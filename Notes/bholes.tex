@@ -1,0 +1,111 @@
+%
+%  Lectures on black holes at IAP
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{makeidx} % generation de l'index
+\usepackage[nottoc]{tocbibind} % bibliographie et index dans la table des matières
+\usepackage{fancyhdr}
+\usepackage{minitoc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{bm} % bold math
+\usepackage{amssymb} % symboles AMS (-> \mathbb)
+\usepackage{mathrsfs} % -> \mathscr
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Reglages:
+%
+\hypersetup{pdftitle={Lectures on black holes},
+  pdfsubject={black holes},
+  pdfauthor={Eric Gourgoulhon <eric.gourgoulhon@obspm.fr>},
+  pdfkeywords={LaTeX},
+  colorlinks=true
+}
+\pagestyle{fancyplain}
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparwidth}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]{}
+\rhead[]{\fancyplain{}{\bfseries\thepage}}
+\chead[\fancyplain{}{\bfseries\leftmark}]{\fancyplain{}{\bfseries\rightmark}}
+\cfoot{}
+%
+\setcounter{minitocdepth}{1}
+\renewcommand{\labelitemi}{$\bullet$}
+%
+% Hauteur du texte:
+\setlength{\topmargin}{-1.8cm}  % marge haut = 2.56cm + \topmargin
+\setlength{\headheight}{1cm}
+\setlength{\headsep}{0.5cm}
+\setlength{\textheight}{22.5cm} % hauteur corps texte = \textheight
+%\setlength{\footheight}{2cm}
+%
+% Largeur du texte:
+\setlength{\textwidth}{16cm}
+\setlength{\oddsidemargin}{0.cm}
+\setlength{\evensidemargin}{0.cm}
+\setlength{\marginparsep}{0.cm}
+%
+% Figures flottantes:
+% fraction maximale d'une page pouvant etre occupe par une figure:
+\renewcommand{\topfraction}{0.8}
+% fraction minimale d'une page reservee pour le texte:
+\renewcommand{\textfraction}{0.2}
+% fraction minimale d'occupation de la page par une figure pleine page:
+\renewcommand{\floatpagefraction}{0.7}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands
+\newcommand{\M}{\mathscr{M}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\w}[1]{\bm{#1}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+
+\newcommand{\defin}[1]{\textbf{\itshape #1}}
+
+\newenvironment{remark}[1][]%
+{\begin{description} \item[\emph{Remarque #1:}]\it}%
+{\end{description}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeindex
+
+%\includeonly{intro,cadre,ref}
+
+\begin{document}
+
+\begin{titlepage}
+\
+\vspace{4cm}
+\begin{center}
+{\Huge\textbf{Geometry and physics of black holes}}\\[2ex]
+{\Large\emph{Lecture notes}}\\[1ex]
+{\Large IAP, March-April 2016} \\[8ex]
+Éric Gourgoulhon \\
+Laboratoire Univers et Théories \\
+CNRS / Observatoire de Paris / Université Paris Diderot\\
+\href{mailto:eric.gourgoulhon@obspm.fr}{\texttt{eric.gourgoulhon@obspm.fr}}\\[8ex]
+\url{http://luth.obspm.fr/~luthier/gourgoulhon/bh16}
+\end{center}
+\end{titlepage}
+
+%\Large  % document en 17pt
+
+\dominitoc
+
+\newpage
+
+\tableofcontents
+
+\include{math}
+
+\end{document}

@@ -1,0 +1,61 @@
+\chapter{Mathematical framework: pseudo-Riemannian manifolds}
+
+\section{Introduction}
+
+The mathematical language of general relativity is mostly differential geometry.
+We recall in this chapter basic definitions and results in this field, which we will use
+throughout the text. The reader who has some knowledge of general relativity should be familiar with most of them. We recall them here to make the text fairly self-contained and also to provide definitions with sufficient generality, not limited to the dimension 4 --- the standard spacetime dimension. Indeed we will manipulate manifolds whose dimension differs from 4, such as hypersurfaces (the black hole event horizon) or 2-dimensional surfaces.
+In the same spirit, we do not stick to Lorentzian metrics
+(such as the spacetime one) but discuss pseudo-Riemannian metrics, which
+encompass both Lorentzian metrics and Riemannian ones.
+Accordingly, in this chapter, $\M$ denotes a generic manifold of any dimension
+and $\w{g}$ a pseudo-Riemannian metric on $\M$. In the subsequent chapters,
+the symbol $\M$ will be restricted to the spacetime manifold and the symbol $\w{g}$
+to a Lorentzian metric on $\M$.
+
+This chapter is not intended to a be a lecture on differential geometry, but
+a collection of basic definitions and useful results. In particular,
+contrary to the other chapters, we state many results without proofs,
+referring the reader to classical textbooks on the topic
+\cite{Berge03,Choqu09,ChoquDD77,Eschr11,Strau04,Wald84}.
+
+\section{Differentiable manifolds}
+
+\subsection{Notion of manifold}
+
+Given an integer $n\geq 1$, a \defin{manifold of dimension $n$}\index{manifold}\index{dimension of a manifold} is a topological space $\M$ obeying the following properties:
+\begin{enumerate}
+\item $\M$ is a \defin{separated space}\index{separated space} (also called \defin{Hausdorff space}\index{Hausdorff space}): any two distinct points of $\M$
+admit disjoint open neighbourhoods.
+\item $\M$ has a \defin{countable base}\index{countable base}\footnote{In the language of topology, one says that $\M$ is a \emph{second-countable space}.}:
+there exists a countable family
+$(\mathcal{U}_k)_{k\in\mathbb{N}}$ of open sets of $\M$ such that any open set of $\M$ can be written as the union (possibly infinite) of some members of the above family.
+\item Around each point of $\M$, there exists a neighbourhood which is
+homeomorphic to an open subset of $\R^n$.
+\end{enumerate}
+Property 1 excludes manifolds with ``forks'' and is very reasonable from a physical point of view: it allows to distinguish between two points even after a small perturbation.
+Property~2 excludes ``too large'' manifolds; in particular it permits setting
+up the theory of integration on manifolds. It also
+allows for a differentiable manifold of dimension $n$ to be embedded smoothly into the Euclidean space $\R^{2n}$
+(Whitney theorem\index{Whitney theorem}).
+Property~3 expresses the essence of a manifold: it means that, locally, one can label the points of $\M$ in a
+continuous way by $n$ real numbers $(x^\alpha)_{\alpha\in\{0,\ldots,n-1\}}$,
+which are called \defin{coordinates}\index{coordinate} (cf. Fig.~\ref{f:bas:manifold}).
+More precisely, given an open subset $\mathcal{U}\subset\M$, a
+\defin{coordinate system}\index{coordinate!system} or \defin{chart}\index{chart}
+on $\mathcal{U}$ is a homeomorphism\footnote{Let us recall that a  \defin{homeomorphism}\index{homeomorphism} between two topological spaces
+(here $\mathcal{U}$ and $\Phi(\mathcal{U})$) is a one-to-one map $\Phi$ such
+that both $\Phi$ and $\Phi^{-1}$ are continuous.}
+\be
+  	\begin{array}{rccl}
+	\Phi: & \mathcal{U}\subset \M & \longrightarrow &
+				\Phi(\mathcal{U})\subset\R^n \\
+		& p & \longmapsto & (x^0, \ldots, x^{n-1}) .
+	\end{array}
+\ee
+\begin{remark}
+In relativity, it is customary to label the $n$ coordinates by an index ranging from
+$0$ to $n-1$. Actually, this convention is mostly used when $\M$ is the spacetime manifold ($n=4$ in standard general relativity). The computer-oriented reader will have noticed the similarity
+with the index ranging of arrays in the C/C++ or Python programming languages.
+\end{remark}
+
