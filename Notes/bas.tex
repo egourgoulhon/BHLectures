@@ -3,21 +3,21 @@
 \section{Introduction}
 
 The mathematical language of general relativity is mostly differential geometry.
-We recall in this chapter basic definitions and results in this field, which we will use
+We recall in this appendix basic definitions and results in this field, which we will use
 throughout the text. The reader who has some knowledge of general relativity should be familiar with most of them. We recall them here to make the text fairly self-contained and also to provide definitions with sufficient generality, not limited to the dimension 4 --- the standard spacetime dimension. Indeed we will manipulate manifolds whose dimension differs from 4, such as hypersurfaces (the black hole event horizon) or 2-dimensional surfaces.
 In the same spirit, we do not stick to Lorentzian metrics
 (such as the spacetime one) but discuss pseudo-Riemannian metrics, which
 encompass both Lorentzian metrics and Riemannian ones.
-Accordingly, in this chapter, $\M$ denotes a generic manifold of any dimension
-and $\w{g}$ a pseudo-Riemannian metric on $\M$. In the subsequent chapters,
-the symbol $\M$ will be restricted to the spacetime manifold and the symbol $\w{g}$
-to a Lorentzian metric on $\M$.
+Accordingly, in this appendix, $\M$ denotes a generic manifold of any dimension
+and $\w{g}$ a pseudo-Riemannian metric on $\M$.
 
 This appendix is not intended to a be a lecture on differential geometry, but
 a collection of basic definitions and useful results. In particular,
-contrary to the other chapters, we state many results without proofs,
+contrary to the other parts of these notes, we state many results without proofs,
 referring the reader to classical textbooks on the topic
 \cite{Berge03,Choqu09,ChoquDD77,Eschr11,Strau04,Wald84}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Differentiable manifolds}
 
@@ -53,17 +53,19 @@ that both $\Phi$ and $\Phi^{-1}$ are continuous.}
 		& p & \longmapsto & (x^0, \ldots, x^{n-1}) .
 	\end{array}
 \ee
-\begin{remark}
-In relativity, it is customary to label the $n$ coordinates by an index ranging from
-$0$ to $n-1$. Actually, this convention is mostly used when $\M$ is the spacetime manifold ($n=4$ in standard general relativity). The computer-oriented reader will have noticed the similarity
-with the index ranging of arrays in the C/C++ or Python programming languages.
-\end{remark}
 
 \begin{figure}
-\centerline{\includegraphics[width=0.8\textwidth]{dge_manifold.eps}}
+\centerline{\includegraphics[width=0.8\textwidth]{bas_manifold.eps}}
 \caption[]{\label{f:bas:manifold} \footnotesize
 Locally a manifold resembles $\R^n$ ($n=2$ on the figure), but this is not necessarily the case at the global level.}
 \end{figure}
+
+\begin{remark}
+In relativity, it is customary to label the $n$ coordinates by an index
+ranging from $0$ to $n-1$. Actually, this convention is mostly used when $\M$ is the spacetime manifold ($n=4$ in standard general relativity). The computer-oriented reader will have noticed the similarity
+with the index ranging of arrays in the C/C++ or Python programming languages.
+\end{remark}
+
 
 \begin{remark} \label{r:bas:topol_manif}
 Strictly speaking the definition given above is that of a \defin{topological manifold}\index{topological manifold}\index{manifold!topological}. We are saying \emph{manifold} for short.
@@ -71,7 +73,7 @@ Strictly speaking the definition given above is that of a \defin{topological man
 
 
 Usually, one needs more than one coordinate system to cover $\M$.
-An \defin{atlas}\index{atlas} on $\M$ is a finite set of couples
+An \defin{atlas}\index{atlas} on $\M$ is a finite set of pairs
 $(\mathcal{U}_k,\Phi_k)_{1\leq k \leq K}$,  where $K$ is a non-zero integer, $\mathcal{U}_k$ an open set of $\M$ and $\Phi_k$ a chart on $\mathcal{U}_k$,
 such that the union of all $\mathcal{U}_k$ covers $\M$:
 \be
@@ -79,7 +81,7 @@ such that the union of all $\mathcal{U}_k$ covers $\M$:
 \ee
 
 The above definition of a manifold lies at the \emph{topological} level
-(Remark~\ref{r:bas:topol_manif}), meaning that one has the notion of continuity, but not of differentiability. To provide the latter, one should rely on the differentiable structure of $\R^n$, via the atlases:
+(cf.~Remark~\ref{r:bas:topol_manif}), meaning that one has the notion of continuity, but not of differentiability. To provide the latter, one should rely on the differentiable structure of $\R^n$, via the atlases:
 a \defin{differentiable manifold}\index{differentiable!manifold}\index{manifold!differentiable}
 is a manifold $\M$ equipped with an atlas
 $(\mathcal{U}_k,\Phi_k)_{1\leq k \leq K}$ such that for any non-empty intersection
@@ -106,7 +108,7 @@ The map $\phi$ is said to be a \defin{diffeomorphism}\index{diffeomorphism} iff
 it is one-to-one and both $\phi$ and $\phi^{-1}$ are differentiable. This implies $n=n'$.
 
 \begin{remark}
-Strictly speaking a differentiable manifold is a couple $(\M,\mathcal{A})$  where
+Strictly speaking a differentiable manifold is a pair $(\M,\mathcal{A})$  where
 $\mathcal{A}$ is a (maximal) differentiable atlas on $\M$.
 Indeed a given (topological) manifold $\M$
 can have non-equivalent differentiable structures, as shown by Milnor (1956) \cite{Milno56}
@@ -187,22 +189,22 @@ with the $n$ real numbers
 Since every vector tangent to a curve at $p$ is expressible as (\ref{e:bas:v_va_wpar_a}), we conclude that
 the set of all vectors tangent to a curve at $p$ is a vector space of dimension $n$ and that $(\wpar_\alpha)$ constitutes a basis of it. This vector space is
 called the
-\defin{tangent vector space to $\M$ at $p$}\index{tangent!vector space}\index{vector!space tangent to a manifold} and is denoted $\T_p(\M)$.
-The elements of $\T_p(\M)$ are simply called \defin{vectors}\index{vector} at $p$.
+\defin{tangent vector space to $\M$ at $p$}\index{tangent!vector space}\index{vector!space tangent to a manifold} and is denoted $T_p\M$.
+The elements of $T_p\M$ are simply called \defin{vectors}\index{vector} at $p$.
 The basis $(\wpar_\alpha)$ is called the \defin{natural basis}\index{natural basis}\index{basis!natural} associated with
 the coordinates $(x^\alpha)$ and the coefficients $v^\alpha$ in (\ref{e:bas:v_va_wpar_a}) are called the \defin{components of the vector $\w{v}$ with respect to the coordinates $(x^\alpha)$}\index{component!w.r.t. a coordinate system}.
 The tangent vector space is represented at two different points in Fig.~\ref{f:bas:tang_space}.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.8\textwidth]{dge_tang_space.eps}}
+\centerline{\includegraphics[width=0.8\textwidth]{bas_tang_space.eps}}
 \caption[]{\label{f:bas:tang_space} \footnotesize
 The vectors at two points $p$ and $q$ on the
 manifold $\M$ belong to two different vector spaces:
-the tangent spaces $\T_p(\M)$ and $\T_q(\M)$.}
+the tangent spaces $T_p\M$ and $T_q\M$.}
 \end{figure}
 
 Contrary to what happens for an affine space, one cannot, in general, define a vector connecting two points $p$ and $q$ on a manifold, except if $p$ and $q$ are infinitesimally close to each other. Indeed, in the latter case, we may define
-the \defin{infinitesimal displacement vector from $p$ to $q$}\index{infinitesimal displacement vector} as the vector $\D\w{\ell}\in\T_p(\M)$ whose action on a scalar field $f$ is
+the \defin{infinitesimal displacement vector from $p$ to $q$}\index{infinitesimal displacement vector} as the vector $\D\w{\ell}\in{{T_p\M}}$ whose action on a scalar field $f$ is
 \be \label{e:bas:dell_f}
   \D\w{\ell}(f) = \left. \D f \right| _{p\rightarrow q} = f(q) - f(p) .
 \ee
@@ -237,15 +239,15 @@ A fundamental operation on vectors consists in mapping them to real numbers, and
 as a mapping\footnote{We are using the same bra-ket notation as in quantum mechanics to denote the action of a linear form on a vector.}
 \be \label{e:bas:def_lin_form}
 	\begin{array}{rccl}
-	\w{\omega}: & \T_p(\M) & \longrightarrow & \R \\
+	\w{\omega}: & T_p\M & \longrightarrow & \R \\
 		& \w{v} & \longmapsto & \langle \w{\omega}, \w{v} \rangle
 	\end{array}
 \ee
 that is linear:
-$\langle\w{\omega},\lambda \w{v} + \w{u}\rangle =  \lambda \langle\w{\omega},\w{v}\rangle +  \langle\w{\omega},\w{u}\rangle$ for all $\w{u},\w{v}\in\T_p(\M)$ and $\lambda\in\R$. The set of all linear forms at $p$ constitutes a $n$-dimensional vector
-space, which is called the \defin{dual space of $\T_p(\M)$}\index{dual!vector space} and denoted by $\T_p^*(\M)$.
-Given the natural basis $(\wpar_\alpha)$ of $\T_p(\M)$ associated with some coordinates
-$(x^\alpha)$, there is a unique basis of $\T_p^*(\M)$, denoted by $(\dd x^\alpha)$, such that
+$\langle\w{\omega},\lambda \w{v} + \w{u}\rangle =  \lambda \langle\w{\omega},\w{v}\rangle +  \langle\w{\omega},\w{u}\rangle$ for all $\w{u},\w{v}\in{T_p\M}$ and $\lambda\in\R$. The set of all linear forms at $p$ constitutes a $n$-dimensional vector
+space, which is called the \defin{dual space of $T_p\M$}\index{dual!vector space} and denoted by ${T_p^*\M}$.
+Given the natural basis $(\wpar_\alpha)$ of $T_p\M$ associated with some coordinates
+$(x^\alpha)$, there is a unique basis of ${T_p^*\M}$, denoted by $(\dd x^\alpha)$, such that
 \be \label{e:bas:dual_basis_nat}
   \encadre{ \langle \dd x^\alpha ,\wpar_\beta\rangle = \delta^\alpha_{\ \  \beta} } ,
 \ee
@@ -278,29 +280,34 @@ In terms of components, the action of a linear form on a vector takes then a ver
 This follows immediately from (\ref{e:bas:def_comp_form}),
 (\ref{e:bas:v_va_wpar_a}) and (\ref{e:bas:dual_basis_nat}).
 
-A field of linear forms, i.e. a (smooth) map which associates to each point $p\in\M$ a member of $\T_p(\M)$ is called a \defin{1-form}\index{1-form}.
+A field of linear forms, i.e. a (smooth) map which associates to each point $p\in\M$ a member of $T_p\M$ is called a \defin{1-form}\index{1-form}.
 Given a smooth scalar field $f$ on $\M$, there exists a 1-form canonically associated with it, called
-the \defin{gradient of $f$}\index{gradient} and denoted $\wnab f$.
+the \defin{differential of $f$}\index{differential} and denoted $\wnab f$.
 At each point $p\in\M$, $\wnab f$ is the unique linear form which, once
 applied to the infinitesimal displacement vector $\D\w{\ell}$ from $p$ to a
 nearby point $q$, gives the change in $f$ between points $p$ and $q$:
 \be \label{e:bas:df}
   \D f := f(q) - f(p) = \langle \wnab f, \D\w{\ell} \rangle .
 \ee
-Since $\D f = \dert{f}{x^\alpha} \, \D x^\alpha$, Eq.~(\ref{e:bas:dxa_dxa}) implies that the components of the gradient with respect to the dual basis are nothing but the partial derivatives of $f$ with respect to the coordinates $(x^\alpha)$ :
+Since $\D f = \dert{f}{x^\alpha} \, \D x^\alpha$, Eq.~(\ref{e:bas:dxa_dxa}) implies that the components of the differential with respect to the dual basis are nothing but the partial derivatives of $f$ with respect to the coordinates $(x^\alpha)$ :
 \be \label{e:bas:grad_f_der_f}
   \encadre{ \wnab f = \der{f}{x^\alpha} \, \dd x^\alpha } .
 \ee
 
 \begin{remark}
-In non-relativistic physics, the gradient is very often
-considered as a vector field and not as a 1-form.
+In non-relativistic physics, the concept of \defin{gradient}\index{gradient}
+of a scalar field is commonly used instead of the
+differential, the former being a vector field and the latter a 1-form.
 This is so because one associates implicitly a vector
 $\vw{\omega}$ to any 1-form $\w{\omega}$ via the Euclidean scalar product
 of $\R^3$: $\forall \overrightarrow{v}\in \R^3,\ \langle \w{\omega},\overrightarrow{v}\rangle = \vw{\omega}\cdot\overrightarrow{v}$.
 Accordingly, formula (\ref{e:bas:df}) is rewritten as
 $\D f = \vw{\nabla} f \cdot \D\w{\ell}$. But we should keep in mind
-that, fundamentally, the gradient is a linear form and not a vector.
+that, at the fundamental level, the key quantity is the differential 1-form
+$\wnab f$, for Eq.~(\ref{e:bas:df}) does not require any metric on the
+manifold $\M$ to be
+meaningful. The gradient $\vw{\nabla} f$ is a derived quantity, obtained
+from the differential $\wnab f$ by metric duality.
 \end{remark}
 
 \begin{remark}
@@ -310,13 +317,13 @@ If we apply (\ref{e:bas:grad_f_der_f}) to $f=x^\alpha$, we then get
   \wnab x^\alpha = \dd x^\alpha .
 \ee
 Hence the dual basis to the natural basis $(\wpar_\alpha)$ is formed by the
-gradients of the coordinates.
+differentials of the coordinates.
 \end{remark}
 
 Of course the natural bases are not the only possible bases in the vector
-space $\T_p(\M)$. One may use a basis $(\w{e}_\alpha)$ that is not related to a coordinate system on $\M$, for instance an orthonormal basis with respect to some metric.
+space $T_p\M$. One may use a basis $(\w{e}_\alpha)$ that is not related to a coordinate system on $\M$, for instance an orthonormal basis with respect to some metric.
 There exists then a unique basis $(\w{e}^\alpha)$
-of the dual space $\T_p^*(\M)$ such that\footnote{Notice that,
+of the dual space ${T_p^*\M}$ such that\footnote{Notice that,
 according to the standard usage, the symbol for the vector $\w{e}_\alpha$ and that for the linear form $\w{e}^\alpha$ differ only by the position of the index $\alpha$.}
 \be \label{e:bas:dual_basis}
   \encadre{ \langle \w{e}^\alpha , \w{e}_\beta \rangle = \delta^\alpha_{\ \ \beta} } .
@@ -335,29 +342,29 @@ a \defin{tensor of type}\index{tensor} $(k,\ell)$ with $(k,\ell)\in\mathbb{N}^2$
 contravariant and $\ell$ times covariant}\index{contravariant}\index{covariant}\index{type of a tensor}, is a
 mapping
 \be \label{e:bas:def_tensor}
-	\begin{array}{rr}
-	\w{T}: & \underbrace{\T_p^*(\M)\times\cdots\times\T_p^*(\M)}_{k {\ \rm times}}
-	\times \underbrace{\T_p(\M)\times\cdots\times\T_p(\M)}_{\ell {\ \rm times}}
-	 \longrightarrow  \R  \\
-	& (\w{\omega}_1,\ldots,\w{\omega}_k,\w{v}_1,\ldots,\w{v}_\ell)
-		 \longmapsto
+	\begin{array}{rccc}
+	\w{T}: & \underbrace{{T_p^*\M}\times\cdots\times{T_p^*\M}}_{k {\ \rm times}}
+	\times \underbrace{T_p\M\times\cdots\times{T_p\M}}_{\ell {\ \rm times}} &
+	 \longrightarrow & \R  \\
+	& (\w{\omega}_1,\ldots,\w{\omega}_k,\w{v}_1,\ldots,\w{v}_\ell) &
+		 \longmapsto &
 	\w{T}(\w{\omega}_1,\ldots,\w{\omega}_k, \w{v}_1,\ldots,\w{v}_\ell)
 	\end{array}
 \ee
 that is linear with respect to each of its arguments. The integer $k+\ell$ is
 called the tensor \defin{valence}\index{valence}, or sometimes the
 tensor \defin{rank}\index{rank of a tensor} or \defin{order}\index{order of a tensor}. Let us recall the canonical duality
-$\T_p^{**}(\M)=\T_p(\M)$, which means that every vector $\w{v}$ can be considered
-as a linear form on the space $\T_p^*(\M)$, via
-$\T_p^*(\M)\rightarrow \R$,
+$T_p^{**}\M={T_p\M}$, which means that every vector $\w{v}$ can be considered
+as a linear form on the space ${T_p^*\M}$, via
+${T_p^*\M}\rightarrow \R$,
 $\w{\omega}\mapsto \langle \w{\omega},\w{v}\rangle$.
 Accordingly a vector is a tensor of type $(1,0)$. A linear form is a
 tensor of type $(0,1)$. A tensor of type $(0,2)$ is called a
-\defin{bilinear form}\index{bilinear form}\index{form!bilinear}. It maps couples of vectors to real numbers, in a linear way for each
+\defin{bilinear form}\index{bilinear form}\index{form!bilinear}. It maps pairs of vectors to real numbers, in a linear way for each
 vector.
 
-Given a basis $(\w{e}_\alpha)$ of $\T_p(\M)$
-and the corresponding dual basis $(\w{e}^\alpha)$ in $\T_p^*(\M)$, we
+Given a basis $(\w{e}_\alpha)$ of $T_p\M$
+and the corresponding dual basis $(\w{e}^\alpha)$ in ${T_p^*\M}$, we
 can expand any tensor $\w{T}$ of type $(k,\ell)$ as
 \be \label{e:bas:def_components}
 	\encadre{\w{T} = T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}
@@ -391,18 +398,21 @@ in addition, $\w{e}_\alpha=\wpar_\alpha$ and $\w{e}^\alpha = \dd x^\alpha$.
 \subsection{Fields on a manifold} \label{s:bas:fields}
 
 A \defin{tensor field}\index{tensor!field}\index{field!tensor} of type $(k,\ell)$ is a map
-which associates to each point $p\in\M$ a tensor of type $(k,\ell)$ on $\T_p(\M)$.
+which associates to each point $p\in\M$ a tensor of type $(k,\ell)$ on $T_p\M$.
 By convention, a scalar field\index{scalar!field}\index{field!scalar} is considered as a tensor field of type $(0,0)$.
 We shall consider only smooth fields.
 
-Given an integer $p$, a \defin{$p$-form}\index{$p$-form}\index{form!$p$-form} is a tensor field of type $(0,p)$, i.e.
+Given a non-negative integer $p$, a
+\defin{differential form of order $p$}\index{form!differential}\index{differential!form},
+or
+\defin{$p$-form}\index{$p$-form}\index{form!$p$-form}, is a tensor field of type $(0,p)$, i.e.
 a field of $p$-linear forms, that is fully antisymmetric whenever $p\geq 2$.
 This definition generalizes that of a 1-form given in Sec.~\ref{s:bas:linear_form}.
 
 A \defin{frame field}\index{frame field} or
 \defin{moving frame}\index{moving!frame} is a $n$-uplet of vector fields
 $(\w{e}_\alpha)$ such that at each point $p\in\M$, $(\w{e}_\alpha(p))$ is
-a basis of the tangent space $\T_p(\M)$.
+a basis of the tangent space $T_p\M$.
 If $n=4$, a frame field is also called a \defin{tetrad}\index{tetrad} and if $n=3$,
 it is called a
 \defin{triad}\index{triad}.
@@ -422,20 +432,21 @@ With respect to a coordinate system $(x^\alpha)$, it is not difficult, via
     - v^\mu \der{u^\alpha}{x^\mu} } .
 \ee
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Pseudo-Riemannian manifolds}
 
 \subsection{Metric tensor}
 
-A \defin{pseudo-Riemannian manifold}\index{pseudo-Riemannian manifold}\index{manifold!pseudo-Riemannian} is a couple $(\M,\w{g})$ where $\M$ is a differentiable manifold
+A \defin{pseudo-Riemannian manifold}\index{pseudo-Riemannian manifold}\index{manifold!pseudo-Riemannian} is a pair $(\M,\w{g})$ where $\M$ is a differentiable manifold
 and $\w{g}$ is a \defin{metric tensor}\index{metric!tensor}\index{metric} on $\M$,
 i.e. a tensor field obeying the following properties:
 \begin{enumerate}
 \item $\w{g}$ is a tensor field of type $(0,2)$: at each point $p\in\M$, $\w{g}(p)$ is a
-bilinear form acting on vectors in the tangent space $\T_p(\M)$:
+bilinear form acting on vectors in the tangent space $T_p\M$:
 \be
 	\begin{array}{rccl}
-	\w{g}(p): & \T_p(\M)\times\T_p(\M) & \longrightarrow & \R \\
+	\w{g}(p): & {T_p\M}\times{T_p\M} & \longrightarrow & \R \\
 		& (\w{u},\w{v}) & \longmapsto & \w{g}(\w{u},\w{v}) .
 	\end{array}
 \ee
@@ -443,7 +454,7 @@ bilinear form acting on vectors in the tangent space $\T_p(\M)$:
 \item $\w{g}$ is \defin{non-degenerate}\index{non-degenerate}: at any point
 $p\in\M$,
 a vector $\w{u}$ such that
-$\forall \w{v}\in\T_p(\M),\ \w{g}(\w{u},\w{v}) = 0$ is necessarily the null vector.
+$\forall \w{v}\in{T_p\M},\ \w{g}(\w{u},\w{v}) = 0$ is necessarily the null vector.
 \end{enumerate}
 The properties of being symmetric and non-degenerate are typical of a
 \defin{scalar pro\-duct}\index{scalar!product}. Accordingly,
@@ -452,17 +463,17 @@ $\w{u}$ and $\w{v}$ are \defin{$\w{g}$-orthogonal}\index{g-orthogonal} (or simpl
 Moreover, when there is no ambiguity on the metric (usually the spacetime metric), we are
 using a dot to denote the scalar product of two vectors taken with $\w{g}$:
 \be
-  \forall (\w{u},\w{v})\in\T_p(\M)\times\T_p(\M),\quad
+  \forall (\w{u},\w{v})\in{T_p\M}\times{T_p\M},\quad
   \encadre{ \w{u}\cdot\w{v} = \w{g}(\w{u},\w{v}) } .
 \ee
 
-In a given basis $(\w{e}_\alpha)$ of $\T_p(\M)$, the components of $\w{g}$
+In a given basis $(\w{e}_\alpha)$ of $T_p\M$, the components of $\w{g}$
 is the matrix $(g_{\alpha\beta})$ defined by
 formula (\ref{e:bas:def_components}) with $(k,\ell)=(0,2)$:
 \be
   \w{g} = g_{\alpha\beta} \, \w{e}^\alpha \otimes \w{e}^\beta .
 \ee
-For any couple $(\w{u},\w{v})$ of vectors we have then
+For any pair $(\w{u},\w{v})$ of vectors we have then
 \be
   \w{g}(\w{u},\w{v}) = g_{\alpha\beta} u^\alpha v^\beta .
 \ee
@@ -480,7 +491,7 @@ general relativity texts. Note that contrary to what the notation may suggest, $
 \subsection{Signature and orthonormal bases} \label{s:bas:signature}
 
 An important feature of the metric tensor is its \defin{signature}\index{signature}:
-in all bases of $\T_p(\M)$ where the components $(g_{\alpha\beta})$ form a diagonal matrix, there is necessarily the same number, $s$ say, of negative components
+in all bases of $T_p\M$ where the components $(g_{\alpha\beta})$ form a diagonal matrix, there is necessarily the same number, $s$ say, of negative components
 and the same number, $n-s$, of positive components. The independence of $s$ from the choice
 of the basis where $(g_{\alpha\beta})$ is diagonal is a basic result of linear algebra named \defin{Sylvester's law of inertia}\index{Sylvester's law of inertia}. One writes:
 \be
@@ -492,7 +503,7 @@ If $s=0$, $\w{g}$ is called a \defin{Riemannian metric}\index{Riemannian!metric}
 $(\M,\w{g})$ a \defin{Riemannian manifold}\index{Riemannian!manifold}. In this case, $\w{g}$ is
 \defin{positive-definite}, which means that
 \be
-  \forall \w{v}\in\T_p(\M),\quad \w{g}(\w{v},\w{v}) \geq 0
+  \forall \w{v}\in{T_p\M},\quad \w{g}(\w{v},\w{v}) \geq 0
 \ee
 and $\w{g}(\w{v},\w{v}) = 0$ iff $\w{v}=0$.
 A standard example of Riemannian metric is of course the scalar product of the Euclidean space
@@ -502,10 +513,10 @@ If $s=1$, $\w{g}$ is called a \defin{Lorentzian metric}\index{Lorentzian!metric}
 $(\M,\w{g})$ a \defin{Lorentzian manifold}\index{Lorentzian!manifold}. One may then have
 $\w{g}(\w{v},\w{v}) < 0$; vectors for which this occurs are called \defin{timelike}\index{timelike!vector},
 whereas vectors for which $\w{g}(\w{v},\w{v}) > 0$ are called \defin{spacelike}\index{spacelike!vector},
-and those for which $\w{g}(\w{v},\w{v}) = 0$ are called \defin{null}\index{null!vector}. The subset of $\T_p(\M)$ formed by all null
+and those for which $\w{g}(\w{v},\w{v}) = 0$ are called \defin{null}\index{null!vector}. The subset of $T_p\M$ formed by all null
 vectors is termed the \defin{null cone}\index{null!cone} of $\w{g}$ at $p$.
 
-A basis $(\w{e}_\alpha)$ of $\T_p(\M)$ is called a \defin{$\w{g}$-orthonormal basis}\index{g-orthonormal basis} (or simply \defin{orthonormal basis}\index{orthonormal basis} if there
+A basis $(\w{e}_\alpha)$ of $T_p\M$ is called a \defin{$\w{g}$-orthonormal basis}\index{g-orthonormal basis} (or simply \defin{orthonormal basis}\index{orthonormal basis} if there
 is no ambiguity on the metric) iff\footnote{No summation on $\alpha$ is implied.}
 \be
    \begin{array}{lcll}
@@ -523,7 +534,7 @@ any basis $(\w{e}_\alpha)$ is invertible and the inverse\index{inverse!metric} i
   \encadre{ g^{\alpha\mu} g_{\mu\beta} = \delta^\alpha_{\ \ \beta} }.
 \ee
 The metric $\w{g}$ induces an isomorphism between
-$\T_p(\M)$ (vectors) and $\T_p^*(\M)$ (linear forms) which, in  index notation,
+$T_p\M$ (vectors) and ${T_p^*\M}$ (linear forms) which, in  index notation,
 corresponds to the lowering\index{lowering an index}\index{index!lowering} or
 raising of the index\index{raising an index}\index{index!raising} by contraction
 with $g_{\alpha\beta}$ or $g^{\alpha\beta}$.
@@ -532,13 +543,13 @@ a tensor with a fixed covariance type (such as a vector, a 1-form,
 a bilinear form, etc.). We will therefore use a different symbol
 to denote its image under the metric isomorphism.
 In particular, we denote by an underbar the
-isomorphism $\T_p(\M) \rightarrow \T_p^*(\M)$
-and by an arrow the reverse isomorphism $\T_p^*(\M) \rightarrow \T_p(\M)$:
+isomorphism $T_p\M \rightarrow {T_p^*\M}$
+and by an arrow the reverse isomorphism ${T_p^*\M} \rightarrow T_p\M$:
 \begin{enumerate}
-\item For any vector $\w{u}$ in $\T_p(\M)$, $\uu{u}$ stands for
+\item For any vector $\w{u}$ in $T_p\M$, $\uu{u}$ stands for
 the unique linear form such that
 \be \label{e:bas:underbar}
-	\forall \w{v} \in \T_p(\M),\quad \langle \uu{u}, \w{v}
+	\forall \w{v} \in T_p\M,\quad \langle \uu{u}, \w{v}
 		\rangle = \w{g}(\w{u},\w{v}) .
 \ee
 However, we will omit the underbar on the components
@@ -552,10 +563,10 @@ are then denoted by $u_\alpha$ and are given by
 \be
   u_\alpha = g_{\alpha\mu} u^\mu .
 \ee
-\item For any linear form $\w{\omega}$ in $\T_p^*(\M)$, $\vw{\w{\omega}}$
-stands for the unique vector of $\T_p(\M)$ such that
+\item For any linear form $\w{\omega}$ in ${T_p^*\M}$, $\vw{\w{\omega}}$
+stands for the unique vector of $T_p\M$ such that
 \be \label{e:bas:arrow_form}
-	\forall \w{v} \in \T_p(\M),\quad
+	\forall \w{v} \in T_p\M,\quad
         \w{g}(\vw{\w{\omega}},\w{v}) =
         \langle \w{\omega}, \w{v} \rangle .
 \ee
@@ -564,20 +575,20 @@ of $\vw{\w{\omega}}$ by denoting them $\omega^\alpha$; they are given by
 \be
   \omega^\alpha = g^{\alpha\mu} \omega_\mu .
 \ee
-\item We extend the arrow notation to {\em bilinear} forms on $\T_p(\M)$ (type-$(0,2)$ tensor):
+\item We extend the arrow notation to {\em bilinear} forms on $T_p\M$ (type-$(0,2)$ tensor):
 for any bilinear form $\w{T}$,
 we denote by $\vw{T}$ the tensor of type $(1,1)$ such that
 \be \label{e:bas:arrow_endo}
-    \forall (\w{u},\w{v}) \in \T_p(\M)\times\T_p(\M), \quad
+    \forall (\w{u},\w{v}) \in T_p\M\times{T_p\M}, \quad
     \w{T}(\w{u},\w{v}) = \vw{T}(\uu{u},\w{v}) = \w{u} \cdot \vw{\w{T}}(\w{v}) ,
 \ee
 and by $\vvw{T}$ the tensor of type $(2,0)$ defined by
 \be \label{e:bas:arrow_double}
-    \forall (\w{u},\w{v}) \in \T_p(\M)\times\T_p(\M), \quad
+    \forall (\w{u},\w{v}) \in {T_p\M}\times{T_p\M}, \quad
     \w{T}(\w{u},\w{v}) = \vvw{\w{T}}(\uu{u},\uu{v}) .
 \ee
 Note that in the second equality of (\ref{e:bas:arrow_endo}), we have considered $\vw{T}$
-as an endomorphism $\T_p(\M)\rightarrow \T_p(\M)$, which is always possible for a tensor of
+as an endomorphism ${T_p\M}\rightarrow {T_p\M}$, which is always possible for a tensor of
 type $(1,1)$.
 If $T_{\alpha\beta}$ are the components of $\w{T}$
 in some basis $(\w{e}_\alpha)$, the components of $\vw{T}$ and $\vvw{T}$ are respectively
@@ -589,7 +600,7 @@ in some basis $(\w{e}_\alpha)$, the components of $\vw{T}$ and $\vvw{T}$ are res
 
 \begin{remark}
 In mathematical literature, the isomorphism induced by $\w{g}$ between
-$\T_p(\M)$ and $\T_p^*(\M)$ is called the \defin{musical isomorphism}\index{musical isomorphism},
+${T_p\M}$ and ${T_p^*\M}$ is called the \defin{musical isomorphism}\index{musical isomorphism},
 because a flat or a sharp symbol is used instead of,
 respectively, the underbar and the arrow introduced above:
 \[
@@ -614,7 +625,7 @@ the metric $\w{g}$.
 Bases for which the right-hand side of (\ref{e:bas:eps_base_pm_un})
 is $+1$ are called \defin{right-handed}\index{right-handed basis}\index{basis!right-handed}, and those for which it is $-1$ are called
 \defin{left-handed}\index{left-handed basis}\index{basis!left-handed}.
-More generally, given a (not necessarily orthonormal) basis $(\w{e}_\alpha)$ of $\T_p(\M)$,
+More generally, given a (not necessarily orthonormal) basis $(\w{e}_\alpha)$ of $T_p\M$,
 one has necessarily $\w{\epsilon}(\w{e}_0,\ldots, \w{e}_{n-1}) \not =0$
 and one says that the basis is \defin{right-handed}\index{right-handed!basis}\index{basis!right-handed}
 or \defin{left-handed}\index{left-handed!basis}\index{basis!left-handed}
@@ -636,23 +647,34 @@ $(\alpha_1, \ldots, \alpha_n)$ are equal and takes the value $1$ or $-1$ if
 $(\alpha_1, \ldots, \alpha_n)$ is an even or odd permutation, respectively, of
 $(0,\ldots,n-1)$.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{The three basic derivatives}
 
-\subsection{Covariant derivative}
+Three kinds of derivative operators on tensor fields can be defined on a
+pseudo-Riemannian manifold. One of them depends on the metric:
+the \emph{covariant derivative} $\wnab$ (Sec.~\ref{s:bas:cov_deriv}).
+Another one depends on the choice of a
+reference vector field: the \emph{Lie derivative} $\Lie{}$ (Sec.~\ref{s:bas:Lie}).
+The third one depends only on the differentiable-manifold structure, i.e.
+is independent of any (metric or vector) field, but, on the other side,
+it is applicable
+only to a specific kind of tensor fields: the $p$-forms; it is the
+\emph{exterior derivative} $\dd$ (Sec.~\ref{s:bas:ext_deriv}).
+
+
+\subsection{Covariant derivative} \label{s:bas:cov_deriv}
+
 
 \subsubsection{Affine connection on a manifold} \label{s:bas:affine_connect}
 
-Let us denote by $\T(\M)$ the space of smooth
-vector fields on $\M$ \footnote{
-The experienced reader is warned that $\T(\M)$ does not stand
-for the tangent bundle of $\M$; it rather corresponds to the
-space of smooth cross-sections of that bundle. No confusion should arise because
-we shall not use the notion of bundle.}.
-Given a vector field $\w{v}\in\T(\M)$, it is not possible from the manifold structure
+Let us denote by $\mathscr{X}(\M)$ the space of smooth
+vector fields on $\M$.
+Given a vector field $\w{v}\in\mathscr{X}(\M)$, it is not possible from the manifold structure
 alone to define its variation between two neighbouring points $p$ and $q$. Indeed
 a formula like $\D \w{v} := \w{v}(q) - \w{v}(p)$ is meaningless because
 the vectors $\w{v}(q)$ and $\w{v}(p)$ belong to two different vector spaces,
-$\T_q(\M)$ and $\T_p(\M)$ respectively (cf. Fig.~\ref{f:bas:tang_space}).
+$T_q\M$ and $T_p\M$ respectively (cf. Fig.~\ref{f:bas:tang_space}).
 Note that for
 a scalar field, this problem does not arise [cf. Eq.~(\ref{e:bas:df})].
 The solution is to introduce an extra-structure on the manifold, called an
@@ -662,13 +684,13 @@ connect the various tangent spaces on the manifold.
 An \defin{affine connection}\index{affine connection}\index{connection!affine} on $\M$ is a mapping
 \be \label{e:bas:def_nabla}
 	\begin{array}{cccc}
-	\wnab \ : & \T(\M)\times\T(\M) & \longrightarrow & \T(\M) \\
+	\wnab \ : & \mathscr{X}(\M)\times\mathscr{X}(\M) & \longrightarrow & \mathscr{X}(\M) \\
 		& (\w{u},\w{v}) & \longmapsto & \wnab_{\w{u}} \,\w{v}
 	\end{array}
 \ee
 which satisfies the following properties:
 \begin{enumerate}
-\item $\wnab$ is bilinear (considering $\T(\M)$ as a vector space over $\R$).
+\item $\wnab$ is bilinear (considering $\mathscr{X}(\M)$ as a vector space over $\R$).
 \item For any scalar field $f$ and any pair $(\w{u},\w{v})$ of vector fields:
 \be
   \wnab_{f\w{u}}\, \w{v} = f \wnab_{\w{u}}\, \w{v} .
@@ -679,13 +701,13 @@ following Leibniz rule holds:
   \wnab_{\w{u}}\, (f\w{v}) =
 	\langle \wnab f, \,\w{u}\rangle\,  \w{v} + f \wnab_{\w{u}}\, \w{v} ,
 \ee
-where $\wnab f$ stands for the gradient of $f$ as defined in Sec.~\ref{s:bas:linear_form}.
+where $\wnab f$ stands for the differential of $f$ as defined in Sec.~\ref{s:bas:linear_form}.
 \end{enumerate}
 The vector $\wnab_{\w{u}} \,\w{v}$ is called the \defin{covariant derivative of $\w{v}$
 along $\w{u}$}\index{covariant!derivative!along a vector}\index{derivative!covariant}.
 \begin{remark} \label{r:bas:def_connection}
 Property~2 is not implied by property~1, for $f$ is a scalar field, not a real number. Actually, property~2 ensures that at a given point $p\in\M$, the value
-of $\wnab_{\w{u}} \,\w{v}$ depends only on the vector $\w{u}(p)\in\T_p(\M)$ and
+of $\wnab_{\w{u}} \,\w{v}$ depends only on the vector $\w{u}(p)\in{T_p\M}$ and
 not on the behaviour of $\w{u}$ around $p$; therefore the role of $\w{u}$ is only to
 give the direction of the derivative of $\w{v}$.
 \end{remark}
@@ -711,13 +733,13 @@ $\wnab_{\w{e}_\beta}\, \w{e}_\alpha (p)$ onto the basis $(\w{e}_\alpha(p))$:
 \ee
 An affine connection is entirely defined by the connection coefficients. In other words, there are as many affine connections on a manifold of dimension $n$ as there are possibilities of choosing $n^3$ scalar fields $\Gamma^\gamma_{\ \ \alpha\beta}$.
 
-Given $\w{v}\in\T(\M)$, one defines a tensor field of type $(1,1)$,
+Given $\w{v}\in\mathscr{X}(\M)$, one defines a tensor field of type $(1,1)$,
 $\wnab\w{v}$, called the
 \defin{covariant derivative of $\w{v}$ with respect to the affine connection $\wnab$}\index{covariant!derivative}, by the following action at each
 point $p\in\M$:
 \be \label{e:bas:def_cov_deriv}
 	\begin{array}{cccc}
-	\wnab\w{v}(p) \ : & \T_p^*(\M)\times\T_p(\M) & \longrightarrow & \R \\
+	\wnab\w{v}(p) \ : & {T_p^*\M}\times{T_p\M} & \longrightarrow & \R \\
 		& (\w{\omega},\w{u}) & \longmapsto &
 	\langle \w{\omega},\, \wnab_{\w{\tilde u}} \, \w{v}(p) \rangle
 	\end{array} ,
@@ -730,7 +752,7 @@ we verify that $\wnab\w{v}(p)$ is a tensor of type $(1,1)$.
 
 One can extend the covariant derivative to all tensor fields by
 (i) demanding that for a scalar field the action of the affine connection
-is nothing but the gradient (hence the same notation $\wnab f$)
+is nothing but taking the differential (hence the same notation $\wnab f$)
 and (ii) using the Leibniz rule.
 As a result, the covariant derivative\index{derivative!covariant} of a tensor field $\w{T}$ of type $(k,\ell)$ is
 a tensor field $\w{\nabla}\w{T}$ of type $(k,\ell+1)$.
@@ -756,7 +778,7 @@ T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots
 where $\w{e}_\gamma (T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell})$
 stands for the action of the vector $\w{e}_\gamma$ on the scalar field
 $T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}$, resulting from the
-very definition of a vector (cf. \S~\ref{s:bas:vectors}).
+very definition of a vector (cf. Sec.~\ref{s:bas:vectors}).
 In particular, if $(\w{e}_\alpha)$ is a natural frame associated with some
 coordinate system $(x^\alpha)$, then $\w{e}_\alpha = \wpar_\alpha$ and
 the above formula becomes [cf. (\ref{e:bas:wpar_partial})]
@@ -863,7 +885,7 @@ Note that the Christoffel symbols are symmetric with respect to the lower two in
 For the Levi-Civita connection, the expression for the divergence of a vector takes
 a rather simple form in a natural basis associated with some coordinates $(x^\alpha)$.
 Indeed, combining Eqs.~(\ref{e:bas:def_divergence}) and (\ref{e:bas:der_cov_coord}),
-we get for $\w{v}\in\T(\M)$,
+we get for $\w{v}\in\mathscr{X}(\M)$,
 \[
   \wnab\cdot\w{v} = \nabla_\mu v^\mu = \der{v^\mu}{x^\mu} + \Gamma^\mu_{\ \ \sigma\mu} v^\sigma   .
 \]
@@ -943,7 +965,7 @@ along the field lines of $\w{u}$ according to
 \be \label{e:bas:def_Phi_eps}
 	\Phi_\varepsilon(\w{v}(p)) := \frac{1}{\lambda} \, \overrightarrow{qq'}.
 \ee
-$\Phi_\varepsilon(\w{v}(p))$ is a vector in $\T_q(\M)$. We may then subtract it from the
+$\Phi_\varepsilon(\w{v}(p))$ is a vector in $T_q\M$. We may then subtract it from the
 actual value of the field $\w{v}$ at $q$ and define the \defin{Lie derivative}\index{Lie!derivative}
 of $\w{v}$ along $\w{u}$ by
 \be \label{e:bas:def_Lie_der}
@@ -952,7 +974,7 @@ of $\w{v}$ along $\w{u}$ by
 \ee
 
 \begin{figure}
-\centerline{\includegraphics[width=0.6\textwidth]{dge_lie_deriv.eps}}
+\centerline{\includegraphics[width=0.6\textwidth]{bas_lie_deriv.eps}}
 \caption[]{\label{f:bas:deriv} Geometrical construction of the Lie derivative of a
 vector field: given a small parameter $\lambda$, each extremity of the arrow
 $\lambda\w{v}$ is dragged by some small parameter $\varepsilon$
@@ -1060,78 +1082,72 @@ u^\mu \nabla_\mu T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}
 \; \nabla_{\beta_i} u^{\sigma} . \label{e:bas:der_comp_nab}
 \eea
 
-\begin{remark} \label{r:bas:exterior_deriv}
-Both the covariant derivative (affine connection) and the Lie derivative
-act on any kind of tensor field. For the specific class of tensor fields
-composed of $p$-forms\index{$p$-form}\index{form!$p$-form} (cf. Sec.~\ref{s:bas:fields}), there exists a third type of derivative, which does not require any extra-structure on $\M$: the \emph{exterior derivative}\index{exterior!derivative}\index{derivative!exterior} $\dd$.
-For a 0-form (scalar field), $\dd$ coincides with the gradient, hence the
-notation $\dd x^\alpha$ used to denote the gradient of coordinates
-[cf. (\ref{e:bas:nab_xa_dxa})]. We shall not use the exterior derivative
-in this book and so will not discus it further
-(see the classical textbooks \cite{ChoquDD77,MisneTW73,ChoquDD77,Wald84} or
-Ref.~\cite{Gourg06} for an elementary introduction).
-\end{remark}
 
+\subsection{Exterior derivative} \label{s:bas:ext_deriv}
 
-\subsection{Exterior derivative} \label{s:diff_forms}
+In Sec.~\ref{s:bas:fields}, we have introduced the
+\emph{differential forms}\index{differential!form}\index{form!differential}
+as tensor fields of type $(0,q)$, with $q\ge 0$,
+that are antisymmetric in all their arguments as soon as $q\ge 2$.
+Otherwise stating, at each point $p\in\M$, a differential form results in a
+fully antisymmetric multilinear form on the vector space $T_p\M$.
+A differential form of order $q$ is also called a $q$-form.
 
-The \emph{differential forms} or \emph{$n$-forms} are type $(0,n)$
-tensor fields that are antisymmetric in all their arguments.
-Otherwise stating, at each point $p\in\M$, they constitute
-antisymmetric multilinear forms on the vector space $\T_p(\M)$).
-They play a special role in the theory of integration on a
+Differential forms play a special role in the theory of integration on a
 manifold. Indeed the primary definition of an integral over a manifold of
-dimension $n$ is the integral of a $n$-form. The 4-dimensional volume element
-associated with the metric $\w{g}$ is a 4-form,
-called the Levi-Civita alternating tensor. Regarding physics, it is well known that the
-electromagnetic field is fundamentally a 2-form (the Faraday tensor $\w{F}$); besides,
-we shall see later that the vorticity of a fluid is described by a 2-form, which
-plays a key role in the Carter-Lichnerowicz formulation.
+dimension $n$ is the integral of a $n$-form. The Levi-Civita tensor
+$\w{\epsilon}$
+introduced in Sec.~\ref{s:bas:Levi-Civita_tensor} is a $n$-form, whose integral
+gives the volume with respect to the metric $\w{g}$.
+Regarding physics, it is well known that the
+electromagnetic field is fundamentally a 2-form (the Faraday tensor $\w{F}$);
+in relativistic hydrodynamics, the vorticity of a fluid is also described by a 2-form
+(see e.g. \cite{Gourg13}).
 
-Being tensor fields, the $n$-forms are subject to the Lie and covariant
-derivations discussed above. But, in addition, they are subject to a third type
+Being tensor fields, differential forms are subject to the covariant
+and Lie derivations discussed above. But, in addition, they are subject to a third type
 of derivation, called \emph{exterior derivation}.
-The \emph{exterior derivative} of a $n$-form $\w{\omega}$ is a
-$(n+1)$-form which is denoted $\dd\w{\omega}$.
-In terms of components with respect to a given
-coordinate system $(x^\alpha)$, $\dd\w{\omega}$ is defined by
+The \defin{exterior derivative}\index{exterior!derivative}\index{derivative!exterior}
+ of a $q$-form $\w{\omega}$ is a
+$(q+1)$-form which is denoted $\dd\w{\omega}$ and whose components
+with respect to a given coordinate system $(x^\alpha)$ are defined by
 \bea
 	\mbox{0-form (scalar field)} & : & (\dd\w{\omega})_\alpha =
-		\der{\omega}{x^\alpha} \label{e:def_ext_0f} \\
+		\der{\omega}{x^\alpha} \label{e:bas:def_ext_0f} \\
 	\mbox{1-form} & : & (\dd\w{\omega})_{\alpha\beta} =
 	\der{\omega_\beta}{x^\alpha} - \der{\omega_\alpha}{x^\beta}
-			 \label{e:def_ext_1f} \\
+			 \label{e:bas:def_ext_1f} \\
 	\mbox{2-form} & : & (\dd\w{\omega})_{\alpha\beta\gamma} =
 	\der{\omega_{\beta\gamma}}{x^\alpha} +
 	\der{\omega_{\gamma\alpha}}{x^\beta} +
-	\der{\omega_{\alpha\beta}}{x^\gamma} \label{e:def_ext_2f} \\
+	\der{\omega_{\alpha\beta}}{x^\gamma} \label{e:bas:def_ext_2f} \\
 	\mbox{etc...}
 \eea
 It can be easily checked that these formul\ae, although expressed in terms of
 partial derivatives of components in a coordinate system, do define tensor fields.
 Moreover, the result is clearly antisymmetric (assuming that $\w{\omega}$ is), so
-that we end up with $(n+1)$-forms.
+that we end up with $(q+1)$-forms.
 Notice that for a scalar field (0-form), the exterior derivative is nothing but the
-gradient 1-form $\dd f$ already defined in Sec.~\ref{s:scalar_gradient}.
+differential 1-form $\dd f$ already defined in Sec.~\ref{s:bas:linear_form}.
 Notice also that the definition of the exterior derivative appeals only to the
 manifold structure. It does not depend upon the metric tensor  $\w{g}$, nor upon
 any other extra structure on $\M$. We may also notice that
 all partial derivatives in the formul\ae\
-(\ref{e:def_ext_0f})-(\ref{e:def_ext_2f}) can be replaced by covariant derivatives
+(\ref{e:bas:def_ext_0f})-(\ref{e:bas:def_ext_2f}) can be replaced by covariant derivatives
 (thanks to the symmetry of the Christoffel symbols).
 
 A fundamental property of the exterior derivation is to be nilpotent:
 \be \label{e:ext_der_nilpot}
 	\encadre{ \dd\dd\w{\omega} = 0 }.
 \ee
-A $n$-form $\w{\omega}$ is said to be \emph{closed} iff $\dd\w{\omega}=0$,
-and \emph{exact} iff there exists a $(n-1)$-form $\w{\sigma}$ such that
+A $q$-form $\w{\omega}$ is said to be \emph{closed} iff $\dd\w{\omega}=0$,
+and \emph{exact} iff there exists a $(q-1)$-form $\w{\sigma}$ such that
 $\w{\omega} = \dd\w{\sigma}$. From property (\ref{e:ext_der_nilpot}),
-an exact $n$-form is closed. The Poincar\'e lemma states that the converse is true,
+an exact $q$-form is closed. The Poincar\'e lemma states that the converse is true,
 at least locally.
 
-The exterior derivative enters in the well known \emph{Stokes' theorem}: if $\mathcal{D}$
-is a submanifold of $\M$ of dimension $d$ ($d\in\{1,2,3,4\}$) that has a boundary (denoted $\partial\mathcal{D}$), then for any $(d-1)$-form $\w{\omega}$,
+The exterior derivative enters in the well known \emph{Stokes' theorem}\index{Stokes!theorem}: if $\mathcal{D}$
+is a submanifold of $\M$ of dimension $d$ that has a boundary (denoted $\partial\mathcal{D}$), then for any $(d-1)$-form $\w{\omega}$,
 \be \label{e:Stokes}
 	\oint_{\partial\mathcal{D}} \w{\omega} =
 	\int_{\mathcal{D}} \dd\w{\omega} .
@@ -1139,23 +1155,24 @@ is a submanifold of $\M$ of dimension $d$ ($d\in\{1,2,3,4\}$) that has a boundar
 Note that $\partial\mathcal{D}$ is a manifold of dimension $d-1$ and
 $\dd\w{\omega}$ is a $d$-form, so that each side of
 (\ref{e:Stokes}) is (of course !) a well defined quantity,
-as the integral of a $n$-form over a $n$-dimensional manifold.
+as the integral of a $q$-form over a $q$-dimensional manifold.
 
 Another very important formula where the exterior derivative enters is
-the \emph{Cartan identity}, which states that the Lie derivative of a $n$-form
+the \defin{Cartan identity}\index{Cartan!identity}, which states that the
+Lie derivative of a differential form
 $\w{\omega}$ along a vector field $\w{u}$ is expressible as
 \be \label{e:Cartan}
 	\encadre{ \Lie{u}\w{\omega} = \w{u}\cdot\dd\w{\omega}
 	+ \dd(\w{u}\cdot\w{\omega}) }.
 \ee
 In the above formula, a dot denotes the contraction on adjacent indices, i.e.
-$\w{u}\cdot\w{\omega}$ is the $(n-1)$-form $\w{\omega}(\w{v},.,\ldots,.)$,
-with the $n-1$ last slots remaining free. Notice that in
-the case where $\w{\omega}$ is a 1-form, Eq.~(\ref{e:Cartan}) is readily obtained
-by combining Eqs.~(\ref{e:Lie_der_1form}) and (\ref{e:def_ext_1f}).
-In this lecture, we shall make an extensive use of the Cartan identity.
+$\w{u}\cdot\w{\omega}$ is the $(q-1)$-form $\w{\omega}(\w{v},.,\ldots,.)$,
+with the $q-1$ last slots remaining free. Notice that in
+the case of a 1-form, Eq.~(\ref{e:Cartan}) is readily obtained
+by combining Eqs.~(\ref{e:Lie_der_1form}),
+(\ref{e:bas:def_ext_0f}) and (\ref{e:bas:def_ext_1f}).
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Curvature} \label{s:bas:curvat}
 
@@ -1165,7 +1182,7 @@ The \defin{Riemann curvature tensor}\index{Riemann!curvature}\index{curvature!te
 an affine connection $\w{\nabla}$ is defined by
 \be \label{e:bas:def_Riemann}
 	 \begin{array}{cccc}
-	\mathrm{\bf Riem} \ : & \T^*(\M)\times\T(\M)^3 &
+	\mathrm{\bf Riem} \ : & \mathscr{X}^*(\M)\times\mathscr{X}(\M)^3 &
 	\longrightarrow & C^\infty(\M,\R) \\
 		& (\w{\omega},\w{w},\w{u},\w{v})
 		& \longmapsto & \bigg\langle \w{\omega} , \
@@ -1174,14 +1191,14 @@ an affine connection $\w{\nabla}$ is defined by
 		- \w{\nabla}_{[\w{u},\w{v}]} \w{w} \bigg\rangle ,
 	\end{array}
 \ee
-where $\T^*(\M)$ stands for the space of 1-forms on $\M$, $\T(\M)$ for the space of vector
+where $\mathscr{X}^*(\M)$ stands for the space of 1-forms on $\M$, $\mathscr{X}(\M)$ for the space of vector
 fields on $\M$ and  $C^\infty(\M,\R)$ for the space of
 smooth scalar fields on $\M$. The above
 formula does define a tensor field on $\M$, i.e. the value
 of $\mathrm{\bf Riem}(\w{\omega},\w{w},\w{u},\w{v})$ at a given
 point $p\in\M$ depends only upon the values of the fields
 $\w{\omega}$, $\w{w}$, $\w{u}$ and $\w{v}$ at $p$ and not
-upon their behaviours away from $p$, as the gradients in
+upon their behaviours away from $p$, as the covariant derivatives in
 Eq.~(\ref{e:bas:def_Riemann}) might suggest.
 We denote the components of this tensor in
 a given basis $(\w{e}_\alpha)$, not by
@@ -1190,7 +1207,7 @@ $R^\gamma_{\ \  \delta \alpha\beta}$.
 The definition (\ref{e:bas:def_Riemann}) leads then to the
 following expression, named the \defin{Ricci identity}\index{Ricci!identity}:
 \be \label{e:bas:Ricci_ident}
-    \forall\w{w}\in\T(\M),\quad
+    \forall\w{w}\in\mathscr{X}(\M),\quad
         \left(\nabla_\alpha\nabla_\beta
         - \nabla_\beta\nabla_\alpha\right) w^\gamma
         = R^\gamma_{\ \  \mu \alpha\beta} \, w^\mu .
@@ -1256,7 +1273,7 @@ The \defin{Ricci tensor}\index{Ricci!tensor} of the affine connection $\wnab$ is
 the field of bilinear forms $\w{R}$ defined by
 \be \label{e:bas:def_Ricci}
 	 \begin{array}{cccc}
-	\w{R} \ : & \T(\M)\times\T(\M) &
+	\w{R} \ : & \mathscr{X}(\M)\times\mathscr{X}(\M) &
 	\longrightarrow & C^\infty(\M,\R) \\
 		& (\w{u},\w{v})
 		& \longmapsto &
@@ -1312,8 +1329,6 @@ represents the  \emph{intrinsic} curvature\index{intrinsic curvature}\index{curv
 curvature that is not vanishing is the
 \emph{extrinsic} curvature\index{extrinsic!curvature}\index{curvature!extrinsic}, i.e. the
 curvature resulting from the embedding of the line in $\R^2$.
-We shall discuss in more details the concepts of intrinsic and extrinsic curvatures
-in Chap.~\ref{s:hyp}.
 
 For $n=2$, the Riemann tensor is entirely determined by the knowledge of the
 Ricci scalar $R$, according to the formula:

@@ -14,7 +14,9 @@
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{bm} % bold math
+\usepackage{amsmath}
 \usepackage{amssymb} % symboles AMS (-> \mathbb)
+\usepackage{amsthm}  % theorem-like environments
 \usepackage{mathrsfs} % -> \mathscr
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -64,7 +66,6 @@
 % New commands
 \newcommand{\M}{\mathscr{M}}
 \newcommand{\R}{\mathbb{R}}
-\newcommand{\T}{\mathscr{T}}
 \newcommand{\D}{\mathrm{d}}
 \newcommand{\dd}{\mathbf{d}}
 \newcommand{\wpar}{\w{\partial}}
@@ -87,9 +88,20 @@
 
 \newcommand{\defin}[1]{\textbf{\itshape #1}}
 
-\newenvironment{remark}[1][]%
-{\begin{description} \item[\emph{Remark #1:}]\it}%
-{\end{description}}
+\newcounter{remarkCounter}[section]
+
+\newenvironment{remark}%
+{\refstepcounter{remarkCounter}
+\par\medskip\noindent\small\textbf{Remark \theremarkCounter:}}%
+{\par\medskip}
+
+%\newenvironment{remark}[1][]%
+%{\begin{description} \item[\emph{Remark #1:}]\it}%
+%{\end{description}}
+
+%\theoremstyle{remark}
+%\newtheorem{remark}{Remark}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -125,6 +137,9 @@ CNRS / Observatoire de Paris / Université Paris Diderot\\
 
 \appendix
 
-\include{dge}
+\include{bas}
+
+\include{ref}
+\printindex
 
 \end{document}
