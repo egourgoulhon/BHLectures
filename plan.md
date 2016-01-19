@@ -2,6 +2,13 @@
 
 These lectures introduce some aspects of black hole physics via a geometrical approach. The prerequisite is to have some notions of general relativity, at the level of an introductory course.  
 
+
+### Location
+
+Space: [Amphitheatre Henri Mineur, IAP, Paris](http://www.iap.fr)
+
+Time: [Schedule (IAP page)](http://www.iap.fr/vie_scientifique/cours/cours.php?nom=cours_iap&annee=2016&langue=en)
+
 ## Lecture 1 (11 March 2016)
 
 ### The concept of black hole
