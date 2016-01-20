@@ -1,5 +1,7 @@
 \chapter{Basic differential geometry} \label{s:bas}
 
+\minitoc
+
 \section{Introduction}
 
 The mathematical language of general relativity is mostly differential geometry.
@@ -15,13 +17,15 @@ This appendix is not intended to a be a lecture on differential geometry, but
 a collection of basic definitions and useful results. In particular,
 contrary to the other parts of these notes, we state many results without proofs,
 referring the reader to classical textbooks on the topic
-\cite{Berge03,Choqu09,ChoquDD77,Eschr11,Strau04,Wald84}.
+\cite{Lafon15,Lee97,Lee13,ONeil83,Berge03,ChoquDD77,Eschr11}, as well as
+to the differential geometry sections of the general relativity textbooks
+\cite{Choqu09,Strau04,Wald84}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Differentiable manifolds} \label{s:bas:manif}
 
-\subsection{Notion of manifold}
+\subsection{Notion of manifold} \label{s:bas:def_manif}
 
 Given an integer $n\geq 1$, a \defin{manifold of dimension $n$}\index{manifold}\index{dimension of a manifold} is a topological space $\M$ obeying the following properties:
 \begin{enumerate}
@@ -44,7 +48,7 @@ which are called \defin{coordinates}\index{coordinate} (cf. Fig.~\ref{f:bas:mani
 More precisely, given an open subset $\mathcal{U}\subset\M$, a
 \defin{coordinate system}\index{coordinate!system} or \defin{chart}\index{chart}
 on $\mathcal{U}$ is a homeomorphism\footnote{Let us recall that a  \defin{homeomorphism}\index{homeomorphism} between two topological spaces
-(here $\mathcal{U}$ and $\Phi(\mathcal{U})$) is a one-to-one map $\Phi$ such
+(here $\mathcal{U}$ and $\Phi(\mathcal{U})$) is a bijective map $\Phi$ such
 that both $\Phi$ and $\Phi^{-1}$ are continuous.}
 \be
   	\begin{array}{rccl}
@@ -81,31 +85,32 @@ such that the union of all $\mathcal{U}_k$ covers $\M$:
 \ee
 
 The above definition of a manifold lies at the \emph{topological} level
-(cf.~Remark~\ref{r:bas:topol_manif}), meaning that one has the notion of continuity, but not of differentiability. To The concept of black holeprovide the latter, one should rely on the differentiable structure of $\R^n$, via the atlases:
-a \defin{differentiable manifold}\index{differentiable!manifold}\index{manifold!differentiable}
+(cf.~Remark~\ref{r:bas:topol_manif}), meaning that one has the notion of continuity, but not of differentiability. To get the latter, one should rely on the differentiable structure of $\R^n$, via the atlases:
+a \defin{differentiable manifold}\index{differentiable!manifold}\index{manifold!differentiable --}
+or \defin{smooth manifold}\index{smooth!manifold}\index{manifold!smooth --},
 is a manifold $\M$ equipped with an atlas
 $(\mathcal{U}_k,\Phi_k)_{1\leq k \leq K}$ such that for any non-empty intersection
 $\mathcal{U}_i \cap \mathcal{U}_j$, the mapping
-\be
+\be \label{e:bas:transition_map}
 	\Phi_i \circ \Phi_j^{-1} : \Phi_j(\mathcal{U}_i \cap \mathcal{U}_j)
 	\subset \R^n \longrightarrow \Phi_i(\mathcal{U}_i \cap \mathcal{U}_j)
 	\subset \R^n
 \ee
-is differentiable (i.e. $C^\infty$).
+is smooth (i.e. $C^\infty$).
 Note that the above mapping is from an open set of $\R^n$ to an open set of $\R^n$, so that the invoked differentiability is nothing but that of $\R^n$.
 The atlas $(\mathcal{U}_k,\Phi_k)_{1\leq k \leq K}$ is called a
 \defin{differentiable atlas}\index{differentiable!atlas}\index{atlas!differentiable}.
-In the following, we consider only differentiable manifolds.
+In the following, we consider only smooth manifolds.
 \begin{remark}
 We are using the word \emph{differentiable} for $C^\infty$, i.e. \emph{smooth}\index{smooth}.
 \end{remark}
 Given two differentiable manifolds, $\M$ and $\M'$, of
 respective dimensions $n$ and $n'$, we say that a map
-$\phi : \M \rightarrow \M'$ is \defin{differentiable} iff in some (and hence all) coordinate systems
-of $\M$ and $\M'$ (belonging to the differentiable atlases of $\M$ and $\M'$),
+$\phi : \M \rightarrow \M'$ is \defin{differentiable map}\index{differentiable!map} iff in some (and hence all, thanks to the smoothness of (\ref{e:bas:transition_map})) coordinate systems
+of $\M$ and $\M'$ belonging to the differentiable atlases of $\M$ and $\M'$,
 the coordinates of the image $\phi(p)$ are differentiable functions $\R^n\rightarrow \R^{n'}$ of the coordinates of $p$.
 The map $\phi$ is said to be a \defin{diffeomorphism}\index{diffeomorphism} iff
-it is one-to-one and both $\phi$ and $\phi^{-1}$ are differentiable. This implies $n=n'$.
+it is bijective and both $\phi$ and $\phi^{-1}$ are differentiable. This implies $n=n'$.
 
 \begin{remark}
 Strictly speaking a differentiable manifold is a pair $(\M,\mathcal{A})$  where
@@ -431,6 +436,66 @@ With respect to a coordinate system $(x^\alpha)$, it is not difficult, via
   \encadre{ [\w{u},\w{v}]^\alpha = u^\mu \der{v^\alpha}{x^\mu}
     - v^\mu \der{u^\alpha}{x^\mu} } .
 \ee
+
+\subsection{Immersions, embeddings and submanifolds} \label{s:bas:embed}
+
+Let $\M$ and $\mathscr{N}$ be two differentiable manifolds
+and
+\be
+    \Phi:\ \M \longrightarrow \mathscr{N}
+\ee
+be a differentiable map (cf. Sec.~\ref{s:bas:def_manif}).
+At a given point $p\in\M$, the \defin{differential}\index{differential!of a smooth map}
+of $\Phi$ is the linear map
+\be
+    \left.\D\Phi \right| _p:\ T_p\M \longrightarrow T_{\Phi(p)}\mathscr{N}
+\ee
+that ``approximates'' $\Phi$ in the following sense: if $\D\w{\ell}\in T_p\M$ is the
+infinitesimal displacement vector from $p$ to some (infinitesimally close) point $q$,
+then
+\be \label{e:bas:def_diff_map}
+    \left.\D\Phi \right| _p(\D\w{\ell}) = \D\w{L},
+\ee
+where $\D\w{L}$ is the infinitesimal displacement vector of $T_{\Phi(p)}\mathscr{N}$
+connecting $\Phi(p)$ to $\Phi(q)$ (cf. Fig.~??).
+In terms of the characterization of vectors by their action on scalar fields
+[Eq.~(\ref{e:bas:def_vector})], it is easy to see, thanks to (\ref{e:bas:dell_f}),
+that the definition (\ref{e:bas:def_diff_map}) is equivalent to
+\be
+    \forall \w{v}\in T_p\M,\ \forall f \in C^\infty(\mathscr{N},\mathbb{R}),\quad
+    \left.\D\Phi \right| _p(\w{v})(f) =
+        \w{v}\left(f\circ \Phi \right) .
+\ee
+
+The differentiable map $\Phi$ is called an \defin{immersion}\index{immersion} iff
+the differential $\left.\D\Phi \right| _p$ is injective at any point $p\in\M$.
+Moreover $\Phi$ is called an \defin{embedding}\index{embedding} iff (i) $\Phi$
+is an immersion and (ii) $\Phi$ is a homeomorphism $\M \rightarrow \Phi(\M)$.
+Note that an embedding is necessarily injective, contrary to an immersion.
+
+A \defin{submanifold} of $\M$ is a subset $\mathscr{S}\subset \M$ such
+that (i) $\mathscr{S}$ is a manifold in the subspace topology and (ii)
+$\mathscr{S}$ has a differentiable structure with respect to which
+the inclusion map $\iota: \mathscr{S} \rightarrow \M$ is an embedding.
+One can show that $\mathscr{S}$ is a submanifold of $\M$ iff there exists
+a manifold $\mathscr{S}_0$ (a priori not included in $\M$) and an
+embedding $\Phi: \mathscr{S}_0 \rightarrow \M$, such that
+$\mathscr{S} = \Phi(\mathscr{S}_0)$.
+
+\begin{remark}
+Scritly speaking, the above definition regards an
+\defin{embedded submanifold}\index{embedded!submanifold}\index{submanifold!embedded --};
+there is also the wider concept of \defin{immersed submanifold}\index{immersed!submanifold}\index{submanifold!immersed --} (see e.g. Chap~5 of \cite{Lee13}).
+\end{remark}
+
+
+One has necessarilly $\dim \mathscr{S} \leq \dim \M$. The non-negative integer
+$m = \dim\M - \dim\mathscr{S}$ is called the \defin{codimension}\index{codimension}
+of the submanifold $\mathscr{S}$. A submanifold of codimension 1 is called
+a \defin{hypersurface}\index{hypersurface}. A submanifold of dimension 1 is
+(the image of) a curve in $\M$, but note that not all curves are submanifolds:
+a curve with self-crossing points is not a submanifold.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
