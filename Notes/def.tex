@@ -9,20 +9,107 @@
 \subsection{Spacetime}
 
 In these lectures we consider a $n$-dimensional \defin{spacetime}\index{spacetime},
-i.e. a pair $(\M, \w{g})$, where $\M$ is a $n$-dimensional smooth manifold
-(cf. Sec.~\ref{s:bas:manif} in Appendix~\ref{s:bas}) and $\w{g}$ is a
+i.e. a pair $(\M, \w{g})$, where $\M$ is a $n$-dimensional smooth manifold, with $n\geq 2$, and $\w{g}$ is a
 Lorentzian metric on $\M$ (cf. Sec.~\ref{s:bas:pRiemManif} in
 Appendix~\ref{s:bas}). In many parts, the dimension $n$ will be set to 4
 --- the standard spacetime value --- but we shall also consider spacetimes with
 $n>4$, especially in Chap.~??.
 
+The precise definition and basic properties of a \emph{smooth manifold} are recalled
+in Appendix~\ref{s:bas}. Here let us simply say that, in loose terms,
+a \defin{manifold}\index{manifold} $\M$ of dimension $n$ is a ``space'' that \emph{locally} resembles $\R^n$,
+i.e. can be described by a $n$-tuple of coordinates $(x^1,\ldots,x^n)$. Globally,
+$\M$ can be very different from $\R^n$, in particular regarding its topology.
+The smooth structure endows the manifold
+with the concept of infinitesimal vectors\index{vector!infinitesimal --} $\D\w{x}$, which connect infinitely
+close pair of points of $\M$. However, for finitely separated points, there is no
+longer the concept of vector connecting them (contrary for instance to points in $\R^n$).
+In other words, vectors on $\M$ do not live in the manifold but in the
+tangent spaces $T_p\M$, which are defined at each point $p\in\M$. Each  $T_p\M$
+is a $n$-dimensional vector space, which is generated for instance by the infinitesimal displacement
+vectors along the $n$ coordinate lines of some coordinate system.
+
 We shall specify further the spacetime structure later on, in particular its
-asymptotics and the orientability of some of its parts.
+asymptotics and its orientability.
+
+\subsection{Worldlines}
+
+In relativity, a particle is described by its spacetime extent, which is a smooth curve,
+$\mathscr{L}$ say, and not a point. This curve is called the particle's
+\defin{worldline}\index{worldline} and might be thought of as the set of
+the ``successive positions'' occupied by the particle as ``time evolves''.
+The dynamics of a simple particle (i.e. a particle without internal structure nor
+spin) is entirely described by its
+\defin{4-momentum}\index{4-momentum} or \defin{energy-momentum vector}\index{energy-momentum!vector}\footnote{When $n\not=4$, \emph{energy-momentum vector} is definitely a better name
+than \emph{4-momentum}!}, which is a vector field $\w{p}$ defined along $\mathscr{L}$
+and tangent to $\mathscr{L}$ at each point (cf. Fig.~??).
+
+One distinguishes two types of particles:
+\begin{itemize}
+\item the \defin{massive particles}\index{massive!particle}\index{particle!massive --}, for which
+$\mathscr{L}$ is a timelike curve, or equivalently, for which
+$\w{p}$ is a timelike vector:
+\be
+    \w{g}(\w{p},\w{p}) = \w{p}\cdot\w{p} < 0 ;
+\ee
+one says then that $\mathscr{L}$ is a timelike curve
+\item the \defin{massless particles}\index{massless!particle}\index{particle!massless --},
+such as the photon,
+for which $\mathscr{L}$ is a null curve, or equivalently, for which  $\w{p}$ is a null vector:
+\be
+    \w{g}(\w{p},\w{p}) = \w{p}\cdot\w{p} = 0 .
+\ee
+\end{itemize}
+In both cases, the \defin{mass} of the particle is defined by
+\be
+   m = \sqrt{- \w{p}\cdot\w{p}} .
+\ee
+Of course, for a massless particle, we get $m=0$.
+
+If the particle feels only gravitation, i.e. if no non-gravitational force
+is exerted on it, the energy-momentum vector must be a
+\defin{geodesic vector}\index{geodesic!vector}, i.e. it obeys
+\be \label{e:def:p_geodesic}
+    \encadre{\wnab_{\w{p}}\,  \w{p} = 0 } ,
+\ee
+or, in terms of components
+\be
+    p^\mu \nabla_\mu p^\alpha = 0 .
+\ee
+This implies that the worldline $\mathscr{L}$ must be a
+\defin{geodesic}\index{geodesic} of the spacetime $(\M,\w{g})$.
+\begin{remark}
+The reverse is not true, i.e. having $\mathscr{L}$ geodesic and $\w{p}$
+tangent to $\mathscr{L}$ does not imply (\ref{e:def:p_geodesic}), but the
+weaker condition $\wnab_{\w{p}}\,  \w{p} = \alpha \, \w{p}$, with $\alpha$
+a scalar field along $\mathscr{L}$.
+\end{remark}
+For massive particles, Eq.~(\ref{e:def:p_geodesic}) can be derived from
+a least-action principle
+
+\subsubsection{Massive particles}
+
+For a massive particle, the constraint of having $\mathscr{L}$ timelike
+has a simple geometrical meaning: the worldline $\mathscr{L}$ must
+always lie inside the light cones of events along $\mathscr{L}$ (cf. Fig.~??).
 
 \subsection{Einstein equation}
 
-
-\subsection{Worldlines}
+Saying that gravitation in the spacetime $(\M, \w{g})$ is ruled by
+\defin{general relativity}\index{general!relativity} amounts
+to demanding that the metric $\w{g}$ obeys \defin{Einstein equation}\index{Einstein!equation}:
+\be \label{e:bas:Einstein_eq}
+    \encadre{ \w{R} - \frac{1}{2}\, R\, \w{g} + \Lambda\, \w{g} = 8\pi \w{T} },
+\ee
+where $\w{R}$ is the Ricci tensor of $\w{g}$, $R$ the Ricci scalar of $\w{g}$
+(cf. Sec.~\ref{s:bas:Ricci_tensor} in Appendix~\ref{s:bas}), $\Lambda$ some
+constant, called the \defin{cosmological constant}\index{cosmological!constant}
+and $\w{T}$ is the energy-momentum tensor\index{energy-momentum tensor} of
+matter and non-gravitational fields.
+\begin{remark}
+The dimension $n$ of the spacetime does not appear in the Einstein equation
+(\ref{e:bas:Einstein_eq}).
+\end{remark}
 
 
 
@@ -203,12 +290,61 @@ as
 \be
     \encadre{ \dd \uu{\el} = \dd\rho \wedge \uu{\el} } .
 \ee
-This reflects the Frobenius theorem in its dual formulation (see e.g.
+This reflects the \defin{Frobenius theorem}\index{Frobenius!theorem}
+in its dual formulation (see e.g.
 Theorem B.3.2 in Wald's textbook \cite{Wald84}): the exterior derivative of
 the 1-form $\uu{\el}$ is the exterior product of $\uu{\el}$ itself with some
 1-form ($\dd\rho$ in the present case) if, and only if,
 $\uu{\el}$ defines hyperplanes that are integrable in some hypersurface ($\Hor$ in the present case).
 
 \subsubsection{Geodesic generators}
+
+Let us contract the Frobenius identity (\ref{e:def:ext_der_wl_comp}) with $\wl$:
+\be \label{e:def:l_contract_Frob}
+    \el^\mu \nabla_\mu \el_\alpha - \el^\mu \nabla_\alpha \el_\mu
+        = \el^\mu \nabla_\mu \rho \, \el_\alpha
+        - \underbrace{\el^\mu \el_\mu}_{0} \nabla_\alpha \rho .
+\ee
+Now, since $\wl$ is a null vector,
+\[
+    \el^\mu \nabla_\alpha \el_\mu = \nabla_\alpha (\underbrace{\el^\mu \el_\mu}_{0})
+        - \el_\mu \nabla_\alpha \el^\mu ,
+\]
+from which we get
+\[
+    \el^\mu \nabla_\alpha \el_\mu = 0 .
+\]
+Hence (\ref{e:def:l_contract_Frob}) reduces to
+\be
+    \el^\mu \nabla_\mu \el_\alpha  = \kappa \, \el_\alpha ,
+\ee
+with
+\be
+    \kappa := \el^\mu \nabla_\mu \rho  .
+\ee
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
