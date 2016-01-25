@@ -209,15 +209,15 @@ the tangent spaces $T_p\M$ and $T_q\M$.}
 \end{figure}
 
 Contrary to what happens for an affine space, one cannot, in general, define a vector connecting two points $p$ and $q$ on a manifold, except if $p$ and $q$ are infinitesimally close to each other. Indeed, in the latter case, we may define
-the \defin{infinitesimal displacement vector from $p$ to $q$}\index{infinitesimal displacement vector} as the vector $\D\w{\ell}\in{{T_p\M}}$ whose action on a scalar field $f$ is
+the \defin{infinitesimal displacement vector from $p$ to $q$}\index{infinitesimal displacement vector} as the vector $\D\w{x}\in{{T_p\M}}$ whose action on a scalar field $f$ is
 \be \label{e:bas:dell_f}
-  \D\w{\ell}(f) = \left. \D f \right| _{p\rightarrow q} = f(q) - f(p) .
+  \D\w{x}(f) = \left. \D f \right| _{p\rightarrow q} = f(q) - f(p) .
 \ee
 Since $p$ and $q$ are infinitesimally close, there is a unique (piece of) curve
 $\mathcal{C}$ going
 from $p$ to $q$ and one has
 \be \label{e:bas:dell_v_dlamb}
-  \D\w{\ell} = \w{v} \, \D\lambda ,
+  \D\w{x} = \w{v} \, \D\lambda ,
 \ee
 where $\lambda$ is a parameter along $\mathcal{C}$, $\w{v}$ the associated tangent
 vector at $p$ and $\D\lambda$ the parameter
@@ -227,12 +227,12 @@ The relation (\ref{e:bas:dell_v_dlamb}) follows immediately from the definition
 Given a coordinate system, let $(x^\alpha)$ be the coordinates
 of $p$ and $(x^\alpha+\D x^\alpha)$ those of $q$. Then from Eq.~(\ref{e:bas:dell_f}),
 \[
-  \D\w{\ell}(f) =   \D f  = \der{f}{x^\alpha} \, \D x^\alpha
+  \D\w{x}(f) =   \D f  = \der{f}{x^\alpha} \, \D x^\alpha
   = \D x^\alpha \, \wpar_\alpha(f) .
 \]
 The scalar field $f$ being arbitrary, we conclude that
 \be \label{e:bas:dell_dxa_wpar}
-  \encadre{ \D\w{\ell} = \D x^\alpha \, \wpar_\alpha } .
+  \encadre{ \D\w{x} = \D x^\alpha \, \wpar_\alpha } .
 \ee
 In other words, the components of the infinitesimal displacement vector with respect
 to the coordinates $(x^\alpha)$ are nothing but the infinitesimal coordinate
@@ -263,7 +263,7 @@ $(\wpar_\alpha)$. The notation $(\dd x^\alpha)$ stems from the fact that if we a
 the linear form $\dd x^\alpha$ to the infinitesimal displacement vector
 (\ref{e:bas:dell_dxa_wpar}), we get nothing but the number $\D x^\alpha$:
 \be \label{e:bas:dxa_dxa}
-    \langle\dd x^\alpha,\D\w{\ell} \rangle = \langle\dd x^\alpha , \D x^\beta \, \wpar_\beta
+    \langle\dd x^\alpha,\D\w{x} \rangle = \langle\dd x^\alpha , \D x^\beta \, \wpar_\beta
     \rangle
     = \D x^\beta \underbrace{\langle \dd x^\alpha , \wpar_\beta \rangle}_{\delta^\alpha_{\ \ \beta}}
     = \D x^\alpha .
@@ -289,10 +289,10 @@ A field of linear forms, i.e. a (smooth) map which associates to each point $p\i
 Given a smooth scalar field $f$ on $\M$, there exists a 1-form canonically associated with it, called
 the \defin{differential of $f$}\index{differential} and denoted $\wnab f$.
 At each point $p\in\M$, $\wnab f$ is the unique linear form which, once
-applied to the infinitesimal displacement vector $\D\w{\ell}$ from $p$ to a
+applied to the infinitesimal displacement vector $\D\w{x}$ from $p$ to a
 nearby point $q$, gives the change in $f$ between points $p$ and $q$:
 \be \label{e:bas:df}
-  \D f := f(q) - f(p) = \langle \wnab f, \D\w{\ell} \rangle .
+  \D f := f(q) - f(p) = \langle \wnab f, \D\w{x} \rangle .
 \ee
 Since $\D f = \dert{f}{x^\alpha} \, \D x^\alpha$, Eq.~(\ref{e:bas:dxa_dxa}) implies that the components of the differential with respect to the dual basis are nothing but the partial derivatives of $f$ with respect to the coordinates $(x^\alpha)$ :
 \be \label{e:bas:grad_f_der_f}
@@ -307,7 +307,7 @@ This is so because one associates implicitly a vector
 $\vw{\omega}$ to any 1-form $\w{\omega}$ via the Euclidean scalar product
 of $\R^3$: $\forall \overrightarrow{v}\in \R^3,\ \langle \w{\omega},\overrightarrow{v}\rangle = \vw{\omega}\cdot\overrightarrow{v}$.
 Accordingly, formula (\ref{e:bas:df}) is rewritten as
-$\D f = \vw{\nabla} f \cdot \D\w{\ell}$. But we should keep in mind
+$\D f = \vw{\nabla} f \cdot \D\w{x}$. But we should keep in mind
 that, at the fundamental level, the key quantity is the differential 1-form
 $\wnab f$, for Eq.~(\ref{e:bas:df}) does not require any metric on the
 manifold $\M$ to be
@@ -450,11 +450,11 @@ of $\Phi$ is the linear map
 \be
     \left.\D\Phi \right| _p:\ T_p\M \longrightarrow T_{\Phi(p)}\mathscr{N}
 \ee
-that ``approximates'' $\Phi$ in the following sense: if $\D\w{\ell}\in T_p\M$ is the
+that ``approximates'' $\Phi$ in the following sense: if $\D\w{x}\in T_p\M$ is the
 infinitesimal displacement vector from $p$ to some (infinitesimally close) point $q$,
 then
 \be \label{e:bas:def_diff_map}
-    \left.\D\Phi \right| _p(\D\w{\ell}) = \D\w{L},
+    \left.\D\Phi \right| _p(\D\w{x}) = \D\w{L},
 \ee
 where $\D\w{L}$ is the infinitesimal displacement vector of $T_{\Phi(p)}\mathscr{N}$
 connecting $\Phi(p)$ to $\Phi(q)$ (cf. Fig.~??).
@@ -546,13 +546,13 @@ For any pair $(\w{u},\w{v})$ of vectors we have then
   \w{g}(\w{u},\w{v}) = g_{\alpha\beta} u^\alpha v^\beta .
 \ee
 In particular, considering the natural basis associated with some coordinate system
-$(x^\alpha)$, the scalar square of an infinitesimal displacement vector $\D\w{\ell}$
+$(x^\alpha)$, the scalar square of an infinitesimal displacement vector $\D\w{x}$
 [cf. Eq.~(\ref{e:bas:dell_f})] is
 \be
-  \D s^2 := \w{g}(\D\w{\ell},\D\w{\ell}) = g_{\alpha\beta} \D x^\alpha \, \D x^\beta .
+  \D s^2 := \w{g}(\D\w{x},\D\w{x}) = g_{\alpha\beta} \D x^\alpha \, \D x^\beta .
 \ee
 This formula, which follows from the value (\ref{e:bas:dell_dxa_wpar}) of the
-components of $\D\w{\ell}$, is called the expression of the \defin{line element}\index{line!element}
+components of $\D\w{x}$, is called the expression of the \defin{line element}\index{line!element}
 on the pseudo-Riemannian manifold $(\M,\w{g})$. It is often used to define the metric tensor in
 general relativity texts. Note that contrary to what the notation may suggest, $\D s^2$ is not necessarily a positive quantity.
 
@@ -816,9 +816,9 @@ give the direction of the derivative of $\w{v}$.
 Given an affine connection, the variation of a vector field $\w{v}$ between
 two neighbouring points $p$ and $q$, is defined as
 \be
-  \D \w{v} := \wnab_{\D\w{\ell}} \, \w{v} ,
+  \D \w{v} := \wnab_{\D\w{x}} \, \w{v} ,
 \ee
-$\D\w{\ell}$ being the infinitesimal displacement vector connecting $p$ and $q$
+$\D\w{x}$ being the infinitesimal displacement vector connecting $p$ and $q$
 [cf Eq.~(\ref{e:bas:dell_f})].
 One says that $\w{v}$ is \defin{parallelly transported from $p$ to $q$ with respect to the connection $\wnab$}\index{parallel transport}\index{parallelly transported} iff $\D\w{v} = 0$.
 
