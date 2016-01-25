@@ -41,8 +41,8 @@ the ``successive positions'' occupied by the particle as ``time evolves''.
 The dynamics of a simple particle (i.e. a particle without internal structure nor
 spin) is entirely described by its
 \defin{4-momentum}\index{4-momentum} or \defin{energy-momentum vector}\index{energy-momentum!vector}\footnote{When $n\not=4$, \emph{energy-momentum vector} is definitely a better name
-than \emph{4-momentum}!}, which is a vector field $\w{p}$ defined along $\mathscr{L}$
-and tangent to $\mathscr{L}$ at each point (cf. Fig.~??).
+than \emph{4-momentum}!}, which is a vector field $\w{p}$ defined along $\mathscr{L}$,
+tangent to $\mathscr{L}$ at each point and future-directed (cf. Fig.~??).
 
 One distinguishes two types of particles:
 \begin{itemize}
@@ -61,7 +61,7 @@ for which $\mathscr{L}$ is a null curve, or equivalently, for which  $\w{p}$ is 
 \ee
 \end{itemize}
 In both cases, the \defin{mass} of the particle is defined by
-\be
+\be \label{e:def:def_mass}
    m = \sqrt{- \w{p}\cdot\w{p}} .
 \ee
 Of course, for a massless particle, we get $m=0$.
@@ -78,20 +78,93 @@ or, in terms of components
 \ee
 This implies that the worldline $\mathscr{L}$ must be a
 \defin{geodesic}\index{geodesic} of the spacetime $(\M,\w{g})$.
-\begin{remark}
+\begin{remark} \label{r:def:geodesic_vector}
 The reverse is not true, i.e. having $\mathscr{L}$ geodesic and $\w{p}$
 tangent to $\mathscr{L}$ does not imply (\ref{e:def:p_geodesic}), but the
 weaker condition $\wnab_{\w{p}}\,  \w{p} = \alpha \, \w{p}$, with $\alpha$
 a scalar field along $\mathscr{L}$.
 \end{remark}
 For massive particles, Eq.~(\ref{e:def:p_geodesic}) can be derived from
-a least-action principle
+a variational principle, the action being simply the worldline's length
+as given by the metric tensor:
+\be
+    S = \int_A^B \D s = \int_{\lambda_A}^{\lambda_B}
+     \sqrt{-\w{g}\left(\frac{\D\w{x}}{\D\lambda}, \frac{\D\w{x}}{\D\lambda} \right)}
+     \, \D\lambda .
+\ee
+For photons, Eq.~(\ref{e:def:p_geodesic}) can be derived from the Maxwell equations
+within the geometrical optics approximation, with the assumption that
+the photon energy-momentum vector is related to the wave 4-vector $\w{k}$ by
+\be
+    \w{p} = \hbar \w{k} .
+\ee
 
 \subsubsection{Massive particles}
 
 For a massive particle, the constraint of having $\mathscr{L}$ timelike
 has a simple geometrical meaning: the worldline $\mathscr{L}$ must
 always lie inside the light cones of events along $\mathscr{L}$ (cf. Fig.~??).
+The fondamental link between physics and geometry is that the
+\defin{proper time}\index{proper!time}\index{time!proper --} $\tau$ of the particle
+is the metric length along the worldline, increasing towards the future:
+\be \label{e:def:proper_time}
+    \D\tau = \sqrt{- \w{g}(\D\w{x}, \D\w{x})} = \sqrt{- g_{\mu\nu} \D x^\mu \, \D x^\nu} ,
+\ee
+where $\D\w{x}$ is an infinitesimal future-directed displacement
+along $\mathscr{L}$.
+
+The particle's \defin{4-velocity}\index{4-velocity} is defined the vector field
+$\w{u}$
+tangent to the worldline $\mathscr{L}$ associated with the parametrization of
+$\mathscr{L}$ by the proper time:
+\be
+    \w{u} = \frac{\D\w{x}}{\D\tau} .
+\ee
+By construction, this is a unit timelike vector:
+\be \label{e:def:u_unit}
+    \w{u}\cdot\w{u} = -1 .
+\ee
+For a simple particle (no internal structure),
+the 4-momentum $\w{p}$ is tangent to $\mathscr{L}$; it is then necessarily
+colinear to $\w{u}$. Since both vectors are future-directed,
+Eqs.~(\ref{e:def:def_mass}) and (\ref{e:def:u_unit}) lead to
+\be
+    \w{p} = m\, \w{u} .
+\ee
+
+\subsubsection{Massless particles (photons)}
+
+For a massless particle, Eq.~(\ref{e:def:proper_time}) would lead to $\D\tau=0$
+since $\D\w{x}$ would be a null vector. There is then no natural parameter
+along a null geodesic. However, one can single out a whole family of them,
+called \emph{affine parameters}. An \defin{affine parameter}\index{affine!parameter}
+along a null geodesic $\mathscr{L}$ is a parameter $\lambda$ such that
+the associated tangent vector,
+\be
+    \w{v} := \frac{\D\w{x}}{\D\lambda} ,
+\ee
+is a geodesic vector field: $\wnab_{\w{v}} \, \w{v} = 0$. In general,
+the tangent vector associated to a given parameter fullfils only
+$\wnab_{\w{v}} \, \w{v} = \alpha \, \w{v}$, with $\alpha$ a scalar field
+along $\mathscr{L}$ (cf. Remark~\ref{r:def:geodesic_vector} above).
+
+The qualifier \emph{affine} arises from the fact any two affine parameters
+$\lambda$ and $\lambda'$ are related by an affine transformation:
+\be \label{e:def:affine_transf}
+    \lambda' = a \lambda + b,
+\ee
+with $a$ and $b$ two constants.
+Given that the photon energy-momentum vector $\w{p}$ is a geodesic vector
+[Eq.~(\ref{e:def:p_geodesic})],
+a natural choice of the affine parameter $\lambda$ is that associated with
+$\w{p}$:
+\be
+    \w{p} = \frac{\D\w{x}}{\D\lambda} .
+\ee
+This fixes $a=1$ in the transformation (\ref{e:def:affine_transf}).
+
+\subsection{Quantities measured by an observer}
+
 
 \subsection{Einstein equation}
 
