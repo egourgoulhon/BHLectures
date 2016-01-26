@@ -306,18 +306,18 @@ The dimension $n$ of the spacetime does not appear in the Einstein equation
 A naive definition of a black hole, involving only words, could be
 \begin{quote}
 A \defin{black hole}\index{black!hole} is a localized region of spacetime
-from which neither massive particles nor light may escape.
+from which neither massive particles nor massless ones (photons) may escape.
 \end{quote}
-There are essentially two features in this definition: localization
-and inescapability. Let us for a moment focus on the latter.
+There are essentially two features in this definition: \emph{localization}
+and \emph{inescapability}. Let us for a moment focus on the latter.
 It implies the existence of a \emph{boundary}, which no
-(massive or not) particle emitted in the black hole region can cross.
+particle emitted in the black hole region can cross.
 This boundary is called the
-\defin{event horizon}\index{event!horizon}\index{horizon!event --} and
+\defin{event horizon}\index{event!horizon}\index{horizon!event --} and is
 quite often referred to simply as the \defin{horizon}.
 It is a \defin{one-way membrane}\index{one-way membrane}\index{membrane!one-way --},
 in the sense that it can be crossed from the black hole ``exterior'' towards
-the black hole region, but not in the reverse way. The one-way membrane must
+the black hole region, but not in the reverse way. The one-way membrane must be
 a hypersurface of the spacetime manifold $\M$, for it has to divide $\M$ in two regions:
 the interior (the black hole itself) and the exterior region.
 Let us recall that a hypersurface is a submanifold of $\M$ of codimension 1
@@ -325,7 +325,7 @@ Let us recall that a hypersurface is a submanifold of $\M$ of codimension 1
 
 To discuss further which hypersurface could act as a black hole boundary,
 one should recall that, on a Lorentzian manifold $(\M,\w{g})$, there are
-three types of hypersurfaces. The classification
+three classes of hypersurfaces. The classification
 depends on the type of metric induced by $\w{g}$ on the
 hypersurface, $\Sigma$ say, the
 \defin{induced metric}\index{induced!metric}\index{metric!induced --} being
@@ -340,9 +340,10 @@ i.e. iff $(\Sigma,  \left.\w{g}\right| _{\Sigma})$ is a Riemannian manifold;
 i.e. iff $\mathrm{sign} \left.\w{g}\right| _{\Sigma} = (-,+,+)$,
 i.e. iff $(\Sigma,  \left.\w{g}\right| _{\Sigma})$ is a Lorentzian manifold;
 \item \defin{null} iff $\left.\w{g}\right| _{\Sigma}$ is degenerate\footnote{
-cf. Sec.~\ref{s:bas:metric} in Appendix~\ref{s:bas} for the definition of a
+Cf. Sec.~\ref{s:bas:metric} in Appendix~\ref{s:bas} for the definition of a
 degenerate bilinear form; the degeneracy
-implies that the bilinear form $\left.\w{g}\right| _{\Sigma}$ is not a metric on $\Sigma$.}
+implies that the bilinear form $\left.\w{g}\right| _{\Sigma}$ is not,
+strictly speaking, a metric on $\Sigma$.}
 i.e. iff $\mathrm{sign} \left.\w{g}\right| _{\Sigma} = (0,+,+)$.
 \end{itemize}
 The hypersurface type can also be deduced from the normal vector
@@ -357,8 +358,8 @@ adapted to $\Sigma$.
 
 \begin{remark}
 Null hypersurfaces have the distinctive feature that their normals are
-also tangent to them. Indeed, saying that the normal $\w{n}$ is null
-is by definition equivalent to $\w{n}\cdot\w{n}=0$, which is nothing but the condition
+also tangent to them. Indeed, by definition, the normal $\w{n}$ is null iff
+$\w{n}\cdot\w{n}=0$, which is nothing but the condition
 for $\w{n}$ to be tangent to $\Sigma$.
 \end{remark}
 
@@ -375,15 +376,17 @@ in the quasi-local approaches to black holes.
 \subsection{Geometry of null hypersurfaces}
 
 Having decided that the black hole event horizon must be a null hypersurface,
-let us examine the geometry properties of such a hypersurface. We shall
+let us examine the geometrical properties of such a hypersurface. We shall
 denote it by $\Hor$, for \emph{horizon}, but the results of this section
 will be valid for any null hypersurface.
 
 
-Locally, the hypersurface $\Hor$ can be considered as a level set, i.e. there exists
-a smooth scalar field $u:\ \Hor \rightarrow \R$ such that
+As any hypersurface, $\Hor$ can be locally considered as a level set,
+around any point of $\Hor$, there exists an open subset $\mathscr{U}$
+of $\M$ (possibly  $\mathscr{U} = \M$) and
+a smooth scalar field $u:\ \mathscr{U} \rightarrow \R$ such that
 \be \label{e:def:Hor_u_zero}
-    \forall p \in \M,\quad p\in \Hor \iff u(p) = 0 .
+    \forall p \in \mathscr{U},\quad p\in \Hor \iff u(p) = 0 .
 \ee
 For example, if $\Hor$ is a light cone in Minkowsky spacetime and
 $(t,r,\th,\ph)$ are standard spherical coordinates, we may choose
@@ -391,16 +394,16 @@ the retarded time coordinate $u=t-r$.
 
 Let $\wl$ be a vector field normal to $\Hor$. Since $\Hor$ is a null hypersurface,
 $\wl$ is a null vector:
-\be
+\be \label{e:def:wl_null}
     \wl\cdot\wl = 0
 \ee
 \begin{remark}
-As a consequence of the above property, there is no natural normalization
+As a consequence of (\ref{e:def:wl_null}), there is no natural normalization
 of $\wl$, contrary to the case of timelike or spacelike hypersurfaces,
 where one can always choose the normal to be a unit vector
 (scalar square equal to $1$ or $-1$). It follows that there is no unique choice
-of $\wl$. At this stage, any rescaling $\wl \mapsto \wl' =  \lambda \wl$, with
-$\lambda$ a strictly positive (or strictly negative) scalar field on $\Hor$,
+of $\wl$. At this stage, any rescaling $\wl \mapsto \wl' =  \alpha \wl$, with
+$\alpha$ a strictly positive (or strictly negative) scalar field on $\Hor$,
 yields a normal vector field $\wl'$ as valid as $\wl$.
 \end{remark}
 The null normal vector field $\wl$ is a priori defined on $\Hor$
@@ -444,7 +447,7 @@ field $\rho$ such that
     \encadre{\wl = e^\rho \, \vw{\nabla} u } .
 \ee
 We have chosen the
-coefficient relating $\wl$ and $\vw{\nabla} u $ to be strictly positive,
+coefficient linking $\wl$ and $\vw{\nabla} u $ to be strictly positive,
 i.e. under the form of an exponential. This is always possible by a suitable
 choice of the scalar field $u$.
 
@@ -501,14 +504,54 @@ from which we get
     \el^\mu \nabla_\alpha \el_\mu = 0 .
 \]
 Hence (\ref{e:def:l_contract_Frob}) reduces to
-\be
+\be \label{e:def:wl_geod_kappa_dual}
     \el^\mu \nabla_\mu \el_\alpha  = \kappa \, \el_\alpha ,
 \ee
 with
 \be
-    \kappa := \el^\mu \nabla_\mu \rho  .
+    \kappa := \el^\mu \nabla_\mu \rho = \wnab_{\wl}\,  \rho .
 \ee
+The metric dual of (\ref{e:def:wl_geod_kappa_dual}) is
+\be \label{e:def:wl_geod_kappa}
+    \encadre{ \wnab_{\wl}\, \wl = \kappa \, \wl } .
+\ee
+This equation implies that the field lines of $\wl$ are geodesics.
+To demonstrate this, we note that a rescaling
+\be \label{e:def:wl_rescale}
+    \wl \mapsto \wl' =  \alpha \wl
+\ee
+with $\alpha$ a strictly positive scalar field can be performed to yield
+a geodesic vector field\index{geodesic!vector field} $\wl'$, i.e.
+a vector field that obeys
+\be
+    \wnab_{\wl'}\, \wl' = 0 .
+\ee
+Indeed, Eqs.~(\ref{e:def:wl_rescale}) and
+(\ref{e:def:wl_geod_kappa}) imply
+\[
+    \wnab_{\wl'}\, \wl' = \alpha\left(
+        \wnab_{\wl}\, \alpha + \kappa \alpha \right)
+\]
+Hence, since $\alpha>0$,
+\[
+    \wnab_{\wl'}\, \wl' = 0  \iff  \wnab_{\wl}\, \ln \alpha = -\kappa .
+\]
+Therefore it suffices to solve $\wnab_{\wl}\, \ln \alpha = -\kappa$, which
+is a first-order ordinary differential equation along each field line of $\wl$
+to ensure that $\wl'$ is a geodesic vector field.
+The field lines of $\wl'$ are then null geodesics and $\wl'$ is the tangent
+vector to them associated with some affine parameter $\lambda$. Since
+$\wl$ is colinear to $\wl'$, it obviously share the same field lines.
+These field lines are called the
+\defin{null generators}\index{null!generator}\index{generator!of a null hypersurface}
+of the hypersurface $\Hor$.
 
+Hence, we have shown that
+\begin{quote}
+Any null hypersurface $\Hor$ is ruled by a family of null geodesics, called the
+null generators, and each vector field $\wl$ normal to $\Hor$ is
+tangent to these null geodesics.
+\end{quote}
 
 
 

@@ -40,7 +40,7 @@ homeomorphic to an open subset of $\R^n$.
 Property 1 excludes manifolds with ``forks'' and is very reasonable from a physical point of view: it allows to distinguish between two points even after a small perturbation.
 Property~2 excludes ``too large'' manifolds; in particular it permits setting
 up the theory of integration on manifolds. It also
-allows for a differentiable manifold of dimension $n$ to be embedded smoothly into the Euclidean space $\R^{2n}$
+allows for a smooth manifold of dimension $n$ to be embedded smoothly into the Euclidean space $\R^{2n}$
 (Whitney theorem\index{Whitney theorem}).
 Property~3 expresses the essence of a manifold: it means that, locally, one can label the points of $\M$ in a
 continuous way by $n$ real numbers $(x^\alpha)_{\alpha\in\{0,\ldots,n-1\}}$,
@@ -85,9 +85,8 @@ such that the union of all $\mathcal{U}_k$ covers $\M$:
 \ee
 
 The above definition of a manifold lies at the \emph{topological} level
-(cf.~Remark~\ref{r:bas:topol_manif}), meaning that one has the notion of continuity, but not of differentiability. To get the latter, one should rely on the differentiable structure of $\R^n$, via the atlases:
-a \defin{differentiable manifold}\index{differentiable!manifold}\index{manifold!differentiable --}
-or \defin{smooth manifold}\index{smooth!manifold}\index{manifold!smooth --},
+(cf.~Remark~\ref{r:bas:topol_manif}), meaning that one has the notion of continuity, but not of differentiability. To get the latter, one should rely on the smooth structure of $\R^n$, via the atlases:
+a \defin{smooth manifold}\index{smooth!manifold}\index{manifold!smooth --},
 is a manifold $\M$ equipped with an atlas
 $(\mathcal{U}_k,\Phi_k)_{1\leq k \leq K}$ such that for any non-empty intersection
 $\mathcal{U}_i \cap \mathcal{U}_j$, the mapping
@@ -99,37 +98,35 @@ $\mathcal{U}_i \cap \mathcal{U}_j$, the mapping
 is smooth (i.e. $C^\infty$).
 Note that the above mapping is from an open set of $\R^n$ to an open set of $\R^n$, so that the invoked differentiability is nothing but that of $\R^n$.
 The atlas $(\mathcal{U}_k,\Phi_k)_{1\leq k \leq K}$ is called a
-\defin{differentiable atlas}\index{differentiable!atlas}\index{atlas!differentiable}.
+\defin{smooth atlas}\index{smooth!atlas}\index{atlas!smooth --}.
 In the following, we consider only smooth manifolds.
-\begin{remark}
-We are using the word \emph{differentiable} for $C^\infty$, i.e. \emph{smooth}\index{smooth}.
-\end{remark}
-Given two differentiable manifolds, $\M$ and $\M'$, of
+
+Given two smooth manifolds, $\M$ and $\M'$, of
 respective dimensions $n$ and $n'$, we say that a map
-$\phi : \M \rightarrow \M'$ is \defin{differentiable map}\index{differentiable!map} iff in some (and hence all, thanks to the smoothness of (\ref{e:bas:transition_map})) coordinate systems
-of $\M$ and $\M'$ belonging to the differentiable atlases of $\M$ and $\M'$,
-the coordinates of the image $\phi(p)$ are differentiable functions $\R^n\rightarrow \R^{n'}$ of the coordinates of $p$.
+$\phi : \M \rightarrow \M'$ is \defin{smooth map}\index{smooth!map} iff in some (and hence all, thanks to the smoothness of (\ref{e:bas:transition_map})) coordinate systems
+of $\M$ and $\M'$ belonging to the smooth atlases of $\M$ and $\M'$,
+the coordinates of the image $\phi(p)$ are smooth functions $\R^n\rightarrow \R^{n'}$ of the coordinates of $p$.
 The map $\phi$ is said to be a \defin{diffeomorphism}\index{diffeomorphism} iff
-it is bijective and both $\phi$ and $\phi^{-1}$ are differentiable. This implies $n=n'$.
+it is bijective and both $\phi$ and $\phi^{-1}$ are smooth. This implies $n=n'$.
 
 \begin{remark}
-Strictly speaking a differentiable manifold is a pair $(\M,\mathcal{A})$  where
-$\mathcal{A}$ is a (maximal) differentiable atlas on $\M$.
+Strictly speaking a smooth manifold is a pair $(\M,\mathcal{A})$  where
+$\mathcal{A}$ is a (maximal) smooth atlas on $\M$.
 Indeed a given (topological) manifold $\M$
 can have non-equivalent differentiable structures, as shown by Milnor (1956) \cite{Milno56}
-in the specific case of the unit sphere of dimension~7, $\mathbb{S}^7$: there exist differentiable manifolds, the so-called \emph{exotic spheres}\index{exotic!sphere},
+in the specific case of the unit sphere of dimension~7, $\mathbb{S}^7$: there exist smooth manifolds, the so-called \emph{exotic spheres}\index{exotic!sphere},
 that are homeomorphic to $\mathbb{S}^7$ but not diffeomorphic
-to $\mathbb{S}^7$.  On the other side, for $n\leq 6$, there is a unique differentiable
+to $\mathbb{S}^7$.  On the other side, for $n\leq 6$, there is a unique smooth
 structure for the sphere $\mathbb{S}^n$.
-Moreover, any manifold of dimension $n\leq 3$ admits a unique differentiable structure.
-Amazingly, in the case of $\R^n$, there exists a unique differentiable structure (the standard one) for any $n\not=4$, but for $n=4$ (the spacetime case !) there exist uncountably many non-equivalent differentiable structures, the so-called
+Moreover, any manifold of dimension $n\leq 3$ admits a unique smooth structure.
+Amazingly, in the case of $\R^n$, there exists a unique smooth structure (the standard one) for any $n\not=4$, but for $n=4$ (the spacetime case !) there exist uncountably many non-equivalent smooth structures, the so-called
 \emph{exotic $\R^4$}\index{exotic!$\R^4$} \cite{Taube87}.
 \end{remark}
 
 \subsection{Vectors on a manifold} \label{s:bas:vectors}
 
 On a manifold, vectors are defined as tangent vectors to a curve.
-A \defin{curve}\index{curve} is a subset $\mathcal{C}\subset \M$ which is the image of a differentiable function $\R  \rightarrow  \M$:
+A \defin{curve}\index{curve} is a subset $\mathcal{C}\subset \M$ which is the image of a smooth function $\R  \rightarrow  \M$:
 \be
 	\begin{array}{rccl}
 	P: & \R & \longrightarrow & \M \\
@@ -146,7 +143,7 @@ defined by $n$ functions $X^\alpha : \ \R\rightarrow \R$ such that
 \ee
 
 A \defin{scalar field}\index{scalar!field} on $\M$ is a function
-$f:\ \M \rightarrow \R$. In practice, we will always consider differentiable scalar fields. At a point $p=P(\lambda)\in\mathcal{C}$, the \defin{vector tangent to $\mathcal{C}$}\index{vector!tangent to a curve}\index{tangent!vector} associated with the parametrization
+$f:\ \M \rightarrow \R$. In practice, we will always consider smooth scalar fields. At a point $p=P(\lambda)\in\mathcal{C}$, the \defin{vector tangent to $\mathcal{C}$}\index{vector!tangent to a curve}\index{tangent!vector} associated with the parametrization
 $P$ is the operator $\w{v}$ which maps every scalar field $f$ to the real number
 \be \label{e:bas:def_vector}
   \w{v}(f) = \left. \frac{\D f}{\D \lambda} \right|_{\mathcal{C}} :=
@@ -439,12 +436,12 @@ With respect to a coordinate system $(x^\alpha)$, it is not difficult, via
 
 \subsection{Immersions, embeddings and submanifolds} \label{s:bas:embed}
 
-Let $\M$ and $\mathscr{N}$ be two differentiable manifolds
+Let $\M$ and $\mathscr{N}$ be two smooth manifolds
 and
 \be
     \Phi:\ \M \longrightarrow \mathscr{N}
 \ee
-be a differentiable map (cf. Sec.~\ref{s:bas:def_manif}).
+be a smooth map (cf. Sec.~\ref{s:bas:def_manif}).
 At a given point $p\in\M$, the \defin{differential}\index{differential!of a smooth map}
 of $\Phi$ is the linear map
 \be
@@ -467,7 +464,7 @@ that the definition (\ref{e:bas:def_diff_map}) is equivalent to
         \w{v}\left(f\circ \Phi \right) .
 \ee
 
-The differentiable map $\Phi$ is called an \defin{immersion}\index{immersion} iff
+The smooth map $\Phi$ is called an \defin{immersion}\index{immersion} iff
 the differential $\left.\D\Phi \right| _p$ is injective at any point $p\in\M$.
 Moreover $\Phi$ is called an \defin{embedding}\index{embedding} iff (i) $\Phi$
 is an immersion and (ii) $\Phi$ is a homeomorphism $\M \rightarrow \Phi(\M)$.
@@ -475,7 +472,7 @@ Note that an embedding is necessarily injective, contrary to an immersion.
 
 A \defin{submanifold} of $\M$ is a subset $\mathscr{S}\subset \M$ such
 that (i) $\mathscr{S}$ is a manifold in the subspace topology and (ii)
-$\mathscr{S}$ has a differentiable structure with respect to which
+$\mathscr{S}$ has a smooth structure with respect to which
 the inclusion map $\iota: \mathscr{S} \rightarrow \M$ is an embedding.
 One can show that $\mathscr{S}$ is a submanifold of $\M$ iff there exists
 a manifold $\mathscr{S}_0$ (a priori not included in $\M$) and an
@@ -506,7 +503,7 @@ a curve with self-crossing points is not a submanifold.
 
 \subsection{Metric tensor} \label{s:bas:metric}
 
-A \defin{pseudo-Riemannian manifold}\index{pseudo-Riemannian manifold}\index{manifold!pseudo-Riemannian} is a pair $(\M,\w{g})$ where $\M$ is a differentiable manifold
+A \defin{pseudo-Riemannian manifold}\index{pseudo-Riemannian manifold}\index{manifold!pseudo-Riemannian} is a pair $(\M,\w{g})$ where $\M$ is a smooth manifold
 and $\w{g}$ is a \defin{metric tensor}\index{metric!tensor}\index{metric} on $\M$,
 i.e. a tensor field obeying the following properties:
 \begin{enumerate}
@@ -757,7 +754,7 @@ pseudo-Riemannian manifold. One of them depends on the metric:
 the \emph{covariant derivative} $\wnab$ (Sec.~\ref{s:bas:cov_deriv}).
 Another one depends on the choice of a
 reference vector field: the \emph{Lie derivative} $\Lie{}$ (Sec.~\ref{s:bas:Lie}).
-The third one depends only on the differentiable-manifold structure, i.e.
+The third one depends only on the smooth-manifold structure, i.e.
 is independent of any (metric or vector) field, but, on the other side,
 it is applicable
 only to a specific kind of tensor fields: the $p$-forms; it is the
