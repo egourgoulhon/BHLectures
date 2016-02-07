@@ -402,9 +402,28 @@ a smooth scalar field $u:\ \mathscr{U} \rightarrow \R$ such that
 \be \label{e:def:Hor_u_zero}
     \forall p \in \mathscr{U},\quad p\in \Hor \iff u(p) = 0 .
 \ee
-For example, if $\Hor$ is a light cone in Minkowsky spacetime and
-$(t,r,\th,\ph)$ are standard spherical coordinates, we may choose
-the retarded time coordinate $u=t-r$.
+\begin{example} \label{x:def:null_hyp}
+A very simple example of null hypersurface is a null hyperplane in
+the 4-dimensional Minkowski spacetime. If $(t,x,y,z)$ are standard Minkowskian
+coordinates, the choice of the scalar field
+\[
+    u(t,x,y,z) = t - x
+\]
+defines a null hyperplane by $u=0$.
+\end{example}
+
+\begin{example} \label{x:def:light_cone}
+Another simple example of null hypersurface, still in the 4-dimensional Minkowski spacetime,
+is the future sheet $\Hor$ of a light cone\index{light!cone}\index{cone!light --}, also
+called \defin{future light cone}\index{future!light cone}. Note that we have
+to take out the apex from $\Hor$, in order to have a regular hypersurface.
+In the  Minkowskian coordinates $(t,x,y,z)$, the choice of the
+``retarded time''\index{retarded!time}
+\[
+    u(t,x,y,z) = t - \sqrt{x^2+y^2+z^2}
+\]
+defines a future light cone by $u=0$.
+\end{example}
 
 Let $\wl$ be a vector field normal to $\Hor$. Since $\Hor$ is a null hypersurface,
 $\wl$ is a null vector:
@@ -442,6 +461,16 @@ The vector field $\wl$ can then be viewed as defined in the part of $\M$
 foliated by $(\Hor_u)$, such that at each point in this region, $\wl$
 is null and normal to $\Hor_u$ for some value of $u$.
 
+\begin{example}
+The scalar field $u$ introduced in Example~\ref{x:def:null_hyp}
+(null hyperplane) does define a family of null hypersurfaces
+$(\Hor_u)$. A counter-example would be $u(t,x,y,z)=(t-x)(1+x^2)$, since
+$u=a$ does not define a null hypersurface except for $a=0$.
+Similarly, the scalar field $u$ of
+Example~\ref{x:def:light_cone} (light cone) does define a family of null
+hypersurfaces $(\Hor_u)$.
+\end{example}
+
 Obviously the family $(\Hor_u)$ is non-unique but all geometrical
 quantities that we shall introduce hereafter do not depend upon the choice
 of the foliation $\Hor_u$ once they are evaluated at $\Hor$.
@@ -464,6 +493,8 @@ We have chosen the
 coefficient linking $\wl$ and $\vw{\nabla} u $ to be strictly positive,
 i.e. under the form of an exponential. This is always possible by a suitable
 choice of the scalar field $u$.
+
+
 
 \subsubsection{Frobenius identity}
 
@@ -582,24 +613,88 @@ of null hypersurfaces. For instance the interior of a future null cone
 in Minkowski spacetime is a region from which no particle may escape,
 but since the null cone is expanding, particles can travel arbitrary far from
 the center. Therefore a null cone does not define a black hole.
-Let us then consider the expansion of null hypersurfaces.
+A key parameter is then the expansion of null hypersurfaces, which we shall
+introduce here.
 
 To encompass the idea that an event horizon delimitates a
 region of spacetime of compact spacelike sections, we shall assume
 that the boundary of these sections have the topology of a sphere, more
 precisely the $(n-2)$-dimensional sphere $\mathbb{S}^{n-2}$ in a $n$-dimensional
 spacetime. The topology of $\Hor$ is then that of a ``tube'' or ``cylinder'':
-\be
+\be \label{e:def:H_topology}
     \Hor \simeq \R \times \mathbb{S}^{n-2}.
 \ee
 For the standard spacetime dimension ($n=4$), this is of course
 $\Hor \simeq \R \times \mathbb{S}^{2}$.
 
-To give some concretness at the ``spacelike sections'' of $\Hor$, let us
-assume that
+Let us define a \defin{spacelike section}\index{section!of horizon}\index{spacelike!section}
+of the null hypersurface $\Hor$
+as a submanifold $\Sp$ of $\Hor$ of codimension 1,
+such that each null generator of $\Hor$ intersect $\Sp$ once, and only once.
+Given $\Hor$'s topology (\ref{e:def:H_topology}), this means that $\Sp$ has the
+topology of the $(n-2)$-dimensional sphere:
+\be
+    \Sp \simeq \mathbb{S}^{n-2}.
+\ee
+A first important property of $\Sp$ is to be spacelike, i.e. every vector
+tangent to $\Sp$ must be spacelike. This follows from the following lemma:
+\begin{quote}
+Every nonzero vector tangent to a null hypersurface is either spacelike or null.
+Moreover, in the latter case, it is tangent to a null generator (i.e. it is normal
+to the hypersurface).
+\end{quote}
+Let $p \in \Sp$ and $\w{v}\in T_p\M$ be a nonzero vector tangent to $\Sp$.
+The above lemma implies that $\w{v}$ is either spacelike or tangent to the
+null generator $\Li$ going through $p$, but then $\Li$ would be tangent to $\Sp$,
+which is not allowed, given the definition of a spacelike section. We conclude
+that $\w{p}$ is necessarily spacelike, which proves that $\Sp$ is a spacelike
+submanifold.
 
+Let us denote by $\w{q}$ the
+\defin{metric induced on $\Sp$ by $\w{g}$}\index{induced!metric}\index{metric!induced --},
+i.e. the bilinear form defined by
+\be
+    \forall (\w{u},\w{v})\in T_p\Sp\times T_p\Sp, \quad
+     \w{q}(\w{u},\w{v}) = \w{g}(\w{u},\w{v}) .
+\ee
+Saying that $\Sp$ is spacelike is equivalent to saying that $\w{q}$ is
+positive definite, i.e.
+\be
+    \forall \w{v}\in T_p\Sp,\quad
+    \w{q}(\w{v},\w{v}) \geq 0 \quad \mbox{and} \quad
+    \w{q}(\w{v},\w{v}) = 0 \iff \w{v} = 0.
+\ee
+In other words, $(\Sp, \w{q})$ is a Riemannian manifold.
 
-
+An important consequence of $\Sp$ being spacelike is that, at each point
+$p\in \Sp$, the tangent space $T_p\Sp$ has an orthogonal complement
+$T_p^\perp\Sp$ which is a timelike plane and is such that
+$T_p\M$ is the direct sum of $T_p\Sp$ and $T_p^\perp\Sp$ :
+\be
+    \forall p\in \Sp,\quad T_p\M = T_p\Sp \oplus T_p^\perp\Sp .
+\ee
+That $T_p^\perp\Sp$ is timelike is necessary for the signature of $\w{g}$
+to be $(-,+,\ldots,+)$. This can be seen by constructing an $\w{g}$-orthogonal
+basis of $T_p\M$ by the Gram-Schmidt process, starting form a
+$\w{q}$-orthogonal basis of $T_p\Sp$. Since $\dim T_p\Sp = n-2$, we have
+$\dim T_p^\perp\Sp = 2$, i.e. $T_p^\perp\Sp$ is a timelike 2-plane.
+In other words, the metric induced by $\w{g}$ on
+$T_p^\perp\Sp$ is Lorentzian:
+\be
+    \mathrm{sign}\, \left.\w{g}\right|_{T_p^\perp\Sp} = (-,+) .
+\ee
+By definition, the null normal $\wl$ is orthogonal to any vector
+tangent to $\Sp$, i.e. $\wl \in T_p^\perp\Sp$.
+Since $T_p^\perp\Sp$ is a timelike plane, it has two independent null directions,
+which can be seen as the two intersection of the null cone at $p$ with
+the 2-plane $T_p^\perp\Sp$ (cf. Fig.~??).
+Let us denote by $\w{k}$ a null vector in the null direction that is not
+defined by $\wl$. By a proper rescaling $\w{k}\mapsto \alpha\w{k}$,
+we may choose $\w{k}$ so that
+\be
+        \w{k}\cdot\wl = -1 .
+\ee
+Given $\wl$ and $\Sp$, this fixes the null vector $\w{k}$ uniquely.
 
 
 
