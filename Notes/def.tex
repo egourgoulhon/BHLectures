@@ -82,7 +82,7 @@ is exerted on it, the energy-momentum vector must be a
 \be \label{e:def:p_geodesic}
     \encadre{\wnab_{\w{p}}\,  \w{p} = 0 } ,
 \ee
-or, in terms of components
+or, in index notation,
 \be
     p^\mu \nabla_\mu p^\alpha = 0 .
 \ee
@@ -499,7 +499,7 @@ choice of the scalar field $u$.
 \subsubsection{Frobenius identity}
 
 Let us take the metric dual of relation (\ref{e:def:wl_rho_u}): it writes
-$\uu{\el} = e^\rho \, \wnab u$, or, in terms of components:
+$\uu{\el} = e^\rho \, \wnab u$, or, in index notation,
 \be
     \el_\alpha = e^\rho \, \nabla_\alpha u .
 \ee
@@ -636,7 +636,8 @@ topology of the $(n-2)$-dimensional sphere:
 \be
     \Sp \simeq \mathbb{S}^{n-2}.
 \ee
-A first important property of $\Sp$ is to be spacelike, i.e. every vector
+A first important property of $\Sp$ is to be spacelike (hence its name!),
+i.e. every vector
 tangent to $\Sp$ must be spacelike. This follows from the following lemma:
 \begin{quote}
 Every nonzero vector tangent to a null hypersurface is either spacelike or null.
@@ -647,13 +648,13 @@ Let $p \in \Sp$ and $\w{v}\in T_p\M$ be a nonzero vector tangent to $\Sp$.
 The above lemma implies that $\w{v}$ is either spacelike or tangent to the
 null generator $\Li$ going through $p$, but then $\Li$ would be tangent to $\Sp$,
 which is not allowed, given the definition of a spacelike section. We conclude
-that $\w{p}$ is necessarily spacelike, which proves that $\Sp$ is a spacelike
+that $\w{v}$ is necessarily spacelike, which proves that $\Sp$ is a spacelike
 submanifold.
 
 Let us denote by $\w{q}$ the
 \defin{metric induced on $\Sp$ by $\w{g}$}\index{induced!metric}\index{metric!induced --},
-i.e. the bilinear form defined by
-\be
+i.e. the bilinear form defined at any point $p\in\Sp$ by
+\be \label{e:def:def_q_S}
     \forall (\w{u},\w{v})\in T_p\Sp\times T_p\Sp, \quad
      \w{q}(\w{u},\w{v}) = \w{g}(\w{u},\w{v}) .
 \ee
@@ -664,14 +665,14 @@ positive definite, i.e.
     \w{q}(\w{v},\w{v}) \geq 0 \quad \mbox{and} \quad
     \w{q}(\w{v},\w{v}) = 0 \iff \w{v} = 0.
 \ee
-In other words, $(\Sp, \w{q})$ is a Riemannian manifold.
+In other words, $(\Sp, \w{q})$ is a Riemannian manifold (cf Sec.~\ref{s:bas:signature} in Appendix~\ref{s:bas}).
 
 An important consequence of $\Sp$ being spacelike is that, at each point
 $p\in \Sp$, the tangent space $T_p\Sp$ has an orthogonal complement
-$T_p^\perp\Sp$ which is a timelike plane and is such that
+$T_p^\perp\Sp$,  which is a timelike plane such that
 $T_p\M$ is the direct sum of $T_p\Sp$ and $T_p^\perp\Sp$ :
-\be
-    \forall p\in \Sp,\quad T_p\M = T_p\Sp \oplus T_p^\perp\Sp .
+\be \label{e:def:TM_direct_sum}
+   \encadre{ \forall p\in \Sp,\quad T_p\M = T_p\Sp \oplus T_p^\perp\Sp }.
 \ee
 That $T_p^\perp\Sp$ is timelike is necessary for the signature of $\w{g}$
 to be $(-,+,\ldots,+)$. This can be seen by constructing an $\w{g}$-orthogonal
@@ -686,27 +687,150 @@ $T_p^\perp\Sp$ is Lorentzian:
 By definition, the null normal $\wl$ is orthogonal to any vector
 tangent to $\Sp$, i.e. $\wl \in T_p^\perp\Sp$.
 Since $T_p^\perp\Sp$ is a timelike plane, it has two independent null directions,
-which can be seen as the two intersection of the null cone at $p$ with
+which can be seen as the two intersections of the null cone at $p$ with
 the 2-plane $T_p^\perp\Sp$ (cf. Fig.~??).
-Let us denote by $\w{k}$ a null vector in the null direction that is not
-defined by $\wl$. By a proper rescaling $\w{k}\mapsto \alpha\w{k}$,
+Let us denote by $\w{k}$ a null vector in the null direction of $T_p^\perp\Sp$
+that is not that of $\wl$. By a proper rescaling $\w{k}\mapsto \alpha\w{k}$,
 we may choose $\w{k}$ so that
-\be
+\be \label{e:def:k_el_minus_one}
         \w{k}\cdot\wl = -1 .
 \ee
 Given $\wl$ and $\Sp$, this fixes the null vector $\w{k}$ uniquely.
+Since $\wl$ and $\w{k}$ are nonzero independent vectors of $T_p^\perp\Sp$, we
+have
+\be \label{e:def:TSperp_Span_k_l}
+    T_p^\perp\Sp = \mathrm{Span}\left( \wl, \w{k} \right) .
+\ee
+
+A priori, the bilinear form $\w{q}$ is defined via (\ref{e:def:def_q_S}) only on $T_p\Sp$.
+However, thanks to the orthogonal decomposition (\ref{e:def:TM_direct_sum}),
+we can extend it to all vectors of $T_p\M$ by requiring
+\be \label{e:def:q_zero_TSperp}
+    \forall \w{v}\in T_p^\perp\Sp, \quad \w{q}(\w{v}, .) = 0 .
+\ee
+Indeed, given a pair $(\w{u},\w{v})$ of vectors in $T_p\M$, (\ref{e:def:TM_direct_sum})
+implies that there is the unique decomposition
+\bea
+  & & \w{u} = \w{u}^\parallel + \w{u}^\perp,\quad \mbox{with}\quad  \w{u}^\parallel \in T_p\Sp,
+    \  \w{u}^\perp \in T_p^\perp\Sp \label{e:def:decomp_u} \\
+  & & \w{v} = \w{v}^\parallel + \w{v}^\perp,\quad \mbox{with}\quad  \w{v}^\parallel \in T_p\Sp,
+    \  \w{v}^\perp \in T_p^\perp\Sp .\label{e:def:decomp_v}
+\eea
+Then, using the bilinearity of $\w{q}$ and the property (\ref{e:def:q_zero_TSperp}),
+we obtain
+\be \label{e:def:q_all_vectors}
+    \forall (\w{u},\w{v})\in T_p\M\times T_p\M, \quad
+     \w{q}(\w{u},\w{v}) = \w{q}(\w{u}^\parallel,\w{v}^\parallel) .
+\ee
+Equation~(\ref{e:def:q_all_vectors}), along with (\ref{e:def:def_q_S}), can
+be considered as the definition of $\w{q}$. An equivalent definition,
+which provides an explicit expression of $\w{q}$, is
+\be \label{e:def:q_g_k_l}
+    \encadre{ \w{q} = \w{g} + \uu{\el}\otimes\uu{k} + \uu{k}\otimes\uu{\el} } ,
+\ee
+or, in index notation,
+\[
+    q_{\alpha\beta} = g_{\alpha\beta} + \el_\alpha k_\beta + k_\alpha \el_\beta .
+\]
+Let us show that (\ref{e:def:q_g_k_l}) implies
+(\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
+Starting from (\ref{e:def:q_g_k_l}), we have for any pair of vectors $(\w{u},\w{v})$
+in $T_p\M$,
+\be \label{e:def:q_u_v_k_l}
+    \w{q}(\w{u},\w{v}) = \w{u}\cdot\w{v} + (\wl\cdot\w{u})(\w{k}\cdot\w{v})
+    + (\w{k}\cdot\w{u})(\wl\cdot\w{v}) .
+\ee
+Now, thanks to (\ref{e:def:TSperp_Span_k_l}), we may write the
+orthogonal decompositions
+(\ref{e:def:decomp_u})-(\ref{e:def:decomp_v}) as
+\[
+    \w{u} = \w{u}^\parallel + u^0 \wl + u^1 \w{k} \quad\mbox{and}\quad
+    \w{v} = \w{v}^\parallel + v^0 \wl + v^1 \w{k} .
+\]
+Using $\wl\cdot\wl=0$, $\w{k}\cdot\w{k}=0$ and $\wl\cdot\w{k}=-1$
+[Eq.~(\ref{e:def:k_el_minus_one})], we have then
+\bea
+ & & \w{u}\cdot\w{v} = \w{u}^\parallel \cdot\w{v}^\parallel - u^0 v^1 - u^1 v^0 \nonumber \\
+ & & \wl\cdot\w{u} = -u^1, \quad \w{k}\cdot\w{u} = -u^0, \nonumber \\
+ & & \wl\cdot\w{v} = -v^1, \quad \w{k}\cdot\w{v} = -v^0 .  \nonumber
+\eea
+Hence (\ref{e:def:q_u_v_k_l}) results in
+\bea
+    \w{q}(\w{u},\w{v}) & = & \w{u}^\parallel \cdot\w{v}^\parallel - u^0 v^1 - u^1 v^0
+            + u^1 v^0 + u^0 v^1 \nonumber \\
+                & = & \w{u}^\parallel \cdot\w{v}^\parallel,  \nonumber
+\eea
+which is nothing but (\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
+
+Having extended the definition of $\w{q}$ via (\ref{e:def:q_g_k_l}), we notice
+that the metric dual of $\w{q}$, i.e. the tensor of type $(1,1)$ defined by
+by
+\be
+    \vw{q} = \mathrm{Id} + \wl\otimes \uu{k} + \w{k}\otimes \uu{\el},
+\ee
+or, in index notation,
+\[
+    q^\alpha_{\ \, \beta} = \delta^\alpha_{\ \, \beta}
+        + \el^\alpha \, k_\beta + k^\alpha \, \wl_\beta ,
+\]
+is nothing but the \defin{orthogonal projector} onto the spacelike section $\Sp$:
+\be
+    \forall \w{v}\in T_p\M, \quad \vw{q}(\w{v}) = \w{v}^\parallel .
+\ee
+The demonstration follows from the decomposition
+$\w{v} = \w{v}^\parallel + v^0 \wl + v^1 \w{k}$ used above.
+In particular, we have
+\be
+    \vw{q}(\wl) = 0 \quad\mbox{and}\quad \vw{q}(\w{k}) = 0 .
+\ee
+
+%%%%
+
+As stressed by (\ref{e:def:TSperp_Span_k_l}), $(\wl,\w{k})$ forms a null
+basis of $T_p^\perp\Sp$. One can construct from it an \emph{orthonormal}
+basis $(\w{n},\w{s})$ as follows:
+\be
+    \left\{ \begin{array}{lcl}
+        \w{n} & = & \frac{1}{2} \wl + \w{k} \\
+        \w{s} & = & \frac{1}{2} \wl - \w{k} .
+        \end{array}\right.
+\ee
+This system is easily inverted:
+\be
+    \left\{ \begin{array}{lcl}
+        \wl & = & \w{n} + \w{s} \\
+        \w{k} & = & \frac{1}{2} \left( \w{n} - \w{s} \right).
+        \end{array}\right.
+\ee
 
 
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{def_expansion.pdf}}
+\caption[]{\label{f:def:expansion} \footnotesize
+Lie dragging of the surface $\Sp$ along $\wl$ by a small parameter $\varepsilon$.}
+\end{figure}
 
+Let us define the expansion of the spacelike section $\Sp$ along the vector
+field $\wl$ as follows. Given an infinitesimal parameter $\varepsilon>0$, take a point
+$p\in \Sp$ and displace it by the infinitesimal vector $\varepsilon \wl$, thereby getting
+a nearby point $p'$ (cf. Fig.~\ref{f:def:expansion}).
+Since $\wl$ is tangent to $\Hor$ and $p\in\Hor$, we have $p'\in\Hor$.
+By repeating this for each point in $\Sp$,
+keeping the value of $\varepsilon$ fixed, we define a new codimension-2 surface
+$\Sp'$ (cf. Fig.~\ref{f:def:expansion}). One says that $\Sp'$ is obtained
+from $\Sp$ by \defin{Lie dragging along $\wl$ by the parameter $\varepsilon$}\index{Lie!dragging}.
+Since $p'\in\Hor$ for every $p\in\Sp$, we have $\Sp'\subset \Hor$.
 
-
-
-
-
-
-
-
-
+At each point $p\in\Sp$, the \defin{expansion of $\Sp$ along $\wl$} is defined from the
+rate of change $\theta_{(\wl)}$ of the area $\delta A$ of an element of surface of
+$\Sp$ around $p$:
+\be
+    \theta_{(\wl)} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \frac{\delta A' - \delta A}{\delta A} .
+\ee
+In the above formula, $\delta A'$ stands for the area of the
+surface element $\delta S'\subset \Sp'$ that is obtained from $\delta S$ by
+Lie dragging along $\wl$ by the parameter $\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
 
 
 
