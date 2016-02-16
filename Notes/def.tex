@@ -787,8 +787,8 @@ In particular, we have
 %%%%
 
 As stressed by (\ref{e:def:TSperp_Span_k_l}), $(\wl,\w{k})$ forms a null
-basis of $T_p^\perp\Sp$. One can construct from it an \emph{orthonormal}
-basis $(\w{n},\w{s})$ as follows:
+basis\index{null!basis}\index{basis!null --} of $T_p^\perp\Sp$. One can construct
+from it an \emph{orthonormal} basis $(\w{n},\w{s})$ as follows:
 \be
     \left\{ \begin{array}{lcl}
         \w{n} & = & \frac{1}{2} \wl + \w{k} \\
@@ -796,18 +796,41 @@ basis $(\w{n},\w{s})$ as follows:
         \end{array}\right.
 \ee
 This system is easily inverted:
-\be
+\be \label{e:def:lk_ns}
     \left\{ \begin{array}{lcl}
         \wl & = & \w{n} + \w{s} \\
         \w{k} & = & \frac{1}{2} \left( \w{n} - \w{s} \right).
         \end{array}\right.
 \ee
+Since $\wl\cdot\wl=0$, $\w{k}\cdot\w{k}=0$ and $\wl\cdot\w{k}=-1$, it is
+easy to check that:
+\be
+    \w{n}\cdot\w{n}=-1,\quad \w{s}\cdot\w{s}=1 \quad\mbox{and}\quad
+    \w{n}\cdot\w{s}=0.
+\ee
+In other words, $(\w{n},\w{s})$ is an orthonormal basis\index{orthonormal!basis}\index{basis!orthonormal --} of
+the Lorentzian plane $(T_p^\perp\Sp,\w{q})$; in particular:
+\be
+    T_p^\perp\Sp = \mathrm{Span}\left( \w{n}, \w{s} \right) .
+\ee
 
+If we substitute (\ref{e:def:lk_ns}) for $\wl$ and $\w{k}$ in (\ref{e:def:q_g_k_l}),
+we get
+\[
+    \w{q} = \w{g} + \frac{1}{2} (\uu{n}+\uu{s})\otimes(\uu{n}-\uu{s})
+    + \frac{1}{2} (\uu{n}-\uu{s})\otimes(\uu{n}+\uu{s}) .
+\]
+Expanding and simplifying leads to
+\be
+    \w{q} = \w{g} + \uu{n}\otimes\uu{n} - \uu{s}\otimes\uu{s} .
+\ee
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{def_expansion.pdf}}
 \caption[]{\label{f:def:expansion} \footnotesize
-Lie dragging of the surface $\Sp$ along $\wl$ by a small parameter $\varepsilon$.}
+Lie dragging of the surface $\Sp$ along $\wl$ by the small parameter $\varepsilon$.
+$\Sp$ is drawn as a 1-dimensional submanifold, while it is actually a
+$(n-2)$-dimensional one, $n$ being the spacetime dimension.}
 \end{figure}
 
 Let us define the expansion of the spacelike section $\Sp$ along the vector
@@ -822,7 +845,7 @@ from $\Sp$ by \defin{Lie dragging along $\wl$ by the parameter $\varepsilon$}\in
 Since $p'\in\Hor$ for every $p\in\Sp$, we have $\Sp'\subset \Hor$.
 
 At each point $p\in\Sp$, the \defin{expansion of $\Sp$ along $\wl$} is defined from the
-rate of change $\theta_{(\wl)}$ of the area $\delta A$ of an element of surface of
+rate of change $\theta_{(\wl)}$ of the area $\delta A$ of an element of surface $\delta S$ of
 $\Sp$ around $p$:
 \be
     \theta_{(\wl)} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
@@ -831,6 +854,10 @@ $\Sp$ around $p$:
 In the above formula, $\delta A'$ stands for the area of the
 surface element $\delta S'\subset \Sp'$ that is obtained from $\delta S$ by
 Lie dragging along $\wl$ by the parameter $\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
+
+Let us assume that the element of surface of $\Sp$ is a $(n-2)$-dimensional
+parallelogram delimited by some infinitesimal displacement vectors
+$\D\w{x}_{(1)},\ldots,\D\w{x}_{(n-2)}$
 
 
 
