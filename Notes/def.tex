@@ -732,6 +732,7 @@ or, in index notation,
 \[
     q_{\alpha\beta} = g_{\alpha\beta} + \el_\alpha k_\beta + k_\alpha \el_\beta .
 \]
+\begin{proof}
 Let us show that (\ref{e:def:q_g_k_l}) implies
 (\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
 Starting from (\ref{e:def:q_g_k_l}), we have for any pair of vectors $(\w{u},\w{v})$
@@ -761,6 +762,7 @@ Hence (\ref{e:def:q_u_v_k_l}) results in
                 & = & \w{u}^\parallel \cdot\w{v}^\parallel,  \nonumber
 \eea
 which is nothing but (\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
+\end{proof}
 
 Having extended the definition of $\w{q}$ via (\ref{e:def:q_g_k_l}), we notice
 that the metric dual of $\w{q}$, i.e. the tensor of type $(1,1)$ defined by
@@ -789,7 +791,7 @@ In particular, we have
 As stressed by (\ref{e:def:TSperp_Span_k_l}), $(\wl,\w{k})$ forms a null
 basis\index{null!basis}\index{basis!null --} of $T_p^\perp\Sp$. One can construct
 from it an \emph{orthonormal} basis $(\w{n},\w{s})$ as follows:
-\be
+\be \label{e:def:ns_lk}
     \left\{ \begin{array}{lcl}
         \w{n} & = & \frac{1}{2} \wl + \w{k} \\
         \w{s} & = & \frac{1}{2} \wl - \w{k} .
@@ -855,12 +857,60 @@ In the above formula, $\delta A'$ stands for the area of the
 surface element $\delta S'\subset \Sp'$ that is obtained from $\delta S$ by
 Lie dragging along $\wl$ by the parameter $\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
 
-Let us assume that the element of surface of $\Sp$ is a $(n-2)$-dimensional
+For concreteness, let us assume that the element of surface $\delta S \subset\Sp$ is a $(n-2)$-dimensional
 parallelogram delimited by some infinitesimal displacement vectors
-$\D\w{x}_{(1)},\ldots,\D\w{x}_{(n-2)}$
+$\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}$. The area of $\delta S$ is then
+\be \label{e:def:A_wepsS_dx}
+    \delta A = \wepsS(\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}),
+\ee
+where $\wepsS$ is the Levi-Civita tensor\index{Levi-Civita!tensor}
+associated with the metric $\w{q}$
+in $\Sp$ (cf. Sec.~\ref{s:bas:Levi-Civita_tensor} in Appendix~\ref{s:bas}).
+Since $\w{q}$ is the metric induced by $\w{g}$ in $\Sp$ and $(\w{n},\w{s})$
+is an orthonormal basis of $T_p^\perp \Sp$, $\wepsS$ is actually the
+alternating form induced on $\Sp$ by the spacetime Levi-Civita tensor
+$\weps$:
+\be \label{e:def:epsS_ns}
+    \encadre{ \wepsS = \weps(\w{n},\w{s},\ldots) },
+\ee
+or, in index notation,
+\[
+    \epsS_{\alpha_1\cdots\alpha_{n-2}} = \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}} n^\mu s^\nu .
+\]
+\begin{proof}
+To demonstrate (\ref{e:def:epsS_ns}), it sufficies to note that its right-hand side
+defines a fully antisymmetric $(n-2)$-linear form on $T_p\Sp$. Since the space
+of such forms is 1-dimensional (for $\dim T_p\Sp = n-2$), we have then
+necessarily $\wepsS = a \weps$ for some proportionality factor $a$. Since
+$\weps(\w{n},\w{s},\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)})$ is the volume
+of the $n$-parallelepiped construted on the vectors $\w{n},\w{s},\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}$ and $\w{n}$ and $\w{s}$ are unit-length vectors for the metric $\w{g}$,
+we have
+\[
+    \weps(\w{n},\w{s},\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}) = \delta A.
+\]
+This implies that $a=1$, thereby establishing (\ref{e:def:epsS_ns}).
+\end{proof}
+An alternative expression of $\wepsS$ is obtained by substituting (\ref{e:def:ns_lk})
+for $\w{n}$ and $\w{s}$ in (\ref{e:def:epsS_ns}). Thanks to the multilinearity
+and antisymmetry of $\weps$, we get
+\be
+    \encadre{ \wepsS = \weps(\w{k},\wl,\ldots) } .
+\ee
 
-
-
+Let us consider in some vicinity of $\Sp$ a coordinate system
+\[
+    x^\alpha = \left(\varepsilon, u, x^2,\ldots, x^{n-1}\right)
+\]
+that is adapted to $\Sp$ and $\wl$ in the sense that
+\be
+    \wl = \der{}{\varepsilon}
+\ee
+and the points of $\Sp$ are defined by $(\varepsilon,u) = (0,0)$.
+Let us choose the infinitesimal displacement vectors in (\ref{e:def:A_wepsS_dx})
+according to this coordinate system:
+\be
+    \D x_{(i)}^a = (0,\ldots,0,1,0,\ldots,0)
+\ee
 
 
 
