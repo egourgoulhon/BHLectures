@@ -487,27 +487,28 @@ a normal vector field to $\Hor$. By uniqueness of the normal direction, it
 must then be colinear to $\wl$. Therefore, there must exist some scalar
 field $\rho$ such that
 \be \label{e:def:wl_rho_u}
-    \encadre{\wl = e^\rho \, \vw{\nabla} u } .
+    \encadre{\wl = - e^\rho \, \vw{\nabla} u } .
 \ee
 We have chosen the
-coefficient linking $\wl$ and $\vw{\nabla} u $ to be strictly positive,
-i.e. under the form of an exponential. This is always possible by a suitable
-choice of the scalar field $u$.
+coefficient linking $\wl$ and $\vw{\nabla} u $ to be strictly negative,
+i.e. under the form of minus an exponential. This is always possible by a suitable
+choice of the scalar field $u$. The minus sign ensures that in the case
+of a retarded time $u$ increasing toward the future, $\wl$ is future-directed.
 
 
 
 \subsubsection{Frobenius identity}
 
 Let us take the metric dual of relation (\ref{e:def:wl_rho_u}): it writes
-$\uu{\el} = e^\rho \, \wnab u$, or, in index notation,
+$\uu{\el} = - e^\rho \, \wnab u$, or, in index notation,
 \be
-    \el_\alpha = e^\rho \, \nabla_\alpha u .
+    \el_\alpha = - e^\rho \, \nabla_\alpha u .
 \ee
 Taking the covariant derivative, we get
 \[
-    \nabla_\alpha \el_\beta = e^\rho \nabla_\alpha \rho \nabla_\beta u
-                +  e^\rho  \nabla_\alpha \nabla_\beta u
-                 = \nabla_\alpha \rho \, \el_\beta + e^\rho  \nabla_\alpha \nabla_\beta u
+    \nabla_\alpha \el_\beta = - e^\rho \nabla_\alpha \rho \nabla_\beta u
+                -   e^\rho  \nabla_\alpha \nabla_\beta u
+                 = \nabla_\alpha \rho \, \el_\beta - e^\rho  \nabla_\alpha \nabla_\beta u
 \]
 Antisymmetrizing and using the torsion-free property of $\wnab$ (i.e.
 $\nabla_\alpha \nabla_\beta u - \nabla_\beta \nabla_\alpha u = 0$, cf.
@@ -836,26 +837,36 @@ $(n-2)$-dimensional one, $n$ being the spacetime dimension.}
 \end{figure}
 
 Let us define the expansion of the spacelike section $\Sp$ along the vector
-field $\wl$ as follows. Given an infinitesimal parameter $\varepsilon>0$, take a point
+field $\wl$ as follows. Given an infinitesimal parameter $\varepsilon\geq 0$, take a point
 $p\in \Sp$ and displace it by the infinitesimal vector $\varepsilon \wl$, thereby getting
-a nearby point $p'$ (cf. Fig.~\ref{f:def:expansion}).
-Since $\wl$ is tangent to $\Hor$ and $p\in\Hor$, we have $p'\in\Hor$.
+a nearby point $p_\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
+Since $\wl$ is tangent to $\Hor$ and $p\in\Hor$, we have $p_\varepsilon\in\Hor$.
 By repeating this for each point in $\Sp$,
-keeping the value of $\varepsilon$ fixed, we define a new codimension-2 surface
-$\Sp'$ (cf. Fig.~\ref{f:def:expansion}). One says that $\Sp'$ is obtained
+keeping the value of $\varepsilon$ fixed, we define a new codimension-2 surface,
+$\Sp_\varepsilon$ say cf. Fig.~\ref{f:def:expansion}). One says that $\Sp_\varepsilon$ is obtained
 from $\Sp$ by \defin{Lie dragging along $\wl$ by the parameter $\varepsilon$}\index{Lie!dragging}.
-Since $p'\in\Hor$ for every $p\in\Sp$, we have $\Sp'\subset \Hor$.
+Note that $\Sp_0 = \Sp$.
+Since $p_\varepsilon\in\Hor$ for every $p\in\Sp$, we have $\Sp_\varepsilon\subset \Hor$.
+Because the null direction $\wl$ is transverse to $\Sp_\varepsilon$ by construction, it
+follows that $\Sp_\varepsilon$ is spacelilke (cf. the lemma in Sec.~??).
 
 At each point $p\in\Sp$, the \defin{expansion of $\Sp$ along $\wl$} is defined from the
 rate of change $\theta_{(\wl)}$ of the area $\delta A$ of an element of surface $\delta S$ of
 $\Sp$ around $p$:
-\be
+\be \label{e:def:def_expansion}
     \theta_{(\wl)} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
-    \frac{\delta A' - \delta A}{\delta A} .
+    \frac{\delta A_\varepsilon - \delta A}{\delta A} .
 \ee
-In the above formula, $\delta A'$ stands for the area of the
-surface element $\delta S'\subset \Sp'$ that is obtained from $\delta S$ by
+In the above formula, $\delta A_\varepsilon$ stands for the area of the
+surface element $\delta S_\varepsilon\subset \Sp_\varepsilon$ that is obtained from $\delta S$ by
 Lie dragging along $\wl$ by the parameter $\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
+\begin{remark}
+The reader may wonder why the expansion is not denoted by something like
+$\theta_{(\wl)}(\Sp)$, since its definition depends explicitely on
+$\Sp$. We shall below that, because $\Hor$ is a null hypersurface, $\theta_{(\wl)}$
+is actually independent of the choice of the spacelike section $\Sp$.
+\end{remark}
+
 
 For concreteness, let us assume that the element of surface $\delta S \subset\Sp$ is a $(n-2)$-dimensional
 parallelogram delimited by some infinitesimal displacement vectors
@@ -902,15 +913,76 @@ Let us consider in some vicinity of $\Sp$ a coordinate system
     x^\alpha = \left(\varepsilon, u, x^2,\ldots, x^{n-1}\right)
 \]
 that is adapted to $\Sp$ and $\wl$ in the sense that
-\be
+\be \label{e:def:l_dsdeps}
     \wl = \der{}{\varepsilon}
 \ee
 and the points of $\Sp$ are defined by $(\varepsilon,u) = (0,0)$.
-Let us choose the infinitesimal displacement vectors in (\ref{e:def:A_wepsS_dx})
-according to this coordinate system:
+Then, from the very definition of the Lie dragging of $\Sp$ along $\wl$, we
+have
 \be
-    \D x_{(i)}^a = (0,\ldots,0,1,0,\ldots,0)
+    \Sp_\varepsilon = \left\{ p\in\M,\quad  (x^0(p), x^1(p)) = (\varepsilon,0)
+                        \right\}
 \ee
+and  $x^a = (x^2,\ldots, x^{n-1})$ can  be viewed as a coordinate system\footnote{
+Latin indices from the beginning of the alphabet, $a$, $b$, etc. range from $2$
+to $n-1$.} on each surface $\Sp_\varepsilon$.
+Let us choose the $n-2$ infinitesimal displacement vectors in (\ref{e:def:A_wepsS_dx})
+along the coordinate lines of this system:
+\be
+    \D x_{(i)}^a = (\underbrace{0,\ldots,0}_{i-2},\D x^i,
+                    \underbrace{0,\ldots,0}_{n-1-i}), \qquad
+                    2\leq i \leq n-1 .
+\ee
+Then expression~(\ref{e:def:A_wepsS_dx}) for the area of $\delta S$ becomes
+\bea
+    \delta A & = & \epsS_{a_1 \cdots a_{n-2}} \, \D x_{(2)}^{a_1} \cdots \D x_{(n-1)}^{a_{n-2}}
+                    \nonumber \\
+            & = & \epsS_{2\cdots(n-1)} \, \D x^2 \cdots \D x^{n-1} \nonumber \\
+     \delta A  & = & \sqrt{q} \, \D x^2 \cdots \D x^{n-1} , \label{e:def:A_sqrt_q}
+\eea
+where we have used (\ref{e:bas:eps_sqrt_g}) for the components of the
+Levi-Civita tensor $\wepsS$, $q$ standing for the determinant of the metric
+$\w{q}$ with respect to the coordinates $(x^2,\ldots,x^{n-1})$.
+By the very definition of the Lie dragging, the surface element
+$\delta S_\varepsilon$ on $\Sp_\varepsilon$
+is defined by the same values of the coordinates $(x^2,\ldots, x^{n-1})$
+as $\Sp$. In particular, the small coordinate increments $\D x^2$, ..., $\D x^{n-1}$
+take the same values as on $\Sp$. Therefore, the area of $\delta S_\varepsilon$
+is
+\be \label{e:def:A_eps_sqrt_q}
+    \delta A_\varepsilon = \sqrt{q(\varepsilon)} \, \D x^2 \cdots \D x^{n-1} ,
+\ee
+where $q(\varepsilon)$ stands for the determinant of the components of the
+metric $\w{q}(\varepsilon)$ induced by $\w{g}$ on $\Sp_\varepsilon$. Since
+$\Sp_\varepsilon$ is spacelike (cf. above), $\w{q}(\varepsilon)$ is positive definite, so
+that $q(\varepsilon)\geq 0$.
 
-
+In view of (\ref{e:def:A_sqrt_q})-(\ref{e:def:A_eps_sqrt_q}), the definition (\ref{e:def:def_expansion})
+of the expansion of $\Sp$ along $\wl$ can be rewritten as
+\[
+    \theta_{(\wl)} = \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \frac{\sqrt{q(\varepsilon)} - \sqrt{q(0)}}{\sqrt{q(0)}} .
+\]
+We recognize the derivative of the function $\varepsilon \mapsto \ln \sqrt{q(\varepsilon)}=
+1/2\, \ln q(\varepsilon)$ at $\varepsilon=0$:
+\be
+     \theta_{(\wl)} = \frac{1}{2} \frac{\D}{\D\varepsilon}  \ln q .
+\ee
+Given that $\Sp_\varepsilon$ is deduced from $\Sp$ by a Lie dragging along $\wl$
+and $\varepsilon$ is the parameter associated with $\wl$ [cf. Eq.~(\ref{e:def:l_dsdeps})], we may
+rewrite this formula as the Lie derivative of $\ln q$ along $\wl$:
+\be
+    \theta_{(\wl)} = \frac{1}{2} \Lie{\el} \ln q .
+\ee
+Using the general law of variation of a derminant, as given by Eq.~(\ref{e:bas:variation_det})
+in Appendix~\ref{s:bas}, we may write
+\[
+    \theta_{(\wl)} = \frac{1}{2} \, \mathrm{tr} \left(Q^{-1} \times \Lie{\el} Q \right) ,
+\]
+when $Q$ is the matrix representing the components of $\w{q}$ with respect to the
+coordinates $(x^a) = (x^2,\ldots, x^{n-1})$. In index notation, we have
+$Q = (q_{ab})$ and $Q^{-1} = (q^{ab})$. Hence
+\be
+    \theta_{(\wl)} = \frac{1}{2} \, q^{ab} \Liec{\el} q_{ab} .
+\ee
 
