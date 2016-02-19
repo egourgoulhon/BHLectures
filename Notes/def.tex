@@ -768,7 +768,7 @@ which is nothing but (\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
 Having extended the definition of $\w{q}$ via (\ref{e:def:q_g_k_l}), we notice
 that the metric dual of $\w{q}$, i.e. the tensor of type $(1,1)$ defined by
 by
-\be
+\be \label{e:def:q_proj}
     \vw{q} = \mathrm{Id} + \wl\otimes \uu{k} + \w{k}\otimes \uu{\el},
 \ee
 or, in index notation,
@@ -994,8 +994,62 @@ field defined in some neighbourhood of the portion of $\Hor$ sliced by
 $\bigcup_{\varepsilon} \Sp_\varepsilon$ via (\ref{e:def:q_g_k_l}), with $\w{k}$
 defined at each point $p\in\Sp_\varepsilon$ as the unique null vector of
 $T_p^\perp\Sp_\varepsilon$ obeying $\wl\cdot\w{k}=-1$.
-Let $(\w{u},\w{v})$ be a pair of vector fields on $\Hor$, which are tangent
-to the spacelike sections $\Sp_\varepsilon$. The Leibniz rule implies
+Let $\w{u}$ and $\w{v}$ be vector fields on $\Hor$ that are tangent
+to the spacelike sections $\Sp_\varepsilon$. Applying the bilinear form
+$\Lie{\el}\w{\bar q}$ to them and using the Leibniz rule to expand
+$\Lie{\el} \left[ \w{\bar q}(\w{u},\w{v}) \right]$ yields
+\be \label{e:def:Lie_l_bar_q}
+     \Lie{\el} \w{\bar q} \, (\w{u},\w{v}) = \Lie{\el} \left[ \w{\bar q}(\w{u},\w{v}) \right]
+        - \w{\bar q}\left(\Lie{\el}\w{u},\w{v}\right)
+         - \w{\bar q}\left(\w{u},\Lie{\el}\w{v}\right) .
+\ee
+Now, since $\w{u}$ and $\w{v}$ are tangent to $\Sp_\varepsilon$, we may
+write $\w{\bar q}(\w{u},\w{v}) = \w{q}(\w{u},\w{v})$. Moreover, by the very
+definition of a Lie derivative of a vector field (cf. Sec.~\ref{s:bas:Lie}
+in Appendix~\ref{s:bas}) and the fact that the spacelike sections
+$\Sp_\varepsilon$ are Lie-dragged along $\wl$, the vectors
+$\Lie{\el}\w{u}$ and $\Lie{\el}\w{v}$ are also tangent to $\Sp_\varepsilon$.
+Therefore, we have
 \[
-     \Lie{\el} \w{\bar q} \,
+    \w{\bar q}\left(\Lie{\el}\w{u},\w{v}\right) = \w{q} \left(\Lie{\el}\w{u},\w{v}\right)
+    \quad\mbox{and}\quad
+    \w{\bar q}\left(\w{u},\Lie{\el}\w{v}\right) = \w{q}\left(\w{u},\Lie{\el}\w{v}\right)
 \]
+as well. Thus, we may rewrite (\ref{e:def:Lie_l_bar_q}) as
+\[
+     \Lie{\el} \w{\bar q} \, (\w{u},\w{v}) = \Lie{\el} \left[ \w{q}(\w{u},\w{v}) \right]
+        - \w{q}\left(\Lie{\el}\w{u},\w{v}\right)
+         - \w{q}\left(\w{u},\Lie{\el}\w{v}\right) .
+\]
+The right-hand side being identical to what would be obtained by expressing
+$\Lie{\el} \w{q} \, (\w{u},\w{v})$ via the Leibniz rule. Hence we conclude
+that
+\[
+    \Lie{\el} \w{\bar q} \, (\w{u},\w{v}) = \Lie{\el} \w{q} \, (\w{u},\w{v}) .
+\]
+Since this identity holds for a pair $(\w{u},\w{v})$ of vectors tangent
+to $\Sp_\varepsilon$, we may express it for any pair of vectors, i.e. not
+necessarily tangent to $\Sp_\varepsilon$ by introducing the orthogonal
+projector $\vw{q}$ onto $\Sp_\varepsilon$ [cf. Eq.~(\ref{e:def:q_proj})]:
+\[
+    \Lie{\el} \w{\bar q} \, (\vw{q}(\w{u}),\vw{q}(\w{v})) =
+    \Lie{\el} \w{q} \, (\vw{q}(\w{u}),\vw{q}(\w{v})) .
+\]
+Using index notation, this is equivalent to
+\[
+    \Liec{\el} {\bar q}_{\mu\nu} \, {\bar q}^\mu_{\ \, \alpha} {\bar q}^\nu_{\ \, \beta} =
+        \Liec{\el} {q}_{ab} \, {\bar q}^a_{\ \, \alpha} {\bar q}^b_{\ \, \beta} .
+\]
+Taking the trace with respect to $\w{g}$, we get
+\[
+    \Liec{\el} {\bar q}_{\mu\nu} \, {\bar q}^\mu_{\ \, \sigma} {\bar q}^{\nu\sigma} =
+        \Liec{\el} {q}_{ab} \, {\bar q}^a_{\ \, \sigma} {\bar q}^{b\sigma} .
+\]
+Now, since $\w{\bar q}$ is symmetric and $\vw{q}$ is a projector,
+${\bar q}^\mu_{\ \, \sigma} {\bar q}^{\nu\sigma} = {\bar q}^\mu_{\ \, \sigma} {\bar q}^{\sigma\nu}
+ = {\bar q}^{\mu\nu}$. Similarly, ${\bar q}^a_{\ \, \sigma} {\bar q}^{b\sigma} = {\bar q}^{ab}$.
+Hence
+\[
+    {\bar q}^{\mu\nu} \Liec{\el} {\bar q}_{\mu\nu} = {\bar q}^{ab}  \Liec{\el} {q}_{ab} .
+\]
+Now the matrix $({\bar q}^{ab})$ is the invert of $(q_{ab})$.
