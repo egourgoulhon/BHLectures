@@ -6,312 +6,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{General framework}
-
-\subsection{Spacetime}
-
-In these lectures we consider a $n$-dimensional \defin{spacetime}\index{spacetime},
-i.e. a pair $(\M, \w{g})$, where $\M$ is a $n$-dimensional smooth manifold, with $n\geq 2$, and $\w{g}$ is a Lorentzian metric on $\M$. In many parts, the dimension $n$ will be set to 4
---- the standard spacetime value --- but we shall also consider spacetimes with
-$n>4$, especially in Chap.~??.
-
-The precise definition and basic properties of a \emph{smooth manifold} are recalled
-in Appendix~\ref{s:bas}. Here let us simply say that, in loose terms,
-a \defin{manifold}\index{manifold} $\M$ of dimension $n$ is a ``space'' that \emph{locally} resembles $\R^n$,
-i.e. can be described by a $n$-tuple of coordinates $(x^1,\ldots,x^n)$. Globally,
-$\M$ can be very different from $\R^n$, in particular regarding its topology.
-
-The smooth structure endows the manifold
-with the concept of infinitesimal vectors\index{vector!infinitesimal --} $\D\w{x}$, which connect infinitely
-close pair of points of $\M$ (cf. Fig.~??). However, for finitely separated points, there is no
-longer the concept of connecting vector (contrary for instance to points in $\R^n$).
-In other words, vectors on $\M$ do not live in the manifold but in the
-tangent spaces $T_p\M$, which are defined at each point $p\in\M$. Each  $T_p\M$
-is a $n$-dimensional vector space, which is generated for instance by the infinitesimal displacement
-vectors along the $n$ coordinate lines of some coordinate system.
-
-The full definition of the \defin{metric tensor} $\w{g}$ is given in Sec.~\ref{s:bas:pRiemManif} of
-Appendix~\ref{s:bas}. The fact that its signature is Lorentzian, i.e.
-\be
-\mathrm{sign}\; \w{g} = (-,\underbrace{+,\ldots,+}_{\mbox{\small $n-1$ times}}),
-\ee
-implies that from each point $p\in\M$, there are privileged directions,
-which form the so-called \defin{null cones}\index{null!cone} (cf. Fig.~??).
-This is an absolute structure of spacetime, independent from any observer.
-
-We shall specify further the spacetime structure later on, in particular its
-asymptotics and its orientability.
-
-\subsection{Worldlines}
-
-In relativity, a particle is described by its spacetime extent, which is a smooth curve,
-$\Li$ say, and not a point. This curve is called the particle's
-\defin{worldline}\index{worldline} and might be thought of as the set of
-the ``successive positions'' occupied by the particle as ``time evolves''.
-The dynamics of a simple particle (i.e. a particle without internal structure nor
-spin) is entirely described by its
-\defin{4-momentum}\index{4-momentum} or \defin{energy-momentum vector}\index{energy-momentum!vector}\footnote{When $n\not=4$, \emph{energy-momentum vector} is definitely a better name
-than \emph{4-momentum}!}, which is a vector field $\w{p}$ defined along $\Li$,
-tangent to $\Li$ at each point and future-directed (cf. Fig.~??).
-
-One distinguishes two types of particles:
-\begin{itemize}
-\item the \defin{massive particles}\index{massive!particle}\index{particle!massive --}, for which
-$\Li$ is a timelike curve, or equivalently, for which
-$\w{p}$ is a timelike vector:
-\be
-    \w{g}(\w{p},\w{p}) = \w{p}\cdot\w{p} < 0 ;
-\ee
-one says then that $\Li$ is a timelike curve
-\item the \defin{massless particles}\index{massless!particle}\index{particle!massless --},
-such as the photon,
-for which $\Li$ is a null curve, or equivalently, for which  $\w{p}$ is a null vector:
-\be
-    \w{g}(\w{p},\w{p}) = \w{p}\cdot\w{p} = 0 .
-\ee
-\end{itemize}
-In both cases, the \defin{mass} of the particle is defined by
-\be \label{e:def:def_mass}
-   m = \sqrt{- \w{p}\cdot\w{p}} .
-\ee
-Of course, for a massless particle, we get $m=0$.
-
-If the particle feels only gravitation, i.e. if no non-gravitational force
-is exerted on it, the energy-momentum vector must be a
-\defin{geodesic vector}\index{geodesic!vector}, i.e. it obeys
-\be \label{e:def:p_geodesic}
-    \encadre{\wnab_{\w{p}}\,  \w{p} = 0 } ,
-\ee
-or, in index notation,
-\be
-    p^\mu \nabla_\mu p^\alpha = 0 .
-\ee
-This implies that the worldline $\Li$ must be a
-\defin{geodesic}\index{geodesic} of the spacetime $(\M,\w{g})$.
-\begin{remark} \label{r:def:geodesic_vector}
-The reverse is not true, i.e. having $\Li$ geodesic and $\w{p}$
-tangent to $\Li$ does not imply (\ref{e:def:p_geodesic}), but the
-weaker condition $\wnab_{\w{p}}\,  \w{p} = \alpha \, \w{p}$, with $\alpha$
-a scalar field along $\Li$.
-\end{remark}
-For massive particles, Eq.~(\ref{e:def:p_geodesic}) can be derived from
-a variational principle, the action being simply the worldline's length
-as given by the metric tensor:
-\be
-    S = \int_A^B \D s = \int_{\lambda_A}^{\lambda_B}
-     \sqrt{-\w{g}\left(\frac{\D\w{x}}{\D\lambda}, \frac{\D\w{x}}{\D\lambda} \right)}
-     \, \D\lambda .
-\ee
-For photons, Eq.~(\ref{e:def:p_geodesic}) can be derived from the Maxwell equations
-within the geometrical optics approximation, with the assumption that
-the photon energy-momentum vector is related to the wave 4-vector $\w{k}$ by
-\be \label{e:def:p_hbar_k}
-    \w{p} = \hbar \w{k} .
-\ee
-
-\subsubsection{Massive particles}
-
-For a massive particle, the constraint of having $\Li$ timelike
-has a simple geometrical meaning: the worldline $\Li$ must
-always lie inside the light cones of events along $\Li$ (cf. Fig.~??).
-The fondamental link between physics and geometry is that the
-\defin{proper time}\index{proper!time}\index{time!proper --} $\tau$ of the particle
-is the metric length along the worldline, increasing towards the future:
-\be \label{e:def:proper_time}
-    \D\tau = \sqrt{- \w{g}(\D\w{x}, \D\w{x})} = \sqrt{- g_{\mu\nu} \D x^\mu \, \D x^\nu} ,
-\ee
-where $\D\w{x}$ is an infinitesimal future-directed displacement
-along $\Li$.
-
-The particle's \defin{4-velocity}\index{4-velocity} is defined the vector field
-$\w{u}$
-tangent to the worldline $\Li$ associated with the parametrization of
-$\Li$ by the proper time:
-\be \label{e:def:def_u}
-    \encadre{ \w{u} := \frac{\D\w{x}}{\D\tau} }.
-\ee
-By construction, this is a unit timelike vector:
-\be \label{e:def:u_unit}
-    \w{u}\cdot\w{u} = -1 .
-\ee
-For a simple particle (no internal structure),
-the 4-momentum $\w{p}$ is tangent to $\Li$; it is then necessarily
-colinear to $\w{u}$. Since both vectors are future-directed,
-Eqs.~(\ref{e:def:def_mass}) and (\ref{e:def:u_unit}) lead to
-\be \label{e:def:p_m_u}
-    \w{p} = m\, \w{u} .
-\ee
-
-\subsubsection{Massless particles (photons)}
-
-For a massless particle, Eq.~(\ref{e:def:proper_time}) would lead to $\D\tau=0$
-since $\D\w{x}$ would be a null vector. There is then no natural parameter
-along a null geodesic. However, one can single out a whole family of them,
-called \emph{affine parameters}. An \defin{affine parameter}\index{affine!parameter}
-along a null geodesic $\Li$ is a parameter $\lambda$ such that
-the associated tangent vector,
-\be
-    \w{v} := \frac{\D\w{x}}{\D\lambda} ,
-\ee
-is a geodesic vector field: $\wnab_{\w{v}} \, \w{v} = 0$. In general,
-the tangent vector associated to a given parameter fullfils only
-$\wnab_{\w{v}} \, \w{v} = \alpha \, \w{v}$, with $\alpha$ a scalar field
-along $\Li$ (cf. Remark~\ref{r:def:geodesic_vector} above).
-
-The qualifier \emph{affine} arises from the fact any two affine parameters
-$\lambda$ and $\lambda'$ are related by an affine transformation:
-\be \label{e:def:affine_transf}
-    \lambda' = a \lambda + b,
-\ee
-with $a$ and $b$ two constants.
-Given that the photon energy-momentum vector $\w{p}$ is a geodesic vector
-[Eq.~(\ref{e:def:p_geodesic})],
-a natural choice of the affine parameter $\lambda$ is that associated with
-$\w{p}$:
-\be \label{e:def:p_dxdl}
-    \w{p} = \frac{\D\w{x}}{\D\lambda} .
-\ee
-This fixes $a=1$ in the transformation (\ref{e:def:affine_transf}).
-
-\subsection{Quantities measured by an observer}
-
-In the simplest modelization, an \defin{observer}\index{observer} $\Obs$
-is described by a timelike worldline $\Li_{\Obs}$ in the spacetime $(\M,\w{g})$.
-Let us suppose that the observer encounters a particle at some event $A$.
-Geometrically, this means that the worldline $\Li$ of the particle
-intersects $\Li_{\Obs}$ at $A$. Then, the \defin{energy}\index{energy!of a particle}
-$E$ and the \defin{momentum}\index{momentum!of a particle} $\w{P}$ of the
-particle, both measured by $\Obs$, are given by the orthogonal decomposition of the
-particle's energy-momentum vector $\w{p}$ with respect to $\Li_{\Obs}$:
-\be \label{e:def:p_E_P}
-    \encadre{ \w{p} = E \w{u}_{\Obs} + \w{P} },\quad\mbox{with}\quad
-        \w{u}_{\Obs}\cdot\w{P} = 0 ,
-\ee
-where $\w{u}_{\Obs}$ is the 4-velocity of observer $\Obs$, i.e. the future-directed
-unit tangent vector to $\Li_{\Obs}$.
-By taking the scalar product of Eq.~(\ref{e:def:p_E_P}) with $\w{u}_{\Obs}$,
-we obtain the following expressions for $E$ and $\w{P}$:
-\be \label{e:def:E_obs}
-    \encadre{E = - \w{u}_{\Obs}\cdot\w{p}}
-\ee
-\be
-    \encadre{\w{P} = \w{p} + (\w{u}_{\Obs}\cdot\w{p})\, \w{u}_{\Obs}} .
-\ee
-The scalar square of Eq.~(\ref{e:def:p_E_P}) leads to
-\be
-    \underbrace{\w{p}\cdot\w{p}}_{-m^2} = E^2
-    \underbrace{\w{u}_{\Obs}\cdot\w{u}_{\Obs}}_{-1} + 2 E \underbrace{\w{u}_{\Obs}\cdot\w{P}}_{0}
-    + \w{P}\cdot\w{P} ,
-\ee
-where we have used Eq.~(\ref{e:def:def_mass}) to let appear the particle's mass
-$m$. Hence we recover Einstein's relation\index{Einstein!relation}:
-\be \label{e:def:E2_m2_P2}
-    \encadre{E^2 = m^2 + \w{P}\cdot\w{P} }.
-\ee
-
-An infinitesimal displacement $\D\w{x}$ of the particle along its worldline
-is related to the energy-momentum vector $\w{p}$ by
-\be \label{e:def:dx_p_dl}
-    \D\w{x} = \w{p} \, \D\lambda,
-\ee
-where $\lambda$ is the affine parameter along the particle's worldline
-whose tangent vector is $\w{p}$ [cf. Eq.~(\ref{e:def:p_dxdl}) for a massless
-particle and Eqs.~(\ref{e:def:def_u}) and (\ref{e:def:p_m_u}) with
-$\lambda := \tau/m$ for a massive particle]. Substituting (\ref{e:def:p_E_P})
-for $\w{p}$ in (\ref{e:def:dx_p_dl}), we get the orthogonal decomposition
-of $\D\w{x}$ with respect to $\Li_{\Obs}$:
-\be
-    \D\w{x} = E \D\lambda \, \w{u}_{\Obs} + \D\lambda\,  \w{P} .
-\ee
-$\Obs$'s proper time elapsed during the particule displacement is the
-coefficient in front of $\w{u}_{\Obs}$: $\D\tau_{\Obs} = E \D\lambda$ and the
-the particle's displacement in $\Obs$'s rest frame is the part orthogonal
-to $\w{u}_{\Obs}$: $\D\w{X} = \D\lambda\,  \w{P}$ (cf. Fig.~??). By definition,
-the particle's velocity with respect to $\Obs$ is
-\be
-    \w{V} := \frac{\D\w{X}}{\D\tau_{\Obs}} = \frac{\D\lambda\,  \w{P}}{E \D\lambda}.
-\ee
-Hence the relation
-\be \label{e:def:P_E_V}
-    \encadre{ \w{P} = E \, \w{V}} .
-\ee
-
-The above relations are valid for any kind of particle, massive or not.
-For a massive particle, the energy-momentum vector $\w{p}$ is related to the
-particle's 4-velocity $\w{u}$ via (\ref{e:def:p_m_u}). Inserting this relation
-into (\ref{e:def:E_obs}), we obtain
-\be \label{e:def:E_Gam_m}
-    E = \Gamma \, m,
-\ee
-where
-\be
-    \Gamma := - \w{u}_{\Obs}\cdot\w{u}
-\ee
-is the \defin{Lorentz factor}\index{Lorentz!factor} of the particle with respect
-to the observer. If we depart from units with $c=1$, Eq.~(\ref{e:def:E_Gam_m})
-becomes the famous relation $E = \Gamma m c^2$.
-Combining (\ref{e:def:P_E_V}) and (\ref{e:def:E_Gam_m}) yields also a familiar
-relation:
-\be \label{e:def:P_Gam_m_V}
-    \w{P} = \Gamma m \, \w{V} .
-\ee
-Finaly, inserting (\ref{e:def:E_Gam_m}) and (\ref{e:def:P_Gam_m_V}) into
-(\ref{e:def:E2_m2_P2}) leads to the well-known expression of the Lorentz factor in
-terms of the velocity:
-\be
-    \Gamma = \left( 1 - \w{V}\cdot\w{V} \right) ^{-1/2} .
-\ee
-
-For a massless particle (photon), inserting (\ref{e:def:P_E_V}) into the
-Einstein relation (\ref{e:def:E2_m2_P2}) with $m=0$ yields
-\be
-    \w{V}\cdot\w{V} = 1 .
-\ee
-This means that the norm of the velocity of the massless particle with respect to $\Obs$
-is the speed of light $c$ ($=1$ in our units).
-For a photon associated with a monochromatic radiation, the wave 4-vector $\w{k}$
-admits the following orthogonal decomposition:
-\be
-    \w{k} = \omega \left(\w{u} + \w{V} \right) ,
-\ee
-where $\omega = 2\pi \nu$ and $\nu$ is the radiation frequency as measured by
-observer $\Obs$. In view of (\ref{e:def:p_hbar_k}) and (\ref{e:def:p_E_P}), we
-get the Planck-Einstein relation\index{Planck-Einstein relation}:
-\be
-    E = h \nu .
-\ee
-
-\subsection{Einstein equation}
-
-Saying that gravitation in the spacetime $(\M, \w{g})$ is ruled by
-\defin{general relativity}\index{general!relativity} amounts
-to demanding that the metric $\w{g}$ obeys \defin{Einstein equation}\index{Einstein!equation}:
-\be \label{e:bas:Einstein_eq}
-    \encadre{ \w{R} - \frac{1}{2}\, R\, \w{g} + \Lambda\, \w{g} = 8\pi \w{T} },
-\ee
-where $\w{R}$ is the Ricci tensor of $\w{g}$, $R$ the Ricci scalar of $\w{g}$
-(cf. Sec.~\ref{s:bas:Ricci_tensor} in Appendix~\ref{s:bas}), $\Lambda$ some
-constant, called the \defin{cosmological constant}\index{cosmological!constant}
-and $\w{T}$ is the energy-momentum tensor\index{energy-momentum tensor} of
-matter and non-gravitational fields.
-
-By taking the trace of (\ref{e:bas:Einstein_eq}) with respect to $\w{g}$, it is
-easy to show that the Einstein equation (\ref{e:bas:Einstein_eq}) is
-equivalent to
-\be \label{e:bas:Einstein_eq_n}
-    \encadre{ \w{R}  = \frac{2}{n-2}\,\Lambda\,  \w{g}
-    + 8\pi \left( \w{T} - \frac{1}{n-2}\,  T \, \w{g} \right) },
-\ee
-where $T := g^{\mu\nu} T_{\mu\nu}$ is the trace of $\w{T}$ with respect to
-$\w{g}$.
-
-\begin{remark}
-The dimension $n$ of the spacetime does not appear in the Einstein equation
-(\ref{e:bas:Einstein_eq}); on the contrary, the variant
-(\ref{e:bas:Einstein_eq_n}) depends on $n$.
-\end{remark}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{A first definition of black holes}
 
@@ -546,9 +240,9 @@ Now, since $\wl$ is a null vector,
         - \el_\mu \nabla_\alpha \el^\mu ,
 \]
 from which we get
-\[
+\be \label{e:def:el_nab_el_zero}
     \el^\mu \nabla_\alpha \el_\mu = 0 .
-\]
+\ee
 Hence (\ref{e:def:l_contract_Frob}) reduces to
 \be \label{e:def:wl_geod_kappa_dual}
     \el^\mu \nabla_\mu \el_\alpha  = \kappa \, \el_\alpha ,
@@ -860,7 +554,7 @@ $\Sp$ around $p$:
 In the above formula, $\delta A_\varepsilon$ stands for the area of the
 surface element $\delta S_\varepsilon\subset \Sp_\varepsilon$ that is obtained from $\delta S$ by
 Lie dragging along $\wl$ by the parameter $\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
-\begin{remark}
+\begin{remark} \label{r:def:expansion_indpt_S}
 The reader may wonder why the expansion is not denoted by something like
 $\theta_{(\wl)}(\Sp)$, since its definition depends explicitely on
 $\Sp$. We shall below that, because $\Hor$ is a null hypersurface, $\theta_{(\wl)}$
@@ -982,7 +676,7 @@ in Appendix~\ref{s:bas}, we may write
 when $Q$ is the matrix representing the components of $\w{q}$ with respect to the
 coordinates $(x^a) = (x^2,\ldots, x^{n-1})$. In index notation, we have
 $Q = (q_{ab})$ and $Q^{-1} = (q^{ab})$. Hence
-\be
+\be \label{e:def:theta_q_ab}
     \theta_{(\wl)} = \frac{1}{2} \, q^{ab} \Liec{\el} q_{ab} .
 \ee
 We may wonder about the link between the Lie derivative along $\wl$ of the $(n-2)$-metric
@@ -1050,6 +744,83 @@ ${\bar q}^\mu_{\ \, \sigma} {\bar q}^{\nu\sigma} = {\bar q}^\mu_{\ \, \sigma} {\
  = {\bar q}^{\mu\nu}$. Similarly, ${\bar q}^a_{\ \, \sigma} {\bar q}^{b\sigma} = {\bar q}^{ab}$.
 Hence
 \[
-    {\bar q}^{\mu\nu} \Liec{\el} {\bar q}_{\mu\nu} = {\bar q}^{ab}  \Liec{\el} {q}_{ab} .
+    {\bar q}^{\mu\nu} \Liec{\el} {\bar q}_{\mu\nu} = {\bar q}^{ab}  \Liec{\el} {q}_{ab}
+    = q^{ab}  \Liec{\el} {q}_{ab} ,
 \]
-Now the matrix $({\bar q}^{ab})$ is the invert of $(q_{ab})$.
+where the second equality follows from
+${\bar q}^{ab}  = q^{ab}$.
+Hence we may rewrite (\ref{e:def:theta_q_ab}) as
+\be
+    \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu} \Liec{\el} q_{\mu\nu} .
+\ee
+Note that we have dropped the bar over $q$, i.e. we revert to previous notation.
+
+Substituting (\ref{e:def:q_g_k_l}) for $q_{\mu\nu}$, and using Leibniz rule, we get
+\[
+    \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu}  \left(
+            \Liec{\el} g_{\mu\nu} + \Liec{\el}  \el_\mu \; k_\nu + \el_\mu \, \Liec{\el} k_\nu
+           + \Liec{\el} k_\mu \; \el_\nu + k_\mu \, \Liec{\el} \el_\nu \right) .
+\]
+If we express the Lie derivative $\Liec{\el} g_{\mu\nu}$ in terms of the
+covariant derivative $\wnab$ via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of
+Appendix~{\ref{s:bas}, we get
+\[
+    \Liec{\el} g_{\mu\nu} = \el^\sigma \underbrace{\nabla_\sigma g_{\mu\nu}}_{0}
+        + \underbrace{g_{\sigma\nu} \nabla_\mu \el^\sigma}_{\nabla_\mu \el_\nu}
+        + \underbrace{g_{\mu\sigma} \nabla_\nu \el^\sigma}_{\nabla_\nu \el_\mu}
+       = \nabla_\mu \el_\nu + \nabla_\nu \el_\mu .
+\]
+Moreover, since $\wl$ and $\w{k}$ are orthogonal to $\Sp$, we have
+\[
+    q^{\mu\nu} \el_\nu = 0 \quad\mbox{and}\quad
+    q^{\mu\nu} k_\nu = 0 .
+\]
+Hence we end up with
+\[
+    \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu}  \left( \nabla_\mu \el_\nu + \nabla_\nu \el_\mu
+        \right) ,
+\]
+i.e. since $q^{\mu\nu}$ is symmetric,
+\be
+    \encadre{ \theta_{(\wl)} = q^{\mu\nu} \nabla_\mu \el_\nu } .
+\ee
+
+We can transform further this relation by expressing $q^{\mu\nu}$ via (\ref{e:def:q_g_k_l}):
+\bea
+    \theta_{(\wl)} & = & \left( g^{\mu\nu} + \el^\mu k^\nu + k^\mu \el^\nu \right)
+        \nabla_\mu \el_\nu  \nonumber \\
+        & = & \nabla_\mu \el^\mu + k^\nu \underbrace{\el^\mu  \nabla_\mu \el_\nu }_{\kappa \el_\nu}
+            + k^\mu \underbrace{\el^\nu  \nabla_\mu \el_\nu }_{0} \nonumber \\
+        & = & \nabla_\mu \el^\mu + \kappa \underbrace{k^\nu \el_\nu}_{-1} \nonumber \\
+        & = & \nabla_\mu \el^\mu - \kappa ,
+\eea
+where we have used respectively the properties (\ref{e:def:wl_geod_kappa}),
+(\ref{e:def:el_nab_el_zero}) and (\ref{e:def:k_el_minus_one}).
+Denoting the divergence of $\wl$ by $\wnab\cdot\wl = \nabla_\mu \el^\mu$, we
+have then
+\be
+    \encadre{\theta_{(\wl)} = \wnab\cdot\wl - \kappa } .
+\ee
+We notice that the right-hand side of this expression is independent of the
+explicit choice of the spacelike section $\Sp$: clearly both $\wnab\cdot\wl$
+and $\kappa$ depends only on the null normal $\wl$ of $\Hor$. This justifies
+the notation $\theta_{(\wl)}$, which does not refer to $\Sp$
+(cf. Remark~\ref{r:def:expansion_indpt_S} in page~\pageref{r:def:expansion_indpt_S}).
+This can be understood geometrically as follows. Let $p\in\Hor$ be a
+point where one would like to evaluate $\theta_{(\wl)}$. Let $\Sp$ and $\Sp'$
+be two distinct spacelike sections of $\Hor$ going through $p$
+(cf. Fig.~??). Let $q$ (resp. $q'$) be a point of $\Sp$ (resp. $\Sp'$)
+close to $p$.
+
+Let us gather all the expressions of the expansion $\theta_{(\wl)}$ obtained
+so far:
+\be
+    \encadre{ \theta_{(\wl)} = \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \frac{\delta A_\varepsilon - \delta A}{\delta A}
+        = \frac{1}{2} \Lie{\el} \ln q
+        = \frac{1}{2} \, q^{\mu\nu} \Liec{\el} q_{\mu\nu}
+        = q^{\mu\nu} \nabla_\mu \el_\nu
+        = \wnab\cdot\wl - \kappa } .
+\ee
+
+
