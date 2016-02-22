@@ -7,9 +7,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{A first definition of black holes}
+\section{Black holes and null hypersurfaces}
 
-\subsection{Black holes and null hypersurfaces} \label{s:def:first_defin}
+\subsection{A first definition of black holes} \label{s:def:first_defin}
 
 A naive definition of a black hole, involving only words, could be
 \begin{quote}
@@ -30,6 +30,8 @@ a hypersurface of the spacetime manifold $\M$, for it has to divide $\M$ in two 
 the interior (the black hole itself) and the exterior region.
 Let us recall that a hypersurface is a submanifold of $\M$ of codimension 1
 (cf. Sec.~\ref{s:bas:embed} in Appendix~\ref{s:bas}).
+
+\subsection{The event horizon as a null hypersurface}
 
 To discuss further which hypersurface could act as a black hole boundary,
 one should recall that, on a Lorentzian manifold $(\M,\w{g})$, there are
@@ -81,13 +83,16 @@ called \emph{dynamical
 horizons}\index{dynamical!horizon}\index{horizon!dynamical --}, are involved
 in the quasi-local approaches to black holes.
 
-\subsection{Geometry of null hypersurfaces}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Geometry of null hypersurfaces}
 
 Having decided that the black hole event horizon must be a null hypersurface,
 let us examine the geometrical properties of such a hypersurface. We shall
 denote it by $\Hor$, for \emph{horizon}, but the results of this section
 will be valid for any null hypersurface.
 
+\subsection{Null generators}
 
 As any hypersurface, $\Hor$ can be locally considered as a level set,
 around any point of $\Hor$, there exists an open subset $\mathscr{U}$
@@ -268,10 +273,10 @@ a vector field that obeys
 \ee
 Indeed, Eqs.~(\ref{e:def:wl_rescale}) and
 (\ref{e:def:wl_geod_kappa}) imply
-\[
+\be \label{e:def:nab_lp_lp}
     \wnab_{\wl'}\, \wl' = \alpha\left(
-        \wnab_{\wl}\, \alpha + \kappa \alpha \right)
-\]
+        \wnab_{\wl}\, \alpha + \kappa \alpha \right) \wl .
+\ee
 Hence, since $\alpha>0$,
 \[
     \wnab_{\wl'}\, \wl' = 0  \iff  \wnab_{\wl}\, \ln \alpha = -\kappa .
@@ -298,8 +303,14 @@ Any null hypersurface $\Hor$ is ruled by a family of null geodesics, called the
 null generators, and each vector field $\wl$ normal to $\Hor$ is
 tangent to these null geodesics.
 \end{quote}
+As a by-product of (\ref{e:def:nab_lp_lp}), we get the behavior of the
+non-affinity parameter under a rescaling of the null normal:
+\be \label{e:def:rescale_kappa}
+    \wl' = \alpha \wl \ \Longrightarrow \ \kappa' = \alpha \kappa + \wnab_{\wl} \alpha .
+\ee
 
-\subsection{Expansion of null hypersurfaces}
+
+\subsection{Spacelike sections}
 
 Let us now focus on the first aspect of the black hole definition given
 in Sec.~\ref{s:def:first_defin}: \emph{localization}.
@@ -530,6 +541,8 @@ $\Sp$ is drawn as a 1-dimensional submanifold, while it is actually a
 $(n-2)$-dimensional one, $n$ being the spacetime dimension.}
 \end{figure}
 
+\subsection{Expansion along the null normal}
+
 Let us define the expansion of the spacelike section $\Sp$ along the vector
 field $\wl$ as follows. Given an infinitesimal parameter $\varepsilon\geq 0$, take a point
 $p\in \Sp$ and displace it by the infinitesimal vector $\varepsilon \wl$, thereby getting
@@ -665,7 +678,7 @@ We recognize the derivative of the function $\varepsilon \mapsto \ln \sqrt{q(\va
 Given that $\Sp_\varepsilon$ is deduced from $\Sp$ by a Lie dragging along $\wl$
 and $\varepsilon$ is the parameter associated with $\wl$ [cf. Eq.~(\ref{e:def:l_dsdeps})], we may
 rewrite this formula as the Lie derivative of $\ln q$ along $\wl$:
-\be
+\be \label{e:def:theta_Lie_ln_q}
     \theta_{(\wl)} = \frac{1}{2} \Lie{\el} \ln q .
 \ee
 Using the general law of variation of a derminant, as given by Eq.~(\ref{e:bas:variation_det})
@@ -798,7 +811,7 @@ where we have used respectively the properties (\ref{e:def:wl_geod_kappa}),
 (\ref{e:def:el_nab_el_zero}) and (\ref{e:def:k_el_minus_one}).
 Denoting the divergence of $\wl$ by $\wnab\cdot\wl = \nabla_\mu \el^\mu$, we
 have then
-\be
+\be \label{e:def:theta_div_l}
     \encadre{\theta_{(\wl)} = \wnab\cdot\wl - \kappa } .
 \ee
 We notice that the right-hand side of this expression is independent of the
@@ -809,8 +822,51 @@ the notation $\theta_{(\wl)}$, which does not refer to $\Sp$
 This can be understood geometrically as follows. Let $p\in\Hor$ be a
 point where one would like to evaluate $\theta_{(\wl)}$. Let $\Sp$ and $\Sp'$
 be two distinct spacelike sections of $\Hor$ going through $p$
-(cf. Fig.~??). Let $q$ (resp. $q'$) be a point of $\Sp$ (resp. $\Sp'$)
-close to $p$.
+(cf. Fig.~??). Let $q$ be a point of $\Sp$ infinitely close to $p$ and let $q'$
+be the point of $\Sp'$ located on the same null generator as $q$,
+i.e. $\vec{qq'} = \varepsilon \wl$, with $\varepsilon$ infinitely small.
+Let $\D\w{x}$ (resp. $\D\w{x'}$) be the infinitesimal vector connecting
+$p$ to $q$ (resp. $p$ to $q'$). We have then
+\[
+\D\w{x'} = \D\w{x} + \varepsilon \wl ,
+\]
+the scalar square of which is
+\[
+    \D\w{x'}\cdot\D\w{x'} =\D\w{x}\cdot\D\w{x}
+            + 2 \varepsilon \underbrace{\D\w{x}\cdot \wl}_{0}
+            + \underbrace{\wl\cdot \wl}_{0},
+\]
+where we have the fact that $\wl$ is normal to any vector tangent to $\Sp$,
+such as $\D\w{x}$ and $\wl$ is null. Hence
+\[
+    \D\w{x'}\cdot\D\w{x'} = \D\w{x}\cdot\D\w{x} .
+\]
+In other words, the lengths of all segments from $p$ do not depend
+on the spacelike section in which they are taken, provided their second end
+lies on the same null generator of $\Hor$. It follows that all infinitesimal surfaces
+$\delta S$ around $p$ that are enclosed in tube made of null generators have the same
+area $\delta A$. Hence the expansion $\theta_{(\wl)}$ at $p$
+does not depend on the choice of $\delta S$, i.e. of the spacelike section
+$\Sp$ through $p$.
+We conclude that
+\begin{quote}
+The expansion $\theta_{(\wl)}$ depends only on the choice of the null
+normal $\wl$ on the null hypersurface $\Hor$.
+\end{quote}
+Moreover, the expansion behaves as follows under a rescaling of $\wl$:
+\be \label{e:def:rescale_lambda}
+   \wl' = \alpha \wl \ \Longrightarrow \ \theta_{(\wl')} = \alpha \theta_{(\wl)} ,
+\ee
+where $\alpha$ is any positive scalar field on $\Hor$. This follows immediately
+from the expression (\ref{e:def:theta_Lie_ln_q}) of $\theta_{(\wl)}$, given
+that the metric $\w{q}$ is independent of $\wl$ and
+$\w{\Liesymbol}_{\alpha\wl}\,\ln q = \alpha \Lie{\wl}\ln q$.
+\begin{remark}
+The reader may check that the rescaling laws (\ref{e:def:rescale_kappa})
+and (\ref{e:def:rescale_lambda}) for respectively $\kappa$ and $\theta_{(\wl)}$
+are compatible with the expression (\ref{e:def:theta_div_l}) of $\theta_{(\wl)}$,
+given that $\wnab\cdot \wl' = \alpha\wnab\cdot\wl + \wnab_{\wl} \alpha$.
+\end{remark}
 
 Let us gather all the expressions of the expansion $\theta_{(\wl)}$ obtained
 so far:
@@ -822,5 +878,81 @@ so far:
         = q^{\mu\nu} \nabla_\mu \el_\nu
         = \wnab\cdot\wl - \kappa } .
 \ee
+
+\subsection{Null Raychaudhuri equation}
+
+Let us consider a spacelike section $\Sp$ of the null hypersurface $\Hor$.
+The \defin{deformation rate} $\w{\Theta}$ of $\Sp$ is defined from the Lie
+derivative of the induced metric $\w{q}$ of $\Sp$ along $\wl$ as
+\be \label{e:def:Theta}
+    \w{\Theta} := \frac{1}{2} \vw{q}^* \Lie{\el} \w{q} ,
+\ee
+where $\vw{q}^*$ stands for the action of the orthogonal projector $\vw{q}$
+onto $\Sp$ on the bilinear form $\Lie{\el} \w{q}$.
+This action extends $\Lie{\el} \w{q}$, which is defined a priori on
+vectors of $T_p\Sp$ to all vectors of $T_p\M$, for any $p\in\Sp$, via
+\be
+    \forall (\w{u},\w{v}) \in T_p\M \times T_p\M, \quad
+         \vw{q}^* \Lie{\el} \w{q}\,  (\w{u}, \w{v}) =
+         \Lie{\el} \w{q} \left( \vw{q}(\w{u}), \vw{q}(\w{v}) \right) .
+\ee
+Accordingly, the index-notation version of (\ref{e:def:Theta}) is
+\be
+    \Theta_{\alpha\beta} = \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta}
+            \Liec{\el} q_{\mu\nu} .
+\ee
+Expressing the Lie derivative in terms of the covariant derivative
+$\wnab$ via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of Appendix~{\ref{s:bas}
+and using expression (\ref{e:def:q_g_k_l}) of $\w{q}$, we get
+\bea
+    \Theta_{\alpha\beta} & = & \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta}
+        \left( \el^\sigma \nabla_\sigma q_{\mu\nu}
+            + q_{\sigma\nu}\nabla_\mu \el^\sigma
+            + q_{\mu\sigma}\nabla_\nu \el^\sigma \right) \nonumber \\
+            & = & \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \Big[
+                l^\sigma \left( \nabla_\sigma \el_\mu k_\nu
+                    + \el_\mu \nabla_\sigma k_\nu +  \nabla_\sigma k_\mu \el_\nu
+                    + k_\mu \nabla_\sigma \el_\nu \right) \nonumber \\
+            & & \qquad\qquad + \nabla_\mu \el_\nu + k_\nu \underbrace{\el_\sigma \nabla_\mu \el^\sigma}_{0}
+                + k_\sigma \el_\nu \nabla_\mu \el^\sigma  + \nabla_\nu \el_\mu + \el_\mu k_\sigma \nabla_\nu \el^\sigma
+                + k_\mu \underbrace{\el_\sigma \nabla_\nu \el^\sigma}_{0}
+                                    \Big] . \nonumber
+\eea
+Since $q^\mu_{\ \, \alpha} \el_\mu = 0$ and $q^\mu_{\ \, \alpha} k_\mu = 0$,
+the above expression simplies to
+\be
+    \Theta_{\alpha\beta}  = q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu \el_\nu .
+\ee
+Let us substitute (\ref{e:def:q_proj}) for the projector $\vw{q}$:
+\[
+    \Theta_{\alpha\beta}  = \left(\delta^\mu_{\ \, \alpha}
+        + \el^\mu k_\alpha + k^\mu \el_\alpha \right)
+        \left(\delta^\nu_{\ \, \beta}
+        + \el^\nu k_\beta + k^\nu \el_\beta \right) \nabla_\mu \el_\nu .
+\]
+Expanding and simplifying (in particular via $\el^\nu \nabla_\mu \el_\nu = 0$)
+yields
+\be
+    \nabla_\alpha \el_\beta = \Theta_{\alpha\beta}
+        + \omega_\alpha \el_\beta - \el_\alpha k^\mu \nabla_\mu \el_\beta ,
+\ee
+with
+\be
+    \omega_\alpha := - k^\mu \nabla_\alpha \el_\mu - k^\mu k^\nu \nabla_\mu \el_\nu \, \el_\alpha .
+\ee
+\begin{remark}
+The 1-form $\w{\omega}$ is sometimes called the \defin{rotation 1-form} of
+the spacelike section $\Sp$; see Ref.~\cite{GourgJ06} for details.
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Non-expanding horizons}
+
+\subsection{Killing horizons}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The general definition}
 
 
