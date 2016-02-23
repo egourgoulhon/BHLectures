@@ -763,7 +763,7 @@ Hence
 where the second equality follows from
 ${\bar q}^{ab}  = q^{ab}$.
 Hence we may rewrite (\ref{e:def:theta_q_ab}) as
-\be
+\be \label{e:def:theta_q_munu}
     \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu} \Liec{\el} q_{\mu\nu} .
 \ee
 Note that we have dropped the bar over $q$, i.e. we revert to previous notation.
@@ -879,10 +879,10 @@ so far:
         = \wnab\cdot\wl - \kappa } .
 \ee
 
-\subsection{Null Raychaudhuri equation}
+\subsection{Deformation rate and shear tensor}
 
 Let us consider a spacelike section $\Sp$ of the null hypersurface $\Hor$.
-The \defin{deformation rate} $\w{\Theta}$ of $\Sp$ is defined from the Lie
+The \defin{deformation rate}\index{deformation rate} $\w{\Theta}$ of $\Sp$ is defined from the Lie
 derivative of the induced metric $\w{q}$ of $\Sp$ along $\wl$ as
 \be \label{e:def:Theta}
     \w{\Theta} := \frac{1}{2} \vw{q}^* \Lie{\el} \w{q} ,
@@ -897,7 +897,7 @@ vectors of $T_p\Sp$ to all vectors of $T_p\M$, for any $p\in\Sp$, via
          \Lie{\el} \w{q} \left( \vw{q}(\w{u}), \vw{q}(\w{v}) \right) .
 \ee
 Accordingly, the index-notation version of (\ref{e:def:Theta}) is
-\be
+\be \label{e:def:Theta_index}
     \Theta_{\alpha\beta} = \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta}
             \Liec{\el} q_{\mu\nu} .
 \ee
@@ -944,6 +944,49 @@ with
 The 1-form $\w{\omega}$ is sometimes called the \defin{rotation 1-form} of
 the spacelike section $\Sp$; see Ref.~\cite{GourgJ06} for details.
 \end{remark}
+
+By comparing (\ref{e:def:theta_q_munu}) and (\ref{e:def:Theta_index}), we
+notice that the trace of $\w{\Theta}$ is nothing but the expansion
+$\theta_{(\wl)}$:
+\be
+    \theta_{(\wl)} = g^{\mu\nu} \Theta_{\mu\nu} = q^{\mu\nu} \Theta_{\mu\nu} = \Theta^\mu_{\ \, \mu} .
+\ee
+The trace-free part of $\w{\Theta}$ is called the \defin{shear tensor}\index{shear!tensor}
+of $\Sp$:
+\be
+    \w{\sigma} := \w{\Theta} - \frac{1}{n-2} \theta_{(\wl)} \, \w{q} ,
+\ee
+or, in index notation:
+\be
+    \sigma_{\alpha\beta} = \Theta_{\alpha\beta} - \frac{1}{n-2} \theta_{(\wl)} \, q_{\alpha\beta} .
+\ee
+Note that the $1/(n-2)$ factor arises from the trace of $\w{q}$, which is $n-2$,
+as easily seen from (\ref{e:def:q_g_k_l}):
+\be
+    q^\mu_{\ \, \mu} = \underbrace{\delta^\mu_{\ \, \mu}}_{n}
+                    + 2 \underbrace{\el^\mu k^\mu}_{-1} = n - 2 .
+\ee
+By construction, we have thus
+\be
+    \sigma^\mu_{\ \, \mu} = g^{\mu\nu} \sigma_{\mu\nu} = q^{\mu\nu} \sigma_{\mu\nu} = 0 .
+\ee
+Note that $\w{\Theta}$ and $\w{\sigma}$ are tensor fields tangent to $\Sp$, in the sense
+that
+\be
+    \forall \w{v}\in T_p^\perp \Sp, \quad \w{\Theta}(\w{v}, .) = \w{\sigma}(\w{v}, .) = 0 ,
+\ee
+with the important special cases $\w{v} = \wl$ and $\w{v} = \w{k}$.
+
+\begin{remark}
+Contrary to $\theta_{(\wl)}$ which depends only on $\wl$, the tensor fields
+$\w{\Theta}$ and $\w{\sigma}$ depend on the specific choice of the spacelike
+section $\Sp$, in addition to $\wl$.
+\end{remark}
+
+\subsection{Null Raychaudhuri equation}
+
+To get an evolution equation for the expansion $\theta_{(\wl)}$
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
