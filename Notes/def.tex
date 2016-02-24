@@ -853,7 +853,11 @@ We conclude that
 The expansion $\theta_{(\wl)}$ depends only on the choice of the null
 normal $\wl$ on the null hypersurface $\Hor$.
 \end{quote}
-Moreover, the expansion behaves as follows under a rescaling of $\wl$:
+For this reason, from now on, we shall call $\theta_{(\wl)}$
+the \defin{expansion of the null hypersurface $\Hor$ along $\wl$}\index{expansion!of a null hypersurface}.
+
+The dependency of the expansion on $\wl$ is explicited by the following
+behaviour under a rescaling of $\wl$:
 \be \label{e:def:rescale_lambda}
    \wl' = \alpha \wl \ \Longrightarrow \ \theta_{(\wl')} = \alpha \theta_{(\wl)} ,
 \ee
@@ -901,6 +905,9 @@ Accordingly, the index-notation version of (\ref{e:def:Theta}) is
     \Theta_{\alpha\beta} = \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta}
             \Liec{\el} q_{\mu\nu} .
 \ee
+Since $\w{q}$ is symmetric, it is clear from the above definition that
+$\w{Theta}$ is a symmetric bilinear form.
+
 Expressing the Lie derivative in terms of the covariant derivative
 $\wnab$ via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of Appendix~{\ref{s:bas}
 and using expression (\ref{e:def:q_g_k_l}) of $\w{q}$, we get
@@ -932,12 +939,12 @@ Let us substitute (\ref{e:def:q_proj}) for the projector $\vw{q}$:
 \]
 Expanding and simplifying (in particular via $\el^\nu \nabla_\mu \el_\nu = 0$)
 yields
-\be
-    \nabla_\alpha \el_\beta = \Theta_{\alpha\beta}
-        + \omega_\alpha \el_\beta - \el_\alpha k^\mu \nabla_\mu \el_\beta ,
+\be \label{e:def:nab_l_Theta}
+   \encadre{ \nabla_\alpha \el_\beta = \Theta_{\alpha\beta}
+        + \omega_\alpha \el_\beta - \el_\alpha k^\mu \nabla_\mu \el_\beta },
 \ee
 with
-\be
+\be \label{e:def:def_omega}
     \omega_\alpha := - k^\mu \nabla_\alpha \el_\mu - k^\mu k^\nu \nabla_\mu \el_\nu \, \el_\alpha .
 \ee
 \begin{remark}
@@ -953,7 +960,7 @@ $\theta_{(\wl)}$:
 \ee
 The trace-free part of $\w{\Theta}$ is called the \defin{shear tensor}\index{shear!tensor}
 of $\Sp$:
-\be
+\be \label{e:def:def_shear}
     \w{\sigma} := \w{\Theta} - \frac{1}{n-2} \theta_{(\wl)} \, \w{q} ,
 \ee
 or, in index notation:
@@ -972,7 +979,7 @@ By construction, we have thus
 \ee
 Note that $\w{\Theta}$ and $\w{\sigma}$ are tensor fields tangent to $\Sp$, in the sense
 that
-\be
+\be \label{e:def:Theta_sigma_tangent}
     \forall \w{v}\in T_p^\perp \Sp, \quad \w{\Theta}(\w{v}, .) = \w{\sigma}(\w{v}, .) = 0 ,
 \ee
 with the important special cases $\w{v} = \wl$ and $\w{v} = \w{k}$.
@@ -985,7 +992,81 @@ section $\Sp$, in addition to $\wl$.
 
 \subsection{Null Raychaudhuri equation}
 
-To get an evolution equation for the expansion $\theta_{(\wl)}$
+Let us derive an evolution equation for the expansion $\theta_{(\wl)}$
+by taking the derivative of $\theta_{(\wl)}$ along $\wl$. Starting from
+$\theta_{(\wl)} = \wnab\cdot\wl - \kappa$ [Eq.~(\ref{e:def:theta_div_l})], we have
+\be \label{e:def:evol_theta_debut}
+    \el^\mu \nabla_\mu \theta_{(\wl)} = \el^\mu \nabla_\mu \left(
+        \nabla_\nu \el^\nu - \kappa \right)
+            = \el^\mu \nabla_\mu \nabla_\nu \el^\nu - \el^\mu \nabla_\mu  \kappa .
+\ee
+Let us permute the indices $(\mu,\nu)$ in $\nabla_\mu \nabla_\nu \el^\nu$
+via the Ricci identity [Eq.~(\ref{e:bas:Ricci_ident}) in Appendix~\ref{s:bas}]
+applied to $\wl$:
+\[
+   \left(\nabla_\alpha\nabla_\beta
+        - \nabla_\beta\nabla_\alpha\right) \el^\gamma
+        = R^\gamma_{\ \  \mu \alpha\beta} \, \el^\mu ,
+\]
+where $R^\gamma_{\ \  \mu \alpha\beta}$ is the Riemann tensor of the metric
+$\w{g}$.
+Taking the trace on the indices $(\alpha,\gamma)$ and relabeling $\beta\rightarrow\mu$ yields
+\[
+    \nabla_\nu \nabla_\mu \el^\nu - \nabla_\mu \nabla_\nu \el^\nu =
+        R_{\mu\nu} \el^\nu ,
+\]
+where $R_{\mu\nu} = R_{\nu\mu} = R^\sigma_{\ \  \nu \sigma\mu}$ is
+the Ricci tensor of $\w{g}$. Hence
+$\nabla_\mu \nabla_\nu \el^\nu = \nabla_\nu \nabla_\mu \el^\nu - R_{\mu\nu} \el^\nu$,
+so that (\ref{e:def:evol_theta_debut}) can be rewritten as
+\bea
+    \el^\mu \nabla_\mu \theta_{(\wl)} &= &\el^\mu  \nabla_\nu \nabla_\mu \el^\nu
+        - R_{\mu\nu} \el^\mu \el^\nu - \el^\mu \nabla_\mu  \kappa \nonumber \\
+    & = & \nabla_\nu (\underbrace{\el^\mu \nabla_\mu \el^\nu}_{\kappa \el^\nu})
+        - \nabla_\nu \el^\mu \nabla_\mu \el^\nu
+        - R_{\mu\nu} \el^\mu \el^\nu - \el^\mu \nabla_\mu  \kappa \nonumber \\
+    & = & \el^\nu \nabla_\nu \kappa + \kappa \underbrace{\nabla_\nu \el^\nu}_{\theta_{(\wl)} + \kappa}
+    - \nabla_\nu \el^\mu \nabla_\mu \el^\nu
+        - R_{\mu\nu} \el^\mu \el^\nu - \el^\mu \nabla_\mu  \kappa \nonumber \\
+    & = & \kappa(\theta_{(\wl)} + \kappa) - \nabla_\nu \el^\mu \nabla_\mu \el^\nu
+        - R_{\mu\nu} \el^\mu \el^\nu  .
+\eea
+Now, from Eq.~(\ref{e:def:nab_l_Theta}), we have
+\[
+    \nabla_\nu \el^\mu \nabla_\mu \el^\nu =
+    \left(\Theta_\nu^{\  \, \mu} + \omega_\nu \el^\mu - \el_\nu k^\rho \nabla_\rho \el^\mu\right)
+    \left(\Theta^\nu_{\ \, \mu} + \omega_\mu \el^\nu - \el_\mu k^\sigma \nabla_\sigma \el^\nu\right) .
+\]
+Expanding and using $\Theta_\nu^{\  \, \mu} \el^\nu = 0$ [Eq.~(\ref{e:def:Theta_sigma_tangent})],
+$\el^\mu \el_\mu = 0$ and the symmetry of $\w{\Theta}$ results in
+\[
+    \nabla_\nu \el^\mu \nabla_\mu \el^\nu = \Theta_{\mu\nu} \Theta^{\mu\nu}
+        + (\omega_\mu \el^\mu)^2 .
+\]
+The first term in the right-hand side can be re-expressed by the decomposition
+(\ref{e:def:def_shear}) of
+$\w{\Theta}$ in terms of the shear tensor and the trace term:
+\bea
+    \Theta_{\mu\nu} \Theta^{\mu\nu} & = & \left( \sigma_{\mu\nu}
+        + \frac{1}{n-2} \, \theta_{(\wl)} q_{\mu\nu} \right)
+        \left( \sigma^{\mu\nu}
+        + \frac{1}{n-2} \, \theta_{(\wl)} q^{\mu\nu} \right) \nonumber \\
+        & = &
+     \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{2}{n-2} \, \theta_{(\wl)}
+    \underbrace{q^{\mu\nu} \sigma_{\mu\nu}}_{0}
+        + \frac{1}{(n-2)^2}\,  \theta_{(\wl)}^2 \underbrace{q_{\mu\nu} q^{\mu\nu}}_{n-2} \nonumber \\
+    & = & \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{1}{n-2} \, \theta_{(\wl)}^2 , \nonumber
+\eea
+while the second term is easily evaluated via Eq.~(\ref{e:def:def_omega}):
+\[
+    \omega_\mu \el^\mu = - k^\nu \underbrace{\el^\mu \nabla_\mu \el_\nu}_{\kappa \el_\nu}
+        - k^\rho k^\sigma \nabla_\rho \el_\sigma \, \underbrace{\el_\mu \el^\mu}_{0}
+         = - \kappa \underbrace{k^\nu \el_\nu}_{-1} = \kappa .
+\]
+Hence
+\[
+    \nabla_\nu \el^\mu \nabla_\mu \el^\nu =  \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{1}{n-2} \, \theta_{(\wl)}^2 + \kappa^2 .
+\]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
