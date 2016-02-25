@@ -105,9 +105,9 @@ a smooth scalar field $u:\ \mathscr{U} \rightarrow \R$ such that
 A very simple example of null hypersurface is a null hyperplane in
 the 4-dimensional Minkowski spacetime. If $(t,x,y,z)$ are standard Minkowskian
 coordinates, the choice of the scalar field
-\[
+\be \label{e:def:null_plane_u}
     u(t,x,y,z) = t - x
-\]
+\ee
 defines a null hyperplane by $u=0$.
 \end{example}
 
@@ -118,9 +118,9 @@ called \defin{future light cone}\index{future!light cone}. Note that we have
 to take out the apex from $\Hor$, in order to have a regular hypersurface.
 In the  Minkowskian coordinates $(t,x,y,z)$, the choice of the
 ``retarded time''\index{retarded!time}
-\[
+\be \label{e:def:light_cone_u}
     u(t,x,y,z) = t - \sqrt{x^2+y^2+z^2}
-\]
+\ee
 defines a future light cone by $u=0$.
 \end{example}
 
@@ -194,7 +194,33 @@ i.e. under the form of minus an exponential. This is always possible by a suitab
 choice of the scalar field $u$. The minus sign ensures that in the case
 of a retarded time $u$ increasing toward the future, $\wl$ is future-directed.
 
+\begin{example} \label{x:def:null_hyp2}
+For the null hyperplane of Example~\ref{x:def:null_hyp}, we deduce from
+expression (\ref{e:def:null_plane_u}) for $u$ that
+\[
+    \wnab u = \dd t - \dd x .
+\]
+The gradient vector field obtained by metric duality is
+$\vw{\nabla} u = - \wpar_t - \wpar_x$. Choosing for simplicity $\rho=0$, we
+have
+\be \label{e:def:wl_null_hyperplane}
+    \wl =  \wpar_t + \wpar x .
+\ee
+\end{example}
 
+\begin{example} \label{x:def:light_cone2}
+Regarding the light cone of Example~\ref{x:def:light_cone}, we have,
+given expression (\ref{e:def:light_cone_u}) for $u$,
+\[
+    \wnab u = \dd t - \frac{x}{r} \dd x - \frac{y}{r} \dd y - \frac{z}{r} \dd z,
+    \quad\mbox{with}\quad r:=\sqrt{x^2+y^2+z^2}.
+\]
+Choosing for simplicity $\rho=0$ in (\ref{e:def:wl_rho_u}), we get the
+normal
+\be \label{e:def:wl_light_cone}
+    \wl = \wpar_t + \frac{x}{r} \wpar_x + \frac{y}{r} \wpar_y + \frac{z}{r} \wpar_z .
+\ee
+\end{example}
 
 \subsubsection{Frobenius identity}
 
@@ -253,7 +279,7 @@ Hence (\ref{e:def:l_contract_Frob}) reduces to
     \el^\mu \nabla_\mu \el_\alpha  = \kappa \, \el_\alpha ,
 \ee
 with
-\be
+\be \label{e:def:def_kappa}
     \kappa := \el^\mu \nabla_\mu \rho = \wnab_{\wl}\,  \rho .
 \ee
 The metric dual of (\ref{e:def:wl_geod_kappa_dual}) is
@@ -309,6 +335,46 @@ non-affinity parameter under a rescaling of the null normal:
     \wl' = \alpha \wl \ \Longrightarrow \ \kappa' = \alpha \kappa + \wnab_{\wl} \alpha .
 \ee
 
+\begin{example}
+For the null hyperplane considered in Examples~\ref{x:def:null_hyp} and \ref{x:def:null_hyp2},
+it is clear on expression (\ref{e:def:wl_null_hyperplane}) for $\wl$ that
+the covariant derivative
+$\wnab \wl$ vanishes identically. In particular $\wnab_{\wl} \wl = 0$.
+Equation~(\ref{e:def:wl_geod_kappa}) then implies
+\[
+    \kappa = 0 ,
+\]
+which is in agreement with Eq.~(\ref{e:def:def_kappa}) and the choice $\rho=0$
+performed in Example~\ref{x:def:null_hyp2}. The null generators of $\Hor$ are the
+straight lines defined by $t=x$, $y=y_0$ and $z=z_0$ for some constants
+$(y_0,z_0)\in \mathbb{R}^2$. Either $t$ or $x$ can be chosen as an affine
+parameter of these generators.
+\end{example}
+
+\begin{example}
+Regarding the light cone in Minkowski spacetime of Examples~\ref{x:def:light_cone}
+and \ref{x:def:light_cone2}, we get from the expression (\ref{e:def:wl_light_cone})
+of $\wl$ and the fact that in Minkowksi coordinates $(t,x,y,z)$,
+$\nabla_\beta \el^\alpha = \partial_\beta \el^\alpha$,
+\[
+    \nabla_\beta \el^\alpha = \left(
+    \begin{array}{cccc}
+    0 & 0 & 0 & 0 \\
+    0 & \frac{y^2+z^2}{r^3} & - \frac{xy}{r^3} & - \frac{xz}{r^3} \\
+    0 & - \frac{xy}{r^3} & \frac{x^2+z^2}{r^3} & - \frac{yz}{r^3} \\
+    0 & - \frac{xz}{r^3} & - \frac{yz}{r^3} & \frac{x^2+y^2}{r^3}
+    \end{array} \right)
+    \qquad {(\alpha = \mbox{row index}; \atop \beta = \mbox{column index}).}
+\]
+We obtain then $\el^\mu \nabla_\mu \el^\alpha = 0$.
+From Eq.~(\ref{e:def:wl_geod_kappa}), we conclude that
+\[
+    \kappa = 0 ,
+\]
+which is in agreement with Eq.~(\ref{e:def:def_kappa}) and the choice $\rho=0$
+performed in Example~\ref{x:def:light_cone2}. The null generators of $\Hor$
+are the straight lines defined by ...
+\end{example}
 
 \subsection{Spacelike sections}
 
@@ -1029,7 +1095,7 @@ so that (\ref{e:def:evol_theta_debut}) can be rewritten as
     - \nabla_\nu \el^\mu \nabla_\mu \el^\nu
         - R_{\mu\nu} \el^\mu \el^\nu - \el^\mu \nabla_\mu  \kappa \nonumber \\
     & = & \kappa(\theta_{(\wl)} + \kappa) - \nabla_\nu \el^\mu \nabla_\mu \el^\nu
-        - R_{\mu\nu} \el^\mu \el^\nu  .
+        - R_{\mu\nu} \el^\mu \el^\nu  . \label{e:def:null_Raych_prov}
 \eea
 Now, from Eq.~(\ref{e:def:nab_l_Theta}), we have
 \[
@@ -1055,7 +1121,8 @@ $\w{\Theta}$ in terms of the shear tensor and the trace term:
      \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{2}{n-2} \, \theta_{(\wl)}
     \underbrace{q^{\mu\nu} \sigma_{\mu\nu}}_{0}
         + \frac{1}{(n-2)^2}\,  \theta_{(\wl)}^2 \underbrace{q_{\mu\nu} q^{\mu\nu}}_{n-2} \nonumber \\
-    & = & \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{1}{n-2} \, \theta_{(\wl)}^2 , \nonumber
+    & = & \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{1}{n-2} \, \theta_{(\wl)}^2 , \nonumber \\
+    & = & \sigma_{ab} \sigma^{ab} + \frac{1}{n-2} \, \theta_{(\wl)}^2 \nonumber
 \eea
 while the second term is easily evaluated via Eq.~(\ref{e:def:def_omega}):
 \[
@@ -1065,13 +1132,52 @@ while the second term is easily evaluated via Eq.~(\ref{e:def:def_omega}):
 \]
 Hence
 \[
-    \nabla_\nu \el^\mu \nabla_\mu \el^\nu =  \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{1}{n-2} \, \theta_{(\wl)}^2 + \kappa^2 .
+    \nabla_\nu \el^\mu \nabla_\mu \el^\nu =
+    \sigma_{ab} \sigma^{ab} + \frac{1}{n-2} \, \theta_{(\wl)}^2 + \kappa^2
 \]
+and Eq.~(\ref{e:def:null_Raych_prov}) becomes
+\be
+    \encadre{ \wnab_{\el}\,  \theta_{(\wl)} = \kappa \theta
+        - \frac{1}{n-2} \, \theta_{(\wl)}^2 - \sigma_{ab} \sigma^{ab}
+        - \w{R}(\wl, \wl) }.
+\ee
+This evolution equation of $\theta_{(\wl)}$ along $\wl$ is known as the
+\defin{null Raychaudhuri equation}\index{null!Raychaudhuri equation}\index{Raychaudhuri!null --  equation}.
 
+If the spacetime $(\M,\w{g})$ is ruled by general relativity, i.e. if
+$\w{g}$ obeys Einstein equation (\ref{e:bas:Einstein_eq_n}), we may express
+the term involving the Ricci tensor in terms of the total energy-momentum tensor
+$\w{T}$:
+\[
+  \w{R}(\wl, \wl)  = \frac{2}{n-2}\,\Lambda\,  \underbrace{\w{g}(\wl, \wl)}_{0}
+    + 8\pi \big[ \w{T}(\wl, \wl) - \frac{1}{n-2}\,  T \, \underbrace{\w{g}(\wl, \wl)}_{0} \big]
+    = 8\pi \w{T}(\wl, \wl) .
+\]
+The null Raychaudhuri equation becomes then
+\be
+    \encadre{ \wnab_{\el}\,  \theta_{(\wl)} = \kappa \theta
+        - \frac{1}{n-2} \, \theta_{(\wl)}^2 - \sigma_{ab} \sigma^{ab}
+        - 8\pi \w{T}(\wl, \wl) }.
+\ee
+
+\begin{remark}
+Since $\theta_{(\wl)}$ is a scalar field on $\Hor$, $\wnab_{\el}\,  \theta_{(\wl)}$
+can be replaced by the Lie derivative $\Lie{\wl} \theta_{(\wl)}$ in the left-hand side of the Raychaudhuri
+equation.
+\end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Non-expanding horizons}
+
+\subsection{Motivation and definition}
+
+Having introduced the concept of expansion of a null hypersurface,
+let us make an attempt to distinguish a black hole event horizon from, let us
+say, a future light cone.
+
+
+\subsection{Rigidity}
 
 \subsection{Killing horizons}
 
