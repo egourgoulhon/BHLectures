@@ -335,7 +335,7 @@ non-affinity parameter under a rescaling of the null normal:
     \wl' = \alpha \wl \ \Longrightarrow \ \kappa' = \alpha \kappa + \wnab_{\wl} \alpha .
 \ee
 
-\begin{example}
+\begin{example} \label{x:def:null_hyp3}
 For the null hyperplane considered in Examples~\ref{x:def:null_hyp} and \ref{x:def:null_hyp2},
 it is clear on expression (\ref{e:def:wl_null_hyperplane}) for $\wl$ that
 the covariant derivative
@@ -351,7 +351,7 @@ $(y_0,z_0)\in \mathbb{R}^2$. Either $t$ or $x$ can be chosen as an affine
 parameter of these generators.
 \end{example}
 
-\begin{example}
+\begin{example} \label{x:def:light_cone3}
 Regarding the light cone in Minkowski spacetime of Examples~\ref{x:def:light_cone}
 and \ref{x:def:light_cone2}, we get from the expression (\ref{e:def:wl_light_cone})
 of $\wl$ and the fact that in Minkowksi coordinates $(t,x,y,z)$,
@@ -373,7 +373,10 @@ From Eq.~(\ref{e:def:wl_geod_kappa}), we conclude that
 \]
 which is in agreement with Eq.~(\ref{e:def:def_kappa}) and the choice $\rho=0$
 performed in Example~\ref{x:def:light_cone2}. The null generators of $\Hor$
-are the straight lines defined by ...
+are the half-lines defined by $x=a t$, $y=b t$, $z = \sqrt{1-a^2-b^2} t$, with
+$t>0$ and $(a,b)\in\mathbb{R}^2$ such that $a^2+b^2 \leq 1$.
+Since $\wnab_{\wl} t = 1$, as it is clear from (\ref{e:def:wl_light_cone}),
+and $\kappa=0$, $\lambda=t$ is an affine parameter along these null generators.
 \end{example}
 
 \subsection{Spacelike sections}
@@ -422,6 +425,24 @@ null generator $\Li$ going through $p$, but then $\Li$ would be tangent to $\Sp$
 which is not allowed, given the definition of a spacelike section. We conclude
 that $\w{v}$ is necessarily spacelike, which proves that $\Sp$ is a spacelike
 submanifold.
+
+\begin{example} \label{x:def:light_cone4}
+From now on, we abandon the null hyperplane considered in Examples~\ref{x:def:null_hyp},
+\ref{x:def:null_hyp2} and \ref{x:def:null_hyp3}, since its topology is $\mathbb{R}^3$,
+and therefore not of the type (\ref{e:def:H_topology}).
+On its side, the light cone of Minkowkski spacetime considered in Examples~\ref{x:def:light_cone},
+\ref{x:def:light_cone2} and \ref{x:def:light_cone3} does obey (\ref{e:def:H_topology}).
+A natural choice of spacelike
+section is a sphere defined by $t=t_0$ for some positive constant $t_0$:
+\[
+    \Sp = \left\{ p \in \Hor,\  t(p) = t_0 \right\} .
+\]
+That $\Sp$ is a 2-dimensional sphere is clear on its equation in terms
+of the Minkowskian coordinates $(t,x,y,z)$:
+$x^2+y^2+z^2 = t_0^2$, which follows immediately from $u=0$ and $t = t_0$
+[cf. Eq.~(\ref{e:def:light_cone_u})]. Moreover, this equation shows that the
+radius of the sphere is $t_0$.
+\end{example}
 
 Let us denote by $\w{q}$ the
 \defin{metric induced on $\Sp$ by $\w{g}$}\index{induced!metric}\index{metric!induced --},
@@ -535,6 +556,50 @@ Hence (\ref{e:def:q_u_v_k_l}) results in
 \eea
 which is nothing but (\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
 \end{proof}
+
+\begin{example}
+In continuation with the light cone in Minkowski spacetime
+considered in Example~\ref{x:def:light_cone4}, the null
+vector $\w{k}$ orthogonal to the sphere $\Sp$ and obeying $\w{k}\cdot\wl = -1$
+is
+\[
+    \w{k} = \frac{1}{2} \wpar_t
+        - \frac{x}{2r} \wpar_x - \frac{y}{2r} \wpar_y  - \frac{z}{2r} \wpar_z .
+\]
+Evaluating $\w{q}$ via (\ref{e:def:q_g_k_l}), given expression
+(\ref{e:def:wl_light_cone}) for $\wl$, we get the following components
+of $\w{q}$ with respect to the Minkowskian coordinates $x^\alpha=(t,x,y,z)$:
+\[
+    q_{\alpha\beta} = \left(
+    \begin{array}{cccc}
+    0 & 0 & 0 & 0 \\
+    0 & \frac{y^2+z^2}{r^2} & - \frac{xy}{r^2} & - \frac{xz}{r^2} \\
+    0 & - \frac{xy}{r^2} & \frac{x^2+z^2}{r^2} & - \frac{yz}{r^2} \\
+    0 & - \frac{xz}{r^2} & - \frac{yz}{r^2} & \frac{x^2+y^2}{r^2}
+    \end{array} \right) .
+ \]
+If we consider the spherical coordinates ${x'}^{\alpha}=(t,r,\theta,\phi)$
+deduced from the Minkowskian ones via the standard formulas:
+\[
+    \left\{ \begin{array}{l}
+    x = r\sin\theta\cos\phi \\
+    y = r\sin\theta\sin\phi \\
+    z = r\cos\theta
+    \end{array} \right. ,
+\]
+the components of $\w{q}$ become
+\[
+    q_{\alpha\beta} = \left(
+    \begin{array}{cccc}
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & r^2 & 0 \\
+    0 & 0 & 0 & r^2\sin^2\theta
+    \end{array} \right) .
+ \]
+and we recognize in $q_{ab} = \mathrm{diag}(r^2, r^2 \sin^2\theta)$ the
+standard metric on the 2-sphere of radius $r$.
+\end{example}
 
 Having extended the definition of $\w{q}$ via (\ref{e:def:q_g_k_l}), we notice
 that the metric dual of $\w{q}$, i.e. the tensor of type $(1,1)$ defined by
