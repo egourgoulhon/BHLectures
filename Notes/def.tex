@@ -92,7 +92,7 @@ let us examine the geometrical properties of such a hypersurface. We shall
 denote it by $\Hor$, for \emph{horizon}, but the results of this section
 will be valid for any null hypersurface.
 
-\subsection{Null generators}
+\subsection{Null generators} \label{s:def:null_gener}
 
 As any hypersurface, $\Hor$ can be locally considered as a level set,
 around any point of $\Hor$, there exists an open subset $\mathscr{U}$
@@ -356,7 +356,7 @@ Regarding the light cone in Minkowski spacetime of Examples~\ref{x:def:light_con
 and \ref{x:def:light_cone2}, we get from the expression (\ref{e:def:wl_light_cone})
 of $\wl$ and the fact that in Minkowksi coordinates $(t,x,y,z)$,
 $\nabla_\beta \el^\alpha = \partial_\beta \el^\alpha$,
-\[
+\be \label{e:def:nab_l_light_cone}
     \nabla_\beta \el^\alpha = \left(
     \begin{array}{cccc}
     0 & 0 & 0 & 0 \\
@@ -365,7 +365,7 @@ $\nabla_\beta \el^\alpha = \partial_\beta \el^\alpha$,
     0 & - \frac{xz}{r^3} & - \frac{yz}{r^3} & \frac{x^2+y^2}{r^3}
     \end{array} \right)
     \qquad {(\alpha = \mbox{row index}; \atop \beta = \mbox{column index}).}
-\]
+\ee
 We obtain then $\el^\mu \nabla_\mu \el^\alpha = 0$.
 From Eq.~(\ref{e:def:wl_geod_kappa}), we conclude that
 \[
@@ -557,7 +557,7 @@ Hence (\ref{e:def:q_u_v_k_l}) results in
 which is nothing but (\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
 \end{proof}
 
-\begin{example}
+\begin{example} \label{x:def:light_cone5}
 In continuation with the light cone in Minkowski spacetime
 considered in Example~\ref{x:def:light_cone4}, the null
 vector $\w{k}$ orthogonal to the sphere $\Sp$ and obeying $\w{k}\cdot\wl = -1$
@@ -588,7 +588,7 @@ deduced from the Minkowskian ones via the standard formulas:
     \end{array} \right. ,
 \]
 the components of $\w{q}$ become
-\[
+\be \label{e:def:q_light_cone_spher}
     q_{\alpha\beta} = \left(
     \begin{array}{cccc}
     0 & 0 & 0 & 0 \\
@@ -596,7 +596,7 @@ the components of $\w{q}$ become
     0 & 0 & r^2 & 0 \\
     0 & 0 & 0 & r^2\sin^2\theta
     \end{array} \right) .
- \]
+\ee
 and we recognize in $q_{ab} = \mathrm{diag}(r^2, r^2 \sin^2\theta)$ the
 standard metric on the 2-sphere of radius $r$.
 \end{example}
@@ -803,7 +803,7 @@ of the expansion of $\Sp$ along $\wl$ can be rewritten as
 \]
 We recognize the derivative of the function $\varepsilon \mapsto \ln \sqrt{q(\varepsilon)}=
 1/2\, \ln q(\varepsilon)$ at $\varepsilon=0$:
-\be
+\be \label{e:def:theta_deps_ln_q}
      \theta_{(\wl)} = \frac{1}{2} \frac{\D}{\D\varepsilon}  \ln q .
 \ee
 Given that $\Sp_\varepsilon$ is deduced from $\Sp$ by a Lie dragging along $\wl$
@@ -812,8 +812,29 @@ rewrite this formula as the Lie derivative of $\ln q$ along $\wl$:
 \be \label{e:def:theta_Lie_ln_q}
     \theta_{(\wl)} = \frac{1}{2} \Lie{\el} \ln q .
 \ee
+\begin{example} \label{x:def:light_cone6}
+Considering the example of the light cone in Minkowkski spacetime,
+it is easy to evaluate $\theta_{(\wl)}$ by means of the spherical coordinates
+introduced in Example~\ref{x:def:light_cone5}, since these coordinates are adapted to the
+surface $\Sp$, the metric of $\Sp$ being $q_{ab} \D x^a \D x^b = r^2 \D \theta^2
++ r^2\sin^2\theta \D \phi^2$ [cf. Eq.~(\ref{e:def:q_light_cone_spher})].
+We have then  $q = \det(q_{ab}) = r^4\sin^2\theta$. Moreover the parameter $\varepsilon$
+can be chosen as $\varepsilon = t - t_0$ since $t$ is an (affine) parameter
+associated with $\wl$ (cf. Example~\ref{x:def:light_cone3}). Given that
+$t=r$ on $\Hor$, we have $\varepsilon = r - t_0$, so that (\ref{e:def:theta_deps_ln_q})
+yields
+\[
+    \theta_{(\wl)} = \frac{1}{2} \frac{\D}{\D r}  \ln q =
+         \frac{1}{2} \frac{\D}{\D r} \left( 4 \ln r + 2 \ln\sin\theta \right) ,
+\]
+i.e.
+\[
+    \theta_{(\wl)} = \frac{2}{r} .
+\]
+\end{example}
+
 Using the general law of variation of a derminant, as given by Eq.~(\ref{e:bas:variation_det})
-in Appendix~\ref{s:bas}, we may write
+in Appendix~\ref{s:bas}, Eq.~(\ref{e:def:theta_Lie_ln_q}) can be rewritten as
 \[
     \theta_{(\wl)} = \frac{1}{2} \, \mathrm{tr} \left(Q^{-1} \times \Lie{\el} Q \right) ,
 \]
@@ -934,9 +955,11 @@ We can transform further this relation by expressing $q^{\mu\nu}$ via (\ref{e:de
     \theta_{(\wl)} & = & \left( g^{\mu\nu} + \el^\mu k^\nu + k^\mu \el^\nu \right)
         \nabla_\mu \el_\nu  \nonumber \\
         & = & \nabla_\mu \el^\mu + k^\nu \underbrace{\el^\mu  \nabla_\mu \el_\nu }_{\kappa \el_\nu}
-            + k^\mu \underbrace{\el^\nu  \nabla_\mu \el_\nu }_{0} \nonumber \\
-        & = & \nabla_\mu \el^\mu + \kappa \underbrace{k^\nu \el_\nu}_{-1} \nonumber \\
-        & = & \nabla_\mu \el^\mu - \kappa ,
+            + k^\mu \el^\nu  \nabla_\mu \el_\nu \nonumber \\
+        & = & \nabla_\mu \el^\mu + \kappa \underbrace{k^\nu \el_\nu}_{-1}
+            + \frac{1}{2} \underbrace{k^\mu \nabla_\mu (\el_\nu \el^\nu)}_{0}
+            \nonumber \\
+        & = & \nabla_\mu \el^\mu - \kappa , \label{e:def:theta_div_l_index}
 \eea
 where we have used respectively the properties (\ref{e:def:wl_geod_kappa}),
 (\ref{e:def:el_nab_el_zero}) and (\ref{e:def:k_el_minus_one}).
@@ -945,7 +968,26 @@ have then
 \be \label{e:def:theta_div_l}
     \encadre{\theta_{(\wl)} = \wnab\cdot\wl - \kappa } .
 \ee
-We notice that the right-hand side of this expression is independent of the
+\begin{remark}
+Contrary to $\theta_{(\wl)}$ or $\kappa$, the quantity $\wnab\cdot\wl$ depends
+on the extension of $\wl$ outside $\Hor$ (cf. the discussion in \S~\ref{s:def:null_gener}).
+For Eq.~(\ref{e:def:theta_div_l}) to hold, we have supposed that $\wl$ remains null
+outside $\Hor$, so that $k^\mu\nabla_\mu(\el_\nu \el^\nu)$, which is a
+derivative in a direction transverse to $\Hor$, could be set to zero
+in the computation leading to (\ref{e:def:theta_div_l_index}).
+\end{remark}
+
+\begin{example}  \label{x:def:light_cone7}
+For the light cone in Minkowksi space, $\wnab\cdot\wl$ is easily computed by taking the trace of
+(\ref{e:def:nab_l_light_cone}) and we have $\kappa=0$ (cf. Example~\ref{x:def:light_cone3}),
+so that (\ref{e:def:theta_div_l}) yields
+\[
+    \theta_{(\wl)} = \frac{2(x^2+y^2+z^2)}{r^3} = \frac{2}{r} .
+\]
+Hence we recover the result obtained in Example~\ref{x:def:light_cone6}.
+\end{example}
+
+We notice that the right-hand side of (\ref{e:def:theta_div_l}) is independent of the
 explicit choice of the spacelike section $\Sp$: clearly both $\wnab\cdot\wl$
 and $\kappa$ depends only on the null normal $\wl$ of $\Hor$. This justifies
 the notation $\theta_{(\wl)}$, which does not refer to $\Sp$
@@ -1037,7 +1079,7 @@ Accordingly, the index-notation version of (\ref{e:def:Theta}) is
             \Liec{\el} q_{\mu\nu} .
 \ee
 Since $\w{q}$ is symmetric, it is clear from the above definition that
-$\w{Theta}$ is a symmetric bilinear form.
+$\w{\Theta}$ is a symmetric bilinear form.
 
 Expressing the Lie derivative in terms of the covariant derivative
 $\wnab$ via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of Appendix~{\ref{s:bas}
@@ -1120,6 +1162,38 @@ Contrary to $\theta_{(\wl)}$ which depends only on $\wl$, the tensor fields
 $\w{\Theta}$ and $\w{\sigma}$ depend on the specific choice of the spacelike
 section $\Sp$, in addition to $\wl$.
 \end{remark}
+
+\begin{example} \label{x:def:light_cone8}
+Let us consider the light cone in Minkowski spacetime (cf. Example~\ref{x:def:light_cone6}).
+Since the coordinates $(t,\theta,\phi)$
+are adapted to the vector field $\wl$ (i.e. the $\theta$ and $\phi$ are constant
+along the field lines of $\wl$ on $\Hor$ and $\wl = \partial/\partial t$ in these
+coordinates, in other words, $\el^\alpha=(1,0,0)$), we have (cf. formula~(\ref{e:bas:Lie_adapted})
+in Appendix~\ref{s:bas})
+\[
+    \Liec{\el} q_{ab} = \der{}{t} q_{ab} = \der{}{r} q_{ab} ,
+\]
+where the second equality follows from $t=r$ on $\Hor$. Given that
+$q_{ab} = \mathrm{diag}(r^2, r^2\sin^2\theta)$
+[cf. Eq.~(\ref{e:def:q_light_cone_spher})], we obtain
+\[
+    \Liec{\el} q_{ab} = \left( \begin{array}{cc}
+        2 r & 0  \\
+        0 & 2 r \sin^2\theta
+        \end{array} \right)
+        = \frac{2}{r} \, q_{ab} .
+\]
+Hence (\ref{e:def:Theta}) yields
+\[
+    \w{\Theta} = \frac{1}{r} \, \w{q} .
+\]
+Taking the trace, we get immediately $\theta_{(\wl)} = 2/r$, i.e. we recover
+the result of Examples~\ref{x:def:light_cone6} and \ref{x:def:light_cone7}.
+From (\ref{e:def:def_shear}), we get a vanishing shear:
+\[
+    \w{\sigma} = 0 .
+\]
+\end{example}
 
 \subsection{Null Raychaudhuri equation}
 
@@ -1230,6 +1304,23 @@ Since $\theta_{(\wl)}$ is a scalar field on $\Hor$, $\wnab_{\el}\,  \theta_{(\wl
 can be replaced by the Lie derivative $\Lie{\wl} \theta_{(\wl)}$ in the left-hand side of the Raychaudhuri
 equation.
 \end{remark}
+
+\begin{example}
+Let us check the null Raychaudhuri equation on the light cone in Minkowski
+spacetime. From Example~\ref{x:def:light_cone3}, we have $\kappa=0$, while
+from Example~\ref{x:def:light_cone8}, we have $\w{\sigma}=0$,
+hence $\sigma_{ab} \sigma^{ab}=0$. Moreover, the Ricci tensor of Minkowski
+spacetime vanishes identically. The null Raychaudhuri equation reduces
+then to
+\[
+    \wnab_{\el}\,  \theta_{(\wl)} =  - \frac{1}{2} \, \theta_{(\wl)}^2 ,
+\]
+where we have set $n=4$. Now, from Example~\ref{x:def:light_cone6}, we
+have $\theta_{(\wl)} = 2/r$. Since, in the present case
+$\wnab_{\el}\,  \theta_{(\wl)}  = \Lie{\el} \,  \theta_{(\wl)}  = \dert{\theta_{(\wl)}}{r} =
+- 2/r^2$, we conclude that the null Raychaudhuri equation is satisfied (as
+it should!).
+\end{example}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
