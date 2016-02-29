@@ -388,8 +388,8 @@ of null hypersurfaces. For instance the interior of a future null cone
 in Minkowski spacetime is a region from which no particle may escape,
 but since the null cone is expanding, particles can travel arbitrary far from
 the center. Therefore a null cone does not define a black hole.
-A key parameter is then the expansion of null hypersurfaces, which we shall
-introduce here.
+A key parameter is then the \emph{expansion} of null hypersurfaces, which we shall
+discuss in the next section, after having introduced spacelike sections.
 
 To encompass the idea that an event horizon delimitates a
 region of spacetime of compact spacelike sections, we shall assume
@@ -970,7 +970,7 @@ have then
 \ee
 \begin{remark}
 Contrary to $\theta_{(\wl)}$ or $\kappa$, the quantity $\wnab\cdot\wl$ depends
-on the extension of $\wl$ outside $\Hor$ (cf. the discussion in \S~\ref{s:def:null_gener}).
+on the extension of $\wl$ outside $\Hor$ (cf. the discussion in Sec.~\ref{s:def:null_gener}).
 For Eq.~(\ref{e:def:theta_div_l}) to hold, we have supposed that $\wl$ remains null
 outside $\Hor$, so that $k^\mu\nabla_\mu(\el_\nu \el^\nu)$, which is a
 derivative in a direction transverse to $\Hor$, could be set to zero
@@ -1029,7 +1029,7 @@ normal $\wl$ on the null hypersurface $\Hor$.
 For this reason, from now on, we shall call $\theta_{(\wl)}$
 the \defin{expansion of the null hypersurface $\Hor$ along $\wl$}\index{expansion!of a null hypersurface}.
 
-The dependency of the expansion on $\wl$ is explicited by the following
+The dependency of the expansion on $\wl$ is given by the following
 behaviour under a rescaling of $\wl$:
 \be \label{e:def:rescale_lambda}
    \wl' = \alpha \wl \ \Longrightarrow \ \theta_{(\wl')} = \alpha \theta_{(\wl)} ,
@@ -1197,16 +1197,8 @@ From (\ref{e:def:def_shear}), we get a vanishing shear:
 
 \subsection{Null Raychaudhuri equation}
 
-Let us derive an evolution equation for the expansion $\theta_{(\wl)}$
-by taking the derivative of $\theta_{(\wl)}$ along $\wl$. Starting from
-$\theta_{(\wl)} = \wnab\cdot\wl - \kappa$ [Eq.~(\ref{e:def:theta_div_l})], we have
-\be \label{e:def:evol_theta_debut}
-    \el^\mu \nabla_\mu \theta_{(\wl)} = \el^\mu \nabla_\mu \left(
-        \nabla_\nu \el^\nu - \kappa \right)
-            = \el^\mu \nabla_\mu \nabla_\nu \el^\nu - \el^\mu \nabla_\mu  \kappa .
-\ee
-Let us permute the indices $(\mu,\nu)$ in $\nabla_\mu \nabla_\nu \el^\nu$
-via the Ricci identity [Eq.~(\ref{e:bas:Ricci_ident}) in Appendix~\ref{s:bas}]
+Let us derive an evolution equation for the expansion $\theta_{(\wl)}$.
+The starting point is the Ricci identity [Eq.~(\ref{e:bas:Ricci_ident}) in Appendix~\ref{s:bas}]
 applied to $\wl$:
 \[
    \left(\nabla_\alpha\nabla_\beta
@@ -1215,40 +1207,79 @@ applied to $\wl$:
 \]
 where $R^\gamma_{\ \  \mu \alpha\beta}$ is the Riemann tensor of the metric
 $\w{g}$.
-Taking the trace on the indices $(\alpha,\gamma)$ and relabeling $\beta\rightarrow\mu$ yields
+Taking the trace on the indices $(\alpha,\gamma)$ and relabeling $\beta\rightarrow\alpha$ yields
 \[
-    \nabla_\nu \nabla_\mu \el^\nu - \nabla_\mu \nabla_\nu \el^\nu =
-        R_{\mu\nu} \el^\nu ,
+    \nabla_\mu \nabla_\alpha \el^\mu - \nabla_\alpha \nabla_\mu \el^\mu =
+        R_{\mu\alpha} \el^\mu ,
 \]
-where $R_{\mu\nu} = R_{\nu\mu} = R^\sigma_{\ \  \nu \sigma\mu}$ is
-the Ricci tensor of $\w{g}$. Hence
-$\nabla_\mu \nabla_\nu \el^\nu = \nabla_\nu \nabla_\mu \el^\nu - R_{\mu\nu} \el^\nu$,
-so that (\ref{e:def:evol_theta_debut}) can be rewritten as
+where $R_{\mu\alpha} = R^\sigma_{\ \  \mu \sigma\alpha}$ is
+the Ricci tensor of $\w{g}$.
+Substituting Eq.~(\ref{e:def:nab_l_Theta}) for $\nabla_\alpha \el^\mu$ and $\theta_{(\wl)} + \kappa$ for $\nabla_\mu \el^\mu = \wnab\cdot\wl$ [cf. Eq.~(\ref{e:def:theta_div_l})] yields
+\[
+    \nabla_\mu \left( \Theta_\alpha^{\ \, \mu} + \omega_\alpha \el^\mu - \el_\alpha
+        k^\nu \nabla_\nu \el^\mu \right) - \nabla_\alpha \left( \theta_{(\wl)} + \kappa \right) =
+        R_{\mu\alpha} \el^\mu .
+\]
+Expanding the left-hand side and using again Eqs.~(\ref{e:def:theta_div_l}) and
+(\ref{e:def:nab_l_Theta}) leads to
 \bea
-    \el^\mu \nabla_\mu \theta_{(\wl)} &= &\el^\mu  \nabla_\nu \nabla_\mu \el^\nu
-        - R_{\mu\nu} \el^\mu \el^\nu - \el^\mu \nabla_\mu  \kappa \nonumber \\
-    & = & \nabla_\nu (\underbrace{\el^\mu \nabla_\mu \el^\nu}_{\kappa \el^\nu})
-        - \nabla_\nu \el^\mu \nabla_\mu \el^\nu
-        - R_{\mu\nu} \el^\mu \el^\nu - \el^\mu \nabla_\mu  \kappa \nonumber \\
-    & = & \el^\nu \nabla_\nu \kappa + \kappa \underbrace{\nabla_\nu \el^\nu}_{\theta_{(\wl)} + \kappa}
-    - \nabla_\nu \el^\mu \nabla_\mu \el^\nu
-        - R_{\mu\nu} \el^\mu \el^\nu - \el^\mu \nabla_\mu  \kappa \nonumber \\
-    & = & \kappa(\theta_{(\wl)} + \kappa) - \nabla_\nu \el^\mu \nabla_\mu \el^\nu
-        - R_{\mu\nu} \el^\mu \el^\nu  . \label{e:def:null_Raych_prov}
+    \nabla_\mu \Theta^\mu_{\ \, \alpha} + \el^\mu \nabla_\mu \omega_\alpha
+       - \nabla_\alpha \left( \theta_{(\wl)} + \kappa \right)
+        + \left( \theta_{(\wl)} + \kappa \right) \omega_\alpha
+        - \Theta_{\alpha\mu} k^\nu \nabla_\nu \el^\mu & & \nonumber \\
+    - \left( \omega_\mu k^\nu \nabla_\nu \el^\mu
+    + \nabla_\mu k^\nu \nabla_\nu \el^\mu + k^\nu \nabla_\mu \nabla_\nu \el^\mu \right)
+        \el_\alpha & = & R_{\mu\alpha} \el^\mu .
 \eea
-Now, from Eq.~(\ref{e:def:nab_l_Theta}), we have
+The above relation is a 1-form identity. Applying it to the vector field $\wl$
+(i.e. contracting with $\el^\alpha$), we get, since $\el_\nu \el^\nu =0$,
+\be \label{e:def:Raychaud_step1}
+    \el^\nu \nabla_\mu \Theta^\mu_{\ \, \nu} + \el^\nu \el^\mu \nabla_\mu \omega_\nu
+        - \el^\mu \nabla_\mu \left( \theta_{(\wl)} + \kappa \right)
+        + \left( \theta_{(\wl)} + \kappa \right) \omega_\mu \el^\mu
+        = R_{\mu\nu} \el^\mu \el^\nu .
+\ee
+Now, using $\Theta^\mu_{\ \, \nu}  \el^\nu = 0$ [Eq.~(\ref{e:def:Theta_sigma_tangent})]
+and Eq.~(\ref{e:def:nab_l_Theta}), we can write
+\bea
+    \el^\nu \nabla_\mu \Theta^\mu_{\ \, \nu} & = & \nabla_\mu
+    ( \underbrace{\Theta^\mu_{\ \, \nu} \el^\nu}_{0} )
+    - \Theta^\mu_{\ \, \nu} \nabla_\mu \el^\nu = - \Theta^{\mu\nu} \nabla_\mu \el_\nu
+    = - \Theta^{\mu\nu}  \left( \Theta_{\mu\nu} + \omega_\mu \el_\nu
+        - \el_\mu k^\sigma \nabla_\sigma \el_\nu \right) \nonumber \\
+    & = & - \Theta^{\mu\nu}  \Theta_{\mu\nu} . \nonumber
+\eea
+On the other side,
 \[
-    \nabla_\nu \el^\mu \nabla_\mu \el^\nu =
-    \left(\Theta_\nu^{\  \, \mu} + \omega_\nu \el^\mu - \el_\nu k^\rho \nabla_\rho \el^\mu\right)
-    \left(\Theta^\nu_{\ \, \mu} + \omega_\mu \el^\nu - \el_\mu k^\sigma \nabla_\sigma \el^\nu\right) .
+    \el^\nu \el^\mu \nabla_\mu \omega_\nu = \el^\mu \nabla_\mu (\omega_\nu \el^\nu )
+        - \omega_\nu \underbrace{\el^\mu \nabla_\mu \el^\nu}_{\kappa \el^\nu}
+        = \el^\mu \nabla_\mu (\omega_\nu \el^\nu ) - \kappa \omega_\nu \el^\nu ,
 \]
-Expanding and using $\Theta_\nu^{\  \, \mu} \el^\nu = 0$ [Eq.~(\ref{e:def:Theta_sigma_tangent})],
-$\el^\mu \el_\mu = 0$ and the symmetry of $\w{\Theta}$ results in
+Accordingly Eq.~(\ref{e:def:Raychaud_step1}) becomes
 \[
-    \nabla_\nu \el^\mu \nabla_\mu \el^\nu = \Theta_{\mu\nu} \Theta^{\mu\nu}
-        + (\omega_\mu \el^\mu)^2 .
+    - \Theta^{\mu\nu}  \Theta_{\mu\nu}  + \el^\mu \nabla_\mu (\omega_\nu \el^\nu )
+        - \el^\mu \nabla_\mu \left( \theta_{(\wl)} + \kappa \right)
+        + \theta_{(\wl)} \omega_\mu \el^\mu
+        = R_{\mu\nu} \el^\mu \el^\nu .
 \]
-The first term in the right-hand side can be re-expressed by the decomposition
+The term $\omega_\mu \el^\mu$, which appears twice in this equation, takes
+a simple form:
+\be
+    \omega_\mu \el^\mu = \kappa .
+\ee
+Indeed, from the definition~(\ref{e:def:def_omega}) of the 1-form $\w{\omega}$,
+\[
+    \omega_\mu \el^\mu = - k^\nu \underbrace{\el^\mu \nabla_\mu \el_\nu}_{\kappa \el_\nu}
+        - k^\rho k^\sigma \nabla_\rho \el_\sigma \, \underbrace{\el_\mu \el^\mu}_{0}
+         = - \kappa \underbrace{k^\nu \el_\nu}_{-1} = \kappa .
+\]
+Therefore the two derivatives $\el^\mu \nabla_\mu (\omega_\nu \el^\nu )$ and $-\el^\mu \nabla_\mu \kappa$
+cancel out and one is left with
+\be \label{e:def:Raychaud_step2}
+   - \Theta^{\mu\nu}  \Theta_{\mu\nu} - \el^\mu \nabla_\mu \theta_{(\wl)}
+    + \kappa \theta_{(\wl)} = R_{\mu\nu} \el^\mu \el^\nu .
+\ee
+The first term in the left-hand side can be re-expressed by the decomposition
 (\ref{e:def:def_shear}) of
 $\w{\Theta}$ in terms of the shear tensor and the trace term:
 \bea
@@ -1261,26 +1292,16 @@ $\w{\Theta}$ in terms of the shear tensor and the trace term:
     \underbrace{q^{\mu\nu} \sigma_{\mu\nu}}_{0}
         + \frac{1}{(n-2)^2}\,  \theta_{(\wl)}^2 \underbrace{q_{\mu\nu} q^{\mu\nu}}_{n-2} \nonumber \\
     & = & \sigma_{\mu\nu} \sigma^{\mu\nu} + \frac{1}{n-2} \, \theta_{(\wl)}^2 , \nonumber \\
-    & = & \sigma_{ab} \sigma^{ab} + \frac{1}{n-2} \, \theta_{(\wl)}^2 \nonumber
+    & = & \sigma_{ab} \sigma^{ab} + \frac{1}{n-2} \, \theta_{(\wl)}^2 . \nonumber
 \eea
-while the second term is easily evaluated via Eq.~(\ref{e:def:def_omega}):
-\[
-    \omega_\mu \el^\mu = - k^\nu \underbrace{\el^\mu \nabla_\mu \el_\nu}_{\kappa \el_\nu}
-        - k^\rho k^\sigma \nabla_\rho \el_\sigma \, \underbrace{\el_\mu \el^\mu}_{0}
-         = - \kappa \underbrace{k^\nu \el_\nu}_{-1} = \kappa .
-\]
-Hence
-\[
-    \nabla_\nu \el^\mu \nabla_\mu \el^\nu =
-    \sigma_{ab} \sigma^{ab} + \frac{1}{n-2} \, \theta_{(\wl)}^2 + \kappa^2
-\]
-and Eq.~(\ref{e:def:null_Raych_prov}) becomes
+Hence Eq.~(\ref{e:def:Raychaud_step2}) can be rewitten as
 \be
-    \encadre{ \wnab_{\el}\,  \theta_{(\wl)} = \kappa \theta
+    \encadre{ \wnab_{\el}\,  \theta_{(\wl)} = \kappa \theta_{(\wl)}
         - \frac{1}{n-2} \, \theta_{(\wl)}^2 - \sigma_{ab} \sigma^{ab}
         - \w{R}(\wl, \wl) }.
 \ee
-This evolution equation of $\theta_{(\wl)}$ along $\wl$ is known as the
+Since $\wl$ is future-directed, this is an evolution equation for
+$\theta_{(\wl)}$. It is known as the
 \defin{null Raychaudhuri equation}\index{null!Raychaudhuri equation}\index{Raychaudhuri!null --  equation}.
 
 If the spacetime $(\M,\w{g})$ is ruled by general relativity, i.e. if
@@ -1294,7 +1315,7 @@ $\w{T}$:
 \]
 The null Raychaudhuri equation becomes then
 \be
-    \encadre{ \wnab_{\el}\,  \theta_{(\wl)} = \kappa \theta
+    \encadre{ \wnab_{\el}\,  \theta_{(\wl)} = \kappa \theta_{(\wl)}
         - \frac{1}{n-2} \, \theta_{(\wl)}^2 - \sigma_{ab} \sigma^{ab}
         - 8\pi \w{T}(\wl, \wl) }.
 \ee
@@ -1328,14 +1349,42 @@ it should!).
 
 \subsection{Motivation and definition}
 
-Having introduced the concept of expansion of a null hypersurface,
-let us make an attempt to distinguish a black hole event horizon from, let us
-say, a future light cone.
+Having discussed in depth the geometry of null hypersurfaces, and in particular
+their expansion, let us make an attempt to distinguish a black hole event
+horizon from, let us say, a future light cone.
+To get the localized behaviour mentionned in the black hole naive definition
+of Sec.~\ref{s:def:first_defin}, we could demand that the area of the
+spacelike cross-sections remains constant, in other words that
+the expansion along the null normal vanishes. Hence the definition:\\
+A \defin{non-expanding horizon} is a null hypersurface $\Hor$ having the
+topology (\ref{e:def:H_topology}):
+\be
+    \Hor \simeq \R \times \mathbb{S}^{n-2}
+\ee
+and such that the expansion of $\Hor$ along any null normal $\wl$ vanishes
+identically:
+\be
+    \theta_{(\wl)} = 0 .
+\ee
+Note that, given the scaling law (\ref{e:def:rescale_lambda}),
+if $\theta_{(\wl)} = 0$ for some normal $\wl$, then  $\theta_{(\wl')} = 0$
+for any other normal $\wl'$. Hence the definition of a non-expanding horizon
+does not depend on the choice of the null normal.
+
+As we shall discuss in detail in Chap.~??, this definition captures only
+the event horizon of black holes in equilibrium.
+
+
+\subsection{Trapped surfaces}
 
 
 \subsection{Rigidity}
 
 \subsection{Killing horizons}
+
+\subsection{Going further}
+
+See Refs~\cite{GourgJ06,Jaram13}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
