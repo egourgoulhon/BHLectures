@@ -1231,7 +1231,7 @@ Expanding the left-hand side and using again Eqs.~(\ref{e:def:theta_div_l}) and
         - \Theta_{\alpha\mu} k^\nu \nabla_\nu \el^\mu & & \nonumber \\
     - \left( \omega_\mu k^\nu \nabla_\nu \el^\mu
     + \nabla_\mu k^\nu \nabla_\nu \el^\mu + k^\nu \nabla_\mu \nabla_\nu \el^\mu \right)
-        \el_\alpha & = & R_{\mu\alpha} \el^\mu .
+        \el_\alpha & = & R_{\mu\alpha} \el^\mu . \label{e:def:contract_Ricci_ident}
 \eea
 The above relation is a 1-form identity. Applying it to the vector field $\wl$
 (i.e. contracting with $\el^\alpha$), we get, since $\el_\nu \el^\nu =0$,
@@ -1270,11 +1270,11 @@ a simple form:
     \omega_\mu \el^\mu = \kappa .
 \ee
 Indeed, from the definition~(\ref{e:def:def_omega}) of the 1-form $\w{\omega}$,
-\[
+\be \label{e:def:omega_l_kappa}
     \omega_\mu \el^\mu = - k^\nu \underbrace{\el^\mu \nabla_\mu \el_\nu}_{\kappa \el_\nu}
         - k^\rho k^\sigma \nabla_\rho \el_\sigma \, \underbrace{\el_\mu \el^\mu}_{0}
          = - \kappa \underbrace{k^\nu \el_\nu}_{-1} = \kappa .
-\]
+\ee
 Therefore the two derivatives $\el^\mu \nabla_\mu (\omega_\nu \el^\nu )$ and $-\el^\mu \nabla_\mu \kappa$
 cancel out and one is left with
 \be \label{e:def:Raychaud_step2}
@@ -1423,25 +1423,41 @@ Cross-sections of a non-expanding horizon are usually marginally trapped surface
 However there exist some pathological situations for
 which $\theta_{(\w{k})} > 0$ at some points of $\Sp$ \cite{GerocH82}.
 
-\subsection{Vanishing of the deformation rate tensor}
+\subsection{Vanishing of the deformation rate tensor} \label{s:def:NEH_Theta_zero}
 
 If $\Hor$ is a non-expanding horizon, we may set $\theta_{(\wl)}=0$
 in the null Raychaudhuri equation (\ref{e:def:null_Raychaud});it reduces then
 to
-\[
+\be \label{e:def:null_Raychaud_theta_zero}
     \sigma_{ab} \sigma^{ab} + 8\pi \w{T}(\wl, \wl) = 0 .
-\]
-It is quite natural to assume that matter and non-gravitational fields,
-represented by the total energy-momentum tensor $\w{T}$, obey to the
+\ee
+The first term is always non-negative:
+\be \label{e:def:sigma_square}
+    \sigma_{ab} \sigma^{ab} \geq 0 .
+\ee
+\begin{proof}
+Since $\sigma$ is symmetric, it can be diagonalized
+in an orthonormal basis of $\w{q}$: $\sigma_{ab} = \mathrm{diag}(s_1,\ldots, s_{n-2})$.
+Moreover, $\w{q}$ being a Riemannian metric, we have, in the same basis, $q^{ab} = \mathrm{diag}(1,\ldots,1)$. Since $\sigma^{ab} = q^{am} q^{bn} \sigma_{mn}$, we conclude that
+\be \label{e:def:sigma_square_si}
+  \sigma_{ab} \sigma^{ab} = s_1^2 + \cdots + s_{n-2}^2 \geq 0 .
+\ee
+\end{proof}
+
+Regarding the second term in (\ref{e:def:null_Raychaud_theta_zero}), it
+is quite natural to assume that matter and non-gravitational fields,
+represented by the total energy-momentum tensor $\w{T}$, obey the
 \defin{null energy condition}\index{null!energy condition}\index{energy!condition!null --},
 namely that
-\be
+\be \label{e:def:null_energy_cond}
     \w{T}(\wl, \wl) \geq 0 \quad \mbox{for any null vector $\wl$}.
 \ee
 This condition is pretty weak and is satisfied by
 \begin{itemize}
 \item vacuum: $\w{T}=0$;
-\item any ``reasonable'' matter model;
+\item any ``reasonable'' matter model, such as a perfect fluid with a
+proper energy density $\varepsilon$ and pressure $p$ satisfying
+$\varepsilon+p\geq 0$;
 \item any electromagnetic field;
 \item any real or complex scalar field;
 \item ``dark energy'' modeled by $\w{T} = -\frac{\Lambda}{8\pi}\, \w{g}$.
@@ -1458,11 +1474,191 @@ Selecting for $\w{u}$ the 4-velocity of an observer, we see that
 the weak energy condition has a simple physical interpretation: the energy
 density as measured by any observer is non-negative.
 
-\subsection{Killing horizons}
+Given (\ref{e:def:sigma_square}) and (\ref{e:def:null_energy_cond}),
+Eq.~(\ref{e:def:null_Raychaud_theta_zero})  implies both
+\be
+    \sigma_{ab} \sigma^{ab}  = 0
+\ee
+and
+\be
+    \w{T}(\wl, \wl) = 0 .
+\ee
+The identity $\sigma_{ab} \sigma^{ab} = 0$ is possible only if each of
+the $s_i$'s in (\ref{e:def:sigma_square_si}) is zero. Hence we have necessarily
+\be
+    \w{\sigma} = 0 .
+\ee
+Given $\theta_{(\wl)}=0$, this implies that the full deformation rate tensor
+vanishes identically [cf. Eq.~(\ref{e:def:def_shear})]:
+\be
+    \w{\Theta} = 0 .
+\ee
+In view of (\ref{e:def:Theta}), this is equivalent to
+\be \label{e:def:Lie_el_q_zero}
+     \vw{q}^* \Lie{\el} \w{q} = 0 .
+\ee
+We conclude that the whole metric, and not only the area element
+$\wepsS$ (as a mere $\theta_{(\wl)}=0$ would suggest), of any cross-section
+of a non-expanding horizon is invariant along the null generators.
 
 \subsection{Going further}
 
 See Refs~\cite{GourgJ06,Jaram13,GourgJ08}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Killing horizons}
+
+\subsection{Definition}
+
+A special kind of non-expanding horizons, which is central for the theory of
+stationary black holes, is that of Killing horizons. These objects have
+been defined by Carter in 1969 \cite{Carte69} as follows: a
+\defin{Killing horizon}\index{Killing!horizon}\index{horizon!Killing --} is
+a null hypersurface $\Hor$ whose generating null vector $\wl$ can be normalized
+so as to coincide with a Killing vector field of $(\M,\w{g})$.
+
+Thus a Killing horizon requires that the spacetime $(\M,\w{g})$ has some symmetry
+(usually stationarity), being invariant under the action of a 1-parameter group.
+Let us recall that a \defin{Killing vector field}\index{Killing!vector field}
+$\w{\xi}$ is a generator of the symmetry group. It can be defined as a vector
+field along which the metric tensor is invariant, i.e.
+\be \label{e:def:Lie_xi_g}
+    \Lie{\xi} \w{g} = 0 .
+\ee
+Expressing the Lie derivative via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of Appendix~\ref{s:bas},
+we see that the above equation is equivalent to the so-called
+\defin{Killing equation}\index{Killing!equation}:
+\be
+    \nabla_\alpha \xi_\beta + \nabla_\beta \xi_\alpha = 0 .
+\ee
+
+We shall see in Sec.~?? that in a stationary spacetime, a black hole
+event horizon must be a Killing horizon.
+
+\subsection{Killing horizons as non-expanding horizons}
+
+If $\Hor$ is a Killing horizon, then the null normal $\wl$ obeys $\wl \equalH \w{\xi}$,
+so that (\ref{e:def:Lie_xi_g}) implies:
+\[
+    \Lie{\el} \w{g} \equalH 0 .
+\]
+Let $\Sp$ be a cross-section of $\Hor$; since $\w{q}$ is the metric induced by $\w{g}$
+on $\Sp$, we deduce immediately that
+\[
+    \Lie{\el} \w{q} = 0 .
+\]
+From the definition (\ref{e:def:Theta})], it follows that the expansion rate
+tensor of $\Sp$ vanishes identically:
+\[
+    \w{\Theta} = 0 .
+\]
+In particular we have
+\[
+    \theta_{(\wl)} = 0 .
+\]
+We conclude that any Killing horizon is a non-expanding horizon.
+
+\subsection{The zeroth Law of black hole mechanics}
+
+Let us show that, on a Killing horizon, the non-affinity coefficient $\kappa$
+of the null normal $\wl$ coinciding with a Killing vector is constant.
+
+First of all, since $\wl$ is a symmetry generator on $\Hor$, we have
+\be
+    \Lie{\el} \kappa = 0 ,
+\ee
+which means that $\kappa$ is constant along the field lines of $\wl$ (i.e. the
+null generators of $\Hor$). It could however vary from a field line to another
+one. To show that this is not the case, let us consider a cross-section
+$\Sp$ of $\Hor$ and project the contracted Ricci identity (\ref{e:def:contract_Ricci_ident})
+onto it:
+\[
+    \nabla_\mu \Theta^\mu_{\ \, \nu} q^\nu_{\ \, \alpha} + \el^\mu \nabla_\mu \omega_\nu q^\nu_{\ \, \alpha}
+       - \nabla_\nu \left( \theta_{(\wl)} + \kappa \right) q^\nu_{\ \, \alpha}
+        + \left( \theta_{(\wl)} + \kappa \right) \omega_\nu q^\nu_{\ \, \alpha}
+        - \Theta_{\alpha\mu} k^\nu \nabla_\nu \el^\mu \nonumber \\
+     = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha}, \nonumber
+\]
+where we have used $\Theta_{\nu\mu}  q^\nu_{\ \, \alpha} = \Theta_{\alpha\mu}$
+and $\el_\nu q^\nu_{\ \, \alpha} = 0$.
+Now, since $\Hor$ is a non-expanding horizon, we may set $\w{\Theta}=0$ and
+$\theta_{(\wl)} =0$, so that the above equation reduces to
+\be \label{e:def:zeroth_law_step1}
+    \el^\mu \nabla_\mu \omega_\nu q^\nu_{\ \, \alpha} - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
+    + \kappa  \, \omega_\nu q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} .
+\ee
+Let us express $\el^\mu \nabla_\mu \omega_\nu$ in terms of the Lie derivative
+of $\w{\omega}$ along $\wl$ via formula (\ref{e:bas:Lie_der_comp_nab}) of Appendix~\ref{s:bas}:
+\[
+    \Liec{\el}\omega_\nu = \el^\mu \nabla_\mu \omega_\nu + \omega_\mu \nabla_\nu \el^\mu .
+\]
+Now, since $\wl$ is a symmetry generator on $\Hor$, we have
+\be
+    \Lie{\el}\w{\omega} \equalH 0 ,
+\ee
+so that
+\[
+    \el^\mu \nabla_\mu \omega_\nu \equalH - \omega_\mu \nabla_\nu \el^\mu .
+\]
+Accordingly, Eq.~(\ref{e:def:zeroth_law_step1}) becomes successively
+\bea
+   & & - \omega_\mu \nabla_\nu \el^\mu  q^\nu_{\ \, \alpha}
+     - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
+    + \kappa  \, \omega_\nu q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} \nonumber \\
+   & &  - \omega_\mu \left(\Theta_\nu^{\ \, \mu}
+        + \omega_\nu \el^\mu - \el_\nu k^\sigma \nabla_\sigma \el^\mu \right) q^\nu_{\ \, \alpha}
+     - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
+    + \kappa  \, \omega_\nu q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} \nonumber \\
+   & &   - \omega_\mu
+   \underbrace{\Theta_\alpha^{\ \, \mu}}_{0}
+        - \underbrace{\omega_\mu \el^\mu}_{\kappa} \omega_\nu q^\nu_{\ \, \alpha}
+     - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
+    + \kappa  \, \omega_\nu q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha}  \nonumber \\
+   & &
+   - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} , \nonumber
+\eea
+where we have used (\ref{e:def:nab_l_Theta}) to get the second line,
+$\el_\nu q^\nu_{\ \, \alpha} = 0$ to get the third one and
+the identity (\ref{e:def:omega_l_kappa}) to substitute $\kappa$ for
+$\omega_\mu \el^\mu$.
+In the above equation appears the covariant derivative of $\kappa$ along $\Sp$,
+which we denote by $\DS$:
+\be
+    \DSc_\alpha \kappa := \nabla_\nu \kappa \, q^\nu_{\ \, \alpha} .
+\ee
+Using the Einstein equation (\ref{e:bas:Einstein_eq_n}), we may then rewrite
+the above relation as
+\[
+    \DSc_\alpha \kappa = -  \frac{2}{n-2}\,\Lambda\,
+    \underbrace{g_{\mu\nu}  \el^\mu q^\nu_{\ \, \alpha}}_{\el^\mu q_{\mu\alpha} = 0}
+    - 8\pi \Big( T_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha}
+    - \frac{1}{n-2}\,  T \, \underbrace{g_{\mu\nu}  \el^\mu q^\nu_{\ \, \alpha}}_{\el^\mu q_{\mu\alpha} = 0} \Big) ,
+\]
+i.e.
+\[
+    \DSc_\alpha \kappa = - 8\pi T_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} .
+\]
+To go further, we shall assume that matter and the non-gravitational fields
+obey the
+\defin{null dominant energy condition}\index{null!dominant energy condition}\index{energy!condition!null dominant--}:
+\be
+    \w{W} := - \vw{T}(\wl, .) \ \mbox{is future-directed null or timelike
+    for any future-directed null vector $\wl$} .
+\ee
+In the above equation, $\vw{T}(\wl, .)$ stands for the vector field
+that is the metric dual of the 1-form $\w{T}(\wl, .)$; in index notation,
+\[
+    W^\alpha = - g^{\alpha\nu} T_{\mu\nu}\el^\mu = - T_\mu^{\ \, \alpha} \el^\mu .
+\]
+Note that the null dominant energy condition implies the null energy condition
+discussed in Sec.~\ref{s:def:NEH_Theta_zero}, since
+\[
+    \w{T}(\wl, \wl) = - \w{W}\cdot\wl \geq 0
+\]
+whenever $\w{W}$ is a future-directed timelike vector or a future-directed
+null vector.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
