@@ -379,7 +379,7 @@ Since $\wnab_{\wl} t = 1$, as it is clear from (\ref{e:def:wl_light_cone}),
 and $\kappa=0$, $\lambda=t$ is an affine parameter along these null generators.
 \end{example}
 
-\subsection{Spacelike sections}
+\subsection{Spacelike sections} \label{s:def:spacelike_sections}
 
 Let us now focus on the first aspect of the black hole definition given
 in Sec.~\ref{s:def:first_defin}: \emph{localization}.
@@ -1480,7 +1480,7 @@ Eq.~(\ref{e:def:null_Raychaud_theta_zero})  implies both
     \sigma_{ab} \sigma^{ab}  = 0
 \ee
 and
-\be
+\be \label{e:def:T_l_l_zero}
     \w{T}(\wl, \wl) = 0 .
 \ee
 The identity $\sigma_{ab} \sigma^{ab} = 0$ is possible only if each of
@@ -1497,7 +1497,8 @@ In view of (\ref{e:def:Theta}), this is equivalent to
 \be \label{e:def:Lie_el_q_zero}
      \vw{q}^* \Lie{\el} \w{q} = 0 .
 \ee
-We conclude that the whole metric, and not only the area element
+We conclude that, provided that the null energy condition holds,
+the whole metric, and not only the area element
 $\wepsS$ (as a mere $\theta_{(\wl)}=0$ would suggest), of any cross-section
 of a non-expanding horizon is invariant along the null generators.
 
@@ -1560,7 +1561,7 @@ In particular we have
 \]
 We conclude that any Killing horizon is a non-expanding horizon.
 
-\subsection{The zeroth Law of black hole mechanics}
+\subsection{The zeroth law of black hole mechanics}
 
 Let us show that, on a Killing horizon, the non-affinity coefficient $\kappa$
 of the null normal $\wl$ coinciding with a Killing vector is constant.
@@ -1637,15 +1638,17 @@ the above relation as
     - \frac{1}{n-2}\,  T \, \underbrace{g_{\mu\nu}  \el^\mu q^\nu_{\ \, \alpha}}_{\el^\mu q_{\mu\alpha} = 0} \Big) ,
 \]
 i.e.
-\[
+\be \label{e:def:DS_kappa_W}
     \DSc_\alpha \kappa = - 8\pi T_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} .
-\]
+\ee
 To go further, we shall assume that matter and the non-gravitational fields
 obey the
 \defin{null dominant energy condition}\index{null!dominant energy condition}\index{energy!condition!null dominant--}:
 \be
-    \w{W} := - \vw{T}(\wl, .) \ \mbox{is future-directed null or timelike
-    for any future-directed null vector $\wl$} .
+   \begin{array}{ll}
+    \w{W} := - \vw{T}(\wl, .) \ & \mbox{is future-directed null or timelike} \\
+    & \mbox{for any future-directed null vector $\wl$} .
+    \end{array}
 \ee
 In the above equation, $\vw{T}(\wl, .)$ stands for the vector field
 that is the metric dual of the 1-form $\w{T}(\wl, .)$; in index notation,
@@ -1659,6 +1662,54 @@ discussed in Sec.~\ref{s:def:NEH_Theta_zero}, since
 \]
 whenever $\w{W}$ is a future-directed timelike vector or a future-directed
 null vector.
+
+The null dominant energy condition is implied by continuty by the
+\defin{dominant energy condition}\index{dominant energy condition}\index{energy!condition!dominant--}:
+\be
+   \begin{array}{ll}
+    \w{W} := - \vw{T}(\w{u}, .) \ & \mbox{is future-directed null or timelike} \\
+    & \mbox{for any future-directed timelike vector $\w{u}$} .
+    \end{array}
+\ee
+Physically, the dominant energy condition states that, with respect to any
+observer (represented by its 4-velocity $\w{u}$, which is future-directed timelike),
+the energy of matter and non-gravitational fields, moves at a speed
+at most equal to $c$.
+
+We note that in the right-hand side of (\ref{e:def:DS_kappa_W}) appears the
+orthogonal projection of $\w{W}$ onto $\Sp$ (more precisely its metric dual).
+If we assume the null dominant energy condition, the null energy condition
+holds and we have, according to (\ref{e:def:T_l_l_zero}),
+\[
+    \wl \cdot \w{W} = - \w{T}(\wl, \wl) = 0 ,
+\]
+This implies that the vector $\w{W}$ is tangent to $\Hor$. The latter
+being a null hypersurface, $\w{W}$ must then be
+either colinear to $\wl$ or spacelike (cf. the lemma in Sec.~\ref{s:def:spacelike_sections}).
+Now, according to the null dominant energy condition, $\w{W}$ cannot be
+spacelike. We conclude that $\w{W}$ is colinear to $\wl$. Consequently its
+orthogonal projection onto $\Sp$ is zero:
+\[
+    q^\alpha_{\ \, \nu} W^\nu = - q^\alpha_{\ \, \nu} T_\mu^{\ \, \nu} \el^\mu = 0 .
+\]
+Hence the right-hand side of (\ref{e:def:DS_kappa_W}) vanishes identically
+and we are left with
+\[
+    \DSc_\alpha \kappa = 0 .
+\]
+This means that $\kappa$ is constant over $\Sp$. Given that $\kappa$ is
+constant along each null generator of $\Hor$, this completes the demonstration
+that $\kappa$ is constant over $\Hor$:
+\be \label{e:def:zeroth_law}
+    \encadre{\kappa = \mathrm{const}.}
+\ee
+In the context of Killing horizons, the non-affinity parameter $\kappa$ is
+often called the horizon's \defin{surface gravity}\index{surface!gravity} and the result
+(\ref{e:def:zeroth_law}) is known as the
+\defin{zeroth law of black hole mechanics}\index{zeroth law}. More precisely,
+the latter states that the surface gravity of a black hole in equilibrium is
+constant and we shall see in Chap.~?? that the event horizon of a black hole in
+equilibrium is a Killing horizon.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
