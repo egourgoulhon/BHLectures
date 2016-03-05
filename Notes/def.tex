@@ -101,7 +101,7 @@ a smooth scalar field $u:\ \mathscr{U} \rightarrow \R$ such that
 \be \label{e:def:Hor_u_zero}
     \forall p \in \mathscr{U},\quad p\in \Hor \iff u(p) = 0 .
 \ee
-\begin{example} \label{x:def:null_hyp}
+\begin{example}[null hyperplane] \label{x:def:null_hyp}
 A very simple example of null hypersurface is a null hyperplane in
 the 4-dimensional Minkowski spacetime. If $(t,x,y,z)$ are standard Minkowskian
 coordinates, the choice of the scalar field
@@ -111,7 +111,7 @@ coordinates, the choice of the scalar field
 defines a null hyperplane by $u=0$.
 \end{example}
 
-\begin{example} \label{x:def:light_cone}
+\begin{example}[light cone] \label{x:def:light_cone}
 Another simple example of null hypersurface, still in the 4-dimensional Minkowski spacetime,
 is the future sheet $\Hor$ of a light cone\index{light!cone}\index{cone!light --}, also
 called \defin{future light cone}\index{future!light cone}. Note that we have
@@ -122,6 +122,46 @@ In the  Minkowskian coordinates $(t,x,y,z)$, the choice of the
     u(t,x,y,z) = t - \sqrt{x^2+y^2+z^2}
 \ee
 defines a future light cone by $u=0$.
+\end{example}
+
+\begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor}
+Let us consider the 4-dimensional spacetime $(\M,\w{g})$ with $\M$ diffeomorphic
+to $\mathbb{R}^4$ and equipped with a coordinate system $(x^\alpha)=(t,r,\th,\ph)$
+($t\in \mathbb{R}$, $r\in(0,+\infty)$, $\th\in(0,\pi)$
+and $\ph\in(0,2\pi)$) such that $\w{g}$ takes the form
+\be \label{e:def:Schw_metric}
+    g_{\mu\nu} \D x^\mu \D x^\nu = - \left( 1 - \frac{2 m}{r} \right) \D t^2
+        + \frac{4m}{r} \, \D t \, \D r
+        + \left( 1 + \frac{2 m}{r} \right) \D r^2
+        + r^2\D\th^2 + r^2\sin^2\th \, \D\ph^2 ,
+\ee
+where $m$ is a positive constant. We shall see in Chap.~\ref{s:sch} that
+$(\M,\w{g})$ is actually a part of Schwarzschild spacetime, described in
+coordinates different from the standard ones,  $(\bar t, r, \th, \ph)$
+say, by the choice of the time coordinate:
+$t = {\bar t} + 2m\ln|r/(2m)-1|$. The present coordinates are called
+\defin{3+1 Eddington-Finkelstein coordinates}\index{Eddington-Finkelstein!coordinates}
+and have the advantage over the the standard ones to be regular on the event horizon,
+which is located at $r=2m$. Indeed, the metric components (\ref{e:def:Schw_metric})
+remain finite when $r\rightarrow 2m$, as those of the inverse metric, which are
+\be \label{e:def:Schw_metric_inv}
+    g^{\alpha\beta} = \left(
+    \begin{array}{cccc}
+    - 1 - \frac{2m}{r} & \frac{2m}{r} & 0 & 0 \\
+    \frac{2m}{r} & 1 - \frac{2m}{r} & 0 & 0 \\
+    0 & 0 & \frac{1}{r^2} & 0 \\
+    0 & 0 & 0 & \frac{1}{r^2\sin^2\th}
+    \end{array} \right) .
+\ee
+Let us consider the scalar field defined on $\M$ by
+\be \label{e:def:Schw_u}
+    u(t,r,\th,\ph) = \left( 1 - \frac{r}{2m} \right)
+            \exp\left(\frac{r-t}{4m}\right) .
+\ee
+It is then clear that the hypersurface $u=0$ is the
+3-dimensional ``cylinder'' $\Hor$ of equation
+$r=2m$. We shall see below\footnote{This should be obvious for the experienced
+reader since a normal 1-form to $\Hor$ is $\dd r$ and, from Eq.~(\ref{e:def:Schw_metric_inv}), $g^{rr}=0$ on $\Hor$.} that $\Hor$ is indeed a null hypersurface.
 \end{example}
 
 Let $\wl$ be a vector field normal to $\Hor$. Since $\Hor$ is a null hypersurface,
@@ -165,9 +205,12 @@ The scalar field $u$ introduced in Example~\ref{x:def:null_hyp}
 (null hyperplane) does define a family of null hypersurfaces
 $(\Hor_u)$. A counter-example would be $u(t,x,y,z)=(t-x)(1+x^2)$, since
 $u=a$ does not define a null hypersurface except for $a=0$.
-Similarly, the scalar field $u$ of
-Example~\ref{x:def:light_cone} (light cone) does define a family of null
-hypersurfaces $(\Hor_u)$.
+Similarly, the scalar fields $u$ of
+Example~\ref{x:def:light_cone} (light cone)
+and Example~\ref{x:def:Schw_hor} (Schwarzschild horizon)
+do define a family of null
+hypersurfaces $(\Hor_u)$. In the latter example, this would not have been the
+case for the simpler choice $u(t,r,\th,\ph)  = r - 2m$.
 \end{example}
 
 Obviously the family $(\Hor_u)$ is non-unique but all geometrical
@@ -194,22 +237,22 @@ i.e. under the form of minus an exponential. This is always possible by a suitab
 choice of the scalar field $u$. The minus sign ensures that in the case
 of a retarded time $u$ increasing toward the future, $\wl$ is future-directed.
 
-\begin{example} \label{x:def:null_hyp2}
-For the null hyperplane of Example~\ref{x:def:null_hyp}, we deduce from
-expression (\ref{e:def:null_plane_u}) for $u$ that
+\begin{example}[null hyperplane] \label{x:def:null_hyp2}
+We deduce from the
+expression (\ref{e:def:null_plane_u}) chosen for $u$ in Example~\ref{x:def:null_hyp} that
 \[
     \wnab u = \dd t - \dd x .
 \]
 The gradient vector field obtained by metric duality is
-$\vw{\nabla} u = - \wpar_t - \wpar_x$. Choosing for simplicity $\rho=0$, we
-have
+$\vw{\nabla} u = - \wpar_t - \wpar_x$. Choosing for simplicity $\rho=0$,
+we get from formula~(\ref{e:def:wl_rho_u})
 \be \label{e:def:wl_null_hyperplane}
     \wl =  \wpar_t + \wpar x .
 \ee
 \end{example}
 
-\begin{example} \label{x:def:light_cone2}
-Regarding the light cone of Example~\ref{x:def:light_cone}, we have,
+\begin{example}[light cone] \label{x:def:light_cone2}
+Regarding Example~\ref{x:def:light_cone}, we have,
 given expression (\ref{e:def:light_cone_u}) for $u$,
 \[
     \wnab u = \dd t - \frac{x}{r} \dd x - \frac{y}{r} \dd y - \frac{z}{r} \dd z,
@@ -220,6 +263,31 @@ normal
 \be \label{e:def:wl_light_cone}
     \wl = \wpar_t + \frac{x}{r} \wpar_x + \frac{y}{r} \wpar_y + \frac{z}{r} \wpar_z .
 \ee
+\end{example}
+
+\begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor2}
+We deduce from the expression (\ref{e:def:Schw_u}) chosen for $u$ in
+Example~\ref{x:def:Schw_hor} that
+\[
+    \wnab u = \frac{1}{4 m} \mathrm{e}^{(r-t)/(4m)} \left[ \left(\frac{r}{2m} - 1 \right)
+        \, \dd t
+        - \left(\frac{r}{2m} + 1 \right) \, \dd r \right] .
+\]
+The corresponding gradient vector field, $\nabla^\alpha u = g^{\alpha\mu} \nabla_\mu u$,
+is computed from the expression
+(\ref{e:def:Schw_metric_inv}) of $g^{\alpha\mu}$:
+\[
+    \vw{\nabla} u = \frac{1}{4 m} \mathrm{e}^{(r-t)/(4m)} \left[
+    - \left(\frac{r}{2m} + 1 \right) \wpar_t
+    + \left(1 - \frac{r}{2m} \right) \wpar_r \right] .
+\]
+This time, we do not chose $\rho=0$ but rather select $\rho$ so that
+$\el^t = 1$:
+\[
+    \rho = - \ln ( - \nabla^t u )
+\]
+
+
 \end{example}
 
 \subsubsection{Frobenius identity}

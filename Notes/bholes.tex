@@ -18,6 +18,7 @@
 \usepackage{amssymb} % symboles AMS (-> \mathbb)
 \usepackage{amsthm}  % theorem-like environments
 \usepackage{mathrsfs} % -> \mathscr
+\usepackage{ifthen}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -110,9 +111,9 @@
 {\par\medskip}
 
 \newcounter{exampleCounter}[section]
-\newenvironment{example}%
+\newenvironment{example}[1][]%
 {\refstepcounter{exampleCounter}
-\par\medskip\noindent\small\textbf{Example \theexampleCounter:}}%
+\par\medskip\noindent\small\textbf{Example \theexampleCounter\ifthenelse{\equal{#1}{}}{: }{ (#1):}}}%
 {\par\medskip}
 
 %\newenvironment{remark}[1][]%
@@ -160,6 +161,8 @@ CNRS / Observatoire de Paris / Université Paris Diderot\\
 \include{fra}  % General framework
 
 \include{def}  % The concept of black hole
+
+\chapter{Schwarzschild black hole} \label{s:sch}
 
 \appendix
 
