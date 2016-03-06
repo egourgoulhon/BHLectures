@@ -269,24 +269,31 @@ normal
 We deduce from the expression (\ref{e:def:Schw_u}) chosen for $u$ in
 Example~\ref{x:def:Schw_hor} that
 \[
-    \wnab u = \frac{1}{4 m} \mathrm{e}^{(r-t)/(4m)} \left[ \left(\frac{r}{2m} - 1 \right)
+    \wnab u = \frac{1}{4 m} \mathrm{e}^{(r-t)/(4m)} \left[ - \left(1-\frac{r}{2m}  \right)
         \, \dd t
-        - \left(\frac{r}{2m} + 1 \right) \, \dd r \right] .
+        - \left(1 + \frac{r}{2m}\right) \, \dd r \right] .
 \]
 The corresponding gradient vector field, $\nabla^\alpha u = g^{\alpha\mu} \nabla_\mu u$,
 is computed from the expression
 (\ref{e:def:Schw_metric_inv}) of $g^{\alpha\mu}$:
 \[
     \vw{\nabla} u = \frac{1}{4 m} \mathrm{e}^{(r-t)/(4m)} \left[
-    - \left(\frac{r}{2m} + 1 \right) \wpar_t
+    - \left(1+ \frac{r}{2m} \right) \wpar_t
     + \left(1 - \frac{r}{2m} \right) \wpar_r \right] .
 \]
 This time, we do not chose $\rho=0$ but rather select $\rho$ so that
 $\el^t = 1$:
 \[
-    \rho = - \ln ( - \nabla^t u )
+    e^\rho =  - \frac{1}{\nabla^t u} \iff
+    \rho = \frac{t-r}{4m} - \ln \left( 1 + \frac{r}{2m} \right) + \ln (4 m).
 \]
-
+Equation~(\ref{e:def:wl_rho_u}) then leads to
+\be \label{e:def:wl_Schw_hor}
+    \wl = \wpar_t + \left( \frac{r-2m}{r+2m} \right) \wpar_r .
+\ee
+Given the metric (\ref{e:def:Schw_metric}), we check that $\w{g}(\wl, \wl)=0$.
+Since $\wl\not=0$, this proves that all hypersurfaces $\Hor_u$, and in particular $\Hor$,
+are null.
 
 \end{example}
 
@@ -403,9 +410,8 @@ non-affinity parameter under a rescaling of the null normal:
     \wl' = \alpha \wl \ \Longrightarrow \ \kappa' = \alpha \kappa + \wnab_{\wl} \alpha .
 \ee
 
-\begin{example} \label{x:def:null_hyp3}
-For the null hyperplane considered in Examples~\ref{x:def:null_hyp} and \ref{x:def:null_hyp2},
-it is clear on expression (\ref{e:def:wl_null_hyperplane}) for $\wl$ that
+\begin{example}[null hyperplane] \label{x:def:null_hyp3}
+It is clear on expression (\ref{e:def:wl_null_hyperplane}) for $\wl$ that
 the covariant derivative
 $\wnab \wl$ vanishes identically. In particular $\wnab_{\wl} \wl = 0$.
 Equation~(\ref{e:def:wl_geod_kappa}) then implies
@@ -419,9 +425,8 @@ $(y_0,z_0)\in \mathbb{R}^2$. Either $t$ or $x$ can be chosen as an affine
 parameter of these generators.
 \end{example}
 
-\begin{example} \label{x:def:light_cone3}
-Regarding the light cone in Minkowski spacetime of Examples~\ref{x:def:light_cone}
-and \ref{x:def:light_cone2}, we get from the expression (\ref{e:def:wl_light_cone})
+\begin{example}[light cone] \label{x:def:light_cone3}
+We get from the expression (\ref{e:def:wl_light_cone})
 of $\wl$ and the fact that in Minkowksi coordinates $(t,x,y,z)$,
 $\nabla_\beta \el^\alpha = \partial_\beta \el^\alpha$,
 \be \label{e:def:nab_l_light_cone}
@@ -445,6 +450,22 @@ are the half-lines defined by $x=a t$, $y=b t$, $z = \sqrt{1-a^2-b^2} t$, with
 $t>0$ and $(a,b)\in\mathbb{R}^2$ such that $a^2+b^2 \leq 1$.
 Since $\wnab_{\wl} t = 1$, as it is clear from (\ref{e:def:wl_light_cone}),
 and $\kappa=0$, $\lambda=t$ is an affine parameter along these null generators.
+\end{example}
+
+\begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor3}
+The covariant derivative of the vector field $\wl$ as given by (\ref{e:def:wl_Schw_hor})
+is (cf. Sec.~?? in Appendix for the computation)
+\be \label{e:def:nab_l_Schw_hor}
+    \nabla_\beta \el^\alpha = \left(
+    \begin{array}{cccc}
+    \frac{m}{r^2} & \frac{m}{r^2} \frac{3r+2m}{r+2m} & 0 & 0 \\[1ex]
+    \frac{m}{r^2}\frac{r-2m}{r+2m} & \frac{m}{r^2}\frac{3r^2-4m(r+m)}{r^2+4m(r+m)} & 0 & 0 \\[1ex]
+    0 & 0 & \frac{r-2m}{r^2+2mr} & 0 \\
+    0 & 0 & 0 & \frac{r-2m}{r^2+2mr}
+    \end{array} \right)
+    \qquad {(\alpha = \mbox{row index}; \atop \beta = \mbox{column index}).}
+\ee
+
 \end{example}
 
 \subsection{Spacelike sections} \label{s:def:spacelike_sections}
