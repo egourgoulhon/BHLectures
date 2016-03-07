@@ -283,13 +283,13 @@ is computed from the expression
 \]
 This time, we do not chose $\rho=0$ but rather select $\rho$ so that
 $\el^t = 1$:
-\[
+\be \label{e:def:rho_Schw_hor}
     e^\rho =  - \frac{1}{\nabla^t u} \iff
     \rho = \frac{t-r}{4m} - \ln \left( 1 + \frac{r}{2m} \right) + \ln (4 m).
-\]
+\ee
 Equation~(\ref{e:def:wl_rho_u}) then leads to
 \be \label{e:def:wl_Schw_hor}
-    \wl = \wpar_t + \left( \frac{r-2m}{r+2m} \right) \wpar_r .
+    \wl = \wpar_t +  \frac{r-2m}{r+2m} \,  \wpar_r .
 \ee
 Given the metric (\ref{e:def:Schw_metric}), we check that $\w{g}(\wl, \wl)=0$.
 Since $\wl\not=0$, this proves that all hypersurfaces $\Hor_u$, and in particular $\Hor$,
@@ -459,13 +459,26 @@ is (cf. Appendix~\ref{s:sam} for the computation)
     \nabla_\beta \el^\alpha = \left(
     \begin{array}{cccc}
     \frac{m}{r^2} & \frac{m}{r^2} \frac{3r+2m}{r+2m} & 0 & 0 \\[1ex]
-    \frac{m}{r^2}\frac{r-2m}{r+2m} & \frac{m}{r^2}\frac{3r^2-4m(r+m)}{r^2+4m(r+m)} & 0 & 0 \\[1ex]
-    0 & 0 & \frac{r-2m}{r^2+2mr} & 0 \\
-    0 & 0 & 0 & \frac{r-2m}{r^2+2mr}
+    \frac{m}{r^2}\frac{r-2m}{r+2m} & \frac{m}{r^2}\frac{3r^2-4m(r+m)}{(r+2m)^2} & 0 & 0 \\[1ex]
+    0 & 0 & \frac{r-2m}{r(r+2m)} & 0 \\
+    0 & 0 & 0 & \frac{r-2m}{r(r+2m)}
     \end{array} \right)
     \qquad {(\alpha = \mbox{row index}; \atop \beta = \mbox{column index}).}
 \ee
-
+Contracting with $\wl^\beta$, we deduce that
+\[
+    \wnab_{\wl} \wl = \frac{4m}{(r+2m)^2} \wpar_t
+        +  \frac{4m(r-2m)}{(r+2m)^3} \,  \wpar_r = \frac{4m}{(r+2m)^2}  \, \wl .
+\]
+Hence, for any $\Hor_u$, $\kappa=4m/(r+2m)^2$. On $\Hor$ ($r=2m$), we get
+\be
+   \kappa = \frac{1}{4m} .
+\ee
+This value agrees with $\kappa = \wnab_{\wl}\rho$ [Eq.~(\ref{e:def:def_kappa})] and the
+choice (\ref{e:def:rho_Schw_hor}) made for $\rho$. Contrary to Examples~\ref{x:def:null_hyp3}
+and \ref{x:def:light_cone3}, $\kappa$ does not vanish; hence $t$, which is
+a parameter of the null generators associated with $\wl$ (since $\wnab_{\wl} t = 1$),
+is \emph{not} an affine parameter.
 \end{example}
 
 \subsection{Spacelike sections} \label{s:def:spacelike_sections}
@@ -515,12 +528,13 @@ which is not allowed, given the definition of a cross-section. We conclude
 that $\w{v}$ is necessarily spacelike, which proves that $\Sp$ is a spacelike
 submanifold.
 
-\begin{example} \label{x:def:light_cone4}
+\begin{example}[light cone] \label{x:def:light_cone4}
 From now on, we abandon the null hyperplane considered in Examples~\ref{x:def:null_hyp},
 \ref{x:def:null_hyp2} and \ref{x:def:null_hyp3}, since its topology is $\mathbb{R}^3$,
 and therefore not of the type (\ref{e:def:H_topology}).
-On its side, the light cone of Minkowkski spacetime considered in Examples~\ref{x:def:light_cone},
-\ref{x:def:light_cone2} and \ref{x:def:light_cone3} does obey (\ref{e:def:H_topology}).
+On its side, the future sheet $\Hor$ of the light cone of Minkowkski spacetime considered in Examples~\ref{x:def:light_cone},
+\ref{x:def:light_cone2} and \ref{x:def:light_cone3} does obey (\ref{e:def:H_topology}),
+since we have excluded the origin from $\Hor$.
 A natural choice of cross-section is a sphere defined by $t=t_0$ for some positive constant $t_0$:
 \[
     \Sp = \left\{ p \in \Hor,\  t(p) = t_0 \right\} .
@@ -530,6 +544,22 @@ of the Minkowskian coordinates $(t,x,y,z)$:
 $x^2+y^2+z^2 = t_0^2$, which follows immediately from $u=0$ and $t = t_0$
 [cf. Eq.~(\ref{e:def:light_cone_u})]. Moreover, this equation shows that the
 radius of the sphere is $t_0$.
+\end{example}
+
+\begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor4}
+The 3-dimensional cylinder $\Hor$ introduced in Example~\ref{x:def:Schw_hor}
+has exactly the topology (\ref{e:def:H_topology}). Since its is defined
+by $r=2m$ in terms of the 3+1 Eddington-Finkelstein coordinates $(t,r,\th,\ph)$,
+a natural coordinate system on $\Hor$ is $x^A = (t,\th,\ph)$. Morevover, we
+have seen that the coordinate $t$ is the (non-affine) parameter of the null
+geodesics generating $\Hor$ associated with the null normal $\wl$.
+As in Example~\ref{x:def:light_cone4}, a natural choice of cross-section is a
+sphere defined by $t=t_0$ for some constant $t_0$:
+\[
+    \Sp = \left\{ p \in \Hor,\  t(p) = t_0 \right\} .
+\]
+$x^a=(\th,\ph)$ constitutes then a coordinate system on $\Sp$.
+
 \end{example}
 
 Let us denote by $\w{q}$ the
@@ -547,6 +577,16 @@ positive definite, i.e.
     \w{q}(\w{v},\w{v}) = 0 \iff \w{v} = 0.
 \ee
 In other words, $(\Sp, \w{q})$ is a Riemannian manifold (cf Sec.~\ref{s:bas:signature} in Appendix~\ref{s:bas}).
+
+\begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor4a}
+The metric induced by $\w{g}$ on the cross-section
+$\Sp$ of the Schwarzschild horizon defined in Example~\ref{x:def:Schw_hor4} is readily obtained by
+setting $t=\mathrm{const}=t_0$ and $r=\mathrm{const}=2m$ in Eq.~(\ref{e:def:Schw_metric}),
+since  $x^a=(\th,\ph)$ is a coordinate system on $\Sp$:
+\be \label{e:def:q_S_Schw_hor}
+    q_{ab} \D x^a \D x^b = 4m^2 \left( \D\th^2 + \sin^2\th \D^2\ph \right) .
+\ee
+\end{example}
 
 An important consequence of $\Sp$ being spacelike is that, at each point
 $p\in \Sp$, the tangent space $T_p\Sp$ has an orthogonal complement
@@ -645,9 +685,8 @@ Hence (\ref{e:def:q_u_v_k_l}) results in
 which is nothing but (\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
 \end{proof}
 
-\begin{example} \label{x:def:light_cone5}
-In continuation with the light cone in Minkowski spacetime
-considered in Example~\ref{x:def:light_cone4}, the null
+\begin{example}[light cone] \label{x:def:light_cone5}
+In continuation with Example~\ref{x:def:light_cone4}, the null
 vector $\w{k}$ orthogonal to the sphere $\Sp$ and obeying $\w{k}\cdot\wl = -1$
 is
 \[
@@ -666,13 +705,13 @@ of $\w{q}$ with respect to the Minkowskian coordinates $x^\alpha=(t,x,y,z)$:
     0 & - \frac{xz}{r^2} & - \frac{yz}{r^2} & \frac{x^2+y^2}{r^2}
     \end{array} \right) .
  \]
-If we consider the spherical coordinates ${x'}^{\alpha}=(t,r,\theta,\phi)$
+If we consider the spherical coordinates ${x'}^{\alpha}=(t,r,\th,\ph)$
 deduced from the Minkowskian ones via the standard formulas:
 \[
     \left\{ \begin{array}{l}
-    x = r\sin\theta\cos\phi \\
-    y = r\sin\theta\sin\phi \\
-    z = r\cos\theta
+    x = r\sin\th\cos\ph \\
+    y = r\sin\th\sin\ph \\
+    z = r\cos\th
     \end{array} \right. ,
 \]
 the components of $\w{q}$ become
@@ -682,11 +721,54 @@ the components of $\w{q}$ become
     0 & 0 & 0 & 0 \\
     0 & 0 & 0 & 0 \\
     0 & 0 & r^2 & 0 \\
-    0 & 0 & 0 & r^2\sin^2\theta
+    0 & 0 & 0 & r^2\sin^2\th
     \end{array} \right) .
 \ee
-and we recognize in $q_{ab} = \mathrm{diag}(r^2, r^2 \sin^2\theta)$ the
+and we recognize in $q_{ab} = \mathrm{diag}(r^2, r^2 \sin^2\th)$ the
 standard metric on the 2-sphere of radius $r$.
+\end{example}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{def_plot_lk.pdf}}
+\caption[]{\label{f:def:Schw_hor_lk} \footnotesize
+Null vector fields $\wl$ (green) and $\w{k}$ (red) corresponding to
+Example~\ref{x:def:Schw_hor5} (Schwarzschild horizon).
+The plot is a 2-dimensional slice $\th=\mathrm{const}$ and $\ph=\mathrm{const}$
+of the spacetime $\M$, with $t$ and $r$ labelled in units of $m$.
+Note that
+since $\w{k}$ diverges at $r=0$ [cf. Eq.~(\ref{e:def:k_Schw_hor})], it is not represented there.}
+\end{figure}
+
+\begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor5}
+For the Schwarzschild horizon case, we deduce from the metric (\ref{e:def:Schw_metric})
+and the expression (\ref{e:def:wl_Schw_hor}) for $\wl$ that the null
+vector $\w{k}$ orthogonal to the sphere $\Sp$ introduced
+in Example~\ref{x:def:Schw_hor4} and obeying $\w{k}\cdot\wl = -1$
+is
+\be
+\label{e:def:k_Schw_hor}
+    \w{k} = \left(\frac{1}{2} + \frac{m}{r} \right) \wpar_t
+        - \left(\frac{1}{2} + \frac{m}{r} \right) \wpar_r .
+\ee
+The vector field $\w{k}$ is depicted in Fig.~\ref{f:def:Schw_hor_lk}.
+We have (cf. Appendix~\ref{s:sam})
+\be \label{e:def:l_k_forms_Schw_hor}
+    \uu{\el} = \frac{2m-r}{2m+r} \, \dd t  + \dd r
+    \qquad\mbox{and}\qquad
+    \uu{k} = - \left(\frac{1}{2} + \frac{m}{r} \right) \dd t
+        - \left(\frac{1}{2} + \frac{m}{r} \right) \dd r ,
+\ee
+so that Eq.~(\ref{e:def:q_g_k_l}) leads to the following components of $\w{q}$
+in terms of the 3+1 Eddington-Finkelstein coordinates $x^\alpha=(t,r,\th,\ph)$:
+\be \label{e:def:q_Schw_hor}
+    q_{\alpha\beta} = \left(
+    \begin{array}{cccc}
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & r^2 & 0 \\
+    0 & 0 & 0 & r^2\sin^2\th
+    \end{array} \right) .
+\ee
 \end{example}
 
 Having extended the definition of $\w{q}$ via (\ref{e:def:q_g_k_l}), we notice
@@ -900,12 +982,12 @@ rewrite this formula as the Lie derivative of $\ln q$ along $\wl$:
 \be \label{e:def:theta_Lie_ln_q}
     \theta_{(\wl)} = \frac{1}{2} \Lie{\el} \ln q .
 \ee
-\begin{example} \label{x:def:light_cone6}
-Considering the example of the light cone in Minkowkski spacetime,
+\begin{example}[light cone] \label{x:def:light_cone6}
+For the light cone in Minkowkski spacetime,
 it is easy to evaluate $\theta_{(\wl)}$ by means of the spherical coordinates
 introduced in Example~\ref{x:def:light_cone5}, since these coordinates are adapted to the
 surface $\Sp$, the metric of $\Sp$ being $q_{ab} \D x^a \D x^b = r^2 \D \theta^2
-+ r^2\sin^2\theta \D \phi^2$ [cf. Eq.~(\ref{e:def:q_light_cone_spher})].
++ r^2\sin^2\theta \D \ph^2$ [cf. Eq.~(\ref{e:def:q_light_cone_spher})].
 We have then  $q = \det(q_{ab}) = r^4\sin^2\theta$. Moreover the parameter $\varepsilon$
 can be chosen as $\varepsilon = t - t_0$ since $t$ is an (affine) parameter
 associated with $\wl$ (cf. Example~\ref{x:def:light_cone3}). Given that
@@ -916,9 +998,35 @@ yields
          \frac{1}{2} \frac{\D}{\D r} \left( 4 \ln r + 2 \ln\sin\theta \right) ,
 \]
 i.e.
-\[
+\be \label{e:def:theta_light_cone}
     \theta_{(\wl)} = \frac{2}{r} .
-\]
+\ee
+\end{example}
+
+\begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor6}
+As above, we have $q = r^4\sin^2\th$ [cf. Eq.~(\ref{e:def:q_S_Schw_hor})],
+so that (\ref{e:def:theta_Lie_ln_q}) yields
+\bea
+    \theta_{(\wl)} & =& \frac{1}{2} \Lie{\el} \ln q = \frac{1}{2} \el^\mu \der{}{x^\mu} \ln q
+        = \underbrace{\der{}{t} \ln (r^2\sin\th)}_{0}
+            + \frac{r-2m}{r+2m} \der{}{r} \ln (r^2\sin\th) \nonumber \\
+       & = & \frac{2}{r} \frac{r-2m}{r+2m}  . \label{e:def:theta_Schw_hor_u}
+\eea
+where we have used
+(\ref{e:def:wl_Schw_hor}) for the components $\el^\mu$.
+The above expression is valid for any null hypersurface $\Hor_u$. For the
+specific case of the Schwarzschild horizon, $r=2m$ and we get a vanishing
+expansion:
+\be \label{e:def:theta_Schw_hor}
+    \theta_{(\wl)} = 0 .
+\ee
+Note that for large $r$, Eq.~(\ref{e:def:theta_Schw_hor_u}) yields
+$\theta_{(\wl)} \sim 2/r$, i.e. we recover the flat
+spacetime result (\ref{e:def:theta_light_cone}), which is consistent with the
+fact that for large $r$, $\Hor_u$ is closed to a Minkowskian light cone
+(cf. Fig.~??). Note also that Eq.~(\ref{e:def:theta_Schw_hor_u}) yields
+$\theta_{(\wl)} <0$ for $r<2m$ and $\theta_{(\wl)} >0$ for $r>2m$. These
+expansion values are in agreement with what can be infered from Fig.~\ref{f:def:Schw_hor_lk}.
 \end{example}
 
 Using the general law of variation of a derminant, as given by Eq.~(\ref{e:bas:variation_det})
@@ -1065,14 +1173,31 @@ derivative in a direction transverse to $\Hor$, could be set to zero
 in the computation leading to (\ref{e:def:theta_div_l_index}).
 \end{remark}
 
-\begin{example}  \label{x:def:light_cone7}
-For the light cone in Minkowksi space, $\wnab\cdot\wl$ is easily computed by taking the trace of
+\begin{example}[light cone]  \label{x:def:light_cone7}
+$\wnab\cdot\wl$ is easily computed by taking the trace of
 (\ref{e:def:nab_l_light_cone}) and we have $\kappa=0$ (cf. Example~\ref{x:def:light_cone3}),
 so that (\ref{e:def:theta_div_l}) yields
 \[
     \theta_{(\wl)} = \frac{2(x^2+y^2+z^2)}{r^3} = \frac{2}{r} .
 \]
 Hence we recover the result obtained in Example~\ref{x:def:light_cone6}.
+\end{example}
+
+\begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor7}
+Here also, $\wnab\cdot\wl$ is easily computed by taking the trace of
+(\ref{e:def:nab_l_Schw_hor}):
+\[
+    \wnab\cdot\wl = \frac{m}{r^2} + \frac{m}{r^2} \frac{3r^2-4m(r+m)}{(r+2m)^2}
+        + 2\frac{r-2m}{r(r+2m)} =
+    \frac{2(r^2 + 2mr - 4m^2)}{r(r+2m)^2} .
+\]
+Given the value $\kappa= 4m/(r+2m)^2$ found in Example~\ref{x:def:Schw_hor3},
+formula (\ref{e:def:theta_div_l}) leads to
+\[
+     \theta_{(\wl)} = \frac{2(r^2 + 2mr - 4m^2) - 4mr}{r(r+2m)^2} = \frac{2(r^2-4m^2)}{r(r+2m)^2}
+     = \frac{2}{r} \frac{r-2m}{r+2m} .
+\]
+Hence we recover the result (\ref{e:def:theta_Schw_hor_u}).
 \end{example}
 
 We notice that the right-hand side of (\ref{e:def:theta_div_l}) is independent of the
@@ -1249,15 +1374,16 @@ that
 with the important special cases $\w{v} = \wl$ and $\w{v} = \w{k}$.
 
 \begin{remark}
-Contrary to $\theta_{(\wl)}$ which depends only on $\wl$, the tensor fields
+Contrary to $\theta_{(\wl)}$, which depends only on $\wl$, the tensor fields
 $\w{\Theta}$ and $\w{\sigma}$ depend on the specific choice of the cross-section $\Sp$,
 in addition to $\wl$.
 \end{remark}
 
-\begin{example} \label{x:def:light_cone8}
-Let us consider the light cone in Minkowski spacetime (cf. Example~\ref{x:def:light_cone6}).
-Since the coordinates $(t,\theta,\phi)$
-are adapted to the vector field $\wl$ (i.e. the $\theta$ and $\phi$ are constant
+\begin{example}[light cone] \label{x:def:light_cone8}
+Let us consider the light cone in Minkowski spacetime described in terms of the
+spherical coordinates introduced in Example~\ref{x:def:light_cone5}.
+Since the coordinates $(t,\th,\ph)$
+are adapted to the vector field $\wl$ (i.e. the $\th$ and $\ph$ are constant
 along the field lines of $\wl$ on $\Hor$ and $\wl = \partial/\partial t$ in these
 coordinates, in other words, $\el^\alpha=(1,0,0)$), we have (cf. formula~(\ref{e:bas:Lie_adapted})
 in Appendix~\ref{s:bas})
@@ -1265,7 +1391,7 @@ in Appendix~\ref{s:bas})
     \Liec{\el} q_{ab} = \der{}{t} q_{ab} = \der{}{r} q_{ab} ,
 \]
 where the second equality follows from $t=r$ on $\Hor$. Given that
-$q_{ab} = \mathrm{diag}(r^2, r^2\sin^2\theta)$
+$q_{ab} = \mathrm{diag}(r^2, r^2\sin^2\th)$
 [cf. Eq.~(\ref{e:def:q_light_cone_spher})], we obtain
 \[
     \Liec{\el} q_{ab} = \left( \begin{array}{cc}
@@ -1284,6 +1410,25 @@ From (\ref{e:def:def_shear}), we get a vanishing shear:
 \[
     \w{\sigma} = 0 .
 \]
+\end{example}
+
+\begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor8}
+The Lie derivative of $\w{q}$, as given by Eq.~(\ref{e:def:q_Schw_hor}),
+along $\wl$ is (cf. Appendix~\ref{s:sam} for the computation):
+\[
+    \Lie{\wl} \w{q} =  2 r \frac{r-2m}{r+2m} \left( \dd\th \otimes \dd\th
+        +  \sin^2\th \, \dd\ph \otimes \dd\ph \right) = \frac{2}{r} \frac{r-2m}{r+2m}
+            \, \w{q} .
+\]
+Since $\vw{q}^* \w{q} = \w{q}$, Eq.~(\ref{e:def:Theta}) yields
+\[
+    \w{\Theta} = \frac{r-2m}{r(r+2m)} \, \w{q} .
+\]
+This formula is valid for all null hypersurface $\Hor_u$. For the specific
+case of the Schwarzschild horizon $\Hor$, $r=2m$ and we get
+\be \label{e:def:Theta_zero_Schw_hor}
+    \w{\Theta} = 0 .
+\ee
 \end{example}
 
 \subsection{Null Raychaudhuri equation}
@@ -1417,7 +1562,7 @@ can be replaced by the Lie derivative $\Lie{\wl} \theta_{(\wl)}$ in the left-han
 equation.
 \end{remark}
 
-\begin{example}
+\begin{example}[light cone]
 Let us check the null Raychaudhuri equation on the light cone in Minkowski
 spacetime. From Example~\ref{x:def:light_cone3}, we have $\kappa=0$, while
 from Example~\ref{x:def:light_cone8}, we have $\w{\sigma}=0$,
@@ -1432,6 +1577,16 @@ have $\theta_{(\wl)} = 2/r$. Since, in the present case
 $\wnab_{\el}\,  \theta_{(\wl)}  = \Lie{\el} \,  \theta_{(\wl)}  = \dert{\theta_{(\wl)}}{r} =
 - 2/r^2$, we conclude that the null Raychaudhuri equation is satisfied (as
 it should!).
+\end{example}
+
+\begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor9}
+For the Schwarzschild horizon $\Hor$, the null Raychaudhuri equation is
+trivially satisfied, i.e. each of its terms vanishes identically:
+$\theta_{(\wl)}=0$ on $\Hor$ [Eq.~(\ref{e:def:theta_Schw_hor})],
+which implies $\wnab_{\el}\,  \theta_{(\wl)}=0$ since $\wl$ is tangent to $\Hor$,
+$\w{\sigma}=0$ since $\w{\Theta}=0$ [Eq.~(\ref{e:def:Theta_zero_Schw_hor})]
+and the Ricci tensor of the metric (\ref{e:def:Schw_metric}) is zero
+(cf. Appendix~\ref{s:sam}).
 \end{example}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1464,6 +1619,13 @@ does not depend on the choice of the null normal.
 
 As we shall discuss in detail in Chap.~??, this definition captures only
 the event horizon of black holes in equilibrium.
+
+\begin{example}[Schwarzschild horizon]
+The Schwarzschild horizon considered in Examples~\ref{x:def:Schw_hor}, \ref{x:def:Schw_hor2},
+\ref{x:def:Schw_hor3}, \ref{x:def:Schw_hor4}, \ref{x:def:Schw_hor5}, \ref{x:def:Schw_hor6},
+\ref{x:def:Schw_hor7}, \ref{x:def:Schw_hor8} and \ref{x:def:Schw_hor9} is a non-expanding horizon
+[cf. Eq.~(\ref{e:def:theta_Schw_hor})].
+\end{example}
 
 \subsection{Trapped surfaces}
 
@@ -1508,9 +1670,26 @@ one has $\theta_{(\wl)} > 0$ and $\theta_{(\w{k})} < 0$ (cf. Fig.~??), so there
 is no trapped surface.
 
 Cross-sections of a non-expanding horizon are usually marginally trapped surfaces
-(cf. example~??).
+(cf. the example below).
 However there exist some pathological situations for
 which $\theta_{(\w{k})} > 0$ at some points of $\Sp$ \cite{GerocH82}.
+
+\begin{example}
+Let us consider a cross-section $\Sp$ of the Schwarzschild horizon as
+defined in Example~\ref{x:def:Schw_hor4}.
+Computing $q^{\mu\nu} \nabla_\mu k_\nu$ from the components $k_\nu$
+given by (\ref{e:def:l_k_forms_Schw_hor}) we get (cf. Appendix~\ref{s:sam})
+\[
+    \theta_{(\w{k})} = - \frac{r+2m}{r^2} .
+\]
+In particular, on $\Sp$ ($r=2m$),
+\[
+    \theta_{(\w{k})}  = - \frac{1}{m} .
+\]
+Hence $\theta_{(\w{k})} < 0$; since we had already $\theta_{(\wl)}=0$
+[cf. Eq.~(\ref{e:def:theta_Schw_hor})], we conclude that $\Sp$ is a
+marginally trapped surface.
+\end{example}
 
 \subsection{Vanishing of the deformation rate tensor} \label{s:def:NEH_Theta_zero}
 
