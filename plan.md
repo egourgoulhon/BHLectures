@@ -1,6 +1,6 @@
 # Geometry and physics of black holes
 
-These lectures introduce some aspects of black hole physics via a geometrical approach. The prerequisite is to have some notions of general relativity, at the level of an introductory course.  
+These lectures introduce some aspects of black hole physics via a geometrical approach. The prerequisite is having some notions of general relativity, at the level of an introductory course.  
 
 
 ### Location
@@ -11,16 +11,26 @@ Time: [Schedule (IAP page)](http://www.iap.fr/vie_scientifique/cours/cours.php?n
 
 ## Lecture 1 (11 March 2016)
 
-### The concept of black hole
+### Introduction and general framework
 
-- Introduction and general framework 
+- Spacetime manifold
+- Worldlines of particles and observers
+- Energy, momentum and frequency as measured by an observer
+- Einstein equation
+
+### The concept of black hole 1: Horizons and null hypersurfaces
+
+- Null hypersurfaces as causal boundaries 
 - Geometry of null hypersurfaces
 - Non-expanding horizons
-- General definition of a black hole
-- Trapped surfaces
-
+- Killing horizons
 
 ## Lecture 2 (18 March 2016)
+
+### The concept of black hole 2: The global view
+
+- Conformal completion
+- General definition of a black hole
 
 ### The Schwarzschild black hole
 
@@ -44,10 +54,14 @@ Time: [Schedule (IAP page)](http://www.iap.fr/vie_scientifique/cours/cours.php?n
 
 ### Evolution and thermodynamics of black holes
 
-- Stability of Kerr spacetime
 - The four laws of black hole dynamics
 - Gravitational collapse
 - Penrose singularity theorem
+
+### Black holes and gravitational waves
+
+- Quasi-normal modes of Kerr black holes
+- Maximum energy radiated in gravitational waves
 - Binary black hole mergers
 
 

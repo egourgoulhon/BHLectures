@@ -1,4 +1,4 @@
-\chapter{The concept of black hole}
+\chapter{The concept of black hole 1: Horizons and null hypersurfaces}
 
 \minitoc
 
@@ -471,7 +471,7 @@ Contracting with $\wl^\beta$, we deduce that
         +  \frac{4m(r-2m)}{(r+2m)^3} \,  \wpar_r = \frac{4m}{(r+2m)^2}  \, \wl .
 \]
 Hence, for any $\Hor_u$, $\kappa=4m/(r+2m)^2$. On $\Hor$ ($r=2m$), we get
-\be
+\be \label{e:def:kappa_Schw_hor}
    \kappa = \frac{1}{4m} .
 \ee
 This value agrees with $\kappa = \wnab_{\wl}\rho$ [Eq.~(\ref{e:def:def_kappa})] and the
@@ -862,8 +862,8 @@ At each point $p\in\Sp$, the \defin{expansion of $\Sp$ along $\wl$} is defined f
 rate of change $\theta_{(\wl)}$ of the area $\delta A$ of an element of surface $\delta S$ of
 $\Sp$ around $p$:
 \be \label{e:def:def_expansion}
-    \theta_{(\wl)} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
-    \frac{\delta A_\varepsilon - \delta A}{\delta A} .
+    \encadre{ \theta_{(\wl)} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \frac{\delta A_\varepsilon - \delta A}{\delta A} }.
 \ee
 In the above formula, $\delta A_\varepsilon$ stands for the area of the
 surface element $\delta S_\varepsilon\subset \Sp_\varepsilon$ that is obtained from $\delta S$ by
@@ -980,7 +980,7 @@ Given that $\Sp_\varepsilon$ is deduced from $\Sp$ by a Lie dragging along $\wl$
 and $\varepsilon$ is the parameter associated with $\wl$ [cf. Eq.~(\ref{e:def:l_dsdeps})], we may
 rewrite this formula as the Lie derivative of $\ln q$ along $\wl$:
 \be \label{e:def:theta_Lie_ln_q}
-    \theta_{(\wl)} = \frac{1}{2} \Lie{\el} \ln q .
+    \encadre{ \theta_{(\wl)} = \frac{1}{2} \Lie{\el} \ln q }.
 \ee
 \begin{example}[light cone] \label{x:def:light_cone6}
 For the light cone in Minkowkski spacetime,
@@ -1038,7 +1038,7 @@ when $Q$ is the matrix representing the components of $\w{q}$ with respect to th
 coordinates $(x^a) = (x^2,\ldots, x^{n-1})$. In index notation, we have
 $Q = (q_{ab})$ and $Q^{-1} = (q^{ab})$. Hence
 \be \label{e:def:theta_q_ab}
-    \theta_{(\wl)} = \frac{1}{2} \, q^{ab} \Liec{\el} q_{ab} .
+    \encadre{ \theta_{(\wl)} = \frac{1}{2} \, q^{ab} \Liec{\el} q_{ab} } .
 \ee
 We may wonder about the link between the Lie derivative along $\wl$ of the $(n-2)$-metric
 $\w{q}$ of the cross-sections $\Sp_\varepsilon$, which appears above, and
@@ -1112,7 +1112,7 @@ where the second equality follows from
 ${\bar q}^{ab}  = q^{ab}$.
 Hence we may rewrite (\ref{e:def:theta_q_ab}) as
 \be \label{e:def:theta_q_munu}
-    \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu} \Liec{\el} q_{\mu\nu} .
+   \encadre{ \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu} \Liec{\el} q_{\mu\nu} }.
 \ee
 Note that we have dropped the bar over $q$, i.e. we revert to previous notation.
 
@@ -1627,6 +1627,62 @@ The Schwarzschild horizon considered in Examples~\ref{x:def:Schw_hor}, \ref{x:de
 [cf. Eq.~(\ref{e:def:theta_Schw_hor})].
 \end{example}
 
+\subsection{Invariance of the area}
+
+Given a cross-section $\Sp$ of $\Hor$, the area\index{area!of a cross-section} of $\Sp$, with respect to the spacetime metric $\w{g}$, is [cf. Eqs.~(\ref{e:def:A_wepsS_dx}) and (\ref{e:def:A_sqrt_q})]
+\be \label{e:def:total_area}
+    A = \int_{\Sp} \wepsS(\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)})
+        = \int_{\Sp} \sqrt{q} \, \D x^2 \cdots \D x^{n-1} ,
+\ee
+where $x^a = (x^2, \ldots, x^{n-1})$ is a coordinate system on $\Sp$ and $q$
+the determinant with respect to these coordinates of the Riemannian metric $\w{q}$
+induced by $\w{g}$ on $\Sp$.
+
+A direct consequence of the definition of a non-expanding horizon is that
+$A$ does not depend on the choice of the cross-section $\Sp$.
+\begin{proof}
+Let $\Sp'$ be a second cross-section of $\Hor$ and let $\wl$ be a field of null normals
+of $\Hor$. Along the null generators of $\Hor$, we can always choose a parameter $\lambda$ associated with $\wl$ (i.e. such that $\wl = \D/\D\lambda$ along a given null generator)
+such that $\lambda=0$ on $\Sp$. By the very definition of a cross-section,
+any null generator $\Li$ of $\Hor$ intersects $\Sp'$ at a single point. Let
+$\lambda_0$ be the value of $\lambda$ at this point. We may then introduce
+a new parameter along $\Li$ as follows:
+\[
+      \lambda' = \frac{\lambda}{\lambda_0} .
+\]
+If we repeat this for all null generators of $\Hor$, we obtain a parametrization
+of all the null generators that satisfies $\lambda'=0$ on $\Sp$ and $\lambda'=1$
+on $\Sp'$. Let $\wl'=\D/\D\lambda'$ be the (null) tangent vector associated
+with $\lambda'$. We may then say that the cross-section $\Sp'$ is deduced
+from $\Sp$ by the Lie dragging of $\Sp$ along $\wl'$ by a parameter $\delta\lambda'=1$.
+More precisely, we may considered that $\Sp'$ is deduced from $\Sp$ by a
+continuous deformation, represented by a 1-parameter family $(\Sp_{\lambda'})$
+of cross-sections such that $\Sp_0 = \Sp$ and $\Sp_1 = \Sp'$. Associated
+with this family is a real-valued function $\lambda' \mapsto A(\lambda')$
+given the area of each element $\Sp_{\lambda'}$. By the very definition
+of the expansion along $\wl'$ [Eq.~(\ref{e:def:def_expansion})], we have then
+\[
+    \frac{\D A}{\D\lambda'} = \int_{\Sp_{\lambda'}} \theta_{(\wl')} \, \delta A .
+\]
+If $\Hor$ is a non-expanding horizon, then $\theta_{(\wl')}=0$ and it follows
+that $A(\lambda')$ is a constant function. Hence the area of $\Sp'$ is equal
+to that of $\Sp$.
+\end{proof}
+Given that the quantity $A$ defined by (\ref{e:def:total_area})
+takes a unique value, whatever the cross-section $\Sp$,
+we call it the \defin{area of the non-expanding horizon}\index{area!of a non-expanding horizon}
+$\Hor$.
+
+\begin{example}[Schwarzschild horizon]
+The area of the Schwarzchild horizon is readily computed from
+the metric (\ref{e:def:q_S_Schw_hor}):
+$q_{ab} \D x^a \D x^b = 4m^2 \left( \D\th^2 + \sin^2\th \D^2\ph \right)$;
+we get
+\[
+     A = 16\pi m^2 .
+\]
+\end{example}
+
 \subsection{Trapped surfaces}
 
 If there is a natural concept of \emph{outer}/\emph{inner} for $\Hor$, for
@@ -1688,13 +1744,17 @@ In particular, on $\Sp$ ($r=2m$),
 \]
 Hence $\theta_{(\w{k})} < 0$; since we had already $\theta_{(\wl)}=0$
 [cf. Eq.~(\ref{e:def:theta_Schw_hor})], we conclude that $\Sp$ is a
-marginally trapped surface.
+marginally trapped surface. This could also have been inferred from
+Fig.~\ref{f:def:Schw_hor_lk}, since according to the metric
+(\ref{e:def:q_Schw_hor}), the area of the cross-sections of $\Hor$
+is nothing but $4\pi r^2$ and $\w{k}$ points to decreasing values of $r$, while, on $\Hor$,
+$\wl$ points to a fixed value of $r$.
 \end{example}
 
 \subsection{Vanishing of the deformation rate tensor} \label{s:def:NEH_Theta_zero}
 
 If $\Hor$ is a non-expanding horizon, we may set $\theta_{(\wl)}=0$
-in the null Raychaudhuri equation (\ref{e:def:null_Raychaud});it reduces then
+in the null Raychaudhuri equation (\ref{e:def:null_Raychaud}); it reduces then
 to
 \be \label{e:def:null_Raychaud_theta_zero}
     \sigma_{ab} \sigma^{ab} + 8\pi \w{T}(\wl, \wl) = 0 .
@@ -1766,9 +1826,14 @@ In view of (\ref{e:def:Theta}), this is equivalent to
      \vw{q}^* \Lie{\el} \w{q} = 0 .
 \ee
 We conclude that, provided that the null energy condition holds,
-the whole metric, and not only the area element
-$\wepsS$ (as a mere $\theta_{(\wl)}=0$ would suggest), of any cross-section
+the whole metric (and not only the area element
+$\wepsS$, as a mere $\theta_{(\wl)}=0$ would suggest) of any cross-section
 of a non-expanding horizon is invariant along the null generators.
+
+\begin{example}[Schwarzschild horizon]
+We had already noticed that, for the Schwarzschild horizon, $\w{\Theta}=0$
+[Eq.~(\ref{e:def:Theta_zero_Schw_hor}) in Example~\ref{x:def:Schw_hor8}].
+\end{example}
 
 \subsection{Going further}
 
@@ -1781,7 +1846,8 @@ See Refs~\cite{GourgJ06,Jaram13,GourgJ08}.
 
 \subsection{Definition}
 
-A special kind of non-expanding horizons, which is central for the theory of
+A special kind of non-expanding horizons, which is of primordial
+importance for the theory of
 stationary black holes, is that of Killing horizons. These objects have
 been defined by Carter in 1969 \cite{Carte69} as follows: a
 \defin{Killing horizon}\index{Killing!horizon}\index{horizon!Killing --} is
@@ -1789,7 +1855,7 @@ a null hypersurface $\Hor$ whose generating null vector $\wl$ can be normalized
 so as to coincide with a Killing vector field of $(\M,\w{g})$.
 
 Thus a Killing horizon requires that the spacetime $(\M,\w{g})$ has some symmetry
-(usually stationarity), being invariant under the action of a 1-parameter group.
+(usually stationarity), namely that it is invariant under the action of a 1-parameter group.
 Let us recall that a \defin{Killing vector field}\index{Killing!vector field}
 $\w{\xi}$ is a generator of the symmetry group. It can be defined as a vector
 field along which the metric tensor is invariant, i.e.
@@ -1805,6 +1871,22 @@ we see that the above equation is equivalent to the so-called
 
 We shall see in Sec.~?? that in a stationary spacetime, a black hole
 event horizon must be a Killing horizon.
+
+\begin{example}[Schwarzschild horizon]
+Given the expression (\ref{e:def:wl_Schw_hor}) for the null normal $\wl$
+of the family of hypersurfaces $\Hor_u$ and the fact that the Schwarzschild
+horizon $\Hor$ is defined by $r=2ùm$, we have
+\be \label{e:def:wl_wpt_Schw_hor}
+    \wl \equalH \wpar_t ,
+\ee
+where the notation $\equalH$ means that the equality holds only on $\Hor$.
+Now the vector field $\wpar_t$ is clearly a Killing vector of metric $\w{g}$
+as given by (\ref{e:def:Schw_metric}), since none of the metric components
+$g_{\alpha\beta}$ depends upon $t$. Hence (\ref{e:def:wl_wpt_Schw_hor})
+shows that the Schwarzschild horizon is a Killing horizon. By the way,
+Eq.~(\ref{e:def:wl_wpt_Schw_hor}) was our motivation for the choice of the
+null normal $\wl$ performed in Example~\ref{x:def:Schw_hor2}.
+\end{example}
 
 \subsection{Killing horizons as non-expanding horizons}
 
@@ -1979,8 +2061,22 @@ the latter states that the surface gravity of a black hole in equilibrium is
 constant and we shall see in Chap.~?? that the event horizon of a black hole in
 equilibrium is a Killing horizon.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{The general definition}
-
+\begin{example}
+We have found in Example~\ref{x:def:Schw_hor3} [cf. Eq.~(\ref{e:def:kappa_Schw_hor})]
+that on a Schwarzschild horizon:
+\[
+  \kappa = \frac{1}{4m},
+\]
+which is clearly constant. But
+this result is rather trivial since the Schwarzschild horizon is spherically
+symmetric, so that no dependence of $\kappa$ on $\th$ nor $\ph$ could have been expected.
+A much less trivial example is that of the event horizon of the Kerr black hole,
+which we shall discuss in Chap.~\ref{s:ker}. This horizon is only axisymmetric,
+so that a priori $\kappa$ could depend on $\th$. But it does not:
+\[
+    \kappa = \frac{\sqrt{m^2 - a^2}}{2m(m + \sqrt{m^2-a^2})} ,
+\]
+where $(m,a)$ are the two parameters of the Kerr solution. Note that for $a=0$,
+we recover the Schwarzschild value: $\kappa= 1/(4m)$.
+\end{example}
 
