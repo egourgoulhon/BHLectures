@@ -4,12 +4,12 @@
 
 \section{Introduction}
 
-This chapter presents succintly the spacetime framework used in these lectures,
+This chapter presents succintly the spacetime framework used in these lectures
 (Sec.~\ref{s:fra:spacetime})
-and recall usefull basic concepts, such as particle and observer worldlines
+and recalls usefull basic concepts, such as worldlines of particles and observers
 (Sec.~\ref{s:fra:worldlines} and \ref{s:fra:measure}).
-Most of the time, we shall assume that the theory of gravitation is general
-relativity, which means that the spacetime metric obeys Einstein equation,
+In most of these lectures, we shall assume that the theory of gravitation is general
+relativity; this means that the spacetime metric obeys Einstein equation,
 which is recalled in Sec.~\ref{s:fra:Einstein_eq}.
 
 This chapter is by no means an introduction to general relativity. We
@@ -19,18 +19,18 @@ respect, as well as \cite{DerueU14,Gourg14,Langl13} for the French-speaking read
 \section{Spacetime} \label{s:fra:spacetime}
 
 In these lectures we consider a $n$-dimensional \defin{spacetime}\index{spacetime},
-i.e. a pair $(\M, \w{g})$, where $\M$ is a $n$-dimensional smooth manifold, with $n\geq 2$, and $\w{g}$ is a Lorentzian metric on $\M$. In many parts, the dimension $n$ will be set to 4
---- the standard spacetime value --- but we shall also consider spacetimes with
-$n>4$, especially in Chap.~??.
+i.e. a pair $(\M, \w{g})$, where $\M$ is a $n$-dimensional smooth manifold, with $n\geq 2$, and $\w{g}$ is a Lorentzian metric on $\M$. In many parts, $n$ will be set to 4
+--- the standard spacetime dimension --- but we shall also consider spacetimes with
+$n>4$, especially in Chap.~\ref{s:hid}.
 
 The precise definition and basic properties of a \emph{smooth manifold} are recalled
 in Appendix~\ref{s:bas}. Here let us simply say that, in loose terms,
 a \defin{manifold}\index{manifold} $\M$ of dimension $n$ is a ``space'' that \emph{locally} resembles $\R^n$,
-i.e. can be described by a $n$-tuple of coordinates $(x^1,\ldots,x^n)$. Globally,
+i.e. can be described by a $n$-tuple of coordinates $(x^1,\ldots,x^n)$. However, globally,
 $\M$ can be very different from $\R^n$, in particular regarding its topology.
 
 \begin{figure}
-\vspace{2cm}
+\vspace{5cm}
 %\centerline{\includegraphics[width=0.6\textwidth]{}}
 \caption[]{\label{f:fra:manifold} \footnotesize
 Points and vectors on a manifold.}
@@ -39,15 +39,21 @@ Points and vectors on a manifold.}
 
 The smooth structure endows the manifold
 with the concept of infinitesimal vectors\index{vector!infinitesimal --} $\D\w{x}$, which connect infinitely
-close pair of points of $\M$ (cf. Fig.~\ref{f:fra:manifold}). However, for finitely separated points, there is no
+close points of $\M$ (cf. Fig.~\ref{f:fra:manifold} and Sec.~\ref{s:bas:vectors} of Appendix~\ref{s:bas}). However, for finitely separated points, there is no
 longer the concept of connecting vector (contrary for instance to points in $\R^n$).
 In other words, vectors on $\M$ do not live in the manifold but in the
-tangent spaces $T_p\M$, which are defined at each point $p\in\M$. Each  $T_p\M$
+\defin{tangent spaces}\index{tangent!space} $T_p\M$, which are defined at each point $p\in\M$. Each  $T_p\M$
 is a $n$-dimensional vector space, which is generated for instance by the infinitesimal displacement
 vectors along the $n$ coordinate lines of some coordinate system.
 
 The full definition of the \defin{metric tensor} $\w{g}$ is given in Sec.~\ref{s:bas:pRiemManif} of
-Appendix~\ref{s:bas}. The fact that its signature is Lorentzian, i.e.
+Appendix~\ref{s:bas}. At each point $p\in\M$, $\w{g}$ induces a (non positive definite)
+scalar product on $T_p\M$, which we shall denote by a dot:
+\be
+    \forall (\w{u},\w{v})\in T_p\M\times T_p\M, \quad
+        \w{u}\cdot\w{v} := \w{g}(\w{u}, \w{v}) .
+\ee
+The fact that its signature is Lorentzian, i.e.
 \be
 \mathrm{sign}\; \w{g} = (-,\underbrace{+,\ldots,+}_{\mbox{\small $n-1$ times}}),
 \ee
@@ -61,7 +67,7 @@ and that $(\M, \w{g})$ is time-orientable. The qualifier \defin{time-orientable}
 \emph{continuously}
 all non-spacelike vectors into two classes, which are called
 \defin{future-directed}\index{future-directed} and \defin{past-directed}\index{past-directed}.
-More precisely, at each tangent space $T_p\M$, one can split the non-spacelike
+More precisely, at each tangent space $T_p\M$, let us split the non-spacelike
 (i.e. timelike or null) vectors
 in two classes, based on the equivalence relation
 \[
@@ -69,11 +75,9 @@ in two classes, based on the equivalence relation
 \]
 In loose terms, $\w{u}\sim \w{v}$ iff $\w{u}$ and $\w{v}$ are located inside
 or onto the same sheet of the null cone at $p$.
-$(\M,\w{g})$ is then time-orientable if some choice of an equivalence class
+$(\M,\w{g})$ is then time-orientable iff some choice of an equivalence class
 can be performed continously over the entire manifold $\M$.
 
-We shall specify further the spacetime structure later on, in particular its
-asymptotics.
 
 \section{Worldlines} \label{s:fra:worldlines}
 
@@ -81,14 +85,14 @@ In relativity, a particle is described by its spacetime extent, which is a smoot
 $\Li$ say, and not a point. This curve is called the particle's
 \defin{worldline}\index{worldline} and might be thought of as the set of
 the ``successive positions'' occupied by the particle as ``time evolves''.
-The dynamics of a simple particle (i.e. a particle without internal structure nor
+The dynamics of a simple particle (i.e. a particle without any internal structure nor
 spin) is entirely described by its
 \defin{4-momentum}\index{4-momentum} or \defin{energy-momentum vector}\index{energy-momentum!vector}\footnote{When $n\not=4$, \emph{energy-momentum vector} is definitely a better name
 than \emph{4-momentum}!}, which is a vector field $\w{p}$ defined along $\Li$,
 tangent to $\Li$ at each point and future-directed (cf. Fig.~\ref{f:fra:worldline}).
 
 \begin{figure}
-\vspace{2cm}
+\vspace{5cm}
 %\centerline{\includegraphics[width=0.6\textwidth]{}}
 \caption[]{\label{f:fra:worldline} \footnotesize
 Worldline.}
@@ -103,7 +107,6 @@ $\w{p}$ is a timelike vector:
 \be
     \w{g}(\w{p},\w{p}) = \w{p}\cdot\w{p} < 0 ;
 \ee
-one says then that $\Li$ is a timelike curve
 \item the \defin{massless particles}\index{massless!particle}\index{particle!massless --},
 such as the photon,
 for which $\Li$ is a null curve, or equivalently, for which  $\w{p}$ is a null vector:
@@ -111,7 +114,7 @@ for which $\Li$ is a null curve, or equivalently, for which  $\w{p}$ is a null v
     \w{g}(\w{p},\w{p}) = \w{p}\cdot\w{p} = 0 .
 \ee
 \end{itemize}
-In both cases, the \defin{mass} of the particle is defined by
+In both cases, the \defin{mass} of the particle is defined by\footnote{Unless specified, we use geometrized units, for which $G=1$ and $c=1$.}
 \be \label{e:fra:def_mass}
    m = \sqrt{- \w{p}\cdot\w{p}} .
 \ee
@@ -152,26 +155,25 @@ the photon energy-momentum vector is related to the wave 4-vector $\w{k}$ by
 
 \subsection{Massive particles}
 
-For a massive particle, the constraint of having $\Li$ timelike
-has a simple geometrical meaning: the worldline $\Li$ must
-always lie inside the light cones of events along $\Li$ (cf. Fig.~??).
+For a massive particle, the constraint of having the worldline $\Li$ timelike
+has a simple geometrical meaning: $\Li$ must
+always lie inside the light cones of events along $\Li$ (cf. Fig.~\ref{f:fra:worldline}).
 The fondamental link between physics and geometry is that the
 \defin{proper time}\index{proper!time}\index{time!proper --} $\tau$ of the particle
-is the metric length along the worldline, increasing towards the future:
+is nothing but the metric length along the worldline, increasing towards the future:
 \be \label{e:fra:proper_time}
     \D\tau = \sqrt{- \w{g}(\D\w{x}, \D\w{x})} = \sqrt{- g_{\mu\nu} \D x^\mu \, \D x^\nu} ,
 \ee
 where $\D\w{x}$ is an infinitesimal future-directed displacement
 along $\Li$.
 
-The particle's \defin{4-velocity}\index{4-velocity} is defined the vector field
-$\w{u}$
-tangent to the worldline $\Li$ associated with the parametrization of
+The particle's \defin{4-velocity}\index{4-velocity} is defined the
+derivative vector $\w{u}$ of the parametrization of
 $\Li$ by the proper time:
 \be \label{e:fra:def_u}
     \encadre{ \w{u} := \frac{\D\w{x}}{\D\tau} }.
 \ee
-By construction, this is a unit timelike vector:
+By construction, $\w{u}$ is tangent to $\Li$ and is a unit timelike vector:
 \be \label{e:fra:u_unit}
     \w{u}\cdot\w{u} = -1 .
 \ee
@@ -186,7 +188,7 @@ Eqs.~(\ref{e:fra:def_mass}) and (\ref{e:fra:u_unit}) lead to
 \subsection{Massless particles (photons)}
 
 For a massless particle, Eq.~(\ref{e:fra:proper_time}) would lead to $\D\tau=0$
-since $\D\w{x}$ would be a null vector. There is then no natural parameter
+since the displacement $\D\w{x}$ would be a null vector. There is then no natural parameter
 along a null geodesic. However, one can single out a whole family of them,
 called \emph{affine parameters}. An \defin{affine parameter}\index{affine!parameter}
 along a null geodesic $\Li$ is a parameter $\lambda$ such that
@@ -277,7 +279,7 @@ Hence the relation
     \encadre{ \w{P} = E \, \w{V}} .
 \ee
 
-The above relations are valid for any kind of particle, massive or not.
+Relations (\ref{e:fra:E2_m2_P2}) and (\ref{e:fra:P_E_V}) are valid for any kind of particle, massive or not.
 For a massive particle, the energy-momentum vector $\w{p}$ is related to the
 particle's 4-velocity $\w{u}$ via (\ref{e:fra:p_m_u}). Inserting this relation
 into (\ref{e:fra:E_obs}), we obtain
@@ -330,9 +332,9 @@ to demanding that the metric $\w{g}$ obeys \defin{Einstein equation}\index{Einst
 \be \label{e:bas:Einstein_eq}
     \encadre{ \w{R} - \frac{1}{2}\, R\, \w{g} + \Lambda\, \w{g} = 8\pi \w{T} },
 \ee
-where $\w{R}$ is the Ricci tensor of $\w{g}$, $R$ the Ricci scalar of $\w{g}$
-(cf. Sec.~\ref{s:bas:Ricci_tensor} in Appendix~\ref{s:bas}), $\Lambda$ some
-constant, called the \defin{cosmological constant}\index{cosmological!constant}
+where $\w{R}$ is the Ricci tensor of $\w{g}$, $R$ is the Ricci scalar of $\w{g}$
+(cf. Sec.~\ref{s:bas:Ricci_tensor} in Appendix~\ref{s:bas}), $\Lambda$ is some
+constant, called the \defin{cosmological constant}\index{cosmological!constant},
 and $\w{T}$ is the energy-momentum tensor\index{energy-momentum tensor} of
 matter and non-gravitational fields.
 
