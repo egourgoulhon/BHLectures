@@ -256,7 +256,7 @@ i.e. the vector field given in index-notation by
 \ee
 Property (\ref{e:def:nab_u_normal}) means that $\vw{\nabla} u$ is
 a normal vector field to $\Hor$. By uniqueness of the normal direction to a hypersurface, it
-must then be colinear to $\wl$. Therefore, there must exist some scalar
+must then be collinear to $\wl$. Therefore, there must exist some scalar
 field $\rho$ such that
 \be \label{e:def:wl_rho_u}
     \encadre{\wl = - e^\rho \, \vw{\nabla} u } .
@@ -431,7 +431,7 @@ reason the quantity $\kappa$ is called the
 \defin{non-affinity parameter}\index{non-affinity parameter} of
 the null normal $\wl$.
 
-Since $\wl$ is colinear to $\wl'$, it obviously shares the same field lines,
+Since $\wl$ is collinear to $\wl'$, it obviously shares the same field lines,
 which have just been shown to be null geodesics. These field lines are called the
 \defin{null geodesic generators}\index{null!geodesic!generator}\index{generator!of a null hypersurface} of the hypersurface $\Hor$.
 
@@ -532,35 +532,42 @@ the center. Therefore a null cone does not define a black hole.
 A key parameter is hence the \emph{expansion} of null hypersurfaces, which we shall
 discuss in the next section, after having introduced cross-sections.
 
+\begin{figure}
+\vspace{5cm}
+%\centerline{\includegraphics[width=0.6\textwidth]{}}
+\caption[]{\label{f:def:hor_cylinder} \footnotesize
+The null hypersurface $\Hor$ and some cross-sections.}
+\end{figure}
+
 In the remaining of this chapter, we assume that the spacetime dimension
 obeys $n\geq 3$. We define then a \defin{cross-section}\index{cross-section}
 of the null hypersurface $\Hor$
-as a submanifold $\Sp$ of $\Hor$ of codimension 2,
+as a submanifold $\Sp$ of $\Hor$ of codimension 2 (i.e. $\dim \Sp=n-2$),
 such that each null geodesic generator of $\Hor$ intersect $\Sp$ once, and only once.
 
+\begin{notation}
+Indices relative to a cross-section will range from $2$ to $n-1$ and
+will be denoted by a Latin letter from the beginning of the alphabet: $a$, $b$, etc.
+\end{notation}
 
-
-To encompass the idea that an event horizon delimitates a
-region of spacetime of compact cross-sections, we shall assume
-that the boundary of these sections have the topology of a sphere, more
-precisely the $(n-2)$-dimensional sphere $\mathbb{S}^{n-2}$ in a $n$-dimensional
-spacetime. The topology of $\Hor$ is then that of a ``tube'' or ``cylinder'':
+To encompass the idea that an event horizon delimitates some
+region of spacetime, we shall assume that the cross-sections have the topology of a sphere,
+more precisely the $(n-2)$-dimensional sphere $\mathbb{S}^{n-2}$, where $n$
+is the spacetime dimension. Given the definition of a cross-section,
+the topology of $\Hor$ is then that of a ``tube'' or ``cylinder''
+(cf. Fig.~\ref{f:def:hor_cylinder}):
 \be \label{e:def:H_topology}
     \Hor \simeq \R \times \mathbb{S}^{n-2}.
 \ee
 For the standard spacetime dimension ($n=4$), this is of course
 $\Hor \simeq \R \times \mathbb{S}^{2}$.
 
-
-
-Given $\Hor$'s topology (\ref{e:def:H_topology}), this means that $\Sp$ has the
-topology of the $(n-2)$-dimensional sphere:
-\be
-    \Sp \simeq \mathbb{S}^{n-2}.
-\ee
-A first important property of $\Sp$ is to be spacelike,
+A first important property of any cross-section $\Sp$ is to be spacelike,
 i.e. every vector
-tangent to $\Sp$ must be spacelike. This follows from the following lemma\footnote{\emph{Exercise:} prove it!}
+tangent to $\Sp$ must be spacelike.
+\begin{proof}
+The spacelike character of $\Sp$ follows from the following
+lemma\footnote{\emph{Exercise:} prove it!}:
 \begin{quote}
 Every nonzero vector tangent to a null hypersurface is either spacelike or null.
 Moreover, in the latter case, it is tangent to a null geodesic generator (i.e. it is normal
@@ -572,21 +579,25 @@ null geodesic generator $\Li$ going through $p$, but then $\Li$ would be tangent
 which is not allowed, given the definition of a cross-section. We conclude
 that $\w{v}$ is necessarily spacelike, which proves that $\Sp$ is a spacelike
 submanifold.
+\end{proof}
 
 \begin{example}[light cone] \label{x:def:light_cone4}
 From now on, we abandon the null hyperplane considered in Examples~\ref{x:def:null_hyp},
 \ref{x:def:null_hyp2} and \ref{x:def:null_hyp3}, since its topology is $\mathbb{R}^3$,
 and therefore not of the type (\ref{e:def:H_topology}).
-On its side, the future sheet $\Hor$ of the light cone of Minkowkski spacetime considered in Examples~\ref{x:def:light_cone},
+On the other side, the future sheet $\Hor$ of the light cone of Minkowkski spacetime considered in Examples~\ref{x:def:light_cone},
 \ref{x:def:light_cone2} and \ref{x:def:light_cone3} does obey (\ref{e:def:H_topology}),
-since we have excluded the origin from $\Hor$.
+since we have excluded the cone apex from $\Hor$.
 A natural choice of cross-section is a sphere defined by $t=t_0$ for some positive constant $t_0$:
 \[
     \Sp = \left\{ p \in \Hor,\  t(p) = t_0 \right\} .
 \]
-That $\Sp$ is a 2-dimensional sphere is clear on its equation in terms
+That $\Sp$ is a 2-dimensional sphere in the hyperplane $t=t_0$ is clear on its equation in terms
 of the Minkowskian coordinates $(t,x,y,z)$:
-$x^2+y^2+z^2 = t_0^2$, which follows immediately from $u=0$ and $t = t_0$
+\[
+\Sp: \quad t=t_0 \quad\mbox{and}\quad x^2+y^2+z^2 = t_0^2,
+\]
+which follows immediately from $u=0$
 [cf. Eq.~(\ref{e:def:light_cone_u})]. Moreover, this equation shows that the
 radius of the sphere is $t_0$.
 \end{example}
@@ -603,8 +614,11 @@ sphere defined by $t=t_0$ for some constant $t_0$:
 \[
     \Sp = \left\{ p \in \Hor,\  t(p) = t_0 \right\} .
 \]
-$x^a=(\th,\ph)$ constitutes then a coordinate system on $\Sp$.
-
+The equation of $\Sp$ in terms of the coordinates $(t,r,\th,\ph)$ is then
+\[
+    \Sp: \quad t=t_0 \quad\mbox{and}\quad r = 2m .
+\]
+Note that $x^a=(\th,\ph)$ constitutes a coordinate system on $\Sp$.
 \end{example}
 
 Let us denote by $\w{q}$ the
@@ -621,7 +635,7 @@ positive definite, i.e.
     \w{q}(\w{v},\w{v}) \geq 0 \quad \mbox{and} \quad
     \w{q}(\w{v},\w{v}) = 0 \iff \w{v} = 0.
 \ee
-In other words, $(\Sp, \w{q})$ is a Riemannian manifold (cf Sec.~\ref{s:bas:signature} in Appendix~\ref{s:bas}).
+In other words, $(\Sp, \w{q})$ is a \defin{Riemannian manifold}\index{Riemannian!manifold} (cf Sec.~\ref{s:bas:signature} in Appendix~\ref{s:bas}).
 
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor4a}
 The metric induced by $\w{g}$ on the cross-section
@@ -632,6 +646,13 @@ since  $x^a=(\th,\ph)$ is a coordinate system on $\Sp$:
     q_{ab} \D x^a \D x^b = 4m^2 \left( \D\th^2 + \sin^2\th \D^2\ph \right) .
 \ee
 \end{example}
+
+\begin{figure}
+\vspace{5cm}
+%\centerline{\includegraphics[width=0.6\textwidth]{}}
+\caption[]{\label{f:def:TS_ortho} \footnotesize
+The tangent space to the cross-section $\Sp$ and its orthogonal complement.}
+\end{figure}
 
 An important consequence of $\Sp$ being spacelike is that, at each point
 $p\in \Sp$, the tangent space $T_p\Sp$ has an orthogonal complement
@@ -654,28 +675,29 @@ By definition, the null normal $\wl$ is orthogonal to any vector
 tangent to $\Sp$, i.e. $\wl \in T_p^\perp\Sp$.
 Since $T_p^\perp\Sp$ is a timelike plane, it has two independent null directions,
 which can be seen as the two intersections of the null cone at $p$ with
-the 2-plane $T_p^\perp\Sp$ (cf. Fig.~??).
-Let us denote by $\w{k}$ a null vector in the null direction of $T_p^\perp\Sp$
-that is not that of $\wl$. By a proper rescaling $\w{k}\mapsto \alpha\w{k}$,
+the 2-plane $T_p^\perp\Sp$ (cf. Fig.~\ref{f:def:TS_ortho}).
+Let us denote by $\w{k}$ a future-directed null vector in the null direction of $T_p^\perp\Sp$
+that is not along $\wl$. By a proper rescaling $\w{k}\mapsto \alpha\w{k}$,
 we may choose $\w{k}$ so that
 \be \label{e:def:k_el_minus_one}
         \w{k}\cdot\wl = -1 .
 \ee
-Given $\wl$ and $\Sp$, this fixes the null vector $\w{k}$ uniquely.
-Since $\wl$ and $\w{k}$ are nonzero independent vectors of $T_p^\perp\Sp$, we
-have
+Given $\wl$ and $\Sp$, the condition (\ref{e:def:k_el_minus_one})
+determines the null vector $\w{k}$ uniquely.
+Since $\wl$ and $\w{k}$ are non-collinear vectors of $T_p^\perp\Sp$ and
+$\dim T_p^\perp\Sp = 2$, they constitute a basis of $T_p^\perp\Sp$:
 \be \label{e:def:TSperp_Span_k_l}
     T_p^\perp\Sp = \mathrm{Span}\left( \wl, \w{k} \right) .
 \ee
 
-A priori, the bilinear form $\w{q}$ is defined via (\ref{e:def:def_q_S}) only on $T_p\Sp$.
+A priori, the bilinear form $\w{q}$ is defined only on $T_p\Sp$, via (\ref{e:def:def_q_S}).
 However, thanks to the orthogonal decomposition (\ref{e:def:TM_direct_sum}),
 we can extend it to all vectors of $T_p\M$ by requiring
 \be \label{e:def:q_zero_TSperp}
     \forall \w{v}\in T_p^\perp\Sp, \quad \w{q}(\w{v}, .) = 0 .
 \ee
 Indeed, given a pair $(\w{u},\w{v})$ of vectors in $T_p\M$, (\ref{e:def:TM_direct_sum})
-implies that there is the unique decomposition
+implies that there are unique decompositions
 \bea
   & & \w{u} = \w{u}^\parallel + \w{u}^\perp,\quad \mbox{with}\quad  \w{u}^\parallel \in T_p\Sp,
     \  \w{u}^\perp \in T_p^\perp\Sp \label{e:def:decomp_u} \\
@@ -727,7 +749,7 @@ Hence (\ref{e:def:q_u_v_k_l}) results in
             + u^1 v^0 + u^0 v^1 \nonumber \\
                 & = & \w{u}^\parallel \cdot\w{v}^\parallel,  \nonumber
 \eea
-which is nothing but (\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
+which is nothing but (\ref{e:def:q_all_vectors}).
 \end{proof}
 
 \begin{example}[light cone] \label{x:def:light_cone5}
@@ -759,9 +781,9 @@ deduced from the Minkowskian ones via the standard formulas:
     z = r\cos\th
     \end{array} \right. ,
 \]
-the components of $\w{q}$ become
+the components of $\w{q}$ become instead
 \be \label{e:def:q_light_cone_spher}
-    q_{\alpha\beta} = \left(
+    {q'}_{\alpha\beta} = \left(
     \begin{array}{cccc}
     0 & 0 & 0 & 0 \\
     0 & 0 & 0 & 0 \\
@@ -874,7 +896,7 @@ we get
     \w{q} = \w{g} + \frac{1}{2} (\uu{n}+\uu{s})\otimes(\uu{n}-\uu{s})
     + \frac{1}{2} (\uu{n}-\uu{s})\otimes(\uu{n}+\uu{s}) .
 \]
-Expanding and simplifying leads to
+Expanding and simplifying results in
 \be
     \w{q} = \w{g} + \uu{n}\otimes\uu{n} - \uu{s}\otimes\uu{s} .
 \ee
@@ -891,7 +913,7 @@ $(n-2)$-dimensional one, $n$ being the spacetime dimension.}
 
 Let us define the expansion of the cross-section $\Sp$ along the vector
 field $\wl$ as follows. Given an infinitesimal parameter $\varepsilon\geq 0$, take a point
-$p\in \Sp$ and displace it by the infinitesimal vector $\varepsilon \wl$, thereby getting
+$p\in \Sp$ and displace it by the (infinitesimal) vector $\varepsilon \wl$, thereby getting
 a nearby point $p_\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
 Since $\wl$ is tangent to $\Hor$ and $p\in\Hor$, we have $p_\varepsilon\in\Hor$.
 By repeating this for each point in $\Sp$,
@@ -901,10 +923,14 @@ from $\Sp$ by \defin{Lie dragging along $\wl$ by the parameter $\varepsilon$}\in
 Note that $\Sp_0 = \Sp$.
 Since $p_\varepsilon\in\Hor$ for every $p\in\Sp$, we have $\Sp_\varepsilon\subset \Hor$.
 Because the null direction $\wl$ is transverse to $\Sp_\varepsilon$ by construction, it
-follows that $\Sp_\varepsilon$ is spacelilke (cf. the lemma in Sec.~??).
+follows that $\Sp_\varepsilon$ is spacelilke (cf. the lemma in Sec.~\ref{s:def:spacelike_sections}).
 
 At each point $p\in\Sp$, the \defin{expansion of $\Sp$ along $\wl$} is defined from the
-rate of change $\theta_{(\wl)}$ of the area $\delta A$ of an element of surface $\delta S$ of
+rate of change $\theta_{(\wl)}$ of the area\footnote{We are using the words
+\emph{area} and \emph{surface} even if $n-2 \not= 2$, i.e. even if $n\not = 4$,
+being aware that for $n=3$ the words \emph{length} and \emph{line} would
+be more appropriate, as well as \emph{volume} for $n=5$.}
+ $\delta A$ of an element of surface $\delta S$ of
 $\Sp$ around $p$:
 \be \label{e:def:def_expansion}
     \encadre{ \theta_{(\wl)} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
@@ -916,14 +942,13 @@ Lie dragging along $\wl$ by the parameter $\varepsilon$ (cf. Fig.~\ref{f:def:exp
 \begin{remark} \label{r:def:expansion_indpt_S}
 The reader may wonder why the expansion is not denoted by something like
 $\theta_{(\wl)}(\Sp)$, since its definition depends explicitely on
-$\Sp$. We shall below that, because $\Hor$ is a null hypersurface, $\theta_{(\wl)}$
+$\Sp$. We shall show below that, because $\Hor$ is a null hypersurface, $\theta_{(\wl)}$
 is actually independent of the choice of the cross-section $\Sp$.
 \end{remark}
 
-
 For concreteness, let us assume that the element of surface $\delta S \subset\Sp$ is a $(n-2)$-dimensional
 parallelogram delimited by some infinitesimal displacement vectors
-$\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}$. The area of $\delta S$ is then
+$\D\w{x}_{(2)}$, $\ldots$, $\D\w{x}_{(n-1)}$. The area of $\delta S$ is then
 \be \label{e:def:A_wepsS_dx}
     \delta A = \wepsS(\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}),
 \ee
@@ -942,10 +967,10 @@ or, in index notation,
     \epsS_{\alpha_1\cdots\alpha_{n-2}} = \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}} n^\mu s^\nu .
 \]
 \begin{proof}
-To demonstrate (\ref{e:def:epsS_ns}), it sufficies to note that its right-hand side
+To demonstrate (\ref{e:def:epsS_ns}), it suffices to note that its right-hand side
 defines a fully antisymmetric $(n-2)$-linear form on $T_p\Sp$. Since the space
 of such forms is 1-dimensional (for $\dim T_p\Sp = n-2$), we have then
-necessarily $\wepsS = a \weps$ for some proportionality factor $a$. Since
+necessarily $\weps(\w{n},\w{s},\ldots) = a \wepsS$ for some proportionality factor $a$. Since
 $\weps(\w{n},\w{s},\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)})$ is the volume
 of the $n$-parallelepiped construted on the vectors $\w{n},\w{s},\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}$ and $\w{n}$ and $\w{s}$ are unit-length vectors for the metric $\w{g}$,
 we have
@@ -977,7 +1002,7 @@ have
                         \right\}
 \ee
 and  $x^a = (x^2,\ldots, x^{n-1})$ can  be viewed as a coordinate system\footnote{
-Latin indices from the beginning of the alphabet, $a$, $b$, etc. range from $2$
+Let us recall that according to the convention stated in Sec.~\ref{s:def:spacelike_sections},  Latin indices from the beginning of the alphabet, $a$, $b$, etc. range from $2$
 to $n-1$.} on each surface $\Sp_\varepsilon$.
 Let us choose the $n-2$ infinitesimal displacement vectors in (\ref{e:def:A_wepsS_dx})
 along the coordinate lines of this system:
@@ -999,7 +1024,7 @@ $\w{q}$ with respect to the coordinates $(x^2,\ldots,x^{n-1})$.
 By the very definition of the Lie dragging, the surface element
 $\delta S_\varepsilon$ on $\Sp_\varepsilon$
 is defined by the same values of the coordinates $(x^2,\ldots, x^{n-1})$
-as $\Sp$. In particular, the small coordinate increments $\D x^2$, ..., $\D x^{n-1}$
+as $\delta S$. In particular, the small coordinate increments $\D x^2$, ..., $\D x^{n-1}$
 take the same values as on $\Sp$. Therefore, the area of $\delta S_\varepsilon$
 is
 \be \label{e:def:A_eps_sqrt_q}
@@ -1060,8 +1085,8 @@ so that (\ref{e:def:theta_Lie_ln_q}) yields
 where we have used
 (\ref{e:def:wl_Schw_hor}) for the components $\el^\mu$.
 The above expression is valid for any null hypersurface $\Hor_u$. For the
-specific case of the Schwarzschild horizon, $r=2m$ and we get a vanishing
-expansion:
+specific case of the Schwarzschild horizon, $r=2m$ and (\ref{e:def:theta_Schw_hor_u})
+yields a vanishing expansion:
 \be \label{e:def:theta_Schw_hor}
     \theta_{(\wl)} = 0 .
 \ee
@@ -1071,7 +1096,9 @@ spacetime result (\ref{e:def:theta_light_cone}), which is consistent with the
 fact that for large $r$, $\Hor_u$ is closed to a Minkowskian light cone
 (cf. Fig.~??). Note also that Eq.~(\ref{e:def:theta_Schw_hor_u}) yields
 $\theta_{(\wl)} <0$ for $r<2m$ and $\theta_{(\wl)} >0$ for $r>2m$. These
-expansion values are in agreement with what can be infered from Fig.~\ref{f:def:Schw_hor_lk}.
+expansion values are in agreement with what can be infered from Fig.~\ref{f:def:Schw_hor_lk},
+since $r$ is directly related to the area of the cross-sections of $\Hor$:
+$A = 4\pi r^2$ from Eq.~(\ref{e:def:q_Schw_hor}).
 \end{example}
 
 Using the general law of variation of a derminant, as given by Eq.~(\ref{e:bas:variation_det})
@@ -1085,7 +1112,7 @@ $Q = (q_{ab})$ and $Q^{-1} = (q^{ab})$. Hence
 \be \label{e:def:theta_q_ab}
     \encadre{ \theta_{(\wl)} = \frac{1}{2} \, q^{ab} \Liec{\el} q_{ab} } .
 \ee
-We may wonder about the link between the Lie derivative along $\wl$ of the $(n-2)$-metric
+One may wonder about the link between the Lie derivative along $\wl$ of the $(n-2)$-metric
 $\w{q}$ of the cross-sections $\Sp_\varepsilon$, which appears above, and
 the Lie derivative along $\wl$ of the spacetime extension $\w{q}$ defined by
 (\ref{e:def:q_g_k_l}). For the sake of clarity, let us denote here the latter
@@ -1159,9 +1186,9 @@ Hence we may rewrite (\ref{e:def:theta_q_ab}) as
 \be \label{e:def:theta_q_munu}
    \encadre{ \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu} \Liec{\el} q_{\mu\nu} }.
 \ee
-Note that we have dropped the bar over $q$, i.e. we revert to previous notation.
+Note that we have dropped the bar over $q$, i.e. we revert to the previous notation.
 
-Substituting (\ref{e:def:q_g_k_l}) for $q_{\mu\nu}$, and using Leibniz rule, we get
+Substituting (\ref{e:def:q_g_k_l}) for $q_{\mu\nu}$, and using the Leibniz rule, we get
 \[
     \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu}  \left(
             \Liec{\el} g_{\mu\nu} + \Liec{\el}  \el_\mu \; k_\nu + \el_\mu \, \Liec{\el} k_\nu
@@ -1245,6 +1272,15 @@ formula (\ref{e:def:theta_div_l}) leads to
 Hence we recover the result (\ref{e:def:theta_Schw_hor_u}).
 \end{example}
 
+\begin{figure}
+\vspace{5cm}
+%\centerline{\includegraphics[width=0.6\textwidth]{}}
+\caption[]{\label{f:def:two_cross_sections} \footnotesize
+Two cross-sections $\Sp$ and $\Sp'$ through the same point $p$ of $\Hor$.}
+\end{figure}
+
+
+
 We notice that the right-hand side of (\ref{e:def:theta_div_l}) is independent of the
 explicit choice of the cross-section $\Sp$: clearly both $\wnab\cdot\wl$
 and $\kappa$ depends only on the null normal $\wl$ of $\Hor$. This justifies
@@ -1253,7 +1289,7 @@ the notation $\theta_{(\wl)}$, which does not refer to $\Sp$
 This can be understood geometrically as follows. Let $p\in\Hor$ be a
 point where one would like to evaluate $\theta_{(\wl)}$. Let $\Sp$ and $\Sp'$
 be two distinct cross-sections of $\Hor$ going through $p$
-(cf. Fig.~??). Let $q$ be a point of $\Sp$ infinitely close to $p$ and let $q'$
+(cf. Fig.~\ref{f:def:two_cross_sections}). Let $q$ be a point of $\Sp$ infinitely close to $p$ and let $q'$
 be the point of $\Sp'$ located on the same null geodesic generator as $q$,
 i.e. $\vec{qq'} = \varepsilon \wl$, with $\varepsilon$ infinitely small.
 Let $\D\w{x}$ (resp. $\D\w{x'}$) be the infinitesimal vector connecting
@@ -1267,15 +1303,15 @@ the scalar square of which is
             + 2 \varepsilon \underbrace{\D\w{x}\cdot \wl}_{0}
             + \underbrace{\wl\cdot \wl}_{0},
 \]
-where we have the fact that $\wl$ is normal to any vector tangent to $\Sp$,
-such as $\D\w{x}$ and $\wl$ is null. Hence
+where we have used the fact that $\wl$ is normal to any vector tangent to $\Hor$,
+such as $\D\w{x}$ and $\wl$ itself. Hence
 \[
     \D\w{x'}\cdot\D\w{x'} = \D\w{x}\cdot\D\w{x} .
 \]
 In other words, the lengths of all segments from $p$ do not depend
 on the cross-section in which they are taken, provided their second end
 lies on the same null geodesic generator of $\Hor$. It follows that all infinitesimal surfaces
-$\delta S$ around $p$ that are enclosed in tube made of null geodesic generators have the same
+$\delta S$ around $p$ that are enclosed in a tube made of null geodesic generators have the same
 area $\delta A$. Hence the expansion $\theta_{(\wl)}$ at $p$
 does not depend on the choice of $\delta S$, i.e. of the cross-section
 $\Sp$ through $p$.
@@ -1390,12 +1426,12 @@ By comparing (\ref{e:def:theta_q_munu}) and (\ref{e:def:Theta_index}), we
 notice that the trace of $\w{\Theta}$ is nothing but the expansion
 $\theta_{(\wl)}$:
 \be
-    \theta_{(\wl)} = g^{\mu\nu} \Theta_{\mu\nu} = q^{\mu\nu} \Theta_{\mu\nu} = \Theta^\mu_{\ \, \mu} .
+   \encadre{ \theta_{(\wl)} = g^{\mu\nu} \Theta_{\mu\nu} = q^{\mu\nu} \Theta_{\mu\nu} = \Theta^\mu_{\ \, \mu} }.
 \ee
 The trace-free part of $\w{\Theta}$ is called the \defin{shear tensor}\index{shear!tensor}
 of $\Sp$:
 \be \label{e:def:def_shear}
-    \w{\sigma} := \w{\Theta} - \frac{1}{n-2} \theta_{(\wl)} \, \w{q} ,
+    \encadre{ \w{\sigma} := \w{\Theta} - \frac{1}{n-2} \theta_{(\wl)} \, \w{q} } ,
 \ee
 or, in index notation:
 \be
@@ -1430,8 +1466,8 @@ spherical coordinates introduced in Example~\ref{x:def:light_cone5}.
 Since the coordinates $(t,\th,\ph)$
 are adapted to the vector field $\wl$ (i.e. the $\th$ and $\ph$ are constant
 along the field lines of $\wl$ on $\Hor$ and $\wl = \partial/\partial t$ in these
-coordinates, in other words, $\el^\alpha=(1,0,0)$), we have (cf. formula~(\ref{e:bas:Lie_adapted})
-in Appendix~\ref{s:bas})
+coordinates, in other words, $\el^\alpha=(1,0,0)$), we have [cf. formula~(\ref{e:bas:Lie_adapted})
+in Appendix~\ref{s:bas}]
 \[
     \Liec{\el} q_{ab} = \der{}{t} q_{ab} = \der{}{r} q_{ab} ,
 \]
@@ -1502,7 +1538,7 @@ Substituting Eq.~(\ref{e:def:nab_l_Theta}) for $\nabla_\alpha \el^\mu$ and $\the
         R_{\mu\alpha} \el^\mu .
 \]
 Expanding the left-hand side and using again Eqs.~(\ref{e:def:theta_div_l}) and
-(\ref{e:def:nab_l_Theta}) leads to
+(\ref{e:def:nab_l_Theta}) results in
 \bea
     \nabla_\mu \Theta^\mu_{\ \, \alpha} + \el^\mu \nabla_\mu \omega_\alpha
        - \nabla_\alpha \left( \theta_{(\wl)} + \kappa \right)
@@ -1666,10 +1702,10 @@ As we shall discuss in detail in Chap.~??, this definition captures only
 the event horizon of black holes in equilibrium.
 
 \begin{example}[Schwarzschild horizon]
-The Schwarzschild horizon considered in Examples~\ref{x:def:Schw_hor}, \ref{x:def:Schw_hor2},
+In view of Eq.~(\ref{e:def:theta_Schw_hor}), we may assert that the
+Schwarzschild horizon considered in Examples~\ref{x:def:Schw_hor}, \ref{x:def:Schw_hor2},
 \ref{x:def:Schw_hor3}, \ref{x:def:Schw_hor4}, \ref{x:def:Schw_hor5}, \ref{x:def:Schw_hor6},
-\ref{x:def:Schw_hor7}, \ref{x:def:Schw_hor8} and \ref{x:def:Schw_hor9} is a non-expanding horizon
-[cf. Eq.~(\ref{e:def:theta_Schw_hor})].
+\ref{x:def:Schw_hor7}, \ref{x:def:Schw_hor8} and \ref{x:def:Schw_hor9} is a non-expanding horizon.
 \end{example}
 
 \subsection{Invariance of the area}
@@ -1679,7 +1715,7 @@ Given a cross-section $\Sp$ of $\Hor$, the area\index{area!of a cross-section} o
     A = \int_{\Sp} \wepsS(\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)})
         = \int_{\Sp} \sqrt{q} \, \D x^2 \cdots \D x^{n-1} ,
 \ee
-where $x^a = (x^2, \ldots, x^{n-1})$ is a coordinate system on $\Sp$ and $q$
+where $x^a = (x^2, \ldots, x^{n-1})$ is a coordinate system on $\Sp$ and $q$ is
 the determinant with respect to these coordinates of the Riemannian metric $\w{q}$
 induced by $\w{g}$ on $\Sp$.
 
@@ -1714,7 +1750,7 @@ that $A(\lambda')$ is a constant function. Hence the area of $\Sp'$ is equal
 to that of $\Sp$.
 \end{proof}
 Given that the quantity $A$ defined by (\ref{e:def:total_area})
-takes a unique value, whatever the cross-section $\Sp$,
+takes a unique value whatever the cross-section $\Sp$,
 we call it the \defin{area of the non-expanding horizon}\index{area!of a non-expanding horizon}
 $\Hor$.
 
@@ -1740,6 +1776,15 @@ non-expanding horizon $\Hor$ is a
 Hawking \cite{Hawki73}, an
 \defin{outer trapped surface}\index{outer!trapped surface}\index{trapped!surface!outer --}
 would be one for which $\theta_{(\wl)}\leq 0$.
+
+\begin{figure}
+\vspace{5cm}
+%\centerline{\includegraphics[width=0.6\textwidth]{}}
+\caption[]{\label{f:def:expansions_flat} \footnotesize
+Inward and outward expansions of a closed spacelike surface in Minkowski
+spacetime.}
+\end{figure}
+
 
 This definition is related to, but distinct from, the definition of a
 marginally trapped surface by Penrose \cite{Penro65}: a $(n-2)$-dimensional
@@ -1767,7 +1812,7 @@ The limit case $\theta_{(\wl)} = 0$ and $\theta_{(\w{k})}<0$ correspond
 to the so-called \defin{marginally trapped surface}\index{marginally!trapped!surface}.
 
 In a flat spacetime (Minkowksi), given any spacelike surface,
-one has $\theta_{(\wl)} > 0$ and $\theta_{(\w{k})} < 0$ (cf. Fig.~??), so there
+one has $\theta_{(\wl)} > 0$ and $\theta_{(\w{k})} < 0$ (cf. Fig.~\ref{f:def:expansions_flat}), so there
 is no trapped surface.
 
 Cross-sections of a non-expanding horizon are usually marginally trapped surfaces
@@ -1787,7 +1832,7 @@ In particular, on $\Sp$ ($r=2m$),
 \[
     \theta_{(\w{k})}  = - \frac{1}{m} .
 \]
-Hence $\theta_{(\w{k})} < 0$; since we had already $\theta_{(\wl)}=0$
+Hence $\theta_{(\w{k})} < 0$. Since we had already $\theta_{(\wl)}=0$
 [cf. Eq.~(\ref{e:def:theta_Schw_hor})], we conclude that $\Sp$ is a
 marginally trapped surface. This could also have been inferred from
 Fig.~\ref{f:def:Schw_hor_lk}, since according to the metric
@@ -1833,7 +1878,7 @@ proper energy density $\varepsilon$ and pressure $p$ satisfying
 $\varepsilon+p\geq 0$;
 \item any electromagnetic field;
 \item any real or complex scalar field;
-\item ``dark energy'' modeled by $\w{T} = -\frac{\Lambda}{8\pi}\, \w{g}$.
+\item ``dark energy''\index{dark energy} modeled by $\w{T} = -\frac{\Lambda}{8\pi}\, \w{g}$.
 \end{itemize}
 Note also that the null energy condition is implied by the
 so-called \defin{weak energy condition}\index{weak!energy condition}\index{energy!condition!weak --},
@@ -1861,7 +1906,7 @@ the $s_i$'s in (\ref{e:def:sigma_square_si}) is zero. Hence we have necessarily
 \be
     \w{\sigma} = 0 .
 \ee
-Given $\theta_{(\wl)}=0$, this implies that the full deformation rate tensor
+Since we had already $\theta_{(\wl)}=0$ (non-expanding horizon), this implies that the full deformation rate tensor
 vanishes identically [cf. Eq.~(\ref{e:def:def_shear})]:
 \be
     \w{\Theta} = 0 .
@@ -2080,9 +2125,9 @@ holds and we have, according to (\ref{e:def:T_l_l_zero}),
 \]
 This implies that the vector $\w{W}$ is tangent to $\Hor$. The latter
 being a null hypersurface, $\w{W}$ must then be
-either colinear to $\wl$ or spacelike (cf. the lemma in Sec.~\ref{s:def:spacelike_sections}).
+either collinear to $\wl$ or spacelike (cf. the lemma in Sec.~\ref{s:def:spacelike_sections}).
 Now, according to the null dominant energy condition, $\w{W}$ cannot be
-spacelike. We conclude that $\w{W}$ is colinear to $\wl$. Consequently its
+spacelike. We conclude that $\w{W}$ is collinear to $\wl$. Consequently its
 orthogonal projection onto $\Sp$ is zero:
 \[
     q^\alpha_{\ \, \nu} W^\nu = - q^\alpha_{\ \, \nu} T_\mu^{\ \, \nu} \el^\mu = 0 .
