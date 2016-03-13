@@ -95,6 +95,11 @@ In relativity, a particle is described by its spacetime extent, which is a smoot
 $\Li$ say, and not a point. This curve is called the particle's
 \defin{worldline}\index{worldline} and might be thought of as the set of
 the ``successive positions'' occupied by the particle as ``time evolves''.
+Except for pathological cases (tachyons\index{tachyon}),
+the worldline has to be a \defin{causal curve}\index{causal!curve}\index{curve!causal --}, i.e.
+at any point, a tangent vector to $\Li$  is either timelike or null.
+This reflects the impossibility for the particle to travel faster than light with respect
+to any local inertial frame.
 The dynamics of a simple particle (i.e. a particle without any internal structure nor
 spin) is entirely described by its
 \defin{4-momentum}\index{4-momentum} or \defin{energy-momentum vector}\index{energy-momentum!vector}\footnote{When $n\not=4$, \emph{energy-momentum vector} is definitely a better name
@@ -102,10 +107,9 @@ than \emph{4-momentum}!}, which is a vector field $\w{p}$ defined along $\Li$,
 tangent to $\Li$ at each point and future-directed (cf. Fig.~\ref{f:fra:worldline}).
 
 \begin{figure}
-\vspace{5cm}
-%\centerline{\includegraphics[width=0.6\textwidth]{}}
+\centerline{\includegraphics[width=0.4\textwidth]{fra_worldline.pdf}}
 \caption[]{\label{f:fra:worldline} \footnotesize
-Worldline.}
+Worldlines of a massive particle ($\Li$) and of a massless one ($\Li'$).}
 \end{figure}
 
 
@@ -146,7 +150,8 @@ This implies that the worldline $\Li$ must be a
 The reverse is not true, i.e. having $\Li$ geodesic and $\w{p}$
 tangent to $\Li$ does not imply (\ref{e:fra:p_geodesic}), but the
 weaker condition $\wnab_{\w{p}}\,  \w{p} = \alpha \, \w{p}$, with $\alpha$
-a scalar field along $\Li$.
+a scalar field along $\Li$. In this case, one says that $\w{p}$ is a
+\defin{pregeodesic vector}\index{pregeodesic!vector}.
 \end{remark}
 For massive particles, Eq.~(\ref{e:fra:p_geodesic}) can be derived from
 a variational principle, the action being simply the worldline's length
@@ -226,6 +231,17 @@ $\w{p}$:
 \ee
 This fixes $a=1$ in the transformation (\ref{e:fra:affine_transf}).
 
+
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{fra_energy_momentum.pdf}}
+\caption[]{\label{f:fra:energy_momentum} \footnotesize
+Orthogonal decomposition of the energy-momentum vector $\w{p}$ of a particle
+with respect to the 4-velocity $\w{u}_{\Obs}$ of an observer $\Obs$,
+giving birth to the energy $E$ and linear momentum $\w{P}$ as measured by $\Obs$.}
+\end{figure}
+
+
+
 \section{Quantities measured by an observer} \label{s:fra:measure}
 
 In the simplest modelization, an \defin{observer}\index{observer} $\Obs$
@@ -235,7 +251,8 @@ Geometrically, this means that the worldline $\Li$ of the particle
 intersects $\Li_{\Obs}$ at $A$. Then, the \defin{energy}\index{energy!of a particle}
 $E$ and the \defin{momentum}\index{momentum!of a particle} $\w{P}$ of the
 particle, both measured by $\Obs$, are given by the orthogonal decomposition of the
-particle's energy-momentum vector $\w{p}$ with respect to $\Li_{\Obs}$:
+particle's energy-momentum vector $\w{p}$ with respect to $\Li_{\Obs}$
+(cf. Fig.~\ref{f:fra:energy_momentum}):
 \be \label{e:fra:p_E_P}
     \encadre{ \w{p} = E \w{u}_{\Obs} + \w{P} },\quad\mbox{with}\quad
         \w{u}_{\Obs}\cdot\w{P} = 0 ,
@@ -279,7 +296,7 @@ of $\D\w{x}$ with respect to $\Li_{\Obs}$:
 $\Obs$'s proper time elapsed during the particule displacement is the
 coefficient in front of $\w{u}_{\Obs}$: $\D\tau_{\Obs} = E \D\lambda$ and the
 the particle's displacement in $\Obs$'s rest frame is the part orthogonal
-to $\w{u}_{\Obs}$: $\D\w{X} = \D\lambda\,  \w{P}$ (cf. Fig.~??). By definition,
+to $\w{u}_{\Obs}$: $\D\w{X} = \D\lambda\,  \w{P}$. By definition,
 the particle's velocity with respect to $\Obs$ is
 \be
     \w{V} := \frac{\D\w{X}}{\D\tau_{\Obs}} = \frac{\D\lambda\,  \w{P}}{E \D\lambda}.
