@@ -28,7 +28,7 @@ Minkowski spacetime in the region ``far from the massive bodies'',  we shall
 investigate first the asymptotics of Minkowski spacetime by performing some
 conformal completion of it.
 
-\subsection{Conformal completion of Minkowski spacetime}
+\subsection{Compactified coordinates on Minkowski spacetime}
 
 In this section $(\M,\w{g})$ is the 4-dimensional Minkowski spacetime,
 i.e. $\M$ is a smooth manifold diffeomorphic to $\mathbb{R}^4$ and $\w{g}$
@@ -71,10 +71,15 @@ Lines of constant null coordinates $u$ (dashed) and $v$
 Let us introduce the null coordinate system $(u,v,\th,\ph)$ where $u$ and
 $v$ are respectively the retarted\index{retarted!time} and advanced\index{advanced!time}
 time defined by (cf. Fig.~\ref{f:glo:glo_null_coord})
-\be
+\be \label{e:glo:advanced_retarded}
     \left\{ \begin{array}{l}
     u = t - r\\
-    v = t + r .
+    v = t + r
+    \end{array} \right.
+    \iff
+    \left\{ \begin{array}{l}
+    t = \frac{1}{2} (v+u)\\[1ex]
+    r = \frac{1}{2} (v-u) .
     \end{array} \right.
 \ee
 The metric tensor takes then the shape
@@ -93,7 +98,11 @@ their arctangents (cf. Fig.~\ref{f:glo:glo_atan})
 \ee
 Then $(U,V)$ span the half part of $(-\pi/2, \pi/2)\times (-\pi/2, \pi/2)$
 defined by $U < V$
-(since $\mathrm{atan}$ is a monotonically increasing function, cf. Fig.~\ref{f:glo:glo_atan}).
+(since $\mathrm{atan}$ is a monotonically increasing function, cf. Fig.~\ref{f:glo:glo_atan}):
+\be \label{e:glo:span_UV}
+    -\frac{\pi}{2} < U < \frac{\pi}{2}, \quad
+    -\frac{\pi}{2} < V < \frac{\pi}{2}, \quad\mbox{and}\quad U < V.
+\ee
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{glo_atan.pdf}}
@@ -110,6 +119,8 @@ the computation.}:
     \right] .
 \ee
 
+\subsection{Conformal metric}
+
 In the right-hand side of (\ref{e:glo:g_UV}) there appears clearly the metric
 $\w{\tilde{g}}$ defined by
 \be \label{e:glo:tilde_g_Omega}
@@ -118,7 +129,7 @@ $\w{\tilde{g}}$ defined by
 where $\Omega$ is the scalar field $\M \rightarrow \mathbb{R}$ defined by
 \begin{subequations}
 \begin{align}
-    \Omega & =  2 \cos U \cos V \\
+    \Omega & =  2 \cos U \cos V \label{e:glo:Omega_UV} \\
            & =  \frac{2}{\sqrt{1+u^2}\sqrt{1+v^2}} \label{e:glo:Omega_uv}\\
            & =  \frac{2}{\sqrt{(t-r)^2+1}\sqrt{(t+r)^2+1}} . \label{e:glo:Omega_tr}
 \end{align}
@@ -128,7 +139,14 @@ $\Omega$ never vanishes on $\M$, so that the bilinear form $\w{\tilde{g}}$ defin
 (\ref{e:glo:tilde_g_Omega}) constitutes a well behaved metric on $\M$.
 Moreover, since $\Omega^2 > 0$, $\w{\tilde{g}}$ has the same signature as
 $\w{g}$, i.e. $(-,+,+,+)$.
-One says that the metric $\w{\tilde{g}}$
+The specific expression of $\w{\tilde{g}}$ is deduced from (\ref{e:glo:g_UV})
+and (\ref{e:glo:Omega_UV}):
+\be \label{e:glo:tg_UV}
+    \tilde{g}_{\mu\nu} \D x^\mu \D x^\nu =  - 4 \D U \, \D V
+        + \sin^2(V-U) \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
+\ee
+
+In view of (\ref{e:glo:tilde_g_Omega}), one says that the metric $\w{\tilde{g}}$
 is \defin{conformal to}\index{conformal} the metric $\w{g}$, or equivalently,
 that the metrics $\w{g}$ and $\w{\tilde{g}}$ are
 \defin{conformally related}\index{conformally related metrics},
@@ -163,7 +181,73 @@ iff $\Li$ is timelike (resp. null, spacelike) for $\w{g}$. Similarly,
 a hypersurface $\Sigma$ is timelike (resp. null, spacelike) for $\w{\tilde{g}}$
 iff $\Li$ is timelike (resp. null, spacelike) for $\w{g}$.
 
-What about geodesics?
+What about geodesics? Let us first recall that a null curve is not necessarily
+a null geodesic (cf. Remark~\ref{r:def:null_curves} on page~\pageref{r:def:null_curves}),
+so that one cannot deduce from the above results that conformal transformations
+preserve null geodesics. Actually, this turns out to be true:
+\begin{quote}
+A smooth curve $\Li$ in $\M$ is a null geodesic for $\w{\tilde{g}}$ iff
+$\Li$ is a null geodesic for $\w{g}$.
+\end{quote}
+To prove it, it suffices to write explicitly the geodesic equation
+and to express the Christoffel symbols of $\w{\tilde{g}}$ in terms of those
+of $\w{g}$ and the derivatives of $\Omega$ (see e.g. Appendix~D of Wald's
+textbook \cite{Wald84} for details).
+
+On the contrary conformal transformations preserve neither the timelike
+geodesics nor the spacelike ones.
+
+The coordinates $(U,V)$ are of null type; let us consider instead
+the ``time+space'' coordinates $(\tau,\chi)$ defined by\footnote{Notice the
+similarity with (\ref{e:glo:advanced_retarded}) up to some $1/2$ factors.}
+\be \label{e:glo:tau_chi_U_V}
+    \left\{ \begin{array}{l}
+    \tau = V + U \\
+    \chi = V - U
+    \end{array} \right.
+    \iff
+    \left\{ \begin{array}{l}
+    U = \frac{1}{2} (\tau - \chi) \\[1ex]
+    V = \frac{1}{2} (\tau + \chi)
+    \end{array} \right.
+\ee
+Given (\ref{e:glo:span_UV}), the range of these new coordinates is
+\be
+    0 < \chi < \pi \quad\mbox{and}\quad
+    \chi - \pi < \tau < \pi - \chi .
+\ee
+In other words, if we draw the Minkowski spacetime in the $(\tau,\chi)$ plane,
+it takes the shape of a half-diamond: see Fig.~\ref{f:glo:glo_conf_diag_Mink}.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{glo_conf_diag_Mink.pdf}}
+\caption[]{\label{f:glo:glo_conf_diag_Mink} \footnotesize
+Conformal diagram of Minkowski spacetime. Constant-$r$ curves are drawn in
+red, while constant-$t$ ones are drawn in grey.}
+\end{figure}
+
+The expression of the conformal metric in terms of the coordinates
+$(x^\alpha) = (\tau,\chi,\th,\ph)$ is deduced from that in terms of
+$(U,V,\th,\ph)$ as given by (\ref{e:glo:tg_UV}):
+\be
+    \tilde{g}_{\mu\nu} \D x^\mu \D x^\nu =  - \D\tau^2
+        + \D \chi^2
+        + \sin^2\chi \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
+\ee
+On a $\tau = \mathrm{const}$ hypersurface, i.e. setting $\D\tau=0$,
+we recognize the metric of the hypersphere
+$\mathbb{S}^3$ in standard hyperspherical coordinates $(\chi,\th,\ph)$.
+
+On the other side, the expression of the conformal factor in the
+coordinates $(\tau,\chi,\th,\ph)$ is easily deduced from
+(\ref{e:glo:Omega_UV}) and
+(\ref{e:glo:tau_chi_U_V}):
+\be
+    \Omega = \cos\tau + \cos\chi .
+\ee
+
+\subsection{Conformal completion of Minkowski spacetime}
+
 
 \subsection{Asymptotic flatness}
 
