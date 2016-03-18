@@ -21,7 +21,7 @@ is described by introducing a conformal completion of spacetime.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Conformal completion}
+\section{Conformal completion of Minkowski spacetime}
 
 In order to define an asymptotical flat spacetime as a spacetime that ressembles
 Minkowski spacetime in the region ``far from the massive bodies'',  we shall
@@ -89,11 +89,16 @@ The metric tensor takes then the shape
 \ee
 The coordinates $(u,v)$ span the half part of $\mathbb{R}^2$ defined by
 $u<v$. In order to have coordinates in a finite range, let us consider
-their arctangents (cf. Fig.~\ref{f:glo:glo_atan})
-\be
+their arctangents (cf. Fig.~\ref{f:glo:glo_atan}):
+\be \label{e:glo:UV_uv}
     \left\{ \begin{array}{l}
     U = \arctan u \\
-    V = \arctan v .
+    V = \arctan v
+    \end{array} \right.
+    \iff
+   \left\{ \begin{array}{l}
+    u = \tan U \\
+    v = \tan V .
     \end{array} \right.
 \ee
 Then $(U,V)$ span the half part of $(-\pi/2, \pi/2)\times (-\pi/2, \pi/2)$
@@ -212,7 +217,7 @@ similarity with (\ref{e:glo:advanced_retarded}) up to some $1/2$ factors.}
     \end{array} \right.
 \ee
 Given (\ref{e:glo:span_UV}), the range of these new coordinates is
-\be
+\be \label{e:glo:range_tau_chi}
     0 < \chi < \pi \quad\mbox{and}\quad
     \chi - \pi < \tau < \pi - \chi .
 \ee
@@ -226,19 +231,24 @@ Conformal diagram of Minkowski spacetime. Constant-$r$ curves are drawn in
 red, while constant-$t$ ones are drawn in grey.}
 \end{figure}
 
-The expression of the conformal metric in terms of the coordinates
-$(x^\alpha) = (\tau,\chi,\th,\ph)$ is deduced from that in terms of
-$(U,V,\th,\ph)$ as given by (\ref{e:glo:tg_UV}):
-\be
-    \tilde{g}_{\mu\nu} \D x^\mu \D x^\nu =  - \D\tau^2
-        + \D \chi^2
-        + \sin^2\chi \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
+By combining (\ref{e:glo:advanced_retarded}) (\ref{e:glo:UV_uv}) and
+(\ref{e:glo:tau_chi_U_V}), we get the link between $(t,r)$ and
+$(\tau,\chi)$:
+\be \label{e:glo:tau_chi_t_r}
+    \left\{ \begin{array}{l}
+    \tau = \arctan(t+r) + \arctan(t-r) \\
+    \chi = \arctan(t+r) - \arctan(t-r)
+    \end{array} \right.
+    \iff
+    \left\{ \begin{array}{l}
+    \displaystyle t = \frac{\sin\tau}{\cos\tau + \cos\chi}\\[2ex]
+    \displaystyle r = \frac{\sin\chi}{\cos\tau + \cos\chi} .
+    \end{array} \right.
 \ee
-On a $\tau = \mathrm{const}$ hypersurface, i.e. setting $\D\tau=0$,
-we recognize the metric of the hypersphere
-$\mathbb{S}^3$ in standard hyperspherical coordinates $(\chi,\th,\ph)$.
+We may use these relations to draw the lines $t=\mathrm{const}$ and
+$r=\mathrm{const}$ in Fig.~\ref{f:glo:glo_conf_diag_Mink}.
 
-On the other side, the expression of the conformal factor in the
+The expression of the conformal factor in the
 coordinates $(\tau,\chi,\th,\ph)$ is easily deduced from
 (\ref{e:glo:Omega_UV}) and
 (\ref{e:glo:tau_chi_U_V}):
@@ -246,10 +256,74 @@ coordinates $(\tau,\chi,\th,\ph)$ is easily deduced from
     \Omega = \cos\tau + \cos\chi .
 \ee
 
-\subsection{Conformal completion of Minkowski spacetime}
+
+\subsection{Conformal completion}
+
+The expression of the conformal metric in terms of the coordinates
+$(x^\alpha) = (\tau,\chi,\th,\ph)$ is deduced from that in terms of
+$(U,V,\th,\ph)$ as given by (\ref{e:glo:tg_UV}):
+\be \label{e:glo:tg_Einstein}
+    \tilde{g}_{\mu\nu} \D x^\mu \D x^\nu =  - \D\tau^2
+        + \D \chi^2
+        + \sin^2\chi \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
+\ee
+On a $\tau = \mathrm{const}$ hypersurface, i.e. setting $\D\tau=0$,
+we recognize the metric of the hypersphere
+$\mathbb{S}^3$ in standard hyperspherical coordinates $(\chi,\th,\ph)$.
+Moreover, we notice that this metric is perfectly regular even if we relax
+the condition on $\tau$ in (\ref{e:glo:range_tau_chi}): $\tau$ can span the
+entire $\mathbb{R}$. We may consider then the manifold
+\be
+    \mathscr{E} = \mathbb{R}\times \mathbb{S}^3
+\ee
+and $\w{\tilde{g}}$ as a Lorentzian metric on $\mathscr{E}$ given by
+(\ref{e:glo:tg_Einstein}).
+$(\mathscr{E},\w{\tilde{g}})$ is nothing but the
+\defin{Einstein static universe}\index{Einstein!static universe}\index{static!universe (Einstein)}, a static solution of the Einstein equation (\ref{e:bas:Einstein_eq})
+with $\Lambda > 0$ and some pressureless matter of constant density
+$\rho = \Lambda/(4\pi)$.
+We have thus a conformal isometry of Minkowski spacetime $(\M,\w{g})$ to
+an open subset of the Einstein static universe $(\mathscr{E},\w{\tilde{g}})$,
+that we shall denote by the same symbol $\M$.
+
+Let $\tilde{\M}$ be the topological closure of $\M$ in $\mathscr{E}$.
+$\tilde\M$ is a manifold with boundary. Denoting its boundary by $\scri$, we have
+then:
+\be
+    \tilde{\M} = \M \cup \scri .
+\ee
+It is customary to pronounce $\scri$ as ``scri'', for \emph{script i}.
+$\scri$ can be decomposed in five disjoint parts
+(cf. Fig.~\ref{f:glo:glo_conf_diag_Mink}):
+\be
+    \scri = \scri^+ \cup \scri^- \cup \left\{ i^0 \right\} \cup
+            \left\{ i^+ \right\} \cup \left\{ i^- \right\} ,
+\ee
+where
+\begin{itemize}
+\item $\scri^+$ is the hypersurface of $\mathscr{E}$ defined by
+$\tau = \pi - \chi$ and $0 < \tau < \pi$;
+\item $\scri^-$ is the hypersurface of $\mathscr{E}$ defined by
+$\tau = \chi - \pi $ and $-\pi  < \tau < 0$;
+\item $i^0$ is the point of $\mathscr{E}$ defined by $\tau=0$ and $\chi=\pi$;
+\item $i^+$ is the point of $\mathscr{E}$ defined by $\tau=\pi$ and $\chi=0$;
+\item $i^-$ is the point of $\mathscr{E}$ defined by $\tau=-\pi$ and $\chi=0$.
+\end{itemize}
+Note that on $\mathbb{S}^3$, the hyperspherical coordinates $(\chi,\th,\ph)$
+are singular at $\chi=0$ and $\chi=\pi$, so that setting $\chi=0$ (or $\chi=\pi$)
+defines a unique point of $\mathbb{S}^3$, whatever the value of $(\th,\ph)$.
+Note also that the vertical left boundary of the daimond drown in
+Fig.~\ref{f:glo:glo_conf_diag_Mink}, i.e. the segment defined by
+$\tau\in(-\pi,\pi)$ and $\chi=0$, is \emph{not} a part of the boundary $\scri$,
+but merely reflect the coordinate singularity at $\chi=0$, in the same
+way that the left vertical boundary of Fig.~\ref{f:glo:glo_null_coord}
+is not a boundary of Minkowski spacetime but is
+due to the coordinate singularity at $r=0$. Note by the way that
+$\chi=0$ implies $r=0$ via (\ref{e:glo:tau_chi_t_r}).
 
 
-\subsection{Asymptotic flatness}
+
+\section{Asymptotic flatness}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
