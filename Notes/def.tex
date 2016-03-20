@@ -36,11 +36,12 @@ embedded submanifold of $\M$ of codimension 1
 (cf. Sec.~\ref{s:bas:embed} in Appendix~\ref{s:bas}).
 
 \begin{figure}
-\vspace{5cm}
-%\centerline{\includegraphics[width=0.6\textwidth]{}}
-\caption[]{\label{f:def:membranes} \footnotesize
-A timelike hypersurface is a two-way membrane, while null and spacelike hypersurfaces
-are one-way membranes.}
+\centerline{\includegraphics[width=0.45\textwidth]{def_spacelike_hyp.pdf}
+\includegraphics[width=0.25\textwidth]{def_timelike_hyp.pdf}
+\includegraphics[width=0.30\textwidth]{def_null_hyp.pdf}}
+\caption[]{\label{f:def:hypersurfaces} \footnotesize
+The three types of hypersurfaces:
+spacelike (left), timelike (middle) and null (right).}
 \end{figure}
 
 \subsection{The event horizon as a null hypersurface}
@@ -68,8 +69,9 @@ implies that the bilinear form $\left.\w{g}\right| _{\Sigma}$ is not,
 strictly speaking, a metric on $\Sigma$.}
 i.e. iff $\mathrm{sign} \left.\w{g}\right| _{\Sigma} = (0,+,+)$.
 \end{itemize}
-The hypersurface type can also be deduced from any normal vector
-$\w{n}$ to it (cf. Sec.~\ref{s:bas:hyp_normal}):
+The hypersurface type can also be deduced from any normal vector\footnote{
+The definition of a vector normal to a hypersurface is recalled in Sec.~\ref{s:bas:hyp_normal} of Appendix~\ref{s:bas}.}
+$\w{n}$ to it (cf. Fig.~\ref{f:def:hypersurfaces}):
 \begin{itemize}
 \item $\Sigma$ spacelike $\iff$ $\w{n}$ timelike;
 \item $\Sigma$ timelike $\iff$ $\w{n}$ spacelike;
@@ -85,8 +87,42 @@ $\w{n}\cdot\w{n}=0$, which is nothing but the condition
 for $\w{n}$ to be tangent to $\Sigma$.
 \end{remark}
 
-Only null and spacelike hypersurfaces are eligible as a one-way membrane
-regarding timelike and null worldlines (cf. Fig.~\ref{f:def:membranes}).
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{def_timelike_2way.pdf}}
+\caption[]{\label{f:def:timelike_2way} \footnotesize
+A timelike hypersurface is a two-way membrane: $\Li_{1\rightarrow 2}$ is
+a timelike worldline from Region~1 to Region~2, while $\Li_{2\rightarrow 1}$ is
+a timelike worldline from Region~2 to Region~1.}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{def_spacelike_1way.pdf}}
+\caption[]{\label{f:def:spacelike_1way} \footnotesize
+A spacelike hypersurface is a one-way membrane: $\Li_{2\rightarrow 1}$ is
+a timelike worldline from Region~2 to Region~1, while there is no timelike or null
+worldline from Region~1 to Region~2.}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{def_null_1way.pdf}}
+\caption[]{\label{f:def:null_1way} \footnotesize
+A null hypersurface is a one-way membrane:: $\Li_{2\rightarrow 1}$ is
+a timelike worldline from Region~2 to Region~1, while there is no timelike or null
+worldline from Region~1 to Region~2.}
+\end{figure}
+
+A timelike hypersurface is a two-way membrane: if it divides (locally)
+spacetime in two regions, 1 and 2 say, and a future-directed timelike or null
+worldline can cross it from Region~1 to Region~2, or from Region~2 to Region~1
+(see Fig.~\ref{f:def:timelike_2way}). On the contrary,
+a spacelike hypersurface is a one-way membrane: a future-directed timelike or null
+worldline, which is constrained to move inside the light cones,
+can cross it only from Region~2 to Region~1, say (see Fig.~\ref{f:def:spacelike_1way}).
+A null hypersurface is also a one-way membrane (see Fig.~\ref{f:def:null_1way}).
+At most, a null worldline that is not going from Region~2 to Region~1 must
+stay on the hypersurface; an exemple of such null wordline is
+the one depicted in Fig.~\ref{f:def:null_1way} as the thin black line tangent to the normal $\w{n}$.
+
 The limit case between two-way membranes (timelike hypersurfaces)
 and one-way ones being null hypersurfaces, it is quite natural to select the
 latter ones for the black hole boundary, rather than spacelike hypersurfaces.
@@ -563,7 +599,8 @@ In the remaining of this chapter, we assume that the spacetime dimension
 obeys $n\geq 3$. We define then a \defin{cross-section}\index{cross-section}
 of the null hypersurface $\Hor$
 as a submanifold $\Sp$ of $\Hor$ of codimension 2 (i.e. $\dim \Sp=n-2$),
-such that each null geodesic generator of $\Hor$ intersect $\Sp$ once, and only once.
+such that (i) the null normal $\wl$ is nowhere tangent to $\Sp$ and (ii)
+each null geodesic generator of $\Hor$ intersects $\Sp$ once, and only once.
 
 \begin{notation}
 Indices relative to a cross-section will range from $2$ to $n-1$ and
@@ -859,10 +896,12 @@ in terms of the 3+1 Eddington-Finkelstein coordinates $x^\alpha=(t,r,\th,\ph)$:
 \end{example}
 
 Having extended the definition of $\w{q}$ via (\ref{e:def:q_g_k_l}), we notice
-that the metric dual of $\w{q}$, i.e. the tensor of type $(1,1)$ defined by
+that the metric dual\footnote{See Eq.~(\ref{e:bas:arrow_endo}) of
+Appendix~\ref{s:bas} for the explanation of the arrow notation.}
+ of $\w{q}$, i.e. the tensor of type $(1,1)$ defined by
 by
 \be \label{e:def:q_proj}
-    \vw{q} = \mathrm{Id} + \wl\otimes \uu{k} + \w{k}\otimes \uu{\el},
+    \vw{q} := \mathrm{Id} + \wl\otimes \uu{k} + \w{k}\otimes \uu{\el},
 \ee
 or, in index notation,
 \[
@@ -1470,7 +1509,7 @@ By construction, we have thus
 Note that $\w{\Theta}$ and $\w{\sigma}$ are tensor fields tangent to $\Sp$, in the sense
 that
 \be \label{e:def:Theta_sigma_tangent}
-    \forall \w{v}\in T_p^\perp \Sp, \quad \w{\Theta}(\w{v}, .) = \w{\sigma}(\w{v}, .) = 0 ,
+   \encadre{\forall \w{v}\in T_p^\perp \Sp, \quad \w{\Theta}(\w{v}, .) = \w{\sigma}(\w{v}, .) = 0 },
 \ee
 with the important special cases $\w{v} = \wl$ and $\w{v} = \w{k}$.
 
@@ -1526,7 +1565,7 @@ Since $\vw{q}^* \w{q} = \w{q}$, Eq.~(\ref{e:def:Theta}) yields
     \w{\Theta} = \frac{r-2m}{r(r+2m)} \, \w{q} .
 \]
 This formula is valid for all null hypersurface $\Hor_u$. For the specific
-case of the Schwarzschild horizon $\Hor$, $r=2m$ and we get
+case of the Schwarzschild horizon $\Hor$, $r=2m$ and it reduces to
 \be \label{e:def:Theta_zero_Schw_hor}
     \w{\Theta} = 0 .
 \ee
@@ -1737,7 +1776,7 @@ the event horizon of black holes in equilibrium.
 
 \begin{example}[Schwarzschild horizon]
 In view of Eq.~(\ref{e:def:theta_Schw_hor}), we may assert that the
-Schwarzschild horizon considered in Examples~\ref{x:def:Schw_hor}, \ref{x:def:Schw_hor2},
+Schwarz\-schild horizon considered in Examples~\ref{x:def:Schw_hor}, \ref{x:def:Schw_hor2},
 \ref{x:def:Schw_hor3}, \ref{x:def:Schw_hor4}, \ref{x:def:Schw_hor5}, \ref{x:def:Schw_hor6},
 \ref{x:def:Schw_hor7}, \ref{x:def:Schw_hor8} and \ref{x:def:Schw_hor9} is a non-expanding horizon.
 \end{example}
@@ -1895,7 +1934,7 @@ The first term is always non-negative:
     \sigma_{ab} \sigma^{ab} \geq 0 .
 \ee
 \begin{proof}
-Since $\sigma$ is symmetric, it can be diagonalized
+Since $\w{\sigma}$ is symmetric, it can be diagonalized
 in an orthonormal basis of $\w{q}$: $\sigma_{ab} = \mathrm{diag}(s_1,\ldots, s_{n-2})$.
 Moreover, $\w{q}$ being a Riemannian metric, we have, in the same basis, $q^{ab} = \mathrm{diag}(1,\ldots,1)$. Since $\sigma^{ab} = q^{am} q^{bn} \sigma_{mn}$, we conclude that
 \be \label{e:def:sigma_square_si}
@@ -2033,20 +2072,27 @@ on $\Sp$, we deduce immediately that
 \[
     \Lie{\el} \w{q} = 0 .
 \]
-From the definition (\ref{e:def:Theta})], it follows that the expansion rate
+From the definition (\ref{e:def:Theta}), it follows that the expansion rate
 tensor of $\Sp$ vanishes identically:
-\[
+\be \label{e:def:Theta_zero_KillingH}
     \w{\Theta} = 0 .
-\]
+\ee
 In particular we have
 \[
     \theta_{(\wl)} = 0 .
 \]
-We conclude that any Killing horizon is a non-expanding horizon.
+We conclude that
+\begin{quote}
+Any Killing horizon is a non-expanding horizon.
+\end{quote}
+Moreover, (\ref{e:def:Theta_zero_KillingH}) shows that $\w{\Theta}$ vanishes
+for all Killing horizons, while to get the same result on a generic non-expanding
+horizon, one has to assume that the null energy condition holds on $\Hor$.
 
 \subsection{The zeroth law of black hole mechanics}
 
-Let us show that, on a Killing horizon, the non-affinity parameter $\kappa$
+Let us show that, on a Killing horizon, modulo some mild energy condition,
+the non-affinity parameter $\kappa$
 (cf. Sec.~\ref{s:def:geod_gener})
 of the null normal $\wl$ coinciding with a Killing vector is constant.
 
@@ -2143,10 +2189,9 @@ that is the metric dual of the 1-form $\w{T}(\wl, .)$; in index notation,
 Note that the null dominant energy condition implies the null energy condition
 discussed in Sec.~\ref{s:def:NEH_Theta_zero}, since
 \[
-    \w{T}(\wl, \wl) = - \w{W}\cdot\wl \geq 0
+    \w{T}(\wl, \wl) = - \w{W}\cdot\wl \geq 0 ,
 \]
-whenever $\w{W}$ is a future-directed timelike vector or a future-directed
-null vector.
+the inequality holding because both $\w{W}$ and $\wl$ are future-directed.
 
 The null dominant energy condition is implied by continuity by the
 \defin{dominant energy condition}\index{dominant energy condition}\index{energy!condition!dominant--}:
@@ -2184,10 +2229,16 @@ and we are left with
 \]
 This means that $\kappa$ is constant over $\Sp$. Given that $\kappa$ is
 constant along each null geodesic generator of $\Hor$, this completes the demonstration
-that $\kappa$ is constant over $\Hor$:
+that $\kappa$ is constant over $\Hor$. More precisely, we have shown that
+\begin{quote}
+If matter and the non-gravitational fields obey the dominant energy condition
+on the Killing horizon $\Hor$, then the non-affinity parameter $\kappa$
+associated with the null normal coinciding with the Killing vector field on
+$\Hor$ is constant over $\Hor$:
 \be \label{e:def:zeroth_law}
     \encadre{\kappa = \mathrm{const}.}
 \ee
+\end{quote}
 In the context of Killing horizons, the non-affinity parameter $\kappa$ is
 often called the horizon's \defin{surface gravity}\index{surface!gravity} and the result
 (\ref{e:def:zeroth_law}) is known as the
@@ -2211,7 +2262,7 @@ so that a priori $\kappa$ could depend on $\th$. But it does not:
 \[
     \kappa = \frac{\sqrt{m^2 - a^2}}{2m(m + \sqrt{m^2-a^2})} ,
 \]
-where $(m,a)$ are the two parameters of the Kerr solution. Note that for $a=0$,
+where $(m,a)$ are the two constant parameters of the Kerr solution. Note that for $a=0$,
 we recover the Schwarzschild value: $\kappa= 1/(4m)$.
 \end{example}
 
@@ -2220,4 +2271,31 @@ we recover the Schwarzschild value: $\kappa= 1/(4m)$.
 
 \section{Summary}
 
+Here is an inheritance diagram summarizing the main results of this chapter.
+The vertical arrow means ``is a'', i.e. the element at the bottom of the arrow
+is a special case of the element at the top of the arrow.
+``NEC'' stands for ``Null Energy Condition''
+and ``NDEC'' for ``Null Dominant Energy condition''.
 
+\begin{center}
+
+\begin{tikzpicture}
+%\tikzstyle{boxst}=[rectangle,draw]
+\tikzstyle{boxst}=[draw, thick, align=center, fill=yellow!20, rounded corners]
+\tikzstyle{inherits}=[->,very thick,>=latex]
+\node[boxst] (N) at (0,6) {\textbf{Null hypersurface}\\
+null geodesic generators\\
+$\wnab_{\wl}\wl = \kappa\wl$};
+\node[boxst] (H) at (0,3) {\textbf{Non-expanding horizon}\\
+$\theta_{(\wl)}=0$\\
+area independent of the cross-section\\
+NEC $\Longrightarrow \w{\Theta}=0$
+};
+\node[boxst] (K) at (0,0) {\textbf{Killing horizon}\\
+$\w{\Theta}=0$ \\
+NDEC $\Longrightarrow \kappa=\mathrm{const}$ (Zeroth Law)};
+\draw[inherits] (H)--(N);
+\draw[inherits] (K)--(H);
+\end{tikzpicture}
+
+\end{center}
