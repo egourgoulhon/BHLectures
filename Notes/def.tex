@@ -608,15 +608,21 @@ will be denoted by a Latin letter from the beginning of the alphabet: $a$, $b$, 
 \end{notation}
 
 To encompass the idea that an event horizon delimitates some
-region of spacetime, we shall assume that the cross-sections have the topology of a sphere,
+region of spacetime, we shall assume that the cross-sections
+are \defin{closed manifolds}\index{closed!manifold}, i.e.
+are compact without boundary. The simplest example is the sphere,
 more precisely the $(n-2)$-dimensional sphere $\mathbb{S}^{n-2}$, where $n$
-is the spacetime dimension. Given the definition of a cross-section,
+is the spacetime dimension. It is the one relevant for standard 4-dimensional
+black holes. But at this stage, we shall allow for other
+closed-manifold topologies, like that of a torus.
+
+Given the definition of a cross-section $\Sp$,
 the topology of $\Hor$ is then that of a ``tube'' or ``cylinder''
 (cf. Fig.~\ref{f:def:hor_cylinder}):
 \be \label{e:def:H_topology}
-    \Hor \simeq \R \times \mathbb{S}^{n-2}.
+    \Hor \simeq \R \times \Sp.
 \ee
-For the standard spacetime dimension ($n=4$), this is of course
+For the standard 4-dimensional black holes, this is
 $\Hor \simeq \R \times \mathbb{S}^{2}$.
 
 A first important property of any cross-section $\Sp$ is to be spacelike,
@@ -641,7 +647,7 @@ submanifold.
 \begin{example}[light cone] \label{x:def:light_cone4}
 From now on, we abandon the null hyperplane considered in Examples~\ref{x:def:null_hyp},
 \ref{x:def:null_hyp2} and \ref{x:def:null_hyp3}, since its topology is $\mathbb{R}^3$,
-and therefore not of the type (\ref{e:def:H_topology}).
+and therefore not of the type (\ref{e:def:H_topology}) with $\Sp$ compact.
 On the other side, the future sheet $\Hor$ of the light cone of Minkowski spacetime considered in Examples~\ref{x:def:light_cone},
 \ref{x:def:light_cone2} and \ref{x:def:light_cone3} does obey (\ref{e:def:H_topology}),
 since we have excluded the cone apex from $\Hor$.
@@ -661,7 +667,8 @@ radius of the sphere is $t_0$.
 
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor4}
 The 3-dimensional cylinder $\Hor$ introduced in Example~\ref{x:def:Schw_hor}
-has exactly the topology (\ref{e:def:H_topology}). Since its is defined
+has the topology (\ref{e:def:H_topology}), with $\Sp\simeq \mathbb{S}^2$.
+Since it is defined
 by $r=2m$ in terms of the 3+1 Eddington-Finkelstein coordinates $(t,r,\th,\ph)$,
 a natural coordinate system on $\Hor$ is $x^A = (t,\th,\ph)$. Moreover, we
 have seen that the coordinate $t$ is the (non-affine) parameter of the null
@@ -1759,8 +1766,9 @@ the expansion along the null normal vanishes. Hence the definition:\\
 A \defin{non-expanding horizon}\index{non-expanding!horizon}\index{horizon!non-expanding --} is a null hypersurface $\Hor$ having the
 topology (\ref{e:def:H_topology}):
 \be
-    \Hor \simeq \R \times \mathbb{S}^{n-2}
+    \Hor \simeq \R \times \Sp,
 \ee
+where $\Sp$ is a closed manifold of dimension $n-2$,
 and such that the expansion of $\Hor$ along any null normal $\wl$ vanishes
 identically:
 \be
@@ -1781,9 +1789,10 @@ Schwarz\-schild horizon considered in Examples~\ref{x:def:Schw_hor}, \ref{x:def:
 \ref{x:def:Schw_hor7}, \ref{x:def:Schw_hor8} and \ref{x:def:Schw_hor9} is a non-expanding horizon.
 \end{example}
 
-\begin{hist}
+\begin{hist}\label{h:def:NEH}
 The concept of non-expanding horizon has been introduced by P.~H\'a\'\j i\v{c}ek
-in 1973 \cite{Hajic73,Hajic74}, under the name \emph{perfect horizon}.
+in 1973 under the name of \emph{totally geodesic null hypersurface} \cite{Hajic73a}
+or \emph{perfect horizon} \cite{Hajic73b,Hajic74}.
 The terminology \emph{non-expanding horizon} is due to A.~Ashtekar, S.~Fairhurst
 and B.~Krishnan in 2000 \cite{AshteFK00} (see also \cite{AshteBL02}).
 \end{hist}
@@ -2005,6 +2014,49 @@ We had already noticed that, for the Schwarzschild horizon, $\w{\Theta}=0$
 [Eq.~(\ref{e:def:Theta_zero_Schw_hor}) in Example~\ref{x:def:Schw_hor8}].
 \end{example}
 
+\subsection{Induced affine connection}
+
+Since $\Hor$ is a null hypersurface, the ``metric'' $\left. \w{g}\right|_{\Hor}$
+induced on it by the spacetime metric $\w{g}$ is degenerate. As a consequence, there
+is a priori no unique connection on $\Hor$ associated with it. However, when
+$\Hor$ is a non-expanding horizon and the null energy condition holds on $\Hor$,
+so that $\w{\Theta}=0$, the spacetime connection $\wnab$ induces a unique
+connection ${}^\Hor\!\wnab$ on $\Hor$ as follows.
+Let $\w{u}$ and $\w{v}$ be two vector fields on $\Hor$. We have, using
+(\ref{e:def:nab_l_Theta}) to express $\nabla_\nu \el_\mu$ in terms of $\Theta_{\nu\mu}$:
+\bea
+    \el_\mu u^\nu \nabla_\nu v^\mu &= &
+        u^\nu \nabla_\nu ( \underbrace{\el_\mu v^\mu}_{0} )
+        - v^\mu u^\nu \nabla_\nu \el_\mu \nonumber \\
+        & = & - \underbrace{\Theta_{\nu\mu}}_{0} v^\mu u^\nu  - \omega_\nu u^\nu
+            \underbrace{\el_\mu v^\mu}_{0}
+            + v^\mu \underbrace{u^\nu \el_\nu}_{0} k^\sigma\nabla_\sigma \el_\mu
+             = 0    \nonumber .
+\eea
+Hence $\wl$ is orthogonal to the vector field $\wnab_{\w{u}} \w{v}$. It follows
+immediately that $\wnab_{\w{u}} \w{v}$ is tangent to $\Hor$.
+We conclude that the operator
+\be
+    \begin{array}{cccc}
+    {}^\Hor\!\wnab \ : & \mathscr{X}(\Hor)\times\mathscr{X}(\Hor) & \longrightarrow & \mathscr{X}(\Hor) \\
+    & (\w{u},\w{v}) & \longmapsto & \wnab_{\w{u}} \,\w{v} ,
+    \end{array}
+\ee
+where $\mathscr{X}(\Hor)$ is the space of vector fields on $\Hor$, is
+well defined (i.e. ${}^\Hor\!\wnab_{\w{u}}\w{v}$  does belong to
+$\mathscr{X}(\Hor)$).
+Moreover this operator fulfills all the properties of an affine connection
+(cf. Sec.~\ref{s:bas:affine_connect}), since $\wnab$ does.
+We naturally call ${}^\Hor\!\wnab$ the \defin{affine connection induced on $\Hor$
+by}\index{induced! affine connection}\index{affine connection!induced --}\index{connection!induced --} $\wnab$.
+
+A geometrical consequence of the identity
+${}^\Hor\!\wnab_{\w{u}}\w{v} = \wnab_{\w{u}}\w{v}$ is
+that $(\Hor, {}^\Hor\!\wnab)$ is a \defin{totally geodesic submanifold}\index{totally geodesic} of $(\M,\w{g})$:
+i.e. any geodesic of $(\Hor, {}^\Hor\!\wnab)$ is also a geodesic of $(\M,\w{g})$
+(cf. the historical note on page~\pageref{h:def:NEH}).
+
+
 \subsection{Going further}
 
 See Refs.~\cite{AshteK04,GourgJ06,Jaram13} for more
@@ -2062,7 +2114,8 @@ null normal $\wl$ performed in Example~\ref{x:def:Schw_hor2}.
 
 \subsection{Killing horizons as non-expanding horizons}
 
-If $\Hor$ is a Killing horizon, then the null normal $\wl$ obeys $\wl \equalH \w{\xi}$,
+If $\Hor$ is a Killing horizon with closed cross-sections, i.e. has the
+topology (\ref{e:def:H_topology}), then the null normal $\wl$ obeys $\wl \equalH \w{\xi}$,
 so that (\ref{e:def:Lie_xi_g}) implies:
 \[
     \Lie{\el} \w{g} \equalH 0 .
@@ -2083,7 +2136,7 @@ In particular we have
 \]
 We conclude that
 \begin{quote}
-Any Killing horizon is a non-expanding horizon.
+Any Killing horizon with closed cross-sections is a non-expanding horizon.
 \end{quote}
 Moreover, (\ref{e:def:Theta_zero_KillingH}) shows that $\w{\Theta}$ vanishes
 for all Killing horizons, while to get the same result on a generic non-expanding
@@ -2266,6 +2319,17 @@ where $(m,a)$ are the two constant parameters of the Kerr solution. Note that fo
 we recover the Schwarzschild value: $\kappa= 1/(4m)$.
 \end{example}
 
+\begin{hist}
+The constancy of $\kappa$ for a Killing horizon has been proven by S.W.~Hawking
+in his lecture at the famous Les Houches School of Summer 1972 \cite{Hawki73} (p.~43).
+It has also been proven without requiring the dominant energy condition, but
+assuming axisymmetry by B.~Carter in his lecture at the same Les Houches School
+\cite{Carte73b} (Theorem 8, p.~167).
+A third proof of the constancy of $\kappa$ using the dominant energy condition
+has also been given in 1973 by J.M.~Bardeen, B.~Carter and S.W.~Hawking
+in their famous article \emph{The Four Laws of Black Hole Mechanics}
+\cite{BardeCH73}.
+\end{hist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2283,15 +2347,19 @@ and ``NDEC'' for ``Null Dominant Energy condition''.
 %\tikzstyle{boxst}=[rectangle,draw]
 \tikzstyle{boxst}=[draw, thick, align=center, fill=yellow!20, rounded corners]
 \tikzstyle{inherits}=[->,very thick,>=latex]
-\node[boxst] (N) at (0,6) {\textbf{Null hypersurface}\\
+\node[boxst] (N) at (0,7) {\textbf{Null hypersurface}\\
 null geodesic generators\\
 $\wnab_{\wl}\wl = \kappa\wl$};
-\node[boxst] (H) at (0,3) {\textbf{Non-expanding horizon}\\
+\node[boxst] (H) at (0,3.5) {\textbf{Non-expanding horizon}\\
 $\theta_{(\wl)}=0$\\
 area independent of the cross-section\\
-NEC $\Longrightarrow \w{\Theta}=0$
+\begin{tabular}{lcl}
+NEC &$\Longrightarrow$ & $\w{\Theta}=0$ \\
+ & $\Longrightarrow$ & induced affine connection
+\end{tabular}
 };
 \node[boxst] (K) at (0,0) {\textbf{Killing horizon}\\
+\textbf{\small with closed cross-sections}\\
 $\w{\Theta}=0$ \\
 NDEC $\Longrightarrow \kappa=\mathrm{const}$ (Zeroth Law)};
 \draw[inherits] (H)--(N);
