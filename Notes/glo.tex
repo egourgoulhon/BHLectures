@@ -11,38 +11,40 @@ hole. As it could have been anticipated from the naive ``definition'' given
 in Sec.~\ref{s:def:first_defin}, the mathematically meaningful definition
 of a black hole cannot be local: it has to take into account the full
 spacetime structure, in particular its future asymptotics. Indeed, to decide
-whether a null geodesic can escape or not, one has to wait until the ``end
-of time'' to conclude.
+whether a null geodesic has escaped or not, one has to wait until the ``end
+of time''...
 
 In this chapter, we therefore consider the global spacetime picture to
-arrive at the definition of a black hole. This amounts to focus on the
-spacetime asymptotics (the region where the ``distant observers'' live), which
-is described by introducing a conformal completion of spacetime.
+arrive at the general definition of a black hole in
+Sec.~\ref{s:glo:def_BH}.
+This amounts to focusing on the
+spacetime asymptotics, which can be seen as
+the region where the ``distant observers'' live and may, or may not, receive
+light rays from some ``central region''. This far-away structure is best
+described in terms of the so-called \emph{conformal completion}, which brings
+the spacetime infinity(ies) to a finite distance in another manifold.
+We start by investigating the conformal completion of the simplest
+spacetime: Minkowski spacetime.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Conformal completion of Minkowski spacetime}
 
-In order to define an asymptotical flat spacetime as a spacetime that ressembles
-Minkowski spacetime in the region ``far from the massive bodies'',  we shall
-investigate first the asymptotics of Minkowski spacetime by performing some
-conformal completion of it.
-
-\subsection{Compactified coordinates on Minkowski spacetime}
-
 In this section $(\M,\w{g})$ is the 4-dimensional Minkowski spacetime,
 i.e. $\M$ is a smooth manifold diffeomorphic to $\mathbb{R}^4$ and $\w{g}$
-is the metric tensor whose expression in terms of the global coordinates
+is the metric tensor whose expression in terms of some global coordinates
 $(x^\alpha) = (t, x, y, z)$ implementing the diffeomorphism to $\mathbb{R}^4$
-(i.e. the so-called \defin{Minkowskian coordinates}\index{Minkowskian!coordinates})
+(i.e. \defin{Minkowskian coordinates}\index{Minkowskian!coordinates})
 is
-\be
+\be \label{e:glo:Mink_metric}
     g_{\mu\nu} \D x^\mu \D x^\nu = - \D t^2 + \D x^2 + \D y^2 + \D z^2 .
 \ee
-Since we have to deal with the ``far'' region, it is natural to introduce
+
+\subsection{Finite-range coordinates on Minkowski spacetime}
+
+Since we would like to deal with the ``far'' region, it is natural to introduce
 $r := \sqrt{x^2+y^2+z^2}$ and the associated spherical coordinates
-$(x^\alpha) = (t,r,\th,\ph)$, which are related to the Minkowskian coordinates
-by
+$(x^\alpha) = (t,r,\th,\ph)$, which are related to the Minkowskian ones by
 \be
     \left\{ \begin{array}{l}
     x = r\sin\th\cos\ph \\
@@ -51,10 +53,10 @@ by
     \end{array} \right.
 \ee
 The coordinates $(t, r,\th,\ph)$ span
-$\mathbb{R}\times(0,+\infty)\times (0,\pi) \times (0,2\pi)$ and do not cover
-the whole manifold $\M$ as a regular chart (cf. Sec.~\ref{s:bas:def_manif} of Appendix~\ref{s:bas}), but $\M\setminus \Pi$, where $\Pi$ is the closed half hyperplane defined
+$\mathbb{R}\times(0,+\infty)\times (0,\pi) \times (0,2\pi)$; they do not cover
+the whole manifold $\M$ as a regular chart (cf. Sec.~\ref{s:bas:def_manif} of Appendix~\ref{s:bas}), but only $\M\setminus \Pi$, where $\Pi$ is the closed half hyperplane defined
 by $y=0$ and $x\geq 0$. Once expressed in terms of the
-spherical coordinates, the Minkowski metric takes the form
+spherical coordinates, the Minkowski metric (\ref{e:glo:Mink_metric}) takes the form
 \be
     g_{\mu\nu} \D x^\mu \D x^\nu = - \D t^2 + \D r^2
         + r^2 \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
@@ -83,12 +85,12 @@ time defined by (cf. Fig.~\ref{f:glo:glo_null_coord})
     \end{array} \right.
 \ee
 The metric tensor takes then the shape
-\be
+\be \label{e:glo:Mink_metric_uv}
     g_{\mu\nu} \D x^\mu \D x^\nu = - \D u \, \D v
         + \frac{1}{4} (v-u)^2 \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
 \ee
 The coordinates $(u,v)$ span the half part of $\mathbb{R}^2$ defined by
-$u<v$. In order to have coordinates in a finite range, let us consider
+$u<v$. In order to have coordinates within a finite range, let us consider
 their arctangents (cf. Fig.~\ref{f:glo:glo_atan}):
 \be \label{e:glo:UV_uv}
     \left\{ \begin{array}{l}
@@ -101,9 +103,9 @@ their arctangents (cf. Fig.~\ref{f:glo:glo_atan}):
     v = \tan V .
     \end{array} \right.
 \ee
-Then $(U,V)$ span the half part of $(-\pi/2, \pi/2)\times (-\pi/2, \pi/2)$
+Then the coordinates $(U,V)$ span the half part of $(-\pi/2, \pi/2)\times (-\pi/2, \pi/2)$
 defined by $U < V$
-(since $\mathrm{atan}$ is a monotonically increasing function, cf. Fig.~\ref{f:glo:glo_atan}):
+(since $\arctan$ is a monotonically increasing function, cf. Fig.~\ref{f:glo:glo_atan}):
 \be \label{e:glo:span_UV}
     -\frac{\pi}{2} < U < \frac{\pi}{2}, \quad
     -\frac{\pi}{2} < V < \frac{\pi}{2}, \quad\mbox{and}\quad U < V.
@@ -115,9 +117,16 @@ defined by $U < V$
 The arctangent function mapping $\mathbb{R}$ to $(-\pi/2, \pi/2)$.}
 \end{figure}
 
-In terms of the coordinates $(x^\alpha)=(U,V,\th,\ph)$, the Minkowski
-metric becomes\footnote{Cf. Sec.~\ref{s:sam:worksheets} for
-the computation.}:
+Since
+\[
+    \D u = \frac{\D U}{\cos^2 U}, \quad \D v = \frac{\D V}{\cos^2 V}
+    \quad\mbox{and}\quad
+    \tan V - \tan U = \frac{\sin(V-U)}{\cos U \cos V},
+\]
+the Minkowski metric (\ref{e:glo:Mink_metric_uv})
+is expressed in terms of the coordinates $(x^\alpha)=(U,V,\th,\ph)$
+as\footnote{See also Sec.~\ref{s:sam:worksheets} for the computation
+with SageManifolds.}
 \be \label{e:glo:g_UV}
     g_{\mu\nu} \D x^\mu \D x^\nu = \frac{1}{4\cos^2 U \cos^2 V}
     \left[ - 4 \D U \, \D V + \sin^2(V-U) \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right)
@@ -126,12 +135,13 @@ the computation.}:
 
 \subsection{Conformal metric}
 
-In the right-hand side of (\ref{e:glo:g_UV}) there appears clearly the metric
-$\w{\tilde{g}}$ defined by
+In the right-hand side of (\ref{e:glo:g_UV}),
+the terms in square brackets defines a metric
+$\w{\tilde{g}}$ such that
 \be \label{e:glo:tilde_g_Omega}
     \encadre{ \w{\tilde{g}} = \Omega^2 \w{g} } ,
 \ee
-where $\Omega$ is the scalar field $\M \rightarrow \mathbb{R}$ defined by
+where $\Omega$ is the scalar field $\M \rightarrow \mathbb{R}$ obeying
 \begin{subequations}
 \begin{align}
     \Omega & =  2 \cos U \cos V \label{e:glo:Omega_UV} \\
@@ -157,6 +167,7 @@ that the metrics $\w{g}$ and $\w{\tilde{g}}$ are
 \defin{conformally related}\index{conformally related metrics},
 or that $\w{\tilde{g}}$ arises from $\w{g}$ via a
 \defin{conformal transformation}\index{conformal!transformation}.
+The scalar field $\Omega$ is called the \defin{conformal factor}\index{conformal!factor}.
 
 A key property of a conformal transformation is to preserve the orthogonality
 relations, since (\ref{e:glo:tilde_g_Omega}) clearly
@@ -165,7 +176,7 @@ implies, at any point $p\in\M$,
     \forall (\w{u},\w{v})\in T_p\M\times T_p\M,\quad
     \w{\tilde{g}}(\w{u},\w{v}) = 0 \iff \w{g}(\w{u},\w{v}) = 0 .
 \]
-In particular, a null vector for $\w{g}$ remains a null vector for $\w{\tilde{g}}$:
+In particular, null vectors for $\w{\tilde{g}}$ coincide with null vectors for $\w{g}$:
 \[
     \forall \wl \in T_p\M,\quad
     \w{\tilde{g}}(\wl,\wl) = 0 \iff \w{g}(\wl,\wl) = 0 .
@@ -189,7 +200,7 @@ iff $\Li$ is timelike (resp. null, spacelike) for $\w{g}$.
 What about geodesics? Let us first recall that a null curve is not necessarily
 a null geodesic (cf. Remark~\ref{r:def:null_curves} on page~\pageref{r:def:null_curves}),
 so that one cannot deduce from the above results that conformal transformations
-preserve null geodesics. Actually, this turns out to be true:
+preserve null geodesics. However, this turns out to be true:
 \begin{quote}
 A smooth curve $\Li$ in $\M$ is a null geodesic for $\w{\tilde{g}}$ iff
 $\Li$ is a null geodesic for $\w{g}$.
@@ -213,7 +224,7 @@ similarity with (\ref{e:glo:advanced_retarded}) up to some $1/2$ factors.}
     \iff
     \left\{ \begin{array}{l}
     U = \frac{1}{2} (\tau - \chi) \\[1ex]
-    V = \frac{1}{2} (\tau + \chi)
+    V = \frac{1}{2} (\tau + \chi) .
     \end{array} \right.
 \ee
 Given (\ref{e:glo:span_UV}), the range of these new coordinates is
@@ -260,19 +271,21 @@ coordinates $(\tau,\chi,\th,\ph)$ is easily deduced from
 \subsection{Conformal completion}
 
 The expression of the conformal metric in terms of the coordinates
-$(x^\alpha) = (\tau,\chi,\th,\ph)$ is deduced from that in terms of
+$(x^\alpha) = (\tau,\chi,\th,\ph)$ is easily deduced from that in terms of
 $(U,V,\th,\ph)$ as given by (\ref{e:glo:tg_UV}):
 \be \label{e:glo:tg_Einstein}
     \tilde{g}_{\mu\nu} \D x^\mu \D x^\nu =  - \D\tau^2
         + \D \chi^2
         + \sin^2\chi \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
 \ee
-On a $\tau = \mathrm{const}$ hypersurface, i.e. setting $\D\tau=0$,
-we recognize the metric of the hypersphere
-$\mathbb{S}^3$ in standard hyperspherical coordinates $(\chi,\th,\ph)$.
-Moreover, we notice that this metric is perfectly regular even if we relax
-the condition on $\tau$ in (\ref{e:glo:range_tau_chi}): $\tau$ can span the
-entire $\mathbb{R}$. We may consider then the manifold
+Restricting to a $\tau = \mathrm{const}$ hypersurface, i.e. setting $\D\tau=0$,
+we recognize the standard metric of the hypersphere
+$\mathbb{S}^3$ in the hyperspherical coordinates $(\chi,\th,\ph)$.
+Moreover, we notice that the full metric (\ref{e:glo:tg_Einstein})
+is perfectly regular even if we relax
+the condition on $\tau$ in (\ref{e:glo:range_tau_chi}), i.e. if we
+let $\tau$ span the
+entire $\mathbb{R}$. We may then consider the manifold
 \be
     \mathscr{E} = \mathbb{R}\times \mathbb{S}^3
 \ee
@@ -282,7 +295,7 @@ The Lorentzian manifold
 $(\mathscr{E},\w{\tilde{g}})$ is nothing but the
 \defin{Einstein static universe}\index{Einstein!static universe}\index{static!universe (Einstein)}, also called the \defin{Einstein cylinder}\index{Einstein!cylinder}\index{cylinder!Einstein --},
 a static solution of the Einstein equation (\ref{e:bas:Einstein_eq})
-with $\Lambda > 0$ and some pressureless matter of constant density
+with $\Lambda > 0$ and some pressureless matter of uniform density
 $\rho = \Lambda/(4\pi)$.
 We have thus a conformal isometry of Minkowski spacetime $(\M,\w{g})$ to
 an open subset of the Einstein static universe $(\mathscr{E},\w{\tilde{g}})$,
@@ -358,7 +371,7 @@ null geodesics $v=\mathrm{const}$ for 17 values of $v$ uniformly spanning $[-8,8
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{General definition of a black hole}
+\section{General definition of a black hole} \label{s:glo:def_BH}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
