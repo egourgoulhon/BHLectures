@@ -237,7 +237,7 @@ it takes the shape of a half-diamond: see Fig.~\ref{f:glo:glo_conf_diag_Mink}.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{glo_conf_diag_Mink.pdf}}
-\caption[]{\label{f:glo:glo_conf_diag_Mink} \footnotesize
+\caption[]{\label{f:glo:conf_diag_Mink} \footnotesize
 Conformal diagram of Minkowski spacetime. Constant-$r$ curves are drawn in
 red, while constant-$t$ ones are drawn in grey.}
 \end{figure}
@@ -263,7 +263,7 @@ The expression of the conformal factor in the
 coordinates $(\tau,\chi,\th,\ph)$ is easily deduced from
 (\ref{e:glo:Omega_UV}) and
 (\ref{e:glo:tau_chi_U_V}):
-\be
+\be \label{e:glo:Omega_tau_chi}
     \Omega = \cos\tau + \cos\chi .
 \ee
 
@@ -301,8 +301,19 @@ We have thus a conformal isometry of Minkowski spacetime $(\M,\w{g})$ to
 an open subset of the Einstein static universe $(\mathscr{E},\w{\tilde{g}})$,
 that we shall denote by the same symbol $\M$.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{glo_Einstcyl_Mink.pdf}}
+\caption[]{\label{f:glo:Einstcyl_Mink}\footnotesize
+Two views of the Einstein cylinder $\mathscr{E}$, with the conformal embedding of
+Minkowski spacetime in it.
+The red curves are the same constant-$r$ curves
+as in Fig.~\ref{f:glo:conf_diag_Mink}, while the black curves are
+the same constant-$t$ curves as those drawn in grey in Fig.~\ref{f:glo:conf_diag_Mink}.}
+\end{figure}
+
+
 The closure $\overline{\M}$ of $\M$ in $\mathscr{E}$ is (cf.
-Figs.~\ref{f:glo:glo_conf_diag_Mink} and ??)
+Figs.~\ref{f:glo:conf_diag_Mink} and \ref{f:glo:Einstcyl_Mink})
 \be
     \overline{\M} = \M \cup \scri^+ \cup \scri^- \cup \left\{ i^0 \right\} \cup
             \left\{ i^+ \right\} \cup \left\{ i^- \right\} ,
@@ -348,7 +359,7 @@ and its boundary is $\scri$:
 \ee
 \begin{remark}
 Because closure $\overline{\M}$ is self-intersecting at the point $i^0$
-(cf. Fig.~??), it is not a manifold with boundary: no open neighbourhood of
+(cf. Fig.~\ref{f:glo:Einstcyl_Mink}), it is not a manifold with boundary: no open neighbourhood of
 $i^0$ is homeomorphic to a neighbourhood of $[0,+\infty)\times \mathbb{R}^2$.
 At the points $i^+$ and $i^-$, $\overline{\M}$ can be considered as a
 topological manifold with boundary, but not as a \emph{smooth} manifold with boundary.
@@ -365,9 +376,80 @@ The dashed green lines are null geodesics $u=\mathrm{const}$ for
 null geodesics $v=\mathrm{const}$ for 17 values of $v$ uniformly spanning $[-8,8]$.}
 \end{figure}
 
+The hypersurface $\scri^+$ is the location of $\tilde{\M}$ where all radial null geodesics
+terminate, while $\scri^-$ is the location of $\tilde{\M}$ where all these geodesics orginate (cf. Fig.~\ref{f:glo:conf_Mink_null}). For this
+reason $\scri^+$ is called the
+\defin{future null infinity}\index{future!null infinity}\index{null!infinity}
+of $(\M,\w{g})$
+and $\scri^-$ the \defin{past null infinity}\index{past!null infinity}
+of $(\M,\w{g})$.
+On the other side, any timelike geodesic of $(\M,\w{g})$ orginates at $i\-$ and ends at
+$i^+$ (cf. Fig.~\ref{f:glo:conf_diag_Mink}), while any spacelike geodesic
+of $(\M,\w{g})$ originates at $i^0$ and terminates there
+(after having completed a closed path on $\mathbb{S}^3$ (cf. Fig.~\ref{f:glo:Einstcyl_Mink}).
+The point $i^+$ is then called the
+\defin{future timelike infinity}\index{future!timelike infinity}\index{timelike!infinity}
+of $(\M,\w{g})$,
+$i\-$ the \defin{past timelike infinity}\index{past!timelike infinity}
+of $(\M,\w{g})$
+and $i^0$ the \defin{spacelike infinity}\index{spacelike!infinity} of $(\M,\w{g})$.
+
+As it is clear on the conformal diagram of Fig.~\ref{f:glo:conf_diag_Mink},
+both $\scri^+$ and $\scri^-$ are null hypersurfaces of $(\tilde{\M},\w{\tilde{g}})$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.45\textwidth]{glo_Omega_Mink.png}}
+\caption[]{\label{f:glo:Omega_Mink}\footnotesize
+Conformal factor $\Omega$ as a function of $(\tau,\chi)$ [cf. Eq.~(\ref{e:glo:Omega_tau_chi})].}
+\end{figure}
+
+
+It is precisely because $\Omega$ vanishes (cf. Fig.~\ref{f:glo:Omega_Mink}) at the boundary
+\be
+    \overline{M} - \M = \scri^+ \cup \scri^- \cup \left\{ i^0 \right\} \cup
+            \left\{ i^+ \right\} \cup \left\{ i^- \right\}
+\ee
+that the conformal transformation (\ref{e:glo:tilde_g_Omega}) brings infinity
+of Minkowski space to a finite distance.
 
 
 \section{Asymptotic flatness}
+
+A spacetime $(\M,\w{g})$ admits a
+\defin{conformal completion}\index{conformal!completion}
+iff there exists a Lorentzian manifold with boundary
+$(\tilde{\M},\w{\tilde{g}})$ equipped with a smooth non-negative scalar field
+$\Omega: \tilde{\M} \rightarrow \mathbb{R}^+$
+such that
+\begin{enumerate}
+\item $\tilde{\M} = \M \cup \scri$, with $\scri := \partial \tilde{\M}$
+(the boundary of $\tilde{\M})$;
+\item on $\M$, $\w{\tilde{g}} = \Omega^2 \w{g}$;
+\item on $\scri$, $\Omega=0$;
+\item on $\scri$, $\dd \Omega \not= 0$;
+\end{enumerate}
+Condition~1 expresses that $\M$ has been endowed with some boundary,
+conditions~2 and 3 express that the boundary has been brought to a
+finite distance with respect to $\w{\tilde{g}}$. Finally, condition~4 ensures
+that $\scri$ is a regular hypersurface of $\tilde{\M}$.
+
+Furthermore, we shall say that $(\tilde{\M},\w{\tilde{g}})$ is a
+\defin{conformal completion at null infinity}\index{conformal!completion!at null infinity}
+of $(\M,\w{g})$
+iff $(\tilde{\M},\w{\tilde{g}})$  is a conformal completion such that
+\be
+    \scri = \scri^+ \cup \scri^-,
+\ee
+with $\scri^+$ (resp. $\scri^-$) being never intersected by any past-directed
+(resp. future-directed) causal
+curve originating in $\M$.
+
+Penrose \cite{Penro64,Penro68} has introduced the following definition:
+a spacetime $(\M,\w{g})$ is \defin{asymptotically simple} iff there exists
+a conformal completion $(\tilde{\M},\w{\tilde{g}})$
+such that every null geodesic in $\M$ has two endpoints in $\scri$.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
