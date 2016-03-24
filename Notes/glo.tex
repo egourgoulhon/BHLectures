@@ -413,7 +413,7 @@ that the conformal transformation (\ref{e:glo:tilde_g_Omega}) brings infinity
 of Minkowski space to a finite distance.
 
 
-\section{Asymptotic flatness}
+\section{Conformal completions and asymptotic flatness} \label{s:glo:conf_compl}
 
 A spacetime $(\M,\w{g})$ admits a
 \defin{conformal completion}\index{conformal!completion}
@@ -442,21 +442,131 @@ iff $(\tilde{\M},\w{\tilde{g}})$  is a conformal completion such that
 \ee
 with $\scri^+$ (resp. $\scri^-$) being never intersected by any past-directed
 (resp. future-directed) causal
-curve originating in $\M$.
+curve originating in $\M$. Let us recall that a
+\defin{causal curve}\index{causal!curve} is
+curve whose tangent vectors are nowhere spacelike.
 
-Penrose \cite{Penro64,Penro68} has introduced the following definition:
-a spacetime $(\M,\w{g})$ is \defin{asymptotically simple} iff there exists
+\begin{remark}
+One often speaks about \emph{conformal compactification}\index{conformal!compactification}
+instead of \emph{conformal completion}, but in general $\tilde{\M}$ is not a
+compact manifold. For instance, because we omitted the points $i^+$, $i^-$ and $i^0$,
+$\tilde{\M}$ is not compact even for Minkowski spacetime.
+\end{remark}
+
+Penrose \cite{Penro64,Penro68} has defined
+a spacetime $(\M,\w{g})$ to be \defin{asymptotically simple}\index{asymptotically!simple} iff there exists
 a conformal completion $(\tilde{\M},\w{\tilde{g}})$
+of $(\M,\w{g})$
 such that every null geodesic in $\M$ has two endpoints in $\scri$.
+
+The last condition, which is verified by Minkowski spacetime (cf. Fig.~\ref{f:glo:conf_Mink_null}), is rather restrictive. In particular, it excludes
+black hole spacetimes, since, almost by definition, the latter contain null
+geodesics that have no endpoint on $\scri^+$, having only a past endpoint
+on $\scri^-$, as far as $\scri$ is concerned. To cope with these spacetimes,
+Penrose \cite{Penro68} has introduced the following definition:
+a spacetime $(\M,\w{g})$ is
+\defin{weakly asymptotically simple}\index{weakly!asymptotically simple} iff
+there exists an open subset $\mathscr{U}$ of $\M$ and
+an asymptotically simple spacetime $(\M_0, \w{g}_0)$
+with an open neighbourhood $\mathscr{U}_0$ of $\scri_0 = \partial \tilde{\M}_0$
+in $\tilde{\M}_0$ such that $(\mathscr{U}_0\cap \M_0,\w{g}_0)$ is
+isometric to $(\mathscr{U},\w{g})$.
+
+\begin{remark}
+For a given weakly asymptotically simple spacetime, there may be different
+(non overlaping) regions $\mathscr{U}$ satisfying the above property.
+For instance we shall see in Chap.~\ref{s:ker}
+that there are an infinite series of them in the Kerr spacetime.
+\end{remark}
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{General definition of a black hole} \label{s:glo:def_BH}
+\section{Black hole}
+
+\subsection{General definition} \label{s:glo:def_BH}
+
+We are now in position to give the general definition of a black hole.
+We shall do it for spacetimes $(\M,\w{g})$ that admit a conformal completion
+at null infinity as defined in Sec.~\ref{s:glo:conf_compl}, i.e. that
+posseses a future null infinity $\scri^+$. The neighbourhood of $\scri^+$
+in $\tilde{\M}$ can then be considered as the asymptotically flat far region
+reached by outgoing null geodesics. If a null geodesic does not reach this
+region, it can be considered as being trapped somewhere else in spacetime: this
+place would constitute a black hole region.
+
+Before we proceed to the precise definition of a black hole, let us introduce
+some concepts regarding the causal structure of a given spacetime $(\M,\w{g})$.
+For any subset $S$ of $\M$, we define
+\begin{itemize}
+\item the \defin{chronological future of $S$}\index{chronological!future} as the set $I^+(S)$ of all
+points of $\M$ that can be reached from a point of $S$ by a future-directed
+timelike curve of nonzero extent;
+\item the \defin{causal future of $S$}\index{causal!future} as the set $J^+(S)$ of
+all points that either are in $S$ or can be reached from a point of $S$ by a future-directed
+causal curve;
+\item the \defin{chronological past of $S$}\index{chronological!past} as the set $I^-(S)$ of all
+points of $\M$ that can be reached from a point of $S$ by a past-directed
+timelike curve of nonzero extent;
+\item the \defin{causal past of $S$}\index{causal!past} as the set $J^-(S)$ of
+all points that either are in $S$ or can be reached from a point of $S$ by a past-directed
+causal curve.
+\end{itemize}
+\begin{remark}
+From the above definitions, one has always $S \subset J^+(S)$, but not
+necessarily $S \subset I^+(S)$. Actually, if the spacetime does not contain
+any closed timelike curve, one has even $S \cap I^+(S) = \varnothing$.
+\end{remark}
+
+The \defin{black hole region}\index{black!hole} of a
+spacetime $(\M,\w{g})$ with a conformal completion at null infinity is the
+complement within $\M$ of the causal past of the future null infinity:
+\be
+    \encadre{\mathscr{B} := \M \setminus (J^-(\scri^+)\cap\M) } .
+\ee
+The black hole region is thus the set of points of $\M$
+from which no future-directed causal curve in $\tilde{\M}$ reaches $\scri^+$.
+Of course, it may be that $\mathscr{B} = \varnothing$, in which case one
+says that the spacetime $(\M,\w{g})$ has no black hole.
+\begin{example}
+The Minkowski spacetime has no black hole, for all future-directed null geodesics
+terminate at $\scri^+$ (cf. Fig.~\ref{f:glo:conf_Mink_null}).
+More generally, any asymptotically simple spacetime has no black hole.
+\end{example}
+
+If $\mathscr{B}\not=\varnothing$, the boundary $\Hor$ of the black hole region
+is called the \defin{future event horizon}\index{future!event horizon}
+(or simply the \defin{event horizon}\index{event!horizon}
+when no ambiguity may arise):
+\be
+    \encadre{\Hor := \partial \mathscr{B}}.
+\ee
+Note that $\Hor$ is the part of the boundary of the causal past of
+$\scri^+$ that lies in $\M$:
+\be
+    \Hor = \M \cap \partial J^-(\scri^+)
+\ee
+
+\subsection{White holes}
+
+In a way symmetric to the black hole one, one defines
+the \defin{white hole region}\index{white!hole} of a
+spacetime $(\M,\w{g})$ with a conformal completion at null infinity as the
+complement within $\M$ of the causal future of the past null infinity:
+\be
+    \encadre{\mathscr{W} := \M \setminus (J^+(\scri^-)\cap \M) } .
+\ee
+The white hole region is thus the set of points of $\M$
+from which no past-directed causal curve in $\tilde{\M}$ reaches $\scri^-$.
+The boundary of white hole region is called the
+\defin{past event horizon}\index{past!event horizon}:
+\be
+    \encadre{\Hor := \partial \mathscr{B}} .
+\ee
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Stationary black holes}
 
-Hawking's strong rigity theorem
