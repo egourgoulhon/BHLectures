@@ -64,7 +64,7 @@ spherical coordinates, the Minkowski metric (\ref{e:glo:Mink_metric}) takes the 
 
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{glo_null_coord.pdf}}
-\caption[]{\label{f:glo:glo_null_coord} \footnotesize
+\caption[]{\label{f:glo:null_coord} \footnotesize
 Lines of constant null coordinates $u$ (dashed) and $v$
 (solid) in terms of the coordinates $(t,r)$.}
 \end{figure}
@@ -72,7 +72,7 @@ Lines of constant null coordinates $u$ (dashed) and $v$
 
 Let us introduce the null coordinate system $(u,v,\th,\ph)$ where $u$ and
 $v$ are respectively the retarted\index{retarted!time} and advanced\index{advanced!time}
-time defined by (cf. Fig.~\ref{f:glo:glo_null_coord})
+time defined by (cf. Fig.~\ref{f:glo:null_coord})
 \be \label{e:glo:advanced_retarded}
     \left\{ \begin{array}{l}
     u = t - r\\
@@ -91,7 +91,7 @@ The metric tensor takes then the shape
 \ee
 The coordinates $(u,v)$ span the half part of $\mathbb{R}^2$ defined by
 $u<v$. In order to have coordinates within a finite range, let us consider
-their arctangents (cf. Fig.~\ref{f:glo:glo_atan}):
+their arctangents (cf. Fig.~\ref{f:glo:atan}):
 \be \label{e:glo:UV_uv}
     \left\{ \begin{array}{l}
     U = \arctan u \\
@@ -105,7 +105,7 @@ their arctangents (cf. Fig.~\ref{f:glo:glo_atan}):
 \ee
 Then the coordinates $(U,V)$ span the half part of $(-\pi/2, \pi/2)\times (-\pi/2, \pi/2)$
 defined by $U < V$
-(since $\arctan$ is a monotonically increasing function, cf. Fig.~\ref{f:glo:glo_atan}):
+(since $\arctan$ is a monotonically increasing function, cf. Fig.~\ref{f:glo:atan}):
 \be \label{e:glo:span_UV}
     -\frac{\pi}{2} < U < \frac{\pi}{2}, \quad
     -\frac{\pi}{2} < V < \frac{\pi}{2}, \quad\mbox{and}\quad U < V.
@@ -113,7 +113,7 @@ defined by $U < V$
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{glo_atan.pdf}}
-\caption[]{\label{f:glo:glo_atan} \footnotesize
+\caption[]{\label{f:glo:atan} \footnotesize
 The arctangent function mapping $\mathbb{R}$ to $(-\pi/2, \pi/2)$.}
 \end{figure}
 
@@ -233,7 +233,7 @@ Given (\ref{e:glo:span_UV}), the range of these new coordinates is
     \chi - \pi < \tau < \pi - \chi .
 \ee
 In other words, if we draw the Minkowski spacetime in the $(\tau,\chi)$ plane,
-it takes the shape of a half-diamond: see Fig.~\ref{f:glo:glo_conf_diag_Mink}.
+it takes the shape of a half-diamond: see Fig.~\ref{f:glo:conf_diag_Mink}.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{glo_conf_diag_Mink.pdf}}
@@ -257,7 +257,7 @@ $(\tau,\chi)$:
     \end{array} \right.
 \ee
 We may use these relations to draw the lines $t=\mathrm{const}$ and
-$r=\mathrm{const}$ in Fig.~\ref{f:glo:glo_conf_diag_Mink}.
+$r=\mathrm{const}$ in Fig.~\ref{f:glo:conf_diag_Mink}.
 
 The expression of the conformal factor in the
 coordinates $(\tau,\chi,\th,\ph)$ is easily deduced from
@@ -297,9 +297,15 @@ $(\mathscr{E},\w{\tilde{g}})$ is nothing but the
 a static solution of the Einstein equation (\ref{e:bas:Einstein_eq})
 with $\Lambda > 0$ and some pressureless matter of uniform density
 $\rho = \Lambda/(4\pi)$.
-We have thus a conformal isometry of Minkowski spacetime $(\M,\w{g})$ to
-an open subset of the Einstein static universe $(\mathscr{E},\w{\tilde{g}})$,
-that we shall denote by the same symbol $\M$.
+We have thus an embedding\footnote{Cf. Sec.~\ref{s:bas:embed} of Appendix~A} of Minkowski spacetime into the Einstein cylinder:
+\be \label{e:glo:embed_Mink_Einst}
+     \Phi:\ \M \longrightarrow \mathscr{E}
+\ee
+and this embedding is a conformal isometry from
+$(\M,\w{g})\rightarrow (\Phi(\M),\w{\tilde{g}})$.
+In the following, we shall identify $\Phi(\M)$ and $\M$, i.e. use the same
+symbol $\M$ to denote the subset of $\mathscr{E}$ that is the image of $\M$ via the
+embedding (\ref{e:glo:embed_Mink_Einst}).
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{glo_Einstcyl_Mink.pdf}}
@@ -311,8 +317,8 @@ as in Fig.~\ref{f:glo:conf_diag_Mink}, while the black curves are
 the same constant-$t$ curves as those drawn in grey in Fig.~\ref{f:glo:conf_diag_Mink}.}
 \end{figure}
 
-
-The closure $\overline{\M}$ of $\M$ in $\mathscr{E}$ is (cf.
+Since $\mathscr{E}$ and $\M$ have the same dimension, $\M$ is an open subset of $\mathscr{E}$.
+Its closure $\overline{\M}$ in $\mathscr{E}$ is (cf.
 Figs.~\ref{f:glo:conf_diag_Mink} and \ref{f:glo:Einstcyl_Mink})
 \be
     \overline{\M} = \M \cup \scri^+ \cup \scri^- \cup \left\{ i^0 \right\} \cup
@@ -335,10 +341,10 @@ On $\mathbb{S}^3$, the hyperspherical coordinates $(\chi,\th,\ph)$
 are singular at $\chi=0$ and $\chi=\pi$, so that setting $\chi=0$ (or $\chi=\pi$)
 defines a unique point of $\mathbb{S}^3$, whatever the value of $(\th,\ph)$.
 Note also that the vertical left boundary of the daimond drawn in
-Fig.~\ref{f:glo:glo_conf_diag_Mink}, i.e. the segment defined by
+Fig.~\ref{f:glo:conf_diag_Mink}, i.e. the segment defined by
 $\tau\in(-\pi,\pi)$ and $\chi=0$, is \emph{not} a part of the boundary
 of $\M$ but merely reflect the coordinate singularity at $\chi=0$, in the same
-way that the left vertical boundary of Fig.~\ref{f:glo:glo_null_coord}
+way that the left vertical boundary of Fig.~\ref{f:glo:null_coord}
 is not a boundary of Minkowski spacetime but is
 due to the coordinate singularity at $r=0$. Note by the way that
 $\chi=0$ implies $r=0$ via (\ref{e:glo:tau_chi_t_r}).
@@ -406,16 +412,21 @@ Conformal factor $\Omega$ as a function of $(\tau,\chi)$ [cf. Eq.~(\ref{e:glo:Om
 
 It is precisely because $\Omega$ vanishes (cf. Fig.~\ref{f:glo:Omega_Mink}) at the boundary
 \be
-    \overline{M} - \M = \scri^+ \cup \scri^- \cup \left\{ i^0 \right\} \cup
+    \overline{\M} \setminus \M = \scri^+ \cup \scri^- \cup \left\{ i^0 \right\} \cup
             \left\{ i^+ \right\} \cup \left\{ i^- \right\}
 \ee
 that the conformal transformation (\ref{e:glo:tilde_g_Omega}) brings infinity
 of Minkowski space to a finite distance.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Conformal completions and asymptotic flatness} \label{s:glo:conf_compl}
 
-A spacetime $(\M,\w{g})$ admits a
+Having investigated the asymptotic structure of Minkowski spacetime
+via a conformal completion, let us use the latter to define spacetimes
+that ``look like'' Minkowski spacetime asymptotically: we
+shall say that a spacetime $(\M,\w{g})$ admits a
 \defin{conformal completion}\index{conformal!completion}
 iff there exists a Lorentzian manifold with boundary
 $(\tilde{\M},\w{\tilde{g}})$ equipped with a smooth non-negative scalar field
@@ -428,12 +439,25 @@ such that
 \item on $\scri$, $\Omega=0$;
 \item on $\scri$, $\dd \Omega \not= 0$;
 \end{enumerate}
-Condition~1 expresses that $\M$ has been endowed with some boundary,
-conditions~2 and 3 express that the boundary has been brought to a
+Condition~1 expresses that $\M$ has been endowed with some boundary.
+A rigorous formulation of it would be via an embedding $\Phi:\M \rightarrow \tilde{\M}$,
+as in Eq.~(\ref{e:glo:embed_Mink_Einst}), so that
+$\tilde{\M} = \Phi(\M) \cup \scri$. However, as above, we identify $\Phi(\M)$
+with $\M$ and therefore simply write $\tilde{\M} = \M \cup \scri$.
+Conditions~2 and 3 express that the boundary of $\M$ has been brought to a
 finite distance with respect to $\w{\tilde{g}}$. Finally, condition~4 ensures
 that $\scri$ is a regular hypersurface of $\tilde{\M}$.
+It is of course fullfilled by Minkowski spacetime, as we can check graphically
+on Fig.~\ref{f:glo:Omega_Mink}: the graph of $\Omega$ has no horizontal slope
+at $\scri$.
 
-Furthermore, we shall say that $(\tilde{\M},\w{\tilde{g}})$ is a
+\begin{remark}
+When we say that $(\tilde{\M},\w{\tilde{g}})$ is a Lorentzian manifold with
+boundary, this implies that $\w{\tilde{g}}$ is smooth everywhere on $\tilde{\M}$,
+including at the boundary $\scri$.
+\end{remark}
+
+Furthermore, ones says that $(\tilde{\M},\w{\tilde{g}})$ is a
 \defin{conformal completion at null infinity}\index{conformal!completion!at null infinity}
 of $(\M,\w{g})$
 iff $(\tilde{\M},\w{\tilde{g}})$  is a conformal completion such that
@@ -483,18 +507,9 @@ that there are an infinite series of them in the Kerr spacetime.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Black hole}
+\section{Black holes}
 
-\subsection{General definition} \label{s:glo:def_BH}
-
-We are now in position to give the general definition of a black hole.
-We shall do it for spacetimes $(\M,\w{g})$ that admit a conformal completion
-at null infinity as defined in Sec.~\ref{s:glo:conf_compl}, i.e. that
-posseses a future null infinity $\scri^+$. The neighbourhood of $\scri^+$
-in $\tilde{\M}$ can then be considered as the asymptotically flat far region
-reached by outgoing null geodesics. If a null geodesic does not reach this
-region, it can be considered as being trapped somewhere else in spacetime: this
-place would constitute a black hole region.
+\subsection{Causal structure preliminaries}
 
 Before we proceed to the precise definition of a black hole, let us introduce
 some concepts regarding the causal structure of a given spacetime $(\M,\w{g})$.
@@ -513,27 +528,64 @@ timelike curve of nonzero extent;
 all points that either are in $S$ or can be reached from a point of $S$ by a past-directed
 causal curve.
 \end{itemize}
+From the above definitions, one has always $S \subset J^\pm(S)$ and
+$I^\pm(S) \subset J^\pm(S)$.
+
 \begin{remark}
-From the above definitions, one has always $S \subset J^+(S)$, but not
-necessarily $S \subset I^+(S)$. Actually, if the spacetime does not contain
-any closed timelike curve, one has even $S \cap I^+(S) = \varnothing$.
+One has not necessarily $S \subset I^\pm(S)$. For instance,
+if the spacetime does not contain
+any closed timelike curve, one has  $S \cap I^\pm(S) = \varnothing$ for
+$S = \{p\}$, $p$ being any point of $\M$.
 \end{remark}
 
-The \defin{black hole region}\index{black!hole} of a
-spacetime $(\M,\w{g})$ with a conformal completion at null infinity is the
-complement within $\M$ of the causal past of the future null infinity:
+Here are some basic topological properties of the future and past sets
+defined above (see e.g. \S~6.2 of \cite{HawkiE73} or Chap.~14 of
+\cite{ONeil83} for a demonstration):
+$I^\pm(S)$ is always an open subset of $\M$ and its closure contains
+$J^\pm(S)$: $J^\pm(S) \subset \overline{I^\pm(S)}$, with equality iff
+$J^\pm(S)$ is closed. The interior of $J^\pm(S)$ is $I^\pm(S)$
+and both sets have the same boundary:
+\be
+    \partial J^\pm(S) = \partial I^\pm(S).
+\ee
+
+\subsection{General definition} \label{s:glo:def_BH}
+
+We are now in position to give the general definition of a black hole.
+We shall do it for spacetimes $(\M,\w{g})$ that admit a conformal completion
+at null infinity as defined in Sec.~\ref{s:glo:conf_compl}, i.e. that
+posseses a future null infinity $\scri^+$. The neighbourhood of $\scri^+$
+in $\tilde{\M}$ can then be considered as the asymptotically flat far region
+reached by outgoing null geodesics. If a null geodesic does not reach this
+region, it can be considered as being trapped somewhere else in spacetime: this
+place would constitute a black hole region.
+
+
+The \defin{black hole region}\index{black!hole}, or simply \defin{black hole}, of a
+spacetime $(\M,\w{g})$ with a conformal completion at null infinity is
+the set of points of $\M$ that are not in the causal past of the future null infinity:
 \be
     \encadre{\mathscr{B} := \M \setminus (J^-(\scri^+)\cap\M) } .
 \ee
 The black hole region is thus the set of points of $\M$
 from which no future-directed causal curve in $\tilde{\M}$ reaches $\scri^+$.
 Of course, it may be that $\mathscr{B} = \varnothing$, in which case one
-says that the spacetime $(\M,\w{g})$ has no black hole.
+says that the spacetime $(\M,\w{g})$ contains no black hole.
 \begin{example}
 The Minkowski spacetime has no black hole, for all future-directed null geodesics
 terminate at $\scri^+$ (cf. Fig.~\ref{f:glo:conf_Mink_null}).
 More generally, any asymptotically simple spacetime has no black hole.
 \end{example}
+
+\begin{remark}
+Some authors (in particular Hawking and Ellis \cite{HawkiE73}) define a
+\emph{black hole} as a connected component of
+$S(\tau) \cap \mathscr{B}$, where $S(\tau)$ is a spacelike
+hypersurface that intersects $\scri^+$ and
+is a slice of the future development of a partial Cauchy hypersurface $S(0)$.
+In such a definition, a black hole is then a $(n-1)$-dimensional object,
+while the black hole $\mathscr{B}$ defined above is $n$-dimensional object.
+\end{remark}
 
 If $\mathscr{B}\not=\varnothing$, the boundary $\Hor$ of the black hole region
 is called the \defin{future event horizon}\index{future!event horizon}
@@ -548,8 +600,6 @@ $\scri^+$ that lies in $\M$:
     \Hor = \M \cap \partial J^-(\scri^+)
 \ee
 
-\subsection{White holes}
-
 In a way symmetric to the black hole one, one defines
 the \defin{white hole region}\index{white!hole} of a
 spacetime $(\M,\w{g})$ with a conformal completion at null infinity as the
@@ -562,11 +612,145 @@ from which no past-directed causal curve in $\tilde{\M}$ reaches $\scri^-$.
 The boundary of white hole region is called the
 \defin{past event horizon}\index{past!event horizon}:
 \be
-    \encadre{\Hor := \partial \mathscr{B}} .
+    \encadre{\Hor^- := \partial \mathscr{B}} .
 \ee
 
+The \defin{domain of outer communications}\index{domain!of outer communications}
+is the part $\langle\langle \M\rangle\rangle$ of $\M$ that lies neither
+in the black hole region nor in the white hole one:
+\be
+    \langle\langle \M\rangle\rangle := \M\setminus (\Hor\cup \mathscr{W} )
+            = \left( J^-(\scri^+) \cap J^+(\scri^-) \right) \cap \M .
+\ee
+The last equality, which is a direct consequence of the definitions of
+$\Hor$ and $\mathscr{W}$, shows that the domain of outer communications
+is the set of points from which it is possible to send a signal to and to
+receive a signal from arbitrary far regions.
+It also follows immediately from the definitions of the two event horizons
+that the boundary of the domain of outer communications is their union:
+\be
+    \partial \langle\langle \M\rangle\rangle  = \Hor \cup \Hor^- .
+\ee
+
+\begin{hist}
+The term \emph{event horizon} has been introduced by W.~Rindler in 1956 \cite{Rindl56}
+in the context of a single observer moving in some cosmological spacetime.
+The word \emph{black hole} has been coined by J.A.~Wheeler in the end of 1967,
+from a suggestion shouted from the audience during one of his conference.
+It superseded the previous names
+\emph{frozen star}, \emph{collapsed star}, or \emph{astre occlus}
+(the latter appearing along \emph{black holes} in the title of
+the proceedings of the famous Les Houches summer school of 1972 \cite{DeWit73}).
+The expression \emph{domain of outer communications} is due to B.~Carter
+(1971) \cite{Carte71}.
+\end{hist}
+
+
+\subsection{Properties of the future event horizon}
+
+Having defined the black hole in full generality, let us discuss the
+main properties of its boundary, the event horizon.
+
+\subsubsection{Property 1:}
+\begin{quote}
+$\Hor$ is an \defin{achronal set}\index{achronal set}, i.e. no pair of points of $\Hor$ can be connected
+by a timelike curve of $\M$.
+\end{quote}
+
+Note that in the definition of an achronal set, it is not demanded that the timelike
+curve lies entirely in the set (the set can even be discrete, so that no curve
+lies in it). Accordingly,
+an equivalent statement of Property~1 is: no timelike curve of $\M$
+encounters $\Hor$ at more than one point.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{glo_achronal.pdf}}
+\caption[]{\label{f:glo:achronal} \footnotesize
+Proving that $\Hor$ is achronal.}
+\end{figure}
+
+\begin{proof}
+Let us assume the negation of Property~1, i.e. that there exists two points
+in $\Hor$ which are connected by a timelike curve $\Li$. Let us call $p$ and
+$q$ these two points, with $q$ in the future of $p$ (cf. Fig.~\ref{f:glo:achronal}).
+The key thing is that one can ``move the ends'' of any timelike curve
+``a little bit'' and still get a timelike curve. In other words, there exists
+a neighbourhood $U$ of $p$ and a neighbourhood $V$ of $q$ such that
+any point $p'\in U$ can be connected to any point $q'\in V$ by a timelike curve.
+This is more or less evident on a spacetime diagram and a formal proof
+can be found as Lemma~3
+in Chap.~14 of O'Neill's textbook \cite{ONeil83}.
+Let us choose $p'\in U\cap\mathscr{B}$ and $q'\in V\cap J^-(\scri^+)$. Such a choice is
+always possible since $p$ and $q$ lie on the boundary between $\mathscr{B}$
+and $J^-(\scri^+)$ (cf. Fig.~\ref{f:glo:achronal}).
+Since $q'\in J^-(\scri^+)$, the timelike curve linking $p'$ and $q'$ can then be extended in the future into a causal curve $\Li'$ reaching $\scri^+$. This implies $p'\in J^-(\scri^+)$,
+which contradicts $p'\in\mathscr{B}$.
+\end{proof}
+
+
+\subsubsection{Property 2:}
+\begin{quote}
+$\Hor$ is a topological manifold of dimension $n-1$, $n$ being the spacetime
+dimension.
+\end{quote}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.45\textwidth]{glo_hor_manifold.pdf}}
+\caption[]{\label{f:glo:hor_manifold} \footnotesize
+Proving that $\Hor$ is a topological manifold of dimension $n-1$.}
+\end{figure}
+
+
+\begin{proof}
+Let $p\in\Hor$ and $U$ some open neighbourhood of $p$ where one can define
+a normal coordinate system $(x^\alpha)$. We have then $\wpar_0$ timelike,
+$\wpar_i$ spacelike for $i\in\{1,\ldots,n-1\}$ and $\w{g}(\wpar_0, \wpar_i) = 0$.
+Let us consider a curve in $U$ defined by $x^1 = a_1$,..., $x^{n-1} = a_{n-1}$,
+where $a_1$, ..., $a_{n-1}$ are $n-1$ constants.
+This curve is timelike, since a tangent vector is $\wpar_0$
+(cf. Fig.~\ref{f:glo:hor_manifold}).
+It therefore intersects $\Hor$ at a single point $q$, for $\Hor$ is achronal (Property~1).
+Let us then give the coordinates $(y^i) = (a_1,\ldots,a_{n-1})$ to $q$.
+By varying $(a_1,\ldots,a_{n-1})$, we get a homeomorphism from $U\cap\Hor$
+to an open subset of $\mathbb{R}^{n-1}$.
+\end{proof}
+
+
+\subsubsection{Property 3 (Penrose 1968):}
+\begin{quote}
+$\Hor$ is generated by a familly of null geodesics that (i) may leave $\Hor$
+in the past, but never in the future, and (ii) have no endpoint in the future.
+\end{quote}
+
+\begin{proof}
+Let $p\in\Hor$
+\end{proof}
+
+\subsubsection{Property 4:}
+\begin{quote}
+Wherever it is smooth, $\Hor$ is a null hypersurface.
+\end{quote}
+\begin{proof}
+Let us assume that $\Hor$ is smooth in some open subset $U$.
+By Property~2, $\Hor$ is then a smooth hypersurface in $U$.
+According to Property~3, there are null geodesic lying in $\Hor$ through
+any point of $\Hor\cap U$.
+This implies null tangent vectors to $\Hor$, so that $\Hor$ must be either
+a null hypersurface or a timelike one. But $\Hor$ is achronal by Property~1;
+it therefore cannot be timelike. Hence $\Hor$ is a null hypersurface in $U$.
+\end{proof}
+
+\begin{remark}
+Properties 1 to 4 are not specific to black hole horizons: they are actually
+valid for any boundary of the causal past of a given set $S\subset\M$.
+\end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Stationary black holes}
 
+Hawking's strong rigidity theorem
+
+% Analyticity
+
+% Proof: see Theorem~8.1 p.~470 of Choquet-Bruhat's textbook \cite{Choqu09}.
