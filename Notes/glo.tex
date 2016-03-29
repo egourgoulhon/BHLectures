@@ -71,7 +71,7 @@ Lines of constant null coordinates $u$ (dashed) and $v$
 
 
 Let us introduce the null coordinate system $(u,v,\th,\ph)$ where $u$ and
-$v$ are respectively the retarted\index{retarted!time} and advanced\index{advanced!time}
+$v$ are respectively the retarded\index{retarded!time} and advanced\index{advanced!time}
 time defined by (cf. Fig.~\ref{f:glo:null_coord})
 \be \label{e:glo:advanced_retarded}
     \left\{ \begin{array}{l}
@@ -340,7 +340,7 @@ It is customary to pronounce $\scri$ as ``scri'', for \emph{script i}.
 On $\mathbb{S}^3$, the hyperspherical coordinates $(\chi,\th,\ph)$
 are singular at $\chi=0$ and $\chi=\pi$, so that setting $\chi=0$ (or $\chi=\pi$)
 defines a unique point of $\mathbb{S}^3$, whatever the value of $(\th,\ph)$.
-Note also that the vertical left boundary of the daimond drawn in
+Note also that the vertical left boundary of the diamond drawn in
 Fig.~\ref{f:glo:conf_diag_Mink}, i.e. the segment defined by
 $\tau\in(-\pi,\pi)$ and $\chi=0$, is \emph{not} a part of the boundary
 of $\M$ but merely reflect the coordinate singularity at $\chi=0$, in the same
@@ -383,13 +383,13 @@ null geodesics $v=\mathrm{const}$ for 17 values of $v$ uniformly spanning $[-8,8
 \end{figure}
 
 The hypersurface $\scri^+$ is the location of $\tilde{\M}$ where all radial null geodesics
-terminate, while $\scri^-$ is the location of $\tilde{\M}$ where all these geodesics orginate (cf. Fig.~\ref{f:glo:conf_Mink_null}). For this
+terminate, while $\scri^-$ is the location of $\tilde{\M}$ where all these geodesics originate (cf. Fig.~\ref{f:glo:conf_Mink_null}). For this
 reason $\scri^+$ is called the
 \defin{future null infinity}\index{future!null infinity}\index{null!infinity}
 of $(\M,\w{g})$
 and $\scri^-$ the \defin{past null infinity}\index{past!null infinity}
 of $(\M,\w{g})$.
-On the other side, any timelike geodesic of $(\M,\w{g})$ orginates at $i\-$ and ends at
+On the other side, any timelike geodesic of $(\M,\w{g})$ originates at $i\-$ and ends at
 $i^+$ (cf. Fig.~\ref{f:glo:conf_diag_Mink}), while any spacelike geodesic
 of $(\M,\w{g})$ originates at $i^0$ and terminates there
 (after having completed a closed path on $\mathbb{S}^3$ (cf. Fig.~\ref{f:glo:Einstcyl_Mink}).
@@ -447,7 +447,7 @@ with $\M$ and therefore simply write $\tilde{\M} = \M \cup \scri$.
 Conditions~2 and 3 express that the boundary of $\M$ has been brought to a
 finite distance with respect to $\w{\tilde{g}}$. Finally, condition~4 ensures
 that $\scri$ is a regular hypersurface of $\tilde{\M}$.
-It is of course fullfilled by Minkowski spacetime, as we can check graphically
+It is of course fulfilled by Minkowski spacetime, as we can check graphically
 on Fig.~\ref{f:glo:Omega_Mink}: the graph of $\Omega$ has no horizontal slope
 at $\scri$.
 
@@ -457,7 +457,7 @@ boundary, this implies that $\w{\tilde{g}}$ is smooth everywhere on $\tilde{\M}$
 including at the boundary $\scri$.
 \end{remark}
 
-\begin{example}[comformal completion of AdS$_{n}$ spacetime]
+\begin{example}[conformal completion of AdS$_{n}$ spacetime]
 ... to be completed ...
 \end{example}
 
@@ -502,7 +502,7 @@ isometric to $(\mathscr{U},\w{g})$.
 
 \begin{remark}
 For a given weakly asymptotically simple spacetime, there may be different
-(non overlaping) regions $\mathscr{U}$ satisfying the above property.
+(non overlapping) regions $\mathscr{U}$ satisfying the above property.
 For instance we shall see in Chap.~\ref{s:ker}
 that there are an infinite series of them in the Kerr spacetime.
 \end{remark}
@@ -513,11 +513,11 @@ that there are an infinite series of them in the Kerr spacetime.
 
 \section{Black holes}
 
-\subsection{Causal structure preliminaries}
+\subsection{Preliminaries regarding causal structure}
 
 Before we proceed to the precise definition of a black hole, let us introduce
 some concepts regarding the causal structure of a given spacetime $(\M,\w{g})$.
-For any subset $S$ of $\M$, we define
+For any subset $S$ of $\M$, one defines
 \begin{itemize}
 \item the \defin{chronological future of $S$}\index{chronological!future} as the set $I^+(S)$ of all
 points of $\M$ that can be reached from a point of $S$ by a future-directed
@@ -539,36 +539,49 @@ $I^\pm(S) \subset J^\pm(S)$.
 One has not necessarily $S \subset I^\pm(S)$. For instance,
 if the spacetime does not contain
 any closed timelike curve, one has  $S \cap I^\pm(S) = \varnothing$ for
-$S = \{p\}$, $p$ being any point of $\M$.
+$S = \{p\}$ with $p$ any point of $\M$.
 \end{remark}
 
 Here are some basic topological properties of the future and past sets
 defined above (see e.g. \S~6.2 of \cite{HawkiE73} or Chap.~14 of
-\cite{ONeil83} for a demonstration):
-$I^\pm(S)$ is always an open subset of $\M$ and its closure contains
-$J^\pm(S)$: $J^\pm(S) \subset \overline{I^\pm(S)}$, with equality iff
-$J^\pm(S)$ is closed. The interior of $J^\pm(S)$ is $I^\pm(S)$
-and both sets have the same boundary:
-\be
+\cite{ONeil83} for proofs):
+\begin{itemize}
+\item
+$I^\pm(S)$ is always an open subset\footnote{This property is a direct
+consequence of Lemma~1 in Sec.~\ref{s:glo:properties_H} below.} of $\M$, while
+$J^\pm(S)$ is not necessarily a closed subset.
+\item The interior of $J^\pm(S)$ is $I^\pm(S)$:
+\be \label{e:glo:int_JS_IS}
+    \mathrm{int}\, J^\pm(S) = I^\pm(S).
+\ee
+\item Both sets have the same closure:
+\be \label{e:glo:clos_JS_IS}
+    \overline{J^\pm(S)} = \overline{I^\pm(S)} .
+\ee
+\item
+It follows from (\ref{e:glo:int_JS_IS}) and (\ref{e:glo:clos_JS_IS})
+that both sets share the same boundary:
+\be \label{e:glo:boundary_JS_IS}
     \partial J^\pm(S) = \partial I^\pm(S).
 \ee
+\end{itemize}
 
-\subsection{General definition} \label{s:glo:def_BH}
+\subsection{General definition of a black hole} \label{s:glo:def_BH}
 
 We are now in position to give the general definition of a black hole.
-We shall do it for spacetimes $(\M,\w{g})$ that admit a conformal completion
+We shall do it for a spacetime $(\M,\w{g})$ that admits a conformal completion
 at null infinity as defined in Sec.~\ref{s:glo:conf_compl}, i.e. that
-posseses a future null infinity $\scri^+$. The neighbourhood of $\scri^+$
+possesses a future null infinity $\scri^+$. The neighbourhood of $\scri^+$
 in $\tilde{\M}$ can then be considered as the asymptotically flat far region
 reached by outgoing null geodesics. If a null geodesic does not reach this
 region, it can be considered as being trapped somewhere else in spacetime: this
-place would constitute a black hole region.
+``somewhere else'' constitutes the black hole region.
 
 
 The \defin{black hole region}\index{black!hole}, or simply \defin{black hole}, of a
 spacetime $(\M,\w{g})$ with a conformal completion at null infinity is
 the set of points of $\M$ that are not in the causal past of the future null infinity:
-\be
+\be \label{e:glo:def_BH}
     \encadre{\mathscr{B} := \M \setminus (J^-(\scri^+)\cap\M) } .
 \ee
 The black hole region is thus the set of points of $\M$
@@ -576,19 +589,20 @@ from which no future-directed causal curve in $\tilde{\M}$ reaches $\scri^+$.
 Of course, it may be that $\mathscr{B} = \varnothing$, in which case one
 says that the spacetime $(\M,\w{g})$ contains no black hole.
 \begin{example}
-The Minkowski spacetime has no black hole, for all future-directed null geodesics
+The Minkowski spacetime contains no black hole, for all future-directed null geodesics
 terminate at $\scri^+$ (cf. Fig.~\ref{f:glo:conf_Mink_null}).
-More generally, any asymptotically simple spacetime has no black hole.
+More generally, any asymptotically simple spacetime contains no black hole.
 \end{example}
 
 \begin{remark}
 Some authors (in particular Hawking and Ellis \cite{HawkiE73}) define a
 \emph{black hole} as a connected component of
 $S(\tau) \cap \mathscr{B}$, where $S(\tau)$ is a spacelike
-hypersurface that intersects $\scri^+$ and
-is a slice of the future development of a partial Cauchy hypersurface $S(0)$.
-In such a definition, a black hole is then a $(n-1)$-dimensional object,
-while the black hole $\mathscr{B}$ defined above is $n$-dimensional object.
+hypersurface that is a slice of the future development of a partial
+Cauchy hypersurface $S(0)$ such that the
+closure in $\tilde{\M}$ of the domain of dependence of $S(0)$ contains $\scri^+$.
+According to such a definition, a black hole is a $(n-1)$-dimensional object,
+while the black hole $\mathscr{B}$ defined above is a $n$-dimensional object.
 \end{remark}
 
 If $\mathscr{B}\not=\varnothing$, the boundary $\Hor$ of the black hole region
@@ -598,16 +612,33 @@ when no ambiguity may arise):
 \be
     \encadre{\Hor := \partial \mathscr{B}}.
 \ee
-Note that $\Hor$ is the part of the boundary of the causal past of
-$\scri^+$ that lies in $\M$:
+By pluging expression (\ref{e:glo:def_BH}) for $\mathscr{B}$ in the standard
+identity $\partial \mathscr{B} =
+\overline{\mathscr{B}} \cap \overline{\M\setminus \mathscr{B}}$, we get
+an equivalent expression for $\Hor$:
+\[
+    \Hor = \overline{\M \setminus (J^-(\scri^+)\cap\M)} \cap
+        \overline{(J^-(\scri^+)\cap\M)}
+        = \partial(J^-(\scri^+)\cap\M) .
+\]
+Now, the boundary of $J^-(\scri^+)$ in $\tilde{\M}$ is
+$\partial J^-(\scri^+) = \partial (J^-(\scri^+)\cap\M) \cup \scri^+$, so that
+$\partial J^-(\scri^+) \cap \M =  \partial(J^-(\scri^+)\cap\M)$; hence
 \be
-    \Hor = \M \cap \partial J^-(\scri^+)
+    \encadre{\Hor = \partial J^-(\scri^+) \cap \M }.
+\ee
+In words: the future event horizon $\Hor$ is the part of the boundary of the causal past
+of the future null infinity $\scri^+$ that lies in $\M$.
+Note that thanks to identity (\ref{e:glo:boundary_JS_IS}), we can write as
+well
+\be
+    \Hor = \partial I^-(\scri^+) \cap \M .
 \ee
 
 In a way symmetric to the black hole one, one defines
 the \defin{white hole region}\index{white!hole} of a
 spacetime $(\M,\w{g})$ with a conformal completion at null infinity as the
-complement within $\M$ of the causal future of the past null infinity:
+complement within $\M$ of the causal future of the past null infinity.
 \be
     \encadre{\mathscr{W} := \M \setminus (J^+(\scri^-)\cap \M) } .
 \ee
@@ -616,18 +647,18 @@ from which no past-directed causal curve in $\tilde{\M}$ reaches $\scri^-$.
 The boundary of white hole region is called the
 \defin{past event horizon}\index{past!event horizon}:
 \be
-    \encadre{\Hor^- := \partial \mathscr{B}} .
+    \encadre{\Hor^- := \partial \mathscr{W} = \partial J^+(\scri^-) \cap \M } .
 \ee
 
 The \defin{domain of outer communications}\index{domain!of outer communications}
 is the part $\langle\langle \M\rangle\rangle$ of $\M$ that lies neither
 in the black hole region nor in the white hole one:
 \be
-    \langle\langle \M\rangle\rangle := \M\setminus (\Hor\cup \mathscr{W} )
+    \langle\langle \M\rangle\rangle := \M\setminus (\mathscr{B}\cup \mathscr{W} )
             = \left( J^-(\scri^+) \cap J^+(\scri^-) \right) \cap \M .
 \ee
 The last equality, which is a direct consequence of the definitions of
-$\Hor$ and $\mathscr{W}$, shows that the domain of outer communications
+$\mathscr{B}$ and $\mathscr{W}$, shows that the domain of outer communications
 is the set of points from which it is possible to send a signal to and to
 receive a signal from arbitrary far regions.
 It also follows immediately from the definitions of the two event horizons
@@ -652,8 +683,8 @@ The expression \emph{domain of outer communications} is due to B.~Carter
 
 \subsection{Properties of the future event horizon} \label{s:glo:properties_H}
 
-Having defined the black hole in full generality, let us discuss the
-main properties of its boundary, the event horizon $\Hor$.
+Having defined a black hole in full generality, let us derive the
+main properties of the black hole boundary: the event horizon $\Hor$.
 
 \subsubsection{Property 1:}
 \begin{quote}
@@ -662,13 +693,13 @@ by a timelike curve of $\M$.
 \end{quote}
 
 Note that in the definition of an achronal set, it is not demanded that the timelike
-curve lies entirely in the set (the set can even be discrete, so that no curve
-lies in it). Accordingly,
+curve lies entirely in the set (for instance, the set can be discrete, so that no curve
+whatsoever lies in it). Accordingly,
 an equivalent statement of Property~1 is: no timelike curve of $\M$
 encounters $\Hor$ at more than one point.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.5\textwidth]{glo_achronal.pdf}}
+\centerline{\includegraphics[width=0.55\textwidth]{glo_achronal.pdf}}
 \caption[]{\label{f:glo:achronal} \footnotesize
 Proving that $\Hor$ is achronal.}
 \end{figure}
@@ -684,7 +715,7 @@ if two points $p,q\in\M$ are connected by a timelike curve,
 there exists
 a neighbourhood $U$ of $p$ and a neighbourhood $V$ of $q$ such that
 any point $p'\in U$ can be connected to any point $q'\in V$ by a timelike curve.
-\begin{proof}
+\begin{proof}[Proof of Lemma 1]
 This is more or less evident on a spacetime diagram (cf. Fig.~??)
 and a formal proof
 can be found as Lemma~3
@@ -711,14 +742,13 @@ dimension.
 Proving that $\Hor$ is a topological manifold of dimension $n-1$.}
 \end{figure}
 
-
 \begin{proof}
 Let $p\in\Hor$ and $U$ some open neighbourhood of $p$ where one can define
 a normal coordinate system $(x^\alpha)$. We have then $\wpar_0$ timelike,
 $\wpar_i$ spacelike for $i\in\{1,\ldots,n-1\}$ and $\w{g}(\wpar_0, \wpar_i) = 0$.
 Let us consider a curve in $U$ defined by $x^1 = a_1$,..., $x^{n-1} = a_{n-1}$,
 where $a_1$, ..., $a_{n-1}$ are $n-1$ constants.
-This curve is timelike, since a tangent vector is $\wpar_0$
+This curve is timelike, since it has $\wpar_0$ as a tangent vector
 (cf. Fig.~\ref{f:glo:hor_manifold}).
 It therefore intersects $\Hor$ at a single point $q$, for $\Hor$ is achronal (Property~1).
 Let us then give the coordinates $(y^i) = (a_1,\ldots,a_{n-1})$ to $q$.
@@ -726,6 +756,10 @@ By varying $(a_1,\ldots,a_{n-1})$, we get a homeomorphism from $U\cap\Hor$
 to an open subset of $\mathbb{R}^{n-1}$.
 \end{proof}
 
+\begin{remark}
+Generically, the topological manifold $\Hor$ is not a smooth manifold, for it
+contains some points (the caustics defined below) at which it is not differentiable.
+\end{remark}
 
 \subsubsection{Property 3 (Penrose 1968 \cite{Penro68}):}
 \begin{quote}
@@ -749,7 +783,7 @@ It relies on the following lemma:\\[1ex]
 \textbf{Lemma~2:} Let $\Li$ be a causal curve connecting two points $p$ and $q$
 of $\M$. If $\Li$ contains a timelike segment, then there exists an
 entirely timelike curve connecting $p$ and $q$.
-\begin{proof}
+\begin{proof}[Proof of Lemma 2]
 We shall provide only a graphical ``proof'', based on the spacetime diagram
 of Fig.~??. The parts of $\Li$ may have parts where it is null, where it is drawn with
 an angle of incline $\theta = \pm 45^\circ$ in Fig.~??.
@@ -761,12 +795,12 @@ everywhere, i.e. to a timelike curve.
 Let $p\in\Hor$ and let $U$ be some convex open neighbourhood of $p$.
 Since $p$ lies in the boundary of $J^-(\scri^+)$, it is always possible to
 consider
-a sequence of points $(p_n)_{n\in\mathbb{N}}$ converging towards $p$
-such that $\forall n\in\mathbb{N},\ p_n \in U \cap J^-(\scri^+)$.
+a sequence of points $(p_n)_{n\in\mathbb{N}}$ converging toward $p$
+and such that $\forall n\in\mathbb{N},\ p_n \in U \cap J^-(\scri^+)$.
 Since $p_n\in J^-(\scri^+)$,
 there exists a future-directed causal curve $\Li_{n}$ from $p_n$ to $\scri^+$
 for each $n\in\mathbb{N}$.
-Since $U$ is convex, each $\Li_n$ intersects its boundary $\partial U$
+The neighbourhood $U$ being convex, each $\Li_n$ intersects its boundary $\partial U$
 at a unique point, $q_n$ say: $\{q_n\}=\Li_n \cap \partial U$ (cf. Fig.~??).
 Since $\partial U$
 is compact, the sequence $(q_n)_{n\in\mathbb{N}}$ admits a subsequence,
@@ -774,8 +808,8 @@ $(q_{f(n)})_{n\in\mathbb{N}}$ say (where $f$ is an increasing
 function $\mathbb{N}\rightarrow\mathbb{N}$),
 that converges to some limit point $q$.
 Since from any point $p_{f(n)}$ arbitrary close to $p$, there is a causal curve
-$\Li_{f(n)}$ to the $q_{f(n)}$ arbitrary close to $q$, one can show that
-there exist a causal curve $\Li$ connecting $p$ to $q$ (see e.g.
+$\Li_{f(n)}$ to the point $q_{f(n)}$ arbitrary close to $q$, one can show that
+there exists a causal curve $\Li$ connecting $p$ to $q$ (see e.g.
 Lemma~6.2.1 of Hawking \& Ellis textbook \cite{HawkiE73}
 for a precise demonstration).
 
@@ -784,13 +818,13 @@ $\overline{J^-(\scri^+)} = J^-(\scri^+) \cup \Hor$, $\Hor$
 being the boundary of $J^-(\scri^+)$.
 Let us show by contradiction that actually $q\in\Hor$.
 If we assume $q\not\in\Hor$, then necessarily $q\in J^-(\scri^+)$.
-There exists then an open neighbourhood $V$ of $q$ such that $V \subset  J^-(\scri+)$.
+There exists then an open neighbourhood $V$ of $q$ such that $V \subset  J^-(\scri^+)$.
 Let us choose $q'\in V$ such that $q$ is connected to $q'$ via a timelike curve.
 We may then extend $\Li$ to a causal curve $\tilde{\Li}$ from $p$ to $\scri^+$
 via $q$ and $q'$ (cf. Fig.~??). Since $\tilde{\Li}$ contains a timelike segment
 (between $q$ and $q'$), we may invoke Lemma~2 to deform it into
 a timelike curve $\tilde{\Li}'$ between $p$ and $\scri^+$. Then, by Lemma~1,
-one can ``move the end'' of $\tilde{\Li}'$
+one can ``move the past end'' of $\tilde{\Li}'$
 to get a new timelike curve linking an event $p'\in\mathscr{B}$ close
 to $p$ to $\scri^+$, which is impossible by the very definition of the black hole
 region $\mathscr{B}$. Hence we have that $q\in\Hor$.
@@ -804,7 +838,7 @@ curve. If it would not be a null geodesic, it would not have an extremum length
 between all curves connecting $p$ and $q$ (the length being defined as
 the integral of the scalar square $\D s^2 = \w{g}(\D\w{x}, \D\w{x})$
 of the displacement vector $\D\w{x}$ along the curve).
-The length of $\Li$ being zero, there would then exists some curves of negative
+The length of $\Li$ being zero, there would then exist some curves of negative
 length connecting $p$ and $q$. Since such curves are timelike, this
 would be in contradiction with the achronal character of $\Hor$.
 
@@ -817,12 +851,13 @@ $a'$ arbitrary close to $a$ such that $a'$ is connected to $q$ by a
 future-directed timelike curve (cf. Fig.~??). Thanks to Lemma~1, we may
 find a point $q'\in J^-(\scri^+)$ close to $q$ such that $a'$ is connected
 to $q'$ by a future-directed timelike curve. But then such curve can be extended
-to a causal curve to $\scri^+$ since $q'\in J^-(\scri^+)$ and we have that
+to a causal curve to $\scri^+$ since $q'\in J^-(\scri^+)$; hence
 $a'\in  J^-(\scri^+)$. Since $a'$ is arbitrary close to $a$, we conclude
-that $a\in\overline{J^-(\scri^+)}$. $a$ being a generic point of $\Li$, we have
+that $a\in\overline{J^-(\scri^+)}$.
+This property being valid for any point $a\in \Li$, we have
 shown in fact that $\Li\subset \overline{J^-(\scri^+)} = J^-(\scri^+)\cup \Hor$.
 Now it is easy to show that any point $a$ of $\Li$ actually lies in $\Hor$
-by repeating exactling the same reasoning as that employed above to show that
+by repeating exactly the same reasoning as that employed above to show that
 $q\in\Hor$, by replacing $q$ by $a$. We therefore conclude that
 $\Li$ lies entirely in $\Hor$.
 
@@ -831,14 +866,14 @@ future-directed null geodesic $\Li$ lying entirely in $\Hor$ and
 connecting $p$ to another point $q\in\Hor$. One can
 repeat the construction
 from the point $q$ to get another future-directed null geodesic $\Li'\subset\Hor$
-connecting $q$ to another point $q'\in\Hor$. Now $\Li$ and $\Li'$ must have
+connecting $q$ to another point $q'\in\Hor$. Now $\Li$ and $\Li'$ must
 be two segments of the same null geodesic $\Li\cup\Li'$ by the following lemma:\\[1ex]
 \textbf{Lemma~3}: If from a point $q\in\Hor$, there exists a past-directed
 null geodesic $\Li\subset\Hor$ and a future-directed null geodesic $\Li'\subset\Hor$,
 then necessarily $\Li$ and $\Li'$ have collinear tangent vectors at their common point $q$.
 It follows that $\Li$ (with a time-reversed parametrization) and $\Li'$ are two segments
 of a same null geodesic through $q$.
-\begin{proof}
+\begin{proof}[Proof of Lemma 3]
 Assume $\Li$ and $\Li'$ have non-collinear tangent vectors at $q$. Then, in
 the vicinity of $q$, one can find a point $a\in\Li$ and a point $b\in\Li'$
 such that $a$ and $b$ can be connected by a timelike curve (cf.
@@ -867,18 +902,20 @@ Wherever it is smooth, $\Hor$ is a null hypersurface.
 \begin{proof}
 Let us assume that $\Hor$ is smooth in some open subset $U$.
 By Property~2, $\Hor$ is then a smooth hypersurface in $U$.
-According to Property~3, there are null geodesic lying in $\Hor$ through
+According to Property~3, there is a null geodesic lying in $\Hor$ through
 any point of $\Hor\cap U$.
-This implies null tangent vectors to $\Hor$, so that $\Hor$ must be either
-a null hypersurface or a timelike one. But $\Hor$ is achronal by Property~1;
-it therefore cannot be timelike. Hence $\Hor$ is a null hypersurface in $U$.
+This implies null tangent vectors at any point of $\Hor\cap U$, so that, in $U$,
+$\Hor$ must be either a null hypersurface or a timelike one. But $\Hor$ is achronal by Property~1 and therefore cannot be timelike. Hence $\Hor$ is a null hypersurface in $U$.
 \end{proof}
-The generators of $\Hor$, as defined in Property~3, are then nothing but the
+When $\Hor$ is smooth, its generators,
+as defined in Property~3, are then nothing but the
 null-hypersurface generators as defined in Sec.~\ref{s:def:geod_gener}.
 
 \begin{remark}
 Properties 1 to 4 are not specific to black hole horizons: they are actually
-valid for any boundary of the causal past of a given set $S\subset\M$.
+valid for any boundary $\partial J^-(S)$ of the causal past of a given set $S\subset\M$.
+They are also valid for the boundary $\partial J^+(S)$ of the causal future of
+$S$, modulo the relevant changes future $\leftrightarrow$ past in Property~3.
 \end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
