@@ -473,6 +473,10 @@ with $\scri^+$ (resp. $\scri^-$) being never intersected by any past-directed
 curve originating in $\M$. Let us recall that a
 \defin{causal curve}\index{causal!curve} is
 curve whose tangent vectors are nowhere spacelike.
+As for Minkowksi spacetime, we shall call $\scri^+$ the
+\defin{future null infinity}\index{future!null infinity}\index{null!infinity}
+and $\scri^-$ the \defin{past null infinity}\index{past!null infinity}
+of $(\M,\w{g})$.
 
 \begin{remark}
 One often speaks about \emph{conformal compactification}\index{conformal!compactification}
@@ -922,7 +926,77 @@ $S$, modulo the relevant changes future $\leftrightarrow$ past in Property~3.
 
 \section{Stationary black holes} \label{s:glo:stationary}
 
-Hawking's strong rigidity theorem
+\subsection{General considerations}
+
+Let us consider a spacetime $(\M,\w{g})$ that contains a black hole, as defined in
+Sec.~\ref{s:glo:def_BH}. In particular, $(\M,\w{g})$ admits a future null
+infinity $\scri^+$ and a past null infinity $\scri^-$. One says that
+$(\M,\w{g})$ is a \defin{stationary spacetime}\index{stationary!spacetime}
+if (i) it is invariant under
+the action of the translation group $(\mathbb{R},+)$ and (ii) the orbits of
+the group action are timelike curves in the vicinity of $\scri^+$ and
+$\scri^-$. It is equivalent to say that there exists a Killing vector field
+$\w{\xi}$ (the generator of the translation group) that is timelike in the vicinity of $\scri^+$ and $\scri^-$.
+
+\begin{remark}
+Some authors (e.g. Carter \cite{Carte73b}) call such spacetimes
+\emph{pseudo-stationary}\index{pseudo-stationary}, keeping the qualifier
+\emph{stationary} for the case where the Killing field $\w{\xi}$ is timelike
+in all $\M$. As we going to see, when $\M$
+contains a black hole, $\w{\xi}$ cannot be timelike everywhere,
+so only \emph{pseudo-stationarity} in the above sense is relevant for them.
+Our terminology follows that of Chru\'sciel, Lopes Costa \& Heusler \cite{ChrusLH12}
+and Choquet-Bruhat \cite{Choqu09}.
+\end{remark}
+
+If $(\M,\w{g})$ is invariant under the action of the isometry group $(\mathbb{R},+)$,
+so is $\scri^+$ (under some proper extension of $\w{\xi}$ to $\tilde{\M}$)
+and therefore its causal past $J^-(\scri^+)$. As the boundary of $J^-(\scri^+)$
+inside $\M$, the event horizon $\Hor$ must therefore be invariant under the group action.
+Note that this means that $\Hor$ is invariant \emph{as a whole}, not that
+each point of $\Hor$ is invariant under the group action. Equivalently, this
+means that the generator $\w{\xi}$ of the isometry group is tangent to $\Hor$.
+Let us assume that $\Hor$ is smooth (which sounds likely in a stationary context;
+a rigourous proof can be found in \cite{ChrusDGH01}),
+it is then a null hypersurface (Property~4 in Sec.~\ref{s:glo:properties_H}).
+Since a timelike vector cannot be tangent to a null hypersurface (cf. the
+lemma in Sec.~\ref{s:def:spacelike_sections}), we conclude that
+\begin{quote}
+The Killing vector $\w{\xi}$ field is either null or spacelike on
+the event horizon $\Hor$.
+\end{quote}
+Let us discuss these two cases successively.
+
+\subsection{Null stationary Killing field on $\Hor$}
+
+By the lemma of Sec.~\ref{s:def:spacelike_sections}, if the Killing vector
+field $\w{\xi}$ is null on $\Hor$, it is necessarily tangent to the null geodesic generators
+of $\Hor$ and therefore collinear to the null normals $\wl$ of $\Hor$. From the definition
+given in Sec.~\ref{s:def:def_Killing_hor}, it follows immediately that
+$\Hor$ is a Killing horizon (with respect to the Killing field $\w{\xi}$.
+In dimension $n=4$ and using Einstein equation,
+D.~Sudarski and R.M.~Wald \cite{SudarW92} have then proven that $\w{\xi}$ must be
+hypersurface-orthogonal everywhere, i.e. that the spacetime $(\M,\w{g})$ is \defin{static}\index{static spacetime}. One can then
+apply a uniqueness theorem by W.~Israel (1967) \cite{Israe67}
+stating that every static vacuum solution
+of the Einstein equation is the Schwarzschild solution\index{Schwarzschild!black hole} (or the Reissner-Nordström\index{Reissner-Nordström black hole}
+one in the electro-vacuum case \cite{Israe68}).
+A demonstration of Israel's theorem can be found in Straumann's textbook \cite{Strau04}.
+
+\subsection{Spacelike stationary Killing field on $\Hor$}
+
+When $\w{\xi}$ is spacelike on $\Hor$, it obviously cannot be collinear to
+any null normal $\wl$, so that one cannot say a priori that
+$\Hor$ is a Killing horizon. When $n=4$, it turns out
+that this is indeed the case, thanks to a famous result by S.W.~Hawking (1972)
+\cite{Hawki72}, known as the
+\emph{strong rigidity theorem}\index{strong!rigidity theorem}\index{rigidity theorem!strong --}.
+By means of the Einstein equation
+Hawking was able to show that there exists a second Killing vector field,
+$\w{\chi}$ say, which is null on $\Hor$, so that $\Hor$ is a Killing horizon
+in this case as well.
+
+% Hawking's strong rigidity theorem
 
 % Analyticity
 
