@@ -957,7 +957,7 @@ Note that this means that $\Hor$ is invariant \emph{as a whole}, not that
 each point of $\Hor$ is invariant under the group action. Equivalently, this
 means that the generator $\w{\xi}$ of the isometry group is tangent to $\Hor$.
 Let us assume that $\Hor$ is smooth (which sounds likely in a stationary context;
-a rigourous proof can be found in \cite{ChrusDGH01}),
+a rigorous proof can be found in \cite{ChrusDGH01}),
 it is then a null hypersurface (Property~4 in Sec.~\ref{s:glo:properties_H}).
 Since a timelike vector cannot be tangent to a null hypersurface (cf. the
 lemma in Sec.~\ref{s:def:spacelike_sections}), we conclude that
@@ -967,7 +967,7 @@ the event horizon $\Hor$.
 \end{quote}
 Let us discuss these two cases successively.
 
-\subsection{Null stationary Killing field on $\Hor$}
+\subsection{Null stationary Killing field on $\Hor$: the staticity theorem}
 
 By the lemma of Sec.~\ref{s:def:spacelike_sections}, if the Killing vector
 field $\w{\xi}$ is null on $\Hor$, it is necessarily tangent to the null geodesic generators
@@ -976,28 +976,116 @@ given in Sec.~\ref{s:def:def_Killing_hor}, it follows immediately that
 $\Hor$ is a Killing horizon (with respect to the Killing field $\w{\xi}$.
 In dimension $n=4$ and using Einstein equation,
 D.~Sudarski and R.M.~Wald \cite{SudarW92} have then proven that $\w{\xi}$ must be
-hypersurface-orthogonal everywhere, i.e. that the spacetime $(\M,\w{g})$ is \defin{static}\index{static spacetime}. One can then
-apply a uniqueness theorem by W.~Israel (1967) \cite{Israe67}
-stating that every static vacuum solution
-of the Einstein equation is the Schwarzschild solution\index{Schwarzschild!black hole} (or the Reissner-Nordström\index{Reissner-Nordström black hole}
-one in the electro-vacuum case \cite{Israe68}).
-A demonstration of Israel's theorem can be found in Straumann's textbook \cite{Strau04}.
+hypersurface-orthogonal everywhere, i.e. that the spacetime $(\M,\w{g})$ is \defin{static}\index{static spacetime}. For this reason, Sudarski \& Wald's result is often
+called the \defin{staticity theorem}\index{staticity theorem}.
 
-\subsection{Spacelike stationary Killing field on $\Hor$}
+One can then apply a uniqueness theorem by W.~Israel (1967) \cite{Israe67},
+and improved latter by many authors (in particular by Chru\'sciel \& Galloway \cite{ChrusG10}
+to remove the hypothesis of analyticity), which
+states that if $(\M,\w{g})$ is a $n$-dimensional static spacetime
+containing a black hole, with $\w{g}$ solution of the vacuum Einstein
+equation, then the domain of outer communications of $\M$ is isomorphic
+to the domain of outer communications of a $n$-dimensional Schwarzschild spacetime\index{Schwarzschild!spacetime}.
+A demonstration of Israel's theorem can be found in Straumann's textbook \cite{Strau04}.
+So basically, in dimension $n=4$ (i.e. when the staticity theorem applies) all stationary black holes with the stationary Killing field $\xi$ null
+on $\Hor$ are nothing but Schwarzschild black holes, which we will study in detail in Chap.~\ref{s:sch}.
+
+
+\subsection{Spacelike stationary Killing field on $\Hor$: the strong rigidity theorem}
 
 When $\w{\xi}$ is spacelike on $\Hor$, it obviously cannot be collinear to
-any null normal $\wl$, so that one cannot say a priori that
-$\Hor$ is a Killing horizon. When $n=4$, it turns out
-that this is indeed the case, thanks to a famous result by S.W.~Hawking (1972)
-\cite{Hawki72}, known as the
-\emph{strong rigidity theorem}\index{strong!rigidity theorem}\index{rigidity theorem!strong --}.
-By means of the Einstein equation
+any null normal $\wl$.
+Assuming that $\Hor$ has cross-sections of spherical topology, we observe
+that, with respect to the null geodesic generators of $\Hor$, the field lines of $\w{\xi}$
+form some helices (cf. Fig.~??). By reciprocity, with respect to the field lines of $\w{\xi}$,
+the null geodesic generators form some helices as well (cf. Fig.~??).
+Since asymptotically the field lines of $\w{\xi}$ are worldlines of inertial observers,
+we may say (in loose terms at this stage) that the event horizon $\Hor$
+``is rotating'', all the more that we have seen above that when the null
+generators coincide with the field lines of $\w{\xi}$ the black hole is static, i.e. non-rotating.
+
+Since the Killing field $\w{\xi}$ is not null on $\Hor$, we cannot say a priori
+that $\Hor$ is a Killing horizon. However, it turns out
+that this is indeed the case, according to a famous result by S.W.~Hawking (1972)
+\cite{Hawki72,HawkiE73}, known as the
+\defin{strong rigidity theorem}\index{strong!rigidity theorem}\index{rigidity theorem!strong --}.
+Assuming $n=4$ and the metric $\w{g}$ obeying the vacuum Einstein equation,
 Hawking was able to show that there exists a second Killing vector field,
-$\w{\chi}$ say, which is null on $\Hor$, so that $\Hor$ is a Killing horizon
+$\w{\chi}$ say, which is null on $\Hor$. Hence $\Hor$ is a Killing horizon
 in this case as well.
+Hawking's result has been extended to dimensions $n\geq 4$ by V.~Moncrief
+and J.~Isenberg (2008) \cite{MoncrI08}, under the hypothesis that $\Hor$
+has compact cross-sections transverse to $\w{\xi}$ (see also
+Theorem~8.1 p.~470 of Choquet-Bruhat's textbook \cite{Choqu09}).
+Both Hawking's result
+and Moncrief \& Isenberg's one rely on the rather strong assumption that $\M$ and $\Hor$
+are (real) \emph{analytic} manifolds, with $\w{g}$ being an analytic field. On physical grounds,
+it would be desirable to assume only \emph{smooth} manifolds and fields.
+Recently, S.~Alexakis, A.D.~Ionescu and S.~Klainerman \cite{AlexaIK14} (2014)
+have succeeded in proving the strong rigidity theorem without the analyticity
+assumption, but only for slowly rotating black holes.
 
-% Hawking's strong rigidity theorem
+A linear combination of Killing vectors with constant coefficients being a
+Killing vector, the vector field $\w{\eta}$ defined by
+\be
+    \w{\eta} = \frac{1}{\Omega_H} \left( \w{\chi} - \w{\xi} \right)
+    \quad\iff\quad
+    \w{\chi} = \w{\xi} + \Omega_H \w{\eta} ,
+\ee
+where $\Omega_H$ is a non-zero constant, is a Killing vector field on $\M$.
+One can show (see e.g. \cite{Chrus97} for a rigorous proof) that $\Omega_H$
+and some constant scale factor of $\w{\chi}$
+can be chosen so that $\w{\eta}$ is a spacelike vector field with closed
+field lines, with $2\pi$-periodicity in terms of the parameter $\ph$
+associated to $\w{\eta}$ (i.e. $\w{\eta} = \D/\D\ph$ along the field lines),
+and such that $\w{\eta}$ vanishes on a timelike 2-dimensional surface, called
+the \defin{rotation axis}\index{rotation!axis}.
+It follows that
+the isometry group whose generator is $\w{\eta}$ is the rotation group
+$\mathrm{SO}(2)$. In other words, the spacetime $(\M,\w{g})$ is
+\defin{axisymmetric}\index{axisymmetric!spacetime} in addition to be stationary.
 
-% Analyticity
+By the very definition of stationarity, the Killing vector field $\w{\xi}$ is
+timelike in the vicinity of $\scri^+$ and $\scri^-$. If $\w{\xi}$ is spacelike
+on $\Hor$, as assumed in this section, by continuity it must be spacelike
+in some part of the domain of outer communications $\langle\langle \M\rangle\rangle$
+near $\Hor$. The simplest configuration is then when
+$\w{\xi}$ is spacelike in some connected region $\mathscr{E}\subset \langle\langle \M\rangle\rangle$
+around $\Hor$, null at the boundary of $\mathscr{E}$ and timelike outside $\mathscr{E}$
+up to $\scri^+$ and $\scri^-$ (cf. Fig.~??). The subset $\mathscr{E}$ is
+called the \defin{ergoregion}\index{ergoregion} and its boundary $\partial\mathscr{E}$
+the \defin{ergosphere}. We shall discuss it further in connection with
+the Penrose process in Chap.~\ref{s:ker}.
 
-% Proof: see Theorem~8.1 p.~470 of Choquet-Bruhat's textbook \cite{Choqu09}.
+
+\subsection{The no-hair theorem}
+
+In dimension $n=4$, one can go much further then claiming that the
+event horizon of a stationary black hole must be a Killing horizon.
+One has indeed the \defin{Carter-Robinson theorem}\index{Carter-Robinson theorem}
+(Carter 1971 \cite{Carte71}, Robinson 1975 \cite{Robin75}):
+any stationary and axisymmetric 4-dimensional asymptotically flat
+black hole spacetime $(\M,\w{g})$
+solution of the Einstein vacuum equation with a connected regular
+event horizon $\Hor$ has a domain of outer communications that is isometric
+to the domain of outer communications of the Kerr spacetime.
+
+\begin{remark}
+In their original work, Carter and Robinson assumed that $\Hor$ is a
+\emph{non-degenerate}
+Killing horizon, i.e. that the non-affinity parameter $\kappa$ associated
+with the Killing vector $\w{\chi}$ is non-zero. However this non-degeneracy
+hypothesis can be released \cite{ChrusN10} (see \cite{ChrusLH12} for an
+extended discussion).
+\end{remark}
+
+By combining the Israel theorem, the strong rigidity theorem and the Carter-Robinson theorem,
+one arrives at the \defin{no-hair theorem}\index{no-hair theorem}:
+\begin{quote}
+Any stationary 4-dimensional asymptotically flat
+black hole spacetime $(\M,\w{g})$
+solution of the Einstein vacuum equation with a connected regular
+event horizon $\Hor$ has a domain of outer communications that is isometric
+to the domain of outer communications of the Kerr spacetime.
+\end{quote}
+
