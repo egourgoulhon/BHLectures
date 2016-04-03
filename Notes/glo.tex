@@ -458,8 +458,22 @@ including at the boundary $\scri$.
 \end{remark}
 
 \begin{example}[conformal completion of AdS$_{n}$ spacetime]
-... to be completed ...
+... to be completed ... \\
+$\scri$ is timelike
 \end{example}
+
+More generally, if $\w{g}$ is a solution of Einstein vacuum equation with
+a cosmological constant $\Lambda$ [Eq.~(\ref{e:bas:Einstein_eq})], then
+\begin{itemize}
+\item $\scri$ is a null hypersurface if $\Lambda=0$;
+\item $\scri$ is a spacelike hypersurface if $\Lambda>0$;
+\item $\scri$ is a timelike hypersurface if $\Lambda<0$.
+\end{itemize}
+\begin{proof}
+... to be completed ...
+\end{proof}
+
+
 
 Furthermore, one says that $(\tilde{\M},\w{\tilde{g}})$ is a
 \defin{conformal completion at null infinity}\index{conformal!completion!at null infinity}
@@ -484,6 +498,19 @@ instead of \emph{conformal completion}, but in general $\tilde{\M}$ is not a
 compact manifold. For instance, because we omitted the points $i^+$, $i^-$ and $i^0$,
 $\tilde{\M}$ is not compact even for Minkowski spacetime.
 \end{remark}
+
+\begin{remark}
+Note that the above definition of $\scri^+$ and $\scri^-$ does not impose
+that these two objects are null hypersurfaces of $(\tilde{\M},\w{\tilde{g}})$.
+This is true for Minkowski spacetime, but not necessarily for other spacetimes,
+as the following example shows.
+\end{remark}
+
+\begin{example}[Conformal completion of dS$_{n}$ spacetime]
+... to be completed ... \\
+$\scri^+$ and $\scri^-$ are spacelike
+\end{example}
+
 
 Penrose \cite{Penro64,Penro68} has defined
 a spacetime $(\M,\w{g})$ to be \defin{asymptotically simple}\index{asymptotically!simple} iff there exists
@@ -588,10 +615,20 @@ the set of points of $\M$ that are not in the causal past of the future null inf
 \be \label{e:glo:def_BH}
     \encadre{\mathscr{B} := \M \setminus (J^-(\scri^+)\cap\M) } .
 \ee
+(cf. Fig.~\ref{f:glo:def_bh}).
 The black hole region is thus the set of points of $\M$
 from which no future-directed causal curve in $\tilde{\M}$ reaches $\scri^+$.
 Of course, it may be that $\mathscr{B} = \varnothing$, in which case one
 says that the spacetime $(\M,\w{g})$ contains no black hole.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{glo_def_bh.pdf}}
+\caption[]{\label{f:glo:def_bh} \footnotesize
+The black hole region $\mathscr{B}$ defined as the complement of
+the causal past of the future null infinity, $J^-(\scri^+)$.}
+\end{figure}
+
+
 \begin{example}
 The Minkowski spacetime contains no black hole, for all future-directed null geodesics
 terminate at $\scri^+$ (cf. Fig.~\ref{f:glo:conf_Mink_null}).
@@ -632,7 +669,7 @@ $\partial J^-(\scri^+) \cap \M =  \partial(J^-(\scri^+)\cap\M)$; hence
     \encadre{\Hor = \partial J^-(\scri^+) \cap \M }.
 \ee
 In words: the future event horizon $\Hor$ is the part of the boundary of the causal past
-of the future null infinity $\scri^+$ that lies in $\M$.
+of the future null infinity $\scri^+$ that lies in $\M$ (cf. Fig.~\ref{f:glo:def_bh}).
 Note that thanks to identity (\ref{e:glo:boundary_JS_IS}), we can write as
 well
 \be
@@ -1116,6 +1153,7 @@ Any spacetime $(\M,\w{g})$ that
 \begin{itemize}
 \item is 4-dimensional
 \item is asymptotically flat
+\item is stationary
 \item contains a black hole with a connected regular horizon
 \item is analytic
 \item is a solution of the vacuum Einstein equation
