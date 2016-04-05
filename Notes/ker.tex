@@ -1,0 +1,91 @@
+\chapter{Kerr black hole}
+\label{s:ker}
+\index{Kerr!black hole}
+
+\minitoc
+
+\section{Introduction}
+
+\section{The Kerr solution}
+
+\subsection{Expression in Boyer-Lindquist coordinates}
+
+The Kerr solution depends on two constant real non-negative parameters:
+\begin{itemize}
+\item the \defin{mass parameter}\index{mass!parameter of Kerr solution} $m > 0$, to be
+interpreted in Sec.~?? as the black hole mass;
+\item the \defin{spin parameter}\index{spin!parameter of Kerr solution} $a \geq 0 $,
+to be interpreted in Sec.~?? as the reduced angular momentum  $a=J/m$, $J$ being the
+black hole angular momentum.
+\end{itemize}
+In this part, we focus on Kerr solutions for which
+\be \label{e:ker:a_lower_m}
+    0 < a < m .
+\ee
+The Kerr solution is usually presented in the so-called
+\defin{Boyer-Lindquist coordinates}\index{Boyer-Lindquist coordinates}
+$(t,r,\th,\ph)$. Except for the standard singularities of the
+spherical coordinates $(\th,\ph)$ on $\SS^2$ at $\theta\in\{0,\pi\}$,
+we may consider that the Boyer-Lindquist coordinates cover the manifold
+$\R^2\times\SS^2$, with $t$ spanning $\R$, $r$
+spanning\footnote{NB: $r$ does not only span $(0,+\infty)$ as in the case of
+the standard spherical coordinates $(r,\th,\ph)$ on $\R^3$.} $\R$ and
+$\th$ spanning $(0,\pi)$ and $\ph$ spanning $(0,2\pi)$. Hence
+$(t,r)$ is a Cartesian chart covering $\R^2$ and $(\th,\ph)$ is the standard
+spherical chart of $\SS^2$.
+
+The spacetime manifold can then be taken as an open subset $\M_{\rm BL}$
+of $\mathbb{R}^2\times\mathbb{S}^2$ formed by the disjoint union of three components:
+\bea
+    \M_{\rm BL} & := & \M_{\rm I} \cup \M_{\rm II} \cup \M_{\rm III} , \\
+    \M_{\rm I} & := & \R\times(r_+,+\infty)\times\SS^2 \\
+    \M_{\rm II} & := & \R\times(r_-,r_+)\times\SS^2 \\
+    \M_{\rm III} & := & \R\times(-\infty,r_-)\times\SS^2 \setminus \ring,
+\eea
+where
+\be
+    \encadre{r_+ := m + \sqrt{m^2-a^2}} \quad\mbox{and}\quad  \encadre{r_- := m - \sqrt{m^2-a^2}}
+\ee
+and $\ring$ is the subset of $\R^2\times\SS^2$ defined in terms of the Boyer-Lindquist coordinates $(t,r,\th,\ph)$ by
+\be
+    \ring = \left\{ p \in \R^2\times\SS^2,
+        \quad r(p) = 0 \ \mbox{and}\ \th(p) = \frac{\pi}{2} \right\} .
+\ee
+Note that thanks to the constraint (\ref{e:ker:a_lower_m}), $r_+$ and $r_-$
+are well defined and obey
+\be
+    0 < r_- < r_+ < 2 m .
+\ee
+Note also that $\ring$ is spanned by the coordinates $(t,\ph)$ and is diffeomorphic to the 2-dimensional cylinder $\R\times\SS^1$:
+\be
+    \ring \simeq \R\times\SS^1 .
+\ee
+This is so because $r=0$ is \emph{not} a peculiar value of $r$ in $\R^2\times\SS^2$.
+
+The \defin{Kerr metric}\index{Kerr!metric} is defined by the following
+components in terms of the Boyer-Lindquist coordinates $(t,r,\th,\ph)$:
+\be \label{e:ker:metric_BL}
+    \encadre{
+    \begin{array}{ll}
+    g_{\mu\nu}\,  \D x^\mu \D x^\nu  = &
+    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right) \, \D t^2
+    - \frac{4 m a r \sin^2\th}{\rho^2} \,  \D t\, \D\ph
+    + \frac{\rho^2}{\Delta} \, \D r^2  \\[2ex]
+    & \displaystyle + \rho^2 \D \th^2
+    + \left( r^2 + a^2 + \frac{2 m a^2 r \sin^2\th}{\rho^2} \right)
+    \sin^2\th \, \D \ph^2 ,
+    \end{array}
+    }
+\ee
+with
+\be
+    \encadre{\rho^2 := r^2 + a^2 \cos^2\th}
+\ee
+and
+\be
+    \encadre{\Delta := r^2 - 2 m r + a^2} .
+\ee
+By means of a computer algebra system (cf. Appendix~\ref{s:sam}),
+it is easy to check that $\left(\M_{\rm BL},\w{g}\right)$ with $\w{g}$ given
+by (\ref{e:ker:metric_BL}), is a solution of Einstein equation (\ref{e:bas:Einstein_eq})
+in vacuum ($\w{T}=0$) and with a vanishing cosmological constant ($\Lambda=0$).
