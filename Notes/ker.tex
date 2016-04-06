@@ -8,7 +8,7 @@
 
 \section{The Kerr solution}
 
-\subsection{Expression in Boyer-Lindquist coordinates}
+\subsection{Expression in Boyer-Lindquist coordinates} \label{s:ker:expr_BL}
 
 The Kerr solution depends on two constant real non-negative parameters:
 \begin{itemize}
@@ -34,8 +34,9 @@ $\th$ spanning $(0,\pi)$ and $\ph$ spanning $(0,2\pi)$. Hence
 $(t,r)$ is a Cartesian chart covering $\R^2$ and $(\th,\ph)$ is the standard
 spherical chart of $\SS^2$.
 
-The spacetime manifold can then be taken as an open subset $\M_{\rm BL}$
-of $\mathbb{R}^2\times\mathbb{S}^2$ formed by the disjoint union of three components:
+In this section, let us choose the spacetime manifold the open subset $\M_{\rm BL}$
+of $\mathbb{R}^2\times\mathbb{S}^2$ formed by the disjoint union of
+the following three components:
 \begin{subequations}
 \begin{align}
     \M_{\rm BL} & :=  \M_{\rm I} \cup \M_{\rm II} \cup \M_{\rm III} , \\
@@ -59,7 +60,7 @@ are well defined and obey
     0 < r_- < m < r_+ < 2 m .
 \ee
 Note also that $\ring$ is spanned by the coordinates $(t,\ph)$ and is diffeomorphic to the 2-dimensional cylinder $\R\times\SS^1$:
-\be
+\be \label{e:ker:ring_R_S1}
     \ring \simeq \R\times\SS^1 .
 \ee
 This is so because $r=0$ is \emph{not} a peculiar value of $r$ in $\R^2\times\SS^2$.
@@ -67,6 +68,7 @@ In view of Eqs.~(\ref{e:ker:def_M_I})-(\ref{e:ker:def_M_III}) and (\ref{e:ker:de
 the various connected components of $\M_{\rm BL}$ are defined in terms of the
 Boyer-Lindquist coordinates $(t,r,\th,\ph)$ by
 \begin{subequations}
+\label{e:ker:M_I_III_r}
 \begin{align}
   \forall p \in  \M_{\rm BL},\quad p \in \M_{\rm I} & \iff r(p) > r_+ \\
     \quad p \in \M_{\rm II} & \iff r_- < r(p) < r_+ \\
@@ -246,7 +248,7 @@ as outside the region $\mathscr{T}$ in $\M_{\rm III}$;
 \end{itemize}
 The region $\mathscr{T}$ is called
 \defin{Carter time machine}\index{Carter!time machine}\index{time!machine (Carter)}.
-This name stems from the fact that, thanks to $\mathscr{T}$, there is
+This name stems from the fact that thanks to $\mathscr{T}$, there is
 a future-directed timelike curve connecting any two points of $\M_{\rm III}$
 (see e.g. Proposition~2.4.7 of O'Neill's textbook \cite{ONeil95} for a
 demonstration, or Carter's original article \cite{Carte68}).
@@ -264,7 +266,117 @@ or $r\rightarrow r_+$; the first case corresponds to the boundary (within $\R^2\
 between $\M_{\rm II}$ and $\M_{\rm III}$ and the second case to the boundary
 between $\M_{\rm I}$ and $\M_{\rm II}$.
 \end{itemize}
-The Kretschmann scalar is
+The divergence when $\rho^2\rightarrow 0$ corresponds to a
+\emph{curvature singularity}\index{curvature!singularity}\index{singularity!curvature --}.
+Indeed the Kretschmann scalar of Kerr metric is (cf. Appendix~\ref{s:sam})
 \be
-    K = 48 m^2\, \frac{r^6 - 15 r^4 a^2\cos^2\th + 15 r^2 a^4 \cos^4\th - a^6\cos^6\th}{(r^2+a^2\cos^2\th)^6}
+    K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma}
+     = 48 \frac{m^2}{\rho^{12}} \left( r^6 - 15 r^4 a^2\cos^2\th + 15 r^2 a^4 \cos^4\th - a^6\cos^6\th \right) .
 \ee
+The value for $\theta=\pi/2$ is thus $K = 48 m^2 / r^6$, which clearly diverges
+for $r\rightarrow 0$ (i.e. $\rho^2\rightarrow 0$).
+Hence $\ring$ is called the
+\defin{ring singularity}\index{ring!singularity}\index{singularity!ring --}
+of Kerr spacetime, the word \emph{ring} reflecting the fact that $t=\mathrm{const}$
+sections of $\ring$ are $\SS^1$ circles [cf. Eq.~(\ref{e:ker:ring_R_S1})].
+
+On the contrary, we shall see in the next section that the divergence
+of the metric components when $\Delta\rightarrow 0$ corresponds to
+a mere
+\emph{coordinate singularity}\index{coordinate!singularity}\index{singularity!coordinate --},
+i.e. to a pathology of Boyer-Lindquist coordinates, which can be cured by switching to
+other coordinates.
+
+\section{Kerr coordinates and extension of the spacetime manifold}
+
+\subsection{Kerr coordinates}
+
+The \defin{Kerr coordinates}\index{Kerr!coordinates} are coordinates
+$\hat{x}^\alpha = (v,r,\th,\tph)$ defined on $\R^2\times\SS^2$ and related to the Boyer-Lindquist coordinates
+$x^\alpha = (t,r,\th,\ph)$ introduced in Sec.~\ref{s:ker:expr_BL} by
+\begin{subequations}
+\label{e:ker:Kerr_coord}
+\begin{align}
+& \encadre{\D v = \D t + \frac{r^2+a^2}{\Delta} \, \D r} \label{e:ker:Kerr_coord_v}\\
+& \encadre{\D \tph = \D \ph + \frac{a}{\Delta}\, \D r} . \label{e:ker:Kerr_coord_tph}
+\end{align}
+\end{subequations}
+If $a=0$, we note that Kerr coordinates are nothing but the ingoing Eddington-Finkelstein
+coordinates on Schwarzschild spacetime (cf. Sec.~??).
+
+The components $\hat{g}_{\alpha\beta}$
+of the metric tensor $\w{g}$ with respect to the Kerr coordinates
+are computed from those with respect to the Boyer-Lindquist ones, as given
+by Eq.~(\ref{e:ker:metric_BL}). One gets (cf. Appendix~\ref{s:sam} or
+Eq.~(5.31) of Ref.~\cite{HawkiE73}, or Lemma~2.5.2 of \cite{ONeil95}):
+\be \label{e:ker:metric_Kerr_coord}
+    \begin{array}{ll}
+    \hat{g}_{\mu\nu}\,  \D \hat{x}^\mu \D \hat{x}^\nu  = &
+    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right) \, \D v^2
+    + 2 \D v\, \D r
+    - \frac{4 a m  r \sin^2\th}{\rho^2} \,  \D v\, \D\tph \\[2ex]
+    & - 2 a \sin^2\th \, \D r\, \D \tph  \displaystyle + \rho^2 \D \th^2
+    + \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right)
+    \sin^2\th \, \D \tph^2 .
+    \end{array}
+\ee
+We note that these metric components do not have any divergence when
+$\Delta\rightarrow 0$, contrary to the Boyer-Lindquist ones. Hence, we may extend
+the Kerr metric to the points of $\R^2\times\SS^2$ where $\Delta=0$, i.e.
+to the hypersurfaces
+\be
+    \Hor := \left\{ p \in \R^2\times\SS^2,\quad r(p) = r_+ \right\}
+\ee
+and
+\be
+    \Hor_{\rm in} := \left\{ p \in \R^2\times\SS^2,\quad r(p) = r_- \right\} .
+\ee
+The hypersurface $\Hor$ is actually the interface between the regions $\M_{\rm I}$
+and $\M_{\rm II}$ and $\Hor_{\rm in}$ is the interface between $\M_{\rm II}$
+and $\M_{\rm III}$ [cf. Eq.~(\ref{e:ker:M_I_III_r})].
+We thus consider
+\be
+    \M := \M_{\rm BL} \cup \Hor \cup \Hor_{\rm in} = \R^2\times\SS^2 \setminus \ring
+\ee
+as the spacetime manifold. In order for $\w{g}$ defined by (\ref{e:ker:metric_Kerr_coord})
+to be a well defined metric on $\M$, it does not suffices that the components
+$\hat{g}_{\alpha\beta}$ do not diverge at $\Hor$ and $\Hor_{\rm in}$: one shall
+check that $\w{g}$ is a non-degenerate bilinear form there as well.
+This is easily proven by considering the determinant of the metric components,
+which turns out to have a simple form (cf. Appendix~\ref{s:sam}):
+\be
+    \det (\hat{g}_{\alpha\beta}) = -\rho^4 \sin^2\th .
+\ee
+Except at $\th=0$ and $\th=\pi$ (the usual singularity of spherical coordinates),
+we have $\det (\hat{g}_{\alpha\beta}) \not= 0$ everywhere on $\M$, since
+$\rho$ vanishes only on $\ring$, which is excluded from $\M$.
+Hence we conclude that $\w{g}$ is not degenerate on $\M$ and thus
+$(\M,\w{g})$ is a well behaved spacetime --- our \defin{Kerr spacetime}\index{Kerr!spacetime}
+from now. We note that, contrary to $\M_{\rm BL}$, $\M$ is a connected manifold.
+
+We deduce from (\ref{e:ker:Kerr_coord}) that the Kerr coordinate frame
+is related to the Boyer-Lindquist coordinate frame by
+\begin{subequations}
+\begin{align}
+    & \wpar_v = \wpar_t \\
+    & \wpar_{\hat{r}} = \wpar_r - \frac{a^2+r^2}{\Delta} \wpar_t
+                        - \frac{a}{\Delta} \wpar_\ph \\
+    & \wpar_{\hat{\th}} = \wpar_\th \\
+    & \wpar_{\tph} = \wpar_\ph .
+\end{align}
+\end{subequations}
+Note that we are using the notation $\wpar_{\hat{r}}$ for the $\partial/\partial r$
+vector of the Kerr coordinates $\hat{x}^\alpha = (v,r,\th,\tph)$, to distinguish
+it from the $\partial/\partial r$ vector of the Boyer-Lindquist coordinates.
+We read on (\ref{e:ker:metric_Kerr_coord}) that $\hat{g}_{rr} = 0$, which
+implies that $\wpar_{\hat{r}}$ is a null vector.
+
+\begin{hist}
+Kerr coordinates are actually those in which R.P.~Kerr originally presented his
+solution \cite{Kerr63}. Actually, he used $-\tph$ instead of $\tph$; hence
+the correspondance between our notations and those of Kerr's article \cite{Kerr63}
+is $v\leftrightarrow u$ and $\tph\leftrightarrow -\phi$.
+\end{hist}
+
+\subsection{3+1 Kerr coordinates}
+
