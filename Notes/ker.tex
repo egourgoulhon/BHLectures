@@ -45,7 +45,7 @@ of $\mathbb{R}^2\times\mathbb{S}^2$ formed by the disjoint union of three compon
 \end{align}
 \end{subequations}
 where
-\be
+\be \label{e:ker:def_r_pm}
     \encadre{r_+ := m + \sqrt{m^2-a^2}} \quad\mbox{and}\quad  \encadre{r_- := m - \sqrt{m^2-a^2}}
 \ee
 and $\ring$ is the subset of $\R^2\times\SS^2$ defined in terms of the Boyer-Lindquist coordinates $(t,r,\th,\ph)$ by
@@ -56,7 +56,7 @@ and $\ring$ is the subset of $\R^2\times\SS^2$ defined in terms of the Boyer-Lin
 Note that thanks to the constraint (\ref{e:ker:a_lower_m}), $r_+$ and $r_-$
 are well defined and obey
 \be
-    0 < r_- < r_+ < 2 m .
+    0 < r_- < m < r_+ < 2 m .
 \ee
 Note also that $\ring$ is spanned by the coordinates $(t,\ph)$ and is diffeomorphic to the 2-dimensional cylinder $\R\times\SS^1$:
 \be
@@ -156,6 +156,103 @@ $\rho^2\sim r^2$, and $\rho^2/\Delta \sim (1-2m/r)^{-1}$, and we see on
 (\ref{e:ker:metric_BL}) that the Kerr metric reduces to the Schwarzschild metric.
 \end{itemize}
 
+\subsection{Ergoregions}
+
+Let us investigate the causal character of the stationary Killing vector $\w{\xi}$.
+We have, according to (\ref{e:ker:metric_BL}) and (\ref{e:ker:def_rho2}),
+\[
+    \w{\xi}\cdot\w{\xi} = g_{tt} = - 1 + \frac{2m r}{r^2 + a^2\cos^2\th} .
+\]
+Thus
+\[
+    \w{\xi}\ \mbox{timelike} \iff r^2 - 2 m r + a^2\cos^2\th > 0
+        \iff r < r_{\E^-}(\theta) \quad\mbox{or}\quad  r > r_{\E^+}(\theta) ,
+\]
+with
+\be
+    r_{\E^\pm}(\theta) := m \pm \sqrt{m^2 - a^2\cos^2\th} .
+\ee
+Comparing with (\ref{e:ker:def_r_pm}), we note that
+\be
+    0 \leq r_{\E^-}(\theta) \leq r_- \leq m \leq r_+ \leq r_{\E^+}(\theta)
+        \leq 2 m ,
+\ee
+with
+\begin{subequations}
+\begin{align}
+ & r_{\E^-}(\pi/2) = 0 \\
+ & r_{\E^-}(0)  = r_{\E^-}(\pi) = r_- \\
+ & r_{\E^+}(0)  = r_{\E^+}(\pi) = r_+ \\
+ & r_{\E^+}(\pi/2) = 2 m .
+\end{align}
+\end{subequations}
+Given the definition of $\M_{\rm I}$, $\M_{\rm II}$ and $\M_{\rm III}$, we conclude that
+\begin{itemize}
+\item $\w{\xi}$ is timelike in the region of $\M_{\rm I}$ defined by $r>r_{\E^+}(\theta)$
+and in the region of $\M_{\rm III}$ defined by $r<r_{\E^-}(\theta)$;
+\item $\w{\xi}$ is null on the hypersurface $\E^+$ of $\M_{\rm I}$ defined by
+$r=r_{\E^+}(\theta)$
+and on the hypersurface $\E^-$ of $\M_{\rm III}$ defined by $r=r_{\E^-}(\theta)$;
+\item $\w{\xi}$ is spacelike in all $\M_{\rm II}$ and in the region
+$\mathscr{G}^+$ of $\M_{\rm I}$
+defined by $r<r_{\E^+}(\theta)$, as well as
+in the region $\mathscr{G}^-$ of $\M_{\rm III}$ defined by $r>r_{\E^-}(\theta)$.
+\end{itemize}
+According to the nomenclature introduced in Sec.~\ref{s:glo:strong_rigidity},
+one calls $\E^+$ (resp. $\E^-$) the
+\defin{outer ergosphere}\index{outer!ergosphere}\index{ergosphere!outer --}
+(resp. \defin{inner ergosphere}\index{inner!ergosphere}\index{ergosphere!inner --})
+and $\mathscr{G}^+$ (resp. $\mathscr{G}^-$) the
+\defin{outer ergoregion}\index{outer!ergoregion}\index{ergoregion!outer --}
+(resp. \defin{inner ergoregion}\index{inner!ergoregion}\index{ergoregion!inner --}).
+\begin{remark}
+Sometimes the word \defin{ergosurface}\index{ergosurface} is used instead of
+\emph{ergosphere}.
+\end{remark}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ker_sign_gpp.pdf}}
+\caption[]{\label{f:ker:sign_gpp} \footnotesize
+Graph of the function giving the sign of $g_{\ph\ph}$ for $a=0.9m$
+and various values of $\theta$.}
+\end{figure}
+
+\subsection{Carter time machine}
+
+Let us now focus on the second Killing vector, $\w{\eta}$.
+From (\ref{e:ker:metric_BL}) and (\ref{e:ker:def_rho2}), we have
+\[
+    \w{\eta}\cdot\w{\eta} = g_{\ph\ph} = \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{r^2 + a^2\cos^2\th} \right) \sin^2\th .
+\]
+Hence
+\[
+    \w{\eta}\ \mbox{spacelike} \iff
+        (r^2 + a^2)(r^2 + a^2\cos^2\th) + 2 a^2 m r \sin^2\th > 0 .
+\]
+For $\theta\rightarrow 0$ or $\theta\rightarrow\pi$, the left-hand side of the above equality
+is always positive, but for $\theta=\pi/2$ and $r$ negative with $|r|$
+small enough so that $2 a^2 m |r| > r^2(r^2 + a^2)$, it is negative. This feature
+is apparent on Fig.~\ref{f:ker:sign_gpp}: for $\theta$ close to $\pi/2$,
+there is a region $\mathscr{T}$ defined by $r_{\mathscr{T}}(\theta) < r < 0$ for some
+negative function $r_{\mathscr{T}}(\theta)$, such that $g_{\ph\ph}<0$.
+Since $\mathscr{T}$ corresponds to negative values of $r$, we have
+$\mathscr{T}\subset \M_{\rm III}$.
+Hence we conclude:
+\begin{itemize}
+\item $\w{\eta}$ is spacelike in all $\M_{\rm I}$ and $\M_{\rm II}$, as well
+as outside the region $\mathscr{T}$ in $\M_{\rm III}$;
+\item $\w{\eta}$ is timelike in the subset $\mathscr{T}$ of $\M_{\rm III}$;
+\item $\w{\eta}$ is null at the boundary of $\mathscr{T}$.
+\end{itemize}
+The region $\mathscr{T}$ is called
+\defin{Carter time machine}\index{Carter!time machine}\index{time!machine (Carter)}.
+This name stems from the fact that, thanks to $\mathscr{T}$, there is
+a future-directed timelike curve connecting any two points of $\M_{\rm III}$
+(see e.g. Proposition~2.4.7 of O'Neill's textbook \cite{ONeil95} for a
+demonstration, or Carter's original article \cite{Carte68}).
+
+\subsection{Singularities}
+
 The components $g_{\alpha\beta}$ of the Kerr metric as given by  (\ref{e:ker:metric_BL})
 are diverging at various locations:
 \begin{itemize}
@@ -167,3 +264,7 @@ or $r\rightarrow r_+$; the first case corresponds to the boundary (within $\R^2\
 between $\M_{\rm II}$ and $\M_{\rm III}$ and the second case to the boundary
 between $\M_{\rm I}$ and $\M_{\rm II}$.
 \end{itemize}
+The Kretschmann scalar is
+\be
+    K = 48 m^2\, \frac{r^6 - 15 r^4 a^2\cos^2\th + 15 r^2 a^4 \cos^4\th - a^6\cos^6\th}{(r^2+a^2\cos^2\th)^6}
+\ee
