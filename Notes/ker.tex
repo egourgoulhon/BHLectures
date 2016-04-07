@@ -357,11 +357,12 @@ from now. We note that, contrary to $\M_{\rm BL}$, $\M$ is a connected manifold.
 We deduce from (\ref{e:ker:Kerr_coord}) that the Kerr coordinate frame
 is related to the Boyer-Lindquist coordinate frame by
 \begin{subequations}
+\label{e:ker:frame_Kerr_BL}
 \begin{align}
     & \wpar_v = \wpar_t \\
     & \wpar_{\hat{r}} = \wpar_r - \frac{a^2+r^2}{\Delta} \wpar_t
                         - \frac{a}{\Delta} \wpar_\ph \\
-    & \wpar_{\hat{\th}} = \wpar_\th \\
+    & \wpar_\th = \wpar_\th \\
     & \wpar_{\tph} = \wpar_\ph .
 \end{align}
 \end{subequations}
@@ -369,7 +370,19 @@ Note that we are using the notation $\wpar_{\hat{r}}$ for the $\partial/\partial
 vector of the Kerr coordinates $\hat{x}^\alpha = (v,r,\th,\tph)$, to distinguish
 it from the $\partial/\partial r$ vector of the Boyer-Lindquist coordinates.
 We read on (\ref{e:ker:metric_Kerr_coord}) that $\hat{g}_{rr} = 0$, which
-implies that $\wpar_{\hat{r}}$ is a null vector.
+implies that $\wpar_{\hat{r}}$ is a null vector. Moreover, asymptotically,
+\[
+    \wpar_{\hat{r}} \sim \wpar_r - \wpar_t \quad\mbox{when}\
+            r \rightarrow +\infty .
+\]
+This shows that $\wpar_{\hat{r}}$ is past-directed. Hence the field lines
+of $-\wpar_{\hat{r}}$ are future-directed null curves,
+which may be qualified of \emph{ingoing} since, by definition, $-\wpar_{\hat{r}}$ points towards
+decreasing values of $r$. Note that, by the very definition of $\wpar_{\hat{r}}$,
+the values of the coordinates $(v,\th,\tph)$ are fixed along each of these
+null curves. We shall therefore denote them by $\Li_{(v,\th,\tph)}$.
+We shall see below that $\Li_{(v,\th,\tph)}$ is actually a null geodesic.
+
 
 \begin{hist}
 Kerr coordinates are actually those in which R.P.~Kerr originally presented his
@@ -380,3 +393,248 @@ is $v\leftrightarrow u$ and $\tph\leftrightarrow -\phi$.
 
 \subsection{3+1 Kerr coordinates}
 
+As in Sec.~??, we shall move from the null coordinate $v$ to a (asymptotically)
+timelike one by setting
+\be \label{e:ker:def_t_tilde}
+    \encadre{\ti = v - r} \iff \encadre{v = \ti + r}
+\ee
+so that $v$ appears as the advanced time $\ti+v$ (compare Eq.~(??)). We thus consider
+the coordinates
+\be
+    (\tilde{x}^\alpha) = (\ti, r, \th,\tph) ,
+\ee
+which we call the
+\defin{3+1 Kerr coordinates}\index{3+1!Kerr coordinates}\index{Kerr!coordinates!3+1 --}.
+In it worth to relate them to the Boyer-Lindquist coordinates
+$(t,r,\th,\ph)$. This is easily done
+by combining (\ref{e:ker:Kerr_coord}) with $\D\ti = \D v - \D r$:
+\begin{subequations}
+\label{e:ker:Kerr_3p1_BL}
+\begin{align}
+& \encadre{\D \ti = \D t + \frac{2m r}{\Delta} \, \D r} \\
+& \encadre{\D \tph = \D \ph + \frac{a}{\Delta}\, \D r} .
+\end{align}
+\end{subequations}
+
+
+\begin{hist}
+In the historical article \cite{Kerr63}, R.P.~Kerr introduced $\ti$ by exactly
+the same transformation as (\ref{e:ker:def_t_tilde}) ($\ti$ is denoted $t$
+in \cite{Kerr63}), but along with Cartesian-type coordinates $(x,y,z)$
+deduced from $(r,\th,\tph)$ by spheroidal transformations, to form the 3+1
+coordinate system $(\ti,x,y,z)$, which is today known as
+\defin{Kerr-Schild coordinates}\index{Kerr-Schild coordinates} (despite
+they have been introduced first in Kerr's article \cite{Kerr63} (1963) and not
+in the article by Kerr and Schild \cite{KerrS65} (1965)). Accordingly,
+our ``3+1 Kerr coordinates'' are a mix of the original Kerr coordinates
+$(v,r,\th,\tph)$ (cf. the previous historical note)
+and the Kerr-Schild coordinates $(\ti,x,y,z)$.
+\end{hist}
+
+Since the transform (\ref{e:ker:def_t_tilde}) leads to $\D v = \D\ti + \D r$,
+the metric components $\tilde{g}_{\alpha\beta}$ with respect to the
+3+1 coordinates $(\ti,r,\th,\tph)$ are easily deduced from
+(\ref{e:ker:metric_Kerr_coord}):
+\be \label{e:ker:metric_Kerr_3p1}
+    \encadre{
+    \begin{array}{ll}
+    \tilde{g}_{\mu\nu}\,  \D \tilde{x}^\mu \D \tilde{x}^\nu  = &
+    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right)  \D \ti^2
+    + \frac{4m r}{\rho^2} \D\ti\, \D r
+    - \frac{4 a m  r \sin^2\th}{\rho^2} \,  \D \ti\, \D\tph \\[2ex]
+    &\displaystyle  + \left( 1 + \frac{2m r}{\rho^2} \right) \D r^2
+     - 2 a \left( 1 + \frac{2m r}{\rho^2} \right) \sin^2\th \, \D r\, \D \tph \\[2ex]
+    & \displaystyle + \rho^2 \D \th^2
+    + \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right)
+    \sin^2\th \, \D \tph^2 .
+    \end{array}
+    }
+\ee
+As a check, we notice the agreement with Eq.~(D.4) of Ref.~\cite{GourgJ06}.
+
+Since we kept $r$, $\th$ and $\tph$ and simply changed
+$v$ to $\ti$ via (\ref{e:ker:def_t_tilde}) when moving from the Kerr
+coordinates to the 3+1 Kerr coordinates, we easily get the relation
+between the two coordinate frames:
+\begin{subequations}
+\label{e:ker:frame_Kerr3p1_Kerr}
+\begin{align}
+    & \wpar_\ti = \wpar_v \\
+    & \wpar_{\tilde r} = \wpar_v + \wpar_{\hat{r}} \\
+    & \wpar_\th = \wpar_\th \\
+    & \wpar_\tph = \wpar_\ph .
+\end{align}
+\end{subequations}
+Note that we have denoted by $\wpar_{\tilde r}$ the second vector of the
+coordinate frame associated to the 3+1 Kerr coordinates
+$(\tilde{x}^\alpha) = (\ti, r, \th,\tph)$, in order to distinguish it from
+the coordinate vector $\wpar_{\hat r}$ of the Kerr coordinates
+$(\hat{x}^\alpha) = (v, r, \th,\tph)$, as well as from the coordinate vector
+$\wpar_r$ of the Boyer-Lindquist coordinates
+$(x^\alpha) = (t,r,\th,\ph)$.
+
+By combining (\ref{e:ker:frame_Kerr_BL}) and (\ref{e:ker:frame_Kerr3p1_Kerr}),
+we get the relation between the 3+1 Kerr coordinate frame and the
+Boyer-Lindquist coordinate frame:
+\begin{subequations}
+\label{e:ker:frame_Kerr3p1_BL}
+\begin{align}
+    & \wpar_\ti = \wpar_t \label{e:ker:frame_Kerr3p1_BL_t} \\
+    & \wpar_{\tilde r} = \wpar_r - \frac{2mr}{\Delta} \wpar_t
+                        - \frac{a}{\Delta} \wpar_\ph \\
+    & \wpar_\th = \wpar_\th \\
+    & \wpar_{\tph} = \wpar_\ph . \label{e:ker:frame_Kerr3p1_BL_ph}
+\end{align}
+\end{subequations}
+We notice on (\ref{e:ker:frame_Kerr3p1_BL_t}) and (\ref{e:ker:frame_Kerr3p1_BL_ph})
+that the coordinate frame vectors $\wpar_\ti$ and $\wpar_\tph$
+coincide with the Killing vectors $\w{\xi}$ and $\w{\eta}$:
+\be \label{e:ker:Killing_vec_3p1}
+    \encadre{\wpar_\ti = \w{\xi}} \quad \mbox{and} \quad
+    \encadre{\wpar_\tph = \w{\eta}} .
+\ee
+That $\wpar_\ti$ and $\wpar_\tph$ are Killing vectors is not surprising since
+the metric components (\ref{e:ker:metric_Kerr_3p1}) do not depend on $\ti$
+nor on $\tph$.
+
+The determinant of the metric components (\ref{e:ker:metric_Kerr_3p1}) has
+a very simple form (cf. Appendix~\ref{s:sam} for the computation):
+\be \label{e:ker:det_g_3p1}
+    \det\left( \tilde{g}_{\mu\nu} \right) = - \rho^4\sin^2\th .
+\ee
+The inverse metric takes also a rather simple form in terms of the 3+1
+Kerr coordinates (cf. Appendix~\ref{s:sam} for the computation):
+\be \label{e:ker:inv_met_3p1}
+    \tilde{g}^{\alpha\beta} = \left(
+    \begin{array}{cccc}
+    - \left( 1 + \frac{2m r}{\rho^2} \right) & \frac{2m r}{\rho^2} & 0 & 0 \\[1ex]
+    \frac{2m r}{\rho^2} & \frac{\Delta}{\rho^2} & 0 & \frac{a}{\rho^2} \\[1ex]
+    0 & 0 &\frac{1}{\rho^2} & 0 \\[1ex]
+    0 & \frac{a}{\rho^2} & 0 & \frac{1}{\rho^2\sin^2\th}
+    \end{array}
+    \right) .
+\ee
+
+Comparing (\ref{e:ker:frame_Kerr3p1_BL}) with (\ref{e:ker:metric_BL}), we
+note that the metric components in 3+1 Kerr coordinates are slightly more
+complicated than those in Boyer-Lindquist coordinates, for they contain
+extra non-diagonal terms: ${\tilde g}_{\ti r}$ and ${\tilde g}_{r \ti}$. However
+the determinant (\ref{e:ker:det_g_3p1})
+and the inverse metric (\ref{e:ker:inv_met_3p1}) are pretty simple. Morever
+the 3+1 Kerr coordinates are as well adapted to the spacetime symmetries
+as the Boyer-Lindquist ones, as (\ref{e:ker:Killing_vec_3p1}) shows, and
+they have the great advantage to be regular on the boundary hypersurfaces
+$\Hor$ and $\Hor_{\rm in}$, contrary to the Boyer-Lindquist ones.
+The last feature is all the more important since
+$\Hor$ is the future event horizon of Kerr spacetime,
+as we are going to see.
+Therefore, we shall continue our study of Kerr spacetime, and especially the
+black hole aspect, by means of the 3+1 Kerr coordinates.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Event horizon and Cauchy horizon}
+
+\subsection{Killing horizons}
+
+Let us consider the hypersurfaces of $\M$ defined by a fixed value of
+the coordinate $r$. $\Hor$ and $\Hor_{\rm in}$ are two particular cases,
+corresponding to $r=r_+$ and $r=r_-$ respectively.
+The normal 1-form to these hypersurfaces is $\dd r$; the corresponding
+gradient vector field is $\vw{\nabla} r$, the components of which are
+$\nabla^\alpha r = g^{\alpha\mu} \partial_\mu r = g^{\alpha r}$.
+According to (\ref{e:ker:inv_met_3p1}), we have
+\be \label{e:ker:nab_r_comp}
+    \nabla^\alpha r = \left( \frac{2m r}{\rho^2}, \frac{\Delta}{\rho^2}, 0, \frac{a}{\rho^2}
+            \right) .
+\ee
+It is then quite natural to consider the vector field
+\be
+    \w{n} := \rho^2 \vw{\nabla} r
+\ee
+for the normal to the hypersurfaces $r=\mathrm{const}$. According to (\ref{e:ker:nab_r_comp}),
+it has indeed simple components on the 3+1 Kerr frame:
+\be \label{e:ker:normal_r}
+    \w{n} = 2 m r \, \wpar_\ti + \Delta \, \wpar_{\tilde r} + a \, \wpar_\tph .
+\ee
+The scalar square of $\w{n}$ is
+\[
+    \w{n}\cdot\w{n} = \w{g}(\w{n},\w{n}) = n_\mu n^\mu = \rho^2 (\nabla_\mu r) n^\mu
+    = \rho^2 n^r .
+\]
+Hence, in view of (\ref{e:ker:normal_r}),
+\be
+    \w{n}\cdot\w{n} = \rho^2 \Delta .
+\ee
+Since $\rho^2>0$ everywhere on $\M$ and $\Delta = (r-r_+)(r-r_-)$ [cf. Eq.~(\ref{e:ker:def_Delta})], we conclude that
+\begin{itemize}
+\item the hypersurfaces $r=\mathrm{const}$ are timelike in regions $\M_{\rm I}$ and $\M_{\rm III}$;
+\item the hypersurfaces $r=\mathrm{const}$ are spacelike in region $\M_{\rm II}$;
+\item $\Hor$ (where $r=r_+$) and $\Hor_{\rm in}$ (where $r=r_-$) are null hypersurfaces.
+\end{itemize}
+
+On $\Hor$ and $\Hor_{\rm in}$, $\Delta=0$, so that (\ref{e:ker:nab_r_comp})
+reduces to
+\be \label{e:ker:normal_r_Killing}
+    \w{n} = 2 m r_{\pm} \, \wpar_\ti + a \, \wpar_\tph = 2 m r_{\pm} \, \w{\xi}
+        + a \, \w{\eta} ,
+\ee
+where we have used (\ref{e:ker:Killing_vec_3p1}) and $r_{\pm}$ stands for
+$r_+$ on $\Hor$ and $r_-$ on $\Hor_{\rm in}$.
+On $\Hor$, we may rewrite this expression as
+\be \label{e:ker:n_rp_chi}
+    \w{n} = 2 m r_+ \, \w{\chi} ,
+\ee
+with
+\be \label{e:ker:def_chi}
+    \encadre{\w{\chi} := \w{\xi} + \Omega_H \, \w{\eta} }
+\ee
+and
+\be
+    \encadre{\Omega_H := \frac{a}{2 m r_+} = \frac{a}{r_+^2 + a^2}
+        = \frac{a}{2m\left( m + \sqrt{m^2-a^2} \right)} }.
+\ee
+$\Omega_H$ being a constant, the vector field $\w{\chi}$ defined by
+(\ref{e:ker:def_chi}) is a Killing vector field. Moreover, (\ref{e:ker:n_rp_chi})
+shows that this Killing vector is normal to the null hypersurface $\Hor$.
+We conclude that $\Hor$ is a
+Killing horizon\index{Killing!horizon}\index{horizon!Killing --} (cf. Sec.~\ref{s:def:def_Killing_hor}).
+
+Similarly, on $\Hor_{\rm in}$, we may rewrite (\ref{e:ker:normal_r_Killing})
+as $\w{n} = 2 m r_- \, \w{\chi}_{\rm in}$, with
+\be
+    \w{\chi}_{\rm in} := \w{\xi} + \Omega_{\rm in} \, \w{\eta}
+\ee
+and
+\be
+    \Omega_{\rm in} := \frac{a}{2 m r_-} = \frac{a}{r_-^2 + a^2}
+        = \frac{a}{2m\left( m - \sqrt{m^2-a^2} \right)} ,
+\ee
+thereby arriving at the same conclusion: $\Hor_{\rm in}$ is a Killing horizon.
+
+
+
+\subsection{Event horizon}
+
+According to the discussion in Sec.~\ref{s:glo:strong_rigidity}, $\Omega_H$
+is called the
+\defin{black hole rotation velocity}\index{black hole!rotation velocity}\index{rotation!velocity}.
+
+
+\subsection{Cauchy horizon}
+
+\subsection{Surface gravity}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Global quantities}
+
+\subsection{Mass}
+
+\subsection{Angular momentum}
+
+\subsection{Black hole area}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Maximal extension}
