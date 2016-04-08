@@ -380,8 +380,8 @@ of $-\wpar_{\hat{r}}$ are future-directed null curves,
 which may be qualified of \emph{ingoing} since, by definition, $-\wpar_{\hat{r}}$ points towards
 decreasing values of $r$. Note that, by the very definition of $\wpar_{\hat{r}}$,
 the values of the coordinates $(v,\th,\tph)$ are fixed along each of these
-null curves. We shall therefore denote them by $\Li_{(v,\th,\tph)}$.
-We shall see below that $\Li_{(v,\th,\tph)}$ is actually a null geodesic.
+null curves. We shall therefore denote them by $\Li^{\rm in}_{(v,\th,\tph)}$.
+We shall see below that $\Li^{\rm in}_{(v,\th,\tph)}$ is actually a null geodesic.
 
 
 \begin{hist}
@@ -533,9 +533,9 @@ black hole aspect, by means of the 3+1 Kerr coordinates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Event horizon and Cauchy horizon}
+\section{Event horizon}
 
-\subsection{Killing horizons}
+\subsection{Killing horizons} \label{s:ker:Killing_hor}
 
 Let us consider the hypersurfaces of $\M$ defined by a fixed value of
 the coordinate $r$. $\Hor$ and $\Hor_{\rm in}$ are two particular cases,
@@ -590,7 +590,7 @@ with
     \encadre{\w{\chi} := \w{\xi} + \Omega_H \, \w{\eta} }
 \ee
 and
-\be
+\be \label{e:ker:def_OmegaH}
     \encadre{\Omega_H := \frac{a}{2 m r_+} = \frac{a}{r_+^2 + a^2}
         = \frac{a}{2m\left( m + \sqrt{m^2-a^2} \right)} }.
 \ee
@@ -612,18 +612,110 @@ and
 \ee
 thereby arriving at the same conclusion: $\Hor_{\rm in}$ is a Killing horizon.
 
-
-
 \subsection{Event horizon}
 
-According to the discussion in Sec.~\ref{s:glo:strong_rigidity}, $\Omega_H$
-is called the
+As a null hypersurface, $\Hor$ is a one-way membrane (cf. Sec.~\ref{s:def:hor_as_null}),
+therefore any (massive or null) particle that crossed it from $\M_{\rm I}$ to
+$\M_{\rm II}$ can never be back in $\M_{\rm I}$.
+Thus $\M_{\rm II}$ and $\M_{\rm III}$ are in the black hole region with respect to
+$\scri^+$ corresponding to $r\rightarrow +\infty$.
+
+Let us show that $\Hor$ is exactly the boundary of the black hole region, i.e.
+that any point in $\M_{\rm I}$ can emit a signal reaching $\scri^+$.
+To this aim, let us consider the vector field $\wl$ defined on $\M$ by
+\be \label{e:ker:def_ell_outgoing}
+    \wl = \left( \frac{1}{2} + \frac{m r}{r^2 + a^2} \right) \wpar_\ti
+        + \left( \frac{1}{2} - \frac{m r}{r^2 + a^2} \right) \wpar_{\tilde r}
+        + \frac{a}{r^2+a^2} \, \wpar_\tph .
+\ee
+$\wl$ is a null vector everywhere, as it can easily be checked
+via (\ref{e:ker:metric_Kerr_3p1}):
+\be
+    \w{g}(\wl,\wl) = 0 .
+\ee
+The field lines of $\wl$ are thus null curves\footnote{They are actually
+null geodesics, as we shall see in Sec.~\ref{s:ker:surf_grav}.}. They obey
+\[
+   \frac{\D r}{\D\lambda} = \el^r = \frac{1}{2} - \frac{m r}{r^2 + a^2} ,
+\]
+where $\lambda$ is the parameter associated with $\wl$.
+Let $p$ be a point in $\M_{\rm I}$, of 3+1 Kerr coordinates $(\ti_0,r_0,\th_0,\tph_0)$.
+The null curve $\Li$ of tangent vector $\wl$ that departs from $p$ obeys
+\[
+    \left. \frac{\D r}{\D\lambda} \right| _{p} = \frac{1}{2} - \frac{m r_0}{r_0^2 + a^2} > 0 ,
+\]
+where the inequality follows from the fact that $r_0 > r_+$ wherever $p$ lies in
+$\M_{\rm I}$.
+Hence, initially $r$ is increasing along $\Li$ and we get, since $-mr/(r^2+a^2)$ is an
+increasing function of $r$,
+\[
+    \frac{\D r}{\D\lambda} > \frac{1}{2} - \frac{m r_0}{r_0^2 + a^2} =: \alpha .
+\]
+Since $\alpha$ is a constant, we deduce that
+\[
+    r > r_0 + \alpha(\lambda - \lambda_0) ,
+\]
+where $\lambda_0$ is the value of $\Li$'s parameter at $p$. When $\lambda\rightarrow +\infty$,
+we get $r\rightarrow +\infty$, which proves that the null curve $\Li$
+reaches $\scri^+$. Hence we conclude:
+\begin{quote}
+$\mathscr{B} = \M \setminus \M_{\rm I}$ is the black hole region, the event
+horizon of which is $\Hor$.
+\end{quote}
+Incidentally, this illustrates Hawking's strong rigidity theorem discussed
+in Sec.~\ref{s:glo:strong_rigidity}: the event horizon of Kerr spacetime
+is indeed a Killing horizon, as we have shown in Sec.~\ref{s:ker:Killing_hor}.
+
+According to the discussion in Sec.~\ref{s:glo:strong_rigidity}, we may then
+call the quantity $\Omega_H$ introduced in
+Eqs.~(\ref{e:ker:def_chi})-(\ref{e:ker:def_OmegaH}) the
 \defin{black hole rotation velocity}\index{black hole!rotation velocity}\index{rotation!velocity}.
 
 
-\subsection{Cauchy horizon}
+\subsection{Surface gravity} \label{s:ker:surf_grav}
 
-\subsection{Surface gravity}
+By construction, the null vector field $\wl$ defined by Eq.~(\ref{e:ker:def_ell_outgoing}) coincides with the Killing vector $\w{\chi}$ on $\Hor$,
+since $m r/(r^2 + a^2) \equalH 1/2$ and $a/(r^2+a^2) \equalH \Omega_H$:
+\be
+    \wl \equalH \w{\chi} .
+\ee
+Moreover, $\wl$ is a pregeodesic vector (cf. Sec.~\ref{s:def:geod_gener}) everywhere.
+An explicit computation (cf. Appendix~\ref{s:sam}) reveals that
+\be \label{e:ker:pregeod_ell}
+    \wnab_{\wl}\, \wl = \bar{\kappa} \, \wl ,
+\ee
+with
+\be
+    \bar{\kappa} := \frac{m(r^2-a^2)}{(r^2+a^2)^2} .
+\ee
+As we have seen in Sec.~\ref{s:def:geod_gener}, Eq.~(\ref{e:ker:pregeod_ell})
+ implies that the field
+lines of $\wl$ are null geodesics. Actually they constitute a privileged
+family of null geodesics in Kerr spacetime, called the
+\defin{outgoing principal null geodesics}\index{principal!null geodesic}.
+
+Since $\wl$ coincides with $\w{\chi}$ on $\Hor$, we have
+\be \label{e:ker:pregeod_chi}
+    \encadre{ \wnab_{\w{\chi}}\, \w{\chi} \equalH \kappa \, \w{\chi} },
+\ee
+with
+\[
+    \kappa = \left. \bar{\kappa} \right| _{r=r_+} = \frac{m(r_+^2-a^2)}{(r_+^2+a^2)^2} .
+\]
+$r_+$ being a zero of $\Delta$, we have $r_+^2 + a^2 = 2 m r_+$, so that we may
+rewrite the above expression in terms of $r_+$ and $a$ only:
+\be
+    \kappa = \frac{r_+^2 - a^2}{2r_+(r_+^2+a^2)} .
+\ee
+Substituting (\ref{e:ker:def_r_pm}) for $r_+$, we get an expression in terms
+of the two basic Kerr parameters:
+\be
+    \encadre{ \kappa = \frac{\sqrt{m^2 - a^2}}{2m(m + \sqrt{m^2-a^2})} } .
+\ee
+From Eq.~(\ref{e:ker:pregeod_chi}), $\kappa$ is the non-affinity coefficient
+of the null normal $\chi$ of the null hypersurface $\Hor$. In the present
+context, where $\Hor$ is an event horizon, $\kappa$ is called
+the \defin{black hole surface gravity}\index{surface!gravity}\index{gravity!surface --}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -638,3 +730,5 @@ is called the
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Maximal extension}
+
+\subsection{Cauchy horizon}
