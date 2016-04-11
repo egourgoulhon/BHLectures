@@ -34,9 +34,19 @@ $\th$ spanning $(0,\pi)$ and $\ph$ spanning $(0,2\pi)$. Hence
 $(t,r)$ is a Cartesian chart covering $\R^2$ and $(\th,\ph)$ is the standard
 spherical chart of $\SS^2$.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ker_spher_view.pdf}}
+\caption[]{\label{f:ker:spher_view} \footnotesize
+A view of a section $t=\mathrm{const}$ of $\mathbb{R}^2\times\mathbb{S}^2$
+in terms of the coordinates $(R,\th,\ph)$, with $R:=\mathrm{e}^r$,
+so that the region $r\rightarrow -\infty$
+is reduced to a single point at the centre of all the pictured spheres.}
+\end{figure}
+
+
 In this section, let us choose the spacetime manifold the open subset $\M_{\rm BL}$
 of $\mathbb{R}^2\times\mathbb{S}^2$ formed by the disjoint union of
-the following three components:
+the following three components (cf. Fig.~\ref{f:ker:spher_view}):
 \begin{subequations}
 \begin{align}
     \M_{\rm BL} & :=  \M_{\rm I} \cup \M_{\rm II} \cup \M_{\rm III} , \\
@@ -63,7 +73,8 @@ Note also that $\ring$ is spanned by the coordinates $(t,\ph)$ and is diffeomorp
 \be \label{e:ker:ring_R_S1}
     \ring \simeq \R\times\SS^1 .
 \ee
-This is so because $r=0$ is \emph{not} a peculiar value of $r$ in $\R^2\times\SS^2$.
+This is so because $r=0$ is \emph{not} a peculiar value of $r$ in $\R^2\times\SS^2$
+(cf. Fig.~\ref{f:ker:spher_view}).
 In view of Eqs.~(\ref{e:ker:def_M_I})-(\ref{e:ker:def_M_III}) and (\ref{e:ker:def_ring}), it is clear that
 the various connected components of $\M_{\rm BL}$ are defined in terms of the
 Boyer-Lindquist coordinates $(t,r,\th,\ph)$ by
@@ -101,7 +112,7 @@ and
 \be \label{e:ker:def_Delta}
     \encadre{\Delta := r^2 - 2 m r + a^2 = (r-r_-)(r-r_+)} .
 \ee
-By means of a computer algebra system (cf. Appendix~\ref{s:sam}),
+By means of a computer algebra system (cf. Sec.~\ref{s:sam:Kerr_solution}),
 it is easy to check that $\left(\M_{\rm BL},\w{g}\right)$ with $\w{g}$ given
 by (\ref{e:ker:metric_BL}), is a solution of Einstein equation (\ref{e:bas:Einstein_eq})
 in vacuum ($\w{T}=0$) and with a vanishing cosmological constant ($\Lambda=0$).
@@ -268,7 +279,7 @@ between $\M_{\rm I}$ and $\M_{\rm II}$.
 \end{itemize}
 The divergence when $\rho^2\rightarrow 0$ corresponds to a
 \emph{curvature singularity}\index{curvature!singularity}\index{singularity!curvature --}.
-Indeed the Kretschmann scalar of Kerr metric is (cf. Appendix~\ref{s:sam})
+Indeed the Kretschmann scalar of Kerr metric is (cf. Sec.~\ref{s:sam:Kerr_solution})
 \be
     K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma}
      = 48 \frac{m^2}{\rho^{12}} \left( r^6 - 15 r^4 a^2\cos^2\th + 15 r^2 a^4 \cos^4\th - a^6\cos^6\th \right) .
@@ -323,7 +334,7 @@ Eq.~(5.31) of Ref.~\cite{HawkiE73}, or Lemma~2.5.2 of \cite{ONeil95}):
 We note that these metric components do not have any divergence when
 $\Delta\rightarrow 0$, contrary to the Boyer-Lindquist ones. Hence, we may extend
 the Kerr metric to the points of $\R^2\times\SS^2$ where $\Delta=0$, i.e.
-to the hypersurfaces
+to the hypersurfaces (cf. Fig.~\ref{f:ker:spher_view})
 \be
     \Hor := \left\{ p \in \R^2\times\SS^2,\quad r(p) = r_+ \right\}
 \ee
@@ -343,7 +354,7 @@ to be a well defined metric on $\M$, it does not suffices that the components
 $\hat{g}_{\alpha\beta}$ do not diverge at $\Hor$ and $\Hor_{\rm in}$: one shall
 check that $\w{g}$ is a non-degenerate bilinear form there as well.
 This is easily proven by considering the determinant of the metric components,
-which turns out to have a simple form (cf. Appendix~\ref{s:sam}):
+which turns out to have a simple form (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord}):
 \be
     \det (\hat{g}_{\alpha\beta}) = -\rho^4 \sin^2\th .
 \ee
@@ -498,12 +509,12 @@ the metric components (\ref{e:ker:metric_Kerr_3p1}) do not depend on $\ti$
 nor on $\tph$.
 
 The determinant of the metric components (\ref{e:ker:metric_Kerr_3p1}) has
-a very simple form (cf. Appendix~\ref{s:sam} for the computation):
+a very simple form (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord} for the computation):
 \be \label{e:ker:det_g_3p1}
     \det\left( \tilde{g}_{\mu\nu} \right) = - \rho^4\sin^2\th .
 \ee
 The inverse metric takes also a rather simple form in terms of the 3+1
-Kerr coordinates (cf. Appendix~\ref{s:sam} for the computation):
+Kerr coordinates (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord} for the computation):
 \be \label{e:ker:inv_met_3p1}
     \tilde{g}^{\alpha\beta} = \left(
     \begin{array}{cccc}
@@ -680,7 +691,7 @@ since $m r/(r^2 + a^2) \equalH 1/2$ and $a/(r^2+a^2) \equalH \Omega_H$:
     \wl \equalH \w{\chi} .
 \ee
 Moreover, $\wl$ is a pregeodesic vector (cf. Sec.~\ref{s:def:geod_gener}) everywhere.
-An explicit computation (cf. Appendix~\ref{s:sam}) reveals that
+An explicit computation (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord}) reveals that
 \be \label{e:ker:pregeod_ell}
     \wnab_{\wl}\, \wl = \bar{\kappa} \, \wl ,
 \ee
