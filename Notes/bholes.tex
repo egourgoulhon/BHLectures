@@ -20,6 +20,7 @@
 \usepackage{mathrsfs} % -> \mathscr
 \usepackage{ifthen}
 \usepackage{tikz}
+\usepackage[framemethod=TikZ]{mdframed} % -> grey boxes
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -131,6 +132,7 @@
 {\par\medskip\noindent\small\textbf{Historical note:}}%
 {\par\medskip}
 
+\newmdenv[backgroundcolor=gray!20!white,roundcorner=5pt,hidealllines=true]{greybox}
 
 %\newenvironment{remark}[1][]%
 %{\begin{description} \item[\emph{Remark #1:}]\it}%
@@ -182,6 +184,8 @@ CNRS / Observatoire de Paris / Université Paris Diderot\\
 \include{def}  % The concept of black hole 1: Horizons as null hypersurfaces
 
 \include{glo}  % The concept of black hole 2: The global view
+
+\include{sta}  % Stationary black holes
 
 \include{sch}  % Schwarzschild black hole
 
