@@ -2074,11 +2074,62 @@ called \emph{isolated horizons}\index{isolated!horizon}\index{horizon!isolated}.
 
 \section{Killing horizons}
 
-\subsection{Definition} \label{s:def:def_Killing_hor}
 
 A special kind of non-expanding horizons, which is of primordial
 importance for the theory of
 stationary black holes, is that of Killing horizons with compact cross-sections.
+This requires the concept of Killing vector and 1-dimensional group of
+isometries, which we discuss first.
+
+\subsection{Spacetime symmetries}
+
+Symmetries of spacetime are described in a coordinate-independent way by means of
+a (symmetry) group acting on the spacetime manifold $\M$.
+Through this action, each transformation belonging to the group displaces points within $\M$ and one demands that the metric $\w{g}$ is invariant under such displacement.
+More precisely, given
+a group $G$, a \defin{group action}\index{group!action} of $G$ on $\M$ is a map\footnote{Do no confuse the generic element $g$ of the group $G$ with the metric tensor $\w{g}$.}
+\be
+	\begin{array}{rccl}
+	\Phi: & G\times \M & \longrightarrow & \M \\
+		& (g,p) & \longmapsto & \Phi(g,p) =: g(p)
+	\end{array}
+\ee
+such that
+\begin{itemize}
+\item $\forall (g,h) \in G^2,\  \forall p\in\M,\  g(h(p)) = gh(p)$, where $gh$ denotes the product of $g$ by $h$ according to the group law of
+$G$;
+\item if $e$ is the identity element of $G$, then
+$\forall p\in \M,\  e(p) = p$ .
+\end{itemize}
+The \defin{orbit}\index{orbit!under a group action} of a point $p\in\M$ is the set $\{g(p),\ g\in G\}\subset\M$, i.e. the set of points which are connected to $p$ by some group transformation.
+
+
+An important class of group actions are those for which $G$ is a one-dimensional
+\emph{Lie group} (i.e. a ``continuous'' group). Then around $e$, the elements of $G$ can be labelled by a parameter $t\in \R$, such that $g_{t=0} = e$.
+The orbit of a given point $p\in\M$ under the group action is then either $\{p\}$ (case where $p$ is fixed point of the
+group action) or a one-dimensional curve of $\M$. In the latter case,
+$t$ is then a natural parameter along the curve (cf. Fig.~\ref{f:def:orbit_group}). The tangent vector
+corresponding to that parameter is called the \defin{generator of the symmetry group}
+(associated with the $t$ parametrization). It is given by
+\be
+    \w{\xi} = \frac{\D\w{x}}{\D t} ,
+\ee
+where $\D\w{x}$ is the infinitesimal vector connecting the point $p$ to the point
+$g_{\D t}(p)$ (cf. Sec.~\ref{s:bas:vectors} and Fig.~\ref{f:def:orbit_group}). The action of $G$ on $\M$ in any infinitesimal neighbourhood
+of $p$ amounts then to translations along the infinitesimal vector $\D t\, \w{\xi}$.
+
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{def_orbit_group.pdf}}
+\caption[]{\label{f:def:orbit_group} \footnotesize
+Orbit of a point $p$ under the action of a one-dimensional Lie group, the elements $g_t$ of which being labelled by the parameter $t\in\R$. The vector $\w{\xi} = \D\w{x}/\D t$ is the group
+generator associated with this parameter.}
+\end{figure}
+
+
+
+
+\subsection{Definition of a Killing horizon} \label{s:def:def_Killing_hor}
+
 
 A Killing horizon is defined as follows. Let us assume that the spacetime
 $(\M,\w{g})$ has a continuous symmetry, i.e. that it is invariant under
