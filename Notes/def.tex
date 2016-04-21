@@ -2114,14 +2114,15 @@ The \defin{orbit}\index{orbit!under a group action} of a point $p\in\M$ is the s
 reduced to $\{p\}$.
 
 An important class of group actions are those for which $G$ is a 1-dimensional
-\emph{Lie group} (i.e. a ``continuous'' group). Then around $e$, the elements of $G$ can be labelled by a parameter $t\in \R$, such that $g_{t=0} = e$. It is then
+\emph{Lie group}, i.e. a ``continuous'' group (actually a ``differentiable'' group).
+Then around $e$, the elements of $G$ can be labelled by a parameter $t\in \R$, such that $g_{t=0} = e$. It is then
 common to use the shorthand notation
 \be
         \Phi_t := \Phi_{g_t} .
 \ee
 Because $G$ is a 1-dimensional Lie group, the orbit of a given point $p\in\M$ under the group action is then either $\{p\}$ (when $p$ is fixed point of the
 group action) or a curve of $\M$. In the latter case,
-$t$ is a natural parameter along the curve (cf. Fig.~\ref{f:def:orbit_group}). The tangent vector corresponding to that parameter is called the \defin{generator of the symmetry group} $G$
+$t$ is a natural parameter along the curve (cf. Fig.~\ref{f:def:orbit_group}). The tangent vector corresponding to that parameter is called the \defin{generator of the group} $G$
 (associated with the $t$-parametrization). At each point $p$ of
 an orbit, it is given by
 \be
@@ -2139,38 +2140,65 @@ by $t\in\R$. The vector $\w{\xi} = \D\w{x}/\D t$ is the group
 generator associated with this parameter.}
 \end{figure}
 
-
-
-
-\subsection{Definition of a Killing horizon} \label{s:def:def_Killing_hor}
-
-
-A Killing horizon is defined as follows. Let us assume that the spacetime
-$(\M,\w{g})$ has a continuous symmetry, i.e. that it is invariant under
-the action of a 1-parameter group\footnote{1-dimensional Lie group in more mathematical
-terms.} $G$.
-
-These objects have
-been defined by Carter in 1969 \cite{Carte69} as follows: a
-\defin{Killing horizon}\index{Killing!horizon}\index{horizon!Killing --} is
-a null hypersurface $\Hor$ whose generating null vector $\wl$ can be normalized
-so as to coincide with a Killing vector field of $(\M,\w{g})$.
-
-Thus a Killing horizon requires that the spacetime $(\M,\w{g})$ has some symmetry
-(usually stationarity), namely that it is invariant under the action of a 1-parameter group.
-Let us recall that a \defin{Killing vector field}\index{Killing!vector field}
-$\w{\xi}$ is a generator of the symmetry group. It can be defined as a vector
-field along which the metric tensor is invariant, i.e.
-\be \label{e:def:Lie_xi_g}
-    \Lie{\xi} \w{g} = 0 .
+A 1-dimensional Lie group $G$ is said to be a
+\defin{symmetry group}\index{symmetry!group}\index{group!symmetry --}
+of the spacetime $(\M,\w{g})$ if there is an action $\Phi$ of $G$ on $\M$
+such that for any value of the parameter $t$ of $G$,
+$\Phi_t$ is an \defin{isometry}\index{isometry} of $(\M,\w{g})$, i.e. $\Phi_t$
+leaves the metric tensor invariant:
+\be \label{e:def:isometry}
+    \forall p\in\M,\  \forall (\w{u},\w{v}) \in (T_p\M)^2,\quad
+    \left. \w{g}\right| _{\Phi_t(p)} \left(\Phi_t^*\w{u}, \Phi_t^*\w{v}\right) =
+    \left. \w{g}\right| _{p} (\w{u},\w{v}) ,
 \ee
+where $\Phi_t^*\w{u}$ is the pushforward of the vector $\w{u}\in T_p\M$
+to the tangent space $T_{\Phi_t(p)}\M$ (cf. Sec.~\ref{s:bas:Lie_der_vector}
+in Appendix~\ref{s:bas}).
+Given the definition (\ref{e:bas:def_pullback}) of the pullback of
+a bilinear form, we may reexpress the isometry condition (\ref{e:def:isometry})
+in terms of the
+pullback of $\w{g}$ by $\Phi_t$:
+\be \label{e:def:isometry_pullback}
+    \Phi_t^*\w{g} = \w{g} .
+\ee
+Now, according the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie
+derivative, we have
+\be
+    \Lie{\xi} \w{g} := \lim_{t \rightarrow 0} \frac{1}{t}
+    \left( \Phi_\varepsilon^*\w{g} - \w{g} \right) .
+\ee
+If $G$ is a symmetry group of $(\M,\w{g})$ with generator $\w{\xi}$,
+(\ref{e:def:isometry_pullback}) leads then to
+$\Lie{\xi}\w{g} = 0$. The reverse is true by integration. Hence
+we conclude:
+\begin{greybox}
+A 1-dimensional Lie group $G$
+is a symmetry group of the spacetime $(\M,\w{g})$ iff the Lie derivative
+of the metric tensor along the generator $\w{\xi}$ of $G$
+vanishes identically:
+\be \label{e:def:Lie_xi_g}
+    \encadre{\Lie{\xi}\w{g} = 0 } .
+\ee
+The vector field $\w{\xi}$ is then called a \defin{Killing vector}\index{Killing!vector field}
+of $(\M,\w{g})$.
+\end{greybox}
 Expressing the Lie derivative via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of Appendix~\ref{s:bas},
-we see immediately that the above equation is equivalent to the so-called
+we see immediately that Eq.~(\ref{e:def:Lie_xi_g}) is equivalent to the so-called
 \defin{Killing equation}\index{Killing!equation}:
 \be
     \nabla_\alpha \xi_\beta + \nabla_\beta \xi_\alpha = 0 .
 \ee
 
+\subsection{Definition of a Killing horizon} \label{s:def:def_Killing_hor}
+
+A \defin{Killing horizon}\index{Killing!horizon}\index{horizon!Killing --} is
+a null hypersurface $\Hor$ whose generating null vector $\wl$ can be normalized
+so as to coincide with a Killing vector field of $(\M,\w{g})$.
+
+Thus a Killing horizon requires that the spacetime $(\M,\w{g})$ has some
+continuous symmetry
+(usually stationarity), namely that it is invariant under the action of a
+1-parameter group.
 We shall see in Chap.~\ref{s:sta} that in a stationary spacetime, a black hole
 event horizon must be a Killing horizon.
 

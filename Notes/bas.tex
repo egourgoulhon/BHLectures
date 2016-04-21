@@ -1039,7 +1039,7 @@ vector field, with respect to which the derivative is to be defined. This leads 
 concept of the \emph{Lie derivative}, which we discuss here.
 
 
-\subsubsection{Lie derivative of a vector field}
+\subsubsection{Lie derivative of a vector field} \label{s:bas:Lie_der_vector}
 
 Consider a vector field $\w{u}$ on $\M$, called hereafter the \defin{flow}\index{flow}.
 Let $\w{v}$ be another vector field on $\M$, the variation of which is to be studied.
@@ -1052,6 +1052,8 @@ We first define the image $\Phi_\varepsilon(p)$ of the point $p$ by the transpor
 $\Phi_\varepsilon(p)=q$, where $q$ is the point close to $p$ such that
 the infinitesimal displacement vector from $p$ to $q$ is
 $\overrightarrow{pq}=\varepsilon\w{u}(p)$ (cf. Sec.~\ref{s:bas:vectors}).
+We shall call the map $\Phi_\varepsilon:\M\rightarrow \M$ hence defined
+the \defin{flow map}\index{flow!map} along $\w{u}$}.
 Besides, if we multiply the vector $\w{v}(p)$ by
 some infinitesimal parameter $\lambda$, it becomes an infinitesimal vector at $p$.
 Then there exists a unique point $p'$ close to $p$ such that
@@ -1063,23 +1065,37 @@ infinitesimal vector at $q$ and we
 define the transport by the distance $\varepsilon$ of the vector $\w{v}(p)$
 along the field lines of $\w{u}$ according to
 \be \label{e:bas:def_Phi_eps}
-	\Phi_\varepsilon(\w{v}(p)) := \frac{1}{\lambda} \, \overrightarrow{qq'}.
+	\Phi_\varepsilon^*(\w{v}(p)) := \frac{1}{\lambda} \, \overrightarrow{qq'}.
 \ee
-$\Phi_\varepsilon(\w{v}(p))$ is a vector in $T_q\M$. We may then subtract it from the
-actual value of the field $\w{v}$ at $q$ and define the \defin{Lie derivative}\index{Lie!derivative}
-of $\w{v}$ along $\w{u}$ by
+$\Phi_\varepsilon^*(\w{v}(p))$ is a vector in $T_q\M$.
+The map $\Phi_\varepsilon^*: T_p\M \rightarrow T_q\M$
+hence defined is called the \defin{pushforward}\index{pushforward}
+of the flow map $\Phi_\varepsilon$. Actually it is nothing but
+the \emph{differential}\index{differential!of a smooth map}
+of the flow map $\Phi_\varepsilon: \M \rightarrow \M$,
+as defined in Sec.~\ref{s:bas:embed}:
+\be
+    \Phi_\varepsilon^*(\w{v}(p)) = \left.\D\Phi_\varepsilon \right| _p ((\w{v}(p)) .
+\ee
+We may then subtract the vector $\Phi_\varepsilon^*(\w{v}(p))$ from the
+actual value of the field $\w{v}$ at $q=\Phi_\varepsilon(p)$ and define the \defin{Lie derivative}\index{Lie!derivative}
+of $\w{v}$ along $\w{u}$ at the point $p$ by
 \be \label{e:bas:def_Lie_der}
-	\Lie{u} \w{v} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
-	\left[ \w{v}(q) - \Phi_\varepsilon(\w{v}(p)) \right] .
+    \encadre{
+    \Lie{u} \w{v} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \left[ \w{v}\left(\Phi_\varepsilon(p)\right)
+        - \Phi_\varepsilon^*\left(\w{v}(p)\right) \right] }.
 \ee
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{bas_lie_deriv.pdf}}
-\caption[]{\label{f:bas:deriv} Geometrical construction of the Lie derivative of a
+\caption[]{\label{f:bas:deriv}
+\footnotesize
+Geometrical construction of the Lie derivative of a
 vector field: given a small parameter $\lambda$, each extremity of the arrow
 $\lambda\w{v}$ is dragged by some small parameter $\varepsilon$
 along $\w{u}$, to form
-the vector denoted by $\Phi_\varepsilon(\lambda\w{v})$. The latter is then compared with
+the vector denoted by $\Phi_\varepsilon^*(\lambda\w{v})$. The latter is then compared with
 the actual value of $\lambda\w{v}$ at the point $q$, the difference (divided
 by $\lambda\varepsilon$) defining the Lie derivative $\Lie{u}\w{v}$.}
 \end{figure}
@@ -1143,7 +1159,26 @@ $\wnab$ associated with some metric $\w{g}$, yielding
 
 \subsubsection{Generalization to any tensor field}
 
-The Lie derivative is extended to any tensor field by (i) demanding that for
+If $\w{T}$ is tensor field of type $(0,\ell)$ on $\M$ (with $\ell \geq 1$)
+its \defin{pullback}\index{pullback}
+by the flow map
+$\Phi_\varepsilon$ is the tensor field $\Phi_\varepsilon^*\w{T}$ of type $(0,\ell)$
+defined by applying $\w{T}$ to pushforwarded vectors:
+\be \label{e:bas:def_pullback}
+    \forall (\w{v}_1,\ldots,\w{v}_\ell)\in (T_p\M)^\ell,\quad
+    \left. \Phi_\varepsilon^*\w{T}\right| _p(\w{v}_1,\ldots,\w{v}_\ell) :=
+        \left.\w{T}\right| _{\Phi_\varepsilon(p)} \left( \Phi_\varepsilon^*(\w{v}_1),
+         \ldots, \Phi_\varepsilon^*(\w{v}_\ell) \right) .
+\ee
+The \defin{Lie derivative} of $\w{T}$ along $\w{u}$ is then defined
+by comparing the pullback image at some point $p$ to the actual value
+of $\w{\omega}$ at the same point:
+\be \label{e:bas:def_Lie_der_covar}
+    \encadre{ \Lie{u} \w{T} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \left( \Phi_\varepsilon^*\w{T} - \w{T} \right) }.
+\ee
+
+Finally, the Lie derivative is extended to any tensor field by (i) demanding that for
 a scalar field $f$, $\Lie{u} f = \langle\wnab f,\w{u}\rangle$ and (ii) using the Leibniz
 rule. As a result, the Lie derivative $\Lie{u}\w{T}$ of a tensor field $\w{T}$ of type
 $(k,\ell)$ is a tensor field of the same type, the components of which
