@@ -319,7 +319,7 @@ The gradient vector field obtained by metric duality is
 $\vw{\nabla} u = - \wpar_t - \wpar_x$. Choosing for simplicity $\rho=0$,
 we get from formula~(\ref{e:def:wl_rho_u})
 \be \label{e:def:wl_null_hyperplane}
-    \wl =  \wpar_t + \wpar x .
+    \wl =  \wpar_t + \wpar_x .
 \ee
 \end{example}
 
@@ -470,7 +470,7 @@ vector to them associated with some affine parameter $\lambda$.
 On the other side, if $\kappa\not=0$, $\wl$ is not a geodesic vector field
 and therefore cannot be associated with some affine parameter. For this
 reason the quantity $\kappa$ is called the
-\defin{non-affinity parameter}\index{non-affinity parameter} of
+\defin{non-affinity coefficient}\index{non-affinity coefficient} of
 the null normal $\wl$.
 
 Since $\wl$ is collinear to $\wl'$, it obviously shares the same field lines,
@@ -498,7 +498,7 @@ spacetime, all null geodesics are straight lines).
 \end{remark}
 
 As a by-product of (\ref{e:def:nab_lp_lp}), we get the behaviour of the
-non-affinity parameter under a rescaling of the null normal:
+non-affinity coefficient under a rescaling of the null normal:
 \be \label{e:def:rescale_kappa}
     \wl' = \alpha \wl \ \Longrightarrow \ \kappa' = \alpha \kappa + \wnab_{\wl} \alpha .
 \ee
@@ -2078,7 +2078,7 @@ called \emph{isolated horizons}\index{isolated!horizon}\index{horizon!isolated}.
 A special kind of non-expanding horizons, which is of primordial
 importance for the theory of
 stationary black holes, is that of Killing horizons with compact cross-sections.
-This requires the concept of Killing vector and 1-dimensional group of
+This requires the concepts of Killing vector and 1-dimensional group of
 isometries, which we discuss first.
 
 
@@ -2089,7 +2089,7 @@ Group action of $G$ on $\M$.}
 \end{figure}
 
 
-\subsection{Spacetime symmetries}
+\subsection{Spacetime symmetries} \label{s:def:symmetries}
 
 Symmetries of spacetime are described in a coordinate-independent way by means of
 a (symmetry) group acting on the spacetime manifold $\M$.
@@ -2145,15 +2145,36 @@ A 1-dimensional Lie group $G$ is said to be a
 of the spacetime $(\M,\w{g})$ if there is an action $\Phi$ of $G$ on $\M$
 such that for any value of the parameter $t$ of $G$,
 $\Phi_t$ is an \defin{isometry}\index{isometry} of $(\M,\w{g})$, i.e. $\Phi_t$
-leaves the metric tensor invariant:
+preserves the ``distances'' and more generally the ``scalar products'' on
+$(\M,\w{g})$, in the following sense: for any $p\in\M$ and any pair of points $(q,r)$
+infinitely close to $p$, we shall have
+\be \label{e:def:isometry_dx}
+    \left.\w{g}\right| _{\Phi_t(p)}(\D\w{x}', \D\w{y}') =
+        \left.\w{g}\right| _{p}(\D\w{x}, \D\w{y}) ,
+\ee
+with the infinitesimal displacement vectors $\D\w{x} := \vp{pq}$, $\D\w{y} := \vp{pr}$,
+$\D\w{x}' := \vp{\Phi_t(p)\Phi_t(q)}$ and $\D\w{y}' := \vp{\Phi_t(p)\Phi_t(r)}$
+(cf. Sect.~\ref{s:fra:spacetime}).
+Now, by definition, $\D\w{x}'$ is nothing but the pushforward
+of the vector $\D\w{x}\in T_p\M$ to the tangent space
+$T_{\Phi_t(p)}\M$ by the map $\Phi_t$
+(cf. Sec.~\ref{s:bas:Lie_der_vector} in Appendix~\ref{s:bas}),
+and similarly $\D\w{y}'$ is the pushforward of $\D\w{y}$ by $\Phi_t$:
+\[
+    \D\w{x}' = \Phi_t^*(\D\w{x}) \quad\mbox{and}\quad
+    \D\w{y}' = \Phi_t^*(\D\w{y}) .
+\]
+By rescaling by infinitely small parameters (using the bilinearity of $\w{g}$),
+it is clear that (\ref{e:def:isometry_dx})
+holds for finite vectors as well, so that we may say that $\Phi_t$ is an
+isometry of $(\M,\w{g})$ iff
 \be \label{e:def:isometry}
     \forall p\in\M,\  \forall (\w{u},\w{v}) \in (T_p\M)^2,\quad
-    \left. \w{g}\right| _{\Phi_t(p)} \left(\Phi_t^*\w{u}, \Phi_t^*\w{v}\right) =
+    \left. \w{g}\right| _{\Phi_t(p)} \left(\Phi_t^*(\w{u}), \Phi_t^*(\w{v})\right) =
     \left. \w{g}\right| _{p} (\w{u},\w{v}) ,
 \ee
-where $\Phi_t^*\w{u}$ is the pushforward of the vector $\w{u}\in T_p\M$
-to the tangent space $T_{\Phi_t(p)}\M$ (cf. Sec.~\ref{s:bas:Lie_der_vector}
-in Appendix~\ref{s:bas}).
+where $\Phi_t^*(\w{u})$ (resp. $\Phi_t^*(\w{v})$) is the pushforward of the vector $\w{u}\in T_p\M$ (resp. $\w{v}\in T_p\M$)
+to the tangent space $T_{\Phi_t(p)}\M$ by $\Phi_t$ [cf. Eq.~(\ref{e:bas:def_Phi_eps})].
 Given the definition (\ref{e:bas:def_pullback}) of the pullback of
 a bilinear form, we may reexpress the isometry condition (\ref{e:def:isometry})
 in terms of the
@@ -2186,30 +2207,78 @@ Expressing the Lie derivative via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of Appendix
 we see immediately that Eq.~(\ref{e:def:Lie_xi_g}) is equivalent to the so-called
 \defin{Killing equation}\index{Killing!equation}:
 \be
-    \nabla_\alpha \xi_\beta + \nabla_\beta \xi_\alpha = 0 .
+    \encadre{ \nabla_\alpha \xi_\beta + \nabla_\beta \xi_\alpha = 0 }.
 \ee
 
 \subsection{Definition of a Killing horizon} \label{s:def:def_Killing_hor}
 
+\begin{greybox}
 A \defin{Killing horizon}\index{Killing!horizon}\index{horizon!Killing --} is
-a null hypersurface $\Hor$ whose generating null vector $\wl$ can be normalized
-so as to coincide with a Killing vector field of $(\M,\w{g})$.
+a null hypersurface $\Hor$ such that a Killing vector field $\w{\xi}$ of $(\M,\w{g})$
+is normal to it.
+\end{greybox}
 
-Thus a Killing horizon requires that the spacetime $(\M,\w{g})$ has some
-continuous symmetry
+Thus the existence of a Killing horizon requires that the spacetime $(\M,\w{g})$ has
+some continuous symmetry
 (usually stationarity), namely that it is invariant under the action of a
-1-parameter group.
+1-parameter group, as described in Sec.~\ref{s:def:symmetries}.
+A definition equivalent to the above one is then:
+\begin{greybox}
+A \defin{Killing horizon} is a null
+hypersurface $\Hor$ whose null geodesic generators are orbits of a
+1-parameter group of isometries of $(\M,\w{g})$.
+\end{greybox}
+
+\begin{remark}
+The above definition implies that the Killing vector field $\w{\xi}$ is null
+and non-vanishing on $\Hor$:
+\be
+    \left. \w{\xi}\cdot\w{\xi} \right| _{\Hor} = 0 \qquad\mbox{and}\qquad
+    \left. \w{\xi} \right| _{\Hor} \not= 0 .
+\ee
+Indeed, if $\w{\xi}$ is vanishing at some point of $\Hor$, it cannot be
+considered as a normal vector to $\Hor$.
+\end{remark}
+
 We shall see in Chap.~\ref{s:sta} that in a stationary spacetime, a black hole
 event horizon must be a Killing horizon.
+
+\begin{example}[null hyperplane as a boost-Killing horizon]
+Let us consider the null hyperplane of Minkowski spacetime $\Hor$ discussed in
+Examples~\ref{x:def:null_hyp}, \ref{x:def:null_hyp2} and \ref{x:def:null_hyp3}.
+$\Hor$ is defined by the equation $t=x$. The vector field
+\be
+    \w{\xi} := x \wpar_t + t \wpar_x
+\ee
+is a Killing vector field of Minkowski spacetime: $\w{\xi}$ is indeed the
+generator of the 1-parameter group of Lorentz boosts\index{boost} in the $(t,x)$ plane.
+On $\Hor$ we have:
+\[
+    \w{\xi} \equalH t (\wpar_t + \wpar_x) \equalH t \, \wl ,
+\]
+where $\wl$ is the null normal to $\Hor$ defined by
+Eq.~(\ref{e:def:wl_null_hyperplane}) and the notation $\equalH$ means that the equality holds only on $\Hor$. We conclude that $\w{\xi}$ is a normal to
+the null hypersurface $\Hor$ as soon as $t\not=0$. Therefore, we may split
+$\Hor\setminus\{t=0\}$ in two open half-planes:
+\[
+    \Hor^+ := \{ p\in\Hor,\quad t(p) > 0 \} \quad\mbox{and}\quad
+    \Hor^- := \{ p\in\Hor,\quad t(p) < 0 \}
+\]
+and each null hypersurface $\Hor^+$ and $\Hor^-$ is a Killing horizon with
+respect to $\w{\xi}$.
+\end{example}
+
+\begin{example}[null hyperplane as a null-rotation-Killing horizon]
+\end{example}
+
 
 \begin{example}[Schwarzschild horizon]
 Given the expression (\ref{e:def:wl_Schw_hor}) for the null normal $\wl$
 of the family of hypersurfaces $\Hor_u$ and the fact that the Schwarzschild
 horizon $\Hor$ is defined by $r=2m$, we have
 \be \label{e:def:wl_wpt_Schw_hor}
-    \wl \equalH \wpar_t ,
+    \wl \equalH \wpar_t .
 \ee
-where the notation $\equalH$ means that the equality holds only on $\Hor$.
 Now the vector field $\wpar_t$ is clearly a Killing vector of metric $\w{g}$
 as given by (\ref{e:def:Schw_metric}), since none of the metric components
 $g_{\alpha\beta}$ depends upon $t$. Hence (\ref{e:def:wl_wpt_Schw_hor})
@@ -2218,11 +2287,23 @@ Eq.~(\ref{e:def:wl_wpt_Schw_hor}) was our motivation for the choice of the
 null normal $\wl$ performed in Example~\ref{x:def:Schw_hor2}.
 \end{example}
 
+\begin{hist}
+The concept of Killing horizon has been introduced by Brandon Carter in
+1966 \cite{Carte66,Carte67} and developed in an article published in
+1969 \cite{Carte69}. It has also been discussed to a great extent
+by Robert H. Boyer in an article prepared posthumously from his notes
+by J.~Ehlers and J.L.~Stachel and published in 1969 \cite{Boyer69},
+leading to the concept of \emph{bifurcate Killing horizon}, to be discussed in
+Sec.~\ref{s:sta:bifur_Killing_hor}.
+\end{hist}
+
 \subsection{Killing horizons as non-expanding horizons}
 
-If $\Hor$ is a Killing horizon with closed cross-sections, i.e. has the
-topology (\ref{e:def:H_topology}), then the null normal $\wl$ obeys $\wl \equalH \w{\xi}$,
-so that (\ref{e:def:Lie_xi_g}) implies:
+Let $\Hor$ be a Killing horizon with closed cross-sections, i.e. $\Hor$ has the
+topology (\ref{e:def:H_topology}). Let us select the null normal $\wl$
+that coincides with the Killing vector $\w{\xi}$ on $\Hor$:
+$\wl \equalH \w{\xi}$.
+Equation~(\ref{e:def:Lie_xi_g}) then implies:
 \[
     \Lie{\el} \w{g} \equalH 0 .
 \]
@@ -2251,7 +2332,7 @@ horizon, one has to assume that the null energy condition holds on $\Hor$.
 \subsection{The zeroth law of black hole mechanics}
 
 Let us show that, on a Killing horizon, modulo some mild energy condition,
-the non-affinity parameter $\kappa$
+the non-affinity coefficient $\kappa$
 (cf. Sec.~\ref{s:def:geod_gener})
 of the null normal $\wl$ coinciding with a Killing vector is constant.
 
@@ -2391,14 +2472,14 @@ constant along each null geodesic generator of $\Hor$, this completes the demons
 that $\kappa$ is constant over $\Hor$. More precisely, we have shown that
 \begin{greybox}
 If matter and the non-gravitational fields obey the dominant energy condition
-on the Killing horizon $\Hor$, then the non-affinity parameter $\kappa$
+on the Killing horizon $\Hor$, then the non-affinity coefficient $\kappa$
 associated with the null normal coinciding with the Killing vector field on
 $\Hor$ is constant over $\Hor$:
 \be \label{e:def:zeroth_law}
     \encadre{\kappa = \mathrm{const}.}
 \ee
 \end{greybox}
-In the context of Killing horizons, the non-affinity parameter $\kappa$ is
+In the context of Killing horizons, the non-affinity coefficient $\kappa$ is
 often called the horizon's \defin{surface gravity}\index{surface!gravity} and the result
 (\ref{e:def:zeroth_law}) is known as the
 \defin{zeroth law of black hole mechanics}\index{zeroth law}. More precisely,
