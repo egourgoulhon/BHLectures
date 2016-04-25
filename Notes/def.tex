@@ -2206,11 +2206,11 @@ of $(\M,\w{g})$.
 Expressing the Lie derivative via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of Appendix~\ref{s:bas},
 we see immediately that Eq.~(\ref{e:def:Lie_xi_g}) is equivalent to the so-called
 \defin{Killing equation}\index{Killing!equation}:
-\be
+\be \label{e:def:Killing_equation}
     \encadre{ \nabla_\alpha \xi_\beta + \nabla_\beta \xi_\alpha = 0 }.
 \ee
 
-\subsection{Definition of a Killing horizon} \label{s:def:def_Killing_hor}
+\subsection{Definition and examples of Killing horizons} \label{s:def:def_Killing_hor}
 
 \begin{greybox}
 A \defin{Killing horizon}\index{Killing!horizon}\index{horizon!Killing --} is
@@ -2243,6 +2243,19 @@ considered as a normal vector to $\Hor$.
 We shall see in Chap.~\ref{s:sta} that in a stationary spacetime, a black hole
 event horizon must be a Killing horizon.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{def_hplaneKilling-boost.pdf}}
+\caption[]{\label{f:def:hplaneKilling-boost} \footnotesize
+Null half-hyperplanes $\Hor^+$ and $\Hor^-$ as Killing horizons for the
+Killing vector field $\w{\xi}=x \wpar_t + t \wpar_x$ generating Lorentz boosts
+in Minkowski spacetime. The green lines are the null geodesic generators of
+$\Hor$, while the thick black line (actually a 2-plane) marks the location
+where $\w{\xi}=0$.}
+\end{figure}
+
+\begin{example}[null hyperplane as a translation-Killing horizon]
+\end{example}
+
 \begin{example}[null hyperplane as a boost-Killing horizon]
 Let us consider the null hyperplane of Minkowski spacetime $\Hor$ discussed in
 Examples~\ref{x:def:null_hyp}, \ref{x:def:null_hyp2} and \ref{x:def:null_hyp3}.
@@ -2252,14 +2265,14 @@ $\Hor$ is defined by the equation $t=x$. The vector field
 \ee
 is a Killing vector field of Minkowski spacetime: $\w{\xi}$ is indeed the
 generator of the 1-parameter group of Lorentz boosts\index{boost} in the $(t,x)$ plane.
-On $\Hor$ we have:
+On $\Hor$ we have (cf. Fig.~\ref{f:def:hplaneKilling-boost}):
 \[
     \w{\xi} \equalH t (\wpar_t + \wpar_x) \equalH t \, \wl ,
 \]
 where $\wl$ is the null normal to $\Hor$ defined by
 Eq.~(\ref{e:def:wl_null_hyperplane}) and the notation $\equalH$ means that the equality holds only on $\Hor$. We conclude that $\w{\xi}$ is a normal to
 the null hypersurface $\Hor$ as soon as $t\not=0$. Therefore, we may split
-$\Hor\setminus\{t=0\}$ in two open half-planes:
+$\Hor\setminus\{t=0\}$ in two open half-hyperplanes (cf. Fig.~\ref{f:def:hplaneKilling-boost}):
 \[
     \Hor^+ := \{ p\in\Hor,\quad t(p) > 0 \} \quad\mbox{and}\quad
     \Hor^- := \{ p\in\Hor,\quad t(p) < 0 \}
@@ -2269,6 +2282,61 @@ respect to $\w{\xi}$.
 \end{example}
 
 \begin{example}[null hyperplane as a null-rotation-Killing horizon]
+Another example of Killing horizon is still provided by the null hyperplane
+$\Hor$ considered above, but this time with the Killing vector
+\be \label{e:def:xi_null_rotation}
+   \w{\xi} := y( \wpar_t + \wpar_x ) + (t-x)\wpar_y .
+\ee
+This vector is indeed the generator of
+null rotations leaving the plane
+$\mathrm{Span}(\wl,\wpar_z)$ strictly invariant (cf. e.g. Sec.~6.4.5 of
+Ref.~\cite{Gourg13}), $\wl$ being the null normal of $\Hor$ defined by
+Eq.~(\ref{e:def:wl_null_hyperplane}), and these null rotations form a
+1-dimensional subgroup of the Lorentz group, and thereby
+a symmetry group of Minkowski spacetime. It is also immediate to check that
+the vector $\w{\xi}$ defined by (\ref{e:def:xi_null_rotation}) obeys
+Killing equation [Eq.~(\ref{e:def:Killing_equation})].
+On $\Hor$, $t-x=0$, so that
+(\ref{e:def:xi_null_rotation}) reduces to
+\[
+    \w{\xi}  \equalH y ( \wpar_t + \wpar_x )  \equalH y \, \wl .
+\]
+It follows that $\w{\xi}$ is a null normal to $\Hor$ as soon as $y\not=0$.
+We may then split $\Hor\setminus\{y=0\}$ in two open half-hyperplanes (cf. Fig.~\ref{f:def:hplaneKilling-nullrot}):
+\[
+    \Hor_1 := \{ p\in\Hor,\quad y(p) > 0 \} \quad\mbox{and}\quad
+    \Hor_2 := \{ p\in\Hor,\quad y(p) < 0 \} ,
+\]
+each of them being a Killing horizon with
+respect to $\w{\xi}$.
+\end{example}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{def_hplaneKilling-nullrot.pdf}}
+\caption[]{\label{f:def:hplaneKilling-nullrot} \footnotesize
+Null half-hyperplanes $\Hor_1$ and $\Hor_2$ as Killing horizons for the
+Killing vector field $\w{\xi}=y( \wpar_t + \wpar_x ) + (t-x)\wpar_y$
+generating null rotations
+in Minkowski spacetime. The green lines are the null geodesic generators of
+$\Hor$, while the thick black line (actually a 2-plane) marks the location
+where $\w{\xi}=0$.}
+\end{figure}
+
+\begin{example}[light cone (counter-example)]
+The future light cone introduced in Example~\ref{x:def:light_cone} is \emph{not} a
+Killing horizon of Minkowski spacetime: it is invariant under the action
+of the Lorentz group, but its null generators are not invariant
+under the action of a single 1-dimensional subgroup of the Lorentz group.
+Actually the future light cone is an example of a more general structure,
+which Brandon Carter \cite{Carte67,Carte69} has termed a
+\defin{local isometry horizon}\index{local!isometry horizon}\index{isometry!horizon}\index{horizon!local isometry --}: a null hypersurface that is invariant under
+some group $G$ of isometries (here: the Lorentz group) and such that each null
+geodesic generator is an orbit under some 1-dimensional subgroup of $G$ (here: using Minkowskian spherical
+coordinates $(t,r,\th,\ph)$,
+the null geodesic generator through the point of coordinates $(1,1,\th_0,\ph_0)$
+is the orbit of this point under the subgroup of boosts in the plane
+$(\th,\ph) = (\th_0,\ph_0)$). A Killing horizon is a local isometry horizon
+for which $\dim G = 1$.
 \end{example}
 
 
@@ -2290,8 +2358,8 @@ null normal $\wl$ performed in Example~\ref{x:def:Schw_hor2}.
 \begin{hist}
 The concept of Killing horizon has been introduced by Brandon Carter in
 1966 \cite{Carte66,Carte67} and developed in an article published in
-1969 \cite{Carte69}. It has also been discussed to a great extent
-by Robert H. Boyer in an article prepared posthumously from his notes
+1969 \cite{Carte69}. The properties of Killing horizons have been
+studied in detail by Robert H. Boyer, in an article prepared posthumously from his notes
 by J.~Ehlers and J.L.~Stachel and published in 1969 \cite{Boyer69},
 leading to the concept of \emph{bifurcate Killing horizon}, to be discussed in
 Sec.~\ref{s:sta:bifur_Killing_hor}.
