@@ -161,6 +161,15 @@ Condition (\ref{e:def:du_not_zero}) ensures that $\Hor$ is a regular
 hypersurface (an \emph{embedded} submanifold, in mathematical terms); without it, $\Hor$ may have
 self-intersection points.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{def_null_hplane.pdf}}
+\caption[]{\label{f:def:null_hplane} \footnotesize
+Null hyperplane $\Hor$ of equation $t-x=0$ in Minkowski spacetime.
+The dimension along $z$ has been suppressed, so that $\Hor$ is pictured as a
+2-plane.}
+\end{figure}
+
+
 \begin{example}[null hyperplane] \label{x:def:null_hyp}
 A very simple example of null hypersurface is a null hyperplane of
 the 4-dimensional Minkowski spacetime. If $(t,x,y,z)$ are standard Minkowskian
@@ -168,7 +177,7 @@ coordinates, the choice of the scalar field
 \be \label{e:def:null_plane_u}
     u(t,x,y,z) = t - x
 \ee
-defines a null hyperplane $\Hor$ by $u=0$.
+defines a null hyperplane $\Hor$ by $u=0$ (cf. Fig.~\ref{f:def:null_hplane}).
 \end{example}
 
 \begin{example}[light cone] \label{x:def:light_cone}
@@ -181,8 +190,18 @@ In the  Minkowskian coordinates $(t,x,y,z)$, the choice of the
 \be \label{e:def:light_cone_u}
     u(t,x,y,z) = t - \sqrt{x^2+y^2+z^2}
 \ee
-defines a future light cone $\Hor$ by $u=0$ and $t>0$.
+defines a future light cone $\Hor$ by $u=0$ and $t>0$ (cf.
+Fig.~\ref{f:def:future_light_cone}).
 \end{example}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{def_future_light_cone.pdf}}
+\caption[]{\label{f:def:future_light_cone} \footnotesize
+Future sheet $\Hor$ of the light cone of equation $t-\sqrt{x^2+y^2+z^2}=0$ in Minkowski spacetime.
+The dimension along $z$ has been suppressed, so that $\Hor$ looks 2-dimensional,
+whereas it is actually 3-dimensional.}
+\end{figure}
+
 
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor}
 Let us consider the 4-dimensional spacetime $(\M,\w{g})$ with $\M$ diffeomorphic
@@ -220,9 +239,20 @@ Let us consider the scalar field defined on $\M$ by
 \ee
 It is then clear that the hypersurface $u=0$ is the
 3-dimensional ``cylinder'' $\Hor$ of equation
-$r=2m$. We shall see below\footnote{This should be obvious to the experienced
+$r=2m$ (cf. Fig.~\ref{f:def:Schwarz_horizon}). We shall see below\footnote{This should be obvious to the experienced
 reader, since a normal 1-form to $\Hor$ is $\dd r$ and, from Eq.~(\ref{e:def:Schw_metric_inv}), $g^{rr}=0$ on $\Hor$.} that $\Hor$ is indeed a null hypersurface.
 \end{example}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{def_Schwarz_horizon.pdf}}
+\caption[]{\label{f:def:Schwarz_horizon} \footnotesize
+Schwarzschild horizon $\Hor$ introduced in Example~\ref{x:def:Schw_hor};
+The figure is drawn for $\th=\pi/2$ and is based on coordinates $(t,x,y)$
+related to the 3+1 Eddington-Finkelstein coordinates $(t,r,\th,\ph)$
+by $x=r\cos\ph$ and $y=r\sin\ph$.}
+\end{figure}
+
+
 
 \subsection{Null normals} \label{s:def:null_normal}
 
@@ -321,6 +351,7 @@ we get from formula~(\ref{e:def:wl_rho_u})
 \be \label{e:def:wl_null_hyperplane}
     \wl =  \wpar_t + \wpar_x .
 \ee
+The vector field $\wl$ is depicted in Fig.~\ref{f:def:null_hplane}.
 \end{example}
 
 \begin{example}[light cone] \label{x:def:light_cone2}
@@ -335,6 +366,7 @@ normal
 \be \label{e:def:wl_light_cone}
     \wl = \wpar_t + \frac{x}{r} \wpar_x + \frac{y}{r} \wpar_y + \frac{z}{r} \wpar_z .
 \ee
+The vector field $\wl$ is depicted in Fig.~\ref{f:def:future_light_cone}.
 \end{example}
 
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor2}
@@ -366,7 +398,7 @@ Equation~(\ref{e:def:wl_rho_u}) leads then to
 Given the metric (\ref{e:def:Schw_metric}), we check that $\w{g}(\wl, \wl)=0$.
 Since $\wl\not=0$, this proves that all hypersurfaces $\Hor_u$, and in particular $\Hor$,
 are null.
-
+The vector field $\wl$ is depicted in Fig.~\ref{f:def:Schwarz_horizon}.
 \end{example}
 
 \subsection{Null geodesic generators}
@@ -508,13 +540,15 @@ It is clear on expression (\ref{e:def:wl_null_hyperplane}) for $\wl$ that
 the covariant derivative
 $\wnab \wl$ vanishes identically. In particular $\wnab_{\wl} \wl = 0$.
 Equation~(\ref{e:def:wl_geod_kappa}) then implies
-\[
+\be \label{e:def:kappa_0_nullhyp}
     \kappa = 0 ,
-\]
+\ee
 which is in agreement with Eq.~(\ref{e:def:def_kappa}) and the choice $\rho=0$
 performed in Example~\ref{x:def:null_hyp2}. The null geodesic generators of $\Hor$ are the
 straight lines defined by $t=x$, $y=y_0$ and $z=z_0$ for some constants
-$(y_0,z_0)\in \mathbb{R}^2$. Either $t$ or $x$ can be chosen as affine
+$(y_0,z_0)\in \mathbb{R}^2$.
+They are depicted as green lines in Fig.~\ref{f:def:null_hplane}.
+ Either $t$ or $x$ can be chosen as affine
 parameters of these generators.
 \end{example}
 
@@ -542,6 +576,7 @@ which is in agreement with Eq.~(\ref{e:def:def_kappa}) and the choice $\rho=0$
 performed in Example~\ref{x:def:light_cone2}. The null geodesic generators of $\Hor$
 are the half-lines defined by $x=a t$, $y=b t$, $z = \sqrt{1-a^2-b^2} t$, with
 $t>0$ and $(a,b)\in\mathbb{R}^2$ such that $a^2+b^2 \leq 1$.
+They are depicted as green lines in Fig.~\ref{f:def:future_light_cone}.
 Since from (\ref{e:def:wl_light_cone}) $\wnab_{\wl} t = 1$
 and $\kappa=0$, $\lambda=t$ is an affine parameter along these null geodesic generators.
 \end{example}
@@ -573,7 +608,8 @@ choice (\ref{e:def:rho_Schw_hor}) made for $\rho$. Contrary to Examples~\ref{x:d
 and \ref{x:def:light_cone3}, $\kappa$ does not vanish; hence $t$, which is
 a parameter of the null geodesic generators associated with $\wl$ (since $\wnab_{\wl} t = 1$
 by virtue of (\ref{e:def:wl_Schw_hor})),
-is \emph{not} an affine parameter.
+is \emph{not} an affine parameter. The null geodesic generators are depicted
+as vertical green lines in Fig.~\ref{f:def:Schwarz_horizon}.
 \end{example}
 
 \subsection{Cross-sections} \label{s:def:spacelike_sections}
@@ -1785,7 +1821,7 @@ if $\theta_{(\wl)} = 0$ for some normal $\wl$, then  $\theta_{(\wl')} = 0$
 for any other normal $\wl'$. Hence the definition of a non-expanding horizon
 does not depend on the choice of the null normal.
 
-As we shall discuss in detail in Chap.~??, this definition captures only
+As we shall discuss in detail in Chap.~\ref{s:sta}, this definition captures only
 the event horizon of black holes in equilibrium.
 
 \begin{example}[Schwarzschild horizon]
@@ -2077,10 +2113,9 @@ called \emph{isolated horizons}\index{isolated!horizon}\index{horizon!isolated}.
 
 A special kind of non-expanding horizons, which is of primordial
 importance for the theory of
-stationary black holes, is that of Killing horizons with compact cross-sections.
-This requires the concepts of Killing vector and 1-dimensional group of
-isometries, which we discuss first.
-
+stationary black holes, is that of Killing horizons with closed-manifold cross-sections.
+Defining a Killing horizon requires the concepts of 1-dimensional group of
+isometries and Killing vector, which we discuss first.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{def_group_action.pdf}}
@@ -2129,8 +2164,12 @@ an orbit, it is given by
     \w{\xi} = \frac{\D\w{x}}{\D t} ,
 \ee
 where $\D\w{x}$ is the infinitesimal vector connecting the point $p$ to the point
-$\Phi_{\D t}(p)$ (cf. Sec.~\ref{s:bas:vectors} and Fig.~\ref{f:def:orbit_group}). The action of $G$ on $\M$ in any infinitesimal neighbourhood
-of $p$ amounts then to translations along the infinitesimal vector $\D t\, \w{\xi}$.
+$\Phi_{\D t}(p)$ (cf. Sec.~\ref{s:bas:vectors} and Fig.~\ref{f:def:orbit_group}).
+We have then
+\begin{greybox}
+The action of $G$ on $\M$ limited to infinitesimal transformations of parameter
+$\D t$ around the identity ($\D t =0$) amounts to translations along the infinitesimal vector $\D t\, \w{\xi}$.
+\end{greybox}
 
 \begin{figure}
 \centerline{\includegraphics[height=0.25\textheight]{def_orbit_group.pdf}}
@@ -2254,16 +2293,29 @@ where $\w{\xi}=0$.}
 \end{figure}
 
 \begin{example}[null hyperplane as a translation-Killing horizon]
-\end{example}
-
-\begin{example}[null hyperplane as a boost-Killing horizon]
+\label{x:def:transKH}
 Let us consider the null hyperplane of Minkowski spacetime $\Hor$ discussed in
 Examples~\ref{x:def:null_hyp}, \ref{x:def:null_hyp2} and \ref{x:def:null_hyp3}.
 $\Hor$ is defined by the equation $t=x$. The vector field
 \be
-    \w{\xi} := x \wpar_t + t \wpar_x
+    \w{\xi} := \wpar_t + \wpar_x
 \ee
-is a Killing vector field of Minkowski spacetime: $\w{\xi}$ is indeed the
+is a Killing vector of Minkowski spacetime: $\w{\xi}$ is the generator of
+translations in the direction $\wpar_t + \wpar_x$, and these translations constitute a
+1-dimensional subgroup of the Poincaré group --- the symmetry group of Minkowski
+spacetime. We note that $\w{\xi}$ coincides with the null vector $\wl$
+defined by Eq.~(\ref{e:def:wl_null_hyperplane}). Since $\wl$ is
+normal to $\Hor$, we conclude immediately that $\Hor$ is a Killing horizon
+with respect to $\w{\xi}$.
+\end{example}
+
+\begin{example}[null hyperplane as a boost-Killing horizon]
+\label{x:def:boostKH}
+Let us consider again the null hyperplane $\Hor$, but setting
+\be
+    \w{\xi} := x \wpar_t + t \wpar_x ,
+\ee
+which defines another Killing vector of Minkowski spacetime: $\w{\xi}$ is indeed the
 generator of the 1-parameter group of Lorentz boosts\index{boost} in the $(t,x)$ plane.
 On $\Hor$ we have (cf. Fig.~\ref{f:def:hplaneKilling-boost}):
 \[
@@ -2282,6 +2334,7 @@ respect to $\w{\xi}$.
 \end{example}
 
 \begin{example}[null hyperplane as a null-rotation-Killing horizon]
+\label{x:def:nullrotKH}
 Another example of Killing horizon is still provided by the null hyperplane
 $\Hor$ considered above, but this time with the Killing vector
 \be \label{e:def:xi_null_rotation}
@@ -2304,8 +2357,8 @@ On $\Hor$, $t-x=0$, so that
 It follows that $\w{\xi}$ is a null normal to $\Hor$ as soon as $y\not=0$.
 We may then split $\Hor\setminus\{y=0\}$ in two open half-hyperplanes (cf. Fig.~\ref{f:def:hplaneKilling-nullrot}):
 \[
-    \Hor_1 := \{ p\in\Hor,\quad y(p) > 0 \} \quad\mbox{and}\quad
-    \Hor_2 := \{ p\in\Hor,\quad y(p) < 0 \} ,
+    \Hor_1 := \{ p\in\Hor,\quad y(p) < 0 \} \quad\mbox{and}\quad
+    \Hor_2 := \{ p\in\Hor,\quad y(p) > 0 \} ,
 \]
 each of them being a Killing horizon with
 respect to $\w{\xi}$.
@@ -2322,7 +2375,7 @@ $\Hor$, while the thick black line (actually a 2-plane) marks the location
 where $\w{\xi}=0$.}
 \end{figure}
 
-\begin{example}[light cone (counter-example)]
+\begin{example}[light cone as a counter-example]
 The future light cone introduced in Example~\ref{x:def:light_cone} is \emph{not} a
 Killing horizon of Minkowski spacetime: it is invariant under the action
 of the Lorentz group, but its null generators are not invariant
@@ -2367,8 +2420,8 @@ Sec.~\ref{s:sta:bifur_Killing_hor}.
 
 \subsection{Killing horizons as non-expanding horizons}
 
-Let $\Hor$ be a Killing horizon with closed cross-sections, i.e. $\Hor$ has the
-topology (\ref{e:def:H_topology}). Let us select the null normal $\wl$
+Let $\Hor$ be a Killing horizon with cross-sections that are closed manifolds,
+i.e. the topology of $\Hor$ is (\ref{e:def:H_topology}). Let us select the null normal $\wl$
 that coincides with the Killing vector $\w{\xi}$ on $\Hor$:
 $\wl \equalH \w{\xi}$.
 Equation~(\ref{e:def:Lie_xi_g}) then implies:
@@ -2391,7 +2444,7 @@ In particular we have
 \]
 We conclude that
 \begin{greybox}
-Any Killing horizon with closed cross-sections is a non-expanding horizon.
+Any Killing horizon with closed-manifold cross-sections is a non-expanding horizon.
 \end{greybox}
 Moreover, (\ref{e:def:Theta_zero_KillingH}) shows that $\w{\Theta}$ vanishes
 for all Killing horizons, while to get the same result on a generic non-expanding
@@ -2552,10 +2605,63 @@ often called the horizon's \defin{surface gravity}\index{surface!gravity} and th
 (\ref{e:def:zeroth_law}) is known as the
 \defin{zeroth law of black hole mechanics}\index{zeroth law}. More precisely,
 the latter states that the surface gravity of a black hole in equilibrium is
-constant and we shall see in Chap.~\ref{s:glo} that the event horizon of a black hole in
+constant and we shall see in Chap.~\ref{s:sta} that the event horizon of a black hole in
 equilibrium is a Killing horizon.
 
-\begin{example}
+\begin{example}[null hyperplane as a translation-Killing horizon]
+For the null hyperplane $\Hor$ considered in Example~\ref{x:def:transKH} as a Killing horizon with respect to the translation group along its normal, we have
+$\kappa = 0$, as already noticed in Example~\ref{x:def:null_hyp3}
+[Eq.~(\ref{e:def:kappa_0_nullhyp})], which is obviously constant over $\Hor$.
+\end{example}
+
+\begin{example}[null hyperplane as a boost-Killing horizon]
+Let us consider each of the null half-hyperplanes $\Hor^+$
+and $\Hor^-$ of Example~\ref{x:def:boostKH}, which are Killing horizons with
+respect to the boost Killing vector $\w{\xi} = x \wpar_t + t \wpar_x$. On
+$\Hor^+$, the future-directed null normal coinciding with this Killing vector
+is $\wl^+ = t\,  \wl$, $\wl$ being the geodesic null normal defined by
+$\wl:= \wpar_t + \wpar_x$ [cf. Eq.~(\ref{e:def:wl_null_hyperplane})].
+Using $\kappa_{\wl} = 0$ and the scaling law (\ref{e:def:rescale_kappa}),
+we get the non-affinity
+coefficient associated with $\wl^+$ as $\kappa_+= \wnab_{\wl} t = \partial_t t + \partial_x t$, i.e.
+\[
+    \kappa_+ = 1 .
+\]
+On $\Hor^-$, $\w{\xi}$ is past-directed (cf. Fig.~\ref{f:def:hplaneKilling-boost}).
+Sticking to future-directed null normals, we shall then consider $\Hor^-$
+as a Killing horizon with respect to the Killing vector field $-\w{\xi}$.
+The future-directed null normal coinciding with $-\w{\xi}$ on $\Hor^-$ is then
+$\wl^- = -t\,  \wl$, from which we deduce the non-affinity
+coefficient associated with $\wl^-$:
+\[
+    \kappa_- = 1 .
+\]
+We check that $\kappa_+$ (resp.  $\kappa_-$) is constant over the Killing horizon $\Hor^+$ (resp. $\Hor^-$), in agreement with the result above.
+\end{example}
+
+\begin{example}[null hyperplane as a null-rotation-Killing horizon]
+In Example~\ref{x:def:nullrotKH}, we have introduced the Killing horizons
+$\Hor_1$ and $\Hor_2$ with respect to the null-rotation Killing vector
+$\w{\xi} = y( \wpar_t + \wpar_x ) + (t-x)\wpar_y$ of Minkowski spacetime.
+On $\Hor_1$, $\w{\xi}$ is past-directed (cf. Fig.~\ref{f:def:hplaneKilling-nullrot}),
+so that we shall actually consider $\Hor_1$
+as a Killing horizon with respect to the Killing vector field $-\w{\xi}$.
+The future-directed null normal coinciding with $-\w{\xi}$ on $\Hor_1$ is then
+$\wl_1 = - y\, \wl$. Since it is clearly constant along the null geodesic generators
+of $\Hor_1$, we have $\wnab_{\wl_1}\wl_1 = 0$, hence the
+associated non-affinity coefficient vanishes:
+\[
+    \kappa_1 = 0 .
+\]
+On $\Hor_2$, $\w{\xi}$ is future-directed (cf. Fig.~\ref{f:def:hplaneKilling-nullrot})
+and the null normal coinciding with it is $\wl_2 =  y\,  \wl$, whose non-affinity
+coefficient is
+\[
+    \kappa_2 = 0 .
+\]
+\end{example}
+
+\begin{example}[Schwarzschild and Kerr horizons]
 We have found in Example~\ref{x:def:Schw_hor3} [cf. Eq.~(\ref{e:def:kappa_Schw_hor})]
 that on a Schwarzschild horizon:
 \[
@@ -2607,6 +2713,7 @@ and ``NDEC'' for ``Null Dominant Energy condition''.
 null geodesic generators\\
 $\wnab_{\wl}\wl = \kappa\wl$};
 \node[boxst] (H) at (0,3.5) {\textbf{Non-expanding horizon}\\
+closed-manifold cross-sections\\
 $\theta_{(\wl)}=0$\\
 area independent of the cross-section\\
 \begin{tabular}{lcl}
@@ -2615,7 +2722,7 @@ NEC &$\Longrightarrow$ & $\w{\Theta}=0$ \\
 \end{tabular}
 };
 \node[boxst] (K) at (0,0) {\textbf{Killing horizon}\\
-\textbf{\small with closed cross-sections}\\
+\textbf{\small with closed-manifold cross-sections}\\
 $\w{\Theta}=0$ \\
 NDEC $\Longrightarrow \kappa=\mathrm{const}$ (Zeroth Law)};
 \draw[inherits] (H)--(N);
