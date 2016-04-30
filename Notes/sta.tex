@@ -203,7 +203,7 @@ are null hypersurfaces.
 
 A first property of bifurcate Killing horizons is
 \begin{greybox}
-The Killing vector field vanishes at the bifurcation surface:
+The Killing vector field vanishes on the bifurcation surface:
 \be
     \encadre{\left. \w{\xi} \right| _{\Sp} = 0 } .
 \ee
@@ -245,6 +245,79 @@ on a Killing horizon, the Killing vector field is nowhere vanishing
 [cf. Eq.~(\ref{s:neh:xi_on_KH})], while on
 a bifurcate Killing horizon, it is vanishing at the bifurcation surface.
 \end{remark}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{sta_hplane_bifur.pdf}}
+\caption[]{\label{f:sta:hplane_bifur} \footnotesize
+Bifurcate Killing horizon $\Hor_1\cup\Hor_2$ with respect to the Killing vector
+field $\w{\xi}$ generating Lorentz boosts in the plane $(t,x)$ of Minkowski
+spacetime. The dimension along $z$ having been suppressed, the bifurcation
+surface $\Sp$ appears as a line, while it is actually a 2-plane.}
+\end{figure}
+
+\begin{example}[bifurcate Killing horizon w.r.t. Lorentz boost]
+Let us consider the boost Killing vector in Minkowski spacetime as given
+by Eq.~(\ref{e:neh:boost-Killing}): $\w{\xi} := x \wpar_t + t \wpar_x$
+and let us take for $\Hor_1$ the null hyperplane of equation $t=x$
+considered in Example~\ref{x:neh:boostKH} in Chap.~\ref{s:neh} and denoted there
+by $\Hor$. The two half-hyperplanes defined by
+Eq.~(\ref{e:neh:boost-Killing_hor}) are then the Killing horizons $\Hor_1^+$ and
+$\Hor_1^-$. The union $\Hor_1 \cup \Hor_2$, where $\Hor_2$ is the null hyperplane of equation $t=-x$ is a bifurcate Killing horizon with respect to $\w{\xi}$,
+with the 2-plane of equation $t=0$ and $x=0$ as the bifurcation surface
+(cf. Fig.~\ref{f:sta:hplane_bifur}). Note that on $\Hor_1$, the Killing vector
+$\w{\xi}$ points away from $\Sp$, while on $\Hor_2$, it points toward $\Sp$.
+\end{example}
+
+\subsection{Non-degenerate Killing horizons}
+
+Let us consider a Killing horizon $\Hor$ with respect to some Killing vector
+field $\w{\xi}$. As shown in Sec.~\ref{s:neh:zeroth_law},
+the surface gravity\index{surface!gravity}  of $\Hor$, i.e.
+the non-affinity coefficient $\kappa$ of $\w{\xi}$ on $\Hor$, is constant over
+$\Hor$ (the zeroth law of black hole mechanics\index{zeroth law}).
+One distinguishes two types of Killing horizons, depending whether $\kappa$
+vanishes or not:
+\begin{itemize}
+\item if $\kappa = 0$, $\w{\xi}$ is then a geodesic vector on $\Hor$
+and the latter is called a \defin{degenerate Killing horizon}\index{degenerate!Killing horizon}\index{Killing!horizon!degenerate --};
+\item if $\kappa \not=0$, $\w{\xi}$ is only a pregeodesic vector on $\Hor$
+(cf. Sec.~\ref{s:def:geod_gener})
+and the latter is called a \defin{non-degenerate Killing horizon}\index{non-degenerate!Killing horizon}\index{Killing!horizon!non-degenerate --}.
+\end{itemize}
+Let us consider a non-degenerate Killing horizon $\Hor$.
+Let us assume that $\w{\xi}$ is future-oriented on $\Hor$; if not, we can
+always consider $\Hor$ as a Killing horizon with respect to $-\w{\xi}$.
+Let $t$ be the parameter
+associated with $\w{\xi}$ along the null geodesic generators of $\Hor$, i.e.
+$\w{\xi} = \D/\D t$ along any null geodesic generator $\Li$.
+Since $\kappa\not=0$, $t$ is not an affine parameter of $\Li$.
+The null vector field $\wl$ defined on $\Hor$ by
+\be
+    \wl = e^{-\kappa t} \, \w{\xi} \quad \iff\quad
+    \w{\xi} = e^{\kappa t} \, \wl
+\ee
+is a geodesic vector field and the affine parameter associated with it is
+\be \label{e:sta:lambda_t}
+    \lambda = \frac{e^{\kappa t}}{\kappa} + \lambda_0 ,
+\ee
+where $\lambda_0$ is a constant.
+\begin{proof}
+We have
+\[
+\wnab_{\wl}\, \wl = \wnab_{e^{-\kappa t} \w{\xi}} \left( e^{-\kappa t} \, \w{\xi} \right) = e^{-\kappa t} \wnab_{\w{\xi}} \left( e^{-\kappa t} \, \w{\xi} \right)
+= e^{-\kappa t} \big[ \big( \underbrace{\wnab_{\w{\xi}} e^{-\kappa t}}_{\D e^{-\kappa t}/\D t} \big) \w{\xi}
+    + e^{-\kappa t} \underbrace{\wnab_{\w{\xi}}\, \w{\xi}}_{\kappa\w{\xi}}
+    \big] = 0 .
+\]
+Hence $\wl$ is a geodesic vector. Besides, along any null generator of $\Hor$,
+one has [cf. Eq.~(\ref{e:bas:def_vector})]
+\[
+    \wl(t) = \frac{\D t}{\D \lambda} = e^{-\kappa t} \, \underbrace{\w{\xi}(t)}_{1} =
+        e^{-\kappa t} .
+\]
+Hence $\D\lambda = e^{\kappa t} \D t$ and (\ref{e:sta:lambda_t}) follows
+by integration.
+\end{proof}
 
 
 
