@@ -257,6 +257,7 @@ surface $\Sp$ appears as a line, while it is actually a 2-plane.}
 \end{figure}
 
 \begin{example}[bifurcate Killing horizon w.r.t. Lorentz boost]
+\label{x:sta:bif-KH-boost}
 Let us consider the boost Killing vector in Minkowski spacetime as given
 by Eq.~(\ref{e:neh:boost-Killing}): $\w{\xi} := x \wpar_t + t \wpar_x$
 and let us take for $\Hor_1$ the null hyperplane of equation $t=x$
@@ -313,11 +314,10 @@ We have
 Hence $\wl$ is a geodesic vector. Besides, along any null generator of $\Hor$,
 one has [cf. Eq.~(\ref{e:bas:def_vector})]
 \[
-    \wl(t) = \frac{\D t}{\D \lambda} = e^{-\kappa t} \, \underbrace{\w{\xi}(t)}_{1} =
-        e^{-\kappa t} .
+    \w{\xi}(\lambda) = \frac{\D\lambda}{\D t} = e^{\kappa t}
+    \underbrace{\wl(\lambda)}_{1} = e^{\kappa t} ,
 \]
-Hence $\D\lambda = e^{\kappa t} \D t$ and (\ref{e:sta:lambda_t}) follows
-by integration.
+which yields Eq.~(\ref{e:sta:lambda_t}).
 \end{proof}
 Let us assume $\kappa>0$. Let $\Li$ be a null geodesic generator of the Killing
 horizon $\Hor$. $\Li$ can be parametrized by $t$, the corresponding
@@ -333,35 +333,54 @@ In other words, the Killing vector field $\w{\xi}$ vanishes and
 the null geodesic $\Li$ stops at the ``edge'' of $\Hor$ corresponding to
 $t\rightarrow -\infty$. If there is no singularity there, $\Li$ can be
 extended to $\lambda\in(-\infty,\lambda_0]$, giving rise to a complete
-null geodesic $\tilde L$. Let us call the point $\lambda=\lambda_0$
-on $\tilde\Li$ the termination point of $\Li$. It seems natural (and can be
-shown rigorously, see \cite{Boyer69}) that the set of the termination points of all the null geodesic generators of $\Hor$ is a
-spacelike submanifold $\Sp$ of dimension $n-2$. $\Sp$ constitutes the past
-boundary of $\Hor$, i.e. the boundary corresponding to $t\rightarrow -\infty$.
+null geodesic $\tilde L$.
+We have the freedom to choose the same value of $\lambda_0$
+in Eq.~(\ref{e:sta:lambda_t}) for all the null geodesic generators
+$\Li$ of $\Hor$. By extending all the null geodesics generators of $\Hor$ to
+$\lambda\in (-\infty,\lambda_0]$, one gives birth to a null hypersurface, $\tilde\Hor$ say, which contains $\Hor$. Let $\Sp\subset\tilde\Hor$ be the set of points of
+affine parameter $\lambda=\lambda_0$ along all the extended null geodesics
+$\tilde L$. $\Sp$ is clearly a cross-section of $\tilde\Hor$
+(cf. Sec.~\ref{s:def:spacelike_sections}); it is then a
+spacelike $(n-2)$-surface.
+$\Sp$ constitutes the past boundary of $\Hor$, i.e. the boundary corresponding to $t\rightarrow -\infty$.
 Since $\w{\xi}$ is a smooth vector field on $\M$, Eq.~(\ref{e:sta:xi_zero_t_inf})
 implies that $\w{\xi}$ vanishes on $\Sp$.
 In other words, $\Sp$ is a set of fixed points for the isometry group generated
 by $\w{\xi}$ (cf. Remark~\ref{r:sta:zero_Killing} above).
-The extension of all null geodesic generators $\Li$ beyond $\Sp$, i.e. for
-$\lambda < \lambda_0$ give birth to a null hypersurface, $\Hor^-$ say.
+Let us denote by $\Hor^-$ the subset of $\tilde\Hor$ corresponding to
+$\lambda<\lambda_0$:
+\[
+    \Hor^- = \tilde\Hor\setminus(\Hor\cup\Sp) .
+\]
+$\Hor^-$ is clearly a null hypersurface.
 Since $\Sp$ is spacelike and $(n-2)$-dimensional, there are, at each point
 $p\in\Sp$, only two null directions normal to $\Sp$ (cf. Sec.~\ref{s:def:spacelike_sections}). One of them is along $\wl$. The set of all null geodesics
 departing from $\Sp$ along the second null direction forms a null hypersurface,
 $\Hor_2^+$ say, in the future of $\Sp$ and another null hypersurface, $\Hor_2^-$
-say, in the past of $\Sp$. It can be shown that $\Hor^-$, $\Hor_2^+$ and $\Hor_2^-$
-are three Killing horizons, so that $\Hor\cup\Hor^-\cup\Hor_2^+\cup\Hor_2^-\cup\Sp$
-is a bifurcate Killing horizon.
-More precisely, a theorem by Robert H. Boyer \cite{Boyer69} states that
+say, in the past of $\Sp$.
+By studying the behaviour of a Killing vector field around the set of its
+fixed points (here $\Sp$), Boyer \cite{Boyer69} has shown that in
+the current setting (i.e. $\Sp$ spacelike), $\w{\xi}$ acts \emph{locally}
+as the generator of Lorentz boosts and $\Sp$ is the bifurcation surface
+of a bifurcate Killing horizon similar to that of Example~\ref{x:sta:bif-KH-boost}
+(cf. Fig.~\ref{f:sta:hplane_bifur}).
+More precisely, Boyer proved the following theorem \cite{Boyer69}:
 a Killing horizon $\Hor$ is contained in a bifurcate Killing horizon if and
 only if $\Hor$ contains at least one incomplete, extendable, null geodesic
 generator. The last properties is guaranteed by $\kappa\not=0$ as we have seen.
+It follows that $\Hor^-$, $\Hor_2^+$ and $\Hor_2^-$
+are three Killing horizons, so that $\Hor\cup\Hor^-\cup\Hor_2^+\cup\Hor_2^-\cup\Sp$
+is a bifurcate Killing horizon.
+
+If $\kappa<0$, we see from Eq.~(\ref{e:sta:lambda_t})
+
 Hence we conclude
 \begin{greybox}
 The null geodesic generators of a non-degenerate Killing horizon $\Hor$ are
-incomplete; if they can be extended, the $\Hor$ is contained in a
-bifurcate Killing horizon.
+incomplete; if they can be extended, $\Hor$ is contained in a
+bifurcate Killing horizon, the bifurcation surface of which is the past
+(resp. future) boundary of $\Hor$ if $\kappa>0$ (resp. $\kappa<0$).
 \end{greybox}
-
 
 
 
