@@ -478,8 +478,9 @@ we see immediately that Eq.~(\ref{e:neh:Lie_xi_g}) is equivalent to the so-calle
 
 \begin{greybox}
 A \defin{Killing horizon}\index{Killing!horizon}\index{horizon!Killing --} is
-a null hypersurface $\Hor$ such that a Killing vector field $\w{\xi}$ of $(\M,\w{g})$
-is normal to it.
+a null hypersurface $\Hor$ in a spacetime $(\M,\w{g})$ admitting a
+Killing vector field $\w{\xi}$ such that $\left.\w{\xi}\right|_{\Hor}$ is a
+normal to $\Hor$.
 \end{greybox}
 
 Thus the existence of a Killing horizon requires that the spacetime $(\M,\w{g})$ has
@@ -676,18 +677,97 @@ Moreover, (\ref{e:neh:Theta_zero_KillingH}) shows that $\w{\Theta}$ vanishes
 for all Killing horizons, while to get the same result on a generic non-expanding
 horizon, one has to assume that the null energy condition holds on $\Hor$.
 
+\subsection{Expressions of the non-affinity coefficient}
+
+Let $\kappa$ be the non-affinity coefficient
+(cf. Sec.~\ref{s:def:geod_gener})
+of the null normal $\wl$ coinciding with the Killing vector $\w{\xi}$
+on a Killing horizon $\Hor$. According to the definition
+(\ref{e:def:wl_geod_kappa}), we have then
+\be
+    \wnab_{\w{\xi}}\, \w{\xi} \equalH \kappa \, \w{\xi} .
+\ee
+The metric dual of this relation is
+$\xi^\mu \nabla_\mu \xi_\alpha \equalH \kappa \, \xi_\alpha$.
+Using Killing equation (\ref{e:neh:Killing_equation}) under the form
+$\nabla_\mu \xi_\alpha = - \nabla_\alpha \xi_\mu$, we get
+\[
+    \xi^\mu \nabla_\alpha \xi_\mu \equalH - \kappa \, \xi_\alpha .
+\]
+Now $\xi^\mu \nabla_\alpha \xi_\mu = 1/2 \, \nabla_\alpha (\xi_\mu \xi^\mu)$.
+Hence
+\be
+    \nabla_\alpha (\xi_\mu \xi^\mu) \equalH - 2 \kappa \, \xi_\alpha.
+\ee
+Since $\xi_\mu \xi^\mu = \w{\xi}\cdot\w{\xi}$ is a scalar field, we may
+replace the covariant derivative by the differential:
+\be \label{e:neh:dxi2_kappa}
+    \encadre{ \dd (\w{\xi}\cdot\w{\xi}) \equalH - 2 \kappa \, \uu{\xi} } .
+\ee
+
+Another interesting relation is obtained from the Frobenius relation
+(\ref{e:def:ext_der_wl_comp}):
+\be \label{e:neh:Frobenius_xi}
+  \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha \equalH
+  \nabla_\alpha \rho \, \xi_\beta -  \nabla_\beta \rho \, \xi_\alpha  ,
+\ee
+where $\rho$ is the scalar field defined on $\Hor$ by the hypersurface-orthogonality
+condition (\ref{e:def:wl_rho_u}):
+\[
+    \uu{\xi} \equalH - e^\rho \, \dd u ,
+\]
+$u$ being a scalar field defining $\Hor$ by $u=0$.
+Actually, $\rho$ is related to $\kappa$ by Eq.~(\ref{e:def:def_kappa}):
+\[
+    \kappa = \xi^\mu \nabla_\mu \rho = \wnab_{\w{\xi}}\,  \rho .
+\]
+Thanks to Killing equation (\ref{e:neh:Killing_equation}), we may reshape
+(\ref{e:neh:Frobenius_xi}) to
+\[
+    2 \nabla_\alpha \xi_\beta \equalH
+  \nabla_\alpha \rho \, \xi_\beta -  \nabla_\beta \rho \, \xi_\alpha  .
+\]
+Taking the square leads to
+\bea
+    2 \nabla_\mu \xi_\nu \, \nabla^\mu \xi^\nu & \equalH &
+        \left( \nabla_\mu \rho \, \xi_\nu -  \nabla_\nu \rho \, \xi_\mu \right)
+       \left( \nabla^\mu \rho \, \xi^\nu -  \nabla^\nu \rho \, \xi^\mu \right)
+       \nonumber \\
+       & \equalH & \nabla_\mu \rho \nabla^\mu \rho
+        \underbrace{ \xi_\nu \xi^\nu}_{\equalH 0}
+        - \underbrace{\xi^\mu \nabla_\mu \rho}_{\kappa}
+         \underbrace{\xi^\nu \nabla_\nu \rho}_{\kappa}
+        - \underbrace{\xi^\nu \nabla_\nu \rho}_{\kappa}
+            \underbrace{\xi^\mu \nabla_\mu \rho}_{\kappa}
+        + \nabla_\nu \rho \nabla^\nu \rho
+        \underbrace{ \xi_\mu \xi^\mu}_{\equalH 0}
+         \nonumber \\
+         & \equalH & - 2 \kappa^2 . \nonumber
+\eea
+Hence
+\be \label{e:neh:kappa2}
+    \encadre{\kappa^2 \equalH - \frac{1}{2}
+        \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu } .
+\ee
+This is an explicit expression of $\kappa$ in terms of the Killing vector
+field $\w{\xi}$.
+However, in actual calculations, one generally prefers to employ
+(\ref{e:neh:dxi2_kappa}) for evaluating $\kappa$, because it does not involve
+the computation of any covariant derivative, contrary to (\ref{e:neh:kappa2}).
+
+
 \subsection{The zeroth law of black hole mechanics} \label{s:neh:zeroth_law}
 
 Let us show that, on a Killing horizon, modulo some mild energy condition,
-the non-affinity coefficient $\kappa$
-(cf. Sec.~\ref{s:def:geod_gener})
-of the null normal $\wl$ coinciding with a Killing vector is constant.
+the non-affinity coefficient $\kappa$ discussed above is constant.
 
-First of all, since $\wl$ is a symmetry generator on $\Hor$, we have
+Let us denote by $\wl$ the null normal to $\Hor$ that coincides with
+the Killing vector field: $\wl \equalH \w{\xi}$. The vector field
+$\wl$ is then a symmetry generator on $\Hor$, which implies
 \be
-    \Lie{\el} \kappa = 0 ,
+    \Lie{\el} \kappa = 0 .
 \ee
-which means that $\kappa$ is constant along the field lines of $\wl$ (i.e. the
+This means that $\kappa$ is constant along the field lines of $\wl$ (i.e. the
 null geodesic generators of $\Hor$). It could however vary from a field line to another
 one. To show that this is not the case, let us consider a cross-section
 $\Sp$ of $\Hor$ and project the contracted Ricci identity (\ref{e:def:contract_Ricci_ident})
@@ -835,12 +915,14 @@ constant and we shall see in Chap.~\ref{s:sta} that the event horizon of a black
 equilibrium is a Killing horizon.
 
 \begin{example}[null hyperplane as a translation-Killing horizon]
+\label{x:neh:transKH_kappa}
 For the null hyperplane $\Hor$ considered in Example~\ref{x:neh:transKH} as a Killing horizon with respect to the translation group along its normal, we have
 $\kappa = 0$, as already noticed in Example~\ref{x:def:null_hyp3} of Chap.~\ref{s:def}
 [Eq.~(\ref{e:def:kappa_0_nullhyp})], which is obviously constant over $\Hor$.
 \end{example}
 
 \begin{example}[null hyperplane as a boost-Killing horizon]
+\label{x:neh:boostKH_kappa}
 Let us consider each of the null half-hyperplanes $\Hor^+$
 and $\Hor^-$ of Example~\ref{x:neh:boostKH}, which are Killing horizons with
 respect to the boost Killing vector $\w{\xi} = x \wpar_t + t \wpar_x$. On
@@ -889,6 +971,7 @@ coefficient is
 \end{example}
 
 \begin{example}[Schwarzschild and Kerr horizons]
+\label{x:neh:Schw_Kerr_kappa}
 We have found in Example~\ref{x:def:Schw_hor3} of Chap.~\ref{s:def} [cf. Eq.~(\ref{e:def:kappa_Schw_hor})]
 that on a Schwarzschild horizon:
 \[
@@ -919,6 +1002,56 @@ has also been given in 1973 by J.M.~Bardeen, B.~Carter and S.W.~Hawking
 in their famous article \emph{The Four Laws of Black Hole Mechanics}
 \cite{BardeCH73}.
 \end{hist}
+
+\subsection{Classification of Killing horizons} \label{s:neh:classif_KH}
+
+Since $\kappa$ is constant on $\Hor$ (assuming the dominant
+energy condition), we may use it to classify Killing horizons in two
+categories, depending whether $\kappa$ vanishes or not:
+\begin{itemize}
+\item if $\kappa = 0$, the Killing vector $\w{\xi}$ is then a geodesic vector on $\Hor$
+and the latter is called a \defin{degenerate Killing horizon}\index{degenerate!Killing horizon}\index{Killing!horizon!degenerate --};
+\item if $\kappa \not=0$, $\w{\xi}$ is only a pregeodesic vector on $\Hor$
+(cf. Sec.~\ref{s:def:geod_gener})
+and the latter is called a \defin{non-degenerate Killing horizon}\index{non-degenerate!Killing horizon}\index{Killing!horizon!non-degenerate --}.
+\end{itemize}
+
+\begin{example}
+In Minkowski spacetime, the null hyperplane as a translation-Killing horizon
+(Example~\ref{x:neh:transKH_kappa}) and the two half-hyperplanes as
+null-rotation-Killing horizons (Example~\ref{x:neh:nullrotKH_kappa}) are
+degenerate Killing horizons, while the two half-hyperplanes as
+boost-Killing horizons (Example~\ref{x:neh:boostKH_kappa}) are non-degenerate.
+From the values of $\kappa$ given in Example~\ref{x:neh:Schw_Kerr_kappa},
+we see that the Schwarzschild horizon and the Kerr horizon for
+$a<m$ are non-degenerate Killing horizons, while the Kerr horizon for
+$a=m$ is a degenerate one.
+\end{example}
+
+\subsection{Interpretation of $\kappa$ as a ``surface gravity''}
+
+In this section, we assume that $\Hor$ is a non-degenerate Killing horizon,
+i.e. that $\kappa\not=0$.
+Let $p\in\Hor$ and $\w{v}\in T_p\M$ be a vector transverse to $\Hor$, i.e.
+not tangent to $\Hor$. According to Eq.~(\ref{e:neh:dxi2_kappa}), we have
+\[
+    \wnab_{\w{v}} (\w{\xi}\cdot\w{\xi}) = - 2\kappa \, \w{\xi}\cdot\w{v} .
+\]
+The right-hand side of this expression does not vanish, because
+$\kappa\not=0$ and $\w{\xi}\cdot\w{v} \not=0$ (since $\w{v}$ is not
+tangent to $\Hor$). Hence we have
+\[
+    \wnab_{\w{v}} (\w{\xi}\cdot\w{\xi}) \not= 0 .
+\]
+In other words, the derivative of the scalar square $\w{\xi}\cdot\w{\xi}$
+along any direction transerve to $\Hor$ does not vanish. Since
+$\w{\xi}\cdot\w{\xi}=0$ on $\Hor$, we conclude that, in the vicinity of $\Hor$,
+$\w{\xi}\cdot\w{\xi}<0$ on one side of $\Hor$ and $\w{\xi}\cdot\w{\xi}>0$ on the
+other side:
+\begin{greybox}
+In the vicinity of a non-degenerate Killing horizon, the Killing vector field $\w{\xi}$ is timelike on side of $\Hor$, null on $\Hor$
+and spacelike on the other side.
+\end{greybox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
