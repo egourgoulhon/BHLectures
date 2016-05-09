@@ -907,7 +907,9 @@ $\Hor$ is constant over $\Hor$:
 \ee
 \end{greybox}
 In the context of Killing horizons, the non-affinity coefficient $\kappa$ is
-often called the horizon's \defin{surface gravity}\index{surface!gravity} and the result
+called the horizon's \defin{surface gravity}\index{surface!gravity},
+for a reason to be detailed in Sec.~\ref{s:neh:surface_gravity},
+and the result
 (\ref{e:neh:zeroth_law}) is known as the
 \defin{zeroth law of black hole mechanics}\index{zeroth law}. More precisely,
 the latter states that the surface gravity of a black hole in equilibrium is
@@ -1029,6 +1031,7 @@ $a=m$ is a degenerate one.
 \end{example}
 
 \subsection{Interpretation of $\kappa$ as a ``surface gravity''}
+\label{s:neh:surface_gravity}
 
 In this section, we assume that $\Hor$ is a non-degenerate Killing horizon,
 i.e. that $\kappa\not=0$.
@@ -1052,6 +1055,60 @@ other side:
 In the vicinity of a non-degenerate Killing horizon, the Killing vector field $\w{\xi}$ is timelike on side of $\Hor$, null on $\Hor$
 and spacelike on the other side.
 \end{greybox}
+
+Let us focus on the region in the vicinity of $\Hor$ where $\w{\xi}$ is timelike.
+There, we define the ``norm'' of $\w{\xi}$ by
+\be
+    V := \sqrt{-\w{\xi}\cdot\w{\xi}}  .
+\ee
+We have $V>0$ and the vector field
+\be
+    \w{u} := \frac{1}{V}\, \w{\xi}
+\ee
+is a future-directed unit timelike vector field. It is future-directed
+because by convention\footnote{Were $\w{\xi}$ past-directed, we could always
+consider the Killing field $-\w{\xi}$ instead.} $\w{\xi}$ is future-directed
+null on $\Hor$ and by continuity this orientation must be preserved in the
+region where $\w{\xi}$ is timelike.
+The unit vector field $\w{u}$ can be considered as the field of 4-velocities
+of a family of observers, the worldlines of which are the field lines of $\w{\xi}$,
+i.e. the orbits of the corresponding isometry group. The 4-acceleration
+of these observers is
+\bea
+    \w{a} & := & \wnab_{\w{u}}\, \w{u} \nonumber \\
+        & = & \wnab_{V^{-1}\w{\xi}}\, \left( V^{-1} \w{\xi} \right)
+        = V^{-1} \wnab_{\w{\xi}}\, \left( V^{-1} \w{\xi} \right)
+        = V^{-1} \left[ - V^{-2} (\wnab_{\w{\xi}} V )\, \w{\xi}
+            + V^{-1} \wnab_{\w{\xi}}\, \w{\xi} \right] . \nonumber
+\eea
+Now, since $\w{\xi}$ is a symmetry generator, $\wnab_{\w{\xi}} V =0$. This
+can be shown explicitly by means of Killing equation (\ref{e:neh:Killing_equation}):
+\[
+    \wnab_{\w{\xi}} V = \xi^\mu \nabla_\mu( \sqrt{-\xi_\nu \xi^\nu} )
+        = - \frac{1}{2\sqrt{-\xi_\nu \xi^\nu}} \, \xi^\mu \nabla_\mu( \xi_\nu \xi^\nu )
+        = -\frac{1}{2V}
+            \underbrace{\xi^\mu \xi^\nu \nabla_\mu \xi_\nu}_{0}
+        = 0 .
+\]
+We have thus
+\be
+    \w{a} = \frac{1}{V^2} \, \wnab_{\w{\xi}}\, \w{\xi}  ,
+\ee
+from which
+\[
+    a_\alpha = \frac{1}{V^2} \, \xi^\mu \nabla_\mu \xi_\alpha .
+\]
+Thanks to Killing equation (\ref{e:neh:Killing_equation}), we get
+\[
+    a_\alpha = - \frac{1}{V^2} \, \xi^\mu \nabla_\alpha \xi_\mu
+        = - \frac{1}{2V^2} \, \nabla_\alpha (\xi_\mu \xi^\mu)
+        = \frac{1}{2V^2} \, \nabla_\alpha V^2
+        = \frac{1}{2}\,  \nabla_\alpha \ln V^2  =  \nabla_\alpha \ln V ,
+\]
+hence
+\be
+    \w{a} = \vw{\nabla} \ln V .
+\ee
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
