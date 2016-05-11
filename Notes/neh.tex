@@ -1052,16 +1052,117 @@ $\w{\xi}\cdot\w{\xi}=0$ on $\Hor$, we conclude that, in the vicinity of $\Hor$,
 $\w{\xi}\cdot\w{\xi}<0$ on one side of $\Hor$ and $\w{\xi}\cdot\w{\xi}>0$ on the
 other side:
 \begin{greybox}
-In the vicinity of a non-degenerate Killing horizon, the Killing vector field $\w{\xi}$ is timelike on side of $\Hor$, null on $\Hor$
+In the vicinity of a non-degenerate Killing horizon $\Hor$, the Killing vector field $\w{\xi}$ is timelike on one side of $\Hor$, null on $\Hor$
 and spacelike on the other side.
 \end{greybox}
 
 Let us focus on the region in the vicinity of $\Hor$ where $\w{\xi}$ is timelike.
-There, we define the ``norm'' of $\w{\xi}$ by
+There we define the ``norm'' of $\w{\xi}$ by
 \be
-    V := \sqrt{-\w{\xi}\cdot\w{\xi}}  .
+   \encadre{ V := \sqrt{-\w{\xi}\cdot\w{\xi}} } .
 \ee
-We have $V>0$ and the vector field
+We have $V>0$ and the square of the gradient of $V$ provides a new expression
+of $\kappa$:
+\be  \label{e:neh:kappa2_nabV}
+    \encadre{ \kappa^2 = \lim_{\Hor} \nabla_\mu V \nabla^\mu V } ,
+\ee
+where $\lim_{\Hor}$ stands for the limit as one approaches $\Hor$
+from the timelike side, which implies $V\rightarrow 0$.
+\begin{proof}
+Let us consider the 3-form $\w{\omega}$ defined by
+\bea
+    \omega_{\alpha\beta\gamma} & := & \xi_{[\alpha}\nabla_\beta\xi_{\gamma]} \nonumber \\
+        & = & \frac{1}{6} \left[
+        \xi_\alpha \left( \nabla_\beta \xi_\gamma - \nabla_\gamma \xi_\beta \right)
+        + \xi_\beta \left( \nabla_\gamma \xi_\alpha - \nabla_\alpha \xi_\gamma \right)
+        + \xi_\gamma \left( \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha \right)
+        \right] , \label{e:neh:antisym_omega}
+\eea
+the second line being simply the explicit expression of the full antisymmetrization
+of $ \xi_{\alpha}\nabla_\beta\xi_{\gamma}$ denoted by square brackets in the first line.
+Killing equation (\ref{e:neh:Killing_equation}) enables us to simplify each term inside
+parentheses in (\ref{e:neh:antisym_omega}), yielding
+\be
+    \omega_{\alpha\beta\gamma} = \frac{1}{3} \left(
+        \xi_\alpha  \nabla_\beta \xi_\gamma
+        + \xi_\beta  \nabla_\gamma \xi_\alpha
+        + \xi_\gamma  \nabla_\alpha \xi_\beta \right) .
+\ee
+The ``square'' of $\w{\omega}$ is then
+\bea
+     \omega_{\mu\nu\rho} \, \omega^{\mu\nu\rho} & = & \frac{1}{9} \Big(
+       \xi_\mu  \nabla_\nu \xi_\rho \, \xi^\mu  \nabla^\nu \xi^\rho
+       + \xi_\mu  \nabla_\nu \xi_\rho \, \xi^\nu  \nabla^\rho \xi^\mu
+       + \xi_\mu  \nabla_\nu \xi_\rho \, \xi^\rho  \nabla^\mu \xi^\nu
+       \nonumber \\
+       & & \quad + \xi_\nu  \nabla_\rho \xi_\mu \, \xi^\mu  \nabla^\nu \xi^\rho
+       + \xi_\nu  \nabla_\rho \xi_\mu \, \xi^\nu  \nabla^\rho \xi^\mu
+       + \xi_\nu  \nabla_\rho \xi_\mu \, \xi^\rho  \nabla^\mu \xi^\nu
+       \nonumber \\
+       & & \quad + \xi_\rho  \nabla_\mu \xi_\nu \, \xi^\mu  \nabla^\nu \xi^\rho
+       + \xi_\rho  \nabla_\mu \xi_\nu \, \xi^\nu  \nabla^\rho \xi^\mu
+       + \xi_\rho \nabla_\mu \xi_\nu \, \xi^\rho  \nabla^\mu \xi^\nu  \Big)  . \nonumber
+\eea
+Now in the first line,
+\be \label{e:neh:omega_square1}
+  \xi_\mu  \nabla_\nu \xi_\rho \, \xi^\mu  \nabla^\nu \xi^\rho =
+    \xi_\mu  \xi^\mu  \nabla_\nu \xi_\rho \nabla^\nu \xi^\rho =
+    - V^2 \nabla_\nu \xi_\rho \nabla^\nu \xi^\rho
+    = - V^2 \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu
+\ee
+and (using Killing equation (\ref{e:neh:Killing_equation}))
+\be \label{e:neh:omega_square2}
+    \xi_\mu  \nabla_\nu \xi_\rho \, \xi^\nu  \nabla^\rho \xi^\mu
+        =  \xi_\mu \nabla^\rho \xi^\mu \, \xi^\nu  \nabla_\nu \xi_\rho
+        = - \xi_\mu \nabla^\rho \xi^\mu \, \xi^\nu  \nabla_\rho \xi_\nu
+        = - \frac{1}{4} \nabla^\rho V^2 \, \nabla_\rho V^2
+        = - V^2 \nabla^\rho V \, \nabla_\rho V  .
+\ee
+Actually, we notice that each line has one term of type (\ref{e:neh:omega_square1})
+and two terms of type (\ref{e:neh:omega_square2}). Hence
+\be \label{e:neh:omega_square_V}
+    \omega_{\mu\nu\rho} \, \omega^{\mu\nu\rho} = - \frac{V^2}{3}
+    \left( \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu + 2 \nabla_\mu V \nabla^\mu V \right) .
+\ee
+On $\Hor$, each of the terms inside parentheses in Eq.~(\ref{e:neh:antisym_omega})
+can be expressed thanks to the Frobenius identity (\ref{e:neh:Frobenius_xi}):
+\[
+    \omega_{\alpha\beta\gamma} \equalH
+    \frac{1}{6} \left[
+        \xi_\alpha \left( \nabla_\beta \rho\,  \xi_\gamma - \nabla_\gamma \rho \, \xi_\beta \right)
+        + \xi_\beta \left( \nabla_\gamma  \rho \, \xi_\alpha - \nabla_\alpha  \rho \, \xi_\gamma \right)
+        + \xi_\gamma \left( \nabla_\alpha  \rho \,  \xi_\beta - \nabla_\beta  \rho \, \xi_\alpha \right)
+        \right] .
+\]
+We notice that all terms canceal two by two:
+\be
+    \omega_{\alpha\beta\gamma} \equalH 0 .
+\ee
+We recover a variant of Frobenius theorem\index{Frobenius!theorem},
+expressing the fact that the vector field $\w{\xi}$
+is hypersurface-orthogonal on $\Hor$ (see e.g.
+Eq.~(B.3.6) in Wald's textbook \cite{Wald84}).
+Let us evaluate the gradient of (\ref{e:neh:omega_square_V}) and take the limit
+on $\Hor$:
+\bea
+    \nabla_\alpha \omega_{\mu\nu\rho} \, \underbrace{\omega^{\mu\nu\rho}}_{0}
+ + \underbrace{\omega_{\mu\nu\rho}}_{0} \nabla_\alpha  \omega^{\mu\nu\rho} & \equalH &
+  - \frac{1}{3} \underbrace{\nabla_\alpha V^2}_{2\kappa \xi_\alpha}
+    \left( \underbrace{\nabla_\mu \xi_\nu \nabla^\mu \xi^\nu}_{-2\kappa^2} + 2 \nabla_\mu V \nabla^\mu V \right)
+        \nonumber \\
+ &  & -  \frac{1}{3} \underbrace{V^2}_{0}  \nabla_\alpha \left( \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu + 2 \nabla_\mu V \nabla^\mu V \right) ,  \nonumber
+\eea
+where we have used Eq.~(\ref{e:neh:dxi2_kappa}) in the form $\nabla_\alpha V^2 \equalH 2 \kappa \xi_\alpha$ and expression~(\ref{e:neh:kappa2}) of $\kappa^2$. Hence we are left with
+\[
+    \kappa \left(  \nabla_\mu V \nabla^\mu V - \kappa^2 \right)
+     \xi_\alpha \longrightarrow 0 \quad\mbox{on}\ \Hor .
+\]
+Now, by the very definition of a Killing horizon, $\xi_\alpha \not=0$ on $\Hor$.
+Moreover, $\Hor$ being a non-degenerate Killing horizon, we have $\kappa\not=0$ as well.
+The above limit implies then (\ref{e:neh:kappa2_nabV}).
+\end{proof}
+
+In the region where $\w{\xi}$ is timelike, the vector field
 \be
     \w{u} := \frac{1}{V}\, \w{\xi}
 \ee
@@ -1070,10 +1171,13 @@ because by convention\footnote{Were $\w{\xi}$ past-directed, we could always
 consider the Killing field $-\w{\xi}$ instead.} $\w{\xi}$ is future-directed
 null on $\Hor$ and by continuity this orientation must be preserved in the
 region where $\w{\xi}$ is timelike.
-The unit vector field $\w{u}$ can be considered as the field of 4-velocities
-of a family of observers, the worldlines of which are the field lines of $\w{\xi}$,
-i.e. the orbits of the corresponding isometry group. The 4-acceleration
-of these observers is
+The unit vector field $\w{u}$ can be considered as the 4-velocity
+of an observer $\Obs$, whose worldline of is a field line of $\w{\xi}$,
+i.e. an orbit of the isometry group generated by $\w{\xi}$.
+One may call $\Obs$ an
+\defin{stationary observer}\index{stationary!observer}\index{observer!stationary --}
+since the spacetime geometry is not changing along its worldline.
+The 4-acceleration of $\Obs$ is
 \bea
     \w{a} & := & \wnab_{\w{u}}\, \w{u} \nonumber \\
         & = & \wnab_{V^{-1}\w{\xi}}\, \left( V^{-1} \w{\xi} \right)
@@ -1098,7 +1202,8 @@ from which
 \[
     a_\alpha = \frac{1}{V^2} \, \xi^\mu \nabla_\mu \xi_\alpha .
 \]
-Thanks to Killing equation (\ref{e:neh:Killing_equation}), we get
+Thanks to Killing equation (\ref{e:neh:Killing_equation}), we may rewrite
+this relation as
 \[
     a_\alpha = - \frac{1}{V^2} \, \xi^\mu \nabla_\alpha \xi_\mu
         = - \frac{1}{2V^2} \, \nabla_\alpha (\xi_\mu \xi^\mu)
@@ -1109,6 +1214,46 @@ hence
 \be
     \w{a} = \vw{\nabla} \ln V .
 \ee
+The norm of $\w{a}$, which is always a spacelike vector (since the unit character
+of $\w{u}$ implies $\w{u}\cdot\w{a}=0$), is
+\be
+    a := \sqrt{\w{a}\cdot\w{a}} = \frac{1}{V} \sqrt{\nabla_\mu V \nabla^\mu V} .
+\ee
+Given the result (\ref{e:neh:kappa2_nabV}), we get an expession of $\kappa$
+involving $a$:
+\be \label{e:neh:kappa_lim_Va}
+    \encadre{ \kappa = \lim_{\Obs\rightarrow\Hor} V a } ,
+\ee
+where $\Obs\rightarrow\Hor$ means that the limit is acheived by choosing
+the worldline of observer $\Obs$ arbitrarly close to $\Hor$.
+Since $V \rightarrow 0$ as one approaches $\Hor$, it follows that
+\be
+     \lim_{\Obs\rightarrow\Hor} a = +\infty .
+\ee
+This means that the acceleration felt by observer $\Obs$ (the ``gravity'')
+diverges as $\Obs$ is placed as close as possible to $\Hor$. In that sense,
+the \emph{physical} surface gravity of $\Hor$ is infinite. But
+Eq.~(\ref{e:neh:kappa_lim_Va}) shows that the rescaled acceleration
+$V a$ remains finite as one approaches $\Hor$, and tends to $\kappa$.
+It is this quantity that is
+named the \defin{surface gravity}\index{surface!gravity}\index{gravity!surface --}
+of the Killing horizon $\Hor$.
+
+\begin{remark}
+As stressed above, the surface gravity $\kappa$ is not the
+actual gravity $a$ measured \emph{locally}, i.e. by an observer at rest with
+respect to $\Hor$ and infinitely close to it. However, $\kappa$ can be interpreted
+as a physical force (per unit mass) measured by a \emph{distant} observer,
+at least in the special case of a Schwarzschild black hole, for which
+$\w{\xi}$ is timelike in the entire region outside the Killing horizon\footnote{This is not true for a rotating Kerr black hole:
+$\w{\xi}$ becomes null at some ``light-cylinder'' outside $\Hor$ and is then
+spacelike away from it, cf. Eq.~(\ref{e:ker:def_chi}),
+where $\w{\xi}$ is denoted by $\w{\chi}$.}. In this case, one can identify $\kappa$
+to the force exerted by an observer ``at infinity'' to hold in place a particle
+of unit mass close to $\Hor$ by means of an infinitely long massless string
+(see e.g. Sec.~5.2.4 of Poisson's textbook \cite{Poiss04}.).
+\end{remark}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
