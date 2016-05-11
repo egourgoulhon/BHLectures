@@ -6,7 +6,7 @@
 \section{Introduction}
 
 Having discussed in depth the geometry of null hypersurfaces in Chap.~\ref{s:def}
-we move forward here to distinguish a null hypersurface representing a black hole event horizon from, let us say, a future light cone. We do it for black holes
+we move forward here to distinguish a null hypersurface representing a black hole event horizon from, let us say, a future light cone. We do it here for black holes
 \emph{in equilibrium}. Indeed, for such black holes, it is quite natural
 to assume a vanishing expansion. This leads us the concept of \emph{non-expanding
 horizon} (Sec.~\ref{s:neh:neh}). A special kind of these objects is that
@@ -392,8 +392,8 @@ where $\D\w{x}$ is the infinitesimal vector connecting the point $p$ to the poin
 $\Phi_{\D t}(p)$ (cf. Sec.~\ref{s:bas:vectors} and Fig.~\ref{f:neh:orbit_group}).
 We have then
 \begin{greybox}
-The action of $G$ on $\M$ limited to infinitesimal transformations of parameter
-$\D t$ around the identity ($\D t =0$) amounts to translations along the infinitesimal vector $\D t\, \w{\xi}$.
+The group action limited to infinitesimal transformations of parameter
+$\D t$ around the identity ($\D t =0$) amounts to translations by the infinitesimal vector $\D t\, \w{\xi}$.
 \end{greybox}
 
 \begin{figure}
@@ -422,7 +422,7 @@ $\D\w{x}' := \vp{\Phi_t(p)\Phi_t(q)}$ and $\D\w{y}' := \vp{\Phi_t(p)\Phi_t(r)}$
 Now, by definition, $\D\w{x}'$ is nothing but the pushforward
 of the vector $\D\w{x}\in T_p\M$ to the tangent space
 $T_{\Phi_t(p)}\M$ by the map $\Phi_t$
-(cf. Sec.~\ref{s:bas:Lie_der_vector} in Appendix~\ref{s:bas}),
+(cf. Sec.~\ref{s:bas:Lie_der_vector} of Appendix~\ref{s:bas}),
 and similarly $\D\w{y}'$ is the pushforward of $\D\w{y}$ by $\Phi_t$:
 \[
     \D\w{x}' = \Phi_t^*(\D\w{x}) \quad\mbox{and}\quad
@@ -446,20 +446,21 @@ pullback of $\w{g}$ by $\Phi_t$:
 \be \label{e:neh:isometry_pullback}
     \Phi_t^*\w{g} = \w{g} .
 \ee
-Now, according the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie
+According the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie
 derivative, we have
 \be
     \Lie{\xi} \w{g} := \lim_{t \rightarrow 0} \frac{1}{t}
-    \left( \Phi_\varepsilon^*\w{g} - \w{g} \right) .
+    \left( \Phi_t^*\w{g} - \w{g} \right) .
 \ee
 If $G$ is a symmetry group of $(\M,\w{g})$ with generator $\w{\xi}$,
+the isometry condition
 (\ref{e:neh:isometry_pullback}) leads then to
 $\Lie{\xi}\w{g} = 0$. The reverse is true by integration. Hence
 we conclude:
 \begin{greybox}
 A 1-dimensional Lie group $G$
 is a symmetry group of the spacetime $(\M,\w{g})$ iff the Lie derivative
-of the metric tensor along the generator $\w{\xi}$ of $G$
+of the metric tensor along a generator $\w{\xi}$ of $G$
 vanishes identically:
 \be \label{e:neh:Lie_xi_g}
     \encadre{\Lie{\xi}\w{g} = 0 } .
@@ -473,6 +474,18 @@ we see immediately that Eq.~(\ref{e:neh:Lie_xi_g}) is equivalent to the so-calle
 \be \label{e:neh:Killing_equation}
     \encadre{ \nabla_\alpha \xi_\beta + \nabla_\beta \xi_\alpha = 0 }.
 \ee
+
+If terms of the components $g_{\alpha\beta}$ of $\w{g}$ with respect to
+coordinates $(x^\alpha) = (t,x^1,\ldots,x^{n-1})$ adapted to the Killing vector $\w{\xi}$,
+i.e. such that $\w{\xi} = \wpar_t$, the isometry condition (\ref{e:neh:Lie_xi_g})
+is equivalent to
+\be
+    \der{g_{\alpha\beta}}{t} = 0 .
+\ee
+\begin{proof}
+This is a direct consequence of the identity (\ref{e:bas:Lie_adapted}).
+\end{proof}
+
 
 \subsection{Definition and examples of Killing horizons} \label{s:neh:def_Killing_hor}
 
@@ -538,11 +551,12 @@ with respect to $\w{\xi}$.
 
 \begin{example}[null hyperplane as a boost-Killing horizon]
 \label{x:neh:boostKH}
-Let us consider again the null hyperplane $\Hor$, but setting
+Let us consider the same null hyperplane $\Hor$ as above, but
+with another Killing vector of Minkowski spacetime:
 \be \label{e:neh:boost-Killing}
-    \w{\xi} := x \wpar_t + t \wpar_x ,
+    \w{\xi} := x \wpar_t + t \wpar_x .
 \ee
-which defines another Killing vector of Minkowski spacetime: $\w{\xi}$ is indeed the
+This vector is indeed the
 generator of the 1-parameter group of Lorentz boosts\index{boost} in the $(t,x)$ plane.
 On $\Hor$ we have (cf. Fig.~\ref{f:neh:hplaneKilling-boost}):
 \[
@@ -551,13 +565,13 @@ On $\Hor$ we have (cf. Fig.~\ref{f:neh:hplaneKilling-boost}):
 where $\wl$ is the null normal to $\Hor$ defined by
 Eq.~(\ref{e:def:wl_null_hyperplane}) and the notation $\equalH$ means that the equality holds only on $\Hor$. We conclude that $\w{\xi}$ is a normal to
 the null hypersurface $\Hor$ as soon as $t\not=0$. Therefore, we may split
-$\Hor\setminus\{t=0\}$ in two open half-hyperplanes (cf. Fig.~\ref{f:neh:hplaneKilling-boost}):
+$\Hor\setminus\{t=0\}$ in two open half-hyperplanes:
 \be \label{e:neh:boost-Killing_hor}
     \Hor^+ := \{ p\in\Hor,\quad t(p) > 0 \} \quad\mbox{and}\quad
-    \Hor^- := \{ p\in\Hor,\quad t(p) < 0 \}
+    \Hor^- := \{ p\in\Hor,\quad t(p) < 0 \} ,
 \ee
-and each null hypersurface $\Hor^+$ and $\Hor^-$ is a Killing horizon with
-respect to $\w{\xi}$.
+so that each of them is a Killing horizon with
+respect to $\w{\xi}$ (cf. Fig.~\ref{f:neh:hplaneKilling-boost}).
 \end{example}
 
 \begin{example}[null hyperplane as a null-rotation-Killing horizon]
@@ -571,24 +585,24 @@ This vector is indeed the generator of
 null rotations leaving the plane
 $\mathrm{Span}(\wl,\wpar_z)$ strictly invariant (cf. e.g. Sec.~6.4.5 of
 Ref.~\cite{Gourg13}), $\wl$ being the null normal of $\Hor$ defined by
-Eq.~(\ref{e:def:wl_null_hyperplane}), and these null rotations form a
+Eq.~(\ref{e:def:wl_null_hyperplane}). These null rotations form a
 1-dimensional subgroup of the Lorentz group, and thereby
 a symmetry group of Minkowski spacetime. It is also immediate to check that
-the vector $\w{\xi}$ defined by (\ref{e:neh:xi_null_rotation}) obeys
-Killing equation [Eq.~(\ref{e:neh:Killing_equation})].
+the vector defined by (\ref{e:neh:xi_null_rotation}) obeys
+Killing equation (\ref{e:neh:Killing_equation}).
 On $\Hor$, $t-x=0$, so that
 (\ref{e:neh:xi_null_rotation}) reduces to
 \[
     \w{\xi}  \equalH y ( \wpar_t + \wpar_x )  \equalH y \, \wl .
 \]
 It follows that $\w{\xi}$ is a null normal to $\Hor$ as soon as $y\not=0$.
-We may then split $\Hor\setminus\{y=0\}$ in two open half-hyperplanes (cf. Fig.~\ref{f:neh:hplaneKilling-nullrot}):
+We may then split $\Hor\setminus\{y=0\}$ in two open half-hyperplanes:
 \[
     \Hor_1 := \{ p\in\Hor,\quad y(p) < 0 \} \quad\mbox{and}\quad
     \Hor_2 := \{ p\in\Hor,\quad y(p) > 0 \} ,
 \]
 each of them being a Killing horizon with
-respect to $\w{\xi}$.
+respect to $\w{\xi}$ (cf. Fig.~\ref{f:neh:hplaneKilling-nullrot}).
 \end{example}
 
 \begin{figure}
@@ -608,10 +622,12 @@ Killing horizon of Minkowski spacetime: it is invariant under the action
 of the Lorentz group, but its null generators are not invariant
 under the action of a single 1-dimensional subgroup of the Lorentz group.
 Actually the future light cone is an example of a more general structure,
-which Brandon Carter \cite{Carte67,Carte69} has termed a
-\defin{local isometry horizon}\index{local!isometry horizon}\index{isometry!horizon}\index{horizon!local isometry --}: a null hypersurface that is invariant under
+which Carter has termed a
+\defin{local isometry horizon}\index{local!isometry horizon}\index{isometry!horizon}\index{horizon!local isometry --} \cite{Carte67,Carte69}: a null hypersurface that is invariant under
 some group $G$ of isometries (here: the Lorentz group) and such that each null
-geodesic generator is an orbit under some 1-dimensional subgroup of $G$ (here: using Minkowskian spherical
+geodesic generator is an orbit of some 1-dimensional subgroup of $G$,
+this subgroup being not necessarily the same from one null generator to the next
+(here: using Minkowskian spherical
 coordinates $(t,r,\th,\ph)$,
 the null geodesic generator through the point of coordinates $(1,1,\th_0,\ph_0)$
 is the orbit of this point under the subgroup of boosts in the plane
@@ -716,7 +732,7 @@ condition (\ref{e:def:wl_rho_u}):
 \[
     \uu{\xi} \equalH - e^\rho \, \dd u ,
 \]
-$u$ being a scalar field defining $\Hor$ by $u=0$.
+$u$ being a scalar field such that the equation of $\Hor$ is $u=0$.
 Actually, $\rho$ is related to $\kappa$ by Eq.~(\ref{e:def:def_kappa}):
 \[
     \kappa = \xi^\mu \nabla_\mu \rho = \wnab_{\w{\xi}}\,  \rho .
@@ -752,7 +768,7 @@ Hence
 This is an explicit expression of $\kappa$ in terms of the Killing vector
 field $\w{\xi}$.
 However, in actual calculations, one generally prefers to employ
-(\ref{e:neh:dxi2_kappa}) for evaluating $\kappa$, because it does not involve
+(\ref{e:neh:dxi2_kappa}) for evaluating $\kappa$, because the latter does not involve
 the computation of any covariant derivative, contrary to (\ref{e:neh:kappa2}).
 
 
@@ -792,7 +808,7 @@ of $\w{\omega}$ along $\wl$ via formula (\ref{e:bas:Lie_der_comp_nab}) of Append
 \[
     \Liec{\el}\omega_\nu = \el^\mu \nabla_\mu \omega_\nu + \omega_\mu \nabla_\nu \el^\mu .
 \]
-Now, since $\wl$ is a symmetry generator on $\Hor$, we have
+Since $\wl$ is a symmetry generator on $\Hor$, we have
 \be
     \Lie{\el}\w{\omega} \equalH 0 ,
 \ee
@@ -900,7 +916,7 @@ that $\kappa$ is constant over $\Hor$. More precisely, we have shown that
 \begin{greybox}
 If matter and the non-gravitational fields obey the dominant energy condition
 on the Killing horizon $\Hor$, then the non-affinity coefficient $\kappa$
-associated with the null normal coinciding with the Killing vector field on
+of the null normal coinciding with the Killing vector field on
 $\Hor$ is constant over $\Hor$:
 \be \label{e:neh:zeroth_law}
     \encadre{\kappa = \mathrm{const}.}
@@ -933,7 +949,7 @@ is $\wl^+ = t\,  \wl$, $\wl$ being the geodesic null normal defined by
 $\wl:= \wpar_t + \wpar_x$ [cf. Eq.~(\ref{e:def:wl_null_hyperplane})].
 Using $\kappa_{\wl} = 0$ and the scaling law (\ref{e:def:rescale_kappa}),
 we get the non-affinity
-coefficient associated with $\wl^+$ as $\kappa_+= \wnab_{\wl} t = \partial_t t + \partial_x t$, i.e.
+coefficient of $\wl^+$ as $\kappa_+= \wnab_{\wl} t = \partial_t t + \partial_x t$, i.e.
 \[
     \kappa_+ = 1 .
 \]
@@ -942,7 +958,7 @@ Sticking to future-directed null normals, we shall then consider $\Hor^-$
 as a Killing horizon with respect to the Killing vector field $-\w{\xi}$.
 The future-directed null normal coinciding with $-\w{\xi}$ on $\Hor^-$ is then
 $\wl^- = -t\,  \wl$, from which we deduce the non-affinity
-coefficient associated with $\wl^-$: $\kappa_-= \wnab_{\wl} (-t) = \partial_t (-t) + \partial_x (-t)$, i.e.
+coefficient of $\wl^-$: $\kappa_-= \wnab_{\wl} (-t) = \partial_t (-t) + \partial_x (-t)$, i.e.
 \[
     \kappa_- = -1 .
 \]
@@ -980,7 +996,7 @@ that on a Schwarzschild horizon:
   \kappa = \frac{1}{4m},
 \]
 which is clearly constant. But
-this result is rather trivial since the Schwarzschild horizon is spherically
+this last feature is rather trivial since the Schwarzschild horizon is spherically
 symmetric, so that no dependence of $\kappa$ on $\th$ nor $\ph$ could have been expected.
 A much less trivial example is that of the event horizon of a Kerr black hole,
 which we shall discuss in Chap.~\ref{s:ker}. This horizon is only axisymmetric,
@@ -1001,7 +1017,7 @@ assuming axisymmetry by B.~Carter in his lecture at the same Les Houches School
 \cite{Carte73b} (Theorem 8, p.~167).
 A third proof of the constancy of $\kappa$ using the dominant energy condition
 has also been given in 1973 by J.M.~Bardeen, B.~Carter and S.W.~Hawking
-in their famous article \emph{The Four Laws of Black Hole Mechanics}
+in their seminal article \emph{The Four Laws of Black Hole Mechanics}
 \cite{BardeCH73}.
 \end{hist}
 
@@ -1047,7 +1063,7 @@ tangent to $\Hor$). Hence we have
     \wnab_{\w{v}} (\w{\xi}\cdot\w{\xi}) \not= 0 .
 \]
 In other words, the derivative of the scalar square $\w{\xi}\cdot\w{\xi}$
-along any direction transerve to $\Hor$ does not vanish. Since
+along any direction transverse to $\Hor$ does not vanish. Since
 $\w{\xi}\cdot\w{\xi}=0$ on $\Hor$, we conclude that, in the vicinity of $\Hor$,
 $\w{\xi}\cdot\w{\xi}<0$ on one side of $\Hor$ and $\w{\xi}\cdot\w{\xi}>0$ on the
 other side:
@@ -1079,7 +1095,7 @@ Let us consider the 3-form $\w{\omega}$ defined by
         \right] , \label{e:neh:antisym_omega}
 \eea
 the second line being simply the explicit expression of the full antisymmetrization
-of $ \xi_{\alpha}\nabla_\beta\xi_{\gamma}$ denoted by square brackets in the first line.
+of $ \xi_{\alpha}\nabla_\beta\xi_{\gamma}$, which is denoted by square brackets in the first line.
 Killing equation (\ref{e:neh:Killing_equation}) enables us to simplify each term inside
 parentheses in (\ref{e:neh:antisym_omega}), yielding
 \be
@@ -1118,7 +1134,8 @@ and (using Killing equation (\ref{e:neh:Killing_equation}))
         = - \frac{1}{4} \nabla^\rho V^2 \, \nabla_\rho V^2
         = - V^2 \nabla^\rho V \, \nabla_\rho V  .
 \ee
-Actually, we notice that each line has one term of type (\ref{e:neh:omega_square1})
+Actually, we notice that each line
+is made of one term of type (\ref{e:neh:omega_square1})
 and two terms of type (\ref{e:neh:omega_square2}). Hence
 \be \label{e:neh:omega_square_V}
     \omega_{\mu\nu\rho} \, \omega^{\mu\nu\rho} = - \frac{V^2}{3}
@@ -1134,32 +1151,34 @@ can be expressed thanks to the Frobenius identity (\ref{e:neh:Frobenius_xi}):
         + \xi_\gamma \left( \nabla_\alpha  \rho \,  \xi_\beta - \nabla_\beta  \rho \, \xi_\alpha \right)
         \right] .
 \]
-We notice that all terms canceal two by two:
-\be
+We notice that all terms in the right-hand side canceal two by two, yielding
+\be \label{e:neh:omega_abc_zero}
     \omega_{\alpha\beta\gamma} \equalH 0 .
 \ee
-We recover a variant of Frobenius theorem\index{Frobenius!theorem},
+Equation~(\ref{e:neh:omega_abc_zero}) is actually nothing but
+a variant of Frobenius theorem\index{Frobenius!theorem},
 expressing the fact that the vector field $\w{\xi}$
 is hypersurface-orthogonal on $\Hor$ (see e.g.
 Eq.~(B.3.6) in Wald's textbook \cite{Wald84}).
-Let us evaluate the gradient of (\ref{e:neh:omega_square_V}) and take the limit
+Let us evaluate the gradient of the square
+(\ref{e:neh:omega_square_V}) and take the limit
 on $\Hor$:
 \bea
-    \nabla_\alpha \omega_{\mu\nu\rho} \, \underbrace{\omega^{\mu\nu\rho}}_{0}
- + \underbrace{\omega_{\mu\nu\rho}}_{0} \nabla_\alpha  \omega^{\mu\nu\rho} & \equalH &
-  - \frac{1}{3} \underbrace{\nabla_\alpha V^2}_{2\kappa \xi_\alpha}
-    \left( \underbrace{\nabla_\mu \xi_\nu \nabla^\mu \xi^\nu}_{-2\kappa^2} + 2 \nabla_\mu V \nabla^\mu V \right)
+    \nabla_\alpha \omega_{\mu\nu\rho} \, \underbrace{\omega^{\mu\nu\rho}}_{\to 0}
+ + \underbrace{\omega_{\mu\nu\rho}}_{\to 0} \nabla_\alpha  \omega^{\mu\nu\rho} & =&
+  - \frac{1}{3} \underbrace{\nabla_\alpha V^2}_{\to 2\kappa \xi_\alpha}
+    \Big( \underbrace{\nabla_\mu \xi_\nu \nabla^\mu \xi^\nu}_{\to -2\kappa^2} + 2 \nabla_\mu V \nabla^\mu V \Big)
         \nonumber \\
- &  & -  \frac{1}{3} \underbrace{V^2}_{0}  \nabla_\alpha \left( \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu + 2 \nabla_\mu V \nabla^\mu V \right) ,  \nonumber
+ &  & -  \frac{1}{3} \underbrace{V^2}_{\to 0}  \nabla_\alpha \left( \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu + 2 \nabla_\mu V \nabla^\mu V \right) ,  \nonumber
 \eea
-where we have used Eq.~(\ref{e:neh:dxi2_kappa}) in the form $\nabla_\alpha V^2 \equalH 2 \kappa \xi_\alpha$ and expression~(\ref{e:neh:kappa2}) of $\kappa^2$. Hence we are left with
+where we have used Eq.~(\ref{e:neh:dxi2_kappa}) in the form $\nabla_\alpha V^2 \equalH 2 \kappa \xi_\alpha$, as well as expression~(\ref{e:neh:kappa2}) of $\kappa^2$. Hence we are left with
 \[
     \kappa \left(  \nabla_\mu V \nabla^\mu V - \kappa^2 \right)
      \xi_\alpha \longrightarrow 0 \quad\mbox{on}\ \Hor .
 \]
 Now, by the very definition of a Killing horizon, $\xi_\alpha \not=0$ on $\Hor$.
 Moreover, $\Hor$ being a non-degenerate Killing horizon, we have $\kappa\not=0$ as well.
-The above limit implies then (\ref{e:neh:kappa2_nabV}).
+The above limit is then equivalent to (\ref{e:neh:kappa2_nabV}).
 \end{proof}
 
 In the region where $\w{\xi}$ is timelike, the vector field
@@ -1171,10 +1190,10 @@ because by convention\footnote{Were $\w{\xi}$ past-directed, we could always
 consider the Killing field $-\w{\xi}$ instead.} $\w{\xi}$ is future-directed
 null on $\Hor$ and by continuity this orientation must be preserved in the
 region where $\w{\xi}$ is timelike.
-The unit vector field $\w{u}$ can be considered as the 4-velocity
+The unit vector field $\w{u}$ can be then considered as the 4-velocity
 of an observer $\Obs$, whose worldline of is a field line of $\w{\xi}$,
 i.e. an orbit of the isometry group generated by $\w{\xi}$.
-One may call $\Obs$ an
+One may call $\Obs$ a
 \defin{stationary observer}\index{stationary!observer}\index{observer!stationary --}
 since the spacetime geometry is not changing along its worldline.
 The 4-acceleration of $\Obs$ is
@@ -1190,7 +1209,7 @@ can be shown explicitly by means of Killing equation (\ref{e:neh:Killing_equatio
 \[
     \wnab_{\w{\xi}} V = \xi^\mu \nabla_\mu( \sqrt{-\xi_\nu \xi^\nu} )
         = - \frac{1}{2\sqrt{-\xi_\nu \xi^\nu}} \, \xi^\mu \nabla_\mu( \xi_\nu \xi^\nu )
-        = -\frac{1}{2V}
+        = -\frac{1}{V}
             \underbrace{\xi^\mu \xi^\nu \nabla_\mu \xi_\nu}_{0}
         = 0 .
 \]
@@ -1224,14 +1243,14 @@ involving $a$:
 \be \label{e:neh:kappa_lim_Va}
     \encadre{ \kappa = \lim_{\Obs\rightarrow\Hor} V a } ,
 \ee
-where $\Obs\rightarrow\Hor$ means that the limit is acheived by choosing
-the worldline of observer $\Obs$ arbitrarly close to $\Hor$.
+where $\Obs\rightarrow\Hor$ means that the limit is achieved by choosing
+the worldline of observer $\Obs$ arbitrarily close to $\Hor$.
 Since $V \rightarrow 0$ as one approaches $\Hor$, it follows that
 \be
      \lim_{\Obs\rightarrow\Hor} a = +\infty .
 \ee
 This means that the acceleration felt by observer $\Obs$ (the ``gravity'')
-diverges as $\Obs$ is placed as close as possible to $\Hor$. In that sense,
+diverges as $\Obs$ is placed as closer and closer to $\Hor$. In that sense,
 the \emph{physical} surface gravity of $\Hor$ is infinite. But
 Eq.~(\ref{e:neh:kappa_lim_Va}) shows that the rescaled acceleration
 $V a$ remains finite as one approaches $\Hor$, and tends to $\kappa$.
@@ -1251,7 +1270,7 @@ spacelike away from it, cf. Eq.~(\ref{e:ker:def_chi}),
 where $\w{\xi}$ is denoted by $\w{\chi}$.}. In this case, one can identify $\kappa$
 to the force exerted by an observer ``at infinity'' to hold in place a particle
 of unit mass close to $\Hor$ by means of an infinitely long massless string
-(see e.g. Sec.~5.2.4 of Poisson's textbook \cite{Poiss04}.).
+(see e.g. Sec.~5.2.4 of Poisson's textbook \cite{Poiss04}).
 \end{remark}
 
 
