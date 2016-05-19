@@ -55,7 +55,7 @@ hypersurface-orthogonal (cf. Sec.~\ref{s:sta:staticity_thm}).
 We may then foliate $\M$ by a 1-parameter family of hypersurfaces
 $\left(\Sigma_t\right)_{t\in\R}$, such that $\w{\xi}$ is normal to
 all $\Sigma_t$'s and $t$ is a parameter associated to $\w{\xi}$:
-\be
+\be \label{e:sch:xi_t}
     \w{\xi}(t) = 1
 \ee
 or equivalently,
@@ -66,16 +66,142 @@ or equivalently,
 In addition to be static, we assume that $(\M,\w{g})$ is \defin{spherically symmetric},
 i.e. that it is invariant under the action of the rotation group $\mathrm{SO}(3)$,
 whose orbits are spacelike 2-spheres (cf. Sec.~\ref{s:neh:symmetries}).
-Let $\Sp$ be an orbit 2-sphere. The static Killing vector field $\w{\xi}$
+Let $\Sp$ be a generic orbit 2-sphere. The static Killing vector field $\w{\xi}$
 must be orthogonal to $\Sp$, otherwise the orthogonal projection of $\w{\xi}$
 onto $\Sp$ would define some privileged directions on $\Sp$, which is incompatible
 with spherical symmetry. The orthogonality of $\w{\xi}$ and $\Sp$ implies
 that $\Sp\subset\Sigma_t$. Let $(x^a)=(\th,\ph)$ be spherical coordinates on
 $\Sp$. The metric $\w{q}$ induced by $\w{g}$ on $\Sp$ is given by
 \be
-    q_{ab}\, \D x^a\, \D x^b = r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right),
+    q_{ab}\, \D x^a\, \D x^b = r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
 \ee
-where $r$ is a constant over $\Sp$, by virtue of spherical symmetry.
+The coefficient $r^2$ in front of the standard spherical element must be
+constant over $\Sp$, by virtue of spherical symmetry. The area of $\Sp$ is
+then $A=4\pi r^2$. For this reason, $r$ is called the \defin{areal radius}\index{areal!radius}
+of $\Sp$. Letting $\Sp$ vary, $r$ can be considered as a scalar field on
+$\M$. If $\dd r \not = 0$, we may use it a coordinate. Since $\Sp\subset \Sigma_t$,
+$(r,\th,\ph)$ is a coordinate system on each hypersurface $\Sigma_t$.
+The set $(t,r,\th,\ph)$,
+where $t$ is adapted to $\w{\xi}$ thanks to (\ref{e:sch:xi_t}) is then a
+coordinate system and, by construction, the expression of the metric tensor
+with respect to this system is
+\be \label{e:sch:g_AB}
+    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -A(r)\, \D t + B(r)\, \D r +
+        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\ee
+Note that in this coordinate system
+\be
+    \w{\xi} = \wpar_t
+\ee
+and that $g_{tt} = -A(r)$ and $g_{rr} = B(r)$ do not depend on $t$
+as a result of the spacetime stationarity, while
+$g_{tr} = g_{t\th} = g_{t\ph} = 0$ expresses the orthogonality of $\w{\xi}$
+and $\Sigma_t$, i.e. the spacetime staticity.
+The coordinates $(t,r,\th,\ph)$ are called \defin{areal coordinates}\index{areal!coordinates},
+reflecting the fact that $r$ is the areal radius.
+
+The Christoffel symbols of the metric (\ref{e:sch:g_AB}) with respect to the
+areal coordinates are (cf. Sec.~\ref{s:sam:Kottler_solution} for the computation):
+\be
+\begin{array}{l}
+\displaystyle  \Gamma^t_{\ \, tr} = \Gamma^t_{\ \, rt} = \frac{1}{2A}\derd{A}{r}\qquad
+\Gamma^r_{\ \, tt} = \frac{1}{2B}\derd{A}{r} \qquad
+\Gamma^r_{\ \, rr} = \frac{1}{2B}\derd{B}{r} \qquad
+\Gamma^r_{\ \, \th\th} = -\frac{r}{B} \\[2ex]
+\displaystyle  \Gamma^r_{\ \, \ph\ph} = -\frac{r\sin^2\th}{B} \qquad
+\Gamma^\th_{\ \, r\th} = \Gamma^\th_{\ \, \th r} = \frac{1}{r} \qquad
+\Gamma^\th_{\ \, \ph\ph} = -\sin\th\cos\th \\[2ex]
+\displaystyle \Gamma^\ph_{\ \, r\ph} = \Gamma^\ph_{\ \, \ph r} = \frac{1}{r} \qquad
+\Gamma^\ph_{\ \, \th\ph} = \Gamma^\ph_{\ \, \ph\th} = \frac{1}{\tan\th} ,
+\end{array}
+\ee
+the Christoffel symbols not listed above being zero.
+
+The $tt$ component of the Einstein equation (\ref{e:sch:vac_Einstein_eq})
+leads to (cf. Sec.~\ref{s:sam:Kottler_solution} for the computation)
+\be \label{e:sch:EE_tt}
+        r \derd{B}{r} - B + (1 - \Lambda r^2) B^2 = 0 ,
+\ee
+while the $rr$ component leads to
+\be \label{e:sch:EE_rr}
+        r \derd{A}{r} + A - (1 - \Lambda r^2) AB = 0 .
+\ee
+Finally, the $\th\th$ and $\ph\ph$ components lead to the same equation:
+\be
+    2  \frac{\D^2 A}{\D r^2} + \frac{2}{r} \derd{A}{r}
+        - \frac{1}{B} \left( \derd{A}{r} + \frac{2A}{r} \right) \derd{B}{r}
+        - \frac{1}{A} \left( \derd{A}{r} \right) ^2
+        + 4 \Lambda  A B  = 0 .
+\ee
+All the other components of the Einstein equation (\ref{e:sch:vac_Einstein_eq})
+are identically zero.
+
+Adding Eq.~(\ref{e:sch:EE_tt}) multiplied by $A$ to
+Eq.~(\ref{e:sch:EE_rr}) multiplied by $B$ yields
+\[
+    B \derd{A}{r} + A \derd{B}{r} = \derd{}{r}(AB) = 0 .
+\]
+The solution of this equation is obviously $A(r)B(r) = C$, where $C$ is a constant.
+Without any loss of generality, we may choose $C=1$. Indeed, substituting
+$C/B(r)$ for $A(r)$ in Eq.~(\ref{e:sch:g_AB}) results in
+\[
+    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -\frac{C}{B(r)}\, \D t + B(r)\, \D r +
+        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\]
+Assuming $C>0$, the change of variable $t' = \sqrt{C} t$, which is equivalent
+of changing the stationary Killing vector from $\w{\xi}$ to
+$\w{\xi}'=  1/\sqrt{C}\, \w{\xi}$,
+yields
+\[
+    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -\frac{1}{B(r)}\, \D t' + B(r)\, \D r +
+        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
+\]
+which is exactly the solution corresponding to $C=1$. Hence from now on,
+we set $C=1$, i.e.
+\be
+    B(r) = \frac{1}{A(r)} .
+\ee
+Substituting this expression in Eq.~(\ref{e:sch:EE_rr}) yields an ordinary
+differential equation for $A(r)$:
+\[
+    r \derd{A}{r} + A - 1 + \Lambda r^2 = 0 ,
+\]
+the solution of which is
+\be
+    A(r) = 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2 ,
+\ee
+where $m$ is a constant.
+The general static and spherically symmetric solution of the vacuum
+Einstein equation (\ref{e:sch:vac_Einstein_eq}) is therefore
+\be \label{e:sch:Kottler_metric}
+    \encadre{
+        g_{\mu\nu}\, \D x^\mu \, \D x^\nu =
+            -\left( 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2\right)\, \D t
+            + \left( 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2\right) ^{-1}\, \D r+
+        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+\ee
+It is called the \defin{Kottler metric}\index{Kottler metric}. The particular case $\Lambda=0$
+is called the \defin{Schwarzschild metric}\index{Schwarzschild!metric}. If $\Lambda>0$,
+(\ref{e:sch:Kottler_metric}) is called the
+\defin{Schwarzschild-de Sitter metric}\index{Schwarzschild!de Sitter metric},
+often abridged as \defin{Schwarzschild-dS metric}, while if $\Lambda<0$, it
+is called the \defin{Schwarzschild-anti-de Sitter metric}\index{Schwarzschild!anti-de Sitter metric},
+often abridged as \defin{Schwarzschild-AdS metric}\index{Schwarzschild!AdS metric}.
+
+In the rest of this chapter, we will focuss on the Schwarzschild metric,
+i.e. the version $\Lambda=0$ of Eq.~(\ref{e:sch:Kottler_metric}):
+\be \label{e:sch:Schwarz_metric_SD}
+    \encadre{
+        g_{\mu\nu}\, \D x^\mu \, \D x^\nu =
+            -\left( 1 - \frac{2 m}{r} \right)\, \D t
+            + \left( 1 - \frac{2 m}{r} \right) ^{-1}\, \D r +
+        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+\ee
+
+\begin{hist}
+Karl Schwarzchild \cite{Schwa1916},  Johannes Droste \cite{Drost1917},
+Friedrich Kottler \cite{Kottl1918}, Hermann Weyl \cite{Weyl1919}.
+\end{hist}
 
 
 \section{Maximal extension}
