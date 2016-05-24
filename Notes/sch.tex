@@ -46,7 +46,7 @@ Inserting this value back into (\ref{e:sch:vac_Einstein_eq}), we get
 Since this equation yields (\ref{e:sch:R_4Lamb}) as well, we conclude
 that it is equivalent to (\ref{e:sch:vac_Einstein_eq}).
 
-\subsection{Static and spherically symmetric metric}
+\subsection{Static and spherically symmetric metric} \label{s:sch:static_spher}
 
 Let us assume that the spacetime $(\M,\w{g})$
 is \defin{static}\index{static spacetime}, i.e. that it is
@@ -216,10 +216,10 @@ The way Schwarzschild proceeded was quite different from that exposed above:
 instead of the coordinates $(t,r,\th,\ph)$
 named today after him, he used the coordinates
 $(t,x^1,x^2,\ph)$ where $x^1 = r_*^3/3$, with $r_*^3 = r^3-8m^3$, and
-$x^2 = -\cos\th$. Such a choice was made to enforce $\det\w{g} = -1$, a condition
+$x^2 = -\cos\th$. Such a choice was made to enforce $\det(g_{\alpha\beta}) = -1$, a condition
 prescribed by Einstein in an early version of general relativity, which had been presented on
 18 November 2015 and on which Schwarzschild was working on. Only in the final version, published on
-25 November 2015, did Einstein relax the condition $\det\w{g} = -1$, allowing for full
+25 November 2015, did Einstein relax the condition $\det(g_{\alpha\beta}) = -1$, allowing for full
 covariance. Schwarzschild however
 exhibited the line element (\ref{e:sch:Schwarz_metric_SD}), via what he
 called the ``auxiliary quantity'' $r = (r_*^3 + 8m^3)^{1/3}$.
@@ -270,7 +270,7 @@ To cover the full $\SS^2$ in a regular way, one needs a second chart, in
 addition to $(\th,\ph)$; this is related to the standard singularities of
 the spherical coordinates at $\th=0$ and $\th=\pi/2$. It is fully understood
 that the metric $\w{g}$, as expressed by (\ref{e:sch:Schwarz_metric_SD}), is
-fully regular on $\SS^2$. The fact that $\det\w{g} = -r^2\sin^2\th$ is zero
+fully regular on $\SS^2$. The fact that $\det(g_{\alpha\beta}) = -r^2\sin^2\th$ is zero
 at $\th=0$ and $\th=\pi/2$ reflects merely the coordinate singularity
 of the $(\th,\ph)$ chart there. We shall not discuss this coordinate singularity
 any further.
@@ -279,7 +279,16 @@ any further.
 
 \subsection{Basic properties}
 
+A first property of the Schwarzschild metric is that $\M_{\rm I}$ has an
+asymptotically flat end: it is clear on (\ref{e:sch:Schwarz_metric_SD})
+that the metric $\w{g}$ tends to Minkowski metric (\ref{e:glo:Mink_metric_spher})
+when $r\rightarrow +\infty$.
 
+Besides, in region $\M_{\rm II}$, we notice on (\ref{e:sch:Schwarz_metric_SD})
+that $g_{tt} > 0$ and $g_{rr} < 0$
+i.e. the vector field $\wpar_t$ is spacelike, while $\wpar_r$ is timelike.
+This means that $(\M_{\rm II},\w{g})$ is not static, as defined in
+Sec.~\ref{s:sch:static_spher}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
