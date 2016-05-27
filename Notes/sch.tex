@@ -89,7 +89,7 @@ where $t$ is adapted to $\w{\xi}$ thanks to (\ref{e:sch:xi_t}) is then a
 coordinate system and, by construction, the expression of the metric tensor
 with respect to this system is
 \be \label{e:sch:g_AB}
-    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -A(r)\, \D t + B(r)\, \D r +
+    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -A(r)\, \D t^2 + B(r)\, \D r^2 +
         r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
 \ee
 Note that in this coordinate system
@@ -107,7 +107,7 @@ reflecting the fact that $r$ is the areal radius.
 
 The Christoffel symbols of the metric (\ref{e:sch:g_AB}) with respect to the
 areal coordinates are (cf. Sec.~\ref{s:sam:Kottler_solution} for the computation):
-\be
+\be \label{e:sch:Christoffel_AB}
 \begin{array}{l}
 \displaystyle  \Gamma^t_{\ \, tr} = \Gamma^t_{\ \, rt} = \frac{1}{2A}\derd{A}{r}\qquad
 \Gamma^r_{\ \, tt} = \frac{1}{2B}\derd{A}{r} \qquad
@@ -150,7 +150,7 @@ The solution of this equation is obviously $A(r)B(r) = C$, where $C$ is a consta
 Without any loss of generality, we may choose $C=1$. Indeed, substituting
 $C/B(r)$ for $A(r)$ in Eq.~(\ref{e:sch:g_AB}) results in
 \[
-    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -\frac{C}{B(r)}\, \D t + B(r)\, \D r +
+    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -\frac{C}{B(r)}\, \D t^2 + B(r)\, \D r^2 +
         r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
 \]
 Assuming $C>0$, the change of variable $t' = \sqrt{C} t$, which is equivalent
@@ -158,7 +158,7 @@ of changing the stationary Killing vector from $\w{\xi}$ to
 $\w{\xi}'=  1/\sqrt{C}\, \w{\xi}$,
 yields
 \[
-    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -\frac{1}{B(r)}\, \D t' + B(r)\, \D r +
+    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -\frac{1}{B(r)}\, \D t'^2 + B(r)\, \D r^2 +
         r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
 \]
 which is exactly the solution corresponding to $C=1$. Hence from now on,
@@ -181,8 +181,8 @@ Einstein equation (\ref{e:sch:vac_Einstein_eq}) is therefore
 \be \label{e:sch:Kottler_metric}
     \encadre{
         g_{\mu\nu}\, \D x^\mu \, \D x^\nu =
-            -\left( 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2\right)\, \D t
-            + \left( 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2\right) ^{-1}\, \D r+
+            -\left( 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2\right)\, \D t^2
+            + \left( 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2\right) ^{-1}\, \D r^2+
         r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
 \ee
 It is called the \defin{Kottler metric}\index{Kottler metric}. The particular case $\Lambda=0$
@@ -198,13 +198,28 @@ i.e. the version $\Lambda=0$ of Eq.~(\ref{e:sch:Kottler_metric}):
 \be \label{e:sch:Schwarz_metric_SD}
     \encadre{
         g_{\mu\nu}\, \D x^\mu \, \D x^\nu =
-            -\left( 1 - \frac{2 m}{r} \right)\, \D t
-            + \left( 1 - \frac{2 m}{r} \right) ^{-1}\, \D r +
+            -\left( 1 - \frac{2 m}{r} \right)\, \D t^2
+            + \left( 1 - \frac{2 m}{r} \right) ^{-1}\, \D r^2 +
         r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
 \ee
 The coordinates $(t,r,\th,\ph)$ are then called
 \defin{Schwarzschild-Droste coordinates}\index{Schwarzschild-Droste coordinates}\footnote{In the literature they are commonly referred to as simply
 \defin{Schwarzschild coordinates}\index{Schwarzschild!coordinates}.}.
+
+Since $A(r) = 1-2m/r$ and $B(r) = (1-2m/r)^{-1}$ for the Schwarzschild metric,
+the Christoffel symbols (\ref{e:sch:Christoffel_AB}) become
+\be \label{e:sch:Christoffel_SD}
+\begin{array}{l}
+\displaystyle  \Gamma^t_{\ \, tr} = \Gamma^t_{\ \, rt} = \frac{m}{r(r-2m)}\qquad
+\Gamma^r_{\ \, tt} = \frac{m(r-2m)}{r^3} \qquad
+\Gamma^r_{\ \, rr} =  - \frac{m}{r(r-2m)}\\[2ex]
+\displaystyle \Gamma^r_{\ \, \th\th} = 2m-r \qquad  \Gamma^r_{\ \, \ph\ph} = (2m -r)\sin^2\th \qquad
+\Gamma^\th_{\ \, r\th} = \Gamma^\th_{\ \, \th r} = \frac{1}{r} \\[2ex]
+\displaystyle \Gamma^\th_{\ \, \ph\ph} = -\sin\th\cos\th \qquad \Gamma^\ph_{\ \, r\ph} = \Gamma^\ph_{\ \, \ph r} = \frac{1}{r} \qquad
+\Gamma^\ph_{\ \, \th\ph} = \Gamma^\ph_{\ \, \ph\th} = \frac{1}{\tan\th} ,
+\end{array}
+\ee
+all the other Christoffel symbols being zero.
 
 \begin{hist}
 The Schwarzschild metric (\ref{e:sch:Schwarz_metric_SD}) is actually
@@ -246,7 +261,7 @@ Schwarzschild solution.
 \end{hist}
 
 
-\subsection{The Schwarzschild-Droste domain}
+\subsection{The Schwarzschild-Droste domain} \label{s:sch:SD_domain}
 
 We immediately notice on (\ref{e:sch:Schwarz_metric_SD}) that the metric
 components are singular at $r=0$ and $r=2m$. Accordingly, the Schwarzschild-Droste coordinates $(t,r,\th,\ph)$ cover the following subset of $\M$, which we call the
@@ -298,7 +313,7 @@ in Fig.~\ref{f:sch:rad_null_geod} are horizontal lines.
 
 \section{Radial null geodesics and Eddington-Finkelstein coordinates}
 
-\subsection{Determination of the radial null geodesics}
+\subsection{Radial null geodesics}
 
 Let us search for the null geodesics of the Schwarzschild metric
 (\ref{e:sch:Schwarz_metric_SD}) that are radial, i.e. along which
@@ -306,9 +321,9 @@ $\th=\mathrm{const}$ and $\ph=\mathrm{const}$. They are found by
 setting  $\D\th=0$ and $\D\ph=0$
 in (\ref{e:sch:Schwarz_metric_SD})
 and searching for $\D s^2 = g_{\mu\nu}\, \D x^\mu \, \D x^\nu = 0$:
-\[
+\be \label{e:sch:radial_null}
     \D s^2 = 0 \iff \D t^2 = \frac{\D r^2}{\left( 1 - \frac{2m}{r} \right) ^2} .
-\]
+\ee
 Hence the radial null geodesics are governed by
 \be
     \D t = \pm \frac{\D r}{ 1 - \frac{2m}{r} } .
@@ -317,7 +332,7 @@ This equation is easily integrated, yielding
 \be
     t = \pm r \pm 2 m \ln \left| \frac{r}{2m} - 1 \right| + \mathrm{const} .
 \ee
-We have thus two families of radial null geodesics, one for each choice
+We have thus two families of curves, one for each choice
 of sign in the $\pm$:
 
 \begin{figure}
@@ -344,26 +359,89 @@ equation is
 \ee
 where $v$ is a constant.
 \end{itemize}
-These two families are depicted in Fig.~\ref{f:sch:rad_null_geod}.
+
+Strictly speaking, we found radial null curves only, i.e. solutions of
+Eq.~(\ref{e:sch:radial_null}). Since not all null curves
+are geodesics, there remains to prove that the curves defined
+by (\ref{e:sch:outgoing_null_geod}) and (\ref{e:sch:ingoing_null_geod})
+obey the geodesic equation\index{geodesic!equation}:
+\be \label{e:sch:geod_eqn}
+    \frac{\D^2 x^\alpha}{\D \lambda^2} + \Gamma^\alpha_{\ \, \mu\nu}
+        \derd{x^\mu}{\lambda} \derd{x^\nu}{\lambda} = 0 ,
+\ee
+where $\lambda$ is an affine parameter.
+Let us check that (\ref{e:sch:geod_eqn}) is satisfied by choosing $\lambda=r$.
+For the curves defined by (\ref{e:sch:outgoing_null_geod}), we have
+\[
+    x^\alpha(r) = \left( r + 2 m \ln \left| \frac{r}{2m} - 1 \right| + u,\ r,\  \th,\  \ph \right) .
+\]
+Hence
+\[
+    \derd{x^\alpha}{r} = \left( \frac{r}{r-2m}, 1, 0, 0 \right)
+    \qquad\mbox{and}\qquad
+    \frac{\D^2 x^\alpha}{\D r^2} = \left( - \frac{2m}{(r-2m)^2}, 0, 0, 0 \right) .
+\]
+Given the Christoffel symbols (\ref{e:sch:Christoffel_SD}), it is then a
+simple exercice to show that Eq.~(\ref{e:sch:geod_eqn}) is satisfied.
+The same thing holds for the family (\ref{e:sch:ingoing_null_geod}). Hence
+we conclude
+\begin{greybox}
+The radial null geodesics in the Schwarzschild-Droste domain are ruled by
+Eqs.~(\ref{e:sch:outgoing_null_geod})-(\ref{e:sch:ingoing_null_geod}).
+Moreover the areal radius $r$ is an affine parameter along them.
+\end{greybox}
+
+The two families of radial null geodesics are depicted in
+Fig.~\ref{f:sch:rad_null_geod}.
 The singularity of Schwarzschild-Droste coordinates at $r=2m$
 is clearly apparent on this figure.
 
-\begin{remark}
-Strictly speaking, we found radial null curves only and since not all null curves
-are geodesics, there remains to check that the curves satisfy the geodesic
-equation.
-\end{remark}
 
 \begin{remark}
 Despite their name, gedeosics of the outgoing family are actually
 \emph{ingoing} in the region $r<2m$, in the sense that
 $r$ is decreasing along them when moving towards the future. Indeed,
+as noticed in Sec.~\ref{s:sch:SD_domain},
 for $r<2m$, $r$ is the timelike coordinate of the system $(t,r,\th,\ph)$,
 with $-\wpar_r$ oriented towards the future (cf. the ``tilted'' light cone
 in Fig.~\ref{f:sch:rad_null_geod}).
 \end{remark}
 
 \subsection{Eddington-Finkelstein coordinates}
+
+The parameter $v$ introduced in Eq.~(\ref{e:sch:ingoing_null_geod}) can be
+seen as a label for the ingoing radial null geodesics: each of these curves is
+entirely identified by the data $(v,\th,\ph)$, which remains fixed along it.
+Let us promote $v$ to a spacetime coordinate, instead of $t$, i.e.
+consider the coordinate system $(v,r,\th,\ph)$ with the relation to
+Schwarzschild-Drostes coordinates $(t,r,\th,\ph)$ governed by Eq.~(\ref{e:sch:ingoing_null_geod}):
+\be
+     v = t + r + 2 m \ln \left| \frac{r}{2m} - 1 \right| .
+\ee
+It follows immediately that
+\[
+    \D v = \D t + \D r + \frac{\D r}{r/(2m) - 1} = \D t + \frac{\D r}{1 - 2m/r} ,
+\]
+i.e.
+\[
+    \D t = \D v -  \frac{\D r}{1 - 2m/r} .
+\]
+Taking the square yields
+\[
+    \D t^2 = \D v^2 - \frac{2}{1 - 2m/r} \, \D v \, \D r + \frac{1}{(1 - 2m/r)^2}\, \D r^2 .
+\]
+Substituting this expression for $\D t^2$ in Eq.~(\ref{e:sch:Schwarz_metric_SD})
+gives the metric components with respect to the coordinates
+$({\hat x}^\alpha) := (v,r,\th,\ph)$:
+\be \label{e:sch:Schwarz_metric_NIEF}
+    \encadre{
+        g_{\mu\nu}\, \D {\hat x}^\mu \, \D {\hat x}^\nu =
+            -\left( 1 - \frac{2 m}{r} \right)\, \D v^2
+            + 2 \, \D v \, \D r
+        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+\ee
+The coordinates $({\hat x}^\alpha) = (v,r,\th,\ph)$ are called the
+\defin{null ingoing Eddington-Finkelstein coordinates}\index{Eddington-Finkelstein!coordinates}\index{null!ingoing Eddington-Finkelstein coordinates}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
