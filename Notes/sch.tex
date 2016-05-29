@@ -415,7 +415,7 @@ entirely identified by the data $(v,\th,\ph)$, which remains fixed along it.
 Let us promote $v$ to a spacetime coordinate, instead of $t$, i.e.
 consider the coordinate system $(v,r,\th,\ph)$ with the relation to
 Schwarzschild-Drostes coordinates $(t,r,\th,\ph)$ governed by Eq.~(\ref{e:sch:ingoing_null_geod}):
-\be
+\be \label{e:sch:v_t_r}
      v = t + r + 2 m \ln \left| \frac{r}{2m} - 1 \right| .
 \ee
 It follows immediately that
@@ -435,13 +435,229 @@ gives the metric components with respect to the coordinates
 $({\hat x}^\alpha) := (v,r,\th,\ph)$:
 \be \label{e:sch:Schwarz_metric_NIEF}
     \encadre{
-        g_{\mu\nu}\, \D {\hat x}^\mu \, \D {\hat x}^\nu =
+        {\hat g}_{\mu\nu}\, \D {\hat x}^\mu \, \D {\hat x}^\nu =
             -\left( 1 - \frac{2 m}{r} \right)\, \D v^2
             + 2 \, \D v \, \D r
         + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
 \ee
 The coordinates $({\hat x}^\alpha) = (v,r,\th,\ph)$ are called the
-\defin{null ingoing Eddington-Finkelstein coordinates}\index{Eddington-Finkelstein!coordinates}\index{null!ingoing Eddington-Finkelstein coordinates}.
+\defin{null ingoing Eddington-Finkelstein coordinates}\index{Eddington-Finkelstein!coordinates}\index{null!ingoing Eddington-Finkelstein coordinates}. The qualifier \emph{null} stems from the fact that
+$v$ is a null coordinate, i.e. the vector $\wpar_v$ of the coordinate
+basis associated with $(v,r,\th,\ph)$ is a null
+vector, as it follows from ${\hat g}_{vv}=0$ in Eq.~(\ref{e:sch:Schwarz_metric_NIEF}).
+
+To deal with a timelike coordinate in $\M_{\rm I}$ instead of a null one, let us set
+\be  \label{e:sch:ti_v_r}
+    \encadre{\ti := v - r} \iff \encadre{v = \ti + r}
+\ee
+and define the \defin{ingoing Eddington-Finkelstein (IEF) coordinates}\index{Eddington-Finkelstein!coordinates}\index{ingoing!Eddington-Finkelstein!coordinates}
+to be
+\be
+    (\tilde{x}^\alpha) := (\ti, r, \th,\ph) .
+\ee
+The relation between the ingoing Eddington-Finkelstein coordinates
+$(\ti, r, \th,\ph)$
+and the Schwarzschild-Droste ones $(t,r,\th,\ph)$ is obtained by combining
+Eqs.~(\ref{e:sch:v_t_r}) and (\ref{e:sch:ti_v_r}):
+\be \label{e:sch:ti_t_r}
+     \encadre{\ti = t + 2 m \ln \left| \frac{r}{2m} - 1 \right| } .
+\ee
+
+We have immediately $\D v = \D\ti + \D r$. Substituting
+into (\ref{e:sch:Schwarz_metric_NIEF}) yields
+\be \label{e:sch:Schwarz_metric_EF}
+    \encadre{
+        \tilde{g}_{\mu\nu}\, \D \tilde{x}^\mu \, \D \tilde {x}^\nu =
+            -\left( 1 - \frac{2 m}{r} \right)\, \D \ti^2
+            + \frac{4m}{r} \, \D \ti \, \D r
+            + \left( 1 + \frac{2 m}{r} \right)\, \D r^2
+        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+\ee
+We check that $\tilde{g}_{\ti\ti} < 0$ in $\M_{\rm I}$, hence $\ti$ is
+a timelike coordinate there.
+In $\M_{\rm II}$, $\tilde{g}_{\ti\ti} > 0$, so that $\ti$ becomes spacelike
+there, as for the Schwarzschild-Droste coordinate $t$ (cf. Sec.~\ref{s:sch:SD_domain}).
+However, we have $\tilde{g}_{rr} = 1+2m/r > 0$ everywhere, so that $r$ remains a spacelike coordinate (for the ingoing Eddington-Finkelstein system) in
+$\M_{\rm II}$, contrary to what happened within the Schwarzschild-Droste coordinates
+(cf. Sec.~\ref{s:sch:SD_domain}).
+
+\begin{remark}
+The above example shows that the property of being timelike, null or spacelike
+is not intrinsic to a given coordinate (here $r$). It is instead a property
+of the whole coordinate system under consideration. This is understandable
+since $r$ spacelike means that the line along which $r$ varies while the
+three other coordinates $(x^0,x^2,x^3)$ are kept constant is a spacelike curve.
+For the Schwarzschild-Droste system, $(x^0,x^2,x^3) = (t,\th,\ph)$,
+while for the ingoing Eddington-Finkelstein system $(x^0,x^2,x^3) = (\ti,\th,\ph)$.
+Hence the two sets of $r$-lines differ.
+Equivalently, the coordinate vectors $\wpar_r$
+tangent to the two kinds of $r$-lines are different:
+\[
+    \left. \der{}{r} \right| _{t,\th,\ph} \not= \left. \der{}{r} \right| _{\ti,\th,\ph} .
+\]
+\end{remark}
+To avoid any ambiguity, we shall denote by $\wpar_{\tilde{r}}$ the
+coordinate vector of the ingoing Eddington-Finkelstein frame and by
+$\wpar_r$ the coordinate vector of the Schwarzschild-Droste frame:
+\be
+    \wpar_{\tilde{r}} := \left. \der{}{r} \right| _{\ti,\th,\ph}
+    \qquad\mbox{and}\qquad
+    \wpar_r := \left. \der{}{r} \right| _{t,\th,\ph} .
+\ee
+The relation between the two vectors is given by the chain rule:
+\[
+    \left. \der{}{r} \right| _{\ti,\th,\ph}  =
+    \left. \der{}{t} \right| _{r,\th,\ph}
+    \underbrace{ \left. \der{t}{r} \right| _{\ti,\th,\ph}}_{\left(1-\frac{r}{2m}\right)^{-1}}
+  + \left. \der{}{r} \right| _{t,\th,\ph}
+   \underbrace{\left. \der{r}{r} \right| _{\ti,\th,\ph}}_{1}
+  + \left. \der{}{\th} \right| _{t,r,\ph}
+  \underbrace{\left. \der{\th}{r} \right| _{\ti,\th,\ph}}_{0}
+  + \left. \der{}{\ph} \right| _{t,r,\th}
+  \underbrace{\left. \der{\ph}{r} \right| _{\ti,\th,\ph}}_{0} ,
+\]
+where (\ref{e:sch:ti_t_r}) has been used to evaluate
+$\left. \dert{t}{r} \right| _{\ti,\th,\ph}$. Hence
+\be
+    \wpar_{\tilde{r}} = \wpar_r + \left(1-\frac{r}{2m}\right)^{-1} \, \wpar_t .
+\ee
+
+On the other hand, we deduce from (\ref{e:sch:ti_t_r}) that
+\be
+     \left. \der{}{\ti} \right| _{r,\th,\ph} = \left. \der{}{t} \right| _{r,\th,\ph} ,
+\ee
+which implies:
+\be
+    \wpar_{\ti} = \wpar_t .
+\ee
+In particular, the vector $\wpar_{\ti}$ of the IEF frame coincides with
+the Killing vector $\w{\xi}$:
+\be \label{e:sch:wparti_xi}
+    \encadre{ \wpar_{\ti} = \w{\xi}} .
+\ee
+\begin{remark}
+The result (\ref{e:sch:wparti_xi}) is not surprising since
+the metric components (\ref{e:sch:Schwarz_metric_EF}) are independent from
+$\ti$. This implies $\wpar_{\ti} = \alpha \w{\xi}$, where $\alpha$ is a constant.
+Since $\ti \sim t$ when $r\rightarrow +\infty$, we conclude that $\alpha=1$.
+\end{remark}
+
+\begin{remark}
+The IEF-coordinates line element (\ref{e:sch:Schwarz_metric_EF}) can be recast
+in the following remarkable form:
+\be \label{e:sch:Kerr_Schild}
+    \tilde{g}_{\mu\nu}\, \D \tilde{x}^\mu \, \D \tilde {x}^\nu =
+ \underbrace{- \D\ti^2 + \D r^2 + r^2  \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)}_{f_{\mu\nu} \, \D \tilde{x}^\mu \, \D \tilde {x}^\nu}
+        + \underbrace{\frac{2m}{r} \left( \D\ti + \D r \right) ^2}_{k_\mu \D \tilde{x}^\mu \, k_\nu \D \tilde {x}^\nu} ,
+\ee
+where the $f_{\mu\nu}$'s are the components of Minkowkski metric expressed in
+terms of the spherical coordinates $(\ti,r,\th,\ph)$ and the $k_\mu$'s are
+the components of a 1-form dual to a null vector:
+\[
+    \uu{k} = \sqrt{\frac{2m}{r}} \, \dd (\ti + r) =
+    \sqrt{\frac{2m}{r}} \, \dd v .
+\]
+The fact that $\w{k}$ is a null vector follows from
+$g^{\mu\nu} k_\mu k_\nu = 0$, which is easily deduced from
+$k_\mu = \sqrt{2m/r} (1, 1, 0, 0)$ and the expression (\ref{e:sch:inv_metric_EF})
+of $g^{\mu\nu}$ below.
+The line element (\ref{e:sch:Kerr_Schild}) is said to be in
+\defin{Kerr-Schild form}\index{Kerr-Schild form}.
+\end{remark}
+
+\subsection{The Schwarzschild horizon}
+
+Contrary to the Schwarzschild-Droste components (\ref{e:sch:Schwarz_metric_SD}),
+the metric components (\ref{e:sch:Schwarz_metric_EF}) are regular as $r\rightarrow 2m$. In particular, their determinant is
+\be
+    \det\left( \tilde{g}_{\alpha\beta} \right) = - r^4\sin^2\th ,
+\ee
+which never zero for $r\in(0,+\infty)$, except for the standard $\th=0$ and
+$\th=\pi$ singularities of spherical coordinates.
+The components of the inverse metric with respect to the ingoing
+Eddington-Finkelstein coordinates are
+\be \label{e:sch:inv_metric_EF}
+    g^{\alpha\beta} = \left( \begin{array}{cccc}
+    - \left( 1 + \frac{2m}{r} \right) &  \frac{2m}{r} & 0 & 0 \\[1ex]
+    \frac{2m}{r} & 1 - \frac{2m}{r} & 0 & 0 \\[1ex]
+    0 & 0 & \frac{1}{r^2} & 0 \\[1ex]
+    0 & 0 & 0 & \frac{1}{r^2\sin^2\th}
+    \end{array} \right) .
+\ee
+This proves that
+(\ref{e:sch:Schwarz_metric_EF}) defines a regular non-degenerate metric
+on the whole \defin{ingoing Eddington-Finkelstein domain}\index{ingoing!Eddington-Finkelstein!domain}
+\be
+    \M_{\rm IEF} := \R\times(0,+\infty)\times\SS^2,
+\ee
+with the coordinate $\ti$ spanning $\R$, the coordinate $r$ spanning
+$(0,+\infty)$ and the coordinates $(\th,\ph)$ forming a standard spherical
+chart of $\SS^2$.
+The IEF domain is an extension of the Schwarzschild-Droste domain
+introduced in Sec.~\ref{s:sch:SD_domain}:
+\be
+    \M_{\rm IEF} = \M_{\rm SD} \cup \Hor = \M_{\rm I} \cup \M_{\rm II} \cup \Hor ,
+\ee
+where $\Hor$ is the subset of $\M_{\rm IEF}$ defined by $r=2m$. Note that
+$\Hor$ has the topology
+\be
+    \Hor \simeq \R\times\SS^2
+\ee
+and that $(\ti,\th,\ph)$ is a coordinate system on $\Hor$.
+Actually $\Hor$ is nothing but what has been called the
+\defin{Schwarzschild horizon}\index{Schwarzschild!horizon} in the examples
+of Chaps.~\ref{s:def} and \ref{s:neh}. Indeed, the metric
+(\ref{e:sch:Schwarz_metric_EF}) is nothing but
+the metric (\ref{e:def:Schw_metric}) introduced in Example~\ref{x:def:Schw_hor}
+of Chap.~\ref{s:def} (p.~\pageref{x:def:Schw_hor}), up to the change of notation $\ti \leftrightarrow t$ (compare (\ref{e:def:Schw_metric_inv}) and
+(\ref{e:sch:inv_metric_EF}) as well).
+We have thus the fundamental result,
+the proof of which is given in Example~\ref{x:neh:Schwarz_KH} of Chap.~\ref{s:neh}
+(p.~\pageref{x:neh:Schwarz_KH}):
+\begin{greybox}
+$\Hor$ is a Killing horizon, the null normal of which is $\w{\xi}$.
+\end{greybox}
+In particular, $\Hor$ is a null hypersurface, whose null geodesic generators
+admit $\w{\xi} = \wpar_{\ti}$ as tangent vector. It is a non-expanding horizon,
+whose area, as defined in Sec.~\ref{s:neh:invar_area}, is (cf. Example~\ref{x:neh:Schwarz_hor_area} of Chap.~\ref{s:neh}, p.~\pageref{x:neh:Schwarz_hor_area})
+\be
+    A=16\pi m^2 .
+\ee
+$\Hor$ is depicted in Fig.~\ref{f:def:Schwarz_horizon}.
+We shall see in Sec.~?? that $\Hor$ is actually a black hole event horizon in
+Schwarzschild spacetime.
+
+
+\begin{hist}
+Eddington-Finkelstein coordinates have been introduced by
+Arthur Eddington in 1924 \cite{Eddin1924}. More precisely, Eddington
+introduced the \emph{outgoing} version of the Eddington-Finkelstein coordinates,
+while we have focussed above on the \emph{ingoing} version. Indeed
+Eddington's Eq.~(2) is $\ti = t - 2m \ln(r-m)$, which mainly differs from
+our Eq.~(\ref{e:sch:ti_t_r}) by the minus sign in front of the logarithm\footnote{The other differences with (\ref{e:sch:ti_t_r}) are a constant additive term
+and a misprint in Eddington's formula: the term $\ln(r-m)$ should be replaced
+by $\ln(r-2m)$.},
+which means that Eddington's time coordinate is actually $\ti = u + r$, instead of
+$\ti = v - r$ (our Eq.~(\ref{e:sch:ti_v_r})). Eddington used his transformation
+to get the Kerr-Schild form (\ref{e:sch:Kerr_Schild}) of Schwarzschild metric,
+with $(\D \ti + \D r)^2$ replaced by $(\D \ti - \D r)^2$ due to the change
+ingoing $\leftrightarrow$ outgoing.
+\end{hist}
+
+\subsection{Radial null geodesics in terms of the Eddington-Finkelstein coordinates}
+
+By construction, the equation of the ingoing radial null geodesics
+in terms of the IEF coordinates is very simple:
+\be
+    \ti = - r + v ,
+\ee
+where the constant $v$ labels the geodesic.
+The equation of the outgoing radial null geodesics is obtained
+by combining (\ref{e:sch:outgoing_null_geod}) and (\ref{e:sch:ti_t_r}):
+\be
+    \ti = r + 4 m \ln \left| \frac{r}{2m} - 1 \right| + u ,
+\ee
+where the constant $u$ labels the geodesic.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
