@@ -333,7 +333,7 @@ This equation is easily integrated, yielding
     t = \pm r \pm 2 m \ln \left| \frac{r}{2m} - 1 \right| + \mathrm{const} .
 \ee
 We have thus two families of curves, one for each choice
-of sign in the $\pm$:
+of sign in $\pm$:
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{sch_rad_null_geod.pdf}}
@@ -342,7 +342,7 @@ Radial null geodesics of Schwarzschild spacetime, plotted in terms
 of Schwarzschild-Droste coordinates $(t,r)$: the solid (resp. dashed) lines
 correspond to outgoing (resp. ingoing) geodesics, as given by Eq.~(\ref{e:sch:outgoing_null_geod})
 (resp. Eq.~(\ref{e:sch:ingoing_null_geod})). The interiors of some future light
-cones are drawn in yellow.}
+cones are depicted in yellow.}
 \end{figure}
 
 \begin{itemize}
@@ -360,9 +360,25 @@ equation is
 where $v$ is a constant.
 \end{itemize}
 
+By introducing the \defin{tortoise coordinate}\index{tortoise coordinate}
+\be \label{e:sch:def_tortoise}
+    r_* := r + 2 m \ln \left| \frac{r}{2m} - 1 \right| ,
+\ee
+one may rewrite the above equations as
+\bea
+    &  & t = r_* + u \\
+    &  & t = -r_* + v . \label{e:sch:v_advanced_tortoise}
+\eea
+The parameter $u$ appears then as a
+\emph{retarded time}\index{retarded!time}\index{time!retarded --}:
+$u = t - r_*$ and $v$ as an
+\emph{advanced time}\index{advanced!time}\index{time!advanced --}: $v = t + r_*$.
+
 Strictly speaking, we found radial null curves only, i.e. solutions of
 Eq.~(\ref{e:sch:radial_null}). Since not all null curves
-are geodesics, there remains to prove that the curves defined
+are geodesics\footnote{A famous counterexample is the null helix in Minkowski
+spacetime defined in terms of Minkowskian coordinates $(t,x,y,z)$ by $x = a\cos(t/a)$, $y = a\sin(t/a)$, $z=0$,
+where $a$ is a positive constant.}, there remains to prove that the curves defined
 by (\ref{e:sch:outgoing_null_geod}) and (\ref{e:sch:ingoing_null_geod})
 obey the geodesic equation\index{geodesic!equation}:
 \be \label{e:sch:geod_eqn}
@@ -383,7 +399,7 @@ Hence
 \]
 Given the Christoffel symbols (\ref{e:sch:Christoffel_SD}), it is then a
 simple exercice to show that Eq.~(\ref{e:sch:geod_eqn}) is satisfied.
-The same thing holds for the family (\ref{e:sch:ingoing_null_geod}). Hence
+The same property holds for the family (\ref{e:sch:ingoing_null_geod}). Hence
 we conclude
 \begin{greybox}
 The radial null geodesics in the Schwarzschild-Droste domain are ruled by
@@ -455,6 +471,14 @@ to be
 \be
     (\tilde{x}^\alpha) := (\ti, r, \th,\ph) .
 \ee
+
+\begin{remark}
+From (\ref{e:sch:ti_v_r}), $v$ appears as the ``time'' $\ti$ ``advanced'' by
+$r$\index{advanced!time}\index{time!advanced --}, while
+from (\ref{e:sch:v_advanced_tortoise}), $v$ is the ``time'' $t$ ``advanced''
+by $r_*$.
+\end{remark}
+
 The relation between the ingoing Eddington-Finkelstein coordinates
 $(\ti, r, \th,\ph)$
 and the Schwarzschild-Droste ones $(t,r,\th,\ph)$ is obtained by combining
@@ -663,6 +687,24 @@ at $r=2m$ had been proved by Georges Lemaître in 1932 \cite{Lemai32}, by means 
 another coordinate system (see \cite{Eisen93} for a detailed discussion).
 \end{hist}
 
+\begin{remark}
+In the literature, the terminology \emph{Eddington-Finkelstein coordinates}
+is often used for the coordinates $(v,r,\th,\ph)$ (or $(u,r,\th,\ph)$),
+i.e. for what we have called the \emph{null Eddington-Finkelstein coordinates},
+and the regularity of the metric tensor at $r=2m$ is demonstrated by
+considering the components (\ref{e:sch:Schwarz_metric_NIEF}).
+However, neither
+Eddington \cite{Eddin1924} nor Finkelstein \cite{Finke58}
+considered this null version: they used coordinates $(\ti,r,\th,\ph)$, where
+$\ti$ is timelike and they exhibited (the outgoing version of) the
+metric components (\ref{e:sch:Schwarz_metric_EF}).
+Hence our terminology is more faithfull to history. Moreover, focussing on
+$(v,r,\th,\ph)$ may give the false impression to a novice reader that it is
+necessary to introduce some null coordinate to establish the regularity
+of the metric tensor at $r=2m$, while the timelike coordinate $\ti$
+does the job very well.
+\end{remark}
+
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{sch_rad_null_geod_EF.pdf}}
 \caption[]{\label{f:sch:rad_null_geod_EF} \footnotesize
@@ -670,7 +712,7 @@ Radial null geodesics of Schwarzschild spacetime, plotted in terms
 of ingoing Eddington-Finkelstein coordinates $(\ti,r)$: the solid (resp. dashed) lines
 correspond to outgoing (resp. ingoing) geodesics, as given by Eq.~(\ref{e:sch:outgoing_null_geod_EF})
 (resp. Eq.~(\ref{e:sch:ingoing_null_geod_EF})). The interiors of some future light
-cones are drawn in yellow.}
+cones are depicted in yellow.}
 \end{figure}
 
 \subsection{Radial null geodesics in terms of the Eddington-Finkelstein coordinates}
@@ -696,6 +738,213 @@ $\ti$ is a timelike coordinate and $r$ a spacelike one.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Maximal extension}
+
+\subsection{Kruskal-Szekeres coordinates}
+
+On the open set $\M_{\rm I}$, let us consider the ``double-null''
+coordinate system $\hat{\hat{x}}^\alpha = (u,v,\th,\ph)$. It is related to
+Schwarzschild-Droste coordinates $(t,r,\th,\ph)$ by
+Eqs.~(\ref{e:sch:outgoing_null_geod})-(\ref{e:sch:ingoing_null_geod}):
+\be \label{e:sch:u_v_r_t}
+    \left\{\begin{array}{l}
+    u = t - r - 2 m \ln \left| \frac{r}{2m} - 1 \right| \\[1ex]
+    v = t + r + 2 m \ln \left| \frac{r}{2m} - 1 \right|
+    \end{array}\right.
+    \iff
+        \left\{\begin{array}{l}
+    t = \frac{1}{2} (u+v)\\[1ex]
+    r + 2 m \ln \left| \frac{r}{2m} - 1 \right| = \frac{1}{2} (v-u).
+    \end{array}\right.
+\ee
+Despite one cannot express explicitely $r$ in terms of $(u,v)$,
+the function $r\mapsto r + 2 m \ln \left| \frac{r}{2m} - 1 \right|$ is
+invertible on $(2m,+\infty)$ (cf. Fig.~\ref{f:sch:tortoise}), so that (\ref{e:sch:u_v_r_t}) does define a coordinate system on $\M_{\rm I}$.
+The range of $(u,v)$ is $\R^2$.
+
+The above relations imply
+\[
+ \D u = \D t - \frac{\D r}{1 - \frac{2m}{r}}  \qquad\mbox{and}\qquad
+\D v = \D t + \frac{\D r}{1 - \frac{2m}{r}} .
+\]
+Hence
+\[
+    \D u \, \D v = \D t^2 - \frac{\D r^2}{\left(1 - \frac{2m}{r} \right) ^2} .
+\]
+The line element (\ref{e:sch:Schwarz_metric_SD}) becomes then
+\be \label{e:sch:Schwarz_metric_uv}
+    \encadre{
+        \hat{\hat{g}}_{\mu\nu}\, \D \hat{\hat{x}}^\mu \,
+        \D \hat{\hat{x}}^\nu =
+            -\left( 1 - \frac{2 m}{r} \right)\, \D u \, \D v
+       +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+\ee
+In this formula, $r$ is to be considered as a function of $(u,v)$, given
+by (\ref{e:sch:u_v_r_t}).
+
+\begin{figure}
+\centerline{\includegraphics[height=0.37\textheight]{sch_tortoise.pdf}}
+\caption[]{\label{f:sch:tortoise} \footnotesize
+Function $r_*(r) = r + 2 m \ln \left| \frac{r}{2m} - 1 \right|$
+(the tortoise coordinate, cf. Eq.~(\ref{e:sch:def_tortoise})).}
+\end{figure}
+
+The metric components (\ref{e:sch:Schwarz_metric_uv}) are regular on $\M_{\rm I}$.
+Having a look at Fig.~\ref{f:sch:tortoise}, we realize that we cannot extend
+this coordinate system to include the Schwarzschild horizon $\Hor$, since
+$r\rightarrow 2m$ is equivalent to $v-u\rightarrow -\infty$: if $u$ (resp. $v$)
+were taking a finite value on $\Hor$, we would have $v\rightarrow -\infty$
+(resp. $u\rightarrow +\infty$). This impossibility of extending to $\Hor$
+is also reflected by the fact that
+\[
+    \det \left( \hat{\hat{g}}_{\alpha\beta} \right) =
+        - \frac{1}{4} \left( 1 - \frac{2 m}{r} \right) ^2 r^4 \sin^2\th
+\]
+vanishes for $r\rightarrow 2m$, which would make $\w{g}$ a degenerate bilinear
+form at $r=2m$, which is not of course.
+
+Instead of $(u,v)$, let us use on $\M_{\rm I}$
+the coordinates $(U,V)$ defined by
+\be \label{e:sch:def_U_V}
+    \left\{\begin{array}{l}
+    U := - \mathrm{e}^{-u/(4m)} \\
+    V := \mathrm{e}^{v/(4m)} .
+    \end{array}\right.
+\ee
+Since the range of $(u,v)$ is $\R^2$, the range of $U$ is $(-\infty,0)$
+and that of $V$ is $(0,+\infty)$.
+We have
+\[
+    \D U = \frac{1}{4m} \,  \mathrm{e}^{-u/(4m)}  \, \D u\qquad\mbox{and}\qquad
+    \D V = \frac{1}{4m} \,  \mathrm{e}^{v/(4m)} \, \D v ,
+\]
+hence
+\[
+    \D u \, \D v = 16 m^2 \mathrm{e}^{(u-v)/(4m)} \, \D U \, \D V .
+\]
+Now, on $\M_{\rm I}$, $r>2m$ and (\ref{e:sch:u_v_r_t}) yields
+\be \label{e:sch:r_u_v_exp}
+    r + 2 m \ln \left( \frac{r}{2m} - 1 \right) = \frac{1}{2} (v-u)
+    \quad
+    \Longrightarrow
+    \quad
+     \mathrm{e}^{r/(2m)} \left( \frac{r}{2m} - 1 \right)  =
+    \mathrm{e}^{(v-u)/(4m)}  ,
+\ee
+so that
+\[
+     \D u \, \D v = 16 m^2 \, \mathrm{e}^{-r/(2m)}
+        \left( \frac{r}{2m} - 1 \right) ^{-1} \D U \, \D V
+        = \frac{32 m^3}{r} \, \mathrm{e}^{-r/(2m)}
+        \left( 1 - \frac{2m}{r} \right) ^{-1} \D U \, \D V .
+\]
+Substituting this expression in (\ref{e:sch:Schwarz_metric_uv}) yields
+the expression of the metric components with respect to
+coordinates ${\hat X}^\alpha := (U,V,\th,\ph)$:
+\be \label{e:sch:metric_UV}
+    \encadre{
+    g_{\mu\nu} \, \D {\hat X}^\mu \, \D {\hat X}^\nu =
+    - \frac{32 m^3}{r} \, \mathrm{e}^{-r/(2m)} \,  \D U \, \D V
+     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+\ee
+In this formula, $r$ has to be considered as a function of $(U,V)$, whose
+implicit expression is found by combining
+(\ref{e:sch:def_U_V}) and (\ref{e:sch:r_u_v_exp}):
+\be
+    \encadre{ \mathrm{e}^{r/(2m)} \left( \frac{r}{2m} - 1 \right) = - U V } .
+\ee
+\begin{remark}
+This relation takes a very simple form in terms of the tortoise coordinate
+(cf. Eq.~(\ref{e:sch:def_tortoise})):
+\[
+    \mathrm{e}^{r_*/(2m)} = - U V  .
+\]
+\end{remark}
+
+We notice that the factor $(1-2m/r)$ has disappeared in the line
+element (\ref{e:sch:metric_UV}), which becomes perfectly regular as
+$r\rightarrow 2m$.
+
+We read on (\ref{e:sch:metric_UV}) that $g_{UU} = 0$ and $g_{VV} = 0$.
+Hence $(U,V)$ is a double-null coordinate system, as much as $(u,v)$.
+To cope with a timelike-spacelike coordinate system instead, let
+us introduce on $\M_{\rm I}$ the pair $(T,X)$ such that $U$ is $T$
+retarded by $X$ and $V$ is $T$ advanced by $X$:
+\be \label{e:sch:def_T_X}
+    \left\{\begin{array}{l}
+    U = T - X\\
+    V = T + X
+    \end{array}\right.
+    \qquad \iff\qquad
+    \left\{\begin{array}{l}
+    T = \frac{1}{2} (U+V) \\[1ex]
+    X = \frac{1}{2} (V-U)
+    \end{array}\right.
+\ee
+Since the range of $U$ on $\M_{\rm I}$ is $(-\infty,0)$ and that of $V$ is
+$(0,+\infty)$, the range of $(T,X)$ is ruled by $T<X$, $T>-X$ and $X>0$.
+In other words, the coordinates $(T,X)$ span the following quarter of
+$\mathbb{R}^2$:
+\be \label{e:sch:X_T_range_I}
+    \M_{\rm I}: \quad X > 0 \quad\mbox{and}\quad -X < T < X .
+\ee
+The coordinates $X^\alpha := (T,X,\th,\ph)$ are called
+the \defin{Kruskal-Szekeres coordinates}\index{Kruskal-Szekeres!coordinates}.
+
+We have $\D U \, \D V = (\D T - \D X) (\D T + \D X)  = \D T^2 - \D X^2$,
+so that the metric components with respect to the Kruskal-Szekeres coordinates
+are easily deduced from the line element (\ref{e:sch:metric_UV}):
+\be \label{e:sch:metric_KS}
+    \encadre{
+    g_{\mu\nu} \, \D X^\mu \, \D X^\nu =
+    \frac{32 m^3}{r} \, \mathrm{e}^{-r/(2m)}
+    \left( - \D T^2 + \D X^2 \right)
+     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+\ee
+Here $r$ is to be considered as the function of $(T,X)$ that is defined
+implicitely by
+\be \label{e:sch:X2mT2}
+   \encadre{ \mathrm{e}^{r/(2m)} \left( \frac{r}{2m} - 1 \right) = X^2 - T^2 } .
+\ee
+
+The relation between the Kruskal-Szekeres coordinates and the
+Schwarzschild-Droste ones is obtained by combining (\ref{e:sch:def_T_X}),
+(\ref{e:sch:def_U_V}) and (\ref{e:sch:u_v_r_t}):
+\bea
+    T &=& \frac{1}{2}(U+V) = \frac{1}{2} \left( \mathrm{e}^{v/(4m)}
+        - \mathrm{e}^{-u/(4m)} \right) =
+        \frac{1}{2} \left( \mathrm{e}^{(t+r_*)/(4m)}
+        - \mathrm{e}^{(r_*-t)/(4m)} \right) \nonumber \\
+     & = & \mathrm{e}^{r_*/(4m)} \sinh\left( \frac{t}{4m} \right) ,\nonumber
+\eea
+where $r_*$ is related to $r$ by (\ref{e:sch:def_tortoise}).
+Similarly
+\[
+     X = \mathrm{e}^{r_*/(4m)} \cosh\left( \frac{t}{4m} \right) .
+\]
+From Eq.~(\ref{e:sch:def_tortoise}), we have
+\[
+    \mathrm{e}^{r_*/(4m)} = \mathrm{e}^{r/(4m)} \sqrt{ \frac{r}{2m} - 1 } .
+\]
+Hence
+\be
+    \M_{\rm I}: \quad \left\{\begin{array}{l}
+    T = \mathrm{e}^{r/(4m)} \sqrt{ \frac{r}{2m} - 1 } \sinh\left( \frac{t}{4m} \right)
+\\[2ex]
+    X = \mathrm{e}^{r/(4m)} \sqrt{ \frac{r}{2m} - 1 } \cosh\left( \frac{t}{4m} \right)
+        \end{array}\right .
+\ee
+\begin{remark}
+Given the properties of the $\cosh$ and $\sinh$ functions, it is clear on these
+expressions that the constraints (\ref{e:sch:X_T_range_I}) are satisfied.
+\end{remark}
+
+
+\begin{figure}
+\centerline{\includegraphics[height=0.37\textheight]{sch_X2mT2.pdf}}
+\caption[]{\label{f:sch:X2mT2} \footnotesize
+Function $r\mapsto \mathrm{e}^{r/(2m)} \left( \frac{r}{2m} - 1 \right)$, giving
+$X^2-T^2$, cf. Eq.~(\ref{e:sch:X2mT2}).}
+\end{figure}
 
 \begin{figure}
 \centerline{\includegraphics[height=0.37\textheight]{sch_coord_schwarz.pdf}\qquad
