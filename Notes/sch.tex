@@ -436,7 +436,7 @@ Schwarzschild-Drostes coordinates $(t,r,\th,\ph)$ governed by Eq.~(\ref{e:sch:in
 \ee
 It follows immediately that
 \[
-    \D v = \D t + \D r + \frac{\D r}{r/(2m) - 1} = \D t + \frac{\D r}{1 - 2m/r} ,
+    \D v = \D t + \D r + \frac{\D r}{r/2m - 1} = \D t + \frac{\D r}{1 - 2m/r} ,
 \]
 i.e.
 \[
@@ -806,20 +806,20 @@ Instead of $(u,v)$, let us use on $\M_{\rm I}$
 the coordinates $(U,V)$ defined by
 \be \label{e:sch:def_U_V}
     \left\{\begin{array}{l}
-    U := - \mathrm{e}^{-u/(4m)} \\
-    V := \mathrm{e}^{v/(4m)} .
+    U := - \mathrm{e}^{-u/4m} \\
+    V := \mathrm{e}^{v/4m} .
     \end{array}\right.
 \ee
 Since the range of $(u,v)$ is $\R^2$, the range of $U$ is $(-\infty,0)$
 and that of $V$ is $(0,+\infty)$.
 We have
 \[
-    \D U = \frac{1}{4m} \,  \mathrm{e}^{-u/(4m)}  \, \D u\qquad\mbox{and}\qquad
-    \D V = \frac{1}{4m} \,  \mathrm{e}^{v/(4m)} \, \D v ,
+    \D U = \frac{1}{4m} \,  \mathrm{e}^{-u/4m}  \, \D u\qquad\mbox{and}\qquad
+    \D V = \frac{1}{4m} \,  \mathrm{e}^{v/4m} \, \D v ,
 \]
 hence
 \[
-    \D u \, \D v = 16 m^2 \mathrm{e}^{(u-v)/(4m)} \, \D U \, \D V .
+    \D u \, \D v = 16 m^2 \mathrm{e}^{(u-v)/4m} \, \D U \, \D V .
 \]
 Now, on $\M_{\rm I}$, $r>2m$ and (\ref{e:sch:u_v_r_t}) yields
 \be \label{e:sch:r_u_v_exp}
@@ -827,14 +827,14 @@ Now, on $\M_{\rm I}$, $r>2m$ and (\ref{e:sch:u_v_r_t}) yields
     \quad
     \Longrightarrow
     \quad
-     \mathrm{e}^{r/(2m)} \left( \frac{r}{2m} - 1 \right)  =
-    \mathrm{e}^{(v-u)/(4m)}  ,
+     \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)  =
+    \mathrm{e}^{(v-u)/4m}  ,
 \ee
 so that
 \[
-     \D u \, \D v = 16 m^2 \, \mathrm{e}^{-r/(2m)}
+     \D u \, \D v = 16 m^2 \, \mathrm{e}^{-r/2m}
         \left( \frac{r}{2m} - 1 \right) ^{-1} \D U \, \D V
-        = \frac{32 m^3}{r} \, \mathrm{e}^{-r/(2m)}
+        = \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m}
         \left( 1 - \frac{2m}{r} \right) ^{-1} \D U \, \D V .
 \]
 Substituting this expression in (\ref{e:sch:Schwarz_metric_uv}) yields
@@ -843,20 +843,20 @@ coordinates ${\hat X}^\alpha := (U,V,\th,\ph)$:
 \be \label{e:sch:metric_UV}
     \encadre{
     g_{\mu\nu} \, \D {\hat X}^\mu \, \D {\hat X}^\nu =
-    - \frac{32 m^3}{r} \, \mathrm{e}^{-r/(2m)} \,  \D U \, \D V
+    - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \D U \, \D V
      +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
 \ee
 In this formula, $r$ has to be considered as a function of $(U,V)$, whose
 implicit expression is found by combining
 (\ref{e:sch:def_U_V}) and (\ref{e:sch:r_u_v_exp}):
-\be
-    \encadre{ \mathrm{e}^{r/(2m)} \left( \frac{r}{2m} - 1 \right) = - U V } .
+\be \label{e:sch:r_UV}
+    \encadre{ \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) = - U V } .
 \ee
 \begin{remark}
 This relation takes a very simple form in terms of the tortoise coordinate
 (cf. Eq.~(\ref{e:sch:def_tortoise})):
 \[
-    \mathrm{e}^{r_*/(2m)} = - U V  .
+    \mathrm{e}^{r_*/2m} = - U V  .
 \]
 \end{remark}
 
@@ -896,55 +896,92 @@ are easily deduced from the line element (\ref{e:sch:metric_UV}):
 \be \label{e:sch:metric_KS}
     \encadre{
     g_{\mu\nu} \, \D X^\mu \, \D X^\nu =
-    \frac{32 m^3}{r} \, \mathrm{e}^{-r/(2m)}
+    \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m}
     \left( - \D T^2 + \D X^2 \right)
      +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
 \ee
 Here $r$ is to be considered as the function of $(T,X)$ that is defined
 implicitely by
 \be \label{e:sch:X2mT2}
-   \encadre{ \mathrm{e}^{r/(2m)} \left( \frac{r}{2m} - 1 \right) = X^2 - T^2 } .
+   \encadre{ \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) = X^2 - T^2 } .
 \ee
+This relation is a direct consequence of (\ref{e:sch:r_UV}) and (\ref{e:sch:def_T_X}).
+The graph of the function
+\be
+    \begin{array}{cccc}
+    F: & (0,+\infty) & \longrightarrow & (-1,+\infty) \\
+        & r & \longmapsto & \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)
+    \end{array}
+\ee
+is shown in Fig.~\ref{f:sch:X2mT2}. We see clearly that it is a bijective map.
+In particular, it induces a bijection between $(2,+\infty)$ (the range of $r$ on $\M_{\rm I}$)
+and $(0,+\infty)$ (the range of $X^2-T^2$ on $\M_{\rm I}$, according to (\ref{e:sch:X_T_range_I})).
+Hence, in the line element (\ref{e:sch:metric_KS}), we may write
+$r = F^{-1}(X^2-T^2)$.
+
+\begin{figure}
+\centerline{\includegraphics[height=0.37\textheight]{sch_X2mT2.pdf}}
+\caption[]{\label{f:sch:X2mT2} \footnotesize
+Function $F(r) = \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)$, giving
+$X^2-T^2$, cf. Eq.~(\ref{e:sch:X2mT2}).}
+\end{figure}
+
 
 The relation between the Kruskal-Szekeres coordinates and the
 Schwarzschild-Droste ones is obtained by combining (\ref{e:sch:def_T_X}),
 (\ref{e:sch:def_U_V}) and (\ref{e:sch:u_v_r_t}):
 \bea
-    T &=& \frac{1}{2}(U+V) = \frac{1}{2} \left( \mathrm{e}^{v/(4m)}
-        - \mathrm{e}^{-u/(4m)} \right) =
-        \frac{1}{2} \left( \mathrm{e}^{(t+r_*)/(4m)}
-        - \mathrm{e}^{(r_*-t)/(4m)} \right) \nonumber \\
-     & = & \mathrm{e}^{r_*/(4m)} \sinh\left( \frac{t}{4m} \right) ,\nonumber
+    T &=& \frac{1}{2}(U+V) = \frac{1}{2} \left( \mathrm{e}^{v/4m}
+        - \mathrm{e}^{-u/4m)} \right) =
+        \frac{1}{2} \left( \mathrm{e}^{(t+r_*)/4m}
+        - \mathrm{e}^{(r_*-t)/4m} \right) \nonumber \\
+     & = & \mathrm{e}^{r_*/4m} \sinh\left( \frac{t}{4m} \right) ,\nonumber
 \eea
 where $r_*$ is related to $r$ by (\ref{e:sch:def_tortoise}).
 Similarly
 \[
-     X = \mathrm{e}^{r_*/(4m)} \cosh\left( \frac{t}{4m} \right) .
+     X = \mathrm{e}^{r_*/4m} \cosh\left( \frac{t}{4m} \right) .
+\]
+In particular, we have
+\[
+    \frac{T}{X} = \tanh\left( \frac{t}{4m} \right) .
 \]
 From Eq.~(\ref{e:sch:def_tortoise}), we have
 \[
-    \mathrm{e}^{r_*/(4m)} = \mathrm{e}^{r/(4m)} \sqrt{ \frac{r}{2m} - 1 } .
+    \mathrm{e}^{r_*/4m} = \mathrm{e}^{r/4m} \sqrt{ \frac{r}{2m} - 1 } .
 \]
-Hence
+We may summarize the above relations as follows:
 \be
-    \M_{\rm I}: \quad \left\{\begin{array}{l}
-    T = \mathrm{e}^{r/(4m)} \sqrt{ \frac{r}{2m} - 1 } \sinh\left( \frac{t}{4m} \right)
+    \M_{\rm I}: \quad \encadre{ \left\{\begin{array}{l}
+    T = \mathrm{e}^{r/4m} \sqrt{ \frac{r}{2m} - 1 } \sinh\left( \frac{t}{4m} \right)
 \\[2ex]
-    X = \mathrm{e}^{r/(4m)} \sqrt{ \frac{r}{2m} - 1 } \cosh\left( \frac{t}{4m} \right)
-        \end{array}\right .
+    X = \mathrm{e}^{r/4m} \sqrt{ \frac{r}{2m} - 1 } \cosh\left( \frac{t}{4m} \right)
+        \end{array}\right. }
+    \iff
+    \encadre{ \left\{\begin{array}{l}
+    t = 4 m \,  \mathrm{atanh} \left( \frac{T}{X} \right) \\[2ex]
+    r = F^{-1}(X^2 - T^2)
+        \end{array}\right. }
 \ee
 \begin{remark}
 Given the properties of the $\cosh$ and $\sinh$ functions, it is clear on these
 expressions that the constraints (\ref{e:sch:X_T_range_I}) are satisfied.
 \end{remark}
+\begin{remark}
+Since in the line element (\ref{e:sch:metric_KS}) $r=F^{-1}(X^2-T^2)$,
+the metric components $g_{TT}$ and $g_{XX}$ depend on both $X$ and $T$, which
+shows that neither $\wpar_T$ nor $\wpar_X$ coincide with a Killing vector.
+In other words, the coordinates $(T,X)$ are not adapted to the spacetime
+symmetries, contrary to the Schwarzschild-Droste coordinates or to the
+Eddington-Finkelstein ones.
+\end{remark}
 
+\subsection{Extension of the spacetime manifold}
 
-\begin{figure}
-\centerline{\includegraphics[height=0.37\textheight]{sch_X2mT2.pdf}}
-\caption[]{\label{f:sch:X2mT2} \footnotesize
-Function $r\mapsto \mathrm{e}^{r/(2m)} \left( \frac{r}{2m} - 1 \right)$, giving
-$X^2-T^2$, cf. Eq.~(\ref{e:sch:X2mT2}).}
-\end{figure}
+We notice that the metric components (\ref{e:sch:metric_KS}) are perfectly
+regular at $r=2m$. Therefore the Kruskal-Szekeres coordinates can be extended
+to cover the Schwarzschild horizon $\Hor$. From (\ref{e:sch:X2mT2}), one
+must have $T^2 = X^2$ on $\Hor$.
 
 \begin{figure}
 \centerline{\includegraphics[height=0.37\textheight]{sch_coord_schwarz.pdf}\qquad
