@@ -599,7 +599,7 @@ The line element (\ref{e:sch:Kerr_Schild}) is said to be in
 \end{remark}
 
 
-\subsection{The Schwarzschild horizon}
+\subsection{The Schwarzschild horizon} \label{s:sch:Schwarz_hor}
 
 Contrary to the Schwarzschild-Droste components (\ref{e:sch:Schwarz_metric_SD}),
 the metric components (\ref{e:sch:Schwarz_metric_EF}) are regular as $r\rightarrow 2m$. In particular, their determinant is
@@ -951,7 +951,7 @@ From Eq.~(\ref{e:sch:def_tortoise}), we have
     \mathrm{e}^{r_*/4m} = \mathrm{e}^{r/4m} \sqrt{ \frac{r}{2m} - 1 } .
 \]
 We may summarize the above relations as follows:
-\be
+\be \label{e:sch:KS_SD_I}
     \M_{\rm I}: \quad \encadre{ \left\{\begin{array}{l}
     T = \mathrm{e}^{r/4m} \sqrt{ \frac{r}{2m} - 1 } \sinh\left( \frac{t}{4m} \right)
 \\[2ex]
@@ -959,10 +959,11 @@ We may summarize the above relations as follows:
         \end{array}\right. }
     \iff
     \encadre{ \left\{\begin{array}{l}
-    t = 4 m \,  \mathrm{atanh} \left( \frac{T}{X} \right) \\[2ex]
+    t = 2 m \,  \ln \left( \frac{X+T}{X-T} \right) \\[2ex]
     r = F^{-1}(X^2 - T^2)
         \end{array}\right. }
 \ee
+Note that we have used the identity $\mathrm{artanh}\, x = 1/2 \ln((1+x)/(1-x))$.
 \begin{remark}
 Given the properties of the $\cosh$ and $\sinh$ functions, it is clear on these
 expressions that the constraints (\ref{e:sch:X_T_range_I}) are satisfied.
@@ -976,11 +977,31 @@ symmetries, contrary to the Schwarzschild-Droste coordinates or to the
 Eddington-Finkelstein ones.
 \end{remark}
 
-\subsection{Extension of the spacetime manifold}
+\subsection{Extension to the IEF domain}
 
 We notice that the metric components (\ref{e:sch:metric_KS}) are perfectly
 regular at $r=2m$. Therefore the Kruskal-Szekeres coordinates can be extended
-to cover the Schwarzschild horizon $\Hor$. From (\ref{e:sch:X2mT2}), one
+to cover the Schwarzschild horizon $\Hor$. Actually they can be extended to
+all values of $r\in (0,2m]$, i.e. to the whole domain of the ingoing
+Eddington-Finkelstein coordinates: the manifold $\M_{\rm IEF}$ introduced
+in Sec.~\ref{s:sch:Schwarz_hor}:
+$\M_{\rm IEF} = \M_{\rm I} \cup \Hor \cup \M_{\rm II}$. Let us show
+this in details. Back on $\M_{\rm I}$, we can express the IEF coordinate
+$\ti$ in terms of $(T,X)$ by combining (\ref{e:sch:ti_t_r}),
+(\ref{e:sch:KS_SD_I}) and (\ref{e:sch:X2mT2}):
+\bea
+    \ti & = & t + 2 m \ln \left( \frac{r}{2m} - 1 \right) \nonumber \\
+        & = &  2 m \,  \ln \left( \frac{X+T}{X-T} \right)
+            + 2 m \ln \left[ (X^2-T^2) \, \mathrm{e}^{-r/2m} \right] \nonumber \\
+        & = & 2 m \ln \left[ \frac{X+T}{X-T}\, (X^2-T^2) \right]
+            + 2 m \ln \mathrm{e}^{-r/2m} , \nonumber
+\eea
+i.e.
+\be
+    \ti = 4 m \ln (X+T) - r.
+\ee
+
+From (\ref{e:sch:X2mT2}), one
 must have $T^2 = X^2$ on $\Hor$.
 
 \begin{figure}
