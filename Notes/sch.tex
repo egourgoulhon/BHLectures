@@ -315,6 +315,7 @@ in Fig.~\ref{f:sch:rad_null_geod} are horizontal lines for $r<2m$.
 \section{Radial null geodesics and Eddington-Finkelstein coordinates}
 
 \subsection{Radial null geodesics}
+\label{s:sch:rad_null_geod}
 
 Let us search for the null geodesics of the Schwarzschild metric
 (\ref{e:sch:Schwarz_metric_SD}) that are radial, i.e. along which
@@ -669,6 +670,7 @@ We shall see in Sec.~?? that $\Hor$ is actually a black hole event horizon in
 Schwarzschild spacetime.
 
 \subsection{Coordinate singularity vs. curvature singularity}
+\label{s:sch:singularities}
 
 The above considerations show that the divergence of the metric
 component $g_{rr}$ in (\ref{e:sch:Schwarz_metric_SD}) when $r\rightarrow 2m$
@@ -776,7 +778,7 @@ $\ti$ is a timelike coordinate and $r$ a spacelike one.
 
 \section{Maximal extension}
 
-\subsection{Kruskal-Szekeres coordinates}
+\subsection{Kruskal-Szekeres coordinates} \label{s:sch:KS_coord}
 
 On the open set $\M_{\rm I}$, let us consider the ``double-null''
 coordinate system $\hat{\hat{x}}^\alpha = (u,v,\th,\ph)$. It is related to
@@ -997,10 +999,10 @@ We may summarize the above relations as follows:
     \iff
     \encadre{ \left\{\begin{array}{l}
     t = 2 m \,  \ln \left( \frac{X+T}{X-T} \right) \\[2ex]
-    r = F^{-1}(X^2 - T^2)
+    r = F^{-1}(X^2 - T^2) .
         \end{array}\right. }
 \ee
-Note that we have used the identity $\mathrm{artanh}\, x = 1/2 \ln((1+x)/(1-x))$.
+Note that we have used the identity $\mathrm{artanh}\, x = 1/2 \ln\left[(1+x)/(1-x)\right]$.
 \begin{remark}
 Given the properties of the $\cosh$ and $\sinh$ functions, it is clear on these
 expressions that the constraints (\ref{e:sch:X_T_range_I}) are satisfied.
@@ -1024,43 +1026,161 @@ Eddington-Finkelstein coordinates: the manifold $\M_{\rm IEF}$ introduced
 in Sec.~\ref{s:sch:Schwarz_hor}:
 $\M_{\rm IEF} = \M_{\rm I} \cup \Hor \cup \M_{\rm II}$. Let us show
 this in details. Back on $\M_{\rm I}$, we can express the IEF coordinate
-$\ti$ in terms of $(T,X)$ by combining (\ref{e:sch:ti_t_r}),
-(\ref{e:sch:KS_SD_I}) and (\ref{e:sch:X2mT2}):
-\bea
-    \ti & = & t + 2 m \ln \left( \frac{r}{2m} - 1 \right) \nonumber \\
-        & = &  2 m \,  \ln \left( \frac{X+T}{X-T} \right)
-            + 2 m \ln \left[ (X^2-T^2) \, \mathrm{e}^{-r/2m} \right] \nonumber \\
-        & = & 2 m \ln \left[ \frac{X+T}{X-T}\, (X^2-T^2) \right]
-            + 2 m \ln \mathrm{e}^{-r/2m} , \nonumber
-\eea
-i.e.
+$\ti$ in terms of $(T,X)$ by combining $\ti = v - r$ [Eq.~(\ref{e:sch:ti_v_r})],
+$v = 4m\ln V$ [Eq.~(\ref{e:sch:def_U_V})] and $V = T+X$ [Eq.~(\ref{e:sch:def_T_X})]:
 \be
-    \ti = 4 m \ln (X+T) - r.
+    \ti = 4 m \ln (T+X) - r.
 \ee
-This expression is valid as long as $X+T>0$. Besides, we already noticed
+The above relation is a valid expression as long as $T+X>0$.
+Besides, we already noticed
 that the function $F$ defined by (\ref{e:sch:def_F}) from the range of $r$
 on $\M_{\rm IEF}$, i.e. $(0,+\infty)$, to $(-1,+\infty)$, with the
 $(0,+\infty)$ part of the latter interval representing the range of $X^2-T^2$
 on $\M_{\rm I}$. We may use these properties to extend the Kruskal-Szekeres coordinates to all $\M_{\rm IEF}$ by requiring
 \begin{subequations}
+\label{e:sch:ti_r_X_T}
 \begin{align}
- & \ti = 4 m \ln (X+T) - r\\
+ & \ti = 4 m \ln (T+X) - r\\
  & \underbrace{\mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)}_{F(r)} = X^2-T^2 .
  \end{align}
 \end{subequations}
 The range of the coordinates $(T,X)$ on $\M_{\rm IEF}$ is then ruled by
 \[
-    \M_{\rm IEF}:\qquad X+T > 0 \quad\mbox{and}\quad X^2 - T^2 > -1 ,
+    \M_{\rm IEF}:\quad T+X > 0 \quad\mbox{and}\quad X^2 - T^2 > -1 ,
 \]
 which can be rewritten as
-\be
-    \M_{\rm IEF}: \qquad -X < T < \sqrt{X^2+1}.
+\be \label{e:sch:range_X_T_IEF}
+    \M_{\rm IEF}: \quad -X < T < \sqrt{X^2+1}.
 \ee
+We deduce from (\ref{e:sch:ti_r_X_T}) that
+\be \label{e:sch:KS_IEF_prov}
+    \left\{\begin{array}{lcl}
+    X+T & = & \mathrm{e}^{(\ti+r)/4m} \\
+    X-T & = & \mathrm{e}^{(r -\ti)/4m} \left( \frac{r}{2m} - 1 \right) .
+    \end{array}\right.
+\ee
+Hence the relation between the ingoing Eddington-Finkelstein coordinates and
+the Kruskal-Szekeres ones on $\M_{\rm IEF}$:
+\be \label{e:sch:KS_IEF}
+    \encadre{ \left\{\begin{array}{l}
+    T = \mathrm{e}^{r/4m} \left[ \cosh\left(\frac{\ti}{4m}\right)
+        - \frac{r}{4m} \mathrm{e}^{-\ti/4m} \right] \\[2ex]
+    X =  \mathrm{e}^{r/4m} \left[ \sinh\left(\frac{\ti}{4m}\right)
+        + \frac{r}{4m} \mathrm{e}^{-\ti/4m}  \right]
+    \end{array}\right. }
+    \iff
+    \encadre{\left\{\begin{array}{l}
+     \ti =  4 m \ln (T+X) - F^{-1}(X^2 - T^2) \\[1ex]
+    r = F^{-1}(X^2 - T^2)
+    \end{array}\right. }
+\ee
+The various subsets of $\M_{\rm IEF}$ correspond then to the following
+coordinate ranges:
+\begin{subequations}
+\begin{align}
+ & \M_{\rm I}: \quad X > 0 \quad\mbox{and}\quad -X < T < X \\
+ & \Hor: \quad T = X \\
+ & \M_{\rm II}: \quad |X| < T < \sqrt{X^2+1} .
+\end{align}
+\end{subequations}
 
+Since the relation between IEF coordinates and Kruskal-Szekeres ones is the
+same in $\M_{\rm II}$ as in $\M_{\rm I}$ (being given by (\ref{e:sch:KS_IEF})
+in both cases), we conclude that the expression (\ref{e:sch:metric_KS})
+of the metric components with respect to
+Kruskal-Szekeres coordinates is valid in all $\M_{\rm IEF}$.
 
+Let us determine the relation between the Kruskal-Szekeres coordinates and
+the Schwarz\-schild-Droste ones in $\M_{\rm II}$. Since $r<2m$ in $\M_{\rm II}$,
+Eq.~(\ref{e:sch:ti_t_r}) gives
+\[
+    \M_{\rm II}: \quad  \mathrm{e}^{\ti/4m} = \mathrm{e}^{t/4m}  \sqrt{1 -  \frac{r}{2m} } ,
+\]
+so that (\ref{e:sch:KS_IEF_prov}) can be rewritten as
+\[
+     \M_{\rm II}: \quad
+\left\{\begin{array}{lcl}
+    X+T & = & \displaystyle \mathrm{e}^{(t+r)/4m} \sqrt{1 -  \frac{r}{2m} }  \\[2ex]
+    X-T & = & \displaystyle  - \mathrm{e}^{(r -t)/4m}  \sqrt{1 -  \frac{r}{2m} }.
+    \end{array}\right.
+\]
+We obtain then
+\be \label{e:sch:KS_SD_II}
+    \M_{\rm II}: \quad \encadre{ \left\{\begin{array}{l}
+    T = \mathrm{e}^{r/4m} \sqrt{ 1 - \frac{r}{2m} } \cosh\left( \frac{t}{4m} \right)
+\\[2ex]
+    X = \mathrm{e}^{r/4m} \sqrt{ 1 - \frac{r}{2m} } \sinh\left( \frac{t}{4m} \right)
+        \end{array}\right. }
+    \iff
+    \encadre{ \left\{\begin{array}{l}
+    t = 2 m \,  \ln \left( \frac{T+X}{T-X} \right) \\[2ex]
+    r = F^{-1}(X^2 - T^2) .
+        \end{array}\right. }
+\ee
+This is to be compared with (\ref{e:sch:KS_SD_I}).
 
-From (\ref{e:sch:X2mT2}), one
-must have $T^2 = X^2$ on $\Hor$.
+As discussed in Sec.~\ref{s:sch:singularities}, one approaches a
+curvature singularity as $r\rightarrow 0$. According to (\ref{e:sch:KS_IEF})
+or (\ref{e:sch:KS_SD_II}),
+this corresponds to $X^2-T^2 \rightarrow -1$ (see also Fig.~\ref{f:sch:X2mT2}), with
+$T > 0$. Hence, in the $(T,X)$ plane, the curvature singularity is located
+at $T = \sqrt{X^2 + 1}$, i.e. at the upper branch of the hyperbola
+$X^2 - T^2 = -1$.
+
+\subsection{Radial null geodesics in Kruskal-Szekeres coordinates}
+
+By construction, the Kruskal-Szekeres coordinates $(T,X,\th,\ph)$ are
+adapted to the radial null geodesics. This is clear on the expression
+(\ref{e:sch:metric_KS}) of the metric tensor, where the $(T,X)$ part is
+conformal to the flat metric $- \D T^2 + \D X^2$. Consequently the radial
+null geodesics are straight lines of slope $\pm 1$ in the $(T,X)$ plane:
+\begin{itemize}
+\item the ingoing radial null geodesics obey
+\be
+    T = - X + V ,
+\ee
+where $V$ is a positive constant (the constraint $V>0$ following from (\ref{e:sch:range_X_T_IEF})), so that each geodesic of this family can be labelled
+by $(V,\th,\ph)$;
+\item the outgoing radial null geodesics obey
+\be \label{e:sch:outgoing_null_geod_KS}
+    T = X + U ,
+\ee
+where $U$ is an arbitrary real constant, so that each geodesic of this family can be labelled
+by $(U,\th,\ph)$.
+\end{itemize}
+In particular, the Schwarzschild horizon $\Hor$ is generated by the
+outgoing radial null geodesics having $U=0$, as it clear from
+(\ref{e:sch:outgoing_null_geod_KS}) and (\ref{e:sch:X2mT2}) that $U=0$
+implies $r=2m$ for outgoing radial null geodesics.
+The outgoing radial null geodesics not lying on $\Hor$ have an equation
+in terms of the IEF coordinates given by
+Eq.~(\ref{e:sch:outgoing_null_geod_EF}):
+$\ti = r + 4 m \ln \left|r/2m- 1 \right| + u$,
+where the constant $u$ is related to $U$ by
+\begin{subequations}
+\begin{align}
+ & U = - \mathrm{e}^{-u/4m} \quad \mbox{on}\ \M_{\rm I} \\
+ & U = 0 \quad \mbox{on}\ \Hor \\
+ & U =  \mathrm{e}^{-u/4m} \quad \mbox{on}\ \M_{\rm II} .
+\end{align}
+\end{subequations}
+These relations are easily established by combining
+(\ref{e:sch:outgoing_null_geod_EF}) and (\ref{e:sch:KS_IEF}).
+\begin{remark}
+The relation $U = - \mathrm{e}^{-u/4m}$ introduced in Sec.~\ref{s:sch:KS_coord}
+by Eq.~(\ref{e:sch:def_U_V}) is thus valid only in $\M_{\rm I}$. On the
+contrary the relation $V = \mathrm{e}^{v/4m}$ is valid on all $\M_{\rm IEF}$.
+\end{remark}
+
+\subsection{Maximal extension}
+
+The spacetime $(\M_{\rm IEF}, \w{g})$ is not geodesically complete.
+Indeed, let us consider the radial null geodesics.
+We have seen in Sec.~\ref{s:sch:rad_null_geod} that $r$ is an affine parameter
+along these geodesics.
+Now, for the ingoing radial null geodesics, $r$ is decreasing towards the
+future and all of them terminates at $r=0$. They are thus incomplete geodesics.
+
 
 \begin{figure}
 \centerline{\includegraphics[height=0.37\textheight]{sch_coord_schwarz.pdf}\qquad
