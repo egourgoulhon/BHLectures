@@ -761,13 +761,13 @@ in terms of the IEF coordinates is very simple:
 \be \label{e:sch:ingoing_null_geod_EF}
     \ti = - r + v ,
 \ee
-where the constant $v$ labels the geodesic.
+where the constant $v\in \R$ labels the geodesic.
 The equation of the outgoing radial null geodesics is obtained
 by combining (\ref{e:sch:outgoing_null_geod}) and (\ref{e:sch:ti_t_r}):
 \be \label{e:sch:outgoing_null_geod_EF}
     \ti = r + 4 m \ln \left| \frac{r}{2m} - 1 \right| + u ,
 \ee
-where the constant $u$ labels the geodesic.
+where the constant $u\in \R$ labels the geodesic.
 The radial null geodesics are depicted in Fig.~\ref{f:sch:rad_null_geod_EF}
 in terms of the IEF coordinates. We note that, contrary to Fig.~\ref{f:sch:rad_null_geod},
 which was based on Schwarzschild-Drostes coordinates, in the region $r<2m$,
@@ -824,7 +824,8 @@ by (\ref{e:sch:u_v_r_t}).
 \centerline{\includegraphics[height=0.37\textheight]{sch_tortoise.pdf}}
 \caption[]{\label{f:sch:tortoise} \footnotesize
 Function $r_*(r) = r + 2 m \ln \left| \frac{r}{2m} - 1 \right|$
-(the tortoise coordinate, cf. Eq.~(\ref{e:sch:def_tortoise})).}
+(the tortoise coordinate, cf. Eq.~(\ref{e:sch:def_tortoise})).
+It relates $r$ to $(u,v)$ via $r_*(r) = (u-v)/2$ [Eq.~(\ref{e:sch:u_v_r_t})].}
 \end{figure}
 
 The metric components (\ref{e:sch:Schwarz_metric_uv}) are regular on $\M_{\rm I}$.
@@ -945,24 +946,41 @@ implicitely by
    \encadre{ \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) = X^2 - T^2 } .
 \ee
 This relation is a direct consequence of (\ref{e:sch:r_UV}) and (\ref{e:sch:def_T_X}).
-The graph of the function
+We may rewrite it as $F(r/2m) = X^2 - T^2$, with $F$ being the function
+defined by
 \be \label{e:sch:def_F}
     \begin{array}{cccc}
     F: & (0,+\infty) & \longrightarrow & (-1,+\infty) \\
-        & r & \longmapsto & \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)
+        & x & \longmapsto & \mathrm{e}^{x} ( x - 1 ) .
     \end{array}
 \ee
-is shown in Fig.~\ref{f:sch:X2mT2}. We see clearly that it is a bijective map.
-In particular, it induces a bijection between $(2,+\infty)$ (the range of $r$ on $\M_{\rm I}$)
+The graph of $F$  is shown in Fig.~\ref{f:sch:X2mT2}. We see clearly that it is a bijective map.
+In particular, $F$ induces a bijection between $(1,+\infty)$ (the range of $r/2m$ on $\M_{\rm I}$)
 and $(0,+\infty)$ (the range of $X^2-T^2$ on $\M_{\rm I}$, according to (\ref{e:sch:X_T_range_I})).
 Hence, in the line element (\ref{e:sch:metric_KS}), we may write
-$r = F^{-1}(X^2-T^2)$.
+$r = 2m F^{-1}(X^2-T^2)$. Noticing that
+$2m/r \, \mathrm{e}^{-r/2m} = (X^2-T^2 + \mathrm{e}^{r/2m})^{-1}$
+[cf. Eq.~(\ref{e:sch:X2mT2})], we may eliminate $r$ from the expression
+of the metric components in Kruskal-Szekeres coordinates:
+\be \label{e:sch:metric_KS_TX}
+   \encadre{
+    \begin{array}{lcll}
+    g_{\mu\nu} \, \D X^\mu \, \D X^\nu & = & 4m^2 \bigg\{ & \displaystyle
+    \frac{4}{X^2-T^2 + \mathrm{e}^{F^{-1}(X^2-T^2)} }
+    \left( - \D T^2 + \D X^2 \right) \\[2ex]
+    & & & \displaystyle + \,   (F^{-1}(X^2-T^2))^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
+    \bigg\}.
+    \end{array} }
+\ee
+
+
+
 
 \begin{figure}
 \centerline{\includegraphics[height=0.37\textheight]{sch_X2mT2.pdf}}
 \caption[]{\label{f:sch:X2mT2} \footnotesize
-Function $F(r) = \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)$, giving
-$X^2-T^2$, cf. Eq.~(\ref{e:sch:X2mT2}).}
+Function $F(x) = \mathrm{e}^{x} (x-1)$, giving
+$X^2-T^2 = F(r/2m)$, cf. Eq.~(\ref{e:sch:X2mT2}).}
 \end{figure}
 
 
@@ -999,7 +1017,7 @@ We may summarize the above relations as follows:
     \iff
     \encadre{ \left\{\begin{array}{l}
     t = 2 m \,  \ln \left( \frac{X+T}{X-T} \right) \\[2ex]
-    r = F^{-1}(X^2 - T^2) .
+    r = 2 m F^{-1}(X^2 - T^2) .
         \end{array}\right. }
 \ee
 Note that we have used the identity $\mathrm{artanh}\, x = 1/2 \ln\left[(1+x)/(1-x)\right]$.
@@ -1008,8 +1026,8 @@ Given the properties of the $\cosh$ and $\sinh$ functions, it is clear on these
 expressions that the constraints (\ref{e:sch:X_T_range_I}) are satisfied.
 \end{remark}
 \begin{remark}
-Since in the line element (\ref{e:sch:metric_KS}) $r=F^{-1}(X^2-T^2)$,
-the metric components $g_{TT}$ and $g_{XX}$ depend on both $X$ and $T$, which
+In line element (\ref{e:sch:metric_KS_TX})
+the metric components $g_{TT}$ and $g_{XX}$ depend on both $X$ and $T$; this
 shows that neither $\wpar_T$ nor $\wpar_X$ coincide with a Killing vector.
 In other words, the coordinates $(T,X)$ are not adapted to the spacetime
 symmetries, contrary to the Schwarzschild-Droste coordinates or to the
@@ -1025,7 +1043,7 @@ all values of $r\in (0,2m]$, i.e. to the whole domain of the ingoing
 Eddington-Finkelstein coordinates: the manifold $\M_{\rm IEF}$ introduced
 in Sec.~\ref{s:sch:Schwarz_hor}:
 $\M_{\rm IEF} = \M_{\rm I} \cup \Hor \cup \M_{\rm II}$. Let us show
-this in details. Back on $\M_{\rm I}$, we can express the IEF coordinate
+this in detail. Back on $\M_{\rm I}$, we can express the IEF coordinate
 $\ti$ in terms of $(T,X)$ by combining $\ti = v - r$ [Eq.~(\ref{e:sch:ti_v_r})],
 $v = 4m\ln V$ [Eq.~(\ref{e:sch:def_U_V})] and $V = T+X$ [Eq.~(\ref{e:sch:def_T_X})]:
 \be
@@ -1033,7 +1051,7 @@ $v = 4m\ln V$ [Eq.~(\ref{e:sch:def_U_V})] and $V = T+X$ [Eq.~(\ref{e:sch:def_T_X
 \ee
 The above relation is a valid expression as long as $T+X>0$.
 Besides, we already noticed
-that the function $F$ defined by (\ref{e:sch:def_F}) from the range of $r$
+that the function $F$ defined by (\ref{e:sch:def_F}) is a bijection from the range of $r/2m$
 on $\M_{\rm IEF}$, i.e. $(0,+\infty)$, to $(-1,+\infty)$, with the
 $(0,+\infty)$ part of the latter interval representing the range of $X^2-T^2$
 on $\M_{\rm I}$. We may use these properties to extend the Kruskal-Szekeres coordinates to all $\M_{\rm IEF}$ by requiring
@@ -1041,7 +1059,7 @@ on $\M_{\rm I}$. We may use these properties to extend the Kruskal-Szekeres coor
 \label{e:sch:ti_r_X_T}
 \begin{align}
  & \ti = 4 m \ln (T+X) - r\\
- & \underbrace{\mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)}_{F(r)} = X^2-T^2 .
+ & \underbrace{\mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)}_{F(r/2m)} = X^2-T^2 .
  \end{align}
 \end{subequations}
 The range of the coordinates $(T,X)$ on $\M_{\rm IEF}$ is then ruled by
@@ -1070,8 +1088,8 @@ the Kruskal-Szekeres ones on $\M_{\rm IEF}$:
     \end{array}\right. }
     \iff
     \encadre{\left\{\begin{array}{l}
-     \ti =  4 m \ln (T+X) - F^{-1}(X^2 - T^2) \\[1ex]
-    r = F^{-1}(X^2 - T^2)
+     \ti =  2 m \left[ 2 \ln (T+X) - F^{-1}(X^2 - T^2) \right] \\[1ex]
+    r = 2 m F^{-1}(X^2 - T^2)
     \end{array}\right. }
 \ee
 The various subsets of $\M_{\rm IEF}$ correspond then to the following
@@ -1114,7 +1132,7 @@ We obtain then
     \iff
     \encadre{ \left\{\begin{array}{l}
     t = 2 m \,  \ln \left( \frac{T+X}{T-X} \right) \\[2ex]
-    r = F^{-1}(X^2 - T^2) .
+    r = 2 m F^{-1}(X^2 - T^2) .
         \end{array}\right. }
 \ee
 This is to be compared with (\ref{e:sch:KS_SD_I}).
