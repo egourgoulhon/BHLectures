@@ -821,7 +821,7 @@ In this formula, $r$ is to be considered as a function of $(u,v)$, given
 by (\ref{e:sch:u_v_r_t}).
 
 \begin{figure}
-\centerline{\includegraphics[height=0.37\textheight]{sch_tortoise.pdf}}
+\centerline{\includegraphics[height=0.4\textheight]{sch_tortoise.pdf}}
 \caption[]{\label{f:sch:tortoise} \footnotesize
 Function $r_*(r) = r + 2 m \ln \left| \frac{r}{2m} - 1 \right|$
 (the tortoise coordinate, cf. Eq.~(\ref{e:sch:def_tortoise})).
@@ -923,12 +923,22 @@ retarded by $X$ and $V$ is $T$ advanced by $X$:
 Since the range of $U$ on $\M_{\rm I}$ is $(-\infty,0)$ and that of $V$ is
 $(0,+\infty)$, the range of $(T,X)$ is ruled by $T<X$, $T>-X$ and $X>0$.
 In other words, the coordinates $(T,X)$ span the following quarter of
-$\mathbb{R}^2$:
+$\mathbb{R}^2$ (cf. Fig.~\ref{f:sch:SD_I_KS}):
 \be \label{e:sch:X_T_range_I}
     \M_{\rm I}: \quad X > 0 \quad\mbox{and}\quad -X < T < X .
 \ee
 The coordinates $X^\alpha := (T,X,\th,\ph)$ are called
 the \defin{Kruskal-Szekeres coordinates}\index{Kruskal-Szekeres!coordinates}.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{sch_SD_I_KS.pdf}}
+\caption[]{\label{f:sch:SD_I_KS} \footnotesize
+Submanifold $\M_{\rm I}$ in the Kruskal-Szekeres coordinates $(T,X)$:
+$\M_{\rm I}$ is covered by the Schwarzschild-Droste grid (in blue): the solid
+lines have $t=\mathrm{const}$ (spaced apart by $\delta t = m$), while the
+dashed curves have $r=\mathrm{const}$ (spaced apart by $\delta r = m/2$).}
+\end{figure}
+
 
 We have $\D U \, \D V = (\D T - \D X) (\D T + \D X)  = \D T^2 - \D X^2$,
 so that the metric components with respect to the Kruskal-Szekeres coordinates
@@ -1021,6 +1031,8 @@ We may summarize the above relations as follows:
         \end{array}\right. }
 \ee
 Note that we have used the identity $\mathrm{artanh}\, x = 1/2 \ln\left[(1+x)/(1-x)\right]$.
+The curves of constant $t$ and constant $r$ in the $(T,X)$ plane
+are drawn in Fig.~\ref{f:sch:SD_I_KS}.
 \begin{remark}
 Given the properties of the $\cosh$ and $\sinh$ functions, it is clear on these
 expressions that the constraints (\ref{e:sch:X_T_range_I}) are satisfied.
@@ -1093,14 +1105,23 @@ the Kruskal-Szekeres ones on $\M_{\rm IEF}$:
     \end{array}\right. }
 \ee
 The various subsets of $\M_{\rm IEF}$ correspond then to the following
-coordinate ranges:
+coordinate ranges (cf. Fig.~\ref{f:sch:IEF_KS}):
 \begin{subequations}
 \begin{align}
  & \M_{\rm I}: \quad X > 0 \quad\mbox{and}\quad -X < T < X \\
- & \Hor: \quad T = X \\
+ & \Hor: \quad X > 0 \quad\mbox{and}\quad  T = X \\
  & \M_{\rm II}: \quad |X| < T < \sqrt{X^2+1} .
 \end{align}
 \end{subequations}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{sch_IEF_KS.pdf}}
+\caption[]{\label{f:sch:IEF_KS} \footnotesize
+Domain of ingoing Eddington-Finkelstein coordinates, $\M_{\rm IEF} = \M_{\rm I}\cup \Hor\cup \M_{\rm II}$, depicted in terms of the Kruskal-Szekeres coordinates $(T,X)$: the solid red
+curves have $\ti=\mathrm{const}$ (spaced apart by $\delta\ti = m$), while the
+dashed red curves have $r=\mathrm{const}$ (spaced apart by $\delta r = m/2$).}
+\end{figure}
+
 
 Since the relation between IEF coordinates and Kruskal-Szekeres ones is the
 same in $\M_{\rm II}$ as in $\M_{\rm I}$ (being given by (\ref{e:sch:KS_IEF})
@@ -1136,6 +1157,19 @@ We obtain then
         \end{array}\right. }
 \ee
 This is to be compared with (\ref{e:sch:KS_SD_I}).
+The curves of constant $t$ and constant $r$ in the $(T,X)$ plane
+are drawn in Fig.~\ref{f:sch:SD_KS}, which extends Fig.~\ref{f:sch:SD_I_KS}
+to $\M_{\rm II}$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{sch_SD_KS.pdf}}
+\caption[]{\label{f:sch:SD_KS} \footnotesize
+Schwarzschild-Droste coordinates in $\M_{\rm SD} = \M_{\rm I}\cup \M_{\rm II}$
+depicted in terms of the Kruskal-Szekeres coordinates $(T,X)$: the solid blue
+curves have $t=\mathrm{const}$ (spaced apart by $\delta t = m$), while the
+dashed blue curves have $r=\mathrm{const}$ (spaced apart by $\delta r = m/2$).}
+\end{figure}
+
 
 As discussed in Sec.~\ref{s:sch:singularities}, one approaches a
 curvature singularity as $r\rightarrow 0$. According to (\ref{e:sch:KS_IEF})
@@ -1151,7 +1185,8 @@ By construction, the Kruskal-Szekeres coordinates $(T,X,\th,\ph)$ are
 adapted to the radial null geodesics. This is clear on the expression
 (\ref{e:sch:metric_KS}) of the metric tensor, where the $(T,X)$ part is
 conformal to the flat metric $- \D T^2 + \D X^2$. Consequently the radial
-null geodesics are straight lines of slope $\pm 1$ in the $(T,X)$ plane:
+null geodesics are straight lines of slope $\pm 1$ in the $(T,X)$ plane
+(cf. Fig.~\ref{f:sch:rad_null_geod_KS}):
 \begin{itemize}
 \item the ingoing radial null geodesics obey
 \be
@@ -1166,6 +1201,17 @@ by $(V,\th,\ph)$;
 where $U$ is an arbitrary real constant, so that each geodesic of this family can be labelled
 by $(U,\th,\ph)$.
 \end{itemize}
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{sch_rad_null_geod_KS.pdf}}
+\caption[]{\label{f:sch:rad_null_geod_KS} \footnotesize
+Radial null geodesics in $\M_{\rm IEF} = \M_{\rm I}\cup\Hor\cup\M_{\rm II}$
+depicted in terms of the Kruskal-Szekeres coordinates $(T,X)$: the solid
+lines correspond to the outgoing family, with $u$ spanning $[-6m, 8m]$
+(with steps $\delta u = 2m$), from the left to the right in $\M_{\rm II}$
+and from the right to the left in $\M_{\rm I}$; the dashed lines
+correspond to the ingoing family, with $v$ spanning $[-8m, 6m]$ (with steps $\delta v = 2m$)
+from the left to the right.}
+\end{figure}
 In particular, the Schwarzschild horizon $\Hor$ is generated by the
 outgoing radial null geodesics having $U=0$, as it clear from
 (\ref{e:sch:outgoing_null_geod_KS}) and (\ref{e:sch:X2mT2}) that $U=0$
@@ -1184,6 +1230,8 @@ where the constant $u$ is related to $U$ by
 \end{subequations}
 These relations are easily established by combining
 (\ref{e:sch:outgoing_null_geod_EF}) and (\ref{e:sch:KS_IEF}).
+
+
 \begin{remark}
 The relation $U = - \mathrm{e}^{-u/4m}$ introduced in Sec.~\ref{s:sch:KS_coord}
 by Eq.~(\ref{e:sch:def_U_V}) is thus valid only in $\M_{\rm I}$. On the
