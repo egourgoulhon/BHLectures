@@ -1180,6 +1180,7 @@ at $T = \sqrt{X^2 + 1}$, i.e. at the upper branch of the hyperbola
 $X^2 - T^2 = -1$.
 
 \subsection{Radial null geodesics in Kruskal-Szekeres coordinates}
+\label{s:sch:rad_null_geod_KS}
 
 By construction, the Kruskal-Szekeres coordinates $(T,X,\th,\ph)$ are
 adapted to the radial null geodesics. This is clear on the expression
@@ -1267,9 +1268,27 @@ the latter $T=X$, but rather to $\ti\rightarrow-\infty$,
 as it is clear when comparing Fig.~\ref{f:sch:rad_null_geod_KS}
 with Fig.~\ref{f:sch:IEF_KS}.
 
+Another hint regarding the extendability of $(\M_{\rm IEF}, \w{g})$
+is the fact that the Killing horizon $\Hor$ is non-degenerate, having
+a non-zero surface gravity (cf. Sec.~\ref{s:neh:classif_KH}); the latter
+has been computed in Example~\ref{x:def:Schw_hor3} of Chap.~\ref{s:def}:
+$\kappa = 1/4m$. Now, we have seen in Sec.~\ref{s:sta:bifur_Killing_hor}
+that non-degenerate Killing horizons have incomplete null generators
+and, if they can be extended, they must be part of a
+bifurcate Killing horizon. In the present case, the null generators of $\Hor$
+are nothing but outgoing radial null geodesics. They are thus as incomplete
+as those that admit $r$ as an affine parameter discussed above.
+
 The possibility of spacetime extension beyond $\M_{\rm IEF}$ is clear
 on the metric element (\ref{e:sch:metric_KS_TX}): it is invariant by
-the transformation $(T,X) \mapsto (-T,-X)$. Thus we may include
+the transformation
+\be \label{e:sch:origin_reflection}
+    \begin{array}{lccc}
+    \Phi : & \R^2 & \longrightarrow & \R^2 \\
+        & (T,X) & \longmapsto & (-T,-X) .
+    \end{array}
+\ee
+Thus we may include
 the part $T+X<0$ by adding a copy of $\M_{\rm IEF}$, symmetric to the
 original one with respect to the ``origin'' $(T,X)=(0,0)$.
 The whole spacetime manifold is then the following open subset of
@@ -1280,24 +1299,90 @@ $\R^2\times\mathbb{S}^2$:
 where $(T,X,\th,\ph)$ is the canonical coordinate system on $\R^2\times\mathbb{S}^2$,
 called in this context
 \defin{Kruskal-Szekeres coordinates}\index{Kruskal-Szekeres!coordinates}.
+The metric $\w{g}$ on the whole $\M$ is then defined by (\ref{e:sch:metric_KS_TX}).
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{sch_kruskal_diag.pdf}}
+\caption[]{\label{f:sch:kruskal_diag} \footnotesize
+Schwarzschild spacetime $\M$ depicted in terms of Kruskal-Szekeres coordinates $(T,X)$.
+Solid lines denote the hypersurfaces $t=\mathrm{const}$ in $\M_{\rm I}$ and
+$\M_{\rm II}$ and the  hypersurfaces $t'=\mathrm{const}$ in $\M_{\rm III}$ and
+$\M_{\rm IV}$, whiles dashed curves
+denote the hypersurfaces $r=\mathrm{const}$ in $\M_{\rm I}$ and
+$\M_{\rm II}$ and the  hypersurfaces $r'=\mathrm{const}$ in $\M_{\rm III}$ and
+$\M_{\rm IV}$.
+The bifurcate Killing horizon is marked by thick black lines, while the
+singularities at $r=0$ and $r'=0$ are depicted by the heavy dashed brown curve.}
+\end{figure}
+
+Let us define the following open subsets of $\M$, which are respectively
+the images of $\M_{\rm I}$ and $\M_{\rm II}$ by the reflection through the origin
+(\ref{e:sch:origin_reflection}):
+\begin{subequations}
+\begin{align}
+ & \M_{\rm III}: \quad X < 0 \quad\mbox{and}\quad X < T < -X \\
+ & \M_{\rm IV}: \quad - \sqrt{X^2+1} < T < -|X| .
+\end{align}
+\end{subequations}
+On $\M_{\rm III}\cup \M_{\rm IV}$, one may introduce coordinates
+$(t',r',\th,\ph)$ of Schwarzschild-Droste type; they are related to
+the Kruskal-Szekeres coordinates by formulas analoguous to
+(\ref{e:sch:KS_SD_I}) and (\ref{e:sch:KS_SD_II}), simply changing $T$ to $-T$
+and $X$ to $-X$:
+\be \label{e:sch:KS_SD_III}
+    \M_{\rm III}: \quad \encadre{ \left\{\begin{array}{l}
+    T = - \mathrm{e}^{r'/4m} \sqrt{ \frac{r'}{2m} - 1 } \sinh\left( \frac{t'}{4m} \right)
+\\[2ex]
+    X = - \mathrm{e}^{r'/4m} \sqrt{ \frac{r'}{2m} - 1 } \cosh\left( \frac{t'}{4m} \right)
+        \end{array}\right. }
+    \iff
+    \encadre{ \left\{\begin{array}{l}
+    t' = 2 m \,  \ln \left( \frac{X+T}{X-T} \right) \\[2ex]
+    r' = 2 m F^{-1}(X^2 - T^2) .
+        \end{array}\right. }
+\ee
+\be \label{e:sch:KS_SD_IV}
+    \M_{\rm IV}: \quad \encadre{ \left\{\begin{array}{l}
+    T = - \mathrm{e}^{r'/4m} \sqrt{ 1 - \frac{r'}{2m} } \cosh\left( \frac{t'}{4m} \right)
+\\[2ex]
+    X = - \mathrm{e}^{r'/4m} \sqrt{ 1 - \frac{r'}{2m} } \sinh\left( \frac{t'}{4m} \right)
+        \end{array}\right. }
+    \iff
+    \encadre{ \left\{\begin{array}{l}
+    t' = 2 m \,  \ln \left( \frac{T+X}{T-X} \right) \\[2ex]
+    r' = 2 m F^{-1}(X^2 - T^2) .
+        \end{array}\right. }
+\ee
+
+The extended Schwarzschild spacetime $(\M,\w{g})$ is depicted in
+Fig.~\ref{f:sch:kruskal_diag}, which is usually called a
+\defin{Kruskal diagram}\index{Kruskal!diagram}.
+There are two curvature singularities, which formally are not part of $\M$:
+the hypersurfaces $r=0$ and $r'=0$.
+As discussed in Sec.~\ref{s:sch:rad_null_geod_KS}, the radial null
+geodesics appear as straight lines of slope $\pm 45^\circ$ ($+$ for the
+outgoing family, and $-$ for the ingoing one).
+As in $(\M_{\rm IEF},\w{g})$, they are still not complete but the only
+locations where they terminate are the curvature singularities
+at $r=0$ (future end point) and $r'=0$ (past end point). Therefore, they cannot
+be extended further. For this reason, $(\M,\w{g})$ is called the
+\defin{maximal extension}\index{maximal!extension}\index{extension!maximal --}
+of Schwarzschild spacetime.
+
 
 
 \subsection{Bifurcate Killing horizon}
 
-
 \begin{figure}
-\centerline{\includegraphics[height=0.37\textheight]{sch_coord_schwarz.pdf}\qquad
-\includegraphics[height=0.37\textheight]{sch_kruskal_diag.pdf}}
-\caption[]{\label{f:sch:kruskal_diag} \footnotesize
-Schwarzschild spacetime depicted in Schwarzschild-Droste coordinates $(t,r)$
-(left) and in Kruskal-Szekeres coordinates $(T,X)$ (right). In both figures,
-green (resp. red) solid curves denote the hypersurfaces $t=\mathrm{const}$
-in Region~I (resp. II), while green (resp. red) dashed curves
-denote the hypersurfaces $r=\mathrm{const}$ in Region~I (resp. II).
-The future and past event horizons are marked by thick black lines, while the
-singularity at $r=0$ is depicted in orange. Regions III and IV are depicted
-in grey and pink respectively. Note that the left figure covers only Regions I and II.}
+\centerline{\includegraphics[width=0.6\textwidth]{sch_xi_extend.pdf}}
+\caption[]{\label{f:sch:xi_extend} \footnotesize
+Killing vector field $\w{\xi}$ on the extended Schwarzschild manifold.}
 \end{figure}
+
+
+
+\subsection{Carter-Penrose diagram}
+
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{sch_carter-penrose.pdf}}
@@ -1307,4 +1392,7 @@ is the same as in Fig.~\ref{f:sch:kruskal_diag}.
 As Fig.~\ref{f:sch:kruskal_diag}, this figure has been produced with
 SageManifolds (cf. Appendix~\ref{s:sam}).}
 \end{figure}
+
+\section{Isotropic coordinates}
+
 
