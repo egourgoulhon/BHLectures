@@ -1239,7 +1239,7 @@ by Eq.~(\ref{e:sch:def_U_V}) is thus valid only in $\M_{\rm I}$. On the
 contrary the relation $V = \mathrm{e}^{v/4m}$ is valid on all $\M_{\rm IEF}$.
 \end{remark}
 
-\subsection{Maximal extension}
+\subsection{Maximal extension} \label{s:sch:max_extens}
 
 The spacetime $(\M_{\rm IEF}, \w{g})$ is not geodesically complete.
 Indeed, let us consider the radial null geodesics discussed above.
@@ -1293,7 +1293,7 @@ the part $T+X<0$ by adding a copy of $\M_{\rm IEF}$, symmetric to the
 original one with respect to the ``origin'' $(T,X)=(0,0)$.
 The whole spacetime manifold is then the following open subset of
 $\R^2\times\mathbb{S}^2$:
-\be
+\be \label{e:sch:def_M_extend}
     \M = \{ p \in \R^2\times\mathbb{S}^2, \quad X^2(p) - T^2(p) > - 1 \} ,
 \ee
 where $(T,X,\th,\ph)$ is the canonical coordinate system on $\R^2\times\mathbb{S}^2$,
@@ -1373,12 +1373,80 @@ of Schwarzschild spacetime.
 
 \subsection{Bifurcate Killing horizon}
 
+As discussed in Sec.~\ref{s:sch:max_extens}, the Schwarzschild horizon
+$\Hor$ is
+a non-degenerate Killing horizon and therefore shall be part of
+a bifurcate Killing horizon (cf. Sec.~\ref{s:sta:bifur_Killing_hor})
+in the extended spacetime.
+The bifurcate Killing horizon, $\hat{\Hor}$ say, is easily found by
+considering the Killing vector field $\w{\xi}$ in the maximal extension
+of Schwarzschild spacetime. The components of $\w{\xi}$ w.r.t. to the
+Kruskal-Szekeres coordinates are easily found from the
+property $\w{\xi} = \wpar_t$:
+\[
+    \xi^T = \der{T}{t}, \quad
+    \xi^X = \der{X}{t}, \quad
+    \xi^\th = \der{\th}{t} = 0, \quad
+    \xi^\ph = \der{\ph}{t} = 0 .
+\]
+Given the coordinate transformation laws (\ref{e:sch:KS_SD_I})
+and (\ref{e:sch:KS_SD_II}), we get in
+$\M_{\rm I}$ and $\M_{\rm II}$:
+\[
+    \xi^T = \frac{1}{4m} \, X, \quad
+    \xi^X = \frac{1}{4m} \, T , \quad
+    \xi^\th = \xi^\ph = 0 .
+\]
+Hence in $\M_{\rm I}\cup\M_{\rm II}$,
+\be \label{e:sch:xi_X_T}
+    \encadre{ \w{\xi} = \frac{1}{4m} \left( X \, \wpar_T + T \, \wpar_X \right) }.
+\ee
+Now, this formula defines a smooth vector field on all $\M$.
+Moreover, on $\M_{\rm III}\cup\M_{\rm IV}$, this vector coincides with
+$\wpar_{t'}$ since $\xi^T = \dert{T}{t'}$ and $\xi^X = \dert{X}{t'}$,
+with the partial derivatives with respect to $t'$ evaluated from
+(\ref{e:sch:KS_SD_III})-(\ref{e:sch:KS_SD_IV}). Hence the vector field
+$\w{\xi}$ defined by (\ref{e:sch:xi_X_T}) is a Killing vector field
+of maximal extension $(\M,\w{g})$. This vector field is depicted in
+Fig.~\ref{f:sch:xi_extend}.
+
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{sch_xi_extend.pdf}}
 \caption[]{\label{f:sch:xi_extend} \footnotesize
 Killing vector field $\w{\xi}$ on the extended Schwarzschild manifold.}
 \end{figure}
 
+It is clear that the bifurcate Killing horizon with respect to $\w{\xi}$
+which extends $\Hor$
+is $\hat{\Hor} = \Hor_1 \cup \Hor_2 $, where
+\begin{itemize}
+\item $\Hor_1$ is the null hypersurface $T=X$;
+\item $\Hor_2$ is the null hypersurface $T=-X$.
+\end{itemize}
+$\Hor$ is then the part of $\Hor_1$ defined by $X>0$.
+The bifurcation surface is $\Sp = \Hor_1 \cap \Hor_2$, which
+is the 2-surface defined by $T=0$ and $X=0$. It is a 2-sphere, since
+any fixed value of the pair $(T,X)$ defines a 2-sphere, according to the
+definition of $\M$ as a part of $\R^2\times\mathbb{S}^2$
+[cf. Eq.~(\ref{e:sch:def_M_extend})]. Accordingly, $\Sp$ is called the
+\defin{bifurcation sphere}\index{bifurcation!sphere}. It is located at the
+center of Fig.~\ref{f:sch:xi_extend}.
+The areal radius of $\Sp$ is found by setting
+$\D T = 0$, $\D X = 0$ and $(T,X)=(0,0)$ in the line element
+(\ref{e:sch:metric_KS_TX}):
+\[
+    r_{\Sp}^2 = 4m^2 (F^{-1}(0))^2.
+\]
+Since $F^{-1}(0)=1$, we get
+\be
+    \encadre{r_{\Sp} = 2 m } .
+\ee
+Moreover, setting $(T,X)=(0,0)$ in Eq.~(\ref{e:sch:xi_X_T}),
+we notice that
+\be
+\left. \w{\xi} \right| _{\Sp} = 0 ,
+\ee
+which is nothing but the general property (\ref{e:sta:xi_S_zero}).
 
 
 \subsection{Carter-Penrose diagram}
