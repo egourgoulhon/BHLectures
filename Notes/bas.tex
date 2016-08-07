@@ -126,6 +126,41 @@ Amazingly, in the case of $\R^n$, there exists a unique smooth structure (the st
 \emph{exotic $\R^4$}\index{exotic!$\R^4$} \cite{Taube87}.
 \end{remark}
 
+\subsection{Manifolds with boundary} \label{s:bas:manif_boundary}
+
+A (topological) \defin{manifold with boundary}\index{manifold!with boundary} $\M$ is defined in the same way
+as a topological manifold, except that condition~3 in the definition given
+at the beginning of Sec.~\ref{s:bas:def_manif} is replaced by
+\begin{itemize}
+\item[3'.] Around each point of $\M$, there exists a neighbourhood which is
+homeomorphic either to an open subset of $\R^n$ or to an open subset\footnote{By \emph{open subset of $\mathbb{H}^n$}, it is meant a set $A\subset \mathbb{H}^n$ that is open with respect to the topology of $\mathbb{H}^n$; $A$ is then not necessarily open when considered
+as a subset of $\R^n$ (for instance $A=\mathbb{H}^n$).}
+the closed half-space
+\be
+    \mathbb{H}^n := \left\{ (x^1,\ldots,x^n) \in \R^n,\quad x^n \geq 0 \right\} .
+\ee
+\end{itemize}
+A point $p\in \M$ is said to be a \defin{boundary point} of $\M$ iff
+there exists a homeomorphism $\Phi: \mathcal{U} \rightarrow \Phi(\mathcal U) \subset \mathbb{H}^n$ such that $p\in\mathcal{U}$ and $\Phi(p)\in \partial \mathbb{H}^n$, where
+\be
+    \partial\mathbb{H}^n := \left\{ (x^1,\ldots,x^n) \in \R^n,\quad x^n = 0 \right\} .
+\ee
+The set of all boundary points of $\M$ is naturally called the
+\defin{boundary of}\index{boundary!of a manifold} $\M$ and is denoted by
+$\partial\M$.
+
+A \defin{smooth manifold with boundary}\index{smooth!manifold with boundary}\index{manifold!smooth -- with boundary} is a manifold with boundary endowed with a
+smooth atlas, with the understanding that a transition map
+\[
+    \Phi_i \circ \Phi_j^{-1} : \Phi_j(\mathcal{U}_i \cap \mathcal{U}_j)
+    \subset \mathbb{H}^n \longrightarrow \Phi_i(\mathcal{U}_i \cap \mathcal{U}_j)
+    \subset \mathbb{H}^n
+\]
+is said to be \emph{smooth} iff
+it can be extended around each point of its domain
+(including the points of $\partial\mathbb{H}^n$) into a smooth from an open subset
+of $\R^n$ to $\R^n$.
+
 \subsection{Vectors on a manifold} \label{s:bas:vectors}
 
 On a manifold, vectors are defined as tangent vectors to a curve.
