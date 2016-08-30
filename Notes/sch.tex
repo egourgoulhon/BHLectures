@@ -616,16 +616,6 @@ $r\rightarrow 2m$. In particular, their determinant is
 \ee
 which is never zero for $r\in(0,+\infty)$, except at the standard $\th=0$ and
 $\th=\pi$ singularities of spherical coordinates.
-The components of the inverse metric with respect to the ingoing
-Eddington-Finkelstein coordinates are
-\be \label{e:sch:inv_metric_EF}
-    g^{\alpha\beta} = \left( \begin{array}{cccc}
-    - \left( 1 + \frac{2m}{r} \right) &  \frac{2m}{r} & 0 & 0 \\[1ex]
-    \frac{2m}{r} & 1 - \frac{2m}{r} & 0 & 0 \\[1ex]
-    0 & 0 & \frac{1}{r^2} & 0 \\[1ex]
-    0 & 0 & 0 & \frac{1}{r^2\sin^2\th}
-    \end{array} \right) .
-\ee
 This proves that
 (\ref{e:sch:Schwarz_metric_EF}) defines a regular non-degenerate metric
 on the whole \defin{ingoing Eddington-Finkelstein domain}\index{ingoing!Eddington-Finkelstein!domain}
@@ -635,6 +625,18 @@ on the whole \defin{ingoing Eddington-Finkelstein domain}\index{ingoing!Eddingto
 with the coordinate $\ti$ spanning $\R$, the coordinate $r$ spanning
 $(0,+\infty)$ and the coordinates $(\th,\ph)$ forming a standard spherical
 chart of $\SS^2$.
+The components of the inverse metric with respect to the ingoing
+Eddington-Finkelstein coordinates are
+\be \label{e:sch:inv_metric_EF}
+    {\tilde g}^{\alpha\beta} = \left( \begin{array}{cccc}
+    - \left( 1 + \frac{2m}{r} \right) &  \frac{2m}{r} & 0 & 0 \\[1ex]
+    \frac{2m}{r} & 1 - \frac{2m}{r} & 0 & 0 \\[1ex]
+    0 & 0 & \frac{1}{r^2} & 0 \\[1ex]
+    0 & 0 & 0 & \frac{1}{r^2\sin^2\th}
+    \end{array} \right) .
+\ee
+In particular, the components ${\tilde g}^{\alpha\beta}$ are regular at $r=2m$.
+
 The IEF domain is an extension of the Schwarzschild-Droste domain
 introduced in Sec.~\ref{s:sch:SD_domain}:
 \be
@@ -793,7 +795,27 @@ formal definition of a black hole region that we have given in
 Sec.~\ref{s:glo:def_BH}. The first step is to define a conformal
 completion at null infinity $(\tilde{\M},\w{\tilde{g}})$ of the Schwarzschild spacetime
 $(\M, \w{g})$, where $\M = \M_{\rm IEF}$ (the ingoing Eddington-Finkelstein
-domain).
+domain). To this aim, let us start form the null ingoing Eddington-Finkelstein
+coordinates $(v,r,\th,\ph)$ on $\M$, in which the metric tensor $\w{g}$
+is expressed by (\ref{e:sch:Schwarz_metric_NIEF}).
+Performing the change of coordinates
+${\hat x}^\alpha=(v,r,\th,\ph)\mapsto {x'}^\alpha = (v,x,\th,\ph)$
+with
+\be
+    x = 1 - \frac{2m}{r} \iff r = \frac{2m}{1-x}, \qquad x\in (-\infty, 1),
+\ee
+we get
+\be
+        {g'}_{\mu\nu}\, \D {x'}^\mu \, \D {x'}^\nu =
+            -x \, \D v^2
+            +\frac{4 m}{(1-x)^2} \, \D v \, \D x
+        + \frac{4 m^2}{(1-x)^2}  \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\ee
+
+
+It is not easy to find a simple form for $\w{\tilde{g}}$ (i.e. for the
+conformal factor $\Omega$) on the whole $\M$ in terms of coordinates introduced
+so far.
 
 
 
