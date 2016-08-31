@@ -425,7 +425,7 @@ with $-\wpar_r$ oriented towards the future (cf. the ``tilted'' light cone
 in Fig.~\ref{f:sch:rad_null_geod}).
 \end{remark}
 
-\subsection{Eddington-Finkelstein coordinates}
+\subsection{Eddington-Finkelstein coordinates} \label{s:sch:EF_coord}
 
 The parameter $v$ introduced in Eq.~(\ref{e:sch:ingoing_null_geod}) can be
 seen as a label for the ingoing radial null geodesics: each of these curves is
@@ -792,19 +792,26 @@ $\M_{\rm II}$ is a black hole.
 
 It would be satisfactory though to check that $\M_{\rm II}$ fulfills the
 formal definition of a black hole region that we have given in
-Sec.~\ref{s:glo:def_BH}. The first step is to define a conformal
-completion at null infinity $(\tilde{\M},\w{\tilde{g}})$ of the Schwarzschild spacetime
-$(\M, \w{g})$, where $\M = \M_{\rm IEF}$ (the ingoing Eddington-Finkelstein
-domain). To this aim, let us start form the null ingoing Eddington-Finkelstein
-coordinates $(v,r,\th,\ph)$ on $\M$, in which the metric tensor $\w{g}$
-is expressed by (\ref{e:sch:Schwarz_metric_NIEF}).
-Performing the change of coordinates
-${\hat x}^\alpha=(v,r,\th,\ph)\mapsto {x'}^\alpha = (v,x,\th,\ph)$
-with
+Sec.~\ref{s:glo:def_BH}.
+The first step is to define a conformal
+completion at null infinity $(\tilde{\M},\w{\tilde{g}})$ of
+the Schwarzschild spacetime $(\M, \w{g})$, which we define
+as the largest set considered so far, i.e. the ingoing Eddington-Finkelstein
+domain:
 \be
+    \M := \M_{\rm IEF} = \M_{\rm I} \cup \Hor \cup \M_{\rm II} .
+\ee
+To this aim, let us start form the null ingoing Eddington-Finkelstein
+coordinates $({\hat x}^\alpha)=(v,r,\th,\ph)$ introduced in Sec.~\ref{s:sch:EF_coord}; they
+cover entirely $\M$ and the metric tensor $\w{g}$
+is expressed in terms of them by Eq.~(\ref{e:sch:Schwarz_metric_NIEF}).
+Performing the change of coordinates
+$({\hat x}^\alpha)=(v,r,\th,\ph)\mapsto ({x'}^\alpha) = (v,x,\th,\ph)$
+with
+\be \label{e:sch:x_r}
     x = 1 - \frac{2m}{r} \iff r = \frac{2m}{1-x}, \qquad x\in (-\infty, 1),
 \ee
-we get
+we deduce from (\ref{e:sch:Schwarz_metric_NIEF}) that
 \be
         {g'}_{\mu\nu}\, \D {x'}^\mu \, \D {x'}^\nu =
             -x \, \D v^2
@@ -812,7 +819,7 @@ we get
         + \frac{4 m^2}{(1-x)^2}  \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
 \ee
 Defining
-\be
+\be \label{e:sch:Omega_x_r}
     \Omega := 1-x = \frac{2m}{r} ,
 \ee
 we may rewrite the metric tensor as
@@ -820,20 +827,127 @@ we may rewrite the metric tensor as
     \w{g} = \Omega^{-2} \w{\tilde{g}} ,
 \ee
 with the conformal metric
-\be
+\be \label{e:sch:tilde_g_x_v}
     {\tilde{g}'}_{\mu\nu}\, \D {x'}^\mu \, \D {x'}^\nu =
             - x(1-x)^2 \, \D v^2
             +4 m \, \D v \, \D x
         + 4 m^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
 \ee
-If we identify $\M$, described by the coordinates $(v,x,\th,\ph)$,
-to the following subset of $\R^4$:
-\be
+Since $(v,x,\th,\ph)$ is a global coordinate system on $\M$
+(up to the trivial coordinate singularities of $(\th,\ph)$), we can
+identify $\M$ to the following open subset of $\R^2\times\SS^2$:
+\be \label{e:sch:M_subset_R2_S2}
     \M = \R \times (-\infty,1) \times \SS^2,
 \ee
+with $v$ spanning $\R$, $x$ spanning $(-\infty,1)$ and $(\th,\ph)$
+spanning $\SS^2$.
+Then we can extend $\M$ to the manifold with boundary (cf. Sec.~\ref{s:bas:manif_boundary})
+\be
+    \M' :=  \R \times (-\infty,1] \times \SS^2 .
+\ee
+Notice the change $(-\infty,1) \rightarrow (-\infty,1]$ with respect
+to (\ref{e:sch:M_subset_R2_S2}), which means
+that $x=1$ is an allowed value on $\M'$; it defines the boundary of
+$\M'$, $\scri'$ say.
+According to (\ref{e:sch:x_r}),
+$\scri'$ corresponds to $r\rightarrow +\infty$.
+We note that the conformal metric (\ref{e:sch:tilde_g_x_v}) can be extended
+to the boundary $\scri'$, yielding a regular metric. Indeed, the determinant of
+the metric components (\ref{e:sch:tilde_g_x_v}) is
+\[
+    \det\left({\tilde{g}'}_{\alpha\beta}\right) = - 64 m^6 \sin^2\th ,
+\]
+which does not vanish at $x=1$ (except at the trivial coordinate singularity
+$\th=0$ or $\th=\pi$), showing that $\tilde{\w{g}}$ is a non-degenerate
+symmetric bilinear form at $\scri'$ and hence a well defined metric on all
+$\M'$.
+Furthermore
+we have $\Omega=0$ at $\scri'$ [set $x=1$ in Eq.~(\ref{e:sch:Omega_x_r})], as well as
+\be
+    \dd \Omega = - \dd x \not = 0 .
+\ee
+So, $(\M',\w{\tilde{g}})$ obeys all the conditions
+listed in Sec.~\ref{s:glo:conf_compl} to form a \emph{conformal completion}
+of $(\M,\w{g})$.
+However, it is not a proper \emph{conformal completion at null infinity},
+as defined in Sec.~\ref{s:glo:conf_compl} and required in the black hole
+definition of Sec.~\ref{s:glo:def_BH}. Indeed any part of $\scri'$ is intersected by
+a past-directed null geodesic: a generic point of $\scri'$ has coordinates
+$(v,x,\th,\ph) = (v_0,1,\th_0,\ph_0)$ and is the past end point of the
+ingoing radial null geodesics defined by
+$(v,\th,\ph) = (v_0,\th_0,\ph_0)$.
+So $\scri'$ does not contain any future null infinity part ($\scri^+$). Actually,
+we shall see below that $\scri'$ is entirely a past null infinity ($\scri^-$).
+Therefore we shall extend $\M'$ to include some $\scri^+$ part.
+To do this, we shall construct $\scri^+$ as the set of endpoints of the
+\emph{outgoing} radial null geodesics in $\M_{\rm I}$. In terms of
+the null ingoing Eddington-Finkelstein coordinates $(v,r,\th,\ph)$,
+the equation of the
+outgoing radial null geodesics is obtained by combining (\ref{e:sch:outgoing_null_geod_EF}) and (\ref{e:sch:ingoing_null_geod_EF}):
+\be \label{e:sch:v_r_u}
+    v = 2 r + 4 m \ln \left| \frac{r}{2m} - 1 \right| + u ,
+\ee
+where $u\in\R$ is a constant parameter along a given geodesic.
+We notice that on $\M_{\rm I}$, we may use $(\check{x}^\alpha) = (u,r,\th,\ph)$ as a coordinate
+system, naturally called the \defin{null outgoing Eddington-Finkelstein coordinates}\index{Eddington-Finkelstein!coordinates}\index{null!outgoing Eddington-Finkelstein coordinates}. Since (\ref{e:sch:v_r_u}) implies
+\[
+    \D v = \D u + \frac{2}{1-2m/r}\, \D r,
+\]
+we easily deduce from (\ref{e:sch:Schwarz_metric_NIEF}) the metric components
+in these coordinates:
+\be \label{e:sch:g_u_r}
+        {\check{g}}_{\mu\nu}\, \D {\check{x}}^\mu \, \D {\check{x}}^\nu =
+            -\left( 1 - \frac{2 m}{r} \right)\, \D u^2
+            - 2 \, \D u \, \D r
+        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\ee
+\begin{remark}
+Contrary to $(v,r,\th,\ph)$, the coordinates $(u,r,\th,\ph)$ do not cover
+all $\M = \M_{\rm IEF}$, but only $\M_{\rm I}$. This is graphically
+evident from
+Fig.~\ref{f:sch:rad_null_geod_EF}, where the outgoing radial null geodesics,
+which are labelled by $u$, accumulate on $\Hor$ as $u\rightarrow +\infty$
+from the $\M_{\rm I}$ side.
+\end{remark}
 
-We notice that $\w{\tilde{g}}$ is a well defined metric at $x=1$:
-
+On $\M_{\rm I}$, let us perform the change of coordinates
+$(\check{x}^\alpha) = (u,r,\th,\ph) \rightarrow ({x''}^\alpha) = (u,x,\th,\ph)$,
+where $x$ is related to $r$ by the same formula as (\ref{e:sch:x_r}),
+except that on $\M_{\rm I}$, $x$'s range is $(0,1)$ only.
+We deduce from (\ref{e:sch:g_u_r}) and (\ref{e:sch:x_r})
+the expression of $\w{g}$ in terms of the coordinates $(u,x,\th,\ph)$:
+\be
+        {g''}_{\mu\nu}\, \D {x''}^\mu \, \D {x''}^\nu =
+            -x \, \D u^2
+            -\frac{4 m}{(1-x)^2} \, \D u \, \D x
+        + \frac{4 m^2}{(1-x)^2}  \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\ee
+Let us identify $\M_{\rm I}$ with the following open subset of
+$\R^2\times \SS^2$:
+\be
+    \M_{\rm I} = \R \times (0,1) \times \SS^2 ,
+\ee
+with $u$ spanning $\R$, $x$ spanning $(0,1)$ and $(\th,\ph)$
+spanning $\SS^2$. Similarly to what we did above for $\M$, we may then
+extend $\M_{\rm I}$ to the manifold with boundary
+\be
+    \M''_{\rm I} :=  \R \times (0,1] \times \SS^2 .
+\ee
+The boundary of $\M''_{\rm I}$, $\scri''$ say, lies at $x=1$. It shall not be
+confused with the boundary of $\M_{\rm I}$ as a submanifold of $\M'$, which is
+$\scri'$. The difference arises from the fact that $u$ diverges (to $-\infty$)
+when one approaches $\scri'$ in $\M'$, so that $u$ cannot be used as a
+coordinate on $\M'$. This is clear on the relation (\ref{e:sch:v_r_u})
+between $u$, $v$ and $r$, which, once re-expressed in terms of $x$, becomes
+\be
+    u = v - 4m\left[ \frac{1}{1-x} + \ln\left( \frac{x}{1-x} \right) \right].
+\ee
+For a fixed value of $v$ in $\M'$, this relation yields diverging values of
+$u$ at two places:
+\begin{itemize}
+\item $x\rightarrow 0^+$ (the horizon $\Hor$): $u\rightarrow +\infty$;
+\item $x\rightarrow 1^-$ (the boundary $\scri'$): $u\rightarrow -\infty$.
+\end{itemize}
 
 It is not easy to find a simple form for $\w{\tilde{g}}$ (i.e. for the
 conformal factor $\Omega$) on the whole $\tilde{\M}$ in terms of coordinates introduced
