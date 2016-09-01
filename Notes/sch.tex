@@ -790,6 +790,16 @@ Fig.~\ref{f:sch:rad_null_geod_EF}). Hence, with respect to the ``outside''
 world, represented by the asympotically flat region $\M_{\rm I}$,
 $\M_{\rm II}$ is a black hole.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{sch_conf_compl1.pdf}}
+\caption[]{\label{f:sch:conf_compl1} \footnotesize
+Manifold with boundary
+$\M' = \M_{\rm II}\cup\Hor\cup\M_{\rm I}\cup\scri'$, drawn in terms of
+the coordinates $x$ and (a compactified version of) $v$.
+The dashed lines are the ingoing radial null geodesics (as in Fig.~\ref{f:sch:rad_null_geod_EF}), the arrows marking the future orientation.}
+\end{figure}
+
+
 It would be satisfactory though to check that $\M_{\rm II}$ fulfills the
 formal definition of a black hole region that we have given in
 Sec.~\ref{s:glo:def_BH}.
@@ -851,6 +861,8 @@ that $x=1$ is an allowed value on $\M'$; it defines the boundary of
 $\M'$, $\scri'$ say.
 According to (\ref{e:sch:x_r}),
 $\scri'$ corresponds to $r\rightarrow +\infty$.
+A schematic view of the manifold $\M'$ is
+provided in Fig.~\ref{f:sch:conf_compl1}.
 We note that the conformal metric (\ref{e:sch:tilde_g_x_v}) can be extended
 to the boundary $\scri'$, yielding a regular metric. Indeed, the determinant of
 the metric components (\ref{e:sch:tilde_g_x_v}) is
@@ -872,9 +884,9 @@ of $(\M,\w{g})$.
 However, it is not a proper \emph{conformal completion at null infinity},
 as defined in Sec.~\ref{s:glo:conf_compl} and required in the black hole
 definition of Sec.~\ref{s:glo:def_BH}. Indeed any part of $\scri'$ is intersected by
-a past-directed null geodesic: a generic point of $\scri'$ has coordinates
+a past-directed null geodesic (cf. Fig.~\ref{f:sch:conf_compl1}): a generic point of $\scri'$ has coordinates
 $(v,x,\th,\ph) = (v_0,1,\th_0,\ph_0)$ and is the past end point of the
-ingoing radial null geodesics defined by
+ingoing radial null geodesic defined by
 $(v,\th,\ph) = (v_0,\th_0,\ph_0)$.
 So $\scri'$ does not contain any future null infinity part ($\scri^+$). Actually,
 we shall see below that $\scri'$ is entirely a past null infinity ($\scri^-$).
@@ -910,13 +922,23 @@ which are labelled by $u$, accumulate on $\Hor$ as $u\rightarrow +\infty$
 from the $\M_{\rm I}$ side.
 \end{remark}
 
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{sch_conf_compl2.pdf}}
+\caption[]{\label{f:sch:conf_compl2} \footnotesize
+Manifold with boundary
+$\M''_{\rm I} = \M_{\rm I}\cup\scri''$, drawn in terms of
+the coordinates $x$ and (a compactified version of) $u$.
+The green solid lines are the outgoing radial null geodesics (as in Fig.~\ref{f:sch:rad_null_geod_EF}), the arrows marking the future orientation.
+Note that $\Hor$, which is drawn on this figure, is not part of $\M''_{\rm I}$.}
+\end{figure}
+
 On $\M_{\rm I}$, let us perform the change of coordinates
 $(\check{x}^\alpha) = (u,r,\th,\ph) \rightarrow ({x''}^\alpha) = (u,x,\th,\ph)$,
 where $x$ is related to $r$ by the same formula as (\ref{e:sch:x_r}),
 except that on $\M_{\rm I}$, $x$'s range is $(0,1)$ only.
 We deduce from (\ref{e:sch:g_u_r}) and (\ref{e:sch:x_r})
 the expression of $\w{g}$ in terms of the coordinates $(u,x,\th,\ph)$:
-\be
+\be \label{e:sch:tilde_g_x_u}
         {g''}_{\mu\nu}\, \D {x''}^\mu \, \D {x''}^\nu =
             -x \, \D u^2
             -\frac{4 m}{(1-x)^2} \, \D u \, \D x
@@ -933,13 +955,14 @@ extend $\M_{\rm I}$ to the manifold with boundary
 \be
     \M''_{\rm I} :=  \R \times (0,1] \times \SS^2 .
 \ee
-The boundary of $\M''_{\rm I}$, $\scri''$ say, lies at $x=1$. It shall not be
+The boundary of $\M''_{\rm I}$, $\scri''$ say, lies at $x=1$
+(cf. Fig.~\ref{f:sch:conf_compl2}). It shall not be
 confused with the boundary of $\M_{\rm I}$ as a submanifold of $\M'$, which is
 $\scri'$. The difference arises from the fact that $u$ diverges (to $-\infty$)
 when one approaches $\scri'$ in $\M'$, so that $u$ cannot be used as a
 coordinate on $\M'$. This is clear on the relation (\ref{e:sch:v_r_u})
 between $u$, $v$ and $r$, which, once re-expressed in terms of $x$, becomes
-\be
+\be \label{e:sch:u_v_x}
     u = v - 4m\left[ \frac{1}{1-x} + \ln\left( \frac{x}{1-x} \right) \right].
 \ee
 For a fixed value of $v$ in $\M'$, this relation yields diverging values of
@@ -948,10 +971,121 @@ $u$ at two places:
 \item $x\rightarrow 0^+$ (the horizon $\Hor$): $u\rightarrow +\infty$;
 \item $x\rightarrow 1^-$ (the boundary $\scri'$): $u\rightarrow -\infty$.
 \end{itemize}
+Reciprocally, for a fixed value of $u$, relation~(\ref{e:sch:u_v_x})
+implies that $v$ diverges (to $+\infty$) when $x\rightarrow 1^-$, which shows that
+$\scri''$ is not included in $\M'$.
 
-It is not easy to find a simple form for $\w{\tilde{g}}$ (i.e. for the
-conformal factor $\Omega$) on the whole $\tilde{\M}$ in terms of coordinates introduced
-so far.
+The conformal completion of $(\M,\w{g})$ including both $\scri'$ (as $\scri^-$)
+and $\scri''$ (as $\scri^+$) is constructed as follows. Let
+\be
+    \tilde{\M} = \M' \cup \M''_{\rm I} .
+\ee
+We endow $\tilde{\M}$ with two coordinate charts:
+\be
+    \begin{array}{rccl}
+        \Phi_1: & \M' & \longrightarrow &   \R \times (-\infty,1] \times \SS^2 \\
+        & p & \longmapsto & (v,x,\th,\ph) \\[1ex]
+    \end{array}
+    \qquad\mbox{and}\qquad
+    \begin{array}{rccl}
+        \Phi_2: & \M''_{\rm I}  & \longrightarrow & \R \times (0,1] \times \SS^2 \\
+        & p & \longmapsto & (u,x,\th,\ph)
+    \end{array}
+\ee
+and define the intersection of the two chart codomains:
+\be
+   \M' \cap  \M''_{\rm I} = \{ p \in \M',\  x(p) \in (0,1) \}
+      = \{ p \in \M''_{\rm I},\  x(p) \in (0,1) \} ,
+\ee
+along with the transition map implementing (\ref{e:sch:u_v_x}):
+\be
+    \begin{array}{rccl}
+        \Phi_2 \circ \Phi_1^{-1}: & \R \times (0,1) \times \SS^2  & \longrightarrow & \R \times (0,1) \times \SS^2 \\
+        & (v,x,\th,\ph) & \longmapsto & \left(u = v - 4m\left[ \frac{1}{1-x} + \ln\left( \frac{x}{1-x} \right) \right],\; x,\; \th,\; \ph \right) ,
+    \end{array}
+\ee
+The above construction makes $\tilde{\M}$ a manifold with boundary
+(cf. Fig.~\ref{f:sch:conf_compl_final}), the boundary
+being
+\be
+    \scri = \scri^+ \cup \scri^- ,
+\ee
+with
+\be
+    \scri^+ := \{ p \in \M''_{\rm I}, \  x(p) = 1 \}
+     \qquad\mbox{and}\qquad
+    \scri^- := \{ p \in \M', \ x(p) = 1 \} .
+\ee
+
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{sch_conf_compl_final.pdf}}
+\caption[]{\label{f:sch:conf_compl_final} \footnotesize
+Schematic view of the manifold with boundary $\tilde{M}$, which defines
+a conformal completion at null infinity of Schwarzschild spacetime
+$(\M,\w{g})$.
+\emph{NB:} contrary to Figs.~\ref{f:sch:conf_compl1} and~\ref{f:sch:conf_compl2}, this figure is not drawn on some specific coordinate system.
+As in Figs.~\ref{f:sch:rad_null_geod_EF}, \ref{f:sch:conf_compl1} and~\ref{f:sch:conf_compl2},
+the green solid (resp. dashed) lines are the outgoing (resp. ingoing) radial null geodesics, the arrows marking the future orientation.
+}
+\end{figure}
+
+
+We then endow $\tilde{\M}$ with a Lorentzian metric $\w{\tilde{g}}$, whose
+expression is given by (\ref{e:sch:tilde_g_x_v}) on $\M'$ and
+by (\ref{e:sch:tilde_g_x_u}) on $\M''_{\rm I}$.
+By construction, $(\tilde{\M},\w{\tilde{g}})$ is then a conformal completion at null
+infinity of the Schwarzschild spacetime $(\M,\w{g})$, the conformal factor
+$\Omega$ being given by (\ref{e:sch:Omega_x_r}) in both
+charts $(\M',\Phi_1)$ and $(\M''_{\rm I},\Phi_2)$: $\Omega = 1 -x$.
+In particular, it is clear that no past-directed causal curve originating in
+$\M$ intersects $\scri^+$ and that no future-directed causal curve originating in
+$\M$ intersects $\scri^-$. We also check immediately that $\scri^+$ and $\scri^-$
+are null hypersurfaces with respect to the metric $\w{\tilde{g}}$:
+both hypersurfaces are defined by $x=1$, so that the induced metric on them,
+as
+deduced from (\ref{e:sch:tilde_g_x_v}) and
+(\ref{e:sch:tilde_g_x_u}), is
+\be
+    \left. \w{\tilde{g}} \right| _{\scri^\pm} = 4 m^2 \left(
+        \dd \th\otimes \dd \th + \sin^2\th \, \dd \ph \otimes \dd \ph \right) ,
+\ee
+which is clearly degenerate (along the $u$ direction for $\scri^+$
+and along the $v$ direction for $\scri^-$).
+
+As it is clear from Fig.~\ref{f:sch:conf_compl_final}, $\M_{\rm I}$
+is the interior of the causal past of $\scri^+$ within $\M$:
+\be
+    \M_{\rm I} = \mathrm{int}\left( J^-(\scri^+)\cap\M \right).
+\ee
+In view of the formal definition (\ref{e:glo:def_BH}), we conclude that
+the Schwarzschild spacetime $(\M=\M_{\rm IEF}, \w{g})$
+has a black region $\mathscr{B}$, the interior
+of which is $\M_{\rm II}$, the event horizon being nothing but the
+Schwarzschild horizon $\Hor$.
+
+\begin{remark}
+As stated at the beginning of this section, the null character of the boundary
+$\Hor$ between $\M_{\rm I}$ and $\M_{\rm II}$ and the fact that
+$\M_{\rm II}$ never intersect the asymptotically flat region $r\rightarrow +\infty$,
+was sufficient to claim that $\M_{\rm II}$ is what should be
+called a \emph{black hole}  of Schwarzschild spacetime.
+Therefore, one could view the above demonstration more as a ``sanity'' check
+of the formal definition of a black hole given in Sec.~\ref{s:glo:def_BH}.
+\end{remark}
+
+\begin{remark}
+The above construction of the conformal completion at null infinity
+$(\tilde{\M},\w{\tilde{g}})$ involves two coordinate charts,
+$(v,x,\th,\ph)$ and $(u,x,\th,\ph)$, with two different (albeit overlapping)
+domains.
+As will be discussed in Chap.~\ref{s:max},
+one may construct a conformal completion
+with a single chart, as in the Minkowski case, but its relation with
+the coordinate introduced so far is quite involved.
+In particular the standard compactification of Kruskal-Szekeres coordinates,
+which yield to the Carter-Penrose diagrams as discussed in Sec.~\ref{s:max:Carter-Penrose} below, do \emph{not} provide a
+conformal completion of Schwarzschild spacetime.
+\end{remark}
 
 
 
