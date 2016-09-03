@@ -10,10 +10,18 @@ After having discussed stationary black holes in Chap.~\ref{s:sta},
 we examine here the simplest of them: the Schwarzschild black hole.
 Let us recall that the prime importance of this object
 in general relativity stems from the no-hair theorem (Sec.~\ref{s:sta:no-hair}),
-which implies that any non-rotating black hole in an asymptotically flat
-4-dimensional spacetime must be a Schwarzschild black hole.
+which, in the non-rotating case, implies that any static black hole in an asymptotically flat 4-dimensional spacetime must be a Schwarzschild black hole.
 
-\section{The Schwarzschild-(anti-)de Sitter solution}
+In this chapter, we derive the Schwarzschild metric as a solution of the
+Einstein equation, possibly with a non-vanishing cosmological constant (Sec.~\ref{s:sch:Sch_sol_lamb}); we then explore it by means of the
+Eddington-Finkelstein coordinates, which have
+the advantage to be regular on the horizon (Sec.~\ref{s:sch:rad_geod_EF}).
+Finally, in Sec.~\ref{s:sch:BH}, we check formally that the Schwarzschild spacetime has a region that obeys the general definition of a black hole given in
+Sec.~\ref{s:glo:def_BH}. The maximal extension of the Schwarzschild
+spacetime and its bifurcate Killing horizon
+is discussed in the next chapter (Chap.~\ref{s:max}).
+
+\section{The Schwarzschild-(anti-)de Sitter solution} \label{s:sch:Sch_sol_lamb}
 
 \subsection{Vacuum Einstein equation with a cosmological constant}
 
@@ -226,7 +234,7 @@ the non-vanishing Christoffel symbols (\ref{e:sch:Christoffel_AB}) become
 The Schwarzschild metric (\ref{e:sch:Schwarz_metric_SD}) is actually
 the first non-trivial (i.e. different from Minkowski metric) solution
 of Einstein equation ever found. It has been obtained by the
-astrophysicist Karl Schwarzchild in the end of 1915 \cite{Schwa1916}, only a few weeks
+astrophysicist Karl Schwarzschild in the end of 1915 \cite{Schwa1916}, only a few weeks
 after the publication of the articles funding general relativity by
 Albert Einstein. It is also quite remarkable that
 Schwarzschild found the solution while serving in the German army at the Russian
@@ -251,7 +259,7 @@ Contrary to Schwarzschild, Droste performed the computation with
 a spherical coordinate system, $(t,\bar r, \th,\ph)$, yet distinct from
 the standard ``Schwarzschild-Droste'' coordinates $(t,r,\th,\ph)$ by the fact that the radial
 coordinate $\bar r$ was not chosen to be the areal radius, but instead a
-coodinate for which $g_{\bar r\bar r} = 1$. At the end, by a change of
+coordinate for which $g_{\bar r\bar r} = 1$. At the end, by a change of
 variable, Droste exhibited the line element (\ref{e:sch:Schwarz_metric_SD}).
 The generalization to a non-vanishing cosmological constant, i.e.
 Eq.~(\ref{e:sch:Kottler_metric}), has been obtained by
@@ -313,6 +321,7 @@ in Fig.~\ref{f:sch:rad_null_geod} are horizontal lines for $r<2m$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Radial null geodesics and Eddington-Finkelstein coordinates}
+\label{s:sch:rad_geod_EF}
 
 \subsection{Radial null geodesics}
 \label{s:sch:rad_null_geod}
@@ -400,7 +409,7 @@ Hence
     \frac{\D^2 x^\alpha}{\D r^2} = \left( - \frac{2m}{(r-2m)^2}, 0, 0, 0 \right) .
 \]
 Given the Christoffel symbols (\ref{e:sch:Christoffel_SD}), it is then a
-simple exercice to show that Eq.~(\ref{e:sch:geod_eqn}) is satisfied.
+simple exercise to show that Eq.~(\ref{e:sch:geod_eqn}) is satisfied.
 The same property holds for the family (\ref{e:sch:ingoing_null_geod}). Hence
 we conclude
 \begin{greybox}
@@ -416,7 +425,7 @@ is clearly apparent on this figure.
 
 
 \begin{remark}
-Despite their name, gedeosics of the outgoing family are actually
+Despite their name, geodesics of the outgoing family are actually
 \emph{ingoing} in the region $r<2m$, in the sense that
 $r$ is decreasing along them when moving towards the future. Indeed,
 as noticed in Sec.~\ref{s:sch:SD_domain},
@@ -432,7 +441,7 @@ seen as a label for the ingoing radial null geodesics: each of these curves is
 entirely identified by the data $(v,\th,\ph)$, which remains fixed along it.
 Let us promote $v$ to a spacetime coordinate, instead of $t$, i.e. let us
 consider the coordinate system $(v,r,\th,\ph)$ with the relation to
-Schwarzschild-Drostes coordinates $(t,r,\th,\ph)$ governed by Eq.~(\ref{e:sch:ingoing_null_geod}):
+Schwarzschild-Droste coordinates $(t,r,\th,\ph)$ governed by Eq.~(\ref{e:sch:ingoing_null_geod}):
 \be \label{e:sch:v_t_r}
      v = t + r + 2 m \ln \left| \frac{r}{2m} - 1 \right| .
 \ee
@@ -707,7 +716,7 @@ per se: it is called a
 Eddington-Finkelstein coordinates have been introduced by
 Arthur Eddington in 1924 \cite{Eddin1924}. More precisely, Eddington
 introduced the \emph{outgoing} version of these coordinates,
-while we have focussed above on the \emph{ingoing} version. Indeed
+while we have focused above on the \emph{ingoing} version. Indeed
 Eddington's Eq.~(2) is $\ti = t - 2m \ln(r-m)$, which mainly differs from
 our Eq.~(\ref{e:sch:ti_t_r}) by the minus sign in front of the logarithm\footnote{The other differences with (\ref{e:sch:ti_t_r}) are a constant additive term
 and a misprint in Eddington's formula: the term $\ln(r-m)$ should be replaced
@@ -739,7 +748,7 @@ Eddington \cite{Eddin1924} nor Finkelstein \cite{Finke58}
 considered this null version: they used coordinates $(\ti,r,\th,\ph)$, where
 $\ti$ is timelike and they exhibited (the outgoing version of) the
 metric components (\ref{e:sch:Schwarz_metric_EF}).
-Hence our terminology is more faithfull to history. Moreover, focussing on
+Hence our terminology is more faithful to history. Moreover, focusing on
 $(v,r,\th,\ph)$ may give the false impression to a novice reader that it is
 necessary to introduce some null coordinate to establish the regularity
 of the metric tensor at $r=2m$, while the timelike coordinate $\ti$
@@ -772,7 +781,7 @@ by combining (\ref{e:sch:outgoing_null_geod}) and (\ref{e:sch:ti_t_r}):
 where the constant $u\in \R$ labels the geodesic.
 The radial null geodesics are depicted in Fig.~\ref{f:sch:rad_null_geod_EF}
 in terms of the IEF coordinates. We note that, contrary to Fig.~\ref{f:sch:rad_null_geod},
-which was based on Schwarzschild-Drostes coordinates, in the region $r<2m$,
+which was based on Schwarzschild-Droste coordinates, in the region $r<2m$,
 the future light cones point upwards. This reflects the fact that, in the IEF system,
 $\ti$ is a timelike coordinate and $r$ a spacelike one.
 
@@ -787,7 +796,7 @@ Since $\Hor$ is the boundary of $\M_{\rm II}$, we conclude that no particle nor
 electromagnetic signal may emerge from $\M_{\rm II}$
 (this is pretty clear by looking to null geodesics on
 Fig.~\ref{f:sch:rad_null_geod_EF}). Hence, with respect to the ``outside''
-world, represented by the asympotically flat region $\M_{\rm I}$,
+world, represented by the asymptotically flat region $\M_{\rm I}$,
 $\M_{\rm II}$ is a black hole.
 
 \begin{figure}
@@ -805,13 +814,14 @@ formal definition of a black hole region that we have given in
 Sec.~\ref{s:glo:def_BH}.
 The first step is to define a conformal
 completion at null infinity $(\tilde{\M},\w{\tilde{g}})$ of
-the Schwarzschild spacetime $(\M, \w{g})$, which we define
-as the largest set considered so far, i.e. the ingoing Eddington-Finkelstein
+the Schwarzschild spacetime $(\M, \w{g})$,
+the latter being defined by the largest manifold
+considered so far, i.e. the ingoing Eddington-Finkelstein
 domain:
 \be
     \M := \M_{\rm IEF} = \M_{\rm I} \cup \Hor \cup \M_{\rm II} .
 \ee
-To this aim, let us start form the null ingoing Eddington-Finkelstein
+To this aim, let us start from the null ingoing Eddington-Finkelstein
 coordinates $({\hat x}^\alpha)=(v,r,\th,\ph)$ introduced in Sec.~\ref{s:sch:EF_coord}; they
 cover entirely $\M$ and the metric tensor $\w{g}$
 is expressed in terms of them by Eq.~(\ref{e:sch:Schwarz_metric_NIEF}).
@@ -836,7 +846,7 @@ we may rewrite the metric tensor as
 \be
     \w{g} = \Omega^{-2} \w{\tilde{g}} ,
 \ee
-with the conformal metric
+with the $\w{\tilde{g}}$ given by
 \be \label{e:sch:tilde_g_x_v}
     {\tilde{g}'}_{\mu\nu}\, \D {x'}^\mu \, \D {x'}^\nu =
             - x(1-x)^2 \, \D v^2
@@ -851,17 +861,17 @@ identify $\M$ to the following open subset of $\R^2\times\SS^2$:
 \ee
 with $v$ spanning $\R$, $x$ spanning $(-\infty,1)$ and $(\th,\ph)$
 spanning $\SS^2$.
-Then we can extend $\M$ to the manifold with boundary (cf. Sec.~\ref{s:bas:manif_boundary})
+We can then extend $\M$ to the manifold with boundary\footnote{Cf. Sec.~\ref{s:bas:manif_boundary} for the definition of a \emph{manifold with boundary}.}
 \be
     \M' :=  \R \times (-\infty,1] \times \SS^2 .
 \ee
 Notice the change $(-\infty,1) \rightarrow (-\infty,1]$ with respect
 to (\ref{e:sch:M_subset_R2_S2}), which means
-that $x=1$ is an allowed value on $\M'$; it defines the boundary of
+that $x=1$ is an allowed value on $\M'$; it actually defines the boundary of
 $\M'$, $\scri'$ say.
 According to (\ref{e:sch:x_r}),
 $\scri'$ corresponds to $r\rightarrow +\infty$.
-A schematic view of the manifold $\M'$ is
+A view of the manifold $\M'$ is
 provided in Fig.~\ref{f:sch:conf_compl1}.
 We note that the conformal metric (\ref{e:sch:tilde_g_x_v}) can be extended
 to the boundary $\scri'$, yielding a regular metric. Indeed, the determinant of
@@ -874,12 +884,12 @@ $\th=0$ or $\th=\pi$), showing that $\tilde{\w{g}}$ is a non-degenerate
 symmetric bilinear form at $\scri'$ and hence a well defined metric on all
 $\M'$.
 Furthermore
-we have $\Omega=0$ at $\scri'$ [set $x=1$ in Eq.~(\ref{e:sch:Omega_x_r})], as well as
+we have $\Omega >0$ on $\M$ and $\Omega=0$ at $\scri'$ [set $x=1$ in Eq.~(\ref{e:sch:Omega_x_r})], as well as
 \be
     \dd \Omega = - \dd x \not = 0 .
 \ee
-So, $(\M',\w{\tilde{g}})$ obeys all the conditions
-listed in Sec.~\ref{s:glo:conf_compl} to form a \emph{conformal completion}
+Hence $(\M',\w{\tilde{g}})$ obeys all the conditions
+listed in Sec.~\ref{s:glo:conf_compl} to be a \emph{conformal completion}
 of $(\M,\w{g})$.
 However, it is not a proper \emph{conformal completion at null infinity},
 as defined in Sec.~\ref{s:glo:conf_compl} and required in the black hole
@@ -891,11 +901,10 @@ $(v,\th,\ph) = (v_0,\th_0,\ph_0)$.
 So $\scri'$ does not contain any future null infinity part ($\scri^+$). Actually,
 we shall see below that $\scri'$ is entirely a past null infinity ($\scri^-$).
 Therefore we shall extend $\M'$ to include some $\scri^+$ part.
-To do this, we shall construct $\scri^+$ as the set of endpoints of the
+To achieve this, we shall construct $\scri^+$ as the set of endpoints of the
 \emph{outgoing} radial null geodesics in $\M_{\rm I}$. In terms of
 the null ingoing Eddington-Finkelstein coordinates $(v,r,\th,\ph)$,
-the equation of the
-outgoing radial null geodesics is obtained by combining (\ref{e:sch:outgoing_null_geod_EF}) and (\ref{e:sch:ingoing_null_geod_EF}):
+the equation of these geodesics is obtained by combining (\ref{e:sch:outgoing_null_geod_EF}) and (\ref{e:sch:ingoing_null_geod_EF}):
 \be \label{e:sch:v_r_u}
     v = 2 r + 4 m \ln \left| \frac{r}{2m} - 1 \right| + u ,
 \ee
@@ -938,7 +947,7 @@ where $x$ is related to $r$ by the same formula as (\ref{e:sch:x_r}),
 except that on $\M_{\rm I}$, $x$'s range is $(0,1)$ only.
 We deduce from (\ref{e:sch:g_u_r}) and (\ref{e:sch:x_r})
 the expression of $\w{g}$ in terms of the coordinates $(u,x,\th,\ph)$:
-\be \label{e:sch:tilde_g_x_u}
+\be
         {g''}_{\mu\nu}\, \D {x''}^\mu \, \D {x''}^\nu =
             -x \, \D u^2
             -\frac{4 m}{(1-x)^2} \, \D u \, \D x
@@ -965,7 +974,7 @@ between $u$, $v$ and $r$, which, once re-expressed in terms of $x$, becomes
 \be \label{e:sch:u_v_x}
     u = v - 4m\left[ \frac{1}{1-x} + \ln\left( \frac{x}{1-x} \right) \right].
 \ee
-For a fixed value of $v$ in $\M'$, this relation yields diverging values of
+For a fixed value of $v$ in $\M'$, this relation yields indeed diverging values of
 $u$ at two places:
 \begin{itemize}
 \item $x\rightarrow 0^+$ (the horizon $\Hor$): $u\rightarrow +\infty$;
@@ -974,6 +983,19 @@ $u$ at two places:
 Reciprocally, for a fixed value of $u$, relation~(\ref{e:sch:u_v_x})
 implies that $v$ diverges (to $+\infty$) when $x\rightarrow 1^-$, which shows that
 $\scri''$ is not included in $\M'$.
+
+The conformal metric $\w{\tilde{g}}$ on $\M''_{\rm I}$ is given by
+\be \label{e:sch:tilde_g_x_u}
+    {\tilde{g}''}_{\mu\nu}\, \D {x''}^\mu \, \D {x''}^\nu =
+            - x(1-x)^2 \, \D u^2
+            - 4 m \, \D u \, \D x
+        + 4 m^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\ee
+We notice that it is regular and non-degenerate in all $\M''_{\rm I}$,
+including on $\scri''$ ($x=1$), and that on the submanifold $\M_{\rm I}$, it is related to the physical metric $\w{g}$ by $\w{\tilde{g}} = \Omega^2 \w{g}$, with the
+scalar field $\Omega$ taking the same expression in terms of $x$ as
+that introduced in Eq.~(\ref{e:sch:Omega_x_r}): $\Omega=1-x$.
+
 
 The conformal completion of $(\M,\w{g})$ including both $\scri'$ (as $\scri^-$)
 and $\scri''$ (as $\scri^+$) is constructed as follows. Let
@@ -1020,10 +1042,10 @@ with
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{sch_conf_compl_final.pdf}}
 \caption[]{\label{f:sch:conf_compl_final} \footnotesize
-Schematic view of the manifold with boundary $\tilde{M}$, which defines
+Schematic view of the manifold with boundary $\tilde{\M}$, which defines
 a conformal completion at null infinity of Schwarzschild spacetime
 $(\M,\w{g})$.
-\emph{NB:} contrary to Figs.~\ref{f:sch:conf_compl1} and~\ref{f:sch:conf_compl2}, this figure is not drawn on some specific coordinate system.
+\textsl{NB:} contrary to Figs.~\ref{f:sch:conf_compl1} and~\ref{f:sch:conf_compl2}, this figure is not drawn on some specific coordinate system.
 As in Figs.~\ref{f:sch:rad_null_geod_EF}, \ref{f:sch:conf_compl1} and~\ref{f:sch:conf_compl2},
 the green solid (resp. dashed) lines are the outgoing (resp. ingoing) radial null geodesics, the arrows marking the future orientation.
 }
@@ -1058,32 +1080,36 @@ is the interior of the causal past of $\scri^+$ within $\M$:
     \M_{\rm I} = \mathrm{int}\left( J^-(\scri^+)\cap\M \right).
 \ee
 In view of the formal definition (\ref{e:glo:def_BH}), we conclude that
-the Schwarzschild spacetime $(\M=\M_{\rm IEF}, \w{g})$
-has a black region $\mathscr{B}$, the interior
-of which is $\M_{\rm II}$, the event horizon being nothing but the
-Schwarzschild horizon $\Hor$.
+\begin{greybox}
+The Schwarzschild spacetime $(\M=\M_{\rm IEF}, \w{g})$
+has a black hole region $\mathscr{B}$, the interior
+of which is $\M_{\rm II}$; the event horizon is nothing but the
+Schwarzschild horizon $\Hor$ discussed in Sec.~\ref{s:sch:Schwarz_hor}.
+\end{greybox}
 
 \begin{remark}
 As stated at the beginning of this section, the null character of the boundary
 $\Hor$ between $\M_{\rm I}$ and $\M_{\rm II}$ and the fact that
 $\M_{\rm II}$ never intersect the asymptotically flat region $r\rightarrow +\infty$,
-was sufficient to claim that $\M_{\rm II}$ is what should be
-called a \emph{black hole}  of Schwarzschild spacetime.
-Therefore, one could view the above demonstration more as a ``sanity'' check
-of the formal definition of a black hole given in Sec.~\ref{s:glo:def_BH}.
+was sufficient to claim that $\M_{\rm II}$ represents what by any means should be
+called a \emph{black hole region}.
+Therefore, we can view the above demonstration more as a ``sanity check''
+of the formal definition of a black hole given in Sec.~\ref{s:glo:def_BH}:
+this definition would not have been acceptable if it would not
+apply to the Schwarzschild spacetime.
 \end{remark}
 
 \begin{remark}
 The above construction of the conformal completion at null infinity
 $(\tilde{\M},\w{\tilde{g}})$ involves two coordinate charts,
-$(v,x,\th,\ph)$ and $(u,x,\th,\ph)$, with two different (albeit overlapping)
-domains.
+$(v,x,\th,\ph)$ and $(u,x,\th,\ph)$, with two different
+domains, $\M'$ and $\M''_{\rm I}$.
 As will be discussed in Chap.~\ref{s:max},
 one may construct a conformal completion
 with a single chart, as in the Minkowski case, but its relation with
-the coordinate introduced so far is quite involved.
+the coordinates introduced so far is quite involved.
 In particular the standard compactification of Kruskal-Szekeres coordinates,
-which yield to the Carter-Penrose diagrams as discussed in Sec.~\ref{s:max:Carter-Penrose} below, do \emph{not} provide a
+which yields to the Carter-Penrose diagram as discussed in Sec.~\ref{s:max:Carter-Penrose} below, does \emph{not} provide any
 conformal completion of Schwarzschild spacetime.
 \end{remark}
 
