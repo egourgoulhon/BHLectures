@@ -173,6 +173,13 @@ dashed curves have $r=\mathrm{const}$ (spaced apart by $\delta r = m/2$).}
 \end{figure}
 
 
+\begin{figure}
+\centerline{\includegraphics[height=0.37\textheight]{max_X2mT2.pdf}}
+\caption[]{\label{f:max:X2mT2} \footnotesize
+Function $F:\; x\mapsto \mathrm{e}^{x}(x-1)$, giving
+$X^2-T^2 = F(r/2m)$, cf. Eq.~(\ref{e:sch:X2mT2}).}
+\end{figure}
+
 We have $\D U \, \D V = (\D T - \D X) (\D T + \D X)  = \D T^2 - \D X^2$,
 so that the metric components with respect to the Kruskal-Szekeres coordinates
 are easily deduced from the line element (\ref{e:sch:metric_UV}):
@@ -183,49 +190,73 @@ are easily deduced from the line element (\ref{e:sch:metric_UV}):
     \left( - \D T^2 + \D X^2 \right)
      +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
 \ee
-Here $r$ is to be considered as the function of $(T,X)$ that is defined
-implicitely by
+Here $r$ is to be considered as a function of $(T,X)$, which is implicitely defined
+by
 \be \label{e:sch:X2mT2}
    \encadre{ \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) = X^2 - T^2 } .
 \ee
 This relation is a direct consequence of (\ref{e:sch:r_UV}) and (\ref{e:sch:def_T_X}).
 We may rewrite it as
 \be
-    \mathrm{e}\, f\left( \frac{r}{2m} - 1 \right) = X^2 - T^2,
+    F\left( \frac{r}{2m} \right) = X^2 - T^2,
 \ee
-where $f$ is the function defined by
+where $F$ is the function defined by
 \be \label{e:sch:def_F}
     \begin{array}{cccc}
-    f: & (-1,+\infty) & \longrightarrow & (-1/\mathrm{e},+\infty) \\
-        & x & \longmapsto & x \mathrm{e}^{x} .
+    F: & (0,+\infty) & \longrightarrow & (-1,+\infty) \\
+        & x & \longmapsto & \mathrm{e}^{x}(x-1) .
     \end{array}
 \ee
-The graph of $f$  is shown in Fig.~\ref{f:max:xex}. We see clearly that it is a bijective map.
+The graph of $F$  is shown in Fig.~\ref{f:max:X2mT2}. We see clearly that $F$ is a bijective map.
 In particular, $F$ induces a bijection between $(1,+\infty)$ (the range of $r/2m$ on $\M_{\rm I}$)
-and $(0,+\infty)$ (the range of $X^2-T^2$ on $\M_{\rm I}$, according to (\ref{e:sch:X_T_range_I})).
-Hence, in the line element (\ref{e:sch:metric_KS}), we may write
-$r = 2m F^{-1}(X^2-T^2)$. Noticing that
+and $(0,+\infty)$ (the range of $X^2-T^2$ on $\M_{\rm I}$, according to (\ref{e:sch:X_T_range_I})). The inverse of $F$ can be expressed in terms of
+the \defin{Lambert function}\index{Lambert function} $W_0$, which is defined as
+the inverse of $x\mapsto x \mathrm{e}^x$:
+\be \label{e:sch:def_W0}
+    \begin{array}{cccl}
+    W_0: & (-1/\mathrm{e},+\infty) & \longrightarrow & (-1,+\infty) \\
+        & x & \longmapsto & y \mbox{\ such that\ } y \mathrm{e}^{y} = x .
+    \end{array}
+\ee
+Noticing that
+\[
+    F(x) = \mathrm{e}^x(x-1) = \mathrm{e}\times (x-1) \mathrm{e}^{x-1}
+\]
+we may write
+\be
+    F^{-1} = \tilde{W}_0 ,
+\ee
+where $\tilde{W}_0$ is the rescaled Lambert function defined by
+\be \label{e:max:def_tilde_W0}
+    \encadre{ \tilde{W}_0(x) := W_0\left(\frac{x}{\mathrm{e}}\right) + 1 }.
+\ee
+Note that $\tilde{W}_0$ is a bijection $(-1,+\infty) \to (0, +\infty)$. Its
+graph is shown in Fig.~\ref{f:max:lambert_rescaled}.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{max_lambert_rescaled.pdf}}
+\caption[]{\label{f:max:lambert_rescaled} \footnotesize
+Rescaled lambert function $\tilde{W}_0$, defined by (\ref{e:max:def_tilde_W0})
+and obeying
+$\mathrm{e}^{\tilde{W}_0(x)}(\tilde{W}_0(x)-1) = x$.}
+\end{figure}
+
+Using $F^{-1} = \tilde{W}_0$, we may invert the relation (\ref{e:sch:X2mT2})
+to $r = 2m \tilde{W}_0(X^2-T^2)$. Noticing that
 $2m/r \, \mathrm{e}^{-r/2m} = (X^2-T^2 + \mathrm{e}^{r/2m})^{-1}$
 [cf. Eq.~(\ref{e:sch:X2mT2})], we may eliminate $r$ from the expression
+(\ref{e:sch:metric_KS})
 of the metric components in Kruskal-Szekeres coordinates:
 \be \label{e:sch:metric_KS_TX_partial}
    \encadre{
     \begin{array}{lcll}
     g_{\mu\nu} \, \D X^\mu \, \D X^\nu & = & 4m^2 \bigg\{ & \displaystyle
-    \frac{4}{X^2-T^2 + \mathrm{e}^{F^{-1}(X^2-T^2)} }
+    \frac{4}{X^2-T^2 + \mathrm{e}^{\tilde{W}_0(X^2-T^2)} }
     \left( - \D T^2 + \D X^2 \right) \\[2ex]
-    & & & \displaystyle + \,   (F^{-1}(X^2-T^2))^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
+    & & & \displaystyle + \,   \tilde{W}_0(X^2-T^2)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
     \bigg\}.
     \end{array} }
 \ee
-
-
-\begin{figure}
-\centerline{\includegraphics[height=0.37\textheight]{max_xex.pdf}}
-\caption[]{\label{f:max:xex} \footnotesize
-Function $f(x) = x \mathrm{e}^{x}$, giving
-$X^2-T^2 = \mathrm{e} \, f(r/2m-1)$, cf. Eq.~(\ref{e:sch:X2mT2}).}
-\end{figure}
 
 
 The relation between the Kruskal-Szekeres coordinates and the
@@ -261,7 +292,7 @@ We may summarize the above relations as follows:
     \iff
     \encadre{ \left\{\begin{array}{l}
     t = 2 m \,  \ln \left( \frac{X+T}{X-T} \right) \\[2ex]
-    r = 2 m F^{-1}(X^2 - T^2) .
+    r = 2 m \tilde{W}_0(X^2 - T^2) .
         \end{array}\right. }
 \ee
 Note that we have used the identity $\mathrm{artanh}\, x = 1/2 \ln\left[(1+x)/(1-x)\right]$.
@@ -334,8 +365,8 @@ the Kruskal-Szekeres ones on $\M_{\rm IEF}$:
     \end{array}\right. }
     \iff
     \encadre{\left\{\begin{array}{l}
-     \ti =  2 m \left[ 2 \ln (T+X) - F^{-1}(X^2 - T^2) \right] \\[1ex]
-    r = 2 m F^{-1}(X^2 - T^2)
+     \ti =  2 m \left[ 2 \ln (T+X) - \tilde{W}_0(X^2 - T^2) \right] \\[1ex]
+    r = 2 m \tilde{W}_0(X^2 - T^2)
     \end{array}\right. }
 \ee
 The various subsets of $\M_{\rm IEF}$ correspond then to the following
@@ -387,7 +418,7 @@ We obtain then
     \iff
     \encadre{ \left\{\begin{array}{l}
     t = 2 m \,  \ln \left( \frac{T+X}{T-X} \right) \\[2ex]
-    r = 2 m F^{-1}(X^2 - T^2) .
+    r = 2 m \tilde{W}_0(X^2 - T^2) .
         \end{array}\right. }
 \ee
 This is to be compared with (\ref{e:sch:KS_SD_I}).
@@ -408,7 +439,7 @@ dashed blue curves have $r=\mathrm{const}$ (spaced apart by $\delta r = m/2$).}
 As discussed in Sec.~\ref{s:sch:singularities}, one approaches a
 curvature singularity as $r\rightarrow 0$. According to (\ref{e:sch:KS_IEF})
 or (\ref{e:sch:KS_SD_II}),
-this corresponds to $X^2-T^2 \rightarrow -1$ (see also Fig.~\ref{f:sch:X2mT2}), with
+this corresponds to $X^2-T^2 \rightarrow -1$ (see also Fig.~\ref{f:max:X2mT2}), with
 $T > 0$. Hence, in the $(T,X)$ plane, the curvature singularity is located
 at $T = \sqrt{X^2 + 1}$, i.e. at the upper branch of the hyperbola
 $X^2 - T^2 = -1$.
@@ -539,13 +570,15 @@ The metric $\w{g}$ on the whole $\M$ is then defined by (\ref{e:sch:metric_KS_TX
    \encadre{
     \begin{array}{lcll}
     g_{\mu\nu} \, \D X^\mu \, \D X^\nu & = & 4m^2 \bigg\{ & \displaystyle
-    \frac{4}{X^2-T^2 + \mathrm{e}^{F^{-1}(X^2-T^2)} }
+    \frac{4}{X^2-T^2 + \mathrm{e}^{\tilde{W}_0(X^2-T^2)} }
     \left( - \D T^2 + \D X^2 \right) \\[2ex]
-    & & & \displaystyle + \,   (F^{-1}(X^2-T^2))^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
+    & & & \displaystyle + \,   \tilde{W}_0(X^2-T^2)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
     \bigg\} ,
     \end{array} }
 \ee
-where $F^{-1}$ is the inverse of the function $F(x) = \mathrm{e}^{x} (x-1)$,
+where $\tilde{W}_0$ is the rescaled Lambert function defined by
+(\ref{e:max:def_tilde_W0}) (cf. Fig.~\ref{f:max:lambert_rescaled}); it is the inverse of the function
+$x\mapsto \mathrm{e}^{x} (x-1)$,
 which establishes a bijection from $(0,+\infty)$ to $(-1,+\infty)$.
 
 \begin{figure}
@@ -588,7 +621,7 @@ and $X$ to $-X$:
     \iff
     \encadre{ \left\{\begin{array}{l}
     t' = 2 m \,  \ln \left( \frac{X+T}{X-T} \right) \\[2ex]
-    r' = 2 m F^{-1}(X^2 - T^2) .
+    r' = 2 m \tilde{W}_0(X^2 - T^2) .
         \end{array}\right. }
 \ee
 \be \label{e:sch:KS_SD_IV}
@@ -600,7 +633,7 @@ and $X$ to $-X$:
     \iff
     \encadre{ \left\{\begin{array}{l}
     t' = 2 m \,  \ln \left( \frac{T+X}{T-X} \right) \\[2ex]
-    r' = 2 m F^{-1}(X^2 - T^2) .
+    r' = 2 m \tilde{W}_0(X^2 - T^2) .
         \end{array}\right. }
 \ee
 
@@ -673,7 +706,9 @@ is $\hat{\Hor} = \Hor_1 \cup \Hor_2 $, where
 \item $\Hor_1$ is the null hypersurface $T=X$;
 \item $\Hor_2$ is the null hypersurface $T=-X$.
 \end{itemize}
-$\Hor$ is then the part of $\Hor_1$ defined by $X>0$.
+The bifurcate Killing horizon $\hat{\Hor}$ is depicted in black in
+Fig.~\ref{f:sch:xi_extend}.
+The Schwarzschild horizon $\Hor$ is the part of $\Hor_1$ defined by $X>0$.
 The bifurcation surface is $\Sp = \Hor_1 \cap \Hor_2$, which
 is the 2-surface defined by $T=0$ and $X=0$. It is a 2-sphere, since
 any fixed value of the pair $(T,X)$ defines a 2-sphere, according to the
@@ -685,21 +720,23 @@ The areal radius of $\Sp$ is found by setting
 $\D T = 0$, $\D X = 0$ and $(T,X)=(0,0)$ in the line element
 (\ref{e:sch:metric_KS_TX}):
 \[
-    r_{\Sp}^2 = 4m^2 (F^{-1}(0))^2.
+    r_{\Sp}^2 = 4m^2 \tilde{W}_0(0)^2.
 \]
-Since $F^{-1}(0)=1$, we get
+Since $\tilde{W}_0(0)=1$ (cf. Fig.~\ref{f:max:lambert_rescaled}), we get
 \be
     \encadre{r_{\Sp} = 2 m } .
 \ee
 Moreover, setting $(T,X)=(0,0)$ in Eq.~(\ref{e:sch:xi_X_T}),
 we recover the general property (\ref{e:sta:xi_S_zero}): the Killing
-vector field vanishes identically at the bifurcation sphere:
+vector field vanishes at the bifurcation sphere:
 \be
 \left. \w{\xi} \right| _{\Sp} = 0 .
 \ee
 
 
 \section{Carter-Penrose diagram} \label{s:max:Carter-Penrose}
+
+\subsection{Construction}
 
 To have a compact representation of the maximal extension of Schwarzschild spacetime,
 let us introduce ``finite-range'' coordinates $(\tilde{T},\tilde{X})$, which
@@ -737,6 +774,8 @@ is the same as in Fig.~\ref{f:sch:kruskal_diag}.
 As the latter, this figure has been produced with
 SageManifolds (cf. Appendix~\ref{s:sam}).}
 \end{figure}
+
+\subsection{Discussion: Carter-Penrose diagram and conformal completion}
 
 The Carter-Penrose diagram in Fig.~\ref{f:sch:sch_carter-penrose} can be compared with the conformal diagram
 of Minkowski spacetime in Fig.~\ref{f:glo:conf_diag_Mink}.
