@@ -744,7 +744,7 @@ are related to $(T,X)$ in exactly the same way as the coordinates $(\tau,\chi)$
 are related to $(t,r)$ in the construction of the conformal completion of
 Minkowski spacetime in
 Sec.~\ref{s:glo:conf_Mink} [cf. Eq.~(\ref{e:glo:tau_chi_t_r})]
-\be
+\be \label{e:max:tTtX}
     \left\{ \begin{array}{l}
     \tilde{T} = \arctan(T+X) + \arctan(T-X) \\
     \tilde{X} = \arctan(T+X) - \arctan(T-X)
@@ -756,13 +756,12 @@ Sec.~\ref{s:glo:conf_Mink} [cf. Eq.~(\ref{e:glo:tau_chi_t_r})]
     \end{array} \right.
 \ee
 The range of $(\tilde{T},\tilde{X})$ is constrained by
-\be
+\be \label{e:max:range_tTtX}
 \tilde{X}\in(-\pi,\pi) \qquad\mbox{and}\qquad -\pi+|\tilde{X}| < \tilde{T} < \pi-|\tilde{X}| .
 \ee
 The maximal extension of Schwarzschild spacetime is depicted with respect
 to the coordinates $(\tilde{T},\tilde{X})$ in Fig.~\ref{f:sch:sch_carter-penrose}.
 Such a plot is called a \defin{Carter-Penrose diagram}\index{Carter-Penrose diagram}.
-It is also called a \defin{conformal diagram}\index{conformal!diagram}.
 As the Kruskal diagram (Fig.~\ref{f:sch:kruskal_diag}), it has the property
 to display the null geodesics as straight lines with slope $\pm 45^\circ$.
 
@@ -779,6 +778,180 @@ SageManifolds (cf. Appendix~\ref{s:sam}).}
 
 The Carter-Penrose diagram in Fig.~\ref{f:sch:sch_carter-penrose} can be compared with the conformal diagram
 of Minkowski spacetime in Fig.~\ref{f:glo:conf_diag_Mink}.
+The right asymptotics of the Carter-Penrose diagram
+(i.e. the part $\tilde{X}>\pi/2$) looks very much the same than that of
+Minkowski conformal diagram.
+However, there is a difference: the coordinates $(\tilde{T},\tilde{X})$
+employed in the construction of the diagram of
+Fig.~\ref{f:sch:sch_carter-penrose} are not related to a regular conformal
+completion, as defined in Sec.~\ref{s:glo:conf_compl}. To see this, let us
+introduce finite-range null coordinates $(\tilde{U},\tilde{V})$ by
+\be \label{e:max:tUtV}
+    \left\{\begin{array}{l}
+    \tilde{U} := \tilde{T} - \tilde{X}\\
+    \tilde{V} := \tilde{T} + \tilde{X}.
+    \end{array}\right.
+\ee
+The range of $(\tilde{U},\tilde{V})$ is deduced from (\ref{e:max:range_tTtX}):
+\be
+    -\pi < \tilde{U} < \pi, \quad
+    -\pi < \tilde{V} < \pi, \quad
+    -\pi < \tilde{U}+\tilde{V} < \pi.
+\ee
+
+The advantage of coordinates $(\tilde{U},\tilde{V})$ over
+$(\tilde{T},\tilde{X})$ is that they are better adapted to the
+spacetime asymptotics.
+Indeed by combining (\ref{e:max:tUtV}) and (\ref{e:max:tTtX}), we have
+\[
+    \left\{\begin{array}{l}
+    \tilde{U} = 2 \arctan(T-X)\\
+    \tilde{V} = 2 \arctan(T+X).
+    \end{array}\right.
+\]
+Combining further with (\ref{e:sch:def_T_X}), we get
+\be \label{e:max:tUtV_UV}
+    \left\{\begin{array}{l}
+    \tilde{U} = 2 \arctan U\\
+    \tilde{V} = 2 \arctan V
+    \end{array}\right.
+    \iff
+    \left\{\begin{array}{l}
+    U = \tan(\tilde{U}/2)\\
+    V = \tan(\tilde{V}/2)
+    \end{array}\right.
+\ee
+\begin{remark}
+These relations can be compared with Eq.~(\ref{e:glo:UV_uv}): they are
+identical, up to a factor $2$.
+\end{remark}
+We have seen in Sec.~\ref{s:sch:BH} that the future null infinity $\scri^+$
+corresponds to $v\rightarrow +\infty$ and that the past null infinity
+$\scri^-$ to $u\rightarrow -\infty$ (cf. Fig.~\ref{f:sch:conf_compl_final}).
+Since on $\M_{\rm I}$, $U = - \mathrm{e}^{-u/4m}$ and $V = \mathrm{e}^{v/4m}$
+[cf. Eq.~(\ref{e:sch:def_U_V})], we
+may write equivalently:
+\be
+    \scri^+:\ V\rightarrow +\infty \qquad\mbox{and}\qquad
+    \scri^-:\ U\rightarrow -\infty.
+\ee
+In view of (\ref{e:max:tUtV_UV}) it is then clear that the coordinates
+$(\tilde{U},\tilde{V})$ are well adapted to the spacetime asymptotics:
+\be \label{e:max:scri_tUtV}
+    \scri^+:\ \tilde{V}\rightarrow \pi \qquad\mbox{and}\qquad
+    \scri^-:\ \tilde{U}\rightarrow -\pi.
+\ee
+\begin{remark}
+The coordinates $(\tilde{U},\tilde{V})$ are also well adapted to the
+bifurcate Killing horizon:
+\be
+    \hat{\Hor}:\ \tilde{U} = 0 \ \mbox{or}\ \tilde{V} = 0 ,
+\ee
+with the Schwarzschild horizon and the bifurcation sphere being the following
+subsets:
+\bea
+    \Hor:& \ \tilde{U} = 0 \ \mbox{and}\ \tilde{V} > 0 \\
+    \Sp:& \ \tilde{U} = 0 \ \mbox{and}\ \tilde{V} = 0 .
+\eea
+
+\end{remark}
+
+The relation (\ref{e:max:tUtV_UV}) leads immediately to
+\[
+    \D U = \frac{\D \tilde{U}}{2\cos^2(\tilde{U}/2)}
+    \qquad\mbox{and}\qquad
+    \D V = \frac{\D \tilde{V}}{2\cos^2(\tilde{V}/2)} .
+\]
+Substituting into (\ref{e:sch:metric_UV}), we obtain the expression of
+the metric components with respect to the coordinates
+$x^\alpha=(\tilde{U}, \tilde{V}, \th,\ph)$:
+\[
+    g_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+    - \frac{8 m^3}{r} \,
+    \frac{\mathrm{e}^{-r/2m}}{\cos^2(\tilde{U}/2)\cos^2(\tilde{V}/2)}
+    \,  \D \tilde{U} \, \D \tilde{V}
+     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\]
+Now, from Eq.~(\ref{e:sch:r_UV}),
+\bea
+    \frac{\mathrm{e}^{-r/2m}}{\cos^2(\tilde{U}/2)\cos^2(\tilde{V}/2)} & =&
+    - \left( \frac{r}{2m} - 1 \right) \frac{1}{UV \cos^2(\tilde{U}/2)\cos^2(\tilde{V}/2)} \nonumber \\
+    & = &
+    - \left( \frac{r}{2m} - 1 \right) \frac{1}{\tan(\tilde{U}/2) \cos^2(\tilde{U}/2)\tan(\tilde{V}/2)\cos^2(\tilde{V}/2)} \nonumber \\
+    & = &
+    - \left( \frac{r}{2m} - 1 \right) \frac{1}{\sin(\tilde{U}/2) \cos(\tilde{U}/2)\sin(\tilde{V}/2)\cos(\tilde{V}/2)} \nonumber \\
+    & = &
+    - \left( \frac{r}{2m} - 1 \right) \frac{4}{\sin\tilde{U} \, \sin\tilde{V}} .
+        \nonumber
+\eea
+Hence
+\be \label{e:max:g_tUtV}
+    \encadre{ g_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+     16 m^2 \left( 1 - \frac{2m}{r} \right)\,
+    \frac{\D \tilde{U} \, \D \tilde{V}}{\sin\tilde{U} \, \sin\tilde{V}}
+     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+\ee
+In this expression, $r$ is the function of $(\tilde{U},\tilde{V})$ defined
+by [cf. Eqs.~(\ref{e:sch:KS_SD_I}), (\ref{e:sch:def_T_X}) and (\ref{e:max:tUtV_UV})]
+\be
+    r = 2 m \tilde{W}_0\left(-\tan\frac{\tilde{U}}{2} \tan\frac{\tilde{V}}{2} \right).
+\ee
+
+To get a conformal completion, we should write (cf. Sec.~\ref{s:glo:conf_compl})
+\[
+    \w{g} = \Omega^{-2} \w{\tilde{g}} ,
+\]
+where $\Omega = 0$ and $\dd\Omega \not=0$ on the spacetime boundary $\scri$ and
+$\w{\tilde{g}}$ is a regular metric on the completion $\M\cup\scri$.
+Since in Eq.~(\ref{e:max:g_tUtV}), the term
+$\sin\tilde{U} \, \sin\tilde{V}$ vanishes both at $\scri^+$ and $\scri^-$
+[cf. Eq.~(\ref{e:max:scri_tUtV})],
+we would have, up to some constant factor,
+\be \label{e:max:Omega_tUtV}
+    \Omega = \sqrt{- \sin\tilde{U} \, \sin\tilde{V}} .
+\ee
+Hence the conformal metric should be
+\be \label{e:max:conf_metric_tUtV}
+   {\tilde g}_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+     - 16 m^2 \left( 1 - \frac{2m}{r} \right)
+    \D \tilde{U} \, \D \tilde{V}
+     -  r^2 \sin\tilde{U} \, \sin\tilde{V}
+     \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\ee
+At $\scri^+$, $r\rightarrow +\infty$, $2m/r\rightarrow 0$ and
+$r^2 \sin\tilde{V} = 2 r^2 \sin(\tilde{V}/2) \cos(\tilde{V}/2) \sim
+2 r^2 \cos(\tilde{V}/2)$, since $\tilde{V} = \pi$ at $\scri^+$
+[Eq.~(\ref{e:max:scri_tUtV})]. Hence the conformal metric at $\scri^+$ is
+\be \label{e:max:conf_g_scrip}
+   \left. {\tilde g}_{\mu\nu} \right| _{\scri^+} \, \D x^\mu \, \D x^\nu =
+     - 16 m^2 \D \tilde{U} \, \D \tilde{V}
+     -  2 r^2 \cos(\tilde{V}/2) \sin\tilde{U}
+     \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\ee
+Now, by combining Eqs.~(\ref{e:sch:r_UV}) and (\ref{e:max:tUtV_UV}),
+we have
+\[
+    - \tan(\tilde{U}/2) \tan(\tilde{V}/2) =  \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)
+\]
+Hence on $\scri^+$,
+\[
+    - \tan(\tilde{U}/2) \frac{1}{\cos(\tilde{V}/2)} \sim \frac{r}{2m} \mathrm{e}^{r/2m} ,
+\]
+from which
+\[
+    r^2 \cos(\tilde{V}/2) \sim - 2m \tan(\tilde{U}/2) \times
+        \underbrace{r \mathrm{e}^{-r/2m}}_{\rightarrow 0}
+        \longrightarrow 0 .
+\]
+Accordingly the conformal metric at $\scri^+$ (\ref{e:max:conf_g_scrip})
+reduces to
+\be
+   \left. {\tilde g}_{\mu\nu} \right| _{\scri^+} \, \D x^\mu \, \D x^\nu =
+     - 16 m^2 \D \tilde{U} \, \D \tilde{V} .
+\ee
+This metric is clearly degenerate. It is therefore not a regular metric.
+We conclude that (\ref{e:max:Omega_tUtV})-(\ref{e:max:conf_metric_tUtV}) does
+not define a conformal completion of $(\M,\w{g})$.
 
 
 \cite{HalacL14}
