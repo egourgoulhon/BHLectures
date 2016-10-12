@@ -128,9 +128,9 @@ implicit expression is found by combining
 \begin{remark}
 This relation takes a very simple form in terms of the tortoise coordinate
 (cf. Eq.~(\ref{e:sch:def_tortoise})):
-\[
+\be
     \mathrm{e}^{r_*/2m} = - U V  .
-\]
+\ee
 \end{remark}
 
 We notice that the factor $(1-2m/r)$ has disappeared in the line
@@ -176,7 +176,7 @@ dashed curves have $r=\mathrm{const}$ (spaced apart by $\delta r = m/2$).}
 \begin{figure}
 \centerline{\includegraphics[height=0.37\textheight]{max_X2mT2.pdf}}
 \caption[]{\label{f:max:X2mT2} \footnotesize
-Function $F:\; x\mapsto \mathrm{e}^{x}(x-1)$, giving
+Function $F:\; x\mapsto \mathrm{e}^{x}(x-1)$, yielding
 $X^2-T^2 = F(r/2m)$, cf. Eq.~(\ref{e:sch:X2mT2}).}
 \end{figure}
 
@@ -442,7 +442,7 @@ or (\ref{e:sch:KS_SD_II}),
 this corresponds to $X^2-T^2 \rightarrow -1$ (see also Fig.~\ref{f:max:X2mT2}), with
 $T > 0$. Hence, in the $(T,X)$ plane, the curvature singularity is located
 at $T = \sqrt{X^2 + 1}$, i.e. at the upper branch of the hyperbola
-$X^2 - T^2 = -1$.
+$T^2 - X^2 = 1$.
 
 \subsection{Radial null geodesics in Kruskal-Szekeres coordinates}
 \label{s:sch:rad_null_geod_KS}
@@ -455,7 +455,7 @@ null geodesics are straight lines of slope $\pm 45^\circ$ in the $(T,X)$ plane
 (cf. Fig.~\ref{f:sch:rad_null_geod_KS}):
 \begin{itemize}
 \item the ingoing radial null geodesics obey
-\be
+\be \label{e:sch:ingoing_null_geod_KS}
     T = - X + V ,
 \ee
 where $V$ is a positive constant (the constraint $V>0$ following from (\ref{e:sch:range_X_T_IEF})), so that each geodesic of this family can be labelled
@@ -505,6 +505,8 @@ contrary the relation $V = \mathrm{e}^{v/4m}$ is valid in all $\M_{\rm IEF}$.
 \end{remark}
 
 \section{Maximal extension} \label{s:sch:max_extens}
+
+\subsection{Construction}
 
 The spacetime $(\M_{\rm IEF}, \w{g})$ is not geodesically complete.
 Indeed, let us consider the radial null geodesics discussed above.
@@ -560,7 +562,7 @@ original one with respect to the ``origin'' $(T,X)=(0,0)$.
 The whole spacetime manifold is then the following open subset of
 $\R^2\times\mathbb{S}^2$:
 \be \label{e:sch:def_M_extend}
-    \M = \{ p \in \R^2\times\mathbb{S}^2, \quad X^2(p) - T^2(p) > - 1 \} ,
+    \M = \{ p \in \R^2\times\mathbb{S}^2, \quad T^2(p) - X^2(p) < 1 \} ,
 \ee
 where $(T,X,\th,\ph)$ is the canonical coordinate system on $\R^2\times\mathbb{S}^2$,
 called in this context
@@ -652,7 +654,56 @@ be extended further. For this reason, $(\M,\w{g})$ is called the
 \defin{maximal extension}\index{maximal!extension}\index{extension!maximal --}
 of Schwarzschild spacetime.
 
+\subsection{Global null coordinates} \label{s:max:glo_null}
 
+In Secs.~\ref{s:sch:KS_coord} and \ref{s:sch:rad_null_geod_KS}, we have introduced
+on $\M_{\rm IEF}$
+the null coordinates $(U,V)$; they are related to the coordinates $(T,X)$
+by Eq.~(\ref{e:sch:def_T_X}) (or equivalently
+Eqs.~(\ref{e:sch:ingoing_null_geod_KS})-(\ref{e:sch:outgoing_null_geod_KS})),
+which we case use define $(U,V)$ in all the maximal extension $\M$:
+\be \label{e:max:U_V_T_X}
+    \left\{\begin{array}{l}
+    U = T - X\\
+    V = T + X
+    \end{array}\right.
+    \qquad \iff\qquad
+    \left\{\begin{array}{l}
+    T = \frac{1}{2} (U+V) \\[1ex]
+    X = \frac{1}{2} (V-U)
+    \end{array}\right.
+\ee
+The range of $(U,V)$ of $\M$ is deduced from the constraint
+$T^2-X^2 < 1$ [cf. Eq.~(\ref{e:sch:def_M_extend})]: since $T^2-X^2 = UV$,
+we get:
+\be \label{e:max:range_UV}
+    \M:\quad (U,V)\in\R^2 \quad\mbox{and}\quad UV < 1.
+\ee
+
+The expression of the metric tensor
+in terms of the null coordinates $x^\alpha = (U,V,\th,\ph)$
+is deduced from (\ref{e:sch:metric_KS_TX}):
+\be
+    \encadre{
+      g_{\mu\nu} \, \D x^\mu \, \D x^\nu = 4m^2 \left[
+      \frac{4}{UV + \mathrm{e}^{\tilde{W}_0(-UV)} } \, \D U \, \D V
+      + \tilde{W}_0(-UV)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) \right] .
+    }
+\ee
+We can also rewrite it as (\ref{e:sch:metric_UV}):
+\be \label{e:max:metric_UV_glob}
+    \encadre{
+    g_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+    - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \D U \, \D V
+     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) },
+\ee
+where $r$ is the function of $(U,V)$ given by
+\be
+    r = 2 m \tilde{W}_0(-UV) .
+\ee
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Bifurcate Killing horizon}
 
@@ -703,14 +754,21 @@ The bifurcate Killing horizon with respect to $\w{\xi}$
 that extends $\Hor$
 is $\hat{\Hor} = \Hor_1 \cup \Hor_2 $, where
 \begin{itemize}
-\item $\Hor_1$ is the null hypersurface $T=X$;
-\item $\Hor_2$ is the null hypersurface $T=-X$.
+\item $\Hor_1$ is the null hypersurface $T=X$ (or equivalently $U=0$);
+\item $\Hor_2$ is the null hypersurface $T=-X$ (or equivalently $V=0$).
 \end{itemize}
 The bifurcate Killing horizon $\hat{\Hor}$ is depicted in black in
 Fig.~\ref{f:sch:xi_extend}.
 The Schwarzschild horizon $\Hor$ is the part of $\Hor_1$ defined by $X>0$.
+In terms of the null coordinates $(U,V)$ introduced in Sec.~\ref{s:max:glo_null},
+we have, given (\ref{e:max:U_V_T_X}),
+\bea
+    \hat{\Hor}:& & U = 0 \quad\mbox{or}\quad V = 0 \\
+    \Hor: & &  U = 0 \quad\mbox{and}\quad V > 0 .
+\eea
 The bifurcation surface is $\Sp = \Hor_1 \cap \Hor_2$, which
-is the 2-surface defined by $T=0$ and $X=0$. It is a 2-sphere, since
+is the 2-surface defined by $T=0$ and $X=0$, or equivalently by
+$U=0$ and $V=0$. It is a 2-sphere, since
 any fixed value of the pair $(T,X)$ defines a 2-sphere, according to the
 definition of $\M$ as a part of $\R^2\times\mathbb{S}^2$
 [cf. Eq.~(\ref{e:sch:def_M_extend})]. Accordingly, $\Sp$ is called the
@@ -739,28 +797,95 @@ vector field vanishes at the bifurcation sphere:
 \subsection{Construction}
 
 To have a compact representation of the maximal extension of Schwarzschild spacetime,
-let us introduce ``finite-range'' coordinates $(\tilde{T},\tilde{X})$, which
-are related to $(T,X)$ in exactly the same way as the coordinates $(\tau,\chi)$
-are related to $(t,r)$ in the construction of the conformal completion of
-Minkowski spacetime in
-Sec.~\ref{s:glo:conf_Mink} [cf. Eq.~(\ref{e:glo:tau_chi_t_r})]
-\be \label{e:max:tTtX}
+one can use the same trick as for Minkowski spacetime (cf. Sec.~\ref{s:glo:finite_range_Mink}), namely employ the arctangent function to map the
+range $(-\infty, +\infty)$ of the null coordinates $U$ and $V$ to the
+interval $(-\pi/2,\pi/2)$, thereby defining the finite-range coordinates
+$(\hat{U},\hat{V})$:
+\be \label{e:max:def_hUhV}
     \left\{ \begin{array}{l}
-    \tilde{T} = \arctan(T+X) + \arctan(T-X) \\
-    \tilde{X} = \arctan(T+X) - \arctan(T-X)
+    \hat{U} = \arctan U \\
+    \hat{V} = \arctan V
+    \end{array} \right.
+    \iff
+   \left\{ \begin{array}{l}
+    U = \tan \hat{U} \\
+    V = \tan \hat{V} .
+    \end{array} \right.
+\ee
+The range of $(\hat{U},\hat{V})$ is deduced from (\ref{e:max:range_UV}):
+\[
+    UV < 1 \iff \tan \hat{U} \,  \tan \hat{V} < 1 .
+\]
+Since for $\hat{U}, \hat{V}\in (-\pi/2,\pi/2)$, we have $\cos\hat{U} > 0$ and
+$\cos\hat{V} > 0$, we may write
+\[
+    UV < 1 \iff  \sin\hat{U} \, \sin\hat{V} < \cos\hat{U} \, \cos\hat{V}
+     \iff  \cos(\hat{U}+\hat{V}) > 0
+     \iff  -\frac{\pi}{2} < \hat{U}+\hat{V} <\frac{\pi}{2} .
+\]
+Hence the range of $(\hat{U},\hat{V})$ on the maximal extension
+of Schwarzschild spacetime:
+\be \label{e:max:range_hUhV}
+    \M:\quad -\frac{\pi}{2} < \hat{U} <\frac{\pi}{2},\quad
+    -\frac{\pi}{2} < \hat{V} <\frac{\pi}{2}
+    \quad\mbox{and}\quad -\frac{\pi}{2} < \hat{U}+\hat{V} <\frac{\pi}{2} .
+\ee
+
+Since (\ref{e:max:def_hUhV}) yields
+$\D U = \D \hat{U} / \cos^2\hat{U}$ and $\D V = \D \hat{V} / \cos^2\hat{V}$,
+we deduce immediately from (\ref{e:max:metric_UV_glob})
+the expression of the metric tensor in terms of the coordinates
+$x^\alpha = (\hat{U}, \hat{V}, \th,\ph)$:
+\be
+    g_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+    - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,
+        \frac{\D \hat{U}}{\cos^2\hat{U}} \, \frac{\D \hat{V}}{\cos^2\hat{V}}
+     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
+\ee
+where $r = 2 m \tilde{W}_0(-\tan \hat{U} \tan \hat{V})$ .
+
+To depict $\M$, let us introduce  ``time+space'' coordinates $(\hat{T},\hat{X})$,
+which are related to $(\hat{U},\hat{V})$ is exactly the same way
+as the coordinates as the  coordinates $(\tau,\chi)$ were related
+to the finite-range null coordinates $(U,V)$ for Minkowski spacetime
+[cf. Eq.~(\ref{e:glo:tau_chi_U_V})]:
+\be \label{e:glo:tau_chi_U_V}
+    \left\{ \begin{array}{l}
+    \hat{T} = \hat{U} + \hat{V} \\
+    \hat{X} = \hat{V} - \hat{U}
     \end{array} \right.
     \iff
     \left\{ \begin{array}{l}
-    \displaystyle T = \frac{\sin\tilde{T}}{\cos\tilde{T} + \cos\tilde{X}}\\[2ex]
-    \displaystyle X = \frac{\sin\tilde{X}}{\cos\tilde{T} + \cos\tilde{X}} .
+    \hat{U} = \frac{1}{2} (\hat{T} - \hat{X}) \\[1ex]
+    \hat{V} = \frac{1}{2} (\hat{T} + \hat{X}) .
     \end{array} \right.
 \ee
-The range of $(\tilde{T},\tilde{X})$ is constrained by
-\be \label{e:max:range_tTtX}
-\tilde{X}\in(-\pi,\pi) \qquad\mbox{and}\qquad -\pi+|\tilde{X}| < \tilde{T} < \pi-|\tilde{X}| .
+The range of $(\hat{T},\hat{X})$ is deduced from (\ref{e:max:range_hUhV}):
+\be
+    \M:\quad -\frac{\pi}{2} < \hat{T} <\frac{\pi}{2},\quad
+        \hat{T}-\pi < \hat{X} < \hat{T}+\pi
+    \quad\mbox{and}\quad -\hat{T}-\pi < \hat{X} < -\hat{T}+\pi.
 \ee
+
+
+Via (\ref{e:max:def_hUhV}) and (\ref{e:max:U_V_T_X}), the relation
+between $(\hat{T},\hat{X})$ and the Kruskal-Szekeres coordinates $(T,X)$
+is then the same as that between $(\tau,\chi)$ and $(t,r)$ for Minkowksi
+spacetime [Eq.~(\ref{e:glo:tau_chi_t_r})]:
+\be \label{e:max:tTtX}
+    \left\{ \begin{array}{l}
+    \hat{T} = \arctan(T+X) + \arctan(T-X) \\
+    \hat{X} = \arctan(T+X) - \arctan(T-X)
+    \end{array} \right.
+    \iff
+    \left\{ \begin{array}{l}
+    \displaystyle T = \frac{\sin\hat{T}}{\cos\hat{T} + \cos\hat{X}}\\[2ex]
+    \displaystyle X = \frac{\sin\hat{X}}{\cos\hat{T} + \cos\hat{X}} .
+    \end{array} \right.
+\ee
+
 The maximal extension of Schwarzschild spacetime is depicted with respect
-to the coordinates $(\tilde{T},\tilde{X})$ in Fig.~\ref{f:sch:sch_carter-penrose}.
+to the coordinates $(\hat{T},\hat{X})$ in Fig.~\ref{f:sch:sch_carter-penrose}.
 Such a plot is called a \defin{Carter-Penrose diagram}\index{Carter-Penrose diagram}.
 As the Kruskal diagram (Fig.~\ref{f:sch:kruskal_diag}), it has the property
 to display the null geodesics as straight lines with slope $\pm 45^\circ$.
@@ -779,9 +904,9 @@ SageManifolds (cf. Appendix~\ref{s:sam}).}
 The Carter-Penrose diagram in Fig.~\ref{f:sch:sch_carter-penrose} can be compared with the conformal diagram
 of Minkowski spacetime in Fig.~\ref{f:glo:conf_diag_Mink}.
 The right asymptotics of the Carter-Penrose diagram
-(i.e. the part $\tilde{X}>\pi/2$) looks similar to that of
+(i.e. the part $\hat{X}>\pi/2$) looks similar to that of
 Minkowski conformal diagram.
-However, there is a difference: the coordinates $(\tilde{T},\tilde{X})$
+However, there is a difference: the coordinates $(\hat{T},\hat{X})$
 employed in the construction of the diagram of
 Fig.~\ref{f:sch:sch_carter-penrose} are not related to any regular conformal
 completion, as defined in Sec.~\ref{s:glo:conf_compl},
