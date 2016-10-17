@@ -811,7 +811,7 @@ vector field vanishes at the bifurcation sphere:
 
 \section{Carter-Penrose diagram} \label{s:max:Carter-Penrose}
 
-\subsection{Construction}
+\subsection{First construction}
 
 To have a compact representation of the maximal extension of Schwarzschild spacetime,
 one can use the same trick as for Minkowski spacetime (cf. Sec.~\ref{s:glo:finite_range_Mink}), namely employ the arctangent function to map the
@@ -937,22 +937,34 @@ $\scri^-$ to $u\rightarrow -\infty$ (cf. Fig.~\ref{f:sch:conf_compl_final}).
 Since on $\M_{\rm I}$, $U = - \mathrm{e}^{-u/4m}$ and $V = \mathrm{e}^{v/4m}$
 [cf. Eq.~(\ref{e:sch:def_U_V})], we
 may write equivalently:
-\be
-    \scri^+:\ V\rightarrow +\infty \qquad\mbox{and}\qquad
-    \scri^-:\ U\rightarrow -\infty.
-\ee
+\begin{subequations}
+\begin{align}
+    \scri^+:&\quad V\rightarrow +\infty \quad\mbox{and}\quad U \in (-\infty, 0) \\
+    \scri^-:&\quad U\rightarrow -\infty \quad\mbox{and}\quad V \in (0,+\infty) .
+\end{align}
+\end{subequations}
 In view of (\ref{e:max:def_hUhV}), we get then:
-\be \label{e:max:scri_hUhV}
-    \scri^+:\ \hat{V}\rightarrow \frac{\pi}{2} \qquad\mbox{and}\qquad
-    \scri^-:\ \hat{U}\rightarrow -\frac{\pi}{2}.
-\ee
+\begin{subequations}
+\label{e:max:scri_hUhV}
+\begin{align}
+    \scri^+:&\quad \hat{V}\rightarrow \frac{\pi}{2} \quad\mbox{and}\quad
+        \hat{U} \in \left( -\frac{\pi}{2} , 0 \right) \\
+    \scri^-:&\quad \hat{U}\rightarrow -\frac{\pi}{2} \quad\mbox{and}\quad
+         \hat{V} \in \left( 0 ,  \frac{\pi}{2} \right).
+\end{align}
+\end{subequations}
 
 By symmetry, the extension $\M_{\rm III}\cup \M_{\rm IV}$ of Schwarzschild
 spacetime has the following null infinity:
-\be \label{e:max:scri_prime_hUhV}
-    {\scri'}^+:\ \hat{U}\rightarrow \frac{\pi}{2} \qquad\mbox{and}\qquad
-    {\scri'}^-:\ \hat{V}\rightarrow -\frac{\pi}{2}.
-\ee
+\begin{subequations}
+\label{e:max:scri_prime_hUhV}
+\begin{align}
+    {\scri'}^+:&\quad \hat{U}\rightarrow \frac{\pi}{2} \quad\mbox{and}\quad
+        \hat{V} \in \left( -\frac{\pi}{2} , 0 \right) \\
+    {\scri'}^-:&\quad \hat{V}\rightarrow -\frac{\pi}{2} \quad\mbox{and}\quad
+        \hat{U}\in \left( 0 ,  \frac{\pi}{2} \right).
+\end{align}
+\end{subequations}
 
 \subsection{Discussion: Carter-Penrose diagram and conformal completion}
 
@@ -1056,6 +1068,109 @@ This metric is clearly degenerate. It is therefore not a regular metric.
 We conclude that (\ref{e:max:Omega_hUhV})-(\ref{e:max:conf_metric_hUhV}) does
 not define a conformal completion of $(\M,\w{g})$.
 
+\subsection{A regular conformal completion based on Frolov-Novikov coordinates}
+
+In order to get a regular conformal completion of the maximal extension
+of Schwarzschild spacetime $(\M,\w{g})$, a finite-range coordinate system has
+been proposed by Frolov \& Novikov \cite{FroloN98}: instead of (\ref{e:max:def_hUhV}),
+the finite-range coordinates $(\tilde{U},\tilde{V})$ are defined by
+\be \label{e:max:def_tUtV}
+    \left\{ \begin{array}{l}
+    \tilde{U} = \arctan(\mathrm{arsinh}\, U) \\
+    \tilde{V} = \arctan(\mathrm{arsinh}\, V)
+    \end{array} \right.
+    \iff
+   \left\{ \begin{array}{l}
+    U = \sinh(\tan \tilde{U}) \\
+    V = \sinh(\tan \tilde{V}) .
+    \end{array} \right.
+\ee
+The range of $(\tilde{U},\tilde{V})$ is deduced from (\ref{e:max:range_UV}):
+\be \label{e:max:range_tUtV}
+    \M:\quad -\frac{\pi}{2} < \tilde{U} <\frac{\pi}{2},\quad
+    -\frac{\pi}{2} < \tilde{V} <\frac{\pi}{2}
+    \quad\mbox{and}\quad  \sinh(\tan \tilde{U}) \sinh(\tan \tilde{V}) < 1 .
+\ee
+Note that contrary to what happened for $(\hat{U},\hat{V})$, these conditions
+do not yield to simple polygonal region in the $(\tilde{U},\tilde{V})$ plane.
+The presence of the $\sinh$ function in the expression (\ref{e:max:def_tUtV})
+$(U,V)$ in terms of $(\tilde{U},\tilde{V})$ does not alter the values
+of the finite-range coordinates at null infinity, as compared to
+$(\hat{U},\hat{V})$ [cf. (\ref{e:max:scri_hUhV})-(\ref{e:max:scri_prime_hUhV})]:
+\begin{subequations}
+\label{e:max:scri_tUtV}
+\begin{align}
+    \scri^+:&\quad \tilde{V}\rightarrow \frac{\pi}{2} \quad\mbox{and}\quad
+        \tilde{U} \in \left( -\frac{\pi}{2} , 0 \right) \\
+    \scri^-:&\quad \tilde{U}\rightarrow -\frac{\pi}{2} \quad\mbox{and}\quad
+         \tilde{V} \in \left( 0 ,  \frac{\pi}{2} \right) \\
+    {\scri'}^+:&\quad \tilde{U}\rightarrow \frac{\pi}{2} \quad\mbox{and}\quad
+        \tilde{V} \in \left( -\frac{\pi}{2} , 0 \right) \\
+    {\scri'}^-:&\quad \tilde{V}\rightarrow -\frac{\pi}{2} \quad\mbox{and}\quad
+        \tilde{U}\in \left( 0 ,  \frac{\pi}{2} \right).
+\end{align}
+\end{subequations}
+
+We have from (\ref{e:max:def_tUtV})
+\[
+    \D U = \frac{\cosh(\tan\tilde{U})}{\cos^2\tilde{U}}\, \D\tilde{U}
+    \qquad\mbox{and}\qquad
+    \D V = \frac{\cosh(\tan\tilde{V})}{\cos^2\tilde{V}}\, \D\tilde{V} ,
+\]
+so that the metric components in terms of the coordinates
+$x^\alpha=(\tilde{U},\tilde{V},\th,\ph)$ are easily deduced from
+(\ref{e:max:metric_UV_glob})-(\ref{e:max:r_W0_UV}):
+\be \label{e:max:metric_tUtV}
+    g_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+    - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,
+        \frac{\cosh(\tan\tilde{U}) \cosh(\tan\tilde{V})}{\cos^2\tilde{U}\cos^2\tilde{V}}\,
+            \D\tilde{U} \, \D\tilde{V}
+     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
+\ee
+where $r$ is the function of $(\tilde{U},\tilde{V})$ given by
+\be \label{e:max:r_tUtV}
+    r = 2 m \tilde{W}_0\left(-\sinh(\tan \tilde{U}) \sinh(\tan \tilde{V})\right) .
+\ee
+As we did for $(\hat{U},\hat{V})$, let us rewrite (\ref{e:max:metric_tUtV}) in
+a form that is better adapted to the null asymptotics.
+Given (\ref{e:max:r_tUtV}) and (\ref{e:max:exp_tW0}), we have
+\be
+    \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) =
+        - \sinh(\tan \tilde{U}) \sinh(\tan \tilde{V}) ,
+\ee
+from which we get
+\[
+    \frac{2m}{r} \mathrm{e}^{-r/2m} = - \left( 1 - \frac{2m}{r} \right)
+        \frac{1}{\sinh(\tan \tilde{U}) \sinh(\tan \tilde{V})} .
+\]
+Hence (\ref{e:max:metric_tUtV}) becomes
+\bea
+    g_{\mu\nu} \, \D x^\mu \, \D x^\nu & =&
+    16 m^2 \left( 1 - \frac{2m}{r} \right)
+    \frac{\D\tilde{U} \, \D\tilde{V}}{\tanh(\tan\tilde{U}) \tanh(\tan\tilde{V}) \cos^2\tilde{U}\cos^2\tilde{V}} \nonumber\\
+    & &
+     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\eea
+Given the values (\ref{e:max:scri_tUtV}) of $\tilde{U}$ and $\tilde{V}$ near
+$\scri$, $\tanh(\tan\tilde{U}) \tanh(\tan\tilde{V})$ does not vanish there.
+A natural choice of conformal factor is then
+\be
+    \Omega = \cos\tilde{U}\cos\tilde{V} .
+\ee
+The corresponding conformal metric is
+\bea
+    {\tilde g}_{\mu\nu} \, \D x^\mu \, \D x^\nu & =&
+    16 m^2 \left( 1 - \frac{2m}{r} \right)
+    \frac{\D\tilde{U} \, \D\tilde{V}}{\tanh(\tan\tilde{U}) \tanh(\tan\tilde{V}) } \nonumber\\
+    & &
+     +  r^2 \cos^2\tilde{U}\cos^2\tilde{V} \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\eea
+Considering $(\tilde{U},\tilde{V},\th,\ph)$ as a canonical coordinate system
+on $\R^2\times\SS^2$, we define the conformal completion manifold as
+\be
+    \tilde{\M} := \left\{ p\in \R^2\times\SS^2,\  (\tilde{U}(p),\tilde{V}(p)) \in \left[ -\frac{\pi}{2}, \frac{\pi}{2} \right] ^2 \ \mbox{and}\
+       \sinh(\tan \tilde{U}(p)) \sinh(\tan \tilde{V}(p)) < 1 \right\} .
+\ee
 
 \cite{HalacL14}
 
