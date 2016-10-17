@@ -967,6 +967,7 @@ spacetime has the following null infinity:
 \end{subequations}
 
 \subsection{Discussion: Carter-Penrose diagram and conformal completion}
+\label{s:max:discus_hUhV}
 
 The Carter-Penrose diagram in Fig.~\ref{f:sch:sch_carter-penrose} can be compared with the conformal diagram
 of Minkowski spacetime in Fig.~\ref{f:glo:conf_diag_Mink}.
@@ -1005,9 +1006,9 @@ for the metric tensor as
 \ee
 with $r$ given by (\ref{e:max:r_hUhV}).
 To get a conformal completion, we should write (cf. Sec.~\ref{s:glo:conf_compl})
-\[
+\be \label{e:max:g_Omega2_tg}
     \w{g} = \Omega^{-2} \w{\tilde{g}} ,
-\]
+\ee
 where $\Omega = 0$ and $\dd\Omega \not=0$ on the spacetime boundary $\scri$ and
 $\w{\tilde{g}}$ is a regular metric on the completion $\M\cup\scri$.
 Since in Eq.~(\ref{e:max:metric_hUhV_asymp}), the term
@@ -1021,7 +1022,13 @@ we would have, up to some constant factor,
 the minus sign taking into account that
 $\sin 2\hat{U} \sin 2\hat{V}$ approaches zero via negative values near
 $\scri$.
-Accordingly, the conformal metric should be
+A first issue is that the square root in (\ref{e:max:Omega_hUhV}) makes
+$\Omega$ not differentiable on $\scri$, where either $\sin 2 \hat{U}=0$
+or $\sin 2\hat{V}=0$. In other words, $\dd\Omega$ is diverging on $\scri$.
+Suppose we accept this and are ready
+to introduce a slight deviation (given that $\Omega^2$, which is involved in (\ref{e:max:g_Omega2_tg}), is smooth) from the definition given in
+Sec.~\ref{s:glo:conf_compl}.
+Then the conformal metric should be
 \be \label{e:max:conf_metric_hUhV}
    {\tilde{g}}_{\mu\nu} \, \D x^\mu \, \D x^\nu =
      - 64 m^2 \left( 1 - \frac{2m}{r} \right)
@@ -1064,7 +1071,8 @@ $\sin^2\hat{V}\rightarrow 1$:
    \left. {\tilde g}_{\mu\nu} \right| _{\scri} \, \D x^\mu \, \D x^\nu =
    - 64 m^2 \D \hat{U} \, \D \hat{V} .
 \ee
-This metric is clearly degenerate. It is therefore not a regular metric.
+This bilinear form is clearly degenerate. Therefore $\tilde{\w{g}}$ is not a
+regular metric on the whole manifold $\M\cup\scri$.
 We conclude that (\ref{e:max:Omega_hUhV})-(\ref{e:max:conf_metric_hUhV}) does
 not define a conformal completion of $(\M,\w{g})$.
 
@@ -1110,6 +1118,8 @@ $(\hat{U},\hat{V})$ [cf. (\ref{e:max:scri_hUhV})-(\ref{e:max:scri_prime_hUhV})]:
         \tilde{U}\in \left( 0 ,  \frac{\pi}{2} \right).
 \end{align}
 \end{subequations}
+We shall call $(\tilde{U},\tilde{V},\th,\ph)$ the
+\defin{Frolov-Novikov coordinates}\index{Frolov-Novikov coordinates}\index{coordinates!Frolov-Novikov --}.
 
 We have from (\ref{e:max:def_tUtV})
 \[
@@ -1154,8 +1164,8 @@ Hence (\ref{e:max:metric_tUtV}) becomes
 Given the values (\ref{e:max:scri_tUtV}) of $\tilde{U}$ and $\tilde{V}$ near
 $\scri$, $\tanh(\tan\tilde{U}) \tanh(\tan\tilde{V})$ does not vanish there.
 A natural choice of conformal factor is then
-\be
-    \Omega = \cos\tilde{U}\cos\tilde{V} .
+\be \label{e:max:def_Omega_tUtV}
+    \Omega := \cos\tilde{U}\cos\tilde{V} .
 \ee
 The corresponding conformal metric is
 \bea
@@ -1163,14 +1173,57 @@ The corresponding conformal metric is
     16 m^2 \left( 1 - \frac{2m}{r} \right)
     \frac{\D\tilde{U} \, \D\tilde{V}}{\tanh(\tan\tilde{U}) \tanh(\tan\tilde{V}) } \nonumber\\
     & &
-     +  r^2 \cos^2\tilde{U}\cos^2\tilde{V} \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+     +  r^2 \cos^2\tilde{U}\cos^2\tilde{V} \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) . \label{e:max:conf_metric_tUtV}
 \eea
 Considering $(\tilde{U},\tilde{V},\th,\ph)$ as a canonical coordinate system
 on $\R^2\times\SS^2$, we define the conformal completion manifold as
+\bea
+    \tilde{\M} &:= &\left\{ p\in \R^2\times\SS^2,\  (\tilde{U}(p),\tilde{V}(p)) \in \left( -\frac{\pi}{2}, \frac{\pi}{2} \right) ^2 \ \mbox{and}\
+       \sinh(\tan \tilde{U}(p)) \sinh(\tan \tilde{V}(p)) < 1 \right\}
+        \nonumber \\
+       & & \cup \scri^+ \cup \scri^- \cup {\scri'}^+ \cup {\scri'}^- ,
+        \label{e:max:def_M_compl}
+\eea
+with
+\begin{subequations}
+\begin{align}
+   \scri^+ := &\ \left\{ p\in \R^2\times\SS^2,\  \tilde{V}(p) = \frac{\pi}{2}
+        \ \mbox{and}\ \tilde{U}(p) \in \left( -\frac{\pi}{2}, 0 \right) \right\} \\
+    \scri^- := &\ \left\{ p\in \R^2\times\SS^2,\  \tilde{U}(p) = -\frac{\pi}{2}
+        \ \mbox{and}\ \tilde{V}(p) \in \left( 0, \frac{\pi}{2}\right) \right\} \\
+   {\scri'}^+ := &\ \left\{ p\in \R^2\times\SS^2,\  \tilde{U}(p) = \frac{\pi}{2}
+        \ \mbox{and}\ \tilde{V}(p) \in \left( -\frac{\pi}{2}, 0 \right) \right\} \\
+   {\scri'}^- := &\ \left\{ p\in \R^2\times\SS^2,\  \tilde{V}(p) = -\frac{\pi}{2}
+        \ \mbox{and}\ \tilde{U}(p) \in \left( 0, \frac{\pi}{2}\right) \right\} .
+\end{align}
+\end{subequations}
+Note that the first line in (\ref{e:max:def_M_compl}) corresponds to $\M$,
+identified as a subset of $\R^2\times\SS^2$ [cf. Eq.~(\ref{e:max:range_tUtV})]
+and that the definitions of $\scri^+$, $\scri^-$, ${\scri'}^+$ and ${\scri'}^-$
+are in agreement with (\ref{e:max:scri_tUtV}). It is clear that $\tilde{\M}$
+is a manifold with boundary and that
 \be
-    \tilde{\M} := \left\{ p\in \R^2\times\SS^2,\  (\tilde{U}(p),\tilde{V}(p)) \in \left[ -\frac{\pi}{2}, \frac{\pi}{2} \right] ^2 \ \mbox{and}\
-       \sinh(\tan \tilde{U}(p)) \sinh(\tan \tilde{V}(p)) < 1 \right\} .
+    \partial\tilde{\M} = \scri := \scri^+ \cup \scri^- \cup {\scri'}^+
+            \cup {\scri'}^- .
 \ee
+Moreover the scalar field $\Omega$ defined by (\ref{e:max:def_Omega_tUtV})
+satisfies $\Omega \geq 0$ on $\tilde{\M}$, along with
+$\Omega = 0$ on $\scri$ and $\dd\Omega\not = 0$ on $\scri$. The last property
+follows from
+\[
+    \dd\Omega = -\sin\tilde{U} \cos\tilde{V}\, \dd\tilde{U}
+            -\cos\tilde{U} \sin\tilde{V}\, \dd\tilde{V} ,
+\]
+which implies
+$\left.\dd\Omega\right|_{\scri^+} = -\cos\tilde{U}\, \dd\tilde{V}\not=0$,
+$\left.\dd\Omega\right|_{\scri^-} = \cos\tilde{V}\, \dd\tilde{U}\not=0$,
+$\left.\dd\Omega\right|_{{\scri'}^+} = -\cos\tilde{V}\, \dd\tilde{U}\not=0$ and
+$\left.\dd\Omega\right|_{{\scri'}^-} = \cos\tilde{U}\, \dd\tilde{V}\not=0$.
+Hence the conditions 1, 3 and 4 of the definition of a conformal completion
+given in Sec.~\ref{s:glo:conf_compl} are obeyed. There remains to check
+condition 2, namely that the tensor $\w{\tilde{g}}$ defined
+by (\ref{e:max:conf_metric_tUtV}) is a regular metric on the whole $\tilde{\M}$.
+This was the main failing point in the attempt of Sec.~\ref{s:max:discus_hUhV}.
 
 \cite{HalacL14}
 
