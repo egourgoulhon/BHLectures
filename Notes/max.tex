@@ -865,7 +865,7 @@ where [cf. Eq.~(\ref{e:max:r_W0_UV})]
 \ee
 
 To depict $\M$, let us introduce  ``time+space'' coordinates $(\hat{T},\hat{X})$,
-which are related to $(\hat{U},\hat{V})$ is exactly the same way
+which are related to $(\hat{U},\hat{V})$ in exactly the same way
 as the coordinates $(\tau,\chi)$ were related
 to the finite-range null coordinates $(U,V)$ for Minkowski spacetime
 [cf. Eq.~(\ref{e:glo:tau_chi_U_V})]:
@@ -905,7 +905,7 @@ spacetime [Eq.~(\ref{e:glo:tau_chi_t_r})]:
 \ee
 
 The maximal extension of Schwarzschild spacetime is depicted with respect
-to the coordinates $(\hat{T},\hat{X})$ in Fig.~\ref{f:sch:sch_carter-penrose}.
+to the coordinates $(\hat{T},\hat{X})$ in Fig.~\ref{f:max:carter-penrose-std}.
 Such a plot is called a \defin{Carter-Penrose diagram}\index{Carter-Penrose diagram}.
 As the Kruskal diagram (Fig.~\ref{f:sch:kruskal_diag}), it has the property
 to display the null geodesics as straight lines with slope $\pm 45^\circ$.
@@ -922,12 +922,21 @@ These relations follow immediately from (\ref{e:max:Hor_U_V}) and
 
 
 \begin{figure}
-\centerline{\includegraphics[width=0.9\textwidth]{sch_carter-penrose.pdf}}
-\caption[]{\label{f:sch:sch_carter-penrose} \footnotesize
-Carter-Penrose diagram of the Schwarzschild spacetime; the color code
-is the same as in Fig.~\ref{f:sch:kruskal_diag}.
-As the latter, this figure has been produced with
-SageManifolds (cf. Appendix~\ref{s:sam}).}
+\centerline{\includegraphics[width=0.9\textwidth]{max_carter-penrose-std.pdf}}
+\caption[]{\label{f:max:carter-penrose-std} \footnotesize
+Carter-Penrose diagram of the Schwarzschild spacetime
+constructed with the compactified coordinates $(\hat{T},\hat{X})$.
+Solid curves denote hypersurfaces of constant Schwarzschild-Droste coordinate
+$t$: in region $\M_{\rm I}$, from the $\hat{X}$-axis to the top: $t=0$, $2m$,
+$5m$, $10m$, $20m$ and $50m$, the last two being barely visible;
+in region $\M_{\rm II}$, from the $\hat{T}$-axis
+to the right: $t=0$, $2m$, $5m$, $10m$, $20m$ and $50m$,
+Dashed curves denote hypersurfaces of constant Schwarzschild-Droste coordinate
+$r$: in region $\M_{\rm I}$, from the left to the right: $r=2.01m$, $2.1m$, $2.5m$ (almost vertical), $4m$, $8m$, $12m$, $20m$ and $100m$, the last three being barely visible;
+in region $\M_{\rm II}$, from the bottom to the top: $r=1.98m$, $1.9m$, $1.7m$,
+$1.5m$, $1.25m$, $m$, $0.5m$ and $0.1m$.
+The color code
+is the same as in Fig.~\ref{f:sch:kruskal_diag}.}
 \end{figure}
 
 
@@ -969,14 +978,14 @@ spacetime has the following null infinity:
 \subsection{Discussion: Carter-Penrose diagram and conformal completion}
 \label{s:max:discus_hUhV}
 
-The Carter-Penrose diagram in Fig.~\ref{f:sch:sch_carter-penrose} can be compared with the conformal diagram
+The Carter-Penrose diagram in Fig.~\ref{f:max:carter-penrose-std} can be compared with the conformal diagram
 of Minkowski spacetime in Fig.~\ref{f:glo:conf_diag_Mink}.
 The right asymptotics of the Carter-Penrose diagram
 (i.e. the part $\hat{X}>\pi/2$) looks similar to that of
 Minkowski conformal diagram.
 However, there is a difference: the coordinates $(\hat{T},\hat{X})$
 employed in the construction of the diagram of
-Fig.~\ref{f:sch:sch_carter-penrose} are not related to any (regular) conformal
+Fig.~\ref{f:max:carter-penrose-std} are not related to any (regular) conformal
 completion --- as defined in Sec.~\ref{s:glo:conf_compl} ---
 contrary to the coordinates $(\tau,\chi)$ used for Minkowski spacetime.
 
@@ -1314,9 +1323,32 @@ $(U,V)$, but from the null coordinates $(u,v)$ defined by (\ref{e:sch:u_v_r_t}).
 We refer to the recent article \cite{HalacL14} for details.
 \end{remark}
 
+\begin{figure}
+\centerline{\includegraphics[width=0.9\textwidth]{max_carter-penrose-FN.pdf}}
+\caption[]{\label{f:max:carter-penrose-FN} \footnotesize
+Carter-Penrose diagram of the Schwarzschild spacetime based on the Frolov-Novikov coordinates.
+Solid curves denote the same hypersurfaces of constant Schwarzschild-Droste coordinate
+$t$ as in Fig.~\ref{f:max:carter-penrose-std}: in region $\M_{\rm I}$, from the $\hat{X}$-axis to the top: $t=0$, $2m$,
+$5m$, $10m$, $20m$ and $50m$;
+in region $\M_{\rm II}$, from the $\hat{T}$-axis
+to the right: $t=0$, $2m$, $5m$, $10m$, $20m$ and $50m$,
+Dashed curves denote the same hypersurfaces of constant Schwarzschild-Droste coordinate
+$r$ as in Fig.~\ref{f:max:carter-penrose-std}: in region $\M_{\rm I}$, from the left to the right: $r=2.01m$, $2.1m$, $2.5m$, $4m$, $8m$, $12m$, $20m$ and $100m$;
+in region $\M_{\rm II}$, from the bottom to the top: $r=1.98m$, $1.9m$, $1.7m$,
+$1.5m$, $1.25m$, $m$, $0.5m$ and $0.1m$.
+The color code
+is the same as in Figs.~\ref{f:sch:kruskal_diag} and \ref{f:max:carter-penrose-std}.
+Contrary to the Carter-Penrose of Fig.~\ref{f:max:carter-penrose-std}, this one is
+associated to a regular conformal completion at null infinity of Schwarzschild spacetime.
+As Figs.~\ref{f:sch:kruskal_diag} and \ref{f:max:carter-penrose-std}, this figure has been produced with
+SageManifolds (cf. Appendix~\ref{s:sam}).}
+\end{figure}
+
+
+
 To depict $\tilde{\M}$, let us introduce ``time+space'' coordinates
 $(\tilde{T},\tilde{X})$,
-which are related to $(\hat{U},\hat{V})$ is exactly the same way
+which are related to $(\hat{U},\hat{V})$ in exactly the same way
 as $(\hat{T},\hat{X})$ are related to $(\hat{U},\hat{V})$
 [cf. Eq.~(\ref{e:max:hThX_hUhV})]:
 \be
