@@ -122,7 +122,7 @@ coordinates ${\hat X}^\alpha := (U,V,\th,\ph)$:
 In this formula, $r$ has to be considered as a function of $(U,V)$, whose
 implicit expression is found by combining
 (\ref{e:sch:def_U_V}) and (\ref{e:sch:r_u_v_exp}):
-\be \label{e:sch:r_UV}
+\be \label{e:max:r_UV_M_I}
     \encadre{ \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) = - U V } .
 \ee
 \begin{remark}
@@ -195,7 +195,7 @@ by
 \be \label{e:sch:X2mT2}
    \encadre{ \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) = X^2 - T^2 } .
 \ee
-This relation is a direct consequence of (\ref{e:sch:r_UV}) and (\ref{e:sch:def_T_X}).
+This relation is a direct consequence of (\ref{e:max:r_UV_M_I}) and (\ref{e:sch:def_T_X}).
 We may rewrite it as
 \be
     F\left( \frac{r}{2m} \right) = X^2 - T^2,
@@ -705,6 +705,12 @@ where $r$ is the function of $(U,V)$ given by
 \be \label{e:max:r_W0_UV}
     r = 2 m \tilde{W}_0(-UV) .
 \ee
+Note that the relation (\ref{e:max:r_UV_M_I}) between $r$ and $(U,V)$ holds
+in all $\M$:
+\be \label{e:max:r_UV}
+    \encadre{ \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) = - U V } .
+\ee
+
 \begin{remark}
 In Sec.~\ref{s:sch:max_extens_constr}, we have distinguished the
 coordinate
@@ -1371,7 +1377,7 @@ $(\tilde{T},\tilde{X})$,
 which are related to $(\hat{U},\hat{V})$ in exactly the same way
 as $(\hat{T},\hat{X})$ are related to $(\hat{U},\hat{V})$
 [cf. Eq.~(\ref{e:max:hThX_hUhV})]:
-\be
+\be \label{e:max:tTtX_tUtV}
     \left\{ \begin{array}{l}
     \tilde{T} = \tilde{U} + \tilde{V} \\
     \tilde{X} = \tilde{V} - \tilde{U}
@@ -1402,12 +1408,14 @@ In particular, the bifurcate Killing horizon and the Schwarzschild horizon
 are defined by:
 \begin{subequations}
 \begin{align}
-    \hat{\Hor}:\quad&  \tilde{U} = 0 \quad\mbox{or}\quad \tilde{V} = 0 \\
-    \Hor:\quad &  \tilde{U} = 0 \quad\mbox{and}\quad \tilde{V} > 0 .
+    \hat{\Hor}:\quad&  \tilde{U} = 0 \quad\mbox{or}\quad \tilde{V} = 0 \ \iff \
+    \tilde{T} = \tilde{X} \quad\mbox{or}\quad \tilde{T} = - \tilde{X} \\
+    \Hor:\quad &  \tilde{U} = 0 \quad\mbox{and}\quad \tilde{V} > 0 \ \iff \
+      \tilde{T} = \tilde{X} \quad\mbox{and}\quad \tilde{T} > 0 .
 \end{align}
 \end{subequations}
-These relations follow immediately from (\ref{e:max:Hor_U_V}) and
-(\ref{e:max:def_tUtV}).
+These relations follow immediately from (\ref{e:max:Hor_U_V}),
+(\ref{e:max:def_tUtV}) and (\ref{e:max:tTtX_tUtV}).
 
 
 At first sight, the main difference with the ``standard'' Carter-Penrose diagram
@@ -1415,6 +1423,35 @@ of Fig.~\ref{f:max:carter-penrose-std} is the more complicated shape of
 the boundary around the $\tilde{T}$-axis. This follows from the third
 condition in (\ref{e:max:range_tTtX}), which is more involved than
 the third condition in (\ref{e:max:range_hThX}).
+Actually this boundary corresponds to the curvature singularity limit $r\rightarrow 0$
+or $r'\rightarrow 0$. Indeed, from Eq.~(\ref{e:max:r_UV}), we have
+\be \label{e:max:r_zero_UV}
+    r = 0 \iff UV = 1 .
+\ee
+In terms of the coordinates $(\hat{U},\hat{V})$, we have then
+[cf. Eq.~(\ref{e:max:def_hUhV})]
+\bea
+    r = 0 &\iff & \tan \hat{U} \tan \hat{V} = 1 \iff \sin \hat{U} \cos \hat{V} =
+    \cos\hat{U} \cos\hat{V} \nonumber \\
+    &\iff & \cos\hat{U} \cos\hat{V} - \sin \hat{U} \cos \hat{V} = 0
+     \iff \cos(\hat{U} + \hat{V}) = 0
+     \iff \hat{U} + \hat{V} = \pm \frac{\pi}{2} .  \nonumber
+\eea
+Since $\hat{T} = \hat{U} + \hat{V}$, we get the simple relation
+\be
+    r = 0 \iff \hat{T} =  \pm \frac{\pi}{2} .
+\ee
+On the contrary, in terms of the coordinates $(\tilde{U},\tilde{V})$,
+Eq.~(\ref{e:max:r_zero_UV}) becomes [cf.
+Eq.~(\ref{e:max:def_tUtV})]
+\[
+    r = 0 \iff \sinh(\tan \tilde{U}) \sinh(\tan \tilde{V}) = 1 ,
+\]
+which yields to the complicated formula
+\be
+    r = 0 \iff  \sinh[\tan((\tilde{T}-\tilde{X})/2)]
+        \; \sinh[\tan((\tilde{T}+\tilde{X})/2)] = 1 .
+\ee
 
 
 \section{Einstein-Rosen bridge}
