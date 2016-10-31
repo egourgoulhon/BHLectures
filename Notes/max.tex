@@ -452,7 +452,7 @@ $T^2 - X^2 = 1$.
 \label{s:sch:rad_null_geod_KS}
 
 By construction, the Kruskal-Szekeres coordinates $(T,X,\th,\ph)$ are
-adapted to the radial null geodesics. This is clear on the expression
+adapted to the radial null geodesics. This lis clear on the expression
 (\ref{e:sch:metric_KS}) of the metric tensor, where the $(T,X)$ part is
 conformal to the flat metric $- \D T^2 + \D X^2$. Consequently the radial
 null geodesics are straight lines of slope $\pm 45^\circ$ in the $(T,X)$ plane
@@ -896,7 +896,7 @@ to the finite-range null coordinates $(U,V)$ for Minkowski spacetime
     \end{array} \right.
 \ee
 The range of $(\hat{T},\hat{X})$ is deduced from (\ref{e:max:range_hUhV}):
-\be
+\be \label{e:max:range_hThX}
     \M:\quad -\frac{\pi}{2} < \hat{T} <\frac{\pi}{2},\quad
         \hat{T}-\pi < \hat{X} < \hat{T}+\pi
     \quad\mbox{and}\quad -\hat{T}-\pi < \hat{X} < -\hat{T}+\pi.
@@ -923,8 +923,12 @@ The maximal extension of Schwarzschild spacetime is depicted with respect
 to the coordinates $(\hat{T},\hat{X})$ in Fig.~\ref{f:max:carter-penrose-std}.
 Such a plot is called a \defin{Carter-Penrose diagram}\index{Carter-Penrose diagram}.
 As the Kruskal diagram (Fig.~\ref{f:sch:kruskal_diag}), it has the property
-to display the null geodesics as straight lines with slope $\pm 45^\circ$.
-In particular, the bifurace Killing horizon and the Schwarzschild horizon
+to display the radial null geodesics as straight lines with slope $\pm 45^\circ$.
+This holds
+since $\hat{U}$ (resp. $\hat{V}$) is a function of $U$ only
+(resp. $V$ only), cf. Eq.~(\ref{e:max:def_hUhV}), so that $\hat{U}$
+(resp. $\hat{V}$) is constant on outgoing (resp. ingoing) radial null geodesics.
+In particular, the bifurcate Killing horizon and the Schwarzschild horizon
 are obtained for specific values of $\hat{U}$ and $\hat{V}$:
 \begin{subequations}
 \begin{align}
@@ -951,7 +955,9 @@ $r$: in region $\M_{\rm I}$, from the left to the right: $r=2.01m$, $2.1m$, $2.5
 in region $\M_{\rm II}$, from the bottom to the top: $r=1.98m$, $1.9m$, $1.7m$,
 $1.5m$, $1.25m$, $m$, $0.5m$ and $0.1m$.
 The color code
-is the same as in Fig.~\ref{f:sch:kruskal_diag}.}
+is the same as in Fig.~\ref{f:sch:kruskal_diag}.
+See Sec.~\ref{s:sam:std_Carter-Penrose} for the
+SageManifolds worksheet generating this figure.}
 \end{figure}
 
 
@@ -1305,7 +1311,7 @@ $(\tilde{\M},\w{\tilde{g}})$, with $\tilde{\M}$ defined by
 (\ref{e:max:def_M_compl})-(\ref{e:max:def_scri_R2S2})
 and $\w{\tilde{g}}$ defined by (\ref{e:max:conf_metric_tUtV}) is a conformal
 completion of the maximally extented Schwarzschild spacetime $(\M,\w{g})$,
-the corresponding conformal factor begin given by (\ref{e:max:def_Omega_tUtV}).
+the conformal factor being given by (\ref{e:max:def_Omega_tUtV}).
 The Frolov-Novikov coordinates $(\tilde{U},\tilde{V},\th,\ph)$ employed in this
 construction are related to the null Kruskal-Szekeres coordinates $(U,V,\th,\ph)$
 by (\ref{e:max:def_tUtV}).
@@ -1354,9 +1360,8 @@ $1.5m$, $1.25m$, $m$, $0.5m$ and $0.1m$.
 The color code
 is the same as in Figs.~\ref{f:sch:kruskal_diag} and \ref{f:max:carter-penrose-std}.
 Contrary to the Carter-Penrose of Fig.~\ref{f:max:carter-penrose-std}, this one is
-associated to a regular conformal completion at null infinity of Schwarzschild spacetime.
-As Figs.~\ref{f:sch:kruskal_diag} and \ref{f:max:carter-penrose-std}, this figure has been produced with
-SageManifolds (cf. Appendix~\ref{s:sam}).}
+associated to a regular conformal completion at null infinity of Schwarzschild spacetime. See Sec.~\ref{s:sam:reg_Carter-Penrose} for the
+SageManifolds worksheet generating this figure.}
 \end{figure}
 
 
@@ -1382,10 +1387,36 @@ The range of $(\tilde{T},\tilde{X})$ is deduced from (\ref{e:max:range_tUtV}):
     \M:& &  -\pi < \tilde{T} - \tilde{X} <\pi,\quad
     -\pi < \tilde{T} + \tilde{X} < \pi \nonumber \\
     & &  \sinh[\tan((\tilde{T}-\tilde{X})/2)]
-        \; \sinh[\tan((\tilde{T}+\tilde{X})/2)] < 1 .
+        \; \sinh[\tan((\tilde{T}+\tilde{X})/2)] < 1 . \label{e:max:range_tTtX}
 \eea
+The picture of $(\M,\w{g})$ in the $(\tilde{T},\tilde{X})$ plane is shown in
+Fig.~\ref{f:max:carter-penrose-FN}. We shall call it a
+\defin{regular Carter-Penrose diagram}\index{Carter-Penrose diagram!regular --}
+of Schwarzschild spacetime.
+As the singular Carter-Penrose diagram of Fig.~\ref{f:max:carter-penrose-std},
+it has the property
+to display the radial null geodesics as straight lines with slope $\pm 45^\circ$,
+since $\tilde{U}$ (resp. $\tilde{V}$) is a function of $U$ only
+(resp. $V$ only) [cf. Eq.~(\ref{e:max:def_tUtV})].
+In particular, the bifurcate Killing horizon and the Schwarzschild horizon
+are defined by:
+\begin{subequations}
+\begin{align}
+    \hat{\Hor}:\quad&  \tilde{U} = 0 \quad\mbox{or}\quad \tilde{V} = 0 \\
+    \Hor:\quad &  \tilde{U} = 0 \quad\mbox{and}\quad \tilde{V} > 0 .
+\end{align}
+\end{subequations}
+These relations follow immediately from (\ref{e:max:Hor_U_V}) and
+(\ref{e:max:def_tUtV}).
 
 
-\section{Isotropic coordinates}
+At first sight, the main difference with the ``standard'' Carter-Penrose diagram
+of Fig.~\ref{f:max:carter-penrose-std} is the more complicated shape of
+the boundary around the $\tilde{T}$-axis. This follows from the third
+condition in (\ref{e:max:range_tTtX}), which is more involved than
+the third condition in (\ref{e:max:range_hThX}).
+
+
+\section{Einstein-Rosen bridge}
 
 
