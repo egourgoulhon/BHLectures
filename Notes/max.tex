@@ -566,7 +566,7 @@ original one with respect to the ``origin'' $(T,X)=(0,0)$.
 The whole spacetime manifold is then the following open subset of
 $\R^2\times\mathbb{S}^2$:
 \be \label{e:sch:def_M_extend}
-    \M = \{ p \in \R^2\times\mathbb{S}^2, \quad T^2(p) - X^2(p) < 1 \} ,
+    \encadre{ \M = \{ p \in \R^2\times\mathbb{S}^2, \quad T^2(p) - X^2(p) < 1 \} },
 \ee
 where $(T,X,\th,\ph)$ is the canonical coordinate system on $\R^2\times\mathbb{S}^2$,
 called in this context
@@ -1493,4 +1493,78 @@ boundary, as discussed in Sec.~\ref{s:max:discus_hUhV}.
 
 \section{Einstein-Rosen bridge}
 
+To get some insight on the maximally extended Schwarzschild
+spacetime $(\M,\w{g})$, let us examine the geometry of a slice of constant
+Kruskal-Szekeres time $T$, i.e. a hypersurface $\Sigma_{T_0}$ defined
+in terms of the global Kruskal-Szekeres coordinates $(T,X,\th,\ph)$ by
+$T=T_0$, where $T_0\in\mathbb{R}$ is a constant.
+The 3-uple $(x^i)=(X,\th,\ph)$ is then a coordinate system on $\Sigma_{T_0}$
+subject to the constraint expressed in (\ref{e:sch:def_M_extend}):
+\be
+    X^2 > T_0^2 - 1 .
+\ee
+Consequently
+\begin{itemize}
+\item if $|T_0|< 1$, the hypersurface $\Sigma_{T_0}$ is connected
+and diffeomorphic to $\R\times\SS^2$, the coordinate $X$ spanning $\R$ and
+$(\th,\ph)$ spanning $\SS^2$.
+\item if $|T_0| \geq 1$, $\Sigma_{T_0}$ has two connected components,
+defined by
+$X < - \sqrt{T_0^2 - 1}$ and $X > \sqrt{T_0^2 - 1}$ respectively.
+Each of them is diffeomorphic to $\R\times\SS^2$.
+\end{itemize}
+
+The geometry of $\Sigma_{T_0}$ is defined by the metric $\w{\gamma}$
+induced on it by $\w{g}$:
+\be \label{e:max:gam_induced}
+    \gamma_{ij} \D x^i \D x^j =
+    \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \D X^2
+     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
+\ee
+where $r$ is the function of $X$ defined by
+\be \label{e:max:Sigma0_r_X}
+    r = r(X) = 2 m  \tilde{W}_0(X^2 - T_0^2) .
+\ee
+The line element (\ref{e:max:gam_induced}) is obtained by setting $T=T_0$ and
+$\D T = 0$ in (\ref{e:sch:metric_KS_TX}).
+The graph of the function $r(X)$ is shown in Fig.~\ref{f:max:SigmaT0_r_X}.
+Once restricted to positive (resp. negative) values of $X$, this function is a bijection
+$(X_0, +\infty)\rightarrow (r_0, +\infty)$ (resp. $(-\infty, -X_0)\rightarrow (r_0, +\infty)$), where
+\be
+    X_0 = \sqrt{\max\left(0, T_0^2-1\right)} \qquad \mbox{and}\qquad
+    r_0 = \left\{ \begin{array}{ll}
+        2m \tilde{W}_0(-T_0^2) & \ \mbox{if}\quad  |T_0| < 1 \\
+        0 & \ \mbox{if}\quad  |T_0| \geq 1.
+        \end{array} \right.
+\ee
+The inverse of this bijection is\footnote{Let us recall that
+$\tilde{W}_0^{-1}(x) = \mathrm{e}^x (x-1)$.}
+\be \label{e:max:Sigma0_X_r}
+    X = X(r) = \pm \sqrt{\mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) + T_0^2} ,
+\ee
+with the $+$ sign on the positive-$X$ half of $\Sigma_0$ and the $-$ sign
+on the negative-$X$ half.
+
+
+\begin{figure}
+\centerline{\includegraphics[height=0.35\textheight]{max_SigmaT0_r_X.pdf}}
+\caption[]{\label{f:max:SigmaT0_r_X} \footnotesize
+Function $r = r(X)$ on the hypersurface $\Sigma_{T_0}$, for various values
+of $T_0$.}
+\end{figure}
+
+We may use the above bijection to introduce coordinates $(r,\th,\ph)$ instead of $(X,\th,\ph)$
+on each of the two (positive-$X$ and negative-$X$)
+halves of $\Sigma_0$.
+Differentiating (\ref{e:max:Sigma0_X_r}) leads to
+\[
+    \D X = \pm \frac{r \mathrm{e}^{r/2m}}{8m^2 \sqrt{\mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) + T_0^2}} \, \D r .
+\]
+Substituting in (\ref{e:max:gam_induced}) we get the expression of the
+metric on $\Sigma_0$ in terms of the coordinate $(x^i) = (r,\th,\ph)$:
+\be
+    \gamma_{ij} \D x^i \D x^j = \left(
+    1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1} \, \D r^2
+     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\ee
 
