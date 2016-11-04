@@ -235,8 +235,7 @@ obeys
 \be \label{e:max:exp_tW0}
     \mathrm{e}^{\tilde{W}_0(x)} \left( \tilde{W}_0(x) - 1 \right) = x .
 \ee
-Its
-graph is shown in Fig.~\ref{f:max:lambert_rescaled}.
+Its graph is shown in Fig.~\ref{f:max:lambert_rescaled}.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{max_lambert_rescaled.pdf}}
@@ -1527,6 +1526,10 @@ where $r$ is the function of $X$ defined by
 \ee
 The line element (\ref{e:max:gam_induced}) is obtained by setting $T=T_0$ and
 $\D T = 0$ in (\ref{e:sch:metric_KS_TX}).
+Since $r>0$, the metric (\ref{e:max:gam_induced}) is clearly positive definite,
+i.e. $\w{\gamma}$ is a Riemannian metric and $\Sigma_{T_0}$ is a
+spacelike hypersurface.
+
 The graph of the function $r(X)$ is shown in Fig.~\ref{f:max:SigmaT0_r_X}.
 Once restricted to positive (resp. negative) values of $X$, this function is a bijection
 $(X_0, +\infty)\rightarrow (r_0, +\infty)$ (resp. $(-\infty, -X_0)\rightarrow (r_0, +\infty)$), where
@@ -1562,9 +1565,54 @@ Differentiating (\ref{e:max:Sigma0_X_r}) leads to
 \]
 Substituting in (\ref{e:max:gam_induced}) we get the expression of the
 metric on $\Sigma_0$ in terms of the coordinate $(x^i) = (r,\th,\ph)$:
-\be
-    \gamma_{ij} \D x^i \D x^j = \left(
+\be \label{e:max:Sigma0_metric}
+    \gamma_{ij}\,  \D x^i \D x^j = \left(
     1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1} \, \D r^2
      +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
 \ee
+\begin{remark}
+As a check of the above formula, we notice that for $T_0=0$ it reduces to the
+metric of a slice $t=\mathrm{const}$ in Schwarzschild-Droste coordinates
+[set $\D t =0$ in Eq.~(\ref{e:sch:Schwarz_metric_SD})]. This is correct since
+the positive-$X$ half of the hypersurface $T=0$ in Kruskal-Szekeres coordinates
+coincides with the hypersurface $t=0$ in Schwarzschild-Droste coordinates,
+as it can be seen by setting $T=0$ in Eq.~(\ref{e:sch:KS_SD_I}).
+\end{remark}
+
+We may visualize the geometry of the spacelike hypersurface $\Sigma_{T_0}$
+via some isometric embedding of a 2-dimensional slice of it
+in the 3-dimensional Euclidean space $(\R^3, \w{f})$, $\w{f}$ being the standard
+flat (Euclidean) metric. Taking into account the spherical symmetry
+of $\Sigma_{T_0}$, there is no loss of generality in choosing the
+equatorial plane $\theta=\pi/2$ as the 2-dimensional slice. We shall denote
+it by $\Sigma_{T_0}^{\rm eq}$.
+Coordinates on $\Sigma_{T_0}^{\rm eq}$ are $(x^a)=(X,\ph)$, or the two patches
+$(x^a)=(r,\ph)$ (one for $X>0$, the other for $X<0$).
+If $|T_0| < 1$, the topology of $\Sigma_{T_0}^{\rm eq}$ is
+$\R\times\SS^1$, i.e. that of a cylinder, while for $|T_0| \geq 1$, it has
+two connected components, reflecting the two connected components of
+$\Sigma_{T_0}$, each of them having the topology of a cylinder.
+
+The metric induced by $\w{g}$
+on $\Sigma_{T_0}^{\rm eq}$,
+$\w{q}$ say, is obtained by setting $\th=\pi/2$ and $\D\th=0$ in
+Eq.~(\ref{e:max:Sigma0_metric}):
+\be
+    q_{ab}\,  \D x^a \D x^b = \left(
+    1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1}
+     \, \D r^2 +  r^2 \D\ph^2 .
+\ee
+Given the invariance in $\ph$, it's
+quite natural to embed $(\Sigma_{T_0}^{\rm eq},\w{q})$ as
+a surface of revolution in the Euclidean space $(\R^3, \w{f})$.
+Describing $\R^3$ with cylindrical coordinates $(x^i) = (r,z,\ph)$,
+the Euclidean metric $\w{f}$ is
+\be
+    f_{ij}\,  \D x^i \D x^j = \D r^2 + \D z^2 + r^2 \D\ph^2 .
+\ee
+A surface of revolution is described by an equation of the type
+$z = Z(r)$. The metric induced by $\w{f}$ on it is
+
+
+
 
