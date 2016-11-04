@@ -1492,6 +1492,8 @@ boundary, as discussed in Sec.~\ref{s:max:discus_hUhV}.
 
 \section{Einstein-Rosen bridge}
 
+\subsection{Hypersurface of constant Kruskal-Szekeres time}
+
 To get some insight on the maximally extended Schwarzschild
 spacetime $(\M,\w{g})$, let us examine the geometry of a slice of constant
 Kruskal-Szekeres time $T$, i.e. a hypersurface $\Sigma_{T_0}$ defined
@@ -1579,10 +1581,29 @@ coincides with the hypersurface $t=0$ in Schwarzschild-Droste coordinates,
 as it can be seen by setting $T=0$ in Eq.~(\ref{e:sch:KS_SD_I}).
 \end{remark}
 
+\subsection{Isometric embedding in the 3-dimensional Euclidean space}
+
 We may visualize the geometry of the spacelike hypersurface $\Sigma_{T_0}$
-via some isometric embedding of a 2-dimensional slice of it
+via some isometric embedding of some 2-dimensional slice of it
 in the 3-dimensional Euclidean space $(\R^3, \w{f})$, $\w{f}$ being the standard
-flat (Euclidean) metric. Taking into account the spherical symmetry
+flat (Euclidean) metric.
+By \defin{isometric embedding}\index{isometric!embedding}\index{embedding!isometric --}
+of a 2-dimensional Riemannian manifold $(\Sp,\w{g})$
+in $(\R^3,\w{f})$, it is meant a \emph{smooth embedding} $\Phi:\ \Sp \rightarrow \R^3$,
+as defined in Sec.~\ref{s:bas:embed},
+such that the metric induced on $\Phi(\Sp)$ by the Euclidean metric of $\R^3$
+coincides with the original metric $\w{g}$ on $\Sp$:
+\be \label{e:max:isometric_emb}
+    \forall p\in \Sp,\quad  \forall (\w{u},\w{v})\in (T_p \Sp)^2,\quad
+        \w{f}(\Phi^*(\w{u}), \Phi^*(\w{v})) = \w{g}(\w{u},\w{v}) ,
+\ee
+where $\Phi^*(\w{u})$ is the ``image of the vector $\w{u}$ by $\Phi$'', i.e.
+the pushforward of $\w{u}$ by $\Phi$, as defined in
+Sec.~\ref{s:bas:Lie_der_vector}. Another phrasing of the
+isometry property (\ref{e:max:isometric_emb}) is: the pullback of $\w{f}$
+on $\Sp$ by $\Phi$ coincides with $\w{g}$: $\Phi^*\w{f} = \w{g}$ [cf. Eq.~(\ref{e:bas:def_pullback})].
+
+Taking into account the spherical symmetry
 of $\Sigma_{T_0}$, there is no loss of generality in choosing the
 equatorial plane $\theta=\pi/2$ as the 2-dimensional slice. We shall denote
 it by $\Sigma_{T_0}^{\rm eq}$.
@@ -1597,7 +1618,7 @@ The metric induced by $\w{g}$
 on $\Sigma_{T_0}^{\rm eq}$,
 $\w{q}$ say, is obtained by setting $\th=\pi/2$ and $\D\th=0$ in
 Eq.~(\ref{e:max:Sigma0_metric}):
-\be
+\be \label{e:max:metric_q}
     q_{ab}\,  \D x^a \D x^b = \left(
     1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1}
      \, \D r^2 +  r^2 \D\ph^2 .
@@ -1610,9 +1631,63 @@ the Euclidean metric $\w{f}$ is
 \be
     f_{ij}\,  \D x^i \D x^j = \D r^2 + \D z^2 + r^2 \D\ph^2 .
 \ee
-A surface of revolution is described by an equation of the type
-$z = Z(r)$. The metric induced by $\w{f}$ on it is
+A surface of revolution $\Sp$ in $\R^3$ is described by an equation of the type
+$z = Z(r)$. On such a surface, one has therefore
+$\D z = Z'(r) \, \D r$, so that the metric $\w{h}$ induced by $\w{f}$ on it is
+\be \label{e:max:metric_h}
+    h_{ab}\,  \D x^a \D x^b = \left( 1 + Z'(r)^2 \right) \D r^2
+            + r^2 \D\ph^2 .
+\ee
+Comparing (\ref{e:max:metric_h}) with (\ref{e:max:metric_q}), we see that
+the isometric embedding of $\Sigma_{T_0}^{\rm eq}$ into $\R^3$
+must be
+\be
+    \begin{array}{clcl}
+    \Phi: & \Sigma_{T_0}^{\rm eq} & \longrightarrow & \R^3 \\
+        & (X,\ph) & \longmapsto & (r,z,\ph) = \left(r(X), Z(r(X)), \ph \right) ,
+    \end{array}
+\ee
+with the function $Z$ obeying
+\[
+   1 + Z'(r)^2 =  \left(
+    1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1} .
+\]
+Thanks to Eq.~(\ref{e:max:Sigma0_X_r}), this expression can be recast as
+\[
+    Z'(r)^2 = \frac{1 - T_0^2  \mathrm{e}^{-r/2m}}{
+    T_0^2  \mathrm{e}^{-r/2m} + \frac{r}{2m} - 1} =
+    \frac{\mathrm{e}^{r/2m} - T_0^2}{X(r)^2} .
+\]
+In order for the isometric embedding to be well defined, the right-hand side
+of the above equation must be non-negative. Since the denominator of the last
+term is manifestly non-negative, the sign is determined by the numerator. Hence
+the condition $\mathrm{e}^{r/2m} \geq T_0^2$, or equivalently,
+\be \label{e:max:cond_r_embed}
+    r \geq 4 m \ln |T_0| .
+\ee
+For $|T_0|\leq 1$, this condition is always fulfilled, since $\ln |T_0| \leq 0$
+and $r \geq 0$. For $|T_0| > 1$, it implies the existence of a minimal value
+of $r$,
+\be
+    r_{\rm min}(T_0) :=  4 m \ln |T_0|,
+\ee
+such that the part of $\Sigma_{T_0}^{\rm eq}$ with $r< r_{\rm min}(T_0)$
+cannot be embedded isometrically in the Euclidean 3-space.
+\begin{remark}
+The above result should not be surprising since there is
+no guarantee that a 2-dimensional Riemannian manifold can
+be isometrically embedded in the 3-dimensional Euclidean space.
+The relevant theorem here is \emph{Nash embedding theorem}\index{Nash embedding theorem}\index{embedding!Nash -- theorem} \cite{Nash56}, which
+states that any smooth Riemannian manifold of dimension $n$ can be isometrically
+embedded in the Euclidean space $(\R^m,\w{f})$, with $m \leq n(n+1)(3n+11)/2$.
+For $n=2$, we get $m\leq 51$, so there is really no guarantee that $m=3$
+is sufficient...
+\end{remark}
 
-
-
-
+Via (\ref{e:max:Sigma0_r_X}) and the fact that the rescaled Lambert function
+$\tilde{W}_0$ is an increasing function (cf. Fig.~\ref{f:max:lambert_rescaled}), of inverse $F(x)=\mathrm{e}^x(x-1)$,
+the condition (\ref{e:max:cond_r_embed}) can be turned into a condition
+on $X$:
+\be
+    |X| \geq X_{\rm min}(T_0) := |T_0| \sqrt{2\ln |T_0|} .
+\ee
