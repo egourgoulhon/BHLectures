@@ -589,6 +589,7 @@ which establishes a bijection from $(0,+\infty)$ to $(-1,+\infty)$.
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{sch_kruskal_diag.pdf}}
 \caption[]{\label{f:sch:kruskal_diag} \footnotesize
+\emph{Kruskal diagram:}
 Schwarzschild spacetime $\M$ depicted in terms of Kruskal-Szekeres coordinates $(T,X)$.
 Each point in this diagram, including the one at $(T,X)=(0,0)$,
 is actually a sphere $\SS^2$, spanned by the
@@ -730,7 +731,10 @@ Actually the coordinates
 introduced by Szekeres were $(2T/\sqrt{\mathrm{e}}, 2X/\sqrt{\mathrm{e}})$
 and have been denoted by $(v,u)$ in the article \cite{Szeke60}. Both Kruskal and Szekeres
 have used these coordinates to construct the maximal extension of Schwarzschild
-spacetime. It seems that the first maximal extension has been obtained in 1950
+spacetime. Its graphical representation in the $(X,T)$ plane (the
+\emph{Kruskal diagram}\index{Kruskal!diagram}, cf. Fig.~\ref{f:sch:kruskal_diag}) has been first presented by
+Kruskal (Fig. 2 of Ref.~\cite{Krusk60}.
+It seems that the first maximal extension has been obtained in 1950
 by John L. Synge \cite{Synge50}.
 The maximal extension has been also found by C. Fronsdal \cite{Frons59} in 1959, not via an explicit change of coordinates but rather via
 an isometric embedding the Schwarzschild spacetime in the 6-dimensional Minkowski spacetime.
@@ -1490,6 +1494,16 @@ The failure of diagram of Fig.~\ref{f:max:carter-penrose-std} to reproduce
 this behavior reflects the fact that the coordinates $(\hat{T},\hat{X})$ are singular on the
 boundary, as discussed in Sec.~\ref{s:max:discus_hUhV}.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{max_constant_T_slices.pdf}}
+\caption[]{\label{f:max:constant_T_slices} \footnotesize
+Kruskal diagram with the hypersurfaces $\Sigma_{T_0}$ (defined by $T=T_0 = \mathrm{const.}$) as blue horizontal lines. For $|T_0|>1$, the dotted part of
+$\Sigma_{T_0}$ corresponds to a region that cannot be embedded isometrically in
+the Euclidean space. When $T_0$ varies, the limit of these regions form
+the grey dotted curve.}
+\end{figure}
+
+
 \section{Einstein-Rosen bridge}
 
 \subsection{Hypersurface of constant Kruskal-Szekeres time}
@@ -1498,7 +1512,8 @@ To get some insight on the maximally extended Schwarzschild
 spacetime $(\M,\w{g})$, let us examine the geometry of a slice of constant
 Kruskal-Szekeres time $T$, i.e. a hypersurface $\Sigma_{T_0}$ defined
 in terms of the global Kruskal-Szekeres coordinates $(T,X,\th,\ph)$ by
-$T=T_0$, where $T_0\in\mathbb{R}$ is a constant.
+$T=T_0$, where $T_0\in\mathbb{R}$ is a constant
+(cf. Fig.~\ref{f:max:constant_T_slices}).
 The 3-uple $(x^i)=(X,\th,\ph)$ is then a coordinate system on $\Sigma_{T_0}$
 subject to the constraint expressed in (\ref{e:sch:def_M_extend}):
 \be
@@ -1511,9 +1526,23 @@ and diffeomorphic to $\R\times\SS^2$, the coordinate $X$ spanning $\R$ and
 $(\th,\ph)$ spanning $\SS^2$.
 \item if $|T_0| \geq 1$, $\Sigma_{T_0}$ has two connected components,
 defined by
-$X < - \sqrt{T_0^2 - 1}$ and $X > \sqrt{T_0^2 - 1}$ respectively.
+$X < - \sqrt{T_0^2 - 1}$ and $X > \sqrt{T_0^2 - 1}$ respectively
+(cf. Fig.~\ref{f:max:constant_T_slices}).
 Each of them is diffeomorphic to $\R\times\SS^2$.
 \end{itemize}
+For future convenience, we split $\Sigma_{T_0}$ in two disjoint parts, according
+to the sign of $X$:
+\be
+    \Sigma^+_{T_0} = \left\{ p \in \Sigma_{T_0},\quad X(p) \geq 0 \right\}
+    \quad\mbox{and}\quad
+    \Sigma^-_{T_0} = \left\{ p \in \Sigma_{T_0},\quad X(p) < 0 \right\} .
+\ee
+For $|T_0|< 1$, there is a slight asymmetry between the
+two parts: $\Sigma^+_{T_0}$ is a manifold with boundary
+(cf. Sec.~\ref{s:bas:manif_boundary}), the boundary corresponding
+to $X=0$, while $\Sigma^-_{T_0}$ is not.
+For $|T_0|\geq 1$, $\Sigma^+_{T_0}$ and $\Sigma^-_{T_0}$ are nothing but the
+two connected components of $\Sigma_{T_0}$.
 
 The geometry of $\Sigma_{T_0}$ is defined by the metric $\w{\gamma}$
 induced on it by $\w{g}$:
@@ -1535,8 +1564,12 @@ spacelike hypersurface.
 The graph of the function $r(X)$ is shown in Fig.~\ref{f:max:SigmaT0_r_X}.
 Once restricted to positive (resp. negative) values of $X$, this function is a bijection
 $(X_0, +\infty)\rightarrow (r_0, +\infty)$ (resp. $(-\infty, -X_0)\rightarrow (r_0, +\infty)$), where
-\be
-    X_0 = \sqrt{\max\left(0, T_0^2-1\right)} \qquad \mbox{and}\qquad
+\be \label{e:max:def_X0_r0}
+    X_0 = \left\{ \begin{array}{ll}
+        0 & \ \mbox{if}\quad  |T_0| < 1 \\
+        \sqrt{T_0^2-1} & \ \mbox{if}\quad  |T_0| \geq 1.
+        \end{array} \right.
+    \quad \mbox{and}\quad
     r_0 = \left\{ \begin{array}{ll}
         2m \tilde{W}_0(-T_0^2) & \ \mbox{if}\quad  |T_0| < 1 \\
         0 & \ \mbox{if}\quad  |T_0| \geq 1.
@@ -1547,26 +1580,24 @@ $\tilde{W}_0^{-1}(x) = \mathrm{e}^x (x-1)$.}
 \be \label{e:max:Sigma0_X_r}
     X = X(r) = \pm \sqrt{\mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) + T_0^2} ,
 \ee
-with the $+$ sign on the positive-$X$ half of $\Sigma_0$ and the $-$ sign
-on the negative-$X$ half.
-
+with the $+$ sign on $\Sigma^+_{T_0}$ and the $-$ sign
+on $\Sigma^-_{T_0}$.
 
 \begin{figure}
 \centerline{\includegraphics[height=0.35\textheight]{max_SigmaT0_r_X.pdf}}
 \caption[]{\label{f:max:SigmaT0_r_X} \footnotesize
-Function $r = r(X)$ on the hypersurface $\Sigma_{T_0}$, for various values
-of $T_0$.}
+Function $r = r(X)$ on the hypersurface $\Sigma_{T_0}$, for the same values
+of $T_0$ as in Fig.~\ref{f:max:constant_T_slices}.}
 \end{figure}
 
 We may use the above bijection to introduce coordinates $(r,\th,\ph)$ instead of $(X,\th,\ph)$
-on each of the two (positive-$X$ and negative-$X$)
-halves of $\Sigma_0$.
+on each of the two regions $\Sigma^+_{T_0}$ and $\Sigma^-_{T_0}$.
 Differentiating (\ref{e:max:Sigma0_X_r}) leads to
 \[
     \D X = \pm \frac{r \mathrm{e}^{r/2m}}{8m^2 \sqrt{\mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) + T_0^2}} \, \D r .
 \]
 Substituting in (\ref{e:max:gam_induced}) we get the expression of the
-metric on $\Sigma_0$ in terms of the coordinate $(x^i) = (r,\th,\ph)$:
+metric on $\Sigma_{T_0}$ in terms of the coordinates $(x^i) = (r,\th,\ph)$:
 \be \label{e:max:Sigma0_metric}
     \gamma_{ij}\,  \D x^i \D x^j = \left(
     1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1} \, \D r^2
@@ -1576,9 +1607,11 @@ metric on $\Sigma_0$ in terms of the coordinate $(x^i) = (r,\th,\ph)$:
 As a check of the above formula, we notice that for $T_0=0$ it reduces to the
 metric of a slice $t=\mathrm{const}$ in Schwarzschild-Droste coordinates
 [set $\D t =0$ in Eq.~(\ref{e:sch:Schwarz_metric_SD})]. This is correct since
-the positive-$X$ half of the hypersurface $T=0$ in Kruskal-Szekeres coordinates
+the positive-$X$ half of the hypersurface $T=0$ in Kruskal-Szekeres coordinates,
+i.e. $\Sigma_0^+$,
 coincides with the hypersurface $t=0$ in Schwarzschild-Droste coordinates,
-as it can be seen by setting $T=0$ in Eq.~(\ref{e:sch:KS_SD_I}).
+as it can be seen by setting $T=0$ in Eq.~(\ref{e:sch:KS_SD_I})
+(see also Fig.~\ref{f:max:constant_T_slices}).
 \end{remark}
 
 \subsection{Isometric embedding in the 3-dimensional Euclidean space}
@@ -1607,12 +1640,14 @@ Taking into account the spherical symmetry
 of $\Sigma_{T_0}$, there is no loss of generality in choosing the
 equatorial plane $\theta=\pi/2$ as the 2-dimensional slice. We shall denote
 it by $\Sigma_{T_0}^{\rm eq}$.
-Coordinates on $\Sigma_{T_0}^{\rm eq}$ are $(x^a)=(X,\ph)$, or the two patches
-$(x^a)=(r,\ph)$ (one for $X>0$, the other for $X<0$).
+Coordinates on $\Sigma_{T_0}^{\rm eq}$ are $(x^a)=(X,\ph)$, or
+on each of the two parts $\Sigma_{T_0}^{+,\rm eq}$ ($X\geq 0$) and
+$\Sigma_{T_0}^{-,\rm eq}$ ($X<0$),
+$(x^a)=(r,\ph)$.
 If $|T_0| < 1$, the topology of $\Sigma_{T_0}^{\rm eq}$ is
 $\R\times\SS^1$, i.e. that of a cylinder, while for $|T_0| \geq 1$, it has
-two connected components, reflecting the two connected components of
-$\Sigma_{T_0}$, each of them having the topology of a cylinder.
+two connected components, $\Sigma_{T_0}^{+,\rm eq}$ and
+$\Sigma_{T_0}^{-,\rm eq}$, each of them having the topology of a cylinder.
 
 The metric induced by $\w{g}$
 on $\Sigma_{T_0}^{\rm eq}$,
@@ -1623,7 +1658,7 @@ Eq.~(\ref{e:max:Sigma0_metric}):
     1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1}
      \, \D r^2 +  r^2 \D\ph^2 .
 \ee
-Given the invariance in $\ph$, it's
+Given the invariance in $\ph$, it is
 quite natural to embed $(\Sigma_{T_0}^{\rm eq},\w{q})$ as
 a surface of revolution in the Euclidean space $(\R^3, \w{f})$.
 Describing $\R^3$ with cylindrical coordinates $(x^i) = (r,z,\ph)$,
@@ -1638,28 +1673,39 @@ $\D z = Z'(r) \, \D r$, so that the metric $\w{h}$ induced by $\w{f}$ on it is
     h_{ab}\,  \D x^a \D x^b = \left( 1 + Z'(r)^2 \right) \D r^2
             + r^2 \D\ph^2 .
 \ee
-Comparing (\ref{e:max:metric_h}) with (\ref{e:max:metric_q}), we see that
-the isometric embedding of $\Sigma_{T_0}^{\rm eq}$ into $\R^3$
-must be
-\be
+Comparing (\ref{e:max:metric_h}) with (\ref{e:max:metric_q}),
+we see that a possible isometric embedding of $\Sigma_{T_0}^{\rm eq}$ into $\R^3$
+is
+\be \label{e:max:def_embedding_Phi}
     \begin{array}{clcl}
     \Phi: & \Sigma_{T_0}^{\rm eq} & \longrightarrow & \R^3 \\
-        & (X,\ph) & \longmapsto & (r,z,\ph) = \left(r(X), Z(r(X)), \ph \right) ,
+        & (X,\ph) & \longmapsto & (r,z,\ph) = \left(r(X), \pm Z(r(X)), \ph \right) ,
     \end{array}
 \ee
-with the function $Z$ obeying
+with (i) the sign $\pm$ being $+$ on $\Sigma_{T_0}^{+,\rm eq}$ and $-$ on
+$\Sigma_{T_0}^{-,\rm eq}$ and (ii) the function $Z$ obeying
 \[
    1 + Z'(r)^2 =  \left(
     1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1} .
 \]
 Thanks to Eq.~(\ref{e:max:Sigma0_X_r}), this expression can be recast as
-\[
+\be \label{e:max:Zp2}
     Z'(r)^2 = \frac{1 - T_0^2  \mathrm{e}^{-r/2m}}{
     T_0^2  \mathrm{e}^{-r/2m} + \frac{r}{2m} - 1} =
     \frac{\mathrm{e}^{r/2m} - T_0^2}{X(r)^2} .
-\]
+\ee
+For $|T_0|<1$, i.e. when $\Sigma_{T_0}^{\rm eq}$ is connected, the
+map (\ref{e:max:def_embedding_Phi}) defines a smooth embedding if, and only
+if, at the boundary $X=0$ between $\Sigma_{T_0}^{+,\rm eq}$ and
+$\Sigma_{T_0}^{-,\rm eq}$, the following holds:
+\be
+    Z(r(0)) = 0 \quad\mbox{and}\quad
+\ee
+
+For the embedding to be smooth at the bound
+
 In order for the isometric embedding to be well defined, the right-hand side
-of the above equation must be non-negative. Since the denominator of the last
+of (\ref{e:max:Zp2}) must be non-negative. Since the denominator of the last
 term is manifestly non-negative, the sign is determined by the numerator. Hence
 the condition $\mathrm{e}^{r/2m} \geq T_0^2$, or equivalently,
 \be \label{e:max:cond_r_embed}
@@ -1669,9 +1715,9 @@ For $|T_0|\leq 1$, this condition is always fulfilled, since $\ln |T_0| \leq 0$
 and $r \geq 0$. For $|T_0| > 1$, it implies the existence of a minimal value
 of $r$,
 \be
-    r_{\rm min}(T_0) :=  4 m \ln |T_0|,
+    r_{\rm emb}(T_0) :=  4 m \ln |T_0|,
 \ee
-such that the part of $\Sigma_{T_0}^{\rm eq}$ with $r< r_{\rm min}(T_0)$
+such that the part of $\Sigma_{T_0}^{\rm eq}$ with $r< r_{\rm emb}(T_0)$
 cannot be embedded isometrically in the Euclidean 3-space.
 \begin{remark}
 The above result should not be surprising since there is
@@ -1689,5 +1735,34 @@ $\tilde{W}_0$ is an increasing function (cf. Fig.~\ref{f:max:lambert_rescaled}),
 the condition (\ref{e:max:cond_r_embed}) can be turned into a condition
 on $X$:
 \be
-    |X| \geq X_{\rm min}(T_0) := |T_0| \sqrt{2\ln |T_0|} .
+    |X| \geq X_{\rm emb}(T_0) := |T_0| \sqrt{2\ln |T_0|} .
+\ee
+This limit is shown as the grey dotted curve in Fig.~\ref{f:max:constant_T_slices}.
+
+Summarizing, the minimal value of $r$ on the embedded surface is
+$r_0$ [cf. Eq.~(\ref{e:max:def_X0_r0})] for $|T_0|\leq 1$ or
+$r_{\rm emb}(T_0)$ for $|T_0| > 1$:
+\be
+    r_{\rm min}(T_0) = \left\{ \begin{array}{ll}
+        2m \tilde{W}_0(-T_0^2) & \ \mbox{if}\quad  |T_0| \leq 1 \\
+        4 m \ln |T_0| & \ \mbox{if}\quad  |T_0| > 1.
+        \end{array} \right.
+\ee
+Note that $r_{\rm min}(T_0)$ is a continuous function, with the peculiar values $r_{\rm min}(0) = 2m$ and $r_{\rm min}(1) = 0$.
+The embedding function $Z(r)$ is found by integration of $Z'(r)$, as given
+by (\ref{e:max:Zp2}), from $r_{\rm min}(T_0)$ to $r$:
+\be
+    Z(r) = 2m \int_{\frac{\scriptstyle r_{\rm min}(T_0)}{\scriptstyle 2m}}^{\frac{\scriptstyle r}{\scriptstyle 2m}}
+        \sqrt{ \frac{1 - T_0^2 \mathrm{e}^{-x}}{ T_0^2 \mathrm{e}^{-x} + x - 1}}
+        \, \D x .
+\ee
+The integral cannot be computed exactly in terms of elementary functions, except for
+$T_0 = 0$, where it reduces to
+\[
+    Z(r) = 2 m \int_1^{\frac{\scriptstyle r}{\scriptstyle 2m}}
+        \frac{\D x}{\sqrt{x-1}}  \qquad (T_0=0) .
+\]
+Hence
+\be
+    \encadre{ Z(r) = 4 m \sqrt{\frac{r}{2m} - 1 }} \qquad (T_0=0).
 \ee
