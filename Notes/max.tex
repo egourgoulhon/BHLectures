@@ -1699,12 +1699,17 @@ map (\ref{e:max:def_embedding_Phi}) defines a smooth embedding if, and only
 if, at the boundary $X=0$ between $\Sigma_{T_0}^{+,\rm eq}$ and
 $\Sigma_{T_0}^{-,\rm eq}$, the following holds:
 \be
-    Z(r(0)) = 0 \quad\mbox{and}\quad
+    Z(r(0)) = 0 \quad\mbox{and}\quad Z'(r(0)) = \infty .
 \ee
-
-For the embedding to be smooth at the bound
-
-In order for the isometric embedding to be well defined, the right-hand side
+The condition $Z(r(0)) = 0$ insures the continuity of the embedded surface
+$\Phi(\Sigma_{T_0}^{\rm eq})$,
+while $Z'(r(0)) = +\infty$ insures that it has a vertical tangent at
+the junction between $\Phi(\Sigma_{T_0}^{+,\rm eq})$ and
+$\Phi(\Sigma_{T_0}^{-,\rm eq})$, so that it is
+a smooth surface. Fortunately, the condition $Z'(r(0)) = \infty$
+is automatically fulfilled from the second expression of
+$Z'(r)^2$ in (\ref{e:max:Zp2}): $Z'(r)^2$ clearly diverges at $X=0$.
+Moreover, in order for the isometric embedding $\Phi$ to be well defined, the right-hand side
 of (\ref{e:max:Zp2}) must be non-negative. Since the denominator of the last
 term is manifestly non-negative, the sign is determined by the numerator. Hence
 the condition $\mathrm{e}^{r/2m} \geq T_0^2$, or equivalently,
@@ -1766,3 +1771,27 @@ Hence
 \be
     \encadre{ Z(r) = 4 m \sqrt{\frac{r}{2m} - 1 }} \qquad (T_0=0).
 \ee
+We recognize the equation of a parboloid of revolution around the $z$-axis.
+It is known as \defin{Flamm paraboloid}\index{Flamm paraboloid} \cite{Flamm1916} and is depicted in Fig.~\ref{f:max:flamm_paraboloid}.
+
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{max_flamm_paraboloid.png}}
+\caption[]{\label{f:max:flamm_paraboloid} \footnotesize
+Flamm paraboloid: isometric embedding of a slice $T=0$ and $\th=\pi/2$
+of Schwarzschild spacetime in the Euclidean 3-space.}
+\end{figure}
+
+\begin{figure}
+\begin{tabular}{ccccc}
+\includegraphics[width=0.18\textwidth]{max_flamm_paraboloid.png} &
+\includegraphics[width=0.18\textwidth]{max_embedding_T0_05.png} &
+\includegraphics[width=0.18\textwidth]{max_embedding_T0_10.png} &
+\includegraphics[width=0.18\textwidth]{max_embedding_T0_15.png} &
+\includegraphics[width=0.18\textwidth]{max_embedding_T0_20.png} \\
+$T_0=0$ & $T_0=0.5$ & $T_0=1$ & $T_0=1.5$ & $T_0=2$
+\end{tabular}
+\caption[]{\label{f:max:embeddings} \footnotesize
+Sequence of isometric embeddings.}
+\end{figure}
+
+
