@@ -1719,7 +1719,7 @@ the condition $\mathrm{e}^{r/2m} \geq T_0^2$, or equivalently,
 For $|T_0|\leq 1$, this condition is always fulfilled, since $\ln |T_0| \leq 0$
 and $r \geq 0$. For $|T_0| > 1$, it implies the existence of a minimal value
 of $r$,
-\be
+\be \label{e:max:r_emb}
     r_{\rm emb}(T_0) :=  4 m \ln |T_0|,
 \ee
 such that the part of $\Sigma_{T_0}^{\rm eq}$ with $r< r_{\rm emb}(T_0)$
@@ -1744,6 +1744,13 @@ on $X$:
 \ee
 This limit is shown as the grey dotted curve in Fig.~\ref{f:max:constant_T_slices}.
 
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{max_flamm_paraboloid.png}}
+\caption[]{\label{f:max:flamm_paraboloid} \footnotesize
+Flamm paraboloid\index{Flamm paraboloid}: isometric embedding in the Euclidean space
+of the spacelike slice $T=0$ and $\th=\pi/2$ of Schwarzschild spacetime.}
+\end{figure}
+
 Summarizing, the minimal value of $r$ on the embedded surface is
 $r_0$ [cf. Eq.~(\ref{e:max:def_X0_r0})] for $|T_0|\leq 1$ or
 $r_{\rm emb}(T_0)$ for $|T_0| > 1$:
@@ -1756,7 +1763,7 @@ $r_{\rm emb}(T_0)$ for $|T_0| > 1$:
 Note that $r_{\rm min}(T_0)$ is a continuous function, with the peculiar values $r_{\rm min}(0) = 2m$ and $r_{\rm min}(1) = 0$.
 The embedding function $Z(r)$ is found by integration of $Z'(r)$, as given
 by (\ref{e:max:Zp2}), from $r_{\rm min}(T_0)$ to $r$:
-\be
+\be \label{e:max:Z_r_integral}
     Z(r) = 2m \int_{\frac{\scriptstyle r_{\rm min}(T_0)}{\scriptstyle 2m}}^{\frac{\scriptstyle r}{\scriptstyle 2m}}
         \sqrt{ \frac{1 - T_0^2 \mathrm{e}^{-x}}{ T_0^2 \mathrm{e}^{-x} + x - 1}}
         \, \D x .
@@ -1772,14 +1779,15 @@ Hence
     \encadre{ Z(r) = 4 m \sqrt{\frac{r}{2m} - 1 }} \qquad (T_0=0).
 \ee
 We recognize the equation of a parboloid of revolution around the $z$-axis.
-It is known as \defin{Flamm paraboloid}\index{Flamm paraboloid} \cite{Flamm1916} and is depicted in Fig.~\ref{f:max:flamm_paraboloid}.
-
-\begin{figure}
-\centerline{\includegraphics[height=0.3\textheight]{max_flamm_paraboloid.png}}
-\caption[]{\label{f:max:flamm_paraboloid} \footnotesize
-Flamm paraboloid\index{Flamm paraboloid}: isometric embedding in the Euclidean space
-of the 2-dimensional spacelike slice $T=0$ and $\th=\pi/2$ of Schwarzschild spacetime.}
-\end{figure}
+It is known as \defin{Flamm paraboloid}\index{Flamm paraboloid} \cite{Flamm1916} and is depicted in Fig.~\ref{f:max:flamm_paraboloid}. Its topology is clearly that of
+a cylinder ($\R\times\SS^1$). The geometry is different though: from top
+to bottom, the radius of the ``cylinder'' decreases to a minimal value, $r_{\rm min}=2m$,
+and then increases. The ``neck'' around $r=r_{\rm min}$, or equivalently $X=0$, is called the
+\defin{Einstein-Rosen bridge}\index{Einstein-Rosen bridge} \cite{EinstR35}.
+Contemplating the slice $T=0$ in the
+Kruskal diagram of Fig.~\ref{f:max:constant_T_slices}, we realize that
+this ``bridge'' connects the two asymptotically flat regions $\M_{\rm I}$ and
+$\M_{\rm III}$.
 
 \begin{figure}
 \begin{center}
@@ -1797,13 +1805,28 @@ $T_0=1.5$ & $T_0=2$
 \end{center}
 \caption[]{\label{f:max:embeddings} \footnotesize
 Sequence of isometric embeddings in the Euclidean space
-of 2-dimensional spacelike slices of Schwarzschild spacetime defined by
+of spacelike slices of Schwarzschild spacetime defined by
 $T=T_0$ and $\th=\pi/2$. The slices are those shown in the Kruskal diagram
 of Fig.~\ref{f:max:constant_T_slices}. The first embedding ($T_0=0$) is the
 Flamm paraboloid depicted in Fig.~\ref{f:max:flamm_paraboloid}.
 In the disconnected case ($T_0=1.5$ and $T_0=2.0$),
 the distance
-between the upper and lower parts is arbitrary (chosen here to be $\Delta z = 0$).}
+between the upper and lower parts is arbitrary (chosen here to be $\Delta z = 1$).}
 \end{figure}
+
+When $T_0\not=0$, the integral in (\ref{e:max:Z_r_integral}) has to
+be computed numerically (see Sec.~?? for the computation with SageMath).
+The resulting embedded surfaces $\Phi(\Sigma_{T_0}^{\rm eq})$ are shown in
+Fig.~\ref{f:max:embeddings} for the values of $T_0$ involved in the
+Kruskal diagram of Fig.~\ref{f:max:constant_T_slices}.
+When $T_0$ increases from $0$, the ``neck'' becomes thiner and thiner.
+At $T_0=1$, it ceases to be connected. As mentionned above, for $T_0 > 1$,
+the surface $\Sigma_{T_0}^{\rm eq}$ can no longer be entirely
+isometrically embedded in the Euclidean 3-space. Hence the holes in the central
+parts of the surfaces for $T_0=1.5$ and $T_0=2$. These holes correspond
+to the dotted segments in Fig.~\ref{f:max:constant_T_slices} and their radii
+are given by Eq.~(\ref{e:max:r_emb}). Note that the tangents to the
+embedded surfaces at their inner boundary is horizontal.
+
 
 
