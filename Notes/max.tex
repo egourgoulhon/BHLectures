@@ -1745,10 +1745,12 @@ on $X$:
 This limit is shown as the grey dotted curve in Fig.~\ref{f:max:constant_T_slices}.
 
 \begin{figure}
-\centerline{\includegraphics[height=0.3\textheight]{max_flamm_paraboloid.png}}
+\centerline{\includegraphics[height=0.4\textheight]{max_flamm_paraboloid.png}}
 \caption[]{\label{f:max:flamm_paraboloid} \footnotesize
-Flamm paraboloid\index{Flamm paraboloid}: isometric embedding in the Euclidean space
-of the spacelike slice $T=0$ and $\th=\pi/2$ of Schwarzschild spacetime.}
+Flamm paraboloid\index{Flamm paraboloid}: isometric embedding in the Euclidean $\R^3$
+of the spacelike slice $T=0$ and $\th=\pi/2$ of Schwarzschild spacetime.
+The $(x,y)$ coordinates are the standard Cartesian coordinates of $\R^3$ related
+to $(r,\ph)$ via $x=r\cos\ph$ and $y=r\sin\ph$. The labels are in units of $m$.}
 \end{figure}
 
 Summarizing, the minimal value of $r$ on the embedded surface is
@@ -1787,6 +1789,12 @@ and then increases. The ``neck'' around $r=r_{\rm min}$, or equivalently $X=0$, 
 Contemplating the slice $T=0$ in the
 Kruskal diagram of Fig.~\ref{f:max:constant_T_slices}, we realize that
 this ``bridge'' connects the two asymptotically flat regions $\M_{\rm I}$ and
+$\M_{\rm III}$. The Einstein-Rosen bridge is also called
+the \defin{Schwarzschild wormhole}\index{Schwarzschild!wormhole}\index{wormhole!Schwarzschild --}. However, it is not
+a \emph{traversable}\index{traversable!wormhole}\index{wormhole!traversable --} wormhole: it is clear from the Kruskal diagram
+(Figs.~\ref{f:sch:kruskal_diag} and \ref{f:max:constant_T_slices})
+or the Carter-Penrose diagram (Fig.~\ref{f:max:carter-penrose-FN}) that no
+timelike or null worldline can go from $\M_{\rm I}$ to
 $\M_{\rm III}$.
 
 \begin{figure}
@@ -1794,20 +1802,22 @@ $\M_{\rm III}$.
 \begin{tabular}{ccc}
 \includegraphics[width=0.33\textwidth]{max_flamm_paraboloid.png} &
 \includegraphics[width=0.33\textwidth]{max_embedding_T0_05.png} &
-\includegraphics[width=0.33\textwidth]{max_embedding_T0_10.png} \\
-$T_0=0$ & $T_0=0.5$ & $T_0=1$
+\includegraphics[width=0.33\textwidth]{max_embedding_T0_09.png} \\
+$T_0=0$ & $T_0=0.5$ & $T_0=0.9$
 \end{tabular} \\
-\begin{tabular}{cc}
+\begin{tabular}{ccc}
+\includegraphics[width=0.33\textwidth]{max_embedding_T0_10.png} &
 \includegraphics[width=0.33\textwidth]{max_embedding_T0_15.png} &
 \includegraphics[width=0.33\textwidth]{max_embedding_T0_20.png} \\
-$T_0=1.5$ & $T_0=2$
+$T_0=1$ & $T_0=1.5$ & $T_0=2$
 \end{tabular}
 \end{center}
 \caption[]{\label{f:max:embeddings} \footnotesize
 Sequence of isometric embeddings in the Euclidean space
 of spacelike slices of Schwarzschild spacetime defined by
 $T=T_0$ and $\th=\pi/2$. The slices are those shown in the Kruskal diagram
-of Fig.~\ref{f:max:constant_T_slices}. The first embedding ($T_0=0$) is the
+of Fig.~\ref{f:max:constant_T_slices} (except for $T_0=0.9$).
+The first embedding ($T_0=0$) is the
 Flamm paraboloid depicted in Fig.~\ref{f:max:flamm_paraboloid}.
 In the disconnected case ($T_0=1.5$ and $T_0=2.0$),
 the distance
@@ -1826,7 +1836,33 @@ isometrically embedded in the Euclidean 3-space. Hence the holes in the central
 parts of the surfaces for $T_0=1.5$ and $T_0=2$. These holes correspond
 to the dotted segments in Fig.~\ref{f:max:constant_T_slices} and their radii
 are given by Eq.~(\ref{e:max:r_emb}). Note that the tangents to the
-embedded surfaces at their inner boundary is horizontal.
+embedded surfaces at their inner boundaries are horizontal.
 
+The evolution of $\Sigma_{T_0}$ as $T_0$ increases is not surprising if one
+remembers that the Kruskal-Szekeres time coordinate $T$ is not associated
+with any timelike Killing vector of Schwarzschild spacetime.
+The sequence shown in Fig.~\ref{f:max:embeddings} can be thought of as
+representing the dynamics of the Schwarzschild wormhole, in particular
+its ``pinching-off'' at $T_0=1$, which forbids any traveler to go through it.
+
+\begin{remark}
+We have restricted ourselves to slices $T=\mathrm{const.}$ of Schwarzschild
+spacetime, with the isometric embedding limitation for $|T|>1$. We refer the
+reader to Ref.~\cite{CollaK12} for more general slices and the corresponding
+embedding diagrams.
+\end{remark}
+
+\begin{remark}
+There are many inexact figures regarding embeddings of spatial sections
+of Schwarz\-schild spacetime in the literature, including in renown textbooks.
+A first common error is to draw the two ends of the embedded surface as asymptotic to flat
+planes, which a paraboloid is not. This is correct from a topological point of view,
+but not from the geometrical one, i.e. the embedding depicted in this way
+is not isometric. A second error regards the embeddings for $|T_0|> 1$, which
+are depicted as variants of that $T_0=1$ (cf. Fig.~\ref{f:max:embeddings}),
+with two spikes at $r=0$, simply pushed apart. However,
+as discussed above, the isometric embeddings with $T=\mathrm{const}$
+cannot reach the region near $r=0$ for $|T_0|> 1$.
+\end{remark}
 
 
