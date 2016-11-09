@@ -1777,7 +1777,7 @@ $T_0 = 0$, where it reduces to
         \frac{\D x}{\sqrt{x-1}}  \qquad (T_0=0) .
 \]
 Hence
-\be
+\be \label{e:max:Z_r_Flamm}
     \encadre{ Z(r) = 4 m \sqrt{\frac{r}{2m} - 1 }} \qquad (T_0=0).
 \ee
 We recognize the equation of a parboloid of revolution around the $z$-axis.
@@ -1825,7 +1825,7 @@ between the upper and lower parts is arbitrary (chosen here to be $\Delta z = 1$
 \end{figure}
 
 When $T_0\not=0$, the integral in (\ref{e:max:Z_r_integral}) has to
-be computed numerically (see Sec.~?? for the computation with SageMath).
+be computed numerically (see Sec.~\ref{s:sam:Einstein-Rosen} for the computation with SageMath).
 The resulting embedded surfaces $\Phi(\Sigma_{T_0}^{\rm eq})$ are shown in
 Fig.~\ref{f:max:embeddings} for the values of $T_0$ involved in the
 Kruskal diagram of Fig.~\ref{f:max:constant_T_slices}.
@@ -1852,17 +1852,33 @@ reader to Ref.~\cite{CollaK12} for more general slices and the corresponding
 embedding diagrams.
 \end{remark}
 
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{max_flamm_paraboloid_far.png}}
+\caption[]{\label{f:max:flamm_paraboloid_far} \footnotesize
+Same Flamm paraboloid\index{Flamm paraboloid} as in Fig.~\ref{f:max:flamm_paraboloid}
+but seen from farther away. Despite being more and more flat, none of the two sheets
+is asymptotic to a plane.}
+\end{figure}
+
 \begin{remark}
-There are many inexact figures regarding embeddings of spatial sections
-of Schwarz\-schild spacetime in the literature, including in renown textbooks.
+There are many inexact plots of embeddings of spatial sections
+of Schwarz\-schild spacetime in the literature, including renown textbooks.
 A first common error is to draw the two ends of the embedded surface as asymptotic to flat
-planes, which a paraboloid is not. This is correct from a topological point of view,
+planes, which a paraboloid is not (the vertical distance between the two ends grows
+unbounded, as $\sqrt{r}$, cf. Eq.~(\ref{e:max:Z_r_Flamm}) and Fig.~\ref{f:max:flamm_paraboloid_far}).
+This is correct from a topological point of view,
 but not from the geometrical one, i.e. the embedding depicted in this way
-is not isometric. A second error regards the embeddings for $|T_0|> 1$, which
+is not an isometry. Probably this results from some confusion with asymptotic
+flatness: it is true that the metric (\ref{e:max:metric_q}) tends
+to a flat metric when $r\rightarrow +\infty$, reflecting the asymptotic
+flatness of Schwarzschild spacetime, but the associated curvature does not
+decay fast enough to allow the embedded surface to be tangent to a plane.
+A second error regards the embeddings for $|T_0|> 1$, which
 are depicted as variants of that $T_0=1$ (cf. Fig.~\ref{f:max:embeddings}),
 with two spikes at $r=0$, simply pushed apart. However,
 as discussed above, the isometric embeddings with $T=\mathrm{const}$
 cannot reach the region near $r=0$ for $|T_0|> 1$.
 \end{remark}
+
 
 
