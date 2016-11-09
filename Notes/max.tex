@@ -1603,7 +1603,7 @@ metric on $\Sigma_{T_0}$ in terms of the coordinates $(x^i) = (r,\th,\ph)$:
     1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1} \, \D r^2
      +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
 \ee
-\begin{remark}
+\begin{remark} \label{r:max:check_metric_SigmaT0}
 As a check of the above formula, we notice that for $T_0=0$ it reduces to the
 metric of a slice $t=\mathrm{const}$ in Schwarzschild-Droste coordinates
 [set $\D t =0$ in Eq.~(\ref{e:sch:Schwarz_metric_SD})]. This is correct since
@@ -1780,6 +1780,13 @@ Hence
 \be \label{e:max:Z_r_Flamm}
     \encadre{ Z(r) = 4 m \sqrt{\frac{r}{2m} - 1 }} \qquad (T_0=0).
 \ee
+According to (\ref{e:max:def_embedding_Phi}), the whole surface
+$\Phi(\Sigma_{T_0}^{\rm eq})$ is obtained by considering $z = -Z(r)$ as well.
+The surface equation in terms of the cylindrical coordinates $(r,z,,\ph)$
+of $\R^3$ is then $z^2 = 16m^2(r/2m-1)$, or
+\be \label{e:max:z2_r_Flamm}
+    \encadre{ z^2 = 8 m (r - 2m) }.
+\ee
 We recognize the equation of a parboloid of revolution around the $z$-axis.
 It is known as \defin{Flamm paraboloid}\index{Flamm paraboloid} \cite{Flamm1916} and is depicted in Fig.~\ref{f:max:flamm_paraboloid}. Its topology is clearly that of
 a cylinder ($\R\times\SS^1$). The geometry is different though: from top
@@ -1880,5 +1887,17 @@ as discussed above, the isometric embeddings with $T=\mathrm{const}$
 cannot reach the region near $r=0$ for $|T_0|> 1$.
 \end{remark}
 
-
+\begin{hist}
+In 1916, very soon after the publication of Schwarzschild solution
+\cite{Schwa1916}, the Austrian physicist Ludwig Flamm (1885-1964) showed that the slice $t=\mathrm{const}$
+and $\th=\pi/2$ in Schwarzschild-Droste coordinates $(t,r,\th,\ph)$
+can be isometrically embedded in the Euclidean space as a paraboloid of
+revolution obeying Eq.~(\ref{e:max:z2_r_Flamm}) \cite{Flamm1916}.
+Let us recall that the hypersurface $T=0$ considered here coincide with the
+hypersurface $t=0$ (cf. Remark~\ref{r:max:check_metric_SigmaT0} on p.~\pageref{r:max:check_metric_SigmaT0}). Although he draw the whole paraboloid (actually
+a parabola in a 2-dimensional plot --- Fig.~2 of Ref.~\cite{Flamm1916}), Flamm did not seem to have considered
+the negative-$z$ part as physically relevant. In other words,
+he limited his considerations to $\M_{\rm I}$ and did not contemplate any bridge to
+the extension $\M_{\rm III}$.
+\end{hist}
 
