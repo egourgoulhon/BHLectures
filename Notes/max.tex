@@ -279,9 +279,9 @@ Similarly
      X = \mathrm{e}^{r_*/4m} \cosh\left( \frac{t}{4m} \right) .
 \]
 In particular, we have
-\[
+\be \label{e:max:TsX_tanh_t}
     \frac{T}{X} = \tanh\left( \frac{t}{4m} \right) .
-\]
+\ee
 From Eq.~(\ref{e:sch:def_tortoise}), we have
 \[
     \mathrm{e}^{r_*/4m} = \mathrm{e}^{r/4m} \sqrt{ \frac{r}{2m} - 1 } .
@@ -302,6 +302,10 @@ We may summarize the above relations as follows:
 Note that we have used the identity $\mathrm{artanh}\, x = 1/2 \ln\left[(1+x)/(1-x)\right]$.
 The curves of constant $t$ and constant $r$ in the $(T,X)$ plane
 are drawn in Fig.~\ref{f:sch:SD_I_KS}.
+The fact that the curves of constant $t$ are straight lines from the
+origin follow immediately
+from Eq.~(\ref{e:max:TsX_tanh_t}).
+
 \begin{remark}
 Given the properties of the $\cosh$ and $\sinh$ functions, it is clear on these
 expressions that the constraints (\ref{e:sch:X_T_range_I}) are satisfied.
@@ -375,6 +379,7 @@ the Kruskal-Szekeres ones on $\M_{\rm IEF}$:
 The various subsets of $\M_{\rm IEF}$ correspond then to the following
 coordinate ranges (cf. Fig.~\ref{f:sch:IEF_KS}):
 \begin{subequations}
+\label{e:max:range_TX_M_I_II}
 \begin{align}
  & \M_{\rm I}: \quad X > 0 \quad\mbox{and}\quad -X < T < X \\
  & \Hor: \quad X > 0 \quad\mbox{and}\quad  T = X \\
@@ -565,7 +570,7 @@ original one with respect to the ``origin'' $(T,X)=(0,0)$.
 The whole spacetime manifold is then the following open subset of
 $\R^2\times\mathbb{S}^2$:
 \be \label{e:sch:def_M_extend}
-    \encadre{ \M = \{ p \in \R^2\times\mathbb{S}^2, \quad T^2(p) - X^2(p) < 1 \} },
+    \encadre{ \M := \{ p \in \R^2\times\mathbb{S}^2, \quad T^2(p) - X^2(p) < 1 \} },
 \ee
 where $(T,X,\th,\ph)$ is the canonical coordinate system on $\R^2\times\mathbb{S}^2$,
 called in this context
@@ -608,6 +613,7 @@ Let us define the following open subsets of $\M$, which are respectively
 the images of $\M_{\rm I}$ and $\M_{\rm II}$ by the reflection through the origin
 (\ref{e:sch:origin_reflection}):
 \begin{subequations}
+\label{e:max:range_TX_M_III_IV}
 \begin{align}
  & \M_{\rm III}: \quad X < 0 \quad\mbox{and}\quad X < T < -X \\
  & \M_{\rm IV}: \quad - \sqrt{X^2+1} < T < -|X| .
@@ -657,6 +663,20 @@ at $r=0$ (future end point) and $r'=0$ (past end point). Therefore, they cannot
 be extended further. For this reason, $(\M,\w{g})$ is called the
 \defin{maximal extension}\index{maximal!extension}\index{extension!maximal --}
 of Schwarzschild spacetime.
+
+\begin{remark}
+The extended manifold $\M$ is not just the union
+$\M_{\rm I}\cup\M_{\rm II}\cup\M_{\rm III}\cup\M_{\rm IV}$, since the latter
+does not cointain the hypersurfaces $T=\pm X$ (cf. the scrict inequalities
+in Eqs.~(\ref{e:max:range_TX_M_I_II})
+and (\ref{e:max:range_TX_M_III_IV})), which are parts of $\M$ according to
+the definition (\ref{e:sch:def_M_extend}). Actually, we have
+\be
+    \M = \M_{\rm I}\cup\M_{\rm II}\cup\M_{\rm III}\cup\M_{\rm IV}\cup\hat{\Hor},
+\ee
+where $\hat{\Hor}$ is the bifurcate Killing horizon, to be discussed in
+Sec.~\ref{s:max:bifur_Kill_hor}.
+\end{remark}
 
 \subsection{Global null coordinates} \label{s:max:glo_null}
 
@@ -735,28 +755,33 @@ spacetime. Its graphical representation in the $(X,T)$ plane (the
 Kruskal (Fig. 2 of Ref.~\cite{Krusk60}.
 Actually, the maximal extension of Schwarzschild spacetime has been first constructed
 by John L. Synge in 1950 \cite{Synge50}. He used coordinates\index{Synge!coordinates} whose relation to
-Schwarzschild-Droste coordinates is more complicated than Kruskal-Szekeres one\footnote{
-For $r\geq 2m$, Synge coordinates are
-$T' = 2m \left[ \mathrm{acosh}\sqrt{\frac{r}{2m}} + \sqrt{ \frac{r}{2m}\left(\frac{r}{2m} - 1 \right) }\right]
-\sinh \left(\frac{t}{4m}\right)$
-and $X' = 2m \left[ \mathrm{acosh}\sqrt{\frac{r}{2m}} + \sqrt{ \frac{r}{2m}\left(\frac{r}{2m} - 1 \right) }\right]
-\cosh \left(\frac{t}{4m}\right)$; compare with (\ref{e:sch:KS_SD_I}). Interestingly, in his
+Schwarzschild-Droste coordinates is more complicated than the Kruskal-Szekeres one: Synge coordinates are
+$T' = R(r) \sinh \left(\frac{t}{4m}\right)$
+and $X' = R(r) \cosh \left(\frac{t}{4m}\right)$, with
+$R(r) := 2m \left[ \mathrm{acosh}\sqrt{\frac{r}{2m}} + \sqrt{ \frac{r}{2m}\left(\frac{r}{2m} - 1 \right) }\right]$; compare with (\ref{e:sch:KS_SD_I}).
+Albeit looking complicated, $R(r)$ is nothing but the primitive vanishing at
+$r=2m$ of $r\mapsto \left(\frac{r}{2m} - 1 \right) ^{-1/2}$.
+Interestingly, in his
 article \cite{Szeke60}, Szekeres says that the transformations (\ref{e:sch:KS_SD_I})
-``are essentially due to Synge''.},
-albeit both coordinate systems share some similarities: in Synge diagram\index{Synge!diagram} (Figs.~8 and 9 in Ref.~\cite{Synge50}),
+``are essentially due to Synge'', probably because they differ only in the choice
+of the function $R(r)$, the latter being
+$R_{\rm KS}(r) = \mathrm{e}^{r/4m} \sqrt{r/2m-1}$ for Kruskal-Szekeres coordinates.
+For this reason, both coordinate systems share some similarities: in Synge diagram\index{Synge!diagram} (Figs.~8 and 9 in Ref.~\cite{Synge50}),
 the bifurcate horizon appears as the two bisector lines $T' = \pm X'$ and
 the singularity $r=0$ as the hyperbola $T'^2 - X'^2 = \pi^2 m^2$ (compare with
 $T^2-X^2 = 1$ for Kruskal-Szekeres coordinates). A major difference is that
-Synge diagram is not conformal: the radial null geodesics are generally not
+Synge diagram is not ``conformal'': the radial null geodesics are generally not
 lines with $\pm 45^\circ$ slope. Even, in some regions, the coordinate $T'$
-ceases to be timelike.
-The maximal extension has been also found by C. Fronsdal \cite{Frons59} in 1959, not via an explicit change of coordinates but rather via
-an isometric embedding the Schwarzschild spacetime in the 6-dimensional Minkowski spacetime.
+ceases to be timelike\footnote{We refer the reader to Fig.~2 of Ref.~\cite{Unruh14}
+for a plot of Synge coordinates in terms of Kruskal-Szekeres ones}.
+The maximal extension of Schwarzschild spacetime
+has also been found by Christian Fronsdal \cite{Frons59} in 1959, not via any explicit change of coordinates but rather via
+an isometric embedding of the spacetime in the 6-dimensional Minkowski spacetime.
 \end{hist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Bifurcate Killing horizon}
+\section{Bifurcate Killing horizon} \label{s:max:bifur_Kill_hor}
 
 As discussed in Sec.~\ref{s:sch:max_extens}, the Schwarzschild horizon
 $\Hor$ is
@@ -1517,10 +1542,11 @@ the Euclidean space. When $T_0$ varies, the limit of these regions form
 the grey dotted curve.}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Einstein-Rosen bridge}
 
-\subsection{Hypersurface of constant Kruskal-Szekeres time}
+\subsection{Hypersurfaces of constant Kruskal-Szekeres time} \label{s:max:hyp_const_T}
 
 To get some insight on the maximally extended Schwarzschild
 spacetime $(\M,\w{g})$, let us examine the geometry of a slice of constant
@@ -1628,7 +1654,7 @@ as it can be seen by setting $T=0$ in Eq.~(\ref{e:sch:KS_SD_I})
 (see also Fig.~\ref{f:max:constant_T_slices}).
 \end{remark}
 
-\subsection{Isometric embedding in the 3-dimensional Euclidean space}
+\subsection{Isometric embedding in 3-dimensional Euclidean space}
 
 We may visualize the geometry of the spacelike hypersurface $\Sigma_{T_0}$
 via some isometric embedding of some 2-dimensional slice of it
@@ -1907,11 +1933,38 @@ In 1916, very soon after the publication of Schwarzschild solution
 and $\th=\pi/2$ in Schwarzschild-Droste coordinates $(t,r,\th,\ph)$
 can be isometrically embedded in the Euclidean space as a paraboloid of
 revolution obeying Eq.~(\ref{e:max:z2_r_Flamm}) \cite{Flamm1916}.
-Let us recall that the hypersurface $T=0$ considered here coincide with the
+Let us recall that the positive-$X$ part of the hypersurface $T=0$ considered here coincides with the
 hypersurface $t=0$ (cf. Remark~\ref{r:max:check_metric_SigmaT0} on p.~\pageref{r:max:check_metric_SigmaT0}). Although he draw the whole paraboloid (actually
 a parabola in a 2-dimensional plot --- Fig.~2 of Ref.~\cite{Flamm1916}), Flamm did not seem to have considered
 the negative-$z$ part as physically relevant. In other words,
 he limited his considerations to $\M_{\rm I}$ and did not contemplate any bridge to
 the extension $\M_{\rm III}$.
 \end{hist}
+
+\subsection{Isotropic coordinates}
+
+Let us consider a hypersurface of constant Schwarzschild-Droste time $t$
+in $\M_{\rm I}$. According to Eq.~(\ref{e:max:TsX_tanh_t}), this hypersurface
+obeys
+\be \label{e:max:T_X_const_t}
+    T = \tanh\left(\frac{t}{4m}\right) \, X,
+\ee
+with $X>0$,
+which implies that it is represented by a straight half-line from the origin
+in the Kruskal diagram (cf. Fig.~\ref{f:sch:kruskal_diag}).
+Similarly, a hypersurface of constant $t'$
+in $\M_{\rm III}$ obeys an equation identical to (\ref{e:max:T_X_const_t}),
+except for $t$ replaced by $t'$ and $X<0$ [cf. Eq.~(\ref{e:sch:KS_SD_III})].
+Accordingly, for $t'=t$, the union of these two hypersurfaces
+forms a hypersurface of $\M$ ruled by Eq.~(\ref{e:max:T_X_const_t}),
+with $X<0$ or $X>0$. If we add the points $(T,X)=(0,0)$ to it (i.e. the
+bifurcation sphere $\Sp$ (cf. Sec.~\ref{s:max:bifur_Kill_hor}),
+we obtain a connected hypersurface in which $X$ takes all values in
+the range $(-\infty,+\infty)$. Let us call $\mathcal{S}_t$ this hypersurface.
+In other words, $\mathcal{S}_t$ is the hypersurface of $\M$ defined by
+Eq.~(\ref{e:max:T_X_const_t}) with $X\in\R$.
+Note that for $t=0$, this hypersurface coincides with the hypersurface
+$T=0$ introduced in Sec.~\ref{s:max:hyp_const_T}: $\mathcal{S}_0 = \Sigma_0$.
+But for $t\not=0$, $\mathcal{S}_t \not= \Sigma_T$.
+
 
