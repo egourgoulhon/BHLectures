@@ -1967,22 +1967,121 @@ Note that for $t=0$, this hypersurface coincides with the hypersurface
 $T=0$ introduced in Sec.~\ref{s:max:hyp_const_T}: $\mathcal{S}_0 = \Sigma_0$.
 But for $t\not=0$, $\mathcal{S}_t \not= \Sigma_T$.
 
-Let us introduce on $\mathcal{S}_t$ a coordinate system $(x^i)=(\bar{r},\th,\ph)$
+There are two Schwarzschild-Droste coordinate systems on $\mathcal{S}_t$:
+$(r,\th,\ph)$ on $\mathcal{S}_t\cap \M_{\rm I}$ and $(r',\th,\ph)$ on
+$\mathcal{S}_t\cap \M_{\rm III}$, with both $r$ and $r'$ ranging
+$(2m,+\infty)$.
+Let us introduce on $\mathcal{S}_t$ a third coordinate system $(x^i)=(\bar{r},\th,\ph)$
 as follows:
 \begin{subequations}
 \begin{align}
-\mbox{on}\ \M_{\rm I}:&\quad  \bar{r} \in \left(\frac{m}{2}, +\infty \right),
-    \quad r = \bar{r} \left( 1 + \frac{m}{2\bar{r}} \right)^2
-    \iff \bar{r} = \frac{1}{2} \left( r - m + \sqrt{r (r-2m)} \right) \\
-\mbox{on}\ \M_{\rm III}:&\quad  \bar{r} \in \left(0, \frac{m}{2} \right),
-   \quad r' = \bar{r} \left( 1 + \frac{m}{2\bar{r}} \right)^2
-    \iff \bar{r} = \frac{1}{2} \left( r' - m - \sqrt{r' (r'-2m)} \right)
+& \mbox{on}\ \mathcal{S}_t\cap \M_{\rm I}:  & & \bar{r} \in \left(\frac{m}{2}, +\infty \right), & &
+     r = \bar{r} \left( 1 + \frac{m}{2\bar{r}} \right)^2 \label{e:max:r_riso}\\
+& & & & & \iff \bar{r} = \frac{1}{2} \left( r - m + \sqrt{r (r-2m)} \right) \\
+&\mbox{on}\ \mathcal{S}_t\cap  \M_{\rm III}:& &
+    \bar{r} \in \left(0, \frac{m}{2} \right), & &
+    r' = \bar{r} \left( 1 + \frac{m}{2\bar{r}} \right)^2 \label{e:max:rp_riso} \\
+& & & & & \iff \bar{r} = \frac{1}{2} \left( r' - m - \sqrt{r' (r'-2m)} \right) \\
+&\mbox{on}\ \mathcal{S}_t\cap \Sp : & & \bar{r} = \frac{m}{2} .& &
 \end{align}
 \end{subequations}
-
+The range of $\bar{r}$ is thus $(0,+\infty)$.
+The graph of the function
+$\bar{r} \mapsto \bar{r}(1+m/(2\bar{r}))^2$ is depicted in
+Fig.~\ref{f:max:r_riso}. We can separate this graph in two parts:
+$\bar{r}\in (0,m/2)$ (the $\M_{\rm III}$ part) and $\bar{r}\in (m/2, +\infty)$
+(the $\M_{\rm I}$ part). In each of these part, there is a one-to-one
+correspondance between $\bar{r}$ and $r$ (or $r'$). Note that
+\begin{subequations}
+\begin{align}
+    & \mbox{when}\ r\rightarrow +\infty,\quad \bar{r} \sim r \\
+    & \mbox{when}\ r'\rightarrow +\infty,\quad \bar{r} \sim \frac{m^2}{4 r'} .
+\end{align}
+\end{subequations}
 
 \begin{figure}
 \centerline{\includegraphics[height=0.4\textheight]{max_r_riso.pdf}}
 \caption[]{\label{f:max:r_riso} \footnotesize
 Areal radius $r$ as a function of the isotropic coordinate $\bar{r}$.}
 \end{figure}
+
+When $t$ varies, $\mathcal{S}_t$ constitute a foliation of
+\be
+    \M_{\rm iso} := \M_{\rm I} \cup \Sp \cup \M_{\rm III} .
+\ee
+This foliation is regular in both $\M_{\rm I}$ and $\M_{\rm III}$, but is
+singular at the bifurcation sphere $\Sp$, since all
+the hypersurfaces $\mathcal{S}_t$ intersect there (cf. Fig.~\ref{f:sch:kruskal_diag}).
+We may then consider $(x^\alpha) = (t,\bar{r},\th,\ph)$ as a coordinate system
+on $\M_{rm iso}$, which is regular on $\M_{\rm I}$ and $\M_{\rm III}$,
+but is singular at $\Sp$, i.e. at $\bar{r}=2m$. This system is called
+\defin{isotropic coordinates}\index{isotropic!coordinates}.
+
+From (\ref{e:max:r_riso}), we get
+\[
+    \D r = \left( 1 + \frac{m}{2\bar{r}} \right) \left( 1 - \frac{m}{2\bar{r}} \right)
+        \D \bar{r}
+\]
+and
+\[
+    1 - \frac{2m}{r} = \left(
+        \frac{ 1 - \frac{m}{2\bar{r}}}{1 + \frac{m}{2\bar{r}}} \right) ^2 .
+\]
+It is then immediate to deduce from (\ref{e:sch:Schwarz_metric_SD})
+the expression of the metric tensor in
+terms of the isotropic coordinates $(x^\alpha) = (t,\bar{r},\th,\ph)$:
+\be \label{e:max:g_isotropic}
+    \encadre{
+        g_{\mu\nu}\, \D x^\mu \, \D x^\nu =
+        - \left( \frac{ 1 - \frac{m}{2\bar{r}}}{1 + \frac{m}{2\bar{r}}} \right) ^2 \D t^2
+            + \left( 1 + \frac{m}{2\bar{r}} \right) ^4 \left[
+            \D \bar{r}^2 + \bar{r}^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
+            \right] }.
+\ee
+Since the relation between $r'$ and $\bar{r}$ is identical to that between
+$r$ and $\bar{r}$ [cf. Eqs.~(\ref{e:max:r_riso}) and (\ref{e:max:rp_riso})],
+the above expression of $\w{g}$ is valid on $\M_{\rm I}$ and $\M_{\rm III}$.
+Note that all metric coefficients are regular on $\M_{\rm I}\cup\M_{\rm III}$
+(except for the standard coordinate singularity of the spherical coordinates
+$(\th,\ph)$ for $\th\in\{0,\pi\}$). On the contrary Eq.~(\ref{e:max:g_isotropic})
+yields $\det(g_{\alpha\beta}) = 0$ for $\bar{r}=m/2$, which reflects the fact that
+the isotropic coordinates are singular on the bifurcation sphere $\Sp$.
+
+A remarkable feature of the line element (\ref{e:max:g_isotropic}) is
+that the spatial part is proportional to
+the line element of the flat metric $\w{f}$ on the Euclidean 3-space:
+\be
+    f_{ij} , \D x^i \, \D x^j = \D \bar{r}^2 + \bar{r}^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+\ee
+In other words, the metric $\w{\gamma}$ induced by $\w{g}$ on $\mathcal{S}_t$
+is \emph{conformal}\index{conformal!metric} to the flat metric $\w{f}$
+(cf. Sec.~\ref{s:glo:conf_metric}):
+\be
+    \w{\gamma} = \Psi^4 \, \w{f} ,
+\ee
+with the conformal factor\footnote{Note a different convention with respect
+to Sec.~\ref{s:glo:conf_metric}: with respect to the latter, what would be
+called the \emph{conformal factor} is the square of $\Psi$: $\Omega = \Psi^2$.}
+\be
+    \Psi = 1 + \frac{m}{2\bar{r}} .
+\ee
+The conformally-flat feature explains the name \emph{isotropic} given to the
+coordinates $(t,\bar{r},\th,\ph)$.
+
+\begin{remark}
+Sometimes, the isotropic coordinates are simply presented as
+coordinates deduced from the standard Schwarzschild-Droste ones by
+formula (\ref{e:max:r_riso}). But much more than a mere change
+of the coordinate $r$ to $\bar{r}$ is involved:
+the two coordinate systems do not cover
+the same part of the extended Schwarzschild spacetime: the Schwarzschild-Droste
+coordinates cover the region $\M_{\rm I}\cup \M_{\rm II}$, while the
+isotropic coordinates cover the region $\M_{\rm I}\cup \M_{\rm III}$.
+In particular, the isotropic coordinates cannot be used to describe the black
+hole region (i.e. $\M_{\rm II}$). This last feature can be inferred directly
+from the line element (\ref{e:max:g_isotropic}), which describes clearly
+an everywhere \emph{static} metric (the Killing vector $\wpar_t$ being
+everywhere timelike because of the square in $g_{tt}$), while
+the Schwarzschild metric is not
+static in $\M_{\rm II}$, since $\wpar_t$ is a spacelike vector there.
+\end{remark}
