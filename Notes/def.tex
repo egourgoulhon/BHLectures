@@ -546,7 +546,7 @@ Minkowski spacetime, the helix defined in terms of
 some Minkowskian coordinates $(x^\alpha)=(t,x,y,z)$ by the parametric equation
 $x^\alpha(\lambda) = (\lambda, \cos\lambda, \sin\lambda, 0)$ is a null curve, i.e.
 it has
-a null tangent vector at each point, but it is not a null geodesics (in Minkowski
+a null tangent vector at each point, but it is not a null geodesic (in Minkowski
 spacetime, all null geodesics are straight lines).
 \end{remark}
 
@@ -604,7 +604,7 @@ and $\kappa=0$, $\lambda=t$ is an affine parameter along these null geodesic gen
 
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor3}
 The covariant derivative of the vector field $\wl$ as given by (\ref{e:def:wl_Schw_hor})
-is (cf. Appendix~\ref{s:sam} for the computation)
+is (cf. Sec.~\ref{s:sam:Schwarz_hor} for the computation)
 \be \label{e:def:nab_l_Schw_hor}
     \nabla_\beta \el^\alpha = \left(
     \begin{array}{cccc}
@@ -847,9 +847,9 @@ which provides an explicit expression of $\w{q}$, is
     \encadre{ \w{q} = \w{g} + \uu{\el}\otimes\uu{k} + \uu{k}\otimes\uu{\el} } ,
 \ee
 or, in index notation,
-\[
-    q_{\alpha\beta} = g_{\alpha\beta} + \el_\alpha k_\beta + k_\alpha \el_\beta .
-\]
+\be
+   \encadre{ q_{\alpha\beta} = g_{\alpha\beta} + \el_\alpha k_\beta + k_\alpha \el_\beta }.
+\ee
 \begin{proof}
 Let us show that (\ref{e:def:q_g_k_l}) implies
 (\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
@@ -974,13 +974,13 @@ Appendix~\ref{s:bas} for the explanation of the arrow notation.}
  of $\w{q}$, i.e. the tensor of type $(1,1)$ defined by
 by
 \be \label{e:def:q_proj}
-    \vw{q} := \mathrm{Id} + \wl\otimes \uu{k} + \w{k}\otimes \uu{\el},
+    \encadre{ \vw{q} := \mathrm{Id} + \wl\otimes \uu{k} + \w{k}\otimes \uu{\el} },
 \ee
 or, in index notation,
-\[
-    q^\alpha_{\ \, \beta} = \delta^\alpha_{\ \, \beta}
-        + \el^\alpha \, k_\beta + k^\alpha \, \wl_\beta ,
-\]
+\be
+   \encadre{ q^\alpha_{\ \, \beta} = \delta^\alpha_{\ \, \beta}
+        + \el^\alpha \, k_\beta + k^\alpha \, \el_\beta },
+\ee
 is nothing but the \defin{orthogonal projector} onto the cross-section $\Sp$:
 \be
     \forall \w{v}\in T_p\M, \quad \vw{q}(\w{v}) = \w{v}^\parallel .
@@ -1433,7 +1433,7 @@ the scalar square of which is
 \[
     \D\w{x'}\cdot\D\w{x'} =\D\w{x}\cdot\D\w{x}
             + 2 \varepsilon \underbrace{\D\w{x}\cdot \wl}_{0}
-            + \underbrace{\wl\cdot \wl}_{0},
+            + \varepsilon^2 \underbrace{\wl\cdot \wl}_{0},
 \]
 where we have used the fact that $\wl$ is normal to any vector tangent to $\Hor$,
 such as $\D\w{x}$ and $\wl$ itself. Hence
