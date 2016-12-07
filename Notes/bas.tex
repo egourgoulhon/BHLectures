@@ -1295,16 +1295,16 @@ The \defin{exterior derivative}\index{exterior!derivative}\index{derivative!exte
 $(q+1)$-form which is denoted $\dd\w{\omega}$ and whose components
 with respect to a given coordinate system $(x^\alpha)$ are defined by
 \bea
-	\mbox{0-form (scalar field)} & : & (\dd\w{\omega})_\alpha =
+	\mbox{0-form (scalar field)} & : & (\dd\w{\omega})_\alpha :=
 		\der{\omega}{x^\alpha} \label{e:bas:def_ext_0f} \\
-	\mbox{1-form} & : & (\dd\w{\omega})_{\alpha\beta} =
+	\mbox{1-form} & : & (\dd\w{\omega})_{\alpha\beta} :=
 	\der{\omega_\beta}{x^\alpha} - \der{\omega_\alpha}{x^\beta}
 			 \label{e:bas:def_ext_1f} \\
-	\mbox{2-form} & : & (\dd\w{\omega})_{\alpha\beta\gamma} =
+	\mbox{2-form} & : & (\dd\w{\omega})_{\alpha\beta\gamma} :=
 	\der{\omega_{\beta\gamma}}{x^\alpha} +
 	\der{\omega_{\gamma\alpha}}{x^\beta} +
 	\der{\omega_{\alpha\beta}}{x^\gamma} \label{e:bas:def_ext_2f} \\
-	\mbox{etc...}
+	\mbox{etc...} \nonumber
 \eea
 It can be easily checked that these formul\ae, although expressed in terms of
 partial derivatives of components in a coordinate system, do define tensor fields.
@@ -1314,10 +1314,28 @@ Notice that for a scalar field (0-form), the exterior derivative is nothing but 
 differential 1-form $\dd f$ already defined in Sec.~\ref{s:bas:linear_form}.
 Notice also that the definition of the exterior derivative appeals only to the
 manifold structure. It does not depend upon the metric tensor  $\w{g}$, nor upon
-any other extra structure on $\M$. We may also notice that
+any other extra structure on $\M$.
+
+\begin{remark}
+Although the exterior derivative does not depend on the metric $\w{g}$ and
+hence on the Levi-Civita connection $\wnab$, one may replace
 all partial derivatives in the formul\ae\
-(\ref{e:bas:def_ext_0f})-(\ref{e:bas:def_ext_2f}) can be replaced by covariant derivatives
-(thanks to the symmetry of the Christoffel symbols).
+(\ref{e:bas:def_ext_0f})-(\ref{e:bas:def_ext_2f}) by covariant derivatives:
+\bea
+    \mbox{0-form} & : & (\dd\w{\omega})_\alpha =
+        \nabla_\alpha \omega \label{e:bas:def_ext_0f_nab} \\
+    \mbox{1-form} & : & (\dd\w{\omega})_{\alpha\beta} =
+        \nabla_\alpha \omega_\beta - \nabla_\beta \omega_\alpha
+            \label{e:bas:def_ext_1f_nab} \\
+    \mbox{2-form} & : & (\dd\w{\omega})_{\alpha\beta\gamma} =
+    \nabla_\alpha\omega_{\beta\gamma} +
+    \nabla_\beta\omega_{\gamma\alpha} +
+    \nabla_\gamma\omega_{\alpha\beta} \label{e:bas:def_ext_2f_nab}
+\eea
+The above identities hold thanks to the symmetry of the Christoffel symbols
+on their last two indices (and thanks to (\ref{e:bas:grad_f_der_f}) for
+a 0-form).
+\end{remark}
 
 A fundamental property of the exterior derivation is to be nilpotent:
 \be \label{e:ext_der_nilpot}
