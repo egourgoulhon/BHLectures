@@ -10,12 +10,12 @@
 
 \subsection{Expression in Boyer-Lindquist coordinates} \label{s:ker:expr_BL}
 
-The Kerr solution depends on two constant real non-negative parameters:
+The Kerr solution depends on two constant non-negative real parameters:
 \begin{itemize}
 \item the \defin{mass parameter}\index{mass!parameter of Kerr solution} $m > 0$, to be
-interpreted in Sec.~?? as the spacetime total mass;
+interpreted in Sec.~\ref{s:ker:Komar_mass} as the spacetime total mass;
 \item the \defin{spin parameter}\index{spin!parameter of Kerr solution} $a \geq 0 $,
-to be interpreted in Sec.~?? as the reduced angular momentum  $a=J/m$, $J$ being the
+to be interpreted in Sec.~\ref{s:ker:Komar_J} as the reduced angular momentum  $a=J/m$, $J$ being the
 spacetime total angular momentum.
 \end{itemize}
 In this part, we focus on Kerr solutions for which
@@ -174,6 +174,30 @@ that $\w{\xi}$ is not normal to these hypersurfaces.
 $\rho^2\sim r^2$, and $\rho^2/\Delta \sim (1-2m/r)^{-1}$, and we see on
 (\ref{e:ker:metric_BL}) that the Kerr metric reduces to the Schwarzschild metric.
 \end{itemize}
+
+\subsection{Determinant and inverse metric}
+
+The determinant of the metric $\w{g}$ with respect to Boyer-Lindquist coordinates
+is deduced from (\ref{e:ker:metric_BL}); it takes a
+relatively simple form (cf. Sec.~\ref{s:sam:Kerr_solution} for the computation):
+\be
+    \det (g_{\alpha\beta}) = - \rho^4 \sin^2\th .
+\ee
+
+The inverse metric is (cf. Sec.~\ref{s:sam:Kerr_solution} for the computation)
+\be \label{e:ker:inv_met_BL}
+    g^{\alpha\beta} = \left(
+    \begin{array}{cccc}
+    - \frac{1}{\Delta}
+    \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right)
+     & 0 & 0 & -\frac{2 a m r}{\rho^2 \Delta} \\[1ex]
+    0 & \frac{\Delta}{\rho^2} & 0 & 0 \\[1ex]
+    0 & 0 &\frac{1}{\rho^2} & 0 \\[1ex]
+    -\frac{2 a m r}{\rho^2 \Delta} & 0 & 0 & \frac{\rho^2-2 m r}{\rho^2\Delta\sin^2\th}
+    \end{array}
+    \right) .
+\ee
+
 
 \subsection{Ergoregions}
 
@@ -743,7 +767,7 @@ the \defin{black hole surface gravity}\index{surface!gravity}\index{gravity!surf
 
 \section{Global quantities}
 
-\subsection{Mass}
+\subsection{Mass} \label{s:ker:Komar_mass}
 
 We have seen in Sec.~\ref{s:ker:basic_prop} that when
 $r\rightarrow +\infty$, the Kerr metric tends towards the Schwarzschild
@@ -824,7 +848,8 @@ where
 \item
 $\w{s}$ is a unit spacelike vector normal to $\Sp$ and oriented towards the
 exterior of $\Sp$, $\w{n}$ is a unit timelike vector normal to $\Sp$ and oriented towards the
-future, such that, at each point $p\in\Sp$, $(\w{n},\w{s})$ is an orthonormal basis
+future\footnote{The vector $\w{n}$ considered here shall not be confused with
+the vector $\w{n}$ introduced in Sec.~\ref{s:ker:Killing_hor}.}, such that, at each point $p\in\Sp$, $(\w{n},\w{s})$ is an orthonormal basis
 of the timelike plane $T^\perp_p\Sp$ normal to $\Sp$.
 \item $(x^a)=(x^2,x^3)$ is a coordinate system on $\Sp$
 \item $q = \det(q_{ab})$ is the determinant w.r.t. $(x^a)$ of the metric
@@ -948,21 +973,115 @@ We have then $\partial_r \xi_t = -2m/r^2$, so that the above integral yields
 \ee
 
 
-\subsection{Angular momentum}
+\subsection{Angular momentum} \label{s:ker:Komar_J}
 
-In way similar to the construction of the Komar mass from a timelike Killing
-vector, an axisymmetry Killing vector gives birth an invariant integral quantity:
+As a timelike Killing vector gave birth to the Komar mass,
+an axisymmetry Killing vector gives birth an invariant integral quantity:
 the Komar angular momentum.
 
 For a spacetime $(\M,\w{g})$ that is axisymmetric, with $\w{\eta}$
 the corresponding Killing vector, one defines the \defin{Komar angular momentum}
 by
-\be
+\be \label{e:ker:def_Komar_J}
     \encadre{ J := \frac{1}{16\pi} \int_{\Sp} \star(\dd \uu{\eta}) } ,
 \ee
-where $\Sp$ is any spacelike surface lying in the vacuum region. As the Komar
-mass, $J$ does not depend on the choice of $\Sp$, provided it lies in the
-vacuum region and $\w{g}$ obeys Einstein equation.
+where $\Sp$ is any spacelike surface lying in the vacuum region and $\star(\dd \uu{\eta})$
+is the Hodge dual of the 2-form $\dd \uu{\eta}$, given by
+\be \label{e:ker:dueta_nab}
+    (\dd \uu{\eta})_{\alpha\beta} =
+        \partial_\alpha \eta_\beta - \partial_\beta \eta_\alpha =
+        \nabla_\alpha \eta_\beta - \nabla_\beta \eta_\alpha .
+\ee
+
+As the Komar mass $M$, $J$ does not depend on the choice of $\Sp$,
+provided it lies in the vacuum region and $\w{g}$ obeys Einstein equation.
+
+\begin{remark}
+Besides the sign and the change $\w{\xi}\leftrightarrow\w{\eta}$, we notice a difference by a factor 2 between the r.h.s. of (\ref{e:ker:def_Komar_mass}) and (\ref{e:ker:def_Komar_J}).
+This is known as Komar's anomalous factor and is discussed further in
+Ref.~\cite{Katz85}.
+\end{remark}
+
+Performing the same manipulations as for the Komar mass, we obtain
+\be \label{e:ker:J_Komar_partial_der}
+    \encadre{ J = \frac{1}{16\pi} \int_{\Sp}
+    (s^\mu \partial_\mu \eta_\nu \, n^\nu - n^\mu \partial_\mu \eta_\nu \, s^\nu)
+    \sqrt{q}\, \D x^2 \, \D x^3 } .
+\ee
+As above, let us choose for $\Sp$ a 2-sphere $\{t=\mathrm{const},\; r=\mathrm{const}\}$.
+In evaluating the terms $s^\mu \partial_\mu \eta_\nu \, n^\nu$
+and $n^\mu \partial_\mu \eta_\nu \, s^\nu$ as $r\rightarrow+\infty$, we have
+be a little more cautious than in Sec.~\ref{s:ker:Komar_mass}, since
+the components $\eta_\alpha$ are diverging when $r\rightarrow+\infty$:
+\[
+    \eta_\alpha = g_{\alpha\mu} \, \eta^\mu = g_{\alpha\mu} \, \delta^\mu_{\ \, \ph}
+        = g_{\alpha\ph} = (g_{t\ph},0,0,g_{\ph\ph})
+\]
+with, according to (\ref{e:ker:asympt_metric}),
+$g_{\ph\ph} \sim r^2\sin^2\th$ as $r\rightarrow+\infty$.
+Moreover, given the value of $g_{t\ph}$ read on (\ref{e:ker:metric_BL}), we may
+write
+\[
+    \eta_\alpha \sim \left( - \frac{2 a m \sin^2\th}{r}, 0, 0, r^2\sin^2\th \right)
+        \quad\mbox{when}\quad
+        r\rightarrow+\infty .
+\]
+Let us choose for the timelike normal $\w{n}$ to $\Sp$
+the future-directed unit normal to the hypersurfaces $t=\mathrm{const}$:
+\be
+ \uu{n} = - N \dd t,
+\ee
+where $N$ is a normalization factor ensuring $\w{n}\cdot\w{n}=-1$.
+We do not need the precise value of $N$, but simply the property $N\rightarrow 1$
+as $r\rightarrow+\infty$.
+We have then
+$n_\alpha = (-N,0,0,0)$, so that
+\[
+    n^\alpha = g^{\alpha\mu} n_\mu = g^{\alpha t} (-N) =
+    (- N g^{tt}, 0, 0, - N g^{t\ph} ),
+\]
+where the last equality follows from the
+expression (\ref{e:ker:inv_met_BL}) of $g^{\alpha\beta}$ in
+Boyer-Lindquist coordinates, with $g^{tt} \sim -1$ and
+$g^{t\ph} \sim - 2 a m / r^3$ when $r\rightarrow+\infty$, so that
+\[
+    n^\alpha \sim \left( 1, 0, 0, \frac{2 a m}{r^3} \right)  \quad\mbox{when}\quad
+        r\rightarrow+\infty .
+\]
+The choice of $\w{n}$ completely determines that of $\w{s}$:
+\[
+    s^\alpha = \left( 0, \frac{\sqrt{\Delta}}{\rho}, 0, 0 \right)
+        \sim (0,1,0,0) \quad\mbox{when}\quad r\rightarrow+\infty .
+\]
+Indeed, given the metric components (\ref{e:ker:metric_BL}), we immediately
+check that $\w{n}\cdot\w{s}=0$, $\w{s}\cdot\w{s}=1$ and
+$\uu{s} = (\rho/\sqrt{\Delta})\, \dd r$, so that $\w{s}$ is normal to $\Sp$.
+
+Given the above expressions for $\eta_\alpha$, $n^\alpha$ and $s^\alpha$,
+we get, for $r\rightarrow+\infty$,
+\[
+  s^\mu \partial_\mu \eta_\nu \, n^\nu \sim \partial_r \left( - \frac{2 a m \sin^2\th}{r} \right) \times 1 + \partial_r \left(r^2 \sin^2\th \right) \times \frac{2 a m}{r^3}
+    \sim \frac{6 a m \sin^2\th}{r^2}
+\]
+and
+\[
+    n^\mu \partial_\mu \eta_\nu \, s^\nu \sim \partial_t \underbrace{\eta_r}_{0}
+        + \frac{2 a m}{r^3} \partial_\ph \underbrace{\eta_r}_{0}  = 0 .
+\]
+Hence Eq.~(\ref{e:ker:J_Komar_partial_der}) leads to
+\[
+    J = \frac{1}{16\pi} \lim_{r\rightarrow +\infty}
+        \int_{\Sp}
+        \frac{6 a m \sin^2\th}{r^2} \times
+        r^2\sin\th \, \D\th\, \D\ph  =
+        \frac{3 a m}{8\pi} \int_{\Sp} \sin^3\th \, \D\th\, \D\ph
+        = \frac{3 a m}{4} \underbrace{\int_0^\pi \sin^3\th \, \D\th}_{4/3} ,
+\]
+i.e.
+\be
+    \encadre{J = a m } .
+\ee
+
 
 
 \subsection{Black hole area}
