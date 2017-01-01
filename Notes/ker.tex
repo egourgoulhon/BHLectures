@@ -1092,9 +1092,53 @@ Since the event horizon $\Hor$ is a Killing horizon (cf. Sec.~\ref{s:ker:Killing
 it is a non-expanding horizon. As such, it has a well defined
 area\index{area!of the Kerr black hole} $A$, which is the
 common area of any of its cross-sections, as we have seen in
-Sec.~\ref{s:neh:invar_area}.
-
-
+Sec.~\ref{s:neh:invar_area}. To compute $A$, we shall not use the Boyer-Lindquist
+coordinates as for $M$ and $J$, because they are singular on $\Hor$; we shall
+use rather the 3+1 Kerr coordinates $(\ti, r, \th,\tph)$, which are regular
+on $\Hor$. $\Hor$ is defined by $r=r_+$ and it is natural to consider a
+cross-section of it, $\Sp$ say, defined by $\{\ti=\mathrm{const}, r=r_+\}$.
+Then $\Sp$ is spanned by the coordinates $(x^a) = (\th,\tph)$ and the metric $\w{q}$
+induced on it by the spacetime metric is obtained by setting
+$\D\ti=0$ and $\D r = 0$ in (\ref{e:ker:metric_Kerr_3p1}):
+\[
+        q_{ab}\,  \D x^a \D x^b =
+   (r_+^2 + a^2\cos^2\th)\, \D \th^2
+    + \left( r_+^2 + a^2 + \frac{2 a^2 m r_+ \sin^2\th}{r_+^2 + a^2\cos^2\th} \right)
+    \sin^2\th \, \D \tph^2 .
+\]
+Now, since $r_+$ is a zero of $\Delta$ [cf. Eq.~(\ref{e:ker:def_Delta})],
+we have $2 m r_+ = r_+^2 + a^2 $. Hence
+\[
+        q_{ab}\,  \D x^a \D x^b =
+  (r_+^2 + a^2\cos^2\th) \, \D \th^2
+    + (r_+^2 + a^2)\left( 1 + \frac{a^2 \sin^2\th}{r_+^2 + a^2\cos^2\th} \right)
+    \sin^2\th \, \D \tph^2 ,
+\]
+or, equivalently,
+\be \label{e:ker:q_cross_section_H}
+        q_{ab}\,  \D x^a \D x^b =
+  (r_+^2 + a^2\cos^2\th) \, \D \th^2
+    + \frac{(r_+^2 + a^2)^2}{r_+^2 + a^2\cos^2\th}\,
+    \sin^2\th \, \D \tph^2 .
+\ee
+The area of $\Sp$ is
+\[
+    A = \int_\Sp \sqrt{q} \, \D\th\, \D\tph ,
+\]
+with, according to (\ref{e:ker:q_cross_section_H}),
+$q = \det (q_{ab}) = (r_+^2 + a^2)^2 \sin^2\th$. Hence
+\[
+    A = (r_+^2 + a^2) \underbrace{\int_\Sp \sin\th \, \D\th\, \D\tph}_{4\pi} .
+\]
+We have thus
+\be
+    \encadre{A = 4\pi (r_+^2 + a^2) = 8 \pi m r_+} .
+\ee
+Via (\ref{e:ker:def_r_pm}),
+one may recast this result to let appear only $m$ and $a$:
+\be
+    \encadre{A = 8 \pi m (m + \sqrt{m^2-a^2})} .
+\ee
 
 
 
