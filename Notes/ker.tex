@@ -37,10 +37,12 @@ spherical chart of $\SS^2$.
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{ker_spher_view.pdf}}
 \caption[]{\label{f:ker:spher_view} \footnotesize
-A view of a section $t=\mathrm{const}$ of $\mathbb{R}^2\times\mathbb{S}^2$
+View of a section $t=\mathrm{const}$ of $\mathbb{R}^2\times\mathbb{S}^2$
 in terms of the coordinates $(R,\th,\ph)$, with $R:=\mathrm{e}^r$,
 so that the region $r\rightarrow -\infty$
-is reduced to a single point at the centre of all the pictured spheres.}
+is reduced to a single point at the centre of all the pictured spheres.
+Such coordinates have been introduced for picturial purposes by O'Neill
+\cite{ONeil95}.}
 \end{figure}
 
 
@@ -213,7 +215,7 @@ The inverse metric is (cf. Sec.~\ref{s:sam:Kerr_solution} for the computation)
 \ee
 
 
-\subsection{Ergoregions}
+\subsection{Ergoregions} \label{s:ker:ergoregion}
 
 Let us investigate the causal character of the stationary Killing vector $\w{\xi}$.
 We have, according to (\ref{e:ker:metric_BL}) and (\ref{e:ker:def_rho2}),
@@ -243,6 +245,36 @@ with
  & r_{\E^+}(\pi/2) = 2 m .
 \end{align}
 \end{subequations}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ker_ergo_a90.pdf}}
+\caption[]{\label{f:ker:ergo_a90} \footnotesize
+Meridional view of a section $t=\mathrm{const}$ of Kerr spacetime with $a/m=0.90$ in
+O'Neill exponential coordinates $x = \mathrm{e}^{r/m}\sin\th$ and $z = \mathrm{e}^{r/m}\sin\th$ (cf. Fig.~\ref{f:ker:spher_view}).
+The right (resp. left) half of the figure corresponds to $\ph=0$ (resp. $\ph=\pi$).
+The Roman numbers I, II, III denote the components $\M_{\rm I}$, $\M_{\rm II}$ and
+$\M_{\rm III}$ of the manifold $\M_{\rm BL}$. The dotted orange circle marks the location
+of $r=0$, while the small black circle at the center of the figure corresponds to
+$r\rightarrow -\infty$. The two red dots marks the curvature singularity $\mathscr{R}$.
+The ergoregion (cf. Sec.~\ref{s:ker:ergoregion}) is shown in grey, while the
+yellow part is Carter time machine (cf. Sec.~\ref{s:ker:time_machine}).
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{ker_ergo_a50.pdf}}
+\caption[]{\label{f:ker:ergo_a50} \footnotesize
+Same as Fig.~\ref{f:ker:ergo_a90} but for $a/m=0.50$.
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ker_ergo_a99.pdf}}
+\caption[]{\label{f:ker:ergo_a99} \footnotesize
+Same as Fig.~\ref{f:ker:ergo_a90} but for $a/m=0.99$.
+}
+\end{figure}
+
 Given the definition of $\M_{\rm I}$, $\M_{\rm II}$ and $\M_{\rm III}$, we conclude that
 \begin{itemize}
 \item $\w{\xi}$ is timelike in the region of $\M_{\rm I}$ defined by $r>r_{\E^+}(\theta)$
@@ -262,19 +294,17 @@ one calls $\E^+$ (resp. $\E^-$) the
 and $\mathscr{G}^+$ (resp. $\mathscr{G}^-$) the
 \defin{outer ergoregion}\index{outer!ergoregion}\index{ergoregion!outer --}
 (resp. \defin{inner ergoregion}\index{inner!ergoregion}\index{ergoregion!inner --}).
+The part of $\M_{\rm BL}$ where $\w{\xi}$ is spacelike, i.e.
+$\mathscr{G} = \mathscr{G}^+ \cup \M_{\rm II} \cup \mathscr{G}^-$,
+is called the \defin{ergoregion}\index{ergoregion!of Kerr spacetime}.
+It is depicted in Figs.~\ref{f:ker:ergo_a90}-\ref{f:ker:ergo_a99}.
 \begin{remark}
 Sometimes the word \defin{ergosurface}\index{ergosurface} is used instead of
 \emph{ergosphere}.
 \end{remark}
 
-\begin{figure}
-\centerline{\includegraphics[width=0.7\textwidth]{ker_sign_gpp.pdf}}
-\caption[]{\label{f:ker:sign_gpp} \footnotesize
-Graph of the function giving the sign of $g_{\ph\ph}$ for $a=0.9m$
-and various values of $\theta$.}
-\end{figure}
 
-\subsection{Carter time machine}
+\subsection{Carter time machine} \label{s:ker:time_machine}
 
 Let us now focus on the second Killing vector, $\w{\eta}$.
 From (\ref{e:ker:metric_BL}) and (\ref{e:ker:def_rho2}), we have
@@ -307,6 +337,16 @@ This name stems from the fact that thanks to $\mathscr{T}$, there is
 a future-directed timelike curve connecting any two points of $\M_{\rm III}$
 (see e.g. Proposition~2.4.7 of O'Neill's textbook \cite{ONeil95} for a
 demonstration, or Carter's original article \cite{Carte68}).
+The region $\mathscr{T}$ is depicted in yellow in the meridional
+diagrams of
+Figs.~\ref{f:ker:ergo_a90}-\ref{f:ker:ergo_a99}.
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ker_sign_gpp.pdf}}
+\caption[]{\label{f:ker:sign_gpp} \footnotesize
+Graph of the function giving the sign of $g_{\ph\ph}$ for $a=0.9m$
+and various values of $\theta$.}
+\end{figure}
+
 
 \subsection{Singularities}
 
@@ -390,8 +430,8 @@ and
     \Hor_{\rm in} := \left\{ p \in \R^2\times\SS^2,\quad r(p) = r_- \right\} .
 \ee
 The hypersurface $\Hor$ is actually the interface between the regions $\M_{\rm I}$
-and $\M_{\rm II}$ and $\Hor_{\rm in}$ is the interface between $\M_{\rm II}$
-and $\M_{\rm III}$ [cf. Eq.~(\ref{e:ker:M_I_III_r})].
+and $\M_{\rm II}$, while $\Hor_{\rm in}$ is the interface between $\M_{\rm II}$
+and $\M_{\rm III}$ (cf. Eq.~(\ref{e:ker:M_I_III_r}) and Fig.~\ref{f:ker:ergo_a90}).
 We thus consider
 \be
     \M := \M_{\rm BL} \cup \Hor \cup \Hor_{\rm in} = \R^2\times\SS^2 \setminus \ring
@@ -465,7 +505,7 @@ the coordinates
 which we call the
 \defin{3+1 Kerr coordinates}\index{3+1!Kerr coordinates}\index{Kerr!coordinates!3+1 --}.
 It is worth to relate them to the Boyer-Lindquist coordinates
-$(t,r,\th,\ph)$. This is easily done
+$(t,r,\th,\ph)$. This is easily acheived
 by combining (\ref{e:ker:Kerr_coord}) with $\D\ti = \D v - \D r$:
 \begin{subequations}
 \label{e:ker:Kerr_3p1_BL}
