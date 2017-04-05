@@ -385,7 +385,7 @@ other coordinates.
 
 \section{Kerr coordinates and extension of the spacetime manifold}
 
-\subsection{Kerr coordinates}
+\subsection{Kerr coordinates} \label{s:ker:Kerr_coord}
 
 The \defin{Kerr coordinates}\index{Kerr!coordinates} are coordinates
 $\hat{x}^\alpha = (v,r,\th,\tph)$ defined on $\R^2\times\SS^2$ and related to the Boyer-Lindquist coordinates
@@ -478,8 +478,8 @@ of $-\wpar_{\hat{r}}$ are future-directed null curves,
 which may be qualified of \emph{ingoing} since, by definition, $-\wpar_{\hat{r}}$ points towards
 decreasing values of $r$. Note that, by the very definition of $\wpar_{\hat{r}}$,
 the values of the coordinates $(v,\th,\tph)$ are fixed along each of these
-null curves. We shall therefore denote them by $\Li^{\rm in}_{(v,\th,\tph)}$.
-We shall see below that $\Li^{\rm in}_{(v,\th,\tph)}$ is actually a null geodesic.
+null curves. We therefore denote them by $\Li^{\rm in}_{(v,\th,\tph)}$.
+We shall see in Sec.~\ref{s:ker:principal_geod} that $\Li^{\rm in}_{(v,\th,\tph)}$ is actually a null geodesic.
 
 
 \begin{hist}
@@ -629,6 +629,87 @@ $\Hor$ is the future event horizon of Kerr spacetime,
 as we are going to see.
 Therefore, we shall continue our study of Kerr spacetime, and especially the
 black hole aspect, by means of the 3+1 Kerr coordinates.
+
+\subsection{Principal null geodesics} \label{s:ker:principal_geod}
+
+We have seen that the Kerr coordinates $(v,r,\th,\tph)$ introduced in
+Sec.~\ref{s:ker:Kerr_coord} are such that
+the curves $\Li^{\rm in}_{(v,\th,\tph)}$ defined by $(v,\th,\tph)=\mathrm{const}$ are null curves. Their (future-directed) tangent
+vector field $\w{k} := -\wpar_{\hat{r}}$, once expressed in terms of 3+1 Kerr
+basis via (\ref{e:ker:frame_Kerr3p1_Kerr}), is
+\be
+    \w{k} = \wpar_\ti - \wpar_{\tilde r} .
+\ee
+In Sec.~\ref{s:sam:Kerr_Kerr_coord}, it is shown by a direct computation
+that
+\be
+    \wnab_{\w{k}}\, \w{k} = 0.
+\ee
+It follows that each curve $\Li^{\rm in}_{(v,\th,\tph)}$ is a geodesic
+and that the parameter associated with $\w{k}$, i.e. $-r$, is an
+affine parameter of this geodesic. The curves $\Li^{\rm in}_{(v,\th,\tph)}$
+are called the \defin{ingoing principal null geodesics}\index{principal!null geodesic}.
+The qualifier \emph{ingoing} stems from the fact that $r$ is decreasing along
+$\Li^{\rm in}_{(v,\th,\tph)}$ (in the future direction), which is an
+immediate consequence of $-r$ being a parameter along $\Li^{\rm in}_{(v,\th,\tph)}$.
+The qualifier \emph{principal} arises from a relation between $\w{k}$
+and the Weyl conformal curvature tensor $\w{C}$ (cf. Sec.~\ref{s:bas:Weyl})
+of Kerr spacetime, namely:
+\be
+    C^\alpha_{\ \, \mu\nu[\beta} k_{\gamma]} k^\mu k^\nu = 0
+    \qquad\mbox{and}\qquad
+    {}^*C^\alpha_{\ \, \mu\nu[\beta} k_{\gamma]} k^\mu k^\nu = 0 ,
+\ee
+where  ${}^*\w{C}$ stands for the
+\defin{dual of the Weyl tensor}\index{dual!of Weyl tensor}\index{Weyl curvature tensor!dual}:
+\be
+    {}^*C^\alpha_{\ \, \beta\gamma\delta} := \frac{1}{2} \, C^\alpha_{\ \, \beta\mu\nu}
+    \, \epsilon^{\mu\nu}_{\ \ \, \gamma\delta} ,
+\ee
+$\w{\epsilon}$ being the Levi-Civita tensor (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
+One says that the vector field $\w{k}$ defines a \emph{doubly degenerate, principal null
+direction} of $\w{C}$ (see e.g. Chap.~5 of O'Neill textbook \cite{ONeil95} for
+details).
+
+The ingoing principal null geodesics form a \emph{congruence}: through
+each point of $\M$, there is one, and only one, curve $\Li^{\rm in}_{(v,\th,\tph)}$.
+
+One can construct a second congruence of principal null geodesics from
+the \emph{outgoing} Kerr coordinates instead of the ingoing ones
+considered in Sec.~\ref{s:ker:Kerr_coord}. The \defin{outgoing Kerr coordinates}
+$(u,r,\th,\tilde{\tph})$ are defined by relations to Boyer-Lindquist
+coordinates that are similar to
+(\ref{e:ker:Kerr_coord}), up to a change of sign:
+\begin{subequations}
+\label{e:ker:out_Kerr_coord}
+\begin{align}
+& \D u = \D t - \frac{r^2+a^2}{\Delta} \, \D r \\
+& \D \tilde{\tph} = \D \ph - \frac{a}{\Delta}\, \D r .
+\end{align}
+\end{subequations}
+The coordinates $(u,r,\th,\tilde{\tph})$ generalize the null
+outgoing Eddington-Finkelstein
+coordinates introduced in Sec.~\ref{s:sch:BH} to the case $a\not=0$.
+By symmetry, the curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
+defined by $(u,\th,\tilde{\tph})=\mathrm{const}$ constitute a second
+congruence of principal null geodesics, called the \defin{outgoing principal null geodesics}\index{principal!null geodesic}. The fact that the Weyl tensor $\w{C}$
+admits two, and exactly two, congruences of principal null geodesics
+means that the Kerr metric is an \emph{algebraically special} solution of
+Einstein equation: it belongs to the so-called \emph{Petrov type D}\index{Petrov type}.
+
+In this Chapter, we shall focus on
+the expression of the outgoing principal null geodesics in terms of
+the 3+1 Kerr coordinates.
+Combining (\ref{e:ker:out_Kerr_coord}) with (\ref{e:ker:Kerr_3p1_BL}),
+we get
+\begin{subequations}
+\label{e:ker:out_Kerr_Kerr_3p1}
+\begin{align}
+& \D u = \D \ti - \frac{r^2 + 2m r + a^2}{\Delta} \, \D r \\
+& \D \tilde{\tph} = \D \tph - \frac{2a}{\Delta}\, \D r .
+\end{align}
+\end{subequations}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
