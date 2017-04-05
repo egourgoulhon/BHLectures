@@ -642,7 +642,7 @@ basis via (\ref{e:ker:frame_Kerr3p1_Kerr}), is
 \ee
 In Sec.~\ref{s:sam:Kerr_Kerr_coord}, it is shown by a direct computation
 that
-\be
+\be \label{e:ker:nab_k_k}
     \wnab_{\w{k}}\, \w{k} = 0.
 \ee
 It follows that each curve $\Li^{\rm in}_{(v,\th,\tph)}$ is a geodesic
@@ -690,7 +690,7 @@ coordinates that are similar to
 The coordinates $(u,r,\th,\tilde{\tph})$ generalize the null
 outgoing Eddington-Finkelstein
 coordinates introduced in Sec.~\ref{s:sch:BH} to the case $a\not=0$.
-By symmetry, the curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
+Thanks to the symmetry $(t,\ph)\mapsto(-t,-\ph)$ of the Kerr metric (\ref{e:ker:metric_BL}), which turns $(u,\tilde{\tph})$ into $(-v,-\tph)$, it is clear that the curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
 defined by $(u,\th,\tilde{\tph})=\mathrm{const}$ constitute a second
 congruence of principal null geodesics, called the \defin{outgoing principal null geodesics}\index{principal!null geodesic}. The fact that the Weyl tensor $\w{C}$
 admits two, and exactly two, congruences of principal null geodesics
@@ -709,7 +709,63 @@ we get
 & \D \tilde{\tph} = \D \tph - \frac{2a}{\Delta}\, \D r .
 \end{align}
 \end{subequations}
+Along a null geodesic $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, we have
+$\D u = 0$ and $\D\tilde{\tph}=0$, so that
+\begin{align}
+& \frac{\D \ti}{\D r} =   \frac{r^2 + 2m r + a^2}{\Delta}  \nonumber \\
+& \frac{\D \tilde{\tph}}{\D r} = \frac{2a}{\Delta} . \nonumber
+\end{align}
+In order to have a parametrization regular on $\Hor$ and $\Hor_{\rm in}$,
+where $\Delta=0$, let us introduce along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
+the parameter $\lambda$ such that
+\[
+    \frac{\D r}{\D\lambda} = \frac{\Delta}{2(r^2+a^2)} .
+\]
+The vector $\wl$ tangent to $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ and associated
+to $\lambda$ has then the following components w.r.t. the 3+1 Kerr coordinates:
+\begin{align}
+& \ell^{\ti} = \frac{\D \ti}{\D\lambda} = \frac{\D \ti}{\D r}\times\frac{\D r}{\D\lambda}
+    = \frac{r^2 + 2m r + a^2}{2(r^2+a^2)} = \frac{1}{2} + \frac{m r}{r^2 + a^2} \nonumber \\
+& \ell^{r} = \frac{\D r}{\D\lambda} = \frac{\Delta}{2(r^2+a^2)} = \frac{1}{2} - \frac{m r}{r^2 + a^2}\nonumber \\
+& \ell^{\th} = \frac{\D \th}{\D\lambda} = 0 \nonumber\\
+& \ell^{\tph} = \frac{\D \tph}{\D\lambda} = \frac{\D \tph}{\D r}\times\frac{\D r}{\D\lambda}
+    = \frac{a}{r^2+a^2} . \nonumber
+\end{align}
+In other words, we have
+\be \label{e:ker:def_ell_outgoing}
+    \wl = \left( \frac{1}{2} + \frac{m r}{r^2 + a^2} \right) \wpar_\ti
+        + \left( \frac{1}{2} - \frac{m r}{r^2 + a^2} \right) \wpar_{\tilde r}
+        + \frac{a}{r^2+a^2} \, \wpar_\tph .
+\ee
+Given the metric components (\ref{e:ker:metric_Kerr_3p1}), it is easy
+to check that $\w{g}(\wl,\wl)=0$, i.e. that $\wl$ is a null vector.
+Moreover, an explicit computation (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord}) reveals that
+\be \label{e:ker:pregeod_ell}
+    \wnab_{\wl}\, \wl = \bar{\kappa} \, \wl ,
+\ee
+with
+\be \label{e:ker:bar_kappa}
+    \bar{\kappa} := \frac{m(r^2-a^2)}{(r^2+a^2)^2} .
+\ee
+This confirms that the null curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ are
+geodesics (cf. Sec.~\ref{s:def:geod_gener}). The fact that
+$\bar{\kappa}\not=0$ means that
+$\lambda$ is not an affine parameter along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$.
 
+\begin{remark}
+The reader may have noticed a certain dissymmetry between the tangent vector
+$\w{k}$ of ingoing principal null geodesics, which obeys $\wnab_{\w{k}}\, \w{k} = 0$
+[Eq.~(\ref{e:ker:nab_k_k})] and the tangent vector $\wl$ of the outgoing
+ones, which obeys $\wnab_{\wl}\, \wl \not= 0$ [Eq.~(\ref{e:ker:pregeod_ell})].
+As mentioned above, the last property is related to the fact that the
+parameter $\lambda$ associated to $\wl$ is not affine, while the
+parameter $-r$ associated to $\w{k}$ is affine.
+The non-affine choice is the price to pay to have a parametrization of the outgoing
+family well defined everywhere on $\M$, even where $\Delta=0$. We shall see in
+Sec.~?? that in the maximal extension of the Kerr spacetime, there are other regions
+where these features of ingoing and outgoing principal null geodesics are reversed,
+thereby restauring the symmetry between them.
+\end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -802,39 +858,29 @@ Thus $\M_{\rm II}$ and $\M_{\rm III}$ are in the black hole region with respect 
 $\scri^+$ corresponding to $r\rightarrow +\infty$.
 
 Let us show that $\Hor$ is exactly the boundary of the black hole region, i.e.
-that any point in $\M_{\rm I}$ can emit a signal reaching $\scri^+$.
-To this aim, let us consider the vector field $\wl$ defined on $\M$ by
-\be \label{e:ker:def_ell_outgoing}
-    \wl = \left( \frac{1}{2} + \frac{m r}{r^2 + a^2} \right) \wpar_\ti
-        + \left( \frac{1}{2} - \frac{m r}{r^2 + a^2} \right) \wpar_{\tilde r}
-        + \frac{a}{r^2+a^2} \, \wpar_\tph .
-\ee
-$\wl$ is a null vector everywhere, as it can easily be checked
-via (\ref{e:ker:metric_Kerr_3p1}):
-\be
-    \w{g}(\wl,\wl) = 0 .
-\ee
-The field lines of $\wl$ are thus null curves\footnote{They are actually
-null geodesics, as we shall see in Sec.~\ref{s:ker:surf_grav}.}. They obey
+that any point $p\in \M_{\rm I}$ can emit a signal reaching $\scri^+$.
+Let $\Li$ be the null geodesic through $p$ of the outgoing principal null
+congruence $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ introduced in Sec.~\ref{s:ker:principal_geod}, i.e. $\Li$ is the unique geodesic departing
+from $p$ with the tangent vector $\wl$ given by
+(\ref{e:ker:def_ell_outgoing}). Along $\Li$, one has
 \[
    \frac{\D r}{\D\lambda} = \el^r = \frac{1}{2} - \frac{m r}{r^2 + a^2} ,
 \]
 where $\lambda$ is the parameter associated with $\wl$.
-Let $p$ be a point in $\M_{\rm I}$, of 3+1 Kerr coordinates $(\ti_0,r_0,\th_0,\tph_0)$.
-The null curve $\Li$ of tangent vector $\wl$ that departs from $p$ obeys
+In particular, at $p$, if we denote by $r_0$ is the $r$-coordinate of $p$ in the 3+1 Kerr system,
 \[
-    \left. \frac{\D r}{\D\lambda} \right| _{p} = \frac{1}{2} - \frac{m r_0}{r_0^2 + a^2} > 0 ,
+    \left. \frac{\D r}{\D\lambda} \right| _{p} = \frac{1}{2} - \frac{m r_0}{r_0^2 + a^2} > 0 .
 \]
-where the inequality follows from the fact that $r_0 > r_+$ wherever $p$ lies in
+The above inequality simply translates the fact that $r_0 > r_+$ wherever $p$ lies in
 $\M_{\rm I}$.
 Hence, initially $r$ is increasing along $\Li$ and we get, since $-mr/(r^2+a^2)$ is an
 increasing function of $r$,
 \[
-    \frac{\D r}{\D\lambda} > \frac{1}{2} - \frac{m r_0}{r_0^2 + a^2} =: \alpha .
+    \frac{\D r}{\D\lambda} \geq \frac{1}{2} - \frac{m r_0}{r_0^2 + a^2} =: \alpha > 0.
 \]
 Since $\alpha$ is a constant, we deduce that
 \[
-    r > r_0 + \alpha(\lambda - \lambda_0) ,
+    r \geq r_0 + \alpha(\lambda - \lambda_0) ,
 \]
 where $\lambda_0$ is the value of $\Li$'s parameter at $p$. When $\lambda\rightarrow +\infty$,
 we get $r\rightarrow +\infty$, which proves that the null curve $\Li$
@@ -855,31 +901,17 @@ Eqs.~(\ref{e:ker:def_chi})-(\ref{e:ker:def_OmegaH}) the
 
 \subsection{Surface gravity} \label{s:ker:surf_grav}
 
-By construction, the null vector field $\wl$ defined by Eq.~(\ref{e:ker:def_ell_outgoing}) coincides with the Killing vector $\w{\chi}$ on $\Hor$,
+The null vector field $\wl$ defined by Eq.~(\ref{e:ker:def_ell_outgoing}) coincides with the Killing vector $\w{\chi}$ on $\Hor$,
 since $m r/(r^2 + a^2) \equalH 1/2$ and $a/(r^2+a^2) \equalH \Omega_H$:
 \be
     \wl \equalH \w{\chi} .
 \ee
-Moreover, $\wl$ is a pregeodesic vector (cf. Sec.~\ref{s:def:geod_gener}) everywhere.
-An explicit computation (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord}) reveals that
-\be \label{e:ker:pregeod_ell}
-    \wnab_{\wl}\, \wl = \bar{\kappa} \, \wl ,
-\ee
-with
-\be
-    \bar{\kappa} := \frac{m(r^2-a^2)}{(r^2+a^2)^2} .
-\ee
-As we have seen in Sec.~\ref{s:def:geod_gener}, Eq.~(\ref{e:ker:pregeod_ell})
- implies that the field
-lines of $\wl$ are null geodesics. Actually they constitute a privileged
-family of null geodesics in Kerr spacetime, called the
-\defin{outgoing principal null geodesics}\index{principal!null geodesic}.
-
-Since $\wl$ coincides with $\w{\chi}$ on $\Hor$, we have
+In view of the pre-geodesic equation (\ref{e:ker:pregeod_ell}) satisfied
+by $\wl$, we deduce that
 \be \label{e:ker:pregeod_chi}
     \encadre{ \wnab_{\w{\chi}}\, \w{\chi} \equalH \kappa \, \w{\chi} },
 \ee
-with
+with [cf. Eq.~(\ref{e:ker:bar_kappa})]
 \[
     \kappa = \left. \bar{\kappa} \right| _{r=r_+} = \frac{m(r_+^2-a^2)}{(r_+^2+a^2)^2} .
 \]
