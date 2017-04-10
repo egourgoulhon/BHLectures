@@ -383,6 +383,8 @@ a mere
 i.e. to a pathology of Boyer-Lindquist coordinates, which can be cured by switching to
 other coordinates.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Kerr coordinates and extension of the spacetime manifold}
 
 \subsection{Kerr coordinates} \label{s:ker:Kerr_coord}
@@ -401,6 +403,32 @@ If $a=0$, we note that Kerr coordinates are nothing but the null
 ingoing Eddington-Finkelstein
 coordinates on Schwarzschild spacetime (cf. Sec.~\ref{s:sch:EF_coord} and compare
 (\ref{e:ker:Kerr_coord_v}) with (\ref{e:sch:dt_dv_NIEF})).
+
+Given that $\Delta = (r-r_-)(r-r_+) = r^2+a^2 - 2mr$ [Eq.~(\ref{e:ker:def_Delta})], we have
+the identities
+\[
+    \frac{r^2+a^2}{\Delta} = 1 + \frac{2m}{r_+-r_-} \left( \frac{r_+}{r-r_+}
+        - \frac{r_-}{r-r_-} \right) \quad\mbox{and}\quad
+     \frac{a}{\Delta} = \frac{a}{r_+-r_-} \left( \frac{1}{r-r_+}
+        - \frac{1}{r-r_-} \right) ,
+\]
+with $r_+-r_- = 2\sqrt{m^2-a^2}$,
+so that Eqs.~(\ref{e:ker:Kerr_coord}) can be readily integrated to
+\begin{subequations}
+\label{e:ker:Kerr_coord_int}
+\begin{align}
+& \encadre{v = t + r + \frac{m}{\sqrt{m^2-a^2}} \left(
+    r_+ \ln\left| \frac{r-r_+}{2m} \right|
+    - r_- \ln\left| \frac{r-r_-}{2m} \right| \right) }\label{e:ker:Kerr_coord_v_int}\\
+& \encadre{ \tph = \ph + \frac{a}{2\sqrt{m^2-a^2}}\, \ln \left|
+    \frac{r-r_+}{r-r_-} \right| } , \label{e:ker:Kerr_coord_tph_int}
+\end{align}
+\end{subequations}
+up to some additive constant.
+When $a\rightarrow 0$, we have $r_+\rightarrow 2m$ and $r_-\rightarrow 0$
+and by comparing Eq.~(\ref{e:ker:Kerr_coord_v_int}) with Eq.~(\ref{e:sch:v_t_r}), we recover the fact
+that the Kerr coordinates reduces to the ingoing Eddington-Finkelstein
+ones in this limit.
 
 The components $\hat{g}_{\alpha\beta}$
 of the metric tensor $\w{g}$ with respect to the Kerr coordinates
@@ -505,13 +533,24 @@ the coordinates
 which we call the
 \defin{3+1 Kerr coordinates}\index{3+1!Kerr coordinates}\index{Kerr!coordinates!3+1 --}.
 It is worth to relate them to the Boyer-Lindquist coordinates
-$(t,r,\th,\ph)$. This is easily acheived
+$(t,r,\th,\ph)$. This is easily achieved
 by combining (\ref{e:ker:Kerr_coord}) with $\D\ti = \D v - \D r$:
 \begin{subequations}
 \label{e:ker:Kerr_3p1_BL}
 \begin{align}
 & \encadre{\D \ti = \D t + \frac{2m r}{\Delta} \, \D r} \\
 & \encadre{\D \tph = \D \ph + \frac{a}{\Delta}\, \D r} .
+\end{align}
+\end{subequations}
+The integrated version is deduced obtained by substituting (\ref{e:ker:def_t_tilde}) in
+Eq.~(\ref{e:ker:Kerr_coord_int}):
+\begin{subequations}
+\begin{align}
+& \encadre{\ti = t  + \frac{m}{\sqrt{m^2-a^2}} \left(
+    r_+ \ln\left| \frac{r-r_+}{2m} \right|
+    - r_- \ln\left| \frac{r-r_-}{2m} \right| \right) }\\
+& \encadre{ \tph = \ph + \frac{a}{2\sqrt{m^2-a^2}}\, \ln \left|
+    \frac{r-r_+}{r-r_-} \right| } .
 \end{align}
 \end{subequations}
 
@@ -630,6 +669,29 @@ as we are going to see.
 Therefore, we shall continue our study of Kerr spacetime, and especially the
 black hole aspect, by means of the 3+1 Kerr coordinates.
 
+\begin{remark} \label{r:ker:Kerr_slicing}
+Despite we called them ``3+1 Kerr coordinates'', the coordinates
+$(\ti,r,\th,\tph)$ are not related everywhere to a 3+1 slicing of
+spacetime. By 3+1 slicing\index{3+1 slicing}, it is indeed meant a foliation of $\M$
+by spacelike hypersurfaces (see e.g. \cite{Gourg12}). Now, the hypersurfaces
+$\ti = \mathrm{const}$ are spacelike iff their normal $\vec{\nabla} \ti$ is timelike, which
+is equivalent to $\w{g}(\vec{\nabla} \ti, \vec{\nabla} \ti) < 0$, with
+\[
+    \w{g}(\vec{\nabla} \ti, \vec{\nabla} \ti) = g_{\mu\nu} \, \nabla^\mu \ti \nabla^\nu \ti
+    = g^{\mu\nu}\,  \partial_\mu \ti \, \partial_\nu \ti = g^{\ti\ti} .
+\]
+Given the value of $g^{\ti\ti}$ read on (\ref{e:ker:inv_met_3p1}), the hypersurface
+$\ti=\mathrm{const}$ is spacelike iff $\rho^2+2mr > 0$, or equivalently
+$r^2 + 2 mr + a^2\cos^2\th > 0$. Now this second-order polynomial is positive everywhere except in the region of $\M_{\rm III}$ defined by
+\be \label{e:ker:no_slicing}
+    - m - \sqrt{m^2-a^2\cos^2\th} \leq r \leq -m + \sqrt{m^2-a^2\cos^2\th} .
+\ee
+Note that this region is contained in the part $r\leq 0$  of $\M_{\rm III}$.
+We conclude that the coordinates $(\ti,r,\th,\tph)$ define a 3+1 slicing of $\M$
+in $\M_{\rm I}$, $\M_{\rm II}$ and in the part of $\M_{\rm III}$ outside the
+region defined by (\ref{e:ker:no_slicing}).
+\end{remark}
+
 \subsection{Principal null geodesics} \label{s:ker:principal_geod}
 
 We have seen that the Kerr coordinates $(v,r,\th,\tph)$ introduced in
@@ -671,6 +733,29 @@ One says that the vector field $\w{k}$ defines a \emph{doubly degenerate, princi
 direction} of $\w{C}$ (see e.g. Chap.~5 of O'Neill textbook \cite{ONeil95} for
 details).
 
+\begin{figure}
+\centerline{\includegraphics[width=0.9\textwidth]{ker_princ_null_geod_a90.pdf}}
+\caption[]{\label{f:ker:princ_null_geod_a90} \footnotesize
+Principal null geodesics of Kerr spacetime viewed in terms of the 3+1 Kerr
+coordinates $(\ti,r)$ for $a/m=0.9$. The solid (resp. dashed) curves
+correspond to outgoing geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
+(resp. incoming geodesics $\Li^{\rm in}_{(v,\th,\tph)}$), as given by
+Eq.~(\ref{e:ker:out_princ_geod}) with $u=\mathrm{const}$
+(resp. Eq.~(\ref{e:ker:def_t_tilde}) with $v=\mathrm{const}$). The increment
+in $u$ between two depicted outgoing geodesics is $\delta u = 2m$;
+similarly, two depicted ingoing geodesics differ in their values of
+$v$ by $\delta v = 2m$.
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.9\textwidth]{ker_princ_null_geod_a50.pdf}}
+\caption[]{\label{f:ker:princ_null_geod_a50} \footnotesize
+Same as Fig.~\ref{f:ker:princ_null_geod_a90}, but for $a/m=0.5$.}
+\end{figure}
+
+
+
 The ingoing principal null geodesics form a \emph{congruence}: through
 each point of $\M$, there is one, and only one, curve $\Li^{\rm in}_{(v,\th,\tph)}$.
 
@@ -709,11 +794,43 @@ we get
 & \D \tilde{\tph} = \D \tph - \frac{2a}{\Delta}\, \D r .
 \end{align}
 \end{subequations}
+These equations can be integrated (cf. the computation leading to Eq.~(\ref{e:ker:Kerr_coord_int})), yielding
+\begin{subequations}
+\label{e:ker:out_princ_geod}
+\begin{align}
+& \ti = u + r + \frac{2m}{\sqrt{m^2-a^2}} \left(
+    r_+ \ln\left| \frac{r-r_+}{2m} \right|
+    - r_- \ln\left| \frac{r-r_-}{2m} \right| \right) \\
+&  \tph = \tilde{\tph} + \frac{a}{\sqrt{m^2-a^2}}\, \ln \left|
+    \frac{r-r_+}{r-r_-} \right|  ,
+\end{align}
+\end{subequations}
+
+The outgoing principal null geodesics are depicted, along with the
+ingoing ones, are depicted in Figs.~\ref{f:ker:princ_null_geod_a90} and
+\ref{f:ker:princ_null_geod_a50}.
+Note that in both asymptotically flat regions, $r\rightarrow +\infty$ and
+$r\rightarrow -\infty$, the two congruences of geodesics are $\pm 45^\circ$ lines.
+Note also that, despite their name, the outgoing geodesics are actually
+ingoing in $\M_{\rm II}$ (between $\Hor_{\rm in}$ and $\Hor$), i.e. have $r$ decaying
+towards the future.
+\begin{remark}
+In Fig.~\ref{f:ker:princ_null_geod_a50},
+the outgoing geodesics seem to go ``backward in time'' for $-2m \lesssim r \lesssim 0$. This
+is an artifact due to the hypersurfaces $\ti = \mathrm{const}$ being not spacelike
+there, as discussed in Remark~\ref{r:ker:Kerr_slicing}
+p.~\pageref{r:ker:Kerr_slicing}.
+Consequently it is possible to move to the future with decaying values
+of $\ti$ in this region.
+The same effect exists, but is less pronounced, for $a/m=0.9$ (Fig.~\ref{f:ker:princ_null_geod_a90}).
+\end{remark}
+
+
 Along a null geodesic $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, we have
-$\D u = 0$ and $\D\tilde{\tph}=0$, so that
+$\D u = 0$ and $\D\tilde{\tph}=0$, so that (\ref{e:ker:out_Kerr_Kerr_3p1}) yields
 \begin{align}
 & \frac{\D \ti}{\D r} =   \frac{r^2 + 2m r + a^2}{\Delta}  \nonumber \\
-& \frac{\D \tilde{\tph}}{\D r} = \frac{2a}{\Delta} . \nonumber
+& \frac{\D \tph}{\D r} = \frac{2a}{\Delta} . \nonumber
 \end{align}
 In order to have a parametrization regular on $\Hor$ and $\Hor_{\rm in}$,
 where $\Delta=0$, let us introduce along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
