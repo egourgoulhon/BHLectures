@@ -461,8 +461,8 @@ The hypersurface $\Hor$ is actually the interface between the regions $\M_{\rm I
 and $\M_{\rm II}$, while $\Hor_{\rm in}$ is the interface between $\M_{\rm II}$
 and $\M_{\rm III}$ (cf. Eq.~(\ref{e:ker:M_I_III_r}) and Fig.~\ref{f:ker:ergo_a90}).
 We thus consider
-\be
-    \M := \M_{\rm BL} \cup \Hor \cup \Hor_{\rm in} = \R^2\times\SS^2 \setminus \ring
+\be \label{e:ker:def_M_Kerr_spacetime}
+   \encadre{ \M := \M_{\rm BL} \cup \Hor \cup \Hor_{\rm in} = \R^2\times\SS^2 \setminus \ring }
 \ee
 as the spacetime manifold. In order for $\w{g}$ defined by (\ref{e:ker:metric_Kerr_coord})
 to be a well defined metric on $\M$, it does not suffice that the components
@@ -699,7 +699,7 @@ Sec.~\ref{s:ker:Kerr_coord} are such that
 the curves $\Li^{\rm in}_{(v,\th,\tph)}$ defined by $(v,\th,\tph)=\mathrm{const}$ are null curves. Their (future-directed) tangent
 vector field $\w{k} := -\wpar_{\hat{r}}$, once expressed in terms of 3+1 Kerr
 basis via (\ref{e:ker:frame_Kerr3p1_Kerr}), is
-\be
+\be \label{e:ker:k_ti_tr}
     \w{k} = \wpar_\ti - \wpar_{\tilde r} .
 \ee
 In Sec.~\ref{s:sam:Kerr_Kerr_coord}, it is shown by a direct computation
@@ -708,12 +708,17 @@ that
     \wnab_{\w{k}}\, \w{k} = 0.
 \ee
 It follows that each curve $\Li^{\rm in}_{(v,\th,\tph)}$ is a geodesic
-and that the parameter associated with $\w{k}$, i.e. $-r$, is an
-affine parameter of this geodesic. The curves $\Li^{\rm in}_{(v,\th,\tph)}$
+and that the parameter associated $\lambda$ associated with $\w{k}$, is an
+affine parameter of this geodesic. We can choose $\lambda=-r$ since
+(\ref{e:ker:k_ti_tr}) implies
+\[
+    k^r = \frac{\D r}{\D\lambda} = - 1 .
+\]
+The curves $\Li^{\rm in}_{(v,\th,\tph)}$
 are called the \defin{ingoing principal null geodesics}\index{principal!null geodesic}.
 The qualifier \emph{ingoing} stems from the fact that $r$ is decreasing along
 $\Li^{\rm in}_{(v,\th,\tph)}$ (in the future direction), which is an
-immediate consequence of $-r$ being a parameter along $\Li^{\rm in}_{(v,\th,\tph)}$.
+immediate consequence of $-r$ being a future-oriented parameter along $\Li^{\rm in}_{(v,\th,\tph)}$.
 The qualifier \emph{principal} arises from a relation between $\w{k}$
 and the Weyl conformal curvature tensor $\w{C}$ (cf. Sec.~\ref{s:bas:Weyl})
 of Kerr spacetime, namely:
@@ -777,12 +782,22 @@ outgoing Eddington-Finkelstein
 coordinates introduced in Sec.~\ref{s:sch:BH} to the case $a\not=0$.
 Thanks to the symmetry $(t,\ph)\mapsto(-t,-\ph)$ of the Kerr metric (\ref{e:ker:metric_BL}), which turns $(u,\tilde{\tph})$ into $(-v,-\tph)$, it is clear that the curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
 defined by $(u,\th,\tilde{\tph})=\mathrm{const}$ constitute a second
-congruence of principal null geodesics, called the \defin{outgoing principal null geodesics}\index{principal!null geodesic}. The fact that the Weyl tensor $\w{C}$
+congruence of principal null geodesics, called the \defin{outgoing principal null geodesics}\index{principal!null geodesic}. As $-r$ was a affine parameter along
+the ingoing principal null geodesics, $r$ is an affine parameter along
+the outgoing principal null geodesics,
+ except at the locations of $\M$ where $\Delta=0$,
+i.e. at $\Hor$ and $\Hor_{\rm in}$ (see below). Another difference
+with respect to the ingoing family is that $r$ is a future-oriented affine
+parameter along outgoing principal null geodesics only in regions
+$\M_{\rm I}$ and $\M_{\rm III}$; in region $\M_{\rm II}$,
+$r$ is past-oriented.
+
+The fact that the Weyl tensor $\w{C}$
 admits two, and exactly two, congruences of principal null geodesics
 means that the Kerr metric is an \emph{algebraically special} solution of
 Einstein equation: it belongs to the so-called \emph{Petrov type D}\index{Petrov type}.
 
-In this Chapter, we shall focus on
+In this chapter, we shall focus on
 the expression of the outgoing principal null geodesics in terms of
 the 3+1 Kerr coordinates.
 Combining (\ref{e:ker:out_Kerr_coord}) with (\ref{e:ker:Kerr_3p1_BL}),
@@ -832,8 +847,11 @@ $\D u = 0$ and $\D\tilde{\tph}=0$, so that (\ref{e:ker:out_Kerr_Kerr_3p1}) yield
 & \frac{\D \ti}{\D r} =   \frac{r^2 + 2m r + a^2}{\Delta}  \nonumber \\
 & \frac{\D \tph}{\D r} = \frac{2a}{\Delta} . \nonumber
 \end{align}
-In order to have a parametrization regular on $\Hor$ and $\Hor_{\rm in}$,
-where $\Delta=0$, let us introduce along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
+As claimed above, these equations show that $r$ cannot be considered as
+a parameter along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ as soon as
+$\Delta=0$, i.e. on $\Hor$ and $\Hor_{\rm in}$.
+In order to have a parametrization regular everywhere in $\M$, let us introduce
+instead of $r$
 the parameter $\lambda$ such that
 \[
     \frac{\D r}{\D\lambda} = \frac{\Delta}{2(r^2+a^2)} .
@@ -854,6 +872,7 @@ In other words, we have
         + \left( \frac{1}{2} - \frac{m r}{r^2 + a^2} \right) \wpar_{\tilde r}
         + \frac{a}{r^2+a^2} \, \wpar_\tph .
 \ee
+It is clear that this vector field is regular everywhere in $\M$.
 Given the metric components (\ref{e:ker:metric_Kerr_3p1}), it is easy
 to check that $\w{g}(\wl,\wl)=0$, i.e. that $\wl$ is a null vector.
 Moreover, an explicit computation (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord}) reveals that
@@ -876,7 +895,7 @@ $\w{k}$ of ingoing principal null geodesics, which obeys $\wnab_{\w{k}}\, \w{k} 
 ones, which obeys $\wnab_{\wl}\, \wl \not= 0$ [Eq.~(\ref{e:ker:pregeod_ell})].
 As mentioned above, the last property is related to the fact that the
 parameter $\lambda$ associated to $\wl$ is not affine, while the
-parameter $-r$ associated to $\w{k}$ is affine.
+parameter $-r$ associated to $\w{k}$ is.
 The non-affine choice is the price to pay to have a parametrization of the outgoing
 family well defined everywhere on $\M$, even where $\Delta=0$. We shall see in
 Sec.~?? that in the maximal extension of the Kerr spacetime, there are other regions
@@ -920,11 +939,13 @@ Hence, in view of (\ref{e:ker:normal_r}),
     \w{n}\cdot\w{n} = \rho^2 \Delta .
 \ee
 Since $\rho^2>0$ everywhere on $\M$ and $\Delta = (r-r_+)(r-r_-)$ [cf. Eq.~(\ref{e:ker:def_Delta})], we conclude that
+\begin{greybox}
 \begin{itemize}
-\item the hypersurfaces $r=\mathrm{const}$ are timelike in regions $\M_{\rm I}$ and $\M_{\rm III}$;
-\item the hypersurfaces $r=\mathrm{const}$ are spacelike in region $\M_{\rm II}$;
+\item The hypersurfaces $r=\mathrm{const}$ are timelike in regions $\M_{\rm I}$ and $\M_{\rm III}$;
+\item The hypersurfaces $r=\mathrm{const}$ are spacelike in region $\M_{\rm II}$;
 \item $\Hor$ (where $r=r_+$) and $\Hor_{\rm in}$ (where $r=r_-$) are null hypersurfaces.
 \end{itemize}
+\end{greybox}
 
 On $\Hor$ and $\Hor_{\rm in}$, $\Delta=0$, so that
 Eqs.~(\ref{e:ker:nab_r_comp})-(\ref{e:ker:def_normal_hyp_r})
@@ -951,8 +972,11 @@ and
 $\Omega_H$ being a constant, the vector field $\w{\chi}$ defined by
 (\ref{e:ker:def_chi}) is a Killing vector field. Moreover, (\ref{e:ker:n_rp_chi})
 shows that this Killing vector is normal to the null hypersurface $\Hor$.
-We conclude that $\Hor$ is a
-Killing horizon\index{Killing!horizon}\index{horizon!Killing --} (cf. Sec.~\ref{s:neh:def_Killing_hor}).
+In view of the definition given in Sec.~\ref{s:neh:def_Killing_hor}, we
+conclude that
+\begin{greybox}
+$\Hor$ is a Killing horizon\index{Killing!horizon}\index{horizon!Killing --}.
+\end{greybox}
 
 Similarly, on $\Hor_{\rm in}$, we may rewrite (\ref{e:ker:normal_r_Killing})
 as $\w{n} = 2 m r_- \, \w{\chi}_{\rm in}$, with
@@ -964,7 +988,10 @@ and
     \Omega_{\rm in} := \frac{a}{2 m r_-} = \frac{a}{r_-^2 + a^2}
         = \frac{a}{2m\left( m - \sqrt{m^2-a^2} \right)} ,
 \ee
-thereby arriving at the same conclusion: $\Hor_{\rm in}$ is a Killing horizon.
+thereby arriving at the same conclusion:
+\begin{greybox}
+$\Hor_{\rm in}$ is a Killing horizon.
+\end{greybox}
 
 \subsection{Event horizon}
 
@@ -1439,14 +1466,30 @@ one may recast this result to let appear only $m$ and $a$:
     \encadre{A = 8 \pi m (m + \sqrt{m^2-a^2})} .
 \ee
 
-
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Maximal extension}
+\section{Maximal analytic extension}
+
+\subsection{Construction}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{ker_3blocks_in.pdf}}
+\caption[]{\label{f:ker:3blocks_in} \footnotesize
+Conformal diagram of the manifold $\M = \R^2\times\SS^2 \setminus \ring$,
+defined as the Kerr spacetime in Sec.~\ref{s:ker:Kerr_coord} [Eq.~(\ref{e:ker:def_M_Kerr_spacetime})], spanned by the ingoing principal null geodesics (dahsed green lines). The dotted curves marks the hypersurfaces $r=\mathrm{const}$.}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{ker_3blocks_out.pdf}}
+\caption[]{\label{f:ker:3blocks_out} \footnotesize
+Conformal diagram of the minimal extension of $\M_{\rm I}$ to ensure
+complete outgoing principal null geodesics (one of them is drawn as a solid green line).}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{ker_max_ext.pdf}}
+\caption[]{\label{f:ker:max_ext} \footnotesize
+Maximal analytic extension of the Kerr spacetime.}
+\end{figure}
 
 \subsection{Cauchy horizon}
