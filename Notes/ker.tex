@@ -496,12 +496,12 @@ Note that we are using the notation $\wpar_{\hat{r}}$ for the $\partial/\partial
 vector of the Kerr coordinates $\hat{x}^\alpha = (v,r,\th,\tph)$, to distinguish
 it from the $\partial/\partial r$ vector of the Boyer-Lindquist coordinates.
 We read on (\ref{e:ker:metric_Kerr_coord}) that $\hat{g}_{rr} = 0$, which
-implies that $\wpar_{\hat{r}}$ is a global null vector on $\M$.
-We may then use it to set the time orientation of $(\M,\w{g})$ by demanding that
-\be
+implies that $\wpar_{\hat{r}}$ is a global null vector field on $\M$.
+We may use it to set the time orientation of $(\M,\w{g})$ by demanding that
+\be \label{e:ker:def_k_hat_r}
     \w{k} := - \wpar_{\hat{r}}
 \ee
-is a future-directed null vector in all $\M$. The minus sign
+is a future-directed null vector field in all $\M$. The minus sign
 in the above definition, along with Eq.~(\ref{e:ker:frame_Kerr_BL_r}),
 ensures that
 \[
@@ -513,7 +513,7 @@ with that of $\wpar_t$.
 
 
 The field lines
-of $\wpar_{k}$ are future-directed null curves,
+of $\w{k}$ are future-directed null curves,
 which may be qualified of \emph{ingoing} since, by definition, $-\wpar_{\hat{r}}$ points towards
 decreasing values of $r$. Note that, by the very definition of $\wpar_{\hat{r}}$,
 the values of the coordinates $(v,\th,\tph)$ are fixed along each of these
@@ -646,7 +646,7 @@ That $\wpar_\ti$ and $\wpar_\tph$ are Killing vectors is not surprising since
 the metric components (\ref{e:ker:metric_Kerr_3p1}) do not depend on $\ti$
 nor on $\tph$.
 
-The determinant of the metric components (\ref{e:ker:metric_Kerr_3p1}) has
+The determinant of the metric components (\ref{e:ker:metric_Kerr_3p1}) takes
 a very simple form (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord} for the computation):
 \be \label{e:ker:det_g_3p1}
     \det\left( \tilde{g}_{\alpha\beta} \right) = - \rho^4\sin^2\th .
@@ -707,9 +707,10 @@ region defined by (\ref{e:ker:no_slicing}).
 
 We have seen that the Kerr coordinates $(v,r,\th,\tph)$ introduced in
 Sec.~\ref{s:ker:Kerr_coord} are such that
-the curves $\Li^{\rm in}_{(v,\th,\tph)}$ defined by $(v,\th,\tph)=\mathrm{const}$ are null curves. Their (future-directed) tangent
-vector field $\w{k} := -\wpar_{\hat{r}}$, once expressed in terms of 3+1 Kerr
-basis via (\ref{e:ker:frame_Kerr3p1_Kerr}), is
+the curves $\Li^{\rm in}_{(v,\th,\tph)}$ defined by $(v,\th,\tph)=\mathrm{const}$ are null curves. Their future-directed tangent
+vector field is $\w{k} = -\wpar_{\hat{r}}$ [Eq.~(\ref{e:ker:def_k_hat_r})], which
+can expressed in terms of 3+1 Kerr
+basis via (\ref{e:ker:frame_Kerr3p1_Kerr}):
 \be \label{e:ker:k_ti_tr}
     \w{k} = \wpar_\ti - \wpar_{\tilde r} .
 \ee
@@ -725,11 +726,11 @@ affine parameter of this geodesic. We can choose $\lambda=-r$ since
 \[
     k^r = \frac{\D r}{\D\lambda} = - 1 .
 \]
-The curves $\Li^{\rm in}_{(v,\th,\tph)}$
+The geodesics $\Li^{\rm in}_{(v,\th,\tph)}$
 are called the \defin{ingoing principal null geodesics}\index{principal!null geodesic}.
 The qualifier \emph{ingoing} stems from the fact that $r$ is decreasing along
 $\Li^{\rm in}_{(v,\th,\tph)}$ (in the future direction), which is an
-immediate consequence of $-r$ being a future-oriented parameter along $\Li^{\rm in}_{(v,\th,\tph)}$.
+immediate consequence of $\lambda=-r$ being a future-oriented parameter along $\Li^{\rm in}_{(v,\th,\tph)}$.
 The qualifier \emph{principal} arises from a relation between $\w{k}$
 and the Weyl conformal curvature tensor $\w{C}$ (cf. Sec.~\ref{s:bas:Weyl})
 of Kerr spacetime, namely:
@@ -771,8 +772,7 @@ Same as Fig.~\ref{f:ker:princ_null_geod_a90}, but for $a/m=0.5$.}
 \end{figure}
 
 
-
-The ingoing principal null geodesics form a \emph{congruence}: through
+We note that the ingoing principal null geodesics form a \emph{congruence}: through
 each point of $\M$, there is one, and only one, curve $\Li^{\rm in}_{(v,\th,\tph)}$.
 
 One can construct a second congruence of principal null geodesics from
@@ -798,10 +798,12 @@ the ingoing principal null geodesics, $r$ is an affine parameter along
 the outgoing principal null geodesics,
  except at the locations of $\M$ where $\Delta=0$,
 i.e. at $\Hor$ and $\Hor_{\rm in}$ (see below). Another difference
-with respect to the ingoing family is that $r$ is a future-oriented affine
-parameter along outgoing principal null geodesics only in regions
+with respect to the ingoing family is that, while $-r$ was always
+increasing towards the future along ingoing geodesics,
+ $r$ is increasing towards the future
+along outgoing principal null geodesics only in regions
 $\M_{\rm I}$ and $\M_{\rm III}$; in region $\M_{\rm II}$,
-$r$ is past-oriented.
+$r$ is decreasing towards the future.
 
 The fact that the Weyl tensor $\w{C}$
 admits two, and exactly two, congruences of principal null geodesics
@@ -1021,7 +1023,12 @@ along with $\scri^+$
 and $\scri^-$ is given in Fig.~\ref{f:ker:3blocks_in} below.
 
 
-Let us show $\M_{\rm I}$ lies entirely in the causal past of the future null infinity, $J^{-}(\scri^+)$, i.e.
+Let us show that the causal past of the future null infinity
+coincide with $\M_{\rm I}$: $J^{-}(\scri^+)=\M_{\rm I}$.
+Since, as stressed above, no future-directed causal curve can move from $\M_{\rm II}$ to $\M_{\rm I}$
+and $\scri^+$ is a boundary of $\M_{\rm I}$, we have $\M_{\rm II} \cap J^{-}(\scri^+) = \varnothing$. A fortiori $\M_{\rm III} \cap J^{-}(\scri^+) = \varnothing$.
+We have thus $J^{-}(\scri^+)\subset \M_{\rm I}$. To show the equality between the
+two sets there remains to show
 that any point $p\in \M_{\rm I}$ can emit a signal reaching $\scri^+$.
 Let $\Li$ be the null geodesic through $p$ of the outgoing principal null
 congruence $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ introduced in Sec.~\ref{s:ker:principal_geod}, i.e. $\Li$ is the unique geodesic departing
