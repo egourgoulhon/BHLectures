@@ -487,7 +487,7 @@ is related to the Boyer-Lindquist coordinate frame by
 \begin{align}
     & \wpar_v = \wpar_t \\
     & \wpar_{\hat{r}} = \wpar_r - \frac{a^2+r^2}{\Delta} \wpar_t
-                        - \frac{a}{\Delta} \wpar_\ph \\
+                        - \frac{a}{\Delta} \wpar_\ph \label{e:ker:frame_Kerr_BL_r}\\
     & \wpar_\th = \wpar_\th \\
     & \wpar_{\tph} = \wpar_\ph .
 \end{align}
@@ -496,13 +496,24 @@ Note that we are using the notation $\wpar_{\hat{r}}$ for the $\partial/\partial
 vector of the Kerr coordinates $\hat{x}^\alpha = (v,r,\th,\tph)$, to distinguish
 it from the $\partial/\partial r$ vector of the Boyer-Lindquist coordinates.
 We read on (\ref{e:ker:metric_Kerr_coord}) that $\hat{g}_{rr} = 0$, which
-implies that $\wpar_{\hat{r}}$ is a null vector. Moreover, asymptotically,
+implies that $\wpar_{\hat{r}}$ is a global null vector on $\M$.
+We may then use it to set the time orientation of $(\M,\w{g})$ by demanding that
+\be
+    \w{k} := - \wpar_{\hat{r}}
+\ee
+is a future-directed null vector in all $\M$. The minus sign
+in the above definition, along with Eq.~(\ref{e:ker:frame_Kerr_BL_r}),
+ensures that
 \[
-    \wpar_{\hat{r}} \sim \wpar_r - \wpar_t \quad\mbox{when}\
-            r \rightarrow +\infty .
+    \w{k} \sim \wpar_t -  \wpar_r  \quad\mbox{when}\
+            r \rightarrow +\infty ,
 \]
-This shows that $\wpar_{\hat{r}}$ is past-directed. Hence the field lines
-of $-\wpar_{\hat{r}}$ are future-directed null curves,
+which shows that the time orientation set by $\w{k}$ agrees asymptotically
+with that of $\wpar_t$.
+
+
+The field lines
+of $\wpar_{k}$ are future-directed null curves,
 which may be qualified of \emph{ingoing} since, by definition, $-\wpar_{\hat{r}}$ points towards
 decreasing values of $r$. Note that, by the very definition of $\wpar_{\hat{r}}$,
 the values of the coordinates $(v,\th,\tph)$ are fixed along each of these
@@ -997,11 +1008,20 @@ $\Hor_{\rm in}$ is a Killing horizon.
 
 As a null hypersurface, $\Hor$ is a one-way membrane (cf. Sec.~\ref{s:def:hor_as_null}),
 therefore any (massive or null) particle that crossed it from $\M_{\rm I}$ to
-$\M_{\rm II}$ can never be back in $\M_{\rm I}$.
-Thus $\M_{\rm II}$ and $\M_{\rm III}$ are in the black hole region with respect to
-$\scri^+$ corresponding to $r\rightarrow +\infty$.
+$\M_{\rm II}$ can never be back in $\M_{\rm I}$. Let us show that $\Hor$
+is actually a black hole event horizon, as defined in Sec.~\ref{s:glo:def_BH}.
 
-Let us show that $\Hor$ is exactly the boundary of the black hole region, i.e.
+We have seen in Sec.~\ref{s:ker:basic_prop} that the asymptotics of region $\M_{\rm I}$
+is the same as that of Schwarzschild spacetime. Hence one can perform a conformal
+completion of $(\M_{\rm I},\w{g})$ endowed with a future null infinity $\scri^+$
+and a past null infinity $\scri^-$ (an explicit construction of $\scri^+$ and
+$\scri^-$ for Schwarzschild spacetime has been performed in
+Sec.~\ref{s:max:regul_conf_compl}). A conformal diagram representing $\M_{\rm I}$
+along with $\scri^+$
+and $\scri^-$ is given in Fig.~\ref{f:ker:3blocks_in} below.
+
+
+Let us show $\M_{\rm I}$ lies entirely in the causal past of the future null infinity, $J^{-}(\scri^+)$, i.e.
 that any point $p\in \M_{\rm I}$ can emit a signal reaching $\scri^+$.
 Let $\Li$ be the null geodesic through $p$ of the outgoing principal null
 congruence $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ introduced in Sec.~\ref{s:ker:principal_geod}, i.e. $\Li$ is the unique geodesic departing
