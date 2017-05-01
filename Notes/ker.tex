@@ -385,7 +385,7 @@ other coordinates.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Kerr coordinates and extension of the spacetime manifold}
+\section{Kerr coordinates and extension of the spacetime manifold through $\Delta=0$}
 
 \subsection{Kerr coordinates} \label{s:ker:Kerr_coord}
 
@@ -454,7 +454,7 @@ to the hypersurfaces (cf. Fig.~\ref{f:ker:spher_view})
     \Hor := \left\{ p \in \R^2\times\SS^2,\quad r(p) = r_+ \right\}
 \ee
 and
-\be
+\be \label{e:ker:def_H_in}
     \Hor_{\rm in} := \left\{ p \in \R^2\times\SS^2,\quad r(p) = r_- \right\} .
 \ee
 The hypersurface $\Hor$ is actually the interface between the regions $\M_{\rm I}$
@@ -993,11 +993,11 @@ $\Hor$ is a Killing horizon\index{Killing!horizon}\index{horizon!Killing --}.
 
 Similarly, on $\Hor_{\rm in}$, we may rewrite (\ref{e:ker:normal_r_Killing})
 as $\w{n} = 2 m r_- \, \w{\chi}_{\rm in}$, with
-\be
+\be \label{e:ker:def_chi_in}
     \w{\chi}_{\rm in} := \w{\xi} + \Omega_{\rm in} \, \w{\eta}
 \ee
 and
-\be
+\be \label{e:ker:def_Omega_in}
     \Omega_{\rm in} := \frac{a}{2 m r_-} = \frac{a}{r_-^2 + a^2}
         = \frac{a}{2m\left( m - \sqrt{m^2-a^2} \right)} ,
 \ee
@@ -1005,6 +1005,8 @@ thereby arriving at the same conclusion:
 \begin{greybox}
 $\Hor_{\rm in}$ is a Killing horizon.
 \end{greybox}
+We shall call $\Hor_{\rm in}$ the \defin{inner horizon}\index{inner!horizon}\index{horizon!inner --}. We shall see in Sec.~\ref{s:ker:Cauchy_hor} that $\Hor_{\rm in}$
+is actually (part of) a Cauchy horizon.
 
 \subsection{Event horizon}
 
@@ -1074,7 +1076,7 @@ Eqs.~(\ref{e:ker:def_chi})-(\ref{e:ker:def_OmegaH}) the
 
 The null vector field $\wl$ defined by Eq.~(\ref{e:ker:def_ell_outgoing}) coincides with the Killing vector $\w{\chi}$ on $\Hor$,
 since $m r/(r^2 + a^2) \equalH 1/2$ and $a/(r^2+a^2) \equalH \Omega_H$:
-\be
+\be \label{e:ker:l_eqH_chi}
     \wl \equalH \w{\chi} .
 \ee
 In view of the pre-geodesic equation (\ref{e:ker:pregeod_ell}) satisfied
@@ -1603,15 +1605,111 @@ bifurcate Killing horizons\index{bifurcate!Killing horizon}\index{Killing!horizo
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{ker_cauchy_hor.png}}
-\caption[]{\label{f:ker:max_ext} \footnotesize
-Spacelike hypersurface $\Sigma$ and the Cauchy horizon.
+\caption[]{\label{f:ker:cauchy_hor} \footnotesize
+The partial Cauchy surface $\Sigma$, its future Cauchy development $\D^+(\Sigma)$ (hatched)
+and the Cauchy horizon.
 As in Figs.~\ref{f:ker:3blocks_in}-\ref{f:ker:max_ext},
 the dotted curves marks some hypersurfaces $r=\mathrm{const}$.}
 \end{figure}
 
 
-\subsection{Cauchy horizon}
+\subsection{Cauchy horizon} \label{s:ker:Cauchy_hor}
 
+Let us consider a spacelike hypersurface $\Sigma$ running from the asymptotically
+flat end of $\M_{\rm I}$ to the asymptotically flat end of ${\M'}_{\rm I}$,
+possibly through $\M_{\rm II}$ or ${\M^*}_{\rm II}$ (cf. Fig.~\ref{f:ker:cauchy_hor})
+that is \defin{acausal}\index{acausal!hypersurface}, in the
+sense that no causal curve intersects it more than once. One says that $\Sigma$ is
+a \defin{partial Cauchy surface}\index{partial!Cauchy surface}\index{Cauchy!surface!partial --}, the definition of the latter being
+an acausal hypersurface without edge \cite{HawkiE73}.
+The \defin{future Cauchy development}\index{future!Cauchy!development}\index{Cauchy!development!future --}
+(resp. \defin{past Cauchy development}\index{past!Cauchy!development}\index{Cauchy!development!past --}) of
+$\Sigma$ is the set $D^+(\Sigma)$ (resp. $D^-(\Sigma)$)
+of all spacetime points $p$ such that each past-directed (resp. future directed) inextendible causal curve
+through $p$ intersects $\Sigma$. The future Cauchy development of $\Sigma$ is
+the hatched region in Fig.~\ref{f:ker:cauchy_hor}.
+The spacetime metric at every point in $D^+(\Sigma)$ is entirely determined
+by initial data on $\Sigma$ through the Einstein equation, in its 3+1 form
+(see e.g. Chap.~5 of Ref.~\cite{Gourg12}); this reflects the well-posedness
+of general relativity as a \emph{Cauchy problem}.
+
+One says that $\Sigma$ is a \defin{Cauchy surface}\index{Cauchy!surface}
+iff $D^+(\Sigma)\cup D^-(\Sigma)$ is the whole spacetime, i.e. iff
+every inextendible causal curve intersects $\Sigma$.
+It is clear on Fig.~\ref{f:ker:cauchy_hor} that $\Sigma$ is a Cauchy surface
+for $(\M_1,\w{g})$, with $\M_1 := \M_{\rm I}\cup{\M'}_{\rm I}\cup\M_{\rm II}\cup{\M^*}_{\rm II}$, but not for the whole extended Kerr spacetime. The future boundary of $D^+(\Sigma)$
+is called the \defin{future Cauchy horizon}\index{future!Cauchy!horizon}\index{Cauchy!horizon!future --}\index{horizon!Cauchy --} of $\Sigma$ and denoted
+by $H^+(\Sigma)$. In the present case, the future Cauchy horizon does not depend upon the
+choice of $\Sigma$, being the same for any partial Cauchy surface through
+$\M_{\rm I}\cup{\M'}_{\rm I}$. We shall therefore denote it by $\Hor_{\rm C}$.
+We see clearly on Fig.~\ref{f:ker:cauchy_hor} that $\Hor_{\rm C}$ is the
+union of what we called the \emph{inner horizon}
+in Sec.~\ref{s:ker:Killing_hor}, i.e. the Killing horizon $\Hor_{\rm in}$,
+and the null boundary between $\M_{\rm II}$ and ${\M'}_{\rm III}$, ${\Hor'}_{\rm in}$
+say, which is a Killing horizon as well:
+\be
+    \Hor_{\rm C} = \Hor_{\rm in} \cup {\Hor'}_{\rm in} .
+\ee
+The Cauchy horizon $\Hor_{\rm C}$ is depicted as the blue thick line in Fig.~\ref{f:ker:cauchy_hor}. Note that it
+corresponds to a fixed value of the $r$ coordinate of Kerr-type coordinate systems, namely
+$r=r_-$, in agreement with the primary definition of $\Hor_{\rm in}$ given in Eq.~(\ref{e:ker:def_H_in}).
+
+\begin{remark}
+There is no such Cauchy horizon in the Schwarzschild spacetime, even in its
+maximally extended version. For instance the hypersurface defined in
+terms of the Kruskal-Szekeres coordinates by $T=0$ and whose equatorial section
+is depicted in Fig.~\ref{f:max:flamm_paraboloid} (Flamm paraboloid), is a
+Cauchy surface for the whole maximally extended Schwarzschild spacetime
+(by looking at Fig.~\ref{f:max:constant_T_slices}, you may convince yourself
+that any inextendible causal curve in Schwarzschild spacetime must go through $T=0$).
+\end{remark}
+
+
+Let us evaluate the non-affinity coefficient $\kappa_{\rm in}$ of the Killing
+generator $\w{\chi}_{\rm in}$ of the part $\Hor_{\rm in}$ of the
+Cauchy horizon [cf. Eq.~(\ref{e:ker:def_chi_in})].
+Since $m r_- /(r_-^2+a^2) = 1/2$,
+we notice, from Eqs.~(\ref{e:ker:def_ell_outgoing}), (\ref{e:ker:def_chi_in}) and (\ref{e:ker:def_Omega_in}), that the Killing vector $\w{\chi}_{\rm in}$ coincides with
+the vector $\wl$ tangent to the outgoing principal
+null geodesics on $\Hor_{\rm in}$:
+\be
+    \w{\chi}_{\rm in} \stackrel{\Hor_{\rm in}}{=} \wl .
+\ee
+Hence, as the event horizon $\Hor$, the inner horizon $\Hor_{\rm in}$
+is generated by outgoing principal null geodesics [compare Eq.~(\ref{e:ker:l_eqH_chi})].
+Equation~(\ref{e:ker:pregeod_ell}) implies then
+\be
+    \encadre{ \wnab_{\w{\chi}_{\rm in}}\, \w{\chi}_{\rm in} \stackrel{\Hor_{\rm in}}{=} \kappa_{\rm in} \, \w{\chi}_{\rm in} },
+\ee
+with the non-affinity coefficient $\kappa_{\rm in}$ obtained by specializing
+Eq.~(\ref{e:ker:bar_kappa}) to $r=r_-$:
+\[
+    \kappa_{\rm in} = \left. \bar{\kappa} \right| _{r=r_-} =
+    \frac{m(r_-^2-a^2)}{(r_-^2+a^2)^2} .
+\]
+Using the expression of $r_-$ in terms of $m$ and $a$ [Eq.~(\ref{e:ker:def_r_pm})], we get
+\be
+    \encadre{ \kappa_{\rm in} = - \frac{\sqrt{m^2 - a^2}}{2m(m - \sqrt{m^2-a^2})} } .
+\ee
+Given the assumption $0<a<m$, we have $\kappa_{\rm in} \not=0$, which implies that
+(cf. Sec.~\ref{s:neh:classif_KH})
+\begin{greybox}
+As long as $a<m$, the part $\Hor_{\rm in}$ of the Cauchy horizon $\Hor_{\rm C}$ is a non-degenerate Killing horizon.
+\end{greybox}
+We note that
+\be
+    \kappa_{\rm in} < 0 .
+\ee
+According to the results of Sec.~\ref{s:sta:non-degenerate_KH}, it follows
+that
+\begin{greybox}
+$\Hor_{\rm in}$ is contained in a \emph{bifurcate Killing horizon}, the
+bifurcation surface of which being the future boundary of $\Hor_{\rm in}$
+(light brown small disk in Fig.~\ref{f:ker:cauchy_hor}).
+Actually, the whole Cauchy horizon $\Hor_{\rm C}$ is the past part of the bifurcate Killing horizon,
+the future part being formed by the future
+boundaries $r=r_-$ of $\M_{\rm III}$ and ${\M'}_{\rm III}$ (light brown thick lines in Fig.~\ref{f:ker:cauchy_hor}).
+\end{greybox}
 
 \section{Further reading}
 
