@@ -18,10 +18,11 @@ interpreted in Sec.~\ref{s:ker:Komar_mass} as the spacetime total mass;
 to be interpreted in Sec.~\ref{s:ker:Komar_J} as the reduced angular momentum  $a=J/m$, $J$ being the
 spacetime total angular momentum.
 \end{itemize}
-In this part, we focus on Kerr solutions for which
+In this chapter, we focus on Kerr solutions for which
 \be \label{e:ker:a_lower_m}
-    0 < a < m .
+    0 < a < m ,
 \ee
+postponing the cases $a=m$ and $a>m$ to Chap.~\ref{s:ext}.
 The Kerr solution is usually presented in the so-called
 \defin{Boyer-Lindquist coordinates}\index{Boyer-Lindquist coordinates}
 $(t,r,\th,\ph)$. Except for the standard singularities of the
@@ -131,8 +132,8 @@ in vacuum ($\w{T}=0$) and with a vanishing cosmological constant ($\Lambda=0$).
 The Kerr solution has been found by the New Zealand mathematician Roy P. Kerr\index{Kerr, R.P.} (then at the University of Texas at Austin) in the spring of 1963
 \cite{Kerr63}. Kerr was searching for \emph{algebraically special}\index{algebraically special metric} metrics, i.e. metrics whose Weyl conformal curvature
 tensor admits a \emph{doubly degenerate principal null direction} (to be defined
-in Sec.~\ref{s:ker:principal_geod} below), when the principal null congruence has
-a non-vanishing twist. The case of vanishing twist (i.e. hypersurface-orthogonal
+in Sec.~\ref{s:ker:principal_geod} below), in the case where the
+principal null congruence has a non-vanishing twist (or ``rotation''). The special case of vanishing twist (i.e. hypersurface-orthogonal
 congruence) had been treated by Ivor Robinson\index{Robinson, I.} and
 Andrzej Trautman\index{Trautman, A.} in 1962 \cite{RobinT62}.
 Kerr used
@@ -508,9 +509,10 @@ is related to the Boyer-Lindquist coordinate frame by
 \end{align}
 \end{subequations}
 Note that we are using the notation $\wpar_{\hat{r}}$ for the $\partial/\partial r$
-vector of the Kerr coordinates $\hat{x}^\alpha = (v,r,\th,\tph)$, to distinguish
-it from the $\partial/\partial r$ vector of the Boyer-Lindquist coordinates.
-We read on (\ref{e:ker:metric_Kerr_coord}) that $\hat{g}_{rr} = 0$, which
+vector of the Kerr coordinate system $\hat{x}^\alpha = (v,r,\th,\tph)$, to distinguish
+it from the $\partial/\partial r$ vector of Boyer-Lindquist coordinates.
+We read on (\ref{e:ker:metric_Kerr_coord}) that
+$\w{g}(\wpar_{\hat{r}},\wpar_{\hat{r}}) = \hat{g}_{rr} = 0$, which
 implies that $\wpar_{\hat{r}}$ is a global null vector field on $\M$.
 We may use it to set the time orientation of $(\M,\w{g})$ by demanding that
 \be \label{e:ker:def_k_hat_r}
@@ -530,14 +532,15 @@ with that of $\wpar_t$.
 The field lines
 of $\w{k}$ are future-directed null curves,
 which may be qualified of \emph{ingoing} since, by definition, $-\wpar_{\hat{r}}$ points towards
-decreasing values of $r$. Note that, by the very definition of $\wpar_{\hat{r}}$,
+decreasing values of $r$. Note that, by the very definition of
+the vector $\wpar_{\hat{r}}$,
 the values of the coordinates $(v,\th,\tph)$ are fixed along each of these
 null curves. We therefore denote them by $\Li^{\rm in}_{(v,\th,\tph)}$.
 We shall see in Sec.~\ref{s:ker:principal_geod} that $\Li^{\rm in}_{(v,\th,\tph)}$ is actually a null geodesic.
 
 
 \begin{hist} \label{h:ker:Kerr_coord}
-Kerr coordinates are actually those in which Roy P.~Kerr\index{Kerr, R.P.} originally presented his
+Kerr coordinates are those in which Roy P.~Kerr\index{Kerr, R.P.} originally presented his
 solution in 1963 \cite{Kerr63}. Actually, he used $-\tph$ instead of $\tph$; hence
 the correspondance between our notations and those of Kerr's article \cite{Kerr63}
 is $v\leftrightarrow u$ and $\tph\leftrightarrow -\phi$.
@@ -557,9 +560,9 @@ the coordinates
 \be
     (\tilde{x}^\alpha) = (\ti, r, \th,\tph) ,
 \ee
-which we call the
+which we call
 \defin{3+1 Kerr coordinates}\index{3+1!Kerr coordinates}\index{Kerr!coordinates!3+1 --}.
-It is worth to relate them to the Boyer-Lindquist coordinates
+It is worth to relate them to Boyer-Lindquist coordinates
 $(t,r,\th,\ph)$. This is easily achieved
 by combining (\ref{e:ker:Kerr_coord}) with $\D\ti = \D v - \D r$:
 \begin{subequations}
@@ -713,7 +716,7 @@ $r^2 + 2 mr + a^2\cos^2\th > 0$. Now this second-order polynomial is positive ev
 \be \label{e:ker:no_slicing}
     - m - \sqrt{m^2-a^2\cos^2\th} \leq r \leq -m + \sqrt{m^2-a^2\cos^2\th} .
 \ee
-Note that this region is contained in the part $r\leq 0$  of $\M_{\rm III}$.
+Note that this region is contained in the negative-$r$ part of $\M_{\rm III}$.
 We conclude that the coordinates $(\ti,r,\th,\tph)$ define a 3+1 slicing of $\M$
 in $\M_{\rm I}$, $\M_{\rm II}$ and in the part of $\M_{\rm III}$ outside the
 region defined by (\ref{e:ker:no_slicing}).
@@ -736,12 +739,16 @@ that
     \wnab_{\w{k}}\, \w{k} = 0.
 \ee
 It follows that each curve $\Li^{\rm in}_{(v,\th,\tph)}$ is a geodesic
-and that the parameter associated $\lambda$ associated with $\w{k}$, is an
-affine parameter of this geodesic. We can choose $\lambda=-r$ since
-(\ref{e:ker:k_ti_tr}) implies
+and that the parameter $\lambda$ associated with $\w{k}$ is an
+affine parameter of this geodesic. Since
+Eq.~(\ref{e:ker:k_ti_tr}) implies
 \[
-    k^r = \frac{\D r}{\D\lambda} = - 1 .
+    k^r = \frac{\D r}{\D\lambda} = - 1 ,
 \]
+we have, up to some additive constant,
+\be
+\lambda=-r .
+\ee
 The geodesics $\Li^{\rm in}_{(v,\th,\tph)}$
 are called the \defin{ingoing principal null geodesics}\index{principal!null geodesic}.
 The qualifier \emph{ingoing} stems from the fact that $r$ is decreasing along
@@ -750,7 +757,7 @@ immediate consequence of $\lambda=-r$ being a future-oriented parameter along $\
 The qualifier \emph{principal} arises from a relation between $\w{k}$
 and the Weyl conformal curvature tensor $\w{C}$ (cf. Sec.~\ref{s:bas:Weyl})
 of Kerr spacetime, namely:
-\be
+\be \label{e:ker:def_PND}
     C^\alpha_{\ \, \mu\nu[\beta} k_{\gamma]} k^\mu k^\nu = 0
     \qquad\mbox{and}\qquad
     {}^*C^\alpha_{\ \, \mu\nu[\beta} k_{\gamma]} k^\mu k^\nu = 0 ,
@@ -762,9 +769,12 @@ where  ${}^*\w{C}$ stands for the
     \, \epsilon^{\mu\nu}_{\ \ \, \gamma\delta} ,
 \ee
 $\w{\epsilon}$ being the Levi-Civita tensor (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
-One says that the vector field $\w{k}$ defines a \emph{doubly degenerate, principal null
-direction} of $\w{C}$ (see e.g. Chap.~5 of O'Neill textbook \cite{ONeil95} for
+In view of (\ref{e:ker:def_PND}), one
+says that the vector field $\w{k}$ constitutes a \defin{doubly degenerate, principal null direction}\index{principal!null direction} of $\w{C}$ (see e.g. Chap.~5 of O'Neill textbook \cite{ONeil95} for
 details).
+We note that the ingoing principal null geodesics form a \emph{congruence}: through
+each point of $\M$, there is one, and only one, curve $\Li^{\rm in}_{(v,\th,\tph)}$.
+
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ker_princ_null_geod_a90.pdf}}
@@ -787,9 +797,6 @@ $v$ by $\delta v = 2m$.
 Same as Fig.~\ref{f:ker:princ_null_geod_a90}, but for $a/m=0.5$.}
 \end{figure}
 
-
-We note that the ingoing principal null geodesics form a \emph{congruence}: through
-each point of $\M$, there is one, and only one, curve $\Li^{\rm in}_{(v,\th,\tph)}$.
 
 One can construct a second congruence of principal null geodesics from
 the \emph{outgoing} Kerr coordinates instead of the ingoing ones
@@ -824,11 +831,13 @@ $r$ is decreasing towards the future.
 The fact that the Weyl tensor $\w{C}$
 admits two, and exactly two, congruences of principal null geodesics
 means that the Kerr metric is an \emph{algebraically special} solution of
-Einstein equation: it belongs to the so-called \emph{Petrov type D}\index{Petrov type}.
+Einstein equation: it belongs to the so-called \emph{Petrov type D}\index{Petrov type}
+\cite{ONeil95}.
 
-In this chapter, we shall focus on
+Let us find
 the expression of the outgoing principal null geodesics in terms of
-the 3+1 Kerr coordinates.
+the 3+1 Kerr coordinates (which have been constructed on the
+\emph{ingoing} principal null congruence).
 Combining (\ref{e:ker:out_Kerr_coord}) with (\ref{e:ker:Kerr_3p1_BL}),
 we get
 \begin{subequations}
@@ -851,10 +860,30 @@ These equations can be integrated (cf. the computation leading to Eq.~(\ref{e:ke
 \end{subequations}
 
 The outgoing principal null geodesics are depicted, along with the
-ingoing ones, are depicted in Figs.~\ref{f:ker:princ_null_geod_a90} and
-\ref{f:ker:princ_null_geod_a50}.
-Note that in both asymptotically flat regions, $r\rightarrow +\infty$ and
-$r\rightarrow -\infty$, the two congruences of geodesics are $\pm 45^\circ$ lines.
+ingoing ones, in Figs.~\ref{f:ker:princ_null_geod_a90} and
+\ref{f:ker:princ_null_geod_a50}. Note that the $\tph$ dependency of the
+outgoing geodesics is not shown in these figures, which represent only a projection
+in the $(\ti,r)$ plane. Actually the geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
+are winding at the coordinate speed
+\be \label{e:ker:wind_speed}
+    \left. \frac{\D\tph}{\D\ti} \right| _{\Li^{\rm out}_{(u,\th,\tilde{\tph})}} =
+    \frac{2a}{r^2 + 2m r + a^2} .
+\ee
+\begin{proof}
+Along a null geodesic $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, we have
+$\D u = 0$ and $\D\tilde{\tph}=0$, so that (\ref{e:ker:out_Kerr_Kerr_3p1}) yields
+\be \label{e:ker:dtdr_dphdr_out}
+\left. \frac{\D \ti}{\D r} \right| _{\Li^{\rm out}_{(u,\th,\tilde{\tph})}}  =   \frac{r^2 + 2m r + a^2}{\Delta}  \qquad\mbox{and}\qquad
+\left. \frac{\D \tph}{\D r} \right| _{\Li^{\rm out}_{(u,\th,\tilde{\tph})}} = \frac{2a}{\Delta} .
+\ee
+Dividing the second expression by the first one yields (\ref{e:ker:wind_speed}).
+\end{proof}
+
+Note that in both asymptotically flat regions, when $r\rightarrow +\infty$ and
+$r\rightarrow -\infty$, the winding speed (\ref{e:ker:wind_speed}) goes to zero
+and the two congruences of geodesics are $\pm 45^\circ$ lines
+in Figs.~\ref{f:ker:princ_null_geod_a90} and
+\ref{f:ker:princ_null_geod_a50}, as expected.
 Note also that, despite their name, the outgoing geodesics are actually
 ingoing in $\M_{\rm II}$ (between $\Hor_{\rm in}$ and $\Hor$), i.e. have $r$ decaying
 towards the future.
@@ -869,14 +898,8 @@ of $\ti$ in this region.
 The same effect exists, but is less pronounced, for $a/m=0.9$ (Fig.~\ref{f:ker:princ_null_geod_a90}).
 \end{remark}
 
-
-Along a null geodesic $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, we have
-$\D u = 0$ and $\D\tilde{\tph}=0$, so that (\ref{e:ker:out_Kerr_Kerr_3p1}) yields
-\begin{align}
-& \frac{\D \ti}{\D r} =   \frac{r^2 + 2m r + a^2}{\Delta}  \nonumber \\
-& \frac{\D \tph}{\D r} = \frac{2a}{\Delta} . \nonumber
-\end{align}
-As claimed above, these equations show that $r$ cannot be considered as
+The presence of $\Delta$ in the denominators of expressions~(\ref{e:ker:dtdr_dphdr_out})
+shows that $r$ cannot be considered as
 a parameter along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ as soon as
 $\Delta=0$, i.e. on $\Hor$ and $\Hor_{\rm in}$.
 In order to have a parametrization regular everywhere in $\M$, let us introduce
@@ -897,9 +920,10 @@ to $\lambda$ has then the following components w.r.t. the 3+1 Kerr coordinates:
 \end{align}
 In other words, we have
 \be \label{e:ker:def_ell_outgoing}
+    \encadre{
     \wl = \left( \frac{1}{2} + \frac{m r}{r^2 + a^2} \right) \wpar_\ti
         + \left( \frac{1}{2} - \frac{m r}{r^2 + a^2} \right) \wpar_{\tilde r}
-        + \frac{a}{r^2+a^2} \, \wpar_\tph .
+        + \frac{a}{r^2+a^2} \, \wpar_\tph } .
 \ee
 It is clear that this vector field is regular everywhere in $\M$.
 Given the metric components (\ref{e:ker:metric_Kerr_3p1}), it is easy
