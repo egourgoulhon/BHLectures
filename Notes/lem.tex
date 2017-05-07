@@ -23,36 +23,44 @@ An alternative, certainly more academic, is to consider the collapse of shell of
 
 \section{Lemaître-Tolman equations}
 
-\subsection{From the Einstein equation to the Lemaître-Tolman system}
+\subsection{Hypotheses}
 
 As mentionned in the Introduction, we shall restrict ourselves to
 spherically symmetric\footnote{See Sec.~\ref{s:sch:static_spher} for a precise
 definition of \emph{spherically symmetric}.} spacetimes, and for concretness, to 4-dimensional ones. The most general spherically symmetric 4-dimensional spacetime $(\M,\w{g})$
 can be described in terms of coordinates $x^\alpha=(\tau,\chi,\th,\ph)$ such that
 the components of the metric tensor are written
-\be
+\be \label{e:lem:metric_sync_coord}
     g_{\mu\nu}\, \D x^\mu \, \D x^\nu = - \D\tau^2 + a(\tau,\chi)^2 \D\chi^2
         + r(\tau,\chi)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)  ,
 \ee
-where $a(\tau,\chi)$ and $r(\tau,\chi)$ are generic (non-vanishing) functions.
+where $a(\tau,\chi)$ and $r(\tau,\chi)$ are generic positive functions.
 These coordinates are called \defin{Lemaître synchronous coordinates}\index{Lemaitre@Lemaître!synchronous coordinates}\index{synchronous!coordinates}, the qualifier
 \defin{synchronous} meaning that $\tau$ is the proper time of a observer staying
 at fixed value of the spatial coordinates $(\chi,\th,\ph)$.
+Note that the function $r(\tau,\chi)$ gives the \emph{areal radius}\index{areal!radius}
+of the 2-spheres
+defined by $(\tau,\chi) = \mathrm{const}$, which are the orbits of the $\mathrm{SO}(3)$
+group action (cf. Sec.~\ref{s:sch:static_spher}), i.e. the metric area of these
+2-spheres is $4\pi r(\tau,\chi)^2$.
 
 For simplification, we consider only a pressureless matter, in the form of a perfect
 fluid of 4-velocity $\w{u}$ with zero pressure. The matter energy-momentum tensor is then
-\be
+\be \label{e:lem:T_pressureless}
     \w{T} = \rho \w{u} \otimes \w{u} ,
 \ee
 where the scalar field $\rho$ can be interpreted as the fluid energy density
-measured in the fluid frame.
+measured in the fluid frame. Let us recall that the energy-mometum tensor of a generic
+perfect fluid is $\w{T} = (\rho + p)\w{u} \otimes \w{u} + p \w{g}$, where $p$
+is the fluid pressure. The expression (\ref{e:lem:T_pressureless}) corresponds thus
+to the special case $p=0$.
 Inside the matter, we link the coordinates $(\tau,\chi,\th,\ph)$ to the fluid by demanding
 that they are \defin{comoving}\index{comoving!coordinates} with the fluid, i.e. that a fluid particle
 stays at fixed values of $(\chi,\th,\ph)$.
 Because the 4-velocity obeys $u^\alpha = \D x^\alpha/\D \tau_{\rm fl}$, where
 $\tau_{\rm fl}$ is the fluid proper time [cf. Eq.~(\ref{e:fra:def_u})], this
 amounts to set $u^\chi=u^\th = u^\ph = 0$, i.e. to have
-\be
+\be \label{e:lem:u_par_tau}
     \w{u} = \wpar_\tau .
 \ee
 A priori, one should have only $\w{u} =  u^\tau\wpar_\tau$, but the
@@ -60,9 +68,114 @@ synchronous coordinate condition $g_{\tau\tau} = -1$ along with the
 normalization $\w{g}(\w{u},\w{u})=-1$ implies $u^\tau=1$. Since $u^\tau = \D\tau / \D\tau_{\rm fl}$, we get $\tau = \tau_{\rm fl}$ (up to some additive constant), which provides the physical
 interpretation of Lemaître coordinate $\tau$ as the fluid proper time.
 
-The expression of the Einstein equation (\ref{e:fra:Einstein_eq})  in terms of Lemaître synchronous coordinates
-is performed in Sec.~\ref{s:sam:Lemaitre-Tolman}.
+\subsection{Geodesic matter flow}
+
+The equation of energy-momentum conservation $\wnab\cdot\vw{T} = 0$
+[Eq.~(\ref{e:fra:divT})], which
+follows from the Einstein equation (\ref{e:fra:Einstein_eq}) and the contracted
+Bianchi identity (\ref{e:bas:Bianchi_contr}) (cf. Sec.~\ref{s:fra:Einstein_eq}),
+implies that
+\begin{greybox}
+The worldlines of the fluid particles obeying the pressureless matter
+model (\ref{e:lem:T_pressureless}) are timelike geodesics of
+spacetime $(\M,\w{g})$.
+\end{greybox}
+\begin{proof}
+If we plug the energy-momentum tensor (\ref{e:lem:T_pressureless}) in the
+energy-momentum conservation law (\ref{e:fra:divT}), we obtain
+\[
+    \nabla_\mu (\rho u^\mu u^\alpha )  = 0 ,
+\]
+i.e.
+\be \label{e:lem:divT_pressureless}
+    \nabla_\mu (\rho u^\mu) u^\alpha + \rho u^\mu \nabla_\mu u^\alpha = 0 .
+\ee
+Now the two terms in the left-hand side of this equation are orthogonal
+to each other, as an immediate consequence of the normalization of the
+4-velocity $\w{u}$ [Eq.~(\ref{e:fra:u_unit})]:
+$\w{u}\cdot \wnab_{\w{u}}\w{u} = 0$. In particular, $\w{u}$
+is a timelike vector, while the 4-acceleration $\wnab_{\w{u}}\w{u}$
+is a spacelike one. The only way for Eq.~(\ref{e:lem:divT_pressureless})
+to hold is thus that each term
+in the left-hand side vanishes separately:
+\[
+    \nabla_\mu (\rho u^\mu) = 0 \qquad\mbox{and}\qquad u^\mu \nabla_\mu u^\alpha = 0 .
+\]
+The second equation above is nothing but the geodesic equation for the
+field lines of $\w{u}$, i.e. the fluid wordlines.
+\end{proof}
+Each fluid particle is thus in free-fall and moves independently of its
+neighbours, which is not surprising since the pressure is zero.
+This justify the term \defin{dust}\index{dust} given to the matter
+model (\ref{e:lem:T_pressureless}).
+
+\subsection{From the Einstein equation to the Lemaître-Tolman system}
+
+Let us write the Einstein equation (\ref{e:fra:Einstein_eq})
+in terms of Lemaître synchronous coordinates $(\tau,\chi,\th,\ph)$
+and with the energy-momentum tensor (\ref{e:lem:T_pressureless})-(\ref{e:lem:u_par_tau})
+in its right-hand side.
+As detailed in Sec.~\ref{s:sam:Lemaitre-Tolman}, the $\tau\chi$ component yields
+\be \label{e:lem:a_f_dr}
+    a(\tau,\chi) = \frac{1}{f(\chi)} \der{r}{\chi} ,
+\ee
+where $f(\chi)$ is an arbitrary function of $\chi$.
+The $\chi\chi$ and $\tau\tau$ components of the Einstein equation
+yield respectively to
+\begin{subequations}\label{e:lem:LTeqs}
+\begin{align}
+ & \encadre{\left( \der{r}{\tau} \right) ^2 = f(\chi)^2 - 1 + \frac{2m(\chi)}{r(\tau,\chi)}
+   + \Lambda r(\tau,\chi)^2 } \label{e:lem:LTeqs1} \\
+ & \encadre{\frac{\D m}{\D\chi} = 4\pi r(\tau,\chi)^2 \rho(\tau,\chi) \der{r}{\chi} } ,
+ \end{align}
+\end{subequations}
+where $m(\chi)$ is another arbitrary function of $\chi$.
+There is no other independent component of Einstein equation.
+Equations~(\ref{e:lem:LTeqs}) constitute the
+\defin{Lemaître-Tolman system}\index{Lemaitre-Tolman system@Lemaître-Tolman system}.
+
+The function $m(\chi)$ is known in the literature as the \defin{Misner-Sharp mass}\index{Misner-Sharp!mass} or \defin{Misner-Sharp energy}\index{Misner-Sharp!energy}, in reference
+of a study by Misner and Sharp in 1964 \cite{MisneS64}, despite it has been introduced
+more than 30 years earlier by Lemaître \cite{Lemai32}. This quantity is
+invariantly defined for any spherically symmetric spacetime by the norm of the
+gradient of the areal radius $r$:
+\be \label{e:lem:def_Misner_Sharp}
+    m  := \frac{r}{2} \left( 1 - \nabla_\mu r \nabla^\mu r  - \Lambda r^2\right) .
+\ee
+It is easy to check that the above relation holds in the present case:
+we have, thanks to (\ref{e:lem:metric_sync_coord}),
+\[
+    \nabla_\mu r \nabla^\mu r = g^{\mu\nu} \der{r}{x^\mu} \der{r}{x^\nu}
+        = g^{\tau\tau} \left( \der{r}{\tau} \right)^2
+        + g^{\chi\chi} \left( \der{r}{\chi} \right)^2
+        = - \left( \der{r}{\tau} \right)^2 + \frac{1}{a(\tau,\chi)^2} \left( \der{r}{\chi} \right)^2
+\]
+Using Eq.~(\ref{e:lem:a_f_dr}), this expression reduces to
+\[
+    \nabla_\mu r \nabla^\mu r = - \left( \der{r}{\tau} \right)^2 + f(\chi)^2 .
+\]
+In view of the Lemaître-Tolman equation (\ref{e:lem:LTeqs1}), we conclude that
+(\ref{e:lem:def_Misner_Sharp}) holds.
 
 \section{Oppenheimer-Snyder solution}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
