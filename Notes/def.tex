@@ -6,7 +6,7 @@
 \section{Introduction}
 
 In this chapter, we shall start from a naive ``definition'' of a black hole,
-as a region of spacetime from which no particle may espace, and
+as a region of spacetime from which no particle can escape, and
 we shall convince ourselves that the black hole boundary --- the so-called
 \emph{event horizon} --- must be a null hypersurface (Sec.~\ref{s:def:BH_null_hypsurf}).
 We shall then study the properties of these hypersurfaces
@@ -37,7 +37,7 @@ This boundary is called the
 quite often referred to simply as the \defin{horizon}.
 It is a \defin{one-way membrane}\index{one-way membrane}\index{membrane!one-way --},
 in the sense that it can be crossed from the black hole ``exterior'' towards
-the black hole region, but not in the reverse way. The one-way membrane must be
+the black hole ``interior'', but not in the reverse way. The one-way membrane must be
 a hypersurface of the spacetime manifold $\M$, for it has to divide $\M$ in two regions:
 the interior (the black hole itself) and the exterior region.
 Let us recall that a \defin{hypersurface}\index{hypersurface} is an
@@ -56,14 +56,14 @@ spacelike (left), timelike (middle) and null (right).}
 \subsection{The event horizon as a null hypersurface} \label{s:def:hor_as_null}
 
 To discuss further which hypersurface could act as a black hole boundary,
-one should recall that, on a Lorentzian manifold $(\M,\w{g})$, there are
-three classes of hypersurfaces. The classification
-depends on the type of metric induced by $\w{g}$ on the
-hypersurface, $\Sigma$ say, the
+one should recall that, on a Lorentzian manifold $(\M,\w{g})$,
+a hypersurface $\Sigma$ can locally be classified in three categories.
+The classification depends on the type of metric induced by $\w{g}$ on
+$\Sigma$, the
 \defin{induced metric}\index{induced!metric}\index{metric!induced --} being
 nothing but the restriction $\left.\w{g}\right| _{\Sigma}$ of $\w{g}$
 to vector fields tangent to $\Sigma$.
-A hypersurface $\Sigma$ is said to be
+The hypersurface $\Sigma$ is said to be
 \begin{itemize}
 \item \defin{spacelike} iff $\left.\w{g}\right| _{\Sigma}$ is positive definite,
 i.e. iff $\mathrm{sign} \left.\w{g}\right| _{\Sigma} = (+,+,+)$,
@@ -78,6 +78,10 @@ implies that the bilinear form $\left.\w{g}\right| _{\Sigma}$ is not,
 strictly speaking, a metric on $\Sigma$.}
 i.e. iff $\mathrm{sign} \left.\w{g}\right| _{\Sigma} = (0,+,+)$.
 \end{itemize}
+All these definitions are local, i.e. apply to a point $p\in\Sigma$.
+Of course, it may happen that a hypersurface has not the same type
+among all its points.
+
 The hypersurface type can also be deduced from any normal vector\footnote{
 The definition of a vector normal to a hypersurface is recalled in Sec.~\ref{s:bas:hyp_normal} of Appendix~\ref{s:bas}.}
 $\w{n}$ to it (cf. Fig.~\ref{f:def:hypersurfaces}):
@@ -167,8 +171,8 @@ and
     \wnab u \not = 0 \quad \mbox{on}\ \Hor .
 \ee
 Condition (\ref{e:def:du_not_zero}) ensures that $\Hor$ is a regular
-hypersurface (an \emph{embedded} submanifold, in mathematical terms); without it, $\Hor$ may have
-self-intersection points.
+hypersurface (an \emph{embedded} submanifold, in mathematical terms); without it, $\Hor$ may be
+self-intersecting.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{def_null_hplane.pdf}}
@@ -181,7 +185,9 @@ The dimension along $z$ has been suppressed, so that $\Hor$ is pictured as a
 
 \begin{example}[null hyperplane] \label{x:def:null_hyp}
 A very simple example of null hypersurface is a null hyperplane of
-the 4-dimensional Minkowski spacetime. If $(t,x,y,z)$ are standard Minkowskian
+the 4-dimensional Minkowski spacetime\footnote{The \defin{Minkowski spacetime}\index{Minkowski!spacetime} is defined as $\M=\mathbb{R}^4$ with $\w{g}$ a flat Lorentzian
+metric; \defin{Minkowskian coordinates}\index{Minkowskian coordinates} are then coordinates with respect to which
+the metric components are $g_{\alpha\beta} = \mathrm{diag}(-1,1,1,1)$.}. If $(t,x,y,z)$ are Minkowskian
 coordinates, the choice of the scalar field
 \be \label{e:def:null_plane_u}
     u(t,x,y,z) = t - x
@@ -249,7 +255,8 @@ Let us consider the scalar field defined on $\M$ by
 It is then clear that the hypersurface $u=0$ is the
 3-dimensional ``cylinder'' $\Hor$ of equation
 $r=2m$ (cf. Fig.~\ref{f:def:Schwarz_horizon}). We shall see below\footnote{This should be obvious to the experienced
-reader, since a normal 1-form to $\Hor$ is $\dd r$ and, from Eq.~(\ref{e:def:Schw_metric_inv}), $g^{rr}=0$ on $\Hor$.} that $\Hor$ is indeed a null hypersurface.
+reader, since a normal 1-form to $\Hor$ is $\dd r$ and
+from Eq.~(\ref{e:def:Schw_metric_inv}), $g^{\mu\nu} \partial_\mu r \, \partial_\nu r = g^{rr}=0$ on $\Hor$.} that $\Hor$ is indeed a null hypersurface.
 \end{example}
 
 \begin{figure}
@@ -341,7 +348,7 @@ we have, by definition,
     & \iff & \vw{\nabla} u \cdot \w{v} = 0 ,   \label{e:def:nab_u_normal}
 \eea
 where $\vw{\nabla} u$ is the gradient vector field of the scalar field $u$,
-i.e. the vector field given in index-notation by
+i.e. the vector field given in index-notation by (cf. Sec.~\ref{s:bas:metric_dual})
 \be \label{e:def:nab_up_u}
     \nabla^\alpha u = g^{\alpha\mu} \nabla_{\mu} u = g^{\alpha\mu} \der{u}{x^\mu} .
 \ee
@@ -546,8 +553,8 @@ Minkowski spacetime, the helix defined in terms of
 some Minkowskian coordinates $(x^\alpha)=(t,x,y,z)$ by the parametric equation
 $x^\alpha(\lambda) = (\lambda, \cos\lambda, \sin\lambda, 0)$ is a null curve, i.e.
 it has
-a null tangent vector at each point, but it is not a null geodesic (in Minkowski
-spacetime, all null geodesics are straight lines).
+a null tangent vector at each point, but it is not a null geodesic: in Minkowski
+spacetime, all null geodesics are straight lines.
 \end{remark}
 
 As a by-product of (\ref{e:def:nab_lp_lp}), we get the behaviour of the
@@ -653,7 +660,7 @@ The green curves represent some null geodesic generators, with the null normal
 $\wl$ tangent to them.}
 \end{figure}
 
-In the remaining of this chapter, we assume that the spacetime dimension
+In the remaining of this chapter, we assume that the spacetime dimension $n$
 obeys $n\geq 3$. We define then a \defin{cross-section}\index{cross-section}
 of the null hypersurface $\Hor$
 as a submanifold $\Sp$ of $\Hor$ of codimension 2 (i.e. $\dim \Sp=n-2$),
@@ -683,9 +690,11 @@ the topology of $\Hor$ is then that of a ``tube'' or ``cylinder''
 For the standard 4-dimensional black holes, this is
 $\Hor \simeq \R \times \mathbb{S}^{2}$.
 
-A first important property of any cross-section $\Sp$ is to be spacelike,
-i.e. every vector
-tangent to $\Sp$ must be spacelike.
+A first important property is
+\begin{greybox}
+Any cross-section $\Sp$ is spacelike,
+i.e. all vectors tangent to $\Sp$ are spacelike.
+\end{greybox}
 \begin{proof}
 The spacelike character of $\Sp$ follows from the following
 lemma\footnote{\emph{Exercise:} prove it!}:
@@ -706,7 +715,7 @@ submanifold.
 From now on, we abandon the null hyperplane considered in Examples~\ref{x:def:null_hyp},
 \ref{x:def:null_hyp2} and \ref{x:def:null_hyp3}, since its topology is $\mathbb{R}^3$,
 and therefore not of the type (\ref{e:def:H_topology}) with $\Sp$ compact.
-On the other side, the future sheet $\Hor$ of the light cone of Minkowski spacetime considered in Examples~\ref{x:def:light_cone},
+On the other side, the future sheet $\Hor$ of the Minkowski-spacetime light cone considered in Examples~\ref{x:def:light_cone},
 \ref{x:def:light_cone2} and \ref{x:def:light_cone3} does obey (\ref{e:def:H_topology}),
 since we have excluded the cone apex from $\Hor$.
 A natural choice of cross-section is a sphere defined by $t=t_0$ for some positive constant $t_0$:
@@ -779,8 +788,10 @@ since  $x^a=(\th,\ph)$ is a coordinate system on $\Sp$:
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{def_2surf_ortho_complement.pdf}}
 \caption[]{\label{f:def:TS_ortho} \footnotesize
-The tangent space $T_p\Sp$ to the cross-section $\Sp$ and its orthogonal complement
-$T_p^\perp\Sp$. On this figure, $\Sp$ and $T_p\Sp$ are depicted as 1-dimensional
+The tangent space $T_p\Sp$ to the cross-section $\Sp$ and its 2-dimensional
+orthogonal complement
+$T_p^\perp\Sp$. Only the dimensionality of the latter is respected in
+the figure: $\Sp$ and $T_p\Sp$ are depicted as 1-dimensional
 objects, while they are truly $(n-2)$-dimensional ones.}
 \end{figure}
 
@@ -801,9 +812,9 @@ $T_p^\perp\Sp$ is Lorentzian:
 \be
     \mathrm{sign}\, \left.\w{g}\right|_{T_p^\perp\Sp} = (-,+) .
 \ee
-By definition, the null normal $\wl$ is orthogonal to any vector
+Since $\Sp\subset\Hor$, the null normal $\wl$ to $\Hor$ is orthogonal to any vector
 tangent to $\Sp$, i.e. $\wl \in T_p^\perp\Sp$.
-Since $T_p^\perp\Sp$ is a timelike plane, it has two independent null directions,
+Now, as a timelike plane, $T_p^\perp\Sp$ has two independent null directions,
 which can be seen as the two intersections of the null cone at $p$ with
 the 2-plane $T_p^\perp\Sp$ (cf. Fig.~\ref{f:def:TS_ortho}).
 Let us denote by $\w{k}$ a future-directed null vector in the null direction of $T_p^\perp\Sp$
@@ -826,7 +837,7 @@ we can extend it to all vectors of $T_p\M$ by requiring
 \be \label{e:def:q_zero_TSperp}
     \forall \w{v}\in T_p^\perp\Sp, \quad \w{q}(\w{v}, .) = 0 .
 \ee
-Indeed, given a pair $(\w{u},\w{v})$ of vectors in $T_p\M$, (\ref{e:def:TM_direct_sum})
+Indeed, given a pair $(\w{u},\w{v})$ of vectors in $T_p\M$, the direct sum (\ref{e:def:TM_direct_sum})
 implies that there are unique decompositions
 \bea
   & & \w{u} = \w{u}^\parallel + \w{u}^\perp,\quad \mbox{with}\quad  \w{u}^\parallel \in T_p\Sp,
@@ -874,11 +885,10 @@ Using $\wl\cdot\wl=0$, $\w{k}\cdot\w{k}=0$ and $\wl\cdot\w{k}=-1$
  & & \wl\cdot\w{v} = -v^1, \quad \w{k}\cdot\w{v} = -v^0 .  \nonumber
 \eea
 Hence (\ref{e:def:q_u_v_k_l}) results in
-\bea
-    \w{q}(\w{u},\w{v}) & = & \w{u}^\parallel \cdot\w{v}^\parallel - u^0 v^1 - u^1 v^0
-            + u^1 v^0 + u^0 v^1 \nonumber \\
-                & = & \w{u}^\parallel \cdot\w{v}^\parallel,  \nonumber
-\eea
+\[
+    \w{q}(\w{u},\w{v}) = \w{u}^\parallel \cdot\w{v}^\parallel - u^0 v^1 - u^1 v^0
+            + u^1 v^0 + u^0 v^1 = \w{u}^\parallel \cdot\w{v}^\parallel,
+\]
 which is nothing but (\ref{e:def:q_all_vectors}).
 \end{proof}
 
@@ -1050,7 +1060,7 @@ a nearby point $p_\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
 Since $\wl$ is tangent to $\Hor$ and $p\in\Hor$, we have $p_\varepsilon\in\Hor$.
 By repeating this for each point in $\Sp$,
 keeping the value of $\varepsilon$ fixed, we define a new codimension-2 surface,
-$\Sp_\varepsilon$ say cf. Fig.~\ref{f:def:expansion}). One says that $\Sp_\varepsilon$ is obtained
+$\Sp_\varepsilon$ say (cf. Fig.~\ref{f:def:expansion}). One says that $\Sp_\varepsilon$ is obtained
 from $\Sp$ by \defin{Lie dragging along $\wl$ by the parameter $\varepsilon$}\index{Lie!dragging}.
 Note that $\Sp_0 = \Sp$.
 Since $p_\varepsilon\in\Hor$ for every $p\in\Sp$, we have $\Sp_\varepsilon\subset \Hor$.
@@ -1231,7 +1241,8 @@ Note also that Eq.~(\ref{e:def:theta_Schw_hor_u}) yields
 $\theta_{(\wl)} <0$ for $r<2m$ and $\theta_{(\wl)} >0$ for $r>2m$. These
 expansion values are in agreement with what can be infered from Fig.~\ref{f:def:Schw_hor_lk},
 since $r$ is directly related to the area of the cross-sections of $\Hor$:
-$A = 4\pi r^2$ from Eq.~(\ref{e:def:q_Schw_hor}).
+$A = 4\pi r^2$ from Eq.~(\ref{e:def:q_Schw_hor}) and $\wl$ points towards
+decreasing (resp. increasing) values of $r$ for $r<2m$ (resp. $r>2m$).
 \end{example}
 
 Using the general law of variation of a derminant, as given by Eq.~(\ref{e:bas:variation_det})
@@ -1370,7 +1381,7 @@ have then
     \encadre{\theta_{(\wl)} = \wnab\cdot\wl - \kappa } .
 \ee
 \begin{remark} \label{r:def:theta_div_l}
-Contrary to $\theta_{(\wl)}$ or $\kappa$, the quantity $\wnab\cdot\wl$ depends
+Contrary to $\theta_{(\wl)}$ or $\kappa$, the quantity $\wnab\cdot\wl$ depends a priori
 on the extension of $\wl$ outside $\Hor$ (cf. the discussion in Sec.~\ref{s:def:null_normal}).
 For Eq.~(\ref{e:def:theta_div_l}) to hold, we have supposed that $\wl$ remains null
 outside $\Hor$, so that $k^\mu\nabla_\mu(\el_\nu \el^\nu)$, which is a
@@ -1637,7 +1648,7 @@ Since $\vw{q}^* \w{q} = \w{q}$, Eq.~(\ref{e:def:Theta}) yields
 \[
     \w{\Theta} = \frac{r-2m}{r(r+2m)} \, \w{q} .
 \]
-This formula is valid for all null hypersurface $\Hor_u$. For the specific
+This formula is valid for any hypersurface of the $\Hor_u$ family. For the specific
 case of the Schwarzschild horizon $\Hor$, $r=2m$ and it reduces to
 \be \label{e:def:Theta_zero_Schw_hor}
     \w{\Theta} = 0 .
@@ -1646,7 +1657,10 @@ case of the Schwarzschild horizon $\Hor$, $r=2m$ and it reduces to
 
 \section{Null Raychaudhuri equation} \label{s:def:null_raychaud}
 
-Let us derive an evolution equation for the expansion $\theta_{(\wl)}$.
+Let us derive an evolution equation for the expansion $\theta_{(\wl)}$;
+it is quite natural to consider the evolution
+along the null generators of $\Hor$, i.e. to evaluate the quantity
+$\wnab_{\wl}\theta_{(\wl)}$, all the more that $\wl$ is by hypothesis future-directed.
 The starting point is the Ricci identity [Eq.~(\ref{e:bas:Ricci_ident}) in Appendix~\ref{s:bas}]
 applied to $\wl$:
 \[
@@ -1789,6 +1803,12 @@ can be replaced by the Lie derivative $\Lie{\wl} \theta_{(\wl)}$ in the left-han
 equation.
 \end{remark}
 
+\begin{remark}
+The cosmological constant $\Lambda$ does not appear in the null Raychaudhuri
+equation (\ref{e:def:null_Raychaud}).
+\end{remark}
+
+
 \begin{example}[light cone]
 Let us check the null Raychaudhuri equation on the light cone in Minkowski
 spacetime. From Example~\ref{x:def:light_cone3}, we have $\kappa=0$, while
@@ -1813,7 +1833,7 @@ $\theta_{(\wl)}=0$ on $\Hor$ [Eq.~(\ref{e:def:theta_Schw_hor})],
 which implies $\wnab_{\el}\,  \theta_{(\wl)}=0$ since $\wl$ is tangent to $\Hor$,
 $\w{\sigma}=0$ since $\w{\Theta}=0$ [Eq.~(\ref{e:def:Theta_zero_Schw_hor})]
 and the Ricci tensor of the metric (\ref{e:def:Schw_metric}) is zero
-(cf. Appendix~\ref{s:sam}).
+(cf. Sec.~\ref{s:sam:Schwarz_hor} in Appendix~\ref{s:sam}).
 \end{example}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
