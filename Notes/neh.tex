@@ -244,7 +244,9 @@ This condition is pretty weak and is satisfied by
 \begin{itemize}
 \item vacuum: $\w{T}=0$;
 \item any ``reasonable'' matter model, such as a perfect fluid with a
-proper energy density $\varepsilon$ and pressure $p$ satisfying
+proper energy density $\varepsilon$ and pressure $p$ satisfying\footnote{Indeed, from the form $\w{T} = (\varepsilon+p)\uu{u}\otimes\uu{u} + p \w{g}$
+of the energy-momentum tensor of a perfect fluid, one has
+$\w{T}(\wl,\wl) = (\varepsilon+p)(\w{u}\cdot\wl)^2$ with $(\w{u}\cdot\wl)^2\geq 0$.}
 $\varepsilon+p\geq 0$;
 \item any electromagnetic field;
 \item any real or complex scalar field;
@@ -353,8 +355,8 @@ called \emph{isolated horizons}\index{isolated!horizon}\index{horizon!isolated}.
 A special kind of non-expanding horizons, which is of primordial
 importance for the theory of
 stationary black holes, is that of Killing horizons with closed-manifold cross-sections.
-Defining a Killing horizon requires the concepts of 1-dimensional group of
-isometries and Killing vector, which we discuss first.
+Defining a Killing horizon requires the concepts of \emph{1-dimensional group of
+isometries} and \emph{Killing vector}, which we discuss first.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{def_group_action.pdf}}
@@ -369,7 +371,7 @@ Symmetries of spacetime are described in a coordinate-independent way by means o
 a (symmetry) group acting on the spacetime manifold $\M$.
 Through this action, each transformation belonging to the group displaces points within $\M$ and one demands that the metric $\w{g}$ is invariant under such displacement.
 More precisely, given
-a group $G$, a \defin{group action}\index{group!action} of $G$ on $\M$ is a map\footnote{Do no confuse the generic element $g$ of the group $G$ with the metric tensor $\w{g}$.}
+a group $G$, a \defin{group action}\index{group!action} of $G$ on $\M$ is a map\footnote{Do no confuse the generic element $g$ of group $G$ with the metric tensor $\w{g}$.}
 \be
     \begin{array}{rccl}
     \Phi: & G\times \M & \longrightarrow & \M \\
@@ -378,10 +380,8 @@ a group $G$, a \defin{group action}\index{group!action} of $G$ on $\M$ is a map\
 \ee
 such that (cf. Fig.~\ref{f:neh:group_action})
 \begin{itemize}
-\item if $e$ is the identity element of $G$, then
-$\forall p\in \M,\  \Phi_e(p) = p$ ;
-\item $\forall (g,h) \in G^2,\  \forall p\in\M,\  \Phi_g(\Phi_h(p)) = \Phi_{gh}(p)$, where $gh$ stands for the product of $g$ by $h$ according to the group law of
-$G$.
+\item $\forall p\in \M,\  \Phi_e(p) = p$, where $e$ is the identity element of $G$;
+\item $\forall (g,h) \in G^2,\  \forall p\in\M,\  \Phi_g(\Phi_h(p)) = \Phi_{gh}(p)$, where $gh$ stands for the product of $g$ by $h$ according to $G$'s group law.
 \end{itemize}
 The \defin{orbit}\index{orbit!under a group action} of a point $p\in\M$ is the set $\{g(p),\ g\in G\}\subset\M$, i.e. the set of points which are connected to $p$ by some group transformation. One says that $p$ is a
 \defin{fixed point}\index{fixed!point} of the group action if its orbit is
@@ -506,7 +506,7 @@ This is a direct consequence of the identity (\ref{e:bas:Lie_adapted}).
 \begin{greybox}
 A \defin{Killing horizon}\index{Killing!horizon}\index{horizon!Killing --} is
 a null hypersurface $\Hor$ in a spacetime $(\M,\w{g})$ admitting a
-Killing vector field $\w{\xi}$ such that $\left.\w{\xi}\right|_{\Hor}$ is a
+Killing vector field $\w{\xi}$ such that, on $\Hor$, $\w{\xi}$ is
 normal to $\Hor$.
 \end{greybox}
 
@@ -542,7 +542,7 @@ Null half-hyperplanes $\Hor^+$ and $\Hor^-$ as Killing horizons for the
 Killing vector field $\w{\xi}=x \wpar_t + t \wpar_x$ generating Lorentz boosts
 in Minkowski spacetime. The green lines are the null geodesic generators of
 $\Hor$, while the thick black line (actually a 2-plane) marks the location
-where $\w{\xi}=0$.}
+where $\w{\xi}$ vanishes.}
 \end{figure}
 
 \begin{example}[null hyperplane as a translation-Killing horizon]
@@ -627,7 +627,7 @@ Killing vector field $\w{\xi}=y( \wpar_t + \wpar_x ) + (t-x)\wpar_y$
 generating null rotations
 in Minkowski spacetime. The green lines are the null geodesic generators of
 $\Hor$, while the thick black line (actually a 2-plane) marks the location
-where $\w{\xi}=0$.}
+where $\w{\xi}$ vanishes.}
 \end{figure}
 
 \begin{example}[light cone as a counter-example]
@@ -666,13 +666,14 @@ null normal $\wl$ performed in Example~\ref{x:def:Schw_hor2} of Chap.~\ref{s:def
 \end{example}
 
 \begin{hist}
-The concept of Killing horizon has been introduced by Brandon Carter in
+The concept of Killing horizon has been introduced by Brandon Carter\index{Carter, B.} in
 1966 \cite{Carte66,Carte67} and developed in an article published in
 1969 \cite{Carte69}. The properties of Killing horizons have been
-studied in detail by Robert H. Boyer, in an article prepared posthumously from his notes
+studied in detail by Robert H. Boyer\index{Boyer, R.H.},
+in an article prepared posthumously from his notes
 by J.~Ehlers and J.L.~Stachel and published in 1969 \cite{Boyer69},
 leading to the concept of \emph{bifurcate Killing horizon}, to be discussed in
-Sec.~\ref{s:sta:bifur_Killing_hor}.
+Sec.~\ref{s:sta:bifur_Killing_hor} (cf. the historical note on page~\pageref{h:sta:Boyer}).
 \end{hist}
 
 \subsection{Killing horizons as non-expanding horizons}
@@ -713,7 +714,7 @@ Let $\kappa$ be the non-affinity coefficient
 (cf. Sec.~\ref{s:def:geod_gener})
 of the null normal $\wl$ coinciding with the Killing vector $\w{\xi}$
 on a Killing horizon $\Hor$. According to the definition
-(\ref{e:def:wl_geod_kappa}), we have then
+(\ref{e:def:wl_geod_kappa}), we have
 \be
     \wnab_{\w{\xi}}\, \w{\xi} \equalH \kappa \, \w{\xi} .
 \ee
@@ -781,15 +782,16 @@ Hence
 \ee
 This is an explicit expression of $\kappa$ in terms of the Killing vector
 field $\w{\xi}$.
-However, in actual calculations, one generally prefers to employ
+However, in actual calculations, it is generally preferable to employ
 (\ref{e:neh:dxi2_kappa}) for evaluating $\kappa$, because the latter does not involve
 the computation of any covariant derivative, contrary to (\ref{e:neh:kappa2}).
 
 
 \subsection{The zeroth law of black hole mechanics} \label{s:neh:zeroth_law}
 
-Let us show that, on a Killing horizon, modulo some mild energy condition,
-the non-affinity coefficient $\kappa$ discussed above is constant.
+We are going to derive a result of great importance for black hole physics,
+namely the non-affinity coefficient $\kappa$ discussed above
+is constant on a Killing horizon, provided some mild energy condition holds.
 
 Let us denote by $\wl$ the null normal to $\Hor$ that coincides with
 the Killing vector field: $\wl \equalH \w{\xi}$. The vector field
@@ -801,7 +803,8 @@ This means that $\kappa$ is constant along the field lines of $\wl$ (i.e. the
 null geodesic generators of $\Hor$). It could however vary from a field line to another
 one. To show that this is not the case, let us consider a cross-section
 $\Sp$ of $\Hor$ and project the contracted Ricci identity (\ref{e:def:contract_Ricci_ident})
-onto it:
+onto it, via the orthogonal projector $\vw{q}$ introduced in
+Sec.~\ref{s:def:spacelike_sections}:
 \[
     \nabla_\mu \Theta^\mu_{\ \, \nu} q^\nu_{\ \, \alpha} + \el^\mu \nabla_\mu \omega_\nu q^\nu_{\ \, \alpha}
        - \nabla_\nu \left( \theta_{(\wl)} + \kappa \right) q^\nu_{\ \, \alpha}
@@ -928,7 +931,7 @@ This means that $\kappa$ is constant over $\Sp$. Given that $\kappa$ is
 constant along each null geodesic generator of $\Hor$, this completes the demonstration
 that $\kappa$ is constant over $\Hor$. More precisely, we have shown that
 \begin{greybox}
-If matter and the non-gravitational fields obey the dominant energy condition
+If matter and non-gravitational fields obey the dominant energy condition
 on the Killing horizon $\Hor$, then the non-affinity coefficient $\kappa$
 of the null normal coinciding with the Killing vector field on
 $\Hor$ is constant over $\Hor$:
@@ -1024,13 +1027,14 @@ we recover the Schwarzschild value: $\kappa= 1/(4m)$.
 \end{example}
 
 \begin{hist}
-The constancy of $\kappa$ for a Killing horizon has been proven by S.W.~Hawking
+The constancy of $\kappa$ for a Killing horizon has been proven by Stephen Hawking\index{Hawking, S.W.}
 in his lecture at the famous Les Houches School of Summer 1972 \cite{Hawki73} (p.~43).
 It has also been proven without requiring the dominant energy condition, but
-assuming axisymmetry by B.~Carter in his lecture at the same Les Houches School
+assuming axisymmetry by Brandon Carter\index{Carter, B.} in his lecture at the same Les Houches School
 \cite{Carte73b} (Theorem 8, p.~167).
 A third proof of the constancy of $\kappa$ using the dominant energy condition
-has also been given in 1973 by J.M.~Bardeen, B.~Carter and S.W.~Hawking
+has also been given in 1973 by James Bardeen\index{Bardeen, J.M.}, Brandon Carter and
+Stephen Hawking
 in their seminal article \emph{The Four Laws of Black Hole Mechanics}
 \cite{BardeCH73}.
 \end{hist}
@@ -1042,10 +1046,10 @@ energy condition), we may use it to classify Killing horizons in two
 categories, depending whether $\kappa$ vanishes or not:
 \begin{itemize}
 \item if $\kappa = 0$, the Killing vector $\w{\xi}$ is then a geodesic vector on $\Hor$
-and the latter is called a \defin{degenerate Killing horizon}\index{degenerate!Killing horizon}\index{Killing!horizon!degenerate --};
+and $\Hor$ is called a \defin{degenerate Killing horizon}\index{degenerate!Killing horizon}\index{Killing!horizon!degenerate --};
 \item if $\kappa \not=0$, $\w{\xi}$ is only a pregeodesic vector on $\Hor$
 (cf. Sec.~\ref{s:def:geod_gener})
-and the latter is called a \defin{non-degenerate Killing horizon}\index{non-degenerate!Killing horizon}\index{Killing!horizon!non-degenerate --}.
+and $\Hor$ is called a \defin{non-degenerate Killing horizon}\index{non-degenerate!Killing horizon}\index{Killing!horizon!non-degenerate --}.
 \end{itemize}
 
 \begin{example}
@@ -1065,7 +1069,7 @@ $a=m$ is a degenerate one.
 
 In this section, we assume that $\Hor$ is a non-degenerate Killing horizon,
 i.e. that $\kappa\not=0$.
-Let $p\in\Hor$ and $\w{v}\in T_p\M$ be a vector transverse to $\Hor$, i.e.
+Let $p\in\Hor$ and $\w{v}\in T_p\M$ be a vector \emph{transverse} to $\Hor$, i.e.
 not tangent to $\Hor$. According to Eq.~(\ref{e:neh:dxi2_kappa}), we have
 \[
     \wnab_{\w{v}} (\w{\xi}\cdot\w{\xi}) = - 2\kappa \, \w{\xi}\cdot\w{v} .
