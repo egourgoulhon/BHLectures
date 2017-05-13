@@ -120,12 +120,19 @@ As detailed in Sec.~\ref{s:sam:Lemaitre-Tolman}, the $\tau\chi$ component yields
     a(\tau,\chi) = \frac{1}{f(\chi)} \der{r}{\chi} ,
 \ee
 where $f(\chi)$ is an arbitrary function of $\chi$.
-The $\chi\chi$ and $\tau\tau$ components of the Einstein equation
-yield respectively to
+Accordingly, we may rewrite the metric components (\ref{e:lem:metric_sync_coord})
+\be \label{e:lem:metric_Lemaitre}
+    \encadre{ g_{\mu\nu}\, \D x^\mu \, \D x^\nu = - \D\tau^2
+        + \frac{1}{f(\chi)^2} \left( \der{r}{\chi} \right)^2 \D\chi^2
+        + r(\tau,\chi)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) } .
+\ee
+
+Taking into account (\ref{e:lem:a_f_dr}), the $\chi\chi$ and $\tau\tau$ components of the Einstein equation
+yield respectively to (cf. Sec.~\ref{s:sam:Lemaitre-Tolman})
 \begin{subequations}\label{e:lem:LTeqs}
 \begin{align}
  & \encadre{\left( \der{r}{\tau} \right) ^2 = f(\chi)^2 - 1 + \frac{2m(\chi)}{r(\tau,\chi)}
-   + \Lambda r(\tau,\chi)^2 } \label{e:lem:LTeqs1} \\
+   + \frac{\Lambda}{3} r(\tau,\chi)^2 } \label{e:lem:LTeqs1} \\
  & \encadre{\frac{\D m}{\D\chi} = 4\pi r(\tau,\chi)^2 \rho(\tau,\chi) \der{r}{\chi} } ,
  \end{align}
 \end{subequations}
@@ -137,10 +144,9 @@ Equations~(\ref{e:lem:LTeqs}) constitute the
 The function $m(\chi)$ is known in the literature as the \defin{Misner-Sharp mass}\index{Misner-Sharp!mass} or \defin{Misner-Sharp energy}\index{Misner-Sharp!energy}, in reference
 of a study by Misner and Sharp in 1964 \cite{MisneS64}, despite it has been introduced
 more than 30 years earlier by Lemaître \cite{Lemai32}. This quantity is
-invariantly defined for any spherically symmetric spacetime by the norm of the
-gradient of the areal radius $r$:
+invariantly defined for any spherically symmetric spacetime from the areal radius $r$:
 \be \label{e:lem:def_Misner_Sharp}
-    m  := \frac{r}{2} \left( 1 - \nabla_\mu r \nabla^\mu r  - \Lambda r^2\right) .
+    m  := \frac{r}{2} \left( 1 - \nabla_\mu r \nabla^\mu r  - \frac{\Lambda}{3} r^2\right) .
 \ee
 It is easy to check that the above relation holds in the present case:
 we have, thanks to (\ref{e:lem:metric_sync_coord}),
@@ -156,6 +162,54 @@ Using Eq.~(\ref{e:lem:a_f_dr}), this expression reduces to
 \]
 In view of the Lemaître-Tolman equation (\ref{e:lem:LTeqs1}), we conclude that
 (\ref{e:lem:def_Misner_Sharp}) holds.
+
+\subsection{Solutions for a vanishing cosmological constant}
+
+In the rest of this chapter, we assume $\Lambda=0$, since we are mainly
+interested in gravitational collapse in asymptotically flat spacetimes.
+The Lemaître-Tolman equation (\ref{e:lem:LTeqs1}) can be then rewritten
+as
+\be \label{e:lem:1dim_mechanical}
+    \frac{1}{2} \dot{r}^2 - \frac{m(\chi)}{r} = E(\chi) ,
+\ee
+where $\dot{r} := \partial r /\partial\tau$ and
+\be
+    E(\chi) := \frac{f(\chi)^2-1}{2} .
+\ee
+For a fixed value of $\chi$, we recognize
+the equation ruling the 1-dimensional non-relativistic motion of a
+particle in a Newtonian
+potential $V=-m/r$; $E(\chi)$ is then nothing but the total
+mechanical energy of the particle per unit mass.
+As it is well known, the solution of (\ref{e:lem:1dim_mechanical})
+depends on the sign of $E(\chi)$:
+\begin{itemize}
+\item if $E(\chi)>0$, the solution is given in parametrized form (parameter $\eta$) by
+\be
+    \left\{ \begin{array}{l}
+    \displaystyle\tau = \frac{m(\chi)}{(2E(\chi))^{3/2}} \left( \sinh\eta - \eta \right)
+        + \tau_0(\chi) \\[2ex]
+    \displaystyle r(\tau,\chi) = \frac{m(\chi)}{2E(\chi)} \left( \cosh\eta - 1 \right)
+    \end{array} \right.
+\ee
+\item if $E(\chi)=0$, the solution is
+\be
+    r(\tau,\chi) = \frac{3}{2} \left( \sqrt{2m(\chi)} \left| \tau -\tau_0(\chi) \right| \right) ^{2/3}
+\ee
+\item if $E(\chi)<0$, the solution is given in parametrized form (parameter $\eta$) by
+\be
+    \left\{ \begin{array}{l}
+    \displaystyle\tau =  \frac{m(\chi)}{|2E(\chi)| ^{3/2}} \left( \eta + \sin\eta \right)
+    + \tau_0(\chi)  \\[2ex]
+    \displaystyle r(\tau,\chi) = \frac{m(\chi)}{|2E(\chi)|} \left( 1 + \cos\eta \right)
+    \end{array} \right.
+\ee
+\end{itemize}
+In the above formulas, $\tau_0(\chi)$ is an arbitrary function of $\chi$.
+For $E>0$ and $E=0$, it sets the value of $\tau$ for which $r=0$, while
+for $E<0$, it sets the value of $\tau$ for which $r$ takes its maximal value
+($m/|E|$).
+
 
 \section{Oppenheimer-Snyder solution}
 
