@@ -1,4 +1,4 @@
-\chapter{The concept of black hole 2: Non-expanding horizons}
+\chapter{The concept of black hole 2: Non-expanding horizons and Killing horizons}
 \label{s:neh}
 
 \minitoc
@@ -6,9 +6,9 @@
 \section{Introduction}
 
 Having discussed in depth the geometry of null hypersurfaces in Chap.~\ref{s:def}
-we move forward here to distinguish a null hypersurface representing a black hole event horizon from, let us say, a future light cone. We do it here for black holes
+we move forward to distinguish a null hypersurface representing a black hole event horizon from, let us say, that representing a mere future light cone. We do it here for black holes
 \emph{in equilibrium}. Indeed, for such objects, it is quite natural
-to assume a vanishing expansion. This leads us the concept of \emph{non-expanding
+to assume a vanishing expansion. This leads us to the concept of \emph{non-expanding
 horizon} (Sec.~\ref{s:neh:neh}). A special kind of these objects is that
 of \emph{Killing horizons} (Sec.~\ref{s:neh:Killing_hor}). Actually, we shall
 see in Chap.~\ref{s:sta} that the event horizon of a black hole in equilibrium
@@ -21,31 +21,33 @@ must be a Killing horizon.
 
 \subsection{Motivation and definition}
 
-Having discussed in depth the geometry of null hypersurfaces, and in particular
-their expansion, let us make an attempt to distinguish a black hole event
-horizon from, let us say, a future light cone.
-To get the localized behaviour mentioned in the black hole naive definition
-of Sec.~\ref{s:def:first_defin}, we could demand that the area of the
-spacelike cross-sections remains constant, in other words that
-the expansion along the null normal vanishes. Hence the definition:\\
+In Chap.~\ref{s:def}, the null hypersurfaces have been introduced as boundaries
+of black holes, from the ``no-escape'' aspect of the naive definition given in
+Sec.~\ref{s:def:first_defin}. To enforce the ``localized'' facet of the definition,
+we could demand that the cross-sections are closed (compact without boundary\footnote{Cf. the discussion in Sec.~\ref{s:def:spacelike_sections}.})
+and have a constant area, i.e. a vanishing expansion. Hence the definition:
+\begin{greybox}
 A \defin{non-expanding horizon}\index{non-expanding!horizon}\index{horizon!non-expanding --} is a null hypersurface $\Hor$ having the
 topology (\ref{e:def:H_topology}):
 \be
     \Hor \simeq \R \times \Sp,
 \ee
-where $\Sp$ is a closed manifold of dimension $n-2$,
+where $\Sp$ is a closed manifold\index{closed!manifold} of dimension $n-2$,
 and such that the expansion of $\Hor$ along any null normal $\wl$ vanishes
 identically:
 \be
     \theta_{(\wl)} = 0 .
 \ee
+\end{greybox}
+\begin{remark}
 Note that, given the scaling law (\ref{e:def:rescale_lambda}),
 if $\theta_{(\wl)} = 0$ for some normal $\wl$, then  $\theta_{(\wl')} = 0$
 for any other normal $\wl'$. Hence the definition of a non-expanding horizon
 does not depend on the choice of the null normal.
-
+\end{remark}
 As we shall discuss in detail in Chap.~\ref{s:sta}, this definition captures only
-the event horizon of black holes in equilibrium.
+the event horizon of black holes in equilibrium. For a black hole out of equilibrium,
+one has generically $\theta_{(\wl)} > 0$.
 
 \begin{example}[Schwarzschild horizon]
 In view of Eq.~(\ref{e:def:theta_Schw_hor}), we may assert that the
@@ -56,12 +58,21 @@ of Chap.~\ref{s:def}
 is a non-expanding horizon.
 \end{example}
 
+\begin{example}[null hyperplane and light cone as counter-examples]
+The null hyperplane and light cone in Minkowski spacetime considered
+in the examples of Chap.~\ref{s:def} are excluded by the above definition,
+having non-compact cross-sections (null hyperplane) or nonzero expansion
+(light cone).
+\end{example}
+
 \begin{hist}\label{h:neh:NEH}
-The concept of non-expanding horizon has been introduced by P.~H\'a\'\j i\v{c}ek
+The concept of non-expanding horizon has been introduced by
+Petr~H\'a\'\j i\v{c}ek\index{Hajicek, P.@Ha\'\j i\v{c}ek, P.}
 in 1973 under the name of \emph{totally geodesic null hypersurface} \cite{Hajic73a}
 or \emph{perfect horizon} \cite{Hajic73b,Hajic74}.
-The terminology \emph{non-expanding horizon} is due to A.~Ashtekar, S.~Fairhurst
-and B.~Krishnan in 2000 \cite{AshteFK00} (see also \cite{AshteBL02}).
+The terminology \emph{non-expanding horizon} is due to
+Abhay Ashtekar\index{Ashtekar, A.}, Stephen Fairhurst\index{Fairhurst, S.}
+and Badri Krishnan\index{Krishnan, B.} in 2000 \cite{AshteFK00} (see also \cite{AshteBL02}).
 \end{hist}
 
 \subsection{Invariance of the area} \label{s:neh:invar_area}
@@ -105,10 +116,12 @@ If $\Hor$ is a non-expanding horizon, then $\theta_{(\wl')}=0$ and it follows
 that $A(\lambda')$ is a constant function. Hence the area of $\Sp'$ is equal
 to that of $\Sp$.
 \end{proof}
+\begin{greybox}
 Given that the quantity $A$ defined by (\ref{e:neh:total_area})
 takes a unique value whatever the cross-section $\Sp$,
 we call it the \defin{area of the non-expanding horizon}\index{area!of a non-expanding horizon}
 $\Hor$.
+\end{greybox}
 
 \begin{example}[Schwarzschild horizon] \label{x:neh:Schwarz_hor_area}
 The area of the Schwarzschild horizon is readily computed from
@@ -122,9 +135,9 @@ we get
 
 \subsection{Trapped surfaces}
 
-If there is a natural concept of \emph{outer}/\emph{inner} for $\Hor$, for
+If there exists some natural concept of \emph{outer}/\emph{inner} for $\Hor$, for
 instance the outer region being the one that contains an asymptotically flat end,
-and if the transverse null normals $\w{k}$ point to the inner region, then
+and if the transverse null normals $\w{k}$ to cross-sections point to the inner region, then
 the property $\theta_{(\wl)}=0$ means that any cross-section $\Sp$ of the
 non-expanding horizon $\Hor$ is a
 \defin{marginally outer trapped surface}\index{marginally!outer trapped surface}\index{trapped!surface!marginally outer --}
@@ -142,7 +155,7 @@ spacetime.}
 \end{figure}
 
 
-This definition is related to, but distinct from, the definition of a
+The MOTS definition is related to, but distinct from, the definition of a
 marginally trapped surface by Penrose \cite{Penro65}: a $(n-2)$-dimensional
 submanifold $\Sp$ of $\M$ is a \defin{trapped surface}\index{trapped!surface}
  iff (i) $\Sp$ is
@@ -180,7 +193,8 @@ which $\theta_{(\w{k})} > 0$ at some points of $\Sp$ \cite{GerocH82}.
 Let us consider a cross-section $\Sp$ of the Schwarzschild horizon as
 defined in Example~\ref{x:def:Schw_hor4} of Chap.~\ref{s:def}.
 Computing $q^{\mu\nu} \nabla_\mu k_\nu$ from the components $k_\nu$
-given by (\ref{e:def:l_k_forms_Schw_hor}) we get (cf. Appendix~\ref{s:sam})
+given by (\ref{e:def:l_k_forms_Schw_hor}) we get (cf. Sec.~\ref{s:sam:Schwarz_hor} for
+the computation)
 \[
     \theta_{(\w{k})} = - \frac{r+2m}{r^2} .
 \]
@@ -205,7 +219,7 @@ to
 \be \label{e:neh:null_Raychaud_theta_zero}
     \sigma_{ab} \sigma^{ab} + 8\pi \w{T}(\wl, \wl) = 0 .
 \ee
-The first term is always non-negative:
+Now, the first term is always non-negative:
 \be \label{e:neh:sigma_square}
     \sigma_{ab} \sigma^{ab} \geq 0 .
 \ee
