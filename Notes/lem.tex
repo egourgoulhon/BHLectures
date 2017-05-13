@@ -134,6 +134,7 @@ yield respectively to (cf. Sec.~\ref{s:sam:Lemaitre-Tolman})
  & \encadre{\left( \der{r}{\tau} \right) ^2 = f(\chi)^2 - 1 + \frac{2m(\chi)}{r(\tau,\chi)}
    + \frac{\Lambda}{3} r(\tau,\chi)^2 } \label{e:lem:LTeqs1} \\
  & \encadre{\frac{\D m}{\D\chi} = 4\pi r(\tau,\chi)^2 \rho(\tau,\chi) \der{r}{\chi} } ,
+    \label{e:lem:LTeqs2}
  \end{align}
 \end{subequations}
 where $m(\chi)$ is another arbitrary function of $\chi$.
@@ -173,7 +174,7 @@ as
     \frac{1}{2} \dot{r}^2 - \frac{m(\chi)}{r} = E(\chi) ,
 \ee
 where $\dot{r} := \partial r /\partial\tau$ and
-\be
+\be \label{e:lem:E_f_chi}
     E(\chi) := \frac{f(\chi)^2-1}{2} .
 \ee
 For a fixed value of $\chi$, we recognize
@@ -185,7 +186,7 @@ As it is well known, the solution of (\ref{e:lem:1dim_mechanical})
 depends on the sign of $E(\chi)$:
 \begin{itemize}
 \item if $E(\chi)>0$, the solution is given in parametrized form (parameter $\eta$) by
-\be
+\be \label{e:lem:sol_E_pos}
     \left\{ \begin{array}{l}
     \displaystyle\tau = \frac{m(\chi)}{(2E(\chi))^{3/2}} \left( \sinh\eta - \eta \right)
         + \tau_0(\chi) \\[2ex]
@@ -193,11 +194,11 @@ depends on the sign of $E(\chi)$:
     \end{array} \right.
 \ee
 \item if $E(\chi)=0$, the solution is
-\be
-    r(\tau,\chi) = \frac{3}{2} \left( \sqrt{2m(\chi)} \left| \tau -\tau_0(\chi) \right| \right) ^{2/3}
+\be \label{e:lem:sol_E_zero}
+    r(\tau,\chi) =  \left( \frac{3}{2} \sqrt{2m(\chi)} \left| \tau -\tau_0(\chi) \right| \right) ^{2/3}
 \ee
 \item if $E(\chi)<0$, the solution is given in parametrized form (parameter $\eta$) by
-\be
+\be \label{e:lem:sol_E_neg}
     \left\{ \begin{array}{l}
     \displaystyle\tau =  \frac{m(\chi)}{|2E(\chi)| ^{3/2}} \left( \eta + \sin\eta \right)
     + \tau_0(\chi)  \\[2ex]
@@ -210,6 +211,105 @@ For $E>0$ and $E=0$, it sets the value of $\tau$ for which $r=0$, while
 for $E<0$, it sets the value of $\tau$ for which $r$ takes its maximal value
 ($m/|E|$).
 
+\noindent\emph{Exercise:} prove that each of formulas (\ref{e:lem:sol_E_pos})-(\ref{e:lem:sol_E_neg}) provides
+a solution of Eq.~(\ref{e:lem:1dim_mechanical}).
+
+The procedure to get a full solution is (i) choose the functions
+$f(\chi)$, $m(\chi)$ and $\tau_0(\chi)$;
+(ii) evaluate $E(\chi)$ via (\ref{e:lem:E_f_chi}); (iii) depending of
+on the value of $E(\chi)$, use (\ref{e:lem:sol_E_pos}), (\ref{e:lem:sol_E_zero})
+or (\ref{e:lem:sol_E_neg}) to get the solution for $r(\tau,\chi)$;
+(iv) plug this solution into the remaining Lemaître-Tolman equation,
+Eq.~(\ref{e:lem:LTeqs2}), to get $\rho(\tau,\chi)$ and into
+(\ref{e:lem:metric_Lemaitre}) to get the metric tensor.
+
+\subsection{Schwarzschild solution in Lemaître coordinates}
+
+One can recover Schwarzschild solution from the above setting by
+considering the vacuum case, i.e. $\rho=0$. Then
+Eq.~(\ref{e:lem:LTeqs2}) imposes $m(\chi)$ to be a constant, which
+we shall denote simply by $m$. Regarding the function $f(\chi)$, let us
+choose for simplicity $f(\chi)=1$. Then $E(\chi)=0$ and $r(\tau,\chi)$
+is given by Eq.~(\ref{e:lem:sol_E_zero}). Since $m$ is constant, we
+cannot choose $\tau_0(\chi)$ to be a constant, otherwise
+$\partial r/\partial \chi$ would be zero and the metric
+(\ref{e:lem:metric_Lemaitre}) would be degenerate.
+The simplest non-constant choice is
+$\tau_0(\chi) = \chi$. To summarize, the
+three functions of $\chi$ determining the solution are set to
+\be
+    m(\chi)=m=\mathrm{const},\qquad f(\chi) = 1 \qquad\mbox{and}\qquad \tau_0(\chi) = \chi .
+\ee
+Equation~(\ref{e:lem:sol_E_zero}), with the above values for $m(\chi)$ and $\tau_0(\chi)$
+and assuming $\tau\geq \chi$,
+yields
+\be \label{e:lem:r_tau_chi_Schwarz}
+    r(\tau,\chi) =  \left( \frac{3}{2} \sqrt{2m} ( \tau -\chi ) \right) ^{2/3} .
+\ee
+Then
+\[
+    \der{r}{\chi} = - \sqrt{2m} \left( \frac{3}{2} \sqrt{2m} ( \tau -\chi ) \right) ^{-1/3}
+        = - \sqrt{\frac{2m}{r}} ,
+\]
+so that Eq.~(\ref{e:lem:metric_Lemaitre}) becomes
+\be \label{e:lem:Sch_met_Lem}
+    \encadre{  g_{\mu\nu}\, \D x^\mu \, \D x^\nu = - \D\tau^2
+        + \frac{2m}{r} \D\chi^2
+        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)  } .
+\ee
+In this expression, $r$ is the function of $(\tau,\chi)$ given
+by (\ref{e:lem:r_tau_chi_Schwarz}).
+
+The metric (\ref{e:lem:Sch_met_Lem}) is actually the
+Schwarzschild metric of mass parameter $m$. To prove it, let us first
+move to coordinates $(\tau,r,\th,\ph)$, the relation to Lemaître coordinates
+${x'}^\alpha=(\tau,\chi,\th,\ph)$ is obtained by differentiating (\ref{e:lem:r_tau_chi_Schwarz}):
+\[
+    \D r =  \sqrt{2m} \left( \frac{3}{2} \sqrt{2m} ( \tau -\chi ) \right) ^{-1/3}
+       (\D\tau - \D\chi) = \sqrt{\frac{2m}{r}} (\D\tau - \D\chi) ,
+\]
+from which
+\[
+  \sqrt{\frac{2m}{r}}  \D\chi = \sqrt{\frac{2m}{r}}  \D\tau - \D r
+\quad \Longrightarrow \quad \frac{2m}{r} \D\chi^2 = \frac{2m}{r} \D\tau^2
+    - 2 \sqrt{\frac{2m}{r}}  \D\tau \, \D r + \D r^2 .
+\]
+Substituting this relation in Eq.~(\ref{e:lem:Sch_met_Lem}) yields
+\bea
+    {g'}_{\mu\nu}\, \D {x'}^\mu \, \D {x'}^\nu & = &
+     - \left( 1 - \frac{2m}{r} \right)
+        \D\tau^2 - 2 \sqrt{\frac{2m}{r}}  \D\tau \, \D r + \D r^2
+        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) \nonumber \\
+    & = & - \left( 1 - \frac{2m}{r} \right) \left( \D\tau^2 + 2
+        \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \D\tau \, \D r \right)
+            + \D r^2 \nonumber \\
+        & & + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) \nonumber \\
+    & = & - \left( 1 - \frac{2m}{r} \right) \left( \D\tau +
+        \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \D r \right) ^2
+            + \frac{\D r^2}{1- \frac{2m}{r}}
+            + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) . \label{e:lem:met_tau_r}
+\eea
+If we introduce, instead of $\tau$, a coordinate $t$ such that
+\be \label{e:lem:dt_dtau_dr}
+    \D t = \D\tau +
+        \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \D r ,
+\ee
+Eq.~(\ref{e:lem:met_tau_r}) yields immediately to the familiar expression
+of Schwarzschild metric in Schwarzschild-Droste coordinates $(t,r,\th,\ph)$
+[Eq.~(\ref{e:sch:Schwarz_metric_SD})].
+The relation between Lemaître coordinates and
+and Schwarzschild-Droste ones can be made explicit by integrating
+Eq.~(\ref{e:lem:dt_dtau_dr}); one gets, up to some constant,
+\be
+    \tau = t - 2\sqrt{2m r} - 2 m \ln \left(
+        \frac{\sqrt{r} - \sqrt{2m}}{\sqrt{r} + \sqrt{2m}} \right) .
+\ee
+The expression of $\chi$ in terms of $(t,r)$ is then deduced from
+Eq.~(\ref{e:lem:r_tau_chi_Schwarz}):
+\be
+    \chi = t - 2\sqrt{2m r} \left( 1 + \frac{r}{6m} \right) - 2 m \ln \left(
+        \frac{\sqrt{r} - \sqrt{2m}}{\sqrt{r} + \sqrt{2m}} \right) .
+\ee
 
 \section{Oppenheimer-Snyder solution}
 
