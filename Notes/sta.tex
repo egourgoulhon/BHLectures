@@ -1,34 +1,87 @@
 \chapter{Stationary black holes}
-\label{s:sta}
+\label{s:sta}\index{stationary!black hole}
 
 \minitoc
 
 \section{Introduction}
 
-\section{Definition and first properties} \label{s:sta:def_station}
+\section{Definition and first properties}
 
-Let us consider a spacetime $(\M,\w{g})$ that contains a black hole, as defined in
-Sec.~\ref{s:glo:def_BH}. In particular, $(\M,\w{g})$ admits a future null
-infinity $\scri^+$ and a past null infinity $\scri^-$. One says that
-$(\M,\w{g})$ is a \defin{stationary spacetime}\index{stationary!spacetime}
-if (i) it is invariant under
+\subsection{Stationarity and staticity} \label{s:sta:def_station}
+
+We shall define a spacetime
+$(\M,\w{g})$ to be \defin{stationary}\index{stationary!spacetime}
+iff (i) it is invariant under
 the action of the translation group $(\mathbb{R},+)$ and (ii) the orbits of
-the group action are timelike curves in the vicinity of $\scri^+$ and
-$\scri^-$. It is equivalent to say that there exists a Killing vector field
-$\w{\xi}$ (the generator of the translation group, cf. Sec.~\ref{s:neh:symmetries}) that is timelike in the vicinity of $\scri^+$ and $\scri^-$.
+the group action are everywhere timelike curves or (ii') $(\M,\w{g})$
+admits a conformal completion (cf. Sec.~\ref{s:glo:conf_compl})
+and the orbits of the group action are timelike in the vicinity of
+the conformal boundary $\scri$.
+It is equivalent to say that there exists a Killing vector field
+$\w{\xi}$ (the generator of the translation group, cf. Sec.~\ref{s:neh:symmetries}) that is
+timelike everywhere or at least in the vicinity of $\scri$ when there exists a conformal
+completion.
 
-\begin{remark}
+\begin{remark} \label{r:sta:pseudo-stationary}
 Some authors (e.g. Carter \cite{Carte73b}) call such spacetimes
 \emph{pseudo-stationary}\index{pseudo-stationary}, keeping the qualifier
 \emph{stationary} for the case where the Killing field $\w{\xi}$ is timelike
-in all $\M$. As we going to see, when $\M$
+in all $\M$, i.e. obeying the point (ii) above. As we going to see, when $\M$
 contains a black hole, $\w{\xi}$ cannot be timelike everywhere,
 so only \emph{pseudo-stationarity} in the above sense is relevant for them.
 Our terminology follows that of Chru\'sciel, Lopes Costa \& Heusler \cite{ChrusLH12}
 and Choquet-Bruhat \cite{Choqu09}.
 \end{remark}
 
-If $(\M,\w{g})$ is invariant under the action of the isometry group $(\mathbb{R},+)$,
+A notion stronger than stationarity is of \emph{staticity}: an asymptotically
+flat spacetime $(\M,\w{g})$ is called \defin{static}\index{static!spacetime}
+iff (i) it is stationary and (ii) the Killing vector field $\w{\xi}$
+generating the stationary action is orthogonal to a family of hypersurfaces
+(one says that $\w{\xi}$ is \defin{hypersurface-orthogonal}\index{hypersurface-orthogonal}).
+Via the Frobenius theorem (cf. Sec.~\ref{s:def:Frobenius}), the hypersurface-orthogonal
+condition is equivalent to the existence of a 1-form $\w{\omega}$ such that
+\be \label{e:sta:dxi_Frob}
+    \dd \uu{\xi} = \w{\omega} \wedge \uu{\xi} ,
+\ee
+where $\uu{\xi}$ is the metric dual of $\w{\xi}$ (cf. Sec.~\ref{s:bas:metric_dual}).
+Equation (\ref{e:sta:dxi_Frob}) is equivalent to
+\be
+    \uu{\xi}\wedge\dd\uu{\xi} = 0 ,
+\ee
+or, in terms of components (expressing the exterior derivative $\dd\uu{\xi}$ in
+terms of the spacetime Levi-Civita connection $\wnab$):
+\be
+    \xi_{[\alpha} \nabla_\beta \xi_{\gamma]} = 0.
+\ee
+Then, one can show (see e.g. Sec.~1.9 of Straumann's textbook \cite{Strau04}), that locally, there exists a coordinate system $(x^\alpha)=(t,x^1,\ldots,x^{n-1})$ such that
+\be \label{e:sta:xi_wpar_t}
+    \w{\xi} = \wpar_t \qquad\mbox{and}\qquad \uu{\xi} = (\w{\xi}\cdot\w{\xi})\, \dd t .
+\ee
+The second relation implies that $\w{\xi}$ is orthogonal to the hypersurfaces $t=\mathrm{const}$. This orthogonality property translates to the metric components in the coordinates
+$(x^\alpha)$ as $g_{0i}=0$ for $i\in\{1,\ldots,n-1\}$, so that one may write
+\be \label{e:sta:static_metric}
+    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = V \D t^2 + g_{ij} \D x^i \D x^j ,
+\ee
+where $V=\w{\xi}\cdot\w{\xi}$ and $g_{ij}$ are functions of $(x^1,\ldots,x^{n-1})$ only.
+It is clear that the metric (\ref{e:sta:static_metric}) is invariant\footnote{Would
+(\ref{e:sta:static_metric}) have contained a non-vanishing $g_{0i}\, \D t \, \D x^i$ term,
+this would not have been the case.} in the
+transformation $t\mapsto-t$. One says that a static spacetime is
+\defin{time-reflection symmetric}\index{time!reflection symmetry}\index{reflection!time --}.
+
+\begin{remark}
+The same comment as in Remark~\ref{r:sta:pseudo-stationary} above can be made: some authors
+would call \emph{static spacetimes} only those in which the hypersurface-orthogonal Killing vector
+is everywhere timelike, whereas our definition is weaker, the timelike character being demanded only in the vicinity of the spacetime ``boundary'', i.e. the boundary of a conformal completion.
+\end{remark}
+
+\subsection{Black holes in stationary spacetimes}
+
+Let us consider a spacetime $(\M,\w{g})$ that contains a black hole, as defined in
+Sec.~\ref{s:glo:def_BH}. In particular, $(\M,\w{g})$ admits a future null
+infinity $\scri^+$ and a past null infinity $\scri^-$.
+Furthermore, we assume that $(\M,\w{g})$ is stationary, in the sense defined above.
+Since $(\M,\w{g})$ is invariant under the action of the isometry group $(\mathbb{R},+)$,
 so is $\scri^+$ (under some proper extension of $\w{\xi}$ to the conformal
 completion $\tilde{\M}$)
 and therefore its causal past $J^-(\scri^+)$. As the boundary of $J^-(\scri^+)$
@@ -39,7 +92,7 @@ each point of $\Hor$ is invariant (i.e. is a fixed point) under the group action
 Let us assume that $\Hor$ is smooth (which sounds likely in a stationary context;
 a rigorous proof can be found in \cite{ChrusDGH01}),
 it is then a null hypersurface (Property~4 in Sec.~\ref{s:glo:properties_H}).
-$\Hor$ is globally invariant if, and only if, the
+Now, $\Hor$ is globally invariant if, and only if, the
 generator $\w{\xi}$ of the isometry group is tangent to $\Hor$.
 Since a timelike vector cannot be tangent to a null hypersurface (cf. the
 lemma in Sec.~\ref{s:def:spacelike_sections}), we conclude that
@@ -64,7 +117,9 @@ $\Hor$ is a Killing horizon (with respect to the Killing field $\w{\xi}$).
 In dimension $n=4$ and using the Einstein equation,
 D.~Sudarsky and R.M.~Wald (1992) \cite{SudarW92} have then proven that $\w{\xi}$ must be
 hypersurface-orthogonal not only on $\Hor$,
-but  everywhere, i.e. that the spacetime $(\M,\w{g})$ is \defin{static}\index{static spacetime}. For this reason, Sudarski \& Wald's result is often
+but  everywhere, i.e. that the spacetime $(\M,\w{g})$ is
+\emph{static}\index{static!spacetime}, according to the above definition.
+For this reason, Sudarski \& Wald's result is often
 called the \defin{staticity theorem}\index{staticity theorem}.
 
 Having that $(\M,\w{g})$ is static, we can go further and
