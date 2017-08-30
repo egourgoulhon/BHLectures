@@ -553,15 +553,52 @@ hypersurface of $(\tilde{\M},\w{\tilde{g}})$.
 \end{example}
 
 
-More generally, if $\w{g}$ is a solution of Einstein vacuum equation with
-a cosmological constant $\Lambda$ [Eq.~(\ref{e:fra:Einstein_eq})], then
+More generally, if $\w{g}$ is a solution of Einstein equation with
+a cosmological constant $\Lambda$ [Eq.~(\ref{e:fra:Einstein_eq})]
+and an energy-momentum tensor decaying to zero at $\scri$,
+then
 \begin{itemize}
 \item $\scri$ is a null hypersurface if $\Lambda=0$;
 \item $\scri$ is a spacelike hypersurface if $\Lambda>0$;
 \item $\scri$ is a timelike hypersurface if $\Lambda<0$.
 \end{itemize}
 \begin{proof}
-... to be completed ...
+It follows from $\w{\tilde{g}} = \Omega^2 \w{g}$ that, on $\M$, the Ricci scalars $\tilde{R}$
+and $R$ of respectively $\w{\tilde{g}}$ and $\w{g}$ are related by\footnote{This relation is
+easily established by starting from Eq.~(2.30) of Hawking \& Ellis textbook~\cite{HawkiE73} or Eq.~(2.19) on page~645 of Choquet-Bruhat one~\cite{Choqu09} and inverting the roles of $\w{\tilde{g}}$ and $\w{g}$, thereby substituting
+$\Omega^{-1}$ for $\Omega$.}
+\be
+    \Omega^2 \tilde{R} = R - (n-1) \left( 2 \Omega \, \tilde{g}^{\mu\nu} \tilde{\nabla}_\mu
+    \tilde{\nabla}_\nu \Omega - n \, \tilde{g}^{\mu\nu} \partial_\mu \Omega \partial_\nu \Omega
+    \right) ,
+\ee
+where $n = \mathrm{dim}\, \M$ and $\tilde{\nabla}$ stands for the Levi-Civita connection of
+$\w{\tilde{g}}$. Using the trace of the Einstein equation (\ref{e:fra:Einstein_eq_n}) to
+express $R$, we get
+\[
+    \Omega^2 \tilde{R} = \frac{2}{n-2}\left( n \Lambda - 8\pi T \right)
+     - (n-1) \left( 2 \Omega \, \tilde{g}^{\mu\nu} \tilde{\nabla}_\mu
+    \tilde{\nabla}_\nu \Omega - n \, \tilde{g}^{\mu\nu} \partial_\mu \Omega \partial_\nu \Omega
+    \right)
+\]
+This equation is a priori valid in $\M$ only. Taking the limit $\Omega\rightarrow 0$ and
+assuming that $T\rightarrow 0$ in that limit, we get, by continuity, an identity
+on $\scri$:
+\be \label{e:glo:normal_scri_square}
+\tilde{g}^{\mu\nu} \partial_\mu \Omega \partial_\nu \Omega \stackrel{\scri}{=}
+    - \frac{2}{(n-1)(n-2)} \Lambda .
+\ee
+Since $\scri$ corresponds to a constant value of the scalar field $\Omega$ ($\Omega=0$),
+the left-hand side of this equation is nothing but the scalar square, with respect
+to the conformal metric, of the vector $\w{n}$ normal to $\scri$,
+whose components are $n^\alpha = \tilde{g}^{\alpha\mu} \partial_\mu \Omega$
+(remember that by hypothesis 4 in the definition
+of a conformal completion, $\dd\scri$ is not vanishing on $\scri$, so that
+$\w{n}$, which is its dual via $\w{\tilde{g}}$, is a valid normal
+vector to $\scri$). Equation~(\ref{e:glo:normal_scri_square}) implies
+that the sign of $\w{\tilde{g}}(\w{n},\w{n})$ is the opposite of that of $\Lambda$.
+Given the link between the type of a hypersurface and the type of its normal
+(cf. Sec.~\ref{s:def:hor_as_null}), this completes the proof.
 \end{proof}
 
 The definition of black hole shall
