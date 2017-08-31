@@ -501,7 +501,7 @@ including at the boundary $\scri$.
 
 \begin{remark}
 The boundary $\scri$ is not part of the physical spacetime
-$\M$, only of the conformal completion $\tilde{\M}$.
+$\M$, but only of the conformal completion $\tilde{\M}$.
 \end{remark}
 
 \begin{figure}
@@ -525,10 +525,14 @@ $(x^\alpha)=(\tau,\rho,\theta,\phi)$ are given by
     g_{\mu\nu} \D x^\mu \D x^\nu = \ell^2 \left[ - \cosh^2\rho \, \D \tau^2
     + \D \rho^2 + \sinh^2\rho \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) \right] ,
 \ee
-where $\ell$ is a positive constant related to the cosmological constant $\Lambda$
-by $\Lambda = - 3/\ell^2$. The metric (\ref{e:glo:AdS4}) is then a solution
-of the Einstein equation (\ref{e:fra:Einstein_eq}) with $\w{T}=0$
-(vacuum). Using coordinates $(x^\alpha)=(\tau,\chi,\theta,\phi)$ with
+where $\ell$ is a positive constant.
+Note that $\tau$ spans $\mathbb{R}$, $\rho$ spans $(0,+\infty)$,
+while $(\theta,\phi)$ are standard polar coordinates on $\mathbb{S}^2$:
+$\theta\in(0,\pi)$ and $\phi\in(0,2\pi)$.
+The metric (\ref{e:glo:AdS4}) is a solution
+of the Einstein equation (\ref{e:fra:Einstein_eq}) with
+the negative cosmological constant $\Lambda = - 3/\ell^2$
+and $\w{T}=0$ (vacuum). Using coordinates $(x^\alpha)=(\tau,\chi,\theta,\phi)$ with
 $\chi = \mathrm{atan}(\sinh\rho) \in (0,\pi/2)$, one gets
 \be
     g_{\mu\nu} \D x^\mu \D x^\nu = \frac{\ell^2}{\cos^2\chi} \left[ - \D \tau^2
@@ -647,7 +651,36 @@ This is true for Minkowski spacetime, but not necessarily for other spacetimes,
 as the following example shows.
 \end{remark}
 
-\begin{example}[Conformal completion of dS$_{n}$ spacetime]
+\begin{example}[Conformal completion of dS$_{4}$ spacetime]
+The 4-dimensional \defin{de Sitter spacetime}\index{de Sitter spacetime} is
+$(\M,\w{g})$ with $\M\simeq \mathbb{R}\times\mathbb{S}^3$ and $\w{g}$ is the metric
+whose components in the so-called \emph{global coordinates}
+$(x^\alpha)=(t,\chi,\theta,\phi)$ are given by
+\be \label{e:glo:dS4}
+    g_{\mu\nu} \D x^\mu \D x^\nu = \ell^2 \left[ -  \D t^2
+    + \cosh^2 t \left(
+    \D \chi^2 + \sin^2\chi \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) \right) \right] ,
+\ee
+where $\ell$ is a positive constant. Note that $t$ spans $\mathbb{R}$
+while $(\chi,\theta,\phi)$ are standard polar coordinates on $\mathbb{S}^3$:
+$\chi\in(0,\pi)$, $\theta\in(0,\pi)$ and $\phi\in(0,2\pi)$.
+ The metric (\ref{e:glo:dS4}) is a solution
+of the Einstein equation (\ref{e:fra:Einstein_eq}) with
+the positive cosmological constant $\Lambda = 3/\ell^2$
+and $\w{T}=0$ (vacuum). Using coordinates $(x^\alpha)=(\tau,\chi,\theta,\phi)$ with
+$\tau = 2\mathrm{atan}(\tanh(t/2)) \in (-\pi/2,\pi/2)$, one gets
+\be
+    g_{\mu\nu} \D x^\mu \D x^\nu = \frac{\ell^2}{\cos^2\tau} \left[ - \D \tau^2
+    + \D \chi^2 + \sin^2\chi \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) \right] .
+\ee
+Defining $\Omega := \ell^{-1}\cos\tau = (\ell\cosh t)^{-1}$, we notice that
+a conformal completion of $(\M,\w{g})$ is $(\tilde{\M},\w{\tilde{g}})$
+where (i) $\tilde{\M}$ is the part $-\pi/2\leq \tau \leq \pi/2$ of the Einstein cylinder\footnote{Recall that on the
+Einstein cylinder the range of $\tau$ is $(-\infty,+\infty)$, cf. Eq.~(\ref{e:glo:range_tau_chi}).}
+introduced in Sec.~\ref{s:glo:conf_complet_Mink}
+and (ii)  $\w{\tilde{g}}$ is the metric (\ref{e:glo:tg_Einstein}).
+
+
 ... to be completed ... \\
 $\scri^+$ and $\scri^-$ are spacelike
 \end{example}
