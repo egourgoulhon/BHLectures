@@ -453,7 +453,10 @@ of Minkowski space to a finite distance.
 Having investigated the asymptotic structure of Minkowski spacetime
 via a conformal completion, let us use the latter to define spacetimes
 that ``look like'' Minkowski spacetime asymptotically.
-A first step is the concept of conformal completion:
+A first step is the concept of conformal completion.
+
+\subsection{Conformal completion}
+
 \begin{greybox}
 A spacetime $(\M,\w{g})$ admits a
 \defin{conformal completion}\index{conformal!completion}
@@ -505,7 +508,7 @@ $\M$, only of the conformal completion $\tilde{\M}$.
 \centerline{\includegraphics[height=0.4\textheight]{glo_AdS_completion.pdf}}
 \caption[]{\label{f:glo:AdS_completion} \footnotesize
 Conformal completion of AdS$_{4}$ spacetime, depicted on the Einstein cylinder.
-The conformal boundary $\scri$ is shown in yellow; red lines are lines
+The conformal boundary $\scri$ is shown in yellow, red lines are lines
 $\chi=\mathrm{const}$ (uniformly sampled in terms of $\tan\chi = \sinh\rho$),
 green curves are radial null geodesics and the purple curve
 is a radial timelike geodesic, bouncing back and forth around $\chi=0$.
@@ -552,18 +555,23 @@ This 3-metric is clearly Lorentzian, which shows that $\scri$ is a timelike
 hypersurface of $(\tilde{\M},\w{\tilde{g}})$.
 \end{example}
 
-
-More generally, if $\w{g}$ is a solution of Einstein equation with
+The above example shows that $\scri$ is not necessarily a null hypersurface,
+as it is for Minkowski spacetime (cf. Sec.~\ref{s:glo:conf_complet_Mink}).
+Actually the hypersurface-type of $\scri$ is determined by the cosmological
+constant, as follows:
+\begin{greybox}
+If $\w{g}$ is a solution of Einstein equation with
 a cosmological constant $\Lambda$ [Eq.~(\ref{e:fra:Einstein_eq})]
-and an energy-momentum tensor decaying to zero at $\scri$,
-then
+and the trace $T$ of the energy-momentum tensor tends to zero in the
+vicinity of $\scri$ (i.e. when $\Omega\rightarrow 0$), then
 \begin{itemize}
-\item $\scri$ is a null hypersurface if $\Lambda=0$;
-\item $\scri$ is a spacelike hypersurface if $\Lambda>0$;
-\item $\scri$ is a timelike hypersurface if $\Lambda<0$.
+\item $\scri$ is a null hypersurface of $(\tilde{\M},\w{\tilde{g}})$ iff $\Lambda=0$;
+\item $\scri$ is a spacelike hypersurface of $(\tilde{\M},\w{\tilde{g}})$ iff $\Lambda>0$;
+\item $\scri$ is a timelike hypersurface of $(\tilde{\M},\w{\tilde{g}})$ iff $\Lambda<0$.
 \end{itemize}
+\end{greybox}
 \begin{proof}
-It follows from $\w{\tilde{g}} = \Omega^2 \w{g}$ that, on $\M$, the Ricci scalars $\tilde{R}$
+It follows from $\w{\tilde{g}} = \Omega^2 \w{g}$ that the Ricci scalars $\tilde{R}$
 and $R$ of respectively $\w{\tilde{g}}$ and $\w{g}$ are related by\footnote{This relation is
 easily established by starting from Eq.~(2.30) of Hawking \& Ellis textbook~\cite{HawkiE73} or Eq.~(2.19) on page~645 of Choquet-Bruhat one~\cite{Choqu09} and inverting the roles of $\w{\tilde{g}}$ and $\w{g}$, thereby substituting
 $\Omega^{-1}$ for $\Omega$.}
@@ -581,7 +589,8 @@ express $R$, we get
     \tilde{\nabla}_\nu \Omega - n \, \tilde{g}^{\mu\nu} \partial_\mu \Omega \partial_\nu \Omega
     \right)
 \]
-This equation is a priori valid in $\M$ only. Taking the limit $\Omega\rightarrow 0$ and
+This equation is a priori valid in $\M = \tilde{\M}\setminus\scri$ only.
+Taking the limit $\Omega\rightarrow 0$ and
 assuming that $T\rightarrow 0$ in that limit, we get, by continuity, an identity
 on $\scri$:
 \be \label{e:glo:normal_scri_square}
@@ -589,12 +598,13 @@ on $\scri$:
     - \frac{2}{(n-1)(n-2)} \Lambda .
 \ee
 Since $\scri$ corresponds to a constant value of the scalar field $\Omega$ ($\Omega=0$),
-the left-hand side of this equation is nothing but the scalar square, with respect
-to the conformal metric, of the vector $\w{n}$ normal to $\scri$,
-whose components are $n^\alpha = \tilde{g}^{\alpha\mu} \partial_\mu \Omega$
+the left-hand side of this equation is nothing but the scalar square
+$\w{\tilde{g}}(\w{n},\w{n})$ of the vector $\w{n}$ normal to $\scri$
+defined as the dual with respect to $\w{\tilde{g}}$ of the 1-form
+$\dd\Omega$: $n^\alpha = \tilde{g}^{\alpha\mu} \partial_\mu \Omega$
 (remember that by hypothesis 4 in the definition
-of a conformal completion, $\dd\scri$ is not vanishing on $\scri$, so that
-$\w{n}$, which is its dual via $\w{\tilde{g}}$, is a valid normal
+of a conformal completion, $\dd\Omega$ is non-vanishing on $\scri$, so that
+$\w{n}$  is a valid normal
 vector to $\scri$). Equation~(\ref{e:glo:normal_scri_square}) implies
 that the sign of $\w{\tilde{g}}(\w{n},\w{n})$ is the opposite of that of $\Lambda$.
 Given the link between the type of a hypersurface and the type of its normal
@@ -602,7 +612,7 @@ Given the link between the type of a hypersurface and the type of its normal
 \end{proof}
 
 The definition of black hole shall
-involve a subcategory of conformal completions:
+involves a subcategory of conformal completions:
 
 \begin{greybox}
 $(\tilde{\M},\w{\tilde{g}})$ is a
@@ -642,6 +652,7 @@ as the following example shows.
 $\scri^+$ and $\scri^-$ are spacelike
 \end{example}
 
+\subsection{Asymptotic flatness}
 
 Penrose\index{Penrose, R.} \cite{Penro64,Penro68} has defined
 a spacetime $(\M,\w{g})$ to be \defin{asymptotically simple}\index{asymptotically!simple} iff there exists
@@ -649,7 +660,9 @@ a conformal completion $(\tilde{\M},\w{\tilde{g}})$
 of $(\M,\w{g})$
 such that every null geodesic in $\M$ has two endpoints in $\scri$.
 
-The last condition, which is verified by Minkowski spacetime (cf. Fig.~\ref{f:glo:conf_Mink_null}), is rather restrictive. In particular, it excludes
+The last condition, which is verified by Minkowski spacetime (cf. Fig.~\ref{f:glo:conf_Mink_null}),
+de Sitter spacetime and anti-de Sitter spacetime (cf. the null geodesics in
+Fig.~\ref{f:glo:AdS_completion}), is rather restrictive. In particular, it excludes
 black hole spacetimes, since, almost by definition, the latter contain null
 geodesics that have no endpoint on $\scri^+$, having only a past endpoint
 on $\scri^-$, as far as $\scri$ is concerned. To cope with these spacetimes,
