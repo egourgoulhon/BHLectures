@@ -378,7 +378,7 @@ Let
     \scri := \scri^+ \cup \scri^-
 \ee
 and
-\be
+\be \label{e:glo:def_tM_Mink}
     \tilde{\M} := \M \cup \scri .
 \ee
 $\tilde{\M}$ is naturally a smooth manifold with
@@ -471,6 +471,9 @@ such that
 \item on $\scri$, $\Omega=0$;
 \item on $\scri$, $\dd \Omega \not= 0$.
 \end{enumerate}
+$\scri$ is called the \defin{conformal boundary}\index{conformal!boundary}\index{boundary!conformal --}
+of $(\M,\w{g})$ within
+the conformal completion $(\tilde{\M},\w{\tilde{g}})$.
 \end{greybox}
 Condition~1 expresses that $\M$ has been endowed with some boundary.
 A rigorous formulation of it would be via an embedding $\Phi:\M \rightarrow \tilde{\M}$,
@@ -487,7 +490,7 @@ implies
 \]
 with $1/\Omega^2 \rightarrow +\infty$ as one approaches $\scri$
 (condition~3).
- Finally, condition~4 ensures
+Finally, condition~4 ensures
 that $\scri$ is a regular hypersurface of $\tilde{\M}$.
 It is of course fulfilled by Minkowski spacetime, as we can check graphically
 on Fig.~\ref{f:glo:Omega_Mink}: the graph of $\Omega$ has no horizontal slope
@@ -500,8 +503,17 @@ including at the boundary $\scri$.
 \end{remark}
 
 \begin{remark}
-The boundary $\scri$ is not part of the physical spacetime
+The conformal boundary $\scri$ is not part of the physical spacetime
 $\M$, but only of the conformal completion $\tilde{\M}$.
+\end{remark}
+
+\begin{remark}
+One often speaks about
+\emph{conformal compactification}\index{conformal!compactification}\index{compactification}
+instead of \emph{conformal completion}, but in general $\tilde{\M}$ is not a
+compact manifold. For instance, because we omitted the points $i^+$, $i^-$ and $i^0$,
+the completion $\tilde{\M}$ of Minkowski spacetime defined by Eq.~(\ref{e:glo:def_tM_Mink})
+is not compact.
 \end{remark}
 
 \begin{figure}
@@ -520,19 +532,19 @@ is available at {\scriptsize \url{http://nbviewer.jupyter.org/github/sagemanifol
 The 4-dimensional \defin{anti-de Sitter spacetime}\index{anti-de Sitter spacetime} is
 $(\M,\w{g})$ with $\M\simeq \mathbb{R}^4$ and $\w{g}$ is the metric
 whose components in the so-called \emph{global coordinates}
-$(x^\alpha)=(\tau,\rho,\theta,\phi)$ are given by
+$(x^\alpha)=(\tau,\rho,\th,\ph)$ are given by
 \be \label{e:glo:AdS4}
     g_{\mu\nu} \D x^\mu \D x^\nu = \ell^2 \left[ - \cosh^2\rho \, \D \tau^2
     + \D \rho^2 + \sinh^2\rho \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) \right] ,
 \ee
 where $\ell$ is a positive constant.
 Note that $\tau$ spans $\mathbb{R}$, $\rho$ spans $(0,+\infty)$,
-while $(\theta,\phi)$ are standard polar coordinates on $\mathbb{S}^2$:
-$\theta\in(0,\pi)$ and $\phi\in(0,2\pi)$.
+while $(\th,\ph)$ are standard polar coordinates on $\mathbb{S}^2$:
+$\th\in(0,\pi)$ and $\ph\in(0,2\pi)$.
 The metric (\ref{e:glo:AdS4}) is a solution
 of the Einstein equation (\ref{e:fra:Einstein_eq}) with
 the negative cosmological constant $\Lambda = - 3/\ell^2$
-and $\w{T}=0$ (vacuum). Using coordinates $(x^\alpha)=(\tau,\chi,\theta,\phi)$ with
+and $\w{T}=0$ (vacuum). Using coordinates $(x^\alpha)=(\tau,\chi,\th,\ph)$ with
 $\chi = \mathrm{atan}(\sinh\rho) \in (0,\pi/2)$, one gets
 \be
     g_{\mu\nu} \D x^\mu \D x^\nu = \frac{\ell^2}{\cos^2\chi} \left[ - \D \tau^2
@@ -579,7 +591,7 @@ It follows from $\w{\tilde{g}} = \Omega^2 \w{g}$ that the Ricci scalars $\tilde{
 and $R$ of respectively $\w{\tilde{g}}$ and $\w{g}$ are related by\footnote{This relation is
 easily established by starting from Eq.~(2.30) of Hawking \& Ellis textbook~\cite{HawkiE73} or Eq.~(2.19) on page~645 of Choquet-Bruhat one~\cite{Choqu09} and inverting the roles of $\w{\tilde{g}}$ and $\w{g}$, thereby substituting
 $\Omega^{-1}$ for $\Omega$.}
-\be
+\be \label{e:glo:tildeR_R}
     \Omega^2 \tilde{R} = R - (n-1) \left( 2 \Omega \, \tilde{g}^{\mu\nu} \tilde{\nabla}_\mu
     \tilde{\nabla}_\nu \Omega - n \, \tilde{g}^{\mu\nu} \partial_\mu \Omega \partial_\nu \Omega
     \right) ,
@@ -615,8 +627,7 @@ Given the link between the type of a hypersurface and the type of its normal
 (cf. Sec.~\ref{s:def:hor_as_null}), this completes the proof.
 \end{proof}
 
-The definition of black hole shall
-involves a subcategory of conformal completions:
+The definition of black hole shall involve a subcategory of conformal completions:
 
 \begin{greybox}
 $(\tilde{\M},\w{\tilde{g}})$ is a
@@ -638,36 +649,30 @@ of $(\M,\w{g})$.
 \end{greybox}
 
 \begin{remark}
-One often speaks about \emph{conformal compactification}\index{conformal!compactification}
-instead of \emph{conformal completion}, but in general $\tilde{\M}$ is not a
-compact manifold. For instance, because we omitted the points $i^+$, $i^-$ and $i^0$,
-$\tilde{\M}$ is not compact even for Minkowski spacetime.
-\end{remark}
-
-\begin{remark}
 The above definition of $\scri^+$ and $\scri^-$ does not impose
 that these two objects are null hypersurfaces of $(\tilde{\M},\w{\tilde{g}})$.
-This is true for Minkowski spacetime, but not necessarily for other spacetimes,
-as the following example shows.
+This is true for Minkowski spacetime, but cannot hold for spacetimes with a
+non-zero cosmological constant, as shown above. In particular, the following
+example exhibits spacelike $\scri^+$ and $\scri^-$.
 \end{remark}
 
 \begin{example}[Conformal completion of dS$_{4}$ spacetime]
 The 4-dimensional \defin{de Sitter spacetime}\index{de Sitter spacetime} is
 $(\M,\w{g})$ with $\M\simeq \mathbb{R}\times\mathbb{S}^3$ and $\w{g}$ is the metric
 whose components in the so-called \emph{global coordinates}
-$(x^\alpha)=(t,\chi,\theta,\phi)$ are given by
+$(x^\alpha)=(t,\chi,\th,\ph)$ are given by
 \be \label{e:glo:dS4}
     g_{\mu\nu} \D x^\mu \D x^\nu = \ell^2 \left[ -  \D t^2
     + \cosh^2 t \left(
     \D \chi^2 + \sin^2\chi \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) \right) \right] ,
 \ee
 where $\ell$ is a positive constant. Note that $t$ spans $\mathbb{R}$
-while $(\chi,\theta,\phi)$ are standard polar coordinates on $\mathbb{S}^3$:
-$\chi\in(0,\pi)$, $\theta\in(0,\pi)$ and $\phi\in(0,2\pi)$.
+while $(\chi,\th,\ph)$ are standard polar coordinates on $\mathbb{S}^3$:
+$\chi\in(0,\pi)$, $\th\in(0,\pi)$ and $\ph\in(0,2\pi)$.
  The metric (\ref{e:glo:dS4}) is a solution
 of the Einstein equation (\ref{e:fra:Einstein_eq}) with
 the positive cosmological constant $\Lambda = 3/\ell^2$
-and $\w{T}=0$ (vacuum). Using coordinates $(x^\alpha)=(\tau,\chi,\theta,\phi)$ with
+and $\w{T}=0$ (vacuum). Using coordinates $(x^\alpha)=(\tau,\chi,\th,\ph)$ with
 $\tau = 2\mathrm{atan}(\tanh(t/2)) \in (-\pi/2,\pi/2)$, one gets
 \be
     g_{\mu\nu} \D x^\mu \D x^\nu = \frac{\ell^2}{\cos^2\tau} \left[ - \D \tau^2
@@ -675,17 +680,35 @@ $\tau = 2\mathrm{atan}(\tanh(t/2)) \in (-\pi/2,\pi/2)$, one gets
 \ee
 Defining $\Omega := \ell^{-1}\cos\tau = (\ell\cosh t)^{-1}$, we notice that
 a conformal completion of $(\M,\w{g})$ is $(\tilde{\M},\w{\tilde{g}})$
-where (i) $\tilde{\M}$ is the part $-\pi/2\leq \tau \leq \pi/2$ of the Einstein cylinder\footnote{Recall that on the
-Einstein cylinder the range of $\tau$ is $(-\infty,+\infty)$, cf. Eq.~(\ref{e:glo:range_tau_chi}).}
+where (i) $\tilde{\M}$ is the part $-\pi/2\leq \tau \leq \pi/2$ of the Einstein cylinder
 introduced in Sec.~\ref{s:glo:conf_complet_Mink}
 and (ii)  $\w{\tilde{g}}$ is the metric (\ref{e:glo:tg_Einstein}).
-
-
-... to be completed ... \\
-$\scri^+$ and $\scri^-$ are spacelike
+The boundary $\scri = \partial\tilde{\M}$ has two connected components:
+$\scri^+$, which is the hypersurface $\tau = \pi/2$ of $\tilde{\M}$, and
+$\scri^-$, which is the hypersurface $\tau = -\pi/2$.
+Both $\scri^+$ and $\scri^-$ are spanned by the coordinates $(\chi,\th,\ph)$
+and their topology is that of $\mathbb{S}^3$.
+We notice that conditions 3 and 4 of the definition of a conformal completion
+are satisfied: $\Omega = \ell^{-1} \cos\tau = 0$ at $\scri$ and
+$\dd\Omega = - \ell^{-1} \sin\tau\, \dd\tau = \pm \ell^{-1} \dd\tau \not = 0 $
+at $\scri$.
+The metric induced by $\w{\tilde{g}}$ on $\scri$ is obtained by
+setting $\tau=\pm\pi/2$ in (\ref{e:glo:tg_Einstein}):
+$\D \tilde{s}^2 =  \D \chi^2 + \sin^2\chi \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) $.
+This 3-metric is clearly Riemannian (this is actually the standard round metric
+of $\mathbb{S}^3$), which shows that $\scri$ is a spacelike
+hypersurface of $(\tilde{\M},\w{\tilde{g}})$. This of course agrees with
+the general property established above for spacetimes with a positive
+cosmological constant. Finally, it is clear that
+any causal curve originating in $\M$ that intersects $\scri^+$ must approach
+$\tau=\pi/2$ from below, i.e. cannot be past-directed. Similarly any
+causal curve originating in $\M$ that intersects $\scri^-$ must approach
+$\tau=-\pi/2$ from above, i.e. cannot be future-directed. We conclude
+that $(\tilde{\M},\w{\tilde{g}})$ is a conformal completion at null infinity
+of the de Sitter spacetime.
 \end{example}
 
-\subsection{Asymptotic flatness}
+\subsection{Asymptotic flatness} \label{s:glo:asymp_flat}
 
 Penrose\index{Penrose, R.} \cite{Penro64,Penro68} has defined
 a spacetime $(\M,\w{g})$ to be \defin{asymptotically simple}\index{asymptotically!simple} iff there exists
@@ -699,7 +722,7 @@ Fig.~\ref{f:glo:AdS_completion}), is rather restrictive. In particular, it exclu
 black hole spacetimes, since, almost by definition, the latter contain null
 geodesics that have no endpoint on $\scri^+$, having only a past endpoint
 on $\scri^-$, as far as $\scri$ is concerned. To cope with these spacetimes,
-Penrose\index{Penrose, R.} \cite{Penro68} has introduced the following definition:
+Penrose\index{Penrose, R.} has also introduced the following definition \cite{Penro68}:
 a spacetime $(\M,\w{g})$ is
 \defin{weakly asymptotically simple}\index{weakly!asymptotically simple} iff
 there exists an open subset $\mathscr{U}$ of $\M$ and
@@ -731,6 +754,21 @@ is asymptotically simple and empty, that the Weyl tensor of $\w{g}$ (cf. Sec.~\r
 vanishes at $\scri$. Since the
 Ricci tensor is zero, this implies that the full Riemann curvature tensor vanishes
 at $\scri$ [cf. Eq.~(\ref{e:bas:Weyl})], hence the qualifier \emph{asymptotically flat}.
+
+The following property holds:
+\begin{greybox}
+The conformal boundary $\scri$ of an asymptotically flat spacetime $(\M,\w{g})$
+is a null hypersurface of the conformal completion $(\tilde{\M},\w{\tilde{g}})$.
+\end{greybox}
+\begin{proof}
+Consider Eq.~(\ref{e:glo:tildeR_R}). Near $\scri$, we have $R=0$ by the
+very definition of asymptotic flatness. The limit $\Omega\rightarrow 0$
+results then in
+$\tilde{g}^{\mu\nu} \partial_\mu \Omega \partial_\nu \Omega \stackrel{\scri}{=} 0$,
+which, following the argument in the proof on p.~\pageref{e:glo:tildeR_R}, implies that
+$\scri$ is a null hypersurface.
+\end{proof}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -796,7 +834,8 @@ We shall do it for a spacetime $(\M,\w{g})$ that admits a conformal completion
 at null infinity as defined in Sec.~\ref{s:glo:conf_compl} and thus
 possesses a future null infinity $\scri^+$.
 Moreover, we shall assume that $\scri^+$ is \defin{complete}\index{complete!future null infinity}: if $\scri^+$
-is a null hypersurface, which occurs if $(\M,\w{g})$ is asymptotically flat,
+is a null hypersurface, which occurs if $(\M,\w{g})$ is asymptotically flat
+(cf. Sec.~\ref{s:glo:asymp_flat}),
 this means that $\scri^+$ is generated by complete null geodesics.
 The completeness condition is imposed to avoid ``spurious'' black holes,
 such as black holes in Minkowski space (cf. Remark~\ref{s:glo:spurious_bh} below).
