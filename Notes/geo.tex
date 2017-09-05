@@ -47,6 +47,8 @@ to the change $\D\lambda$ in the parameter $\lambda$
 In the above definition, let us recall that a \emph{curve} $\mathcal{C}$ is the image of a map (called
 a \emph{parametrization}) $P:\ I\rightarrow \M$,
 where $I$ is an interval of $\R$, spanned by $\lambda$ (cf Sec.~\ref{s:bas:vectors}).
+Moreover, we exclude the case where $\mathcal{C}$ is reduced to a single point
+of $\M$, i.e. where $P$ is a constant function.
 
 The qualifier \emph{affine} in the above definition stems from the following
 property:
@@ -103,6 +105,38 @@ by
 \eea
 where we have used the facts that $\wnab$ is the Levi-Civita connection of $\w{g}$ [Eq.~(\ref{e:bas:nabla_g_zero})] and $\w{v}$ obeys the geodesic equation (\ref{e:geo:geod_eq_v}).
 \end{proof}
+For a Lorentzian manifold, the constancy of $\w{g}(\w{v},\w{v})$ has an
+intersesting corollary: the tangent vector $\w{v}$ cannot change its type
+along $\mathcal{C}$. Hence:
+\begin{greybox}
+In a Lorentzian manifold $(\M,\w{g})$, a geodesic $\mathcal{C}$ belongs necessarily
+to one of the following three categories:
+\begin{itemize}
+\item \defin{timelike geodesic}\index{timelike!geodesic}\index{geodesic!timelike --}:
+tangent vectors are timelike at any point of $\mathcal{C}$;
+\item \defin{null geodesic}\index{null!geodesic}\index{geodesic!null --}:
+tangent vectors are null at any point of $\mathcal{C}$;
+\item \defin{spacelike geodesic}\index{spacelike!geodesic}\index{geodesic!spacelike --}:
+tangent vectors are spacelike at any point of $\mathcal{C}$.
+\end{itemize}
+\end{greybox}
+This is in sharp contrast with generic curves, which can be, for instance, timelike on some portions
+and null or spacelike on other portions. In the timelike case, or the spacelike one,
+the tangent vector field $\w{v}$ can be rescaled by the constant $\sqrt{|\w{g}(\w{v},\w{v})|}$ to get
+a unit tangent vector field, i.e. a tangent vector field $\w{u}$ which obeys
+$\w{g}(\w{u},\w{u}) = -1$ (timelike geodesic) or $\w{g}(\w{u},\w{u}) = 1$
+(spacelike geodesic). Moreover, in doing so, we preserve the affine character of the
+parametrization. Indeed, the rescaling amounts to choosing the constant $a$
+in the affine law~(\ref{e:geo:affine_transf}) such that $a = \sqrt{|\w{g}(\w{v},\w{v})|}$.
+Thus, we have
+\begin{greybox}
+A timelike or spacelike geodesic of a Lorentzian manifold has a unique affine parametrization,
+up to an additive constant $b$ and a choice of orientation ($a=\pm 1$ in (\ref{e:geo:affine_transf})),
+the tangent vector of which is a unit vector (i.e. of scalar square $\pm 1$ with respect to
+$\w{g}$). In the timelike case, the corresponding affine parameter is called the
+\defin{proper time}\index{proper!time}\index{time!proper --}, while in the
+spacelike case, it is called the \defin{arc length}\index{arc length}.
+\end{greybox}
 
 
 Geodesics can be characterized by any of their tangent vectors, i.e.
