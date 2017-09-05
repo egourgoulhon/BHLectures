@@ -166,21 +166,30 @@ from an open subset of $\R^n$ to $\R^n$.
 \subsection{Vectors on a manifold} \label{s:bas:vectors}
 
 On a manifold, vectors are defined as tangent vectors to a curve.
-A \defin{curve}\index{curve} is a subset $\mathcal{C}\subset \M$ which is the image of a smooth function $\R  \rightarrow  \M$:
+Given an interval $I\subset\R$, a (smooth)
+\defin{curve}\index{curve} is a subset $\mathcal{C}\subset \M$ that is the image of a smooth function
+$I \rightarrow  \M$:
 \be
     \begin{array}{rccl}
-    P: & \R & \longrightarrow & \M \\
+    P: & I & \longrightarrow & \M \\
         & \lambda & \longmapsto & p = P(\lambda) \in \mathcal{C}.
     \end{array}
 \ee
-Hence $\mathcal{C} = \{ P(\lambda) |\ \lambda\in\R\}$. The function $P$ is called a
-\defin{parametrization}\index{parametrization} of $\mathcal{C}$ and the
+Hence $\mathcal{C} = P(I) := \{ P(\lambda) |\ \lambda\in I\}$. The function $P$ is called a
+\defin{parametrization}\index{parametrization} of $\mathcal{C}$ and the real
 variable $\lambda$ is called a \defin{parameter along $\mathcal{C}$}\index{parameter along a curve}. Given a coordinate system $(x^\alpha)$
 in a neighbourhood of a point $p\in\mathcal{C}$, the parametrization $P$ is
-defined by $n$ functions $X^\alpha : \ \R\rightarrow \R$ such that
-\be
+defined by $n$ functions $X^\alpha : \ I \rightarrow \R$ such that
+\be \label{e:bas:curve_param_equation}
   x^\alpha(P(\lambda)) = X^\alpha(\lambda) .
 \ee
+
+\begin{remark}
+In the literature, especially in topology texts, a curve is often defined
+as a map $I \rightarrow  \M$, i.e. by the parametrization $P$ and not by
+the image of $P$. According to this definition, different parametrizations
+give then birth to different curves.
+\end{remark}
 
 A \defin{scalar field}\index{scalar!field} on $\M$ is a function
 $f:\ \M \rightarrow \R$. In practice, we will always consider smooth scalar fields. At a point $p=P(\lambda)\in\mathcal{C}$, the \defin{vector tangent to $\mathcal{C}$}\index{vector!tangent to a curve}\index{tangent!vector} associated with the parametrization
@@ -254,7 +263,7 @@ Since $p$ and $q$ are infinitesimally close, there is a unique (piece of) curve
 $\mathcal{C}$ going
 from $p$ to $q$ and one has
 \be \label{e:bas:dell_v_dlamb}
-  \D\w{x} = \w{v} \, \D\lambda ,
+  \encadre{\D\w{x} = \w{v} \, \D\lambda },
 \ee
 where $\lambda$ is a parameter along $\mathcal{C}$, $\w{v}$ the associated tangent
 vector at $p$ and $\D\lambda$ the parameter
@@ -994,7 +1003,7 @@ $\wnab\wnab f$ is a field of \emph{symmetric} bilinear forms; in components:
   \nabla_\alpha\nabla_\beta f = \nabla_\beta\nabla_\alpha f .
 \ee
 \item The covariant derivative of the metric tensor vanishes identically:
-\be
+\be \label{e:bas:nabla_g_zero}
   \encadre{ \wnab\w{g} = 0 } .
 \ee
 \end{enumerate}
@@ -1009,7 +1018,7 @@ in Sec.~\ref{s:bas:Levi-Civita_tensor} shares the same property as $\w{g}$:
 
 Given a coordinate system $(x^\alpha)$ on $\M$, the connection coefficients of the
 Levi-Civita connection with respect to the natural basis $(\wpar_\alpha)$
-are called the \defin{Christoffel symbols}; they
+are called the \defin{Christoffel symbols}\index{Christoffel symbols}; they
 can be evaluated
 from the partial derivatives of the metric components with respect to the coordinates:
 \be \label{e:bas:Christoffel}

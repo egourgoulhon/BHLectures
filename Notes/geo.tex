@@ -2,11 +2,19 @@
 
 \minitoc
 
-\section{Introduction and definition}
+\section{Introduction}
 
 Geodesics play a key role in general relativity, since they represent
 the worldlines of test particles, either massive ones or masseless ones (photons)
-(cf. ~Sec.~\ref{s:fra:worldlines}).
+(cf. Sec.~\ref{s:fra:worldlines}). Moreover, in the context of black holes,
+null geodesics play a proeminant role, as the generator of the event horizons
+(cf. Sec.~\ref{s:glo:properties_H}). We review here the definition and
+properties of geodesics on a generic pseudo-Riemannian manifold.
+Contrary to Appendix~\ref{s:bas}, proofs of the various properties will be provided.
+
+
+\section{Definition and first properties}
+
 On a Riemannian manifold, i.e. a manifold equipped with a positive definite metric
 (cf. Sec.~\ref{s:bas:signature}), a geodesic is the curve of minimal length between
 two points. It is also a curve along which tangent vectors are transported parallel
@@ -16,9 +24,162 @@ keep a fixed direction. In a \emph{pseudo}-Riemannian manifold, such as the
 spacetimes of general relativity, one uses
 the second property to define geodesics:
 \begin{greybox}
-A curve $\mathscr{C}$ of a pseudo-Riemannian manifold $(\M,\w{g})$ is
-called a geodesics
+A smooth curve $\mathcal{C}$ of a pseudo-Riemannian manifold $(\M,\w{g})$ is
+called a \defin{geodesic} iff it admits a parametrization $P$ whose associated
+tangent vector field $\w{v}$ is transported parallellely to itself along
+$\mathcal{C}$:
+\be \label{e:geo:geod_eq_v}
+    \encadre{\wnab_{\w{v}}\,\w{v} = 0},
+\ee
+where $\wnab$ is the Levi-Civita connection associated with $\w{g}$.
+The parametrization $P$ is then called an
+\defin{affine parametrization}\index{affine!parametrization}\index{parametrization!affine --}
+and the corresponding parameter $\lambda$ is called an
+\defin{affine paramater}\index{affine!parameter}\index{parameter!affine --} of the
+geodesic $\mathcal{C}$. Note that the relation between $\w{v}$ and $\lambda$ is
+\be \label{e:geo:v_dxdlambda}
+    \w{v} = \frac{\D\w{x}}{\D\lambda} ,
+\ee
+where $\D\w{x}$ is the infinitesimal displacement along $\mathcal{C}$ corresponding
+to the change $\D\lambda$ in the parameter $\lambda$
+(cf. Eq.~(\ref{e:bas:dell_v_dlamb})).
+\end{greybox}
+In the above definition, let us recall that a \emph{curve} $\mathcal{C}$ is the image of a map (called
+a \emph{parametrization}) $P:\ I\rightarrow \M$,
+where $I$ is an interval of $\R$, spanned by $\lambda$ (cf Sec.~\ref{s:bas:vectors}).
+
+The qualifier \emph{affine} in the above definition stems from the following
+property:
+\begin{greybox}
+Any two affine parametrizations of a geodesic $\mathcal{C}$ are necessarily
+related by an affine transformation:
+\be \label{e:geo:affine_transf}
+    \lambda' = a \lambda + b,
+\ee
+where $a$ and $b$ are two real constants such that $a\not = 0$.
+\end{greybox}
+\begin{proof}
+Let $P: I \to  \mathcal{C}$, $\lambda\mapsto P(\lambda)$ and
+$P': I'\to \mathcal{C}$,
+$\lambda'\mapsto P'(\lambda')$ be two
+parametrizations of $\mathcal{C}$. They are necessarily related by a
+diffeomorphism $I\to I'$, $\lambda \mapsto \lambda'(\lambda)$. It follows
+from (\ref{e:geo:v_dxdlambda}) that the tangent vector fields $\w{v}$ and $\w{v'}$
+associated with these two parametrizations are related by
+\[
+    \w{v} = \frac{\D\lambda'}{\D\lambda} \, \w{v'} .
+\]
+Using the rules 2 and 3 governing the connection $\wnab$ (cf. Sec.~\ref{s:bas:affine_connect}),
+we get then
+\be \label{e:geo:acc_v_acc_vp}
+    \wnab_{\w{v}}\,\w{v} = \frac{\D^2\lambda'}{\D\lambda^2} \, \w{v'}
+    + \left( \frac{\D\lambda'}{\D\lambda} \right)^2 \wnab_{\w{v'}}\,\w{v'} .
+\ee
+If both parametrizations are affine, then $\wnab_{\w{v}}\,\w{v} = 0$ and
+$\wnab_{\w{v'}}\,\w{v'} = 0$, so that the above identity reduces to
+${\D^2\lambda'}/{\D\lambda^2} = 0$, which implies
+the affine law (\ref{e:geo:affine_transf}).
+\end{proof}
+
+An important property of geodesics is
+\begin{greybox}
+Let $\mathcal{C}$ be a geodesic of $(\M,\w{g})$ and $\w{v}$ a tangent vector field
+associated with an affine parametrization of $\mathcal{C}$. Then the
+scalar square of $\w{v}$ with respect to the metric $\w{g}$
+is constant along $\mathcal{C}$:
+\be
+    \w{g}(\w{v},\w{v}) = \mathrm{const}.
+\ee
+\end{greybox}
+\begin{proof}
+The variation of $\w{g}(\w{v},\w{v})$ along $\mathcal{C}$ is given
+by
+\bea
+ \wnab_{\w{v}} \left[ \w{g}(\w{v},\w{v}) \right] & = & v^\mu \nabla_\mu (g_{\rho\sigma} v^\rho v^\sigma) \nonumber \\
+            & = & v^\mu \underbrace{\nabla_\mu g_{\rho\sigma}}_{0} v^\rho v^\sigma
+                + g_{\rho\sigma} \underbrace{v^\mu \nabla_\mu v^\rho}_{0} v^\sigma
+                + g_{\rho\sigma} v^\rho \underbrace{v^\mu \nabla_\mu v^\sigma}_{0}  \nonumber \\
+            & = & 0 ,  \nonumber
+\eea
+where we have used the facts that $\wnab$ is the Levi-Civita connection of $\w{g}$ [Eq.~(\ref{e:bas:nabla_g_zero})] and $\w{v}$ obeys the geodesic equation (\ref{e:geo:geod_eq_v}).
+\end{proof}
+
+
+Geodesics can be characterized by any of their tangent vectors, i.e.
+tangent vectors not necessarily associated with an affine parametrization, as follows:
+\begin{greybox}
+A curve $\mathcal{C}$ is a geodesic
+iff the tangent vector field $\w{v}$ associated with any parametrization
+of $\mathcal{C}$ obeys
+\be \label{e:geo:v_pregeodesic}
+    \wnab_{\w{v}}\,\w{v} = \kappa\,  \w{v},
+\ee
+where $\kappa$ is a scalar field along $\mathcal{C}$.
+\end{greybox}
+\begin{proof}
+Let $P: I\to \mathcal{C}$, $\lambda\mapsto P(\lambda)$ be the parametrization of $\mathcal{C}$
+corresponding to the tangent vector field $\w{v}$: $\w{v} = \D\w{x}/\D\lambda$.
+If $\mathcal{C}$ is a geodesic, then there exists a parametrization
+$\lambda'\mapsto P'(\lambda')$ whose tangent vector, $\w{v'}$ say, obeys
+$\wnab_{\w{v'}}\,\w{v'} = 0$. Since any two parametrizations of $\mathcal{C}$
+are related by Eq.~(\ref{e:geo:acc_v_acc_vp}), we deduce that $\w{v}$ obeys
+(\ref{e:geo:v_pregeodesic}) with
+\[
+    \kappa = \left( \frac{\D\lambda'}{\D\lambda} \right)^{-1}
+        \frac{\D^2\lambda'}{\D\lambda^2} .
+\]
+Conversely, if $\w{v}$ obeys (\ref{e:geo:v_pregeodesic}) with $\kappa=\kappa(\lambda)$,
+then Eq.~(\ref{e:geo:acc_v_acc_vp}) implies that $\wnab_{\w{v'}}\,\w{v'} = 0$,
+i.e. that $\mathcal{C}$ is a geodesic, provided that the change of
+parametrization $\lambda' = \lambda'(\lambda)$ fulfills
+\[
+    \kappa(\lambda) \frac{\D\lambda'}{\D\lambda} -  \frac{\D^2\lambda'}{\D\lambda^2} = 0 .
+\]
+This differential equation has the following solution:
+\[
+    \lambda' = a \int_{\lambda_1}^\lambda \left[ \exp \left(
+    \int_{\lambda_0}^{\tilde{\lambda}} \kappa(\tilde{\tilde{\lambda}})
+    \D\tilde{\tilde{\lambda}}\right) \D\tilde\lambda
+    \right] + b,
+\]
+where $a$, $b$, $\lambda_0$ and $\lambda_1$ are constants, with $a\not = 0$ and $\lambda_0,\lambda_1\in I$.
+\end{proof}
+The above property motivates the following definitions:
+\begin{greybox}
+A vector field $\w{v}$ obeying (\ref{e:geo:v_pregeodesic}) is called
+a \defin{pregeodesic vector field}\index{pregeodesic vector field}.
+The scalar field $\kappa$ is then called the \defin{non-affinity coefficient}\index{non-affinity coefficient} of $\w{v}$.
+If $\kappa=0$, $\w{v}$ is naturally called a \defin{geodesic vector field}\index{geodesic!vector field}.
+\end{greybox}
+Note that the property established above is equivalent to stating that the
+field lines of a pregeodesic vector field are geodesics.
+
+\section{The geodesic equation}
+
+\begin{greybox}
+Let $\mathcal{C}$ be a curve in a pseudo-Riemannian
+manifold $(\M,\w{g})$ of dimension $n$. Let us assume that
+$\mathcal{C}$ is contained in the domain of a coordinate chart $(x^\alpha)_{0\leq\alpha\leq n-1}$,
+so that any parametrization of $\mathcal{C}$, $P: I \to  \mathcal{C}$, $\lambda\mapsto P(\lambda)$,
+can be described by $n$ functions $X^\alpha: I\to \R$
+according to Eq.~(\ref{e:bas:curve_param_equation}): $x^\alpha(P(\lambda)) = X^\alpha(\lambda)$.
+Then the curve $\mathcal{C}$ is a geodesic iff there exists a paramatrization of $\mathcal{C}$
+for which the functions $X^\alpha$ fullfills the system of $n$ second-order differential equations:
+\be
+    \encadre{ \frac{\D^2 X^\alpha}{\D\lambda^2} + \Gamma^\alpha_{\ \, \mu \nu}
+    \frac{\D X^\mu}{\D\lambda} \frac{\D X^\nu}{\D\lambda} = 0 },  \qquad 0 \leq \alpha \leq n-1,
+\ee
+where the $\Gamma^\alpha_{\ \, \mu \nu}$'s are the Christoffel symbols\index{Christoffel symbols} of the metric $\w{g}$
+with respect to the coordinates $(x^\alpha)$, as given by Eq.~(\ref{e:bas:Christoffel}).
 \end{greybox}
 
+
+\section{Geodesics and extremal lengths}
+
+\section{Complete geodesics}
+
+Uniqueness of geodesics, exponential map
+
+\section{Geodesics and symmetries}
 
 
