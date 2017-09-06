@@ -71,9 +71,9 @@ parametrizations of $\mathcal{C}$. They are necessarily related by a
 diffeomorphism $I\to I'$, $\lambda \mapsto \lambda'(\lambda)$. It follows
 from (\ref{e:geo:v_dxdlambda}) that the tangent vector fields $\w{v}$ and $\w{v'}$
 associated with these two parametrizations are related by
-\[
+\be  \label{e:geo:change_tangent_vector}
     \w{v} = \frac{\D\lambda'}{\D\lambda} \, \w{v'} .
-\]
+\ee
 Using the rules 2 and 3 governing the connection $\wnab$ (cf. Sec.~\ref{s:bas:affine_connect}),
 we get then
 \be \label{e:geo:acc_v_acc_vp}
@@ -116,11 +116,11 @@ In a Lorentzian manifold $(\M,\w{g})$, a geodesic $\mathcal{C}$ belongs necessar
 to one of the following three categories:
 \begin{itemize}
 \item \defin{timelike geodesic}\index{timelike!geodesic}\index{geodesic!timelike --}:
-tangent vectors are timelike at any point of $\mathcal{C}$;
+tangent vectors are timelike at all points of $\mathcal{C}$;
 \item \defin{null geodesic}\index{null!geodesic}\index{geodesic!null --}:
-tangent vectors are null at any point of $\mathcal{C}$;
+tangent vectors are null at all points of $\mathcal{C}$;
 \item \defin{spacelike geodesic}\index{spacelike!geodesic}\index{geodesic!spacelike --}:
-tangent vectors are spacelike at any point of $\mathcal{C}$.
+tangent vectors are spacelike at all points of $\mathcal{C}$.
 \end{itemize}
 \end{greybox}
 This is in sharp contrast with generic curves, which can be, for instance, timelike on some portions
@@ -361,6 +361,37 @@ We refer to O'Neill's textbook \cite{ONeil83}, p.~68 for the proof.
 
 
 \section{Geodesics and extremal paths}
+
+\begin{greybox}
+Let us define the \defin{length}\index{length!of a curve} of a curve
+$\mathcal{C}$ connecting two points $p$ and $q$
+in a pseudo-Riemannian manifold $(\M,\w{g})$ by
+\be \label{e:geo:def_length}
+    L_{\mathcal{C}}(p,q) := \int_{\lambda_p}^{\lambda_q} \sqrt{\left|
+        \w{g}(\w{v},\w{v}) \right| } \, \D\lambda ,
+\ee
+where $\lambda$ is some parameter along $\mathcal{C}$, $\lambda_p$
+(resp. $\lambda_q$) being its value at $p$ (resp. $q$), and
+$\w{v} = \D\w{x}/\D\lambda$ is the associated tangent vector field.
+\end{greybox}
+Thanks to the transformation law (\ref{e:geo:change_tangent_vector}), it is
+easy to check that the value of $L_{\mathcal{C}}(p,q)$ is independent from
+the choice of the parametrization of $\mathcal{C}$.
+
+When $\mathcal{C}$ is included in the domain of a coordinate chart
+$(x^\alpha)$, so that its equation is $x^\alpha = X^\alpha(\lambda)$, we
+may rewrite (\ref{e:geo:def_length}) as [cf. Eq.~(\ref{e:geo:va_dXadlamb})]
+\be
+    L_{\mathcal{C}}(p,q) := \int_{\lambda_p}^{\lambda_q} \sqrt{\left|
+        g_{\mu\nu}(X^\alpha(\lambda)) \frac{\D X^\mu}{\D\lambda}
+            \frac{\D X^\nu}{\D\lambda}\right| } \, \D\lambda ,
+\ee
+where $g_{\mu\nu}(X^\alpha(\lambda))$ stands for the components of the
+metric tensor $\w{g}$ with respect to the coordinates $(x^\alpha)$ at the
+point of coordinates $X^\alpha(\lambda)$.
+
+
+
 
 \section{Complete geodesics}
 
