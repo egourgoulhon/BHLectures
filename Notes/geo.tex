@@ -264,6 +264,8 @@ to 1, leading to the same conclusion.
 
 \section{The geodesic equation}
 
+\subsection{Expression}
+
 \begin{greybox}
 Let $\mathcal{C}$ be a curve in a pseudo-Riemannian
 manifold $(\M,\w{g})$ of dimension $n$. Let us assume that
@@ -304,7 +306,31 @@ $\wnab_{\!\w{v}}\w{v}$. The conclusion follows from the very definition
 of a geodesic given in Sec.~\ref{s:geo:def}.
 \end{proof}
 
-We have the fundamental existence and uniqueness result:
+Note that if a solution of (\ref{e:geo:eq_geod}) is found, the parameter
+$\lambda$ is necessarily an affine parameter.
+For a generic parameter,
+of the (pre)geodesic equation becomes (\ref{e:geo:eq_geod}) with the right-hand side
+replaced by $\kappa \D X^\alpha /\D\lambda$, which is the coordinate
+expression of the right-hand side $\kappa \, \w{v}$ of
+Eq.~(\ref{e:geo:v_pregeodesic}). Hence, we have
+\begin{greybox}
+A curve $\mathcal{C}$ in the domain of a chart $(x^\alpha)$ is a geodesic
+iff some (actually all) coordinate expression $x^\alpha = X^\alpha(\lambda)$
+of $\mathcal{C}$ fulfills the following
+system of $n$ second-order differential equations, usually called the
+\defin{pregeodesic equation}\index{pregeodesic!equation}\index{equation!pregeodesic --},
+\be \label{e:geo:pregeod_eq_comp}
+    \encadre{ \frac{\D^2 X^\alpha}{\D\lambda^2} + \Gamma^\alpha_{\ \, \mu \nu}
+    \frac{\D X^\mu}{\D\lambda} \frac{\D X^\nu}{\D\lambda} =
+    \kappa(\lambda) \frac{\D X^\alpha}{\D\lambda}   },  \qquad 0 \leq \alpha \leq n-1 .
+\ee
+for some real-valued function $\kappa(\lambda)$.
+\end{greybox}
+
+\subsection{Existence and uniqueness of geodesics}
+
+We may use the geodesic equation to prove the following existence and uniqueness
+theorem:
 \begin{greybox}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a vector
 $\w{v}_0$ in the tangent space to $\M$ at $p$, i.e. $\w{v}_0 \in T_p\M$,
@@ -378,6 +404,8 @@ We refer to O'Neill's textbook \cite{ONeil83}, p.~68 for the proof.
 
 \section{Geodesics and variation of length}
 
+\subsection{Length of a curve}
+
 Here, we make some attempt to connect geodesics in a pseudo-Riemannian manifold
 with the first feature mentioned in Sec.~\ref{s:geo:def}, namely being
 locally the curves of \emph{minimal length} in a Riemannian manifold.
@@ -418,16 +446,19 @@ where $g_{\mu\nu}(X^\rho(\lambda))$ stands for the components of the
 metric tensor $\w{g}$ with respect to the coordinates $(x^\alpha)$ at the
 point of coordinates $X^\rho(\lambda)$.
 
+\subsection{Timelike and spacelike geodesics as stationary points
+of the length functional}
+
 To find the curves connecting $p$ and $q$ of extremal length, it is
 quite natural to study the behaviour of $L_{(p,q)}(\mathcal{C})$ as a
 variational problem, i.e. to write the Euler-Lagrange equation
 for the ``Lagrangian'' defined by the integrand of (\ref{e:geo:def_length_X}):
 \be \label{e:geo:Lagrangian}
-    \mathcal{L}(X^\alpha, {\dot X}^\alpha) = \sqrt{\left|
-        g_{\mu\nu}(X^\rho) {\dot X}^\mu {\dot X}^\nu \right| },
+    \mathcal{L}(X^\alpha, \dot{X}^\alpha) = \sqrt{\left|
+        g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \right| },
 \ee
 where we have introduced the standard dot notation for the ``velocity'' variables:
-${\dot X}^\alpha := \D X^\alpha / \D\lambda$. Before proceeding, a few
+$\dot{X}^\alpha := \D X^\alpha / \D\lambda$. Before proceeding, a few
 caveats must be made. First of all, the Euler-Lagrange equation
 locate only \emph{stationary} points of the action (here the length
 $L_{(p,q)}(\mathcal{C})$), i.e. points where the action does not vary
@@ -435,10 +466,10 @@ to first order in small changes of the curve. Such points are not
 necessarily extrema: they can be \emph{saddle} points, as we shall see.
 Secondly, because of the square root in (\ref{e:geo:Lagrangian}),
 the Lagrangian is not differentiable at points where
-$g_{\mu\nu} {\dot X}^\mu {\dot X}^\nu = 0$.
+$g_{\mu\nu} \dot{X}^\mu \dot{X}^\nu = 0$.
 This corresponds to points where the curve $\mathcal{C}$ is null. We shall
 therefore exclude such curves in our analysis (we shall return to null
-curves later on). But then $g_{\mu\nu} {\dot X}^\mu {\dot X}^\nu$
+curves later on). But then $g_{\mu\nu} \dot{X}^\mu \dot{X}^\nu$
 has to be either always positive along $\mathcal{C}$ (i.e. $\mathcal{C}$
 is spacelike) or always negative (i.e. $\mathcal{C}$ is timelike); indeed,
 by continuity it cannot change sign without going through zero.
@@ -448,26 +479,81 @@ spacelike ones. The calculations can be conducted in parallel by introducing
 a sign parameter: $\eps=-1$ for timelike curves and $\eps=+1$ for spacelike
 ones. One can then get rid of the absolute value in the Lagrangian, which
 becomes
-\be
-    \mathcal{L}(X^\alpha, {\dot X}^\alpha) = \sqrt{\eps
-        g_{\mu\nu}(X^\rho) {\dot X}^\mu {\dot X}^\nu  } .
+\be \label{e:geo:Lagrangian_eps}
+    \mathcal{L}(X^\alpha, \dot{X}^\alpha) = \sqrt{\eps
+        g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu  } .
 \ee
 Asking that the length (\ref{e:geo:def_length_X}) is stationary
 with respect to small changes in the curve connecting $p$ and $q$
 is equivalent to the Euler-Lagrange equation:
-\be
+\be \label{e:geo:Euler-Lagrange}
     \frac{\D}{\D\lambda}\left( \der{\mathcal{L}}{\dot{X}^\alpha}\right)
         - \der{\mathcal{L}}{X^\alpha} = 0 .
 \ee
 We have
 \[
-    \der{}{X^\alpha} \left( g_{\mu\nu}(X^\rho) {\dot X}^\mu {\dot X}^\nu \right)
-        = \der{g_{\mu\nu}}{x^\alpha}  {\dot X}^\mu {\dot X}^\nu  ,
+    \der{}{X^\alpha} \left( g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \right)
+        = \der{g_{\mu\nu}}{x^\alpha}  \dot{X}^\mu \dot{X}^\nu  ,
 \]
 with the understanding that $\dert{g_{\mu\nu}}{x^\alpha}$ shall be
-taken at the point $X^\rho(\lambda)$.
-
-
+taken at the point $X^\rho(\lambda)$. Hence, given the Lagrangian (\ref{e:geo:Lagrangian_eps}),
+\be \label{e:geo:derL_X}
+  \der{\mathcal{L}}{X^\alpha} = \frac{\eps}{2\mathcal{L}} \der{g_{\mu\nu}}{x^\alpha}  \dot{X}^\mu \dot{X}^\nu .
+\ee
+Besides,
+\[
+    \der{}{\dot{X}^\alpha} \left( g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \right)
+        = g_{\alpha\nu} \dot{X}^\nu + g_{\mu\alpha} \dot{X}^\mu
+        = 2 g_{\alpha\mu} \dot{X}^\mu .
+\]
+Hence
+\[
+    \der{\mathcal{L}}{\dot{X}^\alpha} = \frac{\eps}{\mathcal{L}} g_{\alpha\mu} \dot{X}^\mu  ,
+\]
+from which,
+\be \label{e:geo:derL_Xdot}
+    \frac{\D}{\D\lambda}\left( \der{\mathcal{L}}{\dot{X}^\alpha}\right) =
+      - \frac{\eps}{\mathcal{L}^2}  \frac{\D \mathcal{L}}{\D\lambda} g_{\alpha\mu} \dot{X}^\mu
+      + \frac{\eps}{\mathcal{L}} \der{g_{\alpha\mu}}{x^\nu} \dot{X}^\nu \dot{X}^\mu
+      + \frac{\eps}{\mathcal{L}} g_{\alpha\mu} \ddot{X}^\mu .
+\ee
+In view of (\ref{e:geo:derL_X}) and (\ref{e:geo:derL_Xdot}), the
+Euler-Lagrange equation (\ref{e:geo:Euler-Lagrange}) becomes
+\[
+  - \frac{1}{\mathcal{L}}  \frac{\D \mathcal{L}}{\D\lambda} g_{\alpha\mu} \dot{X}^\mu
+      + \der{g_{\alpha\mu}}{x^\nu} \dot{X}^\mu \dot{X}^\nu
+      +  g_{\alpha\mu} \ddot{X}^\mu
+    - \frac{1}{2} \der{g_{\mu\nu}}{x^\alpha}  \dot{X}^\mu \dot{X}^\nu = 0 .
+\]
+Now, playing with the names of repeated indices and using the symmetry
+of $g_{\alpha\beta}$, we can write the second terms as
+\[
+    \der{g_{\alpha\mu}}{x^\nu} \dot{X}^\mu \dot{X}^\nu
+    = \frac{1}{2} \left( \der{g_{\alpha\nu}}{x^\mu} \dot{X}^\nu \dot{X}^\mu
+    + \der{g_{\mu\alpha}}{x^\nu} \dot{X}^\mu \dot{X}^\nu \right)
+    = \frac{1}{2} \left( \der{g_{\alpha\nu}}{x^\mu}
+    + \der{g_{\mu\alpha}}{x^\nu} \right) \dot{X}^\mu \dot{X}^\nu .
+\]
+Accordingly, we get
+\be \label{e:geo:geod_eq_cov}
+    g_{\alpha\mu} \ddot{X}^\mu + \frac{1}{2} \left( \der{g_{\alpha\nu}}{x^\mu}
+    + \der{g_{\mu\alpha}}{x^\nu} - \der{g_{\mu\nu}}{x^\alpha} \right) \dot{X}^\mu \dot{X}^\nu
+    = \kappa g_{\alpha\mu} \dot{X}^\mu ,
+\ee
+where we have introduced
+\[
+    \kappa := \frac{1}{\mathcal{L}}  \frac{\D \mathcal{L}}{\D\lambda} .
+\]
+If we multiply Eq.~(\ref{e:geo:geod_eq_cov}) by the matrix $g^{\alpha\beta}$
+(the components of the inverse metric) and use
+$g^{\alpha\beta} g_{\alpha\mu} = \delta^\beta_{\ \, \mu}$ as well as
+the expression (\ref{e:bas:Christoffel}) of the Christoffel symbols,
+we get exactly the pregeodesic equation (\ref{e:geo:pregeod_eq_comp}).
+Hence we conclude
+\begin{greybox}
+Among all the timelike (resp. spacelike) curves connecting two points $p$ and $q$, a curve has
+a stationary length iff it is a timelike (resp. spacelike) geodesic.
+\end{greybox}
 
 
 \section{Complete geodesics}
@@ -479,5 +565,16 @@ Uniqueness of geodesics, exponential map
 
 
 \section{Geodesics and symmetries}
+
+
+
+
+
+
+
+
+
+
+
 
 
