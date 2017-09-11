@@ -392,7 +392,8 @@ manifolds, for the metric does not induce any distance function turning them int
 We have the following proposition, strengthening the existence and uniqueness
 result obtained above:
 \begin{greybox}
-Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a vector
+Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a
+nonzero vector
 $\w{V}$ in the tangent space to $\M$ at $p$, i.e. $\w{V} \in T_p\M$,
 there exists a unique maximal geodesic through $p$, which we shall denote
 by $\mathcal{C}_{\w{V}}$, such that
@@ -412,20 +413,44 @@ We refer to O'Neill's textbook \cite{ONeil83}, p.~68 for the proof.
 \begin{greybox}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$,
 let $\mathcal{E}_p$ be the subset of the tangent space $T_p\M$ defined
-by $\w{V}\in \mathcal{E}_p$ iff the affine parametrization $P_{\w{V}}$
-of the geodesic $\mathcal{C}_{\w{V}}$, whose tangent vector coincides
-with $\w{V}$ at $p$, has a domain large enough to include the interval $[0,1]$.
+by $\w{V}\in \mathcal{E}_p$ iff either $\w{V}=0$ or
+the affine parametrization $P_{\w{V}}$
+of the geodesic $\mathcal{C}_{\w{V}}$
+has a domain large enough to include the interval $[0,1]$.
 The \defin{exponential map at $p$}\index{exponential map} is then defined as
 \be
     \begin{array}{cccc}
     \exp_p : & \mathcal{E}_p \subset T_p\M & \longrightarrow & \M \\
-    & \w{V} & \longmapsto & P_{\w{V}}(1) .
+    & \w{V} & \longmapsto &
+    \left\{ \begin{array}{ll}
+        p & \quad\mbox{if}\ \w{V}=0 \\
+        P_{\w{V}}(1) \in \mathcal{C}_{\w{V}} & \quad\mbox{if}\ \w{V}\not=0
+        \end{array} \right.
     \end{array}
 \ee
 \end{greybox}
-Note that if $(\M,\w{g})$ is geodesically complete, $\mathcal{E}_p = T_p\M$
-for every point $p$.
+In other words, $\exp_p$ maps a nonzero vector $\w{V}$ in the tangent space to $\M$ at $p$
+to the point of $\M$ of affine parameter $\lambda=1$
+along the unique geodesic through $p$, the parameter $\lambda$ being such
+that (i) $\lambda=0$ corresponds to $p$ and (ii) the associated tangent vector
+$\D\w{x}/\D\lambda$ at $\lambda=0$ is $\w{V}$.
 
+Note that if $(\M,\w{g})$ is geodesically complete, $\mathcal{E}_p = T_p\M$
+for every point $p\in\M$.
+
+An immediate property of the exponential map is
+\begin{greybox}
+If $\w{V}\in \mathcal{E}_p$, for any $t\in[0,1]$, $\exp_p(t\w{V})$ lies
+on the same geodesic $\mathcal{C}_{\w{V}}$ as $\exp_p(\w{V})$, at the parameter
+$\lambda=t$ of the parametrization $P_{\w{V}}$:
+\be
+    \forall t\in[0,1],\quad \exp_p(t\w{V}) = P_{\w{V}}(t) .
+\ee
+\end{greybox}
+\begin{proof}
+For $t=0$, the property follows from the definition of $\exp_p$, since
+$P_{\w{V}}(0) = p$.
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
