@@ -261,9 +261,9 @@ to 1, leading to the same conclusion.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{The geodesic equation}
+\section{Existence and uniqueness of geodesics}
 
-\subsection{Statement and proof}
+\subsection{The geodesic equation}
 
 \begin{greybox}
 Let $\mathcal{C}$ be a curve in a pseudo-Riemannian
@@ -326,36 +326,36 @@ system of $n$ second-order differential equations, usually called the
 for some real-valued function $\kappa(\lambda)$.
 \end{greybox}
 
-\subsection{Existence and uniqueness of geodesics}
+\subsection{Existence and uniqueness}
 
 We may use the geodesic equation to prove the following existence and uniqueness
 theorem:
 \begin{greybox}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a vector
-$\w{v}_0$ in the tangent space to $\M$ at $p$, i.e. $\w{v}_0 \in T_p\M$,
+$\w{V}$ in the tangent space to $\M$ at $p$, i.e. $\w{V} \in T_p\M$,
 there exists a geodesic $\mathcal{C}$ through $p$ such that
-$\w{v}_0$ is the value at $p$ of the tangent vector of some parametrization
+$\w{V}$ is the value at $p$ of the tangent vector of some affine parametrization
 of $\mathcal{C}$:
 \be
-    \w{v}_0 = \left. \frac{\D\w{x}}{\D\lambda} \right|_p .
+    \w{V} = \left. \frac{\D\w{x}}{\D\lambda} \right|_p .
 \ee
 Morever, this geodesic is unique, in the sense that any geodesic $\mathcal{C}'$
 sharing the same property coincides with $\mathcal{C}$
 in some open neighbourhood of $p$.
 \end{greybox}
 \begin{proof}
-Let $(x^\alpha)$ be a coordinate chart of $\M$ around $p$. Let $(v_0^\alpha)$
-be the component of $\w{v}_0$ in the basis of $T_p\M$ induced by
+Let $(x^\alpha)$ be a coordinate chart of $\M$ around $p$. Let $(V^\alpha)$
+be the component of $\w{V}$ in the basis of $T_p\M$ induced by
 the coordinate frame $(\wpar_\alpha)$ associated with $(x^\alpha)$:
 \[
-    \w{v}_0 = v_0^\alpha \left. \wpar_\alpha \right| _p .
+    \w{V} = V^\alpha \left. \wpar_\alpha \right| _p .
 \]
-A geodesic through $p$ having $\w{v}_0$ as tangent vector at $p$ is then
+A geodesic through $p$ having $\w{V}$ as tangent vector at $p$ is then
 obtained as a solution $(X^\alpha(\lambda))$ of the system (\ref{e:geo:eq_geod})
 with the initial conditions [cf. Eq.~(\ref{e:geo:va_dXadlamb})]
 \be \label{e:geo:init_cond}
     X^\alpha(0) = x^\alpha(p) \quad\mbox{and}\quad
-    \frac{\D X^\alpha}{\D\lambda}(0) = v_0^\alpha .
+    \frac{\D X^\alpha}{\D\lambda}(0) = V^\alpha .
 \ee
 The system (\ref{e:geo:eq_geod}) + (\ref{e:geo:init_cond}) constitutes a well-posed
 Cauchy problem\index{Cauchy problem} and standard results about ordinary
@@ -393,12 +393,39 @@ We have the following proposition, strengthening the existence and uniqueness
 result obtained above:
 \begin{greybox}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a vector
-$\w{v}_0$ in the tangent space to $\M$ at $p$, i.e. $\w{v}_0 \in T_p\M$,
-there exists a unique maximal geodesic $\mathcal{C}$ through $p$ such that
-$\w{v}_0$ is the value at $p$ of the tangent vector of some parametrization
-of $\mathcal{C}$.
+$\w{V}$ in the tangent space to $\M$ at $p$, i.e. $\w{V} \in T_p\M$,
+there exists a unique maximal geodesic through $p$, which we shall denote
+by $\mathcal{C}_{\w{V}}$, such that
+$\w{V}$ is the value at $p$ of the tangent vector of some affine parametrization
+of $\mathcal{C}_{\w{V}}$. We shall then denote by $P_{\w{V}}$ the unique
+affine parametrization of $\mathcal{C}_{\w{V}}$ such that
+\be
+    P_{\w{V}}(0) = p \quad\mbox{and}\quad \left.\w{v}\right| _p = \w{V} ,
+\ee
+where $\w{v}$ is the tangent vector of
+$P_{\w{V}}$.
 \end{greybox}
 We refer to O'Neill's textbook \cite{ONeil83}, p.~68 for the proof.
+
+\subsection{Exponential map}
+
+\begin{greybox}
+Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$,
+let $\mathcal{E}_p$ be the subset of the tangent space $T_p\M$ defined
+by $\w{V}\in \mathcal{E}_p$ iff the affine parametrization $P_{\w{V}}$
+of the geodesic $\mathcal{C}_{\w{V}}$, whose tangent vector coincides
+with $\w{V}$ at $p$, has a domain large enough to include the interval $[0,1]$.
+The \defin{exponential map at $p$}\index{exponential map} is then defined as
+\be
+    \begin{array}{cccc}
+    \exp_p : & \mathcal{E}_p \subset T_p\M & \longrightarrow & \M \\
+    & \w{V} & \longmapsto & P_{\w{V}}(1) .
+    \end{array}
+\ee
+\end{greybox}
+Note that if $(\M,\w{g})$ is geodesically complete, $\mathcal{E}_p = T_p\M$
+for every point $p$.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -563,32 +590,133 @@ curves as worldlines and the length as the proper time, the above maximum
 is nothing but a generalization of the standard ``twin paradox''\index{twin paradox}
 of special relativity, as the example below illustrates.
 
-\begin{example}[Timelike geodesic in Minkowski spacetime]
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{geo_timelike_h.pdf}}
+\caption[]{\label{f:geo:timelike_h} \footnotesize
+Timelike curves $\mathcal{C}_h$ connecting the point $p$
+of coordinates $(0,0,0,0)$ to the point $q$ of coordinates $(T,0,0,0)$
+in Minkowski spacetime. From the left to right, the depicted curves
+correspond to $h$ spanning $[-3/4, 3/4]$, with the step $\delta h = 1/4$.}
+\end{figure}
+
+
+\begin{example}[Timelike geodesic in Minkowski spacetime] \label{x:geo:timelike_geod_Mink}
 Let us suppose that $(\M,\w{g})$ is the 4-dimensional Minkowski spacetime.
 All geodesics are then (segments of) straight lines. If $p$ and $q$ are
 connected by a timelike geodesic $\mathcal{C}$,
 we may considerer a Minkowskian coordinate system $(x^\alpha)=(t,x,y,z)$
-such that $x^\alpha(p) = (0,0,0,0)$ and $x^\alpha(q) = (T,0,0,0)$.
+such that $x^\alpha(p) = (0,0,0,0)$ and $x^\alpha(q) = (T,0,0,0)$, for some $T>0$.
 $t$ is then the proper time along $\mathcal{C}$ and
 $L_{(p,q)}(\mathcal{C})=T$. Let us consider the one-parameter family of curves
-$(\mathcal{C}_h)_{h\in\R}$ defined by $x^\alpha = X^\alpha(\lambda)$ with
+$(\mathcal{C}_h)_{h\in(-1,1)}$ defined by $x^\alpha = X^\alpha(\lambda)$ with
 $\lambda\in[0,T]$ and
-\be
+\[
    X^0(\lambda) = \lambda, \quad
    X^1(\lambda) = \frac{h}{T} \lambda(T - \lambda),\quad
    X^2(\lambda) = 0, \quad
    X^3(\lambda) = 0 .
-\ee
+\]
+Note that $X^0(\lambda) = \lambda$ means that the curve parameter
+coincides with the time coordinate: $\lambda = t$.
 We have $\mathcal{C}_0 = \mathcal{C}$ and for $h\not=0$, $\mathcal{C}$ is
-an arc of parabola connecting $p$ to $q$ in the $(t,x)$ plane; the dimensionless
-parameter $h$ is related to the maximal $x$-extension of the curve by
+an arc of parabola connecting $p$ to $q$ in the $(t,x)$ plane
+(cf. Fig.~\ref{f:geo:timelike_h}); the dimensionless
+parameter $h$ is related to the curve's maximal extension along $x$ by
 $x_{\rm max} = h T /4$. We have
+\[
+   \dot{X}^0(\lambda) = 1, \quad
+   \dot{X}^1(\lambda) = h \left( 1 - 2\frac{\lambda}{T} \right),\quad
+   \dot{X}^2(\lambda) = 0, \quad
+   \dot{X}^3(\lambda) = 0 .
+\]
+Given that $(g_{\alpha\beta}) = \mathrm{diag}(-1,1,1,1)$, it follows that
+$g_{\mu\nu} \dot{X}^\mu \dot{X}^\nu = -1 + h^2(1-2\lambda/T)^2$.
+Since $\lambda\in[0,T]$, this shows that $\mathcal{C}_h$ is a timelike
+curve as long as $-1\leq h \leq 1$. Its length is
+\[
+L_{(p,q)}(\mathcal{C}_h) = \int_{0}^{T} \sqrt{ 1 - h^2 \left( 1 - 2\frac{\lambda}{T} \right)^2 }
+    \, \D\lambda  = \frac{T}{2h} \int_{-h}^h \sqrt{1 - u^2} \, \D u
+    = \frac{T}{2h} \int_{-\mathrm{arcsin}\, h}^{\mathrm{arcsin}\, h}
+        \cos^2 \theta \, \D \theta .
+\]
+Evaluating the integral leads to
+\[
+    L_{(p,q)}(\mathcal{C}_h) = \frac{T}{2} \left( \sqrt{1-h^2} + \frac{\mathrm{arcsin}\, h}{h} \right) .
+\]
+Note that $\mathrm{arcsin}\, h/h$ is well defined at $h=0$, since
+$\lim_{h\rightarrow 0}  \mathrm{arcsin}\, h/h = 1$.
+The graph of $L_{(p,q)}(\mathcal{C}_h)$ as a function $h$ is plotted in
+Fig.~\ref{f:geo:timelike_length_h}. We see clearly that $h=0$, i.e. the
+geodesic $\mathcal{C}$, corresponds to the maximal length.
 \end{example}
+
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{geo_timelike_length_h.pdf}}
+\caption[]{\label{f:geo:timelike_length_h} \footnotesize
+Length of the timelike curve $\mathcal{C}_h$ connecting the point $p$
+of coordinates $(0,0,0,0)$ to the point $q$ of coordinates $(T,0,0,0)$
+in Minkowski spacetime, as a function of the parameter $h$ measuring
+the deviation from the timelike geodesic $\mathcal{C}$.}
+\end{figure}
+
 
 For a spacelike geodesic in a Lorentzian manifold,
 the stationary length corresponds neither to a
 maximum nor a minimum, but rather to a \emph{saddle point}, as the example
 below illustrates.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{geo_spacelike_h.pdf}}
+\caption[]{\label{f:geo:spacelike_h} \footnotesize
+Spacelike curves $\mathcal{C}_h$ connecting the point $p$
+of coordinates $(0,0,0,0)$ to the point $q$ of coordinates $(0,L,0,0)$
+in Minkowski spacetime. From the bottom to the top, the depicted curves
+correspond to $h$ spanning $[-3/4, 3/4]$, with the step $\delta h = 1/4$.}
+\end{figure}
+
+\begin{example}[Spacelike geodesic in Minkowski spacetime]
+As in Example~\ref{x:geo:timelike_geod_Mink}, we consider Minkowksi spacetime,
+but this time $\mathcal{C}$ is assumed to be a spacelike geodesic connecting
+two points $p$ and $q$. Since $\mathcal{C}$ is necessarily a straight line
+segment, without any loss of generality, we may introduce a Minkowskian coordinate
+system $(x^\alpha)=(t,x,y,z)$ such that $x^\alpha(p) = (0,0,0,0)$ and
+$x^\alpha(q) = (0,L,0,0)$ for some $L>0$, which is nothing but the length
+$L_{(p,q)}(\mathcal{C})$ of the geodesic $\mathcal{C}$. Any spacelike curve
+$\mathcal{C}'$ connecting $p$ and $q$ and lying in the hyperplane $\Sigma$
+defined by $t=0$ obeys $L_{(p,q)}(\mathcal{C}') \geq L_{(p,q)}(\mathcal{C})$
+since $\Sigma$, equipped with the metric induced by $\w{g}$, is a
+3-dimensional Euclidean space.
+
+Let us consider a one-parameter family of curves
+$(\mathcal{C}_h)_{h\in(-1,1)}$ lying in the orthogonal complement $\Sigma$
+through $p$ and $q$, namely the curves defined $x^\alpha = X^\alpha(\lambda)$ with
+$\lambda\in[0,L]$ and
+\[
+   X^0(\lambda) = \frac{h}{L} \lambda(L - \lambda), \quad
+   X^1(\lambda) = \lambda, \quad
+   X^2(\lambda) = 0, \quad
+   X^3(\lambda) = 0 .
+\]
+As in Example~\ref{x:geo:timelike_geod_Mink}, we have $\mathcal{C}_0=\mathcal{C}$
+and for $h\not=0$, the $\mathcal{C}_h$'s are
+arcs of parabola connecting $p$ and $q$, which remain spacelike as long as
+$-1<h<1$ (cf. Fig.~\ref{f:geo:spacelike_h}).
+The computations are very similar to those of Example~\ref{x:geo:timelike_geod_Mink},
+leading to
+\[
+    L_{(p,q)}(\mathcal{C}_h) = \frac{L}{2} \left( \sqrt{1-h^2} + \frac{\mathrm{arcsin}\, h}{h} \right) .
+\]
+$L_{(p,q)}(\mathcal{C}_h) / L$ is exactly the same of function of $h$
+as $L_{(p,q)}(\mathcal{C}_h) / T$ in Example~\ref{x:geo:timelike_geod_Mink}.
+In view of Fig.~\ref{f:geo:timelike_length_h}, we therefore assert
+that $L_{(p,q)}(\mathcal{C}_h) \leq L_{(p,q)}(\mathcal{C})$.
+
+We conclude that the spacelike geodesic $\mathcal{C}$ corresponds to a
+saddle point of the length functional: it is a minimum among the curves lying
+in the $(x,y,z)$ hyperplane but a maximum among those lying in the $(t,x)$
+plane.
+\end{example}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
