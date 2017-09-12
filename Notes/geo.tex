@@ -326,7 +326,7 @@ system of $n$ second-order differential equations, usually called the
 for some real-valued function $\kappa(\lambda)$.
 \end{greybox}
 
-\subsection{Existence and uniqueness}
+\subsection{Existence and uniqueness} \label{s:geo:existence_uniqueness}
 
 We may use the geodesic equation to prove the following existence and uniqueness
 theorem:
@@ -403,7 +403,7 @@ affine parametrization of $\mathcal{C}_{\w{V}}$ such that
 \be
     P_{\w{V}}(0) = p \quad\mbox{and}\quad \left.\w{v}\right| _p = \w{V} ,
 \ee
-where $\w{v}$ is the tangent vector of
+where $\w{v}$ is the tangent vector field of
 $P_{\w{V}}$.
 \end{greybox}
 We refer to O'Neill's textbook \cite{ONeil83}, p.~68 for the proof.
@@ -419,12 +419,12 @@ of the geodesic $\mathcal{C}_{\w{V}}$
 has a domain large enough to include the interval $[0,1]$.
 The \defin{exponential map at $p$}\index{exponential map} is then defined as
 \be
-    \begin{array}{cccc}
+    \begin{array}{cccl}
     \exp_p : & \mathcal{E}_p \subset T_p\M & \longrightarrow & \M \\
     & \w{V} & \longmapsto &
     \left\{ \begin{array}{ll}
-        p & \quad\mbox{if}\ \w{V}=0 \\
-        P_{\w{V}}(1) \in \mathcal{C}_{\w{V}} & \quad\mbox{if}\ \w{V}\not=0
+        p &  \mbox{if}\ \w{V}=0 \\
+        P_{\w{V}}(1) \in \mathcal{C}_{\w{V}} & \mbox{if}\ \w{V}\not=0
         \end{array} \right.
     \end{array}
 \ee
@@ -433,24 +433,153 @@ In other words, $\exp_p$ maps a nonzero vector $\w{V}$ in the tangent space to $
 to the point of $\M$ of affine parameter $\lambda=1$
 along the unique geodesic through $p$, the parameter $\lambda$ being such
 that (i) $\lambda=0$ corresponds to $p$ and (ii) the associated tangent vector
-$\D\w{x}/\D\lambda$ at $\lambda=0$ is $\w{V}$.
+$\D\w{x}/\D\lambda$ at $p$ is $\w{V}$.
 
 Note that if $(\M,\w{g})$ is geodesically complete, $\mathcal{E}_p = T_p\M$
 for every point $p\in\M$.
 
 An immediate property of the exponential map is
 \begin{greybox}
-If $\w{V}\in \mathcal{E}_p$, for any $t\in[0,1]$, $\exp_p(t\w{V})$ lies
+If $\w{V}\in \mathcal{E}_p\setminus\{0\}$, for any $t\in[0,1]$, $\exp_p(t\w{V})$ lies
 on the same geodesic $\mathcal{C}_{\w{V}}$ as $\exp_p(\w{V})$, at the parameter
 $\lambda=t$ of the parametrization $P_{\w{V}}$:
-\be
+\be \label{e:geo:exp_tV}
     \forall t\in[0,1],\quad \exp_p(t\w{V}) = P_{\w{V}}(t) .
 \ee
 \end{greybox}
 \begin{proof}
 For $t=0$, the property follows from the definition of $\exp_p$, since
 $P_{\w{V}}(0) = p$.
+If $t\not=0$, the nonzero vector $t\w{V}$ is colinear to $\w{V}$ and the uniqueness
+property of geodesics (cf. Sec.~\ref{s:geo:existence_uniqueness})
+implies that $\mathcal{C}_{t\w{V}} = \mathcal{C}_{\w{V}}$. By virtue
+of the transformation law (\ref{e:geo:change_tangent_vector}), $t\w{V}$ is
+the tangent vector to $\mathcal{C}_{\w{V}}$ corresponding to the affine parameter
+$\lambda' = t^{-1} \lambda$, where $\lambda$ is the affine parameter whose
+tangent vector field obeys $\left.\w{v}\right| _p = \w{V}$. From the definition
+of $\exp_p$, we have then $\exp_p(t\w{V}) = P_{t\w{V}}(\lambda'=1) = P_{\w{V}}(\lambda = t\times 1)$,
+hence (\ref{e:geo:exp_tV}).
 \end{proof}
+
+The exponential map realizes a local identification of the manifold
+with its tangent space at a given point:
+\begin{greybox}
+For any $p\in\M$, there exists a neighbourhood $U$ of $0$ in the tangent
+space $T_p\M$ and a neighbourhood $\mathscr{U}$ of $p$ in the manifold $\M$
+such that the exponential map $\exp_p$ is a diffeomorphism from
+$U$ to $\mathscr{U}$.
+\end{greybox}
+\begin{proof}
+It is clear from its definition that $\exp_p$ is a smooth map, at least
+on some neighbourhood $U'$ of $0$ in $T_p\M$. We may then consider the
+differential of $\exp_p$ at $0$, $\left.\D\exp_p\right| _0$.
+By virtue of the inverse function theorem for manifolds (see e.g. Theorem~4.5 in
+Ref.~\cite{Lee13}), it suffices to show that
+$\left.\D\exp_p\right| _0$ is invertible to complete the proof.
+By definition (cf. Sec.~\ref{s:bas:embed}), since $\exp_p: \mathcal{E}_p \subset T_p\M \to \M$
+and $\exp_p(0) = p$, the differential $\left.\D\exp_p\right| _0$ carries an
+infinitesimal displacement vector of\footnote{Here the vector space $T_p\M$ is considered
+as a $n$-dimensional smooth manifold, and $T_0(T_p\M)$ stands for its tangent space
+at $0$ (the zero vector of $T_p\M$).} $T_0(T_p\M)$, $\w{\varepsilon}$ say, connecting $0$ to a nearby element of $T_p\M$, $\w{\varepsilon'}$ say,
+to the infinitesimal vector $\w{E}\in T_p\M$ connecting
+$p=\exp_p(0)$ to $q=\exp_p(\w{\varepsilon'})$:
+\[
+    \begin{array}{cccl}
+    \left.\D\exp_p\right| _0: & T_0(T_p\M) & \longrightarrow & T_p\M \\
+        & \w{\varepsilon} & \longmapsto & \w{E} = \vp{pq}.
+    \end{array}
+\]
+Now, since $T_p\M$ is a vector space, we have the canonical identification
+$T_0(T_p\M) \simeq T_p\M$, from which $\w{\varepsilon'} = \w{\varepsilon}$.
+Without any loss of generality, we may write $\w{\varepsilon} = \varepsilon \w{V}$,
+where $\varepsilon$ is infinitesimal small and $\w{V}\in T_p\M$. Then
+$q = \exp_p(\varepsilon \w{V}) = P_{\w{V}}(\varepsilon)$, where the second
+identity results from (\ref{e:geo:exp_tV}). We have thus
+\[
+    \left.\D\exp_p\right| _0(\varepsilon \w{V}) = \w{E} = \vp{pq} =
+    \vp{P_{\w{V}}(0) P_{\w{V}}(\varepsilon)} .
+\]
+According to the definition of $P_{\w{V}}$, the infinitesimal vector
+$\vp{P_{\w{V}}(0) P_{\w{V}}(\varepsilon)}$ along the geodesic $\mathcal{C}_{\w{V}}$
+is $\varepsilon \w{V}$, hence
+\[
+    \left.\D\exp_p\right| _0(\varepsilon \w{V}) = \varepsilon \w{V} .
+\]
+Since the differential $\left.\D\exp_p\right| _0$ is a linear map, we
+get $\left.\D\exp_p\right| _0(\w{V}) = \w{V}$. The vector $\w{V}$ being arbitrary,
+we conclude that $\left.\D\exp_p\right| _0$ is nothing but the identity map of
+the vector space $T_p\M$:
+\[
+    \left.\D\exp_p\right| _0 = \operatorname{id}_{T_p\M} .
+\]
+In particular, $\left.\D\exp_p\right| _0$ is invertible.
+\end{proof}
+
+\begin{greybox}
+Given $p\in\M$, a \defin{normal neighbourhood}\index{normal!neighbourhood}\index{neighbourhood!normal --}
+of $p$ is a neighbourhood $\mathscr{U}$ of $p$ that is the image of a
+starshaped neighbourhood of $0\in T_p\M$ under the local diffeomorphism
+$\exp_p$ given by the above proposition.
+By \defin{starshaped neighbourhood}\index{starshaped neighbourhood} of $0$, it
+is meant a neighbourhood $U$ of $0$ such that $\w{V}\in U$
+implies $t\w{V}\in U$ for any $t\in[0,1]$.
+\end{greybox}
+
+On a normal neighbourhood, one may define coordinates linked to geodesics
+as follows.
+
+\begin{greybox}
+Let $\mathscr{U}$ be a normal neighbourhood of $p\in\M$ and $(\w{E}_\alpha)_{0\leq \alpha\leq n-1}$
+be a basis of $T_p\M$. If $(\w{E}^\alpha)$ stands for the basis of $T_p^*\M$
+dual to $(\w{E}_\alpha)$, the map
+\be \label{e:geo:def_normal_coord}
+     \begin{array}{cccl}
+     \Phi: & \mathscr{U} & \longrightarrow & \R^n \\
+        & q & \longmapsto & \left(\langle \w{E}^0, \exp_p^{-1}(q)\rangle, \ldots,
+          \langle\w{E}^{n-1}, \exp_p^{-1}(q) \rangle \right)
+     \end{array}
+\ee
+is coordinate chart on $\mathscr{U}$, which is called
+\defin{geodesic normal coordinates}\index{geodesic!normal coordinates}\index{coordinates!normal --},
+often shorten as \defin{normal coordinates}\index{normal!coordinates}.
+\end{greybox}
+In other words, normal coordinates $(x^\alpha)$ on $\mathscr{U}$ are such
+that the tangent vector $x^\mu(q) \w{E}_\mu\in T_p\M$ has precisely
+$q$ as image by the exponential map:
+\be
+    \forall q \in \mathscr{U},\quad \exp_p(x^\mu(q) \w{E}_\mu) = q .
+\ee
+
+A characteristic feature of normal coordinates is that, in terms of them,
+geodesics through $p$ look like straight lines through $0$ in
+$\R^n$:
+\begin{greybox}
+In a normal coordinate system $(x^\alpha)$, the equation of the unique geodesic
+$\mathcal{C}_{\w{V}}$ through $p$ admitting $\w{V}\in T_p\M$ as tangent
+vector at $p$ is (as long as $\mathcal{C}_{\w{V}}$ remains in the normal
+neirbourhood $\mathscr{U}$)
+\be
+    x^\alpha = X^\alpha(\lambda) = \lambda V^\alpha ,
+\ee
+where the $V^\alpha$'s are the components of $\w{V}$ with respect to the basis
+$(\w{E}_\alpha)$ defining the normal coordinates: $\w{V} = V^\mu \w{E}_\mu$.
+\end{greybox}
+\begin{proof}
+Let $\lambda$ be the affine parameter of $\mathcal{C}_{\w{V}}$ corresponding
+to the parametrization $P_{\w{V}}$. The coordinate equation of
+$\mathcal{C}_{\w{V}}$ is then $x^\alpha = X^\alpha(\lambda)$ with [cf. Eq.~(\ref{e:geo:def_normal_coord})]
+\[
+    X^\alpha(\lambda) = x^\alpha\left( P_{\w{V}}(\lambda) \right)
+        = \langle \w{E}^\alpha, \exp_p^{-1} \left( P_{\w{V}}(\lambda) \right) \rangle .
+\]
+Now, according to Eq.~(\ref{e:geo:exp_tV}), $P_{\w{V}}(\lambda) = \exp_p (\lambda \w{V})$.
+Hence
+\[
+    X^\alpha(\lambda) = \langle \w{E}^\alpha, \lambda \w{V} \rangle
+        = \lambda \langle \w{E}^\alpha, \w{V} \rangle = \lambda V^\alpha .
+\]
+\end{proof}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
