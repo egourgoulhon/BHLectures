@@ -408,7 +408,7 @@ $P_{\w{V}}$.
 \end{greybox}
 We refer to O'Neill's textbook \cite{ONeil83}, p.~68 for the proof.
 
-\subsection{Exponential map}
+\subsection{Exponential map and normal coordinates}
 
 \begin{greybox}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$,
@@ -539,7 +539,7 @@ dual to $(\w{E}_\alpha)$, the map
           \langle\w{E}^{n-1}, \exp_p^{-1}(q) \rangle \right)
      \end{array}
 \ee
-is coordinate chart on $\mathscr{U}$, which is called
+is a coordinate chart on $\mathscr{U}$, which is called
 \defin{geodesic normal coordinates}\index{geodesic!normal coordinates}\index{coordinates!normal --},
 often shorten as \defin{normal coordinates}\index{normal!coordinates}.
 \end{greybox}
@@ -549,6 +549,11 @@ $q$ as image by the exponential map:
 \be
     \forall q \in \mathscr{U},\quad \exp_p(x^\mu(q) \w{E}_\mu) = q .
 \ee
+\begin{remark}
+Some authors, e.g. \cite{ONeil83}, add the condition that the basis $(\w{E}_\alpha)$
+is orthonormal (with respect to the metric $\w{g}$) in the definition of normal
+coordinates. We follow here the more general definition of \cite{KobayN63,HawkiE73,Strau04}.
+\end{remark}
 
 A characteristic feature of normal coordinates is that, in terms of them,
 geodesics through $p$ look like straight lines through $0$ in
@@ -558,7 +563,7 @@ In a normal coordinate system $(x^\alpha)$, the equation of the unique geodesic
 $\mathcal{C}_{\w{V}}$ through $p$ admitting $\w{V}\in T_p\M$ as tangent
 vector at $p$ is (as long as $\mathcal{C}_{\w{V}}$ remains in the normal
 neirbourhood $\mathscr{U}$)
-\be
+\be \label{e:geo:Xa_normal_coord}
     x^\alpha = X^\alpha(\lambda) = \lambda V^\alpha ,
 \ee
 where the $V^\alpha$'s are the components of $\w{V}$ with respect to the basis
@@ -580,6 +585,59 @@ Hence
 \]
 \end{proof}
 
+\begin{greybox}
+Let $(x^\alpha)$ be a normal coordinate system around $p\in\M$ associated
+with a basis $(\w{E}_\alpha)$ of $T_p\M$. Then
+\begin{itemize}
+\item the coordinate frame $(\wpar_\alpha)$ associated with $(x^\alpha)$
+coincides with $(\w{E}_\alpha)$ at $p$:
+\be \label{e:geo:wpar_E}
+    \left. \wpar_\alpha \right| _p = \w{E}_\alpha ;
+\ee
+\item the values at $p$ of the components $(g_{\alpha\beta})$ of the metric tensor $\w{g}$ with respect to $(x^\alpha)$ are
+\be \label{e:geo:g_ab_gEE}
+    g_{\alpha\beta}(p) = \left. \w{g} \right| _p(\w{E}_\alpha, \w{E}_\beta) ;
+\ee
+\item the Christoffel symbols of $\w{g}$ with respect to the coordinates
+$(x^\alpha)$ vanish at $p$:
+\be \label{e:geo:Gam_p_zero}
+    \Gamma^\alpha_{\ \, \beta\gamma}(p) = 0 .
+\ee
+\end{itemize}
+\end{greybox}
+\begin{proof}
+Let $\mathscr{U}$ be the normal neighbourhood covered by $(x^\alpha)$ and
+$\w{V}\in \exp_p^{-1}(\mathscr{U})\subset T_p\M$.
+The tangent vector field to the geodesic $\mathcal{C}_{\w{V}}$ corresponding
+to the parametrization $P_{\w{V}}$ is $\w{v} = \dot{X}^\mu \wpar_\mu$
+with $\dot{X}^\mu$ obtained by deriving (\ref{e:geo:Xa_normal_coord})
+with respect to $\lambda$:
+$\dot{X}^\mu = V^\mu$. Hence $\w{v} = V^\mu \wpar_\mu$. Now, from
+the very definition of $P_{\w{V}}$, $\w{v}|_p = \w{V} = V^\mu \w{E}_\mu$.
+We have therefore
+\[
+    V^\mu \left. \wpar_\mu \right|_p = V^\mu \w{E}_\mu .
+\]
+This identity being fulfilled for any $V^\mu$, Eq.~(\ref{e:geo:wpar_E})
+follows. Equation.~(\ref{e:geo:g_ab_gEE}) is an immediate consequence
+of Eq.~(\ref{e:geo:wpar_E}),
+since $g_{\alpha\beta} = \w{g}(\wpar_\alpha, \wpar_\beta)$.
+Finally, with the functions $X^\alpha(\lambda)$ given by
+(\ref{e:geo:Xa_normal_coord}), the geodesic equation (\ref{e:geo:eq_geod})
+reduces to $\Gamma^\alpha_{\ \, \mu \nu} V^\mu V^\nu = 0$. In particular, at
+$p$, we get
+\[
+  \Gamma^\alpha_{\ \, \mu \nu}(p) V^\mu V^\nu = 0 .
+\]
+This identity must hold for any $V^\alpha$. It expresses therefore that, for
+each value of $\alpha$,
+the quadratic form $\w{V} \mapsto \Gamma^\alpha_{\ \, \mu \nu}(p) V^\mu V^\nu$
+is identically zero on $T_p\M$. Since the Christoffel symbols $\Gamma^\alpha_{\ \, \mu \nu}$
+are symmetric in $\mu\nu$, it is equivalent to say that, for each value of
+$\alpha$, the symmetric bilinear form $(\w{U},\w{V})\mapsto \Gamma^\alpha_{\ \, \mu \nu}(p)
+U^\mu V^\nu$ is identically zero, which amounts to $\Gamma^\alpha_{\ \, \mu \nu}(p) =0$, i.e.
+Eq.~(\ref{e:geo:Gam_p_zero}).
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
