@@ -652,16 +652,21 @@ Eq.~(\ref{e:geo:Gam_p_zero}).
 
 \subsection{Length of a curve} \label{s:geo:length}
 
-Here, we make some attempt to connect geodesics in a pseudo-Riemannian manifold
-with the first feature mentioned in Sec.~\ref{s:geo:def}, namely geodesics are
-locally the curves of \emph{minimal length} in a Riemannian manifold.
+Geodesics in a  pseudo-Riemannian manifold $(\M,\w{g})$
+have been defined in Sec.~\ref{s:geo:def}
+as the ``straightest lines'', i.e. as autoparallel curves with respect to the
+Levi-Civita connection of $\w{g}$.
+Here, we make some attempt to connect them
+with the first feature mentioned in Sec.~\ref{s:geo:def},
+namely, in a pure \emph{Riemannian} manifold, geodesics are
+locally the curves of \emph{minimal length}.
 We have first to define the length of a curve.
 Of course, when the metric is not definite positive, one cannot use
 the integral of the norm of infinitesimal displacements along the curve,
 i.e. $\D s := \sqrt{\w{g}(\D\w{x},\D\w{x})}$, since $\w{g}(\D\w{x},\D\w{x})$
-can be negative. Rather, one defines the length from
-$\D s := \sqrt{|\w{g}(\D\w{x},\D\w{x})|}$. Using $\D\w{x} = \w{v}\D \lambda$
-[Eq.~(\ref{e:bas:dell_v_dlamb})], we end up with the following definition.
+can be negative. Rather, it is quite natural to employ instead
+$\D s := \sqrt{|\w{g}(\D\w{x},\D\w{x})|}$. Using $\D\w{x} = \w{v}\,\D \lambda$
+[Eq.~(\ref{e:bas:dell_v_dlamb})], we end up with the following definition:
 \begin{greybox}
 The \defin{length}\index{length!of a curve} of a curve
 $\mathcal{C}$ connecting two points $p$ and $q$
@@ -692,13 +697,31 @@ where $g_{\mu\nu}(X^\rho(\lambda))$ stands for the components of the
 metric tensor $\w{g}$ with respect to the coordinates $(x^\alpha)$ at the
 point of coordinates $X^\rho(\lambda)$.
 
+From the very definition of $L_{(p,q)}(\mathcal{C})$, it is obvious that
+\be
+    L_{(p,q)}(\mathcal{C}) \geq 0 .
+\ee
+Moreover, if it exists, any null curve from $p$ to $q$ achieves the
+absolute minimum of the length, without having to be a geodesic:
+\be \label{e:geo:C_null_L_zero}
+    \mathcal{C}\mbox{ null } \Longrightarrow L_{(p,q)}(\mathcal{C}) = 0 .
+\ee
+
 \subsection{Timelike and spacelike geodesics as stationary points
 of the length functional}
 
+The property (\ref{e:geo:C_null_L_zero}) implies that, in a pseudo-Riemannian
+manifold, the curve that minimizes the length between two points is not necessarily
+a geodesic. A typical example is the null helix in Minkowski spacetime, discussed in
+Remark~\ref{r:def:null_curves} on p.~\pageref{r:def:null_curves}. Moreover,
+when $\w{g}$ is not positive definite, it could be relevant to consider curves
+of \emph{maximal} length between two points, i.e. to search for an extremum,
+be it a minimum or a maximum.
+
 To find the curves connecting $p$ and $q$ of extremal length, it is
 quite natural to study the behaviour of the length as a
-variational problem, i.e. consider $L_{(p,q)}(\mathcal{C})$ as an ``action''
-and write the Euler-Lagrange equation
+variational problem, i.e. to consider $L_{(p,q)}(\mathcal{C})$ as an ``action''
+and to write the Euler-Lagrange equation
 for the ``Lagrangian'' defined as the integrand of (\ref{e:geo:def_length_X}):
 \be \label{e:geo:Lagrangian}
     \mathcal{L}(X^\alpha, \dot{X}^\alpha) = \sqrt{\left|
@@ -788,9 +811,9 @@ Accordingly, we get
     = \kappa g_{\alpha\mu} \dot{X}^\mu ,
 \ee
 where we have introduced
-\[
+\be \label{e:geo:kappa_from_L}
     \kappa := \frac{1}{\mathcal{L}}  \frac{\D \mathcal{L}}{\D\lambda} .
-\]
+\ee
 If we multiply Eq.~(\ref{e:geo:geod_eq_cov}) by the matrix $g^{\alpha\beta}$
 (the components of the inverse metric) and use
 $g^{\alpha\beta} g_{\alpha\mu} = \delta^\beta_{\ \, \mu}$ as well as
@@ -953,26 +976,31 @@ in Minkowski spacetime. From the bottom to the top, the depicted curves
 correspond to $h$ spanning $[-3/4, 3/4]$, with the step $\delta h = 1/4$.}
 \end{figure}
 
-\subsection{All geodesics as stationary points of the ``energy'' functional}
-
-
-\begin{greybox}
-In any pseudo-Riemannian manifold $(\M,\w{g})$, we shall define
-the \defin{energy}\index{energy!of a curve parametrization} of the
-parametrization $P$ of a curve
-$\mathcal{C}$ connecting two points $p$ and $q$ by
-\be \label{e:geo:def_length}
+\begin{remark}
+We have excluded null geodesics from the above variational analysis by
+invoking the necessary smoothness of the Lagrangian (\ref{e:geo:Lagrangian}).
+Another way to convince ourselves that null geodesics would not have fit
+in the analysis is the division by $\mathcal{L}$ in Eq.~(\ref{e:geo:kappa_from_L}),
+which excludes $\mathcal{L} = 0$.
+However, it is possible to get all geodesics, including the null ones, from
+a variational principle, but starting from a different action, namely the
+``energy'' functional:
+\be \label{e:geo:energy_funct}
     E_{(p,q)}(P) := \int_{\lambda_p}^{\lambda_q}
         \w{g}(\w{v},\w{v}) \, \D\lambda ,
 \ee
-where $\lambda$ is the parameter of $P$, $\lambda_p$
-(resp. $\lambda_q$) being its value at $p$ (resp. $q$) and
-$\w{v} = \D\w{x}/\D\lambda$ is the tangent vector field of $P$,
-and we assume $\lambda_q \geq \lambda_p$.
-\end{greybox}
-Contrary to the length introduced in Sec.~\ref{s:geo:length},
+where $P$ is a parametrization of the curve $\mathcal{C}$ and
+$\lambda$ and $\w{v}$ are the associated parameter and tangent vector,
+respectively.
+
+The Lagrangian in (\ref{e:geo:energy_funct}) is always differentiable, even
+for null curves. However the price to pay is that,
+contrary to the length (\ref{e:geo:def_length}),
 the energy depends on the parametrization of the curve $\mathcal{C}$,
 hence the notation $E_{(p,q)}(P)$ instead of $E_{(p,q)}(\mathcal{C})$.
+\end{remark}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
