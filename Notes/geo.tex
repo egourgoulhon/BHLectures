@@ -10,7 +10,7 @@ the worldlines of test particles, either massive or masseless (photons)
 null geodesics play a proeminant role, as the generators of the event horizons
 (cf. Sec.~\ref{s:glo:properties_H}). We review here the definition and
 properties of geodesics on a generic pseudo-Riemannian manifold.
-Contrary to Appendix~\ref{s:bas}, proofs of the stated properties will be provided.
+Contrary to Appendix~\ref{s:bas}, proofs of most statements will be provided.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -408,7 +408,9 @@ $P_{\w{V}}$.
 \end{greybox}
 We refer to O'Neill's textbook \cite{ONeil83}, p.~68 for the proof.
 
-\subsection{Exponential map and normal coordinates}
+\goodbreak
+
+\subsection{Exponential map}
 
 \begin{greybox}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$,
@@ -515,6 +517,8 @@ the vector space $T_p\M$:
 In particular, $\left.\D\exp_p\right| _0$ is invertible.
 \end{proof}
 
+\subsection{Normal coordinates} \label{s:geo:normal_coord}
+
 \begin{greybox}
 Given $p\in\M$, a \defin{normal neighbourhood}\index{normal!neighbourhood}\index{neighbourhood!normal --}
 of $p$ is a neighbourhood $\mathscr{U}$ of $p$ that is the image of a
@@ -552,7 +556,10 @@ $q$ as image by the exponential map:
 \begin{remark}
 Some authors, e.g. \cite{ONeil83}, add the condition that the basis $(\w{E}_\alpha)$
 is orthonormal (with respect to the metric $\w{g}$) in the definition of normal
-coordinates. We follow here the more general definition of \cite{KobayN63,HawkiE73,Strau04}.
+coordinates. We follow here the more general definition of \cite{KobayN63,BishoG68,HawkiE73,Strau04}.
+The name \defin{Riemann normal coordinates}\index{Riemann!normal coordinates}\index{normal!coordinates!Riemann --} is also commonly encountered in the literature,
+either for normal coordinates as defined here (e.g. \cite{MisneTW73,Wald84})
+or for those with the basis orthonormality requirement (e.g. \cite{PoissW14}).
 \end{remark}
 
 A characteristic feature of normal coordinates is that, in terms of them,
@@ -643,7 +650,7 @@ Eq.~(\ref{e:geo:Gam_p_zero}).
 
 \section{Geodesics and variation of length}
 
-\subsection{Length of a curve}
+\subsection{Length of a curve} \label{s:geo:length}
 
 Here, we make some attempt to connect geodesics in a pseudo-Riemannian manifold
 with the first feature mentioned in Sec.~\ref{s:geo:def}, namely geodesics are
@@ -795,12 +802,28 @@ Among all the timelike (resp. spacelike) curves connecting two points $p$ and $q
 a stationary length iff it is a timelike (resp. spacelike) geodesic.
 \end{greybox}
 
-For a timelike geodesic, and for points $p$ and $q$ not too far,
-the stationary length corresponds to a \emph{maximum}: any other timelike curve
-connecting $p$ and $q$ has a smaller length. If one interprets timelike
-curves as worldlines and the length as the proper time, the above maximum
-is nothing but a generalization of the standard ``twin paradox''\index{twin paradox}
-of special relativity, as the example below illustrates.
+For a timelike geodesic, and for points $p$ and $q$ not too far (in the same
+normal neighbourhood),
+the stationary length corresponds to a \emph{maximum}, according to
+the following proposition:
+\begin{greybox}
+Let $(\M,\w{g})$ be a Lorentzian manifold, $p\in\M$ and $\mathscr{U}$ some
+normal neighbourhood\footnote{See Sec.~\ref{s:geo:normal_coord}.} of $p$. For any point $q\in\mathscr{U}$
+such that there exists a timelike curve in $\mathscr{U}$ from $p$ to $q$,
+the geodesic from $p$ to $q$ is the unique timelike curve of largest length
+in $\mathscr{U}$ connecting $p$ to $q$.
+\end{greybox}
+We shall not provide a full proof here, refering the reader to
+the proof of Proposition~5.34 in O'Neill's textbook~\cite{ONeil83}.
+We shall only illustrate the property on a specific example in flat spacetime
+(Example~\ref{x:geo:timelike_geod_Mink} below).
+
+If one interprets timelike curves as worldlines and the length as the proper time
+(cf. Sec.~\ref{s:fra:massive_part}), the above maximum
+can be viewed as a generalization of the standard ``twin paradox''\index{twin paradox}
+of special relativity: when they meet again, the twin who followed the geodesic (i.e. some
+inertial trajectory)
+is older than his brother, who made a round trip.
 
 \begin{figure}
 \centerline{\includegraphics[height=0.3\textheight]{geo_timelike_h.pdf}}
@@ -877,14 +900,6 @@ the stationary length corresponds neither to a
 maximum nor a minimum, but rather to a \emph{saddle point}, as the example
 below illustrates.
 
-\begin{figure}
-\centerline{\includegraphics[width=0.7\textwidth]{geo_spacelike_h.pdf}}
-\caption[]{\label{f:geo:spacelike_h} \footnotesize
-Spacelike curves $\mathcal{C}_h$ connecting the point $p$
-of coordinates $(0,0,0,0)$ to the point $q$ of coordinates $(0,L,0,0)$
-in Minkowski spacetime. From the bottom to the top, the depicted curves
-correspond to $h$ spanning $[-3/4, 3/4]$, with the step $\delta h = 1/4$.}
-\end{figure}
 
 \begin{example}[Spacelike geodesic in Minkowski spacetime]
 As in Example~\ref{x:geo:timelike_geod_Mink}, we consider Minkowksi spacetime,
@@ -928,6 +943,36 @@ saddle point of the length functional: it is a minimum among the curves lying
 in the $(x,y,z)$ hyperplane but a maximum among those lying in the $(t,x)$
 plane.
 \end{example}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{geo_spacelike_h.pdf}}
+\caption[]{\label{f:geo:spacelike_h} \footnotesize
+Spacelike curves $\mathcal{C}_h$ connecting the point $p$
+of coordinates $(0,0,0,0)$ to the point $q$ of coordinates $(0,L,0,0)$
+in Minkowski spacetime. From the bottom to the top, the depicted curves
+correspond to $h$ spanning $[-3/4, 3/4]$, with the step $\delta h = 1/4$.}
+\end{figure}
+
+\subsection{All geodesics as stationary points of the ``energy'' functional}
+
+
+\begin{greybox}
+In any pseudo-Riemannian manifold $(\M,\w{g})$, we shall define
+the \defin{energy}\index{energy!of a curve parametrization} of the
+parametrization $P$ of a curve
+$\mathcal{C}$ connecting two points $p$ and $q$ by
+\be \label{e:geo:def_length}
+    E_{(p,q)}(P) := \int_{\lambda_p}^{\lambda_q}
+        \w{g}(\w{v},\w{v}) \, \D\lambda ,
+\ee
+where $\lambda$ is the parameter of $P$, $\lambda_p$
+(resp. $\lambda_q$) being its value at $p$ (resp. $q$) and
+$\w{v} = \D\w{x}/\D\lambda$ is the tangent vector field of $P$,
+and we assume $\lambda_q \geq \lambda_p$.
+\end{greybox}
+Contrary to the length introduced in Sec.~\ref{s:geo:length},
+the energy depends on the parametrization of the curve $\mathcal{C}$,
+hence the notation $E_{(p,q)}(P)$ instead of $E_{(p,q)}(\mathcal{C})$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
