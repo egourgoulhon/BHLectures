@@ -9,8 +9,14 @@ the worldlines of test particles, either massive or masseless (photons)
 (cf. Sec.~\ref{s:fra:worldlines}). Moreover, for black hole theory,
 null geodesics play a proeminant role, as the generators of the event horizons
 (cf. Sec.~\ref{s:glo:properties_H}). We review here the definition and
-properties of geodesics on a generic pseudo-Riemannian manifold.
-Contrary to Appendix~\ref{s:bas}, proofs of most statements will be provided.
+properties of geodesics on a generic pseudo-Riemannian manifold,
+i.e. a manifold equipped with a metric of generic signature, as introduced in
+Sec.~\ref{s:bas:pRiemManif}.
+In particular, the results apply to pure Riemannian manifolds (positive
+definite metric), as well as to Lorentzian manifolds, i.e.
+spacetimes.
+Contrary to Appendix~\ref{s:bas}, proofs of most statements will be provided,
+since they are quite illustrative.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -202,7 +208,7 @@ where $a$, $b$, $\lambda_0$ and $\lambda_1$ are constants, with $a\not = 0$ and 
 The above property motivates the following definitions:
 \begin{greybox}
 A vector field $\w{v}$ obeying (\ref{e:geo:v_pregeodesic}) is called
-a \defin{pregeodesic vector field}\index{pregeodesic vector field}.
+a \defin{pregeodesic vector field}\index{pregeodesic!vector field}.
 The scalar field $\kappa$ is then called the \defin{non-affinity coefficient}\index{non-affinity coefficient} of $\w{v}$.
 If $\kappa=0$, $\w{v}$ is naturally called a \defin{geodesic vector field}\index{geodesic!vector field}.
 \end{greybox}
@@ -363,7 +369,7 @@ differential equations, e.g. the Picard-Lindelöf (or Cauchy–Lipschitz) theore
 guarantee the existence and uniqueness of the solution.
 \end{proof}
 
-A few definitions are in order:
+A few definitions follow naturally:
 
 \begin{greybox}
 A geodesic $\mathcal{C}$ is said to be \defin{maximal}\index{maximal!geodesic}\index{geodesic!maximal --}
@@ -383,13 +389,13 @@ iff every maximal geodesic is complete.
 A well-known theorem of differential geometry, namely the \defin{Hopf-Rinow theorem}\index{Hopf-Rinow theorem},
 states that a connected \emph{Riemannian} manifold is geodesically complete iff it is \emph{complete}
 as a \emph{metric space}\index{metric!space} for the distance function $d(p,q)$ defined as the infimum of
-the metric length of all curves connecting the two points $p$ and $q$
+the length\footnote{The length of a curve is defined by Eq.~(\ref{e:geo:def_length}) below.} of all curves from $p$ to $q$
 (see e.g. Ref.~\cite{Lee97}). However, there is no such theorem for \emph{Lorentzian}
 manifolds, for the metric does not induce any distance function turning them into a metric space.
 \end{remark}
 
 
-We have the following proposition, strengthening the existence and uniqueness
+The following proposition strengthens the existence and uniqueness
 result obtained above:
 \begin{greybox}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a
@@ -411,6 +417,9 @@ We refer to O'Neill's textbook \cite{ONeil83}, p.~68 for the proof.
 \goodbreak
 
 \subsection{Exponential map}
+
+One can make use of geodesics to map a tangent space to
+the base manifold:
 
 \begin{greybox}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$,
@@ -690,10 +699,10 @@ $(x^\alpha)$, so that its equation is $x^\alpha = X^\alpha(\lambda)$, we
 may rewrite (\ref{e:geo:def_length}) as [cf. Eq.~(\ref{e:geo:va_dXadlamb})]
 \be \label{e:geo:def_length_X}
     L_{(p,q)}(\mathcal{C})  := \int_{\lambda_p}^{\lambda_q} \sqrt{\left|
-        g_{\mu\nu}(X^\rho(\lambda)) \frac{\D X^\mu}{\D\lambda}
-            \frac{\D X^\nu}{\D\lambda}\right| } \, \D\lambda ,
+        g_{\mu\nu}(X^\rho(\lambda))  \dot{X}^\mu \dot{X}^\nu \right| } \, \D\lambda ,
 \ee
-where $g_{\mu\nu}(X^\rho(\lambda))$ stands for the components of the
+where $\dot{X}^\alpha := \D X^\alpha / \D\lambda$ and
+$g_{\mu\nu}(X^\rho(\lambda))$ stands for the components of the
 metric tensor $\w{g}$ with respect to the coordinates $(x^\alpha)$ at the
 point of coordinates $X^\rho(\lambda)$.
 
@@ -725,10 +734,9 @@ and to write the Euler-Lagrange equation
 for the ``Lagrangian'' defined as the integrand of (\ref{e:geo:def_length_X}):
 \be \label{e:geo:Lagrangian}
     \mathcal{L}(X^\alpha, \dot{X}^\alpha) = \sqrt{\left|
-        g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \right| },
+        g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \right| } .
 \ee
-where we have introduced the standard dot notation for the ``velocity'' variables:
-$\dot{X}^\alpha := \D X^\alpha / \D\lambda$. Before proceeding, a few
+Before proceeding, a few
 caveats must be made. First of all, the Euler-Lagrange equation
 locate only \emph{stationary} points of the action (here the length
 $L_{(p,q)}(\mathcal{C})$), i.e. points where the action does not vary
@@ -739,7 +747,7 @@ the Lagrangian is not differentiable at points where
 $g_{\mu\nu} \dot{X}^\mu \dot{X}^\nu = 0$.
 This corresponds to points where the curve $\mathcal{C}$ is null. We shall
 therefore exclude such curves in our analysis (we shall return to null
-curves later on). But then $g_{\mu\nu} \dot{X}^\mu \dot{X}^\nu$
+curves in Sec.~\ref{s:geo:all_geod}). But then $g_{\mu\nu} \dot{X}^\mu \dot{X}^\nu$
 has to be either always positive along $\mathcal{C}$ (i.e. $\mathcal{C}$
 is spacelike) or always negative (i.e. $\mathcal{C}$ is timelike); indeed,
 by continuity it cannot change sign without going through zero.
@@ -976,37 +984,124 @@ in Minkowski spacetime. From the bottom to the top, the depicted curves
 correspond to $h$ spanning $[-3/4, 3/4]$, with the step $\delta h = 1/4$.}
 \end{figure}
 
-\begin{remark}
+
+\subsection{All geodesics as stationary points of some action} \label{s:geo:all_geod}
+
 We have excluded null geodesics from the above variational analysis by
 invoking the necessary smoothness of the Lagrangian (\ref{e:geo:Lagrangian}).
-Another way to convince ourselves that null geodesics would not have fit
-in the analysis is the division by $\mathcal{L}$ in Eq.~(\ref{e:geo:kappa_from_L}),
+We may further convince ourselves that null geodesics would not have fit
+in the analysis by noticing the division by $\mathcal{L}$ in Eq.~(\ref{e:geo:kappa_from_L}),
 which excludes $\mathcal{L} = 0$.
 However, it is possible to get all geodesics, including the null ones, from
-a variational principle, but starting from a different action, namely the
+a variational principle; one has to start from a different action, namely the
 ``energy'' functional:
 \be \label{e:geo:energy_funct}
     E_{(p,q)}(P) := \int_{\lambda_p}^{\lambda_q}
-        \w{g}(\w{v},\w{v}) \, \D\lambda ,
+        g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \, \D\lambda ,
 \ee
-where $P$ is a parametrization of the curve $\mathcal{C}$ and
-$\lambda$ and $\w{v}$ are the associated parameter and tangent vector,
-respectively.
+where $P$ is a parametrization of the curve $\mathcal{C}$, $\lambda$
+the corresponding parameter
+and $x^\alpha = X^\alpha(\lambda)$ the coordinate expression of $P$.
 
 The Lagrangian in (\ref{e:geo:energy_funct}) is always differentiable, even
-for null curves. However the price to pay is that,
-contrary to the length (\ref{e:geo:def_length}),
-the energy depends on the parametrization of the curve $\mathcal{C}$,
-hence the notation $E_{(p,q)}(P)$ instead of $E_{(p,q)}(\mathcal{C})$.
-\end{remark}
+when $g_{\mu\nu}\dot{X}^\mu \dot{X}^\nu  = 0$, i.e. it allows for null curves.
+However the price to pay is that,
+contrary to the length (\ref{e:geo:def_length_X}),
+the ``energy'' depends on the parametrization of the curve,
+hence the notation $E_{(p,q)}(P)$ rather than $E_{(p,q)}(\mathcal{C})$.
+For this reason, $E_{(p,q)}(P)$ is not expected to have any significant
+physical meaning, contrary to $L_{(p,q)}(\mathcal{C})$, which is the proper
+time along timelike curves. In particular, the name ``energy''
+arises simply because of the quadratic dependencies in the ``velocity'' variables $\dot{X}^\alpha$,
+as in a kinetic energy.
 
-
+Searching for stationary points of the action
+(\ref{e:geo:energy_funct}) is straightforward (cf. the computation below
+Eq.~(\ref{e:geo:Euler-Lagrange})): the Euler-Lagrange equation
+turns out to be equivalent to the geodesic equation (\ref{e:geo:eq_geod}).
+We conclude that
+\begin{greybox}
+In a pseudo-Riemannian manifold $(\M,\w{g})$, a
+curve $\mathcal{C}$ equipped with a parametrization $P$
+is a stationary point of the ``energy'' functional (\ref{e:geo:energy_funct})
+iff $\mathcal{C}$ is a geodesic and $P$ an affine parametrization of it.
+\end{greybox}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Geodesics and symmetries}
+
+As a reminiscence of Noether's theorem\index{Noether's theorem},
+symmetries in a pseudo-Riemannian manifold lead to conserved
+quantities along geodesics.
+Let us first recall that 1-dimensional
+groups of symmetry and the related concept of Killing vector field
+have been introduced in Sec.~\ref{s:neh:symmetries}. In terms of them,
+we may state the following conservation law:
+
+\begin{greybox}
+If the pseudo-Riemannian manifold $(\M,\w{g})$ admits a 1-dimensional
+group of symmetry of generator $\w{\xi}$, i.e. $\w{\xi}$ is a Killing
+vector field of $(\M,\w{g})$, then along any geodesic $\mathcal{C}$,
+the $\w{g}$-scalar product of $\w{\xi}$ by any tangent vector field
+$\w{v}=\D\w{x}/\D\lambda$ associated with an
+affine parameter $\lambda$ of $\mathcal{C}$ is constant:
+\be
+    \w{g}(\w{\xi},\w{v}) = \mathrm{const} .
+\ee
+\end{greybox}
+
+\begin{proof}
+The variation of $\w{g}(\w{\xi},\w{v})$ along $\mathcal{C}$ is,
+according to Eq.~(\ref{e:bas:def_vector}),
+\bea
+    \frac{\D}{\D\lambda} \, \w{g}(\w{\xi},\w{v}) & = & \w{v}\left( \w{g}(\w{\xi},\w{v}) \right) =
+        \wnab_{\!\w{v}} \left( \w{g}(\w{\xi},\w{v}) \right) \nonumber \\
+        & = & v^\sigma \nabla_\sigma ( g_{\mu\nu} \xi^\mu v^\nu ) =
+        v^\sigma \nabla_\sigma (\xi_\nu v^\nu ) = \nabla_\sigma \xi_\nu \, v^\sigma  v^\nu
+            + \xi_\nu v^\sigma \nabla_\sigma v^\nu \nonumber \\
+        & = & \frac{1}{2} (\underbrace{\nabla_\sigma \xi_\nu + \nabla_\mu \xi_\sigma}_{0}) v^\sigma  v^\nu
+            +  \xi_\nu \underbrace{v^\sigma \nabla_\sigma v^\nu}_{0}  = 0, \label{e:geo:dem_conservation}
+\eea
+where the first zero holds because $\w{\xi}$ obeys to the Killing equation
+(\ref{e:neh:Killing_equation}) and the second one holds thanks to
+Eq.~(\ref{e:geo:geod_eq_v}), which expresses that $\mathcal{C}$ is a geodesic
+and $\w{v}$ the tangent vector associated with some affine parameter.
+\end{proof}
+
+\begin{remark}
+If the tangent vector $\w{v}$ is associated with a generic (not necessarily affine)
+parameter of $\mathcal{C}$, the second zero in Eq.~(\ref{e:geo:dem_conservation})
+must be replaced by $\kappa v^\nu$, where $\kappa$ is the non-affinity
+coefficient of $\w{v}$ [cf. Eq.~(\ref{e:geo:v_pregeodesic})]. Accordingly
+$\w{g}(\w{\xi},\w{v})$ is no longer constant along $\mathcal{C}$ but rather
+evolves according to
+\be
+    \frac{\D}{\D\lambda} \, \w{g}(\w{\xi},\w{v}) = \kappa \, \w{g}(\w{\xi},\w{v}) .
+\ee
+Note that $\kappa$ a priori varies along $\mathcal{C}$, so that the integration of
+this first-order differential equation depends of the precise form of the
+function $\kappa(\lambda)$.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
