@@ -167,18 +167,18 @@ from an open subset of $\R^n$ to $\R^n$.
 
 On a manifold, vectors are defined as tangent vectors to a curve.
 Given an interval $I\subset\R$, a (smooth)
-\defin{curve}\index{curve} is a subset $\mathcal{C}\subset \M$ that is the image of a smooth function
+\defin{curve}\index{curve} is a subset $\Li\subset \M$ that is the image of a smooth map
 $I \rightarrow  \M$:
 \be
     \begin{array}{rccl}
     P: & I & \longrightarrow & \M \\
-        & \lambda & \longmapsto & p = P(\lambda) \in \mathcal{C}.
+        & \lambda & \longmapsto & p = P(\lambda) \in \Li.
     \end{array}
 \ee
-Hence $\mathcal{C} = P(I) := \{ P(\lambda) |\ \lambda\in I\}$. The function $P$ is called a
-\defin{parametrization}\index{parametrization} of $\mathcal{C}$ and the real
-variable $\lambda$ is called a \defin{parameter along $\mathcal{C}$}\index{parameter along a curve}. Given a coordinate system $(x^\alpha)$
-in a neighbourhood of a point $p\in\mathcal{C}$, the parametrization $P$ is
+Hence $\Li = P(I) := \{ P(\lambda) |\ \lambda\in I\}$. The function $P$ is called a
+\defin{parametrization}\index{parametrization} of $\Li$ and the real
+variable $\lambda$ is called a \defin{parameter along $\Li$}\index{parameter along a curve}. Given a coordinate system $(x^\alpha)$
+in a neighbourhood of a point $p\in\Li$, the parametrization $P$ is
 defined by $n$ functions $X^\alpha : \ I \rightarrow \R$ such that
 \be \label{e:bas:curve_param_equation}
   x^\alpha(P(\lambda)) = X^\alpha(\lambda) .
@@ -188,27 +188,27 @@ defined by $n$ functions $X^\alpha : \ I \rightarrow \R$ such that
 In the literature, especially in the mathematical one, a curve is often defined
 as a map $I \rightarrow  \M$, i.e. by the parametrization $P$ and not by
 the image of $P$. According to this definition, different parametrizations
-give then birth to different curves.
+give birth to different curves.
 \end{remark}
 
 A \defin{scalar field}\index{scalar!field} on $\M$ is a function
-$f:\ \M \rightarrow \R$. In practice, we will always consider smooth scalar fields. At a point $p=P(\lambda)\in\mathcal{C}$, the \defin{vector tangent to $\mathcal{C}$}\index{vector!tangent to a curve}\index{tangent!vector} associated with the parametrization
+$f:\ \M \rightarrow \R$. In practice, we will always consider smooth scalar fields. At a point $p=P(\lambda)\in\Li$, the \defin{vector tangent to $\Li$}\index{vector!tangent to a curve}\index{tangent!vector} associated with the parametrization
 $P$ is the operator $\w{v}$ which maps every scalar field $f$ to the real number
 \be \label{e:bas:def_vector}
-  \w{v}(f) = \left. \frac{\D f}{\D \lambda} \right|_{\mathcal{C}} :=
+  \w{v}(f) = \left. \frac{\D f}{\D \lambda} \right|_{\Li} :=
   \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
   \left[ f(P(\lambda+\varepsilon)) - f(P(\lambda)) \right] .
 \ee
 Given a coordinate system $(x^\alpha)$ around some point $p\in\M$, there are
-$n$ curves $\mathcal{C}_\alpha$ through $p$ associated with $(x^\alpha)$ and called the
+$n$ curves $\Li_\alpha$ through $p$ associated with $(x^\alpha)$ and called the
 \defin{coordinate lines}\index{coordinate!line}\index{line!coordinate}:
-for each $\alpha\in\{0,\ldots,n-1\}$, $\mathcal{C}_\alpha$ is defined as the curve through $p$ parametrized by $\lambda = x^\alpha$ and having constant coordinates
+for each $\alpha\in\{0,\ldots,n-1\}$, $\Li_\alpha$ is defined as the curve through $p$ parametrized by $\lambda = x^\alpha$ and having constant coordinates
 $x^\beta$ for all $\beta\not=\alpha$.
-The vector tangent to $\mathcal{C}_\alpha$ parametrized by $x^\alpha$ is
+The vector tangent to $\Li_\alpha$ parametrized by $x^\alpha$ is
 denoted $\wpar_\alpha$. Its action on a scalar field $f$ is by definition
 \[
   \wpar_\alpha(f) =
-  \left. \frac{\D f}{\D x^\alpha} \right|_{\mathcal{C}_\alpha}
+  \left. \frac{\D f}{\D x^\alpha} \right|_{\Li_\alpha}
   = \left. \frac{\D f}{\D x^\alpha} \right|_{x^\beta={\rm const}\atop \beta\not=\alpha} .
 \]
 Considering $f$ as a function of
@@ -226,7 +226,7 @@ Similarly, we may rewrite (\ref{e:bas:def_vector}) as
   & = & \der{f}{x^\alpha} \frac{\D X^\alpha}{\D \lambda}
   = \wpar_\alpha(f) \frac{\D X^\alpha}{\D \lambda} . \nonumber
 \eea
-In the above equation and throughout the all book,
+In the above equation,
 we are using \defin{Einstein summation convention}\index{Einstein!summation convention}: a repeated index implies a summation over all the possible values of this index
 (here from $\alpha=0$ to $\alpha=n-1$).
 The above identity being valid for any scalar field $f$, we conclude that
@@ -260,12 +260,12 @@ the \defin{infinitesimal displacement vector from $p$ to $q$}\index{infinitesima
   \D\w{x}(f) = \left. \D f \right| _{p\rightarrow q} = f(q) - f(p) .
 \ee
 Since $p$ and $q$ are infinitesimally close, there is a unique (piece of) curve
-$\mathcal{C}$ going
+$\Li$ going
 from $p$ to $q$ and one has
 \be \label{e:bas:dell_v_dlamb}
   \encadre{\D\w{x} = \w{v} \, \D\lambda },
 \ee
-where $\lambda$ is a parameter along $\mathcal{C}$, $\w{v}$ the associated tangent
+where $\lambda$ is a parameter along $\Li$, $\w{v}$ the associated tangent
 vector at $p$ and $\D\lambda$ the parameter
 increment from $p$ to $q$: $p=P(\lambda)$ and $q=P(\lambda+\D\lambda)$.
 The relation (\ref{e:bas:dell_v_dlamb}) follows immediately from the definition

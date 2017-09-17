@@ -35,22 +35,22 @@ spacetimes of general relativity, one uses
 this last property to define geodesics.
 
 Let us first recall the basic definitions given in Sec.~\ref{s:bas:vectors}:
-a \defin{curve}\index{curve}\footnote{As already mentioned in Remark~\ref{r:bas:curve_def} p.~\pageref{r:bas:curve_def}, in the mathematical literature, it is common to define
+a \defin{curve}\index{curve}\footnote{As already noticed (cf. Remark~\ref{r:bas:curve_def} p.~\pageref{r:bas:curve_def}), in the mathematical literature, it is common to define
 a curve as the parametrization itself, and not as its image.}
-is the image $\mathcal{C}=P(I)$
+is the image $\Li=P(I)$
 of a map (called a \defin{parametrization} of the curve)
 $P:\ I\rightarrow \M$, $\lambda\mapsto P(\lambda)$,
 where $I$ is an interval of $\R$ and the variable $\lambda$ is called a
 \defin{parameter} of the curve.
-Moreover, we exclude the case where $\mathcal{C}$ is reduced to a single point
+Moreover, we exclude the case where $\Li$ is reduced to a single point
 of $\M$, i.e. where $P$ is a constant function.
 We are now in position to define a geodesic as a ``straight'' curve:
 
 \begin{greybox}
-A smooth curve $\mathcal{C}$ of a pseudo-Riemannian manifold $(\M,\w{g})$ is
+A smooth curve $\Li$ of a pseudo-Riemannian manifold $(\M,\w{g})$ is
 called a \defin{geodesic} iff it admits a parametrization $P$ whose associated
 tangent vector field $\w{v}$ is transported parallelly to itself along
-$\mathcal{C}$:
+$\Li$:
 \be \label{e:geo:geod_eq_v}
     \encadre{\wnab_{\!\w{v}} \w{v} = 0},
 \ee
@@ -59,11 +59,11 @@ The parametrization $P$ is then called an
 \defin{affine parametrization}\index{affine!parametrization}\index{parametrization!affine --}
 and the corresponding parameter $\lambda$ is called an
 \defin{affine paramater}\index{affine!parameter}\index{parameter!affine --} of the
-geodesic $\mathcal{C}$. Note that the relation between $\w{v}$ and $\lambda$ is
+geodesic $\Li$. Note that the relation between $\w{v}$ and $\lambda$ is
 \be \label{e:geo:v_dxdlambda}
     \w{v} = \frac{\D\w{x}}{\D\lambda} ,
 \ee
-where $\D\w{x}$ is the infinitesimal displacement along $\mathcal{C}$ corresponding
+where $\D\w{x}$ is the infinitesimal displacement along $\Li$ corresponding
 to the change $\D\lambda$ in the parameter $\lambda$
 (cf. Eq.~(\ref{e:bas:dell_v_dlamb})).
 \end{greybox}
@@ -71,7 +71,7 @@ to the change $\D\lambda$ in the parameter $\lambda$
 The qualifier \emph{affine} in the above definition stems from the following
 property:
 \begin{greybox}
-Any two affine parametrizations of a geodesic $\mathcal{C}$ are necessarily
+Any two affine parametrizations of a geodesic $\Li$ are necessarily
 related by an affine transformation:
 \be \label{e:geo:affine_transf}
     \lambda' = a \lambda + b,
@@ -79,10 +79,10 @@ related by an affine transformation:
 where $a$ and $b$ are two real constants such that $a\not = 0$.
 \end{greybox}
 \begin{proof}
-Let $P: I \to  \mathcal{C}\subset\M$, $\lambda\mapsto P(\lambda)$ and
-$P': I'\to \mathcal{C}$,
+Let $P: I \to  \Li\subset\M$, $\lambda\mapsto P(\lambda)$ and
+$P': I'\to \Li$,
 $\lambda'\mapsto P'(\lambda')$ be two
-parametrizations of $\mathcal{C}$. They are necessarily related by a
+parametrizations of $\Li$. They are necessarily related by a
 diffeomorphism $I\to I'$, $\lambda \mapsto \lambda'(\lambda)$. It follows
 from Eq.~(\ref{e:geo:v_dxdlambda}) that the tangent vector fields $\w{v}$ and $\w{v'}$
 associated with these two parametrizations are related by
@@ -107,7 +107,7 @@ an \defin{autoparallel curve}\index{autoparallel}. It is also sometimes called
 a \defin{zero-acceleration curve}\index{zero-acceleration}, the
 vector $\wnab_{\!\w{v}}\w{v}$ being considered as the
 ``acceleration''\index{acceleration! of a curve} of (the parametrization $P$ of) the
-curve $\mathcal{C}$; this is of course by extension of the concept of
+curve $\Li$; this is of course by extension of the concept of
 4-acceleration $\w{a} := \wnab_{\!\w{u}}\w{u}$ of a timelike worldline
 with 4-velocity $\w{u}$, the latter being nothing but the tangent vector associated with
 the parametrization of the worldline by its proper time (cf. Sec.~\ref{s:fra:massive_part}).
@@ -115,16 +115,16 @@ the parametrization of the worldline by its proper time (cf. Sec.~\ref{s:fra:mas
 
 An important property of geodesics is
 \begin{greybox}
-Let $\mathcal{C}$ be a geodesic of $(\M,\w{g})$ and $\w{v}$ a tangent vector field
-associated with an affine parametrization of $\mathcal{C}$. Then the
+Let $\Li$ be a geodesic of $(\M,\w{g})$ and $\w{v}$ a tangent vector field
+associated with an affine parametrization of $\Li$. Then the
 scalar square of $\w{v}$ with respect to the metric $\w{g}$
-is constant along $\mathcal{C}$:
+is constant along $\Li$:
 \be \label{e:geo:vv_const}
     \w{g}(\w{v},\w{v}) = \mathrm{const}.
 \ee
 \end{greybox}
 \begin{proof}
-The variation of $\w{g}(\w{v},\w{v})$ along $\mathcal{C}$ is given
+The variation of $\w{g}(\w{v},\w{v})$ along $\Li$ is given
 by
 \bea
  \frac{\D}{\D\lambda}  \left( \w{g}(\w{v},\w{v}) \right) & = & \w{v} \left( \w{g}(\w{v},\w{v}) \right)
@@ -137,17 +137,17 @@ where we have used the fact that $\wnab$ is the Levi-Civita connection of $\w{g}
 \end{proof}
 The constancy of $\w{g}(\w{v},\w{v})$ has an
 interesting corollary: the tangent vector $\w{v}$ cannot change its type
-along $\mathcal{C}$. Hence:
+along $\Li$. Hence:
 \begin{greybox}
-In a pseudo-Riemannian manifold $(\M,\w{g})$, a geodesic $\mathcal{C}$ belongs necessarily
+In a pseudo-Riemannian manifold $(\M,\w{g})$, a geodesic $\Li$ belongs necessarily
 to one of the following three categories:
 \begin{itemize}
 \item \defin{timelike geodesic}\index{timelike!geodesic}\index{geodesic!timelike --}:
-tangent vectors are timelike at all points of $\mathcal{C}$;
+tangent vectors are timelike at all points of $\Li$;
 \item \defin{null geodesic}\index{null!geodesic}\index{geodesic!null --}:
-tangent vectors are null at all points of $\mathcal{C}$;
+tangent vectors are null at all points of $\Li$;
 \item \defin{spacelike geodesic}\index{spacelike!geodesic}\index{geodesic!spacelike --}:
-tangent vectors are spacelike at all points of $\mathcal{C}$.
+tangent vectors are spacelike at all points of $\Li$.
 \end{itemize}
 \end{greybox}
 This is in sharp contrast with generic curves, which, for instance, can be timelike on some portions
@@ -178,20 +178,20 @@ geodesic, it is the \emph{arc length}\index{arc length}.
 Geodesics can be characterized by any of their tangent vectors, i.e.
 tangent vectors not necessarily associated with an affine parametrization, as follows:
 \begin{greybox}
-A curve $\mathcal{C}$ is a geodesic
+A curve $\Li$ is a geodesic
 iff the tangent vector field $\w{v}$ associated with any parametrization
-of $\mathcal{C}$ obeys
+of $\Li$ obeys
 \be \label{e:geo:v_pregeodesic}
     \wnab_{\!\w{v}}\w{v} = \kappa\,  \w{v},
 \ee
-where $\kappa$ is a scalar field along $\mathcal{C}$.
+where $\kappa$ is a scalar field along $\Li$.
 \end{greybox}
 \begin{proof}
-Let $P: I\to \mathcal{C}$, $\lambda\mapsto P(\lambda)$ be the parametrization of $\mathcal{C}$
+Let $P: I\to \Li$, $\lambda\mapsto P(\lambda)$ be the parametrization of $\Li$
 corresponding to the tangent vector field $\w{v}$: $\w{v} = \D\w{x}/\D\lambda$.
-If $\mathcal{C}$ is a geodesic, then there exists a parametrization
+If $\Li$ is a geodesic, then there exists a parametrization
 $\lambda'\mapsto P'(\lambda')$ whose tangent vector, $\w{v'}$ say, obeys
-$\wnab_{\!\w{v'}}\w{v'} = 0$. Since the accelerations of any two parametrizations of $\mathcal{C}$
+$\wnab_{\!\w{v'}}\w{v'} = 0$. Since the accelerations of any two parametrizations of $\Li$
 are related by Eq.~(\ref{e:geo:acc_v_acc_vp}), we deduce that $\w{v}$ obeys
 (\ref{e:geo:v_pregeodesic}) with
 \[
@@ -200,7 +200,7 @@ are related by Eq.~(\ref{e:geo:acc_v_acc_vp}), we deduce that $\w{v}$ obeys
 \]
 Conversely, if $\w{v}$ obeys (\ref{e:geo:v_pregeodesic}) with $\kappa=\kappa(\lambda)$,
 then Eq.~(\ref{e:geo:acc_v_acc_vp}) implies that $\wnab_{\!\w{v'}}\w{v'} = 0$,
-i.e. that $\mathcal{C}$ is a geodesic, provided that the change of
+i.e. that $\Li$ is a geodesic, provided that the change of
 parametrization $\lambda' = \lambda'(\lambda)$ fulfils
 \[
     \kappa(\lambda) \frac{\D\lambda'}{\D\lambda} -  \frac{\D^2\lambda'}{\D\lambda^2} = 0 .
@@ -227,8 +227,8 @@ field lines of a pregeodesic vector field are geodesics.
 An easy consequence of Eq.~(\ref{e:geo:v_pregeodesic}) is the following
 evolution law for the scalar square of the tangent vector:
 \begin{greybox}
-Along a geodesic $\mathcal{C}$, the scalar square $\w{g}(\w{v},\w{v})$
-of the tangent vector $\w{v}$ associated with any parametrization of $\mathcal{C}$
+Along a geodesic $\Li$, the scalar square $\w{g}(\w{v},\w{v})$
+of the tangent vector $\w{v}$ associated with any parametrization of $\Li$
 evolves according to
 \be \label{e:geo:evol_vv_kappa}
     \wnab_{\!\w{v}} \left[ \w{g}(\w{v},\w{v}) \right] = 2 \kappa \, \w{g}(\w{v},\w{v}),
@@ -281,13 +281,13 @@ to 1, leading to the same conclusion.
 \subsection{The geodesic equation}
 
 \begin{greybox}
-Let $\mathcal{C}$ be a curve in a pseudo-Riemannian
+Let $\Li$ be a curve in a pseudo-Riemannian
 manifold $(\M,\w{g})$ of dimension $n$, such that
-$\mathcal{C}$ is contained in the domain of a coordinate chart $(x^\alpha)_{0\leq\alpha\leq n-1}$.
-Then any parametrization of $\mathcal{C}$, $P: I \to  \mathcal{C}$, $\lambda\mapsto P(\lambda)$,
+$\Li$ is contained in the domain of a coordinate chart $(x^\alpha)_{0\leq\alpha\leq n-1}$.
+Then any parametrization of $\Li$, $P: I \to  \Li$, $\lambda\mapsto P(\lambda)$,
 can be described by $n$ functions $X^\alpha: I\to \R$
 according to Eq.~(\ref{e:bas:curve_param_equation}): $x^\alpha(P(\lambda)) = X^\alpha(\lambda)$.
-The curve $\mathcal{C}$ is a geodesic iff there exists a parametrization of $\mathcal{C}$
+The curve $\Li$ is a geodesic iff there exists a parametrization of $\Li$
 for which the functions $X^\alpha$ fulfils the following
 system of $n$ second-order differential equations, called the
 \defin{geodesic equation}\index{geodesic!equation}\index{equation!geodesic --}:
@@ -328,9 +328,9 @@ replaced by $\kappa \D X^\alpha /\D\lambda$, which is the coordinate
 expression of the right-hand side $\kappa \w{v}$ in
 Eq.~(\ref{e:geo:v_pregeodesic}). Hence, we have
 \begin{greybox}
-A curve $\mathcal{C}$ in the domain of a chart $(x^\alpha)$ is a geodesic
+A curve $\Li$ in the domain of a chart $(x^\alpha)$ is a geodesic
 iff some (actually all) coordinate expression $x^\alpha = X^\alpha(\lambda)$
-of $\mathcal{C}$ fulfils the following
+of $\Li$ fulfils the following
 system of $n$ second-order differential equations, usually called the
 \defin{pregeodesic equation}\index{pregeodesic!equation}\index{equation!pregeodesic --},
 \be \label{e:geo:pregeod_eq_comp}
@@ -348,14 +348,14 @@ theorem:
 \begin{greybox}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a vector
 $\w{V}$ in the tangent space to $\M$ at $p$, i.e. $\w{V} \in T_p\M$,
-there exists a geodesic $\mathcal{C}$ through $p$ such that
+there exists a geodesic $\Li$ through $p$ such that
 $\w{V}$ is the value at $p$ of the tangent vector of some affine parametrization
-of $\mathcal{C}$:
+of $\Li$:
 \be
     \w{V} = \left. \frac{\D\w{x}}{\D\lambda} \right|_p .
 \ee
-Moreover, this geodesic is unique, in the sense that any geodesic $\mathcal{C}'$
-sharing the same property coincides with $\mathcal{C}$
+Moreover, this geodesic is unique, in the sense that any geodesic $\Li'$
+sharing the same property coincides with $\Li$
 in some open neighbourhood of $p$.
 \end{greybox}
 \begin{proof}
@@ -381,17 +381,21 @@ guarantee the existence and uniqueness of the solution.
 A few definitions follow naturally:
 
 \begin{greybox}
-A geodesic $\mathcal{C}$ is said to be \defin{maximal}\index{maximal!geodesic}\index{geodesic!maximal --}
-or \defin{inextendible}\index{inextendible geodesic}\index{geodesic!inextendible --} iff
-there does not exist any geodesic $\mathcal{C}'$ such that  $\mathcal{C}\subset\mathcal{C}'$ and
-$\mathcal{C}'\not=\mathcal{C}$.
+A geodesic $\Li$ is said to be \defin{inextendible}\index{inextendible geodesic}\index{geodesic!inextendible --}
+or \defin{maximal}\index{maximal!geodesic}\index{geodesic!maximal --}
+iff
+there does not exist any geodesic $\Li'$ such that  $\Li\subset\Li'$ and
+$\Li'\not=\Li$.
 \end{greybox}
 
 \begin{greybox}
-A geodesic $\mathcal{C}$ is \defin{complete}\index{complete!geodesic}\index{geodesic!complete --}
-iff it is maximal and the interval spanned by any of its affine parameters is the whole real line:
-$I=\R$. The pseudo-Riemannian manifold $(\M,\w{g})$ is said to be \defin{geodesically complete}
-iff every maximal geodesic is complete.
+A geodesic $\Li$ is \defin{complete}\index{complete!geodesic}\index{geodesic!complete --}
+iff (i) it is inextendible and (ii) the interval spanned by any of its affine parameters is the whole real line:
+$I=\R$. A geodesic that is not complete is called \defin{incomplete}\index{incomplete geodesic}\index{geodesic!incomplete --}.
+
+The pseudo-Riemannian manifold $(\M,\w{g})$ is said to be
+\defin{geodesically complete}\index{geodesically complete}\index{complete!geodesically -- spacetime}
+iff every inextendible geodesic is complete.
 \end{greybox}
 
 \begin{remark}
@@ -410,11 +414,11 @@ result obtained above:
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a
 nonzero vector
 $\w{V}$ in the tangent space to $\M$ at $p$, i.e. $\w{V} \in T_p\M$,
-there exists a unique maximal geodesic through $p$, which we shall denote
-by $\mathcal{C}_{\w{V}}$, such that
+there exists a unique inextendible geodesic through $p$, which we shall denote
+by $\Li_{\w{V}}$, such that
 $\w{V}$ is the value at $p$ of the tangent vector of some affine parametrization
-of $\mathcal{C}_{\w{V}}$. We shall then denote by $P_{\w{V}}$ the unique
-affine parametrization of $\mathcal{C}_{\w{V}}$ such that
+of $\Li_{\w{V}}$. We shall then denote by $P_{\w{V}}$ the unique
+affine parametrization of $\Li_{\w{V}}$ such that
 \be
     P_{\w{V}}(0) = p \quad\mbox{and}\quad \left.\w{v}\right| _p = \w{V} ,
 \ee
@@ -435,7 +439,7 @@ Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$,
 let $\mathcal{E}_p$ be the subset of the tangent space $T_p\M$ defined
 by $\w{V}\in \mathcal{E}_p$ iff either $\w{V}=0$ or
 the affine parametrization $P_{\w{V}}$
-of the geodesic $\mathcal{C}_{\w{V}}$
+of the geodesic $\Li_{\w{V}}$
 has a domain large enough to include the interval $[0,1]$.
 The \defin{exponential map at $p$}\index{exponential map} is then defined as
 \be
@@ -444,7 +448,7 @@ The \defin{exponential map at $p$}\index{exponential map} is then defined as
     & \w{V} & \longmapsto &
     \left\{ \begin{array}{ll}
         p &  \mbox{if}\ \w{V}=0 \\
-        P_{\w{V}}(1) \in \mathcal{C}_{\w{V}} & \mbox{if}\ \w{V}\not=0
+        P_{\w{V}}(1) \in \Li_{\w{V}} & \mbox{if}\ \w{V}\not=0
         \end{array} \right.
     \end{array}
 \ee
@@ -461,7 +465,7 @@ for every point $p\in\M$.
 An immediate property of the exponential map is
 \begin{greybox}
 If $\w{V}\in \mathcal{E}_p\setminus\{0\}$, for any $t\in[0,1]$, $\exp_p(t\w{V})$ lies
-on the same geodesic $\mathcal{C}_{\w{V}}$ as $\exp_p(\w{V})$, at the parameter
+on the same geodesic $\Li_{\w{V}}$ as $\exp_p(\w{V})$, at the parameter
 $\lambda=t$ of the parametrization $P_{\w{V}}$:
 \be \label{e:geo:exp_tV}
     \forall t\in[0,1],\quad \exp_p(t\w{V}) = P_{\w{V}}(t) .
@@ -472,9 +476,9 @@ For $t=0$, the property follows from the definition of $\exp_p$, since
 $P_{\w{V}}(0) = p$.
 If $t\not=0$, the nonzero vector $t\w{V}$ is collinear to $\w{V}$ and the uniqueness
 property of geodesics (cf. Sec.~\ref{s:geo:existence_uniqueness})
-implies that $\mathcal{C}_{t\w{V}} = \mathcal{C}_{\w{V}}$. By virtue
+implies that $\Li_{t\w{V}} = \Li_{\w{V}}$. By virtue
 of the transformation law (\ref{e:geo:change_tangent_vector}), $t\w{V}$ is
-the tangent vector to $\mathcal{C}_{\w{V}}$ corresponding to the affine parameter
+the tangent vector to $\Li_{\w{V}}$ corresponding to the affine parameter
 $\lambda' = t^{-1} \lambda$, where $\lambda$ is the affine parameter whose
 tangent vector field obeys $\left.\w{v}\right| _p = \w{V}$. From the definition
 of $\exp_p$, we have then $\exp_p(t\w{V}) = P_{t\w{V}}(\lambda'=1) = P_{\w{V}}(\lambda = t\times 1)$,
@@ -521,7 +525,7 @@ identity results from (\ref{e:geo:exp_tV}). We have thus
     \vp{P_{\w{V}}(0) P_{\w{V}}(\varepsilon)} .
 \]
 According to the definition of $P_{\w{V}}$, the infinitesimal vector
-$\vp{P_{\w{V}}(0) P_{\w{V}}(\varepsilon)}$ along the geodesic $\mathcal{C}_{\w{V}}$
+$\vp{P_{\w{V}}(0) P_{\w{V}}(\varepsilon)}$ along the geodesic $\Li_{\w{V}}$
 is $\varepsilon \w{V}$, hence
 \[
     \left.\D\exp_p\right| _0(\varepsilon \w{V}) = \varepsilon \w{V} .
@@ -586,8 +590,8 @@ geodesics through $p$ look like straight lines through $0$ in
 $\R^n$:
 \begin{greybox}
 In a normal coordinate system $(x^\alpha)$, the equation of the unique geodesic
-$\mathcal{C}_{\w{V}}$ through $p$ admitting $\w{V}\in T_p\M$ as tangent
-vector at $p$ is (as long as $\mathcal{C}_{\w{V}}$ remains in the normal
+$\Li_{\w{V}}$ through $p$ admitting $\w{V}\in T_p\M$ as tangent
+vector at $p$ is (as long as $\Li_{\w{V}}$ remains in the normal
 neighbourhood $\mathscr{U}$)
 \be \label{e:geo:Xa_normal_coord}
     x^\alpha = X^\alpha(\lambda) = \lambda V^\alpha ,
@@ -596,9 +600,9 @@ where the $V^\alpha$'s are the components of $\w{V}$ with respect to the basis
 $(\w{E}_\alpha)$ defining the normal coordinates: $\w{V} = V^\mu \w{E}_\mu$.
 \end{greybox}
 \begin{proof}
-Let $\lambda$ be the affine parameter of $\mathcal{C}_{\w{V}}$ corresponding
+Let $\lambda$ be the affine parameter of $\Li_{\w{V}}$ corresponding
 to the parametrization $P_{\w{V}}$. The coordinate equation of
-$\mathcal{C}_{\w{V}}$ is then $x^\alpha = X^\alpha(\lambda)$ with [cf. Eq.~(\ref{e:geo:def_normal_coord})]
+$\Li_{\w{V}}$ is then $x^\alpha = X^\alpha(\lambda)$ with [cf. Eq.~(\ref{e:geo:def_normal_coord})]
 \[
     X^\alpha(\lambda) = x^\alpha\left( P_{\w{V}}(\lambda) \right)
         = \langle \w{E}^\alpha, \exp_p^{-1} \left( P_{\w{V}}(\lambda) \right) \rangle .
@@ -635,7 +639,7 @@ $(x^\alpha)$ vanish at $p$:
 \begin{proof}
 Let $\mathscr{U}$ be the normal neighbourhood covered by $(x^\alpha)$ and
 $\w{V}\in \exp_p^{-1}(\mathscr{U})\subset T_p\M$.
-The tangent vector field to the geodesic $\mathcal{C}_{\w{V}}$ corresponding
+The tangent vector field to the geodesic $\Li_{\w{V}}$ corresponding
 to the parametrization $P_{\w{V}}$ is $\w{v} = \dot{X}^\mu \wpar_\mu$
 with $\dot{X}^\mu$ obtained by deriving (\ref{e:geo:Xa_normal_coord})
 with respect to $\lambda$:
@@ -689,27 +693,27 @@ $\D s := \sqrt{|\w{g}(\D\w{x},\D\w{x})|}$. Using $\D\w{x} = \w{v}\,\D \lambda$
 [Eq.~(\ref{e:bas:dell_v_dlamb})], we end up with the following definition:
 \begin{greybox}
 The \defin{length}\index{length!of a curve} of a curve
-$\mathcal{C}$ connecting two points $p$ and $q$
+$\Li$ connecting two points $p$ and $q$
 in a pseudo-Riemannian manifold $(\M,\w{g})$ is
 \be \label{e:geo:def_length}
-    L_{(p,q)}(\mathcal{C}) := \int_{\lambda_p}^{\lambda_q} \sqrt{\left|
+    L_{(p,q)}(\Li) := \int_{\lambda_p}^{\lambda_q} \sqrt{\left|
         \w{g}(\w{v},\w{v}) \right| } \, \D\lambda ,
 \ee
-where $\lambda$ is some parameter along $\mathcal{C}$, $\lambda_p$
+where $\lambda$ is some parameter along $\Li$, $\lambda_p$
 (resp. $\lambda_q$) being its value at $p$ (resp. $q$),
 $\w{v} = \D\w{x}/\D\lambda$ is the associated tangent vector field,
 and we assume $\lambda_q \geq \lambda_p$.
 \end{greybox}
 Thanks to the transformation law (\ref{e:geo:change_tangent_vector}), it is
-easy to check that the value of $L_{(p,q)}(\mathcal{C}) $ is independent from
-the choice of the parametrization of $\mathcal{C}$, i.e. for a fixed
-pair of points $(p,q)$, it is a function of $\mathcal{C}$ only.
+easy to check that the value of $L_{(p,q)}(\Li) $ is independent from
+the choice of the parametrization of $\Li$, i.e. for a fixed
+pair of points $(p,q)$, it is a function of $\Li$ only.
 
-When $\mathcal{C}$ is included in the domain of a coordinate chart
+When $\Li$ is included in the domain of a coordinate chart
 $(x^\alpha)$, so that its equation is $x^\alpha = X^\alpha(\lambda)$, we
 may rewrite (\ref{e:geo:def_length}) as [cf. Eq.~(\ref{e:geo:va_dXadlamb})]
 \be \label{e:geo:def_length_X}
-    L_{(p,q)}(\mathcal{C})  := \int_{\lambda_p}^{\lambda_q} \sqrt{\left|
+    L_{(p,q)}(\Li)  := \int_{\lambda_p}^{\lambda_q} \sqrt{\left|
         g_{\mu\nu}(X^\rho(\lambda))  \dot{X}^\mu \dot{X}^\nu \right| } \, \D\lambda ,
 \ee
 where $\dot{X}^\alpha := \D X^\alpha / \D\lambda$ and
@@ -717,14 +721,14 @@ $g_{\mu\nu}(X^\rho(\lambda))$ stands for the components of the
 metric tensor $\w{g}$ with respect to the coordinates $(x^\alpha)$ at the
 point of coordinates $X^\rho(\lambda)$.
 
-From the very definition of $L_{(p,q)}(\mathcal{C})$, it is obvious that
+From the very definition of $L_{(p,q)}(\Li)$, it is obvious that
 \be
-    L_{(p,q)}(\mathcal{C}) \geq 0 .
+    L_{(p,q)}(\Li) \geq 0 .
 \ee
 Moreover, if it exists, any null curve from $p$ to $q$ achieves the
 absolute minimum of the length, without having to be a geodesic:
 \be \label{e:geo:C_null_L_zero}
-    \mathcal{C}\mbox{ null } \Longrightarrow L_{(p,q)}(\mathcal{C}) = 0 .
+    \Li\mbox{ null } \Longrightarrow L_{(p,q)}(\Li) = 0 .
 \ee
 
 \subsection{Timelike and spacelike geodesics as stationary points
@@ -740,7 +744,7 @@ be it a minimum or a maximum.
 
 To find the curves of extremal length, it is
 quite natural to study the behaviour of the length as a
-variational problem, i.e. to consider $L_{(p,q)}(\mathcal{C})$ as an ``action''
+variational problem, i.e. to consider $L_{(p,q)}(\Li)$ as an ``action''
 and to write the Euler-Lagrange equation
 for the ``Lagrangian'' defined as the integrand of (\ref{e:geo:def_length_X}):
 \be \label{e:geo:Lagrangian}
@@ -750,17 +754,17 @@ for the ``Lagrangian'' defined as the integrand of (\ref{e:geo:def_length_X}):
 Before proceeding, a few
 caveats must be made. First of all, the Euler-Lagrange equation
 locate only \emph{stationary} points of the action (here the length
-$L_{(p,q)}(\mathcal{C})$), i.e. points where the action does not vary
+$L_{(p,q)}(\Li)$), i.e. points where the action does not vary
 to first order in small changes of the curve. Such points are not
 necessarily extrema: they can be \emph{saddle} points, as we shall see.
 Secondly, because of the square root in (\ref{e:geo:Lagrangian}),
 the Lagrangian is not differentiable at points where
 $g_{\mu\nu} \dot{X}^\mu \dot{X}^\nu = 0$.
-This corresponds to points where the curve $\mathcal{C}$ is null. We shall
+This corresponds to points where the curve $\Li$ is null. We shall
 therefore exclude such curves in our analysis (we shall return to null
 curves in Sec.~\ref{s:geo:all_geod}). But then $g_{\mu\nu} \dot{X}^\mu \dot{X}^\nu$
-has to be either always positive along $\mathcal{C}$ (i.e. $\mathcal{C}$
-is spacelike) or always negative (i.e. $\mathcal{C}$ is timelike); indeed,
+has to be either always positive along $\Li$ (i.e. $\Li$
+is spacelike) or always negative (i.e. $\Li$ is timelike); indeed,
 by continuity it cannot change sign without going through zero.
 We shall then apply the variational principle separately
 to two subsets of curves connecting $p$ and $q$: the timelike ones and the
@@ -870,7 +874,7 @@ is older than his brother, who made a round trip.
 \begin{figure}
 \centerline{\includegraphics[height=0.3\textheight]{geo_timelike_h.pdf}}
 \caption[]{\label{f:geo:timelike_h} \footnotesize
-Timelike curves $\mathcal{C}_h$ connecting the point $p$
+Timelike curves $\Li_h$ connecting the point $p$
 of coordinates $(0,0,0,0)$ to the point $q$ of coordinates $(T,0,0,0)$
 in Minkowski spacetime. From the left to right, the depicted curves
 correspond to $h$ spanning $[-3/4, 3/4]$, with the step $\delta h = 1/4$.}
@@ -880,12 +884,12 @@ correspond to $h$ spanning $[-3/4, 3/4]$, with the step $\delta h = 1/4$.}
 \begin{example}[Timelike geodesic in Minkowski spacetime] \label{x:geo:timelike_geod_Mink}
 Let us suppose that $(\M,\w{g})$ is the 4-dimensional Minkowski spacetime.
 All geodesics are then (segments of) straight lines. If $p$ and $q$ are
-connected by a timelike geodesic $\mathcal{C}$,
+connected by a timelike geodesic $\Li$,
 we may consider a Minkowskian coordinate system $(x^\alpha)=(t,x,y,z)$
 such that $x^\alpha(p) = (0,0,0,0)$ and $x^\alpha(q) = (T,0,0,0)$, for some $T>0$.
-$t$ is then the proper time along $\mathcal{C}$ and
-$L_{(p,q)}(\mathcal{C})=T$. Let us consider the one-parameter family of curves
-$(\mathcal{C}_h)_{h\in(-1,1)}$ defined by $x^\alpha = X^\alpha(\lambda)$ with
+$t$ is then the proper time along $\Li$ and
+$L_{(p,q)}(\Li)=T$. Let us consider the one-parameter family of curves
+$(\Li_h)_{h\in(-1,1)}$ defined by $x^\alpha = X^\alpha(\lambda)$ with
 $\lambda\in[0,T]$ and
 \[
    X^0(\lambda) = \lambda, \quad
@@ -895,7 +899,7 @@ $\lambda\in[0,T]$ and
 \]
 Note that $X^0(\lambda) = \lambda$ means that the curve parameter
 coincides with the time coordinate: $\lambda = t$.
-We have $\mathcal{C}_0 = \mathcal{C}$ and for $h\not=0$, $\mathcal{C}$ is
+We have $\Li_0 = \Li$ and for $h\not=0$, $\Li$ is
 an arc of parabola from $p$ to $q$ in the $(t,x)$ plane
 (cf. Fig.~\ref{f:geo:timelike_h}); the dimensionless
 parameter $h$ is related to the curve's maximal extension along $x$ by
@@ -908,32 +912,32 @@ $x_{\rm max} = h T /4$. We have
 \]
 Given that $(g_{\alpha\beta}) = \mathrm{diag}(-1,1,1,1)$, it follows that
 $g_{\mu\nu} \dot{X}^\mu \dot{X}^\nu = -1 + h^2(1-2\lambda/T)^2$.
-Since $\lambda\in[0,T]$, this shows that $\mathcal{C}_h$ is a timelike
+Since $\lambda\in[0,T]$, this shows that $\Li_h$ is a timelike
 curve as long as $-1\leq h \leq 1$. Its length is
 \[
-L_{(p,q)}(\mathcal{C}_h) = \int_{0}^{T} \sqrt{ 1 - h^2 \left( 1 - 2\frac{\lambda}{T} \right)^2 }
+L_{(p,q)}(\Li_h) = \int_{0}^{T} \sqrt{ 1 - h^2 \left( 1 - 2\frac{\lambda}{T} \right)^2 }
     \, \D\lambda  = \frac{T}{2h} \int_{-h}^h \sqrt{1 - u^2} \, \D u
     = \frac{T}{2h} \int_{-\mathrm{arcsin}\, h}^{\mathrm{arcsin}\, h}
         \cos^2 \theta \, \D \theta .
 \]
 Evaluating the integral leads to
 \[
-    L_{(p,q)}(\mathcal{C}_h) = \frac{T}{2} \left( \sqrt{1-h^2} + \frac{\mathrm{arcsin}\, h}{h} \right) .
+    L_{(p,q)}(\Li_h) = \frac{T}{2} \left( \sqrt{1-h^2} + \frac{\mathrm{arcsin}\, h}{h} \right) .
 \]
 Note that $\mathrm{arcsin}\, h/h$ is well defined at $h=0$, since
 $\lim_{h\rightarrow 0}  \mathrm{arcsin}\, h/h = 1$.
-The graph of $L_{(p,q)}(\mathcal{C}_h)$ as a function $h$ is plotted in
+The graph of $L_{(p,q)}(\Li_h)$ as a function $h$ is plotted in
 Fig.~\ref{f:geo:timelike_length_h}. We see clearly that $h=0$, i.e. the
-geodesic $\mathcal{C}$, corresponds to the maximal length.
+geodesic $\Li$, corresponds to the maximal length.
 \end{example}
 
 \begin{figure}
 \centerline{\includegraphics[height=0.3\textheight]{geo_timelike_length_h.pdf}}
 \caption[]{\label{f:geo:timelike_length_h} \footnotesize
-Length of the timelike curve $\mathcal{C}_h$ connecting the point $p$
+Length of the timelike curve $\Li_h$ connecting the point $p$
 of coordinates $(0,0,0,0)$ to the point $q$ of coordinates $(T,0,0,0)$
 in Minkowski spacetime, as a function of the parameter $h$ measuring
-the deviation from the timelike geodesic $\mathcal{C}$.}
+the deviation from the timelike geodesic $\Li=\Li_0$.}
 \end{figure}
 
 
@@ -945,18 +949,18 @@ below illustrates.
 
 \begin{example}[Spacelike geodesic in Minkowski spacetime]
 As in Example~\ref{x:geo:timelike_geod_Mink}, we consider Minkowski spacetime,
-but this time, $\mathcal{C}$ is assumed to be a spacelike geodesic from $p$ to $q$. Since $\mathcal{C}$ is necessarily a straight line
+but this time, $\Li$ is assumed to be a spacelike geodesic from $p$ to $q$. Since $\Li$ is necessarily a straight line
 segment, without any loss of generality, we may introduce a Minkowskian coordinate
 system $(x^\alpha)=(t,x,y,z)$ such that $x^\alpha(p) = (0,0,0,0)$ and
 $x^\alpha(q) = (0,L,0,0)$ for some $L>0$, which is nothing but the length
-$L_{(p,q)}(\mathcal{C})$ of the geodesic $\mathcal{C}$. Any spacelike curve
-$\mathcal{C}'$ connecting $p$ and $q$ and lying in the hyperplane $\Sigma$
-defined by $t=0$ obeys $L_{(p,q)}(\mathcal{C}') \geq L_{(p,q)}(\mathcal{C})$
+$L_{(p,q)}(\Li)$ of the geodesic $\Li$. Any spacelike curve
+$\Li'$ connecting $p$ and $q$ and lying in the hyperplane $\Sigma$
+defined by $t=0$ obeys $L_{(p,q)}(\Li') \geq L_{(p,q)}(\Li)$
 since $\Sigma$, equipped with the metric induced by $\w{g}$, is a
 3-dimensional Euclidean space.
 
 Let us consider some one-parameter family of curves
-$(\mathcal{C}_h)_{h\in(-1,1)}$ lying in the orthogonal complement of $\Sigma$
+$(\Li_h)_{h\in(-1,1)}$ lying in the orthogonal complement of $\Sigma$
 through $p$ and $q$, namely the curves defined $x^\alpha = X^\alpha(\lambda)$ with
 $\lambda\in[0,L]$ and
 \[
@@ -965,21 +969,21 @@ $\lambda\in[0,L]$ and
    X^2(\lambda) = 0, \quad
    X^3(\lambda) = 0 .
 \]
-As in Example~\ref{x:geo:timelike_geod_Mink}, we have $\mathcal{C}_0=\mathcal{C}$
-and for $h\not=0$, the $\mathcal{C}_h$'s are
+As in Example~\ref{x:geo:timelike_geod_Mink}, we have $\Li_0=\Li$
+and for $h\not=0$, the $\Li_h$'s are
 arcs of parabola from $p$ to $q$, which remain spacelike as long as
 $-1<h<1$ (cf. Fig.~\ref{f:geo:spacelike_h}).
 The computations are similar to those of Example~\ref{x:geo:timelike_geod_Mink},
 leading to
 \[
-    L_{(p,q)}(\mathcal{C}_h) = \frac{L}{2} \left( \sqrt{1-h^2} + \frac{\mathrm{arcsin}\, h}{h} \right) .
+    L_{(p,q)}(\Li_h) = \frac{L}{2} \left( \sqrt{1-h^2} + \frac{\mathrm{arcsin}\, h}{h} \right) .
 \]
-$L_{(p,q)}(\mathcal{C}_h) / L$ is exactly the same of function of $h$
-as $L_{(p,q)}(\mathcal{C}_h) / T$ in Example~\ref{x:geo:timelike_geod_Mink}.
+$L_{(p,q)}(\Li_h) / L$ is exactly the same of function of $h$
+as $L_{(p,q)}(\Li_h) / T$ in Example~\ref{x:geo:timelike_geod_Mink}.
 In view of Fig.~\ref{f:geo:timelike_length_h}, we therefore assert
-that $L_{(p,q)}(\mathcal{C}_h) \leq L_{(p,q)}(\mathcal{C})$.
+that $L_{(p,q)}(\Li_h) \leq L_{(p,q)}(\Li)$.
 
-We conclude that the spacelike geodesic $\mathcal{C}$ corresponds to a
+We conclude that the spacelike geodesic $\Li$ corresponds to a
 saddle point of the length functional: it is a minimum among the curves lying
 in the $(x,y,z)$ hyperplane but a maximum among those lying in the $(t,x)$
 plane.
@@ -988,7 +992,7 @@ plane.
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{geo_spacelike_h.pdf}}
 \caption[]{\label{f:geo:spacelike_h} \footnotesize
-Spacelike curves $\mathcal{C}_h$ connecting the point $p$
+Spacelike curves $\Li_h$ connecting the point $p$
 of coordinates $(0,0,0,0)$ to the point $q$ of coordinates $(0,L,0,0)$
 in Minkowski spacetime. From the bottom to the top, the depicted curves
 correspond to $h$ spanning $[-3/4, 3/4]$, with the step $\delta h = 1/4$.}
@@ -1009,7 +1013,7 @@ a variational principle; one has to start from a different action, namely the
     E_{(p,q)}(P) := \int_{\lambda_p}^{\lambda_q}
         g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \, \D\lambda ,
 \ee
-where $P$ is a parametrization of the curve $\mathcal{C}$, $\lambda$
+where $P$ is a parametrization of the curve $\Li$, $\lambda$
 the corresponding parameter
 and $x^\alpha = X^\alpha(\lambda)$ the coordinate expression of $P$.
 
@@ -1018,9 +1022,9 @@ when $g_{\mu\nu}\dot{X}^\mu \dot{X}^\nu  = 0$, i.e. it allows for null curves.
 However the price to pay is that,
 contrary to the length (\ref{e:geo:def_length_X}),
 the ``energy'' depends on the parametrization of the curve,
-hence the notation $E_{(p,q)}(P)$ rather than $E_{(p,q)}(\mathcal{C})$.
+hence the notation $E_{(p,q)}(P)$ rather than $E_{(p,q)}(\Li)$.
 For this reason, $E_{(p,q)}(P)$ is not expected to have any significant
-physical meaning, contrary to $L_{(p,q)}(\mathcal{C})$, which is the proper
+physical meaning, contrary to $L_{(p,q)}(\Li)$, which is the proper
 time along timelike curves. In particular, the name ``energy''
 arises simply because of the quadratic dependencies in the ``velocity'' variables $\dot{X}^\alpha$,
 as in a kinetic energy.
@@ -1032,16 +1036,16 @@ turns out to be equivalent to the geodesic equation (\ref{e:geo:eq_geod}).
 We conclude that
 \begin{greybox}
 In a pseudo-Riemannian manifold $(\M,\w{g})$, a
-curve $\mathcal{C}$ equipped with a parametrization $P$
+curve $\Li$ equipped with a parametrization $P$
 is a stationary point of the ``energy'' functional (\ref{e:geo:energy_funct})
-iff $\mathcal{C}$ is a geodesic and $P$ an affine parametrization of it.
+iff $\Li$ is a geodesic and $P$ an affine parametrization of it.
 \end{greybox}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Geodesics and symmetries}
+\section{Geodesics and symmetries} \label{s:geo:sym}
 
 As a reminiscence of Noether's theorem\index{Noether's theorem},
 symmetries in a pseudo-Riemannian manifold lead to conserved
@@ -1054,17 +1058,17 @@ we may state the following conservation law:
 \begin{greybox}
 If the pseudo-Riemannian manifold $(\M,\w{g})$ admits a 1-dimensional
 group of symmetry of generator $\w{\xi}$, i.e. $\w{\xi}$ is a Killing
-vector field of $(\M,\w{g})$, then along any geodesic $\mathcal{C}$,
+vector field of $(\M,\w{g})$, then along any geodesic $\Li$,
 the $\w{g}$-scalar product of $\w{\xi}$ by any tangent vector field
 $\w{v}=\D\w{x}/\D\lambda$ associated with an
-affine parameter $\lambda$ of $\mathcal{C}$ is constant:
+affine parameter $\lambda$ of $\Li$ is constant:
 \be
     \w{g}(\w{\xi},\w{v}) = \mathrm{const} .
 \ee
 \end{greybox}
 
 \begin{proof}
-The variation of $\w{g}(\w{\xi},\w{v})$ along $\mathcal{C}$ is,
+The variation of $\w{g}(\w{\xi},\w{v})$ along $\Li$ is,
 according to Eq.~(\ref{e:bas:def_vector}),
 \bea
     \frac{\D}{\D\lambda} \, \w{g}(\w{\xi},\w{v}) & = & \w{v}\left( \w{g}(\w{\xi},\w{v}) \right) =
@@ -1077,51 +1081,24 @@ according to Eq.~(\ref{e:bas:def_vector}),
 \eea
 where the first zero holds because $\w{\xi}$ obeys to the Killing equation
 (\ref{e:neh:Killing_equation}) and the second one holds thanks to
-Eq.~(\ref{e:geo:geod_eq_v}), which expresses that $\mathcal{C}$ is a geodesic
+Eq.~(\ref{e:geo:geod_eq_v}), which expresses that $\Li$ is a geodesic
 and $\w{v}$ the tangent vector associated with some affine parameter.
 \end{proof}
 
 \begin{remark}
 If the tangent vector $\w{v}$ is associated with a generic (not necessarily affine)
-parameter of $\mathcal{C}$, the second zero in Eq.~(\ref{e:geo:dem_conservation})
+parameter of $\Li$, the second zero in Eq.~(\ref{e:geo:dem_conservation})
 must be replaced by $\kappa v^\nu$, where $\kappa$ is the non-affinity
 coefficient of $\w{v}$ [cf. Eq.~(\ref{e:geo:v_pregeodesic})]. Accordingly
-$\w{g}(\w{\xi},\w{v})$ is no longer constant along $\mathcal{C}$ but rather
+$\w{g}(\w{\xi},\w{v})$ is no longer constant along $\Li$ but rather
 evolves according to
 \be
     \frac{\D}{\D\lambda} \, \w{g}(\w{\xi},\w{v}) = \kappa \, \w{g}(\w{\xi},\w{v}) .
 \ee
-Note that $\kappa$ a priori varies along $\mathcal{C}$, so that the integration of
+Note that $\kappa$ a priori varies along $\Li$, so that the integration of
 this first-order differential equation depends of the precise form of the
 function $\kappa(\lambda)$.
 \end{remark}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
