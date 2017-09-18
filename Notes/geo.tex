@@ -1007,27 +1007,37 @@ We may further convince ourselves that null geodesics would not have fit
 in the analysis by noticing the division by $\mathcal{L}$ in Eq.~(\ref{e:geo:kappa_from_L}),
 which excludes $\mathcal{L} = 0$.
 However, it is possible to get all geodesics, including the null ones, from
-a variational principle; one has to start from a different action, namely the
-``energy'' functional:
+a variational principle; one has to start from a different action, namely
 \be \label{e:geo:energy_funct}
-    E_{(p,q)}(P) := \int_{\lambda_p}^{\lambda_q}
+    S_{(p,q)}(P) := \frac{1}{2}\int_{\lambda_p}^{\lambda_q}
         g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \, \D\lambda ,
 \ee
 where $P$ is a parametrization of the curve $\Li$, $\lambda$
 the corresponding parameter
 and $x^\alpha = X^\alpha(\lambda)$ the coordinate expression of $P$.
 
-The Lagrangian in (\ref{e:geo:energy_funct}) is always differentiable, even
+The Lagrangian in (\ref{e:geo:energy_funct}) is
+\be
+   \mathcal{L}(X^\alpha, \dot{X}^\alpha) =  \frac{1}{2}
+        g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu  .
+\ee
+We notice that it is always differentiable, even
 when $g_{\mu\nu}\dot{X}^\mu \dot{X}^\nu  = 0$, i.e. it allows for null curves.
 However the price to pay is that,
 contrary to the length (\ref{e:geo:def_length_X}),
-the ``energy'' depends on the parametrization of the curve,
-hence the notation $E_{(p,q)}(P)$ rather than $E_{(p,q)}(\Li)$.
-For this reason, $E_{(p,q)}(P)$ is not expected to have any significant
+the action depends on the parametrization of the curve,
+hence the notation $S_{(p,q)}(P)$ rather than $S_{(p,q)}(\Li)$.
+For this reason, $S_{(p,q)}(P)$ is not expected to have any significant
 physical meaning, contrary to $L_{(p,q)}(\Li)$, which is the proper
-time along timelike curves. In particular, the name ``energy''
-arises simply because of the quadratic dependencies in the ``velocity'' variables $\dot{X}^\alpha$,
-as in a kinetic energy.
+time along timelike curves.
+\begin{remark}
+The factor $1/2$ in Eq.~(\ref{e:geo:energy_funct}) does not play any role
+in the variational principle, so we could have dropped it. However, thanks to
+it, the momentum conjuguate to $X^\alpha$ takes a simple form:
+\be
+    p_\alpha := \der{\mathcal{L}}{\dot{X}^\alpha} = g_{\alpha\mu} \dot{X}^\mu .
+\ee
+\end{remark}
 
 Searching for stationary points of the action
 (\ref{e:geo:energy_funct}) is straightforward (cf. the computation below
@@ -1037,7 +1047,7 @@ We conclude that
 \begin{greybox}
 In a pseudo-Riemannian manifold $(\M,\w{g})$, a
 curve $\Li$ equipped with a parametrization $P$
-is a stationary point of the ``energy'' functional (\ref{e:geo:energy_funct})
+is a stationary point of the action (\ref{e:geo:energy_funct})
 iff $\Li$ is a geodesic and $P$ an affine parametrization of it.
 \end{greybox}
 
