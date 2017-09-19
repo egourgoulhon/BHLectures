@@ -732,7 +732,7 @@ absolute minimum of the length, without having to be a geodesic:
 \ee
 
 \subsection{Timelike and spacelike geodesics as stationary points
-of the length functional}
+of the length functional} \label{s:geo:variation_length}
 
 The property (\ref{e:geo:C_null_L_zero}) implies that, in a pseudo-Riemannian
 manifold, the curve that minimizes the length between two points is not necessarily
@@ -784,21 +784,21 @@ is equivalent to the Euler-Lagrange equation\index{Euler-Lagrange equation}:
         - \der{\mathcal{L}}{X^\alpha} = 0 .
 \ee
 We have
-\[
+\be \label{e:geo:der_gXX_X}
     \der{}{X^\alpha} \left( g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \right)
         = \der{g_{\mu\nu}}{x^\alpha}  \dot{X}^\mu \dot{X}^\nu  ,
-\]
+\ee
 with the understanding that $\dert{g_{\mu\nu}}{x^\alpha}$ shall be
 taken at the point $X^\rho(\lambda)$. Hence, given the Lagrangian (\ref{e:geo:Lagrangian_eps}),
 \be \label{e:geo:derL_X}
   \der{\mathcal{L}}{X^\alpha} = \frac{\eps}{2\mathcal{L}} \der{g_{\mu\nu}}{x^\alpha}  \dot{X}^\mu \dot{X}^\nu .
 \ee
 Besides,
-\[
+\be \label{e:geo:der_gXX_X_dot}
     \der{}{\dot{X}^\alpha} \left( g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \right)
         = g_{\alpha\nu} \dot{X}^\nu + g_{\mu\alpha} \dot{X}^\mu
         = 2 g_{\alpha\mu} \dot{X}^\mu .
-\]
+\ee
 Hence
 \[
     \der{\mathcal{L}}{\dot{X}^\alpha} = \frac{\eps}{\mathcal{L}} g_{\alpha\mu} \dot{X}^\mu  ,
@@ -821,13 +821,13 @@ by $\mathcal{L}/\eps$,
 \]
 Now, playing with the names of repeated indices and using the symmetry
 of $g_{\alpha\beta}$, we can rewrite the second term as
-\[
+\be \label{e:geo:gXX_indices}
     \der{g_{\alpha\mu}}{x^\nu} \dot{X}^\mu \dot{X}^\nu
     = \frac{1}{2} \left( \der{g_{\alpha\nu}}{x^\mu} \dot{X}^\nu \dot{X}^\mu
     + \der{g_{\mu\alpha}}{x^\nu} \dot{X}^\mu \dot{X}^\nu \right)
     = \frac{1}{2} \left( \der{g_{\alpha\nu}}{x^\mu}
     + \der{g_{\mu\alpha}}{x^\nu} \right) \dot{X}^\mu \dot{X}^\nu .
-\]
+\ee
 Accordingly, we get
 \be \label{e:geo:geod_eq_cov}
     g_{\alpha\mu} \ddot{X}^\mu + \frac{1}{2} \left( \der{g_{\alpha\nu}}{x^\mu}
@@ -1017,8 +1017,8 @@ the corresponding parameter
 and $x^\alpha = X^\alpha(\lambda)$ the coordinate expression of $P$.
 
 The Lagrangian in (\ref{e:geo:energy_funct}) is
-\be
-   \mathcal{L}(X^\alpha, \dot{X}^\alpha) =  \frac{1}{2}
+\be \label{e:geo:Lagrangian2}
+   \mathcal{L}_2(X^\alpha, \dot{X}^\alpha) =  \frac{1}{2}
         g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu  .
 \ee
 We notice that it is always differentiable, even
@@ -1030,18 +1030,25 @@ hence the notation $S_{(p,q)}(P)$ rather than $S_{(p,q)}(\Li)$.
 For this reason, $S_{(p,q)}(P)$ is not expected to have any significant
 physical meaning, contrary to $L_{(p,q)}(\Li)$, which is the proper
 time along timelike curves.
-\begin{remark}
-The factor $1/2$ in Eq.~(\ref{e:geo:energy_funct}) does not play any role
-in the variational principle, so we could have dropped it. However, thanks to
-it, the momentum conjuguate to $X^\alpha$ takes a simple form:
-\be
-    p_\alpha := \der{\mathcal{L}}{\dot{X}^\alpha} = g_{\alpha\mu} \dot{X}^\mu .
-\ee
-\end{remark}
 
 Searching for stationary points of the action
-(\ref{e:geo:energy_funct}) is straightforward (cf. the computation below
-Eq.~(\ref{e:geo:Euler-Lagrange})): the Euler-Lagrange equation
+(\ref{e:geo:energy_funct}) is straightforward. Indeed,
+given Eqs.~(\ref{e:geo:der_gXX_X}) and (\ref{e:geo:der_gXX_X_dot}),
+we have
+\[
+    \der{\mathcal{L}_2}{X^\alpha} = \frac{1}{2}
+        \der{g_{\mu\nu}}{x^\alpha}  \dot{X}^\mu \dot{X}^\nu
+    \qquad\mbox{and}\qquad
+    \der{\mathcal{L}_2}{\dot{X}^\alpha} = g_{\alpha\mu} \dot{X}^\mu ,
+\]
+so that
+\[
+    \frac{\D}{\D\lambda}\left( \der{\mathcal{L}_2}{\dot{X}^\alpha}\right) =
+      \der{g_{\alpha\mu}}{x^\nu} \dot{X}^\nu \dot{X}^\mu
+      + g_{\alpha\mu} \ddot{X}^\mu .
+\]
+Using the identity (\ref{e:geo:gXX_indices}), the Euler-Lagrange equation
+(\ref{e:geo:Euler-Lagrange}) (with $\mathcal{L}$ substituted by $\mathcal{L}_2$)
 turns out to be equivalent to the geodesic equation (\ref{e:geo:eq_geod}).
 We conclude that
 \begin{greybox}
@@ -1051,6 +1058,38 @@ is a stationary point of the action (\ref{e:geo:energy_funct})
 iff $\Li$ is a geodesic and $P$ an affine parametrization of it.
 \end{greybox}
 
+\begin{remark}
+The variational principle applied to the action (\ref{e:geo:energy_funct}) leads directly
+to the geodesic equation (\ref{e:geo:eq_geod}), which implies that the
+involved parametrization is affine. On the contrary,
+the variation of the length functional (\ref{e:geo:def_length_X}),
+leads only to the pregeodesic equation
+(\ref{e:geo:pregeod_eq_comp}) (cf. the computation in Sec.~\ref{s:geo:variation_length}),
+which permits a generic parametrization of the geodesic, in agreement with
+the fact that the length is parametrization-independent, contrary to the
+action (\ref{e:geo:energy_funct}).
+\end{remark}
+
+\begin{remark}
+The factor $1/2$ in Eq.~(\ref{e:geo:energy_funct}) does not play any role
+in the variational principle, so we could have dropped it. However, thanks to
+it, the momentum conjuguate to $X^\alpha$ takes a simple form:
+\be
+    \Pi_\alpha := \der{\mathcal{L}}{\dot{X}^\alpha} = g_{\alpha\mu} \dot{X}^\mu .
+\ee
+The Lagrangian (\ref{e:geo:Lagrangian2}) can be then written
+$\mathcal{L}_2 = 1/2\, \Pi_\mu \dot{X}^\mu$ and the
+Hamiltonian\index{Hamiltonian!for geodesic motion}
+deduced from it by the standard Legendre transformation is
+$\mathcal{H} = \Pi_\mu \dot{X}^\mu - \mathcal{L}_2 = 1/2\, \Pi_\mu \dot{X}^\mu$,
+i.e.
+\be
+    \mathcal{H}(X^\alpha, \Pi_\alpha) = \frac{1}{2} g^{\mu\nu}(X^\rho) \Pi_\mu \Pi_\nu .
+\ee
+Such a Hamiltonian has been used by Carter \cite{Carte68}
+to study the geodesics in Kerr spacetime,
+discovering the famous \emph{Carter constant}\index{Carter constant}.
+\end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
