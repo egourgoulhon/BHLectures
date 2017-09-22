@@ -1096,6 +1096,8 @@ discovering the famous \emph{Carter constant}\index{Carter constant}.
 
 \section{Geodesics and symmetries} \label{s:geo:sym}
 
+\subsection{Killing vector}
+
 As a reminiscence of Noether's theorem\index{Noether's theorem},
 symmetries in a pseudo-Riemannian manifold lead to conserved
 quantities along geodesics.
@@ -1149,5 +1151,38 @@ this first-order differential equation depends of the precise form of the
 function $\kappa(\lambda)$.
 \end{remark}
 
+\subsection{Killing tensor}
 
+\begin{greybox}
+A \defin{Killing tensor}\index{Killing!tensor} of rank $p\geq 1$ in the
+pseudo-Riemannian manifold $(\M,\w{g})$ is a tensor field $\w{K}$ of type $(0,p)$
+that is fully symmetric and whose covariant derivative is fully antisymmetric:
+\be
+    \nabla_{(\alpha_1} K_{\alpha_2\ldots\alpha_{p+1})} = 0 .
+\ee
+\end{greybox}
+
+\begin{example}
+A trivial example is the metric tensor $\w{g}$ itself.
+If $(\M,\w{g})$ admits a Killing vector $\w{\xi}$, other examples
+are for $p=1$: $\w{K} = \uu{\xi}$ (by Killing equation (\ref{e:neh:Killing_equation})),
+for $p=2$:
+$\w{K} = \uu{\xi} \otimes \uu{\xi}$ (by the Leibnitz rule + the Killing equation),
+for $p=3$: $\w{K} = \uu{\xi} \otimes \uu{\xi} \otimes \uu{\xi}$ (idem), etc.
+\end{example}
+
+\begin{greybox}
+If $\w{K}$ is a Killing tensor of rank $p$ on the
+the pseudo-Riemannian manifold $(\M,\w{g})$, then along any geodesic $\Li$,
+the scalar $\w{K}(\w{v},\ldots,\w{v})$, where $\w{v}=\D\w{x}/\D\lambda$ is any tangent vector field associated with an
+affine parameter $\lambda$ of $\Li$, is constant:
+\be \label{e:geo:Kvv_const}
+    \w{K}(\w{v},\ldots,\w{v}) = \mathrm{const} .
+\ee
+\end{greybox}
+
+\begin{example}
+Since we have already noticed that the metric tensor $\w{g}$ is a Killing tensor,
+the property (\ref{e:geo:vv_const}) appears as a special case of (\ref{e:geo:Kvv_const}).
+\end{example}
 
