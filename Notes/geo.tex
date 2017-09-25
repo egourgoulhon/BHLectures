@@ -1088,7 +1088,7 @@ i.e.
 \ee
 Such a Hamiltonian has been used by Carter \cite{Carte68}
 to study the geodesics in Kerr spacetime,
-discovering the famous \emph{Carter constant}\index{Carter constant}.
+discovering the famous \emph{Carter constant}\index{Carter!constant}.
 \end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1156,19 +1156,21 @@ function $\kappa(\lambda)$.
 \begin{greybox}
 A \defin{Killing tensor}\index{Killing!tensor} of rank $p\geq 1$ in the
 pseudo-Riemannian manifold $(\M,\w{g})$ is a tensor field $\w{K}$ of type $(0,p)$
-that is fully symmetric and whose covariant derivative is fully antisymmetric:
+that is fully symmetric and whose covariant derivative obeys:
 \be
     \nabla_{(\alpha_1} K_{\alpha_2\ldots\alpha_{p+1})} = 0 .
 \ee
 \end{greybox}
 
-\begin{example}
+\begin{example} \label{x:geo:trivial_Killing_tensors}
 A trivial example is the metric tensor $\w{g}$ itself.
 If $(\M,\w{g})$ admits a Killing vector $\w{\xi}$, other examples
-are for $p=1$: $\w{K} = \uu{\xi}$ (by Killing equation (\ref{e:neh:Killing_equation})),
-for $p=2$:
+are, for $p=1$, $\w{K} = \uu{\xi}$ (by Killing equation (\ref{e:neh:Killing_equation})),
+for $p=2$,
 $\w{K} = \uu{\xi} \otimes \uu{\xi}$ (by the Leibnitz rule + the Killing equation),
-for $p=3$: $\w{K} = \uu{\xi} \otimes \uu{\xi} \otimes \uu{\xi}$ (idem), etc.
+for $p=3$, $\w{K} = \uu{\xi} \otimes \uu{\xi} \otimes \uu{\xi}$ (idem), etc.
+A less trivial example is the famous Killing tensor of Kerr spacetime, discussed in
+Chap.~\ref{s:gek}.
 \end{example}
 
 \begin{greybox}
@@ -1180,9 +1182,28 @@ affine parameter $\lambda$ of $\Li$, is constant:
     \w{K}(\w{v},\ldots,\w{v}) = \mathrm{const} .
 \ee
 \end{greybox}
+\begin{proof}
+The variation of $\w{K}(\w{v},\ldots,\w{v})$ along $\Li$ is given
+by
+\bea
+ \frac{\D}{\D\lambda}  \left( \w{K}(\w{v},\ldots,\w{v}) \right) & = &
+    \wnab_{\!\w{v}} \left( \w{K}(\w{v},\ldots,\w{v}) \right) = v^\mu \nabla_\mu (K_{\nu_1\ldots\nu_p} v^{\nu_1}\cdots v^{\nu_p}) \nonumber \\
+            & = & \underbrace{v^\mu \nabla_\mu K_{\nu_1\ldots\nu_p} v^{\nu_1}\cdots v^{\nu_p}}_{0}
+                \nonumber \\
+            & & + K_{\nu_1\ldots\nu_p} \underbrace{v^\mu \nabla_\mu v^{\nu_1}}_{0} \cdots v^{\nu_p}
+                + \cdots
+                + K_{\nu_1\ldots\nu_p}  v^{\nu_1}\cdots \underbrace{v^\mu \nabla_\mu v^{\nu_p}}_{0}  \nonumber \\
+            & = & 0 , \nonumber
+\eea
+where the first zero results from (\ref{e:geo:Kvv_const}), while the
+zeros in the line below arise from the geodesic equation (\ref{e:geo:geod_eq_v}) obeyed by $\w{v}$.
+\end{proof}
 
 \begin{example}
-Since we have already noticed that the metric tensor $\w{g}$ is a Killing tensor,
+Since we have already noticed that the metric tensor $\w{g}$ is a Killing tensor
+(Example~\ref{x:geo:trivial_Killing_tensors}),
 the property (\ref{e:geo:vv_const}) appears as a special case of (\ref{e:geo:Kvv_const}).
+For the Killing tensor $\w{K}$ of Kerr spacetime, the conserved quantity
+$\w{K}(\w{v},\w{v})$ is Carter constant\index{Carter!constant} (cf. Chap.~\ref{s:gek}).
 \end{example}
 
