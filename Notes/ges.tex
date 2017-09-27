@@ -18,18 +18,104 @@ intrepid observers freely falling into the black hole.
 
 Let $\Li$ be a geodesic\footnote{The definition and basic properties of geodesics
 are recalled in Appendix~\ref{s:geo}.} of Schwarzschild spacetime
-$(\M,\w{g})$. We shall assume that $\Li$ is either timelike or null\footnote{As
-shown in Sec.~\ref{s:geo:def}, a geodesic cannot be timelike of some parts
-and null on other ones.}. It therefore can be considered as the worldline
+$(\M,\w{g})$. We shall assume that $\Li$ is causal, i.e. either timelike or null\footnote{As
+shown in Sec.~\ref{s:geo:def}, a geodesic cannot be partly timelike and partly
+null.}. It therefore can be considered as the worldline
 of some particle $\mathscr{P}$, either massive
-(timelike case) or masseless (null case).
-Let us denote by $\w{p}$ the 4-momentum of $\mathscr{P}$ (cf. Sec.~\ref{s:fra:worldlines})
+($\Li$ timelike) or masseless ($\Li$ null).
 
-The Killing vector $\w{\xi}$ associated with the staticity
-of $(\M,\w{g})$, introduced in Sec.~\ref{s:sch:static_spher}, gives birth
-to a conserved quantity along $\Li$, namely the scalar product of $\w{\xi}$
-by $\w{p}$.
+The Schwarzschild spacetime $(\M,\w{g})$ is static and spherically symmetric; the
+Killing vector $\w{\xi}$ associated with the staticity (cf. Sec.~\ref{s:sch:static_spher})
+and the Killing vector $\w{\eta}$ associated with the rotation symmetry along any
+axis, give birth to two conserved quantities along $\Li$:
+\begin{greybox}
+The scalar products
+\begin{subequations}
+\label{e:ges:conserved_quantities}
+\begin{align}
+& \encadre{\veps := - \w{\xi}\cdot \w{p} = - \w{g}(\w{\xi},\w{p}) } \label{e:ges:conserved_energy} \\
+& \encadre{\ell := \w{\eta}\cdot \w{p} = \w{g}(\w{\eta},\w{p}) } , \label{e:ges:conserved_angu_mom}
+\end{align}
+\end{subequations}
+where $\w{p}$ is the 4-momentum of particle
+$\mathscr{P}$ (cf. Sec.~\ref{s:fra:worldlines}),
+are constant along the geodesic $\Li$.
+The scalar $\veps$ is called $\mathscr{P}$'s
+\defin{conserved energy}\index{conserved!energy}\index{energy!conserved --}
+or \defin{energy at infinity}\index{energy!at infinity},
+while $\ell$ is called $\mathscr{P}$'s \defin{conserved angular momentum}\index{conserved!angular momuntum}\index{angular momentum!conserved --}
+or \defin{angular momentum at infinity}\index{angular momentum!at infinity}.
+\end{greybox}
+\begin{proof}
+The 4-momentum $\w{p}$ is a tangent vector associated with an affine parameter
+of $\Li$, i.e. it obeys the geodesic equation (\ref{e:fra:p_geodesic}).
+The constancy of $\veps$ and $\ell$ follow then from the generic property (\ref{e:geo:g_xi_v_const})
+of geodesics in presence of a spacetime symmetry.
+\end{proof}
+In coordinates $(t,r,\th,\ph)$ adapted to the spacetime symmetries,
+i.e. coordinates such that $\w{\xi} = \wpar_t$ and $\w{\eta}=\wpar_\ph$, like the Schwarzschild-Droste
+coordinates or the Eddington-Finkelstein ones, one can rewrite
+(\ref{e:ges:conserved_quantities})
+in terms of the components $p_t = g_{t\mu} \, p^\mu$ and $p_\ph = g_{\ph\mu} \, p^\mu$
+of the 1-form associated to $\w{p}$ by metric duality:
+\begin{subequations}
+\begin{align}
+& \veps = - p_t \\
+& \ell = p_\ph
+\end{align}
+\end{subequations}
+Indeed, in such a coordinate system, $\veps = -g_{\mu\nu} \, \xi^\mu p^\nu = -g_{\mu\nu}\,  \delta^\mu_{\ \, t} \, p^\nu = -g_{t\nu} \, p^\nu = -p_t$
+and $\ell = g_{\mu\nu} \, \eta^\mu p^\nu = g_{\mu\nu}\,  \delta^\mu_{\ \, \ph} \, p^\nu = g_{\ph\nu} \, p^\nu = p_\ph$.
 
+
+It is worth stressing that $\veps$ is not a genuine energy, i.e. it is not
+an energy measured by some observer. Indeed the latter is defined by
+Eq.~(\ref{e:fra:E_obs}), which ressembles Eq.~(\ref{e:ges:conserved_energy})
+but differs from it by the fact that $\w{\xi}$ is not a unit vector in general:
+$\w{\xi}\cdot\w{\xi} \not = -1$. In other words, $\w{\xi}$ cannot in general
+be interpreted as the 4-velocity of some observer, thereby making
+$\veps$, as defined by (\ref{e:ges:conserved_energy}), fail to be a measured
+particle energy. It is only in the asymptotic region, where $\w{\xi}\cdot\w{\xi} = g_{tt}
+\rightarrow -1$, that $\w{\xi}$ is an eligible 4-velocity, hence the name
+\emph{energy at infinity}. Note that this name is commonly used, even in the
+particle $\mathscr{P}$ never visit the asymptotic region.
+Similarly, $\ell$ is not some (component of) genuine angular momentum. Only in the
+asymptotic region do we have
+\be \label{e:ges:ell_asympt}
+    \ell \simeq g_{\ph\ph} \, p^\ph \simeq r^2\sin^2\ph \, p^\ph \simeq r^2\sin^2\theta \, P^\ph
+    \simeq r\sin\th \, P^{(\ph)} ,
+\ee
+where $P^{(\ph)}$ is the azimuthal component of the momentum $\w{P}$ of particle $\mathscr{P}$
+as measured by an asymptotic inertial observer (cf. Sec.~\ref{s:fra:measure}), i.e.
+the component of $\w{P}$ along $\w{e}_{(\ph)}$ in the orthonormal basis $(\w{e}_{(r)}, \w{e}_{(\th)}, \w{e}_{(\ph)})$, with $\w{e}_{(\ph)} = (r\sin\th)^{-1} \wpar_\ph$.
+In view of (\ref{e:ges:ell_asympt}), we may say that $\ell$ is the angular momentum
+about the symmetry axis $\th=0$ that an inertial observer would attribute to
+particle $\mathscr{P}$ if the latter would move close to him.
+
+To be specific, let us describe Schwarzschild spacetime in terms of the
+Schwarzschild-Droste coordinates $(t,r,\th,\ph)$ introduced in Sec.~\ref{s:sch:solving_EE}.
+Without any loss of generality, we may choose these coordinates such that
+at $t=0$, the particle $\mathscr{P}$ is located in the equatorial plane $\th=\pi/2$ and
+the spatial projection of the worldline $\Li$ lies in that plane, i.e. $\w{p}$ has
+no component along $\wpar_\th$:
+\be
+    \w{p} \stackrel{t=0}{=} p^t \wpar_t + p^r \wpar_r + p^\ph \wpar_\ph .
+\ee
+Now, if for $t>0$, the geodesic $\Li$ would depart from $\th=\pi/2$, this
+would constitute some breaking of the spherical symmetry, making a difference
+between the ``Northern'' hemisphere and the ``Southern'' one. Hence $\Li$
+must stay at $\th=\pi/2$, which implies
+\be \label{e:ges:pth_zero}
+    \encadre{p^\th = 0} .
+\ee
+We conclude that
+\begin{greybox}
+A geodesic $\Li$ of Schwarzschild spacetime is necessarily confined to a timelike hypersurface.
+Without any loss of generality, we can choose Schwarzschild-Droste coordinates $(t,r,\th,\ph)$
+such that this hypersurface is the ``equatorial hyperplane'' $\th=\pi/2$.
+Then the component $p^\th$ of the 4-momentum of the particle having $\Li$ as worldline
+vanishes identically [Eq.~(\ref{e:ges:pth_zero})].
+\end{greybox}
 
 
 \begin{hist}

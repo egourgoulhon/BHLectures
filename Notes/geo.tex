@@ -390,9 +390,38 @@ $\Li'\not=\Li$.
 
 \begin{greybox}
 A geodesic $\Li$ is \defin{complete}\index{complete!geodesic}\index{geodesic!complete --}
-iff (i) it is inextendible and (ii) the interval spanned by any of its affine parameters is the whole real line:
+iff the interval spanned by any of its affine parameters is the whole real line:
 $I=\R$. A geodesic that is not complete is called \defin{incomplete}\index{incomplete geodesic}\index{geodesic!incomplete --}.
+\end{greybox}
 
+It is easy to show that
+\begin{greybox}
+Any complete geodesic is inextendible.
+\end{greybox}
+\begin{proof}
+Let $\Li$ be a complete geodesic.
+Let us consider any geodesic $\Li'$ such that $\Li\subset \Li'$.
+Let $\lambda$ and $\lambda'$ be affine parameters of respectively $\Li$
+and $\Li'$. Since $\Li\subset \Li'$, $\lambda'$ is also an affine parameter
+of $\Li$ and we must have, along $\Li$,
+$\lambda' = a \lambda + b$ with $a\not=0$ [Eq.~(\ref{e:geo:affine_transf})].
+Since the range of $\lambda$ is $(-\infty,+\infty)$, for $\Li$ is complete,
+this implies that the range of $\lambda'$ on $\Li$ is $(-\infty,+\infty)$
+as well, which make impossible to have points in $\Li'\setminus\Li$.
+Hence $\Li'=\Li$, i.e. $\Li$ is inextendible.
+\end{proof}
+
+
+On physical grounds, one may consider that any timelike geodesic in a given
+spacetime must be complete. Otherwise, this would mean that there exists a worldline
+$\Li$ of a freely falling observer that ``ends'' at some finite proper time. This
+would be the signature of either (i) the possibility to extend the spacetime into
+a larger one or (ii) the ending of worldline $\Li$ at some (curvature)
+singularity\index{singularity}. A spacetime in which this does not occur
+is called timelike geodesically complete:
+
+
+\begin{greybox}
 The pseudo-Riemannian manifold $(\M,\w{g})$ is said to be
 \defin{geodesically complete}\index{geodesically complete}\index{complete!geodesically -- spacetime}
 iff every inextendible geodesic is complete.
@@ -1113,7 +1142,7 @@ vector field of $(\M,\w{g})$, then along any geodesic $\Li$,
 the $\w{g}$-scalar product of $\w{\xi}$ by any tangent vector field
 $\w{v}=\D\w{x}/\D\lambda$ associated with an
 affine parameter $\lambda$ of $\Li$ is constant:
-\be
+\be \label{e:geo:g_xi_v_const}
     \w{g}(\w{\xi},\w{v}) = \mathrm{const} .
 \ee
 \end{greybox}
