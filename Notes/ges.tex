@@ -14,7 +14,7 @@ geodesics, which are of primordial physical importance, since they represent
 the wordlines of planets or stars orbiting the black hole or of
 intrepid observers freely falling into the black hole.
 
-\section{First integrals of motion}
+\section{Geodesic motion}
 
 Let $\Li$ be a geodesic\footnote{The definition and basic properties of geodesics
 are recalled in Appendix~\ref{s:geo}.} of Schwarzschild spacetime
@@ -23,6 +23,9 @@ shown in Sec.~\ref{s:geo:def}, a geodesic cannot be partly timelike and partly
 null.}. It therefore can be considered as the worldline
 of some particle $\mathscr{P}$, either massive
 ($\Li$ timelike) or masseless ($\Li$ null).
+
+
+\subsection{First integrals of motion}
 
 The Schwarzschild spacetime $(\M,\w{g})$ is static and spherically symmetric; the
 Killing vector $\w{\xi}$ associated with the staticity (cf. Sec.~\ref{s:sch:static_spher})
@@ -121,8 +124,11 @@ Let us denote by $\mu$ the mass of particle $\mathscr{P}$, with possibly
 $\mu=0$ if $\mathscr{P}$ is a photon. The scalar square of the 4-momentum $\w{p}$ is
 then [cf. Eq.~(\ref{e:fra:def_mass})]
 \be \label{e:ges:p2_mu2}
-    \w{p}\cdot\w{p} = - \mu^2 .
+    \w{g}(\w{p},\w{p}) = - \mu^2 .
 \ee
+
+\subsection{Equations to be solved}
+
 Contemplating Eqs.~(\ref{e:ges:conserved_energy}), (\ref{e:ges:conserved_angu_mom}),
 (\ref{e:ges:pth_zero}) and (\ref{e:ges:p2_mu2}), we realize that we have
 four first integral of motions. The problem is then completely integrable.
@@ -149,8 +155,8 @@ Eq.~(\ref{e:ges:conserved_energy}) can be written as
     = \left(1 - \frac{2m}{r} \right) \dot{t} ,
 \]
 hence
-\be
-    \dot{t} = \veps \left(1 - \frac{2m}{r} \right) ^{-1} .
+\be \label{e:ges:dot_t}
+    \encadre{\frac{\D t}{\D \lambda} = \veps \left(1 - \frac{2m}{r} \right) ^{-1} }.
 \ee
 Similarly, Eq.~(\ref{e:ges:conserved_angu_mom}) becomes
 \[
@@ -158,9 +164,86 @@ Similarly, Eq.~(\ref{e:ges:conserved_angu_mom}) becomes
         = r^2 \sin^2\th \, \dot{\ph} .
 \]
 Since $\th=\pi/2$, we get
-\be
-    \dot{\ph} = \frac{\ell}{r^2} .
+\be \label{e:ges:dot_ph}
+    \encadre{\frac{\D\ph}{\D\lambda} = \frac{\ell}{r^2} } .
 \ee
+The last unexploited first integral of motion is Eq.~(\ref{e:ges:p2_mu2}); it
+yields
+\[
+   - \left( 1 - \frac{2m}{r} \right) (\dot{t})^2 +
+   \left( 1 - \frac{2m}{r} \right) ^{-1}  (\dot{r})^2
+   + r^2 (\dot{\th})^2 + r^2 \sin^2\th (\dot{\ph})^2  = - \mu^2 .
+\]
+Using (\ref{e:ges:dot_t}), (\ref{e:ges:dot_ph}), as well as
+$\dot{\th}=0$ and $\th=\pi/2$, we get
+\[
+    -  \veps^2 \left(1 - \frac{2m}{r} \right) ^{-1}
+    +  \left( 1 - \frac{2m}{r} \right) ^{-1}  (\dot{r})^2
+    +  \frac{\ell^2}{r^2} = - \mu^2 ,
+\]
+which can be recast as
+\be \label{e:ges:dot_r_square}
+    \encadre{ \left( \frac{\D r}{\D \lambda} \right) ^2
+        - \frac{2 \mu^2 m}{r} + \frac{\ell^2}{r^2}
+         \left( 1 - \frac{2m}{r} \right) = \veps^2 - \mu^2 } .
+\ee
+To summarize, we may say that the geodesic motion in Schwarzschild spacetime is governed by
+Eqs.~(\ref{e:ges:dot_t}), (\ref{e:ges:dot_ph}) and (\ref{e:ges:dot_r_square}),
+where $r=r(\lambda)$ and $\mu$, $\veps$ and $\ell$ are constants.
+This constitutes a system of 3 differential equations for the 3 unknown
+functions $t(\lambda)$, $r(\lambda)$ and $\ph(\lambda)$.
+We observe
+that Eq.~(\ref{e:ges:dot_r_square}) is decoupled from the other two equations.
+The task is then to first solve this equation for $r(\lambda)$ and to inject
+the solution into Eqs.~(\ref{e:ges:dot_t}) and (\ref{e:ges:dot_ph}), which
+can then be integrated separately.
+In what follows, we discuss separately the resolution of
+Eq.~(\ref{e:ges:dot_r_square}) for timelike geodesics and for null ones.
+
+\begin{remark}
+We have derived the system of Eqs.~(\ref{e:ges:dot_t}), (\ref{e:ges:dot_ph}) and (\ref{e:ges:dot_r_square}) without invoking explicitly the
+famous \emph{geodesic equation}\index{geodesic!equation}\index{equation!geodesic --}, i.e.
+Eq.~(\ref{e:geo:eq_geod}) in Appendix~\ref{s:geo}.
+This is because we had enough
+first integrals of that second-order differential equation to completely reduce it to
+a system of first order equations.
+\end{remark}
+
+\section{Timelike orbits}
+
+When the geodesic $\Li$ is timelike, it is natural to use the proper time $\tau$
+as an affine parameter along it, instead to the parameter $\lambda$ associated
+with the 4-momentum $\w{p}$. Since the tangent vector associated with $\tau$
+is the 4-velocity $\w{u}$ (cf. Sec.~\ref{s:fra:massive_part}) and $\w{p}$ and $\w{u}$ are related by
+Eq.~(\ref{e:fra:p_m_u}): $\w{p} = \mu \, \w{u}$, we get
+$\D\w{x}/\D\lambda = \mu \, \D\w{x}/\D\tau$, from which we infer the relation
+between $\tau$ and $\lambda$:
+\be
+    \tau = \mu \lambda ,
+\ee
+which of course a special case of the generic relation (\ref{e:geo:affine_transf})
+between two affine parameters of the same geodesic.
+Equation~(\ref{e:ges:dot_r_square}) becomes then
+\be \label{e:ges:1d_motion_timelike}
+    \encadre{ \frac{1}{2} \left( \frac{\D r}{\D \tau} \right) ^2
+        + V_{\rm eff}(r) = \frac{\bar{\veps}^2 - 1}{2} } ,
+\ee
+with
+\be
+     \encadre{V_{\rm eff}(r) := - \frac{m}{r} + \frac{\bar{\ell}^2}{2 r^2}
+     - \frac{\bar{\ell}^2 m}{r^3} }
+\ee
+and
+\be
+   \bar{\veps} := \frac{\veps}{\mu} \qquad\mbox{and}\qquad
+   \bar{\ell} :=  \frac{\ell}{\mu} .
+\ee
+We notice that Eq.~(\ref{e:ges:1d_motion_timelike}) takes the shape of
+the 1-dimensional motion of a non-relativist particle in the potential
+$V_{\rm eff}$.
+
+\section{Null geodesics}
+
 
 \begin{hist}
 Synge \cite{Synge66}, Bardeen \cite{Barde73}
