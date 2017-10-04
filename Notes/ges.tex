@@ -71,7 +71,7 @@ and $\ell = g_{\mu\nu} \, \eta^\mu p^\nu = g_{\mu\nu}\,  \delta^\mu_{\ \, \ph} \
 It is worth stressing that $\veps$ is not a genuine energy, i.e. it is not
 an energy measured by some observer. Indeed the latter is defined by
 Eq.~(\ref{e:fra:E_obs}), which ressembles Eq.~(\ref{e:ges:conserved_energy})
-but differs from it by the fact that $\w{\xi}$ is not a unit vector in general:
+but differs from it since $\w{\xi}$ is not a unit vector in general:
 $\w{\xi}\cdot\w{\xi} \not = -1$. In other words, $\w{\xi}$ cannot in general
 be interpreted as the 4-velocity of some observer, thereby making
 $\veps$, as defined by (\ref{e:ges:conserved_energy}), fail to be a measured
@@ -125,7 +125,42 @@ then [cf. Eq.~(\ref{e:fra:def_mass})]
 \ee
 Contemplating Eqs.~(\ref{e:ges:conserved_energy}), (\ref{e:ges:conserved_angu_mom}),
 (\ref{e:ges:pth_zero}) and (\ref{e:ges:p2_mu2}), we realize that we have
-four first integral of motions.
+four first integral of motions. The problem is then completely integrable.
+More specifically, let $\lambda$ be the affine parameter along the geodesic
+$\Li$ associated with the 4-momentum $\w{p}$ (cf. Eq.~(\ref{e:geo:v_dxdlambda}):
+\be
+    \w{p} = \frac{\D\w{x}}{\D\lambda} .
+\ee
+In terms of the components with respect to Schwarzschild-Droste coordinates,
+this yields
+\be
+    \dot{t} := \frac{\D t}{\D\lambda} = p^t,\qquad
+    \dot{r} := \frac{\D r}{\D\lambda} = p^r,\qquad
+    \dot{\th} := \frac{\D \th}{\D\lambda} = p^\th,\qquad
+    \dot{\ph} := \frac{\D \ph}{\D\lambda} = p^\ph .
+\ee
+In the present case, where $\th(\lambda)=\pi/2$, we have of course $\dot{\th}=0$,
+in agreement with Eq.~(\ref{e:ges:pth_zero}).
+Given the components (\ref{e:sch:Schwarz_metric_SD}) of Schwarzschild metric
+with respect to the Schwarzschild-Droste coordinates,
+Eq.~(\ref{e:ges:conserved_energy}) can be written as
+\[
+    \veps = - g_{t\mu} p^\mu = - g_{tt} p^t = - g_{tt} \dot{t}
+    = \left(1 - \frac{2m}{r} \right) \dot{t} ,
+\]
+hence
+\be
+    \dot{t} = \veps \left(1 - \frac{2m}{r} \right) ^{-1} .
+\ee
+Similarly, Eq.~(\ref{e:ges:conserved_angu_mom}) becomes
+\[
+    \ell = g_{\ph\mu} p^\mu = g_{\ph\ph} p^\ph  = g_{\ph\ph} \dot{\ph}
+        = r^2 \sin^2\th \, \dot{\ph} .
+\]
+Since $\th=\pi/2$, we get
+\be
+    \dot{\ph} = \frac{\ell}{r^2} .
+\ee
 
 \begin{hist}
 Synge \cite{Synge66}, Bardeen \cite{Barde73}

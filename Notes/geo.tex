@@ -1125,7 +1125,7 @@ discovering the famous \emph{Carter constant}\index{Carter!constant}.
 
 \section{Geodesics and symmetries} \label{s:geo:sym}
 
-\subsection{Killing vector}
+\subsection{Geodesics in presence of a Killing vector}
 
 As a reminiscence of Noether's theorem\index{Noether's theorem},
 symmetries in a pseudo-Riemannian manifold lead to conserved
@@ -1156,10 +1156,10 @@ according to Eq.~(\ref{e:bas:def_vector}),
         & = & v^\sigma \nabla_\sigma ( g_{\mu\nu} \xi^\mu v^\nu ) =
         v^\sigma \nabla_\sigma (\xi_\nu v^\nu ) = \nabla_\sigma \xi_\nu \, v^\sigma  v^\nu
             + \xi_\nu v^\sigma \nabla_\sigma v^\nu \nonumber \\
-        & = & \frac{1}{2} (\underbrace{\nabla_\sigma \xi_\nu + \nabla_\mu \xi_\sigma}_{0}) v^\sigma  v^\nu
+        & = & \frac{1}{2} (\underbrace{\nabla_\sigma \xi_\nu + \nabla_\nu \xi_\sigma}_{0}) v^\sigma  v^\nu
             +  \xi_\nu \underbrace{v^\sigma \nabla_\sigma v^\nu}_{0}  = 0, \label{e:geo:dem_conservation}
 \eea
-where the first zero holds because $\w{\xi}$ obeys to the Killing equation
+where the first zero holds because $\w{\xi}$ obeys the Killing equation
 (\ref{e:neh:Killing_equation}) and the second one holds thanks to
 Eq.~(\ref{e:geo:geod_eq_v}), which expresses that $\Li$ is a geodesic
 and $\w{v}$ the tangent vector associated with some affine parameter.
@@ -1180,27 +1180,38 @@ this first-order differential equation depends of the precise form of the
 function $\kappa(\lambda)$.
 \end{remark}
 
-\subsection{Killing tensor}
+\subsection{Geodesics in presence of a Killing tensor}
+
+While the concept of Killing vector is by definition tight to a spacetime
+symmetry (isometry), there is a generalization of the Killing equation
+(\ref{e:neh:Killing_equation}) to tensors of higher ranks, which is not directly related to any symmetry of the metric tensor. It is
+however interesting since it leads to conserved quantities along geodesics.
 
 \begin{greybox}
 A \defin{Killing tensor}\index{Killing!tensor} of rank $p\geq 1$ in the
 pseudo-Riemannian manifold $(\M,\w{g})$ is a tensor field $\w{K}$ of type $(0,p)$
-that is fully symmetric and whose covariant derivative obeys:
-\be
+that is fully symmetric and whose covariant derivative obeys
+\be \label{e:geo:def_Killing_tensor}
     \nabla_{(\alpha_1} K_{\alpha_2\ldots\alpha_{p+1})} = 0 .
 \ee
 \end{greybox}
 
 \begin{example} \label{x:geo:trivial_Killing_tensors}
 A trivial example is the metric tensor $\w{g}$ itself.
-If $(\M,\w{g})$ admits a Killing vector $\w{\xi}$, other examples
-are, for $p=1$, $\w{K} = \uu{\xi}$ (by Killing equation (\ref{e:neh:Killing_equation})),
-for $p=2$,
-$\w{K} = \uu{\xi} \otimes \uu{\xi}$ (by the Leibnitz rule + the Killing equation),
-for $p=3$, $\w{K} = \uu{\xi} \otimes \uu{\xi} \otimes \uu{\xi}$ (idem), etc.
-A less trivial example is the famous Killing tensor of Kerr spacetime, discussed in
-Chap.~\ref{s:gek}.
+If $(\M,\w{g})$ admits a Killing vector $\w{\xi}$,
+another example is $\w{K} = \uu{\xi}$ (the 1-form associated to $\w{\xi}$
+by metric duality), since for $p=1$, Eq.~(\ref{e:geo:def_Killing_tensor})
+reduces to the Killing equation (\ref{e:neh:Killing_equation}).
+An example for $p=2$ is then
+$\w{K} = \uu{\xi} \otimes \uu{\xi}$ (by the Leibnitz rule + the Killing equation).
+Similarly, $\w{K} = \uu{\xi} \otimes \uu{\xi} \otimes \uu{\xi}$
+is a Killing tensor with $p=3$, etc.
+A less trivial example is Killing tensor of Kerr spacetime found by Walker and Penrose~\cite{WalkeP70} and discussed in Chap.~\ref{s:gek}.
 \end{example}
+
+If a spacetime is endowed with a Killing tensor that is not trivial, i.e.
+neither formed from $\w{g}$ nor any Killing vector as in the examples above, one often says that this spacetime has some \defin{hidden symmetry}\index{hidden symmetry}\index{symmetry!hidden --}. This is because, as Killing vectors,
+Killing tensors give birth to conserved quantities along geodesics:
 
 \begin{greybox}
 If $\w{K}$ is a Killing tensor of rank $p$ on the
@@ -1224,7 +1235,7 @@ by
                 + K_{\nu_1\ldots\nu_p}  v^{\nu_1}\cdots \underbrace{v^\mu \nabla_\mu v^{\nu_p}}_{0}  \nonumber \\
             & = & 0 , \nonumber
 \eea
-where the first zero results from (\ref{e:geo:Kvv_const}), while the
+where the first zero results from (\ref{e:geo:def_Killing_tensor}), while the
 zeros in the line below arise from the geodesic equation (\ref{e:geo:geod_eq_v}) obeyed by $\w{v}$.
 \end{proof}
 
@@ -1232,7 +1243,7 @@ zeros in the line below arise from the geodesic equation (\ref{e:geo:geod_eq_v})
 Since we have already noticed that the metric tensor $\w{g}$ is a Killing tensor
 (Example~\ref{x:geo:trivial_Killing_tensors}),
 the property (\ref{e:geo:vv_const}) appears as a special case of (\ref{e:geo:Kvv_const}).
-For the Killing tensor $\w{K}$ of Kerr spacetime, the conserved quantity
-$\w{K}(\w{v},\w{v})$ is Carter constant\index{Carter!constant} (cf. Chap.~\ref{s:gek}).
+For the Walker-Penrose Killing tensor $\w{K}$ of Kerr spacetime, the conserved quantity
+$\w{K}(\w{v},\w{v})$ leads to the Carter constant\index{Carter!constant} (cf. Chap.~\ref{s:gek}).
 \end{example}
 
