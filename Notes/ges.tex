@@ -211,6 +211,8 @@ a system of first order equations.
 
 \section{Timelike orbits}
 
+\subsection{Effective potential}
+
 When the geodesic $\Li$ is timelike, it is natural to use the proper time $\tau$
 as an affine parameter along it, instead to the parameter $\lambda$ associated
 with the 4-momentum $\w{p}$. Since the tangent vector associated with $\tau$
@@ -240,7 +242,58 @@ and
 \ee
 We notice that Eq.~(\ref{e:ges:1d_motion_timelike}) takes the shape of
 the 1-dimensional motion of a non-relativist particle in the potential
-$V_{\rm eff}$.
+$V_{\rm eff}$, the term $1/2 \, (\D r/\D\tau)^2$ being interpreted as
+the kinetic energy per unit mass, $V_{\rm eff}(r)$ as the potential
+energy per unit mass and the constant right-hand side $(\bar{\veps}^2-1)/2$ as the total
+mechanical energy per unit mass.
+
+The profile  of $V_{\rm eff}(r)$ for selected values of $\bar{\ell}$ is
+plotted in Fig.~\ref{f:ges:eff_pot_timelike}. Its extrema are given by
+$\D V_{\rm eff}/\D r=0$, which is equivalent to
+\[
+    m r^2 - \bar{\ell}^2 r + 3 \bar{\ell}^2 m = 0 .
+\]
+This quadratic equation admits real roots iff $|\bar{\ell}| \geq \bar{\ell}_{\rm crit}$
+with
+\be
+   \encadre{ \bar{\ell}_{\rm crit} = 2\sqrt{3} m }.
+\ee
+For $|\bar{\ell}| \geq \bar{\ell}_{\rm crit}$, the two roots are
+\be
+    r_{\rm max} = \frac{\bar{\ell}}{2m} \left( \bar{\ell} -
+    \sqrt{\bar{\ell}^2 - \bar{\ell}_{\rm crit}^2} \right)
+    \qquad\mbox{and}\qquad
+    r_{\rm min} = \frac{\bar{\ell}}{2m} \left( \bar{\ell} +
+    \sqrt{\bar{\ell}^2 - \bar{\ell}_{\rm crit}^2} \right) ,
+\ee
+corresponding respectively to a maximum of $V_{\rm eff}$ and a minimum
+of $V_{\rm eff}$, hence the indices ``max'' and ``min''. Note that
+$r_{\rm max} \leq r_{\rm min}$.
+In the marginal case $|\bar{\ell}| = \bar{\ell}_{\rm crit}$, the two roots
+coincide and correspond to an inflection point of $V_{\rm eff}$ (the circle
+point in Fig.~\ref{f:ges:eff_pot_timelike}).
+
+For $|\bar{\ell}| < \bar{\ell}_{\rm crit}$, there is no extremum and
+$V_{\rm eff}$ is a scritly increasing function of $r$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot_timelike.pdf}}
+\caption[]{\label{f:ges:eff_pot_timelike} \footnotesize
+Effective potential ruling the radial motion along a geodesic in
+Schwarzschild spacetime.}
+\end{figure}
+
+\subsection{Radial trajectories}
+
+The radial geodesics correspond to a vanishing conserved angular momentum:
+$\ell = 0$. Indeed, setting $\ell=0$ in Eq.~(\ref{e:ges:dot_ph}) yields
+$\ph = \mathrm{const}$, which defines a pure radial trajectory in the
+plane $\th=\pi/2$.
+
+
+\subsection{Circular orbits}
+
+
 
 \section{Null geodesics}
 
