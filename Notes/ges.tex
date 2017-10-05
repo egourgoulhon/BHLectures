@@ -231,7 +231,7 @@ Equation~(\ref{e:ges:dot_r_square}) becomes then
         + V_{\rm eff}(r) = \frac{\bar{\veps}^2 - 1}{2} } ,
 \ee
 with
-\be
+\be \label{e:ges:V_eff_timelike}
      \encadre{V_{\rm eff}(r) := - \frac{m}{r} + \frac{\bar{\ell}^2}{2 r^2}
      - \frac{\bar{\ell}^2 m}{r^3} }
 \ee
@@ -248,7 +248,8 @@ energy per unit mass and the constant right-hand side $(\bar{\veps}^2-1)/2$ as t
 mechanical energy per unit mass.
 
 The profile  of $V_{\rm eff}(r)$ for selected values of $\bar{\ell}$ is
-plotted in Fig.~\ref{f:ges:eff_pot_timelike}. Its extrema are given by
+plotted in Figs.~\ref{f:ges:eff_pot} and \ref{f:ges:eff_pot_zoom} .
+Its extrema are given by
 $\D V_{\rm eff}/\D r=0$, which is equivalent to
 \[
     m r^2 - \bar{\ell}^2 r + 3 \bar{\ell}^2 m = 0 .
@@ -277,10 +278,17 @@ For $|\bar{\ell}| < \bar{\ell}_{\rm crit}$, there is no extremum and
 $V_{\rm eff}$ is a scritly increasing function of $r$.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot_timelike.pdf}}
-\caption[]{\label{f:ges:eff_pot_timelike} \footnotesize
-Effective potential ruling the radial motion along a geodesic in
-Schwarzschild spacetime.}
+\centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot.pdf}}
+\caption[]{\label{f:ges:eff_pot} \footnotesize
+Effective potential ruling the radial motion along a timelike geodesic in
+Schwarzschild spacetime. The vertical dashed line marks $r=2m$, i.e. the
+location of the event horizon.}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot_zoom.pdf}}
+\caption[]{\label{f:ges:eff_pot_zoom} \footnotesize
+Same as Fig.~\ref{f:ges:eff_pot}, but with a zoom in the vertical direction.}
 \end{figure}
 
 \subsection{Radial trajectories}
@@ -289,6 +297,13 @@ The radial geodesics correspond to a vanishing conserved angular momentum:
 $\ell = 0$. Indeed, setting $\ell=0$ in Eq.~(\ref{e:ges:dot_ph}) yields
 $\ph = \mathrm{const}$, which defines a pure radial trajectory in the
 plane $\th=\pi/2$.
+The effective potential (\ref{e:ges:V_eff_timelike}) reduces then
+to $V_{\rm eff}(r) = - m/r$, so that the equation of radial motion
+(\ref{e:ges:1d_motion_timelike}) becomes
+\be
+    \frac{1}{2} \left( \frac{\D r}{\D \tau} \right) ^2
+        - \frac{m}{r} = \frac{\bar{\veps}^2 - 1}{2} .
+\ee
 
 
 \subsection{Circular orbits}
