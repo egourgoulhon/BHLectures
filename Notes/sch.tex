@@ -429,8 +429,9 @@ Despite their name, geodesics of the outgoing family are actually
 \emph{ingoing} in the region $r<2m$, in the sense that
 $r$ is decreasing along them when moving towards the future. Indeed,
 as noticed in Sec.~\ref{s:sch:SD_domain},
-for $r<2m$, $r$ is the timelike coordinate of the system $(t,r,\th,\ph)$,
-with $-\wpar_r$ oriented towards the future (cf. the ``tilted'' light cone
+for $r<2m$, $r$ is a timelike coordinate in the system $(t,r,\th,\ph)$,
+i.e. $\wpar_r$ is a timelike vector and we shall see in Sec.~\ref{s:sch:time_orientation}
+that $-\wpar_r$ is oriented towards the future (cf. the ``tilted'' light cone
 in Fig.~\ref{f:sch:rad_null_geod}).
 \end{remark}
 
@@ -784,13 +785,20 @@ where the constant $u\in \R$ labels the geodesic.
 The radial null geodesics are depicted in Fig.~\ref{f:sch:rad_null_geod_EF}
 in terms of the IEF coordinates.
 
-\subsection{Time orientation of the spacetime manifold}
+\subsection{Time orientation of the spacetime manifold} \label{s:sch:time_orientation}
 
-In view of (\ref{e:sch:ingoing_null_geod_EF}), we may consider $\lambda=-r$
-as a parameter along the ingoing radial null geodesics. The corresponding
-tangent vector $\w{k}$ has components
+We have seen in Sec.~\ref{s:sch:rad_null_geod} that $r$ is an affine parameter
+along the radial null geodesics. We may then choose $\lambda=-r$ as an
+affine parameter along the ingoing ones; according to
+Eq.~(\ref{e:sch:ingoing_null_geod_EF}), the equation of the ingoing radial null geodesics
+becomes then
 \[
-    {\tilde k}^\alpha = - \frac{\D {\tilde x}^\alpha}{\D r}
+    \ti(\lambda) = \lambda + v, \quad r(\lambda) = - \lambda, \quad
+    \th(\lambda) = \th_0,\quad \ph(\lambda) = \ph_0 .
+\]
+The tangent vector $\w{k}$ associated with this parametrization has components
+\[
+    {\tilde k}^\alpha = \frac{\D {\tilde x}^\alpha}{\D \lambda}
         = (1, -1, 0, 0)
 \]
 with respect to the IEF coordinates, i.e.
@@ -798,28 +806,42 @@ with respect to the IEF coordinates, i.e.
     \w{k} = \wpar_\ti - \wpar_{\tilde r} .
 \ee
 $\w{k}$ is a global nonzero null vector field on the manifold
-$\M_{\rm IEF}$. It may therefore be used to set the time orientation\index{time-orientable}\index{orientable!time --}
-of the spacetime $(\M_{\rm IEF}, \w{g})$ (cf. Sec.~\ref{s:fra:spacetime})
-by demanding that $\w{k}$ is future
-directed everywhere. This induces a time orientation of the subdomains
-$\M_{\rm I}$ and $\M_{\rm II}$.
+$\M_{\rm IEF}$. It may therefore be used to set the time orientation\index{time-orientable}\index{orientable!time --} of the spacetime manifold
+(cf. Sec.~\ref{s:fra:spacetime}). Since for $r\rightarrow+\infty$, $\w{k}$
+clearly points towards increasing $\ti$, we declare that $\w{k}$ defines
+the \emph{future} direction:
+\begin{greybox}
+The time orientation of the spacetime $(\M_{\rm IEF}, \w{g})$ is such
+that the null vector $\w{k}$ defined by Eq.~(\ref{e:sch:null_vector_k})
+is everywhere future-directed.
+\end{greybox}
 
-In particular, since
-we have noticed in Sec.~\ref{s:sch:SD_domain} that the coordinate vector
-$\wpar_r$ of Schwarzschild-Droste coordinates is timelike in $\M_{\rm II}$,
-we may form the scalar product $\w{k}\cdot\wpar_r$ to get its time orientation
-[cf. Eq.~(\ref{e:fra:time_orientation})]. In view of
+The above choice induces a time orientation of the subdomains
+$\M_{\rm I}$ and $\M_{\rm II}$ of $\M_{\rm IEF}$.
+In Sec.~\ref{s:sch:SD_domain},
+we have noticed that the coordinate vector
+$\wpar_r$ of Schwarzschild-Droste coordinates is timelike in $\M_{\rm II}$;
+according to Eq.~(\ref{e:fra:time_orientation}),
+we may then form the scalar product $\w{k}\cdot\wpar_r$ to get its time
+orientation. Given
 Eqs.~(\ref{e:sch:wpar_tilde_r}) and (\ref{e:sch:wpar_tilde_t}), we have
 \[
     \wpar_r = - \left( 1 - \frac{2m}{r} \right) ^{-1} \wpar_{\ti}
         + \wpar_{\tilde r} .
 \]
-Via (\ref{e:sch:null_vector_k}) and (\ref{e:sch:Schwarz_metric_EF}), we deduce immediately that
+Via (\ref{e:sch:null_vector_k}) and (\ref{e:sch:Schwarz_metric_EF}), we deduce
+then that
 \[
-    \w{k}\cdot\wpar_r = \frac{r}{2m} \left( 1 - \frac{2m}{r} \right) ^{-1}
+    \w{k}\cdot\wpar_r = \frac{r}{2m} \left( 1 - \frac{r}{2m} \right) ^{-1}
     > 0 \quad\mbox{in} \ \M_{\rm II} .
 \]
-We conclude that $\wpar_r$ is a past-directed timelike vector in $\M_{\rm II}$.
+In view of Eq.~(\ref{e:fra:time_orientation}), this means that
+$\w{k}$ and $\wpar_r$ do not share the same time orientation.
+Since $\w{k}$ sets the future direction, we conclude:
+\begin{greybox}
+In region $\M_{\rm II}$, the vector $\wpar_r$ of Schwarzschild-Droste coordinates
+is a past-directed timelike vector.
+\end{greybox}
 This explains why the future null cones are along $-\wpar_r$
 in Fig.~\ref{f:sch:rad_null_geod} for $r<2m$.
 
