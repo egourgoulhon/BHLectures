@@ -288,7 +288,9 @@ location of the event horizon.}
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot_zoom.pdf}}
 \caption[]{\label{f:ges:eff_pot_zoom} \footnotesize
-Same as Fig.~\ref{f:ges:eff_pot}, but with a zoom in the vertical direction.}
+Same as Fig.~\ref{f:ges:eff_pot}, but with a zoom in along the $y$-axis
+and a zoom out along the $x$-axis. The dots mark the mimima of
+$V_{\rm eff}$, locating stable circular orbits.}
 \end{figure}
 
 \subsection{Radial trajectories}
@@ -300,10 +302,42 @@ plane $\th=\pi/2$.
 The effective potential (\ref{e:ges:V_eff_timelike}) reduces then
 to $V_{\rm eff}(r) = - m/r$, so that the equation of radial motion
 (\ref{e:ges:1d_motion_timelike}) becomes
-\be
+\be \label{e:ges:radial_motion}
     \frac{1}{2} \left( \frac{\D r}{\D \tau} \right) ^2
         - \frac{m}{r} = \frac{\bar{\veps}^2 - 1}{2} .
 \ee
+As it is well known, the solution of this equation
+depends on the sign of the ``mechanical energy'' in the right-hand
+side, i.e. of the position of $\bar{\veps}$ with respect to $1$, or
+equivalently of that of the conserved energy $\veps$ with respect
+to the particle's mass $\mu$:
+\begin{itemize}
+\item if $\veps>\mu$, the solution
+is given in parametrized form (parameter $\eta$) by
+\be \label{e:ges:sol_E_pos}
+    \left\{ \begin{array}{l}
+    \displaystyle\tau = \frac{m}{(\bar{\veps}^2 - 1)^{3/2}} \left( \sinh\eta - \eta \right)
+        + \tau_0 \\[2ex]
+    \displaystyle r = \frac{m}{\bar{\veps}^2 - 1} \left( \cosh\eta - 1 \right),
+    \end{array} \right.
+\ee
+\item if $\veps=\mu$, the solution is
+\be \label{e:ge:sol_E_zero}
+    r(\tau) =  \left( \frac{9 m}{2} (\tau -\tau_0)^2 \right) ^{1/3} ,
+\ee
+\item if $\veps<\mu$, the solution
+is given in parametrized form (parameter $\eta$) by
+\be \label{e:ges:sol_E_neg}
+    \left\{ \begin{array}{l}
+    \displaystyle\tau =  \frac{m}{|\bar{\veps}^2 - 1| ^{3/2}} \left( \eta + \sin\eta \right)
+    + \tau_0  \\[2ex]
+    \displaystyle r = \frac{m}{|\bar{\veps}^2 - 1|} \left( 1 + \cos\eta \right),
+    \end{array} \right.
+\ee
+\end{itemize}
+In the above formulas, $\tau_0$ is a constant; for $\veps\geq \mu$,
+it sets the value of $\tau$ for which $r\rightarrow 0$, while
+for $\veps<\mu$, it sets the value of $\tau$ at which $r$ takes its maximal value.
 
 
 \subsection{Circular orbits}
