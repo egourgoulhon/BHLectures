@@ -95,6 +95,34 @@ In view of (\ref{e:ges:ell_asympt}), we may say that $\ell$ is the angular momen
 about the symmetry axis $\th=0$ that an inertial observer would attribute to
 particle $\mathscr{P}$ if the latter would move close to him.
 
+From its very definition, Eq.~(\ref{e:ges:conserved_energy}), $\veps$ has to be
+a positive
+quantity as soon as the geodesic $\Li$ has some part in $\M_{\rm I}$, i.e.
+some part with $r>2m$:
+\begin{greybox}
+\be
+    \Li \cap \M_{\rm I} \not= \varnothing \quad \Longrightarrow \quad \veps > 0 .
+\ee
+\end{greybox}
+\begin{proof}
+In $\M_{\rm I}$, the Killing vector $\w{\xi}$ is timelike and future-directed.
+The 4-momentum $\w{p}$ is either timelike or null and always future-directed.
+One has then necessarily $\w{\xi}\cdot\w{p} < 0$; hence Eq.~(\ref{e:ges:conserved_energy})
+implies $\veps > 0$ in $\M_{\rm I}$. Since $\veps$ is constant along $\Li$, it
+follows that $\veps > 0$ everywhere.
+\end{proof}
+\begin{remark}
+If the geodesic $\Li$ is confined to $\M_{\rm II}$, i.e. to the black hole
+region (cf. Sec.~\ref{s:sch:BH}),
+where $\w{\xi}$ is spacelike (cf. Sec.~\ref{s:sch:SD_domain}),
+it is possible to have $\veps \leq 0$, since the
+scalar product of $\w{p}$ with a spacelike vector can take any value.
+\end{remark}
+\begin{remark}
+Since the Killing vector $\w{\eta}$ is always spacelike, there is no constraint
+on the sign of $\ell$.
+\end{remark}
+
 To be specific, let us describe Schwarzschild spacetime in terms of the
 Schwarzschild-Droste coordinates $(t,r,\th,\ph)$ introduced in Sec.~\ref{s:sch:solving_EE}.
 Without any loss of generality, we may choose these coordinates such that
@@ -295,6 +323,18 @@ and a zoom out along the $x$-axis. The dots mark the mimima of
 $V_{\rm eff}$, locating stable circular orbits.}
 \end{figure}
 
+To get a full solution in terms of the Schwarzschild-Droste coordinates,
+once Eq.~(\ref{e:ges:1d_motion_timelike}) is solved for $r(\tau)$,
+one has still to solve Eqs.~(\ref{e:ges:dot_t}) and (\ref{e:ges:dot_ph}),
+which can be rewritten in terms of the proper time $\tau$ as
+\be
+    \frac{\D t}{\D \tau} = \bar{\veps} \left(1 - \frac{2m}{r(\tau)} \right) ^{-1} ,
+\ee
+\be
+    \frac{\D\ph}{\D\tau} = \frac{\bar{\ell}}{r(\tau)^2}  .
+\ee
+
+
 \subsection{Radial free fall}
 
 The radial geodesics correspond to a vanishing conserved angular momentum:
@@ -341,6 +381,18 @@ In the above formulas, $\tau_0$ is a constant; for $\veps\geq \mu$,
 it sets the value of $\tau$ for which $r\rightarrow 0$, while
 for $\veps<\mu$, it sets the value of $\tau$ at which $r$ takes its maximal value.
 
+Let consider the concrete case of a radial free-fall from rest, starting at some
+position $r=r_0$ at $\tau=0$. Assuming a departure from rest
+means $\D r/\D\tau = 0$ at $\tau=0$. The equation of radial motion
+(\ref{e:ges:radial_motion}) leads then to $-m/r_0 = (\bar{\veps}^2 - 1)/2$,
+or equivalently
+\be
+         \bar{\veps}^2 = 1 - \frac{2m}{r_0} .
+\ee
+The right-hand side of this equation must be non-negative. This implies
+$r_0\geq 2m$. We recover the fact that one cannot be momentarily at rest
+(in terms of $r$) for $r_0<2m$: $r$ has to decrease along any future-directed
+worldline (cf. Sec.~\ref{s:sch:time_orientation}).
 
 \subsection{Circular orbits}
 

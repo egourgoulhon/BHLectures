@@ -62,6 +62,8 @@ implies that from each point $p\in\M$, there are privileged directions,
 which form the so-called \defin{null cones}\index{null!cone}
 or \defin{light cones}\index{light!cone} (cf. Fig.~\ref{f:fra:lorentz_manifold} ).
 The null cones constitute an absolute structure of spacetime, independent from any observer.
+A vector at a point $p\in\M$ that is either timelike or null is said to be \defin{causal}\index{causal!vector}.
+It lies necessarily inside the null cone at $p$ (timelike vector) or along it (null vector).
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{fra_lorentz_manifold.pdf}}
@@ -75,18 +77,68 @@ defines priviledged directions: those lying in the null cone at $p$.}
 Unless explicitly specified, we assume that $\M$ is an orientable manifold (cf. Sec.~\ref{s:bas:Levi-Civita_tensor})
 and that $(\M, \w{g})$ is time-orientable. The qualifier \defin{time-orientable}\index{time-orientable}\index{orientable!time --} means that it is possible to divide
 \emph{continuously}
-all non-spacelike vectors into two classes, which are called
+all causal vectors (i.e. timelike or null) into two classes, which are called
 \defin{future-directed}\index{future-directed} and \defin{past-directed}\index{past-directed}.
-More precisely, at each tangent space $T_p\M$, let us split the non-spacelike
-(i.e. timelike or null) vectors
-in two classes, based on the equivalence relation
-\be \label{e:fra:time_orientation}
-  \w{u}\sim \w{v} \iff \w{g}(\w{u},\w{v}) \leq 0 .
-\ee
-In loose terms, $\w{u}\sim \w{v}$ iff $\w{u}$ and $\w{v}$ are located inside
-or onto the same sheet of the null cone at $p$.
+More precisely, at each tangent space $T_p\M$, let us split the causal
+vectors in two classes by declaring that two causal
+vectors belong to the same class iff they are located inside
+or onto the same sheet of the null cone at $p$. This defines an equivalence
+relation on causal vectors at $p$, with two equivalence classes.
 $(\M,\w{g})$ is then time-orientable iff some choice of an equivalence class
 can be performed continuously over the entire manifold $\M$.
+Once such a choice is made, thereby defining the future direction, one says
+obviously that $(\M,\w{g})$ is \defin{time-oriented}\index{time-oriented}\index{oriented!time --}.
+
+As a characterization of future-oriented causal vectors,
+we shall use quite often the following lemma:\\[1ex]
+
+\noindent\textbf{Lemma (scalar product of causal vectors)}
+\begin{greybox}
+Let $(\M,\w{g})$ be a time-oriented spacetime and $\w{u}$ and $\w{v}$
+be two timelike or null vectors at some point $p\in\M$.
+If we assume that $\w{u}$ is future-directed, then
+\begin{subequations}
+\begin{align}
+& \w{g}(\w{u},\w{v}) < 0 \iff \w{v} \ \mbox{is future-directed} \label{e:fra:scalar_caus1} \\
+& \w{g}(\w{u},\w{v}) = 0 \iff \mbox{$\w{u}$ and $\w{v}$ are null and collinear} \label{e:fra:scalar_caus2}\\
+& \w{g}(\w{u},\w{v}) > 0 \iff \w{v} \ \mbox{is past-directed} . \label{e:fra:scalar_caus3}
+\end{align}
+\end{subequations}
+\end{greybox}
+\begin{proof}
+Let us first consider that $\w{u}$ is timelike. Without any loss
+of generality, we may assume that $\w{u}$ is a unit vector: $\w{g}(\w{u},\w{u}) = -1$.
+Let then $(\w{e}_i)_{1\leq i \leq n-1}$ be a family of $n-1$ unit spacelike vectors such
+that $(\w{u},\w{e}_1,\ldots,\w{e}_{n-1})$ is an orthonormal basis of $T_p\M$.
+We may expend $\w{v}$ on this basis: $\w{v} = v^0 \w{u} + v^i \w{e}_i$.
+We have
+necessarily $v^0 \not = 0$, otherwise $\w{v} = v^i \w{e}_i$ would be a spacelike
+vector, which is excluded by hypothesis.
+Moreover, the time-orientation of $\w{v}$ is the same as that of $\w{u}$
+iff $v^0>0$. Since $\w{g}(\w{u},\w{v}) = - v^0$, this
+establishes (\ref{e:fra:scalar_caus1}) and (\ref{e:fra:scalar_caus3}) for
+$\w{u}$ timelike, the case (\ref{e:fra:scalar_caus2}) being excluded
+because $v^0\not = 0$.
+
+Let us now assume that $\w{u}$ is null. Without any loss of generality,
+we may find an orthonormal basis $(\w{e}_\alpha)_{0\leq \alpha\leq n-1}$ of
+$T_p\M$ such that $\w{u} = \w{e}_0 + \w{e}_1$, where the timelike unit vector
+$\w{e}_0$ is future-directed since $\w{u}$ is. Let us expand $\w{v}$ on this
+basis: $\w{v} = v^0 \w{e}_0 + v^i \w{e}_i$, with $v^0 \not = 0$ since
+$\w{v}$ is not spacelike. We have
+$\w{g}(\w{u},\w{v}) = -v^0 + v^1$. Now, since $\w{v}$ is timelike or null,
+$\w{g}(\w{v},\w{v}) \leq 0$, which is equivalent to
+\be \label{e:fra:dem_lemma}
+    (v^0)^2 \geq \sum_{i=1}^{n-1} (v^i)^2 .
+\ee
+This implies $|v^0| \geq |v^1|$. Whenever $|v^0| > |v^1|$, the sign of
+$-v^0 + v^1$ is that of $-v^0$, from which (\ref{e:fra:scalar_caus1}) and (\ref{e:fra:scalar_caus3}) follow. If $|v^0| = |v^1|$, then (\ref{e:fra:dem_lemma})
+implies $v^2=v^3=\cdots=v^{n-1} = 0$. We have then
+either $\w{v} = v^0 (\w{e}_0 + \w{e}_1) = v^0 \w{u}$ or
+$\w{v} = v^0 (\w{e}_0 - \w{e}_1)$. In the first case, $\w{g}(\w{u},\w{v})=0$
+and $\w{u}$ and $\w{v}$ are collinear [case (\ref{e:fra:scalar_caus2})]. In
+the second case, $\w{g}(\w{u},\w{v}) = -2 v^0$, from which (\ref{e:fra:scalar_caus1}) and (\ref{e:fra:scalar_caus3}) follow.
+\end{proof}
 
 
 \section{Worldlines} \label{s:fra:worldlines}
@@ -160,8 +212,9 @@ as given by the metric tensor:
 \be
     S = \int_A^B \D s = \int_{\lambda_A}^{\lambda_B}
      \sqrt{-\w{g}\left(\frac{\D\w{x}}{\D\lambda}, \frac{\D\w{x}}{\D\lambda} \right)}
-     \, \D\lambda .
+     \, \D\lambda
 \ee
+(cf. Sec.~\ref{s:geo:variation_length} for details).
 For photons, Eq.~(\ref{e:fra:p_geodesic}) can be derived from
 Maxwell equations\index{Maxwell equations}
 within the geometrical optics approximation (see e.g. Box~5.6 of Ref.~\cite{PoissW14}),
