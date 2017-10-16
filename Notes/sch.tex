@@ -629,7 +629,7 @@ $\th=\pi$ singularities of spherical coordinates.
 This proves that
 (\ref{e:sch:Schwarz_metric_EF}) defines a regular non-degenerate metric
 on the whole \defin{ingoing Eddington-Finkelstein domain}\index{ingoing!Eddington-Finkelstein!domain}
-\be
+\be \label{e:sch:M_IEF_def}
     \M_{\rm IEF} := \R\times(0,+\infty)\times\SS^2,
 \ee
 with the coordinate $\ti$ spanning $\R$, the coordinate $r$ spanning
@@ -787,6 +787,16 @@ in terms of the IEF coordinates.
 
 \subsection{Time orientation of the spacetime manifold} \label{s:sch:time_orientation}
 
+From now on, we consider as
+\emph{Schwarzschild spacetime}\index{Schwarzschild!spacetime} $(\M,\w{g})$ the spacetime
+whose manifold is the largest one considered so far, i.e. the ingoing Eddington-Finkelstein
+domain:
+\be \label{s:sch:def_Schwarz_spacetime}
+   \encadre{ \M := \M_{\rm IEF} = \M_{\rm I} \cup \Hor \cup \M_{\rm II} }.
+\ee
+We have then $\M = \R\times(0,+\infty)\times\SS^2$ [Eq.~(\ref{e:sch:M_IEF_def})].
+Note that we shall extend this spacetime in Chap.~\ref{s:max}.
+
 We have seen in Sec.~\ref{s:sch:rad_null_geod} that $r$ is an affine parameter
 along the radial null geodesics. We may then choose $\lambda=-r$ as an
 affine parameter along the ingoing ones; according to
@@ -805,23 +815,23 @@ with respect to the IEF coordinates, i.e.
 \be \label{e:sch:null_vector_k}
     \w{k} = \wpar_\ti - \wpar_{\tilde r} .
 \ee
-$\w{k}$ is a global nonzero null vector field on the manifold
-$\M_{\rm IEF}$. It may therefore be used to set the time orientation\index{time-orientable}\index{orientable!time --} of the spacetime manifold
-(cf. Sec.~\ref{s:fra:spacetime}). Since for $r\rightarrow+\infty$, $\w{k}$
+$\w{k}$ is a nonzero null vector field defined on the whole manifold
+$\M$. It may therefore be used to set the time orientation\index{time-orientable}\index{orientable!time --} of the Schwarzschild spacetime $(\M,\w{g})$
+(cf. Sec.~\ref{s:fra:time_orientation}). Since for $r\rightarrow+\infty$, $\w{k}$
 clearly points towards increasing $\ti$, we declare that $\w{k}$ defines
 the \emph{future} direction:
 \begin{greybox}
-The time orientation of the spacetime $(\M_{\rm IEF}, \w{g})$ is such
+The time orientation of the Schwarzschild spacetime $(\M, \w{g})$ is such
 that the null vector $\w{k}$ defined by Eq.~(\ref{e:sch:null_vector_k})
 is everywhere future-directed.
 \end{greybox}
 
 The above choice induces a time orientation of the subdomains
-$\M_{\rm I}$ and $\M_{\rm II}$ of $\M_{\rm IEF}$.
+$\M_{\rm I}$ and $\M_{\rm II}$ of $\M$.
 In Sec.~\ref{s:sch:SD_domain},
 we have noticed that the coordinate vector
 $\wpar_r$ of Schwarzschild-Droste coordinates is timelike in $\M_{\rm II}$;
-according to Eq.~(\ref{e:fra:time_orientation}),
+according to the lemma presented in Sec.~\ref{s:fra:time_orientation},
 we may then form the scalar product $\w{k}\cdot\wpar_r$ to get its time
 orientation. Given
 Eqs.~(\ref{e:sch:wpar_tilde_r}) and (\ref{e:sch:wpar_tilde_t}), we have
@@ -835,9 +845,7 @@ then that
     \w{k}\cdot\wpar_r = \frac{r}{2m} \left( 1 - \frac{r}{2m} \right) ^{-1}
     > 0 \quad\mbox{in} \ \M_{\rm II} .
 \]
-In view of Eq.~(\ref{e:fra:time_orientation}), this means that
-$\w{k}$ and $\wpar_r$ do not share the same time orientation.
-Since $\w{k}$ sets the future direction, we conclude:
+In view of Eq.~(\ref{e:fra:scalar_caus3}), we conclude:
 \begin{greybox}
 In region $\M_{\rm II}$, the vector $\wpar_r$ of Schwarzschild-Droste coordinates
 is a past-directed timelike vector.
@@ -882,13 +890,7 @@ formal definition of a black hole region that we have given in
 Sec.~\ref{s:glo:def_BH}.
 The first step is to define a conformal
 completion at null infinity $(\tilde{\M},\w{\tilde{g}})$ of
-the Schwarzschild spacetime $(\M, \w{g})$,
-the latter being defined by the largest manifold
-considered so far, i.e. the ingoing Eddington-Finkelstein
-domain:
-\be
-    \M := \M_{\rm IEF} = \M_{\rm I} \cup \Hor \cup \M_{\rm II} .
-\ee
+the Schwarzschild spacetime $(\M, \w{g})$, as defined by Eq.~(\ref{s:sch:def_Schwarz_spacetime}).
 To this aim, let us start from the null ingoing Eddington-Finkelstein
 coordinates $({\hat x}^\alpha)=(v,r,\th,\ph)$ introduced in Sec.~\ref{s:sch:EF_coord}; they
 cover entirely $\M$ and the metric tensor $\w{g}$

@@ -18,6 +18,8 @@ respect, as well as \cite{DerueU14,Gourg14,Langl13} for the French-speaking read
 
 \section{Spacetime} \label{s:fra:spacetime}
 
+\subsection{General settings}
+
 In these lectures we consider a $n$-dimensional \defin{spacetime}\index{spacetime},
 i.e. a pair $(\M, \w{g})$, where $\M$ is a $n$-dimensional smooth manifold, with $n\geq 2$, and $\w{g}$ is a Lorentzian metric on $\M$. In many parts, $n$ will be set to 4
 --- the standard spacetime dimension --- but we shall also consider spacetimes with
@@ -46,6 +48,7 @@ In other words, vectors on $\M$ do not live in the manifold but in the
 \defin{tangent spaces}\index{tangent!space} $T_p\M$, which are defined at each point $p\in\M$. Each  $T_p\M$
 is a $n$-dimensional vector space, which is generated for instance by the infinitesimal displacement
 vectors along the $n$ coordinate lines of some coordinate system.
+Unless explicitly specified, we assume that $\M$ is an orientable manifold (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
 
 The full definition of the \defin{metric tensor} $\w{g}$ is given in Sec.~\ref{s:bas:pRiemManif} of
 Appendix~\ref{s:bas}. At each point $p\in\M$, $\w{g}$ induces a (non positive definite)
@@ -72,29 +75,29 @@ A Lorentzian manifold $(\M,\w{g})$: at each point, the metric tensor $\w{g}$
 defines priviledged directions: those lying in the null cone at $p$.}
 \end{figure}
 
+\subsection{Time orientation} \label{s:fra:time_orientation}
 
-
-Unless explicitly specified, we assume that $\M$ is an orientable manifold (cf. Sec.~\ref{s:bas:Levi-Civita_tensor})
-and that $(\M, \w{g})$ is time-orientable. The qualifier \defin{time-orientable}\index{time-orientable}\index{orientable!time --} means that it is possible to divide
-\emph{continuously}
-all causal vectors (i.e. timelike or null) into two classes, which are called
-\defin{future-directed}\index{future-directed} and \defin{past-directed}\index{past-directed}.
-More precisely, at each tangent space $T_p\M$, let us split the causal
+When dealing with black hole spacetimes, it is very important to have clear
+concepts of ``past'' and ``future''. Therefore we assume
+that the spacetime $(\M, \w{g})$ is \emph{time-orientable}, i.e. that it is possible to divide \emph{continuously} all causal vectors (i.e. timelike or null) into
+two classes, the \emph{future-directed} ones and the \emph{past-directed} ones.
+More precisely, at each tangent space $T_p\M$, we may split the causal
 vectors in two classes by declaring that two causal
 vectors belong to the same class iff they are located inside
 or onto the same sheet of the null cone at $p$. This defines an equivalence
-relation on causal vectors at $p$, with two equivalence classes.
-$(\M,\w{g})$ is then time-orientable iff some choice of an equivalence class
+relation on causal vectors at $p$, with two equivalence classes. The spacetime
+$(\M,\w{g})$ is then called \defin{time-orientable}\index{time-orientable}\index{orientable!time --} iff some choice of an equivalence class
 can be performed continuously over the entire manifold $\M$.
-Once such a choice is made, thereby defining the future direction, one says
-obviously that $(\M,\w{g})$ is \defin{time-oriented}\index{time-oriented}\index{oriented!time --}.
+The vectors belonging to the chosen equivalence class are called
+\defin{future-directed}\index{future-directed} and the other ones
+\defin{past-directed}\index{past-directed}.
 
 As a characterization of future-oriented causal vectors,
-we shall use quite often the following lemma:\\[1ex]
+we shall use quite often the following lemma:
 
-\noindent\textbf{Lemma (scalar product of causal vectors)}
 \begin{greybox}
-Let $(\M,\w{g})$ be a time-oriented spacetime and $\w{u}$ and $\w{v}$
+\textbf{Lemma (scalar product of causal vectors)}\\[1ex]
+Let $(\M,\w{g})$ be a time-orientable spacetime and $\w{u}$ and $\w{v}$
 be two timelike or null vectors at some point $p\in\M$.
 If we assume that $\w{u}$ is future-directed, then
 \begin{subequations}
@@ -139,6 +142,20 @@ $\w{v} = v^0 (\w{e}_0 - \w{e}_1)$. In the first case, $\w{g}(\w{u},\w{v})=0$
 and $\w{u}$ and $\w{v}$ are collinear [case (\ref{e:fra:scalar_caus2})]. In
 the second case, $\w{g}(\w{u},\w{v}) = -2 v^0$, from which (\ref{e:fra:scalar_caus1}) and (\ref{e:fra:scalar_caus3}) follow.
 \end{proof}
+
+Two useful properties are immediate consequences of the above lemma,
+more precisely of the part (\ref{e:fra:scalar_caus2}) of it:
+
+\begin{greybox}
+\textbf{Corollary 1}\\[1ex]
+A timelike vector can be neither orthogonal to a timelike vector nor
+orthogonal to a null vector.
+\end{greybox}
+
+\begin{greybox}
+\textbf{Corollary 2}\\[1ex]
+Two null vectors are orthogonal if, and only if, they are collinear.
+\end{greybox}
 
 
 \section{Worldlines} \label{s:fra:worldlines}
@@ -235,7 +252,7 @@ is nothing but the metric length along the worldline, increasing towards the fut
 \be \label{e:fra:proper_time}
     \D\tau = \sqrt{- \w{g}(\D\w{x}, \D\w{x})} = \sqrt{- g_{\mu\nu} \D x^\mu \, \D x^\nu} ,
 \ee
-where $\D\w{x}$ is an infinitesimal future-directed displacement
+where $\D\w{x}$ is an infinitesimal future-directed\footnote{Cf. Sec.~\ref{s:fra:time_orientation}.} displacement
 along $\Li$.
 
 The particle's \defin{4-velocity}\index{4-velocity} is defined the
