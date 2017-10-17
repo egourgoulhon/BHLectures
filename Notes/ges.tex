@@ -350,7 +350,7 @@ To get a full solution in terms of the Schwarzschild-Droste coordinates,
 once Eq.~(\ref{e:ges:1d_motion_timelike}) is solved for $r(\tau)$,
 one has still to solve Eqs.~(\ref{e:ges:dot_t}) and (\ref{e:ges:dot_ph}),
 which can be rewritten in terms of the proper time $\tau$ as
-\be
+\be \label{e:ges:Dt_Dtau}
     \frac{\D t}{\D \tau} = \bar{\veps} \left(1 - \frac{2m}{r(\tau)} \right) ^{-1} ,
 \ee
 \be
@@ -409,13 +409,69 @@ position $r=r_0$ at $\tau=0$. Assuming a departure from rest
 means $\D r/\D\tau = 0$ at $\tau=0$. The equation of radial motion
 (\ref{e:ges:radial_motion}) leads then to $-m/r_0 = (\bar{\veps}^2 - 1)/2$,
 or equivalently
-\be
+\be \label{e:ges:beps2}
          \bar{\veps}^2 = 1 - \frac{2m}{r_0} .
 \ee
 The right-hand side of this equation must be non-negative. This implies
 $r_0\geq 2m$. We recover the fact that one cannot be momentarily at rest
 (in terms of $r$) if $r_0<2m$, for $r$ has to decrease along any future-directed
 worldline in the black hole region $\M_{\rm II}$ (cf. Sec.~\ref{s:sch:time_orientation}).
+
+Equation~(\ref{e:ges:beps2}) implies $\bar{\veps} < 1$, i.e. $\veps < \mu$. The solution
+is thus given by Eq.~(\ref{e:ges:sol_E_neg}); expressing $|\bar{\veps}^2 - 1|$
+via (\ref{e:ges:beps2}), we get
+\be \label{e:ges:sol_radial_infall}
+    \encadre{
+    \left\{ \begin{array}{l}
+    \displaystyle\tau = \sqrt{\frac{r_0^3}{8 m}}  \left( \eta + \sin\eta \right) \\[3ex]
+    \displaystyle r = \frac{r_0}{2} \left( 1 + \cos\eta \right)
+    \end{array} \right. }
+    \qquad 0 \leq \eta \leq \pi ,
+\ee
+where the range of $\eta$ is such that $r=r_0$ for $\tau=0$ ($\eta=0$) and
+$r$ decays to $0$ when $\eta\rightarrow \pi$.
+The solution for $t=t(\tau)$ is obtained by combining $\D t/\D\tau$ as expressed
+by (\ref{e:ges:Dt_Dtau}) and $\D\tau/\D\eta$ deduced from (\ref{e:ges:sol_radial_infall}):
+\[
+    \frac{\D\tau}{\D\eta} = \sqrt{\frac{r_0^3}{8 m}}  \left( 1 + \cos\eta \right)
+        = \sqrt{\frac{r_0}{2m}} \, r .
+\]
+We get
+\[
+    \frac{\D t}{\D\eta} =  \frac{\D t}{\D\tau} \frac{\D\tau}{\D\eta}
+        = \bar{\veps} \sqrt{\frac{r_0}{2m}} \, r \left(1 - \frac{2m}{r} \right) ^{-1}
+        = \sqrt{\frac{r_0}{2m} - 1} \; \frac{r^2}{r - 2m} ,
+\]
+where we have used (\ref{e:ges:beps2}) and $\bar{\veps} > 0$ to write
+$\bar{\veps} = \sqrt{1-2m/r_0}$.
+Substituting $r$ from Eq.~(\ref{e:ges:sol_radial_infall}), we get
+\[
+    \frac{\D t}{\D\eta} =   \frac{r_0}{2} \sqrt{\frac{r_0}{2m} - 1} \;
+        \frac{(1+\cos\eta)^2}{1+\cos\eta - 4m/r_0} .
+\]
+This equation can be integrated to
+\be \label{e:ges:sol_t_radial_infall}
+   \encadre{ t = 2m \left\{ \sqrt{\frac{r_0}{2m} - 1} \left[ \eta + \frac{r_0}{4m}
+    (\eta + \sin\eta) \right]
+    + \ln \left| \frac{\sqrt{\frac{r_0}{2m} - 1} + \tan\frac{\eta}{2}}{\sqrt{\frac{r_0}{2m} - 1} - \tan\frac{\eta}{2}} \right| \right\} } ,
+\ee
+where we have assumed $t=0$ at $\tau=0$ ($\eta=0$).
+
+The solution of the radial free fall starting from rest at $r=r_0$ is
+thus given in parametric form by Eqs.~(\ref{e:ges:sol_radial_infall}) and
+(\ref{e:ges:sol_t_radial_infall}). It has been obtained in the Schwarzschild-Droste coordinates
+$(t,r,\th,\ph)$, which are singular at the event horizon $\Hor$. So, one might wonder
+if such a solution can describe the full infall, with the crossing of $\Hor$.
+In particular, we notice that the differential equation for $t(\tau)$,
+Eq.~(\ref{e:ges:Dt_Dtau}), is singular at $r=2m$, i.e. on $\Hor$. The solution
+$t(\eta)$, as given by Eq.~(\ref{e:ges:sol_t_radial_infall}) is singular at
+$\eta=\eta_*$, where
+\be
+    \eta_* := 2 \,\mathrm{atan}\, \sqrt{\frac{r_0}{2m} - 1}
+\ee
+is precisely the value of $\eta$ yielding $r=2m$ in Eq.~(\ref{e:ges:sol_radial_infall})
+[to see it, rewrite the second part of Eq.~(\ref{e:ges:sol_radial_infall}) as
+$r=r_0\cos^2(\eta/2) = r_0/(1+\tan^2(\eta/2))$].
 
 \subsection{Circular orbits}
 
