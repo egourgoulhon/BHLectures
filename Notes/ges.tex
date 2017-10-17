@@ -9,7 +9,7 @@
 We have already investigated some geodesics in Schwarzschild spacetime in
 Chap.~\ref{s:sch}, namely
 the radial null geodesics (Sec.~\ref{s:sch:rad_null_geod}).
-Here, we perform a more extended study. In particular we investigate timelike
+Here, we perform a more extensive study. In particular we investigate timelike
 geodesics, which are of primordial physical importance, since they represent
 the wordlines of planets or stars orbiting the black hole or of
 intrepid observers freely falling into the black hole.
@@ -100,14 +100,14 @@ a positive
 quantity as soon as the geodesic $\Li$ has some part in $\M_{\rm I}$, i.e.
 some part with $r>2m$:
 \begin{greybox}
-\be
+\be \label{e:ges:eps_positive_M_I}
     \Li \cap \M_{\rm I} \not= \varnothing \quad \Longrightarrow \quad \veps > 0 .
 \ee
 \end{greybox}
 \begin{proof}
 In $\M_{\rm I}$, the Killing vector $\w{\xi}$ is timelike and future-directed.
 The 4-momentum $\w{p}$ is either timelike or null and always future-directed.
-One has then necessarily $\w{\xi}\cdot\w{p} < 0$; hence Eq.~(\ref{e:ges:conserved_energy})
+By Eq.~(\ref{e:fra:scalar_caus1}), one has then necessarily $\w{\xi}\cdot\w{p} < 0$; hence Eq.~(\ref{e:ges:conserved_energy})
 implies $\veps > 0$ in $\M_{\rm I}$. Since $\veps$ is constant along $\Li$, it
 follows that $\veps > 0$ everywhere.
 \end{proof}
@@ -167,7 +167,7 @@ $\Li$ associated with the 4-momentum $\w{p}$ (cf. Eq.~(\ref{e:geo:v_dxdlambda}):
 \ee
 In terms of the components with respect to Schwarzschild-Droste coordinates,
 this yields
-\be
+\be \label{e:ges:comp_4_momentum}
     \dot{t} := \frac{\D t}{\D\lambda} = p^t,\qquad
     \dot{r} := \frac{\D r}{\D\lambda} = p^r,\qquad
     \dot{\th} := \frac{\D \th}{\D\lambda} = p^\th,\qquad
@@ -225,8 +225,27 @@ that Eq.~(\ref{e:ges:dot_r_square}) is decoupled from the other two equations.
 The task is then to first solve this equation for $r(\lambda)$ and to inject
 the solution into Eqs.~(\ref{e:ges:dot_t}) and (\ref{e:ges:dot_ph}), which
 can then be integrated separately.
-In what follows, we discuss separately the resolution of
-Eq.~(\ref{e:ges:dot_r_square}) for timelike geodesics and for null ones.
+
+A constraint to keep in mind is that the 4-momentum vector $\w{p}$, whose
+components are related to the solution $(t(\lambda), r(\lambda), \ph(\lambda))$
+by Eq.~(\ref{e:ges:comp_4_momentum}), has to be a future-directed causal vector.
+In $\M_{\rm I}$, as we have seen above, this is guaranteed by choosing $\veps > 0$
+[cf. Eq.~(\ref{e:ges:eps_positive_M_I})]. In $\M_{\rm II}$, a future-directed
+timelike vector is $-\wpar_r$ (cf. Sec.~\ref{s:sch:time_orientation}).
+According to Eq.~(\ref{e:fra:scalar_caus1}), we have then
+$\w{p}$ future-directed iff $-\wpar_r\cdot\w{p} < 0$, i.e. iff
+\[
+    \left(\frac{2m}{r} - 1  \right) ^{-1} p^r < 0  .
+\]
+Since $2m/r - 1 > 0$ in $\M_{\rm II}$, this is equivalent to $p^r < 0$, i.e.
+to $\D r/\D\lambda < 0$. Hence
+\begin{greybox}
+In the black hole region $\M_{\rm II}$, i.e. for $r<2m$,
+the solution $r(\lambda)$ of Eq.~(\ref{e:ges:dot_r_square})
+must be a strictly decreasing function of $\lambda$.
+\end{greybox}
+Actually, we recover the result stated for any causal worldline (not necessarily
+a geodesic) in Sec.~\ref{s:sch:time_orientation}.
 
 \begin{remark}
 We have derived the system of Eqs.~(\ref{e:ges:dot_t}), (\ref{e:ges:dot_ph}) and (\ref{e:ges:dot_r_square}) without invoking explicitly the
@@ -236,6 +255,10 @@ This is because we had enough
 first integrals of that second-order differential equation to completely reduce it to
 a system of first order equations.
 \end{remark}
+
+In what follows, we discuss separately the resolution of
+Eq.~(\ref{e:ges:dot_r_square}) for timelike geodesics and for null ones.
+
 
 \section{Timelike geodesics}
 
@@ -335,7 +358,7 @@ which can be rewritten in terms of the proper time $\tau$ as
 \ee
 
 
-\subsection{Radial free fall}
+\subsection{Radial free fall} \label{s:ges:radial_free_fall}
 
 The radial geodesics correspond to a vanishing conserved angular momentum:
 $\ell = 0$. Indeed, setting $\ell=0$ in Eq.~(\ref{e:ges:dot_ph}) yields
@@ -391,8 +414,8 @@ or equivalently
 \ee
 The right-hand side of this equation must be non-negative. This implies
 $r_0\geq 2m$. We recover the fact that one cannot be momentarily at rest
-(in terms of $r$) for $r_0<2m$: $r$ has to decrease along any future-directed
-worldline (cf. Sec.~\ref{s:sch:time_orientation}).
+(in terms of $r$) if $r_0<2m$, for $r$ has to decrease along any future-directed
+worldline in the black hole region $\M_{\rm II}$ (cf. Sec.~\ref{s:sch:time_orientation}).
 
 \subsection{Circular orbits}
 
