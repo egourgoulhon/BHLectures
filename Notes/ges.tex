@@ -465,13 +465,86 @@ if such a solution can describe the full infall, with the crossing of $\Hor$.
 In particular, we notice that the differential equation for $t(\tau)$,
 Eq.~(\ref{e:ges:Dt_Dtau}), is singular at $r=2m$, i.e. on $\Hor$. The solution
 $t(\eta)$, as given by Eq.~(\ref{e:ges:sol_t_radial_infall}) is singular at
-$\eta=\eta_*$, where
-\be
-    \eta_* := 2 \,\mathrm{atan}\, \sqrt{\frac{r_0}{2m} - 1}
+$\eta=\eta_{\rm h}$, where
+\be \label{e:ges:def_eta_star}
+    \eta_{\rm h} := 2 \,\mathrm{atan}\, \sqrt{\frac{r_0}{2m} - 1}
 \ee
 is precisely the value of $\eta$ yielding $r=2m$ in Eq.~(\ref{e:ges:sol_radial_infall})
 [to see it, rewrite the second part of Eq.~(\ref{e:ges:sol_radial_infall}) as
-$r=r_0\cos^2(\eta/2) = r_0/(1+\tan^2(\eta/2))$].
+$r=r_0\cos^2(\eta/2) = r_0/(1+\tan^2(\eta/2))$]. On the other hand, the equation
+for $r$, Eq.~(\ref{e:ges:radial_motion}), does not exhibit any pathology
+at $r=2m$, nor its solution (\ref{e:ges:sol_t_radial_infall}).
+Actually, had we started from the ingoing Eddington-Finkelstein (IEF) coordinates
+$(\ti,r,\th,\ph)$, instead of the Schwarzschild-Droste ones, we would have
+found\footnote{{\emph Exercice:} do it!}
+exactly the same solution for $r(\tau)$ (which is not surprising since
+$r$, considered as a scalar field on $\M$, is perfectly regular at $\Hor$).
+The solution for $\ti(\tau)$ is deduced from that for $t(\tau)$ by
+the coordinate transformation law (\ref{e:sch:ti_t_r}). Noticing that and
+$r/(2m) = \cos^2(\eta/2)/\cos^2(\eta_{\rm h}/2)$, we get
+\bea
+    \frac{r}{2m} - 1 & = & \frac{\cos^2(\eta/2)}{\cos^2(\eta_{\rm h}/2)} - 1
+        = \cos^2(\eta/2) \left( \frac{1}{\cos^2(\eta_{\rm h}/2)}
+        - \frac{1}{\cos^2(\eta/2)} \right) \nonumber \\
+       & = &\cos^2(\eta/2) \left(\tan^2(\eta_{\rm h}/2) - \tan^2(\eta/2) \right) .
+\eea
+Using this identity as well as (\ref{e:ges:def_eta_star}) to express
+$\sqrt{r_0/(2m)-1}$ in Eq.~(\ref{e:ges:sol_t_radial_infall}), the transformation law (\ref{e:sch:ti_t_r}) yields
+\bea
+    \ti & = & 2m \left\{ \sqrt{\frac{r_0}{2m} - 1} \left[ \eta + \frac{r_0}{4m}
+    (\eta + \sin\eta) \right]
+    + \ln \left| \frac{\tan\frac{\eta_{\rm h}}{2} + \tan\frac{\eta}{2}}{\tan\frac{\eta_{\rm h}}{2}- \tan\frac{\eta}{2}} \cos^2\frac{\eta}{2} \left( \tan^2\frac{\eta_{\rm h}}{2}
+        - \tan^2\frac{\eta}{2} \right) \right| \right\} \nonumber \\
+    & = & 2m \left\{ \sqrt{\frac{r_0}{2m} - 1} \left[ \eta + \frac{r_0}{4m}
+    (\eta + \sin\eta) \right]
+    + \ln \left| \cos^2\frac{\eta}{2}
+    \left( \tan\frac{\eta_{\rm h}}{2} + \tan\frac{\eta}{2} \right) ^2 \right| \right\} \nonumber \\
+    & = & 2m \left\{ \sqrt{\frac{r_0}{2m} - 1} \left[ \eta + \frac{r_0}{4m}
+    (\eta + \sin\eta) \right]
+    +  2 \ln \left( \cos\frac{\eta}{2} \tan\frac{\eta_{\rm h}}{2} + \sin \frac{\eta}{2} \right) \right\} . \nonumber
+\eea
+From this expression, we have $\ti= 4 m \ln \tan(\eta_{\rm h}/2)$ for $\eta=0$.
+Now, we can change the origin of the IEF coordinate $\ti$ to ensure $\ti=0$ for $\eta=0$,
+i.e. $\tau=0$.
+We get then
+\be \label{e:ges:sol_radial_infall_ti}
+    \encadre{ \ti = 2m \left\{ \sqrt{\frac{r_0}{2m} - 1} \left[ \eta + \frac{r_0}{4m}
+    (\eta + \sin\eta) \right]
+    +  2 \ln \left[ \cos\frac{\eta}{2}  + \left(\frac{r_0}{2m} - 1\right)^{-1/2} \sin \frac{\eta}{2} \right] \right\} } .
+\ee
+This expression is perfectly regular for all values of $\eta$ in $[0,\pi]$, reflecting
+the fact that the ingoing Eddington-Finkelstein coordinates cover all $\M$.
+
+In view of Eq.~(\ref{e:ges:sol_radial_infall}), we may say that the radial
+infall starts at $\eta=0$, for which $\tau=0$ and $r=r_0$, and terminates
+at $\eta=\pi$, for which $r=0$, which means that the particle hits the curvature
+singularity. The final value of the particle's proper time is obtained by
+setting $\eta=\pi$ in the first line of (\ref{e:ges:sol_radial_infall}):
+\be
+    \encadre{\tau_{\rm f} = \pi \sqrt{\frac{r_0^3}{8 m}} } .
+\ee
+Similarly, the final value of $\ti$ is obtained by setting $\eta=\pi$ in (\ref{e:ges:sol_radial_infall_ti}):
+\be
+    \encadre{\ti_{\rm f} = 2 m \left[ \pi \sqrt{\frac{r_0}{2m} - 1 }
+        \left( \frac{r_0}{4m} + 1 \right)
+        -  \ln  \left( \frac{r_0}{2m} - 1 \right) \right] } .
+\ee
+As noticed above, the event horizon $\Hor$ is crossed at $\eta=\eta_{\rm h}$;
+via (\ref{e:ges:sol_radial_infall}) and (\ref{e:ges:def_eta_star}), this corresponds to the following value
+of the proper time:
+\be
+    \encadre{\tau_{\rm h} = \sqrt{\frac{r_0^3}{2m}}
+        \left[ \mathrm{atan}\, \sqrt{\frac{r_0}{2m} - 1} +
+        \sqrt{\frac{2m}{r_0} \left( 1 - \frac{2m}{r_0} \right) } \right] } ,
+\ee
+while (\ref{e:ges:sol_radial_infall_ti}) leads to the following value
+of the IEF coordinate $\ti$:
+\be
+    \encadre{\ti_{\rm h} = 2m \left[ 2\left(1+\frac{r_0}{4m}\right)
+        \sqrt{\frac{r_0}{2m} - 1} \, \mathrm{atan}\, \sqrt{\frac{r_0}{2m} - 1}
+        + \frac{r_0}{2m} - 1 - \ln\frac{r_0}{2m} \right] } .
+\ee
+
 
 \subsection{Circular orbits}
 
