@@ -11,7 +11,7 @@ Chap.~\ref{s:sch}, namely
 the radial null geodesics (Sec.~\ref{s:sch:rad_null_geod}).
 Here, we perform a more extensive study. In particular we investigate timelike
 geodesics, which are of primordial physical importance, since they represent
-the wordlines of planets or stars orbiting the black hole or of
+orbits of planets or stars around the black hole or worldlines of
 intrepid observers freely falling into the black hole.
 
 \section{Geodesic motion}
@@ -60,29 +60,30 @@ i.e. coordinates such that $\w{\xi} = \wpar_t$ and $\w{\eta}=\wpar_\ph$, like th
 coordinates or the Eddington-Finkelstein ones, one can rewrite
 (\ref{e:ges:conserved_quantities})
 in terms of the components $p_t = g_{t\mu} \, p^\mu$ and $p_\ph = g_{\ph\mu} \, p^\mu$
-of the 1-form associated to $\w{p}$ by metric duality:
+of the 1-form $\uu{p}$ associated to $\w{p}$ by metric duality:
 \begin{subequations}
 \begin{align}
 & \veps = - p_t \\
 & \ell = p_\ph
 \end{align}
 \end{subequations}
-Indeed, in such a coordinate system, $\veps = -g_{\mu\nu} \, \xi^\mu p^\nu = -g_{\mu\nu}\,  \delta^\mu_{\ \, t} \, p^\nu = -g_{t\nu} \, p^\nu = -p_t$
-and $\ell = g_{\mu\nu} \, \eta^\mu p^\nu = g_{\mu\nu}\,  \delta^\mu_{\ \, \ph} \, p^\nu = g_{\ph\nu} \, p^\nu = p_\ph$.
+Indeed, in such a coordinate system, $\xi^\mu =  \delta^\mu_{\ \, t}$
+and $\eta^\mu = \delta^\mu_{\ \, \ph}$, so that $\veps = -g_{\mu\nu} \, \xi^\mu p^\nu = -g_{t\nu} \, p^\nu = -p_t$
+and $\ell = g_{\mu\nu} \, \eta^\mu p^\nu = g_{\ph\nu} \, p^\nu = p_\ph$.
 
 
 It is worth stressing that $\veps$ is not a genuine energy, i.e. it is not
 an energy measured by some observer. Indeed the latter is defined by
 Eq.~(\ref{e:fra:E_obs}), which ressembles Eq.~(\ref{e:ges:conserved_energy})
-but differs from it since $\w{\xi}$ is not a unit vector in general:
-$\w{\xi}\cdot\w{\xi} \not = -1$. In other words, $\w{\xi}$ cannot in general
-be interpreted as the 4-velocity of some observer, thereby making
-$\veps$, as defined by (\ref{e:ges:conserved_energy}), fail to be a measured
+but differs from it by $\w{\xi}$ being not a unit vector in general:
+$\w{\xi}\cdot\w{\xi} \not = -1$. In other words, $\w{\xi}$ cannot
+be interpreted as the 4-velocity of some observer, so that the quantity
+$\veps$ defined by (\ref{e:ges:conserved_energy}) cannot be a measured
 particle energy. It is only in the asymptotic region, where $\w{\xi}\cdot\w{\xi} = g_{tt}
 \rightarrow -1$, that $\w{\xi}$ is an eligible 4-velocity, hence the name
 \emph{energy at infinity}. Note that this name is commonly used, even in the
-particle $\mathscr{P}$ never visit the asymptotic region.
-Similarly, $\ell$ is not some (component of) genuine angular momentum. Only in the
+particle $\mathscr{P}$ never visits the asymptotic region.
+Similarly, $\ell$ is not some (component of a) genuine angular momentum. Only in the
 asymptotic region do we have
 \be \label{e:ges:ell_asympt}
     \ell \simeq g_{\ph\ph} \, p^\ph \simeq r^2\sin^2\ph \, p^\ph \simeq r^2\sin^2\theta \, P^\ph
@@ -95,7 +96,7 @@ In view of (\ref{e:ges:ell_asympt}), we may say that $\ell$ is the angular momen
 about the symmetry axis $\th=0$ that an inertial observer would attribute to
 particle $\mathscr{P}$ if the latter would move close to him.
 
-From its very definition, Eq.~(\ref{e:ges:conserved_energy}), $\veps$ has to be
+From its very definition, Eq.~(\ref{e:ges:conserved_energy}), $\veps$ is
 a positive
 quantity as soon as the geodesic $\Li$ has some part in $\M_{\rm I}$, i.e.
 some part with $r>2m$:
@@ -119,13 +120,13 @@ it is possible to have $\veps \leq 0$, since the
 scalar product of $\w{p}$ with a spacelike vector can take any value.
 \end{remark}
 \begin{remark}
-Since the Killing vector $\w{\eta}$ is always spacelike, there is no constraint
+The Killing vector $\w{\eta}$ being always spacelike, there is no constraint
 on the sign of $\ell$.
 \end{remark}
 
 To be specific, let us describe Schwarzschild spacetime in terms of the
 Schwarzschild-Droste coordinates $(t,r,\th,\ph)$ introduced in Sec.~\ref{s:sch:solving_EE}.
-Without any loss of generality, we may choose these coordinates such that
+Without any loss of generality, we may choose these coordinates so that
 at $t=0$, the particle $\mathscr{P}$ is located in the equatorial plane $\th=\pi/2$ and
 the spatial projection of the worldline $\Li$ lies in that plane, i.e. $\w{p}$ has
 no component along $\wpar_\th$:
@@ -134,7 +135,13 @@ no component along $\wpar_\th$:
 \ee
 Now, if for $t>0$, the geodesic $\Li$ were departing from $\th=\pi/2$, this
 would constitute some breaking of spherical symmetry, making a difference
-between the ``Northern'' hemisphere and the ``Southern'' one. Hence $\Li$
+between the ``Northern'' hemisphere and the ``Southern'' one.
+Hence\footnote{More rigorously, Eq.~(\ref{e:ges:pth_zero}) can
+be derived from the geodesic equation (\ref{e:fra:p_geodesic}): given
+the expression of the Christoffel symbols of $\w{g}$ in Schwarzschild-Droste
+coordinates (cf. Sec.~\ref{s:sam:Kottler_solution}), Eq.~(\ref{e:fra:p_geodesic})
+yields \[\frac{\D p^\th}{\D\lambda} +\frac{2}{r}  p^r p^\th - \sin\th\cos\th \left( p^\ph \right)^2 = 0,\] where $\lambda$ is the affine parameter of $\Li$ associated with $\w{p}$. The solution of this differential equation with $p^\th=0$ and
+$\cos\th=0$ as initial conditions is $p^\th=0$ for all values of $\lambda$.} $\Li$
 must stay at $\th=\pi/2$, which implies
 \be \label{e:ges:pth_zero}
     \encadre{p^\th = 0} .
@@ -163,8 +170,10 @@ four first integral of motions. The problem is then completely integrable.
 More specifically, let $\lambda$ be the affine parameter along the geodesic
 $\Li$ associated with the 4-momentum $\w{p}$ (cf. Eq.~(\ref{e:geo:v_dxdlambda}):
 \be
-    \w{p} = \frac{\D\w{x}}{\D\lambda} .
+    \w{p} = \frac{\D\w{x}}{\D\lambda} ,
 \ee
+where  $\D\w{x}$ is the infinitesimal displacement along $\Li$ corresponding
+to the parameter change $\D\lambda$.
 In terms of the components with respect to Schwarzschild-Droste coordinates,
 this yields
 \be \label{e:ges:comp_4_momentum}
@@ -252,7 +261,9 @@ We have derived the system of Eqs.~(\ref{e:ges:dot_t}), (\ref{e:ges:dot_ph}) and
 famous \emph{geodesic equation}\index{geodesic!equation}\index{equation!geodesic --}, i.e.
 Eq.~(\ref{e:geo:eq_geod}) in Appendix~\ref{s:geo}.
 This is because we had enough
-first integrals of that second-order differential equation to completely reduce it to
+first integrals of the second-order differential equation
+(\ref{e:geo:eq_geod})
+to completely reduce it to
 a system of first order equations.
 \end{remark}
 
@@ -274,7 +285,8 @@ between $\tau$ and $\lambda$:
 \be
     \tau = \mu \lambda ,
 \ee
-which of course a special case of the generic relation (\ref{e:geo:affine_transf})
+up to some additive constant. This is
+of course a special case of the generic relation (\ref{e:geo:affine_transf})
 between two affine parameters of the same geodesic.
 Equation~(\ref{e:ges:dot_r_square}) becomes then
 \be \label{e:ges:1d_motion_timelike}
@@ -298,6 +310,24 @@ the kinetic energy per unit mass, $V_{\rm eff}(r)$ as the potential
 energy per unit mass and the constant right-hand side $(\bar{\veps}^2-1)/2$ as the total
 mechanical energy per unit mass.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot.pdf}}
+\caption[]{\label{f:ges:eff_pot} \footnotesize
+Effective potential $V_{\rm eff}(r)$ governing the radial motion along a timelike geodesic in
+Schwarzschild spacetime. The vertical dashed line marks $r=2m$, i.e. the
+location of the event horizon.
+The numerical value $\bar{\ell}/m=3.4641$ is that of the critical
+specific angular momentum (\ref{e:ges:ell_crit}).}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot_zoom.pdf}}
+\caption[]{\label{f:ges:eff_pot_zoom} \footnotesize
+Same as Fig.~\ref{f:ges:eff_pot}, but with a zoom in along the $y$-axis
+and a zoom out along the $x$-axis. The dots mark the mimima of
+$V_{\rm eff}$, locating stable circular orbits.}
+\end{figure}
+
 The profile  of $V_{\rm eff}(r)$ for selected values of $\bar{\ell}$ is
 plotted in Figs.~\ref{f:ges:eff_pot} and \ref{f:ges:eff_pot_zoom} .
 Its extrema are given by
@@ -305,7 +335,7 @@ $\D V_{\rm eff}/\D r=0$, which is equivalent to
 \[
     m r^2 - \bar{\ell}^2 r + 3 \bar{\ell}^2 m = 0 .
 \]
-This quadratic equation admits real roots iff $|\bar{\ell}| \geq \bar{\ell}_{\rm crit}$
+This quadratic equation admits real roots iff $|\bar{\ell}| \geq \bar{\ell}_{\rm crit}$,
 with
 \be \label{e:ges:ell_crit}
    \encadre{ \bar{\ell}_{\rm crit} = 2\sqrt{3} m }.
@@ -328,23 +358,6 @@ dot in Fig.~\ref{f:ges:eff_pot_zoom}).
 For $|\bar{\ell}| < \bar{\ell}_{\rm crit}$, there is no extremum and
 $V_{\rm eff}$ is a scritly increasing function of $r$.
 
-\begin{figure}
-\centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot.pdf}}
-\caption[]{\label{f:ges:eff_pot} \footnotesize
-Effective potential ruling the radial motion along a timelike geodesic in
-Schwarzschild spacetime. The vertical dashed line marks $r=2m$, i.e. the
-location of the event horizon.
-The numerical value $\bar{\ell}/m=3.4641$ is that of the critical
-specific angular momentum (\ref{e:ges:ell_crit}).}
-\end{figure}
-
-\begin{figure}
-\centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot_zoom.pdf}}
-\caption[]{\label{f:ges:eff_pot_zoom} \footnotesize
-Same as Fig.~\ref{f:ges:eff_pot}, but with a zoom in along the $y$-axis
-and a zoom out along the $x$-axis. The dots mark the mimima of
-$V_{\rm eff}$, locating stable circular orbits.}
-\end{figure}
 
 To get a full solution in terms of the Schwarzschild-Droste coordinates,
 once Eq.~(\ref{e:ges:1d_motion_timelike}) is solved for $r(\tau)$,
@@ -360,9 +373,11 @@ which can be rewritten in terms of the proper time $\tau$ as
 
 \subsection{Radial free fall} \label{s:ges:radial_free_fall}
 
+\subsubsection{Generic case}
+
 The radial geodesics correspond to a vanishing conserved angular momentum:
 $\ell = 0$. Indeed, setting $\ell=0$ in Eq.~(\ref{e:ges:dot_ph}) yields
-$\ph = \mathrm{const}$, which defines a pure radial trajectory in the
+$\ph = \mathrm{const}$, which defines a purely radial trajectory in the
 plane $\th=\pi/2$.
 The effective potential (\ref{e:ges:V_eff_timelike}) reduces then
 to $V_{\rm eff}(r) = - m/r$, so that the equation of radial motion
@@ -371,7 +386,8 @@ to $V_{\rm eff}(r) = - m/r$, so that the equation of radial motion
     \frac{1}{2} \left( \frac{\D r}{\D \tau} \right) ^2
         - \frac{m}{r} = \frac{\bar{\veps}^2 - 1}{2} .
 \ee
-As it is well known, the solution of this equation
+This equation is identical to that governing radial free fall in the gravitational field generated by a mass $m$ in Newtonian gravity.
+The solution is well known and
 depends on the sign of the ``mechanical energy'' in the right-hand
 side, i.e. of the position of $\bar{\veps}$ with respect to $1$, or
 equivalently of that of the conserved energy $\veps$ with respect
@@ -404,8 +420,10 @@ In the above formulas, $\tau_0$ is a constant; for $\veps\geq \mu$,
 it sets the value of $\tau$ for which $r\rightarrow 0$, while
 for $\veps<\mu$, it sets the value of $\tau$ at which $r$ takes its maximal value.
 
-Let consider the concrete case of a radial free-fall from rest, starting at some
-position $r=r_0$ at $\tau=0$. Assuming a departure from rest
+\subsubsection{Radial free fall from rest}
+
+Let us focus on the radial free fall from rest, starting at some
+position $r=r_0$ at $\tau=0$. Starting from rest
 means $\D r/\D\tau = 0$ at $\tau=0$. The equation of radial motion
 (\ref{e:ges:radial_motion}) leads then to $-m/r_0 = (\bar{\veps}^2 - 1)/2$,
 or equivalently
@@ -419,7 +437,7 @@ worldline in the black hole region $\M_{\rm II}$ (cf. Sec.~\ref{s:sch:time_orien
 
 Equation~(\ref{e:ges:beps2}) implies $\bar{\veps} < 1$, i.e. $\veps < \mu$. The solution
 is thus given by Eq.~(\ref{e:ges:sol_E_neg}); expressing $|\bar{\veps}^2 - 1|$
-via (\ref{e:ges:beps2}), we get
+in it via (\ref{e:ges:beps2}), we get
 \be \label{e:ges:sol_radial_infall}
     \encadre{
     \left\{ \begin{array}{l}
@@ -429,7 +447,17 @@ via (\ref{e:ges:beps2}), we get
     \qquad 0 \leq \eta \leq \pi ,
 \ee
 where the range of $\eta$ is such that $r=r_0$ for $\tau=0$ ($\eta=0$) and
-$r$ decays to $0$ when $\eta\rightarrow \pi$.
+$r$ decays to $0$ when $\eta\rightarrow \pi$. The function $r(\tau)$ resulting
+from (\ref{e:ges:sol_radial_infall}) is depicted in
+Fig.~\ref{f:ges:radial_infall_tau}.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ges_radial_infall_tau.pdf}}
+\caption[]{\label{f:ges:radial_infall_tau} \footnotesize
+Coordinate $r$ as a function of the proper time $\tau$
+for the radial free fall from rest, for various initial values $r_0$ of $r$.}
+\end{figure}
+
 The solution for $t=t(\tau)$ is obtained by combining $\D t/\D\tau$ as expressed
 by (\ref{e:ges:Dt_Dtau}) and $\D\tau/\D\eta$ deduced from (\ref{e:ges:sol_radial_infall}):
 \[
@@ -449,7 +477,7 @@ Substituting $r$ from Eq.~(\ref{e:ges:sol_radial_infall}), we get
     \frac{\D t}{\D\eta} =   \frac{r_0}{2} \sqrt{\frac{r_0}{2m} - 1} \;
         \frac{(1+\cos\eta)^2}{1+\cos\eta - 4m/r_0} .
 \]
-This equation can be integrated to
+This equation can be integrated to (cf. Sec.~\ref{s:sam:ges_radial_free_fall})
 \be \label{e:ges:sol_t_radial_infall}
    \encadre{ t = 2m \left\{ \sqrt{\frac{r_0}{2m} - 1} \left[ \eta + \frac{r_0}{4m}
     (\eta + \sin\eta) \right]
@@ -457,14 +485,25 @@ This equation can be integrated to
 \ee
 where we have assumed $t=0$ at $\tau=0$ ($\eta=0$).
 
+\begin{figure}
+\centerline{\includegraphics[height=0.5\textheight]{ges_radial_infall_t.pdf}\qquad\qquad
+\includegraphics[height=0.5\textheight]{ges_radial_infall_IEF.pdf}}
+\caption[]{\label{f:ges:radial_infall} \footnotesize
+Radial free fall from rest, viewed in Schwarzschild-Droste coordinates $(t,r)$
+(left) and in the ingoing Eddington-Finkelstein coordinates $(\tilde{t},r)$ (right),
+for various values $r_0$ of the coordinate $r$ at $\tau=0$.}
+\end{figure}
+
+
 The solution of the radial free fall starting from rest at $r=r_0$ is
 thus given in parametric form by Eqs.~(\ref{e:ges:sol_radial_infall}) and
-(\ref{e:ges:sol_t_radial_infall}). It has been obtained in the Schwarzschild-Droste coordinates
+(\ref{e:ges:sol_t_radial_infall}) and is represented in the left panel
+of Fig.~\ref{f:ges:radial_infall}. It has been obtained in the Schwarzschild-Droste coordinates
 $(t,r,\th,\ph)$, which are singular at the event horizon $\Hor$. So, one might wonder
 if such a solution can describe the full infall, with the crossing of $\Hor$.
 In particular, we notice that the differential equation for $t(\tau)$,
-Eq.~(\ref{e:ges:Dt_Dtau}), is singular at $r=2m$, i.e. on $\Hor$. The solution
-$t(\eta)$, as given by Eq.~(\ref{e:ges:sol_t_radial_infall}) is singular at
+Eq.~(\ref{e:ges:Dt_Dtau}), is singular at $r(\tau)=2m$, i.e. on $\Hor$. The solution
+$t(\eta)$, as given by Eq.~(\ref{e:ges:sol_t_radial_infall}), is singular at
 $\eta=\eta_{\rm h}$, where
 \be \label{e:ges:def_eta_star}
     \eta_{\rm h} := 2 \,\mathrm{atan}\, \sqrt{\frac{r_0}{2m} - 1}
