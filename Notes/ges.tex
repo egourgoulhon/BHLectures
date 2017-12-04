@@ -366,7 +366,7 @@ which can be rewritten in terms of the proper time $\tau$ as
 \be \label{e:ges:Dt_Dtau}
     \frac{\D t}{\D \tau} = \bar{\veps} \left(1 - \frac{2m}{r(\tau)} \right) ^{-1} ,
 \ee
-\be
+\be \label{e:ges:Dph_Dtau}
     \frac{\D\ph}{\D\tau} = \frac{\bar{\ell}}{r(\tau)^2}  .
 \ee
 
@@ -403,7 +403,7 @@ is given in parametrized form (parameter $\eta$) by
     \end{array} \right.
 \ee
 \item if $\veps=\mu$, the solution is
-\be \label{e:ge:sol_E_zero}
+\be \label{e:ges:sol_E_zero}
     r(\tau) =  \left( \frac{9 m}{2} (\tau -\tau_0)^2 \right) ^{1/3} ,
 \ee
 \item if $\veps<\mu$, the solution
@@ -660,7 +660,7 @@ If we substitute (\ref{e:ges:ell_r_circ}) for $\bar{\ell}$ in
 the expression (\ref{e:ges:V_eff_timelike}) of $V_{\rm eff}$
 and use Eq.~(\ref{e:ges:Veff_circ}), we obtain the value of the
 specific conserved energy along a circular orbit, in terms of $r$:
-\be
+\be \label{e:ges:eps_r_circ}
     \encadre{ \bar{\veps} = \frac{r - 2m}{\sqrt{r(r-3m)}} } .
 \ee
 This function is represented in Fig.~\ref{f:ges:ener_circ_orbit}.
@@ -670,13 +670,23 @@ The minimal value of $\bar{\veps}$ is achieved for $r=6m$, i.e. at the ISCO:
 \ee
 We notice that
 \be
-    r \geq 4 m \iff \bar{\veps} \leq 1 .
+    r > 4 m \iff \bar{\veps} < 1 \iff \veps < \mu .
 \ee
 This corresponds to \defin{bound orbits}\index{bound!orbit}\index{orbit!bound --},
 is to geodesics that, if slightly pertubed, cannot reach the asymptotically
-flat region $r\gg 2m$, since $\veps \geq \mu$ there, which implies $\bar{\veps} \geq 1$.
+flat region $r\gg 2m$, since $\veps \geq \mu$ there. Indeed, when
+$r\rightarrow +\infty$, the Killing vector $\w{\xi}$ can be interpreted
+as the 4-velocity of some asymptotically inertial observer (at rest with
+respect to the black hole) and $\veps$ is the particle energy measured by
+that observer; the famous Einstein relation (\ref{e:fra:E_Gam_m}) is then
+$\veps = \Gamma \mu$, where $\Gamma$ is the Lorentz factor
+of the particle with respect to the observer.
+Since $\Gamma \geq 1$ [Eq.~(\ref{e:fra:Gam_V2})], we have obviously\footnote{Similarly,
+the radial-motion solutions (\ref{e:ges:sol_E_pos})-(\ref{e:ges:sol_E_zero}), which
+allow for $r\rightarrow +\infty$, have $\veps\geq\mu$, while the solution (\ref{e:ges:sol_E_neg}),
+which is relevant for a free fall from rest, has $\veps < \mu$.} $\veps \geq \mu$.
 For this reason, the circular orbit at $r=4m$ is called the
-\defin{marginally bound orbit}\index{marginally bound!orbit}\index{orbit!marginally bound --}. Not that the marginally bound orbit is unstable, since it has $r<6m$.
+\defin{marginally bound orbit}\index{marginally bound!orbit}\index{orbit!marginally bound --}. Note that the marginally bound orbit is unstable, since it has $r<6m$.
 
 \begin{figure}
 \centerline{\includegraphics[height=0.4\textheight]{ges_ener_circ_orbit.pdf}}
@@ -689,6 +699,59 @@ corresponds to unstable orbits,
 while the solid part corresponds to stable ones.
 The horizontal red line marks the limit of bound orbits ($\veps=\mu$).}
 \end{figure}
+
+The \defin{angular velocity}\index{angular!velocity} of a circular orbit $\Li$ is defined by
+\be \label{e:ges:def_Omega}
+    \Omega := \left. \frac{\D\ph}{\D t} \right| _\Li = \frac{u^\ph}{u^t} ,
+\ee
+where $u^\ph = \D\ph/\D\tau$ and $u^t = \D t/\D\tau$ are the only
+nonzero components w.r.t. Schwarzschild-Droste coordinates
+of the 4-velocity $\w{u}$ of the particle $\mathscr{P}$ whose worldline is
+$\Li$. It follows from (\ref{e:ges:def_Omega}) that
+$\Omega$ enters into the linear combination of the two Killing
+vectors $\w{\xi}$ and $\w{\eta}$ expressing the 4-velocity on a circular
+orbit according to
+\be
+    \w{u} = u^t\left( \w{\xi} + \Omega \w{\eta} \right) .
+\ee
+The quantity $\Omega$ has a nice physical meaning: it is nothing but
+the angular velocity of $\mathscr{P}$ monitored by a distant static
+observer $\Obs$.
+\begin{proof}
+Suppose that $\Obs$ is located at fixed coordinates
+$(r,\th,\ph)=(r_\Obs,\pi/2,0)$ with $r_\Obs\gg m$ and that
+$\mathscr{P}$ emits a photon at the event
+$(t_1, r, \pi/2, 0)$ along a \emph{radial} null geodesic. This photon is received
+by $\Obs$ at $t=t'_1$. After one orbit, at the event $(t_2, r, \pi/2, 0)$,
+$\mathscr{P}$ emits a second photon in the radial direction, which is received
+at $t=t'_2$ by $\Obs$. According to the definition (\ref{e:ges:def_Omega})
+of $\Omega$, we have
+\[
+    2\pi = \Omega(t_2 - t_1) .
+\]
+On the other hand, since $r_\Obs\gg m$, the proper time of $\Obs$ is $t$, so that the
+angular velocity measured by $\Obs$ is
+\[
+    \Omega_\Obs = \frac{2\pi}{t'_2 - t'_1} .
+\]
+Now, since $t$ is the coordinate associated to
+the spacetime invariance by time translation (stationarity), we have
+necessarily $t'_2 - t'_1 = t_2 - t_1$. Accordingly, the above two equations
+combine to $\Omega_\Obs = \Omega$.
+\end{proof}
+
+By combining Eqs.~(\ref{e:ges:Dt_Dtau}) and (\ref{e:ges:Dph_Dtau}), we get
+\[
+    \Omega = \frac{1}{r^2} \left( 1 -\frac{2m}{r} \right) \frac{\bar{\ell}}{\bar{\veps}} .
+\]
+Substituting expression (\ref{e:ges:ell_r_circ}) for $\bar{\ell}$ and
+expression (\ref{e:ges:eps_r_circ}) for $\bar{\veps}$, we obtain
+\be
+    \encadre{ \Omega = \sqrt{\frac{m}{r^3}} } .
+\ee
+\begin{remark}
+This formula is identical to that of Newtonian gravity.
+\end{remark}
 
 \section{Null geodesics}
 
