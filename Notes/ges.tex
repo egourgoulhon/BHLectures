@@ -273,7 +273,7 @@ Eq.~(\ref{e:ges:dot_r_square}) for timelike geodesics and for null ones.
 
 \section{Timelike geodesics}
 
-\subsection{Effective potential}
+\subsection{Effective potential} \label{s:ges:eff_pot_timelike}
 
 When the geodesic $\Li$ is timelike, it is natural to use the proper time $\tau$
 as an affine parameter along it, instead to the parameter $\lambda$ associated
@@ -477,7 +477,7 @@ Substituting $r$ from Eq.~(\ref{e:ges:sol_radial_infall}), we get
     \frac{\D t}{\D\eta} =   \frac{r_0}{2} \sqrt{\frac{r_0}{2m} - 1} \;
         \frac{(1+\cos\eta)^2}{1+\cos\eta - 4m/r_0} .
 \]
-This equation can be integrated to (cf. Sec.~\ref{s:sam:ges_radial_free_fall})
+This equation can be integrated to (cf. the \textsf{SageMath} computation in Sec.~\ref{s:sam:ges_radial_free_fall})
 \be \label{e:ges:sol_t_radial_infall}
    \encadre{ t = 2m \left\{ \sqrt{\frac{r_0}{2m} - 1} \left[ \eta + \frac{r_0}{4m}
     (\eta + \sin\eta) \right]
@@ -490,8 +490,9 @@ where we have assumed $t=0$ at $\tau=0$ ($\eta=0$).
 \includegraphics[height=0.5\textheight]{ges_radial_infall_IEF.pdf}}
 \caption[]{\label{f:ges:radial_infall} \footnotesize
 Radial free fall from rest, viewed in Schwarzschild-Droste coordinates $(t,r)$
-(left) and in the ingoing Eddington-Finkelstein coordinates $(\tilde{t},r)$ (right),
-for various values $r_0$ of the coordinate $r$ at $\tau=0$.}
+(left) and in the ingoing Eddington-Finkelstein coordinates $(\ti,r)$ (right),
+for various values $r_0$ of the coordinate $r$ at $\tau=0$. The grey area is the
+black hole region $\M_{\rm II}$.}
 \end{figure}
 
 
@@ -510,7 +511,9 @@ $\eta=\eta_{\rm h}$, where
 \ee
 is precisely the value of $\eta$ yielding $r=2m$ in Eq.~(\ref{e:ges:sol_radial_infall})
 [to see it, rewrite the second part of Eq.~(\ref{e:ges:sol_radial_infall}) as
-$r=r_0\cos^2(\eta/2) = r_0/(1+\tan^2(\eta/2))$]. On the other hand, the equation
+$r=r_0\cos^2(\eta/2) = r_0/(1+\tan^2(\eta/2))$].
+This singularity of $t(\eta)$ appears also clearly on Fig.~\ref{f:ges:radial_infall} (left panel).
+On the other hand, the equation
 for $r$, Eq.~(\ref{e:ges:radial_motion}), does not exhibit any pathology
 at $r=2m$, nor its solution (\ref{e:ges:sol_t_radial_infall}).
 Actually, had we started from the ingoing Eddington-Finkelstein (IEF) coordinates
@@ -518,7 +521,7 @@ $(\ti,r,\th,\ph)$, instead of the Schwarzschild-Droste ones, we would have
 found\footnote{{\emph Exercice:} do it!}
 exactly the same solution for $r(\tau)$ (which is not surprising since
 $r$, considered as a scalar field on $\M$, is perfectly regular at $\Hor$).
-The solution for $\ti(\tau)$ is deduced from that for $t(\tau)$ by
+The solution for $\ti(\tau)$ can be deduced from that for $t(\tau)$ by
 the coordinate transformation law (\ref{e:sch:ti_t_r}). Noticing that and
 $r/(2m) = \cos^2(\eta/2)/\cos^2(\eta_{\rm h}/2)$, we get
 \bea
@@ -552,13 +555,24 @@ We get then
     +  2 \ln \left[ \cos\frac{\eta}{2}  + \left(\frac{r_0}{2m} - 1\right)^{-1/2} \sin \frac{\eta}{2} \right] \right\} } .
 \ee
 This expression is perfectly regular for all values of $\eta$ in $[0,\pi]$, reflecting
-the fact that the ingoing Eddington-Finkelstein coordinates cover all $\M$.
+the fact that the ingoing Eddington-Finkelstein coordinates cover all $\M$
+in a regular way. The radial free fall solution in terms of $(\ti, r)$
+is represented in the right panel of Fig.~\ref{f:ges:radial_infall}. We note the
+smooth crossing of the event horizon $\Hor$.
+
+\begin{figure}
+\centerline{\includegraphics[height=0.4\textheight]{ges_infall_time.pdf}}
+\caption[]{\label{f:ges:infall_time} \footnotesize
+Proper time elapsed to reach the event horizon ($\tau_{\rm h}$, dashed curve)
+and the central singularity ($\tau_{\rm f}$, solid curve), as a function
+of the initial value of $r$ for a radial free fall from rest.}
+\end{figure}
 
 In view of Eq.~(\ref{e:ges:sol_radial_infall}), we may say that the radial
 infall starts at $\eta=0$, for which $\tau=0$ and $r=r_0$, and terminates
 at $\eta=\pi$, for which $r=0$, which means that the particle hits the curvature
 singularity. The final value of the particle's proper time is obtained by
-setting $\eta=\pi$ in the first line of (\ref{e:ges:sol_radial_infall}):
+setting $\eta=\pi$ in Eq.~(\ref{e:ges:sol_radial_infall}):
 \be
     \encadre{\tau_{\rm f} = \pi \sqrt{\frac{r_0^3}{8 m}} } .
 \ee
@@ -583,11 +597,98 @@ of the IEF coordinate $\ti$:
         \sqrt{\frac{r_0}{2m} - 1} \, \mathrm{atan}\, \sqrt{\frac{r_0}{2m} - 1}
         + \frac{r_0}{2m} - 1 - \ln\frac{r_0}{2m} \right] } .
 \ee
+The variation of $\tau_{\rm h}$ and $\tau_{\rm f}$ with $r_0$ are depicted in
+Fig.~\ref{f:ges:infall_time}.
 
+\subsection{Circular orbits}\index{circular!orbit}\index{orbit!circular --}
 
-\subsection{Circular orbits}
+Circular orbits are defined as timelike geodesics with $r = \mathrm{const}$.
+We have then $\D r/\D\tau = 0$ and $\D^2 r/\D\tau^2 = 0$.
+Equation~(\ref{e:ges:1d_motion_timelike}) implies then for such orbits
+\begin{subequations}
+\begin{align}
+& V_{\rm eff}(r) = \frac{\bar{\veps}^2 - 1}{2} \label{e:ges:Veff_circ} \\
+& \frac{\D V_{\rm eff}}{\D r} = 0 . \label{e:ges:dVeffdr_zero}
+\end{align}
+\end{subequations}
+Given the expression (\ref{e:ges:V_eff_timelike}) of $V_{\rm eff}$,
+Eq.~(\ref{e:ges:dVeffdr_zero}) is equivalent to
+\be \label{e:ges:eq_r_ell_circ}
+    m r^2 - \bar{\ell}^2 r + 3 \bar{\ell}^2 m = 0 .
+\ee
+As already noticed in Sec.~\ref{s:ges:eff_pot_timelike}, this
+quadratic equation in $r$ admits real roots iff $|\bar{\ell}| \geq \bar{\ell}_{\rm crit}$,
+with $\bar{\ell}_{\rm crit} = 2\sqrt{3}\, m$ [Eq.~(\ref{e:ges:ell_crit})].
+The two roots are then
+\be \label{e:ges:r_circ_ell}
+    \encadre{ r_{\rm circ}^\pm(\bar{\ell}) = \frac{\bar{\ell}^2}{2m} \left(
+     1 \pm \sqrt{1 - \left( \frac{\bar{\ell}_{\rm crit}}{\bar{\ell}} \right) ^2 } \right) }.
+\ee
+$r_{\rm circ}^+(\bar{\ell})$ corresponds to a minimum of the effective potential
+$V_{\rm eff}$ and thus
+to a stable orbit (see the dots in Fig.~\ref{f:ges:eff_pot_zoom}),
+while $r_{\rm circ}^-(\bar{\ell})$ corresponds to a
+maximum of $V_{\rm eff}$ and thus to an unstable orbit.
+When $\bar{\ell}$ varies from $\bar{\ell}_{\rm crit}$ to $+\infty$,
+$r_{\rm circ}^+(\bar{\ell})$ increases from $6 m$ to $+\infty$, while
+$r_{\rm circ}^-(\bar{\ell})$ decreases from $6 m$ to $3 m$ (cf. Fig.~\ref{f:ges:ell_circ_orbit}). We conclude that
+\begin{greybox}
+Circular orbits in Schwarzschild spacetime exist for all values of $r>3m$.
+Those with $r<6m$ are unstable and those with $r>6m$ are stable. The marginal
+case $r=6m$ is called the \defin{innermost stable circular orbit}\index{stable!circular orbit}, often abriged as \defin{ISCO}\index{ISCO}.
+\end{greybox}
 
+\begin{figure}
+\centerline{\includegraphics[height=0.4\textheight]{ges_ell_circ_orbit.pdf}}
+\caption[]{\label{f:ges:ell_circ_orbit} \footnotesize
+Specific conserved angular momentum $\bar{\ell} = \ell/\mu$
+on circular orbits as a function of the
+orbit circumferential radius $r$. The dashed part of the curve
+corresponds to unstable orbits ($r=r_{\rm circ}^-(\bar{\ell})$, as given by Eq.~(\ref{e:ges:r_circ_ell})), while
+the solid part corresponds to stable orbits ($r=r_{\rm circ}^+(\bar{\ell})$).
+The minimal value of $\bar{\ell}$ is $\bar{\ell}_{\rm crit} = 2\sqrt{3}\, m \simeq 3.46\, m$.}
+\end{figure}
 
+From Eq.~(\ref{e:ges:eq_r_ell_circ}), we can easily express $\bar{\ell}$
+as a function of $r$ on a circular orbit:
+\be \label{e:ges:ell_r_circ}
+    \encadre{ |\bar{\ell}| = r \sqrt{\frac{m}{r - 3m}} } .
+\ee
+This function is represented in Fig.~\ref{f:ges:ell_circ_orbit} (for $\bar{\ell} > 0$).
+
+If we substitute (\ref{e:ges:ell_r_circ}) for $\bar{\ell}$ in
+the expression (\ref{e:ges:V_eff_timelike}) of $V_{\rm eff}$
+and use Eq.~(\ref{e:ges:Veff_circ}), we obtain the value of the
+specific conserved energy along a circular orbit, in terms of $r$:
+\be
+    \encadre{ \bar{\veps} = \frac{r - 2m}{\sqrt{r(r-3m)}} } .
+\ee
+This function is represented in Fig.~\ref{f:ges:ener_circ_orbit}.
+The minimal value of $\bar{\veps}$ is achieved for $r=6m$, i.e. at the ISCO:
+\be
+    \encadre{ \mathrm{min}\,  \bar{\veps} = \frac{2\sqrt{2}}{3} \simeq 0.9428} .
+\ee
+We notice that
+\be
+    r \geq 4 m \iff \bar{\veps} \leq 1 .
+\ee
+This corresponds to \defin{bound orbits}\index{bound!orbit}\index{orbit!bound --},
+is to geodesics that, if slightly pertubed, cannot reach the asymptotically
+flat region $r\gg 2m$, since $\veps \geq \mu$ there, which implies $\bar{\veps} \geq 1$.
+For this reason, the circular orbit at $r=4m$ is called the
+\defin{marginally bound orbit}\index{marginally bound!orbit}\index{orbit!marginally bound --}. Not that the marginally bound orbit is unstable, since it has $r<6m$.
+
+\begin{figure}
+\centerline{\includegraphics[height=0.4\textheight]{ges_ener_circ_orbit.pdf}}
+\caption[]{\label{f:ges:ener_circ_orbit} \footnotesize
+Specific conserved energy $\bar{\veps} = \veps/\mu$
+on circular orbits as a function of the
+orbit circumferential radius $r$.
+The dashed part of the curve
+corresponds to unstable orbits,
+while the solid part corresponds to stable ones.
+The horizontal red line marks the limit of bound orbits ($\veps=\mu$).}
+\end{figure}
 
 \section{Null geodesics}
 
