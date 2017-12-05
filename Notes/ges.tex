@@ -563,9 +563,20 @@ smooth crossing of the event horizon $\Hor$.
 \begin{figure}
 \centerline{\includegraphics[height=0.4\textheight]{ges_infall_time.pdf}}
 \caption[]{\label{f:ges:infall_time} \footnotesize
-Proper time elapsed to reach the event horizon ($\tau_{\rm h}$, dashed curve)
+Elapsed proper time to reach the event horizon ($\tau_{\rm h}$, dashed curve)
 and the central singularity ($\tau_{\rm f}$, solid curve), as a function
 of the initial value of $r$ for a radial free fall from rest.}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[height=0.4\textheight]{ges_time_inside.pdf}}
+\caption[]{\label{f:ges:time_inside} \footnotesize
+Proper time spent inside the black hole region as a function
+of the initial value of $r$ for a radial free fall from rest.
+Note that $r_0=2m$ does not correspond to an asymptote but to
+a vertical tangent from the finite value $\Delta\tau_{\rm in} = \pi\, m$.
+On the other side, there is the asymptotic value
+$\Delta\tau_{\rm in} \rightarrow 4m/3$ for $r_0\rightarrow +\infty$.}
 \end{figure}
 
 In view of Eq.~(\ref{e:ges:sol_radial_infall}), we may say that the radial
@@ -574,7 +585,7 @@ at $\eta=\pi$, for which $r=0$, which means that the particle hits the curvature
 singularity. The final value of the particle's proper time is obtained by
 setting $\eta=\pi$ in Eq.~(\ref{e:ges:sol_radial_infall}):
 \be
-    \encadre{\tau_{\rm f} = \pi \sqrt{\frac{r_0^3}{8 m}} } .
+    \encadre{\tau_{\rm f} = \frac{\pi}{2} \sqrt{\frac{r_0^3}{2 m}} } .
 \ee
 Similarly, the final value of $\ti$ is obtained by setting $\eta=\pi$ in (\ref{e:ges:sol_radial_infall_ti}):
 \be
@@ -598,7 +609,48 @@ of the IEF coordinate $\ti$:
         + \frac{r_0}{2m} - 1 - \ln\frac{r_0}{2m} \right] } .
 \ee
 The variation of $\tau_{\rm h}$ and $\tau_{\rm f}$ with $r_0$ are depicted in
-Fig.~\ref{f:ges:infall_time}.
+Fig.~\ref{f:ges:infall_time} and numerical values for $r_0=6m$ and
+standard astrophysical black holes are provided in
+Table~\ref{t:ges:time_free_fall}.
+
+\begin{table}
+\centerline{
+\begin{tabular}{c|c|c|c|c}
+\hline
+$m$ & $r_{\rm S} = 2m$ & $\tau_{\rm h}$ & $\tau_{\rm f}$ & $\Delta\tau_{\rm in}$ \\[0.5ex]
+\hline\hline
+$15\, M_\odot$ (Cyg X-1) & $44.3 {\rm\; km}$ & $1.10 {\rm\; ms}$ & $1.21 {\rm\; ms}$ & $0.11 {\rm\; ms}$ \\[0.5ex]
+\hline
+$4\; 10^6 \, M_\odot$ (Sgr A*) & $11.8\; 10^6 {\rm\; km}$ & $4 {\rm\; min\; } 52 {\rm\; s}$ & $6 {\rm\; min\; } 22 {\rm\; s}$ & $30 {\rm\; s}$ \\[0.5ex]
+\hline
+$6\; 10^9 \, M_\odot$ (M 87) & $118 {\rm\; UA}$ & $5.07 {\rm\; days}$ & $5.58 {\rm\; days}$ & $12 {\rm\; h\;} 17 {\rm\; min}$ \\[0.5ex]
+\hline
+\end{tabular}
+}
+\caption[]{\label{t:ges:time_free_fall} \footnotesize
+Proper time to reach the event horizon ($\tau_{\rm h}$), to reach
+the central curvature singularity ($\tau_{\rm f}$) and elapsed proper
+time inside the black hole region ($\Delta\tau_{\rm in}$), when freely falling
+from rest at $r_0 = 6m$. The numerical values are given for various
+black hole masses $m$, corresponding to astrophysical objects:
+a stellar black hole (Cyg X-1), the black hole at the center of our galaxy
+(Sgr A*) and the massive black hole in the nucleus of the galaxy M~87.}
+\end{table}
+
+The proper time spent inside the black hole is
+\be
+    \encadre{\Delta\tau_{\rm in}  = \tau_{\rm f} - \tau_{\rm h}
+    = \sqrt{\frac{r_0^3}{2m}}
+        \left[ \frac{\pi}{2} - \mathrm{atan}\, \sqrt{\frac{r_0}{2m} - 1} -
+        \sqrt{\frac{2m}{r_0} \left( 1 - \frac{2m}{r_0} \right) } \right] } .
+\ee
+It varies between $\pi m$ ($r_0 \rightarrow 2m$) and $4m/3$ ($r_0 \rightarrow +\infty$)
+(cf. Fig.~\ref{f:ges:time_inside} and Sec.~\ref{s:sam:ges_radial_free_fall}
+for the computation of $\lim_{r_0\rightarrow +\infty} \Delta\tau_{\rm in}$).
+Numerical values for standard astrophysical black holes are provided in
+Table~\ref{t:ges:time_free_fall}.
+
+%%%%%%%%%%%%%%%%%
 
 \subsection{Circular orbits}\index{circular!orbit}\index{orbit!circular --}
 
@@ -746,12 +798,36 @@ By combining Eqs.~(\ref{e:ges:Dt_Dtau}) and (\ref{e:ges:Dph_Dtau}), we get
 \]
 Substituting expression (\ref{e:ges:ell_r_circ}) for $\bar{\ell}$ and
 expression (\ref{e:ges:eps_r_circ}) for $\bar{\veps}$, we obtain
-\be
+\be \label{e:ges:Omega_m_r}
     \encadre{ \Omega = \sqrt{\frac{m}{r^3}} } .
 \ee
 \begin{remark}
-This formula is identical to that of Newtonian gravity.
+This formula is identical to that of Newtonian gravity (Kepler's third law for circular
+orbits), but it is a mere coincidence.
 \end{remark}
+
+\begin{remark}
+$\Omega$ is not the orbital angular frequency experienced by the particle/observer
+$\mathscr{P}$ on the circular orbit $\Li$, because the proper time of $\mathscr{P}$ is
+$\tau$ and not $t$. The actual orbital frequency measured by $\mathscr{P}$
+is
+\[
+    \Omega_{\mathscr{P}} = \frac{\D t}{\D \tau} \Omega = u^t \Omega ,
+\]
+with $u^t = \D t/\D\tau$ obtained from (\ref{e:ges:Dph_Dtau}) and
+(\ref{e:ges:eps_r_circ}): $u^t = \sqrt{r/(r-3m)}$. Hence
+\be
+    \Omega_{\mathscr{P}} = \sqrt{\frac{r}{r-3m}}\, \Omega  =
+       \frac{1}{r}\sqrt{\frac{m}{r-3m}} .
+\ee
+We notice that $\Omega_{\mathscr{P}} > \Omega$.
+\end{remark}
+
+At the ISCO, $r=6m$ and formula (\ref{e:ges:Omega_m_r}) yields
+\be
+    \encadre{ \Omega_{\rm ISCO} = \frac{1}{6\sqrt{6}\, m} } .
+\ee
+
 
 \section{Null geodesics}
 
