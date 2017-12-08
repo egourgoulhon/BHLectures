@@ -119,8 +119,10 @@ where $\w{\xi}$ is spacelike (cf. Sec.~\ref{s:sch:SD_domain}),
 it is possible to have $E \leq 0$, since the
 scalar product of $\w{p}$ with a spacelike vector can take any value.
 \end{remark}
-\begin{remark}
-The Killing vector $\w{\eta}$ being always spacelike, there is no constraint
+\begin{remark}\label{r:ges:L_any_sign}
+The Killing vector $\w{\eta}$ being always spacelike,
+the scalar product $\w{g}(\w{\eta},\w{p})$ can a priori take any real value, and
+thus there is no constraint
 on the sign of $L$.
 \end{remark}
 
@@ -204,6 +206,10 @@ Since $\th=\pi/2$, we get
 \be \label{e:ges:dot_ph}
     \encadre{\frac{\D\ph}{\D\lambda} = \frac{L}{r^2} } .
 \ee
+We have already noticed that the sign of $L$ is unconstrained (Remark~\ref{r:ges:L_any_sign} on p.~\pageref{r:ges:L_any_sign}). The above equation
+shows that it corresponds to the increase ($L>0$) or decrease $(L<0)$
+of $\ph$ along the geodesic $\Li$.
+
 The last unexploited first integral of motion is Eq.~(\ref{e:ges:p2_mu2}); it
 yields
 \[
@@ -313,8 +319,10 @@ in $\M_{\rm I}$, i.e. some part with $r>2m$:
 \be \label{e:ges:eps_positive_M_I}
     \Li \cap \M_{\rm I} \not= \varnothing \quad \Longrightarrow \quad \veps > 0 .
 \ee
+On the contrary, $\ell$ can be either positive, zero or negative, depending
+on the variation of $\ph$ along $\Li$, as was already noticed above for $L$.
 
-We notice that Eq.~(\ref{e:ges:1d_motion_timelike}) takes the shape of
+We note that Eq.~(\ref{e:ges:1d_motion_timelike}) takes the shape of
 the 1-dimensional motion of a non-relativist particle in the potential
 $V_{\ell}$, the term $1/2 \, (\D r/\D\tau)^2$ being interpreted as
 the kinetic energy per unit mass, $V_{\ell}(r)$ as the potential
@@ -666,6 +674,7 @@ Table~\ref{t:ges:time_free_fall}.
 %%%%%%%%%%%%%%%%%
 
 \subsection{Circular orbits}\index{circular!orbit}\index{orbit!circular --}
+\label{s:ges:circular_orbits}
 
 Circular orbits are defined as timelike geodesics with $r = \mathrm{const}$.
 We have then $\D r/\D\tau = 0$ and $\D^2 r/\D\tau^2 = 0$.
@@ -734,7 +743,7 @@ The minimal value of $\veps$ is achieved for $r=6m$, i.e. at the ISCO:
     \encadre{ \mathrm{min}\,  \veps = \frac{2\sqrt{2}}{3} \simeq 0.9428} .
 \ee
 We notice that
-\be
+\be \label{e:ges:r_marginally_bound}
     r > 4 m \iff \veps < 1 \iff E < \mu .
 \ee
 This corresponds to \defin{bound orbits}\index{bound!orbit}\index{orbit!bound --},
@@ -868,7 +877,8 @@ Table~\ref{t:ges:freq_ISCO}.
 \begin{figure}
 \centerline{\includegraphics[height=0.4\textheight]{ges_eff_pot_bound.pdf}}
 \caption[]{\label{f:ges:eff_pot_bound} \footnotesize
-Effective potential $V_{\ell}(r)$ for $\ell = 4.2 m$.
+Effective potential $V_{\ell}(r)$ for $\ell = 4.2 m$ (one of the values displayed
+in Figs.~\ref{f:ges:eff_pot}  and \ref{f:ges:eff_pot_zoom}).
 The horizontal red line marks $V_{\ell}(r) = (\veps^2-1)/2$
 with $\veps = 0.973$.
 }
@@ -876,13 +886,51 @@ with $\veps = 0.973$.
 
 \subsection{Other orbits}
 
-Let us relax the assumption of circular orbit and consider generic orbits
+Let us relax the assumption of circular orbit and consider generic orbits $\Li$
 obeying
 \be
-    | \ell | < \ell_{\rm crit} \qquad\mbox{and}\qquad
+    | \ell | > \ell_{\rm crit} \qquad\mbox{and}\qquad
       0 < \veps < 1 .
 \ee
-The first condition ensures that the effective potential
+The first condition ensures that the effective potential $V_{\ell}(r)$
+has a well shape in the region $r>2m$ (cf. Fig.~\ref{f:ges:eff_pot_bound})
+and the second one that the particle $\mathscr{P}$ is trapped in this well,
+making the right-hand of Eq.~(\ref{e:ges:1d_motion_timelike}) negative, so
+that the region $r\rightarrow +\infty$, where $V_{\ell}(r)\rightarrow 0$,
+cannot be reached. We have also argued in Sec.~\ref{s:ges:circular_orbits}
+that $\veps < 1$ is forbiden in the region $r\rightarrow +\infty$ on physical
+grounds [cf. the discussion below Eq.~(\ref{e:ges:r_marginally_bound})].
+
+In the potential well, the $r$-coordinate along $\Li$ varies between two
+extrema: a mimimum $r_{\rm per}$, for \defin{pericenter}\index{pericenter} (or
+\defin{periastron}\index{periastron}), and
+a maximum
+$r_{\rm apo}$, for \defin{apocenter}\index{apocenter} (or \defin{apoastron}\index{apoastron}) (cf. Fig.~\ref{f:ges:eff_pot_bound}). Being extrema of $r(\tau)$,
+the values of $r_{\rm per}$ and $r_{\rm apo}$ are obtained by setting
+$\D r /\D\tau =0$ in Eq.~(\ref{e:ges:1d_motion_timelike}), which leads to
+\be
+    \left( 1 - \frac{2m}{r} \right) \left( 1 + \frac{\ell^2}{r^2} \right)
+        = \veps^2 .
+\ee
+This is a cubic equation in $r^{-1}$, which has three real roots, corresponding
+to the three intersections of the curve $V_{\ell}(r)$ with the horizontal
+line at $(\veps^2-1)/2$ in Fig.~\ref{f:ges:eff_pot_bound}. However the smaller
+root has to be disregarded since it would lead to a motion with
+$V_{\ell}(r) > (\veps^2-1)/2$, which is forbiden by Eq.~(\ref{e:ges:1d_motion_timelike}).
+
+We get, from Eqs.~(\ref{e:ges:1d_motion_timelike})-(\ref{e:ges:V_eff_timelike}):
+\be
+    \frac{\D r}{\D\tau} = \pm
+    \sqrt{ \veps^2 - \left(1 - \frac{2m}{r}\right) \left( 1 + \frac{\ell^2}{r^2} \right) } .
+\ee
+Using $\D\ph/\D r = \D\ph /\D\tau \times \D\tau/\D r$ and expression
+(\ref{e:ges:Dph_Dtau}) for $\D\ph /\D\tau$, we obtain the equation governing
+the shape of the orbit in the plane $\th=\pi/2$:
+\be
+    \encadre{ \frac{\D \ph}{\D r} = \pm \frac{\ell}{r^2}
+        \left[ \veps^2 - \left(1 - \frac{2m}{r}\right) \left( 1 + \frac{\ell^2}{r^2} \right) \right] ^{-1/2} } .
+\ee
+
 
 \section{Null geodesics}
 
