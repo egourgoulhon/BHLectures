@@ -302,7 +302,7 @@ Equation~(\ref{e:ges:dot_r_square}) becomes then
 where
 \be \label{e:ges:V_eff_timelike}
      \encadre{V_{\ell}(r) := - \frac{m}{r} + \frac{\ell^2}{2 r^2}
-     - \frac{\ell^2 m}{r^3} }
+     \left( 1 - \frac{2 m}{r} \right)}
 \ee
 and $\veps$ and $\ell$ are respectively the
 \defin{specific conserved energy}\index{specific!conserved!energy}
@@ -322,9 +322,10 @@ in $\M_{\rm I}$, i.e. some part with $r>2m$:
 On the contrary, $\ell$ can be either positive, zero or negative, depending
 on the variation of $\ph$ along $\Li$, as was already noticed above for $L$.
 
-We note that Eq.~(\ref{e:ges:1d_motion_timelike}) takes the shape of
+We note that Eq.~(\ref{e:ges:1d_motion_timelike}) has the shape of the
+first integral of the
 the 1-dimensional motion of a non-relativist particle in the potential
-$V_{\ell}$, the term $1/2 \, (\D r/\D\tau)^2$ being interpreted as
+$V_{\ell}$ (called hereafter the \defin{effective potential}\index{effective!potential}), the term $1/2 \, (\D r/\D\tau)^2$ being interpreted as
 the kinetic energy per unit mass, $V_{\ell}(r)$ as the potential
 energy per unit mass and the constant right-hand side $(\veps^2-1)/2$ as the total
 mechanical energy per unit mass.
@@ -691,12 +692,12 @@ Eq.~(\ref{e:ges:dVeffdr_zero}) is equivalent to
     m r^2 - \ell^2 r + 3 \ell^2 m = 0 .
 \ee
 As already noticed in Sec.~\ref{s:ges:eff_pot_timelike}, this
-quadratic equation in $r$ admits real roots iff $|\ell| \geq \ell_{\rm crit}$,
-with $\ell_{\rm crit} = 2\sqrt{3}\, m$ [Eq.~(\ref{e:ges:ell_crit})].
-The two roots are then
+quadratic equation in $r$ admits two real roots iff $|\ell| \geq \ell_{\rm crit}$,
+with $\ell_{\rm crit} = 2\sqrt{3}\, m$ [Eq.~(\ref{e:ges:ell_crit})],
+which are
 \be \label{e:ges:r_circ_ell}
-    \encadre{ r_{\rm circ}^\pm(\ell) = \frac{\ell^2}{2m} \left(
-     1 \pm \sqrt{1 - \left( \frac{\ell_{\rm crit}}{\ell} \right) ^2 } \right) }.
+    \encadre{ r_{\rm circ}^\pm(\ell) = \frac{\ell}{2m} \left( \ell \pm
+    \sqrt{\ell^2 - \ell_{\rm crit}^2} \right) }.
 \ee
 $r_{\rm circ}^+(\ell)$ corresponds to a minimum of the effective potential
 $V_{\ell}$ and thus
@@ -742,7 +743,7 @@ The minimal value of $\veps$ is achieved for $r=6m$, i.e. at the ISCO:
 \be
     \encadre{ \mathrm{min}\,  \veps = \frac{2\sqrt{2}}{3} \simeq 0.9428} .
 \ee
-We notice that
+From Fig.~\ref{f:ges:ener_circ_orbit}, we notice that
 \be \label{e:ges:r_marginally_bound}
     r > 4 m \iff \veps < 1 \iff E < \mu .
 \ee
@@ -772,6 +773,18 @@ The dashed part of the curve
 corresponds to unstable orbits,
 while the solid part corresponds to stable ones.
 The horizontal red line $\veps=1$ marks the limit of bound orbits.}
+\end{figure}
+
+The track of circular orbits in the $(\ell,\veps)$ plane is depicted in
+Fig.~\ref{f:ges:circ_eps_ell}. The ISCO, which is a minimum for both $\veps$
+and $\ell$, appears as a cusp point.
+
+\begin{figure}
+\centerline{\includegraphics[height=0.4\textheight]{ges_circ_eps_ell.pdf}}
+\caption[]{\label{f:ges:circ_eps_ell} \footnotesize
+Circular orbits in the $(\ell,\veps)$ plane.
+The solid (resp. dashed) curve
+corresponds to stable (resp. unstable) orbits. The ISCO is located at the cusp point.}
 \end{figure}
 
 The \defin{angular velocity}\index{angular!velocity} of a circular orbit $\Li$ is defined by
@@ -837,7 +850,7 @@ is
 \[
     \Omega_{\mathscr{P}} = \frac{\D t}{\D \tau} \Omega = u^t \Omega ,
 \]
-with $u^t = \D t/\D\tau$ obtained from (\ref{e:ges:Dph_Dtau}) and
+with $u^t = \D t/\D\tau$ obtained from (\ref{e:ges:Dt_Dtau}) and
 (\ref{e:ges:eps_r_circ}): $u^t = \sqrt{r/(r-3m)}$. Hence
 \be
     \Omega_{\mathscr{P}} = \sqrt{\frac{r}{r-3m}}\, \Omega  =
@@ -880,7 +893,7 @@ Table~\ref{t:ges:freq_ISCO}.
 Effective potential $V_{\ell}(r)$ for $\ell = 4.2 m$ (one of the values displayed
 in Figs.~\ref{f:ges:eff_pot}  and \ref{f:ges:eff_pot_zoom}).
 The horizontal red line marks $V_{\ell}(r) = (\veps^2-1)/2$
-with $\veps = 0.973$.
+with $\veps = 0.973$, leading to $r_{\rm per} = 9.058\, m$ and $r_{\rm apo} = 25.634\, m$.
 }
 \end{figure}
 
@@ -930,6 +943,26 @@ the shape of the orbit in the plane $\th=\pi/2$:
     \encadre{ \frac{\D \ph}{\D r} = \pm \frac{\ell}{r^2}
         \left[ \veps^2 - \left(1 - \frac{2m}{r}\right) \left( 1 + \frac{\ell^2}{r^2} \right) \right] ^{-1/2} } .
 \ee
+
+\begin{figure}
+\centerline{\includegraphics[height=0.4\textheight]{ges_orbit_e973_l42.pdf}}
+\caption[]{\label{f:ges:orbit_e973_l42} \footnotesize
+Timelike geodesic with $\veps = 0.973$ and $\ell=4.2m$ (same values as in
+Fig.~\ref{f:ges:eff_pot_bound}), plotted in terms of the coordinates
+$(x,y) = (r\cos\ph, r\sin\ph)$. The dotted circles correspond to $r=r_{\rm per}$
+(pericenter) and $r=r_{\rm apo}$ (apocenter).
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.48\textwidth]{ges_orbit_e967_l42.pdf}\quad
+\includegraphics[width=0.48\textwidth]{ges_orbit_e990_l42.pdf}}
+\caption[]{\label{f:ges:orbit_e967_990_l42} \footnotesize
+Timelike geodesics with the value of $\ell$ as in Fig.~\ref{f:ges:orbit_e973_l42} ($\ell=4.2m$), but for different values of $\veps$: $\veps = 0.967$ (left) and $\veps=0.990$ (right).
+Note that the left and right scales are different.
+}
+\end{figure}
+
 
 
 \section{Null geodesics}
