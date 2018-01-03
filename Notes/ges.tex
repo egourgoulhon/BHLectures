@@ -308,10 +308,13 @@ and $\veps$ and $\ell$ are respectively the
 \defin{specific conserved energy}\index{specific!conserved!energy}
 and \defin{specific conserved angular momentum}\index{specific!conserved!angular momuntum}
 of particle $\mathscr{P}$:
-\be
-  \encadre{ \veps := \frac{E}{\mu} }\qquad\mbox{and}\qquad
-  \encadre{ \ell :=  \frac{L}{\mu} }.
+\be \label{e:ges:def_eps_ell}
+  \encadre{ \veps := \frac{E}{\mu} = - \w{\xi}\cdot \w{u}}\qquad\mbox{and}\qquad
+  \encadre{ \ell :=  \frac{L}{\mu} = \w{\eta}\cdot\w{u}} ,
 \ee
+where $\w{u}$ is the 4-velocity of $\mathscr{P}$ and the second equalities
+result from definitions (\ref{e:ges:conserved_quantities})
+and the relation $\w{p} = \mu \, \w{u}$ [Eq.~(\ref{e:fra:p_m_u})].
 Note that $\veps$ is dimensionless (in units $c=1$) and that it shares the
 same positiveness property (\ref{e:ges:E_positive_M_I}) as $E$,
 namely $\veps$ is positive as soon as the timelike geodesic $\Li$ has some part
@@ -334,6 +337,25 @@ The effective potential (\ref{e:ges:V_eff_timelike}) differs from its
 non-relativistic (Newtonian) counterpart only by the factor $1-2m/r$ instead of
 $1$. This difference plays an important role for small values of $r$,
 leading to some orbital instability, as we shall see in Sec.~\ref{s:ges:circular_orbits}.
+\end{remark}
+
+\begin{remark}
+In $\M_{\rm I}$, where the Killing vector $\w{\xi}$ is timelike,
+we may introduce the \defin{static observer}\index{static!observer}
+$\Obs$, whose 4-velocity $\w{u}_{\Obs}$ is colinear to $\w{\xi}$:
+\be
+    \w{u}_{\Obs} = \left( 1 - \frac{2m}{r} \right) ^{-1} \, \w{\xi} ,
+\ee
+the proportionality coefficient ensuring that $\w{u}_\Obs\cdot\w{u}_\Obs=-1$
+given that $\w{\xi}\cdot\w{\xi} = g_{tt} = - (1-2m/r)$.
+We have then, from (\ref{e:ges:def_eps_ell}),
+\be
+    \veps = - \left( 1 - \frac{2m}{r} \right) \w{u}_{\Obs}\cdot\w{u}
+        = \Gamma \left( 1 - \frac{2m}{r} \right)  ,
+\ee
+where $\Gamma = - \w{u}_{\Obs}\cdot\w{u}$ is the Lorentz factor of $\mathscr{P}$
+with respect to $\Obs$. We may express $\Gamma$ in terms of the norm $V$ of the
+velocity of $\mathscr{P}$ with respect to $\Obs$.
 \end{remark}
 
 \begin{figure}
