@@ -339,24 +339,37 @@ $1$. This difference plays an important role for small values of $r$,
 leading to some orbital instability, as we shall see in Sec.~\ref{s:ges:circular_orbits}.
 \end{remark}
 
-\begin{remark}
 In $\M_{\rm I}$, where the Killing vector $\w{\xi}$ is timelike,
 we may introduce the \defin{static observer}\index{static!observer}
 $\Obs$, whose 4-velocity $\w{u}_{\Obs}$ is colinear to $\w{\xi}$:
 \be
-    \w{u}_{\Obs} = \left( 1 - \frac{2m}{r} \right) ^{-1} \, \w{\xi} ,
+    \w{u}_{\Obs} = \left( 1 - \frac{2m}{r} \right) ^{-1/2} \, \w{\xi} ,
 \ee
 the proportionality coefficient ensuring that $\w{u}_\Obs\cdot\w{u}_\Obs=-1$
 given that $\w{\xi}\cdot\w{\xi} = g_{tt} = - (1-2m/r)$.
 We have then, from (\ref{e:ges:def_eps_ell}),
 \be
-    \veps = - \left( 1 - \frac{2m}{r} \right) \w{u}_{\Obs}\cdot\w{u}
-        = \Gamma \left( 1 - \frac{2m}{r} \right)  ,
+    \veps = - \left( 1 - \frac{2m}{r} \right) ^{1/2} \w{u}_{\Obs}\cdot\w{u}
+        = \Gamma \left( 1 - \frac{2m}{r} \right) ^{1/2} ,
 \ee
 where $\Gamma = - \w{u}_{\Obs}\cdot\w{u}$ is the Lorentz factor of $\mathscr{P}$
 with respect to $\Obs$. We may express $\Gamma$ in terms of the norm $V$ of the
-velocity of $\mathscr{P}$ with respect to $\Obs$.
-\end{remark}
+velocity of $\mathscr{P}$ with respect to $\Obs$, according to Eq.~(\ref{e:fra:Gam_V2}):
+$\Gamma = (1-V^2)^{-1/2}$ and get
+\be
+    \veps = \left( 1 - V^2 \right) ^{-1/2} \left( 1 - \frac{2m}{r} \right) ^{1/2}  .
+\ee
+In the region $r\gg m$, we may perform a first order expansion, assuming
+that  $\mathscr{P}$ moves at nonrelativistic velocity with respect to $\Obs$
+($V\ll 1$), thereby obtaining:
+\be
+    \encadre{ \veps - 1 \simeq \frac{1}{2} V^2 - \frac{m}{r} } \qquad
+    \left(r\gg m\quad\mbox{and}\quad V\ll 1\right).
+\ee
+We recognize in the right-hand side the \emph{Newtonian mechanical energy per
+unit mass}\index{Newtonian!mechanical energy}\index{mechanical!energy} of particle $\mathscr{P}$ with respect to the observer $\Obs$, which can
+then considered as an inertial observer, $V^2/2$ being the kinetic energy per unit mass
+and $-m/r$ the gravitational potential energy per unit mass.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot.pdf}}
