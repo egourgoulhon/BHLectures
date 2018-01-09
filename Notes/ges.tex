@@ -362,7 +362,7 @@ $\Gamma = (1-v^2)^{-1/2}$ and get
 In the region $r\gg m$, we may perform a first order expansion, assuming
 that  $\mathscr{P}$ moves at nonrelativistic velocity with respect to $\Obs$
 ($v\ll 1$), thereby obtaining:
-\be
+\be \label{e:ges:veps_far}
     \encadre{ \veps - 1 \simeq \frac{1}{2} v^2 - \frac{m}{r} } \qquad
     \left(r\gg m\quad\mbox{and}\quad v\ll 1\right).
 \ee
@@ -1012,10 +1012,48 @@ We get, from Eqs.~(\ref{e:ges:1d_motion_timelike})-(\ref{e:ges:V_eff_timelike}),
 Using $\D\ph/\D r = \D\ph /\D\tau \times \D\tau/\D r$ and expression
 (\ref{e:ges:Dph_Dtau}) for $\D\ph /\D\tau$, we obtain the equation governing
 the shape of the orbit in the plane $\th=\pi/2$:
-\be
+\be \label{e:ges:dphidr_general_orbit}
     \encadre{ \frac{\D \ph}{\D r} = \pm \frac{\ell}{r^2}
         \left[ \veps^2 - \left(1 - \frac{2m}{r}\right) \left( 1 + \frac{\ell^2}{r^2} \right) \right] ^{-1/2} } .
 \ee
+\begin{remark}
+Far from the black hole, i.e. in the region $r\gg m$, one can easily recover
+the Newtonian orbits from this formula. Indeed, according to
+Eq.~(\ref{e:ges:veps_far}), $\veps = 1 + \veps_0$, where $\veps_0 = v^2/2 -m/r$  is
+the Newtonian mechanical energy and obeys $|\veps_0|\ll 1$, so that $\veps^2 \simeq 1 + 2\veps_0$
+and the first order expansion of (\ref{e:ges:dphidr_general_orbit}) results in
+\[
+    \frac{\D \ph}{\D r} \simeq \pm \frac{\ell}{r^2}
+        \left( 2\veps_0 +  \frac{2m}{r} - \frac{\ell^2}{r^2} \right) ^{-1/2} .
+\]
+Introducing $u := 1/r$, as well as the constants
+\be
+    p := \frac{\ell^2}{m} \qquad\mbox{and}\qquad
+    e := \sqrt{1 + 2 \frac{\veps_0 \ell}{m^2}},
+\ee
+this relation can rewritten as
+\[
+    \frac{\D \ph}{\D u} = \pm \frac{\frac{p}{e}}{\sqrt{1 - \left(\frac{pu-1}{e}\right) ^2}} ,
+\]
+which is readily integrated into
+\[
+    \ph = \pm \arccos \left(\frac{pu-1}{e}\right) + \ph_0 ,
+\]
+where $\ph_0$ is a constant. We have then $pu = 1 + e\cos(\ph-\ph_0)$, or
+equivalently,
+\be
+    r = \frac{p}{1 + e\cos(\ph-\ph_0)}
+\ee
+Since $e<1$ (for $\veps < 1$ implies $\veps_0 < 0$), we recognize the equation
+of an ellipse of eccentricity $e$ and semi-latus rectum $p$. Hence Keplerian orbits\index{Keplerian!orbit}\index{orbit!Keplerian --} are recovered for $r\gg m$, as they should.
+\end{remark}
+
+Generic bound orbits differ from the Keplerian ellipses by the fact that
+the variation of $\ph$ between two successive \defin{periastron passages}\index{periastron!passage},
+i.e. two events along the worldline of $\mathscr{P}$ for which $r=r_{\rm per}$,
+is strictly larger than $2\pi$. This phenomenon is called \defin{periastron advance}\index{periastron!advance}
+and causes the orbits to be not closed, as illustrated in Figs.~\ref{f:ges:orbit_e973_l42} and
+\ref{f:ges:orbit_e967_990_l42}.
 
 \begin{figure}
 \centerline{\includegraphics[height=0.4\textheight]{ges_orbit_e973_l42.pdf}}
@@ -1040,6 +1078,57 @@ Note that the left and right figures have different scales.
 
 
 \section{Null geodesics}
+
+We turn now to the case where the geodesic $\Li$ is null, i.e. to the case
+where $\mathscr{P}$ is a massless particle, typically a photon\index{photon}.
+As above, we assume that the spherical coordinates $(r,\th,\ph)$ are chosen
+so that $\Li$ lies in the plane $\th=\pi/2$.
+
+\subsection{Equation to be solved}
+
+The motion of $\mathscr{P}$ is governed by Eqs.~(\ref{e:ges:dot_t}) and
+(\ref{e:ges:dot_ph}):
+\be \label{e:ges:dot_t_null}
+   \frac{\D t}{\D \lambda} = E \left(1 - \frac{2m}{r} \right) ^{-1} ,
+\ee
+\be \label{e:ges:dot_ph_null}
+    \frac{\D\ph}{\D\lambda} = \frac{L}{r^2}  ,
+\ee
+as well as by Eq.~(\ref{e:ges:dot_r_square}) with $\mu=0$:
+\be \label{e:ges:dot_r_square_null}
+    \left( \frac{\D r}{\D \lambda} \right) ^2
+         + \frac{L^2}{r^2}
+         \left( 1 - \frac{2m}{r} \right) = E^2 .
+\ee
+
+\subsection{Radial null geodesics}
+
+Let us first discuss the case of a radial geodesic: $L=0$.
+Equation (\ref{e:ges:dot_ph_null}) yields then naturally $\ph=\mathrm{const}$,
+while Eq.~(\ref{e:ges:dot_r_square_null}) simplifies drastically:
+\be \label{e:ges:dot_r_null_radial}
+    \frac{\D r}{\D \lambda} = \pm E ,
+\ee
+the solution of which is immediate:
+\be
+    r = \pm E\lambda + r_0 ,
+\ee
+where $r_0$ is some constant.
+Moreover, writing $\D t/\D\lambda = \D t/\D r \times \D r/\D\lambda$
+and combining Eqs.~(\ref{e:ges:dot_t_null}) and (\ref{e:ges:dot_r_null_radial}),
+we get
+\be
+    \frac{\D t}{\D r} = \pm \left(1 - \frac{2m}{r} \right) ^{-1} .
+\ee
+We recognize the equation governing the radial null geodesics obtained in
+Sec.~\ref{s:sch:rad_null_geod} [Eq.~(\ref{e:sch:Dt_Dr_radial_null_geod})],
+the solution of which is given by Eq.~(\ref{e:sch:t_r_radial_null_geod}):
+\be
+    t = \pm r \pm 2 m \ln \left| \frac{r}{2m} - 1 \right| + \mathrm{const} .
+\ee
+
+\subsection{Effective potential}
+
 
 
 \begin{hist}
