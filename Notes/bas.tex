@@ -80,18 +80,18 @@ Strictly speaking the definition given above is that of a \defin{topological man
 
 
 Usually, one needs more than one coordinate system to cover $\M$.
-An \defin{atlas}\index{atlas} on $\M$ is a finite set of pairs
-$(\mathcal{U}_k,\Phi_k)_{1\leq k \leq K}$,  where $K$ is a non-zero integer, $\mathcal{U}_k$ an open set of $\M$ and $\Phi_k$ a chart on $\mathcal{U}_k$,
-such that the union of all $\mathcal{U}_k$ covers $\M$:
+An \defin{atlas}\index{atlas} on $\M$ is a set of pairs
+$(\mathcal{U}_i,\Phi_i)_{i\in I}$,  where $I$ is a set (non necessarily finite), $\mathcal{U}_i$ an open set of $\M$ and $\Phi_i$ a chart on $\mathcal{U}_i$,
+such that the union of all $\mathcal{U}_i$ covers $\M$:
 \be
-    \bigcup_{k=1}^K \mathcal{U}_k = \M.
+    \bigcup_{i\in I} \mathcal{U}_i = \M.
 \ee
 
 The above definition of a manifold lies at the \emph{topological} level
 (cf.~Remark~\ref{r:bas:topol_manif}), meaning that one has the notion of continuity, but not of differentiability. To get the latter, one should rely on the smooth structure of $\R^n$, via the atlases:
 a \defin{smooth manifold}\index{smooth!manifold}\index{manifold!smooth --},
 is a manifold $\M$ equipped with an atlas
-$(\mathcal{U}_k,\Phi_k)_{1\leq k \leq K}$ such that for any non-empty intersection
+$(\mathcal{U}_i,\Phi_i)_{i\in I}$ such that for any non-empty intersection
 $\mathcal{U}_i \cap \mathcal{U}_j$, the mapping
 \be \label{e:bas:transition_map}
     \Phi_i \circ \Phi_j^{-1} : \Phi_j(\mathcal{U}_i \cap \mathcal{U}_j)
@@ -100,9 +100,9 @@ $\mathcal{U}_i \cap \mathcal{U}_j$, the mapping
 \ee
 is smooth (i.e. $C^\infty$).
 Note that the above mapping is from an open set of $\R^n$ to an open set of $\R^n$, so that the invoked differentiability is nothing but that of $\R^n$.
-Such a mapping is called a \defin{change of coordinates}\index{change!of coordinates}\index{coordinate!change} or, in the more mathematical literature, a
+Such a mapping is called a \defin{change of coordinates}\index{change!of coordinates}\index{coordinate!change} or, in the mathematically-oriented literature, a
 \defin{transition map}\index{transition map}.
-The atlas $(\mathcal{U}_k,\Phi_k)_{1\leq k \leq K}$ is called a
+The atlas $(\mathcal{U}_i,\Phi_i)_{i\in I}$  is called a
 \defin{smooth atlas}\index{smooth!atlas}\index{atlas!smooth --}.
 In the following, we consider only smooth manifolds.
 
