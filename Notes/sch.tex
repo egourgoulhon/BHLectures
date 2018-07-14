@@ -215,10 +215,13 @@ i.e. on the version $\Lambda=0$ of Eq.~(\ref{e:sch:Kottler_metric}):
 \ee
 The areal coordinates $(t,r,\th,\ph)$ are then called the
 \defin{Schwarzschild-Droste coordinates}\index{Schwarzschild-Droste!coordinates}\footnote{In the literature they are often referred to as simply
-\defin{Schwarzschild coordinates}\index{Schwarzschild!coordinates}.}.
+\defin{Schwarzschild coordinates}\index{Schwarzschild!coordinates}; we follow
+here Deruelle \& Uzan \cite{DerueU14}.}.
 
 Since $A(r) = 1-2m/r$ and $B(r) = (1-2m/r)^{-1}$ for the Schwarzschild metric,
-the non-vanishing Christoffel symbols (\ref{e:sch:Christoffel_AB}) become
+the non-vanishing Christoffel symbols (\ref{e:sch:Christoffel_AB})
+become\footnote{See also the notebook of Sec.~\ref{s:sam:Kretschmann_Schwarz} for a
+check.}
 \be \label{e:sch:Christoffel_SD}
 \begin{array}{l}
 \displaystyle  \Gamma^t_{\ \, tr} = \Gamma^t_{\ \, rt} = \frac{m}{r(r-2m)}\qquad
@@ -230,6 +233,29 @@ the non-vanishing Christoffel symbols (\ref{e:sch:Christoffel_AB}) become
 \Gamma^\ph_{\ \, \th\ph} = \Gamma^\ph_{\ \, \ph\th} = \frac{1}{\tan\th} .
 \end{array}
 \ee
+
+\subsection{The mass parameter} \label{s:sch:mass_parameter}
+
+The Schwarzschild metric (\ref{e:sch:Schwarz_metric_SD}) depends on a single
+parameter: $m$. This parameter has a direct physical interpretation:
+it is the \defin{gravitational mass}\index{mass!gravitational --}\index{mass!parameter of Schwarzschild solution} (or simply
+\defin{mass}) that is felt by
+an observer located at large values of $r$. Indeed, we will see in
+Chap.~\ref{s:ges} that an observer on a circular orbit at a large value
+of $r$ has an orbital period $T$ obeying Kepler's third law:
+$T^2 = 4\pi^2 r^3 / m$. Without waiting for Chap.~\ref{s:ges}, we may notice
+that for $r\gg |m|$, the line element (\ref{e:sch:Schwarz_metric_SD})
+takes the standard weak-field form (see e.g. \cite{Carro04,MisneTW73}):
+\be \label{e:sch:Schwarz_metric_large_r}
+        g_{\mu\nu}\, \D x^\mu \, \D x^\nu \simeq
+            -\left( 1 + 2\Phi(r) \right) \, \D t^2
+            + \left( 1 - 2\Phi(r) \right)  \, \D r^2 +
+        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
+\ee
+where $\Phi(r) := -m/r$ is the Newtonian gravitational potential outside
+a spherically symmetric body of mass $m$.
+
+
 
 \begin{hist}
 The Schwarzschild metric (\ref{e:sch:Schwarz_metric_SD}) is actually
@@ -310,7 +336,7 @@ some ``origin'') but rather an \emph{area}, as discussed in Sec.~\ref{s:sch:stat
 A first property of the Schwarzschild metric is that $\M_{\rm I}$ has an
 asymptotically flat end: it is clear on (\ref{e:sch:Schwarz_metric_SD})
 that the metric $\w{g}$ tends to Minkowski metric (\ref{e:glo:Mink_metric_spher})
-when $r\rightarrow +\infty$.
+when $r\rightarrow +\infty$ [see also Eq.~(\ref{e:sch:Schwarz_metric_large_r})].
 
 Besides, in region $\M_{\rm II}$, we notice on (\ref{e:sch:Schwarz_metric_SD})
 that $g_{tt} > 0$. Since $g_{tt} = \w{g}(\wpar_t,\wpar_t)$, this implies
@@ -709,7 +735,7 @@ following ``square'' of the Riemann curvature tensor
 \be \label{e:sch:def_Kretschmann}
     K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} ,
 \ee
-is (cf. Appendix~?? for the computation})
+is (cf. Sec.~\ref{s:sam:Kretschmann_Schwarz} for the computation})
 \be
     K = \frac{48 m^2}{r^6} .
 \ee
