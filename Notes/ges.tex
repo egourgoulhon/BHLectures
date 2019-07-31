@@ -75,7 +75,7 @@ and $L = g_{\mu\nu} \, \eta^\mu p^\nu = g_{\ph\nu} \, p^\nu = p_\ph$.
 It is worth stressing that $E$ is not a genuine energy, i.e. it is not
 an energy measured by some observer. Indeed the latter is defined by
 Eq.~(\ref{e:fra:E_obs}), which resembles Eq.~(\ref{e:ges:conserved_energy})
-but differs from it by $\w{\xi}$ being not a unit vector in general:
+but differs from it by $\w{\xi}$ not being a unit vector in general:
 $\w{\xi}\cdot\w{\xi} \not = -1$. In other words, $\w{\xi}$ cannot
 be interpreted as the 4-velocity of some observer, so that the quantity
 $E$ defined by (\ref{e:ges:conserved_energy}) cannot be a measured
@@ -171,7 +171,7 @@ Contemplating Eqs.~(\ref{e:ges:conserved_energy}), (\ref{e:ges:conserved_angu_mo
 four first integral of motions. The problem is then completely integrable.
 More specifically, let $\lambda$ be the affine parameter along the geodesic
 $\Li$ associated with the 4-momentum $\w{p}$ (cf. Eq.~(\ref{e:geo:v_dxdlambda}):
-\be
+\be \label{e:ges:def_lambda}
     \w{p} = \frac{\D\w{x}}{\D\lambda} ,
 \ee
 where  $\D\w{x}$ is the infinitesimal displacement along $\Li$ corresponding
@@ -327,8 +327,8 @@ on the variation of $\ph$ along $\Li$, as was already noticed above for $L$.
 
 We note that Eq.~(\ref{e:ges:1d_motion_timelike}) has the shape of the
 first integral of the
-the 1-dimensional motion of a non-relativist particle in the potential
-$V_{\ell}$ (called hereafter the \defin{effective potential}\index{effective!potential}), the term $1/2 \, (\D r/\D\tau)^2$ being interpreted as
+1-dimensional motion of a non-relativist particle in the potential
+$V_{\ell}$ (called hereafter the \defin{effective potential}\index{effective!potential!timelike geodesic}), the term $1/2 \, (\D r/\D\tau)^2$ being interpreted as
 the kinetic energy per unit mass, $V_{\ell}(r)$ as the potential
 energy per unit mass and the constant right-hand side $(\veps^2-1)/2$ as the total
 mechanical energy per unit mass.
@@ -991,6 +991,28 @@ The corresponding orbit is shown in Fig.~\ref{f:ges:orbit_e973_l42}.
 }
 \end{figure}
 
+\begin{figure}
+\centerline{\includegraphics[height=0.4\textheight]{ges_orbit_e973_l42.pdf}}
+\caption[]{\label{f:ges:orbit_e973_l42} \footnotesize
+Timelike geodesic with $\veps = 0.973$ and $\ell=4.2m$ (same values as in
+Fig.~\ref{f:ges:eff_pot_bound}), plotted in terms of the coordinates
+$(x,y) = (r\cos\ph, r\sin\ph)$. The dotted circles correspond to $r=r_{\rm per}$
+(pericenter) and $r=r_{\rm apo}$ (apocenter). The grey disk locates the
+black hole region $r<2m$.
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.48\textwidth]{ges_orbit_e967_l42.pdf}\quad
+\includegraphics[width=0.48\textwidth]{ges_orbit_e990_l42.pdf}}
+\caption[]{\label{f:ges:orbit_e967_990_l42} \footnotesize
+Timelike geodesics with the same value of $\ell$ as in Fig.~\ref{f:ges:orbit_e973_l42} ($\ell=4.2m$), but for different values of $\veps$: $\veps = 0.967$ (left) and $\veps=0.990$ (right).
+Note that the left and right figures have different scales.
+}
+\end{figure}
+
+
+
 In the potential well, the $r$-coordinate along $\Li$ varies between two
 extrema: a mimimum $r_{\rm per}$, for \defin{pericenter}\index{pericenter} (or
 \defin{periastron}\index{periastron}), and
@@ -1059,26 +1081,6 @@ is strictly larger than $2\pi$. This phenomenon is called \defin{periastron adva
 and causes the orbits to be not closed, as illustrated in Figs.~\ref{f:ges:orbit_e973_l42} and
 \ref{f:ges:orbit_e967_990_l42}.
 
-\begin{figure}
-\centerline{\includegraphics[height=0.4\textheight]{ges_orbit_e973_l42.pdf}}
-\caption[]{\label{f:ges:orbit_e973_l42} \footnotesize
-Timelike geodesic with $\veps = 0.973$ and $\ell=4.2m$ (same values as in
-Fig.~\ref{f:ges:eff_pot_bound}), plotted in terms of the coordinates
-$(x,y) = (r\cos\ph, r\sin\ph)$. The dotted circles correspond to $r=r_{\rm per}$
-(pericenter) and $r=r_{\rm apo}$ (apocenter). The grey disk locates the
-black hole region $r<2m$.
-}
-\end{figure}
-
-\begin{figure}
-\centerline{\includegraphics[width=0.48\textwidth]{ges_orbit_e967_l42.pdf}\quad
-\includegraphics[width=0.48\textwidth]{ges_orbit_e990_l42.pdf}}
-\caption[]{\label{f:ges:orbit_e967_990_l42} \footnotesize
-Timelike geodesics with the same value of $\ell$ as in Fig.~\ref{f:ges:orbit_e973_l42} ($\ell=4.2m$), but for different values of $\veps$: $\veps = 0.967$ (left) and $\veps=0.990$ (right).
-Note that the left and right figures have different scales.
-}
-\end{figure}
-
 
 
 \section{Null geodesics}
@@ -1090,7 +1092,7 @@ so that $\Li$ lies in the plane $\th=\pi/2$.
 
 \subsection{Equation to be solved}
 
-The motion of $\mathscr{P}$ is governed by Eqs.~(\ref{e:ges:dot_t}) and
+In terms of Schwarzschild-Droste coordinates, the motion of $\mathscr{P}$ is governed by Eqs.~(\ref{e:ges:dot_t}) and
 (\ref{e:ges:dot_ph}):
 \be \label{e:ges:dot_t_null}
    \frac{\D t}{\D \lambda} = E \left(1 - \frac{2m}{r} \right) ^{-1} ,
@@ -1104,6 +1106,10 @@ as well as by Eq.~(\ref{e:ges:dot_r_square}) with $\mu=0$:
          + \frac{L^2}{r^2}
          \left( 1 - \frac{2m}{r} \right) = E^2 .
 \ee
+Let us recall that the variable $\lambda$ with respect to which these differential equations
+are set
+is the affine parameter associated with the 4-momentum $\w{p}$ of $\mathscr{P}$
+(cf. Eq.~(\ref{e:ges:def_lambda})).
 
 \subsection{Radial null geodesics}
 
@@ -1114,7 +1120,7 @@ while Eq.~(\ref{e:ges:dot_r_square_null}) simplifies drastically:
     \frac{\D r}{\D \lambda} = \pm E ,
 \ee
 the solution of which is immediate:
-\be
+\be \label{e:ges:r_lambda_radial_null}
     r = \pm E\lambda + r_0 ,
 \ee
 where $r_0$ is some constant.
@@ -1131,9 +1137,57 @@ the solution of which is given by Eq.~(\ref{e:sch:t_r_radial_null_geod}):
     t = \pm r \pm 2 m \ln \left| \frac{r}{2m} - 1 \right| + \mathrm{const} .
 \ee
 
-\subsection{Effective potential}
+\begin{remark}
+Since $\lambda$ is an affine parameter and $E$ is constant,
+Eq.~(\ref{e:ges:r_lambda_radial_null})
+shows explicitely that $r$ is another affine parameter along the radial null
+geodesics of Schwarzschild spacetime --- a result we have already
+obtained in Sec.~\ref{s:sch:rad_null_geod}.
+\end{remark}
 
+\subsection{Generic null geodesics: effective potential}
 
+Here we focus on the case where $L\not= 0$ (``generic'' case). We may then
+consider, instead of $\lambda$, the affine parameter
+\be
+    \tilde{\lambda} := L \lambda .
+\ee
+Since $L$ is a non-vanishing constant along a geodesic, the above formula
+does define a new affine parameter. In terms of it,
+the differential system (\ref{e:ges:dot_t_null})-(\ref{e:ges:dot_r_square_null})
+becomes
+\be \label{e:ges:dot_t_null_b}
+   \frac{\D t}{\D \tilde{\lambda}} = b^{-1} \left(1 - \frac{2m}{r} \right) ^{-1} ,
+\ee
+\be \label{e:ges:dot_ph_null_b}
+    \frac{\D\ph}{\D\tilde{\lambda}} = \frac{1}{r^2}  ,
+\ee
+\be \label{e:ges:dot_r_square_null_b}
+   \encadre{ \left( \frac{\D r}{\D\tilde{\lambda}} \right) ^2
+        + U(r) = \frac{1}{b^2} },
+\ee
+where
+\be
+    \encadre{b := \frac{L}{E}}
+\ee
+and
+\be
+    \encadre{ U(r) := \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) }.
+\ee
+As for the timelike case (cf. Eq.~(\ref{e:ges:1d_motion_timelike})),
+we note that Eq.~(\ref{e:ges:dot_r_square_null_b})
+has the shape of the first integral of the
+1-dimensional motion of a non-relativist particle in the
+\defin{effective potential}\index{effective!potential!null geodesic}
+$U(r)$. The main difference is that $U(r)$ does not depend on $L$, contrary
+to the effective potential $V_\ell(r)$ for timelike geodesics. Actually,
+$U(r)$ is a fonction of $r$ and the black hole mass $m$ only.
+The null geodesics are thus entirely determined by the parameter $b$. The latter
+has the dimension of a length and can be interpreted as the
+impact parameter\index{impact parameter} in the case of particle arising from
+infinity. Indeed, let us consider that the massless
+particle $\mathscr{P}$ arises from a point of coordinates $\theta=\pi/2$,
+$r=r_0 \gg m$ and $\ph = \ph_0 \gg 1$. In Cartesian coordinates
 
 \begin{hist}
 Synge \cite{Synge66}, Bardeen \cite{Barde73}
