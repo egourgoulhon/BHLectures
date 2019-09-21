@@ -25,7 +25,7 @@ of some particle $\mathscr{P}$, either massive
 ($\Li$ timelike) or masseless ($\Li$ null).
 
 
-\subsection{First integrals of motion}
+\subsection{First integrals of motion} \label{s:ges:fiom}
 
 The Schwarzschild spacetime $(\M,\w{g})$ is static and spherically symmetric; the
 Killing vector $\w{\xi}$ associated with the staticity (cf. Sec.~\ref{s:sch:static_spher})
@@ -164,7 +164,7 @@ then [cf. Eq.~(\ref{e:fra:def_mass})]
     \w{g}(\w{p},\w{p}) = - \mu^2 .
 \ee
 
-\subsection{Equations to be solved}
+\subsection{Equations to be solved} \label{s:ges:eq_to_be_solved}
 
 Contemplating Eqs.~(\ref{e:ges:conserved_energy}), (\ref{e:ges:conserved_angu_mom}),
 (\ref{e:ges:pth_zero}) and (\ref{e:ges:p2_mu2}), we realize that we have
@@ -175,7 +175,7 @@ $\Li$ associated with the 4-momentum $\w{p}$ (cf. Eq.~(\ref{e:geo:v_dxdlambda}):
     \w{p} = \frac{\D\w{x}}{\D\lambda} ,
 \ee
 where  $\D\w{x}$ is the infinitesimal displacement along $\Li$ corresponding
-to the parameter change $\D\lambda$.
+to the parameter change $\D\lambda$. Note that $\lambda$ is dimensionless.
 In terms of the components with respect to Schwarzschild-Droste coordinates,
 this yields
 \be \label{e:ges:comp_4_momentum}
@@ -1088,7 +1088,10 @@ and causes the orbits to be not closed, as illustrated in Figs.~\ref{f:ges:orbit
 We turn now to the case where the geodesic $\Li$ is null, i.e. to the case
 where $\mathscr{P}$ is a massless particle, typically a photon\index{photon}.
 As above, we assume that the spherical coordinates $(r,\th,\ph)$ are chosen
-so that $\Li$ lies in the plane $\th=\pi/2$.
+so that $\Li$ lies in the hyperplane $\th=\pi/2$ (let us recall that
+a geodesic of Schwarzschild spacetime lies necessarily in a hypersurface, which
+we can choose to be the hyperplane $\th=\pi/2$ without any loss of generality,
+cf. Sec.~\ref{s:ges:fiom}).
 
 \subsection{Equation to be solved}
 
@@ -1153,7 +1156,10 @@ consider, instead of $\lambda$, the affine parameter
     \tilde{\lambda} := L \lambda .
 \ee
 Since $L$ is a non-vanishing constant along a geodesic, the above formula
-does define a new affine parameter. In terms of it,
+does define a new affine parameter. Note that it has the same
+dimension of $L$, i.e. a squared length, given that $\lambda$ is dimensionless
+(cf. Sec.~\ref{s:ges:eq_to_be_solved}).
+In terms of $\tilde{\lambda}$,
 the differential system (\ref{e:ges:dot_t_null})-(\ref{e:ges:dot_r_square_null})
 becomes
 \be \label{e:ges:dot_t_null_b}
@@ -1167,11 +1173,11 @@ becomes
         + U(r) = \frac{1}{b^2} },
 \ee
 where
-\be
+\be \label{e:ges:def_b}
     \encadre{b := \frac{L}{E}}
 \ee
 and
-\be
+\be \label{e:ges:eff_pot_null}
     \encadre{ U(r) := \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) }.
 \ee
 As for the timelike case (cf. Eq.~(\ref{e:ges:1d_motion_timelike})),
@@ -1182,13 +1188,85 @@ has the shape of the first integral of the
 $U(r)$. The main difference is that $U(r)$ does not depend on $L$, contrary
 to the effective potential $V_\ell(r)$ for timelike geodesics. Actually,
 $U(r)$ is a fonction of $r$ and the black hole mass $m$ only.
-The null geodesics are thus entirely determined by the parameter $b$. The latter
+The null geodesics are thus entirely determined by the parameter\footnote{
+As soon as the null geodesic $\Li$ has a part in the
+region $\M_{\rm I}$, then $E\not=0$ [cf. (\ref{e:ges:E_positive_M_I})], so that
+$b$, as defined by Eq.~(\ref{e:ges:def_b}), is finite.} $b$. It has
 has the dimension of a length and can be interpreted as the
-impact parameter\index{impact parameter} in the case of particle arising from
-infinity. Indeed, let us consider that the massless
+\defin{impact parameter}\index{impact parameter} in the case of a
+particle arising from infinity.
+Indeed, let us consider that the massless
 particle $\mathscr{P}$ arises from a point of coordinates $\theta=\pi/2$,
-$r=r_0 \gg m$ and $\ph = \ph_0 \gg 1$. In Cartesian coordinates
+$r=r_0 \gg m$ and $\ph = \ph_0$.  Let us introduce in the plane $\theta=\pi/2$
+Cartesian coordinates $(x,y)$ in the standard way:
+$x:=r\cos\ph$ and $y:=r\sin\ph$.
+Without any loss of generality, we may
+consider $|\ph_0| \ll 1$. For large values of $r$, the motion of
+$\mathscr{P}$ is then essentially along the $x$-axis, with $\ph$ remaining small:
+$y\simeq y_0$, where  $y_0$ is the impact parameter:
+$y_0 = r_0 \sin\ph_0 \simeq r_0 \ph_0$. Since $y=r\sin\ph\simeq r\ph$, we get
+\[
+    \ph \simeq \frac{y_0}{r} \qquad (r \gg m) .
+\]
+Deriving with respect to $t$ leads to
+\be \label{e:ges:dphdt_approx}
+    \derd{\ph}{t} \simeq - \frac{y_0}{r^2} \derd{r}{t}
+                  \simeq \frac{y_0}{r^2}  \qquad (r \gg m) ,
+\ee
+when we have used $\D r / \D t = - 1$ for $r \gg m$. This is easy
+to admit since
+$r\gg m$ corresponds to the flat part of spacetime; however, this can be derived
+rigorously by combining Eqs.~(\ref{e:ges:dot_t_null_b}) and
+(\ref{e:ges:dot_r_square_null_b}) to evaluate $\D r / \D t$.
+Now by combining Eqs.~(\ref{e:ges:dot_t_null_b}) and (\ref{e:ges:dot_ph_null_b}),
+we have
+\be
+    \derd{\ph}{t} = \frac{b}{r^2} \left( 1 - \frac{2m}{r} \right) .
+\ee
+For $r\gg m$, the right-hand side reduces to $b/r^2$, so that the comparison
+with (\ref{e:ges:dphdt_approx}) yields $b = y_0$, i.e. $b$ is the impact
+parameter of the massless particle $\mathscr{P}$ with respect to the central
+black hole.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot_null.pdf}}
+\caption[]{\label{f:ges:eff_pot_null} \footnotesize
+Effective potential $U(r)$ (rescaled by $m^2$ to make it dimensionless)
+governing the $r$-part of the
+motion along a null geodesic in
+Schwarzschild spacetime [Eq.~(\ref{e:ges:eff_pot_null})].
+The vertical dashed line marks $r=2m$, i.e. the
+location of the event horizon. The horizontal lines marked ``1'' and ``2''
+correspond to the trajectories of two massless particles.}
+\end{figure}
+
+The effective potential $U(r)$ is plotted in Fig.~\ref{f:ges:eff_pot_null}.
+It has no minimum and a maximum at $r=3m$, which is
+\be
+    U_{\rm max} = \frac{1}{27m^2} .
+\ee
+This extremum is a stationary position in $r$: it corresponds thus to a circular
+orbit, usually called the \defin{photon orbit}\index{photon!orbit}\index{orbit!photon --}.
+The set of all photon orbits (one per choice of equatorial plane) is often
+called the \defin{photon sphere}\index{photon!sphere}\index{sphere!photon --}.
+However, since it corresponds to a maximum of the effective potential, the circular
+orbit at $r=3m$ is an unstable orbit. So one should not imaginate that a
+Schwarzschild black hole is surrounded by a spherical shell of photons.
 
 \begin{hist}
 Synge \cite{Synge66}, Bardeen \cite{Barde73}
 \end{hist}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
