@@ -1253,7 +1253,7 @@ However, since it corresponds to a maximum of the effective potential, the circu
 orbit at $r=3m$ is an unstable orbit. So one should not imaginate that a
 Schwarzschild black hole is surrounded by a spherical shell of photons.
 
-\subsection{Black hole shadow}
+\subsection{Radial motion of generic null geodesics}
 
 For the sake of concreteness, in this section and the remaining ones, we
 refer to the massless particle $\mathscr{P}$ as a ``photon''. In most applications, in
@@ -1266,20 +1266,24 @@ $U(r)$ has no minimum, it does not offer any potential well,
 as it is clear from Fig.~\ref{f:ges:eff_pot_null}. This is in sharp contrast
 with the effective potential $V_\ell(r)$ for massive particle
 (compare Fig.~\ref{f:ges:eff_pot_bound}). Hence there are no bound orbits
-for photons.
+for photons\footnote{unless one counts as ``bound'' a worldline that terminates in the
+black hole region}.
 
+We can infer various types of photon worldlines from Fig.~\ref{f:ges:eff_pot_null}.
+In view of the ``first integral'' (\ref{e:ges:dot_r_square_null_b}),
+each photon worldline can be represented by a horizontal line of ordinate
+$b^{-2}$ in this figure, which must lie above the curve $U(r)$
+by the positive quantity $({\D r}/{\D\tilde{\lambda}})^2$. The region under the curve
+$U(r)$ is thus excluded.
 
-
-
-We infer from the effective first integral (\ref{e:ges:dot_r_square_null_b})
-that a photon coming from infinity with an impact parameter
-$b$ small enough to fulfil $b^{-2} > U_{\rm max}$ (cf. trajectory
-no.~1 in Fig.~\ref{f:ges:eff_pot_null}) passes above the potential barrier
-constituted by $U(r)$. It then reaches arbitrary small values of $r$ and
-is eventually absorbed by the black hole ($r < 2m$).
-On the contrary, a photon coming from infinity with an impact parameter large enough
-to guarantee $b^{-2} < U_{\rm max}$ (cf. trajectory
-no.~2 in Fig.~\ref{f:ges:eff_pot_null}) ``bounces'' on the potential barrier
+For an initially inward photon, i.e. a photon emitted with ${\D r}/{\D\tilde{\lambda}} < 0$
+from a position $r=r_{\rm em}$, there are
+two possibilities, depending on the values of $r_{\rm em}$ and
+of the impact parameter $b$:
+\begin{itemize}
+\item if $r_{\rm em} > 3 m$ and $b$ is large enough to fulfil $b^{-2} < U_{\rm max}$
+(e.g. trajectory no.~1 in Fig.~\ref{f:ges:eff_pot_null}), the photon
+``bounces'' on the potential barrier constituted by $U(r)$
 at some minimal value  $r_{\rm per}$ of $r$ --- the \defin{periastron}\index{periastron},
 which is given by  $U(r_{\rm per}) = b^{-2}$. Equation~(\ref{e:ges:dot_r_square_null_b})
 implies then
@@ -1287,16 +1291,37 @@ implies then
     \left. \frac{\D r}{\D\tilde{\lambda}} \right| _{r = r_{\rm per}} = 0 .
 \ee
 Actually, $\D r / \D\tilde{\lambda}$ changes sign at $r = r_{\rm per}$ and
-the photon goes back to
-infinity (generically in a direction different from the incoming one): the
-particle is scattered by the black hole.
+the photon subsequently moves away from the black hole for ever. We may call
+such a wordline a scattering trajectory.
+\item if $r_{\rm em} < 3 m$ (e.g. trajectory
+no.~4 in Fig.~\ref{f:ges:eff_pot_null}) or $b$ is small enough to fulfil $b^{-2} > U_{\rm max}$ ((e.g. trajectory
+no.~2 in Fig.~\ref{f:ges:eff_pot_null}) the photon
+is not halted by the potential barrier constituted by $U(r)$. It then reaches arbitrary
+small values of $r$ and is eventually absorbed by the black hole ($r < 2m$).
+\end{itemize}
 
-The critical value of the impact parameter distinguishing the absorption
-by the black hole from the scattering off it is given by $b_{\rm crit}^{-2} = U_{\rm max}$.
+For an initially outward photon, i.e. a photon emitted with ${\D r}/{\D\tilde{\lambda}} > 0$,
+there are two outcomes:
+\begin{itemize}
+\item if $r_{\rm em} > 3 m$ (e.g. trajectory
+no.~1 in Fig.~\ref{f:ges:eff_pot_null}) or
+$b$ is small enough to fulfil $b^{-2} > U_{\rm max}$ (e.g. trajectory
+no.~3 in Fig.~\ref{f:ges:eff_pot_null}), the photon escapes to infinity;
+\item if $r_{\rm em} < 3 m$ and $b^{-2} < U_{\rm max}$ (e.g. trajectory
+no.~4 in Fig.~\ref{f:ges:eff_pot_null}), the photon ``bounces'' on the left
+side of the potential barrier and subsequently moves towards the black hole,
+so that it is absorbed by it.
+\end{itemize}
+
+The critical value of the impact parameter separating the cases discussed
+above is determined by $b_{\rm crit}^{-2} = U_{\rm max}$.
 Given the value (\ref{e:ges:U_max}) of $U_{\rm max}$, we get
 \be
     \encadre{b_{\rm crit} = 3\sqrt{3} \, m }.
 \ee
+
+\subsection{Black hole shadow}
+
 
 \begin{hist}
 Synge \cite{Synge66}, Bardeen \cite{Barde73}
