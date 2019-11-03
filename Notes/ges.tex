@@ -996,8 +996,8 @@ The corresponding orbit is shown in Fig.~\ref{f:ges:orbit_e973_l42}.
 \caption[]{\label{f:ges:orbit_e973_l42} \footnotesize
 Timelike geodesic with $\veps = 0.973$ and $\ell=4.2m$ (same values as in
 Fig.~\ref{f:ges:eff_pot_bound}), plotted in terms of the coordinates
-$(x,y) = (r\cos\ph, r\sin\ph)$. The dotted circles correspond to $r=r_{\rm per}$
-(pericenter) and $r=r_{\rm apo}$ (apocenter). The grey disk locates the
+$(x,y) := (r\cos\ph, r\sin\ph)$. The dotted circles correspond to $r=r_{\rm per}$
+(pericenter) and $r=r_{\rm apo}$ (apocenter). The grey disk indicates the
 black hole region $r<2m$.
 }
 \end{figure}
@@ -1237,7 +1237,9 @@ motion along a null geodesic in
 Schwarzschild spacetime [Eq.~(\ref{e:ges:eff_pot_null})].
 The vertical dashed line marks $r=2m$, i.e. the
 location of the event horizon. The horizontal lines marked ``1'' to ``4''
-correspond to the $r$-trajectory of four massless particles.}
+correspond to the $r$-motion of four null geodesics,
+the trajectories of which in the equatorial plane $\th=\pi/2$
+are depicted in Fig.~\ref{f:ges:null_geod}.}
 \end{figure}
 
 The effective potential $U(r)$ is plotted in Fig.~\ref{f:ges:eff_pot_null}.
@@ -1250,8 +1252,27 @@ orbit, usually called the \defin{photon orbit}\index{photon!orbit}\index{orbit!p
 The set of all photon orbits (one per choice of equatorial plane) is often
 called the \defin{photon sphere}\index{photon!sphere}\index{sphere!photon --}.
 However, since it corresponds to a maximum of the effective potential, the circular
-orbit at $r=3m$ is an unstable orbit. So one should not imaginate that a
-Schwarzschild black hole is surrounded by a spherical shell of photons.
+orbit at $r=3m$ is an unstable orbit. So one should not imagine that a
+Schwarzschild black hole is surrounded by a spherical shell of photons...
+
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ges_null_geod.pdf}}
+\caption[]{\label{f:ges:null_geod} \footnotesize
+Selected null geodesics in the equatorial plane of Schwarzschild spacetime,
+plotted in terms
+of the coordinates $(x,y) := (r\cos\ph, r\sin\ph)$, with the black hole
+region $r<2m$ depicted as a grey disk.
+The green geodesic is the photon circular orbit at $r=3m$.
+The red geodesic (label ``1'') starts at $r_0=10 m$, $\ph_0=0$ and has
+an impact parameter $b = 7.071 \, m > b_{\rm crit}$ ($b^{-2} = 0.02\, m^{-2}$).
+The brown geodesic (label ``2'') starts at $r_0=10 m$, $\ph_0=0$ and has an impact parameter $b = 5 m < b_{\rm crit}$ ($b^{-2} = 0.04\, m^{-2}$).
+The orange geodesic (label ``3'') starts outward at $r_0=2.1 m$, $\ph_0=0$ and has an impact parameter $b = 4.663 m$ ($b^{-2} = 0.046\, m^{-2}$).
+The grey geodesic (label ``4'') starts outward at $r_0=2.4 m$, $\ph_0=-\pi/2$ and has an impact parameter $b = 5.345 m$ ($b^{-2} = 0.035\, m^{-2}$).
+The $r$-motion of these four gedeosics is depicted in
+Fig.~\ref{f:ges:eff_pot_null}.}
+\end{figure}
+
 
 \subsection{Radial motion of generic null geodesics}
 
@@ -1259,7 +1280,7 @@ For the sake of concreteness, in this section and the remaining ones, we
 refer to the massless particle $\mathscr{P}$ as a ``photon''. In most applications, in
 particular the astrophysical ones, $\mathscr{P}$ will indeed be a photon.
 But one shall keep in mind that all results are valid for any other massless
-particles, like, e.g., neutrinos.
+particles.
 
 Since the effective potential
 $U(r)$ has no minimum, it does not offer any potential well,
@@ -1291,13 +1312,15 @@ implies then
     \left. \frac{\D r}{\D\tilde{\lambda}} \right| _{r = r_{\rm per}} = 0 .
 \ee
 Actually, $\D r / \D\tilde{\lambda}$ changes sign at $r = r_{\rm per}$ and
-the photon subsequently moves away from the black hole for ever. We may call
-such a wordline a scattering trajectory.
+the photon subsequently moves away from the black hole for ever (cf. geodesic
+no.~1 in Fig.~\ref{f:ges:null_geod}). We may call
+such a worldline a scattering trajectory.
 \item if $r_{\rm em} < 3 m$ (e.g. trajectory
 no.~4 in Fig.~\ref{f:ges:eff_pot_null}) or $b$ is small enough to fulfil $b^{-2} > U_{\rm max}$ ((e.g. trajectory
 no.~2 in Fig.~\ref{f:ges:eff_pot_null}) the photon
 is not halted by the potential barrier constituted by $U(r)$. It then reaches arbitrary
-small values of $r$ and is eventually absorbed by the black hole ($r < 2m$).
+small values of $r$ and is eventually absorbed by the black hole ($r < 2m$)
+(cf. geodesic no.~2 in Fig.~\ref{f:ges:null_geod}).
 \end{itemize}
 
 For an initially outward photon, i.e. a photon emitted with ${\D r}/{\D\tilde{\lambda}} > 0$,
@@ -1306,11 +1329,12 @@ there are two outcomes:
 \item if $r_{\rm em} > 3 m$ (e.g. trajectory
 no.~1 in Fig.~\ref{f:ges:eff_pot_null}) or
 $b$ is small enough to fulfil $b^{-2} > U_{\rm max}$ (e.g. trajectory
-no.~3 in Fig.~\ref{f:ges:eff_pot_null}), the photon escapes to infinity;
+no.~3 in Figs.~\ref{f:ges:eff_pot_null}), the photon escapes to infinity
+(cf. geodesic no.~3 in Fig.~\ref{f:ges:null_geod});
 \item if $r_{\rm em} < 3 m$ and $b^{-2} < U_{\rm max}$ (e.g. trajectory
 no.~4 in Fig.~\ref{f:ges:eff_pot_null}), the photon ``bounces'' on the left
 side of the potential barrier and subsequently moves towards the black hole,
-so that it is absorbed by it.
+so that it is absorbed by it (cf. geodesic no.~4 in Fig.~\ref{f:ges:null_geod}).
 \end{itemize}
 
 The critical value of the impact parameter separating the cases discussed
