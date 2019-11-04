@@ -78,7 +78,7 @@ Eq.~(\ref{e:fra:E_obs}), which resembles Eq.~(\ref{e:ges:conserved_energy})
 but differs from it by $\w{\xi}$ not being a unit vector in general:
 $\w{\xi}\cdot\w{\xi} \not = -1$. In other words, $\w{\xi}$ cannot
 be interpreted as the 4-velocity of some observer, so that the quantity
-$E$ defined by (\ref{e:ges:conserved_energy}) cannot be a measured
+$E$ defined by (\ref{e:ges:conserved_energy}) cannot be a \emph{physically measured}
 particle energy. It is only in the asymptotic region, where $\w{\xi}\cdot\w{\xi} = g_{tt}
 \rightarrow -1$, that $\w{\xi}$ is an eligible 4-velocity, hence the name
 \emph{energy at infinity}. Note that this name is commonly used, even in the
@@ -142,8 +142,11 @@ Hence\footnote{More rigorously, Eq.~(\ref{e:ges:pth_zero}) can
 be derived from the geodesic equation (\ref{e:fra:p_geodesic}): given
 the expression of the Christoffel symbols of $\w{g}$ in Schwarzschild-Droste
 coordinates (cf. Sec.~\ref{s:sam:Kottler_solution}), Eq.~(\ref{e:fra:p_geodesic})
-yields \[\frac{\D p^\th}{\D\lambda} +\frac{2}{r}  p^r p^\th - \sin\th\cos\th \left( p^\ph \right)^2 = 0,\] where $\lambda$ is the affine parameter of $\Li$ associated with $\w{p}$. The solution of this differential equation with $p^\th=0$ and
-$\cos\th=0$ as initial conditions is $p^\th=0$ for all values of $\lambda$.} $\Li$
+yields \[\frac{\D p^\th}{\D\lambda} +\frac{2}{r}  p^r p^\th - \sin\th\cos\th \left( p^\ph \right)^2 = 0,\] where $\lambda$ is the affine parameter of $\Li$ associated with $\w{p}$,
+so that $p^\th=\D\th/\D\lambda$. Whatever the values of $r(\lambda)$,
+$p^r(\lambda)$ and $p^\ph(\lambda)$,
+the solution of this ordinary differential equation with the initial conditions $p^\th=0$ and
+$\cos\th=0$ is $p^\th=0$ for all values of $\lambda$.} $\Li$
 must stay at $\th=\pi/2$, which implies
 \be \label{e:ges:pth_zero}
     \encadre{p^\th = 0} .
@@ -208,7 +211,13 @@ Since $\th=\pi/2$, we get
 \ee
 We have already noticed that the sign of $L$ is unconstrained (Remark~\ref{r:ges:L_any_sign} on p.~\pageref{r:ges:L_any_sign}). The above equation
 shows that it corresponds to the increase ($L>0$) or decrease $(L<0)$
-of $\ph$ along the geodesic $\Li$.
+of $\ph$ along the geodesic $\Li$. In other words, we deduce from Eq.~(\ref{e:ges:dot_ph})
+that
+\begin{greybox}
+Along any timelike or null geodesic of Schwarzschild spacetime,
+the azimuthal coordinate $\ph$ is either constant ($L=0$)
+or increases (resp. decreases) monotically ($L>0$) (resp. $L<0$).
+\end{greybox}
 
 The last unexploited first integral of motion is Eq.~(\ref{e:ges:p2_mu2}); it
 yields
@@ -274,15 +283,16 @@ a system of first order equations.
 \end{remark}
 
 In what follows, we discuss separately the resolution of
-Eq.~(\ref{e:ges:dot_r_square}) for timelike geodesics and for null ones.
+the system (\ref{e:ges:dot_t})-(\ref{e:ges:dot_r_square}) for timelike geodesics
+(Sec.~\ref{s:ges:timelike}) and for null ones (Sec.~\ref{s:ges:null}).
 
 
-\section{Timelike geodesics}
+\section{Timelike geodesics} \label{s:ges:timelike}
 
 \subsection{Effective potential} \label{s:ges:eff_pot_timelike}
 
 When the geodesic $\Li$ is timelike, it is natural to use the proper time $\tau$
-as an affine parameter along it, instead to the parameter $\lambda$ associated
+as an affine parameter along it, instead of the parameter $\lambda$ associated
 with the 4-momentum $\w{p}$. Since the tangent vector associated with $\tau$
 is the 4-velocity $\w{u}$ (cf. Sec.~\ref{s:fra:massive_part}) and $\w{p}$ and $\w{u}$ are related by
 Eq.~(\ref{e:fra:p_m_u}): $\w{p} = \mu \, \w{u}$, we get
@@ -319,9 +329,11 @@ Note that $\veps$ is dimensionless (in units $c=1$) and that it shares the
 same positiveness property (\ref{e:ges:E_positive_M_I}) as $E$,
 namely $\veps$ is positive as soon as the timelike geodesic $\Li$ has some part
 in $\M_{\rm I}$, i.e. some part with $r>2m$:
+\begin{greybox}
 \be \label{e:ges:eps_positive_M_I}
     \Li \cap \M_{\rm I} \not= \varnothing \quad \Longrightarrow \quad \veps > 0 .
 \ee
+\end{greybox}
 On the contrary, $\ell$ can be either positive, zero or negative, depending
 on the variation of $\ph$ along $\Li$, as was already noticed above for $L$.
 
@@ -1083,7 +1095,8 @@ and causes the orbits to be not closed, as illustrated in Figs.~\ref{f:ges:orbit
 
 
 
-\section{Null geodesics}
+\section{Null geodesics} \label{s:ges:null}
+
 
 We turn now to the case where the geodesic $\Li$ is null, i.e. to the case
 where $\mathscr{P}$ is a massless particle, typically a photon\index{photon}.
@@ -1110,7 +1123,7 @@ as well as by Eq.~(\ref{e:ges:dot_r_square}) with $\mu=0$:
          \left( 1 - \frac{2m}{r} \right) = E^2 .
 \ee
 Let us recall that the variable $\lambda$ with respect to which these differential equations
-are set
+hold
 is the affine parameter associated with the 4-momentum $\w{p}$ of $\mathscr{P}$
 (cf. Eq.~(\ref{e:ges:def_lambda})).
 
@@ -1157,7 +1170,7 @@ consider, instead of $\lambda$, the affine parameter
 \ee
 Since $L$ is a non-vanishing constant along a geodesic, the above formula
 does define a new affine parameter. Note that it has the same
-dimension of $L$, i.e. a squared length, given that $\lambda$ is dimensionless
+dimension as $L$, i.e. a squared length, given that $\lambda$ is dimensionless
 (cf. Sec.~\ref{s:ges:eq_to_be_solved}).
 In terms of $\tilde{\lambda}$,
 the differential system (\ref{e:ges:dot_t_null})-(\ref{e:ges:dot_r_square_null})
@@ -1195,10 +1208,11 @@ $b$, as defined by Eq.~(\ref{e:ges:def_b}), is finite.} $b$. It has
 has the dimension of a length and can be interpreted as the
 \defin{impact parameter}\index{impact parameter} in the case of a
 particle arising from infinity.
-Indeed, let us consider that the massless
+\begin{proof}
+Let us consider that the massless
 particle $\mathscr{P}$ arises from a point of coordinates $\theta=\pi/2$,
-$r=r_0 \gg m$ and $\ph = \ph_0$.  Let us introduce in the plane $\theta=\pi/2$
-Cartesian coordinates $(x,y)$ in the standard way:
+$r=r_0 \gg m$ and $\ph = \ph_0$.  Let us introduce
+Cartesian coordinates $(x,y)$ in the plane $\theta=\pi/2$:
 $x:=r\cos\ph$ and $y:=r\sin\ph$.
 Without any loss of generality, we may
 consider $|\ph_0| \ll 1$. For large values of $r$, the motion of
@@ -1227,6 +1241,7 @@ For $r\gg m$, the right-hand side reduces to $b/r^2$, so that the comparison
 with (\ref{e:ges:dphdt_approx}) yields $b = y_0$, i.e. $b$ is the impact
 parameter of the massless particle $\mathscr{P}$ with respect to the central
 black hole.
+\end{proof}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot_null.pdf}}
@@ -1241,20 +1256,6 @@ correspond to the $r$-motion of four null geodesics,
 the trajectories of which in the equatorial plane $\th=\pi/2$
 are depicted in Fig.~\ref{f:ges:null_geod}.}
 \end{figure}
-
-The effective potential $U(r)$ is plotted in Fig.~\ref{f:ges:eff_pot_null}.
-It has no minimum and a maximum at $r=3m$, which is
-\be \label{e:ges:U_max}
-    U_{\rm max} = \frac{1}{27m^2} .
-\ee
-This extremum is a stationary position in $r$: it corresponds thus to a circular
-orbit, usually called the \defin{photon orbit}\index{photon!orbit}\index{orbit!photon --}.
-The set of all photon orbits (one per choice of equatorial plane) is often
-called the \defin{photon sphere}\index{photon!sphere}\index{sphere!photon --}.
-However, since it corresponds to a maximum of the effective potential, the circular
-orbit at $r=3m$ is an unstable orbit. So one should not imagine that a
-Schwarzschild black hole is surrounded by a spherical shell of photons...
-
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{ges_null_geod.pdf}}
@@ -1273,8 +1274,21 @@ The $r$-motion of these four gedeosics is depicted in
 Fig.~\ref{f:ges:eff_pot_null}.}
 \end{figure}
 
+The effective potential $U(r)$ is plotted in Fig.~\ref{f:ges:eff_pot_null}.
+It has no minimum and a maximum at $r=3m$, which is
+\be \label{e:ges:U_max}
+    U_{\rm max} = \frac{1}{27m^2} .
+\ee
+This extremum is a stationary position in $r$: it corresponds thus to a circular
+orbit, usually called the \defin{photon orbit}\index{photon!orbit}\index{orbit!photon --}.
+The set of all photon orbits (one per choice of equatorial plane) is often
+called the \defin{photon sphere}\index{photon!sphere}\index{sphere!photon --}.
+However, since it corresponds to a maximum of the effective potential, the circular
+orbit at $r=3m$ is an unstable orbit. So one should not imagine that a
+Schwarzschild black hole is surrounded by a spherical shell of photons...
 
-\subsection{Radial motion of generic null geodesics}
+
+\subsection{Radial behavior of generic null geodesics}
 
 For the sake of concreteness, in this section and the remaining ones, we
 refer to the massless particle $\mathscr{P}$ as a ``photon''. In most applications, in
@@ -1324,7 +1338,7 @@ small values of $r$ and is eventually absorbed by the black hole ($r < 2m$)
 \end{itemize}
 
 For an initially outward photon, i.e. a photon emitted with ${\D r}/{\D\tilde{\lambda}} > 0$,
-there are two outcomes:
+there are two possible outcomes:
 \begin{itemize}
 \item if $r_{\rm em} > 3 m$ (e.g. trajectory
 no.~1 in Fig.~\ref{f:ges:eff_pot_null}) or
@@ -1341,7 +1355,7 @@ The critical value of the impact parameter separating the cases discussed
 above is determined by $b_{\rm crit}^{-2} = U_{\rm max}$.
 Given the value (\ref{e:ges:U_max}) of $U_{\rm max}$, we get
 \be
-    \encadre{b_{\rm crit} = 3\sqrt{3} \, m }.
+    \encadre{b_{\rm crit} = 3\sqrt{3} \, m \simeq 5.196152\, m }.
 \ee
 
 \subsection{Black hole shadow}
