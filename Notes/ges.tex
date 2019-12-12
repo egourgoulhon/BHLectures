@@ -1172,7 +1172,9 @@ consider, instead of $\lambda$, the affine parameter
 Since $L$ is a non-vanishing constant along a geodesic, the above formula
 does define a new affine parameter. Note that it has the same
 dimension as $L$, i.e. a squared length, given that $\lambda$ is dimensionless
-(cf. Sec.~\ref{s:ges:eq_to_be_solved}).
+(cf. Sec.~\ref{s:ges:eq_to_be_solved}). Note also that if $L<0$ and $\lambda$
+is increasing towards the future, $\tilde{\lambda}$ is decreasing towards the
+future.
 In terms of $\tilde{\lambda}$,
 the differential system (\ref{e:ges:dot_t_null})-(\ref{e:ges:dot_r_square_null})
 becomes
@@ -1289,7 +1291,7 @@ orbit at $r=3m$ is an unstable orbit. So one should not imagine that a
 Schwarzschild black hole is surrounded by a spherical shell of photons...
 
 
-\subsection{Radial behavior of generic null geodesics}
+\subsection{Radial behaviour of null geodesics}
 
 For the sake of concreteness, in this section and the remaining ones, we
 refer to the massless particle $\mathscr{P}$ as a ``photon''. In most applications, in
@@ -1321,7 +1323,11 @@ of the impact parameter $b$:
 (e.g. trajectory no.~1 in Fig.~\ref{f:ges:eff_pot_null}), the photon
 ``bounces'' on the potential barrier constituted by $U(r)$
 at some minimal value  $r_{\rm per}$ of $r$ --- the \defin{periastron}\index{periastron},
-which is given by  $U(r_{\rm per}) = b^{-2}$. Equation~(\ref{e:ges:dot_r_square_null_b})
+which is given by  $U(r_{\rm per}) = b^{-2}$, or equivalently by
+\be
+    \frac{r_{\rm per}^3}{r_{\rm per} - 2m} = b^2 .
+\ee
+Equation~(\ref{e:ges:dot_r_square_null_b})
 implies then
 \be
     \left. \frac{\D r}{\D\tilde{\lambda}} \right| _{r = r_{\rm per}} = 0 .
@@ -1409,11 +1415,22 @@ Same as Fig.~\ref{f:ges:null_b1} but for values of $b$ closer to
 $b_{\rm crit} \simeq 5.196152\, m$.}
 \end{figure}
 
+\subsection{Angular behaviour of null geodesics}
+
+Let us first recall the generic property of causal geodesics in Schwarzschild
+spacetime established in Sec.~\ref{s:ges:eq_to_be_solved} : the azimuthal
+angle coordinate $\ph$ has no turning point: it is either always increasing
+towards the future
+($L>0$) or always decreasing towards the future ($L<0$). This is clear on
+Eq.~(\ref{e:ges:dot_ph_null_b}) above, which implies obviously
+$\D\ph/\D\tilde{\lambda} > 0$, with $\tilde{\lambda}$ increasing (resp. decreasing)
+towards the future for $L>0$ (resp. $L<0$).
+
 Figures~\ref{f:ges:null_b1}-\ref{f:ges:null_b2} show some null geodesics in
 the equatorial plane $\theta=\pi/2$ coming from infinity along the
 direction $\ph=0$, for various values of the
 impact parameter $b$ decaying to $b_{\rm crit}$. All these geodesics, having
-$b > b_{\rm crit}$ correspond to the case no.~1 in the effective potential
+$b > b_{\rm crit}$, correspond to the case no.~1 in the effective potential
 diagram of Fig.~\ref{f:ges:eff_pot_null}, i.e. they reach to periastron
 before escaping to infinity. However, they differ by the number of turns
 performed around the black hole. For $b=12 m$ (upper left panel of Fig.~\ref{f:ges:null_b1}),
