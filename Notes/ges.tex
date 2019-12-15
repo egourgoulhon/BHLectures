@@ -1324,8 +1324,8 @@ of the impact parameter $b$:
 ``bounces'' on the potential barrier constituted by $U(r)$
 at some minimal value  $r_{\rm per}$ of $r$ --- the \defin{periastron}\index{periastron},
 which is given by  $U(r_{\rm per}) = b^{-2}$, or equivalently by
-\be
-    \frac{r_{\rm per}^3}{r_{\rm per} - 2m} = b^2 .
+\be \label{e:ges:r_per_null}
+    \frac{r_{\rm per}^3}{r_{\rm per} - 2m} = b^2 , \quad r_{\rm per} > 3 m.
 \ee
 Equation~(\ref{e:ges:dot_r_square_null_b})
 implies then
@@ -1357,8 +1357,13 @@ no.~3 in Figs.~\ref{f:ges:eff_pot_null}), the photon escapes to infinity
 \item if $2m < r_{\rm em} < 3 m$ and $b^{-2} < U_{\rm max}$ (e.g. trajectory
 no.~4 in Fig.~\ref{f:ges:eff_pot_null}), the photon ``bounces'' on the left
 side of the potential barrier, reaching a maximal value of $r$
---- the \defin{apoastron}\index{apoastron}, and subsequently moves towards the black hole,
-so that it is absorbed by it (cf. geodesic no.~4 in Fig.~\ref{f:ges:null_geod}).
+--- the \defin{apoastron}\index{apoastron},
+which is given by  $U(r_{\rm apo}) = b^{-2}$, or equivalently by
+\be \label{e:ges:r_apo_null}
+    \frac{r_{\rm apo}^3}{r_{\rm apo} - 2m} = b^2 , \quad r_{\rm apo} < 3 m.
+\ee
+The photon moves subsequently towards the black hole and
+is absorbed by it (cf. geodesic no.~4 in Fig.~\ref{f:ges:null_geod}).
 \end{itemize}
 
 The critical value of the impact parameter separating the cases discussed
@@ -1385,6 +1390,26 @@ graphically inferred from Fig.~\ref{f:ges:eff_pot_null}, which shows
 that the effective potential $U(r)$ is negative for $r<2m$,
 preventing the turning point condition $U(r) = b^{-2}$ to hold.
 
+
+\subsection{Angular behaviour of null geodesics}
+
+Let us first recall the generic property of causal geodesics in Schwarzschild
+spacetime established in Sec.~\ref{s:ges:eq_to_be_solved} : the azimuthal
+angle coordinate $\ph$ has no turning point: it is either always increasing
+towards the future
+($L>0$) or always decreasing towards the future ($L<0$). This is clear on
+Eq.~(\ref{e:ges:dot_ph_null_b}) above, which implies obviously
+$\D\ph/\D\tilde{\lambda} > 0$, with $\tilde{\lambda}$ increasing (resp. decreasing)
+towards the future for $L>0$ (resp. $L<0$).
+
+By combining Eqs.~(\ref{e:ges:dot_ph_null_b}), (\ref{e:ges:dot_r_square_null_b})
+and (\ref{e:ges:eff_pot_null}), we get
+\be \label{e:ges:dphi_dr_null}
+    \frac{\D\ph}{\D r} = \pm \frac{1}{r^2} \left( \frac{1}{b^2}
+        - \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) \right) ^{-1/2} .
+\ee
+This equation governs the trace of null geodesics on the equatorial plane
+$\th=\pi/2$.
 
 \begin{figure}
 \begin{tabular}{cc}
@@ -1415,23 +1440,12 @@ Same as Fig.~\ref{f:ges:null_b1} but for values of $b$ closer to
 $b_{\rm crit} \simeq 5.196152\, m$.}
 \end{figure}
 
-\subsection{Angular behaviour of null geodesics}
-
-Let us first recall the generic property of causal geodesics in Schwarzschild
-spacetime established in Sec.~\ref{s:ges:eq_to_be_solved} : the azimuthal
-angle coordinate $\ph$ has no turning point: it is either always increasing
-towards the future
-($L>0$) or always decreasing towards the future ($L<0$). This is clear on
-Eq.~(\ref{e:ges:dot_ph_null_b}) above, which implies obviously
-$\D\ph/\D\tilde{\lambda} > 0$, with $\tilde{\lambda}$ increasing (resp. decreasing)
-towards the future for $L>0$ (resp. $L<0$).
-
-Figures~\ref{f:ges:null_b1}-\ref{f:ges:null_b2} show some null geodesics in
-the equatorial plane $\theta=\pi/2$ coming from infinity along the
+Figures~\ref{f:ges:null_b1}-\ref{f:ges:null_b2} show such traces from null
+geodesics coming from infinity along the
 direction $\ph=0$, for various values of the
 impact parameter $b$ decaying to $b_{\rm crit}$. All these geodesics, having
 $b > b_{\rm crit}$, correspond to the case no.~1 in the effective potential
-diagram of Fig.~\ref{f:ges:eff_pot_null}, i.e. they reach to periastron
+diagram of Fig.~\ref{f:ges:eff_pot_null}, i.e. they reach a periastron
 before escaping to infinity. However, they differ by the number of turns
 performed around the black hole. For $b=12 m$ (upper left panel of Fig.~\ref{f:ges:null_b1}),
 the geodesic suffers only some small bending; this is nothing but the standard
@@ -1447,6 +1461,36 @@ almost at the photon circular orbit ($r=3m$). That after a few turns the null ge
 departs to infinity corroborates the fact that the photon orbit is unstable
 (cf. Sec.~\ref{s:ges:null_eff_pot}).
 
+The total change in $\ph$ along the null geodesic
+is obtained by integrating Eq.~(\ref{e:ges:dphi_dr_null}), when $r$ varies
+from $+\infty$ (the ``far away'' emission) to $r_{\rm per}$, and then when
+$r$ varies from $r_{\rm per}$ to $+\infty$ (the ``far away'' reception).
+Assuming $L>0$, so that $\ph$ increases towards the future, one must select
+the $-$ sign in the r.h.s. of Eq.~(\ref{e:ges:dphi_dr_null}) for the first part
+and the $+$ sign for the second part. Hence
+\bea
+    \Delta \ph &=& - \int_{+\infty}^{r_{\rm per}} \frac{1}{r^2} \left( \frac{1}{b^2}
+        - \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) \right) ^{-1/2} \D r
+    + \int_{r_{\rm per}}^{+\infty}  \frac{1}{r^2}\left( \frac{1}{b^2}
+        - \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) \right) ^{-1/2} \D r \nonumber \\
+        & = & 2 \int_{r_{\rm per}}^{+\infty}  \frac{1}{r^2}\left( \frac{1}{b^2}
+        - \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) \right) ^{-1/2} \D r
+\eea
+Via the change of variable
+\be
+    u := \frac{m}{r}
+\ee
+we can transform the integral into
+\be
+    \Delta\ph = 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} ,
+\ee
+with $u_{\rm per} := m/r_{\rm per}$.
+This integral can be evaluated by means of elliptic functions (see e.g. Ref.~\cite{Lumin79, FroloZ11}
+for details). However, we can understand the winding when $b$ is close to $b_{\rm crit}$
+without the explicit form, by simply noticing that the cubic polynomial
+$P(u) := 2 u^3 - u^2 + (m/b)^2$ has three roots for $b>b_{\rm crit}$: $u_{\rm per}$,
+$u_{\rm apo}$ and a negative root, $u_0$ say. The first two roots follow immediately
+from Eqs.~(\ref{e:ges:r_per_null}) and (\ref{e:ges:r_apo_null}).
 
 \subsection{Black hole shadow}
 
