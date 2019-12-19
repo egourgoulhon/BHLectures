@@ -1325,7 +1325,7 @@ of the impact parameter $b$:
 at some minimal value  $r_{\rm per}$ of $r$ --- the \defin{periastron}\index{periastron},
 which is given by  $U(r_{\rm per}) = b^{-2}$, or equivalently by
 \be \label{e:ges:r_per_null}
-    \frac{r_{\rm per}^3}{r_{\rm per} - 2m} = b^2 , \quad r_{\rm per} > 3 m.
+  r_{\rm per}^3 - b^2\, r_{\rm per} + 2 m b^2 = 0, \quad r_{\rm per} > 3 m.
 \ee
 Equation~(\ref{e:ges:dot_r_square_null_b})
 implies then
@@ -1360,7 +1360,7 @@ side of the potential barrier, reaching a maximal value of $r$
 --- the \defin{apoastron}\index{apoastron},
 which is given by  $U(r_{\rm apo}) = b^{-2}$, or equivalently by
 \be \label{e:ges:r_apo_null}
-    \frac{r_{\rm apo}^3}{r_{\rm apo} - 2m} = b^2 , \quad r_{\rm apo} < 3 m.
+   r_{\rm apo}^3 - b^2\, r_{\rm apo} + 2 m b^2 = 0, \quad r_{\rm apo} < 3 m.
 \ee
 The photon moves subsequently towards the black hole and
 is absorbed by it (cf. geodesic no.~4 in Fig.~\ref{f:ges:null_geod}).
@@ -1389,6 +1389,54 @@ decreasing. The impossibility of a turning point for $r<2m$ can also be
 graphically inferred from Fig.~\ref{f:ges:eff_pot_null}, which shows
 that the effective potential $U(r)$ is negative for $r<2m$,
 preventing the turning point condition $U(r) = b^{-2}$ to hold.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{ges_null_per_apo.pdf}}
+\caption[]{\label{f:ges:null_per_apo} \footnotesize
+Radial coordinate of the periastron, $r_{\rm per}$, and of the apoastron,
+$r_{\rm apo}$, along a null geodesic with $b > b_{\rm crit} \simeq 5.196\, m$.
+Note that a given null geodesic has either a periastron or an apoastron, but not
+both.}
+\end{figure}
+
+
+For $b > b_{\rm crit}$, the explicit expression of the periastron radius
+$r_{\rm per}$ (or the apoastron radius $r_{\rm apo}$)
+is obtained by solving the cubic equation (\ref{e:ges:r_per_null})
+(or (\ref{e:ges:r_apo_null}), which is the same cubic equation, except for
+the range of the solution). Fortunately Eq.~(\ref{e:ges:r_per_null})
+is a depressed\footnote{A \emph{depressed} cubic equation is a polynomial equation
+of the type $x^3 + p x + q = 0$.} cubic equation, which makes
+it simpler to solve. For $b > b_{\rm crit}$, its determinant is positive, which
+implies that it admits three distinct real roots. Two of them are positive
+and are precisely $r_{\rm per}$ and $r_{\rm apo}$. The third root is negative,
+since the product of the roots is $-2mb^2 < 0$; it has therefore no
+physical significance. The roots of the generic depressed cubic
+equation $x^3 + p x + q = 0$ can be expressed via Viète's
+trigonometric formulas:
+\be
+    x_k = 2 \sqrt{-\frac{p}{3}} \cos \left[ \frac{1}{3}\,  \mathrm{arccos}\left(
+        \frac{3 q}{2 p} \sqrt{-\frac{p}{3}} \right) + \frac{2 k\pi}{3} \right],
+        \qquad k \in \{0, 1, 2\} .
+\ee
+In the present case, $p= - b^2$ and $q = 2 m b^2$,
+and $r_{\rm per}$ (resp. $r_{\rm apo}$) corresponds to $k=0$
+(resp. $k=2$), so that we obtain
+\be \label{e:ges:sol_r_per}
+    r_{\rm per} = \frac{2 b}{\sqrt{3}} \cos\left[\frac{\pi}{3}
+        - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{b}\right) \right] .
+\ee
+\be
+    r_{\rm apo} = \frac{2 b}{\sqrt{3}} \cos\left[\frac{5\pi}{3}
+        - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{b}\right) \right] .
+\ee
+As a check, we notice that for $b\gg b_{\rm crit}$, Eq.~(\ref{e:ges:sol_r_per})
+yields $r_{\rm per} \simeq 2b/\sqrt{3} \cos\left(\pi/3 -1/3 \times \pi/2 \right)
+\simeq 2b/\sqrt{3} \cos(\pi/6) \simeq b$.
+
+The variation of $r_{\rm per}$ and $r_{\rm apo}$ with $b$ is plotted
+on Fig.~\ref{f:ges:null_per_apo}.
+
 
 
 \subsection{Angular behaviour of null geodesics}
@@ -1496,7 +1544,7 @@ from Eqs.~(\ref{e:ges:r_per_null}) and (\ref{e:ges:r_apo_null}).
 
 
 \begin{hist}
-Synge \cite{Synge66}, Bardeen \cite{Barde73}
+Darwin \cite{Darwi59}, Synge \cite{Synge66}, Bardeen \cite{Barde73}
 \end{hist}
 
 
