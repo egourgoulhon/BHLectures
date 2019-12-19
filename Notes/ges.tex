@@ -1412,8 +1412,7 @@ implies that it admits three distinct real roots. Two of them are positive
 and are precisely $r_{\rm per}$ and $r_{\rm apo}$. The third root is negative,
 since the product of the roots is $-2mb^2 < 0$; it has therefore no
 physical significance. The roots of the generic depressed cubic
-equation $x^3 + p x + q = 0$ can be expressed via Viète's
-trigonometric formulas:
+equation $x^3 + p x + q = 0$ can be expressed via Viète's formulas:
 \be
     x_k = 2 \sqrt{-\frac{p}{3}} \cos \left[ \frac{1}{3}\,  \mathrm{arccos}\left(
         \frac{3 q}{2 p} \sqrt{-\frac{p}{3}} \right) + \frac{2 k\pi}{3} \right],
@@ -1426,16 +1425,17 @@ and $r_{\rm per}$ (resp. $r_{\rm apo}$) corresponds to $k=0$
     r_{\rm per} = \frac{2 b}{\sqrt{3}} \cos\left[\frac{\pi}{3}
         - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{b}\right) \right] .
 \ee
-\be
+\be \label{e:ges:sol_r_apo}
     r_{\rm apo} = \frac{2 b}{\sqrt{3}} \cos\left[\frac{5\pi}{3}
         - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{b}\right) \right] .
 \ee
 As a check, we notice that for $b\gg b_{\rm crit}$, Eq.~(\ref{e:ges:sol_r_per})
 yields $r_{\rm per} \simeq 2b/\sqrt{3} \cos\left(\pi/3 -1/3 \times \pi/2 \right)
-\simeq 2b/\sqrt{3} \cos(\pi/6) \simeq b$.
+\simeq 2b/\sqrt{3} \cos(\pi/6) \simeq b$, as expected.
 
 The variation of $r_{\rm per}$ and $r_{\rm apo}$ with $b$ is plotted
-on Fig.~\ref{f:ges:null_per_apo}.
+on Fig.~\ref{f:ges:null_per_apo}. Note that $r_{\rm per} = r_{\rm apo} = 3 m$
+(the photon orbit) at the limit $b = b_{\rm crit}$.
 
 
 
@@ -1534,11 +1534,21 @@ we can transform the integral into
 \ee
 with $u_{\rm per} := m/r_{\rm per}$.
 This integral can be evaluated by means of elliptic functions (see e.g. Ref.~\cite{Lumin79, FroloZ11}
-for details). However, we can understand the winding when $b$ is close to $b_{\rm crit}$
-without the explicit form, by simply noticing that the cubic polynomial
-$P(u) := 2 u^3 - u^2 + (m/b)^2$ has three roots for $b>b_{\rm crit}$: $u_{\rm per}$,
-$u_{\rm apo}$ and a negative root, $u_0$ say. The first two roots follow immediately
-from Eqs.~(\ref{e:ges:r_per_null}) and (\ref{e:ges:r_apo_null}).
+for details). However, we can understand the winding around the photon circular orbit
+observed in Figs.~\ref{f:ges:null_b1}-\ref{f:ges:null_b2}
+when $b$ is close to $b_{\rm crit}$
+without the explicit form.
+Indeed the roots of the cubic polynomial
+$2 u^3 - u^2 + (m/b)^2$  are nothing but $u_{\rm per} := m/r_{\rm per}$,
+$u_{\rm apo} := m/r_{\rm apo}$ and $u_{\rm neg} := m/r_{\rm neg}$
+with $r_{\rm per}$ given by Eq.~(\ref{e:ges:sol_r_per}), $r_{\rm apo}$
+given by Eq.~(\ref{e:ges:sol_r_apo}) and $r_{\rm neg}$ is the negative root
+of the polynomial $r^3 - b^2 r + 2 m b^2$. We thus can write
+\be
+    \Delta\ph = \sqrt{2} \int_0^{u_{\rm per}}
+    \frac{\D u}{\sqrt{(u_{\rm per} - u )(u_{\rm apo} - u)(u - u_{\rm neg})}} .
+\ee
+
 
 \subsection{Black hole shadow}
 
