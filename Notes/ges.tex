@@ -1291,7 +1291,7 @@ orbit at $r=3m$ is an unstable orbit. So one should not imagine that a
 Schwarzschild black hole is surrounded by a spherical shell of photons...
 
 
-\subsection{Radial behaviour of null geodesics}
+\subsection{Radial behaviour of null geodesics} \label{s:ges:null_radial_behav}
 
 For the sake of concreteness, in this section and the remaining ones, we
 refer to the massless particle $\mathscr{P}$ as a ``photon''. In most applications, in
@@ -1454,10 +1454,111 @@ By combining Eqs.~(\ref{e:ges:dot_ph_null_b}), (\ref{e:ges:dot_r_square_null_b})
 and (\ref{e:ges:eff_pot_null}), we get
 \be \label{e:ges:dphi_dr_null}
     \frac{\D\ph}{\D r} = \pm \frac{1}{r^2} \left( \frac{1}{b^2}
-        - \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) \right) ^{-1/2} .
+        - \frac{1}{r^2} +  \frac{2m}{r^3}  \right) ^{-1/2} .
 \ee
-This equation governs the trace of null geodesics on the equatorial plane
-$\th=\pi/2$.
+Introducing the variable
+\be
+    u := \frac{m}{r}
+\ee
+allows us to simplify this equation:
+\be \label{e:ges:dphi_du_null}
+    \frac{\D\ph}{\D u} = \pm \frac{1}{\sqrt{2 u^3 - u^2 + (m/b)^2}}
+\ee
+
+The zeros of the cubic polynomial
+\be
+        P_b(u) := 2 u^3 - u^2 + \frac{m^2}{b^2}
+\ee
+correspond to points for which $\D\ph/\D u \rightarrow \pm \infty$,
+or equivalently $\D u /\D\ph \rightarrow 0$. They are thus stationary points
+for $u$, and hence for $r$. This can only occur at the circular photon
+orbit $r = \mathrm{const} = 3 m$ (then $b=b_{\rm crit}$)
+or at a periastron or apoastron discussed
+in Sec.~\ref{s:ges:null_radial_behav} (then $b > b_{\rm crit}$).
+Mathematically, the zeros of $P_b(u)$ are governed by its
+discriminant, which is
+\be
+    \Delta = 4 \frac{m^4}{b^4} \left( \frac{b^2}{m^2} - 27 \right) .
+\ee
+\begin{itemize}
+\item If $\Delta<0$ $\iff$ $b <\sqrt{27} m = b_{\rm crit}$,
+$P_b(u)$ has one real negative zero and two complex zeros, so that it never vanishes
+for physical values of $u$ ($u\in\mathbb{R}^+$).
+\item If $\Delta=0$ $\iff$ $b = b_{\rm crit}$, $P_b(u)$
+has a double zero $u=1/3$ and a negative zero: $u=-1/6$.
+\item If $\Delta>0$ $\iff$ $b > b_{\rm crit}$, $P_b(u)$ has three distinct
+zeros; one of them, $u_{\rm neg}$ say, is
+negative and hence unphysical and the two others are positive, being nothing but
+\be
+    u_{\rm per} = \frac{m}{r_{\rm per}} \qquad\mbox{and}\qquad
+    u_{\rm apo} = \frac{m}{r_{\rm apo}} ,
+\ee
+where $r_{\rm per}$ and $r_{\rm apo}$ are given by
+Eqs.~(\ref{e:ges:sol_r_per})-(\ref{e:ges:sol_r_apo}).
+\end{itemize}
+For $\Delta< 0$ or $\Delta> 0$, i.e. for $b\not = b_{\rm crit}$,
+Eq.~(\ref{e:ges:dphi_du_null}) can be integrated in terms of elliptic
+functions (see e.g. Chap.~7 of Frolov \& Zelnikov textbook \cite{FroloZ11}
+or Mu\~noz article \cite{Munoz14} for details).
+The case $b=b_{\rm crit}$ can be delt with by means of elementary functions.
+Indeed, in this case, $P_b(u) = 2(u - 1/3)^2 (u + 1/6)$ and Eq.~(\ref{e:ges:dphi_du_null})
+becomes
+\be
+    \frac{\D\ph}{\D u} = \pm \frac{1}{\left|u - \frac{1}{3}\right|
+        \sqrt{2u+\frac{1}{3}}} .
+\ee
+This equation can be easily integrated by noticing that
+\[
+    \frac{1}{(1-x)\sqrt{x}} = \begin{cases}
+       \displaystyle 2 \frac{\D}{\D x} \left( \mathrm{artanh}\, \sqrt{x} \right) \quad \mbox{for}\ x\in(0,1)\\[2ex]
+       \displaystyle 2 \frac{\D}{\D x} \left( \mathrm{arcoth}\, \sqrt{x} \right) \quad \mbox{for}\ x\in(1,+\infty) .
+    \end{cases}
+\]
+We thus perform the change of variable $x=2u + 1/3$.
+For the case $u<1/3$ ($\iff r> 3m$), which implies $x\in (0,1)$, we arrive
+at
+\be
+    \ph = \pm 2 \,\mathrm{artanh}\, \sqrt{2u + \frac{1}{3}} + \ph_0 ,
+\ee
+where $\ph_0$ is some integration constant. This relation is easily inverted
+to
+\be \label{e:ges:u_ph_crit_null_geod}
+    u = \frac{1}{2}  \tanh^2 \left(\frac{\ph - \ph_0}{2} \right) - \frac{1}{6} .
+\ee
+Moving back to $r = m/u$, we obtain the equation of the null geodesic in polar form:
+\be \label{e:ges:null_r_phi_tanh}
+    r = \frac{2m}{\tanh^2 \left(\frac{\ph - \ph_0}{2} \right) - \frac{1}{3}} .
+\ee
+The constant $\ph_0$ can be related to the asymptotic value $\ph_\infty$ of $\ph$
+when $r\rightarrow +\infty$ by setting $u=0$ in Eq.~(\ref{e:ges:u_ph_crit_null_geod});
+we get, using the identity $\mathrm{artanh}\,  x = 1/2\ln[(1+x)/(1-x)]$,
+\be
+    \ph_0 = \ph_\infty - \ph_*,\quad\mbox{with}\quad
+    \ph_* := \ln\left(\frac{\sqrt{3} + 1}{\sqrt{3} - 1}\right)
+    \simeq 1.316958.
+\ee
+The function $r(\ph)$, as given by Eq.~(\ref{e:ges:null_r_phi_tanh}), is
+depicted on Fig.~\ref{f:ges:null_r_phi_bcrit} (blue curve). Note that for
+$\phi > \phi_0$
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ges_null_r_phi_bcrit.pdf}}
+\caption[]{\label{f:ges:null_r_phi_bcrit} \footnotesize
+$r$ as a function of $\ph$ along a null geodesic with an impact parameter
+$b = b_{\rm crit} = 3\sqrt{3} \, m$; the blue curve is for $r>3m$
+[Eq.~(\ref{e:ges:null_r_phi_tanh})], while the red one
+regards $r<3m$ [Eq.~(\ref{e:ges:null_r_phi_coth})].}
+\end{figure}
+
+
+
+Similarly, for $u>1/3$ ($\iff r< 3m$), which implies $x\in (1,+\infty)$, we
+get
+\be \label{e:ges:null_r_phi_coth}
+    r = \frac{2m}{\coth^2 \left(\frac{\ph - \ph_0}{2} \right) - \frac{1}{3}} .
+\ee
+Again, $\ph_0$ is an integration constant. It cannot be determined by the
+value of $\ph$ when $r\rightarrow +\infty$ since $r<3m$.
 
 \begin{figure}
 \begin{tabular}{cc}
@@ -1488,7 +1589,7 @@ Same as Fig.~\ref{f:ges:null_b1} but for values of $b$ closer to
 $b_{\rm crit} \simeq 5.196152\, m$.}
 \end{figure}
 
-Figures~\ref{f:ges:null_b1}-\ref{f:ges:null_b2} show such traces from null
+Figures~\ref{f:ges:null_b1}-\ref{f:ges:null_b2} show traces in the equatorial plane from null
 geodesics coming from infinity along the
 direction $\ph=0$, for various values of the
 impact parameter $b$ decaying to $b_{\rm crit}$. All these geodesics, having
@@ -1518,11 +1619,11 @@ the $-$ sign in the r.h.s. of Eq.~(\ref{e:ges:dphi_dr_null}) for the first part
 and the $+$ sign for the second part. Hence
 \bea
     \Delta \ph &=& - \int_{+\infty}^{r_{\rm per}} \frac{1}{r^2} \left( \frac{1}{b^2}
-        - \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) \right) ^{-1/2} \D r
+        - \frac{1}{r^2} +  \frac{2m}{r^3} \right) ^{-1/2} \D r
     + \int_{r_{\rm per}}^{+\infty}  \frac{1}{r^2}\left( \frac{1}{b^2}
-        - \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) \right) ^{-1/2} \D r \nonumber \\
+        - \frac{1}{r^2} +  \frac{2m}{r^3} \right) ^{-1/2} \D r \nonumber \\
         & = & 2 \int_{r_{\rm per}}^{+\infty}  \frac{1}{r^2}\left( \frac{1}{b^2}
-        - \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) \right) ^{-1/2} \D r
+        - \frac{1}{r^2} +  \frac{2m}{r^3} \right) ^{-1/2} \D r
 \eea
 Via the change of variable
 \be
@@ -1554,7 +1655,7 @@ of the polynomial $r^3 - b^2 r + 2 m b^2$. We thus can write
 
 
 \begin{hist}
-Darwin \cite{Darwi59}, Synge \cite{Synge66}, Bardeen \cite{Barde73}
+Droste \cite{Drost1917}, Hagihara,  Darwin \cite{Darwi59}, Synge \cite{Synge66}, Bardeen \cite{Barde73}
 \end{hist}
 
 
