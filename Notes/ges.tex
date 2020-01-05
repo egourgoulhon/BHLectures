@@ -1125,7 +1125,7 @@ as well as by Eq.~(\ref{e:ges:dot_r_square}) with $\mu=0$:
 Let us recall that the variable $\lambda$ with respect to which these differential equations
 hold
 is the affine parameter associated with the 4-momentum $\w{p}$ of $\mathscr{P}$
-(cf. Eq.~(\ref{e:ges:def_lambda})).
+(cf. Eq.~(\ref{e:ges:def_lambda})) and that it increases towards the future.
 
 \subsection{Radial null geodesics}
 
@@ -1295,7 +1295,7 @@ The set of all photon orbits (one per choice of equatorial plane) is often
 called the \defin{photon sphere}\index{photon!sphere}\index{sphere!photon --}.
 However, since it corresponds to a maximum of the effective potential, the circular
 orbit at $r=3m$ is an unstable orbit. So one should not imagine that a
-Schwarzschild black hole is surrounded by a spherical shell of photons...
+Schwarzschild black hole is surrounded by any spherical shell of photons...
 
 
 \subsection{Radial behaviour of null geodesics} \label{s:ges:null_radial_behav}
@@ -1503,6 +1503,17 @@ negative and hence unphysical and the two others are positive, being nothing but
 where $r_{\rm per}$ and $r_{\rm apo}$ are given by
 Eqs.~(\ref{e:ges:sol_r_per})-(\ref{e:ges:sol_r_apo}).
 \end{itemize}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ges_null_r_phi_bcrit.pdf}}
+\caption[]{\label{f:ges:null_r_phi_bcrit} \footnotesize
+$r$ as a function of $\ph$ along a null geodesic with an impact parameter
+equal to the critical one:
+$b = b_{\rm crit} = 3\sqrt{3} \, m$; the blue curve is for $r>3m$
+[Eq.~(\ref{e:ges:null_r_phi_tanh})], while the red one
+regards $r<3m$ [Eq.~(\ref{e:ges:null_r_phi_coth})].}
+\end{figure}
+
 For $\Delta< 0$ or $\Delta> 0$, i.e. for $|b| \not= b_{\rm crit}$,
 Eq.~(\ref{e:ges:dphi_du_null}) can be integrated in terms of elliptic
 functions (see e.g. Chap.~7 of Frolov \& Zelnikov textbook \cite{FroloZ11}
@@ -1515,15 +1526,24 @@ becomes
         \sqrt{2u+\frac{1}{3}}} .
 \ee
 This equation can be easily integrated by noticing that
-\[
+\be \label{e:ges:primitive_crit_geod}
     \frac{1}{(1-x)\sqrt{x}} = \begin{cases}
        \displaystyle 2 \frac{\D}{\D x} \left( \mathrm{artanh}\, \sqrt{x} \right) \quad \mbox{for}\ x\in(0,1)\\[2ex]
        \displaystyle 2 \frac{\D}{\D x} \left( \mathrm{arcoth}\, \sqrt{x} \right) \quad \mbox{for}\ x\in(1,+\infty) .
     \end{cases}
-\]
-We thus perform the change of variable $x=2u + 1/3$.
-For the case $u<1/3$ ($\iff r> 3m$), which implies $x\in (0,1)$, we arrive
-at
+\ee
+We thus perform the change of variable $x=2u + 1/3$ and treat separately
+two cases : $u<1/3 \iff x\in (0,1)$ and $u>1/3 \iff x\in (1,+\infty)$.
+We call geodesics in the first case
+\defin{external critical null geodesics}\index{external!critical null geodesic}\index{critical!null geodesic!external --},
+since $u<1/3\iff r > 3 m$, and those in the second case
+\defin{internal critical null geodesics}\index{internal!critical null geodesic}\index{critical!null geodesic!internal --},
+since $u>1/3 \iff r < 3m$, \emph{external} and \emph{internal} refering
+to the photon sphere $r=3 m$ discussed in Sec.~\ref{s:ges:null_eff_pot}.
+
+\subsubsection{External critical null geodesics}
+
+For $u<1/3$, we arrive at
 \be \label{e:ges:ph_u_crit_null_geod}
     \ph = \pm 2 \,\mathrm{artanh}\, \sqrt{2u + \frac{1}{3}} + \ph_0 ,
 \ee
@@ -1545,16 +1565,6 @@ we get, using the identity $\mathrm{artanh}\,  x = 1/2\ln[(1+x)/(1-x)]$,
     \simeq 1.316958.
 \ee
 
-\begin{figure}
-\centerline{\includegraphics[width=0.7\textwidth]{ges_null_r_phi_bcrit.pdf}}
-\caption[]{\label{f:ges:null_r_phi_bcrit} \footnotesize
-$r$ as a function of $\ph$ along a null geodesic with an impact parameter
-equal to the critical one:
-$b = b_{\rm crit} = 3\sqrt{3} \, m$; the blue curve is for $r>3m$
-[Eq.~(\ref{e:ges:null_r_phi_tanh})], while the red one
-regards $r<3m$ [Eq.~(\ref{e:ges:null_r_phi_coth})].}
-\end{figure}
-
 The function $r(\ph)$, as given by Eq.~(\ref{e:ges:null_r_phi_tanh}), is
 depicted on Fig.~\ref{f:ges:null_r_phi_bcrit} (blue curve).
 The region $\ph_0-\ph_* < \ph < \ph_0 + \ph_*$ is excluded, since
@@ -1563,42 +1573,62 @@ $r(\ph)$ is a decaying
 function, which corresponds to the
 plus sign in Eq.~(\ref{e:ges:ph_u_crit_null_geod}) and to the minus sign in
 Eq.~(\ref{e:ges:null_ph_0_ph_inf}): $\ph_0 = \ph_\infty - \ph_*$.
-Fig.~\ref{f:ges:null_b_crit_from_inf} shows such a null geodesic with
+Figure~\ref{f:ges:null_b_crit_from_inf_L_pos} shows such a null geodesic with
 $\ph_\infty=0$, which implies $\ph_0 = - \ph_*$ and $\ph>0$.
-This geodesic spirals onto the photon
-circular orbit at $r=3m$ when $\ph\rightarrow +\infty$,
-which corresponds to the horizontal asymptote in
+When $\ph\rightarrow +\infty$, the geodesic rolls up indefinitely onto the photon
+orbit discussed in Sec.~\ref{s:ges:null_eff_pot}; this
+behavior corresponds to the horizontal asymptote at $r=3m$ in
 the right part of Fig.~\ref{f:ges:null_r_phi_bcrit}.
-Note that Fig.~\ref{f:ges:null_b_crit_from_inf} describes a
-geodesic with $L>0$ ($\ph$ increasing towards the future) arising from $r\rightarrow + \infty$
-and spiraling inwards ($r$ decaying towards the future) to the photon circular orbit
-as well as a geodesic with $L<0$ ($\ph$ decaying towards the future)
-and spiraling outwards ($r$ increasing to the future), escaping to $r\rightarrow +\infty$.
+Note that Fig.~\ref{f:ges:null_b_crit_from_inf_L_pos} describes both (i) the trace of a
+geodesic with $L>0$ (so that $\ph$ increases towards the future, cf. Eq.~(\ref{e:ges:dot_ph_null})) arising from $r\rightarrow + \infty$
+and spiraling inwards to the photon orbit
+and (ii) the trace of a geodesic with $L<0$ (so that $\ph$ decays towards the future)
+arising from $r=r_{\rm em} > 3 m$, $\ph=\ph_{\rm em}>0$
+and spiraling outwards, escaping to $r\rightarrow +\infty$ as $\ph\rightarrow 0$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ges_null_b_crit_from_inf_L_pos.pdf}}
+\caption[]{\label{f:ges:null_b_crit_from_inf_L_pos} \footnotesize
+Trace in the equatorial plane of a
+null geodesic in the region $r>3m$ with an impact parameter
+equal to the critical one: $b = 3\sqrt{3} \, m \simeq 5.196 m$ and $\ph_\infty=0$.
+It obeys Eq.~(\ref{e:ges:null_r_phi_tanh}) with $\ph_0 = -\ph_*$.}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ges_null_b_crit_from_inf_L_neg.pdf}}
+\caption[]{\label{f:ges:null_b_crit_from_inf_L_neg} \footnotesize
+Same as Fig.~\ref{f:ges:null_b_crit_from_inf_L_pos}, but for $\ph_0 = \ph_*$.}
+\end{figure}
 
 On the contrary, for $\ph < \ph_0 - \ph_*$,
 $r(\ph)$ is an increasing
-function, which corresponds to the
+function, as it is clear on the left part of the blue curve in Fig.~\ref{f:ges:null_r_phi_bcrit}.
+This corresponds to the
 minus sign in Eq.~(\ref{e:ges:ph_u_crit_null_geod}) and to the plus sign in
 Eq.~(\ref{e:ges:null_ph_0_ph_inf}): $\ph_0 = \ph_\infty + \ph_*$.
+A null geodesic of this type is depicted in Fig.~\ref{f:ges:null_b_crit_from_inf_L_neg}.
+It has $\ph_\infty = 0$, so that $\ph_0 = \ph_*$ and $\ph < 0$.
+As for Fig.~\ref{f:ges:null_b_crit_from_inf_L_pos}, the curve depicted in
+Fig.~\ref{f:ges:null_b_crit_from_inf_L_neg} is the trace of two distinct
+geodesics: one with $L<0$ arising from $r\rightarrow + \infty$
+and spiraling inwards to the photon orbit when $\ph\rightarrow -\infty$
+and another one with $L>0$
+arising from $r=r_{\rm em} > 3 m$, $\ph=\ph_{\rm em}<0$
+and spiraling outwards, escaping to $r\rightarrow +\infty$ as $\ph\rightarrow 0$.
 
+\subsubsection{Internal critical null geodesics}
 
-
-\begin{figure}
-\centerline{\includegraphics[width=0.7\textwidth]{ges_null_b_crit_from_inf}}
-\caption[]{\label{f:ges:null_b_crit_from_inf} \footnotesize
-Trace in the equatorial plane of a
-null geodesic in the region $r>3m$ with an impact parameter
-equal to the critical one: $b = 3\sqrt{3} \, m \simeq 5.196 m$ and $\ph_0 = -\ph_*$.}
-\end{figure}
-
-
-Similarly, for $u>1/3$ ($\iff r< 3m$), which implies $x\in (1,+\infty)$, we
-get
+Let us now consider the case
+$u>1/3$ ($\iff r< 3m$), which implies $x\in (1,+\infty)$ in Eq.~(\ref{e:ges:primitive_crit_geod}).
+Equation~\eqref{e:ges:dphi_du_null_bcrit} is then integrated to
 \be \label{e:ges:null_r_phi_coth}
     r = \frac{2m}{\coth^2 \left(\frac{\ph - \ph_0}{2} \right) - \frac{1}{3}} .
 \ee
-Again, $\ph_0$ is an integration constant. It cannot be determined by the
-value of $\ph$ when $r\rightarrow +\infty$ since $r<3m$.
+Again, $\ph_0$ is an integration constant. But this time, it cannot be determined by the
+value of $\ph$ when $r\rightarrow +\infty$ since we are in the case $r<3m$.
+The function $r(\ph)$ given by Eq.~\eqref{e:ges:null_r_phi_coth} is plotted as the red
+curve in Fig.~\ref{f:ges:null_r_phi_bcrit}.
 
 \begin{figure}
 \begin{tabular}{cc}
@@ -1628,6 +1658,8 @@ at $r=3m$.}
 Same as Fig.~\ref{f:ges:null_b1} but for values of $b$ closer to
 $b_{\rm crit} \simeq 5.196152\, m$.}
 \end{figure}
+
+\subsubsection{Other null geodesics}
 
 Figures~\ref{f:ges:null_b1}-\ref{f:ges:null_b2} show traces in the equatorial plane from null
 geodesics coming from infinity along the
