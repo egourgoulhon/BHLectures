@@ -1509,7 +1509,8 @@ Eqs.~(\ref{e:ges:sol_r_per})-(\ref{e:ges:sol_r_apo}).
 \caption[]{\label{f:ges:null_r_phi_bcrit} \footnotesize
 $r$ as a function of $\ph$ along a null geodesic with an impact parameter
 equal to the critical one:
-$b = b_{\rm crit} = 3\sqrt{3} \, m$; the blue curve is for $r>3m$
+$b = b_{\rm crit} = 3\sqrt{3} \, m$; the blue curve is for a critical
+null geodesic with $r>3m$
 [Eq.~(\ref{e:ges:null_r_phi_tanh})], while the red one
 regards $r<3m$ [Eq.~(\ref{e:ges:null_r_phi_coth})].}
 \end{figure}
@@ -1589,16 +1590,17 @@ and spiraling outwards, escaping to $r\rightarrow +\infty$ as $\ph\rightarrow 0$
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{ges_null_b_crit_from_inf_L_pos.pdf}}
 \caption[]{\label{f:ges:null_b_crit_from_inf_L_pos} \footnotesize
-Trace in the equatorial plane of a
-null geodesic in the region $r>3m$ with an impact parameter
-equal to the critical one: $b = 3\sqrt{3} \, m \simeq 5.196 m$ and $\ph_\infty=0$.
-It obeys Eq.~(\ref{e:ges:null_r_phi_tanh}) with $\ph_0 = -\ph_*$.}
+Trace in the equatorial plane of an external critical null geodesic ($b = 3\sqrt{3} \, m \simeq 5.196 m$ and
+$r>3m$) with $\ph_\infty=0$.
+It obeys Eq.~(\ref{e:ges:null_r_phi_tanh}) with $\ph_0 = -\ph_*$ and $\ph\in(0,+\infty)$
+(right branch of the blue curve in Fig.~\ref{f:ges:null_r_phi_bcrit}).}
 \end{figure}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{ges_null_b_crit_from_inf_L_neg.pdf}}
 \caption[]{\label{f:ges:null_b_crit_from_inf_L_neg} \footnotesize
-Same as Fig.~\ref{f:ges:null_b_crit_from_inf_L_pos}, but for $\ph_0 = \ph_*$.}
+Same as Fig.~\ref{f:ges:null_b_crit_from_inf_L_pos}, but for $\ph_0 = \ph_*$
+and $\ph\in(-\infty,0)$ (left branch of the blue curve in Fig.~\ref{f:ges:null_r_phi_bcrit}).}
 \end{figure}
 
 On the contrary, for $\ph < \ph_0 - \ph_*$,
@@ -1617,10 +1619,25 @@ and another one with $L>0$
 arising from $r=r_{\rm em} > 3 m$, $\ph=\ph_{\rm em}<0$
 and spiraling outwards, escaping to $r\rightarrow +\infty$ as $\ph\rightarrow 0$.
 
+\begin{figure}
+\centerline{
+\includegraphics[width=0.35\textwidth]{ges_null_b_crit_intern_1.pdf}\qquad
+\includegraphics[width=0.35\textwidth]{ges_null_b_crit_intern_2.pdf}
+}
+\caption[]{\label{f:ges:null_b_crit_intern} \footnotesize
+Trace in the equatorial plane of two internal critical null geodesics ($b = 3\sqrt{3} \, m \simeq 5.196 m$ and
+$r<3m$). They both obey Eq.~\eqref{e:ges:null_r_phi_coth} with $\ph_0 = 0$.
+The left panel corresponds to $\ph\in (-\infty, 0)$ (left part of the red curve
+in Fig.~\ref{f:ges:null_r_phi_bcrit}), while the right one is
+for $\ph\in (0, +\infty)$ (right part of the red curve
+in Fig.~\ref{f:ges:null_r_phi_bcrit}).}
+\end{figure}
+
+
 \subsubsection{Internal critical null geodesics}
 
-Let us now consider the case
-$u>1/3$ ($\iff r< 3m$), which implies $x\in (1,+\infty)$ in Eq.~(\ref{e:ges:primitive_crit_geod}).
+Let us now consider the ``internal'' case: $r< 3m \iff u>1/3$,
+which implies $x\in (1,+\infty)$ in Eq.~(\ref{e:ges:primitive_crit_geod}).
 Equation~\eqref{e:ges:dphi_du_null_bcrit} is then integrated to
 \be \label{e:ges:null_r_phi_coth}
     r = \frac{2m}{\coth^2 \left(\frac{\ph - \ph_0}{2} \right) - \frac{1}{3}} .
@@ -1628,7 +1645,38 @@ Equation~\eqref{e:ges:dphi_du_null_bcrit} is then integrated to
 Again, $\ph_0$ is an integration constant. But this time, it cannot be determined by the
 value of $\ph$ when $r\rightarrow +\infty$ since we are in the case $r<3m$.
 The function $r(\ph)$ given by Eq.~\eqref{e:ges:null_r_phi_coth} is plotted as the red
-curve in Fig.~\ref{f:ges:null_r_phi_bcrit}.
+curve in Fig.~\ref{f:ges:null_r_phi_bcrit}. Contrary to external critical null geodesics, there
+is no exclusion interval for $\ph$. However, $\ph$ cannot range from $-\infty$
+to $+\infty$ along a given geodesic. Indeed, for $\ph=\ph_0$, one gets
+$r=0$, which corresponds to the curvature singularity of the Schwarzschild black hole.
+This is necessarily a termination point of any geodesic. The maximum
+range of $\ph$ along an internal critical null geodesic is therefore
+either $(-\infty,\ph_0)$ or $(\ph_0,+\infty)$.
+
+An internal critical null geodesic with $\ph_0=0$ and $\ph\in(-\infty,0)$
+is depicted in the left panel of Fig.~\ref{f:ges:null_b_crit_intern}.
+For $\ph\rightarrow -\infty$, it rolls up indefinitely onto the photon
+orbit ($r=3m$) from below.
+The plotted curve actually represents the trace in the equatorial plane of two
+kinds of geodesics: (i) a geodesic with $L>0$ arising
+from $r=r_{\rm em} < 3 m$, $\ph=\ph_{\rm em}<0$ and inspiralling to the
+central singularity as $\ph\rightarrow 0$ and (ii) a geodesic with $L<0$ arising from
+$r = r_{\rm em} \in (2m,  3 m)$, $\ph=\ph_{\rm em}<0$ and spiralling outward
+to the photon orbit as $\ph\rightarrow -\infty$. Note that for (ii), the
+emission point must fulfill $r_{\rm em} > 2m$, i.e. must lie outside the black
+hole region. Indeed, as shown in Sec.~\ref{s:ges:eq_to_be_solved}, along
+any geodesic, $r$ must decrease towards the future in the black hole region.
+Hence no null geodesic can be spiralling outwards there.
+
+The right panel of Fig.~\ref{f:ges:null_b_crit_intern} corresponds to a
+internal critical null geodesic with $\ph_0=0$ and $\ph\in(0, \infty)$.
+For $\ph\rightarrow +\infty$, it rolls up indefinitely onto the photon
+orbit ($r=3m$) from below. Again, the plotted curve describes two cases:
+(i) a geodesic with $L<0$ arising
+from $r=r_{\rm em} < 3 m$, $\ph=\ph_{\rm em}>0$ and inspiralling to the
+central singularity as $\ph\rightarrow 0$ and (ii) a geodesic with $L>0$ arising from
+$r = r_{\rm em} \in (2m,  3 m)$, $\ph=\ph_{\rm em}>0$ and spiralling outward
+to the photon orbit as $\ph\rightarrow +\infty$.
 
 \begin{figure}
 \begin{tabular}{cc}
