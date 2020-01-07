@@ -1414,7 +1414,7 @@ is obtained by solving the cubic equation (\ref{e:ges:r_per_null})
 the range of the solution). Fortunately Eq.~(\ref{e:ges:r_per_null})
 is a depressed\footnote{A \emph{depressed} cubic equation is a polynomial equation
 of the type $x^3 + p x + q = 0$.} cubic equation, which makes
-it simpler to solve. For $|b| > b_{\rm crit}$, its determinant is positive, which
+it simpler to solve. For $|b| > b_{\rm crit}$, its discriminant is positive, which
 implies that it admits three distinct real roots. Two of them are positive
 and are precisely $r_{\rm per}$ and $r_{\rm apo}$. The third root is negative,
 since the product of the roots is $-2mb^2 < 0$; it has therefore no
@@ -1436,12 +1436,12 @@ and $r_{\rm per}$ (resp. $r_{\rm apo}$) corresponds to $k=0$
    \encadre{ r_{\rm apo} = \frac{2 |b|}{\sqrt{3}} \cos\left[\frac{5\pi}{3}
         - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{|b|}\right) \right] }.
 \ee
-As a check, we notice that for $|b|\gg b_{\rm crit}$, Eq.~(\ref{e:ges:sol_r_per})
+As a check, we note that for $|b|\gg b_{\rm crit}$, Eq.~(\ref{e:ges:sol_r_per})
 yields $r_{\rm per} \simeq 2|b|/\sqrt{3} \cos\left(\pi/3 -1/3 \times \pi/2 \right)
 \simeq 2|b|/\sqrt{3} \cos(\pi/6) \simeq |b|$, as expected.
 
 The variation of $r_{\rm per}$ and $r_{\rm apo}$ with $b$ is plotted
-on Fig.~\ref{f:ges:null_per_apo}. Note that $r_{\rm per} = r_{\rm apo} = 3 m$
+in Fig.~\ref{f:ges:null_per_apo}. Note that $r_{\rm per} = r_{\rm apo} = 3 m$
 (the photon orbit) at the limit $|b| = b_{\rm crit}$.
 
 
@@ -1449,14 +1449,16 @@ on Fig.~\ref{f:ges:null_per_apo}. Note that $r_{\rm per} = r_{\rm apo} = 3 m$
 \subsection{Angular behaviour of null geodesics}
 
 Let us first recall the generic property of causal geodesics in Schwarzschild
-spacetime established in Sec.~\ref{s:ges:eq_to_be_solved} : the azimuthal
-angle coordinate $\ph$ has no turning point: it is either always increasing
+spacetime established in Sec.~\ref{s:ges:eq_to_be_solved} : for $L\not=0$,
+the azimuthal angle coordinate $\ph$ has no turning point: it is either always increasing
 towards the future
-($L>0$) or always decreasing towards the future ($L<0$). This is clear on
-Eq.~(\ref{e:ges:dot_ph_null_b}) above, which implies obviously
-$\D\ph/\D\tilde{\lambda} > 0$, with $\tilde{\lambda}$ increasing (resp. decreasing)
+($L>0$) or always decreasing towards the future ($L<0$).
+\begin{remark}
+Equation~\eqref{e:ges:dot_ph_null_b} implies obviously
+$\D\ph/\D\tilde{\lambda} > 0$. We recover the above property by
+noticing that $\tilde{\lambda}$ increases (resp. decreases)
 towards the future for $L>0$ (resp. $L<0$).
-
+\end{remark}
 By combining Eqs.~(\ref{e:ges:dot_ph_null_b}), (\ref{e:ges:dot_r_square_null_b})
 and (\ref{e:ges:eff_pot_null}), we get
 \be \label{e:ges:dphi_dr_null}
@@ -1469,7 +1471,7 @@ Introducing the variable
 \ee
 allows us to simplify this equation:
 \be \label{e:ges:dphi_du_null}
-    \frac{\D\ph}{\D u} = \pm \frac{1}{\sqrt{2 u^3 - u^2 + (m/b)^2}}
+   \encadre{ \frac{\D\ph}{\D u} = \pm \frac{1}{\sqrt{2 u^3 - u^2 + (m/b)^2}} }
 \ee
 
 The zeros of the cubic polynomial
@@ -1490,13 +1492,14 @@ discriminant, which is
 \begin{itemize}
 \item If $\Delta<0$ $\iff$ $|b| <\sqrt{27} m = b_{\rm crit}$,
 $P_b(u)$ has one real negative zero and two complex zeros, so that it never vanishes
-for physical values of $u$ ($u\in\mathbb{R}^+$).
+for physical values of $u$, which are real positive.
 \item If $\Delta=0$ $\iff$ $|b| = b_{\rm crit}$, $P_b(u)$
-has a double zero $u=1/3$ and a negative zero: $u=-1/6$.
+has a double zero: $u=1/3$ and a negative zero: $u=-1/6$; only the first
+one is physical and correspond to $r=3m$.
 \item If $\Delta>0$ $\iff$ $|b| > b_{\rm crit}$, $P_b(u)$ has three distinct
-zeros; one of them, $u_{\rm neg}$ say, is
+real zeros; one of them, $u_{\rm neg}$ say, is
 negative and hence unphysical and the two others are positive, being nothing but
-\be
+\be \label{e:ges:def_u_per_apo}
     u_{\rm per} = \frac{m}{r_{\rm per}} \qquad\mbox{and}\qquad
     u_{\rm apo} = \frac{m}{r_{\rm apo}} ,
 \ee
@@ -1534,17 +1537,18 @@ This equation can be easily integrated by noticing that
     \end{cases}
 \ee
 We thus perform the change of variable $x=2u + 1/3$ and treat separately
-two cases : $u<1/3 \iff x\in (0,1)$ and $u>1/3 \iff x\in (1,+\infty)$.
+two cases : $u<1/3 \iff x\in (1/3,1)$ and $u>1/3 \iff x\in (1,+\infty)$.
 We call geodesics in the first case
 \defin{external critical null geodesics}\index{external!critical null geodesic}\index{critical!null geodesic!external --},
 since $u<1/3\iff r > 3 m$, and those in the second case
 \defin{internal critical null geodesics}\index{internal!critical null geodesic}\index{critical!null geodesic!internal --},
-since $u>1/3 \iff r < 3m$, \emph{external} and \emph{internal} refering
+since $u>1/3 \iff r < 3m$. The qualifiers \emph{external} and \emph{internal} thus refer
 to the photon sphere $r=3 m$ discussed in Sec.~\ref{s:ges:null_eff_pot}.
 
 \subsubsection{External critical null geodesics}
 
-For $u<1/3$, we arrive at
+For $u<1/3$, $x\in(1/3, 1)$, so that the first line of Eq.\eqref{e:ges:primitive_crit_geod}
+is relevant and Eq.~\eqref{e:ges:dphi_du_null_bcrit} is integrated to
 \be \label{e:ges:ph_u_crit_null_geod}
     \ph = \pm 2 \,\mathrm{artanh}\, \sqrt{2u + \frac{1}{3}} + \ph_0 ,
 \ee
@@ -1642,9 +1646,9 @@ in Fig.~\ref{f:ges:null_r_phi_bcrit}).}
 
 \subsubsection{Internal critical null geodesics}
 
-Let us now consider the ``internal'' case: $r< 3m \iff u>1/3$,
-which implies $x\in (1,+\infty)$ in Eq.~(\ref{e:ges:primitive_crit_geod}).
-Equation~\eqref{e:ges:dphi_du_null_bcrit} is then integrated to
+Let us now consider the ``internal'' case: $r< 3m \iff u>1/3$.
+This implies $x\in (1,+\infty)$ in Eq.~\eqref{e:ges:primitive_crit_geod},
+so that Eq.~\eqref{e:ges:dphi_du_null_bcrit} is integrated to
 \be \label{e:ges:null_r_phi_coth}
     \encadre{ r = \frac{2m}{\coth^2 \left(\frac{\ph - \ph_0}{2} \right) - \frac{1}{3}} }.
 \ee
@@ -1717,12 +1721,11 @@ $b_{\rm crit} \simeq 5.196152\, m$.}
 
 \subsubsection{Other null geodesics}
 
-For $|b| \not= b_{\rm crit}$, Eq.~\eqref{e:ges:dphi_dr_null} cannot be integrated
+As stated above, for $|b| \not= b_{\rm crit}$, Eq.~\eqref{e:ges:dphi_dr_null} cannot be integrated
 in terms of elementary functions, but requires elliptic functions.
-To get the trajectories $r(\ph)$ in that case, we use the geodesic integrator
-of SageMath (cf. Appendix~\ref{s:sam}).
-
-Figures~\ref{f:ges:null_b1}-\ref{f:ges:null_b2} show traces in the equatorial plane from null
+To compute the trajectories $r(\ph)$ in that case, we use the geodesic integrator
+of SageMath (cf. Appendix~\ref{s:sam}). Some results are displayed in
+Figs.~\ref{f:ges:null_b1}-\ref{f:ges:null_b2}. They correspond to
 geodesics coming from infinity along the
 direction $\ph=0$, for various values of the
 impact parameter $b$ decaying to $b_{\rm crit}$. All these geodesics, having
@@ -1732,8 +1735,17 @@ before escaping to infinity. However, they differ by the number of turns
 performed around the black hole. For $b=12 m$ (upper left panel of Fig.~\ref{f:ges:null_b1}),
 the geodesic suffers only some small bending; this is nothing but the standard
 \defin{deflection of light}\index{deflection of light} by massive bodies in
-general relativity. For $b=8 m$ and $6 m$, the bending is more pronounced,
-exceeding $\Delta\ph = \pi/2$ for $b=6 m$. For $b=5.355 m$ (lower right panel of Fig.~\ref{f:ges:null_b1}), the bending is such that the photon goes back in the direction
+general relativity. More precisely, we define the \defin{bending angle}\index{bending!angle}
+by
+\be \label{e:ges:def_bending_angle}
+    \Theta := \Delta\ph - \pi,
+\ee
+where $\Delta\ph$ is the total change in $\ph$ along the geodesic history, i.e.
+between $\lambda\to -\infty$ ($\ph=0$ in the present case) and $\lambda\to +\infty$.
+The $-\pi$ in Eq.~(\ref{e:ges:def_bending_angle}) is chosen so that
+$\Theta = 0$ in flat spacetime.
+For $b=8 m$ and $6 m$, the bending is more pronounced,
+exceeding $\Theta = \pi/2$ for $b=6 m$. For $b=5.355 m$ (lower right panel of Fig.~\ref{f:ges:null_b1}), the bending angle is $\Theta\simeq\pi$, i.e. the photon goes back in the direction
 from which it was coming.
 
 When the impact parameter becomes even closer to the critical value (\ref{e:ges:b_crit}),
@@ -1744,44 +1756,52 @@ departs to infinity corroborates the fact that the photon orbit is unstable
 (cf. Sec.~\ref{s:ges:null_eff_pot}).
 
 The total change in $\ph$ along the null geodesic
-is obtained by integrating Eq.~(\ref{e:ges:dphi_dr_null}), when $r$ varies
-from $+\infty$ (the ``far away'' emission) to $r_{\rm per}$, and then when
-$r$ varies from $r_{\rm per}$ to $+\infty$ (the ``far away'' reception).
-Assuming $L>0$, so that $\ph$ increases towards the future, one must select
-the $-$ sign in the r.h.s. of Eq.~(\ref{e:ges:dphi_dr_null}) for the first part
-and the $+$ sign for the second part. Hence
+is obtained by integrating Eq.~(\ref{e:ges:dphi_du_null}) with $u=m/r$ varying
+from $0$ (the ``far away'' emission) to $u_{\rm per} = m/r_{\rm per}$, and
+then back to $0$ (the ``far away'' reception).
+Assuming $L>0$, so that $\ph$ increases towards the future
+(as in Figs.~\ref{f:ges:null_b1}-\ref{f:ges:null_b2}), one must select
+the $+$ sign in the r.h.s. of Eq.~(\ref{e:ges:dphi_du_null}) for the first part
+and the $-$ sign for the second part. Hence
 \bea
-    \Delta \ph &=& - \int_{+\infty}^{r_{\rm per}} \frac{1}{r^2} \left( \frac{1}{b^2}
-        - \frac{1}{r^2} +  \frac{2m}{r^3} \right) ^{-1/2} \D r
-    + \int_{r_{\rm per}}^{+\infty}  \frac{1}{r^2}\left( \frac{1}{b^2}
-        - \frac{1}{r^2} +  \frac{2m}{r^3} \right) ^{-1/2} \D r \nonumber \\
-        & = & 2 \int_{r_{\rm per}}^{+\infty}  \frac{1}{r^2}\left( \frac{1}{b^2}
-        - \frac{1}{r^2} +  \frac{2m}{r^3} \right) ^{-1/2} \D r
+    \Delta \ph &=&  \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}}
+     - \int_{u_{\rm per}}^0 \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} \nonumber \\
+  & = & 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} .
 \eea
-Via the change of variable
-\be
-    u := \frac{m}{r}
-\ee
-we can transform the integral into
-\be
-    \Delta\ph = 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} ,
-\ee
-with $u_{\rm per} := m/r_{\rm per}$.
-This integral can be evaluated by means of elliptic functions (see e.g. Ref.~\cite{Lumin79, FroloZ11}
+This integral can be evaluated by means of elliptic functions (see e.g. Ref.~\cite{Lumin79,FroloZ11,Munoz14}
 for details). However, we can understand the winding around the photon circular orbit
 observed in Figs.~\ref{f:ges:null_b1}-\ref{f:ges:null_b2}
 when $b$ is close to $b_{\rm crit}$
 without the explicit form.
-Indeed the roots of the cubic polynomial
-$2 u^3 - u^2 + (m/b)^2$  are nothing but $u_{\rm per} := m/r_{\rm per}$,
-$u_{\rm apo} := m/r_{\rm apo}$ and $u_{\rm neg} := m/r_{\rm neg}$
-with $r_{\rm per}$ given by Eq.~(\ref{e:ges:sol_r_per}), $r_{\rm apo}$
-given by Eq.~(\ref{e:ges:sol_r_apo}) and $r_{\rm neg}$ is the negative root
-of the polynomial $r^3 - b^2 r + 2 m b^2$. We thus can write
-\be
+Indeed let us express the polynomial $P_b(u) = 2 u^3 - u^2 + (m/b)^2$
+in terms of its three real zeros $u_{\rm neg}$, $u_{\rm per}$ and $u_{\rm apo}$,
+cf. Eq.~(\ref{e:ges:def_u_per_apo}). We get
+\be \label{e:ges:Dph_u_per_apo}
     \Delta\ph = \sqrt{2} \int_0^{u_{\rm per}}
     \frac{\D u}{\sqrt{(u_{\rm per} - u )(u_{\rm apo} - u)(u - u_{\rm neg})}} .
 \ee
+Given the ordering $u_{\rm neg} < 0 < u_{\rm per} \leq u_{\rm apo}$, each of the
+three terms under the square root is positive on the integration range
+$u\in(0,u_{\rm per})$. For $b>b_{\rm crit}$, $u_{\rm apo}>u_{\rm per}$ and
+the only diverging term in the integrand is $1/\sqrt{u_{\rm per} - u}$, which
+diverges at the integral boundary $u=u_{\rm per}$. However, the integral
+\[
+    \int_0^{u_{\rm per}}
+    \frac{\D u}{\sqrt{u_{\rm per} - u}}
+\]
+is finite, being equal to $2\sqrt{u_{\rm per}}$. When $b\to b_{\rm crit}$,
+$u_{\rm apo} \to u_{\rm per}$ and the integral (\ref{e:ges:Dph_u_per_apo})
+behaves as
+\[
+     \int_0^{u_{\rm per}}
+    \frac{\D u}{\sqrt{(u_{\rm per} - u)^2}} = \int_0^{u_{\rm per}}
+    \frac{\D u}{u_{\rm per} - u} ,
+\]
+which is diverging. We recover the behavior obtained for
+the external critical null geodesic ($b=b_{\rm crit}$, $r>3m$):
+$\Delta\ph$ is infinite, the geodesic spiralling indefinitely around the
+photon orbit (cf. Fig.~\ref{f:ges:null_b_crit_from_inf_L_pos}).
+
 
 
 \subsection{Black hole shadow}
