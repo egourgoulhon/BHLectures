@@ -1583,7 +1583,7 @@ Figure~\ref{f:ges:null_b_crit_from_inf_L_pos} shows such a null geodesic with
 $\ph_\infty=0$, which implies $\ph_0 = - \ph_*$ and $\ph>0$.
 When $\ph\to +\infty$, the geodesic rolls up indefinitely onto the photon
 orbit discussed in Sec.~\ref{s:ges:null_eff_pot}; this
-behavior corresponds to the horizontal asymptote at $r=3m$ in
+behaviour corresponds to the horizontal asymptote at $r=3m$ in
 the right part of Fig.~\ref{f:ges:null_r_phi_bcrit}.
 Note that the geodesic approaches very fastly the photon orbit, a single
 path round to it being graphically visible in Fig.~\ref{f:ges:null_b_crit_from_inf_L_pos}.
@@ -1766,7 +1766,7 @@ and the $-$ sign for the second part. Hence
 \bea
     \Delta \ph &=&  \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}}
      - \int_{u_{\rm per}}^0 \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} \nonumber \\
-  & = & 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} .
+  & = & 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} . \label{e:ges:null_Delta_ph_b}
 \eea
 This integral can be evaluated by means of elliptic functions (see e.g. Ref.~\cite{Lumin79,FroloZ11,Munoz14}
 for details). However, we can understand the winding around the photon circular orbit
@@ -1782,14 +1782,15 @@ cf. Eq.~(\ref{e:ges:def_u_per_apo}). We get
 \ee
 Given the ordering $u_{\rm neg} < 0 < u_{\rm per} \leq u_{\rm apo}$, each of the
 three terms under the square root is positive on the integration range
-$u\in(0,u_{\rm per})$. For $b>b_{\rm crit}$, $u_{\rm apo}>u_{\rm per}$ and
+$(0,u_{\rm per})$. For $b>b_{\rm crit}$, $u_{\rm apo}>u_{\rm per}$ and
 the only diverging term in the integrand is $1/\sqrt{u_{\rm per} - u}$, which
 diverges at the integral boundary $u=u_{\rm per}$. However, the integral
 \[
     \int_0^{u_{\rm per}}
     \frac{\D u}{\sqrt{u_{\rm per} - u}}
 \]
-is finite, being equal to $2\sqrt{u_{\rm per}}$. When $b\to b_{\rm crit}$,
+is finite, being equal to $2\sqrt{u_{\rm per}}$, so that $\Delta\ph$ remains
+finite. When $b\to b_{\rm crit}$,
 $u_{\rm apo} \to u_{\rm per}$ and the integral (\ref{e:ges:Dph_u_per_apo})
 behaves as
 \[
@@ -1797,12 +1798,60 @@ behaves as
     \frac{\D u}{\sqrt{(u_{\rm per} - u)^2}} = \int_0^{u_{\rm per}}
     \frac{\D u}{u_{\rm per} - u} ,
 \]
-which is diverging. We recover the behavior obtained for
-the external critical null geodesic ($b=b_{\rm crit}$, $r>3m$):
+which is diverging. Hence $\Delta\ph\to +\infty$ when $b\to b_{\rm c}$.
+We recover the behaviour obtained for $b=b_{\rm crit}$, i.e. for
+the external critical null geodesic discussed above:
 $\Delta\ph$ is infinite, the geodesic spiralling indefinitely around the
 photon orbit (cf. Fig.~\ref{f:ges:null_b_crit_from_inf_L_pos}).
 
+More precisely, we can easily derive a lower bound on $\Delta\ph$ involving
+$b-b_{\rm crit}$ as follows. For $b$ close to $b_{\rm crit}$, let us introduce
+the small parameter $\veps >0$ such that
+\be \label{e:ges:u_per_eps}
+    u_{\rm per} =: \frac{1}{3} ( 1 - \veps ).
+\ee
+The relation $P_b(u_{\rm per}) = 0$ leads then, to the second order in $\veps$:
+\be \label{e:ges:b_bc_eps}
+    b-b_{\rm crit} \simeq \frac{9\sqrt{3}}{2} m \veps^2 .
+\ee
+The inegality $m^2/b^2 < m^2/b_{\rm crit}^2$ allows us to deduce from the expression
+(\ref{e:ges:null_Delta_ph_b}) of $\Delta\ph$ that
+\[
+    \Delta\ph > 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b_{\rm crit})^2}}
+      = 2 \int_0^{u_{\rm per}} \frac{\D u}{\left(\frac{1}{3} - u \right)
+        \sqrt{2u + \frac{1}{3}}} .
+\]
+In the right-hand-side integral, we can use the primitive (\ref{e:ges:ph_u_crit_null_geod})
+with the $+$ sign and the $\mathrm{artanh}$ expressed in terms of logarithms,
+via the identity $\mathrm{artanh}\,  x = 1/2\ln[(1+x)/(1-x)]$ to get
+\[
+   \Delta\ph > 2 \left[
+   \ln \left( \frac{1 + \sqrt{2u + \frac{1}{3}}}{1 - \sqrt{2u + \frac{1}{3}}} \right)
+   \right] _0^{u_{\rm per}} .
+\]
+From Eq.~(\ref{e:ges:u_per_eps}), we get $\sqrt{2u_{\rm per} + \frac{1}{3}} \simeq 1 - \veps/3$,
+so that the above relation becomes
+\[
+    \Delta\ph > \ln\left( (7 - 4 \sqrt{3}) \frac{36}{\veps^2} \right) .
+\]
+Substituting Eq.~(\ref{e:ges:b_bc_eps}) for $\veps^2$, we get
+\be \label{e:ges:Delta_ph_lower_bound}
+    \Delta\ph > \ln\left( \frac{162(7\sqrt{3} - 12) m}{b-b_{\rm crit}} \right) .
+\ee
+From this relation, we recover $\Delta\ph\to +\infty$ as $b \to b_{\rm crit}^+$.
 
+An exact study of the behaviour of $\Delta\ph$ when $b \to b_{\rm crit}^+$,
+based on the expression of $\Delta\ph$ in terms of elliptic functions, leads
+to\footnote{See e.g. Eq.~(31) of Ref.~\cite{Darwi59}, where $\mu = \Theta$
+or Eq.~(268) in page~132 of Ref.~\cite{Chand83}, where $\delta D = b-b_{\rm crit}$ and
+$\Theta$ is the same as ours.}
+\be
+    \Delta\ph \sim \ln\left( \frac{648(7\sqrt{3} - 12) m}{b-b_{\rm crit}} \right)
+    \qquad\mbox{when}\quad b \to b_{\rm crit}^+ .
+\ee
+We note that this expression gives a behaviour similar to the lower bound
+(\ref{e:ges:Delta_ph_lower_bound}), except for a factor 4 in the numerical
+factor inside the logarithm.
 
 \subsection{Black hole shadow}
 
