@@ -1474,8 +1474,14 @@ allows us to simplify this equation:
    \encadre{ \frac{\D\ph}{\D u} = \pm \frac{1}{\sqrt{2 u^3 - u^2 + (m/b)^2}} }
 \ee
 
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ges_polynomial_b_u.pdf}}
+\caption[]{\label{f:ges:polynomial_b_u} \footnotesize
+Graph of the cubic polynomial $P_b(u)$ defined by Eq.~(\ref{e:ges:def_Pb_u}).}
+\end{figure}
+
 The zeros of the cubic polynomial
-\be
+\be \label{e:ges:def_Pb_u}
         P_b(u) := 2 u^3 - u^2 + \frac{m^2}{b^2}
 \ee
 correspond to points for which $\D\ph/\D u \to \pm \infty$,
@@ -1484,7 +1490,9 @@ for $u$, and hence for $r$. This can only occur at the circular photon
 orbit $r = \mathrm{const} = 3 m$ (then $b=b_{\rm crit}$)
 or at a periastron or apoastron discussed
 in Sec.~\ref{s:ges:null_radial_behav} (then $b > b_{\rm crit}$).
-Mathematically, the zeros of $P_b(u)$ are governed by its
+The graph of the polynomial $P_b(u)$ is shown in Fig.~\ref{f:ges:polynomial_b_u}
+for selected values.
+The zeros of $P_b(u)$ are governed by its
 discriminant, which is
 \be
     \Delta = 4 \frac{m^4}{b^4} \left( \frac{b^2}{m^2} - 27 \right) .
@@ -1494,10 +1502,12 @@ discriminant, which is
 $P_b(u)$ has one real negative zero and two complex zeros, so that it never vanishes
 for physical values of $u$, which are real positive.
 \item If $\Delta=0$ $\iff$ $|b| = b_{\rm crit}$, $P_b(u)$
-has a double zero: $u=1/3$ and a negative zero: $u=-1/6$; only the first
+has a double zero: $u=1/3$ and a negative zero: $u=-1/6$ (cf. red curve
+in Fig.~\ref{f:ges:polynomial_b_u}); only the first
 one is physical and correspond to $r=3m$.
 \item If $\Delta>0$ $\iff$ $|b| > b_{\rm crit}$, $P_b(u)$ has three distinct
-real zeros; one of them, $u_{\rm neg}$ say, is
+real zeros (cf. the green and cyan curves
+in Fig.~\ref{f:ges:polynomial_b_u}); one of them, $u_{\rm neg}$ say, is
 negative and hence unphysical and the two others are positive, being nothing but
 \be \label{e:ges:def_u_per_apo}
     u_{\rm per} = \frac{m}{r_{\rm per}} \qquad\mbox{and}\qquad
@@ -1852,6 +1862,47 @@ $\Theta$ is the same as ours.}
 We note that this expression gives a behaviour similar to the lower bound
 (\ref{e:ges:Delta_ph_lower_bound}), except for a factor 4 in the numerical
 factor inside the logarithm.
+
+
+\subsection{Images}
+
+Since they are the worldlines of photons, the computation of null geodesics
+is the basic ingredient to get the image as seen by some observer of an emitting material around
+a Schwarzschild black hole. Let us consider a ``far-away'' observer. Without
+any loss of generality, we consider an observer $\Obs$ located at $\th=\pi/2$, $\ph=0$ and $r\gg m$,
+equipped with a screen orthogonal to the direction between $\Obs$ to the black hole, which
+the $x$-axis in terms of the coordinates $x:=r\cos\ph$, $y:=r\sin\ph$.
+The image of the black hole vicinity is formed on $\Obs$'s screen by null geodesics
+that reach the asymptotic value $\ph_\infty = 0$. Any such geodesic can be parametrized by
+(i) its impact parameter $b$, which up to some constant rescaling, measures the distance from
+the impact of the geodesic to the center of the screen and (ii) some polar angle $\alpha$ in the screen plane.
+In other words,
+at a given instant of $\Obs$'s proper time $\tau$, a point (``pixel'') of the screen is
+described by the polar coordinates $(b,\alpha)$ and there is a unique null geodesic intersecting
+the screen orthogonally at $(\tau,b,\alpha)$ and moving away from the black hole region.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.9\textwidth]{ges_mult_images.pdf}}
+\caption[]{\label{f:ges:mult_images} \footnotesize
+Null geodesics in Schwarzschild spacetime with $\ph_\infty=0$ and various values of the impact parameter $b$.
+The green ones have $b$ ranging from $-12 m$ to $12 m$, by steps of
+$0.8 m$, while the olive ones have $|b|$ close to $b_{\rm crit}$,
+namely $b/m\in\{-5.4,-5.2,-5.0\} \cup \{5.0, 5.2, 5.4\}$. $S$ is a luminous point source
+and three of its images for an observer at $y=0$ and $x\to + \infty$ are obtained by
+following the drawn null geodesics through $S$.}
+\end{figure}
+
+To understand the formation of images on $\Obs$'s screen, a bunch of null
+geodesics with $\ph_\infty=0$ is drawn in Fig.~\ref{f:ges:mult_images}.
+$\Obs$ is located in the far right of this figure and
+all the drawn geodesics will hit $\Obs$'s screen. Let us consider a luminous point source
+$S$ in the surrounding of the black hole. From the drawing of Fig.~\ref{f:ges:mult_images},
+three geodesics of the $\ph_\infty=0$ family goes through $S$. They give rise to
+three disctint images of $S$ on $\Obs$'s screen, which are represented by the
+open circles labelled 1 to 3 in the right part of the figure. These three
+geodesics can be distinguished by their deflection angle $\Theta$.
+The one giving image 1 has the smallest deflection angle, while that
+of image 2 has a larger deflection angle, both being lower than $\pi/2$.
 
 \subsection{Black hole shadow}
 
