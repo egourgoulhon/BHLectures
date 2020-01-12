@@ -708,7 +708,7 @@ from rest at $r_0 = 6m$. The numerical values are given for various
 black hole masses $m$, corresponding to astrophysical objects:
 the stellar black hole Cyg X-1 \cite{Orosz_al11,Gou_al14}, the black hole at the center of our galaxy
 (Sgr A*) \cite{GenzeEG10,Johan16} and the massive black hole M87* in the nucleus of the galaxy
-M87 \cite{Gebha_al11}.}
+M87 \cite{Gebha_al11,EHT19a}.}
 \end{table}
 
 The proper time spent inside the black hole is
@@ -1745,22 +1745,34 @@ before escaping to infinity. However, they differ by the number of turns
 performed around the black hole. For $b=12 m$ (upper left panel of Fig.~\ref{f:ges:null_b1}),
 the geodesic suffers only some small bending; this is nothing but the standard
 \defin{deflection of light}\index{deflection of light} by massive bodies in
-general relativity. More precisely, we define the \defin{bending angle}\index{bending!angle}
-by
-\be \label{e:ges:def_bending_angle}
-    \Theta := \Delta\ph - \pi,
+general relativity. More precisely, we define the \defin{deflection angle}\index{deflection!angle}
+$\Theta$ by
+\be \label{e:ges:def_deflection_angle}
+    \Theta + \pi := \Delta\ph \ \mathrm{mod}\ 2 \pi,
 \ee
 where $\Delta\ph$ is the total change in $\ph$ along the geodesic history, i.e.
 between $\lambda\to -\infty$ ($\ph=0$ in the present case) and $\lambda\to +\infty$.
-The $-\pi$ in Eq.~(\ref{e:ges:def_bending_angle}) is chosen so that
-$\Theta = 0$ in flat spacetime.
+The $+\pi$ term in the left-hand side of Eq.~(\ref{e:ges:def_deflection_angle}) is chosen so
+that $\Theta = 0$ in flat spacetime. Eq.~(\ref{e:ges:def_deflection_angle}) can be
+inverted to
+\be \label{e:ges:Dph_Theta_n}
+    \Delta\ph = \Theta + \pi + 2 \pi n,\qquad n\in \mathbb{Z} ,
+\ee
+where $n$ is the number of full turns around the black hole.
+For $b = 12 m$, one has $\Theta\simeq \pi/6$ and $n=0$.
 For $b=8 m$ and $6 m$, the bending is more pronounced,
-exceeding $\Theta = \pi/2$ for $b=6 m$. For $b=5.355 m$ (lower right panel of Fig.~\ref{f:ges:null_b1}), the bending angle is $\Theta\simeq\pi$, i.e. the photon goes back in the direction
+exceeding $\Theta = \pi/2$ for $b=6 m$, still with $n=0$. For $b=5.355\, m$ (lower right panel of Fig.~\ref{f:ges:null_b1}), the deflection angle is $\Theta\simeq\pi$, i.e. the photon goes back in the direction
 from which it was coming.
 
-When the impact parameter becomes even closer to the critical value (\ref{e:ges:b_crit}),
+When the impact parameter becomes even closer to the critical value
+$b_{\rm crit}\simeq 5.196152\, m$ [Eq.~(\ref{e:ges:b_crit})],
 the null geodesic starts to wind around the black hole before escaping
-to infinity (Fig.~\ref{f:ges:null_b2}). Note that the winding is taking place
+to infinity (Fig.~\ref{f:ges:null_b2}).
+For $b=5.2025\, m$ (upper right panel of Fig.~\ref{f:ges:null_b2}), one has $\Theta=0$
+but $n=1$ (a full turn has been performed). For $b=5.19643\, m$, one has
+$\Theta\simeq\pi$ and $n=1$ and for $b=5.196155\, m$ (lower right panel of Fig.~\ref{f:ges:null_b2}), one has
+$\Theta\simeq \pi/2$ and $n=2$.
+Note that the winding is taking place
 almost at the photon circular orbit ($r=3m$). That after a few turns the null geodesic
 departs to infinity corroborates the fact that the photon orbit is unstable
 (cf. Sec.~\ref{s:ges:null_eff_pot}).
@@ -1802,13 +1814,16 @@ diverges at the integral boundary $u=u_{\rm per}$. However, the integral
 is finite, being equal to $2\sqrt{u_{\rm per}}$, so that $\Delta\ph$ remains
 finite. When $b\to b_{\rm crit}$,
 $u_{\rm apo} \to u_{\rm per}$ and the integral (\ref{e:ges:Dph_u_per_apo})
-behaves as
+has a behavior similar to
 \[
      \int_0^{u_{\rm per}}
     \frac{\D u}{\sqrt{(u_{\rm per} - u)^2}} = \int_0^{u_{\rm per}}
     \frac{\D u}{u_{\rm per} - u} ,
 \]
-which is diverging. Hence $\Delta\ph\to +\infty$ when $b\to b_{\rm c}$.
+which is a diverging integral. Hence
+\be \label{e:ges:Dph_infinite}
+    \encadre{ \Delta\ph\to +\infty\quad\mbox{when}\quad b\to b_{\rm c} }.
+\ee
 We recover the behaviour obtained for $b=b_{\rm crit}$, i.e. for
 the external critical null geodesic discussed above:
 $\Delta\ph$ is infinite, the geodesic spiralling indefinitely around the
@@ -1848,38 +1863,55 @@ Substituting Eq.~(\ref{e:ges:b_bc_eps}) for $\veps^2$, we get
 \be \label{e:ges:Delta_ph_lower_bound}
     \Delta\ph > \ln\left( \frac{162(7\sqrt{3} - 12) m}{b-b_{\rm crit}} \right) .
 \ee
-From this relation, we recover $\Delta\ph\to +\infty$ as $b \to b_{\rm crit}^+$.
+This relation establishes rigorously the divergence property
+(\ref{e:ges:Dph_infinite}).
 
 An exact study of the behaviour of $\Delta\ph$ when $b \to b_{\rm crit}^+$,
 based on the expression of $\Delta\ph$ in terms of elliptic functions, leads
 to\footnote{See e.g. Eq.~(31) of Ref.~\cite{Darwi59}, where $\mu = \Theta$
 or Eq.~(268) in page~132 of Ref.~\cite{Chand83}, where $\delta D = b-b_{\rm crit}$ and
 $\Theta$ is the same as ours.}
-\be
+\be \label{e:ges:Dph_ln_b_bc}
     \Delta\ph \sim \ln\left( \frac{648(7\sqrt{3} - 12) m}{b-b_{\rm crit}} \right)
     \qquad\mbox{when}\quad b \to b_{\rm crit}^+ .
 \ee
 We note that this expression gives a behaviour similar to the lower bound
 (\ref{e:ges:Delta_ph_lower_bound}), except for a factor 4 in the numerical
 factor inside the logarithm.
-
+By combining Eq.~(\ref{e:ges:Dph_ln_b_bc}) and Eq.~(\ref{e:ges:Dph_Theta_n}),
+one can relate $b - b_{\rm crit}$ to the deflection angle $\Theta$
+and the number of turns $n$ performed by the geodesic around the black hole:
+\be
+    b - b_{\rm crit} \sim 648(7\sqrt{3} - 12)\mathrm{e}^{-\pi} m \, \mathrm{e}^{-\Theta - 2\pi n}
+    \qquad\mbox{when}\quad b \to b_{\rm crit}^+ ,
+\ee
+or numerically,
+\be
+     b - b_{\rm crit} \sim 3.482284\, m \, \mathrm{e}^{-\Theta - 2\pi n}
+    \qquad\mbox{when}\quad b \to b_{\rm crit}^+ .
+\ee
 
 \subsection{Images}
 
-Since they are the worldlines of photons, the computation of null geodesics
-is the basic ingredient to get the image as seen by some observer of an emitting material around
-a Schwarzschild black hole. Let us consider a ``far-away'' observer. Without
-any loss of generality, we consider an observer $\Obs$ located at $\th=\pi/2$, $\ph=0$ and $r\gg m$,
-equipped with a screen orthogonal to the direction between $\Obs$ to the black hole, which
+Since they are the worldlines of photons, null geodesics are the key ingredient to
+determine the image as seen by some observer of emitting material around
+a black hole. Computing such images is of great interest, especially after
+the first image of a black hole vicinity obtained by
+the Event Horizon Telescope team in 2019 \cite{EHT19a,Cardo19}.
+
+Let us consider a ``far-away'' observer, i.e. an observer $\Obs$ located at $r\gg m$. Without
+any loss of generality, we may assume that $\Obs$ is located at $\th=\pi/2$ and $\ph=0$.
+Furthermore, we suppose that $\Obs$ is
+equipped with a screen orthogonal to the direction from $\Obs$ to the black hole, which
 the $x$-axis in terms of the coordinates $x:=r\cos\ph$, $y:=r\sin\ph$.
-The image of the black hole vicinity is formed on $\Obs$'s screen by null geodesics
+The image of the black hole surroundings is formed on $\Obs$'s screen by null geodesics
 that reach the asymptotic value $\ph_\infty = 0$. Any such geodesic can be parametrized by
-(i) its impact parameter $b$, which up to some constant rescaling, measures the distance from
+(i) its impact parameter $b$, which, up to some constant rescaling, measures the distance from
 the impact of the geodesic to the center of the screen and (ii) some polar angle $\alpha$ in the screen plane.
 In other words,
 at a given instant of $\Obs$'s proper time $\tau$, a point (``pixel'') of the screen is
 described by the polar coordinates $(b,\alpha)$ and there is a unique null geodesic intersecting
-the screen orthogonally at $(\tau,b,\alpha)$ and moving away from the black hole region.
+the screen orthogonally at $(\tau,b,\alpha)$ and moving from the black hole region to $\Obs$.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ges_mult_images.pdf}}
@@ -1895,8 +1927,8 @@ following the drawn null geodesics through $S$.}
 To understand the formation of images on $\Obs$'s screen, a bunch of null
 geodesics with $\ph_\infty=0$ is drawn in Fig.~\ref{f:ges:mult_images}.
 $\Obs$ is located in the far right of this figure and
-all the drawn geodesics will hit $\Obs$'s screen. Let us consider a luminous point source
-$S$ in the surrounding of the black hole. From the drawing of Fig.~\ref{f:ges:mult_images},
+all the drawn geodesics eventually hit $\Obs$'s screen. Let us consider a luminous point source
+$S$ in the surroundings of the black hole. From the drawing of Fig.~\ref{f:ges:mult_images},
 three geodesics of the $\ph_\infty=0$ family goes through $S$. They give rise to
 three disctint images of $S$ on $\Obs$'s screen, which are represented by the
 open circles labelled 1 to 3 in the right part of the figure. These three
@@ -1908,7 +1940,7 @@ of image 2 has a larger deflection angle, both being lower than $\pi/2$.
 
 
 \begin{hist}
-Droste \cite{Drost1917}, Hagihara,  Darwin \cite{Darwi59}, Synge \cite{Synge66}, Bardeen \cite{Barde73}
+Droste \cite{Drost1917}, Hagihara,  Darwin \cite{Darwi59}, Synge \cite{Synge66}, Bardeen \cite{Barde73}, Luminet \cite{Lumin79,Lumin19}
 \end{hist}
 
 
