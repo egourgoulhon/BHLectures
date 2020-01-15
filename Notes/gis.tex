@@ -1,0 +1,919 @@
+\chapter{Null geodesics and images in Schwarzschild spacetime}
+\label{s:gis}
+
+\minitoc
+
+\section{Introduction}
+
+Having investigated the properties of generic causal geodesics
+in Schwarzschild spacetime in Chap.~\ref{s:ges}, we focus here on null
+geodesics.
+
+\section{Null geodesics} \label{s:ges:null}
+
+We use the same notations as in Sec.~\ref{s:ges:geod_motion} of the preceding
+chapter: $(\M, \w{g})$ is Schwarzschild spacetime, $(t,r,\th,\ph)$ are
+Schwarzschild-Droste coordinates and
+$\mathscr{P}$ is a particle, the worldline of which is a
+geodesic $\Li$. The particle $\mathscr{P}$ is characterized by its
+4-momentum $\w{p}$ and
+$E$ and $L$ are respectively the conserved energy and conserved angular momentum
+along $\Li$ [Eq.~(\ref{e:ges:conserved_quantities})].
+
+
+In all this chapter, we consider that $\Li$ is a null geodesic, or equivalently that
+$\mathscr{P}$ is a massless particle, typically a photon\index{photon}.
+As in Chap.~\ref{s:ges}, we assume that the coordinates $(\th,\ph)$ are chosen
+so that $\Li$ lies in the hyperplane $\th=\pi/2$. Let us recall that
+a geodesic of Schwarzschild spacetime lies necessarily in a hypersurface, which
+can be chosen to be the hyperplane $\th=\pi/2$ without any loss of generality
+(cf. Sec.~\ref{s:ges:fiom}).
+
+\subsection{Equation to be solved}
+
+In terms of Schwarzschild-Droste coordinates, the motion of $\mathscr{P}$ is governed by Eqs.~(\ref{e:ges:dot_t}) and
+(\ref{e:ges:dot_ph}):
+\be \label{e:ges:dot_t_null}
+   \frac{\D t}{\D \lambda} = E \left(1 - \frac{2m}{r} \right) ^{-1} ,
+\ee
+\be \label{e:ges:dot_ph_null}
+    \frac{\D\ph}{\D\lambda} = \frac{L}{r^2}  ,
+\ee
+as well as by Eq.~(\ref{e:ges:dot_r_square}) with $\mu=0$:
+\be \label{e:ges:dot_r_square_null}
+    \left( \frac{\D r}{\D \lambda} \right) ^2
+         + \frac{L^2}{r^2}
+         \left( 1 - \frac{2m}{r} \right) = E^2 .
+\ee
+Let us recall that the variable $\lambda$ with respect to which these differential equations
+hold
+is the affine parameter associated with the 4-momentum $\w{p}$ of $\mathscr{P}$
+(cf. Eq.~(\ref{e:ges:def_lambda})) and that it increases towards the future.
+
+\subsection{Radial null geodesics}
+
+Let us first discuss the case of a radial geodesic: $L=0$.
+Equation (\ref{e:ges:dot_ph_null}) yields then naturally $\ph=\mathrm{const}$,
+while Eq.~(\ref{e:ges:dot_r_square_null}) simplifies drastically:
+\be \label{e:ges:dot_r_null_radial}
+    \frac{\D r}{\D \lambda} = \pm E ,
+\ee
+the solution of which is immediate:
+\be \label{e:ges:r_lambda_radial_null}
+    r = \pm E\lambda + r_0 ,
+\ee
+where $r_0$ is some constant.
+Moreover, writing $\D t/\D\lambda = \D t/\D r \times \D r/\D\lambda$
+and combining Eqs.~(\ref{e:ges:dot_t_null}) and (\ref{e:ges:dot_r_null_radial}),
+we get
+\be
+    \frac{\D t}{\D r} = \pm \left(1 - \frac{2m}{r} \right) ^{-1} .
+\ee
+We recognize the equation governing the radial null geodesics obtained in
+Sec.~\ref{s:sch:rad_null_geod} [Eq.~(\ref{e:sch:Dt_Dr_radial_null_geod})],
+the solution of which is given by Eq.~(\ref{e:sch:t_r_radial_null_geod}):
+\be
+    t = \pm r \pm 2 m \ln \left| \frac{r}{2m} - 1 \right| + \mathrm{const} .
+\ee
+
+\begin{remark}
+Since $\lambda$ is an affine parameter and $E$ is constant,
+Eq.~(\ref{e:ges:r_lambda_radial_null})
+shows explicitely that $r$ is another affine parameter along the radial null
+geodesics of Schwarzschild spacetime --- a result we have already
+obtained in Sec.~\ref{s:sch:rad_null_geod}.
+\end{remark}
+
+\subsection{Generic null geodesics: effective potential}
+\label{s:ges:null_eff_pot}
+
+Here we focus on the case where $L\not= 0$ (``generic'' case). We may then
+consider, instead of $\lambda$, the affine parameter
+\be
+    \tilde{\lambda} := L \lambda .
+\ee
+Since $L$ is a non-vanishing constant along a geodesic, the above formula
+does define a new affine parameter. Note that it has the same
+dimension as $L$, i.e. a squared length, given that $\lambda$ is dimensionless
+(cf. Sec.~\ref{s:ges:eq_to_be_solved}). Note also that if $L<0$ and $\lambda$
+is increasing towards the future, $\tilde{\lambda}$ is decreasing towards the
+future.
+In terms of $\tilde{\lambda}$,
+the differential system (\ref{e:ges:dot_t_null})-(\ref{e:ges:dot_r_square_null})
+becomes
+\be \label{e:ges:dot_t_null_b}
+   \frac{\D t}{\D \tilde{\lambda}} = b^{-1} \left(1 - \frac{2m}{r} \right) ^{-1} ,
+\ee
+\be \label{e:ges:dot_ph_null_b}
+    \frac{\D\ph}{\D\tilde{\lambda}} = \frac{1}{r^2}  ,
+\ee
+\be \label{e:ges:dot_r_square_null_b}
+   \encadre{ \left( \frac{\D r}{\D\tilde{\lambda}} \right) ^2
+        + U(r) = \frac{1}{b^2} },
+\ee
+where
+\be \label{e:ges:def_b}
+    \encadre{b := \frac{L}{E}}
+\ee
+and
+\be \label{e:ges:eff_pot_null}
+    \encadre{ U(r) := \frac{1}{r^2} \left( 1 - \frac{2m}{r} \right) }.
+\ee
+As for the timelike case (cf. Eq.~(\ref{e:ges:1d_motion_timelike})),
+we note that Eq.~(\ref{e:ges:dot_r_square_null_b})
+has the shape of the first integral of the
+1-dimensional motion of a non-relativist particle in the
+\defin{effective potential}\index{effective!potential!null geodesic}
+$U(r)$. The main difference is that $U(r)$ does not depend on $L$, contrary
+to the effective potential $V_\ell(r)$ for timelike geodesics. Actually,
+$U(r)$ is a fonction of $r$ and the black hole mass $m$ only.
+The null geodesics are thus entirely determined by the parameter\footnote{
+As soon as the null geodesic $\Li$ has a part in the
+region $\M_{\rm I}$, then $E\not=0$ [cf. (\ref{e:ges:E_positive_M_I})], so that
+$b$, as defined by Eq.~(\ref{e:ges:def_b}), is finite.} $b$. It has
+has the dimension of a length and can be interpreted as the
+\defin{impact parameter}\index{impact parameter} in the case of a
+particle arising from infinity.
+\begin{proof}
+Let us consider that the massless
+particle $\mathscr{P}$ arises from a point of coordinates $\theta=\pi/2$,
+$r=r_0 \gg m$ and $\ph = \ph_0$.  Let us introduce
+Cartesian coordinates $(x,y)$ in the plane $\theta=\pi/2$:
+$x:=r\cos\ph$ and $y:=r\sin\ph$.
+Without any loss of generality, we may
+consider $|\ph_0| \ll 1$. For large values of $r$, the motion of
+$\mathscr{P}$ is then essentially along the $x$-axis, with $\ph$ remaining small:
+$y\simeq y_0$, where  $y_0$ is the impact parameter:
+$y_0 = r_0 \sin\ph_0 \simeq r_0 \ph_0$. Since $y=r\sin\ph\simeq r\ph$, we get
+\[
+    \ph \simeq \frac{y_0}{r} \qquad (r \gg m) .
+\]
+Deriving with respect to $t$ leads to
+\be \label{e:ges:dphdt_approx}
+    \derd{\ph}{t} \simeq - \frac{y_0}{r^2} \derd{r}{t}
+                  \simeq \frac{y_0}{r^2}  \qquad (r \gg m) ,
+\ee
+when we have used $\D r / \D t = - 1$ for $r \gg m$. This is easy
+to admit since
+$r\gg m$ corresponds to the flat part of spacetime; however, this can be derived
+rigorously by combining Eqs.~(\ref{e:ges:dot_t_null_b}) and
+(\ref{e:ges:dot_r_square_null_b}) to evaluate $\D r / \D t$.
+Now by combining Eqs.~(\ref{e:ges:dot_t_null_b}) and (\ref{e:ges:dot_ph_null_b}),
+we have
+\be
+    \derd{\ph}{t} = \frac{b}{r^2} \left( 1 - \frac{2m}{r} \right) .
+\ee
+For $r\gg m$, the right-hand side reduces to $b/r^2$, so that the comparison
+with (\ref{e:ges:dphdt_approx}) yields $b = y_0$, i.e. $b$ is the impact
+parameter of the massless particle $\mathscr{P}$ with respect to the central
+black hole.
+\end{proof}
+
+\begin{remark}
+For a massless particle with $E>0$ (for instance, a particle whose
+worldline intersects $\M_{\rm I}$, cf. Eq.~(\ref{e:ges:E_positive_M_I})),
+the sign of $b$ is that of $L$, given the definition (\ref{e:ges:def_b}).
+In the above demonstration, $b<0$ corresponds to $y_0<0$.
+\end{remark}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot_null.pdf}}
+\caption[]{\label{f:gis:eff_pot_null} \footnotesize
+Effective potential $U(r)$ (rescaled by $m^2$ to make it dimensionless)
+governing the $r$-part of the
+motion along a null geodesic in
+Schwarzschild spacetime [Eq.~(\ref{e:ges:eff_pot_null})].
+The vertical dashed line marks $r=2m$, i.e. the
+location of the event horizon. The horizontal lines marked ``1'' to ``4''
+correspond to the $r$-motion of four null geodesics,
+the trajectories of which in the equatorial plane $\th=\pi/2$
+are depicted in Fig.~\ref{f:gis:null_geod}.}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{ges_null_geod.pdf}}
+\caption[]{\label{f:gis:null_geod} \footnotesize
+Selected null geodesics in the equatorial plane of Schwarzschild spacetime,
+plotted in terms
+of the coordinates $(x,y) := (r\cos\ph, r\sin\ph)$, with the black hole
+region $r<2m$ depicted as a grey disk.
+The green geodesic is the photon circular orbit at $r=3m$.
+The red geodesic (label ``1'') starts at $r_0=10 m$, $\ph_0=0$, with
+the impact parameter $b = 7.071 \, m > b_{\rm crit}$ ($b^{-2} = 0.02\, m^{-2}$).
+The brown geodesic (label ``2'') starts at $r_0=10 m$, $\ph_0=0$ with $b = 5 m < b_{\rm crit}$ ($b^{-2} = 0.04\, m^{-2}$).
+The orange geodesic (label ``3'') starts outward at $r_0=2.1 m$, $\ph_0=0$ with $b = 4.663 m$ ($b^{-2} = 0.046\, m^{-2}$).
+The grey geodesic (label ``4'') starts outward at $r_0=2.4 m$, $\ph_0=-\pi/2$ with $b = 5.345 m$ ($b^{-2} = 0.035\, m^{-2}$).
+The $r$-motion of these four gedeosics is depicted in
+Fig.~\ref{f:gis:eff_pot_null}.}
+\end{figure}
+
+The effective potential $U(r)$ is plotted in Fig.~\ref{f:gis:eff_pot_null}.
+It has no minimum and a maximum at $r=3m$, which is
+\be \label{e:ges:U_max}
+    U_{\rm max} = \frac{1}{27m^2} .
+\ee
+This extremum is a stationary position in $r$: it corresponds thus to a circular
+orbit, usually called the \defin{photon orbit}\index{photon!orbit}\index{orbit!photon --}.
+The set of all photon orbits (one per choice of equatorial plane) is often
+called the \defin{photon sphere}\index{photon!sphere}\index{sphere!photon --}.
+However, since it corresponds to a maximum of the effective potential, the circular
+orbit at $r=3m$ is an unstable orbit. So one should not imagine that a
+Schwarzschild black hole is surrounded by any spherical shell of photons...
+
+
+\subsection{Radial behaviour of null geodesics} \label{s:ges:null_radial_behav}
+
+For the sake of concreteness, in this section and the remaining ones, we
+refer to the massless particle $\mathscr{P}$ as a ``photon''. In most applications, in
+particular the astrophysical ones, $\mathscr{P}$ will indeed be a photon.
+But one shall keep in mind that all results are valid for any other massless
+particle.
+
+Since the effective potential
+$U(r)$ has no minimum, it does not offer any potential well,
+as it is clear from Fig.~\ref{f:gis:eff_pot_null}. This is in sharp contrast
+with the effective potential $V_\ell(r)$ for massive particle
+(compare Fig.~\ref{f:gis:eff_pot_bound}). Hence there are no bound orbits
+for photons\footnote{unless one counts as ``bound'' a worldline that terminates in the
+black hole region}.
+
+We can infer various types of photon worldlines from Fig.~\ref{f:gis:eff_pot_null}.
+In view of the ``first integral'' (\ref{e:ges:dot_r_square_null_b}),
+each photon worldline can be represented by a horizontal line of ordinate
+$b^{-2}$ in this figure, which must lie above the curve $U(r)$
+by the positive quantity $({\D r}/{\D\tilde{\lambda}})^2$. The region under the curve
+$U(r)$ is thus excluded.
+
+For an initially inward photon, i.e. a photon emitted with ${\D r}/{\D\tilde{\lambda}} < 0$
+from a position $r=r_{\rm em}$, there are
+two possibilities, depending on the values of $r_{\rm em}$ and
+of the impact parameter $b$:
+\begin{itemize}
+\item if $r_{\rm em} > 3 m$ and $|b|$ is large enough to fulfil $b^{-2} < U_{\rm max}$
+(e.g. trajectory no.~1 in Fig.~\ref{f:gis:eff_pot_null}), the photon
+``bounces'' on the potential barrier constituted by $U(r)$
+at some minimal value  $r_{\rm per}$ of $r$ --- the \defin{periastron}\index{periastron},
+which is given by  $U(r_{\rm per}) = b^{-2}$, or equivalently by
+\be \label{e:ges:r_per_null}
+  r_{\rm per}^3 - b^2\, r_{\rm per} + 2 m b^2 = 0, \quad r_{\rm per} > 3 m.
+\ee
+Equation~(\ref{e:ges:dot_r_square_null_b})
+implies then
+\be
+    \left. \frac{\D r}{\D\tilde{\lambda}} \right| _{r = r_{\rm per}} = 0 .
+\ee
+Actually, $\D r / \D\tilde{\lambda}$ changes sign at $r = r_{\rm per}$ and
+the photon subsequently moves away from the black hole for ever (cf. geodesic
+no.~1 in Fig.~\ref{f:gis:null_geod}). We may call
+such a worldline a scattering trajectory.
+\item if $r_{\rm em} < 3 m$ (e.g. trajectory
+no.~4 in Fig.~\ref{f:gis:eff_pot_null}) or $|b|$ is small enough to fulfil $b^{-2} > U_{\rm max}$ ((e.g. trajectory
+no.~2 in Fig.~\ref{f:gis:eff_pot_null}) the photon
+is not halted by the potential barrier constituted by $U(r)$. It then reaches arbitrary
+small values of $r$ and is eventually absorbed by the black hole ($r < 2m$)
+(cf. geodesic no.~2 in Fig.~\ref{f:gis:null_geod}).
+\end{itemize}
+
+For an initially outward photon, i.e. a photon emitted with ${\D r}/{\D\tilde{\lambda}} > 0$,
+one has necessarily $r_{\rm em}>2m$ according to the result obtained in Sec.~\ref{s:ges:eq_to_be_solved}
+and there are then two possible outcomes:
+
+\begin{itemize}
+\item if $r_{\rm em} > 3 m$ (e.g. trajectory
+no.~1 in Fig.~\ref{f:gis:eff_pot_null}) or
+$|b|$ is small enough to fulfil $b^{-2} > U_{\rm max}$ (e.g. trajectory
+no.~3 in Figs.~\ref{f:gis:eff_pot_null}), the photon escapes to infinity
+(cf. geodesic no.~3 in Fig.~\ref{f:gis:null_geod});
+\item if $2m < r_{\rm em} < 3 m$ and $b^{-2} < U_{\rm max}$ (e.g. trajectory
+no.~4 in Fig.~\ref{f:gis:eff_pot_null}), the photon ``bounces'' on the left
+side of the potential barrier, reaching a maximal value of $r$
+--- the \defin{apoastron}\index{apoastron},
+which is given by  $U(r_{\rm apo}) = b^{-2}$, or equivalently by
+\be \label{e:ges:r_apo_null}
+   r_{\rm apo}^3 - b^2\, r_{\rm apo} + 2 m b^2 = 0, \quad r_{\rm apo} < 3 m.
+\ee
+The photon moves subsequently towards the black hole and
+is absorbed by it (cf. geodesic no.~4 in Fig.~\ref{f:gis:null_geod}).
+\end{itemize}
+
+The critical value of the impact parameter separating the cases discussed
+above is determined by $b_{\rm crit}^{-2} = U_{\rm max}$.
+Given the value (\ref{e:ges:U_max}) of $U_{\rm max}$, we get
+\be \label{e:ges:b_crit}
+    \encadre{b_{\rm crit} = 3\sqrt{3} \, m \simeq 5.196152\, m }.
+\ee
+
+It follows from the above discussion that
+\begin{greybox}
+Along any null geodesic of Schwarzschild spacetime, the areal coordinate $r$
+either is a monotonic function or has a single turning point. In the latter case,
+if the turning point corresponds to a minimum of $r$ (a periastron, which can occur
+only for $r>3m$), the null geodesic escapes to infinity, while if the turning
+point corresponds to a maximum of $r$ (an apoastron, which can occur only for $2m<r<3m$), the
+null geodesic terminates at the central singularity in $r=0$.
+\end{greybox}
+Note that for $r<2m$, i.e. in the black hole region, $r$
+is always a monotonic function, since it has been demonstrated in
+Sec.~\ref{s:ges:eq_to_be_solved} that $r(\tilde{\lambda})$ is scrictly
+decreasing. The impossibility of a turning point for $r<2m$ can also be
+graphically inferred from Fig.~\ref{f:gis:eff_pot_null}, which shows
+that the effective potential $U(r)$ is negative for $r<2m$,
+preventing the turning point condition $U(r) = b^{-2}$ to hold.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{ges_null_per_apo.pdf}}
+\caption[]{\label{f:gis:null_per_apo} \footnotesize
+Radial coordinate of the periastron, $r_{\rm per}$, and of the apoastron,
+$r_{\rm apo}$, along a null geodesic with $|b| > b_{\rm crit} \simeq 5.196\, m$.
+Note that a given null geodesic has either a periastron or an apoastron, but not
+both.}
+\end{figure}
+
+
+For $|b| > b_{\rm crit}$, the explicit expression of the periastron radius
+$r_{\rm per}$ (or the apoastron radius $r_{\rm apo}$)
+is obtained by solving the cubic equation (\ref{e:ges:r_per_null})
+(or (\ref{e:ges:r_apo_null}), which is the same cubic equation, except for
+the range of the solution). Fortunately Eq.~(\ref{e:ges:r_per_null})
+is a depressed\footnote{A \emph{depressed} cubic equation is a polynomial equation
+of the type $x^3 + p x + q = 0$.} cubic equation, which makes
+it simpler to solve. For $|b| > b_{\rm crit}$, its discriminant is positive, which
+implies that it admits three distinct real roots. Two of them are positive
+and are precisely $r_{\rm per}$ and $r_{\rm apo}$. The third root is negative,
+since the product of the roots is $-2mb^2 < 0$; it has therefore no
+physical significance. The roots of the generic depressed cubic
+equation $x^3 + p x + q = 0$ can be expressed via Viète's formulas:
+\be
+    x_k = 2 \sqrt{-\frac{p}{3}} \cos \left[ \frac{1}{3}\,  \mathrm{arccos}\left(
+        \frac{3 q}{2 p} \sqrt{-\frac{p}{3}} \right) + \frac{2 k\pi}{3} \right],
+        \qquad k \in \{0, 1, 2\} .
+\ee
+In the present case, $p= - b^2$ and $q = 2 m b^2$,
+and $r_{\rm per}$ (resp. $r_{\rm apo}$) corresponds to $k=0$
+(resp. $k=2$), so that we obtain
+\be \label{e:ges:sol_r_per}
+  \encadre{  r_{\rm per} = \frac{2 |b|}{\sqrt{3}} \cos\left[\frac{\pi}{3}
+        - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{|b|}\right) \right] }.
+\ee
+\be \label{e:ges:sol_r_apo}
+   \encadre{ r_{\rm apo} = \frac{2 |b|}{\sqrt{3}} \cos\left[\frac{5\pi}{3}
+        - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{|b|}\right) \right] }.
+\ee
+As a check, we note that for $|b|\gg b_{\rm crit}$, Eq.~(\ref{e:ges:sol_r_per})
+yields $r_{\rm per} \simeq 2|b|/\sqrt{3} \cos\left(\pi/3 -1/3 \times \pi/2 \right)
+\simeq 2|b|/\sqrt{3} \cos(\pi/6) \simeq |b|$, as expected.
+
+The variation of $r_{\rm per}$ and $r_{\rm apo}$ with $b$ is plotted
+in Fig.~\ref{f:gis:null_per_apo}. Note that $r_{\rm per} = r_{\rm apo} = 3 m$
+(the photon orbit) at the limit $|b| = b_{\rm crit}$.
+
+
+
+\subsection{Angular behaviour and critical null geodesics}
+
+Let us first recall the generic property of causal geodesics in Schwarzschild
+spacetime established in Sec.~\ref{s:ges:eq_to_be_solved} : for $L\not=0$,
+the azimuthal angle coordinate $\ph$ has no turning point: it is either always increasing
+towards the future
+($L>0$) or always decreasing towards the future ($L<0$).
+\begin{remark}
+Equation~\eqref{e:ges:dot_ph_null_b} implies obviously
+$\D\ph/\D\tilde{\lambda} > 0$. We recover the above property by
+noticing that $\tilde{\lambda}$ increases (resp. decreases)
+towards the future for $L>0$ (resp. $L<0$).
+\end{remark}
+By combining Eqs.~(\ref{e:ges:dot_ph_null_b}), (\ref{e:ges:dot_r_square_null_b})
+and (\ref{e:ges:eff_pot_null}), we get
+\be \label{e:ges:dphi_dr_null}
+    \frac{\D\ph}{\D r} = \pm \frac{1}{r^2} \left( \frac{1}{b^2}
+        - \frac{1}{r^2} +  \frac{2m}{r^3}  \right) ^{-1/2} .
+\ee
+Introducing the variable
+\be
+    u := \frac{m}{r}
+\ee
+allows us to simplify this equation:
+\be \label{e:ges:dphi_du_null}
+   \encadre{ \frac{\D\ph}{\D u} = \pm \frac{1}{\sqrt{2 u^3 - u^2 + (m/b)^2}} }
+\ee
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ges_polynomial_b_u.pdf}}
+\caption[]{\label{f:gis:polynomial_b_u} \footnotesize
+Graph of the cubic polynomial $P_b(u)$ defined by Eq.~(\ref{e:ges:def_Pb_u}).}
+\end{figure}
+
+The zeros of the cubic polynomial
+\be \label{e:ges:def_Pb_u}
+        P_b(u) := 2 u^3 - u^2 + \frac{m^2}{b^2}
+\ee
+correspond to points for which $\D\ph/\D u \to \pm \infty$,
+or equivalently $\D u /\D\ph \to 0$. They are thus stationary points
+for $u$, and hence for $r$. This can only occur at the circular photon
+orbit $r = \mathrm{const} = 3 m$ (then $b=b_{\rm crit}$)
+or at a periastron or apoastron discussed
+in Sec.~\ref{s:ges:null_radial_behav} (then $b > b_{\rm crit}$).
+The graph of the polynomial $P_b(u)$ is shown in Fig.~\ref{f:gis:polynomial_b_u}
+for selected values.
+The zeros of $P_b(u)$ are governed by its
+discriminant, which is
+\be
+    \Delta = 4 \frac{m^4}{b^4} \left( \frac{b^2}{m^2} - 27 \right) .
+\ee
+\begin{itemize}
+\item If $\Delta<0$ $\iff$ $|b| <\sqrt{27} m = b_{\rm crit}$,
+$P_b(u)$ has one real negative zero and two complex zeros, so that it never vanishes
+for physical values of $u$, which are real positive.
+\item If $\Delta=0$ $\iff$ $|b| = b_{\rm crit}$, $P_b(u)$
+has a double zero: $u=1/3$ and a negative zero: $u=-1/6$ (cf. red curve
+in Fig.~\ref{f:gis:polynomial_b_u}); only the first
+one is physical and correspond to $r=3m$.
+\item If $\Delta>0$ $\iff$ $|b| > b_{\rm crit}$, $P_b(u)$ has three distinct
+real zeros (cf. the green and cyan curves
+in Fig.~\ref{f:gis:polynomial_b_u}); one of them, $u_{\rm neg}$ say, is
+negative and hence unphysical and the two others are positive, being nothing but
+\be \label{e:ges:def_u_per_apo}
+    u_{\rm per} = \frac{m}{r_{\rm per}} \qquad\mbox{and}\qquad
+    u_{\rm apo} = \frac{m}{r_{\rm apo}} ,
+\ee
+where $r_{\rm per}$ and $r_{\rm apo}$ are given by
+Eqs.~(\ref{e:ges:sol_r_per})-(\ref{e:ges:sol_r_apo}).
+\end{itemize}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ges_null_r_phi_bcrit.pdf}}
+\caption[]{\label{f:gis:null_r_phi_bcrit} \footnotesize
+$r$ as a function of $\ph$ along a null geodesic with an impact parameter
+equal to the critical one:
+$b = b_{\rm crit} = 3\sqrt{3} \, m$; the blue curve is for a critical
+null geodesic with $r>3m$
+[Eq.~(\ref{e:ges:null_r_phi_tanh})], while the red one
+regards $r<3m$ [Eq.~(\ref{e:ges:null_r_phi_coth})].}
+\end{figure}
+
+For $\Delta< 0$ or $\Delta> 0$, i.e. for $|b| \not= b_{\rm crit}$,
+Eq.~(\ref{e:ges:dphi_du_null}) can be integrated in terms of elliptic
+functions (see e.g. Chap.~7 of Frolov \& Zelnikov textbook \cite{FroloZ11}
+or Mu\~noz article \cite{Munoz14} for details).
+The case $|b|=b_{\rm crit}$ can be delt with by means of elementary functions.
+Indeed, in this case, $P_b(u) = 2(u - 1/3)^2 (u + 1/6)$ and Eq.~(\ref{e:ges:dphi_du_null})
+becomes
+\be \label{e:ges:dphi_du_null_bcrit}
+    \frac{\D\ph}{\D u} = \pm \frac{1}{\left|u - \frac{1}{3}\right|
+        \sqrt{2u+\frac{1}{3}}} .
+\ee
+This equation can be easily integrated by noticing that
+\be \label{e:ges:primitive_crit_geod}
+    \frac{1}{(1-x)\sqrt{x}} = \begin{cases}
+       \displaystyle 2 \frac{\D}{\D x} \left( \mathrm{artanh}\, \sqrt{x} \right) \quad \mbox{for}\ x\in(0,1)\\[2ex]
+       \displaystyle 2 \frac{\D}{\D x} \left( \mathrm{arcoth}\, \sqrt{x} \right) \quad \mbox{for}\ x\in(1,+\infty) .
+    \end{cases}
+\ee
+We thus perform the change of variable $x=2u + 1/3$ and treat separately
+two cases : $u<1/3 \iff x\in (1/3,1)$ and $u>1/3 \iff x\in (1,+\infty)$.
+We call geodesics in the first case
+\defin{external critical null geodesics}\index{external!critical null geodesic}\index{critical!null geodesic!external --},
+since $u<1/3\iff r > 3 m$, and those in the second case
+\defin{internal critical null geodesics}\index{internal!critical null geodesic}\index{critical!null geodesic!internal --},
+since $u>1/3 \iff r < 3m$. The qualifiers \emph{external} and \emph{internal} thus refer
+to the photon sphere $r=3 m$ discussed in Sec.~\ref{s:ges:null_eff_pot}.
+
+\subsubsection{External critical null geodesics}
+
+For $u<1/3$, $x\in(1/3, 1)$, so that the first line of Eq.\eqref{e:ges:primitive_crit_geod}
+is relevant and Eq.~\eqref{e:ges:dphi_du_null_bcrit} is integrated to
+\be \label{e:ges:ph_u_crit_null_geod}
+    \ph = \pm 2 \,\mathrm{artanh}\, \sqrt{2u + \frac{1}{3}} + \ph_0 ,
+\ee
+where $\ph_0$ is some integration constant. This relation is easily inverted
+to
+\be \label{e:ges:u_ph_crit_null_geod}
+    u = \frac{1}{2}  \tanh^2 \left(\frac{\ph - \ph_0}{2} \right) - \frac{1}{6} .
+\ee
+Moving back to $r = m/u$, we obtain the equation of the external critical
+null geodesic in polar form:
+\be \label{e:ges:null_r_phi_tanh}
+   \encadre{ r = \frac{2m}{\tanh^2 \left(\frac{\ph - \ph_0}{2} \right) - \frac{1}{3}} }.
+\ee
+The constant $\ph_0$ can be related to the asymptotic value $\ph_\infty$ of $\ph$
+when $r\to +\infty$ by setting $u=0$ in Eq.~(\ref{e:ges:u_ph_crit_null_geod});
+we get, using the identity $\mathrm{artanh}\,  x = 1/2\ln[(1+x)/(1-x)]$,
+\be \label{e:ges:null_ph_0_ph_inf}
+    \ph_0 = \ph_\infty \pm \ph_*,\quad\mbox{with}\quad
+    \ph_* := \ln\left(\frac{\sqrt{3} + 1}{\sqrt{3} - 1}\right)
+    \simeq 1.316958.
+\ee
+
+The function $r(\ph)$, as given by Eq.~(\ref{e:ges:null_r_phi_tanh}), is
+depicted on Fig.~\ref{f:gis:null_r_phi_bcrit} (blue curve).
+The region $\ph_0-\ph_* < \ph < \ph_0 + \ph_*$ is excluded, since
+Eq.~(\ref{e:ges:null_r_phi_tanh}) would yield $r<0$. For $\ph > \ph_0 + \ph_*$,
+$r(\ph)$ is a decaying
+function, which corresponds to the
+plus sign in Eq.~(\ref{e:ges:ph_u_crit_null_geod}) and to the minus sign in
+Eq.~(\ref{e:ges:null_ph_0_ph_inf}): $\ph_0 = \ph_\infty - \ph_*$.
+Figure~\ref{f:gis:null_b_crit_from_inf_L_pos} shows such a null geodesic with
+$\ph_\infty=0$, which implies $\ph_0 = - \ph_*$ and $\ph>0$.
+When $\ph\to +\infty$, the geodesic rolls up indefinitely onto the photon
+orbit discussed in Sec.~\ref{s:ges:null_eff_pot}; this
+behaviour corresponds to the horizontal asymptote at $r=3m$ in
+the right part of Fig.~\ref{f:gis:null_r_phi_bcrit}.
+Note that the geodesic approaches very fastly the photon orbit, a single
+path round to it being graphically visible in Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}.
+This is because the asymptotic expansion of relation~\eqref{e:ges:null_r_phi_tanh} is
+$r\sim 3m(1+ 6\mathrm{e}^{-\ph})$ when $\ph\to+\infty$.
+
+It is worth stressing that Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos} describes both (i) the trace of a
+geodesic with $L>0$ (so that $\ph$ increases towards the future, cf. Eq.~(\ref{e:ges:dot_ph_null})) arising from $r\to + \infty$
+and spiraling inwards to the photon orbit
+and (ii) the trace of a geodesic with $L<0$ (so that $\ph$ decays towards the future)
+arising from $r=r_{\rm em} > 3 m$, $\ph=\ph_{\rm em}>0$
+and spiraling outwards, escaping to $r\to +\infty$ as $\ph\to 0$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ges_null_b_crit_from_inf_L_pos.pdf}}
+\caption[]{\label{f:gis:null_b_crit_from_inf_L_pos} \footnotesize
+Trace in the equatorial plane of an external critical null geodesic ($b = 3\sqrt{3} \, m \simeq 5.196 m$ and
+$r>3m$) with $\ph_\infty=0$.
+It obeys Eq.~(\ref{e:ges:null_r_phi_tanh}) with $\ph_0 = -\ph_*$ and $\ph\in(0,+\infty)$
+(right branch of the blue curve in Fig.~\ref{f:gis:null_r_phi_bcrit}).}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ges_null_b_crit_from_inf_L_neg.pdf}}
+\caption[]{\label{f:gis:null_b_crit_from_inf_L_neg} \footnotesize
+Same as Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}, but for $\ph_0 = \ph_*$
+and $\ph\in(-\infty,0)$ (left branch of the blue curve in Fig.~\ref{f:gis:null_r_phi_bcrit}).}
+\end{figure}
+
+On the contrary, for $\ph < \ph_0 - \ph_*$,
+$r(\ph)$ is an increasing
+function, as it is clear on the left part of the blue curve in Fig.~\ref{f:gis:null_r_phi_bcrit}.
+This corresponds to the
+minus sign in Eq.~(\ref{e:ges:ph_u_crit_null_geod}) and to the plus sign in
+Eq.~(\ref{e:ges:null_ph_0_ph_inf}): $\ph_0 = \ph_\infty + \ph_*$.
+A null geodesic of this type is depicted in Fig.~\ref{f:gis:null_b_crit_from_inf_L_neg}.
+It has $\ph_\infty = 0$, so that $\ph_0 = \ph_*$ and $\ph < 0$.
+As for Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}, the curve depicted in
+Fig.~\ref{f:gis:null_b_crit_from_inf_L_neg} can be interpreted as the trace of two distinct
+geodesics: one with $L<0$ arising from $r\to + \infty$
+and spiraling inwards to the photon orbit when $\ph\to -\infty$
+and another one with $L>0$
+arising from $r=r_{\rm em} > 3 m$, $\ph=\ph_{\rm em}<0$
+and spiraling outwards, escaping to $r\to +\infty$ as $\ph\to 0$.
+
+\begin{figure}
+\centerline{
+\includegraphics[width=0.35\textwidth]{ges_null_b_crit_intern_1.pdf}\qquad
+\includegraphics[width=0.35\textwidth]{ges_null_b_crit_intern_2.pdf}
+}
+\caption[]{\label{f:gis:null_b_crit_intern} \footnotesize
+Trace in the equatorial plane of two internal critical null geodesics ($b = 3\sqrt{3} \, m \simeq 5.196 m$ and
+$r<3m$). They both obey Eq.~\eqref{e:ges:null_r_phi_coth} with $\ph_0 = 0$.
+The left panel corresponds to $\ph\in (-\infty, 0)$ (left part of the red curve
+in Fig.~\ref{f:gis:null_r_phi_bcrit}), while the right one is
+for $\ph\in (0, +\infty)$ (right part of the red curve
+in Fig.~\ref{f:gis:null_r_phi_bcrit}).}
+\end{figure}
+
+
+\subsubsection{Internal critical null geodesics}
+
+Let us now consider the ``internal'' case: $r< 3m \iff u>1/3$.
+This implies $x\in (1,+\infty)$ in Eq.~\eqref{e:ges:primitive_crit_geod},
+so that Eq.~\eqref{e:ges:dphi_du_null_bcrit} is integrated to
+\be \label{e:ges:null_r_phi_coth}
+    \encadre{ r = \frac{2m}{\coth^2 \left(\frac{\ph - \ph_0}{2} \right) - \frac{1}{3}} }.
+\ee
+Again, $\ph_0$ is an integration constant. But this time, it cannot be determined by the
+value of $\ph$ when $r\to +\infty$ since we are in the case $r<3m$.
+The function $r(\ph)$ given by Eq.~\eqref{e:ges:null_r_phi_coth} is plotted as the red
+curve in Fig.~\ref{f:gis:null_r_phi_bcrit}. Contrary to external critical null geodesics, there
+is no exclusion interval for $\ph$. However, $\ph$ cannot range from $-\infty$
+to $+\infty$ along a given geodesic. Indeed, for $\ph=\ph_0$, one gets
+$r=0$, which corresponds to the curvature singularity of the Schwarzschild black hole.
+This is necessarily a termination point of any geodesic. The maximum
+range of $\ph$ along an internal critical null geodesic is therefore
+either $(-\infty,\ph_0)$ or $(\ph_0,+\infty)$.
+
+An internal critical null geodesic with $\ph_0=0$ and $\ph\in(-\infty,0)$
+is depicted in the left panel of Fig.~\ref{f:gis:null_b_crit_intern}.
+For $\ph\to -\infty$, it rolls up indefinitely onto the photon
+orbit ($r=3m$) from below. Again the approach to the photon orbit is exponentially
+fast, the asymptotic expansion of relation \eqref{e:ges:null_r_phi_coth} being
+$r\sim 3m (1 - 6 \mathrm{e}^\ph)$ when $\ph\to -\infty$.
+The curve plotted in Fig.~\ref{f:gis:null_b_crit_intern} actually represents the trace in the equatorial plane of two
+kinds of geodesics: (i) a geodesic with $L>0$ arising
+from $r=r_{\rm em} < 3 m$, $\ph=\ph_{\rm em}<0$ and inspiralling to the
+central singularity as $\ph\to 0$ and (ii) a geodesic with $L<0$ arising from
+$r = r_{\rm em} \in (2m,  3 m)$, $\ph=\ph_{\rm em}<0$ and spiralling outward
+to the photon orbit as $\ph\to -\infty$. Note that for (ii), the
+emission point must fulfill $r_{\rm em} > 2m$, i.e. must lie outside the black
+hole region. Indeed, as shown in Sec.~\ref{s:ges:eq_to_be_solved}, along
+any geodesic, $r$ must decrease towards the future in the black hole region.
+Hence no null geodesic can be spiralling outwards there.
+
+The right panel of Fig.~\ref{f:gis:null_b_crit_intern} corresponds to a
+internal critical null geodesic with $\ph_0=0$ and $\ph\in(0, \infty)$.
+For $\ph\to +\infty$, it rolls up indefinitely onto the photon
+orbit ($r=3m$) from below. Again, the plotted curve describes two cases:
+(i) a geodesic with $L<0$ arising
+from $r=r_{\rm em} < 3 m$, $\ph=\ph_{\rm em}>0$ and inspiralling to the
+central singularity as $\ph\to 0$ and (ii) a geodesic with $L>0$ arising from
+$r = r_{\rm em} \in (2m,  3 m)$, $\ph=\ph_{\rm em}>0$ and spiralling outward
+to the photon orbit as $\ph\to +\infty$.
+
+\begin{figure}
+\begin{tabular}{cc}
+\includegraphics[width=0.48\textwidth]{ges_null_b_12_000000.pdf} &
+\includegraphics[width=0.48\textwidth]{ges_null_b_8_000000.pdf} \\
+\includegraphics[width=0.48\textwidth]{ges_null_b_6_000000.pdf} &
+\includegraphics[width=0.48\textwidth]{ges_null_b_5_355000.pdf}
+\end{tabular}
+\caption[]{\label{f:gis:null_b1} \footnotesize
+Null geodesics in the equatorial plane of Schwarzschild spacetime,
+plotted in terms of the coordinates $(x,y) := (r\cos\ph, r\sin\ph)$,
+arising from $x\gg m$ with trajectories all initially parallel to the $x$-axis,
+but differing by the value of the impact parameter $b$.
+The grey disk marks the black hole
+region $r<2m$, while the dashed green circle indicates the photon orbit
+at $r=3m$.}
+\end{figure}
+
+\begin{figure}
+\begin{tabular}{cc}
+\includegraphics[width=0.48\textwidth]{ges_null_b_5_230000.pdf} &
+\includegraphics[width=0.48\textwidth]{ges_null_b_5_202500.pdf} \\
+\includegraphics[width=0.48\textwidth]{ges_null_b_5_196430.pdf} &
+\includegraphics[width=0.48\textwidth]{ges_null_b_5_196155.pdf}
+\end{tabular}
+\caption[]{\label{f:gis:null_b2} \footnotesize
+Same as Fig.~\ref{f:gis:null_b1} but for values of $b$ closer to
+$b_{\rm crit} \simeq 5.196152\, m$.}
+\end{figure}
+
+\subsection{Generic null geodesics}
+
+As stated above, for $|b| \not= b_{\rm crit}$, Eq.~\eqref{e:ges:dphi_dr_null} cannot be integrated
+in terms of elementary functions, but requires elliptic functions.
+To compute the trajectories $r(\ph)$ in that case, we use the geodesic integrator
+of SageMath (cf. Appendix~\ref{s:sam}). Some results are displayed in
+Figs.~\ref{f:gis:null_b1}-\ref{f:gis:null_b2}. They correspond to
+geodesics coming from infinity along the
+direction $\ph=0$, for various values of the
+impact parameter $b$ decaying to $b_{\rm crit}$. All these geodesics, having
+$b > b_{\rm crit}$, correspond to the case no.~1 in the effective potential
+diagram of Fig.~\ref{f:gis:eff_pot_null}, i.e. they reach a periastron
+before escaping to infinity. However, they differ by the number of turns
+performed around the black hole. For $b=12 m$ (upper left panel of Fig.~\ref{f:gis:null_b1}),
+the geodesic suffers only some small bending; this is nothing but the standard
+\defin{deflection of light}\index{deflection of light} by massive bodies in
+general relativity. More precisely, we define the \defin{deflection angle}\index{deflection!angle}
+$\Theta$ by
+\be \label{e:ges:def_deflection_angle}
+    \Theta + \pi := \Delta\ph \ \mathrm{mod}\ 2 \pi,
+\ee
+where $\Delta\ph$ is the total change in $\ph$ along the geodesic history, i.e.
+between $\lambda\to -\infty$ ($\ph=0$ in the present case) and $\lambda\to +\infty$.
+The $+\pi$ term in the left-hand side of Eq.~(\ref{e:ges:def_deflection_angle}) is chosen so
+that $\Theta = 0$ in flat spacetime. Eq.~(\ref{e:ges:def_deflection_angle}) can be
+inverted to
+\be \label{e:ges:Dph_Theta_n}
+    \Delta\ph = \Theta + \pi + 2 \pi n,\qquad n\in \mathbb{Z} ,
+\ee
+where $n$ is the number of full turns around the black hole.
+For $b = 12 m$, one has $\Theta\simeq \pi/6$ and $n=0$.
+For $b=8 m$ and $6 m$, the bending is more pronounced,
+exceeding $\Theta = \pi/2$ for $b=6 m$, still with $n=0$. For $b=5.355\, m$ (lower right panel of Fig.~\ref{f:gis:null_b1}), the deflection angle is $\Theta\simeq\pi$, i.e. the photon goes back in the direction
+from which it was coming.
+
+When the impact parameter becomes even closer to the critical value
+$b_{\rm crit}\simeq 5.196152\, m$ [Eq.~(\ref{e:ges:b_crit})],
+the null geodesic starts to wind around the black hole before escaping
+to infinity (Fig.~\ref{f:gis:null_b2}).
+For $b=5.2025\, m$ (upper right panel of Fig.~\ref{f:gis:null_b2}), one has $\Theta=0$
+but $n=1$ (a full turn has been performed). For $b=5.19643\, m$, one has
+$\Theta\simeq\pi$ and $n=1$ and for $b=5.196155\, m$ (lower right panel of Fig.~\ref{f:gis:null_b2}), one has
+$\Theta\simeq \pi/2$ and $n=2$.
+Note that the winding is taking place
+almost at the photon circular orbit ($r=3m$). That after a few turns the null geodesic
+departs to infinity corroborates the fact that the photon orbit is unstable
+(cf. Sec.~\ref{s:ges:null_eff_pot}).
+
+The total change in $\ph$ along the null geodesic
+is obtained by integrating Eq.~(\ref{e:ges:dphi_du_null}) with $u=m/r$ varying
+from $0$ (the ``far away'' emission) to $u_{\rm per} = m/r_{\rm per}$, and
+then back to $0$ (the ``far away'' reception).
+Assuming $L>0$, so that $\ph$ increases towards the future
+(as in Figs.~\ref{f:gis:null_b1}-\ref{f:gis:null_b2}), one must select
+the $+$ sign in the r.h.s. of Eq.~(\ref{e:ges:dphi_du_null}) for the first part
+and the $-$ sign for the second part. Hence
+\bea
+    \Delta \ph &=&  \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}}
+     - \int_{u_{\rm per}}^0 \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} \nonumber \\
+  & = & 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} . \label{e:ges:null_Delta_ph_b}
+\eea
+This integral can be evaluated by means of elliptic functions (see e.g. Ref.~\cite{Lumin79,FroloZ11,Munoz14}
+for details). However, we can understand the winding around the photon circular orbit
+observed in Figs.~\ref{f:gis:null_b1}-\ref{f:gis:null_b2}
+when $b$ is close to $b_{\rm crit}$
+without the explicit form.
+Indeed let us express the polynomial $P_b(u) = 2 u^3 - u^2 + (m/b)^2$
+in terms of its three real zeros $u_{\rm neg}$, $u_{\rm per}$ and $u_{\rm apo}$,
+cf. Eq.~(\ref{e:ges:def_u_per_apo}). We get
+\be \label{e:ges:Dph_u_per_apo}
+    \Delta\ph = \sqrt{2} \int_0^{u_{\rm per}}
+    \frac{\D u}{\sqrt{(u_{\rm per} - u )(u_{\rm apo} - u)(u - u_{\rm neg})}} .
+\ee
+Given the ordering $u_{\rm neg} < 0 < u_{\rm per} \leq u_{\rm apo}$, each of the
+three terms under the square root is positive on the integration range
+$(0,u_{\rm per})$. For $b>b_{\rm crit}$, $u_{\rm apo}>u_{\rm per}$ and
+the only diverging term in the integrand is $1/\sqrt{u_{\rm per} - u}$, which
+diverges at the integral boundary $u=u_{\rm per}$. However, the integral
+\[
+    \int_0^{u_{\rm per}}
+    \frac{\D u}{\sqrt{u_{\rm per} - u}}
+\]
+is finite, being equal to $2\sqrt{u_{\rm per}}$, so that $\Delta\ph$ remains
+finite. When $b\to b_{\rm crit}$,
+$u_{\rm apo} \to u_{\rm per}$ and the integral (\ref{e:ges:Dph_u_per_apo})
+has a behavior similar to
+\[
+     \int_0^{u_{\rm per}}
+    \frac{\D u}{\sqrt{(u_{\rm per} - u)^2}} = \int_0^{u_{\rm per}}
+    \frac{\D u}{u_{\rm per} - u} ,
+\]
+which is a diverging integral. Hence
+\be \label{e:ges:Dph_infinite}
+    \encadre{ \Delta\ph\to +\infty\quad\mbox{when}\quad b\to b_{\rm c} }.
+\ee
+We recover the behaviour obtained for $b=b_{\rm crit}$, i.e. for
+the external critical null geodesic discussed above:
+$\Delta\ph$ is infinite, the geodesic spiralling indefinitely around the
+photon orbit (cf. Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}).
+
+More precisely, we can easily derive a lower bound on $\Delta\ph$ involving
+$b-b_{\rm crit}$ as follows. For $b$ close to $b_{\rm crit}$, let us introduce
+the small parameter $\veps >0$ such that
+\be \label{e:ges:u_per_eps}
+    u_{\rm per} =: \frac{1}{3} ( 1 - \veps ).
+\ee
+The relation $P_b(u_{\rm per}) = 0$ leads then, to the second order in $\veps$:
+\be \label{e:ges:b_bc_eps}
+    b-b_{\rm crit} \simeq \frac{9\sqrt{3}}{2} m \veps^2 .
+\ee
+The inegality $m^2/b^2 < m^2/b_{\rm crit}^2$ allows us to deduce from the expression
+(\ref{e:ges:null_Delta_ph_b}) of $\Delta\ph$ that
+\[
+    \Delta\ph > 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b_{\rm crit})^2}}
+      = 2 \int_0^{u_{\rm per}} \frac{\D u}{\left(\frac{1}{3} - u \right)
+        \sqrt{2u + \frac{1}{3}}} .
+\]
+In the right-hand-side integral, we can use the primitive (\ref{e:ges:ph_u_crit_null_geod})
+with the $+$ sign and the $\mathrm{artanh}$ expressed in terms of logarithms,
+via the identity $\mathrm{artanh}\,  x = 1/2\ln[(1+x)/(1-x)]$ to get
+\[
+   \Delta\ph > 2 \left[
+   \ln \left( \frac{1 + \sqrt{2u + \frac{1}{3}}}{1 - \sqrt{2u + \frac{1}{3}}} \right)
+   \right] _0^{u_{\rm per}} .
+\]
+From Eq.~(\ref{e:ges:u_per_eps}), we get $\sqrt{2u_{\rm per} + \frac{1}{3}} \simeq 1 - \veps/3$,
+so that the above relation becomes
+\[
+    \Delta\ph > \ln\left( (7 - 4 \sqrt{3}) \frac{36}{\veps^2} \right) .
+\]
+Substituting Eq.~(\ref{e:ges:b_bc_eps}) for $\veps^2$, we get
+\be \label{e:ges:Delta_ph_lower_bound}
+    \Delta\ph > \ln\left( \frac{162(7\sqrt{3} - 12) m}{b-b_{\rm crit}} \right) .
+\ee
+This relation establishes rigorously the divergence property
+(\ref{e:ges:Dph_infinite}).
+
+An exact study of the behaviour of $\Delta\ph$ when $b \to b_{\rm crit}^+$,
+based on the expression of $\Delta\ph$ in terms of elliptic functions, leads
+to\footnote{See e.g. Eq.~(31) of Ref.~\cite{Darwi59}, where $\mu = \Theta$
+or Eq.~(268) in page~132 of Ref.~\cite{Chand83}, where $\delta D = b-b_{\rm crit}$ and
+$\Theta$ is the same as ours.}
+\be \label{e:ges:Dph_ln_b_bc}
+    \Delta\ph \sim \ln\left( \frac{648(7\sqrt{3} - 12) m}{b-b_{\rm crit}} \right)
+    \qquad\mbox{when}\quad b \to b_{\rm crit}^+ .
+\ee
+We note that this expression gives a behaviour similar to the lower bound
+(\ref{e:ges:Delta_ph_lower_bound}), except for a factor 4 in the numerical
+factor inside the logarithm.
+By combining Eq.~(\ref{e:ges:Dph_ln_b_bc}) and Eq.~(\ref{e:ges:Dph_Theta_n}),
+one can relate $b - b_{\rm crit}$ to the deflection angle $\Theta$
+and the number of turns $n$ performed by the geodesic around the black hole:
+\be \label{e:ges:b_bc_exp_Theta}
+    b - b_{\rm crit} \sim
+    \underbrace{648(7\sqrt{3} - 12)\mathrm{e}^{-\pi}}_{\simeq 3.482284} m \, \mathrm{e}^{-\Theta - 2\pi n}
+    \qquad\mbox{when}\quad b \to b_{\rm crit}^+ .
+\ee
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Images}
+
+Since they are the worldlines of photons, null geodesics are the key ingredient to
+determine the image as seen by some observer of emitting material around
+a black hole. Computing such images is of great interest, especially after
+the first image of a black hole vicinity obtained by
+the Event Horizon Telescope team in 2019 \cite{EHT19a,Cardo19}.
+
+\subsection{Images of a point source}
+
+Let us consider a ``far-away'' observer, i.e. an observer $\Obs$ located at $r\gg m$. Without
+any loss of generality, we may assume that $\Obs$ is located at $\th=\pi/2$ and $\ph=0$.
+Furthermore, we suppose that $\Obs$ is
+equipped with a screen orthogonal to the direction from $\Obs$ to the black hole, which
+the $x$-axis in terms of the coordinates $x:=r\cos\ph$, $y:=r\sin\ph$.
+The image of the black hole surroundings is formed on $\Obs$'s screen by null geodesics
+that reach the asymptotic value $\ph_\infty = 0$. Any such geodesic can be parametrized by
+(i) its impact parameter $b$, which, up to some constant rescaling, measures the distance from
+the impact of the geodesic to the center of the screen and (ii) some polar angle $\alpha$ in the screen plane.
+In other words,
+at a given instant of $\Obs$'s proper time $\tau$, a point (``pixel'') of the screen is
+described by the polar coordinates $(b,\alpha)$ and there is a unique null geodesic intersecting
+the screen orthogonally at $(\tau,b,\alpha)$ and moving from the black hole region to $\Obs$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.9\textwidth]{ges_mult_images.pdf}}
+\caption[]{\label{f:gis:mult_images} \footnotesize
+Null geodesics in Schwarzschild spacetime with $\ph_\infty=0$ and various values of the impact parameter $b$.
+The green ones have $b$ ranging from $-12 m$ to $12 m$, by steps of
+$0.8 m$, while the olive ones have $|b|$ close to $b_{\rm crit}$,
+namely $b/m\in\{-5.4,-5.2,-5.0\} \cup \{5.0, 5.2, 5.4\}$. $S$ is a luminous point source
+and three of its images for an observer at $y=0$ and $x\to + \infty$ are obtained by
+following the drawn null geodesics through $S$.}
+\end{figure}
+
+To understand the formation of images on $\Obs$'s screen, a bunch of null
+geodesics with $\ph_\infty=0$ is drawn in Fig.~\ref{f:gis:mult_images}.
+$\Obs$ is located in the far right of this figure and
+all the drawn geodesics eventually hit $\Obs$'s screen. Let us consider a luminous point source
+$S$ in the surroundings of the black hole. From the drawing of Fig.~\ref{f:gis:mult_images},
+three geodesics of the $\ph_\infty=0$ family goes through $S$. They give rise to
+three disctint images of $S$ on $\Obs$'s screen, which are represented by the
+open circles labelled 1 to 3 in the right part of the figure. These three
+geodesics can be distinguished by their deflection angle $\Theta$.
+The one giving image 1 has the smallest deflection angle, while that
+of image 2 has a larger deflection angle, both being lower than $\pi/2$.
+The geodesic giving image 3 is much more deflected: it makes a full turn around
+the black hole before reaching $\Obs$. We note that the more deflected the geodesic,
+the closer the image with respect to the circle $b = b_{\rm crit}$ on $\Obs$'s
+screen.
+
+For the sake of clarity, only three images of the source $S$ have been
+depiced in Fig.~\ref{f:gis:mult_images}, but there is actually an infinite
+number of them: two per value of $n$ (the number of turns around the black hole)
+--- one with $L>0$ and one with $L<0$. The selected geodesics in
+Fig.~\ref{f:gis:mult_images} have $n=0$ and $L<0$ (image 1), $n=0$ and $L>0$
+(image 2) and $n=1$ and $L<0$ (image 3). The higher $n$, the closer the image
+lies to the circle $b=b_{\rm crit}$ on $\Obs$'s screen. Indeed, according to the
+law (\ref{e:ges:b_bc_exp_Theta}), geodesics that perform $n$ turns around the
+black hole have an impact parameter exponentially close to $b_{\rm crit}$,
+by a factor $\mathrm{e}^{- 2\pi n}$ (see also Fig.~\ref{f:gis:null_b2}).
+Note that $\mathrm{e}^{- 2\pi}\simeq 1.9\times 10^{-3}$, so that any extra cycle
+around the blak hole corresponds to a value of $b$ closer to $b_{\rm crit}$
+by two order of magnitude.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.9\textwidth]{ges_images_aligned.pdf}}
+\caption[]{\label{f:gis:images_aligned} \footnotesize
+Same as Fig.~\ref{f:gis:mult_images} but underlining four null geodesics
+from a point source $A$ located on the $x$-axis, i.e.
+aligned with the black hole and the observer.}
+\end{figure}
+
+
+If $S$, $\Obs$ and the black hole are not aligned, i.e. if $S$ is not located
+on the $x$-axis, all the images of $S$ are aligned on $\Obs$'s screen: they
+all lie in the plane defined by $S$, $\Obs$ and the black hole (plane of
+Fig.~\ref{f:gis:mult_images}). This is a direct consequence of the spherical
+symmetry of Schwarzschild spacetime.
+
+In the special case where source is located on the $x$-axis, the images form
+a series of concentric circles accumulating from above on the circle
+$b = b_{\rm crit}$. This is illustrated by the source $A$ in
+Fig.~\ref{f:gis:images_aligned}. Four geodesics through the source are drawn,
+given birth to four images that
+are symmetric with respect to the $x$-axis, labelled 1, 3 and 2, 4 respectivelly.
+Since in this case, the plane of the figure is not privileged (one cannot speak
+about the plane defined by $A$, $\Obs$ and the black hole, since they are aligned);
+we deduce by rotation about the $x$-axis that $A$ generates images all along
+circles centered on the origin in $\Obs$'s screen.
+
+
+\subsection{Black hole shadow}
+
+\subsection{Image of an accretion structure}
+
+
+\begin{hist}
+Droste \cite{Drost1917}, Hagihara,  Darwin \cite{Darwi59}, Synge \cite{Synge66}, Bardeen \cite{Barde73}, Luminet \cite{Lumin79,Lumin19}
+\end{hist}
+
+
+
+
+
