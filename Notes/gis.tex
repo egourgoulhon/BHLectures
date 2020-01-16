@@ -713,8 +713,9 @@ and the $-$ sign for the second part. Hence
      - \int_{u_{\rm per}}^0 \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} \nonumber \\
   & = & 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} . \label{e:ges:null_Delta_ph_b}
 \eea
-This integral can be evaluated by means of elliptic functions (see e.g. Ref.~\cite{Lumin79,FroloZ11,Munoz14}
-for details). However, we can understand the winding around the photon circular orbit
+This integral can be evaluated by means of elliptic integrals of the first kind
+(see e.g. Ref.~\cite{Lumin79,BisnoT08,FroloZ11,Munoz14} for details).
+However, we can understand the winding around the photon circular orbit
 observed in Figs.~\ref{f:gis:null_b1}-\ref{f:gis:null_b2}
 when $b$ is close to $b_{\rm crit}$
 without the explicit form.
@@ -805,9 +806,9 @@ By combining Eq.~(\ref{e:ges:Dph_ln_b_bc}) and Eq.~(\ref{e:ges:Dph_Theta_n}),
 one can relate $b - b_{\rm crit}$ to the deflection angle $\Theta$
 and the number of turns $n$ performed by the geodesic around the black hole:
 \be \label{e:ges:b_bc_exp_Theta}
-    b - b_{\rm crit} \sim
+   \encadre{ b - b_{\rm crit} \sim
     \underbrace{648(7\sqrt{3} - 12)\mathrm{e}^{-\pi}}_{\simeq 3.482284} m \, \mathrm{e}^{-\Theta - 2\pi n}
-    \qquad\mbox{when}\quad b \to b_{\rm crit}^+ .
+    \quad\mbox{when}\quad b \to b_{\rm crit}^+  }.
 \ee
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -875,7 +876,31 @@ black hole have an impact parameter exponentially close to $b_{\rm crit}$,
 by a factor $\mathrm{e}^{- 2\pi n}$ (see also Fig.~\ref{f:gis:null_b2}).
 Note that $\mathrm{e}^{- 2\pi}\simeq 1.9\times 10^{-3}$, so that any extra cycle
 around the blak hole corresponds to a value of $b$ closer to $b_{\rm crit}$
-by two order of magnitude.
+by two orders of magnitude.
+
+
+If $S$, $\Obs$ and the black hole are not aligned, i.e. if $S$ is not located
+on the $x$-axis, all the images of $S$ are aligned on $\Obs$'s screen: they
+all lie in the plane defined by $S$, $\Obs$ and the black hole (plane of
+Fig.~\ref{f:gis:mult_images}). This is a direct consequence of the spherical
+symmetry of Schwarzschild spacetime.
+
+In Fig.~\ref{f:gis:mult_images}, the source $S$ is rather close to the
+black hole but it is worth to stress that
+the multiple character of the images of a given
+source is not due to proximity between the source and the black hole.
+Multiple images are formed for any source, even very far ones.
+For instance, the source can lie \emph{behind} the
+observer, i.e. one can have $x_S > x_{\Obs}$. This is clear if we consider
+the lower-right panel of Fig.~\ref{f:gis:null_b1} (case $b=5.355\, m$):
+a source with $x_S \gg m$ and $y=5.355\, m$ gives an image on
+$\Obs$'s screen at $b=-5.355\, m$.
+
+The reader may be puzzled by the compatibility between an infinite number
+of images from a single source and the conservation of energy. There is
+actually no issue here because because one can show that the images are
+faiter as $n$ increases. So in practice, only a few images would be visible.
+
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ges_images_aligned.pdf}}
@@ -886,11 +911,7 @@ aligned with the black hole and the observer.}
 \end{figure}
 
 
-If $S$, $\Obs$ and the black hole are not aligned, i.e. if $S$ is not located
-on the $x$-axis, all the images of $S$ are aligned on $\Obs$'s screen: they
-all lie in the plane defined by $S$, $\Obs$ and the black hole (plane of
-Fig.~\ref{f:gis:mult_images}). This is a direct consequence of the spherical
-symmetry of Schwarzschild spacetime.
+\subsection{Einstein rings}
 
 In the special case where source is located on the $x$-axis, the images form
 a series of concentric circles accumulating from above on the circle
@@ -901,10 +922,52 @@ are symmetric with respect to the $x$-axis, labelled 1, 3 and 2, 4 respectivelly
 Since in this case, the plane of the figure is not privileged (one cannot speak
 about the plane defined by $A$, $\Obs$ and the black hole, since they are aligned);
 we deduce by rotation about the $x$-axis that $A$ generates images all along
-circles centered on the origin in $\Obs$'s screen.
-
+circles centered on the origin in $\Obs$'s screen. Images 1 and 2 in Fig.~\ref{f:gis:images_aligned}
+are actually on the same circle, as well as images 3 and 4.
+As for the non-aligned case, Fig.~\ref{f:gis:images_aligned} shows only a limited number of
+images, but there is actually an infinite number of such images: the full image
+of $A$ on $\Obs$'s screen is composed by a infinite sequence $(\mathscr{C}_n)_{n\in\mathbb{N}}$
+of concentric circles
+that accumulate exponentially fast onto the circle of radius $b = b_{\rm crit}$.
+Each circle $\mathscr{C}_n$ has a radius $b_n$ that is given approximatively
+by Eq.~(\ref{e:ges:b_bc_exp_Theta}), where $\Theta$ can be seen as the parameter
+giving the position $x_A$ of $A$ on the $x$-axis. In particular $\Theta\to 0$
+when $x_A\to -\infty$.
+The outermost circle, $\mathscr{C}_0$, is called the
+\defin{Einstein ring of}\index{Einstein!ring}\index{ring!Einstein --} $A$.
+It is the only significant ring in astronomical images involving \emph{gravitational
+lensing}\index{gravitational!lensing} by a massive foreground source (not necessarily
+a black hole), which are in the context $|x_A|\ll m$ and $|b|\gg m$.
+We may call $\mathscr{C}_n$ the $\bm{n^{\rm th}}$\defin{~Einstein ring of} $A$.
+For $n\geq 1$, $\mathscr{C}_n$ is also called a \defin{relativistic Einstein ring of}
+$A$. Indeed, these rings exist only in the case of a very relativistic central object, so that
+photons can wind around it. On the contrary $\mathscr{C}_0$ exists even for non-relativistic
+objects. In particular, in astronomical observations of Einstein rings, the
+central deflecting object is a galaxy or a galaxy cluster,
+both being highly non-relativistic (very low compactness). One has in that case
+$n=0$ and $\Theta\ll 1$.
 
 \subsection{Black hole shadow}
+
+Let us investigate the image on the distant observer's screen
+when all the sources of light are very far, both
+from the black hole and the observer $\Obs$. We may think of many stars
+shining on the celestial sphere. To simplify the problem, we shall assume
+that the black hole and the observer are surrounded by a distant
+sphere that is uniformly bright. In such a setting,
+all values of $b > b_{\rm crit}$ on $\Obs$'s screen, whatever the angle $\alpha$,
+correspond to a null geodesic that orginate from the shining sphere, while
+this is not possible for $b \leq b_{\rm crit}$.
+This is clear on Fig.~\ref{f:gis:mult_images}: when traced backward from the right
+($\Obs$ position), (i) null geodesics with $b > b_{\rm crit}$ eventually end
+up far away from the black hole, i.e. on the shining sphere, (ii) null geodesics
+with $b < b_{\rm crit}$ end up infinitely close to the black hole horizon
+and (iii) null geodesics with $b = b_{\rm crit}$ roll up indefinitely around
+the photon sphere (cf. Figs.~\ref{f:gis:null_b_crit_from_inf_L_pos} and
+\ref{f:gis:null_b_crit_from_inf_L_neg}).
+
+
+
 
 \subsection{Image of an accretion structure}
 
