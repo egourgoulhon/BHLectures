@@ -13,19 +13,21 @@ Here, we perform a more extensive study.
 After having established the main properties of generic (timelike or null) geodesics
 in Sec.~\ref{s:ges:geod_motion}, we investigate timelike
 geodesics in Sec.~\ref{s:ges:timelike}. They
-are of primordial physical importance, since they represent
-orbits of planets or stars around the black hole or worldlines of
+are of great physical importance, since they represent
+orbits of planets or stars around the black hole, as well as worldlines of
 intrepid observers freely falling into the black hole.
 The study of null geodesics is deferred to Chap.~\ref{s:gis}.
 
 Before studying this chapter, the reader might want to have a look at
 Appendix~\ref{s:geo}, which recaps the properties of geodesics in
 manifolds equipped with a pseudo-Riemannian metric.
+It could also be worth to reread Sec.~\ref{s:fra:worldlines} about
+worldlines of particles.
 
 \section{Geodesic motion} \label{s:ges:geod_motion}
 
 Let $\Li$ be a geodesic\footnote{The definition and basic properties of geodesics
-are recalled in Appendix~\ref{s:geo}.} of Schwarzschild spacetime
+are recalled in Appendix~\ref{s:geo}; see also Sec.~\ref{s:fra:geod_motion}.} of Schwarzschild spacetime
 $(\M,\w{g})$. We shall assume that $\Li$ is causal, i.e. either timelike or null\footnote{As
 shown in Sec.~\ref{s:geo:def}, a geodesic cannot be partly timelike and partly
 null.}. It therefore can be considered as the worldline
@@ -37,10 +39,12 @@ of some particle $\mathscr{P}$, either massive
 
 The Schwarzschild spacetime $(\M,\w{g})$ is static and spherically symmetric; the
 Killing vector $\w{\xi}$ associated with the staticity (cf. Sec.~\ref{s:sch:static_spher})
-and the Killing vector $\w{\eta}$ associated with the rotation symmetry along any
+and the Killing vector $\w{\eta}$ associated with the rotation symmetry along some
 axis, give birth to two conserved quantities along $\Li$:
 \begin{greybox}
-The scalar products
+Denoting by $\w{p}$ the 4-momentum of particle
+$\mathscr{P}$ (cf. Sec.~\ref{s:fra:worldlines}),
+the scalar products
 \begin{subequations}
 \label{e:ges:conserved_quantities}
 \begin{align}
@@ -48,8 +52,6 @@ The scalar products
 & \encadre{L := \w{\eta}\cdot \w{p} = \w{g}(\w{\eta},\w{p}) } , \label{e:ges:conserved_angu_mom}
 \end{align}
 \end{subequations}
-where $\w{p}$ is the 4-momentum of particle
-$\mathscr{P}$ (cf. Sec.~\ref{s:fra:worldlines}),
 are constant along the geodesic $\Li$.
 The scalar $E$ is called $\mathscr{P}$'s
 \defin{conserved energy}\index{conserved!energy}\index{energy!conserved --}
@@ -64,7 +66,8 @@ The constancy of $E$ and $L$ follow then from the generic property (\ref{e:geo:g
 of geodesics in presence of a spacetime symmetry.
 \end{proof}
 In coordinates $(t,r,\th,\ph)$ adapted to the spacetime symmetries,
-i.e. coordinates such that $\w{\xi} = \wpar_t$ and $\w{\eta}=\wpar_\ph$, like the Schwarzschild-Droste
+i.e. coordinates such that $\w{\xi} = \wpar_t$ and $\w{\eta}=\wpar_\ph$,
+for instance the Schwarzschild-Droste
 coordinates or the Eddington-Finkelstein ones, one can rewrite
 (\ref{e:ges:conserved_quantities})
 in terms of the components $p_t = g_{t\mu} \, p^\mu$ and $p_\ph = g_{\ph\mu} \, p^\mu$
@@ -88,7 +91,7 @@ $\w{\xi}\cdot\w{\xi} \not = -1$. In other words, $\w{\xi}$ cannot
 be interpreted as the 4-velocity of some observer, so that the quantity
 $E$ defined by (\ref{e:ges:conserved_energy}) cannot be a \emph{physically measured}
 particle energy. It is only in the asymptotic region, where $\w{\xi}\cdot\w{\xi} = g_{tt}
-\to -1$, that $\w{\xi}$ is an eligible 4-velocity, hence the name
+\to -1$, that $\w{\xi}$ is eligible as a 4-velocity, hence the name
 \emph{energy at infinity}. Note that this name is commonly used, even in the
 particle $\mathscr{P}$ never visits the asymptotic region.
 Similarly, $L$ is not some (component of a) genuine angular momentum. Only in the
@@ -143,7 +146,7 @@ no component along $\wpar_\th$:
 \be
     \w{p} \stackrel{t=0}{=} p^t \wpar_{t} + p^r \wpar_r + p^\ph \wpar_\ph .
 \ee
-Now, if for $t>0$, the geodesic $\Li$ were departing from $\th=\pi/2$, this
+Now, for $t>0$, if the geodesic $\Li$ were departing from $\th=\pi/2$, this
 would constitute some breaking of spherical symmetry, making a difference
 between the ``Northern'' hemisphere and the ``Southern'' one.
 Hence\footnote{More rigorously, Eq.~(\ref{e:ges:pth_zero}) can
@@ -174,6 +177,7 @@ then [cf. Eq.~(\ref{e:fra:def_mass})]
 \be \label{e:ges:p2_mu2}
     \w{g}(\w{p},\w{p}) = - \mu^2 .
 \ee
+So $\mu^2$ can be seen as an integral of motion.
 
 \subsection{Equations of motion and generic properties} \label{s:ges:eq_to_be_solved}
 
@@ -181,12 +185,15 @@ Contemplating Eqs.~(\ref{e:ges:conserved_energy}), (\ref{e:ges:conserved_angu_mo
 (\ref{e:ges:pth_zero}) and (\ref{e:ges:p2_mu2}), we realize that we have
 four first integral of motions. The problem is then completely integrable.
 More specifically, let $\lambda$ be the affine parameter along the geodesic
-$\Li$ associated with the 4-momentum $\w{p}$ (cf. Eq.~(\ref{e:geo:v_dxdlambda}):
+$\Li$ associated with the 4-momentum $\w{p}$ [cf. Eq.~(\ref{e:geo:v_dxdlambda})]:
 \be \label{e:ges:def_lambda}
     \w{p} = \frac{\D\w{x}}{\D\lambda} ,
 \ee
 where  $\D\w{x}$ is the infinitesimal displacement along $\Li$ corresponding
-to the parameter change $\D\lambda$. Note that $\lambda$ is dimensionless.
+to the parameter change $\D\lambda$. Note that $\lambda$ is dimensionless
+and necessarily increases towards the future\footnote{Let us recall
+that Schwarzschild spacetime is time-oriented, cf. Sec.~\ref{s:sch:time_orientation}.},
+since $\w{p}$ is by definition future-oriented (cf. Sec.~\ref{s:fra:worldlines_def}).
 In terms of the components with respect to Schwarzschild-Droste coordinates,
 this yields
 \be \label{e:ges:comp_4_momentum}
@@ -247,7 +254,7 @@ which can be recast as
         - \frac{2 \mu^2 m}{r} + \frac{L^2}{r^2}
          \left( 1 - \frac{2m}{r} \right) = E^2 - \mu^2 } .
 \ee
-To summarize, we may say that the geodesic motion in Schwarzschild spacetime is governed by
+To summarize, the geodesic motion in Schwarzschild spacetime is governed by
 Eqs.~(\ref{e:ges:dot_t}), (\ref{e:ges:dot_ph}) and (\ref{e:ges:dot_r_square}),
 where $r=r(\lambda)$ and $\mu$, $E$ and $L$ are constants.
 This constitutes a system of 3 differential equations for the 3 unknown
@@ -292,7 +299,7 @@ a system of first order equations.
 
 In what follows, we discuss separately the resolution of
 the system (\ref{e:ges:dot_t})-(\ref{e:ges:dot_r_square}) for timelike geodesics
-(Sec.~\ref{s:ges:timelike}) and for null ones (Sec.~\ref{s:ges:null}).
+(Sec.~\ref{s:ges:timelike}) and for null ones (Chap.~\ref{s:gis}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -388,7 +395,7 @@ that  $\mathscr{P}$ moves at nonrelativistic velocity with respect to $\Obs$
     \left(r\gg m\quad\mbox{and}\quad v\ll 1\right).
 \ee
 We recognize in the right-hand side the \emph{Newtonian mechanical energy per
-unit mass}\index{Newtonian!mechanical energy}\index{mechanical!energy} of particle $\mathscr{P}$ with respect to the observer $\Obs$, which can
+unit mass}\index{Newtonian!mechanical energy}\index{mechanical!energy} of particle $\mathscr{P}$ with respect to observer $\Obs$, who can
 then considered as an inertial observer, $v^2/2$ being the kinetic energy per unit mass
 and $-m/r$ the gravitational potential energy per unit mass.
 
@@ -397,7 +404,8 @@ and $-m/r$ the gravitational potential energy per unit mass.
 \caption[]{\label{f:ges:eff_pot} \footnotesize
 Effective potential $V_{\ell}(r)$ governing the $r$-part of the
 motion along a timelike geodesic in
-Schwarzschild spacetime. The vertical dashed line marks $r=2m$, i.e. the
+Schwarzschild spacetime via Eq.~(\ref{e:ges:1d_motion_timelike}).
+The vertical dashed line marks $r=2m$, i.e. the
 location of the event horizon.
 The numerical value $\ell/m=3.4641$ is that of the critical
 specific angular momentum (\ref{e:ges:ell_crit}).}
@@ -421,7 +429,7 @@ $\D V_{\ell}/\D r=0$, which is equivalent to
 This quadratic equation admits real roots iff $|\ell| \geq \ell_{\rm crit}$,
 with
 \be \label{e:ges:ell_crit}
-   \encadre{ \ell_{\rm crit} = 2\sqrt{3} m }.
+   \encadre{ \ell_{\rm crit} = 2\sqrt{3}\, m \simeq 3.464102 \, m}.
 \ee
 For $|\ell| \geq \ell_{\rm crit}$, the two roots are
 \be
@@ -498,8 +506,8 @@ is given in parametrized form (parameter $\eta$) by
 \ee
 \end{itemize}
 In the above formulas, $\tau_0$ is a constant; for $\veps\geq \mu$,
-it sets the value of $\tau$ for which $r\to 0$, while
-for $\veps<1$, it sets the value of $\tau$ at which $r$ takes its maximal value.
+$\tau_0$ is the value of $\tau$ for which $r\to 0$, while
+for $\veps<1$, it is the value of $\tau$ at which $r$ takes its maximal value.
 
 \subsubsection{Radial free fall from rest}
 
@@ -513,8 +521,9 @@ or equivalently
 \ee
 The right-hand side of this equation must be non-negative. This implies
 $r_0\geq 2m$. We recover the fact that one cannot be momentarily at rest
-(in terms of $r$) if $r_0<2m$, for $r$ has to decrease along any future-directed
-worldline in the black hole region $\M_{\rm II}$ (cf. Sec.~\ref{s:sch:time_orientation}).
+(in terms of $r$) if $r_0<2m$, for $r$ has to decrease along any causal
+geodesic in the black hole region $\M_{\rm II}$
+(cf. Sec.~\ref{s:ges:eq_to_be_solved}).
 
 Equation~(\ref{e:ges:beps2}) implies $\veps < 1$, i.e. $E < \mu$. The solution
 is thus given by Eq.~(\ref{e:ges:sol_E_neg}); expressing $1-\veps^2$
@@ -664,7 +673,8 @@ $\Delta\tau_{\rm in} \to 4m/3$ for $r_0\to +\infty$.}
 In view of Eq.~(\ref{e:ges:sol_radial_infall}), we may say that the radial
 infall starts at $\eta=0$, for which $\tau=0$ and $r=r_0$, and terminates
 at $\eta=\pi$, for which $r=0$, which means that the particle hits the curvature
-singularity. The final value of the particle's proper time is obtained by
+singularity (cf. Sec.~\ref{s:sch:singularities}).
+The final value of the particle's proper time is obtained by
 setting $\eta=\pi$ in Eq.~(\ref{e:ges:sol_radial_infall}):
 \be
     \encadre{\tau_{\rm f} = \frac{\pi}{2} \sqrt{\frac{r_0^3}{2 m}} } .
@@ -739,8 +749,8 @@ Table~\ref{t:ges:time_free_fall}.
 \label{s:ges:circular_orbits}
 
 Circular orbits are defined as timelike geodesics with $r = \mathrm{const}$.
-We have then $\D r/\D\tau = 0$ and $\D^2 r/\D\tau^2 = 0$.
-Equation~(\ref{e:ges:1d_motion_timelike}) implies then for such orbits
+We have then $\D r/\D\tau = 0$ and $\D^2 r/\D\tau^2 = 0$, so that
+Eq.~(\ref{e:ges:1d_motion_timelike}) implies
 \begin{subequations}
 \begin{align}
 & V_{\ell}(r) = \frac{\veps^2 - 1}{2} \label{e:ges:Veff_circ} \\
@@ -986,7 +996,7 @@ Table~\ref{t:ges:freq_ISCO}.
 
 \subsection{Other orbits}
 
-Let us relax the assumption of circular orbit and consider generic orbits $\Li$
+Let us relax the assumption $r=\mathrm{const}$ and consider generic orbits $\Li$
 obeying
 \be
     | \ell | > \ell_{\rm crit} \qquad\mbox{and}\qquad
@@ -1033,22 +1043,21 @@ Note that the left and right figures have different scales.
 \end{figure}
 
 
-
 In the potential well, the $r$-coordinate along $\Li$ varies between two
-extrema: a mimimum $r_{\rm per}$, for \defin{pericenter}\index{pericenter} (or
-\defin{periastron}\index{periastron}), and
+extrema: a mimimum $r_{\rm per}$, for \defin{periastron}\index{periastron} (or \defin{pericenter}\index{pericenter}), and
 a maximum
-$r_{\rm apo}$, for \defin{apocenter}\index{apocenter} (or \defin{apoastron}\index{apoastron}) (cf. Figs.~\ref{f:ges:eff_pot_bound} and \ref{f:ges:orbit_e973_l42}). Being extrema of $r(\tau)$,
+$r_{\rm apo}$, for \defin{apoastron}\index{apoastron}
+(or \defin{apocenter}\index{apocenter}) (cf. Figs.~\ref{f:ges:eff_pot_bound} and \ref{f:ges:orbit_e973_l42}). Being extrema of $r(\tau)$,
 the values of $r_{\rm per}$ and $r_{\rm apo}$ are obtained by setting
 $\D r /\D\tau =0$ in Eq.~(\ref{e:ges:1d_motion_timelike}), which leads to
 \be
     \left( 1 - \frac{2m}{r} \right) \left( 1 + \frac{\ell^2}{r^2} \right)
         = \veps^2 .
 \ee
-This is a cubic equation in $r^{-1}$, which has three real roots, corresponding
+This is a cubic equation in $r^{-1}$, which has three real positive roots, corresponding
 to the three intersections of the curve $V_{\ell}(r)$ with the horizontal
 line at $(\veps^2-1)/2$ in Fig.~\ref{f:ges:eff_pot_bound}. However the smaller
-root has to be disregarded since it would lead to a motion with
+root has to be disregarded as a periastron since it would lead to a motion with
 $V_{\ell}(r) > (\veps^2-1)/2$, which is forbiden by Eq.~(\ref{e:ges:1d_motion_timelike}).
 
 We get, from Eqs.~(\ref{e:ges:1d_motion_timelike})-(\ref{e:ges:V_eff_timelike}),
