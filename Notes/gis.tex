@@ -18,37 +18,37 @@ $\mathscr{P}$ is a particle, the worldline of which is a
 geodesic $\Li$. The particle $\mathscr{P}$ is characterized by its
 4-momentum $\w{p}$ and
 $E$ and $L$ are respectively the conserved energy and conserved angular momentum
-along $\Li$ [Eq.~(\ref{e:ges:conserved_quantities})].
+along $\Li$ [cf.~Eq.~(\ref{e:ges:conserved_quantities})].
 
 
 In all this chapter, we consider that $\Li$ is a null geodesic, or equivalently that
 $\mathscr{P}$ is a massless particle, typically a photon\index{photon}.
 As in Chap.~\ref{s:ges}, we assume that the coordinates $(\th,\ph)$ are chosen
 so that $\Li$ lies in the hyperplane $\th=\pi/2$. Let us recall that
-a geodesic of Schwarzschild spacetime lies necessarily in a hypersurface, which
+a geodesic of Schwarzschild spacetime lies necessarily in some hypersurface, which
 can be chosen to be the hyperplane $\th=\pi/2$ without any loss of generality
 (cf. Sec.~\ref{s:ges:fiom}).
 
 \subsection{Equation to be solved}
 
-In terms of Schwarzschild-Droste coordinates, the motion of $\mathscr{P}$ is governed by Eqs.~(\ref{e:ges:dot_t}) and
-(\ref{e:ges:dot_ph}):
+In terms of Schwarzschild-Droste coordinates, the motion of $\mathscr{P}$ is governed by Eqs.~(\ref{e:ges:dot_t}), (\ref{e:ges:dot_ph}) and (\ref{e:ges:dot_r_square})
+with $\mu=0$ (massless particle):
 \be \label{e:ges:dot_t_null}
-   \frac{\D t}{\D \lambda} = E \left(1 - \frac{2m}{r} \right) ^{-1} ,
+   \encadre{ \frac{\D t}{\D \lambda} = E \left(1 - \frac{2m}{r} \right) ^{-1} } ,
 \ee
 \be \label{e:ges:dot_ph_null}
-    \frac{\D\ph}{\D\lambda} = \frac{L}{r^2}  ,
+   \encadre{ \frac{\D\ph}{\D\lambda} = \frac{L}{r^2}  },
 \ee
-as well as by Eq.~(\ref{e:ges:dot_r_square}) with $\mu=0$:
 \be \label{e:ges:dot_r_square_null}
-    \left( \frac{\D r}{\D \lambda} \right) ^2
+   \encadre{ \left( \frac{\D r}{\D \lambda} \right) ^2
          + \frac{L^2}{r^2}
-         \left( 1 - \frac{2m}{r} \right) = E^2 .
+         \left( 1 - \frac{2m}{r} \right) = E^2 }.
 \ee
 Let us recall that the variable $\lambda$ with respect to which these differential equations
 hold
 is the affine parameter associated with the 4-momentum $\w{p}$ of $\mathscr{P}$
-(cf. Eq.~(\ref{e:ges:def_lambda})) and that it increases towards the future.
+(cf. Eq.~(\ref{e:ges:def_lambda})) and that it increases towards the future,
+$\w{p}$ being future-oriented (cf. Sec.~\ref{s:ges:eq_to_be_solved}).
 
 \subsection{Radial null geodesics}
 
@@ -73,16 +73,22 @@ We recognize the equation governing the radial null geodesics obtained in
 Sec.~\ref{s:sch:rad_null_geod} [Eq.~(\ref{e:sch:Dt_Dr_radial_null_geod})],
 the solution of which is given by Eq.~(\ref{e:sch:t_r_radial_null_geod}):
 \be
-    t = \pm r \pm 2 m \ln \left| \frac{r}{2m} - 1 \right| + \mathrm{const} .
+   \encadre{ t = \pm r \pm 2 m \ln \left| \frac{r}{2m} - 1 \right| + \mathrm{const} }.
 \ee
 
 \begin{remark}
 Since $\lambda$ is an affine parameter and $E$ is constant,
 Eq.~(\ref{e:ges:r_lambda_radial_null})
 shows explicitely that $r$ is another affine parameter along the radial null
-geodesics of Schwarzschild spacetime --- a result we have already
+geodesics of Schwarzschild spacetime --- a result that we had already
 obtained in Sec.~\ref{s:sch:rad_null_geod}.
 \end{remark}
+
+The radial null geodesics of Schwarzschild spacetime are plotted in
+Fig.~\ref{f:sch:rad_null_geod} in terms of the Schwarzschild-Droste coordinates
+and in Fig.~\ref{f:sch:rad_null_geod_EF} in terms of the ingoing Eddington-Finkelstein coordinates.
+
+
 
 \subsection{Generic null geodesics: effective potential}
 \label{s:ges:null_eff_pot}
@@ -90,22 +96,22 @@ obtained in Sec.~\ref{s:sch:rad_null_geod}.
 Here we focus on the case where $L\not= 0$ (``generic'' case). We may then
 consider, instead of $\lambda$, the affine parameter
 \be
-    \tilde{\lambda} := L \lambda .
+    \tilde{\lambda} := |L| \lambda .
 \ee
 Since $L$ is a non-vanishing constant along a geodesic, the above formula
-does define a new affine parameter. Note that it has the same
+does define a new affine parameter. The absolute value ensures that
+$\tilde{\lambda}$ is increasing towards the future, as $\lambda$, whatever
+the sign of $L$. Note that $\tilde{\lambda}$ has the same
 dimension as $L$, i.e. a squared length, given that $\lambda$ is dimensionless
-(cf. Sec.~\ref{s:ges:eq_to_be_solved}). Note also that if $L<0$ and $\lambda$
-is increasing towards the future, $\tilde{\lambda}$ is decreasing towards the
-future.
+(cf. Sec.~\ref{s:ges:eq_to_be_solved}).
 In terms of $\tilde{\lambda}$,
 the differential system (\ref{e:ges:dot_t_null})-(\ref{e:ges:dot_r_square_null})
 becomes
 \be \label{e:ges:dot_t_null_b}
-   \frac{\D t}{\D \tilde{\lambda}} = b^{-1} \left(1 - \frac{2m}{r} \right) ^{-1} ,
+   \encadre{\frac{\D t}{\D \tilde{\lambda}} = b^{-1} \left(1 - \frac{2m}{r} \right) ^{-1} },
 \ee
 \be \label{e:ges:dot_ph_null_b}
-    \frac{\D\ph}{\D\tilde{\lambda}} = \frac{1}{r^2}  ,
+   \encadre{ \frac{\D\ph}{\D\tilde{\lambda}} = \frac{\epsilon_L}{r^2} } ,
 \ee
 \be \label{e:ges:dot_r_square_null_b}
    \encadre{ \left( \frac{\D r}{\D\tilde{\lambda}} \right) ^2
@@ -113,7 +119,10 @@ becomes
 \ee
 where
 \be \label{e:ges:def_b}
-    \encadre{b := \frac{L}{E}}
+    \encadre{b := \frac{|L|}{E}}
+\ee
+\be
+    \epsilon_L = \frac{L}{|L|} = \operatorname{sgn} L
 \ee
 and
 \be \label{e:ges:eff_pot_null}
@@ -127,11 +136,13 @@ has the shape of the first integral of the
 $U(r)$. The main difference is that $U(r)$ does not depend on $L$, contrary
 to the effective potential $V_\ell(r)$ for timelike geodesics. Actually,
 $U(r)$ is a fonction of $r$ and the black hole mass $m$ only.
-The null geodesics are thus entirely determined by the parameter\footnote{
+Null geodesics are thus entirely determined by the parameter
+$b$ and $\epsilon_L = \pm 1$.
 As soon as the null geodesic $\Li$ has a part in the
-region $\M_{\rm I}$, then $E\not=0$ [cf. (\ref{e:ges:E_positive_M_I})], so that
-$b$, as defined by Eq.~(\ref{e:ges:def_b}), is finite.} $b$. It has
-has the dimension of a length and can be interpreted as the
+region $\M_{\rm I}$, then $E>0$ [cf. (\ref{e:ges:E_positive_M_I})], so that
+$b$, as defined by Eq.~(\ref{e:ges:def_b}), is finite and positive. It has
+has the dimension of a length
+and can be interpreted as the
 \defin{impact parameter}\index{impact parameter} in the case of a
 particle arising from infinity.
 \begin{proof}
@@ -143,8 +154,11 @@ $x:=r\cos\ph$ and $y:=r\sin\ph$.
 Without any loss of generality, we may
 consider $|\ph_0| \ll 1$. For large values of $r$, the motion of
 $\mathscr{P}$ is then essentially along the $x$-axis, with $\ph$ remaining small:
-$y\simeq y_0$, where  $y_0$ is the impact parameter:
-$y_0 = r_0 \sin\ph_0 \simeq r_0 \ph_0$. Since $y=r\sin\ph\simeq r\ph$, we get
+$y\simeq y_0$, where
+$y_0 = r_0 \sin\ph_0 \simeq r_0 \ph_0$. The quantity
+$|y_0|$ is the impact parameter.
+Since $y=r\sin\ph\simeq r\ph$, we get from $y\simeq y_0$
+the following relation
 \[
     \ph \simeq \frac{y_0}{r} \qquad (r \gg m) .
 \]
@@ -153,28 +167,22 @@ Deriving with respect to $t$ leads to
     \derd{\ph}{t} \simeq - \frac{y_0}{r^2} \derd{r}{t}
                   \simeq \frac{y_0}{r^2}  \qquad (r \gg m) ,
 \ee
-when we have used $\D r / \D t = - 1$ for $r \gg m$. This is easy
+where we have used $\D r / \D t = - 1$ for $r \gg m$. This last property is easy
 to admit since
-$r\gg m$ corresponds to the flat part of spacetime; however, this can be derived
+$r\gg m$ corresponds to the flat part of spacetime; however, it can be derived
 rigorously by combining Eqs.~(\ref{e:ges:dot_t_null_b}) and
 (\ref{e:ges:dot_r_square_null_b}) to evaluate $\D r / \D t$.
 Now by combining Eqs.~(\ref{e:ges:dot_t_null_b}) and (\ref{e:ges:dot_ph_null_b}),
 we have
 \be
-    \derd{\ph}{t} = \frac{b}{r^2} \left( 1 - \frac{2m}{r} \right) .
+    \derd{\ph}{t} = \epsilon_L \frac{b}{r^2} \left( 1 - \frac{2m}{r} \right) .
 \ee
-For $r\gg m$, the right-hand side reduces to $b/r^2$, so that the comparison
-with (\ref{e:ges:dphdt_approx}) yields $b = y_0$, i.e. $b$ is the impact
+For $r\gg m$, the right-hand side reduces to $\epsilon_L b/r^2$, so that the comparison
+with (\ref{e:ges:dphdt_approx}) yields $\epsilon_L b = y_0$, i.e. $b = |y_0|$,
+which proves that $b$ is the impact
 parameter of the massless particle $\mathscr{P}$ with respect to the central
 black hole.
 \end{proof}
-
-\begin{remark}
-For a massless particle with $E>0$ (for instance, a particle whose
-worldline intersects $\M_{\rm I}$, cf. Eq.~(\ref{e:ges:E_positive_M_I})),
-the sign of $b$ is that of $L$, given the definition (\ref{e:ges:def_b}).
-In the above demonstration, $b<0$ corresponds to $y_0<0$.
-\end{remark}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{ges_eff_pot_null.pdf}}
@@ -216,7 +224,7 @@ This extremum is a stationary position in $r$: it corresponds thus to a circular
 orbit, usually called the \defin{photon orbit}\index{photon!orbit}\index{orbit!photon --}.
 The set of all photon orbits (one per choice of equatorial plane) is often
 called the \defin{photon sphere}\index{photon!sphere}\index{sphere!photon --}.
-However, since it corresponds to a maximum of the effective potential, the circular
+However, since it corresponds to a \emph{maximum} of the effective potential, the circular
 orbit at $r=3m$ is an unstable orbit. So one should not imagine that a
 Schwarzschild black hole is surrounded by any spherical shell of photons...
 
@@ -233,7 +241,7 @@ Since the effective potential
 $U(r)$ has no minimum, it does not offer any potential well,
 as it is clear from Fig.~\ref{f:gis:eff_pot_null}. This is in sharp contrast
 with the effective potential $V_\ell(r)$ for massive particle
-(compare Fig.~\ref{f:gis:eff_pot_bound}). Hence there are no bound orbits
+(compare Fig.~\ref{f:ges:eff_pot_bound}). Hence there are no bound orbits
 for photons\footnote{unless one counts as ``bound'' a worldline that terminates in the
 black hole region}.
 
@@ -249,7 +257,7 @@ from a position $r=r_{\rm em}$, there are
 two possibilities, depending on the values of $r_{\rm em}$ and
 of the impact parameter $b$:
 \begin{itemize}
-\item if $r_{\rm em} > 3 m$ and $|b|$ is large enough to fulfil $b^{-2} < U_{\rm max}$
+\item if $r_{\rm em} > 3 m$ and $b$ is large enough to fulfil $b^{-2} < U_{\rm max}$
 (e.g. trajectory no.~1 in Fig.~\ref{f:gis:eff_pot_null}), the photon
 ``bounces'' on the potential barrier constituted by $U(r)$
 at some minimal value  $r_{\rm per}$ of $r$ --- the \defin{periastron}\index{periastron},
@@ -267,7 +275,7 @@ the photon subsequently moves away from the black hole for ever (cf. geodesic
 no.~1 in Fig.~\ref{f:gis:null_geod}). We may call
 such a worldline a scattering trajectory.
 \item if $r_{\rm em} < 3 m$ (e.g. trajectory
-no.~4 in Fig.~\ref{f:gis:eff_pot_null}) or $|b|$ is small enough to fulfil $b^{-2} > U_{\rm max}$ ((e.g. trajectory
+no.~4 in Fig.~\ref{f:gis:eff_pot_null}) or $b$ is small enough to fulfil $b^{-2} > U_{\rm max}$ ((e.g. trajectory
 no.~2 in Fig.~\ref{f:gis:eff_pot_null}) the photon
 is not halted by the potential barrier constituted by $U(r)$. It then reaches arbitrary
 small values of $r$ and is eventually absorbed by the black hole ($r < 2m$)
@@ -281,7 +289,7 @@ and there are then two possible outcomes:
 \begin{itemize}
 \item if $r_{\rm em} > 3 m$ (e.g. trajectory
 no.~1 in Fig.~\ref{f:gis:eff_pot_null}) or
-$|b|$ is small enough to fulfil $b^{-2} > U_{\rm max}$ (e.g. trajectory
+$b$ is small enough to fulfil $b^{-2} > U_{\rm max}$ (e.g. trajectory
 no.~3 in Figs.~\ref{f:gis:eff_pot_null}), the photon escapes to infinity
 (cf. geodesic no.~3 in Fig.~\ref{f:gis:null_geod});
 \item if $2m < r_{\rm em} < 3 m$ and $b^{-2} < U_{\rm max}$ (e.g. trajectory
@@ -296,7 +304,7 @@ The photon moves subsequently towards the black hole and
 is absorbed by it (cf. geodesic no.~4 in Fig.~\ref{f:gis:null_geod}).
 \end{itemize}
 
-The critical value of the impact parameter separating the cases discussed
+The critical value of the impact parameter $b$ separating the cases discussed
 above is determined by $b_{\rm crit}^{-2} = U_{\rm max}$.
 Given the value (\ref{e:ges:U_max}) of $U_{\rm max}$, we get
 \be \label{e:ges:b_crit}
@@ -310,11 +318,11 @@ either is a monotonic function or has a single turning point. In the latter case
 if the turning point corresponds to a minimum of $r$ (a periastron, which can occur
 only for $r>3m$), the null geodesic escapes to infinity, while if the turning
 point corresponds to a maximum of $r$ (an apoastron, which can occur only for $2m<r<3m$), the
-null geodesic terminates at the central singularity in $r=0$.
+null geodesic terminates at the central singularity ($r=0$).
 \end{greybox}
 Note that for $r<2m$, i.e. in the black hole region, $r$
 is always a monotonic function, since it has been demonstrated in
-Sec.~\ref{s:ges:eq_to_be_solved} that $r(\tilde{\lambda})$ is scrictly
+Sec.~\ref{s:ges:eq_to_be_solved} that $r(\lambda)$ is scrictly
 decreasing. The impossibility of a turning point for $r<2m$ can also be
 graphically inferred from Fig.~\ref{f:gis:eff_pot_null}, which shows
 that the effective potential $U(r)$ is negative for $r<2m$,
@@ -324,20 +332,20 @@ preventing the turning point condition $U(r) = b^{-2}$ to hold.
 \centerline{\includegraphics[width=0.4\textwidth]{ges_null_per_apo.pdf}}
 \caption[]{\label{f:gis:null_per_apo} \footnotesize
 Radial coordinate of the periastron, $r_{\rm per}$, and of the apoastron,
-$r_{\rm apo}$, along a null geodesic with $|b| > b_{\rm crit} \simeq 5.196\, m$.
+$r_{\rm apo}$, along a null geodesic with $b > b_{\rm crit} \simeq 5.196\, m$.
 Note that a given null geodesic has either a periastron or an apoastron, but not
 both.}
 \end{figure}
 
 
-For $|b| > b_{\rm crit}$, the explicit expression of the periastron radius
+For $b > b_{\rm crit}$, the explicit expression of the periastron radius
 $r_{\rm per}$ (or the apoastron radius $r_{\rm apo}$)
 is obtained by solving the cubic equation (\ref{e:ges:r_per_null})
 (or (\ref{e:ges:r_apo_null}), which is the same cubic equation, except for
 the range of the solution). Fortunately Eq.~(\ref{e:ges:r_per_null})
 is a depressed\footnote{A \emph{depressed} cubic equation is a polynomial equation
 of the type $x^3 + p x + q = 0$.} cubic equation, which makes
-it simpler to solve. For $|b| > b_{\rm crit}$, its discriminant is positive, which
+it simpler to solve. For $b > b_{\rm crit}$, its discriminant is positive, which
 implies that it admits three distinct real roots. Two of them are positive
 and are precisely $r_{\rm per}$ and $r_{\rm apo}$. The third root is negative,
 since the product of the roots is $-2mb^2 < 0$; it has therefore no
@@ -352,20 +360,20 @@ In the present case, $p= - b^2$ and $q = 2 m b^2$,
 and $r_{\rm per}$ (resp. $r_{\rm apo}$) corresponds to $k=0$
 (resp. $k=2$), so that we obtain
 \be \label{e:ges:sol_r_per}
-  \encadre{  r_{\rm per} = \frac{2 |b|}{\sqrt{3}} \cos\left[\frac{\pi}{3}
-        - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{|b|}\right) \right] }.
+  \encadre{  r_{\rm per} = \frac{2 b}{\sqrt{3}} \cos\left[\frac{\pi}{3}
+        - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{b}\right) \right] }.
 \ee
 \be \label{e:ges:sol_r_apo}
-   \encadre{ r_{\rm apo} = \frac{2 |b|}{\sqrt{3}} \cos\left[\frac{5\pi}{3}
-        - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{|b|}\right) \right] }.
+   \encadre{ r_{\rm apo} = \frac{2 b}{\sqrt{3}} \cos\left[\frac{5\pi}{3}
+        - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{b}\right) \right] }.
 \ee
-As a check, we note that for $|b|\gg b_{\rm crit}$, Eq.~(\ref{e:ges:sol_r_per})
-yields $r_{\rm per} \simeq 2|b|/\sqrt{3} \cos\left(\pi/3 -1/3 \times \pi/2 \right)
-\simeq 2|b|/\sqrt{3} \cos(\pi/6) \simeq |b|$, as expected.
+As a check, we note that for $b\gg b_{\rm crit}$, Eq.~(\ref{e:ges:sol_r_per})
+yields $r_{\rm per} \simeq 2b/\sqrt{3} \cos\left(\pi/3 -1/3 \times \pi/2 \right)
+\simeq 2b/\sqrt{3} \cos(\pi/6) \simeq b$, as expected.
 
 The variation of $r_{\rm per}$ and $r_{\rm apo}$ with $b$ is plotted
 in Fig.~\ref{f:gis:null_per_apo}. Note that $r_{\rm per} = r_{\rm apo} = 3 m$
-(the photon orbit) at the limit $|b| = b_{\rm crit}$.
+(the photon orbit) at the limit $b = b_{\rm crit}$.
 
 
 
@@ -377,10 +385,10 @@ the azimuthal angle coordinate $\ph$ has no turning point: it is either always i
 towards the future
 ($L>0$) or always decreasing towards the future ($L<0$).
 \begin{remark}
-Equation~\eqref{e:ges:dot_ph_null_b} implies obviously
-$\D\ph/\D\tilde{\lambda} > 0$. We recover the above property by
-noticing that $\tilde{\lambda}$ increases (resp. decreases)
-towards the future for $L>0$ (resp. $L<0$).
+We recover the above property from Eq.~(\ref{e:ges:dot_ph_null_b}):
+$\D\ph/\D\tilde{\lambda} = \epsilon_L/r^2$, given that
+$\epsilon_L = \operatorname{sgn} L$ and $\tilde{\lambda}$ increases towards
+the future.
 \end{remark}
 By combining Eqs.~(\ref{e:ges:dot_ph_null_b}), (\ref{e:ges:dot_r_square_null_b})
 and (\ref{e:ges:eff_pot_null}), we get
@@ -421,14 +429,14 @@ discriminant, which is
     \Delta = 4 \frac{m^4}{b^4} \left( \frac{b^2}{m^2} - 27 \right) .
 \ee
 \begin{itemize}
-\item If $\Delta<0$ $\iff$ $|b| <\sqrt{27} m = b_{\rm crit}$,
+\item If $\Delta<0$ $\iff$ $b <\sqrt{27} m = b_{\rm crit}$,
 $P_b(u)$ has one real negative zero and two complex zeros, so that it never vanishes
 for physical values of $u$, which are real positive.
-\item If $\Delta=0$ $\iff$ $|b| = b_{\rm crit}$, $P_b(u)$
+\item If $\Delta=0$ $\iff$ $b = b_{\rm crit}$, $P_b(u)$
 has a double zero: $u=1/3$ and a negative zero: $u=-1/6$ (cf. red curve
 in Fig.~\ref{f:gis:polynomial_b_u}); only the first
 one is physical and correspond to $r=3m$.
-\item If $\Delta>0$ $\iff$ $|b| > b_{\rm crit}$, $P_b(u)$ has three distinct
+\item If $\Delta>0$ $\iff$ $b > b_{\rm crit}$, $P_b(u)$ has three distinct
 real zeros (cf. the green and cyan curves
 in Fig.~\ref{f:gis:polynomial_b_u}); one of them, $u_{\rm neg}$ say, is
 negative and hence unphysical and the two others are positive, being nothing but
@@ -451,11 +459,11 @@ null geodesic with $r>3m$
 regards $r<3m$ [Eq.~(\ref{e:ges:null_r_phi_coth})].}
 \end{figure}
 
-For $\Delta< 0$ or $\Delta> 0$, i.e. for $|b| \not= b_{\rm crit}$,
+For $\Delta< 0$ or $\Delta> 0$, i.e. for $b \not= b_{\rm crit}$,
 Eq.~(\ref{e:ges:dphi_du_null}) can be integrated in terms of elliptic
 functions (see e.g. Chap.~7 of Frolov \& Zelnikov textbook \cite{FroloZ11}
 or Mu\~noz article \cite{Munoz14} for details).
-The case $|b|=b_{\rm crit}$ can be delt with by means of elementary functions.
+The case $b=b_{\rm crit}$ can be delt with by means of elementary functions.
 Indeed, in this case, $P_b(u) = 2(u - 1/3)^2 (u + 1/6)$ and Eq.~(\ref{e:ges:dphi_du_null})
 becomes
 \be \label{e:ges:dphi_du_null_bcrit}
@@ -654,7 +662,7 @@ $b_{\rm crit} \simeq 5.196152\, m$.}
 
 \subsection{Generic null geodesics}
 
-As stated above, for $|b| \not= b_{\rm crit}$, Eq.~\eqref{e:ges:dphi_dr_null} cannot be integrated
+As stated above, for $b \not= b_{\rm crit}$, Eq.~\eqref{e:ges:dphi_dr_null} cannot be integrated
 in terms of elementary functions, but requires elliptic functions.
 To compute the trajectories $r(\ph)$ in that case, we use the geodesic integrator
 of SageMath (cf. Appendix~\ref{s:sam}). Some results are displayed in
@@ -842,7 +850,7 @@ the screen orthogonally at $(\tau,b,\alpha)$ and moving from the black hole regi
 \caption[]{\label{f:gis:mult_images} \footnotesize
 Null geodesics in Schwarzschild spacetime with $\ph_\infty=0$ and various values of the impact parameter $b$.
 The green ones have $b$ ranging from $-12 m$ to $12 m$, by steps of
-$0.8 m$, while the olive ones have $|b|$ close to $b_{\rm crit}$,
+$0.8 m$, while the olive ones have $b$ close to $b_{\rm crit}$,
 namely $b/m\in\{-5.4,-5.2,-5.0\} \cup \{5.0, 5.2, 5.4\}$. $S$ is a luminous point source
 and three of its images for an observer at $y=0$ and $x\to + \infty$ are obtained by
 following the drawn null geodesics through $S$.}
@@ -937,7 +945,7 @@ The outermost circle, $\mathscr{C}_0$, is called the
 \defin{Einstein ring of}\index{Einstein!ring}\index{ring!Einstein --} $A$.
 It is the only significant ring in astronomical images involving \emph{gravitational
 lensing}\index{gravitational!lensing} by a massive foreground source (not necessarily
-a black hole), which are in the context $|x_A|\ll m$ and $|b|\gg m$.
+a black hole), which are in the context $|x_A|\ll m$ and $b\gg m$.
 We may call $\mathscr{C}_n$ the $\bm{n^{\rm th}}$\defin{~Einstein ring of} $A$.
 For $n\geq 1$, $\mathscr{C}_n$ is also called a \defin{relativistic Einstein ring of}
 $A$. Indeed, these rings exist only in the case of a very relativistic central object, so that
