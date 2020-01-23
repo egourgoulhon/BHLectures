@@ -9,7 +9,10 @@ Having investigated the properties of generic causal geodesics
 in Schwarzschild spacetime in Chap.~\ref{s:ges}, we focus here on null
 geodesics.
 
-\section{Null geodesics} \label{s:ges:null}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main properties of null geodesics} \label{s:ges:null}
 
 We use the same notations as in Sec.~\ref{s:ges:geod_motion} of the preceding
 chapter: $(\M, \w{g})$ is Schwarzschild spacetime, $(t,r,\th,\ph)$ are
@@ -328,15 +331,6 @@ graphically inferred from Fig.~\ref{f:gis:eff_pot_null}, which shows
 that the effective potential $U(r)$ is negative for $r<2m$,
 preventing the turning point condition $U(r) = b^{-2}$ to hold.
 
-\begin{figure}
-\centerline{\includegraphics[width=0.4\textwidth]{ges_null_per_apo.pdf}}
-\caption[]{\label{f:gis:null_per_apo} \footnotesize
-Radial coordinate of the periastron, $r_{\rm per}$, and of the apoastron,
-$r_{\rm apo}$, along a null geodesic with $b > b_{\rm crit} \simeq 5.196\, m$.
-Note that a given null geodesic has either a periastron or an apoastron, but not
-both.}
-\end{figure}
-
 
 For $b > b_{\rm crit}$, the explicit expression of the periastron radius
 $r_{\rm per}$ (or the apoastron radius $r_{\rm apo}$)
@@ -369,12 +363,34 @@ and $r_{\rm per}$ (resp. $r_{\rm apo}$) corresponds to $k=0$
 \ee
 As a check, we note that for $b\gg b_{\rm crit}$, Eq.~(\ref{e:ges:sol_r_per})
 yields $r_{\rm per} \simeq 2b/\sqrt{3} \cos\left(\pi/3 -1/3 \times \pi/2 \right)
-\simeq 2b/\sqrt{3} \cos(\pi/6) \simeq b$, as expected.
+\simeq 2b/\sqrt{3} \cos(\pi/6) \simeq b$, as expected. Indeed, $b\gg b_{\rm crit}$
+implies $b \gg m$, so that the photon stays far from the black hole, a regime
+in which the impact parameter coincides with the distance of closest approach:
+$b \simeq r_{\rm per}$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{ges_null_per_apo.pdf}}
+\caption[]{\label{f:gis:null_per_apo} \footnotesize
+Radial coordinate of the periastron, $r_{\rm per}$, and of the apoastron,
+$r_{\rm apo}$, along null geodesics with $b > b_{\rm crit} \simeq 5.196\, m$.
+Note that a given null geodesic has either a periastron or an apoastron, but not
+both.}
+\end{figure}
 
 The variation of $r_{\rm per}$ and $r_{\rm apo}$ with $b$ is plotted
 in Fig.~\ref{f:gis:null_per_apo}. Note that $r_{\rm per} = r_{\rm apo} = 3 m$
 (the photon orbit) at the limit $b = b_{\rm crit}$.
-
+\begin{remark}
+It is clear on Fig.~\ref{f:gis:null_per_apo} that, for the same value of $b$,
+$r_{\rm apo} \leq r_{\rm per}$, which may seem contradictory with the apoastron
+corresponding to the largest distance from the center and the periastron to
+the distance of closest approach.
+However, one shall keep in mind that the apoastron and the periastron always refer to different null
+geodesics: geodesics with an apoastron lie below the photon sphere ($r=3m$), while those
+with a periastron are always outside it. A null geodesic can of course cross
+the photon sphere (examples are geodesics 2 and 3 on Figs.~\ref{f:gis:eff_pot_null}
+and \ref{f:gis:null_geod}), but then it has neither an apoastron nor a periastron
+\end{remark}
 
 
 \subsection{Angular behaviour and critical null geodesics}
@@ -445,7 +461,7 @@ discriminant, which is
 $P_b(u)$ has one real negative zero and two complex zeros
 (cf. blue and magenta curves in Fig.~\ref{f:gis:polynomial_b_u}),
 so that it never vanishes
-for physical values of $u$, which are real positive
+for physical values of $u$, which are real positive.
 \item If $\Delta=0$ $\iff$ $b = b_{\rm crit}$, $P_b(u)$
 has a double zero: $u=1/3$ and a negative zero: $u=-1/6$ (cf. red curve
 in Fig.~\ref{f:gis:polynomial_b_u}); only the first
@@ -463,12 +479,21 @@ Eqs.~(\ref{e:ges:sol_r_per})-(\ref{e:ges:sol_r_apo}).
 \end{itemize}
 
 
-For $\Delta< 0$ or $\Delta> 0$, i.e. for $b \not= b_{\rm crit}$,
-Eq.~(\ref{e:ges:dphi_du_null}) can be integrated in terms of elliptic
-functions (see e.g. Chap.~7 of Frolov \& Zelnikov textbook \cite{FroloZ11}
-or Mu\~noz article \cite{Munoz14} for details).
-The case $b=b_{\rm crit}$ can be delt with by means of elementary functions.
-Indeed, in this case, $P_b(u) = (u - 1/3)^2 (2u + 1/3)$ and Eq.~(\ref{e:ges:dphi_du_null})
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Polar equations of null geodesics}
+
+For $b=b_{\rm crit}$, the differential equation (\ref{e:ges:dphi_du_null})
+can be integrated by means of elementary functions (Sec.~\ref{s:gis:crit_geod}),
+while for $b \not= b_{\rm crit}$,
+it requires elliptic integrals of the first kind (Sec.~\ref{s:gis:gener_geod}).
+
+\subsection{Critical null geodesics} \label{s:gis:crit_geod}
+
+Let us assume $b = b_{\rm crit} = 3\sqrt{3}\, m$.
+Then $P_b(u) = (u - 1/3)^2 (2u + 1/3)$ and Eq.~(\ref{e:ges:dphi_du_null})
 becomes
 \be \label{e:ges:dphi_du_null_bcrit}
     \frac{\D\ph}{\D u} = \pm \frac{1}{\left|u - \frac{1}{3}\right|
@@ -651,6 +676,69 @@ central singularity as $\ph\to 0$ and (ii) a geodesic with $L>0$ arising from
 $r = r_{\rm em} \in (2m,  3 m)$, $\ph=\ph_{\rm em}>0$ and spiralling outward
 to the photon orbit as $\ph\to +\infty$.
 
+
+\subsection{Generic null geodesics} \label{s:gis:gener_geod}
+
+As stated above, for $b \not= b_{\rm crit}$, the differential equation~\eqref{e:ges:dphi_du_null} cannot be integrated
+in terms of elementary functions. It is integrable though in terms of standard
+functions of mathematical physics, namely elliptic integrals of the first kind.
+
+We shall consider only geodesics with $b>b_{\rm crit}$ and outside
+the photon sphere, because they are the most
+relevant ones for the images to be discussed in Sec.~\ref{s:gis:images}.
+Each of these geodesics has a periastron and obeys $u\to 0$
+($r\to +\infty$) for both $\tlamb\to -\infty$ and
+$\tlamb\to +\infty$. Let us denote by $\tlamb_{\rm per}$ the value of the
+affine parameter $\tlamb$ at the periastron.
+
+Let us first consider a null geodesic $\Li$ with $L>0$. On the part prior to
+the periastron, i.e. for $\tlamb \leq \tlamb_{\rm per}$, one has
+$\D\ph > 0$ and $\D u \geq 0$, so that the $+$ sign must be selected in
+Eq.~(\ref{e:ges:dphi_dr_null}) and its solution can be written as
+\[
+    \ph = \int_0^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}} .
+\]
+We shall rewrite it as
+\be
+    \ph = \Phi_b(0) - \Phi_b(u) \qquad (L>0,\ \tlamb \leq \tlamb_{\rm per}),
+\ee
+where we have introduced the function
+\be
+   \encadre{  \Phi_b(u) := \int_u^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
+      = \int_u^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{2 \bar{u}^3 - \bar{u}^2 + (m/b)^2}} } .
+\ee
+In the part of $\Li$ past to the periastron, one has $\D\ph > 0$ and $\D u < 0$,
+so that the $-$ sign must be selected in Eq.~(\ref{e:ges:dphi_dr_null}); accordingly,
+the solution for $\tlamb > \tlamb_{\rm per}$ can be written as
+\[
+    \ph = \int_0^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
+        - \int_{u_{\rm per}}^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
+        = \int_0^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
+         + \int_u^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}} .
+\]
+Hence
+\be
+    \ph = \Phi_b(0) + \Phi_b(u) \qquad (L>0,\ \tlamb > \tlamb_{\rm per}) .
+\ee
+For a null geodesic with $L < 0$, a similar reasoning with $\D\ph > 0$
+changed to $\D\ph < 0$ leads to
+\be
+    \ph = \Phi_b(u) - \Phi_b(0) \qquad (L<0,\ \tlamb \leq \tlamb_{\rm per}),
+\ee
+\be
+    \ph = - \Phi_b(u) - \Phi_b(0) \qquad (L<0,\ \tlamb > \tlamb_{\rm per}) .
+\ee
+We may combine the above results into
+\be
+   \encadre{ \ph = \begin{cases}
+       \displaystyle \epsilon_L(\Phi_b(0) - \Phi_b(u)) \quad \mbox{for}\
+            \tlamb \leq \tlamb_{\rm per}\\[2ex]
+       \displaystyle \epsilon_L(\Phi_b(0) + \Phi_b(u)) \quad \mbox{for}\
+            \tlamb > \tlamb_{\rm per}
+    \end{cases} }
+\ee
+
+
 \begin{figure}
 \begin{tabular}{cc}
 \includegraphics[width=0.48\textwidth]{ges_null_b_12_000000.pdf} &
@@ -680,10 +768,7 @@ Same as Fig.~\ref{f:gis:null_b1} but for values of $b$ closer to
 $b_{\rm crit} \simeq 5.196152\, m$.}
 \end{figure}
 
-\subsection{Generic null geodesics}
 
-As stated above, for $b \not= b_{\rm crit}$, Eq.~\eqref{e:ges:dphi_dr_null} cannot be integrated
-in terms of elementary functions, but requires elliptic functions.
 To compute the trajectories $r(\ph)$ in that case, one may also use the geodesic integrator
 of \textsf{SageMath} (cf. Appendix~\ref{s:sam}). Some results are displayed in
 Figs.~\ref{f:gis:null_b1}-\ref{f:gis:null_b2}. They correspond to
@@ -842,7 +927,7 @@ and the number of turns $n$ performed by the geodesic around the black hole:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Images}
+\section{Images} \label{s:gis:images}
 
 Since they are the worldlines of photons, null geodesics are the key ingredient to
 determine the image as seen by some observer of emitting material around
