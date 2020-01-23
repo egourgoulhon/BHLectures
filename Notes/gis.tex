@@ -345,9 +345,9 @@ and are precisely $r_{\rm per}$ and $r_{\rm apo}$. The third root is negative,
 since the product of the roots is $-2mb^2 < 0$; it has therefore no
 physical significance. The roots of the generic depressed cubic
 equation $x^3 + p x + q = 0$ can be expressed via Viète's formulas:
-\be
-    x_k = 2 \sqrt{-\frac{p}{3}} \cos \left[ \frac{1}{3}\,  \mathrm{arccos}\left(
-        \frac{3 q}{2 p} \sqrt{-\frac{p}{3}} \right) + \frac{2 k\pi}{3} \right],
+\be \label{e:gis:Viete}
+    x_k = 2 \sqrt{-\frac{p}{3}} \cos \left[ \frac{1}{3}\,  \arccos\left(
+        \frac{3 q}{2 p} \sqrt{-\frac{3}{p}} \right) + \frac{2 k\pi}{3} \right],
         \qquad k \in \{0, 1, 2\} .
 \ee
 In the present case, $p= - b^2$ and $q = 2 m b^2$,
@@ -355,11 +355,11 @@ and $r_{\rm per}$ (resp. $r_{\rm apo}$) corresponds to $k=0$
 (resp. $k=2$), so that we obtain
 \be \label{e:ges:sol_r_per}
   \encadre{  r_{\rm per} = \frac{2 b}{\sqrt{3}} \cos\left[\frac{\pi}{3}
-        - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{b}\right) \right] }.
+        - \frac{1}{3} \, \arccos\left(\frac{b_{\rm crit}}{b}\right) \right] }.
 \ee
 \be \label{e:ges:sol_r_apo}
    \encadre{ r_{\rm apo} = \frac{2 b}{\sqrt{3}} \cos\left[\frac{5\pi}{3}
-        - \frac{1}{3} \, \mathrm{arccos}\left(\frac{b_{\rm crit}}{b}\right) \right] }.
+        - \frac{1}{3} \, \arccos\left(\frac{b_{\rm crit}}{b}\right) \right] }.
 \ee
 As a check, we note that for $b\gg b_{\rm crit}$, Eq.~(\ref{e:ges:sol_r_per})
 yields $r_{\rm per} \simeq 2b/\sqrt{3} \cos\left(\pi/3 -1/3 \times \pi/2 \right)
@@ -478,8 +478,43 @@ where $r_{\rm per}$ and $r_{\rm apo}$ are given by
 Eqs.~(\ref{e:ges:sol_r_per})-(\ref{e:ges:sol_r_apo}).
 \end{itemize}
 
-
-
+Let us find explicit expressions for the three real zeros $u_{\rm neg}$,
+$u_{\rm per}$ and $u_{\rm apo}$ of $P_b(u)$ when $b > b_{\rm crit}$. The
+equation $P_b(u) = 0$ can be brought to a depressed form by the change
+of variable $u = x + 1/6$. We get
+\[
+    x^3 - \frac{1}{12} x + \frac{m^2}{2b^2} - \frac{1}{108} = 0 .
+\]
+We can then use Viète's formulas \eqref{e:gis:Viete}
+with $p = -1/12$ and $q = m^2/(2b^2) - 1/108$ to express the solutions
+as
+\[
+    u_k = \frac{1}{3} \cos \left[ \frac{1}{3}
+        \arccos \left( 1 - 2 \frac{b_{\rm crit}^2}{b^2} \right) + \frac{2 k \pi}{3} \right]
+        + \frac{1}{6},
+        \qquad k \in \{0, 1, 2\} .
+\]
+Using the identity $\arccos(1 - 2 x^2) = 2\arcsin x$ and noticing
+that $u_1 < 0$, which implies $u_1 = u_{\rm neg}$, and $u_ 0 > u_2$, which
+implies $u_0 = u_{\rm apo}$ and $u_2 = u_{\rm per}$,
+we arrive at
+\begin{subequations}
+\begin{align}
+  &  \encadre{u_{\rm neg} = \frac{1}{3}\cos\left[ \frac{2}{3} \arcsin\left(
+   \frac{b_{\rm crit}}{b}\right) + \frac{2\pi}{3}\right] + \frac{1}{6} }\\[1ex]
+ & \encadre{ u_{\rm per} = \frac{1}{3}\cos\left[ \frac{2}{3} \arcsin\left(
+   \frac{b_{\rm crit}}{b}\right) + \frac{4\pi}{3}\right] + \frac{1}{6} }\\[1ex]
+ & \encadre{ u_{\rm apo} = \frac{1}{3}\cos\left[ \frac{2}{3} \arcsin\left(
+   \frac{b_{\rm crit}}{b}\right) \right] + \frac{1}{6} } .
+\end{align}
+\end{subequations}
+These zeros are plotted in term of $b$ on Fig. ??
+Note the ordering
+\be
+    -\frac{1}{6} \leq u_{\rm neg} < 0 < u_{\rm per} \leq \frac{1}{3}
+    \leq u_{\rm apo} ,
+\ee
+with the inequalities $\leq$ being saturated for $b = b_{\rm crit}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
