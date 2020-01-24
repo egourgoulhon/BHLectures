@@ -522,7 +522,7 @@ we arrive at
 \end{subequations}
 These zeros are plotted in term of $b$ on Fig.~\ref{f:gis:u_per_apo_neg}.
 Note the ordering
-\be
+\be \label{e:gis:order_u_zeros}
     -\frac{1}{6} \leq u_{\rm neg} < 0 < u_{\rm per} \leq \frac{1}{3}
     \leq u_{\rm apo} ,
 \ee
@@ -788,6 +788,80 @@ We may combine the above results into
             \tlamb > \tlamb_{\rm per}
     \end{cases} }
 \ee
+So $\ph = \ph(u)$ is entirely determined by the function $\Phi_b(u)$. To evaluate
+the latter, we rewrite it in terms of the three zeros
+$(u_{\rm neg}, u_{\rm per}, u_{\rm apo})$ of $P_b(u)$:
+\be
+  \Phi_b(u) = \int_u^{u_{\rm per}} \frac{\D\bar{u}}{
+  \sqrt{2(\bar{u} - u_{\rm neg})(u_{\rm per} - \bar{u})(u_{\rm apo} - \bar{u})}} .
+\ee
+We then perform the change of variable\footnote{It should be clear that the
+variable $t$ introduced here has nothing to do with the Schwarzschild-Droste
+time coordinate $t$.}
+\be
+    t := \frac{1}{k} \sqrt{\frac{u_{\rm per} - \bar{u}}{u_{\rm apo} - \bar{u}}}
+    \quad\iff\quad
+    \bar{u} = \frac{u_{\rm per} - u_{\rm apo} k^2 t^2}{1 - k^2 t^2} ,
+\ee
+where $k$ is the following constant:
+\be \label{e:gis:def_k_modulus}
+    k := \sqrt{\frac{u_{\rm per} - u_{\rm neg}}{u_{\rm apo} - u_{\rm neg}}} .
+\ee
+Noticing that
+\[
+    \D\bar{u} = - \frac{2(u_{\rm apo} - u_{\rm per}) k^2 t}{(1 - k^2 t^2)^2} \, \D t,
+    \qquad
+    \bar{u} - u_{\rm neg} = \frac{(u_{\rm per} - u_{\rm neg})(1 -t^2)}{1 - k^2 t^2} ,
+\]
+\[
+   u_{\rm per} - \bar{u} =
+    \frac{(u_{\rm per} - u_{\rm neg})(u_{\rm apo} - u_{\rm per}) t^2}{
+    (u_{\rm apo} - u_{\rm neg})(1 - k^2 t^2)}
+    \quad\mbox{and}\quad
+    u_{\rm apo} - \bar{u} = \frac{u_{\rm apo} - u_{\rm per}}{1 - k^2 t^2} ,
+\]
+we arrive at
+\be
+    \encadre{ \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
+    \, F\left( \frac{1}{k} \sqrt{\frac{u_{\rm per} - u}{u_{\rm apo} - u}};\;
+        k\right) },
+\ee
+where $F(x; k)$ is the
+\defin{incomplete elliptic integral of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --}:
+\be \label{e:gis:incomp_elliptic_int}
+     F(x; k) := \int_0^{x} \frac{\D t}{\sqrt{(1 - t^2)(1 - k^2 t^2)}} .
+\ee
+Note the semicolon separating the arguments of $F(x; k)$; this is to
+distinguish from an alternative expression of the incomplete elliptic integral of
+the first kind (the so-called \defin{Legendre form}\index{Legendre!form of elliptic integral}):
+\be
+    F(\phi, k) := \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} .
+\ee
+$F(x; k)$ and $F(\phi, k)$ are related by
+\be
+    F(\phi, k) = F(\sin\phi; k) ,
+\ee
+as the change of variable $t = \sin\vartheta$ in \eqref{e:gis:incomp_elliptic_int}
+easilly shows. The notation $F(\phi, k)$ is the most commonly used
+in the literature \cite{ByrdF71,GradsRGTJ115}\footnote{One may encounter as well
+$F(\phi|m)$ for $F(\phi, k)$ with $m=k^2$ \cite{AbramS72}.}. Let us reexpress
+$\Phi_b(u)$ in terms of it:
+\be
+    \encadre{ \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
+    \, F\left(
+    \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm per} - u}{u_{\rm apo} - u}}\right),\;
+        k\right) } .
+\ee
+$k$ is called the \defin{modulus}\index{modulus!of an elliptic integral} of
+the elliptic integral. From its expression \eqref{e:gis:def_k_modulus}, we
+see that $k$ is a function of $b$, since $u_{\rm neg}$, $u_{\rm per}$ and
+$u_{\rm apo}$ are functions of $b$ (cf. Eq.~\eqref{e:gis:zeros_Pbu}).
+Given the ordering \eqref{e:gis:order_u_zeros}, we deduce from
+\eqref{e:gis:def_k_modulus} that
+\be
+    0 < k \leq 1,
+\ee
+with $k=1 \iff u_{\rm per} = u_{\rm apo} \iff b = b_{\rm crit}$.
 
 
 \begin{figure}
