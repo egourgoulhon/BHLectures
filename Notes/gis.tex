@@ -524,7 +524,7 @@ These zeros are plotted in term of $b$ on Fig.~\ref{f:gis:u_per_apo_neg}.
 Note the ordering
 \be \label{e:gis:order_u_zeros}
     -\frac{1}{6} \leq u_{\rm neg} < 0 < u_{\rm per} \leq \frac{1}{3}
-    \leq u_{\rm apo} ,
+    \leq u_{\rm apo} < \frac{1}{2} ,
 \ee
 with the inequalities $\leq$ being saturated for $b = b_{\rm crit}$.
 
@@ -743,11 +743,13 @@ the periastron, i.e. for $\tlamb \leq \tlamb_{\rm per}$, one has
 $\D\ph > 0$ and $\D u \geq 0$, so that the $+$ sign must be selected in
 Eq.~(\ref{e:ges:dphi_dr_null}) and its solution can be written as
 \[
-    \ph = \int_0^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}} .
+    \ph = \ph_{-\infty} + \int_0^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}} ,
 \]
-We shall rewrite it as
+where $\ph_{-\infty} := \lim_{\tlamb\to-\infty} \ph$ since, being outside
+the photon sphere, the geodesic arises from infinity where $u := m/r = 0$.
+We shall rewrite the above expression as
 \be
-    \ph = \Phi_b(0) - \Phi_b(u) \qquad (L>0,\ \tlamb \leq \tlamb_{\rm per}),
+    \ph = \ph_{-\infty} + \Phi_b(0) - \Phi_b(u) \qquad (L>0,\ \tlamb \leq \tlamb_{\rm per}),
 \ee
 where we have introduced the function
 \be
@@ -762,33 +764,34 @@ In the part of $\Li$ past to the periastron, one has $\D\ph > 0$ and $\D u < 0$,
 so that the $-$ sign must be selected in Eq.~(\ref{e:ges:dphi_dr_null}); accordingly,
 the solution for $\tlamb > \tlamb_{\rm per}$ can be written as
 \[
-    \ph = \int_0^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
+    \ph = \ph_{-\infty} +  \int_0^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
         - \int_{u_{\rm per}}^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
-        = \int_0^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
-         + \int_u^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}} .
+        = \ph_{-\infty} + \int_0^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
+         + \int_u^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}.
 \]
 Hence
 \be
-    \ph = \Phi_b(0) + \Phi_b(u) \qquad (L>0,\ \tlamb > \tlamb_{\rm per}) .
+    \ph = \ph_{-\infty} + \Phi_b(0) + \Phi_b(u) \qquad (L>0,\ \tlamb > \tlamb_{\rm per}) .
 \ee
 For a null geodesic with $L < 0$, a similar reasoning with $\D\ph > 0$
 changed to $\D\ph < 0$ leads to
 \be
-    \ph = \Phi_b(u) - \Phi_b(0) \qquad (L<0,\ \tlamb \leq \tlamb_{\rm per}),
+    \ph = \ph_{-\infty} + \Phi_b(u) - \Phi_b(0) \qquad (L<0,\ \tlamb \leq \tlamb_{\rm per}),
 \ee
 \be
-    \ph = - \Phi_b(u) - \Phi_b(0) \qquad (L<0,\ \tlamb > \tlamb_{\rm per}) .
+    \ph = \ph_{-\infty} - \Phi_b(u) - \Phi_b(0)  \qquad (L<0,\ \tlamb > \tlamb_{\rm per}) .
 \ee
 We may combine the above results into
-\be
-   \encadre{ \ph = \begin{cases}
+\be \label{e:gis:ph_Phi_b_u}
+   \encadre{ \ph =  \ph_{-\infty} + \begin{cases}
        \displaystyle \epsilon_L(\Phi_b(0) - \Phi_b(u)) \quad \mbox{for}\
             \tlamb \leq \tlamb_{\rm per}\\[2ex]
        \displaystyle \epsilon_L(\Phi_b(0) + \Phi_b(u)) \quad \mbox{for}\
             \tlamb > \tlamb_{\rm per}
     \end{cases} }
 \ee
-So $\ph = \ph(u)$ is entirely determined by the function $\Phi_b(u)$. To evaluate
+It this appears that
+$\ph$ is entirely determined by the function $\Phi_b(u)$. To evaluate
 the latter, we rewrite it in terms of the three zeros
 $(u_{\rm neg}, u_{\rm per}, u_{\rm apo})$ of $P_b(u)$:
 \be
@@ -797,7 +800,7 @@ $(u_{\rm neg}, u_{\rm per}, u_{\rm apo})$ of $P_b(u)$:
 \ee
 We then perform the change of variable\footnote{It should be clear that the
 variable $t$ introduced here has nothing to do with the Schwarzschild-Droste
-time coordinate $t$.}
+coordinate $t$.}
 \be
     t := \frac{1}{k} \sqrt{\frac{u_{\rm per} - \bar{u}}{u_{\rm apo} - \bar{u}}}
     \quad\iff\quad
@@ -805,8 +808,13 @@ time coordinate $t$.}
 \ee
 where $k$ is the following constant:
 \be \label{e:gis:def_k_modulus}
-    k := \sqrt{\frac{u_{\rm per} - u_{\rm neg}}{u_{\rm apo} - u_{\rm neg}}} .
+   \encadre{ k := \sqrt{\frac{u_{\rm per} - u_{\rm neg}}{u_{\rm apo} - u_{\rm neg}}}
+    = \frac{\sqrt{2}}{
+       \sqrt{\sqrt{3}\cot\left(\frac{2}{3}\arcsin\left(\frac{b_{\rm crit}}{b}\right)\right) + 1}}},
 \ee
+where the second equality follows from the expressions \eqref{e:gis:zeros_Pbu}
+of $u_{\rm neg}$, $u_{\rm per}$ and
+$u_{\rm apo}$ in terms of $b$.
 Noticing that
 \[
     \D\bar{u} = - \frac{2(u_{\rm apo} - u_{\rm per}) k^2 t}{(1 - k^2 t^2)^2} \, \D t,
@@ -822,46 +830,50 @@ Noticing that
 \]
 we arrive at
 \be
-    \encadre{ \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
-    \, F\left( \frac{1}{k} \sqrt{\frac{u_{\rm per} - u}{u_{\rm apo} - u}};\;
-        k\right) },
+     \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
+     \int_0^{\frac{1}{k} \sqrt{\frac{u_{\rm per} - u}{u_{\rm apo} - u}}}
+     \frac{\D t}{\sqrt{(1 - t^2)(1 - k^2 t^2)}} .
 \ee
-where $F(x; k)$ is the
-\defin{incomplete elliptic integral of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --}:
-\be \label{e:gis:incomp_elliptic_int}
-     F(x; k) := \int_0^{x} \frac{\D t}{\sqrt{(1 - t^2)(1 - k^2 t^2)}} .
-\ee
-Note the semicolon separating the arguments of $F(x; k)$; this is to
-distinguish from an alternative expression of the incomplete elliptic integral of
-the first kind (the so-called \defin{Legendre form}\index{Legendre!form of elliptic integral}):
-\be
-    F(\phi, k) := \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} .
-\ee
-$F(x; k)$ and $F(\phi, k)$ are related by
-\be
-    F(\phi, k) = F(\sin\phi; k) ,
-\ee
-as the change of variable $t = \sin\vartheta$ in \eqref{e:gis:incomp_elliptic_int}
-easilly shows. The notation $F(\phi, k)$ is the most commonly used
-in the literature \cite{ByrdF71,GradsRGTJ115}\footnote{One may encounter as well
-$F(\phi|m)$ for $F(\phi, k)$ with $m=k^2$ \cite{AbramS72}.}. Let us reexpress
-$\Phi_b(u)$ in terms of it:
+The term $\D t/\sqrt{1 - t^2}$ suggests to perform the change of
+variable $t = \sin\vartheta$. This yields
 \be
     \encadre{ \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
     \, F\left(
     \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm per} - u}{u_{\rm apo} - u}}\right),\;
-        k\right) } .
+        k\right) } ,
 \ee
+where $F(\phi, k)$ is the
+\defin{incomplete elliptic integral of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --}:
+\be
+    F(\phi, k) := \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} .
+\ee
+The notation $F(\phi, k)$ is the most commonly used
+in the literature \cite{ByrdF71,GradsRGTJ115}, but one may encounter as well
+$F(\phi|m)$ for $F(\phi, k)$ with $m=k^2$ \cite{AbramS72}.
 $k$ is called the \defin{modulus}\index{modulus!of an elliptic integral} of
 the elliptic integral. From its expression \eqref{e:gis:def_k_modulus}, we
-see that $k$ is a function of $b$, since $u_{\rm neg}$, $u_{\rm per}$ and
-$u_{\rm apo}$ are functions of $b$ (cf. Eq.~\eqref{e:gis:zeros_Pbu}).
+see that $k$ is a function of $b$.
 Given the ordering \eqref{e:gis:order_u_zeros}, we deduce from
 \eqref{e:gis:def_k_modulus} that
 \be
     0 < k \leq 1,
 \ee
 with $k=1 \iff u_{\rm per} = u_{\rm apo} \iff b = b_{\rm crit}$.
+
+The total change of $\ph$ along the geodesic history is
+\be
+    \Delta \ph = \ph_\infty - \ph_{-\infty} ,
+\ee
+with $\ph_\infty := \lim_{\tlamb\to +\infty} \ph$.
+Given that $\lim_{\tlamb\to +\infty} u = 0$ (since $b>b_{\rm crit}$, the geodesic
+is escaping to infinity), Eq.~\eqref{e:gis:ph_Phi_b_u} leads to
+\[
+    \ph_\infty = \ph_{-\infty} + \epsilon_L (\Phi_b(0) + \Phi_b(0)) .
+\]
+Hence
+\be
+    \encadre{ \Delta\ph = 2 \epsilon_L \Phi_b(0) } .
+\ee
 
 
 \begin{figure}
