@@ -528,6 +528,34 @@ Note the ordering
 \ee
 with the inequalities $\leq$ being saturated for $b = b_{\rm crit}$.
 
+It is easy to express two of the zeros in terms of the third one. For instance,
+let us pick $u_{\rm per}$. From $P_b(u_{\rm per}) = 0$, we have immediately
+$b^2/m^2 = - 2 u_{\rm per}^3 + u_{\rm per}^2$. If we substitute this expression
+for $b^2/m^2$ into $P_b(u)$, we get
+\bea
+    P_b(u) = 0 & \iff &  2 u^3 - u^2 - 2 u_{\rm per}^3 + u_{\rm per}^2 = 0  \nonumber \\
+    & \iff & (u - u_{\rm per})\left[ 2 (u^2 + u_{\rm per} u + u_{\rm per}^2)
+    - (u + u_{\rm per}) \right] = 0  \nonumber \\
+    & \iff & (u - u_{\rm per})\left[ 2 u^2 + (2 u_{\rm per} - 1) u
+      + u_{\rm per} (2 u_{\rm per} - 1) \right] = 0 . \nonumber
+\eea
+The two zeros different from $u_{\rm per}$ of this equation, namely
+$u_{\rm neg}$ and $u_{\rm apo}$, must then obey
+\[
+    2 u^2 + (2 u_{\rm per} - 1) u
+      + u_{\rm per} (2 u_{\rm per} - 1)  = 0 .
+\]
+Solving this quadratic equation leads to the sought expressions:
+\begin{subequations}
+\label{e:gis:una_up}
+\begin{align}
+u_{\rm neg} & = \frac{1}{4} \left( 1 - 2 u_{\rm per}
+    - \sqrt{(1 - 2 u_{\rm per} ) (1 + 6 u_{\rm per} )} \right) \\
+u_{\rm apo} & = \frac{1}{4} \left( 1 - 2 u_{\rm per}
+    + \sqrt{(1 - 2 u_{\rm per} ) (1 + 6 u_{\rm per} )} \right) .
+\end{align}
+\end{subequations}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Polar equations of null geodesics} \label{s:gis:polar_equations}
@@ -573,7 +601,7 @@ null geodesic with $r>3m$
 regards $r<3m$ [Eq.~(\ref{e:ges:null_r_phi_coth})].}
 \end{figure}
 
-\subsubsection{External critical null geodesics}
+\subsubsection{External critical null geodesics} \label{s:gis:extern_crit_geod}
 
 For $u<1/3$, $x\in(1/3, 1)$, so that the first line of Eq.\eqref{e:ges:primitive_crit_geod}
 is relevant and Eq.~\eqref{e:ges:dphi_du_null_bcrit} is integrated to
@@ -794,7 +822,7 @@ It thus appears that
 $\ph$ is entirely determined by the function $\Phi_b(u)$. To evaluate
 the latter, we rewrite it in terms of the three zeros
 $(u_{\rm neg}, u_{\rm per}, u_{\rm apo})$ of $P_b(u)$:
-\be
+\be \label{e:gis:Phi_b_int_Pb_zeros}
   \Phi_b(u) = \int_u^{u_{\rm per}} \frac{\D\bar{u}}{
   \sqrt{2(\bar{u} - u_{\rm neg})(u_{\rm per} - \bar{u})(u_{\rm apo} - \bar{u})}} .
 \ee
@@ -828,14 +856,14 @@ Noticing that
     \quad\mbox{and}\quad
     u_{\rm apo} - \bar{u} = \frac{u_{\rm apo} - u_{\rm per}}{1 - k^2 t^2} ,
 \]
-we arrive at
+we get
 \be
      \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
      \int_0^{\frac{1}{k} \sqrt{\frac{u_{\rm per} - u}{u_{\rm apo} - u}}}
      \frac{\D t}{\sqrt{(1 - t^2)(1 - k^2 t^2)}} .
 \ee
 The term $\D t/\sqrt{1 - t^2}$ suggests to perform the change of
-variable $t = \sin\vartheta$. This yields
+variable $t = \sin\vartheta$. We then arrive at
 \be \label{e:gis:Phib_elliptic_int}
     \encadre{ \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
     \, F\left(
@@ -898,9 +926,20 @@ is escaping to infinity), Eq.~\eqref{e:gis:ph_Phi_b_u} leads to
     \ph_\infty = \ph_{-\infty} + \epsilon_L (\Phi_b(0) + \Phi_b(0)) .
 \]
 Hence
-\be
-    \encadre{ \Delta\ph = 2 \epsilon_L \Phi_b(0) } .
+\be \label{e:gis:Dph_Phi_b_0}
+    \Delta\ph = 2 \epsilon_L \Phi_b(0) .
 \ee
+Given the expression  (\ref{e:gis:Phib_elliptic_int}) of $\Phi_b$, we
+get
+\be \label{e:gis:Dph_F_alpha_k}
+    \encadre{  \Delta\ph = \epsilon_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
+    \, F(\psi, k) } ,
+\ee
+where
+\be
+   \encadre{ \psi := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm per}}{u_{\rm apo}}} \right) } .
+\ee
+
 Note that one can have $|\Delta\ph| > 2\pi$; in such a case, the null geodesic
 is winding around the black hole before leaving to infinity. We therefore introduce
 the \defin{winding number}\index{winding!number!of null geodesic} $n\in\mathbb{Z}$ by
@@ -922,6 +961,11 @@ Let us recall that $\epsilon_L = \pm 1$ is the sign of the
 conserved angular momentum $L$ [cf. Eq.~(\ref{e:gis:def_epsilon_L})].
 The $-\epsilon_L \pi$ term in the above equation is chosen so
 that $\Theta = 0$ in flat spacetime (no deflection of light).
+By construction, the range of $\Theta$ is
+\be
+    -\pi \leq \Theta \leq \pi .
+\ee
+
 
 \begin{figure}
 \begin{tabular}{cc}
@@ -985,36 +1029,22 @@ almost at the photon circular orbit ($r=3m$). That after a few turns the null ge
 departs to infinity corroborates the fact that the photon orbit is unstable
 (cf. Sec.~\ref{s:ges:null_eff_pot}).
 
-The total change in $\ph$ along the null geodesic
-is obtained by integrating Eq.~(\ref{e:ges:dphi_du_null}) with $u=m/r$ varying
-from $0$ (the ``far away'' emission) to $u_{\rm per} = m/r_{\rm per}$, and
-then back to $0$ (the ``far away'' reception).
-Assuming $L>0$, so that $\ph$ increases towards the future
-(as in Figs.~\ref{f:gis:null_b1}-\ref{f:gis:null_b2}), one must select
-the $+$ sign in the r.h.s. of Eq.~(\ref{e:ges:dphi_du_null}) for the first part
-and the $-$ sign for the second part. Hence
-\bea
-    \Delta \ph &=&  \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}}
-     - \int_{u_{\rm per}}^0 \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} \nonumber \\
-  & = & 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b)^2}} . \label{e:ges:null_Delta_ph_b}
-\eea
-This integral can be evaluated by means of elliptic integrals of the first kind
-(see e.g. Ref.~\cite{Lumin79,BisnoT08,FroloZ11,Munoz14} for details).
-However, we can understand the winding around the photon circular orbit
-observed in Figs.~\ref{f:gis:null_b1}-\ref{f:gis:null_b2}
-when $b$ is close to $b_{\rm crit}$
-without the explicit form.
-Indeed let us express the polynomial $P_b(u) = 2 u^3 - u^2 + (m/b)^2$
-in terms of its three real zeros $u_{\rm neg}$, $u_{\rm per}$ and $u_{\rm apo}$,
-cf. Eq.~(\ref{e:ges:def_u_per_apo}). We get
+We can understand the winding phenomenon
+around the photon circular orbit for $b$ close to $b_{\rm crit}$
+without investigating the properties of elliptic integrals.
+Indeed, by combining Eqs.~(\ref{e:gis:Dph_Phi_b_0}) and (\ref{e:gis:Phi_b_int_Pb_zeros}),
+we get
 \be \label{e:ges:Dph_u_per_apo}
-    \Delta\ph = \sqrt{2} \int_0^{u_{\rm per}}
+    \Delta\ph = \epsilon_L \sqrt{2} \int_0^{u_{\rm per}}
     \frac{\D u}{\sqrt{(u_{\rm per} - u )(u_{\rm apo} - u)(u - u_{\rm neg})}} .
 \ee
-Given the ordering $u_{\rm neg} < 0 < u_{\rm per} \leq u_{\rm apo}$, each of the
+Given the ordering (\ref{e:gis:order_u_zeros}), each of the
 three terms under the square root is positive on the integration range
-$(0,u_{\rm per})$. For $b>b_{\rm crit}$, $u_{\rm apo}>u_{\rm per}$ and
-the only diverging term in the integrand is $1/\sqrt{u_{\rm per} - u}$, which
+$(0,u_{\rm per})$. For $b\not=b_{\rm crit}$, $u_{\rm apo}\not=u_{\rm per}$
+(cf. Fig.~\ref{f:gis:u_per_apo_neg})
+and
+the only diverging term in the integrand of (\ref{e:ges:Dph_u_per_apo})
+is $1/\sqrt{u_{\rm per} - u}$, which
 diverges at the integral boundary $u=u_{\rm per}$. However, the integral
 \[
     \int_0^{u_{\rm per}}
@@ -1023,58 +1053,56 @@ diverges at the integral boundary $u=u_{\rm per}$. However, the integral
 is finite, being equal to $2\sqrt{u_{\rm per}}$, so that $\Delta\ph$ remains
 finite. When $b\to b_{\rm crit}$,
 $u_{\rm apo} \to u_{\rm per}$ and the integral (\ref{e:ges:Dph_u_per_apo})
-has a behavior similar to
+has a behaviour similar to
 \[
      \int_0^{u_{\rm per}}
     \frac{\D u}{\sqrt{(u_{\rm per} - u)^2}} = \int_0^{u_{\rm per}}
-    \frac{\D u}{u_{\rm per} - u} ,
+    \frac{\D u}{u_{\rm per} - u} .
 \]
-which is a diverging integral. Hence
+Since the latter is a diverging integral, we conclude that
 \be \label{e:ges:Dph_infinite}
-    \encadre{ \Delta\ph\to +\infty\quad\mbox{when}\quad b\to b_{\rm c} }.
+    \encadre{ \Delta\ph\to \pm\infty\quad\mbox{when}\quad b\to b_{\rm crit} }.
 \ee
-We recover the behaviour obtained for $b=b_{\rm crit}$, i.e. for
-the external critical null geodesic discussed above:
+We recover the behaviour obtained for $b=b_{\rm crit}$ in
+Sec.~\ref{s:gis:extern_crit_geod}: for
+an external critical null geodesic,
 $\Delta\ph$ is infinite, the geodesic spiralling indefinitely around the
 photon orbit (cf. Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}).
 
-More precisely, we can easily derive a lower bound on $\Delta\ph$ involving
-$b-b_{\rm crit}$ as follows. For $b$ close to $b_{\rm crit}$, let us introduce
+We are going to refine (\ref{e:ges:Dph_infinite}), since in
+what follows, we will need the diverging behaviour of $\Delta\ph$ in terms
+of $b - b_{\rm crit}$. For this, we shall rely on some properties of
+elliptic integrals. The starting point is the expression
+(\ref{e:gis:Dph_F_alpha_k}) of $\Delta\ph$ involving the incomplete elliptic
+integral of the first kind $F(\alpha, k)$.
+
+For $b$ close to $b_{\rm crit}$, let us introduce
 the small parameter $\veps >0$ such that
 \be \label{e:ges:u_per_eps}
     u_{\rm per} =: \frac{1}{3} ( 1 - \veps ).
 \ee
-The relation $P_b(u_{\rm per}) = 0$ leads then, to the second order in $\veps$:
+The relation $P_b(u_{\rm per}) = 0$, once expanded to the second
+order in $\veps^2$, leads to the following relation between $b - b_{\rm crit}$
+and $\veps$:
 \be \label{e:ges:b_bc_eps}
-    b-b_{\rm crit} \simeq \frac{9\sqrt{3}}{2} m \veps^2 .
+    b-b_{\rm crit} = \frac{9\sqrt{3}}{2} m \veps^2 + O(\veps^3).
 \ee
-The inegality $m^2/b^2 < m^2/b_{\rm crit}^2$ allows us to deduce from the expression
-(\ref{e:ges:null_Delta_ph_b}) of $\Delta\ph$ that
-\[
-    \Delta\ph > 2 \int_0^{u_{\rm per}} \frac{\D u}{\sqrt{2 u^3 - u^2 + (m/b_{\rm crit})^2}}
-      = 2 \int_0^{u_{\rm per}} \frac{\D u}{\left(\frac{1}{3} - u \right)
-        \sqrt{2u + \frac{1}{3}}} .
-\]
-In the right-hand-side integral, we can use the primitive (\ref{e:ges:ph_u_crit_null_geod})
-with the $+$ sign and the $\mathrm{artanh}$ expressed in terms of logarithms,
-via the identity $\mathrm{artanh}\,  x = 1/2\ln[(1+x)/(1-x)]$ to get
-\[
-   \Delta\ph > 2 \left[
-   \ln \left( \frac{1 + \sqrt{2u + \frac{1}{3}}}{1 - \sqrt{2u + \frac{1}{3}}} \right)
-   \right] _0^{u_{\rm per}} .
-\]
-From Eq.~(\ref{e:ges:u_per_eps}), we get $\sqrt{2u_{\rm per} + \frac{1}{3}} \simeq 1 - \veps/3$,
-so that the above relation becomes
-\[
-    \Delta\ph > \ln\left( (7 - 4 \sqrt{3}) \frac{36}{\veps^2} \right) .
-\]
-Substituting Eq.~(\ref{e:ges:b_bc_eps}) for $\veps^2$, we get
-\be \label{e:ges:Delta_ph_lower_bound}
-    \Delta\ph > \ln\left( \frac{162(7\sqrt{3} - 12) m}{b-b_{\rm crit}} \right) .
+Besides, from the expressions (\ref{e:gis:una_up}) of $u_{\rm neg}$ and
+$u_{\rm apo}$ in terms of $u_{\rm per}$, we get, still to the second order in $\veps$,
+\be
+    u_{\rm neg} = - \frac{1}{6} + \frac{2}{9} \veps^2 + O(\veps^3)
+    \qquad\mbox{and}\qquad
+    u_{\rm apo} = \frac{1}{3} \left( 1 + \veps - \frac{2}{3} \veps^2 \right)
+     + O(\veps^3) .
 \ee
-This relation establishes rigorously the divergence property
-(\ref{e:ges:Dph_infinite}).
+Substituting these values in the expression (\ref{e:gis:def_k_modulus})
+of the modulus $k$ and expanding to the first order in $\veps$ leads:
+\be
+    k = 1 - \frac{2}{3} \veps + O(\veps^2).
+\ee
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
 An exact study of the behaviour of $\Delta\ph$ when $b \to b_{\rm crit}^+$,
 based on the expression of $\Delta\ph$ in terms of elliptic functions, leads
 to\footnote{See e.g. Eq.~(31) of Ref.~\cite{Darwi59}, where $\mu = \Theta$
@@ -1084,9 +1112,6 @@ $\Theta$ is the same as ours.}
     \Delta\ph \sim \ln\left( \frac{648(7\sqrt{3} - 12) m}{b-b_{\rm crit}} \right)
     \qquad\mbox{when}\quad b \to b_{\rm crit}^+ .
 \ee
-We note that this expression gives a behaviour similar to the lower bound
-(\ref{e:ges:Delta_ph_lower_bound}), except for a factor 4 in the numerical
-factor inside the logarithm.
 By combining Eq.~(\ref{e:ges:Dph_ln_b_bc}) and Eq.~(\ref{e:ges:Dph_Theta_n}),
 one can relate $b - b_{\rm crit}$ to the deflection angle $\Theta$
 and the number of turns $n$ performed by the geodesic around the black hole:
