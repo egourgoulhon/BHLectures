@@ -122,10 +122,10 @@ becomes
 \ee
 where
 \be \label{e:ges:def_b}
-    \encadre{b := \frac{|L|}{E}}
+    \encadre{b := \frac{|L|}{E}} ,
 \ee
-\be
-    \epsilon_L = \frac{L}{|L|} = \operatorname{sgn} L
+\be \label{e:gis:def_epsilon_L}
+    \epsilon_L := \frac{L}{|L|} = \operatorname{sgn} L
 \ee
 and
 \be \label{e:ges:eff_pot_null}
@@ -790,7 +790,7 @@ We may combine the above results into
             \tlamb > \tlamb_{\rm per}
     \end{cases} }
 \ee
-It this appears that
+It thus appears that
 $\ph$ is entirely determined by the function $\Phi_b(u)$. To evaluate
 the latter, we rewrite it in terms of the three zeros
 $(u_{\rm neg}, u_{\rm per}, u_{\rm apo})$ of $P_b(u)$:
@@ -836,7 +836,7 @@ we arrive at
 \ee
 The term $\D t/\sqrt{1 - t^2}$ suggests to perform the change of
 variable $t = \sin\vartheta$. This yields
-\be
+\be \label{e:gis:Phib_elliptic_int}
     \encadre{ \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
     \, F\left(
     \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm per} - u}{u_{\rm apo} - u}}\right),\;
@@ -852,13 +852,40 @@ in the literature \cite{ByrdF71,GradsRGTJ115}, but one may encounter as well
 $F(\phi|m)$ for $F(\phi, k)$ with $m=k^2$ \cite{AbramS72}.
 $k$ is called the \defin{modulus}\index{modulus!of an elliptic integral} of
 the elliptic integral. From its expression \eqref{e:gis:def_k_modulus}, we
-see that $k$ is a function of $b$.
+see that $k$ is a function of $b$. It is plotted in Fig.~\ref{f:gis:elliptic_mod}.
 Given the ordering \eqref{e:gis:order_u_zeros}, we deduce from
 \eqref{e:gis:def_k_modulus} that
 \be
     0 < k \leq 1,
 \ee
 with $k=1 \iff u_{\rm per} = u_{\rm apo} \iff b = b_{\rm crit}$.
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gis_elliptic_mod.pdf}}
+\caption[]{\label{f:gis:elliptic_mod} \footnotesize
+Modulus $k$ of the incomplete elliptic integral $F$ that is involved
+in expression (\ref{e:gis:Phib_elliptic_int}) for $\Phi_b(u)$.}
+\end{figure}
+
+
+
+\begin{remark}
+The trajectory of a null geodesic in the plane $\th=\pi/2$ as given by
+Eqs.~(\ref{e:gis:ph_Phi_b_u}) and (\ref{e:gis:Phib_elliptic_int})
+is of the form $\ph = \ph(r)$
+on each of the two arcs with respect to the periastron. One can invert
+this relation to express the trajectory in the polar form $r = r(\ph)$. This
+is performed thanks to the inverse of the incomplete elliptic integral $F(\phi,k)$,
+which is the \defin{Jacobi elliptic sine}\index{Jacobi!elliptic sine}\index{elliptic!sine}
+$\operatorname{sn}(x,k)$, defined by $\sin\phi = \operatorname{sn}(F(\phi,k), k)$. We deduce then
+from Eq.~(\ref{e:gis:Phib_elliptic_int}) that
+\be
+    \frac{u_{\rm per} - u}{u_{\rm apo} - u} = k^2 \operatorname{sn}\left(
+    \frac{\sqrt{u_{\rm apo} - u_{\rm neg}}}{\sqrt{2}} \Phi_b(u),\; k \right) .
+\ee
+We refer the reader to Refs.~\cite{CadezK05,Munoz14} for more details.
+\end{remark}
+
+\subsection{Deflection angle and winding number}
 
 The total change of $\ph$ along the geodesic history is
 \be
@@ -874,7 +901,27 @@ Hence
 \be
     \encadre{ \Delta\ph = 2 \epsilon_L \Phi_b(0) } .
 \ee
-
+Note that one can have $|\Delta\ph| > 2\pi$; in such a case, the null geodesic
+is winding around the black hole before leaving to infinity. We therefore introduce
+the \defin{winding number}\index{winding!number!of null geodesic} $n\in\mathbb{Z}$ by
+\be
+    \Delta\ph =: \overline{\Delta\ph} + 2\pi n \quad
+    \mbox{with} \quad
+    \begin{cases}
+    \overline{\Delta\ph} \in [0, 2\pi) &\  \mbox{if}\ L > 0 \\
+    \overline{\Delta\ph} \in (-2\pi, 0] &\  \mbox{if}\ L < 0 .
+    \end{cases}
+\ee
+Note that $n\geq 0$ for $L > 0$ and $n\leq 0$ for $L<0$.
+We then define the \defin{deflection angle}\index{deflection!angle}
+$\Theta$ by
+\be \label{e:ges:def_deflection_angle}
+    \Theta := \overline{\Delta\ph} - \epsilon_L \pi .
+\ee
+Let us recall that $\epsilon_L = \pm 1$ is the sign of the
+conserved angular momentum $L$ [cf. Eq.~(\ref{e:gis:def_epsilon_L})].
+The $-\epsilon_L \pi$ term in the above equation is chosen so
+that $\Theta = 0$ in flat spacetime (no deflection of light).
 
 \begin{figure}
 \begin{tabular}{cc}
@@ -905,34 +952,19 @@ Same as Fig.~\ref{f:gis:null_b1} but for values of $b$ closer to
 $b_{\rm crit} \simeq 5.196152\, m$.}
 \end{figure}
 
-
-To compute the trajectories $r(\ph)$ in that case, one may also use the geodesic integrator
-of \textsf{SageMath} (cf. Appendix~\ref{s:sam}). Some results are displayed in
-Figs.~\ref{f:gis:null_b1}-\ref{f:gis:null_b2}. They correspond to
-geodesics coming from infinity along the
-direction $\ph=0$, for various values of the
-impact parameter $b$ decaying to $b_{\rm crit}$. All these geodesics, having
-$b > b_{\rm crit}$, correspond to the case no.~1 in the effective potential
-diagram of Fig.~\ref{f:gis:eff_pot_null}, i.e. they reach a periastron
-before escaping to infinity. For $b=12 m$ (upper left panel of Fig.~\ref{f:gis:null_b1}),
+The above concepts are illustrated in Figs.~\ref{f:gis:null_b1}-\ref{f:gis:null_b2},
+which show the trajectories
+of null geodesics arising from infinity along the
+direction $\ph=0$ (i.e. having $\ph_{-\infty=0}$, for various values of the
+impact parameter $b$ decaying from $b=12 m$ to $b_{\rm crit}$.
+They have been computed by means of the geodesic integrator
+of \textsf{SageMath} (cf. Appendix~\ref{s:sam}), instead of making use
+of the elliptic integral (\ref{e:gis:Phib_elliptic_int}).
+All these geodesics have $L>0$ and hence $\epsilon_L = +1$.
+For $b=12 m$ (upper left panel of Fig.~\ref{f:gis:null_b1}),
 the geodesic suffers only some moderate bending; this is nothing but the standard
 \defin{deflection of light}\index{deflection of light} by massive bodies in
-general relativity. More precisely, we define the \defin{deflection angle}\index{deflection!angle}
-$\Theta$ by
-\be \label{e:ges:def_deflection_angle}
-    \Theta + \pi := \Delta\ph \ \mathrm{mod}\ 2 \pi,
-\ee
-where $\Delta\ph$ is the total change in $\ph$ along the geodesic history, i.e.
-between $\lambda\to -\infty$ ($\ph=0$ in the present case) and $\lambda\to +\infty$.
-The $+\pi$ term in the left-hand side of Eq.~(\ref{e:ges:def_deflection_angle}) is chosen so
-that $\Theta = 0$ in flat spacetime (no deflection).
-Equation~(\ref{e:ges:def_deflection_angle}) can be
-inverted to
-\be \label{e:ges:Dph_Theta_n}
-    \Delta\ph = \Theta + \pi + 2 \pi n,\qquad n\in \mathbb{Z} ,
-\ee
-where $n$ is the number of full turns around the black hole.
-For $b = 12 m$, one has $\Theta\simeq \pi/6$ and $n=0$.
+general relativity. More precisely, we have in this case $\Theta\simeq \pi/6$ and $n=0$.
 For $b=8 m$ and $6 m$, the bending is more pronounced,
 exceeding $\Theta = \pi/2$ for $b=6 m$, still with $n=0$. For $b=5.355\, m$ (lower right panel of Fig.~\ref{f:gis:null_b1}), the deflection angle is $\Theta\simeq\pi$, i.e. the photon goes back in the direction
 from which it was coming.
@@ -941,11 +973,13 @@ When the impact parameter becomes even closer to the critical value
 $b_{\rm crit}\simeq 5.196152\, m$ [Eq.~(\ref{e:ges:b_crit})],
 the null geodesic starts to wind around the black hole before escaping
 to infinity (Fig.~\ref{f:gis:null_b2}).
-For $b=5.2025\, m$ (upper right panel of Fig.~\ref{f:gis:null_b2}), one has $\Theta=0$
-but $n=1$ (a full turn has been performed). For $b=5.19643\, m$ (lower left panel
+For $b=5.230\, m$ (upper left panel of Fig.~\ref{f:gis:null_b2}), one has
+$n=1$ and $\Theta\simeq -\pi/2$.
+For $b=5.2025\, m$ (upper right panel of Fig.~\ref{f:gis:null_b2}), one has
+$n=1$ and $\Theta=0$. For $b=5.19643\, m$ (lower left panel
 of Fig.~\ref{f:gis:null_b2}), one has
-$\Theta\simeq\pi$ and $n=1$ and for $b=5.196155\, m$ (lower right panel of Fig.~\ref{f:gis:null_b2}), one has
-$\Theta\simeq \pi/2$ and $n=2$.
+$n=1$ and $\Theta\simeq \pi$ and for $b=5.196155\, m$ (lower right panel of Fig.~\ref{f:gis:null_b2}), one has $n=2$ and
+$\Theta\simeq \pi/2$.
 Note that the winding is taking place
 almost at the photon circular orbit ($r=3m$). That after a few turns the null geodesic
 departs to infinity corroborates the fact that the photon orbit is unstable
@@ -1249,7 +1283,7 @@ The latter is called the
 
 
 \begin{hist}
-Droste \cite{Drost1917}, Hagihara,  Darwin \cite{Darwi59}, Synge \cite{Synge66}, Bardeen \cite{Barde73}, Luminet \cite{Lumin79,Lumin19}
+Droste \cite{Drost1917}, Hagihara,  Darwin \cite{Darwi59}, Synge \cite{Synge66}, Bardeen \cite{Barde73}, Luminet \cite{Lumin79,Lumin19}, Marck \cite{Marck96}
 \end{hist}
 
 
