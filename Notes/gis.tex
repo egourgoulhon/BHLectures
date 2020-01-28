@@ -872,7 +872,7 @@ variable $t = \sin\vartheta$. We then arrive at
 \ee
 where $F(\phi, k)$ is the
 \defin{incomplete elliptic integral of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --}:
-\be
+\be \label{e:gis:def_incompl_elliptic_int}
     F(\phi, k) := \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} .
 \ee
 The notation $F(\phi, k)$ is the most commonly used
@@ -931,12 +931,12 @@ Hence
 \ee
 Given the expression  (\ref{e:gis:Phib_elliptic_int}) of $\Phi_b$, we
 get
-\be \label{e:gis:Dph_F_alpha_k}
+\be \label{e:gis:Dph_F_psi_k}
     \encadre{  \Delta\ph = \epsilon_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
     \, F(\psi, k) } ,
 \ee
 where
-\be
+\be \label{e:gis:def_psi}
    \encadre{ \psi := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm per}}{u_{\rm apo}}} \right) } .
 \ee
 
@@ -1069,38 +1069,97 @@ an external critical null geodesic,
 $\Delta\ph$ is infinite, the geodesic spiralling indefinitely around the
 photon orbit (cf. Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}).
 
-We are going to refine (\ref{e:ges:Dph_infinite}), since in
-what follows, we will need the diverging behaviour of $\Delta\ph$ in terms
-of $b - b_{\rm crit}$. For this, we shall rely on some properties of
-elliptic integrals. The starting point is the expression
-(\ref{e:gis:Dph_F_alpha_k}) of $\Delta\ph$ involving the incomplete elliptic
-integral of the first kind $F(\alpha, k)$.
-
-For $b$ close to $b_{\rm crit}$, let us introduce
-the small parameter $\veps >0$ such that
+We are going to refine (\ref{e:ges:Dph_infinite}), since we shall
+need the diverging behaviour of $\Delta\ph$ in terms
+of $b - b_{\rm crit}$ to discuss the images in Sec.~\ref{s:gis:images}.
+To this aim, we shall rely on some properties of
+elliptic integrals, the starting point being the expression
+(\ref{e:gis:Dph_F_psi_k}) of $\Delta\ph$ involving the incomplete elliptic
+integral of the first kind $F(\psi, k)$. As already noticed, we
+have $\lim_{b\to b_{\rm crit}} u_{\rm per} = \lim_{b\to b_{\rm crit}} u_{\rm apo} = 1/3$,
+so that (cf. Eq.~(\ref{e:gis:def_k_modulus}), Fig.~\ref{f:gis:elliptic_mod}
+and Eq.~(\ref{e:gis:def_psi}))
+\be
+    \lim_{b\to b_{\rm crit}} k = 1 \qquad\mbox{and}\qquad
+    \lim_{b\to b_{\rm crit}} \psi = \pi/2.
+\ee
+To get the behaviour of $F(\psi,k)$ when both of the above limits hold, we shall
+use the following addition property of incomplete elliptic
+integrals of the first kind\footnote{See e.g. Eq.~(117.01) of
+Ref.~\cite{ByrdF71} with $k' = \sqrt{1-k^2}$
+or Eq.~(17.4.13) of Ref.~\cite{AbramS72} with $\sin\alpha = k$.}:
+\be \label{e:gis:add_elliptic_int}
+   \tan\psi \tan\phi = \frac{1}{\sqrt{1 - k^2}}\ \Longrightarrow \ F(\psi, k) + F(\phi, k) = K(k),
+\ee
+where $K(k)$ is the
+\defin{complete elliptic integral of the first kind}\index{complete!elliptic integral}\index{elliptic integral!complete --}:
+\be
+    K(k) := \int_0^{\frac{\pi}{2}} \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} = F\left(\frac{\pi}{2}, k\right) .
+\ee
+When $k\to 1$, $K(k)$ is diverging with the following behaviour\footnote{See e.g. Eq.~(112.1) of Ref.~\cite{ByrdF71} with
+$k' = \sqrt{1-k^2}$ or Eq.~(17.3.26) of
+Ref.~\cite{AbramS72} with $m = k^2$ and $m_1 = 1 - k^2$.}:
+\be
+    \lim_{k\to 1} \left[ K(k) - \ln\left(\frac{4}{\sqrt{1-k^2}}\right) \right] = 0 .
+\ee
+Given (\ref{e:gis:add_elliptic_int}) and (\ref{e:gis:def_psi}),
+we can rewrite (\ref{e:gis:Dph_F_psi_k}) as
+\be
+    \Delta\ph = \epsilon_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
+    \, \left[ K(k) - F(\phi, k) \right],
+\ee
+with
+\be \label{e:gis:def_phi_u_ap_k}
+    \phi := \arctan \left(
+            \sqrt{ \frac{(u_{\rm apo}/u_{\rm per}) k^2 - 1}{1 - k^2}}
+          \right).
+\ee
+To get the behaviour of $\Delta\ph$ when $b\to b_{\rm crit}$ from the above
+formulas, let us introduce the small parameter $\veps >0$ such that
 \be \label{e:ges:u_per_eps}
-    u_{\rm per} =: \frac{1}{3} ( 1 - \veps ).
+    u_{\rm per} =: \frac{1}{3} - \veps.
 \ee
 The relation $P_b(u_{\rm per}) = 0$, once expanded to the second
 order in $\veps^2$, leads to the following relation between $b - b_{\rm crit}$
 and $\veps$:
 \be \label{e:ges:b_bc_eps}
-    b-b_{\rm crit} = \frac{9\sqrt{3}}{2} m \veps^2 + O(\veps^3).
+    b-b_{\rm crit} = \frac{81\sqrt{3}}{2} m \veps^2 + O(\veps^3).
 \ee
 Besides, from the expressions (\ref{e:gis:una_up}) of $u_{\rm neg}$ and
 $u_{\rm apo}$ in terms of $u_{\rm per}$, we get, still to the second order in $\veps$,
-\be
-    u_{\rm neg} = - \frac{1}{6} + \frac{2}{9} \veps^2 + O(\veps^3)
+\be \label{e:gis:u_n_a_expand}
+    u_{\rm neg} = - \frac{1}{6} + 2 \veps^2 + O(\veps^3)
     \qquad\mbox{and}\qquad
-    u_{\rm apo} = \frac{1}{3} \left( 1 + \veps - \frac{2}{3} \veps^2 \right)
+    u_{\rm apo} = \frac{1}{3} + \veps - 2 \veps^2
      + O(\veps^3) .
 \ee
 Substituting these values in the expression (\ref{e:gis:def_k_modulus})
-of the modulus $k$ and expanding to the first order in $\veps$ leads:
-\be
-    k = 1 - \frac{2}{3} \veps + O(\veps^2).
+of the modulus $k$ and expanding to the first order in $\veps$ leads to
+\be \label{e:gis:k_expand}
+    k = 1 - 2 \veps + O(\veps^2).
 \ee
-
+Using the expansions (\ref{e:gis:u_n_a_expand}) and (\ref{e:gis:k_expand})
+in Eq.~(\ref{e:gis:def_phi_u_ap_k}), we get
+\be
+    \lim_{\veps\to 0} \tan \phi =  \frac{1}{\sqrt{2}} ,
+\ee
+which implies
+\be \label{e:gis:lim_eps_zero_phi}
+    \lim_{\veps\to 0} \cos\phi = \sqrt{\frac{2}{3}} \qquad\mbox{and}\qquad
+    \lim_{\veps\to 0} \sin\phi = \frac{1}{\sqrt{3}} .
+\ee
+Now, for any $\phi\in{}[0,\pi/2)$ , we have, according to the definition
+(\ref{e:gis:def_incompl_elliptic_int}) of $F$,
+\be
+    F(\phi, 1) = \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - \sin^2\vartheta}}
+        = \int_0^\phi \frac{\D\vartheta}{\cos\vartheta}
+        = \ln\left( \frac{1 + \sin\phi}{\cos\phi} \right) .
+\ee
+In view of (\ref{e:gis:lim_eps_zero_phi}), we conclude that in the present
+case
+\be
+    \lim_{\veps\to 0} F(\phi, k) = \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right) .
+\ee
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 An exact study of the behaviour of $\Delta\ph$ when $b \to b_{\rm crit}^+$,
