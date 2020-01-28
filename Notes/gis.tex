@@ -943,7 +943,7 @@ where
 Note that one can have $|\Delta\ph| > 2\pi$; in such a case, the null geodesic
 is winding around the black hole before leaving to infinity. We therefore introduce
 the \defin{winding number}\index{winding!number!of null geodesic} $n\in\mathbb{Z}$ by
-\be
+\be \label{e:gis:def_Dph_bar}
     \Delta\ph =: \overline{\Delta\ph} + 2\pi n \quad
     \mbox{with} \quad
     \begin{cases}
@@ -954,7 +954,7 @@ the \defin{winding number}\index{winding!number!of null geodesic} $n\in\mathbb{Z
 Note that $n\geq 0$ for $L > 0$ and $n\leq 0$ for $L<0$.
 We then define the \defin{deflection angle}\index{deflection!angle}
 $\Theta$ by
-\be \label{e:ges:def_deflection_angle}
+\be \label{e:gis:def_deflection_angle}
     \Theta := \overline{\Delta\ph} - \epsilon_L \pi .
 \ee
 Let us recall that $\epsilon_L = \pm 1$ is the sign of the
@@ -1099,12 +1099,12 @@ where $K(k)$ is the
 When $k\to 1$, $K(k)$ is diverging with the following behaviour\footnote{See e.g. Eq.~(112.1) of Ref.~\cite{ByrdF71} with
 $k' = \sqrt{1-k^2}$ or Eq.~(17.3.26) of
 Ref.~\cite{AbramS72} with $m = k^2$ and $m_1 = 1 - k^2$.}:
-\be
+\be \label{e:gis:limk1_K}
     \lim_{k\to 1} \left[ K(k) - \ln\left(\frac{4}{\sqrt{1-k^2}}\right) \right] = 0 .
 \ee
 Given (\ref{e:gis:add_elliptic_int}) and (\ref{e:gis:def_psi}),
 we can rewrite (\ref{e:gis:Dph_F_psi_k}) as
-\be
+\be \label{e:gis:Dph_K_F_phi_k}
     \Delta\ph = \epsilon_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}}
     \, \left[ K(k) - F(\phi, k) \right],
 \ee
@@ -1160,25 +1160,71 @@ case
 \be
     \lim_{\veps\to 0} F(\phi, k) = \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right) .
 \ee
-
-%%%%%%%%%%%%%%%%%%%%%%%%%
-An exact study of the behaviour of $\Delta\ph$ when $b \to b_{\rm crit}^+$,
-based on the expression of $\Delta\ph$ in terms of elliptic functions, leads
-to\footnote{See e.g. Eq.~(31) of Ref.~\cite{Darwi59}, where $\mu = \Theta$
-or Eq.~(268) in page~132 of Ref.~\cite{Chand83}, where $\delta D = b-b_{\rm crit}$ and
-$\Theta$ is the same as ours.}
-\be \label{e:ges:Dph_ln_b_bc}
-    \Delta\ph \sim \ln\left( \frac{648(7\sqrt{3} - 12) m}{b-b_{\rm crit}} \right)
-    \qquad\mbox{when}\quad b \to b_{\rm crit}^+ .
+Using this result, as well as (\ref{e:gis:limk1_K}), in Eq.~(\ref{e:gis:Dph_K_F_phi_k})
+yields
+\[
+    \Delta\ph \underset{\veps\to 0}{\sim} \epsilon_L
+    \frac{2 \sqrt{2}}{\sqrt{u_{\rm apo} - u_{\rm neg}}} \left[
+    \ln \left( \frac{4}{\sqrt{1 - k^2}} \right)
+    - \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right)  \right] .
+\]
+Now, $u_{\rm apo} - u_{\rm neg} \underset{\veps\to 0}{\sim} 1/3 - (-1/6) = 1/2$
+and, from Eq.~(\ref{e:gis:k_expand}),
+\[
+    1 - k^2 \underset{\veps\to 0}{\sim} 1 - (1 - 2\veps)^2
+            \underset{\veps\to 0}{\sim}  4 \veps .
+\]
+We then get
+\[
+    \Delta\ph \underset{\veps\to 0}{\sim}  4 \epsilon_L
+    \left[
+    \ln \left( \frac{2}{\sqrt{\veps}} \right)
+    - \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right)  \right] =
+    4 \epsilon_L \ln \left( \frac{2\sqrt{2}}{(\sqrt{3}+1)\sqrt{\veps}} \right)
+    = \epsilon_L \ln \left( \frac{64}{(\sqrt{3} + 1)^4 \veps^2} \right) .
+\]
+Expressing $\veps^2$ in terms of $b - b_{\rm crit}$ via Eq.~(\ref{e:ges:b_bc_eps})
+leads to the final formula expressing the divergence of $\Delta\ph$
+when $b\to b_{\rm crit}$:
+\be \label{e:gis:Dph_ln_b_bc}
+   \encadre{ \Delta\ph \underset{b\to b_{\rm crit}}{\sim}
+    \epsilon_L \ln\left( \frac{648(7\sqrt{3} - 12) m}{b-b_{\rm crit}} \right) } .
 \ee
-By combining Eq.~(\ref{e:ges:Dph_ln_b_bc}) and Eq.~(\ref{e:ges:Dph_Theta_n}),
-one can relate $b - b_{\rm crit}$ to the deflection angle $\Theta$
-and the number of turns $n$ performed by the geodesic around the black hole:
+Let us express $\Delta\ph$ is terms of the deflection angle $\Theta$ and
+the winding number $n$ through Eqs.~(\ref{e:gis:def_Dph_bar}) and
+(\ref{e:gis:def_deflection_angle}):
+\be
+    \Delta\ph = \Theta - \epsilon_L \pi + 2\pi n .
+\ee
+We can then deduce from (\ref{e:gis:Dph_ln_b_bc}) that
 \be \label{e:ges:b_bc_exp_Theta}
-   \encadre{ b - b_{\rm crit} \sim
-    \underbrace{648(7\sqrt{3} - 12)\mathrm{e}^{-\pi}}_{\simeq 3.482284} m \, \mathrm{e}^{-\Theta - 2\pi n}
-    \quad\mbox{when}\quad b \to b_{\rm crit}^+  }.
+   \encadre{ b - b_{\rm crit} \underset{b\to b_{\rm crit}}{\sim}
+    \underbrace{648(7\sqrt{3} - 12)\mathrm{e}^{-\pi}}_{\simeq 3.482284} m \, \mathrm{e}^{-\epsilon_L \Theta - 2\pi |n|}  }.
 \ee
+In the above writing, we have used the fact that the sign of $n$ is the same
+as that of $L$, so that $\epsilon_L n = |n|$.
+\begin{remark}
+A check of Eq.~(\ref{e:gis:Dph_ln_b_bc}) is obtained by comparing it with
+Eq.~(268) in Chap.~3 of Ref.~\cite{Chand83}, where $\delta D = b-b_{\rm crit}$ and
+$\Theta$ is the same as ours, or with Eq.~(7.4.54) of Ref.~\cite{FroloZ11},
+where $\Delta\ell = (b - b_{\rm crit})/(2 m)$.
+\end{remark}
+\begin{remark}
+Equation~(\ref{e:gis:Dph_ln_b_bc}) has been derived for $b > b_{\rm crit}$. In that sense,
+we could have written the limits as $b\to b_{\rm crit}^+$. One can establish
+a similar relation for null geodesics with $b< b_{\rm crit}$ \cite{GrallHW19}.
+There is still a logarithmic divergence of $\Delta\ph$, but with a different
+numerical factor (cf. Eq.~(4) in Ref.~\cite{GrallHW19}):
+\be
+    \Delta\ph \underset{b\to b_{\rm crit}^-}{\sim}
+    \epsilon_L \ln\left( \frac{648(26\sqrt{3} - 45) m}{b_{\rm crit} - b} \right) .
+\ee
+\end{remark}
+
+\begin{hist}
+Equation~(\ref{e:ges:b_bc_exp_Theta}) has been first derived by
+Charles Galton Darwin -- the grandson of the famous naturalist Charles Robert Darwin -- in 1959 \cite{Darwi59} (cf. Eqs.~(31) and (32) of Ref.~\cite{Darwi59}, where $\mu = \Theta$).
+\end{hist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
