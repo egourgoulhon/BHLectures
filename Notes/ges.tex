@@ -297,7 +297,7 @@ to completely reduce it to
 a system of first order equations.
 \end{remark}
 
-\subsection{Trajectories in the orbital plane}
+\subsection{Trajectories in the orbital plane} \label{s:ges:trajectories}
 
 If the conserved angular momentum vanishes, $L=0$, the equation of motion
 (\ref{e:ges:dot_ph}) implies that $\ph = \mathrm{const} = \ph_0$. The geodesic
@@ -371,21 +371,22 @@ where $g_2$ and $g_3$ are two constants entirely determined by the
 periods $\omega_1$ and $\omega_2$ of $\wp$. Indeed, via the
 the change of variables $v := u + 1/6$ and $\tilde\ph := \ph / 2$,
 Eq.~(\ref{e:ges:DuDph_trajectories}) is equivalent to
-\be
+\be \label{e:ges:dvdtph_cubic}
     \left( \frac{\D v}{\D\tilde\ph} \right)^2 =
         4 v^3 - \left[\frac{1}{3} - 4 \left( \frac{m\mu}{L} \right)^2 \right] v
         - \frac{1}{27} + 2 \left(\frac{m E}{L} \right) ^2
         - \frac{4}{3} \left( \frac{m\mu}{L} \right) ^2  ,
 \ee
-which is obviously of the type (\ref{e:ges:Weierstrass_eq}). The solution is
+which is obviously of type (\ref{e:ges:Weierstrass_eq}). The solution is
 thus
 \be
-    u = \wp\left( \frac{\ph}{2} + C; \omega_1, \omega_2 \right) + \frac{1}{6} ,
+    u = \frac{m}{r} = \wp\left( \frac{\ph}{2} + C; \omega_1, \omega_2 \right) + \frac{1}{6} ,
 \ee
 where $C\in \mathbb{C}$ is a contant and $\omega_1$ and $\omega_2$ are
 determined by $m$, $\mu$, $E$ and $L$.
-\item The second approach amounts to write the solution of
-Eq.~(\ref{e:ges:DuDph_trajectories}) as
+\item The second approach consists in noticing that the method of separation
+of variables can be applied easily to Eq.~(\ref{e:ges:DuDph_trajectories}),
+leading to
 \be
     \ph = \pm \int_{u_0}^u \frac{\D\bar{u}}{\sqrt{
      2 \bar{u}^3 - \bar{u}^2 + 2 \left( \frac{m\mu}{L} \right)^2 \bar{u}
@@ -395,18 +396,29 @@ Eq.~(\ref{e:ges:DuDph_trajectories}) as
 where $u_0$ and $\ph_0$ are two constants. One has then
 to express the integral in terms of the so-called \emph{incomplete integrals
 of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --}.
-We shall detail such a method for null geodesics in Sec.~\ref{s:gis:polar_equations}.
-Note that this approach leads to $\ph = \ph(r)$, whereas the method based of the
-Weierstrass function leads to $r = r(\ph)$. It is possible though to
-get the latter form by invoking the inverses of elliptic integrals, namely the
+We shall detail such a technique for null geodesics in Sec.~\ref{s:gis:polar_equations}.
+Note that this approach leads to $\ph = \ph(r)$, whereas the method involving the
+Weierstrass function leads to the standard ``polar equation'' form: $r = r(\ph)$. It is possible though to
+get the polar form by invoking the inverses of elliptic integrals, namely
 \emph{Jacobi elliptic functions}\index{Jacobi!elliptic function}\index{elliptic!Jacobi -- function}.
 \end{itemize}
 
-
+Once the solution $r=r(\ph)$ of Eq.~(\ref{e:ges:DuDph_trajectories})
+has been obtained, it can be injected into the equation for $t = t(\ph)$
+that can be deduced from the equations of motions (\ref{e:ges:dot_t})-(\ref{e:ges:dot_ph}):
+\be
+    \frac{\D t}{\D\ph} = \frac{E}{L} \frac{r(\ph)^3}{r(\ph) - 2 m} .
+\ee
+This is an ordinary differential equation for $t=t(\ph)$, the solution of
+which amounts to finding a primitive with respect to $\ph$ of the
+right-hand side. Unfortunately, this is not an easy task in general, the function
+$r(\ph)$ being quite involved, except for circular orbits ($r(\ph)=\mathrm{const}$).
 
 In what follows, we discuss separately the resolution of
-the system (\ref{e:ges:dot_t})-(\ref{e:ges:dot_r_square}) for timelike geodesics
-(Sec.~\ref{s:ges:timelike}) and for null ones (Chap.~\ref{s:gis}).
+the system (\ref{e:ges:dot_t})-(\ref{e:ges:dot_r_square}) or of
+Eq.~(\ref{e:ges:DuDph_trajectories})
+for timelike geodesics
+(Sec.~\ref{s:ges:timelike}) and for null geodesics (Chap.~\ref{s:gis}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1172,42 +1184,49 @@ We get, from Eqs.~(\ref{e:ges:1d_motion_timelike})-(\ref{e:ges:V_eff_timelike}),
     \frac{\D r}{\D\tau} = \pm
     \sqrt{ \veps^2 - \left(1 - \frac{2m}{r}\right) \left( 1 + \frac{\ell^2}{r^2} \right) } .
 \ee
-Using $\D\ph/\D r = \D\ph /\D\tau \times \D\tau/\D r$ and expression
-(\ref{e:ges:Dph_Dtau}) for $\D\ph /\D\tau$, we obtain the equation governing
-the shape of the orbit in the plane $\th=\pi/2$:
-\be \label{e:ges:dphidr_general_orbit}
-    \encadre{ \frac{\D \ph}{\D r} = \pm \frac{\ell}{r^2}
-        \left[ \veps^2 - \left(1 - \frac{2m}{r}\right) \left( 1 + \frac{\ell^2}{r^2} \right) \right] ^{-1/2} } .
+
+The equation governing the trajectory of $\Li$ in the orbital is
+Eq.~(\ref{e:ges:DuDph_trajectories}), which we can recast in terms
+of $\veps$ and $\ell$:
+\be  \label{e:ges:dudph_timelike}
+    \frac{\D u}{\D\ph}  = \pm \sqrt{ 2 u^3 - u^2 + 2 \left( \frac{m}{\ell} \right)^2 u
+    + \left( \frac{m \veps}{\ell} \right)^2 - \left( \frac{m}{\ell} \right)^2  } .
 \ee
+Let us recall that $u := m/r$ and that various methods for solving this
+differential equation have been briefly discussed in Sec.~\ref{s:ges:trajectories}.
+
 \begin{remark}
 Far from the black hole, i.e. in the region $r\gg m$, one can easily recover
-the Newtonian orbits from this formula. Indeed, according to
+the Newtonian orbits from Eq.~(\ref{e:ges:dudph_timelike}). Indeed, according to
 Eq.~(\ref{e:ges:veps_far}), $\veps = 1 + \veps_0$, where $\veps_0 = v^2/2 -m/r$  is
-the Newtonian mechanical energy and obeys $|\veps_0|\ll 1$, so that $\veps^2 \simeq 1 + 2\veps_0$
-and the first order expansion of (\ref{e:ges:dphidr_general_orbit}) results in
-\[
-    \frac{\D \ph}{\D r} \simeq \pm \frac{\ell}{r^2}
-        \left( 2\veps_0 +  \frac{2m}{r} - \frac{\ell^2}{r^2} \right) ^{-1/2} .
-\]
-Introducing $u := 1/r$, as well as the constants
-\be
-    p := \frac{\ell^2}{m} \qquad\mbox{and}\qquad
-    e := \sqrt{1 + 2 \frac{\veps_0 \ell}{m^2}},
+the Newtonian mechanical energy per unit mass. It obeys $|\veps_0|\ll 1$, so that $\veps^2 \simeq 1 + 2\veps_0$.
+Moreover, for $r\gg m$, $u\ll 1$ and we can neglect the $u^3$ term in front
+of the $u^2$ one in Eq.~(\ref{e:ges:dudph_timelike}). Hence Eq.~(\ref{e:ges:dudph_timelike})
+reduces to
+\be \label{e:ges:dudph_Newt_prov}
+     \frac{\D u}{\D\ph} \simeq \pm \sqrt{ 2 \left( \frac{m}{\ell} \right)^2 \veps_0 - u^2
+     + 2 \left( \frac{m}{\ell} \right)^2 u } .
 \ee
-this relation can rewritten as
+Let us introduce the constants
+\be \label{e:ges:def_p_e}
+    p := \frac{\ell^2}{m} \qquad\mbox{and}\qquad
+    e := \sqrt{1 + 2 \frac{\veps_0 \ell^2}{m^2}} .
+\ee
+Then Eq.~(\ref{e:ges:dudph_Newt_prov}) can be rewritten as
 \[
-    \frac{\D \ph}{\D u} = \pm \frac{\frac{p}{e}}{\sqrt{1 - \left(\frac{pu-1}{e}\right) ^2}} ,
+    \frac{\D \ph}{\D u} = \pm \frac{\frac{p}{m e}}{\sqrt{1 - \left(\frac{\frac{p}{m}u-1}{e}\right) ^2}} ,
 \]
 which is readily integrated into
 \[
-    \ph = \pm \arccos \left(\frac{pu-1}{e}\right) + \ph_0 ,
+    \ph = \pm \arccos \left(\frac{\frac{p}{m}u-1}{e}\right) + \ph_0 ,
 \]
-where $\ph_0$ is a constant. We have then $pu = 1 + e\cos(\ph-\ph_0)$, or
+where $\ph_0$ is a constant. We have then $\frac{p}{m} u = 1 + e\cos(\ph-\ph_0)$, or
 equivalently,
-\be
+\be \label{e:ges:sol_Newt_ellipse}
     r = \frac{p}{1 + e\cos(\ph-\ph_0)}
 \ee
-Since $e<1$ (for $\veps < 1$ implies $\veps_0 < 0$), we recognize the equation
+Assuming a bound orbit, we have $\veps < 1$, which implies $\veps_0 < 0$
+and, via Eq.~(\ref{e:ges:def_p_e}), $e<1$. We recognize then in (\ref{e:ges:sol_Newt_ellipse}) the equation
 of an ellipse of eccentricity $e$ and semi-latus rectum $p$. Hence Keplerian orbits\index{Keplerian!orbit}\index{orbit!Keplerian --} are recovered for $r\gg m$, as they should.
 \end{remark}
 
@@ -1219,7 +1238,22 @@ and causes the orbits to be not closed, as illustrated in Figs.~\ref{f:ges:orbit
 \ref{f:ges:orbit_e967_990_l42}.
 
 
-
+\begin{hist}
+It is quite remarkable that the general solution to the geodesic motion
+Schwarzschild spacetime\footnote{More precisely: in the $\M_{\rm I}$ region
+of Schwarzschild spacetime.} has been given as early as May 1916 by
+Johannes Droste\index{Droste, J.}, in the very same article \cite{Drost1917} in which
+he derived the Schwarzschild solution, independently of Karl Schwarzschild
+(cf. historical note on p.~\pageref{h:sch:Schwarzschild_sol}).
+Droste derived the equations of geodesic motion using $t$ as the parameter
+along the geodesics and he formed Eq.~(\ref{e:ges:DuDph_trajectories}) governing
+the trajectories in the orbital plane\footnote{The link between Droste's notations
+and ours is $\alpha=2m$, $x=2u$, $z = 2u - 1/3$, $A = \mu^2/E^2$ and $B= L/E$.}.
+He presented the solutions to it
+via the Weierstrass function\index{Weierstrass elliptic function}\index{elliptic!Weierstrass -- function} $\wp$ (cf. Sec.~\ref{s:ges:trajectories}).
+He classified the solutions in terms of the roots of the cubic polynomial
+in $v$ that appears in the right-hand side of Eq.~(\ref{e:ges:dvdtph_cubic}).
+\end{hist}
 
 
 
