@@ -297,6 +297,113 @@ to completely reduce it to
 a system of first order equations.
 \end{remark}
 
+\subsection{Trajectories in the orbital plane}
+
+If the conserved angular momentum vanishes, $L=0$, the equation of motion
+(\ref{e:ges:dot_ph}) implies that $\ph = \mathrm{const} = \ph_0$. The geodesic
+$\Li$ is then confined to the 2-dimensional timelike surface
+$(\th, \ph) = (\pi/2,\ph_0)$, which is spanned by the coordinates $(t, r)$.
+One says that $\Li$ is a \defin{radial geodesic}\index{radial!geodesic}.
+
+In the remainder of this section, we discuss the opposite case, namely we
+assume
+\be
+    L \not = 0 .
+\ee
+We have stressed above that $\ph$ is then a strictly monotonic function of $\lambda$,
+increasing (resp. decreasing) continously along $\Li$ for $L>0$ (resp. $L<0$).
+Consequently,
+\begin{greybox}
+Along any timelike or null geodesic with $L\not =0$,
+$\ph$ can be chosen as a parameter, provided one does not restrict its
+range to $(0,2\pi)$.
+\end{greybox}
+Contrary to $\lambda$, $\ph$ is not in general an affine parameter of $\Li$.
+Indeed the dependency $r = r(\lambda)$ in Eq.~(\ref{e:ges:dot_ph})
+does not correspond to an affine relation between $\ph$ and $\lambda$, except for
+$r(\lambda) = \mathrm{const}$ (case of circular orbits).
+
+Let us use Eq.~(\ref{e:ges:dot_ph}) to write
+$\D r/ \D\lambda = \D r/\D\ph \times \D\ph/\D\lambda = L/r^2 \D r /\D\ph$
+and substitute this expression into the equation of motion
+(\ref{e:ges:dot_r_square}). We get
+\be
+    \frac{1}{r^4} \left( \frac{\D r}{\D\ph} \right)^2 =
+     \frac{2m}{r^3} - \frac{1}{r^2} + 2  \left( \frac{\mu}{L} \right)^2 \frac{m}{r}
+     + \left( \frac{E}{L} \right)^2 - \left( \frac{\mu}{L} \right)^2 .
+\ee
+To simplify this equation, it is natural to introduce the dimensionless variable
+\be
+    \encadre{ u := \frac{m}{r} }
+\ee
+instead of $r$. We get then
+\be \label{e:ges:DuDph_trajectories}
+    \encadre{
+    \frac{\D u}{\D\ph}  = \pm \sqrt{ 2 u^3 - u^2 + 2 \left( \frac{m\mu}{L} \right)^2 u
+    + \left( \frac{m E}{L} \right)^2 - \left( \frac{m \mu}{L} \right)^2  } }.
+\ee
+This differential equation determines entirely the $(r,\ph)$-part of the geodesic $\Li$,
+which we shall call the
+\defin{trajectory of $\Li$ in the orbital plane}\index{trajectory!of a geodesic}.
+The term ``orbital plane'' is a slight abuse of language for
+the 2-dimensional \emph{surface} $(t,\th) = (t_0, \pi/2)$, where $t_0$ is a constant.
+
+In general Eq.~(\ref{e:ges:DuDph_trajectories}) is not solvable in terms of
+elementary functions. The exceptions are circular orbits ($u = \mathrm{const}$, the
+constant being one of the roots of the cubic polynomial under the square root)
+and the critical null geodesics, which we shall discuss in
+Sec.~\ref{s:gis:crit_geod}.
+For the generic case, exact solutions are expressible in terms of
+some non-elementary special functions; there
+are basically two strategies:
+\begin{itemize}
+\item The first one is to invoke the
+\emph{Weierstrass elliptic function}\index{Weierstrass elliptic function}\index{elliptic!Weierstrass -- function}\footnote{The character $\wp$
+is a kind of calligraphic lowercase p, which is standard to denote this function.}
+$\wp(z; \omega_1,\omega_2)$, which is a doubly-periodic meromorphic function of
+the complex variable $z$, of periods $\omega_1\in\mathbb{C}$ and $\omega_2\in\mathbb{C}$.
+Among the many properties of this function, the one relevant here is that
+$\wp$ is a solution of the differential equation
+\be \label{e:ges:Weierstrass_eq}
+    \left( \wp'(z) \right)^2  = 4 \wp(z)^3 - g_2 \wp(z) - g_3,
+\ee
+where $g_2$ and $g_3$ are two constants entirely determined by the
+periods $\omega_1$ and $\omega_2$ of $\wp$. Indeed, via the
+the change of variables $v := u + 1/6$ and $\tilde\ph := \ph / 2$,
+Eq.~(\ref{e:ges:DuDph_trajectories}) is equivalent to
+\be
+    \left( \frac{\D v}{\D\tilde\ph} \right)^2 =
+        4 v^3 - \left[\frac{1}{3} - 4 \left( \frac{m\mu}{L} \right)^2 \right] v
+        - \frac{1}{27} + 2 \left(\frac{m E}{L} \right) ^2
+        - \frac{4}{3} \left( \frac{m\mu}{L} \right) ^2  ,
+\ee
+which is obviously of the type (\ref{e:ges:Weierstrass_eq}). The solution is
+thus
+\be
+    u = \wp\left( \frac{\ph}{2} + C; \omega_1, \omega_2 \right) + \frac{1}{6} ,
+\ee
+where $C\in \mathbb{C}$ is a contant and $\omega_1$ and $\omega_2$ are
+determined by $m$, $\mu$, $E$ and $L$.
+\item The second approach amounts to write the solution of
+Eq.~(\ref{e:ges:DuDph_trajectories}) as
+\be
+    \ph = \pm \int_{u_0}^u \frac{\D\bar{u}}{\sqrt{
+     2 \bar{u}^3 - \bar{u}^2 + 2 \left( \frac{m\mu}{L} \right)^2 \bar{u}
+    + \left( \frac{m E}{L} \right)^2 - \left( \frac{m \mu}{L} \right)^2  } }
+    + \ph_0 ,
+\ee
+where $u_0$ and $\ph_0$ are two constants. One has then
+to express the integral in terms of the so-called \emph{incomplete integrals
+of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --}.
+We shall detail such a method for null geodesics in Sec.~\ref{s:gis:polar_equations}.
+Note that this approach leads to $\ph = \ph(r)$, whereas the method based of the
+Weierstrass function leads to $r = r(\ph)$. It is possible though to
+get the latter form by invoking the inverses of elliptic integrals, namely the
+\emph{Jacobi elliptic functions}\index{Jacobi!elliptic function}\index{elliptic!Jacobi -- function}.
+\end{itemize}
+
+
+
 In what follows, we discuss separately the resolution of
 the system (\ref{e:ges:dot_t})-(\ref{e:ges:dot_r_square}) for timelike geodesics
 (Sec.~\ref{s:ges:timelike}) and for null ones (Chap.~\ref{s:gis}).
