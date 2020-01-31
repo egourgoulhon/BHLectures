@@ -32,7 +32,7 @@ $(\M,\w{g})$. We shall assume that $\Li$ is causal, i.e. either timelike or null
 shown in Sec.~\ref{s:geo:def}, a geodesic cannot be partly timelike and partly
 null.}. It therefore can be considered as the worldline
 of some particle $\mathscr{P}$, either massive
-($\Li$ timelike) or masseless ($\Li$ null).
+($\Li$ timelike) or massless ($\Li$ null).
 
 
 \subsection{First integrals of motion} \label{s:ges:fiom}
@@ -56,7 +56,7 @@ are constant along the geodesic $\Li$.
 The scalar $E$ is called $\mathscr{P}$'s
 \defin{conserved energy}\index{conserved!energy}\index{energy!conserved --}
 or \defin{energy at infinity}\index{energy!at infinity},
-while $L$ is called $\mathscr{P}$'s \defin{conserved angular momentum}\index{conserved!angular momuntum}\index{angular momentum!conserved --}
+while $L$ is called $\mathscr{P}$'s \defin{conserved angular momentum}\index{conserved!angular momentum}\index{angular momentum!conserved --}
 or \defin{angular momentum at infinity}\index{angular momentum!at infinity}.
 \end{greybox}
 \begin{proof}
@@ -311,7 +311,7 @@ assume
     L \not = 0 .
 \ee
 We have stressed above that $\ph$ is then a strictly monotonic function of $\lambda$,
-increasing (resp. decreasing) continously along $\Li$ for $L>0$ (resp. $L<0$).
+increasing (resp. decreasing) continuously along $\Li$ for $L>0$ (resp. $L<0$).
 Consequently,
 \begin{greybox}
 Along any timelike or null geodesic with $L\not =0$,
@@ -333,14 +333,14 @@ and substitute this expression into the equation of motion
      + \left( \frac{E}{L} \right)^2 - \left( \frac{\mu}{L} \right)^2 .
 \ee
 To simplify this equation, it is natural to introduce the dimensionless variable
-\be
+\be \label{e:ges:def_u}
     \encadre{ u := \frac{m}{r} }
 \ee
-instead of $r$. We get then
+instead of $r$. We then get
 \be \label{e:ges:DuDph_trajectories}
     \encadre{
-    \frac{\D u}{\D\ph}  = \pm \sqrt{ 2 u^3 - u^2 + 2 \left( \frac{m\mu}{L} \right)^2 u
-    + \left( \frac{m E}{L} \right)^2 - \left( \frac{m \mu}{L} \right)^2  } }.
+    \left( \frac{\D u}{\D\ph} \right)^2 = 2 u^3 - u^2 + 2 \left( \frac{m\mu}{L} \right)^2 u
+    + \left( \frac{m E}{L} \right)^2 - \left( \frac{m \mu}{L} \right)^2   }.
 \ee
 This differential equation determines entirely the $(r,\ph)$-part of the geodesic $\Li$,
 which we shall call the
@@ -350,7 +350,7 @@ the 2-dimensional \emph{surface} $(t,\th) = (t_0, \pi/2)$, where $t_0$ is a cons
 
 In general Eq.~(\ref{e:ges:DuDph_trajectories}) is not solvable in terms of
 elementary functions. The exceptions are circular orbits ($u = \mathrm{const}$, the
-constant being one of the roots of the cubic polynomial under the square root)
+constant being one of the roots of the cubic polynomial in $u$ in the right-hand side)
 and the critical null geodesics, which we shall discuss in
 Sec.~\ref{s:gis:crit_geod}.
 For the generic case, exact solutions are expressible in terms of
@@ -377,15 +377,15 @@ Eq.~(\ref{e:ges:DuDph_trajectories}) is equivalent to
         - \frac{1}{27} + 2 \left(\frac{m E}{L} \right) ^2
         - \frac{4}{3} \left( \frac{m\mu}{L} \right) ^2  ,
 \ee
-which is obviously of type (\ref{e:ges:Weierstrass_eq}). The solution is
-thus
+which is obviously of type (\ref{e:ges:Weierstrass_eq}) (no square in the cubic polynomial).
+The solution is thus
 \be
     u = \frac{m}{r} = \wp\left( \frac{\ph}{2} + C; \omega_1, \omega_2 \right) + \frac{1}{6} ,
 \ee
-where $C\in \mathbb{C}$ is a contant and $\omega_1$ and $\omega_2$ are
+where $C\in \mathbb{C}$ is a constant and $\omega_1$ and $\omega_2$ are
 determined by $m$, $\mu$, $E$ and $L$.
 \item The second approach consists in noticing that the method of separation
-of variables can be applied easily to Eq.~(\ref{e:ges:DuDph_trajectories}),
+of variables can easily be applied to Eq.~(\ref{e:ges:DuDph_trajectories}),
 leading to
 \be
     \ph = \pm \int_{u_0}^u \frac{\D\bar{u}}{\sqrt{
@@ -393,12 +393,13 @@ leading to
     + \left( \frac{m E}{L} \right)^2 - \left( \frac{m \mu}{L} \right)^2  } }
     + \ph_0 ,
 \ee
-where $u_0$ and $\ph_0$ are two constants. One has then
-to express the integral in terms of the so-called \emph{incomplete integrals
+where $u_0$ and $\ph_0$ are two constants, and the $\pm$ sign can be $+$
+on some parts of the geodesic $\Li$ and $-$ on some other parts of $\Li$.
+The integral in right-hand side is expressible in terms of the so-called \emph{incomplete integrals
 of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --}.
-We shall detail such a technique for null geodesics in Sec.~\ref{s:gis:polar_equations}.
+We shall detail such a technique for null geodesics in Sec.~\ref{s:gis:planar_trajectories}.
 Note that this approach leads to $\ph = \ph(r)$, whereas the method involving the
-Weierstrass function leads to the standard ``polar equation'' form: $r = r(\ph)$. It is possible though to
+Weierstrass function leads to the ``polar equation'' form: $r = r(\ph)$. It is possible though to
 get the polar form by invoking the inverses of elliptic integrals, namely
 \emph{Jacobi elliptic functions}\index{Jacobi!elliptic function}\index{elliptic!Jacobi -- function}.
 \end{itemize}
@@ -488,7 +489,7 @@ leading to some orbital instability, as we shall see in Sec.~\ref{s:ges:circular
 
 In $\M_{\rm I}$, where the Killing vector $\w{\xi}$ is timelike,
 we may introduce the \defin{static observer}\index{static!observer}
-$\Obs$, whose 4-velocity $\w{u}_{\Obs}$ is colinear to $\w{\xi}$:
+$\Obs$, whose 4-velocity $\w{u}_{\Obs}$ is collinear to $\w{\xi}$:
 \be
     \w{u}_{\Obs} = \left( 1 - \frac{2m}{r} \right) ^{-1/2} \, \w{\xi} ,
 \ee
@@ -566,7 +567,7 @@ coincide and correspond to an inflection point of $V_{\ell}$ (the circled
 dot in Fig.~\ref{f:ges:eff_pot_zoom}).
 
 For $|\ell| < \ell_{\rm crit}$, there is no extremum and
-$V_{\ell}$ is a scritly increasing function of $r$.
+$V_{\ell}$ is a strictly increasing function of $r$.
 
 
 To get a full solution in terms of the Schwarzschild-Droste coordinates,
@@ -900,7 +901,7 @@ $r_{\rm circ}^-(\ell)$ decreases from $6 m$ to $3 m$ (cf. Fig.~\ref{f:ges:ell_ci
 \begin{greybox}
 Circular orbits in Schwarzschild spacetime exist for all values of $r>3m$.
 Those with $r<6m$ are unstable and those with $r>6m$ are stable. The marginal
-case $r=6m$ is called the \defin{innermost stable circular orbit}\index{stable!circular orbit}, often abriged as \defin{ISCO}\index{ISCO}.
+case $r=6m$ is called the \defin{innermost stable circular orbit}\index{stable!circular orbit}, often abridged as \defin{ISCO}\index{ISCO}.
 \end{greybox}
 
 \begin{remark}
@@ -956,7 +957,7 @@ From Fig.~\ref{f:ges:ener_circ_orbit}, we notice that
     r > 4 m \iff \veps < 1 \iff E < \mu .
 \ee
 This corresponds to \defin{bound orbits}\index{bound!orbit}\index{orbit!bound --},
-i.e. to geodesics that, if slightly pertubed, cannot reach the asymptotically
+i.e. to geodesics that, if slightly perturbed, cannot reach the asymptotically
 flat region $r\gg 2m$, since $E \geq \mu$ there. Indeed, when
 $r\to +\infty$, the Killing vector $\w{\xi}$ can be interpreted
 as the 4-velocity of some asymptotically inertial observer (at rest with
@@ -1079,7 +1080,7 @@ by the orbiting observer/particle $T_{\mathscr{P},\rm ISCO}$.}
 This formula is identical to that of Newtonian gravity (Kepler's third law for circular
 orbits) for all values of $r$. This is a mere coincidence, valid only for
 Schwarzschild-Droste coordinates. Only for $r\gg m$, i.e. in the weak-field limit, this
-agreement is physically meaningfull; it can be then used to interpret the
+agreement is physically meaningful; it can be then used to interpret the
 parameter $m$ as the \emph{gravitational mass}\index{mass!gravitational --}\index{mass!parameter of Schwarzschild solution} of Schwarzschild spacetime,
 as mentioned in Sec.~\ref{s:sch:mass_parameter}.
 \end{remark}
@@ -1127,7 +1128,7 @@ and the second one that the particle $\mathscr{P}$ is trapped in this well.
 Indeed, $0 < \veps < 1$  makes the right-hand of Eq.~(\ref{e:ges:1d_motion_timelike}) negative, so
 that the region $r\to +\infty$, where $V_{\ell}(r)\to 0$,
 cannot be reached. We have also argued in Sec.~\ref{s:ges:circular_orbits}
-that $\veps < 1$ is forbiden in the region $r\to +\infty$ on physical
+that $\veps < 1$ is forbidden in the region $r\to +\infty$ on physical
 grounds [cf. the discussion below Eq.~(\ref{e:ges:r_marginally_bound})].
 
 \begin{figure}
@@ -1163,7 +1164,7 @@ Note that the left and right figures have different scales.
 
 
 In the potential well, the $r$-coordinate along $\Li$ varies between two
-extrema: a mimimum $r_{\rm per}$, for \defin{periastron}\index{periastron} (or \defin{pericenter}\index{pericenter} or \defin{periapsis}\index{periapsis}), and
+extrema: a minimum $r_{\rm per}$, for \defin{periastron}\index{periastron} (or \defin{pericenter}\index{pericenter} or \defin{periapsis}\index{periapsis}), and
 a maximum
 $r_{\rm apo}$, for \defin{apoastron}\index{apoastron}
 (or \defin{apocenter}\index{apocenter} or \defin{apoapsis}\index{apoapsis}) (cf. Figs.~\ref{f:ges:eff_pot_bound} and \ref{f:ges:orbit_e973_l42}). Being extrema of $r(\tau)$,
@@ -1177,7 +1178,7 @@ This is a cubic equation in $r^{-1}$, which has three real positive roots, corre
 to the three intersections of the curve $V_{\ell}(r)$ with the horizontal
 line at $(\veps^2-1)/2$ in Fig.~\ref{f:ges:eff_pot_bound}. However the smaller
 root has to be disregarded as a periastron since it would lead to a motion with
-$V_{\ell}(r) > (\veps^2-1)/2$, which is forbiden by Eq.~(\ref{e:ges:1d_motion_timelike}).
+$V_{\ell}(r) > (\veps^2-1)/2$, which is forbidden by Eq.~(\ref{e:ges:1d_motion_timelike}).
 
 We get, from Eqs.~(\ref{e:ges:1d_motion_timelike})-(\ref{e:ges:V_eff_timelike}),
 \be
@@ -1186,13 +1187,12 @@ We get, from Eqs.~(\ref{e:ges:1d_motion_timelike})-(\ref{e:ges:V_eff_timelike}),
 \ee
 
 The equation governing the trajectory of $\Li$ in the orbital is
-Eq.~(\ref{e:ges:DuDph_trajectories}), which we can recast in terms
-of $\veps$ and $\ell$:
+Eq.~(\ref{e:ges:DuDph_trajectories}), which we can recast as
 \be  \label{e:ges:dudph_timelike}
     \frac{\D u}{\D\ph}  = \pm \sqrt{ 2 u^3 - u^2 + 2 \left( \frac{m}{\ell} \right)^2 u
     + \left( \frac{m \veps}{\ell} \right)^2 - \left( \frac{m}{\ell} \right)^2  } .
 \ee
-Let us recall that $u := m/r$ and that various methods for solving this
+Let us recall that $u := m/r$ and that methods for solving this
 differential equation have been briefly discussed in Sec.~\ref{s:ges:trajectories}.
 
 \begin{remark}
@@ -1258,24 +1258,25 @@ he derived the Schwarzschild solution, independently of Karl Schwarzschild
 (cf. historical note on p.~\pageref{h:sch:Schwarzschild_sol}).
 Droste derived the equations of geodesic motion in Schwarzschild-Droste coordinates
 $(t, r, \th,\ph)$, using $t$ as the parameter
-along the geodesics, and he formed Eq.~(\ref{e:ges:DuDph_trajectories}) governing
+along the geodesics, as well as the equation governing
 the trajectories in the orbital plane\footnote{The link between Droste's notations
 and ours is $\alpha=2m$, $x=2u$, $z = 2u - 1/3$, $A = \mu^2/E^2$ and $B= L/E$.}.
-He presented the solutions to it
-via the Weierstrass function\index{Weierstrass elliptic function}\index{elliptic!Weierstrass -- function} $\wp$ (cf. Sec.~\ref{s:ges:trajectories}).
+He gave the solutions for the trajectories
+in terms of the Weierstrass elliptic function\index{Weierstrass elliptic function}\index{elliptic!Weierstrass -- function} $\wp$ (cf. Sec.~\ref{s:ges:trajectories}).
 He classified the solutions in terms of the roots of the cubic polynomial
 in $v$ that appears in the right-hand side of Eq.~(\ref{e:ges:dvdtph_cubic}).
-He noticed that it takes an infinite amount of coordinate time $t$ for a particle
+Droste noticed that it takes an infinite amount of coordinate time $t$ for a particle
 to reach $r=2m$ (cf. left panel of Fig.~\ref{f:ges:radial_infall}) and
-concluded incorrectly that ``a moving particle outside sphere $r=2m$ can
+he concluded incorrectly that ``a moving particle outside sphere $r=2m$ can
 never pass that sphere''. He missed that this is only a coordinate effect,
 reflecting the pathology of Schwarzschild-Droste coordinates at the horizon.
 One shall keep in mind that in 1916, general relativity was just in its infancy
-and distangling coordinate artifacts from physical effects was not so obvious,
+and disentangling coordinate artefacts from physical effects was not so obvious,
 especially regarding time.
 One can be amused by the fact that the first analysis of the static
-black hole of general relativity made it appear as an object in which no particle
-can penetrate...
+black hole of general relativity made the black hole appear, not as an object
+from which no particle may escape, but as an object in which no particle
+may penetrate...
 For a detailed account about the history of geodesic motion in
 Schwarzschild spacetime see Ref.~\cite{Eisen87}.
 \end{hist}

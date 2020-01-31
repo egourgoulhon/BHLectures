@@ -53,7 +53,7 @@ is the affine parameter associated with the 4-momentum $\w{p}$ of $\mathscr{P}$
 (cf. Eq.~(\ref{e:ges:def_lambda})) and that it increases towards the future,
 $\w{p}$ being future-oriented (cf. Sec.~\ref{s:ges:eq_to_be_solved}).
 
-\subsection{Radial null geodesics}
+\subsection{Radial null geodesics} \label{s:gis:radial}
 
 Let us first discuss the case of a radial geodesic: $L=0$.
 Equation (\ref{e:ges:dot_ph_null}) yields then naturally $\ph=\mathrm{const}$,
@@ -82,7 +82,7 @@ the solution of which is given by Eq.~(\ref{e:sch:t_r_radial_null_geod}):
 \begin{remark}
 Since $\lambda$ is an affine parameter and $E$ is constant,
 Eq.~(\ref{e:ges:r_lambda_radial_null})
-shows explicitely that $r$ is another affine parameter along the radial null
+shows explicitly that $r$ is another affine parameter along the radial null
 geodesics of Schwarzschild spacetime --- a result that we had already
 obtained in Sec.~\ref{s:sch:rad_null_geod}.
 \end{remark}
@@ -138,7 +138,7 @@ has the shape of the first integral of the
 \defin{effective potential}\index{effective!potential!null geodesic}
 $U(r)$. The main difference is that $U(r)$ does not depend on $L$, contrary
 to the effective potential $V_\ell(r)$ for timelike geodesics. Actually,
-$U(r)$ is a fonction of $r$ and the black hole mass $m$ only.
+$U(r)$ is a function of $r$ and the black hole mass $m$ only.
 Null geodesics are thus entirely determined by the parameter
 $b$ and $\epsilon_L = \pm 1$.
 As soon as the null geodesic $\Li$ has a part in the
@@ -325,7 +325,7 @@ null geodesic terminates at the central singularity ($r=0$).
 \end{greybox}
 Note that for $r<2m$, i.e. in the black hole region, $r$
 is always a monotonic function, since it has been demonstrated in
-Sec.~\ref{s:ges:eq_to_be_solved} that $r(\lambda)$ is scrictly
+Sec.~\ref{s:ges:eq_to_be_solved} that $r(\lambda)$ is strictly
 decreasing. The impossibility of a turning point for $r<2m$ can also be
 graphically inferred from Fig.~\ref{f:gis:eff_pot_null}, which shows
 that the effective potential $U(r)$ is negative for $r<2m$,
@@ -392,8 +392,12 @@ the photon sphere (examples are geodesics 2 and 3 on Figs.~\ref{f:gis:eff_pot_nu
 and \ref{f:gis:null_geod}), but then it has neither an apoastron nor a periastron
 \end{remark}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Trajectories of null geodesics in the equatorial plane}
+\section{Trajectories of null geodesics in the equatorial plane} \label{s:gis:planar_trajectories}
+
+In all this section, we assume $L\not = 0$, i.e. we consider non-radial
+null geodesics, the radial case having been discussed in Sec.~\ref{s:gis:radial}.
 
 Let us first recall the generic property of causal geodesics in Schwarzschild
 spacetime established in Sec.~\ref{s:ges:eq_to_be_solved} : for $L\not=0$,
@@ -406,46 +410,38 @@ $\D\ph/\D\tilde{\lambda} = \epsilon_L/r^2$, given that
 $\epsilon_L = \operatorname{sgn} L$ and $\tilde{\lambda}$ increases towards
 the future.
 \end{remark}
-By combining Eqs.~(\ref{e:ges:dot_ph_null_b}), (\ref{e:ges:dot_r_square_null_b})
-and (\ref{e:ges:eff_pot_null}), we get a differential equation governing
-the variation of $\ph$ in terms of $r$ along a null geodesic:
-\be \label{e:ges:dphi_dr_null}
-    \frac{\D\ph}{\D r} = \pm \frac{1}{r^2} \left( \frac{1}{b^2}
-        - \frac{1}{r^2} +  \frac{2m}{r^3}  \right) ^{-1/2} .
-\ee
-Note that the $\pm$ sign in the above equation results from a combination of
-(i) $\epsilon_L=\pm 1$ in Eq.~(\ref{e:ges:dot_ph_null_b}) and
-(ii) the $\pm$ sign that arises when taking the square
-root in Eq.~(\ref{e:ges:dot_r_square_null_b}). In other words, the $\pm$ sign
-in Eq.~(\ref{e:ges:dphi_dr_null}) is
-\begin{itemize}
-\item $+$ if (i) $L>0$ and $r$ is increasing (towards the future) along the geodesic
-$\Li$ at the considered point or (ii) $L<0$ and $r$ is decreasing along $\Li$;
-\item $-$ if (i) $L>0$ and $r$ is decreasing along $\Li$ or (ii)
-$L<0$ and $r$ is increasing along $\Li$.
-\end{itemize}
 
-Introducing the variable
-\be
-   \encadre{ u := \frac{m}{r} }
+\subsection{Differential equation}
+
+The equation governing the $(r,\ph)$-part of a null geodesic, named
+\emph{trajectory in the orbital plane} in Sec.~\ref{s:ges:trajectories},
+is the generic differential equation (\ref{e:ges:DuDph_trajectories})
+with $\mu$ (the particle's mass) set to zero and the ratio $E^2/L^2$ replaced
+by $1/b^2$ [cf. Eq.~(\ref{e:ges:def_b})]:
+\be \label{e:gis:du_dphi_null}
+   \encadre{ \left( \frac{\D u}{\D \ph} \right)^2 = P_b(u)  }
 \ee
-allows us to simplify Eq.~(\ref{e:ges:dphi_dr_null}):
-\be \label{e:ges:dphi_du_null}
-   \encadre{ \frac{\D\ph}{\D u} = \pm \frac{1}{\sqrt{2 u^3 - u^2 + (m/b)^2}} }
+where $u := m/r$ [Eq.~(\ref{e:ges:def_u})] and $P_b(u)$ stands for the cubic
+polynomial
+\be \label{e:ges:def_Pb_u}
+      \encadre{  P_b(u) := 2 u^3 - u^2 + \frac{m^2}{b^2} }
 \ee
+\begin{remark}
+Of course, Eq.~(\ref{e:gis:du_dphi_null}) can be recovered by combining
+Eqs.~(\ref{e:ges:dot_ph_null_b}), (\ref{e:ges:dot_r_square_null_b})
+and (\ref{e:ges:eff_pot_null}).
+\end{remark}
+
+
 
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{ges_polynomial_b_u.pdf}}
 \caption[]{\label{f:gis:polynomial_b_u} \footnotesize
-Graph of the cubic polynomial $P_b(u)$ defined by Eq.~(\ref{e:ges:def_Pb_u}).}
+Graph of the cubic polynomial $P_b(u) = 2 u^3 - u^2 + {m^2}/{b^2}$ [Eq.~(\ref{e:ges:def_Pb_u})].}
 \end{figure}
 
-The zeros of the cubic polynomial
-\be \label{e:ges:def_Pb_u}
-        P_b(u) := 2 u^3 - u^2 + \frac{m^2}{b^2}
-\ee
-correspond to points for which $\D\ph/\D u \to \pm \infty$,
-or equivalently $\D u /\D\ph \to 0$. They are thus stationary points
+The zeros of the polynomial $P_b(u)$
+correspond to points at which $\D u /\D\ph = 0$. They are thus stationary points
 for $u$, and hence for $r$. This can only occur at the circular photon
 orbit $r = \mathrm{const} = 3 m$ (then $b=b_{\rm crit}$)
 or at the periastron or apoastron discussed
@@ -470,7 +466,7 @@ one is physical and correspond to $r=3m$.
 \item If $\Delta>0$ $\iff$ $b > b_{\rm crit}$, $P_b(u)$ has three distinct
 real zeros (cf. the green and cyan curves
 in Fig.~\ref{f:gis:polynomial_b_u}); one of them, $u_{\rm neg}$ say, is
-negative and hence unphysical and the two others are positive, being nothing but
+negative, and hence unphysical, while the two others are positive, being nothing but
 \be \label{e:ges:def_u_per_apo}
     u_{\rm per} = \frac{m}{r_{\rm per}} \qquad\mbox{and}\qquad
     u_{\rm apo} = \frac{m}{r_{\rm apo}} ,
@@ -487,7 +483,7 @@ $P_b(u) =  2 u^3 - u^2 + {m^2}/{b^2}$ as functions of $b$, for
 $b\geq b_{\rm crit} \simeq 5.196\, m$.}
 \end{figure}
 
-Since they will be required in Sec.~\ref{s:gis:polar_equations}, let us
+Since they will be required in what follows, let us
 find explicit expressions for the three real zeros $u_{\rm neg}$,
 $u_{\rm per}$ and $u_{\rm apo}$ of $P_b(u)$ when $b > b_{\rm crit}$. The
 equation $P_b(u) = 0$ can be brought to a depressed form by the change
@@ -556,11 +552,8 @@ u_{\rm apo} & = \frac{1}{4} \left( 1 - 2 u_{\rm per}
 \end{align}
 \end{subequations}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Polar equations of null geodesics} \label{s:gis:polar_equations}
-
-For $b=b_{\rm crit}$, the differential equation (\ref{e:ges:dphi_du_null})
+For $b=b_{\rm crit}$, the differential equation (\ref{e:gis:du_dphi_null})
 can be integrated by means of elementary functions (Sec.~\ref{s:gis:crit_geod}),
 while for $b \not= b_{\rm crit}$,
 it requires elliptic integrals of the first kind (Sec.~\ref{s:gis:gener_geod}).
@@ -568,8 +561,8 @@ it requires elliptic integrals of the first kind (Sec.~\ref{s:gis:gener_geod}).
 \subsection{Critical null geodesics} \label{s:gis:crit_geod}
 
 Let us assume $b = b_{\rm crit} = 3\sqrt{3}\, m$.
-Then $P_b(u) = (u - 1/3)^2 (2u + 1/3)$ and Eq.~(\ref{e:ges:dphi_du_null})
-becomes
+Then $P_b(u) = (u - 1/3)^2 (2u + 1/3)$ and Eq.~(\ref{e:gis:du_dphi_null})
+is equivalent to
 \be \label{e:ges:dphi_du_null_bcrit}
     \frac{\D\ph}{\D u} = \pm \frac{1}{\left|u - \frac{1}{3}\right|
         \sqrt{2u+\frac{1}{3}}} .
@@ -641,7 +634,7 @@ When $\ph\to +\infty$, the geodesic rolls up indefinitely onto the photon
 orbit discussed in Sec.~\ref{s:ges:null_eff_pot}; this
 behaviour corresponds to the horizontal asymptote at $r=3m$ in
 the right part of Fig.~\ref{f:gis:null_r_phi_bcrit}.
-Note that the geodesic approaches very fastly the photon orbit, only a single
+Note that the geodesic approaches very fast the photon orbit, only a single
 path round to it being graphically visible in Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}.
 This is because the asymptotic expansion of relation~\eqref{e:ges:null_r_phi_tanh} is
 $r\sim 3m(1+ 6\mathrm{e}^{-\ph})$ when $\ph\to+\infty$.
@@ -649,10 +642,10 @@ $r\sim 3m(1+ 6\mathrm{e}^{-\ph})$ when $\ph\to+\infty$.
 It is worth stressing that Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos} describes both (i) the trace
 in the $(x,y)$-plane of a
 geodesic with $L>0$ (so that $\ph$ increases towards the future, cf. Eq.~(\ref{e:ges:dot_ph_null})) arising from $r\to + \infty$
-and spiraling inwards to the photon orbit
+and spiralling inwards to the photon orbit
 and (ii) the trace of a geodesic with $L<0$ (so that $\ph$ decays towards the future)
 arising from $r=r_{\rm em} > 3 m$, $\ph=\ph_{\rm em}>0$,
-spiraling outwards and escaping to $r\to +\infty$ as $\ph\to 0$. Had we restored the
+spiralling outwards and escaping to $r\to +\infty$ as $\ph\to 0$. Had we restored the
 $t$ dimension perpendicular to the $(x,y)$-plane in a 3d plot, these two geodesics would have
 clearly appeared distinct.
 
@@ -685,10 +678,10 @@ As for Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}, the curve depicted in
 Fig.~\ref{f:gis:null_b_crit_from_inf_L_neg} can be interpreted as the trace
 in the $(x,y)$-plane of two distinct
 geodesics: one with $L<0$ arising from $r\to + \infty$
-and spiraling inwards to the photon orbit when $\ph\to -\infty$
+and spiralling inwards to the photon orbit when $\ph\to -\infty$
 and another one with $L>0$
 arising from $r=r_{\rm em} > 3 m$, $\ph=\ph_{\rm em}<0$,
-spiraling outwards and escaping to $r\to +\infty$ as $\ph\to 0$.
+spiralling outwards and escaping to $r\to +\infty$ as $\ph\to 0$.
 
 \begin{figure}
 \centerline{
@@ -736,7 +729,7 @@ from $r=r_{\rm em} < 3 m$, $\ph=\ph_{\rm em}<0$ and inspiralling to the
 central singularity as $\ph\to 0$ and (ii) a geodesic with $L<0$ arising from
 $r = r_{\rm em} \in (2m,  3 m)$, $\ph=\ph_{\rm em}<0$ and spiralling outward
 to the photon orbit as $\ph\to -\infty$. Note that for (ii), the
-emission point must fulfill $r_{\rm em} > 2m$, i.e. must lie outside the black
+emission point must fulfil $r_{\rm em} > 2m$, i.e. must lie outside the black
 hole region. Indeed, as shown in Sec.~\ref{s:ges:eq_to_be_solved}, along
 any geodesic, $r$ must decrease towards the future in the black hole region.
 Hence no null geodesic can be spiralling outwards there.
@@ -754,9 +747,21 @@ to the photon orbit as $\ph\to +\infty$.
 
 \subsection{Generic null geodesics} \label{s:gis:gener_geod}
 
-As stated above, for $b \not= b_{\rm crit}$, the differential equation~\eqref{e:ges:dphi_du_null} cannot be integrated
+As stated above, for $b \not= b_{\rm crit}$, the differential equation~\eqref{e:gis:du_dphi_null} cannot be integrated
 in terms of elementary functions. It is integrable though in terms of standard
 functions of mathematical physics, namely elliptic integrals of the first kind.
+As a first step, we rewrite Eq.~(\ref{e:gis:du_dphi_null}) as
+\be \label{e:ges:dphi_du_null}
+   \frac{\D\ph}{\D u} = \pm \frac{1}{\sqrt{2 u^3 - u^2 + (m/b)^2}}  ,
+\ee
+where the $\pm$ sign is
+\begin{itemize}
+\item $+$ if (i) $L>0$ and $r$ is decreasing (towards the future) along the geodesic
+$\Li$ at the considered point or (ii) $L<0$ and $r$ is increasing along $\Li$;
+\item $-$ if (i) $L>0$ and $r$ is increasing along $\Li$ or (ii)
+$L<0$ and $r$ is decreasing along $\Li$.
+\end{itemize}
+
 
 We shall consider only geodesics with $b>b_{\rm crit}$ and outside
 the photon sphere, because they are the most
@@ -769,7 +774,7 @@ affine parameter $\tlamb$ at the periastron.
 Let us first consider a null geodesic $\Li$ with $L>0$. On the part prior to
 the periastron, i.e. for $\tlamb \leq \tlamb_{\rm per}$, one has
 $\D\ph > 0$ and $\D u \geq 0$, so that the $+$ sign must be selected in
-Eq.~(\ref{e:ges:dphi_dr_null}) and its solution can be written as
+Eq.~(\ref{e:ges:dphi_du_null}) and its solution can be written as
 \[
     \ph = \ph_{-\infty} + \int_0^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}} ,
 \]
@@ -789,7 +794,7 @@ the above relation defines uniquely a function of $u$ and $b$, which we consider
 as a function of $u$ parametrized by $b$.
 
 In the part of $\Li$ past to the periastron, one has $\D\ph > 0$ and $\D u < 0$,
-so that the $-$ sign must be selected in Eq.~(\ref{e:ges:dphi_dr_null}); accordingly,
+so that the $-$ sign must be selected in Eq.~(\ref{e:ges:dphi_du_null}); accordingly,
 the solution for $\tlamb > \tlamb_{\rm per}$ can be written as
 \[
     \ph = \ph_{-\infty} +  \int_0^{u_{\rm per}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
@@ -1223,7 +1228,7 @@ numerical factor (cf. Eq.~(4) in Ref.~\cite{GrallHW19}):
 
 \begin{hist}
 Equation~(\ref{e:ges:b_bc_exp_Theta}) has been first derived by
-Charles Galton Darwin -- the grandson of the famous naturalist Charles Robert Darwin -- in 1959 \cite{Darwi59} (cf. Eqs.~(31) and (32) of Ref.~\cite{Darwi59}, where $\mu = \Theta$).
+Charles Galton Darwin\index{Darwin, C.G.} -- the grandson of the famous naturalist Charles Robert Darwin -- in 1959 \cite{Darwi59} (cf. Eqs.~(31) and (32) of Ref.~\cite{Darwi59}, where $\mu = \Theta$).
 \end{hist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1241,8 +1246,8 @@ the Event Horizon Telescope team in 2019 \cite{EHT19a,Cardo19}.
 Let us consider a ``far-away'' observer, i.e. an observer $\Obs$ located at $r\gg m$. Without
 any loss of generality, we may assume that $\Obs$ is located at $\th=\pi/2$ and $\ph=0$.
 Furthermore, we suppose that $\Obs$ is
-equipped with a screen orthogonal to the direction from $\Obs$ to the black hole, which
-the $x$-axis in terms of the coordinates $x:=r\cos\ph$, $y:=r\sin\ph$.
+equipped with a screen\index{screen} orthogonal to the direction from $\Obs$ to the black hole, which
+is the $x$-axis in terms of the coordinates $x:=r\cos\ph$, $y:=r\sin\ph$.
 The image of the black hole surroundings is formed on $\Obs$'s screen by null geodesics
 that reach the asymptotic value $\ph_\infty = 0$. Any such geodesic can be parametrized by
 (i) its impact parameter $b$, which, up to some constant rescaling, measures the distance from
@@ -1269,7 +1274,7 @@ $\Obs$ is located in the far right of this figure and
 all the drawn geodesics eventually hit $\Obs$'s screen. Let us consider a luminous point source
 $S$ in the surroundings of the black hole. From the drawing of Fig.~\ref{f:gis:mult_images},
 three geodesics of the $\ph_\infty=0$ family goes through $S$. They give rise to
-three disctint images of $S$ on $\Obs$'s screen, which are represented by the
+three distinct images of $S$ on $\Obs$'s screen, which are represented by the
 open circles labelled 1 to 3 in the right part of the figure. These three
 geodesics can be distinguished by their deflection angle $\Theta$.
 The one giving image 1 has the smallest deflection angle, while that
@@ -1280,7 +1285,7 @@ the closer the image with respect to the circle $b = b_{\rm crit}$ on $\Obs$'s
 screen.
 
 For the sake of clarity, only three images of the source $S$ have been
-depiced in Fig.~\ref{f:gis:mult_images}, but there is actually an infinite
+depicted in Fig.~\ref{f:gis:mult_images}, but there is actually an infinite
 number of them: two per value of $n$ (the number of turns around the black hole)
 --- one with $L>0$ and one with $L<0$. The selected geodesics in
 Fig.~\ref{f:gis:mult_images} have $n=0$ and $L<0$ (image 1), $n=0$ and $L>0$
@@ -1314,7 +1319,7 @@ $\Obs$'s screen at $b=-5.355\, m$.
 The reader may be puzzled by the compatibility between an infinite number
 of images from a single source and the conservation of energy. There is
 actually no issue here because because one can show that the images are
-faiter as $n$ increases. So in practice, only a few images would be visible.
+fainter as $n$ increases. So in practice, only a few images would be visible.
 
 
 \begin{figure}
@@ -1333,7 +1338,7 @@ a series of concentric circles accumulating from above on the circle
 $b = b_{\rm crit}$. This is illustrated by the source $A$ in
 Fig.~\ref{f:gis:images_aligned}. Four geodesics through the source are drawn,
 given birth to four images that
-are symmetric with respect to the $x$-axis, labelled 1, 3 and 2, 4 respectivelly.
+are symmetric with respect to the $x$-axis, labelled 1, 3 and 2, 4 respectively.
 Since in this case, the plane of the figure is not privileged (one cannot speak
 about the plane defined by $A$, $\Obs$ and the black hole, since they are aligned);
 we deduce by rotation about the $x$-axis that $A$ generates images all along
@@ -1344,7 +1349,7 @@ images, but there is actually an infinite number of such images: the full image
 of $A$ on $\Obs$'s screen is composed by a infinite sequence $(\mathscr{C}_n)_{n\in\mathbb{N}}$
 of concentric circles
 that accumulate exponentially fast onto the circle of radius $b = b_{\rm crit}$.
-Each circle $\mathscr{C}_n$ has a radius $b_n$ that is given approximatively
+Each circle $\mathscr{C}_n$ has a radius $b_n$ that is given approximately
 by Eq.~(\ref{e:ges:b_bc_exp_Theta}), where $\Theta$ can be seen as the parameter
 giving the position $x_A$ of $A$ on the $x$-axis. In particular $\Theta\to 0$
 when $x_A\to -\infty$.
@@ -1371,7 +1376,7 @@ shining on the celestial sphere. To simplify the problem, we shall assume
 that the black hole and the observer are surrounded by a distant
 sphere $\mathscr{S}$ that is uniformly bright. In such a setting,
 all values of $b > b_{\rm crit}$ on $\Obs$'s screen, whatever the angle $\alpha$,
-correspond to a null geodesic that orginate from the shining sphere $\mathscr{S}$, while
+correspond to a null geodesic that originate from the shining sphere $\mathscr{S}$, while
 this is not possible for $b \leq b_{\rm crit}$.
 This is clear on Fig.~\ref{f:gis:mult_images}: when traced backward from the right
 ($\Obs$ position), (i) null geodesics with $b > b_{\rm crit}$ eventually end
