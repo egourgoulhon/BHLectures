@@ -918,7 +918,7 @@ from Eq.~(\ref{e:gis:Phib_elliptic_int}) that
 We refer the reader to Refs.~\cite{CadezK05,Munoz14} for more details.
 \end{remark}
 
-\subsection{Deflection angle and winding number}
+\subsection{Deflection angle and winding number} \label{s:gis:deflect_winding}
 
 The total change of $\ph$ along the geodesic history is
 \be
@@ -1235,7 +1235,7 @@ Charles Galton Darwin\index{Darwin, C.G.} -- the grandson of the famous naturali
 
 \section{Images} \label{s:gis:images}
 
-Since they are the worldlines of photons, null geodesics are the key ingredient to
+Being the worldlines of photons, null geodesics are the key ingredient to
 determine the image as seen by some observer of emitting material around
 a black hole. Computing such images is of great interest, especially after
 the first image of a black hole vicinity obtained by
@@ -1243,15 +1243,23 @@ the Event Horizon Telescope team in 2019 \cite{EHT19a,Cardo19}.
 
 \subsection{Images of a point source}
 
-Let us consider a ``far-away'' observer, i.e. an observer $\Obs$ located at $r\gg m$. Without
+Let us consider some ``far-away'' observer, i.e. an observer $\Obs$ located at $r = r_{\Obs} \gg m$. Without
 any loss of generality, we may assume that $\Obs$ is located at $\th=\pi/2$ and $\ph=0$.
 Furthermore, we suppose that $\Obs$ is
 equipped with a screen\index{screen} orthogonal to the direction from $\Obs$ to the black hole, which
 is the $x$-axis in terms of the coordinates $x:=r\cos\ph$, $y:=r\sin\ph$.
-The image of the black hole surroundings is formed on $\Obs$'s screen by null geodesics
-that reach the asymptotic value $\ph_\infty = 0$. Any such geodesic can be parametrized by
-(i) its impact parameter $b$, which, up to some constant rescaling, measures the distance from
-the impact of the geodesic to the center of the screen and (ii) some polar angle $\alpha$ in the screen plane.
+The image of the black hole's surroundings is formed on $\Obs$'s screen by null geodesics
+that reach the asymptotic value $\ph_\infty = 0 \mod 2 \pi$. Any such geodesic $\Li$ can be parametrized by
+(i) its impact parameter $b$ and (ii) some polar angle $\alpha$ in the screen plane.
+The actual angle formed by the geodesic $\Li$ with respect to the screen's normal
+is
+\be
+    \hat{b} = \frac{b}{r_{\Obs}} .
+\ee
+This angle can be seen as the radial distance from the impact point of $\Li$ on
+the screen and the center of the screen. In what follows, we shall drop the constant
+factor $1/r_{\Obs}$ and use directly $b$ as a measure of the distance from
+the screen center.
 In other words,
 at a given instant of $\Obs$'s proper time $\tau$, a point (``pixel'') of the screen is
 described by the polar coordinates $(b,\alpha)$ and there is a unique null geodesic intersecting
@@ -1273,27 +1281,32 @@ geodesics with $\ph_\infty=0$ is drawn in Fig.~\ref{f:gis:mult_images}.
 $\Obs$ is located in the far right of this figure and
 all the drawn geodesics eventually hit $\Obs$'s screen. Let us consider a luminous point source
 $S$ in the surroundings of the black hole. From the drawing of Fig.~\ref{f:gis:mult_images},
-three geodesics of the $\ph_\infty=0$ family goes through $S$. They give rise to
+three null geodesics of the $\ph_\infty=0$ family goes through $S$. They give rise to
 three distinct images of $S$ on $\Obs$'s screen, which are represented by the
 open circles labelled 1 to 3 in the right part of the figure. These three
-geodesics can be distinguished by their deflection angle $\Theta$.
-The one giving image 1 has the smallest deflection angle, while that
-of image 2 has a larger deflection angle, both being lower than $\pi/2$.
-The geodesic giving image 3 is much more deflected: it makes a full turn around
-the black hole before reaching $\Obs$. We note that the more deflected the geodesic,
+geodesics can be distinguished by their deflection angle $\Theta$
+and their winding number $n$ (cf. Sec.~\ref{s:gis:deflect_winding}).
+The one giving image 1 is the less deflected: it has $\Theta \simeq - \pi/4$
+and $n=0$, while that
+of image 2 has $\Theta\simeq 2\pi/3$ and $n=0$.
+The geodesic giving image 3 is much more deflected
+it makes a full turn around
+the black hole before reaching $\Obs$; it's winding number is $n=-1$ and
+it has $\Theta\simeq -\pi/6$.
+We note that the more deflected the geodesic,
 the closer the image with respect to the circle $b = b_{\rm crit}$ on $\Obs$'s
 screen.
 
 For the sake of clarity, only three images of the source $S$ have been
 depicted in Fig.~\ref{f:gis:mult_images}, but there is actually an infinite
-number of them: two per value of $n$ (the number of turns around the black hole)
+number of them: two per value of $|n|$ (the number of turns around the black hole)
 --- one with $L>0$ and one with $L<0$. The selected geodesics in
 Fig.~\ref{f:gis:mult_images} have $n=0$ and $L<0$ (image 1), $n=0$ and $L>0$
-(image 2) and $n=1$ and $L<0$ (image 3). The higher $n$, the closer the image
+(image 2) and $n=-1$ and $L<0$ (image 3). The higher $|n|$, the closer the image
 lies to the circle $b=b_{\rm crit}$ on $\Obs$'s screen. Indeed, according to the
-law (\ref{e:ges:b_bc_exp_Theta}), geodesics that perform $n$ turns around the
+law (\ref{e:ges:b_bc_exp_Theta}), geodesics that perform $|n|$ turns around the
 black hole have an impact parameter exponentially close to $b_{\rm crit}$,
-by a factor $\mathrm{e}^{- 2\pi n}$ (see also Fig.~\ref{f:gis:null_b2}).
+by a factor $\mathrm{e}^{- 2\pi |n|}$ (see also Fig.~\ref{f:gis:null_b2}).
 Note that $\mathrm{e}^{- 2\pi}\simeq 1.9\times 10^{-3}$, so that any extra cycle
 around the blak hole corresponds to a value of $b$ closer to $b_{\rm crit}$
 by two orders of magnitude.
@@ -1308,17 +1321,17 @@ symmetry of Schwarzschild spacetime.
 In Fig.~\ref{f:gis:mult_images}, the source $S$ is rather close to the
 black hole but it is worth to stress that
 the multiple character of the images of a given
-source is not due to proximity between the source and the black hole.
+source is not due to the proximity between the source and the black hole.
 Multiple images are formed for any source, even very far ones.
 For instance, the source can lie \emph{behind} the
 observer, i.e. one can have $x_S > x_{\Obs}$. This is clear if we consider
 the lower-right panel of Fig.~\ref{f:gis:null_b1} (case $b=5.355\, m$):
-a source with $x_S \gg m$ and $y=5.355\, m$ gives an image on
-$\Obs$'s screen at $b=-5.355\, m$.
+a source with $x_S > x_{\Obs} \gg m$ and $y=5.355\, m$ gives an image on
+$\Obs$'s screen at $b=5.355\, m$.
 
 The reader may be puzzled by the compatibility between an infinite number
 of images from a single source and the conservation of energy. There is
-actually no issue here because because one can show that the images are
+actually no issue here because one can show that the images are
 fainter as $n$ increases. So in practice, only a few images would be visible.
 
 
@@ -1331,52 +1344,51 @@ aligned with the black hole and the observer.}
 \end{figure}
 
 
-\subsection{Einstein rings}
+\subsection{Aligned source and Einstein rings}
 
-In the special case where source is located on the $x$-axis, the images form
+In the special case where the source is located on the $x$-axis, the images form
 a series of concentric circles accumulating from above on the circle
 $b = b_{\rm crit}$. This is illustrated by the source $A$ in
 Fig.~\ref{f:gis:images_aligned}. Four geodesics through the source are drawn,
 given birth to four images that
 are symmetric with respect to the $x$-axis, labelled 1, 3 and 2, 4 respectively.
-Since in this case, the plane of the figure is not privileged (one cannot speak
+Since in this case the plane of the figure is not privileged (one cannot speak
 about the plane defined by $A$, $\Obs$ and the black hole, since they are aligned);
 we deduce by rotation about the $x$-axis that $A$ generates images all along
 circles centered on the origin in $\Obs$'s screen. Images 1 and 2 in Fig.~\ref{f:gis:images_aligned}
-are actually on the same circle, as well as images 3 and 4.
+lie actually on the same circle, as well as images 3 and 4.
 As for the non-aligned case, Fig.~\ref{f:gis:images_aligned} shows only a limited number of
 images, but there is actually an infinite number of such images: the full image
 of $A$ on $\Obs$'s screen is composed by a infinite sequence $(\mathscr{C}_n)_{n\in\mathbb{N}}$
 of concentric circles
 that accumulate exponentially fast onto the circle of radius $b = b_{\rm crit}$.
 Each circle $\mathscr{C}_n$ has a radius $b_n$ that is given approximately
-by Eq.~(\ref{e:ges:b_bc_exp_Theta}), where $\Theta$ can be seen as the parameter
-giving the position $x_A$ of $A$ on the $x$-axis. In particular $\Theta\to 0$
+by Eq.~(\ref{e:ges:b_bc_exp_Theta}), where $\Theta = \Theta_n$ is a function of
+the position $x_A$ of $A$ on the $x$-axis. In particular $\Theta_n\to 0$
 when $x_A\to -\infty$.
 The outermost circle, $\mathscr{C}_0$, is called the
 \defin{Einstein ring of}\index{Einstein!ring}\index{ring!Einstein --} $A$.
 It is the only significant ring in astronomical images involving \emph{gravitational
 lensing}\index{gravitational!lensing} by a massive foreground source (not necessarily
-a black hole), which are in the context $|x_A|\ll m$ and $b\gg m$.
+a black hole), which are in the context $|x_A|\gg m$ and $b\gg m$.
 We may call $\mathscr{C}_n$ the $\bm{n^{\rm th}}$\defin{~Einstein ring of} $A$.
 For $n\geq 1$, $\mathscr{C}_n$ is also called a \defin{relativistic Einstein ring of}
 $A$. Indeed, these rings exist only in the case of a very relativistic central object, so that
 photons can wind around it. On the contrary $\mathscr{C}_0$ exists even for non-relativistic
-objects. In particular, in astronomical observations of Einstein rings, the
-central deflecting object is a galaxy or a galaxy cluster,
-both being highly non-relativistic (very low compactness). One has in that case
-$n=0$ and $\Theta\ll 1$.
+objects. In particular, in astronomical observations of Einstein rings performed up
+to now, the central deflecting object is a galaxy or a galaxy cluster,
+both being highly non-relativistic (very low compactness).
 
 \subsection{Black hole shadow}
 
 Let us determine the image on observer $\Obs$'s screen
 when all the sources of light are very far, both
-from the black hole and the observer $\Obs$. We may think of many stars
+from the black hole and from $\Obs$. We may think of many stars
 shining on the celestial sphere. To simplify the problem, we shall assume
 that the black hole and the observer are surrounded by a distant
 sphere $\mathscr{S}$ that is uniformly bright. In such a setting,
-all values of $b > b_{\rm crit}$ on $\Obs$'s screen, whatever the angle $\alpha$,
-correspond to a null geodesic that originate from the shining sphere $\mathscr{S}$, while
+all values of $b > b_{\rm crit}$ on $\Obs$'s screen, whatever the polar angle $\alpha$,
+correspond to a null geodesic that originates from the shining sphere $\mathscr{S}$, while
 this is not possible for $b \leq b_{\rm crit}$.
 This is clear on Fig.~\ref{f:gis:mult_images}: when traced backward from the right
 ($\Obs$ position), (i) null geodesics with $b > b_{\rm crit}$ eventually end
@@ -1389,11 +1401,12 @@ the photon sphere (cf. Figs.~\ref{f:gis:null_b_crit_from_inf_L_pos} and
 The same conclusion can be reached
 by considering the effective potential diagram in Fig.~\ref{f:gis:eff_pot_null}.
 For concreteness, imagine that $\Obs$ is located at $r=15 m$ and that
-the shining sphere $\mathscr{S}$ has a coordinate radius $r=20 m$. This is to put them
+the shining sphere $\mathscr{S}$ has a coordinate radius $r=20 m$.
+These values allow us to put $\Obs$ and $\mathscr{S}$
 in Fig.~\ref{f:gis:eff_pot_null} according
 to our settings ($\mathscr{S}$ is encompassing both $\Obs$ and the black
 hole), but one shall keep in mind that both $\Obs$ and $\mathscr{S}$
-are assumed to be at much larger values of $r$ (fulfilling $r\gg m$).
+are assumed to lie at much larger values of $r$ (fulfilling $r\gg m$).
 Only two kinds of geodesic
 trajectories in Fig.~\ref{f:gis:eff_pot_null} diagram can reach $r = 15m$ ($\Obs$'s screen) with increasing values
 of $r$ (the direction of observation): those of type 1 and those of type 3.
