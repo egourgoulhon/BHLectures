@@ -1334,6 +1334,92 @@ of images from a single source and the conservation of energy. There is
 actually no issue here because one can show that the images are
 fainter as $n$ increases. So in practice, only a few images would be visible.
 
+\subsubsection{Link between the emission angle and the impact parameter}
+
+In the above discussion, we have parametrized the null geodesics arriving
+on the observer's screen by the impact parameter $b$. Let us relate the latter
+to the emission angle in the source frame. To this aim, we consider that
+the point source $S$, as depicted in Fig.~\ref{f:gis:mult_images}, is actually
+the trace in the plane of the figure of the worldline of a static observer equipped
+with a source of light, who we shall call the \emph{emitter} and denote
+by $\Obs_{\rm em}$. Furthermore, we suppose that the rest frame of $\Obs_{\rm em}$
+is an orthonormal tetrad
+$\left(\w{u}_{\rm em}, \w{e}_{(r)}, \w{e}_{(\th)}, \w{e}_{(\ph)}\right)$ such
+that the first spacelike vector, $\w{e}_{(r)}$, is always pointing towards the
+black hole. More precisely, we set
+\begin{subequations}
+\label{e:gis:bo_Obs_em}
+\begin{align}
+& \w{u}_{\rm em} = \left( 1 - \frac{2m}{r_S} \right)^{-1/2} \wpar_t \\
+& \w{e}_{(r)} = - \left( 1 - \frac{2m}{r_S} \right)^{1/2} \wpar_r \\
+& \w{e}_{(\th)} = - r_S^{-1} \wpar_\th \\
+& \w{e}_{(\ph)} = - r_S^{-1} \wpar_\ph ,
+\end{align}
+\end{subequations}
+where $(\wpar_t, \wpar_r, \wpar_\th, \wpar_\ph)$ is the natural basis associated
+with Schwarzschild-Droste coordinates and $r_S$ is the $r$-coordinate of
+$S$, and hence of $\Obs_{\rm em}$.
+It is immediate that $\left(\w{u}_{\rm em}, \w{e}_{(r)}, \w{e}_{(\th)}, \w{e}_{(\ph)}\right)$
+is an orthonormal tetrad with respect to the Schwarzschild metric
+(\ref{e:sch:Schwarz_metric_SD}). Moreover,
+having a 4-velocity $\w{u}_{\rm em}$ collinear to the Killing vector $\wpar_t$
+makes the observer $\Obs_{\rm em}$ static [cf. Eq.~(\ref{e:ges:u_Obs_xi})].
+
+The 4-momentum $\w{p}$ of a photon emitted by $\Obs_{\rm em}$ in the equatorial
+plane is given by Eqs.~(\ref{e:ges:comp_4_momentum}) and
+(\ref{e:ges:dot_t_null})-(\ref{e:ges:dot_r_square_null}):
+\be
+    \w{p} = E \left( 1 - \frac{2m}{r} \right)^{-1} \wpar_t
+        \pm E \sqrt{ 1 - b^2 U(r) } \, \wpar_r
+        + \epsilon_L E \frac{b}{r^2} \, \wpar_\ph ,
+\ee
+where we have used Eq.~(\ref{e:ges:eff_pot_null}) to let appear $U(r)$
+and Eq.~(\ref{e:ges:def_b}) to express $L$ in terms of $E$ and $b$.
+Taking the value of $\w{p}$ at the emission point $S$ and using (\ref{e:gis:bo_Obs_em})
+to express $\wpar_t$, $\wpar_r$ and $\wpar_\ph$ in terms of
+$\Obs_{\rm em}$'s orthonormal tetrad, we get
+\be \label{e:gis:p_eps_u_em_n}
+    \w{p} = \veps_{\rm em} \left( \w{u}_{\rm em} + \w{n} \right) ,
+\ee
+where
+\be
+    \veps_{\rm em} := - \w{u}_{\rm em} \cdot \w{p} =
+        E \left( 1 - \frac{2m}{r_S} \right)^{-1/2}
+\ee
+is the energy of the photon as measured by $\Obs_{\rm em}$ (cf. Sec.~\ref{s:fra:measure})
+and
+\be \label{e:gis:n_b_U_rS}
+    \w{n} := \pm \sqrt{1 - b^2 U(r_S)} \, \w{e}_{(r)}
+    - \epsilon_L b \sqrt{U(r_S)}\, \w{e}_{(\ph)}
+\ee
+is a unit spacelike vector orthogonal to $\w{u}_{\rm em}$:
+$\w{n}\cdot\w{n} = 1$ and $\w{u}_{\rm em}\cdot\w{n} = 0$.
+In view of (\ref{e:gis:p_eps_u_em_n}) and $\w{u}_{\rm em}\cdot\w{n} = 0$,
+the linear momentum of the photon as measured by $\Obs_{\rm em}$ is
+$\w{P} = \veps_{\rm em} \w{n}$ [cf. Eq.~(\ref{e:fra:p_E_P})].
+We conclude that the unit vector $\w{n}$ gives the direction of emission
+of the photon in $\Obs_{\rm em}$'s rest frame. Let us then define the \defin{emission
+angle}\index{emission!angle} $\eta$ by
+\be
+    \w{n} = \cos\eta\, \w{e}_{(r)} + \sin\eta \, \w{e}_{(\ph)} .
+\ee
+Equation~(\ref{e:gis:n_b_U_rS}) yields immediately
+\be \label{e:gis:cos_sin_eta_b}
+ \cos\eta = \pm \sqrt{1 - b^2 U(r_S)} \qquad\mbox{and}\qquad
+ \sin\eta = - \epsilon_L b \sqrt{U(r_s)} ,
+\ee
+from which we can express the impact parameter $b$ and
+in terms of the emission angle $\eta$:
+\be
+    \encadre{ b = -\epsilon_L \frac{\sin\eta}{\sqrt{U(r_S)}} }.
+\ee
+\begin{remark}
+Equation~(\ref{e:gis:cos_sin_eta_b}) is well posed because
+$U(r)\geq 0$ for $r>2m$ [cf. Eq.~(\ref{e:ges:eff_pot_null})]
+and the equation
+of motion (\ref{e:ges:dot_r_square_null_b}) implies $b^{-2} - U(r_S) \geq 0$,
+from which we get $0 \leq b^2 U(r_S) \leq 1$.
+\end{remark}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ges_images_aligned.pdf}}
