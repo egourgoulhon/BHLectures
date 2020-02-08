@@ -432,7 +432,12 @@ Eqs.~(\ref{e:ges:dot_ph_null_b}), (\ref{e:ges:dot_r_square_null_b})
 and (\ref{e:ges:eff_pot_null}).
 \end{remark}
 
-
+The graph of the polynomial $P_b$ is shown in Fig.~\ref{f:gis:polynomial_b_u}
+for selected values of $b$. Note that along a null geodesic, one must
+have $u>0$ and
+$P_b(u) \geq 0$. The first condition follows from the very definition of
+$u$ as $m/r$, while the second one is a direct consequence of
+Eq.~(\ref{e:gis:du_dphi_null}).
 
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{ges_polynomial_b_u.pdf}}
@@ -440,48 +445,41 @@ and (\ref{e:ges:eff_pot_null}).
 Graph of the cubic polynomial $P_b(u) = 2 u^3 - u^2 + {m^2}/{b^2}$ [Eq.~(\ref{e:ges:def_Pb_u})].}
 \end{figure}
 
-By Eq.~(\ref{e:gis:du_dphi_null}), the zeros of the polynomial $P_b(u)$
+By Eq.~(\ref{e:gis:du_dphi_null}), the zeros of the polynomial $P_b$
 correspond to points at which $\D u /\D\ph = 0$. They are thus stationary points
 for $u$, and hence for $r$. This can only occur at the circular photon
 orbit $r = \mathrm{const} = 3 m$ (then $b=b_{\rm c}$)
 or at the periastron or apoastron discussed
 in Sec.~\ref{s:ges:null_radial_behav} (then $b > b_{\rm c}$).
-The graph of the polynomial $P_b(u)$ is shown in Fig.~\ref{f:gis:polynomial_b_u}
-for selected values of $b$.
-The zeros of $P_b(u)$ are governed by its
+The zeros of $P_b$ are governed by its
 discriminant, which is
 \be
     \Delta = 4 \frac{m^4}{b^4} \left( \frac{b^2}{m^2} - 27 \right) .
 \ee
+One may distinguish three cases:
 \begin{itemize}
-\item If $\Delta<0$ $\iff$ $b <\sqrt{27} m = b_{\rm c}$,
-$P_b(u)$ has one real negative zero and two complex zeros
-(cf. blue and magenta curves in Fig.~\ref{f:gis:polynomial_b_u}),
-so that it never vanishes
-for physical values of $u$, which are real positive.
-\item If $\Delta=0$ $\iff$ $b = b_{\rm c}$, $P_b(u)$
-has a double zero: $u=1/3$ and a negative zero: $u=-1/6$ (cf. red curve
-in Fig.~\ref{f:gis:polynomial_b_u}); only the first
-one is physical and correspond to $r=3m$.
-\item If $\Delta>0$ $\iff$ $b > b_{\rm c}$, $P_b(u)$ has three distinct
+\item $\Delta>0$ $\iff$ $b > \sqrt{27} m = b_{\rm c}$: $P_b$ has three distinct
 real zeros (cf. the green and cyan curves
 in Fig.~\ref{f:gis:polynomial_b_u}); one of them, $u_{\rm n}$ say, is
-negative, and hence unphysical, while the two others are positive, being nothing but
+negative, and hence unphysical (since $u:=m/r >0$),
+while the two other ones are positive, being nothing but
 \be \label{e:ges:def_u_per_apo}
     u_{\rm p} = \frac{m}{r_{\rm p}} \qquad\mbox{and}\qquad
     u_{\rm a} = \frac{m}{r_{\rm a}} ,
 \ee
-where $r_{\rm p}$ and $r_{\rm a}$ are given by
+where $r_{\rm p}$ and $r_{\rm a}$ are the periastron and apoastron radii given by
 Eqs.~(\ref{e:ges:sol_r_per})-(\ref{e:ges:sol_r_apo}).
+\item $\Delta=0$ $\iff$ $b = b_{\rm c}$: $P_b$
+has a double zero: $u_{\rm a} = u_{\rm p} =1/3$ and a negative zero:
+$u_{\rm n}=-1/6$ (cf. red curve
+in Fig.~\ref{f:gis:polynomial_b_u}); only the first
+one is physical and correspond to $r=3m$.
+\item $\Delta<0$ $\iff$ $b < b_{\rm c}$:
+$P_b$ has one real negative zero, $u_{\rm n}$, and two complex zeros
+(cf. blue and magenta curves in Fig.~\ref{f:gis:polynomial_b_u}),
+so that $P_b(u)$ never vanishes
+for physical values of $u$, which are real positive.
 \end{itemize}
-
-\begin{figure}
-\centerline{\includegraphics[width=0.7\textwidth]{gis_u_per_apo_neg.pdf}}
-\caption[]{\label{f:gis:u_per_apo_neg} \footnotesize
-Zeros $(u_{\rm n}, u_{\rm p}, u_{\rm a})$ of the cubic polynomial
-$P_b(u) =  2 u^3 - u^2 + {m^2}/{b^2}$ as functions of $b$, for
-$b\geq b_{\rm c} \simeq 5.196\, m$.}
-\end{figure}
 
 Since they will be required in what follows, let us
 find explicit expressions for the real zeros of the polynomial $P_b$.
@@ -491,6 +489,16 @@ by the change of variable $u = x + 1/6$. We get
     x^3 - \frac{1}{12} x + \frac{m^2}{2b^2} - \frac{1}{108} = 0 .
 \ee
 We shall discuss separately the cases $b>b_{\rm c}$ and $b<b_{\rm c}$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gis_u_per_apo_neg.pdf}}
+\caption[]{\label{f:gis:u_per_apo_neg} \footnotesize
+Real zeros $u_{\rm n}$, $u_{\rm p}$ and $u_{\rm a}$ of the cubic polynomial
+$P_b(u) =  2 u^3 - u^2 + {m^2}/{b^2}$ as functions of $b$. The vertical
+dashed line marks the critical value
+$b = b_{\rm c} \simeq 5.196\, m$.}
+\end{figure}
+
 
 \subsubsection{Zeros of $P_b$ for $b\geq b_{\rm c}$}
 
@@ -512,12 +520,13 @@ we arrive at
 \label{e:gis:zeros_Pbu}
 \begin{align}
   &  \encadre{u_{\rm n} = \frac{1}{3}\cos\left[ \frac{2}{3} \arcsin\left(
-   \frac{b_{\rm c}}{b}\right) + \frac{2\pi}{3}\right] + \frac{1}{6} } \qquad (b \geq b_{\rm c})\\[1ex]
+   \frac{b_{\rm c}}{b}\right) + \frac{2\pi}{3}\right] + \frac{1}{6} } \qquad (b \geq b_{\rm c}) \label{e:gis:u_n_b_gt_bc}\\[1ex]
  & \encadre{ u_{\rm p} = \frac{1}{3}\cos\left[ \frac{2}{3} \arcsin\left(
    \frac{b_{\rm c}}{b}\right) + \frac{4\pi}{3}\right] + \frac{1}{6} }
                             \label{e:gis:u_per_b} \qquad (b \geq b_{\rm c}) \\[1ex]
  & \encadre{ u_{\rm a} = \frac{1}{3}\cos\left[ \frac{2}{3} \arcsin\left(
    \frac{b_{\rm c}}{b}\right) \right] + \frac{1}{6} }  \qquad (b \geq b_{\rm c}) .
+   \label{e:gis:u_apo_b}
 \end{align}
 \end{subequations}
 These zeros are plotted in term of $b$ on Fig.~\ref{f:gis:u_per_apo_neg}.
@@ -527,6 +536,12 @@ Note the ordering
     \leq u_{\rm a} < \frac{1}{2} ,
 \ee
 with the inequalities $\leq$ being saturated for $b = b_{\rm c}$.
+Note also that
+\be
+    \lim_{b\to +\infty} u_{\rm n} = 0,\qquad
+    \lim_{b\to +\infty} u_{\rm p} = 0,\qquad\mbox{and}\qquad
+    \lim_{b\to +\infty} u_{\rm a} = \frac{1}{2} .
+\ee
 
 It is easy to express two of the zeros in terms of the third one. For instance,
 let us pick $u_{\rm p}$. From $P_b(u_{\rm p}) = 0$, we have immediately
@@ -564,24 +579,29 @@ which is negative. Its value is obtained by means of
 \emph{Viète's substitution}\index{Viète's substitution},
 which consists in setting $x = w + 1/(36 w)$ in Eq.~(\ref{e:gis:zeros_Pb_eq_in_x}),
 thereby turning it into a quadratic equation for $w^3$. Solving the latter yields
-\be
+\be \label{e:gis:u_n_b_lt_bc}
    \encadre{ u_{\rm n} = \frac{1}{6} \left[ 1
     - \left( \frac{b_{\rm c}}{b} - \sqrt{ \frac{b_{\rm c}^2}{b^2} - 1 } \right) ^{2/3}
     - \left( \frac{b_{\rm c}}{b} - \sqrt{ \frac{b_{\rm c}^2}{b^2} - 1 } \right) ^{- 2/3}
     \right] } \qquad (b < b_{\rm c}).
 \ee
-
+$u_{\rm n}$ is plotted as a function of $b$ in the left part of
+Fig.~\ref{f:gis:u_per_apo_neg}. Note that $u_{\rm n} < -1/6$ and
+that for $b\to b_{\rm c}^-$,
+there is a smooth connection
+with the value for $b\geq b_{\rm c}$, which is given by
+Eq.~(\ref{e:gis:u_n_b_gt_bc}). Finally, by expanding Eq.~(\ref{e:gis:u_n_b_lt_bc}),
+we get $u_{\rm n} \sim - (2b_{\rm c}/b)^{2/3} / 6$ when $b\to 0$, hence
+\be
+    \lim_{b\to 0} u_{\rm n} = - \infty .
+\ee
 
 
 \subsection{Critical null geodesics} \label{s:gis:crit_geod}
 
-For $b=b_{\rm c}$, the differential equation (\ref{e:gis:du_dphi_null})
-can be integrated by means of elementary functions (Sec.~\ref{s:gis:crit_geod}),
-while for $b \not= b_{\rm c}$,
-it requires elliptic integrals of the first kind (Sec.~\ref{s:gis:gener_geod}).
-
-Let us first consider the first case, i.e. assume $b = b_{\rm c} = 3\sqrt{3}\, m$.
-Then $P_b(u) = (u - 1/3)^2 (2u + 1/3)$ and Eq.~(\ref{e:gis:du_dphi_null})
+For $b=b_{\rm c} = 3\sqrt{3}\, m$, the differential equation (\ref{e:gis:du_dphi_null})
+can be integrated by means of elementary functions. Indeed, one has then
+$P_b(u) = (u - 1/3)^2 (2u + 1/3)$ and Eq.~(\ref{e:gis:du_dphi_null})
 is equivalent to
 \be \label{e:ges:dphi_du_null_bcrit}
     \frac{\D\ph}{\D u} = \pm \frac{1}{\left|u - \frac{1}{3}\right|
@@ -765,10 +785,11 @@ $r = r_{\rm em} \in (2m,  3 m)$, $\ph=\ph_{\rm em}>0$ and spiralling outward
 to the photon orbit as $\ph\to +\infty$.
 
 
-\subsection{Generic null geodesics} \label{s:gis:gener_geod}
+\subsection{Null geodesics with $b > b_{\rm c}$ and $r> 3m$} \label{s:gis:geod_b_gt_bc_out}
 
-As stated above, for $b \not= b_{\rm c}$, the differential equation~\eqref{e:gis:du_dphi_null} cannot be integrated
-in terms of elementary functions. It is integrable though in terms of standard
+For $b \not= b_{\rm c}$, the differential equation~\eqref{e:gis:du_dphi_null} cannot be integrated
+in terms of elementary functions. As we are going to see, it is integrable
+though in terms of standard
 functions of mathematical physics, namely elliptic integrals of the first kind.
 As a first step, we rewrite Eq.~(\ref{e:gis:du_dphi_null}) as
 \be \label{e:ges:dphi_du_null}
@@ -782,11 +803,10 @@ $\Li$ at the considered point or (ii) $L<0$ and $r$ is increasing along $\Li$;
 $L<0$ and $r$ is decreasing along $\Li$.
 \end{itemize}
 
-
-We shall consider only geodesics with $b>b_{\rm c}$ and outside
-the photon sphere, because they are the most
-relevant ones for the images to be discussed in Sec.~\ref{s:gis:images}.
-Each of these geodesics has a periastron and obeys $u\to 0$
+In this section, we consider null geodesics with $b>b_{\rm c}$ and outside
+the photon sphere, i.e. geodesics similar to that labelled 1 in
+Figs.~\ref{f:gis:eff_pot_null} and \ref{f:gis:null_geod}.
+Each of these geodesics has a periastron, at $u = u_{\rm p}$ and obeys $u\to 0$
 ($r\to +\infty$) for both $\tlamb\to -\infty$ and
 $\tlamb\to +\infty$. We naturally denote by $\tlamb_{\rm p}$ the value of the
 affine parameter $\tlamb$ at the periastron.
@@ -798,8 +818,7 @@ Eq.~(\ref{e:ges:dphi_du_null}) and its solution can be written as
 \[
     \ph = \ph_{-\infty} + \int_0^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}} ,
 \]
-where $\ph_{-\infty} := \lim_{\tlamb\to-\infty} \ph$ since, being outside
-the photon sphere, the geodesic arises from infinity where $u := m/r = 0$.
+where $\ph_{-\infty} := \lim_{\tlamb\to-\infty} \ph$.
 We shall rewrite the above expression as
 \be
     \ph = \ph_{-\infty} + \Phi_b(0) - \Phi_b(u) \qquad (L>0,\ \tlamb \leq \tlamb_{\rm p}),
@@ -846,7 +865,7 @@ We may combine the above results into
 It thus appears that
 $\ph$ is entirely determined by the function $\Phi_b(u)$. To evaluate
 the latter, we rewrite it in terms of the three zeros
-$(u_{\rm n}, u_{\rm p}, u_{\rm a})$ of $P_b(u)$:
+$(u_{\rm n}, u_{\rm p}, u_{\rm a})$ of $P_b$:
 \be \label{e:gis:Phi_b_int_Pb_zeros}
   \Phi_b(u) = \int_u^{u_{\rm p}} \frac{\D\bar{u}}{
   \sqrt{2(\bar{u} - u_{\rm n})(u_{\rm p} - \bar{u})(u_{\rm a} - \bar{u})}} .
@@ -919,8 +938,6 @@ Modulus $k$ of the incomplete elliptic integral $F$ that is involved
 in expression (\ref{e:gis:Phib_elliptic_int}) for $\Phi_b(u)$.}
 \end{figure}
 
-
-
 \begin{remark}
 The trajectory of a null geodesic in the plane $\th=\pi/2$ as given by
 Eqs.~(\ref{e:gis:ph_Phi_b_u}) and (\ref{e:gis:Phib_elliptic_int})
@@ -937,6 +954,51 @@ from Eq.~(\ref{e:gis:Phib_elliptic_int}) that
 \ee
 We refer the reader to Refs.~\cite{CadezK05,Munoz14} for more details.
 \end{remark}
+
+\subsection{Null geodesics with $b > b_{\rm c}$ and $r< 3m$}
+
+Let us consider now null geodesics still with $b  > b_{\rm c}$ but located
+below the photon sphere, i.e. geodesics similar to that labelled 4 in
+Figs.~\ref{f:gis:eff_pot_null} and \ref{f:gis:null_geod}. Each of these
+geodesics has an apoastron, at $u = u_{\rm a}$, where
+$u_{\rm a}$ is the function of $b$ given
+by Eq.~(\ref{e:gis:u_apo_b}). In other words,  i.e. one has
+$u \geq u_{\rm a}$ along the geodesic.
+
+The treatment is similar to that of Sec.~\ref{s:gis:geod_b_gt_bc_out}, but
+with $u_{\rm a}$ playing the role of $u_{\rm p}$.
+
+To be detailed later...
+
+
+\subsection{Null geodesics with $b < b_{\rm c}$}
+
+A null geodesic $\Li$ with an impact parameter $b < b_{\rm c}$ has neither
+a periastron nor an apoastron, since $P_b$ has no zero in the physical range
+$(0, +\infty)$ of $u$ in that
+case. The only real zero of $P_b$ is $u_{\rm n}<0$, which is the function of $b$
+given by Eq.~(\ref{e:gis:u_n_b_lt_bc}).
+Examples of such geodesics are those labelled 2 and 3
+in Figs.~\ref{f:gis:eff_pot_null} and \ref{f:gis:null_geod}.
+
+
+Since $P_b(u_{\rm n}) = 0$, we have $m^2/b^2 = - 2 u_{\rm n}^3 + u_{\rm n}^2$,
+so that we may write
+\[
+    P_b(u) = 2 (u^3 - u_{\rm n}^3) - (u^2 - u_{\rm n}^2)
+        = (u - u_{\rm n}) \left[ 2(u^2 + u u_{\rm n} + u_{\rm n}^2)
+            - (u + u_{\rm n}) \right] .
+\]
+After a slight rearrangement of the term in square brackets, we arrive at
+\be
+    P_b(u) = 2 (u - u_{\rm n}) \left[
+        (u - b)^2 + A^2 - (u_{\rm n} - b)^2 \right] ,
+\ee
+with
+\be
+    b := \frac{1}{4} - \frac{u_{\rm n}}{2} \qquad\mbox{and}\qquad
+    A := \sqrt{u_{\rm n}(3 u_{\rm n} - 1)} .
+\ee
 
 \subsection{Deflection angle and winding number} \label{s:gis:deflect_winding}
 
