@@ -586,16 +586,18 @@ thereby turning it into a quadratic equation for $w^3$. Solving the latter yield
     \right] } \qquad (b < b_{\rm c}).
 \ee
 $u_{\rm n}$ is plotted as a function of $b$ in the left part of
-Fig.~\ref{f:gis:u_per_apo_neg}. Note that $u_{\rm n} < -1/6$ and
-that for $b\to b_{\rm c}^-$,
-there is a smooth connection
-with the value for $b\geq b_{\rm c}$, which is given by
-Eq.~(\ref{e:gis:u_n_b_gt_bc}). Finally, by expanding Eq.~(\ref{e:gis:u_n_b_lt_bc}),
-we get $u_{\rm n} \sim - (2b_{\rm c}/b)^{2/3} / 6$ when $b\to 0$, hence
-\be
-    \lim_{b\to 0} u_{\rm n} = - \infty .
+Fig.~\ref{f:gis:u_per_apo_neg}. Note that
+\be \label{e:gis:range_un_b_lt_bc}
+    u_{\rm n} < - \frac{1}{6}, \qquad
+    \lim_{b\to b_{\rm c}^-} u_{\rm n} = - \frac{1}{6}
+     \qquad\mbox{and}\qquad \lim_{b\to 0} u_{\rm n} = - \infty .
 \ee
-
+The last limit results from the expansion of Eq.~(\ref{e:gis:u_n_b_lt_bc}),
+which yields
+$u_{\rm n} \sim - (2b_{\rm c}/b)^{2/3} / 6$ when $b\to 0$.
+Observe also from Fig.~\ref{f:gis:u_per_apo_neg} the smooth transition
+with the value of $u_{\rm n}$ for $b\geq b_{\rm c}$, which is given by
+Eq.~(\ref{e:gis:u_n_b_gt_bc}).
 
 \subsection{Critical null geodesics} \label{s:gis:crit_geod}
 
@@ -830,7 +832,8 @@ where we have introduced the function
 \ee
 Since $u_{\rm p}$ is the function of $b$ given by Eq.~\eqref{e:gis:u_per_b},
 the above relation defines uniquely a function of $u$ and $b$, which we consider
-as a function of $u$ parametrized by $b$.
+as a function of $u$ parametrized by $b$. Note that, since $u\geq u_{\rm p}$
+(by definition of the periastron), one has $\Phi_b(u) \geq 0$.
 
 In the part of $\Li$ past to the periastron, one has $\D\ph > 0$ and $\D u < 0$,
 so that the $-$ sign must be selected in Eq.~(\ref{e:ges:dphi_du_null}); accordingly,
@@ -980,7 +983,47 @@ case. The only real zero of $P_b$ is $u_{\rm n}<0$, which is the function of $b$
 given by Eq.~(\ref{e:gis:u_n_b_lt_bc}).
 Examples of such geodesics are those labelled 2 and 3
 in Figs.~\ref{f:gis:eff_pot_null} and \ref{f:gis:null_geod}.
-
+Having no periastron or apoastron implies that $r$, and hence $u$, is a
+monotonous function along $\Li$.
+We shall then distinguish two cases:
+\begin{itemize}
+\item $\Li$ is \defin{ingoing}\index{ingoing!null geodesic}: $r$ decreases all along $\Li$, from $+\infty$ to $0$ as $\tlamb$
+varies from $-\infty$ to some value $\tlamb_0$ where $\Li$ hits the curvature
+singularity at $r=0$:
+\be
+    \lim_{\tlamb\to -\infty} r = + \infty
+    \ \mbox{and}\
+    \lim_{\tlamb\to \tlamb_0} r = 0
+    \quad \iff\quad
+    \lim_{\tlamb\to -\infty} u = 0
+    \ \mbox{and}\
+    \lim_{\tlamb\to \tlamb_0} u = +\infty.
+\ee
+\item $\Li$ is \defin{outgoing}\index{outgoing!null geodesic}p: $r$ increases all along $\Li$; as shown in Sec.~\ref{s:ges:eq_to_be_solved}, this cannot happen in the region $r<2m$ (the black
+hole interior). Hence, we must have $r$ vary from $2m$ to $+\infty$,
+with $\tlamb$ ranging from some finite value, $\tlamb_1$ say, to $+\infty$:
+\be
+    \lim_{\tlamb\to \tlamb_1} r = 2m
+    \ \mbox{and}\
+    \lim_{\tlamb\to +\infty} r = +\infty
+    \quad \iff\quad
+    \lim_{\tlamb\to \tlamb_1} u = \frac{1}{2}
+    \ \mbox{and}\
+    \lim_{\tlamb\to +\infty} u = 0.
+\ee
+\end{itemize}
+That the range of $\tlamb$ for outgoing geodesics is $(\lambda_1, +\infty)$
+and not the whole real line can be understood by considering the limit
+$b\to 0$. We are then in the case of radial null geodesics, for which it has
+been proved that $r$ is an affine parameter (cf. Sec.~\ref{s:sch:rad_null_geod}).
+Since this particular affine parameter obviously takes a finite value at $r=2m$, it
+must be the case for any other affine parameter.
+Actually, we shall see in Chap.~\ref{s:max} (cf. Sec.~\ref{s:sch:max_extens_constr})
+that this $r=2m$ limit in the
+past of outgoing null geodesics does not correspond to the black hole horizon
+but to the event horizon of a white hole, which is a located in a part of
+the spacetime that is not covered by the Schwarzschild-Droste coordinates
+considered here.
 
 Since $P_b(u_{\rm n}) = 0$, we have $m^2/b^2 = - 2 u_{\rm n}^3 + u_{\rm n}^2$,
 so that we may write
@@ -990,7 +1033,7 @@ so that we may write
             - (u + u_{\rm n}) \right] .
 \]
 After a slight rearrangement of the term in square brackets, we arrive at
-\be
+\be \label{e:gis:Pb_factor_b_lt_bc}
     P_b(u) = 2 (u - u_{\rm n}) \left[
         (u - b)^2 + A^2 - (u_{\rm n} - b)^2 \right] ,
 \ee
@@ -999,6 +1042,19 @@ with
     b := \frac{1}{4} - \frac{u_{\rm n}}{2} \qquad\mbox{and}\qquad
     A := \sqrt{u_{\rm n}(3 u_{\rm n} - 1)} .
 \ee
+\begin{remark}
+From the above definitions and the range (\ref{e:gis:range_un_b_lt_bc}) of
+$u_{\rm n}$, we have
+\[
+   A^2 - (u_{\rm n} - b)^2 = \frac{1}{16} \underbrace{(2 u_{\rm n} - 1)}_{<0}
+        \underbrace{(6 u_{\rm n} + 1)}_{<0} > 0 .
+\]
+The term inside the square brackets in Eq.~(\ref{e:gis:Pb_factor_b_lt_bc}) is
+then clearly positive, in agreement with $u_{\rm n}$ being the only real
+zero of $P_b$ for $b < b_{\rm c}$.
+\end{remark}
+
+
 
 \subsection{Deflection angle and winding number} \label{s:gis:deflect_winding}
 
