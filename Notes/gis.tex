@@ -97,9 +97,10 @@ and in Fig.~\ref{f:sch:rad_null_geod_EF} in terms of the ingoing Eddington-Finke
 \label{s:ges:null_eff_pot}
 
 Here we focus on the case where $L\not= 0$ (``generic'' case). We may then
-consider, instead of $\lambda$, the affine parameter
+consider, instead of the affine $\lambda$ associated with the 4-momentum $\w{p}$,
+the affine parameter
 \be
-    \tilde{\lambda} := |L| \lambda .
+   \encadre{ \tilde{\lambda} := |L| \lambda }.
 \ee
 Since $L$ is a non-vanishing constant along a geodesic, the above formula
 does define a new affine parameter. The absolute value ensures that
@@ -114,7 +115,7 @@ becomes
    \encadre{\frac{\D t}{\D \tilde{\lambda}} = b^{-1} \left(1 - \frac{2m}{r} \right) ^{-1} },
 \ee
 \be \label{e:ges:dot_ph_null_b}
-   \encadre{ \frac{\D\ph}{\D\tilde{\lambda}} = \frac{\epsilon_L}{r^2} } ,
+   \encadre{ \frac{\D\ph}{\D\tilde{\lambda}} = \frac{\eps_L}{r^2} } ,
 \ee
 \be \label{e:ges:dot_r_square_null_b}
    \encadre{ \left( \frac{\D r}{\D\tilde{\lambda}} \right) ^2
@@ -125,7 +126,7 @@ where
     \encadre{b := \frac{|L|}{E}} ,
 \ee
 \be \label{e:gis:def_epsilon_L}
-    \epsilon_L := \frac{L}{|L|} = \operatorname{sgn} L
+    \eps_L := \frac{L}{|L|} = \operatorname{sgn} L
 \ee
 and
 \be \label{e:ges:eff_pot_null}
@@ -140,7 +141,7 @@ $U(r)$. The main difference is that $U(r)$ does not depend on $L$, contrary
 to the effective potential $V_\ell(r)$ for timelike geodesics. Actually,
 $U(r)$ is a function of $r$ and the black hole mass $m$ only.
 Null geodesics are thus entirely determined by the parameter
-$b$ and $\epsilon_L = \pm 1$.
+$b$ and $\eps_L = \pm 1$.
 As soon as the null geodesic $\Li$ has a part in the
 region $\M_{\rm I}$, then $E>0$ [cf. (\ref{e:ges:E_positive_M_I})], so that
 $b$, as defined by Eq.~(\ref{e:ges:def_b}), is finite and positive. It has
@@ -178,10 +179,10 @@ rigorously by combining Eqs.~(\ref{e:ges:dot_t_null_b}) and
 Now by combining Eqs.~(\ref{e:ges:dot_t_null_b}) and (\ref{e:ges:dot_ph_null_b}),
 we have
 \be
-    \derd{\ph}{t} = \epsilon_L \frac{b}{r^2} \left( 1 - \frac{2m}{r} \right) .
+    \derd{\ph}{t} = \eps_L \frac{b}{r^2} \left( 1 - \frac{2m}{r} \right) .
 \ee
-For $r\gg m$, the right-hand side reduces to $\epsilon_L b/r^2$, so that the comparison
-with (\ref{e:ges:dphdt_approx}) yields $\epsilon_L b = y_0$, i.e. $b = |y_0|$,
+For $r\gg m$, the right-hand side reduces to $\eps_L b/r^2$, so that the comparison
+with (\ref{e:ges:dphdt_approx}) yields $\eps_L b = y_0$, i.e. $b = |y_0|$,
 which proves that $b$ is the impact
 parameter of the massless particle $\mathscr{P}$ with respect to the central
 black hole.
@@ -406,8 +407,8 @@ towards the future
 ($L>0$) or always decreasing towards the future ($L<0$).
 \begin{remark}
 We recover the above property from Eq.~(\ref{e:ges:dot_ph_null_b}):
-$\D\ph/\D\tilde{\lambda} = \epsilon_L/r^2$, given that
-$\epsilon_L = \operatorname{sgn} L$ and $\tilde{\lambda}$ increases towards
+$\D\ph/\D\tilde{\lambda} = \eps_L/r^2$, given that
+$\eps_L = \operatorname{sgn} L$ and $\tilde{\lambda}$ increases towards
 the future.
 \end{remark}
 
@@ -537,7 +538,7 @@ Note the ordering
 \ee
 with the inequalities $\leq$ being saturated for $b = b_{\rm c}$.
 Note also that
-\be
+\be \label{e:gis:lim_b_inf_u_zeros}
     \lim_{b\to +\infty} u_{\rm n} = 0,\qquad
     \lim_{b\to +\infty} u_{\rm p} = 0,\qquad\mbox{and}\qquad
     \lim_{b\to +\infty} u_{\rm a} = \frac{1}{2} .
@@ -622,8 +623,9 @@ We call geodesics in the first case
 \defin{external critical null geodesics}\index{external!critical null geodesic}\index{critical!null geodesic!external --},
 since $u<1/3\iff r > 3 m$, and those in the second case
 \defin{internal critical null geodesics}\index{internal!critical null geodesic}\index{critical!null geodesic!internal --},
-since $u>1/3 \iff r < 3m$. The qualifiers \emph{external} and \emph{internal} thus refer
-to the photon sphere $r=3 m$ discussed in Sec.~\ref{s:ges:null_eff_pot}.
+since $u>1/3 \iff r < 3m$. Note that the qualifiers \emph{external} and \emph{internal}  refer
+to the photon sphere $r=3 m$ discussed in Sec.~\ref{s:ges:null_eff_pot}, and
+\emph{not to the black hole region} ($r<2m$).
 
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{ges_null_r_phi_bcrit.pdf}}
@@ -795,35 +797,38 @@ though in terms of standard
 functions of mathematical physics, namely elliptic integrals of the first kind.
 As a first step, we rewrite Eq.~(\ref{e:gis:du_dphi_null}) as
 \be \label{e:ges:dphi_du_null}
-   \frac{\D\ph}{\D u} = \pm \frac{1}{\sqrt{2 u^3 - u^2 + (m/b)^2}}  ,
+   \frac{\D\ph}{\D u} = \eps_L \eps_{\rm in} \frac{1}{\sqrt{P_b(u)}}  ,
 \ee
-where the $\pm$ sign is
-\begin{itemize}
-\item $+$ if (i) $L>0$ and $r$ is decreasing (towards the future) along the geodesic
-$\Li$ at the considered point or (ii) $L<0$ and $r$ is increasing along $\Li$;
-\item $-$ if (i) $L>0$ and $r$ is increasing along $\Li$ or (ii)
-$L<0$ and $r$ is decreasing along $\Li$.
-\end{itemize}
+where $\eps_L = \pm 1$ is the sign of the conserved angular momuntum $L$
+[cf. Eq.~(\ref{e:gis:def_epsilon_L})] and $\eps_{\rm in} = \pm 1$ is
+defined by
+\be
+    \eps_{\rm in} := \operatorname{sgn} \left( \frac{\D u}{\D\tlamb} \right) ,
+\ee
+i.e. $\eps_{\rm in} = +1$ if $u$ increases towards the future along $\Li$, or equivalently
+if $r$ decreases towards the future along $\Li$ (\emph{inward} motion, hence the index ``in''),
+and $\eps_{\rm in} = -1$ otherwise.
+Let us recall that by vertue of the equation of motion (\ref{e:ges:dot_ph_null_b}),
+$\epsilon_L$ gives the sign of $\D\ph/\D\tlamb$, so that the sign of
+$\D\ph/\D u = \D\ph/\D\tlamb \times (\D u/\D\tlamb)^{-1}$ is $\eps_L \eps_{\rm in}$,
+which justifies the factor $\eps_L \eps_{\rm in}$ in front of the positive
+quantity $1/\sqrt{P_b(u)}$ in the right-hand side of Eq.~(\ref{e:ges:dphi_du_null}).
 
 In this section, we consider null geodesics with $b>b_{\rm c}$ and outside
 the photon sphere, i.e. geodesics similar to that labelled 1 in
 Figs.~\ref{f:gis:eff_pot_null} and \ref{f:gis:null_geod}.
 Each of these geodesics has a periastron, at $u = u_{\rm p}$ and obeys $u\to 0$
 ($r\to +\infty$) for both $\tlamb\to -\infty$ and
-$\tlamb\to +\infty$. We naturally denote by $\tlamb_{\rm p}$ the value of the
-affine parameter $\tlamb$ at the periastron.
-
-Let us first consider a null geodesic $\Li$ with $L>0$. On the part prior to
-the periastron, i.e. for $\tlamb \leq \tlamb_{\rm p}$, one has
-$\D\ph > 0$ and $\D u \geq 0$, so that the $+$ sign must be selected in
-Eq.~(\ref{e:ges:dphi_du_null}) and its solution can be written as
-\[
-    \ph = \ph_{-\infty} + \int_0^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}} ,
-\]
-where $\ph_{-\infty} := \lim_{\tlamb\to-\infty} \ph$.
-We shall rewrite the above expression as
+$\tlamb\to +\infty$. The general solution to the differential equation
+(\ref{e:ges:dphi_du_null}) can be written as
 \be
-    \ph = \ph_{-\infty} + \Phi_b(0) - \Phi_b(u) \qquad (L>0,\ \tlamb \leq \tlamb_{\rm p}),
+    \ph = \ph_{\rm p} + \eps_L \eps_{\rm in}
+        \int_{u_{\rm p}}^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}} ,
+\ee
+where $\ph_{\rm p}$ is the value of $\ph$ at the periastron.
+We shall rewrite it as
+\be \label{e:gis:ph_Phi_b_u}
+    \encadre{ \ph = \ph_{\rm p} - \eps_L \eps_{\rm in} \Phi_b(u) },
 \ee
 where we have introduced the function
 \be
@@ -832,42 +837,9 @@ where we have introduced the function
 \ee
 Since $u_{\rm p}$ is the function of $b$ given by Eq.~\eqref{e:gis:u_per_b},
 the above relation defines uniquely a function of $u$ and $b$, which we consider
-as a function of $u$ parametrized by $b$. Note that, since $u\geq u_{\rm p}$
+as a function of $u$ parametrized by $b$. Note that, since $u\leq u_{\rm p}$
 (by definition of the periastron), one has $\Phi_b(u) \geq 0$.
-
-In the part of $\Li$ past to the periastron, one has $\D\ph > 0$ and $\D u < 0$,
-so that the $-$ sign must be selected in Eq.~(\ref{e:ges:dphi_du_null}); accordingly,
-the solution for $\tlamb > \tlamb_{\rm p}$ can be written as
-\[
-    \ph = \ph_{-\infty} +  \int_0^{u_{\rm p}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
-        - \int_{u_{\rm p}}^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
-        = \ph_{-\infty} + \int_0^{u_{\rm p}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
-         + \int_u^{u_{\rm p}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}.
-\]
-Hence
-\be
-    \ph = \ph_{-\infty} + \Phi_b(0) + \Phi_b(u) \qquad (L>0,\ \tlamb > \tlamb_{\rm p}) .
-\ee
-For a null geodesic with $L < 0$, a similar reasoning with $\D\ph > 0$
-changed to $\D\ph < 0$ leads to
-\be
-    \ph = \ph_{-\infty} + \Phi_b(u) - \Phi_b(0) \qquad (L<0,\ \tlamb \leq \tlamb_{\rm p}),
-\ee
-\be
-    \ph = \ph_{-\infty} - \Phi_b(u) - \Phi_b(0)  \qquad (L<0,\ \tlamb > \tlamb_{\rm p}) .
-\ee
-We may combine the above results into
-\be \label{e:gis:ph_Phi_b_u}
-   \encadre{ \ph =  \ph_{-\infty} + \begin{cases}
-       \displaystyle \epsilon_L(\Phi_b(0) - \Phi_b(u)) \quad \mbox{for}\
-            \tlamb \leq \tlamb_{\rm p}\\[2ex]
-       \displaystyle \epsilon_L(\Phi_b(0) + \Phi_b(u)) \quad \mbox{for}\
-            \tlamb > \tlamb_{\rm p}
-    \end{cases} }
-\ee
-It thus appears that
-$\ph$ is entirely determined by the function $\Phi_b(u)$. To evaluate
-the latter, we rewrite it in terms of the three zeros
+To evaluate $\Phi_b(u)$, we rewrite it in terms of the three zeros
 $(u_{\rm n}, u_{\rm p}, u_{\rm a})$ of $P_b$:
 \be \label{e:gis:Phi_b_int_Pb_zeros}
   \Phi_b(u) = \int_u^{u_{\rm p}} \frac{\D\bar{u}}{
@@ -889,8 +861,14 @@ where $k$ is the following constant:
 \ee
 where the second equality follows from the expressions \eqref{e:gis:zeros_Pbu}
 of $u_{\rm n}$, $u_{\rm p}$ and
-$u_{\rm a}$ in terms of $b$.
-Noticing that
+$u_{\rm a}$ in terms of $b$.  Note that $t$ is a decreasing function of $u$
+and takes values in the range
+\be \label{e:gis:t_range_b_gt_bc}
+    0 \leq t \leq \sqrt{\frac{1 - u_{\rm n} /u_{\rm a}}{1 - u_{\rm n} /u_{\rm p}}} < 1,
+\ee
+where the last inequality follows form $u_{\rm n} < 0$ and $u_{\rm p} < u_{\rm a}$
+[cf. Eq.~(\ref{e:gis:order_u_zeros})].
+From
 \[
     \D\bar{u} = - \frac{2(u_{\rm a} - u_{\rm p}) k^2 t}{(1 - k^2 t^2)^2} \, \D t,
     \qquad
@@ -913,14 +891,17 @@ The term $\D t/\sqrt{1 - t^2}$ suggests to perform the change of
 variable $t = \sin\vartheta$. We then arrive at
 \be \label{e:gis:Phib_elliptic_int}
     \encadre{ \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-    \, F\left(
-    \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}\right),\;
-        k\right) } ,
+    \, F\left( \phi(u,b) ,\; k\right) } ,
 \ee
-where $F(\phi, k)$ is the
+where\footnote{Do no confuse the letter $\phi$ with the symbol used
+for the coordinate $\ph$.}
+\be
+    \phi(u, b) := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}\right)
+\ee
+and $F(\phi, k)$ is the
 \defin{incomplete elliptic integral of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --}:
 \be \label{e:gis:def_incompl_elliptic_int}
-    F(\phi, k) := \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} .
+    \encadre{ F(\phi, k) := \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} }.
 \ee
 The notation $F(\phi, k)$ is the most commonly used
 in the literature \cite{ByrdF71,GradsRGTJ115}, but one may encounter as well
@@ -928,12 +909,23 @@ $F(\phi|m)$ for $F(\phi, k)$ with $m=k^2$ \cite{AbramS72}.
 $k$ is called the \defin{modulus}\index{modulus!of an elliptic integral} of
 the elliptic integral. From its expression \eqref{e:gis:def_k_modulus}, we
 see that $k$ is a function of $b$. It is plotted in Fig.~\ref{f:gis:elliptic_mod}.
-Given the ordering \eqref{e:gis:order_u_zeros}, we deduce from
-\eqref{e:gis:def_k_modulus} that
+Given the ordering (\ref{e:gis:order_u_zeros}) and the limits (\ref{e:gis:lim_b_inf_u_zeros}),
+we deduce from expression (\ref{e:gis:def_k_modulus}) that
 \be
-    0 < k \leq 1,
+    0 < k < 1,
 \ee
-with $k=1 \iff u_{\rm p} = u_{\rm a} \iff b = b_{\rm c}$.
+with
+\be
+    \lim_{b\to b_{\rm c}^+} k = 1 \qquad\mbox{and}\qquad
+    \lim_{b\to +\infty} k = 0 .
+\ee
+Given the range (\ref{e:gis:t_range_b_gt_bc}) of $t$, we have
+\be
+    0 \leq \phi(u, b) < \arcsin\sqrt{\frac{1 - u_{\rm n} /u_{\rm a}}{1 - u_{\rm n} /u_{\rm p}}}
+    < \frac{\pi}{2} ,
+\ee
+with $\phi(u_{\rm p}, b) = 0$.
+
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{gis_elliptic_mod.pdf}}
 \caption[]{\label{f:gis:elliptic_mod} \footnotesize
@@ -1066,16 +1058,16 @@ with $\ph_\infty := \lim_{\tlamb\to +\infty} \ph$.
 Given that $\lim_{\tlamb\to +\infty} u = 0$ (since $b>b_{\rm c}$, the geodesic
 is escaping to infinity), Eq.~\eqref{e:gis:ph_Phi_b_u} leads to
 \[
-    \ph_\infty = \ph_{-\infty} + \epsilon_L (\Phi_b(0) + \Phi_b(0)) .
+    \ph_\infty = \ph_{-\infty} + \eps_L (\Phi_b(0) + \Phi_b(0)) .
 \]
 Hence
 \be \label{e:gis:Dph_Phi_b_0}
-    \Delta\ph = 2 \epsilon_L \Phi_b(0) .
+    \Delta\ph = 2 \eps_L \Phi_b(0) .
 \ee
 Given the expression  (\ref{e:gis:Phib_elliptic_int}) of $\Phi_b$, we
 get
 \be \label{e:gis:Dph_F_psi_k}
-    \encadre{  \Delta\ph = \epsilon_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
+    \encadre{  \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
     \, F(\psi, k) } ,
 \ee
 where
@@ -1098,11 +1090,11 @@ Note that $n\geq 0$ for $L > 0$ and $n\leq 0$ for $L<0$.
 We then define the \defin{deflection angle}\index{deflection!angle}
 $\Theta$ by
 \be \label{e:gis:def_deflection_angle}
-    \Theta := \overline{\Delta\ph} - \epsilon_L \pi .
+    \Theta := \overline{\Delta\ph} - \eps_L \pi .
 \ee
-Let us recall that $\epsilon_L = \pm 1$ is the sign of the
+Let us recall that $\eps_L = \pm 1$ is the sign of the
 conserved angular momentum $L$ [cf. Eq.~(\ref{e:gis:def_epsilon_L})].
-The $-\epsilon_L \pi$ term in the above equation is chosen so
+The $-\eps_L \pi$ term in the above equation is chosen so
 that $\Theta = 0$ in flat spacetime (no deflection of light).
 By construction, the range of $\Theta$ is
 \be
@@ -1147,7 +1139,7 @@ impact parameter $b$ decaying from $b=12 m$ to $b_{\rm c}$.
 They have been computed by means of the geodesic integrator
 of \textsf{SageMath} (cf. Appendix~\ref{s:sam}), instead of making use
 of the elliptic integral (\ref{e:gis:Phib_elliptic_int}).
-All these geodesics have $L>0$ and hence $\epsilon_L = +1$.
+All these geodesics have $L>0$ and hence $\eps_L = +1$.
 For $b=12 m$ (upper left panel of Fig.~\ref{f:gis:null_b1}),
 the geodesic suffers only some moderate bending; this is nothing but the standard
 \defin{deflection of light}\index{deflection of light} by massive bodies in
@@ -1178,7 +1170,7 @@ without investigating the properties of elliptic integrals.
 Indeed, by combining Eqs.~(\ref{e:gis:Dph_Phi_b_0}) and (\ref{e:gis:Phi_b_int_Pb_zeros}),
 we get
 \be \label{e:ges:Dph_u_per_apo}
-    \Delta\ph = \epsilon_L \sqrt{2} \int_0^{u_{\rm p}}
+    \Delta\ph = \eps_L \sqrt{2} \int_0^{u_{\rm p}}
     \frac{\D u}{\sqrt{(u_{\rm p} - u )(u_{\rm a} - u)(u - u_{\rm n})}} .
 \ee
 Given the ordering (\ref{e:gis:order_u_zeros}), each of the
@@ -1248,7 +1240,7 @@ Ref.~\cite{AbramS72} with $m = k^2$ and $m_1 = 1 - k^2$.}:
 Given (\ref{e:gis:add_elliptic_int}) and (\ref{e:gis:def_psi}),
 we can rewrite (\ref{e:gis:Dph_F_psi_k}) as
 \be \label{e:gis:Dph_K_F_phi_k}
-    \Delta\ph = \epsilon_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
+    \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
     \, \left[ K(k) - F(\phi, k) \right],
 \ee
 with
@@ -1306,7 +1298,7 @@ case
 Using this result, as well as (\ref{e:gis:limk1_K}), in Eq.~(\ref{e:gis:Dph_K_F_phi_k})
 yields
 \[
-    \Delta\ph \underset{\veps\to 0}{\sim} \epsilon_L
+    \Delta\ph \underset{\veps\to 0}{\sim} \eps_L
     \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}} \left[
     \ln \left( \frac{4}{\sqrt{1 - k^2}} \right)
     - \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right)  \right] .
@@ -1319,33 +1311,33 @@ and, from Eq.~(\ref{e:gis:k_expand}),
 \]
 We then get
 \[
-    \Delta\ph \underset{\veps\to 0}{\sim}  4 \epsilon_L
+    \Delta\ph \underset{\veps\to 0}{\sim}  4 \eps_L
     \left[
     \ln \left( \frac{2}{\sqrt{\veps}} \right)
     - \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right)  \right] =
-    4 \epsilon_L \ln \left( \frac{2\sqrt{2}}{(\sqrt{3}+1)\sqrt{\veps}} \right)
-    = \epsilon_L \ln \left( \frac{64}{(\sqrt{3} + 1)^4 \veps^2} \right) .
+    4 \eps_L \ln \left( \frac{2\sqrt{2}}{(\sqrt{3}+1)\sqrt{\veps}} \right)
+    = \eps_L \ln \left( \frac{64}{(\sqrt{3} + 1)^4 \veps^2} \right) .
 \]
 Expressing $\veps^2$ in terms of $b - b_{\rm c}$ via Eq.~(\ref{e:ges:b_bc_eps})
 leads to the final formula expressing the divergence of $\Delta\ph$
 when $b\to b_{\rm c}$:
 \be \label{e:gis:Dph_ln_b_bc}
    \encadre{ \Delta\ph \underset{b\to b_{\rm c}}{\sim}
-    \epsilon_L \ln\left( \frac{648(7\sqrt{3} - 12) m}{b-b_{\rm c}} \right) } .
+    \eps_L \ln\left( \frac{648(7\sqrt{3} - 12) m}{b-b_{\rm c}} \right) } .
 \ee
 Let us express $\Delta\ph$ is terms of the deflection angle $\Theta$ and
 the winding number $n$ through Eqs.~(\ref{e:gis:def_Dph_bar}) and
 (\ref{e:gis:def_deflection_angle}):
 \be
-    \Delta\ph = \Theta - \epsilon_L \pi + 2\pi n .
+    \Delta\ph = \Theta - \eps_L \pi + 2\pi n .
 \ee
 We can then deduce from (\ref{e:gis:Dph_ln_b_bc}) that
 \be \label{e:ges:b_bc_exp_Theta}
    \encadre{ b - b_{\rm c} \underset{b\to b_{\rm c}}{\sim}
-    \underbrace{648(7\sqrt{3} - 12)\mathrm{e}^{-\pi}}_{\simeq 3.482284} m \, \mathrm{e}^{-\epsilon_L \Theta - 2\pi |n|}  }.
+    \underbrace{648(7\sqrt{3} - 12)\mathrm{e}^{-\pi}}_{\simeq 3.482284} m \, \mathrm{e}^{-\eps_L \Theta - 2\pi |n|}  }.
 \ee
 In the above writing, we have used the fact that the sign of $n$ is the same
-as that of $L$, so that $\epsilon_L n = |n|$.
+as that of $L$, so that $\eps_L n = |n|$.
 \begin{remark}
 A check of Eq.~(\ref{e:gis:Dph_ln_b_bc}) is obtained by comparing it with
 Eq.~(268) in Chap.~3 of Ref.~\cite{Chand83}, where $\delta D = b-b_{\rm c}$ and
@@ -1360,7 +1352,7 @@ There is still a logarithmic divergence of $\Delta\ph$, but with a different
 numerical factor (cf. Eq.~(4) in Ref.~\cite{GrallHW19}):
 \be
     \Delta\ph \underset{b\to b_{\rm c}^-}{\sim}
-    \epsilon_L \ln\left( \frac{648(26\sqrt{3} - 45) m}{b_{\rm c} - b} \right) .
+    \eps_L \ln\left( \frac{648(26\sqrt{3} - 45) m}{b_{\rm c} - b} \right) .
 \ee
 \end{remark}
 
@@ -1509,7 +1501,7 @@ plane is given by Eqs.~(\ref{e:ges:comp_4_momentum}) and
 \be
     \w{p} = E \left( 1 - \frac{2m}{r} \right)^{-1} \wpar_t
         \pm E \sqrt{ 1 - b^2 U(r) } \, \wpar_r
-        + \epsilon_L E \frac{b}{r^2} \, \wpar_\ph ,
+        + \eps_L E \frac{b}{r^2} \, \wpar_\ph ,
 \ee
 where we have used Eq.~(\ref{e:ges:eff_pot_null}) to let appear $U(r)$
 and Eq.~(\ref{e:ges:def_b}) to express $L$ in terms of $E$ and $b$.
@@ -1528,7 +1520,7 @@ is the energy of the photon as measured by $\Obs_{\rm em}$ (cf. Sec.~\ref{s:fra:
 and
 \be \label{e:gis:n_b_U_rS}
     \w{n} := \pm \sqrt{1 - b^2 U(r_S)} \, \w{e}_{(r)}
-    - \epsilon_L b \sqrt{U(r_S)}\, \w{e}_{(\ph)}
+    - \eps_L b \sqrt{U(r_S)}\, \w{e}_{(\ph)}
 \ee
 is a unit spacelike vector orthogonal to $\w{u}_{\rm em}$:
 $\w{n}\cdot\w{n} = 1$ and $\w{u}_{\rm em}\cdot\w{n} = 0$.
@@ -1544,12 +1536,12 @@ angle}\index{emission!angle} $\eta$ by
 Equation~(\ref{e:gis:n_b_U_rS}) yields immediately
 \be \label{e:gis:cos_sin_eta_b}
  \cos\eta = \pm \sqrt{1 - b^2 U(r_S)} \qquad\mbox{and}\qquad
- \sin\eta = - \epsilon_L b \sqrt{U(r_S)} ,
+ \sin\eta = - \eps_L b \sqrt{U(r_S)} ,
 \ee
 from which we can express the impact parameter $b$ and
 in terms of the emission angle $\eta$:
 \be
-    \encadre{ b = -\epsilon_L \frac{\sin\eta}{\sqrt{U(r_S)}} }.
+    \encadre{ b = -\eps_L \frac{\sin\eta}{\sqrt{U(r_S)}} }.
 \ee
 \begin{remark}
 Equation~(\ref{e:gis:cos_sin_eta_b}) is well posed because
