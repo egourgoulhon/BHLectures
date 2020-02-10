@@ -821,7 +821,7 @@ Each of these geodesics has a periastron, at $u = u_{\rm p}$ and obeys $u\to 0$
 ($r\to +\infty$) for both $\tlamb\to -\infty$ and
 $\tlamb\to +\infty$. The general solution to the differential equation
 (\ref{e:ges:dphi_du_null}) can be written as
-\be
+\be \label{e:gis:ph_intPb_b_gt_bc}
     \ph = \ph_{\rm p} + \eps_L \eps_{\rm in}
         \int_{u_{\rm p}}^u \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}} ,
 \ee
@@ -831,9 +831,10 @@ We shall rewrite it as
     \encadre{ \ph = \ph_{\rm p} - \eps_L \eps_{\rm in} \Phi_b(u) },
 \ee
 where we have introduced the function
-\be
+\be \label{e:gis:def_Phib_b_gt_bc}
    \encadre{  \Phi_b(u) := \int_u^{u_{\rm p}} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
-      = \int_u^{u_{\rm p}} \frac{\D\bar{u}}{\sqrt{2 \bar{u}^3 - \bar{u}^2 + (m/b)^2}} } .
+      = \int_u^{u_{\rm p}} \frac{\D\bar{u}}{\sqrt{2 \bar{u}^3 - \bar{u}^2 + (m/b)^2}} }
+      \quad (b> b_{\rm c}) .
 \ee
 Since $u_{\rm p}$ is the function of $b$ given by Eq.~\eqref{e:gis:u_per_b},
 the above relation defines uniquely a function of $u$ and $b$, which we consider
@@ -895,7 +896,7 @@ variable $t = \sin\vartheta$. We then arrive at
 \ee
 where\footnote{Do no confuse the letter $\phi$ with the symbol used
 for the coordinate $\ph$.}
-\be
+\be \label{e:gis:phi_u_b}
     \phi(u, b) := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}\right)
 \ee
 and $F(\phi, k)$ is the
@@ -942,7 +943,7 @@ this relation to express the trajectory in the polar form $r = r(\ph)$. This
 is performed thanks to the inverse of the incomplete elliptic integral $F(\phi,k)$,
 which is the \defin{Jacobi elliptic sine}\index{Jacobi!elliptic sine}\index{elliptic!sine}
 $\operatorname{sn}(x,k)$, defined by $\sin\phi = \operatorname{sn}(F(\phi,k), k)$. We deduce then
-from Eq.~(\ref{e:gis:Phib_elliptic_int}) that
+from Eqs.~(\ref{e:gis:Phib_elliptic_int})-(\ref{e:gis:phi_u_b}) that
 \be
     \frac{u_{\rm p} - u}{u_{\rm a} - u} = k^2 \operatorname{sn}\left(
     \frac{\sqrt{u_{\rm a} - u_{\rm n}}}{\sqrt{2}} \Phi_b(u),\; k \right) .
@@ -991,7 +992,7 @@ singularity at $r=0$:
     \ \mbox{and}\
     \lim_{\tlamb\to \tlamb_0} u = +\infty.
 \ee
-\item $\Li$ is \defin{outgoing}\index{outgoing!null geodesic}p: $r$ increases all along $\Li$; as shown in Sec.~\ref{s:ges:eq_to_be_solved}, this cannot happen in the region $r<2m$ (the black
+\item $\Li$ is \defin{outgoing}\index{outgoing!null geodesic}: $r$ increases all along $\Li$; as shown in Sec.~\ref{s:ges:eq_to_be_solved}, this cannot happen in the region $r<2m$ (the black
 hole interior). Hence, we must have $r$ vary from $2m$ to $+\infty$,
 with $\tlamb$ ranging from some finite value, $\tlamb_1$ say, to $+\infty$:
 \be
@@ -1046,6 +1047,54 @@ then clearly positive, in agreement with $u_{\rm n}$ being the only real
 zero of $P_b$ for $b < b_{\rm c}$.
 \end{remark}
 
+The general solution of the differential equation
+(\ref{e:ges:dphi_du_null}) can be written as
+\be
+   \encadre{ \ph = \ph_* -  \eps_L \eps_{\rm in} \Phi_b(u) },
+\ee
+where
+\be
+    u_* := A + u_{\rm n} = \sqrt{u_{\rm n}(3 u_{\rm n} - 1)} + u_{\rm n}
+\ee
+\be \label{e:gis:def_Phib_b_lt_bc}
+   \encadre{ \Phi_b(u) := \int_u^{u_*} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
+    = \int_u^{u_*} \frac{\D\bar{u}}{\sqrt{2 \bar{u}^3 - \bar{u}^2 + (m/b)^2}} }
+     \quad (b<b_{\rm c})
+\ee
+and $\ph_*$ is the value of $\ph$ at $u=u_*$. Note that $u_*$ is a function
+of $b$, via the expression (\ref{e:gis:u_n_b_lt_bc}) of $u_{\rm n}$.
+It is actually a decreasing function of $b$, with,
+according to the limits (\ref{e:gis:range_un_b_lt_bc}),
+\be
+    \lim_{b\to 0} u_* = -\infty \qquad\mbox{and}\qquad
+    \lim_{b\to b_{\rm c}^-} u_* = \frac{1}{3} .
+\ee
+Note that $\lim_{b\to b_{\rm c}^-} u_* = \lim_{b\to b_{\rm c}^+} u_{\rm p}$,
+so that there is a kind of continuity of (\ref{e:gis:def_Phib_b_lt_bc})
+with the definition (\ref{e:gis:def_Phib_b_gt_bc}) of $\Phi_b(u)$ for
+$b>b_{\rm c}$, despite that fact that $\Phi_b(u)$ is not defined
+for $b=b_{\rm c}$ (more precisely, as we shall see later,
+$\lim_{b\to b_{\rm c}^-} \Phi_b(u) = + \infty$ for $u<u_*$ and
+$\lim_{b\to b_{\rm c}^+} \Phi_b(u) = + \infty$ for $u<u_{\rm p}$).
+
+To evaluate $\Phi_b(u)$, we shall use expression (\ref{e:gis:Pb_factor_b_lt_bc})
+for $P_b(u)$:
+\[
+    \Phi_b(u) = \int_u^{A+u_{\rm n}}
+    \frac{\D\bar{u}}{\sqrt{ 2 (\bar{u} - u_{\rm n}) \left[
+        (\bar{u} - b)^2 + A^2 - (u_{\rm n} - b)^2 \right]}} .
+\]
+Performing the change of variable
+\be
+    t := \frac{A + u_{\rm n} - \bar{u}}{A - u_{\rm n} + \bar{u}}
+    \quad\iff\quad
+    \bar{u} = A \frac{1-t}{1+t} + u_{\rm n}
+\ee
+yields
+\be
+    \Phi_b(u) = \int_0^{\frac{A + u_{\rm n} - u}{A - u_{\rm n} + u}}
+    \frac{\D t}{(1-t^2)\sqrt{ A \frac{1+t^2}{1- t^2} + u_{\rm n} - b }} .
+\ee
 
 
 \subsection{Deflection angle and winding number} \label{s:gis:deflect_winding}
@@ -1054,12 +1103,16 @@ The total change of $\ph$ along the geodesic history is
 \be
     \Delta \ph = \ph_\infty - \ph_{-\infty} ,
 \ee
-with $\ph_\infty := \lim_{\tlamb\to +\infty} \ph$.
-Given that $\lim_{\tlamb\to +\infty} u = 0$ (since $b>b_{\rm c}$, the geodesic
-is escaping to infinity), Eq.~\eqref{e:gis:ph_Phi_b_u} leads to
-\[
-    \ph_\infty = \ph_{-\infty} + \eps_L (\Phi_b(0) + \Phi_b(0)) .
-\]
+with
+$\ph_{-\infty} := \lim_{\tlamb\to -\infty} \ph$ and
+$\ph_\infty := \lim_{\tlamb\to +\infty} \ph$.
+Given that $\lim_{\tlamb\to \pm\infty} u = 0$,
+Eq.~(\ref{e:gis:ph_Phi_b_u}) with respectively
+$\eps_{\rm in} = +1$ and $\eps_{\rm in} = -1$ leads to
+\begin{align}
+    \ph_{-\infty} & = \ph_{\rm p} - \eps_L \Phi_b(0) \nonumber \\
+    \ph_{\infty} & = \ph_{\rm p} + \eps_L \Phi_b(0) . \nonumber
+\end{align}
 Hence
 \be \label{e:gis:Dph_Phi_b_0}
     \Delta\ph = 2 \eps_L \Phi_b(0) .
@@ -1068,11 +1121,11 @@ Given the expression  (\ref{e:gis:Phib_elliptic_int}) of $\Phi_b$, we
 get
 \be \label{e:gis:Dph_F_psi_k}
     \encadre{  \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-    \, F(\psi, k) } ,
+    \, F(\phi(0, b), k) } ,
 \ee
 where
 \be \label{e:gis:def_psi}
-   \encadre{ \psi := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p}}{u_{\rm a}}} \right) } .
+   \phi(0, b) = \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p}}{u_{\rm a}}} \right)  .
 \ee
 
 Note that one can have $|\Delta\ph| > 2\pi$; in such a case, the null geodesic
@@ -1241,11 +1294,11 @@ Given (\ref{e:gis:add_elliptic_int}) and (\ref{e:gis:def_psi}),
 we can rewrite (\ref{e:gis:Dph_F_psi_k}) as
 \be \label{e:gis:Dph_K_F_phi_k}
     \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-    \, \left[ K(k) - F(\phi, k) \right],
+    \, \left[ K(k) - F(\psi, k) \right],
 \ee
 with
 \be \label{e:gis:def_phi_u_ap_k}
-    \phi := \arctan \left(
+    \psi := \arctan \left(
             \sqrt{ \frac{(u_{\rm a}/u_{\rm p}) k^2 - 1}{1 - k^2}}
           \right).
 \ee
@@ -1276,24 +1329,24 @@ of the modulus $k$ and expanding to the first order in $\veps$ leads to
 Using the expansions (\ref{e:gis:u_n_a_expand}) and (\ref{e:gis:k_expand})
 in Eq.~(\ref{e:gis:def_phi_u_ap_k}), we get
 \be
-    \lim_{\veps\to 0} \tan \phi =  \frac{1}{\sqrt{2}} ,
+    \lim_{\veps\to 0} \tan \psi =  \frac{1}{\sqrt{2}} ,
 \ee
 which implies
 \be \label{e:gis:lim_eps_zero_phi}
-    \lim_{\veps\to 0} \cos\phi = \sqrt{\frac{2}{3}} \qquad\mbox{and}\qquad
-    \lim_{\veps\to 0} \sin\phi = \frac{1}{\sqrt{3}} .
+    \lim_{\veps\to 0} \cos\psi = \sqrt{\frac{2}{3}} \qquad\mbox{and}\qquad
+    \lim_{\veps\to 0} \sin\psi = \frac{1}{\sqrt{3}} .
 \ee
-Now, for any $\phi\in{}[0,\pi/2)$ , we have, according to the definition
+Now, for any $\psi\in{}[0,\pi/2)$ , we have, according to the definition
 (\ref{e:gis:def_incompl_elliptic_int}) of $F$,
 \be
-    F(\phi, 1) = \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - \sin^2\vartheta}}
-        = \int_0^\phi \frac{\D\vartheta}{\cos\vartheta}
-        = \ln\left( \frac{1 + \sin\phi}{\cos\phi} \right) .
+    F(\psi, 1) = \int_0^\psi \frac{\D\vartheta}{\sqrt{1 - \sin^2\vartheta}}
+        = \int_0^\psi \frac{\D\vartheta}{\cos\vartheta}
+        = \ln\left( \frac{1 + \sin\psi}{\cos\psi} \right) .
 \ee
 In view of (\ref{e:gis:lim_eps_zero_phi}), we conclude that in the present
 case
 \be
-    \lim_{\veps\to 0} F(\phi, k) = \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right) .
+    \lim_{\veps\to 0} F(\psi, k) = \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right) .
 \ee
 Using this result, as well as (\ref{e:gis:limk1_K}), in Eq.~(\ref{e:gis:Dph_K_F_phi_k})
 yields
