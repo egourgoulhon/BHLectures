@@ -858,7 +858,8 @@ where $k$ is the following constant:
 \be \label{e:gis:def_k_modulus}
    \encadre{ k := \sqrt{\frac{u_{\rm p} - u_{\rm n}}{u_{\rm a} - u_{\rm n}}}
     = \frac{\sqrt{2}}{
-       \sqrt{\sqrt{3}\cot\left(\frac{2}{3}\arcsin\left(\frac{b_{\rm c}}{b}\right)\right) + 1}}},
+       \sqrt{\sqrt{3}\cot\left(\frac{2}{3}\arcsin\left(\frac{b_{\rm c}}{b}\right)\right) + 1}}}
+       \qquad (b > b_{\rm c}),
 \ee
 where the second equality follows from the expressions \eqref{e:gis:zeros_Pbu}
 of $u_{\rm n}$, $u_{\rm p}$ and
@@ -897,7 +898,8 @@ variable $t = \sin\vartheta$. We then arrive at
 where\footnote{Do no confuse the letter $\phi$ with the symbol used
 for the coordinate $\ph$.}
 \be \label{e:gis:phi_u_b}
-    \phi(u, b) := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}\right)
+   \encadre{ \phi(u, b) := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}\right) }
+     \qquad (b > b_{\rm c})
 \ee
 and $F(\phi, k)$ is the
 \defin{incomplete elliptic integral of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --}:
@@ -1092,7 +1094,7 @@ Performing the change of variable
     \bar{u} = (u_* - u_{\rm n}) \frac{1-t}{1+t} + u_{\rm n}
 \ee
 yields
-\be
+\be \label{e:gis:Phib_t_b_lt_bc}
     \Phi_b(u) =  \int_0^{\frac{u_* - u}{u_* + u - 2 u_{\rm n}}}
     \frac{\D t}{\sqrt{1-t^2}\sqrt{ (u_* - u_{\rm n}) (1+t^2) - (u_0 - u_{\rm n}) (1-t^2) }} .
 \ee
@@ -1100,7 +1102,88 @@ Given the range $(0, +\infty)$ for $u$, the range of $t$ is
 \[
     -1 < t \leq \frac{u_*}{u_* - 2 u_{\rm n}} < 1 .
 \]
-To proceed, we shall distinguish the case $t\geq 0$ from the case $t<0$.
+To proceed, we shall distinguish the cases $u \leq u_*$ and $u> u_*$.
+The first case corresponds to $0 \leq t < \frac{u_*}{u_* - 2 u_{\rm n}}$ and we
+perform the change of variable $t = \cos\theta$ in the integral
+(\ref{e:gis:Phib_t_b_lt_bc}), yielding
+\[
+    \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}} \int_{\phi(u,b)}^{\pi/2}
+        \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} ,
+\]
+with
+\be \label{e:gis:def_phi_u_b_lt_bc}
+   \encadre{ \phi(u, b) := \arccos\left( \frac{|u_* - u|}{u_* + u - 2 u_{\rm n}} \right) }
+   \qquad (b < b_{\rm c}).
+\ee
+and\footnote{To get expression (\ref{e:gis:def_k_b_lt_bc}), we have used
+Eq.~(\ref{e:gis:def_u0_us}) to get rid of $u_0$.}
+\be \label{e:gis:def_k_b_lt_bc}
+   \encadre{ k := \sqrt{\frac{u_* - 5u_{\rm n}/2 + 1/4}{2(u_* - u_{\rm n})}} } \qquad
+    (b < b_{\rm c}) .
+\ee
+The absolute value in the right-hand side of Eq.~(\ref{e:gis:def_phi_u_b_lt_bc}) is not necessary
+in the present case since $u \geq u_*$. We keep it because the same
+expression will be used below for the case $u > u_*$.
+To let appear the incomplete elliptic integral of the first
+kind (\ref{e:gis:def_incompl_elliptic_int}), let us rewrite the above
+expression as
+\[
+   \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}}
+   \left[ \int_{0}^{\pi/2}
+        \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}}
+        - \int_{0}^{\phi(u, b)}
+        \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} \right] .
+\]
+In view of (\ref{e:gis:def_incompl_elliptic_int}),
+the first integral is $F(\pi/2,k)$, while the second is
+$F(\phi(u,b), k)$. Actually $F(\pi/2,k)$ receives a special name: it is
+called the
+\defin{complete elliptic integral of the first kind}\index{complete!elliptic integral}\index{elliptic integral!complete --} and its standard notation is $K(k)$:
+\be \label{e:gis:def_K_complete}
+    \encadre{
+    K(k) := \int_0^{\frac{\pi}{2}} \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} = F\left(\frac{\pi}{2}, k\right) }.
+\ee
+We have thus
+\be \label{e:gis:Phib_u_lt_us}
+    \encadre{ \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}}
+    \left[ K(k) - F \left( \phi(u, b),\, k \right) \right]}
+    \qquad (u \leq u_*,\ b < b_{\rm c}) .
+\ee
+As for the case $b>b_{\rm c}$, the modulus $k$ of the elliptic integrals $K$
+and $F$ is a function of $b$ only, which
+is given by combining Eqs.~(\ref{e:gis:def_k_b_lt_bc}), (\ref{e:gis:def_u0_us})
+and (\ref{e:gis:u_n_b_lt_bc}). It is plotted in Fig.~\ref{f:gis:k_b_lt_bc}.
+Note that its range is pretty limited:
+\be
+    \underbrace{\frac{1}{2} \sqrt{2 + \sqrt{3}}}_{\simeq 0.96592}
+    < k < 1.
+\ee
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gis_k_b_lt_bc.pdf}}
+\caption[]{\label{f:gis:k_b_lt_bc} \footnotesize
+Modulus $k$ of the elliptic integrals $F$ and $K$ that are involved
+in expressions (\ref{e:gis:Phib_u_lt_us}) and (\ref{e:gis:Phib_u_gt_us})
+for $\Phi_b(u)$.}
+\end{figure}
+
+Let us now turn to the case $u>u_*$. It implies $-1 < t < 0$, so that
+we perform the change of variable $t = -\cos\theta$ in order to keep
+$\theta\in(0,\pi/2)$. We obtain then
+\[
+    \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}} \int_{\pi/2}^{\phi(u,b)}
+        \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} ,
+\]
+where $\phi(u,b)$ and $k$ are given by Eqs.~(\ref{e:gis:def_phi_u_b_lt_bc})
+and (\ref{e:gis:def_k_b_lt_bc}). We conclude that
+\be \label{e:gis:Phib_u_gt_us}
+    \encadre{ \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}}
+    \left[ F \left( \phi(u, b),\, k \right) - K(k) \right]}
+    \qquad (u > u_*,\ b < b_{\rm c}) .
+\ee
+
+
+
 
 \subsection{Deflection angle and winding number} \label{s:gis:deflect_winding}
 
@@ -1284,11 +1367,9 @@ or Eq.~(17.4.13) of Ref.~\cite{AbramS72} with $\sin\alpha = k$.}:
 \be \label{e:gis:add_elliptic_int}
    \tan\psi \tan\phi = \frac{1}{\sqrt{1 - k^2}}\ \Longrightarrow \ F(\psi, k) + F(\phi, k) = K(k),
 \ee
-where $K(k)$ is the
-\defin{complete elliptic integral of the first kind}\index{complete!elliptic integral}\index{elliptic integral!complete --}:
-\be
-    K(k) := \int_0^{\frac{\pi}{2}} \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} = F\left(\frac{\pi}{2}, k\right) .
-\ee
+where $K(k)$ is the complete elliptic integral of the first
+kind\index{complete!elliptic integral}\index{elliptic integral!complete --}
+(\ref{e:gis:def_K_complete}).
 When $k\to 1$, $K(k)$ is diverging with the following behaviour\footnote{See e.g. Eq.~(112.1) of Ref.~\cite{ByrdF71} with
 $k' = \sqrt{1-k^2}$ or Eq.~(17.3.26) of
 Ref.~\cite{AbramS72} with $m = k^2$ and $m_1 = 1 - k^2$.}:
