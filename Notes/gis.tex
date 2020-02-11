@@ -1018,6 +1018,14 @@ but to the event horizon of a white hole, which is a located in a part of
 the spacetime that is not covered by the Schwarzschild-Droste coordinates
 considered here.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gis_u0_us_b.pdf}}
+\caption[]{\label{f:gis:u0_us_b} \footnotesize
+Parameters $u_0$ and $u_*$, defined by Eq.~(\ref{e:gis:def_u0_us}), as functions
+of $b$. The horizontal dashed line marks $u=1/3$.}
+\end{figure}
+
+
 Since $P_b(u_{\rm n}) = 0$, we have $m^2/b^2 = - 2 u_{\rm n}^3 + u_{\rm n}^2$,
 so that we may write
 \[
@@ -1028,24 +1036,25 @@ so that we may write
 After a slight rearrangement of the term in square brackets, we arrive at
 \be \label{e:gis:Pb_factor_b_lt_bc}
     P_b(u) = 2 (u - u_{\rm n}) \left[
-        (u - b)^2 + A^2 - (u_{\rm n} - b)^2 \right] ,
+        (u - u_0)^2 + (u_* - u_{\rm n})^2 - (u_0 - u_{\rm n})^2 \right] ,
 \ee
 with
-\be
-    b := \frac{1}{4} - \frac{u_{\rm n}}{2} \qquad\mbox{and}\qquad
-    A := \sqrt{u_{\rm n}(3 u_{\rm n} - 1)} .
+\be \label{e:gis:def_u0_us}
+   \encadre{ u_0 := \frac{1}{4} - \frac{u_{\rm n}}{2} } \qquad\mbox{and}\qquad
+   \encadre{ u_* := \sqrt{u_{\rm n}(3 u_{\rm n} - 1)} + u_{\rm n} }.
 \ee
-\begin{remark}
-From the above definitions and the range (\ref{e:gis:range_un_b_lt_bc}) of
-$u_{\rm n}$, we have
-\[
-   A^2 - (u_{\rm n} - b)^2 = \frac{1}{16} \underbrace{(2 u_{\rm n} - 1)}_{<0}
-        \underbrace{(6 u_{\rm n} + 1)}_{<0} > 0 .
-\]
-The term inside the square brackets in Eq.~(\ref{e:gis:Pb_factor_b_lt_bc}) is
-then clearly positive, in agreement with $u_{\rm n}$ being the only real
+Note that $u_0$ and $u_*$ are functions
+of $b$, via the expression (\ref{e:gis:u_n_b_lt_bc}) of $u_{\rm n}$.
+They are plotted in Fig.~\ref{f:gis:u0_us_b}. It is clear from this figure
+that $u_* > u_0$; consequently the term inside the square brackets in
+Eq.~(\ref{e:gis:Pb_factor_b_lt_bc}) is always positive, in agreement with
+$u_{\rm n}$ being the only real
 zero of $P_b$ for $b < b_{\rm c}$.
-\end{remark}
+Furthermore, according to the limits (\ref{e:gis:range_un_b_lt_bc}), we have
+\be
+    \lim_{b\to 0} u_* = +\infty \qquad\mbox{and}\qquad
+    \lim_{b\to b_{\rm c}^-} u_* = \frac{1}{3} .
+\ee
 
 The general solution of the differential equation
 (\ref{e:ges:dphi_du_null}) can be written as
@@ -1053,24 +1062,16 @@ The general solution of the differential equation
    \encadre{ \ph = \ph_* -  \eps_L \eps_{\rm in} \Phi_b(u) },
 \ee
 where
-\be
-    u_* := A + u_{\rm n} = \sqrt{u_{\rm n}(3 u_{\rm n} - 1)} + u_{\rm n}
-\ee
 \be \label{e:gis:def_Phib_b_lt_bc}
    \encadre{ \Phi_b(u) := \int_u^{u_*} \frac{\D\bar{u}}{\sqrt{P_b(\bar{u})}}
     = \int_u^{u_*} \frac{\D\bar{u}}{\sqrt{2 \bar{u}^3 - \bar{u}^2 + (m/b)^2}} }
      \quad (b<b_{\rm c})
 \ee
-and $\ph_*$ is the value of $\ph$ at $u=u_*$. Note that $u_*$ is a function
-of $b$, via the expression (\ref{e:gis:u_n_b_lt_bc}) of $u_{\rm n}$.
-It is actually a decreasing function of $b$, with,
-according to the limits (\ref{e:gis:range_un_b_lt_bc}),
-\be
-    \lim_{b\to 0} u_* = -\infty \qquad\mbox{and}\qquad
-    \lim_{b\to b_{\rm c}^-} u_* = \frac{1}{3} .
-\ee
-Note that $\lim_{b\to b_{\rm c}^-} u_* = \lim_{b\to b_{\rm c}^+} u_{\rm p}$,
-so that there is a kind of continuity of (\ref{e:gis:def_Phib_b_lt_bc})
+and $\ph_*$ is the value of $\ph$ at $u=u_*$. Since
+\[
+    \lim_{b\to b_{\rm c}^-} u_* = \frac{1}{3} = \lim_{b\to b_{\rm c}^+} u_{\rm p},
+\]
+there is a kind of continuity of (\ref{e:gis:def_Phib_b_lt_bc})
 with the definition (\ref{e:gis:def_Phib_b_gt_bc}) of $\Phi_b(u)$ for
 $b>b_{\rm c}$, despite that fact that $\Phi_b(u)$ is not defined
 for $b=b_{\rm c}$ (more precisely, as we shall see later,
@@ -1080,22 +1081,26 @@ $\lim_{b\to b_{\rm c}^+} \Phi_b(u) = + \infty$ for $u<u_{\rm p}$).
 To evaluate $\Phi_b(u)$, we shall use expression (\ref{e:gis:Pb_factor_b_lt_bc})
 for $P_b(u)$:
 \[
-    \Phi_b(u) = \int_u^{A+u_{\rm n}}
-    \frac{\D\bar{u}}{\sqrt{ 2 (\bar{u} - u_{\rm n}) \left[
-        (\bar{u} - b)^2 + A^2 - (u_{\rm n} - b)^2 \right]}} .
+    \Phi_b(u) = \frac{1}{\sqrt{2}} \int_u^{u_*}
+    \frac{\D\bar{u}}{\sqrt{ (\bar{u} - u_{\rm n}) \left[
+        (\bar{u} - u_0)^2 + (u_* - u_{\rm n})^2 - (u_0 - u_{\rm n})^2  \right]}} .
 \]
 Performing the change of variable
 \be
-    t := \frac{A + u_{\rm n} - \bar{u}}{A - u_{\rm n} + \bar{u}}
+    t := \frac{u_* - \bar{u}}{u_* + \bar{u} - 2 u_{\rm n}}
     \quad\iff\quad
-    \bar{u} = A \frac{1-t}{1+t} + u_{\rm n}
+    \bar{u} = (u_* - u_{\rm n}) \frac{1-t}{1+t} + u_{\rm n}
 \ee
 yields
 \be
-    \Phi_b(u) = \int_0^{\frac{A + u_{\rm n} - u}{A - u_{\rm n} + u}}
-    \frac{\D t}{(1-t^2)\sqrt{ A \frac{1+t^2}{1- t^2} + u_{\rm n} - b }} .
+    \Phi_b(u) =  \int_0^{\frac{u_* - u}{u_* + u - 2 u_{\rm n}}}
+    \frac{\D t}{\sqrt{1-t^2}\sqrt{ (u_* - u_{\rm n}) (1+t^2) - (u_0 - u_{\rm n}) (1-t^2) }} .
 \ee
-
+Given the range $(0, +\infty)$ for $u$, the range of $t$ is
+\[
+    -1 < t \leq \frac{u_*}{u_* - 2 u_{\rm n}} < 1 .
+\]
+To proceed, we shall distinguish the case $t\geq 0$ from the case $t<0$.
 
 \subsection{Deflection angle and winding number} \label{s:gis:deflect_winding}
 
