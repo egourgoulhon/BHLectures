@@ -846,71 +846,71 @@ $(u_{\rm n}, u_{\rm p}, u_{\rm a})$ of $P_b$:
   \Phi_b(u) = \int_u^{u_{\rm p}} \frac{\D\bar{u}}{
   \sqrt{2(\bar{u} - u_{\rm n})(u_{\rm p} - \bar{u})(u_{\rm a} - \bar{u})}} .
 \ee
-We then perform the change of variable\footnote{It should be clear that the
+Let us perform the change of variable\footnote{It should be clear that the
 variable $t$ introduced here has nothing to do with the Schwarzschild-Droste
 coordinate $t$.}
-\be
-    t := \frac{1}{k} \sqrt{\frac{u_{\rm p} - \bar{u}}{u_{\rm a} - \bar{u}}}
+\[
+    t := \frac{\bar{u} - u_{\rm n}}{u_{\rm p} - u_{\rm n}}
     \quad\iff\quad
-    \bar{u} = \frac{u_{\rm p} - u_{\rm a} k^2 t^2}{1 - k^2 t^2} ,
+    \bar{u} = (u_{\rm p} - u_{\rm n}) t + u_{\rm n} .
+\]
+We get
+\be
+     \Phi_b(u) = \frac{1}{\sqrt{2(u_{\rm a} - u_{\rm n})}}
+     \int_{\frac{u - u_{\rm n}}{u_{\rm p} - u_{\rm n}}}^1
+     \frac{\D t}{\sqrt{t(1-t)(1 - k^2 t)}} ,
 \ee
 where $k$ is the following constant:
 \be \label{e:gis:def_k_modulus}
    \encadre{ k := \sqrt{\frac{u_{\rm p} - u_{\rm n}}{u_{\rm a} - u_{\rm n}}}
     = \frac{\sqrt{2}}{
        \sqrt{\sqrt{3}\cot\left(\frac{2}{3}\arcsin\left(\frac{b_{\rm c}}{b}\right)\right) + 1}}}
-       \qquad (b > b_{\rm c}),
+       \qquad (b > b_{\rm c}) ,
 \ee
-where the second equality follows from the expressions \eqref{e:gis:zeros_Pbu}
-of $u_{\rm n}$, $u_{\rm p}$ and
-$u_{\rm a}$ in terms of $b$.  Note that $t$ is a decreasing function of $u$
-and takes values in the range
-\be \label{e:gis:t_range_b_gt_bc}
-    0 \leq t \leq \sqrt{\frac{1 - u_{\rm n} /u_{\rm a}}{1 - u_{\rm n} /u_{\rm p}}} < 1,
-\ee
-where the last inequality follows form $u_{\rm n} < 0$ and $u_{\rm p} < u_{\rm a}$
-[cf. Eq.~(\ref{e:gis:order_u_zeros})].
-From
-\[
-    \D\bar{u} = - \frac{2(u_{\rm a} - u_{\rm p}) k^2 t}{(1 - k^2 t^2)^2} \, \D t,
-    \qquad
-    \bar{u} - u_{\rm n} = \frac{(u_{\rm p} - u_{\rm n})(1 -t^2)}{1 - k^2 t^2} ,
-\]
-\[
-   u_{\rm p} - \bar{u} =
-    \frac{(u_{\rm p} - u_{\rm n})(u_{\rm a} - u_{\rm p}) t^2}{
-    (u_{\rm a} - u_{\rm n})(1 - k^2 t^2)}
-    \quad\mbox{and}\quad
-    u_{\rm a} - \bar{u} = \frac{u_{\rm a} - u_{\rm p}}{1 - k^2 t^2} ,
-\]
-we get
-\be
-     \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-     \int_0^{\frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}}
-     \frac{\D t}{\sqrt{(1 - t^2)(1 - k^2 t^2)}} .
-\ee
+the second equality following from the expressions \eqref{e:gis:zeros_Pbu}
+of $u_{\rm n}$, $u_{\rm p}$ and $u_{\rm a}$ in terms of $b$.
+
+
+
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{gis_elliptic_mod.pdf}}
 \caption[]{\label{f:gis:elliptic_mod} \footnotesize
 Modulus $k$ of the incomplete elliptic integral $F$ that is involved
 in expression (\ref{e:gis:Phib_elliptic_int}) for $\Phi_b(u)$.}
 \end{figure}
-The term $\D t/\sqrt{1 - t^2}$ suggests to perform the change of
-variable $t = \sin\vartheta$. We then arrive at
-\be \label{e:gis:Phib_elliptic_int}
-    \encadre{ \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-    \, F\left( \phi(u,b) ,\; k\right) } ,
+
+We can simplify further the integral via a second change of variable:
+\[
+    t = \sin^2 \vartheta \iff \vartheta = \arcsin\sqrt{t} .
+\]
+Note that $0<u\leq u_{\rm p}$ implies $0 < t \leq 1$, so that $0<\vartheta\leq \pi/2$.
+Since $\D t = 2\sin\vartheta\cos\vartheta \, \D\vartheta = 2\sqrt{t(1-t)}\, \D\vartheta$,
+we arrive immediately at
+\be \label{e:gis:Phib_prov}
+    \Phi_b(u) =  \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}} \int_{\phi(u,b)}^{\pi/2}
+    \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}}  ,
 \ee
 where\footnote{Do no confuse the letter $\phi$ with the symbol used
 for the coordinate $\ph$.}
 \be \label{e:gis:phi_u_b}
-   \encadre{ \phi(u, b) := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}\right) }
-     \qquad (b > b_{\rm c})
+   \encadre{ \phi(u, b) := \arcsin\left( \sqrt{\frac{u - u_{\rm n}}{u_{\rm p} - u_{\rm n}}}\right) }
+     \qquad (b > b_{\rm c}) .
 \ee
-and $F(\phi, k)$ is the
+By splitting the integral according to $\int_\phi^{\pi/2} = \int_0^{\pi/2} - \int_0^\phi$,
+we rewrite (\ref{e:gis:Phib_prov}) as
+\be \label{e:gis:Phib_elliptic_int}
+    \encadre{ \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
+    \left[ K(k) - F\left( \phi(u,b) ,\; k\right) \right] } \qquad (b > b_{\rm c}) ,
+\ee
+where $F(\phi, k)$ is the
 \defin{incomplete elliptic integral of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --} \cite{ByrdF71,GradsRGTJ115,AbramS72}:
 \be \label{e:gis:def_incompl_elliptic_int}
-    \encadre{ F(\phi, k) := \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} }.
+    \encadre{ F(\phi, k) := \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} }
+\ee
+and $K(k)$ is the \defin{complete elliptic integral of the first kind}\index{complete!elliptic integral}\index{elliptic integral!complete --}:
+\be \label{e:gis:def_K_complete}
+    \encadre{
+    K(k) := \int_0^{\frac{\pi}{2}} \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} = F\left(\frac{\pi}{2}, k\right) }.
 \ee
 The notation $F(\phi, k)$ is the most commonly used
 in the literature \cite{ByrdF71,GradsRGTJ115}, but one may encounter as well
@@ -928,12 +928,13 @@ with
     \lim_{b\to b_{\rm c}^+} k = 1 \qquad\mbox{and}\qquad
     \lim_{b\to +\infty} k = 0 .
 \ee
-Given the range (\ref{e:gis:t_range_b_gt_bc}) of $t$, we have
+Given the range $(0, u_{\rm p})$ of $u$, we deduce from expression~(\ref{e:gis:phi_u_b})
+that
 \be
-    0 \leq \phi(u, b) < \arcsin\sqrt{\frac{1 - u_{\rm n} /u_{\rm a}}{1 - u_{\rm n} /u_{\rm p}}}
-    < \frac{\pi}{2} ,
+    0 <  \arcsin\left( \sqrt{\frac{- u_{\rm n}}{u_{\rm p} - u_{\rm n}}} \right)
+     < \phi(u, b) \leq \frac{\pi}{2} ,
 \ee
-with $\phi(u_{\rm p}, b) = 0$.
+with $\phi(u_{\rm p}, b) = \pi/2$.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{gis_Phib_b_gt_bc.pdf}}
@@ -1149,15 +1150,9 @@ expression as
         - \int_{0}^{\phi(u, b)}
         \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} \right] .
 \]
-In view of (\ref{e:gis:def_incompl_elliptic_int}),
-the first integral is $F(\pi/2,k)$, while the second is
-$F(\phi(u,b), k)$. Actually $F(\pi/2,k)$ receives a special name: it is
-called the
-\defin{complete elliptic integral of the first kind}\index{complete!elliptic integral}\index{elliptic integral!complete --} and its standard notation is $K(k)$:
-\be \label{e:gis:def_K_complete}
-    \encadre{
-    K(k) := \int_0^{\frac{\pi}{2}} \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} = F\left(\frac{\pi}{2}, k\right) }.
-\ee
+In view of (\ref{e:gis:def_incompl_elliptic_int}) and (\ref{e:gis:def_K_complete}),
+the first integral is $F(\pi/2,k) = K(k)$, while the second is
+$F(\phi(u,b), k)$.
 We have thus
 \be \label{e:gis:Phib_u_lt_us}
     \encadre{ \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}}
