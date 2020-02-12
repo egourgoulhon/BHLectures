@@ -524,7 +524,7 @@ we arrive at
    \frac{b_{\rm c}}{b}\right) + \frac{2\pi}{3}\right] + \frac{1}{6} } \qquad (b \geq b_{\rm c}) \label{e:gis:u_n_b_gt_bc}\\[1ex]
  & \encadre{ u_{\rm p} = \frac{1}{3}\cos\left[ \frac{2}{3} \arcsin\left(
    \frac{b_{\rm c}}{b}\right) + \frac{4\pi}{3}\right] + \frac{1}{6} }
-                            \label{e:gis:u_per_b} \qquad (b \geq b_{\rm c}) \\[1ex]
+            \qquad (b \geq b_{\rm c}) \label{e:gis:u_per_b}  \\[1ex]
  & \encadre{ u_{\rm a} = \frac{1}{3}\cos\left[ \frac{2}{3} \arcsin\left(
    \frac{b_{\rm c}}{b}\right) \right] + \frac{1}{6} }  \qquad (b \geq b_{\rm c}) .
    \label{e:gis:u_apo_b}
@@ -889,6 +889,12 @@ we get
      \int_0^{\frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}}
      \frac{\D t}{\sqrt{(1 - t^2)(1 - k^2 t^2)}} .
 \ee
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gis_elliptic_mod.pdf}}
+\caption[]{\label{f:gis:elliptic_mod} \footnotesize
+Modulus $k$ of the incomplete elliptic integral $F$ that is involved
+in expression (\ref{e:gis:Phib_elliptic_int}) for $\Phi_b(u)$.}
+\end{figure}
 The term $\D t/\sqrt{1 - t^2}$ suggests to perform the change of
 variable $t = \sin\vartheta$. We then arrive at
 \be \label{e:gis:Phib_elliptic_int}
@@ -902,14 +908,14 @@ for the coordinate $\ph$.}
      \qquad (b > b_{\rm c})
 \ee
 and $F(\phi, k)$ is the
-\defin{incomplete elliptic integral of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --}:
+\defin{incomplete elliptic integral of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --} \cite{ByrdF71,GradsRGTJ115,AbramS72}:
 \be \label{e:gis:def_incompl_elliptic_int}
     \encadre{ F(\phi, k) := \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} }.
 \ee
 The notation $F(\phi, k)$ is the most commonly used
 in the literature \cite{ByrdF71,GradsRGTJ115}, but one may encounter as well
 $F(\phi|m)$ for $F(\phi, k)$ with $m=k^2$ \cite{AbramS72}.
-$k$ is called the \defin{modulus}\index{modulus!of an elliptic integral} of
+The parameter $k$ is called the \defin{modulus}\index{modulus!of an elliptic integral} of
 the elliptic integral. From its expression \eqref{e:gis:def_k_modulus}, we
 see that $k$ is a function of $b$. It is plotted in Fig.~\ref{f:gis:elliptic_mod}.
 Given the ordering (\ref{e:gis:order_u_zeros}) and the limits (\ref{e:gis:lim_b_inf_u_zeros}),
@@ -930,11 +936,20 @@ Given the range (\ref{e:gis:t_range_b_gt_bc}) of $t$, we have
 with $\phi(u_{\rm p}, b) = 0$.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.7\textwidth]{gis_elliptic_mod.pdf}}
-\caption[]{\label{f:gis:elliptic_mod} \footnotesize
-Modulus $k$ of the incomplete elliptic integral $F$ that is involved
-in expression (\ref{e:gis:Phib_elliptic_int}) for $\Phi_b(u)$.}
+\centerline{\includegraphics[width=0.7\textwidth]{gis_Phib_b_gt_bc.pdf}}
+\caption[]{\label{f:gis:Phib_b_gt_bc} \footnotesize
+Function $\Phi_b(u)$ defined by Eq.~(\ref{e:gis:def_Phib_b_gt_bc}) and
+evaluated via the elliptic integral expression (\ref{e:gis:Phib_elliptic_int})-(\ref{e:gis:phi_u_b}),
+for selected values of $b > b_{\rm c}$. For each value of $b$, the range of
+$u$ is $(0, u_{\rm p}]$, with the inverse periastron radius $u_{\rm p} = u_{\rm p}(b)$
+given by Eq.~(\ref{e:gis:u_per_b}).}
 \end{figure}
+
+The function $\Phi_b$ is plotted in Fig.~\ref{f:gis:Phib_b_gt_bc} for
+various values of $b$. Note that, by construction [cf. Eq.~(\ref{e:gis:def_Phib_b_gt_bc})],
+$\Phi_b(u) \geq 0$ and $\Phi_b(u) = 0 \iff u = u_{\rm p}$. Note also that the closer
+$b$ is from $b_{\rm c} \simeq 5.1961452$, the larger the amplitude of $\Phi_b(u)$. This
+point will be discussed further in Sec.~\ref{s:gis:deflect_winding}.
 
 \begin{remark}
 The trajectory of a null geodesic in the plane $\th=\pi/2$ as given by
@@ -1167,6 +1182,15 @@ in expressions (\ref{e:gis:Phib_u_lt_us}) and (\ref{e:gis:Phib_u_gt_us})
 for $\Phi_b(u)$.}
 \end{figure}
 
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gis_Phib_b_lt_bc.pdf}}
+\caption[]{\label{f:gis:Phib_b_lt_bc} \footnotesize
+Function $\Phi_b(u)$ defined by Eq.~(\ref{e:gis:def_Phib_b_lt_bc}) and
+evaluated via the elliptic integral expressions (\ref{e:gis:Phib_u_lt_us})
+and (\ref{e:gis:Phib_u_gt_us}),
+for selected values of $b < b_{\rm c}$.}
+\end{figure}
+
 Let us now turn to the case $u>u_*$. It implies $-1 < t < 0$, so that
 we perform the change of variable $t = -\cos\theta$ in order to keep
 $\theta\in(0,\pi/2)$. We obtain then
@@ -1182,7 +1206,12 @@ and (\ref{e:gis:def_k_b_lt_bc}). We conclude that
     \qquad (u > u_*,\ b < b_{\rm c}) .
 \ee
 
-
+The function $\Phi_b$ evaluated via Eqs.~(\ref{e:gis:Phib_u_lt_us})
+and (\ref{e:gis:Phib_u_gt_us}) is plotted in Fig.~\ref{f:gis:Phib_b_lt_bc} for
+various values of $b$. Note that, by construction [cf. Eq.~(\ref{e:gis:def_Phib_b_lt_bc})],
+$\Phi_b(u) = 0 \iff u = u_*$. Note also that, as in the case $b > b_{\rm c}$
+(Sec.~\ref{s:gis:geod_b_gt_bc_out}), the closer
+$b$ is from $b_{\rm c} \simeq 5.1961452$, the larger the amplitude of $\Phi_b(u)$.
 
 
 \subsection{Deflection angle and winding number} \label{s:gis:deflect_winding}
@@ -1351,15 +1380,15 @@ of $b - b_{\rm c}$ to discuss the images in Sec.~\ref{s:gis:images}.
 To this aim, we shall rely on some properties of
 elliptic integrals, the starting point being the expression
 (\ref{e:gis:Dph_F_psi_k}) of $\Delta\ph$ involving the incomplete elliptic
-integral of the first kind $F(\psi, k)$. As already noticed, we
+integral of the first kind $F(\phi(0,b), k)$. As already noticed, we
 have $\lim_{b\to b_{\rm c}} u_{\rm p} = \lim_{b\to b_{\rm c}} u_{\rm a} = 1/3$,
 so that (cf. Eq.~(\ref{e:gis:def_k_modulus}), Fig.~\ref{f:gis:elliptic_mod}
 and Eq.~(\ref{e:gis:def_psi}))
 \be
     \lim_{b\to b_{\rm c}} k = 1 \qquad\mbox{and}\qquad
-    \lim_{b\to b_{\rm c}} \psi = \pi/2.
+    \lim_{b\to b_{\rm c}} \phi(0,b) = \pi/2.
 \ee
-To get the behaviour of $F(\psi,k)$ when both of the above limits hold, we shall
+To get the behaviour of $F(\phi(0,b),\, k)$ when both of the above limits hold, we shall
 use the following addition property of incomplete elliptic
 integrals of the first kind\footnote{See e.g. Eq.~(117.01) of
 Ref.~\cite{ByrdF71} with $k' = \sqrt{1-k^2}$
