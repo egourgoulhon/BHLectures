@@ -931,7 +931,7 @@ with
 Given the range $(0, u_{\rm p})$ of $u$, we deduce from expression~(\ref{e:gis:phi_u_b})
 that
 \be
-    0 <  \arcsin\left( \sqrt{\frac{- u_{\rm n}}{u_{\rm p} - u_{\rm n}}} \right)
+    0 <  \arcsin\left( \sqrt{\frac{u_{\rm n}}{u_{\rm n} - u_{\rm p}}} \right)
      < \phi(u, b) \leq \frac{\pi}{2} ,
 \ee
 with $\phi(u_{\rm p}, b) = \pi/2$.
@@ -953,6 +953,31 @@ $b$ is from $b_{\rm c} \simeq 5.1961452$, the larger the amplitude of $\Phi_b(u)
 point will be discussed further in Sec.~\ref{s:gis:deflect_winding}.
 
 \begin{remark}
+One can express $\Phi_b(u)$ in terms of a single elliptic integral
+thanks to the following property of incomplete elliptic
+integrals of the first kind\footnote{See e.g. Eq.~(117.01) of
+Ref.~\cite{ByrdF71} with $k' = \sqrt{1-k^2}$
+or Eq.~(17.4.13) of Ref.~\cite{AbramS72} with $\sin\alpha = k$.}:
+\be \label{e:gis:add_elliptic_int}
+   \tan\psi \tan\phi = \frac{1}{\sqrt{1 - k^2}}\ \Longrightarrow \
+   F(\psi, k) = K(k) - F(\phi, k) .
+\ee
+Then by setting
+\be \label{e:gis:psi_u_b}
+  \psi(u, b) := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}\right) ,
+\ee
+we can rewrite Eq.~(\ref{e:gis:Phib_elliptic_int}) as
+\be \label{e:gis:Phib_elliptic_int_psi}
+     \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
+    \, F\left( \psi(u,b) ,\; k\right)  .
+\ee
+We prefer however the form (\ref{e:gis:Phib_elliptic_int}) of $\Phi_b(u)$
+because (i) expression (\ref{e:gis:phi_u_b}) for $\phi(u, b)$ is simpler than
+expression (\ref{e:gis:psi_u_b}) for $\psi(u, b)$ and (ii) the form (\ref{e:gis:Phib_elliptic_int}) is better adapted to the study of the limit
+$b\to b_{\rm c}$, to be discussed in Sec.~??
+\end{remark}
+
+\begin{remark}
 The trajectory of a null geodesic in the plane $\th=\pi/2$ as given by
 Eqs.~(\ref{e:gis:ph_Phi_b_u}) and (\ref{e:gis:Phib_elliptic_int})
 is of the form $\ph = \ph(r)$
@@ -961,7 +986,7 @@ this relation to express the trajectory in the polar form $r = r(\ph)$. This
 is performed thanks to the inverse of the incomplete elliptic integral $F(\phi,k)$,
 which is the \defin{Jacobi elliptic sine}\index{Jacobi!elliptic sine}\index{elliptic!sine}
 $\operatorname{sn}(x,k)$, defined by $\sin\phi = \operatorname{sn}(F(\phi,k), k)$. We deduce then
-from Eqs.~(\ref{e:gis:Phib_elliptic_int})-(\ref{e:gis:phi_u_b}) that
+from Eqs.~(\ref{e:gis:psi_u_b})-(\ref{e:gis:Phib_elliptic_int_psi}) that
 \be
     \frac{u_{\rm p} - u}{u_{\rm a} - u} = k^2 \operatorname{sn}\left(
     \frac{\sqrt{u_{\rm a} - u_{\rm n}}}{\sqrt{2}} \Phi_b(u),\; k \right) .
@@ -1383,14 +1408,9 @@ and Eq.~(\ref{e:gis:def_psi}))
     \lim_{b\to b_{\rm c}} k = 1 \qquad\mbox{and}\qquad
     \lim_{b\to b_{\rm c}} \phi(0,b) = \pi/2.
 \ee
-To get the behaviour of $F(\phi(0,b),\, k)$ when both of the above limits hold, we shall
-use the following addition property of incomplete elliptic
-integrals of the first kind\footnote{See e.g. Eq.~(117.01) of
-Ref.~\cite{ByrdF71} with $k' = \sqrt{1-k^2}$
-or Eq.~(17.4.13) of Ref.~\cite{AbramS72} with $\sin\alpha = k$.}:
-\be \label{e:gis:add_elliptic_int}
-   \tan\psi \tan\phi = \frac{1}{\sqrt{1 - k^2}}\ \Longrightarrow \ F(\psi, k) + F(\phi, k) = K(k),
-\ee
+
+...
+
 where $K(k)$ is the complete elliptic integral of the first
 kind\index{complete!elliptic integral}\index{elliptic integral!complete --}
 (\ref{e:gis:def_K_complete}).
