@@ -413,6 +413,7 @@ the future.
 \end{remark}
 
 \subsection{Differential equation and fundamental cubic polynomial}
+\label{s:gis:cubic_poly}
 
 The equation governing the $(r,\ph)$-part of a null geodesic, named
 \emph{trajectory in the orbital plane} in Sec.~\ref{s:ges:trajectories},
@@ -940,7 +941,7 @@ with $\phi(u_{\rm p}, b) = \pi/2$.
 \centerline{\includegraphics[width=0.7\textwidth]{gis_Phib_b_gt_bc.pdf}}
 \caption[]{\label{f:gis:Phib_b_gt_bc} \footnotesize
 Function $\Phi_b(u)$ defined by Eq.~(\ref{e:gis:def_Phib_b_gt_bc}) and
-evaluated via the elliptic integral expression (\ref{e:gis:Phib_elliptic_int})-(\ref{e:gis:phi_u_b}),
+evaluated via the elliptic integral expression (\ref{e:gis:phi_u_b})-(\ref{e:gis:Phib_elliptic_int}),
 for selected values of $b > b_{\rm c}$. For each value of $b$, the range of
 $u$ is $(0, u_{\rm p}]$, with the inverse periastron radius $u_{\rm p} = u_{\rm p}(b)$
 given by Eq.~(\ref{e:gis:u_per_b}).}
@@ -1015,7 +1016,8 @@ To be detailed later...
 A null geodesic $\Li$ with an impact parameter $b < b_{\rm c}$ has neither
 a periastron nor an apoastron, since $P_b$ has no zero in the physical range
 $(0, +\infty)$ of $u$ in that
-case. The only real zero of $P_b$ is $u_{\rm n}<0$, which is the function of $b$
+case (cf. Sec.~\ref{s:gis:cubic_poly} and Fig.~\ref{f:gis:polynomial_b_u}).
+The only real zero of $P_b$ is $u_{\rm n}<0$, which is the function of $b$
 given by Eq.~(\ref{e:gis:u_n_b_lt_bc}).
 Examples of such geodesics are those labelled 2 and 3
 in Figs.~\ref{f:gis:eff_pot_null} and \ref{f:gis:null_geod}.
@@ -1144,8 +1146,8 @@ Given the range $(0, +\infty)$ for $u$, the range of $t$ is
     -1 < t \leq \frac{u_*}{u_* - 2 u_{\rm n}} < 1 .
 \]
 To proceed, we shall distinguish the cases $u \leq u_*$ and $u> u_*$.
-The first case corresponds to $0 \leq t < \frac{u_*}{u_* - 2 u_{\rm n}}$ and we
-perform the change of variable $t = \cos\theta$ in the integral
+The first case corresponds to $0 \leq t < \frac{u_*}{u_* - 2 u_{\rm n}} < 1$ and we
+perform the change of variable $t = \cos\vartheta$ with $\vartheta\in(0, \pi/2)$ in the integral
 (\ref{e:gis:Phib_t_b_lt_bc}), yielding
 \[
     \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}} \int_{\phi(u,b)}^{\pi/2}
@@ -1175,8 +1177,8 @@ expression as
         - \int_{0}^{\phi(u, b)}
         \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} \right] .
 \]
-In view of (\ref{e:gis:def_incompl_elliptic_int}) and (\ref{e:gis:def_K_complete}),
-the first integral is $F(\pi/2,k) = K(k)$, while the second is
+In view of respectively (\ref{e:gis:def_K_complete}) and (\ref{e:gis:def_incompl_elliptic_int}),
+the first integral is $K(k)$, while the second one is
 $F(\phi(u,b), k)$.
 We have thus
 \be \label{e:gis:Phib_u_lt_us}
@@ -1212,8 +1214,8 @@ for selected values of $b < b_{\rm c}$.}
 \end{figure}
 
 Let us now turn to the case $u>u_*$. It implies $-1 < t < 0$, so that
-we perform the change of variable $t = -\cos\theta$ in order to keep
-$\theta\in(0,\pi/2)$. We obtain then
+we perform the change of variable $t = -\cos\vartheta$ in order to keep
+$\vartheta\in(0,\pi/2)$. We obtain then
 \[
     \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}} \int_{\pi/2}^{\phi(u,b)}
         \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} ,
@@ -1236,6 +1238,9 @@ $b$ is from $b_{\rm c} \simeq 5.1961452$, the larger the amplitude of $\Phi_b(u)
 
 \subsection{Deflection angle and winding number} \label{s:gis:deflect_winding}
 
+Let us consider a null geodesic $\Li$  with $b>b_{\rm c}$ arising from $r\to +\infty$,
+i.e. belonging to the family studied in Sec.~\ref{s:gis:geod_b_gt_bc_out}.
+$\Li$ reaches some periastron and departs to $r\to +\infty$.
 The total change of $\ph$ along the geodesic history is
 \be
     \Delta \ph = \ph_\infty - \ph_{-\infty} ,
@@ -1246,23 +1251,23 @@ $\ph_\infty := \lim_{\tlamb\to +\infty} \ph$.
 Given that $\lim_{\tlamb\to \pm\infty} u = 0$,
 Eq.~(\ref{e:gis:ph_Phi_b_u}) with respectively
 $\eps_{\rm in} = +1$ and $\eps_{\rm in} = -1$ leads to
-\begin{align}
-    \ph_{-\infty} & = \ph_{\rm p} - \eps_L \Phi_b(0) \nonumber \\
-    \ph_{\infty} & = \ph_{\rm p} + \eps_L \Phi_b(0) . \nonumber
-\end{align}
+\[
+    \ph_{-\infty} = \ph_{\rm p} - \eps_L \Phi_b(0) \qquad\mbox{and}\qquad
+    \ph_{\infty} = \ph_{\rm p} + \eps_L \Phi_b(0) .
+\]
 Hence
 \be \label{e:gis:Dph_Phi_b_0}
     \Delta\ph = 2 \eps_L \Phi_b(0) .
 \ee
-Given the expression  (\ref{e:gis:Phib_elliptic_int}) of $\Phi_b$, we
+Given expression  (\ref{e:gis:Phib_elliptic_int}) for $\Phi_b$, we
 get
 \be \label{e:gis:Dph_F_psi_k}
     \encadre{  \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-    \, F(\phi(0, b), k) } ,
+    \left[ K(k) - F(\phi(0, b), k) \right]} ,
 \ee
-where
+where, according to Eq.~(\ref{e:gis:phi_u_b}),
 \be \label{e:gis:def_psi}
-   \phi(0, b) = \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p}}{u_{\rm a}}} \right)  .
+   \phi(0, b) = \arcsin\left( \sqrt{\frac{|u_{\rm n}|}{u_{\rm p} - u_{\rm n}}} \right)  .
 \ee
 
 Note that one can have $|\Delta\ph| > 2\pi$; in such a case, the null geodesic
@@ -1328,7 +1333,7 @@ direction $\ph=0$ (i.e. having $\ph_{-\infty=0}$, for various values of the
 impact parameter $b$ decaying from $b=12 m$ to $b_{\rm c}$.
 They have been computed by means of the geodesic integrator
 of \textsf{SageMath} (cf. Appendix~\ref{s:sam}), instead of making use
-of the elliptic integral (\ref{e:gis:Phib_elliptic_int}).
+of the elliptic-integral expression (\ref{e:gis:Phib_elliptic_int}).
 All these geodesics have $L>0$ and hence $\eps_L = +1$.
 For $b=12 m$ (upper left panel of Fig.~\ref{f:gis:null_b1}),
 the geodesic suffers only some moderate bending; this is nothing but the standard
@@ -1364,8 +1369,8 @@ we get
     \frac{\D u}{\sqrt{(u_{\rm p} - u )(u_{\rm a} - u)(u - u_{\rm n})}} .
 \ee
 Given the ordering (\ref{e:gis:order_u_zeros}), each of the
-three terms under the square root is positive on the integration range
-$(0,u_{\rm p})$. For $b\not=b_{\rm c}$, $u_{\rm a}\not=u_{\rm p}$
+three factors under the square root is positive on the integration range
+$(0,u_{\rm p})$. For $b\not=b_{\rm c}$, one has $u_{\rm a}\not=u_{\rm p}$
 (cf. Fig.~\ref{f:gis:u_per_apo_neg})
 and
 the only diverging term in the integrand of (\ref{e:ges:Dph_u_per_apo})
@@ -1388,7 +1393,7 @@ Since the latter is a diverging integral, we conclude that
 \be \label{e:ges:Dph_infinite}
     \encadre{ \Delta\ph\to \pm\infty\quad\mbox{when}\quad b\to b_{\rm c} }.
 \ee
-We recover the behaviour obtained for $b=b_{\rm c}$ in
+We recover the behaviour observed for $b=b_{\rm c}$ in
 Sec.~\ref{s:gis:extern_crit_geod}: for
 an external critical null geodesic,
 $\Delta\ph$ is infinite, the geodesic spiralling indefinitely around the
@@ -1396,7 +1401,7 @@ photon orbit (cf. Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}).
 
 We are going to refine (\ref{e:ges:Dph_infinite}), since we shall
 need the diverging behaviour of $\Delta\ph$ in terms
-of $b - b_{\rm c}$ to discuss the images in Sec.~\ref{s:gis:images}.
+of $b - b_{\rm c}$ to discuss images in Sec.~\ref{s:gis:images}.
 To this aim, we shall rely on some properties of
 elliptic integrals, the starting point being the expression
 (\ref{e:gis:Dph_F_psi_k}) of $\Delta\ph$ involving the incomplete elliptic
