@@ -888,20 +888,20 @@ Note that $0<u\leq u_{\rm p}$ implies $0 < t \leq 1$, so that $0<\vartheta\leq \
 Since $\D t = 2\sin\vartheta\cos\vartheta \, \D\vartheta = 2\sqrt{t(1-t)}\, \D\vartheta$,
 we arrive immediately at
 \be \label{e:gis:Phib_prov}
-    \Phi_b(u) =  \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}} \int_{\phi(u,b)}^{\pi/2}
+    \Phi_b(u) =  \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}} \int_{\phi_b(u)}^{\pi/2}
     \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}}  ,
 \ee
 where\footnote{Do no confuse the letter $\phi$ with the symbol used
 for the coordinate $\ph$.}
 \be \label{e:gis:phi_u_b}
-   \encadre{ \phi(u, b) := \arcsin\left( \sqrt{\frac{u - u_{\rm n}}{u_{\rm p} - u_{\rm n}}}\right) }
+   \encadre{ \phi_b(u) := \arcsin\sqrt{\frac{u - u_{\rm n}}{u_{\rm p} - u_{\rm n}}} }
      \qquad (b > b_{\rm c}) .
 \ee
 By splitting the integral according to $\int_\phi^{\pi/2} = \int_0^{\pi/2} - \int_0^\phi$,
 we rewrite (\ref{e:gis:Phib_prov}) as
 \be \label{e:gis:Phib_elliptic_int}
     \encadre{ \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-    \left[ K(k) - F\left( \phi(u,b) ,\; k\right) \right] } \qquad (b > b_{\rm c}) ,
+    \left[ K(k) - F\left( \phi_b(u) ,\; k\right) \right] } \qquad (b > b_{\rm c}) ,
 \ee
 where $F(\phi, k)$ is the
 \defin{incomplete elliptic integral of the first kind}\index{incomplete!elliptic integral}\index{elliptic integral!incomplete --} \cite{ByrdF71,GradsRGTJ115,AbramS72}:
@@ -932,10 +932,10 @@ with
 Given the range $(0, u_{\rm p})$ of $u$, we deduce from expression~(\ref{e:gis:phi_u_b})
 that
 \be
-    0 <  \arcsin\left( \sqrt{\frac{u_{\rm n}}{u_{\rm n} - u_{\rm p}}} \right)
-     < \phi(u, b) \leq \frac{\pi}{2} ,
+    0 <  \arcsin \sqrt{\frac{u_{\rm n}}{u_{\rm n} - u_{\rm p}}}
+     < \phi_b(u) \leq \frac{\pi}{2} ,
 \ee
-with $\phi(u_{\rm p}, b) = \pi/2$.
+with $\phi_b(u_{\rm p}) = \pi/2$.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{gis_Phib_b_gt_bc.pdf}}
@@ -965,16 +965,16 @@ or Eq.~(17.4.13) of Ref.~\cite{AbramS72} with $\sin\alpha = k$.}:
 \ee
 Then by setting
 \be \label{e:gis:psi_u_b}
-  \psi(u, b) := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}\right) ,
+  \psi_b(u) := \arcsin\left( \frac{1}{k} \sqrt{\frac{u_{\rm p} - u}{u_{\rm a} - u}}\right) ,
 \ee
 we can rewrite Eq.~(\ref{e:gis:Phib_elliptic_int}) as
 \be \label{e:gis:Phib_elliptic_int_psi}
      \Phi_b(u) = \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-    \, F\left( \psi(u,b) ,\; k\right)  .
+    \, F\left( \psi_b(u) ,\; k\right)  .
 \ee
 We prefer however the form (\ref{e:gis:Phib_elliptic_int}) of $\Phi_b(u)$
-because (i) expression (\ref{e:gis:phi_u_b}) for $\phi(u, b)$ is simpler than
-expression (\ref{e:gis:psi_u_b}) for $\psi(u, b)$ and (ii) the form (\ref{e:gis:Phib_elliptic_int}) is better adapted to the study of the limit
+because (i) expression (\ref{e:gis:phi_u_b}) for $\phi_b(u)$ is simpler than
+expression (\ref{e:gis:psi_u_b}) for $\psi_b(u)$ and (ii) the form (\ref{e:gis:Phib_elliptic_int}) is better adapted to the study of the limit
 $b\to b_{\rm c}$, to be discussed in Sec.~??
 \end{remark}
 
@@ -1103,7 +1103,7 @@ Furthermore, according to the limits (\ref{e:gis:range_un_b_lt_bc}), we have
 
 The general solution of the differential equation
 (\ref{e:ges:dphi_du_null}) can be written as
-\be
+\be \label{e:gis:ph_phs_Phib}
    \encadre{ \ph = \ph_* -  \eps_L \eps_{\rm in} \Phi_b(u) },
 \ee
 where
@@ -1150,12 +1150,12 @@ The first case corresponds to $0 \leq t < \frac{u_*}{u_* - 2 u_{\rm n}} < 1$ and
 perform the change of variable $t = \cos\vartheta$ with $\vartheta\in(0, \pi/2)$ in the integral
 (\ref{e:gis:Phib_t_b_lt_bc}), yielding
 \[
-    \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}} \int_{\phi(u,b)}^{\pi/2}
+    \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}} \int_{\phi_b(u))}^{\pi/2}
         \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} ,
 \]
 with
 \be \label{e:gis:def_phi_u_b_lt_bc}
-   \encadre{ \phi(u, b) := \arccos\left( \frac{|u_* - u|}{u_* + u - 2 u_{\rm n}} \right) }
+   \encadre{ \phi_b(u) := \arccos\left( \frac{|u_* - u|}{u_* + u - 2 u_{\rm n}} \right) }
    \qquad (b < b_{\rm c}).
 \ee
 and\footnote{To get expression (\ref{e:gis:def_k_b_lt_bc}), we have used
@@ -1174,16 +1174,16 @@ expression as
    \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}}
    \left[ \int_{0}^{\pi/2}
         \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}}
-        - \int_{0}^{\phi(u, b)}
+        - \int_{0}^{\phi_b(u)}
         \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} \right] .
 \]
 In view of respectively (\ref{e:gis:def_K_complete}) and (\ref{e:gis:def_incompl_elliptic_int}),
 the first integral is $K(k)$, while the second one is
-$F(\phi(u,b), k)$.
+$F(\phi_b(u), k)$.
 We have thus
 \be \label{e:gis:Phib_u_lt_us}
     \encadre{ \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}}
-    \left[ K(k) - F \left( \phi(u, b),\, k \right) \right]}
+    \left[ K(k) - F \left( \phi_b(u),\, k \right) \right]}
     \qquad (u \leq u_*,\ b < b_{\rm c}) .
 \ee
 As for the case $b>b_{\rm c}$, the modulus $k$ of the elliptic integrals $K$
@@ -1217,14 +1217,14 @@ Let us now turn to the case $u>u_*$. It implies $-1 < t < 0$, so that
 we perform the change of variable $t = -\cos\vartheta$ in order to keep
 $\vartheta\in(0,\pi/2)$. We obtain then
 \[
-    \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}} \int_{\pi/2}^{\phi(u,b)}
+    \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}} \int_{\pi/2}^{\phi_b(u)}
         \frac{\D\vartheta}{\sqrt{1 - k^2 \sin^2\vartheta}} ,
 \]
-where $\phi(u,b)$ and $k$ are given by Eqs.~(\ref{e:gis:def_phi_u_b_lt_bc})
+where $\phi_b(u)$ and $k$ are given by Eqs.~(\ref{e:gis:def_phi_u_b_lt_bc})
 and (\ref{e:gis:def_k_b_lt_bc}). We conclude that
 \be \label{e:gis:Phib_u_gt_us}
     \encadre{ \Phi_b(u) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}}
-    \left[ F \left( \phi(u, b),\, k \right) - K(k) \right]}
+    \left[ F \left( \phi_b(u),\, k \right) - K(k) \right]}
     \qquad (u > u_*,\ b < b_{\rm c}) .
 \ee
 
@@ -1251,23 +1251,13 @@ $\ph_\infty := \lim_{\tlamb\to +\infty} \ph$.
 Given that $\lim_{\tlamb\to \pm\infty} u = 0$,
 Eq.~(\ref{e:gis:ph_Phi_b_u}) with respectively
 $\eps_{\rm in} = +1$ and $\eps_{\rm in} = -1$ leads to
-\[
+\be \label{e:gis:ph_inf_ph_p}
     \ph_{-\infty} = \ph_{\rm p} - \eps_L \Phi_b(0) \qquad\mbox{and}\qquad
     \ph_{\infty} = \ph_{\rm p} + \eps_L \Phi_b(0) .
-\]
+\ee
 Hence
 \be \label{e:gis:Dph_Phi_b_0}
     \Delta\ph = 2 \eps_L \Phi_b(0) .
-\ee
-Given expression  (\ref{e:gis:Phib_elliptic_int}) for $\Phi_b$, we
-get
-\be \label{e:gis:Dph_F_psi_k}
-    \encadre{  \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-    \left[ K(k) - F(\phi(0, b), k) \right]} ,
-\ee
-where, according to Eq.~(\ref{e:gis:phi_u_b}),
-\be \label{e:gis:def_psi}
-   \phi(0, b) = \arcsin\left( \sqrt{\frac{|u_{\rm n}|}{u_{\rm p} - u_{\rm n}}} \right)  .
 \ee
 
 Note that one can have $|\Delta\ph| > 2\pi$; in such a case, the null geodesic
@@ -1398,20 +1388,99 @@ Sec.~\ref{s:gis:extern_crit_geod}: for
 an external critical null geodesic,
 $\Delta\ph$ is infinite, the geodesic spiralling indefinitely around the
 photon orbit (cf. Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}).
+We shall refine (\ref{e:ges:Dph_infinite}) in Sec.~??
 
-We are going to refine (\ref{e:ges:Dph_infinite}), since we shall
-need the diverging behaviour of $\Delta\ph$ in terms
-of $b - b_{\rm c}$ to discuss images in Sec.~\ref{s:gis:images}.
+\subsection{Total change in $\ph$ from some emission point}
+
+To discuss images in Sec.~\ref{s:gis:images},
+we shall need the change in $\ph$ between some
+arbitrary point on a null geodesic and a point far away
+from the black hole.
+The total change $\Delta\ph$ along all the geodesic history
+considered above is then a special case: that for which the first point is
+infinitely far from the black hole.
+
+\subsubsection{Case $b > b_{\rm c}$}
+
+Let us consider a null geodesic $\Li$ with $b>b_{\rm c}$ and an event
+of (finite) affine parameter $\tlamb = \tlamb_{\rm em}$ on $\Li$, which we
+shall call the \emph{emission point}. We are
+interested in relating the value $\ph_\infty$ of $\ph$ for $\tlamb\to +\infty$
+to its value $\ph_{\rm em}$ at $\tlamb = \tlamb_{\rm em}$.
+
+If the emission point is past $\Li$'s periastron, i.e. if
+$\tlamb_{\rm em} > \tlamb_{\rm p}$, $\ph_{\rm em}$ is related to $\ph_{\rm p}$
+by Eq.~(\ref{e:gis:ph_Phi_b_u}) with $\eps_{\rm in} = -1$:
+\be
+    \ph_{\rm em} = \ph_{\rm p} + \eps_L \Phi_b(u_{\rm em}) ,
+\ee
+where $u_{\rm em}$ is the value of $u:=m/r$ at the emission point.
+On the other side, the asymptotic value $\ph_\infty$ is related to $\ph_{\rm p}$
+by Eq.~(\ref{e:gis:ph_inf_ph_p}). By combining these two relations
+to eliminate $\ph_{\rm p}$, we get
+\be
+    \ph_\infty = \ph_{\rm em} + \eps_L \left[ \Phi_b(0) - \Phi_b(u_{\rm em}) \right] .
+\ee
+Substituting expression (\ref{e:gis:Phib_elliptic_int}) for $\Phi_b$ yields
+\be
+   \encadre{ \ph_\infty = \ph_{\rm em} + \eps_L \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
+    \left[ F\left(\phi_b(u_{\rm em}), k\right)
+           - F\left(\phi_b(0), k \right) \right] } \qquad (\tlamb_{\rm em} > \tlamb_{\rm p}) ,
+\ee
+where, according to Eq.~(\ref{e:gis:phi_u_b}),
+\be
+   \phi_b(u_{\rm em}) = \arcsin\sqrt{\frac{u_{\rm em} - u_{\rm n}}{u_{\rm p} - u_{\rm n}}}
+   \qquad\mbox{and}\qquad
+   \phi_b(0) = \arcsin \sqrt{\frac{|u_{\rm n}|}{u_{\rm p} - u_{\rm n}}} .
+\ee
+
+If the emission point is located prior
+to the periastron, i.e. if $\tlamb_{\rm em} < \tlamb_{\rm p}$,
+$\ph_{\rm em}$ is related to $\ph_{\rm p}$
+by Eq.~(\ref{e:gis:ph_Phi_b_u}) with $\eps_{\rm in} = +1$:
+\be
+    \ph_{\rm em} = \ph_{\rm p} - \eps_L \Phi_b(u_{\rm em})
+\ee
+and we get, by combining with Eq.~(\ref{e:gis:ph_inf_ph_p}),
+\be
+    \ph_\infty = \ph_{\rm em} + \eps_L \left[ \Phi_b(0) + \Phi_b(u_{\rm em}) \right] .
+\ee
+Equation~(\ref{e:gis:Phib_elliptic_int}) then yields
+\be
+   \encadre{ \ph_\infty = \ph_{\rm em} + \eps_L \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
+    \left[ 2 K(k) - F\left(\phi_b(u_{\rm em}), k\right)
+           - F\left(\phi_b(0), k \right) \right] } \qquad (\tlamb_{\rm em} < \tlamb_{\rm p}) .
+\ee
+
+\subsubsection{Case $b < b_{\rm c}$}
+
+When the impact parameter $b$ obeys $b < b_{\rm c}$, $\Li$ has no periastrion and $\ph_{\rm em}$ and $\ph_\infty$
+are given by Eq.~(\ref{e:gis:ph_phs_Phib}) with $\eps_{\rm in} = -1$
+(outgoing motion):
+\be
+    \ph_{\rm em} = \ph_* +  \eps_L \Phi_b(u_{\rm em})
+    \qquad\mbox{and}\qquad
+    \ph_\infty = \ph_* +  \eps_L \Phi_b(0) .
+\ee
+
+
+%\be \label{e:gis:Dph_F_psi_k}
+%    \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
+%    \left[ K(k) - F(\phi_b(0), k) \right] ,
+%\ee
+
+%@@@@@@@@@@@@@@@@@@@
+
 To this aim, we shall rely on some properties of
 elliptic integrals, the starting point being the expression
 (\ref{e:gis:Dph_F_psi_k}) of $\Delta\ph$ involving the incomplete elliptic
-integral of the first kind $F(\phi(0,b), k)$. As already noticed, we
+integral of the first kind $F(\phi_b(0), k)$. As already noticed, we
 have $\lim_{b\to b_{\rm c}} u_{\rm p} = \lim_{b\to b_{\rm c}} u_{\rm a} = 1/3$,
 so that (cf. Eq.~(\ref{e:gis:def_k_modulus}), Fig.~\ref{f:gis:elliptic_mod}
 and Eq.~(\ref{e:gis:def_psi}))
 \be
     \lim_{b\to b_{\rm c}} k = 1 \qquad\mbox{and}\qquad
-    \lim_{b\to b_{\rm c}} \phi(0,b) = \pi/2.
+    \lim_{b\to b_{\rm c}} \phi_b(0) = \pi/2.
 \ee
 
 ...
