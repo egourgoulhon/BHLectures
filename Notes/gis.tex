@@ -1409,7 +1409,7 @@ Let us consider a null geodesic $\Li$ with $b>b_{\rm c}$ and an event
 of (finite) affine parameter $\tlamb = \tlamb_{\rm em}$ on $\Li$, which we
 shall call the \emph{emission point}. We are
 interested in relating the value $\ph_\infty$ of $\ph$ for $\tlamb\to +\infty$
-to its value $\ph_{\rm em}$ at $\tlamb = \tlamb_{\rm em}$.
+(the asymptotic direction) to its value $\ph_{\rm em}$ at $\tlamb = \tlamb_{\rm em}$.
 
 If the emission point is past $\Li$'s periastron, i.e. if
 $\tlamb_{\rm em} > \tlamb_{\rm p}$, $\ph_{\rm em}$ is related to $\ph_{\rm p}$
@@ -1491,7 +1491,7 @@ in
 \ee
 For $\tlamb_{\rm em} > \tlamb_{\rm p}$, inserting these formulas into
 (\ref{e:gis:ph_inf_em_past_per}) leads to
-\be
+\be \label{e:gis:ph_inf_ph_em_lim_post_per}
     \encadre{ \ph_\infty \underset{b\to b_{\rm c}^+}{\sim} \ph_{\rm em}
     + \eps_L \ln \left(
     \frac{2 + 3 u_{\rm em} + \sqrt{3(6 u_{\rm em} + 1)}}{(2+\sqrt{3})(1 - 3 u_{\rm em})}
@@ -1513,11 +1513,11 @@ $\veps >0$ such that
 \be \label{e:ges:u_per_eps}
     u_{\rm p} =: \frac{1}{3} - \veps.
 \ee
-The relation $P_b(u_{\rm p}) = 0$, once expanded to the second
+The relation $P_b(u_{\rm p}) = 0$, once expanded to second
 order in $\veps^2$, leads to the following relation between $b - b_{\rm c}$
 and $\veps$:
 \be \label{e:ges:b_bc_eps}
-    b-b_{\rm c} = \frac{81\sqrt{3}}{2} m \veps^2 + O(\veps^3).
+    \frac{b-b_{\rm c}}{m} = \frac{81\sqrt{3}}{2} \veps^2 + O(\veps^3).
 \ee
 Besides, from the expressions (\ref{e:gis:una_up}) of $u_{\rm n}$ and
 $u_{\rm a}$ in terms of $u_{\rm p}$, we get, still to the second order in $\veps$,
@@ -1537,7 +1537,7 @@ from which
     \sqrt{1 - k^2} \underset{\veps\to 0}{\sim} \sqrt{1 - (1 - 4\veps)}
             \underset{\veps\to 0}{\sim}  2 \sqrt{\veps} .
 \]
-The property (\ref{e:gis:limk1_K}) and then leads to
+The property (\ref{e:gis:limk1_K}) then leads to
 \[
     2 K(k) \underset{\veps\to 0}{\sim} 2 \ln\left(\frac{2}{\sqrt{\veps}}\right)
        \underset{\veps\to 0}{\sim} \ln\left(\frac{4}{\veps}\right)  .
@@ -1581,18 +1581,6 @@ this divergence as logarithmic in $b - b_{\rm c}$. More generally,
 Eq.~(\ref{e:gis:ph_inf_ph_em_lim_b_gt_bc}) shows that $\ph_\infty - \ph_{\rm em}$
 diverges logarithmically in $b - b_{\rm c}$ when $b\to b_{\rm c}^+$, whatever the position
 of the emission point.
-
-
-
-%\be \label{e:gis:Dph_F_psi_k}
-%    \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-%    \left[ K(k) - F(\phi_b(0), k) \right] ,
-%\ee
-
-%@@@@@@@@@@@@@@@@@@@
-
-
-
 
 Let us express $\Delta\ph$ is terms of the deflection angle $\Theta$ and
 the winding number $n$ through Eqs.~(\ref{e:gis:def_Dph_bar}) and
@@ -1650,7 +1638,7 @@ with $\phi_b(u_{\rm em})$ and $\phi_b(0)$ given by Eq.~(\ref{e:gis:def_phi_u_b_l
 If $u_{\rm em} > u_*$, then $\Phi_b(u_{\rm em})$ is given by Eq.~(\ref{e:gis:Phib_u_gt_us}).
 Combining with Eq.~(\ref{e:gis:Phib_0_b_lt_bc}), we can then write
 Eq.~(\ref{e:gis:ph_inf_b_lt_bc_prov}) as
-\be
+\be \label{e:gis:ph_inf_u_em_gt_us}
     \encadre{ \ph_\infty = \ph_{\rm em} + \frac{\eps_L}{\sqrt{2(u_* - u_{\rm n})}}
     \left[ 2K(k) - F \left( \phi_b(u_{\rm em}),\, k \right)  - F \left( \phi_b(0),\, k \right) \right]
     } \qquad {(b < b_{\rm c})\atop (u_{\rm em} > u_*)} ,
@@ -1682,6 +1670,7 @@ limits for $u_*$ and $u_{\rm n}$, we have (see also Fig.~\ref{f:gis:k_b_lt_bc})
 Given the values (\ref{e:gis:lim_phi_em_0_b_lt_bc}) and expression
 (\ref{e:gis:F_k_one}) for the elliptic integral $F$ when $k=1$, we get
 \begin{subequations}
+\label{e:gis:lim_F_em_0_b_lt_bc}
 \begin{align}
     & \lim_{b\to b_{\rm c}^-} F \left( \phi_b(u_{\rm em}),\, k \right)  =
     \ln \left(
@@ -1692,22 +1681,97 @@ Given the values (\ref{e:gis:lim_phi_em_0_b_lt_bc}) and expression
 \end{subequations}
 When $u_{\rm em} < u_*$, inserting these formulas into
 Eq.~(\ref{e:gis:ph_inf_u_em_lt_us}) leads to
-\be
+\be \label{e:gis:ph_inf_lim_b_lt_bc_u_lt_us}
     \encadre{ \ph_\infty \underset{b\to b_{\rm c}^-}{\sim} \ph_{\rm em}
     + \eps_L \ln \left(
-    \frac{2 + 3 u_{\rm em} + \sqrt{3(6 u_{\rm em} + 1)}}{(2+\sqrt{3})|1 - 3 u_{\rm em}|}
+    \frac{2 + 3 u_{\rm em} + \sqrt{3(6 u_{\rm em} + 1)}}{(2+\sqrt{3})(1 - 3 u_{\rm em})}
     \right) }
-    \qquad (u_{\rm em} < u_*) .
+    \qquad \left(u_{\rm em} < \frac{1}{3} \right) .
 \ee
+We have written $u_{\rm em} < 1/3$ because $u_*\to 1/3$ when
+$b\to b_{\rm c}^-$. For this reason, we also get rid of the absolute value
+around $1 - 3  u_{\rm em}$.
+Note that the value of $\ph_\infty$ given by Eq.~(\ref{e:gis:ph_inf_lim_b_lt_bc_u_lt_us})
+is identical to that given by Eq.~(\ref{e:gis:ph_inf_ph_em_lim_post_per}),
+which was obtained for $b\to b_{\rm c}^+$ and an emission point beyond the
+periastron. This is not surprising if one invokes the continuity around $b=b_{\rm c}$ of
+null geodesics as regards their part beyond the periastron for $b > b_{\rm c}$
+and outside $r = 3 m$ for $b < b_{\rm c}$. Indeed the geodesics with $b \to b_{\rm c}^+$
+differ significantly from those with $b \to b_{\rm c}^-$ only on
+parts including the periastron.
 
-For $u_{\rm em} > u_*$,
+For $u_{\rm em} > u_*$, we shall use formula (\ref{e:gis:ph_inf_u_em_gt_us}), with
+$K(k)$ having the diverging behaviour (\ref{e:gis:limk1_K})
+since $\lim_{b\to b_{\rm c}^-} k = 1$. To express $K(k)$ in terms of
+$|b - b_{\rm c}|$, let us introduce the small parameter $\veps > 0$ such that
+\be \label{e:gis:u_n_eps}
+    u_{\rm n} = - \frac{1}{6} - \veps.
+\ee
+The relation $P_b(u_{\rm n}) = 0$, once expanded to first order in $\veps$,
+leads then to the following relation between $b_{\rm c} - b$ and $\veps$:
+\be \label{e:gis:bc_b_veps}
+    \frac{b_{\rm c} - b}{m} = \frac{81\sqrt{3}}{4} \veps.
+\ee
+Besides, by expanding formula (\ref{e:gis:def_u0_us}) at first order in $\veps$,
+we get
+\[
+    u_* = \frac{1}{3} + \veps + O(\veps^2) .
+\]
+Substituting this value, as well as (\ref{e:gis:u_n_eps}), into expression
+(\ref{e:gis:def_k_b_lt_bc}) for $k$ yields
+\[
+    k = 1 - \frac{\veps}{4} + O(\veps^2) ,
+\]
+so that
+\[
+    \sqrt{1 - k^2} \underset{\veps\to 0}{\sim} \sqrt{1 - \left(1 - \frac{\veps}{2}\right)}
+     \underset{\veps\to 0}{\sim} \sqrt{\frac{\veps}{2}}
+\]
+The property (\ref{e:gis:limk1_K}) then leads to
+\[
+    2 K(k) \underset{\veps\to 0}{\sim} 2 \ln\left(\frac{4\sqrt{2}}{\sqrt{\veps}}\right)
+       \underset{\veps\to 0}{\sim} \ln\left(\frac{32}{\veps}\right)  .
+\]
+Substituting this expression for $K(k)$, as well as Eq.~(\ref{e:gis:lim_F_em_0_b_lt_bc})
+for $F \left( \phi_b(u_{\rm em}),\, k \right)$ and $F \left( \phi_b(0),\, k \right)$,
+into Eq.~(\ref{e:gis:ph_inf_u_em_gt_us}) results in
+\begin{align}
+\ph_\infty & \underset{b\to b_{\rm c}^-}{\sim} \ph_{\rm em}
+    + \frac{\eps_L}{\sqrt{2\left(\frac{1}{3} + \frac{1}{6}\right)}} \left[
+  \ln\left(\frac{32}{\veps}\right)
+    -  \ln \left(
+      \frac{2 + 3 u_{\rm em} + \sqrt{3(1+6 u_{\rm em})}}{3 u_{\rm em} - 1}
+      \right)
+    - \ln(2 + \sqrt{3}) \right] \nonumber \\
+ & \underset{b\to b_{\rm c}^-}{\sim} \ph_{\rm em}
+ + \eps_L \ln \left( \frac{32}{\veps}
+ \frac{(2 - \sqrt{3})(3 u_{\rm em} - 1)}{2 + 3 u_{\rm em} + \sqrt{3(1 + 6 u_{\rm em})}}
+ \right) . \nonumber
+\end{align}
+Finally, using (\ref{e:gis:bc_b_veps}) to let appear $b_{\rm c} - b$
+instead of $\veps$, we get
+\be \label{e:gis:ph_inf_lim_b_lt_bc_u_gt_us}
+ \encadre{ \ph_\infty  \underset{b\to b_{\rm c}^-}{\sim} \ph_{\rm em}
+   + \eps_L \ln \left(
+   \frac{648(2\sqrt{3} - 3)(3 u_{\rm em} - 1)}{2 + 3 u_{\rm em} + \sqrt{3(1 + 6 u_{\rm em})}}
+   \times\frac{m}{b_{\rm c} - b} \right)
+ } \qquad \left(u_{\rm em} > \frac{1}{3} \right) .
+\ee
+Hence we recover a logarithmic divergence of $\ph_\infty - \ph_{\rm em}$
+when $b$ tends to $b_{\rm c}$ by lower values.
+
+The upper bound on $u_{\rm em}$ is $1/2$, for this corresponds to a source
+just outside the black hole event horizon at $r=2m$. Let us evaluate
+$\ph_\infty$ in this limit; setting $u_{\rm em}\to 1/2$ in Eq.~(\ref{e:gis:ph_inf_lim_b_lt_bc_u_gt_us}) results in, after simplification,
+\be  \label{e:gis:ph_inf_lim_b_lt_bc_uem_1_2}
+   \ph_\infty  \underset{b\to b_{\rm c}^-}{\sim} \ph_{\rm em}
+    + \eps_L  \ln\left( \frac{648(26\sqrt{3} - 45) m}{b_{\rm c} - b} \right)
+    \qquad \left( u_{\rm em} \to \frac{1}{2} \right) .
+\ee
 
 \begin{remark}
-Check: compare with Eq.~(4) in Ref.~\cite{GrallHW19}:
-\be
-    \Delta\ph \underset{b\to b_{\rm c}^-}{\sim}
-    \eps_L \ln\left( \frac{648(26\sqrt{3} - 45) m}{b_{\rm c} - b} \right) .
-\ee
+As a check, Eq.~(\ref{e:gis:ph_inf_lim_b_lt_bc_uem_1_2}) agrees with
+Eq.~(4) in Ref.~\cite{GrallHW19}.
 \end{remark}
 
 
