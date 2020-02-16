@@ -925,7 +925,7 @@ we deduce from expression (\ref{e:gis:def_k_modulus}) that
     0 < k < 1,
 \ee
 with
-\be
+\be \label{e:gis:k_limits_b_gt_bc}
     \lim_{b\to b_{\rm c}^+} k = 1 \qquad\mbox{and}\qquad
     \lim_{b\to +\infty} k = 0 .
 \ee
@@ -975,7 +975,7 @@ we can rewrite Eq.~(\ref{e:gis:Phib_elliptic_int}) as
 We prefer however the form (\ref{e:gis:Phib_elliptic_int}) of $\Phi_b(u)$
 because (i) expression (\ref{e:gis:phi_u_b}) for $\phi_b(u)$ is simpler than
 expression (\ref{e:gis:psi_u_b}) for $\psi_b(u)$ and (ii) the form (\ref{e:gis:Phib_elliptic_int}) is better adapted to the study of the limit
-$b\to b_{\rm c}$, to be discussed in Sec.~??
+$b\to b_{\rm c}$, to be discussed in Sec.~\ref{s:gis:asympt_b_gt_bc}.
 \end{remark}
 
 \begin{remark}
@@ -1096,7 +1096,7 @@ Eq.~(\ref{e:gis:Pb_factor_b_lt_bc}) is always positive, in agreement with
 $u_{\rm n}$ being the only real
 zero of $P_b$ for $b < b_{\rm c}$.
 Furthermore, according to the limits (\ref{e:gis:range_un_b_lt_bc}), we have
-\be
+\be \label{e:gis:lim_us}
     \lim_{b\to 0} u_* = +\infty \qquad\mbox{and}\qquad
     \lim_{b\to b_{\rm c}^-} u_* = \frac{1}{3} .
 \ee
@@ -1242,7 +1242,7 @@ Let us consider a null geodesic $\Li$  with $b>b_{\rm c}$ arising from $r\to +\i
 i.e. belonging to the family studied in Sec.~\ref{s:gis:geod_b_gt_bc_out}.
 $\Li$ reaches some periastron and departs to $r\to +\infty$.
 The total change of $\ph$ along the geodesic history is
-\be
+\be \label{e:gis:def_Delta_ph}
     \Delta \ph = \ph_\infty - \ph_{-\infty} ,
 \ee
 with
@@ -1388,19 +1388,22 @@ Sec.~\ref{s:gis:extern_crit_geod}: for
 an external critical null geodesic,
 $\Delta\ph$ is infinite, the geodesic spiralling indefinitely around the
 photon orbit (cf. Fig.~\ref{f:gis:null_b_crit_from_inf_L_pos}).
-We shall refine (\ref{e:ges:Dph_infinite}) in Sec.~??
+We shall refine (\ref{e:ges:Dph_infinite}) in Sec.~\ref{s:gis:asympt_b_gt_bc}
+[Eq.~(\ref{e:gis:Dph_ln_b_bc})].
 
-\subsection{Total change in $\ph$ from some emission point}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Asymptotic direction from some emission point}
 
 To discuss images in Sec.~\ref{s:gis:images},
 we shall need the change in $\ph$ between some
 arbitrary point on a null geodesic and a point far away
 from the black hole.
 The total change $\Delta\ph$ along all the geodesic history
-considered above is then a special case: that for which the first point is
+considered in Sec.~\ref{s:gis:deflect_winding} is then a special case: that for which the first point is
 infinitely far from the black hole.
 
-\subsubsection{Case $b > b_{\rm c}$}
+\subsection{Asymptotic direction for $b > b_{\rm c}$} \label{s:gis:asympt_b_gt_bc}
 
 Let us consider a null geodesic $\Li$ with $b>b_{\rm c}$ and an event
 of (finite) affine parameter $\tlamb = \tlamb_{\rm em}$ on $\Li$, which we
@@ -1422,13 +1425,14 @@ to eliminate $\ph_{\rm p}$, we get
     \ph_\infty = \ph_{\rm em} + \eps_L \left[ \Phi_b(0) - \Phi_b(u_{\rm em}) \right] .
 \ee
 Substituting expression (\ref{e:gis:Phib_elliptic_int}) for $\Phi_b$ yields
-\be
+\be \label{e:gis:ph_inf_em_past_per}
    \encadre{ \ph_\infty = \ph_{\rm em} + \eps_L \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
     \left[ F\left(\phi_b(u_{\rm em}), k\right)
-           - F\left(\phi_b(0), k \right) \right] } \qquad (\tlamb_{\rm em} > \tlamb_{\rm p}) ,
+           - F\left(\phi_b(0), k \right) \right] } \qquad
+           {(b > b_{\rm c})\atop(\tlamb_{\rm em} > \tlamb_{\rm p})} ,
 \ee
 where, according to Eq.~(\ref{e:gis:phi_u_b}),
-\be
+\be \label{e:gis:phi_em_0_b_gt_bc}
    \phi_b(u_{\rm em}) = \arcsin\sqrt{\frac{u_{\rm em} - u_{\rm n}}{u_{\rm p} - u_{\rm n}}}
    \qquad\mbox{and}\qquad
    \phi_b(0) = \arcsin \sqrt{\frac{|u_{\rm n}|}{u_{\rm p} - u_{\rm n}}} .
@@ -1446,68 +1450,66 @@ and we get, by combining with Eq.~(\ref{e:gis:ph_inf_ph_p}),
     \ph_\infty = \ph_{\rm em} + \eps_L \left[ \Phi_b(0) + \Phi_b(u_{\rm em}) \right] .
 \ee
 Equation~(\ref{e:gis:Phib_elliptic_int}) then yields
-\be
+\be \label{e:gis:ph_inf_em_prior_per}
    \encadre{ \ph_\infty = \ph_{\rm em} + \eps_L \frac{\sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
     \left[ 2 K(k) - F\left(\phi_b(u_{\rm em}), k\right)
-           - F\left(\phi_b(0), k \right) \right] } \qquad (\tlamb_{\rm em} < \tlamb_{\rm p}) .
+           - F\left(\phi_b(0), k \right) \right] } \qquad
+           {(b > b_{\rm c})\atop (\tlamb_{\rm em} < \tlamb_{\rm p})} .
 \ee
 
-\subsubsection{Case $b < b_{\rm c}$}
+\subsubsection{Limit $b \to b_{\rm c}^+$}
 
-When the impact parameter $b$ obeys $b < b_{\rm c}$, $\Li$ has no periastrion and $\ph_{\rm em}$ and $\ph_\infty$
-are given by Eq.~(\ref{e:gis:ph_phs_Phib}) with $\eps_{\rm in} = -1$
-(outgoing motion):
-\be
-    \ph_{\rm em} = \ph_* +  \eps_L \Phi_b(u_{\rm em})
+From Eqs.~(\ref{e:gis:zeros_Pbu}), we have the following
+limits:
+\be \label{e:gis:lim_u_n_p_a}
+\lim_{b\to b_{\rm c}^+} u_{\rm n} = -\frac{1}{6} \qquad\mbox{and}\qquad
+\lim_{b\to b_{\rm c}^+} u_{\rm p} = \lim_{b\to b_{\rm c}^+} u_{\rm a} = \frac{1}{3} .
+\ee
+It follows then from expressions~(\ref{e:gis:phi_em_0_b_gt_bc}) that
+\be \label{e:gis:lim_phi_em_0_b_gt_bc}
+    \lim_{b\to b_{\rm c}^+} \phi_b(u_{\rm em}) = \arcsin \sqrt{2 u_{\rm em} + \frac{1}{3}}
     \qquad\mbox{and}\qquad
-    \ph_\infty = \ph_* +  \eps_L \Phi_b(0) .
+   \lim_{b\to b_{\rm c}^+} \phi_b(0) = \arcsin \left(\frac{1}{\sqrt{3}}\right) .
 \ee
-
-
-%\be \label{e:gis:Dph_F_psi_k}
-%    \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-%    \left[ K(k) - F(\phi_b(0), k) \right] ,
-%\ee
-
-%@@@@@@@@@@@@@@@@@@@
-
-To this aim, we shall rely on some properties of
-elliptic integrals, the starting point being the expression
-(\ref{e:gis:Dph_F_psi_k}) of $\Delta\ph$ involving the incomplete elliptic
-integral of the first kind $F(\phi_b(0), k)$. As already noticed, we
-have $\lim_{b\to b_{\rm c}} u_{\rm p} = \lim_{b\to b_{\rm c}} u_{\rm a} = 1/3$,
-so that (cf. Eq.~(\ref{e:gis:def_k_modulus}), Fig.~\ref{f:gis:elliptic_mod}
-and Eq.~(\ref{e:gis:def_psi}))
+Besides, $\lim_{b\to b_{\rm c}^+} k = 1$ [cf. Eq.~(\ref{e:gis:k_limits_b_gt_bc})]
+and, for any $\phi\in{}[0,\pi/2)$, the definition
+(\ref{e:gis:def_incompl_elliptic_int}) of $F$ leads to
+\be \label{e:gis:F_k_one}
+    F(\phi, 1) = \int_0^\phi \frac{\D\vartheta}{\sqrt{1 - \sin^2\vartheta}}
+        = \int_0^\phi \frac{\D\vartheta}{\cos\vartheta}
+        = \ln\left( \frac{1 + \sin\phi}{\cos\phi} \right) .
+\ee
+The limits (\ref{e:gis:lim_phi_em_0_b_gt_bc}) result then
+in
+\be \label{e:gis:lim_F_b_gt_bc}
+     \lim_{b\to b_{\rm c}^+} F\left(\phi_b(u_{\rm em}), k\right) =
+     \ln \left(
+     \frac{\sqrt{3} + \sqrt{6 u_{\rm em} + 1 }}{\sqrt{2(1 - 3 u_{\rm em})}} \right)
+     \quad\mbox{and}\quad
+     \lim_{b\to b_{\rm c}^+} F\left(\phi_b(0), k\right) =
+     \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right) .
+\ee
+For $\tlamb_{\rm em} > \tlamb_{\rm p}$, inserting these formulas into
+(\ref{e:gis:ph_inf_em_past_per}) leads to
 \be
-    \lim_{b\to b_{\rm c}} k = 1 \qquad\mbox{and}\qquad
-    \lim_{b\to b_{\rm c}} \phi_b(0) = \pi/2.
+    \encadre{ \ph_\infty \underset{b\to b_{\rm c}^+}{\sim} \ph_{\rm em}
+    + \eps_L \ln \left(
+    \frac{2 + 3 u_{\rm em} + \sqrt{3(6 u_{\rm em} + 1)}}{(2+\sqrt{3})(1 - 3 u_{\rm em})}
+    \right) }
+    \qquad (\tlamb_{\rm em} > \tlamb_{\rm p}) .
 \ee
 
-...
-
-where $K(k)$ is the complete elliptic integral of the first
-kind\index{complete!elliptic integral}\index{elliptic integral!complete --}
-(\ref{e:gis:def_K_complete}).
-When $k\to 1$, $K(k)$ is diverging with the following behaviour\footnote{See e.g. Eq.~(112.1) of Ref.~\cite{ByrdF71} with
+For the case $\tlamb_{\rm em} < \tlamb_{\rm p}$, $\ph_\infty$ is given
+by Eq.~(\ref{e:gis:ph_inf_em_prior_per}) and
+we need to determine the behaviour of $K(k)$ to conclude.
+Actually, when $k\to 1$, $K(k)$ is diverging with the following behaviour\footnote{See e.g. Eq.~(112.1) of Ref.~\cite{ByrdF71} with
 $k' = \sqrt{1-k^2}$ or Eq.~(17.3.26) of
 Ref.~\cite{AbramS72} with $m = k^2$ and $m_1 = 1 - k^2$.}:
 \be \label{e:gis:limk1_K}
     \lim_{k\to 1} \left[ K(k) - \ln\left(\frac{4}{\sqrt{1-k^2}}\right) \right] = 0 .
 \ee
-Given (\ref{e:gis:add_elliptic_int}) and (\ref{e:gis:def_psi}),
-we can rewrite (\ref{e:gis:Dph_F_psi_k}) as
-\be \label{e:gis:Dph_K_F_phi_k}
-    \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
-    \, \left[ K(k) - F(\psi, k) \right],
-\ee
-with
-\be \label{e:gis:def_phi_u_ap_k}
-    \psi := \arctan \left(
-            \sqrt{ \frac{(u_{\rm a}/u_{\rm p}) k^2 - 1}{1 - k^2}}
-          \right).
-\ee
-To get the behaviour of $\Delta\ph$ when $b\to b_{\rm c}$ from the above
-formulas, let us introduce the small parameter $\veps >0$ such that
+To relate $\sqrt{1 - k^2}$ to $b - b_{\rm c}$, let us introduce the small parameter
+$\veps >0$ such that
 \be \label{e:ges:u_per_eps}
     u_{\rm p} =: \frac{1}{3} - \veps.
 \ee
@@ -1519,69 +1521,79 @@ and $\veps$:
 \ee
 Besides, from the expressions (\ref{e:gis:una_up}) of $u_{\rm n}$ and
 $u_{\rm a}$ in terms of $u_{\rm p}$, we get, still to the second order in $\veps$,
-\be \label{e:gis:u_n_a_expand}
+\[
     u_{\rm n} = - \frac{1}{6} + 2 \veps^2 + O(\veps^3)
     \qquad\mbox{and}\qquad
     u_{\rm a} = \frac{1}{3} + \veps - 2 \veps^2
      + O(\veps^3) .
-\ee
+\]
 Substituting these values in the expression (\ref{e:gis:def_k_modulus})
 of the modulus $k$ and expanding to the first order in $\veps$ leads to
-\be \label{e:gis:k_expand}
-    k = 1 - 2 \veps + O(\veps^2).
-\ee
-Using the expansions (\ref{e:gis:u_n_a_expand}) and (\ref{e:gis:k_expand})
-in Eq.~(\ref{e:gis:def_phi_u_ap_k}), we get
-\be
-    \lim_{\veps\to 0} \tan \psi =  \frac{1}{\sqrt{2}} ,
-\ee
-which implies
-\be \label{e:gis:lim_eps_zero_phi}
-    \lim_{\veps\to 0} \cos\psi = \sqrt{\frac{2}{3}} \qquad\mbox{and}\qquad
-    \lim_{\veps\to 0} \sin\psi = \frac{1}{\sqrt{3}} .
-\ee
-Now, for any $\psi\in{}[0,\pi/2)$ , we have, according to the definition
-(\ref{e:gis:def_incompl_elliptic_int}) of $F$,
-\be
-    F(\psi, 1) = \int_0^\psi \frac{\D\vartheta}{\sqrt{1 - \sin^2\vartheta}}
-        = \int_0^\psi \frac{\D\vartheta}{\cos\vartheta}
-        = \ln\left( \frac{1 + \sin\psi}{\cos\psi} \right) .
-\ee
-In view of (\ref{e:gis:lim_eps_zero_phi}), we conclude that in the present
-case
-\be
-    \lim_{\veps\to 0} F(\psi, k) = \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right) .
-\ee
-Using this result, as well as (\ref{e:gis:limk1_K}), in Eq.~(\ref{e:gis:Dph_K_F_phi_k})
-yields
 \[
-    \Delta\ph \underset{\veps\to 0}{\sim} \eps_L
-    \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}} \left[
-    \ln \left( \frac{4}{\sqrt{1 - k^2}} \right)
-    - \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right)  \right] .
+    k = 1 - 2 \veps + O(\veps^2),
 \]
-Now, $u_{\rm a} - u_{\rm n} \underset{\veps\to 0}{\sim} 1/3 - (-1/6) = 1/2$
-and, from Eq.~(\ref{e:gis:k_expand}),
+from which
 \[
-    1 - k^2 \underset{\veps\to 0}{\sim} 1 - (1 - 2\veps)^2
-            \underset{\veps\to 0}{\sim}  4 \veps .
+    \sqrt{1 - k^2} \underset{\veps\to 0}{\sim} \sqrt{1 - (1 - 4\veps)}
+            \underset{\veps\to 0}{\sim}  2 \sqrt{\veps} .
 \]
-We then get
+The property (\ref{e:gis:limk1_K}) and then leads to
 \[
-    \Delta\ph \underset{\veps\to 0}{\sim}  4 \eps_L
-    \left[
-    \ln \left( \frac{2}{\sqrt{\veps}} \right)
-    - \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right)  \right] =
-    4 \eps_L \ln \left( \frac{2\sqrt{2}}{(\sqrt{3}+1)\sqrt{\veps}} \right)
-    = \eps_L \ln \left( \frac{64}{(\sqrt{3} + 1)^4 \veps^2} \right) .
+    2 K(k) \underset{\veps\to 0}{\sim} 2 \ln\left(\frac{2}{\sqrt{\veps}}\right)
+       \underset{\veps\to 0}{\sim} \ln\left(\frac{4}{\veps}\right)  .
 \]
+Using this result, as well as (\ref{e:gis:lim_F_b_gt_bc}), in
+Eq.~(\ref{e:gis:ph_inf_em_prior_per}) yields
+\begin{align}
+  \ph_\infty & \underset{b\to b_{\rm c}^+}{\sim} \ph_{\rm em}
+   + \eps_L \times 2 \left[ \ln\left(\frac{4}{\veps}\right)
+   - \ln \left(
+     \frac{\sqrt{3} + \sqrt{6 u_{\rm em} + 1 }}{\sqrt{2(1 - 3 u_{\rm em})}} \right)
+   - \ln \left(\frac{\sqrt{3} + 1}{\sqrt{2}} \right) \right] \nonumber \\
+   & \underset{b\to b_{\rm c}^+}{\sim} \ph_{\rm em}
+   + \eps_L \ln\left(\frac{16}{\veps^2}
+   \frac{2(1 - 3 u_{\rm em})}{(\sqrt{3} + \sqrt{6 u_{\rm em} + 1 })^2}
+   \frac{2}{(\sqrt{3} + 1)^2} \right) . \nonumber
+\end{align}
+Note that we have used the limits (\ref{e:gis:lim_u_n_p_a})
+to evaluate the prefactor in Eq.~(\ref{e:gis:ph_inf_em_prior_per})
+as $\sqrt{2/(u_{\rm a} - u_{\rm n})} \sim \sqrt{2/(1/3 - (-1/6))} = 2$.
 Expressing $\veps^2$ in terms of $b - b_{\rm c}$ via Eq.~(\ref{e:ges:b_bc_eps})
-leads to the final formula expressing the divergence of $\Delta\ph$
-when $b\to b_{\rm c}$:
+leads to the final formula:
+\be \label{e:gis:ph_inf_ph_em_lim_b_gt_bc}
+   \encadre{  \ph_\infty  \underset{b\to b_{\rm c}^+}{\sim} \ph_{\rm em}
+   + \eps_L \ln \left(
+   \frac{648\sqrt{3} (1 - 3 u_{\rm em})}{(2+\sqrt{3})(2 + 3 u_{\rm em}
+   + \sqrt{3(1 + 6 u_{\rm em})})} \times \frac{m}{b - b_{\rm c}} \right)
+   } \qquad (\tlamb_{\rm em} < \tlamb_{\rm p}) .
+\ee
+The value of the total change $\Delta\ph$ along the complete geodesic history
+[cf. Eq.~(\ref{e:gis:def_Delta_ph})]
+is obtained by taking the limit $u_{\rm em}\to 0$ (i.e. $r_{\rm em} \to +\infty$)
+in this formula. We get
 \be \label{e:gis:Dph_ln_b_bc}
-   \encadre{ \Delta\ph \underset{b\to b_{\rm c}}{\sim}
+   \encadre{ \Delta\ph \underset{b\to b_{\rm c}^+}{\sim}
     \eps_L \ln\left( \frac{648(7\sqrt{3} - 12) m}{b-b_{\rm c}} \right) } .
 \ee
+We recover the result (\ref{e:ges:Dph_infinite}): $\Delta\ph$ is diverging
+when $b\to b_{\rm c}^+$. Moreover, Eq.~(\ref{e:gis:Dph_ln_b_bc}) specifies
+this divergence as logarithmic in $b - b_{\rm c}$. More generally,
+Eq.~(\ref{e:gis:ph_inf_ph_em_lim_b_gt_bc}) shows that $\ph_\infty - \ph_{\rm em}$
+diverges logarithmically in $b - b_{\rm c}$ when $b\to b_{\rm c}^+$, whatever the position
+of the emission point.
+
+
+
+%\be \label{e:gis:Dph_F_psi_k}
+%    \Delta\ph = \eps_L \frac{2 \sqrt{2}}{\sqrt{u_{\rm a} - u_{\rm n}}}
+%    \left[ K(k) - F(\phi_b(0), k) \right] ,
+%\ee
+
+%@@@@@@@@@@@@@@@@@@@
+
+
+
+
 Let us express $\Delta\ph$ is terms of the deflection angle $\Theta$ and
 the winding number $n$ through Eqs.~(\ref{e:gis:def_Dph_bar}) and
 (\ref{e:gis:def_deflection_angle}):
@@ -1590,7 +1602,7 @@ the winding number $n$ through Eqs.~(\ref{e:gis:def_Dph_bar}) and
 \ee
 We can then deduce from (\ref{e:gis:Dph_ln_b_bc}) that
 \be \label{e:ges:b_bc_exp_Theta}
-   \encadre{ b - b_{\rm c} \underset{b\to b_{\rm c}}{\sim}
+   \encadre{ b - b_{\rm c} \underset{b\to b_{\rm c}^+}{\sim}
     \underbrace{648(7\sqrt{3} - 12)\mathrm{e}^{-\pi}}_{\simeq 3.482284} m \, \mathrm{e}^{-\eps_L \Theta - 2\pi |n|}  }.
 \ee
 In the above writing, we have used the fact that the sign of $n$ is the same
@@ -1601,17 +1613,103 @@ Eq.~(268) in Chap.~3 of Ref.~\cite{Chand83}, where $\delta D = b-b_{\rm c}$ and
 $\Theta$ is the same as ours, or with Eq.~(7.4.54) of Ref.~\cite{FroloZ11},
 where $\Delta\ell = (b - b_{\rm c})/(2 m)$.
 \end{remark}
+
+\subsection{Asymptotic direction for $b < b_{\rm c}$}
+
+When the impact parameter $b$ obeys $b < b_{\rm c}$, $\Li$ has no periastrion and $\ph_{\rm em}$ and $\ph_\infty$
+are given by Eq.~(\ref{e:gis:ph_phs_Phib}) with $\eps_{\rm in} = -1$
+(outgoing motion):
+\be
+    \ph_{\rm em} = \ph_* +  \eps_L \Phi_b(u_{\rm em})
+    \qquad\mbox{and}\qquad
+    \ph_\infty = \ph_* +  \eps_L \Phi_b(0) .
+\ee
+We have then
+\be \label{e:gis:ph_inf_b_lt_bc_prov}
+    \ph_\infty = \ph_{\rm em} + \eps_L \left[  \Phi_b(0) - \Phi_b(u_{\rm em}) \right] .
+\ee
+$\Phi_b(0)$ is given by Eq.~(\ref{e:gis:Phib_u_lt_us}):
+\be \label{e:gis:Phib_0_b_lt_bc}
+   \Phi_b(0) =  \frac{1}{\sqrt{2(u_* - u_{\rm n})}}
+    \left[ K(k) - F \left( \phi_b(0),\, k \right) \right] .
+\ee
+If $u_{\rm em} < u_*$, $\Phi_b(u_{\rm em})$ is given by Eq.~(\ref{e:gis:Phib_u_lt_us})
+as well, so that Eq.~(\ref{e:gis:ph_inf_b_lt_bc_prov}) becomes
+\be \label{e:gis:ph_inf_u_em_lt_us}
+    \encadre{ \ph_\infty = \ph_{\rm em} + \frac{\eps_L}{\sqrt{2(u_* - u_{\rm n})}}
+    \left[ F \left( \phi_b(u_{\rm em}),\, k \right)  - F \left( \phi_b(0),\, k \right) \right]
+    } \qquad {(b < b_{\rm c})\atop (u_{\rm em} < u_*)} ,
+\ee
+with $\phi_b(u_{\rm em})$ and $\phi_b(0)$ given by Eq.~(\ref{e:gis:def_phi_u_b_lt_bc}):
+\be \label{e:gis:phi_em_0_b_lt_bc}
+   \phi_b(u_{\rm em}) = \arccos\left( \frac{|u_* - u_{\rm em}|}{u_* + u_{\rm em} - 2 u_{\rm n}} \right)
+   \qquad\mbox{and}\qquad
+   \phi_b(0) = \arccos\left( \frac{u_*}{u_* - 2 u_{\rm n}} \right) .
+\ee
+
+If $u_{\rm em} > u_*$, then $\Phi_b(u_{\rm em})$ is given by Eq.~(\ref{e:gis:Phib_u_gt_us}).
+Combining with Eq.~(\ref{e:gis:Phib_0_b_lt_bc}), we can then write
+Eq.~(\ref{e:gis:ph_inf_b_lt_bc_prov}) as
+\be
+    \encadre{ \ph_\infty = \ph_{\rm em} + \frac{\eps_L}{\sqrt{2(u_* - u_{\rm n})}}
+    \left[ 2K(k) - F \left( \phi_b(u_{\rm em}),\, k \right)  - F \left( \phi_b(0),\, k \right) \right]
+    } \qquad {(b < b_{\rm c})\atop (u_{\rm em} > u_*)} ,
+\ee
+where $\phi_b(u_{\rm em})$ is still given by Eq.~(\ref{e:gis:phi_em_0_b_lt_bc}).
+
+
+\subsubsection{Limit $b \to b_{\rm c}^-$}
+
+When $b \to b_{\rm c}^-$, we have the following limits
+[cf. Eqs.~(\ref{e:gis:range_un_b_lt_bc}) and (\ref{e:gis:lim_us})]:
+\[
+ \lim_{b\to b_{\rm c}^-} u_{\rm n} = - \frac{1}{6}
+ \qquad\mbox{and}\qquad
+ \lim_{b\to b_{\rm c}^-} u_* = \frac{1}{3} .
+\]
+Consequently, Eq.~(\ref{e:gis:phi_em_0_b_lt_bc}) yields
+\be \label{e:gis:lim_phi_em_0_b_lt_bc}
+   \lim_{b\to b_{\rm c}^-} \phi_b(u_{\rm em}) =
+    \arccos\left( \frac{|1 - 3 u_{\rm em}|}{2 + 3 u_{\rm em}} \right)
+   \quad\mbox{and}\quad
+   \lim_{b\to b_{\rm c}^-} \phi_b(0) = \arccos\left( \frac{1}{2} \right) = \frac{\pi}{3}.
+\ee
+Moreover, from expression (\ref{e:gis:def_k_b_lt_bc}) for $k$ and the above
+limits for $u_*$ and $u_{\rm n}$, we have (see also Fig.~\ref{f:gis:k_b_lt_bc})
+\[
+    \lim_{b\to b_{\rm c}^-} k = 1 .
+\]
+Given the values (\ref{e:gis:lim_phi_em_0_b_lt_bc}) and expression
+(\ref{e:gis:F_k_one}) for the elliptic integral $F$ when $k=1$, we get
+\begin{subequations}
+\begin{align}
+    & \lim_{b\to b_{\rm c}^-} F \left( \phi_b(u_{\rm em}),\, k \right)  =
+    \ln \left(
+      \frac{2 + 3 u_{\rm em} + \sqrt{3(1+6 u_{\rm em})}}{|1 - 3 u_{\rm em}|}
+      \right) \\
+    & \lim_{b\to b_{\rm c}^-} F \left( \phi_b(0),\, k \right)  = \ln(2 + \sqrt{3}) .
+\end{align}
+\end{subequations}
+When $u_{\rm em} < u_*$, inserting these formulas into
+Eq.~(\ref{e:gis:ph_inf_u_em_lt_us}) leads to
+\be
+    \encadre{ \ph_\infty \underset{b\to b_{\rm c}^-}{\sim} \ph_{\rm em}
+    + \eps_L \ln \left(
+    \frac{2 + 3 u_{\rm em} + \sqrt{3(6 u_{\rm em} + 1)}}{(2+\sqrt{3})|1 - 3 u_{\rm em}|}
+    \right) }
+    \qquad (u_{\rm em} < u_*) .
+\ee
+
+For $u_{\rm em} > u_*$,
+
 \begin{remark}
-Equation~(\ref{e:gis:Dph_ln_b_bc}) has been derived for $b > b_{\rm c}$. In that sense,
-we could have written the limits as $b\to b_{\rm c}^+$. One can establish
-a similar relation for null geodesics with $b< b_{\rm c}$ \cite{GrallHW19}.
-There is still a logarithmic divergence of $\Delta\ph$, but with a different
-numerical factor (cf. Eq.~(4) in Ref.~\cite{GrallHW19}):
+Check: compare with Eq.~(4) in Ref.~\cite{GrallHW19}:
 \be
     \Delta\ph \underset{b\to b_{\rm c}^-}{\sim}
     \eps_L \ln\left( \frac{648(26\sqrt{3} - 45) m}{b_{\rm c} - b} \right) .
 \ee
 \end{remark}
+
 
 \begin{hist}
 Equation~(\ref{e:ges:b_bc_exp_Theta}) has been first derived by
