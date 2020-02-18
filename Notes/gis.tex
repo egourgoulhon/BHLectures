@@ -1612,7 +1612,10 @@ Total change $\ph_\infty - \ph_{\rm em}$ in $\ph$ from the
 emission point at $(r,\ph) = (r_{\rm em}, \ph_{\rm em})$
 as a function of the impact parameter $b$ of the null geodesic, assuming $\eps_L = +1$.
 The dashed curves correspond to trajectories with $b > b_{\rm c}$ that do not pass
-through the periastron.}
+through the periastron. For each value of $r_{\rm em} > 3m$, the maximum of
+$b$ is given by $r_{\rm p}(b) = r_{\rm em}$, i.e. by
+$b^2 = r_{\rm em}^3/(r_{\rm em} - 2 m)$ [cf. Eq.~(\ref{e:ges:r_per_null})
+and Fig.~\ref{f:gis:null_per_apo}].}
 \end{figure}
 
 \subsection{Asymptotic direction for $b < b_{\rm c}$}
@@ -1913,19 +1916,20 @@ by $\Obs_{\rm em}$. Furthermore, we suppose that the rest frame of $\Obs_{\rm em
 is an orthonormal tetrad
 $\left(\w{u}_{\rm em}, \w{e}_{(r)}, \w{e}_{(\th)}, \w{e}_{(\ph)}\right)$ such
 that the first spacelike vector, $\w{e}_{(r)}$, is always pointing towards the
-black hole. More precisely, we set
+black hole. Note that the first vector of the tetrad is necessarily the
+4-velocity $\w{u}_{\rm em}$ of $\Obs_{\rm em}$. More precisely, we set
 \begin{subequations}
 \label{e:gis:bo_Obs_em}
 \begin{align}
-& \w{u}_{\rm em} = \left( 1 - \frac{2m}{r_S} \right)^{-1/2} \wpar_t \\
-& \w{e}_{(r)} = - \left( 1 - \frac{2m}{r_S} \right)^{1/2} \wpar_r \\
-& \w{e}_{(\th)} = - r_S^{-1} \wpar_\th \\
-& \w{e}_{(\ph)} = - r_S^{-1} \wpar_\ph ,
+& \w{u}_{\rm em} = \left( 1 - \frac{2m}{r_{\rm em}} \right)^{-1/2} \wpar_t \\
+& \w{e}_{(r)} = - \left( 1 - \frac{2m}{r_{\rm em}} \right)^{1/2} \wpar_r \\
+& \w{e}_{(\th)} = - r_{\rm em}^{-1} \wpar_\th \\
+& \w{e}_{(\ph)} = - r_{\rm em}^{-1} \wpar_\ph ,
 \end{align}
 \end{subequations}
 where $(\wpar_t, \wpar_r, \wpar_\th, \wpar_\ph)$ is the natural basis associated
-with Schwarzschild-Droste coordinates and $r_S$ is the $r$-coordinate of
-$S$, and hence of $\Obs_{\rm em}$.
+with Schwarzschild-Droste coordinates and $r_{\rm em}$ is the (constant) $r$-coordinate of
+$\Obs_{\rm em}$, and hence of $\Obs_{\rm em}$.
 It is immediate that $\left(\w{u}_{\rm em}, \w{e}_{(r)}, \w{e}_{(\th)}, \w{e}_{(\ph)}\right)$
 is an orthonormal tetrad with respect to the Schwarzschild metric
 (\ref{e:sch:Schwarz_metric_SD}). Moreover,
@@ -1941,7 +1945,7 @@ plane is given by Eqs.~(\ref{e:ges:comp_4_momentum}) and
         + \eps_L E \frac{b}{r^2} \, \wpar_\ph ,
 \ee
 where we have used Eq.~(\ref{e:ges:eff_pot_null}) to let appear $U(r)$
-and Eq.~(\ref{e:ges:def_b}) to express $L$ in terms of $E$ and $b$.
+and Eqs.~(\ref{e:ges:def_b})-(\ref{e:gis:def_epsilon_L}) to express $L$ in terms of $E$ and $b$.
 Taking the value of $\w{p}$ at the emission point $S$ and using (\ref{e:gis:bo_Obs_em})
 to express $\wpar_t$, $\wpar_r$ and $\wpar_\ph$ in terms of
 $\Obs_{\rm em}$'s orthonormal tetrad, we get
@@ -1951,16 +1955,27 @@ $\Obs_{\rm em}$'s orthonormal tetrad, we get
 where
 \be
     \veps_{\rm em} := - \w{u}_{\rm em} \cdot \w{p} =
-        E \left( 1 - \frac{2m}{r_S} \right)^{-1/2}
+        E \left( 1 - \frac{2m}{r_{\rm em}} \right)^{-1/2}
 \ee
 is the energy of the photon as measured by $\Obs_{\rm em}$ (cf. Sec.~\ref{s:fra:measure})
 and
 \be \label{e:gis:n_b_U_rS}
-    \w{n} := \pm \sqrt{1 - b^2 U(r_S)} \, \w{e}_{(r)}
-    - \eps_L b \sqrt{U(r_S)}\, \w{e}_{(\ph)}
+    \w{n} := \pm \sqrt{1 - b^2 U(r_{\rm em})} \, \w{e}_{(r)}
+    - \eps_L b \sqrt{U(r_{\rm em})}\, \w{e}_{(\ph)}
 \ee
 is a unit spacelike vector orthogonal to $\w{u}_{\rm em}$:
 $\w{n}\cdot\w{n} = 1$ and $\w{u}_{\rm em}\cdot\w{n} = 0$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gis_b_eta.pdf}}
+\caption[]{\label{f:gis:b_eta} \footnotesize
+Impact parameter $b$ of null geodesics (multiplied by $\eps_L=\pm 1$)
+as a function of the emission angle $\eta$ in the
+emitter's rest frame, for various values of the $r$-coordinate $r_{\rm em}$ of the
+static emitter. Dashed curves correspond to values of $r_{\rm em} < 3 m$.
+The two horizontal grey lines marks $b = b_{\rm c} \simeq 5.196\, m$.}
+\end{figure}
+
 In view of (\ref{e:gis:p_eps_u_em_n}) and $\w{u}_{\rm em}\cdot\w{n} = 0$,
 the linear momentum of the photon as measured by $\Obs_{\rm em}$ is
 $\w{P} = \veps_{\rm em} \w{n}$ [cf. Eq.~(\ref{e:fra:p_E_P})].
@@ -1972,21 +1987,34 @@ angle}\index{emission!angle} $\eta$ by
 \ee
 Equation~(\ref{e:gis:n_b_U_rS}) yields immediately
 \be \label{e:gis:cos_sin_eta_b}
- \cos\eta = \pm \sqrt{1 - b^2 U(r_S)} \qquad\mbox{and}\qquad
- \sin\eta = - \eps_L b \sqrt{U(r_S)} ,
+ \cos\eta = \pm \sqrt{1 - b^2 U(r_{\rm em})} \qquad\mbox{and}\qquad
+ \sin\eta = - \eps_L b \sqrt{U(r_{\rm em})} ,
 \ee
 from which we can express the impact parameter $b$ and
 in terms of the emission angle $\eta$:
-\be
-    \encadre{ b = -\eps_L \frac{\sin\eta}{\sqrt{U(r_S)}} }.
+\be \label{e:gis:b_eta}
+    \encadre{ b = -\eps_L \frac{\sin\eta}{\sqrt{U(r_{\rm em})}} }.
 \ee
 \begin{remark}
 Equation~(\ref{e:gis:cos_sin_eta_b}) is well posed because
 $U(r)\geq 0$ for $r>2m$ [cf. Eq.~(\ref{e:ges:eff_pot_null})]
 and the equation
-of motion (\ref{e:ges:dot_r_square_null_b}) implies $b^{-2} - U(r_S) \geq 0$,
-from which we get $0 \leq b^2 U(r_S) \leq 1$.
+of motion (\ref{e:ges:dot_r_square_null_b}) implies $b^{-2} - U(r_{\rm em}) \geq 0$,
+from which we get $0 \leq b^2 U(r_{\rm em}) \leq 1$.
 \end{remark}
+
+The variation of $b$ in terms of $\eta$ and $r_{\rm em}$, as given by formula (\ref{e:gis:b_eta}),
+is depicted in Fig.~\ref{f:gis:b_eta}. We notice that the smallest range of $b$
+is $[0, b_{\rm c})$ and is reached for $r_{\rm em} = 3m$, which is not surprising
+in view of (\ref{e:gis:b_eta}) since this corresponds to the maximum of $U$
+(cf. Fig.~\ref{f:gis:eff_pot_null}). It appears clearly from Fig.~\ref{f:gis:b_eta}
+that, whatever the location $r_{\rm em}$ of the emitter, including locations
+inside the photon sphere ($r_{\rm em} < 3 m$), there always exist some
+emission angles $\eta$ giving birth to impact parameters $b$ in the vicinity
+of the critical value $b_{\rm c}$.
+
+
+
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ges_images_aligned.pdf}}
