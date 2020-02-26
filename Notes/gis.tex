@@ -1817,7 +1817,7 @@ Let us consider some ``far-away'' observer, i.e. an observer $\Obs$ located at $
 any loss of generality, we may assume that $\Obs$ is located at $\th=\pi/2$ and $\ph=0$.
 Furthermore, we suppose that $\Obs$ is
 equipped with a screen\index{screen} orthogonal to the direction from $\Obs$ to the black hole, which
-is the $x$-axis in terms of the coordinates $x:=r\cos\ph$, $y:=r\sin\ph$.
+is the $x$-axis in terms of the coordinates $(x,y):=(r\cos\ph,r\sin\ph)$.
 The image of the black hole's surroundings is formed on $\Obs$'s screen by null geodesics
 that reach the asymptotic value $\ph_\infty = 0 \mod 2 \pi$. Any such geodesic $\Li$ can be parametrized by
 (i) its impact parameter $b$ and (ii) some polar angle $\alpha$ in the screen plane.
@@ -1832,8 +1832,9 @@ factor $1/r_{\Obs}$ and use directly $b$ as a measure of the distance from
 the screen center.
 In other words,
 at a given instant of $\Obs$'s proper time $\tau$, a point (``pixel'') of the screen is
-described by the polar coordinates $(b,\alpha)$ and there is a unique null geodesic intersecting
-the screen orthogonally at $(\tau,b,\alpha)$ and moving from the black hole region to $\Obs$.
+described by the polar coordinates $(b,\alpha)$ and there is a unique null geodesic
+moving from the black hole region to $\Obs$ that
+intersects the screen orthogonally at $(\tau,b,\alpha)$.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ges_mult_images.pdf}}
@@ -1846,6 +1847,8 @@ and three of its images for an observer at $y=0$ and $x\to + \infty$ are obtaine
 following the drawn null geodesics through $S$.}
 \end{figure}
 
+\subsubsection{Qualitative analysis from a concrete example}
+
 To understand the formation of images on $\Obs$'s screen, a bunch of null
 geodesics with $\ph_\infty=0$ is drawn in Fig.~\ref{f:gis:mult_images}.
 $\Obs$ is located in the far right of this figure and
@@ -1856,7 +1859,7 @@ three distinct images of $S$ on $\Obs$'s screen, which are represented by the
 open circles labelled 1 to 3 in the right part of the figure. These three
 geodesics can be distinguished by their deflection angle $\Theta$
 and their winding number $n$ (cf. Sec.~\ref{s:gis:deflect_winding}).
-The one giving image 1 is the less deflected: it has $\Theta \simeq - \pi/4$
+The geodesic giving image 1 is the less deflected one: it has $\Theta \simeq - \pi/4$
 and $n=0$, while that
 of image 2 has $\Theta\simeq 2\pi/3$ and $n=0$.
 The geodesic giving image 3 is much more deflected
@@ -1888,6 +1891,7 @@ all lie in the plane defined by $S$, $\Obs$ and the black hole (plane of
 Fig.~\ref{f:gis:mult_images}). This is a direct consequence of the spherical
 symmetry of Schwarzschild spacetime.
 
+\begin{remark}
 In Fig.~\ref{f:gis:mult_images}, the source $S$ is rather close to the
 black hole but it is worth to stress that
 the multiple character of the images of a given
@@ -1898,11 +1902,12 @@ observer, i.e. one can have $x_S > x_{\Obs}$. This is clear if we consider
 the lower-right panel of Fig.~\ref{f:gis:null_b1} (case $b=5.355\, m$):
 a source with $x_S > x_{\Obs} \gg m$ and $y=5.355\, m$ gives an image on
 $\Obs$'s screen at $b=5.355\, m$.
+\end{remark}
 
-The reader may be puzzled by the compatibility between an infinite number
-of images from a single source and the conservation of energy. There is
-actually no issue here because one can show that the images are
-fainter as $n$ increases. So in practice, only a few images would be visible.
+%The reader may be puzzled by the compatibility between an infinite number
+%of images from a single source and the conservation of energy. There is
+%actually no issue here because one can show that the images are
+%fainter as $n$ increases. So in practice, only a few images would be visible.
 
 \subsubsection{Link between the emission angle and the impact parameter}
 
@@ -1972,7 +1977,7 @@ $\w{n}\cdot\w{n} = 1$ and $\w{u}_{\rm em}\cdot\w{n} = 0$.
 Impact parameter $b$ of null geodesics (multiplied by $\eps_L=\pm 1$)
 as a function of the emission angle $\eta$ in the
 emitter's rest frame, for various values of the $r$-coordinate $r_{\rm em}$ of the
-static emitter. Dashed curves correspond to values of $r_{\rm em} < 3 m$.
+static emitter. Dashed curves correspond to values of $r_{\rm em}$ lower than $3 m$.
 The two horizontal grey lines marks $b = b_{\rm c} \simeq 5.196\, m$.}
 \end{figure}
 
@@ -2006,14 +2011,16 @@ from which we get $0 \leq b^2 U(r_{\rm em}) \leq 1$.
 The variation of $b$ in terms of $\eta$ and $r_{\rm em}$, as given by formula (\ref{e:gis:b_eta}),
 is depicted in Fig.~\ref{f:gis:b_eta}. We notice that the smallest range of $b$
 is $[0, b_{\rm c})$ and is reached for $r_{\rm em} = 3m$, which is not surprising
-in view of (\ref{e:gis:b_eta}) since this corresponds to the maximum of $U$
-(cf. Fig.~\ref{f:gis:eff_pot_null}). It appears clearly from Fig.~\ref{f:gis:b_eta}
+in view of (\ref{e:gis:b_eta}) since the maximum of $U$ precisely occurs at $r=3m$
+(cf. Fig.~\ref{f:gis:eff_pot_null}).
+
+\subsubsection{Infinite sequence of images}
+
+It appears clearly from Fig.~\ref{f:gis:b_eta}
 that, whatever the location $r_{\rm em}$ of the emitter, including locations
-inside the photon sphere ($r_{\rm em} < 3 m$), there always exist some
+inside the photon sphere ($r_{\rm em} < 3 m$), there always exist four
 emission angles $\eta$ giving birth to impact parameters $b$ in the vicinity
 of the critical value $b_{\rm c}$.
-
-
 
 
 \begin{figure}
@@ -2021,7 +2028,7 @@ of the critical value $b_{\rm c}$.
 \caption[]{\label{f:gis:images_aligned} \footnotesize
 Same as Fig.~\ref{f:gis:mult_images} but underlining four null geodesics
 from a point source $A$ located on the $x$-axis, i.e.
-aligned with the black hole and the observer.}
+aligned with the black hole and the observer on the far right.}
 \end{figure}
 
 
@@ -2098,7 +2105,7 @@ in their past history, i.e. we may consider that they all have been emitted
 by $\mathscr{S}$ inwards and have bounced on the potential barrier before
 reaching $\Obs$'s screen in their outward motion.
 
-So, both reasonings, that based on Fig.~\ref{f:gis:mult_images} and that
+Both reasonings, that based on Fig.~\ref{f:gis:mult_images} and that
 based on Fig.~\ref{f:gis:eff_pot_null}, led us to conclude that
 \begin{greybox}
 For a distant observer, the image of a uniformly bright sphere $\mathscr{S}$ surrounding
