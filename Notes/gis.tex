@@ -995,7 +995,7 @@ from Eqs.~(\ref{e:gis:psi_u_b})-(\ref{e:gis:Phib_elliptic_int_psi}) that
 We refer the reader to Refs.~\cite{CadezK05,Munoz14} for more details.
 \end{remark}
 
-\subsection{Null geodesics with $b > b_{\rm c}$ and $r< 3m$}
+\subsection{Null geodesics with $b > b_{\rm c}$ and $r< 3m$} \label{s:gis:geod_b_gt_bc_in}
 
 Let us consider now null geodesics still with $b  > b_{\rm c}$ but located
 below the photon sphere, i.e. geodesics similar to that labelled 4 in
@@ -1407,8 +1407,19 @@ infinitely far from the black hole.
 
 Let us consider a null geodesic $\Li$ with $b>b_{\rm c}$ and an event
 of (finite) affine parameter $\tlamb = \tlamb_{\rm em}$ on $\Li$, which we
-shall call the \emph{emission point}. We are
-interested in relating the value $\ph_\infty$ of $\ph$ for $\tlamb\to +\infty$
+shall call the \emph{emission point}. We are interested in null geodesics
+which reach the asymptotic flat region $r\to+\infty$ for $\tlamb\to+\infty$.
+This implies that the emission point is located outside the photon sphere, i.e.
+obeys
+\be
+    r_{\rm em} := r(\tlamb_{\rm em}) > 3 m.
+\ee
+Indeed, we have seen in
+Sec.~\ref{s:gis:geod_b_gt_bc_in} that null geodesics with $b > b_{\rm c}$
+and emitted under the photon sphere never cross the later (this is also
+obvious from the effective potential profile, as plotted in Fig.~\ref{f:gis:eff_pot_null},
+cf. trajectory no.~4).
+Our aim is to relate the value $\ph_\infty$ of $\ph$ for $\tlamb\to +\infty$
 (the asymptotic direction) to its value $\ph_{\rm em}$ at $\tlamb = \tlamb_{\rm em}$.
 
 If the emission point is past $\Li$'s periastron, i.e. if
@@ -1417,7 +1428,7 @@ by Eq.~(\ref{e:gis:ph_Phi_b_u}) with $\eps_{\rm in} = -1$:
 \be
     \ph_{\rm em} = \ph_{\rm p} + \eps_L \Phi_b(u_{\rm em}) ,
 \ee
-where $u_{\rm em}$ is the value of $u:=m/r$ at the emission point.
+where $u_{\rm em}:=m/r_{\rm em}$.
 On the other side, the asymptotic value $\ph_\infty$ is related to $\ph_{\rm p}$
 by Eq.~(\ref{e:gis:ph_inf_ph_p}). By combining these two relations
 to eliminate $\ph_{\rm p}$, we get
@@ -1566,8 +1577,8 @@ leads to the final formula:
 \be \label{e:gis:ph_inf_ph_em_lim_b_gt_bc}
    \encadre{  \ph_\infty  \underset{b\to b_{\rm c}^+}{\sim} \ph_{\rm em}
    + \eps_L \ln \left(
-   \frac{648\sqrt{3} (1 - 3 u_{\rm em})}{(2+\sqrt{3})(2 + 3 u_{\rm em}
-   + \sqrt{3(1 + 6 u_{\rm em})})} \times \frac{m}{b - b_{\rm c}} \right)
+   \frac{648(2\sqrt{3} - 3) (1 - 3 u_{\rm em})}{2 + 3 u_{\rm em}
+   + \sqrt{3(1 + 6 u_{\rm em})}} \times \frac{m}{b - b_{\rm c}} \right)
    } \qquad (\tlamb_{\rm em} < \tlamb_{\rm p}) .
 \ee
 The value of the total change $\Delta\ph$ along the complete geodesic history
@@ -1780,6 +1791,12 @@ instead of $\veps$, we get
 \ee
 Hence we recover a logarithmic divergence of $\ph_\infty - \ph_{\rm em}$
 when $b$ tends to $b_{\rm c}$ by lower values.
+
+\begin{remark} \label{r:gis:prefactor_b_bc}
+The prefactor of $m/(b_{\rm c} - b)$ in
+formula (\ref{e:gis:ph_inf_lim_b_lt_bc_u_gt_us}) is exactly the
+opposite of the prefactor of $m/(b - b_{\rm c})$ in formula (\ref{e:gis:ph_inf_ph_em_lim_b_gt_bc}).
+\end{remark}
 
 The upper bound on $u_{\rm em}$ is $1/2$, for this corresponds to a source
 just outside the black hole event horizon at $r=2m$. Let us evaluate
@@ -2020,8 +2037,69 @@ It appears clearly from Fig.~\ref{f:gis:b_eta}
 that, whatever the location $r_{\rm em}$ of the emitter, including locations
 inside the photon sphere ($r_{\rm em} < 3 m$), there always exist four
 emission angles $\eta$ giving birth to impact parameters $b$ in the vicinity
-of the critical value $b_{\rm c}$.
+of the critical value $b_{\rm c}$. These four angles can be gathered in two
+pairs of angles of opposite directions: $(\eta_1, \eta_1+\pi)$ and
+$(\eta_2, \eta_2+\pi)$. In each pair, only a single emission direction is prior to the
+periastron for null geodesics with $b > b_{\rm c}$ and only a single emission
+direction is outgoing and reaches infinity for $b < b_{\rm c}$. In other words,
+on the four values of $\eta$, only two of them define geodesics that may reach
+the asymptotic observer $\Obs$.
 
+Let $\ph_{\rm em}\in {[0, 2\pi)}$ be the $\ph$ coordinate of the emitter $\Obs_{\rm em}$.
+A null geodesic emitted by $\Obs_{\rm em}$ reaches the asymptotic observer $\Obs$, who is located at $\ph=0$, iff $\ph_\infty = 0 \mod 2\pi$, i.e. iff
+\be \label{e:gis:ph_inf_2pi_n}
+    \ph_\infty = 2\pi\eps_L n, \qquad n\in\mathbb{N} .
+\ee
+The above formula takes into account the fact that the sign of $\ph_\infty$
+is that of $L$, hence the factor $\eps_L$ and $n\geq 0$.
+From Fig.~\ref{f:gis:phi_inf_em_b}, we see that values $n \geq 1$ can be
+reached iff either (i) $r_{\rm em} > 3m$, $b$ is close to $b_{\rm c}$ from above and $\tlamb_{\rm em} < \tlamb_{\rm p}$ or (ii) $r_{\rm em} < 3m$ and $b$ is close to
+$b_{\rm c}$ from below.
+In the first case, we may use the approximate formula
+(\ref{e:gis:ph_inf_ph_em_lim_b_gt_bc}), while in the second
+case formula (\ref{e:gis:ph_inf_lim_b_lt_bc_u_gt_us}) is relevant.
+Inserting (\ref{e:gis:ph_inf_2pi_n}) in either of these formulas, we get
+\be \label{e:gis:2pin_Aem}
+     2\pi\eps_L n = \ph_{\rm em}
+   + \eps_L \ln \left( A(r_{\rm em})  \frac{m}{b - b_{\rm c}} \right) ,
+\ee
+with (cf. Remark~\ref{r:gis:prefactor_b_bc}, page~\pageref{r:gis:prefactor_b_bc})
+\be
+    A(r_{\rm em})  :=
+    \frac{648(2\sqrt{3} - 3)(1 - 3 u_{\rm em})}{2 + 3 u_{\rm em}
+    + \sqrt{3(1 + 6 u_{\rm em})}}, \qquad
+    u_{\rm em} := \frac{m}{r_{\rm em}} .
+\ee
+Note that $A(r_{\rm em})  > 0$ for $r_{\rm em} > 3 m$ and
+$A(r_{\rm em})  < 0$ for $r_{\rm em} < 3 m$. Taking into account
+that $b - b_{\rm c} > 0$ for case (i) and $b - b_{\rm c} < 0$ for case (ii),
+we check that
+the argument of the logarithm in Eq.~(\ref{e:gis:2pin_Aem}) is always
+positive.
+Equation~(\ref{e:gis:2pin_Aem}) can be solved for $b$:
+\[
+    b = b_{\rm c} + m A(r_{\rm em})  \mathrm{e}^{\eps_L \ph_{\rm em} - 2\pi n},
+\]
+which we may write, denoting the solution with $\eps_L=+1$ by $b_n^+$
+and that with $\eps_L=-1$ by $b_n^-$,
+\be
+b = b_n^+ := b_{\rm c} + m A(r_{\rm em})  \mathrm{e}^{\ph_{\rm em} - 2\pi n}
+\quad\mbox{or}\quad
+b = b_n^- := b_{\rm c} + m A(r_{\rm em})  \mathrm{e}^{- \ph_{\rm em} - 2\pi n},\quad
+n\in \mathbb{N}^* .
+\ee
+Via Eq.~(\ref{e:gis:b_eta}), these two sequences of the impact parameter $b$
+correspond to two sequences of the emission angle $\eta$:
+\begin{subequations}
+\begin{align}
+&\sin \eta = \sin\eta_n^+ := - \sqrt{U(r_{\rm em})}
+\left( b_{\rm c} + m A(r_{\rm em})  \mathrm{e}^{\ph_{\rm em} - 2\pi n} \right), \quad
+n\in \mathbb{N}^* \\
+&\sin\eta = \sin\eta_n^- := \sqrt{U(r_{\rm em})}
+\left( b_{\rm c} + m A(r_{\rm em})  \mathrm{e}^{-\ph_{\rm em} - 2\pi n} \right),
+\quad n\in \mathbb{N}^*.
+\end{align}
+\end{subequations}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ges_images_aligned.pdf}}
