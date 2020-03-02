@@ -1411,7 +1411,7 @@ shall call the \emph{emission point}. We are interested in null geodesics
 which reach the asymptotic flat region $r\to+\infty$ for $\tlamb\to+\infty$.
 This implies that the emission point is located outside the photon sphere, i.e.
 obeys
-\be
+\be \label{e:gis:rem_gt_3m}
     r_{\rm em} := r(\tlamb_{\rm em}) > 3 m.
 \ee
 Indeed, we have seen in
@@ -1512,6 +1512,8 @@ For $\tlamb_{\rm em} > \tlamb_{\rm p}$, inserting these formulas into
     \right) }
     \qquad (\tlamb_{\rm em} > \tlamb_{\rm p}) .
 \ee
+Note that the constraint (\ref{e:gis:rem_gt_3m}) is equivalent to
+$1 - 3 u_{\rm em} > 0$, so that the above formula is well posed.
 
 For the case $\tlamb_{\rm em} < \tlamb_{\rm p}$, $\ph_\infty$ is given
 by Eq.~(\ref{e:gis:ph_inf_em_prior_per}) and
@@ -1581,6 +1583,9 @@ leads to the final formula:
    + \sqrt{3(1 + 6 u_{\rm em})}} \times \frac{m}{b - b_{\rm c}} \right)
    } \qquad (\tlamb_{\rm em} < \tlamb_{\rm p}) .
 \ee
+The prefactor of $m/(b - b_{\rm c})$ in the logarithm is
+plotted as a function of $r_{\rm em} = m/u_{\rm em}$ in Fig.~\ref{f:gis:A_rem} below.
+
 The value of the total change $\Delta\ph$ along the complete geodesic history
 [cf. Eq.~(\ref{e:gis:def_Delta_ph})]
 is obtained by taking the limit $u_{\rm em}\to 0$ (i.e. $r_{\rm em} \to +\infty$)
@@ -1615,6 +1620,11 @@ Eq.~(268) in Chap.~3 of Ref.~\cite{Chand83}, where $\delta D = b-b_{\rm c}$ and
 $\Theta$ is the same as ours, or with Eq.~(7.4.54) of Ref.~\cite{FroloZ11},
 where $\Delta\ell = (b - b_{\rm c})/(2 m)$.
 \end{remark}
+
+\begin{hist}
+Equation~(\ref{e:ges:b_bc_exp_Theta}) has been first derived by
+Charles Galton Darwin\index{Darwin, C.G.} -- the grandson of the famous naturalist Charles Robert Darwin -- in 1959 \cite{Darwi59} (cf. Eqs.~(31) and (32) of Ref.~\cite{Darwi59}, where $\mu = \Theta$).
+\end{hist}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{gis_phi_inf_em_b.pdf}}
@@ -1796,6 +1806,7 @@ when $b$ tends to $b_{\rm c}$ by lower values.
 The prefactor of $m/(b_{\rm c} - b)$ in
 formula (\ref{e:gis:ph_inf_lim_b_lt_bc_u_gt_us}) is exactly the
 opposite of the prefactor of $m/(b - b_{\rm c})$ in formula (\ref{e:gis:ph_inf_ph_em_lim_b_gt_bc}).
+It is plotted as a function of $r_{\rm em} = m/u_{\rm em}$ in Fig.~\ref{f:gis:A_rem} below.
 \end{remark}
 
 The upper bound on $u_{\rm em}$ is $1/2$, for this corresponds to a source
@@ -1812,18 +1823,12 @@ As a check, Eq.~(\ref{e:gis:ph_inf_lim_b_lt_bc_uem_1_2}) agrees with
 Eq.~(4) in Ref.~\cite{GrallHW19}.
 \end{remark}
 
-
-\begin{hist}
-Equation~(\ref{e:ges:b_bc_exp_Theta}) has been first derived by
-Charles Galton Darwin\index{Darwin, C.G.} -- the grandson of the famous naturalist Charles Robert Darwin -- in 1959 \cite{Darwi59} (cf. Eqs.~(31) and (32) of Ref.~\cite{Darwi59}, where $\mu = \Theta$).
-\end{hist}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Images} \label{s:gis:images}
 
-Being the worldlines of photons, null geodesics are the key ingredient to
-determine the image as seen by some observer of emitting material around
+Being the worldlines of photons, null geodesics are the key ingredient
+determining images as seen by some observer of emitting material around
 a black hole. Computing such images is of great interest, especially after
 the first image of a black hole vicinity obtained by
 the Event Horizon Telescope team in 2019 \cite{EHT19a,Cardo19}.
@@ -1870,7 +1875,7 @@ To understand the formation of images on $\Obs$'s screen, a bunch of null
 geodesics with $\ph_\infty=0$ is drawn in Fig.~\ref{f:gis:mult_images}.
 $\Obs$ is located in the far right of this figure and
 all the drawn geodesics eventually hit $\Obs$'s screen. Let us consider a luminous point source
-$S$ in the surroundings of the black hole. From the drawing of Fig.~\ref{f:gis:mult_images},
+$S$. From the drawing of Fig.~\ref{f:gis:mult_images},
 three null geodesics of the $\ph_\infty=0$ family goes through $S$. They give rise to
 three distinct images of $S$ on $\Obs$'s screen, which are represented by the
 open circles labelled 1 to 3 in the right part of the figure. These three
@@ -2045,6 +2050,14 @@ direction is outgoing and reaches infinity for $b < b_{\rm c}$. In other words,
 on the four values of $\eta$, only two of them define geodesics that may reach
 the asymptotic observer $\Obs$.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gis_A_rem.pdf}}
+\caption[]{\label{f:gis:A_rem} \footnotesize
+Function $A(r_{\rm em})$ defined by Eq.~(\ref{e:gis:def_A_rem}).
+The dashed line marks the horizontal asymptote $A = 648(7\sqrt{3} - 12) \simeq 80.58246$.}
+\end{figure}
+
+
 Let $\ph_{\rm em}\in {[0, 2\pi)}$ be the $\ph$ coordinate of the emitter $\Obs_{\rm em}$.
 A null geodesic emitted by $\Obs_{\rm em}$ reaches the asymptotic observer $\Obs$, who is located at $\ph=0$, iff $\ph_\infty = 0 \mod 2\pi$, i.e. iff
 \be \label{e:gis:ph_inf_2pi_n}
@@ -2056,7 +2069,7 @@ From Fig.~\ref{f:gis:phi_inf_em_b}, we see that values $n \geq 1$ can be
 reached iff either (i) $r_{\rm em} > 3m$, $b$ is close to $b_{\rm c}$ from above and $\tlamb_{\rm em} < \tlamb_{\rm p}$ or (ii) $r_{\rm em} < 3m$ and $b$ is close to
 $b_{\rm c}$ from below.
 In the first case, we may use the approximate formula
-(\ref{e:gis:ph_inf_ph_em_lim_b_gt_bc}), while in the second
+(\ref{e:gis:ph_inf_ph_em_lim_b_gt_bc}) with $u_{\rm em} = m/r_{\rm em}$, while in the second
 case formula (\ref{e:gis:ph_inf_lim_b_lt_bc_u_gt_us}) is relevant.
 Inserting (\ref{e:gis:ph_inf_2pi_n}) in either of these formulas, we get
 \be \label{e:gis:2pin_Aem}
@@ -2064,11 +2077,10 @@ Inserting (\ref{e:gis:ph_inf_2pi_n}) in either of these formulas, we get
    + \eps_L \ln \left( A(r_{\rm em})  \frac{m}{b - b_{\rm c}} \right) ,
 \ee
 with (cf. Remark~\ref{r:gis:prefactor_b_bc}, page~\pageref{r:gis:prefactor_b_bc})
-\be
-    A(r_{\rm em})  :=
-    \frac{648(2\sqrt{3} - 3)(1 - 3 u_{\rm em})}{2 + 3 u_{\rm em}
-    + \sqrt{3(1 + 6 u_{\rm em})}}, \qquad
-    u_{\rm em} := \frac{m}{r_{\rm em}} .
+\be \label{e:gis:def_A_rem}
+   \encadre{ A(r_{\rm em})  :=
+    \frac{648(2\sqrt{3} - 3)(r_{\rm em} - 3 m)}{2 r_{\rm em} + 3 m
+    + \sqrt{3r_{\rm em}(r_{\rm em} + 6 m)}} } .
 \ee
 Note that $A(r_{\rm em})  > 0$ for $r_{\rm em} > 3 m$ and
 $A(r_{\rm em})  < 0$ for $r_{\rm em} < 3 m$. Taking into account
@@ -2080,26 +2092,52 @@ Equation~(\ref{e:gis:2pin_Aem}) can be solved for $b$:
 \[
     b = b_{\rm c} + m A(r_{\rm em})  \mathrm{e}^{\eps_L \ph_{\rm em} - 2\pi n},
 \]
-which we may write, denoting the solution with $\eps_L=+1$ by $b_n^+$
-and that with $\eps_L=-1$ by $b_n^-$,
-\be
-b = b_n^+ := b_{\rm c} + m A(r_{\rm em})  \mathrm{e}^{\ph_{\rm em} - 2\pi n}
-\quad\mbox{or}\quad
-b = b_n^- := b_{\rm c} + m A(r_{\rm em})  \mathrm{e}^{- \ph_{\rm em} - 2\pi n},\quad
+which we may write $b = b_n^+$ or $b_n^-$, denoting the solution with $\eps_L=+1$ by $b_n^+$
+and that with $\eps_L=-1$ by $b_n^-$:
+\begin{subequations}
+\label{e:gis:bn_sequence}
+\begin{align}
+& \encadre{b_n^+ = b_{\rm c} + m A(r_{\rm em})\, \mathrm{e}^{\ph_{\rm em} - 2\pi n}},\quad
+n\in \mathbb{N}^* \\
+& \encadre{b_n^- := b_{\rm c} + m A(r_{\rm em})\,  \mathrm{e}^{- \ph_{\rm em} - 2\pi n}},\quad
 n\in \mathbb{N}^* .
-\ee
-Via Eq.~(\ref{e:gis:b_eta}), these two sequences of the impact parameter $b$
+\end{align}
+\end{subequations}
+The function $A(r_{\rm em})$ is plotted in Fig.~\ref{f:gis:A_rem}.
+It varies monotically between
+\[
+\lim_{r_{\rm em}\to 2m} A(r_{\rm em}) = \underbrace{- 648(26\sqrt{3} - 45)}_{\simeq -21.59201}
+\quad\mbox{and}\quad
+\lim_{r_{\rm em}\to +\infty} A(r_{\rm em}) = \underbrace{648(7\sqrt{3} - 12)}_{\simeq 80.58246}.
+\]
+One shall stress that formulas (\ref{e:gis:bn_sequence}) have been derived
+under the assumption $|b - b_{\rm c}| \ll m$. Given the amplitude of $A(r_{\rm em})$
+shown in Fig.~\ref{f:gis:A_rem} and the value $\mathrm{e}^{-2\pi} \simeq 1.9\times 10^{-3}$,
+this is valid for any $n\geq 1$, except maybe for $b_n^+$ with $n=1$ and $\ph_{\rm em}$
+large (i.e. close to $2\pi$).
+
+Via Eq.~(\ref{e:gis:b_eta}), the two sequences (\ref{e:gis:bn_sequence}) of the impact parameter $b$
 correspond to two sequences of the emission angle $\eta$:
 \begin{subequations}
 \begin{align}
-&\sin \eta = \sin\eta_n^+ := - \sqrt{U(r_{\rm em})}
+&\sin\eta_n^+ := - \sqrt{U(r_{\rm em})}
 \left( b_{\rm c} + m A(r_{\rm em})  \mathrm{e}^{\ph_{\rm em} - 2\pi n} \right), \quad
 n\in \mathbb{N}^* \\
-&\sin\eta = \sin\eta_n^- := \sqrt{U(r_{\rm em})}
+&\sin\eta_n^- := \sqrt{U(r_{\rm em})}
 \left( b_{\rm c} + m A(r_{\rm em})  \mathrm{e}^{-\ph_{\rm em} - 2\pi n} \right),
 \quad n\in \mathbb{N}^*.
 \end{align}
 \end{subequations}
+Note that $0 \leq b_{\rm c} \sqrt{U(r_{\rm em})} \leq 1$ and
+$b_{\rm c} \sqrt{U(r_{\rm em})} = 1 \iff r_{\rm em} = 3m$.
+As discussed above (cf. Fig.~\ref{f:gis:b_eta}), for $r_{\rm em} \not= 3m$,
+there are always some solutions for $\eta_n^+$ and $\eta_n^-$ for $n$
+sufficiently large (in practice, $n\geq 1$). We therefore conclude:
+\begin{greybox}
+Any static point source give birth to two infinite sequences of images
+on the screen of the asymptotic observer $\Obs$.
+To be completed...
+\end{greybox}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ges_images_aligned.pdf}}
