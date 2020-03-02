@@ -1833,7 +1833,7 @@ a black hole. Computing such images is of great interest, especially after
 the first image of a black hole vicinity obtained by
 the Event Horizon Telescope team in 2019 \cite{EHT19a,Cardo19}.
 
-\subsection{Images of a point source}
+\subsection{The asymptotic observer}
 
 Let us consider some ``far-away'' observer, i.e. an observer $\Obs$ located at $r = r_{\Obs} \gg m$. Without
 any loss of generality, we may assume that $\Obs$ is located at $\th=\pi/2$ and $\ph=0$.
@@ -1869,6 +1869,9 @@ and three of its images for an observer at $y=0$ and $x\to + \infty$ are obtaine
 following the drawn null geodesics through $S$.}
 \end{figure}
 
+\subsection{Images of a point source}
+
+
 \subsubsection{Qualitative analysis from a concrete example}
 
 To understand the formation of images on $\Obs$'s screen, a bunch of null
@@ -1893,25 +1896,10 @@ the closer the image with respect to the circle $b = b_{\rm c}$ on $\Obs$'s
 screen.
 
 For the sake of clarity, only three images of the source $S$ have been
-depicted in Fig.~\ref{f:gis:mult_images}, but there is actually an infinite
+depicted in Fig.~\ref{f:gis:mult_images}, but we are going to see
+that there is actually an infinite
 number of them: two per value of $|n|$ (the number of turns around the black hole)
---- one with $L>0$ and one with $L<0$. The selected geodesics in
-Fig.~\ref{f:gis:mult_images} have $n=0$ and $L<0$ (image 1), $n=0$ and $L>0$
-(image 2) and $n=-1$ and $L<0$ (image 3). The higher $|n|$, the closer the image
-lies to the circle $b=b_{\rm c}$ on $\Obs$'s screen. Indeed, according to the
-law (\ref{e:ges:b_bc_exp_Theta}), geodesics that perform $|n|$ turns around the
-black hole have an impact parameter exponentially close to $b_{\rm c}$,
-by a factor $\mathrm{e}^{- 2\pi |n|}$ (see also Fig.~\ref{f:gis:null_b2}).
-Note that $\mathrm{e}^{- 2\pi}\simeq 1.9\times 10^{-3}$, so that any extra cycle
-around the blak hole corresponds to a value of $b$ closer to $b_{\rm c}$
-by two orders of magnitude.
-
-
-If $S$, $\Obs$ and the black hole are not aligned, i.e. if $S$ is not located
-on the $x$-axis, all the images of $S$ are aligned on $\Obs$'s screen: they
-all lie in the plane defined by $S$, $\Obs$ and the black hole (plane of
-Fig.~\ref{f:gis:mult_images}). This is a direct consequence of the spherical
-symmetry of Schwarzschild spacetime.
+--- one with $L>0$ and one with $L<0$.
 
 \begin{remark}
 In Fig.~\ref{f:gis:mult_images}, the source $S$ is rather close to the
@@ -2134,10 +2122,33 @@ As discussed above (cf. Fig.~\ref{f:gis:b_eta}), for $r_{\rm em} \not= 3m$,
 there are always some solutions for $\eta_n^+$ and $\eta_n^-$ for $n$
 sufficiently large (in practice, $n\geq 1$). We therefore conclude:
 \begin{greybox}
-Any static point source give birth to two infinite sequences of images
-on the screen of the asymptotic observer $\Obs$.
-To be completed...
+Any static point source $S$ give birth to two infinite sequences of images
+on the screen of the asymptotic observer $\Obs$, at the effective distances
+from the screen's center
+$(b_n^+)_{n\in\mathbb{N}^*}$ and $(b_n^-)_{n\in\mathbb{N}^*}$, as
+given by Eq.~(\ref{e:gis:bn_sequence}).
+If $S$, $\Obs$ and the black hole are not aligned, i.e. if
+$\ph_{\rm em} \not\in\{0, \pi\}$,
+all the images of $S$ are aligned on $\Obs$'s screen: they
+all lie in the plane defined by $S$, $\Obs$ and the black hole (plane of
+Fig.~\ref{f:gis:mult_images}). If $S$ is located outside the photon sphere
+($r_{\rm em} > 3m$), all images lie outside the circle $b=b_{\rm c}$ on $\Obs$'s screen,
+while if $S$ is located inside the photon sphere ($r_{\rm em} < 3m$),
+all images lie inside that circle. In both cases,
+the images of the sequence $(b_n^+)_{n\in\mathbb{N}^*}$ (positive $L$)
+are located on the opposite side of those of the sequence
+$(b_n^-)_{n\in\mathbb{N}^*}$ (negative $L$). The higher $n$, the closer
+the images $b_n^+$ and $b_n^-$ to the circle $b=b_{\rm c}$. Actually,
+according to the laws (\ref{e:gis:bn_sequence}),
+each sequence converge exponentially fast to that circle. From $n$ to $n+1$,
+the distance to the circle is reduced by a factor
+$\mathrm{e}^{- 2\pi}\simeq 1.9\times 10^{-3}$.
 \end{greybox}
+
+\begin{remark}
+The alignment of the images is a direct consequence of the spherical
+symmetry of Schwarzschild spacetime.
+\end{remark}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ges_images_aligned.pdf}}
