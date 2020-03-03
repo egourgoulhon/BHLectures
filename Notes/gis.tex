@@ -1914,10 +1914,15 @@ a source with $x_S > x_{\Obs} \gg m$ and $y=5.355\, m$ gives an image on
 $\Obs$'s screen at $b=5.355\, m$.
 \end{remark}
 
-%The reader may be puzzled by the compatibility between an infinite number
-%of images from a single source and the conservation of energy. There is
-%actually no issue here because one can show that the images are
-%fainter as $n$ increases. So in practice, only a few images would be visible.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gis_static_obs.pdf}}
+\caption[]{\label{f:gis:static_obs} \footnotesize
+Part $(\w{e}_{(r)}, \w{e}_{(\ph)})$ of the vector frame of the emitter $\Obs_{\rm em}$
+and emission angle $\eta$. The coordinates $(x,y)$ are defined in terms
+of the Schwarzschild-Droste coordinates by $x=r\cos\ph$ and $y=r\sin\ph$.}
+\end{figure}
+
 
 \subsubsection{Link between the emission angle and the impact parameter}
 
@@ -1931,7 +1936,8 @@ by $\Obs_{\rm em}$. Furthermore, we suppose that the rest frame of $\Obs_{\rm em
 is an orthonormal tetrad
 $\left(\w{u}_{\rm em}, \w{e}_{(r)}, \w{e}_{(\th)}, \w{e}_{(\ph)}\right)$ such
 that the first spacelike vector, $\w{e}_{(r)}$, is always pointing towards the
-black hole. Note that the first vector of the tetrad is necessarily the
+black hole (cf. Fig.~\ref{f:gis:static_obs}).
+Note that the first vector of the tetrad is necessarily the
 4-velocity $\w{u}_{\rm em}$ of $\Obs_{\rm em}$. More precisely, we set
 \begin{subequations}
 \label{e:gis:bo_Obs_em}
@@ -1993,7 +1999,7 @@ The two horizontal grey lines marks $b = b_{\rm c} \simeq 5.196\, m$.}
 
 In view of (\ref{e:gis:p_eps_u_em_n}) and $\w{u}_{\rm em}\cdot\w{n} = 0$,
 the linear momentum of the photon as measured by $\Obs_{\rm em}$ is
-$\w{P} = \veps_{\rm em} \w{n}$ [cf. Eq.~(\ref{e:fra:p_E_P})].
+$\w{P} = \veps_{\rm em} \w{n}$ [cf. Eq.~(\ref{e:fra:p_E_P}) and Fig.~\ref{f:gis:static_obs}].
 We conclude that the unit vector $\w{n}$ gives the direction of emission
 of the photon in $\Obs_{\rm em}$'s rest frame. Let us then define the \defin{emission
 angle}\index{emission!angle} $\eta$ by
@@ -2150,6 +2156,13 @@ The alignment of the images is a direct consequence of the spherical
 symmetry of Schwarzschild spacetime.
 \end{remark}
 
+\begin{remark}
+The reader may be puzzled by the compatibility between an infinite number
+of images from a single source and the conservation of energy. There is
+actually no issue here because one can show that the images are
+fainter as $n$ increases. So in practice, only a few images would be visible.
+\end{remark}
+
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ges_images_aligned.pdf}}
 \caption[]{\label{f:gis:images_aligned} \footnotesize
@@ -2177,10 +2190,10 @@ images, but there is actually an infinite number of such images: the full image
 of $A$ on $\Obs$'s screen is composed by a infinite sequence $(\mathscr{C}_n)_{n\in\mathbb{N}}$
 of concentric circles
 that accumulate exponentially fast onto the circle of radius $b = b_{\rm c}$.
-Each circle $\mathscr{C}_n$ has a radius $b_n$ that is given approximately
-by Eq.~(\ref{e:ges:b_bc_exp_Theta}), where $\Theta = \Theta_n$ is a function of
-the position $x_A$ of $A$ on the $x$-axis. In particular $\Theta_n\to 0$
-when $x_A\to -\infty$.
+Each circle $\mathscr{C}_n$ has a radius $b_n$ that is given
+by Eq.~(\ref{e:gis:bn_sequence}) with $\ph_{\rm em} = 0$ or $\pi$ (case of
+Fig.~\ref{f:gis:images_aligned}), so that $b_n^+ = b_n^- =: b_n$ (case $\ph_{\rm em} = 0$)
+or $b_n^+ = b_{n-1}^- =: b_n$ (case $\ph_{\rm em} = \pi$).
 The outermost circle, $\mathscr{C}_0$, is called the
 \defin{Einstein ring of}\index{Einstein!ring}\index{ring!Einstein --} $A$.
 It is the only significant ring in astronomical images involving \emph{gravitational
@@ -2193,6 +2206,7 @@ photons can wind around it. On the contrary $\mathscr{C}_0$ exists even for non-
 objects. In particular, in astronomical observations of Einstein rings performed up
 to now, the central deflecting object is a galaxy or a galaxy cluster,
 both being highly non-relativistic (very low compactness).
+
 
 \subsection{Black hole shadow}
 
@@ -2232,13 +2246,24 @@ in their past history, i.e. we may consider that they all have been emitted
 by $\mathscr{S}$ inwards and have bounced on the potential barrier before
 reaching $\Obs$'s screen in their outward motion.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gis_shadow.pdf}}
+\caption[]{\label{f:gis:shadow} \footnotesize
+Shadow of a Schwarzschild black hole. The dashed grey circle delimitates the
+dark disk that would appear on the screen of an observer looking at
+a black sphere of radius $r=2m$ in Minkowski spacetime. The ratio between
+the radii of the two disks is $b_{\rm c} / 2m = 3\sqrt{3}/2 \simeq 2.60$.}
+\end{figure}
+
+
 Both reasonings, that based on Fig.~\ref{f:gis:mult_images} and that
 based on Fig.~\ref{f:gis:eff_pot_null}, led us to conclude that
 \begin{greybox}
 For a distant observer, the image of a uniformly bright sphere $\mathscr{S}$ surrounding
 the black hole and the observer is a bright area fulfilling
-the observer's screen, except for a central black disk of radius $b=b_{\rm c}$.
-The latter is called the
+the observer's screen, except for a central black disk of radius $b=b_{\rm c}$
+(cf. Fig.~\ref{f:gis:shadow}).
+This disk is called the
 \defin{black hole shadow}\index{black hole!shadow}\index{shadow!black hole --}.
 \end{greybox}
 
