@@ -1825,6 +1825,7 @@ Eq.~(4) in Ref.~\cite{GrallHW19}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \section{Images} \label{s:gis:images}
 
 Being the worldlines of photons, null geodesics are the key ingredient
@@ -1833,30 +1834,48 @@ a black hole. Computing such images is of great interest, especially after
 the first image of a black hole vicinity obtained by
 the Event Horizon Telescope team in 2019 \cite{EHT19a,Cardo19}.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{gis_obs_angle.pdf}}
+\caption[]{\label{f:gis:obs_angle} \footnotesize
+Link between the observation angle $\hat{b}$ and the impact parameter $b$
+for an asymptotic observer $\Obs$ located at $r_{\Obs} \gg m$.}
+\end{figure}
+
+
 \subsection{The asymptotic observer}
 
 Let us consider some ``far-away'' observer, i.e. an observer $\Obs$ located at $r = r_{\Obs} \gg m$. Without
-any loss of generality, we may assume that $\Obs$ is located at $\th=\pi/2$ and $\ph=0$.
+any loss of generality, we may assume that $\Obs$ is located at $\th=\pi/2$ and $\ph=0$
+(cf. Fig.~\ref{f:gis:obs_angle}).
 Furthermore, we suppose that $\Obs$ is
-equipped with a screen\index{screen} orthogonal to the direction from $\Obs$ to the black hole, which
+equipped with an optical device (telescope\index{telescope}) pointing in the direction from $\Obs$ to the black hole, which
 is the $x$-axis in terms of the coordinates $(x,y):=(r\cos\ph,r\sin\ph)$.
-The image of the black hole's surroundings is formed on $\Obs$'s screen by null geodesics
-that reach the asymptotic value $\ph_\infty = 0 \mod 2 \pi$. Any such geodesic $\Li$ can be parametrized by
-(i) its impact parameter $b$ and (ii) some polar angle $\alpha$ in the screen plane.
-The actual angle formed by the geodesic $\Li$ with respect to the screen's normal
-is
-\be
+Images are formed by null geodesics reaching $\Obs$'s screen with a angle
+$\hat{b}$ with respect to the telescope axis (in $\Obs$'s frame) within the
+telescope aperture\index{telescope!aperture}. The angle $\hat{b}$ is actually
+related to the geodesic impact parameter $b$ by
+$\sin\hat{b} = b / r_{\Obs}$ (cf. Fig.~\ref{f:gis:obs_angle}), which,
+for large $r_{\Obs}$, can be rewritten as
+\be \label{e:gis:hat_b}
     \hat{b} = \frac{b}{r_{\Obs}} .
 \ee
-This angle can be seen as the radial distance from the impact point of $\Li$ on
-the screen and the center of the screen. In what follows, we shall drop the constant
-factor $1/r_{\Obs}$ and use directly $b$ as a measure of the distance from
-the screen center.
-In other words,
-at a given instant of $\Obs$'s proper time $\tau$, a point (``pixel'') of the screen is
-described by the polar coordinates $(b,\alpha)$ and there is a unique null geodesic
-moving from the black hole region to $\Obs$ that
-intersects the screen orthogonally at $(\tau,b,\alpha)$.
+A second parameter characterizing any incoming null geodesic is a polar
+angle $\alpha\in{[0, 2\pi)}$ so that $(\hat{b},\alpha)$ are spherical
+coordinates on $\Obs$'s celestial sphere, the North pole ($\hat{b}=0$) of which
+coinciding with the direction to the black hole. The image on $\Obs$'s screen\index{screen}
+at the telescope output may be then parametrized by polar coordinates $(\hat{b}, \alpha)$, with $\hat{b}$ representing the distance to the screen's center.
+Other projections from the celestial sphere to the planar screen may be considered
+but this is rather unimportant here, given the small field of view of the telescope.
+In what follows, we shall use directly $b$, instead of $\hat{b}$, as
+the radial coordinate in the screen plane. According to Eq.~(\ref{e:gis:hat_b}),
+this amounts to drop the constant
+scale factor $1/r_{\Obs}$.
+
+Moreover, we shall consider the asymptotic observer limit: $r_{\Obs}\to\infty$.
+In that limit, null geodesics that reach $\Obs$ must have
+\be \label{e:gis:ph_inf_0_mod_2pi}
+\ph_\infty = 0 \mod 2 \pi .
+\ee
 
 \begin{figure}
 \centerline{\includegraphics[width=0.9\textwidth]{ges_mult_images.pdf}}
@@ -1915,15 +1934,6 @@ $\Obs$'s screen at $b=5.355\, m$.
 \end{remark}
 
 
-\begin{figure}
-\centerline{\includegraphics[width=0.6\textwidth]{gis_static_obs.pdf}}
-\caption[]{\label{f:gis:static_obs} \footnotesize
-Part $(\w{e}_{(r)}, \w{e}_{(\ph)})$ of the vector frame of the emitter $\Obs_{\rm em}$
-and emission angle $\eta$. The coordinates $(x,y)$ are defined in terms
-of the Schwarzschild-Droste coordinates by $x=r\cos\ph$ and $y=r\sin\ph$.}
-\end{figure}
-
-
 \subsubsection{Link between the emission angle and the impact parameter}
 
 In the above discussion, we have parametrized the null geodesics arriving
@@ -1956,6 +1966,14 @@ is an orthonormal tetrad with respect to the Schwarzschild metric
 (\ref{e:sch:Schwarz_metric_SD}). Moreover,
 having a 4-velocity $\w{u}_{\rm em}$ collinear to the Killing vector $\wpar_t$
 makes the observer $\Obs_{\rm em}$ static [cf. Eq.~(\ref{e:ges:u_Obs_xi})].
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gis_static_obs.pdf}}
+\caption[]{\label{f:gis:static_obs} \footnotesize
+Part $(\w{e}_{(r)}, \w{e}_{(\ph)})$ of the vector frame of the emitter $\Obs_{\rm em}$
+and emission angle $\eta$. The coordinates $(x,y)$ are defined in terms
+of the Schwarzschild-Droste coordinates by $x=r\cos\ph$ and $y=r\sin\ph$.}
+\end{figure}
 
 The 4-momentum $\w{p}$ of a photon emitted by $\Obs_{\rm em}$ in the equatorial
 plane is given by Eqs.~(\ref{e:ges:comp_4_momentum}) and
@@ -2053,7 +2071,8 @@ The dashed line marks the horizontal asymptote $A = 648(7\sqrt{3} - 12) \simeq 8
 
 
 Let $\ph_{\rm em}\in {[0, 2\pi)}$ be the $\ph$ coordinate of the emitter $\Obs_{\rm em}$.
-A null geodesic emitted by $\Obs_{\rm em}$ reaches the asymptotic observer $\Obs$, who is located at $\ph=0$, iff $\ph_\infty = 0 \mod 2\pi$, i.e. iff
+A null geodesic emitted by $\Obs_{\rm em}$ reaches the asymptotic observer $\Obs$, who is located at $\ph=0$, iff $\ph_\infty = 0 \mod 2\pi$ [Eq.~(\ref{e:gis:ph_inf_0_mod_2pi})],
+i.e. iff
 \be \label{e:gis:ph_inf_2pi_n}
     \ph_\infty = 2\pi\eps_L n, \qquad n\in\mathbb{N} .
 \ee
@@ -2267,7 +2286,7 @@ This disk is called the
 \defin{black hole shadow}\index{black hole!shadow}\index{shadow!black hole --}.
 \end{greybox}
 
-\subsection{Image of an accretion structure}
+\subsection{Image of an accretion disk}
 
 
 \begin{hist}
