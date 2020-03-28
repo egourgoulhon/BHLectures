@@ -12,6 +12,8 @@
 \usepackage{hyperref}
 \usepackage{makeidx} % generation de l'index
 \usepackage[nottoc]{tocbibind} % bibliographie et index dans la table des matières
+                               % l'option 'nottoc' spécifiant de ne pas inclure la
+                               % TOC elle-même dans la TOC
 \usepackage{fancyhdr}
 \usepackage{minitoc}
 \usepackage{graphicx}
@@ -174,7 +176,7 @@ Université Paris Sciences et Lettres\\
 \href{mailto:eric.gourgoulhon@obspm.fr}{\texttt{eric.gourgoulhon@obspm.fr}}\\[8ex]
 \url{https://luth.obspm.fr/~luthier/gourgoulhon/bh16}\\[8ex]
 {\Huge --- DRAFT ---}\\[2ex]
-{version of 26 March 2020}\\[2ex]
+{version of 28 March 2020}\\[2ex]
 \emph{\Large Corrections and comments are welcome}
 \end{center}
 \end{titlepage}
@@ -233,10 +235,14 @@ Université Paris Sciences et Lettres\\
 
 \include{sam}  % SageMath computations
 
+\include{ksm}  % Kerr-Schild metrics
+
 \include{web}  % On the Web
 
 \include{ref}
 
+\cleardoublepage
+\phantomsection % to have correct hyperlink to index in TOC
 \printindex
 
 \end{document}
