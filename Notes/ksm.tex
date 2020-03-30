@@ -5,20 +5,20 @@
 
 \section{Generic Kerr-Schild spacetimes}
 
-\subsection{Definition}
+\subsection{Definition} \label{s:ksm:def_Kerr_Schild}
 
 A spacetime $(\M,\w{g})$ is said to have a
 \defin{Kerr-Schild metric}\index{Kerr-Schild!metric} iff the metric tensor $\w{g}$
 can be written
 \be \label{e:ksm:g_KerrSchild}
-   \encadre{ \w{g} = \w{f} + 2 H \w{k}\otimes\w{k} },
+   \encadre{ \w{g} = \w{f} + 2 H \uu{k}\otimes\uu{k} },
 \ee
 or equivalently (in index notation):
 \be \label{e:ksm:g_KerrSchild_comp}
     \encadre{ g_{\alpha\beta} = f_{\alpha\beta} + 2 H k_\alpha k_\beta },
 \ee
 where $\w{f}$ is a flat Lorentzian metric on $\M$ (Minkowski metric),
-$H$ is a scalar field on $\M$ and $\w{k}$ is a 1-form on $\M$ such that the
+$H$ is a scalar field on $\M$ and $\uu{k}$ is a 1-form on $\M$ such that the
 vector associated to it via $\w{f}$ is a null vector of the metric
 $\w{f}$:
 \be
@@ -49,8 +49,8 @@ where
 which establishes Eq.~\eqref{e:ksm:g_inverse}. \qed
 
 Given (\ref{e:ksm:g_inverse}), it is easy to see that the vector field
-$\w{k}^\sharp$ associated
-to the 1-form $\w{k}$ by $\w{g}$-duality (cf. Sec.~\ref{s:bas:metric_dual})
+$\w{k}$ associated
+to the 1-form $\uu{k}$ by $\w{g}$-duality (cf. Sec.~\ref{s:bas:metric_dual})
 is the same as the vector field
 obtained by $\w{f}$-duality:
 \[
@@ -59,22 +59,22 @@ obtained by $\w{f}$-duality:
                           - 2H k^\alpha \underbrace{k^\mu k_\mu}_{0}
                         = k^\alpha .
 \]
-Accordingly, we may write the components of $\w{k}^\sharp$ simply as $k^\alpha$
+Accordingly, we may write the components of $\w{k}$ simply as $k^\alpha$
 without having to specify whether the index has been raised with the
 metric $\w{g}$ or with the metric $\w{f}$:
 \be
     k^\alpha = f^{\alpha\mu} k_\mu  = g^{\alpha\mu} k_\mu .
 \ee
-It follows immediately that $\w{k}^\sharp$ is a null vector field for
+It follows immediately that $\w{k}$ is a null vector field for
 both metrics:
 \be
-   \encadre{ \w{g}(\w{k}^\sharp, \w{k}^\sharp) = \w{f}(\w{k}^\sharp, \w{k}^\sharp) = 0 }.
+   \encadre{ \w{g}(\w{k}, \w{k}) = \w{f}(\w{k}, \w{k}) = 0 }.
 \ee
 
 
 If $(\M,\w{g})$ is a spacetime of Kerr-Schild type, then \defin{Kerr-Schild
 coordinates}\index{Kerr-Schild!coordinates}
-are coordinates $(x^\alpha) = (t,x,y,z)$ that are Minkowskian
+are coordinates $(x^\alpha) = (t,x,y,z)$ that are Minkowskian\index{Minkowskian!coordinates}
 for $\w{f}$, i.e. coordinates in which the components of the flat metric
 $\w{f}$ take the form
 \be \label{e:ksm:ds_eta}
@@ -92,8 +92,8 @@ equation\index{Einstein!equation}, i.e. if the Ricci tensor of $\w{g}$ vanishes 
     R_{\alpha\beta} = 0 ,
 \ee
 then the scalar field $H$ appearing in Eq.~(\ref{e:ksm:g_KerrSchild})
-can be chosen so that $\w{k}^\sharp$ is a geodesic vector field\footnote{See Sec.~\ref{s:geo:gener_param} for the definition of a geodesic vector field.}:
-\be
+can be chosen so that $\w{k}$ is a geodesic vector field\footnote{See Sec.~\ref{s:geo:gener_param} for the definition of a geodesic vector field.}:
+\be \label{e:ksm:k_geodesic}
     \encadre{ k^\mu \nabla_\mu k^\alpha = 0 },
 \ee
 where $\nabla$ stands for the covariant derivative associated with $\w{g}$.
@@ -107,6 +107,84 @@ The proof of the above proposition can be found in Ref.~\cite{KerrS65}.
 \section{Case of Kerr spacetime}
 
 \subsection{Kerr-Schild form}
+
+Let consider the Kerr spacetime $(\M,\w{g})$, where $\M$ is the manifold
+(\ref{e:ker:def_M_Kerr_spacetime}): $\M = \R^2\times\SS^2 \setminus \ring$
+and $\w{g}$ is the metric tensor given by Eq.~(\ref{e:ker:metric_Kerr_3p1})
+in terms of the 3+1 Kerr coordinates $(\ti, r, \th,\tph)$ introduced in
+Sec.~\ref{s:ker:3p1_Kerr_coord}.
+Let us show that $\w{g}$ is a Kerr-Schild metric, with the associated null vector
+field $\w{k}$ being nothing but the vector field generating the principal
+ingoing null geodesics $\Li^{\rm in}_{(v,\th,\tph)}$  discussed in Sec.~\ref{s:ker:principal_geod}.
+Its expression in terms of the 3+1 Kerr coordinates is given by Eq.~(\ref{e:ker:k_ti_tr}):
+\be \label{e:ksm:k_Kerr}
+    \encadre{ \w{k} = \wpar_\ti - \wpar_{\tilde r} }.
+\ee
+In other words, the components of $\w{k}$ with respect to the 3+1 Kerr coordinates $(\ti, r, \th,\tph)$ are $k^\alpha = (1, -1, 0, 0)$.
+The 1-form $\uu{k}$ associated to $\w{k}$ by $\w{g}$-duality is easily computed
+from $k_\alpha = g_{\alpha\mu} k^\mu$, with $g_{\alpha\mu}$ given by
+Eq.~(\ref{e:ker:metric_Kerr_3p1}). We get
+$k_\alpha = (-1, -1, 0, a\sin^2\th)$, i.e.
+\be \label{e:ksm:k_form_Kerr}
+    \uu{k} = - \dd \ti - \dd r + a\sin^2\th \, \dd\tph .
+\ee
+Let us then introduce the symmetric bilinear form
+\be
+    \w{f} := \w{g} - 2 H \uu{k} \otimes \uu{k} ,
+\ee
+where $H$ is the following scalar field on $\M$:
+\be \label{e:ksm:H_Kerr}
+   \encadre{ H := \frac{m r}{\rho^2} },
+\ee
+with $\rho^2 := r^2 + a^2 \cos^2\th$ [Eq.~(\ref{e:ker:def_rho2})].
+The expression of $\w{f}$ in terms of the 3+1 Kerr coordinates is deduced
+from that of $\w{g}$ [Eq.~(\ref{e:ker:metric_Kerr_3p1})] and that of
+$\uu{k}$ [Eq.~(\ref{e:ksm:k_form_Kerr})]:
+\be \label{e:ksm:f_Kerr}
+  \encadre{  f_{\mu\nu}\,  \D x^\mu \D x^\nu = - \D\ti^2 + \D r^2 - 2 a \sin^2\th \, \D r \, \D\tph
+    + \rho^2\, \D \th^2 + (r^2 + a^2)\sin^2\th\, \D \tph^2 }.
+\ee
+It is easy to check that $f^{\alpha\beta} := g^{\alpha\beta} + 2 H k^\alpha k^\beta$
+defines an inverse of $\w{f}$: $f^{\alpha\mu} f_{\mu\beta} = \delta^\alpha_{\ \; \beta}$
+(computation similar to that in Sec.~\ref{s:ksm:def_Kerr_Schild}). Hence the
+symmetric bilinear form $\w{f}$ is nondegenerate; this implies that $\w{f}$
+is a \emph{metric tensor} on $\M$ (cf. Sec.~\ref{s:bas:metric}).
+Given the components (\ref{e:ksm:k_form_Kerr}), it is immediate to check that $\w{k}$ is a null vector for $\w{f}$ as well: $\w{f}(\w{k}, \w{k}) = 0$.
+Moreover, $\w{f}$ is a \emph{flat} metric, since a direct computation of its
+Riemann tensor (cf. the notebook \ref{s:sam:Kerr_Schild}) reveals that
+\be
+    \mathrm{\bf Riem}(\w{f}) = 0 .
+\ee
+In view of the definition given in Sec.~\ref{s:ksm:def_Kerr_Schild},
+we conclude that
+\begin{greybox}
+The Kerr metric $\w{g}$ is a Kerr-Schild metric, i.e. it can be written in
+the form (\ref{e:ksm:g_KerrSchild}) with the flat metric
+$\w{f}$ given by Eq.~(\ref{e:ksm:f_Kerr}), the scalar field $H$ given
+by Eq.~(\ref{e:ksm:H_Kerr}) and the null vector $\w{k}$ given by
+Eq.~(\ref{e:ksm:k_Kerr}), $\w{k}$ being the tangent vector field to
+the principal ingoing null geodesics.
+\end{greybox}
+In Sec.~\ref{s:ker:principal_geod},
+we have already noticed that $\w{k}$ is a geodesic vector:
+$\wnab_{\w{k}}\, \w{k} = 0$ [Eq.~(\ref{e:ker:nab_k_k})], in agreement with
+(\ref{e:ksm:k_geodesic}).
+
+\begin{remark}
+The Kerr metric can also be brought to the Kerr-Schild form by using the
+tangent vector field to the principal \emph{outgoing} null geodesics. Hence
+the Kerr-Schild decomposition (\ref{e:ksm:g_KerrSchild}) is not unique for
+the Kerr metric.
+\end{remark}
+
+\subsection{Kerr-Schild coordinates}
+
+It is not immediately obvious that the metric $\w{f}$ given by
+Eq.~(\ref{e:ksm:f_Kerr}) is a flat Lorentzian metric.
+Let us introduce coordinates in which $\w{f}$ takes a manifestly Minkowskian
+form, i.e. Kerr-Schild coordinates, according to the nomenclature introduced
+in Sec.~\ref{s:ksm:def_Kerr_Schild}.
+
 
 The Kerr spacetime (cf. Chap.~\ref{s:ker}) is of Kerr-Schild type
 and one can set Kerr-Schild coordinates\footnote{The first coordinate
@@ -221,7 +299,7 @@ $z=0$:
 where the last equivalence assumes $a\not=0$. \qed
 
 Since in Kerr-Schild coordinates, $f^{\alpha\beta} = \mathrm{diag}(-1, 1, 1, 1)$,
-the components of the null vector $\w{k}^\sharp$ are immediately
+the components of the null vector $\w{k}$ are immediately
 deduced from Eqs.~\eqref{e:ksm:k_up_comp} and \eqref{e:ksm:k_a_Kerr}:
 \be \label{e:ksm:k_sharp_comp}
    \encadre{ k^\alpha = \left( -1,\ \frac{r x + a y}{r^2 + a^2},\
@@ -233,10 +311,10 @@ associated with stationarity:
 According to the components (\ref{e:ksm:k_a_Kerr})
 of $\w{k}$, we have
 \be
-    \w{g}(\w{\xi}, \w{k}^\sharp) = \xi^\mu k_\mu = k_{\ti} = 1 > 0 .
+    \w{g}(\w{\xi}, \w{k}) = \xi^\mu k_\mu = k_{\ti} = 1 > 0 .
 \ee
 In the regions where $\w{\xi}$ is timelike, i.e. outside the ergoregion,
-this implies that the null vector $\w{k}^\sharp$ is past-directed (assuming
+this implies that the null vector $\w{k}$ is past-directed (assuming
 that the time orientation is chosen so that $\w{\xi}$ is future-directed).
 Indeed the scalar product of a future-directed timelike vector with a future-directed
 null vector is necessarily negative (cf. the lemma in Sec.~\ref{s:fra:time_orientation}).
