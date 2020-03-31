@@ -177,7 +177,7 @@ the Kerr-Schild decomposition (\ref{e:ksm:g_KerrSchild}) is not unique for
 the Kerr metric.
 \end{remark}
 
-\subsection{Kerr-Schild coordinates}
+\subsection{Kerr-Schild coordinates on Kerr spacetime}
 
 It is not immediately obvious that the metric $\w{f}$ given by
 Eq.~(\ref{e:ksm:f_Kerr}) is a flat Lorentzian metric.
@@ -185,39 +185,96 @@ Let us introduce coordinates in which $\w{f}$ takes a manifestly Minkowskian
 form, i.e. Kerr-Schild coordinates, according to the nomenclature introduced
 in Sec.~\ref{s:ksm:def_Kerr_Schild}.
 
-
-The Kerr spacetime (cf. Chap.~\ref{s:ker}) is of Kerr-Schild type
-and one can set Kerr-Schild coordinates\footnote{The first coordinate
-is denoted by $\ti$ to distinguish it from the Boyer-Lindquist coordinate $t$,
-see below.} $(\ti, x, y, z)$ on it with
-\be \label{e:ksm:H_Kerr}
-   \encadre{ H = \frac{m r^3}{r^4 + a^2 z^2} }
+Actually, if $a\not=0$, one cannot introduce a Kerr-Schild coordinate system on the whole
+spacetime manifold $\M = \R^2\times\SS^2 \setminus \ring$ as defined by
+Eq.~(\ref{e:ker:def_M_Kerr_spacetime}). One has to split it in two parts:
+\begin{subequations}
+\begin{align}
+    \M & :=  \M_+ \cup \M_- , \\
+    \M_+ & :=  \R\times {[0,+\infty)}\times\SS^2 \setminus \ring\\
+    \M_- & :=  \R\times {(-\infty,0]}\times\SS^2 \setminus \ring .
+\end{align}
+\end{subequations}
+In other words, $\M_+$ is the part $r\geq 0$ of $\M$ and $\M_-$ is the part
+$r\leq 0$. Note that $\M_+$ and $\M_-$ overlap at $r=0$ and that in terms of the domains introduced in Sec.~\ref{s:ker:expr_BL},
+$\M_+$ contains $\M_{\rm I}$, $\M_{\rm II}$ and a part of $\M_{\rm III}$,
+while $\M_-$ is entirely included in $\M_{\rm III}$.
+The \defin{Kerr-Schild coordinates} $(\ti, x, y, z)$
+of $\M_+$ are defined from the 3+1 Kerr coordinates
+$(\ti, r, \th,\tph)$ by the formulas:
+\begin{subequations}
+\label{e:ksm:K_to_KS}
+\bea
+    \ti & = & \ti \\
+    x & = & (r\cos\tph - a \sin\tph) \sin \th  \label{e:ksm:x_Kerr}\\
+    y & = & (r\sin\tph + a \cos\tph) \sin \th  \label{e:ksm:y_Kerr}\\
+    z & = & r\cos \th . \label{e:ksm:z_Kerr}
+\eea
+\end{subequations}
+\begin{remark}
+For $a=0$, Eqs.~\eqref{e:ksm:x_Kerr}-\eqref{e:ksm:z_Kerr} reduce to the standard
+relations between Cartesian and spherical coordinates in Euclidean space.
+\end{remark}
+\begin{remark}
+Equations~(\ref{e:ksm:x_Kerr})-(\ref{e:ksm:y_Kerr}) can be combined into a single
+relation:
+\be
+    x + i y = (r + i a) \mathrm{e}^{i\tph} \sin\th .
 \ee
-and
-\be \label{e:ksm:k_a_Kerr}
-    \encadre{ k_\alpha = \left( 1,\ \frac{r x + a y}{r^2 + a^2},\
-        \frac{r y - a x}{r^2 + a^2},\ \frac{z}{r} \right) },
+\end{remark}
+From Eqs.~(\ref{e:ksm:x_Kerr})-(\ref{e:ksm:y_Kerr}), we
+get
+\be
+    x^2 + y^2 = (r^2 + a^2)\sin^2\th .
 \ee
-where $m$ and $a$ are respectively the mass and specific angular momentum
-parameters of the Kerr spacetime and
-$r$ is the following function of $(x,y,z)$:
-\be \label{e:ksm:def_r}
-   \encadre{ r := \sqrt{ \frac{1}{2} \left(
+Combining with Eq.~(\ref{e:ksm:z_Kerr}) yields:
+\be \label{e:ksm:ellipsoids}
+\encadre{ \frac{x^2 + y^2}{r^2 + a^2} + \frac{z^2}{r^2} = 1 } .
+\ee
+This is a quadratic equation in $r^2$. Solving it results in
+\be \label{e:ksm:r_xyz}
+    r = \sqrt{ \frac{1}{2} \left(
         x^2 + y^2 + z^2 - a^2 +
-        \sqrt{(x^2 + y^2 + z^2 - a^2)^2 + 4 a^2 z^2} \right)} } .
+        \sqrt{(x^2 + y^2 + z^2 - a^2)^2 + 4 a^2 z^2} \right)}  .
 \ee
-Actually, $r$ is nothing but the
-radial coordinate of Boyer-Lindquist coordinates $(t,r,\th,\ph)$
-(cf. Sec.~\ref{s:ker:expr_BL}),
-as well as of Kerr coordinates $(v, r, \th, \tph)$ (cf. Sec.~\ref{s:ker:Kerr_coord})
-or of the 3+1 Kerr coordinates $(\ti, r, \th,\tph)$ (cf. Sec.~\ref{s:ker:3p1_Kerr_coord}).
+A direct computation via the tensor change of components formula with
+the transformation (\ref{e:ksm:K_to_KS}) yields to
+the following components of $\w{f}$ in terms on the coordinates
+$(x^\alpha)=(\ti, x, y, z)$
+(cf. the notebook \ref{s:sam:Kerr_Schild}):
+\be \label{e:ksm:f_Kerr_KS}
+ f_{\mu\nu}\,  \D x^\mu \D x^\nu = - \D\ti^2 + \D x^2 + \D y^2 + \D z^2 ,
+\ee
+which proves that $(\ti, x, y, z)$ are Kerr-Schild coordinates, as announced.
+
+The expression of the vector $\w{k}$ in terms of the Kerr-Schild coordinates
+is obtained similarly:
+\be
+    \w{k} = \wpar_{\ti} - \frac{r x + a y}{r^2 + a^2} \, \wpar_x
+        - \frac{r y - a x}{r^2 + a^2} \, \wpar_y
+        - \frac{z}{r}\, \wpar_z .
+\ee
+In this formula, $r$ is to be considered as the function of $(x,y,z)$ given
+by Eq.~(\ref{e:ksm:r_xyz}). For the associated 1-form, we get
+\be \label{e:ksm:k_form_Kerr_KS}
+    \uu{k} = - \dd\ti - \frac{r x + a y}{r^2 + a^2} \, \dd x
+       - \frac{r y - a x}{r^2 + a^2} \, \dd y
+        - \frac{z}{r}\, \dd z .
+\ee
+The scalar factor $H$ can be re-expressed from Eq.~(\ref{e:ksm:H_Kerr})
+in terms of $z$ and $r$:
+\be \label{e:ksm:H_Kerr_zr}
+    H = \frac{m r^3}{r^4 + a^2 z^2}  .
+\ee
 
 \begin{remark}
 If $a=0$ (Schwarzschild limit), we get
 \be \label{e:ksm:lim_a_zero}
     r = \sqrt{x^2 + y^2 + z^2}, \quad
     H = \frac{m}{r} \quad\mbox{and}\quad
-    k_\alpha = \left( 1,\; \frac{x}{r},\; \frac{y}{r},\; \frac{z}{r} \right) .
+    \uu{k} = - \dd\ti - \frac{x}{r} \, \dd x
+       - \frac{y}{r} \, \dd y
+        - \frac{z}{r}\, \dd z .
 \ee
 \end{remark}
 
@@ -226,18 +283,6 @@ For $a \not = 0$, the relations (\ref{e:ksm:lim_a_zero}) hold at first order
 in the limit $r \gg a$, or equivalently in the limit $\sqrt{x^2 + y^2 + z^2} \gg a$.
 \end{remark}
 
-The Kerr-Schild coordinate system $(\ti,x,y,z)$ actually covers only
-the part $r\geq 0$ of the Kerr spacetime as introduced in Sec.~\ref{s:ker:expr_BL}.
-For the $r<0$ part, which exists as soon as $a\not=0$,
-one has to introduce another patch of Kerr-Schild coordinates, $(\ti,x',y',z')$ say, such
-that
-\be
-    r := - \sqrt{ \frac{1}{2} \left(
-        {x'}^2 + {y'}^2 + {z'}^2 - a^2 +
-        \sqrt{({x'}^2 + {y'}^2 + {z'}^2 - a^2)^2 + 4 a^2 {z'}^2} \right)} .
-\ee
-
-
 The explicit form of the components
 $g_{\mu\nu}$ of the Kerr metric in Kerr-Schild coordinates can be read off by expanding the line
 element
@@ -245,31 +290,38 @@ element
 \encadre{ \begin{array}{ll}
 g_{\mu\nu} \, \D x^\mu \, \D x^\nu = & - \D \ti^2 + \D x^2 + \D y^2
         + \D z^2 \\
-        &\displaystyle  + \frac{2m r^3}{r^4 + a^2 z^2} \left( \D t
+        &\displaystyle  + \frac{2m r^3}{r^4 + a^2 z^2} \left( \D \ti
         + \frac{r x + a y}{r^2 + a^2} \, \D x
         + \frac{r y - a x}{r^2 + a^2} \, \D y + \frac{z}{r} \, \D z \right) ^2
 \end{array} } ,
 \ee
-which is obtained by combining Eqs~(\ref{e:ksm:g_KerrSchild_comp}), (\ref{e:ksm:ds_eta}), (\ref{e:ksm:H_Kerr})
-and (\ref{e:ksm:k_a_Kerr}).
+which is obtained by combining Eqs~(\ref{e:ksm:g_KerrSchild_comp}), (\ref{e:ksm:f_Kerr_KS}),
+(\ref{e:ksm:H_Kerr_zr})
+and (\ref{e:ksm:k_form_Kerr_KS}).
 \begin{remark}
 It is clear on \eqref{e:ksm:g_comp_KS} that all metric components in Kerr-Schild
 coordinates are regular at the event horizon, which is defined by $r= m + \sqrt{m^2-a^2}$.
-This is in sharp contrast with the metric components in the standard
+This property, which is shared by the 3+1 Kerr coordinates,
+is in sharp contrast with the metric components in the standard
 Boyer-Lindquist coordinates [cf. Eq.~(\ref{e:ker:metric_BL})].
 \end{remark}
 
-Given expression \eqref{e:ksm:def_r} for $r$, the following relation holds
-for $r \not=0$:
+
+On the domain $\M_-$, i.e. for $r\leq 0$,
+one has to introduce another patch of Kerr-Schild coordinates, $(\ti,x',y',z')$ say,
+such that
 \be
-\encadre{ \frac{x^2 + y^2}{r^2 + a^2} + \frac{z^2}{r^2} = 1 } .
+    r := - \sqrt{ \frac{1}{2} \left(
+        {x'}^2 + {y'}^2 + {z'}^2 - a^2 +
+        \sqrt{({x'}^2 + {y'}^2 + {z'}^2 - a^2)^2 + 4 a^2 {z'}^2} \right)} .
 \ee
-This shows that, in the Euclidean space spanned by the $(x,y,z)$ coordinates,
+
+The identity (\ref{e:ksm:ellipsoids}) shows that, in the Euclidean space spanned by the $(x,y,z)$ coordinates,
 the surfaces of constant $r\not=0$ are
-confocal\footnote{In any plane containing the axis of symmetry, the trace of
+confocal\footnote{In any plane containing the axis of symmetry $x^2+y^2=0$, the trace of
 the ellipsoids are ellipses that share the same foci, located
 at the abscissas $\pm a$ along the $z=0$ axis.}
- ellipsoids of revolution. For $r=0$ and $a>0$, Eq.~\eqref{e:ksm:def_r} shows that the surface
+ ellipsoids of revolution. For $r=0$ and $a>0$, Eq.~\eqref{e:ksm:r_xyz} shows that the surface
 of constant $r$ is the disk of radius $a$ centered at the origin in the plane
 $z=0$:
 \be \label{e:ksm:disk_r0}
@@ -278,7 +330,7 @@ $z=0$:
         x^2 + y^2 \leq a^2 .
         \end{array} \right.
 \ee
-\emph{Proof:} starting from Eq.~\eqref{e:ksm:def_r}, we have successively
+\emph{Proof:} starting from Eq.~\eqref{e:ksm:r_xyz}, we have successively
 \bea
     r = 0 & \iff & x^2 + y^2 + z^2 - a^2 =
         - \sqrt{(x^2 + y^2 + z^2 - a^2)^2 + 4 a^2 z^2} \nonumber \\
@@ -297,72 +349,6 @@ $z=0$:
                   \end{cases}  \nonumber
 \eea
 where the last equivalence assumes $a\not=0$. \qed
-
-Since in Kerr-Schild coordinates, $f^{\alpha\beta} = \mathrm{diag}(-1, 1, 1, 1)$,
-the components of the null vector $\w{k}$ are immediately
-deduced from Eqs.~\eqref{e:ksm:k_up_comp} and \eqref{e:ksm:k_a_Kerr}:
-\be \label{e:ksm:k_sharp_comp}
-   \encadre{ k^\alpha = \left( -1,\ \frac{r x + a y}{r^2 + a^2},\
-        \frac{r y - a x}{r^2 + a^2},\ \frac{z}{r} \right) }.
-\ee
-
-Let $\w{\xi} = \wpar_{\ti}$ be the Killing vector of Kerr spacetime
-associated with stationarity:
-According to the components (\ref{e:ksm:k_a_Kerr})
-of $\w{k}$, we have
-\be
-    \w{g}(\w{\xi}, \w{k}) = \xi^\mu k_\mu = k_{\ti} = 1 > 0 .
-\ee
-In the regions where $\w{\xi}$ is timelike, i.e. outside the ergoregion,
-this implies that the null vector $\w{k}$ is past-directed (assuming
-that the time orientation is chosen so that $\w{\xi}$ is future-directed).
-Indeed the scalar product of a future-directed timelike vector with a future-directed
-null vector is necessarily negative (cf. the lemma in Sec.~\ref{s:fra:time_orientation}).
-To get a future-directed null vector, some authors consider $\w{k}' = - \w{k}$
-instead of $\w{k}$.
-
-\subsection{Link with Kerr coordinates}
-
-The link between the Kerr-Schild coordinates $(\ti, x, y, z)$ and the 3+1 Kerr
-coordinates $(\ti, r, \th, \tph)$ introduced in Sec.~\ref{s:ker:3p1_Kerr_coord} is
-\begin{subequations}
-\label{e:ksm:K_to_KS}
-\bea
-    \ti & = & \ti \\
-    x & = & (r\cos\tph + a \sin\tph) \sin \th  \label{e:ksm:x_Kerr}\\
-    y & = & (r\sin\tph - a \cos\tph) \sin \th  \label{e:ksm:y_Kerr}\\
-    z & = & r\cos \th . \label{e:ksm:z_Kerr}
-\eea
-\end{subequations}
-The inverse relation gives birth to Eq.~\eqref{e:ksm:def_r} relating $r$ to
-$(x,y,z)$.
-
-\begin{remark}
-Equations~\eqref{e:ksm:x_Kerr}-\eqref{e:ksm:y_Kerr} can be combined into a single
-relation:
-\be
-    x + i y = (r - i a) \mathrm{e}^{i\tph} \sin\th .
-\ee
-\end{remark}
-
-\begin{remark}
-For $a=0$, Eqs.~\eqref{e:ksm:x_Kerr}-\eqref{e:ksm:z_Kerr} reduce to the standard
-relations between Cartesian and spherical coordinates in Euclidean space.
-\end{remark}
-
-Thanks to $z=r\cos\th$ [Eq.~(\ref{e:ksm:z_Kerr})], the scalar field $H$
-defined by Eq.~\eqref{e:ksm:H_Kerr} takes a simple expression in terms of
-Kerr coordinates:
-\be
-    H = \frac{mr}{\rho^2} ,
-\ee
-where $\rho^2 := r^2 + a^2 \cos^2\th$ [Eq.~(\ref{e:ker:def_rho2})].
-
-The link between Kerr-Schild coordinates $(\ti, x, y, z)$ and the Kerr
-coordinates $(v, r, \th, \tph)$ introduced in Sec.~\ref{s:ker:Kerr_coord}
-is given by $\ti = v - r$ [Eq.~(\ref{e:ker:def_t_tilde})]
-and
-Eqs.~(\ref{e:ksm:x_Kerr})-(\ref{e:ksm:z_Kerr}).
 
 
 \subsection{Link with Boyer-Lindquist coordinates}
