@@ -67,6 +67,26 @@ and $\ring$ is the subset of $\R^2\times\SS^2$ defined in terms of the Boyer-Lin
     \ring = \left\{ p \in \R^2\times\SS^2,
         \quad r(p) = 0 \ \mbox{and}\ \th(p) = \frac{\pi}{2} \right\} .
 \ee
+\begin{remark}
+By construction, the points of $\R^2\times\SS^2$ obeying $r=r_-$ and $r=r_+$ are
+excluded from the spacetime manifold $\M_{\rm BL}$. In a latter stage
+(Sec.~\ref{s:ker:extension}), we shall extend the spacetime manifold to
+include these points, so that the spacetime manifold will be $\M = \R^2\times\SS^2\setminus \ring$. Even latter on, after having noticed that $(\M,\w{g})$ is not geodesically complete,
+we shall extend the spacetime manifold further and discuss the maximal analytic
+extension (Sec.~\ref{s:ker:max_extension}).
+\end{remark}
+
+\begin{remark} \label{r:ker:r_zero}
+One shall stress that the points $r=0$ are \emph{not} special points in
+$\R^2\times\SS^2$ spanned by the coordinates $(t,r,\th,\ph)$. In particular,
+$(t,r) = (t_0, 0)$, where $t_0$ is a constant, defines a regular sphere
+$\Sp_0$ diffeomorphic to $\SS^2$. On the spacetime manifold $\M_{\rm BL}$, the
+points $r=0$ are part of $\M_{\rm III}$ and because of the exclusion of $\ring$
+in the definition (\ref{e:ker:def_M_III}), $(t,r) = (t_0, 0)$ defines
+a sphere minus its equator (cf. Fig.~\ref{f:ker:spher_view}, where the equator
+is the tick orange circle).
+\end{remark}
+
 Note that thanks to the constraint (\ref{e:ker:a_lower_m}), $r_+$ and $r_-$
 are well defined and obey
 \be
@@ -77,7 +97,7 @@ Note also that $\ring$ is spanned by the coordinates $(t,\ph)$ and is diffeomorp
     \ring \simeq \R\times\SS^1 .
 \ee
 This is so because $r=0$ is \emph{not} a peculiar value of $r$ in $\R^2\times\SS^2$
-(cf. Fig.~\ref{f:ker:spher_view}).
+(cf. remark~\ref{r:ker:r_zero} above).
 In view of Eqs.~(\ref{e:ker:def_M_I})-(\ref{e:ker:def_M_III}) and (\ref{e:ker:def_ring}), it is clear that
 the various connected components of $\M_{\rm BL}$ are defined in terms of the
 Boyer-Lindquist coordinates $(t,r,\th,\ph)$ by
@@ -120,7 +140,7 @@ of $\M_{\rm BL}$!), so that the metric components (\ref{e:ker:metric_BL})
 are regular in $\M_{\rm BL}$, except for the standard singularities of
 the spherical coordinates $(\th,\ph)$.
 
-By means of a computer algebra system (cf. Sec.~\ref{s:sam:Kerr_solution}),
+By means of a computer algebra system (cf. the notebook~\ref{s:sam:Kerr_solution}),
 it is easy to check that
 \begin{greybox}
 $\left(\M_{\rm BL},\w{g}\right)$ with $\w{g}$ given
@@ -203,9 +223,14 @@ where $x^i=(t,\th,\ph)$. According to the assumption (\ref{e:ker:a_lower_m}), $a
 and the change of coordinates  $x:=a\sin\th\cos\ph$, $y:=a\sin\th\sin\ph$
 turns the right-hand side of (\ref{e:ker:metric_r0}) into $- \D t^2 + \D x^2 + \D y^2$.
 We recognize a \emph{flat} Minkowskian metric. In particular, for a fixed value
-of $t$, the $r=0$ ``sphere'' $\mathcal{S}_t = \{p\in \M_{\rm III}, r(p)=0, t(p)=t\}$
-(pictured by the dotted line in Fig.~\ref{f:ker:spher_view})
-is made of two disconnected components, which are two \emph{flat open disks} of radius $a$, corresponding respectively to $\theta < \pi/2$ and $\theta>\pi/2$.
+of $t$, the $r=0$ set
+\be \label{e:ker:S_r_zero}
+    \mathcal{S}_{0,t} := \{p\in \M_{\rm III}, r(p)=0, t(p)=t\}
+\ee
+is made of two connected components, which are two \emph{flat open disks} of radius $a$, corresponding respectively to $\theta < \pi/2$ and $\theta>\pi/2$, since
+the equator $\theta=\pi/2$ is excluded by the very definition of $\M_{\rm III}$
+(cf. remark~\ref{r:ker:r_zero} above). The set $\mathcal{S}_{0,t}$ is depicted
+by the dotted red line in Fig.~\ref{f:ker:spher_view}.
 \end{itemize}
 
 \subsection{Determinant and inverse metric}
@@ -368,7 +393,7 @@ and various values of $\theta$.}
 \end{figure}
 
 
-\subsection{Singularities}
+\subsection{Singularities} \label{s:ker:singularities}
 
 The components $g_{\alpha\beta}$ of the Kerr metric as given by  (\ref{e:ker:metric_BL})
 are diverging at various locations:
@@ -406,6 +431,7 @@ other coordinates.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Kerr coordinates and extension of the spacetime manifold through $\Delta=0$}
+\label{s:ker:extension}
 
 \subsection{Kerr coordinates} \label{s:ker:Kerr_coord}
 
@@ -582,7 +608,7 @@ Eq.~(\ref{e:ker:Kerr_coord_int}):
 \begin{align}
 & \encadre{\ti = t  + \frac{m}{\sqrt{m^2-a^2}} \left(
     r_+ \ln\left| \frac{r-r_+}{2m} \right|
-    - r_- \ln\left| \frac{r-r_-}{2m} \right| \right) }\\
+    - r_- \ln\left| \frac{r-r_-}{2m} \right| \right) } \label{e:ker:ti_t}\\
 & \encadre{ \tph = \ph + \frac{a}{2\sqrt{m^2-a^2}}\, \ln \left|
     \frac{r-r_+}{r-r_-} \right| } .
 \end{align}
@@ -1716,8 +1742,8 @@ via ``compactified'' coordinates, as we did for Schwarzschild
 spacetime in Sec.~\ref{s:max:Carter-Penrose}. The plane of Fig.~\ref{f:ker:3blocks_in}
 is the $(\ti,r)$ plane, so that
 each point in the diagram is a 2-sphere, spanned by $(\th,\tph)$, except
-along the curve $r=0$ (thick dotted line) where each point is the union of
-two flat open disks (cf. Sec.~\ref{s:ker:basic_prop}).
+along the curve $r=0$ (thick dotted line) where each point is the union $\mathcal{S}_{0,t}$
+of two flat open disks (cf. Sec.~\ref{s:ker:basic_prop}, Eq.~(\ref{e:ker:S_r_zero})).
 As for the Carter-Penrose diagram of Schwarzschild spacetime presented in
 Chap.~\ref{s:max}, the diagram of Fig.~\ref{f:ker:3blocks_in} is conformal, i.e.
 the null curves are represented by $\pm 45^\circ$ lines. A difference with the Schwarzschild case

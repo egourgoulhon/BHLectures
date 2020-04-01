@@ -195,13 +195,14 @@ Eq.~(\ref{e:ker:def_M_Kerr_spacetime}). One has to split it in two parts:
     \M_- & :=  \R\times {(-\infty,0]}\times\SS^2 \setminus \ring .
 \end{align}
 \end{subequations}
-In other words, $\M_+$ is the part $r\geq 0$ of $\M$ and $\M_-$ is the part
-$r\leq 0$. Note that $\M_+$ and $\M_-$ overlap at $r=0$ and that in terms of the domains introduced in Sec.~\ref{s:ker:expr_BL},
+In other words, $\M_+$ is the part $r\geq 0$ of $\M$, while $\M_-$ is the part
+$r\leq 0$. Note that $\M_+$ and $\M_-$ are submanifolds with boundaries
+(cf. Sec.~\ref{s:bas:manif_boundary}), which overlap at $r=0$. In terms of the domains introduced in Sec.~\ref{s:ker:expr_BL},
 $\M_+$ contains $\M_{\rm I}$, $\M_{\rm II}$ and a part of $\M_{\rm III}$,
 while $\M_-$ is entirely included in $\M_{\rm III}$.
 The \defin{Kerr-Schild coordinates} $(\ti, x, y, z)$
-of $\M_+$ are defined from the 3+1 Kerr coordinates
-$(\ti, r, \th,\tph)$ by the formulas:
+on $\M_+$ are defined from the 3+1 Kerr coordinates
+$(\ti, r, \th,\tph)$ by the following formulas:
 \begin{subequations}
 \label{e:ksm:K_to_KS}
 \bea
@@ -211,6 +212,13 @@ $(\ti, r, \th,\tph)$ by the formulas:
     z & = & r\cos \th . \label{e:ksm:z_Kerr}
 \eea
 \end{subequations}
+
+\begin{remark}
+As we shall see in Sec.~\ref{s:ksm:r_zero}, the Kerr-Schild coordinates
+are singular at $r=0$, so strictly speaking, we should have omitted $r=0$ from
+the definition of $\M_+$ and $\M_-$.
+\end{remark}
+
 \begin{remark}
 For $a=0$, Eqs.~\eqref{e:ksm:x_Kerr}-\eqref{e:ksm:z_Kerr} reduce to the standard
 relations between Cartesian and spherical coordinates in Euclidean space.
@@ -237,15 +245,16 @@ This is a quadratic equation in $r^2$. Solving it results in
         x^2 + y^2 + z^2 - a^2 +
         \sqrt{(x^2 + y^2 + z^2 - a^2)^2 + 4 a^2 z^2} \right)}  .
 \ee
-A direct computation via the tensor change of components formula with
-the transformation (\ref{e:ksm:K_to_KS}) yields to
-the following components of $\w{f}$ in terms on the coordinates
-$(x^\alpha)=(\ti, x, y, z)$
+
+The components of $\w{f}$ in terms on the coordinates
+$(x^\alpha)=(\ti, x, y, z)$ are obtained
+via the tensor change-of-components formula with
+the transformation (\ref{e:ksm:K_to_KS})
 (cf. the notebook \ref{s:sam:Kerr_Schild}):
 \be \label{e:ksm:f_Kerr_KS}
- f_{\mu\nu}\,  \D x^\mu \D x^\nu = - \D\ti^2 + \D x^2 + \D y^2 + \D z^2 ,
+ f_{\mu\nu}\,  \D x^\mu \D x^\nu = - \D\ti^2 + \D x^2 + \D y^2 + \D z^2 .
 \ee
-which proves that $(\ti, x, y, z)$ are Kerr-Schild coordinates, as announced.
+This proves that $(\ti, x, y, z)$ are Kerr-Schild coordinates, as announced.
 
 The expression of the vector $\w{k}$ in terms of the Kerr-Schild coordinates
 is obtained similarly:
@@ -303,18 +312,10 @@ It is clear on \eqref{e:ksm:g_comp_KS} that all metric components in Kerr-Schild
 coordinates are regular at the event horizon, which is defined by $r= m + \sqrt{m^2-a^2}$.
 This property, which is shared by the 3+1 Kerr coordinates,
 is in sharp contrast with the metric components in the standard
-Boyer-Lindquist coordinates [cf. Eq.~(\ref{e:ker:metric_BL})].
+Boyer-Lindquist coordinates (cf. Sec.~\ref{s:ker:singularities}).
 \end{remark}
 
 
-On the domain $\M_-$, i.e. for $r\leq 0$,
-one has to introduce another patch of Kerr-Schild coordinates, $(\ti,x',y',z')$ say,
-such that
-\be
-    r := - \sqrt{ \frac{1}{2} \left(
-        {x'}^2 + {y'}^2 + {z'}^2 - a^2 +
-        \sqrt{({x'}^2 + {y'}^2 + {z'}^2 - a^2)^2 + 4 a^2 {z'}^2} \right)} .
-\ee
 
 \begin{figure}
 \centerline{\includegraphics[width=0.45\textwidth]{ksm_phi_cut.png}}
@@ -350,6 +351,61 @@ curvature singularity.
 }
 \end{figure}
 
+
+
+The identity (\ref{e:ksm:ellipsoids}) shows that, in the Euclidean space spanned by the $(x,y,z)$ coordinates,
+the surfaces of constant $r\not=0$ are
+confocal\footnote{In any plane containing the axis of symmetry $x^2+y^2=0$, the trace of
+the ellipsoids are ellipses that share the same foci, located
+at the abscissas $\pm a$ along the $z=0$ axis.}
+ ellipsoids of revolution (see Fig.~\ref{f:ksm:phi_cut} for a slice at $\tph=\mathrm{const}$).
+
+\subsection{The double-disk $r=0$} \label{s:ksm:r_zero}
+
+For $r=0$, the system (\ref{e:ksm:K_to_KS}) reduces to
+\begin{subequations}
+\label{e:ksm:K_to_KS_r_zero}
+\bea
+    \ti & = & \ti \\
+    x & = & - a  \sin\th \sin\tph \\
+    y & = & a \sin\th \cos\tph \\
+    z & = & 0
+\eea
+\end{subequations}
+For $a\not=0$ and a fixed value of $\ti$, the subset $r=0$ of the Kerr spacetime $\M$
+is the set $\mathcal{S}_{0,t}$ discussed in Sec.~\ref{s:ker:basic_prop}
+[cf. Eq.~(\ref{e:ker:S_r_zero})], where $t$ is related to $\ti$ via
+Eq.~(\ref{e:ker:ti_t}), which for $r=0$, is basically $\ti = t + \mathrm{const}$.
+$\mathcal{S}_{0,t}$ is topologically a 2-sphere minus its equator. It is therefore
+disconnected, with two connected components: the two open hemispheres,
+$\mathcal{S}_{0,t}^+$ and  $\mathcal{S}_{0,t}^-$ say.
+As shown in Sec.~\ref{s:ker:basic_prop}, $\mathcal{S}_{0,t}^+$ and
+$\mathcal{S}_{0,t}^-$  are actually
+two disks that, with respect to the metric induced by $\w{g}$, (i) have radius $a$
+and (ii) are flat. The disk $\mathcal{S}_{0,t}^+$ is spanned by
+the coordinates $(\th,\tph)$ with $\th\in {[0, \pi/2)}$,
+while $\mathcal{S}_{0,t}^-$ is spanned by
+the coordinates $(\th,\tph)$ with $\th\in {(\pi/2, \pi]}$.
+Let $p\in\mathcal{S}_{0,t}^+$
+be a point of 3+1 Kerr coordinates $(\ti, 0, \th, \tph)$. The point
+$q$ of 3+1 coordinates $(\ti, 0, \pi-\th, \tph)$ belongs to
+$\mathcal{S}_{0,t}^-$; it is therefore distinct from $p$, since
+$\mathcal{S}_{0,t}^+$ and  $\mathcal{S}_{0,t}^-$ are two disjoint sets. Now,
+the transformation (\ref{e:ksm:K_to_KS_r_zero}) maps $p$ and $q$ to the same
+value $(\ti, - a  \sin\th \sin\tph, a \sin\th\cos\ph, 0)$ of the Kerr-Schild coordinates
+$(\ti, x, y, z)$. We conclude that, for $r=0$, the Kerr-Schild coordinate system fails
+to establish a one-to-one correspondance between the manifold points and
+some open subset of $\R^4$. Actually, as it is clear from (\ref{e:ksm:K_to_KS_r_zero}),
+the two disks $\mathcal{S}_{0,t}^+$ and  $\mathcal{S}_{0,t}^-$ are mapped
+by Kerr-Schild coordinates to a single disk: the disk of radius $a$ centered
+at $(x,y,z)=(0,0,0)$ in the plane $z=0$. This disk is shown in
+Fig.~\ref{f:ksm:theta_cut} (pink central disk) and in Fig.~\ref{f:ksm:rzero_disk};
+its section $\tph = 0$ or $\pi$
+is depicted as the red segment in Fig.~\ref{f:ksm:phi_cut}.
+
+
+
+
 \begin{figure}
 \centerline{\includegraphics[width=0.45\textwidth]{ksm_rzero_disk.pdf}}
 \caption[]{\label{f:ksm:rzero_disk} \footnotesize
@@ -359,14 +415,7 @@ the Kerr-Schild coordinates $(x,y)$.
 }
 \end{figure}
 
-
-
-The identity (\ref{e:ksm:ellipsoids}) shows that, in the Euclidean space spanned by the $(x,y,z)$ coordinates,
-the surfaces of constant $r\not=0$ are
-confocal\footnote{In any plane containing the axis of symmetry $x^2+y^2=0$, the trace of
-the ellipsoids are ellipses that share the same foci, located
-at the abscissas $\pm a$ along the $z=0$ axis.}
- ellipsoids of revolution. For $r=0$ and $a>0$, Eq.~\eqref{e:ksm:r_xyz} shows that the surface
+For $r=0$ and $a>0$, Eq.~\eqref{e:ksm:r_xyz} shows that the surface
 of constant $r$ is the disk of radius $a$ centered at the origin in the plane
 $z=0$:
 \be \label{e:ksm:disk_r0}
@@ -375,7 +424,8 @@ $z=0$:
         x^2 + y^2 \leq a^2 .
         \end{array} \right.
 \ee
-\emph{Proof:} starting from Eq.~\eqref{e:ksm:r_xyz}, we have successively
+\begin{proof}
+Starting from Eq.~\eqref{e:ksm:r_xyz}, we have successively
 \bea
     r = 0 & \iff & x^2 + y^2 + z^2 - a^2 =
         - \sqrt{(x^2 + y^2 + z^2 - a^2)^2 + 4 a^2 z^2} \nonumber \\
@@ -393,8 +443,23 @@ $z=0$:
                   x^2 + y^2 \leq a^2,
                   \end{cases}  \nonumber
 \eea
-where the last equivalence assumes $a\not=0$. \qed
+where the last equivalence assumes $a\not=0$.
+\end{proof}
+The $r=0$ disk is depicted in Figs.~\ref{f:ksm:theta_cut} and \ref{f:ksm:rzero_disk}.
+It is spanned by the coordinates $(\th,\tph)$; the lines $\th=\mathrm{const}$
+are drawn as the brown circles in Fig.~\ref{f:ksm:rzero_disk}, with $\th=0$
+corresponding to the disk center and $\th=\pi/2$ to the disk boundary at
+$\sqrt{x^2 + y^2} = a$, which is the location of the curvature singularity
+of Kerr spacetime (cf. Sec.~\ref{s:ker:singularities}).
 
+On the domain $\M_-$, i.e. for $r\leq 0$,
+one has to introduce another patch of Kerr-Schild coordinates, $(\ti,x',y',z')$ say,
+such that
+\be
+    r := - \sqrt{ \frac{1}{2} \left(
+        {x'}^2 + {y'}^2 + {z'}^2 - a^2 +
+        \sqrt{({x'}^2 + {y'}^2 + {z'}^2 - a^2)^2 + 4 a^2 {z'}^2} \right)} .
+\ee
 
 
 
