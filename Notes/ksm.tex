@@ -114,8 +114,8 @@ and $\w{g}$ is the metric tensor given by Eq.~(\ref{e:ker:metric_Kerr_3p1})
 in terms of the 3+1 Kerr coordinates $(\ti, r, \th,\tph)$ introduced in
 Sec.~\ref{s:ker:3p1_Kerr_coord}.
 Let us show that $\w{g}$ is a Kerr-Schild metric, with the associated null vector
-field $\w{k}$ being nothing but the vector field generating the principal
-ingoing null geodesics $\Li^{\rm in}_{(v,\th,\tph)}$  discussed in Sec.~\ref{s:ker:principal_geod}.
+field $\w{k}$ being nothing but the vector field generating the
+ingoing principal null geodesics\index{principal!null geodesic} $\Li^{\rm in}_{(v,\th,\tph)}$  discussed in Sec.~\ref{s:ker:principal_geod}.
 Its expression in terms of the 3+1 Kerr coordinates is given by Eq.~(\ref{e:ker:k_ti_tr}):
 \be \label{e:ksm:k_Kerr}
     \encadre{ \w{k} = \wpar_\ti - \wpar_{\tilde r} }.
@@ -163,7 +163,7 @@ the form (\ref{e:ksm:g_KerrSchild}) with the flat metric
 $\w{f}$ given by Eq.~(\ref{e:ksm:f_Kerr}), the scalar field $H$ given
 by Eq.~(\ref{e:ksm:H_Kerr}) and the null vector $\w{k}$ given by
 Eq.~(\ref{e:ksm:k_Kerr}), $\w{k}$ being the tangent vector field to
-the principal ingoing null geodesics.
+the ingoing principal null geodesics.
 \end{greybox}
 In Sec.~\ref{s:ker:principal_geod},
 we have already noticed that $\w{k}$ is a geodesic vector:
@@ -172,7 +172,7 @@ $\wnab_{\w{k}}\, \w{k} = 0$ [Eq.~(\ref{e:ker:nab_k_k})], in agreement with
 
 \begin{remark}
 The Kerr metric can also be brought to the Kerr-Schild form by using the
-tangent vector field to the principal \emph{outgoing} null geodesics. Hence
+tangent vector field to the  \emph{outgoing} principal null geodesics. Hence
 the Kerr-Schild decomposition (\ref{e:ksm:g_KerrSchild}) is not unique for
 the Kerr metric.
 \end{remark}
@@ -309,47 +309,47 @@ which is obtained by combining Eqs~(\ref{e:ksm:g_KerrSchild_comp}), (\ref{e:ksm:
 and (\ref{e:ksm:k_form_Kerr_KS}).
 \begin{remark}
 It is clear on \eqref{e:ksm:g_comp_KS} that all metric components in Kerr-Schild
-coordinates are regular at the event horizon, which is defined by $r= m + \sqrt{m^2-a^2}$.
+coordinates are regular both at the the black hole event horizon
+($r= m + \sqrt{m^2 - a^2}$, cf. Sec.~\ref{s:ker:event_hor}) and the Cauchy horizon
+($r = m - \sqrt{m^2 - a^2}$, cf. Sec.~\ref{s:ker:Cauchy_hor}).
 This property, which is shared by the 3+1 Kerr coordinates,
-is in sharp contrast with the metric components in the standard
-Boyer-Lindquist coordinates (cf. Sec.~\ref{s:ker:singularities}).
+is in sharp contrast with the metric components in
+Boyer-Lindquist coordinates, which are singular at both horizons (cf. Sec.~\ref{s:ker:singularities}).
 \end{remark}
 
-
+Finally, the axisymmetry Killing vector $\w{\eta} = \wpar_\tph$
+of Kerr spacetime [Eq.~(\ref{e:ker:Killing_vec_3p1})] has the following
+expression in terms of Kerr-Schild coordinates:
+\be \label{e:ksm:eta_KS}
+    \w{\eta} = - y\, \wpar_x + x \, \wpar_y .
+\ee
+This is easily established from the chain rule and the partial
+derivative with respect to $\tph$ of expressions (\ref{e:ksm:K_to_KS}).
+We notice on Eq.~(\ref{e:ksm:eta_KS}) that $\w{\eta}$ is also a Killing vector for the flat metric $\w{f}$,
+namely the Killing vector generating spatial rotations about the $z$-axis.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.45\textwidth]{ksm_phi_cut.png}}
+\centerline{\includegraphics[width=0.45\textwidth]{ksm_phi_cut.jpg}}
 \caption[]{\label{f:ksm:phi_cut} \footnotesize
 Surface $\ti=\mathrm{const}$ and $\tph\in\{0,\pi\}$ of the $a=0.9\, m$
 Kerr spacetime
 depicted in terms of
-the Kerr-Schild coordinates $(x,y,z)$. The vertical thick green line is
+the Kerr-Schild coordinates $(x,y,z)$.
+The drawing is limited to $r\leq 3 m$.
+The vertical thick green line is
 the axis of rotation. On the right of it $\tph=0$, while on the left
 of it $\tph=\pi$.
 The red lines are curves $r=\mathrm{const}$,
-while the green ones are curves $\th=\mathrm{const}$. The thick black curve corresponds
-to the black hole event horizon and the thick blue curve to the Cauchy horizon
-(cf. Sec.~\ref{s:ker:Cauchy_hor}). The thick red segment in the plane $z=0$
+while the green ones are curves $\th=\mathrm{const}$, which can be thought of as
+the traces of the ingoing principal null geodesics.
+The thick black curve corresponds
+to the black hole event horizon and the thick blue curve to the Cauchy horizon.
+The thick red segment along the $y$-axis
 marks the intersection of the surface with the disk $r=0$.
 \textsl{[Figure produced with the notebook \ref{s:sam:Kerr_Schild}]}
 }
 \end{figure}
 
-\begin{figure}
-\centerline{\includegraphics[width=0.7\textwidth]{ksm_theta_cut.png}}
-\caption[]{\label{f:ksm:theta_cut} \footnotesize
-Surfaces $(\ti,\th)=\mathrm{const}$ of
-the $a=0.9\, m$ Kerr spacetime depicted in terms of
-the Kerr-Schild coordinates $(x,y,z)$.
-The disk-like surface in the plane $z=0$ is for $\th=\pi/2$, while
-the cone-like surface is for $\th=\pi/6$.
-The brown lines are curves $(r,\th)=\mathrm{const}$,
-while the green ones are curves $(\th,\tph)=\mathrm{const}$.
-The central pink disk is the disk $r=0$, the boundary of which is the
-curvature singularity.
-\textsl{[Figure produced with the notebook \ref{s:sam:Kerr_Schild}]}
-}
-\end{figure}
 
 
 
@@ -358,7 +358,47 @@ the surfaces of constant $r\not=0$ are
 confocal\footnote{In any plane containing the axis of symmetry $x^2+y^2=0$, the trace of
 the ellipsoids are ellipses that share the same foci, located
 at the abscissas $\pm a$ along the $z=0$ axis.}
- ellipsoids of revolution (see Fig.~\ref{f:ksm:phi_cut} for a slice at $\tph=\mathrm{const}$).
+ellipsoids of revolution.
+This is depicted in Fig.~\ref{f:ksm:phi_cut}, which represents
+a slice $\ti=\mathrm{const}$ and $\tph = 0$ or $\pi$ in terms of
+the $(x,y,z)$ coordinates. Note that this slice is not a plane but a warped surface,
+with a kink along the red segment $-a<y<a$ at $(x,z) = (0,0)$, which is the intersection
+of the slice with the double disk $r=0$ (to be discussed below).
+Peculiar $r=\mathrm{const}$ surfaces are
+the black hole event horizon ($r=r_+=m + \sqrt{m^2 - a^2}$, cf. Sec.~\ref{s:ker:event_hor}) and the Cauchy horizon
+($r = r_- = m - \sqrt{m^2 - a^2}$, cf. Sec.~\ref{s:ker:Cauchy_hor}).
+They are depicted in respectively black and blue in Fig.~\ref{f:ksm:phi_cut}.
+
+Since the ingoing principal null geodesics\index{principal!null geodesic} $\Li^{\rm in}_{(v,\th,\tph)}$
+(cf. Sec.~\ref{s:ker:principal_geod}) are curves $(\th, \tph) = \mathrm{const}$,
+their traces in the
+3-space of Fig.~\ref{f:ksm:phi_cut} are the green lines that terminates
+at the disk $r=0$ (the red segment along the $y$-axis).
+Another view of the ingoing principal null geodesics is provided by
+Fig.~\ref{f:ksm:theta_cut}, which shows two surfaces $(\ti,\th)=\mathrm{const}$
+in terms of the Kerr-Schild coordinates $(x,y,z)$, namely the surfaces
+$\th = \pi/6$ and $\th = \pi/2$. We notice that, although they are
+straight lines in terms of the Kerr-Schild coordinates, the ingoing principal null geodesics are winding around the rotation axis in the direction of the black hole rotation,
+which is indicated by $\w{\eta}$ [cf. Eq.~(\ref{e:ksm:eta_KS})].
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{ksm_theta_cut.jpg}}
+\caption[]{\label{f:ksm:theta_cut} \footnotesize
+Surfaces $(\ti,\th)=\mathrm{const}$ of
+the $a=0.9\, m$ Kerr spacetime depicted in terms of
+the Kerr-Schild coordinates $(x,y,z)$.
+The disk-like surface in the plane $z=0$ is for $\th=\pi/2$, while
+the cone-like surface is for $\th=\pi/6$.
+The pale brown lines are curves $(r,\th)=\mathrm{const}$,
+while the green ones are curves $(\th,\tph)=\mathrm{const}$. The latter
+can be thought of as the traces of the ingoing principal null geodesics.
+The central pink disk is the (double) disk $r=0$, the boundary of which is the
+curvature singularity.
+\textsl{[Figure produced with the notebook \ref{s:sam:Kerr_Schild}]}
+}
+\end{figure}
+
+
 
 \subsection{The double-disk $r=0$} \label{s:ksm:r_zero}
 
@@ -391,76 +431,75 @@ be a point of 3+1 Kerr coordinates $(\ti, 0, \th, \tph)$. The point
 $q$ of 3+1 coordinates $(\ti, 0, \pi-\th, \tph)$ belongs to
 $\mathcal{S}_{0,t}^-$; it is therefore distinct from $p$, since
 $\mathcal{S}_{0,t}^+$ and  $\mathcal{S}_{0,t}^-$ are two disjoint sets. Now,
-the transformation (\ref{e:ksm:K_to_KS_r_zero}) maps $p$ and $q$ to the same
+the transformation (\ref{e:ksm:K_to_KS_r_zero}) maps both $p$ and $q$ to the same
 value $(\ti, - a  \sin\th \sin\tph, a \sin\th\cos\ph, 0)$ of the Kerr-Schild coordinates
 $(\ti, x, y, z)$. We conclude that, for $r=0$, the Kerr-Schild coordinate system fails
 to establish a one-to-one correspondance between the manifold points and
 some open subset of $\R^4$. Actually, as it is clear from (\ref{e:ksm:K_to_KS_r_zero}),
 the two disks $\mathcal{S}_{0,t}^+$ and  $\mathcal{S}_{0,t}^-$ are mapped
-by Kerr-Schild coordinates to a single disk: the disk of radius $a$ centered
+by Kerr-Schild coordinates to a single disk, namely the disk of radius $a$ centered
 at $(x,y,z)=(0,0,0)$ in the plane $z=0$. This disk is shown in
 Fig.~\ref{f:ksm:theta_cut} (pink central disk) and in Fig.~\ref{f:ksm:rzero_disk};
 its section $\tph = 0$ or $\pi$
 is depicted as the red segment in Fig.~\ref{f:ksm:phi_cut}.
-
+The disk boundary is the circle $z=0$, $\sqrt{x^2 + y^2} = a$; it is not part
+of $\M$, being the curvature singularity of Kerr spacetime
+(cf. Sec.~\ref{s:ker:singularities}).
 
 
 
 \begin{figure}
 \centerline{\includegraphics[width=0.45\textwidth]{ksm_rzero_disk.pdf}}
 \caption[]{\label{f:ksm:rzero_disk} \footnotesize
-Disk $r=0$ of the $a=0.9\, m$ Kerr spacetime depicted in terms of
-the Kerr-Schild coordinates $(x,y)$.
+Disk (actually double disk) $r=0$ of the $a=0.9\, m$ Kerr spacetime depicted in terms of
+the Kerr-Schild coordinates $(x,y)$. The pale brown circles are the curves
+$\th=\mathrm{const}$, while the red segments are the curves $\tph=\mathrm{const}$.
+The disk boundary at
+$\sqrt{x^2 + y^2} = a$ is the curvature singularity
+of Kerr spacetime.
 \textsl{[Figure produced with the notebook \ref{s:sam:Kerr_Schild}]}
 }
 \end{figure}
 
-For $r=0$ and $a>0$, Eq.~\eqref{e:ksm:r_xyz} shows that the surface
-of constant $r$ is the disk of radius $a$ centered at the origin in the plane
-$z=0$:
-\be \label{e:ksm:disk_r0}
-    r = 0 \iff \left\{ \begin{array}{l}
-        z = 0 \\
-        x^2 + y^2 \leq a^2 .
-        \end{array} \right.
-\ee
-\begin{proof}
-Starting from Eq.~\eqref{e:ksm:r_xyz}, we have successively
-\bea
-    r = 0 & \iff & x^2 + y^2 + z^2 - a^2 =
-        - \sqrt{(x^2 + y^2 + z^2 - a^2)^2 + 4 a^2 z^2} \nonumber \\
-        & \iff & \begin{cases}
-               (x^2 + y^2 + z^2 - a^2)^2 =   (x^2 + y^2 + z^2 - a^2)^2 + 4 a^2 z^2 \\
-               x^2 + y^2 + z^2 - a^2 \leq 0
-               \end{cases} \nonumber \\
-        & \iff &  \begin{cases}
-                  4 a^2 z^2 = 0 \\
-                  x^2 + y^2 + z^2 \leq a^2,
-                 \end{cases}
-        \iff
-        \begin{cases}
-                  z = 0 \\
-                  x^2 + y^2 \leq a^2,
-                  \end{cases}  \nonumber
-\eea
-where the last equivalence assumes $a\not=0$.
-\end{proof}
-The $r=0$ disk is depicted in Figs.~\ref{f:ksm:theta_cut} and \ref{f:ksm:rzero_disk}.
-It is spanned by the coordinates $(\th,\tph)$; the lines $\th=\mathrm{const}$
-are drawn as the brown circles in Fig.~\ref{f:ksm:rzero_disk}, with $\th=0$
-corresponding to the disk center and $\th=\pi/2$ to the disk boundary at
-$\sqrt{x^2 + y^2} = a$, which is the location of the curvature singularity
-of Kerr spacetime (cf. Sec.~\ref{s:ker:singularities}).
+\begin{figure}
+\centerline{\includegraphics[height=0.35\textheight]{ksm_2_sheets.jpg}\quad
+\includegraphics[height=0.25\textheight]{ksm_2_sheets_face_on.jpg}\quad
+\includegraphics[height=0.3\textheight]{ksm_2_sheets_top.jpg}
+}
+\caption[]{\label{f:ksm:2_sheets} \footnotesize
+Immersion of the full $\ti=\mathrm{const}$ and $\tph\in\{0,\pi\}$ surface of the $a=0.9\, m$
+Kerr spacetime in the Euclidean space $\mathbb{R}^3$, using the Kerr-Schild coordinates
+$(x,y,z)$ for the $r\geq 0$ part (shown in grey) and the Kerr-Schild coordinates
+$(x',y',z')$ for the $r\leq 0$ part (shown in pink).
+\textsl{[Figure produced with the notebook \ref{s:sam:Kerr_Schild}]}
+}
+\end{figure}
+
+
+\subsection{Kerr-Schild coordinates on the $r\leq 0$ part}
 
 On the domain $\M_-$, i.e. for $r\leq 0$,
-one has to introduce another patch of Kerr-Schild coordinates, $(\ti,x',y',z')$ say,
-such that
+one can introduce another patch of Kerr-Schild coordinates, $(\ti,x',y',z')$ say,
+by formulas similar to (\ref{e:ksm:K_to_KS}). A difference is when expressing
+the square root for $r$ as in Eq.~(\ref{e:ksm:r_xyz}), one has to take the
+minus sign, so that
 \be
     r := - \sqrt{ \frac{1}{2} \left(
         {x'}^2 + {y'}^2 + {z'}^2 - a^2 +
         \sqrt{({x'}^2 + {y'}^2 + {z'}^2 - a^2)^2 + 4 a^2 {z'}^2} \right)} .
 \ee
-
+The two Kerr-Schild coordinate domains $\M_+$ and $\M_-$ are connected through
+the $r=0$ hypersurface. On a $\ti=\mathrm{const}$ slice, this means being
+connected through the double disk $\mathcal{S}_{0,t}$. Such a connection
+is depicted in Fig.~\ref{f:ksm:2_sheets}, which represents the (non-isometric)
+immersion in $\mathbb{R}^3$ of the surface $\ti=\mathrm{const}$ and $\tph\in\{0,\pi\}$,
+with $r$ ranging from $-\infty$ to $+\infty$ (actually from $-3m$ to $3m$
+on the figure. The immersion is not an embedding\footnote{See Sec.~\ref{s:bas:embed}
+for the definitions of \emph{immersion} and \emph{embedding}.} because the
+sheet $r\geq 0$ (in grey) intersects the sheet $r\leq 0$ (in pink) along the
+rotation axis, while the only intersection of $\M_+$ and $\M_-$ is along
+the double disk $\mathcal{S}_{0,t}$ (reduced to the segment $-a < y< a$ at
+$(x,z) = (0,0)$ in Fig.~\ref{f:ksm:2_sheets}.
 
 
 \subsection{Link with Boyer-Lindquist coordinates}
