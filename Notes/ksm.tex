@@ -342,8 +342,7 @@ of it $\tph=\pi$.
 The red lines are curves $r=\mathrm{const}$,
 while the green ones are curves $\th=\mathrm{const}$, which can be thought of as
 the traces of the ingoing principal null geodesics.
-The thick black curve corresponds
-to the black hole event horizon and the thick blue curve to the Cauchy horizon.
+The thick black curve marks the black hole event horizon and the thick blue curve the Cauchy horizon.
 The thick red segment along the $y$-axis
 marks the intersection of the surface with the disk $r=0$.
 \textsl{[Figure produced with the notebook \ref{s:sam:Kerr_Schild}]}
@@ -434,7 +433,7 @@ $\mathcal{S}_{0,t}^+$ and  $\mathcal{S}_{0,t}^-$ are two disjoint sets. Now,
 the transformation (\ref{e:ksm:K_to_KS_r_zero}) maps both $p$ and $q$ to the same
 value $(\ti, - a  \sin\th \sin\tph, a \sin\th\cos\ph, 0)$ of the Kerr-Schild coordinates
 $(\ti, x, y, z)$. We conclude that, for $r=0$, the Kerr-Schild coordinate system fails
-to establish a one-to-one correspondance between the manifold points and
+to establish a one-to-one correspondence between the manifold points and
 some open subset of $\R^4$. Actually, as it is clear from (\ref{e:ksm:K_to_KS_r_zero}),
 the two disks $\mathcal{S}_{0,t}^+$ and  $\mathcal{S}_{0,t}^-$ are mapped
 by Kerr-Schild coordinates to a single disk, namely the disk of radius $a$ centered
@@ -462,16 +461,27 @@ of Kerr spacetime.
 \end{figure}
 
 \begin{figure}
-\centerline{\includegraphics[height=0.35\textheight]{ksm_2_sheets.jpg}\quad
-\includegraphics[height=0.25\textheight]{ksm_2_sheets_face_on.jpg}\quad
+\begin{minipage}[c]{0.33\textwidth}
+\includegraphics[height=0.35\textheight]{ksm_2_sheets.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.33\textwidth}
+\includegraphics[height=0.25\textheight]{ksm_2_sheets_face_on.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.2\textwidth}
 \includegraphics[height=0.3\textheight]{ksm_2_sheets_top.jpg}
-}
+\end{minipage}
 \caption[]{\label{f:ksm:2_sheets} \footnotesize
-Immersion of the full $\ti=\mathrm{const}$ and $\tph\in\{0,\pi\}$ surface of the $a=0.9\, m$
+Three views of the
+immersion of the full $\ti=\mathrm{const}$ and $\tph\in\{0,\pi\}$ surface of the $a=0.9\, m$
 Kerr spacetime in the Euclidean space $\mathbb{R}^3$, using the Kerr-Schild coordinates
-$(x,y,z)$ for the $r\geq 0$ part (shown in grey) and the Kerr-Schild coordinates
-$(x',y',z')$ for the $r\leq 0$ part (shown in pink).
-\textsl{[Figure produced with the notebook \ref{s:sam:Kerr_Schild}]}
+$(x,y,z)$ for the $r\geq 0$ part (drawn in grey) and the Kerr-Schild coordinates
+$(x',y',z')$ for the $r\leq 0$ part (drawn in pink). The red lines are curves
+$(r,\tph)=\mathrm{const}$, while the green straight lines are ingoing principal null
+geodesics, which obey $(\th,\tph) = \mathrm{const}$. The thick (resp. blue) black curve marks the black hole event horizon (resp. Cauchy horizon).
+\textsl{[Figure produced with the notebook \ref{s:sam:Kerr_Schild}; see this notebook
+for an interactive 3D view]}
 }
 \end{figure}
 
@@ -494,12 +504,18 @@ connected through the double disk $\mathcal{S}_{0,t}$. Such a connection
 is depicted in Fig.~\ref{f:ksm:2_sheets}, which represents the (non-isometric)
 immersion in $\mathbb{R}^3$ of the surface $\ti=\mathrm{const}$ and $\tph\in\{0,\pi\}$,
 with $r$ ranging from $-\infty$ to $+\infty$ (actually from $-3m$ to $3m$
-on the figure. The immersion is not an embedding\footnote{See Sec.~\ref{s:bas:embed}
+on the figure). The immersion is not an embedding\footnote{See Sec.~\ref{s:bas:embed}
 for the definitions of \emph{immersion} and \emph{embedding}.} because the
 sheet $r\geq 0$ (in grey) intersects the sheet $r\leq 0$ (in pink) along the
 rotation axis, while the only intersection of $\M_+$ and $\M_-$ is along
 the double disk $\mathcal{S}_{0,t}$ (reduced to the segment $-a < y< a$ at
-$(x,z) = (0,0)$ in Fig.~\ref{f:ksm:2_sheets}.
+$(x,z) = (0,0)$ in Fig.~\ref{f:ksm:2_sheets}). In other words, the intersection
+of the grey and pink sheets along the $z$-axis in Fig.~\ref{f:ksm:2_sheets}
+is spurious (does not correspond to an intersection in the physical spacetime),
+while the intersection along the $y$-axis is physical.
+From the central and right views in Fig.~\ref{f:ksm:2_sheets}, one sees clearly
+that the ingoing principal null geodesics go smoothly from the $r > 0$ region
+to the $r < 0$ region through $\mathcal{S}_{0,t}$.
 
 
 \subsection{Link with Boyer-Lindquist coordinates}
@@ -510,13 +526,13 @@ is obtained by combining Eqs.~(\ref{e:ksm:K_to_KS}) with Eqs.~(\ref{e:ker:Kerr_3
 
 
 \begin{hist}
-Kerr-Schild coordinates have been introduced by Roy Kerr\index{Kerr, R.} in his famous 1963 paper
+Kerr-Schild coordinates on Kerr spacetime have been introduced by Roy Kerr\index{Kerr, R.} in the famous 1963 paper
 \cite{Kerr63} announcing the discovery of the
-metric that bares his name; they have been discussed further by Kerr and Alfred
-Schild\index{Schild, A.}
-in 1965 \cite{KerrS65}, as well as by
-Robert Boyer\index{Boyer, R.H.} and Richard Lindquist\index{Lindquist, R.W.}
+Kerr metric. They have been discussed further by Robert Boyer\index{Boyer, R.H.} and Richard Lindquist\index{Lindquist, R.W.}
 in 1967 \cite{BoyerL67}, Brandon Carter\index{Carter, B.} in 1968
 \cite{Carte68}
 and Stephen Hawking\index{Hawking, S.W.} and George Ellis\index{Ellis, G.F.R} in 1973 \cite{HawkiE73}.
+Generic Kerr-Schild metrics have been introduced and studied by Roy Kerr and Alfred
+Schild\index{Schild, A.}
+in 1965 \cite{KerrS65}.
 \end{hist}
