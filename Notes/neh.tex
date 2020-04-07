@@ -724,7 +724,7 @@ Let $\kappa$ be the non-affinity coefficient
 of the null normal $\wl$ coinciding with the Killing vector $\w{\xi}$
 on a Killing horizon $\Hor$. According to the definition
 (\ref{e:def:wl_geod_kappa}), we have
-\be
+\be \label{e:neh:xi_nab_xi_kappa}
     \wnab_{\w{\xi}}\, \w{\xi} \equalH \kappa \, \w{\xi} .
 \ee
 The metric dual of this relation is
@@ -745,45 +745,72 @@ replace the covariant derivative by the differential:
     \encadre{ \dd (\w{\xi}\cdot\w{\xi}) \equalH - 2 \kappa \, \uu{\xi} } .
 \ee
 
-Another interesting relation is obtained from the Frobenius relation
-(\ref{e:def:ext_der_wl_comp}):
+Another interesting relation is obtained from the Frobenius theorem\index{Frobenius!theorem}
+applied to $\w{\xi}$. Indeed, since on $\Hor$, $\w{\xi}$ is normal to a hypersurface
+($\Hor$), the Frobenius theorem in its dual formulation
+(see e.g.
+Theorem B.3.2 in Wald's textbook \cite{Wald84} or Theorem C.2 in
+Straumann's textbook \cite{Strau13}) states that there exists a 1-form
+$\w{a}$ such that
+\be
+    \dd \uu{\xi} \equalH \w{a} \wedge \uu{\xi} ,
+\ee
+or equivalently
 \be \label{e:neh:Frobenius_xi}
   \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha \equalH
-  \nabla_\alpha \rho \, \xi_\beta -  \nabla_\beta \rho \, \xi_\alpha  ,
+  a_\alpha \, \xi_\beta -  a_\beta  \, \xi_\alpha  .
 \ee
-where $\rho$ is the scalar field defined on $\Hor$ by the hypersurface-orthogonality
-condition (\ref{e:def:wl_rho_u}):
+
+\begin{remark}
+In the case of the vector $\wl$, which is normal to $\Hor$ by definition,
+the Frobenius identity is
+Eq.~(\ref{e:def:ext_der_wl_comp}): $\nabla_\alpha \el_\beta - \nabla_\beta \el_\alpha =
+  \nabla_\alpha \rho \, \el_\beta -  \nabla_\beta \rho \, \el_\alpha$.
+Since $\wl \equalH \w{\xi}$, we may write
 \[
-    \uu{\xi} \equalH - \mathrm{e}^\rho \, \dd u ,
+  \nabla_\alpha \el_\beta - \nabla_\beta \el_\alpha \equalH
+  \nabla_\alpha \rho \, \xi_\beta -  \nabla_\beta \rho \, \xi_\alpha .
 \]
-$u$ being a scalar field such that the equation of $\Hor$ is $u=0$.
-Actually, $\rho$ is related to $\kappa$ by Eq.~(\ref{e:def:def_kappa}):
-\[
-    \kappa = \xi^\mu \nabla_\mu \rho = \wnab_{\w{\xi}}\,  \rho .
-\]
-Thanks to Killing equation (\ref{e:neh:Killing_equation}), we may reshape
+But in general,  $\nabla_\alpha \el_\beta \not= \nabla_\alpha \xi_\beta$ on $\Hor$,
+since $\wl$ and $\w{\xi}$ do not coincide outside $\Hor$. Accordingly, one
+cannot identify the left-hand side of the above equation with the left-hand side
+of Eq.~(\ref{e:neh:Frobenius_xi}), so that the 1-form $\w{a}$ is \emph{not} $\wnab\rho$.
+\end{remark}
+
+Thanks to the Killing equation (\ref{e:neh:Killing_equation}), we may reshape
 (\ref{e:neh:Frobenius_xi}) to
-\[
+\be \label{e:neh:Frobenius_xi_Killing}
     2 \nabla_\alpha \xi_\beta \equalH
-  \nabla_\alpha \rho \, \xi_\beta -  \nabla_\beta \rho \, \xi_\alpha  .
+  a_\alpha \, \xi_\beta -  a_\beta \, \xi_\alpha  .
+\ee
+Contracting this relation with $\w{\xi}$, we get
+\[
+   2 \xi^\mu \nabla_\mu \xi_\alpha \equalH a_\mu \xi^\mu  \, \xi_\alpha
+    -  \underbrace{\xi_\mu \xi^\mu}_{\equalH 0} \, a_\alpha .
 \]
-Taking the square leads to
+In view of Eq.~(\ref{e:neh:xi_nab_xi_kappa}), the left-hand side of this
+equation is $2\kappa \xi_\alpha$. Hence we obtain
+\be \label{e:neh:a_xi_2_kappa}
+    a_\mu \xi^\mu \equalH 2 \kappa .
+\ee
+Besides, taking the square of (\ref{e:neh:Frobenius_xi_Killing}) leads to
 \bea
-    2 \nabla_\mu \xi_\nu \, \nabla^\mu \xi^\nu & \equalH &
-        \left( \nabla_\mu \rho \, \xi_\nu -  \nabla_\nu \rho \, \xi_\mu \right)
-       \left( \nabla^\mu \rho \, \xi^\nu -  \nabla^\nu \rho \, \xi^\mu \right)
+    4 \nabla_\mu \xi_\nu \, \nabla^\mu \xi^\nu & \equalH &
+        \left( a_\mu \xi_\nu -  a_\nu \xi_\mu \right)
+       \left( a^\mu \xi^\nu - a^\nu \xi^\mu \right)
        \nonumber \\
-       & \equalH & \nabla_\mu \rho \nabla^\mu \rho
+       & \equalH & a_\mu a^\mu
         \underbrace{ \xi_\nu \xi^\nu}_{\equalH 0}
-        - \underbrace{\xi^\mu \nabla_\mu \rho}_{\kappa}
-         \underbrace{\xi^\nu \nabla_\nu \rho}_{\kappa}
-        - \underbrace{\xi^\nu \nabla_\nu \rho}_{\kappa}
-            \underbrace{\xi^\mu \nabla_\mu \rho}_{\kappa}
-        + \nabla_\nu \rho \nabla^\nu \rho
+        - \underbrace{a_\mu \xi^\mu}_{2\kappa}
+         \underbrace{a_\nu \xi^\nu}_{2\kappa}
+        - \underbrace{a_\nu \xi^\nu}_{2\kappa}
+            \underbrace{a_\mu \xi^\mu}_{2\kappa}
+        + a_\nu  a^\nu
         \underbrace{ \xi_\mu \xi^\mu}_{\equalH 0}
          \nonumber \\
-         & \equalH & - 2 \kappa^2 . \nonumber
+         & \equalH & - 8 \kappa^2 , \nonumber
 \eea
+where we have used Eq.~(\ref{e:neh:a_xi_2_kappa}).
 Hence
 \be \label{e:neh:kappa2}
     \encadre{\kappa^2 \equalH - \frac{1}{2}
@@ -1173,9 +1200,9 @@ can be expressed thanks to the Frobenius identity (\ref{e:neh:Frobenius_xi}):
 \[
     \omega_{\alpha\beta\gamma} \equalH
     \frac{1}{6} \left[
-        \xi_\alpha \left( \nabla_\beta \rho\,  \xi_\gamma - \nabla_\gamma \rho \, \xi_\beta \right)
-        + \xi_\beta \left( \nabla_\gamma  \rho \, \xi_\alpha - \nabla_\alpha  \rho \, \xi_\gamma \right)
-        + \xi_\gamma \left( \nabla_\alpha  \rho \,  \xi_\beta - \nabla_\beta  \rho \, \xi_\alpha \right)
+        \xi_\alpha \left( a_\beta \xi_\gamma - a_\gamma \xi_\beta \right)
+        + \xi_\beta \left( a_\gamma  \xi_\alpha - a_\alpha  \xi_\gamma \right)
+        + \xi_\gamma \left( a_\alpha \xi_\beta - a_\beta \xi_\alpha \right)
         \right] .
 \]
 We notice that all terms in the right-hand side canceal two by two, yielding
