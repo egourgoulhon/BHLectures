@@ -6,6 +6,173 @@
 
 \section{Introduction}
 
+\section{Equations of geodesic motion}
+
+In all this chapter, we are concerned by the motion of a particle
+$\mathscr{P}$ in Kerr spacetime $(\M,\w{g})$, assuming that $\mathscr{P}$
+feels only gravity, as described by $\w{g}$ (freely falling particle).
+The worldline $\Li$ of $\mathscr{P}$
+is then necessarily a geodesic\footnote{The definition and basic properties of geodesics
+are recalled in Appendix~\ref{s:geo}; see also Sec.~\ref{s:fra:geod_motion}.} of
+$(\M,\w{g})$. It is a timelike geodesic if $\mathscr{P}$ is a massive particle
+and a null geodesic if $\mathscr{P}$ is massless (e.g. a photon).
+
+The starting point for the study of geodesics in Kerr spacetime is pretty similar
+to that of geodesics in Schwarzschild spacetime performed in Chap.~\ref{s:ges},
+since both spacetimes are stationary (outside the ergosphere) and axisymmetric,
+which gives birth to two first integrals of motion, $E$ and $L$ (Sec.~\ref{s:gek:int_motion_sym}).
+A major difference is that in the Kerr case, generic geodesics are not
+planar, i.e. are not confined
+to a hypersurface, contrary to what happens in Schwarzschild spacetime, where
+thanks to the spherical symmetry of the latter, a suitable choice of
+coordinates $(t,r,\th,\ph)$ makes a given geodesic confined to the
+hyperplane $\th=\pi/2$. We therefore lose the first integral $p^\th=0$
+[Eq.~(\ref{e:ges:pth_zero})]. Fortunaly there exists another
+first integral of motion, the Carter constant, due to a remarkable property
+of Kerr spacetime: the existence of a non-trivial Killing tensor (Sec.~\ref{s:gek:Carter_const}).
+With the particle mass $\mu$, this makes a total of four integral of motions,
+which renders the problem integrable, reducing it to a set of four
+first-order differential equations (Sec.~\ref{s:gek:first_order_system}).
+
+
+\subsection{Integrals of motion from symmetries} \label{s:gek:int_motion_sym}
+
+As for Schwarzschild spacetime (cf. Sec.~\ref{s:ges:fiom}), we have the following
+property.
+\begin{greybox}
+The Killing vectors $\w{\xi}$ and $\w{\eta}$ of Kerr spacetime,
+associated respectively with
+stationarity and axisymmetry [cf. Eq.~(\ref{e:ker:def_xi_eta})],
+give birth to two conserved quantities
+along the geodesic $\Li$:
+\begin{subequations}
+\label{e:gek:def_E_L}
+\begin{align}
+& \encadre{E := - \w{\xi}\cdot \w{p} = - \w{g}(\w{\xi},\w{p}) } \label{e:gek:def_E} \\
+& \encadre{L := \w{\eta}\cdot \w{p} = \w{g}(\w{\eta},\w{p}) } , \label{e:gek:def_L}
+\end{align}
+\end{subequations}
+where $\w{p}$ is the 4-momentum of particle $\mathscr{P}$ (cf. Sec.~\ref{s:fra:worldlines}).
+For the same reasons as in Sec.~\ref{s:ges:fiom}, $E$ is called
+the \defin{conserved energy}\index{conserved!energy}\index{energy!conserved --}
+or \defin{energy at infinity}\index{energy!at infinity} of $\mathscr{P}$,
+while $L$ is called $\mathscr{P}$'s \defin{conserved angular momentum}\index{conserved!angular momentum}\index{angular momentum!conserved --}
+or \defin{angular momentum at infinity}\index{angular momentum!at infinity}
+of $\mathscr{P}$.
+\end{greybox}
+\begin{remark}
+Asymptotically, the scalar $L$ is only the
+component along the rotation axis of $\mathscr{P}$'s angular momentum vector $\w{L}$
+as measured by an inertial observer at rest with respect to the black hole.
+For this reason, it is sometimes denoted by $L_z$, instead of merely $L$.
+\end{remark}
+
+In coordinates $(t,r,\th,\ph)$ adapted to the spacetime symmetries,
+i.e. coordinates such that $\w{\xi} = \wpar_t$ and $\w{\eta}=\wpar_\ph$,
+for instance Boyer-Lindquist coordinates (Sec.~\ref{s:ker:expr_BL}),
+Kerr coordinates (Sec.~\ref{s:ker:Kerr_coord}) or 3+1 Kerr coordinates
+(Sec.~\ref{s:ker:3p1_Kerr_coord}), one can rewrite
+(\ref{e:gek:def_E_L})
+in terms of the components $p_t = g_{t\mu} \, p^\mu$ and $p_\ph = g_{\ph\mu} \, p^\mu$
+of the 1-form $\uu{p}$ associated to $\w{p}$ by metric duality:
+\begin{subequations}
+\begin{align}
+& E = - p_t \\
+& L = p_\ph
+\end{align}
+\end{subequations}
+Indeed, in such a coordinate system, $\xi^\mu =  \delta^\mu_{\ \, t}$
+and $\eta^\mu = \delta^\mu_{\ \, \ph}$, so that $E = -g_{\mu\nu} \, \xi^\mu p^\nu = -g_{t\nu} \, p^\nu = -p_t$
+and $L = g_{\mu\nu} \, \eta^\mu p^\nu = g_{\ph\nu} \, p^\nu = p_\ph$.
+
+In what follows, we are going to use Boyer-Lindquist coordinates
+$(x^\alpha)=(t,r,\th,\ph)$
+as introduced in Sec.~\ref{s:ker:expr_BL}.
+Given the components (\ref{e:ker:metric_BL}) of the metric tensor $\w{g}$
+in these coordinates, evaluating $E$ and $L$
+via $E = - g_{t\mu} \, p^\mu$ and $L = g_{\ph\mu} \, p^\mu$ yields
+\be
+    E = \left( 1 - \frac{2 m r}{\rho^2} \right)\,  p^t
+        + \frac{2 a m r \sin^2\th}{\rho^2}\,  p^\ph  .
+\ee
+\be
+    L = - \frac{2 a m r \sin^2\th}{\rho^2} \, p^t
+        + \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right)
+    \sin^2\th \,  p^\ph ,
+\ee
+where $\rho^2 := r^2 + a^2 \cos^2\th$ [Eq.~(\ref{e:ker:def_rho2})].
+
+Let us recall that the components $(p^\alpha)$ of the 4-momentum are
+related to the equation $x^\alpha = x^\alpha(\lambda)$ of the geodesic $\Li$
+in terms of the affine parameter $\lambda$ by $p^\alpha = \D x^\alpha / \D\lambda$
+[cf. Eq.~(\ref{e:fra:p_dxdl})], i.e.
+\be
+    p^t = \derd{t}{\lambda},\quad
+    p^r = \derd{r}{\lambda},\quad
+    p^\th = \derd{\th}{\lambda},\quad
+    p^\ph = \derd{\ph}{\lambda} .
+\ee
+In other words, $\lambda$ is the affine parameter\footnote{See Sec.~\ref{s:geo:def} for the definition
+of an affine parameter along a geodesic.} along $\Li$ such that the tangent vector
+to $\Li$ associated with $\lambda$ is $\w{p}$.
+
+\subsection{Mass as an integral of motion}
+
+The mass $\mu$ of particle $\mathscr{P}$ is given by the scalar square of
+the 4-momentum vector $\w{p}$ via Eq.~(\ref{e:fra:def_mass}):
+\be \label{e:gek:mu_gpp}
+    \mu^2 = - \w{g}(\w{p}, \w{p}) .
+\ee
+The fact that $\Li$ is a geodesic implies that $\mu$ is a constant along
+$\Li$ (cf. Eq.~(\ref{e:geo:vv_const}) in Appendix~\ref{s:geo}). It therefore
+provides a third integral of motion, after $E$ and $L$.
+
+Let us express (\ref{e:gek:mu_gpp}) in terms of the inverse metric
+in order to let appear $p_t = -E$ and $p_\ph = L$:
+\[
+    \mu^2 = - g^{\mu\nu} p_\mu p_\nu .
+\]
+
+Given the components (\ref{e:ker:inv_met_BL}) of the inverse metric
+in Boyer-Lindquist coordinates, we get
+\bea
+    \mu^2 & = & \frac{1}{\Delta}
+    \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right) E^2
+    -\frac{4 a m r}{\rho^2 \Delta} E L
+    - \frac{1}{\Delta}\left(1 - \frac{2 m r}{\rho^2} \right) \frac{L^2}{\sin^2\th}
+    \nonumber \\
+   &  & - \frac{\rho^2}{\Delta} \left( p^r \right) ^2
+    - \rho^2 \left( p^\theta \right) ^2 ,
+\eea
+where $\Delta := r^2 - 2 m r + a^2$ [Eq.~(\ref{e:ker:def_Delta})].
+Note that we have expressed $p_r$ and $p_\th$ in terms of $p^r$ and $p^\th$
+thanks to the relations $p_r = g_{r\mu} p^\mu$ and $p_\th = g_{\th\mu} p^\mu$,
+which are very simple for the Boyer-Lindquist components (\ref{e:ker:metric_BL})
+of $\w{g}$:
+\be
+    p_r = \frac{\rho^2}{\Delta} \, p^r
+    \qquad\mbox{and}\qquad
+    p_\th = \rho^2 \, p^\th .
+\ee
+
+\subsection{The fourth integral of motion: Carter constant} \label{s:gek:Carter_const}
+
+It turns out that the Kerr spacetime is endowed with a non-trivial
+Killing tensor of valence 2: the
+\defin{Walker-Penrose Killing tensor}\index{Killing!tensor!Walker-Penrose --}\index{Walker-Penrose Killing tensor} $\w{K}$, which is the symmetric tensor of type
+$(0,2)$ defined by
+\be
+    \encadre{ \w{K} := (r^2 + a^2) \left( \uu{k} \otimes \uu{\el} = \uu{\el} \otimes \uu{k} \right) + r^2 \w{g} } ,
+\ee
+where $\uu{\el}$ and $\uu{k}$ are the 1-forms associated by metric duality
+to the null vector fields $\w{k}$ and $\wl$ tangent to the principal null
+geodesics introduced in Sec.~\ref{s:ker:principal_geod}.
+
+\subsection{First order equations of motion} \label{s:gek:first_order_system}
+
+
+\section{Motion in the equatorial plane}
+
 Circular orbits in Kerr spacetime: \cite{BardePT72} (see also \cite{Barde73})
 
 More general orbits: \cite{Perez-Giz11}, \cite{GrossLP12}
