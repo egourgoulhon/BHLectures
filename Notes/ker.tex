@@ -258,12 +258,12 @@ Figs.~\ref{f:ksm:phi_cut} - \ref{f:ksm:2_sheets} of Appendix~\ref{s:ksm}.
 
 The determinant of the metric $\w{g}$ with respect to Boyer-Lindquist coordinates
 is deduced from (\ref{e:ker:metric_BL}); it takes a
-relatively simple form (cf. Sec.~\ref{s:sam:Kerr_solution} for the computation):
+relatively simple form (see the notebook~\ref{s:sam:Kerr_solution} for the computation):
 \be
     \det (g_{\alpha\beta}) = - \rho^4 \sin^2\th .
 \ee
 
-The inverse metric is (cf. Sec.~\ref{s:sam:Kerr_solution} for the computation)
+The inverse metric is (see the notebook~\ref{s:sam:Kerr_solution} for the computation)
 \be \label{e:ker:inv_met_BL}
     g^{\alpha\beta} = \left(
     \begin{array}{cccc}
@@ -431,7 +431,7 @@ between $\M_{\rm I}$ and $\M_{\rm II}$.
 The divergence when $\rho^2\rightarrow 0$ corresponds to a
 \emph{curvature singularity}\index{curvature!singularity}\index{singularity!curvature --}.
 Indeed the Kretschmann scalar of Kerr metric is (cf.
-Eq.~(\ref{e:sch:def_Kretschmann}) and Sec.~\ref{s:sam:Kerr_solution} for the computation)
+Eq.~(\ref{e:sch:def_Kretschmann}) and the notebook~\ref{s:sam:Kerr_solution} for the computation)
 \be
     K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma}
      = 48 \frac{m^2}{\rho^{12}} \left( r^6 - 15 r^4 a^2\cos^2\th + 15 r^2 a^4 \cos^4\th - a^6\cos^6\th \right) .
@@ -537,7 +537,7 @@ to be a well defined metric on $\M$, it does not suffice that the components
 $\hat{g}_{\alpha\beta}$ do not diverge at $\Hor$ and $\Hor_{\rm in}$: one shall
 check as well that the bilinear form $\w{g}$ is non-degenerate there.
 This is easily proven by considering the determinant of the metric components,
-which turns out to have a simple form (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord}):
+which turns out to have a simple form (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}):
 \be
     \det (\hat{g}_{\alpha\beta}) = -\rho^4 \sin^2\th .
 \ee
@@ -720,12 +720,12 @@ the metric components (\ref{e:ker:metric_Kerr_3p1}) do not depend on $\ti$
 nor on $\tph$.
 
 The determinant of the metric components (\ref{e:ker:metric_Kerr_3p1}) takes
-a very simple form (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord} for the computation):
+a very simple form (see the notebook~\ref{s:sam:Kerr_Kerr_coord} for the computation):
 \be \label{e:ker:det_g_3p1}
     \det\left( \tilde{g}_{\alpha\beta} \right) = - \rho^4\sin^2\th .
 \ee
 The inverse metric takes also a rather simple form in terms of the 3+1
-Kerr coordinates (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord} for the computation):
+Kerr coordinates (see the notebook~\ref{s:sam:Kerr_Kerr_coord} for the computation):
 \be \label{e:ker:inv_met_3p1}
     \tilde{g}^{\alpha\beta} = \left(
     \begin{array}{cccc}
@@ -993,7 +993,7 @@ In other words, we have
 It is clear that this vector field is regular everywhere in $\M$.
 Given the metric components (\ref{e:ker:metric_Kerr_3p1}), it is easy
 to check that $\w{g}(\wl,\wl)=0$, i.e. that $\wl$ is a null vector.
-Moreover, an explicit computation (cf. Sec.~\ref{s:sam:Kerr_Kerr_coord}) reveals that
+Moreover, an explicit computation (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}) reveals that
 \be \label{e:ker:pregeod_ell}
     \wnab_{\wl}\, \wl = \kappa_{\wl} \, \wl ,
 \ee
@@ -1002,7 +1002,7 @@ with
     \kappa_{\wl} := \frac{m(r^2-a^2)}{(r^2+a^2)^2} .
 \ee
 This confirms that the null curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ are
-geodesics (cf. Sec.~\ref{s:def:geod_gener}).
+geodesics (cf. Sec.~\ref{s:def:geod_gener} and Sec.~\ref{s:geo:gener_param}).
 
 The components of $\wl$ with respect to the Boyer-Lindquist coordinate frame
 are obtained by combining Eqs.~(\ref{e:ker:def_ell_outgoing}) and (\ref{e:ker:frame_Kerr3p1_BL}):
@@ -1033,7 +1033,7 @@ Using either the 3+1 Kerr components (\ref{e:ker:k_ti_tr}) and
 (\ref{e:ker:def_ell_outgoing})
 or the Boyer-Lindquist components (\ref{e:ker:k_BL}) and (\ref{e:ker:ell_BL}),
 one can easily compute the scalar product of $\w{k}$ and $\wl$:
-\be
+\be \label{e:ker:k_scal_ell}
     \w{g}(\w{k},\wl) = - \frac{\rho^2}{r^2 + a^2} .
 \ee
 In particular, we check that $\w{g}(\w{k},\wl) < 0$ everywhere (note that $\rho^2= 0$
@@ -1043,6 +1043,26 @@ the property stated in Sec.~\ref{s:fra:time_orientation}: the scalar product of
 two future-directed null vectors that are not collinear is necessarily negative.
 \end{remark}
 
+\begin{remark}
+Instead of $\wl$, another natural choise for the tangent vector to the outgoing
+principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ would have been the tangent vector $\w{\hat{\el}}$
+such that
+\be
+    \w{g}(\w{k}, \w{\hat{\el}}) = - 1.
+\ee
+In view of (\ref{e:ker:k_scal_ell}), the two tangent vectors are related by
+\be
+    \w{\hat{\el}} = \frac{r^2 + a^2}{\rho^2} \wl .
+\ee
+As for $\wl$, the tangent vector $\w{\hat{\el}}$ does not correspond to
+an affine parameter of $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, i.e. its
+non-affinity coefficient $\kappa_{\w{\hat{\el}}}$ is nonzero. While
+$\w{\hat{\el}}$ is used in many studies, here we prefer $\wl$ because it
+coincides with the Killing vector $\w{\xi} + \Omega_H \w{\eta}$
+on the event horizon [Eq.~(\ref{e:ker:l_eqH_chi}) below]. In particular, its
+non-affinity coefficient $\kappa_{\w{\el}}$ gives there the so-called
+black hole's surface gravity (Sec.~\ref{s:ker:surf_grav} below).
+\end{remark}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Event horizon} \label{s:ker:event_hor_gen}

@@ -8,6 +8,8 @@
 
 \section{Equations of geodesic motion}
 
+\subsection{Introduction}
+
 In all this chapter, we are concerned by the motion of a particle
 $\mathscr{P}$ in Kerr spacetime $(\M,\w{g})$, assuming that $\mathscr{P}$
 feels only gravity, as described by $\w{g}$ (freely falling particle).
@@ -17,10 +19,37 @@ are recalled in Appendix~\ref{s:geo}; see also Sec.~\ref{s:fra:geod_motion}.} of
 $(\M,\w{g})$. It is a timelike geodesic if $\mathscr{P}$ is a massive particle
 and a null geodesic if $\mathscr{P}$ is massless (e.g. a photon).
 
-The starting point for the study of geodesics in Kerr spacetime is pretty similar
-to that of geodesics in Schwarzschild spacetime performed in Chap.~\ref{s:ges},
-since both spacetimes are stationary (outside the ergosphere) and axisymmetric,
-which gives birth to two first integrals of motion, $E$ and $L$ (Sec.~\ref{s:gek:int_motion_sym}).
+In a given coordinate system $(x^\alpha)$, the geodesic $\Li$ is described
+by a system of the form\footnote{In Appendices~\ref{s:bas} and \ref{s:geo},
+we use a different notation for the function $X^\alpha(\lambda)$ defining
+$\Li$ and the coordinate $x^\alpha$ (cf. Secs.~\ref{s:bas:vectors} and
+\ref{s:geo:geodesic_eq}). Following standard usage in the physics literature,
+we shall not do this here.}
+$x^\alpha = x^\alpha(\lambda)$, where $\lambda$ is an
+affine parameter\footnote{See Sec.~\ref{s:geo:def} for the definition
+of an affine parameter along a geodesic.} along $\Li$. We choose $\lambda$ to be the affine parameter
+associated with $\mathscr{P}$'s 4-momentum $\w{p}$ [cf. Eq.~(\ref{e:fra:p_dxdl})]. We have
+then $\D x^\alpha / \D\lambda = p^\alpha$.
+The curve $\Li$ is a geodesic iff the functions $x^\alpha(\lambda)$ obey
+the geodesic equation [Eq.~(\ref{e:geo:eq_geod}) in Appendix~\ref{s:geo}]:
+\be \label{e:gek:eq_geod}
+    \frac{\D^2 x^\alpha}{\D\lambda^2} + \Gamma^\alpha_{\ \, \mu \nu}
+    \frac{\D x^\mu}{\D\lambda} \frac{\D x^\nu}{\D\lambda} = 0 ,
+\ee
+where the $\Gamma^\alpha_{\ \, \mu \nu}$'s are the Christoffel symbols\index{Christoffel symbols} of the metric $\w{g}$
+with respect to the coordinates $(x^\alpha)$, as given by Eq.~(\ref{e:bas:Christoffel}).
+Equation~(\ref{e:gek:eq_geod}) is actually a system of four coupled second-order
+differential equations, that are non-linear. We are going to see that in
+order to compute the geodesics of Kerr spacetime, it is not necessary to
+solve this system, since, as in the Schwarzschild case studied in Chap.~\ref{s:ges}, we have
+enough first integrals of Eq.~(\ref{e:gek:eq_geod}) to reduce
+the problem to four first-order equations
+of the type $\D x^\alpha/\D\lambda = F^\alpha(x^0, x^1, x^2, x^3)$.
+
+Two integrals of motion are similar to those in the Schwarzschild case,
+since both Kerr and Schwarzschild spacetimes are stationary (outside the ergosphere) and axisymmetric,
+which gives birth to the conserved energy $E$ and conserver angular momentum
+$L$ (Sec.~\ref{s:gek:int_motion_sym}).
 A major difference is that in the Kerr case, generic geodesics are not
 planar, i.e. are not confined
 to a hypersurface, contrary to what happens in Schwarzschild spacetime, where
@@ -28,11 +57,10 @@ thanks to the spherical symmetry of the latter, a suitable choice of
 coordinates $(t,r,\th,\ph)$ makes a given geodesic confined to the
 hyperplane $\th=\pi/2$. We therefore lose the first integral $p^\th=0$
 [Eq.~(\ref{e:ges:pth_zero})]. Fortunaly there exists another
-first integral of motion, the Carter constant, due to a remarkable property
+integral of motion, the Carter constant, due to a remarkable property
 of Kerr spacetime: the existence of a non-trivial Killing tensor (Sec.~\ref{s:gek:Carter_const}).
 With the particle mass $\mu$, this makes a total of four integral of motions,
-which renders the problem integrable, reducing it to a set of four
-first-order differential equations (Sec.~\ref{s:gek:first_order_system}).
+which renders the problem integrable (Sec.~\ref{s:gek:first_order_system}).
 
 
 \subsection{Integrals of motion from symmetries} \label{s:gek:int_motion_sym}
@@ -76,6 +104,7 @@ Kerr coordinates (Sec.~\ref{s:ker:Kerr_coord}) or 3+1 Kerr coordinates
 in terms of the components $p_t = g_{t\mu} \, p^\mu$ and $p_\ph = g_{\ph\mu} \, p^\mu$
 of the 1-form $\uu{p}$ associated to $\w{p}$ by metric duality:
 \begin{subequations}
+\label{e:gek:E_pt_L_pph}
 \begin{align}
 & E = - p_t \\
 & L = p_\ph
@@ -91,11 +120,11 @@ as introduced in Sec.~\ref{s:ker:expr_BL}.
 Given the components (\ref{e:ker:metric_BL}) of the metric tensor $\w{g}$
 in these coordinates, evaluating $E$ and $L$
 via $E = - g_{t\mu} \, p^\mu$ and $L = g_{\ph\mu} \, p^\mu$ yields
-\be
+\be \label{e:gek:E_first_int}
     E = \left( 1 - \frac{2 m r}{\rho^2} \right)\,  p^t
         + \frac{2 a m r \sin^2\th}{\rho^2}\,  p^\ph  .
 \ee
-\be
+\be \label{e:gek:L_first_int}
     L = - \frac{2 a m r \sin^2\th}{\rho^2} \, p^t
         + \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right)
     \sin^2\th \,  p^\ph ,
@@ -106,19 +135,16 @@ Let us recall that the components $(p^\alpha)$ of the 4-momentum are
 related to the equation $x^\alpha = x^\alpha(\lambda)$ of the geodesic $\Li$
 in terms of the affine parameter $\lambda$ by $p^\alpha = \D x^\alpha / \D\lambda$
 [cf. Eq.~(\ref{e:fra:p_dxdl})], i.e.
-\be
+\be \label{e:gek:pa_der_xa}
     p^t = \derd{t}{\lambda},\quad
     p^r = \derd{r}{\lambda},\quad
     p^\th = \derd{\th}{\lambda},\quad
     p^\ph = \derd{\ph}{\lambda} .
 \ee
-In other words, $\lambda$ is the affine parameter\footnote{See Sec.~\ref{s:geo:def} for the definition
-of an affine parameter along a geodesic.} along $\Li$ such that the tangent vector
-to $\Li$ associated with $\lambda$ is $\w{p}$.
 
 \subsection{Mass as an integral of motion}
 
-The mass $\mu$ of particle $\mathscr{P}$ is given by the scalar square of
+The mass $\mu$ of particle $\mathscr{P}$ is related to the scalar square of
 the 4-momentum vector $\w{p}$ via Eq.~(\ref{e:fra:def_mass}):
 \be \label{e:gek:mu_gpp}
     \mu^2 = - \w{g}(\w{p}, \w{p}) .
@@ -142,14 +168,14 @@ in Boyer-Lindquist coordinates, we get
     - \frac{1}{\Delta}\left(1 - \frac{2 m r}{\rho^2} \right) \frac{L^2}{\sin^2\th}
     \nonumber \\
    &  & - \frac{\rho^2}{\Delta} \left( p^r \right) ^2
-    - \rho^2 \left( p^\theta \right) ^2 ,
+    - \rho^2 \left( p^\theta \right) ^2 ,   \label{e:gek:mu2_first_int}
 \eea
 where $\Delta := r^2 - 2 m r + a^2$ [Eq.~(\ref{e:ker:def_Delta})].
 Note that we have expressed $p_r$ and $p_\th$ in terms of $p^r$ and $p^\th$
 thanks to the relations $p_r = g_{r\mu} p^\mu$ and $p_\th = g_{\th\mu} p^\mu$,
 which are very simple for the Boyer-Lindquist components (\ref{e:ker:metric_BL})
 of $\w{g}$:
-\be
+\be \label{e:gek:p_r_p_th_cov_con}
     p_r = \frac{\rho^2}{\Delta} \, p^r
     \qquad\mbox{and}\qquad
     p_\th = \rho^2 \, p^\th .
@@ -161,17 +187,108 @@ It turns out that the Kerr spacetime is endowed with a non-trivial
 Killing tensor of valence 2: the
 \defin{Walker-Penrose Killing tensor}\index{Killing!tensor!Walker-Penrose --}\index{Walker-Penrose Killing tensor} $\w{K}$, which is the symmetric tensor of type
 $(0,2)$ defined by
-\be
-    \encadre{ \w{K} := (r^2 + a^2) \left( \uu{k} \otimes \uu{\el} = \uu{\el} \otimes \uu{k} \right) + r^2 \w{g} } ,
+\be \label{e:gek:def_K}
+    \encadre{ \w{K} := (r^2 + a^2) \left( \uu{k} \otimes \uu{\el} + \uu{\el} \otimes \uu{k} \right) + r^2 \w{g} } ,
 \ee
 where $\uu{\el}$ and $\uu{k}$ are the 1-forms associated by metric duality
 to the null vector fields $\w{k}$ and $\wl$ tangent to the principal null
-geodesics introduced in Sec.~\ref{s:ker:principal_geod}.
+geodesics introduced in Sec.~\ref{s:ker:principal_geod}. In index notation,
+Eq.~(\ref{e:gek:def_K}) writes
+\be
+    K_{\alpha\beta} = (r^2 + a^2) \left(k_\alpha \el_\beta + \el_\alpha k_\beta \right)
+        + r^2 g_{\alpha\beta} .
+\ee
+$\w{K}$ is called a \defin{Killing tensor}\index{Killing!tensor} because its symmetrized covariant derivative vanishes identically:
+\be \label{e:gek:Killing_eq_K}
+    \encadre{ \nabla_{(\alpha} K_{\beta\gamma)} = 0 }.
+\ee
+This property can be seen as a generalization of the Killing equation
+(\ref{e:neh:Killing_equation}) to tensors of valence 2.
+That the tensor $\w{K}$ defined by (\ref{e:gek:def_K}) obeys the Killing
+identity (\ref{e:gek:Killing_eq_K}) is shown in the notebook~\ref{s:sam:Kerr_Killing_tensor}.
+
+Killing tensors are discussed in Sec.~\ref{e:geo:Killing_tensor} of Appendix~\ref{s:geo}.
+It is shown there that the Killing identity (\ref{e:gek:Killing_eq_K}) implies that
+the following quantity is constant along any geodesic $\Li$ [cf. Eq.~(\ref{e:geo:Kvv_const})]:
+\be
+    \encadre{ \mathscr{K} := \w{K}(\w{p}, \w{p}) = K_{\mu\nu} p^\mu p^\nu } .
+\ee
+$\mathscr{K}$ is named \defin{Carter constant}\index{Carter!constant}.
+From the definition (\ref{e:gek:def_K}) of $\w{K}$, we have
+\be \label{e:gek:Kcarter_prov}
+    \mathscr{K} = 2(r^2 + a^2) \langle \uu{k}, \w{p} \rangle
+        \langle \uu{\el}, \w{p} \rangle + r^2 \w{g}(\w{p}, \w{p}).
+\ee
+Now by Eq.~(\ref{e:gek:mu_gpp}), $\w{g}(\w{p}, \w{p}) = - \mu^2$. Besides, we
+have
+\[
+  \langle \uu{k}, \w{p} \rangle = k_\mu p^\mu = k^\mu p_\mu .
+\]
+The last form allows us to let appear the constants of motion $p_t = -E$ and
+$p_\ph = L$ [Eq.~(\ref{e:gek:E_pt_L_pph})]. Using it with the components
+of $\w{k}$ as given by Eq.~(\ref{e:ker:k_BL}), we get
+\[
+    \langle \uu{k}, \w{p} \rangle = - \frac{r^2 + a^2}{\Delta} E
+    - p_r + \frac{a}{\Delta} L .
+\]
+Similarly, from the components (\ref{e:ker:ell_BL}) of $\wl$, we obtain
+\[
+     \langle \uu{\el}, \w{p} \rangle = - \frac{1}{2} E + \frac{\Delta}{2(r^2 + a^2)} p_r
+     + \frac{a}{2(r^2 + a^2)} L .
+\]
+Accordingly, Eq.~(\ref{e:gek:Kcarter_prov}) becomes
+\[
+    \mathscr{K} = \frac{1}{\Delta} \left[ (r^2 + a^2) E + \Delta p_r - a L \right]
+      \left[ (r^2 + a^2) E - \Delta p_r - a L \right] - r^2 \mu^2 ,
+\]
+which can be rewritten as
+\be \label{e:gek:Kcarter_first_int}
+    \mathscr{K} = \frac{1}{\Delta} \left[ \left( (r^2 + a^2) E - a L \right)^2
+        - \rho^4 (p^r)^2 \right] - r^2 \mu^2 .
+\ee
+Note that we have expressed $p_r$ in terms of $p^r$ via Eq.~(\ref{e:gek:p_r_p_th_cov_con}).
 
 \subsection{First order equations of motion} \label{s:gek:first_order_system}
 
+We have thus obtained four first integrals of the geodesic equation
+(\ref{e:gek:eq_geod}):
+$E$ [Eq.~(\ref{e:gek:E_first_int})], $L$ [Eq.~(\ref{e:gek:L_first_int})],
+$\mu^2$ [Eq.~(\ref{e:gek:mu2_first_int})] and $\mathscr{K}$
+[Eq.~(\ref{e:gek:Kcarter_first_int})]. In the expressions of each of these integrals,
+$p^\alpha$ has to be thought of as the first order derivative $\D x^\alpha/\D\lambda$
+[Eq.~(\ref{e:gek:pa_der_xa})].
+Two first integrals, namely $E$ and $L$, are linear in the $p^\alpha$'s, while
+the two others, namely $\mu^2$ and $\mathscr{K}$, are quadratic.
+Furthermore, Eqs.~(\ref{e:gek:E_first_int}) and (\ref{e:gek:L_first_int})
+constitute a decoupled subsystem for $(p^t, p^\ph)$, which can be easily solved,
+yielding
+\be
+    \rho^2 p^t = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th )
+\ee
+\be
+    \rho^2 p^\ph = \frac{L}{\sin^2\th}
+    + a \left[\frac{1}{\Delta}\left((r^2 + a^2) E - a L\right) - E \right] .
+\ee
+Besides, Eq.~(\ref{e:gek:Kcarter_first_int}) involves only $p^r$ and can
+be recast as
+\be
+    \rho^2 p^r = \pm \sqrt{ R(r) } ,
+\ee
+with
+\be
+    R(r) := \left[ (r^2 + a^2) E - a L \right]^ 2 - \Delta (r^2 \mu^2 + \mathscr{K}) .
+\ee
+In the above expression, let us recall that $\Delta$ is the function of $r$
+given by Eq.~(\ref{e:ker:def_Delta}): $\Delta := r^2 - 2 m r + a^2$.
 
 \section{Motion in the equatorial plane}
+
+
+
+
+
+
+
 
 Circular orbits in Kerr spacetime: \cite{BardePT72} (see also \cite{Barde73})
 
