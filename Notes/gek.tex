@@ -46,24 +46,26 @@ enough first integrals of Eq.~(\ref{e:gek:eq_geod}) to reduce
 the problem to four first-order equations
 of the type $\D x^\alpha/\D\lambda = F^\alpha(x^0, x^1, x^2, x^3)$.
 
-Two integrals of motion are similar to those in the Schwarzschild case,
-since both Kerr and Schwarzschild spacetimes are stationary (outside the ergosphere) and axisymmetric,
-which gives birth to the conserved energy $E$ and conserver angular momentum
-$L$ (Sec.~\ref{s:gek:int_motion_sym}).
-A major difference is that in the Kerr case, generic geodesics are not
-planar, i.e. are not confined
-to a hypersurface, contrary to what happens in Schwarzschild spacetime, where
-thanks to the spherical symmetry of the latter, a suitable choice of
+Three integrals of motion are similar to those in the Schwarzschild case.
+One is the particle's mass $\mu$ (Sec.~\ref{s:gek:mass_int_motion} below)
+and the two other ones are
+the conserved energy $E$ and the conserved angular momentum
+$L$ (Sec.~\ref{s:gek:int_motion_sym}), which arise from the common symmetries
+of Kerr and Schwarzschild spacetimes: stationarity (outside the ergosphere) and axisymmetry.
+In the Schwarzschild case, the fourth integral of motion was provided by
+spherical symmetry, which constrained all geodesics to be planar, so that
+a suitable choice of
 coordinates $(t,r,\th,\ph)$ makes a given geodesic confined to the
-hyperplane $\th=\pi/2$. We therefore lose the first integral $p^\th=0$
-[Eq.~(\ref{e:ges:pth_zero})]. Fortunaly there exists another
-integral of motion, the Carter constant, due to a remarkable property
+hyperplane $\th=\pi/2$, yielding the first integral $p^\th=0$ [Eq.~(\ref{e:ges:pth_zero})].
+The Kerr spacetime with $a\not=0$ being not spherically symmetric, we loose
+this property here. Fortunaly there exists another
+integral of motion: the Carter constant; it arises from a remarkable property
 of Kerr spacetime: the existence of a non-trivial Killing tensor (Sec.~\ref{s:gek:Carter_const}).
 With the particle mass $\mu$, this makes a total of four integral of motions,
 which renders the problem integrable (Sec.~\ref{s:gek:first_order_system}).
 
 
-\subsection{Integrals of motion from symmetries} \label{s:gek:int_motion_sym}
+\subsection{Integrals of motion from spacetime symmetries} \label{s:gek:int_motion_sym}
 
 As for Schwarzschild spacetime (cf. Sec.~\ref{s:ges:fiom}), we have the following
 property.
@@ -142,7 +144,7 @@ in terms of the affine parameter $\lambda$ by $p^\alpha = \D x^\alpha / \D\lambd
     p^\ph = \derd{\ph}{\lambda} .
 \ee
 
-\subsection{Mass as an integral of motion}
+\subsection{Mass as an integral of motion} \label{s:gek:mass_int_motion}
 
 The mass $\mu$ of particle $\mathscr{P}$ is related to the scalar square of
 the 4-momentum vector $\w{p}$ via Eq.~(\ref{e:fra:def_mass}):
@@ -153,7 +155,7 @@ The fact that $\Li$ is a geodesic implies that $\mu$ is a constant along
 $\Li$ (cf. Eq.~(\ref{e:geo:vv_const}) in Appendix~\ref{s:geo}). It therefore
 provides a third integral of motion, after $E$ and $L$.
 
-Let us express (\ref{e:gek:mu_gpp}) in terms of the inverse metric
+It is convenient to express (\ref{e:gek:mu_gpp}) in terms of the inverse metric
 in order to let appear $p_t = -E$ and $p_\ph = L$:
 \[
     \mu^2 = - g^{\mu\nu} p_\mu p_\nu .
@@ -260,26 +262,89 @@ $p^\alpha$ has to be thought of as the first order derivative $\D x^\alpha/\D\la
 Two first integrals, namely $E$ and $L$, are linear in the $p^\alpha$'s, while
 the two others, namely $\mu^2$ and $\mathscr{K}$, are quadratic.
 Furthermore, Eqs.~(\ref{e:gek:E_first_int}) and (\ref{e:gek:L_first_int})
-constitute a decoupled subsystem for $(p^t, p^\ph)$, which can be easily solved,
+constitute a decoupled subsystem for $(p^t, p^\ph)$, which can easily be solved\footnote{An
+intermediate step is combining  Eqs.~(\ref{e:gek:E_first_int}) and (\ref{e:gek:L_first_int})
+to get $a E - L /\sin^2\th = a p^t - (r^2 + a^2) p^\ph$
+and $(r^2 + a^2) E - a L = \Delta(p^t - a\sin^2\th p^\ph)$.},
 yielding
-\be
+\be \label{e:gek:rho2_pt}
     \rho^2 p^t = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th )
 \ee
-\be
+\be  \label{e:gek:rho2_pph}
     \rho^2 p^\ph = \frac{L}{\sin^2\th}
     + a \left[\frac{1}{\Delta}\left((r^2 + a^2) E - a L\right) - E \right] .
 \ee
 Besides, Eq.~(\ref{e:gek:Kcarter_first_int}) involves only $p^r$ and can
 be recast as
-\be
+\be \label{e:gek:p_r_R}
     \rho^2 p^r = \pm \sqrt{ R(r) } ,
 \ee
-with
-\be
-    R(r) := \left[ (r^2 + a^2) E - a L \right]^ 2 - \Delta (r^2 \mu^2 + \mathscr{K}) .
+where $R(r)$ is the following 4th order polynomial of $r$:
+\be \label{e:gek:def_R}
+   \encadre{ R(r) := \left[ (r^2 + a^2) E - a L \right]^ 2 - \Delta (r^2 \mu^2 + \mathscr{K}) }.
 \ee
 In the above expression, let us recall that $\Delta$ is the function of $r$
-given by Eq.~(\ref{e:ker:def_Delta}): $\Delta := r^2 - 2 m r + a^2$.
+given by Eq.~(\ref{e:ker:def_Delta}): $\Delta := r^2 - 2 m r + a^2$. All other
+quantities are constant.
+
+Finally, if we substitute $p^r$ by the value given by Eqs.~(\ref{e:gek:p_r_R})-(\ref{e:gek:def_R}) in the mass first integral (\ref{e:gek:mu2_first_int}), we get, after simplification,
+\be \label{e:gek:p_th_Th}
+    \rho^2 p^\th = \pm \sqrt{\Theta(\th)} ,
+\ee
+with
+\be \label{e:gek:def_Theta}
+   \encadre{ \Theta(\th) := \mathscr{K} - \left(\frac{L}{\sin\th} - a E \sin\th \right)^2
+        - \mu^2 a^2 \cos^2\th } .
+\ee
+The following constant is often used instead of $\mathscr{K}$:
+\be \label{e:gek:def_Q}
+    \encadre{Q := \mathscr{K} - (L - a E)^2 }
+\ee
+Thanks to it, we may rewrite (\ref{e:gek:def_Theta}) as
+\be
+    \encadre{ \Theta(\th) = Q + \cos^2\th \left[ a^2 (E^2 - \mu^2)
+    - \frac{L^2}{\sin^2\th} \right] } .
+\ee
+In the literature, $Q$ is often called \emph{Carter's constant} as well. A difference
+with the original Carter constant $\mathscr{K}$ is that the latter is always non-negative,
+as Eq.~(\ref{e:gek:def_Theta}) shows (given that $\Theta(\th) \geq 0$ by virtue of
+Eq.~(\ref{e:gek:p_th_Th})):
+\be
+    \mathscr{K} \geq 0 .
+\ee
+
+In view of the relation (\ref{e:gek:pa_der_xa}) between the $p^\alpha$'s
+and the derivatives of the functions $x^\alpha(\lambda)$, we may
+collect Eqs.~(\ref{e:gek:rho2_pt}), (\ref{e:gek:rho2_pph}), (\ref{e:gek:p_r_R})
+and (\ref{e:gek:def_Theta}) as the first-order system
+\begin{subequations}
+\begin{align}
+& \encadre{ \rho^2 \derd{t}{\lambda} = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th ) }\\
+& \encadre{ \rho^2 \derd{r}{\lambda} = \pm \sqrt{ R(r) } }\\
+& \encadre{ \rho^2 \derd{\th}{\lambda} = \pm \sqrt{\Theta(\th)} }\\
+& \encadre{ \rho^2 \derd{\ph}{\lambda}  = \frac{L}{\sin^2\th}
+    + a \left[\frac{1}{\Delta}\left((r^2 + a^2) E - a L\right) - E \right] } .
+\end{align}
+\end{subequations}
+
+\begin{hist}
+The constant of motion $\mathscr{K}$ has been discovered by Brandon Carter\index{Carter, B.}
+in 1968 \cite{Carte68}. He actually did not get $\mathscr{K}$ from the Killing tensor $\w{K}$,
+which was discovered two years later by Martin Walker\index{Walker, M.} and
+Roger Penrose\index{Penrose, R.} \cite{WalkeP70}; he
+started instead from the Lagrangian (\ref{e:geo:Lagrangian2}) governing
+both timelike and null geodesics,
+derived the corresponding
+Hamiltonian as $H = g^{\mu\nu} p_\mu p_\nu$
+and discovered that the Hamilton-Jacobi equation\index{Hamilton-Jacobi equation}
+is separable, i.e.
+can be solved by separation of variables, provided one uses the
+Kerr coordinates
+$(v,r,\th,\tph)$ described in Sec.~\ref{s:ker:Kerr_coord}
+(NB: Carter's $u$ is our $v$) and not the Boyer-Lindquist ones.
+$\mathscr{K}$ appeared then as a separation constant. Carter also introduced
+the constant $Q$ via Eq.~(\ref{e:gek:def_Q}).
+\end{hist}
 
 \section{Motion in the equatorial plane}
 
