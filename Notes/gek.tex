@@ -271,8 +271,8 @@ yielding
     \rho^2 p^t = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th )
 \ee
 \be  \label{e:gek:rho2_pph}
-    \rho^2 p^\ph = \frac{L}{\sin^2\th}
-    + a \left[\frac{1}{\Delta}\left((r^2 + a^2) E - a L\right) - E \right] .
+    \rho^2 p^\ph = \frac{L}{\sin^2\th} - a E
+    + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] .
 \ee
 Besides, Eq.~(\ref{e:gek:Kcarter_first_int}) involves only $p^r$ and can
 be recast as
@@ -318,24 +318,27 @@ and the derivatives of the functions $x^\alpha(\lambda)$, we may
 collect Eqs.~(\ref{e:gek:rho2_pt}), (\ref{e:gek:rho2_pph}), (\ref{e:gek:p_r_R})
 and (\ref{e:gek:def_Theta}) as the first-order system
 \begin{subequations}
+\label{e:gek:eom_first_order}
 \begin{align}
-& \encadre{ \rho^2 \derd{t}{\lambda} = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th ) }\\
-& \encadre{ \rho^2 \derd{r}{\lambda} = \pm \sqrt{ R(r) } }\\
-& \encadre{ \rho^2 \derd{\th}{\lambda} = \pm \sqrt{\Theta(\th)} }\\
-& \encadre{ \rho^2 \derd{\ph}{\lambda}  = \frac{L}{\sin^2\th}
-    + a \left[\frac{1}{\Delta}\left((r^2 + a^2) E - a L\right) - E \right] } .
+& \encadre{ \rho^2 \derd{t}{\lambda} = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th ) } \label{e:gek:dtdl} \\
+& \encadre{ \rho^2 \derd{r}{\lambda} = \pm \sqrt{ R(r) } } \label{e:gek:drdl}\\
+& \encadre{ \rho^2 \derd{\th}{\lambda} = \pm \sqrt{\Theta(\th)} } \label{e:gek:dthdl}\\
+& \encadre{ \rho^2 \derd{\ph}{\lambda}  = \frac{L}{\sin^2\th} - a E
+    + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] } . \label{e:gek:dphdl}
 \end{align}
 \end{subequations}
 
 \begin{hist}
 The constant of motion $\mathscr{K}$ has been discovered by Brandon Carter\index{Carter, B.}
-in 1968 \cite{Carte68}. He actually did not get $\mathscr{K}$ from the Killing tensor $\w{K}$,
+in 1968 \cite{Carte68}, in a study about  Kerr-Newman spacetimes\index{Kerr-Newman!spacetime},
+which generalize the Kerr ones to nonzero global electric charge.
+Carter actually did not get $\mathscr{K}$ from the Killing tensor $\w{K}$,
 which was discovered two years later by Martin Walker\index{Walker, M.} and
 Roger Penrose\index{Penrose, R.} \cite{WalkeP70}; he
 started instead from the Lagrangian (\ref{e:geo:Lagrangian2}) governing
 both timelike and null geodesics,
 derived the corresponding
-Hamiltonian as $H = g^{\mu\nu} p_\mu p_\nu$
+Hamiltonian as $H = g^{\mu\nu} p_\mu p_\nu$ (for the uncharged (i.e. Kerr) case)
 and discovered that the Hamilton-Jacobi equation\index{Hamilton-Jacobi equation}
 is separable, i.e.
 can be solved by separation of variables, provided one uses the
@@ -343,7 +346,18 @@ Kerr coordinates
 $(v,r,\th,\tph)$ described in Sec.~\ref{s:ker:Kerr_coord}
 (NB: Carter's $u$ is our $v$) and not the Boyer-Lindquist ones.
 $\mathscr{K}$ appeared then as a separation constant. Carter also introduced
-the constant $Q$ via Eq.~(\ref{e:gek:def_Q}).
+the constant $Q$ via Eq.~(\ref{e:gek:def_Q}). Carter obtained the equivalent
+of the first-order system (\ref{e:gek:eom_first_order}) for the Kerr coordinates. Actually
+two of his equations, those for $\D r/\D\lambda$ and $\D\th/\D\lambda$, are
+identical to Eqs.~(\ref{e:gek:drdl}) and (\ref{e:gek:dthdl}) of the Boyer-Lindquist
+system. This is not surprising since the coordinates
+$r$ and $\th$ are the same in both systems. Carter's equations for the
+Kerr coordinates $v$ and $\tph$ are slightly more complicated than
+Eqs.~(\ref{e:gek:dtdl}) and (\ref{e:gek:dphdl}) for the Boyer-Lindquist coordinates
+$t$ and $\ph$. It seems that the Boyer-Lindquist first-order system (\ref{e:gek:eom_first_order})
+has been first derived by Daniel Wilkins\index{Wilkins, D.} in 1972 \cite{Wilki72},
+starting from Carter's system and performing the transformation to Boyer-Lindquist
+coordinates.
 \end{hist}
 
 \section{Motion in the equatorial plane}
