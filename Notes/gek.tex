@@ -245,10 +245,47 @@ Accordingly, Eq.~(\ref{e:gek:Kcarter_prov}) becomes
 \]
 which can be rewritten as
 \be \label{e:gek:Kcarter_first_int}
-    \mathscr{K} = \frac{1}{\Delta} \left[ \left( (r^2 + a^2) E - a L \right)^2
-        - \rho^4 (p^r)^2 \right] - r^2 \mu^2 .
+   \encadre{ \mathscr{K} = \frac{1}{\Delta} \left[ \left( (r^2 + a^2) E - a L \right)^2
+        - \rho^4 (p^r)^2 \right] - r^2 \mu^2 }.
 \ee
 Note that we have expressed $p_r$ in terms of $p^r$ via Eq.~(\ref{e:gek:p_r_p_th_cov_con}).
+
+We can get some physical interpretation of the Carter constant from the above
+expression, in the case where the particle $\mathscr{P}$ following the
+geodesic $\Li$ visits the asymptotic region $r\to+\infty$. Indeed, given
+that $\Delta := r^2 - 2m r + a^2 \sim r^2$  and $\rho^4 := (r^2 + a^2\cos^2\th)^2 \sim r^4$
+as $r\to+\infty$, we deduce from Eq.~(\ref{e:gek:Kcarter_first_int})
+that
+\be \label{e:gek:Kcarter_r_inf}
+    \mathscr{K} \underset{r\to + \infty}{\sim} r^2 \left[ E^2 - \mu^2 - (p^r)^2 \right] .
+\ee
+Then let $\Obs$ be the asymptotic inertial observer at rest with respect to the
+black hole, i.e. the observer with $r\gg m$ and whose 4-velocity
+coincides with the Killing vector
+$\w{\xi} = \wpar_t$. $E$ is then $\mathscr{P}$'s energy as measured by $\Obs$
+[cf. Eq.~(\ref{e:fra:E_obs}) and (\ref{e:gek:def_E})], so that, according to
+Einstein's formula (\ref{e:fra:E2_m2_P2}), $E^2 - \mu^2 = \w{P}\cdot\w{P}$, where
+$\w{P}$ is $\mathscr{P}$'s linear momentum as measured by $\Obs$. Given
+that asymptotically, $p^r\sim P^r$ [cf. Eq.~(\ref{e:fra:p_E_P})],
+Eq.~(\ref{e:gek:Kcarter_r_inf}) becomes
+\[
+    \mathscr{K} \underset{r\to + \infty}{\sim} r^2 \left[ \w{P}\cdot\w{P} - (P^r)^2 \right]
+    = r^2 \left[ (P^{(\th)})^2 + (P^{(\ph)})^2 \right],
+\]
+where $P^{(\th)} = r P^\th \sim r p^\th$ and $P^{(\ph)} = r\sin\th\, P^\ph \sim r\sin\th\, p^\ph$
+are the angular components of $\w{P}$ in the
+orthonormal basis $(\w{e}_{(r)}, \w{e}_{(\th)}, \w{e}_{(\ph)}) := (\wpar_r, r^{-1} \wpar_\th,
+(r\sin\th)^{-1}\wpar_\ph)$.
+Now the total angular momentum of $\mathscr{P}$ measured by $\Obs$ is
+\[
+    \w{L}_{\rm tot} = \w{r} \times \w{P} = - r P^{(\ph)} \w{e}_{(\th)}
+        + r P^{(\th)} \w{e}_{(\ph)} .
+\]
+Hence we may conclude that asymptotically, the Carter constant coincides with
+the square of $\w{P}$'s angular momentum as measured by the inertial observer $\Obs$:
+\be \label{e:gek:Kcarter_asymptot}
+    \mathscr{K} \underset{r\to + \infty}{\sim} \w{L}_{\rm tot} \cdot \w{L}_{\rm tot} .
+\ee
 
 \subsection{First order equations of motion} \label{s:gek:first_order_system}
 
@@ -301,7 +338,7 @@ The following constant is often used instead of $\mathscr{K}$:
     \encadre{Q := \mathscr{K} - (L - a E)^2 }
 \ee
 Thanks to it, we may rewrite (\ref{e:gek:def_Theta}) as
-\be
+\be \label{e:gek:Theta_Q}
     \encadre{ \Theta(\th) = Q + \cos^2\th \left[ a^2 (E^2 - \mu^2)
     - \frac{L^2}{\sin^2\th} \right] } .
 \ee
@@ -312,6 +349,18 @@ Eq.~(\ref{e:gek:p_th_Th})):
 \be
     \mathscr{K} \geq 0 .
 \ee
+If the particle $\mathscr{P}$ reaches the asymptotic region $r\gg m$, we deduce from
+Eqs.~(\ref{e:gek:def_Q}) and (\ref{e:gek:Kcarter_asymptot}) the following approximate
+value of $Q$:
+\be
+   Q \underset{r\to + \infty}{\sim} \w{L}_{\rm tot} \cdot \w{L}_{\rm tot}
+    - L^2 + a (2 L - a E^2) .
+\ee
+Hence, if $a=0$, $Q$ can be interpreted as the square of
+the part of $\mathscr{P}$'s angular momentum (measured by the asymptotic inertial
+observer) that is not in $L$. Using
+notations of Sec.~\ref{s:gek:Carter_const}, we have $L = L_{\rm tot}^{(\ph)}$,
+so that $ \w{L}_{\rm tot} \cdot \w{L}_{\rm tot} - L^2 = (L_{\rm tot}^{(\th)})^2$.
 
 In view of the relation (\ref{e:gek:pa_der_xa}) between the $p^\alpha$'s
 and the derivatives of the functions $x^\alpha(\lambda)$, we may
@@ -327,6 +376,59 @@ and (\ref{e:gek:def_Theta}) as the first-order system
     + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] } . \label{e:gek:dphdl}
 \end{align}
 \end{subequations}
+The functions $R(r)$ and $\Theta(\th)$ are defined by Eq.~(\ref{e:gek:def_R})
+and Eq.~(\ref{e:gek:def_Theta}) or (\ref{e:gek:Theta_Q}). They must obey
+\be
+    R(r) \geq 0 \qquad\mbox{and}\qquad \Theta(\th) \geq 0 .
+\ee
+Note that besides the constants of motion $E$, $L$, $\mu$ and $\mathscr{K}$
+or $Q$, $R(r)$ depends on $a$ and $m$ (via $\Delta$), while $\Theta(\th)$
+depends on $a$ only.
+
+\subsection{Equations of motion in terms of Mino time}
+
+In view of the right-hand sides of the system (\ref{e:gek:eom_first_order}),
+it is quite natural to introduce along the geodesic $\Li$ the new
+parameter $\lambda'$ defined by
+\be \label{e:gek:def_Mino_time}
+    \D\lambda' = \frac{\D\lambda}{\rho^2}
+     = \frac{\D\lambda}{r(\lambda)^2 + a^2 \cos^2 \th(\lambda)} .
+\ee
+Since $\rho^2$ never vanishes on the spacetime manifold $\M$ (by construction
+of the latter, cf. Eq.~(\ref{e:ker:def_M_Kerr_spacetime})), the above relation
+leads to a well-defined parameter along $\Li$. Moreover, since $\rho^2>0$, this
+parameter increases towards the future, as $\lambda$. A difference between
+the two parametrizations is that $\lambda'$ is not in general\footnote{The only
+exception is for a circurlar orbit at constant $\theta$, since then $\rho^2$
+is constant and Eq.~(\ref{e:gek:def_Mino_time}) defines an affine transformation
+between $\lambda$ and $\lambda'$.} an affine parameter
+of $\Li$, contrary to $\lambda$.
+The parameter $\lambda'$ is called \defin{Mino time}\index{Mino!time}\index{time!Mino --}
+\cite{Mino03}.
+
+In terms of Mino time, the system (\ref{e:gek:eom_first_order}) becomes
+\begin{subequations}
+\label{e:gek:eom_Mino}
+\begin{align}
+& \encadre{ \derd{t}{\lambda'} = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th ) } \label{e:gek:dtdl_Mino} \\
+& \encadre{ \derd{r}{\lambda'} = \pm \sqrt{ R(r) } } \label{e:gek:drdl_Mino}\\
+& \encadre{ \derd{\th}{\lambda'} = \pm \sqrt{\Theta(\th)} } \label{e:gek:dthdl_Mino}\\
+& \encadre{ \derd{\ph}{\lambda'}  = \frac{L}{\sin^2\th} - a E
+    + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] } . \label{e:gek:dphdl_Mino}
+\end{align}
+\end{subequations}
+It is remarkable that Eqs.~(\ref{e:gek:drdl_Mino}) and (\ref{e:gek:dthdl_Mino})
+are two fully decoupled equations: Eq.~(\ref{e:gek:drdl_Mino}) is an ordinary
+differential equation for the function $r(\lambda')$, while Eq.~(\ref{e:gek:dthdl_Mino})
+is an ordinary differential equation for the function $\th(\lambda')$. This was
+not the case for Eqs.~(\ref{e:gek:drdl}) and (\ref{e:gek:dthdl}) since $\rho^2$ is
+a function of both $r$ and $\th$.
+Equation~(\ref{e:gek:drdl_Mino}) can be integrated by the method of separation
+of variables, yielding
+\be
+    \lambda' = \pm \int_{r_0}^r \frac{\D r}{\sqrt{R(r)}} .
+\ee
+
 
 \begin{hist}
 The constant of motion $\mathscr{K}$ has been discovered by Brandon Carter\index{Carter, B.}
@@ -359,6 +461,10 @@ has been first derived by Daniel Wilkins\index{Wilkins, D.} in 1972 \cite{Wilki7
 starting from Carter's system and performing the transformation to Boyer-Lindquist
 coordinates.
 \end{hist}
+
+\section{Generic properties of geodesics}
+
+
 
 \section{Motion in the equatorial plane}
 
