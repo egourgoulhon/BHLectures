@@ -314,9 +314,10 @@ yielding
 Besides, Eq.~(\ref{e:gek:Kcarter_first_int}) involves only $p^r$ and can
 be recast as
 \be \label{e:gek:p_r_R}
-    \rho^2 p^r = \pm \sqrt{ R(r) } ,
+    \rho^2 p^r = \eps_r \sqrt{ R(r) } ,
 \ee
-where $R(r)$ is the following 4th order polynomial of $r$:
+where $\eps_r := \operatorname{sgn} p^r = \pm 1$ and
+$R(r)$ is the following 4th order polynomial of $r$:
 \be \label{e:gek:def_R}
    \encadre{ R(r) := \left[ (r^2 + a^2) E - a L \right]^ 2 - \Delta (r^2 \mu^2 + \mathscr{K}) }.
 \ee
@@ -326,9 +327,9 @@ quantities are constant.
 
 Finally, if we substitute $p^r$ by the value given by Eqs.~(\ref{e:gek:p_r_R})-(\ref{e:gek:def_R}) in the mass first integral (\ref{e:gek:mu2_first_int}), we get, after simplification,
 \be \label{e:gek:p_th_Th}
-    \rho^2 p^\th = \pm \sqrt{\Theta(\th)} ,
+    \rho^2 p^\th = \eps_\th \sqrt{\Theta(\th)} ,
 \ee
-with
+where $\eps_\th := \operatorname{sgn} p^\th = \pm 1$ and
 \be \label{e:gek:def_Theta}
    \encadre{ \Theta(\th) := \mathscr{K} - \left(\frac{L}{\sin\th} - a E \sin\th \right)^2
         - \mu^2 a^2 \cos^2\th } .
@@ -370,8 +371,8 @@ and (\ref{e:gek:def_Theta}) as the first-order system
 \label{e:gek:eom_first_order}
 \begin{align}
 & \encadre{ \rho^2 \derd{t}{\lambda} = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th ) } \label{e:gek:dtdl} \\
-& \encadre{ \rho^2 \derd{r}{\lambda} = \pm \sqrt{ R(r) } } \label{e:gek:drdl}\\
-& \encadre{ \rho^2 \derd{\th}{\lambda} = \pm \sqrt{\Theta(\th)} } \label{e:gek:dthdl}\\
+& \encadre{ \rho^2 \derd{r}{\lambda} = \eps_r \sqrt{ R(r) } } \label{e:gek:drdl}\\
+& \encadre{ \rho^2 \derd{\th}{\lambda} = \eps_\th \sqrt{\Theta(\th)} } \label{e:gek:dthdl}\\
 & \encadre{ \rho^2 \derd{\ph}{\lambda}  = \frac{L}{\sin^2\th} - a E
     + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] } . \label{e:gek:dphdl}
 \end{align}
@@ -384,6 +385,23 @@ and Eq.~(\ref{e:gek:def_Theta}) or (\ref{e:gek:Theta_Q}). They must obey
 Note that besides the constants of motion $E$, $L$, $\mu$ and $\mathscr{K}$
 or $Q$, $R(r)$ depends on $a$ and $m$ (via $\Delta$), while $\Theta(\th)$
 depends on $a$ only.
+
+In the system (\ref{e:gek:eom_first_order}), $\eps_r$
+is $+1$ (resp. $-1$) in the parts of the geodesic $\Li$ where $r$ increases
+(resp. decreases) with $\lambda$. The factor $\eps_r$ changes sign at points where $\D r/\D\lambda = 0$. Such points
+are called \defin{radial turning points}\index{radial!turning point}\index{turning point!radial --}. According to Eq.~(\ref{e:gek:drdl}), they correspond to the roots of the polynomial $R(r)$:
+\be
+    \derd{r}{\lambda} = 0 \iff R(r) = 0 .
+\ee
+Similarly, $\eps_\th$
+is $+1$ (resp. $-1$) in the parts of $\Li$ where $\th$ increases
+(resp. decreases) with $\lambda$ and $\eps_\th$ changes sign at the
+\defin{latitudinal turning points}\index{latitudinal!turning point}\index{turning point!latitudinal --}, where $\D\th/\D\lambda = 0$. According to Eq.~(\ref{e:gek:dthdl}),
+these turning points are given by the roots of the function $\Theta(\th)$:
+\be
+    \derd{\th}{\lambda} = 0 \iff \Theta(\th) = 0 .
+\ee
+
 
 \subsection{Equations of motion in terms of Mino time}
 
@@ -411,8 +429,8 @@ In terms of Mino time, the system (\ref{e:gek:eom_first_order}) becomes
 \label{e:gek:eom_Mino}
 \begin{align}
 & \encadre{ \derd{t}{\lambda'} = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th ) } \label{e:gek:dtdl_Mino} \\
-& \encadre{ \derd{r}{\lambda'} = \pm \sqrt{ R(r) } } \label{e:gek:drdl_Mino}\\
-& \encadre{ \derd{\th}{\lambda'} = \pm \sqrt{\Theta(\th)} } \label{e:gek:dthdl_Mino}\\
+& \encadre{ \derd{r}{\lambda'} = \eps_r \sqrt{ R(r) } } \label{e:gek:drdl_Mino}\\
+& \encadre{ \derd{\th}{\lambda'} = \eps_\th \sqrt{\Theta(\th)} } \label{e:gek:dthdl_Mino}\\
 & \encadre{ \derd{\ph}{\lambda'}  = \frac{L}{\sin^2\th} - a E
     + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] } . \label{e:gek:dphdl_Mino}
 \end{align}
@@ -424,10 +442,67 @@ is an ordinary differential equation for the function $\th(\lambda')$. This was
 not the case for Eqs.~(\ref{e:gek:drdl}) and (\ref{e:gek:dthdl}) since $\rho^2$ is
 a function of both $r$ and $\th$.
 Equation~(\ref{e:gek:drdl_Mino}) can be integrated by the method of separation
-of variables, yielding
+of variables. On a portion of $\Li$ without any radial turning point, this yields
 \be
-    \lambda' = \pm \int_{r_0}^r \frac{\D r}{\sqrt{R(r)}} .
+    \lambda' - \lambda'_0 = \eps_r \int_{r_0}^r \frac{\D \bar{r}}{\sqrt{R(\bar{r})}} ,
 \ee
+with $r_0 := r(\lambda'_0)$.
+If there
+are $M\geq 1$ radial turning points $r_1,\ldots, r_M$ between $\lambda'_0$ and $\lambda'$,
+the formula becomes
+\be \label{e:gek:Minotime_r_sum}
+    \lambda' - \lambda'_0 = \eps_r^{(0)} \int_{r_0}^{r_1} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
+    + \sum_{i=1}^{M-1} \eps_{r}^{(i)}  \int_{r_i}^{r_{i+1}} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
+    + \eps_{r}^{(M)} \int_{r_M}^r \frac{\D \bar{r}}{\sqrt{R(\bar{r})}} .
+\ee
+where $\eps_r^{(i)}$ is the value of $\eps_r$ between $r_i$ and $r_{i+1}$
+for $0\leq i \leq M$,
+with the convention $r_{M+1}:=r$. Note that each term is the above sum
+is positive, since $\eps_r^{(i)} = -1$ compensates for $r_{i+1} < r_i$.
+For instance, if there is a single turning point $r_1$ between
+between $\lambda'_0$ and $\lambda'$, Eq.~(\ref{e:gek:Minotime_r_sum}) gives
+\[
+   \lambda' - \lambda'_0 = \begin{cases}
+  \displaystyle \int_{r_0}^{r_1} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
+    + \int_{r}^{r_1} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}} & \mbox{if} \ r_1 > r_0 \\[2ex]
+  \displaystyle \int_{r_1}^{r_0} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
+    + \int_{r_1}^{r} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}} & \mbox{if} \ r_1 < r_0 ,
+    \end{cases}
+\]
+where all the integrals in the right-hand side are positive.
+Moreover, despite $R(r_i) = 0$ for $1\leq r_i \leq M$
+(by definition of a turning point), all the integrals involved in
+Eq.~(\ref{e:gek:Minotime_r_sum}) are finite provided that the $r_i$'s are \emph{single}
+zeros of $R$ (same argument as in Sec.~\ref{s:gis:deflect_winding}). If $r_i$
+happens to be a double zero of $R$, then the integral having $r_i$ as a bound
+is divergent.
+
+The right-hand side of Eq.~(\ref{e:gek:Minotime_r_sum}) is actually a path
+integral and is often abriged by means of a slash notation:
+\be
+    \lambda' - \lambda'_0 = \dashint_{r_0}^r \frac{\eps_r \, \D \bar{r}}{\sqrt{R(\bar{r})}} .
+\ee
+
+Similarly, Eq.~(\ref{e:gek:dthdl_Mino}) can be integrated as
+\bea
+    \lambda' - \lambda'_0  & = & \dashint_{\th_0}^\th \frac{\eps_\th \, \D \bar{\th}}{\sqrt{Q(\bar{\th})}} \nonumber \\
+    & = & \eps_\th^{(0)} \int_{\th_0}^{\th_1} \frac{\D \bar{\th}}{\sqrt{Q(\bar{\th})}}
+        + \sum_{j=1}^{N-1} \eps_{\th}^{(j)}
+        \int_{\th_j}^{\th_{j+1}} \frac{\D \bar{\th}}{\sqrt{Q(\bar{\th})}}
+        + \eps_\th^{(N)}  \int_{\th_N}^{\th} \frac{\D \bar{\th}}{\sqrt{Q(\bar{\th})}} ,
+\eea
+where $\th_0 = \th(\lambda'_0)$, $\th_1,\ldots,\th_N$ are the
+latitudinal turning points between $\lambda'_0$ and $\lambda'$
+and $\eps_\th^{(j)}$ is the value of $\eps_\th$ between $\th_j$ and $\th_{j+1}$
+for $0\leq j \leq N$,
+with the convention $\th_{N+1}:=\th$.
+
+%\subsection{Equations of motion in terms of 3+1 Kerr coordinates}
+
+%It is interesting to write the first-order equations of geodesic motion
+%in terms of the 3+1 Kerr coordinates $(\ti,r,\th,\tph)$ introduced in Sec.~\ref{s:ker:3p1_Kerr_coord}, since these coordinates are regular on the event
+%horizon $\Hor$, contrary to the Boyer-Lindquist coordinates $(t,r,\th,\ph)$
+%considered above.
 
 
 \begin{hist}
@@ -462,8 +537,115 @@ starting from Carter's system and performing the transformation to Boyer-Lindqui
 coordinates.
 \end{hist}
 
-\section{Generic properties of geodesics}
+\section{General properties of geodesics}
 
+\subsection{Sign of $E$}
+
+We have:
+\begin{greybox}
+If the geodesic $\Li$ has some part lying outside the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergoregion}),
+then the conserved energy $E$ defined by Eq.~(\ref{e:gek:def_E}) is necessarily positive:
+\be \label{e:gek:E_positive}
+    \Li \not\subset \mathscr{G}\quad \Longrightarrow \quad E > 0 .
+\ee
+\end{greybox}
+\begin{proof}
+By the very definition of the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergoregion}),
+the Killing vector $\w{\xi}$ is timelike outside $\mathscr{G}$. Moreover it is
+future-directed there, given the time orientation defined in Sec.~\ref{s:ker:Kerr_coord}.
+The 4-momentum $\w{p}$ is either timelike or null and always future-directed.
+By Eq.~(\ref{e:fra:scalar_caus1}), one has then necessarily $\w{\xi}\cdot\w{p} < 0$; hence
+$E := - \w{\xi}\cdot\w{p} > 0$ in $\M\setminus \mathscr{G}$. Since $E$ is constant along $\Li$, it
+follows that $E > 0$ everywhere.
+\end{proof}
+In particular, any timelike or null geodesic that reaches one of the asymptotic regions
+$r\to\pm\infty$ has $E>0$.
+\begin{remark}
+The property (\ref{e:gek:E_positive}) generalizes that obtained for Schwarzschild spacetime [cf. Eq.~(\ref{e:ges:E_positive_M_I})] to
+the case $a\not=0$, since for Schwarzschild spacetime, the exterior of the ergoregion
+is nothing but the exterior of the black hole region.
+\end{remark}
+
+Inside the ergoregion, the Killing vector $\w{\xi}$ is spacelike and $E$ can be
+either positive, zero or negative. Particles for which $E<0$ are called
+\defin{negative-energy particles}\index{negative-energy particle}\index{particle!negative-energy --}. They are those involved in the Penrose process discussed in Sec.~\ref{s:ker:Penrose_proc}.
+Note that according to (\ref{e:gek:E_positive}) a negative-energy particle cannot exist
+outside the ergoregion.
+
+\subsection{Winding near the event horizon and the inner horizon}
+
+Let us consider a null or timelike geodesic $\Li$ in the vicinity of the
+black hole event horizon $\Hor$.
+On $\Hor$, $r=r_+$ and $\Delta = 0$. Then, the term
+$\Delta^{-1}$ in Eq.~(\ref{e:gek:dtdl}) makes $\D t/\D\lambda$ diverge as
+$r\to r_+$, except in the very special where $(r_+^2 + a^2)E - aL = 0$, which
+is equivalent to $E = \Omega_H L$ according to Eq.~(\ref{e:ker:def_OmegaH}).
+Similarly, $\D\ph/\D\lambda$, as given by Eq.~(\ref{e:gek:dphdl}), diverges
+as $r\to r_+$, except for $E = \Omega_H L$. These two divergences are not
+a pathology of $\Li$ per se; they
+reflect merely the singularity of Boyer-Lindquist coordinates $(t,r,\th,\ph)$ at $\Hor$
+(cf.  Sec.~\ref{s:ker:singularities}). However, we read on Eqs.~(\ref{e:gek:dtdl}) and
+(\ref{e:gek:dphdl}) that the ratio
+$\left. \D\ph/\D t \right| _{\Li} := \D\ph/\D\lambda \times (\D t/\D\lambda)^{-1}$
+converges to a finite value:
+\be \label{e:gek:lim_dphdt_Hor}
+    \lim_{r\to r_+} \left. \derd{\ph}{t} \right| _{\Li} = \frac{a}{r_+^2 + a^2} = \Omega_H ,
+\ee
+where the second equality follows from Eq.~(\ref{e:ker:def_OmegaH}), letting
+the black hole rotation velocity $\Omega_H$ appear.
+Hence we conclude that
+\begin{greybox}
+Any null or timelike geodesic that approaches the event horizon $\Hor$
+is winding around it in terms of the Boyer-Lindquist coordinates at exactly the black hole rotation velocity $\Omega_H$.
+\end{greybox}
+If $\Li$ is a timelike geodesic, we have argued in Sec.~\ref{s:ges:circular_orbits}
+that $\left. \D\ph/\D t \right| _{\Li}$ can be interpreted as the angular velocity of
+$\Li$ as seen by an asymptotic ($r\to +\infty$) inertial observer. The reasoning was
+given in the Schwarzschild spacetime context but it actually  involved only
+the spacetime symmetry by translation in $t$, so it is applicable here.
+
+\begin{remark}
+When $a\not=0$,
+a geodesic that starts far from the black hole with
+$\left. \D\ph/\D t \right| _{\Li} < 0$ [according to Eq.~(\ref{e:gek:dphdl}) with $r\gg m$,
+this occurs for $L <0$]
+must necessarily have a turning point in $\ph$
+if it reaches the event horizon, in order to fulfill (\ref{e:gek:lim_dphdt_Hor}),
+where $\Omega_H$ is positive.
+This is in sharp contrast with the Schwarzschild case, where $\ph$ was always
+a monotonous function of $\lambda$, as shown in Sec.~\ref{s:ges:eq_to_be_solved}.
+\end{remark}
+
+\begin{remark}
+The winding property does not hold for the Kerr or 3+1 Kerr coordinates. Indeed,
+we have seen in Sec.~\ref{s:ker:principal_geod} that the
+ingoing principal null geodesics $\Li^{\rm in}_{(v,\th,\tph)}$ are geodesics
+along which $\tph$ is constant. They are therefore not winding in terms
+of neither the Kerr coordinates $(v,r,\th,\tph)$ nor the 3+1 Kerr ones $(\ti,r,\th,\tph)$.
+This difference of (coordinate) behaviour is understandable if one considers
+the diverging behaviour in $\Delta^{-1}$ of the
+relation $\D \tph = \D \ph + a/\Delta\, \D r$ [Eq.~(\ref{e:ker:Kerr_coord_tph})]
+between the angular coordinates $\ph$ and $\tph$.
+\end{remark}
+
+Similarly, considering the second root $r_-$ of $\Delta$, we deduce
+from
+Eqs.~(\ref{e:gek:dtdl}) and
+(\ref{e:gek:dphdl}) that
+\be
+    \lim_{r\to r_-} \left. \derd{\ph}{t} \right| _{\Li} = \frac{a}{r_-^2 + a^2} = \Omega_{\rm in} ,
+\ee
+where the second equality follows from Eq.~(\ref{e:ker:def_Omega_in}); it involves
+the rotation velocity $\Omega_{\rm in}$ of the inner horizon $\Hor_{\rm in}$.
+Hence
+\begin{greybox}
+Any null or timelike geodesic that approaches the inner horizon $\Hor_{\rm in}$
+is winding around it in terms of the Boyer-Lindquist coordinates at exactly the
+rotation velocity $\Omega_{\rm in}$ of $\Hor_{\rm in}$.
+\end{greybox}
+
+
+\subsection{$\th$-motion}
 
 
 \section{Motion in the equatorial plane}

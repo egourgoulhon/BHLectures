@@ -118,6 +118,17 @@
 
 \DeclareMathOperator{\artanh}{artanh}
 
+% slash integral
+\def\Xint#1{\mathchoice
+{\XXint\displaystyle\textstyle{#1}}%
+{\XXint\textstyle\scriptstyle{#1}}%
+{\XXint\scriptstyle\scriptscriptstyle{#1}}%
+{\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+\!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$}
+\vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+\def\dashint{\Xint-}
+
 \newcommand{\defin}[1]{\textbf{\itshape #1}}
 
 \newcounter{remarkCounter}[section]
@@ -176,7 +187,7 @@ Université Paris Sciences et Lettres\\
 \href{mailto:eric.gourgoulhon@obspm.fr}{\texttt{eric.gourgoulhon@obspm.fr}}\\[8ex]
 \url{https://luth.obspm.fr/~luthier/gourgoulhon/bh16}\\[8ex]
 {\Huge --- DRAFT ---}\\[2ex]
-{version of 18 April 2020}\\[2ex]
+{version of 20 April 2020}\\[2ex]
 \emph{\Large Corrections and comments are welcome}
 \end{center}
 \end{titlepage}
