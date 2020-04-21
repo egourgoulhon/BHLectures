@@ -379,7 +379,7 @@ and (\ref{e:gek:def_Theta}) as the first-order system
 \end{subequations}
 The functions $R(r)$ and $\Theta(\th)$ are defined by Eq.~(\ref{e:gek:def_R})
 and Eq.~(\ref{e:gek:def_Theta}) or (\ref{e:gek:Theta_Q}). They must obey
-\be
+\be \label{e:gek:R_Theta_positive}
     R(r) \geq 0 \qquad\mbox{and}\qquad \Theta(\th) \geq 0 .
 \ee
 Note that besides the constants of motion $E$, $L$, $\mu$ and $\mathscr{K}$
@@ -644,13 +644,76 @@ is winding around it in terms of the Boyer-Lindquist coordinates at exactly the
 rotation velocity $\Omega_{\rm in}$ of $\Hor_{\rm in}$.
 \end{greybox}
 
-
 \subsection{$\th$-motion}
 
+The property $\Theta(\th) \geq 0$ [Eq.~(\ref{e:gek:R_Theta_positive})]
+constrains the geodesic motion in $\th$. Given the expression (\ref{e:gek:Theta_Q})
+for $\Theta(\th)$, this constraint can be written as
+\be \label{e:gek:cond_th_motion}
+    \cos^2\th \left[ a^2 (E^2 - \mu^2)
+    - \frac{L^2}{\sin^2\th} \right] \geq - Q.
+\ee
+One may then consider three cases, depending on the sign of the Carter constant $Q$.
 
-\section{Motion in the equatorial plane}
+\subsubsection{Case $Q > 0$}
+
+For $\th=\pi/2$ (the equator), Eq.~(\ref{e:gek:cond_th_motion}) reduces to $0 \geq -Q$.
+Therefore, if $Q > 0$, there always exists an interval $[\pi/2-\alpha, \pi/2+\alpha]$
+($0<\alpha \leq\pi/2$)
+around $\pi/2$ such that (\ref{e:gek:cond_th_motion}) is fulfilled for
+$\th$ in that interval, whatever the values
+of $E$, $\mu$ and $L$. If $L\not=0$, this interval cannot be extended to
+full range of $\theta$, namely $[0,\pi]$, since the left-hand side of (\ref{e:gek:cond_th_motion})
+is dominated by $-L^2/\sin^2\th$ when $\th\to 0$ or $\pi$, and this term diverges to $-\infty$.
+Even when $L=0$, (\ref{e:gek:cond_th_motion}) allows for $\th=0$ or $\pi$
+only if $a^2 (E^2 - \mu^2) \geq - Q$.
+This condition is always satisfied for a null geodesic ($\mu=0$) but may
+fail for a timelike one if $E^2 < \mu^2$.
+We conclude that
+\begin{greybox}
+A geodesic with a positive Carter constant $Q$ has a $\th$-motion of limited
+amplitude $\th\in [\pi/2-\alpha, \pi/2+\alpha]$ ($0<\alpha<\pi/2$)
+around the equatorial plane, except if
+\be \label{e:gek:cond_reach_axis}
+    L = 0 \quad\mbox{and}\quad a^2 (E^2 - \mu^2) \geq - Q ,
+\ee
+in which case one has $\alpha=\pi/2$, so that the geodesic may reach the rotation axis.
+\end{greybox}
+\begin{remark}
+For $L=0$ and values of $E$, $\mu$ and $Q$ saturating the inequality in (\ref{e:gek:cond_reach_axis}),
+i.e. obeying $0 < Q = a^2 (\mu^2 - E^2)$, one has $\Theta(\th) = Q(1-\cos^2\th)$,
+so that $\Theta(0) = 0$ and $\Theta(\pi) = 0$. A geodesic along the rotation
+axis is then a solution.
+\end{remark}
+
+\subsubsection{Case $Q = 0$}
+
+\subsubsection{Case $Q < 0$}
+
+\subsection{$r$-motion}
+
+\subsection{Geodesics reaching or emanating from the ring singularity}
+
+\subsection{Moving to the negative $r$ side}
 
 
+\section{Timelike geodesics}
+
+\subsection{Parametrization}
+
+\subsection{Bound geodesics}
+
+\subsection{Equatorial geodesics}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Null geodesics}
+
+\subsection{Parametrization}
+
+\subsection{Principal null geodesics}
+
+\subsection{Spherical null geodesics}
 
 
 
