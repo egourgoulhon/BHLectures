@@ -343,13 +343,17 @@ Thanks to it, we may rewrite (\ref{e:gek:def_Theta}) as
     \encadre{ \Theta(\th) = Q + \cos^2\th \left[ a^2 (E^2 - \mu^2)
     - \frac{L^2}{\sin^2\th} \right] } .
 \ee
-In the literature, $Q$ is often called \emph{Carter's constant} as well. A difference
-with the original Carter constant $\mathscr{K}$ is that the latter is always non-negative,
+Following the standard usage, we call $Q$ the \defin{Carter constant}\index{Carter!constant}
+as well. To distinguish between the two Carter constants, we shall specify \emph{Carter constant $Q$}
+or \emph{Carter constant $\mathscr{K}$}. As we shall see in Sec.~\ref{s:gek:th_motion},
+$Q$ is well adapted to the description of the $\th$-motion of geodesics. On the other
+hand, a nice property of $\mathscr{K}$, which is not shared by $Q$, is to be always non-negative,
 as Eq.~(\ref{e:gek:def_Theta}) shows (given that $\Theta(\th) \geq 0$ by virtue of
 Eq.~(\ref{e:gek:p_th_Th})):
 \be
     \mathscr{K} \geq 0 .
 \ee
+
 If the particle $\mathscr{P}$ reaches the asymptotic region $r\gg m$, we deduce from
 Eqs.~(\ref{e:gek:def_Q}) and (\ref{e:gek:Kcarter_asymptot}) the following approximate
 value of $Q$:
@@ -362,6 +366,41 @@ the part of $\mathscr{P}$'s angular momentum (measured by the asymptotic inertia
 observer) that is not in $L$. Using
 notations of Sec.~\ref{s:gek:Carter_const}, we have $L = L_{\rm tot}^{(\ph)}$,
 so that $ \w{L}_{\rm tot} \cdot \w{L}_{\rm tot} - L^2 = (L_{\rm tot}^{(\th)})^2$.
+
+\begin{remark}
+One may derive the Carter constant $Q$ from a Killing tensor, $\w{\tilde{K}}$ say,
+that is related to the Walker-Penrose Killing tensor $\w{K}$ by
+\be \label{e:gek:def_tilde_K}
+    \w{\tilde{K}} := \w{K} - \uu{\tilde{\eta}}\otimes\uu{\tilde{\eta}} ,
+\ee
+with
+\be
+    \w{\tilde{\eta}} := \w{\eta} + a \w{\xi} .
+\ee
+Being a linear combination with constant coefficients of the Killing vectors
+$\w{\eta}$ and $\w{\xi}$, $\w{\tilde{\eta}}$ is itself a Killing vector.
+It follows that $\uu{\tilde{\eta}}\otimes\uu{\tilde{\eta}}$ is a Killing tensor
+(cf. Example~\ref{x:geo:trivial_Killing_tensors} in Sec.~\ref{e:geo:Killing_tensor}),
+so that (\ref{e:gek:def_tilde_K}) does define a Killing tensor. Applying it to the
+4-momentum $\w{p}$, we get
+\[
+    \w{\tilde{K}}(\w{p},\w{p}) =  \underbrace{\w{K}(\w{p},\w{p})}_{\mathscr{K}}
+        - (\underbrace{\langle\uu{\eta},\w{p}\rangle}_{L}
+        + a \underbrace{\langle\uu{\xi},\w{p}\rangle}_{-E})^2 .
+\]
+Comparing with the definition (\ref{e:gek:def_Q}), we conclude that
+\be
+    Q = \w{\tilde{K}}(\w{p},\w{p}) .
+\ee
+As a side remark, we note that
+the Boyer-Lindquist components of the contravariant tensor associated to $\w{\tilde{K}}$ by
+metric duality have an expression particularly simple in terms of those of
+the inverse metric (cf. the notebook~\ref{s:sam:Kerr_Killing_tensor}):
+\be
+    \tilde{K}^{\alpha\beta} = - a^2 \cos^2 \theta \, g^{\alpha\beta}
+    + \operatorname{diag}(-a^2\cos^2\theta, 0, 1, \tan^{-2}\theta)^{\alpha\beta} .
+\ee
+\end{remark}
 
 In view of the relation (\ref{e:gek:pa_der_xa}) between the $p^\alpha$'s
 and the derivatives of the functions $x^\alpha(\lambda)$, we may
@@ -644,7 +683,143 @@ is winding around it in terms of the Boyer-Lindquist coordinates at exactly the
 rotation velocity $\Omega_{\rm in}$ of $\Hor_{\rm in}$.
 \end{greybox}
 
-\subsection{$\th$-motion}
+\subsection{$\th$-motion} \label{s:gek:th_motion}
+
+Given expression~(\ref{e:gek:Theta_Q}) for $\Theta(\th)$,
+the first-order equation of motion (\ref{e:gek:dthdl_Mino}) can be rewritten as
+\be \label{e:gek:th_eff_potential}
+    \encadre{ \left( \derd{\th}{\lambda'} \right)^2 + V(\th) = Q },
+\ee
+with
+\be \label{e:gek:def_V_th}
+  \encadre{  V(\th) := \cos^2\th \left[ a^2(\mu^2 - E^2) + \frac{L^2}{\sin^2\th} \right] }.
+\ee
+We recognize in Eq.~(\ref{e:gek:th_eff_potential}) the first integral of a
+(non-relativistic) 1-dimensional motion in the potential $V(\th)$, which we
+shall call the
+\defin{latitudinal effective potential}\index{latitudinal!effective potential}\index{effective!potential!latitudinal --}. The discussion of the geodesic $\th$-motion
+is then based on the properties of that potential, $Q$ playing in the right-hand side
+of Eq.~(\ref{e:gek:th_eff_potential}) the role of
+the constant total ``energy''. Since $(\D\th / \D\lambda')^2 \geq 0$, the
+motion is possible only if $Q\geq V(\th)$, which means that in a plot of $V(\th)$
+the allowed range of $\th$ is such that the graph of $V(\th)$ must lie below
+the horizontal line of ordinate equal to $Q$.
+
+We shall distinguish the
+case $L=0$ from $L\not=0$, since the behaviour of $V(\th)$ is drastically different
+in these two cases.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.49\textwidth]{gek_th_pot_L_0_low_E.pdf}
+\ \includegraphics[width=0.49\textwidth]{gek_th_pot_L_0_high_E.pdf}}
+\caption[]{\label{f:gek:th_pot_L_0} \footnotesize
+Latitudinal effective potential $V(\th)$ in the case $L=0$. $V(\th)$ is plotted
+in units of $V_0 := a^2|\mu^2 - E^2|$.
+The left figure is for $E^2 < \mu^2$, with horizontal trajectories corresponding
+to three values of $Q$: $0$, $Q_1 = 0.75 V_0$ and $Q_2 = 1.2 V_0$.
+The right figure is for $E^2 > \mu^2$, with horizontal trajectories corresponding
+to three values of $Q$: $Q_1 = -0.3 V_0$, $0$ and $Q_2 = 0.2 V_0$.
+%\textsl{[Figure produced with the notebook \ref{s:sam:ges_eff_pot_null}]}
+}
+\end{figure}
+
+
+
+\subsubsection{Geodesics with $L=0$}
+
+If $L=0$, the latitudinal effective potential reduces to $V(\th)=a^2(\mu^2 - E^2)\cos^2\th$.
+We have then three subcases:
+
+\begin{itemize}
+\item \textbf{Case $E^2 < \mu^2$}: the corresponding graph of $V(\th)$ is shown in
+Fig.~\ref{f:gek:th_pot_L_0} (left part); we deduce immediately from it that
+$Q\geq 0$, with
+\begin{itemize}
+\item $Q=0$: the motion is confined to the equatorial
+plane $\th=\pi/2$; since it corresponds to a minimum of the effective potential, this
+is a stable configuration.
+\item $0<Q< a^2(\mu^2 - E^2)$: $\th$ ocillates between
+two turning points, which are symmetric about the equatorial plane:
+$\th_0 := \arccos\sqrt{Q/(a^2(\mu^2 - E^2))}$
+and $\pi/2-\th_0$.
+\item $Q = a^2(\mu^2 - E^2)$: the geodesic reaches the rotation axis at
+$\th=0$ or $\th=\pi$, with a vanishing velocity $\D\th / \D\lambda'$.
+\item $Q > a^2(\mu^2 - E^2)$:
+the range of $\th$ is not limited and each time the geodesic reaches the
+rotation axis, it crosses it (since the velocity $\D\th / \D\lambda'$
+is not vanishing there).
+\end{itemize}
+\item \textbf{Case $E^2 = \mu^2$}: $V(\th)=0$ and Eq.(\ref{e:gek:th_eff_potential})
+reduces to $(\D\th/\D\lambda')^2 = Q$. This implies $Q\geq 0$, with
+\begin{itemize}
+\item $Q=0$: the geodesic lies at a constant value of $\th$, within the range
+$[0,\pi]$
+\item $Q>0$: the solution is $\th(\lambda') = \pm \sqrt{Q}\, \lambda' + \th_0$, which
+means that $\th$ varies monotically along the geodesic, crossing the rotation
+axis an infinite number of times.
+\end{itemize}
+\item \textbf{Case $E^2 > \mu^2$}: the corresponding graph of $V(\th)$ is shown in
+Fig.~\ref{f:gek:th_pot_L_0} (right part); the Carter constant must obey
+$Q \geq - a^2 (E^2 - \mu^2)$, with
+\begin{itemize}
+\item $Q=-a^2(E^2 - \mu^2)$: only $\th=0$ and
+$\th=\pi$ are possible and they correspond to minima of $V(\th)$:
+the geodesic is stably located on the rotation axis.
+\item $-a^2(E^2 - \mu^2) < Q < 0$: the geodesic oscillates about the rotation
+axis, without reaching the equator; one has either $\th\in[0,\th_0]$ or
+$\th\in [\pi - \th_0,\pi]$, with the turning point value
+$\th_0 := \arccos\sqrt{|Q|/(a^2(E^2 - \mu^2))} < \pi/2$.
+\item $Q=0$: the geodesic approaches asymptotically the equator, which is
+reached with a vanishing velocity $\D\th/\D\lambda'$.
+\item $Q>0$: $\th$ varies in all the range $[0,\pi]$; when
+the geodesic reaches the rotation axis, it crosses it.
+\end{itemize}
+\end{itemize}
+
+
+\begin{figure}
+\centerline{\includegraphics[width=0.49\textwidth]{gek_th_pot_high_L.pdf}
+\ \includegraphics[width=0.49\textwidth]{gek_th_pot_low_L.pdf}}
+\caption[]{\label{f:gek:th_pot_L_non0} \footnotesize
+Latitudinal effective potential $V(\th)$ in the case $L\neq0$.
+The left figure is for $a^2(E^2 - \mu^2) \leq L^2$, with horizontal trajectories corresponding
+to two values of $Q$: $0$ and $Q_1= 4 L^2$.
+The right figure is for $a^2(E^2 - \mu^2) > L^2$, with horizontal trajectories corresponding
+to four values of $Q$: $Q_{\rm min}$, $Q_1 = - 2 L^2$, $0$ and $Q_2 = 2 L^2$.
+%\textsl{[Figure produced with the notebook \ref{s:sam:ges_eff_pot_null}]}
+}
+\end{figure}
+
+
+\subsubsection{Geodesics with $L\not=0$}
+
+When $L\not=0$, we see from expression~(\ref{e:gek:def_V_th}) for $V$ that
+$V(\th) \to +\infty$ when $\th\to 0$ or $\pi$. Moreover, we have
+\[
+    \derd{V}{\th} = - 2 \cos\th\sin\th \left[ a^2 (\mu^2 - E^2) + \frac{L^2}{\sin^4\th} \right] .
+\]
+The extrema of $V$ in $(0,\pi)$ are then given by
+\be
+    \derd{V}{\th} = 0 \iff
+        \th = \frac{\pi}{2} \quad\mbox{or}\quad
+        \sin^4\th = \frac{L^2}{a^2(E^2 - \mu^2)} .
+\ee
+We are thus led to distinguish two cases, depending whether or not the
+equation involving $\sin^4\th$ has solutions distinct from $\pi/2$:
+\begin{itemize}
+\item $a^2(E^2 - \mu^2) \leq L^2$: $V(\th)$ has a single extremum, which is
+necessarily a miminum, at $\th = \pi/2$.
+\item $a^2(E^2 - \mu^2) > L^2$: $V(\th)$ has three extrema, located at
+$\th=\th_*$, $\pi/2$ and $\pi-\th_*$ with
+\be
+    \th_* := \arcsin\sqrt{\frac{|L|}{a\sqrt{E^2 - \mu^2}}}
+    \quad\mbox{and}\quad 0 < \th_* < \frac{\pi}{2} .
+\ee
+$\th_*$ and $\pi-\th_*$ correspond to a minimum, while $\pi/2$ to a local maximum
+of $V(\th)$.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%
 
 The property $\Theta(\th) \geq 0$ [Eq.~(\ref{e:gek:R_Theta_positive})]
 constrains the geodesic motion in $\th$. Given the expression (\ref{e:gek:Theta_Q})
@@ -657,12 +832,12 @@ One may then consider three cases, depending on the sign of the Carter constant 
 
 \subsubsection{Case $Q > 0$}
 
-For $\th=\pi/2$ (the equator), Eq.~(\ref{e:gek:cond_th_motion}) reduces to $0 \geq -Q$.
-Therefore, if $Q > 0$, there always exists an interval $[\pi/2-\alpha, \pi/2+\alpha]$
-($0<\alpha \leq\pi/2$)
-around $\pi/2$ such that (\ref{e:gek:cond_th_motion}) is fulfilled for
+For $\th=\pi/2$ (the equator), the constraint~(\ref{e:gek:cond_th_motion}) reduces to $0 \geq -Q$.
+Therefore, if $Q > 0$, there always exists an interval around $\pi/2$,
+$[\pi/2-\alpha, \pi/2+\alpha]$ say, with $0<\alpha \leq\pi/2$,
+such that (\ref{e:gek:cond_th_motion}) is fulfilled for
 $\th$ in that interval, whatever the values
-of $E$, $\mu$ and $L$. If $L\not=0$, this interval cannot be extended to
+of $E$, $\mu$ and $L$. If $L\not=0$, this interval cannot be extended to the
 full range of $\theta$, namely $[0,\pi]$, since the left-hand side of (\ref{e:gek:cond_th_motion})
 is dominated by $-L^2/\sin^2\th$ when $\th\to 0$ or $\pi$, and this term diverges to $-\infty$.
 Even when $L=0$, (\ref{e:gek:cond_th_motion}) allows for $\th=0$ or $\pi$
@@ -687,6 +862,41 @@ axis is then a solution.
 \end{remark}
 
 \subsubsection{Case $Q = 0$}
+
+If $Q=0$, condition (\ref{e:gek:cond_th_motion}) is equivalent to
+(i) $\cos^2\th = 0$, i.e. $\th=\pi/2$ or (ii)
+$a^2 (E^2 - \mu^2) - L^2 / \sin^2\th \geq 0$, i.e.
+\be \label{e:gek:sin2th_ii}
+    \sin^2\th \geq \frac{L^2}{a^2(E^2-\mu^2)} ,
+\ee
+which implies $a^2 (E^2 - \mu^2) \geq L^2$ and $\th\in[\th_0,\pi/2]$ or
+$\th\in[\pi/2,\pi-\th_0]$, with
+\be \label{e:gek:def_th_0_Q_0}
+    \th_0 := \arcsin\left( \frac{|L|}{a\sqrt{E^2 - \mu^2}} \right) .
+\ee
+In case (i), one has $\Theta(\th) = 0$ so that the equation of motion
+(\ref{e:gek:dthdl}) is fulfilled. In case (ii), a motion at
+constant $\th$ is possible as well, the constant value
+being either $\th_0$ as given by (\ref{e:gek:def_th_0_Q_0}) or $\pi-\th_0$.
+Indeed, $\Theta(\th_0) = 0$ so that (\ref{e:gek:dthdl}) is fulfilled by
+$\th(\lambda)=\th_0$. When $\th$ varies in case (ii), we have $\Theta(\th) = 0$
+for $\th=\pi/2$, so that the equator is a turning point in the $\th$-motion.
+Accordingly, the particle never crosses it. To summarize:
+\begin{greybox}
+A geodesic with a vanishing Carter constant $Q$ is either a geodesic confined
+to the equatorial plane ($\th=\pi/2$) or a geodesic whose constants of motion
+$E$, $L$ and $\mu$ obey
+\be
+    a^2 (E^2 - \mu^2) \geq L^2 .
+\ee
+In the latter case, the geodesic is located at a constant value
+of $\th$, which is $\th_0$ as given by Eq.~(\ref{e:gek:def_th_0_Q_0}) or
+$\pi-\th_0$, or has a $\th$-motion on one side of equatorial
+plane, with $\th$ ranging from either $\th_0$ to $\pi/2$ or
+$\pi/2$ to $\pi-\th_0$. The $\th$-motion extends to the rotation axis
+(i.e. $\th_0=0$) if, and only if, $L=0$.
+\end{greybox}
+
 
 \subsubsection{Case $Q < 0$}
 
