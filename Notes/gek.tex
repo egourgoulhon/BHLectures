@@ -427,22 +427,93 @@ depends on $a$ only.
 
 In the system (\ref{e:gek:eom_first_order}), $\eps_r$
 is $+1$ (resp. $-1$) in the parts of the geodesic $\Li$ where $r$ increases
-(resp. decreases) with $\lambda$. The factor $\eps_r$ changes sign at points where $\D r/\D\lambda = 0$. Such points
-are called \defin{radial turning points}\index{radial!turning point}\index{turning point!radial --}. According to Eq.~(\ref{e:gek:drdl}), they correspond to the roots of the polynomial $R(r)$:
-\be
-    \derd{r}{\lambda} = 0 \iff R(r) = 0 .
-\ee
-Similarly, $\eps_\th$
+(resp. decreases) with $\lambda$. Similarly, $\eps_\th$
 is $+1$ (resp. $-1$) in the parts of $\Li$ where $\th$ increases
-(resp. decreases) with $\lambda$ and $\eps_\th$ changes sign at the
-\defin{latitudinal turning points}\index{latitudinal!turning point}\index{turning point!latitudinal --}, where $\D\th/\D\lambda = 0$. According to Eq.~(\ref{e:gek:dthdl}),
-these turning points are given by the roots of the function $\Theta(\th)$:
-\be
-    \derd{\th}{\lambda} = 0 \iff \Theta(\th) = 0 .
+(resp. decreases) with $\lambda$.
+
+\subsection{Turning points}
+
+Let $\Li$ be a geodesic that is not sticked at a constant value of the
+coordinate $r$.
+We define a \defin{radial turning point}\index{radial!turning point}\index{turning point!radial --} of $\Li$ as a point $p_0\in\Li$, the $r$-coordinate $r_0$ of which obeys
+\be \label{e:gek:def_r_turning}
+    R(r_0) = 0 \quad\mbox{and}\quad R'(r_0) \neq 0 ,
 \ee
+i.e. $r_0$ is a single zero of the polynomial $R$.
+
+We have then
+\be \label{e:gek:der_r_turning}
+   \left. \derd{r}{\lambda} \right| _{\lambda_0} = 0
+   \quad\mbox{and}\quad
+   \left. \frac{\D^2 r}{\D\lambda^2} \right| _{\lambda_0} = \frac{R'(r_0)}{2\rho_0^4} \neq 0 ,
+\ee
+where $\lambda_0$ is the value of the affine parameter $\lambda$ at $p_0$
+and $\rho_0 := \rho(p_0)$.
+\begin{proof}
+The vanishing of $\D r/\D\lambda$ at $\lambda_0$ follows immediately
+from Eq.~(\ref{e:gek:drdl}) with $R(r_0)=0$, since $\rho^2$ never vanishes
+on $\M$. Besides, by
+taking the derivative of Eq.~(\ref{e:gek:drdl}) with respect to $\lambda$, we
+get
+\[
+    2 \left(r \derd{r}{\lambda} + a^2 \cos\th\sin\th \derd{\th}{\lambda} \right)
+    \derd{r}{\lambda} + \rho^2 \frac{\D^2 r}{\D\lambda^2} =
+    \eps_r \frac{R'(r)}{2\sqrt{R(r)}} \derd{r}{\lambda} = \frac{R'(r)}{2\rho^2} .
+\]
+At $\lambda=\lambda_0$, the first term in left-hand side vanishes identically,
+due to the $\D r/\D\lambda$ factor,
+and we get the second part of (\ref{e:gek:der_r_turning}).
+\end{proof}
+
+We deduce from the result (\ref{e:gek:der_r_turning}) that at $\lambda=\lambda_0$,
+$\D r/\D\lambda$ moves from positive to negative values or vice-versa
+(depending on the sign of $R'(r_0)$), which means that the function $r(\lambda)$
+switches from increasing to decreasing or vice-versa, hence the name \emph{radial
+turning point}. The factor $\eps_r=\pm 1$ in Eq.~(\ref{e:gek:drdl}) necessarily
+changes sign at $\lambda=\lambda_0$.
+
+\begin{remark} \label{r:gek:der_r_analytic}
+For a generic analytic function $r(\lambda)$ with $\D r/\D \lambda=0$ at
+$\lambda_0$, the condition $\D^2 r/\D\lambda^2\neq 0$ at $\lambda_0$
+is sufficient but not necessary for having $r$ change its direction of variation there.
+Indeed, one can have the same property with $\D^2 r/\D\lambda^2= 0$ and higher order derivatives vanishing up to some even order $k$ for which
+$\D^k r/\D\lambda^k\neq 0$. However, in the present case,
+$\D^2 r/\D\lambda^2=0$ would imply $R'(r_0)=0$ and we shall see
+Sec.~\ref{s:gek:asymptotic_values} that a geodesic can reach such a point only asymptotically,
+i.e. for $\lambda\to +\infty$. Hence it cannot be a turning point.
+\end{remark}
 
 
-\subsection{Equations of motion in terms of Mino time}
+Similarly, if $\Li$ is a geodesic that is not sticked at a constant value of the
+coordinate $\th$, we define a \defin{latitudinal turning point}\index{latitudinal!turning point}\index{turning point!latitudinal --} of $\Li$ as a point $p_0\in\Li$, the
+$\th$-coordinate $\th_0$ of which obeys
+\be \label{e:gek:def_th_turning}
+    \Theta(\th_0) = 0 \quad\mbox{and}\quad \Theta'(\theta_0) \neq 0 .
+\ee
+We deduce then from the equation of motion (\ref{e:gek:dthdl}):
+\be \label{e:gek:der_th_turning}
+   \left. \derd{\th}{\lambda} \right| _{\lambda_0} = 0
+   \quad\mbox{and}\quad
+   \left. \frac{\D^2 \th}{\D\lambda^2} \right| _{\lambda_0} = \frac{\Theta'(\th_0)}{2\rho_0^4} \neq 0 .
+\ee
+This implies that at a latitudinal turning point, the function $\th(\lambda)$
+switches from increasing to decreasing or vice-versa. The factor $\eps_\th=\pm 1$ in Eq.~(\ref{e:gek:dthdl}) necessarily
+changes sign at such a point.
+
+\begin{remark}
+A comment similar to Remark~\ref{r:gek:der_r_analytic} can be made:
+a geodesic with varying $\th$ that has $\D\th/\D\lambda = 0$ for some finite
+value of $\lambda$
+cannot have $\D^2\th/\D\lambda^2 = 0$ at the same point, since we shall see
+in Sec.~\ref{s:gek:asymptotic_values}
+that a value of $\th$ with both $\Theta(\th)=0$
+and $\Theta'(\th)=0$ can only be reached asymptotically along a geodesic.
+Hence (\ref{e:gek:def_th_turning})
+is a necessary and sufficient condition for a latitudinal turning point.
+\end{remark}
+
+
+\subsection{Equations of motion in terms of Mino time} \label{s:gek:Mino_time}
 
 In view of the right-hand sides of the system (\ref{e:gek:eom_first_order}),
 it is quite natural to introduce along the geodesic $\Li$ the new
@@ -457,7 +528,7 @@ leads to a well-defined parameter along $\Li$. Moreover, since $\rho^2>0$, this
 parameter increases towards the future, as $\lambda$. A difference between
 the two parametrizations is that $\lambda'$ is not in general\footnote{The only
 exception is for a circurlar orbit at constant $\theta$, since then $\rho^2$
-is constant and Eq.~(\ref{e:gek:def_Mino_time}) defines an affine transformation
+is constant and Eq.~(\ref{e:gek:def_Mino_time}) defines an affine relation
 between $\lambda$ and $\lambda'$.} an affine parameter
 of $\Li$, contrary to $\lambda$.
 The parameter $\lambda'$ is called \defin{Mino time}\index{Mino!time}\index{time!Mino --}
@@ -480,15 +551,39 @@ differential equation for the function $r(\lambda')$, while Eq.~(\ref{e:gek:dthd
 is an ordinary differential equation for the function $\th(\lambda')$. This was
 not the case for Eqs.~(\ref{e:gek:drdl}) and (\ref{e:gek:dthdl}) since $\rho^2$ is
 a function of both $r$ and $\th$.
+
 Equation~(\ref{e:gek:drdl_Mino}) can be integrated by the method of separation
-of variables. On a portion of $\Li$ without any radial turning point, this yields
-\be
+of variables. On a part of $\Li$ where $R(r)\neq 0$, this yields
+\be \label{e:gek:lp_int_dr_ov_R}
     \lambda' - \lambda'_0 = \eps_r \int_{r_0}^r \frac{\D \bar{r}}{\sqrt{R(\bar{r})}} ,
 \ee
-with $r_0 := r(\lambda'_0)$.
-If there
-are $M\geq 1$ radial turning points $r_1,\ldots, r_M$ between $\lambda'_0$ and $\lambda'$,
-the formula becomes
+with $r_0 := r(\lambda'_0)$. Note that $\eps_r=\pm 1$ is constant along
+the considered part of $\Li$
+and could be taken out of the integral because the hypothesis $R(r)\neq 0$
+excludes any radial turning point between $\lambda'_0$ and $\lambda'$.
+
+The solution (\ref{e:gek:lp_int_dr_ov_R})
+can be extended to include a turning point at one or two of its boundaries,
+despite $R(r)=0$ there.
+Indeed, let us assume that $r=r_1$ is a radial turning point of $\Li$.
+Due to the fact that $R'(r_1)\neq 0$ [Eq.~(\ref{e:gek:def_r_turning})], the
+integral in the right-hand side of (\ref{e:gek:lp_int_dr_ov_R}) with $r=r_1$
+converges, since
+the taylor expansion $R(\bar{r}) = R'(r_1) (\bar{r} - r_1) + O((\bar{r} - r_1)^2)$
+make the integral behave near $r_1$
+as\footnote{We assume here $r_0<r_1$, so that the constraint
+$R(\bar{r})\geq 0$ on the interval $[r_0,r_1]$ implies $R'(r_1)<0$.}
+\[
+    \frac{1}{\sqrt{-R'(r_1)}} \int_{r_0}^{r_1} \frac{\D \bar{r}}{\sqrt{r_1 - \bar{r}}} ,
+\]
+which is a convergent integral.
+\begin{remark}
+This is the same reasoning as in Sec.~\ref{s:gis:deflect_winding}.
+\end{remark}
+
+From the above property, we deduce that the solution of Eq.~(\ref{e:gek:drdl_Mino})
+with $M\geq 1$ radial turning points $r_1,\ldots, r_M$ between $\lambda'_0$ and $\lambda'$
+is
 \be \label{e:gek:Minotime_r_sum}
     \lambda' - \lambda'_0 = \eps_r^{(0)} \int_{r_0}^{r_1} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
     + \sum_{i=1}^{M-1} \eps_{r}^{(i)}  \int_{r_i}^{r_{i+1}} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
@@ -509,12 +604,6 @@ between $\lambda'_0$ and $\lambda'$, Eq.~(\ref{e:gek:Minotime_r_sum}) gives
     \end{cases}
 \]
 where all the integrals in the right-hand side are positive.
-Moreover, despite $R(r_i) = 0$ for $1\leq r_i \leq M$
-(by definition of a turning point), all the integrals involved in
-Eq.~(\ref{e:gek:Minotime_r_sum}) are finite provided that the $r_i$'s are \emph{single}
-zeros of $R$ (same argument as in Sec.~\ref{s:gis:deflect_winding}). If $r_i$
-happens to be a double zero of $R$, then the integral having $r_i$ as a bound
-is divergent.
 
 The right-hand side of Eq.~(\ref{e:gek:Minotime_r_sum}) is actually a path
 integral and is often abriged by means of a slash notation:
@@ -575,6 +664,8 @@ has been first derived by Daniel Wilkins\index{Wilkins, D.} in 1972 \cite{Wilki7
 starting from Carter's system and performing the transformation to Boyer-Lindquist
 coordinates.
 \end{hist}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{General properties of geodesics}
 
@@ -683,6 +774,53 @@ is winding around it in terms of the Boyer-Lindquist coordinates at exactly the
 rotation velocity $\Omega_{\rm in}$ of $\Hor_{\rm in}$.
 \end{greybox}
 
+\subsection{Asymptotic radial and latitudinal values} \label{s:gek:asymptotic_values}
+
+Let us reconsider the argument in Sec.~\ref{s:gek:Mino_time}
+that lead to extend the integral
+(\ref{e:gek:lp_int_dr_ov_R}) to $r=r_1$, where $r_1$ corresponded to
+a radial turning point, i.e. fulfilled $R(r_1)=0$ and $R'(r_1)\neq 0$.
+If we assume instead that $R(r_1)=0$, $R'(r_1)=0$ and
+$R''(r_1)\neq 0$, i.e. that $r_1$ is a double zero of the polynomial $R$,
+the integral in the right-hand side of Eq.~(\ref{e:gek:lp_int_dr_ov_R}) with $r=r_1$ behaves
+near $r_1$ as
+\[
+    \frac{\sqrt{2}}{\sqrt{R''(r_1)}} \int_{r_0}^{r_1} \frac{\D \bar{r}}{r_1 - \bar{r}} ,
+\]
+which is a divergent integral. If $r_1$ is a higher order zero of $R$,
+the divergence is even worse, being trigered by a higher power of $1/(r_1 - \bar{r})$.
+Consequently, Eq.~(\ref{e:gek:lp_int_dr_ov_R}) with $r=r_1$
+implies the Mino time diverges: $\lambda'\to +\infty$. Since $\rho^2 > 0$,
+provided that $\rho^2$
+does not tend to $0$ (the ring singularity) as $\lambda'\to +\infty$, this
+implies that the affine parameter $\lambda$ tends to $+\infty$ as well, given
+the relation (\ref{e:gek:def_Mino_time}) between the two parameters.
+Hence we conclude
+\begin{greybox}
+Let $\Li$ be a geodesic of Kerr spacetime and $R(r)$ the associated polynomial
+(\ref{e:gek:def_R}).
+A point away from the ring singularity $\ring$ and of $r$-coordinate $r_1$
+such that both $R(r_1) = 0$ and $R'(r_1) = 0$
+can only be reached asymptotically by $\Li$, i.e. in the limit
+$\lambda\to \pm\infty$ of the affine parameter
+$\lambda$. We call $r_1$ a \defin{radial asymptotic value}\index{radial!asymptotic value}\index{asymptotic!value!radial --} of the geodesic $\Li$.
+\end{greybox}
+This property explains why $R(r_0) = 0$ and $R'(r_0) \neq 0$ is a necessary condition
+to have a radial turning point (cf. Remark~\ref{r:gek:der_r_analytic} on page~\pageref{r:gek:der_r_analytic}).
+
+By exactly the same reasoning, we have
+\begin{greybox}
+Let $\Li$ be a geodesic of Kerr spacetime and $\Theta(\th)$ the associated function
+(\ref{e:gek:def_Theta}).
+A point away from the ring singularity $\ring$ and of $\th$-coordinate $\th_1$
+such that both $\Theta(\th_1) = 0$ and $\Theta'(\th_1) = 0$
+can only be reached asymptotically by $\Li$, i.e. in the limit
+$\lambda\to \pm\infty$ of the affine parameter
+$\lambda$. We call $\th_1$ a \defin{latitudinal asymptotic value}\index{latitudinal!asymptotic value}\index{asymptotic!value!latitudinal --} of the geodesic $\Li$.
+\end{greybox}
+
+
+
 \subsection{$\th$-motion} \label{s:gek:th_motion}
 
 Given expression~(\ref{e:gek:Theta_Q}) for $\Theta(\th)$,
@@ -694,6 +832,11 @@ with
 \be \label{e:gek:def_V_th}
   \encadre{  V(\th) := \cos^2\th \left[ a^2(\mu^2 - E^2) + \frac{L^2}{\sin^2\th} \right] }.
 \ee
+Note that $V(\th)$ is related to $\Theta(\th)$ by
+\be
+    \Theta(\th) = Q - V(\th).
+\ee
+
 We recognize in Eq.~(\ref{e:gek:th_eff_potential}) the first integral of a
 (non-relativistic) 1-dimensional motion in the potential $V(\th)$, which we
 shall call the
@@ -710,15 +853,17 @@ case $L=0$ from $L\not=0$, since the behaviour of $V(\th)$ is drastically differ
 in these two cases.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.49\textwidth]{gek_th_pot_L_0_low_E.pdf}
-\ \includegraphics[width=0.49\textwidth]{gek_th_pot_L_0_high_E.pdf}}
+\centerline{\includegraphics[height=0.24\textheight]{gek_th_pot_L_0_low_E.pdf}
+\ \includegraphics[height=0.24\textheight]{gek_th_pot_L_0_high_E.pdf}}
 \caption[]{\label{f:gek:th_pot_L_0} \footnotesize
 Latitudinal effective potential $V(\th)$ in the case $L=0$. $V(\th)$ is plotted
 in units of $V_0 := a^2|\mu^2 - E^2|$.
-The left figure is for $E^2 < \mu^2$, with horizontal trajectories corresponding
-to three values of $Q$: $0$, $Q_1 = 0.75 V_0$ and $Q_2 = 1.2 V_0$.
-The right figure is for $E^2 > \mu^2$, with horizontal trajectories corresponding
-to three values of $Q$: $Q_1 = -0.3 V_0$, $0$ and $Q_2 = 0.2 V_0$.
+The left figure is for $E^2 < \mu^2$, with colored dots or horizontal lines
+corresponding to trajectories for three values of $Q$:
+$0$, $Q_1 = 0.75 V_0$ and $Q_2 = 1.2 V_0$.
+The right figure is for $E^2 > \mu^2$, with trajectories corresponding
+to four values of $Q$: $Q_{\rm min} = -a^2(E^2 - \mu^2)$,
+$Q_1 = -0.3 V_0$, $0$ and $Q_2 = 0.2 V_0$.
 %\textsl{[Figure produced with the notebook \ref{s:sam:ges_eff_pot_null}]}
 }
 \end{figure}
@@ -742,12 +887,14 @@ is a stable configuration.
 two turning points, which are symmetric about the equatorial plane:
 $\th_0 := \arccos\sqrt{Q/(a^2(\mu^2 - E^2))}$
 and $\pi/2-\th_0$.
-\item $Q = a^2(\mu^2 - E^2)$: the geodesic reaches the rotation axis at
-$\th=0$ or $\th=\pi$, with a vanishing velocity $\D\th / \D\lambda'$.
+\item $Q = a^2(\mu^2 - E^2)$: $\th=0$ and $\th=\pi$
+are either unstable positions or
+latitudinal asymptotic values (cf. Sec.~\ref{s:gek:asymptotic_values}), i.e.
+the geodesic reaches the rotation axis for $\lambda\to+\infty$.
 \item $Q > a^2(\mu^2 - E^2)$:
 the range of $\th$ is not limited and each time the geodesic reaches the
 rotation axis, it crosses it (since the velocity $\D\th / \D\lambda'$
-is not vanishing there).
+does not vanish there).
 \end{itemize}
 \item \textbf{Case $E^2 = \mu^2$}: $V(\th)=0$ and Eq.(\ref{e:gek:th_eff_potential})
 reduces to $(\D\th/\D\lambda')^2 = Q$. This implies $Q\geq 0$, with
@@ -769,8 +916,9 @@ the geodesic is stably located on the rotation axis.
 axis, without reaching the equator; one has either $\th\in[0,\th_0]$ or
 $\th\in [\pi - \th_0,\pi]$, with the turning point value
 $\th_0 := \arccos\sqrt{|Q|/(a^2(E^2 - \mu^2))} < \pi/2$.
-\item $Q=0$: the geodesic approaches asymptotically the equator, which is
-reached with a vanishing velocity $\D\th/\D\lambda'$.
+\item $Q=0$: $\th=\pi/2$ is either an unstable position or
+a latitudinal asymptotic value, i.e. the geodesic tends to the equatorial
+plane when $\lambda\to+\infty$.
 \item $Q>0$: $\th$ varies in all the range $[0,\pi]$; when
 the geodesic reaches the rotation axis, it crosses it.
 \end{itemize}
@@ -782,9 +930,11 @@ the geodesic reaches the rotation axis, it crosses it.
 \ \includegraphics[width=0.49\textwidth]{gek_th_pot_low_L.pdf}}
 \caption[]{\label{f:gek:th_pot_L_non0} \footnotesize
 Latitudinal effective potential $V(\th)$ in the case $L\neq0$.
-The left figure is for $a^2(E^2 - \mu^2) \leq L^2$, with horizontal trajectories corresponding
-to two values of $Q$: $0$ and $Q_1= 4 L^2$.
-The right figure is for $a^2(E^2 - \mu^2) > L^2$, with horizontal trajectories corresponding
+The left figure is for $a^2(E^2 - \mu^2) \leq L^2$, with
+with colored dots or horizontal lines
+corresponding to trajectories for
+two values of $Q$: $0$ and $Q_1= 4 L^2$.
+The right figure is for $a^2(E^2 - \mu^2) > L^2$, with trajectories corresponding
 to four values of $Q$: $Q_{\rm min}$, $Q_1 = - 2 L^2$, $0$ and $Q_2 = 2 L^2$.
 %\textsl{[Figure produced with the notebook \ref{s:sam:ges_eff_pot_null}]}
 }
@@ -807,98 +957,153 @@ The extrema of $V$ in $(0,\pi)$ are then given by
 We are thus led to distinguish two cases, depending whether or not the
 equation involving $\sin^4\th$ has solutions distinct from $\pi/2$:
 \begin{itemize}
-\item $a^2(E^2 - \mu^2) \leq L^2$: $V(\th)$ has a single extremum, which is
-necessarily a miminum, at $\th = \pi/2$.
-\item $a^2(E^2 - \mu^2) > L^2$: $V(\th)$ has three extrema, located at
+\item \textbf{Case $a^2(E^2 - \mu^2) \leq L^2$}: the only extremum solution is
+$\th=\pi/2$.
+Its value is $V(\pi/2)=0$ and it is
+necessarily a miminum, since $V(\th) \to +\infty$ at the boundaries of the
+interval $[0,\pi]$ (cf. left part of Fig.~\ref{f:gek:th_pot_L_non0}).
+Hence one must have $Q\geq 0$, with
+\begin{itemize}
+\item $Q=0$: the geodesic stays stably in the
+equatorial plane.
+\item $Q>0$: the geodesic oscillates about the equatorial plane,
+between two turning points at $\th=\th_0$ and $\pi-\th_0$, $\th_0$ being the solution
+of $V(\th_0) = Q$ in $(0,\pi/2)$.
+\end{itemize}
+\item \textbf{Case $a^2(E^2 - \mu^2) > L^2$}: $V(\th)$ has three extrema (cf. right part of Fig.~\ref{f:gek:th_pot_L_non0}), which are located at
 $\th=\th_*$, $\pi/2$ and $\pi-\th_*$ with
 \be
     \th_* := \arcsin\sqrt{\frac{|L|}{a\sqrt{E^2 - \mu^2}}}
     \quad\mbox{and}\quad 0 < \th_* < \frac{\pi}{2} .
 \ee
-$\th_*$ and $\pi-\th_*$ correspond to a minimum, while $\pi/2$ to a local maximum
-of $V(\th)$.
+$\th_*$ and $\pi-\th_*$ correspond to the minimum of $V(\th)$,
+while $\pi/2$ corresponds to a local maximum. The minimum is
+$V(\th_*) = (1-\sin^2\th_*)(a^2(\mu^2-E^2) + L^2/\sin^2\th_*) = - (a \sqrt{E^2 - \mu^2} - |L|)^2$.
+This is necessary the minimal value of $Q$:
+\be
+    Q_{\rm min} = - \left( a \sqrt{E^2 - \mu^2} - |L| \right) ^2 .
+\ee
+We have then (cf. right part of Fig.~\ref{f:gek:th_pot_L_non0})
+\begin{itemize}
+\item $Q = Q_{\rm min}$: the geodesic stays stably at a fixed value of $\th$,
+either $\th_*$ or $\pi - \th_*$.
+\item $Q_{\rm min} < Q < 0$: the geodesic oscillates either in the Northen
+hemisphere ($\th < \pi/2$) or the Southern one ($\th > \pi/2$), without reaching
+the equator nor the rotation axis
+\item $Q=0$: the geodesic lies unstably in the equatorial plane or
+moves towards the equatorial plane (possibly after a turning point at $\th_0\neq\pi/2$ such that
+$V(\th_0)=0$), reaching it with a vanishing velocity $\D\th/\D\lambda'$.
+\item $Q>0$: the geodesic oscillates about the equatorial plane,
+between two turning points at $\th=\th_0$ and $\pi-\th_0$, $\th_0$ being the solution
+of $V(\th_0) = Q$ in $(0,\pi/2)$.
+\end{itemize}
 \end{itemize}
 
+We can summarize the above results by
+\begin{greybox}
+\begin{itemize}
+\item A geodesic $\Li$ of Kerr spacetime cannot encounter the rotation axis unless it has $L=0$.
+\item If $a^2(E^2 - \mu^2) \leq L^2$, the Carter constant $Q$ is necessarily non-negative:
+\be
+    Q \geq 0 .
+\ee
+\item If $a^2(E^2 - \mu^2) > L^2$, the Carter constant $Q$ can take negative values, but
+with a limited range:
+\be
+    Q \geq Q_{\rm min} = - \left( a \sqrt{E^2 - \mu^2} - |L| \right) ^2.
+\ee
+\item If $Q>0$, $\Li$ oscillates symmetrically about the equatorial plane, between
+two values of $\th$, $\th_0$ and $\pi-\th_0$, such that $0<\th_0<\pi/2$, except for
+(i) $L=0$ and $E^2 > \mu^2$ or (ii) $L=0$ and $Q> a^2(\mu^2 - E^2)$), in which case the geodesic
+crosses repeatedly the rotation axis, with $\th$ taking all values in the
+range $[0,\pi]$. For $L=0$ and $Q=a^2(\mu^2 - E^2) > 0$, there exists a solution
+for which the geodesic lies along the rotation axis, but it is unstable.
+\item to be continued...
+\end{itemize}
+\end{greybox}
+
+\begin{remark}
+We could have deduced that $L=0$ is a necessary condition for a geodesic
+to encounter the rotation axis without studying the potential $V(\th)$. Indeed,
+by definition, $L = \w{\eta}\cdot\w{p}$ [Eq.~(\ref{e:gek:def_L})], with the Killing
+vector $\w{\eta}$ being zero on the rotation axis, since the latter is
+pointwise invariant under the action of the rotation group $\mathrm{SO}(2)$.
+Hence $L=0$ on the rotation axis. Since $L$ is constant along the geodesic,
+the result follows immediately.
+\end{remark}
 %%%%%%%%%%%%%%%%%%%
 
-The property $\Theta(\th) \geq 0$ [Eq.~(\ref{e:gek:R_Theta_positive})]
-constrains the geodesic motion in $\th$. Given the expression (\ref{e:gek:Theta_Q})
-for $\Theta(\th)$, this constraint can be written as
-\be \label{e:gek:cond_th_motion}
-    \cos^2\th \left[ a^2 (E^2 - \mu^2)
-    - \frac{L^2}{\sin^2\th} \right] \geq - Q.
-\ee
-One may then consider three cases, depending on the sign of the Carter constant $Q$.
+%One may then consider three cases, depending on the sign of the Carter constant $Q$.
 
-\subsubsection{Case $Q > 0$}
+%\subsubsection{Case $Q > 0$}
 
-For $\th=\pi/2$ (the equator), the constraint~(\ref{e:gek:cond_th_motion}) reduces to $0 \geq -Q$.
-Therefore, if $Q > 0$, there always exists an interval around $\pi/2$,
-$[\pi/2-\alpha, \pi/2+\alpha]$ say, with $0<\alpha \leq\pi/2$,
-such that (\ref{e:gek:cond_th_motion}) is fulfilled for
-$\th$ in that interval, whatever the values
-of $E$, $\mu$ and $L$. If $L\not=0$, this interval cannot be extended to the
-full range of $\theta$, namely $[0,\pi]$, since the left-hand side of (\ref{e:gek:cond_th_motion})
-is dominated by $-L^2/\sin^2\th$ when $\th\to 0$ or $\pi$, and this term diverges to $-\infty$.
-Even when $L=0$, (\ref{e:gek:cond_th_motion}) allows for $\th=0$ or $\pi$
-only if $a^2 (E^2 - \mu^2) \geq - Q$.
-This condition is always satisfied for a null geodesic ($\mu=0$) but may
-fail for a timelike one if $E^2 < \mu^2$.
-We conclude that
-\begin{greybox}
-A geodesic with a positive Carter constant $Q$ has a $\th$-motion of limited
-amplitude $\th\in [\pi/2-\alpha, \pi/2+\alpha]$ ($0<\alpha<\pi/2$)
-around the equatorial plane, except if
-\be \label{e:gek:cond_reach_axis}
-    L = 0 \quad\mbox{and}\quad a^2 (E^2 - \mu^2) \geq - Q ,
-\ee
-in which case one has $\alpha=\pi/2$, so that the geodesic may reach the rotation axis.
-\end{greybox}
-\begin{remark}
-For $L=0$ and values of $E$, $\mu$ and $Q$ saturating the inequality in (\ref{e:gek:cond_reach_axis}),
-i.e. obeying $0 < Q = a^2 (\mu^2 - E^2)$, one has $\Theta(\th) = Q(1-\cos^2\th)$,
-so that $\Theta(0) = 0$ and $\Theta(\pi) = 0$. A geodesic along the rotation
-axis is then a solution.
-\end{remark}
+%For $\th=\pi/2$ (the equator), the constraint~(\ref{e:gek:cond_th_motion}) reduces to $0 \geq -Q$.
+%Therefore, if $Q > 0$, there always exists an interval around $\pi/2$,
+%$[\pi/2-\alpha, \pi/2+\alpha]$ say, with $0<\alpha \leq\pi/2$,
+%such that (\ref{e:gek:cond_th_motion}) is fulfilled for
+%$\th$ in that interval, whatever the values
+%of $E$, $\mu$ and $L$. If $L\not=0$, this interval cannot be extended to the
+%full range of $\theta$, namely $[0,\pi]$, since the left-hand side of (\ref{e:gek:cond_th_motion})
+%is dominated by $-L^2/\sin^2\th$ when $\th\to 0$ or $\pi$, and this term diverges to $-\infty$.
+%Even when $L=0$, (\ref{e:gek:cond_th_motion}) allows for $\th=0$ or $\pi$
+%only if $a^2 (E^2 - \mu^2) \geq - Q$.
+%This condition is always satisfied for a null geodesic ($\mu=0$) but may
+%fail for a timelike one if $E^2 < \mu^2$.
+%We conclude that
+%\begin{greybox}
+%A geodesic with a positive Carter constant $Q$ has a $\th$-motion of limited
+%amplitude $\th\in [\pi/2-\alpha, \pi/2+\alpha]$ ($0<\alpha<\pi/2$)
+%around the equatorial plane, except if
+%\be \label{e:gek:cond_reach_axis}
+    %L = 0 \quad\mbox{and}\quad a^2 (E^2 - \mu^2) \geq - Q ,
+%\ee
+%in which case one has $\alpha=\pi/2$, so that the geodesic may reach the rotation axis.
+%\end{greybox}
+%\begin{remark}
+%For $L=0$ and values of $E$, $\mu$ and $Q$ saturating the inequality in (\ref{e:gek:cond_reach_axis}),
+%i.e. obeying $0 < Q = a^2 (\mu^2 - E^2)$, one has $\Theta(\th) = Q(1-\cos^2\th)$,
+%so that $\Theta(0) = 0$ and $\Theta(\pi) = 0$. A geodesic along the rotation
+%axis is then a solution.
+%\end{remark}
 
-\subsubsection{Case $Q = 0$}
+%\subsubsection{Case $Q = 0$}
 
-If $Q=0$, condition (\ref{e:gek:cond_th_motion}) is equivalent to
-(i) $\cos^2\th = 0$, i.e. $\th=\pi/2$ or (ii)
-$a^2 (E^2 - \mu^2) - L^2 / \sin^2\th \geq 0$, i.e.
-\be \label{e:gek:sin2th_ii}
-    \sin^2\th \geq \frac{L^2}{a^2(E^2-\mu^2)} ,
-\ee
-which implies $a^2 (E^2 - \mu^2) \geq L^2$ and $\th\in[\th_0,\pi/2]$ or
-$\th\in[\pi/2,\pi-\th_0]$, with
-\be \label{e:gek:def_th_0_Q_0}
-    \th_0 := \arcsin\left( \frac{|L|}{a\sqrt{E^2 - \mu^2}} \right) .
-\ee
-In case (i), one has $\Theta(\th) = 0$ so that the equation of motion
-(\ref{e:gek:dthdl}) is fulfilled. In case (ii), a motion at
-constant $\th$ is possible as well, the constant value
-being either $\th_0$ as given by (\ref{e:gek:def_th_0_Q_0}) or $\pi-\th_0$.
-Indeed, $\Theta(\th_0) = 0$ so that (\ref{e:gek:dthdl}) is fulfilled by
-$\th(\lambda)=\th_0$. When $\th$ varies in case (ii), we have $\Theta(\th) = 0$
-for $\th=\pi/2$, so that the equator is a turning point in the $\th$-motion.
-Accordingly, the particle never crosses it. To summarize:
-\begin{greybox}
-A geodesic with a vanishing Carter constant $Q$ is either a geodesic confined
-to the equatorial plane ($\th=\pi/2$) or a geodesic whose constants of motion
-$E$, $L$ and $\mu$ obey
-\be
-    a^2 (E^2 - \mu^2) \geq L^2 .
-\ee
-In the latter case, the geodesic is located at a constant value
-of $\th$, which is $\th_0$ as given by Eq.~(\ref{e:gek:def_th_0_Q_0}) or
-$\pi-\th_0$, or has a $\th$-motion on one side of equatorial
-plane, with $\th$ ranging from either $\th_0$ to $\pi/2$ or
-$\pi/2$ to $\pi-\th_0$. The $\th$-motion extends to the rotation axis
-(i.e. $\th_0=0$) if, and only if, $L=0$.
-\end{greybox}
+%If $Q=0$, condition (\ref{e:gek:cond_th_motion}) is equivalent to
+%(i) $\cos^2\th = 0$, i.e. $\th=\pi/2$ or (ii)
+%$a^2 (E^2 - \mu^2) - L^2 / \sin^2\th \geq 0$, i.e.
+%\be \label{e:gek:sin2th_ii}
+    %\sin^2\th \geq \frac{L^2}{a^2(E^2-\mu^2)} ,
+%\ee
+%which implies $a^2 (E^2 - \mu^2) \geq L^2$ and $\th\in[\th_0,\pi/2]$ or
+%$\th\in[\pi/2,\pi-\th_0]$, with
+%\be \label{e:gek:def_th_0_Q_0}
+    %\th_0 := \arcsin\left( \frac{|L|}{a\sqrt{E^2 - \mu^2}} \right) .
+%\ee
+%In case (i), one has $\Theta(\th) = 0$ so that the equation of motion
+%(\ref{e:gek:dthdl}) is fulfilled. In case (ii), a motion at
+%constant $\th$ is possible as well, the constant value
+%being either $\th_0$ as given by (\ref{e:gek:def_th_0_Q_0}) or $\pi-\th_0$.
+%Indeed, $\Theta(\th_0) = 0$ so that (\ref{e:gek:dthdl}) is fulfilled by
+%$\th(\lambda)=\th_0$. When $\th$ varies in case (ii), we have $\Theta(\th) = 0$
+%for $\th=\pi/2$, so that the equator is a turning point in the $\th$-motion.
+%Accordingly, the particle never crosses it. To summarize:
+%\begin{greybox}
+%A geodesic with a vanishing Carter constant $Q$ is either a geodesic confined
+%to the equatorial plane ($\th=\pi/2$) or a geodesic whose constants of motion
+%$E$, $L$ and $\mu$ obey
+%\be
+    %a^2 (E^2 - \mu^2) \geq L^2 .
+%\ee
+%In the latter case, the geodesic is located at a constant value
+%of $\th$, which is $\th_0$ as given by Eq.~(\ref{e:gek:def_th_0_Q_0}) or
+%$\pi-\th_0$, or has a $\th$-motion on one side of equatorial
+%plane, with $\th$ ranging from either $\th_0$ to $\pi/2$ or
+%$\pi/2$ to $\pi-\th_0$. The $\th$-motion extends to the rotation axis
+%(i.e. $\th_0=0$) if, and only if, $L=0$.
+%\end{greybox}
 
 
-\subsubsection{Case $Q < 0$}
+%\subsubsection{Case $Q < 0$}
 
 \subsection{$r$-motion}
 
