@@ -431,7 +431,7 @@ is $+1$ (resp. $-1$) in the parts of the geodesic $\Li$ where $r$ increases
 is $+1$ (resp. $-1$) in the parts of $\Li$ where $\th$ increases
 (resp. decreases) with $\lambda$.
 
-\subsection{Turning points}
+\subsection{Turning points} \label{s:gek:turning_points}
 
 Let $\Li$ be a geodesic that is not sticked at a constant value of the
 coordinate $r$.
@@ -836,21 +836,94 @@ Note that $V(\th)$ is related to $\Theta(\th)$ by
 \be
     \Theta(\th) = Q - V(\th).
 \ee
+In particular, the latitudinal turning points (cf. Sec.~\ref{s:gek:turning_points})
+are characterized by
+$V(\th) = Q$ and $V'(\th) \neq 0$, while the latitudinal asymptotic values
+(cf. Sec.~\ref{s:gek:asymptotic_values})
+correspond to $V(\th) = Q$ and $V'(\th) = 0$.
 
 We recognize in Eq.~(\ref{e:gek:th_eff_potential}) the first integral of a
 (non-relativistic) 1-dimensional motion in the potential $V(\th)$, which we
 shall call the
 \defin{latitudinal effective potential}\index{latitudinal!effective potential}\index{effective!potential!latitudinal --}. The discussion of the geodesic $\th$-motion
-is then based on the properties of that potential, $Q$ playing in the right-hand side
-of Eq.~(\ref{e:gek:th_eff_potential}) the role of
-the constant total ``energy''. Since $(\D\th / \D\lambda')^2 \geq 0$, the
-motion is possible only if $Q\geq V(\th)$, which means that in a plot of $V(\th)$
-the allowed range of $\th$ is such that the graph of $V(\th)$ must lie below
+is then based on the properties of that potential, $Q$ playing the role of
+the constant ``total energy'' in the right-hand side
+of Eq.~(\ref{e:gek:th_eff_potential}). Since $(\D\th / \D\lambda')^2 \geq 0$,
+Eq.~(\ref{e:gek:th_eff_potential})  implies
+\be \label{e:gek:V_leq_Q}
+    V(\th) \leq Q .
+\ee
+Accordingly, given a plot of $V(\th)$, as in Figs.~\ref{f:gek:th_pot_L_0} and
+\ref{f:gek:th_pot_L_non0}, the allowed range of $\th$ is determined
+by the part of the graph of $V(\th)$ that lies below
 the horizontal line of ordinate equal to $Q$.
 
 We shall distinguish the
-case $L=0$ from $L\not=0$, since the behaviour of $V(\th)$ is drastically different
-in these two cases.
+case $L=0$ from $L\not=0$, since the shape of $V(\th)$
+is different in these two cases.
+
+
+
+\subsubsection{Geodesics with $L=0$}
+
+If $L=0$, the latitudinal effective potential reduces to $V(\th)=a^2(\mu^2 - E^2)\cos^2\th$.
+We have then three subcases:
+
+\begin{itemize}
+\item \textbf{Case} $a^2 E^2 < a^2 \mu^2 \iff a\neq 0 \ \mbox{and}\ |E| < \mu$:
+the corresponding graph of $V(\th)$ is shown in
+Fig.~\ref{f:gek:th_pot_L_0} (left part); we deduce immediately from it that
+$Q\geq 0$, with
+\begin{itemize}
+\item $Q=0$: the motion is confined to the equatorial
+plane $\th=\pi/2$; since it corresponds to a minimum of the effective potential, this
+is a stable configuration.
+\item $0<Q< a^2(\mu^2 - E^2)$: $\th$ ocillates between
+two turning points, which are symmetric about the equatorial plane:
+$\th_0 := \arccos\sqrt{Q/(a^2(\mu^2 - E^2))}$
+and $\pi-\th_0$.
+\item $Q = a^2(\mu^2 - E^2)$: $\th=0$ and $\th=\pi$
+are either unstable positions or
+latitudinal asymptotic values (cf. Sec.~\ref{s:gek:asymptotic_values}), i.e.
+the geodesic reaches the rotation axis for $\lambda\to\pm\infty$.
+\item $Q > a^2(\mu^2 - E^2)$:
+the range of $\th$ is not limited and each time the geodesic reaches the
+rotation axis ($\th=0$ or $\th=\pi$),
+it crosses it, since the velocity $\D\th / \D\lambda'$
+does not vanish there. This leads to $\th < 0$ or $\th > \pi$; to keep $\th$
+within the interval $[0,\pi]$, one shall use the identification
+of the points $(\th, \ph)$, $(-\th, \ph+\pi)$ and $(\th-\pi, \ph+\pi)$,
+which holds on the sphere $\mathbb{S}^2$.
+\end{itemize}
+\item \textbf{Case} $a^2 E^2 = a^2\mu^2 \iff a=0\ \mbox{or}\ |E|=\mu$:
+$V(\th)=0$ and Eq.(\ref{e:gek:th_eff_potential})
+reduces to $(\D\th/\D\lambda')^2 = Q$. This implies $Q\geq 0$, with
+\begin{itemize}
+\item $Q=0$: the geodesic lies at a constant value of $\th$, within the range
+$[0,\pi]$.
+\item $Q>0$: the solution is $\th(\lambda') = \pm \sqrt{Q}\, \lambda' + \th_0$, which
+means that $\th$ varies monotically along the geodesic, crossing the rotation
+axis an infinite number of times.
+\end{itemize}
+\item \textbf{Case} $a^2 E^2 > a^2 \mu^2 \iff a\neq 0 \ \mbox{and}\  |E|>\mu$:
+the corresponding graph of $V(\th)$ is shown in
+Fig.~\ref{f:gek:th_pot_L_0} (right part); the Carter constant must obey
+$Q \geq - a^2 (E^2 - \mu^2)$, with
+\begin{itemize}
+\item $Q=-a^2(E^2 - \mu^2)$: only $\th=0$ and
+$\th=\pi$ are possible and they correspond to minima of $V(\th)$;
+the geodesic is then stably located on the rotation axis.
+\item $-a^2(E^2 - \mu^2) < Q < 0$: the geodesic oscillates about the rotation
+axis, without reaching the equator; one has either $\th\in[0,\th_0]$ or
+$\th\in [\pi - \th_0,\pi]$, with the turning point value
+$\th_0 := \arccos\sqrt{|Q|/(a^2(E^2 - \mu^2))} < \pi/2$.
+\item $Q=0$: $\th=\pi/2$ is either an unstable position or
+a latitudinal asymptotic value, i.e. the geodesic approaches the equatorial
+plane when $\lambda\to\pm\infty$.
+\item $Q>0$: $\th$ varies in all the range $[0,\pi]$; when
+the geodesic reaches the rotation axis, it crosses it.
+\end{itemize}
+\end{itemize}
 
 \begin{figure}
 \centerline{\includegraphics[height=0.24\textheight]{gek_th_pot_L_0_low_E.pdf}
@@ -867,62 +940,6 @@ $Q_1 = -0.3 V_0$, $0$ and $Q_2 = 0.2 V_0$.
 %\textsl{[Figure produced with the notebook \ref{s:sam:ges_eff_pot_null}]}
 }
 \end{figure}
-
-
-
-\subsubsection{Geodesics with $L=0$}
-
-If $L=0$, the latitudinal effective potential reduces to $V(\th)=a^2(\mu^2 - E^2)\cos^2\th$.
-We have then three subcases:
-
-\begin{itemize}
-\item \textbf{Case $E^2 < \mu^2$}: the corresponding graph of $V(\th)$ is shown in
-Fig.~\ref{f:gek:th_pot_L_0} (left part); we deduce immediately from it that
-$Q\geq 0$, with
-\begin{itemize}
-\item $Q=0$: the motion is confined to the equatorial
-plane $\th=\pi/2$; since it corresponds to a minimum of the effective potential, this
-is a stable configuration.
-\item $0<Q< a^2(\mu^2 - E^2)$: $\th$ ocillates between
-two turning points, which are symmetric about the equatorial plane:
-$\th_0 := \arccos\sqrt{Q/(a^2(\mu^2 - E^2))}$
-and $\pi/2-\th_0$.
-\item $Q = a^2(\mu^2 - E^2)$: $\th=0$ and $\th=\pi$
-are either unstable positions or
-latitudinal asymptotic values (cf. Sec.~\ref{s:gek:asymptotic_values}), i.e.
-the geodesic reaches the rotation axis for $\lambda\to+\infty$.
-\item $Q > a^2(\mu^2 - E^2)$:
-the range of $\th$ is not limited and each time the geodesic reaches the
-rotation axis, it crosses it (since the velocity $\D\th / \D\lambda'$
-does not vanish there).
-\end{itemize}
-\item \textbf{Case $E^2 = \mu^2$}: $V(\th)=0$ and Eq.(\ref{e:gek:th_eff_potential})
-reduces to $(\D\th/\D\lambda')^2 = Q$. This implies $Q\geq 0$, with
-\begin{itemize}
-\item $Q=0$: the geodesic lies at a constant value of $\th$, within the range
-$[0,\pi]$
-\item $Q>0$: the solution is $\th(\lambda') = \pm \sqrt{Q}\, \lambda' + \th_0$, which
-means that $\th$ varies monotically along the geodesic, crossing the rotation
-axis an infinite number of times.
-\end{itemize}
-\item \textbf{Case $E^2 > \mu^2$}: the corresponding graph of $V(\th)$ is shown in
-Fig.~\ref{f:gek:th_pot_L_0} (right part); the Carter constant must obey
-$Q \geq - a^2 (E^2 - \mu^2)$, with
-\begin{itemize}
-\item $Q=-a^2(E^2 - \mu^2)$: only $\th=0$ and
-$\th=\pi$ are possible and they correspond to minima of $V(\th)$:
-the geodesic is stably located on the rotation axis.
-\item $-a^2(E^2 - \mu^2) < Q < 0$: the geodesic oscillates about the rotation
-axis, without reaching the equator; one has either $\th\in[0,\th_0]$ or
-$\th\in [\pi - \th_0,\pi]$, with the turning point value
-$\th_0 := \arccos\sqrt{|Q|/(a^2(E^2 - \mu^2))} < \pi/2$.
-\item $Q=0$: $\th=\pi/2$ is either an unstable position or
-a latitudinal asymptotic value, i.e. the geodesic tends to the equatorial
-plane when $\lambda\to+\infty$.
-\item $Q>0$: $\th$ varies in all the range $[0,\pi]$; when
-the geodesic reaches the rotation axis, it crosses it.
-\end{itemize}
-\end{itemize}
 
 
 \begin{figure}
@@ -943,8 +960,11 @@ to four values of $Q$: $Q_{\rm min}$, $Q_1 = - 2 L^2$, $0$ and $Q_2 = 2 L^2$.
 
 \subsubsection{Geodesics with $L\not=0$}
 
-When $L\not=0$, we see from expression~(\ref{e:gek:def_V_th}) for $V$ that
-$V(\th) \to +\infty$ when $\th\to 0$ or $\pi$. Moreover, we have
+When $L\not=0$, we see from expression~(\ref{e:gek:def_V_th}) that
+$V(\th) \to +\infty$ when $\th\to 0$ or $\pi$.
+We conclude immediately that the geodesic cannot reach the rotation axis
+for $L\not=0$.
+Moreover, we have
 \[
     \derd{V}{\th} = - 2 \cos\th\sin\th \left[ a^2 (\mu^2 - E^2) + \frac{L^2}{\sin^4\th} \right] .
 \]
@@ -957,7 +977,8 @@ The extrema of $V$ in $(0,\pi)$ are then given by
 We are thus led to distinguish two cases, depending whether or not the
 equation involving $\sin^4\th$ has solutions distinct from $\pi/2$:
 \begin{itemize}
-\item \textbf{Case $a^2(E^2 - \mu^2) \leq L^2$}: the only extremum solution is
+\item \textbf{Case} $a^2(E^2 - \mu^2) \leq L^2 \iff a=0\
+\mbox{or}\ |E| \leq \sqrt{\mu^2 + \frac{L^2}{a^2}}$: the only extremum solution is
 $\th=\pi/2$.
 Its value is $V(\pi/2)=0$ and it is
 necessarily a miminum, since $V(\th) \to +\infty$ at the boundaries of the
@@ -970,7 +991,8 @@ equatorial plane.
 between two turning points at $\th=\th_0$ and $\pi-\th_0$, $\th_0$ being the solution
 of $V(\th_0) = Q$ in $(0,\pi/2)$.
 \end{itemize}
-\item \textbf{Case $a^2(E^2 - \mu^2) > L^2$}: $V(\th)$ has three extrema (cf. right part of Fig.~\ref{f:gek:th_pot_L_non0}), which are located at
+\item \textbf{Case} $a^2(E^2 - \mu^2) > L^2 \iff a\neq 0\
+\mbox{and}\ |E| > \sqrt{\mu^2 + \frac{L^2}{a^2}}$: $V(\th)$ has three extrema (cf. right part of Fig.~\ref{f:gek:th_pot_L_non0}), which are located at
 $\th=\th_*$, $\pi/2$ and $\pi-\th_*$ with
 \be
     \th_* := \arcsin\sqrt{\frac{|L|}{a\sqrt{E^2 - \mu^2}}}
@@ -979,7 +1001,7 @@ $\th=\th_*$, $\pi/2$ and $\pi-\th_*$ with
 $\th_*$ and $\pi-\th_*$ correspond to the minimum of $V(\th)$,
 while $\pi/2$ corresponds to a local maximum. The minimum is
 $V(\th_*) = (1-\sin^2\th_*)(a^2(\mu^2-E^2) + L^2/\sin^2\th_*) = - (a \sqrt{E^2 - \mu^2} - |L|)^2$.
-This is necessary the minimal value of $Q$:
+This is necessary the minimal value of $Q$ [cf. Eq.~(\ref{e:gek:V_leq_Q})]:
 \be
     Q_{\rm min} = - \left( a \sqrt{E^2 - \mu^2} - |L| \right) ^2 .
 \ee
@@ -987,12 +1009,14 @@ We have then (cf. right part of Fig.~\ref{f:gek:th_pot_L_non0})
 \begin{itemize}
 \item $Q = Q_{\rm min}$: the geodesic stays stably at a fixed value of $\th$,
 either $\th_*$ or $\pi - \th_*$.
-\item $Q_{\rm min} < Q < 0$: the geodesic oscillates either in the Northen
+\item $Q_{\rm min} < Q < 0$: the geodesic oscillates between two turning
+points either in the Northen
 hemisphere ($\th < \pi/2$) or the Southern one ($\th > \pi/2$), without reaching
-the equator nor the rotation axis
+the equator nor the rotation axis.
 \item $Q=0$: the geodesic lies unstably in the equatorial plane or
-moves towards the equatorial plane (possibly after a turning point at $\th_0\neq\pi/2$ such that
-$V(\th_0)=0$), reaching it with a vanishing velocity $\D\th/\D\lambda'$.
+moves asymptotically towards it (possibly after a turning point at $\th_0\neq\pi/2$ such that
+$V(\th_0)=0$), $\pi/2$ being a latitudinal asymptotic value, since $\Theta'(\pi/2) = - V'(\pi/2)=0$
+(cf. Sec.~\ref{s:gek:asymptotic_values}).
 \item $Q>0$: the geodesic oscillates about the equatorial plane,
 between two turning points at $\th=\th_0$ and $\pi-\th_0$, $\th_0$ being the solution
 of $V(\th_0) = Q$ in $(0,\pi/2)$.
@@ -1003,22 +1027,39 @@ We can summarize the above results by
 \begin{greybox}
 \begin{itemize}
 \item A geodesic $\Li$ of Kerr spacetime cannot encounter the rotation axis unless it has $L=0$.
-\item If $a^2(E^2 - \mu^2) \leq L^2$, the Carter constant $Q$ is necessarily non-negative:
+\item If $a=0$ (Schwarzschild limit) or $|E| \leq \sqrt{\mu^2 + \frac{L^2}{a^2}}$,
+the Carter constant $Q$ is necessarily non-negative:
 \be
     Q \geq 0 .
 \ee
-\item If $a^2(E^2 - \mu^2) > L^2$, the Carter constant $Q$ can take negative values, but
-with a limited range:
+\item The Carter constant $Q$ can take negative values if, and only if,
+$a\neq 0$ and $|E| > \sqrt{\mu^2 + \frac{L^2}{a^2}}$; its range is then
+limited from below:
 \be
     Q \geq Q_{\rm min} = - \left( a \sqrt{E^2 - \mu^2} - |L| \right) ^2.
 \ee
-\item If $Q>0$, $\Li$ oscillates symmetrically about the equatorial plane, between
-two values of $\th$, $\th_0$ and $\pi-\th_0$, such that $0<\th_0<\pi/2$, except for
-(i) $L=0$ and $E^2 > \mu^2$ or (ii) $L=0$ and $Q> a^2(\mu^2 - E^2)$), in which case the geodesic
+\item If $Q>0$, $\Li$ oscillates symmetrically about the equatorial plane,
+between two turning points, $\th_0$ and $\pi-\th_0$, such that $0<\th_0<\pi/2$,
+except for two subcases with $L=0$: (i) $Q = a^2 (\mu^2 - E^2)$: $\Li$
+lies unstably along the rotation axis or approaches it asymptotically
+and (ii) $Q >a^2(\mu^2 - E^2)$: $\Li$
 crosses repeatedly the rotation axis, with $\th$ taking all values in the
-range $[0,\pi]$. For $L=0$ and $Q=a^2(\mu^2 - E^2) > 0$, there exists a solution
-for which the geodesic lies along the rotation axis, but it is unstable.
-\item to be continued...
+range $[0,\pi]$.
+\item If $Q=0$, $\Li$ is stably confined to the equatorial plane
+for $a^2 (E^2 - \mu^2) < L^2$ or $a^2 (E^2 - \mu^2) = L^2 \neq 0$;
+for $a^2 (E^2 - \mu^2) > L^2$, $\Li$ either lies unstably in the equatorial
+plane or approaches it asymptotically from one side, while for $L=0$ and ($a=0$ or $|E|=\mu$),
+$\Li$ lies at a constant value $\th=\th_0\in[0,\pi]$.
+\item If $Q_{\rm min} < Q < 0$, $\Li$ oscillates between two turning
+points strictly located in the Northern hemisphere ($0<\th<\pi/2$) or in
+the Southern hemisphere ($\pi/2<\th<\pi$) for $L\neq 0$, while for $L=0$,
+$\Li$ oscillates about the rotation axis, without encoutering the equatorial
+plane, having a turning point at $\th_0$ such that $0<\th_0<\pi/2$
+(motion in the Northern hemisphere) or $\pi/2<\th_0<\pi$
+(motion in the Southern hemisphere).
+\item If $Q = Q_{\rm min}$, $\Li$ lies stably at a constant value $\th=\th_0$,
+with $\th_0 = 0$ or $\pi$ (the rotation axis) for $L=0$ and $0<\th_0<\pi$
+for $L\neq 0$.
 \end{itemize}
 \end{greybox}
 
@@ -1031,79 +1072,7 @@ pointwise invariant under the action of the rotation group $\mathrm{SO}(2)$.
 Hence $L=0$ on the rotation axis. Since $L$ is constant along the geodesic,
 the result follows immediately.
 \end{remark}
-%%%%%%%%%%%%%%%%%%%
 
-%One may then consider three cases, depending on the sign of the Carter constant $Q$.
-
-%\subsubsection{Case $Q > 0$}
-
-%For $\th=\pi/2$ (the equator), the constraint~(\ref{e:gek:cond_th_motion}) reduces to $0 \geq -Q$.
-%Therefore, if $Q > 0$, there always exists an interval around $\pi/2$,
-%$[\pi/2-\alpha, \pi/2+\alpha]$ say, with $0<\alpha \leq\pi/2$,
-%such that (\ref{e:gek:cond_th_motion}) is fulfilled for
-%$\th$ in that interval, whatever the values
-%of $E$, $\mu$ and $L$. If $L\not=0$, this interval cannot be extended to the
-%full range of $\theta$, namely $[0,\pi]$, since the left-hand side of (\ref{e:gek:cond_th_motion})
-%is dominated by $-L^2/\sin^2\th$ when $\th\to 0$ or $\pi$, and this term diverges to $-\infty$.
-%Even when $L=0$, (\ref{e:gek:cond_th_motion}) allows for $\th=0$ or $\pi$
-%only if $a^2 (E^2 - \mu^2) \geq - Q$.
-%This condition is always satisfied for a null geodesic ($\mu=0$) but may
-%fail for a timelike one if $E^2 < \mu^2$.
-%We conclude that
-%\begin{greybox}
-%A geodesic with a positive Carter constant $Q$ has a $\th$-motion of limited
-%amplitude $\th\in [\pi/2-\alpha, \pi/2+\alpha]$ ($0<\alpha<\pi/2$)
-%around the equatorial plane, except if
-%\be \label{e:gek:cond_reach_axis}
-    %L = 0 \quad\mbox{and}\quad a^2 (E^2 - \mu^2) \geq - Q ,
-%\ee
-%in which case one has $\alpha=\pi/2$, so that the geodesic may reach the rotation axis.
-%\end{greybox}
-%\begin{remark}
-%For $L=0$ and values of $E$, $\mu$ and $Q$ saturating the inequality in (\ref{e:gek:cond_reach_axis}),
-%i.e. obeying $0 < Q = a^2 (\mu^2 - E^2)$, one has $\Theta(\th) = Q(1-\cos^2\th)$,
-%so that $\Theta(0) = 0$ and $\Theta(\pi) = 0$. A geodesic along the rotation
-%axis is then a solution.
-%\end{remark}
-
-%\subsubsection{Case $Q = 0$}
-
-%If $Q=0$, condition (\ref{e:gek:cond_th_motion}) is equivalent to
-%(i) $\cos^2\th = 0$, i.e. $\th=\pi/2$ or (ii)
-%$a^2 (E^2 - \mu^2) - L^2 / \sin^2\th \geq 0$, i.e.
-%\be \label{e:gek:sin2th_ii}
-    %\sin^2\th \geq \frac{L^2}{a^2(E^2-\mu^2)} ,
-%\ee
-%which implies $a^2 (E^2 - \mu^2) \geq L^2$ and $\th\in[\th_0,\pi/2]$ or
-%$\th\in[\pi/2,\pi-\th_0]$, with
-%\be \label{e:gek:def_th_0_Q_0}
-    %\th_0 := \arcsin\left( \frac{|L|}{a\sqrt{E^2 - \mu^2}} \right) .
-%\ee
-%In case (i), one has $\Theta(\th) = 0$ so that the equation of motion
-%(\ref{e:gek:dthdl}) is fulfilled. In case (ii), a motion at
-%constant $\th$ is possible as well, the constant value
-%being either $\th_0$ as given by (\ref{e:gek:def_th_0_Q_0}) or $\pi-\th_0$.
-%Indeed, $\Theta(\th_0) = 0$ so that (\ref{e:gek:dthdl}) is fulfilled by
-%$\th(\lambda)=\th_0$. When $\th$ varies in case (ii), we have $\Theta(\th) = 0$
-%for $\th=\pi/2$, so that the equator is a turning point in the $\th$-motion.
-%Accordingly, the particle never crosses it. To summarize:
-%\begin{greybox}
-%A geodesic with a vanishing Carter constant $Q$ is either a geodesic confined
-%to the equatorial plane ($\th=\pi/2$) or a geodesic whose constants of motion
-%$E$, $L$ and $\mu$ obey
-%\be
-    %a^2 (E^2 - \mu^2) \geq L^2 .
-%\ee
-%In the latter case, the geodesic is located at a constant value
-%of $\th$, which is $\th_0$ as given by Eq.~(\ref{e:gek:def_th_0_Q_0}) or
-%$\pi-\th_0$, or has a $\th$-motion on one side of equatorial
-%plane, with $\th$ ranging from either $\th_0$ to $\pi/2$ or
-%$\pi/2$ to $\pi-\th_0$. The $\th$-motion extends to the rotation axis
-%(i.e. $\th_0=0$) if, and only if, $L=0$.
-%\end{greybox}
-
-
-%\subsubsection{Case $Q < 0$}
 
 \subsection{$r$-motion}
 
