@@ -357,15 +357,13 @@ Eq.~(\ref{e:gek:p_th_Th})):
 If the particle $\mathscr{P}$ reaches the asymptotic region $r\gg m$, we deduce from
 Eqs.~(\ref{e:gek:def_Q}) and (\ref{e:gek:Kcarter_asymptot}) the following approximate
 value of $Q$:
-\be
+\be \label{e:gek:Q_Ltot2_L2}
    Q \underset{r\to + \infty}{\sim} \w{L}_{\rm tot} \cdot \w{L}_{\rm tot}
     - L^2 + a (2 L - a E^2) .
 \ee
 Hence, if $a=0$, $Q$ can be interpreted as the square of
 the part of $\mathscr{P}$'s angular momentum (measured by the asymptotic inertial
-observer) that is not in $L$. Using
-notations of Sec.~\ref{s:gek:Carter_const}, we have $L = L_{\rm tot}^{(\ph)}$,
-so that $ \w{L}_{\rm tot} \cdot \w{L}_{\rm tot} - L^2 = (L_{\rm tot}^{(\th)})^2$.
+observer) that is not in $L$.
 
 \begin{remark}
 One may derive the Carter constant $Q$ from a Killing tensor.
@@ -1035,7 +1033,7 @@ We can summarize the above results by
 \item A geodesic $\Li$ of Kerr spacetime cannot encounter the rotation axis unless it has $L=0$.
 \item If $a=0$ (Schwarzschild limit) or $|E| \leq \sqrt{\mu^2 + \frac{L^2}{a^2}}$,
 the Carter constant $Q$ is necessarily non-negative:
-\be
+\be \label{e:gek:Q_nonnegative}
     Q \geq 0 .
 \ee
 \item The Carter constant $Q$ can take negative values if, and only if,
@@ -1044,6 +1042,8 @@ limited from below:
 \be
     Q \geq Q_{\rm min} = - \left( a \sqrt{E^2 - \mu^2} - |L| \right) ^2.
 \ee
+A geodesic with $Q<0$ is called \defin{vortical}\index{vortical geodesic}; it
+never encounters the equatorial plane.
 \item If $Q>0$, $\Li$ oscillates symmetrically about the equatorial plane,
 between two turning points, $\th_0$ and $\pi-\th_0$, such that $0<\th_0<\pi/2$,
 except for two subcases with $L=0$: (i) $Q = a^2 (\mu^2 - E^2)$: $\Li$
@@ -1064,8 +1064,8 @@ plane, having a turning point at $\th_0$ such that $0<\th_0<\pi/2$
 (motion in the Northern hemisphere) or $\pi/2<\th_0<\pi$
 (motion in the Southern hemisphere).
 \item If $Q = Q_{\rm min}$, $\Li$ lies stably at a constant value $\th=\th_0$,
-with $\th_0 = 0$ or $\pi$ (the rotation axis) for $L=0$ and $0<\th_0<\pi$
-for $L\neq 0$.
+with $\th_0 = 0$ or $\pi$ (the rotation axis) for $L=0$ and $0<\th_0< \pi/2$
+or $\pi/2<\th_0<\pi$ for $L\neq 0$.
 \end{itemize}
 \end{greybox}
 
@@ -1078,6 +1078,40 @@ pointwise invariant under the action of the rotation group $\mathrm{SO}(2)$.
 Hence $L=0$ on the rotation axis. Since $L$ is constant along the geodesic,
 the result follows immediately.
 \end{remark}
+
+\begin{remark}
+That a vortical geodesic never intersects the equatorial plane has been
+obtained by examining the various cases $Q<0$. This result can be derived
+directly from the constraint $\Theta(\th)\geq 0$, by noticing the identity
+$\Theta(\pi/2) = Q$, which follows immediately from Eq.~(\ref{e:gek:Theta_Q}).
+\end{remark}
+
+\begin{example}[Schwarzschild geodesics]
+It is instructive to apply the above results to $a=0$ and recover
+the geodesics in Schwarzschild spacetime studied in Chaps.~\ref{s:ges} and \ref{s:gis}.
+There, spherical symmetry was used to select the coordinates $(t,r,\th,\ph)$ so that
+the geodesic was confined to the hyperplane $\th=\pi/2$. Consequently there was
+no $\th$-motion. Here, we keep the coordinates $(t,r,\th,\ph)$ fixed and do not
+assume they are adapted to the geodesic $\Li$ under consideration. So $\th$
+may vary along $\Li$. In Schwarzschild spacetime, the Carter constant $Q$
+is always non-negative [Eq.~(\ref{e:gek:Q_nonnegative})].\\
+If $Q=0$, then for $L=0$, $\Li$ lies at a constant value of $\th$: this actually
+corresponds to a purely radial geodesic. Indeed,
+the total angular momentum measured in the asymptotic region is $\w{L}_{\rm tot} = 0$
+in that case [set $Q=0$, $L=0$ and $a=0$ in Eq.~(\ref{e:gek:Q_Ltot2_L2})].
+If $L\neq 0$, still with $Q=0$,
+$\Li$ lies stably in the equatorial plane (this is the only possibility for $a=0$ among
+the $Q=0$ cases listed above).\\
+If $Q>0$, then $L=0$ is necessarily the subcase (ii) listed above:
+$\Li$ crosses repeatedly the $z$-axis ($\th\in\{0,\pi\}$); this corresponds to the case where
+the orbital plane contains the $z$-axis. All the angular momentum measured asymptotically
+is then contained in $Q$ [cf. Eq.~(\ref{e:gek:Q_Ltot2_L2})].
+For $Q>0$ and $L\neq 0$, $\Li$ oscillates symmetrically about the equatorial
+plane: this is the case where the orbital plane is inclined by an angle
+$\iota\in(0,\pi/2)$
+with respect to the equatorial plane; the $\th$-turning point of $\Li$ is then
+$\th_0 = \pi/2-\iota$.
+\end{example}
 
 
 \subsection{$r$-motion}
