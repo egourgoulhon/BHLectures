@@ -526,7 +526,7 @@ of the latter, cf. Eq.~(\ref{e:ker:def_M_Kerr_spacetime})), the above relation
 leads to a well-defined parameter along $\Li$. Moreover, since $\rho^2>0$, this
 parameter increases towards the future, as $\lambda$. A difference between
 the two parametrizations is that $\lambda'$ is not in general\footnote{The only
-exception is for a circurlar orbit at constant $\theta$, since then $\rho^2$
+exception is for a circurlar orbit at $\theta=\pi/2$, since then $\rho^2$
 is constant and Eq.~(\ref{e:gek:def_Mino_time}) defines an affine relation
 between $\lambda$ and $\lambda'$.} an affine parameter
 of $\Li$, contrary to $\lambda$.
@@ -556,16 +556,18 @@ of variables. On a part of $\Li$ where $R(r)\neq 0$, this yields
 \be \label{e:gek:lp_int_dr_ov_R}
     \lambda' - \lambda'_0 = \eps_r \int_{r_0}^r \frac{\D \bar{r}}{\sqrt{R(\bar{r})}} ,
 \ee
-with $r_0 := r(\lambda'_0)$. Note that $\eps_r=\pm 1$ is constant along
+with $r_0 := r(\lambda'_0)$.
+The hypothesis $R(r)\neq 0$
+excludes any $r$-turning point between $\lambda'_0$ and $\lambda'$, so that
+$\eps_r=\pm 1$ is constant along
 the considered part of $\Li$
-and could be taken out of the integral because the hypothesis $R(r)\neq 0$
-excludes any $r$-turning point between $\lambda'_0$ and $\lambda'$.
+and could be taken out of the integral.
 
 The solution (\ref{e:gek:lp_int_dr_ov_R})
 can be extended to include a turning point at one or two of its boundaries,
 despite $R(r)=0$ there.
 Indeed, let us assume that $r=r_1$ is a $r$-turning point of $\Li$.
-Due to the fact that $R'(r_1)\neq 0$ [Eq.~(\ref{e:gek:def_r_turning})], the
+Due to $R'(r_1)\neq 0$ [Eq.~(\ref{e:gek:def_r_turning})], the
 integral in the right-hand side of (\ref{e:gek:lp_int_dr_ov_R}) with $r=r_1$
 converges, since
 the taylor expansion $R(\bar{r}) = R'(r_1) (\bar{r} - r_1) + O((\bar{r} - r_1)^2)$
@@ -822,6 +824,11 @@ $\lambda$. We call $\th_1$ an
 
 
 \subsection{$\th$-motion} \label{s:gek:th_motion}
+
+We start by analysing the variation of the $\th$ coordinate along geodesics,
+as governed by the decoupled equation
+(\ref{e:gek:dthdl_Mino}), since this provides some usefull constraints
+to discuss later the $r$-motion.
 
 Given expression~(\ref{e:gek:Theta_Q}) for $\Theta(\th)$,
 the first-order equation of motion (\ref{e:gek:dthdl_Mino}) can be rewritten as
@@ -1115,6 +1122,56 @@ $\th_0 = \pi/2-\iota$.
 
 
 \subsection{$r$-motion}
+
+Let us rewrite the first-order radial equation of motion (\ref{e:gek:drdl_Mino})
+as
+\be \label{e:gek:r_eff_potential}
+   \encadre{ \left( \derd{r}{\lambda'} \right)^2 + U(r) = - a^2 Q },
+\ee
+where
+\be
+    U(r) := - R(r) - a^2 Q .
+\ee
+$U(r)$ is a quartic polynomial, whose expression is obtained by expanding
+Eq.~(\ref{e:gek:def_R}) in powers of $r$:
+\be \label{e:gek:U_r_powers}
+    \encadre{ U(r) = (\mu^2 - E^2) r^4 - 2 m \mu^2 r^3
+     + \left[ Q + L^2 + a^2(\mu^2 - E^2) \right] r^2
+     - 2m\left[ Q + (L - a E)^2 \right] r } .
+\ee
+As Eq.~(\ref{e:gek:th_eff_potential}) for $\th$, Eq.~(\ref{e:gek:r_eff_potential})
+has the shape of the first integral of a 1-dimensional motion in the potential $U(r)$,
+which we naturally call the \defin{effective $r$-potential}\index{effective!$r$-potential}.
+Since $(\D r/\D \lambda')^2 \geq 0$, the motion is possible only when the
+potential is lower than the ``total energy'' $-a^2 Q$:
+\be \label{e:gek:U_leq_a2Q}
+     U(r) \leq - a^2 Q .
+\ee
+Now for $r\to \pm\infty$ and $|E|\neq \mu$,
+we have $U(r) \sim (\mu^2 - E^2) r^4$ and in
+particular $\lim_{r\to\pm\infty} U(r) = - \infty$ for $|E|>\mu$
+and $\lim_{r\to\pm\infty} U(r) = + \infty$ for $|E|<\mu$. In the latter case,
+the constraint (\ref{e:gek:U_leq_a2Q}) cannot be satisfied for large values
+of $|r|$. A geodesic with $|E|<\mu$ is therefore located within a bounded
+region in terms of the radial coordinate $r$. Moreover, we have seen in
+Sec.~\ref{s:gek:th_motion} that for $|E|<\mu$, one has $Q\geq 0$
+[Eq.~(\ref{e:gek:Q_nonnegative})]. Therefore $-a^2 Q \leq 0$ and
+(\ref{e:gek:U_leq_a2Q}) implies $U(r)\leq 0$. This cannot hold for $r<0$: we see
+on expression~(\ref{e:gek:U_r_powers}) that for $|E|<\mu$ (which implies $\mu>0$ and $Q\geq 0$) and $r<0$, we have
+\[
+        U(r) = \underbrace{(\mu^2 - E^2) r^4}_{>0} \underbrace{- 2 m \mu^2 r^3}_{>0}
+     + \underbrace{\left[ Q + L^2 + a^2(\mu^2 - E^2) \right] r^2}_{\geq 0}
+     \underbrace{- 2m\left[ Q + (L - a E)^2 \right] r}_{\geq 0} > 0 .
+\]
+Hence we conclude:
+\begin{greybox}
+A geodesic with $|E|<\mu$ is necessarily timelike ($\mu >0$),
+is confined to the region $r\geq 0$ of Kerr spacetime
+and cannot reach arbitrary large values of $r$. It is called a
+\defin{geodesic with a bound orbit}\index{geodesic!with a bound orbit},
+or in short, a \defin{bound geodesic}. Such a geodesic has necessarily a
+non-negative Carter constant $Q$.
+\end{greybox}
 
 \subsection{Geodesics reaching or emanating from the ring singularity}
 
