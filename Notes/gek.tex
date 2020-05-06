@@ -24,7 +24,7 @@ by a system of the form\footnote{In Appendices~\ref{s:bas} and \ref{s:geo},
 we use a different notation for the function $X^\alpha(\lambda)$ defining
 $\Li$ and the coordinate $x^\alpha$ (cf. Secs.~\ref{s:bas:vectors} and
 \ref{s:geo:geodesic_eq}). Following standard usage in the physics literature,
-we shall not do this here.}
+we shall not do this in this chapter.}
 $x^\alpha = x^\alpha(\lambda)$, where $\lambda$ is an
 affine parameter\footnote{See Sec.~\ref{s:geo:def} for the definition
 of an affine parameter along a geodesic.} along $\Li$. We choose $\lambda$ to be the affine parameter
@@ -115,6 +115,14 @@ of the 1-form $\uu{p}$ associated to $\w{p}$ by metric duality:
 Indeed, in such a coordinate system, $\xi^\mu =  \delta^\mu_{\ \, t}$
 and $\eta^\mu = \delta^\mu_{\ \, \ph}$, so that $E = -g_{\mu\nu} \, \xi^\mu p^\nu = -g_{t\nu} \, p^\nu = -p_t$
 and $L = g_{\mu\nu} \, \eta^\mu p^\nu = g_{\ph\nu} \, p^\nu = p_\ph$.
+
+\begin{example}[Generators of the event and inner horizons]
+Let us take for $\Li$ a null geodesic generator of the event horizon $\Hor$
+(cf. Sec.~\ref{s:gek:null_gen_hor}). $\Li$ is then an outgoing principal null
+geodesic and the 4-momentum vector $\w{p}$ is proportional to the null vector
+$\wl \equalH \w{\chi} = \w{\xi} + \Omega_H \w{\eta}$ [Eq.~(\ref{e:ker:l_eqH_chi})
+and (\ref{e:ker:def_chi}).
+\end{example}
 
 In what follows, we are going to use Boyer-Lindquist coordinates
 $(x^\alpha)=(t,r,\th,\ph)$
@@ -287,6 +295,46 @@ the square of $\w{P}$'s angular momentum as measured by the inertial observer $\
     \mathscr{K} \underset{r\to + \infty}{\sim} \w{L}_{\rm tot} \cdot \w{L}_{\rm tot} .
 \ee
 
+A useful result is
+\begin{greybox}
+A null geodesic $\Li$ has a vanishing Carter constant $\mathscr{K}$ if, and
+only if, $\Li$ is a principal null geodesic:
+\be \label{e:gek:K_zero_null}
+   \mathscr{K} = 0 \iff \Li = \Li^{\rm in}_{(v,\th,\tph)} \quad\mbox{or}\quad
+        \Li = \Li^{\rm out}_{(u,\th,\tilde{\tph})} ,
+\ee
+where $\Li^{\rm in}_{(v,\th,\tph)}$ (resp. $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$)
+stands for one of the ingoing (resp. outgoing) principal null geodesic
+introduced in Sec.~\ref{s:ker:principal_geod}.
+\end{greybox}
+\begin{proof}
+Consider expression (\ref{e:gek:Kcarter_prov}) for $\mathscr{K}$. If $\Li$
+is a null geodesic, the term $\w{g}(\w{p},\w{p})$ vanished identically, so that
+one is left with
+\[
+    \mathscr{K} = 2 (r^2 + a^2) (\w{k}\cdot\w{p}) (\wl\cdot\w{p}) .
+\]
+Given that $r^2 + a^2\neq 0$ (this is clear for $a\neq 0$, while if $a=0$,
+$r=0$ is excluded), we have then
+\[
+     \mathscr{K} = 0 \iff \w{k}\cdot\w{p} = 0 \quad\mbox{or}\quad \wl\cdot\w{p} = 0 .
+\]
+The vectors $\w{k}$, $\wl$ and $\w{p}$ are all null.
+Now, according to the Corollary~2 in Sec.~\ref{s:fra:time_orientation},
+two null vectors are orthogonal iff they are colinear. Hence
+\[
+    \mathscr{K} = 0 \iff \w{p} = \alpha \w{k} \quad\mbox{or}\quad \w{p} = \alpha \wl.
+\]
+Since $\w{k}$ (resp. $\wl$) is tangent to $\Li^{\rm in}_{(v,\th,\tph)}$ (resp.
+$\Li^{\rm out}_{(u,\th,\tilde{\tph})}$), this completes the proof.
+\end{proof}
+Note that the result (\ref{e:gek:K_zero_null}) is consistent with the
+interpretation (\ref{e:gek:Kcarter_asymptot}) of $\mathscr{K}$, since asymptotically
+the principal null geodesics are purely radial\footnote{Indeed,
+we deduce from Eqs.~(\ref{e:ker:k_BL}) and (\ref{e:ker:ell_BL}) that, for $r\to+\infty$,
+$\w{k} \sim \wpar_t - \wpar_r$ and $\wl \sim (\wpar_t + \wpar_r)/2$.},
+and hence have $\w{L}_{\rm tot} = 0$.
+
 \subsection{First order equations of motion} \label{s:gek:first_order_system}
 
 We have thus obtained four first integrals of the geodesic equation
@@ -351,7 +399,7 @@ hand, a nice property of $\mathscr{K}$, which is not shared by $Q$, is to be alw
 as Eq.~(\ref{e:gek:def_Theta}) shows (given that $\Theta(\th) \geq 0$ by virtue of
 Eq.~(\ref{e:gek:p_th_Th})):
 \be
-    \mathscr{K} \geq 0 .
+  \encadre{  \mathscr{K} \geq 0 }.
 \ee
 
 If the particle $\mathscr{P}$ reaches the asymptotic region $r\gg m$, we deduce from
@@ -827,7 +875,7 @@ $\lambda$. We call $\th_1$ an
 
 We start by analysing the variation of the $\th$ coordinate along geodesics,
 as governed by the decoupled equation
-(\ref{e:gek:dthdl_Mino}), since this provides some usefull constraints
+(\ref{e:gek:dthdl_Mino}), since this provides some useful constraints
 to discuss later the $r$-motion.
 
 Given expression~(\ref{e:gek:Theta_Q}) for $\Theta(\th)$,
@@ -1165,13 +1213,38 @@ on expression~(\ref{e:gek:U_r_powers}) that for $|E|<\mu$ (which implies $\mu>0$
 \]
 Hence we conclude:
 \begin{greybox}
-A geodesic with $|E|<\mu$ is necessarily timelike ($\mu >0$),
+Any geodesic $\Li$ with $|E|<\mu$ is necessarily timelike ($\mu >0$),
+has a non-negative Carter constant $Q$,
 is confined to the region $r\geq 0$ of Kerr spacetime
-and cannot reach arbitrary large values of $r$. It is called a
-\defin{geodesic with a bound orbit}\index{geodesic!with a bound orbit},
-or in short, a \defin{bound geodesic}. Such a geodesic has necessarily a
-non-negative Carter constant $Q$.
+and cannot reach arbitrary large values of $r$. $\Li$ is called a
+\defin{geodesic with a bound orbit}\index{geodesic!with a bound orbit}\index{bound!orbit},
+or in short, a \defin{bound geodesic}\index{bound!geodesic}.
 \end{greybox}
+\begin{remark}
+That $\Li$
+cannot reach the asymptotic region $r\to +\infty$ could have been
+found directly from the definition of $E$ as the ``energy at infinity''
+of the particle $\mathscr{P}$ having $\Li$ as worldline
+[Eq.~(\ref{e:gek:def_E})]. Indeed, since $\Li$ is timelike, the 4-momentum
+of $\mathscr{P}$ is $\w{p} = \mu \w{u}$ [Eq.~(\ref{e:fra:p_m_u})], where
+$\w{u}$ is the 4-velocity of $\mathscr{P}$, so that Eq.~(\ref{e:gek:def_E})
+yields $E = - \mu\, \w{\xi}\cdot\w{u}$. Now, when $r\to +\infty$, $\w{\xi}$
+tends to the 4-velocity of a static inertial observer.
+If $\Li$ could reach the asymptotic region,
+the scalar
+product of the two 4-velocities $\w{\xi}$ and
+$\w{u}$ would be necessarily lower or equal to $-1$, or equivalently
+$\Gamma := - \w{\xi}\cdot\w{u} \geq 1$ (the proof lies in expression
+(\ref{e:fra:Gam_V2}) of $\Gamma$ with $0\leq \w{V}\cdot\w{V} < 1$), so that
+we would have $E \geq \mu$, which contradicts $|E|<\mu$.
+\end{remark}
+
+Following the above definition, a geodesic $\Li$ with $|E| = \mu$ is naturally
+called a \defin{geodesic with a marginally bound orbit}\index{geodesic!with a
+marginally bound orbit}\index{marginally!bound!orbit}, or a
+\defin{marginally bound geodesic}\index{marginally!bound!geodesic}.
+Note that such a geodesic can be null, provided it has $E=0$.
+
 
 \subsection{Geodesics reaching or emanating from the ring singularity}
 
