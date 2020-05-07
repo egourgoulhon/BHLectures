@@ -116,12 +116,29 @@ Indeed, in such a coordinate system, $\xi^\mu =  \delta^\mu_{\ \, t}$
 and $\eta^\mu = \delta^\mu_{\ \, \ph}$, so that $E = -g_{\mu\nu} \, \xi^\mu p^\nu = -g_{t\nu} \, p^\nu = -p_t$
 and $L = g_{\mu\nu} \, \eta^\mu p^\nu = g_{\ph\nu} \, p^\nu = p_\ph$.
 
-\begin{example}[Generators of the event and inner horizons]
+\begin{example}[Generators of the event and inner horizons] \label{x:gek:null_generator_hor}
 Let us take for $\Li$ a null geodesic generator of the event horizon $\Hor$
 (cf. Sec.~\ref{s:gek:null_gen_hor}). $\Li$ is then an outgoing principal null
 geodesic and the 4-momentum vector $\w{p}$ is proportional to the null vector
 $\wl \equalH \w{\chi} = \w{\xi} + \Omega_H \w{\eta}$ [Eq.~(\ref{e:ker:l_eqH_chi})
-and (\ref{e:ker:def_chi}).
+and (\ref{e:ker:def_chi})].
+By definition of a
+generator of a null hypersurface (cf. Sec.~\ref{s:def:null_geod_gen}),
+$\w{p}$ is normal to $\Hor$. Since the Killing vector fields $\w{\xi}$ and $\w{\eta}$
+are tangent to $\Hor$ (for $\Hor$ is globally preserved by the
+spacetime symmetries), we get immediately from
+the definitions (\ref{e:gek:def_E_L}) $E=0$ and $L=0$.
+Similarly, if $\Li$ is a null geodesic generator of the
+inner horizon $\Hor_{\rm in}$, $\Li$ is an outgoing principal null
+geodesic, with $\w{p}$ proportional to
+the null normal
+$\wl \stackrel{\Hor_{\rm in}}{=} \w{\chi}_{\rm in} = \w{\xi} + \Omega_{\rm in} \w{\eta}$
+[Eq.~(\ref{e:ker:chi_in_ell}) and (\ref{e:ker:def_chi_in})], so that we
+have $E=0$ and $L=0$ as well. Hence we conclude:
+\be \label{e:gek:generator_hor_E_L_zero}
+    \Li \ \mbox{null geodesic generator of}\ \Hor\ \mbox{or}\ \Hor_{\rm in}
+   \  \Longrightarrow\  E = 0 \quad\mbox{and}\quad L = 0 .
+\ee
 \end{example}
 
 In what follows, we are going to use Boyer-Lindquist coordinates
@@ -1220,7 +1237,7 @@ and cannot reach arbitrary large values of $r$. $\Li$ is called a
 \defin{geodesic with a bound orbit}\index{geodesic!with a bound orbit}\index{bound!orbit},
 or in short, a \defin{bound geodesic}\index{bound!geodesic}.
 \end{greybox}
-\begin{remark}
+\begin{remark} \label{r:gek:bound_geod}
 That $\Li$
 cannot reach the asymptotic region $r\to +\infty$ could have been
 found directly from the definition of $E$ as the ``energy at infinity''
@@ -1243,8 +1260,81 @@ Following the above definition, a geodesic $\Li$ with $|E| = \mu$ is naturally
 called a \defin{geodesic with a marginally bound orbit}\index{geodesic!with a
 marginally bound orbit}\index{marginally!bound!orbit}, or a
 \defin{marginally bound geodesic}\index{marginally!bound!geodesic}.
-Note that such a geodesic can be null, provided it has $E=0$.
+Note that such a geodesic can be null, provided it has $E=0$
+(cf. Example~\ref{x:gek:null_generator_hor} on page~\pageref{x:gek:null_generator_hor}).
+We have
+\begin{greybox}
+Any marginally bound geodesic $\Li$ has $Q\geq 0$ and is necessarily confined
+to the region $r\geq 0$ of Kerr spacetime.
+\end{greybox}
+\begin{proof}
+$Q\geq 0$ follows directly from the criteria $|E| \leq \sqrt{\mu^2 + {L^2}/{a^2}}$
+[cf. Eq.~(\ref{e:gek:Q_nonnegative})],
+which is evidently fulfilled for $|E|=\mu$.
+Furthermore, for $|E|=\mu$, the expression of the effective $r$-potential simplifies to
+\[
+    U(r) = - 2 m \mu^2 r^3 + (Q + L^2) r^2 - 2m  \left[Q + (L-aE)^2 \right] r .
+\]
+For $r<0$, all the three terms in the above sum are $\geq 0$.
+If $\Li$ is timelike, then $\mu>0$ and the first term is $>0$, so that
+$r<0 \Rightarrow U(r) > 0$, which is incompatible with the constraint
+(\ref{e:gek:U_leq_a2Q}) with $Q\geq 0$. Let us now assume that $\Li$ is null.
+We have then $\mu=0$ and $E=0$, so that
+\[
+    U(r) = (Q + L^2) r^2 - 2m  (Q + L^2) r  = (Q+L^2) r ( r - 2m ) .
+\]
+If $Q + L^2 \neq 0$, $U(r)$ is a quadratic polynomial that is $>0$ outside
+the interval $[0,2m]$. In particular, $U(r)>0$ for $r<0$. Once again, this contradicts
+(\ref{e:gek:U_leq_a2Q}).
+If $Q + L^2 = 0$, the property $Q\geq 0$ implies $Q=0$ and $L = 0$.
+The Carter constant $\mathscr{K}$ is then zero as well, since
+$\mathscr{K} = Q + (L - a E)^2$ [Eq.~(\ref{e:gek:def_Q})], with $Q=L=E=0$.
+Then, from the result (\ref{e:gek:K_zero_null}), $\Li$ is a principal null
+geodesic. Moreover, $Q+L^2=0$ implies that $U(r)$ vanishes identically,
+so that Eq.~(\ref{e:gek:r_eff_potential}) along with $Q=0$ yields
+$r(\lambda') = \mathrm{const}$. Now, the only principal null geodesics lying
+at a fixed value of $r$ are the ones from the outgoing family that generates
+the horizons $\Hor$ and $\Hor_{\rm in}$ (cf. Figs.~\ref{f:ker:princ_null_geod_a90} and \ref{f:ker:princ_null_geod_a50}). They do have $E=0$ and $L=0$
+(cf. Example~\ref{x:gek:null_generator_hor} on page~\pageref{x:gek:null_generator_hor})
+and lie at $r=r_+$ or $r=r_-$. Since both $r_+$ and $r_-$ are positive
+[Eq.~(\ref{e:ker:order_r_pm})], we cannot have $r<0$ in this case either.
+\end{proof}
 
+A timelike marginally bound geodesic can reach the asymptotic region
+$r\to +\infty$. It has then $E=\mu$, which implies that the Lorentz factor
+with respect to the asymptotic static observer of 4-velocity $\w{\xi}$ is
+$\Gamma=1$ (cf. Remark~\ref{r:gek:bound_geod} above), which implies that
+$\w{p}$ is collinear to $\w{\xi}$. In that sense, a timelike marginally
+bound geodesic is asymptotically ``at rest''.
+
+On the opposite, a null marginally bound geodesic cannot reach the asymptotic region
+$r\to +\infty$. Actually it cannot exist outside the ergoregion of Kerr spacetime.
+Indeed such a geodesic has necessarily $E=0$, which is not possible to
+achieve from the definition $E = -\w{\xi}\cdot\w{p}$ [Eq.~(\ref{e:gek:def_E})]
+with $\w{\xi}$ timelike
+(exterior of the ergoregion) and $\w{p}$ null, given that a timelike vector
+can never be orthogonal to a null one (Corollary~1 in Sec.~\ref{s:fra:time_orientation}).
+
+\begin{example}
+The null geodesics generating the horizons $\Hor$ and $\Hor_{\rm in}$
+considered in
+Example~\ref{x:gek:null_generator_hor} on page~\pageref{x:gek:null_generator_hor}
+are marginally bound [Eq.~(\ref{e:gek:generator_hor_E_L_zero})]
+ and are indeed fully located inside the ergoregion $\mathscr{G}$,
+since $\Hor\subset\mathscr{G}$ and $\Hor_{\rm in}\subset\mathscr{G}$
+(cf. Fig.~\ref{f:ker:ergo_a90}).
+\end{example}
+
+A timelike or null geodesic with $|E| > \mu$ is called a
+\defin{geodesic with a unbound orbit}\index{geodesic!with a unbound orbit}\index{unbound!orbit},
+or in short, a \defin{unbound geodesic}\index{unbound!geodesic}.
+An immediate corollary of the above two properties is
+\begin{greybox}
+Only unbound geodesics can have some part in the region $r<0$ of Kerr spacetime, $\M_-$:
+\be
+    \Li \cap \M_- \neq \varnothing \Longrightarrow |E| > \mu .
+\ee
+\end{greybox}
 
 \subsection{Geodesics reaching or emanating from the ring singularity}
 
