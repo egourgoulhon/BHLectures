@@ -326,7 +326,7 @@ introduced in Sec.~\ref{s:ker:principal_geod}.
 \end{greybox}
 \begin{proof}
 Consider expression (\ref{e:gek:Kcarter_prov}) for $\mathscr{K}$. If $\Li$
-is a null geodesic, the term $\w{g}(\w{p},\w{p})$ vanished identically, so that
+is a null geodesic, the term $\w{g}(\w{p},\w{p})$ vanishes identically, so that
 one is left with
 \[
     \mathscr{K} = 2 (r^2 + a^2) (\w{k}\cdot\w{p}) (\wl\cdot\w{p}) .
@@ -351,6 +351,44 @@ the principal null geodesics are purely radial\footnote{Indeed,
 we deduce from Eqs.~(\ref{e:ker:k_BL}) and (\ref{e:ker:ell_BL}) that, for $r\to+\infty$,
 $\w{k} \sim \wpar_t - \wpar_r$ and $\wl \sim (\wpar_t + \wpar_r)/2$.},
 and hence have $\w{L}_{\rm tot} = 0$.
+
+\begin{example}[Generators of the event and inner horizons]
+We have seen in Example~\ref{x:gek:null_generator_hor} in Sec.~\ref{s:gek:int_motion_sym}
+that the null geodesic generators of the event horizon $\Hor$ and the
+inner horizon $\Hor_{\rm in}$ have $E=0$ and $L=0$.
+Since these generators are principal null geodesics (cf.
+Secs.~\ref{s:gek:null_gen_hor} and \ref{s:ker:Cauchy_hor}), the above results shows
+that in addition $\mathscr{K}=0$. As $\mu=0$ by definition of a null geodesic,
+we see that the four integrals of motion $\mu$, $E$, $L$ and $\mathscr{K}$ all
+vanish for these geodesics.
+\end{example}
+The converse is true:
+\begin{greybox}
+The null geodesic generators of the event horizon $\Hor$ and of the
+inner horizon $\Hor_{\rm in}$ are the only geodesics of Kerr spacetime
+having their four integrals of motion vanishing:
+\be \label{e:gek:all_const_zero}
+\Li \ \mbox{null geodesic generator of}\ \Hor\ \mbox{or}\ \Hor_{\rm in} \iff
+(\mu, E, L, \mathscr{K}) = (0, 0, 0, 0) .
+\ee
+\end{greybox}
+\begin{proof}
+If a geodesic $\Li$ has $(\mu,\mathscr{K}) = (0,0)$,
+$\Li$ is necessary null and (\ref{e:gek:K_zero_null}) shows that
+$\Li$ is a principal null geodesic. Moreover
+Eq.~(\ref{e:gek:Kcarter_first_int}) with $(\mu, E, L, \mathscr{K}) = (0, 0, 0, 0)$
+implies $p^r = 0$ (i.e. $\Li$ lies at a constant value of $r$).
+If $\Li$ is ingoing, then $\w{p} \propto \w{k}$, with the Boyer-Lindquist components
+of $\w{k}$ given by Eq.~(\ref{e:ker:k_BL}). Since $k^r = -1$, this precludes
+$p^r = 0$. Hence $\Li$ is an outgoing principal null geodesic
+and one has $\w{p} \propto \wl$, with the Boyer-Lindquist components
+of $\wl$ given by Eq.~(\ref{e:ker:ell_BL}). We read $\ell^r = \Delta / (2(r^2+a^2))$
+with $\Delta\neq 0$, except precisely on $\Hor$ and
+$\Hor_{\rm in}$\footnote{This is graphically confirmed by
+Figs.~\ref{f:ker:princ_null_geod_a90} and
+\ref{f:ker:princ_null_geod_a50}, which show that $\Hor$ and $\Hor_{\rm in}$ are the only
+locations where a principal null geodesic can have $r=\mathrm{const}$.}.
+\end{proof}
 
 \subsection{First order equations of motion} \label{s:gek:first_order_system}
 
@@ -739,7 +777,7 @@ coordinates.
 
 We have:
 \begin{greybox}
-If the geodesic $\Li$ has some part lying outside the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergoregion}),
+If a null or timelike geodesic $\Li$ has some part lying outside the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergoregion}),
 then the conserved energy $E$ defined by Eq.~(\ref{e:gek:def_E}) is necessarily positive:
 \be \label{e:gek:E_positive}
     \Li \not\subset \mathscr{G}\quad \Longrightarrow \quad E > 0 .
@@ -763,7 +801,10 @@ is nothing but the exterior of the black hole region.
 \end{remark}
 
 Inside the ergoregion, the Killing vector $\w{\xi}$ is spacelike and $E$ can be
-either positive, zero or negative. Particles for which $E<0$ are called
+either positive, zero or negative.
+We have already encountered geodesics with $E=0$ in Example~\ref{x:gek:null_generator_hor} of Sec.~\ref{s:gek:int_motion_sym}: the null generators of the horizons $\Hor$
+and $\Hor_{\rm in}$.
+Particles for which $E<0$ are called
 \defin{negative-energy particles}\index{negative-energy particle}\index{particle!negative-energy --}. They are those involved in the Penrose process discussed in Sec.~\ref{s:ker:Penrose_proc}.
 Note that according to (\ref{e:gek:E_positive}) a negative-energy particle cannot exist
 outside the ergoregion.
@@ -1288,15 +1329,11 @@ the interval $[0,2m]$. In particular, $U(r)>0$ for $r<0$. Once again, this contr
 (\ref{e:gek:U_leq_a2Q}).
 If $Q + L^2 = 0$, the property $Q\geq 0$ implies $Q=0$ and $L = 0$.
 The Carter constant $\mathscr{K}$ is then zero as well, since
-$\mathscr{K} = Q + (L - a E)^2$ [Eq.~(\ref{e:gek:def_Q})], with $Q=L=E=0$.
-Then, from the result (\ref{e:gek:K_zero_null}), $\Li$ is a principal null
-geodesic. Moreover, $Q+L^2=0$ implies that $U(r)$ vanishes identically,
-so that Eq.~(\ref{e:gek:r_eff_potential}) along with $Q=0$ yields
-$r(\lambda') = \mathrm{const}$. Now, the only principal null geodesics lying
-at a fixed value of $r$ are the ones from the outgoing family that generates
-the horizons $\Hor$ and $\Hor_{\rm in}$ (cf. Figs.~\ref{f:ker:princ_null_geod_a90} and \ref{f:ker:princ_null_geod_a50}). They do have $E=0$ and $L=0$
-(cf. Example~\ref{x:gek:null_generator_hor} on page~\pageref{x:gek:null_generator_hor})
-and lie at $r=r_+$ or $r=r_-$. Since both $r_+$ and $r_-$ are positive
+$\mathscr{K} = Q + (L - a E)^2$ [Eq.~(\ref{e:gek:def_Q})].
+Then by the result (\ref{e:gek:all_const_zero}), $\Li$ is a null geodesic
+generator of either the event horizon $\Hor$, which is located at $r=r_+$,
+or the inner horizon $\Hor_{\rm in}$, which is located at $r=r_-$.
+Since both $r_+$ and $r_-$ are positive
 [Eq.~(\ref{e:ker:order_r_pm})], we cannot have $r<0$ in this case either.
 \end{proof}
 
