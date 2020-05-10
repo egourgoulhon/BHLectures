@@ -717,11 +717,11 @@ integral and is often abriged by means of a slash notation:
 
 Similarly, Eq.~(\ref{e:gek:dthdl_Mino}) can be integrated as
 \bea
-    \lambda' - \lambda'_0  & = & \dashint_{\th_0}^\th \frac{\eps_\th \, \D \bar{\th}}{\sqrt{Q(\bar{\th})}} \nonumber \\
-    & = & \eps_\th^{(0)} \int_{\th_0}^{\th_1} \frac{\D \bar{\th}}{\sqrt{Q(\bar{\th})}}
+    \lambda' - \lambda'_0  & = & \dashint_{\th_0}^\th \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \nonumber \\
+    & = & \eps_\th^{(0)} \int_{\th_0}^{\th_1} \frac{\D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
         + \sum_{j=1}^{N-1} \eps_{\th}^{(j)}
-        \int_{\th_j}^{\th_{j+1}} \frac{\D \bar{\th}}{\sqrt{Q(\bar{\th})}}
-        + \eps_\th^{(N)}  \int_{\th_N}^{\th} \frac{\D \bar{\th}}{\sqrt{Q(\bar{\th})}} ,
+        \int_{\th_j}^{\th_{j+1}} \frac{\D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
+        + \eps_\th^{(N)}  \int_{\th_N}^{\th} \frac{\D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} ,
 \eea
 where $\th_0 = \th(\lambda'_0)$, $\th_1,\ldots,\th_N$ are the
 $\th$-turning points between $\lambda'_0$ and $\lambda'$
@@ -1253,7 +1253,10 @@ potential is lower than the ``total energy'' $-a^2 Q$:
 \be \label{e:gek:U_leq_a2Q}
      U(r) \leq - a^2 Q .
 \ee
-Now for $r\to \pm\infty$ and $|E|\neq \mu$,
+
+\subsubsection{Geodesics with $|E|<\mu$}
+
+For $r\to \pm\infty$ and $|E|\neq \mu$,
 we have $U(r) \sim (\mu^2 - E^2) r^4$ and in
 particular $\lim_{r\to\pm\infty} U(r) = - \infty$ for $|E|>\mu$
 and $\lim_{r\to\pm\infty} U(r) = + \infty$ for $|E|<\mu$. In the latter case,
@@ -1297,15 +1300,14 @@ $\Gamma := - \w{\xi}\cdot\w{u} \geq 1$ (the proof lies in expression
 we would have $E \geq \mu$, which contradicts $|E|<\mu$.
 \end{remark}
 
-Following the above definition, a geodesic $\Li$ with $|E| = \mu$ is naturally
-called a \defin{geodesic with a marginally bound orbit}\index{geodesic!with a
-marginally bound orbit}\index{marginally!bound!orbit}, or a
-\defin{marginally bound geodesic}\index{marginally!bound!geodesic}.
-Note that such a geodesic can be null, provided it has $E=0$
+\subsubsection{Geodesics with $|E|=\mu$}
+
+Contrary to the case $|E|<\mu$, a geodesic with $|E|=\mu$ can be null,
+provided it has $E=0$
 (cf. Example~\ref{x:gek:null_generator_hor} on page~\pageref{x:gek:null_generator_hor}).
 We have
 \begin{greybox}
-Any marginally bound geodesic $\Li$ has $Q\geq 0$ and is necessarily confined
+Any geodesic with $|E|=\mu$ has $Q\geq 0$ and is necessarily confined
 to the region $r\geq 0$ of Kerr spacetime.
 \end{greybox}
 \begin{proof}
@@ -1337,37 +1339,33 @@ Since both $r_+$ and $r_-$ are positive
 [Eq.~(\ref{e:ker:order_r_pm})], we cannot have $r<0$ in this case either.
 \end{proof}
 
-A timelike marginally bound geodesic can reach the asymptotic region
-$r\to +\infty$. It has then $E=\mu$, which implies that the Lorentz factor
-with respect to the asymptotic static observer of 4-velocity $\w{\xi}$ is
-$\Gamma=1$ (cf. Remark~\ref{r:gek:bound_geod} above), which implies that
-$\w{p}$ is collinear to $\w{\xi}$. In that sense, a timelike marginally
-bound geodesic is asymptotically ``at rest''.
+A timelike geodesic with $E=\mu$ can reach the asymptotic region
+$r\to +\infty$. It has then a Lorentz factor
+with respect to the asymptotic static observer of 4-velocity $\w{\xi}$
+equal to one (cf. Remark~\ref{r:gek:bound_geod} above), which implies that
+$\w{p}$ is collinear to $\w{\xi}$. In that sense, such a
+geodesic is asymptotically ``at rest''.
 
-On the opposite, a null marginally bound geodesic cannot reach the asymptotic region
-$r\to +\infty$. Actually it cannot exist outside the ergoregion of Kerr spacetime.
-Indeed such a geodesic has necessarily $E=0$, which is not possible to
-achieve from the definition $E = -\w{\xi}\cdot\w{p}$ [Eq.~(\ref{e:gek:def_E})]
-with $\w{\xi}$ timelike
-(exterior of the ergoregion) and $\w{p}$ null, given that a timelike vector
-can never be orthogonal to a null one (Corollary~1 in Sec.~\ref{s:fra:time_orientation}).
-
+On the opposite, a null geodesic with $E=\mu (=0)$
+cannot reach the asymptotic region
+$r\to +\infty$. Actually, it cannot even exist outside the ergoregion,
+by virtue of the property (\ref{e:gek:E_positive}).
 \begin{example}
 The null geodesics generating the horizons $\Hor$ and $\Hor_{\rm in}$
 considered in
 Example~\ref{x:gek:null_generator_hor} on page~\pageref{x:gek:null_generator_hor}
-are marginally bound [Eq.~(\ref{e:gek:generator_hor_E_L_zero})]
- and are indeed fully located inside the ergoregion $\mathscr{G}$,
+have $E=0$ [Eq.~(\ref{e:gek:generator_hor_E_L_zero})]
+and are indeed fully located inside the ergoregion $\mathscr{G}$,
 since $\Hor\subset\mathscr{G}$ and $\Hor_{\rm in}\subset\mathscr{G}$
 (cf. Fig.~\ref{f:ker:ergo_a90}).
 \end{example}
 
-A timelike or null geodesic with $|E| > \mu$ is called a
-\defin{geodesic with a unbound orbit}\index{geodesic!with a unbound orbit}\index{unbound!orbit},
-or in short, a \defin{unbound geodesic}\index{unbound!geodesic}.
-An immediate corollary of the above two properties is
+\subsubsection{Geodesics with $|E|>\mu$}
+
+An immediate corollary of the properties obtained for $|E|<\mu$ and $|E|=\mu$
+is
 \begin{greybox}
-Only unbound geodesics can have some part in the region $r<0$ of Kerr spacetime, $\M_-$:
+Only geodesics with $|E| > \mu$ can have some part in the region $r<0$ of Kerr spacetime, $\M_-$:
 \be
     \Li \cap \M_- \neq \varnothing \Longrightarrow |E| > \mu .
 \ee
