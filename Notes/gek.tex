@@ -426,7 +426,11 @@ $R(r)$ is the following 4th order polynomial of $r$:
 \ee
 In the above expression, let us recall that $\Delta$ is the function of $r$
 given by Eq.~(\ref{e:ker:def_Delta}): $\Delta := r^2 - 2 m r + a^2$. All other
-quantities are constant.
+quantities are constant. Since $R(r)$ appeared first by rewriting Eq.~(\ref{e:gek:Kcarter_first_int}) as $\rho^4 (p^r)^2 = R(r)$, it has to fulfill
+\be \label{e:gek:R_non_neg}
+    \encadre{R(r) \geq 0 } .
+\ee
+In particular, this makes Eq.~(\ref{e:gek:p_r_R}) well posed.
 
 Finally, if we substitute $p^r$ by the value given by Eqs.~(\ref{e:gek:p_r_R})-(\ref{e:gek:def_R}) in the mass first integral (\ref{e:gek:mu2_first_int}), we get, after simplification,
 \be \label{e:gek:p_th_Th}
@@ -437,6 +441,12 @@ where $\eps_\th := \operatorname{sgn} p^\th = \pm 1$ and
    \encadre{ \Theta(\th) := \mathscr{K} - \left(\frac{L}{\sin\th} - a E \sin\th \right)^2
         - \mu^2 a^2 \cos^2\th } .
 \ee
+Equation.~(\ref{e:gek:p_th_Th}) is actually derived from $\rho^4 (p^\th)^2 = \Theta(\th)$,
+which imposes
+\be \label{e:gek:Theta_non_neg}
+    \encadre{\Theta(\th) \geq 0 } .
+\ee
+
 The following constant is often used instead of $\mathscr{K}$:
 \be \label{e:gek:def_Q}
     \encadre{Q := \mathscr{K} - (L - a E)^2 }
@@ -451,8 +461,7 @@ as well. To distinguish between the two Carter constants, we shall specify \emph
 or \emph{Carter constant $\mathscr{K}$}. As we shall see in Sec.~\ref{s:gek:th_motion},
 $Q$ is well adapted to the description of the $\th$-motion of geodesics. On the other
 hand, a nice property of $\mathscr{K}$, which is not shared by $Q$, is to be always non-negative,
-as Eq.~(\ref{e:gek:def_Theta}) shows (given that $\Theta(\th) \geq 0$ by virtue of
-Eq.~(\ref{e:gek:p_th_Th})):
+as Eqs.~(\ref{e:gek:def_Theta}) and (\ref{e:gek:Theta_non_neg}) show:
 \be
   \encadre{  \mathscr{K} \geq 0 }.
 \ee
@@ -520,9 +529,8 @@ and (\ref{e:gek:def_Theta}) as the first-order system
 \end{subequations}
 The functions $R(r)$ and $\Theta(\th)$ are defined by Eq.~(\ref{e:gek:def_R})
 and Eq.~(\ref{e:gek:def_Theta}) or (\ref{e:gek:Theta_Q}). They must obey
-\be \label{e:gek:R_Theta_positive}
-    R(r) \geq 0 \qquad\mbox{and}\qquad \Theta(\th) \geq 0 .
-\ee
+$R(r) \geq 0$ [Eq.~(\ref{e:gek:R_non_neg})] and $\Theta(\th) \geq 0$
+[Eq.~(\ref{e:gek:Theta_non_neg})].
 Note that besides the constants of motion $E$, $L$, $\mu$ and $\mathscr{K}$
 or $Q$, $R(r)$ depends on $a$ and $m$ (via $\Delta$), while $\Theta(\th)$
 depends on $a$ only.
@@ -541,7 +549,7 @@ We define a \defin{$r$-turning point}\index{turning point!$r$-turning point} of 
 \be \label{e:gek:def_r_turning}
     R(r_0) = 0 \quad\mbox{and}\quad R'(r_0) \neq 0 ,
 \ee
-i.e. $r_0$ is a single zero of the polynomial $R$.
+i.e. $r_0$ is a simple root of the polynomial $R$.
 
 We have then
 \be \label{e:gek:der_r_turning}
@@ -711,7 +719,7 @@ where all the integrals in the right-hand side are positive.
 
 The right-hand side of Eq.~(\ref{e:gek:Minotime_r_sum}) is actually a path
 integral and is often abriged by means of a slash notation:
-\be
+\be \label{e:gek:Minotime_r_slash_int}
     \lambda' - \lambda'_0 = \dashint_{r_0}^r \frac{\eps_r \, \D \bar{r}}{\sqrt{R(\bar{r})}} .
 \ee
 
@@ -722,6 +730,7 @@ Similarly, Eq.~(\ref{e:gek:dthdl_Mino}) can be integrated as
         + \sum_{j=1}^{N-1} \eps_{\th}^{(j)}
         \int_{\th_j}^{\th_{j+1}} \frac{\D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
         + \eps_\th^{(N)}  \int_{\th_N}^{\th} \frac{\D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} ,
+                                                    \label{e:gek:Minotime_th_slash_int}
 \eea
 where $\th_0 = \th(\lambda'_0)$, $\th_1,\ldots,\th_N$ are the
 $\th$-turning points between $\lambda'_0$ and $\lambda'$
@@ -1195,7 +1204,8 @@ the result follows immediately.
 \begin{remark}
 That a vortical geodesic never intersects the equatorial plane has been
 obtained by examining the various cases $Q<0$. This result can be derived
-directly from the constraint $\Theta(\th)\geq 0$, by noticing the identity
+directly from the constraint $\Theta(\th)\geq 0$ [Eq.~(\ref{e:gek:Theta_non_neg})],
+by noticing the identity
 $\Theta(\pi/2) = Q$, which follows immediately from Eq.~(\ref{e:gek:Theta_Q}).
 \end{remark}
 
@@ -1235,7 +1245,7 @@ as
    \encadre{ \left( \derd{r}{\lambda'} \right)^2 + U(r) = - a^2 Q },
 \ee
 where
-\be
+\be \label{e:gek:U_R_Q}
     U(r) := - R(r) - a^2 Q .
 \ee
 $U(r)$ is a quartic polynomial, whose expression is obtained by expanding
@@ -1372,6 +1382,96 @@ Only geodesics with $|E| > \mu$ can have some part in the region $r<0$ of Kerr s
 \end{greybox}
 
 \subsection{Geodesics reaching or emanating from the ring singularity}
+
+In the Schwarzschild spacetime, any causal geodesic that enters into the black
+hole region inevitably terminates at the curvature singularity $r=0$, as it
+is clear on the Kruskal or Carter-Penrose diagrams constructed in Chap.~\ref{s:max}.
+For the Kerr spacetime with $a\neq 0$, we are going to see that, on the contrary,
+most causal geodesics in the black hole region \emph{avoid} the curvature
+singularity. In all this section, we assume $a\neq 0$, so that the
+curvature singularity is the ring singularity\index{ring!singularity} $\ring$
+discussed in Sec.~\ref{s:ker:singularities}.
+
+Formally, $\ring$ is not
+part of the Kerr spacetime $\M$ but of the larger manifold $\R^2\times\mathbb{S}^2$
+[cf. the construction (\ref{e:ker:def_M_Kerr_spacetime})]. It is located
+at located at $\rho^2 = 0$, i.e. at $r=0$ and
+$\th=\pi/2$. We shall say that a
+geodesic $\Li$ of affine parameter $\lambda$ (oriented towards to the future)
+\defin{approaches the ring singularity}\index{approach the singularity}
+if $\Li$ has both
+$r(\lambda)\to 0$ and $\th(\lambda) \to 0$ as $\lambda\to\lambda_*$, with
+$\lambda_*$ finite or infinite. If $\lambda_*$ is finite, we shall say
+that $\Li$ \defin{hits the ring singulary}\index{hit the singularity}
+for $\lambda\to\lambda_*^-$ and
+\defin{emanates from the ring singularity}\index{emanate from the singularity}
+for $\lambda\to\lambda_*^+$. If $\lambda_*=\pm\infty$, we shall say
+that $\Li$ \defin{asymptotically approaches the ring singularity}\index{asymptotically!
+approach the singularity}.
+
+A first key result is
+\begin{greybox}
+A null or timelike geodesic $\Li$ that approaches the ring singularity has
+a vanishing Carter constant $Q$.
+\end{greybox}
+\begin{proof}
+From Eqs.~(\ref{e:gek:def_R}) and (\ref{e:gek:Theta_Q}), we have
+\[
+ \lim_{r\to 0} R(r) = - a^2 Q \quad\mbox{and}\quad
+ \lim_{\th\to \pi/2} \Theta(\th) = Q .
+\]
+The constraints $R(r) \geq 0$ [Eq.~(\ref{e:gek:R_non_neg})]
+and $\Theta(\th)\geq 0$ [Eq.~(\ref{e:gek:Theta_non_neg})] imply then respectively
+$Q \leq 0$ and $Q\geq 0$, from which we get $Q=0$.
+\end{proof}
+
+The above property can be refined\footnote{This is a refinement because not all
+geodesics with $Q=0$ lie in the equatorial plane. For instance the
+null geodesic generators of the event horizon $\Hor$ have $Q=0$ [Eq.~(\ref{e:gek:all_const_zero})]
+but those with $\th\neq \pi/2$ lie outside the equatorial plane.}:
+\begin{greybox}
+A null or timelike geodesic that approaches the ring singularity lies
+entirely in the equatorial plane.
+\end{greybox}
+\begin{proof}
+Let $\Li$ be a causal geodesic that approaches $\ring$. From the previous result,
+$\Li$ has $Q=0$. Reviewing the subcases $Q=0$ among all the cases considered in
+Sec.~\ref{s:gek:th_motion}, we see that $\Li$ can approach $\th=\pi/2$ iff
+(i) $\Li$ has
+$|E|\leq \sqrt{\mu^2 + L^2/a^2}$ and lies stably in the equatorial plane
+or (ii) $\Li$ has $|E| > \sqrt{\mu^2 + L^2/a^2}$ and approaches asymptotically
+$\th=\pi/2$ as the Mino time $\lambda'\to \pm\infty$.
+Let us show that (ii) is not compatible with $r\to 0$.
+For $Q=0$, we have [cf. Eqs.~(\ref{e:gek:U_R_Q}) and (\ref{e:gek:U_r_powers})]:
+\[
+ R(r) = r \left[ (E^2 - \mu^2) r^3 + 2 m \mu^2 r^2
+     + \left( a^2(E^2 - \mu^2) - L^2 \right) r
+     + 2m (L - a E)^2 \right] ,
+\]
+with the constant term inside the square brackets $2m(L - a E)^2 \neq 0$,
+since $L=a E$ is not compatible with $|E| > \sqrt{\mu^2 + L^2/a^2}$. It
+follows that $r=0$ is a simple root of $R(r)$. If $\Li$ reaches both
+$r=0$ and $\th=\pi/2$ when $\lambda\to\lambda_*$, from some point $(r_0,\th_0)$,
+then we should have, by virtue of
+Eqs.~(\ref{e:gek:Minotime_r_slash_int}) and (\ref{e:gek:Minotime_th_slash_int}),
+\be \label{e:gek:dashint_r_theta}
+    \lambda'_* - \lambda'_0 = \dashint_{r_0}^0 \frac{\eps_r \, \D r}{\sqrt{R(r)}}
+    = \dashint_{\th_0}^{\frac{\pi}{2}} \frac{\eps_\th \, \D \th}{\sqrt{\Theta(\th)}} ,
+\ee
+where $\lambda'_*$ is the Mino time corresponding to $\lambda_*$. Note that
+$\lambda'_*$ may be infinite even if $\lambda_*$ is finite, due to the
+relation (\ref{e:gek:def_Mino_time}) with $\rho^2\to 0$ when $\lambda\to\lambda_*$.
+Since $r=0$ is a simple root of $R(r)$, the integral on $r$ has a finite value.
+Now, for $Q=0$, expression (\ref{e:gek:Theta_Q}) for $\Theta$ reduces to
+\[
+    \Theta(\th) = \cos^2\th \left[ a^2 (E^2 - \mu^2)
+    - \frac{L^2}{\sin^2\th} \right] .
+\]
+The $\cos^2\th$ term makes the ingetral on $\th$ in
+Eq.~(\ref{e:gek:dashint_r_theta}) divergent, which is incompatible with the
+finite value of the integral on $r$. Hence only (i) is possible, which completes
+the proof.
+\end{proof}
 
 \subsection{Moving to the negative $r$ side}
 
