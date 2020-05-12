@@ -665,48 +665,49 @@ a function of both $r$ and $\th$.
 Equation~(\ref{e:gek:drdl_Mino}) can be integrated by the method of separation
 of variables. On a part of $\Li$ where $R(r)\neq 0$, this yields
 \be \label{e:gek:lp_int_dr_ov_R}
-    \lambda' - \lambda'_0 = \eps_r \int_{r_0}^r \frac{\D \bar{r}}{\sqrt{R(\bar{r})}} ,
+    \lambda' - \lambda'_0 =  \int_{r_0}^r \frac{\eps_r\, \D \bar{r}}{\sqrt{R(\bar{r})}} ,
 \ee
 with $r_0 := r(\lambda'_0)$.
 The hypothesis $R(r)\neq 0$
 excludes any $r$-turning point between $\lambda'_0$ and $\lambda'$, so that
 $\eps_r=\pm 1$ is constant along
-the considered part of $\Li$
-and could be taken out of the integral.
+the considered part of $\Li$.
 
 The solution (\ref{e:gek:lp_int_dr_ov_R})
 can be extended to include a turning point at one or two of its boundaries,
 despite $R(r)=0$ there.
-Indeed, let us assume that $r=r_1$ is a $r$-turning point of $\Li$.
+Indeed, let us assume that $r=r_1$ corresponds to a $r$-turning point of $\Li$.
 Due to $R'(r_1)\neq 0$ [Eq.~(\ref{e:gek:def_r_turning})], the
 integral in the right-hand side of (\ref{e:gek:lp_int_dr_ov_R}) with $r=r_1$
-converges, since
+is finite, since
 the taylor expansion $R(\bar{r}) = R'(r_1) (\bar{r} - r_1) + O((\bar{r} - r_1)^2)$
-make the integral behave near $r_1$
+makes the integral behave near $r_1$
 as\footnote{We assume here $r_0<r_1$, so that the constraint
 $R(\bar{r})\geq 0$ on the interval $[r_0,r_1]$ implies $R'(r_1)<0$.}
 \[
     \frac{1}{\sqrt{-R'(r_1)}} \int_{r_0}^{r_1} \frac{\D \bar{r}}{\sqrt{r_1 - \bar{r}}} ,
 \]
-which is a convergent integral.
+which is a convergent improper integral.
 \begin{remark}
 This is the same reasoning as in Sec.~\ref{s:gis:deflect_winding}.
 \end{remark}
 
-From the above property, we deduce that the solution of Eq.~(\ref{e:gek:drdl_Mino})
-with $M\geq 1$ $r$-turning points $r_1,\ldots, r_M$ between $\lambda'_0$ and $\lambda'$
-is
+Let us assume that there are $M\geq 1$ $r$-turning points $p_1,\ldots, p_M$ between
+$\lambda'_0$ and $\lambda'$. Their radial coordinates take at most two distinct values, $r_1$ and $r_2$, such
+that $r(p_1) = r_1$, $r(p_2) = r_2$, $r(p_3) = r_1$, $r(p_4) = r_2$, etc.
+From the above convergence property, the solution of Eq.~(\ref{e:gek:drdl_Mino})
+is then
 \be \label{e:gek:Minotime_r_sum}
-    \lambda' - \lambda'_0 = \eps_r^{(0)} \int_{r_0}^{r_1} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
-    + \sum_{i=1}^{M-1} \eps_{r}^{(i)}  \int_{r_i}^{r_{i+1}} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
-    + \eps_{r}^{(M)} \int_{r_M}^r \frac{\D \bar{r}}{\sqrt{R(\bar{r})}} .
+    \lambda' - \lambda'_0 = \int_{r_0}^{r_1} \frac{\eps_r\, \D \bar{r}}{\sqrt{R(\bar{r})}}
+    + (M-1) \int_{r_1}^{r_2} \frac{\eps_r\, \D \bar{r}}{\sqrt{R(\bar{r})}}
+    + \int_{r_{1,2}}^r \frac{\eps_r\, \D \bar{r}}{\sqrt{R(\bar{r})}} ,
 \ee
-where $\eps_r^{(i)}$ is the value of $\eps_r$ between $r_i$ and $r_{i+1}$
-for $0\leq i \leq M$,
-with the convention $r_{M+1}:=r$. Note that each term is the above sum
-is positive, since $\eps_r^{(i)} = -1$ compensates for $r_{i+1} < r_i$.
-For instance, if there is a single turning point $r_1$ between
-between $\lambda'_0$ and $\lambda'$, Eq.~(\ref{e:gek:Minotime_r_sum}) gives
+where $r_{1,2} = r_1$ for $M$ odd and $r_{1,2} = r_2$ for $M$ even.
+Note that each term is the above sum
+is positive, the sign of $\eps_r$ compensating the order of the integral
+boundaries.
+For instance, if there is a single $r$-turning point $p_1$ between
+between $\lambda'_0$ and $\lambda'$, Eq.~(\ref{e:gek:Minotime_r_sum}) with $M=1$ gives
 \[
    \lambda' - \lambda'_0 = \begin{cases}
   \displaystyle \int_{r_0}^{r_1} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
@@ -726,17 +727,22 @@ integral and is often abriged by means of a slash notation:
 Similarly, Eq.~(\ref{e:gek:dthdl_Mino}) can be integrated as
 \bea
     \lambda' - \lambda'_0  & = & \dashint_{\th_0}^\th \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \nonumber \\
-    & = & \eps_\th^{(0)} \int_{\th_0}^{\th_1} \frac{\D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
-        + \sum_{j=1}^{N-1} \eps_{\th}^{(j)}
-        \int_{\th_j}^{\th_{j+1}} \frac{\D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
-        + \eps_\th^{(N)}  \int_{\th_N}^{\th} \frac{\D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} ,
-                                                    \label{e:gek:Minotime_th_slash_int}
+    & = & \begin{cases}
+        \displaystyle
+       \int_{\th_0}^\th \frac{\eps_\th\, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} & \ \mbox{if}\ N=0 \\[3ex]
+       \displaystyle
+       \int_{\th_0}^{\th_1} \frac{\eps_\th\, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
+       + (N-1)
+        \int_{\th_1}^{\th_2} \frac{\eps_\th\, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
+        + \int_{\th_{1,2}}^{\th} \frac{\eps_\th\, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
+         & \ \mbox{if}\ N\geq 1 ,
+    \end{cases} \nonumber \\
+    & &  \label{e:gek:Minotime_th_slash_int}
 \eea
-where $\th_0 = \th(\lambda'_0)$, $\th_1,\ldots,\th_N$ are the
-$\th$-turning points between $\lambda'_0$ and $\lambda'$
-and $\eps_\th^{(j)}$ is the value of $\eps_\th$ between $\th_j$ and $\th_{j+1}$
-for $0\leq j \leq N$,
-with the convention $\th_{N+1}:=\th$.
+where $\th_0 := \th(\lambda'_0)$,
+$N$ is the number of $\th$-turning points between $\lambda'_0$ and $\lambda'$,
+$\theta_1$ (resp. $\theta_2$) is the value of $\th$ at the first (resp. second)
+turning point, if any, $\th_{1,2} = \th_1$ for $N$ odd and $\th_{1,2} = \th_2$ for $N$ even.
 
 %\subsection{Equations of motion in terms of 3+1 Kerr coordinates}
 
@@ -897,13 +903,13 @@ that lead to extend the integral
 (\ref{e:gek:lp_int_dr_ov_R}) to $r=r_1$, where $r_1$ corresponded to
 a $r$-turning point, i.e. fulfilled $R(r_1)=0$ and $R'(r_1)\neq 0$.
 If we assume instead that $R(r_1)=0$, $R'(r_1)=0$ and
-$R''(r_1)\neq 0$, i.e. that $r_1$ is a double zero of the polynomial $R$,
+$R''(r_1)\neq 0$, i.e. that $r_1$ is a double root of the polynomial $R$,
 the integral in the right-hand side of Eq.~(\ref{e:gek:lp_int_dr_ov_R}) with $r=r_1$ behaves
 near $r_1$ as
 \[
     \frac{\sqrt{2}}{\sqrt{R''(r_1)}} \int_{r_0}^{r_1} \frac{\D \bar{r}}{r_1 - \bar{r}} ,
 \]
-which is a divergent integral. If $r_1$ is a higher order zero of $R$,
+which is a divergent improper integral. If $r_1$ is a higher order root of $R$,
 the divergence is even worse, being trigered by a higher power of $1/(r_1 - \bar{r})$.
 Consequently, Eq.~(\ref{e:gek:lp_int_dr_ov_R}) with $r=r_1$
 implies the Mino time diverges: $\lambda'\to +\infty$. Since $\rho^2 > 0$,
@@ -1430,7 +1436,7 @@ geodesics with $Q=0$ lie in the equatorial plane. For instance the
 null geodesic generators of the event horizon $\Hor$ have $Q=0$ [Eq.~(\ref{e:gek:all_const_zero})]
 but those with $\th\neq \pi/2$ lie outside the equatorial plane.}:
 \begin{greybox}
-A null or timelike geodesic that approaches the ring singularity lies
+A null or timelike geodesic cannot approach the ring singularity unless it lies
 entirely in the equatorial plane.
 \end{greybox}
 \begin{proof}
@@ -1467,13 +1473,24 @@ Now, for $Q=0$, expression (\ref{e:gek:Theta_Q}) for $\Theta$ reduces to
     \Theta(\th) = \cos^2\th \left[ a^2 (E^2 - \mu^2)
     - \frac{L^2}{\sin^2\th} \right] .
 \]
-The $\cos^2\th$ term makes the ingetral on $\th$ in
+The $\cos^2\th$ term, which behaves as $(\th - \pi/2)^2$ near $\pi/2$,
+makes the ingetral on $\th$ in
 Eq.~(\ref{e:gek:dashint_r_theta}) divergent, which is incompatible with the
-finite value of the integral on $r$. Hence only (i) is possible, which completes
+finite value of the integral on $r$ in the left-hand side. Hence only (i) is possible, which completes
 the proof.
 \end{proof}
 
-\subsection{Moving to the negative $r$ side}
+The above result has been obtained for a generic approach to the ring singularity,
+i.e. for a geodesic $\Li$ that hits $\ring$, emanates from $\ring$ or
+asymptotically approach $\Li$ in the future or the past. If we apply it to
+null geodesics (light rays) emanating from $\ring$, we conclude that an intrepid observer
+diving into the black hole would not see the ring singularity at all, except when
+he crosses the equatorial plane. At this instant, the singularity would appear
+to him as a 1-dimensional segment, and the image would disappear as soon as the observer
+leaves the equatorial plane. In particular, the observer will never see a ring-like image.
+
+
+%\subsection{Moving to the negative $r$ side}
 
 
 \section{Timelike geodesics}
