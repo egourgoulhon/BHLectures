@@ -1257,51 +1257,40 @@ $\th_0 = \pi/2-\iota$.
 \end{example}
 
 
-\subsection{$r$-motion}
+\subsection{$r$-motion} \label{s:gek:r-motion}
 
-Let us rewrite the first-order radial equation of motion (\ref{e:gek:drdl_Mino})
-as
-\be \label{e:gek:r_eff_potential}
-   \encadre{ \left( \derd{r}{\lambda'} \right)^2 + U(r) = - a^2 Q },
-\ee
-where
-\be \label{e:gek:U_R_Q}
-    U(r) := - R(r) - a^2 Q .
-\ee
-$U(r)$ is a quartic polynomial, whose expression is obtained by expanding
-Eq.~(\ref{e:gek:def_R}) in powers of $r$:
-\be \label{e:gek:U_r_powers}
-    \encadre{ U(r) = (\mu^2 - E^2) r^4 - 2 m \mu^2 r^3
-     + \left[ Q + L^2 + a^2(\mu^2 - E^2) \right] r^2
-     - 2m\left[ Q + (L - a E)^2 \right] r } .
-\ee
-As Eq.~(\ref{e:gek:th_eff_potential}) for $\th$, Eq.~(\ref{e:gek:r_eff_potential})
-has the shape of the first integral of a 1-dimensional motion in the potential $U(r)$,
-which we naturally call the \defin{effective $r$-potential}\index{effective!$r$-potential}.
-Since $(\D r/\D \lambda')^2 \geq 0$, the motion is possible only when the
-potential is lower than the ``total energy'' $-a^2 Q$:
-\be \label{e:gek:U_leq_a2Q}
-     U(r) \leq - a^2 Q .
+The $r$-part of geodesic motion is constrained by Eq.~(\ref{e:gek:R_non_neg}):
+$R(r) \geq 0$. Let us rewrite expression
+(\ref{e:gek:def_R}) for the quartic polynomial $R(r)$ in term of $Q$
+instead of $\mathscr{K}$, via Eq.~(\ref{e:gek:def_Q}), and expand the
+result in powers of $r$:
+\be \label{e:gek:R_r_powers}
+    \encadre{ R(r) = (E^2 - \mu^2) r^4 + 2 m \mu^2 r^3
+     + \left[ a^2(E^2 - \mu^2) - Q - L^2 \right] r^2
+     + 2m\left[ Q + (L - a E)^2 \right] r - a^2 Q} .
 \ee
 
 \subsubsection{Geodesics with $|E|<\mu$}
 
 For $r\to \pm\infty$ and $|E|\neq \mu$,
-we have $U(r) \sim (\mu^2 - E^2) r^4$ and in
-particular $\lim_{r\to\pm\infty} U(r) = - \infty$ for $|E|>\mu$
-and $\lim_{r\to\pm\infty} U(r) = + \infty$ for $|E|<\mu$. In the latter case,
-the constraint (\ref{e:gek:U_leq_a2Q}) cannot be satisfied for large values
+we have $R(r) \sim (E^2 - \mu^2) r^4$ and in
+particular $\lim_{r\to\pm\infty} R(r) = + \infty$ for $|E|>\mu$
+and $\lim_{r\to\pm\infty} R(r) = - \infty$ for $|E|<\mu$. In the latter case,
+the constraint $R(r) \geq 0$ cannot be satisfied for large values
 of $|r|$. A geodesic with $|E|<\mu$ is therefore located within a bounded
 region in terms of the radial coordinate $r$. Moreover, we have seen in
 Sec.~\ref{s:gek:th_motion} that for $|E|<\mu$, one has $Q\geq 0$
-[Eq.~(\ref{e:gek:Q_nonnegative})]. Therefore $-a^2 Q \leq 0$ and
-(\ref{e:gek:U_leq_a2Q}) implies $U(r)\leq 0$. This cannot hold for $r<0$: we see
-on expression~(\ref{e:gek:U_r_powers}) that for $|E|<\mu$ (which implies $\mu>0$ and $Q\geq 0$) and $r<0$, we have
+[Eq.~(\ref{e:gek:Q_nonnegative})]. Therefore $-a^2 Q \leq 0$.
+It follows then that $r$ cannot be negative.
+Indeed, we see
+on expression~(\ref{e:gek:R_r_powers}) that for $|E|<\mu$ (which implies $\mu>0$ and $Q\geq 0$) and $r<0$,
 \[
-        U(r) = \underbrace{(\mu^2 - E^2) r^4}_{>0} \underbrace{- 2 m \mu^2 r^3}_{>0}
-     + \underbrace{\left[ Q + L^2 + a^2(\mu^2 - E^2) \right] r^2}_{\geq 0}
-     \underbrace{- 2m\left[ Q + (L - a E)^2 \right] r}_{\geq 0} > 0 .
+    R(r) = \underbrace{(E^2 - \mu^2) r^4}_{<0} + \underbrace{2 m \mu^2 r^3}_{<0}
+     + \underbrace{\left[ a^2 (E^2 - \mu^2) - Q - L^2 \right] r^2}_{\leq 0}
+     + \underbrace{2m\left[ Q + (L - a E)^2 \right] r}_{\leq 0}
+     \underbrace{-a^2 Q}_{\leq 0} ,
 \]
+which contradicts $R(r)\geq 0$.
 Hence we conclude:
 \begin{greybox}
 Any geodesic $\Li$ with $|E|<\mu$ is necessarily timelike ($\mu >0$),
@@ -1344,21 +1333,25 @@ to the region $r\geq 0$ of Kerr spacetime.
 $Q\geq 0$ follows directly from the criteria $|E| \leq \sqrt{\mu^2 + {L^2}/{a^2}}$
 [cf. Eq.~(\ref{e:gek:Q_nonnegative})],
 which is evidently fulfilled for $|E|=\mu$.
-Furthermore, for $|E|=\mu$, the expression of the effective $r$-potential simplifies to
+Furthermore, for $|E|=\mu$, expression (\ref{e:gek:R_r_powers}) for $R(r)$
+simplifies to
 \[
-    U(r) = - 2 m \mu^2 r^3 + (Q + L^2) r^2 - 2m  \left[Q + (L-aE)^2 \right] r .
+    R(r) =  2 m \mu^2 r^3 - (Q + L^2) r^2 + 2m  \left[Q + (L-aE)^2 \right] r - a^2 Q .
 \]
-For $r<0$, all the three terms in the above sum are $\geq 0$.
-If $\Li$ is timelike, then $\mu>0$ and the first term is $>0$, so that
-$r<0 \Rightarrow U(r) > 0$, which is incompatible with the constraint
-(\ref{e:gek:U_leq_a2Q}) with $Q\geq 0$. Let us now assume that $\Li$ is null.
+For $r<0$, all the four terms in the above sum are $\leq 0$.
+If $\Li$ is timelike, then $\mu\neq 0$ and the first term is $<0$, so that
+$r<0 \Longrightarrow R(r) < 0$, which violates the constraint
+$R(r) \geq 0$. Let us now assume that $\Li$ is null.
 We have then $\mu=0$ and $E=0$, so that
 \[
-    U(r) = (Q + L^2) r^2 - 2m  (Q + L^2) r  = (Q+L^2) r ( r - 2m ) .
+    R(r) = - (Q + L^2) r^2 + 2m  (Q + L^2) r -a^2 Q = (Q+L^2) r ( 2m - r) -a^2 Q.
 \]
-If $Q + L^2 \neq 0$, $U(r)$ is a quadratic polynomial that is $>0$ outside
-the interval $[0,2m]$. In particular, $U(r)>0$ for $r<0$. Once again, this contradicts
-(\ref{e:gek:U_leq_a2Q}).
+If $Q + L^2 \neq 0$, $R(r)$ is a quadratic polynomial that is
+either negative everywhere or negative outside the interval $[r_1, r_2]$,
+when the two roots $r_1$ and $r_2$ of $R(r)$ are reals. In the latter case, we deduce
+from the signs of the coefficients of $R(r)$ that $r_1+r_2 > 0$ and $r_1 r_2 \geq 0$,
+so that $r_1 \geq 0$ and $r_2 \geq 0$. This implies that $R(r) < 0$ for
+$r<0$, which is not permitted.
 If $Q + L^2 = 0$, the property $Q\geq 0$ implies $Q=0$ and $L = 0$.
 The Carter constant $\mathscr{K}$ is then zero as well, since
 $\mathscr{K} = Q + (L - a E)^2$ [Eq.~(\ref{e:gek:def_Q})].
@@ -1374,7 +1367,9 @@ $r\to +\infty$. It has then a Lorentz factor
 with respect to the asymptotic static observer of 4-velocity $\w{\xi}$
 equal to one (cf. Remark~\ref{r:gek:bound_geod} above), which implies that
 $\w{p}$ is collinear to $\w{\xi}$. In that sense, such a
-geodesic is asymptotically ``at rest''.
+geodesic is asymptotically ``at rest''. Such a geodesic is called
+\defin{marginally bound}\index{marginally bound!orbit}\index{orbit!marginally bound --}\index{marginally bound!geodesic}.
+
 
 On the opposite, a null geodesic with $E=\mu (=0)$
 cannot reach the asymptotic region
@@ -1435,7 +1430,7 @@ A null or timelike geodesic $\Li$ that approaches the ring singularity has
 a vanishing Carter constant $Q$.
 \end{greybox}
 \begin{proof}
-From Eqs.~(\ref{e:gek:def_R}) and (\ref{e:gek:Theta_Q}), we have
+From Eqs.~(\ref{e:gek:R_r_powers}) and (\ref{e:gek:Theta_Q}), we have
 \[
  \lim_{r\to 0} R(r) = - a^2 Q \quad\mbox{and}\quad
  \lim_{\th\to \pi/2} \Theta(\th) = Q .
@@ -1462,7 +1457,7 @@ $|E|\leq \sqrt{\mu^2 + L^2/a^2}$ and lies stably in the equatorial plane
 or (ii) $\Li$ has $|E| > \sqrt{\mu^2 + L^2/a^2}$ and approaches asymptotically
 $\th=\pi/2$ as the Mino parameter $\lambda'\to \pm\infty$.
 Let us show that (ii) is not compatible with $r\to 0$.
-For $Q=0$, we have [cf. Eqs.~(\ref{e:gek:U_R_Q}) and (\ref{e:gek:U_r_powers})]:
+For $Q=0$, expression~(\ref{e:gek:R_r_powers}) for $R(r)$ reduces to
 \[
  R(r) = r \left[ (E^2 - \mu^2) r^3 + 2 m \mu^2 r^2
      + \left( a^2(E^2 - \mu^2) - L^2 \right) r
@@ -1531,24 +1526,23 @@ and \defin{reduced Carter constant}\index{reduced!Carter constant}\index{Carter!
   \encadre{ \mathcal{Q} := \frac{Q}{\mu^2}} .
 \ee
 
-The first-order equation of radial motion (\ref{e:gek:r_eff_potential})
+The first-order equation of radial motion (\ref{e:gek:drdl_Mino})
 can be rewritten in term of the above quantities:
 \be \label{e:gek:r_eff_pot_timelike}
-   \encadre{ \left( \derd{r}{\tau'} \right)^2 + \mathcal{U}(r) = - a^2  \mathcal{Q} },
+   \encadre{ \left( \derd{r}{\tau'} \right)^2 - \mathcal{R}(r) = 0 },
 \ee
-where
-\be \label{e:gek:U_timelike}
-    \mathcal{U}(r) := (1-\veps^2) r^4 - 2 m r^3
-    + \left[\mathcal{Q} + \ell^2 + a^2 (1-\veps^2)\right] r^2
-    - 2m\left[ \mathcal{Q} + (\ell -a \veps)^2 \right] r
-\ee
-and $\tau'$ is related to the Mino parameter $\lambda'$ by
+where $\tau'$ is related to the Mino parameter $\lambda'$ by
 \be
-   \tau' = \mu \lambda'.
+   \tau' = \mu \lambda'
 \ee
-The function $\mathcal{U}(r)$ is simply a rescaling of the effective
-$r$-potential $U(r)$ by $\mu^2$: $\mathcal{U}(r) = U(r)/\mu^2$ [cf. Eq.~(\ref{e:gek:U_r_powers})]. We shall call $\mathcal{U}(r)$ the
-\defin{effective $r$-potential}\index{effective!$r$-potential} as well.
+and
+$\mathcal{R}(r) := R(r) / \mu^2$. In view of Eq.~(\ref{e:gek:R_r_powers}),
+we have
+\be \label{e:gek:R_timelike}
+    \mathcal{R}(r) := (\veps^2 - 1) r^4 + 2 m r^3
+    + \left[a^2 (\veps^2 - 1) - \mathcal{Q} -  \ell^2\right] r^2
+    + 2m\left[ \mathcal{Q} + (\ell -a \veps)^2 \right] r  - a^2  \mathcal{Q} .
+\ee
 Using Eqs.~(\ref{e:gek:tau_mu_lamb}) and (\ref{e:gek:def_Mino_time}), we can
 relate $\tau'$ to the proper time $\tau$:
 \be
@@ -1558,7 +1552,13 @@ relate $\tau'$ to the proper time $\tau$:
 We shall call $\tau'$ \defin{Mino time}\index{Mino!time}\index{time!Mino --}
 along the geodesic $\Li$.
 
-\subsection{Bound geodesics}
+\subsection{Bound orbits}
+
+Following the definition given in Sec.~\ref{s:gek:r-motion}, a geodesic
+$\Li$ has a bound orbit iff $|E|< \mu$, or equivalently
+\be
+    |\veps| < 1 .
+\ee
 
 \subsection{Equatorial geodesics}
 
@@ -1577,6 +1577,6 @@ along the geodesic $\Li$.
 
 
 
-Circular orbits in Kerr spacetime: \cite{BardePT72} (see also \cite{Barde73})
+Circular orbits in Kerr spacetime: \cite{BoyerP65} \cite{BardePT72} (see also \cite{Barde73})
 
-More general orbits: \cite{Perez-Giz11}, \cite{GrossLP12}
+More general orbits: \cite{Schmi02}, \cite{Perez-Giz11}, \cite{GrossLP12}
