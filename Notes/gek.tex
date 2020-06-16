@@ -1519,30 +1519,39 @@ and let us introduce the
 \defin{specific conserved energy}\index{specific!conserved!energy} $\veps$,
 \defin{specific conserved angular momentum}\index{specific!conserved!angular momuntum}
 $\ell$ ,
-and \defin{reduced Carter constant}\index{reduced!Carter constant}\index{Carter!constant!reduced --} $\mathcal{Q}$:
+and \defin{reduced Carter constant}\index{reduced!Carter constant}\index{Carter!constant!reduced --} $q$:
 \be \label{e:gek:def_eps_ell_mQ}
   \encadre{ \veps := \frac{E}{\mu}}, \qquad
   \encadre{ \ell :=  \frac{L}{\mu}} \qquad\mbox{and}\qquad
-  \encadre{ \mathcal{Q} := \frac{Q}{\mu^2}} .
+  \encadre{ q := \frac{Q}{\mu^2}} .
 \ee
 
-The first-order equation of radial motion (\ref{e:gek:drdl_Mino})
-can be rewritten in term of the above quantities:
+The first-order equations of motion (\ref{e:gek:drdl_Mino})
+and (\ref{e:gek:th_eff_potential}) can be rewritten in term of the above quantities:
 \be \label{e:gek:r_eff_pot_timelike}
    \encadre{ \left( \derd{r}{\tau'} \right)^2 - \mathcal{R}(r) = 0 },
+\ee
+\be
+    \encadre{ \left( \derd{\th}{\tau'} \right)^2 + \mathcal{V}(\th) = q },
 \ee
 where $\tau'$ is related to the Mino parameter $\lambda'$ by
 \be
    \tau' = \mu \lambda'
 \ee
 and
-$\mathcal{R}(r) := R(r) / \mu^2$. In view of Eq.~(\ref{e:gek:R_r_powers}),
+$\mathcal{R}(r) := R(r) / \mu^2$ and $\mathcal{V}(\th) := V(\th) / \mu^2$.
+In view of Eqs.~(\ref{e:gek:R_r_powers}) and (\ref{e:gek:def_V_th}),
 we have
 \be \label{e:gek:R_timelike}
-    \mathcal{R}(r) := (\veps^2 - 1) r^4 + 2 m r^3
-    + \left[a^2 (\veps^2 - 1) - \mathcal{Q} -  \ell^2\right] r^2
-    + 2m\left[ \mathcal{Q} + (\ell -a \veps)^2 \right] r  - a^2  \mathcal{Q} .
+  \encadre{  \mathcal{R}(r) = (\veps^2 - 1) r^4 + 2 m r^3
+    + \left[a^2 (\veps^2 - 1) - q -  \ell^2\right] r^2
+    + 2m\left[ q + (\ell -a \veps)^2 \right] r  - a^2  q }.
 \ee
+and
+\be \label{e:gek:V_timelike}
+ \encadre{ \mathcal{V}(\th) = \cos^2\th \left[ a^2(1 - \veps^2) + \frac{\ell^2}{\sin^2\th} \right] } .
+\ee
+
 Using Eqs.~(\ref{e:gek:tau_mu_lamb}) and (\ref{e:gek:def_Mino_time}), we can
 relate $\tau'$ to the proper time $\tau$:
 \be
@@ -1554,11 +1563,72 @@ along the geodesic $\Li$.
 
 \subsection{Bound orbits}
 
-Following the definition given in Sec.~\ref{s:gek:r-motion}, a geodesic
-$\Li$ has a bound orbit iff $|E|< \mu$, or equivalently
-\be
+We consider here timelike geodesics with $|E|< \mu$, or equivalently
+\be \label{e:gek:veps_lt_one}
     |\veps| < 1 .
 \ee
+As shown in Sec.~\ref{s:gek:r-motion}, such a geodesic has $q >0$
+and is located in a radialy bounded region of the part $r\geq 0$ of Kerr spacetime.
+
+Equation~(\ref{e:gek:r_eff_pot_timelike}) can be viewed as the first-integral of
+a 1-dimensional motion in the effective potential $U(r) := - \mathcal{R}(r)$,
+with a vanishing ``total energy'' (the right-hand side of Eq.~(\ref{e:gek:r_eff_pot_timelike})).
+The motion is thus possible wherever $U(r) \leq 0$ or, equivalently, wherever
+$\mathcal{R}(r) \geq 0$, which is nothing but the constraint (\ref{e:gek:R_non_neg}).
+Equation~(\ref{e:gek:veps_lt_one})
+implies that the coefficient of $r^4$ in expression
+(\ref{e:gek:R_timelike}) of $\mathcal{R}(r)$ is negative. It follows then that
+$\lim_{r\to\pm\infty} U(r) = +\infty$ and the segments with $U(r) \leq 0$
+are located between two roots of $\mathcal{R}(r)$ (cf. Fig.~\ref{f:gek:R_potential}).
+Let us denote the lower of these two roots by $r_{\rm p}$, for \defin{periastron}\index{periastron} and the larger one by $r_{\rm a}$, for \defin{apoastron}\index{apoastron}.
+The periastron and apoastron are of course $r$-turning points of the geodesic,
+according to the definition given in Sec.~\ref{s:gek:turning_points}.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gek_R_potential.pdf}}
+\caption[]{\label{f:gek:R_potential} \footnotesize
+Effective potential $-\mathcal{R}(r)$ corresponding to $a=0.998\, m$,
+$\veps=0.9$, $\ell=2 m$ and $q=1.3\, m^2$. The black vertical line
+marks the black hole horizon at $r=r_+\simeq 1.063\, m$.
+Note that the polynomial $-\mathcal{R}(r)$
+has four real roots, one of them being very close to, but distinct from, $r_+$.
+The two largest roots give the periastron and apoastron of the bound orbit
+with the above values of $(\veps,\ell,q)$; they
+are respectively $r_p \simeq 2.175\, m$ and
+$r_a \simeq 6.853\, m$.
+\textsl{[Figure produced with the notebook \ref{s:sam:Kerr_geod_plots}]}
+}
+\end{figure}
+
+It is clear that the motion
+as governed by Eq.~(\ref{e:gek:r_eff_pot_timelike})
+in the potential well $U(r) = - \mathcal{R}(r)$
+(cf. Fig.~\ref{f:gek:R_potential}) is periodic:
+\be
+    \forall n\in\mathbb{Z},\quad r(\tau' + n \Lambda_r) = r(\tau') ,
+\ee
+the period
+$\Lambda_r$ being the Mino time $\Delta\tau'$ spent to perform a round-trip
+between $r_{\rm p}$ and $r_{\rm a}$:
+\be \label{e:gek:Lambda_r}
+    \Lambda_r = 2 \int_{r_{\rm p}}^{r_{\rm a}} \frac{\D r}{\sqrt{\mathcal{R}(r)}} .
+\ee
+The above formula is obtained by rewriting Eq.~(\ref{e:gek:r_eff_pot_timelike})
+as $\D\tau' = \pm \D r / \sqrt{\mathcal{R}(r)}$.
+Since $\mathcal{R}(r)$ is a 4th-order polynomial [cf. Eq.~(\ref{e:gek:R_timelike})],
+the integral in the right-hand side of Eq.~(\ref{e:gek:Lambda_r}) can
+be evaluated by means of elliptic integrals. We shall not give the detail
+here and refer to the study~\cite{FujitW09}.
+
+Regarding the $\th$-motion, we are in the case $a^2(E^2 - \mu^2) < L^2$
+considered in Sec.~\ref{s:gek:th_motion}, since for bound geodesics $E^2 - \mu^2 < 0$.
+The effective $\th$-potential $\mathcal{V}(\th)$ has then the shape shown in
+the left part of Fig.~\ref{f:gek:th_pot_L_0} for $\ell=0$ and in the left part
+of Fig.~\ref{f:gek:th_pot_L_non0} for $\ell\neq 0$.
+For $\ell\neq 0$ or $\ell=0$ and $q < a^2 ( 1-\veps^2)$, it follows that
+the the geodesic oscillates symmetrically about the equatorial plane between
+two $\th$-turning points $\th_{\rm min}$ and $\pi-\th_{\rm min}$,
+with $0 < \th_{\rm min} < \pi /2$.
 
 \subsection{Equatorial geodesics}
 

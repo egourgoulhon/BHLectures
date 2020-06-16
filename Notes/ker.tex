@@ -293,7 +293,7 @@ Thus
         \iff r < r_{\E^-}(\theta) \quad\mbox{or}\quad  r > r_{\E^+}(\theta) ,
 \]
 with
-\be
+\be \label{e:ker:ergosphere_radius}
     r_{\E^\pm}(\theta) := m \pm \sqrt{m^2 - a^2\cos^2\th} .
 \ee
 Comparing with (\ref{e:ker:def_r_pm}), we note that
@@ -304,10 +304,10 @@ Comparing with (\ref{e:ker:def_r_pm}), we note that
 with
 \begin{subequations}
 \begin{align}
- & r_{\E^-}(\pi/2) = 0 \\
+ & r_{\E^-}(\pi/2) = 0 \label{e:ker:r_ergo_m_eq} \\
  & r_{\E^-}(0)  = r_{\E^-}(\pi) = r_- \\
  & r_{\E^+}(0)  = r_{\E^+}(\pi) = r_+ \\
- & r_{\E^+}(\pi/2) = 2 m .
+ & r_{\E^+}(\pi/2) = 2 m . \label{e:ker:r_ergo_p_eq}
 \end{align}
 \end{subequations}
 
@@ -315,7 +315,7 @@ with
 \centerline{\includegraphics[width=0.8\textwidth]{ker_ergo_a90.pdf}}
 \caption[]{\label{f:ker:ergo_a90} \footnotesize
 Meridional view of a section $t=\mathrm{const}$ of Kerr spacetime with $a/m=0.90$ in
-O'Neill exponential coordinates $x = \mathrm{e}^{r/m}\sin\th$ and $z = \mathrm{e}^{r/m}\sin\th$ (cf. Fig.~\ref{f:ker:spher_view}).
+O'Neill exponential coordinates $x = \mathrm{e}^{r/m}\sin\th$ and $z = \mathrm{e}^{r/m}\cos\th$ (cf. Fig.~\ref{f:ker:spher_view}).
 The right (resp. left) half of the figure corresponds to $\ph=0$ (resp. $\ph=\pi$).
 The Roman numbers I, II, III denote the components $\M_{\rm I}$, $\M_{\rm II}$ and
 $\M_{\rm III}$ of the manifold $\M_{\rm BL}$. The dotted orange circle marks the location
@@ -363,10 +363,19 @@ The part of $\M_{\rm BL}$ where $\w{\xi}$ is spacelike, i.e.
 $\mathscr{G} = \mathscr{G}^+ \cup \M_{\rm II} \cup \mathscr{G}^-$,
 is called the \defin{ergoregion}\index{ergoregion!of Kerr spacetime}.
 It is depicted in Figs.~\ref{f:ker:ergo_a90}-\ref{f:ker:ergo_a99}.
+It is worth noticing that
+the location of the inner and outer ergospheres in the equatorial
+plane ($\th=\pi/2$) do not depend on the spin parameter $a$:
+$r_{\E^-}(\pi/2) = 0$ [Eq.~(\ref{e:ker:r_ergo_m_eq})] and
+$r_{\E^+}(\pi/2) = 2m$ [Eq.~(\ref{e:ker:r_ergo_p_eq})], a feature
+that appears clearly in Figs.~\ref{f:ker:ergo_a90}-\ref{f:ker:ergo_a99},
+given that $\mathrm{e}^2 \simeq 7.39$.
+
 \begin{remark}
 Sometimes the word \defin{ergosurface}\index{ergosurface} is used instead of
 \emph{ergosphere}.
 \end{remark}
+
 
 We shall see in Sec.~\ref{s:ker:Penrose_proc} that the outer ergoregion
 plays a key role in an energy extraction mechanism known as the
