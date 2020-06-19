@@ -1528,38 +1528,56 @@ and \defin{reduced Carter constant}\index{reduced!Carter constant}\index{Carter!
 
 The first-order equations of motion (\ref{e:gek:drdl_Mino})
 and (\ref{e:gek:th_eff_potential}) can be rewritten in term of the above quantities:
-\be \label{e:gek:r_eff_pot_timelike}
-   \encadre{ \left( \derd{r}{\tau'} \right)^2 - \mathcal{R}(r) = 0 },
-\ee
-\be
-    \encadre{ \left( \derd{\th}{\tau'} \right)^2 + \mathcal{V}(\th) = q },
-\ee
+\begin{subequations}
+\begin{align}
+& \encadre{ \derd{t}{\tau'} = a\ell + T_1(r) + T_2(r) } \label{e:gek:dtdmino_timelike}\\
+& \encadre{  \left( \derd{r}{\tau'} \right)^2 - \mathcal{R}(r) = 0 } \label{e:gek:r_eff_pot_timelike}\\
+& \encadre{ \left( \derd{\theta}{\tau'} \right)^2 - \tilde{\Theta}(\th) = 0 } \label{e:gek:th_eff_pot_timelike}\\
+& \encadre{ \derd{\ph}{\tau'}  = - a \veps + \Phi_1(r) + \Phi_2(\th) } \label{e:gek:dphdmino_timelike}
+\end{align}
+\end{subequations}
 where $\tau'$ is related to the Mino parameter $\lambda'$ by
 \be
    \tau' = \mu \lambda'
 \ee
 and
-$\mathcal{R}(r) := R(r) / \mu^2$ and $\mathcal{V}(\th) := V(\th) / \mu^2$.
-In view of Eqs.~(\ref{e:gek:R_r_powers}) and (\ref{e:gek:def_V_th}),
-we have
+\be
+    T_1(r) := \frac{r^2 + a^2}{r^2 - 2 m r + a^2} [(r^2 + a^2) \veps - a \ell]
+    \qquad\mbox{and}\qquad
+    T_2(\th) := - a^2 \veps \ell \sin^2\th,
+\ee
+\be
+    \Phi_1(r) := \frac{a}{r^2 - 2 m r + a^2}\left[(r^2 + a^2) \veps - a \ell \right]
+    \qquad\mbox{and}\qquad
+    \Phi_2(\th) := \frac{\ell}{\sin^2\th} ,
+\ee
 \be \label{e:gek:R_timelike}
-  \encadre{  \mathcal{R}(r) = (\veps^2 - 1) r^4 + 2 m r^3
+  \encadre{  \mathcal{R}(r) := (\veps^2 - 1) r^4 + 2 m r^3
     + \left[a^2 (\veps^2 - 1) - q -  \ell^2\right] r^2
-    + 2m\left[ q + (\ell -a \veps)^2 \right] r  - a^2  q }.
+    + 2m\left[ q + (\ell -a \veps)^2 \right] r  - a^2  q },
 \ee
-and
-\be \label{e:gek:V_timelike}
- \encadre{ \mathcal{V}(\th) = \cos^2\th \left[ a^2(1 - \veps^2) + \frac{\ell^2}{\sin^2\th} \right] } .
+\be \label{e:gek:Theta_timelike}
+  \encadre{ \tilde\Theta(\th) := q + \cos^2\th \left[ a^2 (\veps^2 - 1)
+    - \frac{\ell^2}{\sin^2\th} \right] } .
 \ee
+Note that $\mathcal{R}(r) = R(r) / \mu^2$, $\tilde\Theta(\th) := \Theta(\th) / \mu^2$
+and that expressions~(\ref{e:gek:R_timelike}) and (\ref{e:gek:Theta_timelike})
+follow respectively from Eqs.~(\ref{e:gek:R_r_powers}) and (\ref{e:gek:Theta_Q}).
 
 Using Eqs.~(\ref{e:gek:tau_mu_lamb}) and (\ref{e:gek:def_Mino_time}), we can
 relate $\tau'$ to the proper time $\tau$:
 \be
-    \D\tau' = \frac{\D\tau}{\rho^2}
-     = \frac{\D\tau}{r(\tau)^2 + a^2 \cos^2 \th(\tau)} .
+   \encadre{ \D\tau' = \frac{\D\tau}{\rho^2}
+     = \frac{\D\tau}{r(\tau)^2 + a^2 \cos^2 \th(\tau)} } .
 \ee
 We shall call $\tau'$ \defin{Mino time}\index{Mino!time}\index{time!Mino --}
 along the geodesic $\Li$.
+\begin{remark}
+Despite its name, the Mino time has not the dimension of a time, but rather
+that of a time inverse or length inverse (in the units $G=c=1$ that we
+are using).
+\end{remark}
+
 
 \subsection{Bound orbits}
 
@@ -1567,7 +1585,11 @@ We consider here timelike geodesics with $|E|< \mu$, or equivalently
 \be \label{e:gek:veps_lt_one}
     |\veps| < 1 .
 \ee
-As shown in Sec.~\ref{s:gek:r-motion}, such a geodesic has $q >0$
+As shown in Sec.~\ref{s:gek:r-motion}, such a geodesic has necessarily a positive
+Carter constant:
+\be
+    q >0
+\ee
 and is located in a radialy bounded region of the part $r\geq 0$ of Kerr spacetime.
 
 Equation~(\ref{e:gek:r_eff_pot_timelike}) can be viewed as the first-integral of
@@ -1576,13 +1598,13 @@ with a vanishing ``total energy'' (the right-hand side of Eq.~(\ref{e:gek:r_eff_
 The motion is thus possible wherever $U(r) \leq 0$ or, equivalently, wherever
 $\mathcal{R}(r) \geq 0$, which is nothing but the constraint (\ref{e:gek:R_non_neg}).
 Equation~(\ref{e:gek:veps_lt_one})
-implies that the coefficient of $r^4$ in expression
-(\ref{e:gek:R_timelike}) of $\mathcal{R}(r)$ is negative. It follows then that
+implies that the coefficient of $r^4$ in formula
+(\ref{e:gek:R_timelike}) for $\mathcal{R}(r)$ is negative. It follows then that
 $\lim_{r\to\pm\infty} U(r) = +\infty$ and the segments with $U(r) \leq 0$
 are located between two roots of $\mathcal{R}(r)$ (cf. Fig.~\ref{f:gek:R_potential}).
-Let us denote the lower of these two roots by $r_{\rm p}$, for \defin{periastron}\index{periastron} and the larger one by $r_{\rm a}$, for \defin{apoastron}\index{apoastron}.
-The periastron and apoastron are of course $r$-turning points of the geodesic,
-according to the definition given in Sec.~\ref{s:gek:turning_points}.
+Let us denote the lower of these two roots by $r_{\rm p}$, for \defin{periastron}\index{periastron}, and the larger one by $r_{\rm a}$, for \defin{apoastron}\index{apoastron}.
+The periastron and apoastron are of course \emph{$r$-turning points} of the geodesic,
+as defined in Sec.~\ref{s:gek:turning_points}.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{gek_R_potential.pdf}}
@@ -1600,35 +1622,109 @@ $r_a \simeq 6.853\, m$.
 }
 \end{figure}
 
-It is clear that the motion
+It is clear that the motion in the potential well $U(r) = - \mathcal{R}(r)$
 as governed by Eq.~(\ref{e:gek:r_eff_pot_timelike})
-in the potential well $U(r) = - \mathcal{R}(r)$
 (cf. Fig.~\ref{f:gek:R_potential}) is periodic:
 \be
     \forall n\in\mathbb{Z},\quad r(\tau' + n \Lambda_r) = r(\tau') ,
 \ee
 the period
 $\Lambda_r$ being the Mino time $\Delta\tau'$ spent to perform a round-trip
-between $r_{\rm p}$ and $r_{\rm a}$:
+between $r_{\rm p}$ and $r_{\rm a}$. By rewriting Eq.~(\ref{e:gek:r_eff_pot_timelike})
+as $\D\tau' = \pm \D r / \sqrt{\mathcal{R}(r)}$, we get
 \be \label{e:gek:Lambda_r}
     \Lambda_r = 2 \int_{r_{\rm p}}^{r_{\rm a}} \frac{\D r}{\sqrt{\mathcal{R}(r)}} .
 \ee
-The above formula is obtained by rewriting Eq.~(\ref{e:gek:r_eff_pot_timelike})
-as $\D\tau' = \pm \D r / \sqrt{\mathcal{R}(r)}$.
 Since $\mathcal{R}(r)$ is a 4th-order polynomial [cf. Eq.~(\ref{e:gek:R_timelike})],
 the integral in the right-hand side of Eq.~(\ref{e:gek:Lambda_r}) can
 be evaluated by means of elliptic integrals. We shall not give the detail
-here and refer to the study~\cite{FujitW09}.
+here, refering the interested reader to the article~\cite{FujitW09}.
 
 Regarding the $\th$-motion, we are in the case $a^2(E^2 - \mu^2) < L^2$
 considered in Sec.~\ref{s:gek:th_motion}, since for bound geodesics $E^2 - \mu^2 < 0$.
-The effective $\th$-potential $\mathcal{V}(\th)$ has then the shape shown in
+The effective $\th$-potential $V(\th) = Q - \Theta(\th)$ has then the shape shown in
 the left part of Fig.~\ref{f:gek:th_pot_L_0} for $\ell=0$ and in the left part
 of Fig.~\ref{f:gek:th_pot_L_non0} for $\ell\neq 0$.
-For $\ell\neq 0$ or $\ell=0$ and $q < a^2 ( 1-\veps^2)$, it follows that
-the the geodesic oscillates symmetrically about the equatorial plane between
+For (i) $\ell\neq 0$ or (ii) $\ell=0$ and $q < a^2 ( 1-\veps^2)$, it follows that
+the geodesic oscillates symmetrically about the equatorial plane between
 two $\th$-turning points $\th_{\rm min}$ and $\pi-\th_{\rm min}$,
-with $0 < \th_{\rm min} < \pi /2$.
+with $\th_{\rm min} \in (0,\pi /2)$ being a zero of $\Theta(\th)$.
+From the viewpoint of Eq.~(\ref{e:gek:th_eff_pot_timelike}) above, this
+corresponds to a periodic motion in the potential well $-\tilde{\Theta}(\th)$:
+\be
+    \forall n\in\mathbb{Z},\quad \th(\tau' + n \Lambda_\th) = \th(\tau') .
+\ee
+The period
+$\Lambda_\theta$ is the Mino time $\Delta\tau'$ spent in a round-trip
+between $\theta_{\rm min}$ and $\pi-\theta_{\rm min}$.
+By rewriting Eq.~(\ref{e:gek:th_eff_pot_timelike})
+as $\D\tau' = \pm \D \th / \sqrt{\tilde\Theta(\th)}$, we get
+\be
+    \Lambda_\th = 2 \int_{\th_{\rm min}}^{\pi-\th_{\rm min}}
+              \frac{\D \th}{\sqrt{\tilde\Theta(\th)}}
+              = 4 \int_{\th_{\rm min}}^{\pi/2}
+                  \frac{\D \th}{\sqrt{\tilde\Theta(\th)}} ,
+\ee
+where the last equality results from the symmetry of $\tilde\Theta(\th)$
+with respect to $\pi/2$.
+One naturally associates to the periods $\Lambda_r$ and $\Lambda_\th$
+the \defin{Mino angular frequencies}\index{Mino!angular frequency}\index{angular!frequency!Mino --}:
+\be
+    \Upsilon_r := \frac{2\pi}{\Lambda_r} \qquad\mbox{and}\qquad
+    \Upsilon_\th := \frac{2\pi}{\Lambda_\th} .
+\ee
+
+Let us now consider the evolution of the coordinates $t$ and $\ph$ along the
+geodesic, as governed
+by Eqs.~(\ref{e:gek:dtdmino_timelike}) and (\ref{e:gek:dphdmino_timelike}).
+Since $r$ and $\th$ are periodic functions of $\tau'$, so are the terms
+$T_1(r)$, $T_2(\th)$, $\Phi_1(r)$ and $\Phi_2(\th)$ that appear in the right-hand side
+of Eqs.~(\ref{e:gek:dtdmino_timelike}) and (\ref{e:gek:dphdmino_timelike}). We can thus expand them in Fourier series:
+\begin{subequations}
+\begin{align}
+  &  T_1(r) = \sum_{k=-\infty}^{+\infty} \hat{T}_{1k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_r \, \tau'} = \langle T_1(r) \rangle + \sum_{k=1}^{+\infty} \left( \hat{T}_{1k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_r \, \tau'} + \mathrm{c.c.} \right) \\
+  &  T_2(\th) = \sum_{k=-\infty}^{+\infty} \hat{T}_{2k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_\th \, \tau'} = \langle T_2(\th) \rangle + \sum_{k=1}^{+\infty} \left( \hat{T}_{2k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_\th \, \tau'} + \mathrm{c.c.} \right) \\
+  &  \Phi_1(r) = \sum_{k=-\infty}^{+\infty} \hat{\Phi}_{1k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_r \, \tau'} = \langle \Phi_1(r) \rangle + \sum_{k=1}^{+\infty} \left( \hat{\Phi}_{1k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_r \, \tau'} + \mathrm{c.c.} \right) \\
+  &  \Phi_2(\th) = \sum_{k=-\infty}^{+\infty} \hat{\Phi}_{2k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_\th \, \tau'} = \langle \Phi_2(r) \rangle + \sum_{k=1}^{+\infty} \left( \hat{\Phi}_{2k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_\th \, \tau'} + \mathrm{c.c.} \right) ,
+\end{align}
+\end{subequations}
+where $\langle T_1(r) \rangle = \hat{T}_{10}$, $\langle T_2(\th) \rangle = \hat{T}_{20}$,
+$\langle \Phi_1(r) \rangle = \hat{\Phi}_{10}$ and $\langle \Phi_2(\th) \rangle = \hat{\Phi}_{20}$
+are the mean values of the functions $T_1(r(\tau'))$,
+$T_2(\th(\tau'))$, $\Phi_1(r(\tau'))$ and $\Phi_2(\th(\tau'))$ over one period:
+\begin{subequations}
+\begin{align}
+    & \langle T_1(r) \rangle = \frac{1}{\Lambda_r} \int_{0}^{\Lambda_r}
+        T_1(r(\tau'))\, \D \tau'
+        = \frac{2}{\Lambda_r} \int_{r_{\rm p}}^{r_{\rm a}} \frac{T_1(r)}{\sqrt{R(r)}}\, \D r \\
+    & \langle T_2(\th) \rangle = \frac{1}{\Lambda_\th} \int_{0}^{\Lambda_\th}
+        T_2(\th(\tau'))\, \D \tau'
+        = \frac{4}{\Lambda_\th} \int_{\th_{\rm min}}^{\pi/2}
+            \frac{T_2(\th)}{\sqrt{\tilde\Theta(\th)}}\, \D \th ,
+\end{align}
+\end{subequations}
+with similar formulas for $\langle \Phi_1(r) \rangle$ and $\langle \Phi_2(\th) \rangle$.
+
+We may then rewrite Eqs.~(\ref{e:gek:dtdmino_timelike}) and (\ref{e:gek:dphdmino_timelike})
+as
+\begin{subequations}
+\begin{align}
+ & \derd{t}{\tau'} = \Gamma + \sum_{k=1}^{+\infty} \left( \hat{T}_{1k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_r \, \tau'} + \mathrm{c.c.} \right)
+    + \sum_{k=1}^{+\infty} \left( \hat{T}_{2k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_\th \, \tau'} + \mathrm{c.c.} \right) \\
+ & \derd{\ph}{\tau'} = \Upsilon_\ph + \sum_{k=1}^{+\infty} \left( \hat{\Phi}_{1k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_r \, \tau'} + \mathrm{c.c.} \right)
+ + \sum_{k=1}^{+\infty} \left( \hat{\Phi}_{2k} \, \mathrm{e}^{\mathrm{i} k \Upsilon_\th \, \tau'} + \mathrm{c.c.} \right) ,
+\end{align}
+\end{subequations}
+with
+\be
+    \Gamma := a\ell + \langle T_1(r) \rangle + \langle T_2(\th) \rangle ,
+\ee
+\be
+    \Upsilon_\ph :=  - a \veps + \langle \Phi_1(r) \rangle + \langle \Phi_2(\th) \rangle .
+\ee
+$\Gamma$ and $\Upsilon_\ph$ represent the constant parts in
+respectively $\D t/\D\tau'$ and $\D \ph / \D\tau'$, while the oscillatory parts
+are the terms in the sums over $k$.
 
 \subsection{Equatorial geodesics}
 
