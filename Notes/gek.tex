@@ -1261,7 +1261,7 @@ $\th_0 = \pi/2-\iota$.
 
 The $r$-part of geodesic motion is constrained by Eq.~(\ref{e:gek:R_non_neg}):
 $R(r) \geq 0$. Let us rewrite expression
-(\ref{e:gek:def_R}) for the quartic polynomial $R(r)$ in term of $Q$
+(\ref{e:gek:def_R}) for the quartic polynomial $R(r)$ in terms of $Q$
 instead of $\mathscr{K}$, via Eq.~(\ref{e:gek:def_Q}), and expand the
 result in powers of $r$:
 \be \label{e:gek:R_r_powers}
@@ -1527,7 +1527,7 @@ and \defin{reduced Carter constant}\index{reduced!Carter constant}\index{Carter!
 \ee
 
 The first-order equations of motion (\ref{e:gek:drdl_Mino})
-and (\ref{e:gek:th_eff_potential}) can be rewritten in term of the above quantities:
+and (\ref{e:gek:th_eff_potential}) can be rewritten in terms of the above quantities:
 \begin{subequations}
 \begin{align}
 & \encadre{ \derd{t}{\tau'} = a\ell + T_1(r) + T_2(r) } \label{e:gek:dtdmino_timelike}\\
@@ -1645,12 +1645,23 @@ considered in Sec.~\ref{s:gek:th_motion}, since for bound geodesics $E^2 - \mu^2
 The effective $\th$-potential $V(\th) = Q - \Theta(\th)$ has then the shape shown in
 the left part of Fig.~\ref{f:gek:th_pot_L_0} for $\ell=0$ and in the left part
 of Fig.~\ref{f:gek:th_pot_L_non0} for $\ell\neq 0$.
-For (i) $\ell\neq 0$ or (ii) $\ell=0$ and $q < a^2 ( 1-\veps^2)$, it follows that
-the geodesic oscillates symmetrically about the equatorial plane between
-two $\th$-turning points $\th_{\rm min}$ and $\pi-\th_{\rm min}$,
-with $\th_{\rm min} \in (0,\pi /2)$ being a zero of $\Theta(\th)$.
-From the viewpoint of Eq.~(\ref{e:gek:th_eff_pot_timelike}) above, this
-corresponds to a periodic motion in the potential well $-\tilde{\Theta}(\th)$:
+We can then distinguish two types of orbits:
+\begin{itemize}
+\item \defin{polar orbit}: $\Li$ crosses the rotational axis an infinite number
+of times; this occurs iff $\ell=0$ and $q > a^2 ( 1-\veps^2)$;
+\item \defin{non-polar orbit}: $\Li$ never crosses the rotational axis; it
+rather oscillates symmetrically about the equatorial plane between
+two $\th$-turning points $\th_{\rm min} \in (0,\pi /2)$ and $\pi-\th_{\rm min}$.
+Such orbits occur for either
+$\ell\not=0$ or $\ell=0$ and $q < a^2 ( 1-\veps^2)$.
+\end{itemize}
+Stricly speaking, there is also the exceptional case $\ell=0$ and
+$q = a^2 (1 -\veps^2)$, for which the rotation axis is reached only
+asymptotically.
+
+In the following, we focus on non-polar orbits.
+From the viewpoint of Eq.~(\ref{e:gek:th_eff_pot_timelike}) above, they
+correspond to a periodic motion in the potential well $-\tilde{\Theta}(\th)$:
 \be
     \forall n\in\mathbb{Z},\quad \th(\tau' + n \Lambda_\th) = \th(\tau') .
 \ee
@@ -1673,6 +1684,22 @@ the \defin{Mino angular frequencies}\index{Mino!angular frequency}\index{angular
     \Upsilon_r := \frac{2\pi}{\Lambda_r} \qquad\mbox{and}\qquad
     \Upsilon_\th := \frac{2\pi}{\Lambda_\th} .
 \ee
+
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{gek_torus.pdf}}
+\caption[]{\label{f:gek:torus} \footnotesize
+Meridional section of the torus occupied by a bound timelike geodesic. The dot-dashed line
+is the rotation axis and the solid line marks the equatorial plane.
+}
+\end{figure}
+
+For non-polar orbits, the motion is restricted by $r_{\rm p}\leq r \leq r_{\rm a}$
+and $\th_{\rm min} \leq \th \leq \pi/2 - \th_{\rm min}$. This means that
+in terms of the ``Cartesian'' Boyer-Lindquist coordinates $(x,y,z)$, the
+geodesic is confined inside a torus (cf. Fig.~\ref{f:gek:torus}), which is
+symmetric about the equatorial plane. Moreover, if the two frequencies
+$\Upsilon_r$ and $\Upsilon_\th$ are not commensurable, i.e. if
+$\Upsilon_\th / \Upsilon_r \not\in\mathbb{Q}$, the geodesic fills the torus.
 
 Let us now consider the evolution of the coordinates $t$ and $\ph$ along the
 geodesic, as governed
@@ -1764,6 +1791,13 @@ are average frequencies.
 
 
 
+
+
+\section{Going further}
+
+For an extended discussion of geodesics of Kerr spacetime, including those
+that cross the various blocks of the maximal analytic extension, see
+Chap.~4 of O'Neill textbook \cite{ONeil95}.
 
 Circular orbits in Kerr spacetime: \cite{BoyerP65} \cite{BardePT72} (see also \cite{Barde73})
 
