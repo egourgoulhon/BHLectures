@@ -661,6 +661,8 @@ is an ordinary differential equation for the function $\th(\lambda')$. This was
 not the case for Eqs.~(\ref{e:gek:drdl}) and (\ref{e:gek:dthdl}) since $\rho^2$ is
 a function of both $r$ and $\th$.
 
+\subsection{Integration of the geodesic equations}
+
 Equation~(\ref{e:gek:drdl_Mino}) can be integrated by the method of separation
 of variables. On a part of $\Li$ where $R(r)\neq 0$, this yields
 \be \label{e:gek:lp_int_dr_ov_R}
@@ -672,7 +674,7 @@ excludes any $r$-turning point between $\lambda'_0$ and $\lambda'$, so that
 $\eps_r=\pm 1$ is constant along
 the considered part of $\Li$.
 
-The solution (\ref{e:gek:lp_int_dr_ov_R})
+Actually, the solution (\ref{e:gek:lp_int_dr_ov_R})
 can be extended to include a turning point at one or two of its boundaries,
 despite $R(r)=0$ there.
 Indeed, let us assume that $r=r_1$ corresponds to a $r$-turning point of $\Li$.
@@ -705,17 +707,6 @@ where $r_{1,2} = r_1$ for $M$ odd and $r_{1,2} = r_2$ for $M$ even.
 Note that each term is the above sum
 is positive, the sign of $\eps_r$ compensating the order of the integral
 boundaries.
-For instance, if there is a single $r$-turning point $p_1$ between
-between $\lambda'_0$ and $\lambda'$, Eq.~(\ref{e:gek:Minotime_r_sum}) with $M=1$ gives
-\[
-   \lambda' - \lambda'_0 = \begin{cases}
-  \displaystyle \int_{r_0}^{r_1} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
-    + \int_{r}^{r_1} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}} & \mbox{if} \ r_1 > r_0 \\[2ex]
-  \displaystyle \int_{r_1}^{r_0} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
-    + \int_{r_1}^{r} \frac{\D \bar{r}}{\sqrt{R(\bar{r})}} & \mbox{if} \ r_1 < r_0 ,
-    \end{cases}
-\]
-where all the integrals in the right-hand side are positive.
 
 The right-hand side of Eq.~(\ref{e:gek:Minotime_r_sum}) is actually a path
 integral and is often abriged by means of a slash notation:
@@ -742,6 +733,34 @@ where $\th_0 := \th(\lambda'_0)$,
 $N$ is the number of $\th$-turning points between $\lambda'_0$ and $\lambda'$,
 $\theta_1$ (resp. $\theta_2$) is the value of $\th$ at the first (resp. second)
 turning point, if any, $\th_{1,2} = \th_1$ for $N$ odd and $\th_{1,2} = \th_2$ for $N$ even.
+
+We are now in position to state the full expression of the general
+solution for geodesic motion:
+\begin{greybox}
+Let $\Li$ be a null or timelike geodesic in Kerr spacetime,
+with conserved energy $E$, conserved angular momentum $L$, mass $\mu$ and
+Carter constant $Q$. Let $\lambda$ be the affine parameter of $\Li$
+associated with the 4-momentum $\w{p}$ and $\lambda'$ the
+Mino parameter. If for $\lambda=\lambda_0$
+$\Li$ lies at the point of Boyer-Lindquist coordinates $(t_0,r_0,\th_0,\ph_0)$,
+then at any value of $\lambda$, the coordinates $(t,r,\th,\ph)$ along $\Li$
+obey
+\begin{subequations}
+\begin{align}
+ & \lambda' - \lambda'_0 = \dashint_{r_0}^r \frac{\eps_r \, \D \bar{r}}{\sqrt{R(\bar{r})}}
+   = \dashint_{\th_0}^\th \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \\
+ & \lambda - \lambda_0 = \dashint_{r_0}^r \frac{\eps_r \bar{r}^2 \D \bar{r}}{\sqrt{R(\bar{r})}}
+    + a^2 \dashint_{\th_0}^\th \frac{\eps_\th \cos^2\bar{\th} \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \\
+ & t - t_0 = \dashint_{r_0}^r  \frac{\eps_r (\bar{r}^2 + a^2)}{\bar{r}^2 - 2m \bar{r} + a^2}
+ \left[ (\bar{r}^2 + a^2) E - a L \right] \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
+ + a \dashint_{\th_0}^\th ( L - a E \sin^2\bar{\th} ) \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \\
+ & \ph - \ph_0 = a \dashint_{r_0}^r  \frac{(\bar{r}^2 + a^2)E - a L}{\bar{r}^2 - 2m \bar{r} + a^2}
+    \frac{\eps_r \, \D \bar{r}}{\sqrt{R(\bar{r})}}
+    + \dashint_{\th_0}^\th \left( \frac{L}{\sin^2\bar{\th}} - a E  \right) \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} .
+\end{align}
+\end{subequations}
+\end{greybox}
+
 
 %\subsection{Equations of motion in terms of 3+1 Kerr coordinates}
 
@@ -1884,7 +1903,7 @@ are average frequencies.
 
 Given a bound timelike geodesic $\Li$ of Kerr spacetime, one may define
 its \defin{eccentricity}\index{eccentricity} $e$ and (dimensionless)
-\defin{semilatus rectum} $p$ by means of Keplerian-like formulas \cite{Schmi02,DrascoH06,SteinW20}:
+\defin{semilatus rectum} $p$ by means of Keplerian-like formulas \cite{Schmi02,DrascH06,SteinW20}:
 \be \label{e:gek:rp_ra_p_e}
     r_{\rm p} =: \frac{p m}{1 + e} \qquad\mbox{and}\qquad
     r_{\rm a} =: \frac{p m}{1 - e} ,
@@ -1936,6 +1955,19 @@ has $\veps=0.9$, $\ell=2 m$ and $q=1.3\, m^2$, from which we get
 $p=3.302$, $e=0.518$ and $\th_{\rm inc} = 29.26^\circ$.
 \end{example}
 
+The parametrization $(p, e, \th_{\rm inc})$ allows one to introduce
+along the geodesic $\Li$ the radial phase angle $\psi(\tau)$ and the
+meridional phase angle $\chi(\tau)$ as monotically increasing functions
+such that
+\be
+    r(\tau) =: \frac{p m}{1 + e\cos\psi(\tau)} \qquad\mbox{and}\qquad
+    \th(\tau) =: \arccos\left( \cos\th_{\rm min} \, \cos\chi(\tau) \right) .
+\ee
+For numerical integration, $\psi(\tau)$ and $\chi(\tau)$ are preferred
+to $r(\tau)$ and $\th(\tau)$ since the latter are tricky at the
+turning points, where $\D r/\D\tau$ and $\D\th/\D\tau$ vanish and change sign
+\cite{DrascH04}.
+
 \subsection{Equatorial geodesics}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1960,6 +1992,3 @@ For an extended discussion of geodesics of Kerr spacetime, including those
 that cross the various blocks of the maximal analytic extension, see
 Chap.~4 of O'Neill textbook \cite{ONeil95}.
 
-Circular orbits in Kerr spacetime: \cite{BoyerP65} \cite{BardePT72} (see also \cite{Barde73})
-
-More general orbits: \cite{Schmi02}, \cite{Perez-Giz11}, \cite{GrossLP12}
