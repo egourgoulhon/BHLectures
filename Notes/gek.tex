@@ -746,21 +746,44 @@ $\Li$ lies at the point of Boyer-Lindquist coordinates $(t_0,r_0,\th_0,\ph_0)$,
 then at any value of $\lambda$, the coordinates $(t,r,\th,\ph)$ along $\Li$
 obey
 \begin{subequations}
+\label{e:gek:integrated_eqs}
 \begin{align}
  & \lambda' - \lambda'_0 = \dashint_{r_0}^r \frac{\eps_r \, \D \bar{r}}{\sqrt{R(\bar{r})}}
-   = \dashint_{\th_0}^\th \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \\
+   = \dashint_{\th_0}^\th \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
+    \label{e:gek:integr_Mino}\\
  & \lambda - \lambda_0 = \dashint_{r_0}^r \frac{\eps_r \bar{r}^2 \D \bar{r}}{\sqrt{R(\bar{r})}}
-    + a^2 \dashint_{\th_0}^\th \frac{\eps_\th \cos^2\bar{\th} \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \\
+    + a^2 \dashint_{\th_0}^\th \frac{\eps_\th \cos^2\bar{\th} \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
+    \label{e:gek:integr_lambda} \\
  & t - t_0 = \dashint_{r_0}^r  \frac{\eps_r (\bar{r}^2 + a^2)}{\bar{r}^2 - 2m \bar{r} + a^2}
  \left[ (\bar{r}^2 + a^2) E - a L \right] \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
- + a \dashint_{\th_0}^\th ( L - a E \sin^2\bar{\th} ) \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \\
+ + a \dashint_{\th_0}^\th ( L - a E \sin^2\bar{\th} ) \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \label{e:gek:integr_t} \\
  & \ph - \ph_0 = a \dashint_{r_0}^r  \frac{(\bar{r}^2 + a^2)E - a L}{\bar{r}^2 - 2m \bar{r} + a^2}
     \frac{\eps_r \, \D \bar{r}}{\sqrt{R(\bar{r})}}
-    + \dashint_{\th_0}^\th \left( \frac{L}{\sin^2\bar{\th}} - a E  \right) \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} .
+    + \dashint_{\th_0}^\th \left( \frac{L}{\sin^2\bar{\th}} - a E  \right) \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} , \label{e:gek:integr_ph}
 \end{align}
 \end{subequations}
+where $R$ is the quartic polynomial defined by Eq.~(\ref{e:gek:def_R}) (see also Eq.~(\ref{e:gek:R_r_powers}) below) and $\Theta$ is the function defined by Eq.~(\ref{e:gek:Theta_Q}).
 \end{greybox}
-
+\begin{proof}
+Equation~(\ref{e:gek:integr_Mino}) is nothing but the gathering of
+Eqs.~(\ref{e:gek:Minotime_r_slash_int}) and (\ref{e:gek:Minotime_th_slash_int}).
+For Eq.~(\ref{e:gek:integr_lambda}), it suffices to rewrite Eq.~(\ref{e:gek:def_Mino_time})
+as
+\[
+    \D\lambda = r^2 \, \D\lambda' + a^2\cos^2\th \, \D\lambda'
+\]
+and to substitute $\D\lambda'$ by $\eps_r \D r / \sqrt{R(r)}$
+in the first term [cf. Eq.~(\ref{e:gek:drdl_Mino})] and by
+$\eps_\th \D\th / \sqrt{\Theta(\th)}$ in the second term [cf. Eq.~(\ref{e:gek:dthdl_Mino})].
+Similarly, by rewriting Eq.~(\ref{e:gek:dtdl_Mino}) as
+\[
+    \D t = \frac{r^2 + a^2}{r^2 - 2mr + a^2} [(r^2 + a^2) E - a L] \, \D\lambda'
+        + a ( L - a E \sin^2\th ) \, \D\lambda'
+\]
+and performing the same substitutions for $\D\lambda'$ as above, we get
+Eq.~(\ref{e:gek:integr_t}). Finally, Eq.~(\ref{e:gek:integr_ph}) is deduced
+in the same fashion from Eq.~(\ref{e:gek:dphdl_Mino}).
+\end{proof}
 
 %\subsection{Equations of motion in terms of 3+1 Kerr coordinates}
 
@@ -799,7 +822,13 @@ Eqs.~(\ref{e:gek:dtdl}) and (\ref{e:gek:dphdl}) for the Boyer-Lindquist coordina
 $t$ and $\ph$. It seems that the Boyer-Lindquist first-order system (\ref{e:gek:eom_first_order})
 has been first derived by Daniel Wilkins\index{Wilkins, D.} in 1972 \cite{Wilki72},
 starting from Carter's system and performing the transformation to Boyer-Lindquist
-coordinates.
+coordinates. The integrated geodesic equations (\ref{e:gek:integrated_eqs}) have
+been obtained by Carter in 1968 \cite{Carte68}: Eq.~(\ref{e:gek:integr_Mino})
+(without the $\lambda' - \lambda'_0$ part) is Eq.~(58) of Ref.~\cite{Carte68}
+and Eq.~(\ref{e:gek:integr_lambda}) is Eq.~(59) of Ref.~\cite{Carte68}.
+Regarding Eqs.~(\ref{e:gek:integr_t}) and (\ref{e:gek:integr_ph}), Carter
+obtained equivalent ones for the Kerr coordinates $v$ and $\tph$ he was using
+[his Eqs.~(60) and (61)].
 \end{hist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1486,7 +1515,7 @@ Sec.~\ref{s:gek:th_motion}, we see that $\Li$ can approach $\th=\pi/2$ iff
 (i) $\Li$ has
 $|E|\leq \sqrt{\mu^2 + L^2/a^2}$ and lies stably in the equatorial plane
 or (ii) $\Li$ has $|E| > \sqrt{\mu^2 + L^2/a^2}$ and approaches asymptotically
-$\th=\pi/2$ as the Mino parameter $\lambda'\to \pm\infty$.
+$\th=\pi/2$ as the Mino parameter $\lambda'$ tends to $\pm\infty$.
 Let us show that (ii) is not compatible with $r\to 0$.
 For $Q=0$, expression~(\ref{e:gek:R_r_powers}) for $R(r)$ reduces to
 \[
@@ -1496,10 +1525,9 @@ For $Q=0$, expression~(\ref{e:gek:R_r_powers}) for $R(r)$ reduces to
 \]
 with the constant term inside the square brackets $2m(L - a E)^2 \neq 0$,
 since $L=a E$ is not compatible with $|E| > \sqrt{\mu^2 + L^2/a^2}$. It
-follows that $r=0$ is a simple root of $R(r)$. If $\Li$ reaches both
+follows that $r=0$ is a simple root of $R(r)$. If $\Li$ would reach both
 $r=0$ and $\th=\pi/2$ when $\lambda\to\lambda_*$, from some point $(r_0,\th_0)$,
-then we should have, by virtue of
-Eqs.~(\ref{e:gek:Minotime_r_slash_int}) and (\ref{e:gek:Minotime_th_slash_int}),
+then Eq.~(\ref{e:gek:integr_Mino}) would yield
 \be \label{e:gek:dashint_r_theta}
     \lambda'_* - \lambda'_0 = \dashint_{r_0}^0 \frac{\eps_r \, \D r}{\sqrt{R(r)}}
     = \dashint_{\th_0}^{\frac{\pi}{2}} \frac{\eps_\th \, \D \th}{\sqrt{\Theta(\th)}} ,
@@ -1513,7 +1541,7 @@ Now, for $Q=0$, expression (\ref{e:gek:Theta_Q}) for $\Theta$ reduces to
     \Theta(\th) = \cos^2\th \left[ a^2 (E^2 - \mu^2)
     - \frac{L^2}{\sin^2\th} \right] .
 \]
-The $\cos^2\th$ term, which behaves as $(\th - \pi/2)^2$ near $\pi/2$,
+The $\cos^2\th$ term, which behaves as $(\th - \pi/2)^2$ for $\th$ near $\pi/2$,
 makes the ingetral on $\th$ in
 Eq.~(\ref{e:gek:dashint_r_theta}) divergent, which is incompatible with the
 finite value of the integral on $r$ in the left-hand side. Hence only (i) is possible, which completes
