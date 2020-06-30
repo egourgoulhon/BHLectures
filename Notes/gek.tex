@@ -661,7 +661,7 @@ is an ordinary differential equation for the function $\th(\lambda')$. This was
 not the case for Eqs.~(\ref{e:gek:drdl}) and (\ref{e:gek:dthdl}) since $\rho^2$ is
 a function of both $r$ and $\th$.
 
-\subsection{Integration of the geodesic equations}
+\subsection{Integration of the geodesic equations} \label{e:gek:integration}
 
 Equation~(\ref{e:gek:drdl_Mino}) can be integrated by the method of separation
 of variables. On a part of $\Li$ where $R(r)\neq 0$, this yields
@@ -784,6 +784,31 @@ and performing the same substitutions for $\D\lambda'$ as above, we get
 Eq.~(\ref{e:gek:integr_t}). Finally, Eq.~(\ref{e:gek:integr_ph}) is deduced
 in the same fashion from Eq.~(\ref{e:gek:dphdl_Mino}).
 \end{proof}
+
+The system (\ref{e:gek:integrated_eqs}) shows that the geodesic motion can be
+fully solved in terms of the Mino parameter $\lambda'$. Indeed,
+the integral on $r$ in Eq.~(\ref{e:gek:integr_Mino}) can be evaluated by
+means of elliptic integrals since $R$ is a polynomial of degree 4. This provides
+$\lambda' = \lambda'(r)$. Inverting this relation via Jacobi elliptic functions
+(cf. Remark~\ref{r:gis:Jacobi_elliptic_sine} on p.~\pageref{r:gis:Jacobi_elliptic_sine})
+yields $r = r(\lambda')$. The integral on $\th$ in Eq.~(\ref{e:gek:integr_Mino})
+can be evaluated by means of elliptic integrals as well since the change of variable
+$\zeta := \cos\th$ along with expression (\ref{e:gek:Theta_Q}) for $\Theta(\th)$ results in
+\[
+\dashint_{\th_0}^\th \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
+= - \dashint_{\zeta_0}^\zeta
+\frac{\eps_\th \, \D \bar{\zeta}}{\sqrt{Q(1-\bar{\zeta}^2) + \bar{\zeta}^2[a^2(E^2-\mu^2)(1-\bar{\zeta}^2) - L^2]}} ,
+\]
+with the term under the square root in the right-hand side being a polynomial of degree 4
+in $\bar{\zeta}$.
+The use of Jacobi elliptic functions leads then to $\th = \th(\lambda')$.
+From $r(\lambda')$ and $\th(\lambda')$ one can get $\lambda(\lambda')$,
+$t(\lambda')$ and $\ph(\lambda')$
+by evaluating the integrals in the right-hand sides of
+Eqs.~(\ref{e:gek:integr_lambda})--(\ref{e:gek:integr_ph}). Again, these integrals are
+reducible to elliptic integrals. We shall not give the details of all the
+elliptic integrals computations, refering the reader to Ref.~\cite{FujitH09}
+for bound timelike geodesics and to Ref.~\cite{GrallaL20b} for null geodesics.
 
 %\subsection{Equations of motion in terms of 3+1 Kerr coordinates}
 
@@ -1526,7 +1551,7 @@ For $Q=0$, expression~(\ref{e:gek:R_r_powers}) for $R(r)$ reduces to
 with the constant term inside the square brackets $2m(L - a E)^2 \neq 0$,
 since $L=a E$ is not compatible with $|E| > \sqrt{\mu^2 + L^2/a^2}$. It
 follows that $r=0$ is a simple root of $R(r)$. If $\Li$ would reach both
-$r=0$ and $\th=\pi/2$ when $\lambda\to\lambda_*$, from some point $(r_0,\th_0)$,
+$r=0$ and $\th=\pi/2$ when $\lambda$ tends to some value $\lambda_*$,
 then Eq.~(\ref{e:gek:integr_Mino}) would yield
 \be \label{e:gek:dashint_r_theta}
     \lambda'_* - \lambda'_0 = \dashint_{r_0}^0 \frac{\eps_r \, \D r}{\sqrt{R(r)}}
@@ -1697,7 +1722,7 @@ as $\D\tau' = \pm \D r / \sqrt{\mathcal{R}(r)}$, we get
 \be \label{e:gek:Lambda_r}
     \Lambda_r = 2 \int_{r_{\rm p}}^{r_{\rm a}} \frac{\D r}{\sqrt{\mathcal{R}(r)}} .
 \ee
-Since $\mathcal{R}(r)$ is a 4th-order polynomial [cf. Eq.~(\ref{e:gek:R_timelike})],
+Since $\mathcal{R}(r)$ is a polynomial of degree 4 [cf. Eq.~(\ref{e:gek:R_timelike})],
 the integral in the right-hand side of Eq.~(\ref{e:gek:Lambda_r}) can
 be evaluated by means of elliptic integrals. We shall not give the detail
 here, refering the interested reader to the article~\cite{FujitH09}.
