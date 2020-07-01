@@ -1654,7 +1654,7 @@ follow respectively from Eqs.~(\ref{e:gek:R_r_powers}) and (\ref{e:gek:Theta_Q})
 
 Using Eqs.~(\ref{e:gek:tau_mu_lamb}) and (\ref{e:gek:def_Mino_time}), we can
 relate $\tau'$ to the proper time $\tau$:
-\be
+\be \label{e:gek:Mino_time_tau}
    \encadre{ \D\tau' = \frac{\D\tau}{\rho^2}
      = \frac{\D\tau}{r(\tau)^2 + a^2 \cos^2 \th(\tau)} } .
 \ee
@@ -2041,7 +2041,40 @@ the exceptional case $L=0$ and $a^2 E^2 = a^2 \mu^2$, for which they are moving 
 a constant value of $\th$ (cf. Sec.~\ref{s:gek:th_motion}).
 \end{remark}
 
-%(\ref{e:gek:timelike_system})
+When $\th=\pi/2$, we have $\sin^2\th=1$, $\rho^2 = r^2$ and $\D\tau' = r^{-2}\D\tau$
+[cf. Eq.~(\ref{e:gek:Mino_time_tau})], so that the system
+(\ref{e:gek:timelike_system}) reduces to
+\begin{subequations}
+\begin{align}
+& \encadre{ \frac{\D t}{\D\tau} = \frac{1}{r^2 - 2 m r + a^2} \left[
+    \veps(r^2 + a^2) + \frac{2 a m}{r} (a\veps - \ell) \right] } \label{e:gek:timel_dtdtau} \\
+& \encadre{ \left( \frac{\D r}{\D \tau} \right) ^2 + \mathcal{V}(r) = 0 }\label{e:gek:timel_drdtau} \\
+& \encadre{ \frac{\D\ph}{\D\tau} = \frac{1}{r^2 - 2 m r + a^2} \left[
+    \ell \left( 1 - \frac{2m}{r} \right)
+    + \frac{2 am \veps}{r} \right] },  \label{e:gek:timel_dphdtau}
+\end{align}
+\end{subequations}
+with
+\be
+   \encadre{ \mathcal{V}(r) := 1 - \veps^2 - \frac{2m}{r} + \frac{\ell^2 + a^2(1-\veps^2)}{r^2}
+    - \frac{2m(\ell - a\veps)^2}{r^3} }.
+\ee
+\begin{remark}
+At the Schwarzschild limit ($a=0$) we recover the differential equations of Chap.~\ref{s:ges},
+namely Eq.~(\ref{e:gek:timel_dtdtau}) reduces to Eq.~(\ref{e:ges:Dt_Dtau}),
+Eq.~(\ref{e:gek:timel_drdtau}) to Eq.~(\ref{e:ges:1d_motion_timelike}) and
+Eq.~(\ref{e:gek:timel_dphdtau}) to Eq.~(\ref{e:ges:Dph_Dtau}). In particular
+we have $\mathcal{V}(r) = 1 - \veps^2 + 2 V_\ell(r)$, where $V_\ell(r)$
+is the effective potential (\ref{e:ges:V_eff_timelike}). Note however that
+when $a\neq 0$, $\mathcal{V}(r)$ cannot be considered as an effective
+potential for the radial motion, because it depends on $\veps$, in addition
+to $\ell$, even if we substract from it the constant term $1 - \veps^2$.
+This is why we did not bother to add a $1/2$ factor in Eq.~(\ref{e:gek:timel_drdtau}),
+as we did for Eq.~(\ref{e:ges:1d_motion_timelike}) to make it resemble
+the first integral of a 1-dimensional motion in a potential well.
+\end{remark}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
