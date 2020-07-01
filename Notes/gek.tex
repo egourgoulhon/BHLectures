@@ -1611,13 +1611,14 @@ and \defin{reduced Carter constant}\index{reduced!Carter constant}\index{Carter!
 \ee
 We shall refer to $\veps$, $\ell$ and $q$ as the
 \defin{reduced integrals of motion}\index{reduced!integral of motion}\index{integral!of motion!reduced --}
-of the geodesic $\Li$.
+of the geodesic $\Li$. Note that in geometrized units ($c=G=1$), $\veps$ is
+dimensionless, $\ell$ has the dimension of a length and $q$ that of a squared length.
 
-The first-order equations of motion (\ref{e:gek:drdl_Mino})
-and (\ref{e:gek:th_eff_potential}) can be rewritten in terms of the above quantities:
+The first-order equations of motion (\ref{e:gek:eom_Mino}) can be rewritten in terms of the above quantities:
 \begin{subequations}
+\label{e:gek:timelike_system}
 \begin{align}
-& \encadre{ \derd{t}{\tau'} = a\ell + T_1(r) + T_2(r) } \label{e:gek:dtdmino_timelike}\\
+& \encadre{ \derd{t}{\tau'} = a\ell + T_1(r) + T_2(\th) } \label{e:gek:dtdmino_timelike}\\
 & \encadre{  \left( \derd{r}{\tau'} \right)^2 - \mathcal{R}(r) = 0 } \label{e:gek:r_eff_pot_timelike}\\
 & \encadre{ \left( \derd{\theta}{\tau'} \right)^2 - \tilde{\Theta}(\th) = 0 } \label{e:gek:th_eff_pot_timelike}\\
 & \encadre{ \derd{\ph}{\tau'}  = - a \veps + \Phi_1(r) + \Phi_2(\th) } \label{e:gek:dphdmino_timelike}
@@ -1629,12 +1630,12 @@ where $\tau'$ is related to the Mino parameter $\lambda'$ by
 \ee
 and
 \be
-    T_1(r) := \frac{r^2 + a^2}{r^2 - 2 m r + a^2} [(r^2 + a^2) \veps - a \ell]
+    T_1(r) := \frac{r^2 + a^2}{r^2 - 2 m r + a^2} [\veps (r^2 + a^2)  - a \ell]
     \qquad\mbox{and}\qquad
-    T_2(\th) := - a^2 \veps \ell \sin^2\th,
+    T_2(\th) := - a^2 \veps \sin^2\th,
 \ee
 \be
-    \Phi_1(r) := \frac{a}{r^2 - 2 m r + a^2}\left[(r^2 + a^2) \veps - a \ell \right]
+    \Phi_1(r) := \frac{a}{r^2 - 2 m r + a^2}\left[\veps (r^2 + a^2) - a \ell \right]
     \qquad\mbox{and}\qquad
     \Phi_2(\th) := \frac{\ell}{\sin^2\th} ,
 \ee
@@ -2022,6 +2023,25 @@ turning points, where $\D r/\D\tau$ and $\D\th/\D\tau$ vanish and change sign
 \cite{DrascH04}.
 
 \subsection{Equatorial geodesics}
+
+Let us focus on timelike geodesics confined to the equatorial plane:
+$\th=\pi/2$. They thus have $\D\th/\D\tau' = 0$ and Eq.~(\ref{e:gek:th_eff_pot_timelike})
+leads to $\tilde{\Theta}(\th) = 0$. Given expression~(\ref{e:gek:Theta_timelike}) for $\tilde{\Theta}(\th)$, this
+implies
+\be
+    q = 0 .
+\ee
+\begin{remark}
+The above result follows as well from the analysis of the $\th$-motion performed
+in Sec.~\ref{s:gek:th_motion} and according to which the only possibility
+for a motion confined to the equatorial plane is $Q=0$, be the geodesic timelike or null.
+The converse is not true: there exist (timelike or null) geodesics with $Q=0$ outside the equatorial
+plane; they are asymptotically approaching the equatorial from one side, except for
+the exceptional case $L=0$ and $a^2 E^2 = a^2 \mu^2$, for which they are moving with
+a constant value of $\th$ (cf. Sec.~\ref{s:gek:th_motion}).
+\end{remark}
+
+%(\ref{e:gek:timelike_system})
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
