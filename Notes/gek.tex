@@ -2054,6 +2054,7 @@ When $\th=\pi/2$, we have $\sin^2\th=1$, $\rho^2 = r^2$ and $\D\tau' = r^{-2}\D\
 [cf. Eq.~(\ref{e:gek:Mino_time_tau})], so that the system
 (\ref{e:gek:timelike_system}) reduces to
 \begin{subequations}
+\label{e:gek:equat_time_system}
 \begin{align}
 & \encadre{ \frac{\D t}{\D\tau} = \frac{1}{r^2 - 2 m r + a^2} \left[
     \veps(r^2 + a^2) + \frac{2 a m}{r} (a\veps - \ell) \right] } \label{e:gek:timel_dtdtau} \\
@@ -2064,7 +2065,7 @@ When $\th=\pi/2$, we have $\sin^2\th=1$, $\rho^2 = r^2$ and $\D\tau' = r^{-2}\D\
 \end{align}
 \end{subequations}
 with
-\be
+\be \label{e:gek:def_V_time_equat}
    \encadre{ \mathcal{V}(r) := 1 - \veps^2 - \frac{2m}{r} + \frac{\ell^2 + a^2(1-\veps^2)}{r^2}
     - \frac{2m(\ell - a\veps)^2}{r^3} }.
 \ee
@@ -2094,9 +2095,105 @@ is a geodesic that obeys
 The constant $r_0$ is called the \defin{radius}\index{radius!of circular orbit} of the circular
 orbit.
 One has then $\D r/\D\tau = 0$, so that Eq.~(\ref{e:gek:timel_drdtau}) implies
-\be
+\be \label{e:gek:circ_V_zero}
     \mathcal{V}(r_0) = 0 .
 \ee
+The above condition is not sufficient to single out a geodesic worldline:
+there exist worldlines with constant $r=r_0$ that obey the whole system
+(\ref{e:gek:equat_time_system}) (which includes (\ref{e:gek:circ_V_zero}))
+but that are not solutions of the
+geodesic equation (\ref{e:gek:eq_geod})
+(see Ref.~\cite{Vanae20} for details). One must add a second condition, which
+is obtained as follows. For any timelike equatorial geodesic (not necessarily
+circular), the following relation must holds:
+\[
+    \derd{r}{\tau} \left[ 2 \dderd{r}{\tau} + \mathcal{V}'(r) \right] = 0 .
+\]
+It is obtained by differentiating Eq.~(\ref{e:gek:timel_drdtau}) with respect
+to $\tau$. If the geodesic is not circular, at any point where $r$ is not
+stationary (e.g. outside possible $r$-turning point), we have $\D r/\D\tau \neq 0$
+and the above relation implies
+\[
+    \mathcal{V}'(r) = - 2 \dderd{r}{\tau} .
+\]
+Since in the vicinity of any circular geodesic there exist non-circular ones
+(those with small eccentricity $e$, as defined by Eq.~(\ref{e:gek:p_e_ra_rp})), by continuity, we shall ask that this relation
+holds for circular geodesics as well. For the latter ones, $r=r_0$ and
+$\D^2 r/\D\tau^2 = 0$, so that it simplifies to
+\be \label{e:gek:circ_derV_zero}
+    \mathcal{V}'(r_0) = 0 .
+\ee
+One can verify\footnote{See Ref.~\cite{Vanae20} for details.} that this
+relation, in conjunction with Eq.~(\ref{e:gek:circ_V_zero}), is sufficient
+to eliminate the non-geodesic circular worldlines.
+
+To summarize, circular timelike geodesics in the equatorial plane are
+obtained by solving the system (\ref{e:gek:circ_V_zero})-(\ref{e:gek:circ_derV_zero}).
+Given expression (\ref{e:gek:def_V_time_equat}) for $\mathcal{V}$, this
+system takes the form
+\begin{subnumcases}{\label{e:gek:syst_r0_eps_ell}}
+(1 - \veps^2) r_0^3  - 2 m r_0^2 + \left[ \ell^2 + a^2 (1-\veps^2) \right] r_0
+    - 2m (\ell - a\veps)^2 = 0  \\
+2 m r_0^2 - 2 \left[ \ell^2 + a^2 (1-\veps^2) \right] r_0 + 6 m (\ell - a\veps)^2 = 0 .
+\end{subnumcases}
+This is a system of 2 equations for 3 unknowns: $r_0$, $\veps$ and $\ell$.
+We thus expect a 1-parameter family of solutions. It is convenient to choose
+$r_0$ as the parameter. We have thus to solve (\ref{e:gek:syst_r0_eps_ell})
+for $(\veps,\ell)$. The change of variable
+\be
+    \tilde{\ell} := \ell - a \veps
+\ee
+turns (\ref{e:gek:syst_r0_eps_ell}) into the system
+\begin{subnumcases}{}
+r_0^3 \veps^2 =  m \tilde{\ell}^2 + r_0^2 (r_0 - m) \label{e:gek:r03_eps2} \\
+2 a r_0 \, \veps\tilde{\ell} = (3m - r_0) \tilde{\ell}^2 + r_0 ( m r_0 - a^2) . \label{e:gek:ar0_eps_ell}
+\end{subnumcases}
+Let us consider the square of Eq.~(\ref{e:gek:ar0_eps_ell}):
+\be \label{e:gek:ar0_eps_ell_square}
+    4 a^2 r_0^2\,  \veps^2 \tilde{\ell}^2 = \left[ (3m - r_0) \tilde{\ell}^2 + r_0 ( m r_0 - a^2) \right] ^2 .
+\ee
+Substituting (\ref{e:gek:r03_eps2}) for $\veps^2$, we get
+\[
+    \left[ r_0 (r_0 - 3m)^2  - 4 a^2 m \right] \tilde{\ell}^4
+    + 2 r_0^2 \left[ (3 m^2 - a^2) r_0 - m (r_0^2 + a^2)\right] \tilde{\ell}^2
+        + r_0^3 (m r_0 - a^2)^2 = 0 .
+\]
+This is a quadratic equation for $X:=\tilde{\ell}^2$. Its discrimant turns out to
+take a simple form:
+\[
+ \mathit{\Delta} = 16 a^2 m r_0^3 (r_0^2 - 2m r_0 + a^2)^2 .
+\]
+The solutions are thus
+\be \label{e:gek:sol_tell2}
+    \tilde{\ell}^2 = r_0 \frac{ (a^2 - 3m^2) r_0^2 + m r_0 (r_0^2 + a^2)
+    \pm 2 a \sqrt{m r_0} (r_0^2 - 2m r_0 + a^2)}{r_0 (r_0 - 3m)^2  - 4 a^2 m} .
+\ee
+The denominator of the above expression can be written as
+\[
+    r_0 (r_0 - 3m)^2  - 4 a^2 m = \frac{1}{r_0} \left[
+        \left( r_0 (r_0 - 3m) \right) ^2 - \left( 2 a \sqrt{m r_0} \right) ^2 \right]
+        = \frac{1}{r_0} A_+ A_- ,
+\]
+with
+\[
+    A_\pm := r_0 (r_0 - 3m) \pm 2 a \sqrt{m r_0} .
+\]
+In the numerator of Eq.~(\ref{e:gek:sol_tell2}), we may use the identity
+$\pm 2 a \sqrt{m r_0} = A_\pm - r_0 (r_0 - 3m)$ and get, after some
+simplifications,
+\[
+    \tilde{\ell}^2 = \frac{r_0^2}{A_+ A_-} \left[ A_\pm (r_0^2 - 2m r_0 + a^2)
+     - A_+ A_- \right] = \frac{r_0^2}{A_\mp} \left(
+        r_0^2 - 2m r_0 + a^2 - A_\mp \right) .
+\]
+Using $r_0^2 - 2m r_0 + a^2 - A_\mp  = m r_0 + a^2 \pm 2a \sqrt{m r_0} =
+(\sqrt{m r_0} \pm a)^2$, we obtain
+\be
+    \tilde{\ell}^2 = \frac{r_0^2 (\sqrt{m r_0} \pm a)^2}{r_0 (r_0 - 3m) \mp 2 a \sqrt{m r_0}} .
+\ee
+Substituting this expression for $\tilde{\ell}^2$ in Eq.~(\ref{e:gek:r03_eps2}), we get,
+after simplifications
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
