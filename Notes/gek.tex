@@ -8,7 +8,7 @@
 
 \section{Equations of geodesic motion}
 
-\subsection{Introduction}
+\subsection{Introduction} \label{s:gek:geod_motion_intro}
 
 In all this chapter, we are concerned with the motion of a particle
 $\mathscr{P}$ in the Kerr spacetime $(\M,\w{g})$, under the hypothesis that $\mathscr{P}$
@@ -30,6 +30,7 @@ affine parameter\footnote{See Sec.~\ref{s:geo:def} for the definition
 of an affine parameter along a geodesic.} along $\Li$. We choose $\lambda$ to be the affine parameter
 associated with $\mathscr{P}$'s 4-momentum $\w{p}$,
 i.e. such that $\D x^\alpha / \D\lambda = p^\alpha$ [Eq.~(\ref{e:fra:p_dxdl})].
+In particular, this implies that $\lambda$ is increasing towards the future\footnote{Let us recall that the Kerr spacetime is time-oriented, cf. Sec.~\ref{s:ker:time_orientation}.} along $\Li$.
 The curve $\Li$ is a geodesic iff the functions $x^\alpha(\lambda)$ obey
 the geodesic equation [Eq.~(\ref{e:geo:eq_geod}) in Appendix~\ref{s:geo}]:
 \be \label{e:gek:eq_geod}
@@ -877,7 +878,7 @@ then the conserved energy $E$ defined by Eq.~(\ref{e:gek:def_E}) is necessarily 
 \begin{proof}
 By the very definition of the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergoregion}),
 the Killing vector $\w{\xi}$ is timelike outside $\mathscr{G}$. Moreover it is
-future-directed there, given the time orientation defined in Sec.~\ref{s:ker:Kerr_coord}.
+future-directed there, given the time orientation defined in Sec.~\ref{s:ker:time_orientation}.
 The 4-momentum $\w{p}$ is either timelike or null and always future-directed.
 By Eq.~(\ref{e:fra:scalar_caus1}), one has then necessarily $\w{\xi}\cdot\w{p} < 0$; hence
 $E := - \w{\xi}\cdot\w{p} > 0$ in $\M\setminus \mathscr{G}$. Since $E$ is constant along $\Li$, it
@@ -899,6 +900,43 @@ Particles for which $E<0$ are called
 \defin{negative-energy particles}\index{negative-energy particle}\index{particle!negative-energy --}. They are those involved in the Penrose process discussed in Sec.~\ref{s:ker:Penrose_proc}.
 Note that according to (\ref{e:gek:E_positive}) a negative-energy particle cannot exist
 outside the ergoregion.
+
+\subsection{Future-directed condition}
+
+Not all values of the constant of motions $(\mu,E,L,Q)$ lead to a solution
+$x^\alpha(\lambda)$ of the first-order system (\ref{e:gek:eom_first_order})
+that is future-directed, i.e. such that $\w{p} = \D \w{x}/\D\lambda$
+is oriented everywhere to the future.
+The latter condition is equivalent to have the affine parameter $\lambda$ increase
+towards the future along the geodesic $\Li$, as we are demanding in all
+our study (cf. Sec.~\ref{s:gek:geod_motion_intro}).
+In particular, this allows to identify $\lambda$ with the proper
+time when $\Li$ is timelike.
+
+
+As discussed in Sec.~\ref{s:ker:time_orientation}, the time orientation of
+the Kerr spacetime $(\M,\w{g})$ is set by the global null
+vector field $\w{k}$ generating the ingoing principal null geodesics, cf. Eq.~(\ref{e:ker:def_k_hat_r}). By virtue of the lemma in Sec.~\ref{s:fra:time_orientation}
+[cf. Eq.~(\ref{e:fra:scalar_caus1})], we have then
+\[
+    \w{p} \ \mbox{future-directed} \iff \w{g}(\w{k},\w{p}) < 0
+    \iff k^\mu p_\mu < 0
+    \iff \frac{r^2 + a^2}{\Delta} p_t - p_r + \frac{a}{\Delta} p_\ph < 0 ,
+\]
+where the last inequality follows from the Boyer-Lindquist components
+(\ref{e:ker:k_BL}) of $\w{k}$.
+Given the identities $p_t = -E$, $p_\ph = L$
+[Eq.~(\ref{e:gek:E_pt_L_pph})] and $p_r = \eps_r \sqrt{R(r)}/ \Delta $
+[Eqs.~(\ref{e:gek:p_r_p_th_cov_con})
+and (\ref{e:gek:drdl})], we conclude that the following criterion must
+be fulfilled along any timelike or null geodesic $\Li$:
+\be \label{e:gek:future_directed}
+\encadre{ \frac{1}{\Delta} \left( E - \frac{a}{r^2 + a^2} L
++ \frac{\eps_r}{r^2 + a^2} \sqrt{R(r)} \right) > 0 } .
+\ee
+Given expression (\ref{e:gek:def_R}) for $R(r)$ and
+$\Delta := r^2 - 2m r + a^2$ [Eq.~(\ref{e:ker:def_Delta})],
+we note that this constraint involves $(\mu,E,L,Q)$ and $r$, but not $\th$.
 
 \subsection{Winding near the event horizon and the inner horizon}
 
@@ -2101,17 +2139,17 @@ One has then $\D r/\D\tau = 0$, so that Eq.~(\ref{e:gek:timel_drdtau}) implies
 The above condition is not sufficient to single out a geodesic worldline:
 there exist worldlines with constant $r=r_0$ that obey the whole system
 (\ref{e:gek:equat_time_system}) (which includes (\ref{e:gek:circ_V_zero}))
-but that are not solutions of the
+but that are not solution of the
 geodesic equation (\ref{e:gek:eq_geod})
-(see Ref.~\cite{Vanae20} for details). One must add a second condition, which
+(see Ref.~\cite{Vanae20} for concrete examples). One must add a second condition, which
 is obtained as follows. For any timelike equatorial geodesic (not necessarily
-circular), the following relation must holds:
+circular), the following relation must hold:
 \[
     \derd{r}{\tau} \left[ 2 \dderd{r}{\tau} + \mathcal{V}'(r) \right] = 0 .
 \]
 It is obtained by differentiating Eq.~(\ref{e:gek:timel_drdtau}) with respect
 to $\tau$. If the geodesic is not circular, at any point where $r$ is not
-stationary (e.g. outside possible $r$-turning point), we have $\D r/\D\tau \neq 0$
+stationary (i.e. excluding $r$-turning points), we have $\D r/\D\tau \neq 0$
 and the above relation implies
 \[
     \mathcal{V}'(r) = - 2 \dderd{r}{\tau} .
@@ -2136,7 +2174,7 @@ system takes the form
     - 2m (\ell - a\veps)^2 = 0  \\
 2 m r_0^2 - 2 \left[ \ell^2 + a^2 (1-\veps^2) \right] r_0 + 6 m (\ell - a\veps)^2 = 0 .
 \end{subnumcases}
-This is a system of 2 equations for 3 unknowns: $r_0$, $\veps$ and $\ell$.
+This is a system of 2 nonlinear equations for 3 unknowns: $r_0$, $\veps$ and $\ell$.
 We thus expect a 1-parameter family of solutions. It is convenient to choose
 $r_0$ as the parameter. We have thus to solve (\ref{e:gek:syst_r0_eps_ell})
 for $(\veps,\ell)$. The change of variable
@@ -2150,16 +2188,16 @@ r_0^3 \veps^2 =  m \tilde{\ell}^2 + r_0^2 (r_0 - m) \label{e:gek:r03_eps2} \\
 \end{subnumcases}
 Let us consider the square of Eq.~(\ref{e:gek:ar0_eps_ell}):
 \be \label{e:gek:ar0_eps_ell_square}
-    4 a^2 r_0^2\,  \veps^2 \tilde{\ell}^2 = \left[ (3m - r_0) \tilde{\ell}^2 + r_0 ( m r_0 - a^2) \right] ^2 .
+    4 a^2 r_0^2\,  \veps^2 \tilde{\ell}^2 = \left[ (3m - r_0) \tilde{\ell}^2 + r_0 ( m r_0 - a^2) \right] ^2 ,
 \ee
-Substituting (\ref{e:gek:r03_eps2}) for $\veps^2$, we get
+and substitute (\ref{e:gek:r03_eps2}) for $\veps^2$ in it; we get
 \[
     \left[ r_0 (r_0 - 3m)^2  - 4 a^2 m \right] \tilde{\ell}^4
     + 2 r_0^2 \left[ (3 m^2 - a^2) r_0 - m (r_0^2 + a^2)\right] \tilde{\ell}^2
         + r_0^3 (m r_0 - a^2)^2 = 0 .
 \]
 This is a quadratic equation for $X:=\tilde{\ell}^2$. Its discrimant turns out to
-take a simple form:
+have a simple form:
 \[
  \mathit{\Delta} = 16 a^2 m r_0^3 (r_0^2 - 2m r_0 + a^2)^2 .
 \]
@@ -2168,7 +2206,7 @@ The solutions are thus
     \tilde{\ell}^2 = r_0 \frac{ (a^2 - 3m^2) r_0^2 + m r_0 (r_0^2 + a^2)
     \pm 2 a \sqrt{m r_0} (r_0^2 - 2m r_0 + a^2)}{r_0 (r_0 - 3m)^2  - 4 a^2 m} .
 \ee
-The denominator of the above expression can be written as
+The denominator of the right-hand side can be written as
 \[
     r_0 (r_0 - 3m)^2  - 4 a^2 m = \frac{1}{r_0} \left[
         \left( r_0 (r_0 - 3m) \right) ^2 - \left( 2 a \sqrt{m r_0} \right) ^2 \right]
@@ -2178,9 +2216,9 @@ with
 \[
     A_\pm := r_0 (r_0 - 3m) \pm 2 a \sqrt{m r_0} .
 \]
-In the numerator of Eq.~(\ref{e:gek:sol_tell2}), we may use the identity
-$\pm 2 a \sqrt{m r_0} = A_\pm - r_0 (r_0 - 3m)$ and get, after some
-simplifications,
+In the numerator of (\ref{e:gek:sol_tell2}), we may use the identity
+$\pm 2 a \sqrt{m r_0} = A_\pm - r_0 (r_0 - 3m)$ and get, after
+simplification,
 \[
     \tilde{\ell}^2 = \frac{r_0^2}{A_+ A_-} \left[ A_\pm (r_0^2 - 2m r_0 + a^2)
      - A_+ A_- \right] = \frac{r_0^2}{A_\mp} \left(
@@ -2188,11 +2226,42 @@ simplifications,
 \]
 Using $r_0^2 - 2m r_0 + a^2 - A_\mp  = m r_0 + a^2 \pm 2a \sqrt{m r_0} =
 (\sqrt{m r_0} \pm a)^2$, we obtain
-\be
+\be \label{e:gek:tell2_circ}
     \tilde{\ell}^2 = \frac{r_0^2 (\sqrt{m r_0} \pm a)^2}{r_0 (r_0 - 3m) \mp 2 a \sqrt{m r_0}} .
 \ee
 Substituting this expression for $\tilde{\ell}^2$ in Eq.~(\ref{e:gek:r03_eps2}), we get,
-after simplifications
+after simplification,
+\be \label{e:gek:eps2_circ}
+    \veps^2 = \frac{\left[ r_0(r_0-2m) \mp a \sqrt{mr_0} \right] ^2}{r^2\left[r_0 (r_0 - 3m) \mp 2 a \sqrt{m r_0}\right]} .
+\ee
+The $\pm$ and $\mp$ in Eqs.~(\ref{e:gek:tell2_circ})-(\ref{e:gek:eps2_circ}) have
+to be consistent. In other words, we have two pairs of solutions for
+$(\veps^2, \tilde{\ell}^2)$, namely $(\veps_1^2, \tilde{\ell}_1^2)$
+and $(\veps_2^2, \tilde{\ell}_2^2)$ with
+\be
+    \veps_1^2 = \frac{\left[ r_0(r_0-2m) - a \sqrt{mr_0} \right] ^2}{r^2\left[r_0 (r_0 - 3m) - 2 a \sqrt{m r_0}\right]}
+    \qand
+    \tilde{\ell}_1^2 = \frac{r_0^2 (\sqrt{m r_0} + a)^2}{r_0 (r_0 - 3m) - 2 a \sqrt{m r_0}} ,
+\ee
+\be
+    \veps_2^2 = \frac{\left[ r_0(r_0-2m) + a \sqrt{mr_0} \right] ^2}{r^2\left[r_0 (r_0 - 3m) + 2 a \sqrt{m r_0}\right]}
+    \qand
+    \tilde{\ell}_2^2 = \frac{r_0^2 (\sqrt{m r_0} - a)^2}{r_0 (r_0 - 3m) + 2 a \sqrt{m r_0}} .
+\ee
+A priori, $\veps_1^2$ leads to two values for $\veps$, namely $\pm\sqrt{\veps_1^2}$
+and $\tilde{\ell}_1^2$ leads to two values for $\tilde{\ell}$, namely $\pm\sqrt{\tilde{\ell}_1^2}$,
+so that the pair $(\veps_1^2, \tilde{\ell}_1^2)$ could generate four solutions
+for $(\veps, \tilde{\ell})$, and similarly the pair $(\veps_2^2, \tilde{\ell}_2^2)$ could generate four extra solutions for $(\veps, \tilde{\ell})$, leading to a total of eight solutions.
+However, these solutions satisfy the ``squared'' equation (\ref{e:gek:ar0_eps_ell_square})
+but not all of them satisfy the original equation (\ref{e:gek:ar0_eps_ell}).
+Moreover, to be physically acceptable, a solution for $(\veps,\ell)$ must obey
+the future-directed geodesic condition (\ref{e:gek:future_directed}), which
+for circular orbits reduces to
+\be
+\frac{1}{r_0^2 - 2 m r_0 + a^2} \left( \veps - \frac{a}{r_0^2 + a^2} \ell \right) > 0 ,
+\ee
+since $R(r_0) = 0$ by virtue of Eq.~(\ref{e:gek:circ_V_zero}).
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
