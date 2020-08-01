@@ -1520,7 +1520,7 @@ An immediate corollary of the properties obtained for $|E|<\mu$ and $|E|=\mu$
 is
 \begin{greybox}
 Only geodesics with $|E| > \mu$ can have some part in the region $r<0$ of Kerr spacetime, $\M_-$:
-\be
+\be \label{e:ker:neg_r_large_E}
     \Li \cap \M_- \neq \varnothing \Longrightarrow |E| > \mu .
 \ee
 \end{greybox}
@@ -2201,10 +2201,34 @@ have a simple form:
 \[
  \mathit{\Delta} = 16 a^2 m r_0^3 (r_0^2 - 2m r_0 + a^2)^2 .
 \]
-The solutions are thus
+It follows immediately that $\mathit{\Delta} \geq 0 \iff r_0 \geq 0$. Hence, there is
+no solution for $r_0 < 0$:
+\begin{greybox}
+There does not exist any equatorial circular timelike orbit in the region $r<0$ of
+Kerr spacetime.
+\end{greybox}
+\begin{remark}
+For $r_0 < 0$ with $|r_0|\gg m$, the above result is not surprising since we
+have seen in Sec.~\ref{s:ker:basic_prop} that under these conditions,
+the Kerr metric appears as a Schwarzschild metric with a negative mass. The
+asymptotic gravitational field is then repulsive and certainly does not admit
+any circular orbit. In the region $r < 0$ and $|r|$ small, the above argument does not apply.
+However, the results obtained in Sec.~\ref{s:gek:r-motion}
+show that if a circular orbit would exist there, it would necessarily
+have $|E| > \mu$ [cf. Eq.~(\ref{e:ker:neg_r_large_E})], i.e. would be unbound.
+\end{remark}
+The case $r_0=0$ is excluded as well, since in the equatorial plane, it would
+correspond to the curvature singularity. In what follows, we therefore assume
+\be
+    r_0 > 0 .
+\ee
+We have then $\sqrt{\mathit{\Delta}} = 4 a r_0 \sqrt{m r_0} |r_0^2 - 2m r_0 + a^2|$
+and the solutions of the quadratic equation are\footnote{For future convenience, we have
+chosen the sign $\mp$ in the numerator to be the opposite of the label $\pm$
+in $\tilde{\ell}^2_{\pm}$.}
 \be \label{e:gek:sol_tell2}
-    \tilde{\ell}^2 = r_0 \frac{ (a^2 - 3m^2) r_0^2 + m r_0 (r_0^2 + a^2)
-    \pm 2 a \sqrt{m r_0} (r_0^2 - 2m r_0 + a^2)}{r_0 (r_0 - 3m)^2  - 4 a^2 m} .
+    \tilde{\ell}^2_{\pm} = r_0 \frac{ (a^2 - 3m^2) r_0^2 + m r_0 (r_0^2 + a^2)
+    \mp 2 a \sqrt{m r_0} (r_0^2 - 2m r_0 + a^2)}{r_0 (r_0 - 3m)^2  - 4 a^2 m} .
 \ee
 The denominator of the right-hand side can be written as
 \[
@@ -2217,42 +2241,84 @@ with
     A_\pm := r_0 (r_0 - 3m) \pm 2 a \sqrt{m r_0} .
 \]
 In the numerator of (\ref{e:gek:sol_tell2}), we may use the identity
-$\pm 2 a \sqrt{m r_0} = A_\pm - r_0 (r_0 - 3m)$ and get, after
+$\mp 2 a \sqrt{m r_0} = A_\mp - r_0 (r_0 - 3m)$ and get, after
 simplification,
 \[
-    \tilde{\ell}^2 = \frac{r_0^2}{A_+ A_-} \left[ A_\pm (r_0^2 - 2m r_0 + a^2)
-     - A_+ A_- \right] = \frac{r_0^2}{A_\mp} \left(
-        r_0^2 - 2m r_0 + a^2 - A_\mp \right) .
+    \tilde{\ell}^2_{\pm} = \frac{r_0^2}{A_+ A_-} \left[ A_\mp (r_0^2 - 2m r_0 + a^2)
+     - A_+ A_- \right] = \frac{r_0^2}{A_\pm} \left(
+        r_0^2 - 2m r_0 + a^2 - A_\pm \right) .
 \]
-Using $r_0^2 - 2m r_0 + a^2 - A_\mp  = m r_0 + a^2 \pm 2a \sqrt{m r_0} =
-(\sqrt{m r_0} \pm a)^2$, we obtain
+Using $r_0^2 - 2m r_0 + a^2 - A_\pm  = m r_0 + a^2 \mp 2a \sqrt{m r_0} =
+(\sqrt{m r_0} \mp a)^2$, we obtain
 \be \label{e:gek:tell2_circ}
-    \tilde{\ell}^2 = \frac{r_0^2 (\sqrt{m r_0} \pm a)^2}{r_0 (r_0 - 3m) \mp 2 a \sqrt{m r_0}} .
+    \tilde{\ell}^2_{\pm} = \frac{r_0^2 (\sqrt{m r_0} \mp a)^2}{r_0 (r_0 - 3m) \pm 2 a \sqrt{m r_0}} .
 \ee
-Substituting this expression for $\tilde{\ell}^2$ in Eq.~(\ref{e:gek:r03_eps2}), we get,
+Since obviously $\tilde{\ell}^2_{\pm} \geq 0$, this expression gives birth to
+the constraint $r_0 (r_0 - 3m) \pm 2 a \sqrt{m r_0} > 0$,
+which is equivalent to
+\be \label{e:gek:cubic_sqrt_r0}
+    r_0^{3/2} - 3 m r_0^{1/2}  \pm 2 a \sqrt{m} > 0 .
+\ee
+The left hand-side of this inequality is a cubic polynomial in $x:=r_0^{1/2}$
+and determining its sign amounts to compute its roots. Fortunately, this
+corresponds to
+a depressed cubic equation $x^3 + px + q = 0$, with $p:= -3m$ and $q:=\pm 2 a \sqrt{m}$,
+the discrimant of which is $-(4 p^3 + 27 q^2) = 108 m (m^2 - a^2) \geq 0$. The roots
+$(x_k)_{k\in\{0,1,2\}}$ are then all real and are given by Viète's formula (\ref{e:gis:Viete}).
+They obey $x_0 + x_1 + x_2 = 0$ and $x_0 x_1 x_2 = -q = \mp 2 a \sqrt{m}$,
+from which we deduce that for $\pm = +$ in Eq.~(\ref{e:gek:cubic_sqrt_r0}), i.e. for
+$\tilde{\ell}^2_+$, there are two positive roots, which are $x_0$ and $x_2$
+as given by Eq.~(\ref{e:gis:Viete}), while for $\pm = -$, i.e. for
+$\tilde{\ell}^2_-$, there is a single positive root, which is $x_0$ as
+given by Eq.~(\ref{e:gis:Viete}).
+Going back to $r_0 = x^2$, with the roots $x_0$ and $x_2$ given by
+Viète's formula (\ref{e:gis:Viete}), we get the following constraints
+for circular orbits in the equatorial plane:
+\begin{subequations}
+\begin{align}
+    & \mbox{for}\ \tilde{\ell}^2_+:\qquad
+    0 < r_0 < r_* \qquad\mbox{or}\qquad r_0 > r_{\rm min}^+ \\
+    & \mbox{for}\ \tilde{\ell}^2_-:\qquad r_0 > r_{\rm min}^- ,
+\end{align}
+\end{subequations}
+with
+\be
+   \encadre{ r_{\rm min}^\pm := 4m\cos^2 \left[ \frac{1}{3} \arccos\left( \mp \frac{a}{m} \right) \right] }
+\ee
+and
+\be
+   \encadre{ r_* := 4m\cos^2 \left[ \frac{1}{3} \arccos\left(-\frac{a}{m} \right)  + \frac{4\pi}{3} \right] } .
+\ee
+Note that $m\leq r_{\rm min}^+ \leq 3 m$ and $3m \leq r_{\rm min}^- \leq 4m$,
+with
+\be
+    \lim_{a\to 0} r_{\rm min}^\pm = 3m, \quad
+    \lim_{a\to m} r_{\rm min}^+ = m, \quad
+    \lim_{a\to m} r_{\rm min}^- = 4 m .
+\ee
+Besides, $0 \leq r_* \leq m$, with
+\be
+    \lim_{a\to 0} r_* = 0, \quad
+    \lim_{a\to m} r_* = m .
+\ee
+
+
+
+Substituting expression (\ref{e:gek:tell2_circ})
+for $\tilde{\ell}^2$ in Eq.~(\ref{e:gek:r03_eps2}), we get,
 after simplification,
 \be \label{e:gek:eps2_circ}
-    \veps^2 = \frac{\left[ r_0(r_0-2m) \mp a \sqrt{mr_0} \right] ^2}{r^2\left[r_0 (r_0 - 3m) \mp 2 a \sqrt{m r_0}\right]} .
+    \veps^2_{\pm} = \frac{\left[ r_0(r_0-2m) \pm a \sqrt{mr_0} \right] ^2}{r^2\left[r_0 (r_0 - 3m) \pm 2 a \sqrt{m r_0}\right]} .
 \ee
-The $\pm$ and $\mp$ in Eqs.~(\ref{e:gek:tell2_circ})-(\ref{e:gek:eps2_circ}) have
+The $\pm$'s in Eqs.~(\ref{e:gek:tell2_circ}) and (\ref{e:gek:eps2_circ}) have
 to be consistent. In other words, we have two pairs of solutions for
-$(\veps^2, \tilde{\ell}^2)$, namely $(\veps_1^2, \tilde{\ell}_1^2)$
-and $(\veps_2^2, \tilde{\ell}_2^2)$ with
-\be
-    \veps_1^2 = \frac{\left[ r_0(r_0-2m) - a \sqrt{mr_0} \right] ^2}{r^2\left[r_0 (r_0 - 3m) - 2 a \sqrt{m r_0}\right]}
-    \qand
-    \tilde{\ell}_1^2 = \frac{r_0^2 (\sqrt{m r_0} + a)^2}{r_0 (r_0 - 3m) - 2 a \sqrt{m r_0}} ,
-\ee
-\be
-    \veps_2^2 = \frac{\left[ r_0(r_0-2m) + a \sqrt{mr_0} \right] ^2}{r^2\left[r_0 (r_0 - 3m) + 2 a \sqrt{m r_0}\right]}
-    \qand
-    \tilde{\ell}_2^2 = \frac{r_0^2 (\sqrt{m r_0} - a)^2}{r_0 (r_0 - 3m) + 2 a \sqrt{m r_0}} .
-\ee
-A priori, $\veps_1^2$ leads to two values for $\veps$, namely $\pm\sqrt{\veps_1^2}$
-and $\tilde{\ell}_1^2$ leads to two values for $\tilde{\ell}$, namely $\pm\sqrt{\tilde{\ell}_1^2}$,
-so that the pair $(\veps_1^2, \tilde{\ell}_1^2)$ could generate four solutions
-for $(\veps, \tilde{\ell})$, and similarly the pair $(\veps_2^2, \tilde{\ell}_2^2)$ could generate four extra solutions for $(\veps, \tilde{\ell})$, leading to a total of eight solutions.
-However, these solutions satisfy the ``squared'' equation (\ref{e:gek:ar0_eps_ell_square})
+$(\veps^2, \tilde{\ell}^2)$, namely $(\veps_+^2, \tilde{\ell}_+^2)$
+and $(\veps_-^2, \tilde{\ell}_-^2)$.
+A priori, $\veps_+^2$ leads to two values for $\veps$, namely $\pm\sqrt{\veps_+^2}$,
+and $\tilde{\ell}_+^2$ leads to two values for $\tilde{\ell}$, namely $\pm\sqrt{\tilde{\ell}_+^2}$,
+so that the pair $(\veps_+^2, \tilde{\ell}_+^2)$ could generate four solutions
+for $(\veps, \tilde{\ell})$, and similarly the pair $(\veps_-^2, \tilde{\ell}_-^2)$ could generate four extra solutions for $(\veps, \tilde{\ell})$, leading to a total of eight solutions.
+However, by construction these solutions satisfy the ``squared'' equation (\ref{e:gek:ar0_eps_ell_square})
 but not all of them satisfy the original equation (\ref{e:gek:ar0_eps_ell}).
 Moreover, to be physically acceptable, a solution for $(\veps,\ell)$ must obey
 the future-directed geodesic condition (\ref{e:gek:future_directed}), which
