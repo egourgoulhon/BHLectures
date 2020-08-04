@@ -2107,6 +2107,7 @@ with
    \encadre{ \mathcal{V}(r) := 1 - \veps^2 - \frac{2m}{r} + \frac{\ell^2 + a^2(1-\veps^2)}{r^2}
     - \frac{2m(\ell - a\veps)^2}{r^3} }.
 \ee
+Note that $\mathcal{V}(r) = - \mathcal{R}(r)/r^4 = - R(r) / (\mu^2 r^4)$ [cf. Eqs.~(\ref{e:gek:R_timelike}) and (\ref{e:gek:R_r_powers})].
 \begin{remark}
 At the Schwarzschild limit ($a=0$) we recover the differential equations of Chap.~\ref{s:ges},
 namely Eq.~(\ref{e:gek:timel_dtdtau}) reduces to Eq.~(\ref{e:ges:Dt_Dtau}),
@@ -2118,7 +2119,7 @@ when $a\neq 0$, $\mathcal{V}(r)$ cannot be considered as an effective
 potential for the radial motion, because it depends on $\veps$, in addition
 to $\ell$, even if we substract from it the constant term $1 - \veps^2$.
 This is why we did not bother to add a $1/2$ factor in Eq.~(\ref{e:gek:timel_drdtau}),
-as we did for Eq.~(\ref{e:ges:1d_motion_timelike}) to make it resemble
+as we did for Eq.~(\ref{e:ges:1d_motion_timelike}) to make it match
 the first integral of a 1-dimensional motion in a potential well.
 \end{remark}
 
@@ -2248,13 +2249,13 @@ simplification,
      - A_+ A_- \right] = \frac{r_0^2}{A_\pm} \left(
         r_0^2 - 2m r_0 + a^2 - A_\pm \right) .
 \]
-Using $r_0^2 - 2m r_0 + a^2 - A_\pm  = m r_0 + a^2 \mp 2a \sqrt{m r_0} =
-(\sqrt{m r_0} \mp a)^2$, we obtain
+Using $r_0^2 - 2m r_0 + a^2 - A_\pm  =  a^2 \mp 2a \sqrt{m r_0} + m r_0 =
+(a \mp \sqrt{m r_0})^2$, we obtain
 \be \label{e:gek:tell2_circ}
-    \tilde{\ell}^2_{\pm} = \frac{r_0^2 (\sqrt{m r_0} \mp a)^2}{r_0 (r_0 - 3m) \pm 2 a \sqrt{m r_0}} .
+    \tilde{\ell}^2_{\pm} = \frac{r_0^2 (a \mp \sqrt{m r_0})^2}{r_0^2 - 3m r_0 \pm 2 a \sqrt{m r_0}} .
 \ee
 Since obviously $\tilde{\ell}^2_{\pm} \geq 0$, this expression gives birth to
-the constraint $r_0 (r_0 - 3m) \pm 2 a \sqrt{m r_0} > 0$,
+the constraint $r_0^2 - 3m r_0 \pm 2 a \sqrt{m r_0} > 0$,
 which is equivalent to
 \be \label{e:gek:cubic_sqrt_r0}
     r_0^{3/2} - 3 m r_0^{1/2}  \pm 2 a \sqrt{m} > 0 .
@@ -2277,8 +2278,8 @@ for circular orbits in the equatorial plane:
 \begin{subequations}
 \begin{align}
     & \mbox{for}\ \tilde{\ell}^2_+:\qquad
-    0 < r_0 < r_* \qquad\mbox{or}\qquad r_0 > r_{\rm min}^+ \\
-    & \mbox{for}\ \tilde{\ell}^2_-:\qquad r_0 > r_{\rm min}^- ,
+    0 < r_0 < r_* \qquad\mbox{or}\qquad r_0 > r_{\rm min}^+ \label{e:gek:range_circ_plus} \\
+    & \mbox{for}\ \tilde{\ell}^2_-:\qquad r_0 > r_{\rm min}^- , \label{e:gek:range_circ_minus}
 \end{align}
 \end{subequations}
 with
@@ -2301,14 +2302,27 @@ Besides, $0 \leq r_* \leq m$, with
     \lim_{a\to 0} r_* = 0, \quad
     \lim_{a\to m} r_* = m .
 \ee
-
-
+Furthermore, one can check that
+\be
+    r_{\rm min}^\pm \geq r_+
+\ee
+and
+\be
+    0 \leq r_* \leq r_- ,
+\ee
+where $r_+ := m^2 - \sqrt{m^2 - a^2}$ and $r_- := m^2 - \sqrt{m^2 - a^2}$ [Eq.~(\ref{e:ker:def_r_pm})]
+are the radii of respectively the event horizon $\Hor$ and the inner horizon $\Hor_{\rm in}$.
+Consequently, the first permitted range for circular orbits in (\ref{e:gek:range_circ_plus}) lies
+entirely in the region $\M_{\rm III}$ of Kerr spacetime, while the second range
+in (\ref{e:gek:range_circ_plus}) lies in entirely in $\M_{\rm I}$. Regarding
+the orbits for $\tilde{\ell}^2_-$, the range (\ref{e:gek:range_circ_minus}) lies in $\M_{\rm I}$
+as well.
 
 Substituting expression (\ref{e:gek:tell2_circ})
 for $\tilde{\ell}^2$ in Eq.~(\ref{e:gek:r03_eps2}), we get,
 after simplification,
 \be \label{e:gek:eps2_circ}
-    \veps^2_{\pm} = \frac{\left[ r_0(r_0-2m) \pm a \sqrt{mr_0} \right] ^2}{r^2\left[r_0 (r_0 - 3m) \pm 2 a \sqrt{m r_0}\right]} .
+    \veps^2_{\pm} = \frac{\left( r_0^2 -2m r_0 \pm a \sqrt{mr_0} \right) ^2}{r_0^2\left(r_0^2 - 3m r_0 \pm 2 a \sqrt{m r_0}\right)} .
 \ee
 The $\pm$'s in Eqs.~(\ref{e:gek:tell2_circ}) and (\ref{e:gek:eps2_circ}) have
 to be consistent. In other words, we have two pairs of solutions for
@@ -2316,17 +2330,64 @@ $(\veps^2, \tilde{\ell}^2)$, namely $(\veps_+^2, \tilde{\ell}_+^2)$
 and $(\veps_-^2, \tilde{\ell}_-^2)$.
 A priori, $\veps_+^2$ leads to two values for $\veps$, namely $\pm\sqrt{\veps_+^2}$,
 and $\tilde{\ell}_+^2$ leads to two values for $\tilde{\ell}$, namely $\pm\sqrt{\tilde{\ell}_+^2}$,
-so that the pair $(\veps_+^2, \tilde{\ell}_+^2)$ could generate four solutions
-for $(\veps, \tilde{\ell})$, and similarly the pair $(\veps_-^2, \tilde{\ell}_-^2)$ could generate four extra solutions for $(\veps, \tilde{\ell})$, leading to a total of eight solutions.
+so that the pair $(\veps_+^2, \tilde{\ell}_+^2)$ would generate four solutions
+for $(\veps, \tilde{\ell})$, and similarly the pair $(\veps_-^2, \tilde{\ell}_-^2)$ would generate four extra solutions for $(\veps, \tilde{\ell})$, leading to a total of eight solutions.
 However, by construction these solutions satisfy the ``squared'' equation (\ref{e:gek:ar0_eps_ell_square})
 but not all of them satisfy the original equation (\ref{e:gek:ar0_eps_ell}).
-Moreover, to be physically acceptable, a solution for $(\veps,\ell)$ must obey
-the future-directed geodesic condition (\ref{e:gek:future_directed}), which
-for circular orbits reduces to
+To see this, let us consider the following square roots of Eqs.~(\ref{e:gek:eps2_circ})
+and (\ref{e:gek:tell2_circ}):
 \be
-\frac{1}{r_0^2 - 2 m r_0 + a^2} \left( \veps - \frac{a}{r_0^2 + a^2} \ell \right) > 0 ,
+    \veps_{\pm} = \frac{r_0^2 -2m r_0 \pm a \sqrt{mr_0}}{r_0\sqrt{r_0^2 - 3m r_0 \pm 2 a \sqrt{m r_0}}} ,
 \ee
-since $R(r_0) = 0$ by virtue of Eq.~(\ref{e:gek:circ_V_zero}).
+\be
+    \tilde{\ell}_{\pm} = - \frac{r_0 (a \mp \sqrt{m r_0})}{\sqrt{r_0^2 - 3m r_0 \pm 2 a \sqrt{m r_0}}} = \frac{r_0 (\pm \sqrt{m r_0} - a)}{\sqrt{r_0^2 - 3m r_0 \pm 2 a \sqrt{m r_0}}}
+\ee
+and write the eight solutions of (\ref{e:gek:ar0_eps_ell_square}) as
+\[
+    (\veps, \tilde{\ell}) = \left( \epsilon_1 \veps_\pm, \epsilon_2 \tilde{\ell}_\pm \right) ,
+    \qquad\mbox{with}\quad \epsilon_1 = \pm 1\qand \epsilon_2 = \pm 1.
+\]
+By a direct calculation, we get
+\[
+    2 a r_0 \, \veps\tilde{\ell} - (3m - r_0) \tilde{\ell}^2 - r_0 ( m r_0 - a^2)
+    =  \frac{2(1 - \epsilon_1 \epsilon_2) a r_0 (a \mp \sqrt{m r_0}) (r_0^2 - 2m r_0 \pm a\sqrt{m r_0})}{r_0^2 - 3m r_0 \pm 2 a \sqrt{m r_0}} .
+\]
+Hence Eq.~(\ref{e:gek:ar0_eps_ell}) is fulfilled iff $ 1 - \epsilon_1 \epsilon_2 = 0$, i.e.
+iff $\epsilon_1 \epsilon_2 = 1$.
+This reduces the number of possible solutions from eight to four:
+\be \label{e:gek:circ_four_sol}
+    (\veps, \tilde{\ell}) = (\veps_+, \tilde{\ell}_+)\quad\mbox{or}\quad
+        (-\veps_+, -\tilde{\ell}_+)\quad\mbox{or}\quad
+        (\veps_-, \tilde{\ell}_-)\quad\mbox{or}\quad  (-\veps_-, -\tilde{\ell}_-) .
+\ee
+A further reduction of the number of solutions is provided by the future-directed condition (\ref{e:gek:future_directed}).
+Since $R(r_0) = -\mu^2 r_0^4 \mathcal{V}(r_0) = 0$ by virtue of Eq.~(\ref{e:gek:circ_V_zero}),
+for circular equatorial orbits, Eq.~(\ref{e:gek:future_directed}) reduces to
+\[
+\frac{1}{\Delta_0} \left( \veps - \frac{a}{r_0^2 + a^2} \ell \right) > 0 ,
+\]
+where $\Delta_0 := r_0^2 - 2 m r_0 + a^2 = (r_0 - r_+)(r_0 - r_-)$. Now, we have
+observed above that circular orbits lie either in $\M_{\rm I}$ or $\M_{\rm III}$,
+where $\Delta_0 > 0$. Therefore, we can further simplify the future-directed condition to
+\[
+   \veps - \frac{a}{r_0^2 + a^2} \ell > 0 .
+\]
+Once reexpressed in terms of $\tilde{\ell} = \ell - a \veps$, it is equivalent to
+\be
+    r_0^2 \veps - a \tilde{\ell}  >  0 .
+\ee
+Let us check each of the four solutions (\ref{e:gek:circ_four_sol}):
+\begin{align}
+  & r_0^2 \veps_+ - a \tilde{\ell}_+ = \frac{r_0 \Delta_0}{\sqrt{r_0^2 - 3m r_0 + 2 a \sqrt{m r_0}}} > 0 \nonumber \\
+  & r_0^2 (-\veps_+) - a (-\tilde{\ell}_+) = - (r_0^2 \veps_+ - a \tilde{\ell}_+) < 0 \nonumber \\
+  & r_0^2 \veps_- - a \tilde{\ell}_- = \frac{r_0 \Delta_0}{\sqrt{r_0^2 - 3m r_0 - 2 a \sqrt{m r_0}}} > 0 \nonumber \\
+  & r_0^2 (-\veps_-) - a (-\tilde{\ell}_-) = - ( r_0^2 \veps_- - a \tilde{\ell}_- ) < 0 . \nonumber
+\end{align}
+We conclude that only two solutions remain:
+\be \label{e:gek:circ_two_sol}
+    (\veps, \tilde{\ell}) = (\veps_+, \tilde{\ell}_+)\quad\mbox{or}\quad
+        (\veps_-, \tilde{\ell}_-) .
+\ee
 
 
 
