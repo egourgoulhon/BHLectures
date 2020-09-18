@@ -533,12 +533,18 @@ and (\ref{e:gek:def_Theta}) as the first-order system
 \end{subequations}
 where $\eps_r := \operatorname{sgn} p^r = \pm 1$,  $\eps_\th := \operatorname{sgn} p^\th = \pm 1$
 and the functions $R(r)$ and $\Theta(\th)$ are defined by Eq.~(\ref{e:gek:def_R})
-and Eq.~(\ref{e:gek:def_Theta}) or (\ref{e:gek:Theta_Q}). They must obey
+and Eq.~(\ref{e:gek:def_Theta}) or (\ref{e:gek:Theta_Q}).
+We may rewrite Eq.~(\ref{e:gek:def_R}) in terms of $Q$
+instead of $\mathscr{K}$, via Eq.~(\ref{e:gek:def_Q}):
+\be \label{e:gek:def_R_Q}
+   \encadre{ R(r) := \left[ (r^2 + a^2) E - a L \right]^ 2 - \Delta \left[ r^2 \mu^2 +  Q +(L-a E)^2) \right] }.
+\ee
+Note that besides the constants of motion $E$, $L$, $\mu$ and $Q$, $R(r)$ depends on the Kerr parameters $a$ and $m$
+(via $\Delta = r^2 - 2 m r + a^2$), while $\Theta(\th)$
+depends on $a$ only [cf. Eq.~(\ref{e:gek:Theta_Q})].
+Along $\Li$, these functions must obey
 $R(r) \geq 0$ [Eq.~(\ref{e:gek:R_non_neg})] and $\Theta(\th) \geq 0$
-[Eq.~(\ref{e:gek:Theta_non_neg})] along $\Li$.
-Note that besides the constants of motion $E$, $L$, $\mu$ and $\mathscr{K}$
-or $Q$, $R(r)$ depends on $a$ and $m$ (via $\Delta$), while $\Theta(\th)$
-depends on $a$ only.
+[Eq.~(\ref{e:gek:Theta_non_neg})].
 
 In the system (\ref{e:gek:eom_first_order}), $\eps_r$
 is $+1$ (resp. $-1$) in the parts of the geodesic $\Li$ where $r$ increases
@@ -588,7 +594,7 @@ switches from increasing to decreasing or vice-versa, hence the name
 changes sign at $\lambda=\lambda_0$.
 
 \begin{remark} \label{r:gek:der_r_analytic}
-For a generic analytic function $r(\lambda)$ with $\D r/\D \lambda=0$ at
+For a generic smooth function $r(\lambda)$ with $\D r/\D \lambda=0$ at
 $\lambda_0$, the condition $\D^2 r/\D\lambda^2\neq 0$ at $\lambda_0$
 is sufficient but not necessary for $r$ to change its direction of variation there.
 Indeed, the same property holds with $\D^2 r/\D\lambda^2= 0$ and higher order derivatives vanishing up to some even order $k$ for which
@@ -656,9 +662,11 @@ In terms of Mino parameter, the system (\ref{e:gek:eom_first_order}) becomes
 & \encadre{ \derd{r}{\lambda'} = \eps_r \sqrt{ R(r) } } \label{e:gek:drdl_Mino}\\
 & \encadre{ \derd{\th}{\lambda'} = \eps_\th \sqrt{\Theta(\th)} } \label{e:gek:dthdl_Mino}\\
 & \encadre{ \derd{\ph}{\lambda'}  = \frac{L}{\sin^2\th} - a E
-    + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] } . \label{e:gek:dphdl_Mino}
+    + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] } , \label{e:gek:dphdl_Mino}
 \end{align}
 \end{subequations}
+where $R$ is the quartic polynomial defined by Eq.~(\ref{e:gek:def_R_Q})
+and $\Theta$ is the function defined by Eq.~(\ref{e:gek:Theta_Q}).
 It is remarkable that Eqs.~(\ref{e:gek:drdl_Mino}) and (\ref{e:gek:dthdl_Mino})
 are two fully decoupled equations: Eq.~(\ref{e:gek:drdl_Mino}) is an ordinary
 differential equation (ODE) for the function $r(\lambda')$, while Eq.~(\ref{e:gek:dthdl_Mino})
@@ -767,7 +775,7 @@ obey
     + \dashint_{\th_0}^\th \left( \frac{L}{\sin^2\bar{\th}} - a E  \right) \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} , \label{e:gek:integr_ph}
 \end{align}
 \end{subequations}
-where $R$ is the quartic polynomial defined by Eq.~(\ref{e:gek:def_R}) (see also Eq.~(\ref{e:gek:R_r_powers}) below) and $\Theta$ is the function defined by Eq.~(\ref{e:gek:Theta_Q}).
+where $R$ is the quartic polynomial defined by Eq.~(\ref{e:gek:def_R_Q}) (see also Eq.~(\ref{e:gek:R_r_powers}) below) and $\Theta$ is the function defined by Eq.~(\ref{e:gek:Theta_Q}).
 \end{greybox}
 \begin{proof}
 Equation~(\ref{e:gek:integr_Mino}) is nothing but the gathering of
@@ -835,13 +843,13 @@ both timelike and null geodesics,
 derived the corresponding
 Hamiltonian as $H = g^{\mu\nu} p_\mu p_\nu$ (for the uncharged (i.e. Kerr) case)
 and discovered that the Hamilton-Jacobi equation\index{Hamilton-Jacobi equation}
-is separable, i.e.
-can be solved by separation of variables, provided one uses the
-Kerr coordinates
+is separable, i.e. can be solved by separation of variables.
+$\mathscr{K}$ appeared then as a separation constant. Note that Carter used
+the Kerr coordinates\footnote{Carter's $u$ is our $v$.}
 $(v,r,\th,\tph)$ described in Sec.~\ref{s:ker:Kerr_coord}
-(\emph{NB:} Carter's $u$ is our $v$) and not the Boyer-Lindquist ones.
-$\mathscr{K}$ appeared then as a separation constant. Carter also introduced
-the constant $Q$ via Eq.~(\ref{e:gek:def_Q}). Carter obtained the equivalent
+and not the Boyer-Lindquist ones.
+Carter also introduced
+the constant $Q$ via Eq.~(\ref{e:gek:def_Q}). He obtained the equivalent
 of the first-order system (\ref{e:gek:eom_first_order}) for the Kerr coordinates. Actually
 two of his equations, those for $\D r/\D\lambda$ and $\D\th/\D\lambda$, are
 identical to Eqs.~(\ref{e:gek:drdl}) and (\ref{e:gek:dthdl}) of the Boyer-Lindquist
@@ -934,7 +942,7 @@ be fulfilled along any timelike or null geodesic $\Li$:
 \encadre{ \frac{1}{\Delta} \left( E - \frac{a}{r^2 + a^2} L
 + \frac{\eps_r}{r^2 + a^2} \sqrt{R(r)} \right) > 0 } .
 \ee
-Given expression (\ref{e:gek:def_R}) for $R(r)$ and
+Given expression (\ref{e:gek:def_R_Q}) for $R(r)$ and
 $\Delta := r^2 - 2m r + a^2$ [Eq.~(\ref{e:ker:def_Delta})],
 we note that this constraint involves $(\mu,E,L,Q)$ and $r$, but not $\th$.
 
@@ -1062,7 +1070,7 @@ the relation (\ref{e:gek:def_Mino_time}) between the two parameters.
 Hence we conclude
 \begin{greybox}
 Let $\Li$ be a geodesic of Kerr spacetime and $R(r)$ the associated polynomial
-(\ref{e:gek:def_R}).
+(\ref{e:gek:def_R_Q}).
 A point away from the ring singularity $\ring$ and of $r$-coordinate $r_1$
 such that both $R(r_1) = 0$ and $R'(r_1) = 0$
 can only be reached asymptotically by $\Li$, i.e. in the limit
@@ -1389,10 +1397,8 @@ $\th_0 = \pi/2-\iota$.
 \subsection{$r$-motion} \label{s:gek:r-motion}
 
 The $r$-part of geodesic motion is constrained by Eq.~(\ref{e:gek:R_non_neg}):
-$R(r) \geq 0$. Let us rewrite expression
-(\ref{e:gek:def_R}) for the quartic polynomial $R(r)$ in terms of $Q$
-instead of $\mathscr{K}$, via Eq.~(\ref{e:gek:def_Q}), and expand the
-result in powers of $r$:
+$R(r) \geq 0$. Let us expand expression (\ref{e:gek:def_R_Q})
+for the quartic polynomial $R(r)$ in powers of $r$:
 \be \label{e:gek:R_r_powers}
     \encadre{ R(r) = (E^2 - \mu^2) r^4 + 2 m \mu^2 r^3
      + \left[ a^2(E^2 - \mu^2) - Q - L^2 \right] r^2
@@ -1519,7 +1525,7 @@ since $\Hor\subset\mathscr{G}$ and $\Hor_{\rm in}\subset\mathscr{G}$
 An immediate corollary of the properties obtained for $|E|<\mu$ and $|E|=\mu$
 is
 \begin{greybox}
-Only geodesics with $|E| > \mu$ can have some part in the region $r<0$ of Kerr spacetime, $\M_-$:
+Only geodesics with $|E| > \mu$ may have some part in the region $r<0$ of Kerr spacetime, $\M_-$:
 \be \label{e:ker:neg_r_large_E}
     \Li \cap \M_- \neq \varnothing \Longrightarrow |E| > \mu .
 \ee
