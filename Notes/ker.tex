@@ -811,6 +811,14 @@ basis via (\ref{e:ker:frame_Kerr3p1_Kerr}):
 \be \label{e:ker:k_ti_tr}
     \encadre{ \w{k} = \wpar_\ti - \wpar_{\tilde r} }.
 \ee
+The 1-form $\uu{k}$ associated to $\w{k}$ by $\w{g}$-duality is easily computed
+from $k_\alpha = g_{\alpha\mu} k^\mu$, with $g_{\alpha\mu}$ given by
+Eq.~(\ref{e:ker:metric_Kerr_3p1}). We get
+$k_\alpha = (-1, -1, 0, a\sin^2\th)$, i.e.
+\be \label{e:ker:k_form_Kerr}
+    \encadre{ \uu{k} = - \dd \ti - \dd r + a\sin^2\th \, \dd\tph } .
+\ee
+
 A direct computation (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}) shows
 that
 \be \label{e:ker:nab_k_k}
@@ -883,7 +891,21 @@ are easily deduced from Eqs.~(\ref{e:ker:k_ti_tr}) and (\ref{e:ker:frame_Kerr3p1
     \w{k} = \frac{r^2 + a^2}{\Delta} \, \wpar_t
         - \wpar_r + \frac{a}{\Delta} \, \wpar_\ph .
 \ee
-
+Substituting Eqs.~(\ref{e:ker:Kerr_3p1_BL}) for $\D\ti$ and $\D\tph$ in
+Eq.~(\ref{e:ker:k_form_Kerr}), we get the expression of the associated 1-form
+$\uu{k}$ in terms of the Boyer-Lindquist coordinate coframe:
+\be \label{e:ker:k_form_BL}
+    \uu{k} = - \dd t - \frac{\rho^2}{\Delta}\, \dd r + a\sin^2\th \dd \ph .
+\ee
+\begin{remark}
+Expressions (\ref{e:ker:k_BL}) and (\ref{e:ker:k_form_BL}) are singular
+on the two horizons $\Hor$ and $\Hor_{\rm in}$, where $\Delta = 0$. This reflects
+of course not a pathology of the vector field $\w{k}$ but merely the
+singularity of the Boyer-Lindquist
+coordinates on $\Hor$ and $\Hor_{\rm in}$. The expressions of $\w{k}$ and
+$\uu{k}$ in terms of the 3+1 Kerr coordinates [Eqs.~(\ref{e:ker:k_ti_tr})
+and (\ref{e:ker:k_form_Kerr})] are perfectly regular on all $\M$.
+\end{remark}
 
 One can construct a second congruence of principal null geodesics from
 the \emph{outgoing} Kerr coordinates instead of the ingoing ones
@@ -1833,7 +1855,7 @@ one may recast this result to let appear only $m$ and $a$:
 The concept of \emph{observer} has been recalled in Sec.~\ref{s:fra:measure}.
 We discuss here some families of observers well adapted to Kerr spacetime.
 
-\subsection{The zero-angular-momentum observers (ZAMO)}
+\subsection{The zero-angular-momentum observers (ZAMO)} \label{s:ker:ZAMO}
 
 Let us consider an observer $\Obs$ whose worldline is normal to the hypersurfaces
 of constant Boyer-Lindquist coordinate $t$, $\Sigma_t$ say. Of course, such an observer exists
@@ -1841,7 +1863,7 @@ only where the hypersurface $\Sigma_t$ is spacelike, so that it has
 a timelike normal (cf. Sec.~\ref{s:def:hor_as_null}). A normal 1-form to $\Sigma_t$ is
 of course $\dd t$. The associated normal vector to $\Sigma_t$, $\w{N}$ say, is obtained
 by metric duality [cf. Eq.~(\ref{e:bas:arrow_form})-(\ref{e:bas:arrow_form_comp})]:
-\be
+\be \label{e:ker:N_grad_t}
     \w{N} = - \overrightarrow{\dd t} = -\vw{\nabla} t .
 \ee
 In components:
@@ -1863,7 +1885,7 @@ The scalar square of the normal vector is
     \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right) .
 \ee
 Now, the quantity inside the parentheses is positive everywhere except in
-the Carter time machine $\mathscr{T}\subset \M_{\rm III}$ discussed in Sec.~\ref{s:ker:time_machine}.
+the Carter time machine\index{Carter!time machine}\index{time!machine (Carter)} $\mathscr{T}\subset \M_{\rm III}$ discussed in Sec.~\ref{s:ker:time_machine}.
 Indeed, up to a $\sin^2\th \geq 0$ factor, it coincides with
 the expression (\ref{e:ker:eta_square}) of $\w{\eta}\cdot\w{\eta}$.
 Since $\Delta = (r - r_+)(r - r_-)$ is positive on
@@ -1904,7 +1926,8 @@ in the proper time of $\Obs$ to the change $\D t$ of the coordinate $t$ when mov
     \encadre{ \D\tau = N \D t }.
 \ee
 \begin{proof}
-The infinitesimal vector that relates the point of coordinate $t$ to that of coordinate $t+\D t$ along $\Obs$'s worldine is $\D \w{x} = \D\tau\,  \w{n}$ (by the very definition of the 4-velocity $\w{n}$, compare Eq.~(\ref{e:fra:def_u})). We have then, using Eq.~(\ref{e:ker:def_n_ZAMO}),
+The infinitesimal vector that connects the point of proper time $\tau$ to that of proper time $\tau+\D\tau$ along $\Obs$'s worldine is $\D \w{x} = \D\tau\,  \w{n}$ (by the very definition of the 4-velocity $\w{n}$, compare Eq.~(\ref{e:fra:def_u})). The corresponding increment in the coordinate $t$ is given by
+formula (\ref{e:bas:df}): $\D t = \langle \dd t, \D \w{x} \rangle$; we have then, using Eq.~(\ref{e:ker:def_n_ZAMO}) to express $\vw{\nabla} t$,
 \[
     \D t = \langle \dd t, \D \w{x} \rangle = \vw{\nabla} t \cdot \D \w{x} = \D\tau \, \vw{\nabla} t \cdot \w{n}
     = - \frac{\D\tau}{N} \underbrace{\w{n}\cdot\w{n}}_{-1} = \frac{\D\tau}{N} ,

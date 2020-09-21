@@ -333,16 +333,16 @@ This follows immediately from (\ref{e:bas:def_comp_form}),
 
 A field of linear forms, i.e. a (smooth) map which associates to each point $p\in\M$ a member of $T_p\M$ is called a \defin{1-form}\index{1-form}.
 Given a smooth scalar field $f$ on $\M$, there exists a 1-form canonically associated with it, called
-the \defin{differential of $f$}\index{differential} and denoted $\wnab f$.
-At each point $p\in\M$, $\wnab f$ is the unique linear form which, once
+the \defin{differential of $f$}\index{differential} and denoted $\dd f$ or $\wnab f$.
+At each point $p\in\M$, $\dd f$ is the unique linear form which, once
 applied to the infinitesimal displacement vector $\D\w{x}$ from $p$ to a
 nearby point $q$, gives the change in $f$ between points $p$ and $q$:
 \be \label{e:bas:df}
-  \D f := f(q) - f(p) = \langle \wnab f, \D\w{x} \rangle .
+  \D f := f(q) - f(p) = \langle \dd f, \D\w{x} \rangle .
 \ee
 Since $\D f = \dert{f}{x^\alpha} \, \D x^\alpha$, Eq.~(\ref{e:bas:dxa_dxa}) implies that the components of the differential with respect to the dual basis are nothing but the partial derivatives of $f$ with respect to the coordinates $(x^\alpha)$ :
 \be \label{e:bas:grad_f_der_f}
-  \encadre{ \wnab f = \der{f}{x^\alpha} \, \dd x^\alpha } .
+  \encadre{ \dd f = \der{f}{x^\alpha} \, \dd x^\alpha } .
 \ee
 
 \begin{remark}
@@ -355,7 +355,7 @@ of $\R^3$: $\forall \overrightarrow{v}\in \R^3,\ \langle \w{\omega},\overrightar
 Accordingly, formula (\ref{e:bas:df}) is rewritten as
 $\D f = \vw{\nabla} f \cdot \D\w{x}$. But we should keep in mind
 that, at the fundamental level, the key quantity is the differential 1-form
-$\wnab f$, for Eq.~(\ref{e:bas:df}) does not require any metric on the
+$\wnab f = \dd f$, for Eq.~(\ref{e:bas:df}) does not require any metric on the
 manifold $\M$ to be
 meaningful. The gradient $\vw{\nabla} f$ is a derived quantity, obtained
 from the differential $\wnab f$ by metric duality.
@@ -363,12 +363,9 @@ from the differential $\wnab f$ by metric duality.
 
 \begin{remark}
 For a fixed value of $\alpha$, the coordinate $x^\alpha$ can be considered as a scalar field on $\M$.
-If we apply (\ref{e:bas:grad_f_der_f}) to $f=x^\alpha$, we then get
-\be \label{e:bas:nab_xa_dxa}
-  \wnab x^\alpha = \dd x^\alpha .
-\ee
+If we apply (\ref{e:bas:grad_f_der_f}) to $f=x^\alpha$, we then get $\dd x^\alpha = \dd x^\alpha$.
 Hence the dual basis to the natural basis $(\wpar_\alpha)$ is formed by the
-differentials of the coordinates.
+differentials of the coordinates. This justifies the notation $\dd x^\alpha$ used for its elements.
 \end{remark}
 
 Of course the natural bases are not the only possible bases in the vector

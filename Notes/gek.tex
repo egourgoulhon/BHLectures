@@ -918,7 +918,7 @@ is oriented everywhere to the future.
 The latter condition is equivalent to have the affine parameter $\lambda$ increase
 towards the future along the geodesic $\Li$, as we are demanding in all
 our study (cf. Sec.~\ref{s:gek:geod_motion_intro}).
-In particular, this allows to identify $\lambda$ with the proper
+In particular, this allows one to identify $\lambda$ with the proper
 time when $\Li$ is timelike.
 
 
@@ -945,6 +945,81 @@ be fulfilled along any timelike or null geodesic $\Li$:
 Given expression (\ref{e:gek:def_R_Q}) for $R(r)$ and
 $\Delta := r^2 - 2m r + a^2$ [Eq.~(\ref{e:ker:def_Delta})],
 we note that this constraint involves $(\mu,E,L,Q)$ and $r$, but not $\th$.
+
+Another constraint is obtained by considering, instead of $\w{k}$, the
+vector field $\w{N}$ normal to the hypersurfaces of constant
+Boyer-Lindquist coordinate $t$, which has been introduced in Sec.~\ref{s:ker:ZAMO}:
+$\w{N} = - \overrightarrow{\dd t}$ [Eq.~(\ref{e:ker:N_grad_t})].
+As shown in Sec.~\ref{s:ker:ZAMO}, $\w{N}$ is future-directed timelike
+in the subpart $\M_{\rm ZAMO} := \M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T})$
+of Kerr spacetime. The lemma of Sec.~\ref{s:fra:time_orientation}
+then yields
+\[
+    \w{p} \ \mbox{future-directed on} \ \M_{\rm ZAMO} \iff \w{g}(\w{N},\w{p}) < 0
+    \iff - \underbrace{\langle \dd t, \w{p} \rangle}_{p^t} < 0 \iff p^t > 0 .
+\]
+Hence the Boyer-Lindquist component $p^t$ of the 4-momentum $\w{p}$ must be positive
+on $\M_{\rm ZAMO}$:
+\be \label{e:gek:p_t_positive}
+    \encadre{ p^t > 0 } \ \ \mbox{on}\ \M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T}) .
+\ee
+Let us recall that $\mathscr{T}$ is the Carter time machine\index{Carter!time machine}\index{time!machine (Carter)} (cf. Sec.~\ref{s:ker:time_machine}),
+which occupies a very limited portion of $\M_{\rm III}$.
+Using $p^t = \D t/\D\lambda$, Eq.~(\ref{e:gek:dtdl}) and the fact that $\Delta > 0$
+on $\M_{\rm I} \cup \M_{\rm III}$, we get the equivalent
+constraint
+\[
+    (r^2 + a^2) [(r^2 + a^2) E - a L]  + a \Delta ( L - a E \sin^2\th ) > 0
+      \ \mbox{on}\ \M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T}) ,
+\]
+which can be simplified to
+\be
+\encadre{ \rho^2 (r^2 + a^2) E - 2 a m r ( L - a E \sin^2\th ) > 0 }
+\ \ \mbox{on}\ \M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T}) .
+\ee
+
+\begin{remark}
+In the outer ergoregion  $\mathscr{G}^+ = \mathscr{G}\cap \M_{\rm I}$
+(i.e. the part of the ergoregion outside of the black hole),
+$E<0$ is allowed, but the result
+(\ref{e:gek:p_t_positive}) shows that $p^t < 0$ is not allowed.
+\end{remark}
+
+Yet another future-directed constraint stems from
+\defin{O'Neill canonical vector field}\index{O'Neill canonical vector}\index{canonical!vector field (O'Neill)} \cite{ONeil95}
+\be
+    \w{V} := (r^2 + a^2) \, \w{\xi} + a \, \w{\eta} .
+\ee
+It is an easy exercise to show, by means of the metric components (\ref{e:ker:metric_BL}), that the scalar
+square of $\w{V}$ is
+\be
+    \w{g}(\w{V},\w{V}) = - \rho^2 \Delta .
+\ee
+Accordingly, $\w{V}$ is timelike on $\M_{\rm I} \cup \M_{\rm III}$, spacelike on $\M_{\rm II}$
+and null on $\Hor$ and $\Hor_{\rm in}$. Moreover, on $\M_{\rm I} \cup \M_{\rm III}$,
+$\w{V}$ is future-directed since
+\[
+    \w{g}(\w{k},\w{V}) = k_\mu V^\mu = - V^t  + a\sin^2\th V^\ph = - (r^2 + a^2) - a^2\sin^2\th = - \rho^2 < 0 ,
+\]
+where we have used Eq.~(\ref{e:ker:k_form_Kerr}) for the components $k_\mu$.
+We can then apply the lemma of Sec.~\ref{s:fra:time_orientation} with $\w{V}$
+on $\M_{\rm I} \cup \M_{\rm III}$:
+\[
+   \w{p} \ \mbox{future-directed on} \ \M_{\rm I} \cup \M_{\rm III} \iff \w{g}(\w{V},\w{p}) < 0
+   \iff (r^2 + a^2) \underbrace{\w{g}(\w{\xi}, \w{p})}_{-E} + a \underbrace{\w{g}(\w{\eta}, \w{p})}_{L} < 0 .
+\]
+Hence the constraint
+\be
+    \encadre{ (r^2 + a^2) E - a L > 0 } \ \ \mbox{on}\ \M_{\rm I} \cup \M_{\rm III} .
+\ee
+
+An immediate corollary of the above result is:
+\begin{greybox}
+In the outer ergoregion\index{outer!ergoregion}\index{ergoregion!outer --}
+$\mathscr{G}^+ = \mathscr{G}\cap \M_{\rm I}$, a geodesic that has $E < 0$
+must have $L<0$ as well.
+\end{greybox}
+
 
 \subsection{Winding near the event horizon and the inner horizon}
 
