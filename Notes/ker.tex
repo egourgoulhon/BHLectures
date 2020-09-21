@@ -373,7 +373,8 @@ given that $\mathrm{e}^2 \simeq 7.39$.
 
 \begin{remark}
 Sometimes the word \defin{ergosurface}\index{ergosurface} is used instead of
-\emph{ergosphere}.
+\emph{ergosphere}. One may encounter as well the name \defin{static limit}\index{static!limit}
+for \emph{ergosphere}, especially in old texts.
 \end{remark}
 
 
@@ -1765,7 +1766,7 @@ Hence Eq.~(\ref{e:ker:J_Komar_partial_der}) leads to
         = \frac{3 a m}{4} \underbrace{\int_0^\pi \sin^3\th \, \D\th}_{4/3} ,
 \]
 i.e.
-\be
+\be \label{e:ker:J_am}
     \encadre{J = a m } .
 \ee
 We conclude that the parameter $a$ is nothing but the total angular momentum
@@ -1911,44 +1912,90 @@ The infinitesimal vector that relates the point of coordinate $t$ to that of coo
 hence formula (\ref{e:ker:dtau_lapse}).
 \end{proof}
 
-The coordinates $(r,\th,\ph)$ span each hypersurface $\Sigma_t$.
-Contrary to $\Obs$'s worldline, the curves of fixed $(r,\th, \ph)$, the tangent vector
-of which is $\wpar_t = \w{\xi}$, are not orthogonal to $\Sigma_t$, except for $a=0$. The orthogonal
-decomposition of $\wpar_t$ into a part along the normal $\w{n}$ and a part tangent to $\Sigma_t$
-defines the \defin{shift vector}\index{shift vector} $\w{\beta}$:
-\be
-    \encadre{ \wpar_t = N \, \w{n} + \w{\beta} }.
-\ee
-By combining Eqs.~(\ref{e:ker:def_n_ZAMO}), (\ref{e:ker:lapse_ZAMO}) and (\ref{e:ker:normal_ZAMO}), we
-get
-\be
-    \w{\beta} = - \frac{2 a m r}{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}\, \wpar_\ph .
-\ee
-
-The family of \defin{zero-angular-momentum observers (ZAMO)}\index{zero-angular-momentum observer}\index{ZAMO}
-is a congruence of observers filling $\M_{\rm ZAMO}$, whose worldlines are normal to the
-hypersurfaces $\Sigma_t$ of constant Boyer-Lindquist time $t$ and whose orthonormal frame
-$\w{e}_{(\alpha)}$ is
-related to the Boyer-Lindquist coordinate frame $(\wpar_\alpha)$ by
+A \defin{zero-angular-momentum observer (ZAMO)}\index{zero-angular-momentum observer}\index{ZAMO}
+is an observer $\Obs$ of the above type, i.e. whose worldline is normal to the
+hypersurfaces $\Sigma_t$ of constant Boyer-Lindquist time $t$, and whose orthonormal frame
+$\w{e}_{(\alpha)}$ is related to the Boyer-Lindquist coordinate frame $(\wpar_\alpha)$ by
 \begin{subequations}
 \begin{align}
   & \w{e}_{(0)} = \w{n} =
   \frac{\sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}}{\rho \sqrt{\Delta}} \,
-  \wpar_t + \frac{2 a m r}{\rho \sqrt{\Delta[ \rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th]}}\, \wpar_\ph\\
+  \wpar_t + \frac{2 a m r}{\rho \sqrt{\Delta[ \rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th]}}\, \wpar_\ph
+    \label{e:ker:ZAMO_frame_0}\\
   & \w{e}_{(r)} = \frac{\sqrt{\Delta}}{\rho} \, \wpar_r \\
   & \w{e}_{(\th)} = \frac{1}{\rho} \, \wpar_\th \\
   & \w{e}_{(\ph)} =  \frac{\rho}{\sin\th \sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}} \,
   \wpar_\ph .
 \end{align}
 \end{subequations}
+Expression (\ref{e:ker:ZAMO_frame_0}) for $\w{n}$ has been obtained by
+combining Eqs.~(\ref{e:ker:def_n_ZAMO}), (\ref{e:ker:lapse_ZAMO}) and (\ref{e:ker:normal_ZAMO}).
+Given the Boyer-Lindquist components (\ref{e:ker:metric_BL}) of $\w{g}$, one readily check
+that $(\w{e}_{(r)}, \w{e}_{(\th)},\w{e}_{(\ph)})$ is an orthonormal basis of spacelike vectors.
+Moreover these vectors are all tangent to $\Sigma_t$, since $(\wpar_r, \wpar_\th, \wpar_\ph)$ are.
+They are thus orthogonal to $\w{n}=\w{e}_{(0)}$, which is a unit timelike vector. This completes the proof that
+$\w{e}_{(\alpha)}$ is an orthonormal basis.
 
+Each ZAMO can be characterized by its coordinates $(r_0,\th_0,\ph_0)$ at some fixed
+value $t_0$ of the Boyer-Lindquist time $t$. The ZAMO's form thus a 3-parameter family of observers
+filling $\M_{\rm ZAMO}$.
+The coordinates $(r,\th,\ph)$ span each hypersurface $\Sigma_t$.
+Contrary to the ZAMO's worldlines, the curves of fixed $(r,\th, \ph)$, the tangent vector
+of which is $\wpar_t = \w{\xi}$, are not orthogonal to $\Sigma_t$, except for $a=0$. The orthogonal
+decomposition of $\wpar_t$ into a part along the normal $\w{n}$ and a part tangent to $\Sigma_t$
+defines the \defin{shift vector}\index{shift vector} $\w{\beta}$:
+\be \label{e:ker:par_t_3p1}
+    \encadre{ \wpar_t = N \, \w{n} + \w{\beta} }, \qquad \w{n}\cdot\w{\beta} = 0 .
+\ee
+From Eq.~(\ref{e:ker:ZAMO_frame_0}), we get
+\be
+    \w{\beta} = - \frac{2 a m r}{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}\, \wpar_\ph .
+\ee
+Along a given ZAMO worldline, the coordinate $\ph$ evolves according to
+$\D\ph/\D t = {\D \ph}/{\D \tau} \times {\D \tau}/{\D t} = {n^\ph}/{n^t} =
+- \beta^\ph$, where we have used (\ref{e:ker:par_t_3p1}) to write ${n^\ph}/{n^t} = - \beta^\phi$.
+When seen from infinity,
+the ZAMO is thus rotating around the black hole at the angular speed
+\be
+    \omega := \frac{\D\ph}{\D t} = \frac{2 a m r}{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th} .
+\ee
+Note that $\omega = 0$ for $a=0$ (Schwarzschild black hole) and that $\omega$
+decays quite rapidly with $r$:
+\be
+    \omega \underset{r\to\pm\infty}{\sim} \frac{2 a m}{r^3} = \frac{2J}{r^3} ,
+\ee
+where Eq.~(\ref{e:ker:J_am}) has been used to let appear the black hole angular momentum $J$.
+At first glance, this rotating behaviour might seem contradictory with
+the name \emph{zero-angular momentum observer}. This denomination arises because
+the observer specific ``angular momentum'', losely defined by $L := \w{\eta}\cdot\w{n}$ [cf. Eq.~(\ref{e:ges:conserved_angu_mom})], is identically
+zero, the observer's 4-velocity $\w{n}$ being orthogonal to $\w{\eta} = \wpar_\ph$. By \emph{losely
+defined}, we mean that the above definition of $L$  makes fully sense for a geodesic, as it leads to
+a conserved quantity along the worldline (cf. Sec.~\ref{s:ges:fiom}), and we are going to see
+that a ZAMO's worldline is not geodesic. Actually, the
+name \emph{locally nonrotating observer}, initially given to a ZAMO (cf. historical note below)
+better conveys the specificity of such an observer: it does not feel any rotation effect.
+For instance, he does not notice any Sagnac effect\index{Sagnac effect} (see Ref.~\cite{Barde70} for details), nor any
+change of orientation of gyroscopes with respect to its frame. The geometrical translation of this
+nonrotating feature is the fact
+that the congruence of the ZAMOs' worldlines is hypersurface-orthogonal, being orthogonal to the
+$\Sigma_t$ foliation at each point.
+
+Even if it is not rotating, a ZAMO is not an inertial observer: it is not in free-fall, since its 4-acceleration $\w{a} := \w{\nabla}_{\w{n}}\, \w{n}$
+is nonzero. Indeed, it can be shown that $\w{a}$ is the orthogonal projection onto $\Sigma_t$ of
+the gradient of the logarithm of the lapse function (see e.g. Eq.~(4.19) in Ref.~\cite{Gourg12}):
+\be
+    \w{a} = \vw{\nabla}\ln N + (\w{\nabla}_{\w{n}} \ln N) \w{n} .
+\ee
+In view of expression (\ref{e:ker:lapse_ZAMO}) of $N$, we have $\w{a}\neq 0$. In other words, the
+ZAMO's worldline is not a geodesic (cf. Eq.~(\ref{e:geo:geod_eq_v}) in Appendix~\ref{s:geo}) and
+if it does not feel any rotation, a ZAMO feels some acceleration (``weight''), the closer to the black hole, the stronger it is.
 
 \begin{hist}
 The concept of ZAMO has been introduced by James M. Bardeen in 1970 \cite{Barde70}
-under the name of \defin{locally nonrotating observers}\index{locally!nonrotating observer}\index{nonrotating!observer} for generic stationary and axisymmetric spacetimes. The application
+under the name of \defin{locally nonrotating observers}\index{locally!nonrotating observer}\index{nonrotating!observer} and for generic stationary and axisymmetric spacetimes. The application
 to the exterior part of Kerr spacetime has been performed by Bardeen, William H. Press and Saul A. Teukolsky
-in 1972 \cite{BardePT72}. The name \emph{ZAMO} is due to  Kip S. Thorne and Douglas MacDonald
-\cite{ThornM82} (1982).
+in 1972 \cite{BardePT72}. The name \emph{ZAMO} has been coined by Kip S. Thorne and Douglas MacDonald
+in 1982 \cite{ThornM82}.
 \end{hist}
 
 
