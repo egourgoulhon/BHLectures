@@ -888,7 +888,7 @@ By the very definition of the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergo
 the Killing vector $\w{\xi}$ is timelike outside $\mathscr{G}$. Moreover it is
 future-directed there, given the time orientation defined in Sec.~\ref{s:ker:time_orientation}.
 The 4-momentum $\w{p}$ is either timelike or null and always future-directed.
-By Eq.~(\ref{e:fra:scalar_caus1}), one has then necessarily $\w{\xi}\cdot\w{p} < 0$; hence
+By Eq.~(\ref{e:fra:orient_time1}) in Lemma~1 of Sec.~\ref{s:fra:time_orientation}, one has then necessarily $\w{\xi}\cdot\w{p} < 0$; hence
 $E := - \w{\xi}\cdot\w{p} > 0$ in $\M\setminus \mathscr{G}$. Since $E$ is constant along $\Li$, it
 follows that $E > 0$ everywhere.
 \end{proof}
@@ -924,8 +924,9 @@ time when $\Li$ is timelike.
 
 As discussed in Sec.~\ref{s:ker:time_orientation}, the time orientation of
 the Kerr spacetime $(\M,\w{g})$ is set by the global null
-vector field $\w{k}$ generating the ingoing principal null geodesics, cf. Eq.~(\ref{e:ker:def_k_hat_r}). By virtue of the lemma in Sec.~\ref{s:fra:time_orientation}
-[cf. Eq.~(\ref{e:fra:scalar_caus1})], we have then
+vector field $\w{k}$ generating the ingoing principal null geodesics, cf. Eq.~(\ref{e:ker:def_k_hat_r}). By virtue of Lemma~2 of Sec.~\ref{s:fra:time_orientation}
+[cf. Eq.~(\ref{e:fra:orient_null1})], we have then, for $\w{p}$ not collinear
+with $\w{k}$ (in particular for $\Li$ timelike),
 \[
     \w{p} \ \mbox{future-directed} \iff \w{g}(\w{k},\w{p}) < 0
     \iff k^\mu p_\mu < 0
@@ -936,9 +937,10 @@ where the last inequality follows from the Boyer-Lindquist components
 Given the identities $p_t = -E$, $p_\ph = L$
 [Eq.~(\ref{e:gek:E_pt_L_pph})] and $p_r = \eps_r \sqrt{R(r)}/ \Delta $
 [Eqs.~(\ref{e:gek:p_r_p_th_cov_con})
-and (\ref{e:gek:drdl})], we conclude that the following criterion must
-be fulfilled along any timelike or null geodesic $\Li$:
+and (\ref{e:gek:drdl})], we conclude that
 \be \label{e:gek:future_directed}
+{\Li \ \mbox{timelike or}\atop
+\w{k} \ \mbox{not tangent to} \ \Li} \implies
 \encadre{ \frac{1}{\Delta} \left[ (r^2 + a^2) E - a L
 + \eps_r \sqrt{R(r)} \right] > 0 } .
 \ee
@@ -952,7 +954,7 @@ Boyer-Lindquist coordinate $t$, which has been introduced in Sec.~\ref{s:ker:ZAM
 $\w{N} = - \overrightarrow{\dd t}$ [Eq.~(\ref{e:ker:N_grad_t})].
 As shown in Sec.~\ref{s:ker:ZAMO}, $\w{N}$ is future-directed timelike
 in the subpart $\M_{\rm ZAMO} := \M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T})$
-of Kerr spacetime. The lemma of Sec.~\ref{s:fra:time_orientation}
+of Kerr spacetime. Lemma~1 of Sec.~\ref{s:fra:time_orientation} [cf. Eq.~(\ref{e:fra:orient_time1})]
 then yields
 \[
     \w{p} \ \mbox{future-directed on} \ \M_{\rm ZAMO} \iff \w{g}(\w{N},\w{p}) < 0
@@ -1002,7 +1004,7 @@ $\w{V}$ is future-directed since
     \w{g}(\w{k},\w{V}) = k_\mu V^\mu = - V^t  + a\sin^2\th V^\ph = - (r^2 + a^2) - a^2\sin^2\th = - \rho^2 < 0 ,
 \]
 where we have used Eq.~(\ref{e:ker:k_form_Kerr}) for the components $k_\mu$.
-We can then apply the lemma of Sec.~\ref{s:fra:time_orientation} with $\w{V}$
+We can then apply Lemma~1 of Sec.~\ref{s:fra:time_orientation} with $\w{V}$
 on $\M_{\rm I} \cup \M_{\rm III}$:
 \[
    \w{p} \ \mbox{future-directed on} \ \M_{\rm I} \cup \M_{\rm III} \iff \w{g}(\w{V},\w{p}) < 0
