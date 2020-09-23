@@ -414,7 +414,7 @@ The region $\mathscr{T}$ is called
 This name stems from the fact that thanks to $\mathscr{T}$, there is
 a future-directed timelike curve connecting any two points of $\M_{\rm III}$
 (see e.g. Proposition~2.4.7 of O'Neill's textbook \cite{ONeil95} for a
-demonstration, or Carter's original article \cite{Carte68}).
+demonstration, or Carter's original article \cite{Carte68a}).
 The region $\mathscr{T}$ is depicted in yellow in the meridional
 diagrams of
 Figs.~\ref{f:ker:ergo_a90}-\ref{f:ker:ergo_a99}.
@@ -1855,7 +1855,7 @@ one may recast this result to let appear only $m$ and $a$:
 The concept of \emph{observer} has been recalled in Sec.~\ref{s:fra:measure}.
 We discuss here some families of observers well adapted to Kerr spacetime.
 
-\subsection{The zero-angular-momentum observers (ZAMO)} \label{s:ker:ZAMO}
+\subsection{Zero-angular-momentum observers (ZAMO)} \label{s:ker:ZAMO}
 
 Let us consider an observer $\Obs$ whose worldline is normal to the hypersurfaces
 of constant Boyer-Lindquist coordinate $t$, $\Sigma_t$ say. Of course, such an observer exists
@@ -2012,20 +2012,68 @@ the gradient of the logarithm of the lapse function (see e.g. Eq.~(4.19) in Ref.
 \be
     \w{a} = \vw{\nabla}\ln N + (\w{\nabla}_{\w{n}} \ln N) \w{n} .
 \ee
-In view of expression (\ref{e:ker:lapse_ZAMO}) of $N$, we have $\w{a}\neq 0$. In other words, the
+In view of expression (\ref{e:ker:lapse_ZAMO}) of $N$, we have\footnote{An explicit expression of $\w{a}$
+can be found in Appendix~A of Ref.~\cite{BiniGJ17} [Eqs. (A.9) and (A.10)].} $\w{a}\neq 0$. In other words, the
 ZAMO's worldline is not a geodesic (cf. Eq.~(\ref{e:geo:geod_eq_v}) in Appendix~\ref{s:geo}) and
 if it does not feel any rotation, a ZAMO feels some acceleration (``weight''), the closer to the black hole, the stronger it is.
 
 \begin{hist}
-The concept of ZAMO has been introduced by James M. Bardeen in 1970 \cite{Barde70}
+The concept of ZAMO has been introduced by James M. Bardeen\index{Bardeen, J.M.} in 1970 \cite{Barde70}
 under the name of \defin{locally nonrotating observers}\index{locally!nonrotating observer}\index{nonrotating!observer} and for generic stationary and axisymmetric spacetimes. The application
-to the exterior part of Kerr spacetime has been performed by Bardeen, William H. Press and Saul A. Teukolsky
-in 1972 \cite{BardePT72}. The name \emph{ZAMO} has been coined by Kip S. Thorne and Douglas MacDonald
+to the exterior part of Kerr spacetime has been performed by Bardeen, William H. Press\index{Press, W.H.} and Saul A. Teukolsky\index{Teukolsky, S.A.}
+in 1972 \cite{BardePT72}. The name \emph{ZAMO} has been coined by Kip S. Thorne\index{Thorne, K.S.} and Douglas MacDonald\index{MacDonald, D.}
 in 1982 \cite{ThornM82}.
 \end{hist}
 
+\subsection{Carter observers}
 
-\subsection{The asymptotic inertial observers}
+A \defin{Carter observer}\index{Carter!observer}\index{observer!Carter --}
+is an observer $\Obs$ defined in the region $\M_{\rm I}\cup \M_{\rm III}$ of Kerr spacetime, whose
+worldline $\Li$ has the following equation in Boyer-Lindquist coordinates:
+\be \label{e:ker:Carter_obs_worldline}
+    t(\tau) = \frac{r^2 + a^2}{\rho\sqrt{\Delta}}\tau  + \mathrm{const.}, \quad
+    r(\tau) = \mathrm{const.},\quad
+    \th(\tau) = \mathrm{const.},\quad
+    \ph(\tau) = \frac{a}{\rho\sqrt{\Delta}} \tau + \mathrm{const.},
+\ee
+where $\tau$ is $\Obs$'s proper time,
+and which is equipped with the following orthonormal frame:
+\begin{subequations}
+\begin{align}
+  & \w{\veps}_{(0)} =
+  \frac{r^2 + a^2}{\rho\sqrt{\Delta}} \,
+  \wpar_t + \frac{a}{\rho \sqrt{\Delta}}\, \wpar_\ph
+    \label{e:ker:Carter_frame_0}\\
+  & \w{\veps}_{(r)} = \frac{\sqrt{\Delta}}{\rho} \, \wpar_r \\
+  & \w{\veps}_{(\th)} = \frac{1}{\rho} \, \wpar_\th \\
+  & \w{\veps}_{(\ph)} =  \frac{a}{\rho}\sin\th\, \wpar_t +
+     \frac{1}{\rho\sin\th} \, \wpar_\ph .
+\end{align}
+\end{subequations}
+We note that the frame $(\w{e}_\alpha)$ is well defined because $\Delta > 0$ in $\M_{\rm I}\cup \M_{\rm III}$.
+It is an easy exercice to check that $(\w{\veps}_\alpha)$ is an orthonormal frame.
+In particular, we have $\w{\veps}_{(0)} \cdot \w{\veps}_{(0)}  = -1$ and, using the
+Boyer-Lindquist components
+(\ref{e:ker:k_form_BL}) of $\uu{k}$:
+\[
+    \w{k}\cdot\w{\veps}_{(0)} = k_\mu \veps_{(0)}^\mu = - \frac{r^2 + a^2}{\rho\sqrt{\Delta}}
+        + a\sin^2\th \frac{a}{\rho \sqrt{\Delta}} = - \frac{\rho}{\sqrt{\Delta}} < 0 ,
+\]
+which, by virtue of Lemma~2 in
+Sec.~\ref{s:fra:time_orientation}, shows that $\w{\veps}_{(0)}$ is future-directed. Moreover,
+we notice from (\ref{e:ker:Carter_obs_worldline}) and (\ref{e:ker:Carter_frame_0})
+that $\veps_{(0)}^\alpha = \D x^\alpha / \D\tau$, which proves that $\Li$ is
+timelike and $\veps_{(0)}$ is the 4-velocity of observer $\Obs$.
+
+
+
+\begin{hist}
+The Carter frame has been introduced by Brandon Carter\index{Carter, B.} in 1968 \cite{Carte68b}, in
+the form of the dual coframe for a quite general class of spacetimes including the Kerr one
+(Eqs.~(81)-(82) in Ref.~\cite{Carte68b}). The explicit form for Kerr spacetime can be found in Carter's famous lecture at Les Houches School (1972) \cite{Carte73a} (Eqs. (5.19)-(5.22) and (5.31)-(5.34)).
+\end{hist}
+
+\subsection{Asymptotic inertial observers}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2128,7 +2176,7 @@ In this process, one shall make sure to have some analytic continuation
 of the metric between the various blocks. This is done by introducing
 Kruskal-type coordinates in the vicinity of the boundaries between
 the various blocks. We shall not do it here and refer the reader to
-the seminal articles by Boyer \& Lindquist \cite{BoyerL67} and Carter \cite{Carte68},
+the seminal articles by Boyer \& Lindquist \cite{BoyerL67} and Carter \cite{Carte68a},
 the famous Les Houches lectures by Carter \cite{Carte73a} or
 the textbook by O'Neill \cite{ONeil95}.
 
