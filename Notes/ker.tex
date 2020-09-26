@@ -453,6 +453,7 @@ Hence $\ring$ is called the
 \defin{ring singularity}\index{ring!singularity}\index{singularity!ring --}
 of Kerr spacetime, the word \emph{ring} reflecting the fact that $t=\mathrm{const}$
 sections of $\ring$ are circles [cf. Eq.~(\ref{e:ker:ring_R_S1})].
+See Ref.~\cite{ChrusMY20} for an extended discussion of this singularity.
 
 On the contrary, we shall see in the next section that the divergence
 of the metric components when $\Delta\rightarrow 0$ corresponds to
@@ -1853,22 +1854,34 @@ one may recast this result to let appear only $m$ and $a$:
 \section{Observers in Kerr spacetime}
 
 The concept of \emph{observer} has been recalled in Sec.~\ref{s:fra:measure}.
-We discuss here some families of observers well adapted to Kerr spacetime.
+We discuss here some families of observers well adapted to Kerr spacetime:
+the ZAMOs (Sec.~\ref{s:ker:ZAMO}) and the Carter observers (Sec.~\ref{s:ker:Carter_obs}).
+These two families correspond to \defin{stationary observers}\index{stationary!observer in Kerr spacetime}:
+they evolve at fixed $r$ and $\th$, with a 4-velocity $\w{u}$ that is a
+linear combination of the Killing vectors $\w{\xi}$ and $\w{\eta}$:
+\be
+    \w{u} = u^t(r,\th) \, \w{\xi} + u^\ph(r,\th) \, \w{\eta} .
+\ee
+Since $u^t(r,\th)$ and $u^\ph(r,\th)$ are constant along the worldline $\Li$
+of a given observer,
+it follows that the spacetime geometry as perceived by the observer does not evolve
+(in other words, $\Li$ is an orbit of the isometry group $\R\times\mathrm{SO}(2)$ of Kerr spacetime),
+hence the qualifier \emph{stationary} given to such observers.
 
 \subsection{Zero-angular-momentum observers (ZAMO)} \label{s:ker:ZAMO}
 
 Let us consider an observer $\Obs$ whose worldline is normal to the hypersurfaces
 of constant Boyer-Lindquist coordinate $t$, $\Sigma_t$ say. Of course, such an observer exists
-only where the hypersurface $\Sigma_t$ is spacelike, so that it has
+only where the hypersurface $\Sigma_t$ is spacelike, so that the latter has
 a timelike normal (cf. Sec.~\ref{s:def:hor_as_null}). A normal 1-form to $\Sigma_t$ is
-of course $\dd t$. The associated normal vector to $\Sigma_t$, $\w{N}$ say, is obtained
+of course $\dd t$. The associated normal vector, $\w{N}$ say, is obtained
 by metric duality [cf. Eq.~(\ref{e:bas:arrow_form})-(\ref{e:bas:arrow_form_comp})]:
 \be \label{e:ker:N_grad_t}
     \w{N} = - \overrightarrow{\dd t} = -\vw{\nabla} t .
 \ee
 In components:
 \[
-   N^\alpha = - g^{\alpha\mu} (\dd t)_\mu = - g^{\alpha\mu} \delta^t_{\ \, \mu} = - g^{t\alpha} .
+   N^\alpha = - g^{\alpha\mu} (\D t)_\mu = - g^{\alpha\mu} \delta^t_{\ \, \mu} = - g^{t\alpha} .
 \]
 The minus sign has been chosen to have $\w{N}$ future-directed, as we shall see below.
 In view of the Boyer-Lindquist components (\ref{e:ker:inv_met_BL}) of the inverse metric,
@@ -1878,7 +1891,7 @@ we get
     \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right) \, \wpar_t
      + \frac{2 a m r}{\rho^2 \Delta} \, \wpar_\ph .
 \ee
-The scalar square of the normal vector is
+The scalar square of $\w{N}$ is
 \be \label{e:ker:w_square}
     \w{N}\cdot\w{N} = \w{g}(\w{N},\w{N}) = N_\mu N^\mu = \delta^t_{\ \, \mu} N^\mu = N^t
     = - \frac{1}{\Delta}
@@ -1886,8 +1899,8 @@ The scalar square of the normal vector is
 \ee
 Now, the quantity inside the parentheses is positive everywhere except in
 the Carter time machine\index{Carter!time machine}\index{time!machine (Carter)} $\mathscr{T}\subset \M_{\rm III}$ discussed in Sec.~\ref{s:ker:time_machine}.
-Indeed, up to a $\sin^2\th \geq 0$ factor, it coincides with
-the expression (\ref{e:ker:eta_square}) of $\w{\eta}\cdot\w{\eta}$.
+Indeed, up to the factor $\sin^2\th \geq 0$, it coincides with
+expression~(\ref{e:ker:eta_square}) of $\w{\eta}\cdot\w{\eta}$.
 Since $\Delta = (r - r_+)(r - r_-)$ is positive on
 $\M_{\rm I}$ and $\M_{\rm III}$, and negative on $\M_{\rm II}$, we conclude that
 the locus where $\w{N}$ is timelike is
@@ -1896,7 +1909,9 @@ the locus where $\w{N}$ is timelike is
 \ee
 This is thus the region where the observer $\Obs$ is defined.
 Note that it does not contain the horizons $\Hor$ and $\Hor_{\rm in}$, which
-is not surprising since the Boyer-Lindquist coordinates are singular there.
+is not surprising since the Boyer-Lindquist coordinates are singular there,
+notably in terms of the spacetime slicing by the hypersurfaces $\Sigma_t$,
+as illustrated in Fig.~\ref{f:sch:SD_slices} for the case $a=0$.
 
 In all $\M_{\rm ZAMO}$,
 the timelike vector $\w{N}$ is future-directed with respect to the time orientation chosen in
@@ -1912,14 +1927,13 @@ so that Lemma~2 in Sec.~\ref{s:fra:time_orientation} [Eq.~(\ref{e:fra:orient_nul
 let us conclude that
 $\w{N}$ is future-directed.
 
-The observer $\Obs$ is chosen so that $\w{N}$ is tangent to its worldline
-at all points.
-The 4-velocity $\w{n}$ of $\Obs$ is then nothing but $\w{N}$ rescaled to a unit vector,
+Choosing the observer $\Obs$ as having his worldline orthogonal to $\Sigma_t$
+means that $\Obs$'s 4-velocity $\w{n}$ is nothing but $\w{N}$ rescaled to form a unit vector,
 namely
 \be \label{e:ker:def_n_ZAMO}
     \w{n} := N \w{N} = - N \vw{\nabla} t ,
 \ee
-with\footnote{Note that $N$ is not defined as the (pseudo)norm of $\w{N}$, but rather as the inverse of it.} $N := (-\w{N}\cdot\w{N})^{-1/2}$. In view of expression (\ref{e:ker:w_square}), we get
+with\footnote{Note that $N$ is not defined as the (pseudo)norm of $\w{N}$, as the notation might suggest, but rather as the inverse of it.} $N := (-\w{N}\cdot\w{N})^{-1/2}$. In view of expression (\ref{e:ker:w_square}), we get
 \be \label{e:ker:lapse_ZAMO}
     N = \sqrt{\Delta} \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right) ^{-1/2} .
 \ee
@@ -1940,8 +1954,8 @@ hence formula (\ref{e:ker:dtau_lapse}).
 
 A \defin{zero-angular-momentum observer (ZAMO)}\index{zero-angular-momentum observer}\index{ZAMO}
 is an observer $\Obs$ of the above type, i.e. whose worldline is normal to the
-hypersurfaces $\Sigma_t$ of constant Boyer-Lindquist time $t$, and whose orthonormal frame
-$\w{e}_{(\alpha)}$ is related to the Boyer-Lindquist coordinate frame $(\wpar_\alpha)$ by
+hypersurfaces $\Sigma_t$ of constant Boyer-Lindquist time $t$, and whose orthonormal frame\index{ZAMO!frame}\index{frame!ZAMO --}
+$(\w{e}_{(\alpha)})$ is related to the Boyer-Lindquist coordinate frame $(\wpar_\alpha)$ by
 \begin{subequations}
 \begin{align}
   & \w{e}_{(0)} = \w{n} =
@@ -1957,13 +1971,31 @@ $\w{e}_{(\alpha)}$ is related to the Boyer-Lindquist coordinate frame $(\wpar_\a
 Expression (\ref{e:ker:ZAMO_frame_0}) for $\w{n}$ has been obtained by
 combining Eqs.~(\ref{e:ker:def_n_ZAMO}), (\ref{e:ker:lapse_ZAMO}) and (\ref{e:ker:normal_ZAMO}).
 Given the Boyer-Lindquist components (\ref{e:ker:metric_BL}) of $\w{g}$, one readily check
-that $(\w{e}_{(r)}, \w{e}_{(\th)},\w{e}_{(\ph)})$ is an orthonormal basis of spacelike vectors.
+that $(\w{e}_{(r)}, \w{e}_{(\th)},\w{e}_{(\ph)})$ is an orthonormal basis of spacelike vectors
+(see the notebook~\ref{s:sam:Kerr_ZAMO_frame} for a SageMath computation).
 Moreover these vectors are all tangent to $\Sigma_t$, since $(\wpar_r, \wpar_\th, \wpar_\ph)$ are.
 They are thus orthogonal to $\w{n}=\w{e}_{(0)}$, which is a unit timelike vector. This completes the proof that
-$\w{e}_{(\alpha)}$ is an orthonormal basis.
+$(\w{e}_{(\alpha)})$ is an orthonormal frame.
+
+The \defin{ZAMO coframe}\index{ZAMO!coframe}\index{coframe!ZAMO --} is the 4-tuple of 1-forms
+$(\w{e}^{(\alpha)})_{0\leq \alpha\leq 3}$ that constitutes, at each point $p\in\Li$, a dual basis of $(\w{e}_{(\alpha(p)})$, namely $(\w{e}^{(\alpha)})$ obeys
+$\langle \w{e}^{(\alpha)} , \w{e}_{(\beta)} \rangle = \delta^\alpha_{\ \ \beta} $
+(cf. Eq.~(\ref{e:bas:dual_basis}) in Appendix~\ref{s:bas}). Its expression in terms of the
+Boyer-Lindquist coordinate coframe $(\dd x^\alpha)$ is (cf. the notebook~\ref{s:sam:Kerr_ZAMO_frame})
+\begin{subequations}
+\begin{align}
+  & \w{e}^{(0)} =
+  \frac{\rho\sqrt{\Delta}}{\sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}}\, \dd t \\
+  & \w{e}^{(r)} = \frac{\rho}{\sqrt{\Delta}} \, \dd r \\
+  & \w{e}^{(\th)} = \rho\, \dd \th \\
+  & \w{e}^{(\ph)} = - \frac{2 a m r \sin\th}{\rho\sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}} \, \dd t
+  + \frac{\sin\th}{\rho} \sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th} \, \dd\ph .
+\end{align}
+\end{subequations}
+
 
 Each ZAMO can be characterized by its coordinates $(r_0,\th_0,\ph_0)$ at some fixed
-value $t_0$ of the Boyer-Lindquist time $t$. The ZAMO's form thus a 3-parameter family of observers
+value $t_0$ of the Boyer-Lindquist time $t$. The set of ZAMOs is thus a 3-parameter family of observers
 filling $\M_{\rm ZAMO}$.
 The coordinates $(r,\th,\ph)$ span each hypersurface $\Sigma_t$.
 Contrary to the ZAMO's worldlines, the curves of fixed $(r,\th, \ph)$, the tangent vector
@@ -1983,7 +2015,7 @@ $\D\ph/\D t = {\D \ph}/{\D \tau} \times {\D \tau}/{\D t} = {n^\ph}/{n^t} =
 When seen from infinity,
 the ZAMO is thus rotating around the black hole at the angular speed
 \be
-    \omega := \frac{\D\ph}{\D t} = \frac{2 a m r}{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th} .
+    \encadre{ \omega := \frac{\D\ph}{\D t} = \frac{2 a m r}{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th} }.
 \ee
 Note that $\omega = 0$ for $a=0$ (Schwarzschild black hole) and that $\omega$
 decays quite rapidly with $r$:
@@ -1995,26 +2027,37 @@ At first glance, this rotating behaviour might seem contradictory with
 the name \emph{zero-angular momentum observer}. This denomination arises because
 the observer specific ``angular momentum'', losely defined by $L := \w{\eta}\cdot\w{n}$ [cf. Eq.~(\ref{e:ges:conserved_angu_mom})], is identically
 zero, the observer's 4-velocity $\w{n}$ being orthogonal to $\w{\eta} = \wpar_\ph$. By \emph{losely
-defined}, we mean that the above definition of $L$  makes fully sense for a geodesic, as it leads to
+defined}, we mean that the above definition of $L$  fully makes sense for a \emph{geodesic},
+for which it leads to
 a conserved quantity along the worldline (cf. Sec.~\ref{s:ges:fiom}), and we are going to see
-that a ZAMO's worldline is not geodesic. Actually, the
+that a ZAMO's worldline is not a geodesic. However, it shares with $L=0$ geodesics
+the property $\D\ph/\D t= \omega$.
+
+...
+
+Actually, the
 name \emph{locally nonrotating observer}, initially given to a ZAMO (cf. historical note below),
-better conveys the specificity of such an observer: a ZAMO $\Obs$ does not feel some rotation effects.
-For instance, $\Obs$ does not notice any \emph{Sagnac effect}\index{Sagnac effect},
-namely the proper time measured by $\Obs$ for a light signal to perform a full circuit on a circle
-at $r=\mathrm{const}$, $\th=\mathrm{const}$ is the same for a forward (increasing $\ph$) motion
-of the signal as for a backward (decreasing $\ph$) one (see Ref.~\cite{Barde70} for details).
+better conveys the specificity of such an observer: a ZAMO $\Obs$ does not feel an important
+rotation effect, namely the \emph{Sagnac effect}\index{Sagnac effect}:
+the proper time measured by $\Obs$ for a light signal to perform a full circuit on a circle
+at $r=\mathrm{const}$, $\th=\mathrm{const}$ is the same for a forward motion (increasing $\ph$)
+of the signal as for a backward one (decreasing $\ph$)  (see Ref.~\cite{Barde70} for details).
 Another property of the ZAMOs, as a family, is to form a zero-vorticity congruence. This follows from
 the property of being orthogonal to a family of hypersurfaces, namely $(\Sigma_t)_{t\in\R}$.
 
 Even if it is ``locally nonrotating'', a ZAMO is not an inertial observer: it is not in free-fall, since its 4-acceleration $\w{a} := \w{\nabla}_{\w{n}}\, \w{n}$
-is nonzero. Indeed, it can be shown that $\w{a}$ is the orthogonal projection onto $\Sigma_t$ of
+is nonzero. Indeed, for any family of observers orthogonal to a spacelike foliation $(\Sigma_t)_{t\in\R}$,
+it can be shown that $\w{a}$ is the orthogonal projection onto $\Sigma_t$ of
 the gradient of the logarithm of the lapse function (see e.g. Eq.~(4.19) in Ref.~\cite{Gourg12}):
+$\w{a} = \vw{\nabla}\ln N + (\w{\nabla}_{\w{n}} \ln N)\, \w{n}$. In the present case, this expression
+simplifies since $\w{\nabla}_{\w{n}} \ln N = n^\mu \partial_\mu \ln N = 0$, as a result of $\w{n} = n^t \wpar_t + n^\ph \wpar_\ph$. We then get $\w{a} = \vw{\nabla}\ln N$, i.e.
+$a^\alpha = g^{\alpha\mu}\partial_\mu \ln N$, so that
 \be
-    \w{a} = \vw{\nabla}\ln N + (\w{\nabla}_{\w{n}} \ln N) \w{n} .
+    \w{a} = \frac{\Delta}{\rho^2 N} \der{N}{r} \, \wpar_r +
+        \frac{1}{\rho^2 N} \der{N}{\th} \, \wpar_\th.
 \ee
-In view of expression (\ref{e:ker:lapse_ZAMO}) of $N$, we have\footnote{An explicit expression of $\w{a}$
-can be found in Eqs.~(70)-(71) of Ref.~\cite{Semer93} or Eqs. (A.9) and (A.10) of Ref.~\cite{BiniGJ17}.} $\w{a}\neq 0$. In other words, the
+In view of expression (\ref{e:ker:lapse_ZAMO}) for $N$, we conclude that\footnote{An explicit expression of $\w{a}$
+in terms of $(r,\th)$ can be found in Eqs.~(70)-(71) of Ref.~\cite{Semer93} or Eqs. (A.9) and (A.10) of Ref.~\cite{BiniGJ17}.} $\w{a}\neq 0$. In other words, the
 ZAMO's worldline is not a geodesic (cf. Eq.~(\ref{e:geo:geod_eq_v}) in Appendix~\ref{s:geo}) and
 if it does not feel any rotation, a ZAMO feels some acceleration (``weight''), the closer to the black hole, the stronger it is.
 
@@ -2026,7 +2069,7 @@ in 1972 \cite{BardePT72}. The name \emph{ZAMO} has been coined by Kip S. Thorne\
 in 1982 \cite{ThornM82}.
 \end{hist}
 
-\subsection{Carter observers}
+\subsection{Carter observers} \label{s:ker:Carter_obs}
 
 A \defin{Carter observer}\index{Carter!observer}\index{observer!Carter --}
 is an observer $\Obs$ defined in the region $\M_{\rm I}\cup \M_{\rm III}$ of Kerr spacetime, whose
