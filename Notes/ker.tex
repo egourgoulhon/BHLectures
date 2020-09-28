@@ -1957,6 +1957,7 @@ is an observer $\Obs$ of the above type, i.e. whose worldline is normal to the
 hypersurfaces $\Sigma_t$ of constant Boyer-Lindquist time $t$, and whose orthonormal frame\index{ZAMO!frame}\index{frame!ZAMO --}
 $(\w{e}_{(\alpha)})$ is related to the Boyer-Lindquist coordinate frame $(\wpar_\alpha)$ by
 \begin{subequations}
+\label{e:ker:def_ZAMO_frame}
 \begin{align}
   & \w{e}_{(0)} = \w{n} =
   \frac{\sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}}{\rho \sqrt{\Delta}} \,
@@ -1965,7 +1966,7 @@ $(\w{e}_{(\alpha)})$ is related to the Boyer-Lindquist coordinate frame $(\wpar_
   & \w{e}_{(r)} = \frac{\sqrt{\Delta}}{\rho} \, \wpar_r \\
   & \w{e}_{(\th)} = \frac{1}{\rho} \, \wpar_\th \\
   & \w{e}_{(\ph)} =  \frac{\rho}{\sin\th \sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}} \,
-  \wpar_\ph .
+  \wpar_\ph .  \label{e:ker:ZAMO_frame_ph}
 \end{align}
 \end{subequations}
 Expression (\ref{e:ker:ZAMO_frame_0}) for $\w{n}$ has been obtained by
@@ -2014,7 +2015,8 @@ $\D\ph/\D t |_\Li= {\D \ph}/{\D \tau} \times {\D \tau}/{\D t} = {n^\ph}/{n^t} =
 - \beta^\ph$, where we have used (\ref{e:ker:par_t_3p1}) to write ${n^\ph}/{n^t} = - \beta^\phi$.
 We have thus
 \be \label{e:ker:omega_ZAMO}
-    \encadre{ \omega := \left. \frac{\D\ph}{\D t} \right| _\Li  = \frac{2 a m r}{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th} }.
+    \encadre{ \omega := \left. \frac{\D\ph}{\D t} \right| _\Li  =
+    \frac{2 a m r}{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th} }.
 \ee
 Now, we have seen in Sec.~\ref{s:ges:circular_orbits} that $\omega$ defined in this way [cf. Eq.~(\ref{e:ges:def_Omega})] is nothing
 but the angular velocity around the rotation axis as measured by an asymptotically distant static observer.
@@ -2028,7 +2030,41 @@ decays quite rapidly with $r$:
 \ee
 where Eq.~(\ref{e:ker:J_am}) has been used to let appear the black hole angular momentum $J$.
 
-Despite $\omega\neq 0$ for $a\neq 0$, a ZAMO has a vanishing angular momentum about the rotation axis,
+A ZAMO is not an inertial observer: it is not in free-fall, since its 4-acceleration $\w{a} := \w{\nabla}_{\w{n}}\, \w{n}$
+is nonzero. Indeed, for any family of observers orthogonal to a spacelike foliation $(\Sigma_t)_{t\in\R}$,
+it can be shown that $\w{a}$ is the orthogonal projection onto $\Sigma_t$ of
+the gradient of the logarithm of the lapse function (see e.g. Eq.~(4.19) in Ref.~\cite{Gourg12}):
+$\w{a} = \vw{\nabla}\ln N + (\w{\nabla}_{\w{n}} \ln N)\, \w{n}$. In the present case, this expression
+simplifies since $\w{\nabla}_{\w{n}} \ln N = n^\mu \partial_\mu \ln N = 0$, as a result of $\w{n} = n^t \wpar_t + n^\ph \wpar_\ph$. We then get $\w{a} = \vw{\nabla}\ln N$, i.e.
+$a^\alpha = g^{\alpha\mu}\partial_\mu \ln N$, so that
+\[
+    \w{a} = \frac{\Delta}{\rho^2 N} \der{N}{r} \, \wpar_r +
+        \frac{1}{\rho^2 N} \der{N}{\th} \, \wpar_\th.
+\]
+Using expression (\ref{e:ker:lapse_ZAMO}) for $N$, we get\footnote{See the
+notebook~\ref{s:sam:Kerr_ZAMO_frame}; see also
+Eqs.~(70)-(71) of Ref.~\cite{Semer93} or Eqs. (A.9) and (A.10) of Ref.~\cite{BiniGJ17}.}
+\be \label{e:ker:acc_ZAMO}
+  \encadre{  \w{a} =
+  \frac{m[\rho^2(r^4 - a^4) + 2 \Delta (r a \sin\th)^2 ]}{\rho^3\sqrt{\Delta}[\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th]} \, \w{e}_{(r)}
+  - \frac{2 a^2 m r (r^2 + a^2)\sin\th\cos\th}{\rho^3[\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th]} \, \w{e}_{(\th)}  } .
+\ee
+We have thus $\w{a}\neq 0$ as soon as $m\neq 0$. In other words, the
+ZAMO's worldline is not a geodesic (cf. Eq.~(\ref{e:geo:geod_eq_v}) in Appendix~\ref{s:geo}) and
+the ZAMO feels some acceleration, the stronger, the closer to the black hole.
+Far from the black hole, we have $\sqrt{\Delta} \sim |r|$, $\rho\sim |r|$ so that
+$\rho^3\sqrt{\Delta} \sim r^4$ and we get
+\be
+    \w{a} \underset{r\to\pm\infty}{\sim} \frac{m}{r^2}\, \w{e}_{(r)} .
+\ee
+Note that on the $r>0$ side (resp. $r<0$ side), $\w{e}_{(r)} = (\sqrt{\Delta}{r})\wpar_r$ is oriented outward (resp. inward) with respect to the black hole. Hence, in the asymptotic region of $\M_{\rm I}$,
+a ZAMO feels some radial Newtonian gravitational field $\w{g} = -\w{a}$ towards the black hole, while
+in the asymptotic region of $\M_{\rm III}$, a ZAMO feels a gravitational field away from the black hole.
+This is of course in agreement with the negative mass aspect of the Kerr metric in region $\M_{\rm III}$,
+as discussed in Sec.~\ref{s:ker:basic_prop}.
+
+
+Despite $\omega$ as given by Eq.~(\ref{e:ker:omega_ZAMO}) is nonzero for $a\neq 0$, a ZAMO has a vanishing angular momentum about the rotation axis,
 hence the name \emph{zero-angular momentum observer}. Indeed, the observer's specific ``angular momentum'', losely defined by $\ell := \w{\eta}\cdot\w{n}$ [cf. Eq.~(\ref{e:ges:def_eps_ell})], is identically
 zero, the observer's 4-velocity $\w{n}$ being orthogonal to $\w{\eta} = \wpar_\ph$. By \emph{losely
 defined}, we mean that the above definition of $\ell$  fully makes sense for a \emph{geodesic},
@@ -2038,33 +2074,94 @@ that a ZAMO's worldline is not a geodesic. However, a ZAMO shares with a $\ell=0
 crossing his worldline the same value $\omega$ of the angular velocity as seen from infinity,
 as we shall see in Sec.~\ref{s:gek:Lense-Thirring} [cf. Eq.~(\ref{e:gek:dphdt_frame_dragging})].
 
-...
 
-Actually, the
-name \emph{locally nonrotating observer}, initially given to a ZAMO (cf. historical note below),
-better conveys the specificity of such an observer: a ZAMO $\Obs$ does not feel an important
-rotation effect, namely the \emph{Sagnac effect}\index{Sagnac effect}:
-the proper time measured by $\Obs$ for a light signal to perform a full circuit on a circle
+The name \emph{locally nonrotating observer}, initially given to a ZAMO (cf. historical note below),
+conveys other specificities of such a observer $\Obs$:
+\begin{itemize}
+\item
+$\Obs$ does not measure any component
+along $\w{e}_{(\ph)}$ for the 3-momentum $\w{P}$ of any null or timelike geodesic
+that has a zero conserved angular momentum ($L=0$):
+\[
+    P^{(\ph)} = \w{e}_{(\ph)}\cdot\w{P} = \w{e}_{(\ph)}\cdot[\w{p} + (\w{n}\cdot\w{p})\, \w{n})] =
+     \w{e}_{(\ph)}\cdot\w{p} = e_{(\ph)}^\ph \, \w{\eta}\cdot\w{p} =  e_{(\ph)}^\ph \, L = 0 ,
+\]
+where $\w{p}$ stands for the particle's 4-momentum and we have used expression
+(\ref{e:fra:P_obs}) for the 3-momentum, along with $\w{e}_{(\ph)}\cdot\w{n} = 0$,
+formula (\ref{e:ker:ZAMO_frame_ph}) for $\w{e}_{(\ph)}$ and the
+definition $L := \w{\eta}\cdot\w{p}$ of the conserved angular momentum
+[cf. Eq.~(\ref{e:ges:conserved_angu_mom}), as well as Eq.~(\ref{e:gek:def_L}) below].
+\item for $\Obs$, the directions $\w{e}_{(\ph)}$ and $-\w{e}_{(\ph)}$ are equivalent,
+insofar as the proper time measured by $\Obs$ for a light signal to perform a full circuit on a circle
 at $r=\mathrm{const}$, $\th=\mathrm{const}$ is the same for a forward motion (increasing $\ph$)
 of the signal as for a backward one (decreasing $\ph$)  (see Ref.~\cite{Barde70} for details).
-Another property of the ZAMOs, as a family, is to form a zero-vorticity congruence. This follows from
-the property of being orthogonal to a family of hypersurfaces, namely $(\Sigma_t)_{t\in\R}$.
+\end{itemize}
 
-Even if it is ``locally nonrotating'', a ZAMO is not an inertial observer: it is not in free-fall, since its 4-acceleration $\w{a} := \w{\nabla}_{\w{n}}\, \w{n}$
-is nonzero. Indeed, for any family of observers orthogonal to a spacelike foliation $(\Sigma_t)_{t\in\R}$,
-it can be shown that $\w{a}$ is the orthogonal projection onto $\Sigma_t$ of
-the gradient of the logarithm of the lapse function (see e.g. Eq.~(4.19) in Ref.~\cite{Gourg12}):
-$\w{a} = \vw{\nabla}\ln N + (\w{\nabla}_{\w{n}} \ln N)\, \w{n}$. In the present case, this expression
-simplifies since $\w{\nabla}_{\w{n}} \ln N = n^\mu \partial_\mu \ln N = 0$, as a result of $\w{n} = n^t \wpar_t + n^\ph \wpar_\ph$. We then get $\w{a} = \vw{\nabla}\ln N$, i.e.
-$a^\alpha = g^{\alpha\mu}\partial_\mu \ln N$, so that
-\be
-    \w{a} = \frac{\Delta}{\rho^2 N} \der{N}{r} \, \wpar_r +
-        \frac{1}{\rho^2 N} \der{N}{\th} \, \wpar_\th.
+However, a ZAMO is not totally ``non rotating'', for he has a nonzero \emph{4-rotation}
+as soon as $a\neq 0$. Let us recall that
+the \defin{4-rotation vector}\index{4-rotation vector} of an observer $\Obs$
+of 4-velocity $\w{n}$ and 4-acceleration $\w{a}$
+is defined as the spacelike vector $\w{\omega}_{\rm rot}$ orthogonal to $\w{n}$ such that the evolution of $\Obs$'s orthonormal frame
+$(\w{e}_{(\alpha)})$ along $\Obs$'s worldline $\Li$ takes the form
+(see e.g. Sec.~13.6 of Ref.~\cite{MisneTW73} or Sec.~4.5 of Ref.~\cite{Gourg13})
+\be \label{e:gek:evol_frame_ZAMO}
+    \wnab_{\w{n}} \w{e}_{(\alpha)} = \underbrace{(\w{a}\cdot\w{e}_{(\alpha)})\w{n}
+        - (\w{n}\cdot\w{e}_{(\alpha)})\w{a} }_{\w{\Omega}_{\rm FW}(\w{e}_{(\alpha)})}
+       \  +\  \w{\omega}_{\rm rot}\times_{\w{n}} \w{e}_{(\alpha)} ,
 \ee
-In view of expression (\ref{e:ker:lapse_ZAMO}) for $N$, we conclude that\footnote{An explicit expression of $\w{a}$
-in terms of $(r,\th)$ can be found in Eqs.~(70)-(71) of Ref.~\cite{Semer93} or Eqs. (A.9) and (A.10) of Ref.~\cite{BiniGJ17}.} $\w{a}\neq 0$. In other words, the
-ZAMO's worldline is not a geodesic (cf. Eq.~(\ref{e:geo:geod_eq_v}) in Appendix~\ref{s:geo}) and
-if it does not feel any rotation, a ZAMO feels some acceleration (``weight''), the closer to the black hole, the stronger it is.
+where the cross product in the hyperplane orthogonal to $\w{n}$, $\w{\omega}_{\rm rot}\times_{\w{n}} \w{e}_{(\alpha)}$, is the unique vector orthogonal to both $\w{n}$
+and $\w{\omega}_{\rm rot}$ such that
+$(\w{\omega}_{\rm rot}\times_{\w{n}} \w{e}_{(\alpha)})\cdot\w{v} = \weps(\w{n}, \w{\omega}_{\rm rot}, \w{e}_{(\alpha)}, \w{v})$ for any vector $\w{v}$, $\weps$ being the Levi-Civita tensor (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
+The $\w{\Omega}_{\rm FW}$ operator that appears
+in the right-hand side of Eq.~(\ref{e:gek:evol_frame_ZAMO}) is called the \defin{Fermi-Walker operator}\index{Fermi-Walker!operator}. It appears as soon as the observer is accelerating, even if he is nonrotating.
+It corrects the parallel transport of $(\w{e}_{(\alpha)})$ along $\Li$, which would be realized by
+$\wnab_{\w{n}} \w{e}_{(\alpha)} = 0$, to ensure that $(\w{e}_{(\alpha)})$ remains an orthonormal
+frame. A vector field $\w{v}$ that obeys $\wnab_{\w{n}} \w{e} = \w{\Omega}_{\rm FW}(\w{v})$ is said
+to be \defin{Fermi-Walker transported}\index{Fermi-Walker!transport} along $\Li$. Physically, Fermi-Walker transport is realized by a free gyroscope\index{gyroscope}: its spin vector with respect to $\Obs$
+is Fermi-Walker transported along $\Li$. Hence the 4-rotation $\w{\omega}_{\rm rot}$ of an observer, which is an \emph{absolute}
+quantity (like the 4-acceleration $\w{a}$, it does not depend on any other observer), measures the motion of
+his spacelike triad $(\w{e}_{(i)})$ with respect to an orthonormal triad whose vectors are aligned along
+gyroscopes axes. For the ZAMO observer, the 4-rotation turns out to be\footnote{See the notebook~\ref{s:sam:Kerr_ZAMO_frame}; see also
+Eqs.~(73)-(74) of Ref.~\cite{Semer93}.}
+\be
+   \encadre{ \w{\omega}_{\rm rot} = - \frac{2a^3 m r\sqrt{\Delta} \cos\th\sin^2\th}{\rho^3[\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th]}\, \w{e}_{(r)}
+    + \frac{am[\rho^2(a^2 - r^2) - 2 r^2(r^2 + a^2)]\sin\th}{\rho^3[\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th]}\, \w{e}_{(\th)} }.
+\ee
+Hence, as soon as $a\neq 0$, $\w{\omega}_{\rm rot} \neq 0$.
+Far from the black hole, $\rho\sim |r|$ and we get
+\be
+     \w{\omega}_{\rm rot} \underset{r\to\pm\infty}{\sim} - \frac{3 a m \sin\th}{|r|^3} \, \w{e}_{(\th)} .
+\ee
+In particular, in the equatorial plane $(\th=\pi/2)$, $\w{\omega}_{\rm rot} \sim 3 a m/|r|^3 \, \w{e}_z$,
+where $\w{e}_z = - \w{e}_{(\th)}$ is parallel the symmetry axis, with the same direction as
+the black hole spin.
+
+\begin{remark}
+As a family of observers, the ZAMOs form a zero-vorticity congruence.
+The \defin{vorticity 2-form}\index{vorticity!2-form} of any congruence of timelike worldlines of
+4-velocity $\w{u}$ is defined as the ``magnetic'' part $\w{\Omega}$ in the ``electric/magnetic''
+decomposition\footnote{This name stems from the decomposition of the electromagnetic field 2-form $\w{F}$
+with respect to an observer of 4-velocity $\w{u}$ into the electric field $\w{E}$ and the magnetic
+field $\w{B}$, both measured by that observer, according to
+$\w{F} = \uu{u}\wedge\uu{E} + \star (\uu{u}\wedge\uu{B})$, where $\star$ stands
+for the Hodge dual, cf. Eq.~(\ref{e:ker:star_duxi}).}
+of the 2-form $\dd\uu{u}$ with respect to $\w{u}$ (cf. Sec.~\ref{s:bas:ext_deriv}):
+\be \label{e:ker:du_au_Omega}
+    \dd\uu{u} = \w{\uu{a}}\wedge \uu{u} + \w{\Omega} \quad\mbox{with}\quad \w{\Omega}(\w{u}, \cdot) = 0 ,
+\ee
+where $\uu{a}$ is the 1-form associated by metric duality to the 4-acceleration $\w{a} := \wnab_{\w{u}} \w{u}$
+of the worldlines. That $\w{\Omega} = 0$ for the ZAMO congruence follows from
+its orthogonality to a family of hypersurfaces, namely $(\Sigma_t)_{t\in\R}$.
+Indeed, we deduce from (\ref{e:ker:def_n_ZAMO}) that $\dd \uu{n} = - \dd(N \dd t) = - \dd N \wedge \dd t$,
+since $\dd \dd t = 0$ [cf. Eq.~(\ref{e:ext_der_nilpot})]. Using (\ref{e:ker:def_n_ZAMO}) again, we
+get $\dd \uu{n} = \dd \ln N \wedge \uu{n}$. Comparing with (\ref{e:ker:du_au_Omega}) with $\w{u} = \w{n}$, we conclude that
+$\w{\Omega} = 0$ for the ZAMO congruence\footnote{Incidently, we also get $\uu{a} = \dd \ln N + \alpha \, \uu{n}$
+and Eq.~(\ref{e:ker:acc_ZAMO}) shows that $\alpha$ is actually zero.}.
+Physically, this means that if each ZAMO sets up a orthonomal spatial frame $(\w{e'}_i)$ with axes aligned along
+the spin of free gyroscopes, instead of the frame $(\w{e}_{(i)})$ defined by
+(\ref{e:ker:def_ZAMO_frame}), then this frame will not rotate with respect to the frame defined
+similarly by a nearby ZAMO.
+\end{remark}
 
 \begin{hist}
 The concept of ZAMO has been introduced by James M. Bardeen\index{Bardeen, J.M.} in 1970 \cite{Barde70}
