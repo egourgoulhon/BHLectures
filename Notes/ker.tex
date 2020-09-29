@@ -837,7 +837,7 @@ we have, up to some additive constant,
 \lambda=-r .
 \ee
 The geodesics $\Li^{\rm in}_{(v,\th,\tph)}$
-are called the \defin{ingoing principal null geodesics}\index{principal!null geodesic}.
+are called the \defin{ingoing principal null geodesics}\index{principal!null geodesic!ingoing --}\index{ingoing!principal null geodesic}.
 The qualifier \emph{ingoing} stems from the fact that $r$ is decreasing along
 $\Li^{\rm in}_{(v,\th,\tph)}$ (in the future direction), which is an
 immediate consequence of $\lambda=-r$ being a future-directed parameter along $\Li^{\rm in}_{(v,\th,\tph)}$.
@@ -926,7 +926,7 @@ outgoing Eddington-Finkelstein
 coordinates introduced in Sec.~\ref{s:sch:BH} to the case $a\not=0$.
 Thanks to the symmetry $(t,\ph)\mapsto(-t,-\ph)$ of the Kerr metric (\ref{e:ker:metric_BL}), which turns $(u,\tilde{\tph})$ into $(-v,-\tph)$, it is clear that the curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
 defined by $(u,\th,\tilde{\tph})=\mathrm{const}$ constitute a second
-congruence of principal null geodesics, called the \defin{outgoing principal null geodesics}\index{principal!null geodesic}. As $-r$ was a affine parameter along
+congruence of principal null geodesics, called the \defin{outgoing principal null geodesics}\index{principal!null geodesic!outgoing --}\index{outgoing!principal null geodesic}. As $-r$ was a affine parameter along
 the ingoing principal null geodesics, $r$ is an affine parameter along
 the outgoing principal null geodesics,
  except at the locations of $\M$ where $\Delta=0$,
@@ -1739,11 +1739,11 @@ write
 \]
 Let us choose for the timelike normal $\w{n}$ to $\Sp$
 the future-directed unit normal to the hypersurfaces $t=\mathrm{const}$:
-\be
+\be \label{e:ker:un_Ndt}
  \uu{n} = - N \dd t,
 \ee
 where $N$ is a normalization factor ensuring $\w{n}\cdot\w{n}=-1$.
-We do not need the precise value of $N$, but simply the property $N\rightarrow 1$
+We do not need the precise value\footnote{It is given by Eq.~(\ref{e:ker:lapse_ZAMO}) below.} of $N$, but simply the property $N\rightarrow 1$
 as $r\rightarrow+\infty$.
 We have then
 $n_\alpha = (-N,0,0,0)$, so that
@@ -1856,17 +1856,35 @@ one may recast this result to let appear only $m$ and $a$:
 The concept of \emph{observer} has been recalled in Sec.~\ref{s:fra:measure}.
 We discuss here some families of observers well adapted to Kerr spacetime:
 the ZAMOs (Sec.~\ref{s:ker:ZAMO}) and the Carter observers (Sec.~\ref{s:ker:Carter_obs}).
-These two families correspond to \defin{stationary observers}\index{stationary!observer in Kerr spacetime}:
-they evolve at fixed $r$ and $\th$, with a 4-velocity $\w{u}$ that is a
-linear combination of the Killing vectors $\w{\xi}$ and $\w{\eta}$:
-\be
-    \w{u} = u^t(r,\th) \, \w{\xi} + u^\ph(r,\th) \, \w{\eta} .
+These two families correspond to the more general concept of a
+\defin{stationary observer}\index{stationary!observer in Kerr spacetime},
+which is defined as an observer in Kerr spacetime whose 4-velocity $\w{u}$ is a linear
+combination of the Killing vectors $\w{\xi}$ and $\w{\eta}$ with constant coefficients\footnote{In
+the definition (\ref{e:ker:4vel_stationary_obs}), the coefficients $\alpha$ and $\beta$
+are required to be constant along a given observer's worldline. When considering a family of observers,
+they may vary from one worldline to the other.}:
+\be \label{e:ker:4vel_stationary_obs}
+    \w{u} = \alpha \, \w{\xi} + \beta \, \w{\eta} , \qquad \alpha=\mathrm{const}, \beta=\mathrm{const} .
 \ee
-Since $u^t(r,\th)$ and $u^\ph(r,\th)$ are constant along the worldline $\Li$
-of a given observer,
-it follows that the spacetime geometry as perceived by the observer does not evolve
-(in other words, $\Li$ is an orbit of the isometry group $\R\times\mathrm{SO}(2)$ of Kerr spacetime),
-hence the qualifier \emph{stationary} given to such observers.
+It follows that the worldline $\Li$ of a stationary observer is an
+orbit of the isometry group $\R\times\mathrm{SO}(2)$ of Kerr spacetime. In physical terms,
+this means that the spacetime geometry as perceived by the observer does not evolve.
+
+A stationary observer moves necessarily at fixed values of non-ignorable coordinates
+in a coordinate system adapted to the spacetime symmetries, like the Boyer-Lindquist or Kerr
+coordinates. For instance, considering the Boyer-Lindquist coordinates $(t, r, \th, \ph)$,
+we have $\w{\xi} = \wpar_t$ and $\w{\eta} = \wpar_\ph$ and
+we deduce from (\ref{e:ker:4vel_stationary_obs}) and the definition (\ref{e:fra:def_u}) of the
+4-velocity that along the worldline $\Li$:
+\[
+    \frac{\D t}{\D\tau} = \alpha,\quad
+    \frac{\D r}{\D\tau} = 0,\quad
+    \frac{\D \th}{\D\tau} = 0,\quad
+    \frac{\D \ph}{\D\tau} = \beta,
+\]
+where $\tau$ is the observer's proper time. It follows that
+the stationary observer evolves at fixed values of the coordinates $r$ and $\th$.
+
 
 \subsection{Zero-angular-momentum observers (ZAMO)} \label{s:ker:ZAMO}
 
@@ -1928,12 +1946,13 @@ let us conclude that
 $\w{N}$ is future-directed.
 
 Choosing the observer $\Obs$ as having his worldline orthogonal to $\Sigma_t$
-means that $\Obs$'s 4-velocity $\w{n}$ is nothing but $\w{N}$ rescaled to form a unit vector,
-namely
+means that $\Obs$'s 4-velocity $\w{n}$ is the unit timelike vector introduced
+by Eq~(\ref{e:ker:un_Ndt}). Equivalently, $\w{n}$ is $\w{N}$ rescaled to form a unit vector:
 \be \label{e:ker:def_n_ZAMO}
-    \w{n} := N \w{N} = - N \vw{\nabla} t ,
+    \w{n} = N \w{N} = - N \vw{\nabla} t ,
 \ee
-with\footnote{Note that $N$ is not defined as the (pseudo)norm of $\w{N}$, as the notation might suggest, but rather as the inverse of it.} $N := (-\w{N}\cdot\w{N})^{-1/2}$. In view of expression (\ref{e:ker:w_square}), we get
+with\footnote{Note that $N$ is not defined as the (pseudo)norm of $\w{N}$, as the notation might suggest, but rather as the inverse of it.} $N := (-\w{N}\cdot\w{N})^{-1/2}$.
+In view of Eq.~(\ref{e:ker:w_square}), we get
 \be \label{e:ker:lapse_ZAMO}
     N = \sqrt{\Delta} \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right) ^{-1/2} .
 \ee
@@ -1953,7 +1972,7 @@ hence formula (\ref{e:ker:dtau_lapse}).
 \end{proof}
 
 A \defin{zero-angular-momentum observer (ZAMO)}\index{zero-angular-momentum observer}\index{ZAMO}
-is an observer $\Obs$ of the above type, i.e. whose worldline is normal to the
+is an observer $\Obs$ of the above type, i.e. whose worldline $\Li$ is normal to the
 hypersurfaces $\Sigma_t$ of constant Boyer-Lindquist time $t$, and whose orthonormal frame\index{ZAMO!frame}\index{frame!ZAMO --}
 $(\w{e}_{(\alpha)})$ is related to the Boyer-Lindquist coordinate frame $(\wpar_\alpha)$ by
 \begin{subequations}
@@ -1966,9 +1985,11 @@ $(\w{e}_{(\alpha)})$ is related to the Boyer-Lindquist coordinate frame $(\wpar_
   & \w{e}_{(r)} = \frac{\sqrt{\Delta}}{\rho} \, \wpar_r \\
   & \w{e}_{(\th)} = \frac{1}{\rho} \, \wpar_\th \\
   & \w{e}_{(\ph)} =  \frac{\rho}{\sin\th \sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}} \,
-  \wpar_\ph .  \label{e:ker:ZAMO_frame_ph}
+  \wpar_\ph , \label{e:ker:ZAMO_frame_ph}
 \end{align}
 \end{subequations}
+where $\rho := \sqrt{r^2 + a^2 \cos^2\th}$ (the positive square root of $\rho^2$, which is
+defined by Eq.~(\ref{e:ker:def_rho2})).
 Expression (\ref{e:ker:ZAMO_frame_0}) for $\w{n}$ has been obtained by
 combining Eqs.~(\ref{e:ker:def_n_ZAMO}), (\ref{e:ker:lapse_ZAMO}) and (\ref{e:ker:normal_ZAMO}).
 Given the Boyer-Lindquist components (\ref{e:ker:metric_BL}) of $\w{g}$, one readily check
@@ -1979,7 +2000,8 @@ They are thus orthogonal to $\w{n}=\w{e}_{(0)}$, which is a unit timelike vector
 $(\w{e}_{(\alpha)})$ is an orthonormal frame.
 
 The \defin{ZAMO coframe}\index{ZAMO!coframe}\index{coframe!ZAMO --} is the 4-tuple of 1-forms
-$(\w{e}^{(\alpha)})_{0\leq \alpha\leq 3}$ that constitutes, at each point $p\in\Li$, a dual basis of $(\w{e}_{(\alpha(p)})$, namely $(\w{e}^{(\alpha)})$ obeys
+$(\w{e}^{(\alpha)})_{0\leq \alpha\leq 3}$ that constitutes, at each point $p\in\Li$, a dual basis of
+$(\w{e}_{(\alpha)}(p))$, namely $(\w{e}^{(\alpha)})$ obeys
 $\langle \w{e}^{(\alpha)} , \w{e}_{(\beta)} \rangle = \delta^\alpha_{\ \ \beta} $
 (cf. Eq.~(\ref{e:bas:dual_basis}) in Appendix~\ref{s:bas}). Its expression in terms of the
 Boyer-Lindquist coordinate coframe $(\dd x^\alpha)$ is (cf. the notebook~\ref{s:sam:Kerr_ZAMO_frame})
@@ -2010,9 +2032,18 @@ From Eq.~(\ref{e:ker:ZAMO_frame_0}), we get
 \be
     \w{\beta} = - \frac{2 a m r}{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}\, \wpar_\ph .
 \ee
+\begin{remark}
+The terms \emph{lapse} and \emph{shift vector} are those used in the so-called \emph{3+1 formalism
+of general relativity}\index{3+1 formalism}
+(see e.g. Refs.~\cite{Alcub08,BaumgS10,Gourg12,Shiba15}). In this context, the ZAMO is called the
+\defin{Eulerian observer}\index{Eulerian observer},
+which is the generic denomination of the observer whose worldline is normal to
+the hypersurfaces $\Sigma_t$ that constitute the 3+1 foliation of spacetime.
+\end{remark}
+
 Along a given ZAMO worldline $\Li$, the coordinate $\ph$ evolves according to
 $\D\ph/\D t |_\Li= {\D \ph}/{\D \tau} \times {\D \tau}/{\D t} = {n^\ph}/{n^t} =
-- \beta^\ph$, where we have used (\ref{e:ker:par_t_3p1}) to write ${n^\ph}/{n^t} = - \beta^\phi$.
+- \beta^\ph$, where we have used (\ref{e:ker:par_t_3p1}) to get ${n^\ph}/{n^t} = - \beta^\ph$.
 We have thus
 \be \label{e:ker:omega_ZAMO}
     \encadre{ \omega := \left. \frac{\D\ph}{\D t} \right| _\Li  =
@@ -2057,11 +2088,13 @@ $\rho^3\sqrt{\Delta} \sim r^4$ and we get
 \be
     \w{a} \underset{r\to\pm\infty}{\sim} \frac{m}{r^2}\, \w{e}_{(r)} .
 \ee
-Note that on the $r>0$ side (resp. $r<0$ side), $\w{e}_{(r)} = (\sqrt{\Delta}{r})\wpar_r$ is oriented outward (resp. inward) with respect to the black hole. Hence, in the asymptotic region of $\M_{\rm I}$,
-a ZAMO feels some radial Newtonian gravitational field $\w{g} = -\w{a}$ towards the black hole, while
-in the asymptotic region of $\M_{\rm III}$, a ZAMO feels a gravitational field away from the black hole.
-This is of course in agreement with the negative mass aspect of the Kerr metric in region $\M_{\rm III}$,
-as discussed in Sec.~\ref{s:ker:basic_prop}.
+In the asymptotic regions, the non-relativistic gravitational field felt by the observer
+is $\w{g} = - \w{a}$, so that we recover the standard Newtonian expression
+for $r\to +\infty$ ($\M_{\rm I}$ side). In the asymptotic region of $\M_{\rm III}$, i.e.
+for $r\to -\infty$, $\w{e}_{(r)} = (\sqrt{\Delta}/\rho)\, \wpar_r$ is oriented towards
+the black hole, so that $\w{g}$ points outward, i.e. is a repelling field.
+This is of course in agreement with the negative mass aspect of the Kerr metric in region $\M_{\rm III}$
+ discussed in Sec.~\ref{s:ker:basic_prop}.
 
 
 Despite $\omega$ as given by Eq.~(\ref{e:ker:omega_ZAMO}) is nonzero for $a\neq 0$, a ZAMO has a vanishing angular momentum about the rotation axis,
@@ -2121,18 +2154,22 @@ to be \defin{Fermi-Walker transported}\index{Fermi-Walker!transport} along $\Li$
 is Fermi-Walker transported along $\Li$. Hence the 4-rotation $\w{\omega}_{\rm rot}$ of an observer, which is an \emph{absolute}
 quantity (like the 4-acceleration $\w{a}$, it does not depend on any other observer), measures the motion of
 his spacelike triad $(\w{e}_{(i)})$ with respect to an orthonormal triad whose vectors are aligned along
-gyroscopes axes. For the ZAMO observer, the 4-rotation turns out to be\footnote{See the notebook~\ref{s:sam:Kerr_ZAMO_frame}; see also
+gyroscopes axes. For the ZAMO observer, the 4-rotation turns out to be\footnote{See the notebook~\ref{s:sam:Kerr_ZAMO_frame} for the computation; see also
 Eqs.~(73)-(74) of Ref.~\cite{Semer93}.}
 \be
-   \encadre{ \w{\omega}_{\rm rot} = - \frac{2a^3 m r\sqrt{\Delta} \cos\th\sin^2\th}{\rho^3[\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th]}\, \w{e}_{(r)}
-    + \frac{am[\rho^2(a^2 - r^2) - 2 r^2(r^2 + a^2)]\sin\th}{\rho^3[\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th]}\, \w{e}_{(\th)} }.
+   \encadre{ \w{\omega}_{\rm rot} = - \frac{\omega}{\rho^3} \left\{
+   a^2 \sqrt{\Delta} \cos\th\sin^2\th \, \w{e}_{(r)}
+   + \left[  r (r^2 + a^2)  + \frac{\rho^2}{2r}(r^2 - a^2) \right] \sin\th \, \w{e}_{(\th)} \right\} },
 \ee
+where $\omega$ is given by Eq.~(\ref{e:ker:omega_ZAMO}).
 Hence, as soon as $a\neq 0$, $\w{\omega}_{\rm rot} \neq 0$.
 Far from the black hole, $\rho\sim |r|$ and we get
 \be
-     \w{\omega}_{\rm rot} \underset{r\to\pm\infty}{\sim} - \frac{3 a m \sin\th}{|r|^3} \, \w{e}_{(\th)} .
+     \w{\omega}_{\rm rot} \underset{r\to\pm\infty}{\sim}
+     - \frac{3\omega}{2} \frac{r}{|r|} \sin\th \, \w{e}_{(\th)}
+     = - \frac{3 J }{|r|^3} \sin\th \, \w{e}_{(\th)} .
 \ee
-In particular, in the equatorial plane $(\th=\pi/2)$, $\w{\omega}_{\rm rot} \sim 3 a m/|r|^3 \, \w{e}_z$,
+In particular, in the equatorial plane $(\th=\pi/2)$, $\w{\omega}_{\rm rot} \sim 3 J/|r|^3 \, \w{e}_z$,
 where $\w{e}_z = - \w{e}_{(\th)}$ is parallel the symmetry axis, with the same direction as
 the black hole spin.
 
@@ -2174,23 +2211,24 @@ in 1982 \cite{ThornM82}.
 \subsection{Carter observers} \label{s:ker:Carter_obs}
 
 A \defin{Carter observer}\index{Carter!observer}\index{observer!Carter --}
-is an observer $\Obs$ defined in the region $\M_{\rm I}\cup \M_{\rm III}$ of Kerr spacetime, whose
+is a stationary observer $\Obs$ defined in the region $\M_{\rm I}\cup \M_{\rm III}$ of Kerr spacetime, whose
 worldline $\Li$ has the following equation in Boyer-Lindquist coordinates:
 \be \label{e:ker:Carter_obs_worldline}
-    t(\tau) = \frac{r^2 + a^2}{\rho\sqrt{\Delta}}\tau  + \mathrm{const.}, \quad
-    r(\tau) = \mathrm{const.},\quad
-    \th(\tau) = \mathrm{const.},\quad
-    \ph(\tau) = \frac{a}{\rho\sqrt{\Delta}} \tau + \mathrm{const.},
+    t(\tau) = \frac{r^2 + a^2}{\rho\sqrt{\Delta}}\tau  + \mathrm{const}, \quad
+    r(\tau) = \mathrm{const},\quad
+    \th(\tau) = \mathrm{const},\quad
+    \ph(\tau) = \frac{a}{\rho\sqrt{\Delta}} \tau + \mathrm{const},
 \ee
 where $\tau$ is $\Obs$'s proper time,
-and which is equipped with the following orthonormal frame:
+and which is equipped with the following orthonormal frame\index{Carter!frame}:
 \begin{subequations}
 \begin{align}
   & \w{\veps}_{(0)} =
   \frac{r^2 + a^2}{\rho\sqrt{\Delta}} \,
   \wpar_t + \frac{a}{\rho \sqrt{\Delta}}\, \wpar_\ph
     \label{e:ker:Carter_frame_0}\\
-  & \w{\veps}_{(r)} = \frac{\sqrt{\Delta}}{\rho} \, \wpar_r \\
+  & \w{\veps}_{(r)} = \frac{\sqrt{\Delta}}{\rho} \, \wpar_r
+    \label{e:ker:Carter_frame_r} \\
   & \w{\veps}_{(\th)} = \frac{1}{\rho} \, \wpar_\th \\
   & \w{\veps}_{(\ph)} =  \frac{a}{\rho}\sin\th\, \wpar_t +
      \frac{1}{\rho\sin\th} \, \wpar_\ph .
@@ -2208,10 +2246,14 @@ Boyer-Lindquist components
 which, by virtue of Lemma~2 in
 Sec.~\ref{s:fra:time_orientation}, shows that $\w{\veps}_{(0)}$ is future-directed. Moreover,
 we notice from (\ref{e:ker:Carter_obs_worldline}) and (\ref{e:ker:Carter_frame_0})
-that $\veps_{(0)}^\alpha = \D x^\alpha / \D\tau$, which proves that $\Li$ is
+that $\veps_{(0)}^\alpha = \D x^\alpha / \D\tau$, which proves that the worldline $\Li$ is
 timelike and $\veps_{(0)}$ is the 4-velocity of observer $\Obs$.
+Since $r$ and $\th$ are constant along $\Li$,
+we note also that expression~(\ref{e:ker:Carter_frame_0}) for $\veps_{(0)}$ agrees with the
+general form (\ref{e:ker:4vel_stationary_obs}) of a stationary observer's 4-velocity.
 
-The dual (cf. Sec.~\ref{s:bas:linear_form} in Appendix~\ref{s:bas}) of the Carter frame
+The algebraic dual (cf. Sec.~\ref{s:bas:linear_form} in Appendix~\ref{s:bas}) of the Carter frame,
+called the \defin{Carter coframe}\index{Carter!coframe}
 is the basis 1-forms
 \begin{subequations}
 \begin{align}
@@ -2222,6 +2264,18 @@ is the basis 1-forms
 \end{align}
 \end{subequations}
 
+The specificity of the Carter observer is to be linked to the principal null geodesic congruences
+of Kerr spacetime (cf. Sec.~\ref{s:ker:principal_geod}). Indeed, by adding and subtracting
+the first two vectors of the Carter frame, as given by
+Eqs.~(\ref{e:ker:Carter_frame_0}) and (\ref{e:ker:Carter_frame_r}) and comparing
+the result with Eqs.~(\ref{e:ker:k_BL}) and (\ref{e:ker:ell_BL}), we can
+express the tangent vectors $\w{k}$ and $\wl$ of respectively the ingoing and outgoing principal
+null geodesics\index{principal!null geodesic!ingoing --}\index{principal!null geodesic!outgoing --} as
+\be
+    \encadre{ \w{k} = \frac{\rho}{\sqrt{\Delta}} \left( \w{\veps}_{(0)} - \w{\veps}_{(r)} \right) }
+    \qand
+    \encadre{ \wl = \frac{\rho\sqrt{\Delta}}{2(r^2+a^2)} \left( \w{\veps}_{(0)} + \w{\veps}_{(r)} \right) } .
+\ee
 
 
 \begin{hist}
