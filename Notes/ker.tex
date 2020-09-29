@@ -2050,7 +2050,7 @@ We have thus
     \frac{2 a m r}{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th} }.
 \ee
 Now, we have seen in Sec.~\ref{s:ges:circular_orbits} that $\omega$ defined in this way [cf. Eq.~(\ref{e:ges:def_Omega})] is nothing
-but the angular velocity around the rotation axis as measured by an asymptotically distant static observer.
+but the angular velocity around the symmetry axis as measured by an asymptotically distant static observer.
 The demonstration was performed in the Schwarzschild case and for a circular orbit in the equatorial plane, but
 it used only the stationarity of Schwarzschild spacetime and the fact that ${\D\ph}/{\D t}$ was constant
 along $\Li$, so it applies to the present case as well.
@@ -2154,7 +2154,7 @@ to be \defin{Fermi-Walker transported}\index{Fermi-Walker!transport} along $\Li$
 is Fermi-Walker transported along $\Li$. Hence the 4-rotation $\w{\omega}_{\rm rot}$ of an observer, which is an \emph{absolute}
 quantity (like the 4-acceleration $\w{a}$, it does not depend on any other observer), measures the motion of
 his spacelike triad $(\w{e}_{(i)})$ with respect to an orthonormal triad whose vectors are aligned along
-gyroscopes axes. For the ZAMO observer, the 4-rotation turns out to be\footnote{See the notebook~\ref{s:sam:Kerr_ZAMO_frame} for the computation; see also
+gyroscopes axes. For the ZAMO, the 4-rotation turns out to be\footnote{See the notebook~\ref{s:sam:Kerr_ZAMO_frame} for the computation; see also
 Eqs.~(73)-(74) of Ref.~\cite{Semer93}.}
 \be
    \encadre{ \w{\omega}_{\rm rot} = - \frac{\omega}{\rho^3} \left\{
@@ -2234,8 +2234,8 @@ and which is equipped with the following orthonormal frame\index{Carter!frame}:
      \frac{1}{\rho\sin\th} \, \wpar_\ph .
 \end{align}
 \end{subequations}
-We note that the frame $(\w{e}_\alpha)$ is well defined because $\Delta > 0$ in $\M_{\rm I}\cup \M_{\rm III}$.
-It is an easy exercice to check that $(\w{\veps}_\alpha)$ is an orthonormal frame.
+We note that the frame $(\w{\veps}_{(\alpha)})$ is well defined because $\Delta > 0$ in $\M_{\rm I}\cup \M_{\rm III}$.
+It is an easy exercice to check that $(\w{\veps}_{(\alpha)})$ is an orthonormal frame.
 In particular, we have $\w{\veps}_{(0)} \cdot \w{\veps}_{(0)}  = -1$ and, using the
 Boyer-Lindquist components
 (\ref{e:ker:k_form_BL}) of $\uu{k}$:
@@ -2247,15 +2247,18 @@ which, by virtue of Lemma~2 in
 Sec.~\ref{s:fra:time_orientation}, shows that $\w{\veps}_{(0)}$ is future-directed. Moreover,
 we notice from (\ref{e:ker:Carter_obs_worldline}) and (\ref{e:ker:Carter_frame_0})
 that $\veps_{(0)}^\alpha = \D x^\alpha / \D\tau$, which proves that the worldline $\Li$ is
-timelike and $\veps_{(0)}$ is the 4-velocity of observer $\Obs$.
+timelike and $\w{\veps}_{(0)}$ is the 4-velocity of observer $\Obs$.
 Since $r$ and $\th$ are constant along $\Li$,
-we note also that expression~(\ref{e:ker:Carter_frame_0}) for $\veps_{(0)}$ agrees with the
+we note also that expression~(\ref{e:ker:Carter_frame_0}) for $\w{\veps}_{(0)}$ agrees with the
 general form (\ref{e:ker:4vel_stationary_obs}) of a stationary observer's 4-velocity.
 
-The algebraic dual (cf. Sec.~\ref{s:bas:linear_form} in Appendix~\ref{s:bas}) of the Carter frame,
-called the \defin{Carter coframe}\index{Carter!coframe}
-is the basis 1-forms
+The algebraic dual of the Carter frame, called the \defin{Carter coframe}\index{Carter!coframe},
+is the 4-tuple of 1-forms $(\w{\veps}^{(\alpha)})_{0\leq\alpha\leq 3}$
+such that $\langle \w{\veps}^{(\alpha)}, \w{\veps}_{(\beta)} \rangle = \delta^\alpha_{\ \, \beta}$
+(cf. Sec.~\ref{s:bas:linear_form} in Appendix~\ref{s:bas}).
+It is related to the Boyer-Lindquist coordinate coframe $(\dd x^\alpha)$ by
 \begin{subequations}
+\label{e:kerr:Carter_coframe}
 \begin{align}
   & \w{\veps}^{(0)} = \frac{\sqrt{\Delta}}{\rho} \left( \dd t - a \sin^2\th \, \dd \ph \right) \\
   & \w{\veps}^{(r)} = \frac{\rho}{\sqrt{\Delta}} \, \dd r \\
@@ -2264,8 +2267,29 @@ is the basis 1-forms
 \end{align}
 \end{subequations}
 
+\begin{remark}
+By definition of an orthonormal frame, the spacetime metric can be written
+\be
+    \w{g} = - \w{\veps}^{(0)}\otimes\w{\veps}^{(0)}
+        + \w{\veps}^{(r)}\otimes\w{\veps}^{(r)}
+        + \w{\veps}^{(\th)}\otimes\w{\veps}^{(\th)}
+        + \w{\veps}^{(\ph)}\otimes\w{\veps}^{(\ph)} .
+\ee
+Substituting Eqs.~(\ref{e:kerr:Carter_coframe}) for the 1-forms $\w{\veps}^{(\alpha)}$,
+we get the following expression of the metric line element in Boyer-Lindquist coordinates:
+\be
+    g_{\mu\nu}\,  \D x^\mu \D x^\nu  =
+    - \frac{\Delta}{\rho^2} \left( \D t - a \sin^2\th \, \D \ph \right)^2
+    + \frac{\rho^2}{\Delta} \, \D r^2  + \rho^2 \D \th^2
+    + \frac{\sin^2\th}{\rho^2} \left( (r^2 + a^2) \D\ph - a \D t  \right)^2 .
+\ee
+This expression, which is equivalent to (\ref{e:ker:metric_BL}), is often
+found in textbooks (cf. e.g. Eq.~(33.2) in Ref.~\cite{MisneTW73}).
+\end{remark}
+
 The specificity of the Carter observer is to be linked to the principal null geodesic congruences
-of Kerr spacetime (cf. Sec.~\ref{s:ker:principal_geod}). Indeed, by adding and subtracting
+of Kerr spacetime, which have been introduced in Sec.~\ref{s:ker:principal_geod}.
+Indeed, by adding and subtracting
 the first two vectors of the Carter frame, as given by
 Eqs.~(\ref{e:ker:Carter_frame_0}) and (\ref{e:ker:Carter_frame_r}) and comparing
 the result with Eqs.~(\ref{e:ker:k_BL}) and (\ref{e:ker:ell_BL}), we can
@@ -2276,12 +2300,42 @@ null geodesics\index{principal!null geodesic!ingoing --}\index{principal!null ge
     \qand
     \encadre{ \wl = \frac{\rho\sqrt{\Delta}}{2(r^2+a^2)} \left( \w{\veps}_{(0)} + \w{\veps}_{(r)} \right) } .
 \ee
+In other words, the principal null vectors $\w{k}$ and $\wl$ lie in
+$\mathrm{Span}(\w{\veps}_{(0)}, \w{\veps}_{(r)})$. Physically, this means that
+the Carter observer see the principal null geodesics having a pure radial motion
+(no component along $\w{\veps}_{(\th)}$ or $\w{\veps}_{(\ph)}$).
+Since the principal null geodesics are related to the Weyl tensor
+and to the algebraically special character of the Kerr metric (cf. Sec.~\ref{s:ker:principal_geod}),
+this makes the Carter frame well taylored to the computation of the Riemann's curvature tensor
+via Cartan's formula (see Refs.~\cite{Carte73a,ONeil95}).
 
+The angular velocity around the symmetry axis of a Carter observer
+as measured by an asymptotically distant static observer\footnote{cf. the discussion for the ZAMO
+case below Eq.~(\ref{e:ker:omega_ZAMO}).} is
+\be \label{e:ker:omega_Carter}
+    \encadre{ \omega_{\rm C} := \left. \frac{\D\ph}{\D t} \right| _\Li  = \frac{a}{r^2 + a^2} } .
+\ee
+\begin{proof}
+We have $\D\ph/\D t |_\Li= {\D \ph}/{\D \tau} \times {\D \tau}/{\D t}$, with, by the
+definition (\ref{e:fra:def_u}) of a 4-velocity, ${\D \ph}/{\D \tau} = \veps_{(0)}^\ph$
+and ${\D t}/{\D \tau} = \veps_{(0)}^t$. Reading the components $\veps_{(0)}^t$ and
+$\veps_{(0)}^\ph$ on Eq.~(\ref{e:ker:Carter_frame_0}) leads to the result.
+\end{proof}
+
+\begin{remark}
+Expression~(\ref{e:ker:omega_Carter}) is much simpler than that of the angular velocity $\omega$ of a ZAMO, as given
+by Eq.~(\ref{e:ker:omega_ZAMO}). In particular, $\omega_{\rm C}$ does not depend on $\th$,
+contrary to $\omega$.
+\end{remark}
 
 \begin{hist}
 The Carter frame has been introduced by Brandon Carter\index{Carter, B.} in 1968 \cite{Carte68b}, in
 the form of the dual coframe for a quite general class of spacetimes including the Kerr one
-(Eqs.~(81)-(82) in Ref.~\cite{Carte68b}). The explicit form for Kerr spacetime can be found in Carter's famous lecture at Les Houches School (1972) \cite{Carte73a} (Eqs. (5.19)-(5.22) and (5.31)-(5.34)).
+(Eqs.~(81)-(82) in Ref.~\cite{Carte68b}). The explicit form for Kerr spacetime can be found in Carter's lecture at the famous Les Houches School (1972) \cite{Carte73a} (Eqs. (5.19)-(5.22) and (5.31)-(5.34)).
+The Carter frame has been popularized by Roman Znajek\index{Znajek, R.L.} in 1977 \cite{Znaje77} for
+studying electromagnetic processes around a black hole. Carter frame is heavily used in
+Barrett O'Neill's\index{O'Neill, B.} monograph about Kerr black holes \cite{ONeil95}, where it is called the
+\emph{Boyer-Lindquist frame field}.
 \end{hist}
 
 \subsection{Asymptotic inertial observers}
