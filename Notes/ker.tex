@@ -280,7 +280,7 @@ The inverse metric is (see the notebook~\ref{s:sam:Kerr_solution} for the comput
 \ee
 
 
-\subsection{Ergoregions} \label{s:ker:ergoregion}
+\subsection{Ergoregion} \label{s:ker:ergoregion}
 
 Let us investigate the causal character of the stationary Killing vector $\w{\xi}$.
 We have, according to (\ref{e:ker:metric_BL}) and (\ref{e:ker:def_rho2}),
@@ -1853,26 +1853,32 @@ one may recast this result to let appear only $m$ and $a$:
 
 \section{Observers in Kerr spacetime}
 
-The concept of \emph{observer} has been recalled in Sec.~\ref{s:fra:measure}.
+The concept of \emph{observer} in a relativistic spacetime
+has been recalled in Sec.~\ref{s:fra:measure}.
 We discuss here some families of observers well adapted to Kerr spacetime:
 the ZAMOs (Sec.~\ref{s:ker:ZAMO}) and the Carter observers (Sec.~\ref{s:ker:Carter_obs}).
-These two families correspond to the more general concept of a
-\defin{stationary observer}\index{stationary!observer in Kerr spacetime},
-which is defined as an observer in Kerr spacetime whose 4-velocity $\w{u}$ is a linear
+These two families are actually particular cases of a more general concept, that
+of a \emph{stationary observer}, which we introduce first.
+
+\subsection{Stationary observers}
+
+A \defin{stationary observer}\index{stationary!observer in Kerr spacetime}\index{observer!stationary --}
+is an observer $\Obs$ in Kerr spacetime whose 4-velocity $\w{u}$ is a linear
 combination of the Killing vectors $\w{\xi}$ and $\w{\eta}$ with constant coefficients\footnote{In
 the definition (\ref{e:ker:4vel_stationary_obs}), the coefficients $\alpha$ and $\beta$
 are required to be constant along a given observer's worldline. When considering a family of observers,
 they may vary from one worldline to the other.}:
 \be \label{e:ker:4vel_stationary_obs}
-    \w{u} = \alpha \, \w{\xi} + \beta \, \w{\eta} , \qquad \alpha=\mathrm{const}, \beta=\mathrm{const} .
+    \w{u} = \alpha \, \w{\xi} + \beta \, \w{\eta} , \qquad \alpha=\mathrm{const},\ \beta=\mathrm{const} .
 \ee
-It follows that the worldline $\Li$ of a stationary observer is an
+It follows that the worldline $\Li$ of $\Obs$ is an
 orbit of the isometry group $\R\times\mathrm{SO}(2)$ of Kerr spacetime. In physical terms,
-this means that the spacetime geometry as perceived by the observer does not evolve.
+this means that the spacetime geometry as perceived by observer $\Obs$ does not evolve,
+hence the name \emph{stationary observer}.
 
 A stationary observer moves necessarily at fixed values of non-ignorable coordinates
-in a coordinate system adapted to the spacetime symmetries, like the Boyer-Lindquist or Kerr
-coordinates. For instance, considering the Boyer-Lindquist coordinates $(t, r, \th, \ph)$,
+in a coordinate system adapted to the spacetime symmetries, like Boyer-Lindquist coordinates or Kerr
+ones. For instance, considering the Boyer-Lindquist coordinates $(t, r, \th, \ph)$,
 we have $\w{\xi} = \wpar_t$ and $\w{\eta} = \wpar_\ph$ and
 we deduce from (\ref{e:ker:4vel_stationary_obs}) and the definition (\ref{e:fra:def_u}) of the
 4-velocity that along the worldline $\Li$:
@@ -1884,6 +1890,73 @@ we deduce from (\ref{e:ker:4vel_stationary_obs}) and the definition (\ref{e:fra:
 \]
 where $\tau$ is the observer's proper time. It follows that
 the stationary observer evolves at fixed values of the coordinates $r$ and $\th$.
+
+Outside the Carter time machine $\mathscr{T}$ (cf. Sec.~\ref{s:ker:time_machine}), we have
+necessarily $\alpha\neq 0$, because $\w{\eta}$ is spacelike in $\M\setminus\mathscr{T}$
+and the 4-velocity $\w{u}$ is necessarily timelike. Hence,
+by introducing $\omega := \beta/\alpha$, we may rewrite
+(\ref{e:ker:4vel_stationary_obs}) as
+\be \label{e:ker:4vel_stat_obs_omega}
+    \encadre{ \w{u} = \alpha \left( \w{\xi} + \omega \, \w{\eta} \right)}, \qquad \alpha=\mathrm{const},\ \omega=\mathrm{const} .
+\ee
+The coefficient $\omega$ gives the rate of variation of the azimuthal coordinate along the observer's worldline $\Li$
+in any coordinate system adapted to the spacetime symetries, like the Boyer-Lindquist ones
+$(t,r,\th,\ph)$, the Kerr ones $(v,r,\th,\tph)$ or the 3+1 Kerr ones $(\ti, r, \th, \tph)$,
+according to
+\be \label{e:ker:omega_angular_vel}
+    \encadre{ \omega = \left. \frac{\D\ph}{\D t} \right| _\Li  =
+    \left. \frac{\D\tph}{\D v} \right| _\Li = \left. \frac{\D\tph}{\D \ti} \right| _\Li } .
+\ee
+\begin{proof}
+Let us consider Boyer-Lindquist coordinates $(t,r,\th,\ph)$. Denoting by $\tau$
+the proper time of $\Obs$, we have
+$\D\ph/\D t |_\Li= {\D \ph}/{\D \tau} \times {\D \tau}/{\D t}$. Now by the
+definition (\ref{e:fra:def_u}) of the 4-velocity, ${\D \ph}/{\D \tau} = u^\ph$
+and ${\D \tau}/{\D t} = (u^t)^{-1}$. We have thus $\D\ph/\D t |_\Li= u^\ph/u^t$.
+From Eq.~(\ref{e:ker:4vel_stat_obs_omega}) along with
+$\w{\xi} = \wpar_t$ and $\w{\eta} = \wpar_\ph$, we read $u^t = \alpha$
+and $u^\ph = \alpha\omega$. Hene $\D\ph/\D t |_\Li=\omega$.
+The same demonstration applies to Kerr and 3+1 Kerr coordinates because
+$\w{\xi} = \wpar_v = \wpar_{\ti}$ and $\w{\eta} = \wpar_{\tph}$.
+\end{proof}
+\begin{remark}
+That the ratios $\D\ph/\D t$, $\D\tph/\D v$ and $\D\tph/\D \ti$ along $\Li$
+are all equal, as expressed in (\ref{e:ker:omega_angular_vel}), is not
+surprising if one considers the links between the various coordinates
+expressed by Eqs.~(\ref{e:ker:Kerr_coord_v}), (\ref{e:ker:Kerr_coord_tph}) and (\ref{e:ker:Kerr_3p1_BL}).
+Setting $\D r = 0$ in these equations, since $r$ is constant along $\Li$, we get
+\[
+    \D t |_\Li = \D v |_\Li = \D\ti |_\Li \qand
+    \D \ph |_\Li = \D \tph | _\Li .
+\]
+\end{remark}
+
+Equation~(\ref{e:ker:omega_angular_vel}) allows for a nice physical interpretation of
+$\omega$. Indeed, we have seen in Sec.~\ref{s:ges:circular_orbits} [cf. Eq.~(\ref{e:ges:def_Omega})]
+that $\D\ph/\D t |_\Li$ is nothing
+but the angular velocity around the symmetry axis as measured by an asymptotically distant static observer.
+The demonstration was performed in the Schwarzschild case and for a circular orbit in the equatorial plane, but
+it used only the stationarity of Schwarzschild spacetime and the fact that ${\D\ph}/{\D t}$ was constant
+along $\Li$, so it applies to the present case as well.
+
+
+\subsection{Static observers}
+
+A \defin{static observer}\index{static!observer in Kerr spacetime}\index{observer!static--}
+is a stationary observer $\Obs$ having $\omega = 0$.
+The denomination stems from the fact that the three coordinates $(r,\th,\ph)$
+(or $(r,\th,\tph)$)
+remain constant along $\Obs$'s worldline, since $\omega = 0$ in Eq.~(\ref{e:ker:omega_angular_vel})
+implies $\ph = \mathrm{const}$ and $\tph = \mathrm{const}$. Moreover, such an
+observer appears not moving to an asymptotic inertial observer.
+
+According to (\ref{e:ker:4vel_stat_obs_omega}) with $\omega=0$, the 4-velocity of $\Obs$ is collinear to the Killing vector $\w{\xi}$: $\w{u} = \alpha \w{\xi}$. We conclude that a static
+observer can exist only where $\w{\xi}$ is timelike, i.e. outside the ergoregion (cf. Sec.~\ref{s:ker:ergoregion}).
+
+Since static observers are not very usefull for describing physical processes
+in the vicinity of a Kerr black hole (in particular, they cannot exist
+close to the event horizon, which is located in the ergoregion), we shall not
+discuss them further.
 
 
 \subsection{Zero-angular-momentum observers (ZAMO)} \label{s:ker:ZAMO}
@@ -2041,19 +2114,14 @@ which is the generic denomination of the observer whose worldline is normal to
 the hypersurfaces $\Sigma_t$ that constitute the 3+1 foliation of spacetime.
 \end{remark}
 
-Along a given ZAMO worldline $\Li$, the coordinate $\ph$ evolves according to
-$\D\ph/\D t |_\Li= {\D \ph}/{\D \tau} \times {\D \tau}/{\D t} = {n^\ph}/{n^t} =
-- \beta^\ph$, where we have used (\ref{e:ker:par_t_3p1}) to get ${n^\ph}/{n^t} = - \beta^\ph$.
-We have thus
+The ZAMO rotation velocity seen at infinity $\omega$ is obtained
+by comparing Eqs.~(\ref{e:ker:4vel_stat_obs_omega}) and Eq.~(\ref{e:ker:par_t_3p1})
+rewritten as $\w{n} = N^{-1}(\wpar_t - \beta^\ph \, \wpar_\ph)$. We thus get
+immediately $\omega = - \beta^\ph$. Hence
 \be \label{e:ker:omega_ZAMO}
     \encadre{ \omega := \left. \frac{\D\ph}{\D t} \right| _\Li  =
     \frac{2 a m r}{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th} }.
 \ee
-Now, we have seen in Sec.~\ref{s:ges:circular_orbits} that $\omega$ defined in this way [cf. Eq.~(\ref{e:ges:def_Omega})] is nothing
-but the angular velocity around the symmetry axis as measured by an asymptotically distant static observer.
-The demonstration was performed in the Schwarzschild case and for a circular orbit in the equatorial plane, but
-it used only the stationarity of Schwarzschild spacetime and the fact that ${\D\ph}/{\D t}$ was constant
-along $\Li$, so it applies to the present case as well.
 Note that $\omega = 0$ for $a=0$ (Schwarzschild black hole) and that $\omega$
 decays quite rapidly with $r$:
 \be
@@ -2309,18 +2377,13 @@ and to the algebraically special character of the Kerr metric (cf. Sec.~\ref{s:k
 this makes the Carter frame well taylored to the computation of the Riemann's curvature tensor
 via Cartan's formula (see Refs.~\cite{Carte73a,ONeil95}).
 
-The angular velocity around the symmetry axis of a Carter observer
-as measured by an asymptotically distant static observer\footnote{cf. the discussion for the ZAMO
-case below Eq.~(\ref{e:ker:omega_ZAMO}).} is
+By comparing expression (\ref{e:ker:Carter_frame_0}) for a Carter observer's 4-velocity
+$\w{\veps}_{(0)}$ with Eq.~(\ref{e:ker:4vel_stat_obs_omega}), we get immediately the
+angular velocity around the symmetry axis of the Carter observer
+as measured by an asymptotically distant static observer:
 \be \label{e:ker:omega_Carter}
     \encadre{ \omega_{\rm C} := \left. \frac{\D\ph}{\D t} \right| _\Li  = \frac{a}{r^2 + a^2} } .
 \ee
-\begin{proof}
-We have $\D\ph/\D t |_\Li= {\D \ph}/{\D \tau} \times {\D \tau}/{\D t}$, with, by the
-definition (\ref{e:fra:def_u}) of a 4-velocity, ${\D \ph}/{\D \tau} = \veps_{(0)}^\ph$
-and ${\D t}/{\D \tau} = \veps_{(0)}^t$. Reading the components $\veps_{(0)}^t$ and
-$\veps_{(0)}^\ph$ on Eq.~(\ref{e:ker:Carter_frame_0}) leads to the result.
-\end{proof}
 
 \begin{remark}
 Expression~(\ref{e:ker:omega_Carter}) is much simpler than that of the angular velocity $\omega$ of a ZAMO, as given
