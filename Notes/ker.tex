@@ -1934,13 +1934,13 @@ Setting $\D r = 0$ in these equations, since $r$ is constant along $\Li$, we get
 Equation~(\ref{e:ker:omega_angular_vel}) allows for a nice physical interpretation of
 $\omega$. Indeed, we have seen in Sec.~\ref{s:ges:circular_orbits} [cf. Eq.~(\ref{e:ges:def_Omega})]
 that $\D\ph/\D t |_\Li$ is nothing
-but the angular velocity around the symmetry axis as measured by an asymptotically distant static observer.
+but the angular velocity around the symmetry axis as measured by an asymptotically distant inertial observer.
 The demonstration was performed in the Schwarzschild case and for a circular orbit in the equatorial plane, but
 it used only the stationarity of Schwarzschild spacetime and the fact that ${\D\ph}/{\D t}$ was constant
 along $\Li$, so it applies to the present case as well.
 
 
-\subsection{Static observers}
+\subsection{Static observers} \label{s:ker:static_obs}
 
 A \defin{static observer}\index{static!observer in Kerr spacetime}\index{observer!static--}
 is a stationary observer $\Obs$ having $\omega = 0$.
@@ -2124,7 +2124,7 @@ immediately $\omega = - \beta^\ph$. Hence
 \ee
 Note that $\omega = 0$ for $a=0$ (Schwarzschild black hole) and that $\omega$
 decays quite rapidly with $r$:
-\be
+\be \label{e:ker:omega_ZAMO_asymp}
     \omega \underset{r\to\pm\infty}{\sim} \frac{2 a m}{r^3} = \frac{2J}{r^3} ,
 \ee
 where Eq.~(\ref{e:ker:J_am}) has been used to let appear the black hole angular momentum $J$.
@@ -2153,7 +2153,7 @@ ZAMO's worldline is not a geodesic (cf. Eq.~(\ref{e:geo:geod_eq_v}) in Appendix~
 the ZAMO feels some acceleration, the stronger, the closer to the black hole.
 Far from the black hole, we have $\sqrt{\Delta} \sim |r|$, $\rho\sim |r|$ so that
 $\rho^3\sqrt{\Delta} \sim r^4$ and we get
-\be
+\be \label{e:ker:acc_ZAMO_asymp}
     \w{a} \underset{r\to\pm\infty}{\sim} \frac{m}{r^2}\, \w{e}_{(r)} .
 \ee
 In the asymptotic regions, the non-relativistic gravitational field felt by the observer
@@ -2224,7 +2224,7 @@ quantity (like the 4-acceleration $\w{a}$, it does not depend on any other obser
 his spacelike triad $(\w{e}_{(i)})$ with respect to an orthonormal triad whose vectors are aligned along
 gyroscopes axes. For the ZAMO, the 4-rotation turns out to be\footnote{See the notebook~\ref{s:sam:Kerr_ZAMO_frame} for the computation; see also
 Eqs.~(73)-(74) of Ref.~\cite{Semer93}.}
-\be
+\be \label{e:ker:rot_ZAMO}
    \encadre{ \w{\omega}_{\rm rot} = - \frac{\omega}{\rho^3} \left\{
    a^2 \sqrt{\Delta} \cos\th\sin^2\th \, \w{e}_{(r)}
    + \left[  r (r^2 + a^2)  + \frac{\rho^2}{2r}(r^2 - a^2) \right] \sin\th \, \w{e}_{(\th)} \right\} },
@@ -2232,7 +2232,7 @@ Eqs.~(73)-(74) of Ref.~\cite{Semer93}.}
 where $\omega$ is given by Eq.~(\ref{e:ker:omega_ZAMO}).
 Hence, as soon as $a\neq 0$, $\w{\omega}_{\rm rot} \neq 0$.
 Far from the black hole, $\rho\sim |r|$ and we get
-\be
+\be \label{e:ker:rot_ZAMO_asymp}
      \w{\omega}_{\rm rot} \underset{r\to\pm\infty}{\sim}
      - \frac{3\omega}{2} \frac{r}{|r|} \sin\th \, \w{e}_{(\th)}
      = - \frac{3 J }{|r|^3} \sin\th \, \w{e}_{(\th)} .
@@ -2303,7 +2303,8 @@ and which is equipped with the following orthonormal frame\index{Carter!frame}:
 \end{align}
 \end{subequations}
 We note that the frame $(\w{\veps}_{(\alpha)})$ is well defined because $\Delta > 0$ in $\M_{\rm I}\cup \M_{\rm III}$.
-It is an easy exercice to check that $(\w{\veps}_{(\alpha)})$ is an orthonormal frame.
+It is an easy exercice to check that $(\w{\veps}_{(\alpha)})$ is an orthonormal frame
+(see the notebook~\ref{s:sam:Kerr_Carter_frame}).
 In particular, we have $\w{\veps}_{(0)} \cdot \w{\veps}_{(0)}  = -1$ and, using the
 Boyer-Lindquist components
 (\ref{e:ker:k_form_BL}) of $\uu{k}$:
@@ -2324,7 +2325,8 @@ The algebraic dual of the Carter frame, called the \defin{Carter coframe}\index{
 is the 4-tuple of 1-forms $(\w{\veps}^{(\alpha)})_{0\leq\alpha\leq 3}$
 such that $\langle \w{\veps}^{(\alpha)}, \w{\veps}_{(\beta)} \rangle = \delta^\alpha_{\ \, \beta}$
 (cf. Sec.~\ref{s:bas:linear_form} in Appendix~\ref{s:bas}).
-It is related to the Boyer-Lindquist coordinate coframe $(\dd x^\alpha)$ by
+It is related to the Boyer-Lindquist coordinate coframe $(\dd x^\alpha)$ by\footnote{cf. the
+notebook~\ref{s:sam:Kerr_Carter_frame}.}
 \begin{subequations}
 \label{e:kerr:Carter_coframe}
 \begin{align}
@@ -2353,6 +2355,7 @@ we get the following expression of the metric line element in Boyer-Lindquist co
 \ee
 This expression, which is equivalent to (\ref{e:ker:metric_BL}), is often
 found in textbooks (cf. e.g. Eq.~(33.2) in Ref.~\cite{MisneTW73}).
+It is called the \emph{canonical form} by Carter\index{Carter, B.} \cite{Carte73a}.
 \end{remark}
 
 The specificity of the Carter observer is to be linked to the principal null geodesic congruences
@@ -2363,7 +2366,7 @@ Eqs.~(\ref{e:ker:Carter_frame_0}) and (\ref{e:ker:Carter_frame_r}) and comparing
 the result with Eqs.~(\ref{e:ker:k_BL}) and (\ref{e:ker:ell_BL}), we can
 express the tangent vectors $\w{k}$ and $\wl$ of respectively the ingoing and outgoing principal
 null geodesics\index{principal!null geodesic!ingoing --}\index{principal!null geodesic!outgoing --} as
-\be
+\be \label{e:ker:k_l_Carter}
     \encadre{ \w{k} = \frac{\rho}{\sqrt{\Delta}} \left( \w{\veps}_{(0)} - \w{\veps}_{(r)} \right) }
     \qand
     \encadre{ \wl = \frac{\rho\sqrt{\Delta}}{2(r^2+a^2)} \left( \w{\veps}_{(0)} + \w{\veps}_{(r)} \right) } .
@@ -2391,17 +2394,79 @@ by Eq.~(\ref{e:ker:omega_ZAMO}). In particular, $\omega_{\rm C}$ does not depend
 contrary to $\omega$.
 \end{remark}
 
+The 4-acceleration $\w{a}_{\rm C} := \wnab_{\!\w{\veps}_{(0)}} \w{\veps}_{(0)}$ of the Carter observer is\footnote{See the notebook~\ref{s:sam:Kerr_Carter_frame} for the computation; see as well Eqs.~(90)-(91) of Ref.~\cite{Semer93}.}
+\be \label{e:ker:acc_Carter}
+   \encadre{ \w{a}_{\rm C} = \frac{m(r^2 - a^2) + a^2(m - r)\sin^2\th}{\rho^3\sqrt{\Delta}} \, \w{\veps}_{(r)}
+        - \frac{a^2}{\rho^3} \sin\th\cos\th \, \w{\veps}_{(\th)} }.
+\ee
+Far from the black hole, we have $\sqrt{\Delta} \sim |r|$, $\rho\sim |r|$ so that
+$\rho^3\sqrt{\Delta} \sim r^4$ and we get
+\be \label{e:ker:acc_Carter_asymp}
+    \w{a}_{\rm C} \underset{r\to\pm\infty}{\sim} \frac{m}{r^2}\, \w{\veps}_{(r)} ,
+\ee
+i.e. the same Newtonian behaviour as for the ZAMO 4-acceleration [Eq.~(\ref{e:ker:acc_ZAMO_asymp})],
+with the attractive character in $\M_{\rm I}$ and the repelling one in $\M_{\rm III}$.
+
+The 4-rotation vector $\w{\omega}_{\rm rot}^{\rm C}$ of the Carter observer is computed in a way similar to that
+of the ZAMO [Eq.~(\ref{e:ker:rot_ZAMO})], i.e. by subtracting the Fermi-Walker part from $\wnab_{\!\w{\veps}_{(0)}} \w{\veps}_{(i)}$
+for $i\in\{1,2,3\}$ and writing it as $\w{\omega}_{\rm rot}^{\rm C}\times_{\!\w{\veps}_{(0)}} \w{\veps}_{(i)}$. We get\footnote{See the notebook~\ref{s:sam:Kerr_Carter_frame} for the computation; see as well Eq.~(93) of Ref.~\cite{Semer93}.}
+\be \label{e:ker:rot_Carter}
+   \encadre{ \w{\omega}_{\rm rot}^{\rm C} = \frac{a}{\rho^3} \left[
+    \sqrt{\Delta}\cos\th \, \w{\veps}_{(r)}
+    - r\sin\th \, \w{\veps}_{(\th)} \right] } .
+\ee
+Due to $\sqrt{\Delta} \sim |r|$ and $\rho\sim |r|$ when $r\to\pm\infty$,
+the asymptotic behaviour is
+\be \label{e:ker:rot_Carter_asymp}
+   \w{\omega}_{\rm rot}^{\rm C} \underset{r\to\pm\infty}{\sim}
+   \frac{a}{r^2} \left[ \cos\th \, \w{\veps}_{(r)} - (\operatorname{sgn} r) \sin\th \, \w{\veps}_{(\th)} \right] ,
+\ee
+with $\operatorname{sgn} r = +1$ in $\M_{\rm I}$ and $\operatorname{sgn} r = -1$ in the asymptotic region of
+$\M_{\rm III}$. Introducing in both the region $\M_{\rm I}$ and in the asymptotic region of
+$\M_{\rm III}$ a ``Cartesian'' coordinate system $(x,y,z)$ defined $x=|r|\sin\th\cos\ph$,
+$y=|r|\sin\th\sin\ph$ and $z=|r|\cos\th$,
+the above formula turns out to be equivalent to
+\be
+    \w{\omega}_{\rm rot}^{\rm C} \underset{r\to\pm\infty}{\sim}
+   (\operatorname{sgn} r) \frac{a}{r^2} \, \wpar_z .
+\ee
+We have thus $\w{\omega}_{\rm rot}^{\rm C}$ always orthogonal to the equatorial plane in the asymptotic regions.
+\begin{remark}
+This is not the case of the ZAMO's 4-rotation vector $\w{\omega}_{\rm rot}$: Eq.~(\ref{e:ker:rot_ZAMO_asymp})
+shows that $\w{\omega}_{\rm rot}$ is collinear to $\wpar_z$ only at $\th=\pi/2$.
+Note also that $\w{\omega}_{\rm rot}$ decays faster than
+$\w{\omega}_{\rm rot}^{\rm C}$: $|r|^{-3}$ versus $r^{-2}$.
+Besides note that the full expression of $\w{\omega}_{\rm rot}^{\rm C}$, Eq.~(\ref{e:ker:rot_Carter}),
+is much simpler than that of $\w{\omega}_{\rm rot}$, Eq.~(\ref{e:ker:rot_ZAMO}).
+The same remark holds for the 4-acceleration $\w{a}_{\rm C}$ [Eq.~(\ref{e:ker:acc_Carter})] versus
+the ZAMO 4-acceleration $\w{a}$ [Eq.~(\ref{e:ker:acc_ZAMO})]. This reflects the fact that
+the Carter observer is more bound to the spacetime structure, being closely related to
+the principal null geodesics, as shown by Eq.~(\ref{e:ker:k_l_Carter}).
+\end{remark}
+
+
 \begin{hist}
 The Carter frame has been introduced by Brandon Carter\index{Carter, B.} in 1968 \cite{Carte68b}, in
-the form of the dual coframe for a quite general class of spacetimes including the Kerr one
-(Eqs.~(81)-(82) in Ref.~\cite{Carte68b}). The explicit form for Kerr spacetime can be found in Carter's lecture at the famous Les Houches School (1972) \cite{Carte73a} (Eqs. (5.19)-(5.22) and (5.31)-(5.34)).
+the form of its dual, namely the Carter coframe, for a quite general class of spacetimes including the Kerr one
+(Eqs.~(81)-(82) in Ref.~\cite{Carte68b}). The explicit form for Kerr spacetime, i.e. the system
+(\ref{e:kerr:Carter_coframe}), can be found in Carter's lecture at the famous Les Houches School (1972) \cite{Carte73a} (Eqs. (5.19)-(5.24) and (5.31)-(5.34); cf. footnote~41 in the reprinted version \cite{Carte73a}).
 The Carter frame has been popularized by Roman Znajek\index{Znajek, R.L.} in 1977 \cite{Znaje77} for
-studying electromagnetic processes around a black hole. Carter frame is heavily used in
+studying electromagnetic processes around a black hole and has been heavily used in
 Barrett O'Neill's\index{O'Neill, B.} monograph about Kerr black holes \cite{ONeil95}, where it is called the
 \emph{Boyer-Lindquist frame field}.
 \end{hist}
 
 \subsection{Asymptotic inertial observers}
+
+For $r\to\pm\infty$, we see on Eqs.~(\ref{e:ker:acc_ZAMO_asymp}), (\ref{e:ker:rot_ZAMO_asymp}),
+(\ref{e:ker:acc_Carter_asymp}) and (\ref{e:ker:rot_Carter_asymp}) that the 4-acceleration
+and 4-rotation of both the ZAMOs and the Carter observers tend to zero. Hence, these observers
+become inertial observers.
+Actually, at the same value of $(r,\th,\ph)$,
+the ZAMO and Carter observer reduce to the same inertial observer. The latter has $\omega=0$
+(take the limit $r\to\pm\infty$ in Eqs.~(\ref{e:ker:omega_ZAMO_asymp}) and (\ref{e:ker:omega_Carter})).
+It is therefore a static observer (cf. Sec.~\ref{s:ker:static_obs}). We shall call it the
+\defin{asymptotic inertial observer}\index{asymptotic!inertial observer}\index{inertial!observer!asymptotic --}. His 4-velocity is nothing but the Killing vector $\w{\xi}$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2413,7 +2478,6 @@ Conformal diagram of the Kerr spacetime $(\M,\w{g})$, with
 $\M = \R^2\times\SS^2 \setminus \ring$ (cf. Eq.~(\ref{e:ker:def_M_Kerr_spacetime}) in Sec.~\ref{s:ker:Kerr_coord}), spanned by the ingoing principal null geodesics (dashed green lines). The solid green lines are outgoing principal null geodesics, while
 the dotted curves mark some hypersurfaces $r=\mathrm{const}$.}
 \end{figure}
-
 
 \section{Maximal analytic extension} \label{s:ker:max_extension}
 
