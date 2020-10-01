@@ -802,6 +802,8 @@ region defined by (\ref{e:ker:no_slicing}).
 
 \subsection{Principal null geodesics} \label{s:ker:principal_geod}
 
+\subsubsection{Ingoing principal null geodesics}
+
 We have seen that the Kerr coordinates $(v,r,\th,\tph)$ introduced in
 Sec.~\ref{s:ker:Kerr_coord} are such that
 the curves $\Li^{\rm in}_{(v,\th,\tph)}$ defined by $(v,\th,\tph)=\mathrm{const}$ are null curves
@@ -894,9 +896,9 @@ are easily deduced from Eqs.~(\ref{e:ker:k_ti_tr}) and (\ref{e:ker:frame_Kerr3p1
 \ee
 Substituting Eqs.~(\ref{e:ker:Kerr_3p1_BL}) for $\D\ti$ and $\D\tph$ in
 Eq.~(\ref{e:ker:k_form_Kerr}), we get the expression of the associated 1-form
-$\uu{k}$ in terms of the Boyer-Lindquist coordinate coframe:
+$\uu{k}$ with respect to the Boyer-Lindquist coordinate coframe:
 \be \label{e:ker:k_form_BL}
-    \uu{k} = - \dd t - \frac{\rho^2}{\Delta}\, \dd r + a\sin^2\th \dd \ph .
+    \uu{k} = - \dd t - \frac{\rho^2}{\Delta}\, \dd r + a\sin^2\th \, \dd \ph .
 \ee
 \begin{remark}
 Expressions (\ref{e:ker:k_BL}) and (\ref{e:ker:k_form_BL}) are singular
@@ -905,8 +907,10 @@ of course not a pathology of the vector field $\w{k}$ but merely the
 singularity of the Boyer-Lindquist
 coordinates on $\Hor$ and $\Hor_{\rm in}$. The expressions of $\w{k}$ and
 $\uu{k}$ in terms of the 3+1 Kerr coordinates [Eqs.~(\ref{e:ker:k_ti_tr})
-and (\ref{e:ker:k_form_Kerr})] are perfectly regular on all $\M$.
+and (\ref{e:ker:k_form_Kerr})] are perfectly regular in all $\M$.
 \end{remark}
+
+\subsubsection{Outgoing principal null geodesics}
 
 One can construct a second congruence of principal null geodesics from
 the \emph{outgoing} Kerr coordinates instead of the ingoing ones
@@ -1053,11 +1057,27 @@ with
 This confirms that the null curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ are
 geodesics (cf. Sec.~\ref{s:def:geod_gener} and Sec.~\ref{s:geo:gener_param}).
 
-The components of $\wl$ with respect to the Boyer-Lindquist coordinate frame
-are obtained by combining Eqs.~(\ref{e:ker:def_ell_outgoing}) and (\ref{e:ker:frame_Kerr3p1_BL}):
+The 1-form $\uu{\el}$ associated to $\wl$ by
+$\w{g}$-duality is obtained
+from $\el_\alpha = g_{\alpha\mu} \el^\mu$, with $g_{\alpha\mu}$ given by
+Eq.~(\ref{e:ker:metric_Kerr_3p1}):
+\be \label{e:ker:ell_form_Kerr}
+    \encadre{ \uu{\el} = - \frac{\Delta}{2(r^2 + a^2)}\, \dd \ti
+    + \frac{2\rho^2 - \Delta}{2(r^2 + a^2)}\,  \dd r
+    + \frac{a\Delta\sin^2\th}{2(r^2 + a^2)} \, \dd\tph } .
+\ee
+
+The components of $\wl$ and $\uu{\el}$ with respect to the Boyer-Lindquist coordinate frame/coframe
+are obtained by combining Eq.~(\ref{e:ker:def_ell_outgoing}) with Eq.~(\ref{e:ker:frame_Kerr3p1_BL})
+and Eq.~(\ref{e:ker:ell_form_Kerr}) with Eq.~(\ref{e:ker:Kerr_3p1_BL}):
 \be \label{e:ker:ell_BL}
     \wl = \frac{1}{2} \wpar_t + \frac{\Delta}{2(r^2 + a^2)}\, \wpar_r
     + \frac{a}{2(r^2 + a^2)}\, \wpar_\ph .
+\ee
+\be \label{e:ker:ell_form_BL}
+    \uu{\el} = - \frac{\Delta}{2(r^2 + a^2)}\, \dd t
+     + \frac{\rho^2}{2(r^2 + a^2)}\,  \dd r
+     + \frac{a\Delta\sin^2\th}{2(r^2 + a^2)} \, \dd \ph .
 \ee
 
 
@@ -1070,7 +1090,7 @@ The last property implies that the
 parameter $\lambda$ associated to $\wl$ is not affine, while the
 parameter $-r$ associated to $\w{k}$ is (cf. Sec.~\ref{s:geo:gener_param}).
 The non-affine choice is the price to pay to have a parametrization of the outgoing
-family well defined everywhere on $\M$, even where $\Delta=0$. We shall see in
+family well defined everywhere in $\M$, even where $\Delta=0$. We shall see in
 Sec.~\ref{s:ker:max_extension} that in the maximal extension of the Kerr spacetime, there are other regions
 where these features are reversed,
 thereby restoring the symmetry between ingoing and outgoing principal null geodesics
@@ -1088,7 +1108,7 @@ one can easily compute the scalar product of $\w{k}$ and $\wl$:
 In particular, we check that $\w{g}(\w{k},\wl) < 0$ everywhere (note that $\rho^2= 0$
 would correspond to the ring singularity $\ring$, which has been excluded from
 the spacetime manifold). This is in agreement with
-the property stated in Sec.~\ref{s:fra:time_orientation}: the scalar product of
+Lemma~2 of Sec.~\ref{s:fra:time_orientation}: the scalar product of
 two future-directed null vectors that are not collinear is necessarily negative.
 \end{remark}
 
@@ -1134,7 +1154,7 @@ It is then quite natural to consider the vector field
     \w{n} := \rho^2 \vw{\nabla} r
 \ee
 for the normal to the hypersurfaces $r=\mathrm{const}$. According to (\ref{e:ker:nab_r_comp}),
-it has indeed simple components on the 3+1 Kerr frame:
+it has indeed simple components in the 3+1 Kerr frame:
 \be \label{e:ker:normal_r}
     \w{n} = 2 m r \, \wpar_\ti + \Delta \, \wpar_{\tilde r} + a \, \wpar_\tph .
 \ee
@@ -1298,6 +1318,18 @@ view of the event horizon $\Hor$ spanned by the rotating null generators,
 as well as to Figs.~\ref{f:ker:princ_null_geod_a90} and \ref{f:ker:princ_null_geod_a50},
 where it appears clearly that at $r=r_+$ the outgoing principal null geodesics are
 tangent to $\Hor$.
+
+\begin{remark}
+Since $\Delta=0$ on $\Hor$, we read immediately from Eq.~(\ref{e:ker:ell_form_Kerr})
+that
+\[
+    \uu{\el} \equalH \frac{\rho^2}{r^2 + a^2} \, \dd r ,
+\]
+which shows that, at any point of $\Hor$, the vector $\wl$ is normal to
+the hypersurface $r = \mathrm{const}$ through this point. This hypersurface
+being nothing but $\Hor$ itself, we recover the fact that $\el$ is normal
+to $\Hor$.
+\end{remark}
 
 \begin{remark}
 In Sec.~\ref{s:ker:principal_geod}, we have labelled the outgoing principal
@@ -2456,7 +2488,7 @@ Barrett O'Neill's\index{O'Neill, B.} monograph about Kerr black holes \cite{ONei
 \emph{Boyer-Lindquist frame field}.
 \end{hist}
 
-\subsection{Asymptotic inertial observers}
+\subsection{Asymptotic inertial observers} \label{s:ker:asymp_inertial_obs}
 
 For $r\to\pm\infty$, we see on Eqs.~(\ref{e:ker:acc_ZAMO_asymp}), (\ref{e:ker:rot_ZAMO_asymp}),
 (\ref{e:ker:acc_Carter_asymp}) and (\ref{e:ker:rot_Carter_asymp}) that the 4-acceleration
