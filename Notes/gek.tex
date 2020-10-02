@@ -874,7 +874,7 @@ obtained equivalent ones for the Kerr coordinates $v$ and $\tph$ which he was us
 
 \section{General properties of geodesics}
 
-\subsection{Sign of $E$}
+\subsection{Sign of $E$} \label{s:gek:sign_E}
 
 We have:
 \begin{greybox}
@@ -2258,7 +2258,7 @@ as we did for Eq.~(\ref{e:ges:1d_motion_timelike}) to make it match
 the first integral of a 1-dimensional motion in a potential well.
 \end{remark}
 
-\subsection{Existence of circular timelike orbits}
+\subsection{Existence of circular timelike orbits} \label{s:gek:existence_circ_orb}
 
 The simplest equatorial geodesics are of course the circular ones:
 a \defin{circular orbit in the equatorial plane}\index{circular!orbit}\index{orbit!circular --}
@@ -2434,7 +2434,7 @@ orbits of the $(\veps_+,\ell_+)$ family exist in both the light and dark grey re
 while orbits of the $(\veps_-,\ell_-)$ family exist only in the dark grey region.
 The orange line marks
 the location of the outer ergosphere in the equatorial plane, which is
-$r_{\rm ergo} = r_{\E^+}(\pi/2) = 2m$ [cf. Eq.~(\ref{e:ker:ergosphere_radius})],
+$r_{\rm ergo} = r_{\E^+}(\pi/2) = 2m$ [cf. Eq.~(\ref{e:ker:r_ergo_p_eq})],
 the black curve corresponds to the black hole event horizon $\Hor$
 ($r=r_+$) and the maroon one to the inner horizon
 $\Hor_{\rm in}$ ($r=r_-$).
@@ -2612,7 +2612,7 @@ In view of this and the result (\ref{e:gek:range_circ}), we introduce the follow
 \begin{itemize}
 \item orbits of the $(\eps_+,\ell_+)$ family with $r_0 >  r_{\rm min}^+$
 are called \defin{prograde outer circular orbits}\index{prograde!outer circular orbit};
-\item orbits of the $(\eps_+,\ell_+)$ family with $r_0 < r_*$
+\item orbits of the $(\eps_+,\ell_+)$ family with $0 < r_0 < r_*$
 are called \defin{inner circular orbits}\index{inner!circular orbit};
 \item all orbits of the $(\eps_-,\ell_-)$ family
 are called \defin{retrograde outer circular orbits}\index{retrograde!outer circular orbit}.
@@ -2816,7 +2816,7 @@ in agreement with the plot of $\mathcal{V}(r)$ in Fig.~\ref{f:gek:V_stability}.
 \end{example}
 
 \begin{figure}
-\centerline{\includegraphics[width=0.7\textwidth]{gek_circ_orb_isco.pdf}}
+\centerline{\includegraphics[width=0.8\textwidth]{gek_circ_orb_isco.pdf}}
 \caption[]{\label{f:gek:circ_orb_isco} \footnotesize
 Various critical radii for circular orbits as functions of the Kerr spin parameter $a$.
 The red curves correspond to the innermost stable circular orbit $r_{\rm ISCO}^\pm$ [Eq.~(\ref{e:gek:r_ISCO})], the light brown ones to the marginally bound circular orbit
@@ -3023,6 +3023,69 @@ $x = 1 + \sqrt{1 \mp a/m}$. This yields
     \encadre{ r_{\rm mb}^\pm = 2 m \mp a + 2 \sqrt{m(m\mp a)} } .
 \ee
 $r_{\rm mb}^\pm$ is plotted as a function of $a$ in Fig.~\ref{f:gek:circ_orb_isco}.
+
+\subsection{Circular orbits in the ergoregion}
+
+We see in Fig.~\ref{f:gek:circ_orb_isco} that for $a$ sufficiently large,
+prograde outer circular orbits can exist in the outer ergoregion\index{outer!ergoregion}\index{ergoregion!outer --} $\mathscr{G}^+$
+(cf. Sec.~\ref{s:ker:ergoregion}), while no retrograde outer circular orbits
+can exist there.
+In the equatorial plane, the coordinate $r$
+of the external boundary of $\mathscr{G}^+$
+(the outer ergosphere\index{outer!ergosphere}\index{ergosphere!outer --}) is
+simply $r_{\E^+}(\pi/2) = 2 m$ [Eq.~(\ref{e:ker:r_ergo_p_eq})] --- the orange
+horizontal line in Fig.~\ref{f:gek:circ_orb_isco}.
+Thus, prograde outer circular orbits exist in the ergoregion if
+$r_{\rm min}^+ < 2 m$ and they can be stable if $r_{\rm ISCO}^+ < 2 m$.
+The limiting value of $a$ for the first case is obtained by setting
+$r_0 = 2 m$ in the equation governing the existence of prograde circular orbits,
+namely Eq.~(\ref{e:gek:cubic_sqrt_r0}) with the $+$ sign:
+$(2m)^{3/2} - 3 m \sqrt{2m} + 2 a \sqrt{m} > 0$,
+from which we get immediately
+\begin{greybox}
+\be \label{e:gek:orb_in_ergo}
+    \left( {\mbox{timelike circular orbits}\atop
+     \mbox{exist in the outer ergoregion}} \right)
+     \iff a > \frac{m}{\sqrt{2}} \simeq 0.707 m .
+\ee
+\end{greybox}
+Similarly, the limiting value of $a$ for the stability of
+circular orbits in the ergoregion is obtained by setting $r_0 = 2m$ in
+Eq.~(\ref{e:gek:circ_stability_crit}) with the $+$ sign:
+$(2 m)^2 - 12 m^2 + 8 a m\sqrt{2} - 3 a^2 > 0$.
+The right-hand side being a quadratic polynomial in $a$, we get
+easily, given the constraint $a \leq m$,
+\begin{greybox}
+\be \label{e:gek:stable_orb_in_ergo}
+    \left( {\mbox{timelike circular orbits}\atop
+     \mbox{exist stably in the ergoregion}} \right)
+     \iff a > \frac{2\sqrt{2}}{3} m \simeq 0.943 m .
+\ee
+\end{greybox}
+Both in (\ref{e:gek:orb_in_ergo}) and (\ref{e:gek:stable_orb_in_ergo}), the
+orbits referred to belong to the prograde outer family.
+
+\begin{remark}
+Regarding the limit (\ref{e:gek:orb_in_ergo}), the existence is specified to
+be in the \emph{outer} ergoregion, because timelike circular orbits always
+exist, as soon as $a>0$, in the inner ergoregion: they are the (unstable) inner circular
+orbits found in Sec.~\ref{s:gek:existence_circ_orb}. Indeed these orbits exist
+in the range $0 < r_0 < r_*$, which is entirely contained in the
+inner ergoregion: the boundaries of the latter in the equatorial plane are
+$r=0$ [Eq.~(\ref{e:ker:r_ergo_m_eq})] and $r_- > r_*$.
+On the contrary, in the limit (\ref{e:gek:stable_orb_in_ergo}), we have
+dropped the qualifier \emph{outer} for the ergoregion, since there is no other
+place where stable circular orbits can be found, the inner circular orbits
+being all unstable.
+\end{remark}
+
+\begin{remark}
+As discussed in Sec.~\ref{s:gek:sign_E}, negative-energy particles can exist in
+the outer ergoregion. However, Fig.~\ref{f:gek:eps_circ_orb} shows us that none
+of them can have a circular orbit.
+\end{remark}
+
+
 
 \begin{hist}
 The solutions for the circular geodesic motion in the equatorial plane
