@@ -1883,7 +1883,7 @@ one may recast this result to let appear only $m$ and $a$:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Observers in Kerr spacetime}
+\section{Observers in Kerr spacetime} \label{s:ker:observers}
 
 The concept of \emph{observer} in a relativistic spacetime
 has been recalled in Sec.~\ref{s:fra:measure}.
@@ -1892,7 +1892,7 @@ the ZAMOs (Sec.~\ref{s:ker:ZAMO}) and the Carter observers (Sec.~\ref{s:ker:Cart
 These two families are actually particular cases of a more general concept, that
 of a \emph{stationary observer}, which we introduce first.
 
-\subsection{Stationary observers}
+\subsection{Stationary observers} \label{s:ker:station_obs}
 
 A \defin{stationary observer}\index{stationary!observer in Kerr spacetime}\index{observer!stationary --}
 is an observer $\Obs$ in Kerr spacetime whose 4-velocity $\w{u}$ is a linear
@@ -2111,11 +2111,12 @@ $\langle \w{e}^{(\alpha)} , \w{e}_{(\beta)} \rangle = \delta^\alpha_{\ \ \beta} 
 (cf. Eq.~(\ref{e:bas:dual_basis}) in Appendix~\ref{s:bas}). Its expression in terms of the
 Boyer-Lindquist coordinate coframe $(\dd x^\alpha)$ is (cf. the notebook~\ref{s:sam:Kerr_ZAMO_frame})
 \begin{subequations}
+\label{e:ker:def_ZAMO_coframe}
 \begin{align}
   & \w{e}^{(0)} =
   \frac{\rho\sqrt{\Delta}}{\sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}}\, \dd t \\
   & \w{e}^{(r)} = \frac{\rho}{\sqrt{\Delta}} \, \dd r \\
-  & \w{e}^{(\th)} = \rho\, \dd \th \\
+  & \w{e}^{(\th)} = \rho\, \dd \th  \\
   & \w{e}^{(\ph)} = - \frac{2 a m r \sin\th}{\rho\sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th}} \, \dd t
   + \frac{\sin\th}{\rho} \sqrt{\rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th} \, \dd\ph .
 \end{align}
@@ -2128,10 +2129,10 @@ filling $\M_{\rm ZAMO}$.
 The coordinates $(r,\th,\ph)$ span each hypersurface $\Sigma_t$.
 Contrary to the ZAMO's worldlines, the curves of fixed $(r,\th, \ph)$, the tangent vector
 of which is $\wpar_t = \w{\xi}$, are not orthogonal to $\Sigma_t$, except for $a=0$. The orthogonal
-decomposition of $\wpar_t$ into a part along the normal $\w{n}$ and a part tangent to $\Sigma_t$
+decomposition of $\w{\xi}$ into a part along the normal $\w{n}$ and a part tangent to $\Sigma_t$
 defines the \defin{shift vector}\index{shift vector} $\w{\beta}$:
-\be \label{e:ker:par_t_3p1}
-    \encadre{ \wpar_t = N \, \w{n} + \w{\beta} }, \qquad \w{n}\cdot\w{\beta} = 0 .
+\be \label{e:ker:xi_3p1_ZAMO}
+    \encadre{ \w{\xi} = N \, \w{n} + \w{\beta} }, \qquad \w{n}\cdot\w{\beta} = 0 .
 \ee
 From Eq.~(\ref{e:ker:ZAMO_frame_0}), we get
 \be
@@ -2146,9 +2147,9 @@ which is the generic denomination of the observer whose worldline is normal to
 the hypersurfaces $\Sigma_t$ that constitute the 3+1 foliation of spacetime.
 \end{remark}
 
-The ZAMO rotation velocity seen at infinity $\omega$ is obtained
-by comparing Eqs.~(\ref{e:ker:4vel_stat_obs_omega}) and Eq.~(\ref{e:ker:par_t_3p1})
-rewritten as $\w{n} = N^{-1}(\wpar_t - \beta^\ph \, \wpar_\ph)$. We thus get
+The ZAMO rotation velocity seen from infinity $\omega$ is obtained
+by comparing Eqs.~(\ref{e:ker:4vel_stat_obs_omega}) and Eq.~(\ref{e:ker:xi_3p1_ZAMO})
+rewritten as $\w{n} = N^{-1}(\w{\xi} - \beta^\ph \, \w{\eta})$. We thus get
 immediately $\omega = - \beta^\ph$. Hence
 \be \label{e:ker:omega_ZAMO}
     \encadre{ \omega := \left. \frac{\D\ph}{\D t} \right| _\Li  =
