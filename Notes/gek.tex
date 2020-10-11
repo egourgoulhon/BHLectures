@@ -951,7 +951,61 @@ Given expression (\ref{e:gek:def_R_Q}) for $R(r)$ and
 $\Delta := r^2 - 2m r + a^2$ [Eq.~(\ref{e:ker:def_Delta})],
 we note that this constraint involves $(\mu,E,L,Q)$ and $r$, but not $\th$.
 
-Another constraint is obtained by considering, instead of $\w{k}$, the
+Another global future-directed null vector field on the Kerr spacetime $(\M,\w{g})$ is the null tangent
+$\wl$ to the outgoing principal null geodesics, introduced in Sec.~\ref{s:ker:principal_geod} [Eq.~(\ref{e:ker:def_ell_outgoing})]. If we apply Lemma~2 of Sec.~\ref{s:fra:time_orientation} with $\wl$ instead
+of $\w{k}$, we get, using the Boyer-Lindquist components (\ref{e:ker:ell_BL}) of $\wl$,
+\begin{greybox}
+\be \label{e:gek:future_directed_l}
+{\Li \ \mbox{timelike or}\atop
+\wl \ \mbox{not tangent to} \ \Li} \implies
+\encadre{ (r^2 + a^2) E - a L - \eps_r \sqrt{R(r)} > 0 } .
+\ee
+\end{greybox}
+
+In $\M_{\rm I}\cup\M_{\rm III}$, $\Delta > 0$ and we can combine (\ref{e:gek:future_directed}) and
+(\ref{e:gek:future_directed_l}) to $(r^2 + a^2) E - a L > |\eps_r \sqrt{R(r)}| = \sqrt{R(r)}$, thereby
+getting a constraint that is independent from $\eps_r$:
+\begin{greybox}
+\be \label{e:gek:future_directed_k_l}
+\Li \ \mbox{not principal null geod.} \implies
+\encadre{ (r^2 + a^2) E - a L > \sqrt{R(r)}  } \quad\mbox{in}\quad \M_{\rm I}\cup\M_{\rm III}.
+\ee
+\end{greybox}
+
+A related constraint in $\M_{\rm I}\cup\M_{\rm III}$ is obtained
+from the vector $\w{\veps}_{(0)}$
+of the Carter frame\index{Carter!frame} introduced in Sec.~\ref{s:ker:Carter_obs}.
+As shown there, $\w{\veps}_{(0)}$ is a linear combination of $\w{k}$ and $\wl$
+[cf. Eq.~(\ref{e:ker:k_l_Carter})] and
+is a future-directed timelike vector in all
+$\M_{\rm I} \cup \M_{\rm III}$.
+We can then apply Lemma~1 of Sec.~\ref{s:fra:time_orientation}, using
+expression~(\ref{e:ker:Carter_frame_0}) of $\w{\veps}_{(0)}$ in terms of
+$\w{\xi}=\wpar_t$ and $\w{\eta}=\wpar_\ph$:
+\[
+   \w{p} \ \mbox{future-directed in} \ \M_{\rm I} \cup \M_{\rm III} \iff \w{g}(\w{\veps}_{(0)},\w{p}) < 0
+   \iff (r^2 + a^2) \underbrace{\w{g}(\w{\xi}, \w{p})}_{-E} + a \underbrace{\w{g}(\w{\eta}, \w{p})}_{L} < 0 .
+\]
+Hence the constraint
+\begin{greybox}
+\be \label{e:gek:future_directed_Carter}
+    \encadre{ (r^2 + a^2) E - a L > 0 } \ \ \mbox{in}\ \M_{\rm I} \cup \M_{\rm III} .
+\ee
+\end{greybox}
+Not that if $\Li$ is not a principal null geodesic, (\ref{e:gek:future_directed_Carter}) is
+a mere consequence of
+(\ref{e:gek:future_directed_k_l}), given that $\sqrt{R(r)}\geq 0$.
+
+An immediate corollary of (\ref{e:gek:future_directed_Carter}) is:
+\begin{greybox}
+In the outer ergoregion\index{outer!ergoregion}\index{ergoregion!outer --}
+$\mathscr{G}^+ = \mathscr{G}\cap \M_{\rm I}$, a geodesic that has $E < 0$
+must have $L<0$ as well.
+\end{greybox}
+
+
+
+Another constraint is obtained by considering the
 vector field $\w{N}$ normal to the hypersurfaces of constant
 Boyer-Lindquist coordinate $t$, which has been introduced in Sec.~\ref{s:ker:ZAMO}:
 $\w{N} = - \overrightarrow{\dd t}$ [Eq.~(\ref{e:ker:N_grad_t})].
@@ -972,9 +1026,16 @@ in $\M_{\rm ZAMO}$:
 \end{greybox}
 Let us recall that $\mathscr{T}$ is the Carter time machine\index{Carter!time machine}\index{time!machine (Carter)} (cf. Sec.~\ref{s:ker:time_machine}),
 which occupies a very limited portion of $\M_{\rm III}$.
-Using $p^t = \D t/\D\lambda$, Eq.~(\ref{e:gek:dtdl}) and the fact that $\Delta > 0$
-in $\M_{\rm I} \cup \M_{\rm III}$, we get the equivalent
-constraint
+Since $p^t = \D t/\D\lambda$ and $\lambda$ increases towards the future (cf. Sec.~\ref{s:gek:geod_motion_intro}),
+(\ref{e:gek:p_t_positive}) implies
+\begin{greybox}
+In the region $\M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T})$ of Kerr spacetime, the
+Boyer-Lindquist coordinate $t$ increases towards the future along any
+geodesic $\Li$.
+\end{greybox}
+
+Using  Eq.~(\ref{e:gek:dtdl}) with $\D t/\D\lambda=p^t$ and the fact that $\Delta > 0$
+in $\M_{\rm I} \cup \M_{\rm III}$, we can rewrite (\ref{e:gek:p_t_positive}) as
 \[
     (r^2 + a^2) [(r^2 + a^2) E - a L]  + a \Delta ( L - a E \sin^2\th ) > 0
       \ \mbox{in}\ \M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T}) ,
@@ -994,48 +1055,12 @@ $E<0$ is allowed, but the result
 (\ref{e:gek:p_t_positive}) shows that $p^t < 0$ is not allowed.
 \end{remark}
 
-Yet another future-directed constraint stems from the vector $\w{\veps}_{(0)}$
-of the Carter frame\index{Carter!frame} introduced in Sec.~\ref{s:ker:Carter_obs}.
-As shown there, $\w{\veps}_{(0)}$ is a future-directed timelike vector in all
-$\M_{\rm I} \cup \M_{\rm III}$.
-We can then apply Lemma~1 of Sec.~\ref{s:fra:time_orientation}, using
-expression~(\ref{e:ker:Carter_frame_0}) of $\w{\veps}_{(0)}$ in terms of
-$\w{\xi}=\wpar_t$ and $\w{\eta}=\wpar_\ph$:
-\[
-   \w{p} \ \mbox{future-directed in} \ \M_{\rm I} \cup \M_{\rm III} \iff \w{g}(\w{\veps}_{(0)},\w{p}) < 0
-   \iff (r^2 + a^2) \underbrace{\w{g}(\w{\xi}, \w{p})}_{-E} + a \underbrace{\w{g}(\w{\eta}, \w{p})}_{L} < 0 .
-\]
-Hence the constraint
-\begin{greybox}
-\be
-    \encadre{ (r^2 + a^2) E - a L > 0 } \ \ \mbox{in}\ \M_{\rm I} \cup \M_{\rm III} .
-\ee
-\end{greybox}
-
-An immediate corollary of the above result is:
-\begin{greybox}
-In the outer ergoregion\index{outer!ergoregion}\index{ergoregion!outer --}
-$\mathscr{G}^+ = \mathscr{G}\cap \M_{\rm I}$, a geodesic that has $E < 0$
-must have $L<0$ as well.
-\end{greybox}
 
 \begin{hist}
 That $E < 0$ in the outer ergoregion implies $L<0$ has been shown for
 equatorial geodesics by George Contopoulos\index{Contopoulos, G.} in 1984 \cite{Conto84}.
 \end{hist}
 
-\begin{figure}
-\centerline{\includegraphics[width=0.7\textwidth]{gek_frame_dragging.pdf}}
-\caption[]{\label{f:gek:frame_dragging} \footnotesize
-Trajectory in the equatorial plane of an incoming timelike geodesic with
-$E = \mu$, $L=0$ and $Q=0$, plunging into a Kerr black hole with $a = 0.998 \, m$.
-The figure is drawn in terms
-of the Cartesian Boyer-Lindquist coordinates $(x,y)$ defined by
-Eq.~(\ref{e:gek:Cartesian_BL}) with $\th=\pi/2$ (equatorial plane)
-and the grey disk marks the black hole region.
-\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_geod_plots}]}
-}
-\end{figure}
 
 
 \subsection{Lense-Thirring effect} \label{s:gek:Lense-Thirring}
@@ -1058,6 +1083,19 @@ Hence, for $a\neq 0$, a geodesic with zero angular momentum about the
 symmetry axis has nevertheless a rotational motion around that axis.
 This is a manifestation of the \defin{Lense-Thirring effect}\index{Lense-Thirring effect},
 also called \defin{dragging of inertial frames}\index{dragging!of inertial frames}, or, in short, \defin{frame dragging}\index{frame!dragging}\index{dragging!frame --}.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gek_frame_dragging.pdf}}
+\caption[]{\label{f:gek:frame_dragging} \footnotesize
+Trajectory in the equatorial plane of an incoming timelike geodesic with
+$E = \mu$, $L=0$ and $Q=0$, plunging into a Kerr black hole with $a = 0.998 \, m$.
+The figure is drawn in terms
+of the Cartesian Boyer-Lindquist coordinates $(x,y)$ defined by
+Eq.~(\ref{e:gek:Cartesian_BL}) with $\th=\pi/2$ (equatorial plane)
+and the grey disk marks the black hole region.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_geod_plots}]}
+}
+\end{figure}
 
 The Lense-Thirring effect is illustrated in Fig.~\ref{f:gek:frame_dragging}
 which shows the trajectory a timelike particle with $L=0$
@@ -2210,12 +2248,13 @@ Let us focus on timelike geodesics confined to the equatorial plane:
 $\th=\pi/2$. They thus have $\D\th/\D\tau' = 0$ and Eq.~(\ref{e:gek:th_eff_pot_timelike})
 leads to $\tilde{\Theta}(\th) = 0$. Given expression~(\ref{e:gek:Theta_timelike}) for $\tilde{\Theta}(\th)$, this
 implies
-\be
-    q = 0 .
+\be \label{e:gek_equat_q_zero}
+    \encadre{ q = 0 }.
 \ee
 \begin{remark}
 The above result follows as well from the analysis of the $\th$-motion performed
-in Sec.~\ref{s:gek:th_motion} and according to which the only possibility
+in Sec.~\ref{s:gek:th_motion} and according to which the only possible value of
+the Cartan constant $Q$
 for a motion confined to the equatorial plane is $Q=0$, be the geodesic timelike or null.
 The converse is not true: there exist (timelike or null) geodesics with $Q=0$ outside the equatorial
 plane; they are asymptotically approaching the equatorial from one side, except for
@@ -2308,7 +2347,8 @@ system takes the form
 \begin{subnumcases}{\label{e:gek:syst_r0_eps_ell}}
 (1 - \veps^2) r_0^3  - 2 m r_0^2 + \left[ \ell^2 + a^2 (1-\veps^2) \right] r_0
     - 2m (\ell - a\veps)^2 = 0  \\
-2 m r_0^2 - 2 \left[ \ell^2 + a^2 (1-\veps^2) \right] r_0 + 6 m (\ell - a\veps)^2 = 0 .
+m r_0^2 - \left[ \ell^2 + a^2 (1-\veps^2) \right] r_0 + 3 m (\ell - a\veps)^2 = 0
+        \label{e:gek:syst_r0_eps_ell_2}.
 \end{subnumcases}
 This is a system of 2 nonlinear equations for 3 unknowns: $r_0$, $\veps$ and $\ell$.
 We thus expect a 1-parameter family of solutions. It is convenient to choose
@@ -2356,7 +2396,7 @@ have $|E| > \mu$ [cf. Eq.~(\ref{e:ker:neg_r_large_E})], i.e. would be unbound.
 The case $r_0=0$ is excluded as well, since in the equatorial plane, it would
 correspond to the curvature singularity. In what follows, we therefore assume
 \be \label{e:gek:circ_r0_positive}
-    r_0 > 0 .
+    \encadre{ r_0 > 0 }.
 \ee
 We have then $\sqrt{\mathit{\Delta}} = 4 a r_0 \sqrt{m r_0} |r_0^2 - 2m r_0 + a^2|$
 and the solutions of the quadratic equation are\footnote{For future convenience, we have
@@ -2618,6 +2658,32 @@ are called \defin{inner circular orbits}\index{inner!circular orbit};
 are called \defin{retrograde outer circular orbits}\index{retrograde!outer circular orbit}.
 \end{itemize}
 
+We note from Figs.~\ref{f:gek:eps_circ_orb} and \ref{f:gek:ell_circ_orb},
+or from formulas (\ref{e:gek:veps_circ}) and (\ref{e:gek:ell_circ}),
+that both $\veps$ and $\ell$ are diverging at the boundaries of the various domains
+of existence of circular orbits. We shall comment further on this behaviour at the end of
+Sec.~\ref{s:gek:circ_velocities}.
+
+Figure~\ref{f:gek:ell_eps_circ_orb} shows $\veps$ in terms of $\ell$
+for the three families of circular orbits, with the indication of
+the stability of the various
+branches, as determined in the next section.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gek_ell_eps_circ_orb.pdf}}
+\caption[]{\label{f:gek:ell_eps_circ_orb} \footnotesize
+Circular timelike orbits in the $(\ell,\veps)$ plane, $\ell$ being the
+specific conserved angular momentum and $\veps$ the specific conserved
+energy. Solid (resp. dotted) curves correspond to stable (unstable) orbits.
+Retrograde outer circular orbits are on the left side, inner circular orbits
+in the middle and prograde outer circular orbits on the right side.
+The cusps in the left and right curves correspond to ISCOs.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_circular_orbits}]}
+}
+\end{figure}
+
+
+
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{gek_V_stability.pdf}}
 \caption[]{\label{f:gek:V_stability} \footnotesize
@@ -2630,14 +2696,42 @@ one has both $\mathcal{V}(r_0) = 0$ and $\mathcal{V}'(r_0) = 0$.
 }
 \end{figure}
 
-We note from Figs.~\ref{f:gek:eps_circ_orb} and \ref{f:gek:ell_circ_orb},
-or from formulas (\ref{e:gek:veps_circ}) and (\ref{e:gek:ell_circ}),
-that both $\veps$ and $\ell$ are diverging at the boundaries of the various domains
-of existence of circular orbits. We shall comment furhter on this behaviour at the end of
-Sec.~\ref{s:gek:circ_velocities}.
+
 
 \subsection{Stability of circular timelike orbits}
 
+\subsubsection{Latitudinal stability}
+
+A natural question regarding the stability of equatorial circular orbits
+is whether these orbits are stably confined into the equatorial plane
+$\th=\pi/2$. The answer is very simple:
+\begin{greybox}
+All circular timelike orbits are stable with respect to any perturbation
+away from the equatorial plane.
+\end{greybox}
+\begin{proof}
+All equatorial orbits have a vanishing Carter constant $Q$
+[cf. Eq.~(\ref{e:gek_equat_q_zero})] and we
+have seen in Sec.~\ref{s:gek:th_motion} that a $Q=0$ geodesic stays stably at
+$\th=\pi/2$ iff $a^2(E^2 - \mu^2) \leq L^2$, i.e. iff
+\be \label{e:gek:lat_stab_equat}
+    a^2(\veps^2 - 1) \leq \ell^2
+\ee
+for a timelike geodesic.
+Now, for a circular orbit of radius $r_0$,
+Eq.~(\ref{e:gek:syst_r0_eps_ell_2}) implies
+\[
+   \ell^2 - a^2 (\veps^2 - 1) = m r_0 + 3 m (\ell - a \veps)^2 / r_0 > 0 ,
+\]
+where the inequality follows from
+$r_0 > 0$ [Eq.~(\ref{e:gek:circ_r0_positive})].
+Hence the stability condition (\ref{e:gek:lat_stab_equat}) is always fulfilled.
+\end{proof}
+
+
+\subsubsection{Radial stability}
+
+Let us now investigate the stability with respect to a radial perturbation.
 A circular orbit at $r=r_0$ obeys both $\mathcal{V}(r_0) = 0$ and $\mathcal{V}'(r_0) = 0$
 [Eqs.~(\ref{e:gek:circ_V_zero}) and (\ref{e:gek:circ_derV_zero})]. The latter property means that
 it corresponds to a local extremum of the function $\mathcal{V}$. This extremum can be either
@@ -2799,7 +2893,7 @@ Indeed, $r_{\rm ISCO}^\pm $ being the unique zero of $r_0^2 - 6 m r_0 \pm 8 a \s
 (\ref{e:gek:circ_stability_crit}) is equivalent to
 \begin{greybox}
 \be
-\mbox{The circular orbit of radius $r_0$ is stable} \quad \iff \quad r_0 > r_{\rm ISCO}^\pm .
+\mbox{A circular orbit of radius $r_0$ is radially stable} \quad \iff \quad r_0 > r_{\rm ISCO}^\pm .
 \ee
 \end{greybox}
 Note that $r_{\rm ISCO}^\pm  / m$ is a function of $\bar{a} := a/m$ only; this
@@ -2895,10 +2989,15 @@ especially their bottom panels, enables us to conclude that the extremum is
 a minimum for $\veps_\pm(r_0)$ and $\ell_+(r_0)$ and a maximum for $\ell_-(r_0)$.
 \end{proof}
 
+Because it is an extremum of both $\veps(r_0)$ and $\ell(r_0)$,
+the ISCO is located at the cusp in the
+$(\ell,\veps)$ curves shown in Fig.~\ref{f:gek:ell_eps_circ_orb}.
+
 \subsubsection{Summary}
 
 \begin{greybox}
 Equatorial circular timelike orbits exist only in the region $r>0$ of Kerr spacetime.
+They are all stable with respect to perturbations away from the equatorial plane.
 They are of three kinds:
 \begin{enumerate}
 \item The \emph{prograde outer circular orbits}: they are located outside
@@ -2906,8 +3005,8 @@ the black hole event horizon (i.e. in region $\M_{\rm I}$), having a Boyer-Lindq
 from  $r_{\rm min}^+ = 4 m \cos^2[\arccos(-a/m)/3]$
 [Eq.~(\ref{e:gek:def_r_min_pm})] to $+\infty$;
 the minimal radius
-$r_{\rm min}^+$ decreases monotically from $3m$ ($a=0$) to $m$ ($a=m$).
-These orbits are unstable for
+$r_{\rm min}^+$ decreases with $a$ monotically from $3m$ ($a=0$) to $m$ ($a=m$).
+These orbits are radially unstable for
 $r_{\rm min}^+ < r_0 \leq r_{\rm ISCO}^+$ and stable for $r_0 > r_{\rm ISCO}^+$,
 where $r_{\rm ISCO}^+$ is given by Eq.~(\ref{e:gek:r_ISCO}),
 decreasing monotically from $6m$ ($a=0$) to $m$ ($a=m$).
@@ -2921,8 +3020,8 @@ The functions $\veps_+(r_0)$ and $\ell_+(r_0)$ are minimal at the ISCO.
 the black hole event horizon (i.e. in region $\M_{\rm I}$), having a Boyer-Lindquist radius $r_0$ ranging
 from $r_{\rm min}^- = 4 m \cos^2[\arccos(a/m)/3]$
 [Eq.~(\ref{e:gek:def_r_min_pm})] to $+\infty$; the minimal radius
-$r_{\rm min}^-$ increases monotically from $3m$ ($a=0$) to $4m$ ($a=m$).
-These orbits are unstable for
+$r_{\rm min}^-$ increases with $a$ monotically from $3m$ ($a=0$) to $4m$ ($a=m$).
+These orbits are radially unstable for
 $r_{\rm min}^- < r_0 \leq r_{\rm ISCO}^-$ and stable for $r_0 > r_{\rm ISCO}^-$,
 where $r_{\rm ISCO}^-$ is given by Eq.~(\ref{e:gek:r_ISCO}),
 increasing monotically from $6m$ ($a=0$) to $9m$ ($a=m$).
@@ -2938,8 +3037,8 @@ having a Boyer-Lindquist radius $r_0$ ranging
 from $0$ (the ring singularity) to
 $r_* = 4 m \cos^2[\arccos(-a/m)/3 + 4\pi/3]$
 [Eq.~(\ref{e:gek:def_r_star})];
-the maximal radius $r_*$ increases monotically from $0$ ($a=0$) to $m$ ($a=m$).
-These orbits are all unstable. Their specific conserved energy and angular momentum
+the maximal radius $r_*$ increases with $a$ monotically from $0$ ($a=0$) to $m$ ($a=m$).
+These orbits are all radially unstable. Their specific conserved energy and angular momentum
 are $\veps = \veps_+(r_0)$ and $\ell = \ell_+(r_0)$, with
 $\veps_+(r_0)$ given by Eq.~(\ref{e:gek:veps_circ}) and $\ell_+(r_0)$ by
 Eq.~(\ref{e:gek:ell_circ}), both being plotted as the solid
