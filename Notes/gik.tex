@@ -21,18 +21,85 @@ We thus treat first the particular case $E=0$.
 \subsection{Null geodesics with $E=0$}
 
 
-First, we note that a geodesic with $E=0$ cannot exist outside the ergoregion
+First, we note that a geodesic $\Li$ with $E=0$ cannot exist outside the ergoregion
 $\mathscr{G}$, by virtue of the result (\ref{e:gek:E_positive}). In particular,
 it cannot exist far from the black hole.
 
-Another property of null geodesics with $E=0$ is a non-negative Carter constant:
-\be
-    Q \geq 0 .
+Another property of null geodesics with $E=0$ is to have a non-negative Carter constant:
+\be \label{e:gik:Q_nonneg_E_zero}
+   \encadre{ Q \geq 0 }_{E=0} .
 \ee
 This follows immediately from the result of Sec.~\ref{s:gek:th_motion}
 stating that a necessary condition for $Q < 0$ is $a\neq 0$ and
-$|E| > \sqrt{\mu^2 + L^2/a^2}$. Specilizing the latter condition to $\mu=0$
+$|E| > \sqrt{\mu^2 + L^2/a^2}$. Specializing this last inequality to $\mu=0$
 and $E=0$, we get $0 > |L|$, which is impossible.
+
+Besides, if $\Li$ has some part in $\M_{\rm I}$ (in the outer ergoregion thus)
+or in $\M_{\rm III}$ (in the inner ergoregion thus),
+the constraint (\ref{e:gek:future_directed_Carter})
+reduces to $L<0$:
+\be
+    \Li \cap (\M_{\rm I} \cup \M_{\rm III}) \neq  \varnothing \quad \Longrightarrow \quad L < 0 .
+\ee
+
+The equations of geodesic motion expressed in terms of the Mino parameter $\lambda'$
+[system (\ref{e:gek:eom_Mino})] simplify considerably for a geodesic $\Li$ with $\mu=0$ and $E=0$:
+\begin{subequations}
+\begin{align}
+&  \derd{t}{\lambda'} = - \frac{2 a m L r}{\Delta} \\
+&  \derd{r}{\lambda'} = \eps_r \sqrt{ R(r) }  \label{e:gik:eom_r_E_zero}\\
+&  \derd{\th}{\lambda'} = \eps_\th \sqrt{\Theta(\th)}  \\
+&  \derd{\ph}{\lambda'}  = \frac{L}{\Delta\sin^2\th} \left( \rho^2 - 2 m r \right) ,
+\end{align}
+\end{subequations}
+with [cf. Eqs.~(\ref{e:gek:R_r_powers}) and (\ref{e:gek:Theta_Q})]:
+\be \label{e:gik:R_E_zero}
+    R(r) = - (Q+L^2) r^2 + 2m (Q+L^2) r - a^2 Q
+\ee
+\be \label{e:gik:Theta_E_zero}
+    \Theta(\th) = Q - \frac{L^2}{\tan^2\th} .
+\ee
+We shall distinguish the subcase $Q=0$ from $Q\neq 0$.
+
+\subsubsection{Case $Q=0$}
+
+If the zero-energy null geodesic $\Li$ has a vanishing Carter constant $Q$, Eq.~(\ref{e:gik:Theta_E_zero}) reduces to $\Theta(\th) = -L^2 / \tan^2\th$,
+so that the constraint $\Theta(\th) \geq 0$ [Eq.~(\ref{e:gek:Theta_non_neg})]
+implies $L=0$ or $\th = \pi/2$ .
+
+In the first case, the four constants of motion $\mu$, $E$, $L$ and $Q$ are
+zero. By virtue of the result (\ref{e:gek:all_const_zero}), $\Li$
+is nothing but a null geodesic generator of the event horizon $\Hor$ or of the
+inner horizon $\Hor_{\rm in}$.
+
+In the second case ($\th=\pi/2$), $\Li$ is confined to the equatorial plane.
+If $L=0$, we are back to the first case: $\Li$ is null geodesic generator of $\Hor$ or
+$\Hor_{\rm in}$ lying in the equatorial plane.
+If $L\neq 0$, the radial motion of $\Li$ is governed by Eq.~(\ref{e:gik:eom_r_E_zero}) with the
+expression (\ref{e:gik:R_E_zero}) of $R(r)$ reduced to
+\be
+    R(r) = L^2 r (2m - r) .
+\ee
+The constraint $R(r) \geq 0$ [Eq.~(\ref{e:gek:R_non_neg})] implies then
+that the motion is within the range $0 \leq r \leq 2 m$, with $r=2m$
+(the outer edge of the ergoregion in the equatorial plane [Eq.~(\ref{e:ker:r_ergo_p_eq})])
+being a $r$-turning point, since it is a simple root of $R(r)$ (cf. Sec.~\ref{s:gek:turning_points}).
+The other boundary of the radial motion, $r=0$, is the ring singularity.
+
+We conclude that
+\begin{greybox}
+Any null geodesic with $E=0$ and $Q=0$
+is either a null generator of one of the two Killing horizons
+$\Hor$ or $\Hor_{\rm in}$ (in which case, it has $L=0$) or it has
+$L \neq 0$, lies in the equatorial plane and terminates at the ring singularity,
+after possibly a turning point at the outer ergosphere.
+\end{greybox}
+
+\subsubsection{Case $Q\neq 0$}
+
+This case actually corresponds to $Q > 0$, since $Q<0$ is forbidden by
+(\ref{e:gik:Q_nonneg_E_zero}).
+
 
 \subsubsection{$\theta$-motion}
 
