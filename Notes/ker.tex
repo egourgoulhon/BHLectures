@@ -362,21 +362,29 @@ and $\mathscr{G}^+$ (resp. $\mathscr{G}^-$) the
 The part of $\M_{\rm BL}$ where $\w{\xi}$ is spacelike, i.e.
 $\mathscr{G} = \mathscr{G}^+ \cup \M_{\rm II} \cup \mathscr{G}^-$,
 is called the \defin{ergoregion}\index{ergoregion!of Kerr spacetime}.
-It is depicted in Figs.~\ref{f:ker:ergo_a90}-\ref{f:ker:ergo_a99}.
+Following the standard notation in topology, we shall denote
+by $\overline{\mathscr{G}}$ the closure of $\mathscr{G}$, i.e. the
+union of the ergoregion and the two ergospheres:
+\be
+    \overline{\mathscr{G}} := \mathscr{G} \cup \E^- \cup \E^+ .
+\ee
+The locus where the Killing vector $\w{\xi}$ is timelike is then
+$\M_{\rm BL}\setminus \overline{\mathscr{G}}$.
+
+The ergoregion is depicted in Figs.~\ref{f:ker:ergo_a90}--\ref{f:ker:ergo_a99}.
 It is worth noticing that
 the location of the inner and outer ergospheres in the equatorial
 plane ($\th=\pi/2$) do not depend on the spin parameter $a$:
 $r_{\E^-}(\pi/2) = 0$ [Eq.~(\ref{e:ker:r_ergo_m_eq})] and
 $r_{\E^+}(\pi/2) = 2m$ [Eq.~(\ref{e:ker:r_ergo_p_eq})], a feature
-that appears clearly in Figs.~\ref{f:ker:ergo_a90}-\ref{f:ker:ergo_a99},
+that appears clearly in Figs.~\ref{f:ker:ergo_a90}--\ref{f:ker:ergo_a99},
 given that $\mathrm{e}^2 \simeq 7.39$.
 
-\begin{remark}
+\begin{remark} \label{r:ker:static_limit}
 Sometimes the word \defin{ergosurface}\index{ergosurface} is used instead of
 \emph{ergosphere}. One may encounter as well the name \defin{static limit}\index{static!limit}
-for \emph{ergosphere}, especially in old texts.
+for \emph{ergosphere}, especially in old texts (cf. Sec.~\ref{s:ker:static_obs} below).
 \end{remark}
-
 
 We shall see in Sec.~\ref{s:ker:Penrose_proc} that the outer ergoregion
 plays a key role in an energy extraction mechanism known as the
@@ -537,8 +545,8 @@ and
 \be \label{e:ker:def_H_in}
     \Hor_{\rm in} := \left\{ p \in \R^2\times\SS^2,\quad r(p) = r_- \right\} .
 \ee
-The hypersurface $\Hor$ is actually the interface between the regions $\M_{\rm I}$
-and $\M_{\rm II}$, while $\Hor_{\rm in}$ is the interface between $\M_{\rm II}$
+The hypersurface $\Hor$ is actually the boundary between the regions $\M_{\rm I}$
+and $\M_{\rm II}$, while $\Hor_{\rm in}$ is the boundary between $\M_{\rm II}$
 and $\M_{\rm III}$ (cf. Eq.~(\ref{e:ker:M_I_III_r}) and Fig.~\ref{f:ker:ergo_a90}).
 We thus consider
 \be \label{e:ker:def_M_Kerr_spacetime}
@@ -1482,7 +1490,7 @@ $\mathscr{P}''$, so that the mention of the point $A$ can be omitted in
 Eq.~(\ref{e:ker:DE_Penrose}).
 \end{remark}
 
-\begin{remark}
+\begin{remark} \label{r:ker:negative_energy}
 If the Penrose process does occur, i.e. if
 $\Delta E > 0$, the particle $\mathscr{P}''$ is called a
 \defin{negative-energy particle}\index{negative-energy particle}\index{particle!negative-energy --}. This
@@ -1894,7 +1902,7 @@ of a \emph{stationary observer}, which we introduce first.
 
 \subsection{Stationary observers} \label{s:ker:station_obs}
 
-A \defin{stationary observer}\index{stationary!observer in Kerr spacetime}\index{observer!stationary --}
+A \defin{stationary observer}\index{stationary!observer!in Kerr spacetime}\index{observer!stationary --}
 is an observer $\Obs$ in Kerr spacetime whose 4-velocity $\w{u}$ is a linear
 combination of the Killing vectors $\w{\xi}$ and $\w{\eta}$ with constant coefficients\footnote{In
 the definition (\ref{e:ker:4vel_stationary_obs}), the coefficients $\alpha$ and $\beta$
@@ -1908,7 +1916,7 @@ orbit of the isometry group $\R\times\mathrm{SO}(2)$ of Kerr spacetime. In physi
 this means that the spacetime geometry as perceived by observer $\Obs$ does not evolve,
 hence the name \emph{stationary observer}.
 
-A stationary observer moves necessarily at fixed values of non-ignorable coordinates
+A stationary observer moves necessarily at fixed values of the non-ignorable coordinates
 in a coordinate system adapted to the spacetime symmetries, like Boyer-Lindquist coordinates or Kerr
 ones. For instance, considering the Boyer-Lindquist coordinates $(t, r, \th, \ph)$,
 we have $\w{\xi} = \wpar_t$ and $\w{\eta} = \wpar_\ph$ and
@@ -1974,7 +1982,7 @@ along $\Li$, so it applies to the present case as well.
 
 \subsection{Static observers} \label{s:ker:static_obs}
 
-A \defin{static observer}\index{static!observer in Kerr spacetime}\index{observer!static--}
+A \defin{static observer}\index{static!observer!in Kerr spacetime}\index{observer!static --}
 is a stationary observer $\Obs$ having $\omega = 0$.
 The denomination stems from the fact that the three coordinates $(r,\th,\ph)$
 (or $(r,\th,\tph)$)
@@ -1983,7 +1991,8 @@ implies $\ph = \mathrm{const}$ and $\tph = \mathrm{const}$. Moreover, such an
 observer appears not moving to an asymptotic inertial observer.
 
 According to (\ref{e:ker:4vel_stat_obs_omega}) with $\omega=0$, the 4-velocity of $\Obs$ is collinear to the Killing vector $\w{\xi}$: $\w{u} = \alpha \w{\xi}$. We conclude that a static
-observer can exist only where $\w{\xi}$ is timelike, i.e. outside the ergoregion (cf. Sec.~\ref{s:ker:ergoregion}).
+observer can exist only where $\w{\xi}$ is timelike, i.e. outside the ergoregion (cf. Sec.~\ref{s:ker:ergoregion}). This explains why the outer boundary of the ergoregion
+(the ergosphere) is sometimes called the \emph{static limit}}\index{static!limit} (cf. Remark~\ref{r:ker:static_limit} on p.~\pageref{r:ker:static_limit}).
 
 Since static observers are not very usefull for describing physical processes
 in the vicinity of a Kerr black hole (in particular, they cannot exist

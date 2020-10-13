@@ -12,7 +12,9 @@ geodesics.
 
 \section{Main properties of null geodesics} \label{s:gik:properties}
 
-We shall distinguish the null geodesics with $E=0$ from those having
+We shall distinguish the null geodesics with $E=0$ (the so-called \emph{zero-energy} geodesics,
+cf. Sec.~\ref{s:gek:sign_E})
+ from those having
 $E \neq 0$. Indeed, in the latter case, we will rescale the angular momentum
 $L$ and the Carter constant $Q$ by $E$, so that only two constants of motion become
 pertinent for the study: $L/E$ and $Q/E^2$.
@@ -34,8 +36,8 @@ stating that a necessary condition for $Q < 0$ is $a\neq 0$ and
 $|E| > \sqrt{\mu^2 + L^2/a^2}$. Specializing this last inequality to $\mu=0$
 and $E=0$, we get $0 > |L|$, which is impossible.
 
-Besides, if $\Li$ has some part in $\M_{\rm I}$ (in the outer ergoregion thus)
-or in $\M_{\rm III}$ (in the inner ergoregion thus),
+Besides, if $\Li$ has some part in $\M_{\rm I}$ (necessarily in the outer ergoregion)
+or in $\M_{\rm III}$ (necessarily in the inner ergoregion),
 the constraint (\ref{e:gek:future_directed_Carter})
 reduces to $L<0$:
 \be
@@ -46,10 +48,11 @@ The equations of geodesic motion expressed in terms of the Mino parameter $\lamb
 [system (\ref{e:gek:eom_Mino})] simplify considerably for a geodesic $\Li$ with $\mu=0$ and $E=0$:
 \begin{subequations}
 \begin{align}
-&  \derd{t}{\lambda'} = - \frac{2 a m L r}{\Delta} \\
+&  \derd{t}{\lambda'} = - \frac{2 a m L r}{\Delta} \label{e:gik:eom_t_E_zero} \\
 &  \derd{r}{\lambda'} = \eps_r \sqrt{ R(r) }  \label{e:gik:eom_r_E_zero}\\
 &  \derd{\th}{\lambda'} = \eps_\th \sqrt{\Theta(\th)}  \\
-&  \derd{\ph}{\lambda'}  = \frac{L}{\Delta\sin^2\th} \left( \rho^2 - 2 m r \right) ,
+&  \derd{\ph}{\lambda'}  = \frac{L}{\Delta\sin^2\th} \left( r^2 - 2 m r + a^2\cos^2\th \right) ,
+                                \label{e:gik:eom_ph_E_zero}
 \end{align}
 \end{subequations}
 with [cf. Eqs.~(\ref{e:gek:R_r_powers}) and (\ref{e:gek:Theta_Q})]:
@@ -59,7 +62,24 @@ with [cf. Eqs.~(\ref{e:gek:R_r_powers}) and (\ref{e:gek:Theta_Q})]:
 \be \label{e:gik:Theta_E_zero}
     \Theta(\th) = Q - \frac{L^2}{\tan^2\th} .
 \ee
-We shall distinguish the subcase $Q=0$ from $Q\neq 0$.
+By combining (\ref{e:gik:eom_t_E_zero}) and (\ref{e:gik:eom_ph_E_zero}), we get
+\be
+    \encadre{ \left. \derd{\ph}{t} \right| _{\Li} = \frac{2mr - r^2 - a^2\cos^2\th}{2 a m r\sin^2\th} }_{E=0} .
+\ee
+It is remarkable that this expression does not depend on $L$ or $Q$; it is therefore the
+same for all zero-energy null geodesics. Moreover, we note that the numerator
+of the right-hand side is always positive or zero in the closure $\overline{\mathscr{G}}$ of the ergoregion,
+which is precisely defined by $2mr - r^2 - a^2\cos^2\th \geq 0$ (cf. Sec.~\ref{s:ker:ergoregion})
+and where $\Li$ is necessarily confined. Since moreover $r > 0$ in $\overline{\mathscr{G}}$,
+we conclude that
+\be
+    \left. \derd{\ph}{t} \right| _{\Li} \geq 0 .
+\ee
+
+
+
+
+To proceed, we shall distinguish the subcase $Q=0$ from $Q\neq 0$.
 
 \subsubsection{Case $Q=0$}
 
@@ -98,24 +118,89 @@ after possibly a turning point at the outer ergosphere.
 \subsubsection{Case $Q\neq 0$}
 
 This case actually corresponds to $Q > 0$, since $Q<0$ is forbidden by
-(\ref{e:gik:Q_nonneg_E_zero}).
+(\ref{e:gik:Q_nonneg_E_zero}). We set
+\be
+    {\bar{L}}^2 := \frac{L^2}{Q}
+\ee
+and rewrite expression (\ref{e:gik:R_E_zero}) for $R(r)$ as
+\be
+    R(r)/Q  = - (1 + \bar{L}^2) r^2 + 2m (1 + \bar{L}^2) r - a^2 .
+\ee
+Since $1 + \bar{L}^2 \neq 0$, this is a second-order polynomial in $r$,
+whose two roots are
+\be
+    r_{\rm min} = m - \sqrt{m^2 - \frac{a^2}{1 + \bar{L}^2}}
+    \qand
+    r_{\rm max} = m + \sqrt{m^2 - \frac{a^2}{1 + \bar{L}^2}} .
+\ee
+Since $m^2 \geq a^2$, the two roots are real. They are distinct
+except for $a=m$ and $L=0$.
+The range of radial motion being determined by $R(r)\geq 0$
+[Eq.~(\ref{e:gek:R_non_neg})], we get
+\be
+    r_{\rm min} \leq r \leq r_{\rm max} ,
+\ee
+with a turning point at $r_{\rm min}$ and at $r_{\rm max}$.
+Given that $r_- = m - \sqrt{m^2 - a^2}$ and $r_+ = m + \sqrt{m^2 - a^2}$
+[Eq.~(\ref{e:ker:def_r_pm})], we note that
+\be
+     0 \leq r_{\rm min} \leq r_- \leq m \leq r_+ \leq r_{\rm max} \leq 2 m ,
+\ee
+with $r_{\rm min} = 0$ for $a = 0$ or $\bar{L}^2 \to +\infty$,
+$r_{\rm min} = r_-$ for $L=0$, $r_{\rm max} = 2m$ for $a=0$
+or $\bar{L}^2 \to +\infty$ and $r_{\rm max} = r_+$ for $L=0$.
+If $L\neq 0$, the limit $\bar{L}^2 \to +\infty$ corresponds to $Q\to 0$
+and we recover the range $[0, 2m]$ determined above in the case $Q=0$.
+
+Let us consider a zero-energy null geodesic $\Li$ emitted outward (i.e.
+with $\epsilon_r = +1$) from a point $A$ in the outer ergoregion $\mathscr{G}^+$.
+The coordinate $r$ increases along $\Li$ from $r_A$ to $r_{\rm max}$, which
+corresponds to a $r$-turning point. Then $r$ decreases to $r_+$, which means
+that $\Li$
+crosses the black hole event horizon $\Hor$ and enters the region $\M_{\rm II}$.
+In all $\M_{\rm II}$, $r$ decreases and reaches $r_-$. There $\Li$
+crosses the inner horizon $\Hor_{\rm in}$ and enters the region $\M_{\rm III}$,
+where $r$ continues to decrease until it reaches $r_{\rm min}$. The latter
+corresponding to a $r$-turning point, $r$ starts to increase and reaches
+$r_-$ again. There one might think that $\Li$ crosses the inner horizon
+$\Hor_{\rm in}$ and enters into $\M_{\rm II}$. But this is impossible since
+$\Hor_{\rm in}$ is a 1-way membrane: it can be crossed by a causal curve
+from $\M_{\rm II}$ to $\M_{\rm III}$ but not in the reverse way. Moreover, $r$
+could not continue to increase into $\M_{\rm II}$ since $r$ must be decreasing
+towards the future into this region (this follows from the hypersurfaces
+$r=\mathrm{const}$ being spacelike in $\M_{\rm II}$, cf. Sec.~\ref{s:ker:Killing_hor}).
+The solution to this apparent puzzle is immediate as soon as one realizes
+that the boundary $r = r_-$ of $\M_{\rm III}$ is not entirely constituted
+by $\Hor_{\rm in}$: it contains another null hypersurface that separates
+$\M_{\rm III}$ from a ``time-reversed'' copy of $\M_{\rm II}$ region in the
+maximally extended Kerr spacetime, cf. Fig.~\ref{f:ker:max_ext}, where
+the ``time-reversed'' copy of $\M_{\rm II}$ is denoted by ${\M_{\rm II}^*}'$.
+So actually, when it reaches $r=r_-$, the null geodesic $\Li$ enters
+${\M_{\rm II}^*}'$. There $r$ must be increasing towards the future, at
+the opposite of $\M_{\rm II}$. It reaches then $r=r_+$, where $\Li$
+crosses a white hole\index{white hole} horizon and emerges into
+the asympototically flat region $\M_{\rm I}''$, cf.
+Fig.~\ref{f:gik:zero_ener_traj}.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gik_zero_ener_traj.pdf}}
+\caption[]{\label{f:gik:zero_ener_traj} \footnotesize
+Trajectory in the extended Kerr spacetime of a null geodesic
+with $E=0$, $Q>0$ and $L<0$, emitted from a point $A$ in the outer ergoregion.
+}
+\end{figure}
 
 
 \subsubsection{$\theta$-motion}
 
 Specializing the general results of Sec.~\ref{s:gek:th_motion} to $\mu=0$ and $E=0$,
-and taking into account $Q \geq 0$, we get
+and taking into account $Q > 0$, we get
 \begin{greybox}
-\begin{itemize}
-\item If $Q>0$, (i) for $L\neq 0$, $\Li$ oscillates symmetrically about the equatorial plane,
+(i) for $L\neq 0$, $\Li$ oscillates symmetrically about the equatorial plane,
 between two turning points, $\th_0$ and $\pi-\th_0$, such that $0<\th_0<\pi/2$;
 (ii) for $L=0$, $\Li$
 crosses repeatedly the rotation axis, with $\th$ taking all values in the
 range $[0,\pi]$.
-\item If $Q=0$, $\Li$ is stably confined to the equatorial plane
-for $L \neq 0$;
-for $L=0$, $\Li$ lies at a constant value $\th=\th_0\in[0,\pi]$.
-\end{itemize}
 \end{greybox}
 
 

@@ -878,15 +878,17 @@ obtained equivalent ones for the Kerr coordinates $v$ and $\tph$ which he was us
 
 We have:
 \begin{greybox}
-If a null or timelike geodesic $\Li$ has some part lying outside the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergoregion}),
-then the conserved energy $E$ defined by Eq.~(\ref{e:gek:def_E}) is necessarily positive:
+If a null or timelike geodesic $\Li$ has some part lying in the exterior of the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergoregion}),
+then the conserved energy $E$ defined by Eq.~(\ref{e:gek:def_E}) is necessarily
+positive:
 \be \label{e:gek:E_positive}
-    \Li \not\subset \mathscr{G}\quad \Longrightarrow \quad E > 0 .
+    \Li \not\subset \overline{\mathscr{G}}\quad \Longrightarrow \quad E > 0 .
 \ee
 \end{greybox}
 \begin{proof}
 By the very definition of the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergoregion}),
-the Killing vector $\w{\xi}$ is timelike outside $\mathscr{G}$. Moreover it is
+the Killing vector $\w{\xi}$ is timelike in the exterior of $\mathscr{G}$, i.e.
+in $\M\setminus\overline{\mathscr{G}}$. Moreover it is
 future-directed there, given the time orientation defined in Sec.~\ref{s:ker:time_orientation}.
 The 4-momentum $\w{p}$ is either timelike or null and always future-directed.
 By Eq.~(\ref{e:fra:orient_time1}) in Lemma~1 of Sec.~\ref{s:fra:time_orientation}, one has then necessarily $\w{\xi}\cdot\w{p} < 0$; hence
@@ -903,12 +905,19 @@ is nothing but the exterior of the black hole region.
 
 Inside the ergoregion, the Killing vector $\w{\xi}$ is spacelike and $E$ can be
 either positive, zero or negative.
-We have already encountered geodesics with $E=0$ in Example~\ref{x:gek:null_generator_hor} of Sec.~\ref{s:gek:int_motion_sym}: the null generators of the horizons $\Hor$
+A particle with $E<0$ (resp. $E=0$) is called a
+\defin{negative-energy particle}\index{negative-energy particle}\index{particle!negative-energy --}
+(resp. a \defin{zero-energy particle}\index{zero-energy particle}\index{particle!zero-energy --}).
+We have already encountered zero-energy particles in Example~\ref{x:gek:null_generator_hor} of Sec.~\ref{s:gek:int_motion_sym}: the photons whose worldlines are the null generators of the horizons $\Hor$
 and $\Hor_{\rm in}$.
-Particles for which $E<0$ are called
-\defin{negative-energy particles}\index{negative-energy particle}\index{particle!negative-energy --}. They are those involved in the Penrose process discussed in Sec.~\ref{s:ker:Penrose_proc}.
-Note that according to (\ref{e:gek:E_positive}) a negative-energy particle cannot exist
-outside the ergoregion.
+Negative-energy particles are those involved in the Penrose process discussed in Sec.~\ref{s:ker:Penrose_proc}.
+Note that according to (\ref{e:gek:E_positive}), neither a negative-energy particle nor a zero-energy one can exist in the exterior of the ergoregion.
+
+\begin{remark}
+As alreay stressed in Remark~\ref{r:ker:negative_energy} on p.~\pageref{r:ker:negative_energy}, any local
+observer measuring the energy of a negative-energy particle or a zero-energy one, according to the process described in Sec.~\ref{s:fra:measure}, will
+find a positive value. Hence there is nothing mysterious about these particles.
+\end{remark}
 
 \subsection{Future-directed condition}
 
@@ -1051,13 +1060,13 @@ which can be simplified to
 \begin{remark}
 In the outer ergoregion  $\mathscr{G}^+ = \mathscr{G}\cap \M_{\rm I}$
 (i.e. the part of the ergoregion outside of the black hole),
-$E<0$ is allowed, but the result
-(\ref{e:gek:p_t_positive}) shows that $p^t < 0$ is not allowed.
+$E\leq 0$ is allowed, but the result
+(\ref{e:gek:p_t_positive}) shows that $p^t \leq 0$ is not allowed.
 \end{remark}
 
 
 \begin{hist}
-That $E < 0$ in the outer ergoregion implies $L<0$ has been shown for
+That $E \leq 0$ in the outer ergoregion implies $L<0$ has been shown for
 equatorial geodesics by George Contopoulos\index{Contopoulos, G.} in 1984 \cite{Conto84}.
 \end{hist}
 
@@ -1145,12 +1154,14 @@ Hence we conclude that
 Any null or timelike geodesic that approaches the event horizon $\Hor$
 is winding around it in terms of the Boyer-Lindquist coordinates at exactly the black hole rotation velocity $\Omega_H$.
 \end{greybox}
-If $\Li$ is a timelike geodesic, we have argued in Sec.~\ref{s:ges:circular_orbits}
-that $\left. \D\ph/\D t \right| _{\Li}$ can be interpreted as the angular velocity of
-$\Li$ as seen by an asymptotic ($r\to +\infty$) inertial observer. The reasoning was
-given in the Schwarzschild spacetime context but it actually  involved only
-the spacetime symmetry by translation in $t$, so it is applicable here.
 
+\begin{remark}
+For a timelike geodesic on a circular orbit, we have argued in Sec.~\ref{s:ges:circular_orbits}
+that $\left. \D\ph/\D t \right| _{\Li}$ is the angular velocity of
+as seen by an asymptotic inertial observer. The reasoning was
+given in the Schwarzschild spacetime context but it actually involved only
+the spacetime symmetry by translation in $t$, so it is applicable here.
+\end{remark}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{gek_winding_null.pdf}}
@@ -1678,7 +1689,7 @@ The null geodesics generating the horizons $\Hor$ and $\Hor_{\rm in}$
 considered in
 Example~\ref{x:gek:null_generator_hor} on page~\pageref{x:gek:null_generator_hor}
 have $E=0$ [Eq.~(\ref{e:gek:generator_hor_E_L_zero})]
-and are indeed fully located inside the ergoregion $\mathscr{G}$,
+and are indeed fully located in the ergoregion $\mathscr{G}$,
 since $\Hor\subset\mathscr{G}$ and $\Hor_{\rm in}\subset\mathscr{G}$
 (cf. Fig.~\ref{f:ker:ergo_a90}).
 \end{example}
@@ -3118,7 +3129,8 @@ get, after simplication:
 Equation~(\ref{e:gek:4vel_circ_orb}) shows that the 4-velocity is a linear
 combination of the two Killing vectors $\w{\xi}$ and $\w{\eta}$ with
 coefficients that are constant along the worldline $\Li$. An observer on
-a circular orbit in the equatorial plane is thus a \emph{stationary observer}\index{stationary!observer in Kerr spacetime}\index{observer!stationary --} as defined in Sec.~\ref{s:ker:station_obs}
+a circular orbit in the equatorial plane is thus a
+\emph{stationary observer}\index{stationary!observer!in Kerr spacetime}\index{observer!stationary --} as defined in Sec.~\ref{s:ker:station_obs}
 [compare Eq.~(\ref{e:ker:4vel_stat_obs_omega})]. He does not notice any change in the spacetime
 geometry. We shall call him a \defin{circular geodesic observer}\index{circular!geodesic!observer}\index{observer!circular geodesic --}.
 Contrary to the families of stationary observers considered in Sec.~\ref{s:ker:observers},
@@ -3321,9 +3333,9 @@ being all unstable.
 \end{remark}
 
 \begin{remark}
-As discussed in Sec.~\ref{s:gek:sign_E}, negative-energy particles can exist in
+As discussed in Sec.~\ref{s:gek:sign_E}, negative-energy or zero-energy particles can exist in
 the outer ergoregion. However, Fig.~\ref{f:gek:eps_circ_orb} shows us that none
-of them can have a circular orbit.
+of them can follow a circular orbit.
 \end{remark}
 
 
