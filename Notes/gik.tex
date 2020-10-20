@@ -253,16 +253,46 @@ lead to
 The integration is then immediate:
 $\arcsin x = - \eps_r \eps_\th \arcsin(\sqrt{1 + \bar{L}^2} \cos\th) + K$,
 where $K$ is a constant, from which we get
-\be
+\be \label{e:gik:E_zero_r_theta}
    \encadre{ r = m + m\sqrt{1 - \frac{a^2}{m^2(1 + \bar{L}^2)}} \; \sin \left[
         K - \eps_r \eps_\th \arcsin\left(\sqrt{1 + \bar{L}^2} \cos\th\right) \right] }.
 \ee
 Since $\sqrt{1 + \bar{L}^2} \cos\th_{\rm min} = 1$, we see that the constant
 $K$ is related to the value of $r$ at $\th = \th_{\rm min}$ by
-\be
+\be \label{e:gik:E_zero_K}
     K =  \arcsin \left( \frac{r(\th_{\rm min})/m - 1}{\sqrt{1 - \frac{a^2}{m^2(1 + \bar{L}^2)}}} \right)
     + \eps_r \eps_\th \frac{\pi}{2} .
 \ee
+Note that $K$ is not a constant all along $\Li$, but only on portions where
+$\eps_r$ and $\eps_\th$ are constant.
+Expression~\ref{e:gik:E_zero_r_theta} gives the trace of the zero-energy
+null geodesic $\Li$ in a meridional plane. It depends on $Q$ and $L$ only
+through the ratio $\bar{L} := L / \sqrt{Q}$. It depends as well on the value of
+$r$ at $\th_{\rm min}$ via $K$, as it appears in Eq.~(\ref{e:gik:E_zero_K}).
+An example is shown in Fig.~\ref{f:gik:zero_ener_merid} for $a/m = 0.9$, $L / \sqrt{Q} = -1$
+and $r(\th_{\rm min}) = 1.5\, m$. It has $\th_{\rm min} = \pi/4$,
+$r_{\rm min} \simeq 0.229\, m$ and $r_{\rm max} \simeq 1.771\, m$,
+while for $a/m = 0.9$, one has $r_- \simeq 0.564\, m$ and $r_+ \simeq 1.436\, m$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gik_zero_ener_merid.pdf}}
+\caption[]{\label{f:gik:zero_ener_merid} \footnotesize
+Trajectory in the meridional plane of a null geodesic (green curve)
+with $E=0$, $Q>0$, $L = - \sqrt{Q}$ and $r(\th_{\rm min}) = 1.5 \, m$
+in a Kerr spacetime with $a/m = 0.9$.
+The meridional plane is described in terms of
+O'Neill exponential coordinates $x = \mathrm{e}^{r/m}\sin\th$ and $z = \mathrm{e}^{r/m}\cos\th$,
+as in Figs.~\ref{f:ker:ergo_a90} -- \ref{f:ker:ergo_a99}.
+The dotted orange circle marks the locus of $r=0$, with the
+two red dots marks indicating the curvature singularity at $r=0$ and $\th=\pi/2$.
+The ergoregion is shown in grey. The area $\rm I$ is defined by $r> r_+$ and
+correspond to the regions denoted by $\M_{\rm I}$ and $\M_{\rm I}''$ in Fig.~\ref{f:gik:zero_ener_traj},
+the area $\rm II$ is defined by $r_- < r < r_+$ and
+correspond to the regions denoted by $\M_{\rm II}$ and ${\M_{\rm II}^*}'$  in Fig.~\ref{f:gik:zero_ener_traj} and the area $\rm III$ is defined by $r < r_-$ and
+correspond to the region denoted by $\M_{\rm III}$ in Fig.~\ref{f:gik:zero_ener_traj}.
+}
+\end{figure}
+
 
 \subsection{Equations of geodesic motion for $E\neq 0$}
 
