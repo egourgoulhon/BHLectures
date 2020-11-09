@@ -305,6 +305,148 @@ corresponds to the region $\M_{\rm III}$ in Fig.~\ref{f:gik:zero_ener_traj}.
 
 \subsection{Equations of geodesic motion for $E\neq 0$}
 
+When $E\neq 0$, we introduce the reduced constants of motion
+\be
+    \encadre{\ell := \frac{L}{E}} \qand
+    \encadre{q := \frac{Q}{E^2}} .
+\ee
+Note that, in geometrized units ($G=1$ and $c=1$), $\ell$ has the dimension of
+a length and $q$ that of a squared length.
+
+The equations of motion in term of the Mino parameter $\lambda'$,
+Eqs.~(\ref{e:gek:eom_Mino}) specialized to $\mu=0$, can be rewritten as
+\begin{subequations}
+\label{e:gik:eom_Mino})
+\begin{align}
+& \encadre{ \frac{1}{E} \derd{t}{\lambda'} = \frac{r^2 + a^2}{\Delta} (r^2 + a^2 - a \ell) + a ( \ell - a \sin^2\th ) } \label{e:gik:dtdl_Mino} \\
+& \encadre{ \frac{1}{E} \derd{r}{\lambda'} = \eps_r \sqrt{ \mathcal{R}(r) } } \label{e:gik:drdl_Mino}\\
+& \encadre{ \frac{1}{E} \derd{\th}{\lambda'} = \eps_\th \sqrt{\tilde\Theta(\th)} } \label{e:gik:dthdl_Mino}\\
+& \encadre{ \frac{1}{E} \derd{\ph}{\lambda'}  = \frac{\ell}{\sin^2\th}
+    + \frac{a}{\Delta}(2m r - a \ell) } , \label{e:gik:dphdl_Mino}
+\end{align}
+\end{subequations}
+with
+\be
+    \mathcal{R}(r) := \frac{R(r)}{E^2}
+    \qand
+    \tilde\Theta(\th) := \frac{\Theta(\th)}{E^2} .
+\ee
+From the general expressions (\ref{e:gek:def_R_Q}) and (\ref{e:gek:Theta_Q}), we get
+\be \label{e:gik:mcR}
+    \encadre{\mathcal{R}(r) = (r^2 + a^2 - a \ell)^2 - \Delta \left[ q + (\ell -a)^2 \right] }
+\ee
+and
+\be \label{e:gik:tTheta}
+    \encadre{ \tilde\Theta(\th) = q + \cos^2\th \left( a^2
+    - \frac{\ell^2}{\sin^2\th} \right) } .
+\ee
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gik_obs_screen.pdf}}
+\caption[]{\label{f:gik:obs_screen} \footnotesize
+Impact of a null geodesic $\Li$ onto the screen of a remote observer. $(x,y,z)$ are the Cartesian Boyer-Lindquist coordinates
+defined by Eq.~(\ref{e:gek:Cartesian_BL}).
+}
+\end{figure}
+
+\subsubsection{Remote observer's screen}
+
+The parameters $(\ell,q)$ are closely related to the impact coordinates $(\alpha,\beta)$
+on the screen of an asymptotic inertial observer (cf. Sec.~\ref{s:ker:asymp_inertial_obs})
+in case the null geodesic $\Li$ reaches the asymptotic region $r\to +\infty$.
+Indeed let us consider an asymptotic inertial observer $\Obs$ located at (fixed) Boyer-Lindquist
+coordinates $(r_0, \th_0, \ph_0)$, with $r_0 \gg m$ (cf. Fig.~\ref{f:gik:obs_screen}).
+The orthonormal frame of $\Obs$ is $\w{e}_{(0)} =\w{\xi}$, $\w{e}_{(r)} = \wpar_r$,
+$\w{e}_{(\th)} = r_0^{-1} \wpar_\th$ and $\w{e}_{(\ph)} = (r_0\sin\th_0)^{-1} \wpar_\ph$
+[Eq.~(\ref{e:ker:def_ZAMO_frame}) with $r = r_0\to +\infty$].
+Let us assume that the observer set up a screen (via a telescope) centered on the direction to the
+black hole, i.e. such that $\w{e}_{(r)}$ is the normal to the screen. The 4-momentum of the photon
+having $\Li$ as worldline at the location of $\Obs$ writes
+\[
+    \w{p} = p^t \, \w{\xi} + p^r \, \w{e}_{(r)} + p^\th r_0 \, \w{e}_{(\th)}
+    + p^\ph r_0 \sin\th_0 \, \w{e}_{(\ph)} =  E (\w{\xi} + \w{n}) ,
+\]
+where the second equality follows from the orthogonal decomposition (\ref{e:fra:p_E_V}) with respect to
+$\Obs$, $\w{\xi}$ being the 4-velocity of $\Obs$ and the unit spacelike vector $\w{n}$ being the photon's velocity\footnote{$\w{n}$ is denoted by $\w{V}$ in Eq.~(\ref{e:fra:p_E_V}).} relative to $\Obs$; it
+obeys $\w{\xi}\cdot\w{n} = 0$ and $\w{n}\cdot\w{n} = 1$ [Eq.~(\ref{e:fra:photon_V_one})].
+That the conserved energy $E$ appears in the above equation is a direct consequence of its
+definition as $E := - \w{\xi}\cdot \w{p}$ [Eq.~(\ref{e:gek:def_E})] with $\w{\xi}\cdot\w{\xi} = -1$
+for $r_0\to +\infty$. The above identity implies
+$p^t = E$ and
+\[
+    \w{n} = \frac{p^r}{E} \, \w{e}_{(r)} + \frac{p^\th}{E} r_0 \, \w{e}_{(\th)}
+    + \frac{p^\ph}{E} r_0 \sin\th_0 \, \w{e}_{(\ph)} .
+\]
+With respect to $\Obs$, the incoming direction of the photon is given by
+the vector $-\w{n}$ and the trace on the screen is indicated by the component of that
+vector that is tangent to the screen, namely
+\be \label{e:gik:m_screen_p}
+    \w{m} = - \w{n}_{\parallel} = - \frac{p^\th}{E} r_0 \, \w{e}_{(\th)}
+    -  \frac{p^\ph}{E} r_0 \sin\th_0 \, \w{e}_{(\ph)}
+\ee
+since the screen plane is spanned by $\w{e}_{(\th)}$ and $\w{e}_{(\ph)}$
+(cf. Fig.~\ref{f:gik:obs_screen}). Let us assume that the screen dimensionless
+Cartesian coordinates $(\alpha,\beta)$ are chosen so that the black hole rotation axis
+appears as the $\beta$-axis (cf. Fig.~\ref{f:gik:obs_screen}), then
+\be \label{e:gik:m_screen_ab}
+    \w{m} = \alpha \w{e}_{(\alpha)} + \beta \w{e}_{(\beta)}, \quad\mbox{with}\quad
+    \w{e}_{(\alpha)} = \w{e}_{(\ph)} \quad\mbox{and}\quad
+    \w{e}_{(\beta)} = - \w{e}_{(\th)} .
+\ee
+By comparing with (\ref{e:gik:m_screen_p}), we get
+\[
+    \alpha = -  \frac{p^\ph}{E} r_0 \sin\th_0
+    \qand
+    \beta = \frac{p^\th}{E} r_0 .
+\]
+Now, for $r_0\to +\infty$,
+\[
+   \frac{p^\th}{E} = \frac{1}{E} \derd{\th}{\lambda} = \frac{1}{E r_0^2}  \derd{\th}{\lambda'} =
+    \frac{\eps_\th}{r_0^2} \sqrt{\tilde\Theta(\th_0)}
+\]
+\[
+ \frac{p^\ph}{E} = \frac{1}{E} \derd{\ph}{\lambda} = \frac{1}{E r_0^2}  \derd{\ph}{\lambda'}
+ = \frac{\ell}{r_0^2 \sin^2\th_0} ,
+\]
+where we have used Eqs.~(\ref{e:gik:dthdl_Mino}) and (\ref{e:gik:dphdl_Mino}), with the
+term involving $a/\Delta$ neglected since $\Delta \sim r^2$ for $r\to +\infty$.
+By inserting these formula into the above expressions of $\alpha$ and $\beta$,
+and using Eq.~(\ref{e:gik:tTheta}) for $\tilde\Theta(\th_0)$,
+we get the sought relation between the constant of motion $(\ell, q)$ and
+the screen coordinates:
+\begin{subequations}
+\label{e:gik:screen_alpha_beta}
+\begin{align}
+& \encadre{ \alpha = - \frac{\ell}{r_0\sin\th_0} } \\
+& \encadre{ \beta = \frac{\eps_\th}{r_0} \sqrt{ q + \cos^2\th_0 \left( a^2
+    - \frac{\ell^2}{\sin^2\th_0} \right) } } .
+\end{align}
+\end{subequations}
+
+\begin{remark}
+We have defined $(\alpha,\beta)$ as dimensionless Cartesian coordinates on
+the screen, cf. Eq.~(\ref{e:gik:m_screen_ab}), where $(\w{e}_{(\alpha)}, \w{e}_{(\beta)})$
+is the screen's orthonormal basis. But in practise, their values are tiny,
+being exactly zero at the limit $r_0\to +\infty$. They can thus be identified
+with \emph{angle} coordinates, measuring the departure from the direction
+of the black hole on the celestial sphere of observer $\Obs$.
+\end{remark}
+
+\begin{remark}
+When studying null geodesics in Schwarzschild spacetime in Chap.~\ref{s:gis}, we
+introduced the impact parameter $b$ as $b := |L|/E$ [Eq.~(\ref{e:ges:def_b})], hence
+\be
+    b = |\ell| .
+\ee
+Moreover, thanks to spherical symmetry, we could reduce the study to the case
+where both the observer
+and the geodesic lie in the equatorial plane, which imply $\th_0 = \pi/2$
+and $q=0$. Equations~(\ref{e:gik:screen_alpha_beta}) yield then
+\be
+    |\alpha| = \frac{b}{r_0} = \hat{b} \qand \beta = 0 ,
+\ee
+where $\hat{b}$ is the angle introduced by formula (\ref{e:gis:hat_b}).
+\end{remark}
 
 \subsection{$\theta$-motion}
 
@@ -312,40 +454,40 @@ Specializing the general results of Sec.~\ref{s:gek:th_motion} to $\mu=0$, we
 get
 \begin{greybox}
 \begin{itemize}
-\item A null geodesic $\Li$ of Kerr spacetime cannot encounter the rotation axis unless it has $L=0$.
-\item If $a=0$ (Schwarzschild limit) or $|E| \leq |L|/a$,
-the Carter constant $Q$ is necessarily non-negative:
-\be \label{e:gik:Q_nonnegative}
-    Q \geq 0 .
+\item A null geodesic $\Li$ of Kerr spacetime cannot encounter the rotation axis unless it has $\ell=0$.
+\item If $a \leq |\ell|$,
+the reduced Carter constant $q$ is necessarily non-negative:
+\be \label{e:gik:q_nonnegative}
+    q \geq 0 .
 \ee
-\item The Carter constant $Q$ can take negative values only if
-$a\neq 0$ and $|E| > |L|/a$; its range is then
+\item The reduced Carter constant $q$ can take negative values only if $a > |\ell|$
+(which implies  $a\neq 0$); its range is then
 limited from below:
 \be
-    Q \geq Q_{\rm min} = - \left( a |E| - |L| \right) ^2.
+    q \geq q_{\rm min} = - \left( a - |\ell| \right) ^2.
 \ee
-If $Q<0$, $\Li$ is called a \defin{vortical null geodesic}\index{vortical geodesic}; it
+If $q<0$, $\Li$ is called a \defin{vortical null geodesic}\index{vortical geodesic}; it
 never encounters the equatorial plane.
-\item If $Q>0$ and $L\not=0$, $\Li$ oscillates symmetrically about the equatorial plane,
+\item If $q>0$ and $\ell\not=0$, $\Li$ oscillates symmetrically about the equatorial plane,
 between two turning points, $\th_0$ and $\pi-\th_0$, such that $0<\th_0<\pi/2$.
-If $Q>0$ and $L=0$, $\Li$
+If $q>0$ and $\ell=0$, $\Li$
 crosses repeatedly the rotation axis, with $\th$ taking all values in the
 range $[0,\pi]$.
-\item If $Q=0$, $\Li$ is stably confined to the equatorial plane
-for $a |E|  < |L|$ or $a |E|  = |L| \neq 0$;
-for $a |E| > |L|$, $\Li$ either lies unstably in the equatorial
-plane or approaches it asymptotically from one side, while for $L=0$ and ($a=0$ or $|E|=\mu$),
+\item If $q=0$, $\Li$ is stably confined to the equatorial plane
+for $a  < |\ell|$ or $a  = |\ell| \neq 0$;
+for $a > |\ell|$, $\Li$ either lies unstably in the equatorial
+plane or approaches it asymptotically from one side, while for $\ell=0$ and $a=0$,
 $\Li$ lies at a constant value $\th=\th_0\in[0,\pi]$.
-\item If $Q_{\rm min} < Q < 0$, $\Li$ oscillates between two turning
+\item If $q_{\rm min} < q < 0$, $\Li$ oscillates between two turning
 points strictly located in the Northern hemisphere ($0<\th<\pi/2$) or in
-the Southern hemisphere ($\pi/2<\th<\pi$) for $L\neq 0$, while for $L=0$,
+the Southern hemisphere ($\pi/2<\th<\pi$) for $\ell\neq 0$, while for $\ell=0$,
 $\Li$ oscillates about the rotation axis, without encoutering the equatorial
 plane, having a turning point at $\th_0$ such that $0<\th_0<\pi/2$
 (motion in the Northern hemisphere) or $\pi/2<\th_0<\pi$
 (motion in the Southern hemisphere).
-\item If $Q = Q_{\rm min}$, $\Li$ lies stably at a constant value $\th=\th_0$,
-with $\th_0 = 0$ or $\pi$ (the rotation axis) for $L=0$ and $0<\th_0< \pi/2$
-or $\pi/2<\th_0<\pi$ for $L\neq 0$.
+\item If $q = q_{\rm min}$, $\Li$ lies stably at a constant value $\th=\th_0$,
+with $\th_0 = 0$ or $\pi$ (the rotation axis) for $\ell=0$ and $0<\th_0< \pi/2$
+or $\pi/2<\th_0<\pi$ for $\ell\neq 0$.
 \end{itemize}
 \end{greybox}
 

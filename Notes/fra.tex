@@ -360,7 +360,7 @@ $(\w{e}_\alpha)$ is called the \defin{observer's frame}\index{frame!of an observ
 Let us suppose that the observer $\Obs$ encounters a particle at some event $A$.
 Geometrically, this means that the worldline $\Li$ of the particle
 intersects $\Li_{\Obs}$ at $A$. Then, the \defin{energy}\index{energy!of a particle}
-$E$ and the \defin{momentum}\index{momentum!of a particle} $\w{P}$ of the
+$E$ and the \defin{linear momentum}\index{momentum!of a particle} $\w{P}$ of the
 particle, both measured by $\Obs$, are given by the orthogonal decomposition of the
 particle's energy-momentum vector $\w{p}$ with respect to $\Li_{\Obs}$
 (cf. Fig.~\ref{f:fra:energy_momentum}):
@@ -415,8 +415,13 @@ Hence the relation
 \be \label{e:fra:P_E_V}
     \encadre{ \w{P} = E \, \w{V}} .
 \ee
+By combining with (\ref{e:fra:p_E_P}), we get the following
+orthogonal decomposition of the particle's 4-momentum:
+\be \label{e:fra:p_E_V}
+    \encadre{ \w{p} = E \left( \w{u}_{\Obs} + \w{V} \right) } .
+\ee
 
-Relations (\ref{e:fra:E2_m2_P2}) and (\ref{e:fra:P_E_V}) are valid for any kind of particle, massive or not.
+Relations (\ref{e:fra:E2_m2_P2}), (\ref{e:fra:p_E_V}) and (\ref{e:fra:P_E_V}) are valid for any kind of particle, massive or not.
 For a massive particle, the energy-momentum vector $\w{p}$ is related to the
 particle's 4-velocity $\w{u}$ via (\ref{e:fra:p_m_u}). Inserting this relation
 into (\ref{e:fra:E_obs}), we obtain
@@ -429,9 +434,9 @@ where
 \ee
 is the \defin{Lorentz factor}\index{Lorentz!factor} of the particle with respect
 to the observer. If we depart from units with $c=1$, Eq.~(\ref{e:fra:E_Gam_m})
-becomes the famous relation $E = \Gamma m c^2$.
-Combining (\ref{e:fra:P_E_V}) and (\ref{e:fra:E_Gam_m}) yields also a familiar
-relation:
+becomes the famous relation $E = \Gamma m c^2$. Furthermore,
+Combining (\ref{e:fra:P_E_V}) and (\ref{e:fra:E_Gam_m}) yields the familiar
+relation between the linear momentum and the velocity:
 \be \label{e:fra:P_Gam_m_V}
     \w{P} = \Gamma m \, \w{V} .
 \ee
@@ -452,21 +457,22 @@ respect to observer $\Obs$:
 
 For a massless particle (photon), inserting (\ref{e:fra:P_E_V}) into the
 Einstein relation (\ref{e:fra:E2_m2_P2}) with $m=0$ yields
-\be
+\be \label{e:fra:photon_V_one}
     \w{V}\cdot\w{V} = 1 .
 \ee
 This means that the norm of the velocity of the massless particle with respect to $\Obs$
-is the speed of light $c$ ($=1$ in our units).
+equals the speed of light $c$ ($=1$ in our units).
 For a photon associated with a monochromatic radiation, the wave 4-vector $\w{k}$
 admits the following orthogonal decomposition:
 \be
-    \w{k} = \omega \left(\w{u} + \w{V} \right) ,
+   \encadre{ \w{k} = \omega \left(\w{u}_{\Obs} + \w{V} \right) },
 \ee
 where $\omega = 2\pi \nu$ and $\nu$ is the radiation frequency as measured by
-observer $\Obs$. In view of (\ref{e:fra:p_hbar_k}) and (\ref{e:fra:p_E_P}), we
+observer $\Obs$. In view of Eq.~ (\ref{e:fra:p_E_V}) with $\w{p} = \hbar\w{k}$
+[Eq.~(\ref{e:fra:p_hbar_k})], we
 get the Planck-Einstein relation\index{Planck-Einstein relation}:
 \be
-    E = h \nu .
+    \encadre{ E = h \nu }.
 \ee
 
 \section{Einstein equation} \label{s:fra:Einstein_eq}
