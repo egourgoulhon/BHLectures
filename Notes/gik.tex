@@ -78,51 +78,13 @@ we conclude that
 \ee
 
 
-
-
-To proceed, we shall distinguish the subcase $Q=0$ from $Q\neq 0$.
-
-\subsubsection{Case $Q=0$}
-
-If the zero-energy null geodesic $\Li$ has a vanishing Carter constant $Q$, Eq.~(\ref{e:gik:Theta_E_zero}) reduces to $\Theta(\th) = -L^2 / \tan^2\th$,
-so that the constraint $\Theta(\th) \geq 0$ [Eq.~(\ref{e:gek:Theta_non_neg})]
-implies $L=0$ or $\th = \pi/2$ .
-
-In the first case, the four constants of motion $\mu$, $E$, $L$ and $Q$ are
-zero. By virtue of the result (\ref{e:gek:all_const_zero}), $\Li$
-is nothing but a null geodesic generator of the event horizon $\Hor$ or of the
-inner horizon $\Hor_{\rm in}$.
-
-In the second case ($\th=\pi/2$), $\Li$ is confined to the equatorial plane.
-If $L=0$, we are back to the first case: $\Li$ is null geodesic generator of $\Hor$ or
-$\Hor_{\rm in}$ lying in the equatorial plane.
-If $L\neq 0$, the radial motion of $\Li$ is governed by Eq.~(\ref{e:gik:eom_r_E_zero}) with the
-expression (\ref{e:gik:R_E_zero}) of $R(r)$ reduced to
-\be
-    R(r) = L^2 r (2m - r) .
-\ee
-The constraint $R(r) \geq 0$ [Eq.~(\ref{e:gek:R_non_neg})] implies then
-that the motion is within the range $0 \leq r \leq 2 m$, with $r=2m$
-being a $r$-turning point, since it is a simple root of $R(r)$ (cf. Sec.~\ref{s:gek:turning_points}).
-It corresponds to the outer edge of the ergoregion in the equatorial plane,
-cf. Eq.~(\ref{e:ker:r_ergo_p_eq}). Hence we have necessarily $\Li\cap \M_{\rm I} \neq \varnothing$
-and (\ref{e:gik:E_zero_L_neg_ergo}) applies: $L < 0$.
-The inner boundary of the radial motion, $r=0$, is the ring singularity.
-
-We conclude that
-\begin{greybox}
-Any null geodesic with $E=0$ and $Q=0$
-is either a null generator of one of the two Killing horizons
-$\Hor$ or $\Hor_{\rm in}$ (in which case, it has $L=0$) or it has
-$L < 0$, lies in the equatorial plane and terminates at the ring singularity,
-after possibly a turning point at the outer ergosphere.
-\end{greybox}
+To proceed, we shall distinguish the subcases $Q\neq 0$ and $Q=0$.
 
 \subsubsection{Case $Q\neq 0$}
 
 This case actually corresponds to $Q > 0$, since $Q<0$ is forbidden by
 (\ref{e:gik:Q_nonneg_E_zero}). We set
-\be
+\be \label{e:gik:def_L_bar}
     \bar{L} := \frac{L}{\sqrt{Q}}
 \ee
 and rewrite expression (\ref{e:gik:R_E_zero}) for $R(r)$ as
@@ -130,7 +92,7 @@ and rewrite expression (\ref{e:gik:R_E_zero}) for $R(r)$ as
     R(r)/Q  = - (1 + \bar{L}^2) r^2 + 2m (1 + \bar{L}^2) r - a^2 .
 \ee
 Since $1 + \bar{L}^2 \neq 0$, this is a second-order polynomial in $r$,
-whose two roots are
+the two roots of which are
 \be \label{e:gik:E_zero_rmin_rmax}
     r_{\rm min} = m - \sqrt{m^2 - \frac{a^2}{1 + \bar{L}^2}}
     \qand
@@ -162,11 +124,6 @@ For $a\neq 0$, any null geodesic with $E=0$ has necessarily
     \encadre{ L \leq 0 }_{{a\neq 0\atop E=0}}.
 \ee
 \end{greybox}
-
-\begin{remark}
-If $L\neq 0$, the limit $\bar{L}^2 \to +\infty$ corresponds to $Q\to 0$
-and we recover the range $[0, 2m]$ determined above in the case $Q=0$.
-\end{remark}
 
 Let us consider a zero-energy null geodesic $\Li$ emitted outward (i.e.
 with $\epsilon_r = +1$) from a point $A$ in the outer ergoregion $\mathscr{G}^+$.
@@ -302,6 +259,75 @@ corresponds to the region $\M_{\rm III}$ in Fig.~\ref{f:gik:zero_ener_traj}.
 }
 \end{figure}
 
+\subsubsection{Case $Q=0$}
+
+If the zero-energy null geodesic $\Li$ has a vanishing Carter constant $Q$, Eq.~(\ref{e:gik:Theta_E_zero}) reduces to $\Theta(\th) = -L^2 / \tan^2\th$,
+so that the constraint $\Theta(\th) \geq 0$ [Eq.~(\ref{e:gek:Theta_non_neg})]
+implies $L=0$ or $\th = \pi/2$ .
+
+In the first case, the four constants of motion $\mu$, $E$, $L$ and $Q$ are
+zero. By virtue of the result (\ref{e:gek:all_const_zero}), $\Li$
+is nothing but a null geodesic generator of the event horizon $\Hor$ or of the
+inner horizon $\Hor_{\rm in}$.
+
+In the second case ($\th=\pi/2$), $\Li$ is confined to the equatorial plane.
+If $L=0$, we are back to the first case: $\Li$ is null geodesic generator of $\Hor$ or
+$\Hor_{\rm in}$ lying in the equatorial plane.
+If $L\neq 0$, the radial motion of $\Li$ is governed by Eq.~(\ref{e:gik:eom_r_E_zero}) with the
+expression (\ref{e:gik:R_E_zero}) of $R(r)$ reduced to
+\be
+    R(r) = L^2 r (2m - r) .
+\ee
+The constraint $R(r) \geq 0$ [Eq.~(\ref{e:gek:R_non_neg})] implies then
+that the motion is within the range $0 \leq r \leq 2 m$, with $r=2m$
+being a $r$-turning point, since it is a simple root of $R(r)$ (cf. Sec.~\ref{s:gek:turning_points}).
+It corresponds to the outer edge of the ergoregion in the equatorial plane,
+cf. Eq.~(\ref{e:ker:r_ergo_p_eq}). Hence we have necessarily $\Li\cap \M_{\rm I} \neq \varnothing$
+and (\ref{e:gik:E_zero_L_neg_ergo}) applies: $L < 0$.
+The inner boundary of the radial motion, $r=0$, is the ring singularity.
+Accordingly, in the maximally extended Kerr spacetime, $\Li$ starts at the ring
+singularity in a $\M_{\rm III}$-type region (cf. Fig.~\ref{f:gik:zero_ener_traj_q0}),
+has $r$ increasing, enters
+a $\M_{\rm II}^*$-type region (time reversed copy of $\M_{\rm II}$), emerges
+in $\M_{\rm I}$ via the white hole horizon at $r=r_+$ and reaches a $r$-turning point at
+$r=2m$, then $r$ decreases continuously until $\Li$ terminates at the ring
+singularity of $\M_{\rm III}$, after having crossed the black hole horizon $\Hor$
+and the inner horizon $\Hor_{\rm in}$.
+This trajectory, depicted in
+Fig.~\ref{f:gik:zero_ener_traj_q0}, is similar to that for $Q\neq 0$
+shown in Fig.~\ref{f:gik:zero_ener_traj}, except that it is ``blocked''
+by two ring singularities and cannot oscillate foreover between distinct
+$\M_{\rm I}$-type regions.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gik_zero_ener_traj_q0.pdf}}
+\caption[]{\label{f:gik:zero_ener_traj_q0} \footnotesize
+Trajectory in the extended Kerr spacetime of a null geodesic
+with $E=0$, $Q=0$ and $L<0$.
+}
+\end{figure}
+
+
+\begin{remark}
+For $Q\neq 0$ and $L\neq 0$, the limit $Q\to 0$ corresponds to
+$\bar{L}^2 \to +\infty$ [cf. Eq.~(\ref{e:gik:def_L_bar})], so that
+Eq.~(\ref{e:gik:E_zero_rmin_rmax}) yields
+$r_{\rm min}\to 0$ and $r_{\rm max}\to 2m$.
+We recover then the range $[0, 2m]$ for $r$ obtained here for $Q=0$.
+\end{remark}
+
+
+We conclude that
+\begin{greybox}
+Any null geodesic with $E=0$ and $Q=0$
+is either a null generator of one of the two Killing horizons
+$\Hor$ or $\Hor_{\rm in}$ (in which case, it has $L=0$) or it has
+$L < 0$, lies in the equatorial plane,
+emanates from a ring singularity, reaches the outer ergosphere ($r=2m$),
+where it has a $r$-turning point, and terminates at a ring singularity.
+\end{greybox}
+
+
 
 \subsection{Equations of geodesic motion for $E\neq 0$}
 
@@ -435,6 +461,7 @@ of the black hole on the celestial sphere of observer $\Obs$.
 \begin{remark}
 When studying null geodesics in Schwarzschild spacetime in Chap.~\ref{s:gis}, we
 introduced the impact parameter $b$ as $b := |L|/E$ [Eq.~(\ref{e:ges:def_b})], hence
+$b$ is related to $\ell$ by
 \be
     b = |\ell| .
 \ee
