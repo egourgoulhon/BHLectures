@@ -39,10 +39,12 @@ the geodesic equation [Eq.~(\ref{e:geo:eq_geod}) in Appendix~\ref{s:geo}]:
 \ee
 where the $\Gamma^\alpha_{\ \, \mu \nu}$'s are the Christoffel symbols\index{Christoffel symbols} of the metric $\w{g}$
 with respect to the coordinates $(x^\alpha)$, as given by Eq.~(\ref{e:bas:Christoffel}).
-Equation~(\ref{e:gek:eq_geod}) is a system of four coupled second-order
-differential equations, which are non-linear. We are going to see that in
-order to compute the geodesics of Kerr spacetime, it is not necessary to
-solve this system, since, as in the Schwarzschild case studied in Chap.~\ref{s:ges}, there exists
+Equation~(\ref{e:gek:eq_geod}) is the component expression of
+$\wnab_{\w{p}} \, \w{p} = 0$ [Eq.~(\ref{e:fra:p_geodesic})]. It is
+a system of four coupled second-order
+differential equations, which are non-linear. We are going to see that it is actually not necessary to
+solve this system to compute the geodesics of Kerr spacetime. Indeed,
+as in the Schwarzschild case studied in Chap.~\ref{s:ges}, there exists
 enough first integrals of Eq.~(\ref{e:gek:eq_geod}) to reduce
 the problem to four first-order equations
 of the type $\D x^\alpha/\D\lambda = F^\alpha(x^0, x^1, x^2, x^3)$.
@@ -63,7 +65,7 @@ this property here. Fortunaly there exists another
 integral of motion, known as the \emph{Carter constant}; it arises from a remarkable property
 of Kerr spacetime: the existence of a non-trivial Killing tensor (Sec.~\ref{s:gek:Carter_const}).
 This makes a total of four integral of motions,
-which renders the problem integrable (Secs.~\ref{s:gek:first_order_system} to
+which makes the problem integrable (Secs.~\ref{s:gek:first_order_system} to
 \ref{e:gek:integration}).
 
 
@@ -143,7 +145,109 @@ have $E=0$ and $L=0$ as well. Hence we conclude:
 \ee
 \end{example}
 
-In what follows, we are going to use Boyer-Lindquist coordinates
+\begin{example}[Ingoing principal null geodesics] \label{x:gek:ingoing_null_E_L}
+For the ingoing principal null geodesics $\Li^{\rm in}_{(v,\th,\tph)}$
+introduced in Sec.~\ref{s:ker:principal_geod}, the 4-momentum vector
+is
+\be \label{e:gek:p_alpha_k}
+    \w{p} = \alpha \w{k} ,
+\ee
+where $\alpha$ is a (positive) constant, since $\w{k}$ is a geodesic vector
+[Eq.~(\ref{e:ker:nab_k_k})], as $\w{p}$ [Eq.~(\ref{e:fra:p_geodesic})].
+Equations~(\ref{e:gek:E_pt_L_pph}) with the components relative to the 3+1 Kerr coordinates
+$(\ti, r, \th, \tph)$ lead then to
+\[
+    E = - \alpha k_{\ti} = - \alpha(-1) = \alpha \qand
+   L = \alpha k_{\tph} = \alpha a \sin^2\th,
+\]
+where the components $k_{\ti}$ and $k_{\tph}$
+have been read on Eq.~(\ref{e:ker:k_form_Kerr}).
+Hence for any ingoing principal null geodesic $\Li^{\rm in}_{(v,\th,\tph)}$,
+\be \label{e:gek:ingoing_null_E_L}
+    E > 0 \qand L = a E \sin^2 \th .
+\ee
+Recall that $\th$ is constant along $\Li^{\rm in}_{(v,\th,\tph)}$, so that
+the above formula does yield a constant value for $L$. Moreover, it fulfills
+$L\geq 0$ with $L=0$ only for $a=0$ or $\th\in\{0,\pi\}$ (rotation axis).
+\end{example}
+
+\begin{example}[Outgoing principal null geodesics]
+For the outgoing principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
+introduced in Sec.~\ref{s:ker:principal_geod}, the 4-momentum vector
+is
+\be \label{e:gek:p_beta_l}
+    \w{p} = \beta(\lambda) \wl .
+\ee
+where $\beta(\lambda)$ is a function of the affine parameter $\lambda$
+associated to $\w{p}$ that obeys $\beta(\lambda) > 0$, since both $\w{p}$
+and $\wl$ are future-directed (cf. Sec.~\ref{s:ker:principal_geod}).
+Contrary to the coefficient $\alpha$ in Eq.~(\ref{e:gek:p_alpha_k}), $\beta(\lambda)$
+is not constant because $\wl$ is not a geodesic vector, but only
+a pregeodesic one: it fulfills $\wnab_{\wl}\, \wl = \kappa_{\wl} \, \wl$
+with $\kappa_{\wl}\neq 0$
+[Eqs.~(\ref{e:ker:pregeod_ell}) and (\ref{e:ker:bar_kappa})] (cf. Remark~\ref{r:ker:k_versus_l}
+on page~\pageref{r:ker:k_versus_l}).
+The geodesic equation $\wnab_{\w{p}}\, \w{p} = 0$ implies that
+$\beta$ obeys the differential equation
+$\wnab_{\w{p}} \beta + \kappa_{\wl} \beta^2 = 0$, or equivalently
+\be \label{e:gek:ode_beta}
+    \derd{\beta}{\lambda} + \kappa_{\wl} \beta^2 = 0 .
+\ee
+The outgoing principal null geodesics either (i) are confined to one of the
+horizons $\Hor$ and $\Hor_{\rm in}$, generating them, or (ii) never intersect them
+(cf. the solid curves in Figs.~\ref{f:ker:princ_null_geod_a90} -- \ref{f:ker:princ_null_geod_a50}).
+In the first case, $\kappa_{\wl}$ is a constant on $\Hor$ and $\Hor_{\rm in}$,
+given by Eq.~(\ref{e:ker:bar_kappa}) with $r=r_+$ for $\Hor$ and $r=r_-$ for $\Hor_{\rm in}$.
+The solution of Eq.~(\ref{e:gek:ode_beta}) is then
+\[
+    \beta(\lambda) = \frac{1}{\kappa_{\wl}(\lambda - \lambda_0)},
+\]
+where $\lambda_0$ is a constant. Outside the horizons, $\kappa_{\wl}$ is the function
+of $r$ given by Eq.~(\ref{e:ker:bar_kappa}). We then search for a solution
+of Eq.~(\ref{e:gek:ode_beta}) in the form $\beta(\lambda) = B(r(\lambda))$,
+where $r(\lambda)$ is the function giving the coordinate $r$ along the geodesic.
+Since the latter obeys $\D r/\D\lambda = p^r = \beta \ell^r$ with $\ell^r$ read
+on Eq.~(\ref{e:ker:def_ell_outgoing}), we get the
+following linear differential equation for $B$:
+\[
+  (r^2 - 2 m r + a^2) \derd{B}{r} + 2 m \frac{r^2 - a^2}{r^2 + a^2} B = 0 .
+\]
+The solution is
+\[
+    B(r) = 2\frac{r^2 + a^2}{r^2 - 2 m r + a^2} B_0 = \beta(\lambda),
+\]
+where $B_0$ is a positive constant in $\M_{\rm I}$ and $\M_{\rm III}$
+and a negative constant in $\M_{\rm II}$, to ensure that $\beta(\lambda) > 0$.
+
+Plugging (\ref{e:gek:p_beta_l}) into Eqs.~(\ref{e:gek:E_pt_L_pph}) with the components
+relative to the 3+1 Kerr coordinates yields
+\[
+    E = - \beta(\lambda) \ell_{\ti} = \beta(\lambda) \frac{\Delta}{2(r^2 + a^2)} \qand
+   L = \beta(\lambda) \ell_{\tph} = \beta(\lambda) \frac{a\Delta\sin^2\th}{2(r^2 + a^2)}  ,
+\]
+where the components $\ell_{\ti}$ and $\ell_{\tph}$ have been
+read on Eq.~(\ref{e:ker:ell_form_Kerr}). Given the above results for $\beta(\lambda)$,
+we get $E=0$ and $L=0$ on $\Hor$ and $\Hor_{\rm in}$, since $\Delta = 0$ there,
+and $E=B_0$ and $L = a B_0 \sin^2\th$ elsewhere. We conclude that
+for the outgoing principal null geodesic $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$,
+\begin{subequations}
+\label{e:gek:outgoing_null_E_L}
+\begin{eqnarray}
+ & \mbox{in}\ \Hor\cup\Hor_{\rm in},\quad & E = 0 \qand L = 0  \label{e:gek:E_L_outgoing_hor} \\
+ & \mbox{in}\ \M_{\rm I}\cup\M_{\rm III},\quad & E > 0 \qand L = a E \sin^2 \th \\
+ & \mbox{in}\ \M_{\rm II},\quad & E < 0 \qand L = a E \sin^2 \th .
+\end{eqnarray}
+\end{subequations}
+In particular, (\ref{e:gek:E_L_outgoing_hor}) is nothing but the
+result (\ref{e:gek:generator_hor_E_L_zero}) already obtained in Example~\ref{x:gek:null_generator_hor}.
+We note also that the relation between $L$ and $E$ is identical to that obtained
+in Example~\ref{x:gek:ingoing_null_E_L} for
+the ingoing principal null geodesics [Eq.~(\ref{e:gek:ingoing_null_E_L})].
+\end{example}
+
+
+
+In what follows, we will use Boyer-Lindquist coordinates
 $(x^\alpha)=(t,r,\th,\ph)$
 as introduced in Sec.~\ref{s:ker:expr_BL}.
 Given the components (\ref{e:ker:metric_BL}) of the metric tensor $\w{g}$
@@ -467,7 +571,7 @@ or \emph{Carter constant $\mathscr{K}$}. As we shall see in Sec.~\ref{s:gek:th_m
 $Q$ is well adapted to the description of the $\th$-motion of geodesics. On the other
 hand, a nice property of $\mathscr{K}$, which is not shared by $Q$, is to be always non-negative,
 as Eqs.~(\ref{e:gek:def_Theta}) and (\ref{e:gek:Theta_non_neg}) show:
-\be
+\be \label{e:ges:K_non_negative}
   \encadre{  \mathscr{K} \geq 0 }.
 \ee
 
@@ -480,6 +584,28 @@ Eqs.~(\ref{e:gek:def_Q}) and (\ref{e:gek:Kcarter_asymptot}) the following behavi
 Hence, if $a=0$, $Q$ can be interpreted as the square of
 the part of $\mathscr{P}$'s angular momentum (measured by the asymptotic inertial
 observer) that is not in $L$.
+
+\begin{example}[Carter constant $Q$ of the principal null geodesics]
+As (\ref{e:gek:K_zero_null}) shows, for a principal null geodesic, be it ingoing
+or outgoing, the Carter constant $\mathscr{K}$ vanishes identically. According
+to Eq.~(\ref{e:gek:def_Q}), the
+Carter constant $Q$ is then $Q = - (L - aE)^2$. In view of the relation
+$L = a E \sin^2\th$ for these geodesics [Eqs.~(\ref{e:gek:ingoing_null_E_L}) and
+(\ref{e:gek:outgoing_null_E_L})], we get
+\be \label{e:gek:Q_principal_null}
+    Q = - a^2 E^2 \cos^4\th ,
+\ee
+where $\th$ is the constant value of the $\th$-coordinate along the principal
+null geodesic. Note that the above relation holds in all Kerr spacetime,
+including on the horizons $\Hor$ and $\Hor_{\rm in}$, where it reduces to $Q=0$, for
+$E=0$ there [Eq.~(\ref{e:gek:E_L_outgoing_hor})]. Equation~(\ref{e:gek:Q_principal_null})
+implies
+\be
+    Q \leq 0 ,
+\ee
+with $Q=0$ only for principal null geodesics lying in the equatorial plane or
+for outgoing principal null geodesics generating the horizons $\Hor$ and $\Hor_{\rm in}$.
+\end{example}
 
 \begin{remark}
 As for $\mathscr{K}$,

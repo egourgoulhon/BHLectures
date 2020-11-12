@@ -115,15 +115,10 @@ with $r_{\rm min} = 0$ for $a = 0$ or $\bar{L}^2 \to +\infty$,
 $r_{\rm min} = r_-$ for $L=0$, $r_{\rm max} = 2m$ for $a=0$
 or $\bar{L}^2 \to +\infty$ and $r_{\rm max} = r_+$ for $L=0$.
 If $L\neq 0$ and $a\neq 0$, then $r_{\rm max} > r_+$, so that $\Li$ has a part in the outer
-ergoregion and (\ref{e:gik:E_zero_L_neg_ergo}) implies that $L < 0$.
-Taking into account the results obtained for $Q=0$, we conclude
-that
-\begin{greybox}
-For $a\neq 0$, any null geodesic with $E=0$ has necessarily
-\be
-    \encadre{ L \leq 0 }_{{a\neq 0\atop E=0}}.
+ergoregion and (\ref{e:gik:E_zero_L_neg_ergo}) implies that $L < 0$. Hence
+\be \label{e:gik:E_zero_Qnz_L_neg}
+    a\neq 0 \implies L \leq 0 .
 \ee
-\end{greybox}
 
 Let us consider a zero-energy null geodesic $\Li$ emitted outward (i.e.
 with $\epsilon_r = +1$) from a point $A$ in the outer ergoregion $\mathscr{G}^+$.
@@ -327,6 +322,15 @@ emanates from a ring singularity, reaches the outer ergosphere ($r=2m$),
 where it has a $r$-turning point, and terminates at a ring singularity.
 \end{greybox}
 
+Regarding the sign of $L$, we can combine the above result with that
+obtained for $Q\neq 0$ [Eq.~(\ref{e:gik:E_zero_Qnz_L_neg})] to conclude:
+\begin{greybox}
+For $a\neq 0$, any null geodesic with $E=0$ has necessarily
+\be
+    \encadre{ L \leq 0 }_{{a\neq 0\atop E=0}}.
+\ee
+\end{greybox}
+
 
 
 \subsection{Equations of geodesic motion for $E\neq 0$}
@@ -339,10 +343,36 @@ When $E\neq 0$, we introduce the reduced constants of motion
 Note that, in geometrized units ($G=1$ and $c=1$), $\ell$ has the dimension of
 a length and $q$ that of a squared length.
 
+The non-negative property of Carter constant $\mathscr{K}$ [Eq.~(\ref{e:ges:K_non_negative})],
+along with the identity (\ref{e:gek:def_Q}) leads to the following constraint on
+the parameters $\ell$ and $q$:
+\be \label{e:gik:q_ell_a_constraint}
+    \encadre{ q + (\ell - a)^2 \geq 0} .
+\ee
+
+\begin{example}[Principal null geodesic]
+For a principal null geodesic with $E\neq 0$, i.e. for any principal null
+geodesic that is not a generator of the horizons $\Hor$ and $\Hor_{\rm in}$
+[cf. Eqs.~(\ref{e:gek:ingoing_null_E_L}) and (\ref{e:gek:outgoing_null_E_L})],
+one has $L = a E\sin^2\th_0$
+[Eqs.~(\ref{e:gek:ingoing_null_E_L}) and (\ref{e:gek:outgoing_null_E_L})]
+and $Q = - a^2 E^2 \cos^2\th_0$ [Eq.~(\ref{e:gek:Q_principal_null})], where
+$\th_0$ is the constant value of $\th$ along the geodesic. We have thus
+\be \label{e:gik:principal_null_l_q}
+    \ell = a \sin^2\th_0 \qand q = - a^2 \cos^4\th_0 .
+\ee
+This yields
+\be
+    q + (\ell - a)^2  = 0 ,
+\ee
+so that (\ref{e:gik:q_ell_a_constraint}) is saturated for principal null
+geodesics.
+\end{example}
+
 The equations of motion in term of the Mino parameter $\lambda'$,
 Eqs.~(\ref{e:gek:eom_Mino}) specialized to $\mu=0$, can be rewritten as
 \begin{subequations}
-\label{e:gik:eom_Mino})
+\label{e:gik:eom_Mino}
 \begin{align}
 & \encadre{ \frac{1}{E} \derd{t}{\lambda'} = \frac{r^2 + a^2}{\Delta} (r^2 + a^2 - a \ell) + a ( \ell - a \sin^2\th ) } \label{e:gik:dtdl_Mino} \\
 & \encadre{ \frac{1}{E} \derd{r}{\lambda'} = \eps_r \sqrt{ \mathcal{R}(r) } } \label{e:gik:drdl_Mino}\\
@@ -357,15 +387,29 @@ with
     \qand
     \tilde\Theta(\th) := \frac{\Theta(\th)}{E^2} .
 \ee
-From the general expressions (\ref{e:gek:def_R_Q}) and (\ref{e:gek:Theta_Q}), we get
-\be \label{e:gik:mcR}
-    \encadre{\mathcal{R}(r) = (r^2 + a^2 - a \ell)^2 - \Delta \left[ q + (\ell -a)^2 \right] }
-\ee
+From the general expressions (\ref{e:gek:def_R_Q}), (\ref{e:gek:R_r_powers}) and (\ref{e:gek:Theta_Q}) specialized to $\mu=0$, we get
+\begin{subequations}
+\label{e:gik:mcR}
+\begin{align}
+    &\encadre{\mathcal{R}(r) = (r^2 + a^2 - a \ell)^2 - \Delta \left[ q + (\ell -a)^2 \right] }
+      \label{e:gik:mcR_Delta}\\
+    &\encadre{\mathcal{R}(r) =  r^4 + (a^2 - \ell^2 - q) r^2 + 2m\left[ q + (\ell -a)^2 \right] r
+    - a^2 q } \label{e:gik:mcR_powers}
+\end{align}
+\end{subequations}
 and
 \be \label{e:gik:tTheta}
     \encadre{ \tilde\Theta(\th) = q + \cos^2\th \left( a^2
     - \frac{\ell^2}{\sin^2\th} \right) } .
 \ee
+
+It suffices to use the parameter $\lambda'' := |E| \lambda'$ to make $E$
+disappear from the system~(\ref{e:gik:eom_Mino}). We therefore conclude that
+\begin{greybox}
+In Kerr spacetime, a null geodesic with $E\neq 0$  is entirely determined
+by the two constants $(\ell,q)$ and by the values of the two signs $\eps_r=\pm 1$ and $\eps_\th=\pm 1$
+at a given point.
+\end{greybox}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{gik_obs_screen.pdf}}
@@ -377,7 +421,7 @@ defined by Eq.~(\ref{e:gek:Cartesian_BL}).
 
 \subsubsection{Remote observer's screen}
 
-The parameters $(\ell,q)$ are closely related to the impact coordinates $(\alpha,\beta)$
+The constants $(\ell,q)$ are closely related to the impact coordinates $(\alpha,\beta)$
 on the screen of an asymptotic inertial observer (cf. Sec.~\ref{s:ker:asymp_inertial_obs})
 in case the null geodesic $\Li$ reaches the asymptotic region $r\to +\infty$.
 Indeed let us consider an asymptotic inertial observer $\Obs$ located at (fixed) Boyer-Lindquist
@@ -482,15 +526,15 @@ get
 \begin{greybox}
 \begin{itemize}
 \item A null geodesic $\Li$ of Kerr spacetime cannot encounter the rotation axis unless it has $\ell=0$.
-\item If $a \leq |\ell|$,
+\item If $|\ell|\geq a$,
 the reduced Carter constant $q$ is necessarily non-negative:
 \be \label{e:gik:q_nonnegative}
     q \geq 0 .
 \ee
-\item The reduced Carter constant $q$ can take negative values only if $a > |\ell|$
+\item The reduced Carter constant $q$ can take negative values only if $|\ell|<a$
 (which implies  $a\neq 0$); its range is then
 limited from below:
-\be
+\be \label{e:gik:q_min}
     q \geq q_{\rm min} = - \left( a - |\ell| \right) ^2.
 \ee
 If $q<0$, $\Li$ is called a \defin{vortical null geodesic}\index{vortical geodesic}; it
@@ -517,6 +561,54 @@ with $\th_0 = 0$ or $\pi$ (the rotation axis) for $\ell=0$ and $0<\th_0< \pi/2$
 or $\pi/2<\th_0<\pi$ for $\ell\neq 0$.
 \end{itemize}
 \end{greybox}
+
+\begin{remark}
+For $\ell < 0$, the constraint (\ref{e:gik:q_min}) is tighter than
+(\ref{e:gik:q_ell_a_constraint}).
+\end{remark}
+
+\begin{example}[Principal null geodesic]
+A principal null geodesic moves at a constant angle
+$\th=\th_0$ and has
+$\ell = a\sin^2\th_0$ [Eq.~(\ref{e:gik:principal_null_l_q})], so that
+(\ref{e:gik:q_min}) yields $q_{\rm min} = - a^2 \cos^4\th_0$.
+Comparing with the value of $q$ given by Eq.~(\ref{e:gik:principal_null_l_q}),
+we note that
+\be
+     q = q_{\rm min} ,
+\ee
+which agrees with the last case listed above (motion at constant
+$\th$).
+\end{example}
+
+\subsection{$r$-motion}
+
+As for any geodesic, the radial motion of a null geodesic $\Li$ is ruled by
+$R(r)\geq 0$ [Eq.~(\ref{e:gek:R_non_neg})], which, in terms of $\mathcal{R}(r)$,
+writes
+\be \label{e:mcR_non_neg}
+    \encadre{\mathcal{R}(r) \geq 0 }.
+\ee
+
+According to the definition given in Sec.~\ref{s:gek:turning_points},
+a $r$-turning of $\Li$ is a point $p_0\in \Li$ for which $\mathcal{R}(r_0) = 0$
+and $\mathcal{R}'(r_0) = 0$, $r_0$ being the radial coordinate of $p_0$.
+We have the following property:
+\begin{greybox}
+A given null geodesic has
+\begin{itemize}
+\item at most one $r$-turning point in $\M_{\rm I}$
+\item no $r$-turning point in $\M_{\rm II}$
+\item at most one $r$-turning point in $\M_{\rm III}$
+\end{itemize}
+\end{greybox}
+\begin{proof}
+The proof is based on expressions (\ref{e:gik:mcR}) of $\mathcal{R}(r)$.
+The easy case is the region $\M_{\rm II}$: in that region $\Delta < 0$
+and Eq.~(\ref{e:gik:mcR_Delta}) yields immediately $\mathcal{R}(r) > 0$
+for $q + (\ell - a)^2 > 0$.
+\end{proof}
+
 
 
 \section{Principal null geodesics}
