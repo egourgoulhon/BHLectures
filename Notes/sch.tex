@@ -895,40 +895,25 @@ In region $\M_{\rm II}$, $r$ must decrease towards the future
 along any null or timelike worldline.
 \end{greybox}
 \begin{proof}
-Let $\Li$ be a null or timelike worldline in $\M_{\rm II}$
-and $\lambda$ some parameter along $\Li$, such that the tangent vector
-$\w{v} = \D\w{x}/\D\lambda$ is future-directed.
-The variation of $r$ along $\Li$ towards the future is then given
-by the differential $\wnab r$ of $r$, considered as a scalar field in $\M$
-[cf. Eq.~(\ref{e:bas:df})]:
+Let $\Li$ be a causal curve in region $\M_{\rm II}$ and $\lambda$ a parameter
+along $\Li$ increasing towards the future.
+The associated tangent vector
+$\w{v} = \D\w{x}/\D\lambda$ is then future-directed.
+According to the above result, $-\wpar_r$ is a future-directed timelike vector
+in $\M_{\rm II}$, so that we can  apply Lemma~1 of Sec.~\ref{s:fra:time_orientation}
+with $\w{u} = - \wpar_r$ and get $\w{g}(-\wpar_r, \w{v}) < 0$.
+Now, using the Schwarzschild-Droste
+components (\ref{e:sch:Schwarz_metric_SD}), we have
 \[
-    \D r = \langle \wnab r, \D\w{x} \rangle = \langle \wnab r, \w{v} \rangle
-        \, \D \lambda
+    \w{g}(-\wpar_r, \w{v}) = - g_{r\mu} v^\mu = - g_{rr} v^r = - g_{rr} \derd{r}{\lambda}
+    = \left(\frac{2m}{r} - 1 \right)^{-1} \derd{r}{\lambda} .
 \]
-Now, let us consider the Schwarzschild-Droste coordinates
-$(x^\alpha) = (t,r,\th,\ph)$ and expand $\w{v}$ in terms of them:
-$\w{v} = v^\mu \wpar_\mu$. We have then
-\[
-     \langle \wnab r, \w{v} \rangle = v^r
-    \qquad\mbox{and}\qquad
-    - \wpar_r \cdot \w{v} = - \left(1 - \frac{2m}{r} \right)^{-1} v^r .
-\]
-Therefore
-\[
-    \D r = \underbrace{\left( \frac{2m}{r} -  1\right)}_{>0}
-        \underbrace{(- \wpar_r \cdot \w{v})}_{<0}
-        \,  \D\lambda ,
-\]
-where the sign of the first term follows from $r<2m$ in $\M_{\rm II}$
-and that of the second term from Eq.~(\ref{e:fra:orient_time1})
-in Lemma~1 of Sec.~\ref{s:fra:time_orientation} applied to the
-future-directed timelike vector $-\wpar_r$ and to the future-directed
-null or timelike vector $\w{v}$.
-Hence we have $\D r < 0$ for $\D\lambda > 0$, i.e. $r$ is necessarily decreasing
-along $\Li$ from the past to the future.
+Since $2m/r - 1 > 0$ in $\M_{\rm II}$, $\w{g}(-\wpar_r, \w{v}) < 0$
+is thus equivalent to $\D r/ \D\lambda < 0$, which proves that $r$ is decreasing
+along $\Li$ as $\lambda$ increases.
 \end{proof}
 Thus not only an observer in $\M_{\rm II}$ cannot cross $\M_{\rm II}$'s outer boundary
-$\Hor$ to reach $\M_{\rm I}$, $\Hor$ being a Killing horizon, but he is forced
+$\Hor$ to reach $\M_{\rm I}$, $\Hor$ being a null hypersurface, but he is forced
 to move to decreasing $r$ until he reaches the curvature singularity at $r\rightarrow 0$.
 We shall study this motion in detail in Sec.~\ref{s:ges:radial_free_fall}.
 

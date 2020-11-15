@@ -630,6 +630,54 @@ the values of the coordinates $(v,\th,\tph)$ are fixed along each of these
 null curves. We therefore denote them by $\Li^{\rm in}_{(v,\th,\tph)}$.
 We shall see in Sec.~\ref{s:ker:principal_geod} that each $\Li^{\rm in}_{(v,\th,\tph)}$ is actually a null geodesic.
 
+\subsubsection{Decaying of $r$ towards the future in $\M_{\rm II}$}
+
+The scalar square of the vector $\wpar_r$ of Boyer-Lindquist coordinates
+is read from the metric components (\ref{e:ker:metric_BL}):
+$\wpar_r \cdot \wpar_r = \w{g}(\wpar_r,\wpar_r) = g_{rr} = \rho^2 / \Delta$. Since $\Delta$ is
+positive in $\M_{\rm I}$ and $\M_{\rm III}$ and negative in $\M_{\rm II}$,
+we conclude that $\wpar_r$ is spacelike in $\M_{\rm I}\cup \M_{\rm III}$
+and timelike in $\M_{\rm II}$. Moreover, it follows from the above choice of time orientation that
+\begin{greybox}
+In region $\M_{\rm II}$, the vector $\wpar_r$ of Boyer-Lindquist coordinates
+is a past-directed timelike vector.
+\end{greybox}
+\begin{proof}
+Applying Lemma~2 of Sec.~\ref{s:fra:time_orientation} with $\w{u}=\w{k}$ and
+$\w{v} = \wpar_r$, we get that $\wpar_r$ is past-directed iff $\w{g}(\w{k},\wpar_r) > 0$.
+Now, in terms of the Boyer-Lindquist components (\ref{e:ker:metric_BL}),
+$\w{g}(\w{k},\wpar_r) = g_{\mu r} k^\mu = g_{rr} k^r = (\rho^2 / \Delta) k^r$.
+The Boyer-Lindquist component $k^r$ is given by Eq.~(\ref{e:ker:frame_Kerr_BL_r}) where
+$\wpar_{\hat{r}} = - \w{k}$; we get $k^r = -1$. Hence $\w{g}(\w{k},\wpar_r) = - \rho^2 /\Delta > 0$
+in $\M_{\rm II}$, for $\Delta < 0$ there.
+\end{proof}
+
+An important consequence of the above property is
+\begin{greybox}
+In region $\M_{\rm II}$, the coordinate $r$ must decrease towards the future
+along any causal (i.e. timelike or null) worldline.
+\end{greybox}
+\begin{proof}
+Let $\Li$ be a causal curve in region $\M_{\rm II}$ and $\lambda$ a parameter
+along $\Li$ increasing towards the future. The associated tangent vector
+$\w{v} = \D\w{x}/\D\lambda$ is then future-directed.
+According to the above result, $-\wpar_r$ is a future-directed timelike vector
+in $\M_{\rm II}$, so that we can  apply Lemma~1 of Sec.~\ref{s:fra:time_orientation}
+with $\w{u} = - \wpar_r$ and get $\w{g}(-\wpar_r, \w{v}) < 0$.
+Now, using Boyer-Lindquist
+components, we have
+\[
+    \w{g}(-\wpar_r, \w{v}) = - g_{r\mu} v^\mu = - g_{rr} v^r = - g_{rr} \derd{r}{\lambda}
+    = - \frac{\rho^2}{\Delta} \derd{r}{\lambda} .
+\]
+Since $-\rho^2/\Delta > 0$ in $\M_{\rm II}$, $\w{g}(-\wpar_r, \w{v}) < 0$
+is thus equivalent to $\D r/ \D\lambda < 0$, which proves that $r$ is decreasing
+along $\Li$ as $\lambda$ increases.
+\end{proof}
+
+
+
+
 \subsection{3+1 Kerr coordinates} \label{s:ker:3p1_Kerr_coord}
 
 As in Sec.~\ref{s:sch:EF_coord},
@@ -843,8 +891,8 @@ Since Eq.~(\ref{e:ker:k_ti_tr}) implies
     k^r = \frac{\D r}{\D\lambda} = - 1 ,
 \]
 we have, up to some additive constant,
-\be
-\lambda=-r .
+\be \label{e:ker:lambda_minus_r}
+\lambda = -r .
 \ee
 The geodesics $\Li^{\rm in}_{(v,\th,\tph)}$
 are called the \defin{ingoing principal null geodesics}\index{principal!null geodesic!ingoing --}\index{ingoing!principal null geodesic}.
@@ -897,7 +945,8 @@ Same as Fig.~\ref{f:ker:princ_null_geod_a90}, but for $a/m=0.5$.}
 \end{figure}
 
 The components of $\w{k}$ with respect to the Boyer-Lindquist coordinate frame
-are easily deduced from Eqs.~(\ref{e:ker:k_ti_tr}) and (\ref{e:ker:frame_Kerr3p1_BL}):
+are immediately deduced from Eq.~(\ref{e:ker:frame_Kerr_BL_r})
+and $\w{k} = - \wpar_{\hat{r}}$:
 \be \label{e:ker:k_BL}
     \w{k} = \frac{r^2 + a^2}{\Delta} \, \wpar_t
         - \wpar_r + \frac{a}{\Delta} \, \wpar_\ph .
@@ -948,7 +997,8 @@ increasing towards the future along ingoing geodesics,
  $r$ is increasing towards the future
 along outgoing principal null geodesics only in regions
 $\M_{\rm I}$ and $\M_{\rm III}$; in region $\M_{\rm II}$,
-$r$ is decreasing towards the future.
+$r$ is decreasing towards the future, in agreement with the general
+rule for causal curves established in Sec.~\ref{s:ker:time_orientation}.
 
 The fact that the Weyl tensor $\w{C}$
 admits two, and exactly two, congruences of principal null geodesics
@@ -1006,9 +1056,11 @@ $r\rightarrow -\infty$, the winding speed (\ref{e:ker:wind_speed}) goes to zero
 and the two congruences of geodesics are $\pm 45^\circ$ lines
 in Figs.~\ref{f:ker:princ_null_geod_a90} and
 \ref{f:ker:princ_null_geod_a50}, as expected.
-Note also that, despite their name, the outgoing geodesics are actually
-ingoing in $\M_{\rm II}$ (between $\Hor_{\rm in}$ and $\Hor$), i.e. have $r$ decaying
-towards the future.
+Note also that, despite their name, the outgoing principal null geodesics are actually
+\emph{ingoing} in $\M_{\rm II}$ (between $\Hor_{\rm in}$ and $\Hor$), i.e. have $r$ decaying
+towards the future, in agreement with the general property stated in
+Sec.~\ref{s:ker:time_orientation}.
+
 \begin{remark}
 In Fig.~\ref{f:ker:princ_null_geod_a50},
 the outgoing geodesics seem to go ``backward in time'' for $-2m \lesssim r \lesssim 0$. This
@@ -1031,9 +1083,9 @@ $\Delta=0$, i.e. on $\Hor$ and $\Hor_{\rm in}$.
 In order to have a parametrization regular everywhere in $\M$, let us introduce
 instead of $r$
 the parameter $\lambda$ such that
-\[
+\be \label{e:ker:dr_dl_out_princip}
     \frac{\D r}{\D\lambda} = \frac{\Delta}{2(r^2+a^2)} .
-\]
+\ee
 The vector $\wl$ tangent to $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ and associated
 to $\lambda$ has then the following components w.r.t. 3+1 Kerr coordinates:
 \begin{align}
@@ -1143,6 +1195,11 @@ on the event horizon [Eq.~(\ref{e:ker:l_eqH_chi}) below]. In particular, its
 non-affinity coefficient $\kappa_{\w{\el}}$ gives there the so-called
 black hole's surface gravity (Sec.~\ref{s:ker:surf_grav} below).
 \end{remark}
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Event horizon} \label{s:ker:event_hor_gen}
@@ -1155,7 +1212,8 @@ corresponding to $r=r_+$ and $r=r_-$ respectively.
 The normal 1-form to these hypersurfaces is $\dd r$; the corresponding
 gradient vector field is $\vw{\nabla} r$, the components of which are
 $\nabla^\alpha r = g^{\alpha\mu} \partial_\mu r = g^{\alpha r}$.
-According to (\ref{e:ker:inv_met_3p1}), we have
+Given (\ref{e:ker:inv_met_3p1}), this yields the following components with respect to
+then 3+1 Kerr coordiantes:
 \be \label{e:ker:nab_r_comp}
     \nabla^\alpha r = \left( \frac{2m r}{\rho^2}, \frac{\Delta}{\rho^2}, 0, \frac{a}{\rho^2}
             \right) .

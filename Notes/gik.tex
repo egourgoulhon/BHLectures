@@ -27,7 +27,7 @@ First, we note that a geodesic $\Li$ with $E=0$ cannot exist outside the ergoreg
 $\mathscr{G}$, by virtue of the result (\ref{e:gek:E_positive}). In particular,
 it cannot exist far from the black hole.
 
-Another property of null geodesics with $E=0$ is to have a non-negative Carter constant:
+Another property of null geodesics with $E=0$ is to have a nonnegative Carter constant:
 \be \label{e:gik:Q_nonneg_E_zero}
    \encadre{ Q \geq 0 }_{E=0} .
 \ee
@@ -343,7 +343,7 @@ When $E\neq 0$, we introduce the reduced constants of motion
 Note that, in geometrized units ($G=1$ and $c=1$), $\ell$ has the dimension of
 a length and $q$ that of a squared length.
 
-The non-negative property of Carter constant $\mathscr{K}$ [Eq.~(\ref{e:ges:K_non_negative})],
+The nonnegative property of Carter constant $\mathscr{K}$ [Eq.~(\ref{e:ges:K_non_negative})],
 along with the identity (\ref{e:gek:def_Q}) leads to the following constraint on
 the parameters $\ell$ and $q$:
 \be \label{e:gik:q_ell_a_constraint}
@@ -519,7 +519,7 @@ and $q=0$. Equations~(\ref{e:gik:screen_alpha_beta}) yield then
 where $\hat{b}$ is the angle introduced by formula (\ref{e:gis:hat_b}).
 \end{remark}
 
-\subsection{$\theta$-motion}
+\subsection{$\theta$-motion} \label{s:gik:th_motion}
 
 Specializing the general results of Sec.~\ref{s:gek:th_motion} to $\mu=0$, we
 get
@@ -527,7 +527,7 @@ get
 \begin{itemize}
 \item A null geodesic $\Li$ of Kerr spacetime cannot encounter the rotation axis unless it has $\ell=0$.
 \item If $|\ell|\geq a$,
-the reduced Carter constant $q$ is necessarily non-negative:
+the reduced Carter constant $q$ is necessarily nonnegative:
 \be \label{e:gik:q_nonnegative}
     q \geq 0 .
 \ee
@@ -595,20 +595,81 @@ a $r$-turning of $\Li$ is a point $p_0\in \Li$ for which $\mathcal{R}(r_0) = 0$
 and $\mathcal{R}'(r_0) = 0$, $r_0$ being the radial coordinate of $p_0$.
 We have the following property:
 \begin{greybox}
-A given null geodesic has
+A null geodesic in Kerr spacetime cannot have
 \begin{itemize}
-\item at most one $r$-turning point in $\M_{\rm I}$
-\item no $r$-turning point in $\M_{\rm II}$
-\item at most one $r$-turning point in $\M_{\rm III}$
+\item more than one $r$-turning point in region $\M_{\rm I}$;
+\item any $r$-turning point in region $\M_{\rm II}$.
 \end{itemize}
 \end{greybox}
 \begin{proof}
-The proof is based on expressions (\ref{e:gik:mcR}) of $\mathcal{R}(r)$.
-The easy case is the region $\M_{\rm II}$: in that region $\Delta < 0$
-and Eq.~(\ref{e:gik:mcR_Delta}) yields immediately $\mathcal{R}(r) > 0$
-for $q + (\ell - a)^2 > 0$.
+The quartic polynomial $\mathcal{R}(r)$ has at most four real roots. If
+a geodesic would have two turning points in $\M_{\rm I}$, this would mean
+that there exist two simple roots in $\M_{\rm I}$ and that
+$\mathcal{R}(r)$ is positive between them. Let us show that this is impossible.
+First, we observe that $\mathcal{R}(r)$ is positive or zero at both
+ends of $\M_{\rm I}$. This is clear
+for the asymptotic flat end since, according to expression~(\ref{e:gik:mcR_powers}),
+$\mathcal{R}(r) \sim r^4 > 0$ when $r\to +\infty$. At the inner end,
+namely for $r = r_+$,
+we have $\Delta = 0$ and expression~(\ref{e:gik:mcR_Delta}) reduces to
+$\mathcal{R}(r_+) = (r_+^2 + a^2 - a \ell)^2 \geq 0$.
+If $\mathcal{R}(r)$ has two simple roots in $\M_{\rm I}$, $r_1$ and $r_2$ say, and is
+positive in the range $r_1< r < r_2$ and well as at $r=r_+$ (where it could also be zero)
+and $r\to+\infty$, then there
+are necessarily a third and fourth roots, $r_3$ and $r_4$ say,
+located respectively between $r_+$ and $r_1$ (with possibly $r_3 = r_+$ if $\mathcal{R}(r_+)= 0$)
+and above $r_2$.
+The four roots are positive, since they all obey $r_i \geq r_+$. Now,
+since there is no $r^3$ term in the expansion (\ref{e:gik:mcR_powers}) of $\mathcal{R}(r)$,
+the sum of the roots of $\mathcal{R}(r)$ is zero, which is impossible with all
+the roots being positive.
+
+In region $\M_{\rm II}$, we have $\Delta < 0$ and
+Eqs.~(\ref{e:gik:mcR_Delta}) and (\ref{e:gik:q_ell_a_constraint}) show that
+$\mathcal{R}(r)$ is the sum of two nonnegative terms. The only possibility
+to have $\mathcal{R}(r)=0$ is then that each term vanishes separately:
+$r^2 + a^2 - a\ell = 0$ and $q + (\ell -a)^2 = 0$, i.e.
+\[
+  r^2 = a (\ell - a) \qand q = - (\ell - a)^2 .
+\]
+The second equation implies $q\leq 0$. The case $q=0$ would lead to $\ell = a$ and $r^2 = 0$,
+which is impossible in $\M_{\rm II}$. There remains $q < 0$, but
+according to the results of Sec.~\ref{s:gik:th_motion}, this implies $|\ell| < a$, so
+that $\ell - a < 0$ and the first equation above would yield $r^2 < 0$, which is impossible.
+There is thus no $r$-turning point in $\M_{\rm II}$.
 \end{proof}
 
+\begin{remark}
+That no $r$-turning point can exist in $\M_{\rm II}$ has been established
+above by some considerations on $\mathcal{R}(r)$. This property can also be deduced as
+an immediate consequence of the result (\ref{e:gek:r_decay_MII}), namely
+that $r$ must be a strictly decreasing function of $\lambda$ at any point
+in $\M_{\rm II}$.
+\end{remark}
+
+
+\begin{remark}
+The region $\M_{\rm III}$ shares with $\M_{\rm I}$ that $\mathcal{R}(r)$ is
+nonnegative at each of its ends: $\mathcal{R}(r) \sim r^4 > 0$ when $r\to -\infty$
+and $\mathcal{R}(r_-) = (r_-^2 + a^2 - a \ell)^2 \geq 0$. However the argument
+used to limit the number of $r$-turning points in $\M_{\rm I}$
+cannot be applied to $\M_{\rm III}$ because the latter can accomodate for positive and negative
+values of $r$ and thus four roots of $\mathcal{R}(r)$ can be located in $\M_{\rm III}$, allowing
+for two $r$-turning points there.
+\end{remark}
+
+
+\begin{remark}
+$\mathcal{R}(r_+) = 0$ occurs for $\Omega_H \ell = 1$
+and $\mathcal{R}(r_-) = 0$ for $\Omega_{\rm in} \ell = 1$ [cf. Eqs.~(\ref{e:ker:def_OmegaH}) and (\ref {e:ker:def_Omega_in})].
+\end{remark}
+
+%\begin{remark}
+%Since their sum is zero, when the four roots of $\mathcal{R}(r)$ coincide,
+%they must be equal to zero and we have $\mathcal{R}(r) = r^4$. This occurs for $\ell=a$ and $q=0$, i.e.
+%for a principal null geodesics in the equatorial plane, cf. Eq.~(\ref{e:gik:principal_null_l_q})
+%with $\th_0=\pi/2$.
+%\end{remark}
 
 
 \section{Principal null geodesics}

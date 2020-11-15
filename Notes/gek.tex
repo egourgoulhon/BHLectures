@@ -171,7 +171,7 @@ the above formula does yield a constant value for $L$. Moreover, it fulfills
 $L\geq 0$ with $L=0$ only for $a=0$ or $\th\in\{0,\pi\}$ (rotation axis).
 \end{example}
 
-\begin{example}[Outgoing principal null geodesics]
+\begin{example}[Outgoing principal null geodesics] \label{x:gek:outgoing_null_E_L}
 For the outgoing principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
 introduced in Sec.~\ref{s:ker:principal_geod}, the 4-momentum vector
 is
@@ -235,7 +235,7 @@ for the outgoing principal null geodesic $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$,
 \begin{eqnarray}
  & \mbox{in}\ \Hor\cup\Hor_{\rm in},\quad & E = 0 \qand L = 0  \label{e:gek:E_L_outgoing_hor} \\
  & \mbox{in}\ \M_{\rm I}\cup\M_{\rm III},\quad & E > 0 \qand L = a E \sin^2 \th \\
- & \mbox{in}\ \M_{\rm II},\quad & E < 0 \qand L = a E \sin^2 \th .
+ & \mbox{in}\ \M_{\rm II},\quad & E < 0 \qand L = a E \sin^2 \th . \label{e:gek:E_L_outgoing_MII}
 \end{eqnarray}
 \end{subequations}
 In particular, (\ref{e:gek:E_L_outgoing_hor}) is nothing but the
@@ -1039,6 +1039,13 @@ and $\Hor_{\rm in}$.
 Negative-energy particles are those involved in the Penrose process discussed in Sec.~\ref{s:ker:Penrose_proc}.
 Note that according to (\ref{e:gek:E_positive}), neither a negative-energy particle nor a zero-energy one can exist in the exterior of the ergoregion.
 
+\begin{example}[Outgoing principal null geodesics in $\M_{\rm II}$]
+We have seen in Example~\ref{x:gek:outgoing_null_E_L} (p.~\pageref{x:gek:outgoing_null_E_L})
+that in the region $\M_{\rm II}$, the outgoing principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ have $E<0$ [Eq.~(\ref{e:gek:E_L_outgoing_MII})]. This is constitent with
+(\ref{e:gek:E_positive}) because $\M_{\rm II}$ is entirely contained in the ergoregion $\mathscr{G}$
+(cf. Fig.~\ref{f:ker:ergo_a90}).
+\end{example}
+
 \begin{remark}
 As alreay stressed in Remark~\ref{r:ker:negative_energy} on p.~\pageref{r:ker:negative_energy}, any local
 observer measuring the energy of a negative-energy particle or a zero-energy one, according to the process described in Sec.~\ref{s:fra:measure}, will
@@ -1830,6 +1837,35 @@ Only geodesics with $|E| > \mu$ may have some part in the region $r<0$ of Kerr s
     \Li \cap \M_- \neq \varnothing \Longrightarrow |E| > \mu .
 \ee
 \end{greybox}
+
+\subsubsection{Decay of $r$ towards the future in $\M_{\rm II}$}
+
+As a particular case  of the result established in Sec.~\ref{s:ker:time_orientation}
+for any causal worldline (not necessarily a geodesic), we have
+\begin{greybox}
+In region $\M_{\rm II}$, the coordinate $r$ must decrease towards the future
+along any timelike or null geodesic:
+\be \label{e:gek:r_decay_MII}
+    \encadre{\derd{r}{\lambda} < 0 }_{\M_{\rm II}} .
+\ee
+\end{greybox}
+
+\begin{example}[Principal null geodesics]
+For the ingoing principal null geodesics $\Li^{\rm in}_{(v,\th,\tph)}$,
+a future-directed tangent vector is $\w{k}$ and we have
+$k^r = \D r / \D\lambda = - 1$, since the affine parameter associated
+with $\w{k}$ is $\lambda = -r$ [Eq.~(\ref{e:ker:lambda_minus_r})].
+Hence for these geodesics, $r$ is decreasing towards the future everywhere
+in $\M$, and in particular in $\M_{\rm II}$.
+For the outgoing principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$,
+a future-directed tangent vector is $\wl$ and the associated (non-affine)
+parameter obeys Eq.~(\ref{e:ker:dr_dl_out_princip}):
+\[
+    \derd{r}{\lambda} = \frac{\Delta}{2(r^2 + a^2)} .
+\]
+Thus $\D r / \D\lambda < 0$ in $\M_{\rm II}$,
+since $\Delta<0$ there.
+\end{example}
 
 \subsection{Geodesics reaching or emanating from the ring singularity}
 
