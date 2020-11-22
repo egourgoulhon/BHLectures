@@ -671,11 +671,14 @@ and $\mathcal{R}(r_-) = 0$ for $\Omega_{\rm in} \ell = 1$ [cf. Eqs.~(\ref{e:ker:
 %with $\th_0=\pi/2$.
 %\end{remark}
 
-In view of the above result, any null geodesic $\Li$ must have one of the following behaviour in
-region $\M_{\rm I}$:
+In view of the above result, we can state:
+
+\begin{greybox}
+In the region $\M_{\rm I}$ of Kerr spacetime,
+a null geodesic $\Li$ must have one of the following behaviours:
 \begin{enumerate}
 \item $\Li$ arises from the past null infinity of $\M_{\rm I}$, $\scri^-$, has a $r$-turning point,
-which we may call the \defin{periastron}, and terminates at the future null infinity
+which we may call the \defin{periastron}\index{periastron}, and terminates at the future null infinity
 of $\M_{\rm I}$, $\scri^+$ ;
 \item $\Li$ arises from the past null infinity $\scri^-$, has $r$ decreasing
 monotically and crosses the black hole event horizon $\Hor$;
@@ -683,17 +686,163 @@ monotically and crosses the black hole event horizon $\Hor$;
 from the white hole region $\M_{\rm II}^*$, has $r$ increasing monotonically and
 terminates at the future null infinity $\scri^+$;
 \item $\Li$ arises from the past event horizon $\Hor^-$, has a $r$-turning point,
-which we may call the \defin{apoastron} and crosses the black hole event horizon $\Hor$;
+which we may call the \defin{apoastron}\index{apoastron}, and crosses the black hole event horizon $\Hor$;
 \item $\Li$ evolves at a fixed value of $r$.
 \end{enumerate}
-Case 1 corresponds to the standard deflection of light.
+\end{greybox}
+Case 1 corresponds to a scattering\index{scattering} trajectory, leading to the standard phenomenon of deflection of light\index{deflection of light}.
 Ingoing principal null geodesics belong to case 2, while the outgoing ones belong to case 3.
-Case 5 will be discussed in Sec.~\ref{s:gik:photon_region}.
+Case 5 corresponds to the so-called \emph{spherical orbits} and will be discussed in Sec.~\ref{s:gik:spherical_orbits}.
+
+\begin{remark}
+The terminology  \emph{(periastron, apoastron)} employed here agree with that
+introduced for the Schwarzschild case in Sec.~\ref{s:ges:null_radial_behav}.
+\end{remark}
 
 %\section{Principal null geodesics}
 
-\section{Photon region} \label{s:gik:photon_region}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Spherical photon orbits} \label{s:gik:spherical_orbits}
+
+In the Schwarzschild case studies in Chap.~\ref{s:gis}, the circular photon
+orbits at $r=3m$ played a central role in the determination of
+the black hole shadow and the image of an accretion structure.
+For the Kerr black hole, a similar role is played by the spherical photon
+orbits. They are also null geodesics at a fixed value of $r$ but, contrary
+to circular photon orbits of Schwarzschild spacetime, they are not planar
+in general.
+
 
 \subsection{Spherical null geodesics}
 
+We shall say that a null geodesic $\Li$ is \defin{spherical} or
+is a \defin{spherical photon orbit}\index{photon!orbit!spherical --}\index{orbit!photon --}\index{spherical!photon orbit} iff it lies at a constant value of the coordinate $r$, $r_0$ say.
+The quartic polynomial $\mathcal{R}(r)$ associated to the constant of motions $(\ell,q)$ of $\Li$
+must obey
+\be \label{e:gik:R_Rp_r0_zero}
+    \mathcal{R}(r_0) = 0 \qand \mathcal{R}'(r_0) = 0 .
+\ee
+\begin{proof}
+Since $r=r_0$ with $r_0$ constant, we have $\D r/\D\lambda' = 0$ where $\lambda'$ is the Mino parameter along $\Li$, so
+that Eq.~(\ref{e:gik:drdl_Mino}) implies $\mathcal{R}(r_0) = 0$. If $\mathcal{R}'(r_0) \neq 0$,
+then $r_0$ would correspond to a $r$-turning point of $\Li$  (cf. Eq.~(\ref{e:gek:der_r_turning})),
+which would contradict $r$ being constant.
+\end{proof}
+
+In view of expression (\ref{e:gik:mcR_Delta}) of $\mathcal{R}(r)$, the system
+(\ref{e:gik:R_Rp_r0_zero}) is equivalent to
+\begin{subequations}
+\label{e:gik:syst_spherical_orbit}
+\begin{align}
+    &(r_0^2 + a^2 - a \ell)^2 - \tilde{q} \Delta_0 = 0  \label{e:gik:syst_spherical_orbit_1} \\
+    & 2 r_0 (r_0^2 + a^2 - a \ell) - \tilde{q} (r_0 - m) = 0 , \label{e:gik:syst_spherical_orbit_2}
+\end{align}
+\end{subequations}
+where $\Delta_0 := r_0^2 - 2 m r_0 + a^2$ and
+\be \label{e:gik:def_tq}
+    \tilde{q} := q + (\ell - a)^2 .
+\ee
+This is a system of 2 equations for 3 unknowns: $(r_0,\ell,q)$. We thus
+expect a one-parameter family of solutions. It is convenient to consider
+$r_0$ as the parameter and to solve the system (\ref{e:gik:syst_spherical_orbit})
+for $(\ell,q)$.
+We shall distinguish the case $r_0 = m$ from $r_0 \neq m$.
+If $r_0 = m$, the system (\ref{e:gik:syst_spherical_orbit}) reduces to
+\[
+\left\{\begin{array}{l}
+    (m^2 + a^2 - a \ell)^2 - \tilde{q} (a^2 - m^2) = 0 \\
+    m^2 + a^2 - a \ell = 0
+\end{array}
+\right.
+\iff
+\left\{\begin{array}{l}
+    \ell = a + \frac{m^2}{a}\\
+    \tilde{q} = 0 \quad\mbox{or}\quad a = m .
+\end{array}
+\right.
+\]
+Now, $\tilde{q} = 0$ is equivalent to $q = - (\ell - a)^2 = - m^4 / a^2$,
+which implies $q< 0$, which is impossible for $\ell = a + \frac{m^2}{a} > a$,
+due to the property $|\ell| > a \implies q \geq 0$ (cf. Sec.~\ref{s:gik:th_motion}).
+There remains $a = m$, which implies and $\ell = 2 m$. Hence we conclude
+\be
+  \encadre{ r_0 = m \iff
+   \left\{\begin{array}{l}
+   a = m \\
+   \ell = 2 m .
+\end{array}
+\right. }
+\ee
+We shall discuss this case further in Chap.~\ref{s:exk}, which is devoted
+to the extreme Kerr black hole ($a=m$).
+In the remainder of this section, we assume $r_0 \neq m$.
+Equation~(\ref{e:gik:syst_spherical_orbit_2}) is then equivalent to
+\be \label{e:gik:spher_tq_sol}
+    \tilde{q} = \frac{2 r_0 (r_0^2 + a^2 - a \ell)}{r_0 - m} .
+\ee
+Substituting this relation into Eq.~(\ref{e:gik:syst_spherical_orbit_1}), we get
+an equation involving $\ell$ only:
+\[
+    (r_0^2 + a^2 - a \ell) \left( r_0^2 + a^2 - a \ell - \frac{2 r_0}{r_0 - m} \Delta_0 \right) = 0 .
+\]
+The two solutions are immediate:
+\be \label{e:gik:spher_ell_sol1}
+    \ell = a + \frac{r_0^2}{a}
+\ee
+or
+\be \label{e:gik:spher_ell_sol2}
+    \ell = a + \frac{r_0}{a(r_0 - m)} \left[r_0(r_0 - m) - 2 \Delta_0 \right] .
+\ee
+The solution (\ref{e:gik:spher_ell_sol1}), once inserted in (\ref{e:gik:spher_tq_sol})
+leads to $\tilde{q} = 0$, i.e. to $q = - (\ell - a)^2 \leq 0$.
+Now, $q<0$ is excluded since Eq.~(\ref{e:gik:spher_ell_sol1}) implies $|\ell| \geq a$
+(cf. Sec.~\ref{s:gik:th_motion}). There remains $q=0$, which yields $\ell = a$. Then
+Eq.~(\ref{e:gik:spher_ell_sol1}) leads to $r_0 = 0$. However, according to the
+results stated in Sec.~\ref{s:gik:th_motion}, $q=0$ and $\ell = a$
+imply that the geodesic is confined in the equatorial plane, where $r_0=0$
+corresponds to the ring singularity. We thus conclude that the solution
+(\ref{e:gik:spher_ell_sol1}) is not permitted. The remains then the solution
+(\ref{e:gik:spher_ell_sol2}). Substituting it into Eq.~(\ref{e:gik:spher_tq_sol}), we get
+\be \label{e:gik:spher_tq_r0}
+    \tilde{q} = \frac{4 r_0^2 \Delta_0}{(r_0 -m)^2} ,
+\ee
+so that Eqs.~(\ref{e:gik:def_tq}) and (\ref{e:gik:spher_ell_sol2}) yield, after simplifications,
+\be \label{e:gik:spher_q_prov}
+    q = \frac{r_0^3}{a^2(r_0 - m)^2}\left[ - r_0^3 + 6 m r_0^2 - 9 m^2 r_0 + 4 a^2 m \right] .
+\ee
+Recasting expressions (\ref{e:gik:spher_ell_sol2}) and (\ref{e:gik:spher_q_prov}), we
+conclude that a spherical photon orbit at $r=r_0\neq m$ has a reduced angular momentum $\ell$
+and a reduced Carter constant $q$ given by
+\be
+   \encadre{ \ell = \frac{r_0^2(3m  - r_0) - a^2 (r_0 + m)}{a(r_0 - m)} },
+\ee
+\be
+    \encadre{ q = \frac{r_0^3}{a^2(r_0 - m)^2}\left[ 4 a^2 m - r_0(r_0 - 3m)^2 \right] } .
+\ee
+For a solution to exist, the constraint (\ref{e:gik:q_ell_a_constraint}) must
+be obeyed; it writes $\tilde{q} \geq 0$. Given expression (\ref{e:gik:spher_tq_r0}) for
+$\tilde{q}$, we see that it is equivalent $\Delta_0 \geq 0$. Hence spherical photon orbits
+do not exist in region $\M_{\rm II}$ of Kerr spacetime. This is in agreement with the
+general result (\ref{e:gek:r_decay_MII}).
+
+\subsection{Photon region}
+
 \section{Images}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
