@@ -351,10 +351,11 @@ the parameters $\ell$ and $q$:
 \ee
 
 \begin{example}[Principal null geodesic]
-For a principal null geodesic with $E\neq 0$, i.e. for any principal null
-geodesic that is not a generator of the horizons $\Hor$ and $\Hor_{\rm in}$
-[cf. Eqs.~(\ref{e:gek:ingoing_null_E_L}) and (\ref{e:gek:outgoing_null_E_L})],
-one has $L = a E\sin^2\th_0$
+A principal null geodesic has $E\neq 0$ if, and only if, it does not belong to the outgoing
+family generating the horizon $\Hor$ or $\Hor_{\rm in}$. This follows immediately from
+Eqs.~(\ref{e:gek:ingoing_null_E_L}) and (\ref{e:gek:outgoing_null_E_L}).
+One has then
+$L = a E\sin^2\th_0$
 [Eqs.~(\ref{e:gek:ingoing_null_E_L}) and (\ref{e:gek:outgoing_null_E_L})]
 and $Q = - a^2 E^2 \cos^2\th_0$ [Eq.~(\ref{e:gek:Q_principal_null})], where
 $\th_0$ is the constant value of $\th$ along the geodesic. We have thus
@@ -410,6 +411,21 @@ In Kerr spacetime, a null geodesic with $E\neq 0$  is entirely determined
 by the two constants $(\ell,q)$ and by the values of the two signs $\eps_r=\pm 1$ and $\eps_\th=\pm 1$
 at a given point.
 \end{greybox}
+
+\begin{example}[Principal null geodesic]
+Given the values (\ref{e:gik:principal_null_l_q}) of $\ell$ and $q$
+for a principal null geodesic, Eq.~(\ref{e:gik:mcR_powers}) reduces to
+a simple expression for the quartic polynomial $\mathcal{R}$:
+\be \label{e:gik:mR_PNG}
+    \mathcal{R}(r) = \left( r^2 + a^2 \cos^2 \th_0 \right)^2 .
+\ee
+We note that $\mathcal{R}(r) = \rho^4$, which makes sense because $\th = \th_0$
+is constant along such a geodesic. For any principal null geodesics lying
+in the equatorial plane, the polynomial simplifies even further:
+\be
+    \mathcal{R}(r) = r^4, \qquad \left(\th_0 = \frac{\pi}{2} \right) .
+\ee
+\end{example}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{gik_obs_screen.pdf}}
@@ -691,13 +707,21 @@ which we may call the \defin{apoastron}\index{apoastron}, and crosses the black 
 \end{enumerate}
 \end{greybox}
 Case 1 corresponds to a scattering\index{scattering} trajectory, leading to the standard phenomenon of deflection of light\index{deflection of light}.
-Ingoing principal null geodesics belong to case 2, while the outgoing ones belong to case 3.
+Ingoing principal null geodesics belong to case 2, while the outgoing ones with $E\neq 0$ belong to case 3
+(cf. Example~\ref{x:gik:png_R_positive} below).
 Case 5 corresponds to the so-called \emph{spherical orbits} and will be discussed in Sec.~\ref{s:gik:spherical_orbits}.
 
 \begin{remark}
-The terminology  \emph{(periastron, apoastron)} employed here agree with that
+The terminology  \emph{(periastron, apoastron)} employed here agrees with that
 introduced for the Schwarzschild case in Sec.~\ref{s:ges:null_radial_behav}.
 \end{remark}
+
+\begin{example}[principal null geodesics] \label{x:gik:png_R_positive}
+That the principal null geodesics with $E\neq 0$ belong to cases 2 and 3 above
+is clear from their value (\ref{e:gik:mR_PNG}) for $\mathcal{R}(r)$:
+$\mathcal{R}(r) = \rho^4 > 0$ in all $\M$, which precludes the existence
+of any $r$-turning point along these geodesics.
+\end{example}
 
 %\section{Principal null geodesics}
 
