@@ -862,20 +862,106 @@ $-m\leq r_0 \leq 3m/2$. The thick vertical lines
 mark the two horizons: $\Hor$ (black) and $\Hor_{\rm in}$ (brown).
 The horizontal dotted lines mark the boundary of the region $|\ell|<a$,
 where $q$ can take negative values. Values of $q$ in the grey zone
-are unphysical, so that only values of $r_0$ for which the blue curve lies
+are unphysical, i.e. do not fulfil the conditions (\ref{e:gik:q_constraints}),
+so that only values of $r_0$ for which the blue curve lies
 above the grey zone correspond to spherical photon orbits.
 }
 \end{figure}
 
 Equations~(\ref{e:gik:spher_ell_r0}) and (\ref{e:gik:spher_q_r0}) provide
-the general solution to the system (\ref{e:gik:R_Rp_r0_zero}), but not all
+the general solution to the system $\mathcal{R}(r_0) = 0$ and $\mathcal{R}'(r_0) = 0$
+[Eq.~(\ref{e:gik:R_Rp_r0_zero})], but not all
 of them correspond to spherical photon orbits. Indeed, we do not expect
 spherical photon orbits to exist for any value of $r_0$, in particular
-for $r_0\gg m$. Actually, not all values of $q$ given by Eq.~(\ref{e:gik:spher_q_r0})
+for $|r_0|\gg m$. Actually, not all values of $q$ given by Eq.~(\ref{e:gik:spher_q_r0})
 are permitted, but only those that fulfill the constraints established in
-Sec.~\ref{s:gik:th_motion}.
+Sec.~\ref{s:gik:th_motion}, namely
+\begin{subequations}
+\label{e:gik:q_constraints}
+\begin{align}
+    & q \geq 0 \quad \mbox{if}\  |\ell| \geq a \label{e:gik:q_constraints_1}\\
+    & q \geq - \left( a - |\ell| \right) ^2  \quad \mbox{if}\  |\ell| < a . \label{e:gik:q_constraints_2}
+\end{align}
+\end{subequations}
+The solutions $\ell$ and $q$ given by Eqs.~(\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0})
+are plotted as functions of $r_0$ for $a=0.95\, m$
+in Fig.~\ref{f:gik:spher_orb_exist}, where the
+region excluded by (\ref{e:gik:q_constraints}) is colored in grey. Consequently
+spherical photon orbits exist only for values of $r_0$ for which the $q$ curve
+(in blue) lies above the grey region. We see that this occurs in two intervals:
+\be
+    \encadre{ r_0 \in [r_{\rm ph}^{**}, r_{\rm ph}^*] }
+    \qand
+    \encadre{ r_0 \in [r_{\rm ph}^+, r_{\rm ph}^-] },
+\ee
+where $r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$ are the three (ordered) roots
+distinct from $0$ of the equation $q(r_0) = 0$ (boundary for
+condition (\ref{e:gik:q_constraints_1})) and $r_{\rm ph}^{**}$ is the unique
+root of the equation $q(r_0) = - \left( a - |\ell(r_0)| \right) ^2$ when
+$|\ell(r_0)|  < a$ (boundary for condition (\ref{e:gik:q_constraints_2})).
+Given expression (\ref{e:gik:spher_q_r0}) for $q$, we see that
+$r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$
+are the three roots of the cubic equation
+\be
+r_0(r_0 - 3m)^2 - 4 a^2 m  = 0 .
+\ee
+We can solve this equation by bringing it to a depressed form in order
+to use Viète's formulas (\ref{e:gis:Viete}). However, we may rely on an
+already solved equation by noticing the following equivalences:
+\begin{eqnarray}
+r_0(r_0 - 3m)^2 - 4 a^2 m  = 0  & \iff & r_0 \geq 0 \ \ \mbox{and} \ \
+            \sqrt{r_0} | r_0 - 3 m | = 2 a\sqrt{m} \nonumber \\
+& \iff &  r_0 \geq 0 \ \ \mbox{and} \ \
+    \sqrt{r_0} (r_0 - 3 m ) \pm 2 a \sqrt{m} = 0 \nonumber \\
+& \iff &  r_0 \geq 0 \ \ \mbox{and} \ \
+    r_0^{3/2} - 3 m r_0^{1/2} \pm 2 a \sqrt{m} = 0 , \nonumber
+\end{eqnarray}
+where $\pm$ is $+$ for $r_0 \leq 3 m$ and $-$ for $r_0 \geq 3m$.
+We recognize the function of $r_0$ which appears in the left-hand side
+of Eq.~(\ref{e:gek:cubic_sqrt_r0}). As shown in Sec.~\ref{s:gek:existence_circ_orb},
+there are three real roots,
+$r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$, with
+$r_{\rm ph}^*, r_{\rm ph}^+\leq 3m$ ($\pm = +$)
+and $r_{\rm ph}^- \geq 3m$ ($\pm = -$). They are given by Eqs.~(\ref{e:gek:def_r_min_pm})
+and (\ref{e:gek:def_r_star}):
+\be
+   \encadre{ r_{\rm ph}^\pm := 4m\cos^2 \left[ \frac{1}{3} \arccos\left( \mp \frac{a}{m} \right) \right] }
+\ee
+\be
+   \encadre{ r_{\rm ph}^* := 4m\cos^2 \left[ \frac{1}{3} \arccos\left(-\frac{a}{m} \right)  + \frac{4\pi}{3} \right] } .
+\ee
+As for $r_{\rm ph}^{**}$, since $q(r_0) = - (|\ell(r_0)| - a)^2$ with
+$|\ell(r_0)|  < a$ occurs in a region where $\ell(r_0) < 0$ (cf. Fig.~\ref{f:gik:spher_orb_exist}),
+we get that $r_{\rm ph}^{**}$ is a solution of the equation
+$q(r_0) = - (\ell(r_0) + a)^2$. Given expressions (\ref{e:gik:spher_ell_r0}) and (\ref{e:gik:spher_q_r0})
+for respectively $\ell(r_0)$ and $q(r_0)$, we get that $r_{\rm ph}^{**}$ is a root of the cubic
+equation
+\be
+    2 r_0^3 - 3 m r_0^2 + a^2 m = 0 .
+\ee
+By the change of variable $r_0 =: x + m/2$, we turn this equation into a depressed one:
+\[
+    x^3  - \frac{3}{4} m^2 x + \frac{m}{2} \left(a^2 - \frac{m^2}{2} \right) = 0 ,
+\]
+i.e. $x^3 + px + q = 0$, with $p:= -3m^2/4$ and $q:=(m/2)(a^2 - m^2/2)$.
+The discrimant is $-(4 p^3 + 27 q^2) = 27 a^2 m^2 (m^2 - a^2)/4 \geq 0$. The three roots
+$(x_k)_{k\in\{0,1,2\}}$ are then all real and are given by Viète's formula (\ref{e:gis:Viete}).
+Only the root $x_1$ leads to a negative value of $r_0$, which is the value we
+are looking for (cf. Fig.~\ref{f:gik:spher_orb_exist}). Viète's formula (\ref{e:gis:Viete})
+with $k=1$ yields
+\[
+    x_1 = m \cos\left[ \frac{1}{3} \arccos\left(1 - 2 \frac{a^2}{m^2} \right) + \frac{2\pi}{3} \right]
+        = m \cos\left[ \frac{2}{3} \arcsin\left(\frac{a}{m}\right) + \frac{2\pi}{3} \right] ,
+\]
+from which we obtain
+\be
+   \encadre{ r_{\rm ph}^{**} = \frac{m}{2} + m \cos\left[ \frac{2}{3} \arcsin\left(\frac{a}{m}\right) + \frac{2\pi}{3} \right] } .
+\ee
 
 
+
+This is not surprising since $q=0$ implies equatorial orbits, i.e. necessarily
+circular ones.
 
 \subsection{Photon region}
 
