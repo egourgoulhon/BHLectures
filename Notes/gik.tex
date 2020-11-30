@@ -561,8 +561,8 @@ If $q>0$ and $\ell=0$, $\Li$
 crosses repeatedly the rotation axis, with $\th$ taking all values in the
 range $[0,\pi]$.
 \item If $q=0$, $\Li$ is stably confined to the equatorial plane
-for $a  < |\ell|$ or $a  = |\ell| \neq 0$;
-for $a > |\ell|$, $\Li$ either lies unstably in the equatorial
+for $|\ell| > a$ or $|\ell| = a\neq 0$;
+for $|\ell| < a$, $\Li$ either lies unstably in the equatorial
 plane or approaches it asymptotically from one side, while for $\ell=0$ and $a=0$,
 $\Li$ lies at a constant value $\th=\th_0\in[0,\pi]$.
 \item If $q_{\rm min} < q < 0$, $\Li$ oscillates between two turning
@@ -572,9 +572,12 @@ $\Li$ oscillates about the rotation axis, without encoutering the equatorial
 plane, having a turning point at $\th_0$ such that $0<\th_0<\pi/2$
 (motion in the Northern hemisphere) or $\pi/2<\th_0<\pi$
 (motion in the Southern hemisphere).
-\item If $q = q_{\rm min}$, $\Li$ lies stably at a constant value $\th=\th_0$,
-with $\th_0 = 0$ or $\pi$ (the rotation axis) for $\ell=0$ and $0<\th_0< \pi/2$
-or $\pi/2<\th_0<\pi$ for $\ell\neq 0$.
+\item If $q = q_{\rm min}$, $\Li$ lies stably at a constant value
+$\th=\th_*$ or $\th = \pi - \th_*$, with $\th_*\in [0, \pi/2)$%]$
+\ given by
+\be \label{e:gik:th_s_ell_over_a}
+     \th_* := \arcsin\sqrt{\frac{|\ell|}{a}} .
+\ee
 \end{itemize}
 \end{greybox}
 
@@ -586,15 +589,17 @@ For $\ell < 0$, the constraint (\ref{e:gik:q_min}) is tighter than
 \begin{example}[Principal null geodesic]
 A principal null geodesic moves at a constant angle
 $\th=\th_0$ and has
-$\ell = a\sin^2\th_0$ [Eq.~(\ref{e:gik:principal_null_l_q})], so that
-(\ref{e:gik:q_min}) yields $q_{\rm min} = - a^2 \cos^4\th_0$.
+$\ell = a\sin^2\th_0$ [Eq.~(\ref{e:gik:principal_null_l_q})].
+For $\th_0\neq \pi/2$, we have $|\ell| < a$ and
+Eq.~(\ref{e:gik:q_min}) yields $q_{\rm min} = - a^2 \cos^4\th_0$.
 Comparing with the value of $q$ given by Eq.~(\ref{e:gik:principal_null_l_q}),
 we note that
 \be
      q = q_{\rm min} ,
 \ee
-which agrees with the last case listed above (motion at constant
-$\th$).
+which agrees with the last case listed above, i.e. motion at constant
+$\th$, with $\th_0 = \th_*$ or $\th_0 = \pi - \th_*$ according
+to Eq.~(\ref{e:gik:th_s_ell_over_a}), since $\sqrt{|\ell|/a} = \sin\th_0$.
 \end{example}
 
 \subsection{$r$-motion}
@@ -790,7 +795,7 @@ Now, $\tilde{q} = 0$ is equivalent to $q = - (\ell - a)^2 = - m^4 / a^2$,
 which implies $q< 0$, which is impossible for $\ell = a + \frac{m^2}{a} > a$,
 due to the property $|\ell| > a \implies q \geq 0$ (cf. Sec.~\ref{s:gik:th_motion}).
 There remains $a = m$, which implies and $\ell = 2 m$. Hence we conclude
-\be
+\be \label{e:gik:spher_orb_r0_eq_m}
   \encadre{ r_0 = m \iff
    \left\{\begin{array}{l}
    a = m \\
@@ -943,7 +948,7 @@ we get that $r_{\rm ph}^{**}$ is a solution of the equation
 $q(r_0) = - (a + \ell(r_0))^2$. Given expressions (\ref{e:gik:spher_ell_r0}) and (\ref{e:gik:spher_q_r0})
 for respectively $\ell(r_0)$ and $q(r_0)$, we get that $r_{\rm ph}^{**}$ is a root of the cubic
 equation
-\be
+\be \label{e:gik:cubic_rph_ss}
     2 r_0^3 - 3 m r_0^2 + a^2 m = 0 .
 \ee
 By the change of variable $r_0 =: x + m/2$, we turn this equation into a depressed one:
@@ -981,26 +986,125 @@ the inner horizon $\Hor_{\rm in}$.
 The four critical radii $r_{\rm ph}^{**}$, $r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$
 are plotted in terms of $a$ in Fig.~\ref{f:gik:spher_orb_range}. We notice that
 \be
-    - \frac{m}{2} \leq r_{\rm ph}^{**} \leq 0 \leq r_{\rm ph}^* \leq r_- \leq m \leq r_+ \leq r_{\rm ph}^+
-    \leq 3 m \leq r_{\rm ph}^- \leq 4 m ,
+  \encadre{  - \frac{m}{2} \leq r_{\rm ph}^{**} \leq 0 \leq r_{\rm ph}^* \leq r_- \leq m \leq r_+ \leq r_{\rm ph}^+
+    \leq 3 m \leq r_{\rm ph}^- \leq 4 m },
 \ee
-with the limits (\ref{e:gek:lim_rph_pm}) and (\ref{e:gek:lim_rph_s}).
+with the limits (\ref{e:gek:lim_rph_pm}) and (\ref{e:gek:lim_rph_s}). In addition,
+\be
+    \lim_{a\to 0} r_{\rm ph}^{**} = 0 \qand
+    \lim_{a\to m} r_{\rm ph}^{**} = - \frac{m}{2} .
+\ee
 As already stressed in Sec.~\ref{s:gek:existence_circ_orb}, $r_{\rm ph}^*$ is lower than, but very close to,
 the inner horizon radius $r_{-}$, with  $\max (r_- - r_{\rm ph}^*) \simeq 0.032 \, m$,
 achieved for $a\simeq 0.9 \, m$.
+In view of the above inequalities and the ranges (\ref{e:gik:spher_orb_range}), we conclude that
+\begin{greybox}
+Spherical photon orbits exist in two regions of Kerr spacetime:
+\begin{itemize}
+\item orbits with $r_0\in [r_{\rm ph}^{**}, r_{\rm ph}^*]$ are located in $\M_{\rm III}$;
+we shall call them the \defin{inner spherical photon orbits}\index{inner!spherical photon orbit}\index{spherical!photon orbit!inner --}\index{photon!orbit!inner spherical --};
+\item orbits with $r_0 \in [r_{\rm ph}^+, r_{\rm ph}^-]$ are located in $\M_{\rm I}$;
+we shall call them the \defin{outer spherical photon orbits}\index{outer!spherical photon orbit}\index{spherical!photon orbit!outer --}\index{photon!orbit!outer spherical --}.
+\end{itemize}
+\end{greybox}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gik_ell_circ_equat.pdf}}
+\caption[]{\label{f:gik:ell_circ_equat} \footnotesize
+Reduced angular momentum $\ell$ of the three circular photon orbits in the
+equatorial plane, as a function of the Kerr spin parameter $a$.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_spher_photon_existence}]}
+}
+\end{figure}
+
 
 The spherical orbits with $r_0 = r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$ have $q=0$
 and $|\ell| > a$. According to the results of Sec.~\ref{s:gik:th_motion}, they
 necessary lie in the equatorial plane $\th=\pi/2$. They are thus \emph{circular}
 orbits. According to expression~(\ref{e:gik:spher_q_r0}) for $q$, they are the
-only ones, because the only other root of $q(r_0)=0$ is $r_0=0$
+only ones in the equatorial plane, because the only other root of $q(r_0)=0$ is $r_0=0$
 (see also Fig.~\ref{f:gik:spher_orb_exist}),
 which would correspond to the ring singularity.
-The spherical orbit with $r_0 = r_{\rm ph}^{**}$ has $q < 0$. It is thus
-a vortical geodesic. Moreover, it obeys $q=q_{\rm min}=-(a - |\ell|)^2$. Thus
-according to Sec.~\ref{s:gik:th_motion}, it stays at a fixed value of $\th$.
+Let us denote by $\ell_{\rm ph}^*$, $\ell_{\rm ph}^+$ and $\ell_{\rm ph}^-$
+the reduced angular momentum $\ell$ of respectively the
+circular photon orbit at $r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$.
+These values of $\ell$ are deduced from Eq.~(\ref{e:gik:spher_ell_r0}) and
+are plotted in terms of $a$ in Fig.~\ref{f:gik:ell_circ_equat}.
+We have $\ell_{\rm ph}^*>0$, $\ell_{\rm ph}^+>0$ and $\ell_{\rm ph}^-<0$.
+Moreover,
+\be
+    \lim_{a\to 0} \ell_{\rm ph}^+ =  \lim_{a\to 0} \left| \ell_{\rm ph}^- \right|
+    = 3\sqrt{3} m \simeq 5.196\, m ,
+\ee
+in agreement with the Schwarzschild result (\ref{e:ges:b_crit}), while
+\be
+    \lim_{a\to m} \ell_{\rm ph}^+ =  \lim_{a\to m} \ell_{\rm ph}^* = 2 m,
+\ee
+in agreement with Eq.~(\ref{e:gik:spher_orb_r0_eq_m}), since
+$\lim_{a\to m} r_{\rm ph}^+ = \lim_{a\to m} r_{\rm ph}^* = m$.
 
+The spherical orbits with $r_0 = r_{\rm ph}^{**}$ have
+$q < 0$, i.e. are vortical geodesics. Moreover, they fulfill $q=q_{\rm min}=-(a - |\ell|)^2$.
+According to the results of Sec.~\ref{s:gik:th_motion}, this corresponds to two orbits at
+a fixed value of $\th$, which are symmetrical with respect to the equatorial plane.
+They lie at $\th = \th_{\rm ph}^{**}$ (Northern hemisphere) and
+$\th = \pi - \th_{\rm ph}^{**}$ (Southern hemisphere), where
+$\th_{\rm ph}^{**}$ is given by Eq.~(\ref{e:gik:th_s_ell_over_a}), using
+for $\ell$ the value (\ref{e:gik:spher_ell_r0}) with $r_0 = r_{\rm ph}^{**}$.
+Since $3 m (r_{\rm ph}^{**})^2 = 2 (r_{\rm ph}^{**})^3 + a^2 m$ by virtue of
+Eq.~(\ref{e:gik:cubic_rph_ss}), some simplification occurs and we get
+\be
+    \th_{\rm ph}^{**} =  \arcsin\sqrt{\frac{|r_{\rm ph}^{**}|}{m - r_{\rm ph}^{**}}
+    \left( 1 - \frac{(r_{\rm ph}^{**})^2}{a^2} \right)} .
+\ee
+$\th_{\rm ph}^{**}$ is an increasing function of $a/m$, plotted in Fig.~\ref{f:gik:theta_ss}.
+We have $\lim_{a\to 0} \th_{\rm ph}^{**} = 0$ (the rotation axis) and
+$\lim_{a\to m} \th_{\rm ph}^{**} = \pi/6$.
+Since they occur at a fixed value of $\th$, the two vortical spherical photon orbits
+are actually circular. Their reduced angular momentum and Carter constant,
+denoted by $\ell_{\rm ph}^{**}$ and
+$q_{\rm ph}^{**}$ respectively,
+are shown in terms of $a$ in Fig.~\ref{f:gik:ell_q_rss}.
+They tend to zero as $a\to 0$ and obey
+\be
+    \lim_{a\to m} \ell_{\rm ph}^{**} = - \frac{m}{4} \qand
+    \lim_{a\to m} q_{\rm ph}^{**} = - \frac{9}{16} m^2 .
+\ee
 
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gik_theta_ss.pdf}}
+\caption[]{\label{f:gik:theta_ss} \footnotesize
+Angle $\th$ of the Northern vortical circular photon orbit at $r = r_{\rm ph}^{**}$ as a
+function of Kerr spin parameter $a$.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_spher_photon_existence}]}
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gik_ell_q_rss.pdf}}
+\caption[]{\label{f:gik:ell_q_rss} \footnotesize
+Reduced angular momentum $\ell_{\rm ph}^{**}$ and reduced Carter constant
+$q_{\rm ph}^{**}$ of the two vortical circular photon orbits
+at $r = r_{\rm ph}^{**}$, as
+functions of Kerr spin parameter $a$.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_spher_photon_existence}]}
+}
+\end{figure}
+
+We may summarize the above results by
+\begin{greybox}
+The geodesics at the boundaries of the domain of
+existence of spherical photon orbits [Eq.~(\ref{e:gik:spher_orb_range})] are circular orbits, having a fixed value of $(r,\th)$:
+\begin{itemize}
+\item the orbit at $(r,\th)=(r_{\rm ph}^{**},\th_{\rm ph}^{**})$ is called
+the \defin{Northern vortical circular photon orbit}\index{vortical!circular photon orbit}\index{circular!photon orbit!vortical --};
+\item the orbit at $(r,\th)=(r_{\rm ph}^{**},\pi - \th_{\rm ph}^{**})$ is called
+the \defin{Southern vortical circular photon orbit};
+\item the orbit at $(r,\th)=(r_{\rm ph}^*,\pi/2)$ is called the \defin{equatorial inner circular photon orbit}\index{equatorial!circular photon orbit}\index{inner!circular!photon orbit};
+\item the orbit at $(r,\th)=(r_{\rm ph}^+,\pi/2)$ is called the \defin{prograde outer circular photon orbit}\index{prograde!outer circular!photon orbit};
+\item the orbit at $(r,\th)=(r_{\rm ph}^-,\pi/2)$ is called the \defin{retrograde outer circular photon orbit}\index{retrograde!outer circular!photon orbit};
+\end{itemize}
+\end{greybox}
 
 
 
