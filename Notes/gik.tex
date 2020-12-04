@@ -1212,7 +1212,7 @@ and reduced Carter constant $q$ are maximal.
 \end{greybox}
 \begin{proof}
 From Eqs.~(\ref{e:gik:spher_ell_r0}) and (\ref{e:gik:spher_q_r0}), we get
-\be
+\be \label{e:gik:spher_orb_dqdr}
    \derd{q}{r_0} = - \frac{4 r_0^2 (r_0 - 3m) \left[ (r_0 - m)^3 + m^3 \left(1 - \frac{a^2}{m^2}
             \right)\right]}{a^2 (r_0 - m)^3}
 \ee
@@ -1225,14 +1225,46 @@ $(r_0 - m)^3 + m^3 (1 - a^2/m^2) = 0$ [cf. Eq.~(\ref{e:gik:R_second_der})],
 it is clear that the function $\ell(r_0)$ has a unique extremum, which is
 achieved by the marginally stable orbits. From the graph of $\ell(r_0)$
 shown in Fig.~\ref{f:gik:spher_orb_exist}, we see that this extremum is
-a maximum. Regarding the function $q(r_0)$, the above expression of $\D q/\ r_0$
+a maximum. Regarding the function $q(r_0)$, the above expression of $\D q/\D r_0$
 leads to two extrema: $r_0 = r_{\rm ph}^{\rm ms}$ and $r_0 = 3 m$.
 The former regards the inner spherical orbits, while the latter regards
 the outer ones. Again, from the graph shown in Fig.~\ref{f:gik:spher_orb_exist},
 it is clear that $r_0 = r_{\rm ph}^{\rm ms}$ realizes a maximum of $q$
 among all inner spherical orbits.
 \end{proof}
-%page~\pageref{p:gek:ISCO_extremum_eps_ell}
+
+\begin{remark}
+Another proof can be given by using the same general argument as that employed in
+Sec.~\ref{s:gek:circ_orb_stab} (page~\pageref{p:gek:ISCO_extremum_eps_ell})
+for showing that the ISCO realizes an extrememun of the specific energy
+and specific angular momentum of timelike circular equatorial orbits.
+Indeed, considering $\mathcal{R}$ as a function of $\ell$ and $q$, in addition
+to $r$, i.e. writing $\mathcal{R} = \mathcal{R}(r, \ell, q)$, the marginal
+stable orbit obeys
+\[
+    \mathcal{R}(r_0, \ell(r_0), q(r_0)) = 0,\quad
+    \der{\mathcal{R}}{r}(r_0, \ell(r_0), q(r_0)) = 0,\quad
+    \frac{\partial^2\mathcal{R}}{\partial r^2} (r_0, \ell(r_0), q(r_0)) = 0 .
+\]
+Deriving the first and second equations with respect to $r_0$
+and using the third equation, we get a homogeneous linear
+system for $(\D\ell/\D r_0,\, \D q/\D r_0)$, similar to the
+system (\ref{e:gek:system_epsp_ellp}). The unique solution
+is then $(\D\ell/\D r_0,\, \D q/\D r_0) = (0, 0)$, yielding the extremun in the
+functions $\ell(r_0)$ and $q(r_0)$ at $r_0 = r_{\rm ph}^{\rm ms}$.
+\end{remark}
+
+Equation~(\ref{e:gik:spher_orb_dqdr}) shows that, in addition to that
+at $r_0 = r_{\rm ph}^{\rm ms}$, the function $q(r_0)$ admits
+a second at $r_0 = 3m$, i.e. for outer spherical orbits.
+This extremum is actually a maximum and its value, obtained by
+setting $r_0 = 3 m$ in Eq.~(\ref{e:gik:spher_q_r0}),
+turns out to be independent from $a$:
+\be
+    \max q(r_0) = 27 m^2 .
+\ee
+This is the maximum of the reduced Carter constant over all the spherical photon
+orbits (cf. Fig.~\ref{f:gik:spher_orb_exist}).
 
 \subsection{Photon region}
 
