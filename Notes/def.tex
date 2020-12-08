@@ -845,17 +845,17 @@ A priori, the bilinear form $\w{q}$ is defined only on $T_p\Sp$, via (\ref{e:def
 However, thanks to the orthogonal decomposition (\ref{e:def:TM_direct_sum}),
 we can extend it to all vectors of $T_p\M$ by requiring
 \be \label{e:def:q_zero_TSperp}
-    \forall \w{v}\in T_p^\perp\Sp, \quad \w{q}(\w{v}, .) = 0 .
+    \forall \w{u}\in T_p^\perp\Sp,\ \forall\w{v}\in T_p\M, \quad \w{q}(\w{u}, \w{v}) = 0 .
 \ee
 Indeed, given a pair $(\w{u},\w{v})$ of vectors in $T_p\M$, the direct sum (\ref{e:def:TM_direct_sum})
 implies that there are unique decompositions
-\bea
-  & & \w{u} = \w{u}^\parallel + \w{u}^\perp,\quad \mbox{with}\quad  \w{u}^\parallel \in T_p\Sp,
-    \  \w{u}^\perp \in T_p^\perp\Sp \label{e:def:decomp_u} \\
-  & & \w{v} = \w{v}^\parallel + \w{v}^\perp,\quad \mbox{with}\quad  \w{v}^\parallel \in T_p\Sp,
-    \  \w{v}^\perp \in T_p^\perp\Sp .\label{e:def:decomp_v}
-\eea
-Then, using the bilinearity of $\w{q}$ and the property (\ref{e:def:q_zero_TSperp}),
+\be \label{e:def:decomp_u_v}
+  \w{u} = \w{u}^\parallel + \w{u}^\perp \quad\mbox{and}\quad
+    \w{v} = \w{v}^\parallel + \w{v}^\perp,\quad\mbox{with}\quad
+    \w{u}^\parallel,  \w{v}^\parallel \in T_p\Sp,\quad
+    \w{u}^\perp, \w{v}^\perp  \in T_p^\perp\Sp .
+\ee
+Then, using the bilinearity of $\w{q}$ and property (\ref{e:def:q_zero_TSperp}),
 we obtain
 \be \label{e:def:q_all_vectors}
     \forall (\w{u},\w{v})\in T_p\M\times T_p\M, \quad
@@ -881,8 +881,7 @@ in $T_p\M$,
     + (\w{k}\cdot\w{u})(\wl\cdot\w{v}) .
 \ee
 Now, thanks to (\ref{e:def:TSperp_Span_k_l}), we may write the
-orthogonal decompositions
-(\ref{e:def:decomp_u})-(\ref{e:def:decomp_v}) as
+orthogonal decompositions (\ref{e:def:decomp_u_v}) as
 \[
     \w{u} = \w{u}^\parallel + u^0 \wl + u^1 \w{k} \quad\mbox{and}\quad
     \w{v} = \w{v}^\parallel + v^0 \wl + v^1 \w{k} .
@@ -891,8 +890,8 @@ Using $\wl\cdot\wl=0$, $\w{k}\cdot\w{k}=0$ and $\wl\cdot\w{k}=-1$
 [Eq.~(\ref{e:def:k_el_minus_one})], we have then
 \bea
  & & \w{u}\cdot\w{v} = \w{u}^\parallel \cdot\w{v}^\parallel - u^0 v^1 - u^1 v^0 \nonumber \\
- & & \wl\cdot\w{u} = -u^1, \quad \w{k}\cdot\w{u} = -u^0, \nonumber \\
- & & \wl\cdot\w{v} = -v^1, \quad \w{k}\cdot\w{v} = -v^0 .  \nonumber
+ & & \wl\cdot\w{u} = -u^1, \quad \w{k}\cdot\w{u} = -u^0, \quad
+  \wl\cdot\w{v} = -v^1, \quad \w{k}\cdot\w{v} = -v^0 .  \nonumber
 \eea
 Hence (\ref{e:def:q_u_v_k_l}) results in
 \[

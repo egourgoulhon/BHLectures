@@ -1464,7 +1464,7 @@ If $L=0$, the effective $\th$-potential reduces to $V(\th)=a^2(\mu^2 - E^2)\cos^
 We have then three subcases:
 
 \begin{itemize}
-\item \textbf{Case} $a^2 E^2 < a^2 \mu^2 \iff a\neq 0 \ \mbox{and}\ |E| < \mu$:
+\item \textbf{Case} $a^2 (E^2 - \mu^2) < 0 \iff a\neq 0 \ \mbox{and}\ |E| < \mu$:
 the corresponding graph of $V(\th)$ is shown in
 Fig.~\ref{f:gek:th_pot_L_0} (left part); we deduce immediately from it that
 $Q\geq 0$, with
@@ -1490,7 +1490,7 @@ within the interval $[0,\pi]$, one shall use the identification
 of the points $(\th, \ph)$, $(-\th, \ph+\pi)$ and $(\th-\pi, \ph+\pi)$,
 which holds on the sphere $\mathbb{S}^2$.
 \end{itemize}
-\item \textbf{Case} $a^2 E^2 = a^2\mu^2 \iff a=0\ \mbox{or}\ |E|=\mu$:
+\item \textbf{Case} $a^2 (E^2 - \mu^2) = 0 \iff a=0\ \mbox{or}\ |E|=\mu$:
 $V(\th)=0$ and Eq.(\ref{e:gek:th_eff_potential})
 reduces to $(\D\th/\D\lambda')^2 = Q$. This implies $Q\geq 0$, with
 \begin{itemize}
@@ -1500,7 +1500,7 @@ $[0,\pi]$.
 means that $\th$ varies monotically along the geodesic, crossing the rotation
 axis an infinite number of times.
 \end{itemize}
-\item \textbf{Case} $a^2 E^2 > a^2 \mu^2 \iff a\neq 0 \ \mbox{and}\  |E|>\mu$:
+\item \textbf{Case} $a^2 (E^2 - \mu^2) > 0 \iff a\neq 0 \ \mbox{and}\  |E|>\mu$:
 the corresponding graph of $V(\th)$ is shown in
 Fig.~\ref{f:gek:th_pot_L_0} (right part); the Carter constant must obey
 $Q \geq - a^2 (E^2 - \mu^2)$, with
@@ -1600,7 +1600,7 @@ $\th_*$ and $\pi-\th_*$ correspond to the minimum of $V(\th)$,
 while $\pi/2$ corresponds to a local maximum. The minimum is
 $V(\th_*) = (1-\sin^2\th_*)(a^2(\mu^2-E^2) + L^2/\sin^2\th_*) = - (a \sqrt{E^2 - \mu^2} - |L|)^2$.
 This is necessary the minimal value of $Q$ [cf. Eq.~(\ref{e:gek:V_leq_Q})]:
-\be
+\be  \label{e:gek:Q_min_prov}
     Q_{\rm min} = - \left( a \sqrt{E^2 - \mu^2} - |L| \right) ^2 .
 \ee
 We have then (cf. right part of Fig.~\ref{f:gek:th_pot_L_non0})
@@ -1619,6 +1619,103 @@ between two turning points at $\th=\th_0$ and $\pi-\th_0$, $\th_0$ being the sol
 of $V(\th_0) = Q$ in $(0,\pi/2)$ (cf. the trajectory $Q=Q_2$ in Fig.~\ref{f:gek:th_pot_L_non0}, right).
 \end{itemize}
 \end{itemize}
+
+\subsubsection{Expression of the $\th$-turning points}
+
+The $\th$-turning points $\th_0$ and $\th_1$ mentionned above are solutions of
+$\Theta(\th) = 0$ and  $\Theta'(\th) \neq 0 $ [Eq.~(\ref{e:gek:def_th_turning})]. We search only for
+$\th$-turning points with $0 < \th < \pi/2$, since $0$ and $\pi/2$ cannot be
+$\th$-turning points (for $\Theta'(0) = 0 $ and $\Theta'(\pi/2) = 0$) and
+$\th$-turnings points with  $\pi/2 < \th < \pi$ are deduced from those
+with $0 < \th < \pi/2$ by $\th \mapsto \pi - \th$
+(symmetry with respect to the equatorial plane).
+Using expression~(\ref{e:gek:Theta_Q})
+for $\Theta$ and introducing
+\be
+    x := \cos^2\th ,
+\ee
+the equation $\Theta(\th) = 0$ is equivalent to
+\be \label{e:gek:quadrat_x}
+    a^2 (E^2 - \mu^2) x^2 + \left[ L^2 + Q - a^2 (E^2 - \mu^2) \right] x - Q = 0 .
+\ee
+If $a^2 (E^2 - \mu^2) = 0$, the solution is $x = Q/(L^2 + Q)$. Moreover, in this
+case one has necessarily $Q \geq 0$, so that $0 \leq x \leq 1$ and
+the unique solution in $(0,\pi/2)$ is
+\be
+     \encadre{\theta_0 = \arccos\sqrt{\frac{Q}{L^2 + Q}} . }_{\, a^2 (E^2 - \mu^2) = 0}
+\ee
+In the rest of this section, we assume that $a^2 (E^2 - \mu^2) \neq 0$.
+Equation~(\ref{e:gek:quadrat_x}) is then a quadratic equation in $x$, the discriminant
+of which is
+\begin{align}
+\mathit{\Delta} & = \left[ L^2 + Q - a^2 (E^2 - \mu^2) \right]^2 + 4 Q a^2 (E^2 - \mu^2) \nonumber \\
+  & = \left[ L^2 + Q + a^2 (E^2 - \mu^2) \right]^2 - 4 L^2 a^2 (E^2 - \mu^2) . \nonumber
+\end{align}
+It turns out that $\mathit{\Delta}$ is always non-negative. Indeed, from the second equality
+above, we have clearly $\Delta \geq 0$ if $a^2(E^2 - \mu^2) \leq 0$. In the complementary
+case, i.e. when $a^2(E^2 - \mu^2) > 0$, then $\mathit{\Delta} \geq 0$ as soon
+as $Q \geq Q_2$, where $Q_2$ is the larger of the two roots of $\mathit{\Delta}$
+considered as a quadratic polynomial in $Q$. Again, considering the second equality
+in the expression of $\mathit{\Delta}$, we have
+$Q_2 = - L^2 - a^2 (E^2 - \mu^2) + 2 |L| a \sqrt{E^2 - \mu^2} = - (|L| - a \sqrt{E^2 - \mu^2} )^2$.
+In view of Eq.~(\ref{e:gek:Q_min_prov}), we realize that $Q_2 = Q_{\rm min}$,
+so that $Q\geq Q_2$ always holds and $\Delta\geq 0$.
+Accordingly the two roots of Eq.~(\ref{e:gek:quadrat_x}) are real and are
+given by
+\be \label{e:gek:th_turn_x_pm}
+    x_{\pm} = \frac{1}{2} \left( 1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}
+        \pm \sqrt{ \left[1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}\right] ^2
+        + \frac{4Q}{a^2 (E^2 - \mu^2)}} \right) .
+\ee
+Since $x := \cos^2\th$ and $\th=0$ and $\th=\pi/2$ cannot correspond
+to a $\th$-turning point,
+acceptable solutions must obey
+\be \label{e:gek:th_turn_x_pm_range}
+    0 < x_{\pm} < 1 .
+\ee
+
+For $L=0$, Eq.~(\ref{e:gek:th_turn_x_pm}) simplifies to\footnote{A switch between
+$x_+$ and $x_-$ is performed if $1 + Q/(a^2(E^2 - \mu^2)) < 0$.}
+\[
+    x_+ = 1 \qand x_- = - \frac{Q}{a^2(E^2 - \mu^2)}
+\]
+Now, $x_+ = 1$ is excluded by (\ref{e:gek:th_turn_x_pm_range}). There remains
+only $x_-$, leading to the turning point value found in the
+$L=0$ case discussed above:
+\be
+   \encadre{ \th_0 = \arccos \sqrt{\frac{Q}{a^2 (\mu^2 - E^2)}} . }_{\, L=0}
+\ee
+This formula assumes that $0 < Q/(a^2 (\mu^2 - E^2)) < 1$, otherwise there
+is no $\th$-turning point (curves marked $Q=Q_2$ in Fig.~\ref{f:gek:th_pot_L_0}).
+
+For $L\neq 0$, one shall distinguish two cases:
+\begin{itemize}
+\item if $|E| < \mu$, then only $x_-$ fulfills the criterium (\ref{e:gek:th_turn_x_pm_range}),
+leading to the turning point value:
+\be
+    \encadre{ \th_0 = \arccos \left[ \frac{1}{2} \left( 1 + \frac{L^2 + Q}{a^2 (\mu^2 - E^2)}
+        - \sqrt{ \left[1 + \frac{L^2 + Q}{a^2 (\mu^2 - E^2)}\right] ^2
+        - \frac{4Q}{a^2 (\mu^2 - E^2)}} \right) \right] ^{1/2}}
+\ee
+\item if $|E| > \mu$, then $x_+$ always fulfills the criterium (\ref{e:gek:th_turn_x_pm_range}),
+leading to the turning point value:
+\be
+    \encadre{\th_0 =  \arccos  \left[  \frac{1}{2} \left( 1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}
+        + \sqrt{ \left[1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}\right] ^2
+        + \frac{4Q}{a^2 (E^2 - \mu^2)}} \right)  \right] ^{1/2} } .
+\ee
+If, in addition $Q<0$, then $x_-$ also fulfills (\ref{e:gek:th_turn_x_pm_range})
+and we get a second turning point value:
+\be
+    \encadre{\th_1 =  \arccos  \left[  \frac{1}{2} \left( 1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}
+        - \sqrt{ \left[1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}\right] ^2
+        + \frac{4Q}{a^2 (E^2 - \mu^2)}} \right)  \right] ^{1/2} } .
+\ee
+
+\end{itemize}
+
+
+\subsubsection{Summary}
 
 We can summarize the above results by
 \begin{greybox}
