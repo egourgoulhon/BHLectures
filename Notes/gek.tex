@@ -49,12 +49,12 @@ enough first integrals of Eq.~(\ref{e:gek:eq_geod}) to reduce
 the problem to four first-order equations
 of the type $\D x^\alpha/\D\lambda = F^\alpha(x^0, x^1, x^2, x^3)$.
 
-Three integrals of motion are similar to those of Schwarzschild geodesics.
-One is the particle's mass $\mu$ (Sec.~\ref{s:gek:mass_int_motion} below)
+Three integrals of motion are similar to those of Schwarzschild geodesics:
+one is the particle's mass $\mu$ (Sec.~\ref{s:gek:mass_int_motion} below)
 and the two other ones are
 the conserved energy $E$ and the conserved angular momentum
 $L$ (Sec.~\ref{s:gek:int_motion_sym}), which arise from the common symmetries
-of Kerr and Schwarzschild spacetimes: stationarity (outside the ergosphere) and axisymmetry.
+of Kerr and Schwarzschild spacetimes: stationarity (outside the ergoregion) and axisymmetry.
 In the Schwarzschild case, the fourth integral of motion was provided by
 spherical symmetry, which constrained all geodesics to be planar, so that
 a suitable choice of
@@ -86,19 +86,27 @@ along any geodesic $\Li$:
 & \encadre{L := \w{\eta}\cdot \w{p} = \w{g}(\w{\eta},\w{p}) } , \label{e:gek:def_L}
 \end{align}
 \end{subequations}
-where $\w{p}$ is the 4-momentum of the particle $\mathscr{P}$, the worldline of which is $\Li$ (cf. Sec.~\ref{s:fra:worldlines}).
+where $\w{p}$ is the 4-momentum of the particle $\mathscr{P}$
+having $\Li$ as worldline (cf. Sec.~\ref{s:fra:worldlines}).
 For the same reasons as in Sec.~\ref{s:ges:fiom}, $E$ is called
 the \defin{conserved energy}\index{conserved!energy}\index{energy!conserved --}
 or \defin{energy at infinity}\index{energy!at infinity} of $\mathscr{P}$,
-while $L$ is called $\mathscr{P}$'s \defin{conserved angular momentum}\index{conserved!angular momentum}\index{angular momentum!conserved --}
+while $L$ is called the \defin{conserved angular momentum}\index{conserved!angular momentum}\index{angular momentum!conserved --}
 or \defin{angular momentum at infinity}\index{angular momentum!at infinity}
 of $\mathscr{P}$.
 \end{greybox}
+In particular, if $\Li$ reaches the asymptotic region $|r|\to+\infty$,
+$E$ is nothing but $\mathscr{P}$'s energy as measured by the asymptotic inertial
+observer introduced in Sec.~\ref{s:ker:asymp_inertial_obs}, given that
+the 4-velocity of the latter coincides with the Killing vector
+$\w{\xi}$
+[compare Eq.~(\ref{e:fra:E_obs}) with Eq.~(\ref{e:gek:def_E})].
+Similarly, $L$ is the component along the rotation axis of $\mathscr{P}$'s (total) angular momentum vector $\w{L}_{\rm tot}$
+as measured by the asymptotic inertial observer.
+
 \begin{remark}
-Asymptotically, the scalar $L$ is the
-component along the rotation axis of $\mathscr{P}$'s (total) angular momentum vector $\w{L}_{\rm tot}$
-as measured by an inertial observer at rest with respect to the black hole (cf. Sec.~\ref{s:ker:asymp_inertial_obs}).
-For this reason, it is sometimes denoted by $L_z$, instead of merely $L$.
+Because it represents only a component of the total angular momentum,
+$L$ is sometimes denoted by $L_z$.
 \end{remark}
 
 In coordinates $(t,r,\th,\ph)$ adapted to spacetime symmetries,
@@ -265,7 +273,7 @@ via $E = - g_{t\mu} \, p^\mu$ and $L = g_{\ph\mu} \, p^\mu$ yields
 where $\rho^2 := r^2 + a^2 \cos^2\th$ [Eq.~(\ref{e:ker:def_rho2})].
 
 Let us recall that the components $(p^\alpha)$ of the 4-momentum are
-related to the equation $x^\alpha = x^\alpha(\lambda)$ of the geodesic $\Li$
+related to the parametric equation $x^\alpha = x^\alpha(\lambda)$ of the geodesic $\Li$
 in terms of the affine parameter $\lambda$ by $p^\alpha = \D x^\alpha / \D\lambda$
 [cf. Eq.~(\ref{e:fra:p_dxdl})], i.e.
 \be \label{e:gek:pa_der_xa}
@@ -335,10 +343,10 @@ $\w{K}$ is called a \defin{Killing tensor}\index{Killing!tensor} because its sym
 \be \label{e:gek:Killing_eq_K}
     \encadre{ \nabla_{(\alpha} K_{\beta\gamma)} = 0 }.
 \ee
-This property can be seen as a generalization of the Killing equation
+This property can be seen as a generalization of the Killing equation\index{Killing!equation}
 (\ref{e:neh:Killing_equation}) to tensors of valence 2.
 That the tensor $\w{K}$ defined by (\ref{e:gek:def_K}) obeys the Killing
-identity (\ref{e:gek:Killing_eq_K}) is shown in the notebook~\ref{s:sam:Kerr_Killing_tensor}.
+identity (\ref{e:gek:Killing_eq_K}) is established in the notebook~\ref{s:sam:Kerr_Killing_tensor}.
 
 Killing tensors are discussed in Sec.~\ref{e:geo:Killing_tensor} of Appendix~\ref{s:geo}.
 It is shown there that the Killing identity (\ref{e:gek:Killing_eq_K}) implies that
@@ -346,18 +354,16 @@ the following quantity is constant along any geodesic $\Li$ [cf. Eq.~(\ref{e:geo
 \be
     \encadre{ \mathscr{K} := \w{K}(\w{p}, \w{p}) = K_{\mu\nu} p^\mu p^\nu } .
 \ee
-$\mathscr{K}$ is named \defin{Carter constant}\index{Carter!constant}.
+$\mathscr{K}$ is named \defin{Carter constant}\index{Carter!constant}
+(cf. the historical note on page~\pageref{h:gek:eom_Carter}).
 From the definition (\ref{e:gek:def_K}) of $\w{K}$, we have
 \be \label{e:gek:Kcarter_prov}
     \mathscr{K} = 2(r^2 + a^2) \langle \uu{k}, \w{p} \rangle
         \langle \uu{\el}, \w{p} \rangle + r^2 \w{g}(\w{p}, \w{p}).
 \ee
 Now by Eq.~(\ref{e:gek:mu_gpp}), $\w{g}(\w{p}, \w{p}) = - \mu^2$. Besides, we
-have
-\[
-  \langle \uu{k}, \w{p} \rangle = k_\mu p^\mu = k^\mu p_\mu .
-\]
-The last form allows us to let appear the constants of motion $p_t = -E$ and
+have $\langle \uu{k}, \w{p} \rangle = k_\mu p^\mu = k^\mu p_\mu$.
+The last form lets appear the constants of motion $p_t = -E$ and
 $p_\ph = L$ [Eq.~(\ref{e:gek:E_pt_L_pph})]. Using it with the components
 of $\w{k}$ as given by Eq.~(\ref{e:ker:k_BL}), we get
 \[
@@ -381,7 +387,7 @@ which can be rewritten as
 \ee
 Note that we have expressed $p_r$ in terms of $p^r$ via Eq.~(\ref{e:gek:p_r_p_th_cov_con}).
 
-We can get some physical interpretation of the Carter constant from the above
+Some physical interpretation of the Carter constant can be inferred from the above
 expression, in the case where the particle $\mathscr{P}$ following the
 geodesic $\Li$ visits the asymptotic region $r\to+\infty$. Indeed, given
 that $\Delta := r^2 - 2m r + a^2 \sim r^2$  and $\rho^4 := (r^2 + a^2\cos^2\th)^2 \sim r^4$
@@ -390,12 +396,8 @@ that
 \be \label{e:gek:Kcarter_r_inf}
     \mathscr{K} \underset{r\to + \infty}{\sim} r^2 \left[ E^2 - \mu^2 - (p^r)^2 \right] .
 \ee
-Then let $\Obs$ be the asymptotic inertial observer at rest with respect to the
-black hole, i.e. the observer with $r\gg m$ and whose 4-velocity
-coincides with the Killing vector
-$\w{\xi} = \wpar_t$ (cf. Sec.~\ref{s:ker:asymp_inertial_obs}).
-$E$ is then $\mathscr{P}$'s energy as measured by $\Obs$
-[cf. Eq.~(\ref{e:fra:E_obs}) and (\ref{e:gek:def_E})], so that, according to
+As discussed above, $E$ is $\mathscr{P}$'s energy as measured by
+the asymptotic inertial observer $\Obs$. Then, according to
 Einstein's formula (\ref{e:fra:E2_m2_P2}), $E^2 - \mu^2 = \w{P}\cdot\w{P}$, where
 $\w{P}$ is $\mathscr{P}$'s linear momentum as measured by $\Obs$. Given
 that asymptotically, $p^r\sim P^r$ [cf. Eq.~(\ref{e:fra:p_E_P})],
@@ -447,19 +449,22 @@ $r=0$ is excluded from the spacetime manifold), we have then
 \]
 The vectors $\w{k}$, $\wl$ and $\w{p}$ are all null.
 Now, according to the Corollary~2 in Sec.~\ref{s:fra:time_orientation},
-two null vectors are orthogonal iff they are colinear. Hence
+two null vectors are orthogonal iff they are collinear. Hence
 \[
     \mathscr{K} = 0 \iff \w{p} = \alpha \w{k} \quad\mbox{or}\quad \w{p} = \alpha \wl.
 \]
 Since $\w{k}$ (resp. $\wl$) is tangent to $\Li^{\rm in}_{(v,\th,\tph)}$ (resp.
 $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$), this completes the proof.
 \end{proof}
-Note that the result (\ref{e:gek:K_zero_null}) is consistent with the
+
+\begin{remark}
+The result (\ref{e:gek:K_zero_null}) is consistent with the
 interpretation (\ref{e:gek:Kcarter_asymptot}) of $\mathscr{K}$, since asymptotically
 the principal null geodesics are purely radial\footnote{Indeed,
 we deduce from Eqs.~(\ref{e:ker:k_BL}) and (\ref{e:ker:ell_BL}) that, for $r\to+\infty$,
 $\w{k} \sim \wpar_t - \wpar_r$ and $\wl \sim (\wpar_t + \wpar_r)/2$.},
 and hence have $\w{L}_{\rm tot} = 0$.
+\end{remark}
 
 \begin{example}[Generators of the event and inner horizons]
 We have seen in Example~\ref{x:gek:null_generator_hor} in Sec.~\ref{s:gek:int_motion_sym}
@@ -486,7 +491,7 @@ If a geodesic $\Li$ has $(\mu,\mathscr{K}) = (0,0)$,
 $\Li$ is necessary null and (\ref{e:gek:K_zero_null}) shows that
 $\Li$ is a principal null geodesic. Moreover
 Eq.~(\ref{e:gek:Kcarter_first_int}) with $(\mu, E, L, \mathscr{K}) = (0, 0, 0, 0)$
-implies $p^r = 0$ (i.e. $\Li$ lies at a constant value of $r$).
+implies $p^r = 0$, i.e. $\Li$ lies at a constant value of $r$.
 If $\Li$ is ingoing, then $\w{p} \propto \w{k}$, with the Boyer-Lindquist components
 of $\w{k}$ given by Eq.~(\ref{e:ker:k_BL}). Since $k^r = -1$, this precludes
 $p^r = 0$. Hence $\Li$ is an outgoing principal null geodesic
@@ -535,7 +540,7 @@ with
 \ee
 In the above expression, let us recall that $\Delta$ is the function of $r$
 given by Eq.~(\ref{e:ker:def_Delta}): $\Delta := r^2 - 2 m r + a^2$. All other
-quantities are constant. Accordingly, $R(r)$ is a 4th order polynomial of $r$.
+quantities are constant. Accordingly, $R(r)$ is a 4th order polynomial in $r$.
 Equation~(\ref{e:gek:p_r_R}) implies that, along the geodesic $\Li$, it has to fulfill
 \be \label{e:gek:R_non_neg}
     \encadre{R(r) \geq 0 } .
@@ -613,17 +618,16 @@ one may derive the Carter constant $Q$ from a Killing tensor.
 Indeed, from the Walker-Penrose Killing tensor $\w{K}$ [Eq.~(\ref{e:gek:def_K})], let us form
 the tensor field
 \be \label{e:gek:def_tilde_K}
-    \w{\tilde{K}} := \w{K} - \uu{\tilde{\eta}}\otimes\uu{\tilde{\eta}} ,
-\ee
-where
-\be
+    \w{\tilde{K}} := \w{K} - \uu{\tilde{\eta}}\otimes\uu{\tilde{\eta}} ,\quad
+\mbox{where}\quad
     \w{\tilde{\eta}} := \w{\eta} + a \w{\xi} .
 \ee
 Being a linear combination with constant coefficients of the Killing vectors
 $\w{\eta}$ and $\w{\xi}$, $\w{\tilde{\eta}}$ is itself a Killing vector.
 It follows that $\uu{\tilde{\eta}}\otimes\uu{\tilde{\eta}}$ is a Killing tensor
 (cf. Example~\ref{x:geo:trivial_Killing_tensors} in Sec.~\ref{e:geo:Killing_tensor}),
-so that $\w{\tilde{K}}$ a Killing tensor. Applying it to the
+so that $\w{\tilde{K}}$ a Killing tensor, the Killing equation (\ref{e:gek:Killing_eq_K})
+being linear. Applying $\w{\tilde{K}}$ to the
 4-momentum $\w{p}$, we get
 \[
     \w{\tilde{K}}(\w{p},\w{p}) =  \underbrace{\w{K}(\w{p},\w{p})}_{\mathscr{K}}
@@ -634,8 +638,7 @@ Comparing with the definition (\ref{e:gek:def_Q}), we conclude that
 \be
     Q = \w{\tilde{K}}(\w{p},\w{p}) .
 \ee
-As a side remark, we note that
-the Boyer-Lindquist components of the contravariant tensor associated to $\w{\tilde{K}}$ by
+The Boyer-Lindquist components of the contravariant tensor associated to $\w{\tilde{K}}$ by
 metric duality have an expression particularly simple in terms of those of
 the inverse metric (cf. the notebook~\ref{s:sam:Kerr_Killing_tensor}):
 \be
@@ -661,23 +664,24 @@ and (\ref{e:gek:def_Theta}) as the first-order system
 where $\eps_r := \operatorname{sgn} p^r = \pm 1$,  $\eps_\th := \operatorname{sgn} p^\th = \pm 1$
 and the functions $R(r)$ and $\Theta(\th)$ are defined by Eq.~(\ref{e:gek:def_R})
 and Eq.~(\ref{e:gek:def_Theta}) or (\ref{e:gek:Theta_Q}).
-We may rewrite Eq.~(\ref{e:gek:def_R}) in terms of $Q$
+Since $p^r = \D r/\D\lambda$,  $\eps_r$
+is $+1$ (resp. $-1$) in the parts of the geodesic $\Li$ where $r$ increases
+(resp. decreases) with $\lambda$. Similarly, $\eps_\th$
+is $+1$ (resp. $-1$) in the parts of $\Li$ where $\th$ increases
+(resp. decreases) with $\lambda$.
+
+We may rewrite Eq.~(\ref{e:gek:def_R}) for $R(r)$ in terms of $Q$
 instead of $\mathscr{K}$, via Eq.~(\ref{e:gek:def_Q}):
 \be \label{e:gek:def_R_Q}
    \encadre{ R(r) := \left[ (r^2 + a^2) E - a L \right]^ 2 - \Delta \left[ r^2 \mu^2 +  Q +(L-a E)^2) \right] }.
 \ee
-Note that besides the constants of motion $E$, $L$, $\mu$ and $Q$, $R(r)$ depends on the Kerr parameters $a$ and $m$
+Note that, beside the constants of motion $E$, $L$, $\mu$ and $Q$, $R(r)$ depends on both Kerr parameters $a$ and $m$
 (via $\Delta = r^2 - 2 m r + a^2$), while $\Theta(\th)$
 depends on $a$ only [cf. Eq.~(\ref{e:gek:Theta_Q})].
 Along $\Li$, these functions must obey
 $R(r) \geq 0$ [Eq.~(\ref{e:gek:R_non_neg})] and $\Theta(\th) \geq 0$
 [Eq.~(\ref{e:gek:Theta_non_neg})].
 
-In the system (\ref{e:gek:eom_first_order}), $\eps_r$
-is $+1$ (resp. $-1$) in the parts of the geodesic $\Li$ where $r$ increases
-(resp. decreases) with $\lambda$. Similarly, $\eps_\th$
-is $+1$ (resp. $-1$) in the parts of $\Li$ where $\th$ increases
-(resp. decreases) with $\lambda$.
 
 \subsection{Turning points} \label{s:gek:turning_points}
 
@@ -764,21 +768,24 @@ is a necessary and sufficient condition for a $\th$-turning point.
 \subsection{Equations of motion in terms of Mino parameter} \label{s:gek:Mino_time}
 
 In view of the right-hand sides of the system (\ref{e:gek:eom_first_order}),
-it is quite natural to introduce along the geodesic $\Li$ the new
-parameter $\lambda'$ defined by
+it is quite natural to introduce a new
+parameter $\lambda'$
+along the geodesic $\Li$ such that
 \be \label{e:gek:def_Mino_time}
     \D\lambda' = \frac{\D\lambda}{\rho^2}
      = \frac{\D\lambda}{r(\lambda)^2 + a^2 \cos^2 \th(\lambda)} .
 \ee
 Since $\rho^2$ never vanishes on the spacetime manifold $\M$ (by construction
 of the latter, cf. Eq.~(\ref{e:ker:def_M_Kerr_spacetime})), the above relation
-leads to a well-defined parameter along $\Li$. Moreover, since $\rho^2>0$, this
-parameter increases towards the future, as $\lambda$. A difference between
-the two parametrizations is that $\lambda'$ is not in general\footnote{The only
+leads to a well-defined parameter\footnote{Note however that $\lambda'$ may blow up
+if $\Li$ comes arbitrarily close to the ring singularity, i.e. if $\rho\to 0$.} along $\Li$.
+Moreover, since $\rho^2>0$, $\lambda'$
+increases towards the future, as $\lambda$. A difference between
+the two parametrizations is that $\lambda'$ is not an affine parameter
+of $\Li$ in general\footnote{The only
 exception is for a circurlar orbit at $\theta=\pi/2$, since then $\rho^2$
 is constant and Eq.~(\ref{e:gek:def_Mino_time}) reduces to an affine relation
-between $\lambda$ and $\lambda'$.} an affine parameter
-of $\Li$, contrary to $\lambda$.
+between $\lambda$ and $\lambda'$.}, contrary to $\lambda$.
 The parameter $\lambda'$ is called \defin{Mino parameter}\index{Mino!parameter}\index{parameter!Mino --} \cite{Mino03}.
 
 In terms of Mino parameter, the system (\ref{e:gek:eom_first_order}) becomes
@@ -942,7 +949,7 @@ $\zeta := \cos\th$ along with expression (\ref{e:gek:Theta_Q}) for $\Theta(\th)$
 with the term under the square root in the right-hand side being a polynomial of degree 4
 in $\bar{\zeta}$.
 The use of Jacobi elliptic functions leads then to $\th = \th(\lambda')$.
-From $r(\lambda')$ and $\th(\lambda')$ one can get $\lambda(\lambda')$,
+From $r(\lambda')$ and $\th(\lambda')$ one can get the functions $\lambda(\lambda')$,
 $t(\lambda')$ and $\ph(\lambda')$
 by evaluating the integrals in the right-hand sides of
 Eqs.~(\ref{e:gek:integr_lambda})--(\ref{e:gek:integr_ph}). Again, these integrals are
@@ -958,12 +965,12 @@ for bound timelike geodesics and to Ref.~\cite{GrallaL20b} for null geodesics.
 %considered above.
 
 
-\begin{hist}
+\begin{hist} \label{h:gek:eom_Carter}
 The constant of motion $\mathscr{K}$ has been discovered by Brandon Carter\index{Carter, B.}
 in 1968 \cite{Carte68a}, in a study about  Kerr-Newman spacetimes\index{Kerr-Newman!spacetime},
 which generalize the Kerr ones to nonzero global electric charge.
 Carter actually did not get $\mathscr{K}$ from the Killing tensor $\w{K}$,
-which was discovered two years later by Martin Walker\index{Walker, M.} and
+which was discovered only two years later by Martin Walker\index{Walker, M.} and
 Roger Penrose\index{Penrose, R.} \cite{WalkeP70}; he
 started instead from the Lagrangian (\ref{e:geo:Lagrangian2}) governing
 both timelike and null geodesics,
@@ -1241,8 +1248,8 @@ and the grey disk marks the black hole region.
 
 The Lense-Thirring effect is illustrated in Fig.~\ref{f:gek:frame_dragging}
 which shows the trajectory a timelike particle with $L=0$
-which was asympotically at rest (marginally bound particle, having $E=\mu$,
-to be discussed in Sec.~\ref{s:gek:r-motion}). The trajectory was initialy
+which is asympotically at rest (marginally bound particle, having $E=\mu$,
+to be discussed in Sec.~\ref{s:gek:r-motion}). The trajectory is initialy
 radial, but as $r$ decreases, $\D\ph/\D t$ increases according to formula
 (\ref{e:gek:dphdt_frame_dragging}).
 In Fig.~\ref{f:gek:frame_dragging} and in all figures of this chapter, we are
@@ -1453,8 +1460,8 @@ by the part of the graph of $V(\th)$ that lies below
 the horizontal line of ordinate equal to $Q$.
 
 We shall distinguish the
-case $L=0$ from $L\not=0$, since the shape of $V(\th)$
-is different in these two cases.
+case $L=0$ from the case $L\not=0$, since they lead
+to different shapes of the potential $V(\th)$.
 
 
 
@@ -1473,7 +1480,7 @@ $Q\geq 0$, with
 plane $\th=\pi/2$; since it corresponds to a minimum of the effective potential, this
 is a stable configuration.
 \item $0<Q< a^2(\mu^2 - E^2)$: $\th$ ocillates between
-two turning points, which are symmetric about the equatorial plane:
+two $\th$-turning points, which are symmetric about the equatorial plane:
 $\th_0 := \arccos\sqrt{Q/(a^2(\mu^2 - E^2))}$
 and $\pi-\th_0$ (cf. the trajectory $Q=Q_1$ in Fig.~\ref{f:gek:th_pot_L_0}, left).
 \item $Q = a^2(\mu^2 - E^2)$: $\th=0$ and $\th=\pi$
@@ -1492,12 +1499,14 @@ which holds on the sphere $\mathbb{S}^2$.
 \end{itemize}
 \item \textbf{Case} $a^2 (E^2 - \mu^2) = 0 \iff a=0\ \mbox{or}\ |E|=\mu$:
 $V(\th)=0$ and Eq.(\ref{e:gek:th_eff_potential})
-reduces to $(\D\th/\D\lambda')^2 = Q$. This implies $Q\geq 0$, with
+reduces to $(\D\th/\D\lambda')^2 = Q$. This implies $Q\geq 0$
+and the solution is $\th(\lambda') = \pm \sqrt{Q}\, \lambda' + \th_0$,
+so that
 \begin{itemize}
-\item $Q=0$: the geodesic lies at a constant value of $\th$, within the range
-$[0,\pi]$.
-\item $Q>0$: the solution is $\th(\lambda') = \pm \sqrt{Q}\, \lambda' + \th_0$, which
-means that $\th$ varies monotically along the geodesic, crossing the rotation
+\item for $Q=0$, the geodesic lies at a constant value of $\th$, within the range
+$[0,\pi]$;
+\item for $Q>0$, $\th$ varies monotically along the geodesic, which
+therefore crosses the rotation
 axis an infinite number of times.
 \end{itemize}
 \item \textbf{Case} $a^2 (E^2 - \mu^2) > 0 \iff a\neq 0 \ \mbox{and}\  |E|>\mu$:
@@ -1575,7 +1584,7 @@ The extrema of $V$ in $(0,\pi)$ are then given by
 We are thus led to distinguish two cases, depending whether or not the
 equation involving $\sin^4\th$ has solutions distinct from $\pi/2$:
 \begin{itemize}
-\item \textbf{Case} $a^2(E^2 - \mu^2) \leq L^2 \iff a=0\
+\item \textbf{Case} $L^2 \geq a^2(E^2 - \mu^2) \iff a=0\
 \mbox{or}\ |E| \leq \sqrt{\mu^2 + \frac{L^2}{a^2}}$: the only extremum solution is
 $\th=\pi/2$.
 Its value is $V(\pi/2)=0$ and it is
@@ -1589,7 +1598,7 @@ equatorial plane.
 between two turning points at $\th=\th_0$ and $\pi-\th_0$, $\th_0$ being the solution
 of $V(\th_0) = Q$ in $(0,\pi/2)$ (cf. the trajectory $Q=Q_1$ in Fig.~\ref{f:gek:th_pot_L_non0}, left).
 \end{itemize}
-\item \textbf{Case} $a^2(E^2 - \mu^2) > L^2 \iff a\neq 0\
+\item \textbf{Case} $L^2 < a^2(E^2 - \mu^2)  \iff a\neq 0\
 \mbox{and}\ |E| > \sqrt{\mu^2 + \frac{L^2}{a^2}}$: $V(\th)$ has three extrema (cf. right part of Fig.~\ref{f:gek:th_pot_L_non0}), which are located at
 $\th=\th_*$, $\pi/2$ and $\pi-\th_*$ with
 \be \label{e:gek:theta_star}
@@ -1641,7 +1650,7 @@ the equation $\Theta(\th) = 0$ is equivalent to
 If $a^2 (E^2 - \mu^2) = 0$, the solution is $x = Q/(L^2 + Q)$. Moreover, in this
 case one has necessarily $Q \geq 0$, so that $0 \leq x \leq 1$ and
 the unique solution in $(0,\pi/2)$ is
-\be
+\be \label{e:gek:th0_a2E2mu2_zero}
      \encadre{\theta_0 = \arccos\sqrt{\frac{Q}{L^2 + Q}} . }_{\, a^2 (E^2 - \mu^2) = 0}
 \ee
 In the rest of this section, we assume that $a^2 (E^2 - \mu^2) \neq 0$.
@@ -1682,7 +1691,7 @@ $x_+$ and $x_-$ is performed if $1 + Q/(a^2(E^2 - \mu^2)) < 0$.}
 Now, $x_+ = 1$ is excluded by (\ref{e:gek:th_turn_x_pm_range}). There remains
 only $x_-$, leading to the turning point value found in the
 $L=0$ case discussed above:
-\be
+\be \label{e:gek:th0_L_zero}
    \encadre{ \th_0 = \arccos \sqrt{\frac{Q}{a^2 (\mu^2 - E^2)}} . }_{\, L=0}
 \ee
 This formula assumes that $0 < Q/(a^2 (\mu^2 - E^2)) < 1$, otherwise there
@@ -1692,21 +1701,21 @@ For $L\neq 0$, one shall distinguish two cases:
 \begin{itemize}
 \item if $|E| < \mu$, then only $x_-$ fulfills the criterium (\ref{e:gek:th_turn_x_pm_range}),
 leading to the turning point value:
-\be
+\be \label{e:gek:th0_E_lt_mu}
     \encadre{ \th_0 = \arccos \left[ \frac{1}{2} \left( 1 + \frac{L^2 + Q}{a^2 (\mu^2 - E^2)}
         - \sqrt{ \left[1 + \frac{L^2 + Q}{a^2 (\mu^2 - E^2)}\right] ^2
         - \frac{4Q}{a^2 (\mu^2 - E^2)}} \right) \right] ^{1/2}}
 \ee
 \item if $|E| > \mu$, then $x_+$ always fulfills the criterium (\ref{e:gek:th_turn_x_pm_range}),
 leading to the turning point value:
-\be
+\be \label{e:gek:th0_E_gt_mu}
     \encadre{\th_0 =  \arccos  \left[  \frac{1}{2} \left( 1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}
         + \sqrt{ \left[1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}\right] ^2
         + \frac{4Q}{a^2 (E^2 - \mu^2)}} \right)  \right] ^{1/2} } .
 \ee
 If, in addition $Q<0$, then $x_-$ also fulfills (\ref{e:gek:th_turn_x_pm_range})
 and we get a second turning point value:
-\be
+\be \label{e:gek:th1}
     \encadre{\th_1 =  \arccos  \left[  \frac{1}{2} \left( 1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}
         - \sqrt{ \left[1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}\right] ^2
         + \frac{4Q}{a^2 (E^2 - \mu^2)}} \right)  \right] ^{1/2} } .
@@ -1721,13 +1730,14 @@ We can summarize the above results by
 \begin{greybox}
 \begin{itemize}
 \item A geodesic $\Li$ of Kerr spacetime cannot encounter the rotation axis unless it has $L=0$.
-\item If $a=0$ (Schwarzschild limit) or $|E| \leq \sqrt{\mu^2 + \frac{L^2}{a^2}}$,
+\item If $L^2 \geq a^2 (E^2 - \mu^2)$,
 the Carter constant $Q$ is necessarily non-negative:
 \be \label{e:gek:Q_nonnegative}
     Q \geq 0 .
 \ee
 \item The Carter constant $Q$ can take negative values only if
-$a\neq 0$ and $|E| > \sqrt{\mu^2 + \frac{L^2}{a^2}}$; its range is then
+$L^2 < a^2 (E^2 - \mu^2)$, which implies $a\neq 0$
+and $|E| > \mu$; the range of $Q$ is then
 limited from below:
 \be
     Q \geq Q_{\rm min} = - \left( a \sqrt{E^2 - \mu^2} - |L| \right) ^2.
@@ -1735,24 +1745,33 @@ limited from below:
 A geodesic with $Q<0$ is called \defin{vortical}\index{vortical geodesic}; it
 never encounters the equatorial plane.
 \item If $Q>0$, $\Li$ oscillates symmetrically about the equatorial plane,
-between two turning points, $\th_0$ and $\pi-\th_0$, such that $0<\th_0<\pi/2$,
+between two $\th$-turning points, at $\th=\th_0$ and $\th=\pi-\th_0$, where $\th_0\in(0,\pi/2)$
+is given by Eq.~(\ref{e:gek:th0_a2E2mu2_zero})
+for $a^2(E^2 - \mu^2) = 0$, Eq.~(\ref{e:gek:th0_L_zero}) for $L=0$ and
+$Q < a^2(\mu^2 - E^2)$, Eq.~(\ref{e:gek:th0_E_lt_mu}) for $|E|<\mu$
+and Eq.~(\ref{e:gek:th0_E_gt_mu}) for $|E|>\mu$,
 except for two subcases with $L=0$: (i) $Q = a^2 (\mu^2 - E^2)$: $\Li$
 lies unstably along the rotation axis or approaches it asymptotically
 and (ii) $Q >a^2(\mu^2 - E^2)$: $\Li$
 crosses repeatedly the rotation axis, with $\th$ taking all values in the
 range $[0,\pi]$.
 \item If $Q=0$, $\Li$ is stably confined to the equatorial plane
-for $a^2 (E^2 - \mu^2) < L^2$ or $a^2 (E^2 - \mu^2) = L^2 \neq 0$;
-for $a^2 (E^2 - \mu^2) > L^2$, $\Li$ either lies unstably in the equatorial
-plane or approaches it asymptotically from one side, while for $L=0$ and ($a=0$ or $|E|=\mu$),
+for $L^2 > a^2 (E^2 - \mu^2)$ or $L^2 = a^2 (E^2 - \mu^2) \neq 0$;
+for $L^2 < a^2 (E^2 - \mu^2)$, $\Li$ either lies unstably in the equatorial
+plane or approaches it asymptotically from one side, while for
+$L^2 = a^2 (E^2 - \mu^2) = 0$,
 $\Li$ lies at a constant value $\th=\th_0\in[0,\pi]$.
-\item If $Q_{\rm min} < Q < 0$, $\Li$ oscillates between two turning
-points strictly located in the Northern hemisphere ($0<\th<\pi/2$) or in
-the Southern hemisphere ($\pi/2<\th<\pi$) for $L\neq 0$, while for $L=0$,
-$\Li$ oscillates about the rotation axis, without encoutering the equatorial
-plane, having a turning point at $\th_0$ such that $0<\th_0<\pi/2$
-(motion in the Northern hemisphere) or $\pi/2<\th_0<\pi$
-(motion in the Southern hemisphere).
+\item If $Q_{\rm min} < Q < 0$, $\Li$ never encounters the equatorial plane,
+having a $\th$-motion entirely confined either to the Northern hemisphere
+($0<\th<\pi/2$) or to
+the Southern one ($\pi/2<\th<\pi$); if $L\neq 0$, $\Li$ oscillates between
+two $\th$-turning points, at $\th=\th_0$ and $\th=\th_1$ (Northern hemisphere)
+or at $\th=\pi-\th_0$ and $\th=\pi-\th_1$ (Southern hemisphere), where
+$\th_0$ and $\th_1$ are given by Eqs.~(\ref{e:gek:th0_E_gt_mu}) and
+(\ref{e:gek:th1}) respectively; if $L=0$,
+$\Li$ oscillates about the rotation axis, with a $\th$-turning point at
+$\th=\th_0$ or $\th = \pi - \th_0$, where $\th_0$
+is given by Eq.~(\ref{e:gek:th0_L_zero}).
 \item If $Q = Q_{\rm min}$, $\Li$ lies stably at a constant value $\th=\th_*$
 or $\th = \pi - \th_*$, with $\th_*\in [0, \pi/2)$%]$
 \ given by\footnote{This is Eq.~(\ref{e:gek:theta_star})
@@ -1828,9 +1847,11 @@ particular $\lim_{r\to\pm\infty} R(r) = + \infty$ for $|E|>\mu$
 and $\lim_{r\to\pm\infty} R(r) = - \infty$ for $|E|<\mu$. In the latter case,
 the constraint $R(r) \geq 0$ cannot be satisfied for large values
 of $|r|$. A geodesic with $|E|<\mu$ is therefore located within a bounded
-region in terms of the radial coordinate $r$. Moreover, we have seen in
-Sec.~\ref{s:gek:th_motion} that for $|E|<\mu$, one has $Q\geq 0$
-[Eq.~(\ref{e:gek:Q_nonnegative})]. Therefore $-a^2 Q \leq 0$.
+region in terms of the radial coordinate $r$. Moreover, $|E|<\mu$
+implies necessarily $L^2 > a^2 (E^2 - \mu^2)$, so that
+the results of
+Sec.~\ref{s:gek:th_motion} lead to $Q\geq 0$
+[cf. Eq.~(\ref{e:gek:Q_nonnegative})]. Therefore $-a^2 Q \leq 0$.
 It follows then that $r$ cannot be negative.
 Indeed, we see
 on expression~(\ref{e:gek:R_r_powers}) that for $|E|<\mu$ (which implies $\mu>0$ and $Q\geq 0$) and $r<0$,
@@ -2195,10 +2216,10 @@ We consider here a timelike geodesic $\Li$ with $|E|< \mu$, or equivalently
 \be \label{e:gek:veps_lt_one}
     |\veps| < 1 .
 \ee
-As shown in Sec.~\ref{s:gek:r-motion}, such a geodesic has necessarily a positive
+As shown in Sec.~\ref{s:gek:r-motion}, such a geodesic has necessarily a non-negative
 Carter constant:
 \be
-    q >0
+    q \geq 0
 \ee
 and is located in a radialy bounded part of the $r\geq 0$ region of Kerr spacetime.
 
@@ -2250,37 +2271,39 @@ the integral in the right-hand side of Eq.~(\ref{e:gek:Lambda_r}) can
 be evaluated by means of elliptic integrals. We shall not give the detail
 here, refering the interested reader to the article~\cite{FujitH09}.
 
-Regarding the $\th$-motion, we are in the case $a^2(E^2 - \mu^2) < L^2$
+Regarding the $\th$-motion, we are in the case $L^2 > a^2(E^2 - \mu^2)$
 considered in Sec.~\ref{s:gek:th_motion}, since for bound geodesics $E^2 - \mu^2 < 0$.
 The effective $\th$-potential $V(\th) = Q - \Theta(\th)$ has then the shape shown in
 the left panel of Fig.~\ref{f:gek:th_pot_L_0} for $\ell=0$ and in the left panel
 of Fig.~\ref{f:gek:th_pot_L_non0} for $\ell\neq 0$.
-We can then distinguish two types of orbits:
+We can then distinguish three types of bound orbits:
 \begin{itemize}
-\item \defin{polar orbit}: $\Li$ crosses the rotational axis an infinite number
+\item \defin{polar orbit}\index{polar!orbit}: $\Li$ crosses the rotational axis an infinite number
 of times; this occurs iff $\ell=0$ and $q > a^2 ( 1-\veps^2)$;
-\item \defin{non-polar orbit}: $\Li$ never crosses the rotational axis; it
-rather oscillates symmetrically about the equatorial plane between
-two $\th$-turning points $\th_{\rm min} \in (0,\pi /2)$ and $\pi-\th_{\rm min}$.
-Such orbits occur for either
-$\ell\not=0$ or $\ell=0$ and $q < a^2 ( 1-\veps^2)$.
+\item \defin{equatorial orbit}\index{equatorial!orbit}: $\Li$ is entirely contained in the
+equatorial plane $\th=\pi/2$; for a bound orbit, this occurs iff $q=0$;
+\item \defin{non-polar and non-equatorial orbit}\index{non-polar!orbit}: $\Li$ never crosses the rotational axis and oscillates symmetrically about the equatorial plane between
+two $\th$-turning points at $\th = \th_0 \in (0,\pi /2)$ and $\th=\pi-\th_0$;
+for a bound orbit, this occurs iff $q>0$ and ($\ell\neq 0$ or $q<a^2 ( 1-\veps^2)$).
 \end{itemize}
 Stricly speaking, there is also the exceptional case $\ell=0$ and
-$q = a^2 (1 -\veps^2)$, for which the rotation axis is reached only
+$q = a^2 (1 -\veps^2)$, for which the rotation axis is reached
 asymptotically (cf. Sec.~\ref{s:gek:asymptotic_values} and the grey dashed curve
 in the left panel of Fig.~\ref{f:gek:th_pot_L_0}).
 
-In the following, we focus on non-polar orbits.
-The angle $\th_{\rm min}$ is a zero of $\tilde{\Theta}(\th)$ (cf. Sec.~\ref{s:gek:turning_points}). Given expression (\ref{e:gek:Theta_timelike}) of $\tilde{\Theta}(\th)$,
-we get
-\[
-    a^2 (1-\veps^2) \sin^4\th_{\rm min}
-    + \left[ \ell^2 + q - a^2 (1-\veps^2) \right] \sin^2\th_{\rm min} - \ell^2 = 0 .
-\]
-Solving this quadratic equation in $\sin^2\th_{\rm min}$ yields
-\be \label{e:gek:th_min_arcsin}
-    \th_{\rm min} = \arcsin\sqrt{\frac{a^2(1 - \veps^2) - \ell^2 - q
-        + \sqrt{\left[ \ell^2 + q - a^2 (1-\veps^2) \right]^2 + 4 \ell^2 a^2 (1-\veps^2)}}{2 a^2 (1-\veps^2)} }.
+Circular equatorial orbits will be discussed in Sec.~\ref{s:gek:circ_equat}.
+In the following, we focus on non-polar and non-equatorial orbits, which
+constitute the generic category of bound timelike orbits.
+One has then $\th_0 \leq \th \leq \pi - \th_0$, with $\th_0$ given by
+Eq.~(\ref{e:gek:th0_E_lt_mu}):
+\be \label{e:gek:th_min_arccos}
+    \encadre{ \th_0 = \arccos \sqrt{ \frac{1}{2} \left( 1 + \frac{\ell^2 + q}{a^2 (1 - \veps^2)}
+        - \sqrt{ \left[1 + \frac{\ell^2 + q}{a^2 (1 - \veps^2)}\right] ^2
+        - \frac{4q}{a^2 (1 - \veps^2)}} \right) } } ,
+\ee
+which reduces to Eq.~(\ref{e:gek:th0_L_zero}) for $\ell = 0$:
+\be
+   \encadre{ \th_0 = \arccos \sqrt{\frac{q}{a^2 (1 - \veps^2)}} . }_{\, \ell=0}
 \ee
 
 From the viewpoint of Eq.~(\ref{e:gek:th_eff_pot_timelike}) above,
@@ -2290,13 +2313,13 @@ non-polar orbits have a periodic $\th$-motion in the potential well $-\tilde{\Th
 \ee
 The period
 $\Lambda_\theta$ is the Mino time $\Delta\tau'$ spent in a round-trip
-between $\theta_{\rm min}$ and $\pi-\theta_{\rm min}$.
+between $\th_0$ and $\pi-\th_0$.
 By rewriting Eq.~(\ref{e:gek:th_eff_pot_timelike})
 as $\D\tau' = \pm \D \th / \sqrt{\tilde\Theta(\th)}$, we get
 \be
-    \Lambda_\th = 2 \int_{\th_{\rm min}}^{\pi-\th_{\rm min}}
+    \Lambda_\th = 2 \int_{\th_0}^{\pi-\th_0}
               \frac{\D \th}{\sqrt{\tilde\Theta(\th)}}
-              = 4 \int_{\th_{\rm min}}^{\pi/2}
+              = 4 \int_{\th_0}^{\pi/2}
                   \frac{\D \th}{\sqrt{\tilde\Theta(\th)}} ,
 \ee
 where the last equality results from the symmetry of $\tilde\Theta(\th)$
@@ -2319,7 +2342,7 @@ is the rotation axis and the solid line marks the equatorial plane.
 For non-polar orbits, the motion is restricted by
 \be
  \encadre{r_{\rm p}\leq r \leq r_{\rm a}} \qquad\mbox{and}\qquad
- \encadre{\th_{\rm min} \leq \th \leq \pi - \th_{\rm min}}.
+ \encadre{\th_0 \leq \th \leq \pi - \th_0}.
 \ee
 This means that in terms of the Cartesian Boyer-Lindquist coordinates (\ref{e:gek:Cartesian_BL}), the
 geodesic is confined inside a torus (cf. Fig.~\ref{f:gek:torus}), which is
@@ -2354,8 +2377,8 @@ of the bound timelike geodesic considered in Fig.~\ref{f:gek:timelike_xyz}.
 The grey disk depicts the black hole region. On the left panel, there appears
 clearly that the minimal value of $r$ is $r_p \simeq 2.2\, m$, while its
 maximal value is $r_a \simeq 6.9\, m$. On the right panel, we check
-that $\th_{\rm min} \leq \th \leq \pi -\th_{\rm min}$ with
-$\th_{\rm min} \sim 60^\circ$, in agreement with the generic behaviour
+that $\th_0 \leq \th \leq \pi -\th_0$ with
+$\th_0 \sim 60^\circ$, in agreement with the generic behaviour
 illustrated in Fig.~\ref{f:gek:torus}.
 \textsl{[Figure generated by the notebook \ref{s:sam:Kerr_geod_plots}]}
 }
@@ -2377,7 +2400,7 @@ show a bound timelike geodesic $\Li$ of reduced integrals of motion
 $\veps=0.9$, $\ell=2 m$ and $q=1.3\, m^2$
 orbiting around a Kerr black hole with $a=0.998\, m$.
 It has $r_p \simeq 2.175\, m$,
-$r_a \simeq 6.853\, m$ and $\th_{\rm min} \simeq 1.060\, {\rm rad} \simeq 60.75^\circ$.
+$r_a \simeq 6.853\, m$ and $\th_0 \simeq 1.060\, {\rm rad} \simeq 60.75^\circ$.
 The effective radial potential
 $-\mathcal{R}(r)$ of this geodesic is the one depicted in Fig.~\ref{f:gek:R_potential}.
 Figures~\ref{f:gek:timelike_xyz}--\ref{f:gek:timelike_txy} show actually the
@@ -2385,7 +2408,7 @@ segment $0\leq \tau \leq 600 \, m$ of $\Li$,
 starting at the point of Boyer-Lindquist coordinates
 $(0, (r_{\rm p} + r_{\rm a})/2, \pi/2, 0)$.
 That $\th(\tau)$ lies in the interval
-$[\th_{\rm min}, \pi-\th_{\rm min}] \sim [60^\circ, 120^\circ]$ appears clearly in the
+$[\th_0, \pi-\th_0] \sim [60^\circ, 120^\circ]$ appears clearly in the
 right panel of Fig.~\ref{f:gek:timelike_plane}. On Figs.~\ref{f:gek:timelike_plane}
 (left panel) and \ref{f:gek:timelike_txy}, we notice a generic feature
 of eccentric orbits in the Kerr metric, known as
@@ -2427,7 +2450,7 @@ $T_2(\th(\tau'))$, $\Phi_1(r(\tau'))$ and $\Phi_2(\th(\tau'))$ over one period:
         = \frac{2}{\Lambda_r} \int_{r_{\rm p}}^{r_{\rm a}} \frac{T_1(r)}{\sqrt{R(r)}}\, \D r \\
     & \langle T_2(\th) \rangle = \frac{1}{\Lambda_\th} \int_{0}^{\Lambda_\th}
         T_2(\th(\tau'))\, \D \tau'
-        = \frac{4}{\Lambda_\th} \int_{\th_{\rm min}}^{\pi/2}
+        = \frac{4}{\Lambda_\th} \int_{\th_0}^{\pi/2}
             \frac{T_2(\th)}{\sqrt{\tilde\Theta(\th)}}\, \D \th ,
 \end{align}
 \end{subequations}
@@ -2492,7 +2515,7 @@ or equivalently
 \ee
 One may also introduce the \defin{inclination angle} $\th_{\rm inc}$ by
 \be \label{e:gek:def_th_inc}
-    \th_{\rm inc} := \frac{\pi}{2} - (\operatorname{sgn}\ell) \th_{\rm min} .
+    \th_{\rm inc} := \frac{\pi}{2} - (\operatorname{sgn}\ell) \th_0 .
 \ee
 The sign of $\ell$ appears in this formula to enforce $\th_{\rm inc} \in [0, \pi/2]$
 for prograde orbits ($\ell > 0$) and $\th_{\rm inc} \in [\pi/2, \pi]$ for retrograde
@@ -2508,19 +2531,19 @@ that $(p, e, \th_{\rm inc})$ are functions of $(\veps,\ell,q)$, because
 (i) $r_{\rm a}$ and $r_{\rm p}$ are some roots of the quartic polynomial
 $\mathcal{R}(r)$, whose coefficients are functions of $(\veps,\ell,q)$ only
 (at fixed Kerr parameters $(m, a)$) [cf. Eq.~(\ref{e:gek:R_timelike})] and
-(ii) $\th_{\rm min}$ in the right-hand side of expression~(\ref{e:gek:def_th_inc}) for
-$\th_{\rm inc}$ is the function of $(\veps,\ell,q)$ given by Eq.~(\ref{e:gek:th_min_arcsin}).
+(ii) $\th_0$ in the right-hand side of expression~(\ref{e:gek:def_th_inc}) for
+$\th_{\rm inc}$ is the function of $(\veps,\ell,q)$ given by Eq.~(\ref{e:gek:th_min_arccos}).
 Conversely, to express $(\veps,\ell,q)$ in terms of $(p, e, \th_{\rm inc})$,
 one shall write
 \[
     \left\{ \begin{array}{l}
         \mathcal{R}(r_{\rm p}) = 0 \\
         \mathcal{R}(r_{\rm a}) = 0 \\
-        \tilde{\Theta}(\th_{\rm min}) = 0 ,
+        \tilde{\Theta}(\th_0) = 0 ,
         \end{array} \right.
 \]
 where $r_{\rm p}$ and $r_{\rm a}$ are the functions of $(e,p)$ given
-by Eq.~(\ref{e:gek:rp_ra_p_e}) and $\th_{\rm min}$ is the function
+by Eq.~(\ref{e:gek:rp_ra_p_e}) and $\th_0$ is the function
 of $\th_{\rm inc}$ given by Eq.~(\ref{e:gek:def_th_inc}). The above system
 is then a system of 3 equations for the 3 unknowns $(\veps,\ell,q)$; see
 Appendix~B of Ref.~\cite{Schmi02} or Appendix~A of Ref.~\cite{DrascH06} for details.
@@ -2529,7 +2552,7 @@ Appendix~B of Ref.~\cite{Schmi02} or Appendix~A of Ref.~\cite{DrascH06} for deta
 The geodesic $\Li$ depicted in Figs.~\ref{f:gek:timelike_xyz}--\ref{f:gek:timelike_txy}
 has $\veps=0.9$, $\ell=2 m$ and $q=1.3\, m^2$, from which we get
 $r_p = 2.175\, m$,
-$r_a = 6.853\, m$ and $\th_{\rm min} = 1.060\, {\rm rad} = 60.75^\circ$.
+$r_a = 6.853\, m$ and $\th_0 = 1.060\, {\rm rad} = 60.75^\circ$.
 Then Eqs.~(\ref{e:gek:p_e_ra_rp}) and (\ref{e:gek:def_th_inc}) yield
 $p=3.302$, $e=0.518$ and $\th_{\rm inc} = 29.26^\circ$.
 \end{example}
@@ -2540,7 +2563,7 @@ meridional phase angle $\chi(\tau)$ as monotically increasing functions
 of $\tau$ such that
 \be
     r(\tau) =: \frac{p m}{1 + e\cos\psi(\tau)} \qquad\mbox{and}\qquad
-    \th(\tau) =: \arccos\left( \cos\th_{\rm min} \, \cos\chi(\tau) \right) .
+    \th(\tau) =: \arccos\left( \cos\th_0 \, \cos\chi(\tau) \right) .
 \ee
 For numerical integration, $\psi(\tau)$ and $\chi(\tau)$ are preferred
 to $r(\tau)$ and $\th(\tau)$ since the latter are tricky at the
@@ -2549,7 +2572,7 @@ turning points, where $\D r/\D\tau$ and $\D\th/\D\tau$ vanish and change sign
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Circular timelike orbits in the equatorial plane}
+\section{Circular timelike orbits in the equatorial plane} \label{s:gek:circ_equat}
 
 \subsection{Equations of motion in the equatorial plane}
 
