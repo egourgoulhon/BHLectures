@@ -1518,9 +1518,9 @@ $Q \geq - a^2 (E^2 - \mu^2)$, with
 $\th=\pi$ are possible and they correspond to minima of $V(\th)$;
 the geodesic is then stably located on the rotation axis.
 \item $-a^2(E^2 - \mu^2) < Q < 0$: the geodesic oscillates about the rotation
-axis, without reaching the equator; one has either $\th\in[0,\th_0]$ or
-$\th\in [\pi - \th_0,\pi]$, with the turning point value
-$\th_0 := \arccos\sqrt{|Q|/(a^2(E^2 - \mu^2))} < \pi/2$ (cf. the trajectories $Q=Q_1$ in Fig.~\ref{f:gek:th_pot_L_0}, right).
+axis, without reaching the equator; one has either $\th\in[0,\th_1]$ or
+$\th\in [\pi - \th_1,\pi]$, with the turning point value
+$\th_1 := \arccos\sqrt{|Q|/(a^2(E^2 - \mu^2))} < \pi/2$ (cf. the trajectories $Q=Q_1$ in Fig.~\ref{f:gek:th_pot_L_0}, right).
 \item $Q=0$: $\th=\pi/2$ is either an unstable position or
 an asymptotic $\th$-value, i.e. the geodesic approaches the equatorial
 plane when $\lambda\to\pm\infty$.
@@ -1552,11 +1552,11 @@ Dashed lines indicate trajectories with asympotic $\th$-values.
 \ \includegraphics[width=0.49\textwidth]{gek_th_pot_low_L.pdf}}
 \caption[]{\label{f:gek:th_pot_L_non0} \footnotesize
 Effective $\th$-potential $V(\th)$ in the case $L\neq0$.
-The left figure is for $a^2(E^2 - \mu^2) \leq L^2$, with
+The left figure is for $L^2 \geq a^2(E^2 - \mu^2)$, with
 with colored dots or horizontal lines
 corresponding to geodesic trajectories for
 two values of the Carter constant $Q$: $0$ and $Q_1= 4 L^2$.
-The right figure is for $a^2(E^2 - \mu^2) > L^2$, with trajectories corresponding
+The right figure is for $L^2 < a^2(E^2 - \mu^2)$, with trajectories corresponding
 to four values of $Q$: $Q_{\rm min}$, $Q_1 = - 2 L^2$, $0$ and $Q_2 = 2 L^2$.
 The dashed line ($Q=0$)
 indicates the trajectory with an asympotic $\th$-value, which is $\pi/2$.
@@ -1612,11 +1612,11 @@ This is necessary the minimal value of $Q$ [cf. Eq.~(\ref{e:gek:V_leq_Q})]:
 \be  \label{e:gek:Q_min_prov}
     Q_{\rm min} = - \left( a \sqrt{E^2 - \mu^2} - |L| \right) ^2 .
 \ee
-We have then (cf. right part of Fig.~\ref{f:gek:th_pot_L_non0})
+We have then (cf. right panel of Fig.~\ref{f:gek:th_pot_L_non0})
 \begin{itemize}
 \item $Q = Q_{\rm min}$: the geodesic stays stably at a fixed value of $\th$,
 either $\th_*$ or $\pi - \th_*$.
-\item $Q_{\rm min} < Q < 0$: the geodesic oscillates between two turning
+\item $Q_{\rm min} < Q < 0$: the geodesic oscillates between two $\th$-turning
 points either in the Northen
 hemisphere ($\th < \pi/2$) or the Southern one ($\th > \pi/2$), without reaching
 the equator nor the rotation axis (cf. the trajectories $Q=Q_1$ in Fig.~\ref{f:gek:th_pot_L_non0}, right).
@@ -1651,7 +1651,7 @@ If $a^2 (E^2 - \mu^2) = 0$, the solution is $x = Q/(L^2 + Q)$. Moreover, in this
 case one has necessarily $Q \geq 0$, so that $0 \leq x \leq 1$ and
 the unique solution in $(0,\pi/2)$ is
 \be \label{e:gek:th0_a2E2mu2_zero}
-     \encadre{\theta_0 = \arccos\sqrt{\frac{Q}{L^2 + Q}} . }_{\, a^2 (E^2 - \mu^2) = 0}
+     \encadre{\th_0 = \arccos\sqrt{\frac{Q}{L^2 + Q}} . }_{\, a^2 (E^2 - \mu^2) = 0}
 \ee
 In the rest of this section, we assume that $a^2 (E^2 - \mu^2) \neq 0$.
 Equation~(\ref{e:gek:quadrat_x}) is then a quadratic equation in $x$, the discriminant
@@ -1690,38 +1690,48 @@ $x_+$ and $x_-$ is performed if $1 + Q/(a^2(E^2 - \mu^2)) < 0$.}
 \]
 Now, $x_+ = 1$ is excluded by (\ref{e:gek:th_turn_x_pm_range}). There remains
 only $x_-$, leading to the turning point value found in the
-$L=0$ case discussed above:
+$L=0$ cases discussed above, which we can combine into a single formula:
 \be \label{e:gek:th0_L_zero}
-   \encadre{ \th_0 = \arccos \sqrt{\frac{Q}{a^2 (\mu^2 - E^2)}} . }_{\, L=0}
+   \encadre{ \th_0 = \th_1 = \arccos \sqrt{\frac{Q}{a^2 (\mu^2 - E^2)}} . }_{\, L=0}
 \ee
-This formula assumes that $0 < Q/(a^2 (\mu^2 - E^2)) < 1$, otherwise there
-is no $\th$-turning point (curves marked $Q=Q_2$ in Fig.~\ref{f:gek:th_pot_L_0}).
+This formula assumes that $0 < Q/(a^2 (\mu^2 - E^2)) < 1$ (as for the trajectories
+$Q=Q_1$ in both panels of Fig.~\ref{f:gek:th_pot_L_0}),
+otherwise there
+is no $\th$-turning point (as for the trajectories $Q=Q_2$ in both panels of
+Fig.~\ref{f:gek:th_pot_L_0}).
+More precisely, for $Q > 0$ and $\mu^2 - E^2 > 0$, it leads to $\th_0$, while
+for $Q<0$ and $\mu^2 - E^2 < 0$, it leads to $\th_1$.
 
-For $L\neq 0$, one shall distinguish two cases:
+For $L\neq 0$, one shall distinguish between two cases, since the case $|E| = \mu$
+has been covered above [Eq.~(\ref{e:gek:th0_a2E2mu2_zero})]:
 \begin{itemize}
 \item if $|E| < \mu$, then only $x_-$ fulfills the criterium (\ref{e:gek:th_turn_x_pm_range}),
 leading to the turning point value:
 \be \label{e:gek:th0_E_lt_mu}
-    \encadre{ \th_0 = \arccos \left[ \frac{1}{2} \left( 1 + \frac{L^2 + Q}{a^2 (\mu^2 - E^2)}
+    \encadre{ \th_0 = \arccos \sqrt{ \frac{1}{2} \left[ 1 + \frac{L^2 + Q}{a^2 (\mu^2 - E^2)}
         - \sqrt{ \left[1 + \frac{L^2 + Q}{a^2 (\mu^2 - E^2)}\right] ^2
-        - \frac{4Q}{a^2 (\mu^2 - E^2)}} \right) \right] ^{1/2}}
+        - \frac{4Q}{a^2 (\mu^2 - E^2)}} \right] }}
 \ee
 \item if $|E| > \mu$, then $x_+$ always fulfills the criterium (\ref{e:gek:th_turn_x_pm_range}),
 leading to the turning point value:
 \be \label{e:gek:th0_E_gt_mu}
-    \encadre{\th_0 =  \arccos  \left[  \frac{1}{2} \left( 1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}
+    \encadre{\th_0 =  \arccos  \sqrt{   \frac{1}{2} \left[ 1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}
         + \sqrt{ \left[1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}\right] ^2
-        + \frac{4Q}{a^2 (E^2 - \mu^2)}} \right)  \right] ^{1/2} } .
+        + \frac{4Q}{a^2 (E^2 - \mu^2)}} \right]  } } .
 \ee
 If, in addition $Q<0$, then $x_-$ also fulfills (\ref{e:gek:th_turn_x_pm_range})
-and we get a second turning point value:
+and we get a second turning point value (cf. the case $Q=Q_1$ in the
+right panel of Fig.~\ref{f:gek:th_pot_L_non0}):
 \be \label{e:gek:th1}
-    \encadre{\th_1 =  \arccos  \left[  \frac{1}{2} \left( 1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}
+    \encadre{\th_1 =  \arccos  \sqrt{  \frac{1}{2} \left[ 1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}
         - \sqrt{ \left[1 - \frac{L^2 + Q}{a^2 (E^2 - \mu^2)}\right] ^2
-        + \frac{4Q}{a^2 (E^2 - \mu^2)}} \right)  \right] ^{1/2} } .
+        + \frac{4Q}{a^2 (E^2 - \mu^2)}} \right]  } } .
 \ee
-
 \end{itemize}
+\begin{remark}
+At the limit $L\to 0$, formulas (\ref{e:gek:th0_E_lt_mu}) and
+(\ref{e:gek:th1}) reduce both to (\ref{e:gek:th0_L_zero}).
+\end{remark}
 
 
 \subsubsection{Summary}
@@ -1770,7 +1780,7 @@ or at $\th=\pi-\th_0$ and $\th=\pi-\th_1$ (Southern hemisphere), where
 $\th_0$ and $\th_1$ are given by Eqs.~(\ref{e:gek:th0_E_gt_mu}) and
 (\ref{e:gek:th1}) respectively; if $L=0$,
 $\Li$ oscillates about the rotation axis, with a $\th$-turning point at
-$\th=\th_0$ or $\th = \pi - \th_0$, where $\th_0$
+$\th=\th_1$ or $\th = \pi - \th_1$, where $\th_1$
 is given by Eq.~(\ref{e:gek:th0_L_zero}).
 \item If $Q = Q_{\rm min}$, $\Li$ lies stably at a constant value $\th=\th_*$
 or $\th = \pi - \th_*$, with $\th_*\in [0, \pi/2)$%]$
@@ -1808,7 +1818,8 @@ the geodesic was confined to the hyperplane $\th=\pi/2$. Consequently there was
 no $\th$-motion. Here, we keep the coordinates $(t,r,\th,\ph)$ fixed and do not
 assume that they are adapted to the geodesic $\Li$ under consideration. So $\th$
 may vary along $\Li$. In Schwarzschild spacetime, the Carter constant $Q$
-is always non-negative [Eq.~(\ref{e:gek:Q_nonnegative})].\\
+is always non-negative, since the inequality $L^2 \geq a^2(E^2-\mu^2)$ is
+trivially satisfied for $a=0$ [cf. Eq.~(\ref{e:gek:Q_nonnegative})].\\
 If $Q=0$, then for $L=0$, $\Li$ lies at a constant value of $\th$: this actually
 corresponds to a purely radial geodesic. Indeed,
 the total angular momentum measured in the asymptotic region is $\w{L}_{\rm tot} = 0$
@@ -2137,7 +2148,7 @@ Whenever the geodesic $\Li$ is timelike, it is relevant to
 rescale everything by the mass $\mu$ of the particle $\mathscr{P}$ whose worldline is $\Li$.
 In particular, as in the Schwarzschild case treated in Sec.~\ref{s:ges:timelike},
 let us parametrize $\Li$ by the proper time $\tau$, which is the affine parameter
-related to the affine parameter $\lambda$ associated to the 4-momentum $\w{p}$
+$\tau$ related to the affine parameter $\lambda$ associated to the 4-momentum $\w{p}$
 by
 \be \label{e:gek:tau_mu_lamb}
     \tau = \mu \lambda
@@ -2173,13 +2184,11 @@ where $\tau'$ is related to the Mino parameter $\lambda'$ by
 \ee
 and
 \be
-    T_1(r) := \frac{r^2 + a^2}{r^2 - 2 m r + a^2} [\veps (r^2 + a^2)  - a \ell]
-    \qquad\mbox{and}\qquad
+    T_1(r) := \frac{r^2 + a^2}{r^2 - 2 m r + a^2} [\veps (r^2 + a^2)  - a \ell],\qquad
     T_2(\th) := - a^2 \veps \sin^2\th,
 \ee
 \be
-    \Phi_1(r) := \frac{a}{r^2 - 2 m r + a^2}\left[\veps (r^2 + a^2) - a \ell \right]
-    \qquad\mbox{and}\qquad
+    \Phi_1(r) := \frac{a}{r^2 - 2 m r + a^2}\left[\veps (r^2 + a^2) - a \ell \right],\qquad
     \Phi_2(\th) := \frac{\ell}{\sin^2\th} ,
 \ee
 \be \label{e:gek:R_timelike}
@@ -2228,7 +2237,7 @@ a 1-dimensional motion in the effective potential $U(r) := - \mathcal{R}(r)$,
 with a vanishing ``total energy'' --- the right-hand side of Eq.~(\ref{e:gek:r_eff_pot_timelike}).
 The motion is thus possible wherever $U(r) \leq 0$ or, equivalently, wherever
 $\mathcal{R}(r) \geq 0$, which is nothing but the constraint (\ref{e:gek:R_non_neg}).
-Equation~(\ref{e:gek:veps_lt_one})
+Property~(\ref{e:gek:veps_lt_one})
 implies that the coefficient of $r^4$ in formula
 (\ref{e:gek:R_timelike}) for $\mathcal{R}(r)$ is negative. It follows then that
 $\lim_{r\to\pm\infty} U(r) = +\infty$ and the segments with $U(r) \leq 0$
@@ -2264,7 +2273,7 @@ $\Lambda_r$ being the Mino time $\Delta\tau'$ spent to perform a round-trip
 between $r_{\rm p}$ and $r_{\rm a}$. By rewriting Eq.~(\ref{e:gek:r_eff_pot_timelike})
 as $\D\tau' = \pm \D r / \sqrt{\mathcal{R}(r)}$, we get
 \be \label{e:gek:Lambda_r}
-    \Lambda_r = 2 \int_{r_{\rm p}}^{r_{\rm a}} \frac{\D r}{\sqrt{\mathcal{R}(r)}} .
+    \encadre{ \Lambda_r = 2 \int_{r_{\rm p}}^{r_{\rm a}} \frac{\D r}{\sqrt{\mathcal{R}(r)}} }.
 \ee
 Since $\mathcal{R}(r)$ is a polynomial of degree 4 [cf. Eq.~(\ref{e:gek:R_timelike})],
 the integral in the right-hand side of Eq.~(\ref{e:gek:Lambda_r}) can
@@ -2297,9 +2306,9 @@ constitute the generic category of bound timelike orbits.
 One has then $\th_0 \leq \th \leq \pi - \th_0$, with $\th_0$ given by
 Eq.~(\ref{e:gek:th0_E_lt_mu}):
 \be \label{e:gek:th_min_arccos}
-    \encadre{ \th_0 = \arccos \sqrt{ \frac{1}{2} \left( 1 + \frac{\ell^2 + q}{a^2 (1 - \veps^2)}
+    \encadre{ \th_0 = \arccos \sqrt{ \frac{1}{2} \left[ 1 + \frac{\ell^2 + q}{a^2 (1 - \veps^2)}
         - \sqrt{ \left[1 + \frac{\ell^2 + q}{a^2 (1 - \veps^2)}\right] ^2
-        - \frac{4q}{a^2 (1 - \veps^2)}} \right) } } ,
+        - \frac{4q}{a^2 (1 - \veps^2)}} \right] } } ,
 \ee
 which reduces to Eq.~(\ref{e:gek:th0_L_zero}) for $\ell = 0$:
 \be
@@ -2317,18 +2326,18 @@ between $\th_0$ and $\pi-\th_0$.
 By rewriting Eq.~(\ref{e:gek:th_eff_pot_timelike})
 as $\D\tau' = \pm \D \th / \sqrt{\tilde\Theta(\th)}$, we get
 \be
-    \Lambda_\th = 2 \int_{\th_0}^{\pi-\th_0}
+    \encadre{ \Lambda_\th = 2 \int_{\th_0}^{\pi-\th_0}
               \frac{\D \th}{\sqrt{\tilde\Theta(\th)}}
               = 4 \int_{\th_0}^{\pi/2}
-                  \frac{\D \th}{\sqrt{\tilde\Theta(\th)}} ,
+                  \frac{\D \th}{\sqrt{\tilde\Theta(\th)}} },
 \ee
 where the last equality results from the symmetry of $\tilde\Theta(\th)$
 with respect to $\pi/2$.
 One naturally associates to the periods $\Lambda_r$ and $\Lambda_\th$
 the \defin{Mino angular frequencies}\index{Mino!angular frequency}\index{angular!frequency!Mino --}:
 \be
-    \Upsilon_r := \frac{2\pi}{\Lambda_r} \qquad\mbox{and}\qquad
-    \Upsilon_\th := \frac{2\pi}{\Lambda_\th} .
+   \encadre{ \Upsilon_r := \frac{2\pi}{\Lambda_r} }\qquad\mbox{and}\qquad
+   \encadre{ \Upsilon_\th := \frac{2\pi}{\Lambda_\th} }.
 \ee
 
 \begin{figure}
@@ -2474,9 +2483,9 @@ and
 \be
     \Upsilon_\ph :=  - a \veps + \langle \Phi_1(r) \rangle + \langle \Phi_2(\th) \rangle .
 \ee
-$\Gamma$ and $\Upsilon_\ph$ represent the constant (or average) parts in
+$\Gamma$ and $\Upsilon_\ph$ represent the constant (or average) parts of
 respectively $\D t/\D\tau'$ and $\D \ph / \D\tau'$, while the oscillatory parts
-are the terms in the sums over $k\geq 1$.
+are the terms involved in the sums over $k\geq 1$.
 Since $\Gamma$ is the average value of $\D t/\D\tau'$,
 we can define the
 \defin{average angular frequencies with respect to Boyer-Lindquist time}\index{average!angular frequency}
@@ -2486,17 +2495,20 @@ by \cite{DrascH04,FujitH09}
     \Omega_\th := \frac{\Upsilon_\th}{\Gamma}, \qquad
     \Omega_\ph := \frac{\Upsilon_\ph}{\Gamma} .
 \ee
-It worth to stress the following: the motion of a generic bound timelike
-geodesic in the Kerr spacetime is periodic in $r$ and $\th$
+We may summarize the above results by
+\begin{greybox}
+The motion of a generic bound timelike
+geodesic in Kerr spacetime is periodic in $r$ and $\th$
 only in terms of the Mino time $\tau'$, the corresponding angular frequencies
 being $\Upsilon_r$ and $\Upsilon_\th$. In terms of the Boyer-Lindquist time
-$t$, the motion in $r$ or $\th$ is not periodic. Accordingly, the ``average''
-frequencies $\Omega_r$ and $\Omega_\th$ defined above are not true
+$t$, the motion in $r$ or $\th$ is not periodic. Accordingly, the ``average
+frequencies'' $\Omega_r$ and $\Omega_\th$ defined above are not true
 frequencies like $\Upsilon_r$ or $\Upsilon_\th$.
 Regarding the motion in $\ph$,
 it is not periodic, neither in terms of the Mino time, nor in terms
 of the Boyer-Lindquist time, so that both $\Upsilon_\ph$ and $\Omega_\ph$
 are average frequencies.
+\end{greybox}
 
 \subsubsection{Quasi-Keplerian parametrization}
 

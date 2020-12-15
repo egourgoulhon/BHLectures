@@ -171,6 +171,12 @@ equivalent to
     \th_{\rm min} \leq \th \leq \pi - \th_{\rm min} \quad\mbox{with}\quad
     \th_{\rm min} := \arctan (-\bar{L}) .
 \ee
+\begin{remark}
+The general formula for $\th_{\rm min}$ in the case
+$a^2(E^2 - \mu^2) = 0$, Eq.~(\ref{e:gek:th0_a2E2mu2_zero}), which holds here since $\mu=0$ and $E=0$,
+yields $\th_{\rm min} = \arccos\sqrt{1/(1+ \bar{L}^2)} = \arctan | \bar{L} |$.
+Hence we recover the above formula.
+\end{remark}
 For $L = 0$, one has $\th_{\rm min} = 0$, so that $\th$ takes all values in the
 range $[0,\pi]$, which means that $\Li$
 crosses repeatedly the rotation axis. For $L< 0$, one has $0 < \th_{\rm min} < \pi/2$ and
@@ -556,7 +562,15 @@ limited from below:
 If $q<0$, $\Li$ is called a \defin{vortical null geodesic}\index{vortical geodesic}; it
 never encounters the equatorial plane.
 \item If $q>0$ and $\ell\not=0$, $\Li$ oscillates symmetrically about the equatorial plane,
-between two turning points, $\th_0$ and $\pi-\th_0$, such that $0<\th_0<\pi/2$.
+between two $\th$-turning points, at $\th=\th_0$ and $\th=\pi-\th_0$,
+where $\th_0\in(0,\pi/2)$
+is given by Eqs.~(\ref{e:gek:th0_a2E2mu2_zero}) and (\ref{e:gek:th0_E_gt_mu}):
+\begin{align}
+    &  \th_0 = \arccos\sqrt{\frac{q}{\ell^2 + q}} \quad\mbox{for}\quad a=0\\
+    &  \th_0 =  \arccos  \sqrt{   \frac{1}{2} \left[ 1 - \frac{\ell^2 + q}{a^2}
+        + \sqrt{ \left(1 - \frac{\ell^2 + q}{a^2}\right) ^2
+        + \frac{4q}{a^2} } \right]  }  \quad\mbox{for}\quad a\neq 0 . \label{e:gik:th0}
+\end{align}
 If $q>0$ and $\ell=0$, $\Li$
 crosses repeatedly the rotation axis, with $\th$ taking all values in the
 range $[0,\pi]$.
@@ -565,13 +579,27 @@ for $|\ell| > a$ or $|\ell| = a\neq 0$;
 for $|\ell| < a$, $\Li$ either lies unstably in the equatorial
 plane or approaches it asymptotically from one side, while for $\ell=0$ and $a=0$,
 $\Li$ lies at a constant value $\th=\th_0\in[0,\pi]$.
-\item If $q_{\rm min} < q < 0$, $\Li$ oscillates between two turning
-points strictly located in the Northern hemisphere ($0<\th<\pi/2$) or in
-the Southern hemisphere ($\pi/2<\th<\pi$) for $\ell\neq 0$, while for $\ell=0$,
-$\Li$ oscillates about the rotation axis, without encoutering the equatorial
-plane, having a turning point at $\th_0$ such that $0<\th_0<\pi/2$
-(motion in the Northern hemisphere) or $\pi/2<\th_0<\pi$
-(motion in the Southern hemisphere).
+\item If $q_{\rm min} < q < 0$, $\Li$ never encounters the equatorial plane,
+having a $\th$-motion entirely confined either to the Northern hemisphere
+($0<\th<\pi/2$) or to
+the Southern one ($\pi/2<\th<\pi$); if $\ell\neq 0$, $\Li$ oscillates between
+two $\th$-turning points, at $\th=\th_0$ and $\th=\th_1$ (Northern hemisphere)
+or at $\th=\pi-\th_0$ and $\th=\pi-\th_1$ (Southern hemisphere), where
+$\th_0$ is given by Eq.~(\ref{e:gik:th0}) above and $\th_1$ is given
+by  Eq.~(\ref{e:gek:th1}):
+\be \label{e:gik:th1_general}
+   \th_1 =  \arccos  \sqrt{  \frac{1}{2} \left[ 1 - \frac{\ell^2 + q}{a^2}
+        - \sqrt{ \left(1 - \frac{\ell^2 + q}{a^2}\right) ^2
+        + \frac{4q}{a^2}} \right]  }  ;
+\ee
+if $\ell=0$,
+$\Li$ oscillates about the rotation axis, with a $\th$-turning point at
+$\th=\th_1$ or $\th = \pi - \th_1$, where $\th_1$
+is given by Eq.~(\ref{e:gek:th0_L_zero}), or equivalently by the $\ell\to 0$
+limit of Eq.~(\ref{e:gik:th1_general}):
+\be
+    \th_1 = \arccos \left( \frac{\sqrt{-q}}{a} \right) \qquad (\ell=0) .
+\ee
 \item If $q = q_{\rm min}$, $\Li$ lies stably at a constant value
 $\th=\th_*$ or $\th = \pi - \th_*$, with $\th_*\in [0, \pi/2)$%]$
 \ given by
@@ -1257,7 +1285,7 @@ functions $\ell(r_0)$ and $q(r_0)$ at $r_0 = r_{\rm ph}^{\rm ms}$.
 
 Equation~(\ref{e:gik:spher_orb_dqdr}) shows that, in addition to that
 at $r_0 = r_{\rm ph}^{\rm ms}$, the function $q(r_0)$ admits
-a second at $r_0 = 3m$, i.e. for outer spherical orbits.
+a second extremum at $r_0 = 3m$, i.e. for outer spherical orbits.
 This extremum is actually a maximum and its value, obtained by
 setting $r_0 = 3 m$ in Eq.~(\ref{e:gik:spher_q_r0}),
 turns out to be independent from $a$:
@@ -1266,6 +1294,31 @@ turns out to be independent from $a$:
 \ee
 This is the maximum of the reduced Carter constant over all the spherical photon
 orbits (cf. Fig.~\ref{f:gik:spher_orb_exist}).
+
+
+\begin{figure}
+\centerline{\includegraphics[width=0.49\textwidth]{gik_spo_meridional.pdf}\
+\includegraphics[width=0.49\textwidth]{gik_spo_meridional_zoom.pdf}}
+\caption[]{\label{f:gik:spo_meridional} \footnotesize
+Trace in the meridional plane $\ph=0$ of spherical photon orbits (green circular arcs)
+in a Kerr spacetime with $a = 0.95 m$ (as in Fig.~\ref{f:gik:spher_orb_exist}).
+The right panel is a zoom on the central part of the left one.
+The meridional plane is described in terms of the coordinates $(\hat{r},\th)$
+where $\hat{r} := (r + \sqrt{r^2 + 4m^2})/2$.
+The black (resp. blight rown) half-circle at $r=r_+$ (resp. $r=r_-$)
+is the trace of the outer (resp. inner) Killing horizon.
+The dotted orange half-circle marks the locus of $r=0$, with the
+red dot indicating the curvature singularity at $r=0$ and $\th=\pi/2$.
+The ergoregion is shown in grey. The region of stable spherical orbits is
+colored in green, with its boundary at $r=r_{\rm ph}^{\rm ms}$ shown in blue.
+Green dots marks photon circular orbits: from the left to the right, they
+are the two vortical circular orbits at $r=r_{\rm ph}^{**}$, the equatorial
+inner circular orbit at $r=r_{\rm ph}^*$, the prograde outer circular orbit
+at $r=r_{\rm ph}^+$ and the retrograde outer circular orbit at $r=r_{\rm ph}^-$.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_spher_photon_existence}]}
+}
+\end{figure}
+
 
 \subsection{Photon region}
 
