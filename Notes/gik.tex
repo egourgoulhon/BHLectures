@@ -22,7 +22,6 @@ We thus treat first the particular case $E=0$.
 
 \subsection{Null geodesics with $E=0$}
 
-
 First, we note that a geodesic $\Li$ with $E=0$ cannot exist outside the ergoregion
 $\mathscr{G}$, by virtue of the result (\ref{e:gek:E_positive}). In particular,
 it cannot exist far from the black hole.
@@ -337,7 +336,13 @@ For $a\neq 0$, any null geodesic with $E=0$ has necessarily
 \ee
 \end{greybox}
 
-
+\begin{hist}
+The zero-energy null geodesics in Kerr spacetime appear to have been first
+studied by Zden\v{e}k Stuchl\'{\i}k\index{Stuchl\'{\i}k, Z.} in 1981
+\cite{Stuch81}; some corrections and refinement of his results have been
+performed by George Contopoulos\index{Contopoulos, G.} in 1984 \cite{Conto84},
+who studied zero-energy timelike geodesics as well.
+\end{hist}
 
 \subsection{Equations of geodesic motion for $E\neq 0$}
 
@@ -630,7 +635,7 @@ $\th$, with $\th_0 = \th_*$ or $\th_0 = \pi - \th_*$ according
 to Eq.~(\ref{e:gik:th_s_ell_over_a}), since $\sqrt{|\ell|/a} = \sin\th_0$.
 \end{example}
 
-\subsection{$r$-motion}
+\subsection{$r$-motion} \label{s:gik:radial_motion}
 
 As for any geodesic, the radial motion of a null geodesic $\Li$ is ruled by
 $R(r)\geq 0$ [Eq.~(\ref{e:gek:R_non_neg})], which, in terms of $\mathcal{R}(r)$,
@@ -763,11 +768,11 @@ of any $r$-turning point along these geodesics.
 \section{Spherical photon orbits} \label{s:gik:spherical_orbits}
 
 In the Schwarzschild case studies in Chap.~\ref{s:gis}, the circular photon
-orbits at $r=3m$ played a central role in the determination of
+orbits at $r=3m$ played a central role in the computation of
 the black hole shadow and the image of an accretion structure.
 For the Kerr black hole, a similar role is played by the spherical photon
-orbits. They are also null geodesics at a fixed value of $r$ but, contrary
-to circular photon orbits of Schwarzschild spacetime, they are not planar
+orbits. They are also null geodesics evolving at a fixed value of $r$ but, contrary
+to the circular photon orbits of Schwarzschild spacetime, they are not planar
 in general.
 
 
@@ -925,9 +930,10 @@ are plotted as functions of $r_0$ for $a=0.95\, m$
 in Fig.~\ref{f:gik:spher_orb_exist}, where the
 region excluded by (\ref{e:gik:q_constraints}) is colored in grey. Consequently
 spherical photon orbits exist only for values of $r_0$ for which the $q$ curve
-(in blue) lies above the grey region. We see that this occurs in two intervals:
+(in blue) lies above the grey region. We see that this occurs in three intervals:
 \be \label{e:gik:spher_orb_range}
-    \encadre{ r_0 \in [r_{\rm ph}^{**}, r_{\rm ph}^*] }
+    \encadre{ r_0 \in [r_{\rm ph}^{**}, 0) },\quad
+    \encadre{ r_0 \in (0, r_{\rm ph}^*] }
     \qand
     \encadre{ r_0 \in [r_{\rm ph}^+, r_{\rm ph}^-] },
 \ee
@@ -939,7 +945,11 @@ $|\ell(r_0)|  < a$ (boundary for condition (\ref{e:gik:q_constraints_2})).
 The above reasoning is based on Fig.~\ref{f:gik:spher_orb_exist}, which has
 been drawn for $a=0.95\, m$; however the conclusions (\ref{e:gik:spher_orb_range})
 hold for any value of $a$ (see the notebook~\ref{s:sam:Kerr_spher_photon_existence}
-for figures with $a=0.5\, m$ or $a=0.998\, m$).
+for figures with $a=0.5\, m$ or $a=0.998\, m$). We have excluded $r_0=0$
+in (\ref{e:gik:spher_orb_range}) because it would yield $\ell = a$ and $q=0$
+following Eqs.~(\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0}). But
+according to the results of Sec.~\ref{s:gik:th_motion}, such an orbit
+would be confined to the equatorial plane, where $r=0$ is not permitted (the ring singularity!).
 
 Given expression (\ref{e:gik:spher_q_r0}) for $q$, we see that
 $r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$
@@ -1034,7 +1044,7 @@ In view of the above inequalities and the ranges (\ref{e:gik:spher_orb_range}), 
 \begin{greybox}
 Spherical photon orbits exist in two regions of Kerr spacetime:
 \begin{itemize}
-\item orbits with $r_0\in [r_{\rm ph}^{**}, r_{\rm ph}^*]$ are located in $\M_{\rm III}$;
+\item orbits with $r_0\in [r_{\rm ph}^{**}, 0) \cup (0, r_{\rm ph}^*]$ are located in $\M_{\rm III}$;
 we shall call them the \defin{inner spherical photon orbits}\index{inner!spherical photon orbit}\index{spherical!photon orbit!inner --}\index{photon!orbit!inner spherical --};
 \item orbits with $r_0 \in [r_{\rm ph}^+, r_{\rm ph}^-]$ are located in $\M_{\rm I}$;
 we shall call them the \defin{outer spherical photon orbits}\index{outer!spherical photon orbit}\index{spherical!photon orbit!outer --}\index{photon!orbit!outer spherical --}.
@@ -1140,6 +1150,10 @@ the \defin{Southern vortical circular photon orbit};
 \item the orbit at $(r,\th)=(r_{\rm ph}^-,\pi/2)$ is called the \defin{retrograde outer circular photon orbit}\index{retrograde!outer circular!photon orbit};
 \end{itemize}
 \end{greybox}
+
+\subsection{The polar spherical photon orbit}
+
+Spherical photon orbit with $\ell=0$
 
 \subsection{Stability of spherical photon orbits}
 
@@ -1321,6 +1335,34 @@ at $r=r_{\rm ph}^+$ and the retrograde outer circular orbit at $r=r_{\rm ph}^-$.
 
 
 \subsection{Photon region}
+
+A corrollary of the results obtained in Sec.~\ref{s:gik:radial_motion}
+is that outside the black hole, i.e. in region $\M_{\rm I}$, a photon
+cannot be trapped (i.e. move in a limited range of $r$) unless it moves
+on a (unstable) spherical orbit. The part of Kerr spacetime made of points
+through which a spherical photon orbit can pass is called the
+\defin{photon region}\index{photon!region} or sometimes the \defin{photon shell}\index{photon!shell} \cite{Johns_al20}. In terms of the Boyer-Lindquist $r$-coordinate, the photon region
+lies in the three intervals (\ref{e:gik:spher_orb_range}).
+Regarding the $\th$-coordinate,
+the range is determined by the values of
+$\ell$ and $q$, according to the results of Sec.~\ref{s:gik:th_motion}:
+\begin{itemize}
+\item
+Spherical photon orbits with $r_0\in (0, r_{\rm ph}^{*})$ or
+$r_0\in (r_{\rm ph}^+, r_{\rm ph}^-)$ have $q>0$ (cf. Fig.~\ref{f:gik:spher_orb_exist})
+and therefore oscillate about the equatorial plane, having $\th$-turning points
+symmetrical about it, at $\th=\th_0$ and $\th=\pi-\th_0$, with
+$\th_0$ given by Eq.~(\ref{e:gik:th0}). According, at a given value $r_0$ of $r$,
+the range of $\th$ is $[\th_0, \pi - \th_0]$ with $\th_0$ computed by
+plugging formulas (\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0})
+for $(\ell,q)$ into Eq.~(\ref{e:gik:th0}).
+\item Spherical photon orbits with $r_0 \in [r_{\rm ph}^{**}, 0)$ %]$
+have $q<0$ (cf. right panel of Fig.~\ref{f:gik:spher_orb_exist}); they are thus vortical
+with either $\th\in[\th_0, \th_1]$ or $\th\in[\pi-\th_1, \pi-\th_0]$, with
+$\th_0$ and $\th_1$ given by Eqs.~(\ref{e:gik:th0}) and (\ref{e:gik:th1_general}), in which
+$\ell$ and $q$ shall be considered as the functions of $r_0$ given Eqs.~(\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0}).
+\end{itemize}
+
 
 \section{Images}
 
