@@ -20,7 +20,7 @@ $L$ and the Carter constant $Q$ by $E$, so that only two constants of motion bec
 pertinent for the study: $L/E$ and $Q/E^2$.
 We thus treat first the particular case $E=0$.
 
-\subsection{Null geodesics with $E=0$}
+\subsection{Zero-energy null geodesics}
 
 First, we note that a geodesic $\Li$ with $E=0$ cannot exist outside the ergoregion
 $\mathscr{G}$, by virtue of the result (\ref{e:gek:E_positive}). In particular,
@@ -243,7 +243,7 @@ Trajectory in the meridional plane, as given by Eq.~(\ref{e:gik:E_zero_r_theta})
 with $E=0$, $Q>0$, $L = - \sqrt{Q}$ and $r(\th_{\rm min}) = 1.5 \, m$
 in the Kerr spacetime with $a/m = 0.9$.
 The meridional plane is described in terms of
-O'Neill exponential coordinates $x = \mathrm{e}^{r/m}\sin\th$ and $z = \mathrm{e}^{r/m}\cos\th$,
+O'Neill exponential coordinates\index{O'Neill!coordinates} $x = \mathrm{e}^{r/m}\sin\th$ and $z = \mathrm{e}^{r/m}\cos\th$,
 as in Figs.~\ref{f:ker:ergo_a90} -- \ref{f:ker:ergo_a99}.
 The ergoregion is shown in grey.
 The black (resp. blight rown) half-circle at $r=r_+$ (resp. $r=r_-$)
@@ -1151,10 +1151,6 @@ the \defin{Southern vortical circular photon orbit};
 \end{itemize}
 \end{greybox}
 
-\subsection{The polar spherical photon orbit}
-
-Spherical photon orbit with $\ell=0$
-
 \subsection{Stability of spherical photon orbits}
 
 The radial stability of spherical photon orbits is derived by the same
@@ -1314,17 +1310,20 @@ orbits (cf. Fig.~\ref{f:gik:spher_orb_exist}).
 \centerline{\includegraphics[width=0.49\textwidth]{gik_spo_meridional.pdf}\
 \includegraphics[width=0.49\textwidth]{gik_spo_meridional_zoom.pdf}}
 \caption[]{\label{f:gik:spo_meridional} \footnotesize
-Trace in the meridional plane $\ph=0$ of spherical photon orbits (green circular arcs)
-in a Kerr spacetime with $a = 0.95 m$ (as in Fig.~\ref{f:gik:spher_orb_exist}).
-The right panel is a zoom on the central part of the left one.
+Trace of the photon region (pale and dark green areas) in
+the meridional plane $(t,\ph)=\mathrm{const}$ of
+a Kerr spacetime with $a = 0.95 m$ (as in Fig.~\ref{f:gik:spher_orb_exist}).
+The right panel is a zoom on the inner part of the left one.
 The meridional plane is described in terms of the coordinates $(\hat{r},\th)$
 where $\hat{r} := (r + \sqrt{r^2 + 4m^2})/2$.
+Some spherical photon orbits are shown as green circular arcs,
+with the dashed ones representing the polar spherical orbits.
 The black (resp. blight rown) half-circle at $r=r_+$ (resp. $r=r_-$)
 is the trace of the outer (resp. inner) Killing horizon.
 The dotted orange half-circle marks the locus of $r=0$, with the
 red dot indicating the curvature singularity at $r=0$ and $\th=\pi/2$.
 The ergoregion is shown in grey. The region of stable spherical orbits is
-colored in green, with its boundary at $r=r_{\rm ph}^{\rm ms}$ shown in blue.
+colored in dark green, with its boundary at $r=r_{\rm ph}^{\rm ms}$ shown in blue.
 Green dots marks photon circular orbits: from the left to the right, they
 are the two vortical circular orbits at $r=r_{\rm ph}^{**}$, the equatorial
 inner circular orbit at $r=r_{\rm ph}^*$, the prograde outer circular orbit
@@ -1336,7 +1335,7 @@ at $r=r_{\rm ph}^+$ and the retrograde outer circular orbit at $r=r_{\rm ph}^-$.
 
 \subsection{Photon region}
 
-A corrollary of the results obtained in Sec.~\ref{s:gik:radial_motion}
+A corollary of the results obtained in Sec.~\ref{s:gik:radial_motion}
 is that outside the black hole, i.e. in region $\M_{\rm I}$, a photon
 cannot be trapped (i.e. move in a limited range of $r$) unless it moves
 on a (unstable) spherical orbit. The part of Kerr spacetime made of points
@@ -1360,8 +1359,93 @@ for $(\ell,q)$ into Eq.~(\ref{e:gik:th0}).
 have $q<0$ (cf. right panel of Fig.~\ref{f:gik:spher_orb_exist}); they are thus vortical
 with either $\th\in[\th_0, \th_1]$ or $\th\in[\pi-\th_1, \pi-\th_0]$, with
 $\th_0$ and $\th_1$ given by Eqs.~(\ref{e:gik:th0}) and (\ref{e:gik:th1_general}), in which
-$\ell$ and $q$ shall be considered as the functions of $r_0$ given Eqs.~(\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0}).
+$\ell$ and $q$ are to be considered as the functions
+(\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0}) of $r_0$.
 \end{itemize}
+There is no constraint on the Boyer-Lindquist $\ph$-coordinate: the photon region occupies
+all the range $[0, 2\pi)$.
+
+The photon region is depicted in Fig.~\ref{f:gik:spo_meridional}, which represents
+a meridional plane $(t,\ph) = \mathrm{const}$ of a Kerr spacetime with $a=0.95 m$
+--- the same value of $a$ as in Fig.~\ref{f:gik:spher_orb_exist}.
+Contrary to the meridional plane plot of Fig.~\ref{f:gik:zero_ener_merid}, which is based
+on O'Neill coordinates, Fig.~\ref{f:gik:spo_meridional} is drawn in terms
+on coordinates $(\hat{r},\th)$, where $\th$ is the Boyer-Lindquist/Kerr coordinate
+and $\hat{r}$ is related to the Boyer-Lindquist/Kerr $r$ by
+\be
+    \hat{r} := \frac{1}{2} \left( r + \sqrt{r^2 + 4m^2} \right) .
+\ee
+As O'Neill coordinates\index{O'Neill!coordinates}, this brings the whole range $(-\infty,+\infty)$ of $r$
+to $(0,+\infty)$, with $0$ corresponding to $r\to -\infty$ (the black small circle
+in Fig.~\ref{f:gik:spo_meridional}).
+Contrary to O'Neill exponential coordinate $\mathrm{e}^{r/m}$, the
+coordinate $\hat{r}$ does not enlarge too much the region exterior
+to the black hole, which makes it more suited to the plot of the photon region.
+Note that asymptotically in $\M_{\rm I}$, $\hat{r}$ is similar to $r$:
+$\hat{r} \sim r $ as $r\to + \infty$.
+
+
+\subsubsection{Polar spherical photon orbits}
+
+We see on Fig.~\ref{f:gik:spher_orb_exist} that the reduced conserved
+angular momentum $\ell$ (red curve) vanishes at two
+places in the physically allowed range of $r_0$,
+i.e. where the blue curve lies above the grey region:
+$r_0=r_{\rm ph}^{\rm pol,in}$ and $r_0=r_{\rm ph}^{\rm pol}$
+with $r_{\rm ph}^{**} < r_{\rm ph}^{\rm pol,in} < 0$ and
+$r_{\rm ph}^+ < r_{\rm ph}^{\rm pol} < r_{\rm ph}^-$.
+The value $r_{\rm ph}^{\rm pol,in}$ has $q<0$ and corresponds to
+vortical inner spherical orbits.
+The value $r_{\rm ph}^{\rm pol}$ has $q >0$
+and corresponds to outer spherical orbits.
+The results of Sec.~\ref{s:gik:th_motion} show that all these orbits cross
+repeatedly the rotation axis. We therefore call them
+\defin{polar spherical photon orbits}\index{polar!spherical photon orbits}.
+
+The precise values of $r_{\rm ph}^{\rm pol,in}$ and
+$r_{\rm ph}^{\rm pol}$ are obtained by solving $\ell(r_0) = 0$,
+with $\ell(r_0)$ given by Eq.~(\ref{e:gik:spher_ell_r0}). We get the cubic
+equation $r_0^3 - 3 m r_0^2 + a^2 r_0 + a^2 m = 0$. Setting $r_0 =: x + m$ reduces
+it to the depressed cubic $x^3 + p x + q = 0$, with $p := a^2 - 3 m^2$
+and $q := 2m (a^2 - m^2)$. The discriminant $\mathit{\Delta} = - 4 p^3 - 27 q^2$
+being positive, the solutions are provided by Viète's formulas, Eq.~(\ref{e:gis:Viete}),
+with $k=0$ and $k=1$ ($k=2$ yields to the third root of $\ell(r_0)$ seen on
+Fig.~\ref{f:gik:spher_orb_exist}, which lies
+in the unphysical range of $r_0$):
+\begin{subequations}
+\begin{align}
+    r_{\rm ph}^{\rm pol} & = m + 2 \sqrt{m^2 - \frac{a^2}{3}}
+        \cos\left[ \frac{1}{3}\arccos \left(
+        \frac{m(m^2 - a^2)}{\left( m^2 - {a^2}/{3} \right) ^{3/2}} \right) \right] \\
+    r_{\rm ph}^{\rm pol,in} & = m + 2 \sqrt{m^2 - \frac{a^2}{3}}
+        \cos\left[ \frac{1}{3}\arccos \left(
+        \frac{m(m^2 - a^2)}{\left( m^2 - {a^2}/{3} \right) ^{3/2}} \right) + \frac{2\pi}{3} \right] .
+\end{align}
+\end{subequations}
+As a function of $a$, $r_{\rm ph}^{\rm pol}$ decays monotically from
+$\lim_{a\to 0} r_{\rm ph}^{\rm pol} = 3 m$ to
+$\lim_{a\to m} r_{\rm ph}^{\rm pol} = (\sqrt{2} + 1) m \simeq 2.414214\, m$,
+while $r_{\rm ph}^{\rm pol,in}$ decays monotically from
+$\lim_{a\to 0} r_{\rm ph}^{\rm pol,in} = 0$ to
+$\lim_{a\to m} r_{\rm ph}^{\rm pol,in} = (\sqrt{2} - 1) m \simeq -0.414214\, m$.
+Polar spherical photon orbits are plotted as dashed green curves in Fig.~\ref{f:gik:spo_meridional}.
+Note that they are the only spherical orbits that encounter the rotation axis.
+
+
+We note that:
+\begin{greybox}
+\begin{itemize}
+\item Outer spherical orbits with $r_0 \in [r_{\rm ph}^+, r_{\rm ph}^{\rm pol})$ %]$
+have $\ell > 0$;
+\item outer spherical orbits with $r_0 \in (r_{\rm ph}^{\rm pol}, r_{\rm ph}^-]$ %]$
+have $\ell < 0$;
+\item inner spherical orbits with $r_0 \in (r_{\rm ph}^{\rm pol,in}, r_{\rm ph}^*]$
+have $\ell > 0$;
+\item inner spherical orbits with $r_0 \in [r_{\rm ph}^{**}, r_{\rm ph}^{\rm pol,in})$ %]$
+have $\ell < 0$.
+\end{itemize}
+\end{greybox}
+
 
 
 \section{Images}
