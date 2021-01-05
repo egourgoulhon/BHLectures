@@ -20,7 +20,7 @@ $L$ and the Carter constant $Q$ by $E$, so that only two constants of motion bec
 pertinent for the study: $L/E$ and $Q/E^2$.
 We thus treat first the particular case $E=0$.
 
-\subsection{Zero-energy null geodesics}
+\subsection{Zero-energy null geodesics} \label{s:gik:zero_energy}
 
 First, we note that a geodesic $\Li$ with $E=0$ cannot exist outside the ergoregion
 $\mathscr{G}$, by virtue of the result (\ref{e:gek:E_positive}). In particular,
@@ -344,7 +344,7 @@ performed by George Contopoulos\index{Contopoulos, G.} in 1984 \cite{Conto84},
 who studied zero-energy timelike geodesics as well.
 \end{hist}
 
-\subsection{Equations of geodesic motion for $E\neq 0$}
+\subsection{Equations of geodesic motion for $E\neq 0$} \label{s:gik:eom_Enonzero}
 
 When $E\neq 0$, we introduce the reduced constants of motion
 \be
@@ -776,11 +776,26 @@ to the circular photon orbits of Schwarzschild spacetime, they are not planar
 in general.
 
 
-\subsection{Existence of spherical null geodesics}
+\subsection{Existence of spherical null geodesics} \label{s:gik:spher_existence}
 
 We shall say that a null geodesic $\Li$ is \defin{spherical} or
 is a \defin{spherical photon orbit}\index{photon!orbit!spherical --}\index{orbit!photon --}\index{spherical!photon orbit} iff it lies at a constant value of the coordinate $r$, $r_0$ say.
-The quartic polynomial $\mathcal{R}(r)$ associated to the constant of motions $(\ell,q)$ of $\Li$
+We have already encountered such geodesics, namely the null generators of the two Killing horizons
+$\Hor$ and $\Hor_{\rm in}$ (cf. Secs.~\ref{s:gek:null_gen_hor} and \ref{s:ker:Cauchy_hor}).
+Indeed, they lie at a constant value of $r$: $r_0 = r_+$ for
+$\Hor$ and $r_0 = r_-$ for $\Hor_{\rm in}$.  These circular orbits have $E=0$
+[cf. Eq.~(\ref{e:gek:all_const_zero})].
+From the results of Sec.~\ref{s:gik:zero_energy}, there are no other orbits with $E=0$ at constant $r$.
+Hence we conclude
+\begin{greybox}
+In Kerr spacetime, the only spherical photon orbits with $E=0$ are the null generators of the two Killing horizons $\Hor$ and $\Hor_{\rm in}$.
+\end{greybox}
+In the remainder of this section, we focuss on spherical photon orbits with $E\neq 0$.
+We shall then describe these geodesics by the reduced constants of motion $\ell := L/E$
+and $q := Q/E^2$ introduced in Sec.~\ref{s:gik:eom_Enonzero}.
+
+For a spherical photon orbit $\Li$,
+the quartic polynomial $\mathcal{R}(r)$ associated to $(\ell,q)$
 must obey
 \be \label{e:gik:R_Rp_r0_zero}
     \mathcal{R}(r_0) = 0 \qand \mathcal{R}'(r_0) = 0 .
@@ -1028,7 +1043,7 @@ the inner horizon $\Hor_{\rm in}$.
 
 The four critical radii $r_{\rm ph}^{**}$, $r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$
 are plotted in terms of $a$ in Fig.~\ref{f:gik:spher_orb_range}. We notice that
-\be
+\be \label{e:gik:r_crit_order}
   \encadre{  - \frac{m}{2} \leq r_{\rm ph}^{**} \leq 0 \leq r_{\rm ph}^* \leq r_- \leq m \leq r_+ \leq r_{\rm ph}^+
     \leq 3 m \leq r_{\rm ph}^- \leq 4 m },
 \ee
@@ -1042,7 +1057,7 @@ the inner horizon radius $r_{-}$, with  $\max (r_- - r_{\rm ph}^*) \simeq 0.032 
 achieved for $a\simeq 0.9 \, m$.
 In view of the above inequalities and the ranges (\ref{e:gik:spher_orb_range}), we conclude that
 \begin{greybox}
-Spherical photon orbits exist in two regions of Kerr spacetime:
+Spherical photon orbits with $E\neq 0$ exist in two regions of Kerr spacetime:
 \begin{itemize}
 \item orbits with $r_0\in [r_{\rm ph}^{**}, 0) \cup (0, r_{\rm ph}^*]$ are located in $\M_{\rm III}$;
 we shall call them the \defin{inner spherical photon orbits}\index{inner!spherical photon orbit}\index{spherical!photon orbit!inner --}\index{photon!orbit!inner spherical --};
@@ -1050,6 +1065,30 @@ we shall call them the \defin{inner spherical photon orbits}\index{inner!spheric
 we shall call them the \defin{outer spherical photon orbits}\index{outer!spherical photon orbit}\index{spherical!photon orbit!outer --}\index{photon!orbit!outer spherical --}.
 \end{itemize}
 \end{greybox}
+
+\subsubsection{Sign of $E$}
+
+All $E\neq 0$ spherical photon orbits lie in $\M_{\rm I}\cup\M_{\rm III}$. We may then apply
+the general result (\ref{e:gek:future_directed_Carter}) to them. Since $L = E \ell$, we get
+$E (r_0^2 + a^2 - a \ell) > 0$.
+Hence, using formula~(\ref{e:gik:spher_ell_r0}) for $\ell$,
+\begin{align}
+E > 0 & \iff r_0^2 + a^2 - a \ell > 0 \nonumber \\
+      & \iff \frac{r_0 \Delta_0}{r_0 - m} > 0 \nonumber \\
+      & \iff \frac{r_0}{r_0 - m} > 0  \nonumber \\
+      & \iff r_0 > m \ \mbox{or}\ r_0 < 0 , \nonumber
+\end{align}
+where the third line follows from $\Delta_0 > 0$ in $\M_{\rm I}\cup\M_{\rm III}$.
+In view of (\ref{e:gik:r_crit_order}), we conclude that
+\begin{greybox}
+All outer spherical photon orbits have $E>0$, as well as inner spherical photon
+orbits with $r_0\in[r_{\rm ph}^{**}, 0)$, %]$
+while inner spherical photon orbits with $r_0\in(0, r_{\rm ph}^*]$
+have $E<0$.
+\end{greybox}
+
+\subsubsection{Latitudinal motion}
+
 The latitudinal motion of spherical photon orbits is
 deduced from the results of Sec.~\ref{s:gik:th_motion}:
 \begin{itemize}
@@ -1076,7 +1115,7 @@ $\ell$ and $q$ are to be considered as the functions
 Spherical photon orbit at $r_0=1.6 \, m$ around a Kerr black hole with
 $a=0.95\, m$, depicted in terms of the Cartesian Boyer-Lindquist coordinates
 $(x,y,z)$ defined by Eq.~(\ref{e:gek:Cartesian_BL}) and scaled in units of $m$.
-The geodesic starts at $\lambda=0$ in the equatorial plane, in the direction
+The geodesic starts at $\lambda=0$ and $\ph=0$ in the equatorial plane, in the direction
 of the Southern hemisphere ($\D\th/\D\lambda>0$).
 The left panel corresponds to $0 \leq \lambda \leq 7.7$,
 while the right one extends the range to $0 \leq \lambda \leq 70$.
@@ -1091,11 +1130,13 @@ The grey sphere is the black hole event horizon.
 \caption[]{\label{f:gik:spher_3d_r_28} \footnotesize
 Spherical photon orbit at $r_0=2.8 \, m$ around a Kerr black hole with
 $a=0.95\, m$, depicted in terms of the Cartesian Boyer-Lindquist coordinates
-$(x,y,z)$ defined by Eq.~(\ref{e:gek:Cartesian_BL}) and scaled in units of $m$.
-The right panel depicts the projection of the orbit onto the $xy$-plane.
-The geodesic starts at $\lambda=0$ in the equatorial plane, in the direction
+$(x,y,z)$ defined by Eq.~(\ref{e:gek:Cartesian_BL}) and scaled in units of $m$,
+with the grey sphere representing the black hole event horizon.
+The right panel depicts the projection of the orbit onto the $xy$-plane
+(the overlap with the grey area is a mere projection effect, since of course
+the orbit never crosses the event horizon).
+The geodesic starts at $\lambda=0$ and $\ph=0$ in the equatorial plane, in the direction
 of the Southern hemisphere. The plotted range is $0 \leq \lambda \leq 38$.
-The grey sphere is the black hole event horizon.
 \textsl{[Figure generated by the notebook \ref{s:sam:Kerr_null_geod_plots}]}
 }
 \end{figure}
@@ -1104,30 +1145,127 @@ The grey sphere is the black hole event horizon.
 \centerline{\includegraphics[width=0.49\textwidth]{gik_spher_3d_r_30.png}\
 \includegraphics[width=0.4\textwidth]{gik_spher_3d_r_30_xy.pdf}}
 \caption[]{\label{f:gik:spher_3d_r_30} \footnotesize
-Spherical photon orbit at $r_0=3 m$ around a Kerr black hole with
-$a=0.95\, m$, depicted in terms of the Cartesian Boyer-Lindquist coordinates
-$(x,y,z)$ defined by Eq.~(\ref{e:gek:Cartesian_BL}) and scaled in units of $m$.
-The right panel depicts the projection of the orbit onto the $xy$-plane.
-The geodesic starts at $\lambda=0$ in the equatorial plane, in the direction
-of the Southern hemisphere. The plotted range is $0 \leq \lambda \leq 32$.
-The grey sphere is the black hole event horizon.
+Same as in Fig.~\ref{f:gik:spher_3d_r_28}  but for a
+spherical photon orbit at $r_0=3 m$, with
+$0 \leq \lambda \leq 32$.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_null_geod_plots}]}
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.58\textwidth]{gik_spher_3d_r_39.png}\
+\includegraphics[width=0.4\textwidth]{gik_spher_3d_r_39_xy.pdf}}
+\caption[]{\label{f:gik:spher_3d_r_39} \footnotesize
+Same as in Fig.~\ref{f:gik:spher_3d_r_28}  but for a
+spherical photon orbit at $r_0=3.9\, m$, with
+$0 \leq \lambda \leq 55$.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_null_geod_plots}]}
+}
+\end{figure}
+
+\begin{example}[Outer spherical photon orbits] \label{x:gik:outer_spher}
+Let us consider a Kerr black hole with $a=0.95\, m$ (same value as in
+Fig.~\ref{f:gik:spher_orb_exist}). The event and inner horizon radii
+are $r_+ = 1.312\, m$ and $r_- = 0.688\, m$ and one has
+$r_{\rm ph}^{**} = - 0.478\, m$, $r_{\rm ph}^{*} = 0.658\, m$,
+$r_{\rm ph}^+ = 1.386\, m$ and $r_{\rm ph}^- = 3.955\, m$.
+Some outer spherical photon orbits are plotted in
+Figs.~\ref{f:gik:spher_3d_r_16}--\ref{f:gik:spher_3d_r_39}
+for various values of $r_0$:
+\begin{itemize}
+\item $r_0 = 1.6\, m$ (Fig.~\ref{f:gik:spher_3d_r_16}): this orbit
+has $\ell = 2.171\, m$, $q=5.976\, m^2$, $\th_0 = 0.706\;{\rm rad}$ and $\D\ph/\D\lambda > 0$;
+\item $r_0 = 2.8\, m$ (Fig.~\ref{f:gik:spher_3d_r_28}): this orbit
+has $\ell = -1.089\, m$, $q=26.260\, m^2$ and $\th_0 = 0.206\;{\rm rad}$;
+$\ph(\lambda)$ is not a monotoneous function (cf. the projection onto the $xy$-plane):
+$\D\ph/\D\lambda < 0$ almost everywhere, except
+near the equator, where the Lense-Thirring effect is the strongest;
+\item $r_0 = 3 m$ (Fig.~\ref{f:gik:spher_3d_r_30}): this orbit
+has $\ell = -1.9\, m$, $q=27\, m^2$, $\th_0 = 0.346\;{\rm rad}$ and
+$\D\ph/\D\lambda \leq 0$, with $\D\ph/\D\lambda = 0$ in the equatorial plane,
+as it can be easily checked by plugging $r=3m$, $\th=\pi/2$ as well as
+the above values of $\ell$ and $q$ into Eq.~(\ref{e:gik:dphdl_Mino});
+this orbit maximizes the value of $q$ among all spherical photon orbits
+(cf. Fig.~\ref{f:gik:spher_orb_exist} and Eq.~(\ref{e:gik:spher_max_q}) below);
+\item $r_0 = 3.9\, m$ (Fig.~\ref{f:gik:spher_3d_r_39}): this orbit
+has $\ell = -6.574\, m$, $q=3.525\, m^2$, $\th_0 = 1.290\;{\rm rad}$
+and $\D\ph/\D\lambda < 0$.
+\end{itemize}
+\end{example}
+
+The next example is devoted to inner spherical photon orbits. The
+Cartesian Boyer-Lindquist coordinates $(t,x,y,z)$ are not well suited to
+depict these orbits, in particular those that have $r<0$. We could
+use O'Neill exponential coordinates\index{O'Neill!coordinates}, as in Fig.~\ref{f:gik:zero_ener_merid}.
+However, we are going to use instead the radial coordinate $\hat{r}$ and the
+associated Cartesian-type coordinates $(\hat{x}, \hat{y}, \hat{z})$ defined
+by
+\begin{subequations}
+\label{e:gik:def_hat_coord}
+\begin{align}
+    & \hat{r} := \frac{1}{2} \left( r + \sqrt{r^2 + 4m^2} \right)  \\
+    & \hat{x} := \hat{r}\sin\th\cos\ph,\quad
+      \hat{y} := \hat{r}\sin\th\sin\ph,\quad
+      \hat{z} := \hat{r}\cos\th .
+\end{align}
+\end{subequations}
+As O'Neill coordinates, this brings the whole range
+$(-\infty,+\infty)$ for $r$
+to $(0,+\infty)$ for $\hat{r}$, with $\hat{r}\to 0$ corresponding to $r\to -\infty$.
+Contrary to O'Neill coordinate $\mathrm{e}^{r/m}$, the
+coordinate $\hat{r}$ does not enlarge too much the region exterior
+to the black hole, which makes it better suited for plots covering both
+the black hole interior and exterior, as in Fig.~\ref{f:gik:spo_meridional} below.
+Note that in $\M_{\rm I}$, $\hat{r}$ is asymptotically equivalent to $r$:
+$\hat{r} \sim r $ as $r\to + \infty$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.48\textwidth]{gik_spher_3d_ms_l030.png}\
+\includegraphics[width=0.49\textwidth]{gik_spher_3d_ms_l200.png}}
+\caption[]{\label{f:gik:spher_3d_ms} \footnotesize
+Marginally stable spherical photon orbit inside a Kerr black hole with
+$a=0.95\, m$, depicted in terms of the coordinates
+$(\hat{x},\hat{y},\hat{z})$ defined by Eq.~(\ref{e:gik:def_hat_coord}) and scaled in units of $m$.
+The geodesic is located at $r_0 = 0.540\, m$ and starts at $\lambda=0$ and $\ph=0$ in the equatorial plane, in the direction
+of the Southern hemisphere ($\D\th/\D\lambda>0$).
+The left panel corresponds to $0 \leq \lambda \leq 3$,
+while the right one extends the range to $0 \leq \lambda \leq 20$.
+The orange red circle is the ring singularity and the vertical black line
+is the rotation axis, with a black dot marking the asymptotic end $r\to -\infty$.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_null_geod_plots}]}
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{gik_spher_3d_r_m046.png}}
+\caption[]{\label{f:gik:spher_3d_r_m046} \footnotesize
+Same as in Fig.~\ref{f:gik:spher_3d_ms} but for a vortical
+spherical photon orbit at $r_0=-0.46\, m$, with
+$0 \leq \lambda \leq 20$. Also shown is the Northern vortical circular photon orbit
+at $r = r_{\rm ph}^{**}$ (in light green).
 \textsl{[Figure generated by the notebook \ref{s:sam:Kerr_null_geod_plots}]}
 }
 \end{figure}
 
 
-\begin{example}
-Figure~\ref{f:gik:spher_3d_r_16} shows an outer spherical photon orbit
-around a Kerr black hole with $a=0.95\, m$. It is located at $r_0 = 1.6\, m$
-and has $\ell = 2.171\, m$ and $q=5.976\, m^2$. Note that this orbit
-has $\D\ph/\D\lambda > 0$ everywhere.
-\end{example}
-
-\begin{example}
-Figure~\ref{f:gik:spher_3d_r_28} shows the spherical photon orbit
-located at $r_0 = 2.8\, m$ around a Kerr black hole with $a=0.95\, m$. It
-has $\ell = -1.089\, m$ and $q=26.260\, m^2$. Note that despite $\ell < 0$,
-this orbit has $\D\ph/\D\lambda > 0$ near the equator.
+\begin{example}[Inner spherical photon orbits]
+We consider the same Kerr spacetime as in Example~\ref{x:gik:outer_spher},
+i.e. $a=0.95\, m$, but this time, we focus on inner spherical photon orbits:
+\begin{itemize}
+\item $r_0 = 0.540\, m$ (Fig.~\ref{f:gik:spher_3d_ms}):
+this orbit has $\ell = 1.539\, m$, $q=0.282\, m^2$, $\th_0 = 1.173\;{\rm rad}$
+$\D\ph/\D\lambda > 0$, $E<0$ and $L<0$; it is actually a marginally stable
+photon orbit ($r_0 = r_{\rm ph}^{\rm ms}$), as we shall see
+in Sec.~\ref{s:gik:spher_stability};
+\item $r_0 = -0.46\, m$ (Fig.~\ref{f:gik:spher_3d_r_m046}):
+this orbit has $\ell = -0.176\, m$, $q=-0.461\, m^2$ (hence it is vortical),
+$\th_0 = 0.282\;{\rm rad}$, $\th_1 = 0.731\;{\rm rad}$,
+$\D\ph/\D\lambda < 0$, $E>0$ and $L<0$;
+\item $r_0 = -0.478\, m = r_{\rm ph}^{**}$ (Fig.~\ref{f:gik:spher_3d_r_m046},
+light green curve): this orbit has $\ell = -0.229\, m$, $q=-0.519\, m^2$ (hence it is vortical),
+$\th_0 = \th_1 = \th_{\rm ph}^{**} = 0.514\;{\rm rad}$,
+$\D\ph/\D\lambda < 0$, $E>0$ and $L<0$.
+\end{itemize}
 \end{example}
 
 
@@ -1140,8 +1278,24 @@ equatorial plane, as a function of the Kerr spin parameter $a$.
 }
 \end{figure}
 
-\subsection{Properties of the critical spherical photon orbits} \label{s:gik:prop_critical}
+\subsection{Circular photon orbits} \label{s:gik:circular_orbits}
 
+In Kerr spacetime, we shall define a \defin{circular orbit}\index{circular!orbit}
+as any geodesic along which both $r$ and $\th$ are constant.
+A circular photon orbit is thus a spherical photon orbit lying at a constant
+value of $\th$.
+
+\begin{remark}
+In Schwarzschild spacetime, the photon circular orbits forming the photon sphere
+at $r=3m$ (cf. Sec.~\ref{s:ges:null_eff_pot}) do not have $\th=\mathrm{const}$, except
+for the orbit in the equatorial plane. In Kerr spacetime with $a\neq 0$, such
+``oblique'' circular orbits cannot exist due to the Lense-Thirring precession.
+\end{remark}
+
+The spherical photon orbits with $E=0$ discussed in Sec.~\ref{s:gik:spher_existence},
+namely the null generators of the horizons $\Hor$ and $\Hor_{\rm in}$ are actually
+circular photon orbits since they belong to the family of outgoing principal
+null geodesics, which have $\th=\mathrm{const}$.
 
 The spherical orbits with $r_0 = r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$ have $q=0$
 and $|\ell| > a$. According to the results of Sec.~\ref{s:gik:th_motion}, they
@@ -1186,10 +1340,12 @@ $\th_{\rm ph}^{**}$ is an increasing function of $a/m$, plotted in Fig.~\ref{f:g
 We have $\lim_{a\to 0} \th_{\rm ph}^{**} = 0$ (the rotation axis) and
 $\lim_{a\to m} \th_{\rm ph}^{**} = \pi/6$.
 Since they occur at a fixed value of $\th$, the two vortical spherical photon orbits
-are actually circular. Their reduced angular momentum and Carter constant,
+are actually circular. Such an orbit is shown in Fig.~\ref{f:gik:spher_3d_r_m046}
+(light green circle).
+The reduced angular momentum and Carter constant of these orbits,
 denoted by $\ell_{\rm ph}^{**}$ and
 $q_{\rm ph}^{**}$ respectively,
-are shown in terms of $a$ in Fig.~\ref{f:gik:ell_q_rss}.
+are depicted in terms of $a$ in Fig.~\ref{f:gik:ell_q_rss}.
 They tend to zero as $a\to 0$ and obey
 \be
     \lim_{a\to m} \ell_{\rm ph}^{**} = - \frac{m}{4} \qand
@@ -1219,7 +1375,7 @@ functions of Kerr spin parameter $a$.
 We may summarize the above results by
 \begin{greybox}
 The geodesics at the boundaries of the domain of
-existence of spherical photon orbits [Eq.~(\ref{e:gik:spher_orb_range})] are circular orbits, having a fixed value of $(r,\th)$:
+existence of spherical photon orbits [Eq.~(\ref{e:gik:spher_orb_range})] are circular orbits:
 \begin{itemize}
 \item the orbit at $(r,\th)=(r_{\rm ph}^{**},\th_{\rm ph}^{**})$ is called
 the \defin{Northern vortical circular photon orbit}\index{vortical!circular photon orbit}\index{circular!photon orbit!vortical --};
@@ -1229,9 +1385,15 @@ the \defin{Southern vortical circular photon orbit};
 \item the orbit at $(r,\th)=(r_{\rm ph}^+,\pi/2)$ is called the \defin{prograde outer circular photon orbit}\index{prograde!outer circular!photon orbit};
 \item the orbit at $(r,\th)=(r_{\rm ph}^-,\pi/2)$ is called the \defin{retrograde outer circular photon orbit}\index{retrograde!outer circular!photon orbit};
 \end{itemize}
+Moreover there is no other circular photon orbit with $E\neq 0$. The circular photon orbits
+with $E=0$ are the null generators of the two Killing horizons $\Hor$ and $\Hor_{\rm in}$.
 \end{greybox}
+That the orbits listed above are the only $E\neq 0$ circular orbits follows from the fact
+that all the other $E\neq 0$ spherical photon orbits have either $q > 0$ or $q_{\rm min} < q < 0$
+(cf. Fig.~\ref{f:gik:spher_orb_exist}), which imply that they have a varying $\th$
+(cf. Sec.~\ref{s:gik:th_motion}).
 
-\subsection{Stability of spherical photon orbits}
+\subsection{Stability of spherical photon orbits} \label{s:gik:spher_stability}
 
 The radial stability of spherical photon orbits is derived by the same
 argument as that used in Sec.~\ref{s:gek:circ_orb_stab} for timelike circular
@@ -1310,8 +1472,12 @@ for a subclass of inner orbits:
 those that have a radius $r_0\in(0, r_{\rm ph}^{\rm ms})$, where $r_{\rm ph}^{\rm ms}$ is
 given by Eq.~(\ref{e:gik:r_ph_mb}). In particular, all spherical photon orbits
 in $\M_{\rm I}$ (the black hole exterior) are unstable, as well as all circular photon orbits
-discussed in Sec.~\ref{s:gik:prop_critical}.
+discussed in Sec.~\ref{s:gik:circular_orbits}.
+The stable orbits correspond to negative-energy\index{negative-energy particle}\index{particle!negative-energy --} photons ($E < 0$).
 \end{greybox}
+The last point follows from the results on the sign of $E$ obtained
+in Sec.~\ref{s:gik:spher_existence}.
+
 
 The stable spherical photon orbits have $q>0$ and $\ell > 0$
 (cf. right panel of Fig.~\ref{f:gik:spher_orb_exist}).
@@ -1321,7 +1487,8 @@ two $\th$-turning points, $\th_0$ and $\pi-\th_0$, such that $0<\th_0<\pi/2$.
 In particular, $r_0 = r_{\rm ms}$ does not correspond to a unique orbit, but
 to a 1-parameter family of marginally stable orbits; the parameter can be chosen
 to be the azimuthal coordinate $\ph$ at the first value $\th=\th_0$ (or $\th=\pi/2$)
-after $t=0$.
+after $t=0$. A marginally stable spherical photon orbit is
+shown in Fig.~\ref{f:gik:spher_3d_ms}.
 
 We have the following property, which appears clearly on Fig.~\ref{f:gik:spher_orb_exist}:
 \begin{greybox}
@@ -1379,7 +1546,7 @@ a second extremum at $r_0 = 3m$, i.e. for outer spherical orbits.
 This extremum is actually a maximum and its value, obtained by
 setting $r_0 = 3 m$ in Eq.~(\ref{e:gik:spher_q_r0}),
 turns out to be independent from $a$:
-\be
+\be \label{e:gik:spher_max_q}
     \max q(r_0) = 27 m^2 .
 \ee
 This is the maximum of the reduced Carter constant over all the spherical photon
@@ -1391,11 +1558,11 @@ orbits (cf. Fig.~\ref{f:gik:spher_orb_exist}).
 \parbox[c]{0.49\textwidth}{\includegraphics[width=0.49\textwidth]{gik_spo_meridional_zoom.pdf}}
 \caption[]{\label{f:gik:spo_meridional} \footnotesize
 Trace of the photon region (pale and dark green areas) in
-the meridional plane $(t,\ph)=\mathrm{const}$ of
+a meridional plane $(t,\ph)=\mathrm{const}$ of
 a Kerr spacetime with $a = 0.95 m$ (as in Fig.~\ref{f:gik:spher_orb_exist}).
 The right panel is a zoom on the inner part of the left one.
 The meridional plane is described in terms of the coordinates $(\hat{r},\th)$
-where $\hat{r} := (r + \sqrt{r^2 + 4m^2})/2$.
+where $\hat{r} := (r + \sqrt{r^2 + 4m^2})/2$ [cf. Eq.~(\ref{e:gik:def_hat_coord})].
 Some spherical photon orbits are shown as green circular arcs,
 with the dashed ones representing the polar spherical orbits.
 The black (resp. blight rown) half-circle at $r=r_+$ (resp. $r=r_-$)
@@ -1403,7 +1570,7 @@ is the trace of the outer (resp. inner) Killing horizon.
 The dotted orange half-circle marks the locus of $r=0$, with the
 red dot indicating the curvature singularity at $r=0$ and $\th=\pi/2$.
 The ergoregion is shown in grey. The region of stable spherical orbits is
-colored in dark green, with its boundary at $r=r_{\rm ph}^{\rm ms}$ shown in blue.
+colored in dark green, with its boundary at $r=r_{\rm ph}^{\rm ms}$ drawn in blue.
 Green dots marks photon circular orbits: from the left to the right, they
 are the two vortical circular orbits at $r=r_{\rm ph}^{**}$, the equatorial
 inner circular orbit at $r=r_{\rm ph}^*$, the prograde outer circular orbit
@@ -1432,21 +1599,10 @@ all the range $[0, 2\pi)$.
 The photon region is depicted in Fig.~\ref{f:gik:spo_meridional}, which represents
 a meridional plane $(t,\ph) = \mathrm{const}$ of a Kerr spacetime with $a=0.95 m$
 --- the same value of $a$ as in Fig.~\ref{f:gik:spher_orb_exist}.
-Contrary to the meridional plane plot of Fig.~\ref{f:gik:zero_ener_merid}, which is based
-on O'Neill coordinates, Fig.~\ref{f:gik:spo_meridional} is drawn in terms
-on coordinates $(\hat{r},\th)$, where $\th$ is the Boyer-Lindquist/Kerr coordinate
-and $\hat{r}$ is related to the Boyer-Lindquist/Kerr $r$ by
-\be
-    \hat{r} := \frac{1}{2} \left( r + \sqrt{r^2 + 4m^2} \right) .
-\ee
-As O'Neill coordinates\index{O'Neill!coordinates}, this brings the whole range $(-\infty,+\infty)$ of $r$
-to $(0,+\infty)$, with $0$ corresponding to $r\to -\infty$ (the black small circle
-in Fig.~\ref{f:gik:spo_meridional}).
-Contrary to O'Neill exponential coordinate $\mathrm{e}^{r/m}$, the
-coordinate $\hat{r}$ does not enlarge too much the region exterior
-to the black hole, which makes it more suited to the plot of the photon region.
-Note that asymptotically in $\M_{\rm I}$, $\hat{r}$ is similar to $r$:
-$\hat{r} \sim r $ as $r\to + \infty$.
+
+We see from this figure that, apart from those generating the two horizons $\Hor_{\rm in}$
+and $\Hor$, the only circular photon orbits of Kerr spacetime are the
+five ones considered in Sec.~\ref{s:gik:circular_orbits}.
 
 
 \subsubsection{Polar spherical photon orbits}
