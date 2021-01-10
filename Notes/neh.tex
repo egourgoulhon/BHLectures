@@ -307,7 +307,7 @@ We had already noticed that, for the Schwarzschild horizon, $\w{\Theta}=0$
 of Chap.~\ref{s:def}].
 \end{example}
 
-\subsection{Induced affine connection}
+\subsection{Induced affine connection} \label{e:neh:induced_connection}
 
 Since $\Hor$ is a null hypersurface, the ``metric'' $\left. \w{g}\right|_{\Hor}$
 induced on it by the spacetime metric $\w{g}$ is degenerate. As a consequence, there
@@ -329,15 +329,15 @@ Let $\w{u}$ and $\w{v}$ be two vector fields on $\Hor$. We have, using
 Hence $\wl$ is orthogonal to the vector field $\wnab_{\w{u}} \w{v}$. It follows
 immediately that $\wnab_{\w{u}} \w{v}$ is tangent to $\Hor$.
 We conclude that the operator
-\be
+\be \label{e:neh:def_induced_connection}
     \begin{array}{cccc}
-    {}^\Hor\!\wnab \ : & \mathscr{X}(\Hor)\times\mathscr{X}(\Hor) & \longrightarrow & \mathscr{X}(\Hor) \\
+    {}^\Hor\!\wnab \ : & \mathfrak{X}(\Hor)\times\mathfrak{X}(\Hor) & \longrightarrow & \mathfrak{X}(\Hor) \\
     & (\w{u},\w{v}) & \longmapsto & \wnab_{\w{u}} \,\w{v} ,
     \end{array}
 \ee
-where $\mathscr{X}(\Hor)$ is the space of vector fields on $\Hor$, is
+where $\mathfrak{X}(\Hor)$ is the space of vector fields on $\Hor$, is
 well defined (i.e. ${}^\Hor\!\wnab_{\w{u}}\w{v}$  does belong to
-$\mathscr{X}(\Hor)$).
+$\mathfrak{X}(\Hor)$).
 Moreover this operator fulfills all the properties of an affine connection
 (cf. Sec.~\ref{s:bas:affine_connect}), since $\wnab$ does.
 We naturally call ${}^\Hor\!\wnab$ the \defin{affine connection induced on $\Hor$
@@ -349,6 +349,53 @@ that $(\Hor, {}^\Hor\!\wnab)$ is a \defin{totally geodesic submanifold}\index{to
 i.e. any geodesic of $(\Hor, {}^\Hor\!\wnab)$ is also a geodesic of $(\M,\w{g})$
 (cf. the historical note on page~\pageref{h:neh:NEH}).
 
+The covariant derivative of the null normal $\wl$ with respect to the affine
+connection ${}^\Hor\!\wnab$ takes a rather simple form:
+\be \label{e:neh:nabH_ell}
+   \encadre{ {}^\Hor\!\wnab \wl = \wl \otimes {}^\Hor\!\w{\omega} },
+\ee
+where ${}^\Hor\!\w{\omega}$ is the tensor field on $\Hor$
+defined as the restriction of the 1-form $\w{\omega}$
+introduced in Sec.~\ref{s:def:deformation_shear}
+to vectors tangent to $\Hor$ [cf. Eq.~(\ref{e:def:omega_restrict_H})].
+In other words, ${}^\Hor\!\w{\omega}$ is the pullback $\iota^*\w{\omega}$ of
+$\w{\omega}$ by the inclusion map $\iota: \Hor \to \M$ (cf. Sec.~\ref{s:bas:lie_der_tensor}
+in Appendix~\ref{s:bas}).
+\begin{proof}
+By definition of the covariant derivative with respect to an
+affine connection [cf. Eq.~(\ref{e:bas:def_cov_deriv}) in Appendix~\ref{s:bas}],
+${}^\Hor\!\wnab \wl$ is a tensor field of type $(1,1)$ on $\Hor$,
+the action of which on any pair
+$(\w{a}, \w{u})$ formed by a 1-form $\w{a}$ and a vector field $\w{u}$
+on $\Hor$ is
+\[
+    {}^\Hor\!\wnab \wl (\w{a}, \w{u}) = \langle \w{a}, {}^\Hor\!\wnab_{\w{u}} \wl \rangle .
+\]
+In view of (\ref{e:neh:def_induced_connection}) and using Eq.~(\ref{e:def:nab_l_Theta})
+to express $\wnab\wl$, we get
+\begin{align}
+    {}^\Hor\!\wnab \wl (\w{a}, \w{u}) & = \langle \w{a}, \wnab_{\w{u}} \wl \rangle
+       = a_\mu u^\nu \nabla_\nu \ell^\mu \nonumber \\
+        & = a_\mu u^\nu \Big( \underbrace{\Theta^\mu_{\ \, \nu}}_{0} + \omega_\nu \ell^\mu
+            - \ell_\nu k^\rho \nabla_\rho \ell^\mu \Big)
+         = a_\mu \ell^\mu \, \omega_\nu u^\nu - \underbrace{\ell_\nu u^\nu}_{0}
+            a_\mu k^\rho \nabla_\rho \ell^\mu \nonumber \\
+         & = \langle \w{a}, \wl \rangle \, \langle \w{\omega}, \w{u} \rangle . \nonumber
+\end{align}
+Given the definition of a tensor product and the fact that $\w{u}$ is tangent to $\Hor$,
+this proves (\ref{e:neh:nabH_ell}).
+\end{proof}
+A priori the 1-form ${}^\Hor\!\w{\omega}$ depends upon the choice of the cross-section $\Sp$
+of $\Hor$, via the vector $\w{k}$ involved in Eq.~(\ref{e:def:omega_restrict_H}):
+$\langle {}^\Hor\!\w{\omega}, \w{v} \rangle = - \w{k} \cdot\wnab_{\w{v}} \w{\ell}$
+for any $\w{v}\in T_p\Hor$. Formula~(\ref{e:neh:nabH_ell}) shows that for a non-expanding
+horizon, this is not the case: ${}^\Hor\!\w{\omega}$ is  a quantity intrinsic to $\Hor$ and to the value of $\wl$ on $\Hor$.
+Moreover under a change of null normal, $\wl \mapsto \wl' = \alpha \wl$,
+it remains constant up to the addition of an exact 1-form:
+${}^\Hor\!\w{\omega}' = {}^\Hor\!\w{\omega} + \dd\ln\alpha$.
+The 1-form ${}^\Hor\!\w{\omega}$
+is usually called the \defin{rotation 1-form} or \defin{connection 1-form}
+of $(\Hor, \wl)$ \cite{AshteBL02,GourgJ06}.
 
 \subsection{Going further}
 
@@ -457,10 +504,10 @@ holds for finite vectors as well, so that we may say that $\Phi_t$ is an
 isometry of $(\M,\w{g})$ iff
 \be \label{e:neh:isometry}
     \forall p\in\M,\  \forall (\w{u},\w{v}) \in (T_p\M)^2,\quad
-    \left. \w{g}\right| _{\Phi_t(p)} \left(\Phi_t^*(\w{u}), \Phi_t^*(\w{v})\right) =
+    \left. \w{g}\right| _{\Phi_t(p)} \left(\Phi_t^*\w{u}, \Phi_t^*\w{v}\right) =
     \left. \w{g}\right| _{p} (\w{u},\w{v}) ,
 \ee
-where $\Phi_t^*(\w{u})$ (resp. $\Phi_t^*(\w{v})$) is the pushforward of the vector $\w{u}\in T_p\M$ (resp. $\w{v}\in T_p\M$)
+where $\Phi_t^* \w{u}$ (resp. $\Phi_t^* \w{v}$) is the pushforward of the vector $\w{u}\in T_p\M$ (resp. $\w{v}\in T_p\M$)
 to the tangent space $T_{\Phi_t(p)}\M$ by $\Phi_t$ [cf. Eq.~(\ref{e:bas:def_Phi_eps})].
 Given the definition (\ref{e:bas:def_pullback}) of the pullback of
 a bilinear form, we may reexpress the isometry condition (\ref{e:neh:isometry})
@@ -858,16 +905,53 @@ $\theta_{(\wl)} =0$. Accordingly, the above equation reduces to
 \ee
 Let us express $\el^\mu \nabla_\mu \omega_\nu$ in terms of the Lie derivative
 of $\w{\omega}$ along $\wl$ via formula (\ref{e:bas:Lie_der_comp_nab}) of Appendix~\ref{s:bas}:
-\[
-    \Liec{\el}\omega_\nu = \el^\mu \nabla_\mu \omega_\nu + \omega_\mu \nabla_\nu \el^\mu .
-\]
-Since $\wl$ is a symmetry generator on $\Hor$, we have
-\be
-    \Lie{\el}\w{\omega} \equalH 0 ,
+\be \label{e:neh:nab_l_omega_prov}
+    \el^\mu \nabla_\mu \omega_\nu q^\nu_{\ \, \alpha} = \left( \Liec{\el}\omega_\nu - \omega_\mu \nabla_\nu \el^\mu \right) q^\nu_{\ \, \alpha} .
 \ee
+Now, since $\wl$ is a symmetry generator on $\Hor$, we have
+\be \label{e:neh:Lie_l_Homeg_zero}
+    \Lie{\el} {}^{\Hor}\!\w{\omega} = 0 ,
+\ee
+where ${}^{\Hor}\!\w{\omega}$ is the restriction of $\w{\omega}$ to vectors
+tangent to $\Hor$, which has been shown to be a geometric quantity intrinsic to
+$\Hor$ and $\wl$ in Sec.~\ref{e:neh:induced_connection} and therefore has to
+obey the spacetime symmetry generated by $\w{\xi} \equalH \wl$.
+Any vector field $\w{v}$ defined on $\Hor$ but not necessarily tangent to $\Hor$ can
+be split in a unique way into a part tangent to $\Hor$, $\w{v}^\parallel$ say,
+and a part along the transverse null vector field $\w{k}$ according
+to\footnote{$\w{v}^\parallel = \w{\Pi}(\w{v})$, where $\w{\Pi}$ is the
+the projector onto $\Hor$ along $\w{k}$, as expressed by Eq.~(\ref{e:def:def_proj_H_along_k}).}
+\[
+     \w{v} = \w{v}^\parallel - \langle \uu{\ell}, \w{v} \rangle \w{k} ,
+\]
 so that
 \[
-    \el^\mu \nabla_\mu \omega_\nu \equalH - \omega_\mu \nabla_\nu \el^\mu .
+    \langle\Lie{\el}\w{\omega}, \w{v} \rangle =
+    \langle\Lie{\el}\w{\omega}, \w{v}^\parallel \rangle
+    -  \langle \uu{\ell}, \w{v} \rangle  \langle\Lie{\el}\w{\omega}, \w{k} \rangle .
+\]
+The first term in the right-hand side vanishes as a consequence of
+(\ref{e:neh:Lie_l_Homeg_zero}); indeed,
+the Leibniz rule allows us to write
+\[
+    \langle \Lie{\el}\w{\omega}, \w{v}^\parallel  \rangle =
+    \Lie{\el} \langle \w{\omega}, \w{v}^\parallel  \rangle - \langle \w{\omega}, \Lie{\el}\w{v}^\parallel  \rangle
+    =  \Lie{\el} \langle {}^{\Hor}\!\w{\omega}, \w{v}^\parallel  \rangle - \langle {}^{\Hor}\!\w{\omega}, \Lie{\el}\w{v}^\parallel  \rangle
+    = \langle \underbrace{\Lie{\el}{}^{\Hor}\!\w{\omega}}_{0}, \w{v}^\parallel  \rangle = 0 ,
+\]
+where the second equality follows from the fact that $\Lie{\el}\w{v}^\parallel $ is a vector field tangent to $\Hor$ by the very definition of a Lie derivative (cf. Sec.~\ref{s:bas:Lie}), $\wl$ being tangent to $\Hor$.
+Hence the symmetry property (\ref{e:neh:Lie_l_Homeg_zero}) translates to
+the Lie derivative of $\w{\omega}$ along $\wl$ being proportional to the
+1-form $\uu{\ell}$:
+\be
+    \Lie{\el}\w{\omega} = - \langle\Lie{\el}\w{\omega}, \w{k} \rangle \, \uu{\ell} .
+\ee
+Using this formula into Eq.~(\ref{e:neh:nab_l_omega_prov}) leads to
+\[
+       \el^\mu \nabla_\mu \omega_\nu q^\nu_{\ \, \alpha} =
+       - k^\mu \Liec{\el} \omega_\mu  \underbrace{\ell_\nu q^\nu_{\ \, \alpha}}_{0}
+       - \omega_\mu \nabla_\nu \el^\mu  q^\nu_{\ \, \alpha}
+       = - \omega_\mu \nabla_\nu \el^\mu  q^\nu_{\ \, \alpha}  .
 \]
 Accordingly, Eq.~(\ref{e:neh:zeroth_law_step1}) becomes successively
 \bea

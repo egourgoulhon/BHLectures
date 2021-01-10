@@ -811,9 +811,9 @@ only to a specific kind of tensor fields: the $p$-forms; it is the
 
 \subsubsection{Affine connection on a manifold} \label{s:bas:affine_connect}
 
-Let us denote by $\mathscr{X}(\M)$ the space of smooth
+Let us denote by $\mathfrak{X}(\M)$ the space of smooth
 vector fields on $\M$.
-Given a vector field $\w{v}\in\mathscr{X}(\M)$, it is not possible from the manifold structure
+Given a vector field $\w{v}\in\mathfrak{X}(\M)$, it is not possible from the manifold structure
 alone to define its variation between two neighbouring points $p$ and $q$. Indeed
 a formula like $\D \w{v} := \w{v}(q) - \w{v}(p)$ is meaningless because
 the vectors $\w{v}(q)$ and $\w{v}(p)$ belong to two different vector spaces,
@@ -827,13 +827,13 @@ connect the various tangent spaces on the manifold.
 An \defin{affine connection}\index{affine connection}\index{connection!affine --} on $\M$ is a mapping
 \be \label{e:bas:def_nabla}
     \begin{array}{cccc}
-    \wnab \ : & \mathscr{X}(\M)\times\mathscr{X}(\M) & \longrightarrow & \mathscr{X}(\M) \\
+    \wnab \ : & \mathfrak{X}(\M)\times\mathfrak{X}(\M) & \longrightarrow & \mathfrak{X}(\M) \\
         & (\w{u},\w{v}) & \longmapsto & \wnab_{\w{u}} \,\w{v}
     \end{array}
 \ee
 which satisfies the following properties:
 \begin{enumerate}
-\item $\wnab$ is bilinear (considering $\mathscr{X}(\M)$ as a vector space over $\R$).
+\item $\wnab$ is bilinear (considering $\mathfrak{X}(\M)$ as a vector space over $\R$).
 \item For any scalar field $f$ and any pair $(\w{u},\w{v})$ of vector fields:
 \be
   \wnab_{f\w{u}}\, \w{v} = f \wnab_{\w{u}}\, \w{v} .
@@ -876,7 +876,7 @@ $\wnab_{\w{e}_\beta}\, \w{e}_\alpha (p)$ onto the basis $(\w{e}_\alpha(p))$:
 \ee
 An affine connection is entirely defined by the connection coefficients. In other words, there are as many affine connections on a manifold of dimension $n$ as there are possibilities of choosing $n^3$ scalar fields $\Gamma^\gamma_{\ \ \alpha\beta}$.
 
-Given $\w{v}\in\mathscr{X}(\M)$, one defines a tensor field of type $(1,1)$,
+Given $\w{v}\in\mathfrak{X}(\M)$, one defines a tensor field of type $(1,1)$,
 $\wnab\w{v}$, called the
 \defin{covariant derivative of $\w{v}$ with respect to the affine connection $\wnab$}\index{covariant!derivative}, by the following action at each
 point $p\in\M$:
@@ -1028,7 +1028,7 @@ Note that the Christoffel symbols are symmetric with respect to the lower two in
 For the Levi-Civita connection, the expression for the divergence of a vector takes
 a rather simple form in a natural basis associated with some coordinates $(x^\alpha)$.
 Indeed, combining Eqs.~(\ref{e:bas:def_divergence}) and (\ref{e:bas:der_cov_coord}),
-we get for $\w{v}\in\mathscr{X}(\M)$,
+we get for $\w{v}\in\mathfrak{X}(\M)$,
 \[
   \wnab\cdot\w{v} = \nabla_\mu v^\mu = \der{v^\mu}{x^\mu} + \Gamma^\mu_{\ \ \sigma\mu} v^\sigma   .
 \]
@@ -1201,7 +1201,7 @@ $\wnab$ associated with some metric $\w{g}$, yielding
     - v^\mu \nabla_\mu u^\alpha .
 \ee
 
-\subsubsection{Generalization to any tensor field}
+\subsubsection{Generalization to any tensor field} \label{s:bas:lie_der_tensor}
 
 If $\w{T}$ is tensor field of type $(0,\ell)$ on $\M$ (with $\ell \geq 1$)
 its \defin{pullback}\index{pullback}
@@ -1271,7 +1271,14 @@ Note that this formula is a direct consequence of (\ref{e:Lie_der_comp})
 since in adapted coordinates, $u^\alpha = (1,0,\ldots,0)$, so that
 $u^\mu \dert{}{x^\mu} = \dert{}{x^0}$ and $\dert{u^\alpha}{x^\beta} = 0$.
 
-
+\begin{remark}
+We use the same notation $\Phi_\varepsilon^*$ to denote the pushforward
+and pullback operators associated with the differentiable map $\Phi_\varepsilon$.
+In the mathematical literature (e.g. \cite{Lee13}), the pushforward operator is usually
+denoted with the star as a subscript rather than a superscript, i.e.
+$(\Phi_\varepsilon)_*$, the superscript notation being reserved for the
+pullback operator.
+\end{remark}
 
 \subsection{Exterior derivative} \label{s:bas:ext_deriv}
 
@@ -1390,7 +1397,7 @@ The \defin{Riemann curvature tensor}\index{Riemann!curvature}\index{curvature!te
 an affine connection $\w{\nabla}$ is defined by
 \be \label{e:bas:def_Riemann}
      \begin{array}{cccc}
-    \mathrm{\bf Riem} \ : & \mathscr{X}^*(\M)\times\mathscr{X}(\M)^3 &
+    \mathrm{\bf Riem} \ : & \mathfrak{X}^*(\M)\times\mathfrak{X}(\M)^3 &
     \longrightarrow & C^\infty(\M,\R) \\
         & (\w{\omega},\w{w},\w{u},\w{v})
         & \longmapsto & \bigg\langle \w{\omega} , \
@@ -1399,7 +1406,7 @@ an affine connection $\w{\nabla}$ is defined by
         - \w{\nabla}_{[\w{u},\w{v}]} \w{w} \bigg\rangle ,
     \end{array}
 \ee
-where $\mathscr{X}^*(\M)$ stands for the space of 1-forms on $\M$, $\mathscr{X}(\M)$ for the space of vector
+where $\mathfrak{X}^*(\M)$ stands for the space of 1-forms on $\M$, $\mathfrak{X}(\M)$ for the space of vector
 fields on $\M$ and  $C^\infty(\M,\R)$ for the space of
 smooth scalar fields on $\M$. The above
 formula does define a tensor field on $\M$, i.e. the value
@@ -1415,7 +1422,7 @@ $R^\gamma_{\ \  \delta \alpha\beta}$.
 The definition (\ref{e:bas:def_Riemann}) leads then to the
 following expression, named the \defin{Ricci identity}\index{Ricci!identity}:
 \be \label{e:bas:Ricci_ident}
-    \forall\w{w}\in\mathscr{X}(\M),\quad
+    \forall\w{w}\in\mathfrak{X}(\M),\quad
         \left(\nabla_\alpha\nabla_\beta
         - \nabla_\beta\nabla_\alpha\right) w^\gamma
         = R^\gamma_{\ \  \mu \alpha\beta} \, w^\mu .
@@ -1481,7 +1488,7 @@ The \defin{Ricci tensor}\index{Ricci!tensor} of the affine connection $\wnab$ is
 the field of bilinear forms $\w{R}$ defined by
 \be \label{e:bas:def_Ricci}
      \begin{array}{cccc}
-    \w{R} \ : & \mathscr{X}(\M)\times\mathscr{X}(\M) &
+    \w{R} \ : & \mathfrak{X}(\M)\times\mathfrak{X}(\M) &
     \longrightarrow & C^\infty(\M,\R) \\
         & (\w{u},\w{v})
         & \longmapsto &

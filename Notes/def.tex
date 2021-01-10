@@ -1265,13 +1265,45 @@ $Q = (q_{ab})$ and $Q^{-1} = (q^{ab})$. Hence
 \be \label{e:def:theta_q_ab}
     \encadre{ \theta_{(\wl)} = \frac{1}{2} \, q^{ab} \Liec{\el} q_{ab} } .
 \ee
-One may wonder about the link between the Lie derivative along $\wl$ of the $(n-2)$-metric
-$\w{q}$ of the cross-sections $\Sp_\varepsilon$, which appears above, and
-the Lie derivative along $\wl$ of the spacetime extension $\w{q}$ defined by
-(\ref{e:def:q_g_k_l}). For the sake of clarity, let us denote here the latter
+The Lie derivative along $\wl$ of the metric $\w{q}$ of the cross-section
+$\Sp$ that appears in this formula is defined as follows. As in Sec.~\ref{s:bas:Lie}
+of Appendix~\ref{s:bas}, let us denote by $\Phi_\veps$ the smooth map
+$\Sp \to \Hor$ that corresponds to the displacement of points of $\Sp$ by
+some infinitesimal quantity $\veps$ along $\wl$. Using the notations
+of Fig.~\ref{f:def:expansion}, we have then $p_\veps = \Phi_\veps(p)$,
+$q_\veps = \Phi_\veps(q)$ and $\Sp_\veps = \Phi_\veps(\Sp)$. The \defin{Lie derivative
+along $\wl$ of $\w{q}$} is then the field $\Lie{\el} \w{q}$
+of bilinear forms on $\Sp$ defined by the following action on any pair of vectors $(\w{u},\w{v})$
+tangent to $\Sp$ at the same point $p$:
+\be \label{e:def:def_Lie_ell_q}
+   \encadre{ \Lie{\el} \w{q}\, (\w{u},\w{v}) := \lim_{\veps\to 0} \frac{1}{\veps}
+    \left[ \w{q}(\veps)\!\left( \Phi_\veps^* \w{u}, \Phi_\veps^* \w{v} \right)
+        - \w{q}(\w{u}, \w{v}) \right] },
+\ee
+where, as above, $\w{q}(\veps)$ is the metric induced by $\w{g}$ on the $(n-2)$-surface
+$\Sp_\veps$ deduced from $\Sp$ by Lie dragging along $\wl$ by the quantity $\veps$
+and
+$\Phi_\veps^* \w{u}$ (resp. $\Phi_\veps^* \w{v}$) is the vector tangent to $\Sp_\veps$
+at $\Phi_\veps(p)$ that is the pushforward of $\w{u}$ (resp. $\w{v}$) by the map $\Phi_\veps$
+(cf. Sec.~\ref{s:bas:Lie}).
+
+\begin{remark}
+Since $\w{q}$ is nothing but the metric induced by the spacetime metric $\w{g}$
+on cross-sections of $\Hor$, we may rewrite the above formula as
+\be
+     \Lie{\el} \w{q}\, (\w{u},\w{v}) := \lim_{\veps\to 0} \frac{1}{\veps}
+    \left[ \left. \w{g}\right| _{\Phi_\veps(p)} \!\left( \Phi_\veps^* \w{u}, \Phi_\veps^* \w{v} \right)
+        - \left. \w{g}\right| _{p} (\w{u}, \w{v}) \right] .
+\ee
+\end{remark}
+
+One may wonder about the link between the Lie derivative $\Lie{\el} \w{q}$ defined
+by Eq.~(\ref{e:def:def_Lie_ell_q}), which is a tensor field on $\Sp$,
+and the Lie derivative along $\wl$ of the spacetime extension $\w{q}$ introduced by
+Eq.~(\ref{e:def:q_g_k_l}). For the sake of clarity, let us denote here the latter
 by $\w{\bar q}$. More precisely, we may consider that $\w{\bar q}$ is a
 field defined in some neighbourhood of the portion of $\Hor$ sliced by
-$\bigcup_{\varepsilon} \Sp_\varepsilon$ via (\ref{e:def:q_g_k_l}), with $\w{k}$
+$\bigcup_{\varepsilon} \Sp_\varepsilon$ via Eq.~(\ref{e:def:q_g_k_l}), with $\w{k}$
 defined at each point $p\in\Sp_\varepsilon$ as the unique null vector of
 $T_p^\perp\Sp_\varepsilon$ obeying $\wl\cdot\w{k}=-1$.
 Let $\w{u}$ and $\w{v}$ be vector fields on $\Hor$ that are tangent
@@ -1285,8 +1317,8 @@ $\Lie{\el} \left[ \w{\bar q}(\w{u},\w{v}) \right]$ yields
 \ee
 Now, since $\w{u}$ and $\w{v}$ are tangent to $\Sp_\varepsilon$, we may
 write $\w{\bar q}(\w{u},\w{v}) = \w{q}(\w{u},\w{v})$. Moreover, by the very
-definition of a Lie derivative of a vector field (cf. Sec.~\ref{s:bas:Lie}
-in Appendix~\ref{s:bas}) and the fact that the cross-sections
+definition of the Lie derivative of a vector field (cf. Sec.~\ref{s:bas:Lie})
+and the fact that the cross-sections
 $\Sp_\varepsilon$ are Lie-dragged along $\wl$, the vectors
 $\Lie{\el}\w{u}$ and $\Lie{\el}\w{v}$ are also tangent to $\Sp_\varepsilon$.
 Therefore, we have
@@ -1301,7 +1333,7 @@ as well. Thus, we may rewrite (\ref{e:def:Lie_l_bar_q}) as
         - \w{q}\left(\Lie{\el}\w{u},\w{v}\right)
          - \w{q}\left(\w{u},\Lie{\el}\w{v}\right) .
 \]
-The right-hand side being identical to what would be obtained by expressing
+The right-hand side is identical to what would be obtained by expressing
 $\Lie{\el} \w{q} \, (\w{u},\w{v})$ via the Leibniz rule. Hence we conclude
 that
 \[
@@ -1311,10 +1343,10 @@ Since this identity holds for a pair $(\w{u},\w{v})$ of vectors tangent
 to $\Sp_\varepsilon$, we may express it for any pair of vectors, i.e. not
 necessarily tangent to $\Sp_\varepsilon$ by introducing the orthogonal
 projector $\vw{q}$ onto $\Sp_\varepsilon$ [cf. Eq.~(\ref{e:def:q_proj})]:
-\[
+\be \label{e:def:Lie_ell_bar_q}
     \Lie{\el} \w{\bar q} \, (\vw{q}(\w{u}),\vw{q}(\w{v})) =
     \Lie{\el} \w{q} \, (\vw{q}(\w{u}),\vw{q}(\w{v})) .
-\]
+\ee
 Using index notation, this is equivalent to
 \[
     \Liec{\el} {\bar q}_{\mu\nu} \, {\bar q}^\mu_{\ \, \alpha} {\bar q}^\nu_{\ \, \beta} =
@@ -1357,10 +1389,7 @@ Appendix~{\ref{s:bas}, we get
        = \nabla_\mu \el_\nu + \nabla_\nu \el_\mu .
 \]
 Moreover, since $\wl$ and $\w{k}$ are orthogonal to $\Sp$, we have
-\[
-    q^{\mu\nu} \el_\nu = 0 \quad\mbox{and}\quad
-    q^{\mu\nu} k_\nu = 0 .
-\]
+$q^{\mu\nu} \el_\nu = 0$ and $q^{\mu\nu} k_\nu = 0$.
 Hence we end up with
 \[
     \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu}  \left( \nabla_\mu \el_\nu + \nabla_\nu \el_\mu
@@ -1501,38 +1530,43 @@ so far:
         = q^{\mu\nu} \nabla_\mu \el_\nu
         = \wnab\cdot\wl - \kappa } ,
 \ee
-with the reminder that the last expression is valid insofar as the vector field $\wl$ is
+with the reminder that the last equality is valid insofar as the vector field $\wl$ is
 null in some entire open neighbourhood of $\Hor$ (and not only on $\Hor$), as
 stressed in Remark~\ref{r:def:theta_div_l}.
 
-\subsection{Deformation rate and shear tensor}
+\subsection{Deformation rate and shear tensor} \label{s:def:deformation_shear}
 
 Let us consider a cross-section $\Sp$ of the null hypersurface $\Hor$.
-The \defin{deformation rate}\index{deformation rate} $\w{\Theta}$ of $\Sp$ is defined from the Lie
-derivative of the induced metric $\w{q}$ of $\Sp$ along $\wl$ as
+The
+\defin{deformation rate $\w{\Theta}$ of $\Sp$ along $\wl$}\index{deformation rate}
+is defined from the Lie derivative along $\wl$ of the induced metric $\w{q}$ on $\Sp$
+[cf. Eq.~(\ref{e:def:def_Lie_ell_q})] as
 \be \label{e:def:Theta}
-    \w{\Theta} := \frac{1}{2} \vw{q}^* \Lie{\el} \w{q} ,
+   \encadre{ \w{\Theta} := \frac{1}{2} \vw{q}^* \Lie{\el} \w{q}  },
 \ee
 where $\vw{q}^*$ stands for the action of the orthogonal projector $\vw{q}$
 onto $\Sp$ on the bilinear form $\Lie{\el} \w{q}$.
-This action extends $\Lie{\el} \w{q}$, which is defined a priori on
-vectors of $T_p\Sp$ to all vectors of $T_p\M$, for any $p\in\Sp$, via
+This action extends $\Lie{\el} \w{q}$, which is defined a priori only
+for vectors of $T_p\Sp$ by Eq.~(\ref{e:def:def_Lie_ell_q}),
+to all vectors of $T_p\M$, for any $p\in\Sp$, via
 \be
     \forall (\w{u},\w{v}) \in T_p\M \times T_p\M, \quad
          \vw{q}^* \Lie{\el} \w{q}\,  (\w{u}, \w{v}) =
          \Lie{\el} \w{q} \left( \vw{q}(\w{u}), \vw{q}(\w{v}) \right) .
 \ee
-Accordingly, the index-notation version of (\ref{e:def:Theta}) is
+Since $\w{q}$ is symmetric, it is clear from the above definition that
+$\w{\Theta}$ is a field on $\Sp$ of symmetric bilinear forms.
+
+Thanks to the identity (\ref{e:def:Lie_ell_bar_q}), we can use for $\w{q}$
+the spacetime extension (\ref{e:def:q_g_k_l})
+and write the index-notation version of the definition (\ref{e:def:Theta}) as
 \be \label{e:def:Theta_index}
     \Theta_{\alpha\beta} = \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta}
             \Liec{\el} q_{\mu\nu} .
 \ee
-Since $\w{q}$ is symmetric, it is clear from the above definition that
-$\w{\Theta}$ is a symmetric bilinear form.
-
 Expressing the Lie derivative in terms of the covariant derivative
 $\wnab$ via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of Appendix~{\ref{s:bas}
-and using expression (\ref{e:def:q_g_k_l}) of $\w{q}$, we get
+and using formula~(\ref{e:def:q_g_k_l}) for $\w{q}$, we get
 \bea
     \Theta_{\alpha\beta} & = & \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta}
         \left( \el^\sigma \nabla_\sigma q_{\mu\nu}
@@ -1565,13 +1599,31 @@ yields
    \encadre{ \nabla_\alpha \el_\beta = \Theta_{\alpha\beta}
         + \omega_\alpha \el_\beta - \el_\alpha k^\mu \nabla_\mu \el_\beta },
 \ee
-with
+where we have let appear the 1-form $\w{\omega}$ defined by
 \be \label{e:def:def_omega}
-    \omega_\alpha := - k^\mu \nabla_\alpha \el_\mu - k^\mu k^\nu \nabla_\mu \el_\nu \, \el_\alpha .
+    \omega_\alpha := - k^\mu \nabla_\nu \el_\mu \Pi^\nu_{\ \, \alpha}
+    = - k^\mu \nabla_\alpha \el_\mu - k^\mu k^\nu \nabla_\mu \el_\nu \, \el_\alpha ,
 \ee
+where $\w{\Pi}$ is the projector onto $\Hor$ along $\w{k}$:
+\be \label{e:def:def_proj_H_along_k}
+    \Pi^\alpha_{\ \, \beta} = \delta^\alpha_{\ \, \beta} + k^\alpha \ell_\beta .
+\ee
+Indeed for any vector $\w{v}$ tangent to $\Hor$, one has $\w{\Pi}(\w{v}) = \w{v}$ since
+$\Pi^\alpha_{\ \, \mu} v^\mu = v^\alpha + k^\alpha \ell_\mu v^\mu$ with $\ell_\mu v^\mu = 0$,
+while $\w{\Pi}(\w{k}) = 0$ since
+$\Pi^\alpha_{\ \, \mu} k^\mu = k^\alpha + k^\alpha \ell_\mu k^\mu$ with $\ell_\mu k^\mu = -1$.
+Consequently, the action of $\w{\omega}$ on vectors tangent to $\Hor$ takes a simple form:
+\be \label{e:def:omega_restrict_H}
+    \forall \w{v}\in T_p\Hor,\quad
+    \langle\w{\omega}, \w{v} \rangle = - \w{k} \cdot\wnab_{\w{v}} \w{\ell} .
+\ee
+
 \begin{remark}
-The 1-form $\w{\omega}$ is sometimes called the \defin{rotation 1-form} of
-the cross-section $\Sp$; see Ref.~\cite{GourgJ06} for details.
+Thanks to the projector $\w{\Pi}$ involved in its definition, the 1-form $\w{\omega}$
+does not depend on the extension of the vector field $\wl$ away from $\Hor$.
+The same property holds for $\w{\Theta}$. On the contrary,
+the tensor field $\wnab\uu{\ell}$, which appears
+in the left-hand side of formula (\ref{e:def:nab_l_Theta}) and in the last term of its right-hand side, depends on the extension of $\wl$ away from $\Hor$.
 \end{remark}
 
 By comparing (\ref{e:def:theta_q_munu}) and (\ref{e:def:Theta_index}), we
@@ -1589,12 +1641,16 @@ or, in index notation:
 \be
     \sigma_{\alpha\beta} = \Theta_{\alpha\beta} - \frac{1}{n-2} \theta_{(\wl)} \, q_{\alpha\beta} .
 \ee
-Note that the $1/(n-2)$ factor arises from the trace of $\w{q}$, which is $n-2$,
-as easily seen from (\ref{e:def:q_g_k_l}):
-\be
+\begin{remark}
+The $1/(n-2)$ factor arises from the trace of $\w{q}$, which is $n-2$.
+This follows immediately from $\w{q}$ being a metric tensor on the
+$(n-2)$-dimensional manifold $\Sp$; this can also be recovered from the
+spacetime extension (\ref{e:def:q_g_k_l}) of $\w{q}$:
+\[
     q^\mu_{\ \, \mu} = \underbrace{\delta^\mu_{\ \, \mu}}_{n}
                     + 2 \underbrace{\el^\mu k^\mu}_{-1} = n - 2 .
-\ee
+\]
+\end{remark}
 By construction, we have thus
 \be
     \sigma^\mu_{\ \, \mu} = g^{\mu\nu} \sigma_{\mu\nu} = q^{\mu\nu} \sigma_{\mu\nu} = 0 .
@@ -1605,12 +1661,6 @@ that
    \encadre{\forall \w{v}\in T_p^\perp \Sp, \quad \w{\Theta}(\w{v}, .) = \w{\sigma}(\w{v}, .) = 0 },
 \ee
 with the important special cases $\w{v} = \wl$ and $\w{v} = \w{k}$.
-
-\begin{remark}
-Contrary to $\theta_{(\wl)}$, which depends only on $\wl$, the tensor fields
-$\w{\Theta}$ and $\w{\sigma}$ depend on the specific choice of the cross-section $\Sp$,
-in addition to $\wl$.
-\end{remark}
 
 \begin{example}[light cone] \label{x:def:light_cone8}
 Let us consider the light cone in Minkowski spacetime described in terms of the
