@@ -659,7 +659,8 @@ A null geodesic in Kerr spacetime has
 The quartic polynomial $\mathcal{R}(r)$ has at most four real roots. If
 a geodesic would have two turning points in $\M_{\rm I}$, this would mean
 that there exist two simple roots in $\M_{\rm I}$ and that
-$\mathcal{R}(r)$ is positive between them. Let us show that this is impossible.
+$\mathcal{R}(r)$ is positive between them (so that the motion is possible
+there). Let us show that this is impossible.
 First, we observe that $\mathcal{R}(r)$ is positive or zero at both
 ends of $\M_{\rm I}$. This is clear
 for the asymptotic flat end since, according to expression~(\ref{e:gik:mcR_powers}),
@@ -767,12 +768,12 @@ of any $r$-turning point along these geodesics.
 
 \section{Spherical photon orbits} \label{s:gik:spherical_orbits}
 
-In the Schwarzschild case studies in Chap.~\ref{s:gis}, the circular photon
+In the Schwarzschild case studied in Chap.~\ref{s:gis}, circular photon
 orbits at $r=3m$ played a central role in the computation of
 the black hole shadow and the image of an accretion structure.
-For the Kerr black hole, a similar role is played by the spherical photon
+For the Kerr black hole, a similar role is played by spherical photon
 orbits. They are also null geodesics evolving at a fixed value of $r$ but, contrary
-to the circular photon orbits of Schwarzschild spacetime, they are not planar
+to circular photon orbits of Schwarzschild spacetime, they are not planar
 in general.
 
 
@@ -783,7 +784,7 @@ is a \defin{spherical photon orbit}\index{photon!orbit!spherical --}\index{orbit
 We have already encountered such geodesics, namely the null generators of the two Killing horizons
 $\Hor$ and $\Hor_{\rm in}$ (cf. Secs.~\ref{s:gek:null_gen_hor} and \ref{s:ker:Cauchy_hor}).
 Indeed, they lie at a constant value of $r$: $r_0 = r_+$ for
-$\Hor$ and $r_0 = r_-$ for $\Hor_{\rm in}$.  These circular orbits have $E=0$
+$\Hor$ and $r_0 = r_-$ for $\Hor_{\rm in}$.  These spherical orbits have $E=0$
 [cf. Eq.~(\ref{e:gek:all_const_zero})].
 From the results of Sec.~\ref{s:gik:zero_energy}, there are no other orbits with $E=0$ at constant $r$.
 Hence we conclude
@@ -795,7 +796,7 @@ We shall then describe these geodesics by the reduced constants of motion $\ell 
 and $q := Q/E^2$ introduced in Sec.~\ref{s:gik:eom_Enonzero}.
 
 For a spherical photon orbit $\Li$,
-the quartic polynomial $\mathcal{R}(r)$ associated to $(\ell,q)$
+the quartic polynomial $\mathcal{R}(r)$ associated to $(\ell,q)$ by Eq.~(\ref{e:gik:mcR})
 must obey
 \be \label{e:gik:R_Rp_r0_zero}
     \mathcal{R}(r_0) = 0 \qand \mathcal{R}'(r_0) = 0 .
@@ -1087,12 +1088,12 @@ while inner spherical photon orbits with $r_0\in(0, r_{\rm ph}^*]$
 have $E<0$.
 \end{greybox}
 
-\subsubsection{Latitudinal motion}
+\subsection{Latitudinal motion} \label{s:gik:spher_latitudinal}
 
 The latitudinal motion of spherical photon orbits is
 deduced from the results of Sec.~\ref{s:gik:th_motion}:
 \begin{itemize}
-\item All outer spherical photon orbits and the inner ones with $r_0\in (0, r_{\rm ph}^{*}]$
+\item All outer spherical photon orbits with $r_0\not\in \left\{r_{\rm ph}^+, r_{\rm ph}^-\right\}$ and the inner ones with $r_0\in (0, r_{\rm ph}^{*}]$
 have $q>0$ (cf. Fig.~\ref{f:gik:spher_orb_exist}); they
 therefore oscillate about the equatorial plane, having $\th$-turning points
 symmetrical about it, at $\th=\th_0$ and $\th=\pi-\th_0$, with
@@ -1590,9 +1591,13 @@ on a (unstable) spherical orbit. The part of Kerr spacetime made of points
 through which a spherical photon orbit can pass is called the
 \defin{photon region}\index{photon!region} or sometimes the \defin{photon shell}\index{photon!shell} \cite{Johns_al20}. In terms of the Boyer-Lindquist $r$-coordinate, the photon region
 lies in the three intervals (\ref{e:gik:spher_orb_range}).
-
-...
-
+The range of the $\th$-coordinate has been discussed in Sec.~\ref{s:gik:spher_latitudinal}:
+spherical photon orbits with $r_0 > 0$ oscillate about the equatorial plane
+with the limiting angle $\th_0$ given by Eq.~(\ref{e:gik:th0}) ($\th_0=\pi/2$
+for the three circular orbits at $r_0 = r_{\rm ph}^*$, $r_0=r_{\rm ph}^+$
+and $r_0 = r_{\rm ph}^-$, which lie in the equatorial plane). On the other side,
+the inner orbits with $r_0 < 0$ are all vortical, with the limiting
+angles $\th_0$ and $\th_1$ given by Eqs.~(\ref{e:gik:th0}) and (\ref{e:gik:th1_general}).
 There is no constraint on the Boyer-Lindquist $\ph$-coordinate: the photon region occupies
 all the range $[0, 2\pi)$.
 
@@ -1600,10 +1605,11 @@ The photon region is depicted in Fig.~\ref{f:gik:spo_meridional}, which represen
 a meridional plane $(t,\ph) = \mathrm{const}$ of a Kerr spacetime with $a=0.95 m$
 --- the same value of $a$ as in Fig.~\ref{f:gik:spher_orb_exist}.
 
-We see from this figure that, apart from those generating the two horizons $\Hor_{\rm in}$
+We recover from this figure that, apart from those generating the two horizons $\Hor_{\rm in}$
 and $\Hor$, the only circular photon orbits of Kerr spacetime are the
-five ones considered in Sec.~\ref{s:gik:circular_orbits}.
-
+five ones considered in Sec.~\ref{s:gik:circular_orbits} (the five green dots).
+We note also that a part of the outer spherical photon orbits lie in the ergoregion. These orbits
+have however $E>0$, according to the results of the end of Sec.~\ref{s:gik:spher_existence}.
 
 \subsubsection{Polar spherical photon orbits}
 
@@ -1631,7 +1637,7 @@ and $q := 2m (a^2 - m^2)$. The discriminant $\mathit{\Delta} = - 4 p^3 - 27 q^2$
 being positive, the solutions are provided by Viète's formulas, Eq.~(\ref{e:gis:Viete}),
 with $k=0$ and $k=1$ ($k=2$ yields to the third root of $\ell(r_0)$ seen on
 Fig.~\ref{f:gik:spher_orb_exist}, which lies
-in the unphysical range of $r_0$):
+in the unphysical range of $r_0$ --- blue curve in the grey region):
 \begin{subequations}
 \begin{align}
     r_{\rm ph}^{\rm pol} & = m + 2 \sqrt{m^2 - \frac{a^2}{3}}
@@ -1651,8 +1657,10 @@ $\lim_{a\to m} r_{\rm ph}^{\rm pol,in} = (\sqrt{2} - 1) m \simeq -0.414214\, m$.
 Polar spherical photon orbits are plotted as dashed green curves in Fig.~\ref{f:gik:spo_meridional}.
 Note that they are the only spherical orbits that encounter the rotation axis.
 
-
-We note that:
+The sign of $\ell$ is deduced from expression (\ref{e:gik:spher_ell_r0}),
+whose numerator has a sign governed by the position of $r_0$ with respect to the
+roots determined above and whose denominator is positive iff $r_0 > m$, which occurs
+only for outer spherical orbits. We get then
 \begin{greybox}
 \begin{itemize}
 \item Outer spherical orbits with $r_0 \in [r_{\rm ph}^+, r_{\rm ph}^{\rm pol})$ %]$
@@ -1665,10 +1673,31 @@ have $\ell > 0$;
 have $\ell < 0$.
 \end{itemize}
 \end{greybox}
+The sign of $L$ is deduced from that of $\ell = L/E$ by combining with the sign of $E$ obtained
+in Sec.~\ref{s:gik:spher_existence}.
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Images}
+
+\subsection{Critical null geodesics}
+
+As in the Schwarzschild case (Sec.~\ref{s:gis:crit_geod}), let us define
+a \defin{critical null geodesic}\index{critical!null geodesic!in Kerr spacetime}
+as a null geodesic with $E\neq 0$ that has the same constants of motion
+$(\ell,q)$ as a spherical photon orbit. For the Schwarzschild case,
+it was simply any null geodesic that has $b = |\ell| = 3\sqrt{3}\, m$.
+Here we have a 1-parameter family of critical values $(\ell,q)$:
+it is given by Eqs.~(\ref{e:gik:spher_ell_r0})--(\ref{e:gik:spher_q_r0}), the
+parameter being $r_0$.
+
+
+
+
+\subsection{Black hole shadow}
+
+
+
 
 
 
