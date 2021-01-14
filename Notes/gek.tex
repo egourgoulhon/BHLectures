@@ -529,11 +529,11 @@ to get $a E - L /\sin^2\th = a p^t - (r^2 + a^2) p^\ph$
 and $(r^2 + a^2) E - a L = \Delta(p^t - a\sin^2\th p^\ph)$.},
 yielding
 \be \label{e:gek:rho2_pt}
-    \rho^2 p^t = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th )
+    \rho^2 p^t = \frac{1}{\Delta} [(r^2 + a^2)^2 E - 2a m r L] - a^2 E \sin^2\th
 \ee
 \be  \label{e:gek:rho2_pph}
-    \rho^2 p^\ph = \frac{L}{\sin^2\th} - a E
-    + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] .
+    \rho^2 p^\ph = \frac{L}{\sin^2\th}
+    + \frac{a}{\Delta} ( 2 m r E - a L).
 \ee
 Besides, Eq.~(\ref{e:gek:Kcarter_first_int}) involves only $p^r$ and can
 be recast as
@@ -660,11 +660,11 @@ and (\ref{e:gek:def_Theta}) as the first-order system
 \begin{subequations}
 \label{e:gek:eom_first_order}
 \begin{align}
-& \encadre{ \rho^2 \derd{t}{\lambda} = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th ) } \label{e:gek:dtdl} \\
+& \encadre{ \rho^2 \derd{t}{\lambda} = \frac{1}{\Delta} [(r^2 + a^2)^2 E - 2a m r L] - a^2 E \sin^2\th  } \label{e:gek:dtdl} \\
 & \encadre{ \rho^2 \derd{r}{\lambda} = \eps_r \sqrt{ R(r) } } \label{e:gek:drdl}\\
 & \encadre{ \rho^2 \derd{\th}{\lambda} = \eps_\th \sqrt{\Theta(\th)} } \label{e:gek:dthdl}\\
-& \encadre{ \rho^2 \derd{\ph}{\lambda}  = \frac{L}{\sin^2\th} - a E
-    + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] } , \label{e:gek:dphdl}
+& \encadre{ \rho^2 \derd{\ph}{\lambda}  = \frac{L}{\sin^2\th}
+    + \frac{a}{\Delta}(2 m r E - a L) } , \label{e:gek:dphdl}
 \end{align}
 \end{subequations}
 where $\eps_r := \operatorname{sgn} p^r = \pm 1$,  $\eps_\th := \operatorname{sgn} p^\th = \pm 1$
@@ -798,11 +798,11 @@ In terms of Mino parameter, the system (\ref{e:gek:eom_first_order}) becomes
 \begin{subequations}
 \label{e:gek:eom_Mino}
 \begin{align}
-& \encadre{ \derd{t}{\lambda'} = \frac{r^2 + a^2}{\Delta} [(r^2 + a^2) E - a L] + a ( L - a E \sin^2\th ) } \label{e:gek:dtdl_Mino} \\
+& \encadre{ \derd{t}{\lambda'} = \frac{1}{\Delta} [(r^2 + a^2)^2 E - 2a m r L] - a^2 E \sin^2\th } \label{e:gek:dtdl_Mino} \\
 & \encadre{ \derd{r}{\lambda'} = \eps_r \sqrt{ R(r) } } \label{e:gek:drdl_Mino}\\
 & \encadre{ \derd{\th}{\lambda'} = \eps_\th \sqrt{\Theta(\th)} } \label{e:gek:dthdl_Mino}\\
-& \encadre{ \derd{\ph}{\lambda'}  = \frac{L}{\sin^2\th} - a E
-    + \frac{a}{\Delta}\left[(r^2 + a^2) E - a L\right] } , \label{e:gek:dphdl_Mino}
+& \encadre{ \derd{\ph}{\lambda'}  = \frac{L}{\sin^2\th}
+    + \frac{a}{\Delta}(2 m r E - a L) } , \label{e:gek:dphdl_Mino}
 \end{align}
 \end{subequations}
 where $R$ is the quartic polynomial defined by Eq.~(\ref{e:gek:def_R_Q})
@@ -867,7 +867,9 @@ integral and is often abriged by means of a slash notation:
     \lambda' - \lambda'_0 = \dashint_{r_0}^r \frac{\eps_r \, \D \bar{r}}{\sqrt{R(\bar{r})}} .
 \ee
 
-Similarly, Eq.~(\ref{e:gek:dthdl_Mino}) can be integrated as
+Similarly, if $\Theta(\th)\neq 0$ along $\Li$, except possibly
+at some $\th$-turning points,
+Eq.~(\ref{e:gek:dthdl_Mino}) can be integrated as
 \bea
     \lambda' - \lambda'_0  & = & \dashint_{\th_0}^\th \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \nonumber \\
     & = & \begin{cases}
@@ -892,11 +894,16 @@ solution for geodesic motion:
 \begin{greybox}
 Let $\Li$ be a null or timelike geodesic in Kerr spacetime,
 with conserved energy $E$, conserved angular momentum $L$, mass $\mu$ and
-Carter constant $Q$. Let $\lambda$ be the affine parameter of $\Li$
+Carter constant $Q$. We assume that the associated quartic polynomial $R(r)$,
+as defined by Eq.~(\ref{e:gek:def_R_Q}) (see also Eq.~(\ref{e:gek:R_r_powers}) below),
+and the associated function $\Theta(\th)$, as defined by Eq.~(\ref{e:gek:Theta_Q}),
+do not vanish along $\Li$ except possibly at some $r$-turning points or
+$\th$-turning points.
+Let $\lambda$ be the affine parameter of $\Li$
 associated with the 4-momentum $\w{p}$ and $\lambda'$ the
 Mino parameter. If for $\lambda=\lambda_0$
 $\Li$ lies at the point of Boyer-Lindquist coordinates $(t_0,r_0,\th_0,\ph_0)$,
-then at any value of $\lambda$, the coordinates $(t,r,\th,\ph)$ along $\Li$
+then at any value of $\lambda$, the Boyer-Lindquist coordinates $(t,r,\th,\ph)$ along $\Li$
 obey
 \begin{subequations}
 \label{e:gek:integrated_eqs}
@@ -907,15 +914,13 @@ obey
  & \lambda - \lambda_0 = \dashint_{r_0}^r \frac{\eps_r \bar{r}^2 \D \bar{r}}{\sqrt{R(\bar{r})}}
     + a^2 \dashint_{\th_0}^\th \frac{\eps_\th \cos^2\bar{\th} \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}}
     \label{e:gek:integr_lambda} \\
- & t - t_0 = \dashint_{r_0}^r  \frac{\eps_r (\bar{r}^2 + a^2)}{\bar{r}^2 - 2m \bar{r} + a^2}
- \left[ (\bar{r}^2 + a^2) E - a L \right] \frac{\D \bar{r}}{\sqrt{R(\bar{r})}}
- + a \dashint_{\th_0}^\th ( L - a E \sin^2\bar{\th} ) \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \label{e:gek:integr_t} \\
- & \ph - \ph_0 = a \dashint_{r_0}^r  \frac{(\bar{r}^2 + a^2)E - a L}{\bar{r}^2 - 2m \bar{r} + a^2}
+ & t - t_0 = \dashint_{r_0}^r  \frac{(\bar{r}^2 + a^2)^2 E - 2 a m \bar{r} L}{\bar{r}^2 - 2m\bar{r} + a^2} \frac{\eps_r\D \bar{r}}{\sqrt{R(\bar{r})}}
+ - a^2 E \dashint_{\th_0}^\th  \sin^2\bar{\th}  \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} \label{e:gek:integr_t} \\
+ & \ph - \ph_0 = a \dashint_{r_0}^r  \frac{2m\bar{r} E - a L}{\bar{r}^2 - 2m \bar{r} + a^2}
     \frac{\eps_r \, \D \bar{r}}{\sqrt{R(\bar{r})}}
-    + \dashint_{\th_0}^\th \left( \frac{L}{\sin^2\bar{\th}} - a E  \right) \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} , \label{e:gek:integr_ph}
+    + L \dashint_{\th_0}^\th \frac{1}{\sin^2\bar{\th}} \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} . \label{e:gek:integr_ph}
 \end{align}
 \end{subequations}
-where $R$ is the quartic polynomial defined by Eq.~(\ref{e:gek:def_R_Q}) (see also Eq.~(\ref{e:gek:R_r_powers}) below) and $\Theta$ is the function defined by Eq.~(\ref{e:gek:Theta_Q}).
 \end{greybox}
 \begin{proof}
 Equation~(\ref{e:gek:integr_Mino}) is nothing but the gathering of
@@ -930,8 +935,8 @@ in the first term [cf. Eq.~(\ref{e:gek:drdl_Mino})] and by
 $\eps_\th \D\th / \sqrt{\Theta(\th)}$ in the second term [cf. Eq.~(\ref{e:gek:dthdl_Mino})].
 Similarly, by rewriting Eq.~(\ref{e:gek:dtdl_Mino}) as
 \[
-    \D t = \frac{r^2 + a^2}{r^2 - 2mr + a^2} [(r^2 + a^2) E - a L] \, \D\lambda'
-        + a ( L - a E \sin^2\th ) \, \D\lambda'
+    \D t = \frac{(r^2 + a^2)^2 E - 2 a m r L}{r^2 - 2mr + a^2}  \, \D\lambda'
+        - a^2 E \sin^2\th  \, \D\lambda'
 \]
 and performing the same substitutions for $\D\lambda'$ as above, we get
 Eq.~(\ref{e:gek:integr_t}). Finally, Eq.~(\ref{e:gek:integr_ph}) is deduced
@@ -1191,11 +1196,6 @@ geodesic $\Li$.
 
 Using  Eq.~(\ref{e:gek:dtdl}) with $\D t/\D\lambda=p^t$ and the fact that $\Delta > 0$
 in $\M_{\rm I} \cup \M_{\rm III}$, we can rewrite (\ref{e:gek:p_t_positive}) as
-\[
-    (r^2 + a^2) [(r^2 + a^2) E - a L]  + a \Delta ( L - a E \sin^2\th ) > 0
-      \ \mbox{in}\ \M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T}) ,
-\]
-which can be simplified to
 \begin{greybox}
 \be
 \encadre{ \rho^2 (r^2 + a^2) E - 2 a m r ( L - a E \sin^2\th ) > 0 }
@@ -1226,8 +1226,7 @@ reduce to
 \begin{align}
 & \rho^2 \derd{t}{\lambda} = E \left( \frac{(r^2 + a^2)^2}{\Delta}   - a^2 \sin^2\th \right)
 = \frac{E}{\Delta} \left[ \rho^2(r^2 + a^2) + 2 a^2 m r \sin^2\th \right] \nonumber \\
-& \rho^2 \derd{\ph}{\lambda}  = a E \left( - 1 + \frac{r^2 + a^2}{\Delta} \right)
- = \frac{2 a m r}{\Delta} , \nonumber
+& \rho^2 \derd{\ph}{\lambda}  = \frac{2 a m r E}{\Delta} , \nonumber
 \end{align}
 so that we get
 \be \label{e:gek:dphdt_frame_dragging}
@@ -2178,10 +2177,10 @@ The first-order equations of motion (\ref{e:gek:eom_Mino}) can be rewritten in t
 \begin{subequations}
 \label{e:gek:timelike_system}
 \begin{align}
-& \encadre{ \derd{t}{\tau'} = a\ell + T_1(r) + T_2(\th) } \label{e:gek:dtdmino_timelike}\\
+& \encadre{ \derd{t}{\tau'} = T_1(r) + T_2(\th) } \label{e:gek:dtdmino_timelike}\\
 & \encadre{  \left( \derd{r}{\tau'} \right)^2 - \mathcal{R}(r) = 0 } \label{e:gek:r_eff_pot_timelike}\\
 & \encadre{ \left( \derd{\theta}{\tau'} \right)^2 - \tilde{\Theta}(\th) = 0 } \label{e:gek:th_eff_pot_timelike}\\
-& \encadre{ \derd{\ph}{\tau'}  = - a \veps + \Phi_1(r) + \Phi_2(\th) } \label{e:gek:dphdmino_timelike}
+& \encadre{ \derd{\ph}{\tau'}  = \Phi_1(r) + \Phi_2(\th) } \label{e:gek:dphdmino_timelike}
 \end{align}
 \end{subequations}
 where $\tau'$ is related to the Mino parameter $\lambda'$ by
@@ -2190,11 +2189,11 @@ where $\tau'$ is related to the Mino parameter $\lambda'$ by
 \ee
 and
 \be
-    T_1(r) := \frac{r^2 + a^2}{r^2 - 2 m r + a^2} [\veps (r^2 + a^2)  - a \ell],\qquad
+    T_1(r) := \frac{\veps (r^2 + a^2)^2  - 2 a m \ell r}{r^2 - 2 m r + a^2},\qquad
     T_2(\th) := - a^2 \veps \sin^2\th,
 \ee
 \be
-    \Phi_1(r) := \frac{a}{r^2 - 2 m r + a^2}\left[\veps (r^2 + a^2) - a \ell \right],\qquad
+    \Phi_1(r) := \frac{a(2m\veps r - a\ell)}{r^2 - 2 m r + a^2},\qquad
     \Phi_2(\th) := \frac{\ell}{\sin^2\th} ,
 \ee
 \be \label{e:gek:R_timelike}
@@ -2483,11 +2482,11 @@ as
 \end{subequations}
 with
 \be
-    \Gamma := a\ell + \langle T_1(r) \rangle + \langle T_2(\th) \rangle ,
+    \Gamma := \langle T_1(r) \rangle + \langle T_2(\th) \rangle ,
 \ee
 and
 \be
-    \Upsilon_\ph :=  - a \veps + \langle \Phi_1(r) \rangle + \langle \Phi_2(\th) \rangle .
+    \Upsilon_\ph :=  \langle \Phi_1(r) \rangle + \langle \Phi_2(\th) \rangle .
 \ee
 $\Gamma$ and $\Upsilon_\ph$ represent the constant (or average) parts of
 respectively $\D t/\D\tau'$ and $\D \ph / \D\tau'$, while the oscillatory parts
