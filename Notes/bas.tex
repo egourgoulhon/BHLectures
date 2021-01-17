@@ -16,7 +16,7 @@ encompass both Lorentzian metrics and Riemannian ones.
 Accordingly, in this appendix, $\M$ denotes a generic manifold of any dimension
 and $\w{g}$ a pseudo-Riemannian metric on $\M$.
 
-This appendix is not intended to a be some lecture on differential geometry, but
+This appendix is not intended to be some lecture on differential geometry, but
 a collection of basic definitions and useful results. In particular,
 contrary to the other parts of these notes, we state many results without proofs,
 referring the reader to classical textbooks on the topic
@@ -106,6 +106,20 @@ The atlas $(\mathcal{U}_i,\Phi_i)_{i\in I}$  is called a
 \defin{smooth atlas}\index{smooth!atlas}\index{atlas!smooth --}.
 In the following, we consider only smooth manifolds.
 
+\begin{remark} \label{r:bas:analytic}
+When discussing the staticity and no-hair theorems in Chap.~\ref{s:sta}, we
+refer to the concept of
+\emph{analytic manifold}\index{analytic!manifold}\index{manifold!analytic --},
+which is a special case of that of smooth manifold. Indeed, an
+\defin{analytic manifold}\index{analytic!manifold}\index{manifold!analytic --}
+is defined as a manifold equipped with an altas for which all the changes of coordinates
+$\Phi_i \circ \Phi_j^{-1}$ are analytic functions.
+Let us recall that an \defin{analytic function}\index{analytic!function}
+is a $C^\infty$ function $f$ for
+which the Taylor series about any point $x$ in its domain converges to $f$
+in some neighborhood of $x$.
+\end{remark}
+
 Given two smooth manifolds, $\M$ and $\M'$, of
 respective dimensions $n$ and $n'$, we say that a map
 $\phi : \M \rightarrow \M'$ is \defin{smooth map}\index{smooth!map} iff in some (and hence all, thanks to the smoothness of (\ref{e:bas:transition_map})) coordinate systems
@@ -117,7 +131,7 @@ it is bijective and both $\phi$ and $\phi^{-1}$ are smooth. This implies $n=n'$.
 \begin{remark}
 Strictly speaking a smooth manifold is a pair $(\M,\mathcal{A})$  where
 $\mathcal{A}$ is a (maximal) smooth atlas on $\M$.
-Indeed a given (topological) manifold $\M$
+Indeed, a given (topological) manifold $\M$
 can have non-equivalent differentiable structures, as shown by Milnor (1956) \cite{Milno56}
 in the specific case of the unit sphere of dimension~7, $\mathbb{S}^7$: there exist smooth manifolds, the so-called \emph{exotic spheres}\index{exotic!sphere},
 that are homeomorphic to $\mathbb{S}^7$ but not diffeomorphic
@@ -1291,7 +1305,7 @@ fully antisymmetric multilinear form on the vector space $T_p\M$.
 A differential form of order $q$ is also called a $q$-form.
 
 Differential forms play a special role in the theory of integration on a
-manifold. Indeed the primary definition of an integral over a manifold of
+manifold. Indeed, the primary definition of an integral over a manifold of
 dimension $n$ is the integral of a $n$-form. The Levi-Civita tensor
 $\w{\epsilon}$
 introduced in Sec.~\ref{s:bas:Levi-Civita_tensor} is a $n$-form, whose integral
@@ -1548,8 +1562,8 @@ curvature resulting from the embedding of the curve in $\R^2$.
 
 For $n=2$, the Riemann tensor is entirely determined by the knowledge of the
 Ricci scalar $R$, according to the formula:
-\be
-  R^\gamma_{\ \; \delta\alpha\beta} =  R \left(
+\be \label{e:bas:Riem_n_2}
+  R^\gamma_{\ \; \delta\alpha\beta} =  \frac{R}{2} \left(
     \delta^\gamma_{\ \  \alpha} \, g_{\delta\beta}   -
     \delta^\gamma_{\ \  \beta} \, g_{\delta\alpha}
          \right) \qquad (n=2) .
