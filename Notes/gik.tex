@@ -546,7 +546,7 @@ and $q=0$. Equations~(\ref{e:gik:screen_alpha_beta}) yield then
 where $\hat{b}$ is the angle introduced by formula (\ref{e:gis:hat_b}).
 \end{remark}
 
-\subsection{$\theta$-motion} \label{s:gik:th_motion}
+\subsection{Latitudinal motion} \label{s:gik:th_motion}
 
 Specializing the general results of Sec.~\ref{s:gek:th_motion} to $\mu=0$, we
 get
@@ -635,7 +635,7 @@ $\th$, with $\th_0 = \th_*$ or $\th_0 = \pi - \th_*$ according
 to Eq.~(\ref{e:gik:th_s_ell_over_a}), since $\sqrt{|\ell|/a} = \sin\th_0$.
 \end{example}
 
-\subsection{$r$-motion} \label{s:gik:radial_motion}
+\subsection{Radial motion} \label{s:gik:radial_motion}
 
 As for any geodesic, the radial motion of a null geodesic $\Li$ is ruled by
 $R(r)\geq 0$ [Eq.~(\ref{e:gek:R_non_neg})], which, in terms of $\mathcal{R}(r)$
@@ -685,20 +685,20 @@ In region $\M_{\rm I}$ of Kerr spacetime, i.e. for $r> r_+$, the
 quartic polynomial $\mathcal{R}(r)$ associated to a given geodesic
 [Eq.~(\ref{e:gik:mcR})] has one of the following behaviors, depending
 on the value of $(\ell, q)$:
-\begin{itemize}
-\item $\mathcal{R}(r)$ has no root and $\mathcal{R}(r) > 0$
-(Fig.~\ref{f:gik:R_in_M1}a);
-\item $\mathcal{R}(r)$ has a double root, at $r=r_0$ say, and
+\begin{enumerate}
+\item $\mathcal{R}(r)$ has no root in $(r_+,+\infty)$ and $\mathcal{R}(r) > 0$
+there (Fig.~\ref{f:gik:R_in_M1}a);
+\item $\mathcal{R}(r)$ has a double root in $(r_+,+\infty)$, at $r=r_0$ say, and
 $\mathcal{R}(r) > 0$ iff $r\in(r_+, r_0)$ or $r\in(r_0, +\infty)$
 (Fig.~\ref{f:gik:R_in_M1}b);
-\item $\mathcal{R}(r)$ has two simple roots, at $r=r_1$ and $r=r_2$ say, and
+\item $\mathcal{R}(r)$ has two simple roots in $(r_+,+\infty)$, at $r=r_1$ and $r=r_2$ say, and
 $\mathcal{R}(r) > 0$ iff $r\in(r_+, r_1)$ or $r\in(r_2, +\infty)$
 (Fig.~\ref{f:gik:R_in_M1}c);
-\item $\mathcal{R}(r)$ has a unique simple root, at $r=r_0$ say; then
+\item $\mathcal{R}(r)$ has a unique simple root in $(r_+,+\infty)$, at $r=r_0$ say; then
 necessarily $\ell = 2 m r_+ /a$, $\mathcal{R}(r_+) = 0$ and
 $\mathcal{R}(r) > 0$ iff $r\in(r_0, +\infty)$
 (Fig.~\ref{f:gik:R_in_M1}d).
-\end{itemize}
+\end{enumerate}
 \end{greybox}
 \begin{proof}
 First, we observe that $\mathcal{R}(r)$ is positive or zero at both
@@ -709,25 +709,49 @@ namely for $r \to r_+$,
 we have $\Delta \to 0$ and expression~(\ref{e:gik:mcR_Delta}) yields the limit value
 $\mathcal{R}(r_+) = (r_+^2 + a^2 - a \ell)^2 \geq 0$.
 Now, as a polynomial of degree four, $\mathcal{R}(r)$ has at most four real roots.
-Given the above boundary conditions it is possible that $\mathcal{R}(r)$ has
-a unique simple root $\M_{\rm I}$ only if $\mathcal{R}(r_+) = 0$ (cf. Fig.~\ref{f:gik:R_in_M1}d),
+Given the above boundary conditions, $\mathcal{R}(r)$ can have
+a unique simple root in $(r_+,+\infty)$ only if $\mathcal{R}(r_+) = 0$ (cf. Fig.~\ref{f:gik:R_in_M1}d),
 which occurs for a very specific value of $\ell$, namely $\ell = (r_+^2 + a^2)/a = 2 m r_+/a$.
-Similarly, the case of three roots in $\M_{\rm I}$, either three simple roots or one double and one simple root,
+This is case~4 above.
+Similarly, the case of three roots in $(r_+,+\infty)$, either three simple roots or one double and one simple root,
 is compatible with the boundary conditions only if $\mathcal{R}(r_+) = 0$, i.e.
-if $r_+$ is a fourth root of $\mathcal{R}$.
+if $r_+$ is a fourth root of $\mathcal{R}(r)$.
 But then the four roots of $\mathcal{R}(r)$ would be positive (since $r_+ > 0$).
 Now, since there is no $r^3$ term in the expression~(\ref{e:gik:mcR_powers}) of $\mathcal{R}(r)$,
 the sum of the roots of $\mathcal{R}(r)$ is zero, which is impossible with all
-the roots being positive.
-For the same reason, there cannot be four roots of $\mathcal{R}(r)$ in $\M_{\rm I}$.
-There remains then only the first three cases of the lemma statement, which are compatible
+the roots being positive. Hence there cannot be three roots in $(r_+,+\infty)$.
+The same argument about the zero sum of the roots excludes as well the case
+of four roots of $\mathcal{R}(r)$ in $(r_+,+\infty)$.
+There remains then the cases of no root at all in  $(r_+,+\infty)$ (case 1 of the lemma) and that of two
+roots (cases 2 and 3). These three cases are compatible
 with the boundary conditions and the vanishing of the sum of the roots.
 \end{proof}
 
+\begin{remark}
+Case~4 of the lemma can be seen as the limit $r_1\to r_+$ of case~3.
+\end{remark}
+
+\begin{remark}
+In case~4, $\mathcal{R}(r_+) = 0$ occurs for $\Omega_H \ell = 1$, where $\Omega_H$ is the black hole
+rotation velocity\index{black hole!rotation velocity}\index{rotation!velocity},
+as given by Eq.~(\ref{e:ker:def_OmegaH}). Similarly, $\mathcal{R}(r_-) = 0$ for $\Omega_{\rm in} \ell = 1$,
+where $\Omega_{\rm in}$ is the rotation velocity of the inner horizon, cf. Eq.~(\ref {e:ker:def_Omega_in}).
+\end{remark}
+
+\begin{remark} \label{r:gik:R_zero_M_III}
+The region $\M_{\rm III}$ shares with $\M_{\rm I}$ that $\mathcal{R}(r)$ is
+nonnegative at each of its ends: $\mathcal{R}(r) \sim r^4 > 0$ when $r\to -\infty$
+and $\mathcal{R}(r_-) = (r_-^2 + a^2 - a \ell)^2 \geq 0$. However, the argument
+used to limit the number of roots in $\M_{\rm I}$
+cannot be applied to $\M_{\rm III}$ because the latter can accommodate for both positive and negative
+values of $r$ and thus four roots of $\mathcal{R}(r)$ can be located in $\M_{\rm III}$.
+\end{remark}
+
+
 According to the definition given in Sec.~\ref{s:gek:turning_points},
-a $r$-turning of $\Li$ is a point $p_0\in \Li$ for which $\mathcal{R}(r_0) = 0$
-and $\mathcal{R}'(r_0) = 0$, $r_0$ being the radial coordinate of $p_0$.
-As a consequence of the above lemma, we have:
+a $r$-turning of a null geodesic $\Li$ is a point $p_0\in \Li$
+such that $r_0 := r(p)$ is a simple root of $\mathcal{R}(r)$.
+The above lemma leads then to:
 \begin{greybox}
 A null geodesic in Kerr spacetime has
 \begin{itemize}
@@ -763,22 +787,22 @@ that $r$ must be a strictly decreasing function of $\lambda$ at any point
 in $\M_{\rm II}$.
 \end{remark}
 
-
-\begin{remark}
-The region $\M_{\rm III}$ shares with $\M_{\rm I}$ that $\mathcal{R}(r)$ is
-nonnegative at each of its ends: $\mathcal{R}(r) \sim r^4 > 0$ when $r\to -\infty$
-and $\mathcal{R}(r_-) = (r_-^2 + a^2 - a \ell)^2 \geq 0$. However, the argument
-used to limit the number of $r$-turning points in $\M_{\rm I}$
-cannot be applied to $\M_{\rm III}$ because the latter can accommodate for positive and negative
-values of $r$ and thus four roots of $\mathcal{R}(r)$ can be located in $\M_{\rm III}$, allowing
-for two $r$-turning points there.
-\end{remark}
-
-
-\begin{remark}
-$\mathcal{R}(r_+) = 0$ occurs for $\Omega_H \ell = 1$
-and $\mathcal{R}(r_-) = 0$ for $\Omega_{\rm in} \ell = 1$ [cf. Eqs.~(\ref{e:ker:def_OmegaH}) and (\ref {e:ker:def_Omega_in})].
-\end{remark}
+Let us consider case~2 of the lemma (double root of $\mathcal{R}(r)$ in $\M_{\rm I}$);
+it corresponds to two distinct situations regarding the null geodesic $\Li$ having
+$\mathcal{R}(r)$ as radial polynomial. First, $\Li$ can lie at a constant value
+of $r$, which is necessarily the double root $r_0$ of $\mathcal{R}(r)$
+by virtue of Eq.~(\ref{e:gik:drdl_Mino}); $\Li$ belongs then to the category
+of the \emph{spherical photon orbits}, which will be
+studied in Sec.~\ref{s:gik:spherical_orbits}. If $r$ is not constant along $\Li$,
+then according to the definition in Sec.~\ref{s:gek:asymptotic_values},
+$\Li$ has as an asymptotic $r$-value, which is the double root $r_0$.
+Given that $r_0$ is the only root of $\mathcal{R}(r)$ in $(r_+,+\infty)$,
+Eq.~(\ref{e:gik:drdl_Mino}) implies
+$\D r/\D\lambda\neq 0$ all along $\Li$, so that $r(\lambda)\to r_0$ for
+$\lambda\to+\infty$ (future asymptotic value)
+or $\lambda\to-\infty$ (past asymptotic value). Such a geodesic belong to the
+category of the \emph{critical null geodesics}, which will be studied in
+Sec.~\ref{s:gik:critical_geod}.
 
 %\begin{remark}
 %Since their sum is zero, when the four roots of $\mathcal{R}(r)$ coincide,
@@ -787,15 +811,16 @@ and $\mathcal{R}(r_-) = 0$ for $\Omega_{\rm in} \ell = 1$ [cf. Eqs.~(\ref{e:ker:
 %with $\th_0=\pi/2$.
 %\end{remark}
 
-In view of the above result, we can state:
+In view of the above results, we can state:
 
 \begin{greybox}
 In the region $\M_{\rm I}$ of Kerr spacetime,
-a null geodesic $\Li$ must have one of the following behaviours:
+any null geodesic $\Li$ has one of the following behaviors.
+For \emph{generic} values of the constant of motions $(\ell, q)$, the possibilities are:
 \begin{enumerate}
 \item $\Li$ arises from the past null infinity of $\M_{\rm I}$, $\scri^-$, has a $r$-turning point,
 which we may call the \defin{periastron}\index{periastron}, and terminates at the future null infinity
-of $\M_{\rm I}$, $\scri^+$ ;
+of $\M_{\rm I}$, $\scri^+$;
 \item $\Li$ arises from the past null infinity $\scri^-$, has $r$ decreasing
 monotonically and crosses the black hole event horizon $\Hor$;
 \item $\Li$ arises from the past event horizon $\Hor^-$ separating $\M_{\rm I}$
@@ -803,13 +828,37 @@ from the white hole region $\M_{\rm II}^*$, has $r$ increasing monotonically and
 terminates at the future null infinity $\scri^+$;
 \item $\Li$ arises from the past event horizon $\Hor^-$, has a $r$-turning point,
 which we may call the \defin{apoastron}\index{apoastron}, and crosses the black hole event horizon $\Hor$;
-\item $\Li$ evolves at a fixed value of $r$.
+\end{enumerate}
+For some \emph{specific} values of the constant of motions $(\ell, q)$,
+forming a 1-dimensional (hence zero-measure) subset of the set of all possible values\footnote{This
+subset is given in parametric form by Eqs.~(\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0}) below.},
+the possibilities are:
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item $\Li$ evolves at a fixed value of $r$;
+\item $\Li$ arises from the past null infinity $\scri^-$
+and has $r$ decreasing monotonically to
+a future asymptotic $r$-value at $r_0 > r_+$;
+\item $\Li$ arises from a past asymptotic $r$-value at $r_0 > r_+$, has
+$r$ increasing monotonically and terminates at the future null infinity
+$\scri^+$;
+\item $\Li$ arises from a past asymptotic $r$-value at $r_0 > r_+$, has
+$r$ decreasing monotonically and crosses the black hole event horizon $\Hor$;
+\item $\Li$ arises from the past event horizon $\Hor^-$, has
+$r$ increasing monotonically to
+a future asymptotic $r$-value at $r_0 > r_+$.
 \end{enumerate}
 \end{greybox}
-Case 1 corresponds to a scattering\index{scattering} trajectory, leading to the standard phenomenon of deflection of light\index{deflection of light}.
+
+
+Case 1 corresponds to a scattering\index{scattering} trajectory, leading to the standard phenomenon of deflection of light\index{deflection of light}. The polynomial $\mathcal{R}(r)$
+belongs then to case~3 or 4 of the lemma.
 Ingoing principal null geodesics belong to case 2, while the outgoing ones with $E\neq 0$ belong to case 3
 (cf. Example~\ref{x:gik:png_R_positive} below).
-Case 5 corresponds to the so-called \emph{spherical orbits} and will be discussed in Sec.~\ref{s:gik:spherical_orbits}.
+Both cases 2 and 3 correspond to the lemma's case 1 (no root of $\mathcal{R}(r)$ in $\M_{\rm I}$).
+Cases~5--9 correspond to the lemma's case 2 (double root of $\mathcal{R}(r)$ in $\M_{\rm I}$).
+Case 5 is that of \emph{spherical photon orbits} and will be discussed in Sec.~\ref{s:gik:spherical_orbits}, while cases~6--9 are those of \emph{critical null geodesics},
+to be discussed in Sec.~\ref{s:gik:critical_geod}.
 
 \begin{remark}
 The terminology  \emph{(periastron, apoastron)} employed here agrees with that
@@ -820,8 +869,15 @@ introduced for the Schwarzschild case in Sec.~\ref{s:ges:null_radial_behav}.
 That the principal null geodesics with $E\neq 0$ belong to cases 2 and 3 above
 is clear from their value (\ref{e:gik:mR_PNG}) for $\mathcal{R}(r)$:
 $\mathcal{R}(r) = \rho^4 > 0$ in all $\M$, which precludes the existence
-of any $r$-turning point along these geodesics.
+of any $r$-turning point nor any $r$-asymptotic value along these geodesics.
 \end{example}
+
+\begin{remark}
+As a sequel of Remark~\ref{r:gik:R_zero_M_III} above, a null geodesic can have
+two turnings points in region $\M_{\rm III}$. There can thus exist null geodesics that are trapped
+between two distinct values of $r$ in $\M_{\rm III}$.
+\end{remark}
+
 
 %\section{Principal null geodesics}
 
@@ -868,6 +924,10 @@ that Eq.~(\ref{e:gik:drdl_Mino}) implies $\mathcal{R}(r_0) = 0$. If $\mathcal{R}
 then $r_0$ would correspond to a $r$-turning point of $\Li$  (cf. Eq.~(\ref{e:gek:der_r_turning})),
 which would contradict $r$ being constant.
 \end{proof}
+In other words, $r_0$ is a double root the polynomial $\mathcal{R}(r)$. A spherical
+photon orbit in $\M_{\rm I}$ correspond then to case~2 of the lemma in
+Sec.~\ref{s:gik:radial_motion} and an example of $\mathcal{R}(r)$ is shown
+for $a=0.95\, m$ and $r_0=2.2\, m$ in Fig.~\ref{f:gik:R_in_M1}b.
 
 In view of expression (\ref{e:gik:mcR_Delta}) for $\mathcal{R}(r)$, the system
 (\ref{e:gik:R_Rp_r0_zero}) is equivalent to
@@ -1487,6 +1547,18 @@ $\mathcal{V}(r) := - R(r) / (\mu^2 r^4)$, whereas we have here
 $\mathcal{R}(r) := R(r)/E^2$.
 \end{remark}
 
+An immediate consequence of the lemma in Sec.~\ref{s:gik:radial_motion} is
+\begin{greybox}
+All spherical photon orbits in the black hole exterior are unstable.
+\end{greybox}
+\begin{proof}
+The quartic polynomial $\mathcal{R}(r)$ of spherical photon orbits in $\M_{\rm I}$
+belong to case~2 of the lemma, which states that $\mathcal{R}(r)>0$ for $r\in (r_+, r_0)\cup(r_0, +\infty)$,
+i.e. $r_0$ corresponds to a minimum of $\mathcal{R}$ (cf. Fig.~\ref{f:gik:R_in_M1}b).
+\end{proof}
+
+We are however going to see that there exist stable spherical photon orbits in
+region $\M_{\rm III}$.
 From expression~(\ref{e:gik:mcR_powers}) for $\mathcal{R}$, we get
 $\mathcal{R}''(r_0) = 12 r_0^2 + 2 (a^2 - \ell^2 - q )$.
 Substituting the values (\ref{e:gik:spher_ell_r0}) and (\ref{e:gik:spher_q_r0})
@@ -1495,7 +1567,7 @@ for respectively $\ell$ and $q$ yields
     \mathcal{R}''(r_0) = \frac{8 r_0}{(r_0 - m)^2}
     \left[ (r_0 - m)^3 + m^3 \left( 1 - \frac{a^2}{m^2} \right) \right] .
 \ee
-Hence
+Hence the stability criterion (\ref{e:gik:stability_spher}) becomes
 \be \label{e:gik:cond_d2R_neg}
    \mathcal{R}''(r_0) < 0 \iff \begin{cases}
    r_0 < 0 \quad\mbox{and}\quad (r_0 - m)^3 + m^3 \left( 1 - \frac{a^2}{m^2} \right)  > 0 \\
@@ -1533,14 +1605,13 @@ with equality iff $a=m$.
 We conclude
 \begin{greybox}
 All spherical photon orbits are unstable with respect to radial perturbations, except
-for a subclass of inner orbits:
+for a subclass of inner orbits with negative energy\index{negative-energy particle}\index{particle!negative-energy --} ($E < 0$):
 those that have a radius $r_0\in(0, r_{\rm ph}^{\rm ms})$, where $r_{\rm ph}^{\rm ms}$ is
 given by Eq.~(\ref{e:gik:r_ph_mb}). In particular, all spherical photon orbits
 in $\M_{\rm I}$ (the black hole exterior) are unstable, as well as all circular photon orbits
 discussed in Sec.~\ref{s:gik:circular_orbits}.
-The stable orbits correspond to negative-energy\index{negative-energy particle}\index{particle!negative-energy --} photons ($E < 0$).
 \end{greybox}
-The last point follows from the results on the sign of $E$ obtained
+That all stable orbits have $E<0$ follows from the results on the sign of $E$ obtained
 in Sec.~\ref{s:gik:spher_existence}.
 
 
@@ -1744,7 +1815,7 @@ in Sec.~\ref{s:gik:spher_existence}.
 
 \section{Images}
 
-\subsection{Critical null geodesics}
+\subsection{Critical null geodesics} \label{s:gik:critical_geod}
 
 As in the Schwarzschild case (Sec.~\ref{s:gis:crit_geod}), let us define
 a \defin{critical null geodesic}\index{critical!null geodesic!in Kerr spacetime}
