@@ -446,7 +446,7 @@ defined by Eq.~(\ref{e:gek:Cartesian_BL}).
 }
 \end{figure}
 
-\subsection{Position on a remote observer's screen}
+\subsection{Position on a remote observer's screen} \label{s:gik:remote_screen}
 
 The constants $(\ell,q)$ are closely related to the impact coordinates $(\alpha,\beta)$
 on the screen of an asymptotic inertial observer (cf. Sec.~\ref{s:ker:asymp_inertial_obs})
@@ -498,12 +498,12 @@ By comparing with (\ref{e:gik:m_screen_p}), we get
 \]
 Now, for $r_{\Obs}\to +\infty$,
 \[
-   \frac{p^\th}{E} = \frac{1}{E} \derd{\th}{\lambda} = \frac{1}{E r_0^2}  \derd{\th}{\lambda'} =
-    \frac{\eps_\th}{r_0^2} \sqrt{\tilde\Theta(\th_{\Obs})}
+   \frac{p^\th}{E} = \frac{1}{E} \derd{\th}{\lambda} = \frac{1}{E r_{\Obs}^2}  \derd{\th}{\lambda'} =
+    \frac{\eps_\th}{r_{\Obs}^2} \sqrt{\tilde\Theta(\th_{\Obs})}
 \]
 \[
- \frac{p^\ph}{E} = \frac{1}{E} \derd{\ph}{\lambda} = \frac{1}{E r_0^2}  \derd{\ph}{\lambda'}
- = \frac{\ell}{r_0^2 \sin^2\th_{\Obs}} ,
+ \frac{p^\ph}{E} = \frac{1}{E} \derd{\ph}{\lambda} = \frac{1}{E r_{\Obs}^2}  \derd{\ph}{\lambda'}
+ = \frac{\ell}{r_{\Obs}^2 \sin^2\th_{\Obs}} ,
 \]
 where we have used Eqs.~(\ref{e:gik:dthdl_Mino}) and (\ref{e:gik:dphdl_Mino}), with the
 term involving $a/\Delta$ neglected since $\Delta \sim r^2$ for $r\to +\infty$.
@@ -524,7 +524,7 @@ the screen coordinates:
 We have defined $(\alpha,\beta)$ as dimensionless Cartesian coordinates on
 the screen, cf. Eq.~(\ref{e:gik:m_screen_ab}), where $(\w{e}_{(\alpha)}, \w{e}_{(\beta)})$
 is the screen's orthonormal basis. But in practice, their values are tiny,
-being exactly zero at the limit $r_0\to +\infty$. They can thus be identified
+being exactly zero at the limit $r_{\Obs}\to +\infty$. They can thus be identified
 with \emph{angle} coordinates, measuring the departure from the direction
 of the black hole on the celestial sphere of observer $\Obs$.
 \end{remark}
@@ -541,7 +541,7 @@ where both the observer
 and the geodesic lie in the equatorial plane, which imply $\th_{\Obs} = \pi/2$
 and $q=0$. Equations~(\ref{e:gik:screen_alpha_beta}) yield then
 \be
-    |\alpha| = \frac{b}{r_0} = \hat{b} \qand \beta = 0 ,
+    |\alpha| = \frac{b}{r_{\Obs}} = \hat{b} \qand \beta = 0 ,
 \ee
 where $\hat{b}$ is the angle introduced by formula (\ref{e:gis:hat_b}).
 \end{remark}
@@ -1014,10 +1014,10 @@ Recasting expressions (\ref{e:gik:spher_ell_sol2}) and (\ref{e:gik:spher_q_prov}
 conclude that a spherical photon orbit at $r=r_0\neq m$ has a reduced angular momentum $\ell$
 and a reduced Carter constant $q$ given by
 \be \label{e:gik:spher_ell_r0}
-   \encadre{ \ell = \frac{r_0^2(3m  - r_0) - a^2 (r_0 + m)}{a(r_0 - m)} },
+   \encadre{ \ell = \ell_{\rm c}(r_0) := \frac{r_0^2(3m  - r_0) - a^2 (r_0 + m)}{a(r_0 - m)} },
 \ee
 \be \label{e:gik:spher_q_r0}
-    \encadre{ q = \frac{r_0^3}{a^2(r_0 - m)^2}\left[ 4 a^2 m - r_0(r_0 - 3m)^2 \right] } .
+    \encadre{ q = q_{\rm c}(r_0) := \frac{r_0^3}{a^2(r_0 - m)^2}\left[ 4 a^2 m - r_0(r_0 - 3m)^2 \right] } .
 \ee
 For a solution to exist, the constraint (\ref{e:gik:q_ell_a_constraint}) must
 be obeyed; it writes $\tilde{q} \geq 0$. Given expression (\ref{e:gik:spher_tq_r0}) for
@@ -1075,10 +1075,10 @@ spherical photon orbits exist only for values of $r_0$ for which the $q$ curve
     \encadre{ r_0 \in [r_{\rm ph}^+, r_{\rm ph}^-] },
 \ee
 where $r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$ are the three (ordered) roots
-distinct from $0$ of the equation $q(r_0) = 0$ (boundary for
+distinct from $0$ of the equation $q_{\rm c}(r_0) = 0$ (boundary for
 condition (\ref{e:gik:q_constraints_1})) and $r_{\rm ph}^{**}$ is the unique
-root of the equation $q(r_0) = - \left( a - |\ell(r_0)| \right) ^2$ when
-$|\ell(r_0)|  < a$ (boundary for condition (\ref{e:gik:q_constraints_2})).
+root of the equation $q_{\rm c}(r_0) = - \left( a - |\ell_{\rm c}(r_0)| \right) ^2$ when
+$|\ell_{\rm c}(r_0)|  < a$ (boundary for condition (\ref{e:gik:q_constraints_2})).
 The above reasoning is based on Fig.~\ref{f:gik:spher_orb_exist}, which has
 been drawn for $a=0.95\, m$; however the conclusions (\ref{e:gik:spher_orb_range})
 hold for any value of $a$ (see the notebook~\ref{s:sam:Kerr_spher_photon_existence}
@@ -1119,11 +1119,11 @@ and (\ref{e:gek:def_r_min_pm}):
 \be \label{e:gik:rph_pm}
    \encadre{ r_{\rm ph}^\pm := 4m\cos^2 \left[ \frac{1}{3} \arccos\left( \mp \frac{a}{m} \right) \right] }
 \ee
-As for $r_{\rm ph}^{**}$, since $q(r_0) = - (a - |\ell(r_0)|)^2$ with
-$|\ell(r_0)|  < a$ occurs in a region where $\ell(r_0) < 0$ (cf. Fig.~\ref{f:gik:spher_orb_exist}),
+As for $r_{\rm ph}^{**}$, since $q_{\rm c}(r_0) = - (a - |\ell_{\rm c}(r_0)|)^2$ with
+$|\ell_{\rm c}(r_0)|  < a$ occurs in a region where $\ell_{\rm c}(r_0) < 0$ (cf. Fig.~\ref{f:gik:spher_orb_exist}),
 we get that $r_{\rm ph}^{**}$ is a solution of the equation
-$q(r_0) = - (a + \ell(r_0))^2$. Given expressions (\ref{e:gik:spher_ell_r0}) and (\ref{e:gik:spher_q_r0})
-for respectively $\ell(r_0)$ and $q(r_0)$, we get that $r_{\rm ph}^{**}$ is a root of the cubic
+$q_{\rm c}(r_0) = - (a + \ell_{\rm c}(r_0))^2$. Given expressions (\ref{e:gik:spher_ell_r0}) and (\ref{e:gik:spher_q_r0})
+for respectively $\ell_{\rm c}(r_0)$ and $q_{\rm c}(r_0)$, we get that $r_{\rm ph}^{**}$ is a root of the cubic
 equation
 \be \label{e:gik:cubic_rph_ss}
     2 r_0^3 - 3 m r_0^2 + a^2 m = 0 .
@@ -1426,7 +1426,7 @@ The spherical orbits with $r_0 = r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-
 and $|\ell| > a$. According to the results of Sec.~\ref{s:gik:th_motion}, they
 necessary lie in the equatorial plane $\th=\pi/2$. They are thus \emph{circular}
 orbits. According to expression~(\ref{e:gik:spher_q_r0}) for $q$, they are the
-only ones in the equatorial plane, because the only other root of $q(r_0)=0$ is $r_0=0$
+only ones in the equatorial plane, because the only other root of $q_{\rm c}(r_0)=0$ is $r_0=0$
 (see also Fig.~\ref{f:gik:spher_orb_exist}),
 which would correspond to the ring singularity.
 Let us denote by $\ell_{\rm ph}^*$, $\ell_{\rm ph}^+$ and $\ell_{\rm ph}^-$
@@ -1635,23 +1635,23 @@ and reduced Carter constant $q$ are maximal.
 \begin{proof}
 From Eqs.~(\ref{e:gik:spher_ell_r0}) and (\ref{e:gik:spher_q_r0}), we get
 \be \label{e:gik:spher_orb_dqdr}
-   \derd{q}{r_0} = - \frac{4 r_0^2 (r_0 - 3m) \left[ (r_0 - m)^3 + m^3 \left(1 - \frac{a^2}{m^2}
+   \derd{q_{\rm c}}{r_0} = - \frac{4 r_0^2 (r_0 - 3m) \left[ (r_0 - m)^3 + m^3 \left(1 - \frac{a^2}{m^2}
             \right)\right]}{a^2 (r_0 - m)^3}
 \ee
 \be
-   \derd{\ell}{r_0} = - 2 \frac{(r_0 - m)^3 + m^3 \left(1 - \frac{a^2}{m^2}
+   \derd{\ell_{\rm c}}{r_0} = - 2 \frac{(r_0 - m)^3 + m^3 \left(1 - \frac{a^2}{m^2}
             \right)}{a (r_0 - m)^2}
 \ee
 Since $r_{\rm ph}^{\rm ms}$ is the unique real root of
 $(r_0 - m)^3 + m^3 (1 - a^2/m^2) = 0$ [cf. Eq.~(\ref{e:gik:R_second_der})],
-it is clear that the function $\ell(r_0)$ has a unique extremum, which is
-achieved by the marginally stable orbits. From the graph of $\ell(r_0)$
+it is clear that the function $\ell_{\rm c}(r_0)$ has a unique extremum, which is
+achieved by the marginally stable orbits. From the graph of $\ell_{\rm c}(r_0)$
 shown in Fig.~\ref{f:gik:spher_orb_exist}, we see that this extremum is
-a maximum. Regarding the function $q(r_0)$, the above expression of $\D q/\D r_0$
+a maximum. Regarding the function $q_{\rm c}(r_0)$, the above expression of $\D q_{\rm c}/\D r_0$
 leads to two extrema: $r_0 = r_{\rm ph}^{\rm ms}$ and $r_0 = 3 m$.
 The former regards the inner spherical orbits, while the latter regards
 the outer ones. Again, from the graph shown in Fig.~\ref{f:gik:spher_orb_exist},
-it is clear that $r_0 = r_{\rm ph}^{\rm ms}$ realizes a maximum of $q$
+it is clear that $r_0 = r_{\rm ph}^{\rm ms}$ realizes a maximum of $q_{\rm c}$
 among all inner spherical orbits.
 \end{proof}
 
@@ -1664,26 +1664,26 @@ Indeed, considering $\mathcal{R}$ as a function of $\ell$ and $q$, in addition
 to $r$, i.e. writing $\mathcal{R} = \mathcal{R}(r, \ell, q)$, the marginal
 stable orbit obeys
 \[
-    \mathcal{R}(r_0, \ell(r_0), q(r_0)) = 0,\quad
-    \der{\mathcal{R}}{r}(r_0, \ell(r_0), q(r_0)) = 0,\quad
-    \frac{\partial^2\mathcal{R}}{\partial r^2} (r_0, \ell(r_0), q(r_0)) = 0 .
+    \mathcal{R}(r_0, \ell_{\rm c}(r_0), q_{\rm c}(r_0)) = 0,\quad
+    \der{\mathcal{R}}{r}(r_0, \ell_{\rm c}(r_0), q_{\rm c}(r_0)) = 0,\quad
+    \frac{\partial^2\mathcal{R}}{\partial r^2} (r_0, \ell_{\rm c}(r_0), q_{\rm c}(r_0)) = 0 .
 \]
 Deriving the first and second equations with respect to $r_0$
 and using the third equation, we get a homogeneous linear
-system for $(\D\ell/\D r_0,\, \D q/\D r_0)$, similar to the
+system for $(\D\ell_{\rm c}/\D r_0,\, \D q_{\rm c}/\D r_0)$, similar to the
 system (\ref{e:gek:system_epsp_ellp}). The unique solution
-is then $(\D\ell/\D r_0,\, \D q/\D r_0) = (0, 0)$, yielding the extremum in the
-functions $\ell(r_0)$ and $q(r_0)$ at $r_0 = r_{\rm ph}^{\rm ms}$.
+is then $(\D\ell_{\rm c}/\D r_0,\, \D q_{\rm c}/\D r_0) = (0, 0)$, yielding the extremum in the
+functions $\ell_{\rm c}(r_0)$ and $q_{\rm c}(r_0)$ at $r_0 = r_{\rm ph}^{\rm ms}$.
 \end{remark}
 
 Equation~(\ref{e:gik:spher_orb_dqdr}) shows that, in addition to that
-at $r_0 = r_{\rm ph}^{\rm ms}$, the function $q(r_0)$ admits
+at $r_0 = r_{\rm ph}^{\rm ms}$, the function $q_{\rm c}(r_0)$ admits
 a second extremum at $r_0 = 3m$, i.e. for outer spherical orbits.
 This extremum is actually a maximum and its value, obtained by
 setting $r_0 = 3 m$ in Eq.~(\ref{e:gik:spher_q_r0}),
 turns out to be independent from $a$:
 \be \label{e:gik:spher_max_q}
-    \max q(r_0) = 27 m^2 .
+    \max q_{\rm c}(r_0) = 27 m^2 .
 \ee
 This is the maximum of the reduced Carter constant over all the spherical photon
 orbits (cf. Fig.~\ref{f:gik:spher_orb_exist}).
@@ -1764,20 +1764,21 @@ repeatedly the rotation axis. We therefore call them
 \defin{polar spherical photon orbits}\index{polar!spherical photon orbits}.
 
 The precise values of $r_{\rm ph}^{\rm pol,in}$ and
-$r_{\rm ph}^{\rm pol}$ are obtained by solving $\ell(r_0) = 0$,
-with $\ell(r_0)$ given by Eq.~(\ref{e:gik:spher_ell_r0}). We get the cubic
+$r_{\rm ph}^{\rm pol}$ are obtained by solving $\ell_{\rm c}(r_0) = 0$,
+with $\ell_{\rm c}(r_0)$ given by Eq.~(\ref{e:gik:spher_ell_r0}). We get the cubic
 equation $r_0^3 - 3 m r_0^2 + a^2 r_0 + a^2 m = 0$. Setting $r_0 =: x + m$ reduces
 it to the depressed cubic $x^3 + p x + q = 0$, with $p := a^2 - 3 m^2$
 and $q := 2m (a^2 - m^2)$. The discriminant $\mathit{\Delta} = - 4 p^3 - 27 q^2$
 being positive, the solutions are provided by Viète's formulas, Eq.~(\ref{e:gis:Viete}),
-with $k=0$ and $k=1$ ($k=2$ yields to the third root of $\ell(r_0)$ seen on
+with $k=0$ and $k=1$ ($k=2$ leads to the third root of $\ell_{\rm c}(r_0)$ seen on
 Fig.~\ref{f:gik:spher_orb_exist}, which lies
 in the unphysical range of $r_0$ --- blue curve in the grey region):
 \begin{subequations}
 \begin{align}
     r_{\rm ph}^{\rm pol} & = m + 2 \sqrt{m^2 - \frac{a^2}{3}}
         \cos\left[ \frac{1}{3}\arccos \left(
-        \frac{m(m^2 - a^2)}{\left( m^2 - {a^2}/{3} \right) ^{3/2}} \right) \right] \\
+        \frac{m(m^2 - a^2)}{\left( m^2 - {a^2}/{3} \right) ^{3/2}} \right) \right]
+        \label{e:gik:rph_pol} \\
     r_{\rm ph}^{\rm pol,in} & = m + 2 \sqrt{m^2 - \frac{a^2}{3}}
         \cos\left[ \frac{1}{3}\arccos \left(
         \frac{m(m^2 - a^2)}{\left( m^2 - {a^2}/{3} \right) ^{3/2}} \right) + \frac{2\pi}{3} \right] .
@@ -1820,39 +1821,46 @@ in Sec.~\ref{s:gik:spher_existence}.
 As in the Schwarzschild case (Sec.~\ref{s:gis:crit_geod}), let us define
 a \defin{critical null geodesic}\index{critical!null geodesic!in Kerr spacetime}
 as a null geodesic with $E\neq 0$ that has the same constants of motion
-$(\ell,q)$ as a spherical photon orbit. In Schwarzschild spacetime,
-this was simply any null geodesic that has $b = |\ell| = 3\sqrt{3}\, m$.
-Here we have a 1-parameter family of critical values $(\ell,q)$:
-it is given by Eqs.~(\ref{e:gik:spher_ell_r0})--(\ref{e:gik:spher_q_r0}), the
-parameter being $r_0$. By construction, the quartic polynomial $\mathcal{R}(r)$
+$(\ell,q)$ as a spherical photon orbit, but that does not stay at a fixed value
+of $r$. Equivalently, a critical null geodesic
+is a null geodesic with varying $r$ and for which the quartic polynomial $\mathcal{R}(r)$
+[Eq.~(\ref{e:gik:mcR})] admits a double root [Eq.~(\ref{e:gik:R_Rp_r0_zero})].
+In Schwarzschild spacetime (Chap.~\ref{s:gis}),
+a critical null geodesic was simply any null geodesic with varying $r$
+that has $b = |\ell| = 3\sqrt{3}\, m$.
+In the Kerr case with $a\neq 0$, we have instead a 1-parameter family of critical values:
+the family $(\ell_{\rm c}(r_0),q_{\rm c}(r_0))$ given by Eqs.~(\ref{e:gik:spher_ell_r0})--(\ref{e:gik:spher_q_r0}), the
+parameter being $r_0$. By construction, the polynomial $\mathcal{R}(r)$
 of a critical null geodesic $\Li$ of parameter $r_0$ has a double root at $r=r_0$
 [cf. Eq.~(\ref{e:gik:R_Rp_r0_zero})]. More precisely, inserting formula
 (\ref{e:gik:spher_ell_r0}) for $\ell$ and formula~(\ref{e:gik:spher_tq_r0})
 for $\tilde{q} := q + (\ell - a)^2$
 into expression (\ref{e:gik:mcR_Delta}) for $\mathcal{R}(r)$ leads to
 \be \label{e:gik:mR_critical_null}
-    \mathcal{R}(r) = (r - r_0)^2 \left( r^2 + 2 r_0 r - \frac{a^2 q}{r_0^2} \right) ,
+    \mathcal{R}(r) = (r - r_0)^2 \left( r^2 + 2 r_0 r - \frac{a^2 q_{\rm c}(r_0)}{r_0^2} \right) ,
 \ee
-where $q$ is the function (\ref{e:gik:spher_q_r0}) of $r_0$.
+where $q_{\rm c}(r_0)$ is the function (\ref{e:gik:spher_q_r0}).
 This writing of $\mathcal{R}(r)$ clearly exhibits the double root at $r=r_0$.
-According to the discussion in Sec.~\ref{s:gek:asymptotic_values},
+As discussed in Sec.~\ref{s:gek:asymptotic_values} and \ref{s:gik:radial_motion},
 a consequence of the double-root behavior is that
-$r_0$ is an asymptotic $r$-value of $\Li$, i.e. $r\to r_0$
-when $\lambda\to+\infty$ or $\lambda\to-\infty$ , where $\lambda$ is the affine
-parameter of $\Li$.
+any critical null geodesic $\Li$ of paramater $r_0$ has
+$r_0$ as an asymptotic $r$-value, i.e. $r(\lambda)\to r_0$
+when $\lambda\to+\infty$ or $\lambda\to-\infty$, where $\lambda$ is the affine
+parameter along $\Li$.
 
 Let us consider a critical null geodesic $\Li$ of parameter $r_0$
 that goes through a point $A$ of Boyer-Lindquist coordinates
 $(t_A, r_A, \th_A, \ph_A)$.
 By plugging (\ref{e:gik:mR_critical_null}) into the integrated equation
-of motion (\ref{e:gek:integr_Mino}), we get at any point of coordinates
-$(t,r,\th,\ph)$ along $\Li$:
+of motion (\ref{e:gek:integr_Mino}), we get, at any point of coordinates
+$(t,r,\th,\ph)$ along $\Li$,
 \be \label{e:gik:div_int_r_crit}
-    \dashint_{r_A}^r \frac{\eps_r \, \D \bar{r}}{|\bar{r}-r_0|\sqrt{\bar{r}^2 + 2r_0 \bar{r} - a^2 q/r_0^2}}
+    \dashint_{r_A}^r \frac{\eps_r \, \D \bar{r}}{|\bar{r}-r_0|\sqrt{\bar{r}^2 + 2r_0 \bar{r} - a^2 q_{\rm c}(r_0)/r_0^2}}
    = \dashint_{\th_A}^\th
    \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\tilde{\Theta}(\bar{\th})}} .
 \ee
-When $r\to r_0$, it is clear that the integral in the left-hand side diverges.
+When $r\to r_0$, it is clear that the integral in the left-hand side diverges
+logarithmically in terms of $|r - r_0|$.
 The path integral in the right-hand side must therefore diverge as well,
 which implies that $\Li$ has an endless oscillatory $\th$-motion as $r\to r_0$.
 Similarly the integrated equation of motion (\ref{e:gek:integr_ph})
@@ -1861,16 +1869,17 @@ becomes
 \be \label{e:gik:div_phi_crit}
     \ph - \ph_{\rm em} = a \dashint_{r_A}^r
     \frac{(2m\bar{r}- a \ell) \, \eps_r \, \D \bar{r}}%
-    {|\bar{r}-r_0|(\bar{r}^2 - 2m \bar{r} + a^2)\sqrt{\bar{r}^2 + 2r_0 \bar{r} - a^2 q/r_0^2}}
+    {|\bar{r}-r_0|(\bar{r}^2 - 2m \bar{r} + a^2)\sqrt{\bar{r}^2 + 2r_0 \bar{r} - a^2 q_{\rm c}(r_0)/r_0^2}}
     + \ell \dashint_{\th_A}^\th \frac{\eps_\th \, \D \bar{\th}}{\sin^2\bar{\th}
-    \sqrt{\tilde{\Theta}(\bar{\th})}}
+    \sqrt{\tilde{\Theta}(\bar{\th})}} .
 \ee
 Again, the first integral diverges when $r\to r_0$. The second one, which is
 a path integral on $\th$, diverges as well because the path integral in the
 right-hand side of Eq.~(\ref{e:gik:div_int_r_crit}) diverges. From
 expression (\ref{e:gik:spher_ell_r0}) for $\ell$ it can be checked
 that $2 m r_0 - a \ell > 0$ in the allowed range of $r_0$ (i.e. in the
-range where spherical orbits exist). Given that $\epsilon_r \, \D \bar{r} > 0$
+range (\ref{e:gik:spher_orb_range}),
+where spherical orbits exist). Given that $\epsilon_r \, \D \bar{r} > 0$
 and $\eps_\th \, \D \bar{\th} > 0$, we conclude that the integral on $r$
 and the path integral on $\th$ both tend to $+\infty$ when $r\to r_0$.
 If $\ell \geq 0$, we get then immediately $\ph \to + \infty$ when $r \to r_0$.
@@ -1931,7 +1940,7 @@ as in Fig.~\ref{f:gik:gik_critical_geod}, $r_0=2.2\, m$ and $a=0.95\, m$.
 The two geodesics depart from the
 same point at $(x,y,z)=(40\, m, 0, 0)$ (outside the scope of the figure)
 as the critical null geodesic shown in Fig.~\ref{f:gik:gik_critical_geod}.
-Both geodesics have $q = q_{\rm c}(r_0)$, but the green one has
+Both geodesics have $q = q_{\rm c}(r_0)$, but the green one
 has $\ell = 1.0001\,\ell_{\rm c}(r_0)$
 while the orange one has $\ell = 0.9999\,\ell_{\rm c}(r_0)$.
 \textsl{[Figure generated by the notebook \ref{s:sam:Kerr_null_geod_plots}]}
@@ -1940,29 +1949,117 @@ while the orange one has $\ell = 0.9999\,\ell_{\rm c}(r_0)$.
 
 
 
-\subsection{Black hole shadow}
+\subsection{Black hole shadow} \label{s:gik:shadow}
 
 In this section, we focus on null geodesics emitted in the black hole
 exterior, i.e. in region $\M_{\rm I}$, having in mind the formation
 of images on the screen of a distant observer.
 As in the Schwarzschild case studied in Chap.~\ref{s:gis}, the family
-of critical null geodesics separates the null geodesics between those
+of critical null geodesics separates the null geodesics emitted far from the
+black hole between those
 that can escape to infinity and those that fall into the black hole.
-More precisely, this family separates null geodesics that have a $r$-turning
-point from those that do not have any, given that a null geodesic has at most
+More precisely, according to the lemma established in Sec.~\ref{s:gik:radial_motion},
+this family separates null geodesics whose quartic polynomial $\mathscr{R}$
+has no root in $\M_{\rm I}$ from those for which $\mathscr{R}$ has a double
+root in $\M_{\rm I}$. It follows that the family of critical null
+geodesics separates null geodesics that have a $r$-turning
+point in $\M_{\rm I}$ from those that do not have any, given that a null geodesic has at most
 one $r$-turning point in $\M_{\rm I}$ (cf. Sec.~\ref{s:gik:radial_motion}).
+This is illustrated by the following example.
 
-This is illustrated in Fig.~\ref{f:gik:close_critical}, which depicts
-two null geodesics initially very close to a critical one. They are emitted
-at the same point as the critical geodesic considered in Example~\ref{x:gik:critical_geod}
+\begin{example}
+Figure~\ref{f:gik:close_critical} depicts
+two null geodesics initially very close to a critical one.
+They are emitted at the same point as the critical geodesic considered in Example~\ref{x:gik:critical_geod}
 and with parameters close to critical: the same reduced Carter constant $q$
 and values of the reduced angular momentum $\ell$ almost equal to the critical
-one, $\ell_{\rm c}(r_0)$ say, up to a relative difference of $10^{-4}$.
-The geodesic with $\ell = 1.0001\,\ell_{\rm c}(r_0)$ (green curve) performs a few
-turns on (actually very close to) the sphere $r=r_0 = 2.2\, m$ and eventually depart to infinity,
-while the geodesic with $\ell = 0.9999\,\ell_{\rm c}(r_0)$ (orange curve), which starts
-to be graphically distinguishable from the first one only after a full turn on the
-sphere $r=r_0 = 2.2\, m$, eventually terminates into the black hole.
+one, $\ell_{\rm c}(r_0)$, up to a relative difference of $10^{-4}$.
+The geodesic $\Li_1$ (green curve) has $\ell = 1.0001\,\ell_{\rm c}(r_0)$; it performs a few
+turns onto (actually very close to) the sphere $\Sp_0$ of coordinate radius $r_0 = 2.2\, m$ and eventually depart to infinity; this means that $\Li_1$ has a $r$-turning point, somewhere close
+to $\Sp_0$.
+The geodesic $\Li_2$ (orange curve) has $\ell = 0.9999\,\ell_{\rm c}(r_0)$; it is
+graphically undistinguishable from $\Li_1$ until a full turn onto $\Sp_0$
+(this is best seen in the interactive 3D view in the online notebook \ref{s:sam:Kerr_null_geod_plots}),
+it then clearly
+departs from it and eventually terminates into the black hole. Hence $\Li_2$ has no $r$-turning
+point.
+\end{example}
+
+Let us consider an asymptotic inertial observer $\Obs$ (cf. Sec.~\ref{s:ker:asymp_inertial_obs}),
+i.e. a static observer located at Boyer-Lindquist coordinates $(t,r_{\Obs},\th_{\Obs},\ph_{\Obs})$,
+where $(r_{\Obs},\th_{\Obs},\ph_{\Obs})$ are constant and $r_{\Obs} \gg m$.
+As in the Schwarzschild case (Sec.~\ref{s:gis:shadow}), the concept of
+black hole shadow is defined by considering an emitting large sphere $\Sp$
+of constant Boyer-Lindquist coordinate $r_{\Sp}$ that
+encompasses both the black hole and observer $\Obs$; this means that
+$r_{\Sp} > r_{\Obs}$. In a more astrophysical setting, one could image $\Sp$
+as being made of many far-away light sources.
+We assume that $\Obs$ is equipped with a screen in the
+direction of the black hole, in the same set up as described in Sec.~\ref{s:gik:remote_screen}
+(cf. Fig.~\ref{f:gik:obs_screen}). Given the relative position of $\Obs$, the black hole
+and the emitting sphere $\Sp$, any photon emitted from $\Sp$ that reaches $\Obs$'s screen
+has necessarily a point of minimal approach to the black hole, i.e. the associated
+null geodesic has necessarily a $r$-turning point between $\Sp$ and $\Obs$.
+Reciprocally, any null geodesic that impacts $\Obs$'s screen and has no
+$r$-turning point in its past cannot have emerged from $\Sp$ and therefore
+results in a black dot on the screen. According to the above discussion, the
+boundary of the black area on $\Obs$'s screen is made by the impact points of
+critical null geodesics. The black area itself is called the
+\defin{black hole shadow}\index{black hole!shadow}\index{shadow!black hole --}.
+It is called so essentially because if the black hole were not present, it would
+not exist and $\Obs$'s screen would be uniformly bright.
+
+In Sec.~\ref{s:gik:remote_screen}, we have shown that the position $(\alpha,\beta)$
+of the impact point on $\Obs$'s screen is related to the reduced angular momentum $\ell$
+and reduced Carter constant $q$ of the incoming geodesic by formulas
+(\ref{e:gik:screen_alpha_beta}). The shadow boundary is then obtained by
+using for $(\ell,q)$ the critical values $(\ell_{\rm c}(r_0),q_{\rm c}(r_0))$
+given by Eqs.~(\ref{e:gik:spher_ell_r0})--(\ref{e:gik:spher_q_r0}):
+\begin{subequations}
+\label{e:gik:shadow_param_eq}
+\begin{align}
+& \alpha = \alpha_{\rm c}(r_0) := - \frac{\ell_{\rm c}(r_0)}{r_{\Obs}\sin\th_{\Obs}}  \\
+& \beta = \beta_{\rm c}(r_0) := \frac{\eps_\th}{r_{\Obs}}
+        \sqrt{ q_{\rm c}(r_0) + \cos^2\th_{\Obs} \left( a^2
+    - \frac{\ell_{\rm c}(r_0)^2}{\sin^2\th_{\Obs}} \right) } .
+\end{align}
+\end{subequations}
+This provides the equation of the shadow boundary in parametric form,
+the parameter being $r_0$ --- the radius of the spherical orbits that have
+the same value of $(\ell, q)$ as the critical null geodesic that impacts
+$\Obs$'s screen at the point $(\alpha,\beta)$.
+The range of $r_0$ for spherical orbits in the black hole exterior
+is $r_{\rm ph}^+ \leq r_0 \leq r_{\rm ph}^-$ [Eq.~(\ref{e:gik:spher_orb_range})],
+with $r_+$ and $r_-$ given by Eq.~(\ref{e:gik:rph_pm}). The corresponding
+range of $\ell=\ell_{\rm c}(r_0)$ is then
+$\ell_{\rm c}(r_{\rm ph}^-) \leq \ell \leq  \ell_{\rm c}(r_{\rm ph}^+)$
+(cf. the red curve in Fig.~\ref{f:gik:spher_orb_exist}) and the
+corresponding range of $q = q_{\rm c}(r_0)$ is
+$0 \leq q \leq 27\, m^2$ [cf. Eq.~(\ref{e:gik:spher_max_q})].
+But not all these values of $(\ell,q)$ can be those of a null geodesic
+that reaches observer $\Obs$: the constraints $\mathcal{R}(r_{\Obs}) \geq 0$
+[Eq.~(\ref{e:mcR_non_neg})]
+and $\tilde\Theta(\th_{\Obs}) \geq 0$ [Eq.~(\ref{e:gek:Theta_non_neg})]
+have to be fulfilled. The first one is always satisfied due to the
+assumption that $\Obs$ is an asymptotic observer, since
+$\mathcal{R}(r) \sim r^4$ for $r\to +\infty$ [cf. Eq.~(\ref{e:gik:mcR_powers})].
+In view of expression~(\ref{e:gik:tTheta}) for $\tilde\Theta$ the second
+constraint is equivalent to
+\be \label{e:gik:constraint_theta_obs}
+    \left( q_{\rm c}(r_0) + a^2 \cos^2\th_{\Obs} \right) \sin^2\th_{\Obs}
+         - \ell_{\rm c}(r_0)^2 \cos^2\th_{\Obs} \geq 0 .
+\ee
+Except for $\th_{\Obs} = \pi/2$ (observer in the equatorial plane), this constraint
+limits the range of $\ell_{\rm c}(r_0)$ around $\ell_{\rm c}(r_0)=0$, this last value being always allowed.
+Actually if $\th_{\Obs} = 0$ (observer along the rotation axis), $\ell_{\rm c}(r_0)=0$
+is the only value compatible with (\ref{e:gik:constraint_theta_obs}).
+Then $r_0$ can then take a unique value: $r_0 = r_{\rm ph}^{\rm pol}$, which is
+given by Eq.~(\ref{e:gik:rph_pol}).
+
+
+
+
+
 
 
 
