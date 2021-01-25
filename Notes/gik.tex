@@ -453,6 +453,27 @@ on the screen of an asymptotic inertial observer (cf. Sec.~\ref{s:ker:asymp_iner
 in case the null geodesic $\Li$ reaches the asymptotic region $r\to +\infty$.
 Indeed, let us consider an asymptotic inertial observer $\Obs$ located at (fixed) Boyer-Lindquist
 coordinates $(r_{\Obs}, \th_{\Obs}, \ph_{\Obs})$, with $r_{\Obs} \gg m$ (cf. Fig.~\ref{f:gik:obs_screen}).
+In order to reach $\Obs$, the geodesic $\Li$ must be such that the constraints
+constraints $\mathcal{R}(r_{\Obs}) \geq 0$
+[Eq.~(\ref{e:mcR_non_neg})]
+and $\tilde\Theta(\th_{\Obs}) \geq 0$ [Eq.~(\ref{e:gek:Theta_non_neg})]
+are fulfilled.
+The first one is always satisfied due to the
+assumption that $\Obs$ is an asymptotic observer, since
+$\mathcal{R}(r) \sim r^4$ for $r\to +\infty$ [cf. Eq.~(\ref{e:gik:mcR_powers})].
+In view of expression~(\ref{e:gik:tTheta}) for $\tilde\Theta$, the second
+constraint is equivalent to
+\be \label{e:gik:constraint_theta_obs}
+    \left( q + a^2 \cos^2\th_{\Obs} \right) \sin^2\th_{\Obs}
+         - \ell^2 \cos^2\th_{\Obs} \geq 0 .
+\ee
+If $\sin\th_{\Obs}$ is small,
+this constraint limits significantly the amplitude of $\ell$.
+
+\subsubsection{Observer not located on the rotation axis}
+
+Here we treat the generic case of an observer $\Obs$ that is not located on the rotation axis,
+i.e. we assume $\th_{\Obs}\not\in\{0,\pi\}$.
 The orthonormal frame of $\Obs$ is $\w{e}_{(0)} =\w{\xi}$, $\w{e}_{(r)} = \wpar_r$,
 $\w{e}_{(\th)} = r_{\Obs}^{-1} \wpar_\th$ and $\w{e}_{(\ph)} = (r_{\Obs}\sin\th_{\Obs})^{-1} \wpar_\ph$
 [Eq.~(\ref{e:ker:def_ZAMO_frame}) with $r = r_{\Obs}\to +\infty$].
@@ -482,8 +503,8 @@ vector that is tangent to the screen, namely
     -  \frac{p^\ph}{E} r_{\Obs} \sin\th_{\Obs} \, \w{e}_{(\ph)}
 \ee
 since the screen plane is spanned by $\w{e}_{(\th)}$ and $\w{e}_{(\ph)}$
-(cf. Fig.~\ref{f:gik:obs_screen}). Let us assume that the screen dimensionless
-Cartesian coordinates $(\alpha,\beta)$ are chosen so that the black hole rotation axis
+(cf. Fig.~\ref{f:gik:obs_screen}). Let us choose the screen dimensionless
+Cartesian coordinates $(\alpha,\beta)$ so that the black hole rotation axis
 appears as the $\beta$-axis (cf. Fig.~\ref{f:gik:obs_screen}), then
 \be \label{e:gik:m_screen_ab}
     \w{m} = \alpha \w{e}_{(\alpha)} + \beta \w{e}_{(\beta)}, \quad\mbox{with}\quad
@@ -509,7 +530,7 @@ where we have used Eqs.~(\ref{e:gik:dthdl_Mino}) and (\ref{e:gik:dphdl_Mino}), w
 term involving $a/\Delta$ neglected since $\Delta \sim r^2$ for $r\to +\infty$.
 By inserting these formula into the above expressions of $\alpha$ and $\beta$,
 and using Eq.~(\ref{e:gik:tTheta}) for $\tilde\Theta(\th_{\Obs})$,
-we get the sought relation between the constant of motion $(\ell, q)$ and
+we get the sought relation between the constants of motion $(\ell, q)$ and
 the screen coordinates:
 \begin{subequations}
 \label{e:gik:screen_alpha_beta}
@@ -520,14 +541,13 @@ the screen coordinates:
 \end{align}
 \end{subequations}
 
-\begin{remark}
 We have defined $(\alpha,\beta)$ as dimensionless Cartesian coordinates on
-the screen, cf. Eq.~(\ref{e:gik:m_screen_ab}), where $(\w{e}_{(\alpha)}, \w{e}_{(\beta)})$
-is the screen's orthonormal basis. But in practice, their values are tiny,
-being exactly zero at the limit $r_{\Obs}\to +\infty$. They can thus be identified
-with \emph{angle} coordinates, measuring the departure from the direction
+the screen, cf. Eq.~(\ref{e:gik:m_screen_ab}), where $\w{m}$ is
+dimensionless and $(\w{e}_{(\alpha)}, \w{e}_{(\beta)})$
+is the screen's orthonormal basis. In practice, their values are tiny,
+being exactly zero at the limit $r_{\Obs}\to +\infty$. $(\alpha,\beta)$ can thus be interpreted as
+\emph{angle} coordinates, measuring the departure from the direction
 of the black hole on the celestial sphere of observer $\Obs$.
-\end{remark}
 
 \begin{remark}
 When studying null geodesics in Schwarzschild spacetime in Chap.~\ref{s:gis}, we
@@ -545,6 +565,55 @@ and $q=0$. Equations~(\ref{e:gik:screen_alpha_beta}) yield then
 \ee
 where $\hat{b}$ is the angle introduced by formula (\ref{e:gis:hat_b}).
 \end{remark}
+
+We deduce from Eqs.~(\ref{e:gik:screen_alpha_beta}) a
+simple relation between the squared distance to the screen center, $\alpha^2 + \beta^2$,
+and the constants of motion $(\ell, q)$ of the incoming geodesic:
+\be \label{e:gik:alpha2_beta2}
+    \alpha^2 + \beta^2 = \frac{1}{r_{\Obs}^2} \left(
+    \ell^2 + q + a^2 \cos^2\th_{\Obs} \right) .
+\ee
+%The asymptotic formula (\ref{e:gek:Q_Ltot2_L2}) relates $\ell^2 + q = E^{-2} (L^2 + Q)$
+%to the square of the total angular momentum $\w{L}_{\rm tot}$ of the incoming
+%photon as measured by observer $\Obs$. Using it, we can turn (\ref{e:gik:alpha2_beta2})
+%into
+%\be
+    %r_{\Obs}^2 (\alpha^2 + \beta^2) = \frac{\w{L}_{\rm tot}\cdot\w{L}_{\rm tot}}{E^2}
+        %+ 2 a \frac{L}{E} - a^2 \sin^2\th_{\Obs} .
+%\ee
+
+\subsubsection{Observer on the rotation axis}
+
+If the asymptotic inertial observer $\Obs$ is located on the rotation axis,
+i.e. if $\th_{\Obs}=0$ or $\th_{\Obs} = \pi$,
+the only value of $\ell$ compatible with
+the constraint (\ref{e:gik:constraint_theta_obs}) is
+\be \label{e:gik:obs_axis_ell_zero}
+     \ell = 0 \qquad (\th_{\Obs} = 0\ \mbox{or}\  \th_{\Obs} = \pi).
+\ee
+We recover one of the properties listed in Sec.~\ref{s:gek:th_motion}:
+a geodesic cannot encounter the rotation axis unless it has $L = 0$.
+
+Moreover, on the rotation axis,
+the vectors $\w{e}_{(\th)}$
+and $\w{e}_{(\ph)}$ are not defined, due to the singularity of spherical
+coordinates there. Consequently, the screen coordinates $(\alpha,\beta)$
+cannot be defined by (\ref{e:gik:m_screen_ab}). In particular, the rotation axis appears as
+single point on the screen, which forbids to use it to define the $\beta$-axis.
+One has then to pick an arbitrary orthonormal frame
+$(\w{e}_{(\alpha)}, \w{e}_{(\beta)})$ in the screen plane to define
+$(\alpha,\beta)$. Formulas (\ref{e:gik:shadow_param_eq}) do no longer
+hold, but formula (\ref{e:gik:alpha2_beta2}) is still valid,
+since the distance from the screen's center is a quantity independent from
+the orientation of the frame $(\w{e}_{(\alpha)}, \w{e}_{(\beta)})$. Another
+way to see that (\ref{e:gik:alpha2_beta2}) is still valid is to notice that
+it admits a well-defined limit for $\th_{\Obs}\to 0$ or $\pi$. Taking into
+account $\ell=0$, we obtain
+\be \label{e:gik:alpha2_beta2_axis}
+    \alpha^2 + \beta^2 = \frac{1}{r_{\Obs}^2} \left( q + a^2\right)
+    \qquad (\th_{\Obs} = 0\ \mbox{or}\  \th_{\Obs} = \pi).
+\ee
+
 
 \subsection{Latitudinal motion} \label{s:gik:th_motion}
 
@@ -1029,7 +1098,7 @@ general result (\ref{e:gek:r_decay_MII}).
 \centerline{\includegraphics[width=0.49\textwidth]{gik_spher_orb_exist.pdf}\
 \includegraphics[width=0.49\textwidth]{gik_spher_orb_exist_zoom.pdf}}
 \caption[]{\label{f:gik:spher_orb_exist} \footnotesize
-Functions $\ell(r_0)$ (in red) and $q(r_0)$ (in blue) giving the reduced angular momentum
+Functions $\ell_{\rm c}(r_0)$ (in red) and $q_{\rm c}(r_0)$ (in blue) giving the reduced angular momentum
 and reduced Carter constant of a spherical photon orbit of radius $r_0$,
 according to Eqs.~(\ref{e:gik:spher_ell_r0}) and (\ref{e:gik:spher_q_r0})
 and for $a=0.95\, m$. The right figure is a zoom on the part
@@ -2009,7 +2078,11 @@ critical null geodesics. The black area itself is called the
 It is called so essentially because if the black hole were not present, it would
 not exist and $\Obs$'s screen would be uniformly bright.
 
-In Sec.~\ref{s:gik:remote_screen}, we have shown that the position $(\alpha,\beta)$
+\subsubsection{Generic (off-axis) observer}
+
+In Sec.~\ref{s:gik:remote_screen}, we have seen
+that, if observer $\Obs$ does not lie on the rotation axis, i.e. if $\th\not\in\{0, \pi\}$,
+the position $(\alpha,\beta)$
 of the impact point on $\Obs$'s screen is related to the reduced angular momentum $\ell$
 and reduced Carter constant $q$ of the incoming geodesic by formulas
 (\ref{e:gik:screen_alpha_beta}). The shadow boundary is then obtained by
@@ -2036,29 +2109,58 @@ $\ell_{\rm c}(r_{\rm ph}^-) \leq \ell \leq  \ell_{\rm c}(r_{\rm ph}^+)$
 (cf. the red curve in Fig.~\ref{f:gik:spher_orb_exist}) and the
 corresponding range of $q = q_{\rm c}(r_0)$ is
 $0 \leq q \leq 27\, m^2$ [cf. Eq.~(\ref{e:gik:spher_max_q})].
-But not all these values of $(\ell,q)$ can be those of a null geodesic
-that reaches observer $\Obs$: the constraints $\mathcal{R}(r_{\Obs}) \geq 0$
-[Eq.~(\ref{e:mcR_non_neg})]
-and $\tilde\Theta(\th_{\Obs}) \geq 0$ [Eq.~(\ref{e:gek:Theta_non_neg})]
-have to be fulfilled. The first one is always satisfied due to the
-assumption that $\Obs$ is an asymptotic observer, since
-$\mathcal{R}(r) \sim r^4$ for $r\to +\infty$ [cf. Eq.~(\ref{e:gik:mcR_powers})].
-In view of expression~(\ref{e:gik:tTheta}) for $\tilde\Theta$ the second
-constraint is equivalent to
-\be \label{e:gik:constraint_theta_obs}
-    \left( q_{\rm c}(r_0) + a^2 \cos^2\th_{\Obs} \right) \sin^2\th_{\Obs}
+However, not all these values of $(\ell, q)$ are allowed, since in
+order for the geodesic $\Li$ to reach $\Obs$, they have to obey the
+constraint (\ref{e:gik:constraint_theta_obs}):
+\be \label{e:gik:constraint_theta_obs_r0}
+  \left( q_{\rm c}(r_0) + a^2 \cos^2\th_{\Obs} \right) \sin^2\th_{\Obs}
          - \ell_{\rm c}(r_0)^2 \cos^2\th_{\Obs} \geq 0 .
 \ee
 Except for $\th_{\Obs} = \pi/2$ (observer in the equatorial plane), this constraint
-limits the range of $\ell_{\rm c}(r_0)$ around $\ell_{\rm c}(r_0)=0$, this last value being always allowed.
-Actually if $\th_{\Obs} = 0$ (observer along the rotation axis), $\ell_{\rm c}(r_0)=0$
-is the only value compatible with (\ref{e:gik:constraint_theta_obs}).
-Then $r_0$ can then take a unique value: $r_0 = r_{\rm ph}^{\rm pol}$, which is
-given by Eq.~(\ref{e:gik:rph_pol}).
+limits the range of $r_0$ to a subinterval $[r_0^{\rm min}, r_0^{\rm max}]$
+of $[r_{\rm ph}^+, r_{\rm ph}^-]$. Note that the radius
+$r_{\rm ph}^{\rm pol}$ of polar spherical photon orbits, as given by
+Eq.~(\ref{e:gik:rph_pol}), lies necessarily in that subinterval;
+indeed by definition $\ell_{\rm c}(r_{\rm ph}^{\rm pol}) = 0$, which ensures that
+the constraint (\ref{e:gik:constraint_theta_obs_r0}) is fulfilled for
+$r_0 = r_{\rm ph}^{\rm pol}$, whatever the value of $\th_\Obs$.
 
 
+\subsubsection{Observer on the rotation axis}
 
-
+As stressed in Sec.~\ref{s:gik:remote_screen}, if $\th_{\Obs}\in\{0,\pi\}$,
+the screen coordinates $(\alpha,\beta)$ can no longer be defined from the frame
+$(\w{e}_{(\th)}, \w{e}_{(\ph)})$. In this case, we pick an arbitrary orthonormal
+frame $(\w{e}_{(\th)}, \w{e}_{(\ph)})$ in the screen frame to define
+$(\alpha,\beta)$.
+Due to the axisymmetry of spacetime, the black hole
+shadow is symmetric by any rotation around the screen's center. It
+is therefore necessarily a disk. The shadow boundary is then a circle.
+Its
+A critical null geodesic on the circle that delimitates this disk
+has necessarily $\ell=0$ [Eq.~(\ref{e:gik:obs_axis_ell_zero})]. It follows
+that the parameter $r_0$ can take only a single value:
+$r_0 = r_{\rm ph}^{\rm pol}$, which is
+given by Eq.~(\ref{e:gik:rph_pol}). The radius of the disk is
+then given by Eq.~(\ref{e:gik:alpha2_beta2_axis}), with $q=q_{\rm c}(r_{\rm ph}^{\rm pol})$:
+\[
+    \alpha^2 + \beta^2 = \frac{1}{r_{\Obs}^2} \left( q_{\rm c}(r_{\rm ph}^{\rm pol}) + a^2\right) .
+\]
+Given expression (\ref{e:gik:spher_q_r0}) of the function $q_{\rm c}$
+and the fact that $r_{\rm ph}^{\rm pol}$ obeys
+$(r_{\rm ph}^{\rm pol})^4 (r_{\rm ph}^{\rm pol} - 3m)^2 = a^4 (r_{\rm ph}^{\rm pol} + m)^2$,
+as a solution of $\ell_{\rm c}(r_0) = 0$, we get
+\be \label{e:gik:R_shadow_axis}
+   \encadre{ R_{\rm shadow} = \sqrt{\alpha^2 + \beta^2} = \frac{2\sqrt{m r_{\rm ph}^{\rm pol}}}{r_{\Obs}}
+    \frac{\sqrt{(r_{\rm ph}^{\rm pol})^2 - a^2}}{r_{\rm ph}^{\rm pol} -  m} }
+    \qquad (\th_{\Obs} = 0\ \mbox{or}\  \th_{\Obs} = \pi)
+\ee
+where $r_{\rm ph}^{\rm pol}$ is the function (\ref{e:gik:rph_pol}) of $(m, a)$.
+\begin{remark}
+At the limit $a\to 0$, we have $r_{\rm ph}^{\rm pol} \to 3 m$, and formula~(\ref{e:gik:R_shadow_axis})
+yields $R_{\rm shadow} = 3\sqrt{3}\, m$, in agreement with the result
+for Schwarzschild black hole obtained in Sec.~\ref{s:gis:shadow}.
+\end{remark}
 
 
 
