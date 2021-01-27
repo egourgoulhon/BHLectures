@@ -346,13 +346,33 @@ who studied zero-energy timelike geodesics as well.
 
 \subsection{Equations of geodesic motion for $E\neq 0$} \label{s:gik:eom_Enonzero}
 
-When $E\neq 0$, we introduce the reduced constants of motion
-\be
+For any null geodesic $\Li$ with $E\neq 0$, we introduce the reduced constants of motion
+\be \label{e:gik:def_ell_q}
     \encadre{\ell := \frac{L}{E}} \qand
     \encadre{q := \frac{Q}{E^2}} .
 \ee
 Note that, in geometrized units ($G=1$ and $c=1$), $\ell$ has the dimension of
 a length and $q$ that of a squared length.
+
+\begin{remark}
+In the literature, $\ell$ is sometimes denoted by $\lambda$ (e.g. Refs.~\cite{Barde73,GrallL20b,DokucN20a})
+or by $\xi$ (e.g. Ref.~\cite{Chand83}), while $q$ is sometimes denoted by
+$\eta$ (e.g. Refs.~\cite{Barde73,Chand83,GrallL20b}). Moreover, in studies restricted
+to $q\geq 0$, it may happen that the notation $q$ stands for the square root of the quantity $q$ defined by
+(\ref{e:gik:def_ell_q}) (e.g. Refs.~\cite{DexteA09,GrallLS18,DokucN20a}).
+\end{remark}
+
+\begin{remark} \label{r:gik:ell_q_intrinsic}
+Contrary to $L$ and $Q$,
+the quantities $\ell$ and $q$ are independent from the affine parametrization of the geodesic $\Li$.
+Indeed, if instead of the affine parameter $\lambda$ associated with the particle's 4-momentum $\w{p}$,
+one considers the affine parameter $\lambda' = \alpha \lambda$, where $\alpha$ is a positive constant,
+the tangent vector field becomes
+$\w{p}' = \alpha^{-1} \w{p}$, so that the associated conserved
+quantities are $E' = - \w{\xi}\cdot\w{p}' = \alpha^{-1} E$ [cf. Eq.~(\ref{e:gek:def_E})], $L' = \w{\eta}\cdot\w{p}' = \alpha^{-1} L$ [cf. Eq.~(\ref{e:gek:def_L})]
+and $Q' = \w{\tilde K}(\w{p}',\w{p}') = \alpha^{-2} Q$ [cf. Eq. (\ref{e:gek:Q_tK_pp})],
+so that $\ell' := L'/E' = \ell$ and $q' := Q'/{E'}^2 = q$.
+\end{remark}
 
 The nonnegative property of Carter constant $\mathscr{K}$ [Eq.~(\ref{e:ges:K_non_negative})],
 along with the identity (\ref{e:gek:def_Q}) leads to the following constraint on
@@ -546,7 +566,7 @@ the screen, cf. Eq.~(\ref{e:gik:m_screen_ab}), where $\w{m}$ is
 dimensionless and $(\w{e}_{(\alpha)}, \w{e}_{(\beta)})$
 is the screen's orthonormal basis. In practice, their values are tiny,
 being exactly zero at the limit $r_{\Obs}\to +\infty$. $(\alpha,\beta)$ can thus be interpreted as
-\emph{angle} coordinates, measuring the departure from the direction
+\emph{angular} coordinates, measuring the departure from the direction
 of the black hole on the celestial sphere of observer $\Obs$.
 
 \begin{remark}
@@ -564,6 +584,14 @@ and $q=0$. Equations~(\ref{e:gik:screen_alpha_beta}) yield then
     |\alpha| = \frac{b}{r_{\Obs}} = \hat{b} \qand \beta = 0 ,
 \ee
 where $\hat{b}$ is the angle introduced by formula (\ref{e:gis:hat_b}).
+\end{remark}
+
+\begin{remark}
+The impact parameters $(\alpha, \beta)$ depend on the geodesic $\Li$ as a curve
+in spacetime and not on any affine parametrization of $\Li$. Their direct
+connection with $(\ell, q)$ expressed by (\ref{e:gik:screen_alpha_beta}) is thus in
+perfect agreement with the invariance of $(\ell, q)$ in any affine reparametrization
+of $\Li$, as noticed in Remark~\ref{r:gik:ell_q_intrinsic} p.~\pageref{r:gik:ell_q_intrinsic}.
 \end{remark}
 
 We deduce from Eqs.~(\ref{e:gik:screen_alpha_beta}) a
@@ -1786,7 +1814,7 @@ The thin dotted grey half-circle marks $r=r_{\rm ph}^{**}$.
 \end{figure}
 
 
-\subsection{Photon region}
+\subsection{Photon region} \label{s:gik:photon_region}
 
 A corollary of the results obtained in Sec.~\ref{s:gik:radial_motion}
 is that outside the black hole, i.e. in region $\M_{\rm I}$, a photon
@@ -2073,7 +2101,7 @@ Reciprocally, any null geodesic that impacts $\Obs$'s screen and has no
 $r$-turning point in its past cannot have emerged from $\Sp$ and therefore
 results in a black dot on the screen. According to the above discussion, the
 boundary of the black area on $\Obs$'s screen is made by the impact points of
-critical null geodesics. The black area itself is called the
+critical null geodesics and is often called the \defin{critical curve}\index{critical!curve}. The black area itself is called the
 \defin{black hole shadow}\index{black hole!shadow}\index{shadow!black hole --}.
 It is called so essentially because if the black hole were not present, it would
 not exist and $\Obs$'s screen would be uniformly bright.
@@ -2101,6 +2129,8 @@ This provides the equation of the shadow's boundary in parametric form,
 the parameter being $r_0$ --- the radius of the spherical orbits that have
 the same value of $(\ell, q)$ as the critical null geodesic that impacts
 $\Obs$'s screen at the point $(\alpha,\beta)$.
+Let us recall that $(\alpha,\beta)$ are (dimensionless) angular coordinates
+(cf. Sec.~\ref{s:gik:remote_screen}).
 The range of $r_0$ for spherical orbits in the black hole exterior
 is $r_{\rm ph}^+ \leq r_0 \leq r_{\rm ph}^-$ [Eq.~(\ref{e:gik:spher_orb_range})],
 with $r_+$ and $r_-$ given by Eq.~(\ref{e:gik:rph_pm}). The corresponding
@@ -2132,11 +2162,11 @@ $r_0 = r_{\rm ph}^{\rm pol}$, whatever the value of $\th_\Obs$.
 \includegraphics[height=0.28\textheight]{gik_shadow_a95_th00.pdf}
 \end{center}
 \caption[]{\label{f:gik:shadow_a95} \footnotesize
-Shadow of a Kerr black hole with the spin parameter $a=0.95\, m$ on the screen of an asymptotic
-inertial observer located in the equatorial plane ($\th_{\Obs} = \pi/2$, upper
-panel), at the inclination $\th_{\Obs} = \pi/6$ (lower left) and on the rotation
-axis ($\th_{\Obs} = 0$ (lower right).
-The color code indicates the range of the parameter $r_0$
+Shadow of a Kerr black hole of mass $m$ and spin parameter $a=0.95\, m$ on the screen of an asymptotic
+inertial observer $\Obs$ located at $r=r_{\Obs}$ and $\th=\th_{\Obs}$, for three
+values of $\th_{\Obs}$: $\th_{\Obs} = \pi/2$ ($\Obs$ in the equatorial plane; upper panel),
+$\th_{\Obs} = \pi/6$ (lower left) and $\th_{\Obs} = 0$ ($\Obs$ on the rotation axis; lower right).
+The color code corresponds to some selected ranges for the parameter $r_0$
 of the critical null geodesics forming the shadow's boundary.
 \textsl{[Figure generated by the notebook \ref{s:sam:Kerr_shadow}]}
 }
@@ -2149,10 +2179,30 @@ the boundary in computed by means of Eqs.~(\ref{e:gik:shadow_param_eq})
 with $\eps_\th=+1$ and $r_0$ ranging in $[r_0^{\rm min}, r_0^{\rm max}]$.
 The lower half is obtained similarly, but with $\eps_\th = -1$ in Eq.~(\ref{e:gik:shadow_param_eq_beta}),
 so that it is the symmetric of the upper half with respect to the $\alpha$-axis.
-Some results are shown in Fig.~\ref{f:gik:shadow_a95}, where the colors indicate
-various ranges of $r_0$. As observed above, only for $\th_{\Obs} = \pi/2$
-does $r_0$ span the full interval $[r_{\rm ph}^+, r_{\rm ph}^-]$.
 
+\begin{example}
+Figure~\ref{f:gik:shadow_a95} shows the shadow of a Kerr black hole with
+$a=0.95\, m$ for various inclination angle of the observer.
+For $\th_{\Obs}=\pi/2$ the parameter $r_0$ of the critical null geodesics
+delineating the shadow's boundary spans the full interval
+$[r_{\rm ph}^+, r_{\rm ph}^-] \simeq [1.386\, m,\; 3.955\, m]$.
+For $\th_{\Obs}=\pi/6$, the range is restricted to
+$[r_0^{\rm min}, r_0^{\rm max}] \simeq [1.768\, m,\;   3.237\, m]$,
+while for $\th_{\Obs}=0$, $r_0$  can take only one value:
+$r_0 = r_{\rm ph}^{\rm pol} \simeq 2.493\, m$.
+\end{example}
+
+\begin{figure}
+\centerline{
+\includegraphics[height=0.28\textheight]{gik_shadow_radius_axis.pdf} }
+\caption[]{\label{f:gik:shadow_radius_axis} \footnotesize
+Angular radius $R_{\rm shad}$ of the shadow of a Kerr black
+hole as seen by an asymptotic inertial observer located at $r=r_{\Obs}$ on the
+black hole's rotation axis, as a function of the Kerr spin parameter $a$
+[Eq.~(\ref{e:gik:R_shadow_axis})].
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_shadow}]}
+}
+\end{figure}
 
 
 \subsubsection{Observer on the rotation axis}
@@ -2180,16 +2230,43 @@ and the fact that $r_{\rm ph}^{\rm pol}$ obeys
 $(r_{\rm ph}^{\rm pol})^4 (r_{\rm ph}^{\rm pol} - 3m)^2 = a^4 (r_{\rm ph}^{\rm pol} + m)^2$,
 as a solution of $\ell_{\rm c}(r_0) = 0$, we get
 \be \label{e:gik:R_shadow_axis}
-   \encadre{ R_{\rm shadow} = \sqrt{\alpha^2 + \beta^2} = \frac{2\sqrt{m r_{\rm ph}^{\rm pol}}}{r_{\Obs}}
+   \encadre{ R_{\rm shad} := \sqrt{\alpha^2 + \beta^2} = \frac{2\sqrt{m r_{\rm ph}^{\rm pol}}}{r_{\Obs}}
     \frac{\sqrt{(r_{\rm ph}^{\rm pol})^2 - a^2}}{r_{\rm ph}^{\rm pol} -  m} }
     \qquad (\th_{\Obs} = 0\ \mbox{or}\  \th_{\Obs} = \pi)
 \ee
 where $r_{\rm ph}^{\rm pol}$ is the function (\ref{e:gik:rph_pol}) of $(m, a)$.
+$R_{\rm shad}$ is a decreasing function of $a$, which is depicted in Fig.~\ref{f:gik:shadow_radius_axis}.
+Note that its variation range is pretty limited, since the limits
+$\lim_{a\to 0} r_{\rm ph}^{\rm pol} = 3 m$ and $\lim_{a\to m} r_{\rm ph}^{\rm pol} = (\sqrt{2} + 1) m$
+(cf. Sec.~\ref{s:gik:photon_region})
+yield respectively
+\be
+    \lim_{a\to 0} R_{\rm shad} = 3\sqrt{3} \frac{m}{r_{\Obs}} \simeq 5.196 \, \frac{m}{r_{\Obs}}
+    \quad\mbox{and}\quad
+    \lim_{a\to m} R_{\rm shad} =  2(\sqrt{2} + 1) \frac{m}{r_{\Obs}}
+    \simeq 4.828 \, \frac{m}{r_{\Obs}}  .
+\ee
+The value for $a= m$ is only $7\%$ lower than the value for $a= 0$.
+
 \begin{remark}
-At the limit $a\to 0$, we have $r_{\rm ph}^{\rm pol} \to 3 m$, and formula~(\ref{e:gik:R_shadow_axis})
-yields $R_{\rm shadow} = 3\sqrt{3}\, m$, in agreement with the result
-for Schwarzschild black hole obtained in Sec.~\ref{s:gis:shadow}.
+The limit $a\to 0$ is in agreement with the result for the shadow of a
+Schwarzschild black hole obtained in Sec.~\ref{s:gis:shadow}.
 \end{remark}
+
+\begin{example}
+An example of shadow seen from the rotation axis is provided in the lower right panel of
+Fig.~\ref{f:gik:shadow_a95}. The Kerr spin parameter is $a=0.95\, m$, which
+yields $r_{\rm ph}^{\rm pol} \simeq 2.493\, m$ according to formula~(\ref{e:gik:rph_pol}),
+so that Eq.~(\ref{e:gik:R_shadow_axis}) results in
+$R_{\rm shad} \simeq 4.875\, m / r_{\Obs}$.
+We note that the shadow's boundary is depicted in the same color (green)
+as the part of the boundary in the other panels that crosses the $\beta$-axis,
+which is expected since the critical null geodesics that reach the screen along
+that axis have $\ell=0$ and thus the same parameter $r_0 = r_{\rm ph}^{\rm pol}$
+as all the critical null geodesics forming the shadow's boundary for $\th_{\Obs} = 0$
+or $\pi$.
+\end{example}
+
 
 
 
