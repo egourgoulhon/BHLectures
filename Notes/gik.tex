@@ -699,7 +699,7 @@ $\Li$ oscillates about the rotation axis, with a $\th$-turning point at
 $\th=\th_{\rm v}$ or $\th = \pi - \th_{\rm v}$, where $\th_{\rm v}$
 is given by Eq.~(\ref{e:gek:th0_L_zero}), or equivalently by the $\ell\to 0$
 limit of Eq.~(\ref{e:gik:th1_general}):
-\be
+\be \label{e:gik:thv_ell_zero}
     \th_{\rm v} = \arccos \left( \frac{\sqrt{-q}}{a} \right) \qquad (\ell=0) .
 \ee
 \item If $q = q_{\rm min}$, $\Li$ lies stably at a constant value
@@ -994,17 +994,43 @@ in general.
 \subsection{Existence of spherical null geodesics} \label{s:gik:spher_existence}
 
 We shall say that a null geodesic $\Li$ is \defin{spherical} or
-is a \defin{spherical photon orbit}\index{photon!orbit!spherical --}\index{orbit!photon --}\index{spherical!photon orbit} iff it lies at a constant value of the coordinate $r$, $r_0$ say.
+is a \defin{spherical photon orbit}\index{photon!orbit!spherical --}\index{orbit!photon --}\index{spherical!photon orbit} iff $\Li$ lies at a constant value of the coordinate $r$, $r_0$ say.
 We have already encountered such geodesics, namely the null generators of the two Killing horizons
 $\Hor$ and $\Hor_{\rm in}$ (cf. Secs.~\ref{s:gek:null_gen_hor} and \ref{s:ker:Cauchy_hor}).
 Indeed, they lie at a constant value of $r$: $r_0 = r_+$ for
 $\Hor$ and $r_0 = r_-$ for $\Hor_{\rm in}$.  These spherical orbits have $E=0$
 [cf. Eq.~(\ref{e:gek:all_const_zero})].
-From the results of Sec.~\ref{s:gik:zero_energy}, there are no other orbits with $E=0$ at constant $r$.
+From the results of Sec.~\ref{s:gik:zero_energy}, there is no other null geodesic with $E=0$ at constant $r$.
 Hence we conclude
 \begin{greybox}
 In Kerr spacetime, the only spherical photon orbits with $E=0$ are the null generators of the two Killing horizons $\Hor$ and $\Hor_{\rm in}$.
 \end{greybox}
+
+\begin{remark}
+A spherical photon orbit of Kerr spacetime is an example of what has been called
+a \defin{fundamental photon orbit}\index{fundamental!photon orbit}\index{photon!orbit!fundamental --} in a generic stationary and axisymmetric
+spacetime \cite{CunhaH18,CunhaHR17}, namely a null geodesic $\Li$ of affine
+parameter $\lambda$ such
+that (i) $\Li$ is restricted a spatially compact region and (ii) there exists
+$\Lambda\in\R^+$ such that
+\[
+    \forall \lambda\in\R, \quad \exists \Phi\in \R\times\mathrm{SO(2)},
+    \quad p(\lambda + \Lambda) = \Phi(p(\lambda)) ,
+\]
+where $p(\lambda)$ stands for the point of affine parameter $\lambda$ along $\Li$
+and $\R\times\mathrm{SO(2)}$ is the symmetry group implementing
+stationarity and axisymmetry. Basically (i) says that $\Li$ is a bound orbit
+and (ii) that $\Li$ is periodic, of period $\Lambda$ in terms of $\lambda$,
+up to some isometry. Note that the definition of a fundamental photon orbit
+is coordinate-independent. Introducing coordinates $(t,x^1,x^2,\ph)$ adapted
+to the spacetime symmetries, the requirement (ii) is equivalent to
+demanding that $x^1$ and $x^2$ are periodic functions of $\lambda$. In the
+present case $x^1 = r$ and $x^2 = \th$. For a spherical photon orbit, $r$
+is obviously a periodic function of $\lambda$, being a constant function, while
+we shall see in Sec.~\ref{s:gik:spher_latitudinal} that $\th$ is indeed
+a periodic function of $\lambda$.
+\end{remark}
+
 In the remainder of this section, we focus on spherical photon orbits with $E\neq 0$.
 We shall then describe these geodesics by the reduced constants of motion $\ell := L/E$
 and $q := Q/E^2$ introduced in Sec.~\ref{s:gik:eom_Enonzero}.
@@ -1309,23 +1335,166 @@ have $E<0$.
 \subsection{Latitudinal motion} \label{s:gik:spher_latitudinal}
 
 The latitudinal motion of spherical photon orbits is
-deduced from the results of Sec.~\ref{s:gik:th_motion}:
+deduced from the general results of Sec.~\ref{s:gik:th_motion},
+where geodesics with $\ell=0$ appear as a special case. We thus treat this
+case first.
+
+\subsubsection{Polar spherical photon orbits}
+
+We see on Fig.~\ref{f:gik:spher_orb_exist} that the reduced conserved
+angular momentum $\ell$ (red curve) vanishes at two
+places in the physically allowed range of $r_0$,
+i.e. where the blue curve lies above the grey region:
+$r_0=r_{\rm ph}^{\rm pol,in}$ and $r_0=r_{\rm ph}^{\rm pol}$
+with $r_{\rm ph}^{**} < r_{\rm ph}^{\rm pol,in} < 0$ and
+$r_{\rm ph}^+ < r_{\rm ph}^{\rm pol} < r_{\rm ph}^-$.
+The value $r_{\rm ph}^{\rm pol,in}$ (resp. $r_{\rm ph}^{\rm pol}$)
+corresponds thus to inner (resp. outer) spherical orbits.
+The results of Sec.~\ref{s:gik:th_motion} show that these orbits
+are the only ones that encounter the rotation axis; moreover, they
+cross it repeatedly.
+We therefore call them
+\defin{polar spherical photon orbits}\index{polar!spherical photon orbits}.
+
+The values of $r_{\rm ph}^{\rm pol,in}$ and
+$r_{\rm ph}^{\rm pol}$ are obtained by solving $\ell_{\rm c}(r_0) = 0$,
+with $\ell_{\rm c}(r_0)$ given by Eq.~(\ref{e:gik:spher_ell_r0}). We get the cubic
+equation $r_0^3 - 3 m r_0^2 + a^2 r_0 + a^2 m = 0$. Setting $r_0 =: x + m$ reduces
+it to the depressed cubic $x^3 + p x + q = 0$, with $p := a^2 - 3 m^2$
+and $q := 2m (a^2 - m^2)$. The discriminant $\mathit{\Delta} = - 4 p^3 - 27 q^2$
+being positive, the solutions are provided by Viète's formulas, Eq.~(\ref{e:gis:Viete}),
+with $k=0$ and $k=1$ ($k=2$ leads to the third root of $\ell_{\rm c}(r_0)$ seen on
+Fig.~\ref{f:gik:spher_orb_exist}, which lies
+in the unphysical range of $r_0$ --- blue curve in the grey region):
+\begin{subequations}
+\begin{align}
+    r_{\rm ph}^{\rm pol} & = m + 2 \sqrt{m^2 - \frac{a^2}{3}}
+        \cos\left[ \frac{1}{3}\arccos \left(
+        \frac{m(m^2 - a^2)}{\left( m^2 - {a^2}/{3} \right) ^{3/2}} \right) \right]
+        \label{e:gik:rph_pol} \\
+    r_{\rm ph}^{\rm pol,in} & = m + 2 \sqrt{m^2 - \frac{a^2}{3}}
+        \cos\left[ \frac{1}{3}\arccos \left(
+        \frac{m(m^2 - a^2)}{\left( m^2 - {a^2}/{3} \right) ^{3/2}} \right) + \frac{2\pi}{3} \right] .
+\end{align}
+\end{subequations}
+As a function of $a$, $r_{\rm ph}^{\rm pol}$ decays monotonically from
+$\lim_{a\to 0} r_{\rm ph}^{\rm pol} = 3 m$ to
+$\lim_{a\to m} r_{\rm ph}^{\rm pol} = ( 1 + \sqrt{2}) m \simeq 2.414214\, m$,
+while $r_{\rm ph}^{\rm pol,in}$ decays monotonically from
+$\lim_{a\to 0} r_{\rm ph}^{\rm pol,in} = 0$ to
+$\lim_{a\to m} r_{\rm ph}^{\rm pol,in} = (1 - \sqrt{2}) m \simeq -0.414214\, m$.
+
+\subsubsection{Sign of $\ell$ and $L$}
+
+For spherical orbits with $\ell\neq 0$,
+the sign of $\ell$ is deduced from expression (\ref{e:gik:spher_ell_r0}),
+whose numerator has a sign governed by the position of $r_0$ with respect to the
+roots $r_{\rm ph}^{\rm pol,in}$ and $r_{\rm ph}^{\rm pol}$ determined above and whose denominator is positive iff $r_0 > m$, which occurs
+only for outer spherical orbits. We get then
+\begin{greybox}
 \begin{itemize}
-\item All outer spherical photon orbits with $r_0\not\in \left\{r_{\rm ph}^+, r_{\rm ph}^-\right\}$ and the inner ones with $r_0\in (0, r_{\rm ph}^{*}]$
-have $q>0$ (cf. Fig.~\ref{f:gik:spher_orb_exist}); they
-therefore oscillate about the equatorial plane, having $\th$-turning points
+\item Outer spherical orbits with $r_0 \in [r_{\rm ph}^+, r_{\rm ph}^{\rm pol})$ %]$
+have $\ell > 0$;
+\item outer spherical orbits with $r_0 \in (r_{\rm ph}^{\rm pol}, r_{\rm ph}^-]$ %]$
+have $\ell < 0$;
+\item inner spherical orbits with $r_0 \in (r_{\rm ph}^{\rm pol,in}, r_{\rm ph}^*]$
+have $\ell > 0$;
+\item inner spherical orbits with $r_0 \in [r_{\rm ph}^{**}, r_{\rm ph}^{\rm pol,in})$ %]$
+have $\ell < 0$.
+\end{itemize}
+\end{greybox}
+The sign of $L$ is deduced from that of $\ell = L/E$ by combining with the sign of $E$ obtained
+in Sec.~\ref{s:gik:spher_existence}.
+
+\subsubsection{Latitudinal motion}
+
+By applying the results of Sec.~\ref{s:gik:th_motion}, we get
+
+\begin{greybox}
+\begin{itemize}
+\item All outer spherical photon orbits with $r_0\not\in \left\{r_{\rm ph}^+, r_{\rm ph}^-\right\}$ and the inner ones with $r_0\in (0, r_{\rm ph}^{*})$
+have $q>0$ (cf. Fig.~\ref{f:gik:spher_orb_exist}); they therefore cross the equatorial plane.
+Moreover,
+\begin{itemize}
+\item those with $r_0 = r_{\rm ph}^{\rm pol}$ (outer polar spherical photon orbits)
+have $\ell=0$
+and cross repeatedly the rotation axis and the equatorial plane, with $\th$
+taking all values in the range $[0,\pi]$;
+\item those with $r_0 \neq r_{\rm ph}^{\rm pol}$
+oscillate about the equatorial plane, having two $\th$-turning points
 symmetrical about it, at $\th=\th_{\rm m}$ and $\th=\pi-\th_{\rm m}$, with
 $\th_{\rm m}$ given by Eq.~(\ref{e:gik:th0}),
 in which $\ell$ and $q$ are to be considered as the functions
 (\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0}) of $r_0$.
-\item Inner spherical photon orbits with $r_0 \in [r_{\rm ph}^{**}, 0)$ %]$
+\end{itemize}
+\item Inner spherical photon orbits with $r_0 \in (r_{\rm ph}^{**}, 0)$
 have $q<0$ (cf. right panel of Fig.~\ref{f:gik:spher_orb_exist}); they are thus vortical
-with either $\th\in[\th_{\rm m}, \th_{\rm v}]$ or $\th\in[\pi-\th_{\rm v}, \pi-\th_{\rm m}]$, with
+and never encounter the equatorial plane. Moreover,
+\begin{itemize}
+\item those with $r_0 = r_{\rm ph}^{\rm pol, in}$ (inner polar spherical photon orbits)
+have $\ell=0$ and oscillate about the rotation axis,
+with a $\th$-turning point at
+$\th=\th_{\rm v}$ (Northern hemisphere) or $\th = \pi - \th_{\rm v}$ (Southern hemisphere),
+where $\th_{\rm v}$
+is given by Eq.~(\ref{e:gik:thv_ell_zero}) in which $q$ is to be considered
+as the function (\ref{e:gik:spher_q_r0}) of $r_{\rm ph}^{\rm pol, in}$.
+\item those with $r_0 \neq r_{\rm ph}^{\rm pol, in}$ neither encounter the rotation axis nor the
+equatorial plane, having
+either $\th\in[\th_{\rm m}, \th_{\rm v}]$ (Northern hemisphere)
+or $\th\in[\pi-\th_{\rm v}, \pi-\th_{\rm m}]$ (Southern hemisphere), with
 $\th_{\rm m}$ and $\th_{\rm v}$ given by Eqs.~(\ref{e:gik:th0}) and (\ref{e:gik:th1_general}), in which
 $\ell$ and $q$ are to be considered as the functions
 (\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0}) of $r_0$.
 \end{itemize}
+\end{itemize}
+Spherical photon orbits at $r_0 = r_{\rm ph}^{**}$, $r_{\rm ph}^*$, $r_{\rm ph}^+$ or $r_{\rm ph}^-$,
+which have been excluded from the above list,
+will be discussed in details in Sec.~\ref{s:gik:circular_orbits}.
+\end{greybox}
 
+In addition, we have
+\begin{greybox}
+For a spherical photon orbit, $\th$ is either a constant or a periodic function
+of the affine parameter $\lambda$, the period being
+\be
+    \Lambda_\th = \frac{2}{|E|}\int_{\th_{\rm min}}^{\th_{\rm max}}
+    \frac{r_0^2 + a^2 \cos^2\th}{\sqrt{\tilde{\Theta}(\th)}} \, \D \th ,
+\ee
+with $(\th_{\rm min}, \th_{\rm max}) = (0, \pi)$ (outer polar orbit),
+$(0, \th_{\rm v})$ (Northern inner polar orbit),
+$(\pi-\th_{\rm v}, \pi)$ (Southern inner polar orbit),
+$(\th_{\rm m}, \pi- \th_{\rm m})$
+(non-polar orbit with $r_0\in (0, r_{\rm ph}^{*}) \cup (r_{\rm ph}^+, r_{\rm ph}^-)$),
+$(\th_{\rm m}, \th_{\rm v})$
+(Northern non-polar vortical inner orbit) or
+$(\pi-\th_{\rm v}, \pi-\th_{\rm m})$
+(Southern non-polar vortical inner orbit).
+\end{greybox}
+\begin{proof}
+Swiching from the Mino parameter $\lambda'$ to the affine parameter $\lambda$
+via the relation (\ref{e:gek:def_Mino_time}) with $r(\lambda)=r_0$, we may
+rewrite the equation of motion (\ref{e:gik:dthdl_Mino}) as
+\[
+    \left( \derd{\th}{\lambda} \right)^2 + \mathcal{V}(\th) = 0,
+    \quad\mbox{with}\
+    \mathcal{V}(\th) :=
+    - \frac{E^2 \tilde{\Theta}(\th)}{(r_0^2 + a^2 \cos^2\th)^2} .
+\]
+This is the 1-dimensional equation of motion in the potential well $\mathcal{V}$.
+It is then clear that $\th(\lambda)$ is a periodic function. The
+period $\Lambda_\th$ is evaluated by integrating
+$\D\lambda = \eps_\th (r_0^2 + a^2 \cos^2\th)^2 / (|E| \sqrt{\tilde{\Theta}(\th)})$
+over a ``round-trip'' to the same values of $\th$ and $\D\th/\D\lambda$.
+\end{proof}
+
+\begin{remark}
+The azimuthal coordinate
+$\ph$ is not a periodic function of the affine parameter $\lambda$ in general,
+nor of the Mino paramater $\lambda'$. An exception regards polar spherical
+geodesics, since setting $\ell=0$ in the equation of motion (\ref{e:gik:dphdl_Mino}) results
+in $\D\ph/\D\lambda' = \mathrm{const}$, so that $\ph$ is a periodic function of $\lambda'$
+(but still not of $\lambda$).
+\end{remark}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.48\textwidth]{gik_spher_3d_r_16_l077.png}\
@@ -1502,28 +1671,53 @@ equatorial plane, as a function of the Kerr spin parameter $a$.
 
 \subsection{Circular photon orbits} \label{s:gik:circular_orbits}
 
-In Kerr spacetime, we shall define a \defin{circular orbit}\index{circular!orbit}
-as any geodesic along which both $r$ and $\th$ are constant.
-A circular photon orbit is thus a spherical photon orbit lying at a constant
+In any stationary and axisymmetric spacetime, such as the Kerr spacetime, one may
+define a \defin{circular photon orbit}\index{circular!photon orbit}\index{photon!orbit!circular --}
+as a null geodesic $\Li$ whose tangent vector field $\w{p}=\D\w{x}/\D\lambda$ is a linear combination
+of the two Killing vectors $\w{\xi}$ and $\w{\eta}$ generating respectively
+the stationarity and the axisymmetry, with a non-vanishing component along $\w{\eta}$:
+\be \label{e:gik:def_circular_orbit}
+    \w{p} = \alpha \w{\xi} + \beta \w{\eta} ,\quad\mbox{with}\ \beta \neq 0.
+\ee
+Note that the above definition is independent from any coordinate system.
+It is worth to compare Eq.~(\ref{e:gik:def_circular_orbit}) with expression~(\ref{e:gek:4vel_circ_orb}) for the 4-velocity $\w{u} = \mu^{-1}\w{p}$ of a circular timelike orbit in the equatorial plane.
+
+\begin{remark}
+Circular photon orbits are sometimes called \defin{light rings}\index{light!ring}\index{ring!light --}
+\cite{CunhaH18}.
+\end{remark}
+
+In Kerr spacetime, when using coordinates adapted to the spacetime symmetries,
+such as Boyer-Lindquist coordinates $(t,r,\th,\ph)$, one has $\w{\xi} = \wpar_t$,
+$\w{\eta}=\wpar_\ph$, $\alpha=p^t$, $\beta=p^\ph$ and the definition (\ref{e:gik:def_circular_orbit})
+is equivalent to $p^r = \D r/\D\lambda = 0$ and $p^\th = \D\th/\D\lambda = 0$. It follows immediately
+that a circular photon orbit is any null geodesic
+along which both $r$ and $\th$ are constant. It is thus a spherical photon orbit lying at a constant
 value of $\th$.
 
 \begin{remark}
 In Schwarzschild spacetime, the photon circular orbits forming the photon sphere
 at $r=3m$ (cf. Sec.~\ref{s:ges:null_eff_pot}) do not have $\th=\mathrm{const}$, except
-for the orbit in the equatorial plane. In Kerr spacetime with $a\neq 0$, such
-``oblique'' circular orbits cannot exist due to the Lense-Thirring precession.
+for the orbit in the equatorial plane. However, for a given orbit non-equatorial
+orbit on the photon sphere, one may use the spherical symmetry of Schwarzschild spacetime
+to perform a change of coordinates $(\th,\ph) \mapsto (\th',\ph')$ such that
+$\th' = \mathrm{const}$ is constant for that orbit.
+In Kerr spacetime with $a\neq 0$, such
+``oblique'' circular orbits cannot exist due to Lense-Thirring precession.
 \end{remark}
 
+\begin{example}
 The spherical photon orbits with $E=0$ discussed in Sec.~\ref{s:gik:spher_existence},
-namely the null generators of the horizons $\Hor$ and $\Hor_{\rm in}$ are actually
-circular photon orbits since they belong to the family of outgoing principal
+namely the null generators of the horizons $\Hor$ and $\Hor_{\rm in}$ are
+circular photon orbits, since they belong to the family of outgoing principal
 null geodesics, which have $\th=\mathrm{const}$.
+\end{example}
 
-The spherical orbits with $r_0 = r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$ have $q=0$
+The spherical photon orbits with $r_0 = r_{\rm ph}^*$, $r_{\rm ph}^+$ and $r_{\rm ph}^-$ have $q=0$
 and $|\ell| > a$. According to the results of Sec.~\ref{s:gik:th_motion}, they
-necessary lie in the equatorial plane $\th=\pi/2$. They are thus \emph{circular}
-orbits. According to expression~(\ref{e:gik:spher_q_r0}) for $q$, they are the
-only ones in the equatorial plane, because the only other root of $q_{\rm c}(r_0)=0$ is $r_0=0$
+necessary lie in the equatorial plane $\th=\pi/2$. They are thus circular.
+According to expression~(\ref{e:gik:spher_q_r0}) for $q$, they are the
+only circular orbits in the equatorial plane, because the only other root of $q_{\rm c}(r_0)=0$ is $r_0=0$
 (see also Fig.~\ref{f:gik:spher_orb_exist}),
 which would correspond to the ring singularity.
 Let us denote by $\ell_{\rm ph}^*$, $\ell_{\rm ph}^+$ and $\ell_{\rm ph}^-$
@@ -1792,12 +1986,12 @@ orbits (cf. Fig.~\ref{f:gik:spher_orb_exist}).
 \caption[]{\label{f:gik:spo_meridional} \footnotesize
 Trace of the photon region (pale and dark green areas) in
 a meridional plane $(t,\ph)=\mathrm{const}$ of
-a Kerr spacetime with $a = 0.95 m$ (as in Fig.~\ref{f:gik:spher_orb_exist}).
+a Kerr spacetime with $a = 0.95\, m$ (as in Fig.~\ref{f:gik:spher_orb_exist}).
 The right panel is a zoom on the inner part of the left one.
 The meridional plane is described in terms of the coordinates $(\hat{r},\th)$
 where $\hat{r} := (r + \sqrt{r^2 + 4m^2})/2$ [cf. Eq.~(\ref{e:gik:def_hat_coord})].
 Some spherical photon orbits are shown as green circular arcs,
-with the dashed ones representing the polar spherical orbits.
+with the dashed ones representing the polar spherical orbits, i.e. $\ell=0$ orbits.
 The black (resp. light brown) half-circle at $r=r_+$ (resp. $r=r_-$)
 is the trace of the outer (resp. inner) Killing horizon.
 The dotted orange half-circle marks the locus of $r=0$, with the
@@ -1834,80 +2028,17 @@ There is no constraint on the Boyer-Lindquist $\ph$-coordinate: the photon regio
 all the range $[0, 2\pi)$.
 
 The photon region is depicted in Fig.~\ref{f:gik:spo_meridional}, which represents
-a meridional plane $(t,\ph) = \mathrm{const}$ of a Kerr spacetime with $a=0.95 m$
+a meridional plane $(t,\ph) = \mathrm{const}$ of a Kerr spacetime with $a=0.95\, m$
 --- the same value of $a$ as in Fig.~\ref{f:gik:spher_orb_exist}.
-
-We recover from this figure that, apart from those generating the two horizons $\Hor_{\rm in}$
+Polar spherical photon orbits, at $r_0 = r_{\rm ph}^{\rm pol}$ and $r_0 = r_{\rm ph}^{\rm pol,in}$
+(cf. Sec.~\ref{s:gik:spher_latitudinal}), are plotted as dashed green curves.
+It is graphically clear that they are the only orbits that encounter the rotation axis.
+We also recover from this figure that, apart from those generating the two horizons $\Hor_{\rm in}$
 and $\Hor$, the only circular photon orbits of Kerr spacetime are the
 five ones considered in Sec.~\ref{s:gik:circular_orbits} (the five green dots).
 We note also that a part of the outer spherical photon orbits lie in the ergoregion. These orbits
 have however $E>0$, according to the results of the end of Sec.~\ref{s:gik:spher_existence}.
 
-\subsubsection{Polar spherical photon orbits}
-
-We see on Fig.~\ref{f:gik:spher_orb_exist} that the reduced conserved
-angular momentum $\ell$ (red curve) vanishes at two
-places in the physically allowed range of $r_0$,
-i.e. where the blue curve lies above the grey region:
-$r_0=r_{\rm ph}^{\rm pol,in}$ and $r_0=r_{\rm ph}^{\rm pol}$
-with $r_{\rm ph}^{**} < r_{\rm ph}^{\rm pol,in} < 0$ and
-$r_{\rm ph}^+ < r_{\rm ph}^{\rm pol} < r_{\rm ph}^-$.
-The value $r_{\rm ph}^{\rm pol,in}$ has $q<0$ and corresponds to
-vortical inner spherical orbits.
-The value $r_{\rm ph}^{\rm pol}$ has $q >0$
-and corresponds to outer spherical orbits.
-The results of Sec.~\ref{s:gik:th_motion} show that all these orbits cross
-repeatedly the rotation axis. We therefore call them
-\defin{polar spherical photon orbits}\index{polar!spherical photon orbits}.
-
-The precise values of $r_{\rm ph}^{\rm pol,in}$ and
-$r_{\rm ph}^{\rm pol}$ are obtained by solving $\ell_{\rm c}(r_0) = 0$,
-with $\ell_{\rm c}(r_0)$ given by Eq.~(\ref{e:gik:spher_ell_r0}). We get the cubic
-equation $r_0^3 - 3 m r_0^2 + a^2 r_0 + a^2 m = 0$. Setting $r_0 =: x + m$ reduces
-it to the depressed cubic $x^3 + p x + q = 0$, with $p := a^2 - 3 m^2$
-and $q := 2m (a^2 - m^2)$. The discriminant $\mathit{\Delta} = - 4 p^3 - 27 q^2$
-being positive, the solutions are provided by Viète's formulas, Eq.~(\ref{e:gis:Viete}),
-with $k=0$ and $k=1$ ($k=2$ leads to the third root of $\ell_{\rm c}(r_0)$ seen on
-Fig.~\ref{f:gik:spher_orb_exist}, which lies
-in the unphysical range of $r_0$ --- blue curve in the grey region):
-\begin{subequations}
-\begin{align}
-    r_{\rm ph}^{\rm pol} & = m + 2 \sqrt{m^2 - \frac{a^2}{3}}
-        \cos\left[ \frac{1}{3}\arccos \left(
-        \frac{m(m^2 - a^2)}{\left( m^2 - {a^2}/{3} \right) ^{3/2}} \right) \right]
-        \label{e:gik:rph_pol} \\
-    r_{\rm ph}^{\rm pol,in} & = m + 2 \sqrt{m^2 - \frac{a^2}{3}}
-        \cos\left[ \frac{1}{3}\arccos \left(
-        \frac{m(m^2 - a^2)}{\left( m^2 - {a^2}/{3} \right) ^{3/2}} \right) + \frac{2\pi}{3} \right] .
-\end{align}
-\end{subequations}
-As a function of $a$, $r_{\rm ph}^{\rm pol}$ decays monotonically from
-$\lim_{a\to 0} r_{\rm ph}^{\rm pol} = 3 m$ to
-$\lim_{a\to m} r_{\rm ph}^{\rm pol} = (\sqrt{2} + 1) m \simeq 2.414214\, m$,
-while $r_{\rm ph}^{\rm pol,in}$ decays monotonically from
-$\lim_{a\to 0} r_{\rm ph}^{\rm pol,in} = 0$ to
-$\lim_{a\to m} r_{\rm ph}^{\rm pol,in} = (\sqrt{2} - 1) m \simeq -0.414214\, m$.
-Polar spherical photon orbits are plotted as dashed green curves in Fig.~\ref{f:gik:spo_meridional}.
-Note that they are the only spherical orbits that encounter the rotation axis.
-
-The sign of $\ell$ is deduced from expression (\ref{e:gik:spher_ell_r0}),
-whose numerator has a sign governed by the position of $r_0$ with respect to the
-roots determined above and whose denominator is positive iff $r_0 > m$, which occurs
-only for outer spherical orbits. We get then
-\begin{greybox}
-\begin{itemize}
-\item Outer spherical orbits with $r_0 \in [r_{\rm ph}^+, r_{\rm ph}^{\rm pol})$ %]$
-have $\ell > 0$;
-\item outer spherical orbits with $r_0 \in (r_{\rm ph}^{\rm pol}, r_{\rm ph}^-]$ %]$
-have $\ell < 0$;
-\item inner spherical orbits with $r_0 \in (r_{\rm ph}^{\rm pol,in}, r_{\rm ph}^*]$
-have $\ell > 0$;
-\item inner spherical orbits with $r_0 \in [r_{\rm ph}^{**}, r_{\rm ph}^{\rm pol,in})$ %]$
-have $\ell < 0$.
-\end{itemize}
-\end{greybox}
-The sign of $L$ is deduced from that of $\ell = L/E$ by combining with the sign of $E$ obtained
-in Sec.~\ref{s:gik:spher_existence}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2238,7 +2369,7 @@ where $r_{\rm ph}^{\rm pol}$ is the function (\ref{e:gik:rph_pol}) of $(m, a)$.
 $R_{\rm shad}$ is a decreasing function of $a$, which is depicted in Fig.~\ref{f:gik:shadow_radius_axis}.
 Note that its variation range is pretty limited, since the limits
 $\lim_{a\to 0} r_{\rm ph}^{\rm pol} = 3 m$ and $\lim_{a\to m} r_{\rm ph}^{\rm pol} = (\sqrt{2} + 1) m$
-(cf. Sec.~\ref{s:gik:photon_region})
+(cf. Sec.~\ref{s:gik:spher_latitudinal})
 yield respectively
 \be
     \lim_{a\to 0} R_{\rm shad} = 3\sqrt{3} \frac{m}{r_{\Obs}} \simeq 5.196 \, \frac{m}{r_{\Obs}}
@@ -2267,9 +2398,30 @@ as all the critical null geodesics forming the shadow's boundary for $\th_{\Obs}
 or $\pi$.
 \end{example}
 
+\subsubsection{Shadow of an extremal Kerr black hole ($a=m$)}
 
-
-
+The case $a=m$ corresponds to the extremal Kerr black hole, which will be
+discussed in detail in Chap.~\ref{s:exk}. However, we shall discuss the
+shadow of such a black hole here, by taking some appropriate limits.
+For $a=m$, formulas (\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0})
+for $\ell_{\rm c}(r_0)$ and $q_{\rm c}(r_0)$ simplify consequently:
+\be
+    \ell_{\rm c}(r_0) = - \frac{r_0^2}{m} + 2 r_0 + m \qquad (a=m)
+\ee
+\be
+    q_{\rm c}(r_0) = \frac{r_0^3}{m^2} ( 4 m - r_0) \qquad (a=m) .
+\ee
+Besides, Eq.~(\ref{e:gik:rph_pm}) yields
+\be
+    r_{\rm ph}^+ = m \qand r_{\rm ph}^- = 4 m \qquad (a=m) .
+\ee
+We notice that $q_{\rm c}(r_{\rm ph}^-) = 0$, while $q_{\rm c}(r_{\rm ph}^+) = 3 m^2 \neq 0$.
+This last result seems to contradict the fact that
+$r_{\rm ph}^+$ and $r_{\rm ph}^-$ have been
+obtained in Sec.~\ref{s:gik:spher_existence} by searching for the zeros of $q_{\rm c}$.
+However, the generic expression (\ref{e:gik:spher_q_r0}) for $q_{\rm c}$ has a factor $(r_0 - m)^2$
+in its denominator so that taking the limits $a\to m$ and $r_0\to r_{\rm ph}^+\ =  m$
+on that expression yields the undeterminate form ``0/0''.
 
 
 
