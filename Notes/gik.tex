@@ -2250,8 +2250,8 @@ given by Eqs.~(\ref{e:gik:spher_ell_r0})--(\ref{e:gik:spher_q_r0}):
 \begin{subequations}
 \label{e:gik:shadow_param_eq}
 \begin{align}
-& \alpha = \alpha_{\rm c}(r_0) := - \frac{\ell_{\rm c}(r_0)}{r_{\Obs}\sin\th_{\Obs}}  \\
-& \beta = \beta_{\rm c}(r_0) := \frac{\eps_\th}{r_{\Obs}}
+& \alpha =  - \frac{\ell_{\rm c}(r_0)}{r_{\Obs}\sin\th_{\Obs}}  \\
+& \beta =  \frac{\eps_\th}{r_{\Obs}}
         \sqrt{ q_{\rm c}(r_0) + \cos^2\th_{\Obs} \left( a^2
     - \frac{\ell_{\rm c}(r_0)^2}{\sin^2\th_{\Obs}} \right) } . \label{e:gik:shadow_param_eq_beta}
 \end{align}
@@ -2404,24 +2404,112 @@ The case $a=m$ corresponds to the extremal Kerr black hole, which will be
 discussed in detail in Chap.~\ref{s:exk}. However, we shall discuss the
 shadow of such a black hole here, by taking some appropriate limits.
 For $a=m$, formulas (\ref{e:gik:spher_ell_r0})-(\ref{e:gik:spher_q_r0})
-for $\ell_{\rm c}(r_0)$ and $q_{\rm c}(r_0)$ simplify consequently:
+for $\ell_{\rm c}(r_0)$ and $q_{\rm c}(r_0)$ simplify significantly:
 \be
     \ell_{\rm c}(r_0) = - \frac{r_0^2}{m} + 2 r_0 + m \qquad (a=m)
 \ee
-\be
+\be \label{e:gik:q_c_extremal}
     q_{\rm c}(r_0) = \frac{r_0^3}{m^2} ( 4 m - r_0) \qquad (a=m) .
 \ee
+Substituting these values into the system (\ref{e:gik:shadow_param_eq}) leads to
+\begin{subequations}
+\label{e:gik:shadow_param_extremal}
+\begin{align}
+& \alpha =  \frac{(r_0 - m)^2 - 2 m^2}{m r_{\Obs}\sin\th_{\Obs}}  \\
+& \beta = \frac{\eps_\th}{m r_{\Obs} \sin\th_{\Obs}}
+        \sqrt{ r_0^3 (4 m - r_0) - m^2 \cos^2\th_{\Obs} \left[ 2 r_0(r_0 + 2 m)
+                + m^2\cos^2\th_{\Obs}\right] } . \label{e:gik:shadow_beta_extremal}
+\end{align}
+\end{subequations}
 Besides, Eq.~(\ref{e:gik:rph_pm}) yields
 \be
     r_{\rm ph}^+ = m \qand r_{\rm ph}^- = 4 m \qquad (a=m) .
 \ee
-We notice that $q_{\rm c}(r_{\rm ph}^-) = 0$, while $q_{\rm c}(r_{\rm ph}^+) = 3 m^2 \neq 0$.
+The range of $r_0$ is determined by $r_{\rm ph}^+ \leq r_0 \leq r_{\rm ph}^-$ and
+$\tilde{\Theta}(\th_{\Obs}) \geq 0$. The last condition is equivalent to demanding that
+the quantity under the square root in expression (\ref{e:gik:shadow_beta_extremal}) for $\beta$
+is non-negative. This leads\footnote{The values of $r_{\rm min}$ and $r_{\rm max}$
+can be computed exactly as $r_{\rm min} = \max(r_1, m)$ and $r_{\rm max} = r_2$,
+where $r_1$ and $r_2$ are two roots of the quartic polynomial in $r_0$ that appears
+under the square root in Eq.~(\ref{e:gik:shadow_beta_extremal}); but this would
+lead to complicated expressions, while a computation by numerical root finding, as in
+the notebook \ref{s:sam:Kerr_shadow}, is sufficient in practice.} to some interval $[r_{\rm min}, r_{\rm max}] \subset [r_{\rm ph}^+, r_{\rm ph}^-]$.
+As in the case $a<m$ treated above, we have $r_{\rm max} \leq r_{\rm ph}^-$
+with $r_{\rm max} = r_{\rm ph}^- \iff \th_{\Obs} = \pi/2$.
+However, $r_{\rm min}$ behaves differently. As we going to see,
+$r_{\rm min} = r_{\rm ph}^+ (= m)$ for a finite-width interval of values of $\th_{\Obs}$ around $\pi/2$
+and not only for $\pi/2$ uniquely. To see this, let us start by noticing that expression~(\ref{e:gik:q_c_extremal})
+results in $q_{\rm c}(r_{\rm ph}^-) = 0$, while $q_{\rm c}(r_{\rm ph}^+) = 3 m^2 \neq 0$.
 This last result seems to contradict the fact that
-$r_{\rm ph}^+$ and $r_{\rm ph}^-$ have been
+$r_{\rm ph}^+$ has been
 obtained in Sec.~\ref{s:gik:spher_existence} by searching for the zeros of $q_{\rm c}$.
 However, the generic expression (\ref{e:gik:spher_q_r0}) for $q_{\rm c}$ has a factor $(r_0 - m)^2$
-in its denominator so that taking the limits $a\to m$ and $r_0\to r_{\rm ph}^+\ =  m$
-on that expression yields the undeterminate form ``0/0''.
+in its denominator, so that taking the limits $a\to m$ and $r_0\to r_{\rm ph}^+\ =  m$
+yields the undeterminate form ``0/0''. As a consequence of $q_{\rm c}(r_{\rm ph}^+) \neq 0$,
+one has $\beta\neq 0$ for $r_0 = r_{\rm ph}^+ = m$ and $|\th_{\Obs} - \pi/2|$ sufficiently small.
+This implies that $r_{\rm min} = m$ for a finite range of values of $\th_{\Obs}$ around
+$\pi/2$.
+More precisely,
+according to (\ref{e:gik:shadow_param_extremal}), the screen coordinates for $r_0 = r_{\rm ph}^+ = m$ are
+\begin{subequations}
+\label{e:gik:shadow_extremal_term}
+\begin{align}
+& \left. \alpha \right| _{r_0=m} =  - 2 \frac{m}{r_{\Obs}\sin\th_{\Obs}}  \\[1ex]
+& \left. \beta \right| _{r_0=m} = \frac{\eps_\th m}{r_{\Obs} \sin\th_{\Obs}}
+        \sqrt{ 3 - 6 \cos^2\th_{\Obs} - \cos^4\th_{\Obs}} .  \label{e:gik:beta_a_m_r0_m}
+\end{align}
+\end{subequations}
+In particular, for $\th_{\Obs}=\pi/2$ (observer $\Obs$ in the equatorial plane), we get
+\be \label{e:gik:shadow_extremal_term_equat}
+    \left. \alpha \right| _{r_0=m}  = - 2 \, \frac{m}{r_{\Obs}}
+    \qand
+    \left. \beta \right| _{r_0=m} = \eps_\th \sqrt{3} \, \frac{m}{r_{\Obs}} \qquad
+    \left(\th_{\Obs} = \frac{\pi}{2} \right) .
+\ee
+Equation~(\ref{e:gik:beta_a_m_r0_m}) shows that, for $\eps_\th = +1$,
+$\left. \beta \right| _{r_0=m} > 0 \iff \th_{\rm crit} < \th_{\Obs} < \pi - \th_{\rm crit}$,
+where $\th_{\rm crit}$ is such that $\cos^2\th_{\rm crit}$ is
+the positive root of the quadratic polynomial $-x^2 - 6 x + 3 = 0$. We get
+$\cos^2\th_{\rm crit} = 2\sqrt{3} - 3$, from which $\sin^2\th_{\rm crit} = 4 - 2\sqrt{3} = (\sqrt{3} - 1)^2$, hence
+\be
+    \th_{\rm crit} = \arcsin(\sqrt{3} - 1) \simeq 0.8213\, {\rm rad} \simeq 47.06^\circ .
+\ee
+For $\th_{\Obs} = \th_{\rm crit}$ or $\pi - \th_{\rm crit}$, we have exactly $\left. \beta \right| _{r_0=m} = 0$,
+while for $\th_{\Obs} < \th_{\rm crit}$ or $\th_{\Obs} > \pi -  \th_{\rm crit}$,
+$\left. \beta \right| _{r_0=m}$ is imaginary. This means that
+for $\th_{\rm crit} \leq \th_{\Obs} \leq \pi - \th_{\rm crit}$, the range of the parameter $r_0$ is
+$[m, r_{\rm max}]$, while for
+for $\th_{\Obs} < \th_{\rm crit}$ or $\th_{\Obs} > \pi -  \th_{\rm crit}$,
+the range is $[r_{\rm min}, r_{\rm max}]$ with $r_{\rm min} > m$, as for the case $\th_{\Obs} \neq \pi/2$ of the shadows with $a < m$ discussed above. In this last case,
+the shadow boundary is a smooth curve with $\left. \beta \right| _{r_0=r_{\rm min}} = 0$ (in addition
+to $\left. \beta \right| _{r_0=r_{\rm max}} = 0$, which always holds).
+
+\begin{figure}
+\centerline{
+\includegraphics[height=0.28\textheight]{gik_shadow_a1_th90_part.pdf} }
+\caption[]{\label{f:gik:shadow_a1_th90_part} \footnotesize
+Part of the boundary of an extremal Kerr black hole ($a=m$)
+as seen by an asymptotic inertial observer $\Obs$ in the equatorial plane
+($\th_{\Obs} = \pi/2$) and defined by the
+parametric equations (\ref{e:gik:shadow_param_extremal}), with $r_0\in[m, 4m]$.
+The two endpoints are acheived for at $r_0=m$ and are given by Eq.~(\ref{e:gik:shadow_extremal_term_equat}):
+$(\bar{\alpha},\bar{\beta}) = (-2, \pm \sqrt{3}) \simeq (-2, \pm 1.732)$, where
+$\bar{\alpha}:= \alpha r_{\Obs}/m$ and $\bar{\beta}:= \beta r_{\Obs}/m$.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_shadow}]}
+}
+\end{figure}
+
+Let us focus of the first case, i.e. $\th_{\rm crit} \leq \th_{\Obs} \leq \pi - \th_{\rm crit}$.
+For $\th_{\rm crit} < \th_{\Obs} < \pi - \th_{\rm crit}$, the parametric curve defined by
+the system (\ref{e:gik:shadow_param_extremal}) terminates for $r_0 = m$  at the two points
+given by Eq.~(\ref{e:gik:shadow_extremal_term}), or Eq.~(\ref{e:gik:shadow_extremal_term_equat})
+in the particular case $\th_{\Obs} = \pi/2$ (one point for $\eps_\th=+1$, and the other one
+for $\eps_\th=-1$). Given that $\beta \neq 0$ for these two points, the curve is not closed
+(cf. Fig.~\ref{f:gik:shadow_a1_th90_part} for the case $\th_{\Obs} = \pi/2$).
+One may be puzzled by this feature: the shadow boundary has to be closed!
+
+
+
 
 
 
