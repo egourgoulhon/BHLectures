@@ -1087,7 +1087,7 @@ If $r_0 = m$, the system (\ref{e:gik:syst_spherical_orbit}) reduces to
 Now, $\tilde{q} = 0$ is equivalent to $q = - (\ell - a)^2 = - m^4 / a^2$,
 which implies $q< 0$, which is impossible for $\ell = a + \frac{m^2}{a} > a$,
 due to the property $|\ell| > a \implies q \geq 0$ (cf. Sec.~\ref{s:gik:th_motion}).
-There remains $a = m$, which implies and $\ell = 2 m$. Hence we conclude
+There remains $a = m$, which implies $\ell = 2 m$. Hence we conclude
 \be \label{e:gik:spher_orb_r0_eq_m}
   \encadre{ r_0 = m \iff
    \left\{\begin{array}{l}
@@ -1096,7 +1096,8 @@ There remains $a = m$, which implies and $\ell = 2 m$. Hence we conclude
 \end{array}
 \right. }
 \ee
-We shall discuss this case further in Chap.~\ref{s:exk}, which is devoted
+We shall discuss this case further in Sec.~\ref{s:gik:shadow}, as well as in
+Chap.~\ref{s:exk}, which is devoted
 to the extreme Kerr black hole ($a=m$).
 In the remainder of this section, we assume $r_0 \neq m$.
 Equation~(\ref{e:gik:syst_spherical_orbit_2}) is then equivalent to
@@ -2053,6 +2054,7 @@ $(\ell,q)$ as a spherical photon orbit, but that does not stay at a fixed value
 of $r$. Equivalently, a critical null geodesic
 is a null geodesic with varying $r$ and for which the quartic polynomial $\mathcal{R}(r)$
 [Eq.~(\ref{e:gik:mcR})] admits a double root [Eq.~(\ref{e:gik:R_Rp_r0_zero})].
+
 In Schwarzschild spacetime (Chap.~\ref{s:gis}),
 a critical null geodesic was simply any null geodesic with varying $r$
 that has $b = |\ell| = 3\sqrt{3}\, m$.
@@ -2471,7 +2473,7 @@ $\left. \beta \right| _{r_0=m} > 0 \iff \th_{\rm crit} < \th_{\Obs} < \pi - \th_
 where $\th_{\rm crit}$ is such that $\cos^2\th_{\rm crit}$ is
 the positive root of the quadratic polynomial $-x^2 - 6 x + 3 = 0$. We get
 $\cos^2\th_{\rm crit} = 2\sqrt{3} - 3$, from which $\sin^2\th_{\rm crit} = 4 - 2\sqrt{3} = (\sqrt{3} - 1)^2$, hence
-\be
+\be \label{e:gik:shadow_a1_th_crit}
     \th_{\rm crit} = \arcsin(\sqrt{3} - 1) \simeq 0.8213\, {\rm rad} \simeq 47.06^\circ .
 \ee
 For $\th_{\Obs} = \th_{\rm crit}$ or $\pi - \th_{\rm crit}$, we have exactly $\left. \beta \right| _{r_0=m} = 0$,
@@ -2488,7 +2490,7 @@ to $\left. \beta \right| _{r_0=r_{\rm max}} = 0$, which always holds).
 \centerline{
 \includegraphics[height=0.28\textheight]{gik_shadow_a1_th90_part.pdf} }
 \caption[]{\label{f:gik:shadow_a1_th90_part} \footnotesize
-Part of the boundary of an extremal Kerr black hole ($a=m$)
+Part of the boundary of an extremal Kerr black hole ($a=m$) shadow
 as seen by an asymptotic inertial observer $\Obs$ in the equatorial plane
 ($\th_{\Obs} = \pi/2$) and defined by the
 parametric equations (\ref{e:gik:shadow_param_extremal}), with $r_0\in[m, 4m]$.
@@ -2500,18 +2502,139 @@ $\bar{\alpha}:= \alpha r_{\Obs}/m$ and $\bar{\beta}:= \beta r_{\Obs}/m$.
 \end{figure}
 
 Let us focus of the first case, i.e. $\th_{\rm crit} \leq \th_{\Obs} \leq \pi - \th_{\rm crit}$.
-For $\th_{\rm crit} < \th_{\Obs} < \pi - \th_{\rm crit}$, the parametric curve defined by
-the system (\ref{e:gik:shadow_param_extremal}) terminates for $r_0 = m$  at the two points
+The parametric curve defined by
+the system (\ref{e:gik:shadow_param_extremal}) terminates for $r_0 = m$ at the two points
 given by Eq.~(\ref{e:gik:shadow_extremal_term}), or Eq.~(\ref{e:gik:shadow_extremal_term_equat})
 in the particular case $\th_{\Obs} = \pi/2$ (one point for $\eps_\th=+1$, and the other one
-for $\eps_\th=-1$). Given that $\beta \neq 0$ for these two points, the curve is not closed
-(cf. Fig.~\ref{f:gik:shadow_a1_th90_part} for the case $\th_{\Obs} = \pi/2$).
+for $\eps_\th=-1$). For $\th_{\rm crit} < \th_{\Obs} < \pi - \th_{\rm crit}$, one has
+$\beta \neq 0$ at these two points, so that the curve is not closed, as one can see
+on Fig.~\ref{f:gik:shadow_a1_th90_part}, which is drawn for $\th_{\Obs} = \pi/2$).
 One may be puzzled by this feature: the shadow boundary has to be closed!
+We are thus missing some critical null geodesics to complete the boundary.
+It is easy to find the missing ones as soon as we remember that in the
+special case $a=m$, we had found an extra family of spherical photon orbits
+in Sec.~\ref{s:gik:spher_existence}: those given by Eq.~(\ref{e:gik:spher_orb_r0_eq_m}),
+namely the spherical photon orbits at $r_0 = m$ that have
+$\ell = 2m$. Obviously, this family cannot be parametrized by $r_0$; on the other hand,
+the reduced Carter constant $q$ is a well-adapted parameter. Since $q$ is
+not constrained by Eq.~(\ref{e:gik:spher_orb_r0_eq_m}), it can take all
+values in the range $[0, +\infty)$. Note that $q<0$ is not permitted here
+since $\ell = 2 m > a$ [cf. property (\ref{e:gik:q_nonnegative})].
+However, not any value of $q$ is that of a spherical photon orbit associated
+with a critical null geodesic that reaches the asymptotic inertial observer $\Obs$.
+Indeed, the value of $q$ must give birth to a radial polynomial
+$\mathcal{R}(r)$ positive for all $r > m$, so that the radial
+motion is possible between the spherical orbit and the observer [condition (\ref{e:mcR_non_neg})].
+Specializing expression (\ref{e:gik:mcR}) for $\mathcal{R}(r)$ to $a=m$ and $\ell=2m$,
+we get
+\be
+    \mathcal{R}(r) = (r - m)^2 (r^2 + 2 m r - q) .
+\ee
+$r = m$ appears as a double root of $\mathcal{R}$, which confirms that we are dealing
+with spherical photon orbits at $r_0 = m$. There are two other roots, which depend
+on $q$:
+\be \label{e:gik:root_rq}
+    r_q^\pm = \pm \sqrt{m^2 + q} - m .
+\ee
+Since $q\geq 0$, we have $r_q^+ \geq 0$ and $r_q^- \leq - 2m$.
+It is then clear (cf. Fig.~\ref{f:gik:R_a_1_l_2m}) that
+\be
+     \left( \forall r \in (m, +\infty),\quad  \mathcal{R}(r) > 0 \right) \iff r_q^+ \leq m .
+\ee
+The critical value is $r_q^+ = m$, which correspond to $q = 3 m^2$ (red curve
+in Fig.~\ref{f:gik:R_a_1_l_2m}). $r=m$ is then a triple root of $\mathcal{R}$:
+$q = 3 m^2 \implies \mathcal{R}(r) = ( r - m)^3 (r + 3m)$. Since $r_q^+$
+is an increasing function of $q$, we conclude that
+\begin{greybox}
+For $a=m$, a critical null geodesic
+of constants of motion $(\ell, q)$ can reach the asymptotic region $r\gg m$
+from the vicinity of a spherical photon orbit at $r_0 = m$ iff
+\be \label{e:gik:critical_from_NHEK}
+    \ell = 2 m \qand 0 \leq q \leq 3 m^2 .
+\ee
+\end{greybox}
 
+\begin{figure}
+\centerline{
+\includegraphics[height=0.28\textheight]{gik_R_a_1_l_2m.pdf} }
+\caption[]{\label{f:gik:R_a_1_l_2m} \footnotesize
+Radial polynomial $\mathcal{R}(r)$ for $a=m$, $\ell=2m$ and three values of $q$.
+All the polynomials have a double root at $r=m$ and
+the dots mark the root $r_q^+$ [Eq.~(\ref{e:gik:root_rq})], the fourth root $r_q^- \leq - 2m$ being out of the
+figure's scope. The dotted horizontal lines indicate the range of $r$
+where a null geodesic motion to the asymptotic inertial observer is possible.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_shadow}]}
+}
+\end{figure}
 
+Furthermore, such a critical null geodesic can reach the asymptotic inertial
+observer $\Obs$, who is located at $\th = \th_{\Obs}$, only if the
+$\tilde{\Theta}$ function associated with $(\ell,q)$ obeys $\tilde{\Theta}(\th_{\Obs}) \geq 0$.
+Setting $a=m$ and $\ell=2m$ into expression (\ref{e:gik:tTheta}) for $\tilde{\Theta}$,
+we get the criterion
+\be \label{e:gik:critical_NHEK_to_Obs}
+    q \geq \frac{3 + \cos^2\th_{\Obs}}{\tan^2\th_{\Obs}} \, m^2 .
+\ee
+The impact parameters of the critical null geodesic on $\Obs$'s screen are obtained by plugging the
+above values of $\ell$ and $q$, as well as $a=m$, into formulas (\ref{e:gik:screen_alpha_beta}):
+\begin{subequations}
+\label{e:gik:alpha_beta_NHEK_line}
+\begin{align}
+& \alpha = - \frac{2 m}{r_{\Obs}\sin\th_{\Obs}}  \\
+&  \beta = \frac{\eps_\th m}{r_{\Obs}\sin\th_{\Obs}} \sqrt{ \frac{q}{m^2}\sin^2\th_{\Obs}
+ - \cos^2\th_{\Obs} \left( 3 + \cos^2\th_{\Obs} \right)  },
+ \quad \frac{3 + \cos^2\th_{\Obs}}{\tan^2\th_{\Obs}}  \leq \frac{q}{m^2} \leq 3 .
+\end{align}
+\end{subequations}
+The system (\ref{e:gik:alpha_beta_NHEK_line}) defines a curve parametrized by $q$,
+with the range of $q$ obtained by combining (\ref{e:gik:critical_from_NHEK}) and (\ref{e:gik:critical_NHEK_to_Obs}).
+For $\Obs$ in the equatorial plane $(\th_{\Obs} = \pi/2)$, this parametric equation
+simplifies to
+\be
+    \alpha = - 2 \frac{m}{r_{\Obs}}
+    \qand
+    \beta = \eps_\th \frac{m}{r_{\Obs}} \sqrt{ \frac{q}{m^2} },
+    \quad 0 \leq \frac{q}{m^2} \leq 3  \qquad\left( \th_{\Obs} = \frac{\pi}{2} \right) .
+\ee
+In all cases, the curve (\ref{e:gik:alpha_beta_NHEK_line})
+is actually a segment of a vertical straight line. Following Ref.~\cite{GrallLS18},
+we shall call this segment the \defin{NHEK line}\index{NHEK!line}, \emph{NHEK} standing
+for \emph{Near Horizon Extremal Kerr}, given that the spherical photon orbit
+at $r_0=m$ are close to the event horizon of the extremal Kerr black hole.
+Note that, despite they have the same radial coordinate as the horizon ($r_+=m$ for $a=m$),
+the spherical photon orbits are not located
+on the horizon, for $r$ fails to be a well-behaved coordinate at $r=m$ in
+the extremal Kerr geometry, as we shall discuss in Chap.~\ref{s:exk}.
+The key feature is that the end points
+of the NHEK line, which are obtained for $q/m^2 = 3$,
+are exactly the two points defined by Eq.~(\ref{e:gik:shadow_extremal_term}),
+i.e. the end points of the curve parametrized by $r_0$ (cf. Fig.~\ref{f:gik:shadow_a1_th90_part}).
+By adding the NHEK line, we are thus
+closing the boundary of the black hole shadow! The result is shown in Fig.~\ref{f:gik:shadow_a1},
+where the NHEK line is drawn in maroon on the left edge of the plots
+for $\th_{\Obs} = \pi/2$ and $\th_{\Obs} = \pi/3 > \th_{\rm crit}$.
 
-
-
+\begin{figure}
+\begin{center}
+\includegraphics[height=0.28\textheight]{gik_shadow_a1_th90.pdf} \\[1ex]
+\includegraphics[height=0.28\textheight]{gik_shadow_a1_th60.pdf}\qquad
+\includegraphics[height=0.28\textheight]{gik_shadow_a1_th_crit.pdf}
+\end{center}
+\caption[]{\label{f:gik:shadow_a1} \footnotesize
+Shadow of an extremal Kerr black hole on the screen of an asymptotic
+inertial observer $\Obs$ located at $r=r_{\Obs}$ and $\th=\th_{\Obs}$, for three
+values of $\th_{\Obs}$: $\th_{\Obs} = \pi/2$ ($\Obs$ in the equatorial plane; upper panel),
+$\th_{\Obs} = \pi/3$ (lower left) and $\th_{\Obs} = \th_{\rm crit} = \arcsin(\sqrt{3} - 1) \simeq 0.821$
+[Eq.~(\ref{e:gik:shadow_a1_th_crit})]. The two first images have the NHEK line, while
+it is vanishing in the third one (marginal case), since there is no NHEK line in the shadow
+boundary for $\th < \th_{\rm crit}$ or $\th > \pi -  \th_{\rm crit}$.
+As in Fig.~\ref{f:gik:shadow_a95},
+the color code corresponds to some selected ranges for the parameter $r_0$
+of the critical null geodesics forming the shadow's boundary, with the NHEK line
+plotted in maroon.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_shadow}]}
+}
+\end{figure}
 
 
 
