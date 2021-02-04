@@ -2463,7 +2463,7 @@ as all the critical null geodesics forming the shadow's boundary for $\th_{\Obs}
 or $\pi$.
 \end{example}
 
-\subsection{Shadow of an extremal Kerr black hole ($a=m$)} \label{s:gik:shadow_extremal}
+\subsection{Shadow of an extremal Kerr black hole} \label{s:gik:shadow_extremal}
 
 The case $a=m$ corresponds to the extremal Kerr black hole, which will be
 studied in Chap.~\ref{s:exk}. However, we shall discuss its
@@ -2481,7 +2481,7 @@ the screen angular coordinates
 \begin{subequations}
 \label{e:gik:shadow_param_extremal}
 \begin{align}
-& \alpha =  \frac{(r_0 - m)^2 - 2 m^2}{m r_{\Obs}\sin\th_{\Obs}}  \\
+& \alpha =  \frac{(r_0 - m)^2 - 2 m^2}{m r_{\Obs}\sin\th_{\Obs}}  \label{e:gik:shadow_alpha_extremal} \\
 & \beta = \frac{\eps_\th}{m r_{\Obs} \sin\th_{\Obs}}
         \sqrt{ r_0^3 (4 m - r_0) - m^2 \cos^2\th_{\Obs} \left[ 2 r_0(r_0 + 2 m)
                 + m^2\cos^2\th_{\Obs}\right] } . \label{e:gik:shadow_beta_extremal}
@@ -2580,7 +2580,7 @@ special case $a=m$, we had found an extra family of spherical photon orbits
 in Sec.~\ref{s:gik:spher_existence}: those given by Eq.~(\ref{e:gik:spher_orb_r0_eq_m}),
 namely the spherical photon orbits at $r_0 = m$ that have
 $\ell = 2m$. Obviously, this family cannot be parametrized by $r_0$; on the other hand,
-the reduced Carter constant $q$ is a well-adapted parameter. Since $q$ is
+the reduced Carter constant $q$ is a valid parameter. Since $q$ is
 not constrained by Eq.~(\ref{e:gik:spher_orb_r0_eq_m}), it can take all
 values in the range $[0, +\infty)$. Note that $q<0$ is not permitted here
 since $\ell = 2 m > a$ [cf. property (\ref{e:gik:q_nonnegative})].
@@ -2702,13 +2702,133 @@ of the critical null geodesics forming the shadow's boundary.
 }
 \end{figure}
 
+\subsubsection{Cardioid shape}
+
+As seen from Fig.~\ref{f:gik:shadow_a1}, the departure of the black hole
+shadow from a perfect disk is maximal when the observer lies in the equatorial
+plane, i.e. when $\th_{\Obs} = \pi/2$. The shadow boundary is often said to have
+a \emph{D-shape} (from the letter "D"). It is interesting that this shape
+corresponds actually to a simple mathematical curve: the convex hull of a
+cardioid \cite{FarahPJB20}.
+Indeed, for $\th_{\Obs} = \pi/2$, equations (\ref{e:gik:shadow_param_extremal}),
+which govern the part of the shadow boundary parametrized by $r_0$,
+simplify to
+\begin{subequations}
+\begin{align}
+    & \alpha = \frac{(r_0 - m)^2 - 2 m^2}{m r_{\Obs}} \label{e:gik:shadow_alpha_a1_equat} \\
+    & \beta = \frac{\eps_\th}{m r_{\Obs}} r_0 \sqrt{r_0(4 m - r_0)} . \label{e:gik:shadow_beta_a1_equat}
+\end{align}
+\end{subequations}
+Let us then extract $r_0$ from Eq.~(\ref{e:gik:shadow_alpha_a1_equat}):
+\[
+    r_0 = m \left( 1 + \sqrt{2 + \frac{r_{\Obs}}{m}\alpha} \right)
+\]
+and substitute it into the square of Eq.~(\ref{e:gik:shadow_beta_a1_equat}); we get (using $\eps_\th^2 = 1$)
+\be \label{e:gik:beta2_alpha}
+    \beta^2 = \frac{m^2}{r_{\Obs}^2} \left( 1 + \sqrt{2 + \frac{r_{\Obs}}{m}\alpha}\,  \right) ^3
+    \left( 3 -  \sqrt{2 + \frac{r_{\Obs}}{m}\alpha} \, \right) .
+\ee
+At this stage, it is worth to introduce explicitely the rescaled angular coordinates used
+in Figs.~\ref{f:gik:shadow_a1_th90_part} and \ref{f:gik:shadow_a1}:
+\be \label{e:gik:def_bar_alp_bet}
+    \bar{\alpha} := \frac{r_{\Obs}}{m} \alpha \qand
+    \bar{\beta} := \frac{r_{\Obs}}{m} \beta .
+\ee
+Then, by expanding its right-hand side, we can rewrite Eq.~(\ref{e:gik:beta2_alpha}) as
+\be \label{e:gik:beta2_alpha_expanded}
+    \bar{\beta}^2 = - \bar{\alpha}^2 + 2 \bar{\alpha} + 8 \sqrt{\bar{\alpha} + 2} + 11 .
+\ee
+Let us introduce new screen coordinates $(\hat{\alpha}, \hat{\beta})$ by
+shifting the origin to $(\bar{\alpha},\bar{\beta}) = (-1, 0)$:
+\be
+    \hat{\alpha} := \bar{\alpha} + 1  \qand
+    \hat{\beta} := \bar{\beta} .
+\ee
+We can then recast Eq.~(\ref{e:gik:beta2_alpha_expanded}) as
+\be \label{e:gik:al2be2_prov}
+    \hat{\alpha}^2 + \hat{\beta}^2 - 4 \hat{\alpha} = 8 \left( \sqrt{\hat{\alpha} + 1} + 1 \right).
+\ee
+The square of this expression is
+\[
+   \left( \hat{\alpha}^2 + \hat{\beta}^2  - 4 \hat{\alpha} \right)^2 =
+    64 \left( \hat{\alpha} + 2 \sqrt{\hat{\alpha} + 1} + 2 \right) .
+\]
+Using Eq.~(\ref{e:gik:al2be2_prov}) to get rid of the square root, we obtain
+\be \label{e:gik:cardioid_Cartesian}
+   \left( \hat{\alpha}^2 + \hat{\beta}^2  - 4 \hat{\alpha} \right)^2 =
+    16 \left(  \hat{\alpha}^2 + \hat{\beta}^2 \right) .
+\ee
+The reader may have recognized the Cartesian equation of a cardioid\index{cardioid}. To put it
+in a more familiar form, let us introduce the polar coordinates $(\rho,\phi)$
+defined by $\rho^2 := \hat{\alpha}^2 + \hat{\beta}^2$, $\cos\phi := \hat{\alpha}/\rho$
+and $\sin\phi := \hat{\beta}/\rho$.
+Then Eq.~(\ref{e:gik:cardioid_Cartesian}) becomes
+$(\rho^2 - 4 \rho\cos\phi )^2 = 16 \rho^2$,
+which is equivalent to $(\rho - 4\cos\phi)^2 = 16$, i.e.
+to $\rho = \pm 4 + 4\cos\phi$.
+Given that $\rho \geq 0$, the $\pm$ sign must be $+$, so that we end up with
+\be
+    \rho = 4 \left( 1 + \cos\phi \right) .
+\ee
+We recognize the polar equation of a cardioid\index{cardioid}, generated by a circle of radius 2 rolling around a
+circle of the same radius and centered at $(\hat{\alpha},\hat{\beta}) = (2,0) \iff
+(\bar{\alpha},\bar{\beta}) = (1, 0)$.
+
+\begin{figure}
+\centerline{
+\includegraphics[height=0.28\textheight]{gik_shadow_cardioid.pdf} }
+\caption[]{\label{f:gik:shadow_cardioid} \footnotesize
+Cardioid defined by the polar equation $\rho = 4 \left( 1 + \cos\phi \right)$ (dotted blue curve)
+and boundary of the shadow of an extremal Kerr black hole seen from the equatorial
+plane (red curve). The screen coordinates $(\bar{\alpha},\bar{\beta})$ are
+defined by Eq.~(\ref{e:gik:def_bar_alp_bet}), while $(\rho,\phi)$ are polar
+coordinates around the point $(\bar{\alpha},\bar{\beta})=(-1,0)$, i.e.
+$\rho := \sqrt{(\bar{\alpha}+1)^2 + \bar{\beta}^2}$ and $\sin\phi := \bar{\beta}/\rho$.
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_shadow}]}
+}
+\end{figure}
+
+As it is clear from the starting point of the above calculation, the cardioid corresponds only to the part of the shadow boundary parametrized by $r_0$, i.e. the part depicted in
+Fig.~\ref{f:gik:shadow_a1_th90_part}. It does not reproduce the NHEK line. Actually, adding
+the NHEK line results in the convex hull of the cardioid, as shown in Fig.~\ref{f:gik:shadow_cardioid}.
+
+\begin{remark}
+It is amusing to note that the cardioid is involved in two optical phenomena of
+very distinct origin: in classical optics, it appears as
+the caustic generated by reflection of light on a circular material, such as a bowl or
+a coffee cup, and at the same time, it delineates the shadow of
+some black holes of general relativity.
+\end{remark}
+
+\begin{remark}
+For $\th_{\Obs}\neq \pi/2$, the shape of the extremal Kerr black hole's shadow
+is no longer a cardioid. It is however still a quartic algebraic curve,
+i.e. $(\bar{\alpha},\bar{\beta})$ obey an algebraic equation of degree 4,
+as in Eq.~(\ref{e:gik:cardioid_Cartesian}). Moreover, it is a classical elementary curve,
+namely a \emph{Cartesian oval}\index{Cartesian!oval}, also
+known as \emph{oval of Descartes}\index{oval!Cartesian --}\index{oval!of Descartes},
+as shown in Ref.~\cite{GrallL20c}. More precisely, it is exactly such an oval
+for $\th_{\Obs} \leq  \th_{\rm crit}$ or $\th_{\Obs} \geq \pi - \th_{\rm crit}$.
+For $\th_{\rm crit}  < \th_{\Obs} < \pi - \th_{\rm crit}$, i.e. when the NHEK line is present, it is the convex hull of a Cartesian oval.
+\end{remark}
+
+\begin{figure}
+\begin{center}
+\includegraphics[height=0.28\textheight]{gik_shadow_comp_th90.pdf} \\[1ex]
+\includegraphics[height=0.28\textheight]{gik_shadow_comp_th30.pdf}\qquad
+\includegraphics[height=0.28\textheight]{gik_shadow_comp_th00.pdf}
+\end{center}
+\caption[]{\label{f:gik:shadow_comp_th} \footnotesize
+Comparing the shadows for different values of $a$ at fixed observer's inclination
+angle: $\th_{\Obs} = \pi/2$ (top panel),   $\th_{\Obs} = \pi/6$ (lower left panel)
+and $\th_{\Obs} = 0$ (lower right panel).
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_shadow}]}
+}
+\end{figure}
 
 
 
-
-
-
-
+\subsection{Comparing the shadows at fixed inclination}
 
 
 
