@@ -2260,7 +2260,7 @@ given by Eqs.~(\ref{e:gik:spher_ell_r0})--(\ref{e:gik:spher_q_r0}):
 \begin{subequations}
 \label{e:gik:shadow_param_eq}
 \begin{align}
-& \alpha =  - \frac{\ell_{\rm c}(r_0)}{r_{\Obs}\sin\th_{\Obs}}  \\
+& \alpha =  - \frac{\ell_{\rm c}(r_0)}{r_{\Obs}\sin\th_{\Obs}}  \label{e:gik:shadow_param_eq_alpha}\\
 & \beta =  \frac{\eps_\th}{r_{\Obs}}
         \sqrt{ q_{\rm c}(r_0) + \cos^2\th_{\Obs} \left( a^2
     - \frac{\ell_{\rm c}(r_0)^2}{\sin^2\th_{\Obs}} \right) } . \label{e:gik:shadow_param_eq_beta}
@@ -2355,7 +2355,7 @@ so that it is the symmetric of the upper half with respect to the $\alpha$-axis.
 
 The result of the computation is shown in
 Fig.~\ref{f:gik:shadow_a95} for a Kerr black hole with
-$a=0.95\, m$ and various inclination angle of observer $\Obs$.
+$a=0.95\, m$ and various inclination angles of observer $\Obs$.
 For $\th_{\Obs}=\pi/2$ the parameter $r_0$ of the critical null geodesics
 delineating the shadow's boundary spans the full interval
 $[r_{\rm ph}^+, r_{\rm ph}^-] \simeq [1.386\, m,\; 3.955\, m]$.
@@ -2371,18 +2371,39 @@ been rescaled by $(m/r_{\Obs})^{-1}$.
 Values of $m/r_{\Obs}$ for some astrophysical black holes are provided
 in Table~\ref{t:gik:scale_factor}; the observer's radial coordinate $r_{\Obs}$ is then
 nothing but the distance of the black hole to the Earth. These values of
-$m/r_{\Obs}$ are tiny, being at most $2.4\; 10^{-11} = 5.0 \, \mu{\rm as}$ for
+$m/r_{\Obs}$ are tiny, being at most $2.4\; 10^{-11} = 5.0 \; \mu{\rm as}$
+(microarcseconds; $1\; \mu{\rm as} = 4.848\; 10^{-12}\; {\rm rad}$)
+for
 the (known) black hole of largest apparent size as seen from Earth, Sgr~A*.
 Given that the diameter of the shadow is $\sim 10$ in the scale
 $m/r_{\Obs}$ used in Fig.~\ref{f:gik:shadow_a95}, this means that the
 angular size of Sgr~A* shadow as seen from Earth is only $\sim 50\; \mu{\rm as}$.
-Such a value has become recently in the realm of astronomical instruments,
+Such a small value\footnote{For comparison, the angular resolution of the
+Hubble Space Telescope\index{Hubble Space Telescope} is $\sim 0.1'' = 10^5\; \mu{\rm as}$!}
+has entered recently in the realm of observational astronomy,
 with the advent of the Event Horizon Telescope\index{Event Horizon Telescope} \cite{EHT19a},
 whose angular resolution is of order $20\; \mu{\rm as}$.
 We also note from Table~\ref{t:gik:scale_factor} that the size of the shadow
 of a stellar-mass black hole in our galaxy, such as Cygnus X-1, is even more tiny,
-by a factor $10^{-5}$, which makes the shadow of this type of black holes out of reach
+by a factor $10^{-5}$, which makes the shadow of this kind of black holes out of reach
 by the current technology.
+
+The main feature that appears in Fig.~\ref{f:gik:shadow_a95}, all the more
+that $\th_{\Obs}$ is close to $\pi/2$, is that
+the shadow is shifted to the right and its left edge is flatten, as compared
+to the shadow for $\th_{\Obs}= 0$ (or $\pi$).
+This can be understood by noticing that the
+critical null geodesics forming the left edge arise form regions of smaller $r_0$
+than those on the right edge (cf. the color code). For instance, the left critical null geodesic
+at $\beta=0$ has $\alpha<0$ and $\ell > 0$ (cf. the minus sign in
+Eq.~(\ref{e:gik:shadow_param_eq_alpha}))
+and arises from the prograde outer circular photon orbit\index{prograde!outer circular!photon orbit} lying at $r_0 = r_{\rm ph}^+$
+in the equatorial plane (cf. Sec.~\ref{s:gik:circular_orbits}), while the right one at $\beta=0$
+has $\alpha>0$ and $\ell < 0$ and arises from the retrograde outer circular photon orbit\index{retrograde!outer circular!photon orbit}
+at $r_0 = r_{\rm ph}^-$. That prograde (resp. retrograde) geodesics impact the screen
+on the left (resp. right) side is easily recovered by remembering that the $\beta$-axis
+($\alpha=0$) coincides with the orthogonal projection of the black hole's spin onto the
+observer's screen, with the spin being oriented upward.
 
 \begin{figure}
 \centerline{
@@ -2429,6 +2450,22 @@ as a solution of $\ell_{\rm c}(r_0) = 0$, we get
     \qquad (\th_{\Obs} = 0\ \mbox{or}\  \th_{\Obs} = \pi)
 \ee
 where $r_{\rm ph}^{\rm pol}$ is the function (\ref{e:gik:rph_pol}) of $(m, a)$.
+
+\begin{example}
+An example of shadow seen from the rotation axis is shown in the lower right panel of
+Fig.~\ref{f:gik:shadow_a95}. The Kerr spin parameter is $a=0.95\, m$, for which
+formula~(\ref{e:gik:rph_pol})
+yields $r_{\rm ph}^{\rm pol} \simeq 2.493\, m$,
+so that Eq.~(\ref{e:gik:R_shadow_axis}) results in
+$R_{\rm shad} \simeq 4.875\, m / r_{\Obs}$.
+We note that the shadow's boundary is depicted in the same color (green)
+as the part of the boundary in the other panels that crosses the $\beta$-axis,
+which is expected since the critical null geodesics that reach the screen along
+that axis have $\ell=0$ and thus the same parameter $r_0 = r_{\rm ph}^{\rm pol}$
+as all the critical null geodesics forming the shadow's boundary for $\th_{\Obs} = 0$
+or $\pi$.
+\end{example}
+
 The shadow radius
 $R_{\rm shad}$ is a decreasing function of $a$, which is depicted in Fig.~\ref{f:gik:shadow_radius_axis}.
 Note that its variation range is pretty limited, since the limits
@@ -2448,20 +2485,6 @@ The limit $a\to 0$ is in agreement with the result for the shadow of a
 Schwarzschild black hole obtained in Sec.~\ref{s:gis:shadow}.
 \end{remark}
 
-\begin{example}
-An example of shadow seen from the rotation axis is shown in the lower right panel of
-Fig.~\ref{f:gik:shadow_a95}. The Kerr spin parameter is $a=0.95\, m$, for which
-formula~(\ref{e:gik:rph_pol})
-yields $r_{\rm ph}^{\rm pol} \simeq 2.493\, m$,
-so that Eq.~(\ref{e:gik:R_shadow_axis}) results in
-$R_{\rm shad} \simeq 4.875\, m / r_{\Obs}$.
-We note that the shadow's boundary is depicted in the same color (green)
-as the part of the boundary in the other panels that crosses the $\beta$-axis,
-which is expected since the critical null geodesics that reach the screen along
-that axis have $\ell=0$ and thus the same parameter $r_0 = r_{\rm ph}^{\rm pol}$
-as all the critical null geodesics forming the shadow's boundary for $\th_{\Obs} = 0$
-or $\pi$.
-\end{example}
 
 \subsection{Shadow of an extremal Kerr black hole} \label{s:gik:shadow_extremal}
 
@@ -2830,9 +2853,25 @@ and $\th_{\Obs} = 0$ (lower right panel).
 
 \subsection{Comparing the shadows at fixed inclination}
 
+From an observational point of view, it may happen that the inclination angle
+$\th_{\Obs}$ is known. For instance, in the case of M87*,
+a large jet emanating from the close vicinity of the black is observed
+(actually since 1918, i.e. well before one suspects a black hole to lie
+in the nucleus of the galaxy M87)
+and most (all?) theoretical models predict that the jet is alined with
+the rotation axis. The inclination  $\iota$ of the jet with respect to the
+line of sight is estimated from observed apparent motions within the jet,
+resulting in a value around $\iota \sim 20^\circ$
+\cite{MerteLWH16,WalkeHDLJ18}. In particular, the observation of
+apparent superluminal motions\index{superluminal motion}, up to $v_{\rm app} \sim 6 c$, requires
+both relativistic velocities and $\iota$ being a small angle (see e.g. Sec. 5.7.4 of Ref.~\cite{Gourg13}).
+Assuming that the jet axis is alined with the rotation axis, we have either
+$\th_{\Obs} = \iota$ or $\th_{\Obs} = \pi - \iota$.
 
-
-
+Figure~\ref{f:gik:shadow_comp_th} compares the black hole shadows at a fixed
+value of $\th_{\Obs}$ for various values of the black hole spin parameter $a$.
+For $\th_{\Obs}=0$, we recover the feature found in Sec.~\ref{s:gik:shadow_rot_axis},
+namely that the shadow depends very weakly on the spin.
 
 
 
