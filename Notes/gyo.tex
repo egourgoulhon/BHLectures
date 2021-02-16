@@ -1,0 +1,42 @@
+\chapter{Gyoto computations} \label{s:gyo}
+
+\minitoc
+
+\section{Introduction}
+
+
+\textsf{Gyoto}\index{Gyoto} (\url{https://gyoto.obspm.fr}) is a free open-source
+C++ code for computing orbits and ray-traced images in general relativity
+\cite{VincePGP11}.
+It has a Python interface and has the capability to integrate geodesics
+not only in analytical spacetimes (such as Kerr) but also in
+in numerical ones, i.e. spacetimes arising from numerical relativity.
+
+
+\section{Image computations}
+
+Here we provide the \textsf{Gyoto} input files, in XML format, that have been
+used to produce the images shown in Chaps.~\ref{s:gis} and \ref{s:gik}.
+To generate the images, it suffices to run \textsf{Gyoto} as
+\begin{center}
+\verb+gyoto input.xml output.fits+
+\end{center}
+By default, the computation is performed in parallel on 8 threads; you can
+adapt to your CPU by changing the field \texttt{NThreads} in the file
+\texttt{input.xml}. The output image is in FITS format and can be converted
+to PNG or JPEG by most image processing programs, such as \textsf{GIMP}.
+
+\subsection{Accretion disk around a Schwarzschild black hole} \label{s:gyo:Schwarz}
+
+The input XML files for generating the images shown in Fig.~\ref{f:gis:disk_images}
+are the files \verb+gis_disk*.xml+ in the directory\\
+\url{https://github.com/egourgoulhon/BHLectures/tree/master/gyoto}
+
+
+\subsection{Accretion disk around a Kerr black hole} \label{s:gyo:Kerr}
+
+The input XML files for generating the images shown in Figs.~\ref{f:gik:img_disk_a95}
+and \ref{f:gik:img_disk_a50}
+are the files \verb+gik_a*.xml+ in the directory\\
+\url{https://github.com/egourgoulhon/BHLectures/tree/master/gyoto}
+

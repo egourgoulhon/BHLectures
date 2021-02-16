@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Scenery>
-  <Metric kind = "KerrBL">
-    <Spin>
-      0.
-    </Spin>
+  <Metric kind = "KerrBL"> BL = Boyer-Lindquist
+    <Spin> 0. </Spin> 0. = Schwarzschild
   </Metric>
   <Screen>
     <Position>
@@ -11,17 +9,14 @@
       1000.
       0.0001
       0.
-    </Position>
+    </Position>  Boyer-Lindquist coordinates (t, r, theta, phi) of the observer
+                 with (t, r) in units of m
     <FieldOfView>
       0.0314159265358979323846264338327950288419716
-    </FieldOfView>
-    <Resolution>
-      512
-    </Resolution>
+    </FieldOfView>  field of view in radians
+    <Resolution> 512 </Resolution>  number of pixels per direction
   </Screen>
   <Astrobj kind = "PageThorneDisk"/>
   <MinimumTime> -2000. </MinimumTime>
-  <!--Quantities> User4 </Quantities-->
-  Bolometric emission, this is the default (and only intensity) for
-  PageThorneDisk.
+  <NThreads> 8 </NThreads> number of parallel threads; adapt to your CPU
 </Scenery>
