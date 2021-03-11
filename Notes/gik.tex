@@ -2921,15 +2921,15 @@ has been coined by Heino Falcke\index{Falcke, H.}, Fulvio Melia\index{Melia, F.}
 
 \section{Images} \label{s:gik:images}
 
-\subsection{Multiples images}
+\subsection{Multiples images of a single source}
 
 The main features of images of a single luminous source on the screen of a remote observer in Kerr spacetime are similar to those obtained for Schwarzschild spacetime in Sec.~\ref{s:gis:images}.
-In particular, a single source, wherever localized in the black hole exterior (region $\M_{\rm I}$),
+In particular, a single point-like source, wherever localized in the black hole exterior (region $\M_{\rm I}$),
 gives birth to two infinite sequences of images on the screen of the asymptotic inertial observer,
-both of them converging to the critical curve $\mathscr{C}$. Typically, one sequence is with
-$\ell>0$ and the other one with $\ell < 0$.
-Each image in a given sequence can be labeled by the number $n$ of round trip around the black hole
-and is dimmer and dimmer as $n$ increases.
+both sequences converging to the critical curve $\mathscr{C}$. Typically, one sequence is formed
+by null geodesics having a reduced angular momentum
+$\ell>0$ and the other one by null geodesics with $\ell < 0$.
+Each image in a given sequence can be labeled by the number $n$ of half-round trips around the black hole and is dimmer and dimmer as $n$ increases.
 
 
 
@@ -2937,16 +2937,21 @@ and is dimmer and dimmer as $n$ increases.
 
 Beside gravitational waves, the main way of observing black holes is through
 the electromagnetic radiation from material orbiting around them,
-either in the form of stars, as in the case of Sgr~A*, or in the
+either in the form of stars, as in the case of Sgr~A*\index{Sagittarius A*}  \cite{Abute_al18a,Abute_al20}, or in the
 form of an accretion disk\index{accretion!disk} \cite{AbramF13}.
-In the latter case, most observations are spectrum from unresolved accretion disks.
+In the latter case, most observations are spectra and time evolution of the
+global luminosity (the so-called \emph{light curve}\index{light!curve}) of the
+unresolved accretion disk.
 However recently, the Event Horizon Telescope team has produced the first
-resolved image of an accretion disk in the close vicinity of the black hole M87*
+resolved image of an accretion disk around a black hole
 \cite{EHT19a,Wielg_al20}.
+In order to discuss this image in Sec.~\ref{s:gik:M87_image},
+let us take a look at the generic properties of (theoretical) images of accretion flows around
+a Kerr black hole.
 
 Figures~\ref{f:gik:img_disk_a50} and \ref{f:gik:img_disk_a95}
-present some computed images of an accretion disk around a Kerr black hole,
-for respectively $a=0.5\, m$ and $a=0.95\, m$.
+present some computed images of an accretion disk around a Kerr black hole
+of spin parameter $a=0.5\, m$ and $a=0.95\, m$, respectively.
 The accretion disk is a simple model developed in Ref.~\cite{VinceWAGLPG21}.
 It consists in a geometrically thick and optically thin accretion disk with
 an opening angle of $1.1\; {\rm rad} \simeq 63^\circ$ and an inner radius located at the prograde
@@ -3038,7 +3043,7 @@ right column of Fig.~\ref{f:gik:img_disk_a50}. The tertiary image ($n=2$) is the
 almost indistinguishable from $\mathscr{C}$, in agreement with the exponential
 convergence of high order images to $\mathscr{C}$. This exponential convergence
 has been established for $a=0$ by Eq.~(\ref{e:gis:bn_sequence}),
-but it holds as well for $a \neq 0$ \cite{GrallL20a}.
+but it holds for $a \neq 0$ as well \cite{GrallL20a}.
 
 Another common feature with the Schwarzschild images of Fig.~\ref{f:gis:disk_images}
 is the left part of the primary image being brighter than the right part
@@ -3054,11 +3059,12 @@ means that a given null geodesic touching the screen ``carries'' not only a phot
 from the disk's surface but also photons from the disk interior, actually all the photons
 emitted along the path of the geodesic inside the disk. This cumulative property
 results in a enhanced brightness of the secondary image and makes it appear
-as a relatively bright ring, as it is clear on the $\th_{\Obs}=0$ and
+as a relatively bright ring, as it is clearly seen on the $\th_{\Obs}=0$ and
 $\th_{\Obs}=\pi/6$ images of Fig.~\ref{f:gik:img_disk_a50}. Another consequence
 of optical thinness is that the bottom part of the secondary and tertiary
-images are not blocked at high inclination by the part of the accretion
-disk standing in the foreground, as they are in the images of Fig.~\ref{f:gis:disk_images},
+images are not blocked by the part of the accretion
+disk standing in the foreground for $\th_{\Obs}$ close to $\pi/2$,
+as they are in the images of Fig.~\ref{f:gis:disk_images},
 which have been obtained for an optically thick disk model.
 
 Another difference between the two sets of
@@ -3091,7 +3097,7 @@ on Fig.~\ref{f:gik:img_disk_a95}, which shows images for the
 Kerr parameter $a = 0.95\, m$.
 There, the boundary of the central dark spot is clearly distinct from
 the critical curve and lies within the latter.
-This is actually due to the inner part of the accretion disk being located
+This is due to the inner part of the accretion disk being located
 well within some spherical photon orbits, including the polar ones. Indeed, for $a=0.95\, m$,
 we have $r_{\rm ISCO}^+ \simeq 1.937\, m$, while
 the radius of the retrograde circular photon orbit is $r_{\rm ph}^-\simeq 3.995\, m$
@@ -3099,14 +3105,15 @@ and that of polar spherical orbits is $r_{\rm ph}^{\rm pol} \simeq 2.493\, m$.
 Given that $r_{\rm ph}^+\simeq 1.386\, m$, we have thus
 $r_{\rm ph}^+ < r_{\rm ISCO}^+ < r_{\rm ph}^{\rm pol} < r_{\rm ph}^-$.
 More generally, using formulas (\ref{e:gek:r_ISCO}), (\ref{e:gik:rph_pm}) and (\ref{e:gik:rph_pol}),
-we have (cf. Fig.~\ref{f:gik:rISCO_rph})
+we have
 \be
     r_{\rm ISCO}^+ < r_{\rm ph}^-  \iff a > 0.638\, m
     \qand
     r_{\rm ISCO}^+ < r_{\rm ph}^{\rm pol} \iff a > 0.853\, m .
 \ee
-Hence, for large spins, if the inner boundary of the accretion disk is at the ISCO,
-a large part of the primary image lies inside the critical curve $\mathscr{C}$.
+These properties are illustrated in  Fig.~\ref{f:gik:rISCO_rph}.
+Hence, for large spins, if the inner boundary of the accretion disk is set by the prograde ISCO,
+a large part of the primary image lies strictly inside the critical curve $\mathscr{C}$.
 Let us for instance consider the image for $\th_{\Obs}=0$ in Fig.~\ref{f:gik:img_disk_a95}, which
 is the easiest to understand since for $\th_{\Obs}=0$, $\mathscr{C}$ involves only the $\ell=0$ critical null geodesics (cf. Sec.~\ref{s:gik:shadow_rot_axis}), i.e. those that are rolling indefinitely around the sphere $r_0 = r_{\rm ph}^{\rm pol}$
 in their asymptotic past. Since $r_{\rm ISCO}^+ < r_{\rm ph}^{\rm pol}$ in the present case, this implies that the part of the disk located at
@@ -3118,15 +3125,19 @@ for $a=0$ in Chap.~\ref{s:gis}: formula (\ref{e:gis:bn_sequence}) along with
 $A(r_{\rm em}) < 0$ for $r_{\rm em} < 3 m = r_{\rm ph}^{\rm pol}(a=0)$ (cf. Fig.~\ref{f:gis:A_rem})
 yields impact parameters $b_n^\pm$ that are lower than $b_{\rm c}$, the latter being
 nothing but the radius of $\mathscr{C}$ for $a=0$.
-Hence we conclude that if the black hole is surrounded by some emitting material
-located within some of the spherical photon orbits, the actual ``shadow'' does
-not correspond to the shadow defined in Sec.~\ref{s:gik:shadow_generic} as the interior of the critical curve.
+Hence we conclude that
+\begin{greybox}
+If the black hole is surrounded by some emitting material
+located within some of the spherical photon orbits,
+the central black spot in the images does not correspond to
+the shadow defined in Sec.~\ref{s:gik:shadow_generic} as the interior of the critical curve $\mathscr{C}$. The black spot is actually smaller than the shadow, lying strictly inside $\mathscr{C}$.
+\end{greybox}
 This holds for $a=0$ as well, if the emitting matter is not limited inward by the ISCO
 as in Fig.~\ref{f:gis:disk_images} (see e.g. Fig.~5 in Ref.~\cite{GrallHW19}
 or Fig.~2 in Ref.~\cite{VinceWAGLPG21}). Note however that in the case of a
 purely radial inflow, the emitted photons suffer such a strong Doppler effect that
 the interior of the critical curve is very dark, so that the effective shadow
-coincides with the academic shadow of Sec.~\ref{s:gik:shadow_generic} in that case,
+coincides with the academic shadow of Sec.~\ref{s:gik:shadow_generic},
 as shown in Refs.~\cite{FalckMA00,NarayJG19}.
 
 
@@ -3138,42 +3149,51 @@ quite close to a circle, as shown in Fig.~\ref{f:gik:shadow_a95}. The only
 major effect of a high inclination angle is to move the high order images
 the right.
 
-Moreover, we note on Fig.~\ref{f:gik:img_disk_a95}
-that the secondary image ($n=1$) is brighter than the primary one ($n=0$)
-and the tertiary one ($n=3$), which is very thin and superposed to the secondary image,
+Besides, we note on Fig.~\ref{f:gik:img_disk_a95}
+that the secondary image ($n=1$) is brighter than the primary one ($n=0$). Moreover,
+the tertiary one ($n=3$), which is very thin and superposed onto the secondary image,
 is even brighter. This is because the higher the image order, the larger the
-number $n$ of half-turns around the black hole of the involved geodesics, so that
-each geodesic ``carries'' photons emitted from different places in the disk,
-along quite a long path length, making
-these photons to accumulate on the same screen pixel. Note that this holds only
+number $n$ of half-turns around the black hole of the involved geodesics,
+and thus the longer the path length of the geodesics inside the disk, resulting
+a larger number of photons ``carried'' by a given geodesic and accumulating on
+the same pixel of the screen. Note that this holds only
 because the disk is optically thin. Would it be optically thick, a null geodesic
 impacting the screen, even if very close to a critical geodesic, would carry only a single photon: the photon emitted at the
 first intersection of the geodesic with the disk's surface when traced backward in time from the screen.
-In Sec.~\ref{s:gis:image_disk} (Schwarzschild case), we considered an optically thick
+In Sec.~\ref{s:gis:image_disk} (Schwarzschild case), we considered such an optically thick
 disk (Page-Thorne model) and the secondary and tertiary images were not brighter than
 the primary one (cf. Fig.~\ref{f:gis:disk_images}). However in that case, the main
 reason was that the emitting region was too far from the black hole for a close-to-critical
 geodesic to visit various parts of the disk. For instance, in the lower part of Fig.~\ref{f:gis:disk_face_on}, consider the red geodesic that intersects the disk
 at the point of coordinates $(x,y) = (0, 6m)$; it contributes to
-the tertiary image and if one would extend it to the past beyond the point $(0, 6m)$ it
+the tertiary image and if one would extend it to the past beyond the point $(0, 6m)$, it
 would never encounter the disk again, leaving the figure at the upper left corner
-in a more or less straight line. Hence two conditions must be met to yield
-bright high-order images: the emitting material must be (i) optically
-thin and (ii) located in the vicinity of some spherical photon orbits.
-
-The set constituted by the secondary image and higher order images is called
-the \defin{photon ring}\index{photon!ring}\index{ring!photon --}. As shown
-in Fig.~\ref{f:gik:img_disk_a95}, it generally appears as a single ring because
+in a more or less straight line. We shall therefore state:
+\begin{greybox}
+The set constituted by the secondary image and higher order images, i.e. all images
+of order $n\geq 1$, is called
+the \defin{photon ring}\index{photon!ring}\index{ring!photon --}.
+It appears as a bright feature on the observer's screen under two conditions:
+the emitting material must (i) be optically
+thin and (ii) be located in the vicinity of some spherical photon orbits.
+\end{greybox}
+As shown
+in Fig.~\ref{f:gik:img_disk_a95}, the photon ring generally appears as a single ring because
 the successive images are superposed on each other and converge exponentially
-to the the critical curve $\mathscr{C}$. Only the $n=1$ and $n=2$ images
-are visible in Fig.~\ref{f:gik:img_disk_a95}, by lack of resolution, since
+to the the critical curve $\mathscr{C}$. Only the $n=1$ and $n=2$ parts of the photon ring
+are visible in Fig.~\ref{f:gik:img_disk_a95} by lack of resolution, since
 the thickness of the $n$-th image decays exponentially with $n$ \cite{GrallL20a}.
 We note on Figs.~\ref{f:gik:img_disk_a50} and \ref{f:gik:img_disk_a95}
 that the $n=2$ image (tertiary image) is already very close to $\mathscr{C}$.
-So in practice the photon ring materializes the critical curve. It is therefore
-a potentially observable feature \cite{Johns_al20} that can provide information on the
-spacetime metric independently of the emission model, e.g. checking that the metric is the Kerr metric and measuring
-the spin parameter $a$.
+We conclude that
+\begin{greybox}
+In practice the photon ring, and more precisely the part $n\geq 2$ of it,
+materializes the critical curve.
+\end{greybox}
+The photon ring is therefore
+a potentially observable feature that can provide information on the
+spacetime metric independently of the emission model \cite{Johns_al20}.
+For instance, by analyzing the photon ring, one could check that the metric is the Kerr metric and measure the spin parameter $a$.
 
 \begin{remark}
 The reader is warned that the term \emph{photon ring} is sometimes used in
@@ -3181,9 +3201,11 @@ the literature for circular photon orbits, as the orbit at $r=3m$ in Schwarzschi
 and the orbits at $r=r_{\rm ph}^\pm$ in Kerr spacetime. We are using it here
 not for an orbit around the black hole but for a feature on the screen of a remote observer,
 in agreement with Refs.~\cite{BeckwD05,JohanP10,Johns_al20,GrallL20a,GrallL20c}.
-Recently the term \emph{secondary ring} has been introduced
-\cite{VinceWAGLPG21}. Some authors have distinguished the secondary image
-by calling it the \emph{lensing ring} \cite{GrallHW19}.
+Recently the term \emph{secondary ring}\index{secondary!ring}\index{ring!secondary --}. has been introduced
+\cite{VinceWAGLPG21} to denote the subpart of the photon ring that contributes
+significantly to the flux in the image.
+Besides, some authors have distinguished the secondary image ($n=1$)
+by calling it the \emph{lensing ring}\index{lensing!ring}\index{ring!lensing --} \cite{GrallHW19}.
 \end{remark}
 
 \begin{hist} \label{h:gik:disk_images}
@@ -3218,7 +3240,7 @@ and low intensity inside it. For this reason, they introduced the term
 \emph{shadow of the black hole}\index{black hole!shadow}\index{shadow!black hole --}
 for the interior of the critical curve, the latter being called by them
 the \emph{apparent boundary of the black hole}. Moreover, in the same article \cite{FalckMA00},
-they advanced that, in the case of Galactic Center black hole Sgr~A*, the shadow could be observed
+they advanced that, in the case of Galactic Center black hole Sgr~A*\index{Sagittarius A*}, the shadow could be observed
 by means of very-long-baseline interferometry (VLBI)\index{VLBI}, thereby proposing what would
 become the Event Horizon Telescope\index{Event Horizon Telescope} two decades later \cite{EHT19a}.
 \end{hist}
@@ -3227,8 +3249,8 @@ become the Event Horizon Telescope\index{Event Horizon Telescope} two decades la
 \subsection{EHT image of M87*} \label{s:gik:M87_image}
 
 The computed black hole images, as those shown in Figs.~\ref{f:gik:img_disk_a50}
-and \ref{f:gik:img_disk_a95}, can now be contrasted with actual observations, since
-the release of the very first observed image of a black hole by the
+and \ref{f:gik:img_disk_a95}, can be contrasted with actual observations since
+the release of the very first observed image by the
 Event Horizon Telescope (EHT)\index{Event Horizon Telescope} collaboration in 2019 \cite{EHT19a,Wielg_al20}. This image, shown in Fig.~\ref{f:gik:M87_EHT_crit}, is that
 of the supermassive black hole M87*\index{M87*} in the nucleus of
 the giant elliptic galaxy Messier~87 at the center of the Virgo cluster. It is actually
@@ -3263,7 +3285,8 @@ EHT image: Fig.~3 of Ref.~\cite{EHT19a}]}
 In order to interpret the EHT image, it is natural to superpose the (theoretical)
 critical curve $\mathscr{C}$ of a Kerr black hole
 onto it. This is all the more meaningful that $\mathscr{C}$ is closely related to
-the photon ring, as discussed above. In order to do so, one must
+the photon ring, as discussed in Sec.~\ref{s:gik:image_disk}. In order to perform the
+superposition for a given value of the Kerr spin parameter $a$, one must
 know three things: (i) the overall scale factor $m/r_{\Obs}$, (ii) the angle $\th_{\Obs}$ between the black hole rotation axis and the line of
 sight and (iii) the orientation $\Theta$ of the projection of the rotation axis
 onto the plane of the sky. It turns out that for M87* these three quantities can be estimated. Indeed, the distance from the Earth to M87* has been measured to
@@ -3274,14 +3297,14 @@ a mass of only $m = 3.5\; 10^9 \, M_\odot$ \cite{WalshBHS13}; the discrepancy
 with the value from stellar dynamics has not been explained yet.}
 $m\simeq 6.2\; 10^9 \, M_\odot$ (cf. Table~\ref{t:gik:scale_factor} and references therein), hence the scale factor $m/r_{\Obs} \simeq 3.7 \; \mu{\rm as}$. Regarding
 $\th_{\Obs}$ and $\Theta$, both angles can be determined via reasonable assumptions, thanks
-to the large relativistic jet\index{jet} emanating from the close vicinity of the black hole\footnote{This jet has been discovered as early as 1918 \cite{Curtis1918},
+to the large relativistic jet\index{jet} emanating from the close vicinity of the black hole\footnote{This jet has been discovered in 1918 \cite{Curtis1918}, hence
 well before one suspects a black hole to lie
 in the core of the galaxy M87! It makes M87 belong to the category of galaxies
 with an \emph{active galactic nucleus (AGN)}\index{AGN}\index{active galactic nucleus}. The jet engine
 is related to the black hole, possibly via the Penrose process discussed in Sec.~\ref{s:ker:Penrose_proc}, see e.g. Ref.~\cite{AbramF13}.},
 since most (all?) theoretical models predict that the jet is aligned with
 the black hole's rotation axis. There are actually two jets, emitted from both
-sides of the black hole in opposite directions. Due to a strong Doppler beaming effect,
+sides of the black hole in opposite directions. Due to a strong Doppler beaming\index{Doppler!beaming} effect,
 the jet moving away from us, usually called the \emph{counterjet}\index{counterjet},
 is hardly visible, so that the large observed jet is the one moving towards us.
 The position angle of the jet in the plane of the sky, measured from the North axis,
@@ -3289,15 +3312,15 @@ is $\Theta_{\rm jet} \sim - 72^\circ$
 (see e.g. Fig.~1 in Ref.~\cite{WalkeHDLJ18}); it is indicated by the light blue dashed
 arrow in Fig.~\ref{f:gik:M87_EHT_crit} (the jet is not visible on the EHT image).
 The inclination  $\iota$ of the jet with respect to the
-line of sight is estimated from observed motions within the jet,
+line of sight is estimated from observed motions of ``nodes'' within the jet,
 resulting in a value around $\iota \sim 17^\circ$
 \cite{MerteLWH16,WalkeHDLJ18}. In particular, the detection of
 apparent superluminal motions\index{superluminal motion}, up to $v_{\rm app} \sim 6 c$, implies
 both relativistic velocities and $\iota$ being a small angle (see e.g. Sec. 5.7.4 of Ref.~\cite{Gourg13}).
-Assuming that the jet axis is aligned with the rotation axis, we have either
+Assuming that the jet axis is aligned with the black holes's rotation axis, we have either
 $\th_{\Obs} = \iota$ or $\th_{\Obs} = \pi - \iota$.
 
-The main feature of the EHT image is a broad annular region, whose bottom part is much brighter
+The main feature of the EHT image (Fig.~\ref{f:gik:M87_EHT_crit}) is a broad annular region, whose bottom part is much brighter
 than its top part. It is natural to interpret this brightness discrepancy as resulting from relativistic Doppler beaming: the bottom (resp. top) part corresponds to emitting material
 moving towards us (resp. receding from us) \cite{EHT19e}.
 Assuming that, so close to the black hole, the emitting
@@ -3329,12 +3352,12 @@ one cannot assert whether the annular structure in the image
 is the photon ring discussed in Sec.~\ref{s:gik:image_disk} blurred to the
 EHT resolution or the primary image of an accretion disk
 or some more complicated accretion flow.
-It follows that it is not possible to infer the spin parameter $a$ from that image,
+It follows that it is not possible to infer the (currently unknown) spin parameter $a$ from that image,
 not speaking about performing any strong test of general relativity
 (see Refs.~\cite{Grall21,GlampP21} for an extended discussion of this last point).
 However, this is the very first image of this type and the next images,
 which will result from some EHT upgrade or from space-based VLBI,
-will undoubtedly be sharper and will revolutionize black hole astronomy.
+will undoubtedly be sharper and will certainly revolutionize black hole astronomy.
 
 
 \subsection{Going further}
@@ -3343,8 +3366,8 @@ For a detailed study of images of the surroundings of a Kerr black hole,
 see Refs.~\cite{Dokuc19,DokucN19,DokucN20a,GrallL20a}. In particular, Ref.~\cite{GrallL20a}
 provides exact solutions of the null geodesic equation via elliptic integrals,
 generalizing those derived in Chap.~\ref{s:gis} for the Schwarzschild black hole.
-We have only discussed images as seen by a remote observer (``astronomical'' setting).
-For the images seen by an observer travelling close to, and even inside, a Kerr black hole,
-see the recent study~\cite{Riazu20}.
+We have discussed only images as seen by a remote observer, which is the ``astronomical'' setting.
+For the images seen by an observer travelling close to, and even inside, a Kerr black hole
+(the ``science-fiction'' setting), see the recent study~\cite{Riazu20}.
 
 
