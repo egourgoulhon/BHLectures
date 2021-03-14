@@ -5,11 +5,41 @@
 
 \section{Introduction}
 
+In the preceding chapters, the Schwarzschild spacetime was considered
+to be $(\M_{\rm IEF}, \w{g})$, where the manifold $\M_{\rm IEF}$
+is covered by the ingoing
+Eddington-Finkelstein coordinates. It turns out that this spacetime
+can be smoothly (actually analytically) extended to a larger spacetime,
+$(\M,\w{g})$ say, which on its side cannot be extended, i.e. is maximal.
+To construct $(\M,\w{g})$, we first introduce the so-called \emph{Kruskal-Szekeres}
+coordinates on $\M_{\rm IEF}$ in Sec.~\ref{s:max:KS}.
+These coordinates restore some symmetry between the ingoing
+radial null geodesics and the outgoing ones: both types of geodesics appear
+as straight lines in a spacetime diagram built on Kruskal-Szekeres coordinates,
+with a slope of $+1$ for the outgoing family and $-1$ for the ingoing one.
+Then it appears clearly that the outgoing radial null geodesics are artificially
+halted\footnote{Technically, one says that they are \emph{incomplete}\index{incomplete geodesic}\index{geodesic!incomplete --} geodesics, cf. Sec.~\ref{s:geo:existence_uniqueness}.}
+at some past boundary of $\M_{\rm IEF}$, while no curvature singularity is located there.
+This calls for an extension of the spacetime, which is performed
+in Sec.~\ref{s:sch:max_extens}, thanks to Kruskal-Szekeres coordinates.
+This extension is maximal; in particular, all
+incomplete geodesics are so because they either terminate to or emanate from a
+curvature singularity. In Sec.~\ref{s:max:Carter-Penrose}, we
+construct the Carter-Penrose diagram of the maximal Schwarzschild spacetime $(\M,\w{g})$,
+via two compactified versions of the Kruskal-Szekeres coordinates.
+We show that the simplest one, which is standard in the litterature,
+does not lead to a regular conformal completion
+of $(\M,\w{g})$, as defined in Sec.~\ref{s:glo:conf_compl}.
+The second version, built on Frolov-Novikov compactified coordinates,
+acheives this goal.
+Finally, in Sec.~\ref{s:max:ER_bridge}, we insestigate the hypersurfaces of
+constant Kruskal-Szekeres time, which connect two asymptotically flat regions
+of $(\M,\w{g})$ through the co-called \emph{Einstein-Rosen bridge}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Kruskal-Szekeres coordinates}
+\section{Kruskal-Szekeres coordinates} \label{s:max:KS}
 
 \subsection{Definition} \label{s:sch:KS_coord}
 
@@ -781,9 +811,8 @@ has also been found by Christian Fronsdal \cite{Frons59} in 1959, not via any ex
 an isometric embedding of the spacetime in the 6-dimensional Minkowski spacetime.
 \end{hist}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Bifurcate Killing horizon} \label{s:max:bifur_Kill_hor}
+\subsection{Bifurcate Killing horizon} \label{s:max:bifur_Kill_hor}
 
 As discussed in Sec.~\ref{s:sch:max_extens}, the Schwarzschild horizon
 $\Hor$ is
@@ -1305,7 +1334,7 @@ identified as a subset of $\R^2\times\SS^2$ [cf. Eq.~(\ref{e:max:range_tUtV})]
 and that the definitions of $\scri^+$, $\scri^-$, ${\scri'}^+$ and ${\scri'}^-$
 are in agreement with (\ref{e:max:scri_tUtV}). It is clear that $\tilde{\M}$
 is a manifold with boundary and that
-\be
+\be \label{e:max:scri_tM_4parts}
     \partial\tilde{\M} = \scri := \scri^+ \cup \scri^- \cup {\scri'}^+
             \cup {\scri'}^- .
 \ee
@@ -1406,7 +1435,7 @@ It is possible to construct an analytic conformal completion, but it involves mo
 complicated coordinate transformations. The latter start,
 not from the Kruskal-Szekeres coordinates
 $(U,V)$, but from the null coordinates $(u,v)$ defined by (\ref{e:sch:u_v_r_t}).
-We refer to the recent article \cite{HalacL14} for details.
+We refer to the article \cite{HalacL14} for details.
 \end{remark}
 
 \begin{figure}
@@ -1549,6 +1578,61 @@ The failure of diagram of Fig.~\ref{f:max:carter-penrose-std} to reproduce
 this behaviour reflects the fact that the coordinates $(\hat{T},\hat{X})$ are singular on the
 boundary, as discussed in Sec.~\ref{s:max:discus_hUhV}.
 
+
+\subsection{Black hole and white hole regions} \label{s:max:black_white}
+
+$(\tilde{\M},\w{\tilde{g}})$ is not only a conformal
+completion of the maximally extented Schwarzschild spacetime $(\M,\w{g})$,
+as established above, but it is a \emph{conformal completion at null infinity}\index{conformal!completion!at null infinity}, in the sense defined in Sec.~\ref{s:glo:def_conf_compl}.
+Indeed, we can rewrite the boundary $\scri$
+of $\tilde{\M}$ expressed by Eq.~(\ref{e:max:scri_tM_4parts}) as
+\be \label{e:max:scri_tM_2parts}
+    \scri = \scri^+_* \cup \scri^-_*,
+\ee
+with
+\be
+    \scri^+_* := \scri^+ \cup {\scri'}^+ \qand
+    \scri^-_* := \scri^- \cup {\scri'}^- .
+\ee
+It is clear that $\scri^+_*$ is never intersected by any past-directed causal curve
+and that $\scri^-_*$ is never intersected by any future-directed causal curve
+(cf. Fig.~\ref{f:max:carter-penrose-FN}). Hence the writing (\ref{e:max:scri_tM_2parts})
+agrees with Eq.~(\ref{e:glo:conf_comp_null_inf}) in the definition of a conformal
+completion at null infinity. $\scri^+_*$ is then the future null infinity
+of $(\M, \w{g})$ and $\scri^-_*$ its past null infinity.
+
+We are thus in position to apply the definitions of a black hole and a white hole
+given in Sec.~\ref{s:glo:def_BH}. The
+causal past of $\scri^+_*$ is $J^-(\scri^+_*) = \M_{\rm I}\cup \M_{\rm III}\cup \M_{\rm IV}$
+(cf. Fig.~\ref{f:max:carter-penrose-FN}). In view of the definition
+(\ref{e:glo:def_BH}), it follows that
+\begin{greybox}
+The maximal extension of Schwarzschild spacetime admits a black hole region,
+the interior of which is $\M_{\rm II}$. The black hole event horizon is the
+part of the bifurcate Killing horizon $\hat{\Hor}$ (cf. Sec.~\ref{s:max:bifur_Kill_hor})
+that has $\tilde{T}>0$.
+\end{greybox}
+The black hole region has thus the same interior $\M_{\rm II}$ as the black hole region
+of the Schwarzschild spacetime $(\M_{\rm IEF}, \w{g})$ considered in Chap.~\ref{s:sch}.
+It differs only a larger boundary: it is not reduced to the Schwarzschild horizon $\Hor$,
+but contains the part $\tilde{X}<0$ and $\tilde{T}>0$ of $\hat{\Hor}$.
+
+The novelty with respect to the original Schwarzschild spacetime $(\M_{\rm IEF}, \w{g})$
+is the existence of a white hole region. Indeed, the causal future of $\scri^-_*$ is
+$J^+(\scri^-_*) = \M_{\rm I}\cup \M_{\rm II}\cup \M_{\rm III}$
+(cf. Fig.~\ref{f:max:carter-penrose-FN}). In view of the definition
+(\ref{e:glo:def_white_hole}), it follows that
+\begin{greybox}
+The maximal extension of Schwarzschild spacetime admits a white hole region\index{white!hole},
+the interior of which is $\M_{\rm IV}$. The corresponding past event horizon is the
+part of the bifurcate Killing horizon $\hat{\Hor}$ (cf. Sec.~\ref{s:max:bifur_Kill_hor})
+that has $\tilde{T}<0$.
+\end{greybox}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{max_constant_T_slices.pdf}}
 \caption[]{\label{f:max:constant_T_slices} \footnotesize
@@ -1558,9 +1642,7 @@ the Euclidean space. When $T_0$ varies, the limit of these regions form
 the grey dotted curve.}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Einstein-Rosen bridge}
+\section{Einstein-Rosen bridge} \label{s:max:ER_bridge}
 
 \subsection{Hypersurfaces of constant Kruskal-Szekeres time} \label{s:max:hyp_const_T}
 
