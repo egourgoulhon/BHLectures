@@ -71,7 +71,7 @@ Such coordinates have been introduced for pictorial purposes by O'Neill\index{O'
 
 
 In this section, we choose the spacetime manifold to be the open subset $\M_{\rm BL}$
-of $\mathbb{R}^2\times\mathbb{S}^2$ formed by the disjoint union of
+of $\R^2\times\SS^2$ formed by the disjoint union of
 the following three components (cf. Fig.~\ref{f:ker:spher_view}):
 \begin{subequations}
 \begin{align}
@@ -87,7 +87,7 @@ where
 \ee
 and $\ring$ is the subset of $\R^2\times\SS^2$ defined in terms of the Boyer-Lindquist coordinates $(t,r,\th,\ph)$ by
 \be \label{e:ker:def_ring}
-    \ring = \left\{ p \in \R^2\times\SS^2,
+    \ring := \left\{ p \in \R^2\times\SS^2,
         \quad r(p) = 0 \ \mbox{and}\ \th(p) = \frac{\pi}{2} \right\} .
 \ee
 \begin{remark}
@@ -100,7 +100,7 @@ extension (Sec.~\ref{s:ker:max_extension}).
 \end{remark}
 
 \begin{remark} \label{r:ker:r_zero}
-One shall stress that the points $r=0$ are \emph{not} special points in
+One shall stress that the points having $r=0$ are \emph{not} special points in
 $\R^2\times\SS^2$ spanned by the coordinates $(t,r,\th,\ph)$. In particular,
 $(t,r) = (t_0, 0)$, where $t_0$ is a constant, defines a regular sphere
 $\Sp_0$ diffeomorphic to $\SS^2$. On the spacetime manifold $\M_{\rm BL}$, the
@@ -2616,8 +2616,10 @@ can also be seen as the projection in the $(\ti,r)$ plane of the field lines
 of $\w{\xi}$ (orbits of the stationary group action).
 
 The ingoing principal null geodesics (dashed green lines in
-Fig.~\ref{f:ker:3blocks_in}) are complete (cf. Sec.~\ref{s:geo:existence_uniqueness}):
-their affine parameter $\lambda=-r$
+Fig.~\ref{f:ker:3blocks_in}) are complete (cf. Sec.~\ref{s:geo:existence_uniqueness}),
+except for those lying in the equatorial plane, which hit the curvature singularity
+at $r=0$. Indeed, the affine parameter
+$\lambda=-r$ of any ingoing principal null geodesic with $\th\neq \pi/2$
 ranges from $-\infty$ (lower right of the diagram) to $+\infty$ (upper left). On the contrary, the outgoing principal null geodesics (solid green lines in
 Fig.~\ref{f:ker:3blocks_in}) are not complete: in $\M_{\rm I}$, their affine parameter
 $\lambda=r$ is bounded from below by $r_+$; in $\M_{\rm II}$, their affine parameter
@@ -2625,12 +2627,14 @@ $\lambda=-r$ ranges in $(-r_+,-r_-)$ only and in $\M_{\rm III}$, their affine pa
 $\lambda=r$ is bounded from above by $r_-$.
 Since these geodesics are not ending on any spacetime singularity
 (it can be shown that all curvature scalar invariants remain bounded along
-these geodesics), this is an indication that the spacetime $(\M,\w{g})$
-can be extended. In particular the outgoing principal null geodesics
-generating the event horizon $\Hor$ are incomplete, in agreement with the fact
-that $\Hor$ is a \emph{non-degenerate} Killing horizon (Sec.~\ref{s:ker:surf_grav}),
-which, generically, is part of a \emph{bifurcate Killing horizon}
-in an extended spacetime (cf. Sec.~\ref{s:sta:non-degenerate_KH}).
+these geodesics), except those with $\th=\pi/2$ in $\M_{\rm III}$,
+this indicates that the spacetime $(\M,\w{g})$
+can be extended. Moreover, for $0\leq a < m$,
+the event horizon  $\Hor$ is a
+\emph{non-degenerate} Killing horizon (cf. Sec.~\ref{s:ker:surf_grav})
+and we have seen in Sec.~\ref{s:sta:non-degenerate_KH} that, generically,
+such horizons are part of a \emph{bifurcate Killing horizon}
+in an extended spacetime.
 
 
 \begin{figure}
