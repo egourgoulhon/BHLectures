@@ -65,16 +65,106 @@ are called the
 \defin{3+1 Kerr coordinates}\index{3+1!Kerr coordinates}\index{Kerr!coordinates!3+1 --}
 and we recognize in (\ref{e:exk:metric_Kerr_3p1}) the limit $a\to m$ of
 expression (\ref{e:ker:metric_Kerr_3p1}) for the Kerr metric with $a< m$
-in the 3+1 Kerr coordinates. The metric (\ref{e:exk:metric_Kerr_3p1}) is regular
+in the 3+1 Kerr coordinates.
+
+The metric (\ref{e:exk:metric_Kerr_3p1}) is regular
 in all $\M$, since the components $\tilde{g}_{\mu\nu}$ are singular only
 for $\rho=0$, i.e. for $r=0$ and $\th=\pi/2$, which defines  the set $\ring$ that has precisely been excluded in
-the definition (\ref{e:exk:def_M}) of $\M$.
+the definition (\ref{e:exk:def_M}) of $\M$. The Kretschmann curvature
+invariant\index{Kretschmann scalar! of Kerr metric} $K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma}$
+is given by Eq.~(\ref{e:ker:Kretschmann}) with $a=m$; it diverges for $\rho\to 0$. Therefore, as
+for the Kerr spacetime with $a<m$ (cf. Sec.~\ref{s:ker:singularities}), we shall call $\ring$ the \defin{ring singularity}\index{ring!singularity}\index{singularity!ring --}
+of the extremal Kerr spacetime. Note that, formally, it is not part of the spacetime manifold
+[cf. Eq.~(\ref{e:exk:def_M})].
 
+Moreover, the Ricci tensor of the metric (\ref{e:exk:metric_Kerr_3p1}) is identically zero in all
+$\M$ (see e.g. the notebook~\ref{s:sam:Kerr_Kerr_coord}). Hence, we have:
+\begin{greybox}
+The metric $\w{g}$ of the extremal Kerr spacetime is a solution of Einstein equation\index{Einstein!equation} (\ref{e:fra:Einstein_eq})
+in vacuum ($\w{T}=0$) and with a vanishing cosmological constant ($\Lambda=0$).
+\end{greybox}
 
+\subsection{Boyer-Lindquist coordinates}
+
+For $a<m$, the Kerr manifold $\M$ has been split in three open regions,
+$\M_{\rm I}$, $\M_{\rm II}$ and $\M_{\rm III}$,  separated by the two Killing
+horizons $\Hor$ and $\Hor_{\rm in}$
+[cf. Eqs.~(\ref{e:ker:def_M_Kerr_spacetime}) and (\ref{e:ker:def_M_BL})].
+Since $\Hor$ was defined by $r=r_+:=m + \sqrt{m^2 - a^2}$ [Eq.~(\ref{e:ker:def_H})]
+and $\Hor_{\rm in}$
+by $r=r_-:=m - \sqrt{m^2 - a^2}$ [Eq.~\ref{e:ker:def_H_in})],
+we notice that in the $a\to m$ limit
+$r_+ = r_- = m$, so that $\Hor$ and $\Hor_{\rm in}$ coincide and the region
+$\M_{\rm II}$, which is bounded by $\Hor$ and $\Hor_{\rm in}$, disappears.
+Accordingly, we shall split the extremal Kerr manifold $\M$ in two open regions only,
+$\M_{\rm I}$ and $\M_{\rm III}$, separated by a single hypersurface $\Hor$:
+\be
+    \encadre{\M = \M_{\rm I} \cup \Hor \cup \M_{\rm III} },
+\ee
+with
+\begin{subequations}
+\begin{align}
+    \M_{\rm I} & := \left\{ p \in \M, \quad r(p) > m \right\} \\
+    \Hor & := \left\{ p \in \M, \quad r(p) = m \right\} \\
+    \M_{\rm III} & := \left\{ p \in \M, \quad r(p) < m \right\} .
+\end{align}
+\end{subequations}
+\begin{remark}
+We are using the notation $\M_{\rm III}$ for the ``second'' region
+to be consistent with Chaps.~\ref{s:ker}--\ref{s:gik}, more precisely with
+the $a\to m$ limit of the results obtained in these chapters.
+\end{remark}
+The second order polynomial in $r$ introduced in Chap.~\ref{s:ker},
+$\Delta=r^2 - 2 m r + a^2 = (r - r_+)(r - r_-)$ reduces to $\Delta = (r - m)^2$
+in the limit $a\to m$. Its double root, $r=m$, defines the hypersurface $\Hor$.
+
+On the region $\M_{\rm BL}:= \M \setminus \Hor = \M_{\rm I} \cup \M_{\rm III}$, one may introduce
+the \defin{Boyer-Lindquist coordinates}\index{Boyer-Lindquist coordinates}
+$(t,r,\th,\ph)$ such that $(r,\th)$ are the same coordinates as in the
+3+1 Kerr coordinates, while $t$ and $\ph$ are related to the 3+1 Kerr coordinates
+$\ti$, $r$ and $\tph$ by
+\begin{subequations}
+\label{e:exk:3p1_Kerr_to_BL}
+\begin{align}
+    t & = \ti + 2 m \left( \frac{m}{r - m} - \ln \left| \frac{r - m}{m} \right| \right) \\
+    \ph & = \tph + \frac{m}{r - m} .
+\end{align}
+\end{subequations}
+The differential versions of these relations are
+\begin{subequations}
+\label{e:exk:dt_dph}
+\begin{align}
+    \D t & = \D \ti  - \frac{2m r}{(r- m)^2} \, \D r \\
+    \D \ph & = \D \tph - \frac{m}{(r - m)^2 } \, \D r .
+\end{align}
+\end{subequations}
+The metric components $(g_{\alpha\beta})$ with respect to the Boyer-Lindquist coordinates $(x^\alpha) = (t,r,\th,\ph)$ are given by
+\be \label{e:exk:metric_BL}
+    \encadre{
+    \begin{array}{ll}
+    g_{\mu\nu}\,  \D x^\mu \D x^\nu  = &
+    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right) \, \D t^2
+    - \frac{4 m^2  r \sin^2\th}{\rho^2} \,  \D t\, \D\ph
+    + \frac{\rho^2}{(r-m)^2} \, \D r^2  \\[2ex]
+    & \displaystyle + \rho^2 \D \th^2
+    + \left( r^2 + m^2 + \frac{2 m^3 r \sin^2\th}{\rho^2} \right)
+    \sin^2\th \, \D \ph^2 .
+    \end{array}
+    }
+\ee
+This expression can be obtained either by taking the limit $a\to m$ of Eq.~(\ref{e:ker:metric_BL})
+of by using (\ref{e:exk:dt_dph}) to substitute $\D\ti$ and $\D\tph$ in Eq.~(\ref{e:exk:metric_Kerr_3p1}).
+We note that $g_{rr}\to +\infty$ when $r\to m$, which reflects the singularity of Boyer-Lindquist
+coordinates on $\Hor$. This singularity is clearly apparemt in the coordinate transformations
+(\ref{e:exk:3p1_Kerr_to_BL}).
+
+\subsection{The degenerate horizon}
 
 
 \section{Maximal analytic extension}
 
 \section{Near-horizon extremal Kerr metric}
+
+\subsection{The extremal Kerr throat}
 
 
