@@ -136,7 +136,7 @@ Boyer-Lindquist coordinates $(t,r,\th,\ph)$ by
 
 
 The \defin{Kerr metric}\index{Kerr!metric} is defined by the following
-components in terms of the Boyer-Lindquist coordinates $(t,r,\th,\ph)$:
+components in terms of the Boyer-Lindquist coordinates $(x^\alpha)=(t,r,\th,\ph)$:
 \be \label{e:ker:metric_BL}
     \encadre{
     \begin{array}{ll}
@@ -242,7 +242,7 @@ $\rho^2\sim r^2$, and $\rho^2/\Delta \sim (1-2m/r)^{-1}$, and we see on
 \be \label{e:ker:metric_r0}
     h_{ij} \, \D x^i \D x^j = - \D t^2 + a^2\left( \cos^2\th \,  \D \th^2 + \sin^2\th \, \D \ph^2 \right) ,
 \ee
-where $x^i=(t,\th,\ph)$. According to the assumption (\ref{e:ker:a_lower_m}), $a\not=0$
+where $(x^i)=(t,\th,\ph)$. According to the assumption (\ref{e:ker:a_lower_m}), $a\not=0$
 and the change of coordinates  $x:=a\sin\th\cos\ph$, $y:=a\sin\th\sin\ph$
 turns the right-hand side of (\ref{e:ker:metric_r0}) into $- \D t^2 + \D x^2 + \D y^2$.
 We recognize a \emph{flat} Minkowskian metric. In particular, for a fixed value
@@ -481,8 +481,8 @@ other coordinates.
 \subsection{Kerr coordinates} \label{s:ker:Kerr_coord}
 
 The \defin{Kerr coordinates}\index{Kerr!coordinates} are coordinates
-$\hat{x}^\alpha = (v,r,\th,\tph)$ defined on $\R^2\times\SS^2$ and related to the Boyer-Lindquist coordinates
-$x^\alpha = (t,r,\th,\ph)$ introduced in Sec.~\ref{s:ker:expr_BL} by
+$(x^{\hat{\alpha}}) = (v,r,\th,\tph)$ defined on $\R^2\times\SS^2$ and related to the Boyer-Lindquist coordinates
+$(x^\alpha) = (t,r,\th,\ph)$ introduced in Sec.~\ref{s:ker:expr_BL} by
 \begin{subequations}
 \label{e:ker:Kerr_coord}
 \begin{align}
@@ -521,14 +521,14 @@ and by comparing Eq.~(\ref{e:ker:Kerr_coord_v_int}) with Eq.~(\ref{e:sch:v_t_r})
 that the Kerr coordinates reduces to the ingoing Eddington-Finkelstein
 ones in this limit.
 
-The components $\hat{g}_{\alpha\beta}$
+The components $g_{\hat{\alpha}\hat{\beta}}$
 of the metric tensor $\w{g}$ with respect to the Kerr coordinates
 are computed from those with respect to the Boyer-Lindquist ones, as given
 by Eq.~(\ref{e:ker:metric_BL}). One gets (cf. Appendix~\ref{s:sam} or
 Eq.~(5.31) of Ref.~\cite{HawkiE73}, or Lemma~2.5.2 of \cite{ONeil95}):
 \be \label{e:ker:metric_Kerr_coord}
     \begin{array}{ll}
-    \hat{g}_{\mu\nu}\,  \D \hat{x}^\mu \D \hat{x}^\nu  = &
+    g_{\hat{\mu}\hat{\nu}}\,  \D x^{\hat{\mu}} \D x^{\hat{\nu}} = &
     \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right) \, \D v^2
     + 2 \D v\, \D r
     - \frac{4 a m  r \sin^2\th}{\rho^2} \,  \D v\, \D\tph \\[2ex]
@@ -557,15 +557,15 @@ We thus consider
 \ee
 as the spacetime manifold. In order for $\w{g}$ defined by (\ref{e:ker:metric_Kerr_coord})
 to be a well-defined metric on $\M$, it does not suffice that the components
-$\hat{g}_{\alpha\beta}$ do not diverge at $\Hor$ and $\Hor_{\rm in}$: one shall
+$g_{\hat{\alpha}\hat{\beta}}$ do not diverge at $\Hor$ and $\Hor_{\rm in}$: one shall
 check as well that the bilinear form $\w{g}$ is non-degenerate there.
 This is easily proven by considering the determinant of the metric components,
 which turns out to have a simple form (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}):
 \be
-    \det (\hat{g}_{\alpha\beta}) = -\rho^4 \sin^2\th .
+    \det (g_{\hat{\alpha}\hat{\beta}}) = -\rho^4 \sin^2\th .
 \ee
 Except at $\th=0$ and $\th=\pi$ (the usual singularity of spherical coordinates),
-we have $\det (\hat{g}_{\alpha\beta}) \not= 0$ everywhere on $\M$, since
+we have $\det (g_{\hat{\alpha}\hat{\beta}}) \neq 0$ everywhere on $\M$, since
 $\rho$ vanishes only on $\ring$, which is excluded from $\M$.
 Hence we conclude that $\w{g}$ is not degenerate on $\M$ and thus
 $(\M,\w{g})$ is a well-behaved spacetime --- our \defin{Kerr spacetime}\index{Kerr!spacetime}
@@ -584,7 +584,7 @@ is related to the Boyer-Lindquist coordinate frame by
 \end{align}
 \end{subequations}
 Note that we are using the notation $\wpar_{\hat{r}}$ for the $\partial/\partial r$
-vector of the Kerr coordinate system $\hat{x}^\alpha = (v,r,\th,\tph)$, to distinguish
+vector of the Kerr coordinate system $(x^{\hat{\alpha}}) = (v,r,\th,\tph)$, to distinguish
 it from the $\partial/\partial r$ vector of Boyer-Lindquist coordinates.
 
 \begin{hist} \label{h:ker:Kerr_coord}
@@ -598,7 +598,7 @@ The Boyer-Lindquist coordinates have been introduced in 1966 by Robert H. Boyer\
 \subsection{Time orientation of Kerr spacetime} \label{s:ker:time_orientation}
 
 We read on (\ref{e:ker:metric_Kerr_coord}) that
-$\w{g}(\wpar_{\hat{r}},\wpar_{\hat{r}}) = \hat{g}_{rr} = 0$, which
+$\w{g}(\wpar_{\hat{r}},\wpar_{\hat{r}}) = g_{rr} = 0$, which
 implies that $\wpar_{\hat{r}}$ is a global null vector field on $\M$.
 We may then use it to set the time orientation of $(\M,\w{g})$ (cf. Sec.~\ref{s:fra:time_orientation}):
 \begin{greybox}
@@ -692,7 +692,7 @@ timelike one by setting
 so that $v$ appears as the advanced time $\ti+r$ (compare with Eq.~(\ref{e:sch:ti_v_r})). We thus consider
 the coordinates
 \be
-    (\tilde{x}^\alpha) = (\ti, r, \th,\tph) ,
+    (x^{\tilde{\alpha}}) = (\ti, r, \th,\tph) ,
 \ee
 which we call
 \defin{3+1 Kerr coordinates}\index{3+1!Kerr coordinates}\index{Kerr!coordinates!3+1 --}.
@@ -737,13 +737,13 @@ and the Kerr-Schild coordinates $(\ti,x,y,z)$.
 \end{hist}
 
 Since the transform (\ref{e:ker:def_t_tilde}) leads to $\D v = \D\ti + \D r$,
-the metric components $\tilde{g}_{\alpha\beta}$ with respect to the
+the metric components $g_{\tilde{\alpha}\tilde{\beta}}$ with respect to the
 3+1 coordinates $(\ti,r,\th,\tph)$ are easily deduced from
 (\ref{e:ker:metric_Kerr_coord}):
 \be \label{e:ker:metric_Kerr_3p1}
     \encadre{
     \begin{array}{ll}
-    \tilde{g}_{\mu\nu}\,  \D \tilde{x}^\mu \D \tilde{x}^\nu  = &
+    g_{\tilde{\mu}\tilde{\nu}}\, \D x^{\tilde{\mu}} \, \D x^{\tilde{\nu}} = &
     \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right)  \D \ti^2
     + \frac{4m r}{\rho^2} \D\ti\, \D r
     - \frac{4 a m  r \sin^2\th}{\rho^2} \,  \D \ti\, \D\tph \\[2ex]
@@ -772,9 +772,9 @@ between the two coordinate frames:
 \end{subequations}
 Note that we have denoted by $\wpar_{\tilde r}$ the second vector of the
 coordinate frame associated to the 3+1 Kerr coordinates
-$(\tilde{x}^\alpha) = (\ti, r, \th,\tph)$, in order to distinguish it from
+$(x^{\tilde{\alpha}}) = (\ti, r, \th,\tph)$, in order to distinguish it from
 the coordinate vector $\wpar_{\hat r}$ of the Kerr coordinates
-$(\hat{x}^\alpha) = (v, r, \th,\tph)$, as well as from the coordinate vector
+$(x^{\hat{\alpha}}) = (v, r, \th,\tph)$, as well as from the coordinate vector
 $\wpar_r$ of the Boyer-Lindquist coordinates
 $(x^\alpha) = (t,r,\th,\ph)$.
 
@@ -805,12 +805,12 @@ nor on $\tph$.
 The determinant of the metric components (\ref{e:ker:metric_Kerr_3p1}) takes
 a very simple form (see the notebook~\ref{s:sam:Kerr_Kerr_coord} for the computation):
 \be \label{e:ker:det_g_3p1}
-    \det\left( \tilde{g}_{\alpha\beta} \right) = - \rho^4\sin^2\th .
+    \det\left( g_{\tilde{\alpha}\tilde{\beta}} \right) = - \rho^4\sin^2\th .
 \ee
 The inverse metric takes also a rather simple form in terms of the 3+1
 Kerr coordinates (see the notebook~\ref{s:sam:Kerr_Kerr_coord} for the computation):
 \be \label{e:ker:inv_met_3p1}
-    \tilde{g}^{\alpha\beta} = \left(
+    g^{\tilde{\alpha}\tilde{\beta}} = \left(
     \begin{array}{cccc}
     - \left( 1 + \frac{2m r}{\rho^2} \right) & \frac{2m r}{\rho^2} & 0 & 0 \\[1ex]
     \frac{2m r}{\rho^2} & \frac{\Delta}{\rho^2} & 0 & \frac{a}{\rho^2} \\[1ex]
@@ -823,14 +823,14 @@ Kerr coordinates (see the notebook~\ref{s:sam:Kerr_Kerr_coord} for the computati
 Comparing (\ref{e:ker:frame_Kerr3p1_BL}) with (\ref{e:ker:metric_BL}), we
 note that the metric components in 3+1 Kerr coordinates are slightly more
 complicated than those in Boyer-Lindquist coordinates, for they contain
-extra non-diagonal terms: ${\tilde g}_{\ti r}$ and ${\tilde g}_{r \tph}$. However
+extra off-diagonal terms: $g_{\ti r}$ and $g_{r \tph}$. However
 the determinant (\ref{e:ker:det_g_3p1})
 and the inverse metric (\ref{e:ker:inv_met_3p1}) are pretty simple. Morever
 the 3+1 Kerr coordinates are as well adapted to the spacetime symmetries
 as the Boyer-Lindquist ones, as (\ref{e:ker:Killing_vec_3p1}) shows, and
 they have the great advantage to be regular on the boundary hypersurfaces
-$\Hor$ and $\Hor_{\rm in}$, contrary to the Boyer-Lindquist ones.
-The last feature is all the more important since
+$\Hor$ and $\Hor_{\rm in}$, contrary to Boyer-Lindquist coordinates.
+The last feature is all the more important that
 $\Hor$ is the future event horizon of Kerr spacetime,
 as we are going to see.
 Therefore, we shall continue our study of Kerr spacetime, and especially the
@@ -844,8 +844,8 @@ by spacelike hypersurfaces (see e.g. \cite{Gourg12}). Now, the hypersurfaces
 $\ti = \mathrm{const}$ are spacelike iff their normal $\vec{\nabla} \ti$ is timelike, which
 is equivalent to $\w{g}(\vec{\nabla} \ti, \vec{\nabla} \ti) < 0$, with
 \[
-    \w{g}(\vec{\nabla} \ti, \vec{\nabla} \ti) = g_{\mu\nu} \, \nabla^\mu \ti \nabla^\nu \ti
-    = g^{\mu\nu}\,  \partial_\mu \ti \, \partial_\nu \ti = g^{\ti\ti} .
+    \w{g}(\vec{\nabla} \ti, \vec{\nabla} \ti) = g_{\tilde{\mu}\tilde{\nu}} \, \nabla^{\tilde{\mu}} \ti \nabla^{\tilde{\nu}} \ti
+    = g^{\tilde{\mu}\tilde{\nu}}\,  \partial_{\tilde{\mu}} \ti \, \partial_{\tilde{\nu}} \ti = g^{\ti\ti} .
 \]
 Given the value of $g^{\ti\ti}$ read on (\ref{e:ker:inv_met_3p1}), the hypersurface
 $\ti=\mathrm{const}$ is spacelike iff $\rho^2+2mr > 0$, or equivalently
@@ -874,9 +874,10 @@ basis via (\ref{e:ker:frame_Kerr3p1_Kerr}):
     \encadre{ \w{k} = \wpar_\ti - \wpar_{\tilde r} }.
 \ee
 The 1-form $\uu{k}$ associated to $\w{k}$ by $\w{g}$-duality is easily computed
-from $k_\alpha = g_{\alpha\mu} k^\mu$, with $g_{\alpha\mu}$ given by
+from $k_{\tilde{\alpha}} = g_{\tilde{\alpha}\tilde{\mu}} k^{\tilde{\mu}}$, with
+$g_{\tilde{\alpha}\tilde{\mu}}$ given by
 Eq.~(\ref{e:ker:metric_Kerr_3p1}). We get
-$k_\alpha = (-1, -1, 0, a\sin^2\th)$, i.e.
+$k_{\tilde{\alpha}} = (-1, -1, 0, a\sin^2\th)$, i.e.
 \be \label{e:ker:k_form_Kerr}
     \encadre{ \uu{k} = - \dd \ti - \dd r + a\sin^2\th \, \dd\tph } .
 \ee
@@ -1122,8 +1123,8 @@ geodesics (cf. Sec.~\ref{s:def:geod_gener} and Sec.~\ref{s:geo:gener_param}).
 
 The 1-form $\uu{\el}$ associated to $\wl$ by
 $\w{g}$-duality is obtained
-from $\el_\alpha = g_{\alpha\mu} \el^\mu$, with $g_{\alpha\mu}$ given by
-Eq.~(\ref{e:ker:metric_Kerr_3p1}):
+from $\el_{\tilde{\alpha}} = g_{\tilde{\alpha}\tilde{\mu}} \el^{\tilde{\mu}}$, with
+$g_{\tilde{\alpha}\tilde{\mu}}$ given by Eq.~(\ref{e:ker:metric_Kerr_3p1}):
 \be \label{e:ker:ell_form_Kerr}
     \encadre{ \uu{\el} = - \frac{\Delta}{2(r^2 + a^2)}\, \dd \ti
     + \frac{2\rho^2 - \Delta}{2(r^2 + a^2)}\,  \dd r
@@ -1214,11 +1215,12 @@ the coordinate $r$. $\Hor$ and $\Hor_{\rm in}$ are two particular cases,
 corresponding to $r=r_+$ and $r=r_-$ respectively.
 The normal 1-form to these hypersurfaces is $\dd r$; the corresponding
 gradient vector field is $\vw{\nabla} r$, the components of which are
-$\nabla^\alpha r = g^{\alpha\mu} \partial_\mu r = g^{\alpha r}$.
+$\nabla^{\tilde{\alpha}} r = g^{\tilde{\alpha}\tilde{\mu}} \partial_{\tilde{\mu}} r
+= g^{\tilde{\alpha} r}$.
 Given (\ref{e:ker:inv_met_3p1}), this yields the following components with respect to
-then 3+1 Kerr coordiantes:
+the 3+1 Kerr coordinates:
 \be \label{e:ker:nab_r_comp}
-    \nabla^\alpha r = \left( \frac{2m r}{\rho^2}, \frac{\Delta}{\rho^2}, 0, \frac{a}{\rho^2}
+    \nabla^{\tilde{\alpha}} r = \left( \frac{2m r}{\rho^2}, \frac{\Delta}{\rho^2}, 0, \frac{a}{\rho^2}
             \right) .
 \ee
 It is then quite natural to consider the vector field

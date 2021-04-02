@@ -47,7 +47,7 @@ of the maximally extended Schwarzschild spacetime.
 \subsection{Definition} \label{s:sch:KS_coord}
 
 On the open set $\M_{\rm I}$, let us consider the ``double-null''
-coordinate system $\hat{\hat{x}}^\alpha = (u,v,\th,\ph)$. It is related to
+coordinate system $x^{\hat{\hat{\alpha}}} = (u,v,\th,\ph)$. It is related to
 Schwarzschild-Droste coordinates $(t,r,\th,\ph)$ by
 Eqs.~(\ref{e:sch:outgoing_null_geod})-(\ref{e:sch:ingoing_null_geod}):
 \be \label{e:sch:u_v_r_t}
@@ -78,8 +78,8 @@ Hence
 The line element (\ref{e:sch:Schwarz_metric_SD}) becomes then
 \be \label{e:sch:Schwarz_metric_uv}
     \encadre{
-        \hat{\hat{g}}_{\mu\nu}\, \D \hat{\hat{x}}^\mu \,
-        \D \hat{\hat{x}}^\nu =
+        g_{\hat{\hat{\mu}}\hat{\hat{\nu}}}\, \D x^{\hat{\hat{\mu}}} \,
+        \D x^{\hat{\hat{\nu}}}  =
             -\left( 1 - \frac{2 m}{r} \right)\, \D u \, \D v
        +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
 \ee
@@ -102,7 +102,7 @@ were taking a finite value on $\Hor$, we would have $v\rightarrow -\infty$
 (resp. $u\rightarrow +\infty$). This impossibility of extending to $\Hor$
 is also reflected by the fact that
 \[
-    \det \left( \hat{\hat{g}}_{\alpha\beta} \right) =
+    \det \left( g_{\hat{\hat{\alpha}}\hat{\hat{\beta}}} \right) =
         - \frac{1}{4} \left( 1 - \frac{2 m}{r} \right) ^2 r^4 \sin^2\th
 \]
 vanishes for $r\rightarrow 2m$, which would make $\w{g}$ a degenerate bilinear
@@ -145,10 +145,10 @@ so that
 \]
 Substituting this expression in (\ref{e:sch:Schwarz_metric_uv}) yields
 the expression of the metric components with respect to
-coordinates ${\hat X}^\alpha := (U,V,\th,\ph)$:
+coordinates $X^{\hat{\alpha}} := (U,V,\th,\ph)$:
 \be \label{e:sch:metric_UV}
     \encadre{
-    g_{\mu\nu} \, \D {\hat X}^\mu \, \D {\hat X}^\nu =
+    g_{\hat{\mu}\hat{\nu}} \, \D X^{\hat{\mu}} \, \D X^{\hat{\nu}}  =
     - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \D U \, \D V
      +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
 \ee
@@ -748,11 +748,11 @@ we get:
 \ee
 
 The expression of the metric tensor
-in terms of the null coordinates $x^\alpha = (U,V,\th,\ph)$
+in terms of the null coordinates $X^{\hat{\alpha}} = (U,V,\th,\ph)$
 is deduced from (\ref{e:sch:metric_KS_TX}):
 \be
     \encadre{
-      g_{\mu\nu} \, \D x^\mu \, \D x^\nu = 4m^2 \left[
+      g_{\hat{\mu}\hat{\nu}} \, \D X^{\hat{\mu}} \, \D X^{\hat{\nu}} = 4m^2 \left[
       \frac{4}{UV - \mathrm{e}^{\tilde{W}_0(-UV)} } \, \D U \, \D V
       + \tilde{W}_0(-UV)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) \right] .
     }
@@ -760,7 +760,7 @@ is deduced from (\ref{e:sch:metric_KS_TX}):
 We can also rewrite it as (\ref{e:sch:metric_UV}):
 \be \label{e:max:metric_UV_glob}
     \encadre{
-    g_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+    g_{\hat{\mu}\hat{\nu}} \, \D X^{\hat{\mu}} \, \D X^{\hat{\nu}}  =
     - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \D U \, \D V
      +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) },
 \ee
@@ -2094,7 +2094,7 @@ There are two Schwarzschild-Droste coordinate systems on $\mathcal{S}_t$:
 $(r,\th,\ph)$ on $\mathcal{S}_t\cap \M_{\rm I}$ and $(r',\th,\ph)$ on
 $\mathcal{S}_t\cap \M_{\rm III}$, with both $r$ and $r'$ ranging
 $(2m,+\infty)$.
-Let us introduce on $\mathcal{S}_t$ a third coordinate system $(x^i)=(\bar{r},\th,\ph)$
+Let us introduce on $\mathcal{S}_t$ a third coordinate system $(x^{\bar{i}})=(\bar{r},\th,\ph)$
 as follows:
 \begin{subequations}
 \begin{align}
@@ -2135,7 +2135,7 @@ When $t$ varies, $\mathcal{S}_t$ constitute a foliation of
 This foliation is regular in both $\M_{\rm I}$ and $\M_{\rm III}$, but is
 singular at the bifurcation sphere $\Sp$, since all
 the hypersurfaces $\mathcal{S}_t$ intersect there (cf. Fig.~\ref{f:sch:kruskal_diag}).
-We may then consider $(x^\alpha) = (t,\bar{r},\th,\ph)$ as a coordinate system
+We may then consider $(x^{\bar{\alpha}}) = (t,\bar{r},\th,\ph)$ as a coordinate system
 on $\M_{\rm iso}$, which is regular on $\M_{\rm I}$ and $\M_{\rm III}$,
 but is singular at $\Sp$, i.e. at $\bar{r}=m/2$. This system is called
 \defin{isotropic coordinates}\index{isotropic!coordinates}.
@@ -2152,10 +2152,10 @@ and
 \]
 It is then immediate to deduce from (\ref{e:sch:Schwarz_metric_SD})
 the expression of the metric tensor in
-terms of the isotropic coordinates $(x^\alpha) = (t,\bar{r},\th,\ph)$:
+terms of the isotropic coordinates $(x^{\bar{\alpha}}) = (t,\bar{r},\th,\ph)$:
 \be \label{e:max:g_isotropic}
     \encadre{
-        g_{\mu\nu}\, \D x^\mu \, \D x^\nu =
+        g_{\bar{\mu}\bar{\nu}}\, \D x^{\bar{\mu}} \, \D x^{\bar{\nu}} =
         - \left( \frac{ 1 - \frac{m}{2\bar{r}}}{1 + \frac{m}{2\bar{r}}} \right) ^2 \D t^2
             + \left( 1 + \frac{m}{2\bar{r}} \right) ^4 \left[
             \D \bar{r}^2 + \bar{r}^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
@@ -2167,14 +2167,14 @@ the above expression of $\w{g}$ is valid on $\M_{\rm I}$ and $\M_{\rm III}$.
 Note that all metric coefficients are regular on $\M_{\rm I}\cup\M_{\rm III}$
 (except for the standard coordinate singularity of the spherical coordinates
 $(\th,\ph)$ for $\th\in\{0,\pi\}$). On the contrary Eq.~(\ref{e:max:g_isotropic})
-yields $\det(g_{\alpha\beta}) = 0$ for $\bar{r}=m/2$, which reflects the fact that
+yields $\det(g_{\bar{\alpha}\bar{\beta}}) = 0$ for $\bar{r}=m/2$, which reflects the fact that
 the isotropic coordinates are singular on the bifurcation sphere $\Sp$.
 
 A remarkable feature of the line element (\ref{e:max:g_isotropic}) is
 that the spatial part is proportional to
 the line element of the flat metric $\w{f}$ on the Euclidean 3-space:
 \be
-    f_{ij} , \D x^i \, \D x^j = \D \bar{r}^2 + \bar{r}^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+    f_{\bar{i}\bar{j}} , \D x^{\bar{i}} \, \D x^{\bar{j}} = \D \bar{r}^2 + \bar{r}^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
 \ee
 In other words, the metric $\w{\gamma}$ induced by $\w{g}$ on $\mathcal{S}_t$
 is \emph{conformal}\index{conformal!metric} to the flat metric $\w{f}$

@@ -495,19 +495,19 @@ Taking the square gives
 \]
 Substituting this expression for $\D t^2$ in Eq.~(\ref{e:sch:Schwarz_metric_SD})
 yields the metric components with respect to the coordinates
-$({\hat x}^\alpha) := (v,r,\th,\ph)$:
+$(x^{\hat{\alpha}}) := (v,r,\th,\ph)$:
 \be \label{e:sch:Schwarz_metric_NIEF}
     \encadre{
-        {\hat g}_{\mu\nu}\, \D {\hat x}^\mu \, \D {\hat x}^\nu =
+        g_{\hat{\mu}\hat{\nu}}\, \D x^{\hat{\mu}} \, \D x^{\hat{\nu}} =
             -\left( 1 - \frac{2 m}{r} \right)\, \D v^2
             + 2 \, \D v \, \D r
         + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
 \ee
-The coordinates $({\hat x}^\alpha) = (v,r,\th,\ph)$ are called the
+The coordinates $(x^{\hat{\alpha}}) = (v,r,\th,\ph)$ are called the
 \defin{null ingoing Eddington-Finkelstein (NIEF) coordinates}\index{Eddington-Finkelstein!coordinates}\index{null!ingoing Eddington-Finkelstein coordinates}\index{NIEF}. The qualifier \emph{null} stems from the fact that
-$r$ is a null coordinate in this system, i.e. the vector $\wpar_r$ of the coordinate
+$r$ is a null coordinate\index{null!coordinate} in this system, i.e. the vector $\wpar_r$ of the coordinate
 basis associated with $(v,r,\th,\ph)$ is a null
-vector, as it follows from ${\hat g}_{rr}=0$ in Eq.~(\ref{e:sch:Schwarz_metric_NIEF}).
+vector, as it follows from $g_{rr}=0$ in Eq.~(\ref{e:sch:Schwarz_metric_NIEF}).
 
 To deal with a ``standard'' time $+$ space coordinate system instead of a null one, let us set
 \be  \label{e:sch:ti_v_r}
@@ -516,7 +516,7 @@ To deal with a ``standard'' time $+$ space coordinate system instead of a null o
 and define the \defin{ingoing Eddington-Finkelstein (IEF) coordinates}\index{Eddington-Finkelstein!coordinates}\index{ingoing!Eddington-Finkelstein!coordinates}\index{IEF}
 to be
 \be
-    (\tilde{x}^\alpha) := (\ti, r, \th,\ph) .
+    (x^{\tilde{\alpha}}) := (\ti, r, \th,\ph) .
 \ee
 
 \begin{remark}
@@ -549,18 +549,18 @@ From (\ref{e:sch:ti_v_r}), we have $\D v = \D\ti + \D r$. Substituting
 into (\ref{e:sch:Schwarz_metric_NIEF}) yields
 \be \label{e:sch:Schwarz_metric_EF}
     \encadre{
-        \tilde{g}_{\mu\nu}\, \D \tilde{x}^\mu \, \D \tilde {x}^\nu =
+        g_{\tilde{\mu}\tilde{\nu}}\, \D x^{\tilde{\mu}} \, \D x^{\tilde{\nu}} =
             -\left( 1 - \frac{2 m}{r} \right)\, \D \ti^2
             + \frac{4m}{r} \, \D \ti \, \D r
             + \left( 1 + \frac{2 m}{r} \right)\, \D r^2
         + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
 \ee
-We check that $\tilde{g}_{\ti\ti} < 0$ in $\M_{\rm I}$, hence $\ti$ is
+We check that $g_{\ti\ti} < 0$ in $\M_{\rm I}$, hence $\ti$ is
 a timelike coordinate there.
-In $\M_{\rm II}$, $\tilde{g}_{\ti\ti} > 0$, so that $\ti$ becomes spacelike
+In $\M_{\rm II}$, $g_{\ti\ti} > 0$, so that $\ti$ becomes spacelike
 there, as for the Schwarzschild-Droste coordinate $t$ (cf. Sec.~\ref{s:sch:SD_domain}).
-However, we have $\tilde{g}_{rr} = 1+2m/r > 0$ everywhere, so that $r$ remains a spacelike coordinate (for the IEF system) in
-$\M_{\rm II}$, contrary to what happens within the Schwarzschild-Droste coordinates
+However, we have $g_{rr} = 1+2m/r > 0$ everywhere, so that $r$ remains a spacelike coordinate (for the IEF system) in
+$\M_{\rm II}$, contrary to what happens with Schwarzschild-Droste coordinates
 (cf. Sec.~\ref{s:sch:SD_domain}).
 
 \begin{remark}
@@ -625,28 +625,29 @@ the Killing vector $\w{\xi}$:
 The result (\ref{e:sch:wparti_xi}) is not surprising since
 the metric components (\ref{e:sch:Schwarz_metric_EF}) are independent from
 $\ti$. This implies $\wpar_{\ti} = \alpha \w{\xi}$, where $\alpha$ is a constant.
-Since $\ti \sim t$ when $r\rightarrow +\infty$, we conclude that $\alpha=1$.
+Since $\ti \sim t$ when $r\rightarrow +\infty$, we get $\alpha=1$.
 \end{remark}
 
 \begin{remark}
 The IEF-coordinates line element (\ref{e:sch:Schwarz_metric_EF}) can be recast
 in the following remarkable form:
 \be \label{e:sch:Kerr_Schild}
-    \tilde{g}_{\mu\nu}\, \D \tilde{x}^\mu \, \D \tilde {x}^\nu =
- \underbrace{- \D\ti^2 + \D r^2 + r^2  \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)}_{f_{\mu\nu} \, \D \tilde{x}^\mu \, \D \tilde {x}^\nu}
-        + \underbrace{\frac{2m}{r} \left( \D\ti + \D r \right) ^2}_{k_\mu \D \tilde{x}^\mu \, k_\nu \D \tilde {x}^\nu} ,
+  g_{\tilde{\mu}\tilde{\nu}}\, \D x^{\tilde{\mu}} \, \D x^{\tilde{\nu}} =
+ \underbrace{- \D\ti^2 + \D r^2 + r^2  \left( \D\th^2 + \sin^2\th\,
+   \D\ph^2 \right)}_{f_{\tilde{\mu}\tilde{\nu}} \, \D x^{\tilde{\mu}} \, \D x^{\tilde{\nu}}}
+        + \underbrace{\frac{2m}{r} \left( \D\ti + \D r \right) ^2}_{k_{\tilde{\mu}} \D x^{\tilde{\mu}} \, k_{\tilde{\nu}} \D x^{\tilde{\nu}}} ,
 \ee
-where the $f_{\mu\nu}$'s are the components of the (flat) Minkowski metric expressed in
-terms of the spherical coordinates $(\ti,r,\th,\ph)$ and the $k_\mu$'s are
+where the $f_{\tilde{\mu}\tilde{\nu}}$'s are the components of the (flat) Minkowski metric expressed in
+terms of the spherical coordinates $(\ti,r,\th,\ph)$ and the $k_{\tilde{\mu}}$'s are
 the components of a 1-form dual to a null vector:
 \[
     \uu{k} = \sqrt{\frac{2m}{r}} \, \dd (\ti + r) =
     \sqrt{\frac{2m}{r}} \, \dd v .
 \]
 The fact that $\w{k}$ is a null vector follows from
-$g^{\mu\nu} k_\mu k_\nu = 0$, which is easily deduced from
-$k_\mu = \sqrt{2m/r} (1, 1, 0, 0)$ and the expression (\ref{e:sch:inv_metric_EF})
-of $g^{\mu\nu}$ below.
+$g^{\tilde{\mu}\tilde{\nu}} k_{\tilde{\mu}} k_{\tilde{\nu}} = 0$, which is easily deduced from
+$k_{\tilde{\mu}} = \sqrt{2m/r} (1, 1, 0, 0)$ and expression (\ref{e:sch:inv_metric_EF})
+for $g^{\tilde{\mu}\tilde{\nu}}$ below.
 A metric of the type (\ref{e:sch:Kerr_Schild}) is said to be a
 \defin{Kerr-Schild metric}\index{Kerr-Schild!metric} (cf. Appendix~\ref{s:ksm}
 for details).
@@ -656,32 +657,26 @@ for details).
 
 Contrary to the Schwarzschild-Droste components (\ref{e:sch:Schwarz_metric_SD}),
 the metric components (\ref{e:sch:Schwarz_metric_EF}) are regular as
-$r\rightarrow 2m$. In particular, their determinant is
-\be
-    \det\left( \tilde{g}_{\alpha\beta} \right) = - r^4\sin^2\th ,
-\ee
-which is never zero for $r\in(0,+\infty)$, except at the standard $\th=0$ and
-$\th=\pi$ singularities of spherical coordinates.
-This proves that
+$r\rightarrow 2m$. Hence
 (\ref{e:sch:Schwarz_metric_EF}) defines a regular non-degenerate metric
 on the whole \defin{ingoing Eddington-Finkelstein domain}\index{ingoing!Eddington-Finkelstein!domain}
 \be \label{e:sch:M_IEF_def}
     \M_{\rm IEF} := \R\times(0,+\infty)\times\SS^2,
 \ee
 with the coordinate $\ti$ spanning $\R$, the coordinate $r$ spanning
-$(0,+\infty)$ and the coordinates $(\th,\ph)$ forming a standard spherical
+$(0,+\infty)$ and the coordinates $(\th,\ph)$ forming the standard spherical
 chart of $\SS^2$.
 The components of the inverse metric with respect to the ingoing
 Eddington-Finkelstein coordinates are
 \be \label{e:sch:inv_metric_EF}
-    {\tilde g}^{\alpha\beta} = \left( \begin{array}{cccc}
+    g^{\tilde{\alpha}\tilde{\beta}} = \left( \begin{array}{cccc}
     - \left( 1 + \frac{2m}{r} \right) &  \frac{2m}{r} & 0 & 0 \\[1ex]
     \frac{2m}{r} & 1 - \frac{2m}{r} & 0 & 0 \\[1ex]
     0 & 0 & \frac{1}{r^2} & 0 \\[1ex]
     0 & 0 & 0 & \frac{1}{r^2\sin^2\th}
     \end{array} \right) .
 \ee
-In particular, the components ${\tilde g}^{\alpha\beta}$ are regular at $r=2m$.
+In particular, the components $g^{\tilde{\alpha}\tilde{\beta}}$ are regular at $r=2m$.
 
 The IEF domain is an extension of the Schwarzschild-Droste domain
 introduced in Sec.~\ref{s:sch:SD_domain}:
@@ -844,7 +839,7 @@ becomes then
 \]
 The tangent vector $\w{k}$ associated with this parametrization has components
 \[
-    {\tilde k}^\alpha = \frac{\D {\tilde x}^\alpha}{\D \lambda}
+    k^{\tilde{\alpha}} = \frac{\D x^{\tilde{\alpha}}}{\D \lambda}
         = (1, -1, 0, 0)
 \]
 with respect to the IEF coordinates, i.e.
@@ -949,18 +944,18 @@ The first step is to define a conformal
 completion at null infinity $(\tilde{\M},\w{\tilde{g}})$ of
 the Schwarzschild spacetime $(\M, \w{g})$, as defined by Eq.~(\ref{s:sch:def_Schwarz_spacetime}).
 To this aim, let us start from the null ingoing Eddington-Finkelstein
-coordinates $({\hat x}^\alpha)=(v,r,\th,\ph)$ introduced in Sec.~\ref{s:sch:EF_coord}; they
+coordinates $(x^{\hat{\alpha}})=(v,r,\th,\ph)$ introduced in Sec.~\ref{s:sch:EF_coord}; they
 cover entirely $\M$ and the metric tensor $\w{g}$
 is expressed in terms of them by Eq.~(\ref{e:sch:Schwarz_metric_NIEF}).
 Performing the change of coordinates
-$({\hat x}^\alpha)=(v,r,\th,\ph)\mapsto ({x'}^\alpha) = (v,x,\th,\ph)$
+$(x^{\hat{\alpha}})=(v,r,\th,\ph)\mapsto (x^{\alpha'}) = (v,x,\th,\ph)$
 with
 \be \label{e:sch:x_r}
     x = 1 - \frac{2m}{r} \iff r = \frac{2m}{1-x}, \qquad x\in (-\infty, 1),
 \ee
 we deduce from (\ref{e:sch:Schwarz_metric_NIEF}) that
 \be
-        {g'}_{\mu\nu}\, \D {x'}^\mu \, \D {x'}^\nu =
+        g_{\mu'\nu'}\, \D x^{\mu'} \, \D x^{\nu'} =
             -x \, \D v^2
             +\frac{4 m}{(1-x)^2} \, \D v \, \D x
         + \frac{4 m^2}{(1-x)^2}  \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
@@ -973,9 +968,9 @@ we may rewrite the metric tensor as
 \be
     \w{g} = \Omega^{-2} \w{\tilde{g}} ,
 \ee
-with the $\w{\tilde{g}}$ given by
+with $\w{\tilde{g}}$ given by
 \be \label{e:sch:tilde_g_x_v}
-    {\tilde{g}'}_{\mu\nu}\, \D {x'}^\mu \, \D {x'}^\nu =
+    {\tilde{g}}_{\mu'\nu'}\,  \D x^{\mu'} \, \D x^{\nu'}  =
             - x(1-x)^2 \, \D v^2
             +4 m \, \D v \, \D x
         + 4 m^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
@@ -1004,7 +999,7 @@ We note that the conformal metric (\ref{e:sch:tilde_g_x_v}) can be extended
 to the boundary $\scri'$, yielding a regular metric. Indeed, the determinant of
 the metric components (\ref{e:sch:tilde_g_x_v}) is
 \[
-    \det\left({\tilde{g}'}_{\alpha\beta}\right) = - 64 m^6 \sin^2\th ,
+    \det\left({\tilde{g}}_{\alpha'\beta'}\right) = - 64 m^6 \sin^2\th ,
 \]
 which does not vanish at $x=1$ (except at the trivial coordinate singularity
 $\th=0$ or $\th=\pi$), showing that $\tilde{\w{g}}$ is a non-degenerate
@@ -1036,7 +1031,7 @@ the equation of these geodesics is obtained by combining (\ref{e:sch:outgoing_nu
     v = 2 r + 4 m \ln \left| \frac{r}{2m} - 1 \right| + u ,
 \ee
 where $u\in\R$ is a constant parameter along a given geodesic.
-We notice that on $\M_{\rm I}$, we may use $(\check{x}^\alpha) = (u,r,\th,\ph)$ as a coordinate
+We notice that on $\M_{\rm I}$, we may use $(x^{\check{\alpha}}) = (u,r,\th,\ph)$ as a coordinate
 system, naturally called the \defin{null outgoing Eddington-Finkelstein coordinates}\index{Eddington-Finkelstein!coordinates}\index{null!outgoing Eddington-Finkelstein coordinates}. Since (\ref{e:sch:v_r_u}) implies
 \[
     \D v = \D u + \frac{2}{1-2m/r}\, \D r,
@@ -1044,7 +1039,7 @@ system, naturally called the \defin{null outgoing Eddington-Finkelstein coordina
 we easily deduce from (\ref{e:sch:Schwarz_metric_NIEF}) the metric components
 in these coordinates:
 \be \label{e:sch:g_u_r}
-        {\check{g}}_{\mu\nu}\, \D {\check{x}}^\mu \, \D {\check{x}}^\nu =
+        g_{\check{\mu}\check{\nu}}\, \D x^{\check{\mu}} \, \D x^{\check{\nu}} =
             -\left( 1 - \frac{2 m}{r} \right)\, \D u^2
             - 2 \, \D u \, \D r
         + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
@@ -1069,13 +1064,13 @@ Note that $\Hor$, which is drawn on this figure, is not part of $\M''_{\rm I}$.}
 \end{figure}
 
 On $\M_{\rm I}$, let us perform the change of coordinates
-$(\check{x}^\alpha) = (u,r,\th,\ph) \rightarrow ({x''}^\alpha) = (u,x,\th,\ph)$,
+$(x^{\check{\alpha}}) = (u,r,\th,\ph) \rightarrow (x^{\alpha''}) = (u,x,\th,\ph)$,
 where $x$ is related to $r$ by the same formula as (\ref{e:sch:x_r}),
 except that on $\M_{\rm I}$, $x$'s range is $(0,1)$ only.
 We deduce from (\ref{e:sch:g_u_r}) and (\ref{e:sch:x_r})
 the expression of $\w{g}$ in terms of the coordinates $(u,x,\th,\ph)$:
 \be
-        {g''}_{\mu\nu}\, \D {x''}^\mu \, \D {x''}^\nu =
+        g_{\mu''\nu''}\, \D x^{\mu''} \, \D x^{\nu''} =
             -x \, \D u^2
             -\frac{4 m}{(1-x)^2} \, \D u \, \D x
         + \frac{4 m^2}{(1-x)^2}  \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
@@ -1113,7 +1108,7 @@ $\scri''$ is not included in $\M'$.
 
 The conformal metric $\w{\tilde{g}}$ on $\M''_{\rm I}$ is given by
 \be \label{e:sch:tilde_g_x_u}
-    {\tilde{g}''}_{\mu\nu}\, \D {x''}^\mu \, \D {x''}^\nu =
+    {\tilde{g}}_{\mu''\nu''}\, \D x^{\mu''} \, \D x^{\nu''} =
             - x(1-x)^2 \, \D u^2
             - 4 m \, \D u \, \D x
         + 4 m^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
