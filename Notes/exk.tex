@@ -84,6 +84,19 @@ The metric $\w{g}$ of the extremal Kerr spacetime is a solution of Einstein equa
 in vacuum ($\w{T}=0$) and with a vanishing cosmological constant ($\Lambda=0$).
 \end{greybox}
 
+The inverse metric is
+\be \label{e:exk:inv_met_3p1}
+    g^{\tilde{\alpha}\tilde{\beta}} = \left(
+    \begin{array}{cccc}
+    - \left( 1 + \frac{2m r}{\rho^2} \right) & \frac{2m r}{\rho^2} & 0 & 0 \\[1ex]
+    \frac{2m r}{\rho^2} & \frac{(r-m)^2}{\rho^2} & 0 & \frac{m}{\rho^2} \\[1ex]
+    0 & 0 &\frac{1}{\rho^2} & 0 \\[1ex]
+    0 & \frac{m}{\rho^2} & 0 & \frac{1}{\rho^2\sin^2\th}
+    \end{array}
+    \right) .
+\ee
+
+
 \subsection{Boyer-Lindquist coordinates}
 
 For $a<m$, the Kerr manifold $\M$ has been split in three open regions,
@@ -126,8 +139,9 @@ $\ti$, $r$ and $\tph$ by
 \begin{subequations}
 \label{e:exk:3p1_Kerr_to_BL}
 \begin{align}
-    t & = \ti + 2 m \left( \frac{m}{r - m} - \ln \left| \frac{r - m}{m} \right| \right) \\
-    \ph & = \tph + \frac{m}{r - m} .
+    t & = \ti +  \frac{2m^2}{r - m} - 2m \ln \left| \frac{r - m}{m} \right|
+            \label{e:exk:3p1_Kerr_to_BL_t} \\
+    \ph & = \tph + \frac{m}{r - m} . \label{e:exk:3p1_Kerr_to_BL_ph}
 \end{align}
 \end{subequations}
 The differential versions of these relations are
@@ -138,6 +152,35 @@ The differential versions of these relations are
     \D \ph & = \D \tph - \frac{m}{(r - m)^2 } \, \D r .
 \end{align}
 \end{subequations}
+\begin{remark}
+The differential relations (\ref{e:exk:dt_dph}) can be obtained immediately
+by substituting $a$ by $m$ in relations (\ref{e:ker:Kerr_3p1_BL}). However, to get the integrated
+relations (\ref{e:exk:3p1_Kerr_to_BL}) from their $a<m$ analog
+(\ref{e:ker:Kerr_3p1_BL_int}), one must perform an expansion in $\veps := \sqrt{m^2 - a^2}/m$,
+taking into account that $r_\pm = m(1\pm\veps)$. One then obtains
+(\ref{e:exk:3p1_Kerr_to_BL_t})
+up to the additive constant $(2\ln 2) m$, while (\ref{e:exk:3p1_Kerr_to_BL_ph}) is recovered in the same form.
+\end{remark}
+It follows from the transformations (\ref{e:exk:3p1_Kerr_to_BL}) that
+the Boyer-Lindquist coordinate frame $(\wpar_\alpha)$ and the 3+1 Kerr coordinate frame $(\wpar_{\tilde{\alpha}})$ are related by\footnote{See also the $a\to m$ limit of Eq.~(\ref{e:ker:frame_Kerr3p1_BL}).}
+\begin{subequations}
+\label{e:exk:frame_BL_Kerr3p1}
+\begin{align}
+    & \wpar_t  = \wpar_\ti  \\
+    & \wpar_r = \wpar_{\tilde r} + \frac{2mr}{(r-m)^2} \wpar_\ti
+                        + \frac{m}{(r-m)^2} \wpar_\tph \\
+    & \wpar_\th = \wpar_\th \\
+    & \wpar_\ph = \wpar_{\tph} .
+\end{align}
+\end{subequations}
+Note that, as in Chap.~\ref{s:ker}, we have denoted by $\wpar_{\tilde r}$ the second vector of the
+coordinate frame associated to the 3+1 Kerr coordinates
+$(x^{\tilde{\alpha}}) = (\ti, r, \th,\tph)$, in order to distinguish it from
+the coordinate vector
+$\wpar_r$ of the Boyer-Lindquist coordinates
+$(x^\alpha) = (t,r,\th,\ph)$.
+
+
 The metric components $(g_{\alpha\beta})$ with respect to the Boyer-Lindquist coordinates $(x^\alpha) = (t,r,\th,\ph)$ are given by
 \be \label{e:exk:metric_BL}
     \encadre{
@@ -155,8 +198,114 @@ The metric components $(g_{\alpha\beta})$ with respect to the Boyer-Lindquist co
 This expression can be obtained either by taking the limit $a\to m$ of Eq.~(\ref{e:ker:metric_BL})
 of by using (\ref{e:exk:dt_dph}) to substitute $\D\ti$ and $\D\tph$ in Eq.~(\ref{e:exk:metric_Kerr_3p1}).
 We note that $g_{rr}\to +\infty$ when $r\to m$, which reflects the singularity of Boyer-Lindquist
-coordinates on $\Hor$. This singularity is clearly apparemt in the coordinate transformations
+coordinates on $\Hor$. This singularity is clearly apparent in the coordinate transformations
 (\ref{e:exk:3p1_Kerr_to_BL}).
+
+The inverse metric $\w{g}^{-1}$ has the following components in the Boyer-Lindquist coordinates
+(cf. the $a\to m$ limit of Eq.~(\ref{e:ker:inv_met_BL})):
+\be \label{e:exk:inv_met_BL}
+    g^{\alpha\beta} = \left(
+    \begin{array}{cccc}
+    - \frac{1}{(r-m)^2}
+    \left( r^2 + m^2 + \frac{2 m^3 r \sin^2\th}{\rho^2} \right)
+     & 0 & 0 & -\frac{2 m^2 r}{\rho^2 (r-m)^2} \\[1ex]
+    0 & \frac{(r-m)^2}{\rho^2} & 0 & 0 \\[1ex]
+    0 & 0 &\frac{1}{\rho^2} & 0 \\[1ex]
+    -\frac{2 m^2 r}{\rho^2 (r-m)^2} & 0 & 0 &
+    \frac{1}{(r-m)^2\sin^2\th}\left(1 - \frac{2 m r}{\rho^2} \right)
+    \end{array}
+    \right) .
+\ee
+
+\subsection{Symetries}
+
+The extremal Kerr metric (\ref{e:exk:metric_Kerr_3p1}) is stationary\footnote{Cf.
+Sec.~\ref{s:sta:def_station} for the definition of \emph{stationary} and a discussion
+about the terminology.} and axisymmetric. The corresponding isometry group is $\R\times\mathrm{SO}(2)$ and is generated
+by two commuting Killing vectors $\w{\xi}$ and $\w{\eta}$. Both the 3+1 Kerr coordinates and
+the Boyer-Lindquist ones are adapted to the spacetime symmetries, i.e. $(\ti,\tph)$ and
+$(t,\ph)$ are ignorable coordinates, as it is clear on the line elements (\ref{e:exk:metric_Kerr_3p1})
+and (\ref{e:exk:metric_BL}). Accordingly, one can normalize the Killing vectors so that
+\be
+    \encadre{\w{\xi} = \wpar_{\ti} = \wpar_t}
+    \qand
+    \encadre{\w{\eta} = \wpar_{\tph} = \wpar_\ph} .
+\ee
+
+\subsection{Principal null geodesics}
+
+As discussed in Sec.~\ref{s:ker:principal_geod}, the Kerr spacetime is
+endowed with two congruences of null geodesics that are tied to
+the spacetime structure, as described by the Weyl conformal curvature tensor.
+All the results of Sec.~\ref{s:ker:principal_geod} remain valid at the limit $a\to m$.
+We can summarize them as follows:
+\begin{greybox}
+\begin{itemize}
+\item The \defin{ingoing principal null geodesics} are the curves
+\be
+    \Li^{\rm in}_{(v,\th,\tph)}: \quad v = \mathrm{const},\ \th=\mathrm{const},\
+        \tph=\mathrm{const},
+\ee
+where $v$ is the Kerr advanced time:
+\be
+    v := \ti + r = t  + r - \frac{2m^2}{r -m} + 2m\ln\left| \frac{r - m}{m} \right|.
+\ee
+Along $\Li^{\rm in}_{(v,\th,\tph)}$, $-r$ is an affine parameter increasing towards the future;
+the corresponding tangent vector is
+\begin{subequations}
+\begin{align}
+ \w{k} & = \wpar_{\ti} - \wpar_{\tilde{r}} \\
+ \w{k} & = \frac{r^2 + m^2}{(r - m)^2}  \wpar_t
+            - \wpar_r + \frac{m}{(r - m)^2} \, \wpar_\ph
+            \quad \mbox{in}\ \M\setminus\Hor .
+\end{align}
+\end{subequations}
+\item The \defin{outgoing principal null geodesics} are the curves
+\begin{subequations}
+\begin{align}
+  \mbox{in}\ \M\setminus\Hor :&\quad \Li^{\rm out}_{(u,\th,\tilde{\tph})}:
+  \quad u = \mathrm{const},\ \th=\mathrm{const},\
+        \tilde{\tph}=\mathrm{const}, \\
+ \mbox{on}\  \Hor: &\quad \Li^{{\rm out},\Hor}_{(\th,\psi)}:
+    \quad  \th=\mathrm{const},\ \psi = \mathrm{const},
+\end{align}
+\end{subequations}
+where $u$ is the Kerr retarded time:
+\be
+    u := \ti - r + \frac{4 m^2}{r - m} - 4 m \ln \left| \frac{r - m}{m} \right|
+      = t  - r + \frac{2m^2}{r -m} - 2m\ln\left| \frac{r - m}{m} \right| ,
+\ee
+\be
+    \tilde{\tph} := \tph + \frac{2m}{r -m} = \ph + \frac{m}{r - m}
+\ee
+and
+\be
+    \psi := \tph - \frac{\ti}{2m} .
+\ee
+Along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, $r$ is an affine parameter increasing towards the future,
+while along $\Li^{{\rm out},\Hor}_{(\th,\psi)}$, such an affine parameter is $\ti$. The null tangent vector $\wl$ along both $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ and $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
+that coincides with the Killing vector $\w{\xi} + (2m)^{-1} \w{\eta}$ on $\Hor$ is
+\begin{subequations}
+\begin{align}
+ \wl & = \left( \frac{1}{2}  + \frac{m r}{r^2 + m^2}\right) \wpar_{\ti}
+  +  \left( \frac{1}{2} - \frac{m r}{r^2 + m^2}\right) \wpar_{\tilde{r}}
+  + \frac{m}{r^2 + m^2} \wpar_{\tph} \\
+ \wl & =  \frac{1}{2} \wpar_t
+            + \left( \frac{1}{2}  - \frac{m r}{r^2 + m^2} \right) \wpar_r
+            + \frac{m}{2(r^2 + m^2)} \, \wpar_\ph
+            \quad \mbox{in}\ \M\setminus\Hor .
+\end{align}
+\end{subequations}
+
+
+
+
+\end{itemize}
+\end{greybox}
+
+
+
+
 
 \subsection{The degenerate horizon}
 
