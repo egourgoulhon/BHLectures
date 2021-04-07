@@ -154,7 +154,8 @@ and $L = g_{\mu\nu} \, \eta^\mu p^\nu = g_{\ph\nu} \, p^\nu = p_\ph$.
 \begin{example}[Generators of the event and inner horizons] \label{x:gek:null_generator_hor}
 Let us choose for $\Li$ a null geodesic generator of the event horizon $\Hor$
 (cf. Sec.~\ref{s:gek:null_gen_hor}). $\Li$ is then an outgoing principal null
-geodesic and the 4-momentum vector $\w{p}$ is proportional to the null vector
+geodesic $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
+and the 4-momentum vector $\w{p}$ is proportional to the null vector
 $\wl \equalH \w{\chi} = \w{\xi} + \Omega_H \w{\eta}$ [Eq.~(\ref{e:ker:l_eqH_chi})
 and (\ref{e:ker:def_chi})].
 By definition of a
@@ -165,7 +166,7 @@ spacetime symmetries), we get immediately from
 the definitions (\ref{e:gek:def_E_L}) $E=0$ and $L=0$.
 Similarly, if $\Li$ is a null geodesic generator of the
 inner horizon $\Hor_{\rm in}$, $\Li$ is an outgoing principal null
-geodesic, with $\w{p}$ proportional to
+geodesic $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$, with $\w{p}$ proportional to
 the null normal
 $\wl \stackrel{\Hor_{\rm in}}{=} \w{\chi}_{\rm in} = \w{\xi} + \Omega_{\rm in} \w{\eta}$
 [Eq.~(\ref{e:ker:chi_in_ell}) and (\ref{e:ker:def_chi_in})], so that we
@@ -203,7 +204,8 @@ $L\geq 0$ with $L=0$ only for $a=0$ or $\th\in\{0,\pi\}$ (rotation axis).
 \end{example}
 
 \begin{example}[Outgoing principal null geodesics] \label{x:gek:outgoing_null_E_L}
-For the outgoing principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
+For the outgoing principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$,
+$\Li^{{\rm out},\Hor}_{(\th,\psi)}$ and $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$
 introduced in Sec.~\ref{s:ker:principal_geod}, the 4-momentum vector
 is
 \be \label{e:gek:p_beta_l}
@@ -225,8 +227,8 @@ $\wnab_{\w{p}} \beta + \kappa_{\wl} \beta^2 = 0$, or equivalently
     \derd{\beta}{\lambda} + \kappa_{\wl} \beta^2 = 0 .
 \ee
 The outgoing principal null geodesics either (i) are confined to one of the
-horizons $\Hor$ and $\Hor_{\rm in}$, generating them, or (ii) never intersect them
-(cf. the solid curves in Figs.~\ref{f:ker:princ_null_geod_a90} -- \ref{f:ker:princ_null_geod_a50}).
+horizons $\Hor$ and $\Hor_{\rm in}$, generating them (case of $\Li^{{\rm out},\Hor}_{(\th,\psi)}$ and $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$), or (ii) never intersect them
+(case of $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, cf. the solid curves in Figs.~\ref{f:ker:princ_null_geod_a90} -- \ref{f:ker:princ_null_geod_a50}).
 In the first case, $\kappa_{\wl}$ is a constant on $\Hor$ and $\Hor_{\rm in}$,
 given by Eq.~(\ref{e:ker:bar_kappa}) with $r=r_+$ for $\Hor$ and $r=r_-$ for $\Hor_{\rm in}$.
 The solution of Eq.~(\ref{e:gek:ode_beta}) is then
@@ -260,7 +262,7 @@ where the components $\ell_{\ti}$ and $\ell_{\tph}$ have been
 read on Eq.~(\ref{e:ker:ell_form_Kerr}). Given the above results for $\beta(\lambda)$,
 we get $E=0$ and $L=0$ on $\Hor$ and $\Hor_{\rm in}$, since $\Delta = 0$ there,
 and $E=B_0$ and $L = a B_0 \sin^2\th$ elsewhere. We conclude that
-for the outgoing principal null geodesic $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$,
+for the outgoing principal null geodesics,
 \begin{subequations}
 \label{e:gek:outgoing_null_E_L}
 \begin{eqnarray}
@@ -451,11 +453,13 @@ A null geodesic $\Li$ has a vanishing Carter constant $\mathscr{K}$ if, and
 only if, $\Li$ is a principal null geodesic:
 \be \label{e:gek:K_zero_null}
    \mathscr{K} = 0 \iff \Li = \Li^{\rm in}_{(v,\th,\tph)} \quad\mbox{or}\quad
-        \Li = \Li^{\rm out}_{(u,\th,\tilde{\tph})} ,
+        \Li = \Li^{\rm out},
 \ee
-where $\Li^{\rm in}_{(v,\th,\tph)}$ (resp. $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$)
-stands for one of the ingoing (resp. outgoing) principal null geodesic
-introduced in Sec.~\ref{s:ker:principal_geod}.
+where $\Li^{\rm in}_{(v,\th,\tph)}$ (resp. $\Li^{\rm out}$)
+is one of the ingoing (resp. outgoing) principal null geodesic
+introduced in Sec.~\ref{s:ker:principal_geod}, with $\Li^{\rm out}$ standing
+for $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
+or $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$.
 \end{greybox}
 \begin{proof}
 Consider expression (\ref{e:gek:Kcarter_prov}) for $\mathscr{K}$. If $\Li$
@@ -477,7 +481,7 @@ two null vectors are orthogonal iff they are collinear. Hence
     \mathscr{K} = 0 \iff \w{p} = \alpha \w{k} \quad\mbox{or}\quad \w{p} = \alpha \wl.
 \]
 Since $\w{k}$ (resp. $\wl$) is tangent to $\Li^{\rm in}_{(v,\th,\tph)}$ (resp.
-$\Li^{\rm out}_{(u,\th,\tilde{\tph})}$), this completes the proof.
+$\Li^{\rm out}$), this completes the proof.
 \end{proof}
 
 \begin{remark}
@@ -638,7 +642,7 @@ implies
     Q \leq 0 ,
 \ee
 with $Q=0$ only for principal null geodesics lying in the equatorial plane or
-for outgoing principal null geodesics generating the horizons $\Hor$ and $\Hor_{\rm in}$.
+for the outgoing principal null geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$ and $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$ generating the horizons $\Hor$ and $\Hor_{\rm in}$.
 \end{example}
 
 \begin{remark}

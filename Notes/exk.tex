@@ -131,7 +131,7 @@ The second order polynomial in $r$ introduced in Chap.~\ref{s:ker},
 $\Delta=r^2 - 2 m r + a^2 = (r - r_+)(r - r_-)$ reduces to $\Delta = (r - m)^2$
 in the limit $a\to m$. Its double root, $r=m$, defines the hypersurface $\Hor$.
 
-On the region $\M_{\rm BL}:= \M \setminus \Hor = \M_{\rm I} \cup \M_{\rm III}$, one may introduce
+In the region $\M_{\rm BL}:= \M \setminus \Hor = \M_{\rm I} \cup \M_{\rm III}$, one may introduce
 the \defin{Boyer-Lindquist coordinates}\index{Boyer-Lindquist coordinates}
 $(t,r,\th,\ph)$ such that $(r,\th)$ are the same coordinates as in the
 3+1 Kerr coordinates, while $t$ and $\ph$ are related to the 3+1 Kerr coordinates
@@ -247,17 +247,17 @@ We can summarize them as follows:
         \tph=\mathrm{const},
 \ee
 where $v$ is the Kerr advanced time:
-\be
+\be \label{e:exk:def_v}
     v := \ti + r = t  + r - \frac{2m^2}{r -m} + 2m\ln\left| \frac{r - m}{m} \right|.
 \ee
 Along $\Li^{\rm in}_{(v,\th,\tph)}$, $-r$ is an affine parameter increasing towards the future;
 the corresponding tangent vector is
 \begin{subequations}
 \begin{align}
- \w{k} & = \wpar_{\ti} - \wpar_{\tilde{r}} \\
+ \w{k} & = \wpar_{\ti} - \wpar_{\tilde{r}} \label{e:exk:k_3p1_Kerr}\\
  \w{k} & = \frac{r^2 + m^2}{(r - m)^2}  \wpar_t
             - \wpar_r + \frac{m}{(r - m)^2} \, \wpar_\ph
-            \quad \mbox{in}\ \M\setminus\Hor .
+            \quad \mbox{in}\ \M\setminus\Hor .  \label{e:exk:k_BL}
 \end{align}
 \end{subequations}
 \item The \defin{outgoing principal null geodesics} are the curves
@@ -271,43 +271,49 @@ the corresponding tangent vector is
 \end{align}
 \end{subequations}
 where $u$ is the Kerr retarded time:
-\be
+\be \label{e:exk:def_u}
     u := \ti - r + \frac{4 m^2}{r - m} - 4 m \ln \left| \frac{r - m}{m} \right|
       = t  - r + \frac{2m^2}{r -m} - 2m\ln\left| \frac{r - m}{m} \right| ,
 \ee
-\be
+\be \label{e:exk:def_ttph}
     \tilde{\tph} := \tph + \frac{2m}{r -m} = \ph + \frac{m}{r - m}
 \ee
 and
-\be
+\be \label{e:exk:psi_tph_ti}
     \psi := \tph - \frac{\ti}{2m} .
 \ee
 Along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, $r$ is an affine parameter increasing towards the future,
-while along $\Li^{{\rm out},\Hor}_{(\th,\psi)}$, such an affine parameter is $\ti$. The null tangent vector $\wl$ along both $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ and $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
+while along $\Li^{{\rm out},\Hor}_{(\th,\psi)}$, such an affine parameter is $\ti$. The null tangent vector $\wl$ along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ and $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
 that coincides with the Killing vector $\w{\xi} + (2m)^{-1} \w{\eta}$ on $\Hor$ is
 \begin{subequations}
 \begin{align}
  \wl & = \left( \frac{1}{2}  + \frac{m r}{r^2 + m^2}\right) \wpar_{\ti}
   +  \left( \frac{1}{2} - \frac{m r}{r^2 + m^2}\right) \wpar_{\tilde{r}}
-  + \frac{m}{r^2 + m^2} \wpar_{\tph} \\
+  + \frac{m}{r^2 + m^2} \wpar_{\tph} \label{e:exk:ell_3p1_Kerr}\\
  \wl & =  \frac{1}{2} \wpar_t
             + \left( \frac{1}{2}  - \frac{m r}{r^2 + m^2} \right) \wpar_r
             + \frac{m}{2(r^2 + m^2)} \, \wpar_\ph
-            \quad \mbox{in}\ \M\setminus\Hor .
+            \quad \mbox{in}\ \M\setminus\Hor . \label{e:exk:ell_BL}
 \end{align}
 \end{subequations}
-
-
-
-
 \end{itemize}
 \end{greybox}
+\begin{proof}
+The second equality in Eq.~(\ref{e:exk:def_v}) follows from Eq.~(\ref{e:exk:3p1_Kerr_to_BL_t}).
+Eq.~(\ref{e:exk:k_BL}) follow from Eq.~(\ref{e:exk:k_3p1_Kerr}) via Eq.~(\ref{e:exk:frame_BL_Kerr3p1}).
+Eqs.~(\ref{e:exk:def_u}) and (\ref{e:exk:def_ttph}) are the integrated version of the system (\ref{e:ker:out_Kerr_Kerr_3p1}) with $a=m$. Equations~(\ref{e:exk:psi_tph_ti}), (\ref{e:exk:ell_3p1_Kerr})
+and (\ref{e:exk:ell_BL}) are the $a=m$ versions of respectively
+Eqs.~(\ref{e:ker:psi_tph_ti}), (\ref{e:ker:def_ell_outgoing}) and (\ref{e:ker:ell_BL}).
+All the other statements follow from the $a\to m$ limit of results of Sec.~\ref{s:ker:principal_geod},
+except for $\ti$ being an affine parameter along $\Li^{{\rm out},\Hor}_{(\th,\psi)}$, which will
+be proved in Sec.~\ref{s:exk:horizon}.
+\end{proof}
 
 
 
 
 
-\subsection{The degenerate horizon}
+\subsection{The degenerate horizon} \label{s:exk:horizon}
 
 
 \section{Maximal analytic extension}

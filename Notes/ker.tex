@@ -998,12 +998,13 @@ outgoing Eddington-Finkelstein
 coordinates introduced in Sec.~\ref{s:sch:BH} to the case $a\not=0$.
 Thanks to the symmetry $(t,\ph)\mapsto(-t,-\ph)$ of the Kerr metric (\ref{e:ker:metric_BL}), which turns $(u,\tilde{\tph})$ into $(-v,-\tph)$, it is clear that the curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
 defined by $(u,\th,\tilde{\tph})=\mathrm{const}$ constitute a second
-congruence of principal null geodesics, called the \defin{outgoing principal null geodesics}\index{principal!null geodesic!outgoing --}\index{outgoing!principal null geodesic}. As $-r$ was a affine parameter along
+congruence of principal null geodesics, called the \defin{outgoing principal null geodesics}\index{principal!null geodesic!outgoing --}\index{outgoing!principal null geodesic}.
+A priori, this congruence is defined only in $\M_{\rm BL}$, i.e. where $\Delta\neq 0$,
+but we shall below that we can extend it to all $\M$.
+As $-r$ was a affine parameter along
 the ingoing principal null geodesics, $r$ is an affine parameter along
-the outgoing principal null geodesics,
- except at the locations of $\M$ where $\Delta=0$,
-i.e. at $\Hor$ and $\Hor_{\rm in}$ (see below). Another difference
-with respect to the ingoing family is that, while $-r$ was always
+the outgoing principal null geodesics in $\M_{\rm BL}$.
+A difference with respect to the ingoing family is that, while $-r$ was always
 increasing towards the future along ingoing geodesics,
  $r$ is increasing towards the future
 along outgoing principal null geodesics only in regions
@@ -1042,10 +1043,11 @@ These equations can be integrated (cf. the computation leading to Eq.~(\ref{e:ke
 \end{align}
 \end{subequations}
 
-The outgoing principal null geodesics are depicted, along with the
-ingoing ones, in Figs.~\ref{f:ker:princ_null_geod_a90} and
+The outgoing principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
+are depicted, along with the
+ingoing ones, $\Li^{\rm in}_{(v,\th,\tph)}$, in Figs.~\ref{f:ker:princ_null_geod_a90} and
 \ref{f:ker:princ_null_geod_a50}. Note that the $\tph$ dependency of the
-outgoing geodesics is not shown in these figures, which represent only a projection
+outgoing geodesics is not shown in these figures, which represent only projections
 in the $(\ti,r)$ plane. Actually the geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
 are winding at the coordinate speed
 \be \label{e:ker:wind_speed}
@@ -1088,17 +1090,22 @@ Another view of ingoing principal null geodesics is provided by Figs.~\ref{f:ksm
 depict them in terms of Kerr-Schild coordinates.
 
 The presence of $\Delta$ in the denominators of expressions~(\ref{e:ker:dtdr_dphdr_out})
-shows that $r$ cannot be considered as
-a parameter along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ as soon as
-$\Delta=0$, i.e. on $\Hor$ and $\Hor_{\rm in}$.
-In order to have a parametrization regular everywhere in $\M$, let us introduce
-instead of $r$
-the parameter $\lambda$ such that
+shows that $r$ can no longer be considered as
+a parameter along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ when
+$\Delta=0$, i.e. on $\Hor$ and $\Hor_{\rm in}$. Actually, the family $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ is not even defined there, since we read on
+(\ref{e:ker:out_princ_geod}) that
+$u\to+\infty$ and $\tilde{\tph}\to +\infty$ when $r\to r_+$ or $r\to r_-$
+(for a pictorial view of $u\to+\infty$ when $r\to r_+$, see Fig.~\ref{f:sch:conf_compl2} drawn in the Schwarzschild case).
+In order to extend the outgoing principal null family to $\Hor$ and $\Hor_{\rm in}$,
+let us introduce
+along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ in $\M_{\rm BL}$ the parameter $\lambda$
+that is related to the affine parameter $r$ by
 \be \label{e:ker:dr_dl_out_princip}
     \frac{\D r}{\D\lambda} = \frac{\Delta}{2(r^2+a^2)} .
 \ee
-The vector $\wl$ tangent to $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ and associated
-to $\lambda$ has then the following components w.r.t. 3+1 Kerr coordinates:
+The tangent vector to $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ associated
+to $\lambda$, $\wl$ say, has the following components w.r.t. 3+1 Kerr coordinates, obtained
+by combining Eqs.~(\ref{e:ker:dtdr_dphdr_out}) and (\ref{e:ker:dr_dl_out_princip}):
 \begin{align}
 & \ell^{\ti} = \frac{\D \ti}{\D\lambda} = \frac{\D \ti}{\D r}\times\frac{\D r}{\D\lambda}
     = \frac{r^2 + 2m r + a^2}{2(r^2+a^2)} = \frac{1}{2} + \frac{m r}{r^2 + a^2} \nonumber \\
@@ -1125,8 +1132,30 @@ with
 \be \label{e:ker:bar_kappa}
     \kappa_{\wl} := \frac{m(r^2-a^2)}{(r^2+a^2)^2} .
 \ee
-This confirms that the null curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ are
-geodesics (cf. Sec.~\ref{s:def:geod_gener} and Sec.~\ref{s:geo:gener_param}).
+Equation~(\ref{e:ker:pregeod_ell}) shows that the integral curves of the
+vector field $\wl$ are geodesics (cf. Secs.~\ref{s:def:geod_gener} and \ref{s:geo:gener_param}).
+In $\M_{\rm BL}$, they are nothing but the null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$.
+On $\Hor$ and $\Hor_{\rm in}$ they are null geodesics evolving at constant $r$
+($=r_+$ or $r_-$), constant $\th$ (since $\ell^\th = 0$) and constant $\psi$,
+where
+\be \label{e:ker:psi_tph_ti}
+    \psi := \tph - \frac{a}{2 m r_\pm} \ti .
+\ee
+Indeed, in view of the components (\ref{e:ker:def_ell_outgoing}), we have along these geodesics
+\[
+    \frac{\D\tph}{\D\ti} = \frac{\D\tph}{\D\lambda} \frac{\D\lambda}{\D\ti}
+    = \frac{\ell^\tph}{\ell^\ti} = \frac{2a}{r_\pm^2 + 2 m r_\pm + a^2}
+   = \frac{a}{2 m r_\pm}.
+\]
+Since $a/(2m r_\pm)$ is constant, we get
+$\tph = a/(2m r_\pm)\,  \ti + \psi$, where $\psi$ is some integration constant.
+\begin{greybox}
+Given that $\wl$ is a smooth vector field, the family of \defin{outgoing principal null
+geodesics}\index{principal!null geodesic!outgoing --}\index{outgoing!principal null geodesic} can be smoothly extended to include the above integral curves of $\wl$ on $\Hor$ and
+$\Hor_{\rm in}$. We shall denote them by
+$\Li^{{\rm out},\Hor}_{(\th,\psi)}$ and $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$
+and shall discuss them in more detail in Sec.~\ref{s:gek:null_gen_hor}.
+\end{greybox}
 
 The 1-form $\uu{\el}$ associated to $\wl$ by
 $\w{g}$-duality is obtained
@@ -1182,13 +1211,15 @@ the spacetime manifold $\M$).
 Using Lemma~2 of Sec.~\ref{s:fra:time_orientation} with $\w{u}=\w{k}$ and
 $\w{v} = \wl$, we conclude that
 \begin{greybox}
-The vector field $\wl$ tangent to the outgoing principal null geodesics
+The tangent vector $\wl$ to the outgoing principal null geodesics
 is future-directed in all the Kerr spacetime $\M$.
 \end{greybox}
 
 \begin{remark}
 Instead of $\wl$, another natural choise for the tangent vector to the outgoing
-principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ would have been the tangent vector $\w{\hat{\el}}$
+principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$,
+$\Li^{{\rm out},\Hor}_{(\th,\psi)}$ and $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$
+would have been the tangent vector $\w{\hat{\el}}$
 such that
 \be
     \w{g}(\w{k}, \w{\hat{\el}}) = - 1.
@@ -1198,9 +1229,10 @@ In view of (\ref{e:ker:k_scal_ell}), the two tangent vectors are related by
     \w{\hat{\el}} = \frac{r^2 + a^2}{\rho^2} \wl .
 \ee
 As for $\wl$, the tangent vector $\w{\hat{\el}}$ does not correspond to
-an affine parameter of $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, i.e. its
+an affine parameter of the outgoing
+principal null geodesics, i.e. its
 non-affinity coefficient $\kappa_{\w{\hat{\el}}}$ is nonzero. While
-$\w{\hat{\el}}$ is used in many studies, here we prefer $\wl$ because it
+$\w{\hat{\el}}$ is used in many studies, we prefer $\wl$ here because it
 coincides with the Killing vector $\w{\xi} + \Omega_H \w{\eta}$
 on the event horizon [Eq.~(\ref{e:ker:l_eqH_chi}) below]. In particular, its
 non-affinity coefficient $\kappa_{\w{\el}}$ gives there the so-called
@@ -1230,12 +1262,12 @@ the 3+1 Kerr coordinates:
     \nabla^{\tilde{\alpha}} r = \left( \frac{2m r}{\rho^2}, \frac{\Delta}{\rho^2}, 0, \frac{a}{\rho^2}
             \right) .
 \ee
-It is then quite natural to consider the vector field
+It is then quite natural to consider the rescaled vector field
 \be \label{e:ker:def_normal_hyp_r}
     \w{n} := \rho^2 \vw{\nabla} r
 \ee
-for the normal to the hypersurfaces $r=\mathrm{const}$. According to (\ref{e:ker:nab_r_comp}),
-it has indeed simple components in the 3+1 Kerr frame:
+as the normal to the hypersurfaces $r=\mathrm{const}$, instead of $ \vw{\nabla} r$, for it
+has simpler components in the 3+1 Kerr frame:
 \be \label{e:ker:normal_r}
     \w{n} = 2 m r \, \wpar_\ti + \Delta \, \wpar_{\tilde r} + a \, \wpar_\tph .
 \ee
@@ -1387,47 +1419,51 @@ since $m r/(r^2 + a^2) \equalH 1/2$ and $a/(r^2+a^2) \equalH \Omega_H$:
     \wl \equalH \w{\chi} .
 \ee
 Since (i) $\w{\chi}$ is tangent
-to the null geodesic generators of $\Hor$, being a null normal to it (cf. Sec.~\ref{s:def:null_geod_gen}) and (ii) $\wl$ is the tangent vector field to the
-outgoing principal null congruence (Sec.~\ref{s:ker:principal_geod}),
+to the null geodesic generators of $\Hor$, being a null normal to it (cf. Sec.~\ref{s:def:null_geod_gen}) and (ii) $\wl$ is the tangent vector to the
+outgoing principal null geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$ (Sec.~\ref{s:ker:principal_geod}),
 we conclude that
 \begin{greybox}
-The null generators of the event horizon $\Hor$ are some outgoing principal
-null geodesics.
+The null generators of the event horizon $\Hor$ are the
+geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
+of the outgoing principal null congruence.
 \end{greybox}
+
+Similarly, we have
+\begin{greybox}
+The null generators of the inner horizon $\Hor_{\rm in}$ are the
+geodesics $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$
+of the outgoing principal null congruence.
+\end{greybox}
+
 The reader is referred to Fig.~\ref{f:sta:rot_horizon} for a pictorial
 view of the event horizon $\Hor$ spanned by the rotating null generators,
 as well as to Figs.~\ref{f:ker:princ_null_geod_a90} and \ref{f:ker:princ_null_geod_a50},
-where it appears clearly that at $r=r_+$ the outgoing principal null geodesics are
-tangent to $\Hor$.
+where it appears clearly that at $r=r_+$ (resp. $r=r_-$) the outgoing principal null geodesics are
+tangent to $\Hor$ (resp. $\Hor_{\rm in}$).
 
 \begin{remark}
 Since $\Delta=0$ on $\Hor$, we read immediately from Eq.~(\ref{e:ker:ell_form_Kerr})
 that
 \[
     \uu{\el} \equalH \frac{\rho^2}{r^2 + a^2} \, \dd r ,
-\]
+\]3
 which shows that, at any point of $\Hor$, the vector $\wl$ is normal to
 the hypersurface $r = \mathrm{const}$ through this point. This hypersurface
-being nothing but $\Hor$ itself, we recover the fact that $\el$ is normal
+being nothing but $\Hor$ itself, we recover the fact that $\wl$ is normal
 to $\Hor$.
 \end{remark}
 
-\begin{remark}
-In Sec.~\ref{s:ker:principal_geod}, we have labelled the outgoing principal
-null congruence by $(u,\th,\tilde{\tph})$, denoting each geodesic by
-$\Li^{\rm out}_{(u,\th,\tilde{\tph})}$. However, this labelling is valid
-only within one of the regions $\M_{\rm I}$, $\M_{\rm II}$ and
-$\M_{\rm III}$, i.e. a fixed value of $(u,\th,\tilde{\tph})$
-correspond to three different geodesics: one in each of the three domains.
-The generators of $\Hor$ do not fit in this labelling, since they would
-correspond to $u\rightarrow +\infty$ (see Fig.~\ref{f:sch:conf_compl2}, drawn
-for the Schwarzschild case).
-\end{remark}
-
-
-We verify that the winding speed of the outgoing principal
+In view of expression (\ref{e:ker:def_OmegaH}) for $\Omega_H$,
+Eq.~(\ref{e:ker:psi_tph_ti}) for the parameter $\psi$
+labelling the outgoing principal null geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
+can be rewritten as
+\be
+    \psi = \tph - \Omega_H \ti .
+\ee
+Hence $\psi$ appears as a corotating azimuthal coordinate on $\Hor$.
+Moreover, we verify that the winding speed of the outgoing principal
 null geodesics given by Eq.~(\ref{e:ker:wind_speed}) tends toward
-the black hole rotation velocity when approaching the event horizon:
+$\Omega_H$ when approaching the event horizon:
 \be
     \lim_{r\rightarrow r_+}
     \left. \frac{\D\tph}{\D\ti} \right| _{\Li^{\rm out}_{(u,\th,\tilde{\tph})}}
