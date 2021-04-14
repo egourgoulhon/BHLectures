@@ -78,7 +78,7 @@ of the extremal Kerr spacetime. Note that, formally, it is not part of the space
 [cf. Eq.~(\ref{e:exk:def_M})].
 
 Moreover, the Ricci tensor of the metric (\ref{e:exk:metric_Kerr_3p1}) is identically zero in all
-$\M$ (see e.g. the notebook~\ref{s:sam:Kerr_Kerr_coord}). Hence, we have:
+$\M$ (see e.g. the notebook~\ref{s:sam:Kerr_extremal}). Hence, we have:
 \begin{greybox}
 The metric $\w{g}$ of the extremal Kerr spacetime is a solution of Einstein equation\index{Einstein!equation} (\ref{e:fra:Einstein_eq})
 in vacuum ($\w{T}=0$) and with a vanishing cosmological constant ($\Lambda=0$).
@@ -118,7 +118,7 @@ with
 \begin{subequations}
 \begin{align}
     \M_{\rm I} & := \left\{ p \in \M, \quad r(p) > m \right\} \\
-    \Hor & := \left\{ p \in \M, \quad r(p) = m \right\} \\
+    \Hor & := \left\{ p \in \M, \quad r(p) = m \right\} \label{e:exk:def_H}\\
     \M_{\rm III} & := \left\{ p \in \M, \quad r(p) < m \right\} .
 \end{align}
 \end{subequations}
@@ -347,7 +347,50 @@ coordinates in Fig.~\ref{f:exk:princ_null_geod}.
 
 \subsection{The degenerate horizon} \label{s:exk:horizon}
 
+$\Hor$ is the hypersurface of $\M$ defined by $r=m$ [Eq.~(\ref{e:exk:def_H})]. Given
+that the component $g^{rr} = (r - m)^2/\rho^2$ of the inverse metric with respect to 3+1 Kerr coordinates vanishes at $r=m$ [cf. Eq.~(\ref{e:exk:inv_met_3p1})], we have
+$g^{\tilde{\mu}\tilde{\nu}} \partial_{\tilde{\mu}} r \partial_{\tilde{\nu}} r = 0$ on $\Hor$,
+which implies that the gradient $\vw{\nabla} r$
+is a null vector there and that $\Hor$ is a null hypersurface.
+Moreover, since the components of $\vw{\nabla} r$ are $\nabla^{\tilde{\alpha}} = g^{\tilde{\alpha}r}$,
+we read on Eq.~(\ref{e:exk:inv_met_3p1}) that
+\be
+    \vw{\nabla} r \equalH \frac{2m^2}{\rho^2} \wpar_{\ti} + \frac{m}{\rho^2} \wpar_{\tph}
+        \equalH \frac{2 m^2}{\rho^2} \w{\chi} ,
+\ee
+where $\w{\chi}$ is the Killing vector field
+\be
+    \w{\chi} := \w{\xi} + \Omega_H \w{\eta} , \qquad\mbox{with}\quad \Omega_H := \frac{1}{2m} .
+\ee
+It follows immediately that $\Hor$ is a \emph{Killing horizon}, i.e. a null hypersurface
+that admits a Killing vector as null normal (cf. the definition given in
+Sec.~\ref{s:neh:def_Killing_hor}).
 
+From expression~(\ref{e:exk:ell_3p1_Kerr}) for $\wl$, we have immediately
+\be \label{e:exk:ell_chi_on_H}
+    \wl \equalH \w{\chi} .
+\ee
+This means that the null generators of $\Hor$ are the outgoing principal null
+geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$.
+
+The \emph{surface gravity}\index{surface!gravity} $\kappa$ of the Killing horizon $\Hor$
+has been defined in Sec.~\ref{s:neh:zeroth_law} as the non-affinity coefficient of the Killing-vector normal $\w{\chi}$ to $\Hor$:
+$\wnab_{\w{\chi}}\, \w{\chi} \equalH \kappa \, \w{\chi}$ [cf. Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
+Given (\ref{e:exk:ell_chi_on_H}), $\kappa$ coincides with the value on $\Hor$ of the
+non-affinity coefficient $\kappa_{\wl}$ of the tangent $\wl$ to the outgoing principal null
+geodesics: $\wnab_{\wl}\, \wl = \kappa_{\wl}\, \wl$. A direct computation (cf. the notebook~\ref{s:sam:Kerr_extremal}) reveals that
+\be
+    \kappa_{\wl} = m \frac{r^2 - m^2}{(r^2 + m^2)^2} .
+\ee
+In particular, $\kappa_{\wl}$ vanishes for $r=m$, i.e. on $\Hor$.
+Since $\kappa = \left. \kappa_{\wl} \right| _{\Hor}$, we
+get\footnote{The vanishing of $\kappa$ can also be obtained
+by taking the limit $a\to m$ of expression (\ref{e:ker:kappa_m_a}) derived for $a<m$.}
+\be
+    \encadre{\kappa = 0 } .
+\ee
+According to the classification introduced in Sec.~\ref{s:neh:classif_KH}, one says
+that $\Hor$ is a \emph{degenerate Killing horizon}\index{degenerate!Killing horizon}\index{Killing!horizon!degenerate --}.
 
 
 \section{Maximal analytic extension}
