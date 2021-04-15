@@ -270,8 +270,8 @@ We can summarize them as follows:
 \begin{itemize}
 \item The \defin{ingoing principal null geodesics} are the curves
 \be
-    \Li^{\rm in}_{(v,\th,\tph)}: \quad v = \mathrm{const},\ \th=\mathrm{const},\
-        \tph=\mathrm{const},
+    \Li^{\rm in}_{(v,\th,\tph)}:\quad
+        (v,\th,\tph) = \mathrm{const} \in \R\times[0,\pi]\times[0,2\pi), %]
 \ee
 where $v$ is the Kerr advanced time:
 \be \label{e:exk:def_v}
@@ -291,13 +291,11 @@ the corresponding tangent vector is
 \begin{subequations}
 \begin{align}
   \mbox{in}\ \M_{\rm I} :&\quad \Li^{\rm out, I}_{(u,\th,\tilde{\tph})}:
-  \quad u = \mathrm{const},\ \th=\mathrm{const},\
-        \tilde{\tph}=\mathrm{const}, \\
+    \quad   (u,\th,\tilde{\tph}) = \mathrm{const} \in \R\times[0,\pi]\times[0,2\pi), \\ %]
   \mbox{in}\ \M_{\rm III}:&\quad \Li^{\rm out, III}_{(u,\th,\tilde{\tph})}:
-  \quad u = \mathrm{const},\ \th=\mathrm{const},\
-        \tilde{\tph}=\mathrm{const}, \\
+    \quad   (u,\th,\tilde{\tph}) = \mathrm{const} \in \R\times[0,\pi]\times[0,2\pi), \\ %]
  \mbox{on}\  \Hor: &\quad \Li^{{\rm out},\Hor}_{(\th,\psi)}:
-    \quad  \th=\mathrm{const},\ \psi = \mathrm{const},
+    \quad  (\th,\psi) = \mathrm{const} \in [0,\pi]\times[0,2\pi),  %]
 \end{align}
 \end{subequations}
 where $u$ is the Kerr retarded time:
@@ -359,7 +357,7 @@ we read on Eq.~(\ref{e:exk:inv_met_3p1}) that
         \equalH \frac{2 m^2}{\rho^2} \w{\chi} ,
 \ee
 where $\w{\chi}$ is the Killing vector field
-\be
+\be \label{e:exk:def_chi}
     \w{\chi} := \w{\xi} + \Omega_H \w{\eta} , \qquad\mbox{with}\quad \Omega_H := \frac{1}{2m} .
 \ee
 It follows immediately that $\Hor$ is a \emph{Killing horizon}, i.e. a null hypersurface
@@ -391,12 +389,59 @@ by taking the limit $a\to m$ of expression (\ref{e:ker:kappa_m_a}) derived for $
 \ee
 According to the classification introduced in Sec.~\ref{s:neh:classif_KH}, one says
 that $\Hor$ is a \emph{degenerate Killing horizon}\index{degenerate!Killing horizon}\index{Killing!horizon!degenerate --}.
+The vanishing of the non-affinity parameter $\kappa$ means that $\wl$ is a geodesic vector\index{geodesic!vector}
+on $\Hor$, and not only a pregeodesic\index{pregeodesic!vector field}  one (cf. Remark~\ref{r:fra:geodesic_vector} in Sec.~\ref{s:fra:geod_motion}). Equivalently, at any given point $p\in\Hor$,
+$\wl$ is the tangent vector associated to
+an affine parameter $\lambda$ of the null geodesic $\Li^{{\rm out},\Hor}_{(\th,\psi)}$ through $p$.
+Moreover, the affine parameter $\lambda$ coincides with $\ti$,
+up to some additive constant. Indeed,
+Eq.~(\ref{e:exk:ell_chi_on_H}) implies
+\[
+     \ell^{\ti} = \derd{\ti}{\lambda} = \chi^{\ti} = 1 ,
+\]
+from which $\lambda = \ti + \mathrm{const}$.
+Since the range of $\ti$ is $(-\infty, +\infty)$, we conclude that
+$\Li^{{\rm out},\Hor}_{(\th,\psi)}$ is a complete geodesic. This constrasts
+with the null generators of a non-degenerate Killing horizon, which are
+incomplete, as shown in Sec.~\ref{s:sta:non-degenerate_KH}.
 
+Let us summarize the results obtained above:
+\begin{greybox}
+In the extremal Kerr spacetime, the hypersurface $\Hor$ defined
+by $r=m$ is a degenerate Killing horizon.
+Its generators are the outgoing principal null geodesics
+$\Li^{{\rm out},\Hor}_{(\th,\psi)}$, which are complete geodesics
+and which admit $\ti$ as an affine parameter. The tangent vector associated to this affine
+parameter is the Killing vector $\w{\chi} = \w{\xi} + \Omega_H \w{\eta}$
+[Eq.~(\ref{e:exk:def_chi})], which coincides on $\Hor$ with the tangent
+vector $\wl$ to the outgoing principal null congruence.
+\end{greybox}
+
+\subsection{Black hole character}
+
+As a Killing horizon, $\Hor$ is a null hypersurface and thus a one-way membrane.
+Since the ingoing principal null geodesics $\Li^{\rm in}_{(v,\th,\tph)}$
+cross it from $\M_{\rm I}$ to $\M_{\rm III}$ (cf. Fig.~\ref{f:exk:princ_null_geod}),
+we conclude that no particle may cross $\Hor$ from $\M_{\rm III}$
+to $\M_{\rm I}$.
 
 \section{Maximal analytic extension}
 
 \section{Near-horizon extremal Kerr metric}
 
 \subsection{The extremal Kerr throat}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
