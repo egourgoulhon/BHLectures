@@ -1013,7 +1013,8 @@ coordinates that are similar to
 The coordinates $(u,r,\th,\tilde{\tph})$ generalize the null
 outgoing Eddington-Finkelstein
 coordinates introduced in Sec.~\ref{s:sch:BH} to the case $a\not=0$.
-Thanks to the symmetry $(t,\ph)\mapsto(-t,-\ph)$ of the Kerr metric (\ref{e:ker:metric_BL}), which turns $(u,\tilde{\tph})$ into $(-v,-\tph)$, it is clear that the curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
+Thanks to the symmetry $(t,\ph)\mapsto(-t,-\ph)$ of the Kerr metric (\ref{e:ker:metric_BL}), which turns $(u,\tilde{\tph})$ into $(-v,-\tph)$, it is clear that the
+curves $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
 defined by $(u,\th,\tilde{\tph})=\mathrm{const}$ constitute a second
 congruence of principal null geodesics, called the \defin{outgoing principal null geodesics}\index{principal!null geodesic!outgoing --}\index{outgoing!principal null geodesic}.
 A priori, this congruence is defined only in $\M_{\rm BL}$, i.e. where $\Delta\neq 0$,
@@ -1054,7 +1055,7 @@ These equations can be integrated (cf. the computation leading to Eq.~(\ref{e:ke
 \begin{align}
 & u = \ti - r - \frac{2m}{\sqrt{m^2-a^2}} \left(
     r_+ \ln\left| \frac{r-r_+}{2m} \right|
-    - r_- \ln\left| \frac{r-r_-}{2m} \right| \right) \\
+    - r_- \ln\left| \frac{r-r_-}{2m} \right| \right) \label{e:ker:out_princ_geod_u} \\
 &  \tilde{\tph} = \tph - \frac{a}{\sqrt{m^2-a^2}}\, \ln \left|
     \frac{r-r_+}{r-r_-} \right|  ,  \label{e:ker:out_princ_geod_ttph}
 \end{align}
@@ -1397,7 +1398,7 @@ and T.G. Price\index{Price, T.G.} \cite{BoyerP65}, who claimed: ``These are `hor
 in the sense that there can be a flow of matter or radiation across them in only one dimension. They are the analogues of the Schwarzschild null sphere or `singularity'.''
 \end{hist}
 
-\subsection{Event horizon} \label{s:ker:event_hor}
+\subsection{Black hole character} \label{s:ker:event_hor}
 
 As a null hypersurface, $\Hor$ is a one-way membrane (cf. Sec.~\ref{s:def:hor_as_null}),
 therefore any (massive or null) particle that crossed it from $\M_{\rm I}$ to
@@ -2678,53 +2679,115 @@ It is therefore a static observer (cf. Sec.~\ref{s:ker:static_obs}). We shall ca
 
 \section{Maximal analytic extension} \label{s:ker:max_extension}
 
-\subsection{Construction}
+\subsection{Carter-Penrose diagrams}
 
-A schematic Carter-Penrose diagram of the Kerr spacetime $(\M,\w{g})$ is depicted in
-Fig.~\ref{f:ker:3blocks_in}.
-By \emph{schematic} it is meant that we do not provide an explicit construction
-via ``compactified'' coordinates, as we did for Schwarzschild
-spacetime in Sec.~\ref{s:max:Carter-Penrose}. The plane of Fig.~\ref{f:ker:3blocks_in}
-is the $(\ti,r)$ plane, so that
-each point in the diagram is a 2-sphere, spanned by $(\th,\tph)$, except
-along the curve $r=0$ (thick dotted line) where each point is the union $\mathcal{S}_{0,t}$
-of two flat open disks (cf. Sec.~\ref{s:ker:basic_prop}, Eq.~(\ref{e:ker:S_r_zero})).
-As for the Carter-Penrose diagram of Schwarzschild spacetime presented in
-Chap.~\ref{s:max}, the diagram of Fig.~\ref{f:ker:3blocks_in} is conformal, i.e.
-the null curves are represented by $\pm 45^\circ$ lines. A difference with the Schwarzschild case
-is that Fig.~\ref{f:ker:3blocks_in} provides only a partial view of Kerr spacetime, since
-the dependence of the Kerr metric on $\theta$ is not represented.
+It is useful to have a ``compactified view'' of the whole Kerr spacetime $(\M,\w{g})$,
+as we had for Schwarzschild spacetime via the Carter-Penrose diagrams
+discussed in Sec.~\ref{s:max:Carter-Penrose}.
+However, because the Kerr spacetime with $a\neq 0$ is not spherically symmetric,
+such a 2-dimensional diagram can only offer a truncated view.
+With this in mind, we shall call a \defin{Carter-Penrose diagram}\index{Carter-Penrose diagram}
+of Kerr spacetime $(\M,\w{g})$ the image $\Pi(\M)$ of a differentiable map $\Pi: \M \to \R^2$,
+$(\ti,r,\th,\tph)\mapsto (T, X)$ such that
+\begin{enumerate}
+\item $T = T(\ti, r)$, $X = X(\ti, r)$;
+\item $\Pi(\M)$ is a bounded region of $\R^2$;
+\item the ingoing principal null geodesics are mapped to lines $T = -X +\mathrm{const}$
+and the outgoing ones are mapped to lines $T = X +\mathrm{const}$.
+\end{enumerate}
+Property~1 implies that $\Pi$ acts as a \emph{projection}, leaving out any information
+in the non-ignorable coordinate $\th$. Property~2 provides the ``compactified''
+view\footnote{Property 2 refers to a
+``bounded region'' instead of ``compact region'', because $\Pi(\M)$
+is in general an open subset of $\R^2$ and therefore not a compact subset.},
+and Property~3 makes $\Pi(\M)$ look ``conformal'' to the 2-dimensional
+Minkowski spacetime generated
+by the metric $\w{f} = -\dd T\otimes \dd T + \dd X\otimes \dd X$ on $\R^2$.
+However, let us stress that $\Pi$
+is not a priori connected to a proper conformal completion of
+$(\M,\w{g})$, as defined in Sec.~\ref{s:glo:conf_compl}.
+Note that to fulfill Property~3, it suffices to choose the functions $T(\ti,r)$
+and $X(\ti,r)$ defining $\Pi$ such that
+\be \label{e:ker:Carter_Penrose_T_X}
+    T(\ti,r) = U(u) + V(v) \qand X(\ti, r) = V(v) - U(u),
+\ee
+where $U(u)$ is a function of the retarded Kerr time $u = u(\ti,r)$ given by Eq.~(\ref{e:ker:out_princ_geod_u})
+and $V(v)$ is a function of the advanced Kerr time $v = \ti + r$ [Eq.~(\ref{e:ker:def_t_tilde})].
+This follows from $u$ (resp. $v$) being constant along the outgoing (resp. ingoing)
+principal null geodesics. Note also that
+Property~3 ensures that the two horizons $\Hor$ and $\Hor_{\rm in}$, which are
+generated by outgoing principal null geodesics,
+appear as lines inclined by $+45^\circ$ with respect to the $X$-axis,
+as for the black hole event horizon in the Carter-Penrose diagrams of
+Schwarzschild spacetime (Figs.~\ref{f:max:carter-penrose-std} and \ref{f:max:carter-penrose-FN}).
+
+\begin{remark}
+A related but distinct concept of \emph{projection diagram}\index{projection!diagram}
+has been introduced
+in Ref.~\cite{ChrusOS12} (see also Chap.~7 of Ref.~\cite{Chrus20});
+it differs from that considered here by demanding, instead of Properties 1 to 3,
+that $\Pi$ maps any timelike curve of\footnote{$\mathscr{T}$ is the Carter time machine
+discussed in Sec.~\ref{s:ker:time_machine}.}
+ $(\M\setminus\mathscr{T},\w{g})$ to a timelike curve of the Minkowski spacetime
+$(\R^2, \w{f})$ and that any timelike curve in $\Pi(\M\setminus\mathscr{T})$ is the image
+of a timelike curve of $(\M\setminus\mathscr{T},\w{g})$.
+\end{remark}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{ker_3blocks_in.pdf}}
 \caption[]{\label{f:ker:3blocks_in} \footnotesize
-Conformal diagram of the Kerr spacetime $(\M,\w{g})$, with
+Carter-Penrose diagram of the Kerr spacetime $(\M,\w{g})$, with
 $\M = \R^2\times\SS^2 \setminus \ring$ (cf. Eq.~(\ref{e:ker:def_M_Kerr_spacetime}) in Sec.~\ref{s:ker:Kerr_coord}), spanned by the ingoing principal null geodesics (dashed green lines). The solid green lines are outgoing principal null geodesics, while
 the dotted curves mark some hypersurfaces $r=\mathrm{const}$.}
 \end{figure}
 
-The dotted curves in Fig.~\ref{f:ker:3blocks_in} represents the hypersurfaces
-$r=\mathrm{const}$. From their inclination in this conformal diagram, we recover the results
-of Sec.~\ref{s:ker:Killing_hor}: the hypersurfaces $r=\mathrm{const}$ are timelike in
+A schematic Carter-Penrose diagram of the Kerr spacetime $(\M,\w{g})$ is shown in
+Fig.~\ref{f:ker:3blocks_in}.
+By \emph{schematic} it is meant that we do not provide any explicit construction
+via a map $\Pi$. Let us mention however that defining $\Pi$ by
+choosing
+$U(u) = \arctan(u/m) - k\pi$ and $V(v) = \arctan(v/m)$ in Eq.~(\ref{e:ker:Carter_Penrose_T_X}),
+with $k=0$, $1$ and $2$
+on respectively $\M_{\rm I}$, $\M_{\rm II}$ and $\M_{\rm III}$,
+would lead to such a diagram.
+By virtue of Property~1, one may think of each point in the diagram of
+Fig.~\ref{f:ker:3blocks_in} as being a 2-sphere, spanned by $(\th,\tph)$, except
+along the curve $r=0$ (thick dotted line), where each point is the union $\mathcal{S}_{0,t}$
+of two flat open disks (cf. Sec.~\ref{s:ker:basic_prop}, Eq.~(\ref{e:ker:S_r_zero})).
+
+Each of the regions $\M_{\rm I}$, $\M_{\rm II}$ and $\M_{\rm III}$ of the Kerr spacetime
+$\M$ is mapped to the interior of a square tilted by $45^\circ$ (a ``diamond'')
+in the diagram of Fig.~\ref{f:ker:3blocks_in}. In each of these diamond
+blocks, $v$ increases from $-\infty$ to $+\infty$ in the South-West to North-East direction,
+while $u$ increases from $-\infty$ to $+\infty$ in the South-East to North-West direction
+in  $\M_{\rm I}$ and $\M_{\rm III}$ and in the opposite direction in $\M_{\rm II}$.
+These ranges and directions follow directly from $v = \ti + r$
+and the graph of $u - \ti$ shown in Fig.~\ref{f:ker:u_ttphi_r}.
+
+The dotted curves in Fig.~\ref{f:ker:3blocks_in} represent some hypersurfaces
+$r=\mathrm{const}$. According to the results
+of Sec.~\ref{s:ker:Killing_hor}, such hypersurfaces are timelike in
 $\M_{\rm I}$ and $\M_{\rm III}$, spacelike in $\M_{\rm II}$ and null for
 $r=r_-$ or $r=r_+$. Since the Killing vector field $\w{\xi}$ is tangent
 to the hypersurfaces $r=\mathrm{const}$, the dotted curves in Fig.~\ref{f:ker:3blocks_in}
-can also be seen as the projection in the $(\ti,r)$ plane of the field lines
-of $\w{\xi}$ (orbits of the stationary group action).
+can also be seen as the projections of the field lines
+of $\w{\xi}$, i.e. the orbits of the stationary group action.
 
-The ingoing principal null geodesics (dashed green lines in
+\subsection{Constructing the maximal extension}
+
+The ingoing principal null geodesics $\Li^{\rm in}_{(v,\th,\tph)}$ (dashed green lines in
 Fig.~\ref{f:ker:3blocks_in}) are complete (cf. Sec.~\ref{s:geo:existence_uniqueness}),
 except for those lying in the equatorial plane, which hit the curvature singularity
 at $r=0$. Indeed, the affine parameter
 $\lambda=-r$ of any ingoing principal null geodesic with $\th\neq \pi/2$
-ranges from $-\infty$ (lower right of the diagram) to $+\infty$ (upper left). On the contrary, the outgoing principal null geodesics (solid green lines in
+ranges from $-\infty$ (lower right of the diagram) to $+\infty$ (upper left). On the contrary, the outgoing principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ (solid green lines in
 Fig.~\ref{f:ker:3blocks_in}) are not complete: in $\M_{\rm I}$, their affine parameter
 $\lambda=r$ is bounded from below by $r_+$; in $\M_{\rm II}$, their affine parameter
 $\lambda=-r$ ranges in $(-r_+,-r_-)$ only and in $\M_{\rm III}$, their affine parameter
 $\lambda=r$ is bounded from above by $r_-$.
-Since these geodesics are not ending on any spacetime singularity
+Since these geodesics are not ending at any spacetime singularity
 (it can be shown that all curvature scalar invariants remain bounded along
-these geodesics), except those with $\th=\pi/2$ in $\M_{\rm III}$,
+them), except those with $\th=\pi/2$ in $\M_{\rm III}$,
 this indicates that the spacetime $(\M,\w{g})$
 can be extended. Moreover, for $0\leq a < m$,
 the event horizon  $\Hor$ is a
@@ -2737,7 +2800,7 @@ in an extended spacetime.
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{ker_3blocks_out.pdf}}
 \caption[]{\label{f:ker:3blocks_out} \footnotesize
-Conformal diagram of the minimal extension of $\M_{\rm I}$ to ensure
+Carter-Penrose diagram of the minimal extension of $\M_{\rm I}$ to ensure
 complete outgoing principal null geodesics (one of them is drawn as a solid green line).}
 \end{figure}
 
@@ -2752,7 +2815,7 @@ in $\M_{\rm II}$.}
  of $(\M_{\rm II},\w{g})$, $(\M_{\rm II}^*,\w{g})$ say,
 and then attaching to the latter a copy of $(\M_{\rm III},\w{g})$, $(\M''_{\rm III},\w{g})$ say\footnote{The notation
 $\M''_{\rm III}$ instead of $\M'_{\rm III}$ is for later convenience.}.
-By construction, the outgoing principal null geodesics are complete, but
+By construction, the outgoing principal null geodesics are complete in this extension, but
 the ingoing ones are not: the affine parameter $\lambda=-r$ of that
 denoted by $v=v_0$ in Fig.~\ref{f:ker:3blocks_out} is bounded from above by $-r_+$. Actually the
 situation is completely symmetric to that of the original Kerr
@@ -2796,8 +2859,18 @@ $\Hor$ and the inner horizon $\Hor_{\rm in}$ have been extended to
 bifurcate Killing horizons\index{bifurcate!Killing horizon}\index{Killing!horizon!bifurcate --}\index{horizon!bifurcate Killing --} (cf. Sec.~\ref{s:sta:bifur_Killing_hor}), the bifurcation surface\index{bifurcation!surface} of which being a 2-sphere depicted by a circular dot.
 
 \begin{hist}
-In 1965, Brandon Carter\index{Carter, B.} \cite{Carte66} obtained the maximal analytic extension
-of the 2-dimensional manifold constituting the symmetry axis $\theta=0$ or $\pi$ of Kerr spacetime, leading to a diagram similar to that of Fig.~\ref{f:ker:max_ext} (Fig.~1a of Ref.~\cite{Carte66}). In the same article, Carter suggested that the maximal analytic extension of the whole 4-dimensional
+In 1966, Brandon Carter\index{Carter, B.} \cite{Carte66} obtained the maximal analytic extension
+of the 2-dimensional manifold constituted by the rotation
+axis\footnote{The rotation axis\index{rotation!axis} is the 2-dimensional Lorentzian
+submanifold $\mathscr{A}$ where the Killing vector $\w{\eta}$ vanishes
+(cf. the definition given in Sec.~\ref{s:sta:strong_rigidity});
+in terms of the 3+1 Kerr coordinates $(\ti, r, \th, \tph)$, $\mathscr{A}$ is defined by
+by $\th=0$ or $\pi$ and is naturally spanned by the coordinates
+$(\ti, r)$. In Ref.~\cite{Carte66}, Carter has shown that the metric induced by $\w{g}$
+onto $\mathscr{A}$ is locally conformal to the metric of a 2-dimensional Minkowski spacetime
+and used this to represent $\mathscr{A}$ by a 2-dimensional conformal diagram.}
+of the Kerr spacetime, leading to a diagram similar to that of
+Fig.~\ref{f:ker:max_ext} (Fig.~1a of Ref.~\cite{Carte66}). In the same article, Carter suggested that the maximal analytic extension of the whole 4-dimensional
 manifold would be similar. This was proven rigorously a year later by
 Robert H. Boyer\index{Boyer, R.H.} and Richard W. Lindquist\index{Lindquist, R.W.} \cite{BoyerL67}.
 \end{hist}
@@ -2929,7 +3002,7 @@ Another physical issue regards the Cauchy horizon, which
 has been shown to be unstable: it suffers the so-called
 \emph{mass inflation instability}\index{mass!inflation instability}
 discovered by Poisson \& Israel \cite{PoissI90}
-(see \cite{BurkoKZ16} for a recent study of this instability).
+(see Ref.~\cite{BurkoKZ16} for a recent study of this instability).
 
 \section{Further reading}
 
