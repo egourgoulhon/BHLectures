@@ -583,7 +583,15 @@ $(\M,\w{g})$ is a well-behaved spacetime --- our \defin{Kerr spacetime}\index{Ke
 from now on. We note that, contrary to $\M_{\rm BL}$, $\M$ is a connected manifold.
 \end{greybox}
 
-We deduce from (\ref{e:ker:Kerr_coord}) that the null Kerr coordinate frame
+We deduce from (\ref{e:ker:Kerr_coord}) that
+\[
+    \left. \der{v}{t} \right| _{r,\th,\ph} = 1, \qquad
+    \left. \der{v}{r} \right| _{t,\th,\ph} = \frac{r^2 + a^2}{\Delta},\qquad
+    \left. \der{\tph}{r} \right| _{t,\th,\ph} = \frac{a}{\Delta},\qquad
+    \left. \der{\tph}{\ph} \right| _{t,r,\th} = 1.
+\]
+It follows then from the chain rule that
+the null Kerr coordinate frame
 is related to the Boyer-Lindquist coordinate frame by
 \begin{subequations}
 \label{e:ker:frame_Kerr_BL}
@@ -608,7 +616,7 @@ Ref.~\cite{Kerr09}).
 Actually, it was shown in 1964
 by Robert H.~Boyer\index{Boyer, R.H.} and
 T.G.~Price\index{Price, T.G.} \cite{BoyerP65}
-that the angular momentum about the rotation axis of Kerr solution is $J=- a m$,
+that the angular momentum about the rotation axis of the Kerr solution is $J=- a m$,
 where $a$ is Kerr's $a$.
 Taking this into account, the correspondence between our notations and those of Kerr's article \cite{Kerr63}
 is $v\leftrightarrow u$ and $a\leftrightarrow -a$. Then we can check that
@@ -1025,7 +1033,7 @@ Same as Fig.~\ref{f:ker:princ_null_geod_a90}, but for $a/m=0.5$.}
 
 
 
-\subsection{Outgoing principal null geodesics}
+\subsection{Outgoing principal null geodesics} \label{s:ker:out_princ_null_geod}
 
 One can construct a second congruence of principal null geodesics from
 the \emph{outgoing} Kerr coordinates instead of the ingoing ones
@@ -1054,7 +1062,7 @@ As $-r$ was a affine parameter along
 the ingoing principal null geodesics, $r$ is an affine parameter along
 the outgoing principal null geodesics in $\M_{\rm BL}$.
 A difference with respect to the ingoing family is that, while $-r$ was always
-increasing towards the future along ingoing geodesics,
+increasing towards the future along all ingoing geodesics,
  $r$ is increasing towards the future
 along outgoing principal null geodesics only in regions
 $\M_{\rm I}$ and $\M_{\rm III}$; in region $\M_{\rm II}$,
@@ -2723,7 +2731,8 @@ $(\ti,r,\th,\tph)\mapsto (T, X)$ such that
 \item $T = T(\ti, r)$, $X = X(\ti, r)$;
 \item $\Pi(\M)$ is a bounded region of $\R^2$;
 \item the ingoing principal null geodesics are mapped to lines $T = -X +\mathrm{const}$
-and the outgoing ones are mapped to lines $T = X +\mathrm{const}$.
+and the outgoing ones are mapped to lines $T = X +\mathrm{const}$, with $T$ increasing
+towards the future of $(\M,\w{g})$ in both cases.
 \end{enumerate}
 Property~1 implies that $\Pi$ acts as a \emph{projection}, leaving out any information
 in the non-ignorable coordinate $\th$. Property~2 provides the ``compactified''
@@ -2737,12 +2746,15 @@ However, let us stress that $\Pi$
 is not a priori connected to a proper conformal completion of
 $(\M,\w{g})$, as defined in Sec.~\ref{s:glo:conf_compl}.
 Note that to fulfill Property~3, it suffices to choose the functions $T(\ti,r)$
-and $X(\ti,r)$ defining $\Pi$ such that
+and $X(\ti,r)$ defining $\Pi$ such that in each of the regions $\M_{\rm I}$,
+$\M_{\rm II}$ and $\M_{\rm III}$,
 \be \label{e:ker:Carter_Penrose_T_X}
     T(\ti,r) = U(u) + V(v) \qand X(\ti, r) = V(v) - U(u),
 \ee
-where $U(u)$ is a function of the retarded Kerr time $u = u(\ti,r)$ given by Eq.~(\ref{e:ker:out_princ_geod_u})
-and $V(v)$ is a function of the advanced Kerr time $v = \ti + r$ [Eq.~(\ref{e:ker:def_t_tilde})].
+where (i) $U(u)$ is a function of the retarded Kerr time $u = u(\ti,r)$ given by Eq.~(\ref{e:ker:out_princ_geod_u}) that is monotonic increasing in $\M_{\rm I}$ and $\M_{\rm III}$
+and decreasing in $\M_{\rm II}$ (cf. Fig.~\ref{f:ker:u_ttphi_r})
+and (ii) $V(v)$ is a monotonic increasing function of the advanced Kerr time $v = \ti + r$ [Eq.~(\ref{e:ker:def_t_tilde})].
+
 This follows from $u$ (resp. $v$) being constant along the outgoing (resp. ingoing)
 principal null geodesics. Note also that
 Property~3 ensures that the two horizons $\Hor$ and $\Hor_{\rm in}$, which are
