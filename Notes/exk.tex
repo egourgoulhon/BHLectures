@@ -238,7 +238,7 @@ by two commuting Killing vectors $\w{\xi}$ and $\w{\eta}$. Both the Kerr coordin
 the Boyer-Lindquist ones are adapted to the spacetime symmetries, i.e. $(\ti,\tph)$ and
 $(t,\ph)$ are ignorable coordinates, as it is clear on the line elements (\ref{e:exk:metric_Kerr_3p1})
 and (\ref{e:exk:metric_BL}). Accordingly, one can normalize the Killing vectors so that
-\be
+\be \label{e:exk:Killing_vectors}
     \encadre{\w{\xi} = \wpar_{\ti} = \wpar_t}
     \qand
     \encadre{\w{\eta} = \wpar_{\tph} = \wpar_\ph} .
@@ -394,7 +394,7 @@ by taking the limit $a\to m$ of expression (\ref{e:ker:kappa_m_a}) derived for $
 \ee
 According to the classification introduced in Sec.~\ref{s:neh:classif_KH}, one says
 that $\Hor$ is a \emph{degenerate Killing horizon}\index{degenerate!Killing horizon}\index{Killing!horizon!degenerate --}.
-The vanishing of the non-affinity parameter $\kappa$ means that $\wl$ is a geodesic vector\index{geodesic!vector}
+The vanishing of the non-affinity coefficient $\kappa$ means that $\wl$ is a geodesic vector\index{geodesic!vector}
 on $\Hor$, and not only a pregeodesic\index{pregeodesic!vector field}  one (cf. Remark~\ref{r:fra:geodesic_vector} in Sec.~\ref{s:fra:geod_motion}). Equivalently, at any given point $p\in\Hor$,
 $\wl$ is the tangent vector associated to
 an affine parameter $\lambda$ of the null geodesic $\Li^{{\rm out},\Hor}_{(\th,\psi)}$ through $p$.
@@ -422,7 +422,7 @@ parameter is the Killing vector $\w{\chi} = \w{\xi} + \Omega_H \w{\eta}$
 vector $\wl$ to the outgoing principal null congruence.
 \end{greybox}
 
-\subsection{Black hole character}
+\subsection{Black hole character} \label{s:exk:bhole_char}
 
 As a Killing horizon, $\Hor$ is a null hypersurface and thus a one-way membrane.
 Since the ingoing principal null geodesics $\Li^{\rm in}_{(v,\th,\tph)}$
@@ -436,8 +436,8 @@ asymptotics of Kerr spacetime being that of Schwarzschild spacetime --- a proper
 that holds for the extremal Kerr spacetime as well) and jump directly to the conclusion:
 \begin{greybox}
 The extremal Kerr spacetime $(\M, \w{g})$ can be endowed with a conformal
-completion at null infinity such that the future null infinity $\scri^+$
-is located at the boundary of $\M_{\rm I}$. The region $\M_{\rm III}$ is
+completion at null infinity such that the future and past null infinities $\scri^+$
+and $\scri^-$ are located at the boundary of $\M_{\rm I}$. The region $\M_{\rm III}$ is
 then the interior of a black hole, the event horizon of which is
 the Killing horizon $\Hor$.
 \end{greybox}
@@ -520,7 +520,7 @@ is related to the angle $\tph$ of Kerr coordinates or to the angle
 $\ph$ of Boyer-Lindquist coordinates by Eq.~(\ref{e:exk:def_ttph}).
 By construction, the tangent vector to $\Li^{\rm out, I}_{(u,\th,\tilde{\tph})}$
 associated with the affine parameter $r$ is then
-\be
+\be \label{e:exk:def_ell_prime}
     \wl' = \wpar_{\tilde{\ti}} + \wpar_{\tilde{\tilde{r}}},
 \ee
 where $\wpar_{\tilde{\tilde{r}}}$ stands for the vector $\partial/\partial r$
@@ -551,7 +551,7 @@ where $\lambda$ is the (non-affine) parameter of $\Li^{\rm out, I}_{(u,\th,\tild
 associated with $\wl$. We read on the Kerr components (\ref{e:exk:ell_3p1_Kerr})
 of $\wl$, as well as on the Boyer-Lindquist ones (\ref{e:exk:ell_BL}), that
 $\D r/\D\lambda = \ell^r = (r-m)^2/(2(r^2 + m^2))$. Hence
-\be
+\be \label{e:exk:ell_prime_ell}
     \wl' = 2 \frac{r^2 + m^2}{(r - m)^2} \, \wl .
 \ee
 
@@ -594,19 +594,25 @@ from the point of view of the Boyer-Lindquist coordinates $(t,r,\th,\ph)$
 
 From Eq.~(\ref{e:exk:Dttt_Dtph_Kerr}) and the chain rule, we get immediately
 the link between the outgoing Kerr coordinate frame and the Kerr coordinate frame:
-\be
+\be \label{e:exk:out_Kerr_frame}
     \wpar_{\tilde{\ti}} = \wpar_{\ti},\qquad
     \wpar_{\tilde{\tilde{r}}} = \wpar_{\tilde{r}} + \frac{4 m r}{(r-m)^2} \wpar_{\ti}
         + \frac{2m}{(r-m)^2} \wpar_{\tph}, \qquad
     \wpar_{\th} = \wpar_{\th},\qquad
     \wpar_{\tilde{\tph}} = \wpar_{\tph} .
 \ee
+In view of Eq.~(\ref{e:exk:Killing_vectors}), we conclude that
+$\wpar_{\tilde{\ti}}$ and $\wpar_{\tilde{\tph}}$ coincide
+with the Killing vectors $\w{\xi}$ and $\w{\eta}$ of Kerr metric:
+\be
+    \wpar_{\tilde{\ti}} = \w{\xi} \qand \wpar_{\tilde{\tph}} = \w{\eta} .
+\ee
 
-The components of the metric tensor with respect to the
+The components of the metric tensor $\w{g}$ with respect to the
 outgoing Kerr coordinates are easily obtained by substituting $\D t$ and $\D\ph$
 from Eq.~(\ref{e:exk:Dttt_Dtph_BL}) into the Boyer-Lindquist expression
 (\ref{e:exk:metric_BL}) (see also the notebook~??); we get
-\be
+\be \label{e:exk:metric_out_Kerr}
     \begin{array}{ll}
     g_{\tilde{\tilde{\mu}}\tilde{\tilde{\nu}}}\, \D x^{\tilde{\tilde{\mu}}} \, \D x^{\tilde{\tilde{\nu}}}   = &
     \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right)  {\D\tilde{\ti}}^2
@@ -619,6 +625,107 @@ from Eq.~(\ref{e:exk:Dttt_Dtph_BL}) into the Boyer-Lindquist expression
     \sin^2\th \, {\D\tilde{\tph}}^2 .
     \end{array}
 \ee
+These metric components are very similar to those in Kerr coordinates, as given by
+Eq.~(\ref{e:exk:metric_Kerr_3p1}): the only differences are $g_{\tilde{\ti}r}$ and
+$g_{r\tilde{\tph}}$, which have a sign opposite to that of respectively $g_{\ti r}$
+and $g_{r\tph}$. Apart from the standard singularities of the
+spherical coordinates $(\th,\tilde{\tph})$ on the axis $\th\in\{0,\pi\}$, the
+only singularity of the metric components (\ref{e:exk:metric_out_Kerr})
+would occur at $\rho=0$, which does not happen in $\M_{\rm I}$. In particular
+there is no divergence for $r\to m$. This can be used to extend smoothly
+the spacetime $(\M_{\rm I},\w{g})$ to $r\in(-\infty, m]$, so that the outgoing
+principal null geodesics $\Li^{\rm out, I}_{(u,\th,\tilde{\tph})}$
+with $\th\neq \pi/2$ become
+complete. But this extension cannot be $\M_{\rm III}$
+as it appears clearly on Fig.~\ref{f:exk:CPdiag_Kerr} that  the end point
+of $\Li^{\rm out, I}_{(u,\th,\tilde{\tph})}$ for $r\to m^+$ is not located at the
+boundary between $\M_{\rm I}$ and $\M_{\rm III}$.
+We thus introduce a spacetime $(\M',\w{g})$ from a new copy of
+$\R^2\times\SS^2$ with $\R^2$ spanned by the coordinates $(\tilde{\ti},r)$ and
+$\SS^2$ spanned by the coordinates $(\th,\tilde{\tph})$, such that (i)
+the manifold $\M'$ is
+\be
+ \M' := \R^2\times\SS^2 \setminus \ring'
+ \quad\mbox{where}\quad
+    \ring' := \left\{ p \in \R^2\times\SS^2,
+        \quad r(p) = 0 \ \mbox{and}\ \th(p) = \frac{\pi}{2} \right\} ,
+\ee
+(ii) $\M_{\rm I}$ is identified with the part $r>m$ of $\M'$ and
+(iii) in all $\M'$, $\w{g}$ has the components given by expression
+(\ref{e:exk:metric_out_Kerr}). Furthermore, we define
+\be
+    \Hor' := \left\{ p \in \M', \quad r(p) = m \right\}
+    \qand
+    {\M'}_{\rm III} := \left\{ p \in \M', \quad r(p) < m \right\} .
+\ee
+We have then $\M_{\rm I} = \M \cap \M'$.
+In ${\M'}_{\rm III}$, one can define Kerr coordinates $(\ti,r,\th,\tph)$
+from $(\tilde{\ti},r,\ph,\tilde{\tph})$
+via formulas (\ref{e:exk:ttt_t_ti}) and (\ref{e:exk:def_ttph}).
+It appears then immediately that $({\M'}_{\rm III}, \w{g})$ is isometric to $(\M_{\rm III},\w{g})$.
+It follows that $\w{g}$ obeys the vacuum Einstein equation in $\M'$.
+The vector field $\wl' := \wpar_{\tilde{\ti}} + \wpar_{\tilde{\tilde{r}}}$
+[cf. Eq.~(\ref{e:exk:def_ell_prime})] is a smooth non-vanishing null vector
+field in all $\M'$. Since it is future directed in $(\M_{\rm I},\w{g})$
+considered as a part of $(\M,\w{g})$,
+we use it to set the time orientation in all $\M'$.
+
+The tangent vector $\w{k}$ to ingoing principal null geodesics has
+the following components with respect to the outgoing Kerr coordinates:
+\be \label{e:exk:k_out_Kerr}
+    \w{k} = \frac{(r + m)^2}{(r - m)^2} \, \wpar_{\tilde{\ti}}
+    - \wpar_{\tilde{\tilde{r}}} + \frac{2m}{(r - m)^2} \, \wpar_{\tilde{\tph}} .
+\ee
+This follows immediately from
+$\w{k} = \wpar_{\ti} - \wpar_{\tilde{r}}$ [Eq.~(\ref{e:exk:k_3p1_Kerr})]
+and using Eq.~(\ref{e:exk:out_Kerr_frame})
+to substitute $\wpar_{\ti}$ and $\wpar_{\tilde{r}}$.
+Extending Equation~(\ref{e:exk:k_out_Kerr}) to all $\M'$
+leads to a vector field that is singular on $\Hor'$. To get a vector field
+everywhere regular on $\M'$, we rescale it by the inverse of the factor
+relating $\wl$ to $\wl'$ in Eq.~(\ref{e:exk:ell_prime_ell}), i.e. we
+define
+\be
+    \w{k}' := \frac{(r - m)^2}{2(r^2 + m^2)} \, \w{k} .
+\ee
+Hence
+\be \label{e:exk:k_prime_out_Kerr}
+    \w{k}' = \frac{(r + m)^2}{2(r^2 + m^2)} \, \wpar_{\tilde{\ti}}
+    - \frac{(r-m)^2}{2(r^2 + m^2)}\, \wpar_{\tilde{\tilde{r}}} + \frac{m}{r^2 + m^2} \, \wpar_{\tilde{\tph}} .
+\ee
+This vector field is clearly regular in all $\M'$.
+Accordingly, it can be used to extend smoothly the family of ingoing principal
+null geodesics to $\Hor'$. The price to pay is that $\w{k}'$ is only a pregeodesic
+vector field, while $\w{k}$ was geodesic, being associated with the affine parameter $-r$.
+The pair $(\w{k}, \w{k}')$ plays actually the same role as the pair $(\wl', \wl)$
+(note the order!) regarding the outgoing principal null geodesics.
+
+
+As $\Hor$ in $(\M,\w{g})$, $\Hor'$ is a degenerate Killing horizon of $(\M',\w{g})$.
+Indeed, by the same reasoning as in Sec.~\ref{s:exk:horizon}, we get that
+the null normal to $\Hor'$ is the Killing vector
+$\w{\chi} = \w{\xi} + 1/(2m) \, \w{\eta}$ [Eq.~(\ref{e:exk:def_chi}) extended to
+$\M'$]. This normal coincides with $\w{k}'$ on $\Hor'$, as we can see
+by setting $r=m$ in  Eq.~(\ref{e:exk:k_prime_out_Kerr}). This implies that
+the null geodesic generators of  $\Hor'$ belong to the ingoing principal null congruence.
+The non-affinity coefficient of $\w{k}'$ is (cf. the notebook~??):
+\be
+    \kappa_{\w{k}'} = m \frac{m^2 - r^2}{(r^2 + m^2)^2} .
+\ee
+We have thus $\kappa_{\w{k}'} = 0$ on $\Hor'$, so that $\Hor'$ is a
+degenerate Killing horizon.
+
+The Killing horizon $\Hor'$ is actually a white hole horizon from the point
+of view of $\M_{\rm I}$. More precisely, let us consider the
+extended spacetime $(\M\cup\M', \w{g})$ and endow it with the same conformal
+completion at null infinity as that used for $(\M,\w{g})$ in Sec.~\ref{s:exk:bhole_char},
+i.e. formed by the same future and past null infinities
+$\scri^+$ and $\scri^-$ at the boundary of $\M_{\rm I}$. It appears then
+that $\M'_{\rm III}$ is the interior of a white hole\index{white hole} region, the boundary of which
+is $\Hor'$.
+
+
+
 
 
 
