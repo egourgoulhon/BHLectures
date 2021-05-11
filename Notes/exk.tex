@@ -537,6 +537,20 @@ We thus define the \defin{outgoing Kerr coordinates}\index{outgoing!Kerr coordin
 where $u$ is the retarded Kerr time (\ref{e:exk:def_u}) and $\tilde{\tph}$
 is related to the angle $\tph$ of Kerr coordinates or to the angle
 $\ph$ of Boyer-Lindquist coordinates by Eq.~(\ref{e:exk:def_ttph}).
+Substituting Eq.~(\ref{e:exk:def_u}) for $u$ into $\tilde{\ti} = u + r$
+and using Eq.~(\ref{e:exk:def_ttph}) linking $\tilde{\tph}$ to $\tph$,
+we get the transition map between the Kerr coordinates $(\ti,r,\th,\tph)$
+and the outgoing Kerr coordinates $(\tilde{\ti},r,\th,\tilde{\tph})$:
+\be \label{e:exk:Kerr_to_out_Kerr}
+    \mbox{on}\, \M_{\rm I},\quad  \left\{
+    \begin{array}{l}
+    \displaystyle \tilde{\ti}  = \ti + \frac{4 m^2}{r - m}
+                        - 4 m \ln \left( \frac{r - m}{m} \right) \\[2ex]
+    \displaystyle \tilde{\tph}  = \tph + \frac{2m}{r -m} .
+    \end{array} \right.
+\ee
+
+
 By construction, the tangent vector to $\Li^{\rm out, I}_{(u,\th,\tilde{\tph})}$
 associated with the affine parameter $r$ is then
 \be \label{e:exk:def_ell_prime}
@@ -574,44 +588,14 @@ $\D r/\D\lambda = \ell^r = (r-m)^2/(2(r^2 + m^2))$. Hence
     \wl' = 2 \frac{r^2 + m^2}{(r - m)^2} \, \wl .
 \ee
 
-Substituting Eq.~(\ref{e:exk:def_u}) for $u$ into $\tilde{\ti} = u + r$
-[Eq.~(\ref{e:exk:ttt_u})], we get the expression of $\tilde{\ti}$ in terms of the
-Kerr time $\ti$ and the Boyer-Lindquist time $t$:
-\be \label{e:exk:ttt_t_ti}
-    \tilde{\ti} = \ti + \frac{4 m^2}{r - m} - 4 m \ln \left| \frac{r - m}{m} \right|
-      = t + \frac{2m^2}{r -m} - 2m\ln\left| \frac{r - m}{m} \right| .
-\ee
-This relation is to be supplemented by Eq.~(\ref{e:exk:def_ttph}) to fully
-specify the transformation from respectively the Kerr coordinates
-$(\ti,r,\th,\tph)$ and the Boyer-Lindquist coordinates
-$(t,r,\th,\ph)$ to the outgoing Kerr coordinates
-$(\tilde{\ti},r,\th,\tilde{\tph})$.
-Differentiating Eqs.~(\ref{e:exk:ttt_t_ti}) and (\ref{e:exk:def_ttph})
+Differentiating Eq.~(\ref{e:exk:Kerr_to_out_Kerr})
 leads to
 \be \label{e:exk:Dttt_Dtph_Kerr}
     \D\tilde{\ti} = \D\ti - \frac{4 m r}{(r-m)^2} \D r
     \qand
-    \D\tilde{\tph} = \D\tph - \frac{2 m}{(r-m)^2} \D r
+    \D\tilde{\tph} = \D\tph - \frac{2 m}{(r-m)^2} \D r .
 \ee
-and
-\be \label{e:exk:Dttt_Dtph_BL}
-    \D\tilde{\ti} = \D t - \frac{2 m r}{(r-m)^2} \D r
-    \qand
-    \D\tilde{\tph} = \D\ph - \frac{m}{(r-m)^2} \D r
-\ee
-
-\begin{remark}
-Equation~(\ref{e:exk:Dttt_Dtph_BL}) differs from
-Eq.~(\ref{e:exk:dt_dph}) only by the sign $+$ changed to $-$ in the
-right-hand side. This reflects the complete symmetry between the Kerr coordinates
-$(\ti,r,\th,\tph)$
-and the outgoing Kerr coordinates
-$(\tilde{\ti},r,\th,\tilde{\tph})$
-from the point of view of the Boyer-Lindquist coordinates $(t,r,\th,\ph)$
-(cf. the discussion at the beginning of Sec.~\ref{s:ker:out_princ_null_geod}).
-\end{remark}
-
-From Eq.~(\ref{e:exk:Dttt_Dtph_Kerr}) and the chain rule, we get immediately
+From these relations and the chain rule, we get immediately
 the link between the outgoing Kerr coordinate frame and the Kerr coordinate frame:
 \be \label{e:exk:out_Kerr_frame}
     \wpar_{\tilde{\ti}} = \wpar_{\ti},\qquad
@@ -626,6 +610,35 @@ with the Killing vectors $\w{\xi}$ and $\w{\eta}$ of Kerr metric:
 \be
     \wpar_{\tilde{\ti}} = \w{\xi} \qand \wpar_{\tilde{\tph}} = \w{\eta} .
 \ee
+
+The link between the outgoing Kerr coordinates and the Boyer-Lindquist ones
+is obtained by substituting Eq.~(\ref{e:exk:def_u}) for $u$ into $\tilde{\ti} = u + r$
+[Eq.~(\ref{e:exk:ttt_u})]:
+\be \label{e:exk:ttt_t}
+    \tilde{\ti} = t + \frac{2m^2}{r -m} - 2m\ln\left| \frac{r - m}{m} \right| .
+\ee
+This relation is to be supplemented by Eq.~(\ref{e:exk:def_ttph}) to fully
+specify the transformation from the Boyer-Lindquist coordinates
+$(t,r,\th,\ph)$ to the outgoing Kerr coordinates
+$(\tilde{\ti},r,\th,\tilde{\tph})$.
+Differentiating Eqs.~(\ref{e:exk:ttt_t}) and (\ref{e:exk:def_ttph})
+leads to
+\be \label{e:exk:Dttt_Dtph_BL}
+    \D\tilde{\ti} = \D t - \frac{2 m r}{(r-m)^2} \D r
+    \qand
+    \D\tilde{\tph} = \D\ph - \frac{m}{(r-m)^2} \D r
+\ee
+\begin{remark}
+Equation~(\ref{e:exk:Dttt_Dtph_BL}) differs from
+Eq.~(\ref{e:exk:dt_dph}) only by the sign $+$ changed to $-$ in the
+right-hand side. This reflects the complete symmetry between the Kerr coordinates
+$(\ti,r,\th,\tph)$
+and the outgoing Kerr coordinates
+$(\tilde{\ti},r,\th,\tilde{\tph})$
+from the point of view of the Boyer-Lindquist coordinates $(t,r,\th,\ph)$
+(cf. the discussion at the beginning of Sec.~\ref{s:ker:out_princ_null_geod}).
+\end{remark}
+
 
 The components of the metric tensor $\w{g}$ with respect to the
 outgoing Kerr coordinates are easily obtained by substituting $\D t$ and $\D\ph$
@@ -680,7 +693,7 @@ the manifold $\M'$ is
 We have then $\M_{\rm I} = \M \cap \M'$.
 In ${\M'}_{\rm III}$, one can define Kerr coordinates $(\ti,r,\th,\tph)$
 from $(\tilde{\ti},r,\ph,\tilde{\tph})$
-via formulas (\ref{e:exk:ttt_t_ti}) and (\ref{e:exk:def_ttph}).
+via formulas (\ref{e:exk:def_u}) (with $u = \tilde{\ti} - r$) and (\ref{e:exk:def_ttph}).
 It appears then immediately that $({\M'}_{\rm III}, \w{g})$ is isometric to $(\M_{\rm III},\w{g})$.
 It follows that $\w{g}$ obeys the vacuum Einstein equation in all $\M'$.
 The vector field $\wl' := \wpar_{\tilde{\ti}} + \wpar_{\tilde{\tilde{r}}}$
@@ -719,21 +732,6 @@ vector field, while $\w{k}$ was geodesic, being associated with the affine param
 The pair $(\w{k}, \w{k}')$ plays actually the same role as the pair $(\wl', \wl)$
 (note the order!) regarding the outgoing principal null geodesics.
 
-
-As $\Hor$ in $(\M,\w{g})$, $\Hor'$ is a degenerate Killing horizon of $(\M',\w{g})$.
-Indeed, by the same reasoning as in Sec.~\ref{s:exk:horizon}, we get that
-the null normal to $\Hor'$ is the Killing vector
-$\w{\chi} = \w{\xi} + 1/(2m) \, \w{\eta}$ [Eq.~(\ref{e:exk:def_chi}) extended to
-$\M'$]. This normal coincides with $\w{k}'$ on $\Hor'$, as we can see
-by setting $r=m$ in  Eq.~(\ref{e:exk:k_prime_out_Kerr}). This implies that
-the null geodesic generators of  $\Hor'$ belong to the ingoing principal null congruence.
-The non-affinity coefficient of $\w{k}'$ is (cf. the notebook~\ref{s:sam:Kerr_extremal_extended}):
-\be
-    \kappa_{\w{k}'} = m \frac{m^2 - r^2}{(r^2 + m^2)^2} .
-\ee
-We have thus $\kappa_{\w{k}'} = 0$ on $\Hor'$, so that $\Hor'$ is a
-degenerate Killing horizon.
-
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{exk_CPdiag_M0.pdf}}
 \caption[]{\label{f:exk:CPdiag_M0} \footnotesize
@@ -756,11 +754,24 @@ principal null geodesics.
 }
 \end{figure}
 
-
+As $\Hor$ in $(\M,\w{g})$, $\Hor'$ is a degenerate Killing horizon of $(\M',\w{g})$.
+Indeed, by the same reasoning as in Sec.~\ref{s:exk:horizon}, we get that
+the null normal to $\Hor'$ is the Killing vector
+$\w{\chi} = \w{\xi} + 1/(2m) \, \w{\eta}$ [Eq.~(\ref{e:exk:def_chi}) extended to
+$\M'$]. This normal coincides with $\w{k}'$ on $\Hor'$, as we can see
+by setting $r=m$ in  Eq.~(\ref{e:exk:k_prime_out_Kerr}). This implies that
+the null geodesic generators of  $\Hor'$ belong to the ingoing principal null congruence.
+The non-affinity coefficient of $\w{k}'$ is (cf. the notebook~\ref{s:sam:Kerr_extremal_extended}):
+\be
+    \kappa_{\w{k}'} = m \frac{m^2 - r^2}{(r^2 + m^2)^2} .
+\ee
+We have thus $\kappa_{\w{k}'} = 0$ on $\Hor'$, so that $\Hor'$ is a
+degenerate Killing horizon.
 
 With $\M'$, our extended extremal Kerr spacetime is thus $(\M_0,\w{g})$ with
 \be
-    \M_0 := \M \cup \M' = \M_{\rm I} \cup \M_{\rm III} \cup \M'_{\rm III} \cup \Hor \cup \Hor' .
+   \encadre{ \M_0 := \M \cup \M'
+     = \M_{\rm I} \cup \M_{\rm III} \cup \M'_{\rm III} \cup \Hor \cup \Hor' } .
 \ee
 A Carter-Penrose diagram of $\M_0$ is shown in Fig.~\ref{f:exk:CPdiag_M0}.
 The projection operator used to build this diagram (cf. Sec.~\ref{s:ker:Carter_Penrose_diag})
@@ -774,27 +785,136 @@ on $\M$, while on $\M'$, $\Pi$ is defined by
    & T = T_0(u, v) - \pi \qand X = X_0(u, v) - \pi \quad\mbox{in}\ \M'_{\rm III}
 \end{align}
 \end{subequations}
-where $T_0(u,v)$ and $X_0(u,v)$ are defined by Eq.~(\ref{e:exk:def_T0_X0})
+where $T_0(u,v)$ and $X_0(u,v)$ are given by Eq.~(\ref{e:exk:def_T0_X0})
 and $u$ and $v$ are functions of $(\tilde{\ti}, r)$ defined by
 respectively $u = \tilde{\ti} - r$ [Eq.~(\ref{e:exk:ttt_u})]
 and
 \be
     v = \tilde{\ti} + r - \frac{4 m^2}{r - m} + 4 m \ln \left| \frac{r - m}{m} \right| .
 \ee
-The last equation is obtained by combining Eqs.~(\ref{e:exk:def_v}) and (\ref{e:exk:ttt_t_ti}).
+The last equation is obtained by combining Eqs.~(\ref{e:exk:def_v}) and (\ref{e:exk:def_u}).
 
 
-It appears that the Killing horizon $\Hor'$ is actually a white hole horizon from the point
+\begin{remark}
+As we have constructed it, the manifold $\M_0$ is covered by two coordinate charts:
+$(\ti, r, \th, \tph)$ on $\M_{\rm I} \cup \Hor \cup \M_{\rm III}$
+and $(\tilde{\ti}, r, \th, \tilde{\tph})$ on $\M_{\rm I} \cup \Hor' \cup \M'_{\rm III}$.
+These two charts overlap in $\M_{\rm I}$, where the transition between them
+is provided by Eq.~(\ref{e:exk:Kerr_to_out_Kerr}).
+The Carter-Penrose diagram of Fig.~\ref{f:exk:CPdiag_M0} might give the impression
+that, by means of the coordinates $(T,X)$, one could cover $\M_0$ by a single chart,
+in a fashion similar to the covering of the entire maximal extension of Schwarzschild
+manifold by the Kruskal-Szekeres coordinates\index{Kruskal-Szekeres!coordinates}
+$(T,X,\th,\ph)$ (cf. Sec.~\ref{s:sch:max_extens}). However, this is not possible
+in a simple way, due to singularity issues with the azimuthal coordinates:
+$\tph$ diverges on $\Hor'$, $\tilde{\tph}$ diverges on $\Hor$ and
+the Boyer-Lindquist coordinate $\ph$ diverges on both $\Hor$ and $\Hor'$.
+Accordingly, none of $(T,X,\th,\tph)$, $(T,X,\th,\tilde{\tph})$ and
+$(T,X,\th,\ph)$ would provide a regular chart of $\M_0$.
+\end{remark}
+
+\begin{remark} \label{r:exk:M0_analytic}
+The spacetime $(\M_0,\w{g})$ is analytic: (i) $\M_0$ is an analytic manifold,
+given that the change of coordinates (\ref{e:exk:Kerr_to_out_Kerr})
+between the two charts covering $\M_0$ is analytic
+(cf. Remark~\ref{r:bas:analytic} in Sec.~\ref{s:bas:def_manif})
+and (ii) the components (\ref{e:exk:metric_Kerr_3p1}) and (\ref{e:exk:metric_out_Kerr})
+of $\w{g}$ are analytic functions of the
+coordinates $(\ti, r, \th, \tph)$ and $(\tilde{\ti}, r, \th, \tilde{\tph})$
+respectively.
+\end{remark}
+
+
+The Killing horizon $\Hor'$ is actually a white hole horizon from the point
 of view of $\M_{\rm I}$. More precisely, we can endow $(\M_0,\w{g})$ with the same conformal
 completion at null infinity as that used for $(\M,\w{g})$ in Sec.~\ref{s:exk:bhole_char},
-i.e. formed by the same future and past null infinities
-$\scri^+$ and $\scri^-$ at the boundary of $\M_{\rm I}$. It appears then
-that $\M'_{\rm III}$ is the interior of a white hole\index{white hole} region, the boundary of which
+i.e. such that the conformal boundary $\scri$ is constituted by
+the same future and past null infinities
+$\scri^+$ and $\scri^-$ located at the boundary of $\M_{\rm I}$ (cf. Fig.~\ref{f:exk:CPdiag_M0}).
+It appears then that
+\be
+   \M'_{\rm III}\cup \Hor' = \M_0 \setminus (J^+(\scri^-)\cap \M_0)
+\ee
+In view of the definition (\ref{e:glo:def_white_hole}), we conclude that
+\begin{greybox}
+$\M'_{\rm III}$ is the interior of a white hole\index{white hole} region, the boundary of which
 is $\Hor'$.
+\end{greybox}
+
+Since $\M_{\rm III}$ was shown in Sec.~\ref{s:exk:bhole_char} to be the black hole region for
+the same conformal completion at null infinity, we may state,
+according to the terminology introduced in Sec.~\ref{s:glo:def_BH}:
+\begin{greybox}
+$\M_{\rm I}$ is the domain of outer communications\index{domain!of outer communications}
+of the spacetime $(\M_0,\w{g})$.
+\end{greybox}
 
 
+\begin{figure}
+\centerline{\includegraphics[height=0.7\textheight]{exk_CPdiag_maximal.pdf}}
+\caption[]{\label{f:exk:CPdiag_maximal} \footnotesize
+Carter-Penrose diagram of the maximal analytic extension $(\M_*,\w{g})$
+of the extremal Kerr spacetime.
+The red dotted curves represent hypersurfaces $r=\mathrm{const}$,
+with the increment $\delta r$ between two successive hypersurfaces being
+$\delta r = 2m$ for $r<0$ and $r> 2m$ and $\delta r = 0.2\, m$ for $0\leq r \leq 2m$.
+The hypersurfaces $r=0$ are marked by brown dashed curves.
+The dashed (resp. solid) green straight lines depict ingoing (resp. outgoing)
+principal null geodesics with $v=0$ (resp. $u=0$).
+\textsl{[Figure generated by the notebook \ref{s:sam:Kerr_extremal_extended}]}
+}
+\end{figure}
 
+\subsection{Construction of the maximal analytic extension}
 
+With $(\M_0,\w{g})$, we have acheived our first goal: all the outgoing
+principal null geodesics crossing $\M_{\rm I}$ and not lying in the equatorial
+plane (i.e. the geodesics extending the $\Li^{\rm out, I}_{(u,\th,\tilde{\tph})}$
+family with $\th\neq \pi/2$ to the past) are complete. However, there remains
+incomplete geodesics in $\M_0$: the outgoing principal null geodesics crossing $\M_{\rm III}$
+all stop at the value $r=m$ of their affine parameter, while
+the ingoing principal null geodesics crossing $\M'_{\rm III}$ all start at the
+value $-r = -m$ of their affine parameter (cf. Fig.~\ref{f:exk:CPdiag_M0}).
+To construct a spacetime with complete geodesics, except for those that encouter the curvature singularity at $r=0$ and $\th=\pi/2$, one introduces an infinite number of copies of $\M_0$,
+$\left( \M_n \right)_{n\in\mathbb{Z}}$ say, and identify the region $\M'_{\rm III}$ of $\M_n$
+with the region $\M_{\rm III}$ of $\M_{n-1}$ for all $n\in\mathbb{Z}$.
+The manifold hence obtained,
+\be
+    \M_* := \bigcup_{n\in\mathbb{Z}} \M_n ,
+\ee
+is depicted via a
+Carter-Penrose diagram in Fig.~\ref{f:exk:CPdiag_maximal}.
+The region $\M_{\rm I}$ (resp. $\M_{\rm III}$) of $\M_n$ is
+denoted by $\M_{\rm I}^{(n)}$ (resp. $\M_{\rm III}^{(n)}$). Similarly,
+the Killing horizon $\Hor$ (resp. $\Hor'$) of $\M_n$ is denoted
+by $\Hor_{(n)}^+$ (resp. $\Hor_{(n)}^-$). Note that $\Hor_{(n)}^+$
+is a future event horizon (black hole horizon), while
+$\Hor_{(n)}^-$ is a past event horizon (white hole horizon),
+for the conformal completion at null infinity with
+the future and past null infinities $\scri^+_{(n)}$ and $\scri^-_{(n)}$
+as copies of $\scri^+$ and $\scri^-$ introduced for $\M_0$.
+
+It is clear that $(\M_*,\w{g})$ is an analytic spacetime, since $(\M_0,\w{g})$
+is (cf. Remark~\ref{r:exk:M0_analytic} on p.~\pageref{r:exk:M0_analytic}).
+
+By construction, all principal null geodesics are complete in $\M_*$,
+except for those that encounter the curvature singularity at
+$r=0$ and $\th=\pi/2$. In particular, this holds for the outgoing
+principal null geodesics generating $\Hor_{(n)}^+$
+and for the ingoing ones generating $\Hor_{(n)}^-$.
+Contemplating the Carter-Penrose diagram of Fig.~\ref{f:exk:CPdiag_maximal},
+we might thus perceive each (solid or dashed) green straight line
+from an $r=-\infty$ end to an $r=+\infty$ end, as well as
+each thick black straight line, as representating a complete principal null
+geodesic.
+
+It can be shown that actually \emph{all} timelike or null
+geodesics of $(\M_*,\w{g})$, and not only the principal null ones, are complete
+(see Carter's article \cite{Carte68a} for the proof), so that we can conclude:
+\begin{greybox}
+$(\M_*,\w{g})$ is the maximal analytic extension of the
+extremal Kerr spacetime.
+\end{greybox}
 
 
 \section{Near-horizon extremal Kerr metric}
