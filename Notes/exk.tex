@@ -1041,11 +1041,14 @@ of $\w{h}$ by $\Phi$: $\w{q} = \Phi^* \w{h}$.}, i.e. iff
 \end{subequations}
 We deduced from Eq.~(\ref{e:exk:isom_emb_cond2}) that
 \be \label{e:exk:isom_emb_z_r}
-    z(r) = \int_{r_0}^r
-    \sqrt{\frac{\bar{r}^2 + m^2\cos^2\th}{(\bar{r}-m)^2}
-        - \varpi'(\bar{r})^2 } \; \D \bar{r} ,
+    z(r) = \int_{2m}^r
+    \frac{1}{\bar{r}-m}
+    \sqrt{\bar{r}^2 + m^2\cos^2\th
+        - \varpi'(\bar{r})^2 (\bar{r}-m)^2 } \; \D \bar{r} ,
 \ee
-where $\varpi'(\bar{r})$ is computed from Eq.~(\ref{e:exk:isom_emb_cond1}).
+up to some additive constant, which we set to zero by choosing arbitrarily $z(2m) = 0$.
+In the integrand, $\varpi'(\bar{r})$ should be substituted by the value obtained
+by differentiating Eq.~(\ref{e:exk:isom_emb_cond1}).
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{exk_throat_emb_equat.png}
@@ -1070,8 +1073,15 @@ and (\ref{e:exk:isom_emb_z_r}) define fully the isometric embedding
 (\ref{e:exk:isom_emb_z_r}) of $(\Sigma_{t,\th})$ in $(\R^3,\w{f})$.
 The outcome is depicted in Fig.~\ref{f:exk:throat_emb}
 for two values of $\th$: $\pi/2$ (left plot) and $\pi/6$ (right plot).
-
-
+In both cases, it appears that the embedded surface is infinite in two directions:
+\begin{itemize}
+\item for $r\to +\infty$, which implies $\varpi \to +\infty$ and $z \to +\infty$;
+\item for $r\to m$, which implies $\varpi \to 2m\frac{\sin\th}{\sqrt{1 + \cos^2\th}}$ and $z\to -\infty$.
+\end{itemize}
+The first direction is towards the asymptotic flat end of $\M_{\rm I}$
+(the right-most corner in the Carter-Penrose diagram of Fig.~\ref{f:exk:CPdiag_BL}).
+The second direction corresponds to an infinite cylinder, since
+$\varpi$ tends to a constant value, while $z$ decays to $-\infty$.
 
 
 
