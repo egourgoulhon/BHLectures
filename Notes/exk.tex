@@ -1129,7 +1129,8 @@ $\Li^{{\rm out},\Hor}_{(\th,\psi)}$ is complete, its past end at $i^{\rm int}$ i
 affine parameter $\ti$ (see also Fig.~\ref{f:exk:CPdiag_Kerr}, where
 the limit $\ti\to -\infty$ at $r=m$ appears clearly as
 $i^{\rm int}$). Hence, in terms of affine length, $i^{\rm int}$ is infinitely
-far in the past of any of the geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$.
+far in the past of any of the null geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
+generating $\Hor$.
 
 The spacetime region in the vicinity of $r=m$ is called the
 \defin{extremal Kerr throat}\index{extremal!Kerr!throat}\index{throat!extremal Kerr --}.
@@ -1139,14 +1140,21 @@ We are going to explore it in more details in the next section.
 
 In order to zoom in on the near-horizon region, let us introduce
 a small parameter $\veps$ and
-new coordinates $(T,R,\th,\Phi)$ related to the Boyer-Lindquist coordinates
+the so-called \defin{Bardeen-Horowitz coordinates}\index{Bardeen-Horowitz coordinates}
+$(T,R,\th,\Phi)$, which are related to the Boyer-Lindquist coordinates
 $(t,r,\th,\ph)$ by
 \be \label{e:exk:def_R_T_Phi}
-    t = \frac{T}{\veps},\quad
-    r = m + \veps R,\quad
-    \ph = \Phi + \frac{T}{2m\veps} .
+    t = 2m \frac{T}{\veps},\quad
+    r = m (1 + \veps R),\quad
+    \ph = \Phi + \frac{T}{\veps} ,
 \ee
-This choice ensures, for $T>0$, $R\geq 0$ and $\Phi\in [0,2\pi)$,  %]$
+the reverse transformation being
+\be
+    T = \veps \frac{t}{2m}, \quad
+    R = \frac{r - m}{\veps m}, \quad
+    \Phi = \ph - \frac{t}{2m} .
+\ee
+This choice ensures, for a fixed value of $(T,R,\Phi)$ with $T>0$,
 \be
     \lim_{\veps\to 0} t = +\infty,\quad
     \lim_{\veps\to 0} r = m, \quad
@@ -1154,18 +1162,49 @@ This choice ensures, for $T>0$, $R\geq 0$ and $\Phi\in [0,2\pi)$,  %]$
     \frac{\D\ph}{\D t} = \frac{1}{2m}
 \ee
 and is motivated as follows.
-The coordinate $t$ diverges near the horizon $\Hor$ --- more precisely,
+For $\veps\to 0$,
+the coordinate $R$ clearly implements the zoom-in on the region $r\simeq m$.
+Regarding the change $t\to T$, we may notice that the Boyer-Lindquist coordinate
+$t$ diverges near the horizon $\Hor$ --- more precisely,
 $t$ diverges along the worldline of any particle that reaches $\Hor$
 (this is clear on Figs.~\ref{f:exk:BL_slicing} and \ref{f:exk:CPdiag_BL}).
-So, we may keep $T = \veps t$ finite in the vicinity of $\Hor$, while having
-$t$ diverging.
+So, we may keep $T = \veps t/(2m)$ finite in the vicinity of $\Hor$, while having
+$t$ diverging. The division by $2m$ makes $T$ dimensionless, as $R$, with the
+factor $2$ being chosen for further convenience.
 Similarly, the coordinate $\ph$ diverges along the worldline of any particle that reaches $\Hor$.
-For geodesics, this divergence occurs at the rate $\D\phi/\D t = \Omega_H = 1/(2m)$
+For geodesics, this divergence occurs at the rate $\D\ph/\D t = \Omega_H = 1/(2m)$
 [Eqs.~(\ref{e:gek:lim_dphdt_Hor}) and (\ref{e:exk:def_chi})], which is ensured
 at fixed $\Phi$ by the choice (\ref{e:exk:def_R_T_Phi}).
-Finally, the coordinate $R = (r - m)/\veps$ is better adapted to describe the
-extremal Kerr throat, since points with almost the same value of $r$ close
-to $m$ can be separated by huge distances.
+
+Let us denote by $G_{\alpha\beta}(T,R,\th,\Phi,\veps)$ the components of
+the metric tensor $\w{g}$ with respect to Bardeen-Horowitz
+coordinates $(X^\alpha):=(T,R,\th,\Phi)$. Their expressions is rather complicated and can be found in
+the notebook \ref{s:sam:NEHK}.
+One defines the \defin{near-horizon extremal Kerr (NEHK) metric} as the
+metric tensor $\w{h}$ whose components with respect to the
+Bardeen-Horowitz coordinates are the limits
+\be \label{e:exk:h_limit_G}
+    h_{\alpha\beta}(T,R,\th,\Phi) := \lim_{\veps\to 0} G_{\alpha\beta}(T,R,\th,\Phi,\veps)
+\ee
+Evaluating the limits leads to the explicit expression
+of $\w{h}$ (cf. the notebook \ref{s:sam:NEHK}):
+\be \label{e:exk:NEHK_metric}
+    \encadre{
+    \begin{array}{lll}
+    h_{\mu\nu}\,  \D X^\mu \D X^\nu  = &
+    m^2 (1 + \cos^2\th) \Big[
+    & \displaystyle \!\!\! - R^2 \D T^2 + \frac{\D R^2}{R^2} + \D\th^2 \\[2ex]
+    & & \displaystyle \!\!\!  + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
+    \left( \D\Phi + R\,  \D T\right)^2 \Big]
+    \end{array}
+    }
+\ee
+\begin{remark}
+A priori the limits (\ref{e:exk:h_limit_G}) lead only to a symmetric bilinear
+form. But we check immediately on (\ref{e:exk:NEHK_metric}) that
+$\w{h}$ is non-degenerate and has signature $(-,+,+,+)$. Hence it is
+a proper metric tensor (cf. Sec.~\ref{s:bas:metric} in Appendix~\ref{s:bas}).
+\end{remark}
 
 
 
