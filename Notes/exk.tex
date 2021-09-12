@@ -1137,7 +1137,7 @@ The spacetime region in the vicinity of $r=m$ is called the
 \defin{extremal Kerr throat}\index{extremal!Kerr!throat}\index{throat!extremal Kerr --}.
 We are going to explore it in more details in the next section.
 
-\subsection{Geometry of the near-horizon region}
+\subsection{The NHEK metric}
 
 In order to zoom on the near-horizon region, let us introduce
 a small parameter $\veps$ and
@@ -1150,7 +1150,7 @@ $(t,r,\th,\ph)$ by
     \ph = \Phi + \frac{T}{\veps} ,
 \ee
 the reverse transformation being
-\be
+\be \label{e:exk:R_T_Phi_BL}
     T = \veps \frac{t}{2m}, \quad
     R = \frac{r - m}{\veps m}, \quad
     \Phi = \ph - \frac{t}{2m} .
@@ -1209,11 +1209,165 @@ a proper metric tensor (cf. Sec.~\ref{s:bas:metric} in Appendix~\ref{s:bas}).
 The metric (\ref{e:exk:NEHK_metric}) has striking similiraties with
 the metric of the anti-de Sitter spacetime\index{anti-de Sitter spacetime} (AdS):
 compare the $\D T^2$ and $\D R^2$ terms with the $\D t^2$ and $\D u^2$ terms
-of the components (\ref{e:neh:AdS:metric_Poincare}) of
-AdS$_{4}$ metric in Poincaré coordinates, presented in Example~\ref{x:neh:AdS}
+of the components (\ref{e:neh:AdS:metric_Poincare}) of the
+AdS$_{4}$ metric in Poincaré coordinates\index{Poincaré!coordinates on AdS$_n$}, presented in Example~\ref{x:neh:AdS}
 of Chap.~\ref{s:neh}. More precisely, the metric induced by $\w{h}$ on
-the rotation axis ($\sin\th=0$) is exactly the metric of AdS$_{2}$.
+the rotation axis $\mathscr{A}$  ($\sin\th=0$), which is a 2-dimensional submanifold of $\M$,
+is exactly the metric of AdS$_{2}$ (the 2-dimensional anti-de Sitter spacetime),
+expressed in the Poincaré coordinates $(X^a) = (T,R)$:
+\be
+    h^{\mathscr{A}}_{ab} \D X^a \D X^b =
+        2 m^2 \left( - R^2 \D T^2 + \frac{\D R^2}{R^2}  \right) .
+\ee
+Moreover, the metric induced by $\w{h}$ on the hypersurface
+$\th = \th_*$, with $\th_* := \arcsin(\sqrt{3} - 1) \simeq 47.06^\circ$ (so that
+$4 \sin^2 \th_*/(1 + \cos^2\th_*) = 1$), is that of AdS$_{3}$:
+\be \label{e:exk:h_th_star}
+    h^{\th=\th_*}_{ij} \D X^i \D X^j =
+     2(\sqrt{3} - 1) m^2 \left[ - R^2 \D T^2 + \frac{\D R^2}{R^2}
+     + \left( \D\Phi + R\,  \D T\right)^2 \right].
+\ee
+Note that the above line element, where $(X^i)=(T,R,\Phi)$,
+is not the expression of AdS$_{3}$ metric
+in Poincaré coordinates. Indeed, by expanding the last term, we get
+\be
+    h^{\th=\th_*}_{ij} \D X^i \D X^j =
+     2(\sqrt{3} - 1) m^2 \left( 2 R \, \D T \, \D \Phi + \frac{\D R^2}{R^2}
+      + \D \Phi^2 \right).
+\ee
+In particular, $h^{\th=\th_*}_{TT} = 0$, which implies that $\wpar_T$ is
+a null vector field, while it should be a timelike one for Poincaré coordinates.
+To prove that (\ref{e:exk:h_th_star}) is the metric of AdS$_{3}$,
+let us introduce the so-called \defin{global NHEK coordinates}\index{global!NHEK coordinates}
+$(\tau,y,\th,\psi)$, which, for their $(\tau,y)$ part, are
+linked to $(T,R)$ by the same relationship as that between global
+and Poincaré coordinates in AdS$_{2}$, namely
+\be \label{e:exk:def_global_NHEK}
+    \left\{ \begin{array}{l}
+    T = \frac{\sqrt{1+y^2}\sin\tau}{y + \sqrt{1+y^2}\cos\tau} \\[1ex]
+    R = y + \sqrt{1+y^2}\cos\tau \\[1ex]
+    \theta = \theta\\[1ex]
+    \Phi = \psi + \ln\left|\frac{\cos\tau + y \sin\tau}{1 + \sqrt{1 + y^2}\sin\tau} \right| .
+    \end{array}\right.
+    \iff
+    \left\{ \begin{array}{l}
+    \tau = \arctan\left(\frac{2 T R^2}{(1 - T^2)R^2 + 1}\right)\\[1ex]
+    y = \frac{(1 + T^2)R^2 - 1}{2R} \\[1ex]
+    \theta = \theta\\[1ex]
+    \psi = \Phi - \ln\left(
+      \frac{(1 - TR)^2 + R^2}{\sqrt{[(1 + T^2)R^2 - 1]^2 + 4R^2}} \right)
+    \end{array}\right.
+\ee
+Beside the AdS$_{2}$-type transformation for $(\tau,y)$, the new azimuthal
+coordinate $\psi$ is introduced to insure $\D\Phi + R \,\D T = \D\psi + y \, \D\tau$.
+In terms of the global NHEK coordinates $(Y^\alpha)=(\tau,y,\theta,\psi)$, the NHEK
+metric $\w{h}$ reads (cf. the notebook~\ref{s:sam:NEHK}):
+\be \label{e:exk:global_NEHK_metric}
+    \encadre{
+    \begin{array}{lll}
+    h_{\mu\nu}\,  \D Y^\mu \D Y^\nu  = &
+    m^2 (1 + \cos^2\th) \Big[
+    & \displaystyle \!\!\! - (1 + y^2) \D \tau^2 + \frac{\D y^2}{1 + y^2} + \D\th^2 \\[2ex]
+    & & \displaystyle \!\!\!  + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
+    \left( \D\psi + y\,  \D \tau\right)^2 \Big]
+    \end{array}
+    }
+\ee
+On the rotation axis ($\sin\th=0$), we recover the AdS$_2$ metric expressed in
+global AdS coordinates $(\tau,y)$. On the hypersurface $\th=\th_*$ considered
+above, we get
+\be
+    h^{\th=\th_*}_{ij} \D Y^i \D Y^j =
+     2(\sqrt{3} - 1) m^2 \left[ - (1 + y^2) \D \tau^2 + \frac{\D y^2}{1 + y^2}
+     + \left( \D\psi + y\,  \D\tau \right)^2 \right].
+\ee
+This is the metric of AdS$_3$ in some standard coordinates\footnote{These coordinates
+are linked to AdS$_3$ being a bundle over AdS$_2$ with the real line as fiber
+(in the same way as $\mathbb{S}^3$ being a bundle over $\mathbb{S}^2$ with
+$\mathbb{S}^1$ as fiber (Hopf fibration)); $\psi$ is then the fiber coordinate
+and spans $\R$. It follows that the hypersurface $\th=\th_*$, where $\psi$
+is $2\pi$-periodic, is not the whole of
+AdS$_3$, but a quotient of it, obtained by identifying the points $\psi$
+and $\psi + 2\pi$.}
+(compare e.g. with Eq.~(17) of Ref.~\cite{BengtS06} with $y = \sinh\omega$).
+On constant $\th$ hypersurfaces, with $\th\neq\th_*$ or $\pi-\th_*$, the
+metric induced by $\w{h}$ is not that of AdS$_3$ but that of a so-called
+\defin{warped AdS$_3$}\index{warped AdS$_3$}, the $\th$-term in front
+of $( \D\psi + y\,  \D\tau )^2$ in Eq.~(\ref{e:exk:global_NEHK_metric}) being the \emph{warp factor}
+(see e.g. Refs.~\cite{Compe17,BengtS06,GuicaHSS09}).
 
+
+\subsection{NHEK spacetime}
+
+The Bardeen-Horowicz components (\ref{e:exk:NEHK_metric}) of the NHEK metric $\w{h}$
+are singular at $R=0$. But this is a mere coordinate singularity, since,
+in terms of the global NHEK coordinates
+$(\tau,y,\theta,\psi)$, $R=0$ is the locus $y + \sqrt{1 + y^2}\cos\tau = 0$
+[cf. Eq.~(\ref{e:exk:def_global_NHEK})] and
+the components (\ref{e:exk:global_NEHK_metric})
+of $\w{h}$ with respect to these coordinates,
+are regular there.
+They are actually regular in all the range $t\in\R$, $y\in\R$, $\th\in(0,\pi)$
+and $\psi\in(0,2\pi)$. Because of the $\arctan$ in Eq.~(\ref{e:exk:def_global_NHEK}),
+on $\M$ the range of $\tau$ is restricted to $(-\pi/2, \pi/2)$. We may therefore
+consider an ``extended'' spacetime as follows:
+\begin{greybox}
+The \defin{NHEK spacetime} is the spacetime $(\mathscr{N},\w{h})$, where
+the manifold $\mathscr{N}$ is diffeomorphic to $\R^2\times \SS^2$ and $\w{h}$ is the
+Lorentzian metric defined by Eq.~(\ref{e:exk:global_NEHK_metric}) in terms
+of the coordinates $(\tau,y,\th,\psi)$, with $(\tau,y)\in \R^2$ and
+$(\th,\psi)\in(0,\pi)\times(0,2\pi)$ being standard spherical coordinates on $\SS^2$.
+\end{greybox}
+By comparing the line elements (\ref{e:exk:global_NEHK_metric}) and
+(\ref{e:neh:AdS4}), with the changes of notation $y\leftrightarrow r$
+and $\psi\leftrightarrow \ph$, we note that
+$(\mathscr{N},\w{h})$ bears some similarities with AdS$_4$, but is
+distinct from it. First of all, $r$ ranges in $(0, +\infty)$ only
+on AdS$_4$, while $y$ ranges in\footnote{Note that there
+is no coordinate singularity at $y=0$ in (\ref{e:exk:global_NEHK_metric}), while
+there is one at $r=0$ in (\ref{e:neh:AdS4}) and the latter is such that AdS$_4$ cannot
+be extended analyticaly to $r<0$.} $(-\infty, +\infty)$ on $\mathscr{N}$.
+Furthermore, there is a global $(1 + \cos^2\th)$ term in (\ref{e:exk:global_NEHK_metric}),
+the $\D\th^2$ terms differ drastically in the two expressions, the one in
+(\ref{e:exk:global_NEHK_metric}) being not multiplied by $y^2$.
+The $\D\ph^2$ and $\D\psi^2$ are also radically distinct. Moreover, the NHEK line element
+contains the off-diagonal term $h_{\tau\psi}$, while
+the AdS$_4$ one is purely diagonal.
+
+As AdS$_4$, the NHEK spacetime is not asymptotically flat.
+The metrics of both spacetimes are solutions of Einstein equation with $\w{T}=0$,
+but with $\Lambda<0$ for AdS$_4$ metric and with $\Lambda=0$ for $\w{h}$:
+
+\begin{greybox}
+The NHEK metric $\w{h}$ is a solution of the vacuum Einstein equation
+(Eq.~(\ref{e:fra:Einstein_eq_n}) with $\w{T}=0$ and $\Lambda=0$):
+\be
+    \bm{\mathrm{Ric}}(\w{h}) = 0 ,
+\ee
+where $\bm{\mathrm{Ric}}(\w{h})$ stands for the Ricci tensor of $\w{h}$.
+\end{greybox}
+\begin{proof}
+$\w{h}$ has been defined on $\M_{\rm BL}$
+via the limit expression (\ref{e:exk:h_limit_G}).
+Now, for $\veps > 0$, the $G_{\alpha\beta}$'s in the right-hand side
+of Eq.~(\ref{e:exk:h_limit_G}) are the components of a metric that has a vanishing
+Ricci tensor, since it is nothing but the extremal Kerr metric, expressed in the Bardeen-Horowicz
+coordinates $(T,R,\th,\Phi)$, which form a perfectly regular coordinate system on $\M_{\rm BL}$
+for $\veps > 0$ (cf. the transformations (\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL})).
+By continuity at the limit $\veps\to 0$, it follows that $\w{h}$ has a vanishing
+Ricci tensor as well. A priori this holds only on $\M_{\rm BL}$, but since the
+components of $\w{h}$ in the global NHEK coordinates $(\tau,y,\theta,\psi)$
+are identical on $\M_{\rm BL}$ and $\mathscr{N}$, the result is immediately extended
+to all the NHEK spacetime.
+\end{proof}
+
+
+
+\subsection{NHEK Symmetries}
+
+Given the similarities with the AdS spacetime, which is a maximally symmetric spacetime,
+it should not come as a surprise that the NHEK spacetime $(\mathscr{N},\w{h})$
+has more symmetries than the extreme Kerr spacetime $(\M,\w{g})$.
 
 
 
