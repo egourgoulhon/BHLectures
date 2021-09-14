@@ -1258,9 +1258,9 @@ and Poincaré coordinates in AdS$_{2}$, namely
       \frac{(1 - TR)^2 + R^2}{\sqrt{[(1 + T^2)R^2 - 1]^2 + 4R^2}} \right)
     \end{array}\right.
 \ee
-Beside the AdS$_{2}$-type transformation for $(\tau,y)$, the new azimuthal
+Beside the AdS$_{2}$-type transformation for $(\tau,y)\leftrightarrow(T,R)$, the new azimuthal
 coordinate $\psi$ is introduced to insure $\D\Phi + R \,\D T = \D\psi + y \, \D\tau$.
-In terms of the global NHEK coordinates $(Y^\alpha)=(\tau,y,\theta,\psi)$, the NHEK
+In terms of the coordinates $(Y^\alpha)=(\tau,y,\theta,\psi)$, the NHEK
 metric $\w{h}$ reads (cf. the notebook~\ref{s:sam:NEHK}):
 \be \label{e:exk:global_NEHK_metric}
     \encadre{
@@ -1296,6 +1296,34 @@ metric induced by $\w{h}$ is not that of AdS$_3$ but that of a so-called
 of $( \D\psi + y\,  \D\tau )^2$ in Eq.~(\ref{e:exk:global_NEHK_metric}) being the \emph{warp factor}
 (see e.g. Refs.~\cite{Compe17,BengtS06,GuicaHSS09}).
 
+It is instructive to express the NHEK metric $\w{h}$ in terms of the Boyer-Lindquist coordinates
+$(t,r,\th,\ph)$. From the transformation law (\ref{e:exk:R_T_Phi_BL}), we have
+\be \label{e:exk:BH_to_BL}
+    R \,\D T = \frac{r - m}{2m^2} \D t,\qquad
+    \frac{\D R}{R} = \frac{\D r}{r - m} \qand
+    \D\Phi + R \, \D T = \D\ph + \frac{r - 2m}{2m^2} \D t .
+\ee
+The components of $\w{h}$ with respect to Boyer-Lindquist coordinates are then
+immediately deduced from the line element (\ref{e:exk:NEHK_metric}):
+\be \label{e:exk:NEHK_metric_BL}
+    \encadre{
+    \begin{array}{lll}
+    h_{\mu\nu}\,  \D x^\mu \D x^\nu  = &
+    m^2 (1 + \cos^2\th) \Bigg[
+    & \displaystyle \!\!\! - \frac{(r - m)^2}{4m^4} \D t^2 + \frac{\D r^2}{(r - m)^2}  + \D\th^2 \\[2ex]
+    & & \displaystyle \!\!\!  + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
+    \left( \D\ph + \frac{r - 2m}{2m^2} \D t \right)^2 \Bigg]
+    \end{array}
+    }
+\ee
+\begin{remark}
+It is remarkable that, while
+the change of coordinates $(t,r,\th,\ph)\leftrightarrow (T,R,\th,\Phi)$ depends on the
+parameter $\veps$ [Eqs.~(\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL})],
+the Boyer-Lindquist expression (\ref{e:exk:NEHK_metric_BL}) of $\w{h}$ is
+independent from $\veps$. This is of course because $\veps$ has disappeared from
+the combinations (\ref{e:exk:BH_to_BL}).
+\end{remark}
 
 \subsection{NHEK spacetime}
 
@@ -1365,8 +1393,13 @@ to all the NHEK spacetime.
 
 \subsection{NHEK Symmetries}
 
-Given the similarities with the AdS spacetime, which is a maximally symmetric spacetime,
-it should not come as a surprise that the NHEK spacetime $(\mathscr{N},\w{h})$
+Given the similarities with the AdS spacetime, which is a maximally symmetric spacetime\footnote{A spacetime
+is said to be \defin{maximally symmetric}\index{maximally symmetric} if, and only if,
+its group of isometries has the maximum possible dimension, which is $S = n(n+1)/2$, where $n$ is the spacetime dimension.
+It is equivalent to say that there are $n(n+1)/2$ linearly independent Killing vector fields, $n$ of them generating
+translations and $n(n-1)/2$ of them generating rotations.
+For $n=4$, one has $S=10$, which, among others, is the dimension of the Poincaré group (case of Minkowski spacetime).},
+it should come as no surprise that the NHEK spacetime $(\mathscr{N},\w{h})$
 has more symmetries than the extreme Kerr spacetime $(\M,\w{g})$.
 
 
