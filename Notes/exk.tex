@@ -243,7 +243,8 @@ The inverse metric $\w{g}^{-1}$ has the following components in Boyer-Lindquist 
 
 The extremal Kerr metric (\ref{e:exk:metric_Kerr_3p1}) is stationary\footnote{Cf.
 Sec.~\ref{s:sta:def_station} for the definition of \emph{stationary} and a discussion
-about the terminology.} and axisymmetric. The corresponding isometry group is $\R\times\mathrm{SO}(2)$ and is generated
+about the terminology.} and axisymmetric. The corresponding isometry group is
+$\R\times\mathrm{SO}(2)\simeq R\times\mathrm{U}(1)$ and is generated
 by two commuting Killing vectors $\w{\xi}$ and $\w{\eta}$. Both the Kerr coordinates and
 the Boyer-Lindquist ones are adapted to the spacetime symmetries, i.e. $(\ti,\tph)$ and
 $(t,\ph)$ are ignorable coordinates, as it is clear on the line elements (\ref{e:exk:metric_Kerr_3p1})
@@ -1179,10 +1180,12 @@ at fixed $\Phi$ by the choice (\ref{e:exk:def_R_T_Phi}).
 
 Let us denote by $G_{\alpha\beta}(T,R,\th,\Phi,\veps)$ the components of
 the metric tensor $\w{g}$ with respect to Bardeen-Horowitz
-coordinates $(X^\alpha):=(T,R,\th,\Phi)$. Their expressions is rather complicated and can be found in
-the notebook \ref{s:sam:NEHK}.
-One defines the \defin{near-horizon extremal Kerr (NEHK) metric} as the
-metric tensor $\w{h}$ whose components with respect to the
+coordinates $(X^\alpha):=(T,R,\th,\Phi)$. They depend on $\veps$
+since the change of coordinates (\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL})
+does. The explicit expressions of the  $G_{\alpha\beta}(T,R,\th,\Phi,\veps)$'s are
+rather complicated and can be found in
+the notebook \ref{s:sam:NEHK}. Let us take the limit $\veps\to 0$, i.e.
+consider the tensor field $\w{h}$ whose components with respect to the
 Bardeen-Horowitz coordinates are the limits
 \be \label{e:exk:h_limit_G}
     h_{\alpha\beta}(T,R,\th,\Phi) := \lim_{\veps\to 0} G_{\alpha\beta}(T,R,\th,\Phi,\veps)
@@ -1200,14 +1203,29 @@ of $\w{h}$ (cf. the notebook \ref{s:sam:NEHK}):
     \end{array}
     }
 \ee
-\begin{remark}
 A priori the limits (\ref{e:exk:h_limit_G}) lead only to a symmetric bilinear
-form. But we check immediately on (\ref{e:exk:NEHK_metric}) that
-$\w{h}$ is non-degenerate and has signature $(-,+,+,+)$. Hence it is
-a proper metric tensor (cf. Sec.~\ref{s:bas:metric} in Appendix~\ref{s:bas}).
-\end{remark}
-The metric (\ref{e:exk:NEHK_metric}) has striking similiraties with
-the metric of the anti-de Sitter spacetime\index{anti-de Sitter spacetime} (AdS):
+form. To be a proper metric tensor, $\w{h}$ has to be non-degenerate as well
+(cf. Sec.~\ref{s:bas:metric} in Appendix~\ref{s:bas}). This can be check by computing the
+determinant of the components (\ref{e:exk:NEHK_metric}); one gets
+(cf. the notebook \ref{s:sam:NEHK}):
+\be
+    \det (h_{\alpha\beta}) = - 4 m^2 (1 + \cos^2\th)^2 \sin^2\th .
+\ee
+Hence $\det (h_{\alpha\beta})$ vanishes only for $\sin\th = 0$, i.e.
+on the rotation axis $\mathscr{A}$. This merely signals the standard coordinate singularity of spherical-type coordinates on $\mathscr{A}$. Away from $\mathscr{A}$, one has $\det (h_{\alpha\beta}) < 0$, which
+shows that $\w{h}$ is non-degenerate. Moreover, $\det (h_{\alpha\beta}) < 0$
+implies that the signature of $\w{h}$ is either $(-,+,+,+)$ or $(+,-,-,-)$.
+Since the (diagonal) $(R,\th)$-block has clearly the signature $(+,+)$, we get
+that only $(-,+,+,+)$ is possible. Hence we may conclude:
+\begin{greybox}
+Equation~(\ref{e:exk:NEHK_metric}) defines a Lorentzian metric tensor $\w{h}$.
+We shall call it the  \defin{near-horizon extremal Kerr (NEHK) metric}\index{NEHK!metric}\index{near-horizon!metric}.
+\end{greybox}
+
+
+It appears from (\ref{e:exk:NEHK_metric}) that the NEHK
+metric $\w{h}$ has striking similiraties with
+the metric of anti-de Sitter spacetime\index{anti-de Sitter spacetime} (AdS):
 compare the $\D T^2$ and $\D R^2$ terms with the $\D t^2$ and $\D u^2$ terms
 of the components (\ref{e:neh:AdS:metric_Poincare}) of the
 AdS$_{4}$ metric in Poincaré coordinates\index{Poincaré!coordinates on AdS$_n$}, presented in Example~\ref{x:neh:AdS}
@@ -1327,17 +1345,17 @@ the combinations (\ref{e:exk:BH_to_BL}).
 
 \subsection{NHEK spacetime}
 
-The Bardeen-Horowicz components (\ref{e:exk:NEHK_metric}) of the NHEK metric $\w{h}$
+The Bardeen-Horowitz components (\ref{e:exk:NEHK_metric}) of the NHEK metric $\w{h}$
 are singular at $R=0$. But this is a mere coordinate singularity, since,
 in terms of the global NHEK coordinates
 $(\tau,y,\theta,\psi)$, $R=0$ is the locus $y + \sqrt{1 + y^2}\cos\tau = 0$
 [cf. Eq.~(\ref{e:exk:def_global_NHEK})] and
 the components (\ref{e:exk:global_NEHK_metric})
-of $\w{h}$ with respect to these coordinates,
+of $\w{h}$ with respect to $(\tau,y,\th,\psi)$
 are regular there.
-They are actually regular in all the range $t\in\R$, $y\in\R$, $\th\in(0,\pi)$
+They are actually regular in all the range $\tau\in\R$, $y\in\R$, $\th\in(0,\pi)$
 and $\psi\in(0,2\pi)$. Because of the $\arctan$ in Eq.~(\ref{e:exk:def_global_NHEK}),
-on $\M$ the range of $\tau$ is restricted to $(-\pi/2, \pi/2)$. We may therefore
+on $\M$ the range of $\tau$ was initially restricted to $(-\pi/2, \pi/2)$. We may therefore
 consider an ``extended'' spacetime as follows:
 \begin{greybox}
 The \defin{NHEK spacetime} is the spacetime $(\mathscr{N},\w{h})$, where
@@ -1379,7 +1397,7 @@ $\w{h}$ has been defined on $\M_{\rm BL}$
 via the limit expression (\ref{e:exk:h_limit_G}).
 Now, for $\veps > 0$, the $G_{\alpha\beta}$'s in the right-hand side
 of Eq.~(\ref{e:exk:h_limit_G}) are the components of a metric that has a vanishing
-Ricci tensor, since it is nothing but the extremal Kerr metric, expressed in the Bardeen-Horowicz
+Ricci tensor, since it is nothing but the extremal Kerr metric, expressed in the Bardeen-Horowitz
 coordinates $(T,R,\th,\Phi)$, which form a perfectly regular coordinate system on $\M_{\rm BL}$
 for $\veps > 0$ (cf. the transformations (\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL})).
 By continuity at the limit $\veps\to 0$, it follows that $\w{h}$ has a vanishing
@@ -1424,13 +1442,13 @@ is said to be \defin{maximally symmetric}\index{maximally symmetric} if, and onl
 its group of isometries has the maximum possible dimension, which is $n(n+1)/2$, where $n$ is the spacetime dimension.
 It is equivalent to say that there are $n(n+1)/2$ linearly independent Killing vector fields.
 For $n=4$, one has $n(n+1)/2=10$, which, among others,
-is the dimension of the Poincaré group, ruling the isometries of Minkowski spacetime.
+is the dimension of the Poincaré group (isometries of Minkowski spacetime).
 The group of isometries of AdS$_n$ is the pseudo-orthogonal group $\mathrm{O}(2, n-1)$,
 the dimension of which is exactly $n(n+1)/2$ (cf. e.g. Ref.~\cite{ONeil83}).}
 it should come as no surprise that the NHEK spacetime $(\mathscr{N},\w{h})$
-has more symmetries than the extreme Kerr spacetime $(\M,\w{g})$. First of all, it is
+has more symmetries than the extremal Kerr spacetime $(\M,\w{g})$. First of all, it is
 obvious on the expression (\ref{e:exk:NEHK_metric}) of the NEHK metric
-in Bardeen-Horowicz coordinates that $T$ and $\Phi$ are ignorable coordinates,
+in Bardeen-Horowitz coordinates that $T$ and $\Phi$ are ignorable coordinates,
 so that the two vector fields
 \be \label{e:exk:xi1_eta}
    \w{\xi}_1 := \wpar_T =   \frac{2m}{\veps} \wpar_t + \frac{1}{\veps} \wpar_\ph
@@ -1480,7 +1498,7 @@ $\w{h}$. In what follows, we will instead the linear combination
     \w{\xi}_3 := \wpar_\tau - 1/2\, \w{\xi}_1,
 \ee
 since it has slightly simpler
-components with respect to Bardeen-Horowicz coordinates. Given the
+components with respect to Bardeen-Horowitz coordinates. Given the
 transformation law (\ref{e:exk:def_global_NHEK}), we get (cf. the notebook~\ref{s:sam:NEHK})
 \be
     \w{\xi}_3 = \left( \frac{T^2}{2} + \frac{1}{2 R^2} \right) \wpar_T
@@ -1490,7 +1508,7 @@ transformation law (\ref{e:exk:def_global_NHEK}), we get (cf. the notebook~\ref{
 We have thus four linearly independent Killing vectors of the NEHK metric $\w{h}$:
 $\w{\eta}$, $\w{\xi}_1$, $\w{\xi}_2$ and  $\w{\xi}_3$. The isometry group $G$
 of the NEHK spacetime is thus 4-dimensional. This is 2 dimensions more than
-the isometry group of Kerr spacetime, which $\mathbb{R}\times\mathrm{SO}(2)$.
+the isometry group of Kerr spacetime, which $\mathbb{R}\times\mathrm{U}(1)$.
 In order to determine $G$, let us evaluate the commutator\footnote{See Eq.~(\ref{e:bas:def_commutator}) in Appendix~\ref{s:bas} for the definition of the commutator
 of two vector fields.} of each pair
 of the four vector fields $\w{\eta}$, $\w{\xi}_1$, $\w{\xi}_2$ and  $\w{\xi}_3$.
@@ -1508,38 +1526,24 @@ and
 \ee
 Equation~(\ref{e:exk:commut_eta}) shows that $\w{\eta}$ commutes with all the
 other generators of $G$. Since $\w{\eta}$ is the
-generator of the axisymmetry group $\mathrm{SO}(2)$, we may write
-$G = \mathrm{SO}(2)\times G_3$, where $G_3$ is a
+generator of the axisymmetry group $\mathrm{U}(1)$, we may write
+$G = \mathrm{U}(1)\times G_3$, where $G_3$ is a
 3-dimensional Lie group, generated by $\w{\xi}_1$, $\w{\xi}_2$ and
 $\w{\xi}_3$. The commutation relations (\ref{e:exk:commut_sl2}) are exactly
 those of the Lie algebra $\mathfrak{sl}(2,\R)$. Actually, $G_3$ is the
 special linear group $\mathrm{SL}(2,\R)$. Hence the full isometry group
 of the NEHK spacetime is
 \be
-    \encadre{ G = \mathrm{SO}(2)\times \mathrm{SL}(2,\R) }.
+    \encadre{ G = \mathrm{U}(1)\times \mathrm{SL}(2,\R) }.
 \ee
 
 \begin{remark}
 The enhanced symmetry group near the horizon is not specific to the
 extremal Kerr black hole;
-it is actually a generic feature, which occurs near any \emph{degenerate} Killing horizon,
-as the extremal Kerr event horizon is (cf. Sec.~\ref{s:exk:horizon}) \cite{KunduL13,Comper17}.
+it is actually a generic feature, which occurs near any \emph{degenerate} Killing horizon
+in axisymmetric spacetimes \cite{KunduL13,Compe17}.
 However, generically
 \end{remark}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
