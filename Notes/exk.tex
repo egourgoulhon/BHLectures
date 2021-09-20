@@ -977,7 +977,7 @@ Summer School in 1972~\cite{Carte73a}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Near-horizon extremal Kerr metric}
+\section{Near-horizon extremal Kerr geometry}
 
 \subsection{The extremal Kerr throat} \label{s:exk:throat}
 
@@ -1222,6 +1222,50 @@ Equation~(\ref{e:exk:NEHK_metric}) defines a Lorentzian metric tensor $\w{h}$.
 We shall call it the  \defin{near-horizon extremal Kerr (NEHK) metric}\index{NEHK!metric}\index{near-horizon!metric}.
 \end{greybox}
 
+The NHEK metric $\w{h}$ has been obtained in the Bardeen-Horowitz coordinates
+$(T,R,\th,\Phi)$. Let us express it in terms of the Boyer-Lindquist coordinates
+$(t,r,\th,\ph)$. From the transformation law (\ref{e:exk:R_T_Phi_BL}), we have
+\be \label{e:exk:BH_to_BL}
+    R \,\D T = \frac{r - m}{2m^2} \D t,\qquad
+    \frac{\D R}{R} = \frac{\D r}{r - m} \qand
+    \D\Phi + R \, \D T = \D\ph + \frac{r - 2m}{2m^2} \D t .
+\ee
+The components of $\w{h}$ with respect to Boyer-Lindquist coordinates are then
+immediately deduced from the line element (\ref{e:exk:NEHK_metric}):
+\be \label{e:exk:NEHK_metric_BL}
+    \encadre{
+    \begin{array}{lll}
+    h_{\mu\nu}\,  \D x^\mu \D x^\nu  = &
+    m^2 (1 + \cos^2\th) \Bigg[
+    & \displaystyle \!\!\! - \frac{(r - m)^2}{4m^4} \D t^2 + \frac{\D r^2}{(r - m)^2}  + \D\th^2 \\[2ex]
+    & & \displaystyle \!\!\!  + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
+    \left( \D\ph + \frac{r - 2m}{2m^2} \D t \right)^2 \Bigg]
+    \end{array}
+    }
+\ee
+\begin{remark}
+It is remarkable that, while
+the change of coordinates $(t,r,\th,\ph)\leftrightarrow (T,R,\th,\Phi)$ depends on the
+parameter $\veps$ [Eqs.~(\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL})],
+the Boyer-Lindquist expression (\ref{e:exk:NEHK_metric_BL}) of $\w{h}$ is
+independent from $\veps$. This is of course because $\veps$ disappears in
+the combinations (\ref{e:exk:BH_to_BL}).
+\end{remark}
+
+In the limit $\veps\to 0$, the Bardeen-Horowitz coordinates $(T,R,\th,\Phi)$
+do not constitute a regular coordinate system on $\M_{\rm BL}$ --- the part
+of Kerr spacetime covered by Boyer-Lindquist coordinates. However,
+expression~(\ref{e:exk:NEHK_metric_BL}) of $\w{h}$ is independent from $\veps$
+and thus perfectly regular at the limit $\veps\to 0$. We may thus consider
+that
+\begin{greybox}
+$\w{h}$ is a Lorentzian metric tensor on the whole of $\M_{\rm BL}$, the expression of which in
+terms of Boyer-Lindquist coordinates is given by Eq.~(\ref{e:exk:NEHK_metric_BL})
+\end{greybox}
+In Sec.~\ref{s:exk:NHEK_spacetime}, we shall consider instead that $\w{h}$ is defined
+on a manifold distinct from the Kerr manifold $\M$.
+
+\subsection{Anti-de Sitter features}
 
 It appears from (\ref{e:exk:NEHK_metric}) that the NEHK
 metric $\w{h}$ has striking similiraties with
@@ -1314,36 +1358,8 @@ metric induced by $\w{h}$ is not that of AdS$_3$ but that of a so-called
 of $( \D\psi + y\,  \D\tau )^2$ in Eq.~(\ref{e:exk:global_NEHK_metric}) being the \emph{warp factor}
 (see e.g. Refs.~\cite{Compe17,BengtS06,GuicaHSS09}).
 
-It is instructive to express the NHEK metric $\w{h}$ in terms of the Boyer-Lindquist coordinates
-$(t,r,\th,\ph)$. From the transformation law (\ref{e:exk:R_T_Phi_BL}), we have
-\be \label{e:exk:BH_to_BL}
-    R \,\D T = \frac{r - m}{2m^2} \D t,\qquad
-    \frac{\D R}{R} = \frac{\D r}{r - m} \qand
-    \D\Phi + R \, \D T = \D\ph + \frac{r - 2m}{2m^2} \D t .
-\ee
-The components of $\w{h}$ with respect to Boyer-Lindquist coordinates are then
-immediately deduced from the line element (\ref{e:exk:NEHK_metric}):
-\be \label{e:exk:NEHK_metric_BL}
-    \encadre{
-    \begin{array}{lll}
-    h_{\mu\nu}\,  \D x^\mu \D x^\nu  = &
-    m^2 (1 + \cos^2\th) \Bigg[
-    & \displaystyle \!\!\! - \frac{(r - m)^2}{4m^4} \D t^2 + \frac{\D r^2}{(r - m)^2}  + \D\th^2 \\[2ex]
-    & & \displaystyle \!\!\!  + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
-    \left( \D\ph + \frac{r - 2m}{2m^2} \D t \right)^2 \Bigg]
-    \end{array}
-    }
-\ee
-\begin{remark}
-It is remarkable that, while
-the change of coordinates $(t,r,\th,\ph)\leftrightarrow (T,R,\th,\Phi)$ depends on the
-parameter $\veps$ [Eqs.~(\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL})],
-the Boyer-Lindquist expression (\ref{e:exk:NEHK_metric_BL}) of $\w{h}$ is
-independent from $\veps$. This is of course because $\veps$ has disappeared from
-the combinations (\ref{e:exk:BH_to_BL}).
-\end{remark}
 
-\subsection{NHEK spacetime}
+\subsection{NHEK spacetime} \label{s:exk:NHEK_spacetime}
 
 The Bardeen-Horowitz components (\ref{e:exk:NEHK_metric}) of the NHEK metric $\w{h}$
 are singular at $R=0$. But this is a mere coordinate singularity, since,
