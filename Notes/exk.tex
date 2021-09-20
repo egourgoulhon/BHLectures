@@ -1141,9 +1141,10 @@ We are going to explore it in more details in the next section.
 \subsection{The NHEK metric}
 
 In order to zoom on the near-horizon region, let us introduce
-a small parameter $\veps$ and
-the so-called \defin{Bardeen-Horowitz coordinates}\index{Bardeen-Horowitz coordinates}
-$(T,R,\th,\Phi)$, which are related to the Boyer-Lindquist coordinates
+a small parameter $\veps >0$ and
+the \defin{Bardeen-Horowitz coordinates}\index{Bardeen-Horowitz coordinates}\footnote{Cf. the historical note on page~??}
+$(T,R,\th,\Phi)$, which are defined on $\M_{\rm BL} = \M_{\rm I} \cup \M_{\rm III}$
+and related to the Boyer-Lindquist coordinates
 $(t,r,\th,\ph)$ by
 \be \label{e:exk:def_R_T_Phi}
     t = 2m \frac{T}{\veps},\quad
@@ -1165,9 +1166,10 @@ This choice ensures, for a fixed value of $(T,R,\Phi)$ with $T>0$,
 \ee
 and is motivated as follows.
 For $\veps\to 0$,
-the coordinate $R$ clearly implements the zoom-in on the region $r\simeq m$.
+the coordinate $R$ clearly implements the zoom on the region $r\simeq m$,
+i.e. the region close to the event horizon $\Hor$.
 Regarding the change $t\to T$, we may notice that the Boyer-Lindquist coordinate
-$t$ diverges near the horizon $\Hor$ --- more precisely,
+$t$ diverges near  $\Hor$ --- more precisely,
 $t$ diverges along the worldline of any particle that reaches $\Hor$
 (this is clear on Figs.~\ref{f:exk:BL_slicing} and \ref{f:exk:CPdiag_BL}).
 So, we may keep $T = \veps t/(2m)$ finite in the vicinity of $\Hor$, while having
@@ -1185,7 +1187,7 @@ since the change of coordinates (\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL
 does. The explicit expressions of the  $G_{\alpha\beta}(T,R,\th,\Phi,\veps)$'s are
 rather complicated and can be found in
 the notebook \ref{s:sam:NEHK}. Let us take the limit $\veps\to 0$, i.e.
-consider the tensor field $\w{h}$ whose components with respect to the
+consider the tensor field $\w{h}$ on $\M_{\rm BL}$ whose components with respect to the
 Bardeen-Horowitz coordinates are the limits
 \be \label{e:exk:h_limit_G}
     h_{\alpha\beta}(T,R,\th,\Phi) := \lim_{\veps\to 0} G_{\alpha\beta}(T,R,\th,\Phi,\veps)
@@ -1218,7 +1220,8 @@ implies that the signature of $\w{h}$ is either $(-,+,+,+)$ or $(+,-,-,-)$.
 Since the (diagonal) $(R,\th)$-block has clearly the signature $(+,+)$, we get
 that only $(-,+,+,+)$ is possible. Hence we may conclude:
 \begin{greybox}
-Equation~(\ref{e:exk:NEHK_metric}) defines a Lorentzian metric tensor $\w{h}$.
+Equation~(\ref{e:exk:NEHK_metric}) defines a Lorentzian metric tensor $\w{h}$
+on $\M_{\rm BL} = \M_{\rm I} \cup \M_{\rm III}$.
 We shall call it the  \defin{near-horizon extremal Kerr (NEHK) metric}\index{NEHK!metric}\index{near-horizon!metric}.
 \end{greybox}
 
@@ -1248,32 +1251,33 @@ It is remarkable that, while
 the change of coordinates $(t,r,\th,\ph)\leftrightarrow (T,R,\th,\Phi)$ depends on the
 parameter $\veps$ [Eqs.~(\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL})],
 the Boyer-Lindquist expression (\ref{e:exk:NEHK_metric_BL}) of $\w{h}$ is
-independent from $\veps$. This is of course because $\veps$ disappears in
+independent of $\veps$. This is of course because $\veps$ disappears in
 the combinations (\ref{e:exk:BH_to_BL}).
+In particular, the NHEK metric is unique, i.e. it does not depend on the value
+of the parameter $\veps$, contrary to the Bardeen-Horowitz coordinates on
+$\M_{\rm BL}$.
 \end{remark}
 
-In the limit $\veps\to 0$, the Bardeen-Horowitz coordinates $(T,R,\th,\Phi)$
-do not constitute a regular coordinate system on $\M_{\rm BL}$ --- the part
-of Kerr spacetime covered by Boyer-Lindquist coordinates. However,
-expression~(\ref{e:exk:NEHK_metric_BL}) of $\w{h}$ is independent from $\veps$
-and thus perfectly regular at the limit $\veps\to 0$. We may thus consider
-that
-\begin{greybox}
-$\w{h}$ is a Lorentzian metric tensor on the whole of $\M_{\rm BL}$, the expression of which in
-terms of Boyer-Lindquist coordinates is given by Eq.~(\ref{e:exk:NEHK_metric_BL})
-\end{greybox}
-In Sec.~\ref{s:exk:NHEK_spacetime}, we shall consider instead that $\w{h}$ is defined
-on a manifold distinct from the Kerr manifold $\M$.
+\begin{remark}
+As we have introduced it, the NHEK metric is defined on the part $\M_{\rm BL}$
+of the Kerr manifold $\M$, where $R\neq 0$.
+In Sec.~\ref{s:exk:NHEK_spacetime},
+we shall consider instead that $\w{h}$ is defined
+on a manifold distinct from $\M$, where it can be extended accross $R=0$.
+\end{remark}
 
 \subsection{Anti-de Sitter features}
 
 It appears from (\ref{e:exk:NEHK_metric}) that the NEHK
-metric $\w{h}$ has striking similiraties with
+metric $\w{h}$ has striking similarities with
 the metric of anti-de Sitter spacetime\index{anti-de Sitter spacetime} (AdS):
 compare the $\D T^2$ and $\D R^2$ terms with the $\D t^2$ and $\D u^2$ terms
 of the components (\ref{e:neh:AdS:metric_Poincare}) of the
 AdS$_{4}$ metric in Poincaré coordinates\index{Poincaré!coordinates on AdS$_n$}, presented in Example~\ref{x:neh:AdS}
-of Chap.~\ref{s:neh}. More precisely, the metric induced by $\w{h}$ on
+of Chap.~\ref{s:neh} and notice that the Poincaré horizon in AdS$_{4}$,
+which corresponds to $u=0$ as the Kerr event horizon $\Hor$ corresponds to $R=0$,
+is a degenerate Killing horizon, as $\Hor$.
+More precisely, the metric induced by $\w{h}$ on
 the rotation axis $\mathscr{A}$  ($\sin\th=0$), which is a 2-dimensional submanifold of $\M$,
 is exactly the metric of AdS$_{2}$ (the 2-dimensional anti-de Sitter spacetime),
 expressed in the Poincaré coordinates $(X^a) = (T,R)$:
@@ -1299,7 +1303,7 @@ in Poincaré coordinates. Indeed, by expanding the last term, we get
 \ee
 In particular, $h^{\th=\th_*}_{TT} = 0$, which implies that $\wpar_T$ is
 a null vector field, while it should be a timelike one for Poincaré coordinates.
-To prove that (\ref{e:exk:h_th_star}) is the metric of AdS$_{3}$,
+To prove that (\ref{e:exk:h_th_star}) is indeed the metric of AdS$_{3}$,
 let us introduce the so-called \defin{global NHEK coordinates}\index{global!NHEK coordinates}
 $(\tau,y,\th,\psi)$, which, for their $(\tau,y)$ part, are
 linked to $(T,R)$ by the same relationship as that between global
@@ -1344,8 +1348,8 @@ above, we get
      + \left( \D\psi + y\,  \D\tau \right)^2 \right].
 \ee
 This is the metric of AdS$_3$ in some standard coordinates\footnote{These coordinates
-are linked to AdS$_3$ being a bundle over AdS$_2$ with the real line as fiber
-(in the same way as $\mathbb{S}^3$ being a bundle over $\mathbb{S}^2$ with
+are linked to the property of AdS$_3$ being a fiber bundle over AdS$_2$ with the real line as fiber
+(in the same way as $\mathbb{S}^3$ is a fiber bundle over $\mathbb{S}^2$ with
 $\mathbb{S}^1$ as fiber (Hopf fibration)); $\psi$ is then the fiber coordinate
 and spans $\R$. It follows that the hypersurface $\th=\th_*$, where $\psi$
 is $2\pi$-periodic, is not the whole of
@@ -1424,7 +1428,7 @@ to all the NHEK spacetime.
 \end{proof}
 
 \begin{remark}
-The quantity $m^2$ appears as global scale of the metric $\w{h}$ in
+The quantity $m^2$ appears as global scale factor of the metric $\w{h}$ in
 each of the three expressions (\ref{e:exk:NEHK_metric}), (\ref{e:exk:global_NEHK_metric})
 and (\ref{e:exk:NEHK_metric_BL}). Many authors replace it by the total
 angular momentum $J= a m = m^2$. This is the same numerical value, but expressing
@@ -1436,9 +1440,9 @@ of total mass via the Komar integral\index{Komar!mass}\index{mass!Komar --}
 (\ref{e:ker:def_Komar_mass}); the alternative definition of mass, that
 of the \emph{ADM mass}\index{ADM!mass}\index{mass!ADM --} (cf. e.g.
 Chap.~8 of Ref.~\cite{Gourg12}) is not applicable either since
-$(\mathscr{N},\w{h})$ is not asymptotically flat. Incidently, this would
+$(\mathscr{N},\w{h})$ is not asymptotically flat. Incidently, this last fact would
 anyway preclude any unambiguous definition of the Komar mass, since asymptotic flatness
-is required to normalize the Killing field to a scalar square $-1$ at spatial
+is required to normalize the timelike Killing field to a scalar square $-1$ at spatial
 infinity.
 On the contrary, the spacetime
 angular momentum can be defined uniquely from the Killing vector
@@ -1460,7 +1464,7 @@ It is equivalent to say that there are $n(n+1)/2$ linearly independent Killing v
 For $n=4$, one has $n(n+1)/2=10$, which, among others,
 is the dimension of the Poincaré group (isometries of Minkowski spacetime).
 The group of isometries of AdS$_n$ is the pseudo-orthogonal group $\mathrm{O}(2, n-1)$,
-the dimension of which is exactly $n(n+1)/2$ (cf. e.g. Ref.~\cite{ONeil83}).}
+the dimension of which is exactly $n(n+1)/2$ (cf. e.g. Ref.~\cite{ONeil83}).},
 it should come as no surprise that the NHEK spacetime $(\mathscr{N},\w{h})$
 has more symmetries than the extremal Kerr spacetime $(\M,\w{g})$. First of all, it is
 obvious on the expression (\ref{e:exk:NEHK_metric}) of the NEHK metric
@@ -1472,6 +1476,7 @@ so that the two vector fields
    \w{\eta} = \wpar_\Phi = \wpar_\ph = \wpar_\psi
 \ee
 are two Killing vectors of $\w{h}$. The second expression of $\w{\xi}_1$
+is that in the Boyer-Lindquist coordinate frame and
 follows directly from the transformation law (\ref{e:exk:def_R_T_Phi}).
 In particular, note that $\w{\xi}_1$ is distinct from the Killing vector
 $\w{\xi} = \wpar_t$ of the Kerr metric $\w{g}$. It is rather connected
@@ -1502,14 +1507,14 @@ Hence the Killing vector field
 \ee
 The second expression stems from the transformation law  (\ref{e:exk:def_R_T_Phi})
 and expresses $\w{\xi}_2$ in terms of the Boyer-Lindquist coordinate frame.
-We notice that this expression is independent from $\veps$,
+We notice that this expression is independent of $\veps$,
 contrary to the Boyer-Lindquist expression of $\w{\xi}_1$.
 
 Finally, a fourth Killing vector of $\w{h}$ shows up clearly on the
 components (\ref{e:exk:global_NEHK_metric})
 with respect to the global NHEK coordinates $(\tau,y,\th,\psi)$, since these components
-are independent from $\tau$. Hence $\wpar_\tau$ is a Killing vector of
-$\w{h}$. In what follows, we will instead the linear combination
+are independent of $\tau$. Hence $\wpar_\tau$ is a Killing vector of
+$\w{h}$. In what follows, we will use instead the linear combination
 \be
     \w{\xi}_3 := \wpar_\tau - 1/2\, \w{\xi}_1,
 \ee
@@ -1524,8 +1529,10 @@ transformation law (\ref{e:exk:def_global_NHEK}), we get (cf. the notebook~\ref{
 We have thus four linearly independent Killing vectors of the NEHK metric $\w{h}$:
 $\w{\eta}$, $\w{\xi}_1$, $\w{\xi}_2$ and  $\w{\xi}_3$. The isometry group $G$
 of the NEHK spacetime is thus 4-dimensional. This is 2 dimensions more than
-the isometry group of Kerr spacetime, which $\mathbb{R}\times\mathrm{U}(1)$.
-In order to determine $G$, let us evaluate the commutator\footnote{See Eq.~(\ref{e:bas:def_commutator}) in Appendix~\ref{s:bas} for the definition of the commutator
+the isometry group of Kerr spacetime, which is $\mathbb{R}\times\mathrm{U}(1)$.
+In order to fully characterize $G$,
+let us determine its Lie algebra by evaluating
+the commutator\footnote{See Eq.~(\ref{e:bas:def_commutator}) in Appendix~\ref{s:bas} for the definition of the commutator
 of two vector fields.} of each pair
 of the four vector fields $\w{\eta}$, $\w{\xi}_1$, $\w{\xi}_2$ and  $\w{\xi}_3$.
 We get (cf. the notebook~\ref{s:sam:NEHK})
@@ -1554,11 +1561,21 @@ of the NEHK spacetime is
 \ee
 
 \begin{remark}
+$\mathrm{SL}(2,\R)$ is isomorphic to the pseudo-orthogonal group $\mathrm{SO}(2,1)$, which is the isometry group of AdS$_2$.
+\end{remark}
+
+
+\begin{remark}
 The enhanced symmetry group near the horizon is not specific to the
 extremal Kerr black hole;
-it is actually a generic feature, which occurs near any \emph{degenerate} Killing horizon
-in axisymmetric spacetimes \cite{KunduL13,Compe17}.
-However, generically
+this is actually a generic feature, which occurs near any \emph{degenerate} Killing horizon
+\cite{KunduL13,Compe17}.
+Pure geometric arguments suffice to show that a \emph{degenerate} Killing horizon
+associated with some Killing vector $\w{\xi}_1$ has necessarily a near-horizon geometry
+endowed with a second Killing vector similar to $\w{\xi}_2$ \cite{KunduL13}.
+Axisymmetry provides the third Killing vector $\w{\eta}$ and the Einstein equation
+leads necessarily to the existence of the fourth Killing vector $\w{\xi}_3$
+\cite{KunduLR07}.
 \end{remark}
 
 
