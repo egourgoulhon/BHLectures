@@ -1163,7 +1163,10 @@ the reverse transformation being
     R = \frac{r - m}{\veps m}, \quad
     \Phi = \ph - \frac{t}{2m} .
 \ee
-This choice ensures, for a fixed value of $(T,R,\Phi)$ with $T>0$,
+Note that on $\M_{\rm BL}$, the range of $T$ is $\R$, while
+that of $R$ is $(-\infty,0)\cup(0,+\infty)$, with $R>0$ on $\M_{\rm I}$
+and $R<0$ on $\M_{\rm III}$.
+The coordinate choice (\ref{e:exk:def_R_T_Phi}) ensures, for a fixed value of $(T,R,\Phi)$ with $T>0$,
 \be
     \lim_{\veps\to 0} t = +\infty,\quad
     \lim_{\veps\to 0} r = m, \quad
@@ -1192,11 +1195,12 @@ coordinates $(X^\alpha):=(T,R,\th,\Phi)$. They depend on $\veps$
 since the change of coordinates (\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL})
 does. The explicit expressions of the  $G_{\alpha\beta}(T,R,\th,\Phi,\veps)$'s are
 rather complicated and can be found in
-the notebook \ref{s:sam:NEHK}. Let us take the limit $\veps\to 0$, i.e.
+the notebook \ref{s:sam:NEHK}.
+We are concerned here only by the limit $\veps\to 0$. In other words, we
 consider the tensor field $\w{h}$ on $\M_{\rm BL}$ whose components with respect to the
 Bardeen-Horowitz coordinates are the limits
 \be \label{e:exk:h_limit_G}
-    h_{\alpha\beta}(T,R,\th,\Phi) := \lim_{\veps\to 0} G_{\alpha\beta}(T,R,\th,\Phi,\veps)
+    h_{\alpha\beta}(T,R,\th,\Phi) := \lim_{\veps\to 0} G_{\alpha\beta}(T,R,\th,\Phi,\veps) .
 \ee
 Evaluating the limits leads to the explicit expression
 of $\w{h}$ (cf. the notebook \ref{s:sam:NEHK}):
@@ -1213,7 +1217,7 @@ of $\w{h}$ (cf. the notebook \ref{s:sam:NEHK}):
 \ee
 A priori the limits (\ref{e:exk:h_limit_G}) lead only to a symmetric bilinear
 form. To be a proper metric tensor, $\w{h}$ has to be non-degenerate as well
-(cf. Sec.~\ref{s:bas:metric} in Appendix~\ref{s:bas}). This can be check by computing the
+(cf. Sec.~\ref{s:bas:metric} in Appendix~\ref{s:bas}). This can be checked by computing the
 determinant of the components (\ref{e:exk:NEHK_metric}); one gets
 (cf. the notebook \ref{s:sam:NEHK}):
 \be
@@ -1221,8 +1225,7 @@ determinant of the components (\ref{e:exk:NEHK_metric}); one gets
 \ee
 Hence $\det (h_{\alpha\beta})$ vanishes only for $\sin\th = 0$, i.e.
 on the rotation axis $\mathscr{A}$. This merely signals the standard coordinate singularity of spherical-type coordinates on $\mathscr{A}$. Away from $\mathscr{A}$, one has $\det (h_{\alpha\beta}) < 0$, which
-shows that $\w{h}$ is non-degenerate. Moreover, $\det (h_{\alpha\beta}) < 0$
-implies that the signature of $\w{h}$ is either $(-,+,+,+)$ or $(+,-,-,-)$.
+shows that $\w{h}$ is non-degenerate and has the signature $(-,+,+,+)$ or $(+,-,-,-)$.
 Since the (diagonal) $(R,\th)$-block has clearly the signature $(+,+)$, we get
 that only $(-,+,+,+)$ is possible. Hence we may conclude:
 \begin{greybox}
@@ -1231,8 +1234,8 @@ on $\M_{\rm BL} = \M_{\rm I} \cup \M_{\rm III}$.
 We shall call it the  \defin{near-horizon extremal Kerr (NEHK) metric}\index{NEHK!metric}\index{near-horizon!metric}.
 \end{greybox}
 
-The NHEK metric $\w{h}$ has been obtained in the Bardeen-Horowitz coordinates
-$(T,R,\th,\Phi)$. Let us express it in terms of the Boyer-Lindquist coordinates
+The NHEK metric $\w{h}$ has been obtained in Bardeen-Horowitz coordinates
+$(T,R,\th,\Phi)$. Let us express it in terms of Boyer-Lindquist coordinates
 $(t,r,\th,\ph)$. From the transformation law (\ref{e:exk:R_T_Phi_BL}), we have
 \be \label{e:exk:BH_to_BL}
     R \,\D T = \frac{r - m}{2m^2} \D t,\qquad
@@ -1260,7 +1263,7 @@ the Boyer-Lindquist expression (\ref{e:exk:NEHK_metric_BL}) of $\w{h}$ is
 independent of $\veps$. This is of course because $\veps$ disappears in
 the combinations (\ref{e:exk:BH_to_BL}).
 In particular, the NHEK metric is unique, i.e. it does not depend on the value
-of the parameter $\veps$, contrary to the Bardeen-Horowitz coordinates on
+of $\veps$, contrary to the Bardeen-Horowitz coordinates on
 $\M_{\rm BL}$.
 \end{remark}
 
@@ -1318,17 +1321,19 @@ and Poincaré coordinates in AdS$_{2}$, namely
     T = \frac{\sqrt{1+y^2}\sin\tau}{y + \sqrt{1+y^2}\cos\tau} \\[1ex]
     R = y + \sqrt{1+y^2}\cos\tau \\[1ex]
     \theta = \theta\\[1ex]
-    \Phi = \psi + \ln\left|\frac{\cos\tau + y \sin\tau}{1 + \sqrt{1 + y^2}\sin\tau} \right| .
+    \Phi = \psi + \ln\left|\frac{\cos\tau + y \sin\tau}{1 + \sqrt{1 + y^2}\sin\tau} \right|
     \end{array}\right.
     \iff
     \left\{ \begin{array}{l}
-    \tau = \arctan\left(\frac{2 T R^2}{(1 - T^2)R^2 + 1}\right)\\[1ex]
+    \tau = \arctantwo\left(2 T R^2, R^2 - T^2 R^2 + 1\right) \\
+    \qquad  + \pi H(-R)\\[1ex]
     y = \frac{(1 + T^2)R^2 - 1}{2R} \\[1ex]
     \theta = \theta\\[1ex]
     \psi = \Phi - \ln\left(
-      \frac{(1 - TR)^2 + R^2}{\sqrt{[(1 + T^2)R^2 - 1]^2 + 4R^2}} \right)
+      \frac{(1 - TR)^2 + R^2}{\sqrt{[(1 + T^2)R^2 - 1]^2 + 4R^2}} \right) ,
     \end{array}\right.
 \ee
+where $H$ stands for the Heaviside function: $H(-R) = 1$ for $R<0$ and $0$ for $R>0$.
 Beside the AdS$_{2}$-type transformation for $(\tau,y)\leftrightarrow(T,R)$, the new azimuthal
 coordinate $\psi$ is introduced to insure $\D\Phi + R \,\D T = \D\psi + y \, \D\tau$.
 In terms of the coordinates $(Y^\alpha)=(\tau,y,\theta,\psi)$, the NHEK
@@ -1381,26 +1386,6 @@ A priori, this is a mere coincidence.
 
 
 
-\begin{figure}
-\begin{minipage}[c]{0.6\textwidth}
-%\includegraphics[height=0.35\textheight]{exk_NH_region.pdf}
-\includegraphics[width=\textwidth]{exk_NH_region.pdf} \\[1ex]
-\
-\end{minipage}
-\hfill
-\begin{minipage}[c]{0.35\textwidth}
-\includegraphics[width=\textwidth]{exk_NHEK_spacetime.pdf}
-\end{minipage}
-\caption[]{\label{f:exk:Kerr_NHEK_spacetimes} \footnotesize
-Kerr spacetime (left) and NHEK spacetime (right)
-\textsl{[Figures generated by the notebook \ref{s:sam:Kerr_extremal_extended} (left)
-and ??]}
-}
-\end{figure}
-
-
-
-
 \subsection{NHEK spacetime} \label{s:exk:NHEK_spacetime}
 
 The Bardeen-Horowitz components (\ref{e:exk:NEHK_metric}) of the NHEK metric $\w{h}$
@@ -1411,8 +1396,9 @@ $(\tau,y,\theta,\psi)$, $R=0$ is the locus $y + \sqrt{1 + y^2}\cos\tau = 0$
 the components (\ref{e:exk:global_NEHK_metric})
 of $\w{h}$ are regular there.
 They are actually regular in all the range $\tau\in\R$, $y\in\R$, $\th\in(0,\pi)$
-and $\psi\in(0,2\pi)$. Because of the $\arctan$ in Eq.~(\ref{e:exk:def_global_NHEK}),
-the coordinate $\tau$ is actually restricted to $(-\pi/2, \pi/2)$ on $\M$. We may therefore
+and $\psi\in(0,2\pi)$.
+As it is introduced in Eq.~(\ref{e:exk:def_global_NHEK}),
+the coordinate $\tau$ is actually restricted to $(-\pi, 2\pi)$ on $\M$. We may therefore
 consider an ``extended'' spacetime as follows:
 \begin{greybox}
 The \defin{NHEK spacetime} is the spacetime $(\mathscr{N},\w{h})$, where
@@ -1433,14 +1419,47 @@ be extended analytically to $r<0$.} $(-\infty, +\infty)$ on $\mathscr{N}$.
 Furthermore, there is a global $(1 + \cos^2\th)$ term in (\ref{e:exk:global_NEHK_metric}),
 the $\D\th^2$ terms differ drastically in the two expressions, the one in
 (\ref{e:exk:global_NEHK_metric}) being not multiplied by $y^2$.
-The $\D\ph^2$ and $\D\psi^2$ are also radically distinct. Moreover, the NHEK line element
+The $\D\ph^2$ and $\D\psi^2$ are also truely distinct. Moreover, the NHEK line element
 contains the off-diagonal term $h_{\tau\psi}$, while
 the AdS$_4$ one is purely diagonal.
+
+
+\begin{figure}
+\begin{minipage}[c]{0.6\textwidth}
+\includegraphics[width=\textwidth]{exk_NH_region.pdf} \\[1ex]
+\
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.35\textwidth}
+\includegraphics[width=\textwidth]{exk_NHEK_spacetime.pdf}
+\end{minipage}
+\caption[]{\label{f:exk:compar_Kerr_NHEK} \footnotesize
+2-dimensional views of the extremal Kerr spacetime  $(\M, \w{g})$ (left) and of
+the NHEK spacetime $(\mathscr{N},\w{h})$ (right). The left figure is a zoom
+on the $(\M_{\rm I}^{(0)}, \M_{\rm III}^{(0)})$ part of
+the Carter-Penrose diagram
+shown in Fig.~\ref{f:exk:CPdiag_maximal}.
+The right figure is a ``compactified'' view of $\mathscr{N}$
+based on the coordinates $(\tau,\chi)$ only. The near-horizon region in
+the Kerr spacetime is visualized by means of red curves, which
+are curves (actually hypersurfaces) of constant $r$,
+ranging from $r=m/2$ to $r=3m/2$, i.e. within $\Delta r = m/2$ of the horizon value $r=m$.
+The $r$-increment between two nearby curves is $\delta r = m/10$.
+Grey curves represents hypersurfaces of constant Boyer-Lindquist coordinate $t$
+in the near horizon region, with $t$ varying by steps of $\delta t = 2m$
+in range $[-8m, 8m]$. Each of these constant-$r$ or constant-$t$ curves is mapped
+to the NHEK spacetime (right figure) by means of the transformation
+(\ref{e:exk:R_T_Phi_BL}) with $\veps=1/2$, giving birth to constant-$R$
+curves ranging from $R=-1$ to $R=1$ (red curves) and to constant-$T$
+curves ranging from $T=-2$ to $T=2$ (grey curves) in the right figure.
+\textsl{[Figures generated by the notebook \ref{s:sam:Kerr_extremal_extended} (left)
+and \ref{s:sam:NEHK_spacetime} (right)]}
+}
+\end{figure}
 
 As AdS$_4$, the NHEK spacetime is not asymptotically flat.
 The metrics of both spacetimes are solutions of Einstein equation with $\w{T}=0$,
 but with $\Lambda<0$ for AdS$_4$ metric and with $\Lambda=0$ for $\w{h}$:
-
 \begin{greybox}
 The NHEK metric $\w{h}$ is a solution of the vacuum Einstein equation
 (Eq.~(\ref{e:fra:Einstein_eq_n}) with $\w{T}=0$ and $\Lambda=0$):
@@ -1490,7 +1509,102 @@ The Komar angular momentum\index{Komar!angular momentum}\index{angular!momentum!
 hence defined is exactly $J$.
 \end{remark}
 
+\subsubsection{``Conformal'' coordinates}
 
+The range of the coordinate $y$ is the whole of $\R$. For pictural purposes (e.g. drawing
+Carter-Penrose-like diagrams), it
+would be convenient to have instead a coordinate spanning some finite range.
+As in the AdS$_4$ case presented in Example~\ref{x:neh:AdS}
+of Chap.~\ref{s:neh}, it is quite natural to introduce
+\be
+    \chi := \arctan y \quad\iff\quad y =: \tan\chi
+\ee
+so that\footnote{In Example~\ref{x:neh:AdS}, we had $\chi := \arctan r \in (0,\pi/2)$ only
+because of the constraint $r\ge 0$ for AdS$_4$ spacetime, while $y$ spans the whole of $\R$
+in NHEK spacetime.}  $\chi\in (-\pi/2, \pi/2)$.
+The relation (\ref{e:exk:def_global_NHEK}) to the Bardeen-Horowitz coordinates $(T,R,\theta,\Phi)$
+can be then rewritten as
+\be \label{e:exk:T_R_Phi_tau_chi_psi}
+    \left\{ \begin{array}{l}
+    T = \frac{\sin\tau}{\cos\tau + \sin\chi} \\[1ex]
+    R = \frac{\cos\tau + \sin\chi}{\cos\chi} \\[1ex]
+    \theta = \theta\\[1ex]
+    \Phi = \psi + \ln\left|\frac{\cos(\tau - \chi)}{\sin\tau + \cos\chi} \right|
+    \end{array}\right.
+    \iff
+    \left\{ \begin{array}{l}
+    \tau = \arctantwo\left(2 T R^2, R^2 - T^2 R^2 + 1\right) + \pi H(-R)\\[1ex]
+    \chi = \arctan \left(\frac{(1 + T^2)R^2 - 1}{2R}  \right)\\[1ex]
+    \theta = \theta\\[1ex]
+    \psi = \Phi - \ln\left(
+      \frac{(1 - TR)^2 + R^2}{\sqrt{[(1 + T^2)R^2 - 1]^2 + 4R^2}} \right) ,
+    \end{array}\right.
+\ee
+These transformations can be used to map the
+the Boyer-Lindquist domain $\M_{\rm BL}$
+of Kerr spacetime to the region $- \pi/2 < \tau + \chi< 3\pi/2$
+of the NHEK spacetime $\mathscr{N}$, as illustrated in Fig.~\ref{f:exk:compar_Kerr_NHEK}.
+This assumes a fixed value of $\veps > 0$ in Eqs.~(\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL}),
+so that $(T,R,\th,\Phi)$ constitute a regular coordinate system of
+$\M_{\rm BL}=\M_{\rm I}\cup \M_{\rm III}$.
+More precisely,
+$\M_{\rm I}$, where $R>0$, is mapped to the subregion $\mathscr{N}_{\rm P}^+$
+defined by $-\chi - \pi/2 < \tau < \chi + \pi/2$, which
+implies $\cos\tau + \sin\chi > 0$ and hence $R>0$ via (\ref{e:exk:T_R_Phi_tau_chi_psi}).
+On the other hand, $\M_{\rm III}$, where $R<0$, is mapped to the subregion
+$\mathscr{N}_{\rm P}^-$ defined by $\chi + \pi/2 < \tau < -\chi + 3\pi/2$,
+which implies $\cos\tau + \sin\chi < 0$ and hence $R<0$ via (\ref{e:exk:T_R_Phi_tau_chi_psi}).
+In both $\mathscr{N}_{\rm P}^+$
+and $\mathscr{N}_{\rm P}^-$, the coordinate $T$ spans the whole of $\R$.
+We shall call each of the regions $\mathscr{N}_{\rm P}^+$
+and $\mathscr{N}_{\rm P}^-$  a \defin{Poincaré patch of NHEK spacetime}\index{Poincaré!patch!of NHEK}.
+They appear as the interiors of triangles with one vertical edge at the NHEK
+boundary in Fig.~\ref{f:exk:compar_Kerr_NHEK}. Note the similarity\footnote{In
+Fig.~\ref{f:neh:AdS_example}, the Poincaré patch (where $u>0$)
+``points'' towards the right, while in Fig.~\ref{f:exk:compar_Kerr_NHEK},
+$\mathscr{N}_{\rm P}^+$ (where $R>0$) points towards the left, but this results simply
+from a distinct convention in choosing $\chi$.}
+with the Poincaré patch in AdS$_4$ spacetime plotted in Fig.~\ref{f:neh:AdS_example}.
+
+The NHEK metric components with respect to the coordinates
+$(\hat{Y}^\alpha)=(\tau,\chi,\th,\psi)$ are easily deduced from
+(\ref{e:exk:global_NEHK_metric}):
+\be
+    \encadre{
+    \begin{array}{lll}
+    h_{\mu\nu}\,  \D \hat{Y}^\mu \D \hat{Y}^\nu  = &
+    m^2 (1 + \cos^2\th) \Bigg[
+    & \displaystyle \!\!\! \frac{1}{\cos^2\chi} \left( - \D \tau^2 + \D \chi^2 \right)
+    + \D\th^2 \\[2ex]
+    & & \displaystyle \!\!\!  + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
+    \left( \D\psi + \tan\chi\,  \D \tau\right)^2 \Bigg]
+    \end{array}
+    }
+\ee
+Note the factor $1/\cos^2\chi$ in front of the
+$- \D \tau^2 + \D \chi^2$ term, which is analogous to the conformal factor
+$1/\cos^2\chi$ of the AdS$_4$ metric in Eq.~(\ref{e:neh:metrix_AdS_conformal}),
+except that in the present case, $1/\cos^2\chi$ does not factor all the
+metric, so it cannot be considered as a proper conformal factor. Since $\chi\in(-\pi/2, \pi/2)$,
+the factor $1/\cos^2\chi$ is regular in all $\mathscr{N}$. It simply blows up
+at the ``boundaries'' $\chi\to \pm \pi/2$ of $\mathscr{N}$,
+which correspond to $y\to \pm\infty$ and to $R\to \pm\infty$ in the Poincaré patches
+$\mathscr{N}_{\rm P}^+$ and $\mathscr{N}_{\rm P}^-$.
+
+The two red strips $r\in[m/2, 3m/2]$ and $R\in[-1, 1]$
+in Fig.~\ref{f:exk:compar_Kerr_NHEK} have been drawn by setting
+$\veps=1/2$ in the transformation (\ref{e:exk:R_T_Phi_BL}) linking the Boyer-Lindquist coordinates
+$(t,r,\th,\ph)$ to the Bardeen-Horowitz ones $(T,R,\th,\Phi)$. Now, if one maintains
+the red strip $R\in[-1, 1]$ in the NHEK spacetime unchanged and let $\veps$ decays to $0$,
+the red strip in the extremal Kerr spacetime  shrinks to a more and more narrow strip
+around the horizon. This narrow strip, endowed with the Kerr metric $\w{g}$, becomes more and
+more isometric to the fixed NHEK strip $R\in[-1, 1]$ endowed with the metric $\w{h}$.
+
+\begin{remark}
+While the extremal Kerr spacetime and the NHEK one are similar in the
+near-horizon region, it is clear on Fig.~\ref{f:exk:compar_Kerr_NHEK} that they
+have very different asymptotics for $r\to \pm \infty$ and $R\to \pm \infty$.
+\end{remark}
 
 \subsection{NHEK Symmetries}
 
@@ -1674,7 +1788,8 @@ homogeneous and partially isotropic.
 Even if he did not get $\w{h}$ by some near-horizon limit process,
 Carter stressed that in the neighborhood of the extremal Kerr horizon,
 the Kerr metric $\w{g}$ can
-be approximated arbitrarily closely by the metric $\w{h}$ (cf. Fig.~6.3 in Ref.~\cite{Carte73a}).
+be approximated arbitrarily closely by the metric $\w{h}$
+(cf. Fig.~6.3 in Ref.~\cite{Carte73a}, which is similar to our Fig.~\ref{f:exk:compar_Kerr_NHEK}).
 In the related case of the extremal static and spherically symmetric black hole,
 constituted by the Reissner-Nordström\index{Reissner-Nordström solution} solution
 with electric charge equal to the mass ($Q = m$), Carter exhibited
