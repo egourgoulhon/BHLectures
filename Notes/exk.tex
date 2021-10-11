@@ -1134,15 +1134,15 @@ $\Hor$ is a degenerate Killing horizon (cf. Sec.~\ref{s:exk:horizon}), it is gen
 \emph{complete} null geodesics: the principal null geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
 introduced in Sec.~\ref{s:exk:princ_null_geod}. Now, since
 $\Li^{{\rm out},\Hor}_{(\th,\psi)}$ is complete, its past end at $i^{\rm int}$ is obtained at the limit $\ti\to -\infty$ of its
-affine parameter $\ti$ (see also Fig.~\ref{f:exk:CPdiag_Kerr}, where
-the limit $\ti\to -\infty$ at $r=m$ appears clearly as
+affine parameter $\ti$ (see also the grey curves in Fig.~\ref{f:exk:CPdiag_Kerr}, which let appear that
+the limit $\ti\to -\infty$ at $r=m$ is
 $i^{\rm int}$). Hence, in terms of affine length, $i^{\rm int}$ is infinitely
 far in the past along any of the null geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
 generating $\Hor$.
 
 The spacetime region in the vicinity of $r=m$ is called the
 \defin{extremal Kerr throat}\index{extremal!Kerr!throat}\index{throat!extremal Kerr --}.
-We are going to explore it in more details in the next section.
+We are going to explore it in more details in the next sections.
 
 \subsection{The NHEK metric} \label{s:exk:NHEK_metric}
 
@@ -1423,6 +1423,94 @@ The $\D\ph^2$ and $\D\psi^2$ are also truely distinct. Moreover, the NHEK line e
 contains the off-diagonal term $h_{\tau\psi}$, while
 the AdS$_4$ one is purely diagonal.
 
+The inverse metric takes a rather simple form (cf. the notebook~\ref{s:sam:NEHK_spacetime}
+for the computation):
+\be
+    h^{\alpha\beta} = \frac{1}{1 + \cos^2\th} \left(
+    \begin{array}{cccc}
+    - \frac{1}{1+y^2} & 0 & 0 & \frac{y}{1 + y^2} \\
+    0 & 1 + y^2 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    \frac{y}{1 + y^2} & 0 & 0 & \frac{(1 + \cos^2\th)^2 + y^2 (\cos^4\th + 6 \cos^2\th - 3)}{4(1+y^2)\sin^2\th}
+    \end{array}
+    \right) .
+\ee
+
+
+
+As AdS$_4$, the NHEK spacetime is not asymptotically flat.
+The metrics of both spacetimes are solutions of Einstein equation with $\w{T}=0$,
+but with $\Lambda<0$ for AdS$_4$ metric and with $\Lambda=0$ for $\w{h}$:
+\begin{greybox}
+The NHEK metric $\w{h}$ is a solution of the vacuum Einstein equation
+(Eq.~(\ref{e:fra:Einstein_eq_n}) with $\w{T}=0$ and $\Lambda=0$):
+\be \label{e:exk:Ricci_h_zero}
+    \bm{\mathrm{Ric}}(\w{h}) = 0 ,
+\ee
+where $\bm{\mathrm{Ric}}(\w{h})$ stands for the Ricci tensor of $\w{h}$.
+\end{greybox}
+\begin{proof}
+$\w{h}$ has been defined on $\M_{\rm BL}$
+via the limit expression (\ref{e:exk:h_limit_G}).
+Now, for $\veps > 0$, the $G_{\alpha\beta}$'s in the right-hand side
+of Eq.~(\ref{e:exk:h_limit_G}) are the components of a metric that has a vanishing
+Ricci tensor, since it is nothing but the extremal Kerr metric, expressed in the Bardeen-Horowitz
+coordinates $(T,R,\th,\Phi)$, which form a perfectly regular coordinate system on $\M_{\rm BL}$
+for $\veps > 0$ (cf. the transformations (\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL})).
+By continuity at the limit $\veps\to 0$, it follows that $\w{h}$ has a vanishing
+Ricci tensor as well. A priori this holds only on $\M_{\rm BL}$, but since the
+components of $\w{h}$ in the global NHEK coordinates $(\tau,y,\theta,\psi)$
+are identical on $\M_{\rm BL}$ and $\mathscr{N}$, the result is immediately extended
+by analyticity to all the NHEK spacetime.
+\end{proof}
+
+
+\subsubsection{Total angular momentum}
+
+The quantity $m^2$ appears as global scale factor of the metric $\w{h}$ in
+each of the three expressions (\ref{e:exk:NEHK_metric}), (\ref{e:exk:global_NEHK_metric})
+and (\ref{e:exk:NEHK_metric_BL}). The parameter $m$ is of course the mass of the extremal
+Kerr spacetime from which the NHEK spacetime $(\mathscr{N},\w{h})$ arises. However, one cannot
+associate a mass to the latter. Indeed, we cannot use the
+Komar integral\index{Komar!mass}\index{mass!Komar --}
+(\ref{e:ker:def_Komar_mass}), as in the Kerr case, since the
+the NHEK spacetime lacks any
+global asymptotically timelike Killing vector\footnote{In particular, the Killing vector
+$\wpar_\tau$ is spacelike for $\th$ close to $\pi/2$ and large enough values of $y$, since
+we read from (\ref{e:exk:global_NEHK_metric}) that
+$\w{h}(\wpar_\tau, \wpar_\tau) = h_{\tau\tau} = m^2 (1 + \cos^2\th)
+\left[ \frac{4 y^2 \sin^2\th}{(1 + \cos^2\th)^2} - 1 - y^2 \right]
+\sim \frac{m^2 y^2}{1 + \cos^2\th} \left[ 4 \sin^2\th - (1 + \cos^2\th)^2 \right]$
+for $|y|\to +\infty$, so that $\w{h}(\wpar_\tau, \wpar_\tau) > 0$ for
+$\sin\th > (1 + \cos^2\th)/2$.}.
+An alternative concept of mass, which does not require any Killing vector,
+is that of the \emph{ADM mass}\index{ADM!mass}\index{mass!ADM --} (cf. e.g.
+Chap.~8 of Ref.~\cite{Gourg12}). It is however not applicable either since
+$(\mathscr{N},\w{h})$ is not asymptotically flat. Incidentally, this last fact would
+anyway preclude any unambiguous definition of the Komar mass, since asymptotic flatness
+is required to normalize the timelike Killing field to a scalar square $-1$ at spatial
+infinity.
+
+On the contrary, the spacetime
+\defin{total angular momentum} can be defined  unambiguously from the axisymmetry Killing vector
+$\w{\eta} = \wpar_{\ph} = \wpar_{\Phi} = \wpar_{\psi}$, via
+the Komar formula\index{Komar!angular momentum}\index{angular!momentum!Komar --} (\ref{e:ker:def_Komar_J}):
+\be
+     J := \frac{1}{16\pi} \int_{\Sp} \star(\dd \uu{\eta})  ,
+\ee
+where the Hodge dual $\star$
+is taken by means of the Levi-Civita tensor associated to $\w{h}$.
+One finds (cf. the notebook~\ref{s:sam:NEHK_spacetime} for the computation):
+\be
+    \encadre{J = m^2} .
+\ee
+
+
+\begin{remark}
+For this reason, many authors replace the overall factor $m^2$ of the NHEK metric
+by $J$.
+\end{remark}
+
 
 \begin{figure}
 \begin{minipage}[c]{0.6\textwidth}
@@ -1457,57 +1545,7 @@ and \ref{s:sam:NEHK_spacetime} (right)]}
 }
 \end{figure}
 
-As AdS$_4$, the NHEK spacetime is not asymptotically flat.
-The metrics of both spacetimes are solutions of Einstein equation with $\w{T}=0$,
-but with $\Lambda<0$ for AdS$_4$ metric and with $\Lambda=0$ for $\w{h}$:
-\begin{greybox}
-The NHEK metric $\w{h}$ is a solution of the vacuum Einstein equation
-(Eq.~(\ref{e:fra:Einstein_eq_n}) with $\w{T}=0$ and $\Lambda=0$):
-\be \label{e:exk:Ricci_h_zero}
-    \bm{\mathrm{Ric}}(\w{h}) = 0 ,
-\ee
-where $\bm{\mathrm{Ric}}(\w{h})$ stands for the Ricci tensor of $\w{h}$.
-\end{greybox}
-\begin{proof}
-$\w{h}$ has been defined on $\M_{\rm BL}$
-via the limit expression (\ref{e:exk:h_limit_G}).
-Now, for $\veps > 0$, the $G_{\alpha\beta}$'s in the right-hand side
-of Eq.~(\ref{e:exk:h_limit_G}) are the components of a metric that has a vanishing
-Ricci tensor, since it is nothing but the extremal Kerr metric, expressed in the Bardeen-Horowitz
-coordinates $(T,R,\th,\Phi)$, which form a perfectly regular coordinate system on $\M_{\rm BL}$
-for $\veps > 0$ (cf. the transformations (\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL})).
-By continuity at the limit $\veps\to 0$, it follows that $\w{h}$ has a vanishing
-Ricci tensor as well. A priori this holds only on $\M_{\rm BL}$, but since the
-components of $\w{h}$ in the global NHEK coordinates $(\tau,y,\theta,\psi)$
-are identical on $\M_{\rm BL}$ and $\mathscr{N}$, the result is immediately extended
-by analyticity to all the NHEK spacetime.
-\end{proof}
 
-\begin{remark}
-The quantity $m^2$ appears as global scale factor of the metric $\w{h}$ in
-each of the three expressions (\ref{e:exk:NEHK_metric}), (\ref{e:exk:global_NEHK_metric})
-and (\ref{e:exk:NEHK_metric_BL}). Many authors replace it by the total
-angular momentum $J= a m = m^2$. This is the same numerical value, but expressing
-it as $J$
-is actually more meaningfull than $m^2$ for the
-NEHK spacetime $(\mathscr{N},\w{h})$. Indeed the later lacks any
-global timelike Killing vector, so that there is no natural definition
-of total mass via the Komar integral\index{Komar!mass}\index{mass!Komar --}
-(\ref{e:ker:def_Komar_mass}); the alternative definition of mass, that
-of the \emph{ADM mass}\index{ADM!mass}\index{mass!ADM --} (cf. e.g.
-Chap.~8 of Ref.~\cite{Gourg12}) is not applicable either since
-$(\mathscr{N},\w{h})$ is not asymptotically flat. Incidentally, this last fact would
-anyway preclude any unambiguous definition of the Komar mass, since asymptotic flatness
-is required to normalize the timelike Killing field to a scalar square $-1$ at spatial
-infinity.
-On the contrary, the spacetime
-angular momentum can be defined uniquely from the Killing vector
-$\w{\eta} = \wpar_{\ph} = \wpar_{\Phi} = \wpar_{\psi}$, via
-the Komar formula (\ref{e:ker:def_Komar_J}), with the Hodge duality
-taken by means of the Levi-Civita tensor associated to $\w{h}$.
-The Komar angular momentum\index{Komar!angular momentum}\index{angular!momentum!Komar --}
-hence defined is exactly $J$.
-\end{remark}
 
 \subsubsection{``Conformal'' coordinates}
 
@@ -1519,9 +1557,10 @@ of Chap.~\ref{s:neh}, it is quite natural to introduce
 \be
     \chi := \arctan y \quad\iff\quad y =: \tan\chi
 \ee
-so that\footnote{In Example~\ref{x:neh:AdS}, we had $\chi := \arctan r \in (0,\pi/2)$ only
-because of the constraint $r\ge 0$ for AdS$_4$ spacetime, while $y$ spans the whole of $\R$
-in NHEK spacetime.}  $\chi\in (-\pi/2, \pi/2)$.
+so that\footnote{In Example~\ref{x:neh:AdS}, the range of $\chi$ was only
+$(0,\pi/2)$
+because $r = \tan\chi \ge 0$ in AdS$_4$, while here $y=\tan\chi$ spans the whole of $\R$.}
+$\chi\in (-\pi/2, \pi/2)$.
 The relation (\ref{e:exk:def_global_NHEK}) to the Bardeen-Horowitz coordinates $(T,R,\theta,\Phi)$
 can be then rewritten as
 \be \label{e:exk:T_R_Phi_tau_chi_psi}
@@ -1540,17 +1579,18 @@ can be then rewritten as
       \frac{(1 - TR)^2 + R^2}{\sqrt{[(1 + T^2)R^2 - 1]^2 + 4R^2}} \right) ,
     \end{array}\right.
 \ee
-These transformations can be used to map the
+These transformations can be used to map
 the Boyer-Lindquist domain $\M_{\rm BL}$
 of Kerr spacetime to the region $- \pi/2 < \tau + \chi< 3\pi/2$
 of the NHEK spacetime $\mathscr{N}$, as illustrated in Fig.~\ref{f:exk:compar_Kerr_NHEK}.
 This assumes a fixed value of $\veps > 0$ in Eqs.~(\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL}),
-so that $(T,R,\th,\Phi)$ constitute a regular coordinate system of
+so that $(T,R,\th,\Phi)$ constitute a regular coordinate system on
 $\M_{\rm BL}=\M_{\rm I}\cup \M_{\rm III}$.
 More precisely,
 $\M_{\rm I}$, where $R>0$, is mapped to the subregion $\mathscr{N}_{\rm P}^+$
 defined by $-\chi - \pi/2 < \tau < \chi + \pi/2$, which
-implies $\cos\tau + \sin\chi > 0$ and hence $R>0$ via (\ref{e:exk:T_R_Phi_tau_chi_psi}).
+implies $\cos\tau + \sin\chi > 0$ and hence $R>0$ via (\ref{e:exk:T_R_Phi_tau_chi_psi}),
+since $\cos\chi>0$ for $\chi\in(-\pi/2,\pi/2)$.
 On the other hand, $\M_{\rm III}$, where $R<0$, is mapped to the subregion
 $\mathscr{N}_{\rm P}^-$ defined by $\chi + \pi/2 < \tau < -\chi + 3\pi/2$,
 which implies $\cos\tau + \sin\chi < 0$ and hence $R<0$ via (\ref{e:exk:T_R_Phi_tau_chi_psi}).
@@ -1558,11 +1598,11 @@ In both $\mathscr{N}_{\rm P}^+$
 and $\mathscr{N}_{\rm P}^-$, the coordinate $T$ spans the whole of $\R$.
 We shall call each of the regions $\mathscr{N}_{\rm P}^+$
 and $\mathscr{N}_{\rm P}^-$  a \defin{Poincaré patch of NHEK spacetime}\index{Poincaré!patch!of NHEK}.
-They appear as the interiors of triangles with one vertical edge at the NHEK
+They appear as the interiors of triangles having one vertical edge at the NHEK
 boundary in Fig.~\ref{f:exk:compar_Kerr_NHEK}. Note the similarity\footnote{In
 Fig.~\ref{f:neh:AdS_example}, the Poincaré patch (where $u>0$)
-``points'' towards the right, while in Fig.~\ref{f:exk:compar_Kerr_NHEK},
-$\mathscr{N}_{\rm P}^+$ (where $R>0$) points towards the left, but this results simply
+has its vertical edge on the left, while in Fig.~\ref{f:exk:compar_Kerr_NHEK},
+$\mathscr{N}_{\rm P}^+$ (where $R>0$) has its vertical edge on the right, but this results simply
 from a distinct convention in choosing $\chi$.}
 with the Poincaré patch in AdS$_4$ spacetime plotted in Fig.~\ref{f:neh:AdS_example}.
 
@@ -1585,20 +1625,25 @@ Note the factor $1/\cos^2\chi$ in front of the
 $- \D \tau^2 + \D \chi^2$ term, which is analogous to the conformal factor
 $1/\cos^2\chi$ of the AdS$_4$ metric in Eq.~(\ref{e:neh:metrix_AdS_conformal}),
 except that in the present case, $1/\cos^2\chi$ does not factor all the
-metric, so it cannot be considered as a proper conformal factor. Since $\chi\in(-\pi/2, \pi/2)$,
+metric, so that it cannot be considered as a proper conformal factor. Since $\cos\chi$ never vanishes
+for $\chi\in(-\pi/2, \pi/2)$,
 the factor $1/\cos^2\chi$ is regular in all $\mathscr{N}$. It simply blows up
 at the ``boundaries'' $\chi\to \pm \pi/2$ of $\mathscr{N}$,
 which correspond to $y\to \pm\infty$ and to $R\to \pm\infty$ in the Poincaré patches
 $\mathscr{N}_{\rm P}^+$ and $\mathscr{N}_{\rm P}^-$.
 
+One can provide a pictoral view of $\w{h}$ being the ``near-horizon limit'' of $\w{g}$ as follows:
+
+\begin{greybox}
 The two red strips $r\in[m/2, 3m/2]$ and $R\in[-1, 1]$
 in Fig.~\ref{f:exk:compar_Kerr_NHEK} have been drawn by setting
 $\veps=1/2$ in the transformation (\ref{e:exk:R_T_Phi_BL}) linking the Boyer-Lindquist coordinates
 $(t,r,\th,\ph)$ to the Bardeen-Horowitz ones $(T,R,\th,\Phi)$. Now, if one maintains
 the red strip $R\in[-1, 1]$ in the NHEK spacetime unchanged and let $\veps$ decays to $0$,
 the red strip in the extremal Kerr spacetime  shrinks to a more and more narrow strip
-around the horizon. This narrow strip, endowed with the Kerr metric $\w{g}$, becomes more and
-more isometric to the fixed NHEK strip $R\in[-1, 1]$ endowed with the metric $\w{h}$.
+around the horizon. As $\veps\to 0$, this narrow strip, endowed with the Kerr metric $\w{g}$, tends
+to be isometric to the fixed NHEK strip $R\in[-1, 1]$ endowed with the metric $\w{h}$.
+\end{greybox}
 
 \begin{remark}
 While the extremal Kerr spacetime and the NHEK one are similar in the
@@ -1611,7 +1656,8 @@ have very different asymptotics for $r\to \pm \infty$ and $R\to \pm \infty$.
 Given the similarities with the AdS spacetime, which is a maximally symmetric spacetime\footnote{A spacetime of dimension $n$
 is said to be \defin{maximally symmetric}\index{maximally symmetric} if, and only if,
 its group of isometries has the maximum possible dimension, which is $n(n+1)/2$.
-It is equivalent to say that there are $n(n+1)/2$ linearly independent Killing vector fields.
+It is equivalent to say that there are $n(n+1)/2$ linearly independent Killing vector fields
+when considering only linear combinations with constants coefficients.
 For $n=4$, one has $n(n+1)/2=10$, which, among others,
 is the dimension of the Poincaré group\index{Poincaré!group} (isometries of Minkowski spacetime).
 The group of isometries of AdS$_n$ is the pseudo-orthogonal group $\mathrm{O}(2, n-1)$,
