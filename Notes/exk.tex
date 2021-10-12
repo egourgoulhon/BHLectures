@@ -1464,14 +1464,20 @@ are identical on $\M_{\rm BL}$ and $\mathscr{N}$, the result is immediately exte
 by analyticity to all the NHEK spacetime.
 \end{proof}
 
+\begin{remark}
+For the reader skeptical about the limit process and the extension to the whole of $\mathscr{N}$,
+a direct computation of the Ricci tensor of $\w{h}$ from
+the global-coordinate components (\ref{e:exk:global_NEHK_metric}) is performed
+in the notebook~\ref{s:sam:NEHK_spacetime} and the outcome is indeed identically vanishing.
+\end{remark}
 
 \subsubsection{Total angular momentum}
 
-The quantity $m^2$ appears as global scale factor of the metric $\w{h}$ in
+The quantity $m^2$ appears as a global scale factor of the metric $\w{h}$ in
 each of the three expressions (\ref{e:exk:NEHK_metric}), (\ref{e:exk:global_NEHK_metric})
-and (\ref{e:exk:NEHK_metric_BL}). The parameter $m$ is of course the mass of the extremal
+and (\ref{e:exk:NEHK_metric_BL}). This is of course the square of the mass of the extremal
 Kerr spacetime from which the NHEK spacetime $(\mathscr{N},\w{h})$ arises. However, one cannot
-associate a mass to the latter. Indeed, we cannot use the
+associate intrinsically a mass to the latter. Indeed, one cannot use the
 Komar integral\index{Komar!mass}\index{mass!Komar --}
 (\ref{e:ker:def_Komar_mass}), as in the Kerr case, since the
 the NHEK spacetime lacks any
@@ -1485,22 +1491,26 @@ for $|y|\to +\infty$, so that $\w{h}(\wpar_\tau, \wpar_\tau) > 0$ for
 $\sin\th > (1 + \cos^2\th)/2$.}.
 An alternative concept of mass, which does not require any Killing vector,
 is that of the \emph{ADM mass}\index{ADM!mass}\index{mass!ADM --} (cf. e.g.
+Ref.~\cite{JaramG11} or
 Chap.~8 of Ref.~\cite{Gourg12}). It is however not applicable either since
 $(\mathscr{N},\w{h})$ is not asymptotically flat. Incidentally, this last fact would
 anyway preclude any unambiguous definition of the Komar mass, since asymptotic flatness
-is required to normalize the timelike Killing field to a scalar square $-1$ at spatial
-infinity.
+is required to normalize the timelike Killing field  at spatial
+infinity (scalar square $-1$).
 
-On the contrary, the spacetime
-\defin{total angular momentum} can be defined  unambiguously from the axisymmetry Killing vector
+On the contrary, the
+\defin{angular momentum}\index{Komar!angular momentum}\index{angular!momentum!Komar --} of the NHEK spacetime can be defined
+properly from the axisymmetry Killing vector
 $\w{\eta} = \wpar_{\ph} = \wpar_{\Phi} = \wpar_{\psi}$, via
-the Komar formula\index{Komar!angular momentum}\index{angular!momentum!Komar --} (\ref{e:ker:def_Komar_J}):
+the Komar formula (\ref{e:ker:def_Komar_J}):
 \be
      J := \frac{1}{16\pi} \int_{\Sp} \star(\dd \uu{\eta})  ,
 \ee
-where $\uu{\eta}$ is the 1-form $h$-dual to $\w{\eta}$ (i.e. obtained as $\eta_\alpha := h_{\alpha\mu} \eta^\mu$)
+where $\Sp$ is a closed spacelike 2-surface, $\uu{\eta}$ is the 1-form $h$-dual to $\w{\eta}$ (i.e. obtained as $\eta_\alpha := h_{\alpha\mu} \eta^\mu$)
 and the Hodge dual $\star$
-is taken by means of the Levi-Civita tensor associated to $\w{h}$.
+is taken by means of the Levi-Civita tensor associated with $\w{h}$ [cf. Eq.~(\ref{e:ker:star_duxi})].
+Since $\w{h}$ fulfills Einstein equation [Eq.~(\ref{e:exk:Ricci_h_zero})], the value
+of $J$ does not depend upon the choice of the 2-surface $\Sp$ (cf. Sec.~\ref{s:ker:Komar_J}).
 One finds (cf. the notebook~\ref{s:sam:NEHK_spacetime} for the computation):
 \be
     \encadre{J = m^2} .
@@ -1509,7 +1519,7 @@ This is exactly the value $J = a m = m^2$ of the angular momentum of the
 extremal Kerr spacetime [Eq.~(\ref{e:ker:J_am})]. Hence we conclude:
 \begin{greybox}
 The NHEK spacetime $(\mathscr{N},\w{h})$ has no well defined mass, but it has a well defined
-total angular momentum, which is nothing but the total angular momentum $J = m^2$
+Komar angular momentum, whose value is nothing but the angular momentum $J = m^2$
 of the extremal Kerr spacetime $(\M,\w{g})$ from which $(\mathscr{N},\w{h})$ arises.
 \end{greybox}
 
@@ -1535,7 +1545,7 @@ on the $(\M_{\rm I}^{(0)}, \M_{\rm III}^{(0)})$ part of
 the Carter-Penrose diagram
 shown in Fig.~\ref{f:exk:CPdiag_maximal}.
 The right figure is a ``compactified'' view of $\mathscr{N}$
-based on the coordinates $(\tau,\chi)$ only. The near-horizon region in
+based on the coordinates $(\tau,\chi)$. The near-horizon region in
 the Kerr spacetime is visualized by means of red curves, which
 are curves (actually hypersurfaces) of constant $r$,
 ranging from $r=m/2$ to $r=3m/2$, i.e. within $\Delta r = m/2$ of the horizon value $r=m$.
@@ -1546,8 +1556,8 @@ in range $[-8m, 8m]$. Each of these constant-$r$ or constant-$t$ curves is mappe
 to the NHEK spacetime (right figure) by means of the transformation
 (\ref{e:exk:R_T_Phi_BL}) with $\veps=1/2$, giving birth to constant-$R$
 curves ranging from $R=-1$ to $R=1$ (red curves) and to constant-$T$
-curves ranging from $T=-2$ to $T=2$ (grey curves) in the right figure.
-\textsl{[Figures generated by the notebook \ref{s:sam:Kerr_extremal_extended} (left)
+curves ranging from $T=-2$ to $T=2$ (grey curves).
+\textsl{[Figures generated by the notebooks \ref{s:sam:Kerr_extremal_extended} (left)
 and \ref{s:sam:NEHK_spacetime} (right)]}
 }
 \end{figure}
@@ -1841,10 +1851,11 @@ homogeneous and partially isotropic.
 Even if he did not get $\w{h}$ by some near-horizon limit process,
 Carter stressed that in the neighborhood of the extremal Kerr horizon,
 the Kerr metric $\w{g}$ can
-be approximated arbitrarily closely by the metric $\w{h}$
+be approximated arbitrarily closely by $\w{h}$
 (cf. Fig.~6.3 in Ref.~\cite{Carte73a}, which is similar to our Fig.~\ref{f:exk:compar_Kerr_NHEK}).
-In the related case of the extremal static and spherically symmetric black hole,
-constituted by the Reissner-Nordström\index{Reissner-Nordström solution} solution
+In the related case of the \emph{static} extremal black hole,
+constituted by the (spherically symmetric)
+Reissner-Nordström\index{Reissner-Nordström solution} solution
 with electric charge equal to the mass ($Q = m$), Carter exhibited
 a change of coordinates similar\footnote{Carter defined the near-horizon coordinates
 $(\tau,\lambda)$ by $t = m^2 \tau$ and $r = \lambda + m$ and took the
@@ -1854,21 +1865,21 @@ this is equivalent to Eq.~(\ref{e:exk:def_R_T_Phi})
 with $\veps = 1/m$.}
 to that between Boyer-Lindquist coordinates
 and Bardeen-Horowitz coordinates [Eq.~(\ref{e:exk:def_R_T_Phi})] and
-showed that the near-horizon limit brings
-the Reissner-Nordström metric to the metric of
-\emph{Bertotti-Robinson\index{Bertotti-Robinson spacetime} spacetime}.
-The latter is the product space $\mathrm{AdS}_2\times\SS^2$ and constitutes a static solution of
+he showed that the near-horizon limit brings
+the Reissner-Nordström metric to the
+\emph{Bertotti-Robinson\index{Bertotti-Robinson spacetime} metric}.
+The latter is the product metric of $\mathrm{AdS}_2\times\SS^2$ and constitutes a static solution of
 the source-free Einstein-Maxwell equations that is highly symmetric, having the 6-dimensional
 group $\mathrm{SL}(2,\R)\times\mathrm{SO}(3)$ as isometry group (cf. e.g. Ref.~\cite{GarfiG11}).
-The NHEK metric has been rediscovered by James Bardeen\index{Bardeen, J.M.} and Gary Horowitz\index{Horowitz, G.T.} in 1999 \cite{BardeH99}. They deduced it from the Boyer-Lindquist expression of the extremal Kerr metric by performing the change of coordinates (\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL}) and taking the limit $\veps\to 0$, as presented in
-Sec.~\ref{s:exk:NHEK_metric}. Note that the coordinates actually used by
+The NHEK metric has been rediscovered by James Bardeen\index{Bardeen, J.M.} and Gary Horowitz\index{Horowitz, G.T.} in 1999 \cite{BardeH99}. They deduced it from the Boyer-Lindquist expression of the extremal Kerr metric by performing the change of coordinates\footnote{The coordinates actually used by
 Bardeen and Horowitz were $\tilde{T} := 2m T$ and $\tilde{R} = m R$, denoted
-respectively $t$ and $r$ by them. In the same article~\cite{BardeH99},
+respectively $t$ and $r$ by them.}  (\ref{e:exk:def_R_T_Phi})-(\ref{e:exk:R_T_Phi_BL}) and taking the limit $\veps\to 0$, as presented in
+Sec.~\ref{s:exk:NHEK_metric}. In the same article~\cite{BardeH99},
 Bardeen and Horowitz introduced
 the global NHEK coordinates\footnote{$\psi$ is denoted by $\phi$ in Ref.~\cite{BardeH99}.}
 $(\tau,y,\th,\psi)$ via the transformation (\ref{e:exk:def_global_NHEK})
 and obtained expression (\ref{e:exk:global_NEHK_metric}) for $\w{h}$ [their Eq.~(2.9)]. They have
-then analyzed the global properties of the NHEK spacetime.
+analyzed the global properties of the NHEK spacetime, in particular its geodesic completeness.
 Bardeen and Horowitz have also shown that the NHEK isometry group is
 $\mathrm{SL}(2,\R)\times \mathrm{U}(1)$ [Eq.~(\ref{e:exk:NHEK_isometry_group})]
 and have given formulas (\ref{e:exk:xi1_eta}), (\ref{e:exk:xi2}) and (\ref{e:exk:xi3})
