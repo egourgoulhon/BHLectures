@@ -251,7 +251,7 @@ or (\ref{e:lem:sol_E_neg}) to get the solution for $r(\tau,\chi)$;
 Eq.~(\ref{e:lem:LTeqs2}), to get $\rho(\tau,\chi)$ and into
 (\ref{e:lem:metric_Lemaitre}) to get the metric tensor.
 
-\subsection{Schwarzschild solution in Lemaître coordinates}
+\subsection{Schwarzschild solution in Lemaître coordinates} \label{s:lem:Schwarzschild}
 
 One can recover Schwarzschild solution from the above setting by
 considering the vacuum case, i.e. $\rho=0$. Then
@@ -421,18 +421,20 @@ Eddington exhibited a coordinate system that is regular at $r=2m$ \cite{Eddin192
 did not mention this feature.
 \end{hist}
 
-\begin{remark}
-The Painlevé-Gullstrand coordinates\index{Painlevé-Gullstrand coordinates}, which have been introduced
-in our way from the Lemaître coordinates to the Schwarzschild-Droste ones,
+\subsubsection{Painlevé-Gullstrand coordinates on Schwarzschild spacetime}
+
+Painlevé-Gullstrand coordinates\index{Painlevé-Gullstrand coordinates} $(\tau,r,\th,\ph)$,
+which have been introduced
+in our way from Lemaître coordinates to Schwarzschild-Droste ones,
 have a noticeable feature: the hypersurfaces $\tau=\mathrm{const}$ are
-flat manifolds, i.e. the metric induced of them is the flat Euclidean metric.
+flat 3-manifolds, i.e. the metric induced of them by $\w{g}$ is the flat Euclidean metric.
 This is immediate if we set $\D\tau=0$ in Eq.~(\ref{e:lem:metric_PG}):
 the line element reduces to
 \[
     \D s^2 = \D r^2 + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
 \]
 which is nothing but the Euclidean line element expressed in spherical coordinates
-$(r,\th,\ph)$. This proves that the Schwarzschild spacetime can be sliced
+$(r,\th,\ph)$. This proves that Schwarzschild spacetime can be sliced
 by a family of flat hypersurfaces. The associated 3+1 decomposition
 of the metric is revealed by rewritting the line element (\ref{e:lem:metric_PG})
 as
@@ -441,21 +443,29 @@ as
        - \D\tau^2 + \left( \D r + \sqrt{\frac{2m}{r}} \D\tau \right)^2
         + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) } .
 \ee
-We read on this expression that the \emph{lapse function}\index{lapse function}
+One reads on this expression that the \emph{lapse function}\index{lapse function}
 (see e.g. Ref.~\cite{Gourg12}) is $N=1$ and that the \emph{shift vector}\index{shift vector}
 is $\beta^i = (\sqrt{r/2m},0,0)$. Finding a lapse function equal to one reflects simply
 that the coordinate time $\tau$ is some observer proper time: that of the
 marginally bound radial geodesics discussed above.
 
 Another interesting property of Painlevé-Gullstrand coordinates, which they
-share with the Lemaître ones, is to be regular at $r=2m$: despite the vanishing of
+share with Lemaître ones, is to be regular at $r=2m$: despite the vanishing of
 $g'_{\tau\tau}$ there, as read on (\ref{e:lem:metric_PG}), the determinant
-of the metric components (\ref{e:lem:metric_PG}) is not vanishing, thanks
-to the off-diagonal term $g'_{\tau r}$: it is everywhere equal
-to $-r^4\sin^2\th$. See Ref.~\cite{MarteP01} for a detailed
-discussion of Painlevé-Gullstrand coordinates.
+of the metric components (\ref{e:lem:metric_PG}) is not vanishing,
+thanks to the off-diagonal term $g'_{\tau r}$. Indeed, $\det\left( g'_{\alpha\beta}\right) = -r^4\sin^2\th$, which is clearly nonzero, except on the
+axis $\th=0$ or $\pi$.
+
+\begin{remark}
+Painlevé-Gullstrand coordinates $(\tau,r,\th,\ph)$ can be seen as a timelike analog of the
+ingoing
+Eddington-Finkelstein (IEF) coordinates $(\tilde{t},r,\th,\ph)$ introduced in Sec.~\ref{s:sch:EF_coord}. Both coordinate
+systems are based on ingoing radial geodesics of Schwarzschild spacetime, these
+geodesics being null for IEF and timelike for Painlevé-Gullstrand.
 \end{remark}
 
+The reader is referred to Ref.~\cite{MarteP01} for a detailed
+discussion of Painlevé-Gullstrand coordinates.
 
 \begin{hist}
 Painlevé-Gullstrand coordinates have been introduced in 1921 by the
