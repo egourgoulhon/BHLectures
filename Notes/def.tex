@@ -222,12 +222,15 @@ whereas it is actually 3-dimensional.}
 Let us consider the 4-dimensional spacetime $(\M,\w{g})$ with $\M$ diffeomorphic
 to $\mathbb{R}^4$ and equipped with a coordinate system $(x^\alpha)=(t,r,\th,\ph)$
 ($t\in \mathbb{R}$, $r\in(0,+\infty)$, $\th\in(0,\pi)$
-and $\ph\in(0,2\pi)$) such that $\w{g}$ takes the form
+and $\ph\in(0,2\pi)$) such that the metric tensor takes the
+form\footnote{Formula (\ref{e:def:Schw_metric}) follows the notation
+introduced in Eq.~(\ref{e:fra:g_components_dx}); see Sec.~\ref{s:bas:metric}
+in Appendix~\ref{s:bas} for an extended discussion, in particular Eq.~(\ref{e:bas:sym_tensor_prod}).}
 \be \label{e:def:Schw_metric}
-    g_{\mu\nu} \D x^\mu \D x^\nu = - \left( 1 - \frac{2 m}{r} \right) \D t^2
-        + \frac{4m}{r} \, \D t \, \D r
-        + \left( 1 + \frac{2 m}{r} \right) \D r^2
-        + r^2\D\th^2 + r^2\sin^2\th \, \D\ph^2 ,
+    \w{g} = - \left( 1 - \frac{2 m}{r} \right) \dd t^2
+        + \frac{4m}{r} \, \dd t \, \dd r
+        + \left( 1 + \frac{2 m}{r} \right) \dd r^2
+        + r^2\dd\th^2 + r^2\sin^2\th \, \dd\ph^2 ,
 \ee
 where $m$ is a positive constant. We shall see in Chap.~\ref{s:sch} that
 $(\M,\w{g})$ is actually a part of Schwarzschild spacetime, described in
@@ -770,7 +773,7 @@ and \ref{f:glo:EH_binspir} of Chap.~\ref{s:glo}.
 \end{example}
 
 Let us denote by $\w{q}$ the
-\defin{metric induced on $\Sp$ by $\w{g}$}\index{induced!metric}\index{metric!induced --},
+\defin{metric induced by $\w{g}$ on $\Sp$}\index{induced!metric}\index{metric!induced --},
 i.e. the bilinear form defined at any point $p\in\Sp$ by
 \be \label{e:def:def_q_S}
     \forall (\w{u},\w{v})\in T_p\Sp\times T_p\Sp, \quad
@@ -791,7 +794,7 @@ $\Sp$ of the Schwarzschild horizon defined in Example~\ref{x:def:Schw_hor4} is r
 setting $t=\mathrm{const}=t_0$ and $r=\mathrm{const}=2m$ in Eq.~(\ref{e:def:Schw_metric}),
 since  $x^a=(\th,\ph)$ is a coordinate system on $\Sp$:
 \be \label{e:def:q_S_Schw_hor}
-    q_{ab} \D x^a \D x^b = 4m^2 \left( \D\th^2 + \sin^2\th \D^2\ph \right) .
+    \w{q} = 4m^2 \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) .
 \ee
 \end{example}
 
@@ -932,7 +935,7 @@ deduced from the Minkowskian ones via the standard formulas:
 \]
 the components of $\w{q}$ become instead
 \be \label{e:def:q_light_cone_spher}
-    {q'}_{\alpha\beta} = \left(
+    q'_{\alpha\beta} = \left(
     \begin{array}{cccc}
     0 & 0 & 0 & 0 \\
     0 & 0 & 0 & 0 \\
@@ -940,7 +943,7 @@ the components of $\w{q}$ become instead
     0 & 0 & 0 & r^2\sin^2\th
     \end{array} \right) .
 \ee
-and we recognize in $q_{ab} = \mathrm{diag}(r^2, r^2 \sin^2\th)$ the
+and we recognize in $q'_{ab} = \mathrm{diag}(r^2, r^2 \sin^2\th)$ the
 standard metric on the 2-sphere of radius $r$.
 \end{example}
 
@@ -1207,8 +1210,8 @@ rewrite this formula as the Lie derivative of $\ln q$ along $\wl$:
 For the light cone in Minkowski spacetime,
 it is easy to evaluate $\theta_{(\wl)}$ by means of the spherical coordinates
 introduced in Example~\ref{x:def:light_cone5}, since these coordinates are adapted to the
-surface $\Sp$, the metric of $\Sp$ being $q_{ab} \D x^a \D x^b = r^2 \D \theta^2
-+ r^2\sin^2\theta \D \ph^2$ [cf. Eq.~(\ref{e:def:q_light_cone_spher})].
+surface $\Sp$, the metric of $\Sp$ being $\w{q} = r^2 \dd \theta^2
++ r^2\sin^2\theta\, \dd \ph^2$ [cf. Eq.~(\ref{e:def:q_light_cone_spher})].
 We have then  $q = \det(q_{ab}) = r^4\sin^2\theta$. Moreover, the parameter $\varepsilon$
 can be chosen as $\varepsilon = t - t_0$ since $t$ is an (affine) parameter
 associated with $\wl$ (cf. Example~\ref{x:def:light_cone3}). Given that
@@ -1225,7 +1228,7 @@ i.e.
 \end{example}
 
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor6}
-As above, we have $q = r^4\sin^2\th$ [cf. Eq.~(\ref{e:def:q_S_Schw_hor})],
+As above, we have $q = r^4\sin^2\th$ [cf. Eq.~(\ref{e:def:Schw_metric})],
 so that (\ref{e:def:theta_Lie_ln_q}) yields
 \bea
     \theta_{(\wl)} & =& \frac{1}{2} \Lie{\el} \ln q = \frac{1}{2} \el^\mu \der{}{x^\mu} \ln q
@@ -1699,8 +1702,8 @@ From (\ref{e:def:def_shear}), we get a vanishing shear:
 The Lie derivative of $\w{q}$, as given by Eq.~(\ref{e:def:q_Schw_hor}),
 along $\wl$ is (cf. Appendix~\ref{s:sam} for the computation):
 \[
-    \Lie{\wl} \w{q} =  2 r \frac{r-2m}{r+2m} \left( \dd\th \otimes \dd\th
-        +  \sin^2\th \, \dd\ph \otimes \dd\ph \right) = \frac{2}{r} \frac{r-2m}{r+2m}
+    \Lie{\wl} \w{q} =  2 r \frac{r-2m}{r+2m} \left( \dd\th^2
+        +  \sin^2\th \, \dd\ph^2 \right) = \frac{2}{r} \frac{r-2m}{r+2m}
             \, \w{q} .
 \]
 Since $\vw{q}^* \w{q} = \w{q}$, Eq.~(\ref{e:def:Theta}) yields

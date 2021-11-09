@@ -31,7 +31,9 @@ The precise definition and basic properties of a \emph{smooth manifold} are reca
 in Appendix~\ref{s:bas}. Here let us simply say that, in loose terms,
 a \defin{manifold}\index{manifold} $\M$ of dimension $n$ is a ``space'' that \emph{locally} resembles $\R^n$,
 i.e. can be described by a $n$-tuple of coordinates $(x^1,\ldots,x^n)$. However, globally,
-$\M$ can be very different from $\R^n$, in particular regarding its topology.
+$\M$ can be very different from $\R^n$, in particular regarding its topology. It could also happen
+that many coordinate systems are required to cover $\M$, while a single one is obviously
+sufficient for $\R^n$.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{fra_manifold.pdf}}
@@ -59,15 +61,36 @@ scalar product on $T_p\M$, which we shall denote by a dot:
     \forall (\w{u},\w{v})\in T_p\M\times T_p\M, \quad
         \w{u}\cdot\w{v} := \w{g}(\w{u}, \w{v}) .
 \ee
-The fact that its signature is Lorentzian, i.e.
+Given a coordinate system $(x^\alpha)$, the components of $\w{g}$ with respect
+to it are the $n^2$ scalar fields $(g_{\alpha\beta})$ such that [cf. Eq.~(\ref{e:bas:g_components_dx})]
+\be \label{e:fra:g_components_dx}
+    \encadre{ \w{g} = g_{\alpha\beta} \, \dd x^\alpha \dd x^\beta },
+\ee
+where $\dd x^\alpha$ is the differential 1-form of $x^\alpha$ (cf. Sec.~\ref{s:bas:linear_form})
+and the notation $\dd x^\alpha \dd x^\beta$ stands for the symmetric tensor product
+defined by Eq.~(\ref{e:bas:sym_tensor_prod}).
+The scalar square $\D s^2$ of an infinitesimal
+displacement vector $\D\w{x} = \D x^\alpha \wpar_\alpha$ is expressed in
+terms of the components $(g_{\alpha\beta})$ by the line element
+formula
+\be \label{e:fra:line_element}
+    \D s^2 := \w{g}(\D\w{x},\D\w{x}) = g_{\alpha\beta} \, \D x^\alpha \, \D x^\beta .
+\ee
+This formula follows from Eq.~(\ref{e:fra:g_components_dx}) via the identity
+$\langle\dd x^\alpha,\D\w{x} \rangle =  \D x^\alpha$ [Eq.~(\ref{e:bas:dxa_dxa})].
+
+The fact that the signature of $\w{g}$ is Lorentzian, i.e.
 \be
 \mathrm{sign}\; \w{g} = (-,\underbrace{+,\ldots,+}_{\mbox{\small $n-1$ times}}),
 \ee
-implies that from each point $p\in\M$, there are privileged directions,
-which form the so-called \defin{null cones}\index{null!cone}
-or \defin{light cones}\index{light!cone} (cf. Fig.~\ref{f:fra:lorentz_manifold} ).
+implies that at each point $p\in\M$, there are privileged directions,
+along which the line element (\ref{e:fra:line_element}) vanishes; they
+form the so-called \defin{null cones}\index{null!cone}
+or \defin{light cones}\index{light!cone} (cf. Fig.~\ref{f:fra:lorentz_manifold}).
 The null cones constitute an absolute structure of spacetime, independent from any observer.
-A vector at a point $p\in\M$ that is either timelike or null is said to be \defin{causal}\index{causal!vector}.
+A vector at a point $p\in\M$ that is either timelike or null
+(cf. Sec.~\ref{s:bas:signature})
+is said to be \defin{causal}\index{causal!vector}.
 It lies necessarily inside the null cone at $p$ (timelike vector) or along it (null vector).
 
 \begin{figure}
@@ -81,7 +104,7 @@ defines privileged directions: those lying in the null cone at $p$.}
 
 When dealing with black hole spacetimes, it is very important to have clear
 concepts of ``past'' and ``future''. Therefore, we assume
-that the spacetime $(\M, \w{g})$ is \emph{time-orientable}, i.e. that it is possible to divide \emph{continuously} all causal vectors (i.e. timelike or null) into
+that the spacetime $(\M, \w{g})$ is \emph{time-orientable}, i.e. that it is possible to divide \emph{continuously} all causal (i.e. timelike or null) vectors into
 two classes, the \emph{future-directed} ones and the \emph{past-directed} ones.
 More precisely, at each tangent space $T_p\M$, we may split the causal
 vectors in two classes by declaring that two causal
@@ -89,7 +112,7 @@ vectors belong to the same class iff they are located inside
 or onto the same sheet of the null cone at $p$. This defines an equivalence
 relation on causal vectors at $p$, with two equivalence classes. The spacetime
 $(\M,\w{g})$ is then called \defin{time-orientable}\index{time-orientable}\index{orientable!time --} iff some choice of an equivalence class
-can be performed continuously over the entire manifold $\M$.
+can be performed continuously over all $\M$.
 The vectors belonging to the chosen equivalence class are called
 \defin{future-directed}\index{future-directed} and the other ones
 \defin{past-directed}\index{past-directed}.
@@ -170,7 +193,7 @@ From Lemma~1, we get
 
 \begin{greybox}
 \textbf{Corollary 1}\\[1ex]
-A timelike vector can be neither orthogonal to a timelike vector nor
+A timelike vector is neither orthogonal to a timelike vector nor
 orthogonal to a null vector.
 \end{greybox}
 

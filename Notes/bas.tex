@@ -319,7 +319,7 @@ $(x^\alpha)$, there is a unique basis of ${T_p^*\M}$, denoted by $(\dd x^\alpha)
 where $\delta^\alpha_{\ \ \beta}$ is the \defin{Kronecker symbol}\index{Kronecker symbol} :
 $\delta^\alpha_{\ \  \beta} = 1$ if $\alpha=\beta$ and $0$ otherwise.
 The basis $(\dd x^\alpha)$ is called the \defin{dual basis}\index{dual!basis}\index{basis!dual} of the basis
-$(\wpar_\alpha)$. The notation $(\dd x^\alpha)$ stems from the fact that if we apply
+$(\wpar_\alpha)$. The notation $\dd x^\alpha$ stems from the fact that if we apply
 the linear form $\dd x^\alpha$ to the infinitesimal displacement vector
 (\ref{e:bas:dell_dxa_wpar}), we get nothing but the number $\D x^\alpha$:
 \be \label{e:bas:dxa_dxa}
@@ -345,7 +345,8 @@ In terms of components, the action of a linear form on a vector takes then a ver
 This follows immediately from (\ref{e:bas:def_comp_form}),
 (\ref{e:bas:v_va_wpar_a}) and (\ref{e:bas:dual_basis_nat}).
 
-A field of linear forms, i.e. a (smooth) map which associates to each point $p\in\M$ a member of $T_p\M$ is called a \defin{1-form}\index{1-form}.
+A field of linear forms, i.e. a (smooth) map which associates to each point $p\in\M$
+an element of the dual space $T_p^*\M$ is called a \defin{1-form}\index{1-form}.
 Given a smooth scalar field $f$ on $\M$, there exists a 1-form canonically associated with it, called
 the \defin{differential of $f$}\index{differential} and denoted $\dd f$ or $\wnab f$.
 At each point $p\in\M$, $\dd f$ is the unique linear form which, once
@@ -382,7 +383,7 @@ Hence the dual basis to the natural basis $(\wpar_\alpha)$ is formed by the
 differentials of the coordinates. This justifies the notation $\dd x^\alpha$ used for its elements.
 \end{remark}
 
-Of course the natural bases are not the only possible bases in the vector
+Of course natural bases are not the only bases in the vector
 space $T_p\M$. One may use a basis $(\w{e}_\alpha)$ that is not related to a coordinate system on $\M$, for instance an orthonormal basis with respect to some metric.
 There exists then a unique basis $(\w{e}^\alpha)$
 of the dual space ${T_p^*\M}$ such that\footnote{Notice that,
@@ -459,9 +460,9 @@ in addition, $\w{e}_\alpha=\wpar_\alpha$ and $\w{e}^\alpha = \dd x^\alpha$.
 
 \subsection{Fields on a manifold} \label{s:bas:fields}
 
-A \defin{tensor field}\index{tensor!field}\index{field!tensor} of type $(k,\ell)$ is a map
+A \defin{tensor field of type}\index{tensor!field}\index{field!tensor --} $(k,\ell)$ is a map
 which associates to each point $p\in\M$ a tensor of type $(k,\ell)$ on $T_p\M$.
-By convention, a scalar field\index{scalar!field}\index{field!scalar} is considered as a tensor field of type $(0,0)$.
+By convention, a scalar field\index{scalar!field}\index{field!scalar --} is considered as a tensor field of type $(0,0)$.
 We shall consider only smooth fields.
 
 Given a non-negative integer $p$, a
@@ -606,7 +607,7 @@ In particular, considering the natural basis associated with some coordinate sys
 $(x^\alpha)$, the scalar square of an infinitesimal displacement vector $\D\w{x} = \D x^\alpha\wpar_\alpha$
 [cf. Eqs.~(\ref{e:bas:dell_f}) and (\ref{e:bas:dell_dxa_wpar})] is
 \be \label{e:bas:line_element}
-  \encadre{ \D s^2 := \w{g}(\D\w{x},\D\w{x}) = g_{\alpha\beta} \D x^\alpha \, \D x^\beta }.
+  \encadre{ \D s^2 := \w{g}(\D\w{x},\D\w{x}) = g_{\alpha\beta} \, \D x^\alpha \, \D x^\beta }.
 \ee
 This formula is called the expression of the \defin{line element}\index{line!element}
 on the pseudo-Riemannian manifold $(\M,\w{g})$. It is often used to define the metric tensor in
@@ -620,14 +621,17 @@ Eq.~(\ref{e:bas:g_components}) can be rewritten as
 \ee
 One can give a form to this relation which reminds the line element (\ref{e:bas:line_element}) by
 introducing the symmetric product notation (cf. e.g. Refs.~\cite{Lee18} or \cite{Strau13}):
-\be
+\be \label{e:bas:sym_tensor_prod}
     \dd x^\alpha \dd x^\beta := \frac{1}{2} \left(\dd x^\alpha \otimes \dd x^\beta + \dd x^\beta \otimes \dd x^\alpha \right) \qand
     (\dd x^\alpha)^2 := \dd x^\alpha \otimes \dd x^\alpha .
 \ee
 Formula~(\ref{e:bas:g_components_natural}) then becomes
-\be
+\be \label{e:bas:g_components_dx}
     \encadre{ \w{g} = g_{\alpha\beta} \, \dd x^\alpha \dd x^\beta } .
 \ee
+Applying this relation to the pair of infinitesimal vectors $(\D\w{x},\D\w{x})$,
+one gets the line element (\ref{e:bas:line_element}), by virtue of the identity
+$\langle\dd x^\alpha,\D\w{x} \rangle =  \D x^\alpha$ [Eq.~(\ref{e:bas:dxa_dxa})].
 
 
 \subsection{Signature and orthonormal bases} \label{s:bas:signature}
@@ -843,26 +847,26 @@ only to a specific kind of tensor fields: the $p$-forms; it is the
 \subsubsection{Affine connection on a manifold} \label{s:bas:affine_connect}
 
 Let us denote by $\mathfrak{X}(\M)$ the space of smooth
-vector fields on $\M$.
+vector fields on $\M$. $\mathfrak{X}(\M)$ is an infinite-dimensional
+vector space over $\R$.
 Given a vector field $\w{v}\in\mathfrak{X}(\M)$, it is not possible from the manifold structure
 alone to define its variation between two neighbouring points $p$ and $q$. Indeed
 a formula like $\D \w{v} := \w{v}(q) - \w{v}(p)$ is meaningless because
 the vectors $\w{v}(q)$ and $\w{v}(p)$ belong to two distinct vector spaces,
 $T_q\M$ and $T_p\M$ respectively (cf. Fig.~\ref{f:bas:tang_space}), so that their
 subtraction is a priori not defined.
-Note that this issue would not arise for a scalar field [cf. Eq.~(\ref{e:bas:df})].
+Note that this issue does not arise for a scalar field [cf. Eq.~(\ref{e:bas:df})].
 The solution is to introduce an extra-structure on $\M$, called an
 \emph{affine connection} because, by providing a clear meaning to the variation of vector fields, it
-\emph{connects} the various tangent spaces on the manifold.
-
-An \defin{affine connection}\index{affine connection}\index{connection!affine --} on $\M$ is a map
+\emph{connects} the various tangent spaces on the manifold. More precisely, an
+ \defin{affine connection}\index{affine connection}\index{connection!affine --} on $\M$ is a map
 \be \label{e:bas:def_nabla}
     \begin{array}{cccc}
     \wnab \ : & \mathfrak{X}(\M)\times\mathfrak{X}(\M) & \longrightarrow & \mathfrak{X}(\M) \\
         & (\w{u},\w{v}) & \longmapsto & \wnab_{\w{u}} \,\w{v}
     \end{array}
 \ee
-which satisfies the following properties:
+that satisfies the following properties:
 \begin{enumerate}
 \item $\wnab$ is bilinear (considering $\mathfrak{X}(\M)$ as a vector space over $\R$).
 \item For any scalar field $f$ and any pair $(\w{u},\w{v})$ of vector fields:
