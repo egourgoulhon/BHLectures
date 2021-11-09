@@ -595,23 +595,40 @@ using a dot to denote the scalar product of two vectors taken with $\w{g}$:
 In a given basis $(\w{e}_\alpha)$ of $T_p\M$, the components of $\w{g}$
 is the matrix $(g_{\alpha\beta})$ defined by
 formula (\ref{e:bas:def_components}) with $(k,\ell)=(0,2)$:
-\be
-  \w{g} = g_{\alpha\beta} \, \w{e}^\alpha \otimes \w{e}^\beta .
+\be \label{e:bas:g_components}
+  \encadre{ \w{g} = g_{\alpha\beta} \, \w{e}^\alpha \otimes \w{e}^\beta }.
 \ee
 For any pair $(\w{u},\w{v})$ of vectors we have then
 \be
   \w{g}(\w{u},\w{v}) = g_{\alpha\beta} u^\alpha v^\beta .
 \ee
 In particular, considering the natural basis associated with some coordinate system
-$(x^\alpha)$, the scalar square of an infinitesimal displacement vector $\D\w{x}$
-[cf. Eq.~(\ref{e:bas:dell_f})] is
-\be
-  \D s^2 := \w{g}(\D\w{x},\D\w{x}) = g_{\alpha\beta} \D x^\alpha \, \D x^\beta .
+$(x^\alpha)$, the scalar square of an infinitesimal displacement vector $\D\w{x} = \D x^\alpha\wpar_\alpha$
+[cf. Eqs.~(\ref{e:bas:dell_f}) and (\ref{e:bas:dell_dxa_wpar})] is
+\be \label{e:bas:line_element}
+  \encadre{ \D s^2 := \w{g}(\D\w{x},\D\w{x}) = g_{\alpha\beta} \D x^\alpha \, \D x^\beta }.
 \ee
-This formula, which follows from the value (\ref{e:bas:dell_dxa_wpar}) of the
-components of $\D\w{x}$, is called the expression of the \defin{line element}\index{line!element}
+This formula is called the expression of the \defin{line element}\index{line!element}
 on the pseudo-Riemannian manifold $(\M,\w{g})$. It is often used to define the metric tensor in
 general relativity texts. Note that contrary to what the notation may suggest, $\D s^2$ is not necessarily a positive quantity.
+
+For the dual basis associated with coordinates
+$(x^\alpha)$, one has $\w{e}^\alpha = \dd x^\alpha$ (cf. Sec.~\ref{s:bas:linear_form}), so that
+Eq.~(\ref{e:bas:g_components}) can be rewritten as
+\be \label{e:bas:g_components_natural}
+    \w{g} = g_{\alpha\beta} \, \dd x^\alpha \otimes \dd x^\beta .
+\ee
+One can give a form to this relation which reminds the line element (\ref{e:bas:line_element}) by
+introducing the symmetric product notation (cf. e.g. Refs.~\cite{Lee18} or \cite{Strau13}):
+\be
+    \dd x^\alpha \dd x^\beta := \frac{1}{2} \left(\dd x^\alpha \otimes \dd x^\beta + \dd x^\beta \otimes \dd x^\alpha \right) \qand
+    (\dd x^\alpha)^2 := \dd x^\alpha \otimes \dd x^\alpha .
+\ee
+Formula~(\ref{e:bas:g_components_natural}) then becomes
+\be
+    \encadre{ \w{g} = g_{\alpha\beta} \, \dd x^\alpha \dd x^\beta } .
+\ee
+
 
 \subsection{Signature and orthonormal bases} \label{s:bas:signature}
 
@@ -726,7 +743,7 @@ in some basis $(\w{e}_\alpha)$, the components of $\vw{T}$ and $\vvw{T}$ are res
 \begin{remark}
 In mathematical literature, the isomorphism induced by $\w{g}$ between
 ${T_p\M}$ and ${T_p^*\M}$ is called the \defin{musical isomorphism}\index{musical isomorphism},
-because a flat or a sharp symbol is used instead of,
+because a flat and a sharp symbols are used instead of,
 respectively, the underbar and the arrow introduced above:
 \[
   \w{u}^\flat = \uu{u} \qquad\mbox{and}\qquad \w{\omega}^\sharp = \vw{\w{\omega}} .
