@@ -35,18 +35,18 @@ spacetime: Minkowski spacetime.
 In this section $(\M,\w{g})$ is the 4-dimensional Minkowski spacetime,
 i.e. $\M$ is a smooth manifold diffeomorphic to $\mathbb{R}^4$ and $\w{g}$
 is the metric tensor whose expression in terms of some global coordinates
-$(x^\alpha) = (t, x, y, z)$ implementing the diffeomorphism to $\mathbb{R}^4$
+$(t, x, y, z)$ implementing the diffeomorphism to $\mathbb{R}^4$
 (i.e. \emph{Minkowskian coordinates}\index{Minkowskian coordinates})
 is
 \be \label{e:glo:Mink_metric}
-    g_{\mu\nu} \D x^\mu \D x^\nu = - \D t^2 + \D x^2 + \D y^2 + \D z^2 .
+    \w{g} = - \dd t^2 + \dd x^2 + \dd y^2 + \dd z^2 .
 \ee
 
 \subsection{Finite-range coordinates on Minkowski spacetime} \label{s:glo:finite_range_Mink}
 
 Since we would like to deal with the ``far'' region, it is natural to introduce
 $r := \sqrt{x^2+y^2+z^2}$ and the associated spherical coordinates
-$(x^\alpha) = (t,r,\th,\ph)$, which are related to the Minkowskian ones by
+$(t,r,\th,\ph)$, which are related to the Minkowskian ones by
 \be
     \left\{ \begin{array}{l}
     x = r\sin\th\cos\ph \\
@@ -60,8 +60,8 @@ the whole manifold $\M$ as a regular chart (cf. Sec.~\ref{s:bas:def_manif} of Ap
 by $y=0$ and $x\geq 0$. Once expressed in terms of the
 spherical coordinates, the Minkowski metric (\ref{e:glo:Mink_metric}) takes the form
 \be \label{e:glo:Mink_metric_spher}
-    g_{\mu\nu} \D x^\mu \D x^\nu = - \D t^2 + \D r^2
-        + r^2 \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
+    \w{g} = - \dd t^2 + \dd r^2
+        + r^2 \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) .
 \ee
 
 \begin{figure}
@@ -88,8 +88,8 @@ time defined by (cf. Fig.~\ref{f:glo:null_coord})
 \ee
 The metric tensor takes then the shape
 \be \label{e:glo:Mink_metric_uv}
-    g_{\mu\nu} \D x^\mu \D x^\nu = - \D u \, \D v
-        + \frac{1}{4} (v-u)^2 \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
+    \w{g} = - \dd u \, \dd v
+        + \frac{1}{4} (v-u)^2 \left(  \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) .
 \ee
 The coordinates $(u,v)$ span the half part of $\mathbb{R}^2$ defined by
 $u<v$. In order to have coordinates within a finite range, let us consider
@@ -126,11 +126,11 @@ Since
     \tan V - \tan U = \frac{\sin(V-U)}{\cos U \cos V},
 \]
 the Minkowski metric (\ref{e:glo:Mink_metric_uv})
-is expressed in terms of the coordinates $(x^\alpha)=(U,V,\th,\ph)$
+is expressed in terms of the coordinates $(U,V,\th,\ph)$
 as\footnote{See also the SageMath notebook~\ref{s:sam:conformal_Mink}.}
 \be \label{e:glo:g_UV}
-    g_{\mu\nu} \D x^\mu \D x^\nu = \frac{1}{4\cos^2 U \cos^2 V}
-    \left[ - 4 \D U \, \D V + \sin^2(V-U) \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right)
+    \w{g} = \frac{1}{4\cos^2 U \cos^2 V}
+    \left[ - 4 \, \dd U \, \dd V + \sin^2(V-U) \left(  \dd\th^2 + \sin^2\th \, \dd\ph^2 \right)
     \right] .
 \ee
 
@@ -181,8 +181,8 @@ $\w{g}$, i.e. $(-,+,+,+)$.
 The specific expression of $\w{\tilde{g}}$ is deduced from (\ref{e:glo:g_UV})
 and (\ref{e:glo:Omega_UV}):
 \be \label{e:glo:tg_UV}
-    \tilde{g}_{\mu\nu} \D x^\mu \D x^\nu =  - 4 \D U \, \D V
-        + \sin^2(V-U) \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
+    \w{\tilde{g}} =  - 4 \, \dd U \, \dd V
+        + \sin^2(V-U) \left(  \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) .
 \ee
 
 In view of (\ref{e:glo:tilde_g_Omega}), one says that the metric $\w{\tilde{g}}$
@@ -299,14 +299,14 @@ coordinates $(\tau,\chi,\th,\ph)$ is easily deduced from
 \subsection{Conformal completion} \label{s:glo:conf_complet_Mink}
 
 The expression of the conformal metric in terms of the coordinates
-$(x^\alpha) = (\tau,\chi,\th,\ph)$ is easily deduced from that in terms of
+$(\tau,\chi,\th,\ph)$ is easily deduced from that in terms of
 $(U,V,\th,\ph)$ as given by (\ref{e:glo:tg_UV}):
 \be \label{e:glo:tg_Einstein}
-    \tilde{g}_{\mu\nu} \D x^\mu \D x^\nu =  - \D\tau^2
-        + \D \chi^2
-        + \sin^2\chi \left(  \D\th^2 + \sin^2\th \, \D\ph^2 \right) .
+    \w{\tilde{g}} =  - \dd\tau^2
+        + \dd \chi^2
+        + \sin^2\chi \left(  \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) .
 \ee
-Restricting to a $\tau = \mathrm{const}$ hypersurface, i.e. setting $\D\tau=0$,
+Restricting to a $\tau = \mathrm{const}$ hypersurface, i.e. setting $\dd\tau=0$,
 we recognize the standard metric of the hypersphere
 $\mathbb{S}^3$ in the hyperspherical coordinates $(\chi,\th,\ph)$.
 Moreover, we notice that the full metric (\ref{e:glo:tg_Einstein})
@@ -506,8 +506,7 @@ with $\M$ and therefore simply write $\tilde{\M} = \M \cup \scri$.
 Conditions~2 and 3 express that the boundary of $\M$, which ``lies at an infinite
 distance'' with respect to $\w{g}$, has been brought to a
 finite distance with respect to $\w{\tilde{g}}$. Indeed, in terms of
-length elements, condition~2
-implies
+length elements [cf. Eq.~(\ref{e:fra:line_element})], condition~2 implies
 \[
     \D s^2 = \frac{1}{\Omega^2} \, \D {\tilde s}^2
 \]
@@ -556,10 +555,10 @@ The 4-dimensional anti-de Sitter spacetime\index{anti-de Sitter spacetime}
 $(\M,\w{g})$
 has been introduced in Example~\ref{x:neh:AdS} of Chap.~\ref{s:neh}.
 The metric tensor expressed in the conformal coordinates
-$(x^\alpha)=(\tau,\chi,\th,\ph)$ is given by Eq.~(\ref{e:neh:metrix_AdS_conformal}):
+$(\tau,\chi,\th,\ph)$ is given by Eq.~(\ref{e:neh:metrix_AdS_conformal}):
 \be
-    g_{\mu\nu} \D x^\mu \D x^\nu = \frac{\ell^2}{\cos^2\chi} \left[ - \D \tau^2
-    + \D \chi^2 + \sin^2\chi \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) \right] ,
+    \w{g} = \frac{\ell^2}{\cos^2\chi} \left[ - \dd \tau^2
+    + \dd \chi^2 + \sin^2\chi \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) \right] ,
 \ee
 with $\tau\in\R$, $\chi \in (0,\pi/2)$, $\th\in(0,\pi)$ and $\ph\in(0,2\pi)$.
 Defining $\Omega := \ell^{-1}\cos\chi$, we notice that
@@ -578,7 +577,7 @@ $\dd\Omega = - \ell^{-1} \sin\chi\, \dd\chi = -\ell^{-1} \dd\chi \not = 0 $
 at $\scri$.
 The metric induced by $\w{\tilde{g}}$ on $\scri$ is obtained by
 setting $\chi=\pi/2$ in (\ref{e:glo:tg_Einstein}):
-$\D \tilde{s}^2 =  - \D \tau^2 + \D\th^2 + \sin^2\th \, \D\ph^2$.
+$- \dd \tau^2 + \dd\th^2 + \sin^2\th \, \dd\ph^2$.
 This 3-metric is clearly Lorentzian, which shows that $\scri$ is a timelike
 hypersurface of $(\tilde{\M},\w{\tilde{g}})$.
 \end{example}
@@ -674,12 +673,12 @@ example exhibits spacelike $\scri^+$ and $\scri^-$.
 \begin{example}[Conformal completion of dS$_{4}$ spacetime]
 The 4-dimensional \defin{de Sitter spacetime}\index{de Sitter spacetime} is
 $(\M,\w{g})$ with $\M\simeq \mathbb{R}\times\mathbb{S}^3$ and $\w{g}$ is the metric
-whose components in the so-called \emph{global coordinates}
-$(x^\alpha)=(t,\chi,\th,\ph)$ are given by
+whose expression in the so-called \emph{global coordinates}
+$(t,\chi,\th,\ph)$ is
 \be \label{e:glo:dS4}
-    g_{\mu\nu} \D x^\mu \D x^\nu = \ell^2 \left[ -  \D t^2
+    \w{g} = \ell^2 \left[ - \dd t^2
     + \cosh^2 t \left(
-    \D \chi^2 + \sin^2\chi \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) \right) \right] ,
+    \dd \chi^2 + \sin^2\chi \left( \dd\th^2 + \sin^2\th \, \dd \ph^2 \right) \right) \right] ,
 \ee
 where $\ell$ is a positive constant. Note that $t$ spans $\mathbb{R}$
 while $(\chi,\th,\ph)$ are standard polar coordinates on $\mathbb{S}^3$:
@@ -687,11 +686,11 @@ $\chi\in(0,\pi)$, $\th\in(0,\pi)$ and $\ph\in(0,2\pi)$.
  The metric (\ref{e:glo:dS4}) is a solution
 of the Einstein equation (\ref{e:fra:Einstein_eq}) with
 the positive cosmological constant $\Lambda = 3/\ell^2$
-and $\w{T}=0$ (vacuum). Using coordinates $(x^\alpha)=(\tau,\chi,\th,\ph)$ with
-$\tau = 2\arctan(\tanh(t/2)) \in (-\pi/2,\pi/2)$, one gets
+and $\w{T}=0$ (vacuum). Using coordinates $(\tau,\chi,\th,\ph)$ with
+$\tau := 2\arctan(\tanh(t/2)) \in (-\pi/2,\pi/2)$, one gets
 \be
-    g_{\mu\nu} \D x^\mu \D x^\nu = \frac{\ell^2}{\cos^2\tau} \left[ - \D \tau^2
-    + \D \chi^2 + \sin^2\chi \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) \right] .
+    \w{g} = \frac{\ell^2}{\cos^2\tau} \left[ - \dd \tau^2
+    + \dd \chi^2 + \sin^2\chi \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) \right] .
 \ee
 Defining $\Omega := \ell^{-1}\cos\tau = (\ell\cosh t)^{-1}$, we notice that
 a conformal completion of $(\M,\w{g})$ is $(\tilde{\M},\w{\tilde{g}})$
@@ -709,7 +708,7 @@ $\dd\Omega = - \ell^{-1} \sin\tau\, \dd\tau = \pm \ell^{-1} \dd\tau \not = 0 $
 at $\scri$.
 The metric induced by $\w{\tilde{g}}$ on $\scri$ is obtained by
 setting $\tau=\pm\pi/2$ in (\ref{e:glo:tg_Einstein}):
-$\D \tilde{s}^2 =  \D \chi^2 + \sin^2\chi \left( \D\th^2 + \sin^2\th \, \D\ph^2 \right) $.
+$\dd \chi^2 + \sin^2\chi \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) $.
 This 3-metric is clearly Riemannian (this is actually the standard round metric
 of $\mathbb{S}^3$), which shows that $\scri$ is a spacelike
 hypersurface of $(\tilde{\M},\w{\tilde{g}})$. This of course agrees with
