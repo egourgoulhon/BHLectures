@@ -29,11 +29,11 @@ An alternative, certainly more academic, is to consider the collapse of shell of
 As mentioned in the Introduction, we shall restrict ourselves to
 spherically symmetric\footnote{See Sec.~\ref{s:sch:static_spher} for a precise
 definition of \emph{spherically symmetric}.} spacetimes, and for concreteness, to 4-dimensional ones. The most general spherically symmetric 4-dimensional spacetime $(\M,\w{g})$
-can be described in terms of coordinates $x^\alpha=(\tau,\chi,\th,\ph)$ such that
-the components of the metric tensor are written
+can be described in terms of coordinates $(x^\alpha)=(\tau,\chi,\th,\ph)$ such that
+the metric tensor writes
 \be \label{e:lem:metric_sync_coord}
-    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = - \D\tau^2 + a(\tau,\chi)^2 \D\chi^2
-        + r(\tau,\chi)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)  ,
+    \w{g} = - \dd\tau^2 + a(\tau,\chi)^2 \dd\chi^2
+        + r(\tau,\chi)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)  ,
 \ee
 where $a(\tau,\chi)$ and $r(\tau,\chi)$ are generic positive functions.
 These coordinates are called \defin{Lemaître synchronous coordinates}\index{Lemaitre@Lemaître!synchronous coordinates}\index{synchronous!coordinates}, the qualifier
@@ -124,11 +124,11 @@ the $\tau\chi$ component yields
     a(\tau,\chi) = \frac{1}{f(\chi)} \der{r}{\chi} ,
 \ee
 where $f(\chi)$ is an arbitrary function of $\chi$.
-Accordingly, we may rewrite the metric components (\ref{e:lem:metric_sync_coord})
+Accordingly, we may rewrite the metric (\ref{e:lem:metric_sync_coord}) as
 \be \label{e:lem:metric_Lemaitre}
-    \encadre{ g_{\mu\nu}\, \D x^\mu \, \D x^\nu = - \D\tau^2
-        + \frac{1}{f(\chi)^2} \left( \der{r}{\chi} \right)^2 \D\chi^2
-        + r(\tau,\chi)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) } .
+    \encadre{ \w{g} = - \dd\tau^2
+        + \frac{1}{f(\chi)^2} \left( \der{r}{\chi} \right)^2 \dd\chi^2
+        + r(\tau,\chi)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) } .
 \ee
 
 Taking into account (\ref{e:lem:a_f_dr}), the $\chi\chi$ and $\tau\tau$ components of the Einstein equation
@@ -284,9 +284,9 @@ and
 \ee
 Accordingly, Eq.~(\ref{e:lem:metric_Lemaitre}) becomes
 \be \label{e:lem:Sch_met_Lem}
-    \encadre{  g_{\mu\nu}\, \D x^\mu \, \D x^\nu = - \D\tau^2
-        + \frac{2m}{r} \D\chi^2
-        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)  } .
+    \encadre{  \w{g} = - \dd\tau^2
+        + \frac{2m}{r} \dd\chi^2
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)  } .
 \ee
 In this expression, $r$ is the function of $(\tau,\chi)$ given
 by (\ref{e:lem:r_tau_chi_Schwarz}).
@@ -301,38 +301,36 @@ $({x}^\alpha)=(\tau,\chi,\th,\ph)$ is obtained by differentiating (\ref{e:lem:r_
 we have clearly $\dert{r}{\tau} = - \dert{r}{\chi}$, so that, taking
 into account (\ref{e:lem:drdchi_Schwarz}),
 \[
-    \D r =  \sqrt{\frac{2m}{r}} (\D\chi - \D\tau) .
+    \dd r =  \sqrt{\frac{2m}{r}} (\dd\chi - \dd\tau) .
 \]
 Hence
 \[
-  \sqrt{\frac{2m}{r}}  \D\chi = \sqrt{\frac{2m}{r}}  \D\tau + \D r
-\quad \Longrightarrow \quad \frac{2m}{r} \D\chi^2 = \frac{2m}{r} \D\tau^2
-    + 2 \sqrt{\frac{2m}{r}}  \D\tau \, \D r + \D r^2 .
+  \sqrt{\frac{2m}{r}}  \dd\chi = \sqrt{\frac{2m}{r}}  \dd\tau + \dd r
+\quad \Longrightarrow \quad \frac{2m}{r} \dd\chi^2 = \frac{2m}{r} \dd\tau^2
+    + 2 \sqrt{\frac{2m}{r}}  \dd\tau \, \dd r + \dd r^2 .
 \]
 Substituting this relation in Eq.~(\ref{e:lem:Sch_met_Lem}) yields
-the expression of the metric tensor in terms of Painlevé-Gullstrand coordinates
-$({x'}^\alpha)$:
+the expression of the metric tensor in terms of Painlevé-Gullstrand coordinates:
 \be \label{e:lem:metric_PG}
-   \encadre{ {g'}_{\mu\nu}\, \D {x'}^\mu \, \D {x'}^\nu =
+   \encadre{ \w{g} =
      - \left( 1 - \frac{2m}{r} \right)
-        \D\tau^2 + 2 \sqrt{\frac{2m}{r}}  \D\tau \, \D r + \D r^2
-        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) } .
+        \dd\tau^2 + 2 \sqrt{\frac{2m}{r}}  \dd\tau \, \dd r + \dd r^2
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) } .
 \ee
 We can rearrange it as
 \bea
-  {g'}_{\mu\nu}\, \D {x'}^\mu \, \D {x'}^\nu & = & - \left( 1 - \frac{2m}{r} \right) \left( \D\tau^2 - 2
-        \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \D\tau \, \D r \right)
-            + \D r^2 + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) \nonumber \\
-    & = & - \left( 1 - \frac{2m}{r} \right) \left( \D\tau -
-        \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \D r \right) ^2
-            + \frac{\D r^2}{1- \frac{2m}{r}}
-            + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) . \nonumber \\
-                & & \label{e:lem:met_tau_r}
+  \w{g} & = &  - \left( 1 - \frac{2m}{r} \right) \left( \dd\tau^2 - 2
+        \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \dd\tau \, \dd r \right)
+            + \dd r^2 + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \nonumber \\
+    & = & - \left( 1 - \frac{2m}{r} \right) \left( \dd\tau -
+        \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \dd r \right) ^2
+            + \frac{\dd r^2}{1- \frac{2m}{r}}
+            + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .  \label{e:lem:met_tau_r}
 \eea
 If we introduce, instead of $\tau$, a coordinate $t$ such that
 \be \label{e:lem:dt_dtau_dr}
-    \D t = \D\tau -
-        \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \D r ,
+    \dd t = \dd\tau -
+        \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \dd r ,
 \ee
 Eq.~(\ref{e:lem:met_tau_r}) yields immediately the familiar expression
 of Schwarzschild metric in Schwarzschild-Droste coordinates $(t,r,\th,\ph)$
@@ -428,20 +426,19 @@ which have been introduced
 in our way from Lemaître coordinates to Schwarzschild-Droste ones,
 have a noticeable feature: the hypersurfaces $\tau=\mathrm{const}$ are
 flat 3-manifolds, i.e. the metric induced of them by $\w{g}$ is the flat Euclidean metric.
-This is immediate if we set $\D\tau=0$ in Eq.~(\ref{e:lem:metric_PG}):
-the line element reduces to
+This is immediate if we set $\dd\tau=0$ in Eq.~(\ref{e:lem:metric_PG}):
 \[
-    \D s^2 = \D r^2 + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
+    \w{g}^{\tau=\mathrm{const}} = \dd r^2 + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
 \]
-which is nothing but the Euclidean line element expressed in spherical coordinates
+which is nothing but the Euclidean metric expressed in spherical coordinates
 $(r,\th,\ph)$. This proves that Schwarzschild spacetime can be sliced
 by a family of flat hypersurfaces. The associated 3+1 decomposition
-of the metric is revealed by rewritting the line element (\ref{e:lem:metric_PG})
+of the metric is revealed by rewritting (\ref{e:lem:metric_PG})
 as
 \be
-       \encadre{ {g'}_{\mu\nu}\, \D {x'}^\mu \, \D {x'}^\nu =
-       - \D\tau^2 + \left( \D r + \sqrt{\frac{2m}{r}} \D\tau \right)^2
-        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) } .
+       \encadre{ \w{g} =
+       - \dd\tau^2 + \left( \dd r + \sqrt{\frac{2m}{r}} \dd\tau \right)^2
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) } .
 \ee
 One reads on this expression that the \emph{lapse function}\index{lapse function}
 (see e.g. Ref.~\cite{Gourg12}) is $N=1$ and that the \emph{shift vector}\index{shift vector}
@@ -451,9 +448,9 @@ marginally bound radial geodesics discussed above.
 
 Another interesting property of Painlevé-Gullstrand coordinates, which they
 share with Lemaître ones, is to be regular at $r=2m$: despite the vanishing of
-$g'_{\tau\tau}$ there, as read on (\ref{e:lem:metric_PG}), the determinant
+$g_{\tau\tau}$ there, as read on (\ref{e:lem:metric_PG}), the determinant
 of the metric components (\ref{e:lem:metric_PG}) is not vanishing,
-thanks to the off-diagonal term $g'_{\tau r}$. Indeed, $\det\left( g'_{\alpha\beta}\right) = -r^4\sin^2\th$, which is clearly nonzero, except on the
+thanks to the off-diagonal term $g_{\tau r}$. Indeed, $\det\left( g_{\alpha\beta}\right) = -r^4\sin^2\th$, which is clearly nonzero, except on the
 axis $\th=0$ or $\pi$.
 
 \begin{remark}

@@ -140,17 +140,17 @@ Boyer-Lindquist coordinates $(t,r,\th,\ph)$ by
 
 
 The \defin{Kerr metric}\index{Kerr!metric} is defined by the following
-components in terms of the Boyer-Lindquist coordinates $(x^\alpha)=(t,r,\th,\ph)$:
+expression in terms of the Boyer-Lindquist coordinates $(x^\alpha)=(t,r,\th,\ph)$:
 \be \label{e:ker:metric_BL}
     \encadre{
     \begin{array}{ll}
-    g_{\mu\nu}\,  \D x^\mu \D x^\nu  = &
-    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right) \, \D t^2
-    - \frac{4 a m  r \sin^2\th}{\rho^2} \,  \D t\, \D\ph
-    + \frac{\rho^2}{\Delta} \, \D r^2  \\[2ex]
-    & \displaystyle + \rho^2 \D \th^2
+    \w{g}  = &
+    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right) \, \dd t^2
+    - \frac{4 a m  r \sin^2\th}{\rho^2} \,  \dd t\, \dd\ph
+    + \frac{\rho^2}{\Delta} \, \dd r^2  \\[2ex]
+    & \displaystyle + \rho^2 \dd \th^2
     + \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right)
-    \sin^2\th \, \D \ph^2 ,
+    \sin^2\th \, \dd \ph^2 ,
     \end{array}
     }
 \ee
@@ -201,18 +201,18 @@ Various properties of the Kerr metric are immediate:
 \begin{itemize}
 \item For $r\rightarrow+\infty$ or $r\rightarrow-\infty$, one has $\rho^2\sim r^2$ and
 $\rho^2/\Delta \sim (1-2m/r)^{-1}$,
-and $4 a m  r / \rho^2\,  \D t\, \D\ph \sim 4 a m/r^2 \,  \D t\, r\D\ph$,
+and $4 a m  r / \rho^2\,  \dd t\, \dd\ph \sim 4 a m/r^2 \,  \dd t\, r\dd\ph$,
 so that the metric (\ref{e:ker:metric_BL}) becomes
 \be \label{e:ker:asympt_metric}
-    g_{\mu\nu}\,  \D x^\mu \D x^\nu  \simeq  - \left( 1 - \frac{2m}{r} \right) \, \D t^2
-    + \left( 1 - \frac{2m}{r} \right) ^{-1} \D r^2
-    + r^2 \left( \D \th^2 + \sin^2\th  \, \D \ph^2 \right)
+    \w{g}  \simeq  - \left( 1 - \frac{2m}{r} \right) \, \dd t^2
+    + \left( 1 - \frac{2m}{r} \right) ^{-1} \dd r^2
+    + r^2 \left( \dd \th^2 + \sin^2\th  \, \dd \ph^2 \right)
     + O\left(\frac{1}{r^2}\right)
 \ee
 For $r>0$, we recognize the Schwarzschild metric\index{Schwarzschild!metric} expressed
 in Schwarzschild-Droste coordinates [cf. Eq.~(\ref{e:sch:Schwarz_metric_SD})].
 For $r<0$, the change of coordinate $r'=-r$ leads also to the Schwarzschild metric
-but with a negative mass parameter $m'=-m$.
+but with the negative mass parameter $m'=-m$.
 Hence, the Kerr metric has (at least) two asymptotically flat ends: one in
 $\M_{\rm I}$ for $r\rightarrow + \infty$ and one in $\M_{\rm III}$ for
 $r\rightarrow - \infty$.
@@ -248,11 +248,11 @@ $\rho^2\sim r^2$, and $\rho^2/\Delta \sim (1-2m/r)^{-1}$, and we see on
 (\ref{e:ker:metric_BL}) that the Kerr metric reduces to the Schwarzschild metric.
 \item On the hypersurface $r=0$, we have $\rho^2=a^2\cos^2\th$ and $\Delta=a^2$, so that the Kerr metric (\ref{e:ker:asympt_metric}) induces the metric:
 \be \label{e:ker:metric_r0}
-    h_{ij} \, \D x^i \D x^j = - \D t^2 + a^2\left( \cos^2\th \,  \D \th^2 + \sin^2\th \, \D \ph^2 \right) ,
+    \w{h} = - \dd t^2 + a^2\left( \cos^2\th \,  \dd \th^2 + \sin^2\th \, \dd \ph^2 \right) .
 \ee
-where $(x^i)=(t,\th,\ph)$. According to the assumption (\ref{e:ker:a_lower_m}), $a\not=0$
+According to the assumption (\ref{e:ker:a_lower_m}), $a\not=0$
 and the change of coordinates  $x:=a\sin\th\cos\ph$, $y:=a\sin\th\sin\ph$
-turns the right-hand side of (\ref{e:ker:metric_r0}) into $- \D t^2 + \D x^2 + \D y^2$.
+turns the right-hand side of (\ref{e:ker:metric_r0}) into $- \dd t^2 + \dd x^2 + \dd y^2$.
 We recognize a \emph{flat} Minkowskian metric. In particular, for a fixed value
 of $t$, the $r=0$ set
 \be \label{e:ker:S_r_zero}
@@ -494,8 +494,8 @@ $(x^\alpha) = (t,r,\th,\ph)$ introduced in Sec.~\ref{s:ker:expr_BL} by
 \begin{subequations}
 \label{e:ker:Kerr_coord}
 \begin{align}
-& \encadre{\D v = \D t + \frac{r^2+a^2}{\Delta} \, \D r} \label{e:ker:Kerr_coord_v}\\
-& \encadre{\D \tph = \D \ph + \frac{a}{\Delta}\, \D r} . \label{e:ker:Kerr_coord_tph}
+& \encadre{\dd v = \dd t + \frac{r^2+a^2}{\Delta} \, \dd r} \label{e:ker:Kerr_coord_v}\\
+& \encadre{\dd \tph = \dd \ph + \frac{a}{\Delta}\, \dd r} . \label{e:ker:Kerr_coord_tph}
 \end{align}
 \end{subequations}
 If $a=0$, we note that the null Kerr coordinates are nothing but the null
@@ -529,23 +529,23 @@ and by comparing Eq.~(\ref{e:ker:Kerr_coord_v_int}) with Eq.~(\ref{e:sch:v_t_r})
 that the null Kerr coordinates reduces to the ingoing null Eddington-Finkelstein
 ones in this limit.
 
-The components $g_{\hat{\alpha}\hat{\beta}}$
-of the metric tensor $\w{g}$ with respect to the null Kerr coordinates
-are computed from those with respect to the Boyer-Lindquist ones, as given
-by Eq.~(\ref{e:ker:metric_BL}). One gets (cf. Appendix~\ref{s:sam} or
+The expression of the metric tensor $\w{g}$ with respect to the null Kerr coordinates
+is computed from that with respect to the Boyer-Lindquist ones, as given
+by Eq.~(\ref{e:ker:metric_BL}), via (\ref{e:ker:Kerr_coord}).
+One gets (cf. Appendix~\ref{s:sam} or
 Eq.~(5.31) of Ref.~\cite{HawkiE73}, or Lemma~2.5.2 of \cite{ONeil95}):
 \be \label{e:ker:metric_Kerr_coord}
     \begin{array}{ll}
-    g_{\hat{\mu}\hat{\nu}}\,  \D x^{\hat{\mu}} \D x^{\hat{\nu}} = &
-    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right) \, \D v^2
-    + 2 \D v\, \D r
-    - \frac{4 a m  r \sin^2\th}{\rho^2} \,  \D v\, \D\tph \\[2ex]
-    & - 2 a \sin^2\th \, \D r\, \D \tph  \displaystyle + \rho^2 \D \th^2
+    \w{g} = &
+    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right) \, \dd v^2
+    + 2 \dd v\, \dd r
+    - \frac{4 a m  r \sin^2\th}{\rho^2} \,  \dd v\, \dd\tph \\[2ex]
+    & - 2 a \sin^2\th \, \dd r\, \dd \tph  \displaystyle + \rho^2 \dd \th^2
     + \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right)
-    \sin^2\th \, \D \tph^2 .
+    \sin^2\th \, \dd \tph^2 .
     \end{array}
 \ee
-We note that these metric components do not have any divergence when
+We note that the above metric components do not have any divergence when
 $\Delta\rightarrow 0$, contrary to the Boyer-Lindquist ones. Hence, we may extend
 the Kerr metric to the points of $\R^2\times\SS^2$ where $\Delta=0$, i.e.
 to the hypersurfaces (cf. Fig.~\ref{f:ker:spher_view})
@@ -728,12 +728,12 @@ which we shall call
 (cf. the historical note below).
 It is worth to relate them to Boyer-Lindquist coordinates
 $(t,r,\th,\ph)$. This is easily achieved
-by combining (\ref{e:ker:Kerr_coord}) with $\D\ti = \D v - \D r$:
+by combining (\ref{e:ker:Kerr_coord}) with $\dd\ti = \dd v - \dd r$:
 \begin{subequations}
 \label{e:ker:Kerr_3p1_BL}
 \begin{align}
-& \encadre{\D \ti = \D t + \frac{2m r}{\Delta} \, \D r} \\
-& \encadre{\D \tph = \D \ph + \frac{a}{\Delta}\, \D r} .
+& \encadre{\dd \ti = \dd t + \frac{2m r}{\Delta} \, \dd r} \\
+& \encadre{\dd \tph = \dd \ph + \frac{a}{\Delta}\, \dd r} .
 \end{align}
 \end{subequations}
 The integrated version is deduced obtained by substituting (\ref{e:ker:def_t_tilde}) in
@@ -750,29 +750,29 @@ Eq.~(\ref{e:ker:Kerr_coord_int}):
 \end{subequations}
 
 
-Since the transform (\ref{e:ker:def_t_tilde}) leads to $\D v = \D\ti + \D r$,
-the metric components $g_{\tilde{\alpha}\tilde{\beta}}$ with respect to the
-Kerr coordinates $(\ti,r,\th,\tph)$ are easily deduced from
+Since the transformation (\ref{e:ker:def_t_tilde}) leads to $\dd v = \dd\ti + \dd r$,
+the expression of the metric with respect to the
+Kerr coordinates $(\ti,r,\th,\tph)$ is easily deduced from
 (\ref{e:ker:metric_Kerr_coord}):
 \be \label{e:ker:metric_Kerr_3p1}
     \encadre{
     \begin{array}{ll}
-    g_{\tilde{\mu}\tilde{\nu}}\, \D x^{\tilde{\mu}} \, \D x^{\tilde{\nu}} = &
-    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right)  \D \ti^2
-    + \frac{4m r}{\rho^2} \D\ti\, \D r
-    - \frac{4 a m  r \sin^2\th}{\rho^2} \,  \D \ti\, \D\tph \\[2ex]
-    &\displaystyle  + \left( 1 + \frac{2m r}{\rho^2} \right) \D r^2
-     - 2 a \left( 1 + \frac{2m r}{\rho^2} \right) \sin^2\th \, \D r\, \D \tph \\[2ex]
-    & \displaystyle + \rho^2 \D \th^2
+    \w{g} = &
+    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right)  \dd \ti^2
+    + \frac{4m r}{\rho^2} \dd\ti\, \dd r
+    - \frac{4 a m  r \sin^2\th}{\rho^2} \,  \dd \ti\, \dd\tph \\[2ex]
+    &\displaystyle  + \left( 1 + \frac{2m r}{\rho^2} \right) \dd r^2
+     - 2 a \left( 1 + \frac{2m r}{\rho^2} \right) \sin^2\th \, \dd r\, \dd \tph \\[2ex]
+    & \displaystyle + \rho^2 \dd \th^2
     + \left( r^2 + a^2 + \frac{2 a^2 m r \sin^2\th}{\rho^2} \right)
-    \sin^2\th \, \D \tph^2 .
+    \sin^2\th \, \dd \tph^2 .
     \end{array}
     }
 \ee
 
 Since we kept $r$, $\th$ and $\tph$ and simply changed
 $v$ to $\ti$ via (\ref{e:ker:def_t_tilde}) when moving from the null Kerr
-coordinates to the Kerr coordinates, we easily get the relation
+coordinates to the Kerr ones, we easily get the link
 between the two coordinate frames:
 \begin{subequations}
 \label{e:ker:frame_Kerr3p1_Kerr}
@@ -1045,8 +1045,8 @@ coordinates that are similar to
 \begin{subequations}
 \label{e:ker:out_Kerr_coord}
 \begin{align}
-& \D u = \D t - \frac{r^2+a^2}{\Delta} \, \D r \\
-& \D \tilde{\tph} = \D \ph - \frac{a}{\Delta}\, \D r .
+& \dd u = \dd t - \frac{r^2+a^2}{\Delta} \, \dd r \\
+& \dd \tilde{\tph} = \dd \ph - \frac{a}{\Delta}\, \dd r .
 \end{align}
 \end{subequations}
 The coordinates $(u,r,\th,\tilde{\tph})$ generalize the null
@@ -1084,8 +1084,8 @@ we get
 \begin{subequations}
 \label{e:ker:out_Kerr_Kerr_3p1}
 \begin{align}
-& \D u = \D \ti - \frac{r^2 + 2m r + a^2}{\Delta} \, \D r \\
-& \D \tilde{\tph} = \D \tph - \frac{2a}{\Delta}\, \D r .
+& \dd u = \dd \ti - \frac{r^2 + 2m r + a^2}{\Delta} \, \dd r \\
+& \dd \tilde{\tph} = \dd \tph - \frac{2a}{\Delta}\, \dd r .
 \end{align}
 \end{subequations}
 These equations can be integrated (cf. the computation leading to Eq.~(\ref{e:ker:Kerr_coord_int})), yielding
@@ -2047,27 +2047,27 @@ on $\Hor$. $\Hor$ is defined by $r=r_+$ and it is natural to consider a
 cross-section of it, $\Sp$ say, defined by $\{\ti=\mathrm{const}, r=r_+\}$.
 Then $\Sp$ is spanned by the coordinates $(x^a) = (\th,\tph)$ and the metric $\w{q}$
 induced on it by the spacetime metric is obtained by setting $r=r_+$,
-$\D\ti=0$ and $\D r = 0$ in (\ref{e:ker:metric_Kerr_3p1}):
+$\dd\ti=0$ and $\dd r = 0$ in (\ref{e:ker:metric_Kerr_3p1}):
 \[
-        q_{ab}\,  \D x^a \D x^b =
-   (r_+^2 + a^2\cos^2\th)\, \D \th^2
+        \w{q} =
+   (r_+^2 + a^2\cos^2\th)\, \dd \th^2
     + \left( r_+^2 + a^2 + \frac{2 a^2 m r_+ \sin^2\th}{r_+^2 + a^2\cos^2\th} \right)
-    \sin^2\th \, \D \tph^2 .
+    \sin^2\th \, \dd \tph^2 .
 \]
 Now, since $r_+$ is a zero of $\Delta$ [cf. Eq.~(\ref{e:ker:def_Delta})],
 we have $2 m r_+ = r_+^2 + a^2 $. Hence
 \[
-        q_{ab}\,  \D x^a \D x^b =
-  (r_+^2 + a^2\cos^2\th) \, \D \th^2
+        \w{q} =
+  (r_+^2 + a^2\cos^2\th) \, \dd \th^2
     + (r_+^2 + a^2)\left( 1 + \frac{a^2 \sin^2\th}{r_+^2 + a^2\cos^2\th} \right)
-    \sin^2\th \, \D \tph^2 ,
+    \sin^2\th \, \dd \tph^2 ,
 \]
 or, equivalently,
 \be \label{e:ker:q_cross_section_H}
-        q_{ab}\,  \D x^a \D x^b =
-  (r_+^2 + a^2\cos^2\th) \, \D \th^2
+        \w{q} =
+  (r_+^2 + a^2\cos^2\th) \, \dd \th^2
     + \frac{(r_+^2 + a^2)^2}{r_+^2 + a^2\cos^2\th}\,
-    \sin^2\th \, \D \tph^2 .
+    \sin^2\th \, \dd \tph^2 .
 \ee
 The area of $\Sp$ is
 \[
@@ -2586,13 +2586,15 @@ By definition of an orthonormal frame, the spacetime metric can be written
         + \w{\veps}^{(\th)}\otimes\w{\veps}^{(\th)}
         + \w{\veps}^{(\ph)}\otimes\w{\veps}^{(\ph)} .
 \ee
-Substituting Eqs.~(\ref{e:kerr:Carter_coframe}) for the 1-forms $\w{\veps}^{(\alpha)}$,
-we get the following expression of the metric line element in Boyer-Lindquist coordinates:
+Substituting Eqs.~(\ref{e:kerr:Carter_coframe}) for the 1-forms $\w{\veps}^{(\alpha)}$
+and using the notation $\w{\omega}^2 := \w{\omega}\otimes\w{\omega}$
+for the tensor-product square of a 1-form [cf. Eq.~(\ref{e:bas:sym_tensor_prod})],
+we get the following expression of the metric with respect to Boyer-Lindquist coordinates:
 \be
-    g_{\mu\nu}\,  \D x^\mu \D x^\nu  =
-    - \frac{\Delta}{\rho^2} \left( \D t - a \sin^2\th \, \D \ph \right)^2
-    + \frac{\rho^2}{\Delta} \, \D r^2  + \rho^2 \D \th^2
-    + \frac{\sin^2\th}{\rho^2} \left( (r^2 + a^2) \D\ph - a \D t  \right)^2 .
+    \w{g} =
+    - \frac{\Delta}{\rho^2} \left( \dd t - a \sin^2\th \, \dd \ph \right)^2
+    + \frac{\rho^2}{\Delta} \, \dd r^2  + \rho^2 \dd \th^2
+    + \frac{\sin^2\th}{\rho^2} \left( (r^2 + a^2) \dd\ph - a \dd t  \right)^2 .
 \ee
 This expression, which is equivalent to (\ref{e:ker:metric_BL}), is often
 found in textbooks (cf. e.g. Eq.~(33.2) in Ref.~\cite{MisneTW73}).

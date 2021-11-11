@@ -57,15 +57,15 @@ $(x^{\tilde{\alpha}}) = (\ti, r, \th,\tph)$:
 \be \label{e:exk:metric_Kerr_3p1}
     \encadre{
     \begin{array}{ll}
-    g_{\tilde{\mu}\tilde{\nu}}\, \D x^{\tilde{\mu}} \, \D x^{\tilde{\nu}}   = &
-    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right)  \D \ti^2
-    + \frac{4m r}{\rho^2} \D\ti\, \D r
-    - \frac{4 m^2  r \sin^2\th}{\rho^2} \,  \D \ti\, \D\tph \\[2ex]
-    &\displaystyle  + \left( 1 + \frac{2m r}{\rho^2} \right) \D r^2
-     - 2 m \left( 1 + \frac{2m r}{\rho^2} \right) \sin^2\th \, \D r\, \D \tph \\[2ex]
-    & \displaystyle + \rho^2 \D \th^2
+   \w{g}  = &
+    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right)  \dd \ti^2
+    + \frac{4m r}{\rho^2} \dd\ti\, \dd r
+    - \frac{4 m^2  r \sin^2\th}{\rho^2} \,  \dd \ti\, \dd\tph \\[2ex]
+    &\displaystyle  + \left( 1 + \frac{2m r}{\rho^2} \right) \dd r^2
+     - 2 m \left( 1 + \frac{2m r}{\rho^2} \right) \sin^2\th \, \dd r\, \dd \tph \\[2ex]
+    & \displaystyle + \rho^2 \dd \th^2
     + \left( r^2 + m^2 + \frac{2 m^3 r \sin^2\th}{\rho^2} \right)
-    \sin^2\th \, \D \tph^2 ,
+    \sin^2\th \, \dd \tph^2 ,
     \end{array}
     }
 \ee
@@ -160,9 +160,9 @@ $\ti$, $r$ and $\tph$ by
 \end{subequations}
 Differentiating these relations leads to
 \be \label{e:exk:dt_dph}
-    \D \ti = \D t  + \frac{2m r}{(r- m)^2} \, \D r
+    \dd \ti = \dd t  + \frac{2m r}{(r- m)^2} \, \dd r
     \qand
-    \D \tph = \D \ph + \frac{m}{(r - m)^2 } \, \D r .
+    \dd \tph = \dd \ph + \frac{m}{(r - m)^2 } \, \dd r .
 \ee
 \begin{remark}
 The differential relations (\ref{e:exk:dt_dph}) can be obtained immediately
@@ -208,18 +208,18 @@ The metric components $(g_{\alpha\beta})$ with respect to the Boyer-Lindquist co
 \be \label{e:exk:metric_BL}
     \encadre{
     \begin{array}{ll}
-    g_{\mu\nu}\,  \D x^\mu \D x^\nu  = &
-    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right) \, \D t^2
-    - \frac{4 m^2  r \sin^2\th}{\rho^2} \,  \D t\, \D\ph
-    + \frac{\rho^2}{(r-m)^2} \, \D r^2  \\[2ex]
-    & \displaystyle + \rho^2 \D \th^2
+    \w{g} = &
+    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right) \, \dd t^2
+    - \frac{4 m^2  r \sin^2\th}{\rho^2} \,  \dd t\, \dd\ph
+    + \frac{\rho^2}{(r-m)^2} \, \dd r^2  \\[2ex]
+    & \displaystyle + \rho^2 \dd \th^2
     + \left( r^2 + m^2 + \frac{2 m^3 r \sin^2\th}{\rho^2} \right)
-    \sin^2\th \, \D \ph^2 .
+    \sin^2\th \, \dd \ph^2 .
     \end{array}
     }
 \ee
 This expression can be obtained either by taking the limit $a\to m$ of Eq.~(\ref{e:ker:metric_BL})
-or by using (\ref{e:exk:dt_dph}) to substitute $\D\ti$ and $\D\tph$ in Eq.~(\ref{e:exk:metric_Kerr_3p1}).
+or by using (\ref{e:exk:dt_dph}) to substitute $\dd\ti$ and $\dd\tph$ in Eq.~(\ref{e:exk:metric_Kerr_3p1}).
 We note that $g_{rr}\to +\infty$ when $r\to m$, which reflects the singularity of Boyer-Lindquist
 coordinates on $\Hor$ and explains why the latter was excluded in the definition
 of $\M_{\rm BL}$. This singularity is clearly apparent in the coordinate transformations
@@ -642,9 +642,9 @@ $(\tilde{\ti},r,\th,\tilde{\tph})$.
 Differentiating Eqs.~(\ref{e:exk:ttt_t}) and (\ref{e:exk:def_ttph})
 leads to
 \be \label{e:exk:Dttt_Dtph_BL}
-    \D\tilde{\ti} = \D t - \frac{2 m r}{(r-m)^2} \D r
+    \dd\tilde{\ti} = \dd t - \frac{2 m r}{(r-m)^2} \dd r
     \qand
-    \D\tilde{\tph} = \D\ph - \frac{m}{(r-m)^2} \D r
+    \dd\tilde{\tph} = \dd\ph - \frac{m}{(r-m)^2} \dd r .
 \ee
 \begin{remark}
 Equation~(\ref{e:exk:Dttt_Dtph_BL}) differs from
@@ -658,21 +658,20 @@ from the point of view of the Boyer-Lindquist coordinates $(t,r,\th,\ph)$
 \end{remark}
 
 
-The components of the metric tensor $\w{g}$ with respect to the
-outgoing Kerr coordinates are easily obtained by substituting $\D t$ and $\D\ph$
+The expression of the metric tensor with respect to the
+outgoing Kerr coordinates is easily obtained by substituting $\dd t$ and $\dd\ph$
 from Eq.~(\ref{e:exk:Dttt_Dtph_BL}) into the Boyer-Lindquist expression
 (\ref{e:exk:metric_BL}) (see also the notebook~\ref{s:sam:Kerr_extremal_extended}); we get
 \be \label{e:exk:metric_out_Kerr}
     \begin{array}{ll}
-    g_{\tilde{\tilde{\mu}}\tilde{\tilde{\nu}}}\, \D x^{\tilde{\tilde{\mu}}} \, \D x^{\tilde{\tilde{\nu}}}   = &
-    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right)  {\D\tilde{\ti}}^2
-    - \frac{4m r}{\rho^2} \D\tilde{\ti}\, \D r
-    - \frac{4 m^2  r \sin^2\th}{\rho^2} \,  \D\tilde{\ti}\, \D\tilde{\tph} \\[2ex]
-    &\displaystyle  + \left( 1 + \frac{2m r}{\rho^2} \right) \D r^2
-     + 2 m \left( 1 + \frac{2m r}{\rho^2} \right) \sin^2\th \, \D r\, \D\tilde{\tph} \\[2ex]
-    & \displaystyle + \rho^2 \D \th^2
+    \w{g}   = &
+    \displaystyle - \left( 1 - \frac{2m r}{\rho^2} \right)  {\dd\tilde{\ti}}^2
+    - \frac{4m r}{\rho^2} \dd\tilde{\ti}\, \dd r
+    - \frac{4 m^2  r \sin^2\th}{\rho^2} \,  \dd\tilde{\ti}\, \dd\tilde{\tph}
+      + \left( 1 + \frac{2m r}{\rho^2} \right) \dd r^2 \\[2ex]
+    & \displaystyle + 2 m \left( 1 + \frac{2m r}{\rho^2} \right) \sin^2\th \, \dd r\, \dd\tilde{\tph} + \rho^2 \dd \th^2
     + \left( r^2 + m^2 + \frac{2 m^3 r \sin^2\th}{\rho^2} \right)
-    \sin^2\th \, {\D\tilde{\tph}}^2 .
+    \sin^2\th \, {\dd\tilde{\tph}}^2 .
     \end{array}
 \ee
 These metric components are very similar to those in Kerr coordinates, as given by
@@ -1007,19 +1006,19 @@ natural to consider the slices $\Sigma_{t,\th}$ where $\th$ is held constant,
 in addition to $t$, with $\Sigma_{t,\frac{\pi}{2}}$ representing the
 equatorial ``plane''. $\Sigma_{t,\th}$  is spanned by the coordinates
 $(x^a) = (r,\ph)$ and the Riemannian metric $\w{q}$ induced on it by
-the spacetime metric $\w{g}$ is obtained by setting $\D t = 0$ and $\D\th = 0$
-in the line element (\ref{e:exk:metric_BL}):
+the spacetime metric $\w{g}$ is obtained by setting $\dd t = 0$ and $\dd\th = 0$
+in (\ref{e:exk:metric_BL}):
 \be \label{e:exk:induced_metric_q}
-    q_{ab}\,  \D x^a \D x^b  =
-    \frac{r^2 + m^2\cos^2\th}{(r-m)^2} \, \D r^2
+    \w{q} =
+    \frac{r^2 + m^2\cos^2\th}{(r-m)^2} \, \dd r^2
     + \left( r^2 + m^2 + \frac{2 m^3 r \sin^2\th}{r^2 + m^2\cos^2\th} \right)
-    \sin^2\th \, \D \ph^2 .
+    \sin^2\th \, \dd \ph^2 .
 \ee
 On the other side, the Euclidean space $\R^3$ can be described by
 cylindrical coordinates $(X^i) = (\varpi,z,\ph)$, such that the
 Euclidean metric $\w{f}$ takes the form
 \be
-    f_{ij}\,  \D X^i \D X^j = \D \varpi^2 + \D z^2 + \varpi^2 \D\ph^2 .
+    \w{f} = \dd \varpi^2 + \dd z^2 + \varpi^2 \dd\ph^2 .
 \ee
 Let us define the embedding of the 2-surface $\Sigma_{t,\th}$ into
 $\R^3$ by
@@ -1030,12 +1029,12 @@ $\R^3$ by
     \end{array}
 \ee
 Along $\Phi(\Sigma_{t,\th})$, we have then
-$\D\varpi = \varpi'(r) \, \D r$ and $\D z = z'(r) \, \D r$, so that the
+$\dd\varpi = \varpi'(r) \, \dd r$ and $\dd z = z'(r) \, \dd r$, so that the
 metric $\w{h}$ induced by $\w{f}$ on $\Phi(\Sigma_{t,\th})$ is
 \be \label{e:exk:induced_metric_h}
-    h_{ab}\,  \D x^a \D x^b  =
-    \left( \varpi'(r)^2 + z'(r)^2 \right) \, \D r^2
-    + \varpi(r)^2 \, \D\ph^2 .
+    \w{h} =
+    \left( \varpi'(r)^2 + z'(r)^2 \right) \, \dd r^2
+    + \varpi(r)^2 \, \dd\ph^2 .
 \ee
 $\Phi$ performs an isometric embedding iff the two line elements
 (\ref{e:exk:induced_metric_q}) and (\ref{e:exk:induced_metric_h})
@@ -1206,14 +1205,12 @@ Evaluating the limits leads to the explicit expression
 of $\w{h}$ (cf. the notebook \ref{s:sam:NEHK}):
 \be \label{e:exk:NEHK_metric}
     \encadre{
-    \begin{array}{lll}
-    h_{\mu\nu}\,  \D X^\mu \D X^\nu  = &
-    m^2 (1 + \cos^2\th) \Big[
-    & \displaystyle \!\!\! - R^2 \D T^2 + \frac{\D R^2}{R^2} + \D\th^2 \\[2ex]
-    & & \displaystyle \!\!\!  + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
-    \left( \D\Phi + R\,  \D T\right)^2 \Big]
-    \end{array}
-    }
+    \w{h} =
+    m^2 (1 + \cos^2\th) \left[
+    - R^2 \dd T^2 + \frac{\dd R^2}{R^2} + \dd\th^2
+    + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
+    \left( \dd\Phi + R\,  \dd T\right)^2 \right]
+    } .
 \ee
 A priori the limits (\ref{e:exk:h_limit_G}) lead only to a symmetric bilinear
 form. To be a proper metric tensor, $\w{h}$ has to be non-degenerate as well
@@ -1238,20 +1235,21 @@ The NHEK metric $\w{h}$ has been obtained in Bardeen-Horowitz coordinates
 $(T,R,\th,\Phi)$. Let us express it in terms of Boyer-Lindquist coordinates
 $(t,r,\th,\ph)$. From the transformation law (\ref{e:exk:R_T_Phi_BL}), we have
 \be \label{e:exk:BH_to_BL}
-    R \,\D T = \frac{r - m}{2m^2} \D t,\qquad
-    \frac{\D R}{R} = \frac{\D r}{r - m} \qand
-    \D\Phi + R \, \D T = \D\ph + \frac{r - 2m}{2m^2} \D t .
+    R \,\dd T = \frac{r - m}{2m^2} \dd t,\qquad
+    \frac{\dd R}{R} = \frac{\dd r}{r - m} \qand
+    \dd\Phi + R \, \dd T = \dd\ph + \frac{r - 2m}{2m^2} \dd t .
 \ee
 The components of $\w{h}$ with respect to Boyer-Lindquist coordinates are then
 immediately deduced from the line element (\ref{e:exk:NEHK_metric}):
 \be \label{e:exk:NEHK_metric_BL}
     \encadre{
     \begin{array}{lll}
-    h_{\mu\nu}\,  \D x^\mu \D x^\nu  = &
+    \w{h}  = &
     m^2 (1 + \cos^2\th) \Bigg[
-    & \displaystyle \!\!\! - \frac{(r - m)^2}{4m^4} \D t^2 + \frac{\D r^2}{(r - m)^2}  + \D\th^2 \\[2ex]
+    & \displaystyle \!\!\! - \frac{(r - m)^2}{4m^4} \dd t^2 + \frac{\dd r^2}{(r - m)^2}
+     + \dd\th^2 \\[2ex]
     & & \displaystyle \!\!\!  + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
-    \left( \D\ph + \frac{r - 2m}{2m^2} \D t \right)^2 \Bigg]
+    \left( \dd\ph + \frac{r - 2m}{2m^2} \dd t \right)^2 \Bigg]
     \end{array}
     }
 \ee
@@ -1280,7 +1278,7 @@ on a manifold distinct from $\M$, where it can be extended accross $R=0$.
 It appears from (\ref{e:exk:NEHK_metric}) that the NEHK
 metric $\w{h}$ has striking similarities with
 the metric of anti-de Sitter spacetime\index{anti-de Sitter spacetime} (AdS):
-compare the $\D T^2$ and $\D R^2$ terms with the $\D t^2$ and $\D u^2$ terms
+compare the $\dd T^2$ and $\dd R^2$ terms with the $\dd t^2$ and $\dd u^2$ terms
 of the components (\ref{e:neh:AdS:metric_Poincare}) of the
 AdS$_{4}$ metric in Poincaré coordinates\index{Poincaré!coordinates on AdS$_n$}, presented in Example~\ref{x:neh:AdS}
 of Chap.~\ref{s:neh}, noticing that both the Poincaré horizon in AdS$_4$
@@ -1290,24 +1288,24 @@ the rotation axis $\mathscr{A}$  ($\sin\th=0$), which is a 2-dimensional submani
 is exactly the metric of AdS$_{2}$ (the 2-dimensional anti-de Sitter spacetime),
 expressed in the Poincaré coordinates $(X^a) = (T,R)$:
 \be
-    h^{\mathscr{A}}_{ab} \D X^a \D X^b =
-        2 m^2 \left( - R^2 \D T^2 + \frac{\D R^2}{R^2}  \right) .
+    \w{h}^{\mathscr{A}} =
+        2 m^2 \left( - R^2 \dd T^2 + \frac{\dd R^2}{R^2}  \right) .
 \ee
 Moreover, the metric induced by $\w{h}$ on the hypersurface
 $\th = \th_*$, with $\th_* := \arcsin(\sqrt{3} - 1) \simeq 47.06^\circ$ (so that
 $4 \sin^2 \th_*/(1 + \cos^2\th_*) = 1$), is that of AdS$_{3}$:
 \be \label{e:exk:h_th_star}
-    h^{\th=\th_*}_{ij} \D X^i \D X^j =
-     2(\sqrt{3} - 1) m^2 \left[ - R^2 \D T^2 + \frac{\D R^2}{R^2}
-     + \left( \D\Phi + R\,  \D T\right)^2 \right].
+    \w{h}^{\th=\th_*} =
+     2(\sqrt{3} - 1) m^2 \left[ - R^2 \dd T^2 + \frac{\dd R^2}{R^2}
+     + \left( \dd\Phi + R\,  \dd T\right)^2 \right].
 \ee
-Note however that the above line element, where $(X^i)=(T,R,\Phi)$,
-is not the expression of AdS$_{3}$ metric
+Note however that the above expression is
+not that of AdS$_{3}$ metric
 in Poincaré coordinates. Indeed, by expanding the last term, we get
 \be
-    h^{\th=\th_*}_{ij} \D X^i \D X^j =
-     2(\sqrt{3} - 1) m^2 \left( 2 R \, \D T \, \D \Phi + \frac{\D R^2}{R^2}
-      + \D \Phi^2 \right).
+    \w{h}^{\th=\th_*} =
+     2(\sqrt{3} - 1) m^2 \left( 2 R \, \dd T \, \dd \Phi + \frac{\dd R^2}{R^2}
+      + \dd \Phi^2 \right).
 \ee
 In particular, $h^{\th=\th_*}_{TT} = 0$, which implies that $\wpar_T$ is
 a null vector field, while it should be a timelike one for Poincaré coordinates.
@@ -1335,27 +1333,25 @@ and Poincaré coordinates in AdS$_{2}$, namely
 \ee
 where $H$ stands for the Heaviside function: $H(-R) = 1$ for $R<0$ and $0$ for $R>0$.
 Beside the AdS$_{2}$-type transformation for $(\tau,y)\leftrightarrow(T,R)$, the new azimuthal
-coordinate $\psi$ is introduced to insure $\D\Phi + R \,\D T = \D\psi + y \, \D\tau$.
-In terms of the coordinates $(Y^\alpha)=(\tau,y,\theta,\psi)$, the NHEK
+coordinate $\psi$ is introduced to insure $\dd\Phi + R \,\dd T = \dd\psi + y \, \dd\tau$.
+In terms of the coordinates $(\tau,y,\theta,\psi)$, the NHEK
 metric $\w{h}$ reads (cf. the notebook~\ref{s:sam:NEHK}):
 \be \label{e:exk:global_NEHK_metric}
     \encadre{
-    \begin{array}{lll}
-    h_{\mu\nu}\,  \D Y^\mu \D Y^\nu  = &
-    m^2 (1 + \cos^2\th) \Big[
-    & \displaystyle \!\!\! - (1 + y^2) \D \tau^2 + \frac{\D y^2}{1 + y^2} + \D\th^2 \\[2ex]
-    & & \displaystyle \!\!\!  + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
-    \left( \D\psi + y\,  \D \tau\right)^2 \Big]
-    \end{array}
-    }
+    \w{h} =
+    m^2 (1 + \cos^2\th) \left[
+    - (1 + y^2) \dd \tau^2 + \frac{\dd y^2}{1 + y^2} + \dd\th^2
+     + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
+    \left( \dd\psi + y\,  \dd \tau\right)^2 \right]
+    } .
 \ee
 On the rotation axis ($\sin\th=0$), we recover the AdS$_2$ metric expressed in
 global AdS coordinates $(\tau,y)$. On the hypersurface $\th=\th_*$ considered
 above, we get
 \be
-    h^{\th=\th_*}_{ij} \D Y^i \D Y^j =
-     2(\sqrt{3} - 1) m^2 \left[ - (1 + y^2) \D \tau^2 + \frac{\D y^2}{1 + y^2}
-     + \left( \D\psi + y\,  \D\tau \right)^2 \right].
+    \w{h}^{\th=\th_*} =
+     2(\sqrt{3} - 1) m^2 \left[ - (1 + y^2) \dd \tau^2 + \frac{\dd y^2}{1 + y^2}
+     + \left( \dd\psi + y\,  \dd\tau \right)^2 \right].
 \ee
 This is the metric of AdS$_3$ in some standard coordinates\footnote{These coordinates
 are linked to the property of AdS$_3$ being a fiber bundle over AdS$_2$ with fiber $\R$
@@ -1369,7 +1365,7 @@ and $\psi + 2\pi$.}
 On constant $\th$ hypersurfaces, with $\th\neq\th_*$ or $\pi-\th_*$, the
 metric induced by $\w{h}$ is not that of AdS$_3$ but that of a so-called
 \defin{warped AdS$_3$}\index{warped AdS$_3$}, the $\th$-term in front
-of $( \D\psi + y\,  \D\tau )^2$ in Eq.~(\ref{e:exk:global_NEHK_metric}) being the \emph{warp factor}
+of $( \dd\psi + y\,  \dd\tau )^2$ in Eq.~(\ref{e:exk:global_NEHK_metric}) being the \emph{warp factor}
 (see e.g. Refs.~\cite{Compe17,BengtS06,GuicaHSS09}).
 
 \begin{remark}
@@ -1624,22 +1620,19 @@ from a distinct convention in choosing $\chi$.}
 with the Poincaré patch in AdS$_4$ spacetime plotted in Fig.~\ref{f:neh:AdS_example}.
 
 The NHEK metric components with respect to the coordinates
-$(\hat{Y}^\alpha)=(\tau,\chi,\th,\psi)$ are easily deduced from
+$(\tau,\chi,\th,\psi)$ are easily deduced from
 (\ref{e:exk:global_NEHK_metric}):
 \be
     \encadre{
-    \begin{array}{lll}
-    h_{\mu\nu}\,  \D \hat{Y}^\mu \D \hat{Y}^\nu  = &
-    m^2 (1 + \cos^2\th) \Bigg[
-    & \displaystyle \!\!\! \frac{1}{\cos^2\chi} \left( - \D \tau^2 + \D \chi^2 \right)
-    + \D\th^2 \\[2ex]
-    & & \displaystyle \!\!\!  + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
-    \left( \D\psi + \tan\chi\,  \D \tau\right)^2 \Bigg]
-    \end{array}
-    }
+    \w{h} =
+    m^2 (1 + \cos^2\th) \left[
+    \frac{1}{\cos^2\chi} \left( - \dd \tau^2 + \dd \chi^2 \right)
+    + \dd\th^2 + \frac{4 \sin^2\th}{(1 + \cos^2\th)^2}
+    \left( \dd\psi + \tan\chi\,  \dd \tau\right)^2 \right]
+    } .
 \ee
 Note the factor $1/\cos^2\chi$ in front of the
-$- \D \tau^2 + \D \chi^2$ term, which is analogous to the conformal factor
+$- \dd \tau^2 + \dd \chi^2$ term, which is analogous to the conformal factor
 $1/\cos^2\chi$ of the AdS$_4$ metric in Eq.~(\ref{e:neh:metrix_AdS_conformal}),
 except that in the present case, $1/\cos^2\chi$ does not factor all the
 metric, so that it cannot be considered as a proper conformal factor. Since $\cos\chi$ never vanishes
