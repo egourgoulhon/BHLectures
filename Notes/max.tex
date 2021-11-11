@@ -68,20 +68,15 @@ The range of $(u,v)$ is $\R^2$.
 
 The above relations imply
 \[
- \D u = \D t - \frac{\D r}{1 - \frac{2m}{r}}  \qquad\mbox{and}\qquad
-\D v = \D t + \frac{\D r}{1 - \frac{2m}{r}} .
+ \dd u = \dd t - \frac{\dd r}{1 - \frac{2m}{r}},  \quad
+\dd v = \dd t + \frac{\dd r}{1 - \frac{2m}{r}} \qand
+    \dd u \, \dd v = \dd t^2 - \frac{\dd r^2}{\left(1 - \frac{2m}{r} \right) ^2} .
 \]
-Hence
-\[
-    \D u \, \D v = \D t^2 - \frac{\D r^2}{\left(1 - \frac{2m}{r} \right) ^2} .
-\]
-The line element (\ref{e:sch:Schwarz_metric_SD}) becomes then
+The Schwarzschild metric (\ref{e:sch:Schwarz_metric_SD}) can be then rewritten as
 \be \label{e:sch:Schwarz_metric_uv}
     \encadre{
-        g_{\hat{\hat{\mu}}\hat{\hat{\nu}}}\, \D x^{\hat{\hat{\mu}}} \,
-        \D x^{\hat{\hat{\nu}}}  =
-            -\left( 1 - \frac{2 m}{r} \right)\, \D u \, \D v
-       +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+        \w{g}  = -\left( 1 - \frac{2 m}{r} \right)\, \dd u \, \dd v
+       +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) }.
 \ee
 In this formula, $r$ is to be considered as a function of $(u,v)$, given
 by (\ref{e:sch:u_v_r_t}).
@@ -120,12 +115,10 @@ Since the range of $(u,v)$ is $\R^2$, the range of $U$ is $(-\infty,0)$
 and that of $V$ is $(0,+\infty)$.
 We have
 \[
-    \D U = \frac{1}{4m} \,  \mathrm{e}^{-u/4m}  \, \D u\qquad\mbox{and}\qquad
-    \D V = \frac{1}{4m} \,  \mathrm{e}^{v/4m} \, \D v ,
-\]
-hence
-\[
-    \D u \, \D v = 16 m^2 \mathrm{e}^{(u-v)/4m} \, \D U \, \D V .
+    \dd U = \frac{1}{4m} \,  \mathrm{e}^{-u/4m}  \, \dd u, \quad
+    \dd V = \frac{1}{4m} \,  \mathrm{e}^{v/4m} \, \dd v
+    \qand
+    \dd u \, \dd v = 16 m^2 \mathrm{e}^{(u-v)/4m} \, \dd U \, \dd V .
 \]
 Now, on $\M_{\rm I}$, $r>2m$ and (\ref{e:sch:u_v_r_t}) yields
 \be \label{e:sch:r_u_v_exp}
@@ -138,19 +131,19 @@ Now, on $\M_{\rm I}$, $r>2m$ and (\ref{e:sch:u_v_r_t}) yields
 \ee
 so that
 \[
-     \D u \, \D v = 16 m^2 \, \mathrm{e}^{-r/2m}
-        \left( \frac{r}{2m} - 1 \right) ^{-1} \D U \, \D V
+     \dd u \, \dd v = 16 m^2 \, \mathrm{e}^{-r/2m}
+        \left( \frac{r}{2m} - 1 \right) ^{-1} \dd U \, \dd V
         = \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m}
-        \left( 1 - \frac{2m}{r} \right) ^{-1} \D U \, \D V .
+        \left( 1 - \frac{2m}{r} \right) ^{-1} \dd U \, \dd V .
 \]
 Substituting this expression in (\ref{e:sch:Schwarz_metric_uv}) yields
-the expression of the metric components with respect to
+the expression of the metric with respect to
 coordinates $X^{\hat{\alpha}} := (U,V,\th,\ph)$:
 \be \label{e:sch:metric_UV}
     \encadre{
-    g_{\hat{\mu}\hat{\nu}} \, \D X^{\hat{\mu}} \, \D X^{\hat{\nu}}  =
-    - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \D U \, \D V
-     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+    \w{g} =
+    - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \dd U \, \dd V
+     +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) }.
 \ee
 In this formula, $r$ has to be considered as a function of $(U,V)$, whose
 implicit expression is found by combining
@@ -215,15 +208,15 @@ Function $F:\; x\mapsto \mathrm{e}^{x}(x-1)$, yielding
 $X^2-T^2 = F(r/2m)$, cf. Eq.~(\ref{e:sch:X2mT2}).}
 \end{figure}
 
-We have $\D U \, \D V = (\D T - \D X) (\D T + \D X)  = \D T^2 - \D X^2$,
+We have $\dd U \, \dd V = (\dd T - \dd X) (\dd T + \dd X)  = \dd T^2 - \dd X^2$,
 so that the metric components with respect to the Kruskal-Szekeres coordinates
 are easily deduced from the line element (\ref{e:sch:metric_UV}):
 \be \label{e:sch:metric_KS}
     \encadre{
-    g_{\mu\nu} \, \D X^\mu \, \D X^\nu =
+    \w{g} =
     \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m}
-    \left( - \D T^2 + \D X^2 \right)
-     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+    \left( - \dd T^2 + \dd X^2 \right)
+     +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) }.
 \ee
 Here $r$ is to be considered as a function of $(T,X)$, which is implicitly defined
 by
@@ -283,20 +276,15 @@ $\mathrm{e}^{\tilde{W}_0(x)}(\tilde{W}_0(x)-1) = x$.}
 Using $F^{-1} = \tilde{W}_0$, we may invert the relation (\ref{e:sch:X2mT2})
 to $r = 2m \tilde{W}_0(X^2-T^2)$. Noticing that
 $2m/r \, \mathrm{e}^{-r/2m} = (X^2-T^2 + \mathrm{e}^{r/2m})^{-1}$
-[cf. Eq.~(\ref{e:sch:X2mT2})], we may eliminate $r$ from the expression
-(\ref{e:sch:metric_KS})
-of the metric components in Kruskal-Szekeres coordinates:
+[cf. Eq.~(\ref{e:sch:X2mT2})], we may eliminate $r$ from the metric expression
+(\ref{e:sch:metric_KS}) in Kruskal-Szekeres coordinates:
 \be \label{e:sch:metric_KS_TX_partial}
    \encadre{
-    \begin{array}{lcll}
-    g_{\mu\nu} \, \D X^\mu \, \D X^\nu & = & 4m^2 \bigg\{ & \displaystyle
-    \frac{4}{X^2-T^2 + \mathrm{e}^{\tilde{W}_0(X^2-T^2)} }
-    \left( - \D T^2 + \D X^2 \right) \\[2ex]
-    & & & \displaystyle + \,   \tilde{W}_0(X^2-T^2)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
-    \bigg\}.
-    \end{array} }
+    \w{g}  =  4m^2 \left[
+    \frac{4 \left( - \dd T^2 + \dd X^2 \right)}{X^2-T^2 + \mathrm{e}^{\tilde{W}_0(X^2-T^2)} }
+    +  \tilde{W}_0(X^2-T^2)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)
+    \right] } .
 \ee
-
 
 The relation between the Kruskal-Szekeres coordinates and the
 Schwarzschild-Droste ones is obtained by combining (\ref{e:sch:def_T_X}),
@@ -619,13 +607,10 @@ called in this context
 The metric $\w{g}$ on the whole $\M$ is then defined by (\ref{e:sch:metric_KS_TX_partial}):
 \be \label{e:sch:metric_KS_TX}
    \encadre{
-    \begin{array}{lcll}
-    g_{\mu\nu} \, \D X^\mu \, \D X^\nu & = & 4m^2 \bigg\{ & \displaystyle
-    \frac{4}{X^2-T^2 + \mathrm{e}^{\tilde{W}_0(X^2-T^2)} }
-    \left( - \D T^2 + \D X^2 \right) \\[2ex]
-    & & & \displaystyle + \,   \tilde{W}_0(X^2-T^2)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
-    \bigg\} ,
-    \end{array} }
+    \w{g}  =  4m^2 \left[
+    \frac{4 \left( - \dd T^2 + \dd X^2 \right)}{X^2-T^2 + \mathrm{e}^{\tilde{W}_0(X^2-T^2)} }
+    +  \tilde{W}_0(X^2-T^2)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)
+    \right] } ,
 \ee
 where $\tilde{W}_0$ is the rescaled Lambert function defined by
 (\ref{e:max:def_tilde_W0}) (cf. Fig.~\ref{f:max:lambert_rescaled}); it is the inverse of the function
@@ -747,22 +732,21 @@ we get:
     \M:\quad (U,V)\in\R^2 \quad\mbox{and}\quad UV < 1.
 \ee
 
-The expression of the metric tensor
-in terms of the null coordinates $X^{\hat{\alpha}} = (U,V,\th,\ph)$
+The expression of the metric
+with respect to the null coordinates $X^{\hat{\alpha}} = (U,V,\th,\ph)$
 is deduced from (\ref{e:sch:metric_KS_TX}):
 \be
     \encadre{
-      g_{\hat{\mu}\hat{\nu}} \, \D X^{\hat{\mu}} \, \D X^{\hat{\nu}} = 4m^2 \left[
-      \frac{4}{UV - \mathrm{e}^{\tilde{W}_0(-UV)} } \, \D U \, \D V
-      + \tilde{W}_0(-UV)^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) \right] .
+      \w{g} = 4m^2 \left[
+      \frac{4}{UV - \mathrm{e}^{\tilde{W}_0(-UV)} } \, \dd U \, \dd V
+      + \tilde{W}_0(-UV)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right] .
     }
 \ee
 We can also rewrite it as (\ref{e:sch:metric_UV}):
 \be \label{e:max:metric_UV_glob}
     \encadre{
-    g_{\hat{\mu}\hat{\nu}} \, \D X^{\hat{\mu}} \, \D X^{\hat{\nu}}  =
-    - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \D U \, \D V
-     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) },
+    \w{g} = - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \dd U \, \dd V
+     +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) },
 \ee
 where $r$ is the function of $(U,V)$ given by
 \be \label{e:max:r_W0_UV}
@@ -960,14 +944,14 @@ of Schwarzschild spacetime:
 Since (\ref{e:max:def_hUhV}) yields
 $\D U = \D \hat{U} / \cos^2\hat{U}$ and $\D V = \D \hat{V} / \cos^2\hat{V}$,
 we deduce immediately from (\ref{e:max:metric_UV_glob})
-the expression of the metric tensor in terms of the coordinates
+the expression of the metric in terms of the coordinates
 $x^\alpha = (\hat{U}, \hat{V}, \th,\ph)$:
 \be \label{e:max:metric_hUhV}
     \encadre{
-    g_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+    \w{g} =
     - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,
-        \frac{\D \hat{U}}{\cos^2\hat{U}} \, \frac{\D \hat{V}}{\cos^2\hat{V}}
-     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) },
+        \frac{\dd \hat{U}}{\cos^2\hat{U}} \, \frac{\dd \hat{V}}{\cos^2\hat{V}}
+     +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) },
 \ee
 where [cf. Eq.~(\ref{e:max:r_W0_UV})]
 \be \label{e:max:r_hUhV}
@@ -1124,10 +1108,10 @@ Hence
 Therefore, we may rewrite expression~(\ref{e:max:metric_hUhV})
 for the metric tensor as
 \be \label{e:max:metric_hUhV_asymp}
-    g_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+    \w{g} =
      64 m^2 \left( 1 - \frac{2m}{r} \right)\,
-    \frac{\D \hat{U} \, \D \hat{V}}{\sin 2\hat{U} \sin 2\hat{V}}
-     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)  ,
+    \frac{\dd \hat{U} \, \dd \hat{V}}{\sin 2\hat{U} \sin 2\hat{V}}
+     +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)  ,
 \ee
 with $r$ given by (\ref{e:max:r_hUhV}).
 To get a conformal completion, we should write (cf. Sec.~\ref{s:glo:conf_compl})
@@ -1155,11 +1139,11 @@ to introduce a slight deviation (given that $\Omega^2$, which is involved in (\r
 Sec.~\ref{s:glo:conf_compl}.
 Then the conformal metric should be
 \be \label{e:max:conf_metric_hUhV}
-   {\tilde{g}}_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+   \w{\tilde{g}} =
      - 64 m^2 \left( 1 - \frac{2m}{r} \right)
-    \D \hat{U} \, \D \hat{V}
+    \dd \hat{U} \, \dd \hat{V}
      -  r^2 \sin 2\hat{U} \sin 2\hat{V}
-     \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+     \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 Near $\scri$, $r\rightarrow +\infty$ and we have ${\tilde{g}}_{\hat{U}\hat{V}} \rightarrow -32 m^2$. On the contrary, ${\tilde{g}}_{\theta\theta}$ is
 of the type ``$\infty\times 0$''; in order to determine its behavior, let
@@ -1180,12 +1164,12 @@ Hence
 \]
 and (\ref{e:max:conf_metric_hUhV}) becomes
 \be
-   {\tilde{g}}_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+   \w{\tilde{g}} =
      - 64 m^2 \left( 1 - \frac{2m}{r} \right)
-    \D \hat{U} \, \D \hat{V}
+    \dd \hat{U} \, \dd \hat{V}
      + 8 m \sin^2\hat{U} \sin^2\hat{V}
     \frac{r \mathrm{e}^{-r/2m}}{1 - 2m/r}
-     \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+     \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 On this expression, we can read directly the value of the conformal metric
 at $\scri$,  where $r\rightarrow +\infty$, $2m/r \rightarrow 0$,
@@ -1193,8 +1177,7 @@ $r \mathrm{e}^{-r/2m}\rightarrow 0$ and
 $\sin^2\hat{U}\rightarrow 1$ or
 $\sin^2\hat{V}\rightarrow 1$:
 \be \label{e:max:conf_metric_scri}
-   {\tilde g}_{\mu\nu} \, \D x^\mu \, \D x^\nu
-   \ \stackrel{\scri}{=}\  - 64 m^2 \D \hat{U} \, \D \hat{V} .
+   \w{\tilde{g}} \ \stackrel{\scri}{=}\  - 64 m^2 \dd \hat{U} \, \dd \hat{V} .
 \ee
 This bilinear form is clearly degenerate (cf. Sec.~\ref{s:bas:metric}).
 Therefore, $\w{\tilde{g}}$ is not a
@@ -1264,20 +1247,20 @@ We shall call $(\tilde{U},\tilde{V},\th,\ph)$ the
 
 From (\ref{e:max:def_tUtV}), we get
 \[
-    \D U = \frac{\cosh(\tan\tilde{U})}{\cos^2\tilde{U}}\, \D\tilde{U}
+    \dd U = \frac{\cosh(\tan\tilde{U})}{\cos^2\tilde{U}}\, \dd\tilde{U}
     \qquad\mbox{and}\qquad
-    \D V = \frac{\cosh(\tan\tilde{V})}{\cos^2\tilde{V}}\, \D\tilde{V} ,
+    \dd V = \frac{\cosh(\tan\tilde{V})}{\cos^2\tilde{V}}\, \dd\tilde{V} ,
 \]
-so that the metric components in terms of the coordinates
-$x^\alpha=(\tilde{U},\tilde{V},\th,\ph)$ are easily deduced from
+so that the metric expression in terms of the coordinates
+$x^\alpha=(\tilde{U},\tilde{V},\th,\ph)$ is easily deduced from
 (\ref{e:max:metric_UV_glob})-(\ref{e:max:r_W0_UV}):
 \be \label{e:max:metric_tUtV}
     \encadre{
-    g_{\mu\nu} \, \D x^\mu \, \D x^\nu =
+    \w{g} =
     - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,
         \frac{\cosh(\tan\tilde{U}) \cosh(\tan\tilde{V})}{\cos^2\tilde{U}\cos^2\tilde{V}}\,
-            \D\tilde{U} \, \D\tilde{V}
-     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) },
+            \dd\tilde{U} \, \dd\tilde{V}
+     +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) },
 \ee
 where $r$ is the function of $(\tilde{U},\tilde{V})$ given by
 \be \label{e:max:r_tUtV}
@@ -1297,11 +1280,11 @@ from which we get
 \]
 Hence (\ref{e:max:metric_tUtV}) becomes
 \bea
-    g_{\mu\nu} \, \D x^\mu \, \D x^\nu & =&
+    \w{g} & =&
     16 m^2 \left( 1 - \frac{2m}{r} \right)
-    \frac{\D\tilde{U} \, \D\tilde{V}}{\tanh(\tan\tilde{U}) \tanh(\tan\tilde{V}) \cos^2\tilde{U}\cos^2\tilde{V}} \nonumber\\
+    \frac{\dd\tilde{U} \, \dd\tilde{V}}{\tanh(\tan\tilde{U}) \tanh(\tan\tilde{V}) \cos^2\tilde{U}\cos^2\tilde{V}} \nonumber\\
     & &
-     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+     +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \eea
 Given the values (\ref{e:max:scri_tUtV}) of $\tilde{U}$ and $\tilde{V}$ near
 $\scri$, $\tanh(\tan\tilde{U}) \tanh(\tan\tilde{V})$ does not vanish there.
@@ -1313,11 +1296,11 @@ The corresponding conformal metric is
 \be \label{e:max:conf_metric_tUtV}
     \encadre{
     \begin{array}{lcl}
-    \displaystyle {\tilde g}_{\mu\nu} \, \D x^\mu \, \D x^\nu & =&
+    \displaystyle \w{\tilde{g}} & =&
     \displaystyle 16 m^2 \left( 1 - \frac{2m}{r} \right)
-    \frac{\D\tilde{U} \, \D\tilde{V}}{\tanh(\tan\tilde{U}) \tanh(\tan\tilde{V}) } \\[2ex]
+    \frac{\dd\tilde{U} \, \dd\tilde{V}}{\tanh(\tan\tilde{U}) \tanh(\tan\tilde{V}) } \\[2ex]
     & &
-     +  r^2 \cos^2\tilde{U}\cos^2\tilde{V} \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
+     +  r^2 \cos^2\tilde{U}\cos^2\tilde{V} \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)
     \end{array} } .
 \ee
 Considering $(\tilde{U},\tilde{V},\th,\ph)$ as a canonical coordinate system
@@ -1401,10 +1384,9 @@ we obtain
 Hence $\cos^2\tilde{V} \sim 4m^2 / r^2$ and $\tilde{g}_{\th\th} \sim 4 m^2 \cos^2\tilde{U}$.
 Gathering the above results, we have
 \be
-   {\tilde g}_{\mu\nu} \, \D x^\mu \, \D x^\nu
-   \ \stackrel{\scri^+}{=}\  4 m^2 \left[
-    \frac{4}{\tanh(\tan\tilde{U})} \, \D\tilde{U} \, \D\tilde{V}
-        + \cos^2\tilde{U} \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) \right] .
+    \w{\tilde{g}}  \ \stackrel{\scri^+}{=}\  4 m^2 \left[
+    \frac{4}{\tanh(\tan\tilde{U})} \, \dd\tilde{U} \, \dd\tilde{V}
+        + \cos^2\tilde{U} \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right] .
 \ee
 Since $\cos^2\tilde{U} \not=0$ on $\scri^+$ [cf. Eq.~(\ref{e:max:def_scrip_R2S2})],
 this bilinear form is non-degenerate.
@@ -1433,13 +1415,12 @@ which compensate the vanishing of $1-2m/r$ in the term
 ${\tilde g}_{\tilde{U}\tilde{V}}$. Actually,
 to deal with $\w{\tilde{g}}$ near $\Hor$, it is more appropriate
 to use the form that is deduced from (\ref{e:max:metric_tUtV}) and (\ref{e:max:def_Omega_tUtV}):
-\bea
-    {\tilde g}_{\mu\nu} \, \D x^\mu \, \D x^\nu & =&
-    - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,
+\be
+    \w{\tilde{g}} = - \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,
         \cosh(\tan\tilde{U}) \cosh(\tan\tilde{V}) \,
-            \D\tilde{U} \, \D\tilde{V} \nonumber \\
-    & & +  r^2 \cos^2\tilde{U}\cos^2\tilde{V}  \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
-\eea
+            \dd\tilde{U} \, \dd\tilde{V}
+    +  r^2 \cos^2\tilde{U}\cos^2\tilde{V}  \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
+\ee
 \end{remark}
 
 \begin{remark}
@@ -1701,9 +1682,9 @@ two connected components of $\Sigma_{T_0}$.
 The geometry of $\Sigma_{T_0}$ is defined by the metric $\w{\gamma}$
 induced on it by $\w{g}$:
 \be \label{e:max:gam_induced}
-    \gamma_{ij} \D x^i \D x^j =
-    \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \D X^2
-     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
+    \w{\gamma} =
+    \frac{32 m^3}{r} \, \mathrm{e}^{-r/2m} \,  \dd X^2
+     +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
 \ee
 where $r$ is the function of $X$ defined by
 \be \label{e:max:Sigma0_r_X}
@@ -1750,14 +1731,14 @@ We may use the above bijection to introduce coordinates $(r,\th,\ph)$ instead of
 on each of the two regions $\Sigma^+_{T_0}$ and $\Sigma^-_{T_0}$.
 Differentiating (\ref{e:max:Sigma0_X_r}) leads to
 \[
-    \D X = \pm \frac{r \mathrm{e}^{r/2m}}{8m^2 \sqrt{\mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) + T_0^2}} \, \D r .
+    \dd X = \pm \frac{r \mathrm{e}^{r/2m}}{8m^2 \sqrt{\mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) + T_0^2}} \, \dd r .
 \]
 Substituting in (\ref{e:max:gam_induced}) we get the expression of the
 metric on $\Sigma_{T_0}$ in terms of the coordinates $(x^i) = (r,\th,\ph)$:
 \be \label{e:max:Sigma0_metric}
-    \gamma_{ij}\,  \D x^i \D x^j = \left(
-    1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1} \, \D r^2
-     +  r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+    \w{\gamma} = \left(
+    1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1} \, \dd r^2
+     +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 \begin{remark} \label{r:max:check_metric_SigmaT0}
 As a check of the above formula, we notice that for $T_0=0$ it reduces to the
@@ -1809,12 +1790,12 @@ $\Sigma_{T_0}^{-,\rm eq}$, each of them having the topology of a cylinder.
 
 The metric induced by $\w{g}$
 on $\Sigma_{T_0}^{\rm eq}$,
-$\w{q}$ say, is obtained by setting $\th=\pi/2$ and $\D\th=0$ in
+$\w{q}$ say, is obtained by setting $\th=\pi/2$ and $\dd\th=0$ in
 Eq.~(\ref{e:max:Sigma0_metric}):
 \be \label{e:max:metric_q}
-    q_{ab}\,  \D x^a \D x^b = \left(
+    \w{q} = \left(
     1 - \frac{2m}{r} \left(1 -  T_0^2 \mathrm{e}^{-r/2m} \right) \right) ^{-1}
-     \, \D r^2 +  r^2 \D\ph^2 .
+     \, \dd r^2 +  r^2 \dd\ph^2 .
 \ee
 Given the invariance in $\ph$, it is
 quite natural to embed $(\Sigma_{T_0}^{\rm eq},\w{q})$ as
@@ -1822,14 +1803,14 @@ a surface of revolution in the Euclidean space $(\R^3, \w{f})$.
 Describing $\R^3$ with cylindrical coordinates $(x^i) = (r,z,\ph)$,
 the Euclidean metric $\w{f}$ is
 \be
-    f_{ij}\,  \D x^i \D x^j = \D r^2 + \D z^2 + r^2 \D\ph^2 .
+    \w{f} = \dd r^2 + \dd z^2 + r^2 \dd\ph^2 .
 \ee
 A surface of revolution $\Sp$ in $\R^3$ is described by an equation of the type
 $z = Z(r)$. On such a surface, one has therefore
-$\D z = Z'(r) \, \D r$, so that the metric $\w{h}$ induced by $\w{f}$ on it is
+$\dd z = Z'(r) \, \dd r$, so that the metric $\w{h}$ induced by $\w{f}$ on it is
 \be \label{e:max:metric_h}
-    h_{ab}\,  \D x^a \D x^b = \left( 1 + Z'(r)^2 \right) \D r^2
-            + r^2 \D\ph^2 .
+    \w{h} = \left( 1 + Z'(r)^2 \right) \dd r^2
+            + r^2 \dd\ph^2 .
 \ee
 Comparing (\ref{e:max:metric_h}) with (\ref{e:max:metric_q}),
 we see that a possible isometric embedding of $(\Sigma_{T_0}^{\rm eq},\w{q})$ into
@@ -2145,11 +2126,9 @@ but is singular at $\Sp$, i.e. at $\bar{r}=m/2$. This system is called
 
 From (\ref{e:max:r_riso}), we get
 \[
-    \D r = \left( 1 + \frac{m}{2\bar{r}} \right) \left( 1 - \frac{m}{2\bar{r}} \right)
-        \D \bar{r}
-\]
-and
-\[
+    \dd r = \left( 1 + \frac{m}{2\bar{r}} \right) \left( 1 - \frac{m}{2\bar{r}} \right)
+        \dd \bar{r}
+\qand
     1 - \frac{2m}{r} = \left(
         \frac{ 1 - \frac{m}{2\bar{r}}}{1 + \frac{m}{2\bar{r}}} \right) ^2 .
 \]
@@ -2158,10 +2137,10 @@ the expression of the metric tensor in
 terms of the isotropic coordinates $(x^{\bar{\alpha}}) = (t,\bar{r},\th,\ph)$:
 \be \label{e:max:g_isotropic}
     \encadre{
-        g_{\bar{\mu}\bar{\nu}}\, \D x^{\bar{\mu}} \, \D x^{\bar{\nu}} =
-        - \left( \frac{ 1 - \frac{m}{2\bar{r}}}{1 + \frac{m}{2\bar{r}}} \right) ^2 \D t^2
+        \w{g} =
+        - \left( \frac{ 1 - \frac{m}{2\bar{r}}}{1 + \frac{m}{2\bar{r}}} \right) ^2 \dd t^2
             + \left( 1 + \frac{m}{2\bar{r}} \right) ^4 \left[
-            \D \bar{r}^2 + \bar{r}^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right)
+            \dd \bar{r}^2 + \bar{r}^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)
             \right] }.
 \ee
 Since the relation between $r'$ and $\bar{r}$ is identical to that between
@@ -2173,11 +2152,11 @@ $(\th,\ph)$ for $\th\in\{0,\pi\}$). On the contrary Eq.~(\ref{e:max:g_isotropic}
 yields $\det(g_{\bar{\alpha}\bar{\beta}}) = 0$ for $\bar{r}=m/2$, which reflects the fact that
 the isotropic coordinates are singular on the bifurcation sphere $\Sp$.
 
-A remarkable feature of the line element (\ref{e:max:g_isotropic}) is
+A remarkable feature of expresssion (\ref{e:max:g_isotropic}) is
 that the spatial part is proportional to
-the line element of the flat metric $\w{f}$ on the Euclidean 3-space:
+the flat metric $\w{f}$ of the Euclidean 3-space:
 \be
-    f_{\bar{i}\bar{j}} , \D x^{\bar{i}} \, \D x^{\bar{j}} = \D \bar{r}^2 + \bar{r}^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+    \w{f} = \dd \bar{r}^2 + \bar{r}^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 In other words, the metric $\w{\gamma}$ induced by $\w{g}$ on $\mathcal{S}_t$
 is \emph{conformal}\index{conformal!metric} to the flat metric $\w{f}$

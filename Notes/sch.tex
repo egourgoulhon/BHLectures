@@ -35,28 +35,13 @@ Einstein equation (\ref{e:fra:Einstein_eq}) in a vacuum
 $\Lambda$. Setting $\w{T}=0$ in Eq.~(\ref{e:fra:Einstein_eq}) yields
 the equation to solve:
 \be \label{e:sch:vac_Einstein_eq}
-     \w{R} + \left(\Lambda - \frac{1}{2}\, R\right) \w{g} = 0 ,
+    \encadre{ \w{R} + \left(\Lambda - \frac{1}{2}\, R\right)  \w{g} = 0 } .
 \ee
-$\w{R}$ being the Ricci tensor of $\w{g}$ and $R:=g^{\mu\nu} R_{\mu\nu}$ its
-trace with respect to $\w{g}$, i.e. the so-called Ricci scalar
-(cf. Sec.~\ref{s:bas:Ricci_tensor} in Appendix~\ref{s:bas}).
-Let us first note that Eq.~(\ref{e:sch:vac_Einstein_eq}) implies a
-constraint on $R$. Indeed, the trace of Eq.~(\ref{e:sch:vac_Einstein_eq})
-with respect to $\w{g}$ is
-\[
-    R + \left(\Lambda - \frac{1}{2}\, R\right) \times 4 = 0 ,
-\]
-hence
-\be \label{e:sch:R_4Lamb}
-    \encadre{R = 4\Lambda} .
-\ee
-In particular $R$ is constant.
-Inserting this value back into (\ref{e:sch:vac_Einstein_eq}), we get
+Note the equivalent form deduced from the variant (\ref{e:fra:Einstein_eq_n})
+of the Einstein equation:
 \be \label{e:sch:vac_Einstein_eq_Lamb}
     \encadre{ \w{R} = \Lambda \, \w{g} } .
 \ee
-Since this equation yields (\ref{e:sch:R_4Lamb}) as well, we conclude
-that it is equivalent to (\ref{e:sch:vac_Einstein_eq}).
 
 \subsection{Static and spherically symmetric metric} \label{s:sch:static_spher}
 
@@ -88,7 +73,7 @@ with spherical symmetry. The orthogonality of $\w{\xi}$ and $\Sp$ implies
 that $\Sp\subset\Sigma_t$. Let $(x^a)=(\th,\ph)$ be spherical coordinates on
 $\Sp$. The (Riemannian) metric $\w{q}$ induced by $\w{g}$ on $\Sp$ is given by
 \be
-    q_{ab}\, \D x^a\, \D x^b = r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+    \w{q} = r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 The positive coefficient $r^2$ in front of the standard spherical element must be
 constant over $\Sp$, by virtue of spherical symmetry. The area of $\Sp$ is
@@ -101,8 +86,8 @@ where $t$ is adapted to $\w{\xi}$ thanks to (\ref{e:sch:xi_t}), is then a
 spacetime coordinate system and, by construction, the expression of the metric tensor
 with respect to this system is
 \be \label{e:sch:g_AB}
-    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -A(r)\, \D t^2 + B(r)\, \D r^2 +
-        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+    \w{g} = -A(r)\, \dd t^2 + B(r)\, \dd r^2 +
+        r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 Note that this is a special case of the general static metric element
 (\ref{e:sta:static_metric}) and that Eq.~(\ref{e:sta:xi_wpar_t}) holds:
@@ -163,16 +148,16 @@ The solution of this equation is obviously $A(r)B(r) = C$, where $C$ is a consta
 Without any loss of generality, we may choose $C=1$. Indeed, substituting
 $C/B(r)$ for $A(r)$ in Eq.~(\ref{e:sch:g_AB}) results in
 \[
-    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -\frac{C}{B(r)}\, \D t^2 + B(r)\, \D r^2 +
-        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+    \w{g} = -\frac{C}{B(r)}\, \dd t^2 + B(r)\, \dd r^2 +
+        r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \]
 Assuming $C>0$, the change of variable $t' = \sqrt{C} t$, which is equivalent
 to changing the stationary Killing vector from $\w{\xi}$ to
 $\w{\xi}'=  1/\sqrt{C}\, \w{\xi}$,
 yields
 \[
-    g_{\mu\nu}\, \D x^\mu \, \D x^\nu = -\frac{1}{B(r)}\, \D t'^2 + B(r)\, \D r^2 +
-        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
+    \w{g} = -\frac{1}{B(r)}\, \dd t'^2 + B(r)\, \dd r^2 +
+        r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
 \]
 which is exactly the solution corresponding to $C=1$. Hence from now on,
 we set $C=1$, i.e.
@@ -190,13 +175,13 @@ the solution of which is
 \ee
 where $m$ is a constant.
 The general static and spherically symmetric solution of the vacuum
-Einstein equation (\ref{e:sch:vac_Einstein_eq}) is therefore
+Einstein equation (\ref{e:sch:vac_Einstein_eq_Lamb}) is therefore
 \be \label{e:sch:Kottler_metric}
     \encadre{
-        g_{\mu\nu}\, \D x^\mu \, \D x^\nu =
-            -\left( 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2\right)\, \D t^2
-            + \left( 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2\right) ^{-1}\, \D r^2+
-        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+        \w{g} =
+            -\left( 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2\right)\, \dd t^2
+            + \left( 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2\right) ^{-1}\, \dd r^2+
+        r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) }.
 \ee
 It is called the \defin{Kottler metric}\index{Kottler metric} (cf. the historical
 note below).
@@ -212,10 +197,9 @@ In the rest of this chapter, we will focus on the Schwarzschild metric,
 i.e. on the version $\Lambda=0$ of Eq.~(\ref{e:sch:Kottler_metric}):
 \be \label{e:sch:Schwarz_metric_SD}
     \encadre{
-        g_{\mu\nu}\, \D x^\mu \, \D x^\nu =
-            -\left( 1 - \frac{2 m}{r} \right)\, \D t^2
-            + \left( 1 - \frac{2 m}{r} \right) ^{-1}\, \D r^2 +
-        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+        \w{g} = -\left( 1 - \frac{2 m}{r} \right)\, \dd t^2
+            + \left( 1 - \frac{2 m}{r} \right) ^{-1}\, \dd r^2 +
+        r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) }.
 \ee
 The areal coordinates $(t,r,\th,\ph)$ are then called the
 \defin{Schwarzschild-Droste coordinates}\index{Schwarzschild-Droste!coordinates}\footnote{In the literature they are often referred to as simply
@@ -248,13 +232,13 @@ an observer located at large values of $r$. Indeed, we will see in
 Chap.~\ref{s:ges} that an observer on a circular orbit at a large value
 of $r$ has an orbital period $T$ obeying Kepler's third law:
 $T^2 = 4\pi^2 r^3 / m$. Without waiting for Chap.~\ref{s:ges}, we may notice
-that for $r\gg |m|$, the line element (\ref{e:sch:Schwarz_metric_SD})
+that for $r\gg |m|$, the metric (\ref{e:sch:Schwarz_metric_SD})
 takes the standard weak-field form (see e.g. \cite{Carro04,MisneTW73}):
 \be \label{e:sch:Schwarz_metric_large_r}
-        g_{\mu\nu}\, \D x^\mu \, \D x^\nu \simeq
-            -\left( 1 + 2\Phi(r) \right) \, \D t^2
-            + \left( 1 - 2\Phi(r) \right)  \, \D r^2 +
-        r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) ,
+        \w{g} \simeq
+            -\left( 1 + 2\Phi(r) \right) \, \dd t^2
+            + \left( 1 - 2\Phi(r) \right)  \, \dd r^2 +
+        r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
 \ee
 where $\Phi(r) := -m/r$ is the Newtonian gravitational potential outside
 a spherically symmetric body of mass $m$.
@@ -279,7 +263,7 @@ prescribed by Einstein in an early version of general relativity, which had been
 18 November 1915 and on which Schwarzschild was working. Only in the final version, published on
 25 November 1915, did Einstein relax the condition $\det(g_{\alpha\beta}) = -1$, allowing for full
 covariance. Schwarzschild however
-exhibited the famous line element (\ref{e:sch:Schwarz_metric_SD}), via what he
+exhibited the famous metric (\ref{e:sch:Schwarz_metric_SD}), via what he
 called the ``auxiliary quantity'' $r = (r_*^3 + 8m^3)^{1/3}$.
 For him, the ``center'',  namely the location of the ``point mass'' generating the field,
 was at $r_* = 0$, i.e. at $r=2m$.
@@ -291,7 +275,7 @@ a spherical coordinate system, $(t,\bar r, \th,\ph)$, yet distinct from
 the standard ``Schwarzschild-Droste'' coordinates $(t,r,\th,\ph)$ by the fact that the radial
 coordinate $\bar r$ was not chosen to be the areal radius, but instead a
 coordinate for which $g_{\bar r\bar r} = 1$. At the end, by a change of
-variable, Droste exhibited the line element (\ref{e:sch:Schwarz_metric_SD}).
+variable, Droste exhibited the metric (\ref{e:sch:Schwarz_metric_SD}).
 The generalization to a non-vanishing cosmological constant, i.e.
 Eq.~(\ref{e:sch:Kottler_metric}), has been obtained by
 Friedrich Kottler\index{Kottler, F.} in 1918 \cite{Kottl1918} and, independently, by
@@ -366,9 +350,9 @@ in Fig.~\ref{f:sch:rad_null_geod} are horizontal lines for $r<2m$.
 Let us search for the null geodesics of the Schwarzschild metric
 (\ref{e:sch:Schwarz_metric_SD}) that are radial, i.e. along which
 $\th=\mathrm{const}$ and $\ph=\mathrm{const}$. They are found by
-setting  $\D\th=0$ and $\D\ph=0$
-in (\ref{e:sch:Schwarz_metric_SD})
-and searching for $\D s^2 = g_{\mu\nu}\, \D x^\mu \, \D x^\nu = 0$:
+setting  $\D\th=0$ and $\D\ph=0$ in the line element (\ref{e:fra:line_element})
+and searching for $\D s^2 = g_{\mu\nu}\, \D x^\mu \, \D x^\nu = 0$,
+which the $g_{\mu\nu}$'s read on (\ref{e:sch:Schwarz_metric_SD}):
 \be \label{e:sch:radial_null}
     \D s^2 = 0 \iff \D t^2 = \frac{\D r^2}{\left( 1 - \frac{2m}{r} \right) ^2} .
 \ee
@@ -483,27 +467,23 @@ Schwarzschild-Droste coordinates $(t,r,\th,\ph)$ governed by Eq.~(\ref{e:sch:ing
 \be \label{e:sch:v_t_r}
      v = t + r + 2 m \ln \left| \frac{r}{2m} - 1 \right| .
 \ee
-It follows immediately that
-\[
-    \D v = \D t + \D r + \frac{\D r}{r/2m - 1} = \D t + \frac{\D r}{1 - 2m/r} ,
-\]
-i.e.
+By differentiating, it follows immediately that
 \be \label{e:sch:dt_dv_NIEF}
-    \D t = \D v -  \frac{\D r}{1 - 2m/r} .
+    \dd t = \dd v -  \frac{\dd r}{1 - 2m/r} ,
 \ee
-Taking the square gives
+the square of which is
 \[
-    \D t^2 = \D v^2 - \frac{2}{1 - 2m/r} \, \D v \, \D r + \frac{1}{(1 - 2m/r)^2}\, \D r^2 .
+    \dd t^2 = \dd v^2 - \frac{2}{1 - 2m/r} \, \dd v \, \dd r + \frac{1}{(1 - 2m/r)^2}\, \dd r^2 .
 \]
-Substituting this expression for $\D t^2$ in Eq.~(\ref{e:sch:Schwarz_metric_SD})
+Substituting this expression for $\dd t^2$ in Eq.~(\ref{e:sch:Schwarz_metric_SD})
 yields the metric components with respect to the coordinates
 $(x^{\hat{\alpha}}) := (v,r,\th,\ph)$:
 \be \label{e:sch:Schwarz_metric_NIEF}
     \encadre{
-        g_{\hat{\mu}\hat{\nu}}\, \D x^{\hat{\mu}} \, \D x^{\hat{\nu}} =
-            -\left( 1 - \frac{2 m}{r} \right)\, \D v^2
-            + 2 \, \D v \, \D r
-        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+        \w{g} =
+            -\left( 1 - \frac{2 m}{r} \right)\, \dd v^2
+            + 2 \, \dd v \, \dd r
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) }.
 \ee
 The coordinates $(x^{\hat{\alpha}}) = (v,r,\th,\ph)$ are called the
 \defin{null ingoing Eddington-Finkelstein (NIEF) coordinates}\index{Eddington-Finkelstein!coordinates}\index{null!ingoing Eddington-Finkelstein coordinates}\index{NIEF}. The qualifier \emph{null} stems from the fact that
@@ -547,15 +527,15 @@ along $\th$ and $\ph$ are not represented, these 3-dimensional surfaces appear
 as curves.}
 \end{figure}
 
-From (\ref{e:sch:ti_v_r}), we have $\D v = \D\ti + \D r$. Substituting
+From (\ref{e:sch:ti_v_r}), we have $\dd v = \dd\ti + \dd r$. Substituting
 into (\ref{e:sch:Schwarz_metric_NIEF}) yields
 \be \label{e:sch:Schwarz_metric_EF}
     \encadre{
-        g_{\tilde{\mu}\tilde{\nu}}\, \D x^{\tilde{\mu}} \, \D x^{\tilde{\nu}} =
-            -\left( 1 - \frac{2 m}{r} \right)\, \D \ti^2
-            + \frac{4m}{r} \, \D \ti \, \D r
-            + \left( 1 + \frac{2 m}{r} \right)\, \D r^2
-        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) }.
+        \w{g} =
+            -\left( 1 - \frac{2 m}{r} \right)\, \dd \ti^2
+            + \frac{4m}{r} \, \dd \ti \, \dd r
+            + \left( 1 + \frac{2 m}{r} \right)\, \dd r^2
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) }.
 \ee
 We check that $g_{\ti\ti} < 0$ in $\M_{\rm I}$, hence $\ti$ is
 a timelike coordinate there.
@@ -631,28 +611,29 @@ Since $\ti \sim t$ when $r\rightarrow +\infty$, we get $\alpha=1$.
 \end{remark}
 
 \begin{remark}
-The IEF-coordinates line element (\ref{e:sch:Schwarz_metric_EF}) can be recast
+The IEF expression (\ref{e:sch:Schwarz_metric_EF}) for the metric can be recast
 in the following remarkable form:
 \be \label{e:sch:Kerr_Schild}
-  g_{\tilde{\mu}\tilde{\nu}}\, \D x^{\tilde{\mu}} \, \D x^{\tilde{\nu}} =
- \underbrace{- \D\ti^2 + \D r^2 + r^2  \left( \D\th^2 + \sin^2\th\,
-   \D\ph^2 \right)}_{f_{\tilde{\mu}\tilde{\nu}} \, \D x^{\tilde{\mu}} \, \D x^{\tilde{\nu}}}
-        + \underbrace{\frac{2m}{r} \left( \D\ti + \D r \right) ^2}_{k_{\tilde{\mu}} \D x^{\tilde{\mu}} \, k_{\tilde{\nu}} \D x^{\tilde{\nu}}} ,
+  \w{g} =
+ \underbrace{- \dd\ti^2 + \dd r^2 + r^2  \left( \dd\th^2 + \sin^2\th\,
+   \dd\ph^2 \right)}_{\w{f}}
+ + \underbrace{\frac{2m}{r} \left( \dd\ti + \dd r \right) ^2}_{\uu{k}\otimes\uu{k}} ,
 \ee
-where the $f_{\tilde{\mu}\tilde{\nu}}$'s are the components of the (flat) Minkowski metric expressed in
-terms of the spherical coordinates $(\ti,r,\th,\ph)$ and the $k_{\tilde{\mu}}$'s are
-the components of a 1-form dual to a null vector:
+where the $\w{f}$ is the (flat) Minkowski metric (expressed above in
+terms of the spherical coordinates $(\ti,r,\th,\ph)$) and $\uu{k}$ is the 1-form
 \[
     \uu{k} = \sqrt{\frac{2m}{r}} \, \dd (\ti + r) =
     \sqrt{\frac{2m}{r}} \, \dd v .
 \]
-The fact that $\w{k}$ is a null vector follows from
-$g^{\tilde{\mu}\tilde{\nu}} k_{\tilde{\mu}} k_{\tilde{\nu}} = 0$, which is easily deduced from
+The 1-form $\uu{k}$ is dual to a vector $\w{k}$, which is null, as it can be seen
+from
+$g^{\tilde{\mu}\tilde{\nu}} k_{\tilde{\mu}} k_{\tilde{\nu}} = 0$. The latter property
+is easily deduced from
 $k_{\tilde{\mu}} = \sqrt{2m/r} (1, 1, 0, 0)$ and expression (\ref{e:sch:inv_metric_EF})
 for $g^{\tilde{\mu}\tilde{\nu}}$ below.
 A metric of the type (\ref{e:sch:Kerr_Schild}) is said to be a
-\defin{Kerr-Schild metric}\index{Kerr-Schild!metric} (cf. Appendix~\ref{s:ksm}
-for details).
+\defin{Kerr-Schild metric}\index{Kerr-Schild!metric}; these peculiar metrics
+are discussed in Appendix~\ref{s:ksm}.
 \end{remark}
 
 \subsection{The Schwarzschild horizon} \label{s:sch:Schwarz_hor}
@@ -957,10 +938,10 @@ with
 \ee
 we deduce from (\ref{e:sch:Schwarz_metric_NIEF}) that
 \be
-        g_{\mu'\nu'}\, \D x^{\mu'} \, \D x^{\nu'} =
-            -x \, \D v^2
-            +\frac{4 m}{(1-x)^2} \, \D v \, \D x
-        + \frac{4 m^2}{(1-x)^2}  \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+        \w{g} =
+            -x \, \dd v^2
+            +\frac{4 m}{(1-x)^2} \, \dd v \, \dd x
+        + \frac{4 m^2}{(1-x)^2}  \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 Defining
 \be \label{e:sch:Omega_x_r}
@@ -970,12 +951,11 @@ we may rewrite the metric tensor as
 \be
     \w{g} = \Omega^{-2} \w{\tilde{g}} ,
 \ee
-with $\w{\tilde{g}}$ given by
+with
 \be \label{e:sch:tilde_g_x_v}
-    {\tilde{g}}_{\mu'\nu'}\,  \D x^{\mu'} \, \D x^{\nu'}  =
-            - x(1-x)^2 \, \D v^2
-            +4 m \, \D v \, \D x
-        + 4 m^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+    \w{\tilde{g}}  = - x(1-x)^2 \, \dd v^2
+            +4 m \, \dd v \, \dd x
+        + 4 m^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 Since $(v,x,\th,\ph)$ is a global coordinate system on $\M$
 (up to the trivial coordinate singularities of $(\th,\ph)$), we can
@@ -1036,15 +1016,14 @@ where $u\in\R$ is a constant parameter along a given geodesic.
 We notice that on $\M_{\rm I}$, we may use $(x^{\check{\alpha}}) = (u,r,\th,\ph)$ as a coordinate
 system, naturally called the \defin{null outgoing Eddington-Finkelstein coordinates}\index{Eddington-Finkelstein!coordinates}\index{null!outgoing Eddington-Finkelstein coordinates}. Since (\ref{e:sch:v_r_u}) implies
 \[
-    \D v = \D u + \frac{2}{1-2m/r}\, \D r,
+    \dd v = \dd u + \frac{2}{1-2m/r}\, \dd r,
 \]
 we easily deduce from (\ref{e:sch:Schwarz_metric_NIEF}) the metric components
 in these coordinates:
 \be \label{e:sch:g_u_r}
-        g_{\check{\mu}\check{\nu}}\, \D x^{\check{\mu}} \, \D x^{\check{\nu}} =
-            -\left( 1 - \frac{2 m}{r} \right)\, \D u^2
-            - 2 \, \D u \, \D r
-        + r^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+    \w{g} = -\left( 1 - \frac{2 m}{r} \right)\, \dd u^2
+            - 2 \, \dd u \, \dd r
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 \begin{remark}
 Contrary to $(v,r,\th,\ph)$, the coordinates $(u,r,\th,\ph)$ do not cover
@@ -1072,10 +1051,9 @@ except that on $\M_{\rm I}$, $x$'s range is $(0,1)$ only.
 We deduce from (\ref{e:sch:g_u_r}) and (\ref{e:sch:x_r})
 the expression of $\w{g}$ in terms of the coordinates $(u,x,\th,\ph)$:
 \be
-        g_{\mu''\nu''}\, \D x^{\mu''} \, \D x^{\nu''} =
-            -x \, \D u^2
-            -\frac{4 m}{(1-x)^2} \, \D u \, \D x
-        + \frac{4 m^2}{(1-x)^2}  \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+        \w{g} = -x \, \dd u^2
+            -\frac{4 m}{(1-x)^2} \, \dd u \, \dd x
+        + \frac{4 m^2}{(1-x)^2}  \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 Let us identify $\M_{\rm I}$ with the following open subset of
 $\R^2\times \SS^2$:
@@ -1110,10 +1088,10 @@ $\scri''$ is not included in $\M'$.
 
 The conformal metric $\w{\tilde{g}}$ on $\M''_{\rm I}$ is given by
 \be \label{e:sch:tilde_g_x_u}
-    {\tilde{g}}_{\mu''\nu''}\, \D x^{\mu''} \, \D x^{\nu''} =
-            - x(1-x)^2 \, \D u^2
-            - 4 m \, \D u \, \D x
-        + 4 m^2 \left( \D\th^2 + \sin^2\th\, \D\ph^2 \right) .
+     \w{\tilde{g}} =
+            - x(1-x)^2 \, \dd u^2
+            - 4 m \, \dd u \, \dd x
+        + 4 m^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 We notice that it is regular and non-degenerate in all $\M''_{\rm I}$,
 including on $\scri''$ ($x=1$), and that on the submanifold $\M_{\rm I}$, it is related to the physical metric $\w{g}$ by $\w{\tilde{g}} = \Omega^2 \w{g}$, with the
@@ -1193,7 +1171,7 @@ deduced from (\ref{e:sch:tilde_g_x_v}) and
 (\ref{e:sch:tilde_g_x_u}), is
 \be
     \left. \w{\tilde{g}} \right| _{\scri^\pm} = 4 m^2 \left(
-        \dd \th\otimes \dd \th + \sin^2\th \, \dd \ph \otimes \dd \ph \right) ,
+        \dd \th^2  + \sin^2\th \, \dd \ph^2 \right) ,
 \ee
 which is clearly degenerate (along the $u$ direction for $\scri^+$
 and along the $v$ direction for $\scri^-$).
