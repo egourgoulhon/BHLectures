@@ -75,11 +75,10 @@ both metrics:
 If $(\M,\w{g})$ is a spacetime of Kerr-Schild type, then \defin{Kerr-Schild
 coordinates}\index{Kerr-Schild!coordinates}
 are coordinates $(x^\alpha) = (t,x,y,z)$ that are Minkowskian\index{Minkowskian!coordinates}
-for $\w{f}$, i.e. coordinates in which the components of the flat metric
-$\w{f}$ take the form
+for $\w{f}$, i.e. coordinates in which the flat metric
+$\w{f}$ takes the form
 \be \label{e:ksm:ds_eta}
-    f_{\mu\nu} \, \D x^\mu \, \D x^\nu = - \D t^2 + \D x^2 + \D y^2
-        + \D z^2 .
+    \w{f} = - \dd t^2 + \dd x^2 + \dd y^2 + \dd z^2 .
 \ee
 
 \subsection{Basic property}
@@ -87,7 +86,8 @@ $\w{f}$ take the form
 \begin{greybox}
 Let $\w{g}$ be a Kerr-Schild metric.
 If $\w{g}$ obeys the vacuum Einstein
-equation\index{Einstein!equation}, i.e. if the Ricci tensor of $\w{g}$ vanishes identically:
+equation\index{Einstein!equation} with vanishing cosmological constant,
+i.e. if the Ricci tensor of $\w{g}$ vanishes identically:
 \be
     R_{\alpha\beta} = 0 ,
 \ee
@@ -136,12 +136,12 @@ where $H$ is the following scalar field on $\M$:
    \encadre{ H := \frac{m r}{\rho^2} },
 \ee
 with $\rho^2 := r^2 + a^2 \cos^2\th$ [Eq.~(\ref{e:ker:def_rho2})].
-The expression of $\w{f}$ in terms of the Kerr coordinates is deduced
+The expression of $\w{f}$ in terms of Kerr coordinates is deduced
 from that of $\w{g}$ [Eq.~(\ref{e:ker:metric_Kerr_3p1})] and that of
 $\uu{k}$ [Eq.~(\ref{e:ksm:k_form_Kerr})]:
 \be \label{e:ksm:f_Kerr}
-  \encadre{  f_{\mu\nu}\,  \D x^\mu \D x^\nu = - \D\ti^2 + \D r^2 - 2 a \sin^2\th \, \D r \, \D\tph
-    + \rho^2\, \D \th^2 + (r^2 + a^2)\sin^2\th\, \D \tph^2 }.
+  \encadre{  \w{f} = - \dd\ti^2 + \dd r^2 - 2 a \sin^2\th \, \dd r \, \dd\tph
+    + \rho^2\, \dd \th^2 + (r^2 + a^2)\sin^2\th\, \dd \tph^2 }.
 \ee
 It is easy to check that $f^{\alpha\beta} := g^{\alpha\beta} + 2 H k^\alpha k^\beta$
 defines an inverse of $\w{f}$: $f^{\alpha\mu} f_{\mu\beta} = \delta^\alpha_{\ \; \beta}$
@@ -179,8 +179,8 @@ the Kerr metric.
 \subsection{Kerr-Schild coordinates on Kerr spacetime}
 
 It is not immediately obvious that the metric $\w{f}$ given by
-Eq.~(\ref{e:ksm:f_Kerr}) is a flat Lorentzian metric.
-Let us introduce coordinates in which $\w{f}$ takes a manifestly Minkowskian
+Eq.~(\ref{e:ksm:f_Kerr}) is a flat Lorentzian metric, except at the limit $a=0$.
+Let us introduce coordinates in which $\w{f}$ takes a manifest Minkowskian
 form, i.e. Kerr-Schild coordinates, according to the nomenclature introduced
 in Sec.~\ref{s:ksm:def_Kerr_Schild}.
 
@@ -251,7 +251,7 @@ via the tensor change-of-components formula with
 the transformation (\ref{e:ksm:K_to_KS})
 (cf. the notebook \ref{s:sam:Kerr_Schild}):
 \be \label{e:ksm:f_Kerr_KS}
- f_{\mu\nu}\,  \D x^\mu \D x^\nu = - \D\ti^2 + \D x^2 + \D y^2 + \D z^2 .
+ \w{f} = - \dd\ti^2 + \dd x^2 + \dd y^2 + \dd z^2 .
 \ee
 This proves that $(\ti, x, y, z)$ are Kerr-Schild coordinates, as announced.
 
@@ -292,15 +292,15 @@ in the limit $r \gg a$, or equivalently in the limit $\sqrt{x^2 + y^2 + z^2} \gg
 \end{remark}
 
 The explicit form of the components
-$g_{\mu\nu}$ of the Kerr metric in Kerr-Schild coordinates can be read off by expanding the line
-element
+$(g_{\alpha\beta})$ of the Kerr metric in Kerr-Schild coordinates can be read off by expanding
+the following expression of $\w{g}$:
 \be \label{e:ksm:g_comp_KS}
 \encadre{ \begin{array}{ll}
-g_{\mu\nu} \, \D x^\mu \, \D x^\nu = & - \D \ti^2 + \D x^2 + \D y^2
-        + \D z^2 \\
-        &\displaystyle  + \frac{2m r^3}{r^4 + a^2 z^2} \left( \D \ti
-        + \frac{r x + a y}{r^2 + a^2} \, \D x
-        + \frac{r y - a x}{r^2 + a^2} \, \D y + \frac{z}{r} \, \D z \right) ^2
+ \w{g} = & - \dd \ti^2 + \dd x^2 + \dd y^2
+        + \dd z^2 \\
+        &\displaystyle  + \frac{2m r^3}{r^4 + a^2 z^2} \left( \dd \ti
+        + \frac{r x + a y}{r^2 + a^2} \, \dd x
+        + \frac{r y - a x}{r^2 + a^2} \, \dd y + \frac{z}{r} \, \dd z \right) ^2
 \end{array} } ,
 \ee
 which is obtained by combining Eqs~(\ref{e:ksm:g_KerrSchild_comp}), (\ref{e:ksm:f_Kerr_KS}),
