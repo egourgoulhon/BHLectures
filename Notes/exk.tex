@@ -255,7 +255,8 @@ about the terminology.} and axisymmetric. The corresponding isometry group is
 $\R\times\mathrm{SO}(2)\simeq \R\times\mathrm{U}(1)$ and is generated
 by two commuting Killing vectors $\w{\xi}$ and $\w{\eta}$. Both the Kerr coordinates and
 the Boyer-Lindquist ones are adapted to the spacetime symmetries, i.e. $(\ti,\tph)$ and
-$(t,\ph)$ are ignorable coordinates, as it is clear on the line elements (\ref{e:exk:metric_Kerr_3p1})
+$(t,\ph)$ are ignorable coordinates, as it is clear from the
+metric components (\ref{e:exk:metric_Kerr_3p1})
 and (\ref{e:exk:metric_BL}). Accordingly, one can normalize the Killing vectors so that
 \be \label{e:exk:Killing_vectors}
     \encadre{\w{\xi} = \wpar_{\ti} = \wpar_t}
@@ -1036,7 +1037,7 @@ metric $\w{h}$ induced by $\w{f}$ on $\Phi(\Sigma_{t,\th})$ is
     \left( \varpi'(r)^2 + z'(r)^2 \right) \, \dd r^2
     + \varpi(r)^2 \, \dd\ph^2 .
 \ee
-$\Phi$ performs an isometric embedding iff the two line elements
+$\Phi$ performs an isometric embedding iff the two metrics
 (\ref{e:exk:induced_metric_q}) and (\ref{e:exk:induced_metric_h})
 coincide\footnote{Formally, one says that the metric $\w{q}$ is the pullback
 of $\w{h}$ by $\Phi$: $\w{q} = \Phi^* \w{h}$.}, i.e. iff
@@ -1117,12 +1118,13 @@ is not part of the physical spacetime $(\M,\w{g})$.
 
 The property of $i^{\rm int}$ being located infinitely far from any point at $r=r_0>m$ on
 a hypersurface $\Sigma_t$ appears clearly
-on the line element (\ref{e:exk:metric_BL}). Indeed,
+on the metric (\ref{e:exk:metric_BL}). Indeed,
 according to the latter, the distance along a
 curve $(t,\th,\ph)=\mathrm{const}$ between the points
 at $r=r_0$ and $r=m$ is
 \[
-    \ell = \int_{m}^{r_0} \frac{\sqrt{r^2 + m^2\cos^2\th}}{r - m} \, \D r .
+    \ell = \int_{m}^{r_0} \sqrt{g_{rr}} \, \D r =
+    \int_{m}^{r_0} \frac{\sqrt{r^2 + m^2\cos^2\th}}{r - m} \, \D r .
 \]
 Again, the factor $(r - m)^{-1}$ makes the integral diverge, so that $\ell = +\infty$.
 
@@ -1240,7 +1242,7 @@ $(t,r,\th,\ph)$. From the transformation law (\ref{e:exk:R_T_Phi_BL}), we have
     \dd\Phi + R \, \dd T = \dd\ph + \frac{r - 2m}{2m^2} \dd t .
 \ee
 The components of $\w{h}$ with respect to Boyer-Lindquist coordinates are then
-immediately deduced from the line element (\ref{e:exk:NEHK_metric}):
+immediately deduced from Eq.~(\ref{e:exk:NEHK_metric}):
 \be \label{e:exk:NEHK_metric_BL}
     \encadre{
     \begin{array}{lll}
@@ -1403,7 +1405,7 @@ Lorentzian metric defined by Eq.~(\ref{e:exk:global_NEHK_metric}) in terms
 of the coordinates $(\tau,y,\th,\psi)$, with $(\tau,y)\in \R^2$ and
 $(\th,\psi)\in(0,\pi)\times(0,2\pi)$ being standard spherical coordinates on $\SS^2$.
 \end{greybox}
-By comparing the line elements (\ref{e:exk:global_NEHK_metric}) and
+By comparing the metrics (\ref{e:exk:global_NEHK_metric}) and
 (\ref{e:neh:AdS4}), with the changes of notation $y\leftrightarrow r$
 and $\psi\leftrightarrow \ph$, we note that
 $(\mathscr{N},\w{h})$ bears some similarities with AdS$_4$, but is
@@ -1415,11 +1417,12 @@ be extended analytically to $r<0$.} $(-\infty, +\infty)$ on $\mathscr{N}$.
 Furthermore, there is a global $(1 + \cos^2\th)$ term in (\ref{e:exk:global_NEHK_metric}),
 the $\D\th^2$ terms differ drastically in the two expressions, the one in
 (\ref{e:exk:global_NEHK_metric}) being not multiplied by $y^2$.
-The $\D\ph^2$ and $\D\psi^2$ are also truely distinct. Moreover, the NHEK line element
+The $\D\ph^2$ and $\D\psi^2$ are also truly distinct. Moreover, the NHEK metric
 contains the off-diagonal term $h_{\tau\psi}$, while
 the AdS$_4$ one is purely diagonal.
 
-The inverse metric takes a rather simple form (cf. the notebook~\ref{s:sam:NEHK_spacetime}
+The inverse NHEK metric $\w{h}^{-1}$
+takes a rather simple form (cf. the notebook~\ref{s:sam:NEHK_spacetime}
 for the computation):
 \be
     h^{\alpha\beta} = \frac{1}{1 + \cos^2\th} \left(
@@ -1699,7 +1702,7 @@ as a consequence of the transformation law (\ref{e:exk:def_R_T_Phi}). Similarly,
 the transformation law (\ref{e:exk:def_global_NHEK}) implies that
 $\w{\eta} = \wpar_\psi$.
 
-A third symmetry apparent on the line element (\ref{e:exk:NEHK_metric})
+A third symmetry apparent on the metric components (\ref{e:exk:NEHK_metric})
 is the invariance under the transformation $(T,R) \mapsto (\alpha T,\, R/\alpha)$,
 for any $\alpha > 0$.
 Such transformations, which are called \defin{squeeze mappings}\index{squeeze mapping}, or
