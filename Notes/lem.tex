@@ -266,7 +266,7 @@ The simplest non-constant choice is
 $\tau_0(\chi) = \chi$. To summarize, the
 three functions of $\chi$ determining the solution are set to
 \be
-    m(\chi)=m=\mathrm{const},\qquad f(\chi) = 1 \qquad\mbox{and}\qquad \tau_0(\chi) = \chi .
+    f(\chi) = 1, \qquad m(\chi)=m=\mathrm{const} \qand \tau_0(\chi) = \chi .
 \ee
 Equation~(\ref{e:lem:sol_E_zero}), with the above values for $m(\chi)$ and $\tau_0(\chi)$,
 yields
@@ -475,7 +475,7 @@ Allvar Gullstrand\index{Gullstrand, A.} (1911 laureate of the Nobel Prize in Med
 
 \subsection{Pressureless collapse of a star from rest}
 
-As an application of the general Lemaître-Tolman framework, let us consider
+Let us consider
 a spherical star in hydrostatic equilibrium that suddenly looses any
 pressure support to counterbalance gravity. This roughly models the astrophysical
 scenario of gravitational collapse\index{gravitational!collapse}
@@ -484,7 +484,7 @@ end of thermonuclear evolution, a phenomon which can ultimately gives birth
 to a supernova\index{supernova} if some bounce occurs. In this astrophysical event, the
 pressure never vanishes, but after the collapse has reached a certain stage, it
 plays a negligle dynamical role, so that the pressureless (dust) approximation
-is quite good.
+developed in this chapter is quite good.
 
 Given the assumed spherical symmetry, the spacetime metric outside the star
 is Schwarzschild metric, by virtue of Birkhoff's theorem (cf. Sec.~\ref{s:lem:Schwarzschild}).
@@ -545,15 +545,36 @@ depicts it for various values of $m_0/r_0$.
 The metric (\ref{e:lem:OS:exterior_metric}) is valid only for $r \geq r_{\rm s}(\ti)$.
 The metric inside the star is given by one of the solutions
 of the Lemaître-Tolman equations given in Sec.~\ref{s:lem:sol_lambda_zero}.
-Actually only the solutions with $E(\chi)<0$, i.e. given by Eq.~(\ref{e:lem:sol_E_neg}),
-are to be considered because they are the only one that allow a departure
+Actually only the solutions with $E(\chi)<0$, i.e. those given by Eq.~(\ref{e:lem:sol_E_neg}),
+are to be considered because they are the only ones allowing a collapse starting
 from rest.
 
-In addition to the hypothesis that the collapse starts from rest, let us
-assume that the ``star'' is \emph{homogeneous}, i.e. that the density
+As stressed in Sec.~\ref{s:lem:sol_lambda_zero}, formula~(\ref{e:lem:sol_E_neg}),
+in conjunction with Eqs.~(\ref{e:lem:LTeqs2}) and
+(\ref{e:lem:metric_Lemaitre}),
+defines an infinity of solutions depending on the functions
+$f(\chi)$, $m(\chi)$ and $\tau_0(\chi)$, which can be chosen arbitrarily.
+We shall actually focus on the simplest of these solutions, which is that
+describing a \emph{homogeneous} star, i.e. an object whose density
 $\rho$ in the matter frame, as defined by Eq.~(\ref{e:lem:T_pressureless}),
 is constant at any given proper time $\tau$. In other words, $\rho$, which
-is a priori a function of $(\tau,\chi)$, must be a function of $\tau$ only.
+is a priori a function of $(\tau,\chi)$, is actually a function of $\tau$ only.
+This is certainly a crude approximation of a real star (or stellar iron core),
+which has a non-constant density profile.
+
+As we are going to see, the homegeneous dust star collapse is obtained by the
+following choice of the free functions:
+\be
+    f(\chi) = \cos\chi,\qquad
+    m(\chi) = \frac{a_0}{2} \sin^3\chi
+    \qand \tau_0(\chi) = 0 ,
+\ee
+with
+\be
+    a_0 := \sqrt{\frac{r_0^3}{2 m_0}} .
+\ee
+
+
 
 
 \subsection{Black hole formation}
