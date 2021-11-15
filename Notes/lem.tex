@@ -192,7 +192,7 @@ to general relativity and cosmology.
 \end{hist}
 
 
-\subsection{Solutions for a vanishing cosmological constant}
+\subsection{Solutions for a vanishing cosmological constant} \label{s:lem:sol_lambda_zero}
 
 In the remaining of this chapter, we assume $\Lambda=0$, since we are mainly
 interested in gravitational collapse in asymptotically flat spacetimes.
@@ -471,8 +471,92 @@ Paul Painlevé\index{Painlevé, P.} \cite{Painl1921}, as well as by the Swedish 
 Allvar Gullstrand\index{Gullstrand, A.} (1911 laureate of the Nobel Prize in Medicine) in 1922 \cite{Gulls1922}.
 \end{hist}
 
-\section{Oppenheimer-Snyder solution}
+\section{Oppenheimer-Snyder collapse}
 
+\subsection{Pressureless collapse of a star from rest}
+
+As an application of the general Lemaître-Tolman framework, let us consider
+a spherical star in hydrostatic equilibrium that suddenly looses any
+pressure support to counterbalance gravity. This roughly models the astrophysical
+scenario of gravitational collapse\index{gravitational!collapse}
+of the iron core of a massive star at the
+end of thermonuclear evolution, a phenomon which can ultimately gives birth
+to a supernova\index{supernova} if some bounce occurs. In this astrophysical event, the
+pressure never vanishes, but after the collapse has reached a certain stage, it
+plays a negligle dynamical role, so that the pressureless (dust) approximation
+is quite good.
+
+Given the assumed spherical symmetry, the spacetime metric outside the star
+is Schwarzschild metric, by virtue of Birkhoff's theorem (cf. Sec.~\ref{s:lem:Schwarzschild}).
+Let us then characterize the star by its gravitational mass $m_0$ and its
+areal radius\footnote{Cf. Sec.~\ref{s:sch:static_spher}.} $r_0$ at the start of the collapse; $m_0$
+is nothing but the mass parameter of the Schwarzschild metric. It stays
+constant during all the collapse.
+We shall describe the spacetime exterior
+to the star by means the ingoing Eddington-Finkelstein coordinates (IEF)
+$(\ti, r, \th,\ph)$
+introduced in Sec.~\ref{s:sch:EF_coord}, because they are regular on the
+black hole event horizon, contrary to Schwarzschild-Droste coordinates.
+The exterior metric is then given by Eq.~(\ref{e:sch:Schwarz_metric_EF}) with
+$m=m_0$:
+\be \label{e:lem:OS:exterior_metric}
+    \w{g} =
+            -\left( 1 - \frac{2 m_0}{r} \right)\, \dd \ti^2
+            + \frac{4m_0}{r} \, \dd \ti \, \dd r
+            + \left( 1 + \frac{2 m_0}{r} \right)\, \dd r^2
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
+\ee
+
+Let us denote by $r_{\rm s}(\tau)$ the areal radius of the star, i.e. the coordinate $r$
+of its surface, as a function of the proper time $\tau$ of a matter particle
+at the surface of the star. If the origin of $\tau$ is set to
+the start of the collapse, we have thus
+\be
+    r_{\rm s}(0) = r_0.
+\ee
+Due to the pressureless hypothesis, the surface particles follow timelike radial geodesics
+of Schwarzschild spacetime, as studied in Sec.~\ref{s:ges:radial_free_fall}.
+Since the collapse starts from rest, the function $r_{\rm s}(\tau)$ is
+given by the parametric expression (\ref{e:ges:sol_radial_infall}):
+\be \label{e:lem:OS:evol_star_surf}
+    \left\{ \begin{array}{l}
+    \displaystyle\tau = \sqrt{\frac{r_0^3}{8 m_0}}  \left( \eta + \sin\eta \right) \\[3ex]
+    \displaystyle r_{\rm s}(\tau) = \frac{r_0}{2} \left( 1 + \cos\eta \right)
+    \end{array} \right.
+    \qquad 0 \leq \eta \leq \pi .
+\ee
+The IEF coordinate time $\ti$ corresponding to the surface proper time $\tau$
+is given by Eq.~(\ref{e:ges:sol_radial_infall_ti}):
+\be \label{e:lem:OS:ti_star_surf}
+     \ti = 2m_0 \left\{ \sqrt{\frac{r_0}{2m_0} - 1} \left[ \eta + \frac{r_0}{4m_0}
+    (\eta + \sin\eta) \right]
+    +  2 \ln \left[ \cos\frac{\eta}{2}  + \left(\frac{r_0}{2m_0} - 1\right)^{-1/2} \sin \frac{\eta}{2} \right] \right\}  ,
+\ee
+where $\ti = 0$ is assumed at the start of the collapse.
+Note that by combining Eqs.~(\ref{e:lem:OS:evol_star_surf}) and (\ref{e:lem:OS:ti_star_surf}),
+one can obtain $r_s = r_s(\ti)$, i.e. the evolution law of the stellar surface
+in terms of the IEF coordinate time $\ti$.
+The right panel in Fig.~\ref{f:ges:radial_infall} (with $m=m_0$)
+depicts it for various values of $m_0/r_0$.
+
+
+\subsection{Oppenheimer-Snyder solution}
+
+The metric (\ref{e:lem:OS:exterior_metric}) is valid only for $r \geq r_{\rm s}(\ti)$.
+The metric inside the star is given by one of the solutions
+of the Lemaître-Tolman equations given in Sec.~\ref{s:lem:sol_lambda_zero}.
+Actually only the solutions with $E(\chi)<0$, i.e. given by Eq.~(\ref{e:lem:sol_E_neg}),
+are to be considered because they are the only one that allow a departure
+from rest.
+
+In addition to the hypothesis that the collapse starts from rest, let us
+assume that the ``star'' is \emph{homogeneous}, i.e. that the density
+$\rho$ in the matter frame, as defined by Eq.~(\ref{e:lem:T_pressureless}),
+is constant at any given proper time $\tau$. In other words, $\rho$, which
+is a priori a function of $(\tau,\chi)$, must be a function of $\tau$ only.
+
+
+\subsection{Black hole formation}
 
 
 
