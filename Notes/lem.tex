@@ -242,14 +242,21 @@ for $E<0$, it sets the value of $\tau$ for which $r$ takes its maximal value
 \noindent\emph{Exercise:} prove that each of formulas (\ref{e:lem:sol_E_pos})-(\ref{e:lem:sol_E_neg}) provides
 a solution of Eq.~(\ref{e:lem:1dim_mechanical}).
 
-The procedure to get a full solution is (i) choose arbitrary functions
+We may summarize the above results by
+\begin{greybox}
+The procedure to get a full solution of spherical dust collapse with $\Lambda=0$ is
+\begin{enumerate}
+\item choose arbitrary functions
 $f(\chi)$, $m(\chi)$ and $\tau_0(\chi)$;
-(ii) evaluate $E(\chi)$ via (\ref{e:lem:E_f_chi}); (iii) depending of
+\item evaluate $E(\chi)$ via (\ref{e:lem:E_f_chi});
+\item depending of
 on the value of $E(\chi)$, use (\ref{e:lem:sol_E_pos}), (\ref{e:lem:sol_E_zero})
 or (\ref{e:lem:sol_E_neg}) to get the solution for $r(\tau,\chi)$;
-(iv) plug this solution into the remaining Lemaître-Tolman equation,
+\item plug this solution into the remaining Lemaître-Tolman equation,
 Eq.~(\ref{e:lem:LTeqs2}), to get $\rho(\tau,\chi)$ and into
 (\ref{e:lem:metric_Lemaitre}) to get the metric tensor.
+\end{enumerate}
+\end{greybox}
 
 \subsection{Schwarzschild solution in Lemaître coordinates} \label{s:lem:Schwarzschild}
 
@@ -475,21 +482,23 @@ Allvar Gullstrand\index{Gullstrand, A.} (1911 laureate of the Nobel Prize in Med
 
 \subsection{Pressureless collapse of a star from rest}
 
-Let us consider
+An important example of dust collapse is that of
 a spherical star in hydrostatic equilibrium that suddenly looses any
 pressure support to counterbalance gravity. This roughly models the astrophysical
-scenario of gravitational collapse\index{gravitational!collapse}
+phenomenon of gravitational collapse\index{gravitational!collapse}
 of the iron core of a massive star at the
-end of thermonuclear evolution, a phenomon which can ultimately gives birth
+end of thermonuclear evolution, which can ultimately give birth
 to a supernova\index{supernova} if some bounce occurs. In this astrophysical event, the
 pressure never vanishes, but after the collapse has reached a certain stage, it
 plays a negligle dynamical role, so that the pressureless (dust) approximation
 developed in this chapter is quite good.
 
-Given the assumed spherical symmetry, the spacetime metric outside the star
-is Schwarzschild metric, by virtue of Birkhoff's theorem (cf. Sec.~\ref{s:lem:Schwarzschild}).
-Let us then characterize the star by its gravitational mass $m_0$ and its
-areal radius\footnote{Cf. Sec.~\ref{s:sch:static_spher}.} $r_0$ at the start of the collapse; $m_0$
+Given the assumed spherical symmetry, Birkhoff's theorem (cf. Sec.~\ref{s:lem:Schwarzschild})
+implies that the spacetime metric outside the star
+is Schwarzschild metric.
+Let us then characterize the star by its areal radius $r_0$
+(i.e. the Schwarzschild-Droste coordinate $r$ of the star's surface, cf. Sec.~\ref{s:sch:static_spher})
+at the start of the collapse and its gravitational mass $m_0$. The latter
 is nothing but the mass parameter of the Schwarzschild metric. It stays
 constant during all the collapse.
 We shall describe the spacetime exterior
@@ -510,21 +519,22 @@ $m=m_0$:
 Let us denote by $r_{\rm s}(\tau)$ the areal radius of the star, i.e. the coordinate $r$
 of its surface, as a function of the proper time $\tau$ of a matter particle
 at the surface of the star. If the origin of $\tau$ is set to
-the start of the collapse, we have thus
+the start of the collapse, we have
 \be
     r_{\rm s}(0) = r_0.
 \ee
 Due to the pressureless hypothesis, the surface particles follow timelike radial geodesics
 of Schwarzschild spacetime, as studied in Sec.~\ref{s:ges:radial_free_fall}.
 Since the collapse starts from rest, the function $r_{\rm s}(\tau)$ is
-given by the parametric expression (\ref{e:ges:sol_radial_infall}):
+given by the geodesic solution (\ref{e:ges:sol_radial_infall}):
 \be \label{e:lem:OS:evol_star_surf}
     \left\{ \begin{array}{l}
     \displaystyle\tau = \sqrt{\frac{r_0^3}{8 m_0}}  \left( \eta + \sin\eta \right) \\[3ex]
     \displaystyle r_{\rm s}(\tau) = \frac{r_0}{2} \left( 1 + \cos\eta \right)
     \end{array} \right.
-    \qquad 0 \leq \eta \leq \pi .
+    \qquad 0 \leq \eta \leq \pi ,
 \ee
+where the parameter $\eta$ is zero at the start of the collapse and $\pi$ at its end.
 The IEF coordinate time $\ti$ corresponding to the surface proper time $\tau$
 is given by Eq.~(\ref{e:ges:sol_radial_infall_ti}):
 \be \label{e:lem:OS:ti_star_surf}
@@ -544,7 +554,7 @@ depicts it for various values of $m_0/r_0$.
 
 The metric (\ref{e:lem:OS:exterior_metric}) is valid only for $r \geq r_{\rm s}(\ti)$.
 The metric inside the star is given by one of the solutions
-of the Lemaître-Tolman equations given in Sec.~\ref{s:lem:sol_lambda_zero}.
+of the Lemaître-Tolman system given in Sec.~\ref{s:lem:sol_lambda_zero}.
 Actually only the solutions with $E(\chi)<0$, i.e. those given by Eq.~(\ref{e:lem:sol_E_neg}),
 are to be considered because they are the only ones allowing a collapse starting
 from rest.
@@ -570,9 +580,64 @@ following choice of the free functions:
     \qand \tau_0(\chi) = 0 ,
 \ee
 with
-\be
+\be \label{e:lem:OS:a0_m0_r0}
     a_0 := \sqrt{\frac{r_0^3}{2 m_0}} .
 \ee
+The above choice of $f(\chi)$ leads to $2 E(\chi) = -\sin^2\chi$
+[cf. Eq.~(\ref{e:lem:E_f_chi})], so that $E(\chi) < 0$ for $\chi>0$
+and the solution to be considered is (\ref{e:lem:sol_E_neg}).
+The prefactors are $m(\chi)/|2E(\chi)|^{3/2} = a_0/2$ and
+$m(\chi)/|2E(\chi)| = (a_0/2) \sin\chi$, so that we get, taking into account
+the choice $\tau_0(\chi) = 0$,
+\be \label{s:lem:OS:tau_r_eta}
+    \left\{ \begin{array}{l}
+    \displaystyle\tau =  \frac{a_0}{2} \left( \eta + \sin\eta \right) \\[2ex]
+    \displaystyle r(\tau,\chi) = \frac{a_0}{2} \sin\chi \left( 1 + \cos\eta \right)
+    \end{array} \right.
+    \qquad 0 \leq \eta \leq \pi .
+\ee
+We note that $\tau$ depends only on $\eta$ and not on $\chi$, as in the
+general solution (\ref{e:lem:sol_E_neg}). Moreover, thanks to the choice
+(\ref{e:lem:OS:a0_m0_r0}), $\tau$ matches the proper time at the surface
+of the star as given by Eq.~(\ref{e:lem:OS:evol_star_surf}).
+The areal radii at the surface must match as well. Let us denote by
+$\chi_{\rm s}$ the value of $\chi$ at the stellar surface. The
+matching of the surface areal radii given by Eqs.~(\ref{e:lem:OS:evol_star_surf})
+and (\ref{s:lem:OS:tau_r_eta}) implies $r_0 = \sqrt{r_0^3/2m_0}\sin\chi_{\rm s}$,
+from which we get the relation between $\chi_{\rm s}$ and
+$(m_0, r_0)$:
+\be \label{e:lem:OS:chis_m0_r0}
+    \chi_{\rm s} = \arcsin\sqrt{\frac{2 m_0}{r_0}} .
+\ee
+Hence $\chi_{\rm s}$ is a function of the dimensionless ratio $m_0/r_0$, which is the
+\defin{compactness}\index{compactness} of the initial star. Moreover
+Eq.~(\ref{e:lem:OS:chis_m0_r0}) along with $\chi_{\rm s}>0$ implies
+$\chi_{\rm s} < \pi / 2$. The limit $\pi/2$ cannot be achieved because it
+would correspond to $r_0 = 2 m_0$, which is the areal radius of the black hole
+horizon in Schwarzschild geometry. The range of the comoving coordinate $\chi$
+in the interior of the star is thus
+\be
+    0 \leq \chi \leq \chi_{\rm s} < \frac{\pi}{2} ,
+\ee
+with $\chi=0$ locating the center, since it corresponds to $r=0$ by
+virtue of Eq.~(\ref{s:lem:OS:tau_r_eta}).
+
+The metric factor $a(\tau,\chi)$, which appears in Eq.~(\ref{e:lem:metric_sync_coord}),
+is deduced from Eq.~(\ref{e:lem:a_f_dr}), with $\dert{r}{\chi}$ computed
+from expression (\ref{s:lem:OS:tau_r_eta}); we get a function of $\tau$
+only, which we rewrite as $a(\tau)$:
+\be
+    a(\tau) = \frac{a_0}{2} \left( 1 + \cos\eta \right) .
+\ee
+We may then rewrite the second equation in (\ref{s:lem:OS:tau_r_eta}) as
+$r(\tau,\chi) = a(\tau) \sin\chi$, so that the metric
+expression (\ref{e:lem:metric_sync_coord}) inside the star takes the form
+\be
+   \w{g} = - \dd\tau^2 + a(\tau)^2 \left[ \dd\chi^2
+        + \sin^2\chi \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right] .
+\ee
+We recognize a \defin{Friedmann-Lemaître-Robertson-Walker (FLRW) metric}\index{Friedmann-Lemaître-Robertson-Walker metric}\index{FLRW metric} describing a closed universe. This is not so surprising since FLRW metrics are solution of Einstein equations based on the hypothesis of homogeneity of spatial slices (cf. e.g. Chap.~3 of Ref.~\cite{PeterU09}).
+
 
 
 
