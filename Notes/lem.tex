@@ -574,7 +574,7 @@ which has a non-constant density profile.
 
 As we are going to see, the homegeneous dust star collapse is obtained by the
 following choice of the free functions:
-\be
+\be \label{e:lem:OS:free_func}
     f(\chi) = \cos\chi,\qquad
     m(\chi) = \frac{a_0}{2} \sin^3\chi
     \qand \tau_0(\chi) = 0 ,
@@ -589,11 +589,13 @@ and the solution to be considered is (\ref{e:lem:sol_E_neg}).
 The prefactors are $m(\chi)/|2E(\chi)|^{3/2} = a_0/2$ and
 $m(\chi)/|2E(\chi)| = (a_0/2) \sin\chi$, so that we get, taking into account
 the choice $\tau_0(\chi) = 0$,
-\be \label{s:lem:OS:tau_r_eta}
+\be \label{e:lem:OS:tau_r_eta}
+    \encadre{
     \left\{ \begin{array}{l}
     \displaystyle\tau =  \frac{a_0}{2} \left( \eta + \sin\eta \right) \\[2ex]
     \displaystyle r(\tau,\chi) = \frac{a_0}{2} \sin\chi \left( 1 + \cos\eta \right)
     \end{array} \right.
+    }
     \qquad 0 \leq \eta \leq \pi .
 \ee
 We note that $\tau$ depends only on $\eta$ and not on $\chi$, as in the
@@ -603,7 +605,7 @@ of the star as given by Eq.~(\ref{e:lem:OS:evol_star_surf}).
 The areal radii at the surface must match as well. Let us denote by
 $\chi_{\rm s}$ the value of $\chi$ at the stellar surface. The
 matching of the surface areal radii given by Eqs.~(\ref{e:lem:OS:evol_star_surf})
-and (\ref{s:lem:OS:tau_r_eta}) implies $r_0 = \sqrt{r_0^3/2m_0}\sin\chi_{\rm s}$,
+and (\ref{e:lem:OS:tau_r_eta}) implies $r_0 = \sqrt{r_0^3/2m_0}\sin\chi_{\rm s}$,
 from which we get the relation between $\chi_{\rm s}$ and
 $(m_0, r_0)$:
 \be \label{e:lem:OS:chis_m0_r0}
@@ -616,25 +618,49 @@ $\chi_{\rm s} < \pi / 2$. The limit $\pi/2$ cannot be achieved because it
 would correspond to $r_0 = 2 m_0$, which is the areal radius of the black hole
 horizon in Schwarzschild geometry. The range of the comoving coordinate $\chi$
 in the interior of the star is thus
-\be
+\be \label{e:lem:OS:range_chi}
     0 \leq \chi \leq \chi_{\rm s} < \frac{\pi}{2} ,
 \ee
 with $\chi=0$ locating the center, since it corresponds to $r=0$ by
-virtue of Eq.~(\ref{s:lem:OS:tau_r_eta}).
+virtue of Eq.~(\ref{e:lem:OS:tau_r_eta}).
+
+The matter density $\rho(\tau,\chi)$ is deduced from Eq.~(\ref{e:lem:LTeqs2}), with the above
+values of $m(\chi)$ and $r(\tau,\chi)$. We get a function of $\tau$ only,
+via $\eta = \eta(\tau)$ [cf. Eq.~(\ref{e:lem:OS:tau_r_eta})],
+which we rewrite as $\rho(\tau)$:
+\be \label{e:lem:OS:rho_tau}
+  \encadre{  \rho(\tau) = \frac{6 m_0}{\pi r_0^3 (1 + \cos\eta)^3} } .
+\ee
+% \rho(\tau) = \frac{3 a_0}{8\pi a(\tau)^3}
+The independence of $\rho$ from $\chi$ confirms that the choice
+(\ref{e:lem:OS:free_func}) leads to a uniform density object, i.e.
+a homogeneous star.
+Let us stress that the homeogeneity is maintained during all the collapse:
+at each instant of matter proper time $\tau$, the density is uniform is all the star.
+\begin{remark}
+In view of Eq.~(\ref{e:lem:OS:evol_star_surf}), we may rewrite Eq.~(\ref{e:lem:OS:rho_tau})
+as
+\be
+    \rho(\tau) = \frac{m_0}{\frac{4}{3}\pi r_{\rm s}(\tau)^3} .
+\ee
+This formula is identical to that giving the mass density of a uniform ball of mass
+$m_0$ and radius $r_{\rm s}(\tau)$ in Newtonian physics (flat spacetime).
+\end{remark}
+
 
 The metric factor $a(\tau,\chi)$, which appears in Eq.~(\ref{e:lem:metric_sync_coord}),
 is deduced from Eq.~(\ref{e:lem:a_f_dr}), with $\dert{r}{\chi}$ computed
-from expression (\ref{s:lem:OS:tau_r_eta}); we get a function of $\tau$
+from expression (\ref{e:lem:OS:tau_r_eta}); as for $\rho$, we get a function of $\tau$
 only, which we rewrite as $a(\tau)$:
-\be
-    a(\tau) = \frac{a_0}{2} \left( 1 + \cos\eta \right) .
+\be \label{e:lem:OS:a_tau}
+   \encadre{ a(\tau) = \frac{a_0}{2} \left( 1 + \cos\eta \right) }.
 \ee
-We may then rewrite the second equation in (\ref{s:lem:OS:tau_r_eta}) as
+We may then rewrite the second equation in (\ref{e:lem:OS:tau_r_eta}) as
 $r(\tau,\chi) = a(\tau) \sin\chi$, so that the metric
 expression (\ref{e:lem:metric_sync_coord}) inside the star takes the form
 \be \label{e:lem:OS:g_interior_tau}
-   \w{g} = - \dd\tau^2 + a(\tau)^2 \left[ \dd\chi^2
-        + \sin^2\chi \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right] .
+  \encadre{ \w{g} = - \dd\tau^2 + a(\tau)^2 \left[ \dd\chi^2
+        + \sin^2\chi \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right]  } .
 \ee
 We recognize a \defin{Friedmann-Lemaître-Robertson-Walker (FLRW) metric}\index{Friedmann-Lemaître-Robertson-Walker metric}\index{FLRW metric} describing a closed universe. This is not so surprising since FLRW metrics are solution of Einstein equations based on the hypothesis of homogeneity of spatial slices (cf. e.g. Chap.~3 of Ref.~\cite{PeterU09}).
 We may use $\eta$, instead of $\tau$, as the time coordinate inside the star, thanks to the
@@ -642,34 +668,32 @@ relation
 \be
     \dd\tau = \frac{a_0}{2} (1 + \cos\eta) \dd\eta ,
 \ee
-which follows from (\ref{s:lem:OS:tau_r_eta}). We then deduce from Eq.~(\ref{e:lem:OS:g_interior_tau})
+which follows from (\ref{e:lem:OS:tau_r_eta}). We then deduce from Eq.~(\ref{e:lem:OS:g_interior_tau})
 that
 \be
-       \w{g} = \frac{a_0^2}{4} (1 + \cos\eta)^2 \left[ - \dd\eta^2 + \dd\chi^2
-        + \sin^2\chi \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right] .
+    \encadre{   \w{g} = \frac{a_0^2}{4} (1 + \cos\eta)^2 \left[ - \dd\eta^2 + \dd\chi^2
+        + \sin^2\chi \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right] } .
 \ee
-Hence, inside the star, the metric is conformal to the metric of the
+The term inside square brackets is nothing but the metric $\tilde{\w{g}}$ of the
 \emph{Einstein cylinder}\index{Einstein!cylinder} introduced in Sec.~\ref{s:glo:conf_complet_Mink}
 [compare Eq.~(\ref{e:glo:tg_Einstein}) with the change of notation $\eta \leftrightarrow \tau$].
+Hence, inside the star, the metric $\w{g}$ is conformal to $\w{\tilde{g}}$:
+$\w{g} = \Omega^2 \w{\tilde{g}}$,
+with the conformal factor $\Omega := a_0/2 (1 + \cos\eta) = a(\tau)$.
 For this reason, $\eta$ is called the \defin{conformal time}\index{conformal!time}\index{time!conformal --}.
+Note that while $\w{\tilde{g}}$
+is a static metric [it obeys Eq.~(\ref{e:sta:static_metric})], $\w{g}$ is not, since
+the conformal factor depends on $\eta$.
 
-Finally, the matter density $\rho$ is deduced from Eq.~(\ref{e:lem:LTeqs2}). Again, we get
-a function of $\tau$ only:
-\be \label{e:lem:OS:rho_tau}
-    \rho(\tau) = \frac{3 a_0}{8\pi a(\tau)^3} = \frac{6 m_0}{\pi r_0^3 (1 + \cos\eta)^3} .
-\ee
-The indepedence of $\rho$ from $\chi$ confirms that the current model is that of
-a homogeneous star.
-
-\begin{remark}
-In view of Eq.~(\ref{e:lem:OS:evol_star_surf}), we may rewrite Eq.~(\ref{e:lem:OS:rho_tau})
-as
-\be
-    \rho(\tau) = \frac{m_0}{\frac{4}{3}\pi r_{\rm s}(\tau)^3} .
-\ee
-This formula is identical to that given the mass density of a uniform ball of mass
-$m_0$ and radius $r_{\rm s}(\tau)$ in Newtonian physics (flat spacetime).
-\end{remark}
+On each hypersurface $\eta=\mathrm{const}$ ($\iff \tau = \mathrm{const}$),
+the 3-metric induced by
+the conformal metric $\w{\tilde{g}}$ is the standard metric of the hypersphere
+$\mathbb{S}^3$, expressed in terms of the hyperspherical coordinates $(\chi,\th,\ph)$.
+On the whole $\mathbb{S}^3$, $\chi$ ranges from $0$ to $\pi$. Since in the
+present case, $\chi \in [0,\chi_{\rm s}]$ [Eq.~(\ref{e:lem:OS:range_chi})],
+we may view each constant proper time slice of the interior of the collapsing
+star as a piece of $\mathbb{S}^3$, scaled by the factor $a(\tau)$
+given by Eq.~(\ref{e:lem:OS:a_tau}).
 
 \subsection{Black hole formation}
 
