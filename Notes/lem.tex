@@ -48,12 +48,14 @@ group action (cf. Sec.~\ref{s:sch:static_spher}), i.e. the metric area of these
 For simplification, we consider only a pressureless matter, in the form of a perfect
 fluid of 4-velocity $\w{u}$ with zero pressure. The matter energy-momentum tensor is then
 \be \label{e:lem:T_pressureless}
-    \w{T} = \rho \uu{u} \otimes \uu{u} ,
+    \w{T} = \rho \, \uu{u} \otimes \uu{u} ,
 \ee
 where $\uu{u}$ is the 1-form metric-dual to the vector field $\w{u}$,
 i.e. the 1-form of components $u_\alpha = g_{\alpha\mu} u^\mu$ [cf. Eq.~(\ref{e:bas:u_dual})],
 and $\rho$ is a scalar field that can be interpreted as the fluid energy density
-measured in the fluid frame. Let us recall that the energy-mometum tensor of a generic
+measured in the fluid frame, by virtue of the identity
+$\rho = \w{T}(\w{u}, \w{u})$, which follows from $\langle \uu{u}, \w{u} \rangle = \w{g}(\w{u},\w{u}) = -1$.
+Let us recall that the energy-mometum tensor of a generic
 \defin{perfect fluid}\index{perfect!fluid}\index{fluid!perfect --} is
 $\w{T} = (\rho + p)\uu{u} \otimes \uu{u} + p \w{g}$, where $p$
 is the fluid pressure. Expression~(\ref{e:lem:T_pressureless}) corresponds thus
@@ -245,7 +247,7 @@ for $E<0$, it sets the value of $\tau$ for which $r$ takes its maximal value
 \noindent\emph{Exercise:} prove that each of formulas (\ref{e:lem:sol_E_pos})-(\ref{e:lem:sol_E_neg}) provides
 a solution of Eq.~(\ref{e:lem:1dim_mechanical}).
 
-We may summarize the above results by
+We may summarize the above results as follows:
 \begin{greybox}
 The procedure to get a full solution of spherical dust collapse with $\Lambda=0$ is
 \begin{enumerate}
@@ -574,7 +576,16 @@ $\rho$ in the matter frame, as defined by Eq.~(\ref{e:lem:T_pressureless}),
 is constant at any given proper time $\tau$. In other words, $\rho$, which
 is a priori a function of $(\tau,\chi)$, is actually a function of $\tau$ only.
 This is certainly a crude approximation of a real star (or stellar iron core),
-which has a non-constant density profile.
+which has a non-constant density profile, but it captures the essential
+features of spherically symmetric collapse giving birth to a black hole.
+This homogeneous solution is usually called
+\defin{Oppenheimer-Snyder collapse}\index{Oppenheimer-Snyder collapse},
+although the solution originally presented by J. Robert Oppenheimer\index{Oppenheimer, J.R.}
+and Hartland Snyder\index{Snyder, H.S.} in 1939 \cite{OppenS1939} was slightly
+different, since it regards the marginally bound case, i.e. the solution $E(\chi) = 0$
+[Eq.~(\ref{e:lem:sol_E_zero})] instead of $E(\chi)<0$ [Eq.~(\ref{e:lem:sol_E_neg})]
+(cf. the historical note below).
+
 
 As we are going to see, the homegeneous dust star collapse is obtained by the
 following choice of the free functions:
@@ -602,8 +613,8 @@ the choice $\tau_0(\chi) = 0$,
     }
     \qquad 0 \leq \eta \leq \pi .
 \ee
-We note that $\tau$ depends only on $\eta$ and not on $\chi$, as in the
-general solution (\ref{e:lem:sol_E_neg}). Moreover, thanks to the choice
+We note that $\tau$ depends only on $\eta$ and not on $\chi$, contrary
+to what happens for the general solution (\ref{e:lem:sol_E_neg}). Moreover, thanks to the choice
 (\ref{e:lem:OS:a0_m0_r0}), $\tau$ matches the proper time at the surface
 of the star as given by Eq.~(\ref{e:lem:OS:evol_star_surf}).
 The areal radii at the surface must match as well. Let us denote by
@@ -666,8 +677,9 @@ as
 \be
     \rho(\tau) = \frac{m_0}{\frac{4}{3}\pi r_{\rm s}(\tau)^3} .
 \ee
-This formula is identical to that giving the mass density of a uniform ball of mass
-$m_0$ and radius $r_{\rm s}(\tau)$ in Newtonian physics (flat spacetime).
+This formula happens to be identical to that giving the mass density of a uniform ball of mass
+$m_0$ and radius $r_{\rm s}(\tau)$ in Newtonian physics (flat spacetime), but there is
+no profound physical significance in this coincidence.
 \end{remark}
 
 
@@ -714,7 +726,7 @@ the conformal factor depends on $\eta$.
 \includegraphics[height=0.55\textheight]{lem_OS_diag_int.pdf}\qquad
 \includegraphics[height=0.6\textheight]{lem_OS_diag_EF.pdf}
 }
-\caption[]{\label{f:lem:OS:diag} \footnotesize
+\caption[]{\label{f:lem:OS:diag_int_EF} \footnotesize
 Spacetime diagrams of the Oppenheimer-Snyder collapse
 in conformal coordinates $(\eta,\chi)$ (left figure, representing only the
 interior)
@@ -742,9 +754,16 @@ $r(\tau,\chi)$ (labelled in units of $m_0$).
 \includegraphics[width=0.55\textwidth]{lem_OS_diag_KS.pdf}\quad
 \includegraphics[width=0.45\textwidth]{lem_OS_diag_KS_zoom.pdf}
 }
-\caption[]{\label{f:lem:OS:diag} \footnotesize
+\caption[]{\label{f:lem:OS:diag_KS} \footnotesize
 Spacetime diagrams of the Oppenheimer-Snyder collapse
 in Kruskal-Szekeres-type coordinates $(T,X)$.
+The colored curves are the same as in Fig.~\ref{f:lem:OS:diag_int_EF}.
+In particular, the magenta curve represents the star at the start of
+the collapse, at $\tau = \tilde{t} = 0$. In addition, solid grey
+lines are hypersurfaces of constant $r$, uniformly sampling $[0, 8m_0]$
+with $\delta r = m_0$ and dashed lines are hypersurfaces of
+constant $\tilde{t}$, uniformly sampling $[0, 16m_0]$ with
+$\delta\tilde{t} = 2 m_0$.
 The right figure is a zoom on the end of the collapse.
 \textsl{[Figures generated by the notebook \ref{s:sam:Oppenheimer_Snyder}]}
 }
@@ -760,6 +779,19 @@ present case, $\chi \in [0,\chi_{\rm s}]$ [Eq.~(\ref{e:lem:OS:range_chi})],
 we may view each constant proper time slice of the interior of the collapsing
 star as a piece of $\mathbb{S}^3$, scaled by the factor $a(\tau)$
 given by Eq.~(\ref{e:lem:OS:a_tau}).
+
+\subsection{Central singularity}
+
+The collapse ends at $\eta = \pi$, since this corresponds to the surface
+areal radius $r_{\rm s}(\tau) = 0$ by virtue of Eq.~(\ref{e:lem:OS:evol_star_surf}).
+Equation~(\ref{e:lem:OS:tau_r_eta}) shows that this also corresponds to $r(\tau,\chi) = 0$ for all
+particles inside the star. The matter proper time $\tau$ at the end of the collapse
+is given by $\eta=\pi$ in Eq.~(\ref{e:lem:OS:tau_r_eta}):
+\be
+    \tau_{\rm end} = \frac{\pi}{2} a_0 = \frac{\pi}{2} \sqrt{\frac{r_0^3}{2 m_0}}
+      = \pi \left( \frac{r_0}{2 m_0} \right)^{3/2} m_0
+      = \pi \frac{m_0}{\sin^3\chi_{\rm s}} .
+\ee
 
 
 
