@@ -623,13 +623,29 @@ matching of the surface areal radii given by Eqs.~(\ref{e:lem:OS:evol_star_surf}
 and (\ref{e:lem:OS:tau_r_eta}) implies $r_0 = \sqrt{r_0^3/2m_0}\sin\chi_{\rm s}$,
 from which we get the relation between $\chi_{\rm s}$ and
 $(m_0, r_0)$:
-\be \label{e:lem:OS:chis_m0_r0}
-    \chi_{\rm s} = \arcsin\sqrt{\frac{2 m_0}{r_0}} .
+\be \label{e:lem:OS:sin_chis_m0_r0}
+    \sin\chi_{\rm s} = \sqrt{\frac{2 m_0}{r_0}} .
 \ee
-Hence $\chi_{\rm s}$ is a function of the dimensionless ratio $m_0/r_0$, which is the
-\defin{compactness}\index{compactness} of the initial star. Moreover
-Eq.~(\ref{e:lem:OS:chis_m0_r0}) along with $\chi_{\rm s}>0$ implies
-$\chi_{\rm s} < \pi / 2$. The limit $\pi/2$ cannot be achieved because it
+This implies $\sin\chi_{\rm s} > 0$ and hence $\chi_{\rm s} \in (0,\pi)$.
+There are actually two solutions of Eq.~(\ref{e:lem:OS:sin_chis_m0_r0})
+for $\chi_{\rm s}$.
+Given that $\arcsin$ is a one-to-one map $[0,1] \to [0,\pi/2]$, they are
+\be \label{e:lem:OS:chis_m0_r0}
+    \chi_{\rm s} = \arcsin\sqrt{\frac{2 m_0}{r_0}}
+\ee
+and $\chi_{\rm s} = \pi - \arcsin\sqrt{2 m_0/r_0}$.
+For the physical situation we have in mind (gravitational collapse of an ``ordinary'' stellar core),
+we shall retain only the solution (\ref{e:lem:OS:chis_m0_r0}), which implies $\chi_{\rm s} \in (0, \pi/2]$.
+The second solution, for which $\chi_{\rm s} \in [\pi/2, \pi)$,    %]$
+will be discussed in Remark~?? below\footnote{For the moment, we can note that such a solution
+would lead to the areal radius $r$ being a decaying function of $\chi$ near $\chi_{\rm s}$,
+since Eq.~(\ref{e:lem:OS:tau_r_eta}) shows that $r(\tau,\chi)$ behaves as $\sin\chi$, which is decaying
+on $(\pi/2,\pi)$. Such a behavior is certainly not expected in an ``ordinary'' star.} .
+Equation~(\ref{e:lem:OS:chis_m0_r0}) show that
+$\chi_{\rm s}$ is a function of the dimensionless ratio $m_0/r_0$, which is the
+\defin{compactness}\index{compactness} of the initial star.
+The upper limit $\pi/2$ can be excluded from the range of
+$\chi_{\rm s}$ since it
 would correspond to $r_0 = 2 m_0$, which is the areal radius of the black hole
 horizon in Schwarzschild geometry. The range of the comoving coordinate $\chi$
 in the interior of the star is thus
@@ -780,11 +796,12 @@ we may view each constant proper time slice of the interior of the collapsing
 star as a piece of $\mathbb{S}^3$, scaled by the factor $a(\tau)$
 given by Eq.~(\ref{e:lem:OS:a_tau}).
 
-\subsection{Central singularity}
+\subsection{Final singularity}
 
 The collapse ends at $\eta = \pi$, since this corresponds to the surface
 areal radius $r_{\rm s}(\tau) = 0$ by virtue of Eq.~(\ref{e:lem:OS:evol_star_surf}).
-Equation~(\ref{e:lem:OS:tau_r_eta}) shows that this also corresponds to $r(\tau,\chi) = 0$ for all
+Equation~(\ref{e:lem:OS:tau_r_eta}) shows that this corresponds as well
+to $r(\tau,\chi) = 0$ for all
 particles inside the star. The matter proper time $\tau$ at the end of the collapse
 is given by $\eta=\pi$ in Eq.~(\ref{e:lem:OS:tau_r_eta}):
 \be
@@ -792,13 +809,18 @@ is given by $\eta=\pi$ in Eq.~(\ref{e:lem:OS:tau_r_eta}):
       = \pi \left( \frac{r_0}{2 m_0} \right)^{3/2} m_0
       = \pi \frac{m_0}{\sin^3\chi_{\rm s}} .
 \ee
-
+Equation~(\ref{e:lem:OS:rho_tau}) with $\eta\to \pi$
+immediately yields an infinite proper energy density at the end of the collapse:
+\be
+    \lim_{\tau\to\tau_{\rm end}} \rho(\tau) = + \infty.
+\ee
+Since $\rho$ is a measurable
 
 
 \subsection{Black hole formation}
 
 
-
+\subsection{Tapped surfaces}
 
 
 
