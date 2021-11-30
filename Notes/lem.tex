@@ -721,7 +721,7 @@ relation
 \ee
 which follows from (\ref{e:lem:OS:tau_r_eta}). We then deduce from Eq.~(\ref{e:lem:OS:g_interior_tau})
 that
-\be
+\be \label{e:lem:OS:g_int}
     \encadre{   \w{g} = \frac{a_0^2}{4} (1 + \cos\eta)^2 \left[ - \dd\eta^2 + \dd\chi^2
         + \sin^2\chi \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right] } .
 \ee
@@ -814,8 +814,31 @@ immediately yields an infinite proper energy density at the end of the collapse:
 \be
     \lim_{\tau\to\tau_{\rm end}} \rho(\tau) = + \infty.
 \ee
-Since $\rho$ is a measurable
-
+Since $\rho$ is a measurable quantity (by comoving observers), this signals
+some physical singularity.
+This corresponds actually to the apparition of a \emph{curvature singularity}
+in the part of spacetime covering the interior of the star (cf. the discussion
+in Sec.~\ref{s:sch:singularities}).
+Indeed, from the interior metric (\ref{e:lem:OS:g_int}), one can
+compute\footnote{See the notebook \ref{s:sam:Oppenheimer_Snyder_curvature} for
+the computation.} curvature scalars like the Ricci scalar
+\be
+    R := R^\mu_{\ \, \mu} = \frac{24}{a_0^2 (1 + \cos\eta)^3} = \frac{6 m_0}{r_{\rm s}(\tau)^3} ,
+\ee
+the ``square'' of the Ricci tensor
+\be
+    R_{\mu\nu} R^{\mu\nu} = \frac{576}{a_0^4 (1 + \cos\eta)^6}
+    =  \frac{36 m_0^2}{r_{\rm s}(\tau)^6}
+\ee
+and the Kretschmann
+scalar\index{Kretschmann scalar! of Oppenheimer-Snyder metric} defined by
+Eq.~(\ref{e:sch:def_Kretschmann}):
+\be
+      K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = \frac{960}{a_0^4 (1 + \cos\eta)^6}
+         = \frac{60 m_0^2}{r_{\rm s}(\tau)^6} .
+\ee
+It is clear that these three curvature invariants diverge when $\eta\to \pi$,
+or equivalently, when $r_{\rm s}(\tau)\to 0$.
 
 \subsection{Black hole formation}
 
