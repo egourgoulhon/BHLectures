@@ -744,7 +744,7 @@ the conformal factor depends on $\eta$.
 }
 \caption[]{\label{f:lem:OS:diag_int_EF} \footnotesize
 Spacetime diagrams of the Oppenheimer-Snyder collapse
-in conformal coordinates $(\eta,\chi)$ (left figure, representing only the
+in conformal coordinates $(\eta,\chi)$ (left figure, depicting only the
 interior)
 and in Eddington-Finkelstein coordinates $(\ti, r)$
 (right figure), for an initial compactness $m_0/r_0 = 1/4$, which corresponds to $\chi_{\rm s} = \pi/4$.
@@ -795,6 +795,28 @@ present case, $\chi \in [0,\chi_{\rm s}]$ [Eq.~(\ref{e:lem:OS:range_chi})],
 we may view each constant proper time slice of the interior of the collapsing
 star as a piece of $\mathbb{S}^3$, scaled by the factor $a(\tau)$
 given by Eq.~(\ref{e:lem:OS:a_tau}).
+If one uses the conformal coordinates $(\eta,\chi)$ to draw a 2-dimensional
+spacetime diagram of the interior, as in the left part of Fig.~\ref{f:lem:OS:diag_int_EF},
+then the radial null geodesics appear as straight lines inclined by $\pm 45^\circ$
+with the horizontal, reflecting the Minkowskian part $- \dd\eta^2 + \dd\chi^2$
+in the metric (\ref{e:lem:OS:g_int}).
+
+To draw a full spacetime diagram of the collapse, we may extend the ingoing
+Eddington-Finkelstein (IEF) coordinates $(\ti,r,\th,\ph)$, used to described the
+Schwarschild exterior of the star to the interior region by demanding
+that relation (\ref{e:lem:OS:ti_star_surf}), which a priori links $\ti$
+to $\eta$ at the stellar surface, holds everywhere in the interior.
+As for the IEF coordinate $r$, it is naturally identified with the areal
+radius $r(\eta,\chi)$ given by Eq.~(\ref{e:lem:OS:tau_r_eta}).
+The resulting spacetime diagram is shown in the right part of Fig.~\ref{f:lem:OS:diag_int_EF}.
+In this one, only the ingoing radial null geodesics in the exterior appear
+as straight lines, as a consequence of the definition of the IEF coordinates
+(cf. Sec.~\ref{s:sch:EF_coord}). The slices of constant proper time $\tau$
+(dashed red lines) appear as horizontal line segments by virtue of the above
+choice for $\ti$ in the interior. In particular, the star at $\tau = 0$
+is depicted by a horizontal magenta segment, as in the $(\eta,\chi)$ diagram
+on the left of the figure.
+
 
 \subsection{Final singularity}
 
@@ -809,6 +831,13 @@ is given by $\eta=\pi$ in Eq.~(\ref{e:lem:OS:tau_r_eta}):
       = \pi \left( \frac{r_0}{2 m_0} \right)^{3/2} m_0
       = \pi \frac{m_0}{\sin^3\chi_{\rm s}} .
 \ee
+Similarly, setting $\eta=\pi$ in Eq.~(\ref{e:lem:OS:ti_star_surf}), we get the value
+of the IEF coordinate $\ti$ at the end of the collapse:
+\be
+     \ti_{\rm end} = 2m_0 \left[ \pi \left(1 +  \frac{r_0}{4m_0} \right) \sqrt{\frac{r_0}{2m_0} - 1}
+     - \ln \left( \frac{r_0}{2m_0} - 1\right) \right] .
+\ee
+
 Equation~(\ref{e:lem:OS:rho_tau}) with $\eta\to \pi$
 immediately yields an infinite proper energy density at the end of the collapse:
 \be
@@ -837,8 +866,25 @@ Eq.~(\ref{e:sch:def_Kretschmann}):
       K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = \frac{960}{a_0^4 (1 + \cos\eta)^6}
          = \frac{60 m_0^2}{r_{\rm s}(\tau)^6} .
 \ee
-It is clear that these three curvature invariants diverge when $\eta\to \pi$,
-or equivalently, when $r_{\rm s}(\tau)\to 0$.
+\begin{remark}
+Although the components of the Riemann and Ricci tensors with respect to the
+coordinates $(\eta,\chi,\th,\ph)$ depend on $\chi$ (cf. the notebook \ref{s:sam:Oppenheimer_Snyder_curvature}),
+the above three scalars are independent
+of it, in full agreement with the homogeneity of the stellar interior at each
+instant $\eta$.
+\end{remark}
+
+It is clear that the above three curvature invariants diverge when $\eta\to \pi$,
+or equivalently, when $r_{\rm s}(\tau)\to 0$. Hence a curvature singularity
+appears in the stellar interior at the end of the collapse.
+It is depicted by the orange zig-zag segment in left spacetime diagram
+of Fig.~\ref{f:lem:OS:diag_int_EF}. This singularity is shrinked to the point
+$(\ti, r) = (\ti_{\rm end}, 0)$ in the IEF diagram on the right part of the figure,
+because $r_{\rm s}(\tau_{\rm end}) = 0$. It is then connected to the
+curvature singularity at $r=0$ of Schwarzschild spacetime, depicted as the
+vertical orange zig-zag segment.
+
+
 
 \subsection{Black hole formation}
 
