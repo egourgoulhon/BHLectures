@@ -851,18 +851,18 @@ in Sec.~\ref{s:sch:singularities}).
 Indeed, from the interior metric (\ref{e:lem:OS:g_int}), one can
 compute\footnote{See the notebook \ref{s:sam:Oppenheimer_Snyder_curvature} for
 the computation.} curvature scalars like the Ricci scalar
-\be
+\be \label{e:lem:OS:Ricci_scal}
     R := R^\mu_{\ \, \mu} = \frac{24}{a_0^2 (1 + \cos\eta)^3} = \frac{6 m_0}{r_{\rm s}(\tau)^3} ,
 \ee
 the ``square'' of the Ricci tensor
-\be
+\be \label{e:lem:OS:Ricci_squared}
     R_{\mu\nu} R^{\mu\nu} = \frac{576}{a_0^4 (1 + \cos\eta)^6}
     =  \frac{36 m_0^2}{r_{\rm s}(\tau)^6}
 \ee
 and the Kretschmann
 scalar\index{Kretschmann scalar! of Oppenheimer-Snyder metric} defined by
 Eq.~(\ref{e:sch:def_Kretschmann}):
-\be
+\be \label{e:lem:OS:Kretschmann}
       K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = \frac{960}{a_0^4 (1 + \cos\eta)^6}
          = \frac{60 m_0^2}{r_{\rm s}(\tau)^6} .
 \ee
@@ -884,12 +884,29 @@ because $r_{\rm s}(\tau_{\rm end}) = 0$. It is then connected to the
 curvature singularity at $r=0$ of Schwarzschild spacetime, depicted as the
 vertical orange zig-zag segment.
 
+\begin{remark}
+The reader might be puzzled by the Kretschmann scalar (\ref{e:lem:OS:Kretschmann})
+being different from that of Schwarzschild spacetime, as given by Eq.~(\ref{e:sch:value_Kretschmann}):
+$K_{\rm Schwarz} = 48 m^2/r^6$. Both
+have the same $m^2/r^6$ structure but they differ by the numerical prefactor: 60 versus 48.
+This actually reflects the discontinuity of the Riemann tensor between the stellar interior
+and the Schwarzschild exterior. This discontinuity is enforced on the Ricci part of the Riemann
+tensor via the Einstein equation and the uniform density of the star, the latter resulting in
+a jump of the energy-momentum tensor $\w{T}$ between the value (\ref{e:lem:T_pressureless})
+and zero (vacuum exterior). The difference is even more dramatic on the Ricci scalar
+(\ref{e:lem:OS:Ricci_scal})
+and the square of the Ricci tensor (\ref{e:lem:OS:Ricci_squared}), since they are
+identically zero in the Schwarzschild exterior. In other words, the Einstein equation
+implies that the metric tensor of the Oppenheimer-Snyder solution is not $C^2$.
+For an actual stellar core, there is a density gradient so that $\rho=0$
+at the surface and the metric tensor is $C^2$ (at least).
+\end{remark}
 
 
 \subsection{Black hole formation}
 
 
-\subsection{Tapped surfaces}
+\subsection{Trapped surfaces}
 
 
 
