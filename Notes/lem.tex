@@ -624,7 +624,7 @@ and (\ref{e:lem:OS:tau_r_eta}) implies $r_0 = \sqrt{r_0^3/2m_0}\sin\chi_{\rm s}$
 from which we get the relation between $\chi_{\rm s}$ and
 $(m_0, r_0)$:
 \be \label{e:lem:OS:sin_chis_m0_r0}
-    \sin\chi_{\rm s} = \sqrt{\frac{2 m_0}{r_0}} .
+    \encadre{ \sin\chi_{\rm s} = \sqrt{\frac{2 m_0}{r_0}} }.
 \ee
 This implies $\sin\chi_{\rm s} > 0$ and hence $\chi_{\rm s} \in (0,\pi)$.
 There are actually two solutions of Eq.~(\ref{e:lem:OS:sin_chis_m0_r0})
@@ -904,6 +904,36 @@ at the surface and the metric tensor is $C^2$ (at least).
 
 
 \subsection{Black hole formation}
+
+Since the surface areal radius $r_{\rm s}(\tau)$ is a monotonically decreasing function
+of $\tau$ (cf. Fig.~\ref{f:lem:OS:rs_tho}), there exists a unique value $\tau_*$ of
+$\tau$ for which $r_{\rm s}(\tau_*) = 2 m_0$. For $\tau>\tau_*$, $r_{\rm s}(\tau) < 2 m_0$
+and the exterior
+Schwarzschild spacetime contains a black hole event horizon $\Hor$, located
+at $r=2m_0$ in IEF coordinates (the vertical black segment in Fig.~\ref{f:lem:OS:diag_int_EF}).
+The value of $\tau_*$ is determined through the corresponding
+conformal time $\eta_*$ via Eq.~(\ref{e:lem:OS:evol_star_surf}):
+\[
+    \frac{r_0}{2} (1 + \cos\eta_*) = 2 m_0 \iff
+    \cos\eta_* = 4\frac{m_0}{r_0} - 1 = 2 \sin^2\chi_{\rm s} - 1 = - \cos(2\chi_{\rm s}) ,
+\]
+where use has been made of Eq.~(\ref{e:lem:OS:sin_chis_m0_r0}). Given that $0<\eta_*<\pi$
+and $0<\chi_{\rm s} < \pi/2$, the solution is
+\be
+    \eta_* = \pi - 2 \chi_{\rm s} .
+\ee
+Equation~(\ref{e:lem:OS:evol_star_surf}) yields then
+\be
+    \tau_* = m_0 \frac{\pi - 2 \chi_{\rm s} + \sin(2\chi_{\rm s})}{\sin^3\chi_{\rm s}}
+     = \tau_{\rm end} \left( 1 - \frac{2\chi_{\rm s} - \sin(2\chi_{\rm s})}{\pi} \right) .
+\ee
+
+
+For $\tau < \tau_*$, the event horizon must be located inside the collapsing star.
+To determine it, let us consider the outgoing radial null geodesics, which are drawn as solid green curves
+in Fig.~\ref{f:lem:OS:diag_int_EF}. Their equations are pretty simple in terms of
+the coordinates $(\eta,\chi)$:
+
 
 
 \subsection{Trapped surfaces}
