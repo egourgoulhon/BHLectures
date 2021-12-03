@@ -533,14 +533,23 @@ of Schwarzschild spacetime, as studied in Sec.~\ref{s:ges:radial_free_fall}.
 Since the collapse starts from rest, the function $r_{\rm s}(\tau)$ is
 given by the geodesic solution (\ref{e:ges:sol_radial_infall}):
 \be \label{e:lem:OS:evol_star_surf}
-    \left\{ \begin{array}{l}
+    \encadre{ \left\{ \begin{array}{l}
     \displaystyle\tau = \sqrt{\frac{r_0^3}{8 m_0}}  \left( \eta + \sin\eta \right) \\[3ex]
     \displaystyle r_{\rm s}(\tau) = \frac{r_0}{2} \left( 1 + \cos\eta \right)
-    \end{array} \right.
+    \end{array} \right. }
     \qquad 0 \leq \eta \leq \pi ,
 \ee
 where the parameter $\eta$ is zero at the start of the collapse and $\pi$ at its end.
-The function $r_{\rm s}(\tau)$ is plotted in Fig.~\ref{f:lem:OS:rs_tho}.
+The function $r_{\rm s}(\tau)$ is plotted in Fig.~\ref{f:lem:OS:rs_tho} (right).
+Its graph is an arch of cycloid\index{cycloid}, the parameter $\eta$ corresponding
+to the angle of rotation of the rolling circle defining the cycloid.
+\begin{remark} \label{r:lem:OS:cycloid}
+The ``cycloidal'' evolution law $r_{\rm s}(\tau)$, as given by Eq.~(\ref{e:lem:OS:evol_star_surf}),
+is identical to that of dust ball in Newtonian gravity, with $\tau$ being then the (universal) Newtonian
+time. This coincidence follows from the Lemaître-Tolman equation (\ref{e:lem:1dim_mechanical})
+being identical to the first integral of a purely radial motion in Newtonian gravity.
+\end{remark}
+
 The IEF coordinate time $\ti$ corresponding to the surface proper time $\tau$
 is given by Eq.~(\ref{e:ges:sol_radial_infall_ti}):
 \be \label{e:lem:OS:ti_star_surf}
@@ -638,7 +647,7 @@ For the physical situation we have in mind (gravitational collapse of an ``ordin
 we shall retain only the solution (\ref{e:lem:OS:chis_m0_r0}), which implies $\chi_{\rm s} \in (0, \pi/2]$.
 The second solution, for which $\chi_{\rm s} \in [\pi/2, \pi)$,    %]$
 will be discussed in Remark~?? below\footnote{For the moment, we can note that such a solution
-would lead to the areal radius $r$ being a decaying function of $\chi$ near $\chi_{\rm s}$,
+would lead to the areal radius $r$ being a decreasing function of $\chi$ near $\chi_{\rm s}$,
 since Eq.~(\ref{e:lem:OS:tau_r_eta}) shows that $r(\tau,\chi)$ behaves as $\sin\chi$, which is decaying
 on $(\pi/2,\pi)$. Such a behavior is certainly not expected in an ``ordinary'' star.} .
 Equation~(\ref{e:lem:OS:chis_m0_r0}) show that
@@ -698,6 +707,13 @@ $m_0$ and radius $r_{\rm s}(\tau)$ in Newtonian physics (flat spacetime), but th
 no profound physical significance in this coincidence.
 \end{remark}
 
+It is instructive to express the initial energy density, $\rho_0 := \rho(\tau=0)$,
+in terms of the geometrical energy/mass unit, $m_0^{-2}$, and the compactness
+angle $\chi_{\rm s}$ by combining Eqs.~(\ref{e:lem:OS:rho_tau}) and
+(\ref{e:lem:OS:sin_chis_m0_r0}):
+\be \label{e:lem:OS:rho0}
+    \rho_0 = \frac{3 \sin^6\chi_{\rm s}}{32\pi m_0^2} .
+\ee
 
 The metric factor $a(\tau,\chi)$, which appears in Eq.~(\ref{e:lem:metric_sync_coord}),
 is deduced from Eq.~(\ref{e:lem:a_f_dr}), with $\dert{r}{\chi}$ computed
@@ -827,10 +843,24 @@ to $r(\tau,\chi) = 0$ for all
 particles inside the star. The matter proper time $\tau$ at the end of the collapse
 is given by $\eta=\pi$ in Eq.~(\ref{e:lem:OS:tau_r_eta}):
 \be
-    \tau_{\rm end} = \frac{\pi}{2} a_0 = \frac{\pi}{2} \sqrt{\frac{r_0^3}{2 m_0}}
+   \encadre{ \tau_{\rm end} = \frac{\pi}{2} a_0 = \pi \sqrt{\frac{r_0^3}{8 m_0}}
       = \pi \left( \frac{r_0}{2 m_0} \right)^{3/2} m_0
-      = \pi \frac{m_0}{\sin^3\chi_{\rm s}} .
+      = \pi \frac{m_0}{\sin^3\chi_{\rm s}}
+      = \sqrt{\frac{3\pi}{32\rho_0}} },
 \ee
+where the last equality has been obtained by using Eq.~(\ref{e:lem:OS:rho0})
+to express $m_0/\sin^3\chi_{\rm s}$ in terms of the initial proper energy density $\rho_0$.
+We note that $\tau_{\rm end}$ is a function of $\rho_0$ only.
+
+\begin{remark}
+The above formulas for the collapse proper time $\tau_{\rm end}$ are identical
+to those giving the collapse time of a spherical ball of dust of mass $m_0$, initial radius
+$r_0$ and initial mean mass density $\rho_0=3 m_0/(4\pi r_0^3)$ in Newtonian gravity.
+This coincidence arises from the
+same cycloidal law for $r_{\rm s}(\tau)$ in both general relativity and Newtonian gravity,
+as already discussed in Remark~\ref{r:lem:OS:cycloid} on p.~\pageref{r:lem:OS:cycloid}.
+\end{remark}
+
 Similarly, setting $\eta=\pi$ in Eq.~(\ref{e:lem:OS:ti_star_surf}), we get the value
 of the IEF coordinate $\ti$ at the end of the collapse:
 \be
@@ -936,7 +966,8 @@ Equation~(\ref{e:lem:OS:evol_star_surf}) yields then
 \begin{example}
 For the compactness $1/4$ considered in
 Figs.~\ref{f:lem:OS:diag_int_EF}-\ref{f:lem:OS:diag_KS}, one has $\chi_{\rm s}=\pi/4$,
-so that $\eta_* = \pi/2$ and $\tau_* = \sqrt{2}(\pi + 2) m_0 \simeq 7.27 m_0$.
+so that $\eta_* = \pi/2$ and
+$\tau_* = \sqrt{2}(\pi + 2) m_0 \simeq 7.27 \, m_0 \simeq 0.82 \, \tau_{\rm end}$.
 \end{example}
 
 For $\tau < \tau_*$, one has $r_{\rm s}(\tau) > 2 m_0$ and the event horizon
@@ -949,8 +980,8 @@ the constant $\eta_{\rm s}$ is the value of $\eta$ when the geodesic
 reaches the surface of the star ($\chi = \chi_{\rm s}$). Radial null geodesics
 for which $\eta_{\rm s} < \eta_*$ emerge out of the star in
 a part of Schwarschild spacetime where $r > 2 m_0$, so that they can espace
-to infinity, while those for which $\eta_{\rm s} > \eta_*$ emerge in the
-black hole region of Schwarzschild spacetime. They are thus trapped and
+to infinity. On the contrary, geodesics having $\eta_{\rm s} > \eta_*$ emerge in the
+black hole region of Schwarzschild spacetime; they are thus trapped and
 eventually end on the curvature singularity at $r=0$. The event horizon
 is generated by the null radial geodesics of the limiting case: $\eta_{\rm s} = \eta_*$.
 Hence, inside the star, the equation of the black hole event horizon $\Hor$
@@ -974,29 +1005,81 @@ In view of Eq.~(\ref{e:lem:OS:Hor_eta_chi}), we may say that
 \begin{greybox}
 The event horizon $\Hor$ appears at the center of the star ($\chi=0$)
 at the conformal time
-\be
-    \eta_{\rm hor} = \pi - 3 \chi_{\rm s}
+\be \label{e:lem:OS:eta_hb}
+    \eta_{\rm hb} = \pi - 3 \chi_{\rm s}
 \ee
 or equivalently at the matter proper time
-\be \label{e:lem:OS:tau_hor}
-  \tau_{\rm hor} = \frac{\pi - 3 \chi_{\rm s} + \sin(3\chi_{\rm s})}{\sin^3\chi_{\rm s}} m_0
-     =  \left( 1 - \frac{3\chi_{\rm s} - \sin(3\chi_{\rm s})}{\pi} \right) \tau_{\rm end} .
+\be \label{e:lem:OS:tau_hb}
+  \tau_{\rm hb} = \frac{\pi - 3 \chi_{\rm s} + \sin(3\chi_{\rm s})}{\sin^3\chi_{\rm s}} m_0
+     =  \left( 1 - \frac{3\chi_{\rm s} - \sin(3\chi_{\rm s})}{\pi} \right) \tau_{\rm end} ,
 \ee
-It then expands according to Eq.~(\ref{e:lem:OS:Hor_eta_chi}) until it reaches the surface
+the label `hb' standing for ``horizon birth''.
+The horizon then expands according to Eq.~(\ref{e:lem:OS:Hor_eta_chi}) until it reaches the surface
 of the star ($\chi=\chi_{\rm s}$) at $\eta = \eta_* = \pi - 2 \chi_{\rm s}$
 or $\tau = \tau_*$ given by Eq.~(\ref{e:lem:OS:tau_star}).
 \end{greybox}
 
 \begin{example}
 Continuing with the example $m_0/r_0=1/4 \iff \chi_{\rm s}=\pi/4$,
-we get $\eta_{\rm hor} = \pi/4$, which corresponds to the origin of the
+we get $\eta_{\rm hb} = \pi/4$, which corresponds to the origin of the
 black straight segment drawn in Fig.~\ref{f:lem:OS:diag_int_EF}, left.
-Equation~(\ref{e:lem:OS:tau_hor}) gives
-$\tau_{\rm hor} = (2 + \pi/\sqrt{2}) m_0 \simeq 4.22 m_0$.
+Equation~(\ref{e:lem:OS:tau_hb}) gives
+$\tau_{\rm hb} = (2 + \pi/\sqrt{2}) m_0 \simeq 4.22 \, m_0 \simeq 0.48 \, \tau_{\rm end}$.
 \end{example}
 
+\begin{figure}
+\centerline{
+\includegraphics[height=0.35\textheight]{lem_OS_rho_hb.pdf}
+}
+\caption[]{\label{f:lem:OS:rho_hb} \footnotesize
+Proper energy density $\rho_{\rm hb}$ at the instant of the black hole
+formation at the center of the star, in units of $m_0^{-2}$,
+as a function of the initial compactness angle $\chi_{\rm s}$.
+\textsl{[Figure generated by the notebook \ref{s:sam:Oppenheimer_Snyder}]}
+}
+\end{figure}
 
 
+The matter proper energy density at the horizon birth,
+i.e. at $\tau = \tau_{\rm hb}$, is obtained by substituting (\ref{e:lem:OS:eta_hb})
+for $\eta$ into Eq.~(\ref{e:lem:OS:rho_tau}); using the identity (\ref{e:lem:OS:sin_chis_m0_r0})
+to express $m_0^3/r_0^3$ in terms of $\chi_{\rm s}$, we get
+\be \label{e:lem:OS:rho_hb}
+    \rho_{\rm hb} := \rho(\tau_{\rm hb}) = \frac{3}{4\pi m_0^2} \frac{\sin^6\chi_{\rm s}}{(1 - \cos(3\chi_{\rm s}))^3} .
+\ee
+It is instructive to take the limit of small initial compactness $m_0/r_0 \ll 1$,
+which corresponds to $\chi_{\rm s} \ll 1$ by virtue of relation~(\ref{e:lem:OS:chis_m0_r0}):
+\be \label{e:lem:OS:rho_hb_small_compact}
+    \rho_{\rm hb}\simeq \frac{2}{243\pi m_0^2} \left( 1 + \frac{5}{4} \chi_{\rm s}^2 \right)
+    + O(\chi_{\rm s}^4) .
+\ee
+We deduce from Eqs.~(\ref{e:lem:OS:rho_hb})-(\ref{e:lem:OS:rho_hb_small_compact}) that
+\be
+    \lim_{\chi_{\rm s}\to 0} \rho_{\rm hb} = \frac{2}{243\pi m_0^2}
+    \simeq 2.62\; 10^{-3} m_0^{-2}
+    \quad\mbox{and}\quad
+    \lim_{\chi_{\rm s}\to \pi/2}  \rho_{\rm hb} = \frac{3}{4\pi m_0^2}
+    \simeq 0.239\, m_0^{-2}.
+\ee
+Between these two limits, $\rho_{\rm hb}$ has a monotonic behavior, as shown in
+Fig.~\ref{f:lem:OS:rho_hb}. In particular, we have
+\be
+    \rho_{\rm hb} < \frac{1}{4 m_0^2} .
+\ee
+Hence
+\begin{greybox}
+By selecting a sufficiently large mass $m_0$, the matter proper energy density
+when the black hole region forms at the center of the collapsing star
+can be made arbitrarily small.
+\end{greybox}
+\begin{example}
+Let us a consider the density of water: $\rho_{\rm hb} = 10^3 \; {\rm kg\, m}^{-3}$.
+By restoring the $G$'s and the $c$'s, the density $m_0^{-2}$ becomes
+$c^6/G^3 m_0^{-2}$.  We get then $m_0 \simeq 4\; 10^7 M_\odot$ for a small initial compactness
+($\chi_{\rm s} \ll 1$)
+and $m_0 \simeq 4\; 10^8 M_\odot$ for a large initial compactness
+($\chi_{\rm s} \sim \pi/2$).
+\end{example}
 
 
 
