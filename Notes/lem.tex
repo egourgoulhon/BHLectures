@@ -699,7 +699,7 @@ The function $\rho(\tau)$ is plotted in Fig.~\ref{f:lem:OS:rs_tho}.
 \begin{remark}
 In view of Eq.~(\ref{e:lem:OS:evol_star_surf}), we may rewrite Eq.~(\ref{e:lem:OS:rho_tau})
 as
-\be
+\be \label{e:lem:OS:rho_m0_r_tau}
     \rho(\tau) = \frac{m_0}{\frac{4}{3}\pi r_{\rm s}(\tau)^3} .
 \ee
 This formula happens to be identical to that giving the mass density of a uniform ball of mass
@@ -842,7 +842,7 @@ Equation~(\ref{e:lem:OS:tau_r_eta}) shows that this corresponds as well
 to $r(\tau,\chi) = 0$ for all
 particles inside the star. The matter proper time $\tau$ at the end of the collapse
 is given by $\eta=\pi$ in Eq.~(\ref{e:lem:OS:tau_r_eta}):
-\be
+\be \label{e:lem:OS:tau_end}
    \encadre{ \tau_{\rm end} = \frac{\pi}{2} a_0 = \pi \sqrt{\frac{r_0^3}{8 m_0}}
       = \pi \left( \frac{r_0}{2 m_0} \right)^{3/2} m_0
       = \pi \frac{m_0}{\sin^3\chi_{\rm s}}
@@ -936,6 +936,61 @@ implies that the metric tensor of the Oppenheimer-Snyder solution is not $C^2$.
 For an actual stellar core, there is a density gradient so that $\rho=0$
 at the surface and the metric tensor is $C^2$ (at least).
 \end{remark}
+
+\begin{table}
+\centerline{
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+& Earth & Sun & white dwarf & neutron star \\[0.5ex]
+\hline\hline
+$m_0$ $[M_\odot]$& $3 \; 10^{-6}$ & $1$ & $0.6$ & $1.4$ \\[0.5ex]
+\hline
+$r_0$ $[{\rm km}]$ & $6.37\; 10^3$ & $6.96\; 10^5$ & $8.0\; 10^3$ &  $12$ \\[0.5ex]
+\hline
+$m_0/r_0$ & $7.0\;10^{-10}$ & $2.1\; 10^{-6}$ & $1.1\; 10^{-4}$ & $0.17$ \\[0.5ex]
+\hline
+$\chi_{\rm s}$ & $3.7\; 10^{-5}$ & $2.1\; 10^{-3}$ & $1.5\; 10^{-2}$ & $0.63$ \\[0.5ex]
+\hline
+$\rho_0$ $[{\rm kg\, m}^{-3}]$ & $5.5\; 10^3$ & $1.4\; 10^3$ & $5.6\; 10^8$ & $3.8\; 10^{17}$ \\[0.5ex]
+\hline
+$\tau_{\rm end}$ & $14\; {\rm min}\; 55\; {\rm s}$ & $29\; {\rm min}\; 30\; {\rm s}$ &
+$2.82\; {\rm s}$ & $0.107\; {\rm ms}$  \\[0.5ex]
+\hline
+$\tau_{\rm hb}$ & $14\; {\rm min}\; 55\; {\rm s}$ & $29\; {\rm min}\; 30\; {\rm s}$ &
+$2.82\; {\rm s}$ & $0.075\; {\rm ms}$  \\[0.5ex]
+\hline
+$\tau_{\rm end} - \tau_{\rm hb}$ & $6.6\; 10^{-11}\; {\rm s}$ & $22\; \mu{\rm s}$
+& $13\; \mu{\rm s}$ & $22\; \mu{\rm s}$ \\[0.5ex]
+\hline
+$\tau_{\rm end} - \tau_*$ & $2.0\; 10^{-11}\; {\rm s}$ & $6.6\; \mu{\rm s}$
+& $3.9\; \mu{\rm s}$ & $10.4\; \mu{\rm s}$ \\[0.5ex]
+\hline
+$\rho_{\rm hb}$ $[{\rm kg\, m}^{-3}]$ & $1.8\; 10^{29}$ & $1.8\; 10^{18}$
+& $4.5\; 10^{18}$ & $1.4\; 10^{18}$ \\[0.5ex]
+\hline
+\end{tabular}
+}
+\caption[]{\label{t:lem:OS:num} \footnotesize
+Numerical values for the gravitational collapse of various astrophysical bodies,
+assuming that all forces counterbalancing gravitation suddenly disappear
+at the proper time $\tau=0$.
+$m_0$ is the gravitational mass (constant during the collapse),
+$r_0$ is the initial areal radius, $m_0/r_0$ is the initial compactness,
+$\chi_{\rm s}$ is the (constant) value of the hyperspherical angle $\chi$ at the surface
+of the body [Eq.~(\ref{e:lem:OS:chis_m0_r0})], $\rho_0$ is the initial
+proper energy density, assuming that the body is homogeneous
+[Eq.~(\ref{e:lem:OS:rho_m0_r_tau}) with $\tau=0$, or Eq.~(\ref{e:lem:OS:rho0})],
+$\tau_{\rm end}$ is the proper time at the end of the collapse, when the
+central singularity appears [Eq.~(\ref{e:lem:OS:tau_end})],
+$\tau_{\rm hb}$ is the proper time of the event horizon birth at the center
+of the body [Eq.~(\ref{e:lem:OS:tau_hb})],
+$\tau_*$ is the proper time when the event horizon encounters
+the infalling surface [Eq.~(\ref{e:lem:OS:tau_star})]
+and $\rho_{\rm hb}$ is the proper energy density
+at $\tau=\tau_{\rm hb}$, i.e. when the black hole forms [Eq.~(\ref{e:lem:OS:rho_hb})].
+}
+\end{table}
+
 
 
 \subsection{Black hole formation}
@@ -1075,9 +1130,9 @@ can be made arbitrarily small.
 \begin{example}
 Let us a consider the density of water: $\rho_{\rm hb} = 10^3 \; {\rm kg\, m}^{-3}$.
 By restoring the $G$'s and the $c$'s, the density $m_0^{-2}$ becomes
-$c^6/G^3 m_0^{-2}$.  We get then $m_0 \simeq 4\; 10^7 M_\odot$ for a small initial compactness
+$c^6/G^3 m_0^{-2}$.  We get then $m_0 \simeq 4\; 10^7 M_\odot$ for small initial compactness
 ($\chi_{\rm s} \ll 1$)
-and $m_0 \simeq 4\; 10^8 M_\odot$ for a large initial compactness
+and $m_0 \simeq 4\; 10^8 M_\odot$ for large initial compactness
 ($\chi_{\rm s} \sim \pi/2$).
 \end{example}
 
