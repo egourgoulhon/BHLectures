@@ -1243,21 +1243,32 @@ various curves.
 
 \subsection{Trapped surfaces}
 
-Let us consider a 2-dimensional surface $\Sp$ at constant coordinates $(\eta,\chi)$
-inside the collapsing star. It appears as a point in the spacetime diagrams of
-Fig.~\ref{f:lem:OS:diag_trapped}. The surface $\Sp$ is spanned by the coordinates $(\th,\ph)$
-and the metric $\w{q}$ induced by $\w{g}$ on $\Sp$ is readily
+The concept of trapped surface\index{trapped!surface}
+has been introduced in Sec.~\ref{s:neh:trapped_surfaces}
+(cf. Fig.~\ref{f:neh:trapped_surf}).
+Let us show that such surfaces appear at late times in the Oppenheimer-Snyder collapse.
+To this aim, we consider a 2-dimensional surface $\Sp$ at constant coordinates $(\eta,\chi)$
+inside the collapsing star, with $\eta\neq \pi$ and $\chi\neq 0$.
+Such a surface appears as a point in the spacetime diagrams of
+Fig.~\ref{f:lem:OS:diag_trapped}. The surface $\Sp$
+has the topology of a 2-sphere and
+is spanned by the coordinates $(\th,\ph)$. In particular,
+it is a closed manifold (compact
+without boundary).
+The metric $\w{q}$ induced by $\w{g}$ on $\Sp$ is readily
 obtained by setting $\dd\eta = 0$ and $\dd\chi = 0$ in Eq.~(\ref{e:lem:OS:g_int}):
-\be
+\be \label{e:lem:OS:metric_q_Sp}
       \w{q} = \frac{a_0^2}{4} (1 + \cos\eta)^2
         \sin^2\chi \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)   .
 \ee
+This is clearly a Riemannian metric, i.e. $\Sp$ is a spacelike 2-surface
+of $(\M,\w{g})$.
 At each point of $\Sp$, there are two null directions orthogonal to $\Sp$:
-the outgoing one, represented by a solig green line in Fig.~\ref{f:lem:OS:diag_trapped}
+the outgoing one, represented by a solid green line in Fig.~\ref{f:lem:OS:diag_trapped}
 and the ingoing one, represented by a dashed green line (see also
 Fig.~\ref{f:def:TS_ortho}). Future-directed null vectors along these
 two directions are respectively
-\be
+\be \label{e:lem:OS:comp_l_k}
     \wl = \wpar_\eta + \wpar_\chi \qand
     \w{k} = \wpar_\eta - \wpar_\chi .
 \ee
@@ -1265,10 +1276,71 @@ The expansions of $\Sp$ along $\wl$ and $\w{k}$ are
 given by Eq.~(\ref{e:def:theta_deps_ln_q}) [see also Eq.~(\ref{e:neh:expansion_k})
 and Fig.~\ref{f:neh:trapped_surf}]:
 \be
-     \theta_{(\wl)} = \frac{1}{2}  \Lie{\el} \ln q
+     \theta_{(\wl)} = \Lie{\el} \ln \sqrt{q}
      \qand
-     \theta_{(\w{k})} = \frac{1}{2} \Lie{\w{k}}  \ln q .
+     \theta_{(\w{k})} = \Lie{\w{k}}  \ln \sqrt{q} ,
 \ee
+where $q$ is the determinant of the metric $\w{q}$ with respect to any
+coordinate system of $\Sp$ that is carried along with $\wl$ or $\w{k}$,
+such that $(\th,\ph)$, since $\th$ and $\ph$ are constant along the integral
+curves of $\wl$ and $\w{k}$ (the radial null geodesics). From Eq.~(\ref{e:lem:OS:metric_q_Sp}),
+we get $\sqrt{q}= (a_0^2/4)(1 + \cos\eta)^2 \sin^2\chi \sin\th$.
+Furthermore, in view of the components (\ref{e:lem:OS:comp_l_k}),
+$\Lie{\wl} \ln \sqrt{q} = \ell^\mu \partial \ln \sqrt{q} /\partial x^\mu =
+ \partial \ln \sqrt{q} /\partial \eta + \partial \ln\sqrt{q} /\partial \chi$
+ and
+ $\Lie{\w{k}} \ln \sqrt{q} = k^\mu \partial \ln\sqrt{q} /\partial x^\mu =
+ \partial \ln\sqrt{q} /\partial \eta - \partial\ln  \sqrt{q} /\partial \chi$.
+We then get easily
+\be
+    \theta_{(\wl)} = 4 \frac{\cos\left(\eta/2\right) \cos\left(\chi + \eta/2\right) }{
+    (1 + \cos\eta)\sin\chi}
+    \qand
+    \theta_{(\w{k})} = - 4 \frac{\cos\left(\eta/2\right) \cos\left(\chi - \eta/2\right) }{
+    (1 + \cos\eta)\sin\chi} .
+\ee
+Given that $\eta\in [0,\pi)$ %]$
+and $\chi\in(0,\chi_{\rm s}]$, with $\chi_{\rm s} < \pi/2$,
+one has $1 + \cos\eta > 0$, $\cos(\eta/2) > 0$, $\sin\chi > 0$
+and $\cos(\chi - \eta/2) > 0$. It follows immediately that
+\be
+    \theta_{(\w{k})} < 0
+\ee
+and that the sign of $\theta_{(\wl)}$ is that of $\cos(\chi + \eta/2)$.
+Given that the above ranges of $\eta$ and $\chi$ imply $0 < \chi + \eta/2 < \pi$,
+we conclude that $\theta_{(\wl)} < 0 \iff \chi + \eta/2 > \pi/2$, i.e.
+\be
+    \theta_{(\wl)} < 0 \iff \eta > \pi - 2 \chi .
+\ee
+Since $\Sp$ is a closed spacelike 2-surface,
+we conclude, in view of the definition given in Sec.~\ref{s:neh:trapped_surfaces}, that
+\begin{greybox}
+At late times, i.e. for $\eta > \pi - 2 \chi$, the spheres $\Sp$ defined
+by $(\eta,\chi) = \mathrm{const}$, with $\eta<\pi$ and $\chi>0$,
+are trapped surfaces. They are marginally trapped for $\eta = \pi - 2 \chi$
+and untrapped for $\eta <  \pi - 2 \chi$.
+\end{greybox}
+
+\begin{example}
+The trapped surface $\Sp$ corresponding tp $(\eta,\chi) = (11\pi/16, 3\pi/16)$
+in the Oppen\-heimer-Snyder collapse with $r_0 = 4 m_0$
+is plotted as a brown dot in Fig.~\ref{f:lem:OS:diag_trapped}. According
+to Eq.~(\ref{e:lem:OS:tau_r_eta}), the areal radius of $\Sp$ is
+$r_{\Sp} = 2\sqrt{2} \sin(3\pi/16) (1 + \cos(11\pi/16)) \simeq 0.70 m_0$.
+The trapped character of $\Sp$ can be read on Fig.~\ref{f:lem:OS:diag_trapped}:
+moving to the future along either the ingoing radial null geodesic (dashed green line)
+or the outgoing one (solid green line) leads to spheres of smaller areal radius,
+and hence smaller area. This is clear on the left diagram when noticing
+that both geodesics encounter the curve $r=0.65 m_0$ in the immediate future of $\Sp$.
+It is even more immediate on the right diagram since $r$ is read directly on the $x$-axis.
+\end{example}
+
+The set formed by all the marginally trapped spheres of fixed $(\eta,\chi)$
+is the hypersurface $\mathscr{T}$
+defined by $\eta = \pi - 2\chi$. As we shall see in
+Chap.~\ref{s:loc}, it is called a \emph{future inner trapping horizon}.
+It is drawned as a dotted blue line in Figs.~\ref{f:lem:OS:diag_int_EF}
+and \ref{f:lem:OS:diag_trapped}.
 
 
 \subsection{Observational appearance of the black hole formation}
