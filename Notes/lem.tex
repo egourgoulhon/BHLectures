@@ -140,18 +140,18 @@ Taking into account (\ref{e:lem:a_f_dr}), the $\chi\chi$ and $\tau\tau$ componen
 yield respectively to (cf. the notebook~\ref{s:sam:Lemaitre_Tolman})
 \begin{subequations}\label{e:lem:LTeqs}
 \begin{align}
- & \encadre{\left( \der{r}{\tau} \right) ^2 = f(\chi)^2 - 1 + \frac{2m(\chi)}{r(\tau,\chi)}
+ & \encadre{\left( \der{r}{\tau} \right) ^2 = f(\chi)^2 - 1 + \frac{2M(\chi)}{r(\tau,\chi)}
    + \frac{\Lambda}{3} r(\tau,\chi)^2 } \label{e:lem:LTeqs1} \\
- & \encadre{\frac{\D m}{\D\chi} = 4\pi r(\tau,\chi)^2 \rho(\tau,\chi) \der{r}{\chi} } ,
+ & \encadre{\frac{\D M}{\D\chi} = 4\pi r(\tau,\chi)^2 \rho(\tau,\chi) \der{r}{\chi} } ,
     \label{e:lem:LTeqs2}
  \end{align}
 \end{subequations}
-where $m(\chi)$ is another arbitrary function of $\chi$.
+where $M(\chi)$ is another arbitrary function of $\chi$.
 There is no other independent component of Einstein equation.
 Equations~(\ref{e:lem:LTeqs}) constitute the
 \defin{Lemaître-Tolman system}\index{Lemaitre-Tolman system@Lemaître-Tolman system}.
 
-The function $m(\chi)$ is known in the literature as the \defin{Misner-Sharp mass}\index{Misner-Sharp!mass} or \defin{Misner-Sharp energy}\index{Misner-Sharp!energy}, in reference
+The function $M(\chi)$ is known in the literature as the \defin{Misner-Sharp mass}\index{Misner-Sharp!mass} or \defin{Misner-Sharp energy}\index{Misner-Sharp!energy}, in reference
 of a study by Misner and Sharp in 1964 \cite{MisneS64}, despite it has been introduced
 more than 30 years earlier by Lemaître \cite{Lemai32}. This quantity is
 invariantly defined for any spherically symmetric spacetime from the areal radius $r$:
@@ -204,7 +204,7 @@ interested in gravitational collapse in asymptotically flat spacetimes.
 The Lemaître-Tolman equation (\ref{e:lem:LTeqs1}) can be then rewritten
 as
 \be \label{e:lem:1dim_mechanical}
-    \frac{1}{2} \dot{r}^2 - \frac{m(\chi)}{r} = E(\chi) ,
+    \frac{1}{2} \dot{r}^2 - \frac{M(\chi)}{r} = E(\chi) ,
 \ee
 where $\dot{r} := \partial r /\partial\tau$ and
 \be \label{e:lem:E_f_chi}
@@ -221,21 +221,21 @@ depends on the sign of $E(\chi)$:
 \item if $E(\chi)>0$, the solution is given in parameterized form (parameter $\eta$) by
 \be \label{e:lem:sol_E_pos}
     \left\{ \begin{array}{l}
-    \displaystyle\tau = \frac{m(\chi)}{(2E(\chi))^{3/2}} \left( \sinh\eta - \eta \right)
+    \displaystyle\tau = \frac{M(\chi)}{(2E(\chi))^{3/2}} \left( \sinh\eta - \eta \right)
         + \tau_0(\chi) \\[2ex]
-    \displaystyle r(\tau,\chi) = \frac{m(\chi)}{2E(\chi)} \left( \cosh\eta - 1 \right)
+    \displaystyle r(\tau,\chi) = \frac{M(\chi)}{2E(\chi)} \left( \cosh\eta - 1 \right)
     \end{array} \right.
 \ee
 \item if $E(\chi)=0$, the solution is
 \be \label{e:lem:sol_E_zero}
-    r(\tau,\chi) =  \left( \frac{9 m(\chi)}{2} (\tau -\tau_0(\chi))^2 \right) ^{1/3}
+    r(\tau,\chi) =  \left( \frac{9 M(\chi)}{2} (\tau -\tau_0(\chi))^2 \right) ^{1/3}
 \ee
 \item if $E(\chi)<0$, the solution is given in parameterized form (parameter $\eta$) by
 \be \label{e:lem:sol_E_neg}
     \left\{ \begin{array}{l}
-    \displaystyle\tau =  \frac{m(\chi)}{|2E(\chi)| ^{3/2}} \left( \eta + \sin\eta \right)
+    \displaystyle\tau =  \frac{M(\chi)}{|2E(\chi)| ^{3/2}} \left( \eta + \sin\eta \right)
     + \tau_0(\chi)  \\[2ex]
-    \displaystyle r(\tau,\chi) = \frac{m(\chi)}{|2E(\chi)|} \left( 1 + \cos\eta \right)
+    \displaystyle r(\tau,\chi) = \frac{M(\chi)}{|2E(\chi)|} \left( 1 + \cos\eta \right)
     \end{array} \right.
 \ee
 \end{itemize}
@@ -252,7 +252,7 @@ We may summarize the above results as follows:
 The procedure to get a full solution of spherical dust collapse with $\Lambda=0$ is
 \begin{enumerate}
 \item choose arbitrary functions
-$f(\chi)$, $m(\chi)$ and $\tau_0(\chi)$;
+$f(\chi)$, $M(\chi)$ and $\tau_0(\chi)$;
 \item evaluate $E(\chi)$ via (\ref{e:lem:E_f_chi});
 \item depending of
 on the value of $E(\chi)$, use (\ref{e:lem:sol_E_pos}), (\ref{e:lem:sol_E_zero})
@@ -266,21 +266,21 @@ Eq.~(\ref{e:lem:LTeqs2}), to get $\rho(\tau,\chi)$ and into
 \subsection{Schwarzschild solution in Lemaître coordinates} \label{s:lem:Schwarzschild}
 
 One can recover Schwarzschild solution from the above setting by
-considering the vacuum case, i.e. $\rho=0$. Then
-Eq.~(\ref{e:lem:LTeqs2}) imposes $m(\chi)$ to be a constant, which
-we shall denote simply by $m$. Regarding the function $f(\chi)$, let us
+considering the vacuum case, i.e. $\rho=0$.
+Equation~(\ref{e:lem:LTeqs2}) imposes then $M(\chi)$ to be a constant, which
+we shall denote by $m$. Regarding the function $f(\chi)$, let us
 choose for simplicity $f(\chi)=1$. Then $E(\chi)=0$ and $r(\tau,\chi)$
-is given by Eq.~(\ref{e:lem:sol_E_zero}). Since $m$ is constant, we
-cannot choose $\tau_0(\chi)$ to be a constant, otherwise
-$\partial r/\partial \chi$ would be zero and the metric
+is given by Eq.~(\ref{e:lem:sol_E_zero}). Since $M(\chi)$ is constant, we
+cannot choose $\tau_0(\chi)$ to be a constant, otherwise Eq.~(\ref{e:lem:sol_E_zero})
+would imply $\partial r/\partial \chi=0$ and the metric
 (\ref{e:lem:metric_Lemaitre}) would be degenerate.
 The simplest non-constant choice is
 $\tau_0(\chi) = \chi$. To summarize, the
-three functions of $\chi$ determining the solution are set to
+three functions of $\chi$ determining the vacuum solution are
 \be
-    f(\chi) = 1, \qquad m(\chi)=m=\mathrm{const} \qand \tau_0(\chi) = \chi .
+    f(\chi) = 1, \qquad M(\chi)=m=\mathrm{const} \qand \tau_0(\chi) = \chi .
 \ee
-Equation~(\ref{e:lem:sol_E_zero}), with the above values for $m(\chi)$ and $\tau_0(\chi)$,
+Equation~(\ref{e:lem:sol_E_zero}), with the above values for $M(\chi)$ and $\tau_0(\chi)$,
 yields
 \be \label{e:lem:r_tau_chi_Schwarz}
     \encadre{ r(\tau,\chi) =  \left( \frac{9m}{2} \right)^{1/3} ( \chi -\tau )^{2/3} }.
@@ -305,7 +305,7 @@ by (\ref{e:lem:r_tau_chi_Schwarz}).
 
 The metric (\ref{e:lem:Sch_met_Lem}) is actually the
 Schwarzschild metric of mass parameter $m$. To prove it, let us first
-promote $r$ as a coordinate, instead of $\chi$, i.e. we consider the
+promote $r$ as a coordinate, instead of $\chi$, i.e. let us consider the
 coordinate system $({x'}^\alpha):=(\tau,r,\th,\ph)$, which are called
 \defin{Painlevé-Gullstrand coordinates}\index{Painlevé-Gullstrand coordinates}.
 The relation to Lemaître coordinates
@@ -321,7 +321,7 @@ Hence
 \quad \Longrightarrow \quad \frac{2m}{r} \dd\chi^2 = \frac{2m}{r} \dd\tau^2
     + 2 \sqrt{\frac{2m}{r}}  \dd\tau \, \dd r + \dd r^2 .
 \]
-Substituting this relation in Eq.~(\ref{e:lem:Sch_met_Lem}) yields
+Substituting this relation into Eq.~(\ref{e:lem:Sch_met_Lem}) yields
 the expression of the metric tensor in terms of Painlevé-Gullstrand coordinates:
 \be \label{e:lem:metric_PG}
    \encadre{ \w{g} =
@@ -330,21 +330,19 @@ the expression of the metric tensor in terms of Painlevé-Gullstrand coordinates
         + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) } .
 \ee
 We can rearrange it as
-\bea
-  \w{g} & = &  - \left( 1 - \frac{2m}{r} \right) \left( \dd\tau^2 - 2
-        \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \dd\tau \, \dd r \right)
-            + \dd r^2 + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \nonumber \\
-    & = & - \left( 1 - \frac{2m}{r} \right) \left( \dd\tau -
+\be
+  \w{g} =  - \left( 1 - \frac{2m}{r} \right) \left( \dd\tau -
         \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \dd r \right) ^2
             + \frac{\dd r^2}{1- \frac{2m}{r}}
             + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .  \label{e:lem:met_tau_r}
-\eea
+\ee
 If we introduce, instead of $\tau$, a coordinate $t$ such that
 \be \label{e:lem:dt_dtau_dr}
     \dd t = \dd\tau -
         \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \dd r ,
 \ee
-Eq.~(\ref{e:lem:met_tau_r}) yields immediately the familiar expression
+then
+Eq.~(\ref{e:lem:met_tau_r}) yields the familiar expression
 of Schwarzschild metric in Schwarzschild-Droste coordinates $(t,r,\th,\ph)$
 [Eq.~(\ref{e:sch:Schwarz_metric_SD})]. Hence this proves that
 the vacuum solution (\ref{e:lem:Sch_met_Lem}) is nothing but
@@ -363,9 +361,9 @@ radially, keeping its spherical symmetry). In other words, there are no
 gravitational waves in spherical symmetry.
 \begin{remark}
 Birkhoff's theorem can be viewed as a generalization of Gauss' theorem in Newtonian gravity:
-the gravitational field outside any spherical source is entirely determined by the mass $m$ of
-the source, being identical to that generated by a point of mass $m$ located at the symmetry
-center.
+the gravitational field outside any spherical source is entirely determined by the total
+mass $m$ of the source, being identical to that generated by a point of mass $m$
+located at the symmetry center.
 \end{remark}
 
 The relation between Lemaître coordinates and
@@ -392,9 +390,10 @@ the chain rule $\dert{}{t} = \dert{}{\tau} \times \dert{\tau}{t} + \dert{}{\chi}
     \encadre{\w{\xi} = \wpar_\tau + \wpar_\chi }.
 \ee
 \begin{remark}
-Although very simple, this relation shows that Lemaître coordinates are \emph{not}
+Although very simple, the above relation shows that Lemaître coordinates are \emph{not}
 adapted to the spacetime symmetry generated by the Killing vector $\w{\xi}$:
-the latter does not coincide with any Lemaître coordinate vector. This reflects
+the latter does not coincide with any coordinate vector $\wpar_\alpha$ of
+Lemaître coordinates. This reflects
 the fact that the metric components (\ref{e:lem:Sch_met_Lem}) depend on $\tau$
 (via the function $r(\tau,\chi)$), in addition to $\chi$.
 \end{remark}
@@ -503,7 +502,7 @@ implies that the spacetime metric outside the star
 is Schwarzschild metric.
 Let us then characterize the star by its areal radius $r_0$
 (i.e. the Schwarzschild-Droste coordinate $r$ of the star's surface, cf. Sec.~\ref{s:sch:static_spher})
-at the start of the collapse and its gravitational mass $m_0$. The latter
+at the start of the collapse and its gravitational mass $m$. The latter
 is nothing but the mass parameter of the Schwarzschild metric. It stays
 constant during all the collapse.
 We shall describe the spacetime exterior
@@ -511,19 +510,18 @@ to the star by means the ingoing Eddington-Finkelstein coordinates (IEF)
 $(\ti, r, \th,\ph)$
 introduced in Sec.~\ref{s:sch:EF_coord}, because they are regular on the
 black hole event horizon, contrary to Schwarzschild-Droste coordinates.
-The exterior metric is then given by Eq.~(\ref{e:sch:Schwarz_metric_EF}) with
-$m=m_0$:
+The exterior metric is then given by Eq.~(\ref{e:sch:Schwarz_metric_EF}):
 \be \label{e:lem:OS:exterior_metric}
     \w{g} =
-            -\left( 1 - \frac{2 m_0}{r} \right)\, \dd \ti^2
-            + \frac{4m_0}{r} \, \dd \ti \, \dd r
-            + \left( 1 + \frac{2 m_0}{r} \right)\, \dd r^2
+            -\left( 1 - \frac{2 m}{r} \right)\, \dd \ti^2
+            + \frac{4m}{r} \, \dd \ti \, \dd r
+            + \left( 1 + \frac{2 m}{r} \right)\, \dd r^2
         + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
 \ee
 
 Let us denote by $r_{\rm s}(\tau)$ the areal radius of the star, i.e. the coordinate $r$
 of its surface, as a function of the proper time $\tau$ of a matter particle
-at the surface of the star. If the origin of $\tau$ is set to
+located at the surface of the star. If the origin of $\tau$ is set to
 the start of the collapse, we have
 \be
     r_{\rm s}(0) = r_0.
@@ -534,7 +532,7 @@ Since the collapse starts from rest, the function $r_{\rm s}(\tau)$ is
 given by the geodesic solution (\ref{e:ges:sol_radial_infall}):
 \be \label{e:lem:OS:evol_star_surf}
     \encadre{ \left\{ \begin{array}{l}
-    \displaystyle\tau = \sqrt{\frac{r_0^3}{8 m_0}}  \left( \eta + \sin\eta \right) \\[3ex]
+    \displaystyle\tau = \sqrt{\frac{r_0^3}{8 m}}  \left( \eta + \sin\eta \right) \\[3ex]
     \displaystyle r_{\rm s}(\tau) = \frac{r_0}{2} \left( 1 + \cos\eta \right)
     \end{array} \right. }
     \qquad 0 \leq \eta \leq \pi ,
@@ -553,16 +551,16 @@ being identical to the first integral of a purely radial motion in Newtonian gra
 The IEF coordinate time $\ti$ corresponding to the surface proper time $\tau$
 is given by Eq.~(\ref{e:ges:sol_radial_infall_ti}):
 \be \label{e:lem:OS:ti_star_surf}
-     \ti = 2m_0 \left\{ \sqrt{\frac{r_0}{2m_0} - 1} \left[ \eta + \frac{r_0}{4m_0}
+     \ti = 2m \left\{ \sqrt{\frac{r_0}{2m} - 1} \left[ \eta + \frac{r_0}{4m}
     (\eta + \sin\eta) \right]
-    +  2 \ln \left[ \cos\frac{\eta}{2}  + \left(\frac{r_0}{2m_0} - 1\right)^{-1/2} \sin \frac{\eta}{2} \right] \right\}  ,
+    +  2 \ln \left[ \cos\frac{\eta}{2}  + \left(\frac{r_0}{2m} - 1\right)^{-1/2} \sin \frac{\eta}{2} \right] \right\}  ,
 \ee
 where $\ti = 0$ is assumed at the start of the collapse.
 Note that by combining Eqs.~(\ref{e:lem:OS:evol_star_surf}) and (\ref{e:lem:OS:ti_star_surf}),
 one can obtain $r_s = r_s(\ti)$, i.e. the evolution law of the stellar surface
 in terms of the IEF coordinate time $\ti$.
-The right panel in Fig.~\ref{f:ges:radial_infall} (with $m=m_0$)
-depicts it for various values of $m_0/r_0$.
+The right panel in Fig.~\ref{f:ges:radial_infall}
+depicts it for various values of $m/r_0$.
 
 
 \subsection{Oppenheimer-Snyder solution}
@@ -578,7 +576,7 @@ As stressed in Sec.~\ref{s:lem:sol_lambda_zero}, formula~(\ref{e:lem:sol_E_neg})
 in conjunction with Eqs.~(\ref{e:lem:LTeqs2}) and
 (\ref{e:lem:metric_Lemaitre}),
 defines an infinity of solutions depending on the functions
-$f(\chi)$, $m(\chi)$ and $\tau_0(\chi)$, which can be chosen arbitrarily.
+$f(\chi)$, $M(\chi)$ and $\tau_0(\chi)$, which can be chosen arbitrarily.
 We shall actually focus on the simplest of these solutions, which is that
 describing a \emph{homogeneous} star, i.e. an object whose density
 $\rho$ in the matter frame, as defined by Eq.~(\ref{e:lem:T_pressureless}),
@@ -600,18 +598,18 @@ As we are going to see, the homegeneous dust star collapse is obtained by the
 following choice of the free functions:
 \be \label{e:lem:OS:free_func}
     f(\chi) = \cos\chi,\qquad
-    m(\chi) = \frac{a_0}{2} \sin^3\chi
+    M(\chi) = \frac{a_0}{2} \sin^3\chi
     \qand \tau_0(\chi) = 0 ,
 \ee
 with
 \be \label{e:lem:OS:a0_m0_r0}
-    a_0 := \sqrt{\frac{r_0^3}{2 m_0}} .
+    a_0 := \sqrt{\frac{r_0^3}{2 m}} .
 \ee
 The above choice of $f(\chi)$ leads to $2 E(\chi) = -\sin^2\chi$
 [cf. Eq.~(\ref{e:lem:E_f_chi})], so that $E(\chi) < 0$ for $\chi>0$
 and the solution to be considered is (\ref{e:lem:sol_E_neg}).
-The prefactors are $m(\chi)/|2E(\chi)|^{3/2} = a_0/2$ and
-$m(\chi)/|2E(\chi)| = (a_0/2) \sin\chi$, so that we get, taking into account
+The prefactors are $M(\chi)/|2E(\chi)|^{3/2} = a_0/2$ and
+$M(\chi)/|2E(\chi)| = (a_0/2) \sin\chi$, so that we get, taking into account
 the choice $\tau_0(\chi) = 0$,
 \be \label{e:lem:OS:tau_r_eta}
     \encadre{
@@ -629,20 +627,20 @@ of the star as given by Eq.~(\ref{e:lem:OS:evol_star_surf}).
 The areal radii at the surface must match as well. Let us denote by
 $\chi_{\rm s}$ the surface value of $\chi$. The
 matching of the surface areal radii given by Eqs.~(\ref{e:lem:OS:evol_star_surf})
-and (\ref{e:lem:OS:tau_r_eta}) implies $r_0 = \sqrt{r_0^3/2m_0}\sin\chi_{\rm s}$,
+and (\ref{e:lem:OS:tau_r_eta}) implies $r_0 = \sqrt{r_0^3/2m}\sin\chi_{\rm s}$,
 from which we get the relation between $\chi_{\rm s}$ and
-$(m_0, r_0)$:
+$(m, r_0)$:
 \be \label{e:lem:OS:sin_chis_m0_r0}
-    \encadre{ \sin\chi_{\rm s} = \sqrt{\frac{2 m_0}{r_0}} }.
+    \encadre{ \sin\chi_{\rm s} = \sqrt{\frac{2 m}{r_0}} }.
 \ee
 This implies $\sin\chi_{\rm s} > 0$ and hence $\chi_{\rm s} \in (0,\pi)$.
 There are actually two solutions of Eq.~(\ref{e:lem:OS:sin_chis_m0_r0})
 for $\chi_{\rm s}$.
 Given that $\arcsin$ is a one-to-one map $[0,1] \to [0,\pi/2]$, they are
 \be \label{e:lem:OS:chis_m0_r0}
-    \chi_{\rm s} = \arcsin\sqrt{\frac{2 m_0}{r_0}}
+    \chi_{\rm s} = \arcsin\sqrt{\frac{2 m}{r_0}}
 \ee
-and $\chi_{\rm s} = \pi - \arcsin\sqrt{2 m_0/r_0}$.
+and $\chi_{\rm s} = \pi - \arcsin\sqrt{2 m/r_0}$.
 For the physical situation we have in mind (gravitational collapse of an ``ordinary'' stellar core),
 we shall retain only the solution (\ref{e:lem:OS:chis_m0_r0}), which implies $\chi_{\rm s} \in (0, \pi/2]$.
 The second solution, for which $\chi_{\rm s} \in [\pi/2, \pi)$,    %]$
@@ -651,12 +649,12 @@ would lead to the areal radius $r$ being a decreasing function of $\chi$ near $\
 since Eq.~(\ref{e:lem:OS:tau_r_eta}) shows that $r(\tau,\chi)$ behaves as $\sin\chi$, which is decaying
 on $(\pi/2,\pi)$. Such a behavior is certainly not expected in an ``ordinary'' star.} .
 Equation~(\ref{e:lem:OS:chis_m0_r0}) show that
-$\chi_{\rm s}$ is a function of the dimensionless ratio $m_0/r_0$, which is the
+$\chi_{\rm s}$ is a function of the dimensionless ratio $m/r_0$, which is the
 \defin{compactness}\index{compactness} of the initial star
 (some numerical values can be found in Table~\ref{t:lem:OS:num}).
 The upper limit $\pi/2$ can be excluded from the range of
 $\chi_{\rm s}$ since it
-would correspond to $r_0 = 2 m_0$, which is the areal radius of the black hole
+would correspond to $r_0 = 2 m$, which is the areal radius of the black hole
 horizon in Schwarzschild geometry. The range of the comoving coordinate $\chi$
 in the interior of the star is thus
 \be \label{e:lem:OS:range_chi}
@@ -664,6 +662,13 @@ in the interior of the star is thus
 \ee
 with $\chi=0$ locating the center, since it corresponds to $r=0$ by
 virtue of Eq.~(\ref{e:lem:OS:tau_r_eta}).
+
+By combining Eqs.~(\ref{e:lem:OS:free_func}), (\ref{e:lem:OS:a0_m0_r0}) and
+(\ref{e:lem:OS:sin_chis_m0_r0}), we note that $M(\chi)$ is an increasing function
+of $\chi$ in the range (\ref{e:lem:OS:range_chi}) with $M(0) = 0$ and
+\be
+    M(\chi_{\rm s}) = m .
+\ee
 
 
 \begin{figure}
@@ -684,11 +689,11 @@ by $\sin\chi_{\rm s}$.
 
 
 The matter density $\rho(\tau,\chi)$ is deduced from Eq.~(\ref{e:lem:LTeqs2}), with the above
-values of $m(\chi)$ and $r(\tau,\chi)$. We get a function of $\tau$ only,
+values of $M(\chi)$ and $r(\tau,\chi)$. We get a function of $\tau$ only,
 via $\eta = \eta(\tau)$ [cf. Eq.~(\ref{e:lem:OS:tau_r_eta})],
 which we rewrite as $\rho(\tau)$:
 \be \label{e:lem:OS:rho_tau}
-  \encadre{  \rho(\tau) = \frac{6 m_0}{\pi r_0^3 (1 + \cos\eta)^3} } .
+  \encadre{  \rho(\tau) = \frac{6 m}{\pi r_0^3 (1 + \cos\eta)^3} } .
 \ee
 % \rho(\tau) = \frac{3 a_0}{8\pi a(\tau)^3}
 The independence of $\rho$ from $\chi$ confirms that the choice
@@ -701,19 +706,19 @@ The function $\rho(\tau)$ is plotted in Fig.~\ref{f:lem:OS:rs_tho}.
 In view of Eq.~(\ref{e:lem:OS:evol_star_surf}), we may rewrite Eq.~(\ref{e:lem:OS:rho_tau})
 as
 \be \label{e:lem:OS:rho_m0_r_tau}
-    \rho(\tau) = \frac{m_0}{\frac{4}{3}\pi r_{\rm s}(\tau)^3} .
+    \rho(\tau) = \frac{m}{\frac{4}{3}\pi r_{\rm s}(\tau)^3} .
 \ee
 This formula happens to be identical to that giving the mass density of a uniform ball of mass
-$m_0$ and radius $r_{\rm s}(\tau)$ in Newtonian physics (flat spacetime), but there is
+$m$ and radius $r_{\rm s}(\tau)$ in Newtonian physics (flat spacetime), but there is
 no profound physical significance in this coincidence.
 \end{remark}
 
 It is instructive to express the initial energy density, $\rho_0 := \rho(\tau=0)$,
-in terms of the geometrical energy/mass unit, $m_0^{-2}$, and the compactness
+in terms of the geometrical energy/mass unit, $m^{-2}$, and the compactness
 angle $\chi_{\rm s}$ by combining Eqs.~(\ref{e:lem:OS:rho_tau}) and
 (\ref{e:lem:OS:sin_chis_m0_r0}):
 \be \label{e:lem:OS:rho0}
-    \rho_0 = \frac{3 \sin^6\chi_{\rm s}}{32\pi m_0^2} .
+    \rho_0 = \frac{3 \sin^6\chi_{\rm s}}{32\pi m^2} .
 \ee
 
 The metric factor $a(\tau,\chi)$, which appears in Eq.~(\ref{e:lem:metric_sync_coord}),
@@ -730,7 +735,7 @@ expression (\ref{e:lem:metric_sync_coord}) inside the star takes the form
   \encadre{ \w{g} = - \dd\tau^2 + a(\tau)^2 \left[ \dd\chi^2
         + \sin^2\chi \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right]  } .
 \ee
-We recognize a \defin{Friedmann-Lemaître-Robertson-Walker (FLRW) metric}\index{Friedmann-Lemaître-Robertson-Walker metric}\index{FLRW metric} describing a closed universe. This is not so surprising since FLRW metrics are solution of Einstein equations based on the hypothesis of homogeneity of spatial slices (cf. e.g. Chap.~3 of Ref.~\cite{PeterU09}).
+We recognize the \defin{Friedmann-Lemaître-Robertson-Walker (FLRW) metric}\index{Friedmann-Lemaître-Robertson-Walker metric}\index{FLRW metric} corresponding to a closed universe. This is not so surprising since FLRW metrics are solution of Einstein equation based on the hypothesis of homogeneity of constant $\tau$ slices (cf. e.g. Chap.~3 of Ref.~\cite{PeterU09}).
 We may use $\eta$, instead of $\tau$, as the time coordinate inside the star, thanks to the
 relation
 \be
@@ -764,7 +769,7 @@ Spacetime diagrams of the Oppenheimer-Snyder collapse
 in conformal coordinates $(\eta,\chi)$ (left figure, depicting only the
 interior)
 and in Eddington-Finkelstein coordinates $(\ti, r)$
-(right figure), for an initial compactness $m_0/r_0 = 1/4$, which corresponds to $\chi_{\rm s} = \pi/4$.
+(right figure), for an initial compactness $m/r_0 = 1/4$, which corresponds to $\chi_{\rm s} = \pi/4$.
 In both figures, solid red lines are worldlines of matter particles,
 uniformly sampling $[0,\chi_{\rm s}]$ with $\delta\chi=\pi/32$,
 while dashed red lines denote isosurfaces of constant matter proper time $\tau$
@@ -776,7 +781,7 @@ encountering the star's surface at the above selected values of $\tau$.
 The thick black line is the black hole event horizon $\Hor$ and the dotted blue line
 is the centered future inner trapping horizon $\mathscr{T}$. In the left figure,
 thin solid grey to black lines mark isosurfaces of constant values of the areal radius
-$r(\tau,\chi)$ (labelled in units of $m_0$).
+$r(\tau,\chi)$ (labelled in units of $m$).
 \textsl{[Figures generated by the notebook \ref{s:sam:Oppenheimer_Snyder}]}
 }
 \end{figure}
@@ -793,10 +798,10 @@ in Kruskal-Szekeres-type coordinates $(T,X)$.
 The colored curves are the same as in Fig.~\ref{f:lem:OS:diag_int_EF}.
 In particular, the magenta curve represents the star at $\tau = \tilde{t} = 0$,
 when the collapse starts. In addition, solid grey
-lines are hypersurfaces of constant $r$, uniformly sampling $[0, 8m_0]$
-with $\delta r = m_0$ and dashed lines are hypersurfaces of
-constant $\tilde{t}$, uniformly sampling $[0, 16m_0]$ with
-$\delta\tilde{t} = 2 m_0$.
+lines are hypersurfaces of constant $r$, uniformly sampling $[0, 8m]$
+with $\delta r = m$ and dashed lines are hypersurfaces of
+constant $\tilde{t}$, uniformly sampling $[0, 16m]$ with
+$\delta\tilde{t} = 2 m$.
 The right figure is a zoom on the end of the collapse.
 \textsl{[Figures generated by the notebook \ref{s:sam:Oppenheimer_Snyder}]}
 }
@@ -808,8 +813,9 @@ the 3-metric induced by
 the conformal metric $\w{\tilde{g}}$ is the standard metric of the hypersphere
 $\mathbb{S}^3$, expressed in terms of the hyperspherical coordinates $(\chi,\th,\ph)$.
 On the whole $\mathbb{S}^3$, $\chi$ ranges from $0$ to $\pi$. Since in the
-present case, $\chi \in [0,\chi_{\rm s}]$ [Eq.~(\ref{e:lem:OS:range_chi})],
-we may view each constant proper time slice of the interior of the collapsing
+present case, $\chi \in [0,\chi_{\rm s}]$ with $\chi_{\rm s} < \pi/2$
+[Eq.~(\ref{e:lem:OS:range_chi})],
+we may view each constant $\eta$ slice of the interior of the collapsing
 star as a piece of $\mathbb{S}^3$, scaled by the factor $a(\tau)$
 given by Eq.~(\ref{e:lem:OS:a_tau}).
 If one uses the conformal coordinates $(\eta,\chi)$ to draw a 2-dimensional
@@ -836,10 +842,10 @@ on the left of the figure.
 
 Figure~\ref{f:lem:OS:diag_KS} presents another view of the Oppenheimer-Snyder collapse.
 It is built on Kruskal-Szekeres-like coordinates
-$(T,X)$ (cf. Sec.~\ref{s:max:KS}). These coordinates are defined from the IEF-like ones $(\ti, r)$ via formulas~(\ref{e:sch:KS_IEF}), with $\ti$ being replaced there by $\ti - 5 m_0$, this
+$(T,X)$ (cf. Sec.~\ref{s:max:KS}). These coordinates are defined from the IEF-like ones $(\ti, r)$ via formulas~(\ref{e:sch:KS_IEF}), with $\ti$ being replaced there by $\ti - 5 m$, this
 translation in $\ti$ ensuring a better representation of the final
 stages of the collapse. One may note that the surface of the star (thick solid red line) is initially
-tangent to the hypersurface $r=4 m_0$ (solide grey line), which is the geometrical translation
+tangent to the hypersurface $r=4 m$ (solide grey line), which is the geometrical translation
 of the collapse starting from rest. The part of the diagram that lies to the right of the
 thick solid red line is identical to a part of the diagram shown in Fig.~\ref{f:sch:IEF_KS}, which
 is expected since both represent a piece of Schwarzschild spacetime. A major difference with
@@ -873,19 +879,19 @@ to $r(\tau,\chi) = 0$ for all
 particles inside the star. The matter proper time $\tau$ at the end of the collapse
 is given by $\eta=\pi$ in Eq.~(\ref{e:lem:OS:tau_r_eta}):
 \be \label{e:lem:OS:tau_end}
-   \encadre{ \tau_{\rm end} = \frac{\pi}{2} a_0 = \pi \sqrt{\frac{r_0^3}{8 m_0}}
-      = \pi \left( \frac{r_0}{2 m_0} \right)^{3/2} m_0
-      = \pi \frac{m_0}{\sin^3\chi_{\rm s}}
+   \encadre{ \tau_{\rm end} = \frac{\pi}{2} a_0 = \pi \sqrt{\frac{r_0^3}{8 m}}
+      = \pi \left( \frac{r_0}{2 m} \right)^{3/2} m
+      = \pi \frac{m}{\sin^3\chi_{\rm s}}
       = \sqrt{\frac{3\pi}{32\rho_0}} },
 \ee
 where the last equality has been obtained by using Eq.~(\ref{e:lem:OS:rho0})
-to express $m_0/\sin^3\chi_{\rm s}$ in terms of the initial proper energy density $\rho_0$.
+to express $m/\sin^3\chi_{\rm s}$ in terms of the initial proper energy density $\rho_0$.
 We note that $\tau_{\rm end}$ is a function of $\rho_0$ only.
 
 \begin{remark}
 The above formulas for the collapse proper time $\tau_{\rm end}$ are identical
-to those giving the collapse time of a spherical ball of dust of mass $m_0$, initial radius
-$r_0$ and initial mean mass density $\rho_0=3 m_0/(4\pi r_0^3)$ in Newtonian gravity.
+to those giving the collapse time of a spherical ball of dust of mass $m$, initial radius
+$r_0$ and initial mean mass density $\rho_0=3 m/(4\pi r_0^3)$ in Newtonian gravity.
 This coincidence arises from the
 same cycloidal law for $r_{\rm s}(\tau)$ in both general relativity and Newtonian gravity,
 as already discussed in Remark~\ref{r:lem:OS:cycloid} on p.~\pageref{r:lem:OS:cycloid}.
@@ -894,13 +900,13 @@ as already discussed in Remark~\ref{r:lem:OS:cycloid} on p.~\pageref{r:lem:OS:cy
 Similarly, setting $\eta=\pi$ in Eq.~(\ref{e:lem:OS:ti_star_surf}), we get the value
 of the IEF coordinate $\ti$ at the end of the collapse:
 \be
-     \ti_{\rm end} = 2m_0 \left[ \pi \left(1 +  \frac{r_0}{4m_0} \right) \sqrt{\frac{r_0}{2m_0} - 1}
-     - \ln \left( \frac{r_0}{2m_0} - 1\right) \right] .
+     \ti_{\rm end} = 2m \left[ \pi \left(1 +  \frac{r_0}{4m} \right) \sqrt{\frac{r_0}{2m} - 1}
+     - \ln \left( \frac{r_0}{2m} - 1\right) \right] .
 \ee
 \begin{example}
-For the compactness $m_0/r_0 = 1/4$, which is that considered in Figs.~\ref{f:lem:OS:diag_int_EF}-\ref{f:lem:OS:diag_KS}, the above formulas yield
-$\tau_{\rm end} = 2 \sqrt{2} \pi m_0 \simeq 8.89\, m_0$ and
-$\ti_{\rm end} = 4 \pi m_0 \simeq 12.57\, m_0$.
+For the compactness $m/r_0 = 1/4$, which is that considered in Figs.~\ref{f:lem:OS:diag_int_EF}-\ref{f:lem:OS:diag_KS}, the above formulas yield
+$\tau_{\rm end} = 2 \sqrt{2} \pi m \simeq 8.89\, m$ and
+$\ti_{\rm end} = 4 \pi m \simeq 12.57\, m$.
 \end{example}
 
 \begin{example} \label{x:lem:OS:tau_end_astro}
@@ -927,19 +933,19 @@ Indeed, from the interior metric (\ref{e:lem:OS:g_int}), one can
 compute\footnote{See the notebook \ref{s:sam:Oppenheimer_Snyder_curvature} for
 the computation.} curvature scalars like the Ricci scalar
 \be \label{e:lem:OS:Ricci_scal}
-    R := R^\mu_{\ \, \mu} = \frac{24}{a_0^2 (1 + \cos\eta)^3} = \frac{6 m_0}{r_{\rm s}(\tau)^3} ,
+    R := R^\mu_{\ \, \mu} = \frac{24}{a_0^2 (1 + \cos\eta)^3} = \frac{6 m}{r_{\rm s}(\tau)^3} ,
 \ee
 the ``square'' of the Ricci tensor
 \be \label{e:lem:OS:Ricci_squared}
     R_{\mu\nu} R^{\mu\nu} = \frac{576}{a_0^4 (1 + \cos\eta)^6}
-    =  \frac{36 m_0^2}{r_{\rm s}(\tau)^6}
+    =  \frac{36 m^2}{r_{\rm s}(\tau)^6}
 \ee
 and the Kretschmann
 scalar\index{Kretschmann scalar! of Oppenheimer-Snyder metric} defined by
 Eq.~(\ref{e:sch:def_Kretschmann}):
 \be \label{e:lem:OS:Kretschmann}
       K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = \frac{960}{a_0^4 (1 + \cos\eta)^6}
-         = \frac{60 m_0^2}{r_{\rm s}(\tau)^6} .
+         = \frac{60 m^2}{r_{\rm s}(\tau)^6} .
 \ee
 \begin{remark}
 Although the components of the Riemann and Ricci tensors with respect to the
@@ -974,7 +980,7 @@ and the square of the Ricci tensor (\ref{e:lem:OS:Ricci_squared}), since they ar
 identically zero in the Schwarzschild exterior. In other words, the Einstein equation
 implies that the metric tensor of the Oppenheimer-Snyder solution is not $C^2$.
 For an actual stellar core, there is a density gradient so that $\rho=0$
-at the surface and the metric tensor is $C^2$ (at least).
+at the surface and the metric tensor is at least $C^2$.
 \end{remark}
 
 \begin{table}
@@ -983,11 +989,11 @@ at the surface and the metric tensor is $C^2$ (at least).
 \hline
 & Earth & Sun & white dwarf & neutron star \\[0.5ex]
 \hline\hline
-$m_0$ $[M_\odot]$& $3 \; 10^{-6}$ & $1$ & $0.6$ & $1.4$ \\[0.5ex]
+$m$ $[M_\odot]$& $3 \; 10^{-6}$ & $1$ & $0.6$ & $1.4$ \\[0.5ex]
 \hline
 $r_0$ $[{\rm km}]$ & $6.37\; 10^3$ & $6.96\; 10^5$ & $8.0\; 10^3$ &  $12$ \\[0.5ex]
 \hline
-$m_0/r_0$ & $7.0\;10^{-10}$ & $2.1\; 10^{-6}$ & $1.1\; 10^{-4}$ & $0.17$ \\[0.5ex]
+$m/r_0$ & $7.0\;10^{-10}$ & $2.1\; 10^{-6}$ & $1.1\; 10^{-4}$ & $0.17$ \\[0.5ex]
 \hline
 $\chi_{\rm s}$ & $3.7\; 10^{-5}$ & $2.1\; 10^{-3}$ & $1.5\; 10^{-2}$ & $0.63$ \\[0.5ex]
 \hline
@@ -1014,8 +1020,8 @@ $\rho_{\rm hb}$ $[{\rm kg\, m}^{-3}]$ & $1.8\; 10^{29}$ & $1.8\; 10^{18}$
 Numerical values for the gravitational collapse of various astrophysical bodies,
 assuming that all forces counterbalancing gravitation suddenly disappear
 at the proper time $\tau=0$.
-$m_0$ is the gravitational mass (constant during the collapse),
-$r_0$ is the initial areal radius, $m_0/r_0$ is the initial compactness,
+$m$ is the gravitational mass (constant during the collapse),
+$r_0$ is the initial areal radius, $m/r_0$ is the initial compactness,
 $\chi_{\rm s}$ is the (constant) value of the hyperspherical angle $\chi$ at the surface
 of the body [Eq.~(\ref{e:lem:OS:chis_m0_r0})], $\rho_0$ is the initial
 proper energy density, assuming that the body is homogeneous
@@ -1038,15 +1044,15 @@ at $\tau=\tau_{\rm hb}$ [Eq.~(\ref{e:lem:OS:rho_hb})].
 
 Since the surface areal radius $r_{\rm s}(\tau)$ is a monotonically decreasing function
 of $\tau$ (cf. Fig.~\ref{f:lem:OS:rs_tho}), there exists a unique value $\tau_*$ of
-$\tau$ for which $r_{\rm s}(\tau_*) = 2 m_0$. For $\tau>\tau_*$, $r_{\rm s}(\tau) < 2 m_0$
+$\tau$ for which $r_{\rm s}(\tau_*) = 2 m$. For $\tau>\tau_*$, $r_{\rm s}(\tau) < 2 m$
 and the exterior
 Schwarzschild spacetime contains a black hole event horizon $\Hor$, located
-at $r=2m_0$ in IEF coordinates (the vertical black segment in Fig.~\ref{f:lem:OS:diag_int_EF}).
+at $r=2m$ in IEF coordinates (the vertical black segment in Fig.~\ref{f:lem:OS:diag_int_EF}).
 The value of $\tau_*$ is determined through the corresponding
 conformal time $\eta_*$ via Eq.~(\ref{e:lem:OS:evol_star_surf}):
 \[
-    \frac{r_0}{2} (1 + \cos\eta_*) = 2 m_0 \iff
-    \cos\eta_* = 4\frac{m_0}{r_0} - 1 = 2 \sin^2\chi_{\rm s} - 1 = - \cos(2\chi_{\rm s}) ,
+    \frac{r_0}{2} (1 + \cos\eta_*) = 2 m \iff
+    \cos\eta_* = 4\frac{m}{r_0} - 1 = 2 \sin^2\chi_{\rm s} - 1 = - \cos(2\chi_{\rm s}) ,
 \]
 where use has been made of Eq.~(\ref{e:lem:OS:sin_chis_m0_r0}). Given that $0<\eta_*<\pi$
 and $0<\chi_{\rm s} < \pi/2$, the solution is
@@ -1055,7 +1061,7 @@ and $0<\chi_{\rm s} < \pi/2$, the solution is
 \ee
 Equation~(\ref{e:lem:OS:evol_star_surf}) yields then
 \be \label{e:lem:OS:tau_star}
-    \tau_* = \frac{\pi - 2 \chi_{\rm s} + \sin(2\chi_{\rm s})}{\sin^3\chi_{\rm s}} m_0
+    \tau_* = \frac{\pi - 2 \chi_{\rm s} + \sin(2\chi_{\rm s})}{\sin^3\chi_{\rm s}} m
      =  \left( 1 - \frac{2\chi_{\rm s} - \sin(2\chi_{\rm s})}{\pi} \right) \tau_{\rm end} .
 \ee
 
@@ -1063,7 +1069,7 @@ Equation~(\ref{e:lem:OS:evol_star_surf}) yields then
 For the compactness $1/4$ considered in
 Figs.~\ref{f:lem:OS:diag_int_EF}-\ref{f:lem:OS:diag_KS}, one has $\chi_{\rm s}=\pi/4$,
 so that $\eta_* = \pi/2$ and
-$\tau_* = \sqrt{2}(\pi + 2) m_0 \simeq 7.27 \, m_0 \simeq 0.82 \, \tau_{\rm end}$.
+$\tau_* = \sqrt{2}(\pi + 2) m \simeq 7.27 \, m \simeq 0.82 \, \tau_{\rm end}$.
 \end{example}
 
 \begin{example} \label{x:lem:OS:tau_star_astro}
@@ -1075,7 +1081,7 @@ the first three objects, since Eq.~(\ref{e:lem:OS:tau_star}) implies
 $\tau_*/\tau_{\rm end} \simeq 1 - 4 \chi_{\rm s}^3/(3\pi)$ for $\chi_{\rm s} \ll 1$.
 \end{example}
 
-For $\tau < \tau_*$, one has $r_{\rm s}(\tau) > 2 m_0$ and the event horizon
+For $\tau < \tau_*$, one has $r_{\rm s}(\tau) > 2 m$ and the event horizon
 must be located inside the collapsing star. To determine it,
 let us consider the outgoing radial null geodesics, which are drawn as solid green curves
 in Fig.~\ref{f:lem:OS:diag_int_EF}. In view of the metric (\ref{e:lem:OS:g_int}),
@@ -1084,7 +1090,7 @@ the coordinates $(\eta,\chi)$: $\eta = \chi - \chi_{\rm s} + \eta_{\rm s}$, wher
 the constant $\eta_{\rm s}$ is the value of $\eta$ when the geodesic
 reaches the surface of the star ($\chi = \chi_{\rm s}$). Radial null geodesics
 for which $\eta_{\rm s} < \eta_*$ emerge out of the star in
-a part of Schwarschild spacetime where $r > 2 m_0$, so that they can espace
+a part of Schwarschild spacetime where $r > 2 m$, so that they can espace
 to infinity. On the contrary, geodesics having $\eta_{\rm s} > \eta_*$ emerge in the
 black hole region of Schwarzschild spacetime; they are thus trapped and
 eventually end on the curvature singularity at $r=0$. The event horizon
@@ -1109,7 +1115,7 @@ is drawn in black in Fig.~\ref{f:lem:OS:diag_int_EF}, right.
 In view of Eq.~(\ref{e:lem:OS:Hor_eta_chi}), we may say that
 \begin{greybox}
 \begin{itemize}
-\item If $\chi_{\rm s} \leq \pi/3$, or equivalently if $m_0/r_0 \leq 3/8$,
+\item If $\chi_{\rm s} \leq \pi/3$, or equivalently if $m/r_0 \leq 3/8$,
 the event horizon $\Hor$ appears at the center of the star ($\chi=0$)
 at the conformal time
 \be \label{e:lem:OS:eta_hb}
@@ -1117,11 +1123,11 @@ at the conformal time
 \ee
 or equivalently at the matter proper time
 \be \label{e:lem:OS:tau_hb}
-  \tau_{\rm hb} = \frac{\pi - 3 \chi_{\rm s} + \sin(3\chi_{\rm s})}{\sin^3\chi_{\rm s}} m_0
+  \tau_{\rm hb} = \frac{\pi - 3 \chi_{\rm s} + \sin(3\chi_{\rm s})}{\sin^3\chi_{\rm s}} m
      =  \left( 1 - \frac{3\chi_{\rm s} - \sin(3\chi_{\rm s})}{\pi} \right) \tau_{\rm end} ,
 \ee
 the label `hb' standing for ``horizon birth''.
-\item If $\chi_{\rm s} > \pi/3$, or equivalently if $m_0/r_0 > 3/8$, the
+\item If $\chi_{\rm s} > \pi/3$, or equivalently if $m/r_0 > 3/8$, the
 event horizon $\Hor$ is already present in the star at $\tau=0$, at the
 location $\chi = 3\chi_{\rm s} - \pi$.
 \end{itemize}
@@ -1132,11 +1138,11 @@ or $\tau = \tau_*$ given by Eq.~(\ref{e:lem:OS:tau_star}).
 
 \begin{example}
 Continuing with Example~\ref{x:lem:OS:tau_star_chis4}, i.e. with
-$m_0/r_0=1/4$, or equivalently with $\chi_{\rm s}=\pi/4$,
+$m/r_0=1/4$, or equivalently with $\chi_{\rm s}=\pi/4$,
 we get $\eta_{\rm hb} = \pi/4$, which corresponds to the origin of the
 black straight segment drawn in Fig.~\ref{f:lem:OS:diag_int_EF}, left.
 Equation~(\ref{e:lem:OS:tau_hb}) gives
-$\tau_{\rm hb} = (2 + \pi/\sqrt{2}) m_0 \simeq 4.22 \, m_0 \simeq 0.48 \, \tau_{\rm end}$.
+$\tau_{\rm hb} = (2 + \pi/\sqrt{2}) m \simeq 4.22 \, m \simeq 0.48 \, \tau_{\rm end}$.
 \end{example}
 
 \begin{figure}
@@ -1145,7 +1151,7 @@ $\tau_{\rm hb} = (2 + \pi/\sqrt{2}) m_0 \simeq 4.22 \, m_0 \simeq 0.48 \, \tau_{
 }
 \caption[]{\label{f:lem:OS:rho_hb} \footnotesize
 Proper energy density $\rho_{\rm hb}$ at the instant of the black hole
-formation at the center of the star, in units of $m_0^{-2}$,
+formation at the center of the star, in units of $m^{-2}$,
 as a function of the initial compactness angle $\chi_{\rm s}$.
 \textsl{[Figure generated by the notebook \ref{s:sam:Oppenheimer_Snyder}]}
 }
@@ -1166,46 +1172,46 @@ $\tau_{\rm hb} \simeq 0.7 \, \tau_{\rm end}$.
 The matter proper energy density at the horizon birth,
 i.e. at $\tau = \tau_{\rm hb}$, is obtained by substituting (\ref{e:lem:OS:eta_hb})
 for $\eta$ into Eq.~(\ref{e:lem:OS:rho_tau}); using the identity (\ref{e:lem:OS:sin_chis_m0_r0})
-to express $m_0^3/r_0^3$ in terms of $\chi_{\rm s}$, we get
+to express $m^3/r_0^3$ in terms of $\chi_{\rm s}$, we get
 \be \label{e:lem:OS:rho_hb}
-    \rho_{\rm hb} := \rho(\tau_{\rm hb}) = \frac{3}{4\pi m_0^2} \frac{\sin^6\chi_{\rm s}}{(1 - \cos(3\chi_{\rm s}))^3} .
+    \rho_{\rm hb} := \rho(\tau_{\rm hb}) = \frac{3}{4\pi m^2} \frac{\sin^6\chi_{\rm s}}{(1 - \cos(3\chi_{\rm s}))^3} .
 \ee
-It is instructive to take the limit of small initial compactness $m_0/r_0 \ll 1$,
+It is instructive to take the limit of small initial compactness $m/r_0 \ll 1$,
 which corresponds to $\chi_{\rm s} \ll 1$ by virtue of relation~(\ref{e:lem:OS:chis_m0_r0}):
 \be \label{e:lem:OS:rho_hb_small_compact}
-    \rho_{\rm hb}\simeq \frac{2}{243\pi m_0^2} \left( 1 + \frac{5}{4} \chi_{\rm s}^2 \right)
+    \rho_{\rm hb}\simeq \frac{2}{243\pi m^2} \left( 1 + \frac{5}{4} \chi_{\rm s}^2 \right)
     + O(\chi_{\rm s}^4) .
 \ee
 We deduce from Eqs.~(\ref{e:lem:OS:rho_hb})-(\ref{e:lem:OS:rho_hb_small_compact}) that
 \be
-    \lim_{\chi_{\rm s}\to 0} \rho_{\rm hb} = \frac{2}{243\pi m_0^2}
-    \simeq 2.62\; 10^{-3} m_0^{-2}
+    \lim_{\chi_{\rm s}\to 0} \rho_{\rm hb} = \frac{2}{243\pi m^2}
+    \simeq 2.62\; 10^{-3} m^{-2}
     \quad\mbox{and}\quad
-    \lim_{\chi_{\rm s}\to \pi/2}  \rho_{\rm hb} = \frac{3}{4\pi m_0^2}
-    \simeq 0.239\, m_0^{-2}.
+    \lim_{\chi_{\rm s}\to \pi/2}  \rho_{\rm hb} = \frac{3}{4\pi m^2}
+    \simeq 0.239\, m^{-2}.
 \ee
 Between these two limits, $\rho_{\rm hb}$ has a monotonic behavior, as shown in
 Fig.~\ref{f:lem:OS:rho_hb}. In particular, we have
 \be
-    \rho_{\rm hb} < \frac{1}{4 m_0^2} .
+    \rho_{\rm hb} < \frac{1}{4 m^2} .
 \ee
 Hence
 \begin{greybox}
-By selecting a sufficiently large mass $m_0$, the matter proper energy density
+By selecting a sufficiently large mass $m$, the matter proper energy density
 when the black hole region forms at the center of the collapsing star
 can be made arbitrarily small.
 \end{greybox}
 \begin{example} \label{x:lem:OS:rho_hb_water}
 Let us a consider the density of water: $\rho_{\rm hb} = 10^3 \; {\rm kg\, m}^{-3}$.
-By restoring the $G$'s and the $c$'s, the density $m_0^{-2}$ becomes
-$c^6/G^3 m_0^{-2}$.  We then get $m_0 \simeq 4\; 10^7 M_\odot$ for small initial compactness
+By restoring the $G$'s and the $c$'s, the density $m^{-2}$ becomes
+$c^6/G^3 m^{-2}$.  We then get $m \simeq 4\; 10^7 M_\odot$ for small initial compactness
 ($\chi_{\rm s} \ll 1$)
-and $m_0 \simeq 4\; 10^8 M_\odot$ for large initial compactness
+and $m \simeq 4\; 10^8 M_\odot$ for large initial compactness
 ($\chi_{\rm s} \sim \pi/2$).
 \end{example}
 
 The relative density increase at the horizon birth with respect to the initial
-value $\rho_0 = m_0/(4/3 \,\pi r_0^3)$ is obtained by setting $\eta = \pi - 3 \chi_{\rm s}$
+value $\rho_0 = m/(4/3 \,\pi r_0^3)$ is obtained by setting $\eta = \pi - 3 \chi_{\rm s}$
 in Eq.~(\ref{e:lem:OS:rho_tau}):
 \be \label{e:lem:OS:rho_hb_rho0}
     \frac{\rho_{\rm hb}}{\rho_0} = \frac{8}{(1 - \cos(3\chi_{\rm s}))^3} .
@@ -1337,16 +1343,16 @@ and untrapped for $\eta <  \pi - 2 \chi$.
 \end{greybox}
 
 \begin{example}
-The trapped surface $\Sp$ corresponding tp $(\eta,\chi) = (11\pi/16, 3\pi/16)$
-in the Oppen\-heimer-Snyder collapse with $r_0 = 4 m_0$
+The trapped surface $\Sp$ corresponding to $(\eta,\chi) = (11\pi/16, 3\pi/16)$
+in the Oppen\-heimer-Snyder collapse with $r_0 = 4 m$
 is plotted as a brown dot in Fig.~\ref{f:lem:OS:diag_trapped}. According
 to Eq.~(\ref{e:lem:OS:tau_r_eta}), the areal radius of $\Sp$ is
-$r_{\Sp} = 2\sqrt{2} \sin(3\pi/16) (1 + \cos(11\pi/16)) \simeq 0.70 m_0$.
+$r_{\Sp} = 2\sqrt{2} \sin(3\pi/16) (1 + \cos(11\pi/16)) \simeq 0.70 m$.
 The trapped character of $\Sp$ can be read on Fig.~\ref{f:lem:OS:diag_trapped}:
 moving to the future along either the ingoing radial null geodesic (dashed green line)
 or the outgoing one (solid green line) leads to spheres of smaller areal radius,
 and hence smaller area. This is clear on the left diagram when noticing
-that both geodesics encounter the curve $r=0.65 m_0$ in the immediate future of $\Sp$.
+that both geodesics encounter the curve $r=0.65 m$ in the immediate future of $\Sp$.
 It is even more immediate on the right diagram since $r$ is read directly on the $x$-axis.
 \end{example}
 
@@ -1408,7 +1414,7 @@ that the worldline of $\Obs$ is a field line of the static Killing vector
 $\w{\xi} = \wpar_t = \wpar_{\ti}$ in the exterior Schwarzschild region
 [cf. Eq.~(\ref{e:ges:u_Obs_xi})]. In particular, $\Obs$ evolves at a fixed
 value of $(r_\Obs,\th_\Obs,\ph_\Obs)$ of the coordinates $(r,\th,\ph)$
-(cf. Fig.~\ref{f:lem:OS:diag_delay}), with $r_\Obs \gg m_0$.
+(cf. Fig.~\ref{f:lem:OS:diag_delay}), with $r_\Obs \gg m$.
 
 \begin{figure}
 \centerline{
@@ -1418,7 +1424,7 @@ value of $(r_\Obs,\th_\Obs,\ph_\Obs)$ of the coordinates $(r,\th,\ph)$
 Spacetime diagram of the Oppenheimer-Snyder collapse,
 as in the right panel of Fig.~\ref{f:lem:OS:diag_int_EF}, illustrating
 the increasing delay in the reception by a remote static observer $\Obs$
-(maroon worldline at $r=10 \, m_0$)
+(maroon worldline at $r=10 \, m$)
 of signals emitted from the
 surface of the collapsing star with a constant interval of matter proper time,
 $\delta\tau = \tau_{\rm end}/8$.
@@ -1438,8 +1444,8 @@ Since each signal is carried by an outgoing radial null geodesic (the green curv
 in Fig.~\ref{f:lem:OS:diag_delay}), the equation of which is (\ref{e:sch:outgoing_null_geod_EF})
 with respect to the IEF coordinates, we have
 \[
-    \ti^{\rm rec}_i - r_{\Obs} - 4 m_0 \ln \left( \frac{r_{\Obs}}{2 m_0} - 1 \right) =
-    \ti^{\rm em}(\tau_i) - r_{\rm s}(\tau_i) - 4 m_0 \ln \left( \frac{r_{\rm s}(\tau_i)}{2 m_0} - 1 \right),
+    \ti^{\rm rec}_i - r_{\Obs} - 4 m \ln \left( \frac{r_{\Obs}}{2 m} - 1 \right) =
+    \ti^{\rm em}(\tau_i) - r_{\rm s}(\tau_i) - 4 m \ln \left( \frac{r_{\rm s}(\tau_i)}{2 m} - 1 \right),
     \quad i\in\{1,2\} ,
 \]
 where $\ti^{\rm rec}_i$ is the IEF coordinate $\ti$ of the reception event of signal no. $i$
@@ -1453,12 +1459,12 @@ separating the receptions of signal 1 and 2 by $\Obs$:
     \ti^{\rm rec}_2 - \ti^{\rm rec}_1 =
     \ti^{\rm em}(\tau_2) - \ti^{\rm em}(\tau_1)
     + r_{\rm s}(\tau_1) - r_{\rm s}(\tau_2)
-    + 4 m_0 \ln \left( \frac{r_{\rm s}(\tau_1) - 2 m_0}{r_{\rm s}(\tau_2) - 2 m_0} \right) .
+    + 4 m \ln \left( \frac{r_{\rm s}(\tau_1) - 2 m}{r_{\rm s}(\tau_2) - 2 m} \right) .
 \ee
-If $\Obs$ is asymptotically far, i.e. if $r_\Obs \gg m_0$, $\ti^{\rm rec}_2 - \ti^{\rm rec}_1$
+If $\Obs$ is asymptotically far, i.e. if $r_\Obs \gg m$, $\ti^{\rm rec}_2 - \ti^{\rm rec}_1$
 is nothing but the lapse of $\Obs$'s proper time between the two reception events.
 The quantities $\ti^{\rm em}(\tau_2) - \ti^{\rm em}(\tau_1)$ and $r_{\rm s}(\tau_1) - r_{\rm s}(\tau_2)$
-are always finite; on the other side, the logarithm term diverges when $\tau_2$ approaches $\tau_*$ [cf. Eq.~(\ref{e:lem:OS:tau_star})], i.e. when $r_{\rm s}(\tau_2)$ approaches $2 m_0$,  so that
+are always finite; on the other side, the logarithm term diverges when $\tau_2$ approaches $\tau_*$ [cf. Eq.~(\ref{e:lem:OS:tau_star})], i.e. when $r_{\rm s}(\tau_2)$ approaches $2 m$,  so that
 \be
     \ti^{\rm rec}_2 - \ti^{\rm rec}_1 \to +\infty
     \quad\mbox{when}\quad \tau_2 \to \tau_* .
@@ -1469,15 +1475,15 @@ proceeds. The delay between two successive signals becoming infinite, so that, a
 last signal received by $\Obs$. All subsequent signals do not cross the event horizon,
 i.e. are captured by the black hole.
 This is illustrated by Fig.~\ref{f:lem:OS:diag_delay}, which depicts the Oppenheimer-Snyder collapse
-with $r_0 = 4 m_0 \iff \chi_{\rm s} = \pi/4$. Starting from $\tau=0$, a uniform sequence of 8 signals is emitted from the star's surface, the proper time separation between two successive signals being
-$\delta\tau = \tau_{\rm end}/8 = \pi\sqrt{2} m_0 / 4$. One sees graphically that the signals are received by $\Obs$
+with $r_0 = 4 m \iff \chi_{\rm s} = \pi/4$. Starting from $\tau=0$, a uniform sequence of 8 signals is emitted from the star's surface, the proper time separation between two successive signals being
+$\delta\tau = \tau_{\rm end}/8 = \pi\sqrt{2} m / 4$. One sees graphically that the signals are received by $\Obs$
 with an increasing separation $\delta\ti$. The last received signal is the 7th one. The 8th signal is trapped in the black hole region and ends on the curvature singularity.
 
 We conclude from the above analysis that
 \begin{greybox}
 For a remote static observer, the collapse, as monitored from signals regularily emitted at the star's surface, appears to slow down and even to freeze completely when the areal radius
-of the star tends to the gravitational radius $2 m_0$. In particular, the remote observer never sees the
-star shrink below its gravitational radius and does not perceives at all the final singularity.
+of the star tends to the gravitational radius $2 m$. In particular, the remote observer never sees the
+star shrink below its gravitational radius and does not perceive at all the final singularity.
 \end{greybox}
 
 \begin{hist}
@@ -1510,7 +1516,7 @@ parameter along them (cf. Secs.~\ref{s:sch:rad_null_geod} and \ref{s:gis:radial}
 for some constant $\alpha$, we get
 \[
     \w{p} = \derd{x^\mu}{\lambda} \wpar_\mu = \alpha \derd{x^\mu}{r} \wpar_\mu
-          = \alpha \left[ \left( 1  - \frac{2m_0}{r} \right) ^{-1} \wpar_t + \wpar_r \right] .
+          = \alpha \left[ \left( 1  - \frac{2m}{r} \right) ^{-1} \wpar_t + \wpar_r \right] .
 \]
 The constant $\alpha$ is set by considering the energy measured at infinity by
 $\Obs$: $E_\infty = -\w{g}(\w{u}_\Obs, \w{p})$. Since $\w{u}_\Obs = \wpar_t$,
@@ -1518,20 +1524,20 @@ we have $E_\infty = - g_{t\mu} p^\mu$. In view of the
 Schwarzschild-Droste components (\ref{e:sch:Schwarz_metric_SD}) of the metric tensor,
 we get $E_\infty = \alpha$. Hence
 \be \label{e:lem:OS:p_photon}
-     \w{p} = E_\infty  \left[ \left( 1  - \frac{2m_0}{r} \right) ^{-1} \wpar_t + \wpar_r \right] .
+     \w{p} = E_\infty  \left[ \left( 1  - \frac{2m}{r} \right) ^{-1} \wpar_t + \wpar_r \right] .
 \ee
 The 4-velocity of the comoving observer at the surface of the collapsing star
 is $\w{u} = u^t \wpar_t + u^r \wpar_r$. Since this observer is in radial free fall
 from rest,
 $u^t=\D t / \D\tau$ is given by Eq.~(\ref{e:ges:Dt_Dtau})
-with $\veps = \sqrt{1 - 2m_0/r_0}$ [Eq.~(\ref{e:ges:beps2})]
+with $\veps = \sqrt{1 - 2m/r_0}$ [Eq.~(\ref{e:ges:beps2})]
 and $u^r = \D r /\D\tau$ is given by
-Eq.~(\ref{e:ges:radial_motion}) with $\veps^2 - 1 = - 2m_0/r_0$.
+Eq.~(\ref{e:ges:radial_motion}) with $\veps^2 - 1 = - 2m/r_0$.
 Hence we get
 \be \label{e:lem:OS:u_comoving}
-    \w{u} = \sqrt{1 - \frac{2m_0}{r_0} }
-         \left(1 - \frac{2m_0}{r_{\rm s}(\tau)} \right)^{-1} \, \wpar_t
-        - \sqrt{\frac{2m_0}{r_{\rm s}(\tau)} - \frac{2m_0}{r_0}} \,
+    \w{u} = \sqrt{1 - \frac{2m}{r_0} }
+         \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1} \, \wpar_t
+        - \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}} \,
         \wpar_r .
 \ee
 The energy of the emitted photon measured by the comoving observer
@@ -1540,8 +1546,8 @@ $\w{u}$ and $\w{p}$ given by respectively Eqs.~(\ref{e:sch:Schwarz_metric_SD}),
 (\ref{e:lem:OS:u_comoving}) and (\ref{e:lem:OS:p_photon}), we get
 \be
     E_{\rm em} = E_\infty
-    \left(1 - \frac{2m_0}{r_{\rm s}(\tau)} \right)^{-1}
-    \left( \sqrt{1 - \frac{2m_0}{r_0} } + \sqrt{\frac{2m_0}{r_{\rm s}(\tau)} - \frac{2m_0}{r_0}}
+    \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1}
+    \left( \sqrt{1 - \frac{2m}{r_0} } + \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}}
     \right) .
 \ee
 The photon's \defin{redshift}\index{redshift!in Oppenheimer-Snyder collapse} when received by $\Obs$ is\footnote{In this expression,
@@ -1551,23 +1557,23 @@ the affine parameter $\lambda$ along the photon's geodesic.}
 $z := (\lambda_\infty - \lambda_{\rm em})/\lambda_{\rm em} = E_{\rm em}/E_\infty - 1$.
 Hence
 \be \label{e:lem:OS:redshift}
-    \encadre{ z = \left(1 - \frac{2m_0}{r_{\rm s}(\tau)} \right)^{-1}
-    \left( \sqrt{1 - \frac{2m_0}{r_0} } + \sqrt{\frac{2m_0}{r_{\rm s}(\tau)} - \frac{2m_0}{r_0}}
+    \encadre{ z = \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1}
+    \left( \sqrt{1 - \frac{2m}{r_0} } + \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}}
     \right)  - 1 } .
 \ee
 In this expression, $\tau$ is the proper time of infalling matter at the star's surface at the
 instant of emission of the photon.
 
 For $\tau = 0$, $r_{\rm s}(\tau) = r_0$ and formula~(\ref{e:lem:OS:redshift}) reduces to
-$z = (1 - 2m_0/r_0)^{-1/2} - 1$, which is the standard expression for the redshift at infinity of
+$z = (1 - 2m/r_0)^{-1/2} - 1$, which is the standard expression for the redshift at infinity of
 a photon emitted by a \emph{static} observer at $r=r_0$ in the Schwarzschild spacetime. This is
 not surprising since the star is momentarily static at $\tau=0$, the collapse starting
 from rest.
 
-For $\tau\to \tau_*$, $r_{\rm s}(\tau) \to 2 m_0$ and formula~(\ref{e:lem:OS:redshift}) yields
+For $\tau\to \tau_*$, $r_{\rm s}(\tau) \to 2 m$ and formula~(\ref{e:lem:OS:redshift}) yields
 \be \label{e:lem:OS:redshift_sim}
-    z \underset{\tau\to\tau_*}{\sim}  2 \sqrt{1 - \frac{2m_0}{r_0} }
-     \left(1 - \frac{2m_0}{r_{\rm s}(\tau)} \right)^{-1} ,
+    z \underset{\tau\to\tau_*}{\sim}  2 \sqrt{1 - \frac{2m}{r_0} }
+     \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1} ,
 \ee
 which implies $z \to +\infty$ for $\tau \to \tau_*$.
 
@@ -1579,26 +1585,26 @@ $\Delta t_\Obs$ is obtained by setting  $\tau_1 = 0$
 and $\tau_2 = \tau$ in Eq.~(\ref{e:lem:OS:delay}):
 \[
     \Delta t_\Obs = \underbrace{\ti^{\rm em}(\tau) + r_0 - r_{\rm s}(\tau)
-    + 4 m_0 \ln \left( \frac{r_0}{2m_0} - 1 \right)}_{A}
-    -  4 m_0 \ln \left( \frac{r_{\rm s}(\tau)}{2 m_0}  - 1 \right) ,
+    + 4 m \ln \left( \frac{r_0}{2m} - 1 \right)}_{A}
+    -  4 m \ln \left( \frac{r_{\rm s}(\tau)}{2 m}  - 1 \right) ,
 \]
 when we have used $\ti^{\rm em}(0) = 0$.
 The terms denoted by $A$ are bounded when $\tau\to \tau_*$, so that
 \[
-    \Delta t_\Obs  \underset{\tau\to\tau_*}{\sim} -  4 m_0 \ln \left( \frac{r_{\rm s}(\tau)}{2 m_0}  - 1 \right)
-    \iff 1 - \frac{2m_0}{r_{\rm s}(\tau)} \underset{\tau\to\tau_*}{\sim} \mathrm{e}^{-\Delta t_\Obs/(4 m_0)} .
+    \Delta t_\Obs  \underset{\tau\to\tau_*}{\sim} -  4 m \ln \left( \frac{r_{\rm s}(\tau)}{2 m}  - 1 \right)
+    \iff 1 - \frac{2m}{r_{\rm s}(\tau)} \underset{\tau\to\tau_*}{\sim} \mathrm{e}^{-\Delta t_\Obs/(4 m)} .
 \]
 Combining with Eq.~(\ref{e:lem:OS:redshift_sim}), we obtain the expression
 of the redshift at late times in terms of $\Delta t_\Obs$:
 \be
-   \encadre{ z \underset{\tau\to\tau_*}{\sim}  2 \sqrt{1 - \frac{2m_0}{r_0} }
-     \; \mathrm{e}^{\Delta t_\Obs/(4 m_0)} } .
+   \encadre{ z \underset{\tau\to\tau_*}{\sim}  2 \sqrt{1 - \frac{2m}{r_0} }
+     \; \mathrm{e}^{\Delta t_\Obs/(4 m)} } .
 \ee
 Hence we conclude:
 \begin{greybox}
 The radiation from the surface of the collapsing star is received by the remote static observer $\Obs$
 with an increasing redshift. At late times, the redshift grows exponentially
-with a characteristic time scale $4 m_0$. Equivalently, the energies of the received photons
+with a characteristic time scale $4 m$. Equivalently, the energies of the received photons
 vanish exponentially fast.
 \end{greybox}
 
