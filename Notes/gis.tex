@@ -166,8 +166,7 @@ $b$ and $\eps_L = \pm 1$.
 As soon as $\Li$ has some part in
 region $\M_{\rm I}$, then $E>0$ [cf. Eq.~(\ref{e:ges:E_positive_M_I})], so that
 $b$, as defined by Eq.~(\ref{e:ges:def_b}), is finite and positive. It has
-has the dimension of a length
-and can be interpreted as the
+the dimension of a length and can be interpreted as the
 \defin{impact parameter}\index{impact parameter} in the case of a
 particle arising from infinity.
 \end{greybox}
@@ -1966,9 +1965,10 @@ for an asymptotic observer $\Obs$ located at $r_{\Obs} \gg m$.}
 \end{figure}
 
 
-\subsection{The asymptotic observer}
+\subsection{The asymptotic observer} \label{s:gis:asympt_obs}
 
-Let us consider some ``far-away'' observer, i.e. an observer $\Obs$ located at $r = r_{\Obs} \gg m$. Without
+Let us consider some ``far-away'' static observer, i.e.
+an observer $\Obs$ located at $r = r_{\Obs} \gg m$. Without
 any loss of generality, we may assume that $\Obs$ is located at $\th=\pi/2$ and $\ph=0$
 (cf. Fig.~\ref{f:gis:obs_angle}).
 Furthermore, we suppose that $\Obs$ is
@@ -2102,16 +2102,20 @@ is an orthonormal tetrad with respect to the Schwarzschild metric
 having a 4-velocity $\w{u}_{\rm em}$ collinear to the Killing vector $\wpar_t$
 makes the observer $\Obs_{\rm em}$ static [cf. Eq.~(\ref{e:ges:u_Obs_xi})].
 
-The 4-momentum $\w{p}$ of a photon emitted by $\Obs_{\rm em}$ in the equatorial
-plane is given by Eqs.~(\ref{e:ges:comp_4_momentum}) and
+The generic 4-momentum $\w{p}$ of a photon evolving in the equatorial
+plane $\th=\pi/2$ is given by Eqs.~(\ref{e:ges:comp_4_momentum}) and
 (\ref{e:ges:dot_t_null})-(\ref{e:ges:dot_r_square_null}):
-\be
-    \w{p} = E \left( 1 - \frac{2m}{r} \right)^{-1} \wpar_t
-        \pm E \sqrt{ 1 - b^2 U(r) } \, \wpar_r
-        + \eps_L E \frac{b}{r^2} \, \wpar_\ph ,
+\be \label{e:gis:4mom_photon}
+   \encadre{ \w{p} = E \left[ \left( 1 - \frac{2m}{r} \right)^{-1} \wpar_t
+        \pm  \sqrt{ 1 - b^2 U(r) } \, \wpar_r
+        + \eps_L  \frac{b}{r^2} \, \wpar_\ph \right] },
 \ee
 where we have used Eq.~(\ref{e:ges:eff_pot_null}) to let appear $U(r)$
-and Eqs.~(\ref{e:ges:def_b})-(\ref{e:gis:def_epsilon_L}) to express $L$ in terms of $E$ and $b$.
+and Eqs.~(\ref{e:ges:def_b})-(\ref{e:gis:def_epsilon_L}) to express\footnote{
+Note that formula (\ref{e:gis:4mom_photon}) assumes $E\neq 0$, otherwise $b := |L|/E$ would
+be ill-defined. As discussed in Sec.~\ref{s:gis:null_eff_pot}, the property $E\neq 0$,
+and even $E>0$, holds as soon as the photon travels in the black hole's exterior.}
+$L$ in terms of $E$ and $b$.
 Taking the value of $\w{p}$ at the emission point $S$ and using (\ref{e:gis:bo_Obs_em})
 to express $\wpar_t$, $\wpar_r$ and $\wpar_\ph$ in terms of
 $\Obs_{\rm em}$'s orthonormal tetrad, we get

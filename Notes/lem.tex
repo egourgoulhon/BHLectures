@@ -903,7 +903,7 @@ of the IEF coordinate $\ti$ at the end of the collapse:
      \ti_{\rm end} = 2m \left[ \pi \left(1 +  \frac{r_0}{4m} \right) \sqrt{\frac{r_0}{2m} - 1}
      - \ln \left( \frac{r_0}{2m} - 1\right) \right] .
 \ee
-\begin{example}
+\begin{example} \label{x:lem:OS:tau_end_plot}
 For the compactness $m/r_0 = 1/4$, which is that considered in Figs.~\ref{f:lem:OS:diag_int_EF}-\ref{f:lem:OS:diag_KS}, the above formulas yield
 $\tau_{\rm end} = 2 \sqrt{2} \pi m \simeq 8.89\, m$ and
 $\ti_{\rm end} = 4 \pi m \simeq 12.57\, m$.
@@ -1414,7 +1414,9 @@ that the worldline of $\Obs$ is a field line of the static Killing vector
 $\w{\xi} = \wpar_t = \wpar_{\ti}$ in the exterior Schwarzschild region
 [cf. Eq.~(\ref{e:ges:u_Obs_xi})]. In particular, $\Obs$ evolves at a fixed
 value of $(r_\Obs,\th_\Obs,\ph_\Obs)$ of the coordinates $(r,\th,\ph)$
-(cf. Fig.~\ref{f:lem:OS:diag_delay}), with $r_\Obs \gg m$.
+(cf. Fig.~\ref{f:lem:OS:diag_delay}). Without any loss of generality,
+we choose $\th_\Obs = \pi/2$ and $\ph_\Obs = 0$.
+Furthermore, we assume that $\Obs$ is \emph{remote}: $r_\Obs \gg m$.
 
 \begin{figure}
 \centerline{
@@ -1438,7 +1440,8 @@ curves.
 
 Let us suppose that, at the matter comoving proper time $\tau_1$, an electromagnetic
 signal (``flash'') is emitted in the radial direction from
-the surface of the collapsing star and that a similar signal is emitted
+the surface of the collapsing star at $\th=\pi/2$ and $\ph=0$ (i.e. towards observer $\Obs$)
+and that a similar signal is emitted
 subsequently at proper time $\tau_2$.
 Since each signal is carried by an outgoing radial null geodesic (the green curves
 in Fig.~\ref{f:lem:OS:diag_delay}), the equation of which is (\ref{e:sch:outgoing_null_geod_EF})
@@ -1461,29 +1464,37 @@ separating the receptions of signal 1 and 2 by $\Obs$:
     + r_{\rm s}(\tau_1) - r_{\rm s}(\tau_2)
     + 4 m \ln \left( \frac{r_{\rm s}(\tau_1) - 2 m}{r_{\rm s}(\tau_2) - 2 m} \right) .
 \ee
-If $\Obs$ is asymptotically far, i.e. if $r_\Obs \gg m$, $\ti^{\rm rec}_2 - \ti^{\rm rec}_1$
+Since $\Obs$ is remote ($r_\Obs \gg m$), $\ti^{\rm rec}_2 - \ti^{\rm rec}_1$
 is nothing but the lapse of $\Obs$'s proper time between the two reception events.
 The quantities $\ti^{\rm em}(\tau_2) - \ti^{\rm em}(\tau_1)$ and $r_{\rm s}(\tau_1) - r_{\rm s}(\tau_2)$
-are always finite; on the other side, the logarithm term diverges when $\tau_2$ approaches $\tau_*$ [cf. Eq.~(\ref{e:lem:OS:tau_star})], i.e. when $r_{\rm s}(\tau_2)$ approaches $2 m$,  so that
+are always finite; on the other side, the logarithm term diverges
+when $r_{\rm s}(\tau_2)$ approaches $2 m$, i.e.
+when $\tau_2$ approaches $\tau_*$ [cf. Eq.~(\ref{e:lem:OS:tau_star})], so that
 \be
     \ti^{\rm rec}_2 - \ti^{\rm rec}_1 \to +\infty
     \quad\mbox{when}\quad \tau_2 \to \tau_* .
 \ee
 In particular, if a sequence of signals is emitted from the star's surface at a constant rate in terms
 of the comoving proper time $\tau$, the signals are received by the remote observer $\Obs$ with an increasing delay as the collapse
-proceeds. The delay between two successive signals becoming infinite, so that, among the emitted sequence, there exists a very
-last signal received by $\Obs$. All subsequent signals do not cross the event horizon,
+proceeds. The delay between two successive signals becoming infinite, there exists a very
+last signal received by $\Obs$.
+All subsequent signals of the emitted sequence do not cross the event horizon,
 i.e. are captured by the black hole.
-This is illustrated by Fig.~\ref{f:lem:OS:diag_delay}, which depicts the Oppenheimer-Snyder collapse
+
+\begin{example}
+Consider Fig.~\ref{f:lem:OS:diag_delay}, which depicts the Oppenheimer-Snyder collapse
 with $r_0 = 4 m \iff \chi_{\rm s} = \pi/4$. Starting from $\tau=0$, a uniform sequence of 8 signals is emitted from the star's surface, the proper time separation between two successive signals being
-$\delta\tau = \tau_{\rm end}/8 = \pi\sqrt{2} m / 4$. One sees graphically that the signals are received by $\Obs$
+$\delta\tau = \tau_{\rm end}/8 = \pi\sqrt{2} m / 4$ (cf. Example~\ref{x:lem:OS:tau_end_plot} on
+p.~\pageref{x:lem:OS:tau_end_plot}). One sees graphically that the signals are received by $\Obs$
 with an increasing separation $\delta\ti$. The last received signal is the 7th one. The 8th signal is trapped in the black hole region and ends on the curvature singularity.
+\end{example}
 
 We conclude from the above analysis that
 \begin{greybox}
-For a remote static observer, the collapse, as monitored from signals regularily emitted at the star's surface, appears to slow down and even to freeze completely when the areal radius
-of the star tends to the gravitational radius $2 m$. In particular, the remote observer never sees the
-star shrink below its gravitational radius and does not perceive at all the final singularity.
+For a remote static observer, the collapse, as monitored by the reception of signals regularily emitted from the star's surface,
+appears to slow down and even to freeze completely when the areal radius
+of the star tends towards $2 m$. In particular, the remote observer never sees the
+star's surface crossing the event horizon and does not perceive at all the final singularity.
 \end{greybox}
 
 \begin{hist}
@@ -1492,13 +1503,18 @@ was given to black holes before the name \emph{black hole} itself was coined
 (cf. the historical note on p.~\pageref{h:glo:black_hole_name}).
 \end{hist}
 
-\subsubsection{Infinite redshift}
+\subsubsection{Infinite central redshift}
 
 The time dilation effect described above manifests itself on the frequencies of photons
-received by the remote observer $\Obs$ from the surface of the collapsing star.
+received by the remote observer $\Obs$ from the surface of the collapsing star
+in the radial direction, i.e. along $\th=\pi/2$ and $\ph=0$.
 The inverses of the observed frequencies, i.e. the observed electromagnetic periods, are expected to increase without any bound during the collapse, leading to an infinite redshift.
 Let us establish this via a direct computation of the photon energies $E$, which are proportional
 to the frequencies $\nu$, via the Planck-Einstein relation (\ref{e:fra:Planck_Einstein}): $E = h\nu$.
+We shall work in terms of the Schwarzschild-Droste
+coordinates $(t,r,\th,\ph)$, which are regular in the Schwarzschild exterior where
+the null geodesic propagates to the remote observer $\Obs$; they
+make computations slightly simpler than IEF coordinates do.
 
 The energy of a photon measured by an observer of 4-velocity $\w{u}$ is
 $E = - \w{g}(\w{u},\w{p})$ [Eq.~(\ref{e:fra:E_obs})], where $\w{p}$ is the photon's
@@ -1506,43 +1522,30 @@ energy-momentum vector. The latter is the tangent vector corresponding to
 some affine parametrization (parameter $\lambda$) of
 the null geodesic constituting the photon's worldline: $\w{p} = \D\w{x}/\D\lambda$
 [Eq.~(\ref{e:fra:p_dxdl})].
-In what follows, we shall work in terms of the Schwarzschild-Droste
-coordinates $(t,r,\th,\ph)$, which are regular in the Schwarzschild exterior where
-the null geodesic propagates to the remote observer $\Obs$; they
-make computations slightly simpler than IEF coordinates do.
-Given expression (\ref{e:sch:outgoing_null_geod})
-for the outgoing radial null geodesics and the fact that $r$ is an affine
-parameter along them (cf. Secs.~\ref{s:sch:rad_null_geod} and \ref{s:gis:radial}), so that $r = \alpha \lambda$
-for some constant $\alpha$, we get
-\[
-    \w{p} = \derd{x^\mu}{\lambda} \wpar_\mu = \alpha \derd{x^\mu}{r} \wpar_\mu
-          = \alpha \left[ \left( 1  - \frac{2m}{r} \right) ^{-1} \wpar_t + \wpar_r \right] .
-\]
-The constant $\alpha$ is set by considering the energy measured at infinity by
-$\Obs$: $E_\infty = -\w{g}(\w{u}_\Obs, \w{p})$. Since $\w{u}_\Obs = \wpar_t$,
-we have $E_\infty = - g_{t\mu} p^\mu$. In view of the
-Schwarzschild-Droste components (\ref{e:sch:Schwarz_metric_SD}) of the metric tensor,
-we get $E_\infty = \alpha$. Hence
+For a photon travelling radially outward in the plane $\th=\pi/2$, it is given
+by Eq.~(\ref{e:gis:4mom_photon}) with $b=0$:
 \be \label{e:lem:OS:p_photon}
-     \w{p} = E_\infty  \left[ \left( 1  - \frac{2m}{r} \right) ^{-1} \wpar_t + \wpar_r \right] .
+     \w{p} = E_\infty  \left[ \left( 1  - \frac{2m}{r} \right) ^{-1} \wpar_t + \wpar_r \right] ,
 \ee
+where $E_\infty$ is the photon's energy measured at infinity by a remote static observer,
+like $\Obs$.
 The 4-velocity of the comoving observer at the surface of the collapsing star
-is $\w{u} = u^t \wpar_t + u^r \wpar_r$. Since this observer is in radial free fall
+is $\w{u}_{\rm s} = u_{\rm s}^t \wpar_t + u_{\rm s}^r \wpar_r$. Since this observer is in radial free fall
 from rest,
-$u^t=\D t / \D\tau$ is given by Eq.~(\ref{e:ges:Dt_Dtau})
+$u_{\rm s}^t=\D t / \D\tau$ is given by Eq.~(\ref{e:ges:Dt_Dtau})
 with $\veps = \sqrt{1 - 2m/r_0}$ [Eq.~(\ref{e:ges:beps2})]
-and $u^r = \D r /\D\tau$ is given by
+and $u_{\rm s}^r = \D r /\D\tau$ is given by
 Eq.~(\ref{e:ges:radial_motion}) with $\veps^2 - 1 = - 2m/r_0$.
 Hence we get
 \be \label{e:lem:OS:u_comoving}
-    \w{u} = \sqrt{1 - \frac{2m}{r_0} }
+    \w{u}_{\rm s} = \sqrt{1 - \frac{2m}{r_0} }
          \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1} \, \wpar_t
         - \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}} \,
         \wpar_r .
 \ee
 The energy of the emitted photon measured by the comoving observer
-is $E_{\rm em} = -\w{g}(\w{u},\w{p})$. With the components of $\w{g}$,
-$\w{u}$ and $\w{p}$ given by respectively Eqs.~(\ref{e:sch:Schwarz_metric_SD}),
+is $E_{\rm em} = -\w{g}(\w{u}_{\rm s},\w{p})$. With the components of $\w{g}$,
+$\w{u}_{\rm s}$ and $\w{p}$ given by respectively Eqs.~(\ref{e:sch:Schwarz_metric_SD}),
 (\ref{e:lem:OS:u_comoving}) and (\ref{e:lem:OS:p_photon}), we get
 \be
     E_{\rm em} = E_\infty
@@ -1600,27 +1603,41 @@ of the redshift at late times in terms of $\Delta t_\Obs$:
    \encadre{ z \underset{\tau\to\tau_*}{\sim}  2 \sqrt{1 - \frac{2m}{r_0} }
      \; \mathrm{e}^{\Delta t_\Obs/(4 m)} } .
 \ee
-Hence we conclude:
-\begin{greybox}
-The radiation from the surface of the collapsing star is received by the remote static observer $\Obs$
-with an increasing redshift. At late times, the redshift grows exponentially
-with a characteristic time scale $4 m$. Equivalently, the energies of the received photons
-vanish exponentially fast.
-\end{greybox}
+%~ Hence we conclude:
+%~ \begin{greybox}
+%~ The radiation from the surface of the collapsing star is received by the remote static observer $\Obs$
+%~ with an increasing redshift. At late times, the redshift grows exponentially
+%~ with a characteristic time scale $4 m$. Equivalently, the energies of the received photons
+%~ vanish exponentially fast.
+%~ \end{greybox}
 
 
 \subsubsection{Images of the collapse}
 
-As stressed above, the remote static observer $\Obs$ shall never see the star
-collapse to a ``point'', but shall instead perceive it to freeze to its gravitational radius.
-The image of the star, which is a disk on $\Obs$'s screen, shall even shrink much
-less than naively expected, due to strong gravitational lensing effects that
-take place in the last stages of the collapse. As analyzed in Secs.~\ref{s:gis:shadow}
-and \ref{s:gis:image_disk}, the final images are indeed larger by a factor
-$\sim 3\sqrt{3}/2 \sim 2.60$ than those for a collapse
-in a flat spacetime. See e.g. Fig.~4 of Ref.~\cite{VinceGN12} for a concrete example
-regarding simulated
-images of the gravitational collapse of an unstable neutron star into a black hole.
+%~ As stressed above, the remote static observer $\Obs$ shall never see the star
+%~ collapse to a ``point'', but shall instead perceive it to freeze to its gravitational radius.
+%~ The image of the star, which is a disk on $\Obs$'s screen, shall even shrink much
+%~ less than naively expected, due to strong gravitational lensing effects that
+%~ take place in the last stages of the collapse. As analyzed in Secs.~\ref{s:gis:shadow}
+%~ and \ref{s:gis:image_disk}, the final images are indeed larger by a factor
+%~ $\sim 3\sqrt{3}/2 \sim 2.60$ than those for a collapse
+%~ in a flat spacetime. See e.g. Fig.~4 of Ref.~\cite{VinceGN12} for a concrete example
+%~ regarding simulated
+%~ images of the gravitational collapse of an unstable neutron star into a black hole.
+
+The image of the collapsing star is formed on the screen of observer's $\Obs$
+by photons emitted from the star's surface in various directions. Due to spherical
+symmetry the image of the star at a given instant is a disk.
+As discussed in Sec.~\ref{s:gis:asympt_obs},
+the distance of a screen pixel from the disk center
+is propotional to the impact parameter $b$ of the null geodesic carrying the photon
+that hits this pixel.
+The center of the image corresponds to a null geodesic having $b=0$, i.e.
+travelling radially in the direction $\th=\pi/2$ and $\ph=0$.
+Let us denote by $t_\Obs$ the proper time of observer $\Obs$. Since $\Obs$
+is assumed to far away in the weak-field region, $t_\Obs$ coincide
+with the Schwarzschild-Droste time coordinate at the location of $\Obs$.
+
 
 
 
