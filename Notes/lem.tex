@@ -1404,11 +1404,13 @@ this limit, see Ref.~\cite{BengtJS13} for details.
 \end{remark}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Observational appearance of the black hole formation}
+
+\section{Observational appearance of the black hole formation}
 
 Let us consider a remote static observer $\Obs$ who receives electromagnetic
-radiation from the surface of the collapsing star. By
+radiation from the surface of a spherically symmetric collapsing star. By
 \emph{static}\index{static!observer!in Schwarzschid!spacetime}, it is meant
 that the worldline of $\Obs$ is a field line of the static Killing vector
 $\w{\xi} = \wpar_t = \wpar_{\ti}$ in the exterior Schwarzschild region
@@ -1436,7 +1438,7 @@ curves.
 }
 \end{figure}
 
-\subsubsection{Apparent collapse freezing}
+\subsection{Apparent collapse freezing}
 
 Let us suppose that, at the matter comoving proper time $\tau_1$, an electromagnetic
 signal (``flash'') is emitted in the radial direction from
@@ -1503,6 +1505,314 @@ was given to black holes before the name \emph{black hole} itself was coined
 (cf. the historical note on p.~\pageref{h:glo:black_hole_name}).
 \end{hist}
 
+
+
+\subsection{Shape and size of the images of the collapse}
+
+%~ As stressed above, the remote static observer $\Obs$ shall never see the star
+%~ collapse to a ``point'', but shall instead perceive it to freeze to its gravitational radius.
+%~ The image of the star, which is a disk on $\Obs$'s screen, shall even shrink much
+%~ less than naively expected, due to strong gravitational lensing effects that
+%~ take place in the last stages of the collapse. As analyzed in Secs.~\ref{s:gis:shadow}
+%~ and \ref{s:gis:image_disk}, the final images are indeed larger by a factor
+%~ $\sim 3\sqrt{3}/2 \sim 2.60$ than those for a collapse
+%~ in a flat spacetime. See e.g. Fig.~4 of Ref.~\cite{VinceGN12} for a concrete example
+%~ regarding simulated
+%~ images of the gravitational collapse of an unstable neutron star into a black hole.
+
+The image of the collapsing star is formed on the screen of observer's $\Obs$
+by photons emitted from the star's surface and following
+null geodesics of Schwarzschild spacetime (the spacetime
+exterior to the star). Such geodesics have been studied in detail in Chap.~\ref{s:gis}.
+In particular, it has been shown that they are essentially characterized by a
+single parameter: the impact parameter $b:=|L|/E$ introduced in Sec.~\ref{s:gis:null_eff_pot}.
+
+Due to spherical
+symmetry, the image of the star at a given instant is a disk and is invariant
+by rotation around the disk center.
+As discussed in Sec.~\ref{s:gis:asympt_obs},
+the distance of a screen pixel from the disk center
+is proportional to the impact parameter $b$ of the null geodesic carrying the photon
+hitting this pixel.
+The pixel at the disk center corresponds to a null geodesic having $b=0$, i.e.
+travelling radially in the direction $\th=\th_\Obs=\pi/2$ and $\ph=\ph_\Obs=0$.
+The image's rim, i.e. the circle bounding the disk, is located at some
+maximal value of $b$, $b_{\rm m}(t_\Obs)$ say, where $t_\Obs$
+stands for the proper time of observer $\Obs$. Since $\Obs$
+is assumed to lie far away in the weak-field region, $t_\Obs$ coincides
+with the Schwarzschild-Droste time coordinate at the location of $\Obs$.
+A great amount of information on $b_{\rm m}(t_\Obs)$ can be inferred from the effective
+potential analysis developed in Sec.~\ref{s:gis:null_eff_pot}. Indeed, along
+any null geodesic $\Li$ in the black hole exterior,
+the constraint
+\be \label{e:lem:OS:b_constraint}
+    b \leq \frac{1}{\sqrt{U(r)}} = \frac{r}{\sqrt{1 - 2m/r}}
+\ee
+must hold, where $U(r)$ is the effective potential (\ref{e:ges:eff_pot_null}):
+$U(r) := (1 - 2m/r)/r^2$. This follows directly from
+$({\D r}/{\D\tilde{\lambda}})^2\geq 0$ in Eq.~(\ref{e:ges:dot_r_square_null_b}).
+Prior to the collapse, let us assume
+that the surface of the star is static and located at $r = r_0$.
+Let us then denote by $t_\Obs^{**}$ the value of $t_\Obs$ at which the disk image
+starts to shrink. It corresponds to the disk boundary
+formed by null geodesics emitted from the star's surface
+at the matter proper time $\tau=0$ (the start of collapse according to our conventions).
+For $t_{\Obs} \leq t_\Obs^{**}$, one has then $r\geq r_0$ all along $\Li$.
+If we assume $r_0 > 3m$, then $1/\sqrt{U(r)}$ is increasing with $r$ all along $\Li$,
+since $U(r)$ is a decreasing function on the interval $(3m,+\infty)$ (cf. Fig.~\ref{f:gis:eff_pot_null}).
+The constraint (\ref{e:lem:OS:b_constraint}) is then equivalent to $b \leq 1/\sqrt{U(r_0)}$, so
+that the maximal value of $b$ is $b_0 := 1/\sqrt{U(r_0)}$ and we can write:
+\be \label{e:lem:OS:bmax_static}
+    b_{\rm m}(t_\Obs) = b_0 := \frac{r_0}{\sqrt{1 - 2m/r_0}} \quad\mbox{for}\quad  t_\Obs \leq t_\Obs^{**}
+        \quad\mbox{and}\quad r_0 > 3 m .
+\ee
+For $t_\Obs \leq t_\Obs^{**}$, a
+null geodesic at the image's rim, i.e having $b=b_{\rm m}(t_\Obs)$, fullfils
+thus $U(r_0) = b^{-2}$, which implies ${\D r}/{\D\tilde{\lambda}} = 0$ at $r=r_0$
+according to Eq.~(\ref{e:ges:dot_r_square_null_b}). This means that the emission point
+($r=r_0$) is a periastron of the geodesic: it corresponds to the minimal value of $r$ along
+$\Li$, even if the latter is extented infinitely far in the past. This implies
+that $\Li$ is tangent to the hypersurface $r=r_0$ at the emission point, i.e. that
+the photon is emitted in a direction tangent to the star's surface.
+
+\begin{remark}
+In terms of the compactness angle $\chi_{\rm s}$ defined by Eq.~(\ref{e:lem:OS:chis_m0_r0}),
+formula (\ref{e:lem:OS:bmax_static}) takes a simple form:
+\be
+    b_{\rm m}(t_\Obs) = r_0 \cos\chi_{\rm s} \quad\mbox{for}\quad  t_\Obs \leq t_\Obs^{**}
+        \quad\mbox{and}\quad r_0 > 3 m .
+\ee
+In the non-relativistic limit, $\chi_{\rm s} \to 0$ and we get $b_{\rm m}(t_\Obs) = r_0$,
+as expected (recall that the trully observed quantity through a telescope is the small angle
+$\hat{b} = b / r_\Obs$ [Eq.~(\ref{e:gis:hat_b})]).
+\end{remark}
+
+One can also use the effective potential analysis to get the value of $b_{\rm m}(t_\Obs)$
+at late times, more precisely for images formed by photons emitted after the collapsing star has
+shrunk below the \emph{photon sphere}\index{photon!sphere}\index{sphere!photon --}
+introduced in Sec.~\ref{s:gis:null_eff_pot}, which corresponds to
+$r_{\rm s}(\tau) < 3m$. Since the function $r\mapsto 1/\sqrt{U(r)}$ is
+decreasing on $(2m, 3m)$, reaches a minimun at $r=3m$ and increases on $(3m, +\infty)$
+(cf. the plot of $U(r)$ in Fig.~\ref{f:gis:eff_pot_null}), the constraint
+(\ref{e:lem:OS:b_constraint}) becomes $b \leq \min ({1}/{\sqrt{U(r)}}) = b_{\rm c}$,
+where $b_{\rm c} = 3\sqrt{3} \, m$ [Eq.~(\ref{e:ges:b_crit})].
+An example of photon emitted at $r<3m$ and fulfilling this constraint is
+represented by the trajectory no.~3 in Fig.~\ref{f:gis:eff_pot_null}.
+Furthermore, the constraint is actually a sufficient condition for any
+photon emitted outward to reach infinity (cf. Fig.~\ref{f:gis:eff_pot_null} once more).
+However, for $b$ close to $b_{\rm c}$, photons perform a large number of orbits
+very close to the photon sphere, this number being actually infinite for $b=b_{\rm c}$
+(critical null geodesics)\index{critical!null geodesic}, as discussed in
+Sec.~\ref{s:gis:crit_geod}
+(cf. Figs.~\ref{f:gis:null_b_crit_from_inf_L_pos} to \ref{f:gis:null_b_crit_intern}.
+As a consequence, the elapsed time coordinate $t$ along the corresponding null
+geodesic diverges as $b \to b_{\rm c}$, so that
+the image boundary $b_{\rm m}(t_\Obs) = b_{\rm c}$ is reached only for
+$t_\Obs \to +\infty$:
+\be \label{e:lem:OS:bmax_final}
+    \lim_{t_\Obs \to +\infty} b_{\rm m}(t_\Obs) = 3\sqrt{3} \, m .
+\ee
+However, one can show (see e.g. Ref.~\cite{YoshiTN19} for
+details) that $b_{\rm m}(t_\Obs)$ converges to $b_{\rm c}$ exponentially fast:
+$b_{\rm m}(t_\Obs) - b_{\rm c} \propto \exp(- t_\Obs/b_{\rm c})$.
+
+
+To summarize:
+
+\begin{greybox}
+\begin{itemize}
+\item If the initial star is not ultracompact\index{ultracompact}, i.e. if its areal radius
+$r_0$ is larger than $3 m$,
+the radius of the disk image shrinks from $b_0 = r_0 / \sqrt{1 - 2m/r_0}$
+[Eq.~(\ref{e:lem:OS:bmax_static})]
+to $b_\infty := 3\sqrt{3} \, m$ [Eq.~(\ref{e:lem:OS:bmax_final})].
+The latter value is reached only asymptotically, i.e. for $t_\Obs\to +\infty$,
+but the convergence is exponentially fast, so that, $b_{\rm m}(t_\Obs) \simeq 3\sqrt{3} \, m$
+is a very good approximation for $t_\Obs > t_\Obs^{**} + \alpha m$, where $\alpha \sim 2 b_{\rm c}/m
+\sim 10 $.
+\item Collapsing stars that are initially ultracompact
+($r_0 < 3 m$) generate images of constant size: the radius of the disk image
+remains fixed at $b_{\rm m} = 3\sqrt{3} \, m$.
+\end{itemize}
+\end{greybox}
+
+\begin{remark}
+The above results are not specific to the Oppenheimer-Snyder collapse: they
+hold for any spherically symmetric gravitational collapse.
+\end{remark}
+
+\begin{example}
+For our favorite example with $r_0 = 4m$ (Figs.~\ref{f:lem:OS:diag_int_EF},
+\ref{f:lem:OS:diag_KS}, \ref{f:lem:OS:diag_trapped} and \ref{f:lem:OS:diag_delay}),
+the radius of the image disk evolves from $4\sqrt{2} \, m\simeq 5.66\, m$ to
+$3\sqrt{3}\, m \simeq 5.20\, m$, which constitutes a pretty modest
+decrease: only $8\%$. This is of course because such a star has a very compactness.
+For the neutron star considered in Table~\ref{t:lem:OS:num}, which has a
+smaller compactness: $m/r_0 = 0.17$, the shrinking factor is higher: $28\%$.
+\end{example}
+
+The photons that form the star's image
+on $\Obs$'s screen at a given instant $t_\Obs$ have impact parameters $b$ in
+the range $0\leq b \leq b_{\rm m}(t_\Obs)$ and have been emitted from the
+star's surface at various proper times $\tau$, depending on the value of $b$.
+Indeed, let us evaluate the elapsed
+Schwarzschild-Droste time $t$ between
+along a null geodesic $\Li$ of impact parameter $b$ between
+the photon emission at the star surface and its reception
+by $\Obs$. Thanks to spherical
+symmetry, it suffices to consider photons travelling in the plane
+$\th=\pi/2$. The geodesic equations of motion are then
+(\ref{e:ges:dot_t_null_b})-(\ref{e:ges:dot_r_square_null_b}), from which
+we get
+\begin{subequations}
+\begin{align}
+   &\left. \frac{\D t}{\D r} \right| _{\Li}
+    = \eps_r \left(1 - \frac{2m}{r} \right) ^{-1}
+        \left( 1 - b^2 U(r) \right) ^{-1/2} \\[1ex] \label{e:lem:OS:dtdr_null_geod}
+   &\left. \frac{\D \ph}{\D r} \right| _{\Li}
+    = \eps_r \eps_L \frac{b}{r^2} \left( 1 - b^2 U(r) \right) ^{-1/2} ,
+\end{align}
+\end{subequations}
+where
+$\eps_L = \pm 1$ indicates the sign of the conserved angular momentum $L$
+of $\Li$ and $\eps_r = \pm 1$ is $+1$ (resp. $-1$) on portions of $\Li$ where $r$ increases
+(resp. decreases) towards the future along $\Li$. Note that $\eps_L$ is
+constant along $\Li$. Regarding $\eps_r$, it has to be $+1$ in the vicinity
+of observer $\Obs$. Given that a null geodesic of Schwarzschild spacetime
+has at most one $r$-turning point (cf. Sec.~\ref{s:gis:null_radial_behav}),
+one has either $\eps_r = +1$ along all $\Li$ or $\eps_r = -1$
+just around the emission point, switching to $+1$ after some periastron
+passage.
+
+Let $\mathscr{E}$ be the event of emission at the star's surface of a photon that reaches
+$\Obs$'s screen at the radial position $b$ at the instant $t_\Obs$.
+Let us denote by respectively $t_{\rm em}(b,t_\Obs)$,
+$\tau_{\rm em}(b,t_\Obs)$ and $r_{\rm s}^{\rm em}(b,t_\Obs)$,
+the Schwarzschild-Droste time
+coordinate of $\mathscr{E}$, the infalling matter proper time of $\mathscr{E}$
+and the areal coordinate $r$ of $\mathscr{E}$.
+For a dust collapse,
+$t_{\rm em}(b,t_\Obs)$, $\tau_{\rm em}(b,t_\Obs)$ and $r_{\rm s}^{\rm em}(b,t_\Obs)$
+are related by the free-fall equations (\ref{e:ges:sol_radial_infall}) [or
+equivalently (\ref{e:lem:OS:evol_star_surf})] and (\ref{e:ges:sol_t_radial_infall}):
+\begin{subequations}
+\label{e:lem:OS:free_fall_em}
+\begin{align}
+   & t_{\rm em}(b,t_\Obs) = 2m \left\{ \sqrt{\frac{r_0}{2m} - 1} \left[ \eta + \frac{r_0}{4m}
+    (\eta + \sin\eta) \right]
+    + \ln \left| \frac{\sqrt{\frac{r_0}{2m} - 1} + \tan\frac{\eta}{2}}{\sqrt{\frac{r_0}{2m} - 1} - \tan\frac{\eta}{2}} \right| \right\} \\
+    & \tau_{\rm em}(b,t_\Obs) =\sqrt{\frac{r_0^3}{8 m}}  \left( \eta + \sin\eta \right) \\
+    & r_{\rm s}^{\rm em}(b,t_\Obs) = \frac{r_0}{2} \left( 1 + \cos\eta \right) .
+\end{align}
+\end{subequations}
+Note that the origin of the Schwarzschild-Droste coordinate $t$ is chosen
+to coincide with the start of the collapse: $t = 0 \iff \tau = 0 \iff \eta = 0$.
+
+In terms of the star's areal radius function $r_{\rm s}(\tau)$, one
+has of course $r_{\rm s}^{\rm em}(b,t_\Obs) = r_{\rm s}(\tau_{\rm em}(b,t_\Obs))$.
+The above relations are valid for $\tau_{\rm em}(b,t_\Obs) \geq 0$, i.e.
+after the collapse has started. For $\tau_{\rm em}(b,t_\Obs) < 0$, we
+have,
+instead of (\ref{e:lem:OS:free_fall_em}),
+\begin{subequations}
+\begin{align}
+    & t_{\rm em}(b,t_\Obs) =  \left(1 - \frac{2m}{r_0} \right) ^{-1/2} \tau_{\rm em}(b,t_\Obs) < 0 \\
+    & r_{\rm s}^{\rm em}(b,t_\Obs) = r_0 . \label{e:lem:OS:rs_em_r0}
+\end{align}
+\end{subequations}
+By integrating Eq.~(\ref{e:lem:OS:dtdr_null_geod}) between the emission and reception points,
+we get
+\be \label{e:lem:OS:t_em_b_tO}
+    t_\Obs - t_{\rm em}(b,t_\Obs) = \int_{r_{\rm s}^{\rm em}(b,t_\Obs)}^{r_\Obs}
+        \left(1 - \frac{2m}{r} \right) ^{-1}
+        \left( 1 - b^2 U(r) \right) ^{-1/2} \; \D r  + \Delta,
+\ee
+where $\Delta = 0$ if there is no $r$-turning point (periastron) along the photon geodesic
+$\Li$ and
+\be
+    \Delta = 2 \int_{r_{\rm p}}^{r_{\rm s}^{\rm em}(b,t_\Obs)}
+     \left(1 - \frac{2m}{r} \right) ^{-1}
+        \left( 1 - b^2 U(r) \right) ^{-1/2} \; \D r
+\ee
+if there is a periastron, located at $r=r_{\rm p} < r_{\rm s}^{\rm em}(b,t_\Obs)$.
+For a given position of the screen, i.e. a given value of $b$,
+Eq.~(\ref{e:lem:OS:t_em_b_tO}) must be solved to get $t_{\rm em}(b,t_\Obs)$. In general, this
+is a complicated problem since the lower boundary of the integral, $r_{\rm s}^{\rm em}(b,t_\Obs)$,
+depends on $t_{\rm em}(b,t_\Obs)$ in a complicated way, via the parametric
+system (\ref{e:lem:OS:free_fall_em}). However, this is not the case for
+$t_{\rm em}(b,t_\Obs)< 0$, since then $r_{\rm s}^{\rm em}(b,t_\Obs) = r_0$
+[Eq.~(\ref{e:lem:OS:rs_em_r0})]. Equation~(\ref{e:lem:OS:t_em_b_tO}) provides then
+directly the value of $t_{\rm em}(b,t_\Obs)$ and we see that this is a decreasing function
+of $b$, since at fixed $r$, $b \mapsto \left( 1 - b^2 U(r) \right) ^{-1/2}$ is an increasing function of $b$, given that $U(r) > 0$.
+Consequently, the first value of $b$ for which $t_{\rm em}(b,t_\Obs) \geq 0$, i.e. for
+which the collapse starts to be perceptible, is $b=0$. In other words, the collapse
+manifests itself first at the center of the disk image. Let us then denote by
+$t_\Obs^*$ the corresponding value of $t_\Obs$. It is obtained by setting
+$b=0$ (which implies $\Delta=0$ since pure radial geodesics do not have any
+periastron), $t_{\rm em}(b,t_\Obs) = 0$ and $r_{\rm s}^{\rm em}(b,t_\Obs) = r_0$
+in Eq.~(\ref{e:lem:OS:t_em_b_tO}):
+\be
+    t_\Obs^* = \int_{r_0}^{r_\Obs}
+        \left(1 - \frac{2m}{r} \right) ^{-1} \; \D r .
+\ee
+On the other side, the value of $t_\Obs^{**}$ (start of the decrease of disk image's radius)
+is obtained by setting
+$b=b_0$ [the value~(\ref{e:lem:OS:bmax_static})],
+$t_{\rm em}(b,t_\Obs) = 0$ and $r_{\rm s}^{\rm em}(b,t_\Obs) = r_0$
+in Eq.~(\ref{e:lem:OS:t_em_b_tO}):
+\be
+    t_\Obs^{**} = \int_{r_0}^{r_\Obs}
+        \left(1 - \frac{2m}{r} \right) ^{-1}
+        \left( 1 - b_0^2 U(r) \right) ^{-1/2} \; \D r .
+\ee
+By subtracting the above two equations and substituting (\ref{e:ges:eff_pot_null})
+for $U(r)$, we get
+\be
+    t_\Obs^{**} - t_\Obs^* = b_0^2 \int_{r_0}^{r_\Obs}
+    \frac{\D r}{r^2 - b_0^2(1 - 2m/r) + r\sqrt{r^2 - b_0^2(1 - 2m/r) }}.
+\ee
+Since $r^2  - b_0^2(1 - 2m/r) \geq 0$ for $r \geq r_0$, the time delay
+$t_\Obs^{**} - t_\Obs^*$ is positive.
+
+
+
+\subsection{Redshift in the image}
+
+The \defin{redshift}\index{redshift!in gravitational collapse}
+$z$ of a photon hitting the remote observer screen's $\Obs$
+is
+$z := (\lambda_\infty - \lambda_{\rm em})/\lambda_{\rm em}$,
+where $\lambda_{\rm em}$ is the photon wavelength at emission, i.e.
+with respect to the infalling matter at the star surface and $\lambda_\infty$ is
+the photon wavelength measured by $\Obs$.
+Thanks to Planck-Einstein relation (\ref{e:fra:Planck_Einstein}): $E = h\nu = h/(c\lambda)$,
+we have
+\be
+ 1 + z = \frac{E_{\rm em}}{E_\infty},
+\ee
+where $E_{\rm em}$ is the photon energy with respect to the infalling matter frame
+and $E_\infty$ is the photon energy measured by $\Obs$.
+
+
+\subsubsection{Frame of the comoving surface observer}
+
+The 4-velocity of the comoving observer at the surface of the collapsing star
+is $\w{u}_{\rm s} = u_{\rm s}^t \wpar_t + u_{\rm s}^r \wpar_r$. Since this observer is in radial free fall
+from rest,
+$u_{\rm s}^t=\D t / \D\tau$ is given by Eq.~(\ref{e:ges:Dt_Dtau})
+with $\veps = \sqrt{1 - 2m/r_0}$ [Eq.~(\ref{e:ges:beps2})]
+and $u_{\rm s}^r = \D r /\D\tau$ is given by
+Eq.~(\ref{e:ges:radial_motion}) with $\veps^2 - 1 = - 2m/r_0$.
+Hence we get
+\be \label{e:lem:OS:u_comoving}
+    \w{u}_{\rm s} = \sqrt{1 - \frac{2m}{r_0} }
+         \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1} \, \wpar_t
+        - \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}} \,
+        \wpar_r .
+\ee
+
+
+
 \subsubsection{Infinite central redshift}
 
 The time dilation effect described above manifests itself on the frequencies of photons
@@ -1529,20 +1839,7 @@ by Eq.~(\ref{e:gis:4mom_photon}) with $b=0$:
 \ee
 where $E_\infty$ is the photon's energy measured at infinity by a remote static observer,
 like $\Obs$.
-The 4-velocity of the comoving observer at the surface of the collapsing star
-is $\w{u}_{\rm s} = u_{\rm s}^t \wpar_t + u_{\rm s}^r \wpar_r$. Since this observer is in radial free fall
-from rest,
-$u_{\rm s}^t=\D t / \D\tau$ is given by Eq.~(\ref{e:ges:Dt_Dtau})
-with $\veps = \sqrt{1 - 2m/r_0}$ [Eq.~(\ref{e:ges:beps2})]
-and $u_{\rm s}^r = \D r /\D\tau$ is given by
-Eq.~(\ref{e:ges:radial_motion}) with $\veps^2 - 1 = - 2m/r_0$.
-Hence we get
-\be \label{e:lem:OS:u_comoving}
-    \w{u}_{\rm s} = \sqrt{1 - \frac{2m}{r_0} }
-         \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1} \, \wpar_t
-        - \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}} \,
-        \wpar_r .
-\ee
+
 The energy of the emitted photon measured by the comoving observer
 is $E_{\rm em} = -\w{g}(\w{u}_{\rm s},\w{p})$. With the components of $\w{g}$,
 $\w{u}_{\rm s}$ and $\w{p}$ given by respectively Eqs.~(\ref{e:sch:Schwarz_metric_SD}),
@@ -1610,263 +1907,4 @@ of the redshift at late times in terms of $\Delta t_\Obs$:
 %~ with a characteristic time scale $4 m$. Equivalently, the energies of the received photons
 %~ vanish exponentially fast.
 %~ \end{greybox}
-
-
-\subsubsection{Images of the collapse}
-
-%~ As stressed above, the remote static observer $\Obs$ shall never see the star
-%~ collapse to a ``point'', but shall instead perceive it to freeze to its gravitational radius.
-%~ The image of the star, which is a disk on $\Obs$'s screen, shall even shrink much
-%~ less than naively expected, due to strong gravitational lensing effects that
-%~ take place in the last stages of the collapse. As analyzed in Secs.~\ref{s:gis:shadow}
-%~ and \ref{s:gis:image_disk}, the final images are indeed larger by a factor
-%~ $\sim 3\sqrt{3}/2 \sim 2.60$ than those for a collapse
-%~ in a flat spacetime. See e.g. Fig.~4 of Ref.~\cite{VinceGN12} for a concrete example
-%~ regarding simulated
-%~ images of the gravitational collapse of an unstable neutron star into a black hole.
-
-The image of the collapsing star is formed on the screen of observer's $\Obs$
-by photons emitted from the star's surface and following
-null geodesics of Schwarzschild spacetime (the spacetime
-exterior to the star). Such geodesics have been studied in detail in Chap.~\ref{s:gis}.
-In particular, it has been shown that they are essentially characterized by a
-single parameter: the impact parameter $b:=|L|/E$ introduced in Sec.~\ref{s:gis:null_eff_pot}.
-
-Due to spherical
-symmetry, the image of the star at a given instant is a disk and is invariant
-by rotation around the disk center.
-As discussed in Sec.~\ref{s:gis:asympt_obs},
-the distance of a screen pixel from the disk center
-is proportional to the impact parameter $b$ of the null geodesic carrying the photon
-that hits this pixel.
-The pixel at the disk center corresponds to a null geodesic having $b=0$, i.e.
-travelling radially in the direction $\th=\th_\Obs=\pi/2$ and $\ph=\ph_\Obs=0$.
-The image's rim, i.e. the circle bounding the disk, is located at some
-maximal value of $b$, $b_{\rm m}(t_\Obs)$ say, where $t_\Obs$
-stands for the proper time of observer $\Obs$. Since $\Obs$
-is assumed to lie far away in the weak-field region, $t_\Obs$ coincides
-with the Schwarzschild-Droste time coordinate at the location of $\Obs$.
-A great amount of information on $b_{\rm m}(t_\Obs)$ can be inferred from the effective
-potential analysis developed in Sec.~\ref{s:gis:null_eff_pot}. Indeed, along
-any null geodesic $\Li$ in the black hole exterior,
-the constraint
-\be \label{e:lem:OS:b_constraint}
-    b \leq \frac{1}{\sqrt{U(r)}} = \frac{r}{\sqrt{1 - 2m/r}}
-\ee
-must hold, where $U(r)$ is the effective potential (\ref{e:ges:eff_pot_null}):
-$U(r) := (1 - 2m/r)/r^2$. This follows directly from
-$({\D r}/{\D\tilde{\lambda}})^2\geq 0$ in Eq.~(\ref{e:ges:dot_r_square_null_b}).
-Prior to the collapse, let us assume
-that the surface of the star is static and located at $r = r_0$.
-Let us then denote by $t_\Obs^{**}$ the value of $t_\Obs$ at which the disk image
-starts to shrink. It corresponds to the disk boundary
-formed by null geodesics emitted from the star's surface
-at the matter proper time $\tau=0$ (the start of collapse according to our conventions).
-For $t_{\Obs} \leq t_\Obs^{**}$, one has then $r\geq r_0$ all along $\Li$.
-If we assume $r_0 > 3m$, then $1/\sqrt{U(r)}$ is increasing with $r$ all along $\Li$,
-since $U(r)$ is a decreasing function on the interval $(3m,+\infty)$ (cf. Fig.~\ref{f:gis:eff_pot_null}).
-The constraint (\ref{e:lem:OS:b_constraint}) is then equivalent to $b \leq 1/\sqrt{U(r_0)}$, so
-that the maximal value of $b$ is
-\be \label{e:lem:OS:bmax_static}
-    b_{\rm m}(t_\Obs) = \frac{r_0}{\sqrt{1 - 2m/r_0}} \quad\mbox{for}\quad  t_\Obs \leq t_\Obs^{**}
-        \quad\mbox{and}\quad r_0 > 3 m .
-\ee
-For $t_\Obs \leq t_\Obs^{**}$, a
-null geodesic at the image's rim, i.e having $b=b_{\rm m}(t_\Obs)$, fullfils
-thus $U(r_0) = b^{-2}$, which implies ${\D r}/{\D\tilde{\lambda}} = 0$ at $r=r_0$
-according to Eq.~(\ref{e:ges:dot_r_square_null_b}). This means that the emission point
-($r=r_0$) is a periastron of the geodesic: it corresponds to the minimal value of $r$ along
-$\Li$, even if the latter is extented infinitely far in the past. This implies
-that $\Li$ is tangent to the hypersurface $r=r_0$ at the emission point, i.e. that
-the photon is emitted in a direction tangent to the star's surface.
-
-\begin{remark}
-In terms of the compactness angle $\chi_{\rm s}$ defined by Eq.~(\ref{e:lem:OS:chis_m0_r0}),
-formula (\ref{e:lem:OS:bmax_static}) takes a simple form:
-\be
-    b_{\rm m}(t_\Obs) = r_0 \cos\chi_{\rm s} \quad\mbox{for}\quad  t_\Obs \leq t_\Obs^{**}
-        \quad\mbox{and}\quad r_0 > 3 m .
-\ee
-In the non-relativistic limit, $\chi_{\rm s} \to 0$ and we get $b_{\rm m}(t_\Obs) = r_0$,
-as expected (recall that the trully observed quantity through a telescope is the small angle
-$\hat{b} = b / r_\Obs$ [Eq.~(\ref{e:gis:hat_b})]).
-\end{remark}
-
-One can also use the effective potential analysis to get the value of $b_{\rm m}(t_\Obs)$
-at late times, more precisely for images formed by photons emitted after the collapsing star has
-shrunk below the \emph{photon sphere}\index{photon!sphere}\index{sphere!photon --}
-introduced in Sec.~\ref{s:gis:null_eff_pot}, which corresponds to
-$r_{\rm s}(\tau) < 3m$. Since the function $r\mapsto 1/\sqrt{U(r)}$ is
-decreasing on $(2m, 3m)$, reaches a minimun at $r=3m$ and increases on $(3m, +\infty)$
-(cf. the plot of $U(r)$ in Fig.~\ref{f:gis:eff_pot_null}), the constraint
-(\ref{e:lem:OS:b_constraint}) becomes $b \leq \min ({1}/{\sqrt{U(r)}}) = b_{\rm c}$,
-where $b_{\rm c} = 3\sqrt{3} \, m$ [Eq.~(\ref{e:ges:b_crit})].
-An example of photon emitted at $r<3m$ and fulfilling this constraint is
-represented by the trajectory no.~3 in Fig.~\ref{f:gis:eff_pot_null}.
-Furthermore, the constraint is actually a sufficient condition for any
-photon emitted outward to reach infinity (cf. Fig.~\ref{f:gis:eff_pot_null} once more).
-However, for $b$ close to $b_{\rm c}$, photons perform a large number of orbits
-very close to the photon sphere, this number being actually infinite for $b=b_{\rm c}$
-(critical null geodesics)\index{critical!null geodesic}, as discussed in
-Sec.~\ref{s:gis:crit_geod}
-(cf. Figs.~\ref{f:gis:null_b_crit_from_inf_L_pos} to \ref{f:gis:null_b_crit_intern}.
-As a consequence, the elapsed time coordinate $t$ along the corresponding null
-geodesic diverges as $b \to b_{\rm c}$, so that
-the image boundary $b_{\rm m}(t_\Obs) = b_{\rm c}$ is reached only for
-$t_\Obs \to +\infty$:
-\be \label{e:lem:OS:bmax_final}
-    \lim_{t_\Obs \to +\infty} b_{\rm m}(t_\Obs) = 3\sqrt{3} \, m .
-\ee
-However, one can show (see e.g. Ref.~\cite{YoshiTN19} for
-details) that $b_{\rm m}(t_\Obs)$ converges to $b_{\rm c}$ exponentially fast:
-$b_{\rm m}(t_\Obs) - b_{\rm c} \propto \exp(- t_\Obs/b_{\rm c})$.
-
-
-To summarize:
-
-\begin{greybox}
-\begin{itemize}
-\item If the initial star is not ultracompact\index{ultracompact}, i.e. if its areal radius
-$r_0$ is larger than $3 m$,
-the radius of the disk image shrinks from $b_{\rm m} = r_0 / \sqrt{1 - 2m/r_0}$
-[Eq.~(\ref{e:lem:OS:bmax_static})]
-to $b_{\rm m} = 3\sqrt{3} \, m$ [Eq.~(\ref{e:lem:OS:bmax_final})].
-The latter value is reached only asymptotically, i.e. for $t_\Obs\to +\infty$,
-but the convergence is exponentially fast, so that, $b_{\rm m}(t_\Obs) \simeq 3\sqrt{3} \, m$
-is a very good approximation for $t_\Obs > t_\Obs^{**} + \alpha m$, where $\alpha \sim 2 b_{\rm c}/m
-\sim 10 $.
-\item Collapsing stars that are initially ultracompact
-($r_0 < 3 m$) generate images of constant size: the radius of the disk image
-remains fixed at $b_{\rm m} = 3\sqrt{3} \, m$.
-\end{itemize}
-\end{greybox}
-
-\begin{remark}
-The above results are not specific to the Oppenheimer-Snyder collapse: they
-hold for any spherically symmetric gravitational collapse.
-\end{remark}
-
-\begin{example}
-For our favorite example with $r_0 = 4m$ (Figs.~\ref{f:lem:OS:diag_int_EF},
-\ref{f:lem:OS:diag_KS}, \ref{f:lem:OS:diag_trapped} and \ref{f:lem:OS:diag_delay}),
-the radius of the image disk evolves from $4\sqrt{2} \, m\simeq 5.66\, m$ to
-$3\sqrt{3}\, m \simeq 5.20\, m$, which constitutes a pretty modest
-decrease: only $8\%$. This is of course because such a star has a very compactness.
-For the neutron star considered in Table~\ref{t:lem:OS:num}, which has a
-smaller compactness: $m/r_0 = 0.17$, the shrinking factor is higher: $28\%$.
-\end{example}
-
-The photons that form the star's image
-on $\Obs$'s screen at a given instant $t_\Obs$ have impact parameters $b$ in
-the range $0\leq b \leq b_{\rm m}(t_\Obs)$ and have been emitted from the
-star's surface at various proper times $\tau$, depending on the value of $b$.
-Indeed, let us evaluate the elapsed
-Schwarzschild-Droste time $t$ between
-along a null geodesic $\Li$ of impact parameter $b$ between
-the photon emission at the star surface and its reception
-by $\Obs$. Thanks to spherical
-symmetry, it suffices to consider photons travelling in the plane
-$\th=\pi/2$. The geodesic equations of motion are then
-(\ref{e:ges:dot_t_null_b})-(\ref{e:ges:dot_r_square_null_b}), from which
-we get
-\begin{subequations}
-\begin{align}
-   &\left. \frac{\D t}{\D r} \right| _{\Li}
-    = \eps_r \left(1 - \frac{2m}{r} \right) ^{-1}
-        \left( 1 - b^2 U(r) \right) ^{-1/2} \\[1ex] \label{e:lem:OS:dtdr_null_geod}
-   &\left. \frac{\D \ph}{\D r} \right| _{\Li}
-    = \eps_r \eps_L \frac{b}{r^2} \left( 1 - b^2 U(r) \right) ^{-1/2} ,
-\end{align}
-\end{subequations}
-where
-$\eps_L = \pm 1$ indicates the sign of the conserved angular momentum $L$
-of $\Li$ and $\eps_r = \pm 1$ is $+1$ (resp. $-1$) on portions of $\Li$ where $r$ increases
-(resp. decreases) towards the future along $\Li$. Note that $\eps_L$ is
-constant along $\Li$. Regarding $\eps_r$, it has to be $+1$ in the vicinity
-of observer $\Obs$. Given that a null geodesic of Schwarzschild spacetime
-has at most one $r$-turning point (cf. Sec.~\ref{s:gis:null_radial_behav}),
-one has either $\eps_r = +1$ along all $\Li$ or $\eps_r = -1$
-just around the emission point, switching to $+1$ after some periastron
-passage.
-
-Let $\mathscr{E}$ be the event of emission at the star's surface of a photon that reaches
-$\Obs$'s screen at the radial position $b$ at the instant $t_\Obs$.
-Let us denote by respectively $t_{\rm em}(b,t_\Obs)$,
-$\tau_{\rm em}(b,t_\Obs)$ and $r_{\rm s}^{\rm em}(b,t_\Obs)$,
-the Schwarzschild-Droste time
-coordinate of $\mathscr{E}$, the infalling matter proper time of $\mathscr{E}$
-and the areal coordinate $r$ of $\mathscr{E}$.
-$t_{\rm em}(b,t_\Obs)$, $\tau_{\rm em}(b,t_\Obs)$ and $r_{\rm s}^{\rm em}(b,t_\Obs)$
-are related by the free-fall equations (\ref{e:ges:sol_radial_infall}) [or
-equivalently (\ref{e:lem:OS:evol_star_surf})] and (\ref{e:ges:sol_t_radial_infall}):
-\begin{subequations}
-\label{e:lem:OS:free_fall_em}
-\begin{align}
-   & t_{\rm em}(b,t_\Obs) = 2m \left\{ \sqrt{\frac{r_0}{2m} - 1} \left[ \eta + \frac{r_0}{4m}
-    (\eta + \sin\eta) \right]
-    + \ln \left| \frac{\sqrt{\frac{r_0}{2m} - 1} + \tan\frac{\eta}{2}}{\sqrt{\frac{r_0}{2m} - 1} - \tan\frac{\eta}{2}} \right| \right\} \\
-    & \tau_{\rm em}(b,t_\Obs) =\sqrt{\frac{r_0^3}{8 m}}  \left( \eta + \sin\eta \right) \\
-    & r_{\rm s}^{\rm em}(b,t_\Obs) = \frac{r_0}{2} \left( 1 + \cos\eta \right) .
-\end{align}
-\end{subequations}
-Note that the origin of the Schwarzschild-Droste coordinate $t$ is chosen
-to coincide with the start of the collapse: $t = 0 \iff \tau = 0 \iff \eta = 0$.
-
-In terms of the star's areal radius function $r_{\rm s}(\tau)$, one
-has of course $r_{\rm s}^{\rm em}(b,t_\Obs) = r_{\rm s}(\tau_{\rm em}(b,t_\Obs))$.
-The above relations are valid for $\tau_{\rm em}(b,t_\Obs) \geq 0$, i.e.
-after the collapse has started. For $\tau_{\rm em}(b,t_\Obs) < 0$, we
-have,
-instead of (\ref{e:lem:OS:free_fall_em}),
-\begin{subequations}
-\begin{align}
-    & t_{\rm em}(b,t_\Obs) =  \left(1 - \frac{2m}{r_0} \right) ^{-1/2} \tau_{\rm em}(b,t_\Obs) < 0 \\
-    & r_{\rm s}^{\rm em}(b,t_\Obs) = r_0 . \label{e:lem:OS:rs_em_r0}
-\end{align}
-\end{subequations}
-By integrating Eq.~(\ref{e:lem:OS:dtdr_null_geod}) between the emission and reception points,
-we get
-\be \label{e:lem:OS:t_em_b_tO}
-    t_\Obs - t_{\rm em}(b,t_\Obs) = \int_{r_{\rm s}^{\rm em}(b,t_\Obs)}^{r_\Obs}
-        \left(1 - \frac{2m}{r} \right) ^{-1}
-        \left( 1 - b^2 U(r) \right) ^{-1/2} \; \D r  + \Delta,
-\ee
-where $\Delta = 0$ if there is no $r$-turning point (periastron) along the photon geodesic
-$\Li$ and
-\be
-    \Delta = 2 \int_{r_{\rm p}}^{r_{\rm s}^{\rm em}(b,t_\Obs)}
-     \left(1 - \frac{2m}{r} \right) ^{-1}
-        \left( 1 - b^2 U(r) \right) ^{-1/2} \; \D r
-\ee
-if there is a periastron, located at $r=r_{\rm p} < r_{\rm s}^{\rm em}(b,t_\Obs)$.
-For a given position of the screen, i.e. a given value of $b$,
-Eq.~(\ref{e:lem:OS:t_em_b_tO}) must be solved to get $t_{\rm em}(b,t_\Obs)$. In general, this
-is a complicated problem since the lower boundary of the integral, $r_{\rm s}^{\rm em}(b,t_\Obs)$,
-depends on $t_{\rm em}(b,t_\Obs)$ in a complicated way, via the parametric
-system (\ref{e:lem:OS:free_fall_em}). However, this is not the case for
-$t_{\rm em}(b,t_\Obs)< 0$, since then $r_{\rm s}^{\rm em}(b,t_\Obs) = r_0$
-[Eq.~(\ref{e:lem:OS:rs_em_r0})]. Equation~(\ref{e:lem:OS:t_em_b_tO}) provides then
-directly the value of $t_{\rm em}(b,t_\Obs)$ and we see that this is a decreasing function
-of $b$, since at fixed $r$, $b \mapsto \left( 1 - b^2 U(r) \right) ^{-1/2}$ is an increasing function of $b$, given that $U(r) > 0$.
-Consequently, the first value of $b$ for which $t_{\rm em}(b,t_\Obs) \geq 0$, i.e. for
-which the collapse starts to be perceptible, is $b=0$. In other words, the collapse
-manifests itself first at the center of the disk image. Let us then denote by
-$t_\Obs^*$ the corresponding value of $t_\Obs$. It is obtained by setting
-$b=0$ (which implies $\Delta=0$ since pure radial geodesics do not have any
-periastron), $t_{\rm em}(b,t_\Obs) = 0$ and $r_{\rm s}^{\rm em}(b,t_\Obs) = r_0$
-in Eq.~(\ref{e:lem:OS:t_em_b_tO}):
-\be
-    t_\Obs^* = \int_{r_0}^{r_\Obs}
-        \left(1 - \frac{2m}{r} \right) ^{-1} \; \D r .
-\ee
-On the other side, the value of $t_\Obs^{**}$ is obtained by setting
-$b=b_0:= r_0/\sqrt{1 - 2m/r_0}$ [the value~(\ref{e:lem:OS:bmax_static})],
-$t_{\rm em}(b,t_\Obs) = 0$ and $r_{\rm s}^{\rm em}(b,t_\Obs) = r_0$
-in Eq.~(\ref{e:lem:OS:t_em_b_tO}):
-\be
-    t_\Obs^{**} = \int_{r_0}^{r_\Obs}
-        \left(1 - \frac{2m}{r} \right) ^{-1}
-        \left( 1 - b_0^2 U(r) \right) ^{-1/2} \; \D r .
-\ee
-
 
