@@ -1745,7 +1745,9 @@ the exterior derivative of $\uu{\xi}$ (cf. Sec.~\ref{s:bas:ext_deriv} and Eqs.~(
     (\dd \uu{\xi})_{\alpha\beta} =
         \partial_\alpha \xi_\beta - \partial_\beta \xi_\alpha =
         \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha
+        = 2 \nabla_\alpha \xi_\beta ,
 \ee
+the last equality following from Killing equation (\ref{e:neh:Killing_equation}),
 and $\star(\dd \uu{\xi})$ is the
 \defin{Hodge dual}\index{Hodge dual}\index{dual!Hodge --} of the 2-form
 $\dd \uu{\xi}$, i.e. the 2-form defined by\footnote{See e.g. Sec.~14.5 of
@@ -1767,13 +1769,8 @@ in a vacuum region of spacetime and $\w{g}$ fulfils the Einstein equation
 As the integral of a 2-form over a 2-dimensional manifold, formula
 (\ref{e:ker:def_Komar_mass}) is well posed.
 \end{remark}
-Thanks to the Killing equation (\ref{e:neh:Killing_equation}), one may
-rewrite Eq.~(\ref{e:ker:duxi_nab}) as
-\be \label{e:ker:dxi_Killing}
-    (\dd \uu{\xi})_{\alpha\beta} = 2 \nabla_\alpha \xi_\beta .
-\ee
-Taking into account Eq.~(\ref{e:ker:star_duxi}), the Komar mass formula
-(\ref{e:ker:def_Komar_mass}) becomes then
+In view of Eq.~(\ref{e:ker:star_duxi}) and the last equality in Eq.~(\ref{e:ker:duxi_nab}),
+the Komar mass formula (\ref{e:ker:def_Komar_mass}) becomes
 \be \label{e:ker:def_Komar_mass_alt}
     M = - \frac{1}{8\pi} \int_{\Sp}  \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta} ,
 \ee
@@ -1874,12 +1871,12 @@ Thanks to (\ref{e:ker:int_star_A}), we may reexpress the Komar mass
 \be \label{e:ker:M_Komar_dS}
    M = -\frac{1}{16\pi} \int_{\Sp} (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} .
 \ee
-Using the Killing equation as (\ref{e:ker:dxi_Killing}), this becomes
+Using the last equality in Eq.~(\ref{e:ker:duxi_nab}), this becomes
 \be
     \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} \nabla_\mu \xi_\nu \,  \D S^{\mu\nu} } .
 \ee
 Alternatively, we may express the exterior derivative in terms of
-partial derivatives and get
+partial derivatives (first equality in Eq.~(\ref{e:ker:duxi_nab})) and get
 \[
     (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} =
     (\partial_\mu \xi_\nu - \partial_\nu \xi_\mu)
@@ -1946,7 +1943,7 @@ provided it lies in the vacuum region and $\w{g}$ obeys Einstein equation.
 
 \begin{remark}
 Besides the sign and the change $\w{\xi}\leftrightarrow\w{\eta}$, we notice a difference by a factor 2 between the r.h.s. of (\ref{e:ker:def_Komar_mass}) and (\ref{e:ker:def_Komar_J}).
-This is known as Komar's anomalous factor and is discussed further in
+This is known as \emph{Komar's anomalous factor} and is discussed further in
 Ref.~\cite{Katz85}.
 \end{remark}
 
@@ -2055,29 +2052,20 @@ $\dd\ti=0$ and $\dd r = 0$ in (\ref{e:ker:metric_Kerr_3p1}):
     \sin^2\th \, \dd \tph^2 .
 \]
 Now, since $r_+$ is a zero of $\Delta$ [cf. Eq.~(\ref{e:ker:def_Delta})],
-we have $2 m r_+ = r_+^2 + a^2 $. Hence
-\[
-        \w{q} =
-  (r_+^2 + a^2\cos^2\th) \, \dd \th^2
-    + (r_+^2 + a^2)\left( 1 + \frac{a^2 \sin^2\th}{r_+^2 + a^2\cos^2\th} \right)
-    \sin^2\th \, \dd \tph^2 ,
-\]
-or, equivalently,
+we have $2 m r_+ = r_+^2 + a^2 $. This brings us to
 \be \label{e:ker:q_cross_section_H}
         \w{q} =
   (r_+^2 + a^2\cos^2\th) \, \dd \th^2
     + \frac{(r_+^2 + a^2)^2}{r_+^2 + a^2\cos^2\th}\,
     \sin^2\th \, \dd \tph^2 .
 \ee
-The area of $\Sp$ is
+The area of the cross-section $\Sp$ is
 \[
-    A = \int_\Sp \sqrt{q} \, \D\th\, \D\tph ,
+    A = \int_\Sp \sqrt{q} \, \D\th\, \D\tph
+      = (r_+^2 + a^2) \underbrace{\int_\Sp \sin\th \, \D\th\, \D\tph}_{4\pi}
 \]
-with, according to (\ref{e:ker:q_cross_section_H}),
-$q = \det (q_{ab}) = (r_+^2 + a^2)^2 \sin^2\th$. Hence
-\[
-    A = (r_+^2 + a^2) \underbrace{\int_\Sp \sin\th \, \D\th\, \D\tph}_{4\pi} .
-\]
+where we have used (\ref{e:ker:q_cross_section_H}) to write
+$q = \det (q_{ab}) = (r_+^2 + a^2)^2 \sin^2\th$.
 We have thus
 \be
     \encadre{A = 4\pi (r_+^2 + a^2) = 8 \pi m r_+} .
