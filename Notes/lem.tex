@@ -1526,6 +1526,10 @@ null geodesics of Schwarzschild spacetime (the spacetime
 exterior to the star). Such geodesics have been studied in detail in Chap.~\ref{s:gis}.
 In particular, it has been shown that they are essentially characterized by a
 single parameter: the impact parameter $b:=|L|/E$ introduced in Sec.~\ref{s:gis:null_eff_pot}.
+In what follows, we shall work in terms of the Schwarzschild-Droste
+coordinates $(t,r,\th,\ph)$, as in Chap.~\ref{s:gis}. These coordinates are regular in the Schwarzschild exterior where
+the null geodesics propagate to the remote observer $\Obs$ and they
+make computations slightly simpler than IEF coordinates do.
 
 Due to spherical
 symmetry, the image of the star at a given instant is a disk and is invariant
@@ -1778,26 +1782,30 @@ $t_\Obs^{**} - t_\Obs^*$ is positive.
 
 \subsection{Redshift in the image}
 
-The \defin{redshift}\index{redshift!in gravitational collapse}
+Let $\Obs_{\rm em}$ be an observer at the surface of the star comoving with
+the infalling matter. One defines the
+\defin{redshift}\index{redshift!in gravitational collapse}
 $z$ of a photon hitting the remote observer screen's $\Obs$
-is
+by
 $z := (\lambda_\infty - \lambda_{\rm em})/\lambda_{\rm em}$,
 where $\lambda_{\rm em}$ is the photon wavelength at emission, i.e.
-with respect to the infalling matter at the star surface and $\lambda_\infty$ is
+with respect to observer $\Obs_{\rm em}$, and $\lambda_\infty$ is
 the photon wavelength measured by $\Obs$.
 Thanks to Planck-Einstein relation (\ref{e:fra:Planck_Einstein}): $E = h\nu = h/(c\lambda)$,
 we have
 \be
  1 + z = \frac{E_{\rm em}}{E_\infty},
 \ee
-where $E_{\rm em}$ is the photon energy with respect to the infalling matter frame
-and $E_\infty$ is the photon energy measured by $\Obs$.
+where $E_{\rm em}$ (resp. $E_\infty$)
+is the photon energy with respect to observer $\Obs_{\rm em}$
+(resp. $\Obs$).
 
 
 \subsubsection{Frame of the comoving surface observer}
 
-The 4-velocity of the comoving observer at the surface of the collapsing star
-is $\w{u}_{\rm s} = u_{\rm s}^t \wpar_t + u_{\rm s}^r \wpar_r$. Since this observer is in radial free fall
+The 4-velocity of the surface observer $\Obs_{\rm em}$
+is $\w{u}_{\rm s} = u_{\rm s}^t \wpar_t + u_{\rm s}^r \wpar_r$.
+Since in the Oppenheimer-Snyder collapse, this observer is in radial free fall
 from rest,
 $u_{\rm s}^t=\D t / \D\tau$ is given by Eq.~(\ref{e:ges:Dt_Dtau})
 with $\veps = \sqrt{1 - 2m/r_0}$ [Eq.~(\ref{e:ges:beps2})]
@@ -1810,6 +1818,39 @@ Hence we get
         - \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}} \,
         \wpar_r .
 \ee
+Observer $\Obs_{\rm em}$ is endowed with an orthonormal frame
+$(\w{u}_{\rm s}, \w{n}_{\rm s}, \w{e}^{\rm s}_2, \w{e}^{\rm s}_3)$,
+where $\w{n}_{\rm s} = n_{\rm s}^t \wpar_t + n_{\rm s}^r \wpar_r$
+is a unit spacelike vector normal to the star surface and the vectors
+$(\w{e}^{\rm s}_2, \w{e}^{\rm s}_3)$ are unit spacelike vectors
+tangent to the star surface. The components $(n_{\rm s}^t, n_{\rm s}^r)$
+of $\w{n}_{\rm s}$ are obtained from the two conditions
+$\w{g}(\w{u}_{\rm s},\w{n}_{\rm s}) = 0$ and $\w{g}(\w{n}_{\rm s},\w{n}_{\rm s}) =1$.
+Given the Schwarzschild-Droste components (\ref{e:sch:Schwarz_metric_SD}) for $\w{g}$
+and (\ref{e:lem:OS:u_comoving}) for $\w{u}_{\rm s}$,
+one gets
+\be
+    \w{n}_{\rm s} = - \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}}
+     \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1} \, \wpar_t
+     + \sqrt{1 - \frac{2m}{r_0} } \, \wpar_r .
+\ee
+
+Let us consider a photon emitted from the surface of the collapsing star.
+The photon's energy-momentum vector $\w{p}$ can be decomposed with respect to $\Obs_{\rm em}$'s
+frame according to Eqs.~(\ref{e:fra:p_E_V}) and (\ref{e:fra:P_E_V}):
+\be
+    \w{p} = E_{\rm em} \w{u}_{\rm s} + \w{P}_{\rm em},
+\ee
+where $\w{P}_{\rm em}$ is a vector orthogonal to $\w{u}_{\rm s}$ representing
+the photon's linear momentum as measured by $\Obs_{\rm em}$.
+The energy $E_{\rm em}$ is then obtained as [cf. Eq.~(\ref{e:fra:p_E_P})]
+\be
+    E_{\rm em} = - \w{u}_{\rm s} \cdot \w{p}
+\ee
+
+Since $\w{p}$ is
+a null vector, we have $\w{P}_{\rm em}\cdot\w{P_{\rm em}} = E_{\rm em}^2$.
+
 
 ...
 
@@ -1821,10 +1862,6 @@ in the radial direction, i.e. along $\th=\pi/2$ and $\ph=0$.
 The inverses of the observed frequencies, i.e. the observed electromagnetic periods, are expected to increase without any bound during the collapse, leading to an infinite redshift.
 Let us establish this via a direct computation of the photon energies $E$, which are proportional
 to the frequencies $\nu$, via the Planck-Einstein relation (\ref{e:fra:Planck_Einstein}): $E = h\nu$.
-We shall work in terms of the Schwarzschild-Droste
-coordinates $(t,r,\th,\ph)$, which are regular in the Schwarzschild exterior where
-the null geodesic propagates to the remote observer $\Obs$; they
-make computations slightly simpler than IEF coordinates do.
 
 The energy of a photon measured by an observer of 4-velocity $\w{u}$ is
 $E = - \w{g}(\w{u},\w{p})$ [Eq.~(\ref{e:fra:E_obs})], where $\w{p}$ is the photon's
