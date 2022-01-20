@@ -1783,7 +1783,8 @@ $t_\Obs^{**} - t_\Obs^*$ is positive.
 \subsection{Redshift in the image}
 
 Let $\Obs_{\rm em}$ be an observer at the surface of the star comoving with
-the infalling matter. One defines the
+the infalling matter. In particular the proper time of $\Obs$ is $\tau$.
+One defines the
 \defin{redshift}\index{redshift!in gravitational collapse}
 $z$ of a photon hitting the remote observer screen's $\Obs$
 by
@@ -1818,21 +1819,40 @@ Hence we get
         - \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}} \,
         \wpar_r .
 \ee
+It is useful to expand $\w{u}_{\rm s}$ onto the frame of the local static
+observer whose position coincides with the star surface at a given instant.
+The orthonormal frame of the static observer is
+\be \label{e:lem:OS:frame_static}
+     \w{e}_{(t)} = \left(1 - \frac{2m}{r} \right)^{-1/2} \wpar_t,\quad
+    \w{e}_{(r)} = \left(1 - \frac{2m}{r} \right)^{1/2} \wpar_r ,\quad
+    \w{e}_{(\th)} = \frac{1}{r} \, \wpar_\th,\quad
+    \w{e}_{(\ph)} = \frac{1}{r\sin\th} \, \wpar_\ph .
+\ee
+We deduce then from (\ref{e:lem:OS:u_comoving}) that
+\be \label{e:lem:OS:u_s_static}
+    \w{u}_{\rm s} = \Gamma(\tau) \left( \w{e}_{(t)}  - V(\tau) \w{e}_{(r)} \right),
+\ee
+with
+\be \label{e:lem:OS:V_Gamma}
+    V(\tau) := \sqrt{\frac{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}}{1 - \frac{2m}{r_0}}}
+    \qand
+    \Gamma(\tau) := \frac{1}{\sqrt{1 - V(\tau)^2}}  = \sqrt{\frac{1 - \frac{2m}{r_0}}{1 - \frac{2m}{r_{\rm s}(\tau)}}}
+\ee
+By comparing with the generic formulas~(\ref{e:fra:Gam_V2})-(\ref{e:fra:u_Gamma_V}), we conclude that
+$V(\tau)$ is the norm of the velocity $\w{V} = -V(\tau)\w{e}_{(r)}$ of $\Obs_{\rm em}$ with respect to the local
+static observer and $\Gamma(\tau)$ is the corresponding Lorentz factor.
+
 Observer $\Obs_{\rm em}$ is endowed with an orthonormal frame
 $(\w{u}_{\rm s}, \w{n}_{\rm s}, \w{e}^{\rm s}_2, \w{e}^{\rm s}_3)$,
-where $\w{n}_{\rm s} = n_{\rm s}^t \wpar_t + n_{\rm s}^r \wpar_r$
+where $\w{n}_{\rm s} = n_{\rm s}^{(t)} \w{e}_{(t)} + n_{\rm s}^{(r)} \w{e}_{(r)}$
 is a unit spacelike vector normal to the star surface and the vectors
 $(\w{e}^{\rm s}_2, \w{e}^{\rm s}_3)$ are unit spacelike vectors
-tangent to the star surface. The components $(n_{\rm s}^t, n_{\rm s}^r)$
+tangent to the star surface. The components $(n_{\rm s}^{(t)}, n_{\rm s}^{(r)})$
 of $\w{n}_{\rm s}$ are obtained from the two conditions
-$\w{g}(\w{u}_{\rm s},\w{n}_{\rm s}) = 0$ and $\w{g}(\w{n}_{\rm s},\w{n}_{\rm s}) =1$.
-Given the Schwarzschild-Droste components (\ref{e:sch:Schwarz_metric_SD}) for $\w{g}$
-and (\ref{e:lem:OS:u_comoving}) for $\w{u}_{\rm s}$,
-one gets
+$\w{u}_{\rm s}\cdot\w{n}_{\rm s} = 0$ and $\w{n}_{\rm s}\cdot\w{n}_{\rm s} =1$,
+along with (\ref{e:lem:OS:u_s_static}):
 \be
-    \w{n}_{\rm s} = - \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}}
-     \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1} \, \wpar_t
-     + \sqrt{1 - \frac{2m}{r_0} } \, \wpar_r .
+    \w{n}_{\rm s} = - \Gamma(\tau) V(\tau) \w{e}_{(t)} + \Gamma(\tau) \w{e}_{(r)}.
 \ee
 
 Let us consider a photon emitted from the surface of the collapsing star.
@@ -1844,12 +1864,49 @@ frame according to Eqs.~(\ref{e:fra:p_E_V}) and (\ref{e:fra:P_E_V}):
 where $\w{P}_{\rm em}$ is a vector orthogonal to $\w{u}_{\rm s}$ representing
 the photon's linear momentum as measured by $\Obs_{\rm em}$.
 The energy $E_{\rm em}$ is then obtained as [cf. Eq.~(\ref{e:fra:p_E_P})]
-\be
+\be \label{e:lem:OS:E_em_p_photon}
     E_{\rm em} = - \w{u}_{\rm s} \cdot \w{p}
 \ee
+Due to spherical symmetry, we may restrict the study to photons travelling
+in the equatorial plane $\th=\pi/2$.  The photon's energy-momentum vector $\w{p}$
+is then given by Eq.~(\ref{e:gis:4mom_photon}), which involves
+the impact parameter $b$. Once reexpressed
+in terms of the static observer frame (\ref{e:lem:OS:frame_static}), this
+formula becomes
+\be \label{e:lem:OS:p_photon_static}
+    \w{p} = E_\infty \left[ \left(1 - \frac{2m}{r} \right)^{-1/2}
+    \left( \w{e}_{(t)} + \eps_r \sqrt{1 - b^2 U(r)} \, \w{e}_r \right)
+    + \eps_L \frac{b}{r} \,  \w{e}_{(\ph)} \right] ,
+\ee
+where $\eps_r = \pm 1$ and $\eps_L = \pm 1$.
+The scalar product in Eq.~(\ref{e:lem:OS:E_em_p_photon}) is easily
+evaluated from expressions (\ref{e:lem:OS:u_s_static}) and
+(\ref{e:lem:OS:p_photon_static}),
+owing to the orthonormality of the frame $(\w{e}_{(\alpha)})$; one gets
+\be
+    1 + z = \frac{E_{\rm em}}{E_\infty}
+    = \Gamma(\tau) \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right) ^{-1/2}
+    \left( 1  + \eps_r V(\tau) \sqrt{1 - b^2 U(r_{\rm s}(\tau))} \right) .
+\ee
+Substituting expressions~(\ref{e:lem:OS:V_Gamma}) for $V(\tau)$
+and $\Gamma(\tau)$, as well as (\ref{e:ges:eff_pot_null}) for $U(r)$, yields
+\be
+    \encadre{
+    1 + z = \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right) ^{-1}
+    \left[ \sqrt{1 - \frac{2m}{r_0}}
+        + \eps_r \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}}
+        \sqrt{1 - \frac{b^2}{r_{\rm s}(\tau)^2} \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)}
+        \right] } .
+\ee
+This formula gives the redshift of a photon that hits the screen of the
+remote observer $\Obs$ at the impact parameter $b$ at the instant $t_\Obs$.
+$\tau$ has to be replaced by ...
+
 
 Since $\w{p}$ is
-a null vector, we have $\w{P}_{\rm em}\cdot\w{P_{\rm em}} = E_{\rm em}^2$.
+a null vector, we have $\w{P}_{\rm em}\cdot\w{P}_{\rm em} = E_{\rm em}^2$.
+
+
 
 
 ...
