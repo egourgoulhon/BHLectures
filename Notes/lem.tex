@@ -1783,7 +1783,9 @@ $t_\Obs^{**} - t_\Obs^*$ is positive.
 \subsection{Redshift in the image}
 
 Let $\Obs_{\rm em}$ be an observer at the surface of the star comoving with
-the infalling matter. In particular the proper time of $\Obs$ is $\tau$.
+the infalling matter. In particular the proper time of $\Obs$ is $\tau$
+and the $r$-coordinate of $\Obs_{\rm em}$ is $r_{\rm s}(\tau)$, as given
+by Eq.~(\ref{e:lem:OS:evol_star_surf}) for a pressureless collapse.
 One defines the
 \defin{redshift}\index{redshift!in gravitational collapse}
 $z$ of a photon hitting the remote observer screen's $\Obs$
@@ -1806,8 +1808,8 @@ is the photon energy with respect to observer $\Obs_{\rm em}$
 
 The 4-velocity of the surface observer $\Obs_{\rm em}$
 is $\w{u}_{\rm s} = u_{\rm s}^t \wpar_t + u_{\rm s}^r \wpar_r$.
-Since in the Oppenheimer-Snyder collapse, this observer is in radial free fall
-from rest,
+In any pressureless collapse from rest, like the Oppenheimer-Snyder one,
+$\Obs_{\rm em}$ is in radial free fall from rest, so that
 $u_{\rm s}^t=\D t / \D\tau$ is given by Eq.~(\ref{e:ges:Dt_Dtau})
 with $\veps = \sqrt{1 - 2m/r_0}$ [Eq.~(\ref{e:ges:beps2})]
 and $u_{\rm s}^r = \D r /\D\tau$ is given by
@@ -1815,10 +1817,11 @@ Eq.~(\ref{e:ges:radial_motion}) with $\veps^2 - 1 = - 2m/r_0$.
 Hence we get
 \be \label{e:lem:OS:u_comoving}
     \w{u}_{\rm s} = \sqrt{1 - \frac{2m}{r_0} }
-         \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1} \, \wpar_t
-        - \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}} \,
-        \wpar_r .
+         \left(1 - \frac{2m}{r_{\rm s}} \right)^{-1} \, \wpar_t
+        - \sqrt{\frac{2m}{r_{\rm s}} - \frac{2m}{r_0}} \,
+        \wpar_r ,
 \ee
+where $r_{\rm s}$ is a shortcut for $r_{\rm s}(\tau)$.
 It is useful to expand $\w{u}_{\rm s}$ onto the frame of the local static
 observer whose position coincides with the star surface at a given instant.
 The orthonormal frame of the static observer is
@@ -1830,35 +1833,41 @@ The orthonormal frame of the static observer is
 \ee
 We deduce then from (\ref{e:lem:OS:u_comoving}) that
 \be \label{e:lem:OS:u_s_static}
-    \w{u}_{\rm s} = \Gamma(\tau) \left( \w{e}_{(t)}  - V(\tau) \w{e}_{(r)} \right),
+    \w{u}_{\rm s} = \Gamma \left( \w{e}_{(t)}  - V \w{e}_{(r)} \right),
 \ee
 with
 \be \label{e:lem:OS:V_Gamma}
-    V(\tau) := \sqrt{\frac{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}}{1 - \frac{2m}{r_0}}}
+    V := \sqrt{\frac{\frac{2m}{r_{\rm s}} - \frac{2m}{r_0}}{1 - \frac{2m}{r_0}}}
     \qand
-    \Gamma(\tau) := \frac{1}{\sqrt{1 - V(\tau)^2}}  = \sqrt{\frac{1 - \frac{2m}{r_0}}{1 - \frac{2m}{r_{\rm s}(\tau)}}}
+    \Gamma := \frac{1}{\sqrt{1 - V^2}}  = \sqrt{\frac{1 - \frac{2m}{r_0}}{1 - \frac{2m}{r_{\rm s}}}}
 \ee
 By comparing with the generic formulas~(\ref{e:fra:Gam_V2})-(\ref{e:fra:u_Gamma_V}), we conclude that
-$V(\tau)$ is the norm of the velocity $\w{V} = -V(\tau)\w{e}_{(r)}$ of $\Obs_{\rm em}$ with respect to the local
-static observer and $\Gamma(\tau)$ is the corresponding Lorentz factor.
+$V$ is the norm of the velocity $\w{V} = -V\w{e}_{(r)}$ of $\Obs_{\rm em}$ with respect to the local
+static observer and $\Gamma$ is the corresponding Lorentz factor.
 
 Observer $\Obs_{\rm em}$ is endowed with an orthonormal frame
 $(\w{u}_{\rm s}, \w{n}_{\rm s}, \w{e}^{\rm s}_2, \w{e}^{\rm s}_3)$,
 where $\w{n}_{\rm s} = n_{\rm s}^{(t)} \w{e}_{(t)} + n_{\rm s}^{(r)} \w{e}_{(r)}$
-is a unit spacelike vector normal to the star surface and the vectors
+is a unit spacelike vector normal to the star surface and oriented towards the exterior,
+while the vectors
 $(\w{e}^{\rm s}_2, \w{e}^{\rm s}_3)$ are unit spacelike vectors
 tangent to the star surface. The components $(n_{\rm s}^{(t)}, n_{\rm s}^{(r)})$
 of $\w{n}_{\rm s}$ are obtained from the two conditions
 $\w{u}_{\rm s}\cdot\w{n}_{\rm s} = 0$ and $\w{n}_{\rm s}\cdot\w{n}_{\rm s} =1$,
 along with (\ref{e:lem:OS:u_s_static}):
-\be
-    \w{n}_{\rm s} = - \Gamma(\tau) V(\tau) \w{e}_{(t)} + \Gamma(\tau) \w{e}_{(r)}.
+\be \label{e:lem:OS:n_s_static}
+    \w{n}_{\rm s} = \Gamma \left( - V \w{e}_{(t)} +  \w{e}_{(r)} \right).
 \ee
+\begin{remark}
+Equations~(\ref{e:lem:OS:u_s_static}) and (\ref{e:lem:OS:n_s_static}) simply express
+that the orthonormal pairs $(\w{u}_{\rm s}, \w{n}_{\rm s})$ and $(\w{e}_{(t)},\w{e}_{(r)})$
+are connected by a \emph{Lorentz boost}\index{Lorentz!boost} of velocity $-V$.
+\end{remark}
 
 Let us consider a photon emitted from the surface of the collapsing star.
 The photon's energy-momentum vector $\w{p}$ can be decomposed with respect to $\Obs_{\rm em}$'s
 frame according to Eqs.~(\ref{e:fra:p_E_V}) and (\ref{e:fra:P_E_V}):
-\be
+\be \label{e:lem:OS:p_photon_Oem}
     \w{p} = E_{\rm em} \w{u}_{\rm s} + \w{P}_{\rm em},
 \ee
 where $\w{P}_{\rm em}$ is a vector orthogonal to $\w{u}_{\rm s}$ representing
@@ -1883,28 +1892,44 @@ The scalar product in Eq.~(\ref{e:lem:OS:E_em_p_photon}) is easily
 evaluated from expressions (\ref{e:lem:OS:u_s_static}) and
 (\ref{e:lem:OS:p_photon_static}),
 owing to the orthonormality of the frame $(\w{e}_{(\alpha)})$; one gets
-\be
+\be \label{e:lem:OS:redshift_gal}
     1 + z = \frac{E_{\rm em}}{E_\infty}
-    = \Gamma(\tau) \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right) ^{-1/2}
-    \left( 1  + \eps_r V(\tau) \sqrt{1 - b^2 U(r_{\rm s}(\tau))} \right) .
+    = \Gamma \left(1 - \frac{2m}{r_{\rm s}} \right) ^{-1/2}
+    \left( 1  + \eps_r V \sqrt{1 - b^2 U(r_{\rm s})} \right) .
 \ee
-Substituting expressions~(\ref{e:lem:OS:V_Gamma}) for $V(\tau)$
-and $\Gamma(\tau)$, as well as (\ref{e:ges:eff_pot_null}) for $U(r)$, yields
-\be
+Substituting expressions~(\ref{e:lem:OS:V_Gamma}) for $V$
+and $\Gamma$, as well as (\ref{e:ges:eff_pot_null}) for $U(r)$, yields
+\be \label{e:lem:OS:redshift_pless}
     \encadre{
-    1 + z = \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right) ^{-1}
+    1 + z = \left(1 - \frac{2m}{r_{\rm s}} \right) ^{-1}
     \left[ \sqrt{1 - \frac{2m}{r_0}}
-        + \eps_r \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}}
-        \sqrt{1 - \frac{b^2}{r_{\rm s}(\tau)^2} \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)}
+        + \eps_r \sqrt{\frac{2m}{r_{\rm s}} - \frac{2m}{r_0}}
+        \sqrt{1 - \frac{b^2}{r_{\rm s}^2} \left(1 - \frac{2m}{r_{\rm s}} \right)}
         \right] } .
 \ee
 This formula gives the redshift of a photon that hits the screen of the
 remote observer $\Obs$ at the impact parameter $b$ at the instant $t_\Obs$.
-$\tau$ has to be replaced by ...
+The quantity $r_{\rm s}$ has to be replaced by $r_{\rm s}^{\rm em}(b,t_\Obs)$
+as given by the system~(\ref{e:lem:OS:free_fall_em}) for the pressureless collapse,
+where $t_{\rm em}(b,t_\Obs)$ is given by Eq.~(\ref{e:lem:OS:t_em_b_tO}).
 
-
-Since $\w{p}$ is
-a null vector, we have $\w{P}_{\rm em}\cdot\w{P}_{\rm em} = E_{\rm em}^2$.
+The photon's emission direction in the frame of the comoving observer $\Obs_{\rm em}$
+is characterized by the angle $\Theta_{\rm em}$ between the photon's linear momentum $\w{P}_{\rm em}$
+and the normal to the surface $\w{n}_{\rm s}$; this angle is given by
+\be
+    \cos\Theta_{\rm em} =
+    \frac{\w{n}_{\rm s}\cdot\w{P}_{\rm em}}{\sqrt{\w{P}_{\rm em}\cdot\w{P}_{\rm em}}} .
+\ee
+Now, from Eq.~(\ref{e:lem:OS:p_photon_Oem}), we have
+$\sqrt{\w{P}_{\rm em}\cdot\w{P}_{\rm em}} = E_{\rm em}$ (using that $\w{p}$ is a null vector)
+and $\w{n}_{\rm s}\cdot\w{P}_{\rm em} = \w{n}_{\rm s}\cdot\w{p}$. Evaluating this
+last scalar product by means of Eqs.~(\ref{e:lem:OS:n_s_static}) and
+(\ref{e:lem:OS:p_photon_static}) and substituting expression~(\ref{e:lem:OS:redshift_gal}) for
+${E_{\rm em}}/{E_\infty}$, we get
+\be
+    \cos\Theta_{\rm em} = \frac{V +  \eps_r \sqrt{1 - b^2 U(r_{\rm s})}}{1 + \eps_r V
+    \sqrt{1 - b^2 U(r_{\rm s})}} .
+\ee
 
 
 
@@ -1913,58 +1938,20 @@ a null vector, we have $\w{P}_{\rm em}\cdot\w{P}_{\rm em} = E_{\rm em}^2$.
 
 \subsubsection{Infinite central redshift}
 
-The time dilation effect described above manifests itself on the frequencies of photons
-received by the remote observer $\Obs$ from the surface of the collapsing star
-in the radial direction, i.e. along $\th=\pi/2$ and $\ph=0$.
-The inverses of the observed frequencies, i.e. the observed electromagnetic periods, are expected to increase without any bound during the collapse, leading to an infinite redshift.
-Let us establish this via a direct computation of the photon energies $E$, which are proportional
-to the frequencies $\nu$, via the Planck-Einstein relation (\ref{e:fra:Planck_Einstein}): $E = h\nu$.
-
-The energy of a photon measured by an observer of 4-velocity $\w{u}$ is
-$E = - \w{g}(\w{u},\w{p})$ [Eq.~(\ref{e:fra:E_obs})], where $\w{p}$ is the photon's
-energy-momentum vector. The latter is the tangent vector corresponding to
-some affine parametrization (parameter $\lambda$) of
-the null geodesic constituting the photon's worldline: $\w{p} = \D\w{x}/\D\lambda$
-[Eq.~(\ref{e:fra:p_dxdl})].
-For a photon travelling radially outward in the plane $\th=\pi/2$, it is given
-by Eq.~(\ref{e:gis:4mom_photon}) with $b=0$:
-\be \label{e:lem:OS:p_photon}
-     \w{p} = E_\infty  \left[ \left( 1  - \frac{2m}{r} \right) ^{-1} \wpar_t + \wpar_r \right] ,
+The redshift $z_{\rm c}$ at the center of the image of a pressureless collapse
+is obtained by setting $b=0$ in Eq.~(\ref{e:lem:OS:redshift_pless}):
+\be \label{e:lem:OS:redshift_c}
+    \encadre{ 1 + z_{\rm c} = \left(1 - \frac{2m}{r_{\rm s}^{\rm em}(0,t_\Obs)} \right)^{-1}
+    \left( \sqrt{1 - \frac{2m}{r_0} } + \sqrt{\frac{2m}{r_{\rm s}^{\rm em}(0,t_\Obs)} - \frac{2m}{r_0}}
+    \right) } .
 \ee
-where $E_\infty$ is the photon's energy measured at infinity by a remote static observer,
-like $\Obs$.
 
-The energy of the emitted photon measured by the comoving observer
-is $E_{\rm em} = -\w{g}(\w{u}_{\rm s},\w{p})$. With the components of $\w{g}$,
-$\w{u}_{\rm s}$ and $\w{p}$ given by respectively Eqs.~(\ref{e:sch:Schwarz_metric_SD}),
-(\ref{e:lem:OS:u_comoving}) and (\ref{e:lem:OS:p_photon}), we get
-\be
-    E_{\rm em} = E_\infty
-    \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1}
-    \left( \sqrt{1 - \frac{2m}{r_0} } + \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}}
-    \right) .
-\ee
-The photon's \defin{redshift}\index{redshift!in Oppenheimer-Snyder collapse} when received by $\Obs$ is\footnote{In this expression,
-$\lambda_{\rm em}$ (resp. $\lambda_\infty$) is the the photon wavelength measured by
-the surface comoving observer (resp. the static observer at infinity), not to be confused with
-the affine parameter $\lambda$ along the photon's geodesic.}
-$z := (\lambda_\infty - \lambda_{\rm em})/\lambda_{\rm em} = E_{\rm em}/E_\infty - 1$.
-Hence
-\be \label{e:lem:OS:redshift}
-    \encadre{ z = \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1}
-    \left( \sqrt{1 - \frac{2m}{r_0} } + \sqrt{\frac{2m}{r_{\rm s}(\tau)} - \frac{2m}{r_0}}
-    \right)  - 1 } .
-\ee
-In this expression, $\tau$ is the proper time of infalling matter at the star's surface at the
-instant of emission of the photon.
+For $t_{\rm em}(0,t_\Obs) \leq 0$, $r_{\rm s}^{\rm em}(0,t_\Obs) = r_0$ and
+formula~(\ref{e:lem:OS:redshift_c}) reduces to
+$1 + z_{\rm c} = (1 - 2m/r_0)^{-1/2}$, which is the standard expression for the redshift at infinity of
+a photon emitted by a \emph{static} observer at $r=r_0$ in the Schwarzschild spacetime.
 
-For $\tau = 0$, $r_{\rm s}(\tau) = r_0$ and formula~(\ref{e:lem:OS:redshift}) reduces to
-$z = (1 - 2m/r_0)^{-1/2} - 1$, which is the standard expression for the redshift at infinity of
-a photon emitted by a \emph{static} observer at $r=r_0$ in the Schwarzschild spacetime. This is
-not surprising since the star is momentarily static at $\tau=0$, the collapse starting
-from rest.
-
-For $\tau\to \tau_*$, $r_{\rm s}(\tau) \to 2 m$ and formula~(\ref{e:lem:OS:redshift}) yields
+For $\tau\to \tau_*$, $r_{\rm s}(\tau) \to 2 m$ and formula~(\ref{e:lem:OS:redshift_c}) yields
 \be \label{e:lem:OS:redshift_sim}
     z \underset{\tau\to\tau_*}{\sim}  2 \sqrt{1 - \frac{2m}{r_0} }
      \left(1 - \frac{2m}{r_{\rm s}(\tau)} \right)^{-1} ,
