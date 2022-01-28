@@ -1743,7 +1743,7 @@ $\Li$ and
      \left(1 - \frac{2m}{r} \right) ^{-1}
         \left( 1 - b^2 U(r) \right) ^{-1/2} \; \D r
 \ee
-if there is a periastron, located at $r=r_{\rm p} < r_{\rm s}^{\rm em}(b,t_\Obs)$.
+if there is a one, located at $r=r_{\rm p} < r_{\rm s}^{\rm em}(b,t_\Obs)$.
 For a given observation instant $t_\Obs$ and a given position on the screen, measured by $b$,
 Eq.~(\ref{e:lem:OS:t_em_b_tO}) must be solved to get $t_{\rm em}(b,t_\Obs)$. In general, this
 is a difficult problem since the lower boundary of the integral, $r_{\rm s}^{\rm em}(b,t_\Obs)$,
@@ -1821,7 +1821,7 @@ with respect to observer $\Obs_{\rm em}$, and $\lambda_\infty$ is
 the photon wavelength measured by $\Obs$.
 Thanks to Planck-Einstein relation (\ref{e:fra:Planck_Einstein}): $E = h\nu = h/(c\lambda)$,
 we have
-\be
+\be \label{e:lem:redshift}
  1 + z = \frac{E_{\rm em}}{E_\infty},
 \ee
 where $E_{\rm em}$ (resp. $E_\infty$)
@@ -2070,7 +2070,7 @@ The terms denoted by $A$ are bounded when $r_{\rm s}^{\rm em}(0,t_\Obs) \to 2m$,
 \]
 Combining with Eq.~(\ref{e:lem:OS:redshift_sim}), we obtain the expression
 of the central redshift at late times:
-\be
+\be \label{e:lem:central_redshift}
    \encadre{ 1 + z_{\rm c} \underset{t_\Obs \to +\infty}{\sim}  2 \sqrt{1 - \frac{2m}{r_0} }
      \; \mathrm{e}^{(t_\Obs - t_\Obs^*)/(4 m)} } .
 \ee
@@ -2117,8 +2117,95 @@ in that limit). The Doppler blueshift is of course due to the rim's photon being
 emitted inward, which is the direction of the matter motion.
 
 
+\subsection{Image brightness}
+
+Each point in the image corresponds to a direction in observer $\Obs$'s sky.
+We may then think of a small solid angle $\D\Omega$ around this direction
+as a ``pixel'' in the image. The ``brightness'' of this pixel
+in the frequency bandwith $[\nu, \nu + \D\nu]$ is represented by the
+energy flux\index{energy!flux} (energy per unit of time and unit of area)
+$\D F$ given by
+\be \label{e:lem:elem_flux}
+   \D F = I_\nu \, \D\Omega \, \D\nu ,
+\ee
+where $I_\nu$ is the \defin{specific intensity}\index{specific!intensity} of the electromagnetic
+radiation from the surface of the collapsing star\footnote{The notation $I_\nu$ follows
+the standard convention in the literature, the subscript $\nu$ being merely an indicator to
+distinguish this quantity from the \emph{intensity} $I$, which is integrated over
+all frequencies.}.
+The specific intensity $I_\nu$
+depends on the radiation frequency $\nu$
+as measured by observer $\Obs$, as well
+as on $\Obs$'s proper time $t_\Obs$ and the direction in $\Obs$'s sky.
+Taking the origin at the center of the image, the direction is defined
+by the small angle $\hat{b} = b / r_\Obs$ and some azimuthal angle $\phi\in [0,2\pi)$ %]$.
+The solid angle increment $\D\Omega$ can be then written
+$\D \Omega = \sin\hat{b}\, \D\hat{b}\, \D\phi \simeq \hat{b}\, \D\hat{b}\, \D\phi$.
+Due to the rotation symmetry of the image, $I_\nu$ is independent from $\phi$. We may then
+write $I_\nu = I_\nu(b, t_\Obs, \nu)$, using $b$ to represent $\hat{b} = b / r_\Obs$.
+
+A fundamental property of the specific intensity is that the ratio
+$I_\nu / \nu^3$ is constant along a given light ray. In particular, it does not depend
+on the distance between the source and the observer. This property follows from
+\emph{Etherington's reciprocity theorem}\index{Etherington's reciprocity theorem}\index{reciprocity theorem}
+which basically states that, in any spacetime, identical area elements carried by two observers
+in arbitrary motion subtend identical solid angles when seen by the other observer, up to some redshift factor $(1+z)^2$. This theorem can be proved via geometrical optics in curved spacetime
+(cf. e.g. Sec.~3.6 of Ref.~\cite{SchneEF92}, Sec.~6 of Ref.~\cite{Ellis71} or Sec.~2 of
+Ref.~\cite{Perli04}) or by applying \emph{Liouville's theorem}
+expressing the constancy of the photon distribution function $f$
+along a photon trajectory in phase space, given that $I_\nu /\nu^3 = h^4 f$,
+where $h$ is Planck constant
+(see e.g. Sec.~22.6 of Ref.~\cite{MisneTW73}).
+We deduce from the constancy of $I_\nu / \nu^3$ that
+\be \label{e:lem:spec_int_1pz3}
+    I_\nu(b, t_\Obs, \nu) = (1 + z)^{-3} \,
+    I_\nu^{\rm em}\left(\Theta_{\rm em}, t_{\rm em}, \nu_{\rm em}\right),
+\ee
+where $z = z(b, t_\Obs)$ is the redshift at the location $b$ on the image at time $t_\Obs$
+as given by Eq.~(\ref{e:lem:OS:redshift_gal}) or (\ref{e:lem:OS:redshift_pless}),
+$\Theta_{\rm em}$ is the emission angle expressed in terms of $(b, t_\Obs)$
+by Eq.~(\ref{e:lem:cos_Theta_em}), $t_{\rm em} = t_{\rm em}(b, t_\Obs)$ is the emission
+coordinate time expressed via Eq.~(\ref{e:lem:OS:t_em_b_tO}), $\nu_{\rm em}$ is
+the emission frequency and, by the very definition of the redshift, is related
+to $\nu$ by $\nu_{\rm em} = (1 + z) \nu$ [cf. Eq.~(\ref{e:lem:redshift})].
+The function $I_\nu^{\rm em}\left(\Theta_{\rm em}, t_{\rm em}, \nu_{\rm em}\right)$, the specific intensity at the source, depends on the model
+of emission assumed for the surface of the collapsing star.
+
+The \defin{integrated intensity} $I$ is the specific intensity integrated over all the frequencies:
+\be
+    I(b, t_\Obs) = \int_0^{+\infty} I_\nu(b, t_\Obs, \nu) \, \D \nu
+\ee
+Given expression~(\ref{e:lem:spec_int_1pz3}) and $\nu = (1 + z)^{-1} \nu_{\rm em}$, we get
+\be
+     I(b, t_\Obs)   = (1 + z)^{-4} \int_0^{+\infty}
+        I_\nu^{\rm em}\left(\Theta_{\rm em}, t_{\rm em}, \nu_{\rm em}\right) \, \D \nu_{\rm em} .
+\ee
+In view of the redshift behavior (\ref{e:lem:central_redshift}), we deduce
+from this formula that the integrated intensity at the center of the image
+decay exponentially with a characteristic time equal to $m$:
+\be
+  I(0, t_\Obs)  \underset{t_\Obs \to +\infty}{\sim} I_0\,
+           \mathrm{e}^{- (t_\Obs - t_\Obs^*)/m}  .
+\ee
 
 
+The \defin{specific flux} of the image is obtained by integrating
+the flux element (\ref{e:lem:elem_flux}) over the solid angle $\D\Omega$. Using
+$\D\Omega = b/r_\Obs^2\, \D b\, \D\phi$, we get
+\be
+    F_\nu(t_\Obs, \nu) = \frac{2\pi}{r_\Obs^2} \int_0^{b_\star} I_\nu(b, t_\Obs, \nu)\, b \, \D b .
+\ee
+
+The \defin{integrated flux} of the image is the specific flux integrated over all the frequencies:
+\be
+    F(t_\Obs) = \int_0^{+\infty} F_\nu(t_\Obs, \nu) \, \D \nu
+     = \frac{2\pi}{r_\Obs^2} \int_0^{b_\star} I(b, t_\Obs)\, b \, \D b .
+\ee
+It can be shown (see e.g. Refs.~\cite{AmesT68,Shapi89}) that, independently of
+the emission model, the integrated flux is decaying exponentially according to
+\be
+    F(t_\Obs) \sim F_0 \, \mathrm{e}^{- (t_\Obs - t_\Obs^*)/(3\sqrt{3} m)} .
+\ee
 
 
 
