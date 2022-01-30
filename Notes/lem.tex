@@ -1962,9 +1962,17 @@ starting from rest.
 
 \subsubsection{Emission angle}
 
-The photon's emission direction in the frame of the comoving observer $\Obs_{\rm em}$
+The emission direction of a photon in the frame of the comoving observer $\Obs_{\rm em}$
 is characterized by the angle $\Theta_{\rm em}$ between the photon's linear momentum $\w{P}_{\rm em}$
-and the normal to the surface $\w{n}_{\rm s}$; this angle is given by
+and the normal to the surface $\w{n}_{\rm s}$. Considering that the collapsing matter
+is opaque to radiation, the maximum inclination of an emitted photon capable to
+reach the remote observer $\Obs$ is
+$\Theta_{\rm em} = \pi/2$ (emission tangent to the surface).
+Hence any photon received by $\Obs$ has necessarily
+\be
+        0 \leq \Theta_{\rm em} \leq \frac{\pi}{2} .
+\ee
+By definition, $\Theta_{\rm em}$ is given by
 \be
     \cos\Theta_{\rm em} =
     \frac{\w{n}_{\rm s}\cdot\w{P}_{\rm em}}{\sqrt{\w{P}_{\rm em}\cdot\w{P}_{\rm em}}} .
@@ -2180,7 +2188,7 @@ Given expression~(\ref{e:lem:spec_int_1pz3}) and $\nu = (1 + z)^{-1} \nu_{\rm em
      I(b, t_\Obs)   = (1 + z)^{-4} \int_0^{+\infty}
         I_\nu^{\rm em}\left(\Theta_{\rm em}, t_{\rm em}, \nu_{\rm em}\right) \, \D \nu_{\rm em} .
 \ee
-In view of the redshift behavior (\ref{e:lem:central_redshift}), we deduce
+In view of the central redshift behavior (\ref{e:lem:central_redshift}), we deduce
 from this formula that the integrated intensity at the center of the image
 decay exponentially with a characteristic time equal to $m$:
 \be
@@ -2191,7 +2199,7 @@ decay exponentially with a characteristic time equal to $m$:
 
 The \defin{specific flux} of the image is obtained by integrating
 the flux element (\ref{e:lem:elem_flux}) over the solid angle $\D\Omega$. Using
-$\D\Omega = b/r_\Obs^2\, \D b\, \D\phi$, we get
+$\D\Omega = \hat{b}\, \D\hat{b}\, \D\phi = b/r_\Obs^2\, \D b\, \D\phi$, we get
 \be
     F_\nu(t_\Obs, \nu) = \frac{2\pi}{r_\Obs^2} \int_0^{b_\star} I_\nu(b, t_\Obs, \nu)\, b \, \D b .
 \ee
@@ -2204,7 +2212,7 @@ The \defin{integrated flux} of the image is the specific flux integrated over al
 It can be shown (see e.g. Refs.~\cite{AmesT68,Shapi89}) that, independently of
 the emission model, the integrated flux is decaying exponentially according to
 \be
-    F(t_\Obs) \sim F_0 \, \mathrm{e}^{- (t_\Obs - t_\Obs^*)/(3\sqrt{3} m)} .
+    F(t_\Obs) \underset{t_\Obs \to +\infty}{\sim} F_0 \, \mathrm{e}^{- (t_\Obs - t_\Obs^*)/(3\sqrt{3} m)} .
 \ee
 
 
