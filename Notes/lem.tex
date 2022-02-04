@@ -2092,53 +2092,81 @@ vanish exponentially fast.
 
 \subsubsection{Redshift at the image's rim}
 
+We have the following characterization of the image's rim:
+\begin{greybox}
 The image's rim, or \emph{limb}, at $b=b_\star(t_\Obs)$ (cf. Sec.~\ref{s:lem:size_image}),
 is formed by photons emitted tangentially to the
-star's surface. By the very definition of $\Theta_{\rm em}$, these photons are
-thus emitted in the direction $\Theta_{\rm em} = \pi/2$. One has then $\cos\Theta_{\rm em} = 0$
-and Eq.~(\ref{e:lem:cos_Theta_em}) implies $\epsilon_r = -1$ for $V>0$, i.e. as soon as
+star's surface. In other words, the image's rim is formed by photons
+emitted in the direction $\Theta_{\rm em} = \pi/2$ with respect to the normal
+in the frame of the comoving observer $\Obs_{\rm em}$.
+\end{greybox}
+We have demonstrated this property for $t_\Obs \leq t_\Obs^{**}$, i.e. prior to the collapse,
+in Sec.~\ref{s:lem:size_image}. We shall admit that it remains true for
+$t_\Obs > t_\Obs^{**}$.
+
+One has then $\cos\Theta_{\rm em} = 0$ for $b=b_\star(t_\Obs)$
+and Eq.~(\ref{e:lem:cos_Theta_em}) implies $\epsilon_r = -1$ as soon as $V>0$, i.e. when
 the collapse has started. Hence these photons are emitted in the inward direction.
 Their geodesics have then necessarily a $r$-turning point (periastron), after which $r$
-is increasing monoteneously ($\eps_r = +1$) until reaching observer $\Obs$.
+is increasing monotonically ($\eps_r = +1$) until reaching observer $\Obs$.
 
-The redshift $z_\star$ at the image's rim is thus obtained by
+The redshift $z_\star$ at the image's rim is obtained by
 setting $\Theta_{\rm em} = \pi/2$ in Eq.~(\ref{e:lem:redshift_Theta_em_gal}):
 \be \label{e:lem:redshit_rim_gal}
     1 + z_\star = \Gamma^{-1}
     \left(1 - \frac{2m}{r_{\rm s}^{\rm em}(b_\star, t_\Obs)}\right) ^{-1/2} ,
 \ee
 where $b_\star$ stands for $b_\star(t_\Obs)$. For pressureless collapse,
-$\Gamma$ can be substituted by expression (\ref{e:lem:OS:V_Gamma}), which
-makes the terms involving $r_{\rm s}^{\rm em}(b_\star, t_\Obs)$ cancel out,
-so that one is left with
-\be
+$\Gamma$ can be substituted by expression (\ref{e:lem:OS:V_Gamma}); this
+makes the terms involving $r_{\rm s}^{\rm em}(b_\star, t_\Obs)$ cancel out.
+Hence
+\begin{greybox}
+For a pressureless collapse starting from rest,
+the redshift at the image's rim keeps a constant value:
+\be \label{e:lem:redhsit_rim_pless}
    \encadre{ 1 + z_\star = \left(1 - \frac{2m}{r_0}\right) ^{-1/2} } .
 \ee
-Hence the redshift at the image's rim keeps a constant value.
+\end{greybox}
 This surprising result can be understood by considering the general
 expression (\ref{e:lem:redshit_rim_gal}): $1 + z_\star$ is the product
 of two competing factors: the ``static'' gravitational redshift
 $(1 - 2m/r_{\rm s})^{-1/2}$, which is always larger than one and diverges
 as $r_{\rm s}\to 2m$, and the Doppler blueshift factor $\Gamma^{-1}$, which
 is always lower than one and tends to zero as $r_{\rm s}\to 2m$ (since $V\to 1$
-in that limit). The Doppler blueshift is of course due to the rim's photon being
+in that limit). The Doppler blueshift is of course due to the rim's photons being
 emitted inward, which is the direction of the matter motion.
+
+\subsubsection{Redshift profile}
+
+The redshift across the image, i.e. $z$ as a function of $b$ at fixed $t_\Obs$,
+is given by Eq.~(\ref{e:lem:OS:redshift_gal}) for a generic collapse
+and by Eq.~(\ref{e:lem:OS:redshift_pless}) for a pressureless collapse
+from rest. However, one has to solve for $r_{\rm s}(b, t_\Obs)$ to make
+these formulas fully explicit. Doing so (see e.g. Fig.~2 of Ref.~\cite{LakeR79} or
+Fig.~6 of Ref.~\cite{YoshiTN19}), one obtains a redshift which is maximal
+at the image's center, where it is given by formulas (\ref{e:lem:OS:redshift_c}),
+and increases exponentially with time [Eq.~(\ref{e:lem:central_redshift})].
+The redshift then decays until a small annulus near the image's rim where it
+takes the constant value (\ref{e:lem:redhsit_rim_pless}). The width of
+this annulus decays to zero with time.
 
 
 \subsection{Image brightness}
 
+Beside the redshift, the image is characterized by its brightness.
 Each point in the image corresponds to a direction in observer $\Obs$'s sky.
 We may then think of a small solid angle $\D\Omega$ around this direction
-as a ``pixel'' in the image. The ``brightness'' of this pixel
+as a ``pixel'' in the image. The brightness of this pixel
 in the frequency bandwith $[\nu, \nu + \D\nu]$ is represented by the
 energy flux\index{energy!flux} (energy per unit of time and unit of area)
 $\D F$ given by
 \be \label{e:lem:elem_flux}
    \D F = I_\nu \, \D\Omega \, \D\nu ,
 \ee
-where $I_\nu$ is the \defin{specific intensity}\index{specific!intensity} of the electromagnetic
-radiation from the surface of the collapsing star\footnote{The notation $I_\nu$ follows
-the standard convention in the literature, the subscript $\nu$ being merely an indicator to
+where $I_\nu$ is the \defin{specific intensity}\index{specific!intensity}\index{intensity!specific --}
+of the electromagnetic
+radiation from the collapsing star\footnote{The notation $I_\nu$ follows
+a standard convention in the literature, the subscript $\nu$ being merely an indicator to
 distinguish this quantity from the \emph{intensity} $I$, which is integrated over
 all frequencies.}.
 The specific intensity $I_\nu$
@@ -2146,10 +2174,10 @@ depends on the radiation frequency $\nu$
 as measured by observer $\Obs$, as well
 as on $\Obs$'s proper time $t_\Obs$ and the direction in $\Obs$'s sky.
 Taking the origin at the center of the image, the direction is defined
-by the small angle $\hat{b} = b / r_\Obs$ and some azimuthal angle $\phi\in [0,2\pi)$ %]$.
+by the small angle $\hat{b} = b / r_\Obs$ and some azimuthal angle $\phi\in [0,2\pi)$. %]$
 The solid angle increment $\D\Omega$ can be then written
 $\D \Omega = \sin\hat{b}\, \D\hat{b}\, \D\phi \simeq \hat{b}\, \D\hat{b}\, \D\phi$.
-Due to the rotation symmetry of the image, $I_\nu$ is independent from $\phi$. We may then
+Due to the rotation symmetry of the image, $I_\nu$ is independent of $\phi$. We may then
 write $I_\nu = I_\nu(b, t_\Obs, \nu)$, using $b$ to represent $\hat{b} = b / r_\Obs$.
 
 A fundamental property of the specific intensity is that the ratio
@@ -2157,7 +2185,8 @@ $I_\nu / \nu^3$ is constant along a given light ray. In particular, it does not 
 on the distance between the source and the observer. This property follows from
 \emph{Etherington's reciprocity theorem}\index{Etherington's reciprocity theorem}\index{reciprocity theorem}
 which basically states that, in any spacetime, identical area elements carried by two observers
-in arbitrary motion subtend identical solid angles when seen by the other observer, up to some redshift factor $(1+z)^2$. This theorem can be proved via geometrical optics in curved spacetime
+in arbitrary motion subtend identical solid angles when seen by the other observer, up to some redshift factor $(1+z)^2$. This theorem can be proven in the framework of
+geometrical optics in curved spacetime
 (cf. e.g. Sec.~3.6 of Ref.~\cite{SchneEF92}, Sec.~6 of Ref.~\cite{Ellis71} or Sec.~2 of
 Ref.~\cite{Perli04}) or by applying \emph{Liouville's theorem}
 expressing the constancy of the photon distribution function $f$
@@ -2173,13 +2202,13 @@ where $z = z(b, t_\Obs)$ is the redshift at the location $b$ on the image at tim
 as given by Eq.~(\ref{e:lem:OS:redshift_gal}) or (\ref{e:lem:OS:redshift_pless}),
 $\Theta_{\rm em}$ is the emission angle expressed in terms of $(b, t_\Obs)$
 by Eq.~(\ref{e:lem:cos_Theta_em}), $t_{\rm em} = t_{\rm em}(b, t_\Obs)$ is the emission
-coordinate time expressed via Eq.~(\ref{e:lem:OS:t_em_b_tO}), $\nu_{\rm em}$ is
-the emission frequency and, by the very definition of the redshift, is related
+coordinate time expressed via Eq.~(\ref{e:lem:OS:t_em_b_tO}) and $\nu_{\rm em}$ is
+the emission frequency. By the very definition of the redshift, $\nu_{\rm em}$ is related
 to $\nu$ by $\nu_{\rm em} = (1 + z) \nu$ [cf. Eq.~(\ref{e:lem:redshift})].
-The function $I_\nu^{\rm em}\left(\Theta_{\rm em}, t_{\rm em}, \nu_{\rm em}\right)$, the specific intensity at the source, depends on the model
+The function $I_\nu^{\rm em}\left(\Theta_{\rm em}, t_{\rm em}, \nu_{\rm em}\right)$ --- the specific intensity at the source --- depends on the model
 of emission assumed for the surface of the collapsing star.
 
-The \defin{integrated intensity} $I$ is the specific intensity integrated over all the frequencies:
+The \defin{intensity}\index{intensity} $I$ is the specific intensity integrated over all the frequencies:
 \be
     I(b, t_\Obs) = \int_0^{+\infty} I_\nu(b, t_\Obs, \nu) \, \D \nu
 \ee
@@ -2189,28 +2218,28 @@ Given expression~(\ref{e:lem:spec_int_1pz3}) and $\nu = (1 + z)^{-1} \nu_{\rm em
         I_\nu^{\rm em}\left(\Theta_{\rm em}, t_{\rm em}, \nu_{\rm em}\right) \, \D \nu_{\rm em} .
 \ee
 In view of the central redshift behavior (\ref{e:lem:central_redshift}), we deduce
-from this formula that the integrated intensity at the center of the image
-decay exponentially with a characteristic time equal to $m$:
+from this formula that the intensity at the center of the image
+decreases exponentially with a characteristic time equal to $m$:
 \be \label{e:lem:decay_central_intensity}
   \encadre{ I(0, t_\Obs)  \underset{t_\Obs \to +\infty}{\sim} I_0\,
            \mathrm{e}^{- (t_\Obs - t_\Obs^*)/m} } .
 \ee
 
 
-The \defin{specific flux} of the image is obtained by integrating
+The \defin{specific flux}\index{specific!flux}\index{flux!specific} of the image is obtained by integrating
 the flux element (\ref{e:lem:elem_flux}) over the solid angle $\D\Omega$. Using
 $\D\Omega = \hat{b}\, \D\hat{b}\, \D\phi = b/r_\Obs^2\, \D b\, \D\phi$, we get
 \be
     F_\nu(t_\Obs, \nu) = \frac{2\pi}{r_\Obs^2} \int_0^{b_\star} I_\nu(b, t_\Obs, \nu)\, b \, \D b .
 \ee
 
-The \defin{integrated flux} of the image is the specific flux integrated over all the frequencies:
+The \defin{flux}\index{flux!of an image} of the image is the specific flux integrated over all the frequencies:
 \be
     F(t_\Obs) = \int_0^{+\infty} F_\nu(t_\Obs, \nu) \, \D \nu
      = \frac{2\pi}{r_\Obs^2} \int_0^{b_\star} I(b, t_\Obs)\, b \, \D b .
 \ee
 It can be shown (see e.g. Refs.~\cite{AmesT68,Shapi89}) that, independently of
-the emission model, the integrated flux is decaying exponentially according to
+the emission model, the flux is decaying exponentially according to
 \be \label{e:lem:integrated_flux}
     \encadre{ F(t_\Obs) \underset{t_\Obs \to +\infty}{\sim} F_0 \, \mathrm{e}^{- (t_\Obs - t_\Obs^*)/(3\sqrt{3} m)} } .
 \ee
@@ -2218,23 +2247,23 @@ the emission model, the integrated flux is decaying exponentially according to
 \begin{hist}
 The first computation of the appearance of a gravitational collapse from the viewpoint of a remote observer
 has been performed by Mikhail A. Podurets\index{Podurets, M. A.} in 1964 \cite{Podur64}.
-He obtained the exponential decay formula (\ref{e:lem:integrated_flux}) for the total flux,
+He obtained the exponential decay formula (\ref{e:lem:integrated_flux}) for the flux,
 up to an erroneous factor $2$ in factor of $t_\Obs - t_\Obs^*$. This has been
 corrected by William L. Ames\index{Ames, W.L.} and Kip S. Thorne\index{Thorne, K.S.} in 1968
-\cite{AmesT68}. Podurets considered only the total flux, which is relevant for a remote observer who
-cannot resolve the collapsing star. The integrated intensity at the center of the image
+\cite{AmesT68}. Podurets considered only the image flux, which is relevant for a remote observer who
+cannot resolve the collapsing star. The intensity at the center of the image
 has been derived by
 Yakov B. Zeldovich\index{Zeldovich, Ya.B.} and Igor D. Novikov\index{Novikov, I.D.}
 in 1964 \cite{ZeldoN64}, who obtained the the exponential decay formula
 (\ref{e:lem:decay_central_intensity}). The computation of the
 intensity at each point of the image has been achieved by
-Ames and Thorne in their 1968 study \cite{AmesT68}, who showed that
-the image is brightest at its rim, that the redshift is constant there and that the width of this
+Ames and Thorne in their 1968 study \cite{AmesT68}, who showed that (i)
+the image is brightest at its rim, (ii) the redshift is constant there and (iii) the width of this
 peripheral bright region is decaying exponentially with time. In 1969, Jack Jaffe\index{Jaffe, J.}
 \cite{Jaffe69} pointed out that Ames and Thorne considered only photons with
 an emission angle $\Theta_{\rm em}' \leq \pi/2$ in the local \emph{static} observer frame,
 while the limiting condition should be $\Theta_{\rm em} \leq \pi/2$ in the \emph{comoving} observer frame,
-which encompasses extra photons: those that are backward-emitted. In 1979, Kayll Lake\index{Lake, K.} and
+which encompasses extra photons: those that are emitted inward. In 1979, Kayll Lake\index{Lake, K.} and
 R. C. Roeder\index{Roeder, R. C.} \cite{LakeR79}
 recomputed the intensity with this hypothesis and concluded
 that the main properties found by Podurets, Ames and Thorne are not significantly altered.
