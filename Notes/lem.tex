@@ -758,6 +758,22 @@ Note that while $\w{\tilde{g}}$
 is a static metric [it obeys Eq.~(\ref{e:sta:static_metric})], $\w{g}$ is not, since
 the conformal factor depends on $\eta$.
 
+On each hypersurface $\eta=\mathrm{const}$ ($\iff \tau = \mathrm{const}$),
+the 3-metric induced by
+the conformal metric $\w{\tilde{g}}$ is the standard metric of the hypersphere
+$\mathbb{S}^3$, expressed in terms of the hyperspherical coordinates $(\chi,\th,\ph)$.
+On the whole $\mathbb{S}^3$, $\chi$ ranges from $0$ to $\pi$. Since in the
+present case, $\chi \in [0,\chi_{\rm s}]$ with $\chi_{\rm s} < \pi/2$
+[Eq.~(\ref{e:lem:OS:range_chi})],
+we may view each constant $\eta$ slice of the interior of the collapsing
+star as a piece of $\mathbb{S}^3$, scaled by the factor $a(\tau)$
+given by Eq.~(\ref{e:lem:OS:a_tau}).
+If one uses the conformal coordinates $(\eta,\chi)$ to draw a 2-dimensional
+spacetime diagram of the interior, as in the left part of Fig.~\ref{f:lem:OS:diag_int_EF},
+then the radial null geodesics appear as straight lines inclined by $\pm 45^\circ$
+with the horizontal, reflecting the Minkowskian part $- \dd\eta^2 + \dd\chi^2$
+in the metric (\ref{e:lem:OS:g_int}).
+
 
 \begin{figure}
 \centerline{
@@ -808,21 +824,24 @@ The right figure is a zoom on the end of the collapse.
 \end{figure}
 
 
-On each hypersurface $\eta=\mathrm{const}$ ($\iff \tau = \mathrm{const}$),
-the 3-metric induced by
-the conformal metric $\w{\tilde{g}}$ is the standard metric of the hypersphere
-$\mathbb{S}^3$, expressed in terms of the hyperspherical coordinates $(\chi,\th,\ph)$.
-On the whole $\mathbb{S}^3$, $\chi$ ranges from $0$ to $\pi$. Since in the
-present case, $\chi \in [0,\chi_{\rm s}]$ with $\chi_{\rm s} < \pi/2$
-[Eq.~(\ref{e:lem:OS:range_chi})],
-we may view each constant $\eta$ slice of the interior of the collapsing
-star as a piece of $\mathbb{S}^3$, scaled by the factor $a(\tau)$
-given by Eq.~(\ref{e:lem:OS:a_tau}).
-If one uses the conformal coordinates $(\eta,\chi)$ to draw a 2-dimensional
-spacetime diagram of the interior, as in the left part of Fig.~\ref{f:lem:OS:diag_int_EF},
-then the radial null geodesics appear as straight lines inclined by $\pm 45^\circ$
-with the horizontal, reflecting the Minkowskian part $- \dd\eta^2 + \dd\chi^2$
-in the metric (\ref{e:lem:OS:g_int}).
+
+To show that the FLRW interior (\ref{e:lem:OS:g_int})
+along with the Schwarzschild exterior (\ref{e:lem:OS:exterior_metric})
+form a regular spacetime, one shall check that the
+\emph{Darmois junction conditions}\index{Darmois junction conditions}
+are fulfilled at the interface between the two regions, i.e. on the
+timelike hypersurface $\Sigma$ defining the surface of the collapsing star.
+These conditions, first enounced by Georges Darmois\index{Darmois, G.} \cite{Darmo1927}
+(see also Sec.~21.13 of MTW textbook \cite{MisneTW73}, as well as Ref.~\cite{Lake17}),
+are the continuity of the induced 3-metric of $\Sigma$ and of
+its extrinsic curvature\index{extrinsic!curvature}\index{curvature!extrinsic},
+when these two tensors are computed on each side of $\Sigma$.
+These geometric conditions translate the absence of surface layers on $\Sigma$.
+We shall not check them here; the computation can be found in
+Sec.~3.8 of Poisson's textbook \cite{Poiss04}.
+
+
+\subsection{Spacetime diagrams}
 
 To draw a full spacetime diagram of the collapse, we may extend the ingoing
 Eddington-Finkelstein (IEF) coordinates $(\ti,r,\th,\ph)$, used to described the
@@ -854,20 +873,33 @@ in Fig.~\ref{f:lem:OS:diag_KS} is not conformal in the stellar interior: the rad
 are not straight lines inclined by $\pm 45^\circ$. The outgoing ones even run backwards in $T$
 in the left part of the diagram, which means that causal relations cannot be simply inferred there.
 
-To show that the FLRW interior (\ref{e:lem:OS:g_int})
-along with the Schwarzschild exterior (\ref{e:lem:OS:exterior_metric})
-form a regular spacetime, one shall check that the
-\emph{Darmois junction conditions}\index{Darmois junction conditions}
-are fulfilled at the interface between the two regions, i.e. on the
-timelike hypersurface $\Sigma$ defining the surface of the collapsing star.
-These conditions, first enounced by Georges Darmois\index{Darmois, G.} \cite{Darmo1927}
-(see also Sec.~21.13 of MTW textbook \cite{MisneTW73}, as well as Ref.~\cite{Lake17}),
-are the continuity of the induced 3-metric of $\Sigma$ and of
-its extrinsic curvature\index{extrinsic!curvature}\index{curvature!extrinsic},
-when these two tensors are computed on each side of $\Sigma$.
-These geometric conditions translate the absence of surface layers on $\Sigma$.
-We shall not check them here; the computation can be found in
-Sec.~3.8 of Poisson's textbook \cite{Poiss04}.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{lem_OS_CP_diag.pdf}}
+\caption[]{\label{f:lem:OS:CP_diag} \footnotesize
+Carter-Penrose diagram of the Oppenheimer-Snyder collapse generated
+by switching off the pressure at $\tau=0$ in a star
+in hydrostatic equilibrium.
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{lem_OS_CP_diag_sym.pdf}}
+\caption[]{\label{f:lem:OS:CP_diag_sym} \footnotesize
+Carter-Penrose diagram of the Oppenheimer-Snyder collapse starting at
+the instant of time symmetry ($\tau=0$) after an expanding phase from
+a past singularity.
+}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{lem_OS_CP_diag_sclosed.pdf}}
+\caption[]{\label{f:lem:OS:CP_diag_sclosed} \footnotesize
+Carter-Penrose diagram of a semiclosed world.
+}
+\end{figure}
+
+
 
 
 \subsection{Final singularity}
