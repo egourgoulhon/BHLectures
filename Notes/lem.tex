@@ -22,7 +22,7 @@ The second major approximation is to consider \emph{pressureless matter},
 commonly referred to as \emph{dust}\index{dust}.
 An alternative, certainly more academic, is to consider the collapse of shell of pure electromagnetic radiation; this will be performed in Chap.~\ref{s:vai}.
 
-\section{Lemaître-Tolman equations}
+\section{Lemaître-Tolman equations} \label{s:lem:LT_equat}
 
 \subsection{Hypotheses} \label{s:lem:hyp}
 
@@ -774,6 +774,21 @@ then the radial null geodesics appear as straight lines inclined by $\pm 45^\cir
 with the horizontal, reflecting the Minkowskian part $- \dd\eta^2 + \dd\chi^2$
 in the metric (\ref{e:lem:OS:g_int}).
 
+To show that the FLRW interior (\ref{e:lem:OS:g_int})
+along with the Schwarzschild exterior (\ref{e:lem:OS:exterior_metric})
+form a regular spacetime, one shall check that the
+\emph{Darmois junction conditions}\index{Darmois junction conditions}
+are fulfilled at the interface between the two regions, i.e. on the
+timelike hypersurface $\Sigma$ defining the surface of the collapsing star.
+These conditions, first enounced by Georges Darmois\index{Darmois, G.} \cite{Darmo1927}
+(see also Sec.~21.13 of MTW textbook \cite{MisneTW73}, as well as Ref.~\cite{Lake17}),
+are the continuity of the induced 3-metric of $\Sigma$ and of
+its extrinsic curvature\index{extrinsic!curvature}\index{curvature!extrinsic},
+when these two tensors are computed on each side of $\Sigma$.
+These geometric conditions translate the absence of surface layers on $\Sigma$.
+We shall not check them here; the computation can be found in
+Sec.~3.8 of Poisson's textbook \cite{Poiss04}.
+
 
 \begin{figure}
 \centerline{
@@ -823,24 +838,6 @@ The right figure is a zoom on the end of the collapse.
 }
 \end{figure}
 
-
-
-To show that the FLRW interior (\ref{e:lem:OS:g_int})
-along with the Schwarzschild exterior (\ref{e:lem:OS:exterior_metric})
-form a regular spacetime, one shall check that the
-\emph{Darmois junction conditions}\index{Darmois junction conditions}
-are fulfilled at the interface between the two regions, i.e. on the
-timelike hypersurface $\Sigma$ defining the surface of the collapsing star.
-These conditions, first enounced by Georges Darmois\index{Darmois, G.} \cite{Darmo1927}
-(see also Sec.~21.13 of MTW textbook \cite{MisneTW73}, as well as Ref.~\cite{Lake17}),
-are the continuity of the induced 3-metric of $\Sigma$ and of
-its extrinsic curvature\index{extrinsic!curvature}\index{curvature!extrinsic},
-when these two tensors are computed on each side of $\Sigma$.
-These geometric conditions translate the absence of surface layers on $\Sigma$.
-We shall not check them here; the computation can be found in
-Sec.~3.8 of Poisson's textbook \cite{Poiss04}.
-
-
 \subsection{Spacetime diagrams}
 
 To draw a full spacetime diagram of the collapse, we may extend the ingoing
@@ -883,39 +880,54 @@ in hydrostatic equilibrium.
 The stellar surface is marked by the thick red curve and some outgoing radial
 null geodesics are drawn as green straight lines.
 The black hole event horizon $\Hor$ is indicated by
-the thick black line. The dashed blue line marks the trapping horizon
+the thick black line, the shadded region being the black hole interior.
+The dashed blue line marks the trapping horizon
 $\mathscr{T}$ discussed in Sec.~\ref{s:lem:trapped}.
 The maroon curve is the worldline of the remote
 static observer $\Obs$ considered in Sec.~\ref{s:lem:obs}.
 }
 \end{figure}
 
-One may also think about a compactified conformal spacetime diagram, i.e.
+Finally let us consider a compactified conformal diagram of the Oppenheimer-Snyder collapse, i.e.
 a \emph{Carter-Penrose diagram}\index{Carter-Penrose diagram}
 (cf. Secs.~\ref{s:max:Carter-Penrose} and \ref{s:ker:Carter_Penrose_diag}).
-Since they offer a view of the entire spacetime, these diagrams are
-usually \emph{maximal}, i.e. each geodesic is either complete or terminates
-on a singularity. This is clearly not the case of the diagrams in
+Thanks to the compactification, such a diagram offers a view of the entire spacetime.
+It is then natural to consider \emph{maximal} or \emph{inextendible} spacetimes,
+i.e. a spacetime in which each geodesic either is complete or terminates
+at a singularity. This is clearly not the case for the spacetime depicted in the
+diagrams of
 Figs.~\ref{f:lem:OS:diag_int_EF} and \ref{f:lem:OS:diag_KS}: when run
 in the past direction, causal geodesics
 in the star interior stop at the $\tau=0$ hypersurface
-(the magenta line). They are thus incomplete (for instance $\tau$
-is an affine parameter along the free-falling matter geodesics) and could be extended to
-$\tau < 0$. There are actually two ways to extend the spacetime.
-The first one corresponds to the astophysical situation of a star in
+(the magenta line). In particular, the free-falling matter geodesics, along
+which $\tau$ is an affine parameter, are clearly incomplete and could a priori
+be extended to
+$\tau < 0$. There are actually two ways to extend the Oppenheimer-Snyder spacetime
+considered up to now.
+The first one corresponds to a star in
 hydrostatic equilibrium for $\tau < 0$ and in which the pressure drops suddenly to zero at $\tau = 0$.
-The corresponding Carter-Penrose diagram is drawn schematically\footnote{This diagram is not
-constructed on explicited coordinates.} in Fig.~\ref{f:lem:OS:CP_diag}. It describes a
-maximally extended spacetime: all geodesics are inextendible. The star seems to expand from
+This extension is ``astrophysical'' insofar as it models the gravitational collapse of the core of a massive star. Of course the equilibrium for $\tau\in(-\infty,0)$ requires
+some nonzero pressure inside the star. Therefore it cannot be described by the
+Lemaître-Tolman equations discussed in Sec.~\ref{s:lem:LT_equat}, but rather
+by the Tolman-Oppenheimer-Volkoff\index{Tolman-Oppenheimer-Volkoff equations}
+equations, which govern hydrostatic equilibrium in
+spherical symmetry (see e.g. Chap.~23 of Ref.~\cite{MisneTW73}).
+The Carter-Penrose diagram corresponding to this extension
+is drawn schematically\footnote{This diagram is not
+constructed on explicit coordinates.} in Fig.~\ref{f:lem:OS:CP_diag}. The star seems to expand from
 the past timelike infinity $i^-$, but this is an artifact of the drawning\footnote{Recall that a
-Carter-Penrose reflect the conformal structure but does not respect the metric distances.}: the star surface
-(red line) follows actually a curve $r = \mathrm{const}$ for $\tau < 0$. For $\tau \geq 0$,
-the surface of the star is drawn as a vertical line, while the radius is actually
-decreasing, as in the left part of Fig.~\ref{f:lem:OS:diag_int_EF}. Actually, one may consider that this
+Carter-Penrose reflects the conformal structure but does not respect the distances.}: the star surface
+(red line) follows actually a curve $r = \mathrm{const}\; (= r_0)$ for $\tau < 0$. For $\tau \geq 0$,
+the surface of the star appears as a vertical line, as in the left part of Fig.~\ref{f:lem:OS:diag_int_EF}, while the radius is actually
+decreasing. Actually, one may consider that this
 part of the Carter-Penrose diagram is drawn by means of the conformal coordinates $(\eta,\chi)$ used
-in Fig.~\ref{f:lem:OS:diag_int_EF}.
+in Fig.~\ref{f:lem:OS:diag_int_EF}. Note that the Carter-Penrose diagram of Fig.~\ref{f:lem:OS:CP_diag}
+corresponds to a maximally extended spacetime: all geodesics are inextendible.
 
-
+The second maximal extension of the Oppenheimer-Snyder spacetime
+assumes that the star at $\tau=0$ corresponds actually to a moment of
+time symmetry of a ball of pressureless matter that was expanding from an
+initial past singularity.
 
 \begin{figure}
 \centerline{\includegraphics[height=0.3\textheight]{lem_OS_CP_diag_sym.pdf}}
