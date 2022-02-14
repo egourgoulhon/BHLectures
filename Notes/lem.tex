@@ -563,7 +563,7 @@ The right panel in Fig.~\ref{f:ges:radial_infall}
 depicts it for various values of $m/r_0$.
 
 
-\subsection{Oppenheimer-Snyder solution}
+\subsection{Oppenheimer-Snyder solution} \label{s:lem:OS_sol}
 
 The metric (\ref{e:lem:OS:exterior_metric}) is valid only for $r \geq r_{\rm s}(\ti)$.
 The metric inside the star is given by one of the solutions
@@ -644,7 +644,7 @@ and $\chi_{\rm s} = \pi - \arcsin\sqrt{2 m/r_0}$.
 For the physical situation we have in mind (gravitational collapse of an ``ordinary'' stellar core),
 we shall retain only the solution (\ref{e:lem:OS:chis_m0_r0}), which implies $\chi_{\rm s} \in (0, \pi/2]$.
 The second solution, for which $\chi_{\rm s} \in [\pi/2, \pi)$,    %]$
-will be discussed in Remark~?? below\footnote{For the moment, we can note that such a solution
+will be discussed in Remark~\ref{r:lem:semiclosed} on p.~\pageref{r:lem:semiclosed} below\footnote{For the moment, we can note that such a solution
 would lead to the areal radius $r$ being a decreasing function of $\chi$ near $\chi_{\rm s}$,
 since Eq.~(\ref{e:lem:OS:tau_r_eta}) shows that $r(\tau,\chi)$ behaves as $\sin\chi$, which is decaying
 on $(\pi/2,\pi)$. Such a behavior is certainly not expected in an ``ordinary'' star.} .
@@ -838,7 +838,7 @@ The right figure is a zoom on the end of the collapse.
 }
 \end{figure}
 
-\subsection{Spacetime diagrams}
+\subsection{Spacetime diagrams and maximal extensions}
 
 To draw a full spacetime diagram of the collapse, we may extend the ingoing
 Eddington-Finkelstein (IEF) coordinates $(\ti,r,\th,\ph)$, used to described the
@@ -876,13 +876,14 @@ in the left part of the diagram, which means that causal relations cannot be sim
 \caption[]{\label{f:lem:OS:CP_diag} \footnotesize
 Carter-Penrose diagram of the Oppenheimer-Snyder collapse generated
 by switching off the pressure at $\tau=0$ in a star
-in hydrostatic equilibrium.
-The stellar surface is marked by the thick red curve and some outgoing radial
+in hydrostatic equilibrium for $\tau \in (-\infty,0)$.
+The stellar surface is indicated by the red curve and some outgoing radial
 null geodesics are drawn as green straight lines.
 The black hole event horizon $\Hor$ is indicated by
-the thick black line, the shadded region being the black hole interior.
+the black line, the shadded region being the black hole interior.
 The dashed blue line marks the trapping horizon
-$\mathscr{T}$ discussed in Sec.~\ref{s:lem:trapped}.
+$\mathscr{T}$ discussed in Sec.~\ref{s:lem:trapped},
+while the thick dashed orange line marks the curvature singularity.
 The maroon curve is the worldline of the remote
 static observer $\Obs$ considered in Sec.~\ref{s:lem:obs}.
 }
@@ -892,13 +893,14 @@ Finally let us consider a compactified conformal diagram of the Oppenheimer-Snyd
 a \emph{Carter-Penrose diagram}\index{Carter-Penrose diagram}
 (cf. Secs.~\ref{s:max:Carter-Penrose} and \ref{s:ker:Carter_Penrose_diag}).
 Thanks to the compactification, such a diagram offers a view of the entire spacetime.
-It is then natural to consider \emph{maximal} or \emph{inextendible} spacetimes,
-i.e. a spacetime in which each geodesic either is complete or terminates
-at a singularity. This is clearly not the case for the spacetime depicted in the
+It is then natural to consider \emph{maximal} spacetimes,
+i.e. spacetimes in which each geodesic is inextendible, being complete or terminating
+at a singularity (cf. Sec.~\ref{s:geo:existence_uniqueness}).
+This is clearly not the case of the spacetime depicted in the
 diagrams of
 Figs.~\ref{f:lem:OS:diag_int_EF} and \ref{f:lem:OS:diag_KS}: when run
 in the past direction, causal geodesics
-in the star interior stop at the $\tau=0$ hypersurface
+in the star interior stop on the hypersurface $\tau=0$
 (the magenta line). In particular, the free-falling matter geodesics, along
 which $\tau$ is an affine parameter, are clearly incomplete and could a priori
 be extended to
@@ -923,38 +925,74 @@ decreasing. Actually, one may consider that this
 part of the Carter-Penrose diagram is drawn by means of the conformal coordinates $(\eta,\chi)$ used
 in Fig.~\ref{f:lem:OS:diag_int_EF}. Note that the Carter-Penrose diagram of Fig.~\ref{f:lem:OS:CP_diag}
 corresponds to a maximally extended spacetime: all geodesics are inextendible.
-
-The second maximal extension of the Oppenheimer-Snyder spacetime
-is based on the assumption that the star at $\tau=0$ corresponds actually to a moment of
-time symmetry of a ball of pressureless matter that was expanding from an
-initial past singularity. The spacetime for $\tau < 0$ is then exactly the
-time-reversed of that for $\tau > 0$, as illustrated on the Carter-Penrose
-diagram of Fig.~\ref{f:lem:OS:CP_diag_sym}. Contrary to the ``astrophysical'' extension
-discussed above, this one has the advantage to invoke only pressureless matter
-and therefore to be described by an exact solution of Einstein's equation:
-the Friedmann-Lemaître-Robertson-Walker solution (\ref{e:lem:OS:g_int})
-extended to $\eta \in (-\pi, \pi)$
-inside the star and the Schwarzschild solution (\ref{e:lem:OS:exterior_metric})
-outside the star.
-
+Note as well that the exterior region is formed by parts of regions $\M_{\rm I}$
+and $\M_{\rm II}$ of Schwarzschild spacetime (compare with Fig.~\ref{f:max:carter-penrose-std}).
 
 \begin{figure}
 \centerline{\includegraphics[height=0.3\textheight]{lem_OS_CP_diag_sym.pdf}}
 \caption[]{\label{f:lem:OS:CP_diag_sym} \footnotesize
 Carter-Penrose diagram of the Oppenheimer-Snyder collapse starting at
 the instant of time symmetry ($\tau=0$) after an expanding phase from
-a past singularity.
+a past singularity. The legend is the same as in Fig.~\ref{f:lem:OS:CP_diag},
+with in addition the past curvature singularity (bottom dashed orange line)
+and the white hole region (bottom shadded area), bounded by the past event
+horizon $\Hor^-$.
 }
 \end{figure}
+
+The second maximal extension of the Oppenheimer-Snyder spacetime
+is based on the assumption that the star at $\tau=0$ corresponds to a moment of
+time symmetry of a ball of pressureless matter that was expanding from an
+initial past singularity. The spacetime for $\tau < 0$ is then exactly the
+time-reversed of that for $\tau > 0$, as illustrated on the Carter-Penrose
+diagram of Fig.~\ref{f:lem:OS:CP_diag_sym}.
+Such an extension is less ``astrophysical'' than the one considered above, but
+it has the advantage to invoke only pressureless matter
+and hence to be described by an exact solution of Einstein's equation:
+the Friedmann-Lemaître-Robertson-Walker solution (\ref{e:lem:OS:g_int})
+extended to $\eta \in (-\pi, \pi)$
+inside the star and the Schwarzschild solution
+outside the star. This maximal solution contains a white hole\index{white hole} region,
+i.e. a region in which causal curves arising from the
+past null infinity $\scri^-$ cannot penetrate (cf. Sec.~\ref{s:glo:def_BH}).
+The white hole (null) boundary is the past event horizon $\Hor^-$ (cf. Fig.~\ref{f:lem:OS:CP_diag_sym}).
+The pressureless matter starts its life by expanding from a past curvature singularity where $r=0$,
+as a ``mini big-bang'',
+the areal radius being given by Eq.~(\ref{e:lem:OS:tau_r_eta}) with $\eta\in (-\pi,0)$
+in the expansion phase and $\eta \in (0, \pi)$ in the collapse phase.
+Note that the exterior region is formed by parts of regions $\M_{\rm I}$,
+$\M_{\rm II}$ and $\M_{\rm IV}$ of the maximally extended
+Schwarzschild spacetime (compare with Fig.~\ref{f:max:carter-penrose-std}).
+
 
 \begin{figure}
 \centerline{\includegraphics[height=0.3\textheight]{lem_OS_CP_diag_sclosed.pdf}}
 \caption[]{\label{f:lem:OS:CP_diag_sclosed} \footnotesize
-Carter-Penrose diagram of a semiclosed world.
+Carter-Penrose diagram of a semiclosed world. See Fig.~\ref{f:lem:OS:CP_diag_sym}
+for the legend.
 }
 \end{figure}
 
-
+\begin{remark} \label{r:lem:semiclosed}
+The time-symmetric extended solution described above provides us with a way
+to construct pressureless solutions with $\chi_{\rm s} \in (\pi/2,\pi)$.
+We disregarded these solutions in Sec.~\ref{s:lem:OS_sol}, after having noticing
+that they lead to a decreasing areal radius $r$ as a function of $\chi$ for
+$\chi\in [\pi/2, \chi_{\rm s}]$. In other words, starting from the center of the
+star at $\chi = 0$, the areal radius $r$ increases up a maximum value for
+$\chi=\pi/2$, which is $r_{\rm s}(\tau)/\sin\chi_{\rm s}$, and then decreases
+to $r_{\rm s}(\tau)$ for $\chi = \chi_{\rm s}$. We realize that such a behavior
+is possible if the star's surface meets Schwarzschild spacetime in a region
+of the latter where $r$ decreases when moving away from the surface, i.e.
+``to the right''. This happens in the region $\hat{X} < 0$ of the compactified
+Kruskal-Szekeres coordinates (cf. Fig.~\ref{f:max:carter-penrose-std}).
+The corresponding Carter-Penrose diagram is shown in Fig.~\ref{f:lem:OS:CP_diag_sclosed}.
+We note that the star exterior comprises the entire $\M_{\rm I}$ region of
+the extended Schwarzschild spacetime, as well as parts of regions $\M_{\rm II}$,
+$\M_{\rm III}$ and  $\M_{\rm IV}$. Contrary to the solution
+for $\chi_{\rm s} < \pi/2$ shown in Fig.~\ref{f:lem:OS:CP_diag_sym}, it
+contains the bifurcation sphere, where $\Hor$ meets $\Hor^-$.
+\end{remark}
 
 
 \subsection{Final singularity}
@@ -1503,7 +1541,9 @@ that the worldline of $\Obs$ is a field line of the static Killing vector
 $\w{\xi} = \wpar_t = \wpar_{\ti}$ in the exterior Schwarzschild region
 [cf. Eq.~(\ref{e:ges:u_Obs_xi})]. In particular, $\Obs$ evolves at a fixed
 value of $(r_\Obs,\th_\Obs,\ph_\Obs)$ of the coordinates $(r,\th,\ph)$
-(cf. Fig.~\ref{f:lem:OS:diag_delay}). Without any loss of generality,
+(cf. Fig.~\ref{f:lem:OS:diag_delay}; see also Figs.~\ref{f:lem:OS:CP_diag}
+and \ref{f:lem:OS:CP_diag_sym}).
+Without any loss of generality,
 we choose $\th_\Obs = \pi/2$ and $\ph_\Obs = 0$.
 Furthermore, we assume that $\Obs$ is \emph{remote}: $r_\Obs \gg m$.
 
