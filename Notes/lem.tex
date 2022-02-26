@@ -5,7 +5,7 @@
 
 \section{Introduction}
 
-After having investigated black holes in equilibrium, in the form of
+After having investigated black holes in equilibrium, via the
 Schwarzschild and Kerr solutions, we turn to dynamical black holes,
 more specifically to the standard process of
 black hole formation: \emph{gravitational collapse}\index{gravitational!collapse}.
@@ -20,14 +20,25 @@ of any spherically symmetric collapsing object is a piece of Schwarzschild
 spacetime, i.e. it does not contain any gravitational radiation.
 The second major approximation is to consider \emph{pressureless matter},
 commonly referred to as \emph{dust}\index{dust}.
-An alternative, certainly more academic, is to consider the collapse of shell of pure electromagnetic radiation; this will be performed in Chap.~\ref{s:vai}.
+
+We start by deriving from Einstein's equation the system of partial differential
+equations yielding the metric for spherically symmetric dust (Lemaître-Tolman
+system) and write down the most general solutions (Sec.~\ref{s:lem:LT_equat}).
+Then we specialize these solutions to the case of a homogeneous ball of dust
+collapsing from rest (Oppenheimer-Snyder collapse, Sec.~\ref{s:lem:OS}),
+which we study in details, in particular regarding the birth of the event
+horizon and the existence of trapped surfaces. Finally, we consider
+the observational appearance of the gravitational collapse and the black hole
+formation to a remote observer (Sec.~\ref{s:lem:obs}).
+
+
 
 \section{Lemaître-Tolman equations} \label{s:lem:LT_equat}
 
 \subsection{Hypotheses} \label{s:lem:hyp}
 
 As mentioned in the Introduction, we shall restrict ourselves to
-spherically symmetric\footnote{See Sec.~\ref{s:sch:static_spher} for a precise
+spherically symmetric\footnote{See Sec.~\ref{s:sch:static_spher} for the precise
 definition of \emph{spherically symmetric}.} spacetimes, and for concreteness, to 4-dimensional ones. The most general spherically symmetric 4-dimensional spacetime $(\M,\w{g})$
 can be described in terms of coordinates $(x^\alpha)=(\tau,\chi,\th,\ph)$ such that
 the metric tensor writes
@@ -45,12 +56,12 @@ defined by $(\tau,\chi) = \mathrm{const}$, which are the orbits of the $\mathrm{
 group action (cf. Sec.~\ref{s:sch:static_spher}), i.e. the metric area of these
 2-spheres is $4\pi r(\tau,\chi)^2$.
 
-For simplification, we consider only a pressureless matter, in the form of a perfect
-fluid of 4-velocity $\w{u}$ with zero pressure. The matter energy-momentum tensor is then
+For simplicity, we consider only pressureless matter, in the form of a perfect
+fluid with zero pressure. The matter energy-momentum tensor is then
 \be \label{e:lem:T_pressureless}
     \w{T} = \rho \, \uu{u} \otimes \uu{u} ,
 \ee
-where $\uu{u}$ is the 1-form metric-dual to the vector field $\w{u}$,
+where $\uu{u}$ is the 1-form metric-dual to the fluid 4-velocity $\w{u}$,
 i.e. the 1-form of components $u_\alpha = g_{\alpha\mu} u^\mu$ [cf. Eq.~(\ref{e:bas:u_dual})],
 and $\rho$ is a scalar field that can be interpreted as the fluid energy density
 measured in the fluid frame, by virtue of the identity
@@ -61,17 +72,17 @@ $\w{T} = (\rho + p)\uu{u} \otimes \uu{u} + p \w{g}$, where $p$
 is the fluid pressure. Expression~(\ref{e:lem:T_pressureless}) corresponds thus
 to the special case $p=0$.
 Inside the matter, we link the coordinates $(\tau,\chi,\th,\ph)$ to the fluid by demanding
-that they are \defin{comoving}\index{comoving!coordinates} with the fluid, i.e. that a fluid particle
+that they are \defin{comoving}\index{comoving!coordinates} with the fluid, i.e. that any fluid particle
 stays at fixed values of $(\chi,\th,\ph)$.
-Because the 4-velocity obeys $u^\alpha = \D x^\alpha/\D \tau_{\rm fl}$, where
-$\tau_{\rm fl}$ is the fluid proper time [cf. Eq.~(\ref{e:fra:def_u})], this
-amounts to set $u^\chi=u^\th = u^\ph = 0$, i.e. to have
+Because the 4-velocity obeys $u^\alpha = \D x^\alpha/\D \tau_{\rm f}$, where
+$\tau_{\rm f}$ is the fluid proper time [cf. Eq.~(\ref{e:fra:def_u})], this
+amounts to $u^\chi=u^\th = u^\ph = 0$, hence
 \be \label{e:lem:u_par_tau}
     \w{u} = \wpar_\tau .
 \ee
-A priori, one should have only $\w{u} =  u^\tau\wpar_\tau$, but the
+A priori, one should only have $\w{u} =  u^\tau\wpar_\tau$, but the
 synchronous coordinate condition $g_{\tau\tau} = -1$ along with the
-normalization $\w{g}(\w{u},\w{u})=-1$ implies $u^\tau=1$. Since $u^\tau = \D\tau / \D\tau_{\rm fl}$, we get $\tau = \tau_{\rm fl}$ (up to some additive constant), which provides the physical
+normalization $\w{g}(\w{u},\w{u})=-1$ implies $u^\tau=1$. Since $u^\tau = \D\tau / \D\tau_{\rm f}$, we get $\tau = \tau_{\rm f}$ (up to some additive constant), which provides the physical
 interpretation of Lemaître coordinate $\tau$ as the \emph{fluid proper time}.
 
 \subsection{Geodesic matter flow}
@@ -82,13 +93,13 @@ follows from the Einstein equation (\ref{e:fra:Einstein_eq}) and the contracted
 Bianchi identity (\ref{e:bas:Bianchi_contr}) (cf. Sec.~\ref{s:fra:Einstein_eq}),
 implies that
 \begin{greybox}
-The worldlines of the fluid particles obeying the pressureless matter
+The worldlines of the fluid particles of the pressureless matter
 model (\ref{e:lem:T_pressureless}) are timelike geodesics of
 $(\M,\w{g})$.
 \end{greybox}
 \begin{proof}
-If we plug the energy-momentum tensor (\ref{e:lem:T_pressureless}) in the
-energy-momentum conservation law (\ref{e:fra:divT}), we obtain
+If one plugs the energy-momentum tensor (\ref{e:lem:T_pressureless}) in the
+energy-momentum conservation law (\ref{e:fra:divT}), one obtains
 \[
     \nabla_\mu (\rho u^\mu u^\alpha )  = 0 ,
 \]
@@ -101,13 +112,13 @@ to each other, as an immediate consequence of the normalization of the
 4-velocity $\w{u}$ [Eq.~(\ref{e:fra:u_unit})]:
 $\w{u}\cdot \wnab_{\w{u}}\w{u} = 0$. In particular, $\w{u}$
 is a timelike vector, while the 4-acceleration $\wnab_{\w{u}}\w{u}$
-is a spacelike one. The only way for Eq.~(\ref{e:lem:divT_pressureless})
-to hold is thus that each term
+is a spacelike one. Thus the only way for Eq.~(\ref{e:lem:divT_pressureless})
+to hold is  that each term
 in the left-hand side vanishes separately:
 \[
     \nabla_\mu (\rho u^\mu) = 0 \qquad\mbox{and}\qquad u^\mu \nabla_\mu u^\alpha = 0 .
 \]
-The second equation above is nothing but the geodesic equation [Eq.~(\ref{e:geo:geod_eq_v})]
+The second equation is nothing but the geodesic equation [Eq.~(\ref{e:geo:geod_eq_v})]
 for the field lines of $\w{u}$, i.e. the fluid worldlines.
 \end{proof}
 Each fluid particle is thus in free-fall and moves independently of its
@@ -147,7 +158,7 @@ yield respectively to (cf. the notebook~\ref{s:sam:Lemaitre_Tolman})
  \end{align}
 \end{subequations}
 where $M(\chi)$ is another arbitrary function of $\chi$.
-There is no other independent component of Einstein equation.
+There is no other independent component of the Einstein equation.
 Equations~(\ref{e:lem:LTeqs}) constitute the
 \defin{Lemaître-Tolman system}\index{Lemaitre-Tolman system@Lemaître-Tolman system}.
 
@@ -179,7 +190,7 @@ in 1932 by Georges Lemaître\index{Lemaitre, G.@Lemaître, G.} \cite{Lemai32}:
 Eqs.~(\ref{e:lem:metric_Lemaitre}), (\ref{e:lem:LTeqs1}) and (\ref{e:lem:LTeqs2}) are
 respectively Eqs.~(8.1), (8.2) and (8.3) of Ref.~\cite{Lemai32}, up to some slight
 change of notations.
-It however became known as \emph{Tolman model}\index{Tolman model}
+The system (\ref{e:lem:LTeqs}) however became known as \emph{Tolman model}\index{Tolman model}
 or \emph{Tolman-Bondi model}\index{Tolman-Bondi model}, in reference
 to posterior works by Richard Tolman\index{Tolman, R.C.} (1934) \cite{Tolma34}
 and by Hermann Bondi\index{Bondi, H.} (1947) \cite{Bondi47}.
@@ -201,7 +212,7 @@ to general relativity and cosmology.
 
 In the remaining of this chapter, we assume $\Lambda=0$, since we are mainly
 interested in gravitational collapse in asymptotically flat spacetimes.
-The Lemaître-Tolman equation (\ref{e:lem:LTeqs1}) can be then rewritten
+The Lemaître-Tolman equation (\ref{e:lem:LTeqs1}) can then be rewritten
 as
 \be \label{e:lem:1dim_mechanical}
     \frac{1}{2} \dot{r}^2 - \frac{M(\chi)}{r} = E(\chi) ,
@@ -267,7 +278,7 @@ Eq.~(\ref{e:lem:LTeqs2}), to get $\rho(\tau,\chi)$ and into
 
 One can recover Schwarzschild solution from the above setting by
 considering the vacuum case, i.e. $\rho=0$.
-Equation~(\ref{e:lem:LTeqs2}) imposes then $M(\chi)$ to be a constant, which
+Equation~(\ref{e:lem:LTeqs2}) implies then that $M(\chi)$ is a constant, which
 we shall denote by $m$. Regarding the function $f(\chi)$, let us
 choose for simplicity $f(\chi)=1$. Then $E(\chi)=0$ and $r(\tau,\chi)$
 is given by Eq.~(\ref{e:lem:sol_E_zero}). Since $M(\chi)$ is constant, we
@@ -301,7 +312,7 @@ Accordingly, Eq.~(\ref{e:lem:metric_Lemaitre}) becomes
         + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)  } .
 \ee
 In this expression, $r$ is the function of $(\tau,\chi)$ given
-by (\ref{e:lem:r_tau_chi_Schwarz}).
+by Eq.~(\ref{e:lem:r_tau_chi_Schwarz}).
 
 The metric (\ref{e:lem:Sch_met_Lem}) is actually the
 Schwarzschild metric of mass parameter $m$. To prove it, let us first
@@ -321,7 +332,7 @@ Hence
 \quad \Longrightarrow \quad \frac{2m}{r} \dd\chi^2 = \frac{2m}{r} \dd\tau^2
     + 2 \sqrt{\frac{2m}{r}}  \dd\tau \, \dd r + \dd r^2 .
 \]
-Substituting this relation into Eq.~(\ref{e:lem:Sch_met_Lem}) yields
+Substituting this relation into Eq.~(\ref{e:lem:Sch_met_Lem}), we obtain
 the expression of the metric tensor in terms of Painlevé-Gullstrand coordinates:
 \be \label{e:lem:metric_PG}
    \encadre{ \w{g} =
@@ -342,9 +353,9 @@ If we introduce, instead of $\tau$, a coordinate $t$ such that
         \frac{\sqrt{\frac{2m}{r}}}{1 - \frac{2m}{r}} \, \dd r ,
 \ee
 then
-Eq.~(\ref{e:lem:met_tau_r}) yields the familiar expression
-of Schwarzschild metric in Schwarzschild-Droste coordinates $(t,r,\th,\ph)$
-[Eq.~(\ref{e:sch:Schwarz_metric_SD})]. Hence this proves that
+Eq.~(\ref{e:lem:met_tau_r}) yields the familiar expression (\ref{e:sch:Schwarz_metric_SD})
+of Schwarzschild metric in Schwarz\-schild-Droste coordinates $(t,r,\th,\ph)$.
+Hence this proves that
 the vacuum solution (\ref{e:lem:Sch_met_Lem}) is nothing but
 Schwarzschild metric. Incidentally, since our starting point was
 the most general metric for a spherically symmetric spacetime
@@ -360,7 +371,8 @@ spacetime is static, even if the central body is not (for instance it may oscill
 radially, keeping its spherical symmetry). In other words, there are no
 gravitational waves in spherical symmetry.
 \begin{remark}
-Birkhoff's theorem can be viewed as a generalization of Gauss' theorem in Newtonian gravity:
+Birkhoff's theorem can be viewed as a generalization of the shell theorem version
+of Gauss's law\index{Gauss's law} in Newtonian gravity:
 the gravitational field outside any spherical source is entirely determined by the total
 mass $m$ of the source, being identical to that generated by a point of mass $m$
 located at the symmetry center.
@@ -411,11 +423,11 @@ are timelike geodesics. Moreover, the conserved energy per unit mass along these
 where use has been made of (\ref{e:lem:Killing_vect_Schwarz}).
 $\varepsilon=1$ means
 that the geodesics are marginally bound\index{marginally!bound!geodesic}: they
-describe a free fall from rest at infinity.
+describe the free fall from rest at infinity.
 
 As it is clear on the metric components (\ref{e:lem:Sch_met_Lem}),
 a key feature of Lemaître coordinates is to be regular at $r=2m$, i.e.
-across the event horizon of Schwarzschild spacetime, contrary to the
+across the event horizon of Schwarzschild spacetime, contrary to
 Schwarzschild-Droste coordinates.
 
 \begin{hist}
@@ -426,7 +438,8 @@ Remarkably, Lemaître pointed out that the metric components (\ref{e:lem:Sch_met
 regular at $r=2m$ and was the first author to conclude that the singularity of
 Schwarzschild's solution at $r=2m$ is a mere coordinate singularity.
 As pointed out in the historical note on p.~\pageref{n:sch:Eddington_coord}, eight years before,
-Eddington exhibited a coordinate system that is regular at $r=2m$ \cite{Eddin1924} but he
+Arthur Eddington\index{Eddington, A.} \cite{Eddin1924} exhibited a
+coordinate system that is regular at $r=2m$ but he
 did not mention this feature.
 \end{hist}
 
@@ -437,11 +450,11 @@ which have been introduced
 in our way from Lemaître coordinates to Schwarzschild-Droste ones,
 have a noticeable feature: the hypersurfaces $\tau=\mathrm{const}$ are
 flat 3-manifolds, i.e. the metric induced of them by $\w{g}$ is the flat Euclidean metric.
-This is immediate if we set $\dd\tau=0$ in Eq.~(\ref{e:lem:metric_PG}):
+This is immediate: by setting $\dd\tau=0$ in Eq.~(\ref{e:lem:metric_PG}), one gets
 \[
     \w{g}^{\tau=\mathrm{const}} = \dd r^2 + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
 \]
-which is nothing but the Euclidean metric expressed in spherical coordinates
+which is nothing but the 3-dimensional Euclidean metric expressed in spherical coordinates
 $(r,\th,\ph)$. This proves that Schwarzschild spacetime can be sliced
 by a family of flat hypersurfaces. The associated 3+1 decomposition
 of the metric is revealed by rewriting (\ref{e:lem:metric_PG})
@@ -482,19 +495,19 @@ Paul Painlevé\index{Painlevé, P.} \cite{Painl1921}, as well as by the Swedish 
 Allvar Gullstrand\index{Gullstrand, A.} (1911 laureate of the Nobel Prize in Medicine) in 1922 \cite{Gulls1922}.
 \end{hist}
 
-\section{Oppenheimer-Snyder collapse}
+\section{Oppenheimer-Snyder collapse} \label{s:lem:OS}
 
 \subsection{Pressureless collapse of a star from rest}
 
 An important example of dust collapse is that of
-a spherical star in hydrostatic equilibrium that suddenly looses any
+a spherical star in hydrostatic equilibrium that suddenly looses
 pressure support to counterbalance gravity. This roughly models the astrophysical
 phenomenon of gravitational collapse\index{gravitational!collapse}
 of the iron core of a massive star at the
-end of thermonuclear evolution, which can ultimately give birth
+end of thermonuclear evolution --- a phenomenon that can ultimately give birth
 to a supernova\index{supernova} if some bounce occurs. In this astrophysical event, the
 pressure never vanishes, but after the collapse has reached a certain stage, it
-plays a negligible dynamical role, so that the pressureless (dust) approximation
+plays a negligible role on the dynamics, so that the pressureless (dust) approximation
 developed in this chapter is quite good.
 
 Given the assumed spherical symmetry, Birkhoff's theorem (cf. Sec.~\ref{s:lem:Schwarzschild})
@@ -521,7 +534,7 @@ The exterior metric is then given by Eq.~(\ref{e:sch:Schwarz_metric_EF}):
 
 Let us denote by $r_{\rm s}(\tau)$ the areal radius of the star, i.e. the coordinate $r$
 of its surface, as a function of the proper time $\tau$ of a matter particle
-located at the surface of the star. If the origin of $\tau$ is set to
+located at the surface. If the origin of $\tau$ is set to
 the start of the collapse, we have
 \be
     r_{\rm s}(0) = r_0.
@@ -569,7 +582,7 @@ The metric (\ref{e:lem:OS:exterior_metric}) is valid only for $r \geq r_{\rm s}(
 The metric inside the star is given by one of the solutions
 of the Lemaître-Tolman system given in Sec.~\ref{s:lem:sol_lambda_zero}.
 Actually only the solutions with $E(\chi)<0$, i.e. those given by Eq.~(\ref{e:lem:sol_E_neg}),
-are to be considered because they are the only ones allowing a collapse starting
+are to be considered because they are the only ones allowing for a collapse starting
 from rest.
 
 As stressed in Sec.~\ref{s:lem:sol_lambda_zero}, formula~(\ref{e:lem:sol_E_neg}),
@@ -594,7 +607,7 @@ different, since it regards the marginally bound case, i.e. the solution $E(\chi
 (cf. the historical note below).
 
 
-As we are going to see, the homogeneous dust star collapse is obtained by the
+As we are going to see, the homogeneous dust collapse is obtained by the
 following choice of the freely specifiable functions:
 \be \label{e:lem:OS:free_func}
     f(\chi) = \cos\chi,\qquad
@@ -606,7 +619,7 @@ with
     a_0 := \sqrt{\frac{r_0^3}{2 m}} .
 \ee
 The above choice of $f(\chi)$ leads to $2 E(\chi) = -\sin^2\chi$
-[cf. Eq.~(\ref{e:lem:E_f_chi})], so that $E(\chi) < 0$ for $\chi>0$
+[cf. Eq.~(\ref{e:lem:E_f_chi})]; hence $E(\chi) < 0$ for $\chi>0$
 and the solution to be considered is (\ref{e:lem:sol_E_neg}).
 The prefactors are $M(\chi)/|2E(\chi)|^{3/2} = a_0/2$ and
 $M(\chi)/|2E(\chi)| = (a_0/2) \sin\chi$, so that we get, taking into account
@@ -641,7 +654,7 @@ Given that $\arcsin$ is a one-to-one map $[0,1] \to [0,\pi/2]$, they are
     \chi_{\rm s} = \arcsin\sqrt{\frac{2 m}{r_0}}
 \ee
 and $\chi_{\rm s} = \pi - \arcsin\sqrt{2 m/r_0}$.
-For the physical situation we have in mind (gravitational collapse of an ``ordinary'' stellar core),
+For the physical scenario we have in mind (gravitational collapse of an ``ordinary'' stellar core),
 we shall retain only the solution (\ref{e:lem:OS:chis_m0_r0}), which implies $\chi_{\rm s} \in (0, \pi/2]$.
 The second solution, for which $\chi_{\rm s} \in [\pi/2, \pi)$,    %]$
 will be discussed in Remark~\ref{r:lem:semiclosed} on p.~\pageref{r:lem:semiclosed} below\footnote{For the moment, we can note that such a solution
@@ -665,7 +678,7 @@ virtue of Eq.~(\ref{e:lem:OS:tau_r_eta}).
 
 By combining Eqs.~(\ref{e:lem:OS:free_func}), (\ref{e:lem:OS:a0_m0_r0}) and
 (\ref{e:lem:OS:sin_chis_m0_r0}), we note that $M(\chi)$ is an increasing function
-of $\chi$ in the range (\ref{e:lem:OS:range_chi}) with $M(0) = 0$ and
+of $\chi$ in the range (\ref{e:lem:OS:range_chi}), with $M(0) = 0$ and
 \be
     M(\chi_{\rm s}) = m .
 \ee
@@ -714,7 +727,7 @@ no profound physical significance in this coincidence.
 \end{remark}
 
 It is instructive to express the initial energy density, $\rho_0 := \rho(\tau=0)$,
-in terms of the geometrical energy/mass unit, $m^{-2}$, and the compactness
+in terms of the geometrical mass density unit $m^{-2}$ and the compactness
 angle $\chi_{\rm s}$ by combining Eqs.~(\ref{e:lem:OS:rho_tau}) and
 (\ref{e:lem:OS:sin_chis_m0_r0}):
 \be \label{e:lem:OS:rho0}
@@ -730,12 +743,14 @@ only, which we rewrite as $a(\tau)$:
 \ee
 We may then rewrite the second equation in (\ref{e:lem:OS:tau_r_eta}) as
 $r(\tau,\chi) = a(\tau) \sin\chi$, so that the metric
-expression (\ref{e:lem:metric_sync_coord}) inside the star takes the form
+tensor (\ref{e:lem:metric_sync_coord}) inside the star takes the form
 \be \label{e:lem:OS:g_interior_tau}
   \encadre{ \w{g} = - \dd\tau^2 + a(\tau)^2 \left[ \dd\chi^2
         + \sin^2\chi \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right]  } .
 \ee
-We recognize the \defin{Friedmann-Lemaître-Robertson-Walker (FLRW) metric}\index{Friedmann-Lemaître-Robertson-Walker metric}\index{FLRW metric} corresponding to a closed universe. This is not so surprising since FLRW metrics are solution of Einstein equation based on the hypothesis of homogeneity of constant $\tau$ slices (cf. e.g. Chap.~3 of Ref.~\cite{PeterU09}).
+We recognize the \defin{Friedmann-Lemaître-Robertson-Walker (FLRW) metric}\index{Friedmann-Lemaître-Robertson-Walker metric}\index{FLRW metric} corresponding to a closed universe
+(cf. e.g. Chap.~3 of Ref.~\cite{PeterU09} or Chap.~17 of Book~3 of Ref.~\cite{DerueU18}).
+This is not so surprising since FLRW metrics are solution of Einstein equation based on the hypothesis of homogeneity of constant $\tau$ slices.
 We may use $\eta$, instead of $\tau$, as the time coordinate inside the star, thanks to the
 relation
 \be
@@ -758,10 +773,13 @@ Note that while $\w{\tilde{g}}$
 is a static metric [it obeys Eq.~(\ref{e:sta:static_metric})], $\w{g}$ is not, since
 the conformal factor depends on $\eta$.
 
-On each hypersurface $\eta=\mathrm{const}$ ($\iff \tau = \mathrm{const}$),
-the 3-metric induced by
-the conformal metric $\w{\tilde{g}}$ is the standard metric of the hypersphere
-$\mathbb{S}^3$, expressed in terms of the hyperspherical coordinates $(\chi,\th,\ph)$.
+On each hypersurface $\eta=\mathrm{const}$, or equivalently $\tau = \mathrm{const}$,
+the 3-metric $\w{h}$ induced by
+the conformal metric $\w{\tilde{g}}$ is the standard metric of the hypersphere\index{hypersphere}
+$\mathbb{S}^3$, expressed in terms of the hyperspherical coordinates $(\chi,\th,\ph)$:
+\be
+    \w{h} = \dd\chi^2 + \sin^2\chi \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
+\ee
 On the whole $\mathbb{S}^3$, $\chi$ ranges from $0$ to $\pi$. Since in the
 present case, $\chi \in [0,\chi_{\rm s}]$ with $\chi_{\rm s} < \pi/2$
 [Eq.~(\ref{e:lem:OS:range_chi})],
@@ -772,7 +790,7 @@ If one uses the conformal coordinates $(\eta,\chi)$ to draw a 2-dimensional
 spacetime diagram of the interior, as in the left part of Fig.~\ref{f:lem:OS:diag_int_EF},
 then the radial null geodesics appear as straight lines inclined by $\pm 45^\circ$
 with the horizontal, reflecting the Minkowskian part $- \dd\eta^2 + \dd\chi^2$
-in the metric (\ref{e:lem:OS:g_int}).
+of the metric (\ref{e:lem:OS:g_int}).
 
 To show that the FLRW interior (\ref{e:lem:OS:g_int})
 along with the Schwarzschild exterior (\ref{e:lem:OS:exterior_metric})
@@ -800,13 +818,13 @@ Spacetime diagrams of the Oppenheimer-Snyder collapse
 in conformal coordinates $(\eta,\chi)$ (left figure, depicting only the
 interior)
 and in Eddington-Finkelstein coordinates $(\ti, r)$
-(right figure), for an initial compactness $m/r_0 = 1/4$, which corresponds to $\chi_{\rm s} = \pi/4$.
+(right figure), for the initial compactness $m/r_0 = 1/4$, which corresponds to $\chi_{\rm s} = \pi/4$.
 In both figures, solid red lines are worldlines of matter particles,
 uniformly sampling $[0,\chi_{\rm s}]$ with $\delta\chi=\pi/32$,
 while dashed red lines denote isosurfaces of constant matter proper time $\tau$
 uniformly sampling $[0,\tau_{\rm end}]$ with $\delta\tau = \tau_{\rm end}/8$.
 The thick red line is the star's surface and the thick magenta one is
-the star at the initial instant $\tau=0$. The orange zig-zag line marks the
+the star at the initial instant $\tau=0$. The orange zigzag line marks the
 curvature singularity. Solid (resp. dashed) green lines are outgoing (resp. ingoing) radial null geodesics
 encountering the star's surface at the above selected values of $\tau$.
 The thick black line is the black hole event horizon $\Hor$ and the dotted blue line
@@ -851,16 +869,17 @@ More precisely, Oppenheimer and Snyder's original solution corresponds to the ch
 \ee
 for the freely specifiable functions determining the solutions of the Lemaître-Tolman system
 (cf. Sec.~\ref{s:lem:sol_lambda_zero}), instead of the choice (\ref{e:lem:OS:free_func})
-adopted in this chapter. This leads to
+adopted in this chapter. Choosing $f(\chi)=1$ leads to
 $E(\chi) = 0$ [cf. Eq.~(\ref{e:lem:E_f_chi})]
 and hence to the solution~(\ref{e:lem:sol_E_zero}), instead of (\ref{e:lem:sol_E_neg}).
-This solution is still homogeneous, $\rho$ being a function of $\tau$ only, but it is less adapted
-to describe a star of finite size collapsing from an equilibrium configuration than the
+This solution is still homogeneous, since $\rho$, computed via Eq.~(\ref{e:lem:LTeqs2}),
+is a function of $\tau$ only, but it is less adapted
+to a star of finite size collapsing from an equilibrium state than the
 solution (\ref{e:lem:sol_E_neg}). The latter, which we are using here, has been first presented
 by David Beckedorff\index{Beckedorff, D.L.} in 1962 \cite{Becke62} and popularized by
 B. Kent Harrison\index{Harrison, B.K.}, Kip Thorne\index{Thorne, K.S.}, Masami Wakano\index{Wakano, M.}
 and John Archibald Wheeler\index{Wheeler, J.A.} in their 1965 monograph on gravitational collapse
-\cite{HarriTWW65}.
+\cite{HarriTWW65}, as well as by Misner, Thorne and Wheeler in their 1973 textbook \cite{MisneTW73}.
 \end{hist}
 
 
@@ -871,10 +890,10 @@ Eddington-Finkelstein (IEF) coordinates $(\ti,r,\th,\ph)$, used to described the
 Schwarzschild exterior of the star to the interior region by demanding
 that relation (\ref{e:lem:OS:ti_star_surf}), which a priori links $\ti$
 to $\eta$ at the stellar surface, holds everywhere in the interior.
-As for the IEF coordinate $r$, it is naturally identified with the areal
+Regarding the IEF coordinate $r$, it is naturally identified with the areal
 radius $r(\eta,\chi)$ given by Eq.~(\ref{e:lem:OS:tau_r_eta}).
 The resulting spacetime diagram is shown in the right part of Fig.~\ref{f:lem:OS:diag_int_EF}.
-In this one, only the ingoing radial null geodesics in the exterior appear
+In this diagram, only the ingoing radial null geodesics in the exterior appear
 as straight lines, as a consequence of the definition of the IEF coordinates
 (cf. Sec.~\ref{s:sch:EF_coord}). The slices of constant proper time $\tau$
 (dashed red lines) appear as horizontal line segments by virtue of the above
@@ -884,8 +903,8 @@ on the left of the figure.
 
 Figure~\ref{f:lem:OS:diag_KS} presents another view of the Oppenheimer-Snyder collapse.
 It is built on Kruskal-Szekeres-like coordinates
-$(T,X)$ (cf. Sec.~\ref{s:max:KS}). These coordinates are defined from the IEF-like ones $(\ti, r)$ via formulas~(\ref{e:sch:KS_IEF}), with $\ti$ being replaced there by $\ti - 5 m$, this
-translation in $\ti$ ensuring a better representation of the final
+$(T,X)$ (cf. Sec.~\ref{s:max:KS}). These coordinates are defined from the IEF-like ones $(\ti, r)$ via formulas~(\ref{e:sch:KS_IEF}), with $\ti$ being replaced there by $\ti - 5 m$; this
+translation in $\ti$ ensures a better representation of the final
 stages of the collapse. One may note that the surface of the star (thick solid red line) is initially
 tangent to the hypersurface $r=4 m$ (solide grey line), which is the geometrical translation
 of the collapse starting from rest. The part of the diagram that lies to the right of the
@@ -930,21 +949,22 @@ in the star interior stop on the hypersurface $\tau=0$
 (the magenta line). In particular, the free-falling matter geodesics, along
 which $\tau$ is an affine parameter, are clearly incomplete and could a priori
 be extended to
-$\tau < 0$. There are actually two ways to extend the Oppenheimer-Snyder spacetime
+$\tau < 0$.
+
+There are actually two ways to maximally extend the Oppenheimer-Snyder spacetime
 considered up to now.
 The first one corresponds to a star in
 hydrostatic equilibrium for $\tau < 0$ and in which the pressure drops suddenly to zero at $\tau = 0$.
-This extension is ``astrophysical'' insofar as it models the gravitational collapse of the core of a massive star. Of course the equilibrium for $\tau\in(-\infty,0)$ requires
+This extension is ``astrophysical'' insofar as it models the gravitational collapse of the core of a massive star. Of course the equilibrium for $\tau< 0$ requires
 some nonzero pressure inside the star. Therefore it cannot be described by the
-Lemaître-Tolman equations discussed in Sec.~\ref{s:lem:LT_equat}, but rather
-by the Tolman-Oppenheimer-Volkoff\index{Tolman-Oppenheimer-Volkoff equations}
-equations, which govern hydrostatic equilibrium in
+Lemaître-Tolman equations discussed in Sec.~\ref{s:lem:LT_equat}; it should rather
+obey the \emph{Tolman-Oppenheimer-Volkoff equations}\index{Tolman-Oppenheimer-Volkoff equations},
+which govern hydrostatic equilibria in
 spherical symmetry (see e.g. Chap.~23 of Ref.~\cite{MisneTW73}).
 The Carter-Penrose diagram corresponding to this extension
-is drawn schematically\footnote{This diagram is not
-constructed on explicit coordinates.} in Fig.~\ref{f:lem:OS:CP_diag}. The star seems to expand from
+is drawn schematically (i.e. not by means of explicit coordinates) in Fig.~\ref{f:lem:OS:CP_diag}. The star seems to expand from
 the past timelike infinity $i^-$, but this is an artifact of the drawing\footnote{Recall that a
-Carter-Penrose reflects the conformal structure but does not respect the distances.}: the star surface
+Carter-Penrose diagram reflects the causal structure of spacetime but does not respect the metric distances.}: the star surface
 (red line) follows actually a curve $r = \mathrm{const}\; (= r_0)$ for $\tau < 0$. For $\tau \geq 0$,
 the surface of the star appears as a vertical line, as in the left part of Fig.~\ref{f:lem:OS:diag_int_EF}, while the radius is actually
 decreasing. Actually, one may consider that this
@@ -955,7 +975,7 @@ Note as well that the exterior region is formed by parts of regions $\M_{\rm I}$
 and $\M_{\rm II}$ of Schwarzschild spacetime (compare with Fig.~\ref{f:max:carter-penrose-std}).
 
 \begin{figure}
-\centerline{\includegraphics[height=0.3\textheight]{lem_OS_CP_diag_sym.pdf}}
+\centerline{\includegraphics[height=0.35\textheight]{lem_OS_CP_diag_sym.pdf}}
 \caption[]{\label{f:lem:OS:CP_diag_sym} \footnotesize
 Carter-Penrose diagram of the Oppenheimer-Snyder collapse starting at
 the instant of time symmetry ($\tau=0$) after an expanding phase from
@@ -967,18 +987,18 @@ horizon $\Hor^-$.
 \end{figure}
 
 The second maximal extension of the Oppenheimer-Snyder spacetime
-is based on the assumption that the matter time $\tau=0$ is an instant of
+is based on the assumption that the proper time $\tau=0$ is an instant of
 time symmetry of a ball of pressureless matter that was expanding from an
 initial past singularity. The spacetime for $\tau < 0$ is then exactly the
 time-reversed of that for $\tau > 0$, as illustrated on the Carter-Penrose
 diagram of Fig.~\ref{f:lem:OS:CP_diag_sym}.
 Such an extension is less ``astrophysical'' than the one considered above, but
 it has the advantage to invoke only pressureless matter
-and hence to be described by an exact solution of Einstein's equation:
+and hence to be entirely described by an exact solution of Einstein's equation:
 the Friedmann-Lemaître-Robertson-Walker solution (\ref{e:lem:OS:g_int})
 extended to $\eta \in (-\pi, \pi)$
-inside the star and the Schwarzschild solution
-outside the star. This maximal solution contains a white hole\index{white hole} region,
+inside the star and matched to the Schwarzschild solution
+outside the star. This maximal solution contains a \emph{white hole}\index{white hole} region,
 i.e. a region in which causal curves arising from the
 past null infinity $\scri^-$ cannot penetrate (cf. Sec.~\ref{s:glo:def_BH}).
 The white hole (null) boundary is the past event horizon $\Hor^-$ (cf. Fig.~\ref{f:lem:OS:CP_diag_sym}).
@@ -989,16 +1009,16 @@ in the expansion phase and $\eta \in (0, \pi)$ in the collapse phase.
 Note that the exterior region is formed by parts of regions $\M_{\rm I}$,
 $\M_{\rm II}$ and $\M_{\rm IV}$ of the maximally extended
 Schwarzschild spacetime (compare with Fig.~\ref{f:max:carter-penrose-std}).
-Note also that the star is not visible from the infinite past of the remote static observer
-$\Obs$: it appears suddenly to $\Obs$
-at the event denoted by $a$ in Fig.~\ref{f:lem:OS:CP_diag_sym}.
+Note also that the star is not visible from the infinite past to the remote static observer
+$\Obs$: it only appears to $\Obs$
+after the event denoted by $a$ in Fig.~\ref{f:lem:OS:CP_diag_sym}.
 On the contrary, in the ``astrophysical'' model discussed above,
 the star is always visible to $\Obs$ (cf. Fig.~\ref{f:lem:OS:CP_diag}),
-despite it fades very rapidly after the collapse phase starts to be observed,
+despite it fades very rapidly after the collapse phase has started to be observed,
 as we shall see in Sec.~\ref{s:lem:obs}.
 
 \begin{figure}
-\centerline{\includegraphics[height=0.3\textheight]{lem_OS_CP_diag_sclosed.pdf}}
+\centerline{\includegraphics[height=0.35\textheight]{lem_OS_CP_diag_sclosed.pdf}}
 \caption[]{\label{f:lem:OS:CP_diag_sclosed} \footnotesize
 Carter-Penrose diagram of a semiclosed world. See Fig.~\ref{f:lem:OS:CP_diag_sym}
 for the legend.
@@ -1006,7 +1026,7 @@ for the legend.
 \end{figure}
 
 \begin{remark} \label{r:lem:semiclosed}
-The time-symmetric extended solution described above opens the path
+The time-symmetric extended solution considered above opens the path
 to pressureless solutions with $\chi_{\rm s} \in (\pi/2,\pi)$,
 i.e. with $\chi_{\rm s} = \pi - \arcsin\sqrt{2 m/r_0}$ as the solution
 of the junction equation (\ref{e:lem:OS:sin_chis_m0_r0}).
@@ -1023,14 +1043,16 @@ of the latter where $r$ decreases when moving away from the surface (i.e.
 as in Figs.~\ref{f:lem:OS:CP_diag}-\ref{f:lem:OS:CP_diag_sym}).
 This happens in the region $\hat{X} < 0$ of the compactified
 Kruskal-Szekeres coordinates (cf. Fig.~\ref{f:max:carter-penrose-std}).
-The corresponding Carter-Penrose diagram is shown in Fig.~\ref{f:lem:OS:CP_diag_sclosed}.
+We may then place the star there; the corresponding
+Carter-Penrose diagram is shown in Fig.~\ref{f:lem:OS:CP_diag_sclosed}.
 We note that the star exterior comprises the entire region $\M_{\rm I}$  of
 the extended Schwarzschild spacetime, as well as parts of regions $\M_{\rm II}$,
 $\M_{\rm III}$ and  $\M_{\rm IV}$. Contrary to the solution
 for $\chi_{\rm s} < \pi/2$ shown in Fig.~\ref{f:lem:OS:CP_diag_sym}, it
 contains the bifurcation sphere\index{bifurcation!sphere} $\Sp$, where $\Hor$ meets $\Hor^-$
 (cf. Sec.~\ref{s:max:bifur_Kill_hor}). Such a configuration is called a \defin{semiclosed world}\index{semiclosed world} (cf. p.~149 of Ref.~\cite{ZeldoN83}, Sec.~2.7 of Ref.~\cite{NovikF89}
-or Sec. 2.7.2 of Ref.~\cite{FroloN98}).
+or Sec. 2.7.2 of Ref.~\cite{FroloN98}), because at the limit $\chi_{\rm s} \to \pi$, the
+matter region becomes an entire FRLW closed universe.
 Note that the collapse phase ($\tau > 0$) cannot be seen by a remote static observer, like $\Obs$ in Fig.~\ref{f:lem:OS:CP_diag_sclosed}, for it is hidden below
 the event horizon $\Hor$; only some initial part of the expanding phase is visible to $\Obs$
 on the segment $a - i^+$ of his worldline.
@@ -1046,7 +1068,7 @@ They have been further studied by Igor D. Novikov\index{Novikov, I.D.} in 1963 \
 \subsection{Final singularity}
 
 The collapse ends at $\eta = \pi$, since this value corresponds to the surface
-areal radius $r_{\rm s}(\tau) = 0$ by virtue of Eq.~(\ref{e:lem:OS:evol_star_surf}).
+areal radius $r_{\rm s}(\tau) = 0$, by virtue of Eq.~(\ref{e:lem:OS:evol_star_surf}).
 Equation~(\ref{e:lem:OS:tau_r_eta}) shows that this corresponds as well
 to $r(\tau,\chi) = 0$ for all
 particles inside the star. The matter proper time $\tau$ at the end of the collapse
@@ -1091,70 +1113,6 @@ would collapse in 15 minutes, while it would take half an hour for the Sun,
 The similarity of the values for the Earth and the Sun, which have very different
 masses and radii, is due to the closeness of their values of $\rho_0$.
 \end{example}
-
-Equation~(\ref{e:lem:OS:rho_tau}) with $\eta\to \pi$
-immediately yields an infinite proper energy density at the end of the collapse:
-\be
-    \lim_{\tau\to\tau_{\rm end}} \rho(\tau) = + \infty.
-\ee
-Since $\rho$ is a measurable quantity (by comoving observers), this signals
-some physical singularity.
-This corresponds actually to the apparition of a \emph{curvature singularity}
-in the part of spacetime covering the interior of the star (cf. the discussion
-in Sec.~\ref{s:sch:singularities}).
-Indeed, from the interior metric (\ref{e:lem:OS:g_int}), one can
-compute\footnote{See the notebook \ref{s:sam:Oppenheimer_Snyder_curvature} for
-the computation.} curvature scalars like the Ricci scalar
-\be \label{e:lem:OS:Ricci_scal}
-    R := R^\mu_{\ \, \mu} = \frac{24}{a_0^2 (1 + \cos\eta)^3} = \frac{6 m}{r_{\rm s}(\tau)^3} ,
-\ee
-the ``square'' of the Ricci tensor
-\be \label{e:lem:OS:Ricci_squared}
-    R_{\mu\nu} R^{\mu\nu} = \frac{576}{a_0^4 (1 + \cos\eta)^6}
-    =  \frac{36 m^2}{r_{\rm s}(\tau)^6}
-\ee
-and the Kretschmann
-scalar\index{Kretschmann scalar! of Oppenheimer-Snyder metric} defined by
-Eq.~(\ref{e:sch:def_Kretschmann}):
-\be \label{e:lem:OS:Kretschmann}
-      K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = \frac{960}{a_0^4 (1 + \cos\eta)^6}
-         = \frac{60 m^2}{r_{\rm s}(\tau)^6} .
-\ee
-\begin{remark}
-Although the components of the Riemann and Ricci tensors with respect to the
-coordinates $(\eta,\chi,\th,\ph)$ depend on $\chi$ (cf. the notebook \ref{s:sam:Oppenheimer_Snyder_curvature}),
-the above three scalars are independent
-of it, in full agreement with the homogeneity of the stellar interior at each
-instant $\eta$.
-\end{remark}
-
-It is clear that the above three curvature invariants diverge when $\eta\to \pi$,
-or equivalently, when $r_{\rm s}(\tau)\to 0$. Hence a curvature singularity
-appears in the stellar interior at the end of the collapse.
-It is depicted by the orange zig-zag segment in left spacetime diagram
-of Fig.~\ref{f:lem:OS:diag_int_EF}. This singularity is shrunk to the point
-$(\ti, r) = (\ti_{\rm end}, 0)$ in the IEF diagram on the right part of the figure,
-because $r_{\rm s}(\tau_{\rm end}) = 0$. It is then connected to the
-curvature singularity at $r=0$ of Schwarzschild spacetime, depicted as the
-vertical orange zigzag segment.
-
-\begin{remark}
-The reader might be puzzled by the Kretschmann scalar (\ref{e:lem:OS:Kretschmann})
-being different from that of Schwarzschild spacetime, as given by Eq.~(\ref{e:sch:value_Kretschmann}):
-$K_{\rm Schwarz} = 48 m^2/r^6$. Both
-have the same $m^2/r^6$ structure but they differ by the numerical prefactor: 60 versus 48.
-This actually reflects the discontinuity of the Riemann tensor between the stellar interior
-and the Schwarzschild exterior. This discontinuity is enforced on the Ricci part of the Riemann
-tensor via the Einstein equation and the uniform density of the star, the latter yielding
-a jump of the energy-momentum tensor $\w{T}$ between the value (\ref{e:lem:T_pressureless})
-and zero (vacuum exterior). The difference is even more dramatic on the Ricci scalar
-(\ref{e:lem:OS:Ricci_scal})
-and the square of the Ricci tensor (\ref{e:lem:OS:Ricci_squared}), since they are
-identically zero in the Schwarzschild exterior. In other words, the Einstein equation
-implies that the metric tensor of the Oppenheimer-Snyder solution is not $C^2$.
-For an actual stellar core, there is a density gradient so that $\rho=0$
-at the surface and the metric tensor is at least $C^2$.
-\end{remark}
 
 \begin{table}
 \centerline{
@@ -1213,6 +1171,72 @@ at $\tau=\tau_{\rm hb}$ [Eq.~(\ref{e:lem:OS:rho_hb})].
 
 
 
+
+Equation~(\ref{e:lem:OS:rho_tau}) with $\eta\to \pi$
+immediately yields an infinite proper energy density at the end of the collapse:
+\be
+    \lim_{\tau\to\tau_{\rm end}} \rho(\tau) = + \infty.
+\ee
+Since $\rho$ is a measurable quantity (by comoving observers), this signals
+some physical singularity.
+This corresponds actually to the apparition of a \emph{curvature singularity}
+in the part of spacetime covering the interior of the star (cf. the discussion
+in Sec.~\ref{s:sch:singularities}).
+Indeed, from the interior metric (\ref{e:lem:OS:g_int}), one can
+evaluate\footnote{See the notebook \ref{s:sam:Oppenheimer_Snyder_curvature} for
+the computations.} curvature scalars like the Ricci scalar
+\be \label{e:lem:OS:Ricci_scal}
+    R := R^\mu_{\ \, \mu} = \frac{24}{a_0^2 (1 + \cos\eta)^3} = \frac{6 m}{r_{\rm s}(\tau)^3} ,
+\ee
+the ``square'' of the Ricci tensor
+\be \label{e:lem:OS:Ricci_squared}
+    R_{\mu\nu} R^{\mu\nu} = \frac{576}{a_0^4 (1 + \cos\eta)^6}
+    =  \frac{36 m^2}{r_{\rm s}(\tau)^6}
+\ee
+and the Kretschmann
+scalar\index{Kretschmann scalar! of Oppenheimer-Snyder metric} defined by
+Eq.~(\ref{e:sch:def_Kretschmann}):
+\be \label{e:lem:OS:Kretschmann}
+      K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = \frac{960}{a_0^4 (1 + \cos\eta)^6}
+         = \frac{60 m^2}{r_{\rm s}(\tau)^6} .
+\ee
+\begin{remark}
+Although the components of the Riemann and Ricci tensors with respect to the
+coordinates $(\eta,\chi,\th,\ph)$ depend on $\chi$ (cf. the notebook \ref{s:sam:Oppenheimer_Snyder_curvature}),
+the above three scalars are independent
+of it, in full agreement with the homogeneity of the stellar interior at each
+instant $\eta$.
+\end{remark}
+
+It is clear that the above three curvature invariants diverge when $\eta\to \pi$,
+or equivalently, when $r_{\rm s}(\tau)\to 0$. Hence a curvature singularity
+appears in the stellar interior at the end of the collapse.
+It is depicted by the orange zigzag segment in left spacetime diagram
+of Fig.~\ref{f:lem:OS:diag_int_EF}. This singularity is shrunk to the point
+$(\ti, r) = (\ti_{\rm end}, 0)$ in the IEF diagram on the right part of the figure,
+because $r_{\rm s}(\tau_{\rm end}) = 0$. It is then connected to the
+curvature singularity at $r=0$ of Schwarzschild spacetime, depicted as the
+vertical orange zigzag segment.
+
+\begin{remark}
+The reader might be puzzled by the Kretschmann scalar (\ref{e:lem:OS:Kretschmann})
+being different from that of Schwarzschild spacetime, as given by Eq.~(\ref{e:sch:value_Kretschmann}):
+$K_{\rm Schwarz} = 48 m^2/r^6$. Both
+have the same $m^2/r^6$ structure but they differ by the numerical prefactor: 60 versus 48.
+This actually reflects the discontinuity of the Riemann tensor between the stellar interior
+and the Schwarzschild exterior. This discontinuity is enforced on the Ricci part of the Riemann
+tensor via the Einstein equation and the uniform density of the star, the latter yielding
+a jump of the energy-momentum tensor $\w{T}$ between the value (\ref{e:lem:T_pressureless})
+and zero (vacuum exterior). The difference is even more dramatic on the Ricci scalar
+(\ref{e:lem:OS:Ricci_scal})
+and the square of the Ricci tensor (\ref{e:lem:OS:Ricci_squared}), since they are
+identically zero in the Schwarzschild exterior. In other words, the Einstein equation
+implies that the metric tensor of the Oppenheimer-Snyder solution is not $C^2$.
+For an actual stellar core, there is a density gradient so that $\rho=0$
+at the surface and the metric tensor is at least $C^2$.
+\end{remark}
+
+
 \subsection{Black hole formation}
 
 Since the surface areal radius $r_{\rm s}(\tau)$ is a monotonically decreasing function
@@ -1234,8 +1258,8 @@ and $0<\chi_{\rm s} < \pi/2$, the solution is
 \ee
 Equation~(\ref{e:lem:OS:evol_star_surf}) yields then
 \be \label{e:lem:OS:tau_star}
-    \tau_* = \frac{\pi - 2 \chi_{\rm s} + \sin(2\chi_{\rm s})}{\sin^3\chi_{\rm s}} m
-     =  \left( 1 - \frac{2\chi_{\rm s} - \sin(2\chi_{\rm s})}{\pi} \right) \tau_{\rm end} .
+  \encadre{  \tau_* = \frac{\pi - 2 \chi_{\rm s} + \sin(2\chi_{\rm s})}{\sin^3\chi_{\rm s}} m
+     =  \left( 1 - \frac{2\chi_{\rm s} - \sin(2\chi_{\rm s})}{\pi} \right) \tau_{\rm end} } .
 \ee
 
 \begin{example} \label{x:lem:OS:tau_star_chis4}
@@ -1272,11 +1296,11 @@ Hence, inside the star, the equation of the black hole event horizon $\Hor$
 is $\eta = \chi - \chi_{\rm s} + \eta_*$. Given the value (\ref{e:lem:OS:eta_star}) for
 $\eta_*$, we get
 \be \label{e:lem:OS:Hor_eta_chi}
-    \Hor:\qquad \eta = \chi + \pi - 3 \chi_{\rm s} .
+    \Hor:\quad \encadre{ \eta = \chi + \pi - 3 \chi_{\rm s} } .
 \ee
 For a fixed value of $(\th,\ph)$, this is the equation of a straight line segment
 inclined by $+45^\circ$ with
-respect to the horizontal.
+respect to the horizontal (cf. Fig.~\ref{f:lem:OS:diag_int_EF}, left).
 
 The equation of $\Hor$ in terms of the internal IEF coordinate is obtained in parametric
 form, with parameter $\chi\in[0,\chi_{\rm s}]$ by substituting (\ref{e:lem:OS:Hor_eta_chi})
@@ -1375,7 +1399,8 @@ when the black hole region forms at the center of the collapsing star
 can be made arbitrarily small.
 \end{greybox}
 \begin{example} \label{x:lem:OS:rho_hb_water}
-Let us a consider the density of water: $\rho_{\rm hb} = 10^3 \; {\rm kg\, m}^{-3}$.
+Let us determine the mass $m$ for which  $\rho_{\rm hb}$ is as small as
+the density of water: $\rho_{\rm hb} = 10^3 \; {\rm kg\, m}^{-3}$.
 By restoring the $G$'s and the $c$'s, the density $m^{-2}$ becomes
 $c^6/G^3 m^{-2}$.  We then get $m \simeq 4\; 10^7 M_\odot$ for small initial compactness
 ($\chi_{\rm s} \ll 1$)
@@ -1422,7 +1447,7 @@ required for a low value of $\rho_{\rm hb}$.
 }
 \caption[]{\label{f:lem:OS:diag_trapped} \footnotesize
 Spacetime diagrams of the Oppenheimer-Snyder collapse, as in Fig.~\ref{f:lem:OS:diag_int_EF},
-but zooming around the trapped sphere $\Sp$.
+but zooming around the trapped sphere $\Sp$ located at $(\eta,\chi) = (11\pi/16, 3\pi/16)$.
 The left diagram is drawn in terms of the
 conformal coordinates $(\eta,\chi)$, while the right one is based on
 the Eddington-Finkelstein coordinates $(\ti, r)$.
@@ -1447,7 +1472,7 @@ Such a surface appears as a point in the spacetime diagrams of
 Fig.~\ref{f:lem:OS:diag_trapped}. The surface $\Sp$
 has the topology of a 2-sphere and
 is spanned by the coordinates $(\th,\ph)$. In particular,
-it is a closed manifold (compact
+it is a \emph{closed} manifold (compact
 without boundary).
 The metric $\w{q}$ induced by $\w{g}$ on $\Sp$ is readily
 obtained by setting $\dd\eta = 0$ and $\dd\chi = 0$ in Eq.~(\ref{e:lem:OS:g_int}):
