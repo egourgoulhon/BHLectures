@@ -1525,19 +1525,22 @@ and $\cos(\chi - \eta/2) > 0$. It follows immediately that
 \be
     \theta_{(\w{k})} < 0
 \ee
-and that the sign of $\theta_{(\wl)}$ is that of $\cos(\chi + \eta/2)$.
+and the sign of $\theta_{(\wl)}$ is that of $\cos(\chi + \eta/2)$.
 Given that the above ranges of $\eta$ and $\chi$ imply $0 < \chi + \eta/2 < \pi$,
-we conclude that $\theta_{(\wl)} < 0 \iff \chi + \eta/2 > \pi/2$, i.e.
-\be
+we have $\theta_{(\wl)} < 0 \iff \chi + \eta/2 > \pi/2$, i.e.
+\be \label{e:lem:theta_l_neg}
     \theta_{(\wl)} < 0 \iff \eta > \pi - 2 \chi .
 \ee
 Since $\Sp$ is a closed spacelike 2-surface,
-we conclude, in view of the definition given in Sec.~\ref{s:neh:trapped_surfaces}, that
+we conclude, in view of the definitions given in Sec.~\ref{s:neh:trapped_surfaces}, that
 \begin{greybox}
 At late times, i.e. for $\eta > \pi - 2 \chi$, the spheres $\Sp$ defined
 by $(\eta,\chi) = \mathrm{const}$, with $\eta<\pi$ and $\chi>0$,
-are trapped surfaces. They are marginally trapped for $\eta = \pi - 2 \chi$
-and untrapped for $\eta <  \pi - 2 \chi$.
+are trapped surfaces ($\theta_{(\wl)} < 0$ and $\theta_{(\w{k})} < 0$).
+These spheres are marginally trapped
+($\theta_{(\wl)} = 0$ and $\theta_{(\w{k})} < 0$)
+for $\eta = \pi - 2 \chi$
+and untrapped ($\theta_{(\wl)} > 0$ and $\theta_{(\w{k})} < 0$) for $\eta <  \pi - 2 \chi$.
 \end{greybox}
 
 \begin{example}
@@ -1545,22 +1548,26 @@ The trapped surface $\Sp$ corresponding to $(\eta,\chi) = (11\pi/16, 3\pi/16)$
 in the Oppen\-heimer-Snyder collapse with $r_0 = 4 m$
 is plotted as a brown dot in Fig.~\ref{f:lem:OS:diag_trapped}. According
 to Eq.~(\ref{e:lem:OS:tau_r_eta}), the areal radius of $\Sp$ is
-$r_{\Sp} = 2\sqrt{2} \sin(3\pi/16) (1 + \cos(11\pi/16)) \simeq 0.70 m$.
+$r_{\Sp} = 2\sqrt{2} \sin(3\pi/16) (1 + \cos(11\pi/16)) \simeq 0.70\, m$.
 The trapped character of $\Sp$ can be read on Fig.~\ref{f:lem:OS:diag_trapped}:
 moving to the future along either the ingoing radial null geodesic (dashed green line)
 or the outgoing one (solid green line) leads to spheres of smaller areal radius,
 and hence smaller area. This is clear on the left diagram when noticing
-that both geodesics encounter the curve $r=0.65 m$ in the immediate future of $\Sp$.
+that both geodesics encounter the curve $r=0.65\, m$ in the immediate future of $\Sp$.
 It is even more immediate on the right diagram since $r$ is read directly on the $x$-axis.
 \end{example}
 
-The set formed by all the marginally trapped spheres of fixed $(\eta,\chi)$
-is the hypersurface
+The set formed by all the marginally trapped spheres
+of fixed $(\eta,\chi)$
+is the hypersurface $\mathscr{T}$ defined by $\theta_{(\wl)} = 0$.
+Its equation is obtained by saturating the inequalities
+in Eq.~(\ref{e:lem:theta_l_neg}):
 \be \label{e:lem:OS:def_T}
     \mathscr{T}:\qquad \eta = \pi - 2\chi.
 \ee
 As we shall see in
-Chap.~\ref{s:loc}, $\mathscr{T}$ is called a \emph{future inner trapping horizon}.
+Chap.~\ref{s:loc}, $\mathscr{T}$ is called a
+\defin{future inner trapping horizon}\index{future!inner trapping horizon}\index{trapping horizon!future!inner --}.
 It is drawn as a dotted blue line in Figs.~\ref{f:lem:OS:diag_int_EF}
 and \ref{f:lem:OS:diag_trapped}. Since the slope of that line is $-2$ and
 $(\eta,\chi)$ are conformal coordinates, it is clear from the left diagrams
@@ -1605,7 +1612,7 @@ this limit, see Ref.~\cite{BengtJS13} for details.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Observational appearance of the black hole formation} \label{s:lem:obs}
+\section{Observing the black hole formation} \label{s:lem:obs}
 
 Let us consider a remote static observer $\Obs$ who receives electromagnetic
 radiation from the surface of a spherically symmetric collapsing star. By
@@ -1629,7 +1636,7 @@ Spacetime diagram of the Oppenheimer-Snyder collapse,
 as in the right panel of Fig.~\ref{f:lem:OS:diag_int_EF}, illustrating
 the increasing delay in the reception by a remote static observer $\Obs$
 (maroon worldline at $r=10 \, m$)
-of signals emitted from the
+of signals emitted radially from the
 surface of the collapsing star with a constant interval of matter proper time,
 $\delta\tau = \tau_{\rm end}/8$.
 See the caption of Fig.~\ref{f:lem:OS:diag_int_EF} for the legend of the various
@@ -1638,7 +1645,7 @@ curves.
 }
 \end{figure}
 
-\subsection{Apparent collapse freezing}
+\subsection{Apparent collapse freezing} \label{s:lem:freezing}
 
 Let us suppose that, at the matter comoving proper time $\tau_1$, an electromagnetic
 signal (``flash'') is emitted in the radial direction from
@@ -1681,11 +1688,11 @@ of the comoving proper time $\tau$, the signals are received by the remote obser
 proceeds. The delay between two successive signals becoming infinite, there exists a very
 last signal received by $\Obs$.
 All subsequent signals of the emitted sequence do not cross the event horizon,
-i.e. are captured by the black hole.
+i.e. are captured into the black hole.
 
 \begin{example}
 Consider Fig.~\ref{f:lem:OS:diag_delay}, which depicts the Oppenheimer-Snyder collapse
-with $r_0 = 4 m \iff \chi_{\rm s} = \pi/4$. Starting from $\tau=0$, a uniform sequence of 8 signals is emitted from the star's surface, the proper time separation between two successive signals being
+with $r_0 = 4 m$, or equivalently $\chi_{\rm s} = \pi/4$. Starting from $\tau=0$, a uniform sequence of 8 signals is emitted from the star's surface, the proper time separation between two successive signals being
 $\delta\tau = \tau_{\rm end}/8 = \pi\sqrt{2} m / 4$ (cf. Example~\ref{x:lem:OS:tau_end_plot} on
 p.~\pageref{x:lem:OS:tau_end_plot}). One sees graphically that the signals are received by $\Obs$
 with an increasing separation $\delta\ti$. The last received signal is the 7th one. The 8th signal is trapped in the black hole region and ends on the curvature singularity.
@@ -1709,23 +1716,15 @@ was given to black holes before the name \emph{black hole} itself was coined
 
 \subsection{Shape and size of the images of the collapse} \label{s:lem:size_image}
 
-%~ As stressed above, the remote static observer $\Obs$ shall never see the star
-%~ collapse to a ``point'', but shall instead perceive it to freeze to its gravitational radius.
-%~ The image of the star, which is a disk on $\Obs$'s screen, shall even shrink much
-%~ less than naively expected, due to strong gravitational lensing effects that
-%~ take place in the last stages of the collapse. As analyzed in Secs.~\ref{s:gis:shadow}
-%~ and \ref{s:gis:image_disk}, the final images are indeed larger by a factor
-%~ $\sim 3\sqrt{3}/2 \sim 2.60$ than those for a collapse
-%~ in a flat spacetime. See e.g. Fig.~4 of Ref.~\cite{VinceGN12} for a concrete example
-%~ regarding simulated
-%~ images of the gravitational collapse of an unstable neutron star into a black hole.
-
 The image of the collapsing star is formed on the screen of observer's $\Obs$
 by photons emitted from the star's surface and following
 null geodesics of Schwarzschild spacetime (the spacetime
-exterior to the star). Such geodesics have been studied in detail in Chap.~\ref{s:gis}.
+exterior to the star). In Sec.~\ref{s:lem:freezing}, we have considered only
+radial null geodesics. Discussing the image requires to consider non-radial null geodesics
+as well. Such geodesics have been studied in detail in Chap.~\ref{s:gis}.
 In particular, it has been shown that they are essentially characterized by a
 single parameter: the impact parameter $b:=|L|/E$ introduced in Sec.~\ref{s:gis:null_eff_pot}.
+Radial geodesics are those for which $b=0$.
 In what follows, we shall work in terms of the Schwarzschild-Droste
 coordinates $(t,r,\th,\ph)$, as in Chap.~\ref{s:gis}. These coordinates are regular in the Schwarzschild exterior where
 the null geodesics propagate to the remote observer $\Obs$ and they
@@ -1749,20 +1748,20 @@ The image's rim, i.e. the circle bounding the disk, is located at some
 maximal value of $b$, $b_\star(t_\Obs)$ say.
 A great amount of information on $b_\star(t_\Obs)$ can be inferred from the effective
 potential analysis developed in Sec.~\ref{s:gis:null_eff_pot}. Indeed, along
-any null geodesic $\Li$ in the black hole exterior,
-the constraint
+a given null geodesic $\Li$ of impact parameter $b$,
+the following constraint must hold in the exterior of the star:
 \be \label{e:lem:OS:b_constraint}
-    b \leq \frac{1}{\sqrt{U(r)}} = \frac{r}{\sqrt{1 - 2m/r}}
+    b \leq \frac{1}{\sqrt{U(r)}} = \frac{r}{\sqrt{1 - 2m/r}} ,
 \ee
-must hold, where $U(r)$ is the effective potential (\ref{e:ges:eff_pot_null}):
+where $U(r)$ is the effective potential (\ref{e:ges:eff_pot_null}):
 $U(r) := (1 - 2m/r)/r^2$. This follows directly from
 $({\D r}/{\D\tilde{\lambda}})^2\geq 0$ in Eq.~(\ref{e:ges:dot_r_square_null_b}).
 Prior to the collapse, let us assume
 that the surface of the star is static and located at $r = r_0$.
 Let us then denote by $t_\Obs^{**}$ the value of $t_\Obs$ at which the disk image
-starts to shrink. It corresponds to the disk boundary
-formed by null geodesics emitted from the star's surface
-at the matter proper time $\tau=0$ (the start of collapse according to our conventions).
+starts to shrink. This corresponds to
+null geodesics emitted from the star's surface
+at the matter proper time $\tau=0$  arriving at the disk boundary.
 For $t_{\Obs} \leq t_\Obs^{**}$, one has then $r\geq r_0$ all along $\Li$.
 If we assume $r_0 > 3m$, then $1/\sqrt{U(r)}$ is increasing with $r$ all along $\Li$,
 given that $U(r)$ is a decreasing function on the interval $(3m,+\infty)$ (cf. Fig.~\ref{f:gis:eff_pot_null}).
@@ -1790,7 +1789,8 @@ formula (\ref{e:lem:OS:bmax_static}) takes a simple form:
 \ee
 In the non-relativistic limit, $\chi_{\rm s} \to 0$ and we get $b_\star(t_\Obs) = r_0$,
 as expected (recall that the trully observed quantity through a telescope is the small angle
-$\hat{b} = b / r_\Obs$ [Eq.~(\ref{e:gis:hat_b})]).
+$\hat{b} = b / r_\Obs$ [Eq.~(\ref{e:gis:hat_b})], so that $\hat{b} = r_0 / r_\Obs$
+at the disk's rim).
 \end{remark}
 
 One can also use the effective potential analysis to get the value of $b_\star(t_\Obs)$
@@ -1805,7 +1805,7 @@ where $b_{\rm c} = 3\sqrt{3} \, m$ [Eq.~(\ref{e:ges:b_crit})].
 An example of photon emitted at $r<3m$ and fulfilling this constraint is
 represented by the trajectory no.~3 in Fig.~\ref{f:gis:eff_pot_null}.
 Furthermore, the constraint is actually a sufficient condition for any
-photon emitted outward to reach infinity (cf. Fig.~\ref{f:gis:eff_pot_null} once more).
+photon emitted outward to reach infinity (cf. Fig.~\ref{f:gis:eff_pot_null} once again).
 However, for $b$ close to $b_{\rm c}$, photons perform a large number of orbits
 very close to the photon sphere, this number being actually infinite for $b=b_{\rm c}$
 (critical null geodesics)\index{critical!null geodesic}, as discussed in
@@ -1877,7 +1877,7 @@ we get
 \begin{align}
    &\left. \frac{\D t}{\D r} \right| _{\Li}
     = \eps_r \left(1 - \frac{2m}{r} \right) ^{-1}
-        \left( 1 - b^2 U(r) \right) ^{-1/2} \\[1ex] \label{e:lem:OS:dtdr_null_geod}
+        \left( 1 - b^2 U(r) \right) ^{-1/2}  \label{e:lem:OS:dtdr_null_geod} \\[1ex]
    &\left. \frac{\D \ph}{\D r} \right| _{\Li}
     = \eps_r \eps_L \frac{b}{r^2} \left( 1 - b^2 U(r) \right) ^{-1/2} ,
 \end{align}
@@ -1885,7 +1885,7 @@ we get
 where
 $\eps_L = \pm 1$ indicates the sign of the conserved angular momentum $L$
 of $\Li$ and $\eps_r = \pm 1$ is $+1$ (resp. $-1$) on portions of $\Li$ where $r$ increases
-(resp. decreases) towards the future along $\Li$. Note that $\eps_L$ is
+(resp. decreases) towards the future. Note that $\eps_L$ is
 constant along $\Li$. Regarding $\eps_r$, it has to be $+1$ in the vicinity
 of observer $\Obs$. Given that a null geodesic of Schwarzschild spacetime
 has at most one $r$-turning point (cf. Sec.~\ref{s:gis:null_radial_behav}),
@@ -1914,7 +1914,7 @@ equivalently (\ref{e:lem:OS:evol_star_surf})] and (\ref{e:ges:sol_t_radial_infal
     & r_{\rm s}^{\rm em}(b,t_\Obs) = \frac{r_0}{2} \left( 1 + \cos\eta \right) .
 \end{align}
 \end{subequations}
-Note that the origin of the Schwarzschild-Droste coordinate $t$ is chosen
+Note that we have chosen the origin of the Schwarzschild-Droste coordinate $t$
 to coincide with the start of the collapse: $t = 0 \iff \tau = 0 \iff \eta = 0$.
 
 In terms of the star's areal radius function $r_{\rm s}(\tau)$, one
@@ -1948,10 +1948,10 @@ For a given observation instant $t_\Obs$ and a given position on the screen, mea
 Eq.~(\ref{e:lem:OS:t_em_b_tO}) must be solved to get $t_{\rm em}(b,t_\Obs)$. In general, this
 is a difficult problem since the lower boundary of the integral, $r_{\rm s}^{\rm em}(b,t_\Obs)$,
 depends on $t_{\rm em}(b,t_\Obs)$ in a complicated way, via the parametric
-system (\ref{e:lem:OS:free_fall_em}). However, for $b=0$, one can compute
+system (\ref{e:lem:OS:free_fall_em}). However, for $b=0$ (radial geodesic), one can compute
 the integral in Eq.~(\ref{e:lem:OS:t_em_b_tO}) in an elementary way; taking into account that
 $\Delta=0$ for $b=0$ (no $r$-turning
-point along a pure radial geodesic), we obtain
+point along a radial geodesic), we obtain
 \be \label{e:lem:t_em_b_zero}
     t_{\rm em}(0, t_\Obs) = t_\Obs - r_\Obs + r_{\rm s}^{\rm em}(0,t_\Obs)
         + 2m \ln\left(\frac{r_{\rm s}^{\rm em}(0,t_\Obs) - 2m}{r_\Obs - 2m} \right) .
@@ -2019,7 +2019,7 @@ $z := (\lambda_\infty - \lambda_{\rm em})/\lambda_{\rm em}$,
 where $\lambda_{\rm em}$ is the photon wavelength at emission, i.e.
 with respect to observer $\Obs_{\rm em}$, and $\lambda_\infty$ is
 the photon wavelength measured by $\Obs$.
-Thanks to Planck-Einstein relation (\ref{e:fra:Planck_Einstein}): $E = h\nu = h/(c\lambda)$,
+Thanks to the Planck-Einstein relation (\ref{e:fra:Planck_Einstein}): $E = h\nu = h/(c\lambda)$,
 we have
 \be \label{e:lem:redshift}
  1 + z = \frac{E_{\rm em}}{E_\infty},
@@ -2122,9 +2122,9 @@ formula becomes
 \ee
 where $\eps_r = \pm 1$ and $\eps_L = \pm 1$.
 Far from  the star, one has of course $\eps_r = +1$, but, as we shall see below,
-$\eps_r = -1$ may occur close to the star, which corresponds to means a photon
+$\eps_r = -1$ may occur close to the star, which corresponds to a photon
 emitted in the inward direction (decreasing $r$); in this case, the photon
-will reach a periastron, where $\eps_r$ changes to $+1$.
+will reach a periastron, where $\eps_r$ is switched to $+1$.
 
 The scalar product in Eq.~(\ref{e:lem:OS:E_em_p_photon}) is easily
 evaluated from expressions (\ref{e:lem:OS:u_s_static}) and
@@ -2162,14 +2162,14 @@ starting from rest.
 
 \subsubsection{Emission angle}
 
-The emission direction of a photon in the frame of the comoving observer $\Obs_{\rm em}$
+The direction of emission in the frame of the comoving observer $\Obs_{\rm em}$
 is characterized by the angle $\Theta_{\rm em}$ between the photon's linear momentum $\w{P}_{\rm em}$
 and the normal to the surface $\w{n}_{\rm s}$. Considering that the collapsing matter
 is opaque to radiation, the maximum inclination of an emitted photon capable to
 reach the remote observer $\Obs$ is
 $\Theta_{\rm em} = \pi/2$ (emission tangent to the surface).
 Hence any photon received by $\Obs$ has necessarily
-\be
+\be \label{e:lem:em_angle}
         0 \leq \Theta_{\rm em} \leq \frac{\pi}{2} .
 \ee
 By definition, $\Theta_{\rm em}$ is given by
@@ -2255,8 +2255,7 @@ When $r_{\rm s}^{\rm em}(0,t_\Obs) \to 2m$, two terms in the right-hand side
 of the above equation diverge: the last logarithm and the first term,
 $t_{\rm em}(0, t_\Obs)$, due to the singularity of Schwarzschild-Droste coordinates
 at $r=2m$. We can express the latter divergence in terms of a logarithm
-involving $r_{\rm s}^{\rm em}(0,t_\Obs)$ thanks to the relation
-(\ref{e:sch:ti_t_r})
+involving $r_{\rm s}^{\rm em}(0,t_\Obs)$ thanks to Eq.~(\ref{e:sch:ti_t_r}):
 $t_{\rm em}(0, t_\Obs) = \ti_{\rm em}(0,t_\Obs) - 2m
 \ln\left[ {r_{\rm s}^{\rm em}(0,t_\Obs)}/{2m}  - 1 \right] + K$,
 where $\ti_{\rm em}(0,t_\Obs)$ is the IEF coordinate
@@ -2327,7 +2326,7 @@ the redshift at the image's rim keeps a constant value:
    \encadre{ 1 + z_\star = \left(1 - \frac{2m}{r_0}\right) ^{-1/2} } .
 \ee
 \end{greybox}
-This surprising result can be understood by considering the general
+This rather surprising result can be understood by considering the general
 expression (\ref{e:lem:redshit_rim_gal}): $1 + z_\star$ is the product
 of two competing factors: the ``static'' gravitational redshift
 $(1 - 2m/r_{\rm s})^{-1/2}$, which is always larger than one and diverges
@@ -2344,9 +2343,11 @@ and by Eq.~(\ref{e:lem:OS:redshift_pless}) for a pressureless collapse
 from rest. However, one has to solve for $r_{\rm s}(b, t_\Obs)$ to make
 these formulas fully explicit. Doing so (see e.g. Fig.~2 of Ref.~\cite{LakeR79} or
 Fig.~6 of Ref.~\cite{YoshiTN19}), one obtains a redshift which is maximal
-at the image's center, where it is given by formulas (\ref{e:lem:OS:redshift_c}),
+at the image's center ($b=0$), where it is given by formulas (\ref{e:lem:OS:redshift_c}),
 and increases exponentially with time [Eq.~(\ref{e:lem:central_redshift})].
-The redshift then decays until a small annulus near the image's rim where it
+The redshift decreases with $b$ until a small annulus near the image's rim
+($b = b_\star(t_\Obs)$),
+where it
 takes the constant value (\ref{e:lem:redhsit_rim_pless}). The width of
 this annulus decays to zero with time.
 
@@ -2358,7 +2359,7 @@ Each point in the image corresponds to a direction in observer $\Obs$'s sky.
 We may then think of a small solid angle $\D\Omega$ around this direction
 as a ``pixel'' in the image. The brightness of this pixel
 in the frequency bandwidth $[\nu, \nu + \D\nu]$ is represented by the
-energy flux\index{energy!flux} (energy per unit of time and unit of area)
+energy flux\index{energy!flux} (energy per unit time per unit area)
 $\D F$ given by
 \be \label{e:lem:elem_flux}
    \D F = I_\nu \, \D\Omega \, \D\nu ,
@@ -2445,7 +2446,7 @@ the emission model, the flux is decaying exponentially according to
 \ee
 
 \begin{hist}
-The first computation of the appearance of a gravitational collapse from the viewpoint of a remote observer
+The first computation of the appearance of a gravitational collapse as seen by a remote observer
 has been performed by Mikhail A. Podurets\index{Podurets, M. A.} in 1964 \cite{Podur64}.
 He obtained the exponential decay formula (\ref{e:lem:integrated_flux}) for the flux,
 up to an erroneous factor $2$ in factor of $t_\Obs - t_\Obs^*$. This has been
@@ -2454,7 +2455,7 @@ corrected by William L. Ames\index{Ames, W.L.} and Kip S. Thorne\index{Thorne, K
 cannot resolve the collapsing star. The intensity at the center of the image
 has been derived by
 Yakov B. Zeldovich\index{Zeldovich, Ya.B.} and Igor D. Novikov\index{Novikov, I.D.}
-in 1964 \cite{ZeldoN64}, who obtained the the exponential decay formula
+in 1964 \cite{ZeldoN64}, who obtained the exponential decay formula
 (\ref{e:lem:decay_central_intensity}). The computation of the
 intensity at each point of the image has been achieved by
 Ames and Thorne in their 1968 study \cite{AmesT68}, who showed that (i)
@@ -2462,8 +2463,10 @@ the image is brightest at its rim, (ii) the redshift is constant there and (iii)
 peripheral bright region is decaying exponentially with time. In 1969, Jack Jaffe\index{Jaffe, J.}
 \cite{Jaffe69} pointed out that Ames and Thorne considered only photons with
 an emission angle $\Theta_{\rm em}' \leq \pi/2$ in the local \emph{static} observer frame,
-while the limiting condition should be $\Theta_{\rm em} \leq \pi/2$ in the \emph{comoving} observer frame,
-which encompasses extra photons: those that are emitted inward. In 1979, Kayll Lake\index{Lake, K.} and
+while the limiting condition should be $\Theta_{\rm em} \leq \pi/2$ in the \emph{comoving} observer
+frame [Eq.~(\ref{e:lem:em_angle})].
+This encompasses extra photons: those that are emitted inward, as shown above.
+In 1979, Kayll Lake\index{Lake, K.} and
 R. C. Roeder\index{Roeder, R. C.} \cite{LakeR79}
 recomputed the intensity with this hypothesis and concluded
 that the main properties found by Podurets, Ames and Thorne are not significantly altered.
