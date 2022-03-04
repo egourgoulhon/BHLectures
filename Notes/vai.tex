@@ -11,7 +11,7 @@ formation of a black hole by the collapse of a shell of radiation,
 known as \emph{Vaidya collapse}. Albeit quite
 academic, this process illustrates various features of black hole birth and dynamics.
 
-\section{The Vaidya collapse solution}
+\section{The ingoing Vaidya metric}
 
 \subsection{General expression}
 
@@ -20,7 +20,8 @@ coordinates $(v,r,\th,\ph)$ such that $v\in \R$, $r\in(0, +\infty)$,
 $\th\in(0,\pi)$ and $\ph\in(0,2\pi)$, $(\th,\ph)$ being standard
 spherical coordinates on $\SS^2$ and $r$ being the areal radius associated
 with spherical symmetry (cf. Sec.~\ref{s:sch:static_spher}).
-The \defin{Vaidya metric} is the metric tensor
+The \defin{ingoing Vaidya metric}\index{ingoing!Vaidya metric}\index{Vaidya!metric!ingoing --}
+is the metric tensor
 \be \label{e:vai:Vaidya_metric_null}
     \encadre{ \w{g} =
             -\left( 1 - \frac{2 M(v)}{r} \right)\, \dd v^2
@@ -34,12 +35,43 @@ coordinates, as given by Eq.~(\ref{e:sch:Schwarz_metric_NIEF}). Actually, the
 only difference is the constant $m$ in Eq.~(\ref{e:sch:Schwarz_metric_NIEF})
 replaced by the function $M(v)$ in Eq.~(\ref{e:vai:Vaidya_metric_null}).
 
-As shown in the notebook~??, the Ricci tensor of $\w{g}$ is very simple:
+An important property of the ingoing Vaidya metric is
+\begin{greybox}
+The vector field $\w{k}$, defined as the metric-dual\footnote{Cf. Sec.~\ref{s:bas:metric_dual};
+in index notation: $k^\alpha := - g^{\alpha\mu} \partial_\mu v = - \nabla^\alpha v \iff
+k_\alpha := - \partial_\alpha v $}
+of the 1-form $-\dd v$:
 \be
-    \w{R} = \frac{2 M'(v)}{r^2}\, \dd v \otimes \dd v .
+    \w{k} := - \vp{\dd v} = - \vw{\nabla} v \quad\iff\quad
+    \uu{k} := - \dd v ,
 \ee
+is a null vector.
+\end{greybox}
+\begin{proof}
+In view of the metric components (\ref{e:vai:Vaidya_metric_null}),
+the coordinate vector field $\wpar_r$ is a null vector, since $g_{rr} = 0$.
+Its metric-dual is the 1-form $\uu{\wpar_r} = g_{\mu r}\dd x^\mu = g_{vr} \dd v = \dd v$.
+Hence we $\w{k} = - \wpar_{r}$, so that $\w{k}$ is a null vector.
+\end{proof}
 
-\subsection{Case of a shell of radiation}
+As shown in the notebook~\ref{s:sam:Vaidya},
+the Ricci tensor of $\w{g}$ is very simple:
+\be
+    \w{R} = \frac{2 M'(v)}{r^2}\, \dd v \otimes \dd v ,
+\ee
+where $M'(v)$ stands for the derivative of the function $M(v)$.
+The Ricci scalar $R = g^{\mu\nu} R_{\mu\nu} = (2M'(v)/r^2) \, \nabla_\mu v \nabla^\mu v =  (2M'(v)/r^2) \, k_\mu k^\mu$ is identically zero, since $\w{k}$ is a null vector.
+It follows that
+\begin{greybox}
+The ingoing Vaidya metric (\ref{e:vai:Vaidya_metric_null}) is a solution
+of the Einstein equation (\ref{e:fra:Einstein_eq})
+with $\Lambda = 0$ and with the energy-momentum tensor
+\be
+   \encadre{ \w{T} = \frac{M'(v)}{4\pi r^2}\, \uu{k} \otimes \uu{k}  } .
+\ee
+\end{greybox}
+
+\subsection{Case of a infalling shell of radiation}
 
 \subsection{Black hole formation}
 
