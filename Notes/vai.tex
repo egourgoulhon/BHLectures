@@ -147,7 +147,7 @@ was reserved for the Schwarzschild-Droste time coordinate.
 \end{remark}
 We have $\dd v = \dd t + \dd r$, from which the IEF expression of the
 metric tensor is immediately deduced from Eq.~(\ref{e:vai:Vaidya_metric_null}):
-\be
+\be \label{e:vai:metric_IEF}
     \encadre{
         \begin{array}{ll}
         \w{g} = &
@@ -170,14 +170,26 @@ The analog equation in Schwarzschild spacetime is Eq.~(\ref{e:sch:null_vector_k}
 
 \subsection{Case of an infalling shell of radiation}
 
-A \defin{shell of ingoing radiation}\index{shell!of ingoing radiation}
-is defined the choice of the function $M(v)$ such that
+An \defin{infalling shell of radiation}\index{shell!infalling -- of radiation}\index{infalling!shell of radiation}
+is defined by the function $M(v)$ obeying
 $M'(v) \neq 0$ only on a finite interval of $v$. By choosing properly
-the origin of $v$, we may consider that this interval is $[0, v_0]$, with $v_0>0$
-parametrizing the thickness of the shell. Furthermore, we choose $M(v)$
-so that $M(v) = 0$ for $v < 0$. We have then $M(v)$ increasing from 0 to
-a constant value, $m$ say, when $v$ varies from $0$ to $v_0$ and
-$M(v) = m$ for $v > v_0$.
+the origin of $v$, we may consider this interval to be $[0, v_0]$, with
+the parameter $v_0>0$ governing the
+thickness of the shell.
+The function $M(v)$ is thus constant outside the interval $[0, v_0]$.
+In order to describe the formation of a black hole, we choose
+$M(v) = 0$ for $v < 0$. This corresponds to a piece of Minkowski spacetime,
+since the metric (\ref{e:vai:metric_IEF})
+cleary reduces to Minkowski metric wherever $M(v)=0$ [compare Eq.~(\ref{e:glo:Mink_metric_spher})].
+Denoting by $m>0$ the constant value of $M(v)$ for $v > v_0$, we have then
+\be
+    M(v) = \left\{ \begin{array}{ll}
+     0 \quad \mbox{for} \ v < 0 \qquad & \mbox{(Minkowski region)} \\
+     \mbox{increases from}\ 0 \ \mbox{to}\ m \quad \mbox{for} \ 0 \leq v \leq v_0
+        & \mbox{(radiation region)} \\
+      m \quad \mbox{for} \ v > v_0 \qquad & \mbox{(Schwarzschild region).}
+      \end{array} \right.
+\ee
 
 \subsection{Black hole formation}
 
