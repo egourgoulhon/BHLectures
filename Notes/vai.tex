@@ -13,7 +13,7 @@ academic, this process illustrates various features of black hole birth and dyna
 
 \section{The ingoing Vaidya metric}
 
-\subsection{General expression}
+\subsection{General expression} \label{s:vai:general}
 
 Let us consider a spherically symmetric spacetime $(\M,\w{g})$ described by
 coordinates $(v,r,\th,\ph)$ such that $v\in \R$, $r\in(0, +\infty)$,
@@ -167,6 +167,15 @@ is deduced from Eq.~(\ref{e:vai:k_d_dr}) and the chain rule:
 The analog equation in Schwarzschild spacetime is Eq.~(\ref{e:sch:null_vector_k}).
 \end{remark}
 
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{vai_mass_function.pdf}}
+\caption[]{\label{f:vai:mass_function} \footnotesize
+An example of function $M(v)$ increasing linearly on $[0,v_0]$.
+}
+\end{figure}
+
+
+
 
 \subsection{Case of an infalling shell of radiation}
 
@@ -182,7 +191,7 @@ $M(v) = 0$ for $v < 0$. This corresponds to a piece of Minkowski spacetime,
 since the metric (\ref{e:vai:metric_IEF})
 cleary reduces to Minkowski metric wherever $M(v)=0$ [compare Eq.~(\ref{e:glo:Mink_metric_spher})].
 Denoting by $m>0$ the constant value of $M(v)$ for $v > v_0$, we have then
-\be
+\be \label{e:vai:mass_function}
     M(v) = \left\{ \begin{array}{ll}
      0 \quad \mbox{for} \ v < 0 \qquad & \mbox{(Minkowski region)} \\
      \mbox{increases from}\ 0 \ \mbox{to}\ m \quad \mbox{for} \ 0 \leq v \leq v_0
@@ -190,6 +199,11 @@ Denoting by $m>0$ the constant value of $M(v)$ for $v > v_0$, we have then
       m \quad \mbox{for} \ v > v_0 \qquad & \mbox{(Schwarzschild region).}
       \end{array} \right.
 \ee
+The region for $v>v_0$ is denoted \emph{Schwarzschild} since for $M(v) = m = \mathrm{const}$,
+the Vaidya metric reduces to Schwarzschild metric, as we have already noticed
+in Sec.~\ref{s:vai:general}. The simplest example of a function $M(v)$
+obeying (\ref{e:vai:mass_function}) is $M(v) = m v/v_0$ for $v\in[0, v_0]$;
+it is shown in Fig.~\ref{f:vai:mass_function} for $v_0 = 3 m$.
 
 \subsection{Black hole formation}
 
