@@ -7,9 +7,11 @@
 
 Having investigated the gravitational collapse of a star, modeled as a ball of dust,
 in the preceding chapter, we turn now to a less astrophysical scenario: the
-formation of a black hole by the collapse of a shell of radiation,
+formation of a black hole by the collapse of a spherical shell of pure radiation
+(no matter!),
 known as \emph{Vaidya collapse}. Albeit quite
-academic, this process illustrates various features of black hole birth and dynamics.
+academic, this process illustrates various features of black hole birth and dynamics,
+in a way somehow complementary to the collapse of a dust ball.
 
 \section{The ingoing Vaidya metric}
 
@@ -51,11 +53,11 @@ of the 1-form $-\dd v$:
 is a null vector.
 \end{greybox}
 \begin{proof}
-In view of the metric components (\ref{e:vai:Vaidya_metric_null}),
-the coordinate vector field $\wpar_r$ is a null vector, since $g_{rr} = 0$.
+Since $g_{rr} = 0$ in the metric components (\ref{e:vai:Vaidya_metric_null}),
+the coordinate vector field $\wpar_r$ is a null vector.
 Its metric-dual is the 1-form
 $\uu{\wpar_r} = g_{\mu r}\dd x^\mu = g_{vr} \dd v = \dd v = - \uu{k}$.
-Hence
+Hence, by metric duality,
 \be \label{e:vai:k_d_dr}
     \w{k} = - \left. \der{}{r} \right| _{v,\th,\ph} ,
 \ee
@@ -84,13 +86,20 @@ with $\Lambda = 0$ and with the energy-momentum tensor
    \encadre{ \w{T} = \frac{M'(v)}{4\pi r^2}\, \uu{k} \otimes \uu{k}  } .
 \ee
 \end{greybox}
+
+\begin{remark}
+We have already noticed that Vaidya metric reduces to Schwarzschild metric for $M(v) = \mathrm{const}$.
+Equation~(\ref{e:vai:ener_mom_tensor}) gives then immediately $\w{T} = 0$ and we recover that
+Schwarzschild metric is a solution of the vacuum Einstein equation.
+\end{remark}
+
 The tensor (\ref{e:vai:ener_mom_tensor}) has the same
 structure as the energy-momentum tensor of the dust model considered in Chap.~\ref{s:lem}:
 $\w{T}_{\rm dust} = \rho  \, \uu{u} \otimes \uu{u} $ [Eq.~(\ref{e:lem:T_pressureless})].
 The main difference is that $\w{u}$ is a timelike vector (the dust 4-velocity), while
 $\w{k}$ is a null vector. For this reason, the energy-momentum tensor  (\ref{e:vai:ener_mom_tensor})
 is sometimes referred to as a \defin{null dust}\index{null!dust}\index{dust!null --} model \cite{Poiss04}.
-It corresponds physically to the energy-momentum tensor of some \emph{electromagnetic radiation} in the
+It corresponds physically to the energy-momentum tensor of some \emph{monochromatic electromagnetic radiation} in the
 \emph{geometrical optics}\index{geometrical optics} approximation (see Box~22.4 of Ref.~\cite{MisneTW73}):
 $\w{T}_{\rm rad} = q  \, \uu{K} \otimes \uu{K}$, where $q\geq 0$ and $\w{K} := \vw{\nabla}\Phi$ is the \emph{wave vector}\index{wave!vector}, $\Phi$ being the rapidly-varying
 phase in the geometrical optics decomposition $\w{A} = \mathrm{Re}(\mathrm{e}^{\mathrm{i}\Phi} \, \w{a})$ of the electromagnetic potential 1-form $\w{A}$. The quantity $q$ is related to the energy density
@@ -131,7 +140,7 @@ $\lambda := -r$.
 
 \subsection{Expression in ingoing Eddington-Finkelstein coordinates} \label{s:vai:IEF}
 
-To deal with the black hole formation in Vaidya spacetime, it will quite
+To deal with the black hole formation in Vaidya spacetime, it is quite
 convenient to work with the
 \defin{ingoing Eddington-Finkelstein (IEF) coordinates}\index{Eddington-Finkelstein!coordinates}\index{ingoing!Eddington-Finkelstein!coordinates}\index{IEF}
 $(t,r,\th,\ph)$ defined from the null coordinates $(v,r,\th,\ph)$ in the
@@ -200,10 +209,17 @@ Denoting by $m>0$ the constant value of $M(v)$ for $v > v_0$, we have then
       \end{array} \right.
 \ee
 The region for $v>v_0$ is denoted \emph{Schwarzschild} since for $M(v) = m = \mathrm{const}$,
-the Vaidya metric reduces to Schwarzschild metric, as we have already noticed
+the Vaidya metric reduces to Schwarzschild metric, as noticed
 in Sec.~\ref{s:vai:general}. The simplest example of a function $M(v)$
 obeying (\ref{e:vai:mass_function}) is $M(v) = m v/v_0$ for $v\in[0, v_0]$;
 it is shown in Fig.~\ref{f:vai:mass_function} for $v_0 = 3 m$.
+
+\subsection{Radial null geodesics}
+
+The equation for null radial curves is obtained by setting $\D\th=0$ and $\D\ph=0$ in the line element
+(\ref{e:fra:line_element})
+and searching for $\D s^2 = g_{\mu\nu}\, \D x^\mu \, \D x^\nu = 0$,
+with the $g_{\mu\nu}$'s read on (\ref{e:vai:metric_IEF}).
 
 \subsection{Black hole formation}
 
