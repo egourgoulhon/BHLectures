@@ -42,28 +42,34 @@ the ingoing Vaidya metric.
 
 A key property of the ingoing Vaidya metric is
 \begin{greybox}
-The vector field $\w{k}$, defined as the metric-dual\footnote{Cf. Sec.~\ref{s:bas:metric_dual};
-in index notation: $k^\alpha := - g^{\alpha\mu} \partial_\mu v = - \nabla^\alpha v \iff
-k_\alpha := - \partial_\alpha v $}
-of the 1-form $-\dd v$:
+The hypersurfaces $v = \mathrm{const}$ are null; a normal to them is the (null)
+vector\footnote{in index notation: $k^\alpha := - g^{\alpha\mu} \partial_\mu v = - \nabla^\alpha v \iff
+k_\alpha := - \partial_\alpha v $.}:
 \be \label{e:vai:def_k}
     \w{k} := - \vp{\dd v} = - \vw{\nabla} v \quad\iff\quad
-    \uu{k} := - \dd v ,
+    \uu{k} := - \dd v .
 \ee
-is a null vector.
-\end{greybox}
-\begin{proof}
-Since $g_{rr} = 0$ in the metric components (\ref{e:vai:Vaidya_metric_null}),
-the coordinate vector field $\wpar_r$ is a null vector.
-Its metric-dual is the 1-form
-$\uu{\wpar_r} = g_{\mu r}\dd x^\mu = g_{vr} \dd v = \dd v = - \uu{k}$.
-Hence, by metric duality,
+Moreover, $\w{k}$ is equal to minus the vector $\wpar_r$ of coordinates
+$(v,r,\th,\ph)$:
 \be \label{e:vai:k_d_dr}
     \w{k} = - \left. \der{}{r} \right| _{v,\th,\ph} ,
 \ee
-where we have rewritten the null vector $\wpar_r$ as $\left. \dert{}{r} \right| _{v,\th,\ph}$
+where we have rewritten $\wpar_r$ as $\left. \dert{}{r} \right| _{v,\th,\ph}$
 to distinguish it from the vector $\wpar_r$ of the IEF coordinates, to be
-introduced in Sec.~\ref{s:vai:IEF}. It follows that $\w{k}$ is a null vector.
+introduced in Sec.~\ref{s:vai:IEF}.
+\end{greybox}
+\begin{proof}
+Let $\Sigma_v$ be a hypersurface defined by $v = \mathrm{const}$.
+The metric induced by $\w{g}$ on $\Sigma_v$
+is obtained by setting $\dd v = 0$ in Eq.~(\ref{e:vai:Vaidya_metric_null}):
+$\left.\w{g}\right| _{\Sigma_v} = r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)$.
+This metric has clearly the signature $(0, +, +)$, i.e. it is degenerate, hence
+$\Sigma_v$ is a null hypersurface (cf. Sec.~\ref{s:def:hor_as_null}).
+By construction, $\w{k}$ is normal to $\Sigma_v$. It is thus a null vector.
+Besides, the metric dual of
+the coordinate vector field $\wpar_r$ is the 1-form
+$\uu{\wpar_r} = g_{\mu r}\dd x^\mu = g_{vr} \dd v = \dd v = - \uu{k}$,
+which proves Eq.~(\ref{e:vai:k_d_dr}).
 \end{proof}
 
 Since $\dd v$ is nowhere vanishing, $\w{k}$ is a nonzero null vector field on $\M$.
@@ -71,8 +77,8 @@ We may use it to set up the \emph{time orientation} of $(\M,\w{g})$
 by declaring that $\w{k}$ is future-oriented (cf. Sec.~\ref{s:fra:time_orientation}).
 
 As shown in the notebook~\ref{s:sam:Vaidya},
-the Ricci tensor of $\w{g}$ is very simple:
-\be
+the Ricci tensor of $\w{g}$ takes a simple form:
+\be \label{e:vai:Ricci_tensor}
     \w{R} = \frac{2 M'(v)}{r^2}\, \dd v \otimes \dd v ,
 \ee
 where $M'(v)$ stands for the derivative of the function $M(v)$.
@@ -89,7 +95,8 @@ with $\Lambda = 0$ and with the energy-momentum tensor
 
 \begin{remark}
 We have already noticed that Vaidya metric reduces to Schwarzschild metric for $M(v) = \mathrm{const}$.
-Equation~(\ref{e:vai:ener_mom_tensor}) gives then immediately $\w{T} = 0$ and we recover that
+This corresponds to $M'(v) = 0$, so that
+Equation~(\ref{e:vai:ener_mom_tensor}) reduces to $\w{T} = 0$ and we recover that
 Schwarzschild metric is a solution of the vacuum Einstein equation.
 \end{remark}
 
@@ -107,14 +114,21 @@ $\veps$ of the electromagnetic field as measured by an observer $\Obs$ of 4-velo
 by $\veps = \omega^2 q$, where $\omega = - \w{K}\cdot\w{u}$ is the frequency of the electromagnetic
 radiation as measured by $\Obs$.
 Maxwell equations\index{Maxwell equations} imply that $\w{K}$ is a null vector and that it is geodesic:
-$\w{\nabla}_{\w{K}}\, \w{K} = 0$. The geodesic field lines of $\w{K}$ are nothing but
+$\w{\nabla}_{\w{K}}\, \w{K} = 0$. The geodesic integral curves of $\w{K}$ are nothing but
 the \emph{light rays}\index{light!ray} of the geometrical optics framework.
-The geodesic character also holds for $\w{k}$ as defined by Eq.~(\ref{e:vai:def_k})
-(cf. the notebook~\ref{s:sam:Vaidya} for an explicit check):
+The geodesic character also holds for $\w{k}$ as defined by Eq.~(\ref{e:vai:def_k}),
+since $\w{k}$ is normal to the null hypersurfaces $v = \mathrm{const}$:
+the integral curves of $\w{k}$ are the null geodesic generators of these hypersurfaces
+(cf. Sec.~\ref{s:def:null_geod_gen}); moreover,
+we have exactly
 \be \label{e:vai:k_geodesic}
     \w{\nabla}_{\w{k}}\, \w{k} = 0 .
 \ee
-It follows then from the identity (\ref{e:vai:k_d_dr}) that the curves $(v,\th,\ph) = \mathrm{const}$
+This follows from Eq.~(\ref{e:def:wl_geod_kappa}) with $\wl = \w{k}$ and $\kappa = 0$
+by virtue of Eq.~(\ref{e:def:def_kappa}) with $\rho=0$ implied by
+Eq.~(\ref{e:def:wl_rho_u}) given that $u = v$ and $\w{k} =  - \vw{\nabla} v$ [Eq.~(\ref{e:vai:def_k})].
+Equations~(\ref{e:vai:k_geodesic}) and (\ref{e:vai:k_d_dr})
+imply that the curves $(v,\th,\ph) = \mathrm{const}$
 are null geodesics, $\lambda:=-r$ is an affine parameter along them and $\w{k}$ is
 the corresponding tangent vector.
 
@@ -132,7 +146,7 @@ Provided that $M(v)$ is an increasing function\footnote{by \emph{increasing}, it
 strictly increasing ($M'(v)>0$) or locally constant ($M'(v) = 0$).},
 the ingoing Vaidya spacetime $(\M,\w{g})$ is generated by a spherical symmetric electromagnetic radiation
 within the geometrical optics approximation. The corresponding light rays are the
-ingoing radial null geodesics
+\defin{ingoing radial null geodesics}\index{ingoing!radial!null geodesics}
 defined by $v=\mathrm{const}$, $\th=\mathrm{const}$ and $\ph=\mathrm{const}$.
 These geodesics admit $\w{k}$ as the tangent vector associated with their affine parameter
 $\lambda := -r$.
@@ -203,19 +217,19 @@ Denoting by $m>0$ the constant value of $M(v)$ for $v > v_0$, we have then
 \be \label{e:vai:mass_function}
     M(v) = \left\{ \begin{array}{ll}
      0 \quad \mbox{for} \ v < 0 \qquad & \mbox{(Minkowski region)} \\
-     \mbox{increases from}\ 0 \ \mbox{to}\ m \quad \mbox{for} \ 0 \leq v \leq v_0
+     \mbox{increasing from}\ 0 \ \mbox{to}\ m \quad \mbox{for} \ 0 \leq v \leq v_0
         & \mbox{(radiation region)} \\
       m \quad \mbox{for} \ v > v_0 \qquad & \mbox{(Schwarzschild region).}
       \end{array} \right.
 \ee
-The region for $v>v_0$ is denoted \emph{Schwarzschild} since for $M(v) = m = \mathrm{const}$,
+The region for $v>v_0$ is qualified as \emph{Schwarzschild} since for $M(v) = m = \mathrm{const}$,
 the Vaidya metric reduces to Schwarzschild metric, as noticed
 in Sec.~\ref{s:vai:general}. The simplest example of a function $M(v)$
 obeying (\ref{e:vai:mass_function}) is $M(v) = m v/v_0$ for $v\in[0, v_0]$;
 it is shown in Fig.~\ref{f:vai:mass_function} for $v_0 = 3 m$.
 
 
-\subsection{Radial null geodesics}
+\subsection{Outgoing radial null geodesics}
 
 Let us determine the radial null directions at each point by searching for
 null vectors of the form $\wl = \wpar_t + V \wpar_r$. The condition
@@ -227,8 +241,8 @@ $\w{g}$ yields immediately a quadratic equation for $V$:
     1 - \frac{2 M(t+ r)}{r}  = 0 .
 \]
 The two solutions are $V = -1$ and $V = [r - 2M(t + r)]/[r + 2M(t+r)]$.
-The null vector corresponding to the first solution is nothing but
-the vector $\w{k}$ introduced in Sec.~\ref{s:vai:general} [cf. Eq.~(\ref{e:vai:k_IEF})].
+The first solution gives back the ingoing null vector $\w{k}$ introduced in Sec.~\ref{s:vai:general}
+[cf. Eq.~(\ref{e:vai:k_IEF})].
 The null vector $\wl$ corresponding to the second solution is
 \be
     \wl = \wpar_t + \frac{r - 2M(t + r)}{r + 2M(t+r)}\, \wpar_r .
@@ -237,8 +251,8 @@ The null vector $\wl$ corresponding to the second solution is
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{vai_diagram.pdf}}
 \caption[]{\label{f:vai:diagram} \footnotesize
-Spacetime diagram of the Vaidya collapse based on the IEF coordinates $(t, r)$,
-for the mass function $M(v)$ shown in Fig.~\ref{f:vai:mass_function}.
+Spacetime diagram of the Vaidya collapse based on the IEF coordinates $(t, r)$
+and for the mass function $M(v)$ shown in Fig.~\ref{f:vai:mass_function}.
 The yellow area is the radiation region [cf. Eq.~(\ref{e:vai:mass_function})],
 below it lies the Minkowski region and above it the Schwarzchild one.
 The solid (resp. dashed) green curves are outgoing (resp. ingoing) radial
@@ -254,39 +268,85 @@ compared with Fig.~\ref{f:sch:rad_null_geod_EF}.
 
 \begin{greybox}
 The integral curves of the vector fields $\w{k}$ and $\wl$ are null geodesics.
-Those of $\w{k}$ are called the \defin{ingoing radial null geodesics}\index{ingoing!null geodesic},
+Those of $\w{k}$ are the \emph{ingoing radial null geodesics}\index{ingoing!radial!null geodesic}
+already discussed in Sec.~\ref{s:vai:general},
 while those of $\wl$ are called the \defin{outgoing radial null geodesics}\index{ingoing!null geodesic}.
 \end{greybox}
 
 \begin{proof}
-The geodesic character is easy for the integral curves of $\w{k}$, since the defining property (\ref{e:vai:def_k}) of the latter
-yields to
-\[
-    k^\mu \nabla_\mu k_\alpha = - k^\mu \underbrace{\nabla_\mu \nabla_\alpha v}_{\nabla_\alpha \nabla_\mu v}
-    = - k^\mu \nabla_\alpha \nabla_\mu v =  k^\mu \nabla_\alpha k_\mu
-    = \frac{1}{2} \nabla_\alpha (\underbrace{k_\mu k^\mu}_{0}) = 0 .
-\]
-Hence $\wnab_{\w{k}} \w{k} = 0$, i.e. $\w{k}$ is a geodesic vector field. Regarding
-$\wl$, a direct computation shows that it is pregeodesic:
+A direct computation shows that $\wl$ is a pregeodesic vector field:
 $\wnab_{\wl} \wl = \kappa \wl$, with $\kappa = - 4 [rM'(t+r) - M(t+r)]/[r + 2M(t+r)]^2$
 (cf. the notebook~\ref{s:sam:Vaidya}). It follows that the integral curves of
 $\wl$ are geodesics (cf. Sec.~\ref{s:geo:gener_param}).
 \end{proof}
-Some radial null geodesics are drawn in green in Fig.~\ref{f:vai:diagram}.
+The differential equation governing the outgoing radial null geodesics
+is obtained by demanding that $\wl$ is their tangent vector:
+\be \label{e:vai:ODE_outgoing_null}
+    \frac{\D r}{\D t} = \frac{r - 2M(t + r)}{r + 2M(t+r)} .
+\ee
+Except for $M$ being a constant function, this ODE can be solved only numerically.
+The result is shown in Fig.~\ref{f:vai:diagram} for the function $M$
+of Fig.~\ref{f:vai:mass_function} (green curves).
 
 \begin{remark}
-As in the Schwarzschild case (cf. Remark~\ref{r:sch:outgoing_ingoing} on p.~\pageref{r:sch:outgoing_ingoing}),
+As in the Schwarzschild case (cf. Remark~\ref{r:sch:outgoing_ingoing}
+on p.~\pageref{r:sch:outgoing_ingoing}),
 the outgoing radial null geodesics are actually \emph{ingoing}, i.e. have $r$ decreasing towards the future,
 as soon as $r < 2 M(t+r)$. This corresponds to the region bounded by the red curve in Fig.~\ref{f:vai:diagram}.
 \end{remark}
 
+\subsection{Curvature singularity}
+
+The Kretschmann scalar\index{Kretschmann scalar!of Vaidya metric}
+$K := R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma}$
+(cf. Sec.~\ref{s:sch:singularities})
+is computed in the notebook~\ref{s:sam:Vaidya}:
+\be
+    K = \frac{48 M(t + r)^2}{r^6} .
+\ee
+$K$ is identically zero in the Minkowski region ($M(r+t) = 0$), as it should!
+It diverges at $r=0$ in the radiation and Schwarzschild regions, tracing the
+existence of a curvature singularity there. Note that the curvature
+singularity appears as soon as the radiation arrive at $r=0$, i.e. for
+$t=0$ (cf. Fig.~\ref{f:vai:diagram}).
+
+\begin{remark}
+The Kretschmann scalar of Vaidya metric has the same structural form
+as that of the Schwarzschild metric, compare Eq.~(\ref{e:sch:value_Kretschmann}),
+while a priori $K$ could have
+contained some term involving the derivative of $M(v)$. Indeed $M'(v)$
+appears in some components of the Riemann tensor, since it is present in the
+components of the Ricci tensor, as given by Eq.~(\ref{e:vai:Ricci_tensor}).
+\end{remark}
+
+\begin{remark}
+Since the Ricci tensor of the Vaidya metric is not identically zero
+[cf. Eq.~(\ref{e:vai:Ricci_tensor})], other curvature invariants that one might
+have think of to track the curvature singularity are the Ricci scalar $R := g^{\mu\nu} R_{\mu\nu}$
+and the Ricci ``squared'' $R_{\mu\nu} R^{\mu\nu}$. However, they are both identically zero
+since $\w{k}$ is a null vector.
+\end{remark}
+
+
 \subsection{Black hole formation}
 
-In spherical symmetry, the consideration of the radial null geodesics give us
-a direct access to the black hole event horizon. It appears clearly on
+In spherical symmetry, the inspection of the radial null geodesics give us
+a direct access to the black hole event horizon.
+It appears clearly on Fig.~\ref{f:vai:diagram} that the outgoing
+radial null geodesics that cross $r=0$ for $t$ larger than a certain
+threshold, $t_{\rm hb}$ say\footnote{As in Chap.~\ref{s:lem}, the subscipt `hb' stands
+for \emph{horizon birth}.}, do not reach
+arbitraly large values of $r$. They all eventually
+fall back to the curvature singularity at $r=0$.
+The value of $t_{\rm hb}$ can be determined by integrating Eq.~(\ref{e:vai:ODE_outgoing_null})
+backward in time from the initial value $r = 2m$ at $t = t_{\rm init}$, with $t_{\rm init} > v_0 - 2 m$.
+Indeed, $r=2m$ is the location of the event horizon
+in the Schwarzschild region $t + r > v_0$, which is generated by null geodesics from the
+outgoing family.
 
 
-\subsection{Curvature singularity}
+
+
 
 
 
@@ -299,6 +359,9 @@ a direct access to the black hole event horizon. It appears clearly on
 
 
 
+%\section{Going further}
+
+%\cite{Krish14}
 
 
 
