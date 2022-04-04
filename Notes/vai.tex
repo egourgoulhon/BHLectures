@@ -311,7 +311,7 @@ two different choices of $S(x)$ in formula~(\ref{e:vai:mass_function}).
 }
 \end{figure}
 
-\subsection{Solution for $M(v)$ piecewise linear}
+\subsection{Solution for $M(v)$ piecewise linear} \label{s:vai:sol_M_linear}
 
 Let us consider the simplest choice for $M(v)$, i.e.
 Eq.~(\ref{e:vai:S_linear}).
@@ -334,7 +334,7 @@ conformal isometry\index{conformal!isometry}\index{isometry!conformal --} of
 $\w{g}$ with a constant conformal factor $\mu^2$. The homotheties $(H_\mu)_{\mu\in \R_{>0}}$
 form a 1-dimensional
 group, the generator of which is obtained by considering infinitesimal transformations,
-i.e. homotheties of factor $\mu = 1 + \D\lambda$ where $\D\lambda$ is
+i.e. homotheties of ratio $\mu = 1 + \D\lambda$ where $\D\lambda$ is
 infinitely small. The components of the corresponding displacement vector are $\D v = \D\lambda \, v$
 and $\D r = \D\lambda\,  r$, so that formula~(\ref{e:neh:xi_dxdt}) (with $t \leftrightarrow \lambda$)
 leads to the generator
@@ -344,7 +344,7 @@ leads to the generator
 \ee
 The second equality follows form the change of coordinates (\ref{e:vai:t_v_r}).
 That $\w{\xi}$ has the same expression with respect to $(v, r)$ and $(t, r)$
-coordinates should not be surprising since the homethety $H_\mu$ has the
+coordinates should not be surprising since the homothety $H_\mu$ has the
 same expression in both coordinate systems:  $H_\mu:\ (t, r) \mapsto (\mu t, \mu r)$,
 given that $\mu v = \mu(t + r) = \mu t + \mu r$.
 The vector field $\w{\xi}$ is called a
@@ -366,9 +366,6 @@ called \defin{conformal Killing vectors}\index{conformal!Killing vector}.
 They fulfill $\Lie{\xi} \w{g} = \lambda \w{g}$, where $\lambda$ is a scalar field.
 Equation~(\ref{e:vai:Lie_xi_g}) constitutes the particular subcase $\lambda = 2$.
 \end{remark}
-
-
-
 
 Let us introduce the variable
 \be
@@ -412,9 +409,9 @@ In the radiation region, the outgoing radial null geodesics form
 a 3-parameter family of curves $\left(\Li_{(r_0,\th,\ph)}\right)$,
 where the parameter $r_0 \in \R^+$ is the value of $r$
 at the inner edge of the radiation shell ($v=0$).
-The equation of $\Li_{(r_0,\th,\ph)}$ in terms of the IEF coordinates
-is given in parametric form as
-\be
+The parametric equation of $\Li_{(r_0,\th,\ph)}$ in terms of the IEF
+coordinates is
+\be \label{e:vai:eq_out_v0_small}
 \begin{cases}
 t = (x - 1) f(x) \\
 r = f(x) \\
@@ -423,11 +420,41 @@ r = f(x) \\
 \qquad 0 \leq x \leq x_{\rm max}
 \ee
 where the function $f(x)$ is given by the right-hand side of
-Eq.~(\ref{e:vai:sol_r_x_v0_small}) and $x_{\rm max} = +\infty$ if $r$ reaches
+Eq.~(\ref{e:vai:sol_r_x_v0_small}) and either $x_{\rm max} = +\infty$ if $r$ reaches
 $0$ along $\Li_{(r_0,\th,\ph)}$ for $v < v_0$
 or $x_{\rm max}$ is the solution of $x_{\rm max} f(x_{\rm max}) = v_0$
 (outer edge of the radiation shell).
 \end{greybox}
+
+Some outgoing radial null geodesics are depicted as solid green lines
+in Fig.~\ref{f:vai:diag_S0}. In the radiation region, they obey
+Eqs.~(\ref{e:vai:eq_out_v0_small})-(\ref{e:vai:sol_r_x_v0_small}).
+It appears clearly on the figure that, in the radiation region, a homothety of center $(t, r) = (0,0)$
+and of ratio $\mu$
+transforms a geodesic $\Li_{(r_0,\th,\ph)}$ to the geodesic $\Li_{(\mu r_0,\th,\ph)}$ of
+the same family, in agreement with the homothetic symmetry discussed
+above.
+
+In the Minkowski region, the outgoing radial null geodesics are straight line
+segment inclined at $+45^\circ$ in Fig.~\ref{f:vai:diag_S0}, while
+in the Schwarzschid region, they are curves obeying Eq.~(\ref{e:sch:outgoing_null_geod_EF})
+(with the change of notation $\ti \leftrightarrow t$).
+
+
+\subsection{Black hole formation}
+
+In spherical symmetry, the inspection of the radial null geodesics gives us
+a direct access to the black hole event horizon.
+Let us determine explicitely the location of the latter for the homothetic
+shell collapse considered above, since we have at disposal the solution
+(\ref{e:vai:sol_r_x_v0_small}) for the outgoing radial null geodesics.
+
+
+
+$t_{\rm hb}$ say\footnote{As in Chap.~\ref{s:lem}, the subscipt `hb' stands
+for \emph{horizon birth}.}
+
+
 
 \subsection{Curvature singularity}
 
@@ -461,22 +488,6 @@ and the Ricci ``squared'' $R_{\mu\nu} R^{\mu\nu}$. However, they are both identi
 since $\w{k}$ is a null vector.
 \end{remark}
 
-
-\subsection{Black hole formation}
-
-In spherical symmetry, the inspection of the radial null geodesics give us
-a direct access to the black hole event horizon.
-It appears clearly on Fig.~\ref{f:vai:diag_S0} that the outgoing
-radial null geodesics that cross $r=0$ for $t$ larger than a certain
-threshold, $t_{\rm hb}$ say\footnote{As in Chap.~\ref{s:lem}, the subscipt `hb' stands
-for \emph{horizon birth}.}, do not reach
-arbitraly large values of $r$. They all eventually
-fall back to the curvature singularity at $r=0$.
-The value of $t_{\rm hb}$ can be determined by integrating Eq.~(\ref{e:vai:ODE_outgoing_null})
-backward in time from the initial value $r = 2m$ at $t = t_{\rm init}$, with $t_{\rm init} > v_0 - 2 m$.
-Indeed, $r=2m$ is the location of the event horizon
-in the Schwarzschild region $t + r > v_0$, which is generated by null geodesics from the
-outgoing family.
 
 
 
