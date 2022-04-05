@@ -325,16 +325,16 @@ takes the form
 \ee
 where $\alpha$ is the positive constant defined by
 \be \label{e:vai:def_alpha}
-    \alpha := \frac{2m}{v_0} .
+   \encadre{ \alpha := \frac{2m}{v_0} }.
 \ee
-It is immediately apparent that on (\ref{e:vai:self_similar_metric})
-that for any $\mu > 0$, the homothety $H_\mu:\ (v, r) \mapsto (\mu v, \mu r)$
-maps $\w{g}$ to $\mu^2 \w{g}$. Hence $H_\mu$ is a
+It is immediately apparent on (\ref{e:vai:self_similar_metric})
+that for any $\lambda > 0$, the homothety $H_\lambda:\ (v, r) \mapsto (\lambda v, \lambda r)$
+maps $\w{g}$ to $\lambda^2 \w{g}$. Hence $H_\lambda$ is a
 conformal isometry\index{conformal!isometry}\index{isometry!conformal --} of
-$\w{g}$ with a constant conformal factor $\mu^2$. The homotheties $(H_\mu)_{\mu\in \R_{>0}}$
+$\w{g}$ with a constant conformal factor $\lambda^2$. The homotheties $(H_\lambda)_{\lambda\in \R_{>0}}$
 form a 1-dimensional
 group, the generator of which is obtained by considering infinitesimal transformations,
-i.e. homotheties of ratio $\mu = 1 + \D\lambda$ where $\D\lambda$ is
+i.e. homotheties of ratio $\lambda = 1 + \D\lambda$ where $\D\lambda$ is
 infinitely small. The components of the corresponding displacement vector are $\D v = \D\lambda \, v$
 and $\D r = \D\lambda\,  r$, so that formula~(\ref{e:neh:xi_dxdt}) (with $t \leftrightarrow \lambda$)
 leads to the generator
@@ -344,9 +344,9 @@ leads to the generator
 \ee
 The second equality follows form the change of coordinates (\ref{e:vai:t_v_r}).
 That $\w{\xi}$ has the same expression with respect to $(v, r)$ and $(t, r)$
-coordinates should not be surprising since the homothety $H_\mu$ has the
-same expression in both coordinate systems:  $H_\mu:\ (t, r) \mapsto (\mu t, \mu r)$,
-given that $\mu v = \mu(t + r) = \mu t + \mu r$.
+coordinates should not be surprising since the homothety $H_\lambda$ has the
+same expression in both coordinate systems:  $H_\lambda:\ (t, r) \mapsto (\lambda t, \lambda r)$,
+given that $\lambda v = \lambda(t + r) = \lambda t + \lambda r$.
 The vector field $\w{\xi}$ is called a
 \defin{homothetic Killing vector}\index{homothetic!Killing vector}\index{Killing!vector!homothetic --}.
 The Lie derivative of $\w{g}$ along $\w{\xi}$ is twice $\w{g}$ (cf. the notebook~\ref{s:sam:Vaidya}
@@ -359,19 +359,19 @@ for the computation):
 A \emph{homothetic Killing vector} is not a \emph{Killing vector},
 for the right-hand side of Eq.~(\ref{e:vai:Lie_xi_g}) would be zero if
 $\w{\xi}$ were a Killing vector [cf. Eq.~(\ref{e:neh:Lie_xi_g})].
-In other words, except for $\mu=1$, the homotheties $H_\mu$ are not isometries,
+In other words, except for $\lambda=1$, the homotheties $H_\lambda$ are not isometries,
 but only conformal isometries.
 Generally, vector fields generating conformal isometries are
 called \defin{conformal Killing vectors}\index{conformal!Killing vector}.
-They fulfill $\Lie{\xi} \w{g} = \lambda \w{g}$, where $\lambda$ is a scalar field.
-Equation~(\ref{e:vai:Lie_xi_g}) constitutes the particular subcase $\lambda = 2$.
+They fulfill $\Lie{\xi} \w{g} = \sigma \w{g}$, where $\sigma$ is a scalar field.
+Equation~(\ref{e:vai:Lie_xi_g}) constitutes the particular subcase $\sigma = 2$.
 \end{remark}
 
 Let us introduce the variable
 \be
     x := \frac{v}{r} ,
 \ee
-which is invariant under the homotheties $H_\mu$.
+which is invariant under the homotheties $H_\lambda$.
 The differential equation governing the outgoing radial null
 geodesics, Eq.~(\ref{e:vai:ODE_outgoing_null}),
 can be rewritten as $\D t / \D r = (1 + \alpha x)/(1 - \alpha x)$ [cf. Eq.~(\ref{e:vai:def_alpha})].
@@ -382,9 +382,9 @@ we get the equivalent form
 \ee
 Fortunately, this ordinary differential equation is separable, so that its
 solutions are easily obtained by quadrature. They depend on whether the
-quadratic polynomial $P_\alpha(x) := \alpha x^2 - x + 2$ admit some real roots
-or not. Let us first focus on the case where $P_\alpha$ has not real root.
-This occurs if, and only if,
+quadratic polynomial $P_\alpha(x) := \alpha x^2 - x + 2$ admits real roots
+or not. Let us first focus on the case where $P_\alpha$ has no real root.
+The discriminant being $1 - 8\alpha$, this occurs if, and only if,
 \be \label{e:vai:v0_small}
     \alpha > \frac{1}{8} \iff v_0 < 16 \, m .
 \ee
@@ -394,14 +394,14 @@ as
 \be \label{e:vai:ODE_outgoing_x_sep}
     \D \ln r = \frac{1 - \alpha x}{\alpha x^2 - x + 2}\, \D x ,
 \ee
-the solution of which is
+the solution of which is $r = r_0 f_\alpha(x)$, where
 \be \label{e:vai:sol_r_x_v0_small}
- \encadre{   r = \frac{\sqrt{2}\,  r_0}{\sqrt{\alpha x^2 - x + 2}}
+ \encadre{   f_\alpha(x) := \frac{\sqrt{2}}{\sqrt{\alpha x^2 - x + 2}}
     \exp\left\{ \frac{1}{\sqrt{8\alpha - 1}} \left[
     \arctan \left(\frac{2\alpha x - 1}{\sqrt{8\alpha - 1}} \right)
     + \arctan\left( \frac{1}{\sqrt{8\alpha - 1}} \right)\right] \right\} },
 \ee
-where the integration constant $r_0>0$ is the value of $r$ at $x=0$, or equivalently
+and the integration constant $r_0>0$ is the value of $r$ at $x=0$, or equivalently
 at $v = 0$.
 Hence:
 \begin{greybox}
@@ -413,27 +413,60 @@ The parametric equation of $\Li_{(r_0,\th,\ph)}$ in terms of the IEF
 coordinates is
 \be \label{e:vai:eq_out_v0_small}
 \begin{cases}
-t = (x - 1) f(x) \\
-r = f(x) \\
+t = r_0 (x - 1) f_\alpha(x) \\
+r = r_0 f_\alpha(x) \\
 \th = \mathrm{const}, \ph = \mathrm{const}
 \end{cases}
 \qquad 0 \leq x \leq x_{\rm max}
 \ee
-where the function $f(x)$ is given by the right-hand side of
-Eq.~(\ref{e:vai:sol_r_x_v0_small}) and either $x_{\rm max} = +\infty$ if $r$ reaches
-$0$ along $\Li_{(r_0,\th,\ph)}$ for $v < v_0$
-or $x_{\rm max}$ is the solution of $x_{\rm max} f(x_{\rm max}) = v_0$
-(outer edge of the radiation shell).
+where the function $f_\alpha(x)$ is defined by Eq.~(\ref{e:vai:sol_r_x_v0_small})
+and either $x_{\rm max} = +\infty$ ($\Li_{(r_0,\th,\ph)}$ reaches $r=0$ for some $v < v_0$)
+or $x_{\rm max}$ is the solution of $r_0 x_{\rm max} f_\alpha(x_{\rm max}) = v_0$
+($\Li_{(r_0,\th,\ph)}$ reaches the outer edge of the radiation shell).
 \end{greybox}
+The function $f_\alpha(x)$ is plotted in Fig.~\ref{f:vai:f_alpha_x}.
+It increases from $1$ at $x=0$ to some maximum reached for $x=1/\alpha$
+and then decreases to $0$ as $x\to +\infty$. This behavior follows
+directly from the sign of the numerator $1 - \alpha x$ in Eq.~(\ref{e:vai:ODE_outgoing_x_sep}),
+given that the denominator $\alpha x^2 - x + 2$ is always positive for $\alpha > 1/8$.
+Note that it could be that $x_{\rm max} < 1/\alpha$ so that the maximum
+of $f_\alpha(x)$ is actually not reached along $\Li_{(r_0,\th,\ph)}$. In that
+case, $r$ increases monotically along $\Li_{(r_0,\th,\ph)}$ in the radiation region,
+from $r_0$ to $r_0 f_\alpha(x_{\rm max})$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{vai_f_alpha_x.pdf}}
+\caption[]{\label{f:vai:f_alpha_x} \footnotesize
+Function $f_\alpha(x)$, defined by Eq.~(\ref{e:vai:sol_r_x_v0_small}),
+for some selected values of $\alpha$. For each value of $\alpha$, the maximum
+of $f_\alpha(x)$ is achieved for $x=1/\alpha$.
+}
+\end{figure}
+
+It appears clearly on Eq.~(\ref{e:vai:eq_out_v0_small}) that
+the homothety $H_\lambda:\ (t, r) \mapsto (\lambda t, \lambda r)$
+transforms the geodesic $\Li_{(r_0,\th,\ph)}$ into the geodesic $\Li_{(\lambda r_0,\th,\ph)}$,
+in agreement with the homothetic symmetry of the radiation region discussed
+above.
 
 Some outgoing radial null geodesics are depicted as solid green lines
 in Fig.~\ref{f:vai:diag_S0}. In the radiation region, they obey
-Eqs.~(\ref{e:vai:eq_out_v0_small})-(\ref{e:vai:sol_r_x_v0_small}).
-It appears clearly on the figure that, in the radiation region, a homothety of center $(t, r) = (0,0)$
-and of ratio $\mu$
-transforms a geodesic $\Li_{(r_0,\th,\ph)}$ to the geodesic $\Li_{(\mu r_0,\th,\ph)}$ of
-the same family, in agreement with the homothetic symmetry discussed
-above.
+Eq.~(\ref{e:vai:eq_out_v0_small}).
+Note that the homothetic symmetry appears clearly on the figure.
+If a geodesic $\Li_{(r_0,\th,\ph)}$ has a turning point in terms of $r$ in the
+radiation region, it must located at $x = 1/\alpha$, i.e. at $t/r = 1/\alpha - 1$,
+or equivalently at
+\be \label{e:vai:r_max_out}
+  t = \left( \frac{v_0}{2m} - 1 \right) r .
+\ee
+The above equation defines a straight line through $(t,r) = (0,0)$,
+whose intersection with the radiation region is depicted by a red segment
+in Fig.~\ref{f:vai:diag_S0}.
+\begin{remark}
+The turning point value (\ref{e:vai:r_max_out}) can be obtained
+directly by setting $\D r / \D t = 0$ in Eq.~(\ref{e:vai:ODE_outgoing_null})
+and using the value (\ref{e:vai:S_linear}) for $M(v)$.
+\end{remark}
 
 In the Minkowski region, the outgoing radial null geodesics are straight line
 segment inclined at $+45^\circ$ in Fig.~\ref{f:vai:diag_S0}, while
@@ -445,9 +478,9 @@ in the Schwarzschid region, they are curves obeying Eq.~(\ref{e:sch:outgoing_nul
 
 In spherical symmetry, the inspection of the radial null geodesics gives us
 a direct access to the black hole event horizon.
-Let us determine explicitely the location of the latter for the homothetic
-shell collapse considered above, since we have at disposal the solution
-(\ref{e:vai:sol_r_x_v0_small}) for the outgoing radial null geodesics.
+Let us determine the location of the latter for the homothetic
+shell collapse considered above, since we have at disposal the exact solution
+(\ref{e:vai:eq_out_v0_small}) for the outgoing radial null geodesics.
 
 
 
