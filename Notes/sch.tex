@@ -382,13 +382,13 @@ cones are depicted in yellow.}
 \item the \defin{outgoing radial null geodesics}\index{outgoing!null geodesic}, whose
 equation is
 \be \label{e:sch:outgoing_null_geod}
-    t = r + 2 m \ln \left| \frac{r}{2m} - 1 \right| + u ,
+   \encadre{ t = r + 2 m \ln \left| \frac{r}{2m} - 1 \right| + u },
 \ee
 where $u$ is a constant;
 \item  the \defin{ingoing radial null geodesics}\index{ingoing!null geodesic}, whose
 equation is
 \be \label{e:sch:ingoing_null_geod}
-    t = - r - 2 m \ln \left| \frac{r}{2m} - 1 \right| + v ,
+  \encadre{ t = - r - 2 m \ln \left| \frac{r}{2m} - 1 \right| + v },
 \ee
 where $v$ is a constant.
 \end{itemize}
@@ -397,7 +397,8 @@ By introducing the \defin{tortoise coordinate}\index{tortoise coordinate}
 \be \label{e:sch:def_tortoise}
     r_* := r + 2 m \ln \left| \frac{r}{2m} - 1 \right| ,
 \ee
-one may rewrite the above equations as
+one may rewrite Eqs.~(\ref{e:sch:outgoing_null_geod})-(\ref{e:sch:ingoing_null_geod}) as
+respectively
 \bea
     &  & t = r_* + u \\
     &  & t = -r_* + v . \label{e:sch:v_advanced_tortoise}
@@ -813,36 +814,59 @@ leads to
     - \left( \frac{\D r}{\D \ti} \right)^2 + \frac{4 m}{r + 2 m}\,  \frac{\D r}{\D \ti}
     - \frac{r - 2m}{r + 2m} = 0 .
 \]
-The solutions of this quadratic equation in $\D r / \D\ti$ are
+The two solutions of this quadratic equation in $\D r / \D\ti$ are
 \be \label{e:sch:drdt_rad_null_geod}
     \frac{\D r}{\D \ti} = \frac{\pm r - 2 m}{r + 2m} .
 \ee
-For $\pm = -$, we get $\D r / \D \ti = -1$, so that the integration is
+For the $-$ sign in $\pm$, we get $\D r / \D \ti = -1$, so that the integration is
 immediate:
 \be \label{e:sch:ingoing_null_geod_EF}
-    \ti = - r + v ,
+    \encadre{ \ti = - r + v },\quad (\th,\ph) = \mathrm{const},
 \ee
-where the constant $v\in \R$ labels the null curve. The simple equation (\ref{e:sch:ingoing_null_geod_EF})
-reflects the construction of the IEF coordinates onto the ingoing radial null geodesics; in
+where the constant $v\in \R$ labels the null curve, along with $(\th,\ph)$.
+The simplicity of Eq.~(\ref{e:sch:ingoing_null_geod_EF})
+reflects the construction of the IEF coordinates on the ingoing radial null geodesics.
+Note that in
 $\M_{\rm SD}$, Eq.~(\ref{e:sch:ingoing_null_geod_EF}) is equivalent to Eq.~(\ref{e:sch:ingoing_null_geod}),
 given relation (\ref{e:sch:ti_t_r}) between $\ti$ and $t$.
 
-For $\pm = +$ in Eq.~(\ref{e:sch:drdt_rad_null_geod}), we get
+For $\pm$ equal to $+$ in Eq.~(\ref{e:sch:drdt_rad_null_geod}), we get
 $\D r / \D \ti = (r - 2m)/(r + 2m)$. To proceed, we have to distinguish two cases.
 First, if $r\neq 2m$, the equation can be rewritten as
 \[
-    \D \ti = \frac{r + 2m}{r - 2m} \D r ,
+    \D \ti = \frac{r + 2m}{r - 2m} \D r  = \left( 1 + \frac{4m}{r - 2m} \right) \D r,
 \]
 the integration of which leads to
 \be \label{e:sch:outgoing_null_geod_EF}
-    \ti = r + 4 m \ln \left| \frac{r}{2m} - 1 \right| + u ,
+    \encadre{ \ti = r + 4 m \ln \left| \frac{r}{2m} - 1 \right| + u },
+    \quad (\th,\ph) = \mathrm{const},
 \ee
-where the integration constant $u\in \R$ labels the null curve.
-The equation of the outgoing radial null geodesics is obtained
-by combining (\ref{e:sch:outgoing_null_geod}) and (\ref{e:sch:ti_t_r}):
+where the integration constant $u\in \R$ labels the null curve, along with $(\th,\ph)$.
+Since $r\neq 2m$, Eq.~(\ref{e:sch:outgoing_null_geod_EF}) regards $\M_{\rm SD}$
+and we actually recover Eq.~(\ref{e:sch:outgoing_null_geod}),
+given relation (\ref{e:sch:ti_t_r}) between $\ti$ and $t$. If $r=2m$,
+Eq.~(\ref{e:sch:drdt_rad_null_geod}) with $\pm$ equal to $+$ leads to
+$\D r / \D \ti = 0$, so that the equation of the radial null curve is
+$r = \mathrm{const}$. The constant being necessarily $2m$, we get
+\be \label{e:sch:outgoing_null_geod_H}
+    \encadre{r = 2 m} ,\quad (\th,\ph) = \mathrm{const}.
+\ee
+These null curves, which form a family labelled by $(\th,\ph)$, are actually
+the null geodesics generating the Killing horizon $\Hor$ (cf. Sec.~\ref{s:sch:Schwarz_hor}).
+Indeed, it follows from Eq.~(\ref{e:sch:outgoing_null_geod_H}) that their tangent
+vector is $\wpar_{\ti} = \w{\xi}$, which, for $r=2m$, is the null normal of $\Hor$.
 
+The null geodesics (\ref{e:sch:outgoing_null_geod_H}) had not been found in
+Sec.~\ref{s:sch:rad_null_geod}, since they don't belong to $\M_{\rm SD}$. We may consider
+that they extend the outgoing family, since (i) they have been obtained for the same
+choice $+$ of the $\pm$ sign in Eq.~(\ref{e:sch:drdt_rad_null_geod}) as the
+outgoing geodesics (\ref{e:sch:outgoing_null_geod_EF}) and (ii) they correspond
+to the limiting case $r = \mathrm{const}$ separating the two subfamilies of the outgoing
+geodesics (\ref{e:sch:outgoing_null_geod_EF}): those with $r>2m$, which have $r$ increasing
+towards the future (and therefore are truely ``outgoing'') and those with $r<2m$,
+which have $r$ decreasing towards the future.
 
-The radial null geodesics are depicted in Fig.~\ref{f:sch:rad_null_geod_EF}
+The ingoing and outgoing radial null geodesics are depicted in Fig.~\ref{f:sch:rad_null_geod_EF}
 in terms of the IEF coordinates.
 
 \subsection{Time orientation of the spacetime manifold} \label{s:sch:time_orientation}
