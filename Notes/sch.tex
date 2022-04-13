@@ -804,18 +804,44 @@ cones are depicted in yellow.}
 
 \subsection{Radial null geodesics in terms of the Eddington-Finkelstein coordinates}
 
-By construction, the equation of the ingoing radial null geodesics
-in terms of the IEF coordinates is very simple:
+Let us search directly for the radial null geodesics on the IEF domain $\M_{\rm IEF}$
+by looking for the radial null curves of the metric (\ref{e:sch:Schwarz_metric_EF}).
+The vanishing of the line element $\D s^2 = \w{g}(\D\w{x},\D\w{x})$ for the
+radial displacement $\D\w{x} = \D\ti \, \wpar_{\ti} +  \D r \, \wpar_{\tilde{r}}$
+leads to
+\[
+    - \left( \frac{\D r}{\D \ti} \right)^2 + \frac{4 m}{r + 2 m}\,  \frac{\D r}{\D \ti}
+    - \frac{r - 2m}{r + 2m} = 0 .
+\]
+The solutions of this quadratic equation in $\D r / \D\ti$ are
+\be \label{e:sch:drdt_rad_null_geod}
+    \frac{\D r}{\D \ti} = \frac{\pm r - 2 m}{r + 2m} .
+\ee
+For $\pm = -$, we get $\D r / \D \ti = -1$, so that the integration is
+immediate:
 \be \label{e:sch:ingoing_null_geod_EF}
     \ti = - r + v ,
 \ee
-where the constant $v\in \R$ labels the geodesic.
-The equation of the outgoing radial null geodesics is obtained
-by combining (\ref{e:sch:outgoing_null_geod}) and (\ref{e:sch:ti_t_r}):
+where the constant $v\in \R$ labels the null curve. The simple equation (\ref{e:sch:ingoing_null_geod_EF})
+reflects the construction of the IEF coordinates onto the ingoing radial null geodesics; in
+$\M_{\rm SD}$, Eq.~(\ref{e:sch:ingoing_null_geod_EF}) is equivalent to Eq.~(\ref{e:sch:ingoing_null_geod}),
+given relation (\ref{e:sch:ti_t_r}) between $\ti$ and $t$.
+
+For $\pm = +$ in Eq.~(\ref{e:sch:drdt_rad_null_geod}), we get
+$\D r / \D \ti = (r - 2m)/(r + 2m)$. To proceed, we have to distinguish two cases.
+First, if $r\neq 2m$, the equation can be rewritten as
+\[
+    \D \ti = \frac{r + 2m}{r - 2m} \D r ,
+\]
+the integration of which leads to
 \be \label{e:sch:outgoing_null_geod_EF}
     \ti = r + 4 m \ln \left| \frac{r}{2m} - 1 \right| + u ,
 \ee
-where the constant $u\in \R$ labels the geodesic.
+where the integration constant $u\in \R$ labels the null curve.
+The equation of the outgoing radial null geodesics is obtained
+by combining (\ref{e:sch:outgoing_null_geod}) and (\ref{e:sch:ti_t_r}):
+
+
 The radial null geodesics are depicted in Fig.~\ref{f:sch:rad_null_geod_EF}
 in terms of the IEF coordinates.
 
