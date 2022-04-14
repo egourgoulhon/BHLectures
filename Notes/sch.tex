@@ -373,25 +373,37 @@ of sign in $\pm$:
 \caption[]{\label{f:sch:rad_null_geod} \footnotesize
 Radial null geodesics of Schwarzschild spacetime, plotted in terms
 of Schwarzschild-Droste coordinates $(t,r)$: the solid (resp. dashed) lines
-correspond to outgoing (resp. ingoing) geodesics, as given by Eq.~(\ref{e:sch:outgoing_null_geod})
+correspond to outgoing (resp. ingoing) geodesics $\Li^{\rm out}_{(u,\th,\ph)}$
+(resp. $\Li^{\rm in}_{(v,\th,\ph)}$), as given by Eq.~(\ref{e:sch:outgoing_null_geod})
 (resp. Eq.~(\ref{e:sch:ingoing_null_geod})). The interiors of some future light
 cones are depicted in yellow.}
 \end{figure}
 
 \begin{itemize}
-\item the \defin{outgoing radial null geodesics}\index{outgoing!null geodesic}, whose
+\item the \defin{outgoing radial null geodesics}\index{outgoing!null geodesic}
+$\Li^{\rm out}_{(u,\th,\ph)}$, whose
 equation is
 \be \label{e:sch:outgoing_null_geod}
+   \Li^{\rm out}_{(u,\th,\ph)}:\quad
    \encadre{ t = r + 2 m \ln \left| \frac{r}{2m} - 1 \right| + u },
 \ee
-where $u$ is a constant;
-\item  the \defin{ingoing radial null geodesics}\index{ingoing!null geodesic}, whose
+where $u\in \R$ is a constant along $\Li^{\rm out}_{(u,\th,\ph)}$;
+\item  the \defin{ingoing radial null geodesics}\index{ingoing!null geodesic}
+$\Li^{\rm in}_{(v,\th,\ph)}$, whose
 equation is
 \be \label{e:sch:ingoing_null_geod}
-  \encadre{ t = - r - 2 m \ln \left| \frac{r}{2m} - 1 \right| + v },
+ \Li^{\rm in}_{(v,\th,\ph)}:\quad  \encadre{ t = - r - 2 m \ln \left| \frac{r}{2m} - 1 \right| + v },
 \ee
-where $v$ is a constant.
+where $v\in \R$ is a constant along $\Li^{\rm in}_{(v,\th,\ph)}$.
 \end{itemize}
+Note that along a given outgoing radial null geodesic, $(u,\th,\ph)$ are constant and that
+two outgoing radial null geodesics that have distinct $(u,\th,\ph)$ are distinct. We can thus
+use the triplet $(u,\th,\ph)$ to label the outgoing radial null geodesics,
+leading to the notation $\Li^{\rm out}_{(u,\th,\ph)}$. Moreover, the family $(\Li^{\rm out}_{(u,\th,\ph)})$,
+with $u\in\R$, $\th\in[0,\pi]$ and $\ph \in [0, 2\pi)$, %]$
+forms a \defin{congruence}\index{congruence}: there is one, and only one, such curve through
+every point of $\M_{\rm SD}$. Similar considerations apply to the ingoing radial null geodesics
+$\Li^{\rm in}_{(v,\th,\ph)}$.
 
 By introducing the \defin{tortoise coordinate}\index{tortoise coordinate}
 \be \label{e:sch:def_tortoise}
@@ -400,8 +412,8 @@ By introducing the \defin{tortoise coordinate}\index{tortoise coordinate}
 one may rewrite Eqs.~(\ref{e:sch:outgoing_null_geod})-(\ref{e:sch:ingoing_null_geod}) as
 respectively
 \bea
-    &  & t = r_* + u \\
-    &  & t = -r_* + v . \label{e:sch:v_advanced_tortoise}
+  \Li^{\rm out}_{(u,\th,\ph)}:\quad  &  & t = r_* + u \\
+  \Li^{\rm in}_{(v,\th,\ph)}:\quad  &  & t = -r_* + v . \label{e:sch:v_advanced_tortoise}
 \eea
 The parameter $u$ appears then as a
 \defin{retarded time}\index{retarded!time}\index{time!retarded --}:
@@ -435,12 +447,13 @@ simple exercise to show that Eq.~(\ref{e:sch:geod_eqn}) is satisfied.
 The same property holds for the family (\ref{e:sch:ingoing_null_geod}). Hence
 we conclude
 \begin{greybox}
-The radial null geodesics in the Schwarzschild-Droste domain are ruled by
-Eqs.~(\ref{e:sch:outgoing_null_geod})-(\ref{e:sch:ingoing_null_geod}).
+The radial null geodesics in the Schwarzschild-Droste domain
+form two congruences, $(\Li^{\rm out}_{(u,\th,\ph)})$ and $(\Li^{\rm in}_{(v,\th,\ph)})$,
+obeying Eqs.~(\ref{e:sch:outgoing_null_geod})-(\ref{e:sch:ingoing_null_geod}).
 Moreover, the areal radius $r$ is an affine parameter along them.
 \end{greybox}
 
-The two families of radial null geodesics are depicted in
+The two congruences of radial null geodesics are depicted in
 Fig.~\ref{f:sch:rad_null_geod}.
 The singularity of Schwarzschild-Droste coordinates at
 the Schwarzschild radius $r=2m$
@@ -448,7 +461,7 @@ appears clearly on this figure.
 
 
 \begin{remark} \label{r:sch:outgoing_ingoing}
-Despite their name, geodesics of the outgoing family are actually
+Despite their name, geodesics of the outgoing family $\Li^{\rm out}_{(u,\th,\ph)}$ are actually
 \emph{ingoing} in the region $r<2m$, in the sense that
 $r$ is decreasing along them when moving towards the future. Indeed,
 as noticed in Sec.~\ref{s:sch:SD_domain},
@@ -460,20 +473,19 @@ in Fig.~\ref{f:sch:rad_null_geod}).
 
 \subsection{Eddington-Finkelstein coordinates} \label{s:sch:EF_coord}
 
-The parameter $v$ introduced in Eq.~(\ref{e:sch:ingoing_null_geod}) can be
-seen as a label for the ingoing radial null geodesics: each of these curves is
-entirely identified by the data $(v,\th,\ph)$, which remains fixed along it.
-Let us promote $v$ to a spacetime coordinate, instead of $t$, i.e. let us
-consider the coordinate system $(v,r,\th,\ph)$ with the relation to
-Schwarzschild-Droste coordinates $(t,r,\th,\ph)$ governed by Eq.~(\ref{e:sch:ingoing_null_geod}):
+The parameter $v$ is one the three parameters labelling the
+ingoing radial null geodesics $\Li^{\rm in}_{(v,\th,\ph)}$.
+Let us promote it to a spacetime coordinate, instead of $t$, i.e. let us
+consider the coordinate system $(v,r,\th,\ph)$ that is related to the
+Schwarzschild-Droste coordinates $(t,r,\th,\ph)$ by Eq.~(\ref{e:sch:ingoing_null_geod}):
 \be \label{e:sch:v_t_r}
      v = t + r + 2 m \ln \left| \frac{r}{2m} - 1 \right| .
 \ee
-By differentiating, it follows immediately that
+By differentiation, it follows immediately that
 \be \label{e:sch:dt_dv_NIEF}
     \dd t = \dd v -  \frac{\dd r}{1 - 2m/r} ,
 \ee
-the square of which is
+the tensor square of which is
 \[
     \dd t^2 = \dd v^2 - \frac{2}{1 - 2m/r} \, \dd v \, \dd r + \frac{1}{(1 - 2m/r)^2}\, \dd r^2 .
 \]
@@ -798,12 +810,14 @@ Hence our terminology is more faithful to history.
 \caption[]{\label{f:sch:rad_null_geod_EF} \footnotesize
 Radial null geodesics of Schwarzschild spacetime, plotted in terms
 of ingoing Eddington-Finkelstein coordinates $(\ti,r)$: the solid (resp. dashed) lines
-correspond to outgoing (resp. ingoing) geodesics, as given by Eq.~(\ref{e:sch:outgoing_null_geod_EF})
+correspond to outgoing (resp. ingoing) geodesics $\Li^{\rm out}_{(u,\th,\ph)}$
+(resp. $\Li^{\rm in}_{(v,\th,\ph)}$), as given by Eq.~(\ref{e:sch:outgoing_null_geod_EF})
 (resp. Eq.~(\ref{e:sch:ingoing_null_geod_EF})). The interiors of some future light
 cones are depicted in yellow.}
 \end{figure}
 
 \subsection{Radial null geodesics in terms of the Eddington-Finkelstein coordinates}
+\label{s:sch:radial_null_IEF}
 
 Let us search directly for the radial null geodesics on the IEF domain $\M_{\rm IEF}$
 by looking for the radial null curves of the metric (\ref{e:sch:Schwarz_metric_EF}).
@@ -819,9 +833,9 @@ The two solutions of this quadratic equation in $\D r / \D\ti$ are
     \frac{\D r}{\D \ti} = \frac{\pm r - 2 m}{r + 2m} .
 \ee
 For the $-$ sign in $\pm$, we get $\D r / \D \ti = -1$, so that the integration is
-immediate:
+immediate and leads to the \emph{ingoing radial null geodesics}:
 \be \label{e:sch:ingoing_null_geod_EF}
-    \encadre{ \ti = - r + v },\quad (\th,\ph) = \mathrm{const},
+    \Li^{\rm in}_{(v,\th,\ph)}:\quad \encadre{ \ti = - r + v },\quad (\th,\ph) = \mathrm{const},
 \ee
 where the constant $v\in \R$ labels the null curve, along with $(\th,\ph)$.
 The simplicity of Eq.~(\ref{e:sch:ingoing_null_geod_EF})
@@ -836,34 +850,45 @@ First, if $r\neq 2m$, the equation can be rewritten as
 \[
     \D \ti = \frac{r + 2m}{r - 2m} \D r  = \left( 1 + \frac{4m}{r - 2m} \right) \D r,
 \]
-the integration of which leads to
+the integration of which leads to the \emph{outgoing radial null geodesics}:
 \be \label{e:sch:outgoing_null_geod_EF}
-    \encadre{ \ti = r + 4 m \ln \left| \frac{r}{2m} - 1 \right| + u },
+     \Li^{\rm out}_{(u,\th,\ph)}:\quad  \encadre{ \ti = r + 4 m \ln \left| \frac{r}{2m} - 1 \right| + u },
     \quad (\th,\ph) = \mathrm{const},
 \ee
 where the integration constant $u\in \R$ labels the null curve, along with $(\th,\ph)$.
 Since $r\neq 2m$, Eq.~(\ref{e:sch:outgoing_null_geod_EF}) regards $\M_{\rm SD}$
 and we actually recover Eq.~(\ref{e:sch:outgoing_null_geod}),
-given relation (\ref{e:sch:ti_t_r}) between $\ti$ and $t$. If $r=2m$,
-Eq.~(\ref{e:sch:drdt_rad_null_geod}) with $\pm$ equal to $+$ leads to
+given relation (\ref{e:sch:ti_t_r}) between $\ti$ and $t$. On can easily show
+that a curve defined by (\ref{e:sch:outgoing_null_geod_EF}) nether crosses $\Hor$, i.e.
+it either lies entirely in $\M_{\rm I}$ or lies entirely in $\M_{\rm II}$
+(cf. Fig.~\ref{f:sch:rad_null_geod_EF}). We have thus
+two families of outgoing radial null geodesics, each labelled by $(u,\th,\ph)$:
+$\Li^{\rm out,I}_{(u,\th,\ph)}$ in $\M_{\rm I}$ and
+$\Li^{\rm out,II}_{(u,\th,\ph)}$ in $\M_{\rm II}$.
+
+Let us now consider the case $r=2m$ in
+Eq.~(\ref{e:sch:drdt_rad_null_geod}) with $\pm$ equal to $+$; the equation
+reduces then to
 $\D r / \D \ti = 0$, so that the equation of the radial null curve is
 $r = \mathrm{const}$. The constant being necessarily $2m$, we get
+the family of curves $\Li^{{\rm out},\Hor}_{(\th,\ph)}$
+defined by
 \be \label{e:sch:outgoing_null_geod_H}
-    \encadre{r = 2 m} ,\quad (\th,\ph) = \mathrm{const}.
+    \Li^{{\rm out},\Hor}_{(\th,\ph)}:\quad \encadre{r = 2 m} ,\quad (\th,\ph) = \mathrm{const}.
 \ee
 These null curves, which form a family labelled by $(\th,\ph)$, are actually
-the null geodesics generating the Killing horizon $\Hor$ (cf. Sec.~\ref{s:sch:Schwarz_hor}).
+the null geodesic generators of the Killing horizon $\Hor$ (cf. Sec.~\ref{s:sch:Schwarz_hor}).
 Indeed, it follows from Eq.~(\ref{e:sch:outgoing_null_geod_H}) that their tangent
 vector is $\wpar_{\ti} = \w{\xi}$, which, for $r=2m$, is the null normal of $\Hor$.
 
-The null geodesics (\ref{e:sch:outgoing_null_geod_H}) had not been found in
+The null geodesics $ \Li^{{\rm out},\Hor}_{(\th,\ph)}$ had not been found in
 Sec.~\ref{s:sch:rad_null_geod}, since they don't belong to $\M_{\rm SD}$. We may consider
 that they extend the outgoing family, since (i) they have been obtained for the same
 choice $+$ of the $\pm$ sign in Eq.~(\ref{e:sch:drdt_rad_null_geod}) as the
 outgoing geodesics (\ref{e:sch:outgoing_null_geod_EF}) and (ii) they correspond
 to the limiting case $r = \mathrm{const}$ separating the two subfamilies of the outgoing
-geodesics (\ref{e:sch:outgoing_null_geod_EF}): those with $r>2m$, which have $r$ increasing
-towards the future (and therefore are truely ``outgoing'') and those with $r<2m$,
+geodesics: $\Li^{\rm out,I}_{(u,\th,\ph)}$, which have $r$ increasing
+towards the future (and therefore are truely ``outgoing'') and $\Li^{\rm out,II}_{(u,\th,\ph)}$,
 which have $r$ decreasing towards the future.
 
 The ingoing and outgoing radial null geodesics are depicted in Fig.~\ref{f:sch:rad_null_geod_EF}
@@ -882,9 +907,11 @@ We have then $\M = \R\times(0,+\infty)\times\SS^2$ [Eq.~(\ref{e:sch:M_IEF_def})]
 Note that we shall extend this spacetime in Chap.~\ref{s:max}.
 
 We have seen in Sec.~\ref{s:sch:rad_null_geod} that $r$ is an affine parameter
-along the radial null geodesics. We may then choose $\lambda=-r$ as an
-affine parameter along the ingoing ones; according to
-Eq.~(\ref{e:sch:ingoing_null_geod_EF}), the equation of the ingoing radial null geodesics
+along the radial null geodesics $\Li^{\rm in}_{(v,\th,\ph)}$ and
+$\Li^{\rm out}_{(u,\th,\ph)}$.
+We may then choose $\lambda=-r$ as an
+affine parameter along $\Li^{\rm in}_{(v,\th,\ph)}$; according to
+Eq.~(\ref{e:sch:ingoing_null_geod_EF}), the equation of $\Li^{\rm in}_{(v,\th,\ph)}$
 becomes then
 \[
     \ti(\lambda) = \lambda + v, \quad r(\lambda) = - \lambda, \quad
@@ -1099,8 +1126,9 @@ in these coordinates:
 Contrary to $(v,r,\th,\ph)$, the coordinates $(u,r,\th,\ph)$ do not cover
 all $\M = \M_{\rm IEF}$, but only $\M_{\rm I}$. This is graphically
 evident from
-Fig.~\ref{f:sch:rad_null_geod_EF}, where the outgoing radial null geodesics,
-which are labelled by $u$, accumulate on $\Hor$ as $u\rightarrow +\infty$
+Fig.~\ref{f:sch:rad_null_geod_EF}, where the outgoing radial null geodesics
+$\Li^{\rm out,I}_{(u,\th,\ph)}$
+accumulate on $\Hor$ as $u\rightarrow +\infty$
 from the $\M_{\rm I}$ side.
 \end{remark}
 
