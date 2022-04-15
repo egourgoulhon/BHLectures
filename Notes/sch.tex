@@ -653,19 +653,15 @@ in the following remarkable form:
   \w{g} =
  \underbrace{- \dd\ti^2 + \dd r^2 + r^2  \left( \dd\th^2 + \sin^2\th\,
    \dd\ph^2 \right)}_{\w{f}}
- + \underbrace{\frac{2m}{r} \left( \dd\ti + \dd r \right) ^2}_{\uu{k}\otimes\uu{k}} ,
+ + \frac{2m}{r} \underbrace{\left( \dd\ti + \dd r \right) ^2}_{\uu{k}\otimes\uu{k}} ,
 \ee
 where the $\w{f}$ is the (flat) Minkowski metric (expressed above in
-terms of the spherical coordinates $(\ti,r,\th,\ph)$) and $\uu{k}$ is the 1-form
-\[
-    \uu{k} = \sqrt{\frac{2m}{r}} \, \dd (\ti + r) =
-    \sqrt{\frac{2m}{r}} \, \dd v .
-\]
+terms of the spherical coordinates $(\ti,r,\th,\ph)$) and $\uu{k} = - \dd(\ti + r) = - \dd v$.
 The 1-form $\uu{k}$ is dual to a vector $\w{k}$, which is null, as it can be seen
 from
 $g^{\tilde{\mu}\tilde{\nu}} k_{\tilde{\mu}} k_{\tilde{\nu}} = 0$. The latter property
 is easily deduced from
-$k_{\tilde{\mu}} = \sqrt{2m/r} (1, 1, 0, 0)$ and expression (\ref{e:sch:inv_metric_EF})
+$k_{\tilde{\mu}} = (-1, -1, 0, 0)$ and expression (\ref{e:sch:inv_metric_EF})
 for $g^{\tilde{\mu}\tilde{\nu}}$ below.
 A metric of the type (\ref{e:sch:Kerr_Schild}) is said to be a
 \defin{Kerr-Schild metric}\index{Kerr-Schild!metric}; these peculiar metrics
@@ -685,8 +681,7 @@ on the whole \defin{ingoing Eddington-Finkelstein domain}\index{ingoing!Eddingto
 with the coordinate $\ti$ spanning $\R$, the coordinate $r$ spanning
 $(0,+\infty)$ and the coordinates $(\th,\ph)$ forming the standard spherical
 chart of $\SS^2$.
-The components of the inverse metric with respect to the ingoing
-Eddington-Finkelstein coordinates are
+The components of the inverse metric with respect to the IEF coordinates are
 \be \label{e:sch:inv_metric_EF}
     g^{\tilde{\alpha}\tilde{\beta}} = \left( \begin{array}{cccc}
     - \left( 1 + \frac{2m}{r} \right) &  \frac{2m}{r} & 0 & 0 \\[1ex]
@@ -829,10 +824,14 @@ leads to
     - \frac{r - 2m}{r + 2m} = 0 .
 \]
 The two solutions of this quadratic equation in $\D r / \D\ti$ are
-\be \label{e:sch:drdt_rad_null_geod}
+\be \label{e:sch:drdti_rad_null_geod}
     \frac{\D r}{\D \ti} = \frac{\pm r - 2 m}{r + 2m} .
 \ee
-For the $-$ sign in $\pm$, we get $\D r / \D \ti = -1$, so that the integration is
+
+\subsubsection{Ingoing radial null geodesics}
+
+Choosing $-$ for $\pm$ in Eq.~(\ref{e:sch:drdti_rad_null_geod}),
+we get $\D r / \D \ti = -1$, so that the integration is
 immediate and leads to the \emph{ingoing radial null geodesics}:
 \be \label{e:sch:ingoing_null_geod_EF}
     \Li^{\rm in}_{(v,\th,\ph)}:\quad \encadre{ \ti = - r + v },\quad (\th,\ph) = \mathrm{const},
@@ -844,9 +843,36 @@ Note that in
 $\M_{\rm SD}$, Eq.~(\ref{e:sch:ingoing_null_geod_EF}) is equivalent to Eq.~(\ref{e:sch:ingoing_null_geod}),
 given relation (\ref{e:sch:ti_t_r}) between $\ti$ and $t$.
 
-For $\pm$ equal to $+$ in Eq.~(\ref{e:sch:drdt_rad_null_geod}), we get
-$\D r / \D \ti = (r - 2m)/(r + 2m)$. To proceed, we have to distinguish two cases.
-First, if $r\neq 2m$, the equation can be rewritten as
+We have seen in Sec.~\ref{s:sch:rad_null_geod} that $r$ is an affine parameter
+along $\Li^{\rm in}_{(v,\th,\ph)}$. It follows that $\lambda = -r$ is an
+affine parameter as well, in terms of which the equation of $\Li^{\rm in}_{(v,\th,\ph)}$
+deduced from Eq.~(\ref{e:sch:ingoing_null_geod_EF}) is
+\[
+    \ti(\lambda) = \lambda + v, \quad r(\lambda) = - \lambda, \quad
+    \th(\lambda) = \th = \mathrm{const},\quad \ph(\lambda) = \ph = \mathrm{const}.
+\]
+The tangent vector $\w{k}$ associated with this parametrization of $\Li^{\rm in}_{(v,\th,\ph)}$
+has components
+$k^\alpha = \D x^\alpha/\D\lambda = (1, -1, 0, 0)$
+with respect to the IEF coordinates. We have therefore
+\be \label{e:sch:null_vector_k}
+   \encadre{ \w{k} = \wpar_\ti - \wpar_{\tilde r} }.
+\ee
+The IEF components of the 1-form $\uu{k}$ metric-dual to $\w{k}$ are
+$k_\alpha = g_{\alpha\mu} k^\mu$ with $g_{\alpha\mu}$ given by Eq.~(\ref{e:sch:Schwarz_metric_EF}).
+We get $k_\alpha = (-1,-1,0,0)$, hence $\uu{k} = - \dd \ti - \dd r$, i.e.
+\be
+    \uu{k} = - \dd v .
+\ee
+
+\subsubsection{Outgoing radial null geodesics}
+
+For $\pm$ equal to $+$ in Eq.~(\ref{e:sch:drdti_rad_null_geod}), we get
+\be \label{e:sch:drdti_outgoing}
+    \frac{\D r}{\D \ti} = \frac{r - 2m}{r + 2m}.
+\ee
+To proceed, we have to distinguish two cases.
+First, if $r\neq 2m$, Eq.~(\ref{e:sch:drdti_outgoing}) can be rewritten as
 \[
     \D \ti = \frac{r + 2m}{r - 2m} \D r  = \left( 1 + \frac{4m}{r - 2m} \right) \D r,
 \]
@@ -867,7 +893,7 @@ $\Li^{\rm out,I}_{(u,\th,\ph)}$ in $\M_{\rm I}$ and
 $\Li^{\rm out,II}_{(u,\th,\ph)}$ in $\M_{\rm II}$.
 
 Let us now consider the case $r=2m$ in
-Eq.~(\ref{e:sch:drdt_rad_null_geod}) with $\pm$ equal to $+$; the equation
+Eq.~(\ref{e:sch:drdti_outgoing}); the equation
 reduces then to
 $\D r / \D \ti = 0$, so that the equation of the radial null curve is
 $r = \mathrm{const}$. The constant being necessarily $2m$, we get
@@ -881,17 +907,36 @@ the null geodesic generators of the Killing horizon $\Hor$ (cf. Secs.~\ref{s:sch
 and \ref{s:def:null_geod_gen}).
 Indeed, it follows from Eq.~(\ref{e:sch:outgoing_null_geod_H}) that a tangent
 vector to them is $\wpar_{\ti} = \w{\xi}$, which, for $r=2m$, is the null normal of $\Hor$.
-The null geodesics $ \Li^{{\rm out},\Hor}_{(\th,\ph)}$ had not been found in
+The null geodesics $\Li^{{\rm out},\Hor}_{(\th,\ph)}$ had not been found in
 Sec.~\ref{s:sch:rad_null_geod} for they don't belong to $\M_{\rm SD}$.
 They extend the outgoing family $\Li^{\rm out}_{(u,\th,\ph)}$
-since (i) they are obtained for the same
-choice $+$ of the $\pm$ sign in Eq.~(\ref{e:sch:drdt_rad_null_geod}) as the
-geodesics $\Li^{\rm out}_{(u,\th,\ph)}$ and (ii) they correspond
+since they obey the same differential equation (\ref{e:sch:drdti_outgoing})
+as the
+geodesics $\Li^{\rm out}_{(u,\th,\ph)}$. Moreover, they correspond
 to the limiting case $r = \mathrm{const}$ separating the two subfamilies of outgoing
 geodesics: $\Li^{\rm out,I}_{(u,\th,\ph)}$, which have $r$ increasing
 towards the future (and therefore are truely ``outgoing'') and $\Li^{\rm out,II}_{(u,\th,\ph)}$,
 which have $r$ decreasing towards the future (cf. Fig.~\ref{f:sch:rad_null_geod_EF}).
 
+Given that both $\Li^{{\rm out},\Hor}_{(\th,\ph)}$ and $\Li^{{\rm out},\Hor}_{(\th,\ph)}$
+obey the differential equation (\ref{e:sch:drdti_outgoing}), the vector field
+tangent to them when parametrized by $\ti$ is
+$\hat{\wl} := \wpar_{\ti} +  (r - 2m)/(r + 2m) \wpar_{\tilde r}$.
+For future convenience, we shall actually consider the vector field
+$\wl := (1/2 + m/r) \, \hat{\wl}$; we have then by construction:
+\begin{greybox}
+The vector field
+\be \label{e:sch:null_vector_ell}
+    \encadre{\wl = \frac{1}{2}
+    \left[ \left( 1 + \frac{2m}{r} \right) \wpar_{\ti}
+    + \left( 1 - \frac{2m}{r} \right) \wpar_{\tilde r} \right] }
+\ee
+is a null regular vector field in all $\M_{\rm IEF}$, which is tangent to the outgoing radial
+null geodesics $\Li^{\rm out,I}_{(u,\th,\ph)}$ in $\M_{\rm I}$,
+to $\Li^{\rm out,II}_{(u,\th,\ph)}$ in $\M_{\rm II}$
+and to $\Li^{{\rm out},\Hor}_{(\th,\ph)}$ on $\Hor$.
+\end{greybox}
+Note that, on $\Hor$, $\wl \equalH \wpar_{\ti} = \w{\xi}$.
 
 \subsection{Time orientation of the spacetime manifold} \label{s:sch:time_orientation}
 
@@ -905,24 +950,8 @@ domain:
 We have then $\M = \R\times(0,+\infty)\times\SS^2$ [Eq.~(\ref{e:sch:M_IEF_def})].
 Note that we shall extend this spacetime in Chap.~\ref{s:max}.
 
-We have seen in Sec.~\ref{s:sch:rad_null_geod} that $r$ is an affine parameter
-along the radial null geodesics $\Li^{\rm in}_{(v,\th,\ph)}$ and
-$\Li^{\rm out}_{(u,\th,\ph)}$.
-We may then choose $\lambda=-r$ as an
-affine parameter along $\Li^{\rm in}_{(v,\th,\ph)}$; according to
-Eq.~(\ref{e:sch:ingoing_null_geod_EF}), the equation of $\Li^{\rm in}_{(v,\th,\ph)}$
-becomes then
-\[
-    \ti(\lambda) = \lambda + v, \quad r(\lambda) = - \lambda, \quad
-    \th(\lambda) = \th_0,\quad \ph(\lambda) = \ph_0 .
-\]
-The tangent vector $\w{k}$ associated with this parametrization has components
-$k^\alpha = \D x^\alpha/\D\lambda = (1, -1, 0, 0)$
-with respect to the IEF coordinates, i.e.
-\be \label{e:sch:null_vector_k}
-    \w{k} = \wpar_\ti - \wpar_{\tilde r} .
-\ee
-$\w{k}$ is a nonzero null vector field defined on the whole manifold
+The vector $\w{k}$ defined by Eq.~(\ref{e:sch:null_vector_k}) is a nonzero null vector field
+defined on the whole manifold
 $\M$. It may therefore be used to set the time orientation\index{time-orientable}\index{orientable!time --} of the Schwarzschild spacetime $(\M,\w{g})$
 (cf. Sec.~\ref{s:fra:time_orientation}). Since for $r\rightarrow+\infty$, $\w{k}$
 clearly points towards increasing $\ti$, we declare that $\w{k}$ defines
