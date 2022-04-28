@@ -239,7 +239,7 @@ as soon as $r < 2 M(t+r)$. This corresponds to the region bounded by the red cur
 
 \section{Infalling shell of radiation}
 
-\subsection{The infalling shell model}
+\subsection{The infalling shell model} \label{s:vai:infalling_shell}
 
 An \defin{infalling shell of radiation}\index{shell!infalling -- of radiation}\index{infalling!shell of radiation}
 is defined by the ingoing Vadya metric with the function $M(v)$ obeying
@@ -388,7 +388,8 @@ The discriminant being $1 - 8\alpha$, this occurs if, and only if,
 \be \label{e:vai:v0_small}
     \alpha > \frac{1}{8} \iff v_0 < 16 \, m .
 \ee
-We shall discuss the case $v_0 \geq 16 \, m$ in Sec.~??. Assuming (\ref{e:vai:v0_small}),
+We shall discuss the case $v_0 \geq 16 \, m$ in Sec.~\ref{s:vai:naked_sing}.
+Assuming (\ref{e:vai:v0_small}),
 we have $P_\alpha(x) > 0$ for any $x\in\R$ and we may rewrite Eq.~(\ref{e:vai:ODE_outgoing_x})
 as
 \be \label{e:vai:ODE_outgoing_x_sep}
@@ -474,7 +475,7 @@ in the Schwarzschid region, they are curves obeying Eq.~(\ref{e:sch:outgoing_nul
 (with the change of notation $\ti \leftrightarrow t$).
 
 
-\subsection{Black hole formation}
+\subsection{Black hole formation} \label{s:vai:BH_formation}
 
 In spherical symmetry, the inspection of radial null geodesics gives
 a direct access to the black hole event horizon.
@@ -602,10 +603,15 @@ is computed in the notebook~\ref{s:sam:Vaidya}:
     K = \frac{48 M(t + r)^2}{r^6} .
 \ee
 $K$ is identically zero in the Minkowski region ($M(r+t) = 0$), as it should!
-It diverges at $r=0$ in the radiation and Schwarzschild regions, tracing the
-existence of a curvature singularity there. Note that the curvature
-singularity appears as soon as the radiation arrive at $r=0$, i.e. for
-$t=0$ (cf. Fig.~\ref{f:vai:diag_S0}).
+
+It diverges at $r=0$ in the radiation and Schwarzschild regions ($M(r+t) > 0$), tracing the
+existence of a curvature singularity there.
+In other words:
+\begin{greybox}
+The Vaidya shell collapse introduced in Sec.~\ref{s:vai:infalling_shell}
+generates a spacetime with a curvature singularity
+located at $r=0$ and $t \geq 0$.
+\end{greybox}
 
 \begin{remark}
 The Kretschmann scalar of Vaidya metric has the same structural form
@@ -624,8 +630,49 @@ and the Ricci ``squared'' $R_{\mu\nu} R^{\mu\nu}$. However, they are both identi
 since $\w{k}$ is a null vector.
 \end{remark}
 
+The curvature singularity is depicted as the orange broken line in Fig.~\ref{f:vai:diag_S0}.
+For the homothetic collapse with $v_0 < 16\, m$ considered in Secs.~\ref{s:vai:sol_M_linear} and
+\ref{s:vai:BH_formation}, one has $t_{\rm hb} < 0$ [Eq.~(\ref{e:vai:t_hb})], so that
+the curvature singularity is entirely located in the black hole region. It is therefore hidden
+from a remote observer. In the next section, we are going to see that this is no longer the
+case for $v_0 > 16 ùm$: the singularity is then naked.
 
-\subsection{Configurations with a naked singularity}
+
+\subsection{Configurations with a naked singularity} \label{s:vai:naked_sing}
+
+Still within the framework of $M(v)$ piecewise linear (homothetic radiation shell,
+Sec.~\ref{s:vai:sol_M_linear}), let us consider the case
+\be
+    \alpha < \frac{1}{8} \iff v_0 > 16 \, m .
+\ee
+The polynomial $P_\alpha(x) := \alpha x^2 - x + 2$, which appears in the
+numerator of the ODE (\ref{e:vai:ODE_outgoing_x}) ruling outgoing radial null geodesics,
+admits then two real roots
+\be
+    x_1 := \frac{1 - \sqrt{1 - 8\alpha}}{2\alpha}
+    \qand
+    x_2 := \frac{1 + \sqrt{1 - 8\alpha}}{2\alpha} .
+\ee
+Accordingly, Eq.~(\ref{e:vai:ODE_outgoing_x}) can be recast as
+\be \label{e:vai:ODE_outgoing_x_naked}
+    r \frac{\D x}{\D r} = \frac{(x - x_1)(x - x_2)}{x_1 + x_2 - x} .
+\ee
+This differential equation admits two special solutions, corresponding
+to outgoing radial null geodesics with constant value of $x$:
+\be
+    x = x_1  \qand x = x_2 .
+\ee
+For $x\neq x_1$ and $x \neq x_2$, Eq.~(\ref{e:vai:ODE_outgoing_x_naked}) yields
+\[
+    \D \ln r = \frac{x_1 + x_2 - x}{(x - x_1)(x - x_2)} \, \D x ,
+\]
+the generic solution of which is
+\be
+    r = r_* \frac{| x - x_2 | ^{x_1/(x_2 - x_1)}}{| x - x_1 | ^{x_2/(x_2 - x_1)}} ,
+\ee
+where $r_*$ is a constant.
+
+
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{vai_diag_naked_S0.pdf}}
