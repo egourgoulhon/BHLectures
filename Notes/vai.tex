@@ -648,7 +648,7 @@ Sec.~\ref{s:vai:sol_M_linear}), let us consider the case
 \ee
 The polynomial $P_\alpha(x) := \alpha x^2 - x + 2$, which appears in the
 numerator of the ODE (\ref{e:vai:ODE_outgoing_x}) ruling outgoing radial null geodesics,
-admits then two real roots
+admits then two real roots:
 \be
     x_1 := \frac{1 - \sqrt{1 - 8\alpha}}{2\alpha}
     \qand
@@ -677,17 +677,6 @@ $\Li^{*1}_{(\th,\ph)}$ and $\Li^{*2}_{(\th,\ph)}$ are straight line segments
 through the origin $(t, r) = (0,0)$. They are depicted
 as the segments $OC$ and $OB$ respectively in Fig.~\ref{f:vai:diag_naked_S0}.
 
-For $x\neq x_1$ and $x \neq x_2$, Eq.~(\ref{e:vai:ODE_outgoing_x_naked}) yields
-\[
-    \D \ln r = \frac{x_1 + x_2 - x}{(x - x_1)(x - x_2)} \, \D x ,
-\]
-the generic solution of which is
-\be
-    r = r_* \frac{| x - x_2 | ^{x_1/(x_2 - x_1)}}{| x - x_1 | ^{x_2/(x_2 - x_1)}} ,
-\ee
-where $r_*$ is a constant.
-
-
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{vai_diag_naked_S0.pdf}}
@@ -703,6 +692,31 @@ at $(t,r) = (0,0)$.
 }
 \end{figure}
 
+Let us now turn to the generic outgoing radial null geodesics: we assume
+$x\neq x_1$ and $x \neq x_2$ and rewrite Eq.~(\ref{e:vai:ODE_outgoing_x_naked}) as
+\[
+    \D \ln r = \frac{x_1 + x_2 - x}{(x - x_1)(x - x_2)} \, \D x .
+\]
+The generic solution is
+\be \label{e:vai:sol_r_x_out_naked}
+    r = r_* \frac{| x - x_2 | ^{x_1/(x_2 - x_1)}}{| x - x_1 | ^{x_2/(x_2 - x_1)}} ,
+\ee
+where $r_*$ is constant along a given geodesic.
+The function $r(x)$ given by Eq.~(\ref{e:vai:sol_r_x_out_naked})
+is plotted in Fig.~\ref{f:vai:r_x_naksing} for $\alpha=1/9$, which is
+equivalent to $x_1 = 3$ and $x_2 = 6$.
+
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{vai_r_x_naksing.pdf}}
+\caption[]{\label{f:vai:r_x_naksing} \footnotesize
+The coordinate $r$ as a function of $x:=v/r$ along outgoing radial
+null geodesics for the homothetic Vaidya collapse with
+$\alpha = 1/9$, which implies $x_1 = 3$ and $x_2 = 6$, so that
+Eq.~(\ref{e:vai:sol_r_x_out_naked}) simplifies to
+$r/r_* = |x - 6|/(x - 3)^2$.
+}
+\end{figure}
 
 
 
