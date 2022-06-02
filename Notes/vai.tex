@@ -718,7 +718,7 @@ This equation is easily integrated to
 \ee
 where $c$ is constant along the considered geodesic.
 
-\begin{example}
+\begin{example} \label{x:vai:sol_out_1o9}
 For $\alpha=1/9$, one has $x_1 = 3$ and $x_2 = 6$ [cf. Eq.~(\ref{e:vai:x1_x2})]
 and Eq.~(\ref{e:vai:sol_r_x_out_naked}) reduces to
 $r = c |x - 6|/(x - 3)^2$. Such a function of $x$ is
@@ -817,20 +817,65 @@ region:
     \mathscr{N}_{\rm I}: r > \frac{v}{x_2} \qand
     \mathscr{N}_{\rm II}: r < \frac{v}{x_1} .
 \ee
+Note that $\mathscr{N}_{\rm I}$ (resp.  $\mathscr{N}_{\rm II}$)
+contains the homothetic Killing horizon $\Hor_1$ (resp. $\Hor_2$).
+
 On $\mathscr{N}_{\rm I}$, we introduce the parameter $u$ so that
 \be
     \tilde{c} = |u|^{-x_2/(x_2 - x_1)} .
 \ee
 As $\tilde{c}$, $u$ is constant along a given outgoing radial null geodesic.
-From Eq.~(\ref{e:vai:v_r_out_naked}), we get\footnote{Note that we have made use of
+From Eq.~(\ref{e:vai:v_r_out_naked}), we get\footnote{We have made use of
 the identity $|v/x_2 - r| = r - v/x_2$, which holds on $ \mathscr{N}_{\rm I}$.}
 $|u| = |v/x_1 - r| / (r - v/x_2)^{x_1/x_2}$. This equation determines
 $u$ in terms of $v$ and $r$ up to some sign. We choose the latter so that
 $u \to +\infty$ at the inner boundary of $\mathscr{N}_{\rm I}$
 ($r \to v/x_2$). This yields
-\be
-    u = \frac{v/x_1 - r}{(r - v/x_2)^{x_1/x_2}} .
+\be \label{e:vai:u_N_I}
+    u = \frac{v/x_1 - r}{(r - v/x_2)^{x_1/x_2}}, \quad -\infty < u < +\infty ,
 \ee
+with $\lim_{r\to +\infty} u = - \infty$.
+We may use $(u, v, \th, \ph)$ as a coordinate system on $\mathscr{N}_{\rm I}$,
+instead of IEF coordinates $(t, r, \th, \ph)$. Note that the
+homothetic Killing horizon $\Hor_1$, which is defined by $v/r = x_1$,
+is the hypersurface $u = 0$.
+The metric components in the coordinates $(u, v, \th, \ph)$
+are deduced from those in the $(v, r, \th, \ph)$
+coordinates, i.e. Eq.~(\ref{e:vai:self_similar_metric}). We get
+(see the notebook~\ref{s:sam:Vaidya_nk_sing} for the computation):
+\be
+    \w{g} = - \frac{2 x_2}{(x_2 - x_1)r} \left(r - \frac{v}{x_2} \right)^{x_1/2}
+        \dd u \, \dd v
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \qquad
+        \left(0 \leq v \leq v_0,\ r > \frac{v}{x_2}\right) .
+\ee
+In this expression, $r$ shall be considered as a function of $(u,v)$ defined
+implicitely by Eq.~(\ref{e:vai:u_N_I}).
+The metric component $g_{uv}$ is regular and non-vanishing in all $\mathscr{N}_{\rm I}$.
+Moreover we have a double-null coordinate system:
+$g_{uu} = 0$ and $g_{vv} = 0$ imply that the coordinate vectors $\wpar_u$
+and $\wpar_v$ are both null. The vector $\wpar_u$ is actually tangent to the
+ingoing radial null geodesics, which are defined by $(v,\th,\ph) = \mathrm{const}$,
+and the vector $\wpar_v$ is tangent to the outgoing ones, which are defined
+by $(u,\th,\ph) = \mathrm{const}$.
+
+On $\mathscr{N}_{\rm II}$, let us introduce the parameter $u'$ to rewrite
+$\tilde{c}$ in Eq.~(\ref{e:vai:v_r_out_naked}) as
+\be
+    \tilde{c} = |u'|^{x_1/(x_2 - x_1)} .
+\ee
+Then Eq.~(\ref{e:vai:v_r_out_naked}) yields $|u'| = |v/x_2 - r| / (v/x_1 - r)^{x_2/x_1}$.
+Choosing the sign of $u'$ such that $u'\to -\infty$ at the outer boundary of
+$\mathscr{N}_{\rm II}$ ($r\to v/x_1$), we get
+\be
+    u' = \frac{v/x_2 - r}{\left(v/x_1 - r \right)^{x_2/x_1}} .
+\ee
+
+
+
+\begin{example}
+As in Example~\ref{x:vai:sol_out_1o9}, let us consider the case $\alpha=1/9$.
+\end{example}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
