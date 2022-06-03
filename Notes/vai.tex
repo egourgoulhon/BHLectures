@@ -836,12 +836,11 @@ $u \to +\infty$ at the inner boundary of $\mathscr{N}_{\rm I}$
 \ee
 with $\lim_{r\to +\infty} u = - \infty$.
 We may use $(u, v, \th, \ph)$ as a coordinate system on $\mathscr{N}_{\rm I}$,
-instead of IEF coordinates $(t, r, \th, \ph)$. Note that the
-homothetic Killing horizon $\Hor_1$, which is defined by $v/r = x_1$,
-is the hypersurface $u = 0$.
+instead of IEF coordinates $(t, r, \th, \ph)$.
 The metric components in the coordinates $(u, v, \th, \ph)$
 are deduced from those in the $(v, r, \th, \ph)$
-coordinates, i.e. Eq.~(\ref{e:vai:self_similar_metric}). We get
+coordinates, i.e. Eq.~(\ref{e:vai:self_similar_metric}), taking into account
+the identity $\alpha=2/(x_1 x_2)$. We get
 (see the notebook~\ref{s:sam:Vaidya_nk_sing} for the computation):
 \be
     \w{g} = - \frac{2 x_2}{(x_2 - x_1)r} \left(r - \frac{v}{x_2} \right)^{x_1/2}
@@ -859,6 +858,20 @@ ingoing radial null geodesics, which are defined by $(v,\th,\ph) = \mathrm{const
 and the vector $\wpar_v$ is tangent to the outgoing ones, which are defined
 by $(u,\th,\ph) = \mathrm{const}$.
 
+\begin{example}
+As in Example~\ref{x:vai:sol_out_1o9}, let us consider the case $\alpha=1/9$,
+for which $x_1 = 3$ and $x_2 = 6$ [cf. Eq.~(\ref{e:vai:x1_x2})]. Equation~(\ref{e:vai:u_N_I})
+reduces then to
+\be
+    u = \frac{v/3 - r}{\sqrt{r - v/6}} .
+\ee
+This relation can be inverted, yielding an explicit expression for $r(u, v)$:
+\be
+    r = \frac{v}{3} + \frac{u}{2} \left( u - \sqrt{ u^2 + \frac{2}{3} v} \right) .
+\ee
+\end{example}
+
+
 On $\mathscr{N}_{\rm II}$, let us introduce the parameter $u'$ to rewrite
 $\tilde{c}$ in Eq.~(\ref{e:vai:v_r_out_naked}) as
 \be
@@ -867,15 +880,43 @@ $\tilde{c}$ in Eq.~(\ref{e:vai:v_r_out_naked}) as
 Then Eq.~(\ref{e:vai:v_r_out_naked}) yields $|u'| = |v/x_2 - r| / (v/x_1 - r)^{x_2/x_1}$.
 Choosing the sign of $u'$ such that $u'\to -\infty$ at the outer boundary of
 $\mathscr{N}_{\rm II}$ ($r\to v/x_1$), we get
-\be
+\be \label{e:vai:up_N_II}
     u' = \frac{v/x_2 - r}{\left(v/x_1 - r \right)^{x_2/x_1}} .
 \ee
-
-
+Let us consider $(u',v,\th,\ph)$ as a coordinate system on $\mathscr{N}_{\rm II}$.
+As above, the metric components in these coordinates
+are deduced from those in the $(v,r,\th,\ph)$ coordinates,
+as given by Eq.~(\ref{e:vai:self_similar_metric})
+(see the notebook~\ref{s:sam:Vaidya_nk_sing} for the computation):
+\be
+    \w{g} = - \frac{2 x_1}{(x_2 - x_1)r} \left(\frac{v}{x_1} - r \right)^{x_2/2}
+        \dd u' \, \dd v
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \qquad
+        \left(0 \leq v \leq v_0,\ r < \frac{v}{x_1}\right) ,
+\ee
+where $r = r(u', v)$ is defined implicitely by Eq.~(\ref{e:vai:up_N_II}).
+Again, we get a double-null coordinate system, adapted to the ingoing and
+outgoing radial null geodesics. Moreover, the coordinates $(u',v,\th,\ph)$ are regular
+since $g_{u'v}$ is finite and non-vanishing in all $\mathscr{N}_{\rm II}$.
 
 \begin{example}
-As in Example~\ref{x:vai:sol_out_1o9}, let us consider the case $\alpha=1/9$.
+For $\alpha=1/9$, i.e. $x_1 = 3$ and $x_2 = 6$,
+Eq.~(\ref{e:vai:up_N_II}) reduces to
+\be
+    u' = \frac{3}{2} \frac{v - 6r}{(v - 3 r)^2} .
+\ee
+This relation can be inverted, yielding  an explicit expression for $r(u', v)$:
+\be
+    r = \frac{v}{3} + \frac{1}{2u'} \left( \sqrt{1 - \frac{2}{3} u' v } - 1 \right) .
+\ee
 \end{example}
+
+
+
+The homothetic Killing horizon $\Hor_1 \subset \mathscr{N}_{\rm I}$,
+which is defined by $v/r = x_1$, is the hypersurface $u = 0$,
+while the homothetic Killing horizon $\Hor_2 \subset \mathscr{N}_{\rm II}$,
+which is defined by $v/r = x_2$, is the hypersurface $u' = 0$.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
