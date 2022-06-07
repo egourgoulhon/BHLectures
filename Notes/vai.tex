@@ -840,6 +840,8 @@ region:
 Note that $\mathscr{N}_{\rm I}$ (resp.  $\mathscr{N}_{\rm II}$)
 contains the homothetic Killing horizon $\Hor_1$ (resp. $\Hor_2$).
 
+\subsubsection{The $\mathscr{N}_{\rm I}$ region}
+
 On $\mathscr{N}_{\rm I}$, let us define the parameter $u$ so that
 \be
     \tilde{c} = |u|^{-x_2/(x_2 - x_1)} .
@@ -862,7 +864,7 @@ are deduced from those in the $(v, r, \th, \ph)$
 coordinates, i.e. Eq.~(\ref{e:vai:self_similar_metric}), via
 the identity $\alpha=2/(x_1 x_2)$. We get
 (see the notebook~\ref{s:sam:Vaidya_nk_sing} for the computation):
-\be
+\be \label{e:vai:metric_N_I}
     \w{g} = - \frac{2 x_2}{(x_2 - x_1)r} \left(r - \frac{v}{x_2} \right)^{x_1/2}
         \dd u \, \dd v
         + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \qquad
@@ -908,23 +910,36 @@ This, in turns, implies that the numerator of Eq.~(\ref{e:vai:u_N_I})
 is equivalent to $(x_2 - x_1)/(x_1 x_2) v$ in the limit $v\to 0$ and thus
 is positive, so that $u > 0$ on the part of the boundary of $\mathscr{N}_{\rm I}$
 where $r\to 0$.
-Hence the ``point'' $(t,r) = (v,r) = (0,0)$ of Vaidya spacetime in IEF coordinates
-becomes the hypersurface $v = 0$, $u > 0$ in the double-null coordinates.
+Hence the ``point'' $(t,r) = (v,r) = (0,0)$ in IEF coordinates
+becomes the hypersurface $v = 0$, $u > 0$ in the double-null coordinates. This means
+that the IEF coordinates are not adapted to describe the vicinity of $(t,r) = (0,0)$
+in Vaidya spacetime when $\alpha < 1/8$.
 
 \begin{example}
 Let us perform a first order expansion in $v$ of the explicit expression of $r(u,v)$
-found in Example~\ref{x:vai:u_r_1o9} [Eq.~(\ref{e:vai:r_uv_1o9})]. We
-get
+found in Example~\ref{x:vai:u_r_1o9} [Eq.~(\ref{e:vai:r_uv_1o9})].
+Taking into account the identity $\sqrt{u^2} = |u|$, we get
 \be
 \begin{cases}
- \displaystyle r = u^2 + \frac{1}{3} v + O(v^2) \quad\mbox{for}\ u < 0 \\
- \displaystyle r = \frac{1}{6} v + O(v^2) \quad\mbox{for}\ u > 0 .
+ \displaystyle r = u^2 + \frac{1}{3} v + O(v^2) & \quad\mbox{for}\ u < 0 \\
+ \displaystyle r = \frac{1}{6} v + O(v^2) & \quad\mbox{for}\ u > 0 .
 \end{cases}
 \ee
-The last equation agrees fully with (\ref{e:vai:r_v_0_N_I}) since $x_2=6$
-for this example.
+The first equation agrees with the relation $u = - r^{1 - x_1/x_2}$ found
+above for $r \neq 0 $ and $v = 0$, given that $x_1/x_2 = 1/2$ in the present
+case, while the
+last equation is exactly (\ref{e:vai:r_v_0_N_I}), given that $x_2=6$.
 \end{example}
 
+As discussed above, the double null coordinates $(u, v, \th, \ph)$
+are regular coordinates on $\mathscr{N}_{\rm I}$, for the components
+(\ref{e:vai:metric_N_I}) of the metric tensor are regular. Another advantage
+of these coordinates is that they allow for an immediate drawing of a
+Carter-Penrose diagram. It suffices to set $U = \arctan u$, $V = v$ and
+$T = U + V$ and $X = V - U$ to get such a diagram of $\mathscr{N}_{\rm I}$.
+It is depicted in Fig.~??
+
+\subsubsection{The $\mathscr{N}_{\rm II}$ region}
 
 On $\mathscr{N}_{\rm II}$, let us introduce the parameter $u'$ to rewrite
 $\tilde{c}$ in Eq.~(\ref{e:vai:v_r_out_naked}) as
