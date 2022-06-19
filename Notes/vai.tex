@@ -651,11 +651,11 @@ from a remote observer. In the next section, we are going to see that this is no
 case for $v_0 > 16 ùm$: the singularity is then naked.
 
 
-\section{Cases with a naked singularity} \label{s:vai:naked_sing}
+\section{Configurations with a naked singularity} \label{s:vai:naked_sing}
 
 \subsection{The low radiation density case}
 
-In Sec.~\ref{s:vai:infall}, we have focussed on a homothetic radiation shell
+In Sec.~\ref{s:vai:infall}, we have focussed on homothetic radiation shells
 ($M(v) = \alpha v / 2$) with a large energy density:
 $\alpha > 1/8$ [Eq.~(\ref{e:vai:v0_small})].
 Let us now discuss the opposite case\footnote{The marginal case $\alpha = 1/8$
@@ -683,8 +683,8 @@ to outgoing radial null geodesics with constant value of $x$:
 \be
     x = x_1  \qand x = x_2 .
 \ee
-Let us denote by respectively
-$\Li^{*1}_{(\th,\ph)}$ and $\Li^{*2}_{(\th,\ph)}$ these geodesics.
+Let us denote these geodesics by respectively
+$\Li^{*1}_{(\th,\ph)}$ and $\Li^{*2}_{(\th,\ph)}$.
 Since $x := v/r = 1 + t/r$, their equations in terms of the IEF
 coordinates $(t, r, \th, \ph)$ and in the radiation region is simply
 \be
@@ -692,22 +692,31 @@ coordinates $(t, r, \th, \ph)$ and in the radiation region is simply
     \qand
     \Li^{*2}_{(\th,\ph)}: t = (x_2 - 1) r.
 \ee
-We note that, in the radiation region,
+Thus, in the radiation region,
 $\Li^{*1}_{(\th,\ph)}$ and $\Li^{*2}_{(\th,\ph)}$ are straight line segments
 through the origin $(t, r) = (0,0)$. They are depicted
 as the segments $OC$ and $OB$ respectively in Fig.~\ref{f:vai:diag_naked_S0}.
+
+\begin{greybox}
 When $(\th,\ph)$ varies, $\Li^{*1}_{(\th,\ph)}$ and $\Li^{*2}_{(\th,\ph)}$
-generate null hypersurfaces, $\Hor_1$ and $\Hor_2$ respectively, that are
-\defin{homothetic Killing horizons}\index{homothetic!Killing!horizon}\index{Killing!horizon!homothetic --}
-in the radiation region: the homothetic Killing vector $\w{\xi}$
-[cf. Eq.~(\ref{e:vai:hom_Killing})] is normal to these null hypersurfaces. Indeed,
-their equations being $t=(x_1 - 1)r$ and $t=(x_2 - 1)r$, $ \Li^{*1}_{(\th,\ph)}$ and
-$ \Li^{*2}_{(\th,\ph)}$ are orbits of the
+generate null hypersurfaces, $\Hor_1$ and $\Hor_2$ respectively,
+such that the homothetic Killing vector $\w{\xi}$
+[cf. Eq.~(\ref{e:vai:hom_Killing})] is normal to them
+in the radiation region. One says that $\Hor_1$ and $\Hor_2$
+are
+\defin{homothetic Killing horizons}\index{homothetic!Killing!horizon}\index{Killing!horizon!homothetic --}\footnote{Recall from Sec.~\ref{s:neh:def_Killing_hor} that
+a \emph{Killing horizon} is a null hypersurface such that a Killing vector is normal to it.}.
+\end{greybox}
+\begin{proof}
+Their equations being $t=(x_1 - 1)r$ and $t=(x_2 - 1)r$, $ \Li^{*1}_{(\th,\ph)}$ and
+$ \Li^{*2}_{(\th,\ph)}$ are clearly orbits of the
 homothety group $(H_\lambda)_{\lambda\in \R_{>0}}$ discussed in Sec.~\ref{s:vai:sol_M_linear}.
-The group generator $\w{\xi}$ is thus tangent to $\Li^{*1}_{(\th,\ph)}$ on $\Hor_1$
-and to $\Li^{*2}_{(\th,\ph)}$ on $\Hor_2$. Consequently, $\w{\xi}$ is null there. Since the
-only null direction in a null hypersurface is the normal direction, it follows
-that  $\w{\xi}$  is normal to $\Hor_1$ and $\Hor_2$.
+The group generator $\w{\xi}$ is thus tangent to the null curves $\Li^{*1}_{(\th,\ph)}$ on $\Hor_1$
+and $\Li^{*2}_{(\th,\ph)}$ on $\Hor_2$. Hence,
+$\w{\xi}$ is null there. Given that the
+only null direction in a null hypersurface is the normal one, we conclude
+that  $\w{\xi}$ is normal to $\Hor_1$ and $\Hor_2$.
+\end{proof}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{vai_diag_naked_S0.pdf}}
@@ -757,7 +766,7 @@ is barely noticeable on the figure.
 }
 \end{figure}
 
-Having determined the outgoing radial null geodesics, one can establish
+Having determined the outgoing radial null geodesics, we are in position to establish
 the following results:
 \begin{greybox}
 The infalling radiation shell described by the Vaidya metric with $M(v)$ piecewise linear
@@ -822,9 +831,9 @@ with $x\in [x_1, 1/\alpha)$. %]$
 This appears clearly on Fig.~\ref{f:vai:r_x_naksing}.
 It looks like there is an infinity of future light cones emanating
 from a single spacetime point!
-This state of affairs results actually from a bad behaviour of the coordinate
+This state of affairs results actually from a bad behaviour of the coordinates
 $(t, r)$ near $(0,0)$. To clarify this, let us introduce new coordinates
-$(u, v, \th, \ph)$ on spacetime, such that $u$ is constant along the
+$(u, v, \th, \ph)$ such that $u$ is constant along the
 outgoing radial null geodesics, $v$ being by construction constant along
 the ingoing ones. Let us start by substituting $v/r$ for $x$ in
 the geodesic equation (\ref{e:vai:sol_r_x_out_naked}); we get
@@ -835,7 +844,7 @@ where $\tilde{c} := c^{-1} x_1^{x_2/(x_2 - x_1)} x_2^{-x_1/(x_2 - x_1)}$ is
 constant along a given outgoing radial null geodesic.
 To proceed, we introduce two overlaping subregions of the radiation
 region:
-\be
+\be \label{e:vai:def_NI_NII}
     \mathscr{N}_{\rm I}: r > \frac{v}{x_2} \qand
     \mathscr{N}_{\rm II}: r < \frac{v}{x_1} .
 \ee
@@ -873,14 +882,16 @@ the identity $\alpha=2/(x_1 x_2)$. We get
         \left(0 \leq v \leq v_0,\ r > \frac{v}{x_2}\right) .
 \ee
 In this expression, $r$ shall be considered as a function of $(u,v)$ defined
-implicitely by Eq.~(\ref{e:vai:u_N_I}).
+implicitly by Eq.~(\ref{e:vai:u_N_I}).
 The metric component $g_{uv}$ is regular and non-vanishing in all $\mathscr{N}_{\rm I}$.
 Moreover we have a double-null coordinate system:
 $g_{uu} = 0$ and $g_{vv} = 0$ imply that the coordinate vectors $\wpar_u$
 and $\wpar_v$ are both null. The vector $\wpar_u$ is actually tangent to the
 ingoing radial null geodesics, which are defined by $(v,\th,\ph) = \mathrm{const}$,
 and the vector $\wpar_v$ is tangent to the outgoing ones, which are defined
-by $(u,\th,\ph) = \mathrm{const}$.
+by $(u,\th,\ph) = \mathrm{const}$. Furthermore, the homothetic Killing horizon $\Hor_1$, which is defined by $v/r = x_1$, is the hypersurface
+$u = 0$ of $\mathscr{N}_{\rm I}$.
+
 
 \begin{example} \label{x:vai:u_r_1o9}
 As in Example~\ref{x:vai:sol_out_1o9}, let us consider the case $\alpha=1/9$,
@@ -905,14 +916,20 @@ coordinate of $\mathscr{N}_{\rm I}$ for $u < 0$. On the other side,
 the limit $r\to 0$ in $\mathscr{N}_{\rm I}$ implies $v\to 0$ since $r > v /x_2$
 in $\mathscr{N}_{\rm I}$. Actually, the following relation holds:
 \be \label{e:vai:r_v_0_N_I}
-    r \underset{v \to 0}{\sim} \frac{v}{x_2} .
+    v \underset{r \to 0}{\sim} x_2 r \quad\mbox{in}\quad \mathscr{N}_{\rm I} .
 \ee
 This follows directly from Eq.~(\ref{e:vai:sol_r_x_out_naked}), which implies
 the equivalence
-$r\to 0 \iff (x \to x_2 \ \mbox{or}\  x \to +\infty)$ along any outgoing radial null geodesic, irrespective
-of the value of $u$ (see also Fig.~\ref{f:vai:r_x_naksing}). Given that $x=v/r$, we do get (\ref{e:vai:r_v_0_N_I}).
+\be
+    r\to 0 \iff (x \to x_2 \ \mbox{or}\  x \to +\infty)
+\ee
+along any outgoing radial null geodesic, irrespective
+of the value of $u$ (see also Fig.~\ref{f:vai:r_x_naksing}).
+Given that in $\mathscr{N}_{\rm I}$, $x \to +\infty$ is excluded
+by the constraint $x < x_2$ [Eq.~(\ref{e:vai:def_NI_NII})], there remains $x\to x_2$,
+which yields the equivalence (\ref{e:vai:r_v_0_N_I}).
 Now, Eq.~(\ref{e:vai:r_v_0_N_I}) implies that the numerator of Eq.~(\ref{e:vai:u_N_I})
-is equivalent to $(x_2 - x_1)/(x_1 x_2) v$ in the limit $v\to 0$ and thus
+is equivalent to $(x_2/x_1 - 1) r$ in the limit $r\to 0$ and thus
 is positive, so that $u > 0$ on the part of the boundary of $\mathscr{N}_{\rm I}$
 where $r\to 0$.
 We conclude that the ``point'' $(t,r) = (v,r) = (0,0)$ in IEF coordinates
@@ -944,6 +961,22 @@ Carter-Penrose diagram. It suffices to set $U = \arctan u$, $V = v$ and
 $T = U + V$ and $X = V - U$ to get such a diagram of $\mathscr{N}_{\rm I}$.
 It is depicted in Fig.~??
 
+Let us describe the (vicinity of the) curvature singularity in the double null
+coordinates. In the present case, where $M(v) = \alpha v/2$, the Kretschmann
+scalar (\ref{e:vai:Kretschmann}) reduces to
+\be
+    K = 12\alpha^2 \frac{v^2}{r^6} ,
+\ee
+where $r$ is the function of $(u,v)$ given implicitly by Eq.~(\ref{e:vai:u_N_I})
+(or explicitly by Eq.~(\ref{e:vai:r_uv_1o9}) in the case $\alpha=1/9$).
+The above expression shows that
+$K$ diverges only if $r\to 0$. This occurs only for $v \to 0$ in the
+subregion $u\geq 0$ of $\mathscr{N}_{\rm I}$. There, Eq.~(\ref{e:vai:r_v_0_N_I})
+leads to $K \sim 12 \alpha^2 x_2^6 / v^4$, which actually diverges as
+$v \to 0$. We conclude that in $\mathscr{N}_{\rm I}$, the curvature
+singularity corresponds to $u\geq 0$ and $v=0$.
+
+
 \subsubsection{The $\mathscr{N}_{\rm II}$ region}
 
 On $\mathscr{N}_{\rm II}$, let us introduce the parameter $u'$ to rewrite
@@ -968,10 +1001,12 @@ as given by Eq.~(\ref{e:vai:self_similar_metric})
         + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \qquad
         \left(0 \leq v \leq v_0,\ r < \frac{v}{x_1}\right) ,
 \ee
-where $r = r(u', v)$ is defined implicitely by Eq.~(\ref{e:vai:up_N_II}).
+where $r = r(u', v)$ is defined implicitly by Eq.~(\ref{e:vai:up_N_II}).
 Again, we get a double-null coordinate system, adapted to the ingoing and
 outgoing radial null geodesics. Moreover, the coordinates $(u',v,\th,\ph)$ are regular
 since $g_{u'v}$ is finite and non-vanishing in all $\mathscr{N}_{\rm II}$.
+In addition, the homothetic Killing horizon $\Hor_2$,
+which is defined by $v/r = x_2$, is the hypersurface $u' = 0$ of $\mathscr{N}_{\rm II}$.
 
 \begin{example}
 For $\alpha=1/9$, i.e. $x_1 = 3$ and $x_2 = 6$,
@@ -985,13 +1020,7 @@ This relation can be inverted, yielding  an explicit expression for $r(u', v)$:
 \ee
 \end{example}
 
-
-
-The homothetic Killing horizon $\Hor_1 \subset \mathscr{N}_{\rm I}$,
-which is defined by $v/r = x_1$, is the hypersurface $u = 0$,
-while the homothetic Killing horizon $\Hor_2 \subset \mathscr{N}_{\rm II}$,
-which is defined by $v/r = x_2$, is the hypersurface $u' = 0$.
-
+On $\mathscr{N}_{\rm II}$, $v\to 0$ implies $r \to 0$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
