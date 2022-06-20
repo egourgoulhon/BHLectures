@@ -849,12 +849,14 @@ region:
     \mathscr{N}_{\rm II}: r < \frac{v}{x_1} .
 \ee
 Note that $\mathscr{N}_{\rm I}$ (resp.  $\mathscr{N}_{\rm II}$)
-contains the homothetic Killing horizon $\Hor_1$ (resp. $\Hor_2$).
+contains the homothetic Killing horizon $\Hor_1$ (resp. $\Hor_2$)
+and that $\mathscr{N}_{\rm I} \cap \mathscr{N}_{\rm II}$ is the region
+between $\Hor_1$ and $\Hor_2$.
 
 \subsubsection{The $\mathscr{N}_{\rm I}$ region}
 
 On $\mathscr{N}_{\rm I}$, let us define the parameter $u$ so that
-\be
+\be \label{e:vai:def_u_tilde_c}
     \tilde{c} = |u|^{-x_2/(x_2 - x_1)} .
 \ee
 As $\tilde{c}$, $u$ is constant along a given outgoing radial null geodesic.
@@ -879,7 +881,7 @@ the identity $\alpha=2/(x_1 x_2)$. We get
     \w{g} = - \frac{2 x_2}{(x_2 - x_1)r} \left(r - \frac{v}{x_2} \right)^{x_1/2}
         \dd u \, \dd v
         + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \qquad
-        \left(0 \leq v \leq v_0,\ r > \frac{v}{x_2}\right) .
+        \left(r > \frac{v}{x_2}\right) .
 \ee
 In this expression, $r$ shall be considered as a function of $(u,v)$ defined
 implicitly by Eq.~(\ref{e:vai:u_N_I}).
@@ -984,7 +986,7 @@ singularity corresponds to $u\geq 0$ and $v\to 0$.
 
 On $\mathscr{N}_{\rm II}$, let us introduce the parameter $u'$ to rewrite
 $\tilde{c}$ in Eq.~(\ref{e:vai:v_r_out_naked}) as
-\be
+\be \label{e:vai:def_up_tilde_c}
     \tilde{c} = |u'|^{x_1/(x_2 - x_1)} .
 \ee
 Then Eq.~(\ref{e:vai:v_r_out_naked}) yields $|u'| = |v/x_2 - r| / (v/x_1 - r)^{x_2/x_1}$.
@@ -1006,7 +1008,7 @@ are deduced from those in coordinates $(v,r,\th,\ph)$ [Eq.~(\ref{e:vai:self_simi
     \w{g} = - \frac{2 x_1}{(x_2 - x_1)r} \left(\frac{v}{x_1} - r \right)^{x_2/2}
         \dd u' \, \dd v
         + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \qquad
-        \left(0 \leq v \leq v_0,\ r < \frac{v}{x_1}\right) ,
+        \left( r < \frac{v}{x_1}\right) ,
 \ee
 where $r = r(u', v)$ is defined implicitly by Eq.~(\ref{e:vai:up_N_II}).
 Again, we get a double-null coordinate system adapted to the ingoing and
@@ -1014,6 +1016,20 @@ outgoing radial null geodesics. Moreover, the coordinates $(u',v,\th,\ph)$ are r
 since $g_{u'v}$ is finite and non-vanishing in all $\mathscr{N}_{\rm II}$.
 In addition, the homothetic Killing horizon $\Hor_2$,
 which is defined by $v/r = x_2$, is the hypersurface $u' = 0$ of $\mathscr{N}_{\rm II}$.
+In $\mathscr{N}_{\rm I}\cap \mathscr{N}_{\rm II}$, we have $u>0$ and $u'<0$.
+The relation between the two coordinates is obtained by equating the
+right-hand sides of Eqs.~(\ref{e:vai:def_u_tilde_c}) and (\ref{e:vai:def_up_tilde_c});
+one gets
+\be \label{e:vai:up_u}
+    u' = - u^{-x_2/x_1} \quad\mbox{in}\ \mathscr{N}_{\rm I}\cap \mathscr{N}_{\rm II} ,
+\ee
+along with the following characterization of the two homothetic Killing horizons:
+\begin{subequations}
+\begin{align}
+\Hor_1:\quad &u = 0, \quad u' \to - \infty \\
+\Hor_2:\quad &u \to +\infty, \quad u'=0 .
+\end{align}
+\end{subequations}
 
 \begin{example}
 For $\alpha=1/9$, i.e. $x_1 = 3$ and $x_2 = 6$,
@@ -1025,6 +1041,12 @@ This relation can be inverted, yielding  an explicit expression for $r(u', v)$:
 \be \label{e:vai:r_up_v_alp1o9}
     r = \frac{v}{3} + \frac{1}{2u'} \left( \sqrt{1 - \frac{2}{3} u' v } - 1 \right) .
 \ee
+Equation~(\ref{e:vai:up_u}) reduces to
+\be
+    u' = - \frac{1}{u^2} \quad\mbox{in}\ \mathscr{N}_{\rm I}\cap \mathscr{N}_{\rm II} .
+\ee
+Substuting this expression for $u'$ in Eq.~(\ref{e:vai:r_up_v_alp1o9}), one recovers
+Eq.~(\ref{e:vai:r_uv_1o9}).
 \end{example}
 
 Let us locate the curvature singularity at the boundary of $\mathscr{N}_{\rm II}$.
