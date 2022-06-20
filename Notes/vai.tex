@@ -920,7 +920,7 @@ in $\mathscr{N}_{\rm I}$. Actually, the following relation holds:
 \ee
 This follows directly from Eq.~(\ref{e:vai:sol_r_x_out_naked}), which implies
 the equivalence
-\be
+\be \label{e:vai:r_to_0_outgoing}
     r\to 0 \iff (x \to x_2 \ \mbox{or}\  x \to +\infty)
 \ee
 along any outgoing radial null geodesic, irrespective
@@ -964,7 +964,7 @@ It is depicted in Fig.~??
 Let us describe the (vicinity of the) curvature singularity in the double null
 coordinates. In the present case, where $M(v) = \alpha v/2$, the Kretschmann
 scalar (\ref{e:vai:Kretschmann}) reduces to
-\be
+\be \label{e:vai:Kretschmann:M_linear}
     K = 12\alpha^2 \frac{v^2}{r^6} ,
 \ee
 where $r$ is the function of $(u,v)$ given implicitly by Eq.~(\ref{e:vai:u_N_I})
@@ -973,8 +973,11 @@ The above expression shows that
 $K$ diverges only if $r\to 0$. This occurs only for $v \to 0$ in the
 subregion $u\geq 0$ of $\mathscr{N}_{\rm I}$. There, Eq.~(\ref{e:vai:r_v_0_N_I})
 leads to $K \sim 12 \alpha^2 x_2^6 / v^4$, which actually diverges as
-$v \to 0$. We conclude that in $\mathscr{N}_{\rm I}$, the curvature
-singularity corresponds to $u\geq 0$ and $v=0$.
+$v \to 0$. We conclude that
+\begin{greybox}
+In $\mathscr{N}_{\rm I}$, the curvature
+singularity corresponds to $u\geq 0$ and $v\to 0$.
+\end{greybox}
 
 
 \subsubsection{The $\mathscr{N}_{\rm II}$ region}
@@ -990,11 +993,15 @@ $\mathscr{N}_{\rm II}$ ($r\to v/x_1$), we get
 \be \label{e:vai:up_N_II}
     u' = \frac{v/x_2 - r}{\left(v/x_1 - r \right)^{x_2/x_1}} .
 \ee
-Let us consider $(u',v,\th,\ph)$ as a coordinate system on $\mathscr{N}_{\rm II}$.
-As above, the metric components in these coordinates
-are deduced from those in the $(v,r,\th,\ph)$ coordinates,
-as given by Eq.~(\ref{e:vai:self_similar_metric})
-(see the notebook~\ref{s:sam:Vaidya_nk_sing} for the computation):
+We may then consider $(u',v,\th,\ph)$ as a coordinate system on $\mathscr{N}_{\rm II}$.
+\begin{remark}
+Contrary to the range of $u$ on $\mathscr{N}_{\rm I}$, which is $(-\infty,+\infty)$,
+the range of $u'$ on $\mathscr{N}_{\rm II}$ is bounded from above by a function
+of $v$, which is given by Eq.~(\ref{e:vai:range_v_uprime}) below.
+\end{remark}
+As above, the metric components in coordinates $(u',v,\th,\ph)$
+are deduced from those in coordinates $(v,r,\th,\ph)$ [Eq.~(\ref{e:vai:self_similar_metric})]
+(cf. the notebook~\ref{s:sam:Vaidya_nk_sing} for the computation):
 \be
     \w{g} = - \frac{2 x_1}{(x_2 - x_1)r} \left(\frac{v}{x_1} - r \right)^{x_2/2}
         \dd u' \, \dd v
@@ -1002,7 +1009,7 @@ as given by Eq.~(\ref{e:vai:self_similar_metric})
         \left(0 \leq v \leq v_0,\ r < \frac{v}{x_1}\right) ,
 \ee
 where $r = r(u', v)$ is defined implicitly by Eq.~(\ref{e:vai:up_N_II}).
-Again, we get a double-null coordinate system, adapted to the ingoing and
+Again, we get a double-null coordinate system adapted to the ingoing and
 outgoing radial null geodesics. Moreover, the coordinates $(u',v,\th,\ph)$ are regular
 since $g_{u'v}$ is finite and non-vanishing in all $\mathscr{N}_{\rm II}$.
 In addition, the homothetic Killing horizon $\Hor_2$,
@@ -1011,16 +1018,61 @@ which is defined by $v/r = x_2$, is the hypersurface $u' = 0$ of $\mathscr{N}_{\
 \begin{example}
 For $\alpha=1/9$, i.e. $x_1 = 3$ and $x_2 = 6$,
 Eq.~(\ref{e:vai:up_N_II}) reduces to
-\be
+\be \label{e:vai:up_v_r_alp1o9}
     u' = \frac{3}{2} \frac{v - 6r}{(v - 3 r)^2} .
 \ee
 This relation can be inverted, yielding  an explicit expression for $r(u', v)$:
-\be
+\be \label{e:vai:r_up_v_alp1o9}
     r = \frac{v}{3} + \frac{1}{2u'} \left( \sqrt{1 - \frac{2}{3} u' v } - 1 \right) .
 \ee
 \end{example}
 
-On $\mathscr{N}_{\rm II}$, $v\to 0$ implies $r \to 0$.
+Let us locate the curvature singularity at the boundary of $\mathscr{N}_{\rm II}$.
+A necessary condition for the Kretschmann scalar (\ref{e:vai:Kretschmann:M_linear})
+to diverge is $r(u',v) \to 0$. According to Eq.~(\ref{e:vai:r_to_0_outgoing}),
+this occurs along an outgoing radial null
+geodesic if, and only if, $x \to x_2$ or $x\to +\infty$.
+Now, let us rewrite Eq.~(\ref{e:vai:up_N_II}) by substituting $x r$ for $v$:
+\[
+    u' = \frac{x/x_2 - 1}{\left(x/x_1 - 1 \right)^{x_2/x_1} r^{x_2/x_1-1}} .
+\]
+Since $u'$ is fixed along the outgoing radial null geodesic, we recover
+from this expression the two limits $x \to x_2$ or $x\to +\infty$ in which
+$r(u',v) \to 0$ may occur. The first limit corresponds to $v \sim x_2 r$
+(actually the same behavior as (\ref{e:vai:r_v_0_N_I}) in $\mathscr{N}_{\rm I}$),
+which implies $v\to 0$. This leads to
+$K \sim 12\alpha^2 x_2^6/v^4$, which does diverge for $v\to 0$.
+For the second limit, $x \to +\infty$, we get
+\[
+    u' \sim \frac{x_1^{x_2/x_1}}{x_1 (x r)^{x_2/x_1 - 1}} .
+\]
+This implies that $x r = v$ tends to a finite value. Then $K = 12\alpha^2 v^2 / r^6$
+diverges as $r^{-6}$ there. In conclusion:
+\begin{greybox}
+In all $\mathscr{N}_{\rm II}$,
+the limit $r\to 0$ corresponds to a curvature singularity.
+This singularity is reached in two places, which constitute parts of the boundary
+of $\mathscr{N}_{\rm II}$: (i) $v\to 0$ and (ii) $u' v^{x_2/x_1 - 1}
+\to x_1^{x_2/x_1} / x_2$. In particular, we get that the range of the coordinates
+$(u',v)$ in $\mathscr{N}_{\rm II}$ are
+\be \label{e:vai:range_v_uprime}
+    0 < v \leq v_0 \qand
+    -\infty < u' < \frac{x_1^{x_2/x_1}}{x_2 v^{x_2/x_1 - 1}} .
+\ee
+\end{greybox}
+
+\begin{example}
+For $\alpha=1/9$, i.e. $x_1 = 3$ and $x_2 = 6$,
+Eq.~(\ref{e:vai:r_up_v_alp1o9}) implies
+\be
+\lim_{v\to 0} r = 0 \qand
+\lim_{u'v\to 3/2} r = 0 .
+\ee
+The second limit agrees with the upper boundary for $u'$
+in (\ref{e:vai:range_v_uprime}), since the latter can be
+rewritten as $u' v < 3/2$
+for $x_1 = 3$ and $x_2 = 6$.
+\end{example}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
