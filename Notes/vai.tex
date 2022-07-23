@@ -407,34 +407,39 @@ as
     \D \ln r = \frac{1 - \alpha x}{\alpha x^2 - x + 2}\, \D x ,
 \ee
 the solution of which is $r = r_0 f_\alpha(x)$, where
+\be
+    \ln f_\alpha(x) := \int_0^x \frac{1 - \alpha x'}{\alpha {x'}^2 - x' + 2}\, \D x'
+\ee
+and the integration constant $r_0>0$ is the value of $r$ at $x=0$, or equivalently
+at $v = 0$, since $f_\alpha(0) = 1$.
+Explicitely,
 \be \label{e:vai:sol_r_x_v0_small}
- \encadre{   f_\alpha(x) := \frac{\sqrt{2}}{\sqrt{\alpha x^2 - x + 2}}
+ \encadre{   f_\alpha(x) = \frac{\sqrt{2}}{\sqrt{\alpha x^2 - x + 2}}
     \exp\left\{ \frac{1}{\sqrt{8\alpha - 1}} \left[
     \arctan \left(\frac{2\alpha x - 1}{\sqrt{8\alpha - 1}} \right)
     + \arctan\left( \frac{1}{\sqrt{8\alpha - 1}} \right)\right] \right\} },
 \ee
-and the integration constant $r_0>0$ is the value of $r$ at $x=0$, or equivalently
-at $v = 0$.
-Hence:
+Introducing the dimensionless
+parameter $u := - \ln (r_0 / m)$, we conclude
 \begin{greybox}
 In the radiation region, the outgoing radial null geodesics form
-a 3-parameter family of curves $\left(\Li_{(r_0,\th,\ph)}\right)$,
-where the parameter $r_0 \in \R^+$ is the value of $r$
-at the inner edge of the radiation shell ($v=0$).
-The parametric equation of $\Li_{(r_0,\th,\ph)}$ in terms of the IEF
+a 3-parameter family of curves $\left(\Li_{(u,\th,\ph)}^{\rm out}\right)$,
+where the parameter $u \in \R$ is related to the value $r_0$ of $r$
+at the inner edge of the radiation shell ($v=0$) by $r_0 = m \mathrm{e}^{-u}$.
+The parametric equation of $\Li_{(u,\th,\ph)}^{\rm out}$ in terms of the IEF
 coordinates is
 \be \label{e:vai:eq_out_v0_small}
 \begin{cases}
-t = r_0 (x - 1) f_\alpha(x) \\
-r = r_0 f_\alpha(x) \\
+t =  m \mathrm{e}^{-u} (x - 1) f_\alpha(x) \\
+r =  m \mathrm{e}^{-u} f_\alpha(x) \\
 \th = \mathrm{const}, \ph = \mathrm{const}
 \end{cases}
 \qquad 0 \leq x \leq x_{\rm max},
 \ee
 where the function $f_\alpha(x)$ is defined by Eq.~(\ref{e:vai:sol_r_x_v0_small})
-and either $x_{\rm max} = +\infty$ ($\Li_{(r_0,\th,\ph)}$ reaches $r=0$ for some $v < v_0$)
-or $x_{\rm max}$ is the solution of $r_0 x_{\rm max} f_\alpha(x_{\rm max}) = v_0$
-($\Li_{(r_0,\th,\ph)}$ reaches the outer edge of the radiation shell).
+and either $x_{\rm max} = +\infty$ ($\Li_{(u,\th,\ph)}^{\rm out}$ reaches $r=0$ for some $v < v_0$)
+or $x_{\rm max}$ is the solution of $m \mathrm{e}^{-u} x_{\rm max} f_\alpha(x_{\rm max}) = v_0$
+($\Li_{(u,\th,\ph)}^{\rm out}$ reaches the outer edge of the radiation shell).
 \end{greybox}
 The function $f_\alpha(x)$ is plotted in Fig.~\ref{f:vai:f_alpha_x}.
 It increases from $1$ at $x=0$ to some maximum reached for $x=1/\alpha$
@@ -442,8 +447,8 @@ and then decreases to $0$ as $x\to +\infty$. This behavior follows
 directly from the sign of the numerator $1 - \alpha x$ in Eq.~(\ref{e:vai:ODE_outgoing_x_sep}),
 given that the denominator $\alpha x^2 - x + 2$ is always positive for $\alpha > 1/8$.
 Note that it could be that $x_{\rm max} < 1/\alpha$ so that the maximum
-of $f_\alpha(x)$ is actually not reached along $\Li_{(r_0,\th,\ph)}$. In that
-case, $r$ increases monotically along $\Li_{(r_0,\th,\ph)}$ in the radiation region,
+of $f_\alpha(x)$ is actually not reached along $\Li_{(u,\th,\ph)}^{\rm out}$. In that
+case, $r$ increases monotically along $\Li_{(u,\th,\ph)}^{\rm out}$ in the radiation region,
 from $r_0$ to $r_0 f_\alpha(x_{\rm max})$.
 
 \begin{figure}
@@ -458,7 +463,8 @@ of $f_\alpha(x)$ is achieved for $x=1/\alpha$.
 
 It appears clearly on Eq.~(\ref{e:vai:eq_out_v0_small}) that
 the homothety $H_\lambda:\ (t, r) \mapsto (\lambda t, \lambda r)$
-transforms the geodesic $\Li_{(r_0,\th,\ph)}$ into the geodesic $\Li_{(\lambda r_0,\th,\ph)}$,
+transforms the geodesic $\Li_{(u,\th,\ph)}^{\rm out}$  into the geodesic
+$\Li_{(u',\th,\ph)}^{\rm out}$ with $u' = u - \ln \lambda$,
 in agreement with the homothetic symmetry of the radiation region discussed
 above.
 
@@ -466,7 +472,7 @@ Some outgoing radial null geodesics are depicted as solid green lines
 in Fig.~\ref{f:vai:diag_S0}. In the radiation region, they obey
 Eq.~(\ref{e:vai:eq_out_v0_small}).
 Note that the homothetic symmetry appears clearly on the figure.
-If a geodesic $\Li_{(r_0,\th,\ph)}$ has a turning point in terms of $r$ in the
+If a geodesic $\Li_{(u,\th,\ph)}^{\rm out}$  has a $r$-turning point in the
 radiation region, it must located at $x = 1/\alpha$, i.e. at $t/r = 1/\alpha - 1$,
 or equivalently at
 \be \label{e:vai:r_max_out}
@@ -533,8 +539,9 @@ black curve). If $\hat{\Li}$ is prolonged into the radiation
 region, still in the past direction, it encounters the inner edge of
 the radiation region (hypersurface $v=0$) at the point $B$
 (cf. Fig.~\ref{f:vai:diag_S0}).
-The portion $AB$ of $\hat{\Li}$ coincides with the geodesic $\Li_{(r_B,\th,\ph)}$
-of the outgoing radial null family given by Eq.~(\ref{e:vai:eq_out_v0_small}).
+The portion $AB$ of $\hat{\Li}$ coincides with the geodesic $\Li_{(u_B,\th,\ph)}^{\rm out}$
+of the outgoing radial null family given by Eq.~(\ref{e:vai:eq_out_v0_small}),
+with $u_B = - \ln(r_B / m)$.
 We have then $r_A = r_B f_\alpha(x_A)$.
 Now, by definition of $x$ [Eq.~(\ref{e:vai:def_x_v_r})] and
 $\alpha$ [Eq.~(\ref{e:vai:def_alpha})],
@@ -647,9 +654,24 @@ The curvature singularity is depicted as the orange broken line in Fig.~\ref{f:v
 For the homothetic collapse with $v_0 < 16\, m$ considered in Secs.~\ref{s:vai:sol_M_linear} and
 \ref{s:vai:BH_formation}, one has $t_{\rm hb} < 0$ [Eq.~(\ref{e:vai:t_hb})], so that
 the curvature singularity is entirely located in the black hole region. It is therefore hidden
-from a remote observer. In the next section, we are going to see that this is no longer the
-case for $v_0 > 16 ùm$: the singularity is then naked.
+from a remote observer. In Sec.~\ref{s:vai:naked_sing}, we will see that this is no longer the
+case for $v_0 > 16 m$: the singularity is then naked.
 
+\subsection{Carter-Penrose diagram}
+
+In order to draw a conformal Carter-Penrose diagram of the Vaidya collapse,
+we need first to introduce a double null coordinate system in the radiation
+region $\M_{\rm rad}$. More precisely, let us use $(u, v, \th,\ph)$
+as a coordinate system on $\M_{\rm rad}$. By construction $u$ is constant
+along the outgoing radial null geodesics and $v$ is constant along the ingoing
+ones. From Eq.~(\ref{e:vai:eq_out_v0_small}), we get
+\[
+    \frac{1}{r} \D r = - \D u + \derd{}{x}\left( \ln f_\alpha(x) \right) \, \D x
+        = - \D u +  \frac{1 - \alpha x}{\alpha x^2 - x + 2} \D x .
+\]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Configurations with a naked singularity} \label{s:vai:naked_sing}
 
