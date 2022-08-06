@@ -738,12 +738,16 @@ The spacelike character of $\mathscr{T}$ is actually a generic feature of future
 as we shall see in Chap.~\ref{s:loc}.
 \end{remark}
 
-\begin{example}
 For the homothetic shell model considered in Sec.~\ref{s:vai:sol_M_linear},
 $M(v) = m v / v_0 = \alpha v / 2$ and the equation of
-$\mathscr{T}$ in $\M_{\rm rad}$ is vey simple: $ r = \alpha(t + r)$, or equivalently
-$t = (\alpha^{-1} - 1) r$. For $v_0 = 3m$, as in Fig.~\ref{f:vai:diag_S0},
-$\alpha = 2/3$ and we get $t = r / 2$. Hence, in $\M_{\rm rad}$,
+$\mathscr{T}$ in $\M_{\rm rad}$ is vey simple:
+\be \label{e:vai:def_T_hom}
+    \mathscr{T} \cap \M_{\rm rad}:\qquad r = \alpha v .
+\ee
+
+\begin{example}
+For $v_0 = 3m$, as in Fig.~\ref{f:vai:diag_S0},
+$\alpha = 2/3$ and we get $r = 2v/3 = 2(t+r)/3$ or equivalently $t = r / 2$. Hence, in $\M_{\rm rad}$,
 $\mathscr{T}$ appears as the straight line segment of slope $1/2$
 drawn in red in Fig.~\ref{f:vai:diag_S0}.
 By considering the light cones delineated by the radial null geodesics, it appears
@@ -846,6 +850,8 @@ depicted in terms of the double-null coordinates
 $(u, v)$. Solid (resp. dashed) green lines are outgoing (resp. ingoing)
 radial null geodesics. The orange zigzag curve corresponds to the curvature
 singularity at $r=0$.
+The black segment marks the event horizon $\Hor$, while the red curve marks the trapping horizon
+$\mathscr{T}$ [Eq.~(\ref{e:vai:thin:trap_uv})].
 The points $A$ and $B$ are the same as in Fig.~\ref{f:vai:diag_S0}.
 }
 \end{figure}
@@ -890,20 +896,25 @@ radial null geodesics.
 The orange zigzag segment corresponds to the curvature
 singularity at $r=0$. The hatched area is the black hole region,
 delimited by the event horizon $\Hor$.
+The red dot-filled area, delimited by the future outer trapping horizon
+$\mathscr{T}$ (red curve),
+is the region where the spheres $(t,r)=\mathrm{const}$
+are trapped surfaces.
 The points $A$, $B$ and $C$ along $\Hor$ are the same as in Fig.~\ref{f:vai:diag_S0}.
 }
 \end{figure}
 
 Regarding the future outer trapping horizon $\mathscr{T}$ introduced in
-Sec.~\ref{s:vai:trapped_surf}, it obeys $r = \alpha v$ in $\M_{\rm rad}$
-[Eq.~(\ref{e:vai:def_T}) with $M(v) = \alpha v / 2$], so that the equation
+Sec.~\ref{s:vai:trapped_surf}, it obeys $r=\alpha v$ in $\M_{\rm rad}$
+[Eq.~(\ref{e:vai:def_T_hom})],
+so that the equation
 of $\mathscr{T}$ in terms of the double-null coordinates is easily obtained
 by substituting $\alpha^{-1}$ for $v/r$ in Eq.~(\ref{e:vai:u_lnr_v})
-and making use of expression (\ref{e:vai:thin:u_H}):
-\be
+and making use of expressions (\ref{e:vai:sol_r_x_v0_small}) and (\ref{e:vai:thin:u_H}); one gets
+\be \label{e:vai:thin:trap_uv}
   \mathscr{T}: \qquad  u = \ln\left( \frac{v_0}{v} \right) + u_\Hor .
 \ee
-
+$\mathscr{T}$ is drawn as a red curve in Fig.~\ref{f:vai:thin_double_null}.
 
 The spacetime diagram of $\M_{\rm rad}$ in Fig.~\ref{f:vai:thin_double_null}
 is already conformal since all radial null geodesics are straight lines
@@ -944,7 +955,9 @@ admits two real roots:
     \qand
     x_2 := \frac{1 + \sqrt{1 - 8\alpha}}{2\alpha} .
 \ee
-Accordingly, Eq.~(\ref{e:vai:ODE_outgoing_x}) can be recast as
+Useful identities are $x_1 + x_2 = \alpha^{-1}$ and $x_1 x_2 = 2\alpha^{-1}$.
+Note also that $2 < x_1 < 4 < x_2 < \alpha^{-1}$.
+Equation~(\ref{e:vai:ODE_outgoing_x}) can be recast as
 \be \label{e:vai:ODE_outgoing_x_naked}
     r \frac{\D x}{\D r} = \frac{(x - x_1)(x - x_2)}{x_1 + x_2 - x} .
 \ee
