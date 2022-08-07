@@ -752,6 +752,12 @@ $\mathscr{T}$ appears as the straight line segment of slope $1/2$
 drawn in red in Fig.~\ref{f:vai:diag_S0}.
 By considering the light cones delineated by the radial null geodesics, it appears
 clearly on Fig.~\ref{f:vai:diag_S0} that $\mathscr{T}$ is a spacelike hypersurface in $\M_{\rm rad}$.
+As shown above, $\mathscr{T}$ coincides with $\Hor$ in $\M_{\rm Sch}$, so that one notices
+that on Fig.~\ref{f:vai:diag_S0} that the slope of $\mathscr{T}$ changes from $1/2$
+to $+\infty$ at the outer edge of $\M_{\rm rad}$.
+This lack of smoothness of the hypersurface $\mathscr{T}$ reflects actually
+the lack of smoothness of the function $M(v)$ of the homothetic shell model
+(cf. the blue curve in Fig.~\ref{f:vai:mass_function}).
 \end{example}
 
 \subsection{Carter-Penrose diagram} \label{f:vai:thin_CP}
@@ -763,7 +769,7 @@ as a coordinate system on $\M_{\rm rad}$.
 The relation between the coordinates $(u, v, \th,\ph)$ and
 $(v, r, \th, \ph)$ is provided by Eq.~(\ref{e:vai:eq_out_v0_small}):
 \be \label{e:vai:u_lnr_v}
-    u = - \ln\left(\frac{r}{m}\right) + \ln f_\alpha\left(\frac{v}{r}\right) .
+    \encadre{ u = - \ln\left(\frac{r}{m}\right) + \ln f_\alpha\left(\frac{v}{r}\right) }.
 \ee
 By construction $u$ is constant
 along the outgoing radial null geodesics and $v$ is constant along the ingoing
@@ -914,6 +920,9 @@ and making use of expressions (\ref{e:vai:sol_r_x_v0_small}) and (\ref{e:vai:thi
 \be \label{e:vai:thin:trap_uv}
   \mathscr{T}: \qquad  u = \ln\left( \frac{v_0}{v} \right) + u_\Hor .
 \ee
+Note that this implies $u\to +\infty$ for $v\to 0$ and $u\to u_\Hor$
+for $v\to v_0$; the latter property agrees with $\mathscr{T}$ coinciding
+with $\Hor$ in $\M_{\rm Sch}$, i.e. for $v > v_0$.
 $\mathscr{T}$ is drawn as a red curve in Fig.~\ref{f:vai:thin_double_null}.
 
 The spacetime diagram of $\M_{\rm rad}$ in Fig.~\ref{f:vai:thin_double_null}
@@ -1147,7 +1156,7 @@ $u$ in terms of $v$ and $r$ up to some sign. We choose the latter so that
 $u \to +\infty$ at the inner boundary of $\mathscr{N}_{\rm I}$
 ($r \to v/x_2$). This yields
 \be \label{e:vai:u_N_I}
-    u = \frac{v/x_1 - r}{(r - v/x_2)^{x_1/x_2}}, \quad -\infty < u < +\infty ,
+    \encadre{ u = \frac{v/x_1 - r}{(r - v/x_2)^{x_1/x_2}}}, \quad -\infty < u < +\infty ,
 \ee
 with $\lim_{r\to +\infty} u = - \infty$ (cf. Fig.~\ref{f:vai:CPdiag_NI_NII}).
 We may use $(u, v, \th, \ph)$ as a coordinate system on $\mathscr{N}_{\rm I}$,
@@ -1287,7 +1296,7 @@ Then Eq.~(\ref{e:vai:v_r_out_naked}) yields $|u'| = |v/x_2 - r| / (v/x_1 - r)^{x
 Choosing the sign of $u'$ such that $u'\to -\infty$ at the outer boundary of
 $\mathscr{N}_{\rm II}$ ($r\to v/x_1$), we get
 \be \label{e:vai:up_N_II}
-    u' = \frac{v/x_2 - r}{\left(v/x_1 - r \right)^{x_2/x_1}} .
+    \encadre{ u' = \frac{v/x_2 - r}{\left(v/x_1 - r \right)^{x_2/x_1}} }.
 \ee
 We may then consider $(u',v,\th,\ph)$ as a coordinate system on $\mathscr{N}_{\rm II}$.
 \begin{remark}
@@ -1416,7 +1425,7 @@ value of $u'$ along an ingoing radial null
 geodesic with $v = v_0$ (geodesic on the outer edge of the radiation shell,
 cf. Fig.~\ref{f:vai:CPdiag_NI_NII})
 is
-\be
+\be \label{e:vai:nak:up0}
     u'_0 = \frac{x_1^{x_2/x_1}}{x_2 v_0^{x_2/x_1 - 1}} .
 \ee
 
@@ -1436,7 +1445,7 @@ null geodesics, $\Hor\cap \M_{\rm rad}$ lies a constant value of $u'$, which
 we shall denote by $u'_\Hor$. The value of ${u'}_\Hor$ is obtained by
 setting $v=v_0$ and $r=2m$ in Eq.~(\ref{e:vai:up_N_II}). Using the identities
 $\alpha = 2m/v_0$ and $\alpha = 2/(x_1 x_2)$, we get
-\be
+\be \label{e:vai:nak:upH}
     u'_\Hor = u'_0 \left(1 - \frac{2}{x_1} \right)
     \left(1 - \frac{2}{x_2} \right)^{-x_2/x_1} .
 \ee
@@ -1444,6 +1453,26 @@ From the expressions of $x_1$ and $x_2$ in terms of $\alpha$
 [Eq.~(\ref{e:vai:x1_x2})], it is easy to show that $u'_\Hor < u'_0$.
 In view of this, one obtains the Carter-Penrose diagram shown in
 Fig.~\ref{f:vai:CPdiag_nk_sing}.
+
+In order to add the future outer trapping horizon $\mathscr{T}$
+to the Carter-Penrose diagram, we need to get its equation in terms of the
+double null coordinates. First of all, we notice that in $\M_{\rm rad}$, $\mathscr{T}$ is
+entirely contained in $\mathscr{N}_{\rm II}$. Indeed, $\mathscr{T}$ obeying
+$r = \alpha v$ [Eq.~(\ref{e:vai:def_T_hom})], the property $\alpha < x_2^{-1}$
+excludes $\mathscr{T}$ from $\mathscr{N}_{\rm I}$, by the definition
+(\ref{e:vai:def_NI_NII}) of the latter. It suffices then to determine
+the equation of $\mathscr{T}$ in terms of the coordinates $(u',v)$ of  $\mathscr{N}_{\rm II}$.
+This is acheived by substituting $\alpha v$ for $r$ in Eq.~(\ref{e:vai:up_N_II}) and making use successively of
+the identity $\alpha = 2/(x_1 x_2)$,
+Eq.~(\ref{e:vai:nak:upH}) and Eq.~(\ref{e:vai:nak:up0}); one gets
+\be
+    \mathscr{T} \cap \M_{\rm rad}:\qquad
+    u' = u'_\Hor \left(\frac{v_0}{v}\right) ^{x_2/x_1 - 1} .
+\ee
+Note that this implies $u'\to +\infty$ for $v\to 0$ and
+$u'\to u'_\Hor$ for $v\to v_0$.
+
+
 
 \subsection{Naked singularity and Cauchy horizon}
 
