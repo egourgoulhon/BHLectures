@@ -37,7 +37,7 @@ of the Schwarzschild metric expressed in the
 coordinates, as given by Eq.~(\ref{e:sch:Schwarz_metric_NIEF}). Actually, the
 only difference is the constant $m$ in Eq.~(\ref{e:sch:Schwarz_metric_NIEF})
 replaced by the function $M(v)$ in Eq.~(\ref{e:vai:Vaidya_metric_null}).
-We may say that the Schwarzschild metric is the special case $M(v) = m$ of
+We may even say that the Schwarzschild metric is the special case $M(v) = m$ of
 the ingoing Vaidya metric.
 
 A key property of the ingoing Vaidya metric is
@@ -153,13 +153,41 @@ These geodesics admit $\w{k}$ as the tangent vector associated with their affine
 $\lambda := -r$.
 \end{greybox}
 
+\begin{hist}
+A first version of Vaidya metric has been presented by Prahalad Chunilal Vaidya in 1943 \cite{Vaidy43}
+and further discussed in 1951 \cite{Vaidy51a}.
+It regarded the metric outside a spherically symmetric radiating star and was given as
+\be
+    \w{g} = - \frac{1}{f(M)^2} \left( \der{M}{T} \right) ^2
+    \left(1 - \frac{2 M}{r} \right) \, \dd T^2
+    + \left(1 - \frac{2 M}{r} \right) ^{-1} \dd r^2
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
+\ee
+where $f$ is an arbitrary function and $M = M(T, r)$ fulfills the differential equation
+\be
+     \der{M}{r} \left(1 - \frac{2 M}{r} \right) = f(M) .
+\ee
+By introducing the scalar field $u$ such that $\dd u = - f(M)^{-1} \dd M$
+and promoting it as a coordinate, one can
+bring this solution to a form that ressembles (\ref{e:vai:Vaidya_metric_null})
+and was given by Vaidya in 1953 \cite{Vaidy53}:
+\be
+   \w{g} = -\left( 1 - \frac{2 M}{r} \right)\, \dd u^2
+            -  2 \, \dd u \, \dd r
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
+\ee
+where $M = M(u)$. The only difference
+is the minus sign in front of $\dd u \, \dd r$, while there is a plus sign
+in front  $\dd v \, \dd r$ in (\ref{e:vai:Vaidya_metric_null})
+\end{hist}
+
 \subsection{Expression in ingoing Eddington-Finkelstein coordinates} \label{s:vai:IEF}
 
-To deal with the black hole formation in Vaidya spacetime, it is quite
+To deal with black hole formation in Vaidya spacetime, it is quite
 convenient to work with the
 \defin{ingoing Eddington-Finkelstein (IEF) coordinates}\index{Eddington-Finkelstein!coordinates}\index{ingoing!Eddington-Finkelstein!coordinates}\index{IEF}
-$(t,r,\th,\ph)$ defined from the null coordinates $(v,r,\th,\ph)$ in the
-same way as for the Schwarzschild case, i.e. such that $v$ is the
+$(t,r,\th,\ph)$, which are defined from the null coordinates $(v,r,\th,\ph)$ in the
+same way as in the Schwarzschild case, i.e. by considering that $v$ is the
 \defin{advanced time}\index{advanced!time}\index{time!advanced --} with respect to $t$
 [cf. Eq.~(\ref{e:sch:ti_v_r})]:
 \be  \label{e:vai:t_v_r}
@@ -775,24 +803,23 @@ $\mathscr{T}$ would merge smoothly with $\Hor$ at $v=v_0$.
 
 \subsection{Carter-Penrose diagram} \label{f:vai:thin_CP}
 
-In order to draw a conformal Carter-Penrose diagram of the Vaidya collapse,
-we need first to introduce a double null coordinate system in the radiation
-region $\M_{\rm rad}$. This is acheived by considering $(u, v, \th,\ph)$
-as a coordinate system on $\M_{\rm rad}$.
-The relation between the coordinates $(u, v, \th,\ph)$ and
+In order to draw a Carter-Penrose diagram of the Vaidya collapse,
+we need first to introduce a double-null coordinate system $(u, v, \th,\ph)$
+in the radiation region $\M_{\rm rad}$, i.e. a coordinate system such that
+$u$ is constant along the outgoing radial null geodesics ---
+$v$ being constant along the ingoing ones by construction.
+For the homothetic model ($M(v) = \alpha v /2$ in $\M_{\rm rad}$),
+the relation between coordinates $(u, v, \th,\ph)$ and
 $(v, r, \th, \ph)$ is provided by Eq.~(\ref{e:vai:eq_out_v0_small}):
 \be \label{e:vai:u_lnr_v}
     \encadre{ u = - \ln\left(\frac{r}{m}\right) + \ln f_\alpha\left(\frac{v}{r}\right) }.
 \ee
-By construction $u$ is constant
-along the outgoing radial null geodesics and $v$ is constant along the ingoing
-ones.
 From Eqs.~(\ref{e:vai:u_lnr_v}) and (\ref{e:vai:lnf_alpha}), we get
 \[
    \dd u = - \frac{1}{r} \dd r  +  \frac{1 - \alpha x}{\alpha x^2 - x + 2} \dd\left(\frac{v}{r}\right)
     = - \frac{1}{r(\alpha x^2 - x + 2)} \left[ (\alpha x - 1) \dd v + 2 \dd r \right] .
 \]
-By comparison with (\ref{e:vai:self_similar_metric}), we deduce immediately
+By comparing with (\ref{e:vai:self_similar_metric}), we deduce immediately
 the expression of the metric tensor in terms of the coordinates $(u,v,\th,\ph)$:
 \be \label{e:vai:thin:g_uv}
     \w{g} =  - r(\alpha x^2 - x + 2) \, \dd u \, \dd v
@@ -827,7 +854,7 @@ $\w{g}(\wpar_u,\wpar_v) = g_{uv} < 0$, so that, according to Lemma~2 of
 Sec.~\ref{s:fra:time_orientation}, $\wpar_v$ is future-directed as well.
 
 \begin{remark}
-The reader may have noticed a slight disymmetry between the coordinates $u$
+The reader may have noticed a slight asymmetry between the coordinates $u$
 and $v$: $u$ is dimensionless, while $v$ has the dimension of a time. We could
 of course make $u$ have the same dimension as $v$ by introducing an overall
 factor $m$ in the right-hand side of Eq.~(\ref{e:vai:u_lnr_v}). However, this
@@ -1536,11 +1563,31 @@ the Cauchy horizon $\Hor_{\rm C}$ and the future null infinity $\scri^+$.}
 \begin{remark}
 The part $O_2 O_3$ of the curvature singularity (cf. Fig.~\ref{f:vai:CPdiag_nk_sing})
 is visible to observers that fall into the black hole, but remains hidden
-to remote observers. One may say that the
+to remote observers. For this reason, the singularity $O_2 O_3$ is qualified as
+\defin{locally naked}\index{naked singulariy!locally --}\index{singularity!locally naked --},
+while $O_1 O_2$ is qualified as
+\defin{globally naked}\index{naked singulariy!globally --}\index{singularity!globally naked --}.
+For remote observers, one may say that the
 singularity $O_2 O_3$ is ``clothed'' by the event horizon $\Hor$.
 \end{remark}
 
-The remote observers see the naked singularity as soon as they cross
+\begin{remark}
+The curvature singularity of the Vaidya spacetime with $v_0 < 16 m$ (Fig.~\ref{f:vai:CPdiag_thin})
+is not even locally naked: observers falling into the black hole region never see
+it until they hit it at the end of their lives.
+\end{remark}
+
+The part  $(v, r) = (0, 0)$ of the curvature singularity, i.e. the segment $O_1 O_3$ in
+the diagram of Fig.~\ref{f:vai:CPdiag_nk_sing} corresponds to a past null boundary of
+spacetime.
+Such a singularity is generically called a
+\defin{shell-focusing singularity}\index{shell-focusing singulariy}\index{singularity!shell-focusing --}. This terms has been coined by Eardley \& Smarr \cite{EardlS79}, who discovered them
+in spherically symmetric inhomogeneous dust collapse.
+Due to its past null character, a shell-focusing singularity is always locally naked: close obsevers can see it.
+
+
+
+Remote observers see the naked singularity as soon as they cross
 the null hypersurface $\Hor_{\rm C}$ generated by the outgoing radial null geodesics
 emanating from the birth of the singularity at $u=0$ in $\mathscr{N}_{\rm I}$
 (point $O_1$ in Figs.~\ref{f:vai:CPdiag_nk_sing} and \ref{f:vai:CPdiag_Cauchy} ).
