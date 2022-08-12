@@ -154,31 +154,82 @@ $\lambda := -r$.
 \end{greybox}
 
 \begin{hist}
-A first version of Vaidya metric has been presented by Prahalad Chunilal Vaidya in 1943 \cite{Vaidy43}
-and further discussed in 1951 \cite{Vaidy51a}.
-It regarded the metric outside a spherically symmetric radiating star and was given as
-\be
+Vaidya metric has been actually first derived by Henri Mineur\index{Mineur, H.} in 1933 \cite{Mineu1933},
+as the solution of the Einstein equation describing the exterior of a spherically symmetric body,
+the ``mass'' of which is ``varying''
+due to the radiation of a ``energy flux of light''. It thus corresponds to the \emph{outgoing}
+version of Vaidya metric, while the version (\ref{e:vai:Vaidya_metric_null})
+considered here is \emph{ingoing}. More precisely, the solution given by Mineur
+reads\footnote{This is Mineur's Eq.~(21), p.~47 of Ref.~\cite{Mineu1933}.
+The minus sign in the left-hand side, which is present
+Mineur's article~\cite{Mineu1933}, is fortunate for comparison with the current text
+since Mineur is using the metric signature $(+,-,-,-)$, i.e. the opposite of ours.}
+\be \label{e:vai:Mineur_metric}
+   -\D s^2 = 2 \,  \D x \,  \D r + r^2 \, \frac{\D u^2 - \D v^2}{u^2} - \left( 1 - \frac{2 M(x)}{r} \right) \D x^2 .
+\ee
+The coordinate $x$ is the opposite of a retarded time ($x = -u$ in our notations), while $(u,v)$ are coordinates on the 2-sphere $\SS^2$ (submanifold $(x,r) = \mathrm{const}$)
+such that the standard (round)
+metric of $\SS^2$  is $\w{q} = u^{-2} \left( - \dd u^2 + \dd v^2 \right)$
+(cf. the unumbered equation at the top of p.~35 of Mineur's article \cite{Mineu1933}).
+This looks quite surprising, given that $u^{-2} \left( - \dd u^2 + \dd v^2 \right)$
+is rather the metric of the 2-dimensional anti-de Sitter space expressed in a variant
+of Poincaré coordinates (compare Eq.~(\ref{e:exk:metric_AdS2}) with $T = v$ and $R = 1/u$).
+In particular the signature is $(-, +)$, while it should be $(+,+)$ for
+$\SS^2$! It turns out that the coordinate $u$ used by Mineur is pure imaginary,
+i.e. Mineur wrote the metric of $\SS^2$ via a kind of Wick rotation of
+the metric of the hyperbolic plane\index{hyperbolic!plane}\footnote{The spaces $\mathbb{H}^2$ and $\SS^2$
+are somehow connected as being the only 2-dimensional Riemannian manifolds of
+constant nonzero scalar curvature (negative for $\mathbb{H}^2$ and positive for $\SS^2$).}
+ $\mathbb{H}^2$, the latter being
+$(\dd X^2 + \dd Y^2)/Y^2$: setting $v = X$ and $u = \mathrm{i} Y$, one
+gets $-\w{q} =  u^{-2} \left( \dd u^2 - \dd v^2 \right)$. If one restores
+the standard spherical coordinates $(\th,\ph)$ on $\SS^2$ and uses the modern notation
+$u = -x$ as well as the metric signature $(-,+,+,+)$, one can rewrite Mineur's
+solution as\footnote{As one can infer by comparing with other expressions
+of $\D s^2$ in Mineur's article, the $+$ sign in front of $r^2$ times the $\SS^2$
+line element in Eq.~(\ref{e:vai:Mineur_metric}) is certainly a typo and should be
+replaced by a $-$ sign, which is done in order to get Eq.~(\ref{e:vai:Mineur_metric_modern}).}
+\be \label{e:vai:Mineur_metric_modern}
+   \w{g} = -\left( 1 - \frac{2 M(u)}{r} \right)\, \dd u^2
+            -  2 \, \dd u \, \dd r
+        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
+\ee
+This ressembles the metric (\ref{e:vai:Vaidya_metric_null}).
+The only difference is the $-$ sign in front of $\dd u \, \dd r$, while there is a $+$ sign
+in front  $\dd v \, \dd r$ in (\ref{e:vai:Vaidya_metric_null}). This results form Mineur's version
+being \emph{outgoing}, given that he considered a radiating body. On
+the contrary the version (\ref{e:vai:Vaidya_metric_null}) is \emph{ingoing}, since we are interested in gravitational collapse and black hole formation.
+
+Only 20 years later did Prahalad Chunnilal Vaidya\index{Vaidya, P.C.} publish
+the metric that bears his name in the form (\ref{e:vai:Mineur_metric_modern}) \cite{Vaidy53}.
+Previously, in 1943 \cite{Vaidy43} and in 1951 \cite{Vaidy51a}, Vaidya presented
+the metric outside a spherically symmetric radiating star in an equivalent, but
+more complicated form:
+\be \label{e:vai:Vaidya_metric_original}
     \w{g} = - \frac{1}{f(M)^2} \left( \der{M}{T} \right) ^2
     \left(1 - \frac{2 M}{r} \right) \, \dd T^2
     + \left(1 - \frac{2 M}{r} \right) ^{-1} \dd r^2
         + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
 \ee
 where $f$ is an arbitrary function and $M = M(T, r)$ fulfills the differential equation
-\be
-     \der{M}{r} \left(1 - \frac{2 M}{r} \right) = f(M) .
-\ee
+$\dert{M}{r}\, (1 - {2 M}/{r}) = f(M)$.
 By introducing the scalar field $u$ such that $\dd u = - f(M)^{-1} \dd M$
 and promoting it as a coordinate, one can
-bring this solution to a form that ressembles (\ref{e:vai:Vaidya_metric_null})
-and was given by Vaidya in 1953 \cite{Vaidy53}:
-\be
-   \w{g} = -\left( 1 - \frac{2 M}{r} \right)\, \dd u^2
-            -  2 \, \dd u \, \dd r
-        + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
-\ee
-where $M = M(u)$. The only difference
-is the minus sign in front of $\dd u \, \dd r$, while there is a plus sign
-in front  $\dd v \, \dd r$ in (\ref{e:vai:Vaidya_metric_null})
+bring this solution to Mineur's form (\ref{e:vai:Mineur_metric_modern}).
+In the foreword of Vaidya's 1951 article \cite{Vaidy51a},
+Vishnu Vasudev Narlikar\index{Narlikar, V.V.}, who was Vaidya's PhD advisor,
+wrote: \emph{The treatment as given here is essentially different from that of Professor H. Mineur
+as it appears in \emph{Ref. \cite{Mineu1933}}. Our attention
+was kindly drawn to it by Professor Mineur some years ago.} In a common article by
+Narlikar and Vaidya published in 1947 \cite{NarliV1947}, one can also read
+\emph{The line element (5) \emph{[Eq.~(\ref{e:vai:Vaidya_metric_original})]}
+was first published by one of us some years ago. A line element equivalent to
+(5) but not obviously so was obtained by Mineur
+several years earlier.} It would probably be fair to call the metric
+(\ref{e:vai:Mineur_metric_modern}) the \emph{Mineur-Vaidya metric}, but
+we keep here the standard name of \emph{Vaidya metric}.
+The metric (\ref{e:vai:Mineur_metric_modern}) was popularized and further studied by Richard W. Lindquist\index{Lindquist, R.W.}, Robert A. Schwartz\index{Schwartz, R.A} and Charles W. Misner\index{Misner, C.W.}
+in 1965 \cite{LindqSM65}.
 \end{hist}
 
 \subsection{Expression in ingoing Eddington-Finkelstein coordinates} \label{s:vai:IEF}
