@@ -153,7 +153,7 @@ These geodesics admit $\w{k}$ as the tangent vector associated with their affine
 $\lambda := -r$.
 \end{greybox}
 
-\begin{hist}
+\begin{hist} \label{h:vai:origin}
 Vaidya metric has been actually first derived by Henri Mineur\index{Mineur, H.} in 1933 \cite{Mineu1933},
 as the solution of the Einstein equation describing the exterior of a spherically symmetric body,
 the ``mass'' of which is ``varying''
@@ -449,6 +449,11 @@ for the computation):
 We should refer to the case where $M(v)$ is piecewise linear, i.e. $M(v) = m v/v_0 = \alpha v / 2$,
 as the \defin{homothetic radiation shell model}\index{homothetic!radiation shell}.
 
+\begin{remark}
+The denomination \defin{self-similar}\index{self-similar Vaidya spacetime},
+in place of \emph{homothetic},
+is also used in the literature (e.g. \cite{Nolan01,Nolan07}).
+\end{remark}
 
 \begin{remark}
 A \emph{homothetic Killing vector} is not a \emph{Killing vector},
@@ -1074,6 +1079,8 @@ A Carter-Penrose diagram similar to that of Fig.~\ref{f:vai:CPdiag_thin} except
 for the radiation region extending to $\scri^+$ (no pure Schwarzschild exterior but
 $M'(v) \to 0$ for $v\to +\infty$) has been exhibited by Yuhji Kuroda\index{Kuroda, Y.}
 in 1984 \cite{Kurod84} (cf. his Fig. 2b).
+The case of a radiation region bounded by $v = v_0$, as here, can be found in Fig.~2 of a 2007 article by
+Brien C. Nolan\index{Nolan, B.C} \cite{Nolan07}.
 \end{hist}
 
 
@@ -1088,7 +1095,7 @@ In Sec.~\ref{s:vai:infall}, we have focussed on homothetic radiation shells
 $\alpha > 1/8$ [Eq.~(\ref{e:vai:v0_small})].
 Let us now discuss the opposite case\footnote{The marginal case $\alpha = 1/8$
 will not be discussed here; it is actually qualitatively similar to the
-case $\alpha < 1/8$ insofar as it leads to a naked singularity as well.}:
+case $\alpha < 1/8$ insofar as it leads to a naked singularity as well \cite{Papap85}.}:
 \be \label{e:vai:v0_large}
     \alpha < \frac{1}{8} \iff v_0 > 16 \, m .
 \ee
@@ -1656,15 +1663,18 @@ B. Waugh\index{Waugh, B.} and Kayll Lake\index{Lake, K.} in 1986 \cite{WaughL86}
 The double-null coordinates $(u,v)$ and $(u',v)$ introduced above are
 theirs, except for some constant factors.
 Four years before, William A. Hiscock\index{Hiscock, W.A.}, Leslie G. Williams\index{Williams, L.G.} and Douglas M. Eardley\index{Eardley, D.M.} \cite{HiscoWE82}
-provided a Carter-Penrose diagram similar to that Fig.~\ref{f:vai:CPdiag_nk_sing}
-except that it regards the limiting case $\alpha \to 1/8$, for which
-the Cauchy and event horizons coincide (Fig.~2 in Ref.~\cite{HiscoWE82}).
+exhibited a Carter-Penrose diagram similar to that Fig.~\ref{f:vai:CPdiag_nk_sing}
+except that it regards a case for which
+the Cauchy and event horizons coincide (Fig.~2 in Ref.~\cite{HiscoWE82}),
+which is obtained by adding a surface layer (Dirac delta) of radiation at $v=v_0$.
 However, as discussed in Ref.~\cite{WaughL86}, these authors have not set up
 regular double-null coordinates in $\M_{\rm rad}$, so that their construction
 can be seen as rather heuristic. In 1984, Yuhji Kuroda\index{Kuroda, Y.} \cite{Kurod84}
 exhibited a Carter-Penrose diagram again similar to that of Fig.~\ref{f:vai:CPdiag_thin}, except
 for the radiation region extending to $\scri^+$ (no pure Schwarzschild exterior but
-$M'(v) \to 0$ for $v\to +\infty$) (Fig. 3 in Ref.~\cite{Kurod84}).
+$M'(v) \to 0$ for $v\to +\infty$) (Fig. 3 in Ref.~\cite{Kurod84}). The case of a
+radiation region bounded by $v = v_0$, as here, can be found in Fig.~1 of a 2007 article by
+Brien C. Nolan\index{Nolan, B.C} \cite{Nolan07}.
 \end{hist}
 
 
@@ -1748,11 +1758,46 @@ terminate at the future timelike infinity $i^+$).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\section{Going further}
 
+For simplicity, we have mostly restricted ourselves to $M(v)$ linear in the radiation
+region, except in Secs.~\ref{s:vai:thin:sing} and \ref{s:vai:trapped_surf}.
+This allowed us to benefit from an extra symmetry (homothetic Killing vector) and to get
+exact solutions for the outgoing radial null geodesics.
+The obtained results are nevertheless representative of those for more
+general functions
+$M(v)$. In particular, the criterion for having a shell-focusing singularity\index{shell-focusing singulariy}\index{singularity!shell-focusing --}
+with a generic function $M(v)$ remains $\alpha < 1/8$ but with $\alpha$ defined
+by
+\be
+    \alpha := \lim_{v\to 0^+} \frac{2 M(v)}{v} .
+\ee
+See Ref.~\cite{Kurod84,FayosT08} for details. Of course, for $M(v) = m v /v_0$, the
+above definition of $\alpha$ reduces to (\ref{e:vai:def_alpha}).
+For $\alpha < 1/8$, a new possibility may occur: that of a shell-focusing singularity
+that lies entirely in the black hole region, i.e. that is naked locally but not globally,
+contrary to what happens for $M(v)$ linear (Sec.~\ref{s:vai:naked_sing}).
+See e.g. Fig.~4 of Ref.~\cite{AshteK04} or Fig.~9.20 of Ref.~\cite{GriffP09}
+for the corresponding Carter-Penrose diagram.
+Actually, the Vaidya collapse depicted in Fig.~\ref{f:vai:diag_S2} lies in this
+category: it has $M(v) = m (v/v_0)^3 \left[ 6 (v/v_0)^2 - 15 v/v_0 + 10 \right]$,
+so that $\alpha = 0$. The singularity is entirely located in the black
+hole region and appears to be locally naked (note the outgoing radial null geodesic
+emerging from it near $(t,r) = (0,0)$ in Fig.~\ref{f:vai:diag_S2}).
 
-
-%\section{Going further}
-
+It is worth to stress that in the litterature,
+many studies regard the \emph{outgoing} Vaidya metric, starting from the original studies
+(cf. the historical note on p.~\pageref{h:vai:origin}), because they are
+motivated either by the modelization of radiating bodies or the
+study of black hole evaporation. Nonetheless, most results are applicable
+to Vaidya collapse, which is based on the
+\emph{ingoing} version of the metric, simply by performing some time reversal.
+For instance, one can infer from the recent study \cite{CoudrN21}
+that for an imploding Vaidya spacetime without any Minkowksi region
+($v$ spanning the range $(-\infty, v_0)$ in the radiation region),
+but such that $\lim_{v\to -\infty} M(v) = 0$, there is a curvature singularity
+at the null boundary $v\to -\infty$ of spacetime, whatever the choice of the
+non-decreasing mass function $M(v)$.
 %\cite{Krish14}
 
 
