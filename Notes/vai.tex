@@ -5,15 +5,25 @@
 
 \section{Introduction}
 
-Having investigated the gravitational collapse of a star, modeled as a ball of dust,
-in the preceding chapter, we turn now to a less astrophysical scenario: the
+Having investigated the gravitational collapse of a star, modelled as a ball of dust,
+in the preceding chapter, we move to a much less astrophysical scenario: the
 formation of a black hole by the collapse of a spherical shell of pure radiation
-(no matter!),
-known as \emph{Vaidya collapse}. Albeit quite
-academic, this process illustrates various features of black hole birth and dynamics,
-in a way somehow complementary to the collapse of a dust ball.
+(no matter!).
+Albeit quite academic, this process illustrates various features of black hole birth and dynamics,
+in a way somewhat complementary to the collapse of a ball of dust.
+The model is based on an exact solution of the Einstein equation sourced by
+a pure radial electromagnetic flux, known as \emph{Vaidya metric}, which
+we present first (Sec.~\ref{s:vai:Vaidya_metric}).
+Then, we introduce the
+model describing the implosion of a radiation shell and
+study the black hole formation via such a process (Sec.~\ref{s:vai:infall}).
+Finally, we focus on
+some subclass of models giving birth a \emph{naked singularity}, i.e.
+such that the central curvature is visible to remote observers located
+outside the black hole region (Sec.~\ref{s:vai:naked_sing}).
 
-\section{The ingoing Vaidya metric}
+
+\section{The ingoing Vaidya metric} \label{s:vai:Vaidya_metric}
 
 \subsection{General expression} \label{s:vai:general}
 
@@ -72,9 +82,11 @@ $\uu{\wpar_r} = g_{\mu r}\dd x^\mu = g_{vr} \dd v = \dd v = - \uu{k}$,
 which proves Eq.~(\ref{e:vai:k_d_dr}).
 \end{proof}
 
+\begin{greybox}
 Since $\dd v$ is nowhere vanishing, $\w{k}$ is a nonzero null vector field on $\M$.
 We may use it to set up the \emph{time orientation} of $(\M,\w{g})$
 by declaring that $\w{k}$ is future-oriented (cf. Sec.~\ref{s:fra:time_orientation}).
+\end{greybox}
 
 As shown in the notebook~\ref{s:sam:Vaidya},
 the Ricci tensor of $\w{g}$ takes a simple form:
@@ -154,9 +166,9 @@ $\lambda := -r$.
 \end{greybox}
 
 \begin{hist} \label{h:vai:origin}
-Vaidya metric has been actually first derived by Henri Mineur\index{Mineur, H.} in 1933 \cite{Mineu1933},
-as the solution of the Einstein equation describing the exterior of a spherically symmetric body,
-the ``mass'' of which is ``varying''
+Vaidya metric has actually been first derived by Henri Mineur\index{Mineur, H.} in 1933 \cite{Mineu1933},
+as the solution of the Einstein equation for the exterior of a spherically symmetric body,
+the ``mass'' of which ``is varying''
 due to the radiation of a ``energy flux of light''. It thus corresponds to the \emph{outgoing}
 version of Vaidya metric, while the version (\ref{e:vai:Vaidya_metric_null})
 considered here is \emph{ingoing}. More precisely, the solution given by Mineur
@@ -170,7 +182,7 @@ since Mineur is using the metric signature $(+,-,-,-)$, i.e. the opposite of our
 The coordinate $x$ is the opposite of a retarded time ($x = -u$ in our notations), while $(u,v)$ are coordinates on the 2-sphere $\SS^2$ (submanifold $(x,r) = \mathrm{const}$)
 such that the standard (round)
 metric of $\SS^2$  is $\w{q} = u^{-2} \left( - \dd u^2 + \dd v^2 \right)$
-(cf. the unumbered equation at the top of p.~35 of Mineur's article \cite{Mineu1933}).
+(cf. the unnumbered equation at the top of p.~35 of Mineur's article \cite{Mineu1933}).
 This looks quite surprising, given that $u^{-2} \left( - \dd u^2 + \dd v^2 \right)$
 is rather the metric of the 2-dimensional anti-de Sitter space expressed in a variant
 of Poincaré coordinates (compare Eq.~(\ref{e:exk:metric_AdS2}) with $T = v$ and $R = 1/u$).
@@ -179,7 +191,7 @@ $\SS^2$! It turns out that the coordinate $u$ used by Mineur is pure imaginary,
 i.e. Mineur wrote the metric of $\SS^2$ via a kind of Wick rotation of
 the metric of the hyperbolic plane\index{hyperbolic!plane}\footnote{The spaces $\mathbb{H}^2$ and $\SS^2$
 are somehow connected as being the only 2-dimensional Riemannian manifolds of
-constant nonzero scalar curvature (negative for $\mathbb{H}^2$ and positive for $\SS^2$).}
+nonzero constant scalar curvature (negative for $\mathbb{H}^2$ and positive for $\SS^2$).}
  $\mathbb{H}^2$, the latter being
 $(\dd X^2 + \dd Y^2)/Y^2$: setting $v = X$ and $u = \mathrm{i} Y$, one
 gets $-\w{q} =  u^{-2} \left( \dd u^2 - \dd v^2 \right)$. If one restores
@@ -188,7 +200,7 @@ $u = -x$ as well as the metric signature $(-,+,+,+)$, one can rewrite Mineur's
 solution as\footnote{As one can infer by comparing with other expressions
 of $\D s^2$ in Mineur's article, the $+$ sign in front of $r^2$ times the $\SS^2$
 line element in Eq.~(\ref{e:vai:Mineur_metric}) is certainly a typo and should be
-replaced by a $-$ sign, which is done in order to get Eq.~(\ref{e:vai:Mineur_metric_modern}).}
+replaced by a $-$ sign; this correction is performed to get Eq.~(\ref{e:vai:Mineur_metric_modern}).}
 \be \label{e:vai:Mineur_metric_modern}
    \w{g} = -\left( 1 - \frac{2 M(u)}{r} \right)\, \dd u^2
             -  2 \, \dd u \, \dd r
@@ -198,9 +210,9 @@ This ressembles the metric (\ref{e:vai:Vaidya_metric_null}).
 The only difference is the $-$ sign in front of $\dd u \, \dd r$, while there is a $+$ sign
 in front  $\dd v \, \dd r$ in (\ref{e:vai:Vaidya_metric_null}). This results form Mineur's version
 being \emph{outgoing}, given that he considered a radiating body. On
-the contrary the version (\ref{e:vai:Vaidya_metric_null}) is \emph{ingoing}, since we are interested in gravitational collapse and black hole formation.
+the contrary, the version (\ref{e:vai:Vaidya_metric_null}) is \emph{ingoing}, since we are interested in gravitational collapse and black hole formation.
 
-Only 20 years later did Prahalad Chunnilal Vaidya\index{Vaidya, P.C.} publish
+Only 20 years later, in 1953, Prahalad Chunnilal Vaidya\index{Vaidya, P.C.} did publish
 the metric that bears his name in the form (\ref{e:vai:Mineur_metric_modern}) \cite{Vaidy53}.
 Previously, in 1943 \cite{Vaidy43} and in 1951 \cite{Vaidy51a}, Vaidya presented
 the metric outside a spherically symmetric radiating star in an equivalent, but
@@ -211,23 +223,24 @@ more complicated form:
     + \left(1 - \frac{2 M}{r} \right) ^{-1} \dd r^2
         + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
 \ee
-where $f$ is an arbitrary function and $M = M(T, r)$ fulfills the differential equation
+where $f$ is an arbitrary function and $M = M(T, r)$ fulfils the differential equation
 $\dert{M}{r}\, (1 - {2 M}/{r}) = f(M)$.
 By introducing the scalar field $u$ such that $\dd u = - f(M)^{-1} \dd M$
 and promoting it as a coordinate, one can
 bring this solution to Mineur's form (\ref{e:vai:Mineur_metric_modern}).
-In the foreword of Vaidya's 1951 article \cite{Vaidy51a},
+In a foreword to Vaidya's 1951 article \cite{Vaidy51a},
 Vishnu Vasudev Narlikar\index{Narlikar, V.V.}, who was Vaidya's PhD advisor,
-wrote: \emph{The treatment as given here is essentially different from that of Professor H. Mineur
-as it appears in \emph{Ref. \cite{Mineu1933}}. Our attention
-was kindly drawn to it by Professor Mineur some years ago.} In a common article by
+wrote: \emph{``The treatment as given here is essentially different from that of Professor H. Mineur
+as it appears in Ann. de l'Ecole Normal Superieure, Ser. 3, 5, 1, 1933
+\emph{(our Ref. \cite{Mineu1933})}. Our attention
+was kindly drawn to it by Professor Mineur some years ago.''} In a common article by
 Narlikar and Vaidya published in 1947 \cite{NarliV1947}, one can also read
-\emph{The line element (5) \emph{[Eq.~(\ref{e:vai:Vaidya_metric_original})]}
+\emph{``The line element (5) \emph{[our Eq.~(\ref{e:vai:Vaidya_metric_original})]}
 was first published by one of us some years ago. A line element equivalent to
 (5) but not obviously so was obtained by Mineur
-several years earlier.} It would probably be fair to call the metric
-(\ref{e:vai:Mineur_metric_modern}) the \emph{Mineur-Vaidya metric}, but
-we keep here the standard name of \emph{Vaidya metric}.
+several years earlier.''} It would probably be fair to call the metric
+(\ref{e:vai:Mineur_metric_modern}) the \emph{Mineur-Vaidya metric}; however,
+we keep here the usual name of \emph{Vaidya metric}.
 The metric (\ref{e:vai:Mineur_metric_modern}) was popularized and further studied by Richard W. Lindquist\index{Lindquist, R.W.}, Robert A. Schwartz\index{Schwartz, R.A} and Charles W. Misner\index{Misner, C.W.}
 in 1965 \cite{LindqSM65}.
 \end{hist}
@@ -323,7 +336,7 @@ as soon as $r < 2 M(t+r)$. This corresponds to the region bounded by the red cur
 \subsection{The imploding shell model} \label{s:vai:imploding_shell}
 
 An \defin{imploding shell of radiation}\index{shell!imploding -- of radiation}\index{imploding!shell of radiation}
-is defined by the ingoing Vadya metric with the function $M(v)$ obeying
+is defined by the ingoing Vaidya metric with the function $M(v)$ obeying
 $M'(v) \neq 0$ only on a finite interval of $v$. By choosing properly
 the origin of $v$, we may consider this interval to be $[0, v_0]$, with
 the parameter $v_0>0$ governing the
@@ -332,7 +345,7 @@ The function $M(v)$ is thus constant outside the interval $[0, v_0]$.
 In order to describe the formation of a black hole, we choose
 $M(v) = 0$ for $v < 0$. This corresponds to a piece of Minkowski spacetime,
 since the metric (\ref{e:vai:metric_IEF})
-cleary reduces to Minkowski metric (\ref{e:glo:Mink_metric_spher}) wherever $M(v)=0$.
+clearly reduces to Minkowski metric (\ref{e:glo:Mink_metric_spher}) wherever $M(v)=0$.
 Denoting by $m>0$ the constant value of $M(v)$ for $v > v_0$, we have then
 \be \label{e:vai:mass_function}
     M(v) = \left\{ \begin{array}{ll}
@@ -360,7 +373,7 @@ and for the linear mass function $M(v)=m v/v_0$ with $v_0 = 3 m$
 The yellow area is the radiation region $\M_{\rm rad}$
 [cf. Eq.~(\ref{e:vai:mass_function})],
 below it lies the Minkowski region $\M_{\rm Min}$
-and above it the Schwarzchild region $\M_{\rm Sch}$.
+and above it the Schwarzschild region $\M_{\rm Sch}$.
 The solid (resp. dashed) green curves are outgoing (resp. ingoing) radial
 null geodesics. The thick black line marks the event horizon $\Hor$ (Sec.~\ref{s:vai:BH_formation}) and
 the red one the future outer trapping horizon $\mathscr{T}$ (Sec.~\ref{s:vai:trapped_surf}).
@@ -463,7 +476,7 @@ In other words, except for $\lambda=1$, the homotheties $H_\lambda$ are not isom
 but only \emph{conformal isometries}.
 Generally, vector fields generating conformal isometries are
 called \defin{conformal Killing vectors}\index{conformal!Killing vector}.
-They fulfill $\Lie{\xi} \w{g} = \sigma \w{g}$, where $\sigma$ is a scalar field.
+They fulfil $\Lie{\xi} \w{g} = \sigma \w{g}$, where $\sigma$ is a scalar field.
 Equation~(\ref{e:vai:Lie_xi_g}) constitutes the particular subcase $\sigma = 2$.
 \end{remark}
 
@@ -512,7 +525,7 @@ the solution of which is $r = r_0 f_\alpha(x)$, where
 \ee
 and the integration constant $r_0>0$ is the value of $r$ at $x=0$, or equivalently
 at $v = 0$, since $f_\alpha(0) = 1$.
-Explicitely,
+Explicitly,
 \be \label{e:vai:sol_r_x_v0_small}
  \encadre{   f_\alpha(x) = \frac{\sqrt{2}}{\sqrt{\alpha x^2 - x + 2}}
     \exp\left\{ \frac{1}{\sqrt{8\alpha - 1}} \left[
@@ -549,7 +562,7 @@ directly from the sign of the numerator $1 - \alpha x$ in Eq.~(\ref{e:vai:ODE_ou
 given that the denominator $\alpha x^2 - x + 2$ is always positive for $\alpha > 1/8$.
 Note that it could be that $x_{\rm max} < \alpha^{-1}$ so that the maximum
 of $f_\alpha(x)$ is actually not reached along $\Li_{(u,\th,\ph)}^{\rm out}$. In that
-case, $r$ increases monotically along $\Li_{(u,\th,\ph)}^{\rm out}$ in $\M_{\rm rad}$,
+case, $r$ increases monotonically along $\Li_{(u,\th,\ph)}^{\rm out}$ in $\M_{\rm rad}$,
 from $r_0$ to $r_0 f_\alpha(x_{\rm max})$.
 
 \begin{figure}
@@ -590,7 +603,7 @@ and using the value (\ref{e:vai:S_linear}) for $M(v)$.
 
 In the Minkowski region, the outgoing radial null geodesics are straight line
 segments inclined at $+45^\circ$ in Fig.~\ref{f:vai:diag_S0}, while
-in the Schwarzschid region, they are curves obeying Eq.~(\ref{e:sch:outgoing_null_geod_EF})
+in the Schwarzschild region, they are curves obeying Eq.~(\ref{e:sch:outgoing_null_geod_EF})
 (with the change of notation $\ti \leftrightarrow t$).
 
 
@@ -614,7 +627,7 @@ for \emph{horizon birth}.}
     \arctan\left( \frac{1}{\sqrt{8\alpha - 1}} \right) \right] } .
 \ee
 Outside the radiation shell, $\Hor$ coincides with the
-Killing horizon of Schwarzschid spacetime located at $r=2m$.
+Killing horizon of Schwarzschild spacetime located at $r=2m$.
 \end{greybox}
 
 \begin{figure}
@@ -653,12 +666,12 @@ We have thus $2 m = r_B f_\alpha(\alpha^{-1})$. In view of expression
 \]
 Since $B$ is located on the hypersurface $v=0$, we have $t_B = - r_B$.
 If the radial null geodesic $\hat{\Li}$
-is prolonged further to the past in the Minkowksi
+is prolonged further to the past in the Minkowski
 region $\M_{\rm Min}$, it becomes the straight line of equation $t = r - 2 r_B$.
 $\hat{\Li}$ thus reaches $r=0$ at some event $C$ of
 coordinate $t = t_{\rm hb} = -2 r_B$, hence Eq.~(\ref{e:vai:t_hb}).
 
-There remains to prove that the null hypersuface generated by
+There remains to prove that the null hypersurface generated by
 $\hat{\Li}$ when $(\th,\ph)$ varies, i.e. the future light cone $\Hor$
 of the point $(t, r) = (t_{\rm hb}, 0)$, is indeed the black hole event
 horizon. To this aim, let us consider an outgoing radial null geodesic $\Li$
@@ -795,7 +808,7 @@ The spherically symmetric surface $\Sp$ defined by $(t,r) = \mathrm{const}$ obey
 \be \label{e:vai:S_trapped}
     \Sp \text{ is trapped} \iff r < 2M(t+r) .
 \ee
-Obviously, the above criterion cannot be fulfiled in the Minkowski region, where $M(t+r) = 0$.
+Obviously, the above criterion cannot be fulfilled in the Minkowski region, where $M(t+r) = 0$.
 On the contrary, trapped surfaces exist
 in the central part of the radiation region, since $M(t+r) > 0$ there.
 They also exist in the black hole part ($r < 2m$)
@@ -919,7 +932,7 @@ the expression of the metric tensor in terms of the coordinates $(u,v,\th,\ph)$:
     + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \qquad
         (0 \leq v \leq v_0) ,
 \ee
-where $x := v/r$  and $r$ is to be considered as a function of $(u,v)$ defined implicitely
+where $x := v/r$  and $r$ is to be considered as a function of $(u,v)$ defined implicitly
 by Eq.~(\ref{e:vai:u_lnr_v}).
 Since for $\alpha > 1/8$, the polynomial $\alpha x^2 - x + 2$ never vanishes,
 the metric component $g_{uv}$ read on Eq.~(\ref{e:vai:thin:g_uv}) is
@@ -984,7 +997,7 @@ In the last inequality, the right-hand side must be replaced by $+\infty$ if $v=
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{vai_thin_double_null.pdf}}
 \caption[]{\label{f:vai:thin_double_null} \footnotesize
-Radiation region $\M_{\rm rad}$ for the homethetic model ($M(v) = m v/v_0$) with $v_0 < 16m$,
+Radiation region $\M_{\rm rad}$ for the homothetic model ($M(v) = m v/v_0$) with $v_0 < 16m$,
 depicted in terms of the double-null coordinates
 $(u, v)$. Solid (resp. dashed) green lines are outgoing (resp. ingoing)
 radial null geodesics. The orange zigzag curve corresponds to the curvature
@@ -1026,7 +1039,7 @@ as drawn in Fig.~\ref{f:vai:thin_double_null}.
 \centerline{\includegraphics[width=0.45\textwidth]{vai_CPdiag_thin.pdf}}
 \caption[]{\label{f:vai:CPdiag_thin} \footnotesize
 Carter-Penrose diagram of Vaidya collapse
-for the homethetic shell model ($M(v) = m v/v_0 = \alpha v /2$) with
+for the homothetic shell model ($M(v) = m v/v_0 = \alpha v /2$) with
 $\alpha > 1/8$ ($v_0 < 16m$).
 The Minkowski region $\M_{\rm Min}$, radiation region $\M_{\rm rad}$
 and Schwarzschild region $\M_{\rm Sch}$ are depicted in respectively
@@ -1090,7 +1103,7 @@ Brien C. Nolan\index{Nolan, B.C} \cite{Nolan07}.
 
 \subsection{The low radiation density case} \label{s:vai:low_alpha}
 
-In Sec.~\ref{s:vai:infall}, we have focussed on homothetic radiation shells
+In Sec.~\ref{s:vai:infall}, we have focused on homothetic radiation shells
 ($M(v) = \alpha v / 2$) with
 $\alpha > 1/8$ [Eq.~(\ref{e:vai:v0_small})].
 Let us now discuss the opposite case\footnote{The marginal case $\alpha = 1/8$
@@ -1101,7 +1114,7 @@ case $\alpha < 1/8$ insofar as it leads to a naked singularity as well \cite{Pap
 \ee
 In view of the form (\ref{e:vai:T_alpha}) of the energy momentum tensor, this
 corresponds to a low energy density of the radiation field. When (\ref{e:vai:v0_large})
-is fullfilled, the polynomial $P_\alpha(x) := \alpha x^2 - x + 2$, which appears in the
+is fulfilled, the polynomial $P_\alpha(x) := \alpha x^2 - x + 2$, which appears in the
 numerator of the ODE (\ref{e:vai:ODE_outgoing_x}) ruling outgoing radial null geodesics
 in $\M_{\rm rad}$,
 admits two real roots:
@@ -1209,7 +1222,7 @@ Having determined the outgoing radial null geodesics, we are in position to esta
 the following results:
 \begin{greybox}
 The homothetic imploding radiation shell with $\alpha := 2m/v_0 < 1/8$
-generates a black hole, the event horizon of which orginates
+generates a black hole, the event horizon of which originates
 at $(t,r) = (0, 0)$, with a slope $t/r = x_2 - 1$. Moreover, the curvature singularity at $(t,r)=(0,0)$
 is \defin{naked}\index{naked singularity}: it is connected to remote observers
 by the outgoing radial null geodesics $\Li^{*1}_{(\th,\ph)}$, as well as
@@ -1253,14 +1266,14 @@ $x < x_1$, i.e. below the point $C$ in Fig.~\ref{f:vai:diag_naked_S0}. When $\Li
 and we read on the left part of Fig.~\ref{f:vai:r_x_naksing} that $r$ reaches
 a finite nonzero value at $x=0$, i.e. at the inner edge of $\M_{\rm rad}$. It can then be extended backward to the Minkowski region $\M_{\rm Min}$.
 Since for $x\to x_1$, $r/r_*\to +\infty$, we conclude that the value of $r$
-at $x=0$ can be made arbitraly small. This proves that the whole of $\M_{\rm Min}$ can be connected to $\scri^+$ by this type of null geodesics. It follows
+at $x=0$ can be made arbitrarily small. This proves that the whole of $\M_{\rm Min}$ can be connected to $\scri^+$ by this type of null geodesics. It follows
 that the black hole event horizon is the null hypersurface generated by $\hat{\Li}$.
 \end{proof}
 
 \begin{hist}
 The formation of naked singularities in spacetimes with a Vaidya region
 has been put forward first by B. Steinmüller\index{Steinmüller, B.}, Andrew R. King\index{King, A.R}, and Jean-Pierre Lasota\index{Lasota, J.-P.}
-in 1975 \cite{SteinmKL75}, but this regards bodies raidating away all their masses, the exterior of which
+in 1975 \cite{SteinmKL75}, but this regards bodies radiating away all their masses, the exterior of which
 is described by the \emph{outgoing} Vaidya metric. In the context of imploding
 radiating shells (\emph{ingoing} Vaidya metric) considered here, the appearance of naked singularities
 has been shown first by William A. Hiscock\index{Hiscock, W.A.}, Leslie G. Williams\index{Williams, L.G.} and Douglas M. Eardley\index{Eardley, D.M.} in 1982 \cite{HiscoWE82} and has been further studied by
@@ -1289,12 +1302,12 @@ the geodesic equation (\ref{e:vai:sol_r_x_out_naked}); we get
 \ee
 where $\tilde{c} := c^{-1} x_1^{x_2/(x_2 - x_1)} x_2^{-x_1/(x_2 - x_1)}$ is
 constant along a given outgoing radial null geodesic.
-To proceed, we introduce two overlaping subregions of $\M_{\rm rad}$:
+To proceed, we introduce two overlapping subregions of $\M_{\rm rad}$:
 \be \label{e:vai:def_NI_NII}
     \mathscr{N}_{\rm I}: r > \frac{v}{x_2} \qand
     \mathscr{N}_{\rm II}: r < \frac{v}{x_1} .
 \ee
-They fulfill $\M_{\rm rad} = \mathscr{N}_{\rm I} \cup \mathscr{N}_{\rm II}$.
+They fulfil $\M_{\rm rad} = \mathscr{N}_{\rm I} \cup \mathscr{N}_{\rm II}$.
 Furthermore, $\mathscr{N}_{\rm I}$ (resp.  $\mathscr{N}_{\rm II}$)
 contains the homothetic Killing horizon $\Hor_1$ (resp. $\Hor_2$)
 and $\mathscr{N}_{\rm I} \cap \mathscr{N}_{\rm II}$ is the region
@@ -1508,7 +1521,7 @@ Equation~(\ref{e:vai:up_u}) reduces to
 \be
     u' = - \frac{1}{u^2} \quad\mbox{in}\ \mathscr{N}_{\rm I}\cap \mathscr{N}_{\rm II} .
 \ee
-Substuting this expression for $u'$ in Eq.~(\ref{e:vai:r_up_v_alp1o9}), one recovers
+Substituting this expression for $u'$ in Eq.~(\ref{e:vai:r_up_v_alp1o9}), one recovers
 Eq.~(\ref{e:vai:r_uv_1o9}).
 \end{example}
 
@@ -1681,7 +1694,7 @@ Brien C. Nolan\index{Nolan, B.C} \cite{Nolan07}.
 \subsection{Naked singularity and Cauchy horizon} \label{s:vai:nak_Cauchy}
 
 We recover on the Carter-Penrose diagram of Fig.~\ref{f:vai:CPdiag_nk_sing}
-the naked singularity\index{naked singulariy}\index{singularity!naked --} feature noticed in Sec.~\ref{s:vai:low_alpha}:
+the naked singularity\index{naked singularity}\index{singularity!naked --} feature noticed in Sec.~\ref{s:vai:low_alpha}:
 it appears clearly
 that light rays emitted by the curvature singularity
 between $O_1$ and $O_2$ can reach the future null infinity $\scri^+$ of the
@@ -1705,9 +1718,9 @@ the Cauchy horizon $\Hor_{\rm C}$ and the future null infinity $\scri^+$.}
 The part $O_2 O_3$ of the curvature singularity (cf. Fig.~\ref{f:vai:CPdiag_nk_sing})
 is visible to observers that fall into the black hole, but remains hidden
 to remote observers. For this reason, the singularity $O_2 O_3$ is qualified as
-\defin{locally naked}\index{naked singulariy!locally --}\index{singularity!locally naked --},
+\defin{locally naked}\index{naked singularity!locally --}\index{singularity!locally naked --},
 while $O_1 O_2$ is qualified as
-\defin{globally naked}\index{naked singulariy!globally --}\index{singularity!globally naked --}.
+\defin{globally naked}\index{naked singularity!globally --}\index{singularity!globally naked --}.
 For remote observers, one may say that the
 singularity $O_2 O_3$ is ``clothed'' by the event horizon $\Hor$.
 \end{remark}
@@ -1724,7 +1737,7 @@ spacetime.
 Such a singularity is generically called a
 \defin{shell-focusing singularity}\index{shell-focusing singulariy}\index{singularity!shell-focusing --}. This terms has been coined by Eardley \& Smarr \cite{EardlS79}, who discovered them
 in spherically symmetric inhomogeneous dust collapse.
-Due to its past null character, a shell-focusing singularity is always locally naked: close obsevers can see it.
+Due to its past null character, a shell-focusing singularity is always locally naked: close observers can see it.
 
 
 
@@ -1733,7 +1746,7 @@ the null hypersurface $\Hor_{\rm C}$ generated by the outgoing radial null geode
 emanating from the birth of the singularity at $u=0$ in $\mathscr{N}_{\rm I}$
 (point $O_1$ in Figs.~\ref{f:vai:CPdiag_nk_sing} and \ref{f:vai:CPdiag_Cauchy} ).
 $\Hor_{\rm C}$ can be seen as the null hypersurface extending the
-homethetic Killing horizon $\Hor_1$ beyond the radiation region, i.e. one has
+homothetic Killing horizon $\Hor_1$ beyond the radiation region, i.e. one has
 $\Hor_{\rm C} \cap \M_{\rm rad} = \Hor_1$.
 The hypersurface $\Hor_{\rm C}$ is actually the future Cauchy horizon\index{future!Cauchy!horizon}\index{Cauchy!horizon}\index{horizon!Cauchy --} (cf. Sec.~\ref{s:ker:Cauchy_hor})
 of any partial Cauchy surface $\Sigma$ that encounters the Minkowkski region\footnote{Since it
@@ -1743,7 +1756,7 @@ In other words, the region of spacetime in the future of $\Hor_{\rm C}$ cannot
 be entirely predicted from initial data on $\Sigma$ and the Einstein equations.
 In particular, data from the naked curvature singularity $O_1 O_3$ is required.
 Since a curvature singularity marks a validity limit of general relativity,
-one cannot unambigously prescribe data there. This seriously hampers the
+one cannot unambiguously prescribe data there. This seriously hampers the
 predictability of general relativity alone for describing the region
 beyond $\Hor_{\rm C}$. For instance, a huge burst of radiation could come
 out at any time from the naked singularity and change the fate of observers
@@ -1766,7 +1779,7 @@ This allowed us to benefit from an extra symmetry (homothetic Killing vector) an
 exact solutions for the outgoing radial null geodesics.
 The obtained results are nevertheless representative of those for more
 general functions
-$M(v)$. In particular, the criterion for having a shell-focusing singularity\index{shell-focusing singulariy}\index{singularity!shell-focusing --}
+$M(v)$. In particular, the criterion for having a shell-focusing singularity\index{shell-focusing singularity}\index{singularity!shell-focusing --}
 with a generic function $M(v)$ remains $\alpha < 1/8$ but with $\alpha$ defined
 by
 \be
@@ -1785,13 +1798,13 @@ so that $\alpha = 0$. The singularity is entirely located in the black
 hole region and appears to be locally naked (note the outgoing radial null geodesic
 emerging from it near $(t,r) = (0,0)$ in Fig.~\ref{f:vai:diag_S2}).
 
-It is worth to stress that in the litterature,
+It is worth to stress that in the literature,
 many studies regard the \emph{outgoing} Vaidya metric, starting from the original studies
 (cf. the historical note on p.~\pageref{h:vai:origin}), because they are
-motivated either by the modelization of radiating bodies or the
+motivated either by the modelling of radiating bodies or the
 study of black hole evaporation. Nonetheless, most results are applicable
-to Vaidya collapse, which is based on the
-\emph{ingoing} version of the metric, simply by performing some time reversal.
+to Vaidya collapse (which is based on the
+\emph{ingoing} version of the metric) by performing some time reversal.
 For instance, one can infer from the recent study \cite{CoudrN21}
 that for an imploding Vaidya spacetime without any Minkowksi region
 ($v$ spanning the range $(-\infty, v_0)$ in the radiation region),
@@ -1799,12 +1812,6 @@ but such that $\lim_{v\to -\infty} M(v) = 0$, there is a curvature singularity
 at the null boundary $v\to -\infty$ of spacetime, whatever the choice of the
 non-decreasing mass function $M(v)$.
 %\cite{Krish14}
-
-
-
-
-
-
 
 
 
