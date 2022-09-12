@@ -17,9 +17,8 @@ we present first (Sec.~\ref{s:vai:Vaidya_metric}).
 Then, we introduce the
 model describing the implosion of a radiation shell and
 study the black hole formation via such a process (Sec.~\ref{s:vai:infall}).
-Finally, we focus on
-some subclass of models giving birth a \emph{naked singularity}, i.e.
-such that the central curvature is visible to remote observers located
+Finally, we focus on a subclass of models giving birth a \emph{naked singularity}, i.e.
+such that the central curvature singularity is visible to remote observers located
 outside the black hole region (Sec.~\ref{s:vai:naked_sing}).
 
 
@@ -47,7 +46,7 @@ of the Schwarzschild metric expressed in the
 coordinates, as given by Eq.~(\ref{e:sch:Schwarz_metric_NIEF}). Actually, the
 only difference is the constant $m$ in Eq.~(\ref{e:sch:Schwarz_metric_NIEF})
 replaced by the function $M(v)$ in Eq.~(\ref{e:vai:Vaidya_metric_null}).
-We may even say that the Schwarzschild metric is the special case $M(v) = m$ of
+We may even say that the Schwarzschild metric is the special case $M(v) = \mathrm{const}$ of
 the ingoing Vaidya metric.
 
 A key property of the ingoing Vaidya metric is
@@ -131,7 +130,7 @@ the \emph{light rays}\index{light!ray} of the geometrical optics framework.
 The geodesic character also holds for $\w{k}$ as defined by Eq.~(\ref{e:vai:def_k}),
 since $\w{k}$ is normal to the null hypersurfaces $v = \mathrm{const}$:
 the integral curves of $\w{k}$ are the null geodesic generators of these hypersurfaces
-(cf. Sec.~\ref{s:def:null_geod_gen}); moreover,
+(cf. Sec.~\ref{s:def:null_geod_gen}); actually,
 we have exactly
 \be \label{e:vai:k_geodesic}
     \w{\nabla}_{\w{k}}\, \w{k} = 0 .
@@ -208,7 +207,7 @@ replaced by a $-$ sign; this correction is performed to get Eq.~(\ref{e:vai:Mine
 \ee
 This ressembles the metric (\ref{e:vai:Vaidya_metric_null}).
 The only difference is the $-$ sign in front of $\dd u \, \dd r$, while there is a $+$ sign
-in front  $\dd v \, \dd r$ in (\ref{e:vai:Vaidya_metric_null}). This results form Mineur's version
+in front  $\dd v \, \dd r$ in (\ref{e:vai:Vaidya_metric_null}). This results from Mineur's version
 being \emph{outgoing}, given that he considered a radiating body. On
 the contrary, the version (\ref{e:vai:Vaidya_metric_null}) is \emph{ingoing}, since we are interested in gravitational collapse and black hole formation.
 
@@ -239,8 +238,8 @@ Narlikar and Vaidya published in 1947 \cite{NarliV1947}, one can also read
 was first published by one of us some years ago. A line element equivalent to
 (5) but not obviously so was obtained by Mineur
 several years earlier.''} It would probably be fair to call the metric
-(\ref{e:vai:Mineur_metric_modern}) the \emph{Mineur-Vaidya metric}; however,
-we keep here the usual name of \emph{Vaidya metric}.
+(\ref{e:vai:Mineur_metric_modern}) the \emph{Mineur-Vaidya metric}; we shall
+however keep here the usual name of \emph{Vaidya metric}.
 The metric (\ref{e:vai:Mineur_metric_modern}) was popularized and further studied by Richard W. Lindquist\index{Lindquist, R.W.}, Robert A. Schwartz\index{Schwartz, R.A} and Charles W. Misner\index{Misner, C.W.}
 in 1965 \cite{LindqSM65}.
 \end{hist}
@@ -318,7 +317,7 @@ $\wl$ are geodesics (cf. Sec.~\ref{s:geo:gener_param}).
 The differential equation governing the outgoing radial null geodesics
 is obtained by demanding that $\wl$ is their tangent vector:
 \be \label{e:vai:ODE_outgoing_null}
-    \frac{\D r}{\D t} = \frac{r - 2M(t + r)}{r + 2M(t+r)} .
+    \encadre{ \frac{\D r}{\D t} = \frac{r - 2M(t + r)}{r + 2M(t+r)} }.
 \ee
 In what follows, we shall get exact solutions of this equation for $M(v)$ piecewise linear.
 
@@ -338,9 +337,8 @@ as soon as $r < 2 M(t+r)$. This corresponds to the region bounded by the red cur
 An \defin{imploding shell of radiation}\index{shell!imploding -- of radiation}\index{imploding!shell of radiation}
 is defined by the ingoing Vaidya metric with the function $M(v)$ obeying
 $M'(v) \neq 0$ only on a finite interval of $v$. By choosing properly
-the origin of $v$, we may consider this interval to be $[0, v_0]$, with
-the parameter $v_0>0$ governing the
-thickness of the shell.
+the origin of $v$, we may consider this interval to be $[0, v_0]$, where
+the parameter $v_0>0$ governs the shell's thickness.
 The function $M(v)$ is thus constant outside the interval $[0, v_0]$.
 In order to describe the formation of a black hole, we choose
 $M(v) = 0$ for $v < 0$. This corresponds to a piece of Minkowski spacetime,
@@ -348,12 +346,12 @@ since the metric (\ref{e:vai:metric_IEF})
 clearly reduces to Minkowski metric (\ref{e:glo:Mink_metric_spher}) wherever $M(v)=0$.
 Denoting by $m>0$ the constant value of $M(v)$ for $v > v_0$, we have then
 \be \label{e:vai:mass_function}
-    M(v) = \left\{ \begin{array}{ll}
+   \encadre{ M(v) = \left\{ \begin{array}{ll}
      0 \quad \mbox{for} \ v < 0 \qquad & (\mbox{Minkowski region},\ \M_{\rm Min}) \\
      m \, S(v/v_0) \quad \mbox{for} \ 0 \leq v \leq v_0
         & (\mbox{radiation region},\ \M_{\rm rad}) \\
-      m \quad \mbox{for} \ v > v_0 \qquad & (\mbox{Schwarzschild region},\ \M_{\rm Sch})
-      \end{array} \right.
+      m \quad \mbox{for} \ v > v_0 \qquad & (\mbox{Schwarzschild region},\ \M_{\rm Sch}),
+      \end{array} \right. }
 \ee
 where $S: [0,1] \to [0,1],\ x \mapsto S(x)$ is an increasing function
 obeying $S(0) = 0$ and $S(1) = 1$.
@@ -373,7 +371,7 @@ and for the linear mass function $M(v)=m v/v_0$ with $v_0 = 3 m$
 The yellow area is the radiation region $\M_{\rm rad}$
 [cf. Eq.~(\ref{e:vai:mass_function})],
 below it lies the Minkowski region $\M_{\rm Min}$
-and above it the Schwarzschild region $\M_{\rm Sch}$.
+and above it, the Schwarzschild region $\M_{\rm Sch}$.
 The solid (resp. dashed) green curves are outgoing (resp. ingoing) radial
 null geodesics. The thick black line marks the event horizon $\Hor$ (Sec.~\ref{s:vai:BH_formation}) and
 the red one the future outer trapping horizon $\mathscr{T}$ (Sec.~\ref{s:vai:trapped_surf}).
@@ -459,7 +457,7 @@ for the computation):
 \be \label{e:vai:Lie_xi_g}
     \Lie{\xi} \w{g} = 2 \w{g} .
 \ee
-We should refer to the case where $M(v)$ is piecewise linear, i.e. $M(v) = m v/v_0 = \alpha v / 2$,
+We shall refer to the choice $M(v)$ piecewise linear
 as the \defin{homothetic radiation shell model}\index{homothetic!radiation shell}.
 
 \begin{remark}
@@ -477,14 +475,14 @@ but only \emph{conformal isometries}.
 Generally, vector fields generating conformal isometries are
 called \defin{conformal Killing vectors}\index{conformal!Killing vector}.
 They fulfil $\Lie{\xi} \w{g} = \sigma \w{g}$, where $\sigma$ is a scalar field.
-Equation~(\ref{e:vai:Lie_xi_g}) constitutes the particular subcase $\sigma = 2$.
+Equation~(\ref{e:vai:Lie_xi_g}) constitutes the particular case $\sigma = 2$.
 \end{remark}
 
 Let us introduce the variable
 \be \label{e:vai:def_x_v_r}
     \encadre{ x := \frac{v}{r} },
 \ee
-which is left invariant under the homotheties $H_\lambda$.
+which is invariant under the homotheties $H_\lambda$.
 The differential equation governing the outgoing radial null
 geodesics, Eq.~(\ref{e:vai:ODE_outgoing_null}),
 can be rewritten as $\D t / \D r = (1 + \alpha x)/(1 - \alpha x)$ [cf. Eq.~(\ref{e:vai:def_alpha})].
@@ -509,8 +507,8 @@ expression (\ref{e:vai:S_linear}) substituted for $M(v)$, we get
 \ee
 Consequently, we may say that the case $\alpha > 1/8$
 corresponds to
-a \defin{large energy density of radiation}.
-We shall discuss the case of a low energy density radiation
+a \defin{large radiation energy density}\index{radiation!energy density}.
+We shall discuss the low radiation energy density case
 ($\alpha < 1/8$)
 in Sec.~\ref{s:vai:naked_sing}.
 For the moment, assuming (\ref{e:vai:v0_small}),
@@ -609,7 +607,7 @@ in the Schwarzschild region, they are curves obeying Eq.~(\ref{e:sch:outgoing_nu
 
 \subsection{Black hole formation} \label{s:vai:BH_formation}
 
-In spherical symmetry, the inspection of radial null geodesics gives
+In spherical symmetry, the inspection of radial null geodesics provides
 a direct access to the black hole event horizon $\Hor$.
 Since we have at disposal the exact solution
 (\ref{e:vai:eq_out_v0_small}) for the outgoing radial null geodesics,
@@ -680,10 +678,10 @@ i.e. outside $\Hor$.
 $\Li$ arrives then at the inner edge of $\M_{\rm rad}$
 with $r = r_0 > r_B$.  In $\M_{\rm rad}$,
 according to Eq.~(\ref{e:vai:eq_out_v0_small}),
-$\Li$ is homothetic to a part of $\hat{\Li}$ with a ratio $r_0 / r_B > 1$. It emerges
-then at the outer edge of $\M_{\rm rad}$ with $r > r_A = 2 m$. It is
-then in the exterior of the Schwarzschild black hole and can reach
-the future null infinity $\scri^+$ of Schwarzschild spacetime.
+$\Li$ is homothetic to a part of $\hat{\Li}$ with a ratio $r_0 / r_B > 1$. Hence it emerges
+at the outer edge of $\M_{\rm rad}$ with $r > r_A = 2 m$. $\Li$ is
+there in the exterior of the Schwarzschild black hole, so that it will subsequently reach
+the future null infinity $\scri^+$ of $\M_{\rm Sch}$.
 On the contrary, if $\Li$ crosses $r=0$ with $t > t_{\rm hb}$,
 i.e. inside $\Hor$,
 it encounters the inner edge of $\M_{\rm rad}$ with
@@ -704,7 +702,7 @@ horizon.
 
 The black hole event horizon $\Hor$ is depicted as the thick black curve
 in Fig.~\ref{f:vai:diag_S0}. Since $t_{\rm hb} < 0$ [cf. Eq.~(\ref{e:vai:t_hb})],
-one immediately notes that
+one immediately notices that
 \begin{greybox}
 The black hole forms in the Minkowski
 region of Vaidya spacetime, i.e. in a region where the spacetime curvature
@@ -769,21 +767,25 @@ components of the Ricci tensor, as given by Eq.~(\ref{e:vai:Ricci_tensor}).
 \begin{remark}
 Since the Ricci tensor of the Vaidya metric is not identically zero
 [cf. Eq.~(\ref{e:vai:Ricci_tensor})], other curvature invariants that one might
-have think of in order to track the curvature singularity are the Ricci scalar $R := g^{\mu\nu} R_{\mu\nu}$
+have think of for tracking the curvature singularity are the Ricci scalar $R := g^{\mu\nu} R_{\mu\nu}$
 and the Ricci ``squared'' $R_{\mu\nu} R^{\mu\nu}$. However, they are both identically zero
 for $\w{k}$ is a null vector.
 \end{remark}
 
-The curvature singularity is depicted as the orange broken line in Fig.~\ref{f:vai:diag_S0}.
-It is clear on this figure that the singularity bounds the future of both ingoing and outgoing radial null geodesics.
-This will be shown rigorously in Sec.~\ref{f:vai:thin_CP}.
-This implies that the curvature singularity is spacelike, as in Schwarzschild spacetime.
+The curvature singularity is depicted as the orange broken line in Fig.~\ref{f:vai:diag_S0},
+which regards the homothetic radiation shell with $\alpha > 1/8$.
+It is clear on this figure that the singularity bounds the future of both ingoing and outgoing radial null geodesics (this will be shown rigorously in Sec.~\ref{f:vai:thin_CP}).
+This implies that, for $\alpha > 1/8$, the curvature singularity is \emph{spacelike},
+as in Schwarzschild spacetime. We shall see in Sec.~\ref{s:vai:naked_sing} that
+for $\alpha < 1/8$, the curvature singularity has a \emph{null} segment, in addition to the spacelike
+one.
 
-For the homothetic collapse with $v_0 < 16\, m$ considered in Secs.~\ref{s:vai:sol_M_linear} and
-\ref{s:vai:BH_formation}, one has $t_{\rm hb} < 0$ [Eq.~(\ref{e:vai:t_hb})], so that
+For the homothetic collapse with $\alpha > 1/8$ ($v_0 < 16\, m$) considered in Secs.~\ref{s:vai:sol_M_linear} and
+\ref{s:vai:BH_formation} and depicted in Fig.~\ref{f:vai:diag_S0}, one has $t_{\rm hb} < 0$
+[Eq.~(\ref{e:vai:t_hb})], so that
 the curvature singularity is entirely located in the black hole region. It is therefore hidden
-from a remote observer. In Sec.~\ref{s:vai:naked_sing}, we will see that this is no longer the
-case for $v_0 > 16 m$: the singularity is then naked.
+to a remote observer. In Sec.~\ref{s:vai:naked_sing}, we will see that this is no longer the
+case for $\alpha < 1/8$: the singularity is then naked.
 
 \subsection{Trapped surfaces} \label{s:vai:trapped_surf}
 
@@ -816,10 +818,10 @@ of the Schwarzschild region, where
 $M(t+r) = m$.
 \end{greybox}
 
-The set formed by all the marginally trapped spheres
-of fixed $(t,r)$
-is the hypersurface $\mathscr{T}$ defined by $\theta_{(\wl)} = 0$.
-Its equation is obtained by saturating the inequality
+Let us denote by $\mathscr{T}$ the hypersurface formed by
+all the \emph{marginally} trapped spheres
+of fixed $(t,r)$ (vanishing expansion along $\wl$). The equation
+of $\mathscr{T}$ is obtained by saturating the inequality
 in Eq.~(\ref{e:vai:S_trapped}):
 \be \label{e:vai:def_T}
     \mathscr{T}:\qquad r = 2M(t + r).
@@ -827,14 +829,14 @@ in Eq.~(\ref{e:vai:S_trapped}):
 As we shall see in
 Chap.~\ref{s:loc}, $\mathscr{T}$ is called a
 \defin{future outer trapping horizon}\index{future!outer trapping horizon}\index{trapping horizon!future!outer --}.
-We have the following characterization of $\mathscr{T}$, which follows directly
-from Eq.~(\ref{e:vai:def_T}) implying $\D r / \D t = 0$ in Eq.~(\ref{e:vai:ODE_outgoing_null}):
+Equation~(\ref{e:vai:def_T}) implies $\D r / \D t = 0$ in Eq.~(\ref{e:vai:ODE_outgoing_null}),
+hence we get
 \begin{greybox}
 If an outgoing radial null geodesic $\Li$ crosses $\mathscr{T}$,
 the crossing point is a $r$-turning point of $\Li$.
 \end{greybox}
 This feature appears clearly in Figs.~\ref{f:vai:diag_S0} and \ref{f:vai:diag_S2}.
-Furthermore, $\mathscr{T}$ obeys the following properties.
+Furthermore, $\mathscr{T}$ obeys the following properties:
 \begin{greybox}
 In the radiation region, the future outer trapping horizon $\mathscr{T}$ is a
 spacelike hypersurface, while in the Schwarzschild region, $\mathscr{T}$
@@ -904,7 +906,7 @@ $\mathscr{T}$ would merge smoothly with $\Hor$ at $v=v_0$. This is shown in
 Fig.~\ref{f:vai:diag_S2}, where $M(v)$ is of class $C^2$. Besides, we can check
 on this figure that, while it has a shape more complicated
 that in Fig.~\ref{f:vai:diag_S0}, $\mathscr{T}$ always lies outside the null cones in
-$\M_{\rm rad}$, i.e. is a spacelike hypersurface there.
+$\M_{\rm rad}$, i.e. $\mathscr{T}$ is spacelike there.
 \end{remark}
 
 \subsection{Carter-Penrose diagram} \label{f:vai:thin_CP}
@@ -1014,7 +1016,7 @@ Along a given ingoing radial null geodesic $\Li^{\rm in}_{(v,\th,\ph)}$,
 $u$ can be considered as a (non-affine) parameter, $\wpar_u$
 being tangent to $\Li^{\rm in}_{(v,\th,\ph)}$. The geodesic hits the curvature
 singularity for $u \to \ln(v_0/v) + u_0$.
-Regarding an outgoing radial null geodesic $\Li^{\rm out}_{(u,\th,\ph)}$,
+Similarly, along an outgoing radial null geodesic $\Li^{\rm out}_{(u,\th,\ph)}$,
 $v$ can be considered as a (non-affine) parameter, $\wpar_v$
 being tangent to $\Li^{\rm out}_{(u,\th,\ph)}$. If $u < u_0$,
 $\Li^{\rm out}_{(u,\th,\ph)}$ reaches the outer boundary of the radiation
@@ -1023,8 +1025,9 @@ region, while if $u \geq u_0$, $\Li^{\rm out}_{(u,\th,\ph)}$ hits the
 curvature singularity for $v \to v_0 \mathrm{e}^{u_0 - u}$
 (cf. Fig.~\ref{f:vai:thin_double_null}).
 
-The event horizon $\Hor$ crosses $\M_{\rm rad}$ at a fixed value of $u$, $u_\Hor$ say,
-since it is generated by outgoing null geodesics. The value of $u_\Hor$ is found
+Since it is generated by outgoing null geodesics,
+the event horizon $\Hor$ crosses $\M_{\rm rad}$ at a fixed value of $u$, $u_\Hor$ say.
+The value of $u_\Hor$ is found
 by setting $r=2m$ and $v=v_0$ in Eq.~(\ref{e:vai:u_lnr_v}):
 \be \label{e:vai:thin:u_H}
     u_\Hor = \frac{2}{\sqrt{8\alpha - 1}}\arctan\left( \frac{1}{\sqrt{8\alpha - 1}}\right)
@@ -1036,7 +1039,7 @@ as drawn in Fig.~\ref{f:vai:thin_double_null}.
 
 
 \begin{figure}
-\centerline{\includegraphics[width=0.45\textwidth]{vai_CPdiag_thin.pdf}}
+\centerline{\includegraphics[width=0.5\textwidth]{vai_CPdiag_thin.pdf}}
 \caption[]{\label{f:vai:CPdiag_thin} \footnotesize
 Carter-Penrose diagram of Vaidya collapse
 for the homothetic shell model ($M(v) = m v/v_0 = \alpha v /2$) with
@@ -1076,12 +1079,12 @@ The spacetime diagram of $\M_{\rm rad}$ in Fig.~\ref{f:vai:thin_double_null}
 is already conformal since all radial null geodesics are straight lines
 inclined at $\pm 45^\circ$. To integrate it into a Carter-Penrose diagram,
 one needs to compactify it along the $u$ direction by introducing a
-coordinate of the type $U = \arctan u$ --- the $v$ direction begin already
+coordinate of the type $U = \arctan u$ --- the $v$ direction being already
 compactified, given the finite range of $v$ in $\M_{\rm rad}$.
 One can then match the obtained diagram to
 Carter-Penrose diagrams of $\M_{\rm Min}$ (cf. Fig.~\ref{f:glo:conf_Mink_null})
-and $\M_{\rm Sch}$ (cf. Fig.~\ref{f:max:carter-penrose-std} or \ref{f:max:carter-penrose-FN})
-to get a Carter-Penrose diagram of the whole Vaidya spacetime, as shown
+and $\M_{\rm Sch}$ (cf. Fig.~\ref{f:max:carter-penrose-std} or \ref{f:max:carter-penrose-FN}),
+thereby getting a Carter-Penrose diagram of the whole Vaidya spacetime, as shown
 in Fig.~\ref{f:vai:CPdiag_thin}.
 
 \begin{hist}
@@ -1148,27 +1151,6 @@ $\Li^{*1}_{(\th,\ph)}$ and $\Li^{*2}_{(\th,\ph)}$ are straight line segments
 through the origin $(t, r) = (0,0)$. They are depicted
 as the segments $OC$ and $OB$ respectively in Fig.~\ref{f:vai:diag_naked_S0}.
 
-\begin{greybox}
-When $(\th,\ph)$ varies, $\Li^{*1}_{(\th,\ph)}$ and $\Li^{*2}_{(\th,\ph)}$
-generate null hypersurfaces, $\Hor_1$ and $\Hor_2$ respectively,
-such that the homothetic Killing vector $\w{\xi}$
-[cf. Eq.~(\ref{e:vai:hom_Killing})] is normal to them
-in the radiation region. One says that $\Hor_1$ and $\Hor_2$
-are
-\defin{homothetic Killing horizons}\index{homothetic!Killing!horizon}\index{Killing!horizon!homothetic --}\footnote{Recall from Sec.~\ref{s:neh:def_Killing_hor} that
-a \emph{Killing horizon} is a null hypersurface such that a Killing vector is normal to it.}.
-\end{greybox}
-\begin{proof}
-Their equations being $t=(x_1 - 1)r$ and $t=(x_2 - 1)r$, $ \Li^{*1}_{(\th,\ph)}$ and
-$ \Li^{*2}_{(\th,\ph)}$ are clearly orbits of the
-homothety group $(H_\lambda)_{\lambda\in \R_{>0}}$ discussed in Sec.~\ref{s:vai:sol_M_linear}.
-The group generator $\w{\xi}$ is thus tangent to the null curves $\Li^{*1}_{(\th,\ph)}$ on $\Hor_1$
-and $\Li^{*2}_{(\th,\ph)}$ on $\Hor_2$. Hence,
-$\w{\xi}$ is null there. Given that the
-only null direction in a null hypersurface is the normal one, we conclude
-that  $\w{\xi}$ is normal to $\Hor_1$ and $\Hor_2$.
-\end{proof}
-
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{vai_diag_naked_S0.pdf}}
 \caption[]{\label{f:vai:diag_naked_S0} \footnotesize
@@ -1185,6 +1167,28 @@ part of the Cauchy horizon.
 \textsl{[Figure generated by the notebook \ref{s:sam:Vaidya}]}
 }
 \end{figure}
+
+\begin{greybox}
+When $(\th,\ph)$ varies, $\Li^{*1}_{(\th,\ph)}$ and $\Li^{*2}_{(\th,\ph)}$
+generate null hypersurfaces, $\Hor_1$ and $\Hor_2$ respectively,
+such that the homothetic Killing vector $\w{\xi}$
+[cf. Eq.~(\ref{e:vai:hom_Killing})] is normal to them
+in $\M_{\rm rad}$. One says that $\Hor_1$ and $\Hor_2$
+are
+\defin{homothetic Killing horizons}\index{homothetic!Killing!horizon}\index{Killing!horizon!homothetic --}\footnote{Recall from Sec.~\ref{s:neh:def_Killing_hor} that
+a \emph{Killing horizon} is a null hypersurface such that a Killing vector is normal to it.}.
+\end{greybox}
+\begin{proof}
+Their equations being $t=(x_1 - 1)r$ and $t=(x_2 - 1)r$, $ \Li^{*1}_{(\th,\ph)}$ and
+$ \Li^{*2}_{(\th,\ph)}$ are clearly orbits of the
+homothety group $(H_\lambda)_{\lambda\in \R_{>0}}$ discussed in Sec.~\ref{s:vai:sol_M_linear}.
+The group generator $\w{\xi}$ is thus tangent to the null curves $\Li^{*1}_{(\th,\ph)}$ on $\Hor_1$
+and $\Li^{*2}_{(\th,\ph)}$ on $\Hor_2$. Hence,
+$\w{\xi}$ is null there. Given that the
+only null direction in a null hypersurface is the normal one, we conclude
+that  $\w{\xi}$ is normal to $\Hor_1$ and $\Hor_2$.
+\end{proof}
+
 
 Let us now consider \emph{generic} outgoing radial null geodesics, i.e.
 geodesics with
@@ -1233,8 +1237,8 @@ $\Li^{*2}_{(\th,\ph)}$, emanate from $(t,r)=(0,0)$ with a slope $t/r = x_2 - 1$.
 \end{greybox}
 \begin{proof}
 As in Sec.~\ref{s:vai:BH_formation}, let us consider a null generator
-$\hat{\Li}$ of the Killing horizon at $r=2m$ in the Schwarzschild region
-$\M_{\rm Sch}$.
+$\hat{\Li}$ of the Killing horizon of the Schwarzschild region
+$\M_{\rm Sch}$, which is located at $r=2m$.
 $\hat{\Li}$ intersects the outer edge $v=v_0$ of $\M_{\rm rad}$ at a
 point $A$ such that $r_A=2m$ and hence $x_A=\alpha^{-1}$ (cf. Fig.~\ref{f:vai:diag_naked_S0}). When
 prolonged to the past in $\M_{\rm rad}$, i.e. to $x < \alpha^{-1}$,
@@ -1274,7 +1278,8 @@ that the black hole event horizon is the null hypersurface generated by $\hat{\L
 The formation of naked singularities in spacetimes with a Vaidya region
 has been put forward first by B. Steinmüller\index{Steinmüller, B.}, Andrew R. King\index{King, A.R}, and Jean-Pierre Lasota\index{Lasota, J.-P.}
 in 1975 \cite{SteinmKL75}, but this regards bodies radiating away all their masses, the exterior of which
-is described by the \emph{outgoing} Vaidya metric. In the context of imploding
+is described by the \emph{outgoing} Vaidya metric (\ref{e:vai:Mineur_metric_modern}).
+In the context of imploding
 radiating shells (\emph{ingoing} Vaidya metric) considered here, the appearance of naked singularities
 has been shown first by William A. Hiscock\index{Hiscock, W.A.}, Leslie G. Williams\index{Williams, L.G.} and Douglas M. Eardley\index{Eardley, D.M.} in 1982 \cite{HiscoWE82} and has been further studied by
 Yuhji Kuroda\index{Kuroda, Y.} in 1984 \cite{Kurod84} and Achilles Papapetrou\index{Papapetrou, A.} in 1985 \cite{Papap85}. In particular, the solution (\ref{e:vai:sol_r_x_out_naked}) for the
@@ -1288,7 +1293,7 @@ value of $(\th,\ph)$, there are distinct radial null geodesics emanating
 from the ``point'' $(t, r) = (0,0)$, namely all the geodesics that
 cross the outer edge of the radiation shell with a slope $t/r = x - 1$,
 $x\in [x_1, \alpha^{-1})$. %]$
-This appears clearly on Fig.~\ref{f:vai:r_x_naksing}.
+This appears clearly on Fig.~\ref{f:vai:diag_naked_S0}.
 It looks like there is an infinity of future light cones emanating
 from a single spacetime point!
 This state of affairs results actually from a bad behaviour of the coordinates
@@ -1302,12 +1307,16 @@ the geodesic equation (\ref{e:vai:sol_r_x_out_naked}); we get
 \ee
 where $\tilde{c} := c^{-1} x_1^{x_2/(x_2 - x_1)} x_2^{-x_1/(x_2 - x_1)}$ is
 constant along a given outgoing radial null geodesic.
-To proceed, we introduce two overlapping subregions of $\M_{\rm rad}$:
+Contrary to the case $\alpha > 1/8$ dealt with in Sec.~\ref{f:vai:thin_CP},
+two coordinate patches $(u,v,\th,\ph)$ and $(u',v,\th,\ph)$ are actually
+required to get regular double-null coordinates on $\M_{\rm rad}$. They are defined
+on two overlapping subregions of $\M_{\rm rad}$:
 \be \label{e:vai:def_NI_NII}
     \mathscr{N}_{\rm I}: r > \frac{v}{x_2} \qand
     \mathscr{N}_{\rm II}: r < \frac{v}{x_1} .
 \ee
-They fulfil $\M_{\rm rad} = \mathscr{N}_{\rm I} \cup \mathscr{N}_{\rm II}$.
+Since $x_2 > x_1$, one has
+$\M_{\rm rad} = \mathscr{N}_{\rm I} \cup \mathscr{N}_{\rm II}$.
 Furthermore, $\mathscr{N}_{\rm I}$ (resp.  $\mathscr{N}_{\rm II}$)
 contains the homothetic Killing horizon $\Hor_1$ (resp. $\Hor_2$)
 and $\mathscr{N}_{\rm I} \cap \mathscr{N}_{\rm II}$ is the region
@@ -1332,6 +1341,20 @@ $u \to +\infty$ at the inner boundary of $\mathscr{N}_{\rm I}$
 with $\lim_{r\to +\infty} u = - \infty$ (cf. Fig.~\ref{f:vai:CPdiag_NI_NII}).
 We may use $(u, v, \th, \ph)$ as a coordinate system on $\mathscr{N}_{\rm I}$,
 instead of the IEF coordinates $(t, r, \th, \ph)$.
+
+\begin{example} \label{x:vai:u_r_1o9}
+As in Example~\ref{x:vai:sol_out_1o9}, let us consider the case $\alpha=1/9$,
+for which $x_1 = 3$ and $x_2 = 6$ [cf. Eq.~(\ref{e:vai:x1_x2})]. Equation~(\ref{e:vai:u_N_I})
+reduces then to
+\be
+    u = \frac{v/3 - r}{\sqrt{r - v/6}} .
+\ee
+This relation can be inverted, yielding an explicit expression for $r(u, v)$:
+\be \label{e:vai:r_uv_1o9}
+    r = \frac{v}{3} + \frac{u}{2} \left( u - \sqrt{ u^2 + \frac{2}{3} v} \right) .
+\ee
+\end{example}
+
 The metric components in coordinates $(u, v, \th, \ph)$
 are deduced from those in coordinates $(v, r, \th, \ph)$, i.e.
 Eq.~(\ref{e:vai:self_similar_metric}), via
@@ -1355,18 +1378,6 @@ by $(u,\th,\ph) = \mathrm{const}$. Furthermore, the homothetic Killing horizon $
 $u = 0$ of $\mathscr{N}_{\rm I}$.
 
 
-\begin{example} \label{x:vai:u_r_1o9}
-As in Example~\ref{x:vai:sol_out_1o9}, let us consider the case $\alpha=1/9$,
-for which $x_1 = 3$ and $x_2 = 6$ [cf. Eq.~(\ref{e:vai:x1_x2})]. Equation~(\ref{e:vai:u_N_I})
-reduces then to
-\be
-    u = \frac{v/3 - r}{\sqrt{r - v/6}} .
-\ee
-This relation can be inverted, yielding an explicit expression for $r(u, v)$:
-\be \label{e:vai:r_uv_1o9}
-    r = \frac{v}{3} + \frac{u}{2} \left( u - \sqrt{ u^2 + \frac{2}{3} v} \right) .
-\ee
-\end{example}
 
 Let us investigate the structure of the inner boundary $v=0$ of the radiation
 shell in the double-null coordinates $(u, v, \th, \ph)$. For $r\neq 0$,
@@ -1391,7 +1402,7 @@ Given that in $\mathscr{N}_{\rm I}$, $x \to +\infty$ is excluded
 by the constraint $x < x_2$ [Eq.~(\ref{e:vai:def_NI_NII})], there remains $x\to x_2$,
 which yields the equivalence (\ref{e:vai:r_v_0_N_I}).
 Now, Eq.~(\ref{e:vai:r_v_0_N_I}) implies that the numerator of Eq.~(\ref{e:vai:u_N_I})
-is equivalent to $(x_2/x_1 - 1) r$ in the limit $r\to 0$ and thus
+is equivalent to $(x_2/x_1 - 1) r$ at the limit $r\to 0$ and thus
 is positive, so that $u > 0$ on the part of the boundary of $\mathscr{N}_{\rm I}$
 where $r\to 0$.
 We conclude that the ``point'' $(t,r) = (v,r) = (0,0)$ in IEF coordinates
@@ -1446,7 +1457,7 @@ scalar (\ref{e:vai:Kretschmann}) reduces to
 where $r$ is the function of $(u,v)$ given implicitly by Eq.~(\ref{e:vai:u_N_I})
 (or explicitly by Eq.~(\ref{e:vai:r_uv_1o9}) in the case $\alpha=1/9$).
 The above expression shows that
-$K$ diverges only if $r\to 0$. This occurs only for $v \to 0$ in the
+$K$ diverges only if $r\to 0$. This limit occurs only for $v \to 0$ in the
 subregion $u\geq 0$ of $\mathscr{N}_{\rm I}$. There, Eq.~(\ref{e:vai:r_v_0_N_I})
 leads to $K \sim 12 \alpha^2 x_2^6 / v^4$, which actually diverges as
 $v \to 0$. We conclude that
@@ -1455,7 +1466,7 @@ In $\mathscr{N}_{\rm I}$, the curvature
 singularity corresponds to $u\geq 0$ and $v\to 0$.
 \end{greybox}
 This curvature singularity corresponds to the zigzag segment in
-Fig.~\ref{f:vai:CPdiag_NI_NII} right.
+right part of Fig.~\ref{f:vai:CPdiag_NI_NII}.
 
 \subsubsection{The $\mathscr{N}_{\rm II}$ region}
 
@@ -1471,11 +1482,25 @@ $\mathscr{N}_{\rm II}$ ($r\to v/x_1$), we get
     \encadre{ u' = \frac{v/x_2 - r}{\left(v/x_1 - r \right)^{x_2/x_1}} }.
 \ee
 We may then consider $(u',v,\th,\ph)$ as a coordinate system on $\mathscr{N}_{\rm II}$.
+
 \begin{remark}
 Contrary to the range of $u$ on $\mathscr{N}_{\rm I}$, which is $(-\infty,+\infty)$,
 the range of $u'$ on $\mathscr{N}_{\rm II}$ is bounded from above by a function
 of $v$, which is given by Eq.~(\ref{e:vai:range_v_uprime}) below.
 \end{remark}
+
+\begin{example}
+For $\alpha=1/9$, i.e. $x_1 = 3$ and $x_2 = 6$,
+Eq.~(\ref{e:vai:up_N_II}) reduces to
+\be \label{e:vai:up_v_r_alp1o9}
+    u' = \frac{3}{2} \frac{v - 6r}{(v - 3 r)^2} .
+\ee
+This relation can be inverted, yielding  an explicit expression for $r(u', v)$:
+\be \label{e:vai:r_up_v_alp1o9}
+    r = \frac{v}{3} + \frac{1}{2u'} \left( \sqrt{1 - \frac{2}{3} u' v } - 1 \right) .
+\ee
+\end{example}
+
 As above, the metric components in coordinates $(u',v,\th,\ph)$
 are deduced from those in coordinates $(v,r,\th,\ph)$ [Eq.~(\ref{e:vai:self_similar_metric})]
 (cf. the notebook~\ref{s:sam:Vaidya_nk_sing} for the computation):
@@ -1508,16 +1533,8 @@ along with the following characterization of the two homothetic Killing horizons
 \end{subequations}
 
 \begin{example}
-For $\alpha=1/9$, i.e. $x_1 = 3$ and $x_2 = 6$,
-Eq.~(\ref{e:vai:up_N_II}) reduces to
-\be \label{e:vai:up_v_r_alp1o9}
-    u' = \frac{3}{2} \frac{v - 6r}{(v - 3 r)^2} .
-\ee
-This relation can be inverted, yielding  an explicit expression for $r(u', v)$:
-\be \label{e:vai:r_up_v_alp1o9}
-    r = \frac{v}{3} + \frac{1}{2u'} \left( \sqrt{1 - \frac{2}{3} u' v } - 1 \right) .
-\ee
-Equation~(\ref{e:vai:up_u}) reduces to
+For $\alpha=1/9$ ($x_1 = 3$ and $x_2 = 6$),
+Eq.~(\ref{e:vai:up_u}) reduces to
 \be
     u' = - \frac{1}{u^2} \quad\mbox{in}\ \mathscr{N}_{\rm I}\cap \mathscr{N}_{\rm II} .
 \ee
@@ -1548,7 +1565,7 @@ This implies that $x r = v$ tends to a finite value. Then $K = 12\alpha^2 v^2 / 
 diverges as $r^{-6}$ there. In conclusion:
 \begin{greybox}
 In $\mathscr{N}_{\rm II}$,
-the limit $r\to 0$ corresponds to a curvature singularity.
+the limit $r\to 0$ always corresponds to a curvature singularity.
 This singularity is reached in two places, which constitute parts of the boundary
 of $\mathscr{N}_{\rm II}$: (i) $v\to 0$ (the zigzag segment inclined
 at $45^\circ$ in Fig.~\ref{f:vai:CPdiag_NI_NII} left) and (ii) $u' v^{x_2/x_1 - 1}
@@ -1676,13 +1693,14 @@ B. Waugh\index{Waugh, B.} and Kayll Lake\index{Lake, K.} in 1986 \cite{WaughL86}
 The double-null coordinates $(u,v)$ and $(u',v)$ introduced above are
 theirs, except for some constant factors.
 Four years before, William A. Hiscock\index{Hiscock, W.A.}, Leslie G. Williams\index{Williams, L.G.} and Douglas M. Eardley\index{Eardley, D.M.} \cite{HiscoWE82}
-exhibited a Carter-Penrose diagram similar to that Fig.~\ref{f:vai:CPdiag_nk_sing}
-except that it regards a case for which
-the Cauchy and event horizons coincide (Fig.~2 in Ref.~\cite{HiscoWE82}),
-which is obtained by adding a surface layer (Dirac delta) of radiation at $v=v_0$.
+exhibited a Carter-Penrose diagram similar to that of Fig.~\ref{f:vai:CPdiag_nk_sing}
+except that
+the Cauchy horizon (to be discussed below) and the event horizon coincide
+(Fig.~2 in Ref.~\cite{HiscoWE82}). Such a configuration
+is obtained by adding a radiation surface layer (Dirac delta) at $v=v_0$.
 However, as discussed in Ref.~\cite{WaughL86}, these authors have not set up
 regular double-null coordinates in $\M_{\rm rad}$, so that their construction
-can be seen as rather heuristic. In 1984, Yuhji Kuroda\index{Kuroda, Y.} \cite{Kurod84}
+can be seen as heuristic. In 1984, Yuhji Kuroda\index{Kuroda, Y.} \cite{Kurod84}
 exhibited a Carter-Penrose diagram again similar to that of Fig.~\ref{f:vai:CPdiag_thin}, except
 for the radiation region extending to $\scri^+$ (no pure Schwarzschild exterior but
 $M'(v) \to 0$ for $v\to +\infty$) (Fig. 3 in Ref.~\cite{Kurod84}). The case of a
@@ -1695,13 +1713,12 @@ Brien C. Nolan\index{Nolan, B.C} \cite{Nolan07}.
 
 We recover on the Carter-Penrose diagram of Fig.~\ref{f:vai:CPdiag_nk_sing}
 the naked singularity\index{naked singularity}\index{singularity!naked --} feature noticed in Sec.~\ref{s:vai:low_alpha}:
-it appears clearly
-that light rays emitted by the curvature singularity
-between $O_1$ and $O_2$ can reach the future null infinity $\scri^+$ of the
+light rays emitted by the curvature singularity
+between $O_1$ and $O_2$ reach the future null infinity $\scri^+$ of the
 Schwarzschild exterior. This means that the singularity is visible to
-remote observers (cf. observer $\Obs$ in Fig.~\ref{f:vai:CPdiag_Cauchy}).
+remote observers, such as observer $\Obs$ in Fig.~\ref{f:vai:CPdiag_Cauchy}.
 This contrasts with the curvature singularity of the
-Vaidya collapse with $v_0 < 16 m$ (compare Fig.~\ref{f:vai:CPdiag_thin}
+Vaidya collapse with $\alpha > 1/8$ (compare Fig.~\ref{f:vai:CPdiag_thin}
 with Fig.~\ref{f:vai:CPdiag_nk_sing}).
 The latter is indeed located at the ``future boundary'' of spacetime, so that
 no causal geodesic can originate from it.
@@ -1717,9 +1734,9 @@ the Cauchy horizon $\Hor_{\rm C}$ and the future null infinity $\scri^+$.}
 \begin{remark}
 The part $O_2 O_3$ of the curvature singularity (cf. Fig.~\ref{f:vai:CPdiag_nk_sing})
 is visible to observers that fall into the black hole, but remains hidden
-to remote observers. For this reason, the singularity $O_2 O_3$ is qualified as
+to remote observers. For this reason, the singularity $O_2 O_3$ is called
 \defin{locally naked}\index{naked singularity!locally --}\index{singularity!locally naked --},
-while $O_1 O_2$ is qualified as
+while $O_1 O_2$ is called
 \defin{globally naked}\index{naked singularity!globally --}\index{singularity!globally naked --}.
 For remote observers, one may say that the
 singularity $O_2 O_3$ is ``clothed'' by the event horizon $\Hor$.
@@ -1735,7 +1752,7 @@ The part  $(v, r) = (0, 0)$ of the curvature singularity, i.e. the segment $O_1 
 the diagram of Fig.~\ref{f:vai:CPdiag_nk_sing} corresponds to a past null boundary of
 spacetime.
 Such a singularity is generically called a
-\defin{shell-focusing singularity}\index{shell-focusing singulariy}\index{singularity!shell-focusing --}. This terms has been coined by Eardley \& Smarr \cite{EardlS79}, who discovered them
+\defin{shell-focusing singularity}\index{shell-focusing singulariy}\index{singularity!shell-focusing --}. This terms has been coined by Eardley \& Smarr \cite{EardlS79}, who discovered this type of singularity
 in spherically symmetric inhomogeneous dust collapse.
 Due to its past null character, a shell-focusing singularity is always locally naked: close observers can see it.
 
@@ -1746,21 +1763,22 @@ the null hypersurface $\Hor_{\rm C}$ generated by the outgoing radial null geode
 emanating from the birth of the singularity at $u=0$ in $\mathscr{N}_{\rm I}$
 (point $O_1$ in Figs.~\ref{f:vai:CPdiag_nk_sing} and \ref{f:vai:CPdiag_Cauchy} ).
 $\Hor_{\rm C}$ can be seen as the null hypersurface extending the
-homothetic Killing horizon $\Hor_1$ beyond the radiation region, i.e. one has
+homothetic Killing horizon $\Hor_1$ introduced in Sec.~\ref{s:vai:low_alpha}
+beyond the radiation region, i.e. one has
 $\Hor_{\rm C} \cap \M_{\rm rad} = \Hor_1$.
-The hypersurface $\Hor_{\rm C}$ is actually the future Cauchy horizon\index{future!Cauchy!horizon}\index{Cauchy!horizon}\index{horizon!Cauchy --} (cf. Sec.~\ref{s:ker:Cauchy_hor})
+The hypersurface $\Hor_{\rm C}$ is actually the \emph{future Cauchy horizon}\index{future!Cauchy!horizon}\index{Cauchy!horizon}\index{horizon!Cauchy --}\footnote{Cf. Sec.~\ref{s:ker:Cauchy_hor} for the definition.}
 of any partial Cauchy surface $\Sigma$ that encounters the Minkowkski region\footnote{Since it
 has to be acausal without edge (cf. Sec.~\ref{s:ker:Cauchy_hor}), $\Sigma$ has to meet the spacelike infinity $i^0$
-in the Carter-Penrose diagram of Fig.~\ref{f:vai:CPdiag_Cauchy} (cf. Fig.~\ref{f:vai:CPdiag_Cauchy})}.
+in the Carter-Penrose diagram of Fig.~\ref{f:vai:CPdiag_Cauchy}.}.
 In other words, the region of spacetime in the future of $\Hor_{\rm C}$ cannot
 be entirely predicted from initial data on $\Sigma$ and the Einstein equations.
 In particular, data from the naked curvature singularity $O_1 O_3$ is required.
 Since a curvature singularity marks a validity limit of general relativity,
 one cannot unambiguously prescribe data there. This seriously hampers the
 predictability of general relativity alone for describing the region
-beyond $\Hor_{\rm C}$. For instance, a huge burst of radiation could come
+beyond $\Hor_{\rm C}$. For instance, a burst of radiation could come
 out at any time from the naked singularity and change the fate of observers
-travelling in this region. In particular, this regards all remote observers at a sufficiently
+travelling in this region. This regards all remote observers at a sufficiently
 advanced amount of their proper time, since any such observer necessarily crosses
 $\Hor_{\rm C}$ at some point (cf. observer $\Obs$ in Fig.~\ref{f:vai:CPdiag_Cauchy},
 noticing that the worldlines of all remote observers
@@ -1780,9 +1798,9 @@ exact solutions for the outgoing radial null geodesics.
 The obtained results are nevertheless representative of those for more
 general functions
 $M(v)$. In particular, the criterion for having a shell-focusing singularity\index{shell-focusing singularity}\index{singularity!shell-focusing --}
-with a generic function $M(v)$ remains $\alpha < 1/8$ but with $\alpha$ defined
-by
-\be
+with a generic function $M(v)$ remains $\alpha < 1/8$, provided that $\alpha$ is defined
+as
+\be \label{e:vai:alpha_lim}
     \alpha := \lim_{v\to 0^+} \frac{2 M(v)}{v} .
 \ee
 See Ref.~\cite{Kurod84,FayosT08} for details. Of course, for $M(v) = m v /v_0$, the
@@ -1794,7 +1812,8 @@ See e.g. Fig.~4 of Ref.~\cite{AshteK04} or Fig.~9.20 of Ref.~\cite{GriffP09}
 for the corresponding Carter-Penrose diagram.
 Actually, the Vaidya collapse depicted in Fig.~\ref{f:vai:diag_S2} lies in this
 category: it has $M(v) = m (v/v_0)^3 \left[ 6 (v/v_0)^2 - 15 v/v_0 + 10 \right]$,
-so that $\alpha = 0$. The singularity is entirely located in the black
+so that Eq.~(\ref{e:vai:alpha_lim}) yields $\alpha = 0$.
+The singularity is entirely located in the black
 hole region and appears to be locally naked (note the outgoing radial null geodesic
 emerging from it near $(t,r) = (0,0)$ in Fig.~\ref{f:vai:diag_S2}).
 
