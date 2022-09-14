@@ -1599,8 +1599,8 @@ with the non-affinity coefficient\index{non-affinity coefficient} given by Eq.~(
 \]
 $r_+$ being a zero of $\Delta$, we have $r_+^2 + a^2 = 2 m r_+$, so that we may
 rewrite the above expression in terms of $r_+$ and $a$ only:
-\be
-    \kappa = \frac{r_+^2 - a^2}{2r_+(r_+^2+a^2)} .
+\be \label{e:ker:kappa_rp_m_a}
+    \kappa = \frac{r_+^2 - a^2}{2r_+(r_+^2+a^2)} = \frac{r_+^2 - a^2}{4m r_+^2} .
 \ee
 Substituting (\ref{e:ker:def_r_pm}) for $r_+$, we get an expression involving
 the two basic Kerr parameters:
@@ -1933,7 +1933,7 @@ with
 \]
 the last expression resulting from the expansion (\ref{e:ker:asympt_metric}).
 We have then $\partial_r \xi_t = -2m/r^2$, so that the above integral yields
-\be
+\be \label{e:ker:M_m}
     \encadre{M = m} .
 \ee
 
@@ -2087,14 +2087,37 @@ The area of the cross-section $\Sp$ is
 where we have used (\ref{e:ker:q_cross_section_H}) to write
 $q = \det (q_{ab}) = (r_+^2 + a^2)^2 \sin^2\th$.
 We have thus
-\be
+\be \label{e:ker:A_rp_a_m}
     \encadre{A = 4\pi (r_+^2 + a^2) = 8 \pi m r_+} .
 \ee
 Via (\ref{e:ker:def_r_pm}),
 one may recast this result to let appear only $m$ and $a$:
-\be
+\be \label{e:ker:A_a_m}
     \encadre{A = 8 \pi m (m + \sqrt{m^2-a^2})} .
 \ee
+
+\subsection{Smarr formula}
+
+By combining the relations $\Omega_H = a/(2 m r_+)$ [Eq.~(\ref{e:ker:def_OmegaH})],
+$\kappa = (r_+^2 - a^2)/(4 m r_+^2)$ [Eq.~(\ref{e:ker:kappa_rp_m_a})]
+and $A = 8\pi m r_+$ [Eq.~(\ref{e:ker:A_rp_a_m})], we get an interesting
+identity:
+\[
+    2 \Omega_H a m + \frac{\kappa A}{4\pi} = m .
+\]
+If we let appear the total angular momentum $J = a m$ [Eq.~(\ref{e:ker:J_am})]
+and the Komar mass $M = m$ [Eq.~(\ref{e:ker:M_m})], we can turn this identity
+into the so-called \defin{Smarr formula}\index{Smarr formula}:
+\be \label{e:ker:Smarr}
+    \encadre{ M =  2 \Omega_H J + \frac{\kappa A}{4\pi} } .
+\ee
+
+\begin{hist}
+Equation~(\ref{e:ker:Smarr}) has been derived in 1973 by Larry Smarr\index{Smarr, L.}
+\cite{Smarr73} in the more general case of the Kerr-Newman black hole\index{Kerr-Newman black hole};
+the right-hand side contains then an additional term
+involving the electric charge of the black hole, which vanishes for a Kerr black hole.
+\end{hist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

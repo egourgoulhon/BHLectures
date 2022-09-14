@@ -1,0 +1,57 @@
+\chapter{Evolution and thermodynamics of black holes}
+\label{s:evo}
+
+\minitoc
+
+\section{Introduction}
+
+\section{Towards the first law of black hole dynamics}
+
+\subsection{The mass variation formula}
+
+Let us consider an initially isolated Kerr black hole, of parameters $(m,a)$,
+that is perturbed by the arrival of some external body or some gravitational
+radiation. After some transitory dynamical regime (e.g. absorption of the
+external body and emission of gravitational waves), the black hole relaxes
+to a new equilibrium configuration. According to the
+no-hair theorem (Sec.~\ref{s:sta:no-hair}),
+the final state has to be a Kerr black hole, of
+parameters $(m+\D m, a+\D a)$ say.
+Let us investigate how the black hole global properties evolve during the
+process. More precisely, we would like to relate the change
+in the Komar mass $M = m$ [Eq.~(\ref{e:ker:M_m})] to the change in
+the area $A = 8 \pi m (m + \sqrt{m^2-a^2})$ [Eq.~(\ref{e:ker:A_a_m})]
+and in the angular momentum $J = a m$ [Eq.~(\ref{e:ker:J_am})].
+
+Rewriting Eq.~(\ref{e:ker:A_a_m}) as $A = 8 \pi (M^2 + \sqrt{M^4 - J^2})$
+and differentiating, we get
+\[
+\frac{1}{8\pi} \, \D A =  2 M\,  \D M + \frac{2M^3}{\sqrt{M^4-J^2}}\, \D M
+    - \frac{J}{\sqrt{M^4-J^2}}\, \D J ,
+\]
+or equivalently
+\[
+    \D M = \frac{1}{8\pi}
+\underbrace{\frac{\sqrt{M^4-J^2}}{2M(M^2+\sqrt{M^4-J^2})}}_{\kappa} \, \D A
++ \underbrace{\frac{J}{2M(M^2+\sqrt{M^4-J^2})}}_{\Omega_H} \, \D J  ,
+\]
+where the identification of the black hole's surface gravity $\kappa$ and
+rotation velocity $\Omega_H$ results from Eqs.~(\ref{e:ker:kappa_m_a})
+and (\ref{e:ker:def_OmegaH}). Hence we get
+\be \label{e:evo:mass_variation}
+    \encadre{ \D M = \frac{\kappa}{8\pi} \, \D A + \Omega_H \, \D J } .
+\ee
+\begin{remark}
+The mass variation formula (\ref{e:evo:mass_variation}) is \emph{not}
+the mere differential of the Smarr formula (\ref{e:ker:Smarr}). Indeed, differentiating
+the latter yields
+\[
+    \D M = \frac{\kappa}{4\pi} \, \D A +  \frac{A}{4\pi} \, \D \kappa
+        + 2 \Omega_H \, \D J  + 2 J \, \D\Omega_H ,
+\]
+with $\D\kappa \neq 0$ and $\D\Omega_H\neq 0$ in the process
+that makes the Kerr black hole evolve from $(m,a)$ to $(m+\D m, a+\D a)$.
+If one were (wrongly) assuming that $\D\kappa = 0$ and $\D\Omega_H = 0$, one would
+be wrong by a factor of 2 in recovering the right-hand side of
+Eq.~(\ref{e:evo:mass_variation}).
+\end{remark}
