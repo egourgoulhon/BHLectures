@@ -546,13 +546,12 @@ the null normal $\wl$ (cf. Sec.~\ref{s:geo:gener_param} in Appendix~\ref{s:geo})
 Since $\wl$ is collinear to $\wl'$, it obviously shares the same field lines,
 which have just been shown to be null geodesics. These field lines are called the
 \defin{null geodesic generators}\index{null!geodesic!generator}\index{generator!of a null hypersurface} of the hypersurface $\Hor$.
-
-Hence, we have shown that
-\begin{greybox}
+Hence, we have shown the following result.
+\begin{prop}
 Any null hypersurface $\Hor$ is ruled by a family of null geodesics, called the
 \emph{generators of $\Hor$}, and each vector field $\wl$ normal to $\Hor$ is
 tangent to these null geodesics.
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 \label{r:def:null_curves}
@@ -700,25 +699,25 @@ the topology of $\Hor$ is then that of a ``tube'' or ``cylinder''
 For the standard 4-dimensional black holes, this is
 $\Hor \simeq \R \times \mathbb{S}^{2}$.
 
-A first important property is
-\begin{greybox}
-Any cross-section $\Sp$ is spacelike,
+A first important property of cross-sections is the following one.
+\begin{prop}
+Any cross-section $\Sp$ of a null hypersurface is spacelike,
 i.e. all vectors tangent to $\Sp$ are spacelike.
-\end{greybox}
+\end{prop}
 \begin{proof}
 The spacelike character of $\Sp$ follows from
-\begin{greybox}
-\textbf{Lemma (vectors tangent to a null hypersurface)}\\[1ex]
+\begin{lemma}[vectors tangent to a null hypersurface]
+\label{p:def:tangent_to_null_hyp}
 Every nonzero vector tangent to a null hypersurface is either spacelike or null.
 Moreover, in the latter case, it is tangent to a null geodesic generator (i.e. it is normal
 to the hypersurface).
-\end{greybox}
+\end{lemma}
 \begin{proof}
 Tangent vectors to a null hypersurface $\Hor$ are by definition
 vectors $\w{v}$ such that $\w{g}(\wl,\w{v})=0$, where $\wl$ is the normal
-to $\Hor$. Since $\wl$ is null, it follows then from Corollary~1
-of Sec.~\ref{s:fra:time_orientation} that $\w{v}$ cannot be timelike.
-Besides, if $\w{v}$ is null, Corollary~2 of Sec.~\ref{s:fra:time_orientation}
+to $\Hor$. Since $\wl$ is null, it follows then from Proposition~\ref{p:fra:corol1}
+in Sec.~\ref{s:fra:time_orientation} that $\w{v}$ cannot be timelike.
+Besides, if $\w{v}$ is null, Proposition~\ref{p:fra:corol2} in Sec.~\ref{s:fra:time_orientation}
 implies that it must be collinear to $\wl$.
 \end{proof}
 Let $p \in \Sp$ and $\w{v}\in T_p\M$ be a nonzero vector tangent to $\Sp$.
@@ -1082,7 +1081,8 @@ from $\Sp$ by \defin{Lie dragging along $\wl$ by the parameter $\varepsilon$}\in
 Note that $\Sp_0 = \Sp$.
 Since $p_\varepsilon\in\Hor$ for every $p\in\Sp$, we have $\Sp_\varepsilon\subset \Hor$.
 Because the null direction $\wl$ is transverse to $\Sp_\varepsilon$ by construction, it
-follows that $\Sp_\varepsilon$ is spacelike (cf. the lemma in Sec.~\ref{s:def:spacelike_sections}).
+follows that $\Sp_\varepsilon$ is spacelike (cf. Lemma~\ref{p:def:tangent_to_null_hyp}
+in Sec.~\ref{s:def:spacelike_sections}).
 
 At each point $p\in\Sp$, the \defin{expansion of $\Sp$ along $\wl$} is defined from the
 rate of change $\theta_{(\wl)}$ of the area\footnote{We are using the words
@@ -1502,13 +1502,13 @@ on the cross-section in which they are taken, provided their second end
 lies on the same null geodesic generator of $\Hor$. It follows that all infinitesimal surfaces
 $\delta S$ that (i) contain $p$ and (ii) are enclosed in a tube made of null geodesic generators have the same
 area $\delta A$. Hence the expansion $\theta_{(\wl)}$ at $p$
-does not depend on the choice of $\delta S$, i.e. of the cross-section
-$\Sp$ through $p$.
-We conclude that
-\begin{greybox}
-The expansion $\theta_{(\wl)}$ depends only on the choice of the null
-normal $\wl$ on the null hypersurface $\Hor$.
-\end{greybox}
+does not depend on the choice of $\delta S$.
+We conclude:
+\begin{prop}[independence of the expansion from the cross-section]
+The expansion $\theta_{(\wl)}$ at a point $p$ of a null hypersurface $\Hor$
+does not depend on the choice of the cross-section through $p$.
+It depends  only on the null normal $\wl$ of $\Hor$.
+\end{prop}
 For this reason, from now on, we shall call $\theta_{(\wl)}$
 the \defin{expansion of the null hypersurface $\Hor$ along $\wl$}\index{expansion!of a null hypersurface}.
 

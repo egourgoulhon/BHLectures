@@ -164,6 +164,26 @@
 
 \newmdenv[backgroundcolor=gray!10!white,roundcorner=5pt,hidealllines=true]{greybox}
 
+
+%\theoremstyle{definition} % upright text in theorems
+%\theoremstyle{break}
+%\newmdtheoremenv[backgroundcolor=gray!10!white,roundcorner=5pt,hidealllines=true,frametitlerule=true]{prop}{Proposition}[chapter]
+%\newmdtheoremenv[backgroundcolor=gray!10!white,roundcorner=5pt,frametitlerule=true]{prop}{Proposition}[chapter]
+
+
+\mdfdefinestyle{propstyle}{%
+linecolor=black,linewidth=2pt,%
+hidealllines=true,
+frametitlerule=true,%
+frametitlebackgroundcolor=gray!20,
+backgroundcolor=gray!10!white,
+roundcorner=5pt,
+innertopmargin=\topskip,
+}
+
+\mdtheorem[style=propstyle]{prop}{Proposition}[chapter]
+\mdtheorem[style=propstyle]{lemma}[prop]{Lemma}
+
 %\newenvironment{remark}[1][]%
 %{\begin{description} \item[\emph{Remark #1:}]\it}%
 %{\end{description}}

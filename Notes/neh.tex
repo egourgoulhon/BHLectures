@@ -86,8 +86,14 @@ where $x^a = (x^2, \ldots, x^{n-1})$ is a coordinate system on $\Sp$ and $q$ is
 the determinant with respect to these coordinates of the Riemannian metric $\w{q}$
 induced by $\w{g}$ on $\Sp$.
 
-A direct consequence of the definition of a non-expanding horizon is that
-$A$ does not depend on the choice of the cross-section $\Sp$.
+\begin{prop}
+The area $A$ does not depend on the choice of the cross-section $\Sp$
+of $\Hor$.
+For this reason, $A$ is
+called the \defin{area of the non-expanding horizon}\index{area!of a non-expanding horizon}
+$\Hor$, without any mention of $\Sp$.
+\end{prop}
+
 \begin{proof}
 Let $\Sp'$ be a second cross-section of $\Hor$ and let $\wl$ be a field of null normals
 of $\Hor$. Along the null geodesic generators of $\Hor$, we can always choose a parameter $\lambda$ associated with $\wl$ (i.e. such that $\wl = \D/\D\lambda$ along a given null geodesic generator)
@@ -116,12 +122,6 @@ If $\Hor$ is a non-expanding horizon, then $\theta_{(\wl')}=0$ and it follows
 that $A(\lambda')$ is a constant function. Hence the area of $\Sp'$ is equal
 to that of $\Sp$.
 \end{proof}
-\begin{greybox}
-Given that the quantity $A$ defined by (\ref{e:neh:total_area})
-takes a unique value whatever the cross-section $\Sp$,
-we call it the \defin{area of the non-expanding horizon}\index{area!of a non-expanding horizon}
-$\Hor$.
-\end{greybox}
 
 \begin{example}[Schwarzschild horizon] \label{x:neh:Schwarz_hor_area}
 The area of the Schwarzschild horizon is readily computed from
@@ -298,10 +298,15 @@ In view of (\ref{e:def:Theta}), this is equivalent to
 \be \label{e:neh:Lie_el_q_zero}
      \vw{q}^* \Lie{\el} \w{q} = 0 .
 \ee
-We conclude that, provided that the null energy condition holds,
+We conclude:
+\begin{prop}[invariance of the cross-section 2-metric along the null generators]
+Provided that the null energy condition (\ref{e:neh:null_energy_cond})
+holds,
 the whole metric (and not only the area element
 $\wepsS$, as a mere $\theta_{(\wl)}=0$ would suggest) of any cross-section
-of a non-expanding horizon is invariant along the null geodesic generators.
+of a non-expanding horizon is invariant along the null geodesic generators
+[Eq.~(\ref{e:neh:Lie_el_q_zero})].
+\end{prop}
 
 \begin{example}[Schwarzschild horizon]
 We had already noticed that, for the Schwarzschild horizon, $\w{\Theta}=0$
@@ -351,6 +356,7 @@ that $(\Hor, {}^\Hor\!\wnab)$ is a \defin{totally geodesic submanifold}\index{to
 i.e. any geodesic of $(\Hor, {}^\Hor\!\wnab)$ is also a geodesic of $(\M,\w{g})$
 (cf. the historical note on page~\pageref{h:neh:NEH}).
 
+\begin{prop}
 The covariant derivative of the null normal $\wl$ with respect to the affine
 connection ${}^\Hor\!\wnab$ takes a rather simple form:
 \be \label{e:neh:nabH_ell}
@@ -363,6 +369,7 @@ to vectors tangent to $\Hor$ [cf. Eq.~(\ref{e:def:omega_restrict_H})].
 In other words, ${}^\Hor\!\w{\omega}$ is the pullback $\iota^*\w{\omega}$ of
 $\w{\omega}$ by the inclusion map $\iota: \Hor \to \M$ (cf. Sec.~\ref{s:bas:lie_der_tensor}
 in Appendix~\ref{s:bas}).
+\end{prop}
 \begin{proof}
 By definition of the covariant derivative with respect to an
 affine connection [cf. Eq.~(\ref{e:bas:def_cov_deriv}) in Appendix~\ref{s:bas}],
@@ -463,10 +470,10 @@ an orbit, it is given by
 where $\D\w{x}$ is the infinitesimal vector connecting the point $p$ to the point
 $\Phi_{\D t}(p)$ (cf. Sec.~\ref{s:bas:vectors} and Fig.~\ref{f:neh:orbit_group}).
 We have then
-\begin{greybox}
+\begin{prop}
 The group action limited to infinitesimal transformations of parameter
 $\D t$ around the identity ($\D t =0$) amounts to translations by the infinitesimal vector $\D t\, \w{\xi}$.
-\end{greybox}
+\end{prop}
 
 \begin{figure}
 \centerline{\includegraphics[height=0.25\textheight]{def_orbit_group.pdf}}
@@ -529,7 +536,7 @@ the isometry condition
 (\ref{e:neh:isometry_pullback}) leads then to
 $\Lie{\xi}\w{g} = 0$. The reverse is true by integration. Hence
 we conclude:
-\begin{greybox}
+\begin{prop}
 A 1-dimensional Lie group $G$
 is a symmetry group of the spacetime $(\M,\w{g})$ iff the Lie derivative
 of the metric tensor along a generator $\w{\xi}$ of $G$
@@ -539,7 +546,7 @@ vanishes identically:
 \ee
 The vector field $\w{\xi}$ is then called a \defin{Killing vector}\index{Killing!vector field}
 of $(\M,\w{g})$.
-\end{greybox}
+\end{prop}
 Expressing the Lie derivative via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of Appendix~\ref{s:bas},
 we see immediately that Eq.~(\ref{e:neh:Lie_xi_g}) is equivalent to the so-called
 \defin{Killing equation}\index{Killing!equation}:
@@ -758,10 +765,10 @@ In particular we have
 \[
     \theta_{(\wl)} = 0 .
 \]
-We conclude that
-\begin{greybox}
+We conclude:
+\begin{prop}
 Any Killing horizon with closed-manifold cross-sections is a non-expanding horizon.
-\end{greybox}
+\end{prop}
 Moreover, (\ref{e:neh:Theta_zero_KillingH}) shows that $\w{\Theta}$ vanishes
 for all Killing horizons, while to get the same result on a generic non-expanding
 horizon, one has to assume that the null energy condition holds on $\Hor$.
@@ -997,7 +1004,7 @@ i.e.
 To go further, we shall assume that matter and the non-gravitational fields
 obey the
 \defin{null dominant energy condition}\index{null!dominant energy condition}\index{energy!condition!null dominant--}:
-\be
+\be \label{e:neh:null_dominant_cond}
    \begin{array}{ll}
     \w{W} := - \vw{T}(\wl, .) \ & \mbox{is future-directed null or timelike} \\
     & \mbox{for any future-directed null vector $\wl$} .
@@ -1051,23 +1058,25 @@ and we are left with
 \]
 This means that $\kappa$ is constant over $\Sp$. Given that $\kappa$ is
 constant along each null geodesic generator of $\Hor$, this completes the demonstration
-that $\kappa$ is constant over $\Hor$. More precisely, we have shown that
-\begin{greybox}
+that $\kappa$ is constant over $\Hor$. More precisely, we have shown
+the following property.
+\begin{prop}[zeroth law of black hole mechanics]
 If matter and non-gravitational fields obey the null dominant energy condition
+[Eq.~(\ref{e:neh:null_dominant_cond})]
 on the Killing horizon $\Hor$, then the non-affinity coefficient $\kappa$
 of the null normal coinciding with the Killing vector field on
 $\Hor$ is constant over $\Hor$:
 \be \label{e:neh:zeroth_law}
     \encadre{\kappa = \mathrm{const}.}
 \ee
-\end{greybox}
+\end{prop}
 In the context of Killing horizons, the non-affinity coefficient $\kappa$ is
 called the horizon's \defin{surface gravity}\index{surface!gravity},
 for a reason to be detailed in Sec.~\ref{s:neh:surface_gravity},
 and the result
 (\ref{e:neh:zeroth_law}) is known as the
 \defin{zeroth law of black hole mechanics}\index{zeroth law}. More precisely,
-the latter states that the surface gravity of a black hole in equilibrium is
+the zeroth law states that the surface gravity of a black hole in equilibrium is
 constant and we shall see in Chap.~\ref{s:sta} that the event horizon of a black hole in
 equilibrium is a Killing horizon.
 
@@ -1389,10 +1398,10 @@ along any direction transverse to $\Hor$ does not vanish. Since
 $\w{\xi}\cdot\w{\xi}=0$ on $\Hor$, we conclude that, in the vicinity of $\Hor$,
 $\w{\xi}\cdot\w{\xi}<0$ on one side of $\Hor$ and $\w{\xi}\cdot\w{\xi}>0$ on the
 other side:
-\begin{greybox}
+\begin{prop}
 In the vicinity of a non-degenerate Killing horizon $\Hor$, the Killing vector field $\w{\xi}$ is timelike on one side of $\Hor$, null on $\Hor$
 and spacelike on the other side.
-\end{greybox}
+\end{prop}
 
 Let us focus on the region in the vicinity of $\Hor$ where $\w{\xi}$ is timelike.
 There we define the ``norm'' of $\w{\xi}$ by
@@ -1603,8 +1612,8 @@ of unit mass close to $\Hor$ by means of an infinitely long massless string
 Here is an inheritance diagram summarizing the main results of this chapter.
 The vertical arrow means ``is a'', i.e. the element at the bottom of the arrow
 is a special case of the element at the top of the arrow.
-``NEC'' stands for ``Null Energy Condition''
-and ``NDEC'' for ``Null Dominant Energy condition''.
+``NEC'' stands for ``Null Energy Condition'' [Eq.~(\ref{e:neh:null_energy_cond})]
+and ``NDEC'' for ``Null Dominant Energy condition'' [Eq.~(\ref{e:neh:null_dominant_cond})].
 
 \begin{center}
 
