@@ -227,7 +227,7 @@ a null geodesic (cf. Remark~\ref{r:def:null_curves} on page~\pageref{r:def:null_
 and Appendix~\ref{s:geo}),
 so that one cannot deduce from the above results that conformal transformations
 preserve null geodesics. However, this turns out to be true:
-\begin{prop}
+\begin{prop}[null geodesics preserved by conformal transformations]
 A smooth curve $\Li$ in $\M$ is a null geodesic for $\w{\tilde{g}}$ iff
 $\Li$ is a null geodesic for $\w{g}$.
 \end{prop}
@@ -1035,7 +1035,7 @@ Brandon Carter\index{Carter, B.}
 Having defined a black hole in full generality, let us derive the
 main properties its boundary --- the future event horizon $\Hor$.
 
-\begin{prop}
+\begin{prop}[the event horizon as an achronal set]
 \label{p:glo:prop1}
 $\Hor$ is an \defin{achronal set}\index{achronal set}, i.e. no pair of points of $\Hor$ can be connected
 by a timelike curve of $\M$.
@@ -1044,7 +1044,7 @@ by a timelike curve of $\M$.
 Note that in the definition of an achronal set, it is not demanded that the timelike
 curve lies entirely in the set (for instance, the set can be discrete, so that no curve
 whatsoever lies in it). Accordingly,
-an equivalent statement of Proposition~\ref{p:glo:prop1} is: no timelike curve of $\M$
+an equivalent statement of Property~\ref{p:glo:prop1} is: no timelike curve of $\M$
 encounters $\Hor$ at more than one point.
 
 \begin{figure}
@@ -1054,7 +1054,7 @@ Proving that $\Hor$ is achronal.}
 \end{figure}
 
 \begin{proof}
-Let us assume the negation of Proposition~\ref{p:glo:prop1}, i.e. that there exists two points
+Let us assume the negation of Property~\ref{p:glo:prop1}, i.e. that there exists two points
 in $\Hor$ which are connected by a timelike curve $\Li$. Let us call $p$ and
 $q$ these two points, with $q$ in the future of $p$ (cf. Fig.~\ref{f:glo:achronal}).
 We shall then use the following lemma.
@@ -1070,8 +1070,7 @@ any point $p'\in U$ can be connected to any point $q'\in V$ by a timelike curve.
 \begin{proof}[Proof of Lemma~\ref{p:glo:lem1}]
 This is more or less evident on a spacetime diagram (cf. Fig.~\ref{f:glo:timelike_stab})
 and a formal proof
-can be found as Lemma~3
-in Chap.~14 of O'Neill's textbook \cite{ONeil83}.
+can be found as Lemma~3 in Chap.~14 of O'Neill's textbook \cite{ONeil83}.
 \end{proof}
 Applying Lemma~\ref{p:glo:lem1},
 let us choose $p'\in U\cap\mathscr{B}$ and $q'\in V\cap J^-(\scri^+)$. Such a choice is
@@ -1084,12 +1083,13 @@ which contradicts $p'\in\mathscr{B}$.
 \begin{figure}
 \centerline{\includegraphics[height=0.3\textheight]{glo_timelike_stab.pdf}}
 \caption[]{\label{f:glo:timelike_stab} \footnotesize
-Lemma~1: moving slightly the ends $p$ and $q$ of a timelike curve $\Li$
+Lemma~\ref{p:glo:lem1}: moving slightly the ends $p$ and $q$ of a timelike curve $\Li$
 yields another timelike curve $\Li'$.}
 \end{figure}
 
 
-\begin{prop}
+\begin{prop}[the event horizon as manifold of codimension 1]
+\label{p:glo:prop2}
 $\Hor$ is a topological manifold of dimension $n-1$, $n$ being the spacetime
 dimension.
 \end{prop}
@@ -1109,7 +1109,7 @@ where $a_1$, ..., $a_{n-1}$ are $n-1$ constants.
 This curve is timelike, since it has $\wpar_0$ as a tangent vector
 (cf. Fig.~\ref{f:glo:hor_manifold}).
 It therefore intersects $\Hor$ at a single point $q$, for $\Hor$ is achronal
-(Proposition~\ref{p:glo:prop1}).
+(Property~\ref{p:glo:prop1}).
 Let us then give the coordinates $(y^i) = (a_1,\ldots,a_{n-1})$ to $q$.
 By varying $(a_1,\ldots,a_{n-1})$, we get a homeomorphism from $U\cap\Hor$
 to an open subset of $\mathbb{R}^{n-1}$.
@@ -1131,17 +1131,17 @@ Hence, one says that $\Hor$ is a \defin{Lipschitz submanifold}\index{Lipschitz s
 $C^0$ and $C^1$) is generally used to denote Lipschitz submanifolds.
 \end{remark}
 
-\begin{prop}[(Penrose\index{Penrose, R.} 1968 \cite{Penro68})]
+\begin{prop}[the event horizon ruled by never leaving null geodesics \textnormal{(Penrose\index{Penrose, R.} 1968 \cite{Penro68})}]
 \label{p:glo:prop3}
 $\Hor$ is ruled by a family of null geodesics that (i) either lie entirely
 in $\Hor$ or never leave $\Hor$ when followed into the future from the
-point where they arrived in $\Hor$, and
+point where they enter in $\Hor$, and
 (ii) have no endpoint in the future.
 Moreover, there is exactly one null geodesic through each point of $\Hor$,
-except at special points where null geodesics enter in contact with $\Hor$, which are
+except at special points where null geodesics enter in $\Hor$, which are
 called \defin{crossovers}\index{crossover point}. A special case
 of crossover, called \defin{caustic}\index{caustic}, is a point
-where neighbouring null geodesics focus and converge while entering on $\Hor$.
+where neighbouring null geodesics focus and converge while entering in $\Hor$.
 \end{prop}
 In particular, once a null geodesic has
 merged with $\Hor$ (at a point where it may intersect other null geodesics),
@@ -1154,7 +1154,7 @@ The set of all crossovers is called the \defin{crease set}\index{crease set}
 \begin{figure}
 \centerline{\includegraphics[width=0.3\textwidth]{glo_timelike_arc.pdf}}
 \caption[]{\label{f:glo:timelike_arc} \footnotesize
-Lemma 2: A \emph{causal} curve $\Li$ containing a timelike segment (between
+Lemma~\ref{p:glo:lem2}: A \emph{causal} curve $\Li$ containing a timelike segment (between
 $a$ and $b$ on the figure) can be deformed into a \emph{timelike} curve $\Li'$
 with the ends kept fixed (dashed curve).}
 \end{figure}
@@ -1237,8 +1237,8 @@ Proving by contradiction that $q$ lies in $\Hor$.}
 
 
 The causal curve $\Li$ connecting $p$ to $q$ cannot be timelike since
-$p$ and $q$ are both in $\Hor$, which is achronal (Proposition~\ref{p:glo:prop1}).
-If $\Li$ would contain a timelike segment, then by Lemma~2, it could
+$p$ and $q$ are both in $\Hor$, which is achronal (Property~\ref{p:glo:prop1}).
+If $\Li$ would contain a timelike segment, then by Lemma~\ref{p:glo:lem2}, it could
 be deformed into a timelike curve between $p$ and $q$, which again would
 contradict the achronal character of $\Hor$. Hence $\Li$ is necessarily a null
 curve. Moreover, it is a geodesic. Indeed, let us assume it is not.
@@ -1257,7 +1257,7 @@ stationary point of $E_{(a,b)}(P)$, which
 implies that there exists a nearby curve from $a$ to $b$ with $E_{(a,b)}(P)<0$,
 i.e. there exists a curve from $a$ to $b$ with a timelike part.
 It follows that $p$ and $q$ can be connected
-by a causal curve with a timelike segment. By Lemma~2, this curve can be
+by a causal curve with a timelike segment. By Lemma~\ref{p:glo:lem2}, this curve can be
 deformed into a timelike curve from $p$ to $q$, which contradicts
 the achronal character of $\Hor$. Hence $\Li$ is a null geodesic.
 
@@ -1268,7 +1268,7 @@ Let us start by showing that $\Li\subset \overline{J^-(\scri^+)}$.
 Let $a$ be a generic point of $\Li$ between $p$ and $q$. Since $\Li$ is
 null, there exists a point
 $a'$ arbitrary close to $a$ such that $a'$ is connected to $q$ by a
-future-directed timelike curve (cf. Fig.~\ref{f:glo:L_in_H}). Thanks to Lemma~1
+future-directed timelike curve (cf. Fig.~\ref{f:glo:L_in_H}). Thanks to Lemma~\ref{p:glo:lem1}
 and the property $q\in \overline{J^-(\scri^+)}$, we may
 find a point $q'\in J^-(\scri^+)$ close to $q$ such that $a'$ is connected
 to $q'$ by a future-directed timelike curve.
@@ -1331,7 +1331,7 @@ in contradiction with $\Li'\subset\Hor$.
 Another direct consequence of Lemma~\ref{p:glo:lem3} is that no two distinct null generators
 may intersect at a point $p\in\Hor$, except if their segments in the past of
 $p$ lie outside $\Hor$.
-This completes the proof of Proposition~\ref{p:glo:prop3}.
+This completes the proof of Property~\ref{p:glo:prop3}.
 \end{proof}
 
 
@@ -1347,7 +1347,7 @@ the merger region, with the crease set
 
 
 
-Some features of Proposition~\ref{p:glo:prop3} are illustrated in Fig.~\ref{f:glo:BH_headon_gener},
+Some features of Property~\ref{p:glo:prop3} are illustrated in Fig.~\ref{f:glo:BH_headon_gener},
 which displays the null geodesic generators in a numerical simulation
 of the head-on collision of two black holes by Matzner et al. (1995) \cite{Matzn_al95}.
 Note that new null geodesics enter the event horizon at the ``crotch'' of the
@@ -1416,33 +1416,33 @@ the crease set forms a 2-dimensional subset of the event horizon
 $\Hor$ and is bounded by the set of caustic points, which forms a 1-dimensional
 subset of $\Hor$ \cite{Siino98a,Siino98b,HusaW99,CohenKS12}.
 
-\subsubsection{Property 4:}
-\begin{greybox}
+
+\begin{prop}[the event horizon as a null hypersurface]
+\label{p:glo:prop4}
 Wherever it is smooth, $\Hor$ is a null hypersurface.
-\end{greybox}
+\end{prop}
+
 \begin{proof}
 Let us assume that $\Hor$ is smooth in some open subset $U$.
-By Property~2, $\Hor$ is then a smooth hypersurface in $U$.
-According to Property~3, there is a null geodesic lying in $\Hor$ through
+By Property~\ref{p:glo:prop2}, $\Hor$ is then a smooth hypersurface in $U$.
+According to Property~\ref{p:glo:prop3}, there is a null geodesic lying in $\Hor$ through
 any point of $\Hor\cap U$.
 This implies null tangent vectors at any point of $\Hor\cap U$, so that, in $U$,
-$\Hor$ must be either a null hypersurface or a timelike one. But $\Hor$ is achronal by Property~1 and therefore cannot be timelike. Hence, $\Hor$ is a null hypersurface in $U$.
+$\Hor$ must be either a null hypersurface or a timelike one. But $\Hor$ is achronal by Property~\ref{p:glo:prop1} and therefore cannot be timelike. Hence, $\Hor$ is a null hypersurface in $U$.
 \end{proof}
 When $\Hor$ is smooth, its generators,
-as defined in Property~3, are then nothing but the
+as defined by Property~\ref{p:glo:prop3}, are then nothing but the
 null-hypersurface generators as defined in Sec.~\ref{s:def:geod_gener}.
 
 \begin{remark}
-Properties 1 to 4 are not specific to black hole horizons: they are actually
+Properties~\ref{p:glo:prop1} to \ref{p:glo:prop4} are not specific to black hole horizons: they are actually
 valid for any boundary $\partial J^-(S)$ of the causal past of a given set $S\subset\M$.
 They are also valid for the boundary $\partial J^+(S)$ of the causal future of
-$S$, modulo the relevant changes future $\leftrightarrow$ past in Property~3.
+$S$, modulo the relevant changes future $\leftrightarrow$ past in Property~\ref{p:glo:prop3}.
 \end{remark}
 
 It can be shown that event horizons are smooth almost everywhere: the only
 location where they are not differentiable is the crease set, i.e. the set of points
 where null geodesics cross each other while arriving at $\Hor$ and becoming null
 generators.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
