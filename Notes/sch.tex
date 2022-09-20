@@ -446,12 +446,12 @@ Given the Christoffel symbols (\ref{e:sch:Christoffel_SD}), it is then a
 simple exercise to show that Eq.~(\ref{e:sch:geod_eqn}) is satisfied.
 The same property holds for the family (\ref{e:sch:ingoing_null_geod}). Hence
 we conclude
-\begin{greybox}
+\begin{prop}[radial null geodesics]
 The radial null geodesics in the Schwarzschild-Droste domain
 form two congruences, $(\Li^{\rm out}_{(u,\th,\ph)})$ and $(\Li^{\rm in}_{(v,\th,\ph)})$,
 obeying Eqs.~(\ref{e:sch:outgoing_null_geod})-(\ref{e:sch:ingoing_null_geod}).
 Moreover, the areal radius $r$ is an affine parameter along them.
-\end{greybox}
+\end{prop}
 
 The two congruences of radial null geodesics are depicted in
 Fig.~\ref{f:sch:rad_null_geod}.
@@ -713,9 +713,10 @@ of Chap.~\ref{s:def} (p.~\pageref{x:def:Schw_hor}), up to the change of notation
 We have thus the fundamental result,
 the proof of which is given in Example~\ref{x:neh:Schwarz_KH} of Chap.~\ref{s:neh}
 (p.~\pageref{x:neh:Schwarz_KH}):
-\begin{greybox}
-$\Hor$ is a Killing horizon, the null normal of which is $\w{\xi}$.
-\end{greybox}
+\begin{prop}
+The hypersurface $\Hor$ defined by $r=2m$
+is a Killing horizon, the null normal of which is $\w{\xi}$.
+\end{prop}
 In particular, $\Hor$ is a null hypersurface, whose null geodesic generators
 admit $\w{\xi} = \wpar_{\ti}$ as tangent vector. It is a non-expanding horizon,
 whose area, as defined in Sec.~\ref{s:neh:invar_area}, is (cf. Example~\ref{x:neh:Schwarz_hor_area} of Chap.~\ref{s:neh}, p.~\pageref{x:neh:Schwarz_hor_area})
@@ -924,7 +925,7 @@ tangent to them when parametrized by $\ti$ is
 $\hat{\wl} := \wpar_{\ti} +  (r - 2m)/(r + 2m) \wpar_{\tilde r}$.
 For future convenience, we shall actually consider the vector field
 $\wl := (1/2 + m/r) \, \hat{\wl}$; we have then by construction:
-\begin{greybox}
+\begin{prop}[outgoing radial null vector field]
 The vector field
 \be \label{e:sch:null_vector_ell}
     \encadre{\wl = \frac{1}{2}
@@ -935,7 +936,7 @@ is a null regular vector field in all $\M_{\rm IEF}$, which is tangent to the ou
 null geodesics $\Li^{\rm out,I}_{(u,\th,\ph)}$ in $\M_{\rm I}$,
 to $\Li^{\rm out,II}_{(u,\th,\ph)}$ in $\M_{\rm II}$
 and to $\Li^{{\rm out},\Hor}_{(\th,\ph)}$ on $\Hor$.
-\end{greybox}
+\end{prop}
 Note that, on $\Hor$, $\wl \equalH \wpar_{\ti} = \w{\xi}$.
 
 \subsection{Time orientation of the spacetime manifold} \label{s:sch:time_orientation}
@@ -956,11 +957,11 @@ $\M$. It may therefore be used to set the time orientation\index{time-orientable
 (cf. Sec.~\ref{s:fra:time_orientation}). Since for $r\rightarrow+\infty$, $\w{k}$
 clearly points towards increasing $\ti$, we declare that $\w{k}$ defines
 the \emph{future} direction:
-\begin{greybox}
+\begin{prop}[time orientation of Schwarzschild spacetime]
 The time orientation of the Schwarzschild spacetime $(\M, \w{g})$ is such
 that the null vector $\w{k}$ defined by Eq.~(\ref{e:sch:null_vector_k})
 is everywhere future-directed.
-\end{greybox}
+\end{prop}
 
 The above choice induces a time orientation of the subdomains
 $\M_{\rm I}$ and $\M_{\rm II}$ of $\M$.
@@ -981,19 +982,20 @@ then that
     \w{k}\cdot\wpar_r = \frac{r}{2m} \left( 1 - \frac{r}{2m} \right) ^{-1}
     > 0 \quad\mbox{in} \ \M_{\rm II} .
 \]
-In view of Eq.~(\ref{e:fra:orient_null3}) in Lemma~2 of Sec.~\ref{s:fra:time_orientation}, we conclude:
-\begin{greybox}
+In view of Eq.~(\ref{e:fra:orient_null3}) in Lemma~\ref{p:fra:lem2} of Sec.~\ref{s:fra:time_orientation}, we conclude:
+\begin{prop}[$\wpar_r$ past-directed timelike in the black hole region]
 In region $\M_{\rm II}$, the vector $\wpar_r$ of Schwarzschild-Droste coordinates
 is a past-directed timelike vector.
-\end{greybox}
+\end{prop}
 This explains why the future null cones are along $-\wpar_r$
 in Fig.~\ref{f:sch:rad_null_geod} for $r<2m$.
 
 A corollary is:
-\begin{greybox}
+\begin{prop}[decreasing of $r$ in the black hole region]
+\label{p:sch:r_decreasing}
 In region $\M_{\rm II}$, $r$ must decrease towards the future
 along any null or timelike worldline.
-\end{greybox}
+\end{prop}
 \begin{proof}
 Let $\Li$ be a causal curve in region $\M_{\rm II}$ and $\lambda$ a parameter
 along $\Li$ increasing towards the future.
@@ -1304,13 +1306,13 @@ is the interior of the causal past of $\scri^+$ within $\M$:
 \be
     \M_{\rm I} = \mathrm{int}\left( J^-(\scri^+)\cap\M \right).
 \ee
-In view of the formal definition (\ref{e:glo:def_BH}), we conclude that
-\begin{greybox}
+In view of the formal definition (\ref{e:glo:def_BH}), we conclude:
+\begin{prop}[black hole region in Schwarzschild spacetime]
 The Schwarzschild spacetime $(\M=\M_{\rm IEF}, \w{g})$
 has a black hole region $\mathscr{B}$, the interior
 of which is $\M_{\rm II}$; the event horizon is nothing but the
 Schwarzschild horizon $\Hor$ discussed in Sec.~\ref{s:sch:Schwarz_hor}.
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 As stated at the beginning of this section, the null character of the boundary
