@@ -168,13 +168,13 @@ are regular in $\M_{\rm BL}$, except for the standard singularities of
 the spherical coordinates $(\th,\ph)$.
 
 By means of a computer algebra system (cf. the notebook~\ref{s:sam:Kerr_solution}),
-it is easy to check that
-\begin{greybox}
+it is easy to check that we are dealing with a solution of the Einstein equation:
+\begin{prop}[Kerr metric as a solution of the Einstein equation]
 $\left(\M_{\rm BL},\w{g}\right)$ with $\w{g}$ given
 by (\ref{e:ker:metric_BL}), is a solution of Einstein equation\index{Einstein!equation}
 (\ref{e:fra:Einstein_eq})
 in vacuum ($\w{T}=0$) and with a vanishing cosmological constant ($\Lambda=0$).
-\end{greybox}
+\end{prop}
 
 \begin{hist}
 The Kerr solution has been found by the New Zealand mathematician Roy P. Kerr\index{Kerr, R.P.} (then at the University of Texas at Austin) in the spring of 1963
@@ -575,13 +575,13 @@ which turns out to have a simple form (cf. the notebook~\ref{s:sam:Kerr_Kerr_coo
 Except at $\th=0$ and $\th=\pi$ (the usual singularity of spherical coordinates),
 we have $\det (g_{\hat{\alpha}\hat{\beta}}) \neq 0$ everywhere on $\M$, since
 $\rho$ vanishes only on $\ring$, which is excluded from $\M$.
-Hence we conclude that
-\begin{greybox}
+Hence we conclude
+\begin{prop}[Kerr spacetime]
 The symmetric bilinear form $\w{g}$ is non-degenerate on the manifold $\M$
 defined by Eq.~(\ref{e:ker:def_M_Kerr_spacetime}) and thus
 $(\M,\w{g})$ is a well-behaved spacetime --- our \defin{Kerr spacetime}\index{Kerr!spacetime}
 from now on. We note that, contrary to $\M_{\rm BL}$, $\M$ is a connected manifold.
-\end{greybox}
+\end{prop}
 
 We deduce from (\ref{e:ker:Kerr_coord}) that
 \[
@@ -624,20 +624,20 @@ the metric (\ref{e:ker:metric_Kerr_coord}) coincides with that given
 by an unnumbered (!) equation in Ref.~\cite{Kerr63}.
 \end{hist}
 
-\subsection{Time orientation of Kerr spacetime} \label{s:ker:time_orientation}
+\subsection{time orientation of Kerr spacetime} \label{s:ker:time_orientation}
 
 We read on (\ref{e:ker:metric_Kerr_coord}) that
 $\w{g}(\wpar_{\hat{r}},\wpar_{\hat{r}}) = g_{rr} = 0$, which
 implies that $\wpar_{\hat{r}}$ is a global null vector field on $\M$.
 We may then use it to set the time orientation of $(\M,\w{g})$ (cf. Sec.~\ref{s:fra:time_orientation}):
-\begin{greybox}
+\begin{prop}[Time orientation of Kerr spacetime]
 The Kerr spacetime $(\M,\w{g})$ is time-orientable, and we choose its time orientation
 such that
 \be \label{e:ker:def_k_hat_r}
     \w{k} := - \wpar_{\hat{r}}
 \ee
 is a future-directed null vector field in all $\M$.
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 The minus sign
@@ -669,11 +669,11 @@ is read from the metric components (\ref{e:ker:metric_BL}):
 $\wpar_r \cdot \wpar_r = \w{g}(\wpar_r,\wpar_r) = g_{rr} = \rho^2 / \Delta$. Since $\Delta$ is
 positive in $\M_{\rm I}$ and $\M_{\rm III}$ and negative in $\M_{\rm II}$,
 we conclude that $\wpar_r$ is spacelike in $\M_{\rm I}\cup \M_{\rm III}$
-and timelike in $\M_{\rm II}$. Moreover, it follows from the above choice of time orientation that
-\begin{greybox}
+and timelike in $\M_{\rm II}$. Moreover, the above choice of time orientation leads to
+\begin{prop}
 In region $\M_{\rm II}$, the vector $\wpar_r$ of Boyer-Lindquist coordinates
 is a past-directed timelike vector.
-\end{greybox}
+\end{prop}
 \begin{proof}
 Applying Lemma~2 of Sec.~\ref{s:fra:time_orientation} with $\w{u}=\w{k}$ and
 $\w{v} = \wpar_r$, we get that $\wpar_r$ is past-directed iff $\w{g}(\w{k},\wpar_r) > 0$.
@@ -685,10 +685,10 @@ in $\M_{\rm II}$, for $\Delta < 0$ there.
 \end{proof}
 
 An important consequence of the above property is
-\begin{greybox}
+\begin{prop}[decreasing of $r$ in $\M_{\rm II}$]
 In region $\M_{\rm II}$, the coordinate $r$ must decrease towards the future
 along any causal (i.e. timelike or null) worldline.
-\end{greybox}
+\end{prop}
 \begin{proof}
 Let $\Li$ be a causal curve in region $\M_{\rm II}$ and $\lambda$ a parameter
 along $\Li$ increasing towards the future. The associated tangent vector
@@ -1246,13 +1246,13 @@ Indeed, in view of the components (\ref{e:ker:def_ell_outgoing}), we have along 
 \]
 Since $a/(2m r_\pm)$ is constant, we get
 $\tph = a/(2m r_\pm)\,  \ti + \psi$, where $\psi$ is some integration constant.
-\begin{greybox}
+\begin{prop}[outgoing principal null geodesics]
 Given that $\wl$ is a smooth vector field, the congruence of \defin{outgoing principal null
 geodesics}\index{principal!null geodesic!outgoing --}\index{outgoing!principal null geodesic} can be smoothly extended to include the above integral curves of $\wl$ on $\Hor$ and
 $\Hor_{\rm in}$. We shall denote them by
 $\Li^{{\rm out},\Hor}_{(\th,\psi)}$ and $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$
 and shall discuss them in more detail in Sec.~\ref{s:gek:null_gen_hor}.
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 At the Schwarzschild limit, $a=0$, $\tilde{\tph} = \ph$, $\psi=\ph$ and the
@@ -1318,12 +1318,12 @@ one can easily compute the scalar product of $\w{k}$ and $\wl$:
 This implies that $\w{g}(\w{k},\wl) < 0$ everywhere (note that $\rho^2= 0$
 would correspond to the ring singularity $\ring$, which has been excluded from
 the spacetime manifold $\M$).
-Using Lemma~2 of Sec.~\ref{s:fra:time_orientation} with $\w{u}=\w{k}$ and
-$\w{v} = \wl$, we conclude that
-\begin{greybox}
+Using Lemma~\ref{p:fra:lem2} in Sec.~\ref{s:fra:time_orientation} with $\w{u}=\w{k}$ and
+$\w{v} = \wl$, we conclude
+\begin{prop}[$\wl$ future-directed]
 The tangent vector $\wl$ to the outgoing principal null geodesics
 is future-directed in all the Kerr spacetime $\M$.
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 Instead of $\wl$, another natural choise for the tangent vector to the outgoing
@@ -1390,14 +1390,14 @@ Hence, in view of (\ref{e:ker:normal_r}),
 \be
     \w{n}\cdot\w{n} = \rho^2 \Delta .
 \ee
-Since $\rho^2>0$ everywhere on $\M$ and $\Delta = (r-r_+)(r-r_-)$ [cf. Eq.~(\ref{e:ker:def_Delta})], we conclude that
-\begin{greybox}
+Since $\rho^2>0$ everywhere on $\M$ and $\Delta = (r-r_+)(r-r_-)$ [cf. Eq.~(\ref{e:ker:def_Delta})], we conclude:
+\begin{prop}[causal type of the hypersurfaces $r=\mathrm{const}$]
 \begin{itemize}
 \item The hypersurfaces $r=\mathrm{const}$ are timelike in regions $\M_{\rm I}$ and $\M_{\rm III}$;
 \item The hypersurfaces $r=\mathrm{const}$ are spacelike in region $\M_{\rm II}$;
 \item $\Hor$ (where $r=r_+$) and $\Hor_{\rm in}$ (where $r=r_-$) are null hypersurfaces.
 \end{itemize}
-\end{greybox}
+\end{prop}
 
 On $\Hor$ and $\Hor_{\rm in}$, $\Delta=0$, so that
 Eqs.~(\ref{e:ker:nab_r_comp})-(\ref{e:ker:def_normal_hyp_r})
@@ -1425,10 +1425,10 @@ $\Omega_H$ being a constant, the vector field $\w{\chi}$ defined by
 (\ref{e:ker:def_chi}) is a Killing vector field. Moreover, (\ref{e:ker:n_rp_chi})
 shows that this Killing vector is normal to the null hypersurface $\Hor$.
 In view of the definition given in Sec.~\ref{s:neh:def_Killing_hor}, we
-conclude that
-\begin{greybox}
+conclude
+\begin{prop}
 $\Hor$ is a Killing horizon\index{Killing!horizon}\index{horizon!Killing --}.
-\end{greybox}
+\end{prop}
 
 Similarly, on $\Hor_{\rm in}$, we may rewrite (\ref{e:ker:normal_r_Killing})
 as $\w{n} = 2 m r_- \, \w{\chi}_{\rm in}$, with
@@ -1441,9 +1441,9 @@ and
         = \frac{a}{2m\left( m - \sqrt{m^2-a^2} \right)} ,
 \ee
 thereby arriving at the same conclusion:
-\begin{greybox}
+\begin{prop}
 $\Hor_{\rm in}$ is a Killing horizon.
-\end{greybox}
+\end{prop}
 We shall call $\Hor_{\rm in}$ the \defin{inner horizon}\index{inner!horizon}\index{horizon!inner --}. We shall see in Sec.~\ref{s:ker:Cauchy_hor} that $\Hor_{\rm in}$
 is actually (part of) a so-called \emph{Cauchy horizon}.
 
@@ -1506,10 +1506,10 @@ Since $\alpha$ is a constant, we deduce that
 where $\lambda_0$ is the value of $\Li$'s parameter at $p$. When $\lambda\rightarrow +\infty$,
 we get $r\rightarrow +\infty$, which proves that the null curve $\Li$
 reaches $\scri^+$. Hence we conclude:
-\begin{greybox}
+\begin{prop}[black hole region in Kerr spacetime]
 $\mathscr{B} = \M \setminus \M_{\rm I}$ is the black hole region, the event
 horizon of which is $\Hor$.
-\end{greybox}
+\end{prop}
 Incidentally, since we have already shown that $\Hor$ is a Killing horizon
 (cf. Sec.~\ref{s:ker:Killing_hor}),
 this illustrates Hawking's strong rigidity theorem discussed
@@ -1531,19 +1531,19 @@ since $m r/(r^2 + a^2) \equalH 1/2$ and $a/(r^2+a^2) \equalH \Omega_H$:
 Since (i) $\w{\chi}$ is tangent
 to the null geodesic generators of $\Hor$, being a null normal to it (cf. Sec.~\ref{s:def:null_geod_gen}) and (ii) $\wl$ is the tangent vector to the
 outgoing principal null geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$ (Sec.~\ref{s:ker:principal_geod}),
-we conclude that
-\begin{greybox}
+we get
+\begin{prop}[null generators of the event horizon]
 The null generators of the event horizon $\Hor$ are the
 geodesics $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
 of the outgoing principal null congruence.
-\end{greybox}
+\end{prop}
 
 Similarly, we have
-\begin{greybox}
+\begin{prop}[null generators of the inner horizon]
 The null generators of the inner horizon $\Hor_{\rm in}$ are the
 geodesics $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$
 of the outgoing principal null congruence.
-\end{greybox}
+\end{prop}
 
 The reader is referred to Fig.~\ref{f:sta:rot_horizon} for a pictorial
 view of the event horizon $\Hor$ spanned by the rotating null generators,
@@ -1608,11 +1608,11 @@ the two basic Kerr parameters:
     \encadre{ \kappa = \frac{\sqrt{m^2 - a^2}}{2m(m + \sqrt{m^2-a^2})} } .
 \ee
 Given the strict inequality $a<m$ assumed in this chapter [Eq.~(\ref{e:ker:a_lower_m})],
-we have $\kappa\not=0$, which, according to the classification introduced in
-Sec.~\ref{s:neh:classif_KH}, means that
-\begin{greybox}
+we have $\kappa\not=0$. According to the classification introduced in
+Sec.~\ref{s:neh:classif_KH}, we may state:
+\begin{prop}[non-degeneracy of the event horizon]
 As long as $a<m$, the event horizon $\Hor$ is a non-degenerate Killing horizon.
-\end{greybox}
+\end{prop}
 In Sec.~\ref{s:neh:surface_gravity}, we have seen that the non-affinity coefficient
 $\kappa$ can be interpreted as a ``rescaled'' surface gravity. Hence $\kappa$
 is called
@@ -2121,7 +2121,7 @@ involving the electric charge of the black hole, which vanishes for a Kerr black
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Observers in Kerr spacetime} \label{s:ker:observers}
+\section{Observer families in Kerr spacetime} \label{s:ker:observers}
 
 The concept of \emph{observer} in a relativistic spacetime
 has been recalled in Sec.~\ref{s:fra:measure}.
@@ -3060,25 +3060,24 @@ Using the expression of $r_-$ in terms of $m$ and $a$ [Eq.~(\ref{e:ker:def_r_pm}
 \be
     \encadre{ \kappa_{\rm in} = - \frac{\sqrt{m^2 - a^2}}{2m(m - \sqrt{m^2-a^2})} } .
 \ee
-Given the assumption $0<a<m$, we have $\kappa_{\rm in} \not=0$, which implies that
+Given the assumption $0<a<m$, we have $\kappa_{\rm in} \not=0$, which implies
 (cf. Sec.~\ref{s:neh:classif_KH})
-\begin{greybox}
+\begin{prop}[non-degeneracy of the inner horizon]
 As long as $a<m$, the part $\Hor_{\rm in}$ of the Cauchy horizon $\Hor_{\rm C}$ is a non-degenerate Killing horizon.
-\end{greybox}
+\end{prop}
 We note that
 \be
     \kappa_{\rm in} < 0 .
 \ee
-According to the results of Sec.~\ref{s:sta:non-degenerate_KH}, it follows
-that
-\begin{greybox}
+According to the results of Sec.~\ref{s:sta:non-degenerate_KH}, this implies
+\begin{prop}[Cauchy horizon as part of a bifurcate Killing horizon]
 $\Hor_{\rm in}$ is contained in a \emph{bifurcate Killing horizon}, the
 bifurcation surface of which being the future boundary of $\Hor_{\rm in}$
 (light brown small disk in Fig.~\ref{f:ker:cauchy_hor}).
 Actually, the whole Cauchy horizon $\Hor_{\rm C}$ is the past part of the bifurcate Killing horizon,
 the future part being formed by the future
 boundaries $r=r_-$ of $\M_{\rm III}$ and ${\M'}_{\rm III}$ (light brown thick lines in Fig.~\ref{f:ker:cauchy_hor}).
-\end{greybox}
+\end{prop}
 
 \subsection{Physical relevance of the maximal extension}
 
