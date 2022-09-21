@@ -42,8 +42,9 @@ Another property of $\Li$ is to have a non-negative Carter constant:
 \be \label{e:gik:Q_nonneg_E_zero}
    \encadre{ Q \geq 0 }_{E=0} .
 \ee
-This follows immediately from the result of Sec.~\ref{s:gek:th_motion}
-stating that a necessary condition for $Q < 0$ is $a\neq 0$ and
+This follows immediately Property~\ref{p:gek:latitudinal_motion} in Sec.~\ref{s:gek:th_motion},
+which, among other things,
+states that a necessary condition for $Q < 0$ is $a\neq 0$ and
 $|E| > \sqrt{\mu^2 + L^2/a^2}$. Specializing this last inequality to $\mu=0$
 and $E=0$, we get $0 > |L|$, which is impossible.
 
@@ -329,24 +330,24 @@ We recover then the range $[0, 2m]$ for $r$ obtained here for $Q=0$.
 \end{remark}
 
 
-We conclude that
-\begin{greybox}
+We conclude:
+\begin{prop}[null geodesic with $E=0$ and $Q=0$]
 Any null geodesic with $E=0$ and $Q=0$
 is either a null generator of one of the two Killing horizons
 $\Hor$ or $\Hor_{\rm in}$ (in which case, it has $L=0$) or it has
 $L < 0$, lies in the equatorial plane,
 emanates from a ring singularity, reaches the outer ergosphere ($r=2m$),
 where it has a $r$-turning point, and terminates at a ring singularity.
-\end{greybox}
+\end{prop}
 
 Regarding the sign of $L$, we can combine the above result with that
-obtained for $Q\neq 0$ [Eq.~(\ref{e:gik:E_zero_Qnz_L_neg})] to conclude:
-\begin{greybox}
+obtained for $Q\neq 0$ [Eq.~(\ref{e:gik:E_zero_Qnz_L_neg})] to get:
+\begin{prop}[negative angular momentum for zero-energy null geodesics]
 For $a\neq 0$, any null geodesic with $E=0$ has necessarily
 \be
     \encadre{ L \leq 0 }_{{a\neq 0\atop E=0}}.
 \ee
-\end{greybox}
+\end{prop}
 
 \begin{hist}
 The zero-energy null geodesics in Kerr spacetime appear to have been first
@@ -448,12 +449,12 @@ and
 \ee
 
 It suffices to use the parameter $\lambda'' := |E| \lambda'$ to make $E$
-disappear from the system~(\ref{e:gik:eom_Mino}). We therefore conclude that
-\begin{greybox}
+disappear from the system~(\ref{e:gik:eom_Mino}). We therefore conclude:
+\begin{prop}
 In Kerr spacetime, a null geodesic with $E\neq 0$  is entirely determined
 by the two constants $(\ell,q)$, by the sign of $E$ and by the values of the two
 signs $\eps_r=\pm 1$ and $\eps_\th=\pm 1$ at a given point.
-\end{greybox}
+\end{prop}
 
 \begin{example}[Principal null geodesic]
 Given the values (\ref{e:gik:principal_null_l_q}) of $\ell$ and $q$
@@ -660,9 +661,9 @@ account $\ell=0$, we obtain
 
 \subsection{Latitudinal motion} \label{s:gik:th_motion}
 
-Specializing the general results of Sec.~\ref{s:gek:th_motion} to $\mu=0$, we
-get
-\begin{greybox}
+Specializing the general results expressed in Property~\ref{p:gek:latitudinal_motion} to
+$\mu=0$ and $E\neq 0$, we get
+\begin{prop}[latitudinal motion of null geodesics]
 \begin{itemize}
 \item A null geodesic $\Li$ of Kerr spacetime cannot encounter the rotation axis unless it has $\ell=0$.
 \item If $|\ell|\geq a$,
@@ -724,7 +725,7 @@ $\th=\th_*$ or $\th = \pi - \th_*$, with $\th_*\in [0, \pi/2)$%]$
      \th_* := \arcsin\sqrt{\frac{|\ell|}{a}} .
 \ee
 \end{itemize}
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 For $\ell < 0$, the constraint (\ref{e:gik:q_min}) is tighter than
@@ -791,8 +792,8 @@ Since $\mathcal{R}(r)$ is a polynomial of degree $4$ in $r$, its
 behavior can be relatively complicated. However, it turns out that in the
 black hole exterior, its behavior is quite simple, according to the
 following lemma:
-\begin{greybox}
-\textbf{Lemma ($\mathcal{R}(r)$ in $\M_{\rm I}$)}\\[1ex]
+\begin{lemma}[behavior of $\mathcal{R}(r)$ in $\M_{\rm I}$]
+\label{p:gik:lem_R_r}
 In region $\M_{\rm I}$ of Kerr spacetime, i.e. for $r> r_+$, the
 quartic polynomial $\mathcal{R}(r)$ associated to a given geodesic
 [Eq.~(\ref{e:gik:mcR})] has one of the following behaviors, depending
@@ -811,7 +812,7 @@ necessarily $\ell = 2 m r_+ /a$, $\mathcal{R}(r_+) = 0$ and
 $\mathcal{R}(r) > 0$ iff $r\in(r_0, +\infty)$
 (Fig.~\ref{f:gik:R_in_M1}d).
 \end{enumerate}
-\end{greybox}
+\end{lemma}
 \begin{proof}
 First, we observe that $\mathcal{R}(r)$ is positive or zero at both
 ends of $\M_{\rm I}$. This is clear
@@ -840,7 +841,7 @@ with the boundary conditions and the vanishing of the sum of the roots.
 \end{proof}
 
 \begin{remark}
-Case~4 of the lemma can be seen as the limit $r_1\to r_+$ of case~3.
+Case~4 of Lemma~\ref{p:gik:lem_R_r} can be seen as the limit $r_1\to r_+$ of case~3.
 \end{remark}
 
 \begin{remark}
@@ -863,19 +864,19 @@ values of $r$ and thus four roots of $\mathcal{R}(r)$ can be located in $\M_{\rm
 According to the definition given in Sec.~\ref{s:gek:turning_points},
 a $r$-turning of a null geodesic $\Li$ is a point $p_0\in \Li$
 such that $r_0 := r(p)$ is a simple root of $\mathcal{R}(r)$.
-The above lemma leads then to:
-\begin{greybox}
+Lemma~\ref{p:gik:lem_R_r} leads then to:
+\begin{prop}[$r$-turning points of null geodesics]
 A null geodesic in Kerr spacetime has
 \begin{itemize}
 \item at most one $r$-turning point in region $\M_{\rm I}$;
 \item no $r$-turning point in region $\M_{\rm II}$.
 \end{itemize}
-\end{greybox}
+\end{prop}
 \begin{proof}
 If a geodesic would have two turning points in $\M_{\rm I}$, this would mean
 that there exist two simple roots in $\M_{\rm I}$ and that
 $\mathcal{R}(r)$ is positive between them (so that the motion is possible
-there). But this is excluded by the lemma.
+there). But this is excluded by Lemma~\ref{p:gik:lem_R_r}.
 In region $\M_{\rm II}$, we have $\Delta < 0$ and
 Eqs.~(\ref{e:gik:mcR_Delta}) and (\ref{e:gik:q_ell_a_constraint}) show that
 $\mathcal{R}(r)$ is the sum of two non-negative terms. The only possibility
@@ -899,7 +900,7 @@ that $r$ must be a strictly decreasing function of $\lambda$ at any point
 in $\M_{\rm II}$.
 \end{remark}
 
-Let us consider case~2 of the lemma (double root of $\mathcal{R}(r)$ in $\M_{\rm I}$);
+Let us consider case~2 of Lemma~\ref{p:gik:lem_R_r} (double root of $\mathcal{R}(r)$ in $\M_{\rm I}$);
 it corresponds to two distinct situations regarding the null geodesic $\Li$ having
 $\mathcal{R}(r)$ as radial polynomial. First, $\Li$ can lie at a constant value
 of $r$, which is necessarily the double root $r_0$ of $\mathcal{R}(r)$
@@ -925,7 +926,7 @@ Sec.~\ref{s:gik:critical_geod}.
 
 In view of the above results, we can state:
 
-\begin{greybox}
+\begin{prop}[radial behavior of null geodesics]
 In the region $\M_{\rm I}$ of Kerr spacetime,
 any null geodesic $\Li$ has one of the following behaviors.
 For \emph{generic} values of the constant of motions $(\ell, q)$, the possibilities are:
@@ -960,15 +961,15 @@ $r$ decreasing monotonically and crosses the black hole event horizon $\Hor$;
 $r$ increasing monotonically to
 a future asymptotic $r$-value at $r_0 > r_+$.
 \end{enumerate}
-\end{greybox}
+\end{prop}
 
 
 Case 1 corresponds to a scattering\index{scattering} trajectory, leading to the standard phenomenon of deflection of light\index{deflection of light}. The polynomial $\mathcal{R}(r)$
-belongs then to case~3 or 4 of the lemma.
+belongs then to case~3 or 4 of Lemma~\ref{p:gik:lem_R_r}.
 Ingoing principal null geodesics belong to case 2, while the outgoing ones with $E\neq 0$ belong to case 3
 (cf. Example~\ref{x:gik:png_R_positive} below).
-Both cases 2 and 3 correspond to the lemma's case 1 (no root of $\mathcal{R}(r)$ in $\M_{\rm I}$).
-Cases~5--9 correspond to the lemma's case 2 (double root of $\mathcal{R}(r)$ in $\M_{\rm I}$).
+Both cases 2 and 3 correspond to case 1 of Lemma~\ref{p:gik:lem_R_r} (no root of $\mathcal{R}(r)$ in $\M_{\rm I}$).
+Cases~5--9 correspond to case 2 of Lemma~\ref{p:gik:lem_R_r} (double root of $\mathcal{R}(r)$ in $\M_{\rm I}$).
 Case 5 is that of \emph{spherical photon orbits} and will be discussed in Sec.~\ref{s:gik:spherical_orbits}, while cases~6--9 are those of \emph{critical null geodesics},
 to be discussed in Sec.~\ref{s:gik:critical_geod}.
 
@@ -1018,10 +1019,10 @@ Indeed, they lie at a constant value of $r$: $r_0 = r_+$ for
 $\Hor$ and $r_0 = r_-$ for $\Hor_{\rm in}$.  These spherical orbits have $E=0$
 [cf. Eq.~(\ref{e:gek:all_const_zero})].
 From the results of Sec.~\ref{s:gik:zero_energy}, there is no other null geodesic with $E=0$ at constant $r$.
-Hence we conclude
-\begin{greybox}
+Hence we conclude:
+\begin{prop}[zero-energy spherical photon orbits]
 In Kerr spacetime, the only spherical photon orbits with $E=0$ are the null generators of the two Killing horizons $\Hor$ and $\Hor_{\rm in}$.
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 A spherical photon orbit of Kerr spacetime is an example of what has been called
@@ -1065,8 +1066,8 @@ then $r_0$ would correspond to a $r$-turning point of $\Li$  (cf. Eq.~(\ref{e:ge
 which would contradict $r$ being constant.
 \end{proof}
 In other words, $r_0$ is a double root the polynomial $\mathcal{R}(r)$. A spherical
-photon orbit in $\M_{\rm I}$ correspond then to case~2 of the lemma in
-Sec.~\ref{s:gik:radial_motion} and an example of $\mathcal{R}(r)$ is shown
+photon orbit in $\M_{\rm I}$ correspond then to case~2 of Lemma~\ref{p:gik:lem_R_r}
+and an example of $\mathcal{R}(r)$ is shown
 for $a=0.95\, m$ and $r_0=2.2\, m$ in Fig.~\ref{f:gik:R_in_M1}b.
 
 In view of expression (\ref{e:gik:mcR_Delta}) for $\mathcal{R}(r)$, the system
@@ -1318,8 +1319,8 @@ with the limits (\ref{e:gek:lim_rph_pm}) and (\ref{e:gek:lim_rph_s}). In additio
 As already stressed in Sec.~\ref{s:gek:existence_circ_orb}, $r_{\rm ph}^*$ is lower than, but very close to,
 the inner horizon radius $r_{-}$, with  $\max (r_- - r_{\rm ph}^*) \simeq 0.032 \, m$,
 achieved for $a\simeq 0.9 \, m$.
-In view of the above inequalities and the ranges (\ref{e:gik:spher_orb_range}), we conclude that
-\begin{greybox}
+In view of the above inequalities and the ranges (\ref{e:gik:spher_orb_range}), we conclude:
+\begin{prop}[spherical photon orbits with $E\neq 0$]
 Spherical photon orbits with $E\neq 0$ exist in two regions of Kerr spacetime:
 \begin{itemize}
 \item orbits with $r_0\in [r_{\rm ph}^{**}, 0) \cup (0, r_{\rm ph}^*]$ are located in $\M_{\rm III}$;
@@ -1327,7 +1328,7 @@ we shall call them the \defin{inner spherical photon orbits}\index{inner!spheric
 \item orbits with $r_0 \in [r_{\rm ph}^+, r_{\rm ph}^-]$ are located in $\M_{\rm I}$;
 we shall call them the \defin{outer spherical photon orbits}\index{outer!spherical photon orbit}\index{spherical!photon orbit!outer --}\index{photon!orbit!outer spherical --}.
 \end{itemize}
-\end{greybox}
+\end{prop}
 
 \subsubsection{Sign of $E$}
 
@@ -1342,13 +1343,14 @@ E > 0 & \iff r_0^2 + a^2 - a \ell > 0 \nonumber \\
       & \iff r_0 > m \ \mbox{or}\ r_0 < 0 , \nonumber
 \end{align}
 where the third line follows from $\Delta_0 > 0$ in $\M_{\rm I}\cup\M_{\rm III}$.
-In view of (\ref{e:gik:r_crit_order}), we conclude that
-\begin{greybox}
+In view of (\ref{e:gik:r_crit_order}), we conclude:
+\begin{prop}[energy sign of spherical photon orbits]
+\label{p:gik:sign_E_ph_orbit}
 All outer spherical photon orbits have $E>0$, as well as inner spherical photon
 orbits with $r_0\in[r_{\rm ph}^{**}, 0)$, %]$
 while inner spherical photon orbits with $r_0\in(0, r_{\rm ph}^*]$
 have $E<0$.
-\end{greybox}
+\end{prop}
 
 \subsection{Latitudinal motion} \label{s:gik:spher_latitudinal}
 
@@ -1409,7 +1411,7 @@ the sign of $\ell$ is deduced from expression (\ref{e:gik:spher_ell_r0}),
 whose numerator has a sign governed by the position of $r_0$ with respect to the
 roots $r_{\rm ph}^{\rm pol,in}$ and $r_{\rm ph}^{\rm pol}$ determined above and whose denominator is positive iff $r_0 > m$, which occurs
 only for outer spherical orbits. We get then
-\begin{greybox}
+\begin{prop}[sign of $\ell$ for spherical photon orbits]
 \begin{itemize}
 \item Outer spherical orbits with $r_0 \in [r_{\rm ph}^+, r_{\rm ph}^{\rm pol})$ %]$
 have $\ell > 0$;
@@ -1420,7 +1422,7 @@ have $\ell > 0$;
 \item inner spherical orbits with $r_0 \in [r_{\rm ph}^{**}, r_{\rm ph}^{\rm pol,in})$ %]$
 have $\ell < 0$.
 \end{itemize}
-\end{greybox}
+\end{prop}
 The sign of $L$ is deduced from that of $\ell = L/E$ by combining with the sign of $E$ obtained
 in Sec.~\ref{s:gik:spher_existence}.
 
@@ -1428,7 +1430,7 @@ in Sec.~\ref{s:gik:spher_existence}.
 
 By applying the results of Sec.~\ref{s:gik:th_motion}, we get
 
-\begin{greybox}
+\begin{prop}[latitudinal behavior of spherical photon orbits]
 \begin{itemize}
 \item All outer spherical photon orbits with $r_0\not\in \left\{r_{\rm ph}^+, r_{\rm ph}^-\right\}$ and the inner ones with $r_0\in (0, r_{\rm ph}^{*})$
 have $q>0$ (cf. Fig.~\ref{f:gik:spher_orb_exist}); they therefore cross the equatorial plane.
@@ -1468,10 +1470,10 @@ $\ell$ and $q$ are to be considered as the functions
 Spherical photon orbits at $r_0 = r_{\rm ph}^{**}$, $r_{\rm ph}^*$, $r_{\rm ph}^+$ or $r_{\rm ph}^-$,
 which have been excluded from the above list,
 will be discussed in details in Sec.~\ref{s:gik:circular_orbits}.
-\end{greybox}
+\end{prop}
 
 In addition, we have
-\begin{greybox}
+\begin{prop}[periodicity of the $\th$-motion]
 For a spherical photon orbit, $\th$ is either a constant or a periodic function
 of the affine parameter $\lambda$, the period being
 \be
@@ -1487,10 +1489,10 @@ $(\th_{\rm m}, \th_{\rm v})$
 (Northern non-polar vortical inner orbit) or
 $(\pi-\th_{\rm v}, \pi-\th_{\rm m})$
 (Southern non-polar vortical inner orbit).
-\end{greybox}
+\end{prop}
 \begin{proof}
 Switching from the Mino parameter $\lambda'$ to the affine parameter $\lambda$
-via the relation (\ref{e:gek:def_Mino_time}) with $r(\lambda)=r_0$, we may
+via Eq.~(\ref{e:gek:def_Mino_time}) with $r(\lambda)=r_0$, we may
 rewrite the equation of motion (\ref{e:gik:dthdl_Mino}) as
 \[
     \left( \derd{\th}{\lambda} \right)^2 + \mathcal{V}(\th) = 0,
@@ -1807,7 +1809,7 @@ functions of Kerr spin parameter $a$.
 \end{figure}
 
 We may summarize the above results by
-\begin{greybox}
+\begin{prop}[circular photon orbits in Kerr spacetime]
 The geodesics at the boundaries of the domain of
 existence of spherical photon orbits [Eq.~(\ref{e:gik:spher_orb_range})] are circular orbits:
 \begin{itemize}
@@ -1821,7 +1823,7 @@ the \defin{Southern vortical circular photon orbit};
 \end{itemize}
 Moreover, there is no other circular photon orbit with $E\neq 0$. The circular photon orbits
 with $E=0$ are the null generators of the two Killing horizons $\Hor$ and $\Hor_{\rm in}$.
-\end{greybox}
+\end{prop}
 That the orbits listed above are the only $E\neq 0$ circular orbits follows from the fact
 that all the other $E\neq 0$ spherical photon orbits have either $q > 0$ or $q_{\rm min} < q < 0$
 (cf. Fig.~\ref{f:gik:spher_orb_exist}), which imply that they have a varying $\th$
@@ -1842,12 +1844,12 @@ the above criteria is equivalent to $\mathcal{R}(r) < 0$
 for $r$ distinct from $r_0$ but close to it. Since $\mathcal{R}(r_0) = 0$
 and $\mathcal{R}'(r_0) = 0$ [Eq.~(\ref{e:gik:R_Rp_r0_zero})], this is equivalent
 to $\mathcal{R}$ having a maximum at $r_0$. In other words:
-\begin{greybox}
+\begin{prop}[stability criterion for spherical photon orbits]
 \be \label{e:gik:stability_spher}
     \mbox{The spherical photon orbit of radius $r_0$ is stable} \iff
     \mathcal{R}''(r_0) < 0 .
 \ee
-\end{greybox}
+\end{prop}
 \begin{remark}
 The criterion (\ref{e:gek:stability_circ_V}) for timelike circular orbits involves
 $\mathcal{V}''(r_0) > 0$ simply because
@@ -1856,13 +1858,13 @@ $\mathcal{V}(r) := - R(r) / (\mu^2 r^4)$, whereas we have here
 $\mathcal{R}(r) := R(r)/E^2$.
 \end{remark}
 
-An immediate consequence of the lemma in Sec.~\ref{s:gik:radial_motion} is
-\begin{greybox}
+An immediate consequence of Lemma~\ref{p:gik:lem_R_r} is
+\begin{prop}[unstability of spherical photon orbits in the black hole exterior]
 All spherical photon orbits in the black hole exterior are unstable.
-\end{greybox}
+\end{prop}
 \begin{proof}
 The quartic polynomial $\mathcal{R}(r)$ of spherical photon orbits in $\M_{\rm I}$
-belong to case~2 of the lemma, which states that $\mathcal{R}(r)>0$ for $r\in (r_+, r_0)\cup(r_0, +\infty)$,
+belong to case~2 of Lemma~\ref{p:gik:lem_R_r}, which states that $\mathcal{R}(r)>0$ for $r\in (r_+, r_0)\cup(r_0, +\infty)$,
 i.e. $r_0$ corresponds to a minimum of $\mathcal{R}$ (cf. Fig.~\ref{f:gik:R_in_M1}b).
 \end{proof}
 
@@ -1897,31 +1899,31 @@ where
 \ee
 Since obviously $r_{\rm ph}^{\rm ms} \geq 0$, we conclude that the first case in (\ref{e:gik:cond_d2R_neg})
 is excluded and that the second case holds for $0 < r_0 < r_{\rm ph}^{\rm ms}$:
-\begin{greybox}
+\begin{prop}[stability region for spherical photon orbits]
 \be
     \mbox{A spherical photon orbit of radius $r_0$ is stable} \iff
     0 < r_0 < r_{\rm ph}^{\rm ms}.
 \ee
-\end{greybox}
+\end{prop}
 The index `ms' in $r_{\rm ph}^{\rm ms}$ stands for \defin{marginally stable}\index{marginally!stable spherical orbit}.
 $r_{\rm ph}^{\rm ms}$ is plotted as a function of $a$ in Fig.~\ref{f:gik:spher_orb_range}.
 By comparing the blue solid curve with the green dotted one in that figure,
 we note that
-\be
+\be \label{e:gik:rph_ms_leq_rph_star}
     r_{\rm ph}^{\rm ms} \leq r_{\rm ph}^* ,
 \ee
 with equality iff $a=m$.
-We conclude
-\begin{greybox}
+We conclude:
+\begin{prop}[stability of spherical photon orbits]
 All spherical photon orbits are unstable with respect to radial perturbations, except
 for a subclass of inner orbits with negative energy\index{negative-energy particle}\index{particle!negative-energy --} ($E < 0$):
 those that have a radius $r_0\in(0, r_{\rm ph}^{\rm ms})$, where $r_{\rm ph}^{\rm ms}$ is
 given by Eq.~(\ref{e:gik:r_ph_mb}). In particular, all spherical photon orbits
 in $\M_{\rm I}$ (the black hole exterior) are unstable, as well as all circular photon orbits
 discussed in Sec.~\ref{s:gik:circular_orbits}.
-\end{greybox}
-That all stable orbits have $E<0$ follows from the results on the sign of $E$ obtained
-in Sec.~\ref{s:gik:spher_existence}.
+\end{prop}
+That all stable orbits have $E<0$ follows from Property~\ref{p:gik:sign_E_ph_orbit},
+given the inequality (\ref{e:gik:rph_ms_leq_rph_star}).
 
 
 The stable spherical photon orbits have $q>0$ and $\ell > 0$
@@ -1936,11 +1938,11 @@ after $t=0$. A marginally stable spherical photon orbit is
 shown in Fig.~\ref{f:gik:spher_3d_ms}.
 
 We have the following property, which appears clearly on Fig.~\ref{f:gik:spher_orb_exist}:
-\begin{greybox}
+\begin{prop}[characterization of marginally stable spherical photon orbits]
 Among all inner spherical photon orbits, the marginally stable orbits
 at $r_0 = r_{\rm ph}^{\rm ms}$ are those for which the reduced angular momentum $\ell$
 and reduced Carter constant $q$ are maximal.
-\end{greybox}
+\end{prop}
 \begin{proof}
 From Eqs.~(\ref{e:gik:spher_ell_r0}) and (\ref{e:gik:spher_q_r0}), we get
 \be \label{e:gik:spher_orb_dqdr}
@@ -2166,8 +2168,8 @@ $r = r_+ = 1.312\, m$.
 }
 \end{figure}
 
-We may summarize the above results as follows.
-\begin{greybox}
+We may summarize the above results as follows:
+\begin{prop}[radial motion of critical null geodesics]
 A critical null geodesic $\Li$ of parameter $r_0$ has $r_0$ as an asymptotic $r$-value,
 either in the future ($r(\lambda) \to r_0$ when $\lambda\to +\infty$) or in the
 past ($r(\lambda) \to r_0$ when $\lambda\to -\infty$), $\lambda$ being the (future-directed) affine
@@ -2175,7 +2177,7 @@ parameter of $\Li$. In particular, $\Li$ never crosses the sphere $r=r_0$.
 Moreover $\Li$ is winding endlessly on the sphere $r=r_0$ when
 either $\lambda\to+\infty$ or $\lambda\to-\infty$, mimicking there the behavior of
 a spherical photon orbit.
-\end{greybox}
+\end{prop}
 
 
 
@@ -2217,7 +2219,7 @@ As in the Schwarzschild case studied in Chap.~\ref{s:gis}, the family
 of critical null geodesics separates the null geodesics emitted far from the
 black hole between those
 that can escape to infinity and those that fall into the black hole.
-More precisely, according to the lemma established in Sec.~\ref{s:gik:radial_motion},
+More precisely, according to Lemma~\ref{p:gik:lem_R_r},
 this family separates null geodesics whose quartic polynomial $\mathscr{R}$
 has no root in $\M_{\rm I}$ from those for which $\mathscr{R}$ has a double
 root in $\M_{\rm I}$. It follows that the family of critical null
@@ -2674,15 +2676,15 @@ It is then clear (cf. Fig.~\ref{f:gik:R_a_1_l_2m}) that
 The critical value is $r_q^+ = m$, which correspond to $q = 3 m^2$ (red curve
 in Fig.~\ref{f:gik:R_a_1_l_2m}). $r=m$ is then a triple root of $\mathcal{R}$:
 $q = 3 m^2 \implies \mathcal{R}(r) = ( r - m)^3 (r + 3m)$. Since $r_q^+$
-is an increasing function of $q$, we conclude that
-\begin{greybox}
+is an increasing function of $q$, we conclude:
+\begin{prop}
 For $a=m$, a critical null geodesic
 of constants of motion $(\ell, q)$ can reach the asymptotic region $r\gg m$
 from the vicinity of a spherical photon orbit at $r_0 = m$ iff
 \be \label{e:gik:critical_from_NHEK}
     \ell = 2 m \qand 0 \leq q \leq 3 m^2 .
 \ee
-\end{greybox}
+\end{prop}
 
 \begin{figure}
 \centerline{
@@ -3138,13 +3140,13 @@ for $a=0$ in Chap.~\ref{s:gis}: formula (\ref{e:gis:bn_sequence}) along with
 $A(r_{\rm em}) < 0$ for $r_{\rm em} < 3 m = r_{\rm ph}^{\rm pol}(a=0)$ (cf. Fig.~\ref{f:gis:A_rem})
 yields impact parameters $b_n^\pm$ that are lower than $b_{\rm c}$, the latter being
 nothing but the radius of $\mathscr{C}$ for $a=0$.
-Hence we conclude that
-\begin{greybox}
+Hence we conclude:
+\begin{prop}[black spot in the image and black hole shadow]
 If the black hole is surrounded by some emitting material
 located within some of the spherical photon orbits,
 the central black spot in the images does not correspond to
 the shadow defined in Sec.~\ref{s:gik:shadow_generic} as the interior of the critical curve $\mathscr{C}$. The black spot is actually smaller than the shadow, lying strictly inside $\mathscr{C}$.
-\end{greybox}
+\end{prop}
 This holds for $a=0$ as well, if the emitting matter is not limited inward by the ISCO
 as in Fig.~\ref{f:gis:disk_images} (see e.g. Fig.~5 in Ref.~\cite{GrallHW19}
 or Fig.~2 in Ref.~\cite{VinceWAGLPG21}). Note however that in the case of a
@@ -3182,14 +3184,14 @@ at the point of coordinates $(x,y) = (0, 6m)$; it contributes to
 the tertiary image and if one would extend it to the past beyond the point $(0, 6m)$, it
 would never encounter the disk again, leaving the figure at the upper left corner
 in a more or less straight line. We shall therefore state:
-\begin{greybox}
+\begin{prop}[photon ring]
 The set constituted by the secondary image and higher order images, i.e. all images
 of order $n\geq 1$, is called
 the \defin{photon ring}\index{photon!ring}\index{ring!photon --}.
 It appears as a bright feature on the observer's screen under two conditions:
 the emitting material must (i) be optically
 thin and (ii) be located in the vicinity of some spherical photon orbits.
-\end{greybox}
+\end{prop}
 As shown
 in Fig.~\ref{f:gik:img_disk_a95}, the photon ring generally appears as a single ring because
 the successive images are superposed on each other and converge exponentially
@@ -3198,11 +3200,11 @@ are visible in Fig.~\ref{f:gik:img_disk_a95} by lack of resolution, since
 the thickness of the $n$-th image decays exponentially with $n$ \cite{GrallL20a}.
 We note on Figs.~\ref{f:gik:img_disk_a50} and \ref{f:gik:img_disk_a95}
 that the $n=2$ image (tertiary image) is already very close to $\mathscr{C}$.
-We conclude that
-\begin{greybox}
+We conclude:
+\begin{prop}[photon ring and critical curve]
 In practice the photon ring, and more precisely the part $n\geq 2$ of it,
 materializes the critical curve.
-\end{greybox}
+\end{prop}
 The photon ring is therefore
 a potentially observable feature that can provide information on the
 spacetime metric independently of the emission model \cite{Johns_al20}.
