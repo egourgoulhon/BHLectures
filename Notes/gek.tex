@@ -95,13 +95,13 @@ which makes the problem integrable (Secs.~\ref{s:gek:first_order_system} to
 \subsection{Integrals of motion from spacetime symmetries} \label{s:gek:int_motion_sym}
 
 As for Schwarzschild spacetime (cf. Sec.~\ref{s:ges:fiom}), we have the following
-property.
-\begin{greybox}
+property:
+\begin{prop}[conserved quantities along causal geodesics]
 The Killing vectors $\w{\xi}$ and $\w{\eta}$ of Kerr spacetime,
 associated respectively with
 stationarity and axisymmetry [cf. Eq.~(\ref{e:ker:def_xi_eta})],
 give birth to two conserved quantities
-along any geodesic $\Li$:
+along any (causal) geodesic $\Li$:
 \begin{subequations}
 \label{e:gek:def_E_L}
 \begin{align}
@@ -117,7 +117,7 @@ or \defin{energy at infinity}\index{energy!at infinity} of $\mathscr{P}$,
 while $L$ is called the \defin{conserved angular momentum}\index{conserved!angular momentum}\index{angular momentum!conserved --}
 or \defin{angular momentum at infinity}\index{angular momentum!at infinity}
 of $\mathscr{P}$.
-\end{greybox}
+\end{prop}
 In particular, if $\Li$ reaches the asymptotic region $|r|\to+\infty$,
 $E$ is nothing but $\mathscr{P}$'s energy as measured by the asymptotic inertial
 observer introduced in Sec.~\ref{s:ker:asymp_inertial_obs}, given that
@@ -448,7 +448,7 @@ the square of $\mathscr{P}$'s angular momentum as measured by the inertial obser
 
 We shall see later that one has always $\mathscr{K}\geq 0$. For now, let us
 establish the following characterization of null geodesics with $\mathscr{K} = 0$:
-\begin{greybox}
+\begin{prop}[null geodesics with vanishing Carter constant]
 A null geodesic $\Li$ has a vanishing Carter constant $\mathscr{K}$ if, and
 only if, $\Li$ is a principal null geodesic:
 \be \label{e:gek:K_zero_null}
@@ -460,7 +460,7 @@ is one of the ingoing (resp. outgoing) principal null geodesic
 introduced in Sec.~\ref{s:ker:principal_geod}, with $\Li^{\rm out}$ standing
 for $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$, $\Li^{{\rm out},\Hor}_{(\th,\psi)}$
 or $\Li^{{\rm out},\Hor_{\rm in}}_{(\th,\psi)}$.
-\end{greybox}
+\end{prop}
 \begin{proof}
 Consider expression (\ref{e:gek:Kcarter_prov}) for $\mathscr{K}$. If $\Li$
 is a null geodesic, the term $\w{g}(\w{p},\w{p})$ vanishes identically, so that
@@ -504,7 +504,7 @@ we see that the four integrals of motion $\mu$, $E$, $L$ and $\mathscr{K}$ all
 vanish for these geodesics.
 \end{example}
 The converse is true:
-\begin{greybox}
+\begin{prop}[characterization of the null generators of the two horizons]
 The null geodesic generators of the event horizon $\Hor$ and of the
 inner horizon $\Hor_{\rm in}$ are the only geodesics of Kerr spacetime
 having their four integrals of motion vanishing:
@@ -512,7 +512,7 @@ having their four integrals of motion vanishing:
 \Li \ \mbox{null geodesic generator of}\ \Hor\ \mbox{or}\ \Hor_{\rm in} \iff
 (\mu, E, L, \mathscr{K}) = (0, 0, 0, 0) .
 \ee
-\end{greybox}
+\end{prop}
 \begin{proof}
 If a geodesic $\Li$ has $(\mu,\mathscr{K}) = (0,0)$,
 $\Li$ is necessary null and (\ref{e:gek:K_zero_null}) shows that
@@ -918,7 +918,7 @@ turning point, if any, $\th_{1,2} = \th_1$ for $N$ odd and $\th_{1,2} = \th_2$ f
 
 We are now in position to state the full expression of the general
 solution for geodesic motion:
-\begin{greybox}
+\begin{prop}[solution for geodesic motion]
 Let $\Li$ be a null or timelike geodesic in Kerr spacetime,
 with conserved energy $E$, conserved angular momentum $L$, mass $\mu$ and
 Carter constant $Q$. We assume that the associated quartic polynomial $R(r)$,
@@ -948,7 +948,7 @@ obey
     + L \dashint_{\th_0}^\th \frac{1}{\sin^2\bar{\th}} \frac{\eps_\th \, \D \bar{\th}}{\sqrt{\Theta(\bar{\th})}} . \label{e:gek:integr_ph}
 \end{align}
 \end{subequations}
-\end{greybox}
+\end{prop}
 \begin{proof}
 Equation~(\ref{e:gek:integr_Mino}) is nothing but the gathering of
 Eqs.~(\ref{e:gek:Minotime_r_slash_int}) and (\ref{e:gek:Minotime_th_slash_int}).
@@ -1048,14 +1048,15 @@ obtained equivalent ones for the Kerr coordinates $v$ and $\tph$, which he was u
 \subsection{Sign of $E$} \label{s:gek:sign_E}
 
 We have:
-\begin{greybox}
+\begin{prop}[positivity of the conserved energy outside the ergoregion]
+\label{p:gek:E_positive}
 If a null or timelike geodesic $\Li$ has some part lying in the exterior of the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergoregion}),
 then the conserved energy $E$ defined by Eq.~(\ref{e:gek:def_E}) is necessarily
 positive:
 \be \label{e:gek:E_positive}
     \Li \not\subset \overline{\mathscr{G}}\quad \Longrightarrow \quad E > 0 .
 \ee
-\end{greybox}
+\end{prop}
 \begin{proof}
 By the very definition of the ergoregion $\mathscr{G}$ (cf. Sec.~\ref{s:ker:ergoregion}),
 the Killing vector $\w{\xi}$ is timelike in the exterior of $\mathscr{G}$, i.e.
@@ -1069,8 +1070,9 @@ follows that $E > 0$ everywhere.
 In particular, any timelike or null geodesic that reaches one of the asymptotic regions
 $r\to\pm\infty$ has $E>0$.
 \begin{remark}
-The property (\ref{e:gek:E_positive}) generalizes that obtained for Schwarzschild spacetime [cf. Eq.~(\ref{e:ges:E_positive_M_I})] to
-the case $a\not=0$, since for Schwarzschild spacetime, the exterior of the ergoregion
+Property~\ref{p:gek:E_positive} generalizes Property~\ref{p:ges:E_positive_M_I}
+obtained for Schwarzschild spacetime to
+the case $a\not=0$. Indeed, for Schwarzschild spacetime, the exterior of the ergoregion
 is nothing but the exterior of the black hole region.
 \end{remark}
 
@@ -1082,19 +1084,19 @@ A particle with $E<0$ (resp. $E=0$) is called a
 We have already encountered zero-energy particles in Example~\ref{x:gek:null_generator_hor} of Sec.~\ref{s:gek:int_motion_sym}: the photons whose worldlines are the null generators of the horizons $\Hor$
 and $\Hor_{\rm in}$.
 Negative-energy particles are those involved in the Penrose process discussed in Sec.~\ref{s:ker:Penrose_proc}.
-Note that according to (\ref{e:gek:E_positive}), neither a negative-energy particle nor a zero-energy one can exist in the exterior of the ergoregion.
+Note that according to Property~\ref{p:gek:E_positive}, neither a negative-energy particle nor a zero-energy one can exist in the exterior of the ergoregion.
 
 \begin{example}[Outgoing principal null geodesics in $\M_{\rm II}$]
 We have seen in Example~\ref{x:gek:outgoing_null_E_L} (p.~\pageref{x:gek:outgoing_null_E_L})
 that in the region $\M_{\rm II}$, the outgoing principal null geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ have $E<0$ [Eq.~(\ref{e:gek:E_L_outgoing_MII})]. This is consistent with
-(\ref{e:gek:E_positive}) because $\M_{\rm II}$ is entirely contained in the ergoregion $\mathscr{G}$
+Property~\ref{p:gek:E_positive} because $\M_{\rm II}$ is entirely contained in the ergoregion $\mathscr{G}$
 (cf. Fig.~\ref{f:ker:ergo_a90}).
 \end{example}
 
 \begin{remark}
 As already stressed in Remark~\ref{r:ker:negative_energy} on p.~\pageref{r:ker:negative_energy}, any local
 observer measuring the energy of a negative-energy particle or a zero-energy one, according to the process described in Sec.~\ref{s:fra:measure}, will
-find a positive value. Hence there is nothing mysterious about these particles.
+find a positive value. Hence there is nothing mysterious about such particles.
 \end{remark}
 
 \subsection{Future-directed condition}
@@ -1126,15 +1128,15 @@ where the last inequality follows from the Boyer-Lindquist components
 Given the identities $p_t = -E$, $p_\ph = L$
 [Eq.~(\ref{e:gek:E_pt_L_pph})] and $p_r = \eps_r \sqrt{R(r)}/ \Delta $
 [Eqs.~(\ref{e:gek:p_r_p_th_cov_con})
-and (\ref{e:gek:drdl})], we conclude that
-\begin{greybox}
+and (\ref{e:gek:drdl})], we conclude:
+\begin{prop}
 \be \label{e:gek:future_directed}
 {\Li \ \mbox{timelike or}\atop
 \w{k} \ \mbox{not tangent to} \ \Li} \implies
 \encadre{ \frac{1}{\Delta} \left[ (r^2 + a^2) E - a L
 + \eps_r \sqrt{R(r)} \right] > 0 } .
 \ee
-\end{greybox}
+\end{prop}
 Given expression (\ref{e:gek:def_R_Q}) for $R(r)$ and
 $\Delta := r^2 - 2m r + a^2$ [Eq.~(\ref{e:ker:def_Delta})],
 we note that this constraint involves $(\mu,E,L,Q)$ and $r$, but not $\th$.
@@ -1142,23 +1144,23 @@ we note that this constraint involves $(\mu,E,L,Q)$ and $r$, but not $\th$.
 Another global future-directed null vector field on the Kerr spacetime $(\M,\w{g})$ is the null tangent
 $\wl$ to the outgoing principal null geodesics, introduced in Sec.~\ref{s:ker:principal_geod} [Eq.~(\ref{e:ker:def_ell_outgoing})]. If we apply Lemma~\ref{p:fra:lem2}  of Sec.~\ref{s:fra:time_orientation} with $\wl$ instead
 of $\w{k}$, we get, using the Boyer-Lindquist components (\ref{e:ker:ell_BL}) of $\wl$,
-\begin{greybox}
+\begin{prop}
 \be \label{e:gek:future_directed_l}
 {\Li \ \mbox{timelike or}\atop
 \wl \ \mbox{not tangent to} \ \Li} \implies
 \encadre{ (r^2 + a^2) E - a L - \eps_r \sqrt{R(r)} > 0 } .
 \ee
-\end{greybox}
+\end{prop}
 
 In $\M_{\rm I}\cup\M_{\rm III}$, $\Delta > 0$ and we can combine (\ref{e:gek:future_directed}) and
 (\ref{e:gek:future_directed_l}) to $(r^2 + a^2) E - a L > |\eps_r \sqrt{R(r)}| = \sqrt{R(r)}$, thereby
 getting a constraint that is independent from $\eps_r$:
-\begin{greybox}
+\begin{prop}
 \be \label{e:gek:future_directed_k_l}
 \Li \ \mbox{not principal null geod.} \implies
 \encadre{ (r^2 + a^2) E - a L > \sqrt{R(r)}  } \quad\mbox{in}\quad \M_{\rm I}\cup\M_{\rm III}.
 \ee
-\end{greybox}
+\end{prop}
 
 A related constraint in $\M_{\rm I}\cup\M_{\rm III}$ is obtained
 from the vector $\w{\veps}_{(0)}$
@@ -1174,22 +1176,24 @@ $\w{\xi}=\wpar_t$ and $\w{\eta}=\wpar_\ph$:
    \w{p} \ \mbox{future-directed in} \ \M_{\rm I} \cup \M_{\rm III} \iff \w{g}(\w{\veps}_{(0)},\w{p}) < 0
    \iff (r^2 + a^2) \underbrace{\w{g}(\w{\xi}, \w{p})}_{-E} + a \underbrace{\w{g}(\w{\eta}, \w{p})}_{L} < 0 .
 \]
-Hence the constraint
-\begin{greybox}
+Hence the constraint:
+\begin{prop}
+\label{p:gek:future_directed_Carter}
 \be \label{e:gek:future_directed_Carter}
     \encadre{ (r^2 + a^2) E - a L > 0 } \ \ \mbox{in}\ \M_{\rm I} \cup \M_{\rm III} .
 \ee
-\end{greybox}
+\end{prop}
 Note that if $\Li$ is not a principal null geodesic, (\ref{e:gek:future_directed_Carter}) is
 a mere consequence of
 (\ref{e:gek:future_directed_k_l}), given that $\sqrt{R(r)}\geq 0$.
 
-An immediate corollary of (\ref{e:gek:future_directed_Carter}) is:
-\begin{greybox}
+An immediate corollary of Property~\ref{p:gek:future_directed_Carter} is:
+\begin{prop}
+\label{p:gek:E_neg_implies_L_neg}
 In the outer ergoregion\index{outer!ergoregion}\index{ergoregion!outer --}
 $\mathscr{G}^+ = \mathscr{G}\cap \M_{\rm I}$, a geodesic that has $E \leq 0$
 must have $L<0$.
-\end{greybox}
+\end{prop}
 
 
 
@@ -1207,41 +1211,42 @@ then yields
 \]
 Hence the Boyer-Lindquist component $p^t$ of the 4-momentum $\w{p}$ must be positive
 in $\M_{\rm ZAMO}$:
-\begin{greybox}
+\begin{prop}
+\label{p:gek:p_t_positive}
 \be \label{e:gek:p_t_positive}
     \encadre{ p^t > 0 } \ \ \mbox{in}\ \M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T}) .
 \ee
-\end{greybox}
+\end{prop}
 Let us recall that $\mathscr{T}$ is the Carter time machine\index{Carter!time machine}\index{time!machine (Carter)} (cf. Sec.~\ref{s:ker:time_machine}),
 which occupies a very limited portion of $\M_{\rm III}$.
 Since $p^t = \D t/\D\lambda$ and $\lambda$ increases towards the future (cf. Sec.~\ref{s:gek:geod_motion_intro}),
-(\ref{e:gek:p_t_positive}) implies
-\begin{greybox}
+Property~\ref{p:gek:p_t_positive} implies
+\begin{prop}
 In the region $\M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T})$ of Kerr spacetime, the
 Boyer-Lindquist coordinate $t$ increases towards the future along any
 geodesic $\Li$.
-\end{greybox}
+\end{prop}
 
 Using  Eq.~(\ref{e:gek:dtdl}) with $\D t/\D\lambda=p^t$ and the fact that $\Delta > 0$
-in $\M_{\rm I} \cup \M_{\rm III}$, we can rewrite (\ref{e:gek:p_t_positive}) as
-\begin{greybox}
+in $\M_{\rm I} \cup \M_{\rm III}$, we can rewrite Property~\ref{p:gek:p_t_positive} as
+\begin{prop}
 \be
 \encadre{ \rho^2 (r^2 + a^2) E - 2 a m r ( L - a E \sin^2\th ) > 0 }
 \ \ \mbox{in}\ \M_{\rm I} \cup (\M_{\rm III}\setminus \mathscr{T}) .
 \ee
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 In the outer ergoregion  $\mathscr{G}^+ = \mathscr{G}\cap \M_{\rm I}$
 (i.e. the part of the ergoregion outside of the black hole),
-$E\leq 0$ is allowed, but the result
-(\ref{e:gek:p_t_positive}) shows that $p^t \leq 0$ is not allowed.
+$E\leq 0$ is allowed, but Property~\ref{p:gek:p_t_positive}
+shows that $p^t \leq 0$ is not allowed.
 \end{remark}
 
 
 \begin{hist}
-That $E \leq 0$ in the outer ergoregion implies $L<0$ has been shown for
-equatorial geodesics by George Contopoulos\index{Contopoulos, G.} in 1984 \cite{Conto84}.
+That $E \leq 0$ in the outer ergoregion implies $L<0$ (Property~\ref{p:gek:E_neg_implies_L_neg})
+has been shown for equatorial geodesics by George Contopoulos\index{Contopoulos, G.} in 1984 \cite{Conto84}.
 \end{hist}
 
 
@@ -1322,11 +1327,11 @@ converges to a finite value:
 \ee
 where the second equality follows from Eq.~(\ref{e:ker:def_OmegaH}), letting
 the black hole rotation velocity $\Omega_H$ appear.
-Hence we conclude that
-\begin{greybox}
+Hence we conclude:
+\begin{prop}[behaviour of $\ph$ near the event horizon]
 Any null or timelike geodesic that approaches the event horizon $\Hor$
 is winding around it in terms of the Boyer-Lindquist coordinates at exactly the black hole rotation velocity $\Omega_H$.
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 For a timelike geodesic on a circular orbit, we have argued in Sec.~\ref{s:ges:circular_orbits}
@@ -1387,11 +1392,11 @@ Eqs.~(\ref{e:gek:dtdl}) and
 where the second equality follows from Eq.~(\ref{e:ker:def_Omega_in}); it involves
 the rotation velocity $\Omega_{\rm in}$ of the inner horizon $\Hor_{\rm in}$.
 Hence
-\begin{greybox}
+\begin{prop}[behaviour of $\ph$ near the inner horizon]
 Any null or timelike geodesic that approaches the inner horizon $\Hor_{\rm in}$
 is winding around it in terms of the Boyer-Lindquist coordinates at exactly the
 rotation velocity $\Omega_{\rm in}$ of $\Hor_{\rm in}$.
-\end{greybox}
+\end{prop}
 
 \subsection{Asymptotic $r$-values and $\th$-values} \label{s:gek:asymptotic_values}
 
@@ -1419,8 +1424,8 @@ provided that $\rho^2$
 does not tend to $0$ (the ring singularity) as $\lambda'\to +\infty$, this
 implies that the affine parameter $\lambda$ tends to $+\infty$ as well, given
 the relation (\ref{e:gek:def_Mino_time}) between the two parameters.
-Hence we conclude
-\begin{greybox}
+Hence we conclude:
+\begin{prop}[asymptotic $r$-value]
 Let $\Li$ be a geodesic of Kerr spacetime that does not lie at a fixed value of $r$
 and let $R(r)$ be the associated polynomial
 (\ref{e:gek:def_R_Q}).
@@ -1429,12 +1434,12 @@ such that both $R(r_1) = 0$ and $R'(r_1) = 0$
 can only be reached asymptotically by $\Li$, i.e. in the limit
 $\lambda\to \pm\infty$ of the affine parameter
 $\lambda$. We call $r_1$ an \defin{asymptotic $r$-value}\index{asymptotic!$r$-value} of the geodesic $\Li$.
-\end{greybox}
+\end{prop}
 This property explains why $R(r_0) = 0$ and $R'(r_0) \neq 0$ is a necessary condition
 to have a $r$-turning point (cf. Remark~\ref{r:gek:der_r_analytic} on p.~\pageref{r:gek:der_r_analytic}).
 
 By the same reasoning, we have
-\begin{greybox}
+\begin{prop}[asymptotic $\th$-value]
 Let $\Li$ be a geodesic of Kerr spacetime that does not lie at a fixed value of $\th$ and let
 $\Theta(\th)$ be the associated function
 (\ref{e:gek:def_Theta}).
@@ -1444,7 +1449,7 @@ can only be reached asymptotically by $\Li$, i.e. in the limit
 $\lambda\to \pm\infty$ of the affine parameter
 $\lambda$. We call $\th_1$ an
 \defin{asymptotic $\th$-value}\index{asymptotic!$\th$-value} of the geodesic $\Li$.
-\end{greybox}
+\end{prop}
 
 
 
@@ -1773,7 +1778,7 @@ At the limit $L\to 0$, formulas (\ref{e:gek:th0_E_lt_mu}) and
 \subsubsection{Summary}
 
 We can summarize the above results by
-\begin{greybox}
+\begin{prop}[latitudinal motion of Kerr geodesics]
 \begin{itemize}
 \item A geodesic $\Li$ of Kerr spacetime cannot encounter the rotation axis unless it has $L=0$.
 \item If $L^2 \geq a^2 (E^2 - \mu^2)$,
@@ -1826,7 +1831,7 @@ generalized to encompass the case $L=0$.}
      \th_* := \arcsin\sqrt{\frac{|L|}{a\sqrt{E^2 - \mu^2}}} .
 \ee
 \end{itemize}
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 We could have deduced that $L=0$ is a necessary condition for a geodesic
@@ -1910,14 +1915,14 @@ on expression~(\ref{e:gek:R_r_powers}) that for $|E|<\mu$ (which implies $\mu>0$
 \]
 which contradicts $R(r)\geq 0$.
 Hence we conclude:
-\begin{greybox}
+\begin{prop}[bound orbits]
 Any geodesic $\Li$ with $|E|<\mu$ is necessarily timelike ($\mu >0$),
 has a non-negative Carter constant $Q$,
 is confined to the region $r\geq 0$ of Kerr spacetime
 and cannot reach arbitrary large values of $r$. $\Li$ is called a
 \defin{geodesic with a bound orbit}\index{geodesic!with a bound orbit}\index{bound!orbit},
 or in short, a \defin{bound geodesic}\index{bound!geodesic}.
-\end{greybox}
+\end{prop}
 \begin{remark} \label{r:gek:bound_geod}
 That $\Li$
 cannot reach the asymptotic region $r\to +\infty$ could have been
@@ -1943,10 +1948,10 @@ Contrary to the case $|E|<\mu$, a geodesic with $|E|=\mu$ can be null,
 provided it has $E=0$
 (cf. Example~\ref{x:gek:null_generator_hor} on p.~\pageref{x:gek:null_generator_hor}).
 We have
-\begin{greybox}
+\begin{prop}
 Any geodesic with $|E|=\mu$ has $Q\geq 0$ and is necessarily confined
 to the region $r\geq 0$ of Kerr spacetime.
-\end{greybox}
+\end{prop}
 \begin{proof}
 $Q\geq 0$ follows directly from the criteria $|E| \leq \sqrt{\mu^2 + {L^2}/{a^2}}$
 [cf. Eq.~(\ref{e:gek:Q_non-negative})],
@@ -1992,7 +1997,7 @@ is asymptotically ``at rest''. Such a geodesic is called
 On the opposite, a null geodesic with $E=\mu (=0)$
 cannot reach the asymptotic region
 $r\to +\infty$. Actually, it cannot even exist outside the ergoregion,
-by virtue of the property (\ref{e:gek:E_positive}).
+by virtue of Property~\ref{p:gek:E_positive}.
 \begin{example}
 The null geodesics generating the horizons $\Hor$ and $\Hor_{\rm in}$
 considered in
@@ -2007,24 +2012,24 @@ since $\Hor\subset\mathscr{G}$ and $\Hor_{\rm in}\subset\mathscr{G}$
 
 An immediate corollary of the properties obtained for $|E|<\mu$ and $|E|=\mu$
 is
-\begin{greybox}
+\begin{prop}[necessary condition to visit the negative-$r$ region]
 Only geodesics with $|E| > \mu$ may have some part in the region $r<0$ of Kerr spacetime, $\M_-$:
 \be \label{e:ker:neg_r_large_E}
     \Li \cap \M_- \neq \varnothing \Longrightarrow |E| > \mu .
 \ee
-\end{greybox}
+\end{prop}
 
 \subsubsection{Decay of $r$ towards the future in $\M_{\rm II}$}
 
 As a particular case  of the result established in Sec.~\ref{s:ker:time_orientation}
 for any causal worldline (not necessarily a geodesic), we have
-\begin{greybox}
+\begin{prop}[decreasing of $r$ in $\M_{\rm II}$]
 In region $\M_{\rm II}$, the coordinate $r$ must decrease towards the future
 along any timelike or null geodesic:
 \be \label{e:gek:r_decay_MII}
     \encadre{\derd{r}{\lambda} < 0 }_{\M_{\rm II}} .
 \ee
-\end{greybox}
+\end{prop}
 
 \begin{example}[Principal null geodesics]
 For the ingoing principal null geodesics $\Li^{\rm in}_{(v,\th,\tph)}$,
@@ -2072,10 +2077,10 @@ that $\Li$ \defin{asymptotically approaches the ring singularity}\index{asymptot
 approach the singularity}.
 
 A first key result is
-\begin{greybox}
+\begin{prop}[vanishing of $Q$ required to approach the ring singularity]
 A null or timelike geodesic $\Li$ that approaches the ring singularity has
 a vanishing Carter constant $Q$.
-\end{greybox}
+\end{prop}
 \begin{proof}
 From Eqs.~(\ref{e:gek:R_r_powers}) and (\ref{e:gek:Theta_Q}), we have
 \[
@@ -2091,10 +2096,11 @@ The above property can be refined\footnote{This is a refinement because not all
 geodesics with $Q=0$ lie in the equatorial plane. For instance the
 null geodesic generators of the event horizon $\Hor$ have $Q=0$ [Eq.~(\ref{e:gek:all_const_zero})]
 but those with $\th\neq \pi/2$ lie outside the equatorial plane.}:
-\begin{greybox}
+\begin{prop}[ring singularity reachable only from the equatorial plane]
+\label{p:gek:ring_reach_from_equat}
 A null or timelike geodesic cannot approach the ring singularity unless it lies
 entirely in the equatorial plane.
-\end{greybox}
+\end{prop}
 \begin{proof}
 Let $\Li$ be a causal geodesic that approaches $\ring$. From the previous result,
 $\Li$ has $Q=0$. Reviewing the subcases $Q=0$ among all the cases considered in
@@ -2135,7 +2141,8 @@ finite value of the integral on $r$ in the left-hand side. Hence only (i) is pos
 the proof.
 \end{proof}
 
-The above result has been obtained for a generic approach to the ring singularity,
+Property~\ref{p:gek:ring_reach_from_equat}
+has been obtained for a generic approach to the ring singularity,
 i.e. for a geodesic $\Li$ that hits $\ring$, emanates from $\ring$ or
 asymptotically approach $\Li$ in the future or the past. If we apply it to
 null geodesics (light rays) emanating from $\ring$, we conclude that an intrepid observer
@@ -2157,10 +2164,10 @@ The case $R(0) = 0$ is excluded for it would correspond either to a
 $r$-turning point (Sec.~\ref{s:gek:turning_points}) or to an asymptotic $r$-value (Sec.~\ref{s:gek:asymptotic_values}). In both cases, $\Li$ would remain on a single side of the hypersurface
 $r=0$. The necessary condition for $r=0$ crossing is thus $R(0)> 0$. Now, in view of expression (\ref{e:gek:R_r_powers}) of $R$,
 we have $R(0) = - a^2 Q$, so that $R(0)> 0 \iff Q < 0$. We thus conclude
-\begin{greybox}
+\begin{prop}[crossing $r=0$ only possible for vortical geodesics]
 Only a vortical geodesic ($Q<0$) can cross the hypersurface $r=0$ and thus move from the positive-$r$ region of spacetime ($\M_+$) to the negative-$r$ one ($\M_-$), or vice-versa. In particular, such a geodesic must have
 a high energy, i.e. it must obey $|E| > \sqrt{\mu^2 + L^2/a^2}$.
-\end{greybox}
+\end{prop}
 The energy condition is simply the necessary condition for $Q < 0$ stated
 in Sec.~\ref{s:gek:th_motion}. We note that it implies $|E| > \mu$, which
 is consistent with the property (\ref{e:ker:neg_r_large_E}) required to travel in $\M_-$.
@@ -2531,8 +2538,8 @@ by \cite{DrascH04,FujitH09}
     \Omega_\th := \frac{\Upsilon_\th}{\Gamma}, \qquad
     \Omega_\ph := \frac{\Upsilon_\ph}{\Gamma} .
 \ee
-We may summarize the above results by
-\begin{greybox}
+We may summarize the above results as follows:
+\begin{prop}[periodicities of bound timelike orbits]
 The motion of a generic bound timelike
 geodesic in Kerr spacetime is periodic in $r$ and $\th$
 only in terms of the Mino time $\tau'$, the corresponding angular frequencies
@@ -2544,7 +2551,7 @@ Regarding the motion in $\ph$,
 it is not periodic, neither in terms of the Mino time, nor in terms
 of the Boyer-Lindquist time, so that both $\Upsilon_\ph$ and $\Omega_\ph$
 are average frequencies.
-\end{greybox}
+\end{prop}
 
 \subsubsection{Quasi-Keplerian parametrization}
 
@@ -2759,10 +2766,10 @@ have a simple form:
 \]
 It follows immediately that $\mathit{\Delta} \geq 0 \iff r_0 \geq 0$. Hence, there is
 no solution for $r_0 < 0$:
-\begin{greybox}
+\begin{prop}
 There does not exist any equatorial circular timelike orbit in the region $r<0$ of
 Kerr spacetime.
-\end{greybox}
+\end{prop}
 \begin{remark}
 For $r_0 < 0$ with $|r_0|\gg m$, the above result is not surprising since we
 have seen in Sec.~\ref{s:ker:basic_prop} that under these conditions,
@@ -3092,10 +3099,10 @@ one has both $\mathcal{V}(r_0) = 0$ and $\mathcal{V}'(r_0) = 0$.
 A natural question regarding the stability of equatorial circular orbits
 is whether these orbits are stably confined into the equatorial plane
 $\th=\pi/2$. The answer is very simple:
-\begin{greybox}
-All circular timelike orbits are stable with respect to any perturbation
+\begin{prop}[latitudinal stability of equatorial circular timelike orbits]
+All equatorial circular timelike orbits are stable with respect to any perturbation
 away from the equatorial plane.
-\end{greybox}
+\end{prop}
 \begin{proof}
 All equatorial orbits have a vanishing Carter constant $Q$
 [cf. Eq.~(\ref{e:gek_equat_q_zero})] and we
@@ -3135,12 +3142,12 @@ for $r$ close to $r_0$, but distinct from it (cf. the red curve in Fig.~\ref{f:g
 Motion away from $r_0$ is then possible for the same values of $\veps$ and $\ell$; we conclude that the circular orbit is unstable in that
 case. Assuming that $\mathcal{V}''(r_0)\neq 0$, a local minimum (resp. maximum) is equivalent to
 $\mathcal{V}''(r_0) > 0$ (resp. $\mathcal{V}''(r_0) < 0$). We have then
-\begin{greybox}
+\begin{prop}[criterion for radial stability of circular orbits]
 \be \label{e:gek:stability_circ_V}
     \mbox{The circular orbit of radius $r_0$ is stable} \iff
     \mathcal{V}''(r_0) > 0 .
 \ee
-\end{greybox}
+\end{prop}
 
 From the definition (\ref{e:gek:def_V_time_equat}) of $\mathcal{V}(r)$ and the
 relation $\ell = \tilde{\ell} + a\veps$ [Eq.~(\ref{e:gek:def_tilde_l})], we get
@@ -3280,11 +3287,11 @@ where $\pm$ indicates which family among $(\veps_+,\ell_+)$ and $(\veps_-,\ell_-
 considered and \emph{ISCO} stands for \defin{innermost stable circular orbit}\index{stable!circular orbit}\index{innermost!stable circular orbit}\index{circular!orbit!innermost stable --}.
 Indeed, $r_{\rm ISCO}^\pm $ being the unique zero of $r_0^2 - 6 m r_0 \pm 8 a \sqrt{m r_0} - 3 a^2$,
 (\ref{e:gek:circ_stability_crit}) is equivalent to
-\begin{greybox}
+\begin{prop}[stability of circular orbits]
 \be
 \mbox{A circular orbit of radius $r_0$ is radially stable} \quad \iff \quad r_0 > r_{\rm ISCO}^\pm .
 \ee
-\end{greybox}
+\end{prop}
 Note that $r_{\rm ISCO}^\pm  / m$ is a function of $\bar{a} := a/m$ only; this
 function is depicted in Fig.~\ref{f:gek:circ_orb_isco}. We notice immediately
 from it that
@@ -3319,13 +3326,14 @@ while the other curves are the same as in Fig.~\ref{f:gek:circ_orb_lim}.
 
 An interesting property of the ISCO is that it corresponds to extrema of
 $\veps_\pm(r_0)$ and $\ell_\pm(r_0)$:
-\begin{greybox} \label{p:gek:ISCO_extremum_eps_ell}
+\begin{prop}[characterization of the ISCO]
+\label{p:gek:ISCO_extremum_eps_ell}
 Among all prograde outer circular orbits, the ISCO is that for which
 the functions $\veps_+(r_0)$ and $\ell_+(r_0)$ are minimal.
 Similarly, among all retrograde outer circular orbits, the ISCO is that for
 which the function $\veps_-(r_0)$ is minimal and the function $\ell_-(r_0)$
 is maximal.
-\end{greybox}
+\end{prop}
 \begin{proof}
 In what precedes, we have considered $\mathcal{V}$, defined by
 Eq.~(\ref{e:gek:def_V_time_equat}), as a function of $r$ only. Let us consider
@@ -3384,7 +3392,7 @@ $(\ell,\veps)$ curves shown in Fig.~\ref{f:gek:ell_eps_circ_orb}.
 
 \subsubsection{Summary}
 
-\begin{greybox}
+\begin{prop}[existence and stability of equatorial circular timelike orbits]
 Equatorial circular timelike orbits exist only in the region $r>0$ of Kerr spacetime.
 They are all stable with respect to perturbations away from the equatorial plane.
 They are of three kinds:
@@ -3434,7 +3442,7 @@ Eq.~(\ref{e:gek:ell_circ}), both being plotted as the solid
 curves in the region $r_0 \leq m$ of Figs.~\ref{f:gek:eps_circ_orb} and \ref{f:gek:ell_circ_orb}.
 \end{enumerate}
 In particular, there are no equatorial circular orbits in region $\M_{\rm II}$ of Kerr spacetime.
-\end{greybox}
+\end{prop}
 
 
 \begin{figure}
@@ -3679,26 +3687,26 @@ $r_0 = 2 m$ in the equation governing the existence of prograde circular orbits,
 namely Eq.~(\ref{e:gek:cubic_sqrt_r0}) with the $+$ sign:
 $(2m)^{3/2} - 3 m \sqrt{2m} + 2 a \sqrt{m} > 0$,
 from which we get immediately
-\begin{greybox}
+\begin{prop}[timelike circular orbits in the ergoregion]
 \be \label{e:gek:orb_in_ergo}
     \left( {\mbox{timelike circular orbits}\atop
      \mbox{exist in the outer ergoregion}} \right)
      \iff a > \frac{m}{\sqrt{2}} \simeq 0.707\, m .
 \ee
-\end{greybox}
+\end{prop}
 Similarly, the limiting value of $a$ for the stability of
 circular orbits in the ergoregion is obtained by setting $r_0 = 2m$ in
 Eq.~(\ref{e:gek:circ_stability_crit}) with the $+$ sign:
 $(2 m)^2 - 12 m^2 + 8 a m\sqrt{2} - 3 a^2 > 0$.
 The right-hand side being a quadratic polynomial in $a$, we get
 easily, given the constraint $a \leq m$,
-\begin{greybox}
+\begin{prop}[stable timelike circular orbits in the ergoregion]
 \be \label{e:gek:stable_orb_in_ergo}
     \left( {\mbox{timelike circular orbits}\atop
      \mbox{exist stably in the ergoregion}} \right)
      \iff a > \frac{2\sqrt{2}}{3} m \simeq 0.943\, m .
 \ee
-\end{greybox}
+\end{prop}
 Both in (\ref{e:gek:orb_in_ergo}) and (\ref{e:gek:stable_orb_in_ergo}), the
 orbits referred to belong to the prograde outer family.
 
@@ -3718,7 +3726,7 @@ being all unstable.
 
 \begin{remark}
 As discussed in Sec.~\ref{s:gek:sign_E}, negative-energy or zero-energy particles can exist in
-the outer ergoregion. However, Fig.~\ref{f:gek:eps_circ_orb} shows us that none
+the outer ergoregion. However, Fig.~\ref{f:gek:eps_circ_orb} shows that none
 of them can follow a circular orbit.
 \end{remark}
 
@@ -3734,12 +3742,6 @@ computer algebra techniques.
 \end{hist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
 
 
 \section{Going further}
