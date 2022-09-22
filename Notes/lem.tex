@@ -91,12 +91,12 @@ The equation of energy-momentum conservation $\wnab\cdot\vw{T} = 0$
 [Eq.~(\ref{e:fra:divT})], which
 follows from the Einstein equation (\ref{e:fra:Einstein_eq}) and the contracted
 Bianchi identity (\ref{e:bas:Bianchi_contr}) (cf. Sec.~\ref{s:fra:Einstein_eq}),
-implies that
-\begin{greybox}
+implies:
+\begin{prop}[geodesic flow]
 The worldlines of the fluid particles of the pressureless matter
 model (\ref{e:lem:T_pressureless}) are timelike geodesics of
 $(\M,\w{g})$.
-\end{greybox}
+\end{prop}
 \begin{proof}
 If one plugs the energy-momentum tensor (\ref{e:lem:T_pressureless}) in the
 energy-momentum conservation law (\ref{e:fra:divT}), one obtains
@@ -147,8 +147,9 @@ Accordingly, we may rewrite the metric (\ref{e:lem:metric_sync_coord}) as
         + r(\tau,\chi)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) } .
 \ee
 
-Taking into account (\ref{e:lem:a_f_dr}), the $\chi\chi$ and $\tau\tau$ components of the Einstein equation
-yield respectively to (cf. the notebook~\ref{s:sam:Lemaitre_Tolman})
+\begin{prop}[Lemaître-Tolman system\index{Lemaitre-Tolman system@Lemaître-Tolman system}]
+The metric (\ref{e:lem:metric_Lemaitre}) is a solution of the
+Einstein equation (\ref{e:fra:Einstein_eq}) with the energy-momentum tensor (\ref{e:lem:T_pressureless})-(\ref{e:lem:u_par_tau}) if, and only if,
 \begin{subequations}\label{e:lem:LTeqs}
 \begin{align}
  & \encadre{\left( \der{r}{\tau} \right) ^2 = f(\chi)^2 - 1 + \frac{2M(\chi)}{r(\tau,\chi)}
@@ -157,10 +158,13 @@ yield respectively to (cf. the notebook~\ref{s:sam:Lemaitre_Tolman})
     \label{e:lem:LTeqs2}
  \end{align}
 \end{subequations}
-where $M(\chi)$ is another arbitrary function of $\chi$.
+where $M(\chi)$ is an arbitrary function of $\chi$.
+\end{prop}
+\begin{proof}
+Taking into account (\ref{e:lem:a_f_dr}), the $\chi\chi$ and $\tau\tau$ components of the Einstein equation
+yield respectively to (\ref{e:lem:LTeqs1}) and (\ref{e:lem:LTeqs2}), cf. the notebook~\ref{s:sam:Lemaitre_Tolman}.
 There is no other independent component of the Einstein equation.
-Equations~(\ref{e:lem:LTeqs}) constitute the
-\defin{Lemaître-Tolman system}\index{Lemaitre-Tolman system@Lemaître-Tolman system}.
+\end{proof}
 
 The function $M(\chi)$ is known in the literature as the \defin{Misner-Sharp mass}\index{Misner-Sharp!mass} or \defin{Misner-Sharp energy}\index{Misner-Sharp!energy}, in reference
 of a study by Misner and Sharp in 1964 \cite{MisneS64}, despite it has been introduced
@@ -259,7 +263,7 @@ for $E<0$, it sets the value of $\tau$ for which $r$ takes its maximal value
 a solution of Eq.~(\ref{e:lem:1dim_mechanical}).
 
 We may summarize the above results as follows:
-\begin{greybox}
+\begin{prop}
 The procedure to get a full solution of spherical dust collapse with $\Lambda=0$ is
 \begin{enumerate}
 \item choose arbitrary functions
@@ -272,7 +276,7 @@ or (\ref{e:lem:sol_E_neg}) to get the solution for $r(\tau,\chi)$;
 Eq.~(\ref{e:lem:LTeqs2}), to get $\rho(\tau,\chi)$ and into
 (\ref{e:lem:metric_Lemaitre}) to get the metric tensor.
 \end{enumerate}
-\end{greybox}
+\end{prop}
 
 \subsection{Schwarzschild solution in Lemaître coordinates} \label{s:lem:Schwarzschild}
 
@@ -361,10 +365,10 @@ Schwarzschild metric. Incidentally, since our starting point was
 the most general metric for a spherically symmetric spacetime
 [Eq.~(\ref{e:lem:metric_sync_coord})], we have proven
 \defin{Birkhoff's theorem}\index{Birkhoff's theorem}:
-\begin{greybox}
+\begin{prop}
 In vacuum, the unique spherically symmetric solution of the 4-dimensional
 Einstein equation with $\Lambda=0$ is Schwarzschild metric.
-\end{greybox}
+\end{prop}
 In particular, outside any spherically symmetric body, the spacetime
 is a piece of Schwarz\-schild spacetime. Note that this implies that this part of
 spacetime is static, even if the central body is not (for instance it may oscillate
@@ -1309,8 +1313,8 @@ Eq.~(\ref{e:lem:OS:tau_r_eta}) providing $r$. One obtains then a curved segment
 in the $(\ti, r)$ plane, which
 is drawn in black in Fig.~\ref{f:lem:OS:diag_int_EF}, right.
 
-In view of Eq.~(\ref{e:lem:OS:Hor_eta_chi}), we may say that
-\begin{greybox}
+In view of Eq.~(\ref{e:lem:OS:Hor_eta_chi}), we may state:
+\begin{prop}
 \begin{itemize}
 \item If $\chi_{\rm s} \leq \pi/3$, or equivalently if $m/r_0 \leq 3/8$,
 the event horizon $\Hor$ appears at the center of the star ($\chi=0$)
@@ -1331,7 +1335,7 @@ location $\chi = 3\chi_{\rm s} - \pi$.
 In all cases, the horizon expands according to Eq.~(\ref{e:lem:OS:Hor_eta_chi}) until it reaches the surface
 of the star ($\chi=\chi_{\rm s}$) at $\eta = \eta_* = \pi - 2 \chi_{\rm s}$
 or $\tau = \tau_*$ given by Eq.~(\ref{e:lem:OS:tau_star}).
-\end{greybox}
+\end{prop}
 
 \begin{example}
 Continuing with Example~\ref{x:lem:OS:tau_star_chis4}, i.e. with
@@ -1393,11 +1397,11 @@ Fig.~\ref{f:lem:OS:rho_hb}. In particular, we have
     \rho_{\rm hb} < \frac{1}{4 m^2} .
 \ee
 Hence
-\begin{greybox}
+\begin{prop}
 By selecting a sufficiently large mass $m$, the matter proper energy density
 when the black hole region forms at the center of the collapsing star
 can be made arbitrarily small.
-\end{greybox}
+\end{prop}
 \begin{example} \label{x:lem:OS:rho_hb_water}
 Let us determine the mass $m$ for which  $\rho_{\rm hb}$ is as small as
 the density of water: $\rho_{\rm hb} = 10^3 \; {\rm kg\, m}^{-3}$.
@@ -1532,8 +1536,8 @@ we have $\theta_{(\wl)} < 0 \iff \chi + \eta/2 > \pi/2$, i.e.
     \theta_{(\wl)} < 0 \iff \eta > \pi - 2 \chi .
 \ee
 Since $\Sp$ is a closed spacelike 2-surface,
-we conclude, in view of the definitions given in Sec.~\ref{s:neh:trapped_surfaces}, that
-\begin{greybox}
+we conclude, in view of the definitions given in Sec.~\ref{s:neh:trapped_surfaces}:
+\begin{prop}
 At late times, i.e. for $\eta > \pi - 2 \chi$, the spheres $\Sp$ defined
 by $(\eta,\chi) = \mathrm{const}$, with $\eta<\pi$ and $\chi>0$,
 are trapped surfaces ($\theta_{(\wl)} < 0$ and $\theta_{(\w{k})} < 0$).
@@ -1541,7 +1545,7 @@ These spheres are marginally trapped
 ($\theta_{(\wl)} = 0$ and $\theta_{(\w{k})} < 0$)
 for $\eta = \pi - 2 \chi$
 and untrapped ($\theta_{(\wl)} > 0$ and $\theta_{(\w{k})} < 0$) for $\eta <  \pi - 2 \chi$.
-\end{greybox}
+\end{prop}
 
 \begin{example}
 The trapped surface $\Sp$ corresponding to $(\eta,\chi) = (11\pi/16, 3\pi/16)$
@@ -1698,13 +1702,13 @@ p.~\pageref{x:lem:OS:tau_end_plot}). One sees graphically that the signals are r
 with an increasing separation $\delta\ti$. The last received signal is the 7th one. The 8th signal is trapped in the black hole region and ends on the curvature singularity.
 \end{example}
 
-We conclude from the above analysis that
-\begin{greybox}
+We conclude from the above analysis:
+\begin{prop}
 For a remote static observer, the collapse, as monitored by the reception of signals regularily emitted from the star's surface,
 appears to slow down and even to freeze completely when the areal radius
 of the star tends towards $2 m$. In particular, the remote observer never sees the
 star's surface crossing the event horizon and does not perceive at all the final singularity.
-\end{greybox}
+\end{prop}
 
 \begin{hist}
 The above behavior explains why the name \emph{frozen star}\index{frozen star}
@@ -1836,7 +1840,7 @@ $b_\star(t_\Obs) - b_{\rm c} \propto \exp(- t_\Obs/b_{\rm c})$.
 
 To summarize:
 
-\begin{greybox}
+\begin{prop}
 \begin{itemize}
 \item If the initial star is not ultracompact\index{ultracompact}, i.e. if its areal radius
 $r_0$ is larger than $3 m$,
@@ -1851,7 +1855,7 @@ is a very good approximation for $t_\Obs > t_\Obs^{**} + \alpha m$, where $\alph
 ($r_0 < 3 m$) generate images of constant size: the radius of the disk image
 remains fixed at $b_\star = 3\sqrt{3} \, m$.
 \end{itemize}
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 The above results are not specific to pressureless collapse: they
@@ -2293,23 +2297,23 @@ of the central redshift at late times:
      \; \mathrm{e}^{(t_\Obs - t_\Obs^*)/(4 m)} } .
 \ee
 Hence we conclude:
-\begin{greybox}
+\begin{prop}
 The photons arriving at the center of the image ($b=0$) suffer an
 increasing redshift. At late times, the redshift grows exponentially
 with a characteristic time scale $4 m$. Equivalently, the energies of the central photons
 vanish exponentially fast.
-\end{greybox}
+\end{prop}
 
 \subsubsection{Redshift at the image's rim}
 
 We have the following characterization of the image's rim:
-\begin{greybox}
+\begin{prop}
 The image's rim, or \emph{limb}, at $b=b_\star(t_\Obs)$ (cf. Sec.~\ref{s:lem:size_image}),
 is formed by photons emitted tangentially to the
 star's surface. In other words, the image's rim is formed by photons
 emitted in the direction $\Theta_{\rm em} = \pi/2$ with respect to the normal
 in the frame of the comoving observer $\Obs_{\rm em}$.
-\end{greybox}
+\end{prop}
 We have demonstrated this property for $t_\Obs \leq t_\Obs^{**}$, i.e. prior to the collapse,
 in Sec.~\ref{s:lem:size_image}. We shall admit that it remains true for
 $t_\Obs > t_\Obs^{**}$.
@@ -2330,13 +2334,13 @@ where $b_\star$ stands for $b_\star(t_\Obs)$. For pressureless collapse,
 $\Gamma$ can be substituted by expression (\ref{e:lem:OS:V_Gamma}); this
 makes the terms involving $r_{\rm s}^{\rm em}(b_\star, t_\Obs)$ cancel out.
 Hence
-\begin{greybox}
+\begin{prop}
 For a pressureless collapse starting from rest,
 the redshift at the image's rim keeps a constant value:
 \be \label{e:lem:redhsit_rim_pless}
    \encadre{ 1 + z_\star = \left(1 - \frac{2m}{r_0}\right) ^{-1/2} } .
 \ee
-\end{greybox}
+\end{prop}
 This rather surprising result can be understood by considering the general
 expression (\ref{e:lem:redshit_rim_gal}): $1 + z_\star$ is the product
 of two competing factors: the ``static'' gravitational redshift
