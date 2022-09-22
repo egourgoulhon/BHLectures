@@ -16,12 +16,14 @@ for which the Kerr solution describes a black hole.
 Indeed, for $a> m$, the Kerr metric is still an exact
 solution of the vacuum Einstein equation, but it describes a \emph{naked singularity}\index{naked singularity} (cf. Sec.~\ref{s:max:naked_sing}):
 the ring singularity is not hidden by any horizon to asymptotic observers.
-But the Kerr spacetime with $a=m$ is not just the maximally spinning black hole of the Kerr family.
+
+The Kerr spacetime with $a=m$ is not just the maximally spinning black hole of the Kerr family.
 As we going to see, it has important properties that are not
 shared by Kerr spacetimes with $a<m$. In particular, the black hole event horizon is
 \emph{degenerate}, in the sense defined in Sec.~\ref{s:neh:classif_KH}, i.e. it has a
 vanishing surface gravity $\kappa$. Besides, there is no internal horizon
-and the maximal analytic extension is simpler than
+and the maximal analytic extension, to be constructed in Sec.~\ref{s:exk:max_extension}
+below, is simpler than
 that of the Kerr spacetime with $a<m$.
 Another specific property of the extremal Kerr spacetime (actually related
 to the degeneracy of the horizon)
@@ -30,7 +32,8 @@ symmetry group, which is generated
 by four independent Killing vectors,
 instead of two for the geometry of the global solution.
 This is called the \emph{NHEK} geometry (for \emph{near-horizon extremal Kerr})
-and has received considerable attention in the recent literature.
+and has received considerable attention in the recent literature. We shall
+discuss it in Sec.~\ref{s:exk:NHEK}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,10 +94,10 @@ $\M$ [cf. Eq.~(\ref{e:exk:def_M})].
 
 Moreover, the Ricci tensor of the metric (\ref{e:exk:metric_Kerr_3p1}) is identically zero in all
 $\M$ (see the notebook~\ref{s:sam:Kerr_extremal} for the computation). Hence, we have:
-\begin{greybox}
+\begin{prop}[extremal Kerr metric solution of vacuum Einstein equation]
 The metric $\w{g}$ of the extremal Kerr spacetime is a solution of Einstein equation\index{Einstein!equation} (\ref{e:fra:Einstein_eq})
 in vacuum ($\w{T}=0$) and with a vanishing cosmological constant ($\Lambda=0$).
-\end{greybox}
+\end{prop}
 
 The inverse metric is
 \be \label{e:exk:inv_met_3p1}
@@ -286,7 +289,7 @@ endowed with two congruences of null geodesics tied to
 the spacetime structure, as described by the Weyl conformal curvature tensor.
 All the results of Sec.~\ref{s:ker:principal_geod} remain valid at the limit $a\to m$.
 We can summarize them as follows:
-\begin{greybox}
+\begin{prop}[principal null geodesics of the extremal Kerr spacetime]
 \begin{itemize}
 \item The \defin{ingoing principal null geodesics} are the curves
 \be
@@ -347,7 +350,7 @@ that coincides with the Killing vector $\w{\xi} + (2m)^{-1} \w{\eta}$ on $\Hor$ 
 \end{align}
 \end{subequations}
 \end{itemize}
-\end{greybox}
+\end{prop}
 \begin{proof}
 The second equality in Eq.~(\ref{e:exk:def_v}) follows from Eq.~(\ref{e:exk:3p1_Kerr_to_BL_t}).
 Equation~(\ref{e:exk:k_BL}) follows from Eq.~(\ref{e:exk:k_3p1_Kerr}) via Eq.~(\ref{e:exk:frame_BL_Kerr3p1}).
@@ -433,7 +436,7 @@ with the null generators of a non-degenerate Killing horizon, which are
 incomplete, as shown in Sec.~\ref{s:sta:non-degenerate_KH}.
 
 Let us summarize the results obtained above:
-\begin{greybox}
+\begin{prop}[$\Hor$ as a Killing horizon]
 In the extremal Kerr spacetime, the hypersurface $\Hor$ defined
 by $r=m$ is a degenerate Killing horizon.
 Its generators are the outgoing principal null geodesics
@@ -443,7 +446,7 @@ $\ti$ as an affine parameter. The tangent vector associated to this affine
 parameter is the Killing vector $\w{\chi} = \w{\xi} + \Omega_H \w{\eta}$
 [Eq.~(\ref{e:exk:def_chi})], which coincides on $\Hor$ with the tangent
 vector $\wl$ to the outgoing principal null congruence.
-\end{greybox}
+\end{prop}
 
 \subsection{Black hole character} \label{s:exk:bhole_char}
 
@@ -458,13 +461,14 @@ it suffices to proceed as for the $a<m$ case treated in Sec.~\ref{s:ker:event_ho
 We shall not repeat the argument here (which is based on the
 asymptotics of Kerr spacetime being that of Schwarzschild spacetime --- a property
 that holds for the extremal Kerr spacetime as well) and jump directly to the conclusion:
-\begin{greybox}
+
+\begin{prop}[black hole region in the extremal Kerr spacetime]
 The extremal Kerr spacetime $(\M, \w{g})$ can be endowed with a conformal
 completion at null infinity such that the future and past null infinities $\scri^+$
 and $\scri^-$ are located at the boundary of $\M_{\rm I}$. The region $\M_{\rm III}$ is
 then the interior of a black hole, the event horizon of which is
 the Killing horizon $\Hor$.
-\end{greybox}
+\end{prop}
 
 The future null infinity $\scri^+$ and the past null infinity $\scri^-$
 relative to $\M_{\rm I}$ are depicted in the Carter-Penrose diagram of
@@ -512,7 +516,7 @@ of constant Kerr time $\ti$ shown in Fig.~\ref{f:exk:CPdiag_Kerr}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Maximal analytic extension}
+\section{Maximal analytic extension} \label{s:exk:max_extension}
 
 \subsection{Extension of $\M_{\rm I}$ for complete outgoing principal null geodesics}
 
@@ -853,19 +857,19 @@ It appears then that
 \be
    \M'_{\rm III}\cup \Hor' = \M_0 \setminus (J^+(\scri^-)\cap \M_0)
 \ee
-In view of the definition (\ref{e:glo:def_white_hole}), we conclude that
-\begin{greybox}
+In view of the definition (\ref{e:glo:def_white_hole}), we conclude:
+\begin{prop}[white hole region in the extended extremal Kerr spacetime]
 $\M'_{\rm III}$ is the interior of a white hole\index{white hole} region, the boundary of which
 is $\Hor'$.
-\end{greybox}
+\end{prop}
 
 Since $\M_{\rm III}$ was shown in Sec.~\ref{s:exk:bhole_char} to be the black hole region for
 the same conformal completion at null infinity, we may state,
 according to the terminology introduced in Sec.~\ref{s:glo:def_BH}:
-\begin{greybox}
+\begin{prop}[domain of outer communications]
 $\M_{\rm I}$ is the domain of outer communications\index{domain!of outer communications}
 of the spacetime $(\M_0,\w{g})$.
-\end{greybox}
+\end{prop}
 
 
 \begin{figure}
@@ -929,10 +933,10 @@ geodesic.
 It can be shown that actually \emph{all} timelike or null
 geodesics of $(\M_*,\w{g})$, and not only the principal null ones, are complete
 (see Carter's article \cite{Carte68a} for the proof), so that we can conclude:
-\begin{greybox}
+\begin{prop}[maximal analytic extension of the extremal Kerr spacetime]
 $(\M_*,\w{g})$ is the maximal analytic extension of the
 extremal Kerr spacetime.
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 The construction of the maximal extension of the extremal Kerr spacetime
@@ -1227,11 +1231,11 @@ on the rotation axis $\mathscr{A}$. This merely signals the standard coordinate 
 shows that $\w{h}$ is non-degenerate and has the signature $(-,+,+,+)$ or $(+,-,-,-)$.
 Since the (diagonal) $(R,\th)$-block has clearly the signature $(+,+)$, we get
 that only $(-,+,+,+)$ is possible. Hence we may conclude:
-\begin{greybox}
+\begin{prop}[NHEK metric]
 Equation~(\ref{e:exk:NEHK_metric}) defines a Lorentzian metric tensor $\w{h}$
 on $\M_{\rm BL} = \M_{\rm I} \cup \M_{\rm III}$.
 We shall call it the  \defin{near-horizon extremal Kerr (NEHK) metric}\index{NEHK!metric}\index{near-horizon!metric}.
-\end{greybox}
+\end{prop}
 
 The NHEK metric $\w{h}$ has been obtained in Bardeen-Horowitz coordinates
 $(T,R,\th,\Phi)$. Let us express it in terms of Boyer-Lindquist coordinates
@@ -1397,7 +1401,7 @@ They are actually regular in all the range $\tau\in\R$, $y\in\R$, $\th\in(0,\pi)
 and $\psi\in(0,2\pi)$.
 As it is introduced in Eq.~(\ref{e:exk:def_global_NHEK}),
 the coordinate $\tau$ is actually restricted to $(-\pi, 2\pi)$ on $\M$. We may therefore
-consider an ``extended'' spacetime as follows:
+define an ``extended'' spacetime as follows:
 \begin{greybox}
 The \defin{NHEK spacetime} is the spacetime $(\mathscr{N},\w{h})$, where
 the manifold $\mathscr{N}$ is diffeomorphic to $\R^2\times \SS^2$ and $\w{h}$ is the
@@ -1440,14 +1444,14 @@ for the computation):
 As AdS$_4$, the NHEK spacetime is not asymptotically flat.
 The metrics of both spacetimes are solutions of Einstein equation with $\w{T}=0$,
 but with $\Lambda<0$ for AdS$_4$ metric and with $\Lambda=0$ for $\w{h}$:
-\begin{greybox}
+\begin{prop}[NHEK metric as a solution of the vacuum Einstein equation]
 The NHEK metric $\w{h}$ is a solution of the vacuum Einstein equation
 (Eq.~(\ref{e:fra:Einstein_eq_n}) with $\w{T}=0$ and $\Lambda=0$):
 \be \label{e:exk:Ricci_h_zero}
     \bm{\mathrm{Ric}}(\w{h}) = 0 ,
 \ee
 where $\bm{\mathrm{Ric}}(\w{h})$ stands for the Ricci tensor of $\w{h}$.
-\end{greybox}
+\end{prop}
 \begin{proof}
 $\w{h}$ has been defined on $\M_{\rm BL}$
 via the limit expression (\ref{e:exk:h_limit_G}).
@@ -1516,15 +1520,15 @@ One finds (cf. the notebook~\ref{s:sam:NEHK_spacetime} for the computation):
 \ee
 This is exactly the value $J = a m = m^2$ of the angular momentum of the
 extremal Kerr spacetime [Eq.~(\ref{e:ker:J_am})]. Hence we conclude:
-\begin{greybox}
+\begin{prop}[angular momentum of NHEK spacetime]
 The NHEK spacetime $(\mathscr{N},\w{h})$ has no well defined mass, but it has a well defined
 Komar angular momentum, whose value is nothing but the angular momentum $J = m^2$
 of the extremal Kerr spacetime $(\M,\w{g})$ from which $(\mathscr{N},\w{h})$ arises.
-\end{greybox}
+\end{prop}
 
 \begin{remark}
 For this reason, many authors replace the overall factor $m^2$ of the NHEK metric
-by $J$.
+in Eq.~(\ref{e:exk:NEHK_metric}) or (\ref{e:exk:global_NEHK_metric}) by $J$.
 \end{remark}
 
 
@@ -1800,8 +1804,8 @@ the transformation $(T,R) \mapsto (-T,-R)$ is an element of $G_3$ and, in $\math
 due to the quotient by $\mathbb{Z}_2 = \{\mathrm{Id}, -\mathrm{Id}\}$, where $\mathrm{Id}$
 is the identity element.
 $G_3$ is actually the
-special linear group $\mathrm{SL}(2,\R)$. We conclude that
-\begin{greybox}
+special linear group $\mathrm{SL}(2,\R)$. We conclude:
+\begin{prop}[isometry group of NEHK spacetime]
 The isometry group
 of the NEHK spacetime is
 \be \label{e:exk:NHEK_isometry_group}
@@ -1810,7 +1814,7 @@ of the NEHK spacetime is
 with $\mathrm{U}(1)$ generated by the axisymmetry Killing vector $\w{\eta}$ and
 $\mathrm{SL}(2,\R)$ generated by the three Killing vectors $\w{\xi}_1$, $\w{\xi}_2$ and
 $\w{\xi}_3$ given by Eqs.~(\ref{e:exk:xi1_eta}), (\ref{e:exk:xi2}) and (\ref{e:exk:xi3}).
-\end{greybox}
+\end{prop}
 
 This property is often phrased as follows: the near-horizon region of the extremal
 Kerr spacetime (the extremal Kerr throat) has some \emph{emergent symmetries}, i.e. it has
