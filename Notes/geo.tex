@@ -114,6 +114,7 @@ the parametrization of the worldline by its proper time (cf. Sec.~\ref{s:fra:mas
 
 An important property of geodesics is
 \begin{prop}[constancy of the scalar square of affine tangent vector fields]
+\label{p:geo:const_scalar_square}
 Let $\Li$ be a geodesic of $(\M,\w{g})$ and $\w{v}$ a tangent vector field
 associated with an affine parametrization of $\Li$. Then the
 scalar square of $\w{v}$ with respect to the metric $\w{g}$
@@ -177,6 +178,7 @@ geodesic, it is the \emph{arc length}\index{arc length}.
 Geodesics can be characterized by any of their tangent vectors, i.e.
 tangent vectors not necessarily associated with an affine parametrization, as follows:
 \begin{prop}[generic tangent vector field along a geodesic]
+\label{p:geo:v_pregeodesic}
 A curve $\Li$ is a geodesic
 iff the tangent vector field $\w{v}$ associated with any parametrization
 of $\Li$ obeys
@@ -213,14 +215,14 @@ This differential equation has the following solution:
 \]
 where $a$, $b$, $\lambda_0$ and $\lambda_1$ are constants, with $a\not = 0$ and $\lambda_0,\lambda_1\in I$.
 \end{proof}
-The above property motivates the following definitions:
+Property~\ref{p:geo:v_pregeodesic} motivates the following definitions:
 \begin{greybox}
 A vector field $\w{v}$ obeying (\ref{e:geo:v_pregeodesic}) is called
 a \defin{pregeodesic vector field}\index{pregeodesic!vector field}.
 The scalar field $\kappa$ is then called the \defin{non-affinity coefficient}\index{non-affinity coefficient} of $\w{v}$.
 If $\kappa=0$, $\w{v}$ is naturally called a \defin{geodesic vector field}\index{geodesic!vector field}.
 \end{greybox}
-Note that the property established above is equivalent to stating that the
+Note that Property~\ref{p:geo:v_pregeodesic} is equivalent to stating that the
 field lines of a pregeodesic vector field are geodesics.
 
 An easy consequence of Eq.~(\ref{e:geo:v_pregeodesic}) is the following
@@ -244,7 +246,7 @@ One has, using $\wnab\w{g}=0$ [Eq.~(\ref{e:bas:nabla_g_zero})] and Eq.~(\ref{e:g
 \]
 hence the law (\ref{e:geo:evol_vv_kappa}).
 \end{proof}
-We recover of course (\ref{e:geo:vv_const}) in the special case $\kappa = 0$
+We recover of course Eq.~(\ref{e:geo:vv_const}) in the special case $\kappa = 0$
 ($\w{v}$ geodesic vector).
 \begin{remark}
 If $\lambda$ is the parameter associated with $\w{v}$, i.e. $\w{v} = \D\w{x}/\D\lambda$,
@@ -439,6 +441,7 @@ the manifold a metric space.
 
 The following proposition strengthens Property~\ref{p:geo:exist_uniq_geod}:
 \begin{prop}[existence and uniqueness of inextendible geodesic from a vector]
+\label{p:geo:inextend_unique}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a
 nonzero vector
 $\w{V}$ in the tangent space to $\M$ at $p$, i.e. $\w{V} \in T_p\M$,
@@ -503,7 +506,7 @@ $\lambda=t$ of the parametrization $P_{\w{V}}$:
 For $t=0$, the property follows from the definition of $\exp_p$, since
 $P_{\w{V}}(0) = p$.
 If $t\not=0$, the nonzero vector $t\w{V}$ is collinear to $\w{V}$ and the uniqueness
-property of geodesics (cf. Sec.~\ref{s:geo:existence_uniqueness})
+property of geodesics (Property~\ref{p:geo:inextend_unique})
 implies that $\Li_{t\w{V}} = \Li_{\w{V}}$. By virtue
 of the transformation law (\ref{e:geo:change_tangent_vector}), $t\w{V}$ is
 the tangent vector to $\Li_{\w{V}}$ corresponding to the affine parameter
@@ -1139,6 +1142,7 @@ we may state the following conservation law:
 
 \begin{prop}[constancy of the scalar product of an affine tangent vector
 with a Killing vector]
+\label{p:geo:g_xi_v_const}
 If the pseudo-Riemannian manifold $(\M,\w{g})$ admits a 1-dimensional
 isometry group of generator $\w{\xi}$, i.e. if $\w{\xi}$ is a Killing
 vector field of $(\M,\w{g})$, then along any geodesic $\Li$,
@@ -1221,6 +1225,7 @@ an extended discussion). This is because, as Killing vectors,
 Killing tensors give birth to conserved quantities along geodesics:
 
 \begin{prop}[conserved quantity induced by a Killing tensor along a geodesic]
+\label{p:geo:cons_quant_Killing_tensor}
 If $\w{K}$ is a Killing tensor of rank $p$ on the
 the pseudo-Riemannian manifold $(\M,\w{g})$, then along any geodesic $\Li$,
 the scalar $\w{K}(\w{v},\ldots,\w{v})$, where $\w{v}=\D\w{x}/\D\lambda$ is any tangent vector field associated with an
@@ -1249,7 +1254,9 @@ zeros in the line below arise from the geodesic equation (\ref{e:geo:geod_eq_v})
 \begin{example}
 Since we have already noticed that the metric tensor $\w{g}$ is a Killing tensor
 (Example~\ref{x:geo:trivial_Killing_tensors}),
-the property (\ref{e:geo:vv_const}) appears as a special case of (\ref{e:geo:Kvv_const}).
+Property~\ref{p:geo:const_scalar_square} (constancy of $\w{g}(\w{v},\w{v})$)
+appears as a special case of
+Property~\ref{p:geo:cons_quant_Killing_tensor}.
 For the Walker-Penrose Killing tensor $\w{K}$ of Kerr spacetime, the conserved quantity
 $\w{K}(\w{v},\w{v})$ leads to the Carter constant\index{Carter!constant} (cf. Chap.~\ref{s:gek}).
 \end{example}
