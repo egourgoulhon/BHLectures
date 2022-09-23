@@ -342,14 +342,15 @@ for some real-valued function $\kappa(\lambda)$.
 
 \subsection{Existence and uniqueness} \label{s:geo:existence_uniqueness}
 
-We may use the geodesic equation to prove the following existence and uniqueness
+We may use the geodesic equation to prove the following
 theorem:
-\begin{prop}
+\begin{prop}[existence and uniqueness of geodesic from a vector at a point]
+\label{p:geo:exist_uniq_geod}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a vector
 $\w{V}$ in the tangent space to $\M$ at $p$, i.e. $\w{V} \in T_p\M$,
 there exists a geodesic $\Li$ through $p$ such that
 $\w{V}$ is the value at $p$ of the tangent vector of some affine parametrization
-of $\Li$:
+$\lambda$ of $\Li$:
 \be
     \w{V} = \left. \frac{\D\w{x}}{\D\lambda} \right|_p .
 \ee
@@ -394,7 +395,7 @@ $I=\R$. A geodesic that is not complete is called \defin{incomplete}\index{incom
 \end{greybox}
 
 It is easy to show:
-\begin{prop}
+\begin{prop}[inextendibility of complete geodesics]
 Any complete geodesic is inextendible.
 \end{prop}
 \begin{proof}
@@ -417,8 +418,8 @@ $\Li$ of a freely falling observer that ``ends'' at some finite proper time. Thi
 would be the signature of either (i) the possibility to extend the spacetime into
 a larger one or (ii) the ending of worldline $\Li$ at some (curvature)
 singularity\index{singularity}. A spacetime in which this does not occur
-is called timelike geodesically complete:
-
+is called \defin{timelike geodesically complete}\index{timelike!geodesically complete}.
+More generally:
 \begin{greybox}
 The pseudo-Riemannian manifold $(\M,\w{g})$ is said to be
 \defin{geodesically complete}\index{geodesically complete}\index{complete!geodesically -- spacetime}
@@ -431,14 +432,13 @@ states that a connected \emph{Riemannian} manifold is geodesically complete iff 
 as a \emph{metric space}\index{metric!space} for the distance function $d(p,q)$ defined as the infimum of
 the length\footnote{The length of a curve is defined by Eq.~(\ref{e:geo:def_length}) below.} of all curves from $p$ to $q$
 (see e.g. Ref.~\cite{Lee18}). However, there is no such theorem for a \emph{Lorentzian}
-manifold, for the metric does not induce any distance function turning
-the manifold into a metric space.
+manifold, for the metric does not induce any distance function which would make
+the manifold a metric space.
 \end{remark}
 
 
-The following proposition strengthens the existence and uniqueness
-result obtained above:
-\begin{prop}
+The following proposition strengthens Property~\ref{p:geo:exist_uniq_geod}:
+\begin{prop}[existence and uniqueness of inextendible geodesic from a vector]
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$ and a
 nonzero vector
 $\w{V}$ in the tangent space to $\M$ at $p$, i.e. $\w{V} \in T_p\M$,
@@ -515,7 +515,8 @@ hence (\ref{e:geo:exp_tV}).
 
 The exponential map realizes a local identification of the manifold
 with its tangent space at a given point:
-\begin{prop}
+\begin{prop}[exponential map as a local diffeomorphism]
+\label{p:geo:exp_diffeo}
 For any $p\in\M$, there exists a neighbourhood $U$ of $0$ in the tangent
 space $T_p\M$ and a neighbourhood $\mathscr{U}$ of $p$ in the manifold $\M$
 such that the exponential map $\exp_p$ is a diffeomorphism from
@@ -574,7 +575,7 @@ In particular, $\left.\D\exp_p\right| _0$ is invertible.
 Given $p\in\M$, a \defin{normal neighbourhood}\index{normal!neighbourhood}\index{neighbourhood!normal --}
 of $p$ is a neighbourhood $\mathscr{U}$ of $p$ that is the image of a
 starshaped neighbourhood of $0\in T_p\M$ under the local diffeomorphism
-$\exp_p$ given by the above proposition.
+$\exp_p$ given by Property~\ref{p:geo:exp_diffeo}.
 By \defin{starshaped neighbourhood}\index{starshaped neighbourhood} of $0$, it
 is meant a neighbourhood $U$ of $0$ such that $\w{V}\in U$
 implies $t\w{V}\in U$ for any $t\in[0,1]$.
@@ -595,8 +596,9 @@ dual to $(\w{E}_\alpha)$, the map
      \end{array}
 \ee
 is a coordinate chart on $\mathscr{U}$, which is called
-\defin{geodesic normal coordinates}\index{geodesic!normal coordinates},
-often shorten as \defin{normal coordinates}\index{normal!coordinates}.
+\defin{geodesic normal coordinates}\index{geodesic!normal coordinates}
+(often shorten to \defin{normal coordinates}\index{normal!coordinates})
+\defin{associated with the basis} $(\w{E}_\alpha)$.
 \end{greybox}
 In other words, normal coordinates $(x^\alpha)$ on $\mathscr{U}$ are such
 that the tangent vector $x^\mu(q) \w{E}_\mu\in T_p\M$ has precisely
@@ -616,7 +618,7 @@ or for those with the basis orthonormality requirement (e.g. \cite{PoissW14}).
 A characteristic feature of normal coordinates is that, in terms of them,
 geodesics through $p$ look like straight lines through $0$ in
 $\R^n$:
-\begin{prop}
+\begin{prop}[geodesics in terms of normal coordinates]
 In a normal coordinate system $(x^\alpha)$, the equation of the unique geodesic
 $\Li_{\w{V}}$ through $p$ admitting $\w{V}\in T_p\M$ as tangent
 vector at $p$ is (as long as $\Li_{\w{V}}$ remains in the normal
@@ -644,7 +646,7 @@ Hence
 \]
 \end{proof}
 
-\begin{prop}
+\begin{prop}[metric components and Christoffel symbols in terms of normal coordinates]
 Let $(x^\alpha)$ be a normal coordinate system around $p\in\M$ associated
 with a basis $(\w{E}_\alpha)$ of $T_p\M$. Then
 \begin{itemize}
@@ -722,7 +724,7 @@ $\D s := \sqrt{|\w{g}(\D\w{x},\D\w{x})|}$. Using $\D\w{x} = \w{v}\,\D \lambda$
 \begin{greybox}
 The \defin{length}\index{length!of a curve} of a curve
 $\Li$ connecting two points $p$ and $q$
-in a pseudo-Riemannian manifold $(\M,\w{g})$ is
+in a pseudo-Riemannian manifold $(\M,\w{g})$ is the real number
 \be \label{e:geo:def_length}
     L_{(p,q)}(\Li) := \int_{\lambda_p}^{\lambda_q} \sqrt{\left|
         \w{g}(\w{v},\w{v}) \right| } \, \D\lambda ,
@@ -872,7 +874,7 @@ $g^{\alpha\beta} g_{\alpha\mu} = \delta^\beta_{\ \, \mu}$ as well as
 the expression (\ref{e:bas:Christoffel}) of the Christoffel symbols,
 we get exactly the pregeodesic equation (\ref{e:geo:pregeod_eq_comp}).
 Hence we conclude:
-\begin{prop}
+\begin{prop}[timelike and spacelike geodesics as stationary points of the length]
 Among all timelike (resp. spacelike) curves connecting two points $p$ and $q$, a curve has
 a stationary length iff it is a timelike (resp. spacelike) geodesic.
 \end{prop}
@@ -880,7 +882,8 @@ a stationary length iff it is a timelike (resp. spacelike) geodesic.
 For a timelike geodesic, and for points $p$ and $q$ not too far (in the same
 normal neighbourhood),
 the stationary length corresponds actually to a \emph{maximum}:
-\begin{prop}
+\begin{prop}[timelike geodesics as maximal length curves]
+\label{p:geo:timelike_geod_max_length}
 Let $(\M,\w{g})$ be a Lorentzian manifold, $p\in\M$ and $\mathscr{U}$ some
 normal neighbourhood\footnote{See Sec.~\ref{s:geo:normal_coord}.} of $p$. For any point $q\in\mathscr{U}$
 such that there exists a timelike curve in $\mathscr{U}$ from $p$ to $q$,
@@ -892,12 +895,12 @@ the proof of Proposition~5.34 in O'Neill's textbook~\cite{ONeil83}.
 We shall only illustrate the property on a specific example in flat spacetime
 (Example~\ref{x:geo:timelike_geod_Mink} below).
 
-If one interprets timelike curves as worldlines and the length as the proper time
-(cf. Sec.~\ref{s:fra:massive_part}), the above maximum
+If one interprets timelike curves as worldlines and length as proper time
+(cf. Sec.~\ref{s:fra:massive_part}), Property~\ref{p:geo:timelike_geod_max_length}
 can be viewed as a generalization of the standard ``twin paradox''\index{twin paradox}
 of special relativity: when they meet again, the twin who followed the geodesic (i.e. some
 inertial trajectory)
-is older than his brother, who made a round trip.
+is older than his brother or her sister, who made a round trip.
 
 \begin{figure}
 \centerline{\includegraphics[height=0.3\textheight]{geo_timelike_h.pdf}}
@@ -1037,8 +1040,8 @@ which excludes $\mathcal{L} = 0$.
 However, it is possible to get all geodesics, including the null ones, from
 a variational principle; one has to start from a different action, namely
 \be \label{e:geo:energy_funct}
-    S_{(p,q)}(P) := \frac{1}{2}\int_{\lambda_p}^{\lambda_q}
-        g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \, \D\lambda ,
+    \encadre{ S_{(p,q)}(P) := \frac{1}{2}\int_{\lambda_p}^{\lambda_q}
+        g_{\mu\nu}(X^\rho) \dot{X}^\mu \dot{X}^\nu \, \D\lambda },
 \ee
 where $P$ is a parametrization of the curve $\Li$, $\lambda$
 the corresponding parameter
@@ -1079,7 +1082,7 @@ Using the identity (\ref{e:geo:gXX_indices}), the Euler-Lagrange equation
 (\ref{e:geo:Euler-Lagrange}) (with $\mathcal{L}$ substituted by $\mathcal{L}_2$)
 turns out to be equivalent to the geodesic equation (\ref{e:geo:eq_geod}).
 We conclude:
-\begin{prop}
+\begin{prop}[geodesics as stationary points of the action (\ref{e:geo:energy_funct})]
 In a pseudo-Riemannian manifold $(\M,\w{g})$, a
 curve $\Li$ equipped with a parametrization $P$
 is a stationary point of the action (\ref{e:geo:energy_funct})
@@ -1129,14 +1132,15 @@ discovering the famous \emph{Carter constant}\index{Carter!constant}.
 As a reminiscence of Noether's theorem\index{Noether's theorem},
 symmetries in a pseudo-Riemannian manifold lead to conserved
 quantities along geodesics.
-Let us first recall that 1-dimensional
-groups of symmetry and the related concept of Killing vector field
+Let us first recall that 1-dimensional isometry
+groups and the related concept of Killing vector field
 have been introduced in Sec.~\ref{s:neh:symmetries}. In terms of them,
 we may state the following conservation law:
 
-\begin{prop}
+\begin{prop}[constancy of the scalar product of an affine tangent vector
+with a Killing vector]
 If the pseudo-Riemannian manifold $(\M,\w{g})$ admits a 1-dimensional
-group of symmetry of generator $\w{\xi}$, i.e. $\w{\xi}$ is a Killing
+isometry group of generator $\w{\xi}$, i.e. if $\w{\xi}$ is a Killing
 vector field of $(\M,\w{g})$, then along any geodesic $\Li$,
 the $\w{g}$-scalar product of $\w{\xi}$ by any tangent vector field
 $\w{v}=\D\w{x}/\D\lambda$ associated with an
@@ -1216,7 +1220,7 @@ neither formed from $\w{g}$ nor any Killing vector as in the examples above, one
 an extended discussion). This is because, as Killing vectors,
 Killing tensors give birth to conserved quantities along geodesics:
 
-\begin{prop}
+\begin{prop}[conserved quantity induced by a Killing tensor along a geodesic]
 If $\w{K}$ is a Killing tensor of rank $p$ on the
 the pseudo-Riemannian manifold $(\M,\w{g})$, then along any geodesic $\Li$,
 the scalar $\w{K}(\w{v},\ldots,\w{v})$, where $\w{v}=\D\w{x}/\D\lambda$ is any tangent vector field associated with an
