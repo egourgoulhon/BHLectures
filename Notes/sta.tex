@@ -11,8 +11,11 @@ This chapter is still in draft stage...
 
 \subsection{Stationarity and staticity} \label{s:sta:def_station}
 
-We shall define a spacetime
-$(\M,\w{g})$ to be \defin{stationary}\index{stationary!spacetime}
+Let us start by defining the concepts of \emph{stationary} and \emph{static}
+spacetimes.
+
+\begin{greybox}
+A spacetime $(\M,\w{g})$ is called \defin{stationary}\index{stationary!spacetime}
 iff (i) it is invariant under
 the action of the translation group $(\mathbb{R},+)$ and (ii) the orbits of
 the group action (cf. Sec.~\ref{s:neh:symmetries})
@@ -24,6 +27,7 @@ It is equivalent to say that there exists a Killing vector field
 $\w{\xi}$ (the generator of the translation group, cf. Sec.~\ref{s:neh:symmetries}) that is
 timelike everywhere or at least in the vicinity of $\scri$ when there exists a conformal
 completion.
+\end{greybox}
 
 \begin{remark} \label{r:sta:pseudo-stationary}
 Some authors (e.g. Carter \cite{Carte73b}) call such spacetimes
@@ -38,11 +42,21 @@ Chru\'sciel, Lopes Costa \& Heusler \cite{ChrusLH12}
 and Choquet-Bruhat \cite{Choqu09}.
 \end{remark}
 
-A stronger notion than stationarity is that of \emph{staticity}: an asymptotically
-flat spacetime $(\M,\w{g})$ is called \defin{static}\index{static!spacetime}
+A notion stronger than stationarity is that of \emph{staticity}:
+
+\begin{greybox}
+A spacetime $(\M,\w{g})$ is called \defin{static}\index{static!spacetime}
 iff (i) it is stationary and (ii) the Killing vector field $\w{\xi}$
 generating the stationary action is orthogonal to a family of hypersurfaces
 (one says that $\w{\xi}$ is \defin{hypersurface-orthogonal}\index{hypersurface-orthogonal}).
+\end{greybox}
+
+\begin{remark}
+The same comment as in Remark~\ref{r:sta:pseudo-stationary} can be made: some authors
+would call \emph{static spacetimes} only those in which the hypersurface-orthogonal Killing vector
+is everywhere timelike, whereas our definition is weaker, the timelike character being demanded only in the vicinity of the spacetime ``boundary'', i.e. the boundary of a conformal completion.
+\end{remark}
+
 Via the Frobenius theorem (cf. Sec.~\ref{s:def:Frobenius}), the hypersurface-orthogonal
 condition is equivalent to the existence of a 1-form $\w{\omega}$ such that
 \be \label{e:sta:dxi_Frob}
@@ -64,22 +78,18 @@ Then, one can show (see e.g. Sec.~2.9 of Straumann's textbook \cite{Strau13}), t
 \ee
 The second relation implies that $\w{\xi}$ is orthogonal to the hypersurfaces $t=\mathrm{const}$. This orthogonality property translates to $g_{0i}=0$ for $i\in\{1,\ldots,n-1\}$,
 the $g_{\alpha\beta}$'s being the metric components with respect to the coordinates
-$(x^\alpha)$. Hence one may write
+$(x^\alpha)$. Hence one may write the metric of the static spacetime as
 \be \label{e:sta:static_metric}
     \w{g} = V \dd t^2 + g_{ij} \dd x^i \dd x^j ,
 \ee
-where $V=\w{\xi}\cdot\w{\xi}$ and $g_{ij}$ are functions of $(x^1,\ldots,x^{n-1})$ only.
+where $V=\w{\xi}\cdot\w{\xi}$, the indices $(i,j)$ range in $\{1,\ldots,n-1\}$
+and $V$ and $g_{ij}$ are functions of $(x^1,\ldots,x^{n-1})$ only.
 It is clear that the metric (\ref{e:sta:static_metric}) is invariant\footnote{Would
 (\ref{e:sta:static_metric}) have contained a non-vanishing $g_{0i}\, \D t \, \D x^i$ term,
 this would not have been the case.} in the
 transformation $t\mapsto-t$. One says that a static spacetime is
 \defin{time-reflection symmetric}\index{time!reflection symmetry}\index{reflection!time --}.
 
-\begin{remark}
-The same comment as in Remark~\ref{r:sta:pseudo-stationary} can be made: some authors
-would call \emph{static spacetimes} only those in which the hypersurface-orthogonal Killing vector
-is everywhere timelike, whereas our definition is weaker, the timelike character being demanded only in the vicinity of the spacetime ``boundary'', i.e. the boundary of a conformal completion.
-\end{remark}
 
 \subsection{Black holes in stationary spacetimes}
 
@@ -101,8 +111,10 @@ it is then a null hypersurface (Property~\ref{p:glo:prop4} in Sec.~\ref{s:glo:pr
 Now, $\Hor$ is globally invariant if, and only if, the
 generator $\w{\xi}$ of the isometry group is tangent to $\Hor$.
 Since a timelike vector cannot be tangent to a null hypersurface (cf.
-Lemma~\ref{p:def:tangent_to_null_hyp} in Sec.~\ref{s:def:spacelike_sections}), we conclude that
+Lemma~\ref{p:def:tangent_to_null_hyp} in Sec.~\ref{s:def:spacelike_sections}), we conclude:
+
 \begin{prop}[stationary Killing vector tangent to the event horizon]
+\label{p:sta:xi_tangent_H}
 In a stationary spacetime containing a black hole,
 the stationary Killing vector field  $\w{\xi}$ is tangent to the event horizon
 $\Hor$, which implies that $\w{\xi}$ is either null or spacelike on $\Hor$.
@@ -110,22 +122,38 @@ $\Hor$, which implies that $\w{\xi}$ is either null or spacelike on $\Hor$.
 
 \section{The event horizon as a Killing horizon} \label{s:sta:EH_KH}
 
-Let us discuss successively the two allowed types for the stationary
-Killing vector $\w{\xi}$ on $\Hor$: null and spacelike.
+In view of Property~\ref{p:sta:xi_tangent_H}, let us
+examine successively the two allowed types for the stationary
+Killing vector $\w{\xi}$ on the event horizon $\Hor$: $\w{\xi}$ null (Sec.~\ref{s:sta:staticity_thm})
+and $\w{\xi}$ spacelike (Sec.~\ref{s:sta:strong_rigidity}). In both cases, we shall see
+that $\Hor$ must be a Killing horizon; this is immediate
+for $\w{\xi}$ null and not trivial for $\w{\xi}$ spacelike.
 
 \subsection{Null stationary Killing field on $\Hor$: the staticity theorem}\label{s:sta:staticity_thm}
 
-By the lemma of Sec.~\ref{s:def:spacelike_sections}, if the Killing vector
+By Lemma~\ref{p:def:tangent_to_null_hyp} (Sec.~\ref{s:def:spacelike_sections}),
+if the Killing vector
 field $\w{\xi}$ is null on $\Hor$, it is necessarily tangent to the null geodesic generators
 of $\Hor$ and therefore collinear to the null normals $\wl$ of $\Hor$. From the definition
-given in Sec.~\ref{s:neh:def_Killing_hor}, it follows immediately that
-$\Hor$ is a Killing horizon (with respect to the Killing field $\w{\xi}$).
-One has then:
+of a Killing horizon
+given in Sec.~\ref{s:neh:def_Killing_hor}, we get immediately:
+
+\begin{prop}[event horizon as a Killing horizon for $\w{\xi}$ null on it]
+In a stationary spacetime $(\M,\w{g})$ containing a black hole
+of event horizon $\Hor$, if the stationary Killing vector $\w{\xi}$
+is null $\Hor$, then $\Hor$ is a Killing horizon with respect to the
+Killing field $\w{\xi}$.
+\end{prop}
+
+It follows that, on $\Hor$, the Killing vector field $\w{\xi}$
+is hypersurface-orthogonal, being normal to $\Hor$. Under certain hypotheses, one can go further
+and prove that actually $\w{\xi}$ must hypersurface-orthogonal everywhere in $\M$:
+
 \begin{prop}[staticity theorem\index{staticity theorem} \textnormal{(Sudarsky \& Wald, 1992 \cite{SudarW92})}]
 Let us assume that the spacetime dimension is $n=4$ and the metric $\w{g}$
 fulfills the Einstein equation. If the stationary Killing vector $\w{\xi}$
 is null on $\Hor$, it must be
-hypersurface-orthogonal in all $\M$, not only on $\Hor$.
+hypersurface-orthogonal in all $\M$.
 It follows that the spacetime $(\M,\w{g})$ is
 \emph{static}\index{static!spacetime}, according to the definition given in Sec.~\ref{s:sta:def_station}.
 \end{prop}
