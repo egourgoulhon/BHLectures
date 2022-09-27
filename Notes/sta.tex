@@ -120,6 +120,185 @@ the stationary Killing vector field  $\w{\xi}$ is tangent to the event horizon
 $\Hor$, which implies that $\w{\xi}$ is either null or spacelike on $\Hor$.
 \end{prop}
 
+\section{Mass and angular momentum in stationary spacetimes}
+
+\subsection{Komar mass}
+
+
+Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime,
+with stationary Killing vector $\w{\xi}$.
+Given a spacelike closed 2-surface $\Sp\subset\M$,
+the \defin{Komar mass}\index{Komar!mass}\index{mass!Komar --} is
+defined by
+\be  \label{e:sta:def_Komar_mass}
+    \encadre{M := - \frac{1}{8\pi} \int_{\Sp} \star(\dd \uu{\xi}) },
+\ee
+where
+$\uu{\xi}$ is the 1-form associated to $\w{\xi}$
+by metric duality (cf. Sec.~\ref{s:bas:metric_dual}), i.e. the 1-form
+of components $\xi_\alpha = g_{\alpha\mu} \xi^\mu$, $\dd \uu{\xi}$ is
+the exterior derivative of $\uu{\xi}$ (cf. Sec.~\ref{s:bas:ext_deriv} and Eqs.~(\ref{e:bas:def_ext_1f}) and (\ref{e:bas:def_ext_1f_nab})):
+\be \label{e:sta:duxi_nab}
+    (\dd \uu{\xi})_{\alpha\beta} =
+        \partial_\alpha \xi_\beta - \partial_\beta \xi_\alpha =
+        \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha
+        = 2 \nabla_\alpha \xi_\beta ,
+\ee
+the last equality following from Killing equation (\ref{e:neh:Killing_equation}),
+and $\star(\dd \uu{\xi})$ is the 2-form that is the
+Hodge dual of $\dd \uu{\xi}$, the
+\defin{Hodge dual}\index{Hodge dual}\index{dual!Hodge --} of
+any 2-form $\w{A}$ being the 2-form $\star\w{A}$ defined by\footnote{See e.g. Sec.~14.5 of
+Ref.~\cite{Gourg13} for an introduction to Hodge duality.}
+\be \label{e:sta:Hodge_2form}
+    \star\! A_{\alpha\beta} := \frac{1}{2}
+        A_{\mu\nu} \, \epsilon^{\mu\nu}_{\ \ \; \alpha\beta} ,
+\ee
+where
+$\w{\epsilon}$ is the Levi-Civita tensor associated with the metric $\w{g}$
+(cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
+
+\begin{remark}
+As the integral of a 2-form over a 2-dimensional manifold, formula
+(\ref{e:sta:def_Komar_mass}) is well posed.
+\end{remark}
+
+As we are going to see (Property~??), the key feature of
+the Komar mass is that its value does not depend
+on the choice of the 2-surface $\Sp$, as long as the latter is located
+in a vacuum region of spacetime and $\w{g}$ fulfils the Einstein equation.
+
+
+In view of Eq.~(\ref{e:sta:Hodge_2form}) and the last equality in Eq.~(\ref{e:sta:duxi_nab}),
+the Komar mass formula (\ref{e:sta:def_Komar_mass}) becomes
+\be \label{e:sta:def_Komar_mass_alt}
+    M = - \frac{1}{8\pi} \int_{\Sp}  \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta} ,
+\ee
+where $\nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta}$
+stands for the 2-form $\w{\omega}$ defined by
+$\w{\omega}(\w{u},\w{v}) = \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\rho\sigma} u^\rho v^\sigma$
+for any pair of vector fields $(\w{u},\w{v})$.
+
+Instead of integrals of 2-forms \emph{along} the 2-surface $\Sp$, as in (\ref{e:sta:def_Komar_mass})
+and (\ref{e:sta:def_Komar_mass_alt}), one may
+express the Komar mass as a \emph{flux integral}\index{flux!integral}\index{integral!flux --}, i.e. the integral of a 2-form
+contracted with some ``surface element'', which is \emph{normal} to $\Sp$.
+More precisely, let us introduce the
+\defin{area element bivector}\index{area!element!bivector}\index{bivector!area element --} by
+\be \label{e:sta:area_bivector}
+    \D S^{\alpha\beta} := (s^\alpha n^\beta - n^\alpha s^\beta) \sqrt{q}\, \D x^2 \, \D x^3 ,
+\ee
+where
+\begin{itemize}
+\item $(x^a)=(x^2,x^3)$ is a coordinate system on $\Sp$;
+\item $\w{n}$ is a unit future-directed timelike vector normal to $\Sp$
+and $\w{s}$ is a unit spacelike vector normal to $\Sp$
+such that (i) at each point $p\in\Sp$, $(\w{n},\w{s})$ is an orthonormal basis
+of the timelike plane $T^\perp_p\Sp$ normal to $\Sp$ (cf. Fig.~\ref{f:def:TS_ortho},
+which holds for any spacelike closed 2-surface $\Sp$)
+and (ii) $(\w{n},\w{s},\wpar_2,\wpar_3)$ is a right-handed basis,
+i.e. $\w{\eps}(\w{n},\w{s},\wpar_2,\wpar_3) > 0$;
+\item $q = \det(q_{ab})$ is the determinant w.r.t. $(x^a)$ of the metric
+induced on $\Sp$ by the spacetime metric $\w{g}$, so that
+$\sqrt{q}\, \D x^2 \, \D x^3$ is the area element on $\Sp$.
+\end{itemize}
+To reexpress the Komar mass, we shall use the following identity:\\
+\begin{lemma}[Flux integral of a 2-form]
+For any 2-form $\w{A}$ defined in the vicinity of $\Sp$, one has
+\be \label{e:sta:int_star_A}
+    \int_{\Sp} \star \w{A} = \frac{1}{2} \int_{\Sp} A_{\mu\nu} \, \D S^{\mu\nu} ,
+\ee
+where the 2-form $\star\w{A}$ is the Hodge dual of $\w{A}$, as
+defined by Eq.~(\ref{e:sta:Hodge_2form}).
+\end{lemma}
+\begin{proof}
+Using the definition (\ref{e:sta:Hodge_2form}), we have
+\[
+    \int_{\Sp} \star \w{A} =
+        \frac{1}{2} \int_{\Sp} A_{\mu\nu} \, \epsilon^{\mu\nu}_{\ \ \; \alpha\beta} =
+        \frac{1}{2} \int_{\Sp} A^{\mu\nu} \, \epsilon_{\mu\nu\alpha\beta} =
+         \frac{1}{2} \int_{\Sp} \w{A}^\sharp (\w{e}^{(\mu)}, \w{e}^{(\nu)})
+                \, \w{\epsilon}(\w{e}_{(\mu)}, \w{e}_{(\nu)}, \D\w{\ell}_{2},
+                    \D\w{\ell}_{3}) ,
+\]
+where $(\w{e}_{(\alpha)})$ is an orthonormal tetrad such that
+$\w{e}_{(0)} = \w{n}$ and $\w{e}_{(1)} = \w{s}$,
+$(\w{e}^{(\alpha)})$ is its dual cobasis and $\D\w{\ell}_{2}$ and $\D\w{\ell}_{3}$
+are displacement vectors forming elementary parallelograms on $\Sp$; for instance
+$\D\w{\ell}_{2} = \D x^2 \, \wpar_2$ and $\D\w{\ell}_{3} = \D x^3 \, \wpar_3$.
+Note that the last equality in the above expression results from the very
+definition of the integral of a 2-form on a 2-surface.
+Given the definition of the tetrad $(\w{e}_{(\alpha)})$, $(\w{e}_{(2)}, \w{e}_{(3)})$
+is necessarily a basis of the tangent space $T_p\Sp$; consequently
+$\D\w{\ell}_{2}$ and $\D\w{\ell}_{3}$ are linear combinations of $\w{e}_{(2)}$
+and $\w{e}_{(3)}$. Given the alternate character of $\w{\epsilon}$, the sum
+over the indices $\mu$ and $\nu$ can be then restricted to $\mu,\nu = 0$ or $1$.
+Hence
+\bea
+     \int_{\Sp} \star \w{A}    & = &
+         \frac{1}{2} \int_{\Sp}
+    \left[ \w{A}^\sharp (\w{e}^{(0)}, \w{e}^{(1)})
+            \, \w{\epsilon}(\w{e}_{(0)}, \w{e}_{(1)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
+   + \w{A}^\sharp (\w{e}^{(1)}, \w{e}^{(0)})
+            \, \w{\epsilon}(\w{e}_{(1)}, \w{e}_{(0)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
+            \right] \nonumber \\
+    & = & \int_{\Sp}
+    \w{A}^\sharp (\w{e}^{(0)}, \w{e}^{(1)})
+            \, \w{\epsilon}(\w{e}_{(0)}, \w{e}_{(1)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
+    =  \int_{\Sp} A^{(0)(1)}
+    \, \w{\epsilon}(\w{n}, \w{s}, \D\w{\ell}_{2}, \D\w{\ell}_{3}) . \nonumber
+\eea
+Now, since $(\w{e}_{(\alpha)})$ is an orthonormal basis,
+\[
+  A^{(0)(1)} = g^{(0)(\mu)} g^{(1)(\nu)} A_{(\mu)(\nu)} = g^{(0)(0)} g^{(1)(1)}
+    A_{(0)(1)} = (-1)\times 1 \times A_{(0)(1)} = - A_{(0)(1)} ,
+\]
+with
+\[
+    A_{(0)(1)} = \w{A}(\w{e}_{(0)}, \w{e}_{(1)}) = \w{A}(\w{n}, \w{s})
+        = A_{\mu\nu} n^\mu s^\nu = - A_{\mu\nu} s^\mu n^\nu
+        = - \frac{1}{2} A_{\mu\nu} (s^\mu n^\nu - n^\mu s^\nu) .
+\]
+On the other side, we recognize in ${}^\Sp\!\!\w{\epsilon} := \w{\epsilon}(\w{n}, \w{s}, ., .)$ the
+area element 2-form on $\Sp$ (see e.g. Sec.~16.4.3 of Ref.~\cite{Gourg13}),
+so that we may write, for
+$\D\w{\ell}_{2} = \D x^2 \, \wpar_2$ and $\D\w{\ell}_{3} = \D x^3 \, \wpar_3$,
+\[
+    \w{\epsilon}(\w{n}, \w{s}, \D\w{\ell}_{2}, \D\w{\ell}_{3}) =
+        {}^\Sp\!\!\epsilon_{ab} \, \D\ell_{2}^a \, \D\ell_3^b
+        = \sqrt{q} \, \D x^2 \, \D x^3 .
+\]
+Gathering the above results and using Eq.~(\ref{e:sta:area_bivector})
+establishes Eq.~(\ref{e:sta:int_star_A}).
+\end{proof}
+
+Thanks to Eq.~(\ref{e:sta:int_star_A}), we may reexpress the Komar mass
+(\ref{e:sta:def_Komar_mass}) as
+\be \label{e:sta:M_Komar_dS}
+   M = -\frac{1}{16\pi} \int_{\Sp} (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} .
+\ee
+Using the last equality in Eq.~(\ref{e:sta:duxi_nab}), this becomes
+\be
+    \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} \nabla_\mu \xi_\nu \,  \D S^{\mu\nu} } .
+\ee
+Alternatively, we may express the exterior derivative in terms of
+partial derivatives (first equality in Eq.~(\ref{e:sta:duxi_nab})) and get
+\[
+    (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} =
+    (\partial_\mu \xi_\nu - \partial_\nu \xi_\mu)
+    (s^\mu n^\nu - n^\mu s^\nu) \sqrt{q}\, \D x^2 \, \D x^3
+    = 2 (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
+    \sqrt{q}\, \D x^2 \, \D x^3,
+\]
+so that Eq.~(\ref{e:sta:M_Komar_dS}) yields an expression of the Komar mass that
+may be useful for explicit computations:
+\be \label{e:sta:M_Komar_partial_der}
+    \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
+    \sqrt{q}\, \D x^2 \, \D x^3 } .
+\ee
+
+
+
 \section{The event horizon as a Killing horizon} \label{s:sta:EH_KH}
 
 In view of Property~\ref{p:sta:xi_tangent_H}, let us

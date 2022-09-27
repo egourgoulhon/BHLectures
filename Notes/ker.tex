@@ -1748,178 +1748,16 @@ there is a generic definition of the mass, given by an invariant integral:
 the \emph{Komar mass}.
 Let us show explicitly that for the Kerr spacetime, the Komar mass coincides with $m$.
 
-Let $(\M, \w{g})$ be an asymptotically flat spacetime endowed with
-a Killing vector $\w{\xi}$ which is timelike at least near infinity.
-The \defin{Komar mass}\index{Komar!mass}\index{mass!Komar --} is
-defined as
-\be  \label{e:ker:def_Komar_mass}
-    \encadre{M := - \frac{1}{8\pi} \int_{\Sp} \star(\dd \uu{\xi}) },
-\ee
-where
-\begin{itemize}
-\item $\Sp$ is a closed spacelike 2-surface;
-\item $\uu{\xi}$ is the 1-form associated to the Killing vector $\w{\xi}$
-by metric duality (cf. Sec.~\ref{s:bas:metric_dual}), i.e. the 1-form
-of components $\xi_\alpha = g_{\alpha\mu} \xi^\mu$, $\dd \uu{\xi}$ is
-the exterior derivative of $\uu{\xi}$ (cf. Sec.~\ref{s:bas:ext_deriv} and Eqs.~(\ref{e:bas:def_ext_1f}) and (\ref{e:bas:def_ext_1f_nab})):
-\be \label{e:ker:duxi_nab}
-    (\dd \uu{\xi})_{\alpha\beta} =
-        \partial_\alpha \xi_\beta - \partial_\beta \xi_\alpha =
-        \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha
-        = 2 \nabla_\alpha \xi_\beta ,
-\ee
-the last equality following from Killing equation (\ref{e:neh:Killing_equation}),
-and $\star(\dd \uu{\xi})$ is the
-\defin{Hodge dual}\index{Hodge dual}\index{dual!Hodge --} of the 2-form
-$\dd \uu{\xi}$, i.e. the 2-form defined by\footnote{See e.g. Sec.~14.5 of
-Ref.~\cite{Gourg13} for an introduction to Hodge duality.}
-\be \label{e:ker:star_duxi}
-    \star(\dd \uu{\xi}) _{\alpha\beta} := \frac{1}{2}
-        (\dd \uu{\xi})_{\mu\nu} \, \epsilon^{\mu\nu}_{\ \ \; \alpha\beta} ,
-\ee
-$\w{\epsilon}$ being the Levi-Civita tensor associated with the metric $\w{g}$
-(cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
-\end{itemize}
-An important property of the Komar mass is that its value does not depend
-on the choice of the 2-surface $\Sp$, as long as the latter is located
-in a vacuum region of spacetime and $\w{g}$ fulfils the Einstein equation
-(see e.g. Sec.~8.6.1 of Ref.~\cite{Gourg12} for a demonstration).
 
-
-\begin{remark}
-As the integral of a 2-form over a 2-dimensional manifold, formula
-(\ref{e:ker:def_Komar_mass}) is well posed.
-\end{remark}
-In view of Eq.~(\ref{e:ker:star_duxi}) and the last equality in Eq.~(\ref{e:ker:duxi_nab}),
-the Komar mass formula (\ref{e:ker:def_Komar_mass}) becomes
-\be \label{e:ker:def_Komar_mass_alt}
-    M = - \frac{1}{8\pi} \int_{\Sp}  \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta} ,
-\ee
-where $\omega_{\alpha\beta}:=\nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta}$
-stands for the 2-form defined by
-$\w{\omega}(\w{u},\w{v}) = \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\rho\sigma} u^\rho v^\sigma$
-for any pair of vector fields $(\w{u},\w{v})$.
-
-Instead of integrals of 2-forms \emph{along} the 2-surface $\Sp$, as in (\ref{e:ker:def_Komar_mass})
-and (\ref{e:ker:def_Komar_mass_alt}), one may
-express the Komar mass as a \emph{flux integral}\index{flux!integral}\index{integral!flux --}, i.e. the integral of a 2-form
-contracted with some ``surface element'', which is \emph{normal} to $\Sp$.
-More precisely, let us introduce the
-\defin{area element bivector}\index{area!element!bivector}\index{bivector!area element --} by
-\be
-    \D S^{\alpha\beta} := (s^\alpha n^\beta - n^\alpha s^\beta) \sqrt{q}\, \D x^2 \, \D x^3 ,
-\ee
-where
-\begin{itemize}
-\item
-$\w{s}$ is a unit spacelike vector normal to $\Sp$ and oriented towards the
-exterior of $\Sp$, $\w{n}$ is a unit timelike vector normal to $\Sp$ and oriented towards the
-future\footnote{The vector $\w{n}$ considered here shall not be confused with
-the vector $\w{n}$ introduced in Sec.~\ref{s:ker:Killing_hor}.}, such that, at each point $p\in\Sp$, $(\w{n},\w{s})$ is an orthonormal basis
-of the timelike plane $T^\perp_p\Sp$ normal to $\Sp$.
-\item $(x^a)=(x^2,x^3)$ is a coordinate system on $\Sp$
-\item $q = \det(q_{ab})$ is the determinant w.r.t. $(x^a)$ of the metric
-induced on $\Sp$ by the spacetime metric $\w{g}$, so that
-$\sqrt{q}\, \D x^2 \, \D x^3$ is the area element on $\Sp$.
-\end{itemize}
-To reexpress the Komar mass, we shall use the following identity:\\
-\textbf{Lemma}: for any 2-form $\w{A}$ defined in the vicinity of $\Sp$, one has
-\be \label{e:ker:int_star_A}
-    \int_{\Sp} \star \w{A} = \frac{1}{2} \int_{\Sp} A_{\mu\nu} \, \D S^{\mu\nu} .
-\ee
-\begin{proof}
-Using the definition of the Hodge dual, we have
-\[
-    \int_{\Sp} \star \w{A} =
-        \frac{1}{2} \int_{\Sp} A_{\mu\nu} \, \epsilon^{\mu\nu}_{\ \ \; \alpha\beta} =
-        \frac{1}{2} \int_{\Sp} A^{\mu\nu} \, \epsilon_{\mu\nu\alpha\beta} =
-         \frac{1}{2} \int_{\Sp} \w{A}^\sharp (\w{e}^{(\mu)}, \w{e}^{(\nu)})
-                \, \w{\epsilon}(\w{e}_{(\mu)}, \w{e}_{(\nu)}, \D\w{\ell}_{2},
-                    \D\w{\ell}_{3}) ,
-\]
-where $(\w{e}_{(\alpha)})$ is an orthonormal tetrad such that
-$\w{e}_{(0)} = \w{n}$ and $\w{e}_{(1)} = \w{s}$,
-$(\w{e}^{(\alpha)})$ is its dual cobasis and $\D\w{\ell}_{2}$ and $\D\w{\ell}_{3}$
-are displacement vectors forming elementary parallelograms on $\Sp$; for instance
-$\D\w{\ell}_{2} = \D x^2 \, \wpar_2$ and $\D\w{\ell}_{3} = \D x^3 \, \wpar_3$.
-Notice that the last equality in the expression above results from the very
-definition of the integral of a 2-form on a 2-surface.
-Given the definition of $(\w{e}_{(\alpha)})$, $(\w{e}_{(2)}, \w{e}_{(3)})$
-is necessarily a basis of the tangent space $T_p\Sp$; consequently
-$\D\w{\ell}_{2}$ and $\D\w{\ell}_{3}$ are linear combinations of $\w{e}_{(2)}$
-and $\w{e}_{(3)})$. Given the alternate character of $\w{\epsilon}$, the sum
-over the indices $\mu$ and $\nu$ can be then restricted to $\mu,\nu = 0$ or $1$.
-Hence
-\bea
-     \int_{\Sp} \star \w{A}    & = &
-         \frac{1}{2} \int_{\Sp}
-    \left[ \w{A}^\sharp (\w{e}^{(0)}, \w{e}^{(1)})
-            \, \w{\epsilon}(\w{e}_{(0)}, \w{e}_{(1)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
-   + \w{A}^\sharp (\w{e}^{(1)}, \w{e}^{(0)})
-            \, \w{\epsilon}(\w{e}_{(1)}, \w{e}_{(0)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
-            \right] \nonumber \\
-    & = & \int_{\Sp}
-    \w{A}^\sharp (\w{e}^{(0)}, \w{e}^{(1)})
-            \, \w{\epsilon}(\w{e}_{(0)}, \w{e}_{(1)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
-            \nonumber \\
-    & = &  \int_{\Sp} A^{(0)(1)}
-    \, \w{\epsilon}(\w{n}, \w{s}, \D\w{\ell}_{2}, \D\w{\ell}_{3}) . \nonumber
-\eea
-Now, since $(\w{e}_{(\alpha)})$ is an orthonormal basis,
-\[
-  A^{(0)(1)} = g^{(0)(\mu)} g^{(1)(\nu)} A_{(\mu)(\nu)} = g^{(0)(0)} g^{(1)(1)}
-    A_{(0)(1)} = (-1)\times 1 \times A_{(0)(1)} = - A_{(0)(1)} ,
-\]
-with
-\[
-    A_{(0)(1)} = \w{A}(\w{e}_{(0)}, \w{e}_{(1)}) = \w{A}(\w{n}, \w{s})
-        = A_{\mu\nu} n^\mu s^\nu = - A_{\mu\nu} s^\mu n^\nu
-        = - \frac{1}{2} A_{\mu\nu} (s^\mu n^\nu - n^\mu s^\nu) .
-\]
-On the other side, we recognize in ${}^\Sp\!\!\w{\epsilon} := \w{\epsilon}(\w{n}, \w{s}, ., .)$ the
-area element 2-form on $\Sp$, so that we may write, for
-$\D\w{\ell}_{2} = \D x^2 \, \wpar_2$ and $\D\w{\ell}_{3} = \D x^3 \, \wpar_3$,
-\[
-    \w{\epsilon}(\w{n}, \w{s}, \D\w{\ell}_{2}, \D\w{\ell}_{3}) =
-        {}^\Sp\!\!\epsilon_{ab} \, \D\ell_{2}^a \, \D\ell_3^b
-        = \sqrt{q} \, \D x^2 \, \D x^3 .
-\]
-Gathering the above results establishes (\ref{e:ker:int_star_A}).
-\end{proof}
-
-Thanks to (\ref{e:ker:int_star_A}), we may reexpress the Komar mass
-(\ref{e:ker:def_Komar_mass}) as
-\be \label{e:ker:M_Komar_dS}
-   M = -\frac{1}{16\pi} \int_{\Sp} (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} .
-\ee
-Using the last equality in Eq.~(\ref{e:ker:duxi_nab}), this becomes
-\be
-    \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} \nabla_\mu \xi_\nu \,  \D S^{\mu\nu} } .
-\ee
-Alternatively, we may express the exterior derivative in terms of
-partial derivatives (first equality in Eq.~(\ref{e:ker:duxi_nab})) and get
-\[
-    (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} =
-    (\partial_\mu \xi_\nu - \partial_\nu \xi_\mu)
-    (s^\mu n^\nu - n^\mu s^\nu) \sqrt{q}\, \D x^2 \, \D x^3
-    = 2 (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
-    \sqrt{q}\, \D x^2 \, \D x^3,
-\]
-so that (\ref{e:ker:M_Komar_dS}) becomes
-\be \label{e:ker:M_Komar_partial_der}
-    \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
-    \sqrt{q}\, \D x^2 \, \D x^3 } .
-\ee
-
-Let us use this last expression to compute the Komar mass of the Kerr
-spacetime. For this purpose, we shall consider the Boyer-Lindquist coordinates
+Let us use the Komar mass expression~(\ref{e:sta:M_Komar_partial_der}) to compute it
+for the Kerr spacetime. For this purpose, we shall consider the Boyer-Lindquist coordinates
 $(x^\alpha) = (t,r,\th,\ph)$ and define $\Sp$ to be a sphere
 $t=\mathrm{const}$ and $r=\mathrm{const}$. Coordinates on $\Sp$ are then
 $(x^2,x^3)=(\th,\ph)$. Moreover, since the value of $M$ does not depend on
 the choice of $\Sp$, we may set $r\rightarrow +\infty$ and use the
 asymptotic flatness of Kerr metric to get simple expressions. The unit normals
 to $\Sp$ are then $\w{n} = \wpar_t$ and $\w{s} = \wpar_r$. Moreover, when
-$r\rightarrow +\infty$, $\sqrt{q} = r^2\sin\th$. Hence (\ref{e:ker:M_Komar_partial_der})
+$r\rightarrow +\infty$, $\sqrt{q} = r^2\sin\th$. Hence (\ref{e:sta:M_Komar_partial_der})
 yields
 \[
     M = -\frac{1}{8\pi} \lim_{r\rightarrow +\infty}
@@ -1963,7 +1801,7 @@ As the Komar mass $M$, $J$ does not depend on the choice of $\Sp$,
 provided it lies in the vacuum region and $\w{g}$ obeys Einstein equation.
 
 \begin{remark}
-Besides the sign and the change $\w{\xi}\leftrightarrow\w{\eta}$, we notice a difference by a factor 2 between the r.h.s. of (\ref{e:ker:def_Komar_mass}) and (\ref{e:ker:def_Komar_J}).
+Besides the sign and the change $\w{\xi}\leftrightarrow\w{\eta}$, we notice a difference by a factor 2 between the r.h.s. of (\ref{e:sta:def_Komar_mass}) and (\ref{e:ker:def_Komar_J}).
 This is known as \emph{Komar's anomalous factor} and is discussed further in
 Ref.~\cite{Katz85}.
 \end{remark}
@@ -2522,7 +2360,7 @@ decomposition\footnote{This name stems from the decomposition of the electromagn
 with respect to an observer of 4-velocity $\w{u}$ into the electric field $\w{E}$ and the magnetic
 field $\w{B}$, both measured by that observer, according to
 $\w{F} = \uu{u}\wedge\uu{E} + \star (\uu{u}\wedge\uu{B})$, where $\star$ stands
-for the Hodge dual, cf. Eq.~(\ref{e:ker:star_duxi}).}
+for the Hodge dual, cf. Eq.~(\ref{e:sta:Hodge_2form}).}
 of the 2-form $\dd\uu{u}$ with respect to $\w{u}$ (cf. Sec.~\ref{s:bas:ext_deriv}):
 \be \label{e:ker:du_au_Omega}
     \dd\uu{u} = \w{\uu{a}}\wedge \uu{u} + \w{\Omega} \quad\mbox{with}\quad \w{\Omega}(\w{u}, \cdot) = 0 ,
