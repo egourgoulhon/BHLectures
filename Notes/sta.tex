@@ -120,377 +120,22 @@ the stationary Killing vector field  $\w{\xi}$ is tangent to the event horizon
 $\Hor$, which implies that $\w{\xi}$ is either null or spacelike on $\Hor$.
 \end{prop}
 
-\section{Mass and angular momentum in stationary spacetimes}
-
-\subsection{Komar mass}
-
-
-Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime,
-with stationary Killing vector $\w{\xi}$.
-Given a spacelike closed 2-surface $\Sp\subset\M$,
-the \defin{Komar mass}\index{Komar!mass}\index{mass!Komar --} is
-defined by
-\be  \label{e:sta:def_Komar_mass}
-    \encadre{M := - \frac{1}{8\pi} \int_{\Sp} \star(\dd \uu{\xi}) },
-\ee
-where
-$\uu{\xi}$ is the 1-form associated to $\w{\xi}$
-by metric duality (cf. Sec.~\ref{s:bas:metric_dual}), i.e. the 1-form
-of components $\xi_\alpha = g_{\alpha\mu} \xi^\mu$, $\dd \uu{\xi}$ is
-the exterior derivative of $\uu{\xi}$ (cf. Sec.~\ref{s:bas:ext_deriv} and Eqs.~(\ref{e:bas:def_ext_1f}) and (\ref{e:bas:def_ext_1f_nab})):
-\be \label{e:sta:duxi_nab}
-    (\dd \uu{\xi})_{\alpha\beta} =
-        \partial_\alpha \xi_\beta - \partial_\beta \xi_\alpha =
-        \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha
-        = 2 \nabla_\alpha \xi_\beta ,
-\ee
-the last equality following from Killing equation (\ref{e:neh:Killing_equation}),
-and $\star(\dd \uu{\xi})$ is the 2-form that is the
-Hodge dual of $\dd \uu{\xi}$, the
-\defin{Hodge dual}\index{Hodge dual}\index{dual!Hodge --} of
-any 2-form $\w{A}$ being the 2-form $\star\w{A}$ defined by\footnote{See e.g. Sec.~14.5 of
-Ref.~\cite{Gourg13} for an introduction to Hodge duality.}
-\be \label{e:sta:Hodge_2form}
-    \star\! A_{\alpha\beta} := \frac{1}{2}
-        A_{\mu\nu} \, \epsilon^{\mu\nu}_{\ \ \; \alpha\beta} ,
-\ee
-where
-$\w{\epsilon}$ is the Levi-Civita tensor associated with the metric $\w{g}$
-(cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
-
-\begin{remark}
-As the integral of a 2-form over a 2-dimensional manifold, formula
-(\ref{e:sta:def_Komar_mass}) is well posed.
-\end{remark}
-
-As we are going to see (Property~??), the key feature of
-the Komar mass is that its value does not depend
-on the choice of the 2-surface $\Sp$, as long as the latter is located
-in a vacuum region of spacetime and $\w{g}$ fulfils the Einstein equation.
-
-
-In view of Eq.~(\ref{e:sta:Hodge_2form}) and the last equality in Eq.~(\ref{e:sta:duxi_nab}),
-the Komar mass formula (\ref{e:sta:def_Komar_mass}) becomes
-\be \label{e:sta:def_Komar_mass_alt}
-    M = - \frac{1}{8\pi} \int_{\Sp}  \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta} ,
-\ee
-where $\nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta}$
-stands for the 2-form $\w{\omega}$ defined by
-$\w{\omega}(\w{u},\w{v}) = \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\rho\sigma} u^\rho v^\sigma$
-for any pair of vector fields $(\w{u},\w{v})$.
-
-Instead of integrals of 2-forms \emph{along} the 2-surface $\Sp$, as in (\ref{e:sta:def_Komar_mass})
-and (\ref{e:sta:def_Komar_mass_alt}), one may
-express the Komar mass as a \emph{flux integral}\index{flux!integral}\index{integral!flux --}, i.e. the integral of a 2-form
-contracted with some ``surface element'', which is \emph{normal} to $\Sp$.
-More precisely, let us introduce the
-\defin{area element bivector}\index{area!element!bivector}\index{bivector!area element --} by
-\be \label{e:sta:area_bivector}
-    \D S^{\alpha\beta} := (s^\alpha n^\beta - n^\alpha s^\beta) \sqrt{q}\, \D x^2 \, \D x^3 ,
-\ee
-where
-\begin{itemize}
-\item $(x^a)=(x^2,x^3)$ is a coordinate system on $\Sp$;
-\item $\w{n}$ is a unit future-directed timelike vector normal to $\Sp$
-and $\w{s}$ is a unit spacelike vector normal to $\Sp$
-such that (i) at each point $p\in\Sp$, $(\w{n},\w{s})$ is an orthonormal basis
-of the timelike plane $T^\perp_p\Sp$ normal to $\Sp$ (cf. Fig.~\ref{f:def:TS_ortho},
-which holds for any spacelike closed 2-surface $\Sp$)
-and (ii) $(\w{n},\w{s},\wpar_2,\wpar_3)$ is a right-handed basis,
-i.e. $\w{\eps}(\w{n},\w{s},\wpar_2,\wpar_3) > 0$;
-\item $q = \det(q_{ab})$ is the determinant w.r.t. $(x^a)$ of the metric
-induced on $\Sp$ by the spacetime metric $\w{g}$, so that
-$\sqrt{q}\, \D x^2 \, \D x^3$ is the area element on $\Sp$.
-\end{itemize}
-To reexpress the Komar mass, we shall use the following identity:\\
-\begin{lemma}[Flux integral of a 2-form]
-For any 2-form $\w{A}$ defined in the vicinity of $\Sp$, one has
-\be \label{e:sta:int_star_A}
-    \int_{\Sp} \star \w{A} = \frac{1}{2} \int_{\Sp} A_{\mu\nu} \, \D S^{\mu\nu} ,
-\ee
-where the 2-form $\star\w{A}$ is the Hodge dual of $\w{A}$, as
-defined by Eq.~(\ref{e:sta:Hodge_2form}).
-\end{lemma}
-\begin{proof}
-Using the definition (\ref{e:sta:Hodge_2form}), we have
-\[
-    \int_{\Sp} \star \w{A} =
-        \frac{1}{2} \int_{\Sp} A_{\mu\nu} \, \epsilon^{\mu\nu}_{\ \ \; \alpha\beta} =
-        \frac{1}{2} \int_{\Sp} A^{\mu\nu} \, \epsilon_{\mu\nu\alpha\beta} =
-         \frac{1}{2} \int_{\Sp} \w{A}^\sharp (\w{e}^{(\mu)}, \w{e}^{(\nu)})
-                \, \w{\epsilon}(\w{e}_{(\mu)}, \w{e}_{(\nu)}, \D\w{\ell}_{2},
-                    \D\w{\ell}_{3}) ,
-\]
-where $(\w{e}_{(\alpha)})$ is an orthonormal tetrad such that
-$\w{e}_{(0)} = \w{n}$ and $\w{e}_{(1)} = \w{s}$,
-$(\w{e}^{(\alpha)})$ is its dual cobasis and $\D\w{\ell}_{2}$ and $\D\w{\ell}_{3}$
-are displacement vectors forming elementary parallelograms on $\Sp$; for instance
-$\D\w{\ell}_{2} = \D x^2 \, \wpar_2$ and $\D\w{\ell}_{3} = \D x^3 \, \wpar_3$.
-Note that the last equality in the above expression results from the very
-definition of the integral of a 2-form on a 2-surface.
-Given the definition of the tetrad $(\w{e}_{(\alpha)})$, $(\w{e}_{(2)}, \w{e}_{(3)})$
-is necessarily a basis of the tangent space $T_p\Sp$; consequently
-$\D\w{\ell}_{2}$ and $\D\w{\ell}_{3}$ are linear combinations of $\w{e}_{(2)}$
-and $\w{e}_{(3)}$. Given the alternate character of $\w{\epsilon}$, the sum
-over the indices $\mu$ and $\nu$ can be then restricted to $\mu,\nu = 0$ or $1$.
-Hence
-\bea
-     \int_{\Sp} \star \w{A}    & = &
-         \frac{1}{2} \int_{\Sp}
-    \left[ \w{A}^\sharp (\w{e}^{(0)}, \w{e}^{(1)})
-            \, \w{\epsilon}(\w{e}_{(0)}, \w{e}_{(1)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
-   + \w{A}^\sharp (\w{e}^{(1)}, \w{e}^{(0)})
-            \, \w{\epsilon}(\w{e}_{(1)}, \w{e}_{(0)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
-            \right] \nonumber \\
-    & = & \int_{\Sp}
-    \w{A}^\sharp (\w{e}^{(0)}, \w{e}^{(1)})
-            \, \w{\epsilon}(\w{e}_{(0)}, \w{e}_{(1)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
-    =  \int_{\Sp} A^{(0)(1)}
-    \, \w{\epsilon}(\w{n}, \w{s}, \D\w{\ell}_{2}, \D\w{\ell}_{3}) . \nonumber
-\eea
-Now, since $(\w{e}_{(\alpha)})$ is an orthonormal basis,
-\[
-  A^{(0)(1)} = g^{(0)(\mu)} g^{(1)(\nu)} A_{(\mu)(\nu)} = g^{(0)(0)} g^{(1)(1)}
-    A_{(0)(1)} = (-1)\times 1 \times A_{(0)(1)} = - A_{(0)(1)} ,
-\]
-with
-\[
-    A_{(0)(1)} = \w{A}(\w{e}_{(0)}, \w{e}_{(1)}) = \w{A}(\w{n}, \w{s})
-        = A_{\mu\nu} n^\mu s^\nu = - A_{\mu\nu} s^\mu n^\nu
-        = - \frac{1}{2} A_{\mu\nu} (s^\mu n^\nu - n^\mu s^\nu) .
-\]
-On the other side, we recognize in ${}^\Sp\!\!\w{\epsilon} := \w{\epsilon}(\w{n}, \w{s}, ., .)$ the
-area element 2-form on $\Sp$ (see e.g. Sec.~16.4.3 of Ref.~\cite{Gourg13}),
-so that we may write, for
-$\D\w{\ell}_{2} = \D x^2 \, \wpar_2$ and $\D\w{\ell}_{3} = \D x^3 \, \wpar_3$,
-\[
-    \w{\epsilon}(\w{n}, \w{s}, \D\w{\ell}_{2}, \D\w{\ell}_{3}) =
-        {}^\Sp\!\!\epsilon_{ab} \, \D\ell_{2}^a \, \D\ell_3^b
-        = \sqrt{q} \, \D x^2 \, \D x^3 .
-\]
-Gathering the above results and using Eq.~(\ref{e:sta:area_bivector})
-establishes Eq.~(\ref{e:sta:int_star_A}).
-\end{proof}
-
-Thanks to Eq.~(\ref{e:sta:int_star_A}), we may reexpress the Komar mass
-(\ref{e:sta:def_Komar_mass}) as
-\be \label{e:sta:M_Komar_dS}
-   M = -\frac{1}{16\pi} \int_{\Sp} (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} .
-\ee
-Using the last equality in Eq.~(\ref{e:sta:duxi_nab}), this becomes
-\be
-    \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} \nabla_\mu \xi_\nu \,  \D S^{\mu\nu} } .
-\ee
-Alternatively, we may express the exterior derivative in terms of
-partial derivatives (first equality in Eq.~(\ref{e:sta:duxi_nab})) and get
-\[
-    (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} =
-    (\partial_\mu \xi_\nu - \partial_\nu \xi_\mu)
-    (s^\mu n^\nu - n^\mu s^\nu) \sqrt{q}\, \D x^2 \, \D x^3
-    = 2 (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
-    \sqrt{q}\, \D x^2 \, \D x^3,
-\]
-so that Eq.~(\ref{e:sta:M_Komar_dS}) yields an expression of the Komar mass that
-may be useful for explicit computations:
-\be \label{e:sta:M_Komar_partial_der}
-    \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
-    \sqrt{q}\, \D x^2 \, \D x^3 } .
-\ee
-
-
-
-\section{The event horizon as a Killing horizon} \label{s:sta:EH_KH}
-
-In view of Property~\ref{p:sta:xi_tangent_H}, let us
-examine successively the two allowed types for the stationary
-Killing vector $\w{\xi}$ on the event horizon $\Hor$: $\w{\xi}$ null (Sec.~\ref{s:sta:staticity_thm})
-and $\w{\xi}$ spacelike (Sec.~\ref{s:sta:strong_rigidity}). In both cases, we shall see
-that $\Hor$ must be a Killing horizon; this is immediate
-for $\w{\xi}$ null and not trivial for $\w{\xi}$ spacelike.
-
-\subsection{Null stationary Killing field on $\Hor$: the staticity theorem}\label{s:sta:staticity_thm}
-
-By Lemma~\ref{p:def:tangent_to_null_hyp} (Sec.~\ref{s:def:spacelike_sections}),
-if the Killing vector
-field $\w{\xi}$ is null on $\Hor$, it is necessarily tangent to the null geodesic generators
-of $\Hor$ and therefore collinear to the null normals $\wl$ of $\Hor$. From the definition
-of a Killing horizon
-given in Sec.~\ref{s:neh:def_Killing_hor}, we get immediately:
-
-\begin{prop}[event horizon as a Killing horizon for $\w{\xi}$ null on it]
-\label{p:sta:H_Killing_hor_xi_null}
-In a stationary spacetime $(\M,\w{g})$ containing a black hole
-of event horizon $\Hor$, if the stationary Killing vector $\w{\xi}$
-is null $\Hor$, then $\Hor$ is a Killing horizon with respect to the
-Killing field $\w{\xi}$.
-\end{prop}
-
-It follows that, on $\Hor$, the Killing vector field $\w{\xi}$
-is hypersurface-orthogonal, being normal to $\Hor$. Under certain hypotheses, especially
-that the metric fulfills the Einstein equation, one can go further
-and prove that actually $\w{\xi}$ must hypersurface-orthogonal everywhere in $\M$:
-
-\begin{prop}[staticity theorem\index{staticity theorem} \textnormal{(Sudarsky \& Wald, 1993)}]
-\label{p:sta:staticity_thm}
-Let $(\M,\w{g})$ be a stationary spacetime of dimension $n=4$ containing a black
-hole of event horizon $\Hor$ such that the stationary Killing vector $\w{\xi}$
-is null on $\Hor$.
-Let us assume that $\w{g}$ is a solution of the \emph{electrovacuum} Einstein
-equation, i.e. Eq.~(\ref{e:fra:Einstein_eq}) with either $\w{T} = 0$
-or $\w{T}$ being the energy-momentum tensor of a source-free electromagnetic
-field $\w{F}$ that is stationary: $\Lie{\w{\xi}} \w{F} = 0$ (one says that
-$(\w{g},\w{F})$ is a solution of the stationary Einstein-Maxwell system). Then,
-assuming that $\Hor$ is non-degenerate, i.e. has a nonzero surface gravity
-(cf. Sec.~\ref{s:neh:classif_KH}), the Killing vector $\w{\xi}$  is
-hypersurface-orthogonal in all $\M$.
-It follows that the spacetime $(\M,\w{g})$ is
-\emph{static}\index{static!spacetime} (cf. the definition given in Sec.~\ref{s:sta:def_station}).
-\end{prop}
-The proof can be found in the original article by Sudarsky \& Wald \cite{SudarW93}.
-A simplified version for the vacuum case ($\w{T}=0$) is given in the appendix
-of Carter's review article \cite{Carte99}.
-
-\begin{remark}
-In the original formulation (Theorem~2 of Ref.~\cite{SudarW93}), the non-degeneracy of $\Hor$
-is replaced by $\Hor$ being part of a bifurcate Killing horizon, to be discussed in
-Sec.~\ref{s:sta:bifur_Killing_hor} below. However, these two properties are essentially
-equivalent \cite{RaczW96}. Although the latter was used in
-Sudarsky \& Wald's demonstration, it turns out the final result still holds without it:
-as the uniqueness theorem ?? below shows, the spacetime is static even if the horizon
-is degenerate.
-\end{remark}
-
-
-\begin{figure}
-\centerline{\includegraphics[height=0.4\textheight]{sta_rot_horizon_gen.pdf}
-\qquad\includegraphics[height=0.4\textheight]{sta_rot_horizon_kil.pdf}}
-\caption[]{\label{f:sta:rot_horizon} \footnotesize
-Event horizon $\Hor$ with a stationary Killing vector field $\w{\xi}$ spacelike
-on it:
-\textbf{(a)} Representation with the null geodesic generators of $\Hor$ drawn as vertical
-lines; two of them are actually depicted, in dark green and light green
-respectively, with a null normal $\wl$ along them; besides,
-two field lines of $\w{\xi}$
-(orbits of the isometry group) are depicted, in black and brown
-respectively.
-\textbf{(b)} Representation with the field lines of $\w{\xi}$ as vertical lines.
-The color code is the same as in (a) and
-labelled points ($a$, $b$, etc.) help to identify
-the two figures. A few light cones are drawn in each figure; note that $\w{\xi}$,
-being spacelike,
-is always outside of them,
-while the null normal $\wl$ is always tangent to them. }
-\end{figure}
-
-
-\subsection{Spacelike stationary Killing field on $\Hor$: the strong rigidity theorem}
-\label{s:sta:strong_rigidity}
-
-When $\w{\xi}$ is spacelike on $\Hor$, it obviously cannot be collinear to
-any null normal $\wl$ of $\Hor$.
-Assuming that $\Hor$ has cross-sections of spherical topology, we observe
-that, with respect to the null geodesic generators of $\Hor$, the field lines of $\w{\xi}$
-form some helices, as depicted in Fig.~\ref{f:sta:rot_horizon}a. By reciprocity,
-with respect to the field lines of $\w{\xi}$,
-the null geodesic generators form some helices as well, as depicted in
-Fig.~\ref{f:sta:rot_horizon}b):
-observe that Fig.~\ref{f:sta:rot_horizon}b can be obtained from Fig.~\ref{f:sta:rot_horizon}a
-by ``untwisting'' the field lines of $\w{\xi}$.
-
-Since asymptotically the field lines of $\w{\xi}$ are worldlines of inertial observers,
-Fig.~\ref{f:sta:rot_horizon}b leads us to say
-(in loose terms at this stage) that the event horizon $\Hor$
-``is rotating'', all the more that we have seen above that when the null
-generators coincide with the field lines of $\w{\xi}$, the black hole is static, i.e. non-rotating.
-
-Since the Killing field $\w{\xi}$ is not null on $\Hor$, we cannot say a priori
-that $\Hor$ is a Killing horizon. However, modulo some additional hypotheses,
-it turns out that this is the case, according to a famous result by
-S.W.~Hawking\index{Hawking, S.W.} (1972)
-\cite{Hawki72,HawkiE73}, known as the
-\defin{strong rigidity theorem}\index{strong!rigidity theorem}\index{rigidity theorem!strong --}.
-We give below a modern version of this theorem, due to Moncrief \& Isenberg
-(2008) \cite{MoncrI08} (see also
-Theorem~8.1 p.~470 of Choquet-Bruhat's textbook \cite{Choqu09})
-\begin{prop}[strong rigidity theorem]
-\label{p:sta:strong_rigidity_thm}
-Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 4$ containing a black
-hole of event horizon $\Hor$ such that the stationary Killing vector $\w{\xi}$
-is spacelike on $\Hor$. If
-\begin{itemize}
-\item $\M$ and $\Hor$ are (real) analytic manifold
-(cf. Remark~\ref{r:bas:analytic} in Sec.~\ref{s:bas:def_manif}),
-with $\w{g}$ being an analytic field,
-\item $\w{g}$ fulfills the vacuum Einstein equation
-[Eq.~(\ref{e:fra:Einstein_eq}) with $\Lambda=0$ and $\w{T} = 0$],
-\item $\Hor$ has a null geodesic generator that is incomplete,
-\item $\Hor$ has compact cross-sections
-\item $\w{\xi}$ is transverse to some cross-sections,
-\end{itemize}
-then the spacetime $(\M,\w{g})$ admits a second Killing vector field, $\w{\chi}$
-say, such that
-$\Hor$ is a Killing horizon with respect to $\w{\chi}$.
-\end{prop}
-
-\begin{hist}
-The original version of the theorem established in 1972
-by Stephen Hawking\index{Hawking, S.} \cite{Hawki72} was for a 4-dimensional
-spacetime.
-\end{hist}
-
-The above theorem relies on the rather strong assumption that
-the manifolds and fields are analytic.
-On physical grounds,
-it would be desirable to assume only \emph{smooth} manifolds and fields.
-Recently, S.~Alexakis, A.D.~Ionescu and S.~Klainerman \cite{AlexaIK14} (2014)
-have succeeded in proving the strong rigidity theorem without the analyticity
-assumption, but only for slowly rotating black holes.
-
-Since we have two Killing vectors, $\w{\xi}$ and $\w{\chi}$, we may
-form any linear combination of them with constant coefficients
-and still get a Killing vector. For instance, if $\Omega_H$ is a non-zero constant,
-the vector field $\w{\eta}$ defined by
-\be
-    \w{\eta} = \frac{1}{\Omega_H} \left( \w{\chi} - \w{\xi} \right)
-    \quad\iff\quad
-    \w{\chi} = \w{\xi} + \Omega_H \w{\eta} ,
-\ee
-is a Killing vector field on $\M$.
-One can show (see e.g. \cite{Chrus97} for a rigorous proof) that $\Omega_H$
-and some constant rescaling of $\w{\chi}$
-can be chosen so that $\w{\eta}$ is a spacelike vector field whose
-field lines are closed, with $2\pi$-periodicity in terms of the parameter $\ph$
-associated to $\w{\eta}$ (i.e. $\w{\eta} = \D/\D\ph$ along the field lines),
-and such that $\w{\eta}$ vanishes on a timelike 2-dimensional surface, called
-the \defin{rotation axis}\index{rotation!axis}.
-It follows that
-the isometry group whose generator is $\w{\eta}$ is the rotation group
-$\mathrm{SO}(2)$. In other words, the spacetime $(\M,\w{g})$ is
-\defin{axisymmetric}\index{axisymmetric!spacetime} in addition to being stationary.
-The constant $\Omega_H$ is then called the
-\defin{black hole rotation velocity}\index{black hole!rotation velocity}\index{rotation!velocity}.
-
-By the very definition of stationarity, the Killing vector field $\w{\xi}$ is
-timelike in the vicinity of $\scri^+$ and $\scri^-$. If $\w{\xi}$ is spacelike
-on $\Hor$, as assumed in this section, by continuity it must be spacelike
-in some part of the domain of outer communications $\langle\langle \M\rangle\rangle$
-near $\Hor$. The simplest configuration is then when
-$\w{\xi}$ is spacelike in some connected region $\mathscr{G}\subset \langle\langle \M\rangle\rangle$
-around $\Hor$, null at the boundary of $\mathscr{G}$ and timelike outside $\mathscr{G}$
-up to $\scri^+$ and $\scri^-$. The subset $\mathscr{G}$ is
-called the \defin{ergoregion}\index{ergoregion} and its boundary $\E:=\partial\mathscr{G}$
-the \defin{ergosphere}. We shall discuss it further in connection with
-the Penrose process in Chap.~\ref{s:ker}.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Bifurcate Killing horizons} \label{s:sta:bifur_Killing_hor}
 
-Having shown that stationary black hole horizons must be Killing horizons
-(Properties~\ref{p:sta:H_Killing_hor_xi_null} and \ref{p:sta:strong_rigidity_thm}),
-let us move in the study of Killing horizons beyond what was achieved
-in Sec.~\ref{s:neh:Killing_hor}.
+If the stationary Killing vector $\w{\xi}$,
+which is tangent to $\Hor$ by Property~\ref{p:sta:xi_tangent_H},
+is null on $\Hor$, it is then necessarily normal to $\Hor$
+(cf. Lemma~\ref{p:def:tangent_to_null_hyp} in Sec.~\ref{s:def:spacelike_sections}).
+According to the definition given in Sec.~\ref{s:neh:def_Killing_hor},
+$\Hor$ is then a \emph{Killing horizon}. We shall see in Sec.~?? that, modulo some
+assumptions, if $\w{\xi}$ is spacelike on $\Hor$, $\Hor$ is still a Killing
+horizon, albeit not with respect to $\w{\xi}$ but to another
+Killing vector. We shall then move on in the study of Killing horizons beyond what was achieved
+in Sec.~\ref{s:neh:Killing_hor}, notably by introducing the concept of
+bifurcate Killing horizon.
 
 \subsection{Definition and first properties} \label{s:sta:bifur_def}
 
@@ -739,6 +384,473 @@ His last notes, containing the definition of bifurcate Killing horizon
 and the proof of the above mentioned theorem, have been transformed to an article
 by J. Ehlers and J.L. Stachel and published in 1969 \cite{Boyer69}.
 \end{hist}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Mass and angular momentum in stationary spacetimes}
+
+\subsection{Komar mass}
+
+
+Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime,
+with stationary Killing vector $\w{\xi}$.
+Given a spacelike closed 2-surface $\Sp\subset\M$,
+the \defin{Komar mass}\index{Komar!mass}\index{mass!Komar --} is
+defined by
+\be  \label{e:sta:def_Komar_mass}
+    \encadre{M := - \frac{1}{8\pi} \int_{\Sp} \star(\dd \uu{\xi}) },
+\ee
+where
+(i) $\uu{\xi}$ is the 1-form associated to $\w{\xi}$
+by metric duality (cf. Sec.~\ref{s:bas:metric_dual}), i.e. the 1-form
+of components $\xi_\alpha = g_{\alpha\mu} \xi^\mu$, (ii) $\dd \uu{\xi}$ is
+the exterior derivative of $\uu{\xi}$ (cf. Sec.~\ref{s:bas:ext_deriv}, especially Eqs.~(\ref{e:bas:def_ext_1f}) and (\ref{e:bas:def_ext_1f_nab})):
+\be \label{e:sta:duxi_nab}
+    (\dd \uu{\xi})_{\alpha\beta} =
+        \partial_\alpha \xi_\beta - \partial_\beta \xi_\alpha =
+        \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha
+        = 2 \nabla_\alpha \xi_\beta ,
+\ee
+the last equality following from Killing equation (\ref{e:neh:Killing_equation}),
+and (iii) $\star(\dd \uu{\xi})$ is the 2-form that is the
+Hodge dual of $\dd \uu{\xi}$. The
+\defin{Hodge dual}\index{Hodge dual}\index{dual!Hodge --} of
+any 2-form $\w{A}$ is defined\footnote{See e.g. Sec.~14.5 of
+Ref.~\cite{Gourg13} for an introduction to Hodge duality.}
+as the 2-form $\star\w{A}$ given by
+\be \label{e:sta:Hodge_2form}
+    \star\! A_{\alpha\beta} := \frac{1}{2}
+        A_{\mu\nu} \, \epsilon^{\mu\nu}_{\ \ \; \alpha\beta} ,
+\ee
+where
+$\w{\epsilon}$ is the Levi-Civita tensor associated with the metric $\w{g}$
+(cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
+
+\begin{remark}
+As the integral of a 2-form over a 2-dimensional manifold, formula
+(\ref{e:sta:def_Komar_mass}) is well posed.
+\end{remark}
+
+As we are going to see (Property~??), the key feature of
+the Komar mass is that its value does not depend
+on the choice of the 2-surface $\Sp$, as long as the latter is located
+in a vacuum region of spacetime and $\w{g}$ fulfils the Einstein equation.
+
+
+In view of Eq.~(\ref{e:sta:Hodge_2form}) and the last equality in Eq.~(\ref{e:sta:duxi_nab}),
+the Komar mass formula (\ref{e:sta:def_Komar_mass}) becomes
+\be \label{e:sta:def_Komar_mass_alt}
+    M = - \frac{1}{8\pi} \int_{\Sp}  \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta} ,
+\ee
+where $\nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta}$
+stands for the 2-form $\w{\omega}$ defined by
+$\w{\omega}(\w{u},\w{v}) = \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\rho\sigma} u^\rho v^\sigma$
+for any pair of vector fields $(\w{u},\w{v})$.
+
+Instead of integrals of 2-forms \emph{along} the 2-surface $\Sp$, as in (\ref{e:sta:def_Komar_mass})
+and (\ref{e:sta:def_Komar_mass_alt}), one may
+express the Komar mass as a \emph{flux integral}\index{flux!integral}\index{integral!flux --}, i.e. the integral of a 2-form
+contracted with some ``area element'', which is \emph{normal} to $\Sp$.
+More precisely, let us introduce the
+\defin{normal area element bivector}\index{normal!area!element}\index{bivector!normal area element --}\index{area!normal -- element} by
+\be \label{e:sta:area_bivector}
+    \D S^{\alpha\beta} := (s^\alpha n^\beta - n^\alpha s^\beta) \sqrt{q}\, \D x^2 \, \D x^3 ,
+\ee
+where
+\begin{itemize}
+\item $\w{n}$ is a unit future-directed timelike vector normal to $\Sp$
+and $\w{s}$ is a unit spacelike vector normal to $\Sp$
+such that (i) $\w{s}$ points towards the ``exterior'' of $\Sp$, i.e.
+towards the asymptotically flat end of $(\M, \w{g})$ and
+(ii) at each point $p\in\Sp$, $(\w{n},\w{s})$ is an orthonormal basis
+of the timelike plane $T^\perp_p\Sp$ normal to $\Sp$ (cf. Fig.~\ref{f:def:TS_ortho},
+which holds for any spacelike closed 2-surface $\Sp$);
+\item $(x^a)=(x^2,x^3)$ is a coordinate system on $\Sp$
+such that $(\w{n},\w{s},\wpar_2,\wpar_3)$ is a right-handed basis,
+i.e. $\w{\eps}(\w{n},\w{s},\wpar_2,\wpar_3) > 0$;
+\item $q := \det(q_{ab})$ is the determinant w.r.t. $(x^a)$ of
+the metric $\w{q}$
+induced on $\Sp$ by the spacetime metric $\w{g}$, so that
+$\sqrt{q}\, \D x^2 \, \D x^3$ is the area element on $\Sp$.
+\end{itemize}
+To reexpress the Komar mass, we shall use the following identity:\\
+\begin{lemma}[Flux integral of a 2-form]
+\label{p:sta:flux_integ_2form}
+For any 2-form $\w{A}$ defined in the vicinity of $\Sp$, one has
+\be \label{e:sta:int_star_A}
+    \int_{\Sp} \star \w{A} = \frac{1}{2} \int_{\Sp} A_{\mu\nu} \, \D S^{\mu\nu} ,
+\ee
+where the 2-form $\star\w{A}$ is the Hodge dual of $\w{A}$, as
+defined by Eq.~(\ref{e:sta:Hodge_2form}).
+\end{lemma}
+\begin{proof}
+Using the definition (\ref{e:sta:Hodge_2form}), we have
+\[
+    \int_{\Sp} \star \w{A} =
+        \frac{1}{2} \int_{\Sp} A^{\mu\nu} \, \epsilon_{\mu\nu\alpha\beta} =
+         \frac{1}{2} \int_{\Sp} \w{A}^\sharp (\w{e}^{(\mu)}, \w{e}^{(\nu)})
+                \, \w{\epsilon}(\w{e}_{(\mu)}, \w{e}_{(\nu)}, \D\w{\ell}_{2},
+                    \D\w{\ell}_{3}) ,
+\]
+where $\w{A}^\sharp$ is the tensor field of components $A^{\alpha\beta}$,
+$(\w{e}_{(\alpha)})$ is an orthonormal tetrad such that
+$\w{e}_{(0)} = \w{n}$ and $\w{e}_{(1)} = \w{s}$,
+$(\w{e}^{(\alpha)})$ is its dual cobasis and $\D\w{\ell}_{2}$ and $\D\w{\ell}_{3}$
+are displacement vectors forming elementary parallelograms on $\Sp$; for instance
+$\D\w{\ell}_{2} = \D x^2 \, \wpar_2$ and $\D\w{\ell}_{3} = \D x^3 \, \wpar_3$.
+Note that the last equality in the above expression results from the very
+definition of the integral of a 2-form on a 2-surface.
+Given the definition of the tetrad $(\w{e}_{(\alpha)})$, $(\w{e}_{(2)}, \w{e}_{(3)})$
+is necessarily a basis of the tangent space $T_p\Sp$; consequently
+$\D\w{\ell}_{2}$ and $\D\w{\ell}_{3}$ are linear combinations of $\w{e}_{(2)}$
+and $\w{e}_{(3)}$. Given the alternate character of $\w{\epsilon}$, we may then restrict the sum
+over the indices $\mu$ and $\nu$ to $\mu,\nu = 0$ or $1$.
+Hence
+\bea
+     \int_{\Sp} \star \w{A}    & = &
+         \frac{1}{2} \int_{\Sp}
+    \left[ \w{A}^\sharp (\w{e}^{(0)}, \w{e}^{(1)})
+            \, \w{\epsilon}(\w{e}_{(0)}, \w{e}_{(1)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
+   + \w{A}^\sharp (\w{e}^{(1)}, \w{e}^{(0)})
+            \, \w{\epsilon}(\w{e}_{(1)}, \w{e}_{(0)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
+            \right] \nonumber \\
+    & = & \int_{\Sp}
+    \w{A}^\sharp (\w{e}^{(0)}, \w{e}^{(1)})
+            \, \w{\epsilon}(\w{e}_{(0)}, \w{e}_{(1)}, \D\w{\ell}_{2}, \D\w{\ell}_{3})
+    =  \int_{\Sp} A^{(0)(1)}
+    \, \w{\epsilon}(\w{n}, \w{s}, \D\w{\ell}_{2}, \D\w{\ell}_{3}) . \nonumber
+\eea
+Now, since $(\w{e}_{(\alpha)})$ is an orthonormal basis,
+\[
+  A^{(0)(1)} = g^{(0)(\mu)} g^{(1)(\nu)} A_{(\mu)(\nu)} = g^{(0)(0)} g^{(1)(1)}
+    A_{(0)(1)} = (-1)\times 1 \times A_{(0)(1)} = - A_{(0)(1)} ,
+\]
+with
+\[
+    A_{(0)(1)} = \w{A}(\w{e}_{(0)}, \w{e}_{(1)}) = \w{A}(\w{n}, \w{s})
+        = A_{\mu\nu} n^\mu s^\nu = - A_{\mu\nu} s^\mu n^\nu
+        = - \frac{1}{2} A_{\mu\nu} (s^\mu n^\nu - n^\mu s^\nu) .
+\]
+On the other side, we recognize in ${}^\Sp\!\!\w{\epsilon} := \w{\epsilon}(\w{n}, \w{s}, ., .)$ the
+area element 2-form on $\Sp$ (see e.g. Sec.~16.4.3 of Ref.~\cite{Gourg13}),
+so that we may write, for
+$\D\w{\ell}_{2} = \D x^2 \, \wpar_2$ and $\D\w{\ell}_{3} = \D x^3 \, \wpar_3$,
+\[
+    \w{\epsilon}(\w{n}, \w{s}, \D\w{\ell}_{2}, \D\w{\ell}_{3}) =
+        {}^\Sp\!\!\epsilon_{ab} \, \D\ell_{2}^a \, \D\ell_3^b
+        = \sqrt{q} \, \D x^2 \, \D x^3 .
+\]
+Gathering the above results and using Eq.~(\ref{e:sta:area_bivector})
+establishes Eq.~(\ref{e:sta:int_star_A}).
+\end{proof}
+
+Thanks to Lemma~\ref{p:sta:flux_integ_2form}, we may reexpress the Komar mass
+(\ref{e:sta:def_Komar_mass}) as
+\be \label{e:sta:M_Komar_dS}
+   M = -\frac{1}{16\pi} \int_{\Sp} (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} .
+\ee
+Using the last equality in Eq.~(\ref{e:sta:duxi_nab}), this becomes
+\be
+    \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} \nabla_\mu \xi_\nu \,  \D S^{\mu\nu} } .
+\ee
+Alternatively, we may express the exterior derivative in terms of
+partial derivatives (first equality in Eq.~(\ref{e:sta:duxi_nab})) and get
+\[
+    (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} =
+    (\partial_\mu \xi_\nu - \partial_\nu \xi_\mu)
+    (s^\mu n^\nu - n^\mu s^\nu) \sqrt{q}\, \D x^2 \, \D x^3
+    = 2 (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
+    \sqrt{q}\, \D x^2 \, \D x^3,
+\]
+so that Eq.~(\ref{e:sta:M_Komar_dS}) yields an expression of the Komar mass that
+may be useful for explicit computations:
+\be \label{e:sta:M_Komar_partial_der}
+    \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
+    \sqrt{q}\, \D x^2 \, \D x^3 } .
+\ee
+
+\subsection{Volume integral formula for the Komar mass}
+
+We are going to derive a volume integral formula for $M$, from which one can show
+the independence of $M$ from the choice of $\Sp$ in
+the vacuum case. To this aim, we shall make use of the following lemma:
+\begin{lemma}[flux integral of the divergence of a 2-form]
+In a 4-dimensional spacetime asymptotically flat spacetime $(\M, \w{g})$,
+let $\Sigma$ be a compact spacelike hypersurface bounded by two closed 2-surfaces:
+an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
+$\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
+Let $\w{n}$ be the future-directed unit normal to $\Sigma$ and $\D\w{V}$
+the \defin{normal volume element vector}\index{normal!volume!element}\index{volume!normal -- element}
+of $\Sigma$ defined by [compare Eq.~(\ref{e:sta:area_bivector})]:
+\be
+    \D V^\alpha := - n^\alpha \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3 ,
+\ee
+where $(x^1, x^2, x^3)$ stands for a coordinate system on $\Sigma$ and
+$\gamma := \det (\gamma_{ij})$  is the determinant w.r.t. these coordinates of the metric
+$\w{\gamma}$ induced on $\Sigma$ by the spacetime metric $\w{g}$, so that
+$\sqrt{\gamma}\,\D x^1 \D x^2 \, \D x^3$ is the volume element on $\Sigma$.
+Then, for any 2-form $\w{A}$, we have
+\be \label{e:sta:flux_div_2form}
+    2 \int_{\Sigma} \nabla^\nu A_{\mu\nu} \, \D V^\mu
+    = \int_{\Sp_{\rm ext}} A_{\mu\nu} \, \D S^{\mu\nu}
+      - \int_{\Sp_{\rm int}} A_{\mu\nu} \, \D S^{\mu\nu} ,
+\ee
+where $\D S^{\mu\nu}$
+is defined by Eq.~(\ref{e:sta:area_bivector}) with $\w{s}$ pointing to the
+exterior for both $\Sp_{\rm ext}$ and $\Sp_{\rm int}$.
+\end{lemma}
+\begin{proof}
+Let $(t,x^1,x^2,x^3)$ be a local coordinate system adapted to $\Sigma$,
+i.e. such that $\Sigma$ is the hypersurface $t=0$, and let $\w{V}$
+be the vector defined by $\uu{V} := \w{A}(., \w{n})$, i.e.
+$V_\alpha := A_{\alpha\mu} n^\mu$. Thanks to the antisymmetry of $\w{A}$,
+$\w{V}$ is tangent to $\Sigma$: $\w{n}\cdot\w{V} = \w{A}(\w{n},\w{n}) = 0$.
+We have then, using the antisymmetry of $\w{A}$,
+\bea
+    \nabla^\nu A_{\mu\nu} \, \D V^\mu &= & \nabla^\nu A_{\nu\mu} \, n^\mu \sqrt{\gamma} \,  \D^3 x
+    = \left( \nabla^\nu V_\nu - A_{\nu\mu} \nabla^\nu n^\mu \right) \sqrt{\gamma} \,  \D^3 x
+        \nonumber \\
+   & = &
+   ( \nabla_\mu V^\mu  + \underbrace{A_{\nu\mu} K^{\nu\mu}}_{0}
+    + \underbrace{A_{\nu\mu} n^\nu}_{-V_\mu} D^\mu \ln N ) \sqrt{\gamma} \,  \D^3 x
+    \nonumber \\
+  & = & \left( \nabla_\mu V^\mu - V^i \partial_i \ln N \right) \sqrt{\gamma} \,  \D^3 x . \nonumber
+\eea
+In the second line, we have expressed the derivative of $\w{n}$ in terms of the extrinsic curvature
+tensor $\w{K}$ of $\Sigma$ and the lapse function $N := - \w{n} \cdot \wpar_t$
+via the identity $\nabla^\alpha n^\beta = - K^{\alpha\beta} - D^\beta\ln N n^\alpha$
+(see e.g. Eq.~(4.24) of Ref.~\cite{Gourg12}), where $D^\beta \ln N = \nabla^\beta \ln N + n^\beta n^\mu \nabla_\mu \ln N$. To get the third line, we have used the symmetry of $\w{K}$
+to set $A_{\nu\mu} K^{\nu\mu} = 0$ and the property $V_\mu n^\mu = 0$.
+Let us now use the standard formula expressing the divergence of a vector,
+along with $V^0 = 0$ ($\w{V}$ is tangent to $\Sigma$) and
+the relation $\sqrt{-g} = N\sqrt{\gamma}$ between the determinants
+of the metrics $\w{g}$ and $\w{\gamma}$ (see e.g. Eq.~(5.55) of Ref.~\cite{Gourg12})
+\bea
+    \nabla_\mu V^\mu  & = & \frac{1}{\sqrt{-g}} \der{}{x^\mu} \left( \sqrt{-g} V^\mu \right)
+    = \frac{1}{N \sqrt{\gamma}} \der{}{x^i} \left( N \sqrt{\gamma} V^i \right) \nonumber \\
+    & = & \frac{1}{\sqrt{\gamma}} \der{}{x^i} \left( \sqrt{\gamma} V^i \right)
+      + V^i \der{}{x^i} \ln N
+    = D_i V^i + V^i \der{}{x^i} \ln N  ,  \nonumber
+\eea
+where $D_i V^i$ is the divergence of $\w{V}$ considered as a vector field
+on $(\Sigma, \w{\gamma})$, $\w{D}$ standing for the Levi-Civita connection
+of $\w{\gamma}$. Hence we get
+\[
+   \nabla^\nu A_{\mu\nu} \, \D V^\mu = D_i V^i  \sqrt{\gamma}  \, \D^3 x.
+\]
+We may then apply the Gauss-Ostrogradsky theorem to $\w{V}$
+and write the integral of the divergence of $\w{A}$ as
+\[
+    \int_{\Sigma} \nabla^\nu A_{\mu\nu} \, \D V^\mu =
+    \int_{\Sigma}  D_i V^i  \sqrt{\gamma}  \, \D^3 x =
+    \int_{\partial\Sigma} \sigma^i V_i \sqrt{q} \, d^2 x
+    =  \int_{\Sp_{\rm ext}}\!\! s^i V_i \sqrt{q} \, d^2 x
+        - \int_{\Sp_{\rm int}} \!\! s^i V_i \sqrt{q} \, d^2 x ,
+\]
+where $\w{\sigma}$ is the unit vector normal to the boundary $\partial\Sigma$,
+oriented towards the exterior of $\Sigma$. In the present case, $\partial\Sigma$
+has two connected components: $\Sp_{\rm int}$ and $\Sp_{\rm ext}$, with
+$\w{\sigma} = - \w{s}$ on $\Sp_{\rm int}$ and $\w{\sigma} = \w{s}$ on $\Sp_{\rm ext}$,
+hence the last equality.
+Now, using again the antisymmetry of $\w{A}$,
+\[
+   s^i V_i = s^\mu V_\mu = s^\mu A_{\mu\nu} n^\nu = \frac{1}{2} A_{\mu\nu}
+   (s^\mu n^\nu - n^\mu s^\nu) .
+\]
+In view of expression (\ref{e:sta:area_bivector}) for $\D S^{\mu\nu}$, we
+thus get $2 s^i V_i \sqrt{\gamma} \, \D^2 x = A_{\mu\nu} \D S^{\mu\nu}$, so
+that Eq.~(\ref{e:sta:flux_div_2form}) follows.
+\end{proof}
+
+\subsection{Komar angular momentum}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{The event horizon as a Killing horizon} \label{s:sta:EH_KH}
+
+In view of Property~\ref{p:sta:xi_tangent_H}, let us
+examine successively the two allowed types for the stationary
+Killing vector $\w{\xi}$ on the event horizon $\Hor$: $\w{\xi}$ null (Sec.~\ref{s:sta:staticity_thm})
+and $\w{\xi}$ spacelike (Sec.~\ref{s:sta:strong_rigidity}). In both cases, we shall see
+that $\Hor$ must be a Killing horizon; this is immediate
+for $\w{\xi}$ null and not trivial for $\w{\xi}$ spacelike.
+
+\subsection{Null stationary Killing field on $\Hor$: the staticity theorem}\label{s:sta:staticity_thm}
+
+By Lemma~\ref{p:def:tangent_to_null_hyp} (Sec.~\ref{s:def:spacelike_sections}),
+if the Killing vector
+field $\w{\xi}$ is null on $\Hor$, it is necessarily tangent to the null geodesic generators
+of $\Hor$ and therefore collinear to the null normals $\wl$ of $\Hor$. From the definition
+of a Killing horizon
+given in Sec.~\ref{s:neh:def_Killing_hor}, we get immediately:
+
+\begin{prop}[event horizon as a Killing horizon for $\w{\xi}$ null on it]
+\label{p:sta:H_Killing_hor_xi_null}
+In a stationary spacetime $(\M,\w{g})$ containing a black hole
+of event horizon $\Hor$, if the stationary Killing vector $\w{\xi}$
+is null on $\Hor$, then $\Hor$ is a Killing horizon with respect to the
+Killing field $\w{\xi}$.
+\end{prop}
+
+It follows that, on $\Hor$, the Killing vector field $\w{\xi}$
+is hypersurface-orthogonal, being normal to $\Hor$. Under certain hypotheses, especially
+that the metric fulfills the Einstein equation, one can go further
+and prove that actually $\w{\xi}$ must hypersurface-orthogonal everywhere in $\M$:
+
+\begin{prop}[staticity theorem\index{staticity theorem} \textnormal{(Sudarsky \& Wald, 1993)}]
+\label{p:sta:staticity_thm}
+Let $(\M,\w{g})$ be a stationary spacetime of dimension $n=4$ containing a black
+hole of event horizon $\Hor$ such that the stationary Killing vector $\w{\xi}$
+is null on $\Hor$.
+Let us assume that $\w{g}$ is a solution of the \emph{electrovacuum} Einstein
+equation, i.e. Eq.~(\ref{e:fra:Einstein_eq}) with either $\w{T} = 0$
+or $\w{T}$ being the energy-momentum tensor of a source-free electromagnetic
+field $\w{F}$ that is stationary: $\Lie{\w{\xi}} \w{F} = 0$ (one says that
+$(\w{g},\w{F})$ is a solution of the stationary Einstein-Maxwell system). Then,
+assuming that $\Hor$ is non-degenerate, i.e. has a nonzero surface gravity
+(cf. Sec.~\ref{s:neh:classif_KH}), the Killing vector $\w{\xi}$  is
+hypersurface-orthogonal in all $\M$.
+It follows that the spacetime $(\M,\w{g})$ is
+\emph{static}\index{static!spacetime} (cf. the definition given in Sec.~\ref{s:sta:def_station}).
+\end{prop}
+The proof can be found in the original article by Sudarsky \& Wald \cite{SudarW93}.
+A simplified version for the vacuum case ($\w{T}=0$) is given in the appendix
+of Carter's review article \cite{Carte99}.
+
+\begin{remark}
+In the original formulation (Theorem~2 of Ref.~\cite{SudarW93}), the non-degeneracy of $\Hor$
+is replaced by $\Hor$ being part of a bifurcate Killing horizon, to be discussed in
+Sec.~\ref{s:sta:bifur_Killing_hor} below. However, these two properties are essentially
+equivalent \cite{RaczW96}. Although the latter was used in
+Sudarsky \& Wald's demonstration, it turns out the final result still holds without it:
+as the uniqueness theorem ?? below shows, the spacetime is static even if the horizon
+is degenerate.
+\end{remark}
+
+
+\begin{figure}
+\centerline{\includegraphics[height=0.4\textheight]{sta_rot_horizon_gen.pdf}
+\qquad\includegraphics[height=0.4\textheight]{sta_rot_horizon_kil.pdf}}
+\caption[]{\label{f:sta:rot_horizon} \footnotesize
+Event horizon $\Hor$ with a stationary Killing vector field $\w{\xi}$ spacelike
+on it:
+\textbf{(a)} Representation with the null geodesic generators of $\Hor$ drawn as vertical
+lines; two of them are actually depicted, in dark green and light green
+respectively, with a null normal $\wl$ along them; besides,
+two field lines of $\w{\xi}$
+(orbits of the isometry group) are depicted, in black and brown
+respectively.
+\textbf{(b)} Representation with the field lines of $\w{\xi}$ as vertical lines.
+The color code is the same as in (a) and
+labelled points ($a$, $b$, etc.) help to identify
+the two figures. A few light cones are drawn in each figure; note that $\w{\xi}$,
+being spacelike,
+is always outside of them,
+while the null normal $\wl$ is always tangent to them. }
+\end{figure}
+
+
+\subsection{Spacelike stationary Killing field on $\Hor$: the strong rigidity theorem}
+\label{s:sta:strong_rigidity}
+
+When $\w{\xi}$ is spacelike on $\Hor$, it obviously cannot be collinear to
+any null normal $\wl$ of $\Hor$.
+Assuming that $\Hor$ has cross-sections of spherical topology, we observe
+that, with respect to the null geodesic generators of $\Hor$, the field lines of $\w{\xi}$
+form some helices, as depicted in Fig.~\ref{f:sta:rot_horizon}a. By reciprocity,
+with respect to the field lines of $\w{\xi}$,
+the null geodesic generators form some helices as well, as depicted in
+Fig.~\ref{f:sta:rot_horizon}b):
+observe that Fig.~\ref{f:sta:rot_horizon}b can be obtained from Fig.~\ref{f:sta:rot_horizon}a
+by ``untwisting'' the field lines of $\w{\xi}$.
+
+Since asymptotically the field lines of $\w{\xi}$ are worldlines of inertial observers,
+Fig.~\ref{f:sta:rot_horizon}b leads us to say
+(in loose terms at this stage) that the event horizon $\Hor$
+``is rotating'', all the more that we have seen above that when the null
+generators coincide with the field lines of $\w{\xi}$, the black hole is static, i.e. non-rotating.
+
+Since the Killing field $\w{\xi}$ is not null on $\Hor$, we cannot say a priori
+that $\Hor$ is a Killing horizon. However, modulo some additional hypotheses,
+it turns out that this is the case, according to a famous result by
+S.W.~Hawking\index{Hawking, S.W.} (1972)
+\cite{Hawki72,HawkiE73}, known as the
+\defin{strong rigidity theorem}\index{strong!rigidity theorem}\index{rigidity theorem!strong --}.
+We give below a modern version of this theorem, due to Moncrief \& Isenberg
+(2008) \cite{MoncrI08} (see also
+Theorem~8.1 p.~470 of Choquet-Bruhat's textbook \cite{Choqu09})
+\begin{prop}[strong rigidity theorem]
+\label{p:sta:strong_rigidity_thm}
+Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 4$ containing a black
+hole of event horizon $\Hor$ such that the stationary Killing vector $\w{\xi}$
+is spacelike on $\Hor$. If
+\begin{itemize}
+\item $\M$ and $\Hor$ are (real) analytic manifold
+(cf. Remark~\ref{r:bas:analytic} in Sec.~\ref{s:bas:def_manif}),
+with $\w{g}$ being an analytic field,
+\item $\w{g}$ fulfills the vacuum Einstein equation
+[Eq.~(\ref{e:fra:Einstein_eq}) with $\Lambda=0$ and $\w{T} = 0$],
+\item $\Hor$ has a null geodesic generator that is incomplete,
+\item $\Hor$ has compact cross-sections
+\item $\w{\xi}$ is transverse to some cross-sections,
+\end{itemize}
+then the spacetime $(\M,\w{g})$ admits a second Killing vector field, $\w{\chi}$
+say, such that
+$\Hor$ is a Killing horizon with respect to $\w{\chi}$.
+\end{prop}
+
+\begin{hist}
+The original version of the theorem established in 1972
+by Stephen Hawking\index{Hawking, S.} \cite{Hawki72} was for a 4-dimensional
+spacetime.
+\end{hist}
+
+The above theorem relies on the rather strong assumption that
+the manifolds and fields are analytic.
+On physical grounds,
+it would be desirable to assume only \emph{smooth} manifolds and fields.
+Recently, S.~Alexakis, A.D.~Ionescu and S.~Klainerman \cite{AlexaIK14} (2014)
+have succeeded in proving the strong rigidity theorem without the analyticity
+assumption, but only for slowly rotating black holes.
+
+Since we have two Killing vectors, $\w{\xi}$ and $\w{\chi}$, we may
+form any linear combination of them with constant coefficients
+and still get a Killing vector. For instance, if $\Omega_H$ is a non-zero constant,
+the vector field $\w{\eta}$ defined by
+\be
+    \w{\eta} = \frac{1}{\Omega_H} \left( \w{\chi} - \w{\xi} \right)
+    \quad\iff\quad
+    \w{\chi} = \w{\xi} + \Omega_H \w{\eta} ,
+\ee
+is a Killing vector field on $\M$.
+One can show (see e.g. \cite{Chrus97} for a rigorous proof) that $\Omega_H$
+and some constant rescaling of $\w{\chi}$
+can be chosen so that $\w{\eta}$ is a spacelike vector field whose
+field lines are closed, with $2\pi$-periodicity in terms of the parameter $\ph$
+associated to $\w{\eta}$ (i.e. $\w{\eta} = \D/\D\ph$ along the field lines),
+and such that $\w{\eta}$ vanishes on a timelike 2-dimensional surface, called
+the \defin{rotation axis}\index{rotation!axis}.
+It follows that
+the isometry group whose generator is $\w{\eta}$ is the rotation group
+$\mathrm{SO}(2)$. In other words, the spacetime $(\M,\w{g})$ is
+\defin{axisymmetric}\index{axisymmetric!spacetime} in addition to being stationary.
+The constant $\Omega_H$ is then called the
+\defin{black hole rotation velocity}\index{black hole!rotation velocity}\index{rotation!velocity}.
+
+By the very definition of stationarity, the Killing vector field $\w{\xi}$ is
+timelike in the vicinity of $\scri^+$ and $\scri^-$. If $\w{\xi}$ is spacelike
+on $\Hor$, as assumed in this section, by continuity it must be spacelike
+in some part of the domain of outer communications $\langle\langle \M\rangle\rangle$
+near $\Hor$. The simplest configuration is then when
+$\w{\xi}$ is spacelike in some connected region $\mathscr{G}\subset \langle\langle \M\rangle\rangle$
+around $\Hor$, null at the boundary of $\mathscr{G}$ and timelike outside $\mathscr{G}$
+up to $\scri^+$ and $\scri^-$. The subset $\mathscr{G}$ is
+called the \defin{ergoregion}\index{ergoregion} and its boundary $\E:=\partial\mathscr{G}$
+the \defin{ergosphere}. We shall discuss it further in connection with
+the Penrose process in Chap.~\ref{s:ker}.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
