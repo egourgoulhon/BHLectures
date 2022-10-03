@@ -396,10 +396,10 @@ by J. Ehlers and J.L. Stachel and published in 1969 \cite{Boyer69}.
 Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime,
 with stationary Killing vector $\w{\xi}$.
 Given a spacelike closed 2-surface $\Sp\subset\M$,
-the \defin{Komar mass}\index{Komar!mass}\index{mass!Komar --} is
+the \defin{Komar mass of}\index{Komar!mass}\index{mass!Komar --} $\Sp$ is
 defined by
 \be  \label{e:sta:def_Komar_mass}
-    \encadre{M := - \frac{1}{8\pi} \int_{\Sp} \star(\dd \uu{\xi}) },
+    \encadre{M_{\Sp} := - \frac{1}{8\pi} \int_{\Sp} \star(\dd \uu{\xi}) },
 \ee
 where
 (i) $\uu{\xi}$ is the 1-form associated to $\w{\xi}$
@@ -441,7 +441,7 @@ in a vacuum region of spacetime and $\w{g}$ fulfils the Einstein equation.
 In view of Eq.~(\ref{e:sta:Hodge_2form}) and the last equality in Eq.~(\ref{e:sta:duxi_nab}),
 the Komar mass formula (\ref{e:sta:def_Komar_mass}) becomes
 \be \label{e:sta:def_Komar_mass_alt}
-    M = - \frac{1}{8\pi} \int_{\Sp}  \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta} ,
+    M_{\Sp} = - \frac{1}{8\pi} \int_{\Sp}  \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta} ,
 \ee
 where $\nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta}$
 stands for the 2-form $\w{\omega}$ defined by
@@ -548,11 +548,11 @@ establishes Eq.~(\ref{e:sta:int_star_A}).
 Thanks to Lemma~\ref{p:sta:flux_integ_2form}, we may reexpress the Komar mass
 (\ref{e:sta:def_Komar_mass}) as
 \be \label{e:sta:M_Komar_dS}
-   M = -\frac{1}{16\pi} \int_{\Sp} (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} .
+   M_{\Sp} = -\frac{1}{16\pi} \int_{\Sp} (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} .
 \ee
 Using the last equality in Eq.~(\ref{e:sta:duxi_nab}), this becomes
 \be
-    \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} \nabla_\mu \xi_\nu \,  \D S^{\mu\nu} } .
+    \encadre{ M_{\Sp} = -\frac{1}{8\pi} \int_{\Sp} \nabla_\mu \xi_\nu \,  \D S^{\mu\nu} } .
 \ee
 Alternatively, we may express the exterior derivative in terms of
 partial derivatives (first equality in Eq.~(\ref{e:sta:duxi_nab})) and get
@@ -566,14 +566,23 @@ partial derivatives (first equality in Eq.~(\ref{e:sta:duxi_nab})) and get
 so that Eq.~(\ref{e:sta:M_Komar_dS}) yields an expression of the Komar mass that
 may be useful for explicit computations:
 \be \label{e:sta:M_Komar_partial_der}
-    \encadre{ M = -\frac{1}{8\pi} \int_{\Sp} (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
+    \encadre{ M_{\Sp} = -\frac{1}{8\pi} \int_{\Sp} (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
     \sqrt{q}\, \D x^2 \, \D x^3 } .
 \ee
 
+\begin{example}[Komar mass in Schwarzschild spacetime]
+Let us consider the Schwarzschild spacetime $(\M,\w{g})$
+introduced in
+Example~\ref{x:def:Schw_hor} of Sec.~\ref{s:def:geom_null_hypsurf} (p.~\pageref{x:def:Schw_hor}).
+In terms of the ingoing Eddington-Finkelstein coordinates $(t,r,\th,\ph)$ used there,
+the stationary Killing vector is simply $\w{\xi} = \wpar_t$.
+Let us choose $\Sp$ to be a 2-sphere defined by $(t,r) = \mathrm{const}$.
+\end{example}
+
 \subsection{Volume integral formula for the Komar mass}
 
-We are going to derive a volume integral formula for $M$, from which one can show
-the independence of $M$ from the choice of $\Sp$ in
+We are going to derive a volume integral formula for $M_{\Sp}$, from which one can show
+the independence of $M_{\Sp}$ from the choice of $\Sp$ in
 the vacuum case. To this aim, we shall make use of the following lemma:
 \begin{lemma}[flux integral of the divergence of a 2-form]
 In a 4-dimensional spacetime asymptotically flat spacetime $(\M, \w{g})$,
