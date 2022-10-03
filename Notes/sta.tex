@@ -392,7 +392,6 @@ by J. Ehlers and J.L. Stachel and published in 1969 \cite{Boyer69}.
 
 \subsection{Komar mass}
 
-
 Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime,
 with stationary Killing vector $\w{\xi}$.
 Given a spacelike closed 2-surface $\Sp\subset\M$,
@@ -560,30 +559,70 @@ partial derivatives (first equality in Eq.~(\ref{e:sta:duxi_nab})) and get
     (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} =
     (\partial_\mu \xi_\nu - \partial_\nu \xi_\mu)
     (s^\mu n^\nu - n^\mu s^\nu) \sqrt{q}\, \D x^2 \, \D x^3
-    = 2 (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
-    \sqrt{q}\, \D x^2 \, \D x^3,
+    = 2 \partial_\mu \xi_\nu  (s^\mu  n^\nu - n^\mu  s^\nu)
+    \sqrt{q}\, \D x^2 \, \D x^3 .
 \]
-so that Eq.~(\ref{e:sta:M_Komar_dS}) yields an expression of the Komar mass that
-may be useful for explicit computations:
+Equation~(\ref{e:sta:M_Komar_dS}) yields then an expression of $M_{\Sp}$ that
+can be used for explicit computations:
 \be \label{e:sta:M_Komar_partial_der}
-    \encadre{ M_{\Sp} = -\frac{1}{8\pi} \int_{\Sp} (s^\mu \partial_\mu \xi_\nu \, n^\nu - n^\mu \partial_\mu \xi_\nu \, s^\nu)
+    \encadre{ M_{\Sp} = -\frac{1}{8\pi} \int_{\Sp} \partial_\mu \xi_\nu (s^\mu   n^\nu - n^\mu s^\nu)
     \sqrt{q}\, \D x^2 \, \D x^3 } .
 \ee
 
 \begin{example}[Komar mass in Schwarzschild spacetime]
+\label{x:sta:Komar_mass_Schw}
 Let us consider the Schwarzschild spacetime $(\M,\w{g})$
 introduced in
-Example~\ref{x:def:Schw_hor} of Sec.~\ref{s:def:geom_null_hypsurf} (p.~\pageref{x:def:Schw_hor}).
+Example~\ref{x:def:Schw_hor} of Sec.~\ref{s:def:geom_null_hypsurf}.
 In terms of the ingoing Eddington-Finkelstein coordinates $(t,r,\th,\ph)$ used there,
 the stationary Killing vector is simply $\w{\xi} = \wpar_t$.
 Let us choose $\Sp$ to be a 2-sphere defined by $(t,r) = \mathrm{const}$.
+The coordinates $(x^a) = (x^2, x^3)$ spanning $\Sp$ are then $(\th,\ph)$.
+For the pair of normal vectors to $\Sp$, we choose
+$\w{n} = N^{-1} \wpar_t  - 2mN/r \wpar_r$ and $\w{s} = N \wpar_r$, where
+$N := (1 + 2m/r)^{-1/2}$. Given the metric (\ref{e:def:Schw_metric}), it is
+easy to check that
+$\w{g}(\w{n},\w{n}) = -1$, $\w{g}(\w{n},\w{s}) = 0$ and $\w{g}(\w{s},\w{s}) = 1$.
+It is also immediate that $\w{g}(\w{n},\wpar_\th) = \w{g}(\w{n},\wpar_\ph) =  0$ and
+$\w{g}(\w{s},\wpar_\th) = \w{g}(\w{s},\wpar_\ph) =  0$,
+which proves that $\w{n}$ and $\w{s}$ are normal to $\Sp$.
+Moreover, $\w{s}$ points towards the exterior of $\Sp$ (since $N>0$) and
+$(\w{n},\w{s},\wpar_\th,\wpar_\ph)$ is a right-handed basis. All the hypotheses
+stated below Eq.~(\ref{e:sta:area_bivector}) are thus fulfilled and we may use
+Eq.~(\ref{e:sta:M_Komar_partial_der}) to evaluate the Komar mass of $\Sp$.
+The components $\xi_\alpha$ of $\uu{\xi}$ are easily evaluated via
+the components (\ref{e:def:Schw_metric}) of $\w{g}$:
+$\xi_\alpha = g_{\alpha\mu} \xi^\nu = g_{\alpha\mu} (\partial_t)^\mu = g_{\alpha t}
+= (-1 + 2m/r, 2m/r, 0, 0)$.
+The only non-zero derivatives $\partial_\mu\xi_\nu$
+are then $\partial_r \xi_t$ and $\partial_r \xi_r$; they are both equal to $-2m/r^2$.
+It follows that the integrand in Eq.~(\ref{e:sta:M_Komar_partial_der}) is reduced to only two terms:
+\[
+  \partial_\mu \xi_\nu (s^\mu   n^\nu - n^\mu s^\nu) =
+  \partial_r \xi_t (s^r n^t - n^r s^t) = - \frac{2m}{r^2}
+  \left( N \times N^{-1}  + 2m N\times 0 \right) = - \frac{2m}{r^2} .
+\]
+We read on Eq.~(\ref{e:def:Schw_metric}) that the metric induced on
+$\Sp$ is $\w{q} = r^2 \, \dd\th^2 + r^2 \sin^2\, \th \dd\ph^2$, so that $\sqrt{q} = r^2 \sin\th$.
+Accordingly, Eq.~(\ref{e:sta:M_Komar_partial_der}) leads to
+\[
+    M_{\Sp} = -\frac{1}{8\pi} \int_{\Sp} \left( - \frac{2m}{r^2} \right)
+    r^2 \sin\th \, \D\th \, \D\ph = \frac{m}{4\pi} \int_{\Sp} \D\th \, \D\ph .
+\]
+Since the remaining integral is nothing but $4\pi$, we get simply
+\be
+    M_{\Sp} = m.
+\ee
+We note that $M_{\Sp}$ does not depend on $r$, i.e. does not depend on the
+choice of the sphere $\Sp$.
 \end{example}
 
 \subsection{Volume integral formula for the Komar mass}
 
 We are going to derive a volume integral formula for $M_{\Sp}$, from which one can show
 the independence of $M_{\Sp}$ from the choice of $\Sp$ in
-the vacuum case. To this aim, we shall make use of the following lemma:
+the vacuum case, thereby generalizing the result of Example~\ref{x:sta:Komar_mass_Schw}.
+ To this aim, we shall make use of the following lemma:
 \begin{lemma}[flux integral of the divergence of a 2-form]
 In a 4-dimensional spacetime asymptotically flat spacetime $(\M, \w{g})$,
 let $\Sigma$ be a compact spacelike hypersurface bounded by two closed 2-surfaces:
