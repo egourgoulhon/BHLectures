@@ -427,15 +427,17 @@ $\w{\epsilon}$ is the Levi-Civita tensor associated with the metric $\w{g}$
 (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
 
 \begin{remark}
+\label{r:sta:Komar_well_posed}
 As the integral of a 2-form over a 2-dimensional manifold, formula
-(\ref{e:sta:def_Komar_mass}) is well posed.
+(\ref{e:sta:def_Komar_mass}) is well posed. More precisely, on the 2-dimensional
+manifold $\Sp$, the theory of integration is defined for 2-forms \emph{on} $\Sp$,
+while $\star(\dd \uu{\xi})$ is a 2-form \emph{on} $\M$. However, any
+2-form $\w{\omega}$ on $\M$ yields canonically to a unique 2-form $\iota^* \w{\omega}$ on the
+submanifold $\Sp$, by restrincting the action of $\w{\omega}$ at each point
+$p\in\Sp$ to vectors tangent to $\Sp$. One says that $\iota^* \w{\omega}$ is the
+\emph{pullback}\index{pullback} of $\w{\omega}$ to $\Sp$ via the embedding $\iota$ of $\Sp$ in $\M$
+(cf. Sec.~\ref{s:bas:Lie}).
 \end{remark}
-
-As we are going to see (Property~??), the key feature of
-the Komar mass is that its value does not depend
-on the choice of the 2-surface $\Sp$, as long as the latter is located
-in a vacuum region of spacetime and $\w{g}$ fulfils the Einstein equation.
-
 
 In view of Eq.~(\ref{e:sta:Hodge_2form}) and the last equality in Eq.~(\ref{e:sta:duxi_nab}),
 the Komar mass formula (\ref{e:sta:def_Komar_mass}) becomes
@@ -445,7 +447,7 @@ the Komar mass formula (\ref{e:sta:def_Komar_mass}) becomes
 where $\nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\alpha\beta}$
 stands for the 2-form $\w{\omega}$ defined by
 $\w{\omega}(\w{u},\w{v}) = \nabla^\mu \xi^\nu \, \epsilon_{\mu\nu\rho\sigma} u^\rho v^\sigma$
-for any pair of vector fields $(\w{u},\w{v})$.
+for any pair of vector fields $(\w{u},\w{v})$ tangent to $\Sp$ (cf. Remark~\ref{r:sta:Komar_well_posed} above).
 
 Instead of integrals of 2-forms \emph{along} the 2-surface $\Sp$, as in (\ref{e:sta:def_Komar_mass})
 and (\ref{e:sta:def_Komar_mass_alt}), one may
@@ -550,7 +552,7 @@ Thanks to Lemma~\ref{p:sta:flux_integ_2form}, we may reexpress the Komar mass
    M_{\Sp} = -\frac{1}{16\pi} \int_{\Sp} (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} .
 \ee
 Using the last equality in Eq.~(\ref{e:sta:duxi_nab}), this becomes
-\be
+\be \label{e:sta:Komar_mass_flux_nabla_xi}
     \encadre{ M_{\Sp} = -\frac{1}{8\pi} \int_{\Sp} \nabla_\mu \xi_\nu \,  \D S^{\mu\nu} } .
 \ee
 Alternatively, we may express the exterior derivative in terms of
@@ -623,15 +625,17 @@ We are going to derive a volume integral formula for $M_{\Sp}$, from which one c
 the independence of $M_{\Sp}$ from the choice of $\Sp$ in
 the vacuum case, thereby generalizing the result of Example~\ref{x:sta:Komar_mass_Schw}.
  To this aim, we shall make use of the following lemma:
+
 \begin{lemma}[flux integral of the divergence of a 2-form]
-In a 4-dimensional spacetime asymptotically flat spacetime $(\M, \w{g})$,
+\label{p:sta:flux_div_2_form}
+In a 4-dimensional asymptotically flat spacetime $(\M, \w{g})$,
 let $\Sigma$ be a compact spacelike hypersurface bounded by two closed 2-surfaces:
 an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
 $\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
 Let $\w{n}$ be the future-directed unit normal to $\Sigma$ and $\D\w{V}$
 the \defin{normal volume element vector}\index{normal!volume!element}\index{volume!normal -- element}
 of $\Sigma$ defined by [compare Eq.~(\ref{e:sta:area_bivector})]:
-\be
+\be \label{e:sta:normal_vol_element}
     \D V^\alpha := - n^\alpha \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3 ,
 \ee
 where $(x^1, x^2, x^3)$ stands for a coordinate system on $\Sigma$ and
@@ -666,7 +670,7 @@ We have then, using the antisymmetry of $\w{A}$,
   & = & \left( \nabla_\mu V^\mu - V^i \partial_i \ln N \right) \sqrt{\gamma} \,  \D^3 x . \nonumber
 \eea
 In the second line, we have expressed the derivative of $\w{n}$ in terms of the extrinsic curvature
-tensor $\w{K}$ of $\Sigma$ and the lapse function $N := - \w{n} \cdot \wpar_t$
+tensor $\w{K}$ of $\Sigma$ and of the lapse function $N := - \w{n} \cdot \wpar_t$,
 via the identity $\nabla^\alpha n^\beta = - K^{\alpha\beta} - D^\beta\ln N n^\alpha$
 (see e.g. Eq.~(4.24) of Ref.~\cite{Gourg12}), where $D^\beta \ln N = \nabla^\beta \ln N + n^\beta n^\mu \nabla_\mu \ln N$. To get the third line, we have used the symmetry of $\w{K}$
 to set $A_{\nu\mu} K^{\nu\mu} = 0$ and the property $V_\mu n^\mu = 0$.
@@ -710,6 +714,111 @@ In view of expression (\ref{e:sta:area_bivector}) for $\D S^{\mu\nu}$, we
 thus get $2 s^i V_i \sqrt{\gamma} \, \D^2 x = A_{\mu\nu} \D S^{\mu\nu}$, so
 that Eq.~(\ref{e:sta:flux_div_2form}) follows.
 \end{proof}
+
+\begin{prop}[Volume integral formula of the Komar mass]
+Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime,
+with stationary Killing vector $\w{\xi}$. Let us assume that $\w{g}$
+obeys the Einstein equation (\ref{e:fra:Einstein_eq}) for some energy-momentum
+tensor $\w{T}$.
+Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed 2-surfaces:
+an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
+$\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
+The Komar masses of $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ are then
+related by
+\be \label{e:sta:Komar_mass_vol_integ}
+    \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + 2
+    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T}{2} \w{g}(\w{n}, \w{\xi}) \right)
+    \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3  , }
+\ee
+where $\w{n}$ be the future-directed unit normal to $\Sigma$
+and $\sqrt{\gamma}\,\D x^1 \D x^2 \, \D x^3$ is the volume element on $\Sigma$
+induced by $\w{g}$.
+\end{prop}
+\begin{proof}
+Let us apply Lemma~\ref{p:sta:flux_div_2_form} to $A_{\alpha\beta} := \nabla_\alpha \xi_\beta$,
+which does define a 2-form thanks to the  Killing equation (\ref{e:neh:Killing_equation}).
+In the left-hand side of Eq.~(\ref{e:sta:flux_div_2form}), there appears then
+$\nabla^\nu \nabla_\mu \xi_\nu$. Now, the Ricci identity (\ref{e:bas:Ricci_ident})
+applied to the vector field $\w{\xi}$ yields
+$\nabla_\alpha \nabla_\beta \xi^\gamma - \nabla_\beta \nabla_\alpha \xi^\gamma
+= R^\gamma_{\ \  \nu \alpha\beta} \, \xi^\nu$. Contracting on the indices
+$\alpha$ and $\gamma$ makes the Ricci tensor $R_{\alpha\beta}$ appear:
+$\nabla_\nu \nabla_\mu \xi^\nu - \nabla_\mu \nabla_\nu \xi^\nu = R_{\nu\mu} \xi^\nu$.
+Thanks to the Killing equation (\ref{e:neh:Killing_equation}), the divergence
+of $\w{\xi}$ is zero: $\nabla_\nu \xi^\nu = 0$. Using the symmetry of the Ricci tensor,
+we get then
+\[
+    \nabla^\nu \nabla_\mu \xi_\nu = R_{\mu\nu} \xi^\nu .
+\]
+Equation~(\ref{e:sta:flux_div_2form}) yields then
+\[
+    2 \int_{\Sigma} R_{\mu\nu} \xi^\nu \D V^\mu =
+    - 8\pi M_{\Sp_{\rm ext}} + 8\pi M_{\Sp_{\rm int}} ,
+\]
+where we have used Eq.~(\ref{e:sta:Komar_mass_flux_nabla_xi})
+to let appear the Komar masses $M_{\Sp_{\rm ext}}$ and $M_{\Sp_{\rm int}}$.
+Finaly, making use of the Einstein equation in the form
+(\ref{e:fra:Einstein_eq_n}) along with expression
+(\ref{e:sta:normal_vol_element}) for $\D V^\mu$, we get
+Eq.~(\ref{e:sta:Komar_mass_vol_integ}).
+\end{proof}
+
+\begin{remark}
+We may use formula (\ref{e:sta:Komar_mass_vol_integ})
+to check that at the Newtonian limit, the Komar mass taken
+on a surface $\Sp_{\rm ext}$ surrounding a star
+reduces to the volume integral of the matter mass density,
+i.e. to the Newtonian expression of mass\index{Newtonian!mass}\index{mass!Newtonian --}.
+Indeed, let us assume that the spacetime is strictly static, i.e. that $\w{\xi}$
+is timelike in all $\M$ and is hypersurface-orthogonal.
+A static fluid star is then
+defined by the energy-momentum tensor $\w{T}$ being
+a perfect fluid\index{perfect fluid}\index{fluid!perfect --} one:
+$\w{T} = (\rho + p)\uu{u} \otimes \uu{u} + p \w{g}$, where
+$\rho$ is the fluid-comoving energy density,
+$p$ is the fluid pressure and the fluid 4-velocity is collinear to the
+static Killing field $\w{\xi}$:
+\[
+    \w{u} = \frac{1}{W} \, \w{\xi}
+    \quad\mbox{with}\quad
+    W := \sqrt{- \w{\xi}\cdot\w{\xi} } ,
+\]
+the value of $W$ being imposed by the requirement $\w{u}\cdot\w{u} = -1$.
+Let us choose for $\Sigma$ a hypersurface orthogonal to $\w{\xi}$
+with an outer boundary  $\Sp_{\rm ext}$ but no inner boundary $\Sp_{\rm int}$,
+so that $M_{\Sp_{\rm int}}$
+can be set to zero in Eq.~(\ref{e:sta:Komar_mass_vol_integ}).
+Since $\Sigma$ is othogonal to $\w{\xi}$, we have
+necessarily $\w{n} = \w{u}$, so that $\w{T}(\w{n},\w{\xi}) = W \w{T}(\w{u},\w{u})
+= W \rho$ and $\w{g}(\w{n},\w{\xi}) = W \w{g}(\w{u},\w{u}) = -W$. Given that
+$T = 3 p  - \rho$, formula~(\ref{e:sta:Komar_mass_vol_integ}) with
+$M_{\Sp_{\rm int}} =  0$ results in
+\[
+    M_{\Sp_{\rm ext}} = 2
+    \int_{\Sigma} \left( W \rho - \frac{3p - \rho}{2}(-W) \right)
+    \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3
+    = \int_{\Sigma} W (\rho + 3 p) \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3 .
+\]
+Now, for a weakly relativistic star, $|p| \ll \rho$ and
+ in coordinates $(t, x^i)$ such that
+$\w{\xi} = \wpar_t$,
+ $W = \sqrt{- \w{\xi}\cdot\w{\xi} } = \sqrt{- g_{tt}} \simeq 1 + \Phi$, where
+$\Phi$ is the Newtonian gravitational potential\index{gravitational!potential},
+i.e. the solution of
+the Poisson equation\index{Poisson equation}
+$\Delta \Phi = 4\pi \rho$ vanishing at infinity. We may then write
+\be
+    M_{\Sp_{\rm ext}} \simeq \int_{\Sigma} \rho \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3
+    + \int_{\Sigma} \rho \Phi \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3 .
+\ee
+The first term is the volume integral of the fluid mass density; the second
+term is negative (since $\Phi < 0$) and represents the \emph{total gravitational
+potential energy} of the star, or equivalently the \emph{gravitational binding energy} of the star.
+Its presence should not be a surprise given the mass-energy equivalence in
+relativity. However, at the Newtonian limit, this
+term can be
+neglected in front of the first term.
+\end{remark}
 
 \subsection{Komar angular momentum}
 
