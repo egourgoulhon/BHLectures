@@ -26,16 +26,18 @@ the conformal boundary $\scri$.
 It is equivalent to say that there exists a Killing vector field
 $\w{\xi}$ (the generator of the translation group, cf. Sec.~\ref{s:neh:symmetries}) that is
 timelike everywhere or at least in the vicinity of $\scri$ when there exists a conformal
-completion.
+completion. We shall say that $(\M,\w{g})$ is \defin{strictly stationary}\index{strictly!stationary}\index{stationary!strictly --} iff the Killing vector field $\w{\xi}$ is timelike in all $\M$,
+i.e. iff the point (i) above is fulfilled.
 \end{greybox}
 
 \begin{remark} \label{r:sta:pseudo-stationary}
-Some authors (e.g. Carter \cite{Carte73b}) call such spacetimes
-\emph{pseudo-stationary}\index{pseudo-stationary}, keeping the qualifier
-\emph{stationary} for the case where the Killing field $\w{\xi}$ is timelike
-in all $\M$, i.e. obeying the point (ii) above. As we are going to see, when $\M$
+Some authors (e.g. Carter \cite{Carte73b}) call
+\emph{pseudo-stationary}\index{pseudo-stationary} the stationary spacetimes
+defined above, keeping the qualifier
+\emph{stationary} for the strictly stationary case.
+As we are going to see, when $\M$
 contains a black hole, $\w{\xi}$ cannot be timelike everywhere,
-so only \emph{pseudo-stationarity} in the above sense is relevant for them.
+so only \emph{pseudo-stationarity} in the above sense is relevant for these spacetimes.
 Our terminology follows that of
 Heusler \cite{Heusle96},
 Chru\'sciel, Lopes Costa \& Heusler \cite{ChrusLH12}
@@ -49,12 +51,14 @@ A spacetime $(\M,\w{g})$ is called \defin{static}\index{static!spacetime}
 iff (i) it is stationary and (ii) the Killing vector field $\w{\xi}$
 generating the stationary action is orthogonal to a family of hypersurfaces
 (one says that $\w{\xi}$ is \defin{hypersurface-orthogonal}\index{hypersurface-orthogonal}).
+The spacetime $(\M,\w{g})$ is called \defin{strictly static}\index{strictly!static}\index{static!strictly --}
+iff $\w{\xi}$ is timelike in all $\M$.
 \end{greybox}
 
 \begin{remark}
 The same comment as in Remark~\ref{r:sta:pseudo-stationary} can be made: some authors
-would call \emph{static spacetimes} only those in which the hypersurface-orthogonal Killing vector
-is everywhere timelike, whereas our definition is weaker, the timelike character being demanded only in the vicinity of the spacetime ``boundary'', i.e. the boundary of a conformal completion.
+would call \emph{static} only spacetimes that are
+\emph{strictly static} according to the above definition.
 \end{remark}
 
 Via the Frobenius theorem (cf. Sec.~\ref{s:def:Frobenius}), the hypersurface-orthogonal
@@ -78,11 +82,11 @@ Then, one can show (see e.g. Sec.~2.9 of Straumann's textbook \cite{Strau13}), t
 \ee
 The second relation implies that $\w{\xi}$ is orthogonal to the hypersurfaces $t=\mathrm{const}$. This orthogonality property translates to $g_{0i}=0$ for $i\in\{1,\ldots,n-1\}$,
 the $g_{\alpha\beta}$'s being the metric components with respect to the coordinates
-$(x^\alpha)$. Hence one may write the metric of the static spacetime as
+$(x^\alpha)$. Hence one may write the metric of a static spacetime of dimension $n$ as
 \be \label{e:sta:static_metric}
     \w{g} = V \dd t^2 + g_{ij} \dd x^i \dd x^j ,
 \ee
-where $V=\w{\xi}\cdot\w{\xi}$, the indices $(i,j)$ range in $\{1,\ldots,n-1\}$
+where $V := \w{\xi}\cdot\w{\xi}$, the indices $(i,j)$ range in $\{1,\ldots,n-1\}$
 and $V$ and $g_{ij}$ are functions of $(x^1,\ldots,x^{n-1})$ only.
 It is clear that the metric (\ref{e:sta:static_metric}) is invariant\footnote{Would
 (\ref{e:sta:static_metric}) have contained a non-vanishing $g_{0i}\, \D t \, \D x^i$ term,
@@ -104,9 +108,9 @@ and therefore its causal past $J^-(\scri^+)$. As the boundary of $J^-(\scri^+)$
 inside $\M$, the event horizon $\Hor$ must therefore be invariant under the
 action of the isometry group.
 Note that this means that $\Hor$ is invariant \emph{as a whole}, not that
-each point of $\Hor$ is invariant (i.e. is a fixed point) under the group action.
+each point of $\Hor$ is invariant (i.e. is a fixed point of the group action).
 Let us assume that $\Hor$ is smooth (which sounds likely in a stationary context;
-a rigorous proof can be found in Ref.~\cite{ChrusDGH01}),
+a rigorous proof can be found in Ref.~\cite{ChrusDGH01});
 it is then a null hypersurface (Property~\ref{p:glo:prop4} in Sec.~\ref{s:glo:properties_H}).
 Now, $\Hor$ is globally invariant if, and only if, the
 generator $\w{\xi}$ of the isometry group is tangent to $\Hor$.
@@ -715,7 +719,8 @@ thus get $2 s^i V_i \sqrt{\gamma} \, \D^2 x = A_{\mu\nu} \D S^{\mu\nu}$, so
 that Eq.~(\ref{e:sta:flux_div_2form}) follows.
 \end{proof}
 
-\begin{prop}[Volume integral formula of the Komar mass]
+\begin{prop}[Volume integral formula for the Komar mass]
+\label{p:sta:Komar_mass_vol_integ}
 Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime,
 with stationary Killing vector $\w{\xi}$. Let us assume that $\w{g}$
 obeys the Einstein equation (\ref{e:fra:Einstein_eq}) for some energy-momentum
@@ -764,19 +769,29 @@ Eq.~(\ref{e:sta:Komar_mass_vol_integ}).
 \end{proof}
 
 \begin{remark}
+\label{r:sta:Komar_mass_single_boundary}
+If $\Sigma$ is a compact spacelike hypersurface bounded by a single closed
+2-surface, $\Sp_{\rm ext}$ say, formula~(\ref{e:sta:Komar_mass_vol_integ})
+still holds, provided that $M_{\Sp_{\rm int}}$ is replaced by zero. This follows
+directly from Eq.~(\ref{e:sta:flux_div_2form}) with the integral on $\Sp_{\rm int}$
+set to zero, since the boundary of $\Sigma$, which appears in the
+Gauss-Ostrogradsky theorem, is only made of $\Sp_{\rm ext}$.
+\end{remark}
+
+\begin{example}[Komar mass of a fluid star]
 We may use formula (\ref{e:sta:Komar_mass_vol_integ})
-to check that at the Newtonian limit, the Komar mass taken
-on a surface $\Sp_{\rm ext}$ surrounding a star
+to check that at the Newtonian limit, the Komar mass of
+a surface $\Sp_{\rm ext}$ surrounding a star
 reduces to the volume integral of the matter mass density,
 i.e. to the Newtonian expression of mass\index{Newtonian!mass}\index{mass!Newtonian --}.
-Indeed, let us assume that the spacetime is strictly static, i.e. that $\w{\xi}$
+To this aim, we assume that the spacetime is strictly static, i.e. that $\w{\xi}$
 is timelike in all $\M$ and is hypersurface-orthogonal.
 A static fluid star is then
 defined by the energy-momentum tensor $\w{T}$ being
 a perfect fluid\index{perfect fluid}\index{fluid!perfect --} one:
 $\w{T} = (\rho + p)\uu{u} \otimes \uu{u} + p \w{g}$, where
 $\rho$ is the fluid-comoving energy density,
-$p$ is the fluid pressure and the fluid 4-velocity is collinear to the
+$p$ is the fluid pressure and the fluid 4-velocity $\w{u}$ is collinear to the
 static Killing field $\w{\xi}$:
 \[
     \w{u} = \frac{1}{W} \, \w{\xi}
@@ -785,14 +800,13 @@ static Killing field $\w{\xi}$:
 \]
 the value of $W$ being imposed by the requirement $\w{u}\cdot\w{u} = -1$.
 Let us choose for $\Sigma$ a hypersurface orthogonal to $\w{\xi}$
-with an outer boundary  $\Sp_{\rm ext}$ but no inner boundary $\Sp_{\rm int}$,
-so that $M_{\Sp_{\rm int}}$
-can be set to zero in Eq.~(\ref{e:sta:Komar_mass_vol_integ}).
+with an outer boundary  $\Sp_{\rm ext}$ but no inner boundary $\Sp_{\rm int}$.
 Since $\Sigma$ is othogonal to $\w{\xi}$, we have
 necessarily $\w{n} = \w{u}$, so that $\w{T}(\w{n},\w{\xi}) = W \w{T}(\w{u},\w{u})
 = W \rho$ and $\w{g}(\w{n},\w{\xi}) = W \w{g}(\w{u},\w{u}) = -W$. Given that
 $T = 3 p  - \rho$, formula~(\ref{e:sta:Komar_mass_vol_integ}) with
-$M_{\Sp_{\rm int}} =  0$ results in
+$M_{\Sp_{\rm int}} =  0$ (cf. Remark~\ref{r:sta:Komar_mass_single_boundary} above)
+results in
 \[
     M_{\Sp_{\rm ext}} = 2
     \int_{\Sigma} \left( W \rho - \frac{3p - \rho}{2}(-W) \right)
@@ -806,7 +820,7 @@ $\w{\xi} = \wpar_t$,
 $\Phi$ is the Newtonian gravitational potential\index{gravitational!potential},
 i.e. the solution of
 the Poisson equation\index{Poisson equation}
-$\Delta \Phi = 4\pi \rho$ vanishing at infinity. We may then write
+$\Delta \Phi = 4\pi \rho$ that is vanishing at infinity. We may then write
 \be
     M_{\Sp_{\rm ext}} \simeq \int_{\Sigma} \rho \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3
     + \int_{\Sigma} \rho \Phi \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3 .
@@ -818,7 +832,19 @@ Its presence should not be a surprise given the mass-energy equivalence in
 relativity. However, at the Newtonian limit, this
 term can be
 neglected in front of the first term.
-\end{remark}
+\end{example}
+
+Since in vacuum, $\w{T} = 0$, an immediate
+corollary of Property~\ref{p:sta:Komar_mass_vol_integ} is:
+
+\begin{prop}[Independence of the Komar mass from the integration 2-surface]
+Two 2-surfaces $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ that are connected by
+a spacelike hypersurface $\Sigma$ in a \emph{vacuum} region of an
+an asymptotically flat stationary spacetime share the same Komar mass:
+\be
+    M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} .
+\ee
+\end{prop}
 
 \subsection{Komar angular momentum}
 
