@@ -868,29 +868,72 @@ $(\M,\w{g})$ and denote it by $M_\infty$.
 Given a spacelike hypersurface $\Sigma$, with future-directed unit normal
 $\w{n}$, the \defin{3+1 decomposition}\index{3+1 decomposition}
 of $\w{\xi}$ with respect to $\Sigma$
-is the unique pair $(N, \w{\beta})$ where $N$ is a scalar field on $\Sigma$
+is the pair $(N, \w{\beta})$ where $N$ is a scalar field on $\Sigma$
 and $\w{\beta}$ is a vector field tangent to $\Sigma$ such that
-\be
+\be \label{e:sta:xi_3p1}
     \w{\xi} = N \w{n} + \w{\beta} .
 \ee
 In other words, $\w{\beta}$ is the orthogonal projection of $\w{\xi}$ on $\Sigma$
-and $N$ is minus the scalar product of $\w{n}$ and $\w{\xi}$:
-$\w{\beta} = \w{\xi} + (\w{n}\cdot\w{\xi}) \w{n}$ and
-$N = - \w{n}\cdot\w{\xi}$. In the language of the 3+1 formalism of general
+and $N \w{n}$ is the part of $\w{\xi}$ along $\w{n}$.
+$N$ and $\w{\beta}$ are uniquely determined by
+$N = - \w{n}\cdot\w{\xi}$ and
+$\w{\beta} = \w{\xi} + (\w{n}\cdot\w{\xi}) \w{n}$.
+In the language of the 3+1 formalism of general
 relativity, $N$ is called the \defin{lapse function}\index{lapse function}
 and $\w{\beta}$ the \defin{shift vector}\index{shift vector} (cf. e.g. Ref.~\cite{Gourg12}).
 
-The 3+1 decomposition of the energy-momentum tensor $\w{T}$ with respect
-to the hypersurface $\Sigma$ is constituted by the unique
-3-tuple $(E, \w{p}, \w{S})$, where $E$ is a scalar field,
+Similarly, the \defin{3+1 decomposition} of the energy-momentum tensor $\w{T}$ with respect
+to the hypersurface $\Sigma$ is the
+triplet $(E, \w{p}, \w{S})$, where $E$ is a scalar field,
 $\w{p}$ is a 1-form satisfying $\langle \w{p}, \w{n} \rangle = 0$
 and $\w{S}$ is a symmetric type-$(0,2)$ tensor field satisfying
-$\w{S}(\w{n}, .) = 0$, such that
-\be
+$\w{S}(\w{n}, .) = 0$, such that\footnote{See e.g. Sec.~5.1.2 of Ref.~\cite{Gourg12}.}
+\be \label{e:sta:T_3p1}
     \w{T} = E \uu{n}\otimes \uu{n} + \uu{n} \otimes \w{p}
     + \w{p}\otimes \uu{n} + \w{S} .
 \ee
+$E$, $\w{p}$ and $\w{S}$ are uniquely determined by
+\be \label{e:sta:E_p_S_3p1}
+    E = T_{\mu\nu} n^\mu n^\nu, \quad
+    p_\alpha = - n^\mu T_{\mu \nu} \gamma^\nu_{\ \, \alpha},  \quad
+    S_{\alpha\beta} = T_{\mu \nu} \gamma^\mu_{\ \, \alpha} \gamma^\nu_{\ \, \beta} ,
+\ee
+where $\gamma^\alpha_{\ \, \beta} =  \delta^\alpha_{\ \, \beta} + n^\alpha n_\beta$
+stands for the \defin{orthogonal projector onto}\index{orthogonal!projector}
+$\Sigma$.
+Physically, $E$
+is the matter energy density measured by the observer $\Obs$ of 4-velocity $\w{n}$,
+$\w{p}$ is the matter momentum
+density measured by $\Obs$ and $\w{S}$ is the matter stress tensor measured by $\Obs$.
 
+\begin{prop}[3+1 expression of the Komar mass]
+Under the same hypotheses as Property~\ref{p:sta:Komar_mass_vol_integ},
+one can rewrite Eq.~(\ref{e:sta:Komar_mass_vol_integ}) as
+\be \label{e:sta:Komar_mass_3p1}
+    \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} +
+    \int_{\Sigma} \left[ N(E + S) - 2\langle \w{p}, \w{\beta} \rangle  \right]
+    \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3  , }
+\ee
+where $S := g^{\mu\nu} S_{\mu\nu} = \gamma^{ij} S_{ij}$
+is the trace of the stress tensor $\w{S}$.
+\end{prop}
+\begin{proof}
+From Eq.~(\ref{e:sta:T_3p1}), the trace of the energy-momentum tensor
+is $T := g^{\mu\nu} T_{\mu\nu} = E n_\mu n^\mu + n_\mu p^\mu + p_\mu n^\mu + S = - E + S$,
+since $n_\mu n^\mu = - 1$ and $p_\mu n^\mu = 0$.
+In view of Eqs.~(\ref{e:sta:xi_3p1}) and (\ref{e:sta:E_p_S_3p1})
+along with $\gamma^\alpha_{\ \, \mu} \beta^\mu$ (since $\w{\beta}$ is tangent
+to $\Sigma$), we can then rewrite
+the integrand in the r.h.s. of Eq.~(\ref{e:sta:Komar_mass_vol_integ}) as
+\[
+ \w{T}(\w{n}, \w{\xi}) - \frac{T}{2} \w{g}(\w{n}, \w{\xi}) =
+ N \underbrace{\w{T}(\w{n}, \w{n})}_{E}
+ + \underbrace{\w{T}(\w{n}, \w{\beta})}_{-\langle \w{p}, \w{\beta} \rangle}
+ - \frac{1}{2} (S - E) \underbrace{\w{n}\cdot \w{\xi}}_{-N}
+ = \frac{N}{2} (E+S) - \langle \w{p}, \w{\beta} \rangle .
+\]
+This establishes Eq.~(\ref{e:sta:Komar_mass_3p1}).
+\end{proof}
 
 
 
