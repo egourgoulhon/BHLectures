@@ -392,14 +392,14 @@ by J. Ehlers and J.L. Stachel and published in 1969 \cite{Boyer69}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Mass and angular momentum in stationary spacetimes}
+\section{Mass and angular momentum}
 
 \subsection{Komar mass}
 
 Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime,
 with stationary Killing vector $\w{\xi}$.
 Given a spacelike closed 2-surface $\Sp\subset\M$,
-the \defin{Komar mass of}\index{Komar!mass}\index{mass!Komar --} $\Sp$ is
+the \defin{Komar mass over}\index{Komar!mass}\index{mass!Komar --} $\Sp$ is
 defined by
 \be  \label{e:sta:def_Komar_mass}
     \encadre{M_{\Sp} := - \frac{1}{8\pi} \int_{\Sp} \star(\dd \uu{\xi}) },
@@ -595,7 +595,7 @@ which proves that $\w{n}$ and $\w{s}$ are normal to $\Sp$.
 Moreover, $\w{s}$ points towards the exterior of $\Sp$ (since $N>0$) and
 $(\w{n},\w{s},\wpar_\th,\wpar_\ph)$ is a right-handed basis. All the hypotheses
 stated below Eq.~(\ref{e:sta:area_bivector}) are thus fulfilled and we may use
-Eq.~(\ref{e:sta:M_Komar_partial_der}) to evaluate the Komar mass of $\Sp$.
+Eq.~(\ref{e:sta:M_Komar_partial_der}) to evaluate the Komar mass over $\Sp$.
 The components $\xi_\alpha$ of $\uu{\xi}$ are easily evaluated via
 the components (\ref{e:def:Schw_metric}) of $\w{g}$:
 $\xi_\alpha = g_{\alpha\mu} \xi^\nu = g_{\alpha\mu} (\partial_t)^\mu = g_{\alpha t}
@@ -673,21 +673,24 @@ We have then, using the antisymmetry of $\w{A}$,
     \nonumber \\
   & = & \left( \nabla_\mu V^\mu - V^i \partial_i \ln N \right) \sqrt{\gamma} \,  \D^3 x . \nonumber
 \eea
-In the second line, we have expressed the derivative of $\w{n}$ in terms of the extrinsic curvature
+In the second line, we have expressed the derivative of $\w{n}$ in terms of the
+extrinsic curvature\index{extrinsic!curvature}
 tensor $\w{K}$ of $\Sigma$ and of the lapse function $N := - \w{n} \cdot \wpar_t$,
 via the identity $\nabla^\alpha n^\beta = - K^{\alpha\beta} - D^\beta\ln N n^\alpha$
 (see e.g. Eq.~(4.24) of Ref.~\cite{Gourg12}), where $D^\beta \ln N = \nabla^\beta \ln N + n^\beta n^\mu \nabla_\mu \ln N$. To get the third line, we have used the symmetry of $\w{K}$
-to set $A_{\nu\mu} K^{\nu\mu} = 0$ and the property $V_\mu n^\mu = 0$.
+to set $A_{\nu\mu} K^{\nu\mu} = 0$ and the property $V_\mu n^\mu = 0$
+to write $V_\mu D^\mu \ln N = V_\mu \nabla^\mu \ln N = V^\mu \partial_\mu \ln N
+= V^i\partial_i \ln N$ ($i\in\{1,2,3\}$).
 Let us now use the standard formula expressing the divergence of a vector,
 along with $V^0 = 0$ ($\w{V}$ is tangent to $\Sigma$) and
 the relation $\sqrt{-g} = N\sqrt{\gamma}$ between the determinants
 of the metrics $\w{g}$ and $\w{\gamma}$ (see e.g. Eq.~(5.55) of Ref.~\cite{Gourg12})
 \bea
-    \nabla_\mu V^\mu  & = & \frac{1}{\sqrt{-g}} \der{}{x^\mu} \left( \sqrt{-g} V^\mu \right)
-    = \frac{1}{N \sqrt{\gamma}} \der{}{x^i} \left( N \sqrt{\gamma} V^i \right) \nonumber \\
-    & = & \frac{1}{\sqrt{\gamma}} \der{}{x^i} \left( \sqrt{\gamma} V^i \right)
-      + V^i \der{}{x^i} \ln N
-    = D_i V^i + V^i \der{}{x^i} \ln N  ,  \nonumber
+    \nabla_\mu V^\mu  & = & \frac{1}{\sqrt{-g}} \partial_\mu \left( \sqrt{-g} V^\mu \right)
+    = \frac{1}{N \sqrt{\gamma}} \partial_i \left( N \sqrt{\gamma} V^i \right) \nonumber \\
+    & = & \frac{1}{\sqrt{\gamma}} \partial_i \left( \sqrt{\gamma} V^i \right)
+      + V^i \partial_i \ln N
+    = D_i V^i + V^i \partial_i \ln N  ,  \nonumber
 \eea
 where $D_i V^i$ is the divergence of $\w{V}$ considered as a vector field
 on $(\Sigma, \w{\gamma})$, $\w{D}$ standing for the Levi-Civita connection
@@ -728,7 +731,7 @@ tensor $\w{T}$.
 Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed 2-surfaces:
 an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
 $\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
-The Komar masses of $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ are then
+The Komar masses over $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ are then
 related by
 \be \label{e:sta:Komar_mass_vol_integ}
     \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + 2
@@ -751,7 +754,7 @@ $\alpha$ and $\gamma$ makes the Ricci tensor $R_{\alpha\beta}$ appear:
 $\nabla_\nu \nabla_\mu \xi^\nu - \nabla_\mu \nabla_\nu \xi^\nu = R_{\nu\mu} \xi^\nu$.
 Thanks to the Killing equation (\ref{e:neh:Killing_equation}), the divergence
 of $\w{\xi}$ is zero: $\nabla_\nu \xi^\nu = 0$. Using the symmetry of the Ricci tensor,
-we get then
+we get
 \[
     \nabla^\nu \nabla_\mu \xi_\nu = R_{\mu\nu} \xi^\nu .
 \]
@@ -778,14 +781,15 @@ set to zero, since the boundary of $\Sigma$, which appears in the
 Gauss-Ostrogradsky theorem, is only made of $\Sp_{\rm ext}$.
 \end{remark}
 
-\begin{example}[Komar mass of a fluid star]
+\begin{example}[Komar mass of a static star]
 We may use formula (\ref{e:sta:Komar_mass_vol_integ})
-to check that at the Newtonian limit, the Komar mass of
+to check that at the Newtonian limit, the Komar mass over
 a surface $\Sp_{\rm ext}$ surrounding a star
 reduces to the volume integral of the matter mass density,
-i.e. to the Newtonian expression of mass\index{Newtonian!mass}\index{mass!Newtonian --}.
-To this aim, we assume that the spacetime is strictly static, i.e. that $\w{\xi}$
-is timelike in all $\M$ and is hypersurface-orthogonal.
+i.e. to the classical expression of the mass\index{Newtonian!mass}\index{mass!Newtonian --}
+in Newtonian gravity.
+To this aim, let us assume that the spacetime is strictly static, i.e. that $\w{\xi}$
+is timelike and hypersurface-orthogonal in all $\M$.
 A static fluid star is then
 defined by the energy-momentum tensor $\w{T}$ being
 a perfect fluid\index{perfect fluid}\index{fluid!perfect --} one:
@@ -820,8 +824,8 @@ $\w{\xi} = \wpar_t$,
 $\Phi$ is the Newtonian gravitational potential\index{gravitational!potential},
 i.e. the solution of
 the Poisson equation\index{Poisson equation}
-$\Delta \Phi = 4\pi \rho$ that is vanishing at infinity. We may then write
-\be
+$\Delta \Phi = 4\pi \rho$ that vansihes at infinity. We may then write
+\be \label{e:sta:mass_Newtonian}
     M_{\Sp_{\rm ext}} \simeq \int_{\Sigma} \rho \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3
     + \int_{\Sigma} \rho \Phi \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3 .
 \ee
@@ -831,7 +835,8 @@ potential energy} of the star, or equivalently the \emph{gravitational binding e
 Its presence should not be a surprise given the mass-energy equivalence in
 relativity. However, at the Newtonian limit, this
 term can be
-neglected in front of the first term.
+neglected in front of the first one and formula (\ref{e:sta:mass_Newtonian})
+reduces to the classical expression of mass of a Newtonian body.
 \end{example}
 
 Since in vacuum, $\w{T} = 0$, an immediate
@@ -840,11 +845,61 @@ corollary of Property~\ref{p:sta:Komar_mass_vol_integ} is:
 \begin{prop}[Independence of the Komar mass from the integration 2-surface]
 Two 2-surfaces $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ that are connected by
 a spacelike hypersurface $\Sigma$ in a \emph{vacuum} region of an
-an asymptotically flat stationary spacetime share the same Komar mass:
+asymptotically flat stationary spacetime share the same Komar mass:
 \be
     M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} .
 \ee
 \end{prop}
+We then have:
+\begin{prop}[Komar mass at infinity]
+Let $(\M,\w{g})$ be a stationary and asympotitcally flat spacetime.
+Let $\Sigma$ be any spacelike hypersurface that is asymptotically orthogonal
+to the stationary Killing vector field $\w{\xi}$.
+If the energy-momentum tensor $\w{T}$ has a compact support
+$\mathscr{D}\subset \M$, the Komar mass over a closed 2-surface $\Sp$ lying in
+$\Sigma$ is independent of $\Sp$ as long as $\Sp$ lies outside
+$\mathscr{D}$. Moreover, it is independent of the choice of $\Sigma$ as well.
+We shall call it the \defin{Komar mass at infinity} of the spacetime
+$(\M,\w{g})$ and denote it by $M_\infty$.
+\end{prop}
+
+\subsubsection{3+1 decomposition}
+
+Given a spacelike hypersurface $\Sigma$, with future-directed unit normal
+$\w{n}$, the \defin{3+1 decomposition}\index{3+1 decomposition}
+of $\w{\xi}$ with respect to $\Sigma$
+is the unique pair $(N, \w{\beta})$ where $N$ is a scalar field on $\Sigma$
+and $\w{\beta}$ is a vector field tangent to $\Sigma$ such that
+\be
+    \w{\xi} = N \w{n} + \w{\beta} .
+\ee
+In other words, $\w{\beta}$ is the orthogonal projection of $\w{\xi}$ on $\Sigma$
+and $N$ is minus the scalar product of $\w{n}$ and $\w{\xi}$:
+$\w{\beta} = \w{\xi} + (\w{n}\cdot\w{\xi}) \w{n}$ and
+$N = - \w{n}\cdot\w{\xi}$. In the language of the 3+1 formalism of general
+relativity, $N$ is called the \defin{lapse function}\index{lapse function}
+and $\w{\beta}$ the \defin{shift vector}\index{shift vector} (cf. e.g. Ref.~\cite{Gourg12}).
+
+The 3+1 decomposition of the energy-momentum tensor $\w{T}$ with respect
+to the hypersurface $\Sigma$ is constituted by the unique
+3-tuple $(E, \w{p}, \w{S})$, where $E$ is a scalar field,
+$\w{p}$ is a 1-form satisfying $\langle \w{p}, \w{n} \rangle = 0$
+and $\w{S}$ is a symmetric type-$(0,2)$ tensor field satisfying
+$\w{S}(\w{n}, .) = 0$, such that
+\be
+    \w{T} = E \uu{n}\otimes \uu{n} + \uu{n} \otimes \w{p}
+    + \w{p}\otimes \uu{n} + \w{S} .
+\ee
+
+
+
+
+\subsection{Link with the ADM mass}
+
+For generic (i.e. not necessarily stationary) asymptotically flat spacetimes,
+there exists the concept of \defin{ADM mass}, \emph{ADM} standing for
+Arnowitt, Deser and Misner \cite{ArnowDM62}. The ADM mass
+
 
 \subsection{Komar angular momentum}
 
