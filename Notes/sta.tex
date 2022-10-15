@@ -394,7 +394,7 @@ by J. Ehlers and J.L. Stachel and published in 1969 \cite{Boyer69}.
 
 \section{Mass and angular momentum}
 
-\subsection{Komar mass}
+\subsection{Komar mass} \label{s:sta:Komar_mass}
 
 Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime,
 with stationary Killing vector $\w{\xi}$.
@@ -623,12 +623,12 @@ We note that $M_{\Sp}$ does not depend on $r$, i.e. does not depend on the
 choice of the sphere $\Sp$.
 \end{example}
 
-\subsection{Volume integral formula for the Komar mass}
+\subsubsection{Volume integral formula for the Komar mass}
 
 We are going to derive a volume integral formula for $M_{\Sp}$, from which one can show
 the independence of $M_{\Sp}$ from the choice of $\Sp$ in
 the vacuum case, thereby generalizing the result of Example~\ref{x:sta:Komar_mass_Schw}.
- To this aim, we shall make use of the following lemma:
+To this aim, we shall make use of the following lemma:
 
 \begin{lemma}[flux integral of the divergence of a 2-form]
 \label{p:sta:flux_div_2_form}
@@ -937,14 +937,72 @@ This establishes Eq.~(\ref{e:sta:Komar_mass_3p1}).
 
 
 
-\subsection{Link with the ADM mass}
+\subsubsection{Link with the ADM mass}
 
 For generic (i.e. not necessarily stationary) asymptotically flat spacetimes,
-there exists the concept of \defin{ADM mass}, \emph{ADM} standing for
-Arnowitt, Deser and Misner \cite{ArnowDM62}. The ADM mass
+there exists the concept of \emph{ADM energy-momentum}\index{ADM!energy-momentum}, \emph{ADM} standing for
+Arnowitt, Deser and Misner \cite{ArnowDM62}. It arises from the Hamiltonian
+formulation of general relativity developed by these authors.
+For a spacelike hypersurface $\Sigma$ that is asymptotically Euclidean,
+the \defin{ADM energy}\index{ADM!energy} of $\Sigma$ is defined
+as some flux over a closed 2-sphere $\Sp$ of quantities involving derivatives
+of the metric $\w{\gamma}$ induced by $\w{g}$ on $\Sigma$, in the limit where
+the coordinate radius of $\Sp$ tends to infinity, while the
+3 components of the \defin{ADM momentum}\index{ADM!momentum}
+of $\Sigma$ are defined by similar integrals with quantities involving the extrinsic curvature
+tensor $\w{K}$ of $\Sigma$ (see e.g. \cite{JaramG11},
+Chap.~8 of \cite{Gourg12}, Sec.~4.3 of \cite{Poiss04},
+Sec.~3.7 of \cite{Strau13} or Sec.~3.2.1 of \cite{Szaba09} for details).
+The \defin{ADM mass}\index{ADM!mass} of $\Sigma$
+is then defined as the Minkowskian norm of the ADM energy-momentum.
+For a vanishing ADM momentum, the ADM mass coincides with the ADM energy.
+One may then ask the relation with the Komar mass if the spacetimes is stationary.
+The answer is very simple:
+\begin{prop}[Equality of Komar and ADM masses (Beig 1978)]
+If $(\M,\w{g})$ is a stationary and asymptotically flat spacetime,
+its Komar mass at infinity equals the ADM mass of any spacelike hypersurface
+$\Sigma$ that is asymptotically orthogonal to the stationary Killing vector $\w{\xi}$.
+\end{prop}
+The proof can be found in Beig's article \cite{Beig78}
+(see also Ref.~\cite{AshteM79} for a different proof).
 
+\subsection{Komar angular momentum} \label{s:sta:Komar_angu_mom}
 
-\subsection{Komar angular momentum}
+As a stationary Killing vector gave birth to the Komar mass,
+an axisymmetric Killing vector gives birth to an invariant integral quantity:
+the Komar angular momentum.
+
+Let $(\M, \w{g})$ be an axisymmetric spacetime,
+with axisymmetric Killing vector $\w{\eta}$.
+Given a spacelike closed 2-surface $\Sp\subset\M$,
+the \defin{Komar angular momentum over}\index{Komar!angular momentum}\index{angular!momentum!Komar --} $\Sp$ is
+defined by
+\be \label{e:sta:def_Komar_J}
+    \encadre{ J_{\Sp} := \frac{1}{16\pi} \int_{\Sp} \star(\dd \uu{\eta}) } ,
+\ee
+where $\star(\dd \uu{\eta})$
+is the Hodge dual of the 2-form $\dd \uu{\eta}$ given by
+\be
+    (\dd \uu{\eta})_{\alpha\beta} =
+        \partial_\alpha \eta_\beta - \partial_\beta \eta_\alpha =
+        \nabla_\alpha \eta_\beta - \nabla_\beta \eta_\alpha .
+\ee
+As the Komar mass $M_{\Sp}$, $J_{\Sp}$ does not depend on the choice of $\Sp$,
+provided $\Sp$ lies in the vacuum region and $\w{g}$ obeys the Einstein equation.
+
+\begin{remark}
+Besides the sign and the change $\w{\xi}\leftrightarrow\w{\eta}$, we notice a difference by a factor 2 between the r.h.s. of (\ref{e:sta:def_Komar_mass}) and (\ref{e:sta:def_Komar_J}).
+This is known as \emph{Komar's anomalous factor} and is discussed further in
+Ref.~\cite{Katz85}.
+\end{remark}
+
+Performing the same manipulations as for the Komar mass, we obtain
+\be \label{e:sta:J_Komar_partial_der}
+    \encadre{ J_{\Sp} = \frac{1}{16\pi} \int_{\Sp}
+    (s^\mu \partial_\mu \eta_\nu \, n^\nu - n^\mu \partial_\mu \eta_\nu \, s^\nu)
+    \sqrt{q}\, \D x^2 \, \D x^3 } .
+\ee
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
