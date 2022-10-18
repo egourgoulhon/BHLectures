@@ -458,7 +458,7 @@ manifold $\Sp$, the theory of integration is defined for $(n-2)$-forms \emph{on}
 while $\star(\dd \uu{\xi})$ is a $(n-2)$-form \emph{on} $\M$. However, any
 $(n-2)$-form $\w{\omega}$ on $\M$ yields canonically to a unique $(n-2)$-form
 $\iota^* \w{\omega}$ on the
-submanifold $\Sp$, by restrincting the action of $\w{\omega}$ at each point
+submanifold $\Sp$, by restricting the action of $\w{\omega}$ at each point
 $p\in\Sp$ to vectors tangent to $\Sp$. One says that $\iota^* \w{\omega}$ is the
 \emph{pullback}\index{pullback} of $\w{\omega}$ to $\Sp$ via the embedding $\iota$ of $\Sp$ in $\M$
 (cf. Sec.~\ref{s:bas:Lie}).
@@ -467,8 +467,26 @@ $p\in\Sp$ to vectors tangent to $\Sp$. One says that $\iota^* \w{\omega}$ is the
 \begin{remark}
 For $n=4$ (the standard spacetime dimension), the numerical prefactor in front of
 the integral in the definition (\ref{e:sta:def_Komar_mass}) is $-1/(8\pi)$.
-For $n=5$, it becomes $-3/(32\pi)$. Note that the Komar mass is not defined for
-$n \leq 3$.
+For $n=5$, it becomes $-3/(32\pi)$.
+\end{remark}
+
+\begin{remark}
+The Komar mass is not defined for $n \leq 3$. In particular,
+formula~(\ref{e:sta:def_Komar_mass}) is ill-posed for $n=3$.
+Already in Newtonian gravity, the very concept of gravitational mass is well defined only
+for $n \geq 4$. Indeed, in spherical symmetry,
+a solution of the Poisson equation\index{Poisson equation} outside the sources ($\Delta \Phi = 0$)
+that decays with the radius $r$ exists only for $n \geq 4$: this solution is\footnote{This is easy
+to get since in an Euclidean space of dimension $n-1$ the Laplace
+operator\index{Laplace operator} is $\Delta\Phi = \frac{1}{r^{n-2}} \derd{}{r} \left( r^{n-2} \derd{\Phi}{r} \right)$
+for spherically symmetric fields $\Phi(r)$.}
+$\Phi = -M/r^{n-3}$,
+where the constant $M$ is interpreted as the \emph{gravitational mass}\index{gravitational!mass}\index{mass!gravitational --} of the central source.
+For $n=3$, the solutions of $\Delta \Phi = 0$ are $\Phi = a \ln r + b$ ($a$ and $b$ being constant), while
+for $n=2$, they are $\Phi = a r + b$, none of them decaying for $r\to +\infty$.
+The prefactor $-(n-2)/(16\pi(n-3))$ in the definition (\ref{e:sta:def_Komar_mass})
+is chosen to recover the gravitational mass at the Newtonian limit, as
+it will be explictly shown for $n=4$ in Example~\ref{x:sta:Komar_mass_star} below.
 \end{remark}
 
 In view of Eq.~(\ref{e:sta:Hodge_2form}) and the last equality in Eq.~(\ref{e:sta:duxi_nab}),
@@ -496,7 +514,8 @@ More precisely, let us introduce the
 \ee
 where
 \begin{itemize}
-\item $\w{n}$ is a unit future-directed timelike vector normal to $\Sp$
+\item $\w{n}$ is a unit future-directed timelike vector\footnote{Do not confuse the vector $\w{n}$
+with the spacetime dimension $n$.} normal to $\Sp$
 and $\w{s}$ is a unit spacelike vector normal to $\Sp$
 such that (i) $\w{s}$ points towards the ``exterior'' of $\Sp$, i.e.
 towards the asymptotically flat end of $(\M, \w{g})$ and
@@ -709,7 +728,7 @@ via the identity $\nabla^\alpha n^\beta = - K^{\alpha\beta} - D^\beta\ln N n^\al
 (see e.g. Eq.~(4.24) of Ref.~\cite{Gourg12}), where $D^\beta \ln N = \nabla^\beta \ln N + n^\beta n^\mu \nabla_\mu \ln N$. To get the third line, we have used the symmetry of $\w{K}$
 to set $A_{\nu\mu} K^{\nu\mu} = 0$ and the property $V_\mu n^\mu = 0$
 to write $V_\mu D^\mu \ln N = V_\mu \nabla^\mu \ln N = V^\mu \partial_\mu \ln N
-= V^i\partial_i \ln N$ ($i\in\{1,2,3\}$).
+= V^i\partial_i \ln N$ ($i\in\{1,\ldots,n-1\}$).
 Let us now use the standard formula expressing the divergence of a vector,
 along with $V^0 = 0$ ($\w{V}$ is tangent to $\Sigma$) and
 the relation $\sqrt{-g} = N\sqrt{\gamma}$ between the determinants
@@ -753,22 +772,22 @@ that Eq.~(\ref{e:sta:flux_div_2form}) follows.
 
 \begin{prop}[Volume integral formula for the Komar mass]
 \label{p:sta:Komar_mass_vol_integ}
-Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime,
+Let $(\M, \w{g})$ be an asymptotically flat stationary $n$-dimensional spacetime,
 with stationary Killing vector $\w{\xi}$. Let us assume that $\w{g}$
-obeys the Einstein equation (\ref{e:fra:Einstein_eq}) for some energy-momentum
-tensor $\w{T}$.
-Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed 2-surfaces:
+obeys the Einstein equation (\ref{e:fra:Einstein_eq}) with some energy-momentum
+tensor $\w{T}$ and a vanishing cosmological constant.
+Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed $(n-2)$-surfaces:
 an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
 $\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
 The Komar masses over $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ are then
 related by
 \be \label{e:sta:Komar_mass_vol_integ}
     \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + 2
-    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T}{2} \, \w{n}\cdot \w{\xi} \right)
-    \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3  , }
+    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T}{n-2} \, \w{n}\cdot \w{\xi} \right)
+    \sqrt{\gamma} \, \D x^1 \cdots \D x^{n-1}  , }
 \ee
-where $\w{n}$ be the future-directed unit normal to $\Sigma$,
-$\sqrt{\gamma}\,\D x^1 \D x^2 \, \D x^3$ is the volume element on $\Sigma$
+where $\w{n}$ is the future-directed unit normal to $\Sigma$,
+$\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
 induced by $\w{g}$ and $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
 \end{prop}
 \begin{proof}
@@ -795,7 +814,7 @@ Equation~(\ref{e:sta:flux_div_2form}) yields then
 where we have used Eq.~(\ref{e:sta:Komar_mass_flux_nabla_xi})
 to let appear the Komar masses $M_{\Sp_{\rm ext}}$ and $M_{\Sp_{\rm int}}$.
 Finaly, making use of the Einstein equation in the form
-(\ref{e:fra:Einstein_eq_n}) along with expression
+(\ref{e:fra:Einstein_eq_n}) with $\Lambda=0$, along with expression
 (\ref{e:sta:normal_vol_element}) for $\D V^\mu$, we get
 Eq.~(\ref{e:sta:Komar_mass_vol_integ}).
 \end{proof}
@@ -803,7 +822,7 @@ Eq.~(\ref{e:sta:Komar_mass_vol_integ}).
 \begin{remark}
 \label{r:sta:Komar_mass_single_boundary}
 If $\Sigma$ is a compact spacelike hypersurface bounded by a single closed
-2-surface, $\Sp_{\rm ext}$ say, formula~(\ref{e:sta:Komar_mass_vol_integ})
+$(n-2)$-surface, $\Sp_{\rm ext}$ say, formula~(\ref{e:sta:Komar_mass_vol_integ})
 still holds, provided that $M_{\Sp_{\rm int}}$ is replaced by zero. This follows
 directly from Eq.~(\ref{e:sta:flux_div_2form}) with the integral on $\Sp_{\rm int}$
 set to zero, since the boundary of $\Sigma$, which appears in the
@@ -811,13 +830,14 @@ Gauss-Ostrogradsky theorem, is only made of $\Sp_{\rm ext}$.
 \end{remark}
 
 \begin{example}[Komar mass of a static star]
+\label{x:sta:Komar_mass_star}
 We may use formula (\ref{e:sta:Komar_mass_vol_integ})
 to check that at the Newtonian limit, the Komar mass over
 a surface $\Sp_{\rm ext}$ surrounding a star
 reduces to the volume integral of the matter mass density,
 i.e. to the classical expression of the mass\index{Newtonian!mass}\index{mass!Newtonian --}
 in Newtonian gravity.
-To this aim, let us assume that the spacetime is strictly static, i.e. that $\w{\xi}$
+To this aim, we set $n=4$ and assume that the spacetime is strictly static, i.e. that $\w{\xi}$
 is timelike and hypersurface-orthogonal in all $\M$.
 A static fluid star is then
 defined by the energy-momentum tensor $\w{T}$ being
@@ -860,7 +880,8 @@ $\Delta \Phi = 4\pi \rho$ that vansihes at infinity. We may then write
 \ee
 The first term is the volume integral of the fluid mass density; the second
 term is negative (since $\Phi < 0$) and represents the \emph{total gravitational
-potential energy} of the star, or equivalently the \emph{gravitational binding energy} of the star.
+potential energy}\index{gravitational!potential energy} of the star, or equivalently the \emph{gravitational binding energy}\index{gravitational!binding energy}\index{binding!energy}
+of the star.
 Its presence should not be a surprise given the mass-energy equivalence in
 relativity. However, at the Newtonian limit, this
 term can be
@@ -868,36 +889,38 @@ neglected in front of the first one and formula (\ref{e:sta:mass_Newtonian})
 reduces to the classical expression of mass of a Newtonian body.
 \end{example}
 
-Since in vacuum, $\w{T} = 0$, an immediate
+Since in vacuum $\w{T} = 0$, an immediate
 corollary of Property~\ref{p:sta:Komar_mass_vol_integ} is:
 
 \begin{prop}[Independence of the Komar mass from the integration 2-surface]
 \label{p:sta:Komar_mass_invariant}
-Two 2-surfaces $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ that are connected by
+Two $(n-2)$-surfaces $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ that are connected by
 a spacelike hypersurface $\Sigma$ in a \emph{vacuum} region of an
 asymptotically flat stationary spacetime ruled by the Einstein equation
-share the same Komar mass:
+with $\Lambda=0$ share the same Komar mass:
 \be
     M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} .
 \ee
 \end{prop}
 We then have:
 \begin{prop}[Komar mass at infinity]
-Let $(\M,\w{g})$ be a stationary and asympotitcally flat spacetime.
+Let $(\M,\w{g})$ be a stationary and asympotically flat $n$-dimensional spacetime.
 Let $\Sigma$ be any spacelike hypersurface that is asymptotically orthogonal
 to the stationary Killing vector field $\w{\xi}$.
 If the energy-momentum tensor $\w{T}$ has a compact support
-$\mathscr{D}\subset \M$, the Komar mass over a closed 2-surface $\Sp$ lying in
+$\mathscr{D}\subset \M$, the Komar mass over a closed $(n-2)$-surface $\Sp$ lying in
 $\Sigma$ is independent of $\Sp$ as long as $\Sp$ lies outside
 $\mathscr{D}$. Moreover, it is independent of the choice of $\Sigma$ as well.
 We shall call it the \defin{Komar mass at infinity} of the spacetime
 $(\M,\w{g})$ and denote it by $M_\infty$.
 \end{prop}
 
-\subsubsection{3+1 decomposition}
+\subsubsection{N+1 decomposition}
 
+Let $\mathcal{N} := n - 1$, $n$ being the spacetime dimension.
 Given a spacelike hypersurface $\Sigma$, with future-directed unit normal
-$\w{n}$, the \defin{3+1 decomposition}\index{3+1 decomposition}
+$\w{n}$,
+the \defin{$\bm{\mathcal{N}}$+1 decomposition}\index{$\mathcal{N}+1$ decomposition}
 of $\w{\xi}$ with respect to $\Sigma$
 is the pair $(N, \w{\beta})$ where $N$ is a scalar field on $\Sigma$
 and $\w{\beta}$ is a vector field tangent to $\Sigma$ such that
@@ -909,11 +932,11 @@ and $N \w{n}$ is the part of $\w{\xi}$ along $\w{n}$.
 $N$ and $\w{\beta}$ are uniquely determined by
 $N = - \w{n}\cdot\w{\xi}$ and
 $\w{\beta} = \w{\xi} + (\w{n}\cdot\w{\xi}) \w{n}$.
-In the language of the 3+1 formalism of general
+In the language of the $\mathcal{N}$+1 formalism of general
 relativity, $N$ is called the \defin{lapse function}\index{lapse function}
 and $\w{\beta}$ the \defin{shift vector}\index{shift vector} (cf. e.g. Ref.~\cite{Gourg12}).
 
-Similarly, the \defin{3+1 decomposition} of the energy-momentum tensor $\w{T}$ with respect
+Similarly, the \defin{$\bm{\mathcal{N}}$+1 decomposition} of the energy-momentum tensor $\w{T}$ with respect
 to the hypersurface $\Sigma$ is the
 triplet $(E, \w{p}, \w{S})$, where $E$ is a scalar field,
 $\w{p}$ is a 1-form satisfying $\langle \w{p}, \w{n} \rangle = 0$
@@ -937,13 +960,13 @@ is the matter energy density measured by the observer $\Obs$ of 4-velocity $\w{n
 $\w{p}$ is the matter momentum
 density measured by $\Obs$ and $\w{S}$ is the matter stress tensor measured by $\Obs$.
 
-\begin{prop}[3+1 expression of the Komar mass]
+\begin{prop}[$\bm{\mathcal{N}}$+1 expression of the Komar mass]
 Under the same hypotheses as Property~\ref{p:sta:Komar_mass_vol_integ},
 one can rewrite Eq.~(\ref{e:sta:Komar_mass_vol_integ}) as
 \be \label{e:sta:Komar_mass_3p1}
     \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} +
-    \int_{\Sigma} \left[ N(E + S) - 2\langle \w{p}, \w{\beta} \rangle  \right]
-    \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3  , }
+    2 \int_{\Sigma} \left[ \frac{N}{n-2} \left[ (n-3) E + S \right] - \langle \w{p}, \w{\beta} \rangle  \right]
+    \sqrt{\gamma} \, \D x^1 \cdots \D x^{n-1}  , }
 \ee
 where $S := g^{\mu\nu} S_{\mu\nu} = \gamma^{ij} S_{ij}$
 is the trace of the stress tensor $\w{S}$.
@@ -952,16 +975,14 @@ is the trace of the stress tensor $\w{S}$.
 From Eq.~(\ref{e:sta:T_3p1}), the trace of the energy-momentum tensor
 is $T := g^{\mu\nu} T_{\mu\nu} = E n_\mu n^\mu + n_\mu p^\mu + p_\mu n^\mu + S = - E + S$,
 since $n_\mu n^\mu = - 1$ and $p_\mu n^\mu = 0$.
-In view of Eqs.~(\ref{e:sta:xi_3p1}) and (\ref{e:sta:E_p_S_3p1})
-along with $\gamma^\alpha_{\ \, \mu} \beta^\mu$ (since $\w{\beta}$ is tangent
-to $\Sigma$), we can then rewrite
+In view of Eqs.~(\ref{e:sta:xi_3p1}) and (\ref{e:sta:T_3p1}), we can then rewrite
 the integrand in the r.h.s. of Eq.~(\ref{e:sta:Komar_mass_vol_integ}) as
 \[
- \w{T}(\w{n}, \w{\xi}) - \frac{T}{2} \w{g}(\w{n}, \w{\xi}) =
+ \w{T}(\w{n}, \w{\xi}) - \frac{T}{n-2} \w{n}\cdot \w{\xi} =
  N \underbrace{\w{T}(\w{n}, \w{n})}_{E}
  + \underbrace{\w{T}(\w{n}, \w{\beta})}_{-\langle \w{p}, \w{\beta} \rangle}
- - \frac{1}{2} (S - E) \underbrace{\w{n}\cdot \w{\xi}}_{-N}
- = \frac{N}{2} (E+S) - \langle \w{p}, \w{\beta} \rangle .
+ - \frac{S - E}{n-2} \underbrace{\w{n}\cdot \w{\xi}}_{-N}
+ =  \frac{N}{n-2} \left[ (n-3) E + S \right] - \langle \w{p}, \w{\beta} \rangle .
 \]
 This establishes Eq.~(\ref{e:sta:Komar_mass_3p1}).
 \end{proof}
@@ -976,7 +997,7 @@ Arnowitt, Deser and Misner \cite{ArnowDM62}. It arises from the Hamiltonian
 formulation of general relativity developed by these authors.
 For a spacelike hypersurface $\Sigma$ that is asymptotically Euclidean,
 the \defin{ADM energy}\index{ADM!energy} of $\Sigma$ is defined
-as some flux over a closed 2-sphere $\Sp$ of quantities involving derivatives
+as some flux over a closed $(n-2)$-sphere $\Sp$ of quantities involving derivatives
 of the metric $\w{\gamma}$ induced by $\w{g}$ on $\Sigma$, in the limit where
 the coordinate radius of $\Sp$ tends to infinity, while the
 3 components of the \defin{ADM momentum}\index{ADM!momentum}
@@ -989,13 +1010,14 @@ is then defined as the Minkowskian norm of the ADM energy-momentum.
 For a vanishing ADM momentum, the ADM mass coincides with the ADM energy.
 One may then ask the relation with the Komar mass if the spacetimes is stationary.
 The answer is very simple:
-\begin{prop}[Equality of Komar and ADM masses (Beig 1978)]
-If $(\M,\w{g})$ is a stationary and asymptotically flat spacetime,
+\begin{prop}[Equality of Komar and ADM masses \textnormal{(Beig 1978)}]
+If $(\M,\w{g})$ is a stationary and asymptotically flat $n$-dimensional spacetime,
 its Komar mass at infinity equals the ADM mass of any spacelike hypersurface
 $\Sigma$ that is asymptotically orthogonal to the stationary Killing vector $\w{\xi}$.
 \end{prop}
-The proof can be found in Beig's article \cite{Beig78}
-(see also Ref.~\cite{AshteM79} for a different proof).
+For $n=4$, the proof can be found in R.~Beig's\index{Beig, R.} article \cite{Beig78}
+(see also Ref.~\cite{AshteM79} for a different proof), while the proof
+for $n>4$ has been obtained by H.~Barzegar, P.T.~Chruściel and M.~Hörzinger \cite{BarzgCH17}.
 
 \subsection{Komar angular momentum} \label{s:sta:Komar_angu_mom}
 
@@ -1003,9 +1025,9 @@ As a stationary Killing vector gave birth to the Komar mass,
 an axisymmetric Killing vector gives birth to an invariant integral quantity:
 the Komar angular momentum.
 
-Let $(\M, \w{g})$ be an axisymmetric spacetime,
+Let $(\M, \w{g})$ be an axisymmetric $n$-diemnsional spacetime,
 with axisymmetric Killing vector $\w{\eta}$.
-Given a spacelike closed 2-surface $\Sp\subset\M$,
+Given a spacelike closed $(n-2)$-surface $\Sp\subset\M$,
 the \defin{Komar angular momentum over}\index{Komar!angular momentum}\index{angular!momentum!Komar --} $\Sp$ is
 defined by
 \be \label{e:sta:def_Komar_J}
@@ -1020,15 +1042,14 @@ is the Hodge dual of the 2-form $\dd \uu{\eta}$ given by
 \ee
 
 \begin{remark}
-Besides the sign and the change $\w{\xi}\leftrightarrow\w{\eta}$, we notice a difference by a factor $-2$ between the r.h.s. of (\ref{e:sta:def_Komar_mass}) and (\ref{e:sta:def_Komar_J}).
-This is known as \emph{Komar's anomalous factor} and is discussed further in
-Ref.~\cite{Katz85}.
+Besides the change $\w{\xi}\leftrightarrow\w{\eta}$, we notice a difference by a factor $-(n-2)/(n-3)$ between the r.h.s. of (\ref{e:sta:def_Komar_mass}) and (\ref{e:sta:def_Komar_J}). For $n=4$, this factor is $-2$ and is
+known as \emph{Komar's anomalous factor} (see Ref.~\cite{Katz85} for a discussion).
 \end{remark}
 
 Formulas (\ref{e:sta:Komar_mass_flux_nabla_xi}) and (\ref{e:sta:M_Komar_partial_der})
 for the Komar mass rely only on the fact that $\w{\xi}$ is a Killing vector.
 In an axisymmetric spacetime, we may therefore replace $\w{\xi}$ by $\w{\eta}$
-and the factor $-1/(8\pi)$ by $1/(16\pi)$ to get the following expressions
+and the numerical prefactor by $1/(16\pi)$ to get the following expressions
 for the Komar angular momentum:
 \be
     \encadre{ J_{\Sp} = \frac{1}{16\pi} \int_{\Sp} \nabla_\mu \eta_\nu \,  \D S^{\mu\nu} }
@@ -1036,37 +1057,38 @@ for the Komar angular momentum:
 and
 \be \label{e:sta:J_Komar_partial_der}
     \encadre{ J_{\Sp} = \frac{1}{16\pi} \int_{\Sp} \partial_\mu \eta_\nu (s^\mu   n^\nu - n^\mu s^\nu)
-    \sqrt{q}\, \D x^2 \, \D x^3 } .
+    \sqrt{q}\, \D x^1 \cdots  \D x^{n-2} } .
 \ee
 Similarly, the volume integral formula (\ref{e:sta:Komar_mass_vol_integ}) for the
 Komar mass relies only the Einstein equation and $\w{\xi}$ being a Killing vector.
 We may therefore transpose it to the Komar angular momentum:
 
 \begin{prop}[Volume integral formula for the Komar angular momentum]
-Let $(\M, \w{g})$ be an axisymmetric spacetime,
+Let $(\M, \w{g})$ be an axisymmetric $n$-dimensional spacetime,
 with axisymmetric Killing vector $\w{\eta}$. Let us assume that $\w{g}$
-obeys the Einstein equation (\ref{e:fra:Einstein_eq}) for some energy-momentum
-tensor $\w{T}$.
-Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed 2-surfaces:
+obeys the Einstein equation (\ref{e:fra:Einstein_eq}) with some energy-momentum
+tensor $\w{T}$ and a vanishing cosmological constant.
+Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed $(n-2)$-surfaces:
 an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
 $\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
 The Komar angular momenta over $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ are then
 related by
 \be \label{e:sta:Komar_angul_vol_integ}
     \encadre{ J_{\Sp_{\rm ext}} = J_{\Sp_{\rm int}} -
-    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\eta}) - \frac{T}{2} \, \w{n}\cdot\w{\eta} \right)
-    \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3  , }
+    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\eta}) - \frac{T}{n-2} \, \w{n}\cdot\w{\eta} \right)
+    \sqrt{\gamma} \, \D x^1 \cdots \D x^{n-1}  , }
 \ee
-where $\w{n}$ be the future-directed unit normal to $\Sigma$,
-$\sqrt{\gamma}\,\D x^1 \D x^2 \, \D x^3$ is the volume element on $\Sigma$
+where $\w{n}$ is the future-directed unit normal to $\Sigma$,
+$\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
 induced by $\w{g}$ and $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
 \end{prop}
 
 \begin{remark}
 Since the axisymmetry generator $\w{\eta}$ is spacelike, the spacelike hypersurface
 $\Sigma$ can be chosen so that $\w{\eta}$ is tangent to it; one has then
-$\w{n}\cdot\w{\eta} = 0$, so that the second term in the integrand of Eq.~(\ref{e:sta:Komar_angul_vol_integ}) vanishes identically.
-Moreover, if one expresses $\w{T}$ via the 3+1 decomposition (\ref{e:sta:T_3p1}),
+$\w{n}\cdot\w{\eta} = 0$ and the second term in the integrand of
+Eq.~(\ref{e:sta:Komar_angul_vol_integ}) vanishes identically.
+Moreover, if one expresses $\w{T}$ via the $\mathcal{N}$+1 decomposition (\ref{e:sta:T_3p1}),
 one can write the first term as $\w{T}(\w{n}, \w{\eta}) = - \langle \w{p}, \w{\eta} \rangle$,
 so that formula (\ref{e:sta:Komar_angul_vol_integ}) simplifies to
 \be
@@ -1080,7 +1102,7 @@ As for the Komar mass (Property~\ref{p:sta:Komar_mass_invariant}), it follows
 immediately from Eq.~(\ref{e:sta:Komar_angul_vol_integ}) that
 
 \begin{prop}[Independence of the Komar angular momentum from the integration 2-surface]
-Two 2-surfaces $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ that are connected by
+Two $(n-2)$-surfaces $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ that are connected by
 a spacelike hypersurface $\Sigma$ in a \emph{vacuum} region of an
 axisymmetric spacetime ruled by the Einstein equation share the same Komar
 angular momentum:
@@ -1152,8 +1174,8 @@ of Carter's review article \cite{Carte99}.
 
 \begin{remark}
 In the original formulation (Theorem~2 of Ref.~\cite{SudarW93}), the non-degeneracy of $\Hor$
-is replaced by $\Hor$ being part of a bifurcate Killing horizon, to be discussed in
-Sec.~\ref{s:sta:bifur_Killing_hor} below. However, these two properties are essentially
+is replaced by $\Hor$ being part of a bifurcate Killing horizon
+(cf. Sec.~\ref{s:sta:bifur_Killing_hor}). However, these two properties are essentially
 equivalent \cite{RaczW96}. Although the latter was used in
 Sudarsky \& Wald's demonstration, it turns out the final result still holds without it:
 as the uniqueness theorem ?? below shows, the spacetime is static even if the horizon
