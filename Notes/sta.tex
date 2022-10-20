@@ -7,12 +7,9 @@
 
 This chapter is still in draft stage...
 
-\section{Definition and first properties}
+\section{Stationary and static spacetimes}
 
-\subsection{Stationarity and staticity} \label{s:sta:def_station}
-
-Let us start by defining the concepts of \emph{stationary} and \emph{static}
-spacetimes.
+\subsection{Definitions} \label{s:sta:def_station}
 
 \begin{greybox}
 A spacetime $(\M,\w{g})$ is called \defin{stationary}\index{stationary!spacetime}
@@ -60,6 +57,14 @@ The same comment as in Remark~\ref{r:sta:pseudo-stationary} can be made: some au
 would call \emph{static} only spacetimes that are
 \emph{strictly static} according to the above definition.
 \end{remark}
+
+In loose terms, a spacetime is stationary if nothing ``changes with time'', while
+it is static if, in addition, nothing ``moves''. A prototype of a stationary
+spacetime that is not static is a spacetime containing a steadily rotating
+body, be it a star or a black hole.
+
+
+\subsection{Coordinates adapted to static spacetimes}
 
 Via the Frobenius theorem (cf. Sec.~\ref{s:def:Frobenius}), the hypersurface-orthogonal
 condition is equivalent to the existence of a 1-form $\w{\omega}$ such that
@@ -1124,8 +1129,9 @@ with it, contrary to what was done in Sec.~\ref{s:sta:Komar_ADM} for the mass.
 \section{The event horizon as a Killing horizon} \label{s:sta:EH_KH}
 
 In view of Property~\ref{p:sta:xi_tangent_H}, let us
-examine successively the two allowed types for the stationary
-Killing vector $\w{\xi}$ on the event horizon $\Hor$: $\w{\xi}$ null (Sec.~\ref{s:sta:staticity_thm})
+examine successively the two allowed types for the
+Killing vector $\w{\xi}$ on the event horizon $\Hor$ of a stationary black hole:
+$\w{\xi}$ null (Sec.~\ref{s:sta:staticity_thm})
 and $\w{\xi}$ spacelike (Sec.~\ref{s:sta:strong_rigidity}). In both cases, we shall see
 that $\Hor$ must be a Killing horizon; this is immediate
 for $\w{\xi}$ null and not trivial for $\w{\xi}$ spacelike.
@@ -1143,31 +1149,35 @@ given in Sec.~\ref{s:neh:def_Killing_hor}, we get immediately:
 \label{p:sta:H_Killing_hor_xi_null}
 In a stationary spacetime $(\M,\w{g})$ containing a black hole
 of event horizon $\Hor$, if the stationary Killing vector $\w{\xi}$
-is null on $\Hor$, then $\Hor$ is a Killing horizon with respect to the
-Killing field $\w{\xi}$.
+is null on $\Hor$, then $\Hor$ is a Killing horizon with respect to $\w{\xi}$.
 \end{prop}
 
 It follows that, on $\Hor$, the Killing vector field $\w{\xi}$
 is hypersurface-orthogonal, being normal to $\Hor$. Under certain hypotheses, especially
-that the metric fulfills the Einstein equation, one can go further
-and prove that actually $\w{\xi}$ must hypersurface-orthogonal everywhere in $\M$:
+that the vacuum Einstein equation is fulfilled, one can go further
+and prove that actually $\w{\xi}$ must hypersurface-orthogonal everywhere in $\M$,
+i.e. that $(\M,\w{g})$ is \emph{static} (cf. the definition given in Sec.~\ref{s:sta:def_station}):
 
-\begin{prop}[staticity theorem\index{staticity theorem} \textnormal{(Sudarsky \& Wald, 1993)}]
+\begin{prop}[staticity theorem\index{staticity theorem} \textnormal{(Sudarsky \& Wald 1993 \cite{SudarW93})}]
 \label{p:sta:staticity_thm}
-Let $(\M,\w{g})$ be a stationary spacetime of dimension $n=4$ containing a black
-hole of event horizon $\Hor$ such that the stationary Killing vector $\w{\xi}$
-is null on $\Hor$.
-Let us assume that $\w{g}$ is a solution of the \emph{electrovacuum} Einstein
+Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 4$
+that contains a black hole of event horizon $\Hor$.
+If
+(i) the stationary Killing vector $\w{\xi}$ is null on $\Hor$,
+(ii) $\Hor$ is part of a bifurcate Killing horizon
+and (iii) $\w{g}$ obeys the vacuum Einstein equation, then the spacetime
+is static\index{static!spacetime}.
+\end{prop}
+
+\begin{remark}
+The theorem actually proved by Sudarsky \& Wald (Theorem~2 in Ref.~\cite{SudarW93})
+is actually more general: it regards solutions of the \emph{electrovacuum}\index{electrovacuum} Einstein
 equation, i.e. Eq.~(\ref{e:fra:Einstein_eq}) with either $\w{T} = 0$
 or $\w{T}$ being the energy-momentum tensor of a source-free electromagnetic
 field $\w{F}$ that is stationary: $\Lie{\w{\xi}} \w{F} = 0$ (one says that
-$(\w{g},\w{F})$ is a solution of the stationary Einstein-Maxwell system). Then,
-assuming that $\Hor$ is non-degenerate, i.e. has a nonzero surface gravity
-(cf. Sec.~\ref{s:neh:classif_KH}), the Killing vector $\w{\xi}$  is
-hypersurface-orthogonal in all $\M$.
-It follows that the spacetime $(\M,\w{g})$ is
-\emph{static}\index{static!spacetime} (cf. the definition given in Sec.~\ref{s:sta:def_station}).
-\end{prop}
+$(\w{g},\w{F})$ is a solution of the stationary Einstein-Maxwell system\index{Einstein-Maxwell system}).
+\end{remark}
+
 The proof can be found in the original article by Sudarsky \& Wald \cite{SudarW93}.
 A simplified version for the vacuum case ($\w{T}=0$) is given in the appendix
 of Carter's review article \cite{Carte99}.
@@ -1304,6 +1314,7 @@ called the \defin{ergoregion}\index{ergoregion} and its boundary $\E:=\partial\m
 the \defin{ergosphere}. We shall discuss it further in connection with
 the Penrose process in Chap.~\ref{s:ker}.
 
+\subsection{The generalized Smarr formula}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
