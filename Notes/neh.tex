@@ -1416,28 +1416,33 @@ of $\kappa$:
 where $\lim_{\Hor}$ stands for the limit as one approaches $\Hor$
 from the timelike side, which implies $V\rightarrow 0$.
 \begin{proof}
-Let us consider the 3-form $\w{\omega}$ defined by
+Let us consider the \defin{twist 3-form}\index{twist 3-form} $\w{\omega}$ defined by
+\be \label{e:neh:def_twist_3form}
+    \w{\omega} := \uu{\xi} \wedge \dd \uu{\xi}
+\ee
+or, using index notation,
 \bea
-    \omega_{\alpha\beta\gamma} & := & \xi_{[\alpha}\nabla_\beta\xi_{\gamma]} \nonumber \\
-        & = & \frac{1}{6} \left[
+    \omega_{\alpha\beta\gamma} & := &
+    \xi_\alpha (\D \xi)_{\beta\gamma}
+    + \xi_\beta (\D \xi)_{\gamma\alpha}
+    + \xi_\gamma (\D \xi)_{\alpha\beta} \nonumber \\
+        & = &
         \xi_\alpha \left( \nabla_\beta \xi_\gamma - \nabla_\gamma \xi_\beta \right)
         + \xi_\beta \left( \nabla_\gamma \xi_\alpha - \nabla_\alpha \xi_\gamma \right)
-        + \xi_\gamma \left( \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha \right)
-        \right] , \label{e:neh:antisym_omega}
+        + \xi_\gamma \left( \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha \right) .
+        \label{e:neh:antisym_omega}
 \eea
-the second line being simply the explicit expression of the full antisymmetrization
-of $ \xi_{\alpha}\nabla_\beta\xi_{\gamma}$, which is denoted by square brackets in the first line.
 Killing equation (\ref{e:neh:Killing_equation}) enables us to simplify each term inside
 parentheses in (\ref{e:neh:antisym_omega}), yielding
 \be
-    \omega_{\alpha\beta\gamma} = \frac{1}{3} \left(
+    \omega_{\alpha\beta\gamma} = 2 \left(
         \xi_\alpha  \nabla_\beta \xi_\gamma
         + \xi_\beta  \nabla_\gamma \xi_\alpha
         + \xi_\gamma  \nabla_\alpha \xi_\beta \right) .
 \ee
 The ``square'' of $\w{\omega}$ is then
 \bea
-     \omega_{\mu\nu\rho} \, \omega^{\mu\nu\rho} & = & \frac{1}{9} \Big(
+     \omega_{\mu\nu\rho} \, \omega^{\mu\nu\rho} & = & 4 \Big(
        \xi_\mu  \nabla_\nu \xi_\rho \, \xi^\mu  \nabla^\nu \xi^\rho
        + \xi_\mu  \nabla_\nu \xi_\rho \, \xi^\nu  \nabla^\rho \xi^\mu
        + \xi_\mu  \nabla_\nu \xi_\rho \, \xi^\rho  \nabla^\mu \xi^\nu
@@ -1469,18 +1474,16 @@ Actually, we notice that each line
 is made of one term of type (\ref{e:neh:omega_square1})
 and two terms of type (\ref{e:neh:omega_square2}). Hence
 \be \label{e:neh:omega_square_V}
-    \omega_{\mu\nu\rho} \, \omega^{\mu\nu\rho} = - \frac{V^2}{3}
+    \omega_{\mu\nu\rho} \, \omega^{\mu\nu\rho} = - 12 V^2
     \left( \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu + 2 \nabla_\mu V \nabla^\mu V \right) .
 \ee
 On $\Hor$, each of the terms inside parentheses in Eq.~(\ref{e:neh:antisym_omega})
 can be expressed thanks to the Frobenius identity (\ref{e:neh:Frobenius_xi}):
 \[
     \omega_{\alpha\beta\gamma} \equalH
-    \frac{1}{6} \left[
         \xi_\alpha \left( a_\beta \xi_\gamma - a_\gamma \xi_\beta \right)
         + \xi_\beta \left( a_\gamma  \xi_\alpha - a_\alpha  \xi_\gamma \right)
-        + \xi_\gamma \left( a_\alpha \xi_\beta - a_\beta \xi_\alpha \right)
-        \right] .
+        + \xi_\gamma \left( a_\alpha \xi_\beta - a_\beta \xi_\alpha \right) .
 \]
 We notice that all terms in the right-hand side canceal two by two, yielding
 \be \label{e:neh:omega_abc_zero}
@@ -1490,17 +1493,18 @@ Equation~(\ref{e:neh:omega_abc_zero}) is actually nothing but
 a variant of Frobenius theorem\index{Frobenius!theorem},
 expressing the fact that the vector field $\w{\xi}$
 is hypersurface-orthogonal on $\Hor$ (see e.g.
-Eq.~(B.3.6) in Wald's textbook \cite{Wald84}).
+Eq.~(B.3.6) in Wald's textbook \cite{Wald84}, taking into account
+that $\omega_{\alpha\beta\gamma} = 6 \xi_{[\alpha} \nabla_\beta \xi_{\gamma]}$).
 Let us evaluate the gradient of the square
 (\ref{e:neh:omega_square_V}) and take the limit
 on $\Hor$:
 \bea
     \nabla_\alpha \omega_{\mu\nu\rho} \, \underbrace{\omega^{\mu\nu\rho}}_{\to 0}
  + \underbrace{\omega_{\mu\nu\rho}}_{\to 0} \nabla_\alpha  \omega^{\mu\nu\rho} & =&
-  - \frac{1}{3} \underbrace{\nabla_\alpha V^2}_{\to 2\kappa \xi_\alpha}
+  - 12 \underbrace{\nabla_\alpha V^2}_{\to 2\kappa \xi_\alpha}
     \Big( \underbrace{\nabla_\mu \xi_\nu \nabla^\mu \xi^\nu}_{\to -2\kappa^2} + 2 \nabla_\mu V \nabla^\mu V \Big)
         \nonumber \\
- &  & -  \frac{1}{3} \underbrace{V^2}_{\to 0}  \nabla_\alpha \left( \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu + 2 \nabla_\mu V \nabla^\mu V \right) ,  \nonumber
+ &  & - 12 \underbrace{V^2}_{\to 0}  \nabla_\alpha \left( \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu + 2 \nabla_\mu V \nabla^\mu V \right) ,  \nonumber
 \eea
 where we have used Eq.~(\ref{e:neh:dxi2_kappa}) in the form $\nabla_\alpha V^2 \equalH 2 \kappa \xi_\alpha$, as well as expression~(\ref{e:neh:kappa2}) of $\kappa^2$. Hence we are left with
 \[
