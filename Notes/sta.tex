@@ -921,7 +921,7 @@ We shall call it the \defin{Komar mass at infinity} of the spacetime
 $(\M,\w{g})$ and denote it by $M_\infty$.
 \end{prop}
 
-\subsubsection{N+1 decomposition} \label{s:sta:np1_decomp}
+\subsection{N+1 decomposition} \label{s:sta:np1_decomp}
 
 Let $\mathcal{N} := n - 1$, $n$ being the spacetime dimension.
 Given a spacelike hypersurface $\Sigma$, with future-directed unit normal
@@ -1191,15 +1191,82 @@ containing $\Hor$.
 Thanks to a theorem by Chrusciel \& Wald (Theorem~4.2 in Ref.~\cite{ChrusW94}),
 the domain domain of outer communications can be foliated by a family of
 spacelike hypersurfaces $(\Sigma_t)_{t\in\R}$
-that have $\Sp$ as inner boundary, are Lie-dragged to each other by $\w{\xi}$ and are \emph{maximal}\index{maximal!hypersurface},
-i.e. have an extrinsic curvature\index{extrinsic curvature}\index{curvature!extrinsic --}
-tensor $\w{K}$ of vanishing trace: $K^i_{\ \, i} = 0$. This last property allows
-to simplify one of the Einstein equations in the $\mathcal{N}+1$ decomposition (cf.
-p.~\pageref{s:sta:np1_decomp}),
-namely the momemtum constraint (see e.g. Chap.~5 of Ref.~\cite{Gourg12}),
-which reduces to $D^j K_{ij} = 8\pi p_i$.
+that have $\Sp$ as inner boundary, are Lie-dragged to each other by $\w{\xi}$ and are \emph{maximal}. The hypersurface $\Sigma_t$ is said
+\defin{maximal}\index{maximal!hypersurface} iff its
+extrinsic curvature\index{extrinsic curvature}\index{curvature!extrinsic --}
+tensor $\w{K}$ has a vanishing trace: $K^i_{\ \, i} = 0$, or equivalently, iff
+the unit normal $\w{n}$ to $\Sigma_t$ is divergence-free : $\nabla_\mu n^\mu = 0$
+(cf. Sec.~10.2.2 of Ref.~\cite{Gourg12}).
+Let us consider the $\mathcal{N}+1$ decomposition with respect to $\Sigma_t$
+introduced in Sec.~\ref{s:sta:np1_decomp}, and in particular the Komar mass
+formula (\ref{e:sta:Komar_mass_3p1}) with $\Sigma = \Sigma_t$,
+$\Sp_{\rm int} = \Sp$ and $\Sp_{\rm ext}$ being a sphere
+with $r\to +\infty$ (``outer boundary'' of $\Sigma_t$).
+The maximality property $K^i_{\ \, i} = 0$ allows one
+to simplify one of the Einstein equations in the $\mathcal{N}+1$ decomposition,
+namely the momemtum constraint\index{momentum constraint} (see e.g. Chap.~5 of Ref.~\cite{Gourg12}),
+which reduces to $D^j K_{ij} = 8\pi p_i$, where $\w{D}$ is the Levi-Civita connection
+associated to the metric $\w{\gamma}$ induced by $\w{g}$ on $\Sigma_t$ and $\w{p}$ is the matter energy-momentum density in the hypersurface $\Sigma_t$ (cf. Sec.~\ref{s:sta:np1_decomp}).
+We may then rewrite the term $\langle \w{p}, \w{\beta} \rangle$ in the right-hand side of
+Eq.~(\ref{e:sta:Komar_mass_3p1}) as
+\[
+    \langle \w{p}, \w{\beta} \rangle = p_i \beta^i = \frac{1}{8\pi} D^j K_{ij} \beta^i
+    = \frac{1}{8\pi} \left[ D^j \left( K_{ij} \beta^i \right)
+        - K_{ij} D^j \beta^i  \right]
+     = \frac{1}{8\pi} \left[ D^j \left( K_{ij} \beta^i \right)
+        - N K_{ij} K^{ij}  \right] ,
+\]
+where the last equality results from the symmetry of $K_{ij}$ and the identity
+$D^j \beta^i + D^i \beta^j = 2N K^{ij}$ which holds for the shift vector $\w{\beta}$
+associated with the stationary Killing vector $\w{\xi}$ (see e.g. Eqs.~(5.66) and
+(5.67) in Ref.~\cite{Gourg12} with $\dert{\gamma_{ij}}{t} = 0$).
+We have then, using the Gauss-Ostrogradsky theorem,
+\bea
+    8 \pi \int_{\Sigma_t} \langle \w{p}, \w{\beta} \rangle  \sqrt{\gamma} \, \D^{n-1} x & =&
+    \int_{\Sp_{\rm ext}} s^j K_{ij} \beta^i \sqrt{q} \,  \D^{n-2} x
+    - \int_{\Sp} s^j K_{ij} \beta^i \sqrt{q} \, \D^{n-2} x \nonumber \\
+    & &
+    -  \int_{\Sigma_t} N K_{ij} K^{ij}  \sqrt{\gamma} \, \D^{n-1} x ,  \nonumber
+\eea
+where $\w{s}$ is the unit normal to $\Sp_{\rm ext}$ and $\Sp$ in $\Sigma_t$,
+oriented towards the asymptotic flat end of $\Sigma_t$. Now, each of the two surface
+integrals in the first line of the above equation vanishes identically:
+the first one because on the asymptotically flat slice $\Sigma_t$, $\w{K}$ decays
+as $O(r^{-2})$ for $r\to +\infty$ and, still in this limit,  $\w{\beta}\to 0$
+in order for $\w{\xi}$ to coincide with the timelike unit normal $\w{n}$
+[cf. Eq.~(\ref{e:sta:xi_3p1})].
+As for the integral over $\Sp$, it is zero because
+$\left. \w{\beta} \right| _{\Sp} =  0$.
+Indeed, since $\Sp$ is the bifurcation surface of a bifurcate Killing
+horizon with respect to $\w{\xi}$ (Property~\ref{p:sta:H_Killing_hor_xi_null}),
+one has  $\left. \w{\xi} \right| _{\Sp} = 0$ (Property~\ref{p:sta:xi_S_zero}),
+which implies via Eq.~(\ref{e:sta:xi_3p1}) both $\left. N \right| _{\Sp} = 0$ and
+$\left. \w{\beta} \right| _{\Sp} = 0$. We may therefore rewrite the Komar
+mass formula (\ref{e:sta:Komar_mass_3p1}) as
+\[
+ M_{\Sp_{\rm ext}} = M_{\Sp} +
+    2 \int_{\Sigma_t} N \left[ \frac{1}{n-2} \left[ (n-3) E + S \right]
+    + \frac{1}{8\pi} K_{ij} K^{ij} \right]
+    \sqrt{\gamma} \, \D^{n-1} x .
+\]
+In the vaccum case considered here, $E=0$ and $S=0$, and
+$M_{\Sp_{\rm ext}} = M_{\Sp}$ (Property~\ref{p:sta:Komar_mass_invariant}),
+so that we are left with
+\[
+    \int_{\Sigma_t} N K_{ij} K^{ij} \, \sqrt{\gamma} \, \D^{n-1} x = 0 .
+\]
+Given that $N > 0$ on $\Sigma_t\setminus \Sp$ and $K_{ij} K^{ij} \geq 0$ on $\Sigma_t$ (for
+$K_{ij} K^{ij} = \gamma^{ik} \gamma^{jl} K_{ij} K_{kl}$ with
+$\w{\gamma}$ being a Riemannian metric), the vanishing of the above integral
+implies the vanishing of the extrinsic curvature tensor: $K_{ij} = 0$.
+Now, $\w{K} = - (2N)^{-1} \Lie{\w{m}} \w{\gamma}$, where $\w{m} := N \w{n}$
+is the evolution vector along the normal to $\Sigma_t$ (cf. Sec.~4.3 of Ref.~\cite{Gourg12}).
+We have then
+\bea
+   & & \dot{\w{\gamma}} :=  \Lie{\w{m}} \w{\gamma} = 0 \nonumber \\
+   & & \dot{\w{\pi}} :=  \Lie{\w{m}} \w{\pi} = 0 , \nonumber
+\eea
 \end{proof}
-
 \begin{remark}
 The theorem actually proved by Sudarsky \& Wald (Theorem~2 in Ref.~\cite{SudarW93})
 is actually more general: it regards solutions of the \emph{electrovacuum}\index{electrovacuum} Einstein
