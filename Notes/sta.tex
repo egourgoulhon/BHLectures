@@ -372,7 +372,7 @@ leads to
 \be
     \w{\xi} \rightarrow 0 \quad\mbox{when}\quad t\rightarrow +\infty  \qquad (\kappa<0).
 \ee
-The reasoning developed for $\kappa>0$ can be then applied mutatis mutandis,
+The reasoning developed for $\kappa>0$ can be applied mutatis mutandis,
 leading to a bifurcate Killing horizon with a bifurcation surface $\Sp$ that
 is the future boundary of $\Hor$. Hence we conclude:
 \begin{prop}[non-degenerate Killing horizons and bifurcate Killing horizons]
@@ -1258,15 +1258,35 @@ so that we are left with
 Given that $N > 0$ on $\Sigma_t\setminus \Sp$ and $K_{ij} K^{ij} \geq 0$ on $\Sigma_t$ (for
 $K_{ij} K^{ij} = \gamma^{ik} \gamma^{jl} K_{ij} K_{kl}$ with
 $\w{\gamma}$ being a Riemannian metric), the vanishing of the above integral
-implies the vanishing of the extrinsic curvature tensor: $K_{ij} = 0$.
-Now, $\w{K} = - (2N)^{-1} \Lie{\w{m}} \w{\gamma}$, where $\w{m} := N \w{n}$
+implies $K_{ij} = 0$.
+Now, $\w{K} = - (2N)^{-1} \Lie{\w{m}} \w{\gamma}$ (cf. Eq.~(4.30) in Ref.~\cite{Gourg12}), where $\w{m} := N \w{n}$
 is the evolution vector along the normal to $\Sigma_t$ (cf. Sec.~4.3 of Ref.~\cite{Gourg12}).
-We have then
-\bea
-   & & \dot{\w{\gamma}} :=  \Lie{\w{m}} \w{\gamma} = 0 \nonumber \\
-   & & \dot{\w{\pi}} :=  \Lie{\w{m}} \w{\pi} = 0 , \nonumber
-\eea
+The vanishing of $\w{K}$ implies then
+\be \label{e:sta:dot_gamma_dot_pi}
+   \dot{\w{\gamma}} :=  \Lie{\w{m}} \w{\gamma} = 0 \qand
+   \dot{\w{\pi}} :=  \Lie{\w{m}} \w{\pi} = 0 ,
+\ee
+where $\w{\pi}$ is the momentum canonically conjugate to $\w{\gamma}$ in
+the ADM Hamiltonian formulation\index{Hamiltonian!formulation of general relativity}\index{ADM!Hamiltonian formulation} of general relativity \cite{ArnowDM62}.
+$\w{\pi}$ is a tensor density
+that is related to the extrinsic curvature tensor $\w{K}$ by
+$\pi^{ij} = \sqrt{\gamma} (K^k_{\ \, k} \gamma^{ij} - K^{ij})$.
+Hence, $\w{K} = 0$ implies $\w{\pi} = 0$ so that $\dot{\w{\pi}} = 0$ in
+Eq.~(\ref{e:sta:dot_gamma_dot_pi}) is trivially fulfilled. In the Hamiltonian formulation,
+the spacetime dynamics is entirely described by the ``time development'' (i.e. the variation
+accross the $\Sigma_t$ foliation) of
+$(\w{\gamma}, \w{\pi})$, which are the $(q,p)$ pairs of Hamiltonian mechanics. Hamilton's equations (\ref{e:sta:dot_gamma_dot_pi}) shows that $(\w{\gamma}, \w{\pi})$ do not evolve at all.
+It is equivalent to say that $\w{m}$ is a Killing vector of the spacetime metric
+$\w{g}$. Since $\w{m} = N \w{n}$ is by construction timelike and hypersurface-orthogonal,
+this proves that the part of spacetime foliated by the $(\Sigma_t)_{t\in\R}$,
+i.e. the domain of outer communication, is strictly static. The connection
+between $\w{m}$ and $\w{\xi}$ is given by
+Eq.~(\ref{e:sta:xi_3p1}): $\w{\xi} = \w{m} + \w{\beta}$. Hence the Killing vectors
+$\w{\xi}$ and $\w{m}$ coincide iff the shift vector $\w{\beta}$ vanishes. As seen above,
+$\w{\beta}$ vanishes at the inner boundary $\Sp$ of $\Sigma_t$
+and at the ``outer boundary'', i.e. for $r\to +\infty$. In most cases, these constraints will result in $\w{m} = \w{\xi}$.
 \end{proof}
+
 \begin{remark}
 The theorem actually proved by Sudarsky \& Wald (Theorem~2 in Ref.~\cite{SudarW93})
 is actually more general: it regards solutions of the \emph{electrovacuum}\index{electrovacuum} Einstein
@@ -1276,9 +1296,6 @@ field $\w{F}$ that is stationary: $\Lie{\w{\xi}} \w{F} = 0$ (one says that
 $(\w{g},\w{F})$ is a solution of the stationary Einstein-Maxwell system\index{Einstein-Maxwell system}).
 \end{remark}
 
-The proof can be found in the original article by Sudarsky \& Wald \cite{SudarW93}.
-A simplified version for the vacuum case ($\w{T}=0$) is given in the appendix
-of Carter's review article \cite{Carte99}.
 
 \begin{remark}
 In the original formulation (Theorem~2 of Ref.~\cite{SudarW93}), the non-degeneracy of $\Hor$
@@ -1411,6 +1428,8 @@ up to $\scri^+$ and $\scri^-$. The subset $\mathscr{G}$ is
 called the \defin{ergoregion}\index{ergoregion} and its boundary $\E:=\partial\mathscr{G}$
 the \defin{ergosphere}. We shall discuss it further in connection with
 the Penrose process in Chap.~\ref{s:ker}.
+
+\subsection{Carter's weak rigidity theorem}
 
 \subsection{The generalized Smarr formula}
 
