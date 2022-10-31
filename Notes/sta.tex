@@ -36,7 +36,7 @@ As we are going to see, when $\M$
 contains a black hole, $\w{\xi}$ cannot be timelike everywhere,
 so only \emph{pseudo-stationarity} in the above sense is relevant for these spacetimes.
 Our terminology follows that of
-Heusler \cite{Heusle96},
+Heusler \cite{Heusl96},
 Chru\'sciel, Lopes Costa \& Heusler \cite{ChrusLH12}
 and Choquet-Bruhat \cite{Choqu09}.
 \end{remark}
@@ -382,6 +382,16 @@ incomplete; if they can be extended, $\Hor$ is contained in a
 bifurcate Killing horizon, the bifurcation surface of which is the past
 (resp. future) boundary of $\Hor$ if $\kappa>0$ (resp. $\kappa<0$).
 \end{prop}
+
+\begin{remark}
+\label{r:sta:extension_bifurcate}
+It could be that the generators of $\Hor$ cannot be extended simply
+because the spacetime $(\M,\w{g})$ is not been chosen ``large enough''.
+I.~R\'acz\index{Racz, I.@R\'acz, I.} and R.M.~Wald\index{Wald, R.M.} \cite{RaczW96}
+have shown that under some mild hypotheses (in particular that $(\M,\w{g})$ is globally
+hyperbolic), one can extend $(\M,\w{g})$ to a larger spacetime with a bifurcate
+Killing horizon containing $\Hor$.
+\end{remark}
 
 \begin{remark}
 For a degenerate Killing horizon, the problem of extension disappears, since
@@ -1171,31 +1181,34 @@ is null on $\Hor$, then $\Hor$ is a Killing horizon with respect to $\w{\xi}$.
 It follows that, on $\Hor$, the Killing vector field $\w{\xi}$
 is hypersurface-orthogonal, being normal to $\Hor$. Under certain hypotheses, especially
 that the vacuum Einstein equation is fulfilled, one can go further
-and prove that actually $\w{\xi}$ must hypersurface-orthogonal everywhere in $\M$,
+and prove that $\w{\xi}$ must actually be hypersurface-orthogonal everywhere in $\M$,
 i.e. that $(\M,\w{g})$ is \emph{static} (cf. the definition given in Sec.~\ref{s:sta:def_station}):
 
-\begin{prop}[staticity theorem\index{staticity theorem} \textnormal{(Sudarsky \& Wald 1993 \cite{SudarW93})}]
+\begin{prop}[staticity theorem\index{staticity theorem} \textnormal{(Sudarsky\index{Sudarsky, D.} \& Wald\index{Wald, R.M.}  1993 \cite{SudarW93})}]
 \label{p:sta:staticity_thm}
-Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 4$
-that contains a black hole of event horizon $\Hor$.
-If
-(i) the stationary Killing vector $\w{\xi}$ is null on $\Hor$,
-(ii) $\Hor$ is part of a bifurcate Killing horizon
-and (iii) $\w{g}$ obeys the vacuum Einstein equation, then the spacetime
+Let $(\M,\w{g})$ be an asymptotically flat stationary spacetime of dimension $n\geq 4$
+that contains a black hole of event horizon $\Hor$ so that
+the stationary Killing vector $\w{\xi}$ is null on $\Hor$. By Property~\ref{p:sta:H_Killing_hor_xi_null}, $\Hor$ is a Killing horizon. If $\Hor$ is
+non-degenerate (i.e. has a non-vanishing surface gravity $\kappa$, cf. Sec.~\ref{s:neh:classif_KH})
+and $\w{g}$ obeys the vacuum Einstein equation, then the spacetime
 is static\index{static!spacetime} and the domain of outer communications\index{domain of outer communications} (cf. Sec.~\ref{s:glo:def_BH}) is strictly static.
 \end{prop}
 
 \begin{proof}
-Let $\Sp$ be the bifurcation surface of the bifurcate Killing horizon
-containing $\Hor$.
-Thanks to a theorem by Chrusciel \& Wald (Theorem~4.2 in Ref.~\cite{ChrusW94}),
+Since $\Hor$ is a non-degenerate Killing horizon, it is contained in a bifurcate Killing horizon
+(cf. Property~\ref{p:sta:non_degen_bifurcate} and Remark~\ref{r:sta:extension_bifurcate} on p.~\pageref{r:sta:extension_bifurcate}).
+Let $\Sp$ be the corresponding bifurcation surface.
+Thanks to a theorem by P.T.~Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.} \&
+R.M.~Wald\index{Wald, R.M.} (Theorem~4.2 in Ref.~\cite{ChrusW94}),
 the domain domain of outer communications can be foliated by a family of
 spacelike hypersurfaces $(\Sigma_t)_{t\in\R}$
-that are asymptotically flat, have $\Sp$ as inner boundary, are Lie-dragged\footnote{$\Sigma_{t+\D t}$ is the image of $\Sigma_t$ by the infinitesimal displacement $\D t\, \w{\xi}$.}
-to each other by $\w{\xi}$ and are \emph{maximal}. The hypersurface $\Sigma_t$ is said
-\defin{maximal}\index{maximal!hypersurface} iff its
+that are asymptotically flat, are asymptotically orthogonal to $\w{\xi}$,
+have $\Sp$ as inner boundary, are Lie-dragged\footnote{$\Sigma_{t+\D t}$ is the image of $\Sigma_t$ by the infinitesimal displacement $\D t\, \w{\xi}$.}
+to each other by $\w{\xi}$ and are \defin{maximal}\index{maximal!hypersurface}.
+The last property means that the
 extrinsic curvature\index{extrinsic curvature}\index{curvature!extrinsic --}
-tensor $\w{K}$ has a vanishing trace: $K^i_{\ \, i} = 0$, or equivalently, iff
+tensor $\w{K}$ of each hypersurface $\Sigma_t$
+has a vanishing trace: $K^i_{\ \, i} = 0$, or equivalently, that
 the unit normal $\w{n}$ to $\Sigma_t$ is divergence-free : $\nabla_\mu n^\mu = 0$
 (cf. Sec.~10.2.2 of Ref.~\cite{Gourg12}).
 Let us consider the $\mathcal{N}+1$ decomposition with respect to $\Sigma_t$
@@ -1218,7 +1231,7 @@ Eq.~(\ref{e:sta:Komar_mass_3p1}) as
         - N K_{ij} K^{ij}  \right] ,
 \]
 where the last equality results from the symmetry of $K_{ij}$ and the identity
-$D^j \beta^i + D^i \beta^j = 2N K^{ij}$ which holds for the shift vector $\w{\beta}$
+$D^j \beta^i + D^i \beta^j = 2N K^{ij}$, which holds for the shift vector $\w{\beta}$
 associated with the stationary Killing vector $\w{\xi}$ (see e.g. Eqs.~(5.66) and
 (5.67) in Ref.~\cite{Gourg12} with $\dert{\gamma_{ij}}{t} = 0$).
 We have then, using the Gauss-Ostrogradsky theorem,
@@ -1234,8 +1247,8 @@ oriented towards the asymptotic flat end of $\Sigma_t$. Now, each of the two sur
 integrals in the first line of the above equation vanishes identically:
 the first one because on the asymptotically flat slice $\Sigma_t$, $\w{K}$ decays
 as $O(r^{-2})$ for $r\to +\infty$ and, still in this limit,  $\w{\beta}\to 0$
-in order for $\w{\xi}$ to coincide with the timelike unit normal $\w{n}$
-[cf. Eq.~(\ref{e:sta:xi_3p1})].
+since $\w{\xi}$ is asymptotically orthogonal to $\Sigma_t$
+[cf. the orthogonal decomposition~(\ref{e:sta:xi_3p1})].
 As for the integral over $\Sp$, it is zero because
 $\left. \w{\beta} \right| _{\Sp} =  0$.
 Indeed, since $\Sp$ is the bifurcation surface of a bifurcate Killing
@@ -1268,7 +1281,7 @@ The vanishing of $\w{K}$ implies then
    \dot{\w{\pi}} :=  \Lie{\w{m}} \w{\pi} = 0 ,
 \ee
 where $\w{\pi}$ is the momentum canonically conjugate to $\w{\gamma}$ in
-the ADM Hamiltonian formulation\index{Hamiltonian!formulation of general relativity}\index{ADM!Hamiltonian formulation} of general relativity \cite{ArnowDM62}.
+the ADM Hamiltonian formulation\index{Hamiltonian!formulation of general relativity}\index{ADM!Hamiltonian formulation} of general relativity \cite{ArnowDM62,FischM79}.
 $\w{\pi}$ is a tensor density
 that is related to the extrinsic curvature tensor $\w{K}$ by
 $\pi^{ij} = \sqrt{\gamma} (K^k_{\ \, k} \gamma^{ij} - K^{ij})$.
@@ -1277,37 +1290,74 @@ Eq.~(\ref{e:sta:dot_gamma_dot_pi}) is trivially fulfilled. In the Hamiltonian fo
 the spacetime dynamics is entirely described by the ``time development'' (i.e. the variation
 accross the $\Sigma_t$ foliation) of
 $(\w{\gamma}, \w{\pi})$, which are the $(q,p)$ pairs of Hamiltonian mechanics. Hamilton's equations (\ref{e:sta:dot_gamma_dot_pi}) shows that $(\w{\gamma}, \w{\pi})$ do not evolve at all.
-It is equivalent to say that $\w{m}$ is a Killing vector of the spacetime metric
+This means that $\w{m}$ is a Killing vector of the spacetime metric
 $\w{g}$. Since $\w{m} = N \w{n}$ is by construction timelike and hypersurface-orthogonal,
 this proves that the part of spacetime foliated by the $(\Sigma_t)_{t\in\R}$,
-i.e. the domain of outer communication, is strictly static. The connection
+i.e. the domain of outer communications, is strictly static. The connection
 between $\w{m}$ and $\w{\xi}$ is given by
 Eq.~(\ref{e:sta:xi_3p1}): $\w{\xi} = \w{m} + \w{\beta}$. Hence the Killing vectors
-$\w{\xi}$ and $\w{m}$ coincide iff the shift vector $\w{\beta}$ vanishes. As seen above,
+$\w{\xi}$ and $\w{m}$ coincide iff the shift vector $\w{\beta}$ vanishes.
+If $\w{\beta}$ would not vanish identically, it would be a Killing vector itself,
+as the difference $\w{\xi} - \w{m}$ of two Killing vectors.
+However, as seen above,
 $\w{\beta}$ vanishes at the inner boundary $\Sp$ of $\Sigma_t$
-and at the ``outer boundary'', i.e. for $r\to +\infty$. In most cases, these constraints will result in $\w{m} = \w{\xi}$.
+and at the ``outer boundary'', i.e. for $r\to +\infty$.
+In most cases, these constraints will result in $\w{\beta} = 0$ (for instance, they
+exclude $\w{\beta}$ being a rotational Killing vector), so that we conclude
+that $\w{m} = \w{\xi}$.
 \end{proof}
 
+
 \begin{remark}
-The theorem actually proved by Sudarsky \& Wald (Theorem~2 in Ref.~\cite{SudarW93})
-is actually more general: it regards solutions of the \emph{electrovacuum}\index{electrovacuum} Einstein
-equation, i.e. Eq.~(\ref{e:fra:Einstein_eq}) with either $\w{T} = 0$
+In the original formulation by Sudarsky \& Wald (Theorem~2 of Ref.~\cite{SudarW93}), the non-degeneracy of $\Hor$
+is replaced by $\Hor$ being part of a bifurcate Killing horizon.
+However, as mentioned in the above proof, these two properties are essentially equivalent.
+\end{remark}
+
+
+\begin{remark}
+The theorem proved by Sudarsky \& Wald (Theorem~2 in Ref.~\cite{SudarW93})
+is actually more general: it regards solutions of the
+\emph{electrovacuum}\index{electrovacuum} Einstein equation,
+i.e. Eq.~(\ref{e:fra:Einstein_eq}) with either $\w{T} = 0$ (the case considered here)
 or $\w{T}$ being the energy-momentum tensor of a source-free electromagnetic
 field $\w{F}$ that is stationary: $\Lie{\w{\xi}} \w{F} = 0$ (one says that
 $(\w{g},\w{F})$ is a solution of the stationary Einstein-Maxwell system\index{Einstein-Maxwell system}).
 \end{remark}
 
-
 \begin{remark}
-In the original formulation (Theorem~2 of Ref.~\cite{SudarW93}), the non-degeneracy of $\Hor$
-is replaced by $\Hor$ being part of a bifurcate Killing horizon
-(cf. Sec.~\ref{s:sta:bifur_Killing_hor}). However, these two properties are essentially
-equivalent \cite{RaczW96}. Although the latter was used in
-Sudarsky \& Wald's demonstration, it turns out the final result still holds without it:
-as the uniqueness theorem ?? below shows, the spacetime is static even if the horizon
-is degenerate.
+Sudarsky \& Wald stated the staticity theorem for $n=4$ but, as pointed out in
+Refs.~\cite{ChrusLH12} and \cite{HollaI12}, the theorem straightforwardly generalizes
+to any dimension $n \geq 4$. Actually, the proof given above (which is slightly different
+from Sudarsky \& Wald's one) does not assume $n=4$.
 \end{remark}
 
+\begin{remark}
+For the dimension $n=4$, it turns out that the hypothesis of non-degeneracy of $\Hor$
+is not necessary: as the uniqueness theorem ?? below shows,
+the spacetime is static even if the event horizon is degenerate.
+\end{remark}
+
+
+\subsection{Spacelike stationary Killing field on $\Hor$: the strong rigidity theorem}
+\label{s:sta:strong_rigidity}
+
+When the stationary Killing vector $\w{\xi}$ is spacelike on the event horizon $\Hor$, it obviously cannot be collinear to
+any null normal $\wl$ of $\Hor$.
+Assuming that $\Hor$ has cross-sections of spherical topology, we observe
+that, with respect to the null geodesic generators of $\Hor$, the field lines of $\w{\xi}$
+form some helices, as depicted in Fig.~\ref{f:sta:rot_horizon}a. By reciprocity,
+with respect to the field lines of $\w{\xi}$,
+the null geodesic generators form some helices as well, as depicted in
+Fig.~\ref{f:sta:rot_horizon}b):
+observe that Fig.~\ref{f:sta:rot_horizon}b can be obtained from Fig.~\ref{f:sta:rot_horizon}a
+by ``untwisting'' the field lines of $\w{\xi}$.
+
+Since asymptotically the field lines of $\w{\xi}$ are worldlines of inertial observers,
+Fig.~\ref{f:sta:rot_horizon}b leads us to say
+(in loose terms at this stage) that the event horizon $\Hor$
+``is rotating'', all the more that we have seen above that when the null
+generators coincide with the field lines of $\w{\xi}$, the black hole is static, i.e. non-rotating.
 
 \begin{figure}
 \centerline{\includegraphics[height=0.4\textheight]{sta_rot_horizon_gen.pdf}
@@ -1329,27 +1379,6 @@ being spacelike,
 is always outside of them,
 while the null normal $\wl$ is always tangent to them. }
 \end{figure}
-
-
-\subsection{Spacelike stationary Killing field on $\Hor$: the strong rigidity theorem}
-\label{s:sta:strong_rigidity}
-
-When $\w{\xi}$ is spacelike on $\Hor$, it obviously cannot be collinear to
-any null normal $\wl$ of $\Hor$.
-Assuming that $\Hor$ has cross-sections of spherical topology, we observe
-that, with respect to the null geodesic generators of $\Hor$, the field lines of $\w{\xi}$
-form some helices, as depicted in Fig.~\ref{f:sta:rot_horizon}a. By reciprocity,
-with respect to the field lines of $\w{\xi}$,
-the null geodesic generators form some helices as well, as depicted in
-Fig.~\ref{f:sta:rot_horizon}b):
-observe that Fig.~\ref{f:sta:rot_horizon}b can be obtained from Fig.~\ref{f:sta:rot_horizon}a
-by ``untwisting'' the field lines of $\w{\xi}$.
-
-Since asymptotically the field lines of $\w{\xi}$ are worldlines of inertial observers,
-Fig.~\ref{f:sta:rot_horizon}b leads us to say
-(in loose terms at this stage) that the event horizon $\Hor$
-``is rotating'', all the more that we have seen above that when the null
-generators coincide with the field lines of $\w{\xi}$, the black hole is static, i.e. non-rotating.
 
 Since the Killing field $\w{\xi}$ is not null on $\Hor$, we cannot say a priori
 that $\Hor$ is a Killing horizon. However, modulo some additional hypotheses,
@@ -1375,24 +1404,37 @@ with $\w{g}$ being an analytic field,
 \item $\Hor$ has compact cross-sections
 \item $\w{\xi}$ is transverse to some cross-sections,
 \end{itemize}
-then the spacetime $(\M,\w{g})$ admits a second Killing vector field, $\w{\chi}$
-say, such that
+then the spacetime $(\M,\w{g})$ admits a second Killing vector, $\w{\chi}$
+say, such that $\w{\xi}$ and $\w{\chi}$ commute: $[\w{\xi}, \w{\chi}] = 0$ and
 $\Hor$ is a Killing horizon with respect to $\w{\chi}$.
 \end{prop}
 
+\begin{remark}
+The Killing horizon $\Hor$ is necessarily non-degenerate, given the hypothesis
+that $\Hor$ has an incomplete null geodesic generator.
+\end{remark}
+
 \begin{hist}
-The original version of the theorem established in 1972
-by Stephen Hawking\index{Hawking, S.} \cite{Hawki72} was for a 4-dimensional
-spacetime.
+Stephen Hawking\index{Hawking, S.} first established this theorem in 1972 \cite{Hawki72}
+for a spacetime of dimension $n=4$. Some details have been fixed
+by Piotr T. Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.} in 1997 \cite{Chrus97}.
+The extension to spacetimes of
+dimension $n\geq 4$ has been performed independently by
+Stefan Hollands\index{Hollands, S.}, Akihiro Ishibashi\index{Ishibashi, A.}
+and Robert M.~Wald\index{Wald, R.M.} in 2007 \cite{HollaIW07}
+and by Vincent Moncrief\index{Moncrief, V.} and James Isenberg\index{Isenberg, J.}
+in 2008 \cite{MoncrI08}.
 \end{hist}
 
 The above theorem relies on the rather strong assumption that
 the manifolds and fields are analytic.
 On physical grounds,
 it would be desirable to assume only \emph{smooth} manifolds and fields.
-Recently, S.~Alexakis, A.D.~Ionescu and S.~Klainerman \cite{AlexaIK14} (2014)
+In 2014, S.~Alexakis, A.D.~Ionescu and S.~Klainerman \cite{AlexaIK14}
 have succeeded in proving the strong rigidity theorem without the analyticity
 assumption, but only for slowly rotating black holes.
+See Ref.~\cite{IonesK15} for a review of the progresses in removing
+the analycity hypothesis.
 
 Since we have two Killing vectors, $\w{\xi}$ and $\w{\chi}$, we may
 form any linear combination of them with constant coefficients
@@ -1512,3 +1554,12 @@ See Ref.~\cite{IonesK15} for a review.
 \begin{hist}
 See the historical account by Carter \cite{Carte99}.
 \end{hist}
+
+
+\section{To go further}
+
+See Heusler's textbook (1996) \cite{Heusl96} and the review
+articles by Chru\'sciel, Lopes Costa \& Heusler (2012) \cite{ChrusLH12},
+Hollands \& Ishibashi (2012) \cite{HollaI12} and
+Ionescu \& Klainerman (2015) \cite{IonesK15}.
+
