@@ -1198,8 +1198,8 @@ is static\index{static!spacetime} and the domain of outer communications\index{d
 Since $\Hor$ is a non-degenerate Killing horizon, it is contained in a bifurcate Killing horizon
 (cf. Property~\ref{p:sta:non_degen_bifurcate} and Remark~\ref{r:sta:extension_bifurcate} on p.~\pageref{r:sta:extension_bifurcate}).
 Let $\Sp$ be the corresponding bifurcation surface.
-Thanks to a theorem by P.T.~Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.} \&
-R.M.~Wald\index{Wald, R.M.} (Theorem~4.2 in Ref.~\cite{ChrusW94}),
+Thanks to a theorem by Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.} \&
+Wald\index{Wald, R.M.} (Theorem~4.2 in Ref.~\cite{ChrusW94}),
 the domain domain of outer communications can be foliated by a family of
 spacelike hypersurfaces $(\Sigma_t)_{t\in\R}$
 that are asymptotically flat, are asymptotically orthogonal to $\w{\xi}$,
@@ -1229,20 +1229,20 @@ where the last equality results from the symmetry of $K_{ij}$ and the identity
 $D^j \beta^i + D^i \beta^j = 2N K^{ij}$, which holds for the shift vector $\w{\beta}$
 associated with the stationary Killing vector $\w{\xi}$ (see e.g. Eqs.~(5.66) and
 (5.67) in Ref.~\cite{Gourg12} with $\dert{\gamma_{ij}}{t} = 0$).
-If we integrate the above equation over $\Sigma_t$, we get,
-using the Gauss-Ostrogradsky theorem for the divergence term
-$D^j \left( K_{ij} \beta^i \right)$,
+Let us integrate the above equation over $\Sigma_t$ and
+use the Gauss-Ostrogradsky theorem for the divergence term
+$D^j \left( K_{ij} \beta^i \right)$, taking into account that
+the boundary of $\Sigma_t$ is made
+of the bifurcation sphere $\Sp$ (inner boundary) and the sphere ``at infinity''
+$\Sp_\infty$ (outer boundary), the latter being a $(n-2)$-sphere in $\Sigma_t$
+of coordinate radius $r\to +\infty$ ($r$ is defined from the asymptotic flatness
+property). We get
 \[
     \int_{\Sp_\infty} s^j K_{ij} \beta^i \sqrt{q} \,  \D^{n-2} x
     - \int_{\Sp} s^j K_{ij} \beta^i \sqrt{q} \, \D^{n-2} x
     -  \int_{\Sigma_t} N K_{ij} K^{ij}  \sqrt{\gamma} \, \D^{n-1} x =  0 ,
 \]
-where we have used the fact that the boundary of $\Sigma_t$ is made
-of the bifurcation sphere $\Sp$ (inner boundary) and the sphere ``at infinity''
-$\Sp_\infty$ (outer boundary), the latter being a $(n-2)$-sphere in $\Sigma_t$
-of coordinate radius $r\to +\infty$ ($r$ is defined from the asymptotic flatness
-assumption). In the above surface integrals,
-$\w{s}$ is the unit normal to $\Sp_\infty$ and $\Sp$ in $\Sigma_t$,
+where $\w{s}$ is the unit normal to $\Sp_\infty$ and $\Sp$ in $\Sigma_t$,
 oriented towards the asymptotic flat end of $\Sigma_t$. Now, each of the two surface
 integrals vanishes identically:
 the first one because on the asymptotically flat slice $\Sigma_t$, $\w{K}$ decays
@@ -1318,8 +1318,10 @@ $(\w{g},\w{F})$ is a solution of the stationary Einstein-Maxwell system\index{Ei
 \begin{remark}
 Sudarsky \& Wald stated the staticity theorem for $n=4$ but, as pointed out in
 Refs.~\cite{ChrusLH12} and \cite{HollaI12}, the theorem straightforwardly generalizes
-to any dimension $n \geq 4$. Actually, the proof given above (which is slightly different
-from Sudarsky \& Wald's one) does not assume $n=4$.
+to any dimension $n \geq 4$. Actually, the proof given above\footnote{The first part of the proof,
+leading to $\w{K} = 0$, differs from Sudarsky \& Wald's one, which is based on integral
+mass formulas.}
+does not assume $n=4$.
 \end{remark}
 
 \begin{remark}
@@ -1342,10 +1344,9 @@ the null geodesic generators form some helices as well, as depicted in
 Fig.~\ref{f:sta:rot_horizon}b):
 observe that Fig.~\ref{f:sta:rot_horizon}b can be obtained from Fig.~\ref{f:sta:rot_horizon}a
 by ``untwisting'' the field lines of $\w{\xi}$.
-
 Since asymptotically the field lines of $\w{\xi}$ are worldlines of inertial observers,
 Fig.~\ref{f:sta:rot_horizon}b leads us to say
-(in loose terms at this stage) that the event horizon $\Hor$
+(in loose terms at this stage, this will be made more precise by Eq.~(\ref{e:sta:chi_xi_OmegaH_eta}) below) that the event horizon $\Hor$
 ``is rotating'', all the more that we have seen above that when the null
 generators coincide with the field lines of $\w{\xi}$, the black hole is static, i.e. non-rotating.
 
@@ -1391,7 +1392,7 @@ with $\w{g}$ being an analytic field,
 \item $\w{g}$ fulfills the vacuum Einstein equation
 [Eq.~(\ref{e:fra:Einstein_eq}) with $\Lambda=0$ and $\w{T} = 0$],
 \item $\Hor$ has a null geodesic generator that is incomplete,
-\item $\Hor$ has compact cross-sections
+\item $\Hor$ has compact cross-sections,
 \item $\w{\xi}$ is transverse to some cross-sections,
 \end{itemize}
 then the spacetime $(\M,\w{g})$ admits a second Killing vector, $\w{\chi}$
@@ -1405,8 +1406,15 @@ that $\Hor$ has an incomplete null geodesic generator.
 \end{remark}
 
 \begin{hist}
-Stephen Hawking\index{Hawking, S.} first established this theorem in 1972 \cite{Hawki72}
-for a spacetime of dimension $n=4$. Some details have been fixed
+Stephen Hawking\index{Hawking, S.} first established the strong rigidity
+theorem in 1972 \cite{Hawki72}
+for a spacetime of dimension $n=4$ and assuming that there exists
+a past event horizon (i.e. a white hole region) in addition to the
+future event horizon $\Hor$.
+The theorem was restated and proved without the last hypothesis
+in Hawking \& Ellis'\index{Ellis, G.} famous textbook published in 1973 \cite{HawkiE73}
+(Proposition 9.3.6).
+Some details have been fixed
 by Piotr T. Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.} in 1997 \cite{Chrus97}.
 The extension to spacetimes of
 dimension $n\geq 4$ has been performed independently by
@@ -1426,29 +1434,41 @@ assumption, but only for slowly rotating black holes.
 See Ref.~\cite{IonesK15} for a review of the progresses in removing
 the analycity hypothesis.
 
-Since we have two Killing vectors, $\w{\xi}$ and $\w{\chi}$, we may
-form any linear combination of them with constant coefficients
-and still get a Killing vector. For instance, if $\Omega_H$ is a non-zero constant,
-the vector field $\w{\eta}$ defined by
+\begin{prop}[Axisymmetry of stationary black holes]
+\label{p:sta:axisymmetry_BH}
+Under the same hypotheses as in Property~\ref{p:sta:strong_rigidity_thm},
+there exist $L$ Killing vectors $\w{\eta}_{(1)},\ldots,\w{\eta}_{(L)}$
+with $1 \leq L \leq [(n-1)/2]$ with closed orbits with period $2\pi$
+such that
 \be
-    \w{\eta} = \frac{1}{\Omega_H} \left( \w{\chi} - \w{\xi} \right)
-    \quad\iff\quad
-    \w{\chi} = \w{\xi} + \Omega_H \w{\eta} ,
+   [\w{\xi},\w{\eta}_{(i)}] = 0 \qand [\w{\eta}_{(i)},\w{\eta}_{(j)}] = 0
+   \quad (1 \leq i, j \leq L)
 \ee
-is a Killing vector field on $\M$.
-One can show (see e.g. \cite{Chrus97} for a rigorous proof) that $\Omega_H$
-and some constant rescaling of $\w{\chi}$
-can be chosen so that $\w{\eta}$ is a spacelike vector field whose
-field lines are closed, with $2\pi$-periodicity in terms of the parameter $\ph$
-associated to $\w{\eta}$ (i.e. $\w{\eta} = \D/\D\ph$ along the field lines),
-and such that $\w{\eta}$ vanishes on a timelike 2-dimensional surface, called
-the \defin{rotation axis}\index{rotation!axis}.
-It follows that
-the isometry group whose generator is $\w{\eta}$ is the rotation group
-$\mathrm{SO}(2)$. In other words, the spacetime $(\M,\w{g})$ is
-\defin{axisymmetric}\index{axisymmetric!spacetime} in addition to being stationary.
-The constant $\Omega_H$ is then called the
-\defin{black hole rotation velocity}\index{black hole!rotation velocity}\index{rotation!velocity}.
+and the horizon-generating Killing vector $\w{\chi}$ writes
+\be \label{e:sta:chi_xi_Omega_i_eta_i}
+    \w{\chi} = \w{\xi} + \Omega_{(1)} \w{\eta}_{(1)} + \cdots \Omega_{(L)} \w{\eta}_{(L)} ,
+\ee
+where $\Omega_{(1)}$, $\ldots$, $\Omega_{(L)}$ are $L$ constant.
+
+For $n=4$, one has necessarily $L=1$ and
+denoting $\w{\eta}_{(1)}$ by simply $\w{\eta}$ and $\Omega_{(1)}$ by $\Omega_H$,
+Eq.~(\ref{e:sta:chi_xi_Omega_i_eta_i}) reduces to
+\be \label{e:sta:chi_xi_OmegaH_eta}
+    \w{\chi} = \w{\xi} + \Omega_H \w{\eta} .
+\ee
+The constant $\Omega_H$ is then called \defin{black hole rotation velocity}\index{black hole!rotation velocity}\index{rotation!velocity}.
+\end{prop}
+Since it has closed orbits, the isometry group generated by each Killing vector
+$\w{\eta}_{(i)}$ is $\mathrm{SO}(2)$. Each isometry is thus an axisymmetry,
+according to the definition given in Sec.~\ref{s:sta:Komar_angu_mom}.
+
+
+\begin{remark}
+Property~\ref{p:sta:axisymmetry_BH} is often considered as the second part
+of the strong rigidity theorem. In some statements, it is even incorporated
+into the strong rigidity theorem (e.g. Proposition~9.3.6 of Ref.~\cite{HawkiE73}).
+\end{remark}
+
 
 By the very definition of stationarity, the Killing vector field $\w{\xi}$ is
 timelike in the vicinity of $\scri^+$ and $\scri^-$. If $\w{\xi}$ is spacelike
