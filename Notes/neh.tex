@@ -225,30 +225,41 @@ $\wl$ points to a fixed value of $r$.
 \subsection{Vanishing of the deformation rate tensor} \label{s:neh:NEH_Theta_zero}
 
 If $\Hor$ is a non-expanding horizon, we may set $\theta_{(\wl)}=0$
-in the null Raychaudhuri equation (\ref{e:def:null_Raychaud}); it reduces then
+in the null Raychaudhuri equation (\ref{e:def:null_Raychaud_Ricci}); it reduces then
 to
 \be \label{e:neh:null_Raychaud_theta_zero}
-    \sigma_{ab} \sigma^{ab} + 8\pi \w{T}(\wl, \wl) = 0 .
+    \sigma_{ab} \sigma^{ab} + \w{R}(\wl, \wl) = 0 ,
 \ee
+where $\w{R}$ is the Ricci tensor of the metric $\w{g}$.
 Now, the first term is always non-negative:
 \be \label{e:neh:sigma_square}
     \sigma_{ab} \sigma^{ab} \geq 0 .
 \ee
 \begin{proof}
-Since $\w{\sigma}$ is symmetric, it can be diagonalized
-in an orthonormal basis of $\w{q}$: $\sigma_{ab} = \mathrm{diag}(s_1,\ldots, s_{n-2})$.
-Moreover, $\w{q}$ being a Riemannian metric, we have, in the same basis, $q^{ab} = \mathrm{diag}(1,\ldots,1)$. Since $\sigma^{ab} = q^{am} q^{bn} \sigma_{mn}$, we conclude that
+Let us consider an orthonormal basis of $\w{q}$. Since
+$\w{q}$ is a Riemannian metric, the components of its inverse
+in that basis are $q^{ab} = \mathrm{diag}(1,\ldots,1) = \delta^{ab}$.
+Hence $\sigma^{ab} = q^{ac} q^{bd} \sigma_{cd} =
+\delta^{ac} \delta^{bd} \sigma_{cd} = \sigma_{ab}$ and
 \be \label{e:neh:sigma_square_si}
-  \sigma_{ab} \sigma^{ab} = s_1^2 + \cdots + s_{n-2}^2 \geq 0 .
+   \sigma_{ab} \sigma^{ab}
+   = \sum_{a=1}^{n-2} \sum_{b=1}^{n-2} (\sigma_{ab})^2 \geq 0 .
 \ee
 \end{proof}
 
-Regarding the second term in (\ref{e:neh:null_Raychaud_theta_zero}), it
-is quite natural to assume that matter and non-gravitational fields,
-represented by the total energy-momentum tensor $\w{T}$, obey the
-\defin{null energy condition}\index{null!energy condition}\index{energy!condition!null --},
-namely that
+Regarding the second term in (\ref{e:neh:null_Raychaud_theta_zero}),
+it is non-negative if the Ricci tensor obeys the so-called
+\defin{null energy condition}\index{null!energy condition}\index{energy!condition!null --}:
 \be \label{e:neh:null_energy_cond}
+    \encadre{ \w{R}(\wl, \wl) \geq 0 \quad \mbox{for any null vector $\wl$} }.
+\ee
+If general relativity is assumed, i.e. if the Einstein equation
+(\ref{e:fra:Einstein_eq}) is fulfilled, we have
+$\w{R}(\wl, \wl) = 8\pi \w{T}(\wl,\wl)$ [Eq.~(\ref{e:def:Rll_Tll})],
+where $\w{T}$ is the total energy-momentum tensor of the matter and
+non-gravitational fields. Accordingly, the null energy condition
+is equivalent to
+\be \label{e:neh:null_energy_cond_matter}
     \w{T}(\wl, \wl) \geq 0 \quad \mbox{for any null vector $\wl$}.
 \ee
 This condition is pretty weak and is satisfied by
@@ -273,19 +284,28 @@ The null energy condition follows from the
 weak energy condition by continuity.
 Selecting for $\w{u}$ the 4-velocity of an observer, we see that
 the weak energy condition has a simple physical interpretation: the energy
-density as measured by any observer is non-negative.
+density as measured by any observer is non-negative,
+hence the name \emph{energy condition}.
 
-Given (\ref{e:neh:sigma_square}) and (\ref{e:neh:null_energy_cond}),
-Eq.~(\ref{e:neh:null_Raychaud_theta_zero})  implies both
+\begin{remark}
+The condition (\ref{e:neh:null_energy_cond}) is also called
+the \defin{null convergence condition}\index{null!convergence condition}\index{convergence!null -- condition} (e.g. \cite{Senov22,SenovG15}), which reflects better its geometrical
+significance, while the connection with the positivity of energy [Eq.~(\ref{e:neh:null_energy_cond_matter})] requires
+the Einstein equation.
+\end{remark}
+
+Let us assume that the null energy condition (\ref{e:neh:null_energy_cond})
+holds. Given (\ref{e:neh:sigma_square}),
+Eq.~(\ref{e:neh:null_Raychaud_theta_zero}) then implies both
 \be
     \sigma_{ab} \sigma^{ab}  = 0
 \ee
 and
-\be \label{e:neh:T_l_l_zero}
-    \w{T}(\wl, \wl) = 0 .
+\be \label{e:neh:R_l_l_zero}
+    \w{R}(\wl, \wl) = 0 .
 \ee
 The identity $\sigma_{ab} \sigma^{ab} = 0$ is possible only if each of
-the $s_i$'s in (\ref{e:neh:sigma_square_si}) is zero. Hence we have necessarily
+the terms $\sigma_{ab}$ in the sum (\ref{e:neh:sigma_square_si}) is zero. Hence we have necessarily
 \be
     \w{\sigma} = 0 .
 \ee
@@ -1039,9 +1059,9 @@ at most equal to $c$.
 We note that in the right-hand side of (\ref{e:neh:DS_kappa_W}), there appears the
 orthogonal projection of $\w{W}$ onto $\Sp$ (more precisely its metric dual).
 If we assume the null dominant energy condition, the null energy condition
-holds and we have, according to (\ref{e:neh:T_l_l_zero}),
+holds and we have, according to Eqs.~(\ref{e:def:Rll_Tll}) and (\ref{e:neh:R_l_l_zero}),
 \[
-    \wl \cdot \w{W} = - \w{T}(\wl, \wl) = 0 ,
+    \wl \cdot \w{W} = - \w{T}(\wl, \wl) = - \frac{1}{8\pi} \w{R}(\wl, \wl) = 0 .
 \]
 This implies that the vector $\w{W}$ is tangent to $\Hor$. The latter
 being a null hypersurface, $\w{W}$ must then be
