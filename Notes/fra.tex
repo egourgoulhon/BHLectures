@@ -515,16 +515,22 @@ the metric $\w{g}$ obeys the \defin{Einstein equation}\index{Einstein!equation}:
 \be \label{e:fra:Einstein_eq}
     \encadre{ \w{R} - \frac{1}{2}\, R\, \w{g} + \Lambda\, \w{g} = 8\pi \w{T} },
 \ee
-where $\w{R}$ is the Ricci tensor of $\w{g}$, $R$ is the Ricci scalar of $\w{g}$
+where $\w{R}$ is the Ricci tensor\index{Ricci!tensor} of $\w{g}$, $R$ is the
+Ricci scalar\index{Ricci!scalar} of $\w{g}$
 (cf. Sec.~\ref{s:bas:Ricci_tensor} in Appendix~\ref{s:bas}), $\Lambda$ is some
 constant, called the \defin{cosmological constant}\index{cosmological!constant},
 and $\w{T}$ is the energy-momentum tensor\index{energy-momentum!tensor} of
-matter and non-gravitational fields.
+matter and non-gravitational fields. Letting appear the
+Einstein tensor\index{Einstein!tensor} $\w{G} := \w{R} - (R/2) \w{g}$
+[Eq.~(\ref{e:bas:Einstein_tensor})], the Einstein equation can be recast as
+\be \label{e:fra:Einstein_eq_G}
+    \encadre{ \w{G} +  \Lambda\, \w{g} = 8\pi \w{T} }.
+\ee
 
 \begin{remark} \label{r:fra:Einstein_eq_n_2}
 The case $n=2$ has been excluded since the Einstein equation would
 no longer involve the spacetime curvature, given that the Einstein tensor
-$\w{R} - (R/2) \w{g}$ is identically zero for any metric $\w{g}$ if $n=2$
+$\w{G}$ is identically zero for any metric $\w{g}$ if $n=2$
 (consider the trace of Eq.~(\ref{e:bas:Riem_n_2}) in Appendix~\ref{s:bas}).
 The exclusion of $n=2$ also follows by noticing that
 the Einstein-Hilbert action\index{Einstein-Hilbert action},
@@ -552,7 +558,7 @@ Eq.~(\ref{e:fra:Einstein_eq_n}) would be ill-posed for $n=2$
 (cf. Remark~\ref{r:fra:Einstein_eq_n_2}).
 \end{remark}
 
-Taking the covariant divergence of the Einstein equation (\ref{e:fra:Einstein_eq})
+Taking the covariant divergence of the Einstein equation (\ref{e:fra:Einstein_eq_G})
 and invoking the contracted Bianchi identity (\ref{e:bas:Bianchi_contr}) leads
 to
 \be \label{e:fra:divT}
