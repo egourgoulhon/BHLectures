@@ -1020,15 +1020,6 @@ the covariant derivative of $\kappa$ along $\Sp$,
 which we denote by $\DS$:
 $\DSc_\alpha \kappa := \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}$.
 
-%Using the Einstein equation (\ref{e:fra:Einstein_eq_n}), we may then rewrite
-%the above relation as
-%\[
-%    \DSc_\alpha \kappa = -  \frac{2}{n-2}\,\Lambda\,
-%    \underbrace{g_{\mu\nu}  \el^\mu q^\nu_{\ \, \alpha}}_{\el^\mu q_{\mu\alpha} = 0}
-%    - 8\pi \Big( T_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha}
-%    - \frac{1}{n-2}\,  T \, \underbrace{g_{\mu\nu}  \el^\mu q^\nu_{\ \, \alpha}}_{\el^\mu q_{\mu\alpha} = 0} \Big) ,
-%\]
-
 To go further, we shall assume the (generalized)
 \defin{null dominant energy condition}\index{null!dominant energy condition}\index{energy!condition!null dominant--} \cite{Racz08}, namely that there
 exists a scalar field $f$ such that
@@ -1059,7 +1050,7 @@ If general relativity is assumed, i.e. if the metric $\w{g}$
 fulfills the Einstein equation (\ref{e:fra:Einstein_eq_G}), then
 the null dominant energy condition with $f = \Lambda$ is
 equivalent to
-\be
+\be \label{e:neh:null_dominant_cond_T}
   \encadre{ \begin{array}{ll}
     \w{W} := - \vw{T}(\wl) \ & \mbox{is future-directed null or timelike} \\
     & \mbox{for any future-directed null vector $\wl$}
@@ -1076,29 +1067,32 @@ By continuity, the null dominant energy condition is implied by the standard
 \ee
 Physically, the dominant energy condition states that, with respect to any
 observer (represented by its 4-velocity $\w{u}$, which is future-directed timelike),
-the energy of matter and non-gravitational fields, moves at a speed
-at most equal to $c$.
+the energy of matter and non-gravitational fields moves not faster than light.
 
-We note that in the right-hand side of (\ref{e:neh:DS_kappa_W}), there appears the
-orthogonal projection of $\w{W}$ onto $\Sp$, since we get from (\ref{e:neh:def_W_index})
+We note that in the right-hand side of Eq.~(\ref{e:neh:DS_kappa_W}), there appears the
+orthogonal projection onto $\Sp$ of the vector $\w{W}$
+defined by Eq.~(\ref{e:neh:null_dominant_cond}), since we have from
+Eq.~(\ref{e:neh:def_W_index})
 \[
     q^\alpha_{\ \, \mu} W^\mu = -  q^\alpha_{\ \, \mu} R^\mu_{\ \, \nu} \el^\nu
    + \left( \frac{R}{2} - f \right) \underbrace{q^\alpha_{\ \, \mu} \el^\mu}_{0}
    = -  q^{\alpha\mu} R_{\mu\nu} \el^\nu .
 \]
 If we assume the null dominant energy condition, the null energy condition
-holds and we have, according to Eqs.~(\ref{e:neh:R_ll_W_l}) and (\ref{e:neh:R_l_l_zero}),
+holds, so that $\w{R}(\wl, \wl) = 0$ on $\Hor$ [Eq.~(\ref{e:neh:R_l_l_zero})].
+Then, according to Eq.~(\ref{e:neh:R_ll_W_l}),
 $\wl \cdot \w{W} = - \w{R}(\wl, \wl) = 0$.
 This implies that the vector $\w{W}$ is tangent to $\Hor$. The latter
 being a null hypersurface, $\w{W}$ must then be
 either collinear to $\wl$ or spacelike (cf. Lemma~\ref{p:def:tangent_to_null_hyp} in Sec.~\ref{s:def:spacelike_sections}).
-Now, according to the null dominant energy condition, $\w{W}$ cannot be
+Now, according to the null dominant energy condition (\ref{e:neh:null_dominant_cond}),
+$\w{W}$ cannot be
 spacelike. We conclude that $\w{W}$ is collinear to $\wl$. Consequently its
-orthogonal projection onto $\Sp$ is zero:
+orthogonal projection onto the cross-section $\Sp$ is zero:
 \[
     q^\alpha_{\ \, \mu} W^\mu = -  q^{\alpha\mu} R_{\mu\nu} \el^\nu  = 0 .
 \]
-Hence the right-hand side of (\ref{e:neh:DS_kappa_W}) vanishes identically
+Hence the right-hand side of Eq.~(\ref{e:neh:DS_kappa_W}) vanishes identically
 and we are left with $\DSc_\alpha \kappa = 0$.
 This means that $\kappa$ is constant over $\Sp$. Given that $\kappa$ is
 constant along each null geodesic generator of $\Hor$, this completes the demonstration
@@ -1121,7 +1115,8 @@ for a reason to be detailed in Sec.~\ref{s:neh:surface_gravity},
 and the result
 (\ref{e:neh:zeroth_law}) is known as the
 \defin{zeroth law of black hole mechanics}\index{zeroth law}. More precisely,
-the zeroth law states that the surface gravity of a black hole in equilibrium is
+the zeroth law --- to be discussed in detail in Chap.~\ref{s:evo} ---
+states that the surface gravity of a black hole in equilibrium is
 constant and we shall see in Chap.~\ref{s:sta} that the event horizon of a black hole in
 equilibrium is a Killing horizon.
 

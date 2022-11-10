@@ -104,15 +104,17 @@ transformation $t\mapsto-t$. One says that a static spacetime is
 
 \subsection{Black holes in stationary spacetimes}
 
-Let us consider a spacetime $(\M,\w{g})$ that contains a black hole, as defined in
+Let us consider a spacetime $(\M,\w{g})$ that contains a \emph{black hole}, as defined in
 Sec.~\ref{s:glo:def_BH}. In particular, $(\M,\w{g})$ admits a future null
 infinity $\scri^+$ and a past null infinity $\scri^-$.
-Furthermore, we assume that $(\M,\w{g})$ is stationary, in the sense defined above.
+Furthermore, we assume that $(\M,\w{g})$ is \emph{stationary},
+as defined in Sec.~\ref{s:sta:def_station}.
 Since $(\M,\w{g})$ is invariant under the action of the isometry group $(\mathbb{R},+)$,
 so is $\scri^+$ (under some proper extension of $\w{\xi}$ to the conformal
 completion $\tilde{\M}$)
 and therefore its causal past $J^-(\scri^+)$. As the boundary of $J^-(\scri^+)$
-inside $\M$, the event horizon $\Hor$ must therefore be invariant under the
+inside $\M$ [cf. Eq.~(\ref{e:glo:Hor_bound_past_scrip})],
+the event horizon $\Hor$ must therefore be invariant under the
 action of the isometry group.
 Note that this means that $\Hor$ is invariant \emph{as a whole}, not that
 each point of $\Hor$ is invariant (i.e. is a fixed point of the group action).
@@ -132,27 +134,29 @@ $\Hor$, which implies that $\w{\xi}$ is either null or spacelike on $\Hor$.
 \end{prop}
 
 Since $\w{\xi}$ cannot be timelike on $\Hor$, it follows immediately
-that a spacetime that contains a black hole cannot be strictly stationary.
+that a stationary spacetime that contains a black hole cannot be strictly stationary.
 We shall discuss in detail the two cases --- null or spacelike --- allowed
 for $\w{\xi}$ on $\Hor$ in Sec.~\ref{s:sta:EH_KH}.
 
-It is rather intuitive that a black hole event horizon $\Hor$ in a stationary
-spactime must have a vanishing expansion $\theta_{(\wl)}$ along its null
+It is rather intuitive that the event horizon $\Hor$ of a black hole in
+a stationary spactime must have a vanishing expansion $\theta_{(\wl)}$ along its null
 normals $\wl$, otherwise the area of cross-sections would vary when dragged
-along $\wl$ and this would define a privileged ``time direction'' along $\Hor$,
+along $\wl$ and this would define some ``evolution'' along $\Hor$ (e.g. from the small areas
+to the larger ones),
 which would break the invariance of $\Hor$ under the action of the stationary group.
 This of course results from $\Hor$ being part of the global spacetime structure,
 since not any null hypersurface in a stationary spacetime has a vanishing
 expansion: for instance, a future light cone in Minkowski spacetime
 (which is stationary!) has $\theta_{(\wl)}>0$
 (cf. Example~\ref{x:def:light_cone6} on p.~\pageref{x:def:light_cone6}),
-but the light cone is not invariant by any time translation isometry of
-Minkowski spacetime. The rigorous proof that $\theta_{(\wl)} = 0$
+but the light cone is not invariant by any time translation isometry.
+The rigorous proof that $\theta_{(\wl)} = 0$
 for stationary event horizons can be found in Hawking \& Ellis' textbook
 (Proposition~9.3.1 in Ref.~\cite{HawkiE73}).  Here, we shall simply state, following
 the terminology introduced in Chap.~\ref{s:neh}:
 
 \begin{prop}
+\label{p:sta:hor_non_exanding}
 The event horizon $\Hor$ of a black hole in stationary spacetime
 is a non-expanding horizon.
 \end{prop}
@@ -164,13 +168,45 @@ manifold. Equivalently, the cross-sections of $\Hor$ must be closed manifolds,
 i.e. compact without boundary. This is fulfilled for black holes
 thanks to the topology theorem:
 
-\begin{prop}[topology theorem \textnormal{(Hawking 1972 \cite{Hawki72},
-Chru\'sciel \& Wald 1994 \cite{ChrusW94b})}]
+\begin{prop}[topology theorem 1 \textnormal{(Hawking 1972 \cite{Hawki72})}]
+Let $(\M, \w{g})$ be a 4-dimensional asymptotically flat stationary spacetime
+containing a black hole region.
+Let us assume that the
+dominant null energy condition (\ref{e:neh:null_dominant_cond})
+is fulfilled for some scalar field $f \geq 0$.
+In particular, for general relativity with $f=\Lambda$,
+this is equivalent to assuming $\Lambda \geq 0$ and
+the matter dominant null energy condition (\ref{e:neh:null_dominant_cond_T}).
+Then, any connected component of a cross section of the black hole
+event horizon is homeomorphic to a 2-sphere.
+\end{prop}
+\begin{proof}
+Let $\Sp$ be a cross-section of the event horizon $\Hor$,
+$\wl$ a future-directed null normal to $\Hor$ and $\w{k}$ a complementary
+future-directed null vector field
+normal to $\Sp$, normalized as in Eq.~(\ref{e:def:k_el_minus_one}), i.e.
+$\w{k}\cdot\wl = -1$. At each point $p\in \Sp$, the pair $(\w{k},\wl)$ is
+a basis of the 2-plane orthogonal to $\Sp$, $T_p^\perp\Sp$ (cf. Fig.~\ref{f:def:TS_ortho}),
+with $\wl$ tangent to $\Hor$ and $\w{k}$ transverse to it.
+As in Sec.~\ref{s:def:geom_null_hypsurf}, let us consider that $\Hor$
+is the level set $u=0$ of 1-parameter family of hypersurfaces $(\Hor_u)_{u\in\R}$.
+This extends $\wl$ in the vinicity of $\Hor$ via Eq.~(\ref{e:def:wl_rho_u})
+as a vector field normal to each $\Hor_u$.
+By Property~\ref{p:sta:hor_non_exanding}, we have $\theta_{(\wl)} = 0$
+on $\Sp$. A standard identity (cf. e.g. Eq.~(3b) in \cite{Haywa94}
+or Eq.~(36) in \cite{Jaram13}) gives the variation of $\theta_{(\wl)}$
+along $\w{k}$ as
+\be
+    \Lie{\w{k}} \theta_{(\wl)} = - \frac{1}{2} {}^\Sp\!\! R - \DSc_a \Omega^a
+    +  \Omega_a \Omega^a + \w{G}(\w{k},\wl) ,
+\ee
+\end{proof}
+
+\begin{prop}[topology theorem 2 \textnormal{(Chru\'sciel \& Wald 1994 \cite{ChrusW94b})}]
 Let $(\M, \w{g})$ be a 4-dimensional asymptotically flat stationary spacetime
 containing a black hole region.
 Let us assume that (i) the
-null energy condition (\ref{e:neh:null_energy_cond})
-($\w{R}(\wl, \wl) \geq 0$ for any null vector $\wl$) is fulfilled
+null energy condition (\ref{e:neh:null_energy_cond}) is fulfilled
 and (ii) the domain of outer communications is globally hyperbolic.
 Then, the domain of outer communications is simply connected and
 any connected component of a compact cross section of the black hole
