@@ -260,9 +260,10 @@ where $\w{T}$ is the total energy-momentum tensor of the matter and
 non-gravitational fields. Accordingly, the null energy condition
 is equivalent to
 \be \label{e:neh:null_energy_cond_matter}
-    \w{T}(\wl, \wl) \geq 0 \quad \mbox{for any null vector $\wl$}.
+    \encadre{ \w{T}(\wl, \wl) \geq 0 \quad \mbox{for any null vector $\wl$} }_{\rm\,  GR},
 \ee
-This condition is pretty weak and is satisfied by
+where the index `GR' stands for \emph{general relativity}.
+The condition (\ref{e:neh:null_energy_cond_matter}) is pretty weak and is satisfied by
 \begin{itemize}
 \item vacuum: $\w{T}=0$;
 \item any ``reasonable'' matter model, such as a perfect fluid with a
@@ -1006,59 +1007,72 @@ Accordingly, Eq.~(\ref{e:neh:zeroth_law_step1}) becomes successively
      - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
     + \kappa  \, \omega_\nu q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha}  \nonumber \\
    & &
-   - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} , \nonumber
+   - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} , \nonumber \\
+   & & \DSc_\alpha \kappa = - R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} , \label{e:neh:DS_kappa_W}
 \eea
 where we have used (\ref{e:def:nab_l_Theta}) to get the second line,
 the identity
 $\el_\nu q^\nu_{\ \, \alpha} = 0$ to get the third one and
 (\ref{e:def:omega_l_kappa}) to substitute $\kappa$ for
 $\omega_\mu \el^\mu$.
-In the above equation appears the covariant derivative of $\kappa$ along $\Sp$,
+Finaly, in the last line, we have let appear
+the covariant derivative of $\kappa$ along $\Sp$,
 which we denote by $\DS$:
-\be
-    \DSc_\alpha \kappa := \nabla_\nu \kappa \, q^\nu_{\ \, \alpha} .
-\ee
-Using the Einstein equation (\ref{e:fra:Einstein_eq_n}), we may then rewrite
-the above relation as
-\[
-    \DSc_\alpha \kappa = -  \frac{2}{n-2}\,\Lambda\,
-    \underbrace{g_{\mu\nu}  \el^\mu q^\nu_{\ \, \alpha}}_{\el^\mu q_{\mu\alpha} = 0}
-    - 8\pi \Big( T_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha}
-    - \frac{1}{n-2}\,  T \, \underbrace{g_{\mu\nu}  \el^\mu q^\nu_{\ \, \alpha}}_{\el^\mu q_{\mu\alpha} = 0} \Big) ,
-\]
-i.e.
-\be \label{e:neh:DS_kappa_W}
-    \DSc_\alpha \kappa = - 8\pi T_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} .
-\ee
-To go further, we shall assume that matter and the non-gravitational fields
-obey the
-\defin{null dominant energy condition}\index{null!dominant energy condition}\index{energy!condition!null dominant--}:
+$\DSc_\alpha \kappa := \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}$.
+
+%Using the Einstein equation (\ref{e:fra:Einstein_eq_n}), we may then rewrite
+%the above relation as
+%\[
+%    \DSc_\alpha \kappa = -  \frac{2}{n-2}\,\Lambda\,
+%    \underbrace{g_{\mu\nu}  \el^\mu q^\nu_{\ \, \alpha}}_{\el^\mu q_{\mu\alpha} = 0}
+%    - 8\pi \Big( T_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha}
+%    - \frac{1}{n-2}\,  T \, \underbrace{g_{\mu\nu}  \el^\mu q^\nu_{\ \, \alpha}}_{\el^\mu q_{\mu\alpha} = 0} \Big) ,
+%\]
+
+To go further, we shall assume the (generalized)
+\defin{null dominant energy condition}\index{null!dominant energy condition}\index{energy!condition!null dominant--} \cite{Racz08}, namely that there
+exists a scalar field $f$ such that
 \be \label{e:neh:null_dominant_cond}
-   \begin{array}{ll}
-    \w{W} := - \vw{T}(\wl, .) \ & \mbox{is future-directed null or timelike} \\
-    & \mbox{for any future-directed null vector $\wl$} .
-    \end{array}
+  \encadre{  \begin{array}{ll}
+    \w{W} := - \vw{G}(\wl) - f \wl \ & \mbox{is future-directed null or timelike} \\
+    & \mbox{for any future-directed null vector $\wl$}
+    \end{array} } .
 \ee
-In the above equation, $\vw{T}(\wl, .)$ stands for the vector field
-that is the metric dual of the 1-form $\w{T}(\wl, .)$; in index notation,
-\[
-    W^\alpha = - g^{\alpha\nu} T_{\mu\nu}\el^\mu = - T_\mu^{\ \, \alpha} \el^\mu .
-\]
+In the above equation, $\vw{G}$ stands for the type-$(1,1)$ tensor
+associated by metric duality to the Einstein tensor\index{Einstein!tensor}
+$\w{G}$ [Eq.~(\ref{e:bas:Einstein_tensor})].
+We have, in index notation [cf. Eq.~(\ref{e:bas:arrow_endo_index})]
+\be \label{e:neh:def_W_index}
+    W^\alpha = - G^\alpha_{\ \, \mu} \el^\mu - f \ell^\alpha .
+\ee
 Note that the null dominant energy condition implies the null energy condition
-discussed in Sec.~\ref{s:neh:NEH_Theta_zero}, since
-\[
-    \w{T}(\wl, \wl) = - \w{W}\cdot\wl \geq 0 ,
-\]
+(\ref{e:neh:null_energy_cond}) since
+\be \label{e:neh:R_ll_W_l}
+    \w{R}(\wl, \wl) = \w{R}(\wl, \wl) - \frac{R}{2} \underbrace{\w{g}(\wl, \wl)}_{0}
+    + f \underbrace{\w{g}(\wl, \wl)}_{0}  =  \w{G}(\wl, \wl) + f \w{g}(\wl,\wl)
+     =  - \w{W}\cdot\wl \geq 0 ,
+\ee
 the inequality holding because both $\w{W}$ and $\wl$ are future-directed
 (cf. Lemma~\ref{p:fra:lem2}).
 
-The null dominant energy condition is implied by continuity by the
+If general relativity is assumed, i.e. if the metric $\w{g}$
+fulfills the Einstein equation (\ref{e:fra:Einstein_eq_G}), then
+the null dominant energy condition with $f = \Lambda$ is
+equivalent to
+\be
+  \encadre{ \begin{array}{ll}
+    \w{W} := - \vw{T}(\wl) \ & \mbox{is future-directed null or timelike} \\
+    & \mbox{for any future-directed null vector $\wl$}
+    \end{array} }_{\rm \, GR},
+\ee
+where $\w{T}$ is the energy-momentum tensor of matter and non-gravitational fields.
+By continuity, the null dominant energy condition is implied by the standard
 \defin{dominant energy condition}\index{dominant energy condition}\index{energy!condition!dominant--}:
 \be
    \begin{array}{ll}
-    \w{W} := - \vw{T}(\w{u}, .) \ & \mbox{is future-directed null or timelike} \\
-    & \mbox{for any future-directed timelike vector $\w{u}$} .
-    \end{array}
+    \w{W} := - \vw{T}(\w{u}) \ & \mbox{is future-directed null or timelike} \\
+    & \mbox{for any future-directed timelike vector $\w{u}$}
+    \end{array}  .
 \ee
 Physically, the dominant energy condition states that, with respect to any
 observer (represented by its 4-velocity $\w{u}$, which is future-directed timelike),
@@ -1066,12 +1080,15 @@ the energy of matter and non-gravitational fields, moves at a speed
 at most equal to $c$.
 
 We note that in the right-hand side of (\ref{e:neh:DS_kappa_W}), there appears the
-orthogonal projection of $\w{W}$ onto $\Sp$ (more precisely its metric dual).
-If we assume the null dominant energy condition, the null energy condition
-holds and we have, according to Eqs.~(\ref{e:def:Rll_Tll}) and (\ref{e:neh:R_l_l_zero}),
+orthogonal projection of $\w{W}$ onto $\Sp$, since we get from (\ref{e:neh:def_W_index})
 \[
-    \wl \cdot \w{W} = - \w{T}(\wl, \wl) = - \frac{1}{8\pi} \w{R}(\wl, \wl) = 0 .
+    q^\alpha_{\ \, \mu} W^\mu = -  q^\alpha_{\ \, \mu} R^\mu_{\ \, \nu} \el^\nu
+   + \left( \frac{R}{2} - f \right) \underbrace{q^\alpha_{\ \, \mu} \el^\mu}_{0}
+   = -  q^{\alpha\mu} R_{\mu\nu} \el^\nu .
 \]
+If we assume the null dominant energy condition, the null energy condition
+holds and we have, according to Eqs.~(\ref{e:neh:R_ll_W_l}) and (\ref{e:neh:R_l_l_zero}),
+$\wl \cdot \w{W} = - \w{R}(\wl, \wl) = 0$.
 This implies that the vector $\w{W}$ is tangent to $\Hor$. The latter
 being a null hypersurface, $\w{W}$ must then be
 either collinear to $\wl$ or spacelike (cf. Lemma~\ref{p:def:tangent_to_null_hyp} in Sec.~\ref{s:def:spacelike_sections}).
@@ -1079,21 +1096,19 @@ Now, according to the null dominant energy condition, $\w{W}$ cannot be
 spacelike. We conclude that $\w{W}$ is collinear to $\wl$. Consequently its
 orthogonal projection onto $\Sp$ is zero:
 \[
-    q^\alpha_{\ \, \nu} W^\nu = - q^\alpha_{\ \, \nu} T_\mu^{\ \, \nu} \el^\mu = 0 .
+    q^\alpha_{\ \, \mu} W^\mu = -  q^{\alpha\mu} R_{\mu\nu} \el^\nu  = 0 .
 \]
 Hence the right-hand side of (\ref{e:neh:DS_kappa_W}) vanishes identically
-and we are left with
-\[
-    \DSc_\alpha \kappa = 0 .
-\]
+and we are left with $\DSc_\alpha \kappa = 0$.
 This means that $\kappa$ is constant over $\Sp$. Given that $\kappa$ is
 constant along each null geodesic generator of $\Hor$, this completes the demonstration
 that $\kappa$ is constant over $\Hor$. More precisely, we have established
 the following property:
+
 \begin{prop}[zeroth law of black hole mechanics]
-If matter and non-gravitational fields obey the null dominant energy condition
+If the null dominant energy condition
 [Eq.~(\ref{e:neh:null_dominant_cond})]
-on the Killing horizon $\Hor$, then the non-affinity coefficient $\kappa$
+is fulfilled on the Killing horizon $\Hor$, then the non-affinity coefficient $\kappa$
 of the null normal coinciding with the Killing vector field on
 $\Hor$ is constant over $\Hor$:
 \be \label{e:neh:zeroth_law}
