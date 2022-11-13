@@ -152,7 +152,8 @@ expansion: for instance, a future light cone in Minkowski spacetime
 but the light cone is not invariant by any time translation isometry.
 The rigorous proof that $\theta_{(\wl)} = 0$
 for stationary event horizons can be found in Hawking \& Ellis' textbook
-(Proposition~9.3.1 in Ref.~\cite{HawkiE73}).  Here, we shall simply state, following
+(Proposition~9.3.1 of Ref.~\cite{HawkiE73}).
+Here, we shall simply state, following
 the terminology introduced in Chap.~\ref{s:neh}:
 
 \begin{prop}
@@ -165,19 +166,22 @@ In the definition of a non-expanding horizon given in Sec.~\ref{s:neh:def},
 in addition to $\theta_{(\wl)} = 0$, the topology of $\Hor$ is
 demanded to be $\R\times \Sp$ where $\Sp$ is a closed $(n-2)$-dimensional
 manifold. Equivalently, the cross-sections of $\Hor$ must be closed manifolds,
-i.e. compact without boundary. This is fulfilled for black holes
-thanks to the topology theorem:
+i.e. compact without boundary.
+We shall assume that this holds for black holes.
+In dimension 4, this is guaranted by the topology theorem:
 
 \begin{prop}[topology theorem 1 \textnormal{(Hawking 1972 \cite{Hawki72})}]
 Let $(\M, \w{g})$ be a 4-dimensional asymptotically flat stationary spacetime
 containing a black hole region.
-Let us assume that the
-dominant null energy condition (\ref{e:neh:null_dominant_cond})
-is fulfilled for some scalar field $f \geq 0$.
-In particular, for general relativity with $f=\Lambda$,
+Let us assume that
+(i) the dominant null energy condition (\ref{e:neh:null_dominant_cond})
+is fulfilled for some scalar field $f \geq 0$
+(for general relativity with $f=\Lambda$
 this is equivalent to assuming $\Lambda \geq 0$ and
-the matter dominant null energy condition (\ref{e:neh:null_dominant_cond_T}).
-Then, any connected component of a cross section of the black hole
+the matter dominant null energy condition (\ref{e:neh:null_dominant_cond_T}))
+and (ii) the following ``outermost'' property holds: when
+displaced into the black hole region along the ingoing null normal $\w{k}$, the horizon cross-sections become surfaces with $\theta_{(\wl)} < 0$.
+Then, any connected component of a cross-section of the black hole
 event horizon is homeomorphic to a 2-sphere.
 \end{prop}
 \begin{proof}
@@ -191,27 +195,98 @@ with $\wl$ tangent to $\Hor$ and $\w{k}$ transverse to it.
 As in Sec.~\ref{s:def:geom_null_hypsurf}, let us consider that $\Hor$
 is the level set $u=0$ of 1-parameter family of hypersurfaces $(\Hor_u)_{u\in\R}$.
 This extends $\wl$ in the vinicity of $\Hor$ via Eq.~(\ref{e:def:wl_rho_u})
-as a vector field normal to each $\Hor_u$.
+as a null vector field normal to each $\Hor_u$.
 By Property~\ref{p:sta:hor_non_exanding}, we have $\theta_{(\wl)} = 0$
-on $\Sp$. A standard identity (cf. e.g. Eq.~(3b) in \cite{Haywa94}
-or Eq.~(36) in \cite{Jaram13}) gives the variation of $\theta_{(\wl)}$
-along $\w{k}$ as
-\be
+on $\Sp$. Let us displace $\Sp$ by a small parameter $\eps>0$ along the inward
+null normal $\w{k}$. The expansion along $\wl$ of the obtained surface is
+negative by hypothesis. By taking the limit $\eps\to 0$, we form the
+derivative $\Lie{\w{k}} \theta_{(\wl)}$, which must obey
+\be \label{e:sta:Lie_k_l}
+    \Lie{\w{k}} \theta_{(\wl)} < 0 .
+\ee
+since $\theta_{(\wl)} = 0$ on $\Sp$ and
+$\theta_{(\wl)} < 0$ on the displaced surface.
+A standard identity (cf. e.g. Eq.~(3b) of \cite{Haywa94}, Eq.~(3.1) of \cite{BoothF07},
+Eq.~(96) of \cite{Cao11} or Eq.~(36) of \cite{Jaram13})
+expresses $\Lie{\w{k}}\theta_{(\wl)}$ as
+\be \label{e:sta:Lie_k_theta_l}
     \Lie{\w{k}} \theta_{(\wl)} = - \frac{1}{2} {}^\Sp\!\! R - \DSc_a \Omega^a
     +  \Omega_a \Omega^a + \w{G}(\w{k},\wl) ,
 \ee
+where ${}^\Sp\!\! R$ is the Ricci scalar of the Riemannian metric $\w{q}$ on
+$\Sp$ induced by the spacetime metric $\w{g}$, $\DS$ is the Levi-civita
+connection associated to $\w{q}$ (already introduced in Sec.~\ref{s:neh:zeroth_law}),
+$\w{G}$ is the Einstein tensor
+of the spacetime metric $\w{g}$ and $\w{\Omega}$ is the 1-form on $\Sp$
+that is the pullback of the 1-form $\w{\omega}$ defined by Eq.~(\ref{e:def:def_omega}).
+We may also view $\w{\Omega}$ as a spacetime 1-form: it is then defined as
+the composition of $\w{\omega}$ with the orthogonal projector $\vw{q}$ onto
+$\Sp$: $\w{\Omega} = \w{\omega} \circ \vw{q}$.
+In view of Eq.~(\ref{e:def:omega_restrict_H}), we may then write
+$\langle\w{\Omega}, \w{v} \rangle = - \w{k} \cdot\wnab_{\vw{q}(\w{v})} \w{\ell}$,
+or in index notation, $\Omega_\alpha  = - k_\mu \nabla_\nu \el^\mu q^\nu_{\ \, \alpha}$.
+Using Eq.~(\ref{e:neh:null_dominant_cond}), we may express $\w{G}(\w{k},\wl)$
+as $\w{G}(\w{k},\wl) = \w{G}(\wl, \w{k}) = - \w{W}\cdot\w{k} - f \wl\cdot \w{k} = - \w{W}\cdot\w{k} + f$.
+Then, integrating (\ref{e:sta:Lie_k_theta_l}) over $\Sp$
+and setting the integral of the divergence term $\DSc_a \Omega^a$ to zero since
+$\Sp$ has no boundary, we get
+\be \label{e:sta:Euler_char}
+    \underbrace{\frac{1}{2} \int_\Sp  {}^\Sp\!\! R \, \sqrt{q} \, \D^2 x}_{2\pi\chi} = \int_\Sp \Big[
+    \underbrace{\Omega_a \Omega^a}_{\geq 0}
+    \, \underbrace{- \w{W}\cdot\w{k}}_{\geq 0}
+    + \underbrace{f}_{\geq 0}
+    \, \underbrace{- \Lie{\w{k}} \theta_{(\wl)}}_{> 0} \Big]
+          \sqrt{q} \, \D^2 x .
+\ee
+In the left-hand side, we have invoked the Gauss-Bonnet theorem\index{Gauss-Bonnet theorem}
+to express the integral of ${}^\Sp\!\! R$ in terms
+of the Euler characteristic\index{Euler characteristic} $\chi$ of the
+surface $\Sp$, using the fact that in dimension 2,
+the Ricci scalar ${}^\Sp\!\! R$ is twice the
+Gaussian curvature\index{Gaussian curvature}.
+The signs of the terms forming the integrand in the right-hand side
+are justified as follows:
+$\Omega_a \Omega^a = q^{ab} \Omega_a \Omega_b \geq 0$ because $\w{q}$ is a Riemannian metric,
+$- \w{W}\cdot\w{k} \geq 0$ by Lemma~\ref{p:fra:lem2} in Sec.~\ref{s:fra:time_orientation},
+given that $\w{k}$ is a future-directed null vector and $\w{W}$ is a future-directed
+causal vector thanks to the null dominant enegy condition (\ref{e:neh:null_dominant_cond}),
+$f\geq 0$ by hypothesis and $- \Lie{\w{k}} \theta_{(\wl)} > 0$
+follows from Eq.~(\ref{e:sta:Lie_k_l}). The Euler characteristic $\chi$ is a topological
+invariant, which is $2$ for the sphere $\SS^2$, $0$ for the torus $\mathbb{T}^2$
+and $-2(g-1)$
+for a connected orientable surface of genus $g$, i.e. with $g$ ``holes''.
+Equation~(\ref{e:sta:Euler_char}) yields $\chi > 0$. Given that the only orientable 2-manifolds
+with positive Euler characteristic are homeomorphic to $\SS^2$ or
+to some disjoint union of $\SS^2$'s, the theorem follows.
 \end{proof}
 
-\begin{prop}[topology theorem 2 \textnormal{(Chru\'sciel \& Wald 1994 \cite{ChrusW94b})}]
+Another version of the topology theorem relies on the null energy
+condition, which is weaker than the dominant energy condition, and replaces the
+assumption $\Lie{\w{k}} \theta_{(\wl)} < 0$ by other hypotheses:
+
+\begin{prop}[topology theorem 2 \textnormal{(Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.} \& Wald\index{Wald, R.M.} 1994 \cite{ChrusW94b})}]
 Let $(\M, \w{g})$ be a 4-dimensional asymptotically flat stationary spacetime
-containing a black hole region.
+containing a black hole region of event horizon $\Hor$.
 Let us assume that (i) the
-null energy condition (\ref{e:neh:null_energy_cond}) is fulfilled
-and (ii) the domain of outer communications is globally hyperbolic.
-Then, the domain of outer communications is simply connected and
-any connected component of a compact cross section of the black hole
-event horizon is homeomorphic to a 2-sphere.
+null energy condition (\ref{e:neh:null_energy_cond}) is fulfilled,
+(ii) the domain of outer communications\index{domain of outer communications} $\langle\langle \M\rangle\rangle$
+[Eq.~(\ref{e:glo:def_doc})]
+is globally hyperbolic,
+(iii) $\langle\langle \M\rangle\rangle$ contains an achronal asymptotically
+flat hypersurface $\Sigma$ that intersects $\Hor$ in a compact cross-section $\Sp$,
+and (iv) some technical condition is fulfilled (cf. \cite{ChrusW94b} for the details).
+Then, $\langle\langle \M\rangle\rangle$ is simply connected and
+any connected component of $\Sp$ is homeomorphic to a 2-sphere.
 \end{prop}
+We shall not give the proof here, refering to the original article by Chru\'sciel
+\& Wald \cite{ChrusW94b}.
+
+\begin{remark}
+The topology theorem 1, as stated above, is slightly different from the original
+version given by Hawking \cite{Hawki72}, for it adds the ``outermost'' hypothesis (ii).
+The latter is very mild and fixes some shortcoming in Hawking's proof
+(cf. the historical note below).
+\end{remark}
 
 \begin{remark}
 Generalization to $n>4$: Galloway \& Schoen \cite{GalloS06}.
@@ -221,17 +296,22 @@ Generalization to $n>4$: Galloway \& Schoen \cite{GalloS06}.
 The topology theorem for the spacetime dimension $n=4$ has been formulated
 first by Stephen Hawking\index{Hawking, S.W.} in 1992 \cite{Hawki72}
 (see also p.~34 of Ref.~\cite{Hawki73} and Proposition~9.3.2 in Hawking \& Ellis' textbook
-\cite{HawkiE73}), under the hypothesis of the
-null dominant energy condition\index{null!dominant energy condition}\index{energy!condition!null dominant--} (cf. Sec.~\ref{s:neh:zeroth_law}).
+\cite{HawkiE73}).
 However, in 1993, Gregory Galloway\index{Galloway, G.J.} \cite{Gallo94}
 pointed out some limitation in Hawking's proof, namely that it cannot
-exclude the 2-torus topology for the horizon's cross sections
+exclude the torus topology ($\chi = 0$) for the horizon's cross-sections
 without assuming that the spacetime is analytic, which is a much stronger
 assumption that the smoothness usually assumed (cf. the discussion in Sec.~??).
-The theorem was demonstrated by Piotr Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.}
-and Robert Wald\index{Wald, R.M.} in 1994 \cite{ChrusW94b} without
-the analyticity assumption and assuming the null energy
-condition (which is weaker than the dominant one).
+The proof presented above is free from this limitation, since it leads to
+$\chi > 0$, which excludes the torus. This proof is based on that given
+by Sean Hayward\index{Hayward, S.} in 1994 \cite{Haywa94}
+for future outer trapping horizons.
+The version of theorem obtained by Piotr Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.}
+and Robert Wald\index{Wald, R.M.} in 1994 \cite{ChrusW94b}
+relies on the \emph{topological censorship theorem}\index{topological censorship theorem} established by
+John L. Friedman\index{Friedman, J.L.}, Kristin Schleich\index{Schleich, K.}
+and Donald M. Witt\index{Witt, D.M.} in 1993 \cite{FriedSW93}.
+It leads directly to the spherical topology, excluding the toroidal one.
 \end{hist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
