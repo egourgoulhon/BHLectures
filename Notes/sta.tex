@@ -153,36 +153,36 @@ but the light cone is not invariant by any time translation isometry.
 The rigorous proof that $\theta_{(\wl)} = 0$
 for stationary event horizons can be found in Hawking \& Ellis' textbook
 (Proposition~9.3.1 of Ref.~\cite{HawkiE73}).
-Here, we shall simply state, following
-the terminology introduced in Chap.~\ref{s:neh}:
-
+Here, we shall simply state
 \begin{prop}
 \label{p:sta:hor_non_exanding}
 The event horizon $\Hor$ of a black hole in stationary spacetime
-is a non-expanding horizon.
+is a null hypersurface of vanishing expansion:
+\be
+    \theta_{(\wl)} = 0 .
+\ee
+If its cross-sections are compact manifolds, $\Hor$ is then a \emph{non-expanding horizon},
+according to the definition introduced in Chap.~\ref{s:neh}.
 \end{prop}
 
-In the definition of a non-expanding horizon given in Sec.~\ref{s:neh:def},
-in addition to $\theta_{(\wl)} = 0$, the topology of $\Hor$ is
-demanded to be $\R\times \Sp$ where $\Sp$ is a closed $(n-2)$-dimensional
-manifold. Equivalently, the cross-sections of $\Hor$ must be closed manifolds,
-i.e. compact without boundary.
-We shall assume that this holds for black holes.
-In dimension 4, this is guaranted by the topology theorem:
+In dimension 4, one can strongly constrain the cross-sections, thanks to the
+topology theorem:
 
 \begin{prop}[topology theorem 1 \textnormal{(Hawking 1972 \cite{Hawki72})}]
-Let $(\M, \w{g})$ be a 4-dimensional asymptotically flat stationary spacetime
-containing a black hole region.
+Let $(\M, \w{g})$ be a 4-dimensional stationary spacetime
+containing a black hole of event horizon $\Hor$.
 Let us assume that
 (i) the dominant null energy condition (\ref{e:neh:null_dominant_cond})
-is fulfilled for some scalar field $f \geq 0$
-(for general relativity with $f=\Lambda$
+is fulfilled on $\Hor$ for some scalar field $f \geq 0$
+[for general relativity with $f=\Lambda$
 this is equivalent to assuming $\Lambda \geq 0$ and
-the matter dominant null energy condition (\ref{e:neh:null_dominant_cond_T}))
-and (ii) the following ``outermost'' property holds: when
-displaced into the black hole region along the ingoing null normal $\w{k}$, the horizon cross-sections become surfaces with $\theta_{(\wl)} < 0$.
-Then, any connected component of a cross-section of the black hole
-event horizon is homeomorphic to a 2-sphere.
+the matter dominant null energy condition (\ref{e:neh:null_dominant_cond_T})]
+and (ii) when
+displaced into the black hole region along the ingoing null normal $\w{k}$, the
+cross-sections of $\Hor$ become surfaces with $\theta_{(\wl)} < 0$.
+Then, any connected component $\Sp$ of a cross-section of $\Hor$
+has the topology of the sphere $\SS^2$ (one says that $\Sp$ is
+\emph{homeomorphic}\index{homeomorphic} to $\SS^2$).
 \end{prop}
 \begin{proof}
 Let $\Sp$ be a cross-section of the event horizon $\Hor$,
@@ -199,7 +199,7 @@ as a null vector field normal to each $\Hor_u$.
 By Property~\ref{p:sta:hor_non_exanding}, we have $\theta_{(\wl)} = 0$
 on $\Sp$. Let us displace $\Sp$ by a small parameter $\eps>0$ along the inward
 null normal $\w{k}$. The expansion along $\wl$ of the obtained surface is
-negative by hypothesis. By taking the limit $\eps\to 0$, we form the
+negative by hypothesis (ii). By taking the limit $\eps\to 0$, we form the
 derivative $\Lie{\w{k}} \theta_{(\wl)}$, which must obey
 \be \label{e:sta:Lie_k_l}
     \Lie{\w{k}} \theta_{(\wl)} < 0 .
@@ -244,7 +244,7 @@ of the Euler characteristic\index{Euler characteristic} $\chi$ of the
 surface $\Sp$, using the fact that in dimension 2,
 the Ricci scalar ${}^\Sp\!\! R$ is twice the
 Gaussian curvature\index{Gaussian curvature}.
-The signs of the terms forming the integrand in the right-hand side
+The signs of the terms of the integrand in the right-hand side
 are justified as follows:
 $\Omega_a \Omega^a = q^{ab} \Omega_a \Omega_b \geq 0$ because $\w{q}$ is a Riemannian metric,
 $- \w{W}\cdot\w{k} \geq 0$ by Lemma~\ref{p:fra:lem2} in Sec.~\ref{s:fra:time_orientation},
@@ -261,12 +261,12 @@ to some disjoint union of $\SS^2$'s, the theorem follows.
 \end{proof}
 
 Another version of the topology theorem relies on the null energy
-condition, which is weaker than the dominant energy condition, and replaces the
-assumption $\Lie{\w{k}} \theta_{(\wl)} < 0$ by other hypotheses:
+condition, which is weaker than the dominant energy condition assumed in (i) above,
+and replaces the hypothesis (ii) by other ones, which are more global:
 
 \begin{prop}[topology theorem 2 \textnormal{(Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.} \& Wald\index{Wald, R.M.} 1994 \cite{ChrusW94b})}]
 Let $(\M, \w{g})$ be a 4-dimensional asymptotically flat stationary spacetime
-containing a black hole region of event horizon $\Hor$.
+containing a black hole of event horizon $\Hor$.
 Let us assume that (i) the
 null energy condition (\ref{e:neh:null_energy_cond}) is fulfilled,
 (ii) the domain of outer communications\index{domain of outer communications} $\langle\langle \M\rangle\rangle$
@@ -276,21 +276,36 @@ is globally hyperbolic,
 flat hypersurface $\Sigma$ that intersects $\Hor$ in a compact cross-section $\Sp$,
 and (iv) some technical condition is fulfilled (cf. \cite{ChrusW94b} for the details).
 Then, $\langle\langle \M\rangle\rangle$ is simply connected and
-any connected component of $\Sp$ is homeomorphic to a 2-sphere.
+any connected component of $\Sp$ is homeomorphic to the sphere $\SS^2$.
 \end{prop}
 We shall not give the proof here, refering to the original article by Chru\'sciel
 \& Wald \cite{ChrusW94b}.
 
 \begin{remark}
 The topology theorem 1, as stated above, is slightly different from the original
-version given by Hawking \cite{Hawki72}, for it adds the ``outermost'' hypothesis (ii).
+version given by Hawking \cite{Hawki72,Hawki73,HawkiE73}, for it adds the ``outermost'' hypothesis (ii).
 The latter is very mild and fixes some shortcoming in Hawking's proof
 (cf. the historical note below).
 \end{remark}
 
 \begin{remark}
+The topology theorem 1 is not specific to black hole event horizons, since
+it relies only on quasilocal properties. Indeed, the proof does not use
+that $\Hor$ is the boundary of a black hole region, only that $\Hor$ is a hypersuface
+sliced by surfaces with $\theta_{(\wl)} = 0$ and $\Lie{\w{k}} \theta_{(\wl)} < 0$.
+The theorem is therefore valid for future outer trapping horizons \cite{Haywa94}
+and apparent horizons, as noticed by Hawking himself \cite{Hawki73}.
+\end{remark}
+
+
+\begin{remark}
 Generalization to $n>4$: Galloway \& Schoen \cite{GalloS06}.
 \end{remark}
+
+\begin{remark}
+Cross-sections with disconnected components: Majumdar-Papapetrou solution.
+\end{remark}
+
 
 \begin{hist}
 The topology theorem for the spacetime dimension $n=4$ has been formulated
