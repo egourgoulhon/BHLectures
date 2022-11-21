@@ -173,7 +173,7 @@ topology theorem:
 Let $(\M, \w{g})$ be a 4-dimensional stationary spacetime
 containing a black hole of event horizon $\Hor$.
 Let us assume that
-(i) the dominant null energy condition (\ref{e:neh:null_dominant_cond})
+(i) the null dominant energy condition (\ref{e:neh:null_dominant_cond})
 is fulfilled on $\Hor$ for some scalar field $f \geq 0$
 [for general relativity with $f=\Lambda$
 this is equivalent to assuming $\Lambda \geq 0$ and
@@ -353,8 +353,9 @@ The proof presented above is free from this limitation, since it leads to
 $\chi > 0$, which excludes the torus. This proof is based on that given
 by Sean Hayward\index{Hayward, S.} in 1994 \cite{Haywa94}
 for future outer trapping horizons (see also the proof of Theorem~6.3 in Ref.~\cite{Newma87}).
-The version of theorem obtained by Piotr Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.}
+The theorem obtained by Piotr Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.}
 and Robert Wald\index{Wald, R.M.} in 1994 \cite{ChrusW94b}
+(Property~\ref{p:sta:topology2})
 relies on the \emph{topological censorship theorem}\index{topological censorship theorem} established by
 John L. Friedman\index{Friedman, J.L.}, Kristin Schleich\index{Schleich, K.}
 and Donald M. Witt\index{Witt, D.M.} in 1993 \cite{FriedSW93}.
@@ -374,8 +375,8 @@ According to the definition given in Sec.~\ref{s:neh:def_Killing_hor},
 $\Hor$ is then a \emph{Killing horizon}.
 On the other hand, if $\w{\xi}$ is spacelike on $\Hor$,
 we shall see in Sec.~\ref{s:sta:strong_rigidity} that, modulo some
-assumptions, $\Hor$ is still a Killing
-horizon, albeit not with respect to $\w{\xi}$ but to another
+assumptions, $\Hor$ is a Killing
+horizon as well, albeit not with respect to $\w{\xi}$ but to another
 Killing vector. This motivates to move on in the study of Killing horizons,
 beyond what was achieved in Sec.~\ref{s:neh:Killing_hor},
 starting by the concept of
@@ -1391,7 +1392,7 @@ Killing vector $\w{\xi}$ on the event horizon $\Hor$ of a stationary black hole:
 $\w{\xi}$ null (Sec.~\ref{s:sta:staticity_thm})
 and $\w{\xi}$ spacelike (Sec.~\ref{s:sta:strong_rigidity}). In both cases, we shall see
 that $\Hor$ must be a Killing horizon; this is immediate
-for $\w{\xi}$ null and not trivial for $\w{\xi}$ spacelike.
+for $\w{\xi}$ null but not trivial for $\w{\xi}$ spacelike.
 
 \subsection{Null stationary Killing field on $\Hor$: the staticity theorem}\label{s:sta:staticity_thm}
 
@@ -1610,7 +1611,7 @@ S.W.~Hawking\index{Hawking, S.W.} (1972)
 \defin{strong rigidity theorem}\index{strong!rigidity theorem}\index{rigidity theorem!strong --}.
 We give below a modern version of this theorem, due to Moncrief \& Isenberg
 (2008) \cite{MoncrI08} (see also
-Theorem~8.1 p.~470 of Choquet-Bruhat's textbook \cite{Choqu09})
+Theorem~8.1 p.~470 of Choquet-Bruhat's textbook \cite{Choqu09}).
 \begin{prop}[strong rigidity theorem]
 \label{p:sta:strong_rigidity_thm}
 Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 4$ containing a black
@@ -1622,8 +1623,8 @@ is spacelike on $\Hor$. If
 with $\w{g}$ being an analytic field,
 \item $\w{g}$ fulfills the vacuum Einstein equation
 [Eq.~(\ref{e:fra:Einstein_eq}) with $\Lambda=0$ and $\w{T} = 0$],
-\item $\Hor$ has a null geodesic generator that is incomplete,
-\item $\Hor$ has compact cross-sections,
+\item $n=4$ or $\Hor$ has a null geodesic generator that is incomplete,
+\item $\Hor$ has compact and connected cross-sections,
 \item $\w{\xi}$ is transverse to some cross-sections,
 \end{itemize}
 then the spacetime $(\M,\w{g})$ admits a second Killing vector, $\w{\chi}$
@@ -1632,9 +1633,49 @@ $\Hor$ is a Killing horizon with respect to $\w{\chi}$.
 \end{prop}
 
 \begin{remark}
-The Killing horizon $\Hor$ is necessarily non-degenerate, given the hypothesis
-that $\Hor$ has an incomplete null geodesic generator.
+For $n\neq 4$, the Killing horizon $\Hor$ is necessarily non-degenerate, given
+that $\Hor$ must have an incomplete null geodesic generator in that case.
 \end{remark}
+
+
+\begin{remark}
+In some formulations \cite{HollaIW07,HawkiE73}, the hypothesis of $\w{\xi}$
+being transverse to some cross-sections is replaced by $\Hor$ lying in
+the future of the past null infinity $\scri^-$. Actually it can be shown
+that the latter implies the former (see e.g. the proof of Proposition~9.3.1
+in Ref.~\cite{HawkiE73}).
+\end{remark}
+
+\begin{proof}[Sketch of proof]
+The proof of the strong rigidity theorem is pretty long and we
+give only a sketch here for $n=4$, refering to Ref.~\cite{HawkiE73} (Proposition~9.3.6)
+for full details and Refs.~\cite{HollaIW07,HollaI12,MoncrI08}
+for $n>4$.
+Let us thus assume $n=4$ and that the vacuum Einstein equation holds.
+The null dominant energy condition is then satisfied and, since
+$\Hor$ is connected, the topology theorem 1 (Property~\ref{p:sta:topology1})
+implies that the cross-sections of $\Hor$ have the topology of $\SS^2$,
+or equivalently that the topology of $\Hor$ is $\R\times\SS^2$. One can define an abstract 2-dimensional manifold $\hat{\Sp}$
+by taking the quotient of $\Hor$ along its null generators, i.e. by identifying
+two points on $\Hor$ if they belong to the same null geodesic generator. Given the
+topology of $\Hor$'s cross-sections, $\hat{\Sp}$ is clearly a 2-dimensional
+manifold of topology $\SS^2$. In view of the definition
+of a cross-section (cf. Sec.~\ref{s:def:spacelike_sections}),
+one can identify $\hat{\Sp}$
+with a given cross-section $\Sp_0$ of $\Hor$ if necessary.
+Taking avantage that $\Hor$ is a non-expanding horizon (Property~\ref{p:sta:hor_non_exanding}),
+one can endow $\hat{\Sp}$ with a unique Riemannian metric $\hat{\w{q}}$
+thanks to Property~\ref{p:neh:invariance_of_2metric}. If one sticks to the $\Sp_0$ model
+of $\hat{\Sp}$, this metric is nothing but the metric $\w{q}$ induced by
+the spacetime metric $\w{g}$ on $\Sp_0$. Now the spacetime stationary action $(\R, +)$,
+$\M \to \M$, $p \mapsto \Phi_t(p)$
+induces an isometry of $(\hat{\Sp},\hat{\w{q}})$ as follows.
+Let $\Li$ be a null geodesic generator of $\Hor$; for
+$t\in\R$, $\Phi_t(\Li)$ is a null geodesic of $(\M,\w{g})$ since $\Phi_t$ is
+an isometry. Furthermore, given that $\Hor$ is globally invariant by $\Phi_t$
+\end{proof}
+
+
 
 \begin{hist}
 Stephen Hawking\index{Hawking, S.} first established the strong rigidity
@@ -1680,7 +1721,8 @@ and the horizon-generating Killing vector $\w{\chi}$ writes
 \be \label{e:sta:chi_xi_Omega_i_eta_i}
     \w{\chi} = \w{\xi} + \Omega_{(1)} \w{\eta}_{(1)} + \cdots \Omega_{(L)} \w{\eta}_{(L)} ,
 \ee
-where $\Omega_{(1)}$, $\ldots$, $\Omega_{(L)}$ are $L$ constant.
+where $\Omega_{(1)}$, $\ldots$, $\Omega_{(L)}$ are $L$ constants, all of whose
+ratios are irrational.
 
 For $n=4$, one has necessarily $L=1$ and
 denoting $\w{\eta}_{(1)}$ by simply $\w{\eta}$ and $\Omega_{(1)}$ by $\Omega_H$,
@@ -1690,6 +1732,7 @@ Eq.~(\ref{e:sta:chi_xi_Omega_i_eta_i}) reduces to
 \ee
 The constant $\Omega_H$ is then called \defin{black hole rotation velocity}\index{black hole!rotation velocity}\index{rotation!velocity}.
 \end{prop}
+
 Since it has closed orbits, the isometry group generated by each Killing vector
 $\w{\eta}_{(i)}$ is $\mathrm{SO}(2)$. Each isometry is thus an axisymmetry,
 according to the definition given in Sec.~\ref{s:sta:Komar_angu_mom}.
