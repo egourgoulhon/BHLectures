@@ -245,7 +245,7 @@ to express the integral of ${}^\Sp\!\! R$ in terms
 of the Euler characteristic\index{Euler characteristic} $\chi$ of the
 surface $\Sp$, using the fact that in dimension 2,
 the Ricci scalar ${}^\Sp\!\! R$ is twice the
-Gaussian curvature\index{Gaussian curvature}.
+Gaussian curvature\index{Gaussian!curvature}\index{curvature!Gaussian --}.
 The signs of the terms of the integrand in the right-hand side
 are justified as follows:
 $\Omega_a \Omega^a = q^{ab} \Omega_a \Omega_b \geq 0$ because $\w{q}$ is a Riemannian metric,
@@ -1692,9 +1692,14 @@ stationary, the event horizon $\Hor$ is axisymmetric.
 
 The axisymmetry can be extended to the whole spacetime as follows.
 Let $\w{\chi}=\D\w{x}/\D v$ be a vector tangent to the null generators of $\Hor$
-corresponding to a parameter $v$ of the generators connected to the parameter
-$t$ of the stationary action, i.e. such that, along a given null generator
-$\Li$, $v(\Phi_T(p)) = v(p) + T$. The vector $\w{\chi}$ is invariant
+corresponding to a parameter $v$ of the generators that is connected to the parameter
+$t$ of the stationary action, in the sense that along a given null generator
+$\Li$,
+\be
+\label{e:sta:vPhiT_v_p_T}
+    v(\Phi_T(p)) = v(p) + T.
+\ee
+The vector $\w{\chi}$ is invariant
 under the stationary action, i.e. $\Lie{\w{\xi}} \w{\chi} = 0$, so that
 $\w{\xi}$ and $\w{\chi}$ commute: $[\w{\xi}, \w{\chi}] = 0$.
 Let then define the following vector field on $\Hor$:
@@ -1702,8 +1707,12 @@ Let then define the following vector field on $\Hor$:
     \w{\eta} := \frac{1}{\Omega_H} \left( \w{\chi} - \w{\xi} \right) ,
     \qquad \mbox{with}\quad \Omega_H := \frac{2\pi}{T} .
 \]
-Since $\w{\xi}$ and $\w{\chi}$ commute,
 $\w{\eta}$ has by constrution closed field lines, of period $2\pi$.
+Indeed, since $\w{\xi}$ and $\w{\chi}$ commute, moving by a parameter $2\pi$
+along $\w{\eta}$ is equivalent to moving by a parameter $t=-T$ along the field
+lines of $\w{\xi}$ and then by a parameter $v=T$ along the field lines of
+$\w{\chi}$; the property (\ref{e:sta:vPhiT_v_p_T}) ensures that one is back
+to the starting point.
 Given the $\SS^2$
 topology of $\hat{\Sp}$, there are two fixed points $\hat{p}_1$ and $\hat{p}_2$ of the axisymmetric
 action of $\hat{\Sp}$
@@ -1716,6 +1725,37 @@ cross-section obtained by displacing $\Sp$ by a parameter $v$ along $\w{\chi}$.
 Finally, let $\w{k}$ be the future-directed null vector orthogonal to $\Sp_v$ and complementary
 to $\w{\chi}$, normalized such that $\w{\chi}\cdot\w{k} = -1$ ($\w{k}$ is
 transverse to $\Hor$ and is pointing towards the black hole region).
+In a neighbourhood of $\Hor$, we introduce a spacetime coordinate system $(v,r,\th,\ph)$,
+named \defin{Gaussian null coordinates}\index{Gaussian!null coordinates}, as follows.
+First of all, we choose spherical coordinates $(\th,\ph)$ on the cross-section
+$\Sp$, such that $\w{\eta} = \wpar_\ph$ and $\th$ is a parameter along the
+the ``meridional'' curve $\mathscr{C}$. To any point $p\in\Hor$, we assign
+then the coordinates $(v,\th,\ph)$ where $v$ is such that $p\in \Sp_v$
+and $(\th,\ph)$ are the coordinates
+of the intersection of $\Sp$ and the null generator $\Li$ through $p$.
+Let us then consider the null geodesics $\Li'$
+of tangent vector $\w{k}$, which are transverse to $\Hor$ and an affine parameter
+$r$ along each of them such that, on $\Hor$, $r=0$ and $\w{k} = - \D{\w{x}}/\D r$.
+To any point $p\in \Li'$ in the vicinity of $\Hor$, we assign the coordinates $(v,r,\th,\ph)$
+such that $r$ is the affine parameter of $p$ along $\Li'$ and $(v,\th,\ph)$
+are the coordinates of the intersection of $\Li'$ and $\Hor$. We may then extend
+the vector fields $\w{\chi}$, $\w{\eta}$ and $\w{k}$ away from $\Hor$ by setting
+\[
+    \w{\chi} := \wpar_v,\quad
+    \w{\eta} := \wpar_\ph,\quad
+    \w{k} := - \wpar_r .
+\]
+By means of the vacuum Einstein equation, one can then show by induction that,
+\be \label{e:sta:Lie_k_Lie_chi_g}
+    \forall N\in\mathbb{N}, \quad \underbrace{\Lie{\w{k}}\cdots \Lie{\w{k}}}_{N\mbox{\ times}}
+    \Lie{\w{\chi}} \w{g} \equalH 0 .
+\ee
+This is the lengthy part of the computation (see p.~343 Ref.~\cite{HawkiE73}).
+Once (\ref{e:sta:Lie_k_Lie_chi_g})
+is established, one can use the analyticity hypothesis to conclude that $\Lie{\w{\chi}} \w{g} = 0$
+in all $\M$, i.e. that $\w{\chi}$ is a Killing vector of $(\M,\w{g})$. Since, on $\Hor$,
+$\w{\chi}$ is normal to $\Hor$, it follows that $\Hor$ is a Killing horizon
+with respect to $\w{\chi}$.
 \end{proof}
 
 
@@ -1740,7 +1780,7 @@ and by Vincent Moncrief\index{Moncrief, V.} and James Isenberg\index{Isenberg, J
 in 2008 \cite{MoncrI08}.
 \end{hist}
 
-The above theorem relies on the rather strong assumption that
+The strong rigidity theorem relies on the rather strong assumption that
 the manifolds and fields are analytic.
 On physical grounds,
 it would be desirable to assume only \emph{smooth} manifolds and fields.
