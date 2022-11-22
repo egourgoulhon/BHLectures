@@ -103,6 +103,7 @@ transformation $t\mapsto-t$. One says that a static spacetime is
 
 
 \subsection{Black holes in stationary spacetimes}
+\label{s:sta:BH_stationary}
 
 Let us consider a spacetime $(\M,\w{g})$ that contains a \emph{black hole}, as defined in
 Sec.~\ref{s:glo:def_BH}. In particular, $(\M,\w{g})$ admits a future null
@@ -1648,7 +1649,7 @@ in Ref.~\cite{HawkiE73}).
 
 \begin{proof}[Sketch of proof]
 The proof of the strong rigidity theorem is pretty long and we
-give only a sketch here for $n=4$, refering to Ref.~\cite{HawkiE73} (Proposition~9.3.6)
+give here only a sketch for $n=4$, refering to Ref.~\cite{HawkiE73} (Proposition~9.3.6)
 for full details and Refs.~\cite{HollaIW07,HollaI12,MoncrI08}
 for $n>4$.
 Let us thus assume $n=4$ and that the vacuum Einstein equation holds.
@@ -1657,7 +1658,7 @@ $\Hor$ is connected, the topology theorem 1 (Property~\ref{p:sta:topology1})
 implies that the cross-sections of $\Hor$ have the topology of $\SS^2$,
 or equivalently that the topology of $\Hor$ is $\R\times\SS^2$. One can define an abstract 2-dimensional manifold $\hat{\Sp}$
 by taking the quotient of $\Hor$ along its null generators, i.e. by identifying
-two points on $\Hor$ if they belong to the same null geodesic generator. Given the
+two points on $\Hor$ if they belong to the same null geodesic generator $\Li$. Given the
 topology of $\Hor$'s cross-sections, $\hat{\Sp}$ is clearly a 2-dimensional
 manifold of topology $\SS^2$. In view of the definition
 of a cross-section (cf. Sec.~\ref{s:def:spacelike_sections}),
@@ -1667,12 +1668,54 @@ Taking avantage that $\Hor$ is a non-expanding horizon (Property~\ref{p:sta:hor_
 one can endow $\hat{\Sp}$ with a unique Riemannian metric $\hat{\w{q}}$
 thanks to Property~\ref{p:neh:invariance_of_2metric}. If one sticks to the $\Sp_0$ model
 of $\hat{\Sp}$, this metric is nothing but the metric $\w{q}$ induced by
-the spacetime metric $\w{g}$ on $\Sp_0$. Now the spacetime stationary action $(\R, +)$,
+the spacetime metric $\w{g}$ on $\Sp_0$. Now the spacetime stationary action
 $\M \to \M$, $p \mapsto \Phi_t(p)$
-induces an isometry of $(\hat{\Sp},\hat{\w{q}})$ as follows.
+induces an isometry group of $(\hat{\Sp},\hat{\w{q}})$ as follows.
 Let $\Li$ be a null geodesic generator of $\Hor$; for
 $t\in\R$, $\Phi_t(\Li)$ is a null geodesic of $(\M,\w{g})$ since $\Phi_t$ is
 an isometry. Furthermore, given that $\Hor$ is globally invariant by $\Phi_t$
+(cf. Sec.~\ref{s:sta:BH_stationary}), $\Phi_t(\Li) \subset \Hor$. Hence
+$\Phi_t(\Li)$ is a generator of $\Hor$ and we conclude that
+$\Phi_t$ maps generators of $\Hor$ to generators of $\Hor$. It therefore
+induces a map $\hat{\Phi}_t: \hat{\Sp} \to \hat{\Sp}$. Furthermore, this map
+is an isometry of the metric $\hat{\w{q}}$, given that $\Phi_t$ is an isometry
+on $\Hor$. Given the $\R\times \SS^2$ topology of $\Hor$, for each $p\in\Hor$,
+there is a smallest $T>0$ such that $\Phi_T(p)$ lies on the same null generator
+as $p$ (cf. Fig.~\ref{f:sta:rot_horizon}). It follows that
+$\hat{\Phi}_{t + T} = \hat{\Phi}_t$. In other words, the 1-dimensional group action
+defined by $\hat{\Phi}_t$ on $\hat{\Sp}$ has closed orbits, of period $T$.
+It follows that the underlying group is the rotation group $\mathrm{SO}(2)$
+and we conclude that $(\hat{\Sp},\hat{\w{q}})$ is an axisymmetric Riemannian manifold
+(cf. Sec.~\ref{s:sta:Komar_angu_mom}). This axisymmetry transfers immediately
+to the fiducial cross-section $\Sp_0$ and we conclude that, in addition to be
+stationary, the event horizon $\Hor$ is axisymmetric.
+
+The axisymmetry can be extended to the whole spacetime as follows.
+Let $\w{\chi}=\D\w{x}/\D v$ be a vector tangent to the null generators of $\Hor$
+corresponding to a parameter $v$ of the generators connected to the parameter
+$t$ of the stationary action, i.e. such that, along a given null generator
+$\Li$, $v(\Phi_T(p)) = v(p) + T$. The vector $\w{\chi}$ is invariant
+under the stationary action, i.e. $\Lie{\w{\xi}} \w{\chi} = 0$, so that
+$\w{\xi}$ and $\w{\chi}$ commute: $[\w{\xi}, \w{\chi}] = 0$.
+Let then define the following vector field on $\Hor$:
+\[
+    \w{\eta} := \frac{1}{\Omega_H} \left( \w{\chi} - \w{\xi} \right) ,
+    \qquad \mbox{with}\quad \Omega_H := \frac{2\pi}{T} .
+\]
+Since $\w{\xi}$ and $\w{\chi}$ commute,
+$\w{\eta}$ has by constrution closed field lines, of period $2\pi$.
+Given the $\SS^2$
+topology of $\hat{\Sp}$, there are two fixed points $\hat{p}_1$ and $\hat{p}_2$ of the axisymmetric
+action of $\hat{\Sp}$
+defining the ``axis'' of the rotations. Let $\Li_1$ and $\Li_2$ the corresponding
+null generators of $\Hor$. Let $\mathscr{C}$ be a curve in $\Hor$
+from $\Li_1$ and $\Li_2$, orthogonal to $\w{\eta}$ and
+such that the field lines of $\w{\eta}$ from $\mathscr{C}$ form
+a smooth cross-section $\Sp$ of $\Hor$. Let us then denote by $\Sp_v$ the
+cross-section obtained by displacing $\Sp$ by a parameter $v$ along $\w{\chi}$.
+Finally, let $\w{k}$ be the future-directed null vector orthogonal to $\Sp_v$ and complementary
+to $\w{\chi}$, normalized such that $\w{\chi}\cdot\w{k} = -1$ ($\w{k}$ is
+transverse to $\Hor$ and is pointing towards the black hole region).
 \end{proof}
 
 
