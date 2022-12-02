@@ -41,6 +41,14 @@ Chru\'sciel, Lopes Costa \& Heusler \cite{ChrusLH12}
 and Choquet-Bruhat \cite{Choqu09}.
 \end{remark}
 
+If the stationary spacetime is endowed with an electromagnetic field and/or
+matter fields, they should respect the stationarity as well. For the electromagnetic
+field $\w{F}$ (cf. Sec.~\ref{e:fra:electrovacuum}), this is expressed by
+\be
+    \Lie{\xi} \w{F} = 0 ,
+\ee
+which is similar to $\Lie{\xi} \w{g} = 0$ [Eq.~(\ref{e:neh:Lie_xi_g})].
+
 A notion stronger than stationarity is that of \emph{staticity}:
 
 \begin{greybox}
@@ -202,17 +210,17 @@ By Property~\ref{p:sta:hor_non_exanding}, we have $\theta_{(\wl)} = 0$
 on $\Sp$. Let us displace $\Sp$ by a small parameter $\eps>0$ along the inward
 null normal $\w{k}$. The expansion along $\wl$ of the obtained surface is
 negative by hypothesis (ii). By taking the limit $\eps\to 0$, we form the
-derivative $\Lie{\w{k}} \theta_{(\wl)}$, which must obey
+derivative $\Lie{k} \theta_{(\wl)}$, which must obey
 \be \label{e:sta:Lie_k_l}
-    \Lie{\w{k}} \theta_{(\wl)} < 0 .
+    \Lie{k} \theta_{(\wl)} < 0 .
 \ee
 since $\theta_{(\wl)} = 0$ on $\Sp$ and
 $\theta_{(\wl)} < 0$ on the displaced surface.
 A standard identity (cf. e.g. Eq.~(3b) of \cite{Haywa94}, Eq.~(3.1) of \cite{BoothF07},
 Eq.~(96) of \cite{Cao11} or Eq.~(36) of \cite{Jaram13})
-expresses $\Lie{\w{k}}\theta_{(\wl)}$ as
+expresses $\Lie{k}\theta_{(\wl)}$ as
 \be \label{e:sta:Lie_k_theta_l}
-    \Lie{\w{k}} \theta_{(\wl)} = - \frac{1}{2} {}^\Sp\!\! R - \DSc_a \Omega^a
+    \Lie{k} \theta_{(\wl)} = - \frac{1}{2} {}^\Sp\!\! R - \DSc_a \Omega^a
     +  \Omega_a \Omega^a + \w{G}(\w{k},\wl) ,
 \ee
 where ${}^\Sp\!\! R$ is the Ricci scalar of the Riemannian metric $\w{q}$ on
@@ -237,7 +245,7 @@ $\Sp$ has no boundary, we get
     \underbrace{\Omega_a \Omega^a}_{\geq 0}
     \, \underbrace{- \w{W}\cdot\w{k}}_{\geq 0}
     + \underbrace{f}_{\geq 0}
-    \, \underbrace{- \Lie{\w{k}} \theta_{(\wl)}}_{> 0} \Big]
+    \, \underbrace{- \Lie{k} \theta_{(\wl)}}_{> 0} \Big]
           \sqrt{q} \, \D^2 x .
 \ee
 In the left-hand side, we have invoked the Gauss-Bonnet theorem\index{Gauss-Bonnet theorem}
@@ -252,7 +260,7 @@ $\Omega_a \Omega^a = q^{ab} \Omega_a \Omega_b \geq 0$ because $\w{q}$ is a Riema
 $- \w{W}\cdot\w{k} \geq 0$ by Lemma~\ref{p:fra:lem2} in Sec.~\ref{s:fra:time_orientation},
 given that $\w{k}$ is a future-directed null vector and $\w{W}$ is a future-directed
 causal vector thanks to the null dominant enegy condition (\ref{e:neh:null_dominant_cond}),
-$f\geq 0$ by hypothesis and $- \Lie{\w{k}} \theta_{(\wl)} > 0$
+$f\geq 0$ by hypothesis and $- \Lie{k} \theta_{(\wl)} > 0$
 follows from Eq.~(\ref{e:sta:Lie_k_l}). The Euler characteristic $\chi$ is a topological
 invariant, which is $2$ for the sphere $\SS^2$, $0$ for the torus $\mathbb{T}^2$
 and $-2(g-1)$
@@ -296,7 +304,7 @@ The latter is very mild and fixes some shortcoming in Hawking's proof
 The topology theorem 1 is not specific to black hole event horizons, for
 it relies only on quasilocal properties. Indeed, the proof does not use
 that $\Hor$ is the boundary of a black hole region, only that $\Hor$ is a hypersuface
-sliced by surfaces with $\theta_{(\wl)} = 0$ and $\Lie{\w{k}} \theta_{(\wl)} < 0$.
+sliced by surfaces with $\theta_{(\wl)} = 0$ and $\Lie{k} \theta_{(\wl)} < 0$.
 The theorem is therefore valid for \emph{outer trapping horizons} \cite{Haywa94}
 and (tubes of) \emph{apparent horizons}, as noticed by Hawking himself \cite{Hawki73} (p.~34),
 which are not necessarily null hypersurfaces and which exist in non-stationary spacetimes.
@@ -1425,8 +1433,7 @@ Let $(\M,\w{g})$ be an asymptotically flat stationary spacetime of dimension $n\
 that contains a black hole of event horizon $\Hor$ so that
 the stationary Killing vector $\w{\xi}$ is null on $\Hor$. By Property~\ref{p:sta:H_Killing_hor_xi_null}, $\Hor$ is a Killing horizon. If $\Hor$ is
 non-degenerate (i.e. has a non-vanishing surface gravity $\kappa$, cf. Sec.~\ref{s:neh:classif_KH})
-and $\w{g}$ obeys the vacuum or electrovacuum Einstein equation (cf. Sec.~\ref{e:fra:electrovacuum})
-with a source-free electromagnetic field $\w{F}$ that is stationary ($\Lie{\w{\xi}}\w{F} = 0$),
+and $\w{g}$ obeys the vacuum or electrovacuum Einstein equation (cf. Sec.~\ref{e:fra:electrovacuum}),
 then the spacetime
 is static\index{static!spacetime} and the domain of outer communications\index{domain of outer communications} (cf. Sec.~\ref{s:glo:def_BH}) is strictly static.
 \end{prop}
@@ -1502,12 +1509,12 @@ Given that $N > 0$ on $\Sigma_t\setminus \Sp$ and $K_{ij} K^{ij} \geq 0$ on $\Si
 $K_{ij} K^{ij} = \gamma^{ik} \gamma^{jl} K_{ij} K_{kl}$ with
 $\w{\gamma}$ being a Riemannian metric), the vanishing of the above integral
 implies $K_{ij} = 0$.
-Now, $\w{K} = - (2N)^{-1} \Lie{\w{m}} \w{\gamma}$ (cf. Eq.~(4.30) in Ref.~\cite{Gourg12}), where $\w{m} := N \w{n}$
+Now, $\w{K} = - (2N)^{-1} \Lie{m} \w{\gamma}$ (cf. Eq.~(4.30) in Ref.~\cite{Gourg12}), where $\w{m} := N \w{n}$
 is the evolution vector along the normal to $\Sigma_t$ (cf. Sec.~4.3 of Ref.~\cite{Gourg12}).
 The vanishing of $\w{K}$ implies then
 \be \label{e:sta:dot_gamma_dot_pi}
-   \dot{\w{\gamma}} :=  \Lie{\w{m}} \w{\gamma} = 0 \qand
-   \dot{\w{\pi}} :=  \Lie{\w{m}} \w{\pi} = 0 ,
+   \dot{\w{\gamma}} :=  \Lie{m} \w{\gamma} = 0 \qand
+   \dot{\w{\pi}} :=  \Lie{m} \w{\pi} = 0 ,
 \ee
 where $\w{\pi}$ is the momentum canonically conjugate to $\w{\gamma}$ in
 the ADM Hamiltonian formulation\index{Hamiltonian!formulation of general relativity}\index{ADM!Hamiltonian formulation} of general relativity \cite{ArnowDM62,FischM79}.
@@ -1626,7 +1633,8 @@ is spacelike on some parts of $\Hor$. If
 (cf. Remark~\ref{r:bas:analytic} in Sec.~\ref{s:bas:def_manif}),
 with $\w{g}$ being an analytic field,
 \item $\w{g}$ fulfills the vacuum Einstein equation
-[Eq.~(\ref{e:fra:Einstein_eq}) with $\Lambda=0$ and $\w{T} = 0$],
+[Eq.~(\ref{e:fra:Einstein_eq}) with $\Lambda=0$ and $\w{T} = 0$]
+or the electrovacuum Einstein equation (cf. Sec.~\ref{e:fra:electrovacuum}),
 \item $n=4$ or $\Hor$ has a null geodesic generator that is incomplete,
 \item $\Hor$ has compact and connected cross-sections,
 \item $\w{\xi}$ is transverse to some cross-sections,
@@ -1641,7 +1649,7 @@ The proof of the strong rigidity theorem is pretty long and we
 give here only a sketch for $n=4$, refering to Ref.~\cite{HawkiE73} (Proposition~9.3.6)
 for full details and Refs.~\cite{HollaIW07,HollaI12,MoncrI08}
 for $n>4$.
-Let us thus assume $n=4$ and that the vacuum Einstein equation holds.
+Let us thus assume $n=4$ and that the (electro)vacuum Einstein equation holds.
 The null dominant energy condition is then satisfied and, since
 $\Hor$ is connected, the topology theorem 1 (Property~\ref{p:sta:topology1})
 implies that the cross-sections of $\Hor$ have the topology of $\SS^2$,
@@ -1691,7 +1699,7 @@ $\Li$,
     v(\Phi_T(p)) = v(p) + T.
 \ee
 The vector $\w{\chi}$ is invariant
-under the stationary action, i.e. $\Lie{\w{\xi}} \w{\chi} = 0$, so that
+under the stationary action, i.e. $\Lie{\xi} \w{\chi} = 0$, so that
 $\w{\xi}$ and $\w{\chi}$ commute: $[\w{\xi}, \w{\chi}] = 0$.
 Let then define the following vector field on $\Hor$:
 \be \label{e:sta:def_eta_rigidity}
@@ -1737,14 +1745,14 @@ the vector fields $\w{\chi}$, $\w{\eta}$ and $\w{k}$ away from $\Hor$ by setting
     \w{\eta} := \wpar_\ph,\quad
     \w{k} := - \wpar_r .
 \]
-By means of the vacuum Einstein equation, one can then show by induction that,
+By means of the (electro)vacuum Einstein equation, one can then show by induction that,
 \be \label{e:sta:Lie_k_Lie_chi_g}
-    \forall N\in\mathbb{N}, \quad \underbrace{\Lie{\w{k}}\cdots \Lie{\w{k}}}_{N\mbox{\ times}}
-    \Lie{\w{\chi}} \w{g} \equalH 0 .
+    \forall N\in\mathbb{N}, \quad \underbrace{\Lie{k}\cdots \Lie{k}}_{N\mbox{\ times}}
+    \Lie{\chi} \w{g} \equalH 0 .
 \ee
 This is the lengthy part of the computation (see p.~343 Ref.~\cite{HawkiE73}).
 Once (\ref{e:sta:Lie_k_Lie_chi_g})
-is established, one can use the analyticity hypothesis to conclude that $\Lie{\w{\chi}} \w{g} = 0$
+is established, one can use the analyticity hypothesis to conclude that $\Lie{\chi} \w{g} = 0$
 in all $\M$, i.e. that $\w{\chi}$ is a Killing vector of $(\M,\w{g})$. Since, on $\Hor$,
 $\w{\chi}$ is normal to $\Hor$, it follows that $\Hor$ is a Killing horizon
 with respect to $\w{\chi}$.
@@ -1771,7 +1779,6 @@ that the latter implies the former (see e.g. the proof of Proposition~9.3.1
 in Ref.~\cite{HawkiE73}).
 \end{remark}
 
-
 \begin{hist}
 Stephen Hawking\index{Hawking, S.} first established the strong rigidity
 theorem in 1972 \cite{Hawki72}
@@ -1781,7 +1788,11 @@ future event horizon $\Hor$.
 The theorem was restated and proved without the white hole hypothesis
 in Hawking \& Ellis'\index{Ellis, G.} famous textbook published in 1973 \cite{HawkiE73}
 (Proposition 9.3.6). See Sec.~8 of Ref.~\cite{Hawki73} for an account by Hawking himself
-about this reformulation.
+about this reformulation. The demonstration presented in Ref.~\cite{HawkiE73}
+relies on the vacuum Einstein equation,
+but it is noted there that \emph{``similar arguments hold in the presence
+of matter fields, like the electromagnetic or scalar fields, which obey
+well-behaved hyperbolic equations''}.
 Some details in Hawking's proof have been fixed
 by Piotr T. Chru\'sciel\index{Chrusciel, P.T.@Chru\'sciel, P.T.} in 1997 \cite{Chrus97}.
 The extension to spacetimes of
@@ -1789,7 +1800,8 @@ dimension $n\geq 4$ has been performed independently by
 Stefan Hollands\index{Hollands, S.}, Akihiro Ishibashi\index{Ishibashi, A.}
 and Robert M.~Wald\index{Wald, R.M.} in 2007 \cite{HollaIW07}
 and by Vincent Moncrief\index{Moncrief, V.} and James Isenberg\index{Isenberg, J.}
-in 2008 \cite{MoncrI08}.
+in 2008 \cite{MoncrI08}. The treatment of the electrovacuum
+case is done explicitely in Hollands, Ishibashi \& Wald's work \cite{HollaIW07}.
 \end{hist}
 
 The strong rigidity theorem relies on the rather strong assumption that
