@@ -768,7 +768,7 @@ contracted with some ``area element'', which is \emph{normal} to $\Sp$.
 More precisely, let us introduce the
 \defin{normal area element bivector}\index{normal!area!element}\index{bivector!normal area element --}\index{area!normal -- element} by
 \be \label{e:sta:area_bivector}
-    \D S^{\alpha\beta} := (s^\alpha n^\beta - n^\alpha s^\beta) \sqrt{q}\, \D x^1 \cdots \D x^{n-2} ,
+    \D S^{\alpha\beta} := (s^\alpha n^\beta - n^\alpha s^\beta) \sqrt{q}\, \D x^1 \cdots \D x^{n-2} =: (s^\alpha n^\beta - n^\alpha s^\beta) \sqrt{q}\, \D^{n-2} x,
 \ee
 where
 \begin{itemize}
@@ -878,7 +878,7 @@ can be used for explicit computations:
 \be \label{e:sta:M_Komar_partial_der}
     \encadre{ M_{\Sp} = -\frac{n-2}{16\pi(n-3)}
     \int_{\Sp} \partial_\mu \xi_\nu (s^\mu   n^\nu - n^\mu s^\nu)
-    \sqrt{q}\,  \D x^1 \cdots  \D x^{n-2} } .
+    \sqrt{q}\,  \D^{n-2} x } .
 \ee
 
 \begin{example}[Komar mass in Schwarzschild spacetime]
@@ -946,7 +946,8 @@ Let $\w{n}$ be the future-directed unit normal to $\Sigma$ and $\D\w{V}$
 the \defin{normal volume element vector}\index{normal!volume!element}\index{volume!normal -- element}
 of $\Sigma$ defined by [compare Eq.~(\ref{e:sta:area_bivector})]:
 \be \label{e:sta:normal_vol_element}
-    \D V^\alpha := - n^\alpha \sqrt{\gamma} \, \D x^1 \cdots \D x^{n-1} ,
+    \D V^\alpha := - n^\alpha \sqrt{\gamma} \, \D x^1 \cdots \D x^{n-1}
+    =: - n^\alpha \sqrt{\gamma} \, \D^{n-1} x,
 \ee
 where $(x^1, \ldots, x^{n-1})$ stands for a coordinate system on $\Sigma$ and
 $\gamma := \det (\gamma_{ij})$  is the determinant w.r.t. these coordinates of the metric
@@ -1042,7 +1043,7 @@ related by
 \be \label{e:sta:Komar_mass_vol_integ}
     \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + 2
     \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T}{n-2} \, \w{n}\cdot \w{\xi} \right)
-    \sqrt{\gamma} \, \D x^1 \cdots \D x^{n-1}  , }
+    \sqrt{\gamma} \, \D^{n-1} x , }
 \ee
 where $\w{n}$ is the future-directed unit normal to $\Sigma$,
 $\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
@@ -1121,8 +1122,8 @@ results in
 \[
     M_{\Sp_{\rm ext}} = 2
     \int_{\Sigma} \left( W \rho - \frac{3p - \rho}{2}(-W) \right)
-    \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3
-    = \int_{\Sigma} W (\rho + 3 p) \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3 .
+    \sqrt{\gamma} \, \D^3 x
+    = \int_{\Sigma} W (\rho + 3 p) \sqrt{\gamma} \, \D^3 x .
 \]
 Now, for a weakly relativistic star, $|p| \ll \rho$ and
  in coordinates $(t, x^i)$ such that
@@ -1133,8 +1134,8 @@ i.e. the solution of
 the Poisson equation\index{Poisson equation}
 $\Delta \Phi = 4\pi \rho$ that vansihes at infinity. We may then write
 \be \label{e:sta:mass_Newtonian}
-    M_{\Sp_{\rm ext}} \simeq \int_{\Sigma} \rho \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3
-    + \int_{\Sigma} \rho \Phi \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3 .
+    M_{\Sp_{\rm ext}} \simeq \int_{\Sigma} \rho \sqrt{\gamma} \, \D^3 x
+    + \int_{\Sigma} \rho \Phi \sqrt{\gamma} \, \D^3 x .
 \ee
 The first term is the volume integral of the fluid mass density; the second
 term is negative (since $\Phi < 0$) and represents the \emph{total gravitational
@@ -1162,6 +1163,7 @@ with $\Lambda=0$ share the same Komar mass:
 \end{prop}
 We then have:
 \begin{prop}[Komar mass at infinity]
+\label{p:sta:Komar_mass_inf}
 Let $(\M,\w{g})$ be a stationary and asympotically flat $n$-dimensional spacetime.
 Let $\Sigma$ be any spacelike hypersurface that is asymptotically orthogonal
 to the stationary Killing vector field $\w{\xi}$.
@@ -1224,7 +1226,7 @@ one can rewrite Eq.~(\ref{e:sta:Komar_mass_vol_integ}) as
 \be \label{e:sta:Komar_mass_3p1}
     \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} +
     2 \int_{\Sigma} \left[ \frac{N}{n-2} \left[ (n-3) E + S \right] - \langle \w{p}, \w{\beta} \rangle  \right]
-    \sqrt{\gamma} \, \D x^1 \cdots \D x^{n-1}  , }
+    \sqrt{\gamma} \, \D^{n-1} x  , }
 \ee
 where $S := g^{\mu\nu} S_{\mu\nu} = \gamma^{ij} S_{ij}$
 is the trace of the stress tensor $\w{S}$.
@@ -1324,13 +1326,13 @@ for the Komar mass rely only on the fact that $\w{\xi}$ is a Killing vector.
 In an axisymmetric spacetime, we may therefore replace $\w{\xi}$ by $\w{\eta}$
 and the numerical prefactor by $1/(16\pi)$ to get the following expressions
 for the Komar angular momentum:
-\be
+\be \label{e:sta:J_Komar_cov_der}
     \encadre{ J_{\Sp} = \frac{1}{16\pi} \int_{\Sp} \nabla_\mu \eta_\nu \,  \D S^{\mu\nu} }
 \ee
 and
 \be \label{e:sta:J_Komar_partial_der}
     \encadre{ J_{\Sp} = \frac{1}{16\pi} \int_{\Sp} \partial_\mu \eta_\nu (s^\mu   n^\nu - n^\mu s^\nu)
-    \sqrt{q}\, \D x^1 \cdots  \D x^{n-2} } .
+    \sqrt{q}\, \D^{n-2} x } .
 \ee
 Similarly, the volume integral formula (\ref{e:sta:Komar_mass_vol_integ}) for the
 Komar mass relies only the Einstein equation and $\w{\xi}$ being a Killing vector.
@@ -1349,10 +1351,10 @@ related by
 \be \label{e:sta:Komar_angul_vol_integ}
     \encadre{ J_{\Sp_{\rm ext}} = J_{\Sp_{\rm int}} -
     \int_{\Sigma} \left( \w{T}(\w{n}, \w{\eta}) - \frac{T}{n-2} \, \w{n}\cdot\w{\eta} \right)
-    \sqrt{\gamma} \, \D x^1 \cdots \D x^{n-1}  , }
+    \sqrt{\gamma} \, \D^{n-1} x  , }
 \ee
 where $\w{n}$ is the future-directed unit normal to $\Sigma$,
-$\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
+$\sqrt{\gamma}\,\D^{n-1} x$ is the volume element on $\Sigma$
 induced by $\w{g}$ and $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
 \end{prop}
 
@@ -1367,7 +1369,7 @@ so that formula (\ref{e:sta:Komar_angul_vol_integ}) simplifies to
 \be
     J_{\Sp_{\rm ext}} = J_{\Sp_{\rm int}} +
     \int_{\Sigma} \langle \w{p}, \w{\eta} \rangle \,
-    \sqrt{\gamma} \, \D x^1 \D x^2 \D x^3 .
+    \sqrt{\gamma} \, \D^{n-1} x  .
 \ee
 \end{remark}
 
@@ -1825,25 +1827,25 @@ the analycity hypothesis.
 
 A corollary of the strong rigidity theorem is
 
-\begin{prop}[Axisymmetry of stationary black holes]
+\begin{prop}[axisymmetry of stationary black holes]
 \label{p:sta:axisymmetry_BH}
 Under the same hypotheses as in Property~\ref{p:sta:strong_rigidity_thm},
-there exist $L$ Killing vectors $\w{\eta}_{(1)},\ldots,\w{\eta}_{(L)}$
+there exist $L$ Killing vectors $\w{\eta}_{1},\ldots,\w{\eta}_{L}$
 with $1 \leq L \leq [(n-1)/2]$ with closed orbits with period $2\pi$
 such that
 \be
-   [\w{\xi},\w{\eta}_{(i)}] = 0 \qand [\w{\eta}_{(i)},\w{\eta}_{(j)}] = 0
+   [\w{\xi},\w{\eta}_{i}] = 0 \qand [\w{\eta}_{i},\w{\eta}_{j}] = 0
    \quad (1 \leq i, j \leq L)
 \ee
 and the Killing vector $\w{\chi}$ normal to $\Hor$ writes
 \be \label{e:sta:chi_xi_Omega_i_eta_i}
-    \w{\chi} = \w{\xi} + \Omega_{(1)} \w{\eta}_{(1)} + \cdots \Omega_{(L)} \w{\eta}_{(L)} ,
+    \w{\chi} = \w{\xi} + \Omega_{1} \w{\eta}_{1} + \cdots \Omega_{L} \w{\eta}_{L} ,
 \ee
-where $\Omega_{(1)}$, $\ldots$, $\Omega_{(L)}$ are $L$ constants, all of whose
+where $\Omega_{1}$, $\ldots$, $\Omega_{L}$ are $L$ constants, all of whose
 ratios are irrational.
 
 For $n=4$,  $[(n-1)/2] = 1$, so that one has necessarily $L=1$. Denothing then
-$\w{\eta}_{(1)}$ by simply $\w{\eta}$ and $\Omega_{(1)}$ by $\Omega_H$,
+$\w{\eta}_{1}$ by simply $\w{\eta}$ and $\Omega_{1}$ by $\Omega_H$,
 Eq.~(\ref{e:sta:chi_xi_Omega_i_eta_i}) reduces to
 \be \label{e:sta:chi_xi_OmegaH_eta}
     \w{\chi} = \w{\xi} + \Omega_H \w{\eta} .
@@ -1853,7 +1855,7 @@ the whole event horizon (i.e. if the event horizon is connected).
 \end{prop}
 
 Since it has closed orbits, the isometry group generated by each Killing vector
-$\w{\eta}_{(i)}$ is $\mathrm{SO}(2)$. Each isometry is thus an axisymmetry,
+$\w{\eta}_{i}$ is $\mathrm{SO}(2)$. Each isometry is thus an axisymmetry,
 according to the definition given in Sec.~\ref{s:sta:Komar_angu_mom}.
 For $n=4$, Eq.~(\ref{e:sta:chi_xi_OmegaH_eta}) is
 equivalent to Eq.~(\ref{e:sta:def_eta_rigidity}).
@@ -1871,20 +1873,20 @@ into the strong rigidity theorem (e.g. Proposition~9.3.6 of Ref.~\cite{HawkiE73}
 \end{remark}
 
 \begin{remark}
+\label{r:sta:dep_eta_Omega}
 If the event horizon has various connected components, the Killing vectors
-$\w{\eta}_{(i)}$ and the constants $\Omega_{(i)}$ may vary from one connected
+$\w{\eta}_{i}$ and the constants $\Omega_{i}$ may vary from one connected
 component to the other. In particular, the horizon-generating Killing vector $\w{\chi}$
 may not be the same for each connected component. For instance,
-in dimension $n=5$, there
-exist stationary black holes, the event horizon of which has two connected
-components: they are the \emph{black saturns}\index{black!saturn}
-found by H.~Elvang and P.~Figueras (2007) \cite{ElvanF07}. The topology of the first
-connected component, $\Hor_{\rm p}$ say, is $\R\times\SS^3$ (the ``planet'')
-and that of the second component, $\Hor_{\rm r}$ say, is $\R\times\SS^1\times\SS^2$
-(the ``ring''). For both $\Hor_{\rm p}$ and $\Hor_{\rm r}$, $L=1$ and
-the two components share the same axisymmetry Killing vector $\w{\eta}_{(1)}$,
+in dimension $n=5$, the \emph{black saturns}\index{black!saturn}
+found by H.~Elvang\index{Elvang, H.} and P.~Figueras\index{Figureas, P.} in 2007 \cite{ElvanF07}
+are stationary black holes, the event horizon of which has two connected
+components: $\Hor_{\rm p}$ (the ``planet'') and $\Hor_{\rm r}$ (the ``ring''),
+with topology $\R\times\SS^3$ and $\R\times\SS^1\times\SS^2$ respectively.
+For both $\Hor_{\rm p}$ and $\Hor_{\rm r}$, $L=1$ and
+the two components share the same axisymmetry Killing vector $\w{\eta}_{1}$,
 but they may have different angular velocities:
-$\Omega_{(1)}^{\Hor_{\rm p}} \neq \Omega_{(1)}^{\Hor_{\rm r}}$, and hence
+$\Omega_{1}^{\Hor_{\rm p}} \neq \Omega_{1}^{\Hor_{\rm r}}$, and hence
 different normal Killing vectors: $\w{\chi}^{\Hor_{\rm p}} \neq \w{\chi}^{\Hor_{\rm r}}$.
 \end{remark}
 
@@ -1916,9 +1918,101 @@ the Penrose process in Chap.~\ref{s:ker}.
 
 \subsection{The generalized Smarr formula}
 
-\begin{prop}
-Let $(\M,\w{g})$ be a $n$-dimensional spacetime
+\begin{prop}[generalized Smarr formula]
+Let $(\M,\w{g})$ be a $n$-dimensional stationary spacetime, with stationary
+Killing vector $\w{\xi}$. Let us assume that $(\M,\w{g})$ contains a black
+hole, the event horizon of which has $K \geq 1$ connected components
+$\Hor_{(1)}$, $\ldots$, $\Hor_{(K)}$. Each $\Hor_{(k)}$ ($1\leq k \leq K$)
+is a Killing horizon with respect to a Killing vector $\w{\chi}_{(k)}$,
+with either $\w{\chi}_{(k)} = \w{\xi}$ if $\w{\xi}$ is null on all $\Hor_{(k)}$
+(Property~\ref{p:sta:H_Killing_hor_xi_null}) or
+$\w{\chi}_{(k)} = \w{\xi} + \sum_{i=1}^{L_{(k)}} \Omega_i^{(k)} \w{\eta}_i^{(k)}$
+(Properties~\ref{p:sta:strong_rigidity_thm} and \ref{p:sta:axisymmetry_BH}),
+where the $\Omega_i^{(k)}$ are constants and
+$\w{\eta}_i^{(k)}$ are axisymmetric Killing vectors, which are labelled with $(k)$
+for they depend on the connected component $\Hor_{(k)}$, cf. Remark~\ref{r:sta:dep_eta_Omega}
+above. Being a non-expanding horizon, each
+$\Hor_{(k)}$ has a well defined area $A_{(k)}$ (Property~\ref{p:neh:invariance_area}).
+Let $\kappa_{(k)}$ be the surface gravity of $\Hor_{(k)}$, i.e.
+tha coefficient such that the identity
+$\wnab_{\w{\chi}_{(k)}}\w{\chi}_{(k)} =  \kappa_{(k)} \w{\chi}_{(k)}$
+holds on $\Hor_{(k)}$ [cf. Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
+According to the zeroth law of black hole mechanics (Property~\ref{p:neh:zeroth_law}),
+$\kappa_{(k)}$ is constant.
+Then the Komar mass (\ref{e:sta:def_Komar_mass}) over any cross section
+of $\Hor_{(k)}$ is
+\be \label{e:sta:Smarr_H_k}
+    M_{\Hor_{(k)}} = \frac{n - 2}{2(n- 3)}\left(
+    \frac{\kappa_{(k)} A_{(k)}}{4\pi}
+    + 2  \sum_{i=1}^{L_{(k)}} \Omega_i^{(k)} J_{\Hor_{(k)}}^i \right) ,
+\ee
+where $J_{\Hor_{(k)}}^i$ is the Komar angular momentum with respect to
+the axisymmetric Killing vector $\w{\eta}_i^{(k)}$ as given by Eq.~(\ref{e:sta:def_Komar_J}).
+In Eq.~(\ref{e:sta:Smarr_H_k}), it is intended that $L_{(k)} = 0$ if
+$\w{\chi}_{(k)} = \w{\xi}$, so that there is no sum over $i$ in that case.
+Furthermore, if $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq})
+with $\Lambda=0$, the Komar mass at infinity of the spacetime $(\M,\w{g})$
+(cf. Property~\ref{p:sta:Komar_mass_inf}) is
+\bea
+    M_\infty & = & \frac{n - 2}{2(n- 3)} \sum_{k = 1}^K
+    \left(
+    \frac{\kappa_{(k)} A_{(k)}}{4\pi}
+    + 2  \sum_{i=1}^{L_{(k)}} \Omega_i^{(k)} J_{\Hor_{(k)}}^i \right) \nonumber \\
+    & & + 2
+    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T \w{n}\cdot \w{\xi}}{n-2}  \right)
+    \sqrt{\gamma} \, \D^{n-1} x , \label{e:sta:Smarr_M_infty}
+\eea
+where $\Sigma$ is an asymptotically flat spacelike hypersurface, the inner boundary
+of which is a cross-section of the event horizon, i.e. a union of cross-sections
+of the connected components $\Hor_{(k)}$, $\w{n}$ is the future-directed unit normal
+to $\Sigma$ and $\w{T}$ is the matter energy-momentum tensor.
 \end{prop}
+\begin{proof}
+Let us consider formula (\ref{e:sta:Komar_mass_flux_nabla_xi}) for the
+Komar mass $M_{\Hor_{(k)}}$. If we denote the cross-section of $\Hor_{(k)}$
+by $\Sp_{(k)}$ and we substitute $\w{\xi}$ by
+its expression arising from Eq.~(\ref{e:sta:chi_xi_Omega_i_eta_i}), we get
+(here we drop the index ${(k)}$ on $\w{\chi}$ and $\w{\eta}_i$ for clarity, given that the integral regards
+a single connected component $\Hor_{(k)}$)
+\bea
+    M_{\Hor_{(k)}} &= & - \frac{n-2}{16\pi(n-3)} \int_{\Sp_{(k)}} \nabla_\mu
+    \left( \chi_{\nu} - \sum_{i=1}^{L_{(k)}} \Omega_i^{(k)}  (\eta_i)_\nu
+    \right) \D S^{\mu\nu} \nonumber \\
+    & = & - \frac{n-2}{16\pi(n-3)} \Bigg[
+        \underbrace{\int_{\Sp_{(k)}} \nabla_\mu \chi_\nu \, \D S^{\mu\nu}}_{-2 \kappa_{(k)} A_{(k)}}
+        - \sum_{i=1}^{L_{(k)}} \Omega_i^{(k)}
+        \underbrace{\int_{\Sp_{(k)}} \nabla_\mu (\eta_i)_\nu
+        \, \D S^{\mu\nu}}_{16\pi J_{\Hor_{(k)}}^i} \Bigg] . \nonumber
+\eea
+The second surface integral being $16\pi J_{\Hor_{(k)}}^i$ follows
+directly from Eq.~(\ref{e:sta:J_Komar_cov_der}).
+As for the first integral, the value $-2 \kappa_{(k)} A_{(k)}$
+is obtained by introducing a null vector $\w{k}$ normal to $\Sp_{(k)}$
+such that $\w{\eta}\cdot\w{k} = -1$.
+At each point $p\in\Sp_{(k)}$,
+the pair $(\w{\eta},\w{k})$ is then a null basis of the 2-plane $T_p^\perp\Sp_{(k)}$
+(cf. Fig.~\ref{f:def:TS_ortho} where $\wl$ stands for $\w{\chi}$) and
+we may rewrite the normal area element bivector $\D S^{\alpha\beta}$
+as $\D S^{\alpha\beta} = (\chi^\alpha k^\beta - k^\alpha \chi^\beta) \sqrt{q}\, \D^{n-2} x$
+(this follows readily by setting $\w{n} = (\w{\chi} + \w{k})/\sqrt{2}$
+and $\w{s} = (\w{\chi} - \w{k})/\sqrt{2}$ in formula~(\ref{e:sta:area_bivector})).
+We have then
+\bea
+ \nabla_\mu \chi_\nu \, \D S^{\mu\nu} & = & \Big( \chi^\mu \nabla_\mu \chi_\nu \,  k^\nu
+ - k^\mu \chi^\nu \underbrace{\nabla_\mu \chi_\nu}_{-\nabla_\nu \chi_\mu} \Big) \sqrt{q}\, \D^{n-2} x =  2 \underbrace{\chi^\mu \nabla_\mu \chi_\nu}_{\kappa_{(k)} \chi_\nu} \,  k^\nu \, \sqrt{q}\, \D^{n-2} x \nonumber \\
+ & = & 2 \kappa_{(k)} \underbrace{\chi_\nu k^\nu}_{-1} \, \sqrt{q}\, \D^{n-2} x
+    = - 2 \kappa_{(k)} \, \sqrt{q}\, \D^{n-2} x . \nonumber
+\eea
+Given that $\kappa_{(k)}$ is constant (Property~\ref{p:neh:zeroth_law}), the integral
+of the above expression over $\Sp_{(k)}$ reduces to $-2\kappa_{(k)} A_{(k)}$, by the
+very definition of the area $A_{(k)}$ [cf. Eq.~(\ref{e:neh:total_area})].
+This establishes Eq.~(\ref{e:sta:Smarr_H_k}).
+Finally, Eq.~(\ref{e:sta:Smarr_M_infty}) follows from
+Eqs.~(\ref{e:sta:Komar_mass_vol_integ}) and (\ref{e:sta:Smarr_H_k}), once
+one has noticed that $\Sp_{\rm int} = \bigcup_{k=1}^K \Sp_{(k)}$,
+so that $M_{\Sp_{\rm int}} = \sum_{k=1}^K M_{\Hor_{(k)}}$.
+\end{proof}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
