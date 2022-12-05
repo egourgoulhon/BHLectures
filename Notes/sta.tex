@@ -313,6 +313,7 @@ will be discussed in Chap.~\ref{s:loc}.
 \end{remark}
 
 \begin{remark}
+\label{r:sta:Majumdar_Papapetrou}
 The topology theorems 1 and 2 regard only
 a \emph{connected component} of a given horizon cross-section.
 Generally, this corresponds to the whole cross-section, i.e. the cross-section
@@ -379,18 +380,17 @@ It leads directly to the spherical topology, excluding the toroidal one.
 
 If the stationary Killing vector $\w{\xi}$,
 which is tangent to $\Hor$ by Property~\ref{p:sta:xi_tangent_H},
-is null on $\Hor$, it is then necessarily normal to $\Hor$
+is null on all $\Hor$, it is then necessarily normal to $\Hor$
 (cf. Lemma~\ref{p:def:tangent_to_null_hyp} in Sec.~\ref{s:def:spacelike_sections}).
 According to the definition given in Sec.~\ref{s:neh:def_Killing_hor},
 $\Hor$ is then a \emph{Killing horizon}.
-On the other hand, if $\w{\xi}$ is spacelike on $\Hor$,
+On the other hand, if $\w{\xi}$ is spacelike on (some parts of) $\Hor$,
 we shall see in Sec.~\ref{s:sta:strong_rigidity} that, modulo some
-assumptions, $\Hor$ is a Killing
-horizon as well, albeit not with respect to $\w{\xi}$ but to another
+assumptions, the connected components of $\Hor$ are Killing
+horizons as well, albeit not with respect to $\w{\xi}$ but to another
 Killing vector. This motivates to move on in the study of Killing horizons,
 beyond what was achieved in Sec.~\ref{s:neh:Killing_hor},
-starting by the concept of
-bifurcate Killing horizons.
+starting by the concept of bifurcate Killing horizon.
 
 \subsection{Definition and first properties} \label{s:sta:bifur_def}
 
@@ -1399,8 +1399,15 @@ with it, contrary to what was done in Sec.~\ref{s:sta:Komar_ADM} for the mass.
 \section{The event horizon as a Killing horizon} \label{s:sta:EH_KH}
 
 In view of Property~\ref{p:sta:xi_tangent_H}, let us
-examine successively the only two allowed cases for
-the event horizon $\Hor$ of a stationary black hole:
+examine successively the only two allowed cases for a
+connected component\footnote{In the most astrophysically relevant case, namely
+that of a stationary black hole in a 4-dimensional spacetime, the event horizon
+is a connected hypersurface, i.e. it is reduced to a single connected component.
+However, we shall see that disconnected event horizons exist for some stationary
+black holes in 5-dimensional spacetimes as well as in 4 dimensions if one allows
+for an electric charge: they are Majumdar-Papapetrou black holes\index{Majumdar-Papapetrou black hole} mentioned in
+Remark~\ref{r:sta:Majumdar_Papapetrou} in Sec.~\ref{s:sta:BH_stationary}.}
+$\Hor$ of the event horizon of a stationary black hole:
 either the Killing vector $\w{\xi}$ is null on all $\Hor$
 (Sec.~\ref{s:sta:staticity_thm}) or $\w{\xi}$ is spacelike in some part
 (possibly all) of $\Hor$ (Sec.~\ref{s:sta:strong_rigidity}).
@@ -1419,14 +1426,16 @@ given in Sec.~\ref{s:neh:def_Killing_hor}, we get immediately:
 
 \begin{prop}[event horizon as a Killing horizon for $\w{\xi}$ null on it]
 \label{p:sta:H_Killing_hor_xi_null}
-In a stationary spacetime $(\M,\w{g})$ containing a black hole
-of event horizon $\Hor$, if the stationary Killing vector $\w{\xi}$
-is null on all $\Hor$, then $\Hor$ is a Killing horizon with respect to $\w{\xi}$.
+In a stationary spacetime $(\M,\w{g})$ containing a black hole,
+if the stationary Killing vector $\w{\xi}$
+is null on all a connected component $\Hor$ of the event horizon, then $\Hor$ is a Killing horizon with respect to $\w{\xi}$.
 \end{prop}
 
 It follows that, on $\Hor$, the Killing vector field $\w{\xi}$
-is hypersurface-orthogonal, being normal to $\Hor$. Under certain hypotheses, especially
-that the electrovacuum Einstein equation is fulfilled, one can go further
+is hypersurface-orthogonal, being normal to $\Hor$.
+If this holds for all the connected components of the event horizon, then,
+under certain hypotheses (especially
+that the electrovacuum Einstein equation is fulfilled), one can go further
 and prove that $\w{\xi}$ must actually be hypersurface-orthogonal everywhere in $\M$,
 i.e. that $(\M,\w{g})$ is \emph{static}, according to the definition given in Sec.~\ref{s:sta:def_station}:
 
@@ -1434,7 +1443,7 @@ i.e. that $(\M,\w{g})$ is \emph{static}, according to the definition given in Se
 \label{p:sta:staticity_thm}
 Let $(\M,\w{g})$ be an asymptotically flat stationary spacetime of dimension $n\geq 4$
 that contains a black hole of event horizon $\Hor$ so that
-the stationary Killing vector $\w{\xi}$ is null on $\Hor$. By Property~\ref{p:sta:H_Killing_hor_xi_null}, $\Hor$ is a Killing horizon. If $\Hor$ is
+the stationary Killing vector $\w{\xi}$ is null on all $\Hor$. By Property~\ref{p:sta:H_Killing_hor_xi_null}, $\Hor$ is a Killing horizon. If $\Hor$ is
 non-degenerate (i.e. has a non-vanishing surface gravity $\kappa$, cf. Sec.~\ref{s:neh:classif_KH})
 and $\w{g}$ obeys the vacuum or electrovacuum Einstein equation (cf. Sec.~\ref{e:fra:electrovacuum}),
 then the spacetime
@@ -1573,7 +1582,7 @@ the spacetime is static even if the event horizon is degenerate.
 \label{s:sta:strong_rigidity}
 
 When the stationary Killing vector $\w{\xi}$ is spacelike
-on some part of the event horizon $\Hor$, it obviously cannot be collinear to
+on some part of a connected component $\Hor$ of the event horizon, it obviously cannot be collinear to
 a null normal $\wl$ of $\Hor$.
 Assuming that $\Hor$ has cross-sections of spherical topology (as it should
 in dimension $n=4$ according to Property~\ref{p:sta:topology1}), we observe
@@ -1586,7 +1595,7 @@ observe that Fig.~\ref{f:sta:rot_horizon}b can be obtained from Fig.~\ref{f:sta:
 by ``untwisting'' the field lines of $\w{\xi}$.
 Since asymptotically the field lines of $\w{\xi}$ are worldlines of inertial observers,
 Fig.~\ref{f:sta:rot_horizon}b leads us to say
-(in loose terms at this stage, this will be made more precise by Eq.~(\ref{e:sta:chi_xi_OmegaH_eta}) below) that the event horizon $\Hor$
+(in loose terms at this stage, this will be made more precise by Eq.~(\ref{e:sta:chi_xi_OmegaH_eta}) below) that $\Hor$
 ``is rotating'', all the more that we have seen above that when the null
 generators coincide with the field lines of $\w{\xi}$, the black hole is static, i.e. non-rotating.
 
@@ -1661,7 +1670,7 @@ or equivalently that the topology of $\Hor$ is $\R\times\SS^2$. One can define a
 by taking the quotient of $\Hor$ along its null generators, i.e. by identifying
 two points on $\Hor$ if they belong to the same null geodesic generator $\Li$. Given the
 topology of $\Hor$'s cross-sections, $\hat{\Sp}$ is clearly a 2-dimensional
-manifold of topology $\SS^2$. In view of the definition
+manifold of $\SS^2$ topology. In view of the definition
 of a cross-section (cf. Sec.~\ref{s:def:spacelike_sections}),
 one can identify $\hat{\Sp}$
 with a given cross-section $\Sp_0$ of $\Hor$ if necessary.
