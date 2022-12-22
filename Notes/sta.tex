@@ -723,9 +723,13 @@ $p\in\Sp$ to vectors tangent to $\Sp$. One says that $\iota^* \w{\omega}$ is the
 \end{remark}
 
 \begin{remark}
-For $n=4$ (the standard spacetime dimension), the numerical prefactor in front of
-the integral in the definition (\ref{e:sta:def_Komar_mass}) is $-1/(8\pi)$.
-For $n=5$, it becomes $-3/(32\pi)$.
+The numerical prefactor $- (n-2)/(16\pi(n-3))$ in the definition~(\ref{e:sta:def_Komar_mass})
+is adjusted so that for a weakly relativistic isolated object, the Komar mass coincides
+with the volume integral of the matter energy density, as it will be shown in
+Examples~\ref{x:sta:Komar_mass_star} ($n=4$)
+and \ref{x:sta:Komar_mass_star_dim_n} (generic $n$) below.
+For $n=4$ (the standard spacetime dimension), this prefactor is $-1/(8\pi)$,
+while for $n=5$, it becomes $-3/(32\pi)$.
 \end{remark}
 
 \begin{remark}
@@ -1041,7 +1045,7 @@ $\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of
 The Komar masses over $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ are then
 related by
 \be \label{e:sta:Komar_mass_vol_integ}
-    \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + 2
+    \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + \frac{n-2}{n-3}
     \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T}{n-2} \, \w{n}\cdot \w{\xi} \right)
     \sqrt{\gamma} \, \D^{n-1} x , }
 \ee
@@ -1068,7 +1072,7 @@ we get
 Equation~(\ref{e:sta:flux_div_2form}) yields then
 \[
     2 \int_{\Sigma} R_{\mu\nu} \xi^\nu \D V^\mu =
-    - 8\pi M_{\Sp_{\rm ext}} + 8\pi M_{\Sp_{\rm int}} ,
+    - \frac{16\pi(n-3)}{n-2} \left( M_{\Sp_{\rm ext}} -  M_{\Sp_{\rm int}} \right),
 \]
 where we have used Eq.~(\ref{e:sta:Komar_mass_flux_nabla_xi})
 to let appear the Komar masses $M_{\Sp_{\rm ext}}$ and $M_{\Sp_{\rm int}}$.
@@ -1116,7 +1120,7 @@ with an outer boundary  $\Sp_{\rm ext}$ but no inner boundary $\Sp_{\rm int}$.
 Since $\Sigma$ is othogonal to $\w{\xi}$, we have
 necessarily $\w{n} = \w{u}$, so that $\w{T}(\w{n},\w{\xi}) = W \w{T}(\w{u},\w{u})
 = W \rho$ and $\w{g}(\w{n},\w{\xi}) = W \w{g}(\w{u},\w{u}) = -W$. Given that
-$T = 3 p  - \rho$, formula~(\ref{e:sta:Komar_mass_vol_integ}) with
+$T = 3 p  - \rho$, formula~(\ref{e:sta:Komar_mass_vol_integ}) with $n=4$ and
 $M_{\Sp_{\rm int}} =  0$ (cf. Remark~\ref{r:sta:Komar_mass_single_boundary} above)
 results in
 \[
@@ -1225,7 +1229,9 @@ Under the same hypotheses as Property~\ref{p:sta:Komar_mass_vol_integ},
 one can rewrite Eq.~(\ref{e:sta:Komar_mass_vol_integ}) as
 \be \label{e:sta:Komar_mass_3p1}
     \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} +
-    2 \int_{\Sigma} \left[ \frac{N}{n-2} \left[ (n-3) E + S \right] - \langle \w{p}, \w{\beta} \rangle  \right]
+    \int_{\Sigma} \left[
+    N \left( E + \frac{1}{n-3} S \right)
+     - \frac{n-2}{n-3} \langle \w{p}, \w{\beta} \rangle  \right]
     \sqrt{\gamma} \, \D^{n-1} x  , }
 \ee
 where $S := g^{\mu\nu} S_{\mu\nu} = \gamma^{ij} S_{ij}$
@@ -1247,7 +1253,21 @@ the integrand in the r.h.s. of Eq.~(\ref{e:sta:Komar_mass_vol_integ}) as
 This establishes Eq.~(\ref{e:sta:Komar_mass_3p1}).
 \end{proof}
 
-
+\begin{example}[Komar mass of a weakly relativistic star]
+\label{x:sta:Komar_mass_star_dim_n}
+In Example~\ref{x:sta:Komar_mass_star}, we have considered a star
+in a 4-dimensional spacetime. Here let us keep the spacetime dimension $n$
+general. We will then say that star is \emph{weakly relativistic}\index{weakly relativistic}
+if $(\M,\w{g})$ is close to
+the $n$-dimensional Minkowski spacetime. One has then $N\simeq 1$ and
+$\beta \to 0$. Furthermore,
+the matter constituting the star shall
+be weakly relativistic as well, which implies that the trace $S$ of the stress
+tensor is negligible in front of the energy density $E$. Under these
+hypotheses, Eq.~(\ref{e:sta:Komar_mass_3p1}) with $M_{\Sp_{\rm int}} =0$
+shows that the Komar mass at infinity is nothing but the $(n-1)$-volume integral of
+the matter energy density $E$.
+\end{example}
 
 \subsection{Link between the Komar mass and the ADM mass}  \label{s:sta:Komar_ADM}
 
@@ -1966,7 +1986,7 @@ Furthermore, if $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq})
 with $\Lambda=0$, the Komar mass at infinity of the spacetime $(\M,\w{g})$
 (cf. Property~\ref{p:sta:Komar_mass_inf}) obeys the \defin{generalized Smarr formula}\index{generalized Smarr formula}\index{Smarr formula!generalized --}:
 \bea
-    M_\infty & = & \frac{n - 2}{2(n- 3)} \sum_{k = 1}^K
+    \frac{2(n- 3)}{n - 2}  M_\infty & = & \sum_{k = 1}^K
     \left(
     \frac{\kappa_{(k)} A_{(k)}}{4\pi}
     + 2  \sum_{i=1}^{L_{(k)}} \Omega_i^{(k)} J_{\Hor_{(k)}}^i \right) \nonumber \\
