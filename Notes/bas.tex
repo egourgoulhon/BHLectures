@@ -466,7 +466,7 @@ By convention, a scalar field\index{scalar!field}\index{field!scalar --} is cons
 We shall consider only smooth fields.
 
 Given a non-negative integer $p$, a
-\defin{differential form of order $p$}\index{form!differential}\index{differential!form},
+\defin{differential form of degree $p$}\index{form!differential}\index{differential!form},
 or
 \defin{$p$-form}\index{$p$-form}\index{form!$p$-form}, is a tensor field of type $(0,p)$, i.e.
 a field of $p$-linear forms, that is fully antisymmetric whenever $p\geq 2$.
@@ -1329,29 +1329,27 @@ pullback operator.
 
 In Sec.~\ref{s:bas:fields}, we have introduced the
 \emph{differential forms}\index{differential!form}\index{form!differential}
-as tensor fields of type $(0,q)$, with $q\ge 0$,
-that are antisymmetric in all their arguments as soon as $q\ge 2$.
-Otherwise stating, at each point $p\in\M$, a differential form results in a
-fully antisymmetric multilinear form on the vector space $T_p\M$.
-A differential form of order $q$ is also called a $q$-form.
-
-Differential forms play a special role in the theory of integration on a
-manifold. Indeed, the primary definition of an integral over a manifold of
+or \emph{$p$-forms}
+as tensor fields of type $(0,p)$, with $p\ge 0$,
+that are antisymmetric in all their arguments as soon as $p\ge 2$.
+Differential forms play a special role in the theory of integration on
+manifolds. Indeed, the primary definition of an integral over a manifold of
 dimension $n$ is the integral of a $n$-form. The Levi-Civita tensor
 $\w{\epsilon}$
 introduced in Sec.~\ref{s:bas:Levi-Civita_tensor} is a $n$-form, whose integral
 gives the volume with respect to the metric $\w{g}$.
 Regarding physics, it is well known that the
-electromagnetic field is fundamentally a 2-form (the Faraday tensor $\w{F}$);
+electromagnetic field is fundamentally a 2-form $\w{F}$ (sometimes
+called the \emph{Faraday tensor});
 in relativistic hydrodynamics, the vorticity of a fluid is also described by a 2-form
 (see e.g. \cite{Gourg13}).
 
 Being tensor fields, differential forms are subject to the covariant
-and Lie derivations discussed above. But, in addition, they are subject to a third kind
-of derivation, called \emph{exterior derivation}.
+and Lie derivatives discussed above. But, in addition, they are subject to a third kind
+of derivative, called the \emph{exterior derivative}.
 The \defin{exterior derivative}\index{exterior!derivative}\index{derivative!exterior}
- of a $q$-form $\w{\omega}$ is a
-$(q+1)$-form which is denoted $\dd\w{\omega}$ and whose components
+ of a $p$-form $\w{\omega}$ is a
+$(p+1)$-form which is denoted $\dd\w{\omega}$ and whose components
 with respect to a given coordinate system $(x^\alpha)$ are defined by
 \bea
     \mbox{0-form (scalar field)} & : & (\dd\w{\omega})_\alpha :=
@@ -1368,10 +1366,10 @@ with respect to a given coordinate system $(x^\alpha)$ are defined by
 It can be easily checked that these formul\ae, although expressed in terms of
 partial derivatives of components in a coordinate system, do define tensor fields.
 Moreover, the result is clearly antisymmetric (assuming that $\w{\omega}$ is), so
-that we end up with $(q+1)$-forms.
+that we end up with $(p+1)$-forms.
 Notice that for a scalar field (0-form), the exterior derivative is nothing but the
 differential 1-form $\dd f$ already defined in Sec.~\ref{s:bas:linear_form}.
-Notice also that the definition of the exterior derivative appeals only to the
+Notice also that the exterior derivative appeals only to the
 manifold structure. It does not depend upon the metric tensor  $\w{g}$, nor upon
 any other extra structure on $\M$.
 
@@ -1396,14 +1394,14 @@ on their last two indices (and thanks to (\ref{e:bas:grad_f_der_f}) for
 a 0-form).
 \end{remark}
 
-A fundamental property of the exterior derivation is to be nilpotent:
+A fundamental property of the exterior derivative is to be nilpotent:
 \be \label{e:ext_der_nilpot}
     \encadre{ \dd\dd\w{\omega} = 0 }.
 \ee
-A $q$-form $\w{\omega}$ is said to be \defin{closed}\index{closed!differential form} iff $\dd\w{\omega}=0$,
-and \defin{exact}\index{exact diff. form} iff there exists a $(q-1)$-form $\w{\sigma}$ such that
+A $p$-form $\w{\omega}$ is said to be \defin{closed}\index{closed!differential form} iff $\dd\w{\omega}=0$,
+and \defin{exact}\index{exact diff. form} iff there exists a $(p-1)$-form $\w{\sigma}$ such that
 $\w{\omega} = \dd\w{\sigma}$. From property (\ref{e:ext_der_nilpot}),
-any exact $q$-form is closed. The Poincar\'e lemma states that the converse is true,
+any exact $p$-form is closed. The Poincaré lemma states that the converse is true,
 at least locally.
 
 The exterior derivative enters in the well known \defin{Stokes' theorem}\index{Stokes!theorem}: if $\mathcal{D}$
@@ -1415,22 +1413,28 @@ is a submanifold of $\M$ of dimension $d$ that has a boundary (denoted $\partial
 Note that $\partial\mathcal{D}$ is a manifold of dimension $d-1$ and
 $\dd\w{\omega}$ is a $d$-form, so that each side of
 (\ref{e:Stokes}) is (of course !) a well-defined quantity,
-as the integral of a $q$-form over a $q$-dimensional manifold.
+as the integral of a $p$-form over a $p$-dimensional manifold.
 
-Another very important formula where the exterior derivative enters is
+Another very important formula involving the exterior derivative is
 the \defin{Cartan identity}\index{Cartan!identity}, which states that the
 Lie derivative of a differential form
 $\w{\omega}$ along a vector field $\w{u}$ is expressible as
-\be \label{e:Cartan}
+\be \label{e:bas:Cartan}
     \encadre{ \Lie{u}\w{\omega} = \w{u}\cdot\dd\w{\omega}
     + \dd(\w{u}\cdot\w{\omega}) }.
 \ee
 In the above formula, a dot denotes the contraction on adjacent indices, i.e.
-$\w{u}\cdot\w{\omega}$ is the $(q-1)$-form $\w{\omega}(\w{u},.,\ldots,.)$,
-with the $q-1$ last slots remaining free. Notice that in
-the case of a 1-form, Eq.~(\ref{e:Cartan}) is readily obtained
+$\w{u}\cdot\w{\omega}$ is the $(p-1)$-form $\w{\omega}(\w{u},.,\ldots,.)$,
+with the $p-1$ last slots remaining free. Notice that if $\w{\omega}$ is
+a 1-form, Eq.~(\ref{e:bas:Cartan}) is readily obtained
 by combining Eqs.~(\ref{e:Lie_der_1form}),
 (\ref{e:bas:def_ext_0f}) and (\ref{e:bas:def_ext_1f}).
+An immediate consequence of the Cartan identity and the nilpotence property
+(\ref{e:ext_der_nilpot}) is that the Lie derivative
+and the exterior derivative commute, i.e. for any $p$-form $\w{\omega}$:
+\be
+    \Lie{u} \dd \w{\omega} = \dd \, \Lie{u}\! \w{\omega} .
+\ee
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
