@@ -2125,7 +2125,7 @@ We shall choose the additive constant so that $\Phi \to 0$ in the asymptotic fla
 of $(\M,\w{g})$. This determines $\Phi$ uniquely and we shall call it the
 \defin{electromagnetic Killing potential}\index{electromagnetic!Killing potential}\index{Killing!electromagnetic -- potential}. Furthermore, on $\Hor$, the vector field
 $\vw{E}$ is collinear to the null normal $\w{\chi}$:
-\be
+\be \label{e:sta:E_collin_chi}
     \vw{E} \equalH \mu_0 \sigma \w{\chi}
     \iff
     E^\alpha \equalH \mu_0 \sigma \chi^\alpha ,
@@ -2143,15 +2143,43 @@ Finally, the electromagnetic Killing potential $\Phi$ is constant on $\Hor$:
 \ee
 \end{prop}
 \begin{proof}
-Let $\w{A}$ be some electromagnetic potential associated to $\w{F}$: $\w{F} = \dd \w{A}$.
-If $\w{A}$ obeys the $\w{\chi}$-symmetry, we have $\Lie{\chi} \w{A} = 0$.
-Now, thanks to the Cartan identity (\ref{e:bas:Cartan}),
+Let $\w{A}$ be some electromagnetic potential associated to $\w{F}$ ($\w{F} = \dd \w{A}$)
+such that $\Lie{\chi} \w{A} = 0$.
+Thanks to the Cartan identity (\ref{e:bas:Cartan}), we get
 $0 = \Lie{\chi} \w{A} = \w{\chi}\cdot\dd\w{A}
     + \dd(\w{\chi}\cdot\w{A}) = \w{\chi}\cdot\w{F} + \dd \langle \w{A}, \w{\chi} \rangle
     = -\w{E} + \dd \langle \w{A}, \w{\chi} \rangle $. This proves Eq.~(\ref{e:sta:E_d_Phi})
 with $\Phi$ given by Eq.~(\ref{e:sta:Phi_A_chi}).
-Let $\w{\tilde{A}}$ be another electromagnetic potential associated to $\w{F}$
-such that $\Lie{\chi} \w{\tilde{A}} = 0$.
+Let $\w{A'}$ be another electromagnetic potential associated to $\w{F}$
+such that $\Lie{\chi} \w{A'} = 0$. We have the change-of-gauge relation
+$\w{A'} = \w{A} + \dd\Psi$, where $\Psi$ is a scalar field.
+Then $\Lie{\chi} \dd\Psi = \Lie{\chi} \w{A'}  - \Lie{\chi} \w{A} = 0 - 0 = 0$.
+Invoking the commutation relation (\ref{e:bas:Lie_ext_commute}), we get
+$\dd \, \Lie{\chi}\! \Psi = 0$. Hence, $\Lie{\chi}\! \Psi = \mathrm{const}$.
+Given the identity $\langle \dd \Psi, \w{\chi} \rangle = \Lie{\chi}\! \Psi$,
+it follows that $\langle \w{A'}, \w{\chi} \rangle = \langle \w{A}, \w{\chi} \rangle
++ \langle \dd \Psi, \w{\chi} \rangle = \langle \w{A}, \w{\chi} \rangle  + \mathrm{const}$.
+This proves that, up to some additive constant, the scalar field $\Phi$ defined by Eq.~(\ref{e:sta:Phi_A_chi}) does not depend on the choice of the electromagnetic potential
+$\w{A}$. Let us now turn to relation (\ref{e:sta:E_collin_chi}). First, it is trivial
+that $\vw{E}$ is tangent to $\Hor$, given that $\w{\chi}\cdot\vw{E} = \langle \w{E},\w{\chi} \rangle = \w{F}(\w{\chi}, \w{\chi}) = 0$ by antisymmetry of $\w{F}$.
+Second, given that the Killing horizon $\Hor$ is a non-expanding horizon and that
+any electromagnetic field obeys the null energy condition
+(cf. Sec.~\ref{s:neh:NEH_Theta_zero}), property (\ref{e:neh:R_l_l_zero})
+holds: $\w{R}(\w{\chi},\w{\chi}) \equalH 0$. Since $\w{\chi}$ is null on $\Hor$,
+we can invoke the Einstein equation (\ref{e:fra:Einstein_eq_n}) to
+transform this relation into $\w{T}(\w{\chi},\w{\chi}) \equalH 0$, where
+$\w{T}$ is the energy-momentum tensor of the electromagnetic field.
+Using expression (\ref{e:fra:T_em}) for $\w{T}$, we get
+\[
+    \underbrace{F_{\mu\rho} \chi^\rho}_{E_\mu}
+    \underbrace{F^\mu_{\ \, \sigma} \chi^\sigma}_{E^\mu}
+    - \frac{1}{4}  F_{\mu\nu} F^{\mu\nu}
+    \underbrace{g_{\rho\sigma} \chi^\rho \chi^\sigma}_{0} \equalH 0 ,
+\]
+i.e. $\vw{E}\cdot\vw{E} \equalH 0$. Thus $\vw{E}$ is null vector on $\Hor$.
+Being tangent to $\Hor$, it is then necessarily collinear to the null normal
+to $\Hor$, namely $\w{\chi}$, hence Eq.~(\ref{e:sta:E_collin_chi}).
+
 \end{proof}
 
 
