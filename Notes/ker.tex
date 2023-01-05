@@ -1759,8 +1759,8 @@ a stationary Killing vector $\w{\xi}$, as the Kerr spacetime,
 there is a well-defined concept of mass, namely the \emph{Komar mass}\index{Komar!mass}\index{mass!Komar --}
 introduced in Sec.~\ref{s:sta:Komar_mass}.
 Let us show explicitly that for the Kerr spacetime, the Komar mass coincides with $m$.
-To this aim, we shall use expression~(\ref{e:sta:M_Komar_partial_der})
-of the Komar mass. We shall consider the Boyer-Lindquist coordinates
+To this aim, we shall use expression~(\ref{e:sta:M_Komar_partial_der}) with $n=4$
+for the Komar mass. We shall consider the Boyer-Lindquist coordinates
 $(x^\alpha) = (t,r,\th,\ph)$ and define $\Sp$ to be a sphere
 $(t,r)=\mathrm{const}$. Coordinates on $\Sp$ are then
 $(x^2,x^3)=(\th,\ph)$. Moreover, since the value of $M_\Sp$ does not depend on
@@ -1769,7 +1769,7 @@ we may set $r\rightarrow +\infty$ and use the
 asymptotic flatness of Kerr metric to get simple expressions. The unit normals
 to $\Sp$ are then $\w{n} = \wpar_t$ and $\w{s} = \wpar_r$. Moreover, when
 $r\rightarrow +\infty$, $\sqrt{q} = r^2\sin\th$. Hence Eq.~(\ref{e:sta:M_Komar_partial_der})
-yields
+with $n=4$ yields
 \[
     M = -\frac{1}{8\pi} \lim_{r\rightarrow +\infty}
         \int_{\Sp}
@@ -1778,7 +1778,7 @@ yields
 \]
 with
 \[
-    \xi_t = g_{t\mu} \underbrace{\xi^\mu}_{\delta^\mu_{\ \, t}}
+    \xi_t = g_{t\mu} \xi^\mu = g_{t\mu} \delta^\mu_{\ \, t}
         = g_{tt} \simeq - 1 + \frac{2m}{r} ,
 \]
 the last expression resulting from the expansion (\ref{e:ker:asympt_metric}).
@@ -1925,14 +1925,17 @@ $\kappa = (r_+^2 - a^2)/(4 m r_+^2)$ [Eq.~(\ref{e:ker:kappa_rp_m_a})]
 and $A = 8\pi m r_+$ [Eq.~(\ref{e:ker:A_rp_a_m})], we get an interesting
 identity:
 \[
-    2 \Omega_H a m + \frac{\kappa A}{4\pi} = m .
+    \frac{\kappa A}{4\pi} + 2 \Omega_H a m   = m .
 \]
 If we let appear the total angular momentum $J = a m$ [Eq.~(\ref{e:ker:J_am})]
 and the Komar mass $M = m$ [Eq.~(\ref{e:ker:M_m})], we can turn this identity
-into the so-called \defin{Smarr formula}\index{Smarr formula}:
+into
 \be \label{e:ker:Smarr}
-    \encadre{ M =  2 \Omega_H J + \frac{\kappa A}{4\pi} } .
+    \encadre{ M =  \frac{\kappa A}{4\pi} + 2 \Omega_H J} .
 \ee
+This is actually the particular case $\w{T} = 0$ (vacuum) of the generic
+\emph{Smarr formula}\index{Smarr formula} (\ref{e:sta:Smarr_M_infty_n4})
+established in Chap.~5 (Property~\ref{p:sta:Smarr_n4}).
 
 \begin{hist}
 Equation~(\ref{e:ker:Smarr}) has been derived in 1973 by Larry Smarr\index{Smarr, L.}
