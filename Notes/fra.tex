@@ -569,7 +569,7 @@ to
 \ee
 where $\vw{T}$ in the type-$(1,1)$ tensor associated by metric duality
 to $\w{T}$ [cf. Eq.~(\ref{e:bas:arrow_endo})]. In index notation, the above
-equation writes
+equation writes [cf. Eq.~(\ref{e:bas:def_divergence})]
 \[
     \nabla_\mu T^\mu_{\ \, \alpha} = 0 .
 \]
@@ -577,23 +577,76 @@ Equation (\ref{e:fra:divT}) is often referred to as the \defin{equation of energ
 
 \subsection{Electrovacuum Einstein equation} \label{e:fra:electrovacuum}
 
-A \defin{source-free electromagnetic field}\index{source-free!electromagnetic field}\index{electromagnetic field!source-free --} is a 2-form $\w{F}$ on spacetime
-that obeys the \defin{source-free Maxwell equations}:
+An \defin{electromagnetic field}\index{electromagnetic field}
+in the spacetime $(\M,\w{g})$ is a 2-form $\w{F}$
+(cf. Sec.~\ref{s:bas:fields}) such that any particle of mass $m>0$, electric charge\index{electric!charge}
+$q$ and 4-velocity $\w{u}$ is subject to the 4-acceleration
 \be
-    \dd \w{F} = 0 \qand  \wnab\cdot\vvw{F}  = 0
+    \wnab_{\w{u}} \w{u} = \frac{q}{m} \vw{F}(. , \w{u})
+    \iff
+    u^\mu \nabla_\mu u^\alpha = \frac{q}{m} F^\alpha_{\ \, \mu} u^\mu .
 \ee
-where $\dd\w{F}$ is the exterior derivative of $\w{F}$ (cf. Sec.~\ref{s:bas:ext_deriv})
-and $\vvw{F}$ in the type-$(2,0)$ antisymmetric tensor (bivector) associated by metric duality
-to $\w{F}$ [cf. Eqs.~(\ref{e:bas:arrow_double}) and (\ref{e:bas:arrow_double_index})].
+Moreover, $\w{F}$ is governed by the \defin{Maxwell equations}\index{Maxwell equations}:
+\be \label{e:fra:Maxwell}
+    \dd \w{F} = 0 \qand  \wnab\cdot\vvw{F}  = \mu_0 \, \w{j} ,
+\ee
+where $\dd\w{F}$ is the exterior derivative of $\w{F}$ (cf. Sec.~\ref{s:bas:ext_deriv}),
+$\vvw{F}$ in the type-$(2,0)$ antisymmetric tensor (bivector) associated by metric duality
+to $\w{F}$ [cf. Eqs.~(\ref{e:bas:arrow_double}) and (\ref{e:bas:arrow_double_index})],
+$\mu_0$ is a constant called the \defin{vacuum permeability}\index{vacuum!permeability}
+and $\w{j}$ is the \defin{electric current density}\index{electric!current density} vector field,
+which describes the distribution of electric charges in spacetime.
+In view of formula~(\ref{e:bas:def_ext_2f}) for the exterior derivative and of definition~(\ref{e:bas:def_divergence}) of the divergence operator, the Maxwell equations (\ref{e:fra:Maxwell})
+can be expressed in terms of components with respect to some coordinates $(x^\alpha)$
+as
+\be
+    \der{F_{\beta\gamma}}{x^\alpha} +
+    \der{F_{\gamma\alpha}}{x^\beta} +
+    \der{F_{\alpha\beta}}{x^\gamma} = 0
+    \qand
+    \nabla_\mu F^{\alpha\mu} = \mu_0 \, j^\alpha .
+\ee
 
-The \defin{electrovacuum Einstein equation}\index{electrovacuum!Einstein equation} is the Einstein equation (\ref{e:fra:Einstein_eq})
+\begin{remark}
+Thanks to an identity valid for the divergence of any antisymmetric type-$(2,0)$
+tensor field, the second Maxwell equation
+can be written in terms of partial derivatives only:
+\be
+    \frac{1}{\sqrt{-g}} \der{}{x^\mu} \left( \sqrt{-g}  F^{\alpha\mu} \right) = \mu_0 \, j^\alpha ,
+\ee
+where $g$ stands for the determinant of the components $(g_{\alpha\beta})$ of the metric tensor
+$\w{g}$ with respect to the coordinates $(x^\alpha)$.
+\end{remark}
+
+\begin{remark}
+The second Maxwell equation can be expressed in terms of differential forms, as the first one,
+by introducing the $(n-2)$-form $\star\w{F}$ ($n$ being the spacetime dimension)
+and the $(n-1)$-form $\star\uu{j}$, which
+are respectively the Hodge dual\index{Hodge dual}\index{dual!Hodge --}
+of the 2-form $\w{F}$ and the Hodge dual
+of the 1-form $\uu{j}$ (the metric dual of the vector field $\w{j}$,
+cf. Sec.~\ref{s:bas:metric_dual}). We shall define the Hodge dual of a $p$-form only
+in Chap.~\ref{s:sta} [cf. Eq.~(\ref{e:sta:Hodge_dual})]; here, let us simply
+state the Maxwell equations in term of it and of the
+exterior derivative $\dd$:
+\be \label{e:fra:Maxwell_forms}
+    \dd \w{F} = 0 \qand \dd\star\!\w{F} = \mu_0\, \star\!\uu{j} .
+\ee
+\end{remark}
+
+A \defin{source-free electromagnetic field}\index{source-free!electromagnetic field}\index{electromagnetic field!source-free --} is a 2-form $\w{F}$
+that obeys the Maxwell equations (\ref{e:fra:Maxwell}) with $\w{j} = 0$:
+\be
+    \dd \w{F} = 0 \qand  \wnab\cdot\vvw{F}  = 0 .
+\ee
+
+The \defin{electrovacuum Einstein equation}\index{electrovacuum Einstein equation}\index{Einstein!equation!electrovacuum --} is the Einstein equation (\ref{e:fra:Einstein_eq})
 with $\w{T}$ being the energy-momentum tensor of a source-free electromagnetic field
 $\w{F}$:
 \be \label{e:fra:T_em}
     T_{\alpha\beta} = \frac{1}{\mu_0} \left( F_{\mu\alpha} F^\mu_{\ \, \beta}
-        - \frac{1}{4} F_{\mu\nu} F^{\mu\nu} \, g_{\alpha\beta} \right) ,
+        - \frac{1}{4} F_{\mu\nu} F^{\mu\nu} \, g_{\alpha\beta} \right) .
 \ee
-where $\mu_0$ is a constant called the \defin{vacuum permeability}\index{vacuum!permeability}.
 A solution of the \defin{Einstein-Maxwell system}\index{Einstein-Maxwell system}
 is a triplet $(\M,\w{g},\w{F})$ such that  $(\M,\w{g})$ is a $n$-dimensional spacetime,
 $\w{F}$ is a source-free electromagnetic field on $\M$ and $\w{g}$ obeys the
