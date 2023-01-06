@@ -2349,21 +2349,62 @@ We recognize the pseudo-electric field $E^\sigma = F^\sigma_{\ \, \nu} \chi^\nu$
 [cf. Eq.~(\ref{e:sta:def_elec_field})] in the first term in the
 right-hand side; thanks to Eq.~(\ref{e:sta:E_d_Phi}), we may reexpress it in
 terms of the Killing electric potential $\Phi$:
-\[
+\be \label{e:sta:FF_chi}
     F_{\sigma\mu} F^\sigma_{\ \, \nu} \chi^\nu = F_{\sigma\mu} E^\sigma
     = - F_{\sigma\mu} \nabla^\sigma \Phi = - \nabla_\sigma \Phi F^\sigma_{\ \, \mu}
-    = - \nabla_\sigma \left( \Phi F^\sigma_{\ \, \mu} \right) ,
-\]
-where the last equality stems from the source-free Maxwell equation
+    = - \nabla_\sigma \left( \Phi F^\sigma_{\ \, \mu} \right)
+    = \nabla^\sigma (\Phi F_{\mu\sigma} ),
+\ee
+where the last but one equality stems from the source-free Maxwell equation
 $\nabla_\sigma F^{\alpha\sigma} = 0$ [Eq.~(\ref{e:fra:Maxwell_comp})].
 As for the second term in the integrand (\ref{e:sta:Smarr_em_integrand}), let
 us rewrite it in terms of some electromagnetic potential 1-form $\w{A}$ that
-vanishes at infinity; we have then $F_{\rho\sigma} = \nabla_\rho A_\sigma
-- \nabla_\sigma A_\rho$ so that, using the antisymmetry of $F^{\rho\sigma}$,
+vanishes at infinity and obeys to the spacetime symmetries; we have then $F_{\rho\sigma} = \nabla_\rho A_\sigma
+- \nabla_\sigma A_\rho$ so that, using the antisymmetry of $F^{\rho\sigma}$
+and again the source-free Maxwell equation $\nabla_\sigma F^{\sigma\rho} = 0$,
 \[
      F_{\rho\sigma} F^{\rho\sigma} \chi_\mu = 2 \nabla_\sigma A_\rho
-      F^{\sigma\rho} \chi_\mu .
+      F^{\sigma\rho} \chi_\mu = 2 \left[ \nabla_\sigma( A_\rho F^{\sigma\rho} \chi_\mu )
+      - A_\rho F^{\sigma\rho} \nabla_\sigma \chi_\mu \right] .
 \]
+Now, expressing the property $\Lie{\w{\chi}} \w{F} = 0$ via formula~(\ref{e:bas:Lie_der_comp_nab}), we have
+$\Liec{\chi} F^{\mu\rho} = \chi^\sigma \nabla_\sigma F^{\mu\rho}
+- F^{\sigma\rho} \nabla_\sigma \chi^\mu - F^{\mu\sigma} \nabla_\sigma \chi^\rho = 0$,
+from which
+\bea
+  A_\rho F^{\sigma\rho} \nabla_\sigma \chi_\mu  & = & A_\rho F^\sigma_{\ \, \mu}
+  \nabla_\sigma \chi^\rho - A_\rho \chi^\sigma \nabla_\sigma F^\rho_{\ \, \mu}
+  =  A_\rho F^\sigma_{\ \, \mu} \nabla_\sigma \chi^\rho
+  - \nabla_\sigma( \chi^\sigma A_\rho F^\rho_{\ \, \mu} )
+  +  F^\rho_{\ \, \mu}  \chi^\sigma \nabla_\sigma A_\rho \nonumber \\
+  & = & - \nabla_\sigma( \chi^\sigma A_\rho F^\rho_{\ \, \mu} )
+    + F^\rho_{\ \, \mu}  (
+    \underbrace{\chi^\sigma \nabla_\sigma A_\rho + A_\sigma \nabla_\rho \chi^\sigma}_{0})
+    =  - \nabla_\sigma( A_\rho F^\rho_{\ \, \mu} \chi^\sigma)
+    \nonumber ,
+\eea
+where we have used $\nabla_\sigma \chi^\sigma = 0$, as implied by
+the Killing equation for $\w{\chi}$, in the first line
+and $\Liec{\chi} A_\rho = 0$ in the second line. Hence, we get
+\[
+    F_{\rho\sigma} F^{\rho\sigma} \chi_\mu =
+    2 \nabla_\sigma \left( A_\rho F^{\sigma\rho} \chi_\mu
+    +  A_\rho F^\rho_{\ \, \mu} \chi^\sigma \right)
+    = 2 \nabla^\sigma \left( A_\rho F^\rho_{\ \, \mu} \chi_\sigma
+     - A_\rho  F^\rho_{\ \, \sigma} \chi_\mu\right) .
+\]
+Together with Eq.~(\ref{e:sta:FF_chi}), this expression allows us to
+rewrite Eq.~(\ref{e:sta:Smarr_em_integrand}) as
+\[
+\w{T}(\w{n}, \w{\chi}) - \frac{T \w{n}\cdot \w{\chi}}{n-2} =
+\frac{n^\mu}{\mu_0} \nabla^\nu \Omega_{\mu\nu}
+\quad\mbox{with}\quad
+\Omega_{\mu\nu} := \Phi F_{\mu\nu} +
+ \frac{1}{n-2} \left( A_\rho  F^\rho_{\ \, \nu} \chi_\mu
+ - A_\rho F^\rho_{\ \, \mu} \chi_\nu \right) .
+\]
+Note that $\Omega_{\mu\nu}$ defines a 2-form, since
+$\Omega_{\mu\nu} = - \Omega_{\nu\mu}$.
 \end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
