@@ -2300,6 +2300,72 @@ Property~\ref{p:sta:electromag_Killing_hor}, and $Q_{\Hor_k}$ is the
 electric charge of $\Hor_k$, as defined by Property~\ref{p:sta:electric_charge}.
 \end{prop}
 
+\begin{proof}
+Let us start from the general Smarr formula~(\ref{e:sta:Smarr_M_infty}).
+Thanks to the independence of $\Omega^{(i)}$ and $\w{\eta}_{(i)}$
+from $\Hor_k$, we may permute the sums over $k$ and $i$ in it and write
+\[
+    \frac{2(n- 3)}{n - 2}  M_\infty =
+    \sum_{k = 1}^K \frac{\kappa_{k} A_{k}}{4\pi}
+    + 2  \sum_{i=1}^{L} \Omega^{(i)} \sum_{k = 1}^K J_{\Hor_{k}(i)}
+    + 2
+    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T \w{n}\cdot \w{\xi}}{n-2}  \right)
+    \sqrt{\gamma} \, \D^{n-1} x ,
+\]
+where $\Sigma$ is an asymptotically flat spacelike hypersurface,
+of future-directed unit normal $\w{n}$ to $\Sigma$ and of
+inner boundary being a cross-section $\Sp_{\rm int}$ of the event horizon,
+i.e. $\Sp_{\rm int} = \bigcup_{k=1}^K \Sp_k$, where $\Sp_k$ is a
+cross-section of $\Hor_{k}$.
+Now, according to Eq.~(\ref{e:sta:Komar_angul_vol_integ})
+with $\Sp_{\rm ext}$ going to infinity, we have
+\[
+     \sum_{k=1}^K J_{\Hor_k(i)} =  J_{\Sp_{\rm int}(i)}
+    = J_{(i)}^\infty + \int_{\Sigma} \left( \w{T}(\w{n}, \w{\eta}_{(i)})
+     - \frac{T}{n-2} \, \w{n}\cdot\w{\eta}_{(i)} \right)
+    \sqrt{\gamma} \, \D^{n-1} x .
+\]
+Hence
+\[
+    \frac{2(n- 3)}{n - 2}  M_\infty =
+    \sum_{k = 1}^K \frac{\kappa_{k} A_{k}}{4\pi}
+    + 2  \sum_{i=1}^{L} \Omega^{(i)} J_{(i)}^\infty
+    + 2
+    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\chi}) - \frac{T \w{n}\cdot \w{\chi}}{n-2}  \right)
+    \sqrt{\gamma} \, \D^{n-1} x ,
+\]
+where we have used the identity
+$\w{\xi} + \sum_{i=1}^{L} \Omega^{(i)} \w{\eta}_{(i)} = \w{\chi}$
+to collect all the integrals on $\Sigma$.
+Let us now evaluate the integral by using the electromagnetic form
+(\ref{e:fra:T_em})-(\ref{e:fra:trace_T_em}) for $\w{T}$ and $T$.
+Thanks to these formulas, the integrand becomes
+\be \label{e:sta:Smarr_em_integrand}
+\w{T}(\w{n}, \w{\chi}) - \frac{T \w{n}\cdot \w{\chi}}{n-2} =
+\frac{n^\mu}{\mu_0} \left( F_{\sigma\mu} F^\sigma_{\ \, \nu} \chi^\nu
+    - \frac{1}{2(n-2)} F_{\rho\sigma} F^{\rho\sigma} \chi_\mu \right) .
+\ee
+We recognize the pseudo-electric field $E^\sigma = F^\sigma_{\ \, \nu} \chi^\nu$
+[cf. Eq.~(\ref{e:sta:def_elec_field})] in the first term in the
+right-hand side; thanks to Eq.~(\ref{e:sta:E_d_Phi}), we may reexpress it in
+terms of the Killing electric potential $\Phi$:
+\[
+    F_{\sigma\mu} F^\sigma_{\ \, \nu} \chi^\nu = F_{\sigma\mu} E^\sigma
+    = - F_{\sigma\mu} \nabla^\sigma \Phi = - \nabla_\sigma \Phi F^\sigma_{\ \, \mu}
+    = - \nabla_\sigma \left( \Phi F^\sigma_{\ \, \mu} \right) ,
+\]
+where the last equality stems from the source-free Maxwell equation
+$\nabla_\sigma F^{\alpha\sigma} = 0$ [Eq.~(\ref{e:fra:Maxwell_comp})].
+As for the second term in the integrand (\ref{e:sta:Smarr_em_integrand}), let
+us rewrite it in terms of some electromagnetic potential 1-form $\w{A}$ that
+vanishes at infinity; we have then $F_{\rho\sigma} = \nabla_\rho A_\sigma
+- \nabla_\sigma A_\rho$ so that, using the antisymmetry of $F^{\rho\sigma}$,
+\[
+     F_{\rho\sigma} F^{\rho\sigma} \chi_\mu = 2 \nabla_\sigma A_\rho
+      F^{\sigma\rho} \chi_\mu .
+\]
+\end{proof}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{The no-hair theorem} \label{s:sta:no-hair}

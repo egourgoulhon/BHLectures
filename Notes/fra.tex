@@ -599,7 +599,7 @@ which describes the distribution of electric charges in spacetime.
 In view of formula~(\ref{e:bas:def_ext_2f}) for the exterior derivative and of definition~(\ref{e:bas:def_divergence}) of the divergence operator, the Maxwell equations (\ref{e:fra:Maxwell})
 can be expressed in terms of components with respect to some coordinates $(x^\alpha)$
 as
-\be
+\be \label{e:fra:Maxwell_comp}
     \der{F_{\beta\gamma}}{x^\alpha} +
     \der{F_{\gamma\alpha}}{x^\beta} +
     \der{F_{\alpha\beta}}{x^\gamma} = 0
@@ -647,6 +647,14 @@ $\w{F}$:
     T_{\alpha\beta} = \frac{1}{\mu_0} \left( F_{\mu\alpha} F^\mu_{\ \, \beta}
         - \frac{1}{4} F_{\mu\nu} F^{\mu\nu} \, g_{\alpha\beta} \right) .
 \ee
+The trace of $\w{T}$ with respect to $\w{g}$ is
+\be \label{e:fra:trace_T_em}
+    T := g^{\mu\nu} T_{\mu\nu} = \frac{4 - n}{4\mu_0} F_{\mu\nu} F^{\mu\nu} .
+\ee
+\begin{remark}
+$T = 0$ only for $n=4$ (the standard spacetime dimension).
+\end{remark}
+
 A solution of the \defin{Einstein-Maxwell system}\index{Einstein-Maxwell system}
 is a triplet $(\M,\w{g},\w{F})$ such that  $(\M,\w{g})$ is a $n$-dimensional spacetime,
 $\w{F}$ is a source-free electromagnetic field on $\M$ and $\w{g}$ obeys the
