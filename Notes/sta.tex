@@ -927,7 +927,7 @@ Accordingly, Eq.~(\ref{e:sta:M_Komar_partial_der}) leads to
     r^2 \sin\th \, \D\th \, \D\ph = \frac{m}{4\pi} \int_{\Sp} \D\th \, \D\ph .
 \]
 Since the remaining integral is nothing but $4\pi$, we get simply
-\be
+\be \label{e:sta:Komar_mass_Schwarz}
     M_{\Sp} = m.
 \ee
 We note that $M_{\Sp}$ does not depend on $r$, i.e. does not depend on the
@@ -2111,6 +2111,25 @@ For black holes in vacuum, $\w{T} = 0$ and the generalized Smarr formulas (\ref{
 and (\ref{e:sta:Smarr_M_infty_n4}) simplify since the integral
 term disappears.
 
+\begin{example}[Schwarzschild black hole]
+The Schwarzschild black hole will be discussed in details in Chap.~\ref{s:sch};
+however, we have have sufficiently studied its event horizon in various examples
+of the preceeding chapters to check that the Smarr formula holds
+for it. From Example~\ref{x:def:Schw_hor3} of Chap.~\ref{s:def}, we have
+$\kappa = 1/(4 m)$ [Eq.~(\ref{e:def:kappa_Schw_hor})], while from
+Example~\ref{x:neh:Schwarz_hor_area} of Chap.~\ref{s:neh} we have
+$A = 16\pi m^2$ [Eq.~(\ref{e:neh:area_Schwarz})]. Hence
+$\kappa A / (4\pi) = m$. Since we have seen in Example~\ref{x:sta:Komar_mass_Schw}
+of the current chapter that the parameter $m$ is nothing but the Komar mass
+over any closed spacelike 2-surface $\Sp$ [Eq.~(\ref{e:sta:Komar_mass_Schwarz})],
+we have $m = M_\infty$, so that
+\be
+    M_\infty = \frac{\kappa}{4\pi} A .
+\ee
+This is nothing but the Smarr formula (\ref{e:sta:Smarr_M_infty_n4})
+for a static ($\Omega_{\Hor} = 0$) black hole in vaccum ($\w{T}=0$).
+\end{example}
+
 \subsection{Electrovacuum Smarr formula} \label{s:sta:Smarr_electrovac}
 
 Besides the vacuum case, the generalized Smarr formulas (\ref{e:sta:Smarr_M_infty})
@@ -2284,7 +2303,7 @@ $\Omega^{(i)}$ and axisymmetric Killing vectors $\w{\eta}_{(i)}$
 are the same for all the $\Hor_k$'s. We may have $L=0$,
 i.e. $\w{\chi} = \w{\xi}$ (static configuration).
 The Komar mass formula is then
-\be
+\be \label{e:sta:Smarr_electrovac}
     \frac{2(n- 3)}{n - 2}  M_\infty = \sum_{k = 1}^K
     \left(
     \frac{\kappa_{k} A_{k}}{4\pi}
@@ -2326,14 +2345,14 @@ with $\Sp_{\rm ext}$ going to infinity, we have
     \sqrt{\gamma} \, \D^{n-1} x .
 \]
 Hence
-\[
+\be \label{e:sta:Smarr_electrovac_prov}
     \frac{2(n- 3)}{n - 2}  M_\infty =
     \sum_{k = 1}^K \frac{\kappa_{k} A_{k}}{4\pi}
     + 2  \sum_{i=1}^{L} \Omega^{(i)} J_{(i)}^\infty
     + 2
     \int_{\Sigma} \left( \w{T}(\w{n}, \w{\chi}) - \frac{T \w{n}\cdot \w{\chi}}{n-2}  \right)
     \sqrt{\gamma} \, \D^{n-1} x ,
-\]
+\ee
 where we have used the identity
 $\w{\xi} + \sum_{i=1}^{L} \Omega^{(i)} \w{\eta}_{(i)} = \w{\chi}$
 to collect all the integrals on $\Sigma$.
@@ -2358,9 +2377,13 @@ terms of the Killing electric potential $\Phi$:
 where the last but one equality stems from the source-free Maxwell equation
 $\nabla_\sigma F^{\alpha\sigma} = 0$ [Eq.~(\ref{e:fra:Maxwell_comp})].
 As for the second term in the integrand (\ref{e:sta:Smarr_em_integrand}), let
-us rewrite it in terms of some electromagnetic potential 1-form $\w{A}$ that
-vanishes at infinity and obeys to the spacetime symmetries; we have then $F_{\rho\sigma} = \nabla_\rho A_\sigma
-- \nabla_\sigma A_\rho$ so that, using the antisymmetry of $F^{\rho\sigma}$
+us rewrite it in terms of some electromagnetic potential 1-form $\w{A}$
+that obeys $\Lie{\chi}\w{A} = 0$ and
+such that
+$\Phi = - \langle \w{A}, \w{\chi}\rangle $ (i.e. such that the constant
+in Eq.~(\ref{e:sta:Phi_A_chi}) is zero). Then
+$F_{\rho\sigma} = \nabla_\rho A_\sigma
+- \nabla_\sigma A_\rho$, so that, using the antisymmetry of $F^{\rho\sigma}$
 and again the source-free Maxwell equation $\nabla_\sigma F^{\sigma\rho} = 0$,
 \[
      F_{\rho\sigma} F^{\rho\sigma} \chi_\mu = 2 \nabla_\sigma A_\rho
@@ -2404,8 +2427,58 @@ rewrite Eq.~(\ref{e:sta:Smarr_em_integrand}) as
  - A_\rho F^\rho_{\ \, \mu} \chi_\nu \right) .
 \]
 Note that $\Omega_{\mu\nu}$ defines a 2-form, since
-$\Omega_{\mu\nu} = - \Omega_{\nu\mu}$.
+$\Omega_{\mu\nu} = - \Omega_{\nu\mu}$. It follows then from Lemma~\ref{p:sta:flux_div_2_form}
+that
+\bea
+    I & := & 2 \int_{\Sigma} \left( \w{T}(\w{n}, \w{\chi}) - \frac{T \w{n}\cdot \w{\chi}}{n-2}  \right)
+    \sqrt{\gamma} \, \D^{n-1} x
+   = \frac{2}{\mu_0} \int_{\Sigma} \nabla^\mu \Omega_{\mu\nu} n^\mu \sqrt{\gamma}
+   \, \D^{n-1} x \nonumber \\
+   & = &
+    - \frac{2}{\mu_0} \int_{\Sigma} \nabla^\mu \Omega_{\mu\nu}  \D V^\mu
+    = -\frac{1}{\mu_0} \Big( \underbrace{\int_{\Sp_\infty} \Omega_{\mu\nu} \, \D S^{\mu\nu}}_{0}
+      - \int_{\Sp_{\rm int}} \Omega_{\mu\nu} \, \D S^{\mu\nu} \Big) \nonumber
+\eea
+We have set the integral on $\Sp_\infty$ to zero since
+$\w{F}$ decays to zero sufficiently fast at the asymptotically
+flat end of $\Sigma$ (otherwise $(\M,\w{g})$ could not be asymptotically flat).
+Since $\Sp_{\rm int} = \bigcup_{k=1}^K \Sp_k$, we may write
+\[
+    I = \frac{1}{\mu_0} \sum_{k=1}^K \int_{\Sp_k} \Omega_{\mu\nu} \, \D S^{\mu\nu} .
+\]
+Now, thanks to the antisymmetry of $\D S^{\mu\nu}$,
+\bea
+    \Omega_{\mu\nu} \, \D S^{\mu\nu} & = & \Phi F_{\mu\nu} \, \D S^{\mu\nu}
+    + \frac{2}{n-2} A_\rho  F^\rho_{\ \, \nu} \chi_\mu  \, \D S^{\mu\nu} \nonumber \\
+    & = & \Phi F_{\mu\nu} \, \D S^{\mu\nu}
+    + \frac{2}{n-2} A_\rho  F^\rho_{\ \, \nu}
+    (\underbrace{\chi_\mu \chi^\mu}_{0} k^\nu - \underbrace{\chi_\mu k^\mu}_{-1} \chi^\nu) \sqrt{q}\, \D^{n-2} x  \nonumber \\
+    & = & \Phi F_{\mu\nu} \, \D S^{\mu\nu}
+    + \frac{2}{n-2} A_\rho E^\rho \sqrt{q}\, \D^{n-2} x , \nonumber
+\eea
+where use has been made of expression~(\ref{e:sta:dS_chi_k}) for $\D S^{\mu\nu}$,
+of the null character of $\w{\chi}$ on $\Hor_k$ and of the definition (\ref{e:sta:def_elec_field}) of $\w{E}$. Since the latter obeys (\ref{e:sta:E_collin_chi}),
+we have $A_\rho E^\rho = \mu_0 \sigma A_\rho \chi^\rho = - \mu_0 \sigma \Phi$.
+Hence
+\[
+  \Omega_{\mu\nu} \, \D S^{\mu\nu} = \Phi\left( F_{\mu\nu}  \, \D S^{\mu\nu}
+  - \frac{2\mu_0}{n-2}  \sigma \sqrt{q}\, \D^{n-2} x \right) .
+\]
+Given that $\Phi$ is a constant $\Phi_{\Hor_k}$ on each $\Hor_k$ [Eq.~(\ref{e:sta:def_Phi_H})],
+the above expression yields
+\[
+    I =  \sum_{k=1}^K \Phi_{\Hor_k}
+    \Big(  \underbrace{\frac{1}{\mu_0} \int_{\Sp_k} F_{\mu\nu}  \, \D S^{\mu\nu}}_{2Q_{\Hor_k}}
+    -  \frac{2}{n-2}
+    \underbrace{\int_{\Sp_k}  \sigma \sqrt{q}\, \D^{n-2} x}_{Q_{\Hor_k}} \Big)
+    = \frac{2(n-3)}{n-2} \sum_{k=1}^K \Phi_{\Hor_k} Q_{\Hor_k} ,
+\]
+where we have used two expressions of the electric charge of
+$\Hor_k$ given by Eq.~(\ref{e:sta:Q_sigma}).
+In view of Eq.~(\ref{e:sta:Smarr_electrovac_prov}), the above value for $I$
+proves the Smarr formula (\ref{e:sta:Smarr_electrovac}).
 \end{proof}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
