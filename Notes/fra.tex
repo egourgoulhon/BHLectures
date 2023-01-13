@@ -571,7 +571,7 @@ Eq.~(\ref{e:fra:Einstein_eq_n}) with $\w{T}=0$:
 In the mathematical literature, a solution of Eq.~(\ref{e:fra:vac_Einstein_Lambda})
 is called an \defin{Einstein metric}\index{Einstein!metric}.
 The special case $\Lambda=0$ is called the
-\defin{vacuum Einstein equation}\index{Einstein!vacuum -- equation}\index{vacuum!Einstein equation}:
+\defin{vacuum Einstein equation}\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation}:
  \be \label{e:fra:vac_Einstein}
     \w{R}  = 0 .
 \ee
@@ -657,23 +657,25 @@ that obeys the Maxwell equations (\ref{e:fra:Maxwell}) with $\w{j} = 0$:
 \be
     \dd \w{F} = 0 \qand  \wnab\cdot\vvw{F}  = 0 .
 \ee
-
-The \defin{electrovacuum Einstein equation}\index{electrovacuum Einstein equation}\index{Einstein!equation!electrovacuum --} is the Einstein equation (\ref{e:fra:Einstein_eq})
-with $\w{T}$ being the energy-momentum tensor of a source-free electromagnetic field
-$\w{F}$:
+The energy-momentum tensor $\w{T}$ of a source-free electromagnetic field $\w{F}$ is
 \be \label{e:fra:T_em}
     T_{\alpha\beta} = \frac{1}{\mu_0} \left( F_{\mu\alpha} F^\mu_{\ \, \beta}
-        - \frac{1}{4} F_{\mu\nu} F^{\mu\nu} \, g_{\alpha\beta} \right) .
+        - \frac{1}{4} F_{\mu\nu} F^{\mu\nu} \, g_{\alpha\beta} \right) ,
 \ee
-The trace of $\w{T}$ with respect to $\w{g}$ is
+the trace of which with respect to $\w{g}$ is
 \be \label{e:fra:trace_T_em}
     T := g^{\mu\nu} T_{\mu\nu} = \frac{4 - n}{4\mu_0} F_{\mu\nu} F^{\mu\nu} .
 \ee
 \begin{remark}
 $T = 0$ only for $n=4$ (the standard spacetime dimension).
 \end{remark}
-
+The \defin{electrovacuum Einstein equation}\index{electrovacuum Einstein equation}\index{Einstein!equation!electrovacuum --} is the Einstein equation (\ref{e:fra:Einstein_eq_n})
+with $\Lambda=0$ and $\w{T}$ given by Eq.~(\ref{e:fra:T_em}); in view of Eq.~(\ref{e:fra:trace_T_em}), it writes
+\be \label{e:fra:electrovac_Einstein}
+    R_{\alpha\beta} = \frac{8\pi}{\mu_0} \left( F_{\mu\alpha} F^\mu_{\ \, \beta}
+        - \frac{1}{2(n-2)} F_{\mu\nu} F^{\mu\nu} \, g_{\alpha\beta} \right) .
+\ee
 A solution of the \defin{Einstein-Maxwell system}\index{Einstein-Maxwell system}
 is a triplet $(\M,\w{g},\w{F})$ such that  $(\M,\w{g})$ is a $n$-dimensional spacetime,
-$\w{F}$ is a source-free electromagnetic field on $\M$ and $\w{g}$ obeys the
-the electrovacuum Einstein equation with $\w{T}$ related to $\w{F}$ by Eq.~(\ref{e:fra:T_em}).
+$\w{F}$ is a source-free electromagnetic field on $\M$ and $(\w{g},\w{F})$ obeys the
+the electrovacuum Einstein equation (\ref{e:fra:electrovac_Einstein}).
