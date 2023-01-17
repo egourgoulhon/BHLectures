@@ -321,7 +321,7 @@ is a connected 2-manifold, but there exist
 4-dimensional stationary (actually static) spacetimes containing a black hole,
 the event horizon of which has
 disconnected cross-sections: these are the
-\emph{Majumdar-Papapetrou spacetimes}\index{Majumdar-Papapetrou black hole}
+\emph{Majumdar-Papapetrou spacetimes}\index{Majumdar-Papapetrou!black hole}
 \cite{Majum47,Papap47,HartlH72}. They are solutions of the
 electrovacuum Einstein equation (cf. Sec.~\ref{e:fra:electrovacuum})
 representing an arbitrary number of charged black holes,
@@ -1443,7 +1443,7 @@ that of a stationary black hole in a 4-dimensional spacetime, the event horizon
 is a connected hypersurface, i.e. it is reduced to a single connected component.
 However, we shall see that disconnected event horizons exist for some stationary
 black holes in 5-dimensional spacetimes as well as in 4 dimensions if one allows
-for some electric charge: they are Majumdar-Papapetrou black holes\index{Majumdar-Papapetrou black hole} mentioned in
+for some electric charge: they are Majumdar-Papapetrou black holes\index{Majumdar-Papapetrou!black hole} mentioned in
 Remark~\ref{r:sta:Majumdar_Papapetrou} in Sec.~\ref{s:sta:BH_stationary}.}
 $\Hor$ of the event horizon of a stationary black hole:
 either the Killing vector $\w{\xi}$ is null on all $\Hor$
@@ -2541,7 +2541,7 @@ and $L=1$ (single angular momentum) [their Eq.~(66)].
 \subsection{Uniqueness theorems for static black holes}
 
 \begin{prop}[Generalized Israel uniqueness theorem (vacuum)
-\index{Israel uniqueness theorem}]
+\index{Israel uniqueness theorem!vacuum}]
 \label{p:sta:Israel_uniqueness_thm}
 Let $(\M,\w{g})$ is a $n$-dimensional static and asymptotically flat spacetime
 containing a black hole of event horizon $\Hor$. If
@@ -2626,8 +2626,75 @@ $n\geq 4$ has been found by
 Frank Tangherlini\index{Tangherlini, F.R.} in 1963 \cite{Tangh63}.
 \end{hist}
 
+\begin{prop}[Generalized Israel uniqueness theorem ($n = 4$ electrovacuum)
+\index{Israel uniqueness theorem!electrovacuum}]
+\label{p:sta:Israel_uniq_electrovac_n4}
+Let $(\M,\w{g})$ is a $4$-dimensional static and asymptotically flat spacetime
+endowed with an electromagnetic field $\w{F}$
+such that
+$(\w{g},\w{F})$ fulfills the electrovacuum Einstein equation\index{Einstein!equation!electrovacuum --}\index{electrovacuum Einstein equation} (\ref{e:fra:electrovac_Einstein}).
+If $(\M,\w{g})$ contains a black hole, then the domain of outer communications $\langle\langle \M\rangle\rangle$ is isometric
+to the the domain of outer communications of (i) a Reissner-Nordström black hole or (ii) a Majumdar-Papapetrou black hole.
+The \defin{Reissner-Nordström black hole}\index{Reissner-Nordström!spacetime} is defined by the event horizon being connected and
+the existence of a
+coordinate system $(t,r,\th,\ph)$ on $\langle\langle \M\rangle\rangle$ such
+that
+\bea
+    \w{g} & = & -\left( 1 - \frac{2 m}{r} + \frac{\mu_0}{4\pi} \frac{Q^2 + P^2}{r^2} \right)\, \dd t^2
+    + \left( 1 - \frac{2 m}{r} + \frac{\mu_0}{4\pi} \frac{Q^2 + P^2}{r^2} \right) ^{-1}\, \dd r^2
+    \nonumber \\
+    & & + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \label{e:sta:ReiNor_n4}
+\eea
+and
+\be
+    \w{F} = - \frac{\mu_0}{4\pi} \left( \frac{Q}{r^2}\,  \dd t \wedge \dd r
+     + P \sin\th \, \dd \th \wedge\dd \ph \right) .  \label{e:sta:F_ReiNor_n4}
+\ee
+The three constants $m$, $Q$ and $P$ are respectively the Komar mass at infinity
+(or ADM mass), $Q$ the black hole electric charge (cf. Property~\ref{p:sta:electric_charge})
+and $P$ its magnetic monopole charge (cf. remark below); they fulfill
+$\sqrt{Q^2 + P^2} \leq \sqrt{\frac{4\pi}{\mu_0}}\, m$.
+The \defin{Majumdar-Papapetrou black hole}\index{Majumdar-Papapetrou!black hole} is defined by the event horizon being disconnected, with $K\geq 2$ connected components
+$(\Hor_k)_{1\leq k \leq K}$, which are all
+degenerate Killing horizons,
+and the existence of a
+coordinate system $(t,x,y,z)$ on $\langle\langle \M\rangle\rangle$ such that
+\be \label{e:sta:MajPap_n4}
+    \w{g} = - U^{-2} \dd t^2 + U^2 (\dd x^2 + \dd y^2 + \dd z^2)
+    \qand
+    \w{F} = \pm \sqrt{\frac{\mu_0}{4\pi}} U^{-2} \dd U \wedge \dd t,
+\ee
+where
+\be  \label{e:sta:U_MajPap_n4}
+    U := 1 + \sum_{k=1}^K \frac{\mu_k}{\sqrt{(x - x_k)^2 + (y - y_k)^2 + (z - z_k)^2}} .
+\ee
+This solution is characterized by $K$ constants $\mu_k$, which can be interpreted
+as the mass of each ``black hole'' for widely separated configurations,
+and $3K$ constants $(x_k, y_k, z_k)$, which are the locations in the $(x,y,z)$ coordinate
+system of the $K$ degenerate Killing horizons $\Hor_k$.
+Note that each $(x_k, y_k, z_k)$ correspond to
+a coordinate singularity of the $(t,x,y,z)$ system, so that $\Hor_k$ appears as the
+curve $(t,x,y,z) = (t,x_k, y_k, z_k)$, while it is actually a hypersurface. The electric
+charge $Q_k$ of $\Hor_k$ is proportional to $\mu_k$:
+\be
+    Q_k = \pm \sqrt{\frac{4\pi}{\mu_0}} \mu_k ,
+\ee
+where the $\pm$ sign is the same as in
+expression (\ref{e:sta:MajPap_n4}) for $\w{F}$; in particular it must be the same
+for all the components $\Hor_k$'s, i.e. the charges $Q_k$ are either all positive or all negative.
+\end{prop}
+
+\begin{remark}
+The Majumdar-Papapetrou metric (\ref{e:sta:MajPap_n4})-(\ref{e:sta:U_MajPap_n4})
+with $K=1$ is still a valid static solution of the electrovacuum Einstein equation. It is
+actually a member of the first family given by the uniqueness theorem, namely
+the Reissner-Nordström one. More precisely, it is a \defin{extremal Reissner-Nordström
+spacetime}, i.e. a solution (\ref{e:sta:ReiNor_n4})-(\ref{e:sta:F_ReiNor_n4}) for which $Q = \sqrt{4\pi/\mu_0} \, m$ and $P=0$, or equivalently a
+Reissner-Nordström solution with a degenerate event horizon.
+\end{remark}
+
 \begin{prop}[Generalized Israel uniqueness theorem ($n\geq 5$ electrovacuum)
-\index{Israel uniqueness theorem}]
+\index{Israel uniqueness theorem!electrovacuum}]
 \label{p:sta:Israel_uniq_electrovac_n5}
 Let $(\M,\w{g})$ is a $n$-dimensional static and asymptotically flat spacetime
 endowed with an electromagnetic field $\w{F}$ and
