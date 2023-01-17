@@ -2558,12 +2558,12 @@ $\ph\in (0, 2\pi)$ and
 \be \label{e:sta:Schwarz_Tang}
     \w{g} = - \left( 1 - \frac{\mu}{r^{n-3}} \right) \, \dd t^2
     +  \left( 1 - \frac{\mu}{r^{n-3}} \right) ^{-1} \, \dd r^2
-    + r^2 \w{q} ,
+    + r^2 \overset{\circ}{\w{q}},
 \ee
-where $\w{q}$ is the standard round metric\footnote{
-$\w{q} = \dd\th_1^2 + \sin^2\th_1 \dd\ph^2$ for $n=4$,
-$\w{q} =  \dd\th_1^2 + \sin^2\th_1( \dd\th_2^2 + \sin^2\th_2 \dd\ph^2 )$
-for $n=5$, etc.}
+where $\overset{\circ}{\w{q}}$ is the standard round metric\footnote{for $n=4$,
+$\overset{\circ}{\w{q}} = \dd\th_1^2 + \sin^2\th_1 \dd\ph^2$; for $n=5$,
+$\overset{\circ}{\w{q}} =  \dd\th_1^2 + \sin^2\th_1( \dd\th_2^2 + \sin^2\th_2 \dd\ph^2 )$;
+etc.}
 on the unit sphere $\SS^{n-2}$, which is
 spanned by the coordinates $(\th_1,\ldots,\th_{n-3},\ph)$,
 and the constant $\mu>0$ is related to the spacetime Komar (or ADM, cf. Property~\ref{p:sta:Komar_ADM_mass}) mass $M$ by
@@ -2685,6 +2685,32 @@ for all the components $\Hor_k$'s, i.e. the charges $Q_k$ are either all positiv
 \end{prop}
 
 \begin{remark}
+At the level of elementary particles, a
+\defin{magnetic monopole}\index{magnetic!monopole}
+is a particle that
+generates the radial magnetic field $\w{B} = \mu_0 q_{\rm m}/(4\pi r^2)) \wpar_r$
+in its inertial rest frame, where $q_{\rm m}$ is the magnetic charge.
+Although predicted by
+some grand unified theories and string theories, no magnetic monopole has
+been detected ever and standard electromagnetism postulates that magnetic monopoles
+do not exist. From a formal point of view, magnetic monopoles would
+render the Maxwell equations more symmetric, since instead of Eq.~(\ref{e:fra:Maxwell_forms}),
+they would write
+\be
+    \dd \w{F} =  \mu_0\, \star\!\uu{j}_{\rm m}
+     \qand \dd\star\!\w{F} = \mu_0\, \star\!\uu{j} ,
+\ee
+where $\uu{j}_{\rm m}$ is the magnetic current density 1-form, which describes
+the distribution of magnetic monopoles.
+In the black hole framework, we are considering the source-free Maxwell equations
+$\dd \w{F} = 0$ and $\dd\star\!\w{F} = 0$, which are perfectly symmetric
+in terms of $\w{F}$ and $\star\!\w{F}$. As the Reissner-Nordström solution
+(\ref{e:sta:ReiNor_n4})-(\ref{e:sta:F_ReiNor_n4}) shows, a black hole with a non-vanishing
+magnetic monopole charge can exist even if magnetic monopoles are excluded
+as elementary particles.
+\end{remark}
+
+\begin{remark}
 The Majumdar-Papapetrou metric (\ref{e:sta:MajPap_n4})-(\ref{e:sta:U_MajPap_n4})
 with $K=1$ is still a valid static solution of the electrovacuum Einstein equation. It is
 actually a member of the first family given by the uniqueness theorem, namely
@@ -2706,21 +2732,24 @@ containing a black hole of event horizon $\Hor$. If
 (i.e. have non-zero surface gravity),
 \end{itemize}
 then the domain of outer communications $\langle\langle \M\rangle\rangle$ of $(\M,\w{g})$ is isometric
-to the domain of outer communications of a $n$-dimensional Reissner-Nordström spacetime\index{Reissner-Nordström!spacetime} with vanishing magnetic monopole, i.e. there exists a coordinate system
+to the domain of outer communications of a $n$-dimensional Reissner-Nordström spacetime\index{Reissner-Nordström!spacetime} with vanishing magnetic monopole, i.e. there exists a coordinate system ... TBC ...
 \end{prop}
 
 \subsection{The no-hair theorem}
 
 In dimension $n=4$, one can go much further then just claiming that the
 event horizon of a stationary black hole must be a Killing horizon (Sec.~\ref{s:sta:EH_KH}).
-One has indeed the \defin{Carter-Robinson theorem}\index{Carter-Robinson theorem}
-(Carter\index{Carter, B.} 1971 \cite{Carte71}, Robinson\index{Robinson, D.C.} 1975 \cite{Robin75}):
-any stationary and axisymmetric 4-dimensional asymptotically flat
+One has indeed the
+\begin{prop}[Carter-Robinson theorem
+\textnormal{(Carter\index{Carter, B.} 1971 \cite{Carte71}, Robinson\index{Robinson, D.C.} 1975 \cite{Robin75})}]
+\index{Carter-Robinson theorem}
+Any stationary and axisymmetric 4-dimensional asymptotically flat
 black hole spacetime $(\M,\w{g})$ that is
 solution of the vacuum Einstein equation (\ref{e:fra:vac_Einstein}) with a connected regular
 event horizon $\Hor$ and no closed timelike curve outside it
 has a domain of outer communications that is isometric
 to the domain of outer communications of the Kerr spacetime.
+\end{prop}
 
 \begin{remark}
 In their original works, Carter and Robinson assumed that $\Hor$ is a
