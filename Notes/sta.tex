@@ -2648,16 +2648,17 @@ that
 and
 \be
     \w{F} = - \frac{\mu_0}{4\pi} \left( \frac{Q}{r^2}\,  \dd t \wedge \dd r
-     + P \sin\th \, \dd \th \wedge\dd \ph \right) .  \label{e:sta:F_ReiNor_n4}
+     + P \sin\th \, \dd \th \wedge\dd \ph \right) , \label{e:sta:F_ReiNor_n4}
 \ee
-The three constants $m$, $Q$ and $P$ are respectively the Komar mass at infinity
-(or ADM mass), $Q$ the black hole electric charge (cf. Property~\ref{p:sta:electric_charge})
-and $P$ its magnetic monopole charge (cf. remark below); they fulfill
+where $m$ is the Komar mass at infinity
+(or ADM mass), $Q$ is the black hole electric charge (cf. Property~\ref{p:sta:electric_charge})
+and $P$ is its magnetic monopole charge (cf. Remark~\ref{r:sta:magnetic_monopole} below).
+The three constants $m$, $Q$ and $P$ must fulfill
 $\sqrt{Q^2 + P^2} \leq \sqrt{\frac{4\pi}{\mu_0}}\, m$.
-The \defin{Majumdar-Papapetrou black hole}\index{Majumdar-Papapetrou!black hole} is defined by the event horizon being disconnected, with $K\geq 2$ connected components
+The \defin{Majumdar-Papapetrou black hole}\index{Majumdar-Papapetrou!black hole} is defined by (i) the event horizon being disconnected, with $K\geq 2$ connected components
 $(\Hor_k)_{1\leq k \leq K}$, which are all
 degenerate Killing horizons,
-and the existence of a
+and (ii) the existence of a
 coordinate system $(t,x,y,z)$ on $\langle\langle \M\rangle\rangle$ such that
 \be \label{e:sta:MajPap_n4}
     \w{g} = - U^{-2} \dd t^2 + U^2 (\dd x^2 + \dd y^2 + \dd z^2)
@@ -2669,10 +2670,9 @@ where
     U := 1 + \sum_{k=1}^K \frac{\mu_k}{\sqrt{(x - x_k)^2 + (y - y_k)^2 + (z - z_k)^2}} .
 \ee
 This solution is characterized by $K$ constants $\mu_k$, which can be interpreted
-as the mass of each ``black hole'' for widely separated configurations,
-and $3K$ constants $(x_k, y_k, z_k)$, which are the locations in the $(x,y,z)$ coordinate
-system of the $K$ degenerate Killing horizons $\Hor_k$.
-Note that each $(x_k, y_k, z_k)$ correspond to
+as the masses of each component $\Hor_k$ for widely separated configurations,
+and $3K$ constants $(x_k, y_k, z_k)$, which are the coordinate locations of the $K$ degenerate Killing horizons $\Hor_k$.
+Note that each $(x_k, y_k, z_k)$ corresponds to
 a coordinate singularity of the $(t,x,y,z)$ system, so that $\Hor_k$ appears as the
 curve $(t,x,y,z) = (t,x_k, y_k, z_k)$, while it is actually a hypersurface. The electric
 charge $Q_k$ of $\Hor_k$ is proportional to $\mu_k$:
@@ -2684,11 +2684,11 @@ expression (\ref{e:sta:MajPap_n4}) for $\w{F}$; in particular it must be the sam
 for all the components $\Hor_k$'s, i.e. the charges $Q_k$ are either all positive or all negative.
 \end{prop}
 
-\begin{remark}
+\begin{remark} \label{r:sta:magnetic_monopole}
 At the level of elementary particles, a
 \defin{magnetic monopole}\index{magnetic!monopole}
 is a particle that
-generates the radial magnetic field $\w{B} = \mu_0 q_{\rm m}/(4\pi r^2)) \wpar_r$
+generates the radial magnetic field $\w{B} = \mu_0 q_{\rm m}/(4\pi r^2) \wpar_r$
 in its inertial rest frame, where $q_{\rm m}$ is the magnetic charge.
 Although predicted by
 some grand unified theories and string theories, no magnetic monopole has
@@ -2700,23 +2700,33 @@ they would write
     \dd \w{F} =  \mu_0\, \star\!\uu{j}_{\rm m}
      \qand \dd\star\!\w{F} = \mu_0\, \star\!\uu{j} ,
 \ee
-where $\uu{j}_{\rm m}$ is the magnetic current density 1-form, which describes
-the distribution of magnetic monopoles.
-In the black hole framework, we are considering the source-free Maxwell equations
+where $\uu{j}_{\rm m}$ is the 1-form associated to the magnetic current density vector
+$\w{j}_{\rm m}$, which describes
+the distribution of elementary magnetic monopoles.
+In the electrovacuum black hole framework, we are considering the source-free Maxwell equations
 $\dd \w{F} = 0$ and $\dd\star\!\w{F} = 0$, which are perfectly symmetric
 in terms of $\w{F}$ and $\star\!\w{F}$. As the Reissner-Nordström solution
 (\ref{e:sta:ReiNor_n4})-(\ref{e:sta:F_ReiNor_n4}) shows, a black hole with a non-vanishing
 magnetic monopole charge can exist even if magnetic monopoles are excluded
-as elementary particles.
+as elementary particles, i.e. even if $\w{j}_{\rm m}  = 0$.
+\end{remark}
+
+\begin{remark}
+The constraint $\sqrt{Q^2 + P^2} \leq \sqrt{\frac{4\pi}{\mu_0}}\, m$ in the
+Reissner-Nordström case enforces the existence of a black hole. If one relaxes
+it, Eqs.~(\ref{e:sta:ReiNor_n4})-(\ref{e:sta:F_ReiNor_n4}) still define a valid
+solution of the electrovacuum Einstein equation, but it corresponds to a
+naked singularity\index{naked singularity}, not to a black hole.
 \end{remark}
 
 \begin{remark}
 The Majumdar-Papapetrou metric (\ref{e:sta:MajPap_n4})-(\ref{e:sta:U_MajPap_n4})
 with $K=1$ is still a valid static solution of the electrovacuum Einstein equation. It is
 actually a member of the first family given by the uniqueness theorem, namely
-the Reissner-Nordström one. More precisely, it is a \defin{extremal Reissner-Nordström
+the Reissner-Nordström one. More precisely, it is an \defin{extremal Reissner-Nordström
+spacetime}\index{extremal!Reissner-Nordström
 spacetime}, i.e. a solution (\ref{e:sta:ReiNor_n4})-(\ref{e:sta:F_ReiNor_n4}) for which $Q = \sqrt{4\pi/\mu_0} \, m$ and $P=0$, or equivalently a
-Reissner-Nordström solution with a degenerate event horizon.
+Reissner-Nordström solution with $P=0$ and a degenerate event horizon.
 \end{remark}
 
 \begin{prop}[Generalized Israel uniqueness theorem ($n\geq 5$ electrovacuum)
@@ -2732,7 +2742,26 @@ containing a black hole of event horizon $\Hor$. If
 (i.e. have non-zero surface gravity),
 \end{itemize}
 then the domain of outer communications $\langle\langle \M\rangle\rangle$ of $(\M,\w{g})$ is isometric
-to the domain of outer communications of a $n$-dimensional Reissner-Nordström spacetime\index{Reissner-Nordström!spacetime} with vanishing magnetic monopole, i.e. there exists a coordinate system ... TBC ...
+to the domain of outer communications of a $n$-dimensional Reissner-Nordström spacetime\index{Reissner-Nordström!spacetime} with vanishing magnetic monopole, i.e. there exists a coordinate system
+$(t,r,\th_1,\ldots,\th_{n-3},\ph)$ on $\langle\langle \M\rangle\rangle$ such that
+$t\in\R$, $r\in (r_{\Hor},+\infty)$, $\th_i \in (0,\pi)\ (1\leq i \leq n-3)$,
+$\ph\in (0, 2\pi)$ and
+\be \label{e:sta:ReissnerN_Tang}
+    \w{g} = - \left( 1 - \frac{\mu}{r^{n-3}} + \frac{q^2}{r^{2(n-3)}} \right) \, \dd t^2
+    +  \left( 1 - \frac{\mu}{r^{n-3}} + \frac{q^2}{r^{2(n-3)}}  \right) ^{-1} \, \dd r^2
+    + r^2 \overset{\circ}{\w{q}},
+\ee
+where $\overset{\circ}{\w{q}}$ is the standard round metric on
+the unit sphere $\SS^{n-2}$, which is
+spanned by the coordinates $(\th_1,\ldots,\th_{n-3},\ph)$,
+and the constants $\mu>0$ and $q\geq 0$ are related to the Komar mass at infinity (or ADM mass)
+$M$ and electric charge $Q$ by
+\be
+    \mu = \frac{16\pi M}{(n-2) \Omega_{n-2}}
+    \qand
+    q^2 = \frac{8\pi \mu_0 Q^2}{(n-2)(n-3) \Omega_{n-2}^2} ,
+\ee
+where $\Omega_{n-2}$ is the area of $\SS^{n-2}$ (cf. Property~\ref{p:sta:Israel_uniqueness_thm})
 \end{prop}
 
 \subsection{The no-hair theorem}
