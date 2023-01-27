@@ -2635,17 +2635,17 @@ The \defin{Reissner-Nordström black hole}\index{Reissner-Nordström!spacetime} 
 the existence of a
 coordinate system $(t,r,\th,\ph)$ on $\langle\langle \M\rangle\rangle$ such
 that
-\bea
-    \w{g} & = & -\left( 1 - \frac{2 M}{r} + \frac{\mu_0}{4\pi} \frac{Q^2 + P^2}{r^2} \right) \dd t^2
+\begin{subequations}
+\label{e:sta:ReiNor_n4}
+\begin{align}
+    \w{g}  = & -\left( 1 - \frac{2 M}{r} + \frac{\mu_0}{4\pi} \frac{Q^2 + P^2}{r^2} \right) \dd t^2
     + \left( 1 - \frac{2 M}{r} + \frac{\mu_0}{4\pi} \frac{Q^2 + P^2}{r^2} \right) ^{-1} \dd r^2
     \nonumber \\
-    & & + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \label{e:sta:g_ReiNor_n4}
-\eea
-and
-\be
-    \w{F} = - \frac{\mu_0}{4\pi} \left( \frac{Q}{r^2}\,  \dd t \wedge \dd r
+    &  + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \label{e:sta:g_ReiNor_n4} \\
+    \w{F}  = & - \frac{\mu_0}{4\pi} \left( \frac{Q}{r^2}\,  \dd t \wedge \dd r
      + P \sin\th \, \dd \th \wedge\dd \ph \right) , \label{e:sta:F_ReiNor_n4}
-\ee
+\end{align}
+\end{subequations}
 where $M$ is the Komar mass at infinity
 (or ADM mass), $Q$ is the black hole electric charge (cf. Property~\ref{p:sta:electric_charge})
 and $P$ is its magnetic monopole charge (cf. Remark~\ref{r:sta:magnetic_monopole} below).
@@ -2656,15 +2656,16 @@ $(\Hor_k)_{1\leq k \leq K}$, which are all
 degenerate Killing horizons,
 and (ii) the existence of a
 coordinate system $(t,x,y,z)$ on $\langle\langle \M\rangle\rangle$ such that
-\be \label{e:sta:MajPap_n4}
-    \w{g} = - U^{-2} \dd t^2 + U^2 (\dd x^2 + \dd y^2 + \dd z^2)
-    \qand
+\begin{subequations}
+\label{e:sta:MajPap_n4}
+\begin{align}
+    & \w{g} = - U^{-2} \dd t^2 + U^2 (\dd x^2 + \dd y^2 + \dd z^2),
+    \qquad
     \w{F} = \pm \sqrt{\frac{\mu_0}{4\pi}} U^{-2} \dd U \wedge \dd t,
-\ee
-where
-\be  \label{e:sta:U_MajPap_n4}
-    U := 1 + \sum_{k=1}^K \frac{\mu_k}{\sqrt{(x - x_k)^2 + (y - y_k)^2 + (z - z_k)^2}} .
-\ee
+                \label{e:sta:MajPap_n4_g_F} \\
+    & U := 1 + \sum_{k=1}^K \frac{\mu_k}{\sqrt{(x - x_k)^2 + (y - y_k)^2 + (z - z_k)^2}} .
+\end{align}
+\end{subequations}
 This solution is characterized by $K$ constants $\mu_k$, which can be interpreted
 as the masses of each component $\Hor_k$ for widely separated configurations,
 and $3K$ constants $(x_k, y_k, z_k)$, which are the coordinate locations of the $K$ degenerate Killing horizons $\Hor_k$.
@@ -2676,7 +2677,7 @@ charge $Q_k$ of $\Hor_k$ is proportional to $\mu_k$:
     Q_k = \pm \sqrt{\frac{4\pi}{\mu_0}} \mu_k ,
 \ee
 where the $\pm$ sign is the same as in
-expression (\ref{e:sta:MajPap_n4}) for $\w{F}$; in particular it must be the same
+expression (\ref{e:sta:MajPap_n4_g_F}) for $\w{F}$; in particular it must be the same
 for all the components $\Hor_k$, i.e. the charges $Q_k$ are either all positive or all negative.
 \end{prop}
 
@@ -2702,7 +2703,7 @@ the distribution of elementary magnetic monopoles.
 In the electrovacuum black hole framework, we are considering the source-free Maxwell equations
 $\dd \w{F} = 0$ and $\dd\star\!\w{F} = 0$, which are perfectly symmetric
 in terms of $\w{F}$ and $\star\!\w{F}$. As the Reissner-Nordström solution
-(\ref{e:sta:g_ReiNor_n4})-(\ref{e:sta:F_ReiNor_n4}) shows, a black hole with a non-vanishing
+(\ref{e:sta:ReiNor_n4}) shows, a black hole with a non-vanishing
 magnetic monopole charge can exist even if magnetic monopoles are excluded
 as elementary particles, i.e. even if $\w{j}_{\rm m}  = 0$.
 \end{remark}
@@ -2710,25 +2711,25 @@ as elementary particles, i.e. even if $\w{j}_{\rm m}  = 0$.
 \begin{remark}
 The constraint $\sqrt{Q^2 + P^2} \leq \sqrt{\frac{4\pi}{\mu_0}}\, M$ in the
 Reissner-Nordström case enforces the existence of a black hole. If one relaxes
-it, Eqs.~(\ref{e:sta:g_ReiNor_n4})-(\ref{e:sta:F_ReiNor_n4}) still define a valid
+it, Eqs.~(\ref{e:sta:ReiNor_n4}) still define a valid
 solution of the electrovacuum Einstein equation, but it corresponds to a
 naked singularity\index{naked singularity}, not to a black hole.
 \end{remark}
 
 \begin{remark}
-The Majumdar-Papapetrou metric (\ref{e:sta:MajPap_n4})-(\ref{e:sta:U_MajPap_n4})
+The Majumdar-Papapetrou solution (\ref{e:sta:MajPap_n4})
 with $K=1$ is still a valid static solution of the electrovacuum Einstein equation. It is
 actually a member of the first family given by the uniqueness theorem, namely
 the Reissner-Nordström one. More precisely, it is an \defin{extremal Reissner-Nordström
 spacetime}\index{extremal!Reissner-Nordström
-spacetime}, i.e. a solution (\ref{e:sta:g_ReiNor_n4})-(\ref{e:sta:F_ReiNor_n4}) for which $|Q| = \sqrt{4\pi/\mu_0} \, M$ and $P=0$, or equivalently a
+spacetime}, i.e. a solution (\ref{e:sta:ReiNor_n4}) for which $|Q| = \sqrt{4\pi/\mu_0} \, M$ and $P=0$, or equivalently a
 Reissner-Nordström solution with $P=0$ and a degenerate event horizon.
 To see this, it suffices to choose $(x_1,y_1,z_1) = (0,0,0)$, to move from
 coordinates $(x,y,z)$ to spherical coordinates $(\bar{r},\th,\ph)$ via the standard formulas
 (in particular $\bar{r}^2 = x^2 + y^2 + z^2$) and to introduce a new radial coordinate
 $r := \bar{r} + \mu_1$. Then $U = r/(r-\mu_1)$ and the Majumdar-Papapetrou solution
-(\ref{e:sta:MajPap_n4})-(\ref{e:sta:U_MajPap_n4}) coincides with the
-Reissner-Nordström solution (\ref{e:sta:g_ReiNor_n4})-(\ref{e:sta:F_ReiNor_n4})
+(\ref{e:sta:MajPap_n4}) coincides with the
+Reissner-Nordström solution (\ref{e:sta:ReiNor_n4})
 with $M = \mu_1$,  $Q=\pm\sqrt{4\pi/\mu_0} \, \mu_1$ and $P=0$.
 \end{remark}
 
@@ -2752,14 +2753,15 @@ This means that there exists a coordinate system
 $(t,r,\th_1,\ldots,\th_{n-3},\ph)$ on $\langle\langle \M\rangle\rangle$ such that
 $t\in\R$, $r\in (r_{\Hor},+\infty)$, $\th_i \in (0,\pi)\ (1\leq i \leq n-3)$,
 $\ph\in (0, 2\pi)$ and
-\be \label{e:sta:g_ReiNorTang}
-    \w{g} = - \left( 1 - \frac{\mu}{r^{n-3}} + \frac{q^2}{r^{2(n-3)}} \right) \dd t^2
+\begin{subequations}
+\label{e:sta:ReiNorTang}
+\begin{align}
+    \w{g} & = - \left( 1 - \frac{\mu}{r^{n-3}} + \frac{q^2}{r^{2(n-3)}} \right) \dd t^2
     +  \left( 1 - \frac{\mu}{r^{n-3}} + \frac{q^2}{r^{2(n-3)}}  \right) ^{-1} \dd r^2
-    + r^2 \overset{\circ}{\w{q}},
-\ee
-\be  \label{e:sta:F_ReiNorTang}
-       \w{F} = - \frac{\mu_0}{\Omega_{n-2}} \frac{Q}{r^{n-2}} \,  \dd t \wedge \dd r ,
-\ee
+    + r^2 \overset{\circ}{\w{q}}, \\
+    \w{F} & = - \frac{\mu_0}{\Omega_{n-2}} \frac{Q}{r^{n-2}} \,  \dd t \wedge \dd r ,
+\end{align}
+\end{subequations}
 where $\overset{\circ}{\w{q}}$ is the standard round metric on
 the unit sphere $\SS^{n-2}$, which is
 spanned by the coordinates $(\th_1,\ldots,\th_{n-3},\ph)$,
@@ -2775,15 +2777,14 @@ where $\Omega_{n-2}$ is the area of $\SS^{n-2}$ (cf. Property~\ref{p:sta:Israel_
 \end{prop}
 
 \begin{example}
-For $n=5$, $\Omega_{n-2} = \Omega_3 = 2\pi^2$ and Eqs.~(\ref{e:sta:g_ReiNorTang})-(\ref{e:sta:F_ReiNorTang}) become
-\[
-    \w{g} =  - \left( 1 - \frac{\mu}{r^2} + \frac{q^2}{r^{4}} \right)  \dd t^2
+For $n=5$, $\Omega_{n-2} = \Omega_3 = 2\pi^2$ and Eq.~(\ref{e:sta:ReiNorTang}) become
+\begin{align}
+    \w{g} & =  - \left( 1 - \frac{\mu}{r^2} + \frac{q^2}{r^{4}} \right)  \dd t^2
     +  \left( 1 - \frac{\mu}{r^{2}} + \frac{q^2}{r^{4}}  \right) ^{-1} \dd r^2
-    + r^2 \left[ \dd\th_1^2 + \sin^2\th_1( \dd\th_2^2 + \sin^2\th_2 \dd\ph^2 ) \right] .
-\]
-\[
-    \w{F} = - \frac{\mu_0}{2\pi^2} \frac{Q}{r^3} \,  \dd t \wedge \dd r ,
-\]
+    + r^2 \left[ \dd\th_1^2 + \sin^2\th_1( \dd\th_2^2 + \sin^2\th_2 \dd\ph^2 ) \right]
+        \nonumber \\
+    \w{F} & = - \frac{\mu_0}{2\pi^2} \frac{Q}{r^3} \,  \dd t \wedge \dd r , \nonumber
+\end{align}
 with
 \[
     \mu = \frac{8 M}{3\pi}
@@ -2793,16 +2794,14 @@ with
 \end{example}
 
 \begin{hist}
-The Reissner-Nordström solution (\ref{e:sta:g_ReiNor_n4})-(\ref{e:sta:F_ReiNor_n4})
+The Reissner-Nordström solution (\ref{e:sta:ReiNor_n4})
 of the Einstein-Maxwell system with a vanishing magnetic monopole ($P=0$) has been found independently by Hans Reissner\index{Reissner, H.}
 in 1916 \cite{Reiss1916}, Hermann Weyl\index{Weyl, H.} in 1917 \cite{Weyl1917}
 and Gunnar Nordström\index{Nordström, G.} in 1918 \cite{Nords1918}.
 The generalization to $P\neq 0$ can be found in Brandon Carter's\index{Carter, B.}
 lecture at Les Houches (1972) \cite{Carte73a}.
-The generalization to dimensions $n > 4$ with $P=0$, i.e. the solution
-(\ref{e:sta:g_ReiNorTang})-(\ref{e:sta:F_ReiNorTang}),
-has been obtained by
-Frank Tangherlini\index{Tangherlini, F.R.} in 1963 \cite{Tangh63}.
+The generalization to dimensions $n > 4$ with $P=0$, i.e. the solution (\ref{e:sta:ReiNorTang}),
+has been obtained by Frank Tangherlini\index{Tangherlini, F.R.} in 1963 \cite{Tangh63}.
 \end{hist}
 
 
