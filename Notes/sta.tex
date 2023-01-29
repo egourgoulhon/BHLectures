@@ -2543,15 +2543,15 @@ and $L=1$ (single angular momentum) [their Eq.~(66)].
 \begin{prop}[Generalized Israel uniqueness theorem (vacuum)
 \index{Israel uniqueness theorem!vacuum}]
 \label{p:sta:Israel_uniqueness_thm}
-Let $(\M,\w{g})$ is a $n$-dimensional static and asymptotically flat spacetime
-containing a black hole of event horizon $\Hor$. If
+Let $(\M,\w{g})$ be a $n$-dimensional static and asymptotically flat spacetime
+with $n\geq 4$ and containing a black hole of event horizon $\Hor$. If
 \begin{itemize}
 \item $\w{g}$ fulfills the vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation} (\ref{e:fra:vac_Einstein}),
 \item $n=4$ or all the connected components of $\Hor$ are non-degenerate
 (i.e. have non-zero surface gravity),
 \end{itemize}
 then the domain of outer communications $\langle\langle \M\rangle\rangle$ of $(\M,\w{g})$ is isometric
-to the domain of outer communications of a \defin{$n$-dimensional Schwarzschild spacetime}\index{Schwarzschild!spacetime}, also known as a \defin{Schwarzschild-Tangherlini spacetime}\index{Schwarzschild-Tangherlini spacetime}. This means that there exists a coordinate system
+to the domain of outer communications of a \defin{$\bm{n}$-dimensional Schwarzschild spacetime}\index{Schwarzschild!spacetime}, also known as a \defin{Schwarzschild-Tangherlini spacetime}\index{Schwarzschild-Tangherlini spacetime}. This means that there exists a coordinate system
 $(t,r,\th_1,\ldots,\th_{n-3},\ph)$ on $\langle\langle \M\rangle\rangle$ such that
 $t\in\R$, $r\in (\mu,+\infty)$, $\th_i \in (0,\pi)\ (1\leq i \leq n-3)$,
 $\ph\in (0, 2\pi)$ and
@@ -2565,14 +2565,13 @@ $\overset{\circ}{\w{q}} = \dd\th_1^2 + \sin^2\th_1 \dd\ph^2$; for $n=5$,
 $\overset{\circ}{\w{q}} =  \dd\th_1^2 + \sin^2\th_1( \dd\th_2^2 + \sin^2\th_2 \dd\ph^2 )$;
 etc.}
 on the unit sphere $\SS^{n-2}$, which is
-spanned by the coordinates $(\th_1,\ldots,\th_{n-3},\ph)$,
+spanned by $(\th_1,\ldots,\th_{n-3},\ph)$,
 and the constant $\mu>0$ is related to the spacetime Komar mass (or ADM mass, cf. Property~\ref{p:sta:Komar_ADM_mass}) $M$ by
 \be
     \mu = \frac{16\pi M}{(n-2) \Omega_{n-2}} .
 \ee
 $\Omega_{n-2}$ is the area of $\SS^{n-2}$ and is given by the formula
-$\Omega_{n-2} = 2\pi^{(n-1)/2}/\Gamma((n-1)/2)$, which involves the
-gamma function\index{gamma function}: $\Gamma(x) := \int_0^{+\infty} t^{x-1} e^{-t} \D t$,
+$\Omega_{n-2} = 2\pi^{(n-1)/2}/\Gamma((n-1)/2)$, with $\Gamma(x) := \int_0^{+\infty} t^{x-1} e^{-t} \D t$,
 so that $\Omega_2 = 4\pi$, $\Omega_3 = 2\pi^2$ and $\Omega_4 = 8\pi^2/3$,
 yielding $\mu = 2 M$ for $n=4$, $\mu = 8M/(3\pi)$ for $n=5$ and
 $\mu = 3M/(2\pi)$ for $n=6$. In particular, the event horizon $\Hor$ is
@@ -2625,7 +2624,7 @@ Frank Tangherlini\index{Tangherlini, F.R.} in 1963 \cite{Tangh63}.
 \begin{prop}[Generalized Israel uniqueness theorem ($n = 4$ electrovacuum)
 \index{Israel uniqueness theorem!electrovacuum}]
 \label{p:sta:Israel_uniq_electrovac_n4}
-Let $(\M,\w{g})$ is a $4$-dimensional static and asymptotically flat spacetime
+Let $(\M,\w{g})$ be a 4-dimensional static and asymptotically flat spacetime
 endowed with an electromagnetic field $\w{F}$
 such that
 $(\w{g},\w{F})$ fulfills the electrovacuum Einstein equation\index{Einstein!equation!electrovacuum --}\index{electrovacuum Einstein equation} (\ref{e:fra:electrovac_Einstein}).
@@ -2643,7 +2642,7 @@ that
     \nonumber \\
     &  + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \label{e:sta:g_ReiNor_n4} \\
     \w{F}  = & - \frac{\mu_0}{4\pi} \left( \frac{Q}{r^2}\,  \dd t \wedge \dd r
-     + P \sin\th \, \dd \th \wedge\dd \ph \right) , \label{e:sta:F_ReiNor_n4}
+     - P \sin\th \, \dd \th \wedge\dd \ph \right) , \label{e:sta:F_ReiNor_n4}
 \end{align}
 \end{subequations}
 where $M$ is the Komar mass at infinity
@@ -2680,17 +2679,21 @@ where the $\pm$ sign is the same as in
 expression (\ref{e:sta:MajPap_n4_g_F}) for $\w{F}$; in particular it must be the same
 for all the components $\Hor_k$, i.e. the charges $Q_k$ are either all positive or all negative.
 \end{prop}
+For a proof, see Secs.~9.3 and 9.4 of Heusler's textbook \cite{Heusl96}
+for the case where all connected components of the event horizon are assumed to be
+non-degenerate and Ref.~\cite{ChrusT07} for the complementary case.
 
 \begin{remark} \label{r:sta:magnetic_monopole}
 At the level of elementary particles, a
 \defin{magnetic monopole}\index{magnetic!monopole}
 is a particle that
-generates the radial magnetic field $\w{B} = \mu_0 q_{\rm m}/(4\pi r^2) \wpar_r$
-in its inertial rest frame, where $q_{\rm m}$ is the magnetic charge.
+generates the radial magnetic field $\w{B} = \mu_0 P/(4\pi r^2) \wpar_r$
+in its inertial rest frame, where $P$ is the magnetic charge.
 Although predicted by
-some grand unified theories and string theories, no magnetic monopole has
-been detected ever and standard electromagnetism postulates that magnetic monopoles
-do not exist. From a formal point of view, magnetic monopoles would
+some grand unified theories and string theories, no magnetic monopole has ever
+been detected and standard electromagnetism postulates that magnetic monopoles
+do not exist (see Refs.~\cite{MavroM20,Rajan12} for reviews).
+From a formal point of view, magnetic monopoles would
 render the Maxwell equations more symmetric, since instead of Eq.~(\ref{e:fra:Maxwell_forms}),
 they would write
 \be
@@ -2736,18 +2739,18 @@ with $M = \mu_1$,  $Q=\pm\sqrt{4\pi/\mu_0} \, \mu_1$ and $P=0$.
 \begin{prop}[Generalized Israel uniqueness theorem ($n\geq 5$ electrovacuum)
 \index{Israel uniqueness theorem!electrovacuum}]
 \label{p:sta:Israel_uniq_electrovac_n5}
-Let $(\M,\w{g})$ is a $n$-dimensional static and asymptotically flat spacetime
+Let $(\M,\w{g})$ be a $n$-dimensional static and asymptotically flat spacetime
+with $n\geq 5$. Let us assume that $(\M,\w{g})$ is
 endowed with an electromagnetic field $\w{F}$ and
-containing a black hole of event horizon $\Hor$. If
+contains a black hole of event horizon $\Hor$. If
 \begin{itemize}
-\item $n\geq 5$
 \item $(\w{g},\w{F})$ fulfills the electrovacuum Einstein equation\index{Einstein!equation!electrovacuum --}\index{electrovacuum Einstein equation} (\ref{e:fra:electrovac_Einstein}),
 \item all the connected components of $\Hor$ are non-degenerate
 (i.e. have non-zero surface gravity),
 \end{itemize}
 then the domain of outer communications $\langle\langle \M\rangle\rangle$ of $(\M,\w{g})$ is isometric
 to the domain of outer communications of a
-\defin{$n$-dimensional Reissner-Nordström spacetime}\index{Reissner-Nordström!spacetime} with vanishing magnetic monopole, also known as a
+\defin{$\bm{n}$-dimensional Reissner-Nordström spacetime}\index{Reissner-Nordström!spacetime} with vanishing magnetic monopole, also known as a
 \defin{Reissner-Nordström-Tangherlini spacetime}\index{Reissner-Nordström-Tangherlini spacetime}.
 This means that there exists a coordinate system
 $(t,r,\th_1,\ldots,\th_{n-3},\ph)$ on $\langle\langle \M\rangle\rangle$ such that
@@ -2764,7 +2767,7 @@ $\ph\in (0, 2\pi)$ and
 \end{subequations}
 where $\overset{\circ}{\w{q}}$ is the standard round metric on
 the unit sphere $\SS^{n-2}$, which is
-spanned by the coordinates $(\th_1,\ldots,\th_{n-3},\ph)$,
+spanned by $(\th_1,\ldots,\th_{n-3},\ph)$,
 $Q$ is the black hole electric charge (cf. Property~\ref{p:sta:electric_charge}) and
 the constants $\mu$ and $q$ are related to the Komar mass at infinity (or ADM mass)
 $M$ and to the electric charge $Q$ by
@@ -2792,6 +2795,13 @@ with
     q^2 = \frac{\mu_0 Q^2}{3\pi^3} .
 \]
 \end{example}
+
+\begin{remark}
+A static and asymptotically flat black hole spacetime cannot carry a nonzero magnetic monopole $P$
+for $n \geq 5$ \cite{EmparOS10}. Hence Property~\ref{p:sta:Israel_uniq_electrovac_n5}
+is not a direct generalization of Property~\ref{p:sta:Israel_uniq_electrovac_n4} to $n > 4$,
+even if $\Hor$ is assumed to be made of non-degenerate components.
+\end{remark}
 
 \begin{hist}
 The Reissner-Nordström solution (\ref{e:sta:ReiNor_n4})
