@@ -164,8 +164,9 @@
 {\par\medskip\noindent\textbf{Notation:}}%
 {\par\medskip}
 
-\newenvironment{hist}%
-{\par\medskip\noindent\small\textbf{Historical note:}}%
+\newenvironment{hist}[1][]%
+%{\par\medskip\noindent\small\textbf{Historical note:}}%
+{\par\medskip\noindent\small\textbf{Historical note \ifthenelse{\equal{#1}{}}{: }{ (#1):}}}%
 {\par\medskip}
 
 \newmdenv[backgroundcolor=gray!10!white,roundcorner=5pt,hidealllines=true]{greybox}
