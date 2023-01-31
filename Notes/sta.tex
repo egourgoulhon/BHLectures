@@ -1518,7 +1518,8 @@ namely the momemtum constraint\index{momentum constraint} (see e.g. Chap.~5 of R
 which reduces to $D^j K_{ij} = 8\pi p_i$, where $\w{D}$ is the Levi-Civita connection
 associated to the metric $\w{\gamma}$ induced by $\w{g}$ on $\Sigma_t$ and $\w{p}$ is the matter momentum density in the hypersurface $\Sigma_t$ (cf. Sec.~\ref{s:sta:np1_decomp}).
 Since we consider the vacuum case, we have $\w{p} = 0$. Hence the momentum
-constraint reduces to $D^j K_{ij} = 0$. Contracting with $\w{\beta}$, we get
+constraint reduces to $D^j K_{ij} = 0$. Contracting with the shift vector $\w{\beta}$
+arising from the orthogonal split (\ref{e:sta:xi_3p1}) of $\w{\xi}$, we get
 \[
     0 = D^j K_{ij} \beta^i
     =  D^j \left( K_{ij} \beta^i \right) - K_{ij} D^j \beta^i
@@ -1625,7 +1626,7 @@ that, with respect to the null geodesic generators of $\Hor$, the field lines of
 form some helices, as depicted in Fig.~\ref{f:sta:rot_horizon}a. By reciprocity,
 with respect to the field lines of $\w{\xi}$,
 the null geodesic generators form some helices as well, as depicted in
-Fig.~\ref{f:sta:rot_horizon}b):
+Fig.~\ref{f:sta:rot_horizon}b:
 observe that Fig.~\ref{f:sta:rot_horizon}b can be obtained from Fig.~\ref{f:sta:rot_horizon}a
 by ``untwisting'' the field lines of $\w{\xi}$.
 Since asymptotically the field lines of $\w{\xi}$ are worldlines of inertial observers,
@@ -1659,12 +1660,13 @@ $\wl$ is collinear to a Killing vector field $\w{\chi}$, making $\Hor$
 a Killing horizon.}
 \end{figure}
 
-Since the Killing field $\w{\xi}$ is not null on $\Hor$, we cannot say a priori
+When the Killing field $\w{\xi}$ is not null on $\Hor$, we cannot say a priori
 that $\Hor$ is a Killing horizon. However, modulo some additional hypotheses,
-it turns out that this is the case, according to a famous result by
+it turns out that $\Hor$ is still a Killing horizon, albeit with
+respect to a Killing vector distinct from $\w{\xi}$. This result is due to
 S.W.~Hawking\index{Hawking, S.W.} (1972)
-\cite{Hawki72,HawkiE73}, known as the
-\defin{strong rigidity theorem}\index{strong!rigidity theorem}\index{rigidity theorem!strong --}.
+\cite{Hawki72,HawkiE73} and is known as the
+\defin{(strong) rigidity theorem}\index{strong!rigidity theorem}\index{rigidity theorem!strong --}.
 We give below a modern version of this theorem, due to
 Hollands, Ishibashi \& Wald (2007) \cite{HollaIW07}
 and Moncrief \& Isenberg (2008) \cite{MoncrI08} (see also
@@ -1677,7 +1679,7 @@ hole. Let $\Hor$ be a connected component of the black hole event horizon.
 Let us assume that the stationary Killing vector $\w{\xi}$
 is spacelike on some parts of $\Hor$. If
 \begin{itemize}
-\item $\M$ and $\Hor$ are (real) analytic manifold
+\item $\M$ and $\Hor$ are (real) analytic manifolds
 (cf. Remark~\ref{r:bas:analytic} in Sec.~\ref{s:bas:def_manif}),
 with $\w{g}$ being an analytic field,
 \item $\w{g}$ fulfills the vacuum Einstein equation (\ref{e:fra:vac_Einstein})
@@ -1693,8 +1695,8 @@ $\Hor$ is a Killing horizon with respect to $\w{\chi}$.
 
 \begin{proof}[Sketch of proof]
 The proof of the strong rigidity theorem is pretty long and we
-give here only a sketch for $n=4$, referring to Ref.~\cite{HawkiE73} (Proposition~9.3.6)
-for full details and Refs.~\cite{HollaIW07,HollaI12,MoncrI08}
+give here only a sketch for $n=4$, referring to Hawking \& Ellis' textbook~\cite{HawkiE73} (Proposition~9.3.6)
+for full details and to Refs.~\cite{HollaIW07,HollaI12,MoncrI08}
 for $n>4$.
 Let us thus assume $n=4$ and that the (electro)vacuum Einstein equation holds.
 The null dominant energy condition is then satisfied and, since
@@ -1736,8 +1738,8 @@ and we conclude that $(\hat{\Sp},\hat{\w{q}})$ is an axisymmetric Riemannian man
 to the fiducial cross-section $\Sp_0$ and we conclude that, in addition to being
 stationary, the event horizon $\Hor$ is axisymmetric.
 
-The axisymmetry can be extended to the whole spacetime as follows.
-Let $\w{\chi}=\D\w{x}/\D v$ be a vector tangent to the null generators of $\Hor$
+The next step is to extend this axisymmetry to the whole spacetime.
+Let $\w{\chi}=\D\w{x}/\D v$ be the vector tangent to the null generators of $\Hor$
 corresponding to a parameter $v$ of the generators that is connected to the parameter
 $t$ of the stationary action, in the sense that along a given null generator
 $\Li$,
@@ -1877,7 +1879,7 @@ generating axisymmetries:
 \label{p:sta:axisymmetry_BH}
 Under the same hypotheses as in Property~\ref{p:sta:strong_rigidity_thm},
 there exist $L$ Killing vectors $\w{\eta}_{(1)},\ldots,\w{\eta}_{(L)}$
-with $1 \leq L \leq [(n-1)/2]$ with closed orbits with period $2\pi$
+with $1 \leq L \leq [(n-1)/2]$, which have closed orbits of period $2\pi$,
 such that
 \be
    [\w{\xi},\w{\eta}_{(i)}] = 0 \qand [\w{\eta}_{(i)},\w{\eta}_{(j)}] = 0
@@ -1890,7 +1892,7 @@ and the Killing vector $\w{\chi}$ normal to $\Hor$ writes
 where $\Omega^{(1)}$, $\ldots$, $\Omega^{(L)}$ are $L$ constants, all of whose
 ratios are irrational.
 
-For $n=4$, one has $[(n-1)/2] = 1$, so that necessarily $L=1$. Denothing then
+For $n=4$, one has $[(n-1)/2] = 1$, so that necessarily $L=1$. Denoting
 $\w{\eta}_{(1)}$ simply by $\w{\eta}$ and $\Omega^{(1)}$ by $\Omega_{\Hor}$,
 Eq.~(\ref{e:sta:chi_xi_Omega_i_eta_i}) reduces to
 \be \label{e:sta:chi_xi_OmegaH_eta}
@@ -1924,9 +1926,9 @@ If the event horizon has various connected components, the Killing vectors
 $\w{\eta}_{(i)}$ and the constants $\Omega^{(i)}$ may vary from one connected
 component to the other. In particular, the horizon-generating Killing vector $\w{\chi}$
 may not be the same for each connected component. For instance,
-in dimension $n=5$, the \emph{black saturns}\index{black!saturn}
+in dimension $n=5$, the \emph{black saturn}\index{black!saturn}
 found by H.~Elvang\index{Elvang, H.} and P.~Figueras\index{Figureas, P.} in 2007 \cite{ElvanF07}
-are stationary black holes, the event horizon of which has two connected
+is a stationary black hole, the event horizon of which has two connected
 components: $\Hor_{\rm p}$ (the ``planet'') and $\Hor_{\rm r}$ (the ``ring''),
 with topology $\R\times\SS^3$ and $\R\times\SS^1\times\SS^2$ respectively.
 For both $\Hor_{\rm p}$ and $\Hor_{\rm r}$, $L=1$ and
@@ -1946,9 +1948,8 @@ proved by Carter in 1969 (corollary to Theorem~1 in Ref.~\cite{Carte69}; see als
 spacetime must be a Killing horizon. The \emph{strong rigidity theorem} is
 stronger in that it assumes only the stationarity of the spacetime, the axisymmetry
 becoming a consequence (Property~\ref{p:sta:axisymmetry_BH}). On the other hand,
-the weak rigidity theorem is stronger in so far as it does not rely on the analyticity
-assumption.
-
+the weak rigidity theorem is stronger in so far as it does not rely on the
+assumption of analyticity.
 
 By the very definition of stationarity, the Killing vector field $\w{\xi}$ is
 timelike in the vicinity of $\scri^+$ and $\scri^-$. If $\w{\xi}$ is spacelike
@@ -1959,8 +1960,9 @@ $\w{\xi}$ is spacelike in some connected region $\mathscr{G}\subset \langle\lang
 around $\Hor$, null at the boundary of $\mathscr{G}$ and timelike outside $\mathscr{G}$
 up to $\scri^+$ and $\scri^-$. The subset $\mathscr{G}$ is
 called the \defin{ergoregion}\index{ergoregion} and its boundary $\E:=\partial\mathscr{G}$
-the \defin{ergosphere}. We shall discuss it further in connection with
-the Penrose process in Chap.~\ref{s:ker}.
+the \defin{ergosphere}. We shall discuss it further in Chap.~\ref{s:ker},
+especially in connection with the so-called \emph{Penrose process}
+(Sec.~\ref{s:ker:Penrose_proc}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2124,7 +2126,7 @@ term disappears.
 
 \begin{example}[Schwarzschild black hole]
 The Schwarzschild black hole will be discussed in details in Chap.~\ref{s:sch};
-however, we have have sufficiently studied its event horizon in various examples
+however, we have sufficiently studied its event horizon in various examples
 of the preceeding chapters to check that the Smarr formula holds
 for it. From Example~\ref{x:def:Schw_hor3} of Chap.~\ref{s:def}, we have
 $\kappa = 1/(4 m)$ [Eq.~(\ref{e:def:kappa_Schw_hor})], while from
@@ -2522,7 +2524,7 @@ been derived by Brandon Carter\index{Carter, B.} in 1973 \cite{Carte73b} [his Eq
 Actually, the formula obtained by Carter is more general than Eq.~(\ref{e:sta:Smarr_electrovac_n4})
 since it allows for electric sources (non-vanishing electric 4-current $\w{j}$) and matter in the black hole exterior (see also Carter's review articles~\cite{Carte79} [Eq.~(6.323)]
 and \cite{Carte87} [Eq.~(4.68)]).
-The generalization of Smarr formula to dimensions $n \geq 4$ has been
+The generalization of the Smarr formula to dimensions $n \geq 4$ has been
 obtained by Robert Myers\index{Myers, R.C.} and Malcolm Perry\index{Perry, M.J.}
 in 1986 \cite{MyersP86}
 for connected event horizons in vaccum: they obtained Eq.~(\ref{e:sta:Smarr_M_infty})
