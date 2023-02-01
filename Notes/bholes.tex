@@ -14,8 +14,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb} % symboles AMS (-> \mathbb)
 \usepackage{amsthm}  % theorem-like environments
-\usepackage{hyperref}
-\usepackage{makeidx} % generation de l'index
+\usepackage{imakeidx} % generation de l'index
 \usepackage[nottoc]{tocbibind} % bibliographie et index dans la table des matières
                                % l'option 'nottoc' spécifiant de ne pas inclure la
                                % TOC elle-même dans la TOC
@@ -30,6 +29,8 @@
 \usepackage[framemethod=TikZ]{mdframed} % -> grey boxes
 \usepackage{cases} % numbered cases equations
 \usepackage{microtype}
+
+\usepackage{hyperref}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -198,7 +199,8 @@ innertopmargin=\topskip,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\makeindex
+\makeindex[intoc=true]
+\makeindex[name=pers,title=Index of person names,intoc=true]
 
 %\includeonly{intro,cadre,ref}
 
@@ -302,6 +304,15 @@ Université Paris Sciences et Lettres\\
 
 \cleardoublepage
 \phantomsection % to have correct hyperlink to index in TOC
+
+\indexprologue{\small Only names of persons mentioned explicitly in the text, mostly
+in the historical notes, appear here}
+\printindex[pers]
+
+\cleardoublepage
+\phantomsection % to have correct hyperlink to index in TOC
+
+\indexprologue{Ceci est un test}
 \printindex
 
 \end{document}
