@@ -2997,43 +2997,86 @@ assumptions of a non-degenerate horizon with spherical cross sections,
 Carter could reduce the 4-dimensional stationary-axisymmetric
 vacuum Einstein equation to a 2-dimensional non-linear elliptic system
 of two partial differential equations
-with boundary conditions depending on only two parameters, the mass $M$
-and $c := \kappa A/(4\pi)$ (where $\kappa$ is the surface gravity and $A$
-is the horizon area). Then Carter has been able to show that the solutions
+with boundary conditions depending on only two parameters: the mass $M$
+and $c := \kappa A/(4\pi)$, where $\kappa$ is the surface gravity and $A$
+is the horizon area ($\kappa \neq 0$ since the horizon is assumed non-degenerate).
+Then Carter has been able to show that the solutions
 of this system form disjoint 2-parameter families and that within one family,
 the members are fully specified by the pair $(M, c)$. The Kerr family is
 such a family and the only one containing the Schwarzschild solution, but
 Carter could not exclude that other families exist. This step was achieved
 by David Robinson\index[pers]{Robinson, D.C.} in 1975 \cite{Robin75}, who
-by some \emph{tour de force} \cite{Carte97}
-could show that the solution has to belong to the Kerr family.
-The electrovacuum case turned out to be too complicated for the technique
-used by Robinson. New techniques have been introduced independently
+could show by some \emph{tour de force} \cite{Carte99}
+that the solution has to belong to the Kerr family.
+The electrovacuum case turned out to be too complicated
+to be dealt with the same techniques; only a result similar to Carter's
+one (i.e. reduction to disjoint 4-parameter families of solutions)
+could be achieved by Robinson in 1974 \cite{Robin74}.
+New techniques have been introduced independently
 by Pawe\l{} Mazur\index[pers]{Mazur, P.O.} in 1982 \cite{Mazur82} and
 Gary Bunting\index[pers]{Bunting, G.L.} in 1983 \cite{Bunti83}, which enabled
-them to get the uniqueness theorem~\ref{p:sta:Bunting_Mazur_thm}.
+them to get the uniqueness theorem~\ref{p:sta:Bunting_Mazur_thm}
+under the non-degeneracy assumption. The case of a degenerate horizon
+has been treated by Piotr Chru\'sciel\index[pers]{Chrusciel, P.T.@Chru\'sciel, P.T.}
+and Luc Nguyen\index[pers]{Nguyen, L.} in 2010 \cite{ChrusN10}.
+They showed that electrovaccuum rotating black holes with a degenerate horizon
+necessarily belong to the Kerr-Newman family (they are the so-called
+\emph{extremal}\index{extremal!Kerr-Newman spactime} members of that family).
+For further details, see the historical accounts \cite{Carte99,Mazur01,Robin09}
+by the actors themselves. As for the Kerr-Newman solution itself, it has
+been discovered by Ezra Newman\index[pers]{Newman, E.T.} and his collaborators in 1965 \cite{Newma_al65}, two years after the discovery of the Kerr solution by Roy Kerr\index[pers]{Kerr, R.P.} \cite{Kerr63}. A historical note about the Kerr discovery is to be found
+in Chap.~\ref{s:ker}, p.~\pageref{h:ker:Kerr_sol}.
 \end{hist}
 
 \subsection{The no-hair theorem} \label{s:sta:the_no-hair_thm}
 
-By combining the staticity, Israel, strong rigidity and Carter-Robinson theorems,
-one arrives at the famous
-\begin{prop}[no-hair theorem\index{no-hair theorem} (vaccum)]
+We are now is position to state the famous
+\begin{prop}[no-hair theorem\index{no-hair theorem}]
 Any spacetime $(\M,\w{g})$ that
 \begin{itemize}
-\item is 4-dimensional
-\item is asymptotically flat
-\item is stationary
-\item is a solution of the vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation} (\ref{e:fra:vac_Einstein})
-\item contains a black hole with a connected regular horizon
-\item does not contain any closed timelike curve in the domain of outer
-communications
-\item is analytic
+\item is 4-dimensional,
+\item is asymptotically flat,
+\item is stationary,
+\item fulfils the electrovacuum Einstein equation\index{electrovacuum Einstein equation}\index{Einstein!equation!electrovacuum --} (\ref{e:fra:electrovac_Einstein}) (with the vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation} (\ref{e:fra:vac_Einstein}) being considered as a subcase),
+\item contains a black hole with a connected event horizon
+that is either (i) rotating\footnote{Let us recall that
+the concepts of \emph{rotating} and \emph{non-rotating} horizons
+have been defined in Property~\ref{p:sta:xi_tangent_H}.}
+ or (ii) non-rotating and non-degenerate,
+\item does not contain any closed causal curve in the domain of outer
+communications $\langle\langle \M\rangle\rangle$,
+\item is analytic,
 \end{itemize}
-has a domain of outer communications that is isometric
-to the domain of outer communications of the Kerr spacetime.
+has $\langle\langle \M\rangle\rangle$ isometric
+to the domain of outer communications of a Kerr-Newman spacetime.
+The latter depends on four parameters: the total mass $M$, the
+total angular momentum $J$, the electric charge $Q$ and the magnetic
+monopole charge $P$, with the following subcases:
+\begin{itemize}
+\item $J=0$: Reissner-Nordström spacetime;
+\item $Q=0$, $P=0$: Kerr spacetime;
+\item $Q=0$, $P=0$, $J=0$: Schwarzschild spacetime.
+\end{itemize}
+In the last two cases, the electromagnetic field vanishes and $\w{g}$
+fulfils the vacuum Einstein equation (\ref{e:fra:vac_Einstein}).
 \end{prop}
-
+\begin{proof}
+Let $\Hor$ be the black hole event horizon.
+In the case (i) ($\Hor$ rotating), we may invoke the strong rigidity
+theorem~\ref{p:sta:strong_rigidity_thm} to get that $(\M,\w{g})$
+is axisymmetric, in addition to being stationary. Then the
+Bunting-Mazur theorem \ref{p:sta:Bunting_Mazur_thm} leads to
+$\langle\langle \M\rangle\rangle$ being isometric
+to the domain of outer communications of a Kerr-Newman spacetime.
+In the case (ii) ($\Hor$ is non-rotating and
+non-degenerate), we
+may invoke the staticity theorem \ref{p:sta:staticity_thm}
+to assert that $(\M,\w{g})$ is static. Then the generalized Israel
+theorem \ref{p:sta:Israel_uniq_electrovac_n4} leads to $\langle\langle \M\rangle\rangle$
+being isometric to the domain of outer communications of a Reissner-Nordström
+spacetime (the Majumdar-Papapetrou case in theorem~\ref{p:sta:Israel_uniq_electrovac_n4}
+is excluded since $\Hor$ is assumed non-degenerate).
+\end{proof}
 
 \begin{hist}
 See the historical accounts by Carter \cite{Carte99} and Robinson \cite{Robin09}.
