@@ -30,24 +30,26 @@ i.e. iff the point (ii) above is fulfilled.
 \begin{remark} \label{r:sta:pseudo-stationary}
 Some authors (e.g. Carter \cite{Carte73b}) call
 \emph{pseudo-stationary}\index{pseudo-stationary} the stationary spacetimes
-defined above, keeping the qualifier
+obeying (ii'), keeping the qualifier
 \emph{stationary} for the strictly stationary case.
 As we are going to see, when $\M$
 contains a black hole, $\w{\xi}$ cannot be timelike everywhere,
-so only \emph{pseudo-stationarity} in the above sense is relevant for these spacetimes.
+so only \emph{pseudo-stationarity} in Carter's sense is relevant for such spacetimes.
 Our terminology follows that of
 Heusler \cite{Heusl96},
 Chru\'sciel, Lopes Costa \& Heusler \cite{ChrusLH12}
 and Choquet-Bruhat \cite{Choqu09}.
 \end{remark}
 
-If the stationary spacetime is endowed with an electromagnetic field and/or
-matter fields, they should respect the stationarity as well. For the electromagnetic
+If the stationary spacetime is endowed with an electromagnetic and/or
+matter fields, they must respect the stationarity as well. For the electromagnetic
 field $\w{F}$ (cf. Sec.~\ref{e:fra:electrovacuum}), this is expressed by
+the vanishing of the Lie derivative along $\w{\xi}$:
 \be
-    \Lie{\xi} \w{F} = 0 ,
+    \Lie{\xi} \w{F} = 0 .
 \ee
-which is similar to $\Lie{\xi} \w{g} = 0$ [Eq.~(\ref{e:neh:Lie_xi_g})].
+This condition is similar to Killing-vector property
+$\Lie{\xi} \w{g} = 0$ [Eq.~(\ref{e:neh:Lie_xi_g})].
 
 A notion stronger than stationarity is that of \emph{staticity}:
 
@@ -57,7 +59,7 @@ iff (i) it is stationary and (ii) the Killing vector field $\w{\xi}$
 generating the stationary action is orthogonal to a family of hypersurfaces
 (one says that $\w{\xi}$ is \defin{hypersurface-orthogonal}\index{hypersurface-orthogonal}).
 The spacetime $(\M,\w{g})$ is called \defin{strictly static}\index{strictly!static}\index{static!strictly --}
-iff $\w{\xi}$ is timelike in all $\M$.
+iff moreover $\w{\xi}$ is timelike in all $\M$.
 \end{greybox}
 
 \begin{remark}
@@ -74,9 +76,9 @@ body, be it a star or a black hole.
 
 \subsection{Coordinates adapted to stationarity or staticity}
 
-In a $n$-dimensional stationary spacetime $(\M,\w{g})$, a coordinate system $(x^\alpha) = (x^0=t, x^1, \ldots  x^{n-1})$
+In a $n$-dimensional stationary spacetime $(\M,\w{g})$, a coordinate system $(x^\alpha) = (x^0, x^1, \ldots  x^{n-1})$
 is said \defin{adapted to stationarity}\index{adapted!coordinates} iff the coordinate vector
-$\wpar_t$ coincides with the stationary Killing vector $\w{\xi}$.
+$\wpar_t$, where $t := x^0$, coincides with the stationary Killing vector $\w{\xi}$.
 It has been shown in Sec.~\ref{s:neh:symmetries} that the components $g_{\alpha\beta}$
 of the metric tensor with respect to $(x^\alpha)$ obeys then $\dert{g_{\alpha\beta}}{t} = 0$
 [Eq.~(\ref{e:neh:dgabdt_zero})]. It follows that
@@ -91,24 +93,47 @@ $t=\mathrm{const}$ are orthogonal to the static Killing vector $\w{\xi}$.
 Given that a normal 1-form to the hypersurfaces $t=\mathrm{const}$ is $\dd t$,
 the coordinates $(x^\alpha)$ are adapted to staticity iff
 \be \label{e:sta:xi_wpar_t}
-    \w{\xi} = \wpar_t \qquad\mbox{and}\qquad \uu{\xi} = (\w{\xi}\cdot\w{\xi})\, \dd t ,
+    \w{\xi} = \wpar_t \qquad\mbox{and}\qquad \uu{\xi} = W\, \dd t ,
 \ee
-where $\uu{\xi}$ is the metric dual of $\w{\xi}$ (cf. Sec.~\ref{s:bas:metric_dual}).
+where $\uu{\xi}$ is the metric dual of $\w{\xi}$ (cf. Sec.~\ref{s:bas:metric_dual})
+and $W := \w{g}(\w{\xi},\w{\xi}) = \langle  \uu{\xi}, \w{\xi} \rangle$.
 The orthogonality of $\wpar_t$ and the hypersurfaces $t=\mathrm{const}$
 translates to $g_{0i}=0$ for $i\in\{1,\ldots,n-1\}$,
 the $g_{\alpha\beta}$'s being the metric components with respect to the coordinates
 $(x^\alpha)$. Hence one may write the metric of a static spacetime of dimension $n$ as
 \be \label{e:sta:static_metric}
-    \w{g} = V \dd t^2 + g_{ij} \dd x^i \dd x^j ,
+    \w{g} = W \dd t^2 + g_{ij} \dd x^i \dd x^j ,
 \ee
-where $V := \w{\xi}\cdot\w{\xi}$, the indices $(i,j)$ range in $\{1,\ldots,n-1\}$
-and $V$ and $g_{ij}$ are functions of $(x^1,\ldots,x^{n-1})$ only.
+where the indices $(i,j)$ range in $\{1,\ldots,n-1\}$
+and $W$ and $g_{ij}$ are functions of $(x^1,\ldots,x^{n-1})$ only.
 It is clear that the metric (\ref{e:sta:static_metric}) is invariant\footnote{Would
 (\ref{e:sta:static_metric}) have contained a non-vanishing $g_{0i}\, \D t \, \D x^i$ term,
 this would not have been the case.} in the
 transformation $t\mapsto-t$. One says that a static spacetime is
 \defin{time-reflection symmetric}\index{time!reflection symmetry}\index{reflection!time --}.
 
+\begin{example}[staticity of anti-de Sitter spacetime]
+The anti-de Sitter spacetime\index{anti-de Sitter spacetime} AdS$_{4}$ considered in Example~\ref{x:neh:AdS} of Chap.~\ref{s:neh}
+is strictly static, with the coordinates $(\tau, r, \th,\ph)$ being
+adapted to staticity (hence their name \emph{global static coordinates}),
+since the metric (\ref{e:neh:AdS4}) is of the form (\ref{e:sta:static_metric})
+with $t = \tau$ and $W = -\ell^2(1+ r^2)$. The strict staticity follows from $W < 0$, which
+shows that the Killing vector $\w{\xi} = \wpar_t$ is everywhere timelike.
+\end{example}
+
+\begin{example}[staticity of Schwarzschild spacetime]
+The Schwarzschild spacetime\index{Schwarzschild!spacetime}, introduced in Example~\ref{x:def:Schw_hor} of Chap.~\ref{s:def}
+and used throughout Chaps.~\ref{s:def} and \ref{s:neh}, is static, but not
+strictly static. The staticity is not obvious from the metric components
+given by Eq.~(\ref{e:def:Schw_metric}) because the coordinates
+$(t,r,\th,\ph)$ used there are not adapted to staticity: the Killing vector
+$\w{\xi} = \wpar_t$ is not orthogonal to the hypersurfaces $t=\mathrm{const}$,
+given that $g_{tr} \neq 0$. However, we shall consider coordinates adapted to
+staticity in Chap.~\ref{s:sch}: the so-called \emph{Schwarzschild-Droste coordinates}.
+That Schwarzschild spacetime is not strictly static can be read directly on
+Eq.~(\ref{e:def:Schw_metric}): $\w{\xi}\cdot\w{\xi} = g_{tt} = -1 + 2m/r$, so
+that $\w{\xi}$ is timelike only in the region $r > 2 m$.
+\end{example}
 
 \subsection{Black holes in stationary spacetimes}
 \label{s:sta:BH_stationary}
