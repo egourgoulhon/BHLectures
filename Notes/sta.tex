@@ -5,9 +5,45 @@
 
 \section{Introduction}
 
-This chapter is still in draft stage...
+Having defined black holes in all generality in Chap.~\ref{s:glo}, we focus
+here on black holes in steady state, i.e. black holes in stationary spacetimes.
+We have already discussed
+non-expanding horizons and Killing horizons in Chap.~\ref{s:neh} as
+possible models for the event horizon of a
+steady state black hole. Actually, we shall see here that (each connected
+component of) the event horizon of a black hole in a stationary spacetime has to be
+a Killing horizon.
+We shall start by defining properly the concept of a stationary
+spacetime and investigating the first properties of a stationary black hole
+(Sec.~\ref{s:sta:sta_st}). Then, we extend the study of Killing horizons
+initiated in Chap.~\ref{s:neh} to encompass bifurcate Killing horizons
+(Sec.~\ref{s:sta:bifur_Killing_hor}). In Sec.~\ref{s:sta:mass_angul_mom},
+we discuss the concepts
+of mass and angular momentum in asymptotically flat spacetimes, which are useful to characterize black holes. In Sec.~\ref{s:sta:EH_KH}, we shall
+see that
+if the Killing vector $\w{\xi}$ generating stationarity is null on
+a connected event horizon $\Hor$, the latter is a Killing horizon with
+respect to $\w{\xi}$.  If $\Hor$ is non-degenerate and the
+electrovacuum Einstein equation holds, this can only occur in a static spacetime
+(\emph{staticity theorem}, Sec.~\ref{s:sta:staticity_thm}).
+If on the contrary, $\w{\xi}$ is spacelike on some parts of $\Hor$ (the timelike
+case is excluded for the event horizon is a null hypersurface), then, modulo the
+electrovacuum Einstein equation and some additional hypotheses,
+$\Hor$ is still a Killing horizon, albeit with respect to a Killing vector
+distinct from $\w{\xi}$ (\emph{strong rigidity theorem}, Sec.~\ref{s:sta:strong_rigidity}).
+Section~\ref{s:sta:Smarr} is devoted to an important formula relating various global
+quantities characterizing a stationary black hole: the \emph{Smarr formula}.
+This is the occasion to investigate the properties of an electromagnetic
+field on the horizon of a stationary black hole, in particular to define
+the black hole's electric charge and electric potential, both of them being involved
+in the Smarr formula. The culmination point of this chapter is
+Sec.~\ref{s:sta:no-hair}, which presents the famous
+\emph{no-hair theorem}. Modulo some hypotheses, this theorem stipulates that in 4-dimensional
+general relativity, all isolated stationary electrovacuum black holes are necessarily
+Kerr-Newman black holes; in the pure vacuum case (the most relevant one for astrophysics),
+they are Kerr black holes, to be explored in Part.~\ref{P:ker}.
 
-\section{Stationary and static spacetimes}
+\section{Stationary and static spacetimes} \label{s:sta:sta_st}
 
 \subsection{Definitions} \label{s:sta:def_station}
 
@@ -178,7 +214,7 @@ We shall discuss in detail the two cases --- null or spacelike --- allowed
 for $\w{\xi}$ on $\Hor$ in Sec.~\ref{s:sta:EH_KH}.
 
 It is rather intuitive that the event horizon $\Hor$ of a black hole in
-a stationary spactime must have a vanishing expansion $\theta_{(\wl)}$ along its null
+a stationary spacetime must have a vanishing expansion $\theta_{(\wl)}$ along its null
 normals $\wl$, otherwise the area of cross-sections would vary when dragged
 along $\wl$ and this would define some ``evolution'' along $\Hor$ (e.g. from small areas
 to larger ones),
@@ -194,7 +230,7 @@ for stationary event horizons can be found in Hawking \& Ellis' textbook
 (Proposition~9.3.1 of Ref.~\cite{HawkiE73}).
 Here, we shall simply state
 \begin{prop}
-\label{p:sta:hor_non_exanding}
+\label{p:sta:hor_non_expanding}
 The event horizon $\Hor$ of a black hole in stationary spacetime
 is a null hypersurface of vanishing expansion:
 \be
@@ -233,9 +269,9 @@ a basis of the 2-plane orthogonal to $\Sp$, $T_p^\perp\Sp$ (cf. Fig.~\ref{f:def:
 with $\wl$ tangent to $\Hor$ and $\w{k}$ transverse to it.
 As in Sec.~\ref{s:def:geom_null_hypsurf}, let us consider that $\Hor$
 is the level set $u=0$ of 1-parameter family of hypersurfaces $(\Hor_u)_{u\in\R}$.
-This extends $\wl$ in the vinicity of $\Hor$ via Eq.~(\ref{e:def:wl_rho_u})
+This extends $\wl$ in the vicinity of $\Hor$ via Eq.~(\ref{e:def:wl_rho_u})
 as a null vector field normal to each $\Hor_u$.
-By Property~\ref{p:sta:hor_non_exanding}, we have $\theta_{(\wl)} = 0$
+By Property~\ref{p:sta:hor_non_expanding}, we have $\theta_{(\wl)} = 0$
 on $\Sp$. Let us displace $\Sp$ by a small parameter $\eps>0$ along the inward
 null normal $\w{k}$. The expansion along $\wl$ of the obtained surface is
 negative by hypothesis (ii). By taking the limit $\eps\to 0$, we form the
@@ -337,7 +373,7 @@ The latter is very mild and fixes some shortcoming in Hawking's proof
 \begin{remark}
 The topology theorem 1 is not specific to black hole event horizons, for
 it relies only on quasilocal properties. Indeed, the proof does not use
-that $\Hor$ is the boundary of a black hole region, only that $\Hor$ is a hypersuface
+that $\Hor$ is the boundary of a black hole region, only that $\Hor$ is a hypersurface
 sliced by surfaces with $\theta_{(\wl)} = 0$ and $\Lie{k} \theta_{(\wl)} < 0$.
 The theorem is therefore valid for \emph{outer trapping horizons} \cite{Haywa94}
 and (tubes of) \emph{apparent horizons}, as noticed by Hawking himself \cite{Hawki73} (p.~34),
@@ -376,7 +412,7 @@ $f \geq 0$ (\footnote{In brief, Eq.~(\ref{e:sta:Euler_char}) holds for $n>4$
 as well, except that the integral of the Ricci scalar ${}^\Sp\!\!R$ is no longer
 proportional to the Euler characteristic of $\Sp$ (no Gauss-Bonnet theorem for $\mathrm{dim}\, \Sp \neq 2$ !) but is connected to the Yamabe constant of the conformal class of the metric $\w{q}$.}). This result implies that $\Sp$ must admit metrics of positive scalar curvature; it is
 less stringent about the topology of $\Sp$ than the theorem for $n=4$.
-Actually, the higher $n$, the less contraints on
+Actually, the higher $n$, the less constraints on
 the topology are provided by the Yamabe invariant. For instance,
 for $n=5$, the cross-sections of the \emph{Myers-Perry black holes}\index{Myers-Perry black hole} \cite{MyersP86,EmparR08,Reall14}, which generalize
 Kerr black holes to $n>4$, have the
@@ -703,7 +739,7 @@ by J. Ehlers\index[pers]{Ehlers, J.} and J.L. Stachel\index[pers]{Stachel, J.L.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Mass and angular momentum}
+\section{Mass and angular momentum} \label{s:sta:mass_angul_mom}
 
 For an asymptotically flat stationary spacetime, containing a
 black hole or not, there is a well-defined concept of mass: the \emph{Komar mass},
@@ -790,7 +826,7 @@ For $n=3$, the solutions of $\Delta \Phi = 0$ are $\Phi = a \ln r + b$ ($a$ and 
 for $n=2$, they are $\Phi = a r + b$, none of them decaying for $r\to +\infty$.
 The prefactor $-(n-2)/(16\pi(n-3))$ in the definition (\ref{e:sta:def_Komar_mass})
 is chosen to recover the gravitational mass at the Newtonian limit, as
-it will be explictly shown for $n=4$ in Example~\ref{x:sta:Komar_mass_star} below.
+it will be explicitly shown for $n=4$ in Example~\ref{x:sta:Komar_mass_star} below.
 \end{remark}
 
 In view of Eq.~(\ref{e:sta:Hodge_dual}) with $p=2$ and the last equality in Eq.~(\ref{e:sta:duxi_nab}),
@@ -834,7 +870,7 @@ the metric $\w{q}$
 induced on $\Sp$ by the spacetime metric $\w{g}$, so that
 $\sqrt{q}\, \D x^1 \cdots \D x^{n-2}$ is the area element on $\Sp$.
 \end{itemize}
-To reexpress the Komar mass, we shall use the following identity:\\
+To re-express the Komar mass, we shall use the following identity:\\
 \begin{lemma}[Flux integral of a 2-form]
 \label{p:sta:flux_integ_2form}
 For any 2-form $\w{A}$ defined in the vicinity of $\Sp$, one has
@@ -1159,7 +1195,7 @@ static Killing field $\w{\xi}$:
 the value of $V$ being determined to ensure $\w{u}\cdot\w{u} = -1$.
 Let us choose for $\Sigma$ a hypersurface orthogonal to $\w{\xi}$
 with an outer boundary  $\Sp_{\rm ext}$ but no inner boundary $\Sp_{\rm int}$.
-Since $\Sigma$ is othogonal to $\w{\xi}$, we have
+Since $\Sigma$ is orthogonal to $\w{\xi}$, we have
 necessarily $\w{n} = \w{u}$, so that $\w{T}(\w{n},\w{\xi}) = V \w{T}(\w{u},\w{u})
 = V \rho$ and $\w{g}(\w{n},\w{\xi}) = V \w{g}(\w{u},\w{u}) = -V$. Given that
 $T = 3 p  - \rho$, formula~(\ref{e:sta:Komar_mass_vol_integ}) with $n=4$ and
@@ -1210,7 +1246,7 @@ with $\Lambda=0$ share the same Komar mass:
 We then have:
 \begin{prop}[Komar mass at infinity]
 \label{p:sta:Komar_mass_inf}
-Let $(\M,\w{g})$ be a stationary and asympotically flat $n$-dimensional spacetime.
+Let $(\M,\w{g})$ be a stationary and asymptotically flat $n$-dimensional spacetime.
 Let $\Sigma$ be any spacelike hypersurface that is asymptotically orthogonal
 to the stationary Killing vector field $\w{\xi}$.
 If the energy-momentum tensor $\w{T}$ has a compact support
@@ -1535,7 +1571,7 @@ is static\index{static!spacetime} and the domain of outer communications\index{d
 
 \begin{proof}
 For simplicity, we give only the proof for the case of the vacuum Einstein equation
-(\ref{e:fra:vac_Einstein}), refering
+(\ref{e:fra:vac_Einstein}), referring
 to Sudarsky \& Wald's article \cite{SudarW93} for the electrovacuum case.
 Since $\Hor$ is a non-degenerate Killing horizon, it is contained in a bifurcate Killing horizon
 (cf. Property~\ref{p:sta:non_degen_bifurcate} and Remark~\ref{r:sta:extension_bifurcate} on p.~\pageref{r:sta:extension_bifurcate}).
@@ -1557,7 +1593,7 @@ Let us consider the $\mathcal{N}+1$ decomposition with respect to $\Sigma_t$
 introduced in Sec.~\ref{s:sta:np1_decomp}.
 The maximality property $K^i_{\ \, i} = 0$ allows one
 to simplify one of the Einstein equations in the $\mathcal{N}+1$ decomposition,
-namely the momemtum constraint\index{momentum constraint} (see e.g. Chap.~5 of Ref.~\cite{Gourg12}),
+namely the momentum constraint\index{momentum constraint} (see e.g. Chap.~5 of Ref.~\cite{Gourg12}),
 which reduces to $D^j K_{ij} = 8\pi p_i$, where $\w{D}$ is the Levi-Civita connection
 associated to the metric $\w{\gamma}$ induced by $\w{g}$ on $\Sigma_t$ and $\w{p}$ is the matter momentum density in the hypersurface $\Sigma_t$ (cf. Sec.~\ref{s:sta:np1_decomp}).
 Since we consider the vacuum case, we have $\w{p} = 0$. Hence the momentum
@@ -1697,7 +1733,7 @@ two field lines of $\w{\xi}$
 respectively.
 \textbf{(b)} Representation with the field lines of $\w{\xi}$ as vertical lines.
 The color code is the same as in (a) and
-labelled points ($a$, $b$, etc.) help to identify
+labeled points ($a$, $b$, etc.) help to identify
 the two figures. A few light cones are drawn in each figure; note that $\w{\xi}$,
 being spacelike,
 lies always outside of them,
@@ -1757,7 +1793,7 @@ manifold of $\SS^2$ topology. In view of the definition
 of a cross-section (cf. Sec.~\ref{s:def:spacelike_sections}),
 one can identify $\hat{\Sp}$
 with a given cross-section $\Sp_0$ of $\Hor$ if necessary.
-Taking advantage that $\Hor$ is a non-expanding horizon (Property~\ref{p:sta:hor_non_exanding}),
+Taking advantage that $\Hor$ is a non-expanding horizon (Property~\ref{p:sta:hor_non_expanding}),
 one can endow $\hat{\Sp}$ with a unique Riemannian metric $\hat{\w{q}}$
 thanks to Property~\ref{p:neh:invariance_of_2metric}. If one sticks to the $\Sp_0$ model
 of $\hat{\Sp}$, this metric is nothing but the metric $\w{q}$ induced by
@@ -2013,7 +2049,7 @@ especially in connection with the so-called \emph{Penrose process}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{The generalized Smarr formula}
+\section{The generalized Smarr formula} \label{s:sta:Smarr}
 
 As shown in the previous section, the connected components of the event horizon of a stationary black hole are Killing horizons; this gives rise to a nice formula connecting the
 mass, angular momentum and area of these objects. After having established
@@ -3085,7 +3121,7 @@ been discovered by Ezra Newman\index[pers]{Newman, E.T.} and his collaborators i
 found his famous solution \cite{Kerr63}. A historical note about the discovery of the Kerr metric is to be found in Chap.~\ref{s:ker}, p.~\pageref{h:ker:Kerr_sol}.
 \end{hist}
 
-\subsection{The no-hair theorem} \label{s:sta:the_no-hair_thm}
+\subsection{The 4-dimensional no-hair theorem} \label{s:sta:the_no-hair_thm}
 
 We are now is position to state the famous theorem:
 \begin{prop}[no-hair theorem\index{no-hair theorem}]
