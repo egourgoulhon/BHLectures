@@ -2518,8 +2518,8 @@ rewrite Eq.~(\ref{e:sta:Smarr_em_integrand}) as
 \frac{n^\mu}{\mu_0} \nabla^\nu \Omega_{\mu\nu}
 \quad\mbox{with}\quad
 \Omega_{\mu\nu} := \Phi F_{\mu\nu} +
- \frac{1}{n-2} \left( A_\rho  F^\rho_{\ \, \nu} \chi_\mu
- - A_\rho F^\rho_{\ \, \mu} \chi_\nu \right) .
+ \frac{1}{n-2} \left( \chi_\mu A_\rho  F^\rho_{\ \, \nu}
+ - \chi_\nu A_\rho F^\rho_{\ \, \mu}  \right) .
 \]
 Note that $\Omega_{\mu\nu}$ defines a 2-form, since
 $\Omega_{\mu\nu} = - \Omega_{\nu\mu}$. It follows then from Lemma~\ref{p:sta:flux_div_2_form}
@@ -2527,10 +2527,10 @@ that
 \bea
     I & := & 2 \int_{\Sigma} \left( \w{T}(\w{n}, \w{\chi}) - \frac{T \w{n}\cdot \w{\chi}}{n-2}  \right)
     \sqrt{\gamma} \, \D^{n-1} x
-   = \frac{2}{\mu_0} \int_{\Sigma} \nabla^\mu \Omega_{\mu\nu} n^\mu \sqrt{\gamma}
+   = \frac{2}{\mu_0} \int_{\Sigma} \nabla^\nu \Omega_{\mu\nu} n^\mu \sqrt{\gamma}
    \, \D^{n-1} x \nonumber \\
    & = &
-    - \frac{2}{\mu_0} \int_{\Sigma} \nabla^\mu \Omega_{\mu\nu}  \D V^\mu
+    - \frac{2}{\mu_0} \int_{\Sigma} \nabla^\nu \Omega_{\mu\nu}  \D V^\mu
     = -\frac{1}{\mu_0} \Big( \underbrace{\int_{\Sp_\infty} \Omega_{\mu\nu} \, \D S^{\mu\nu}}_{0}
       - \int_{\Sp_{\rm int}} \Omega_{\mu\nu} \, \D S^{\mu\nu} \Big) \nonumber
 \eea
