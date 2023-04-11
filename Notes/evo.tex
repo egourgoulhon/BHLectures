@@ -76,21 +76,106 @@ The mass-variation formula (\ref{e:evo:mass_variation}) has been first
 derived for a Kerr black hole (as here) by Jacob Bekenstein\index[pers]{Bekenstein, J.D.}
 in 1973 \cite{Beken73a}. Its extension to generic stationary black hole configurations (cf. Remark~\ref{r:evo:general_mass_variation} above) has been
 obtained by James Bardeen\index[pers]{Bardeen, J.M.}, Brandon Carter\index[pers]{Carter, B.}
-and Stephen Hawking\index[pers]{Hawking, S.W.} in 1973 \cite{BardeCH73}
+and Stephen Hawking\index[pers]{Hawking, S.W.} in 1973 \cite{BardeCH73}.
 \end{hist}
 
 
 
 \subsection{A first law?}
 
-At this stage, it would be quite premature to call formula~(\ref{e:evo:mass_variation})
+At this stage, it would be premature to call formula~(\ref{e:evo:mass_variation})
 the first law of black hole dynamics by analogy to the first law of thermodynamics
-$\D E = T \D S - P \D V$. If one can reasonably interpret the left-hand side $\D M$
+$\D E = T \D S - P \D V$. One can reasonably interpret $\D M$
 as some energy variation and the term
-$\Omega_{\Hor} \, \D J$ in the right-hand side as the change of some rotational
-kinetic energy, it is not obvious at all to identify the term $(\kappa/4\pi) \, \D A$
-with $T\D S$.
+$\Omega_{\Hor} \, \D J$ as the work\footnote{In Newtonian mechanics, the
+work done by a torque $\tau$ during the time $\D t$ by which a body is rotating by $\D\ph$
+is $\D W = \tau \, \D\ph$. Given that $\tau := \D J/\D t$, one gets $\D W = \Omega \, \D J$, where
+$\Omega = \D\ph/\D t$ is the body's angular velocity.} performed by the torque
+that is changing by the amount $\D J$ the angular momentum of a body rotating
+at the angular velocity $\Omega_{\Hor}$. However, we do not have any argument yet to
+to identify the term $(\kappa/8\pi) \, \D A$ with the classical heat exchange term $T\D S$.
+For this, we need first to identify the entropy $S$ with the black hole area $A$.
+This will be performed in the next section.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Evolution of the area of a black hole}
+
+\subsection{Hawking's area theorem}
+
+The first step towards the area theorem is:
+
+\begin{prop}[positive expansion of a black hole horizon]
+Let $(\M,\w{g})$ be a $n$-dimensional spacetime containing a black hole
+of event horizon $\Hor$. If the Ricci tensor $\w{R}$ obeys the null
+energy condition (\ref{e:neh:null_energy_cond}) on $\Hor$, i.e. if
+$\w{R}(\wl, \wl) \geq 0$ for any null vector $\wl$ on $\Hor$, then the
+expansion $\theta_{(\wl)}$ of $\Hor$ along any future-directed null
+normal $\wl$, as defined in Sec.~\ref{s:def:def_expansion}, is positive or zero:
+\be \label{e:evo:theta_positive}
+    \theta_{(\wl)} \geq 0 .
+\ee
+\end{prop}
+\begin{proof}
+Let $\wl$ be a future-directed null normal vector field of $\Hor$.
+$\wl$ is necessarily tangent to the null geodesic geodesic generators of $\Hor$
+(Property~\ref{p:def:null_geod_generators}) and is thus a pregeodesic
+vector, i.e. it obeys Eq.~(\ref{e:def:wl_geod_kappa}):
+$\wnab_{\wl}\, \wl = \kappa \, \wl $.
+If $\wl$ is not geodesic, it is always possible to rescale it
+to $\wl' = \alpha \wl$ with $\alpha > 0$ so that $\wl'$ is a geodesic vector field:
+$\wnab_{\wl'}\, \wl' = 0$ [Eq.~(\ref{e:def:wlp_geod})].
+We have then $\theta_{(\wl')} = \alpha \theta_{(\wl)}$ [cf. Eq.~(\ref{e:def:rescale_lambda})],
+so that $\theta_{(\wl)} \geq 0 \iff \theta_{(\wl')} \geq 0$.
+Accordingly, in order to prove (\ref{e:evo:theta_positive}), there is no loss of generality in assuming that $\wl$ is a geodesic vector field, i.e. has a vanishing non-affinity coefficient: $\kappa=0$.
+Let then $\lambda$ be the affine parameter of the geodesic generators of $\Hor$ associated to $\wl$:
+$\wl = \D\w{x}/\D\lambda$ along any geodesic generator $\Li$. The evolution of
+$\theta_{(\wl)}$ along $\Li$
+is $\D\theta_{(\wl)}/\D\lambda = \wnab_{\el}\,  \theta_{(\wl)}$ and is given by
+the null Raychaudhuri equation (\ref{e:def:null_Raychaud_Ricci}).
+Owing to $\kappa=0$, it simplifies to
+\[
+    \derd{\theta_{(\wl)}}{\lambda}  =
+        - \frac{1}{n-2} \, \theta_{(\wl)}^2
+        - \underbrace{\sigma_{ab} \sigma^{ab}}_{\geq 0}
+        - \underbrace{\w{R}(\wl, \wl)}_{\geq 0} ,
+\]
+where $\sigma_{ab} \sigma^{ab} \geq 0$ has been established in Sec.~\ref{s:neh:NEH_Theta_zero}
+[Eq.~(\ref{e:neh:sigma_square})] and $\w{R}(\wl, \wl) \geq 0$ by virtue of the null
+energy condition on $\Hor$. We have then
+\be \label{e:evo:der_theta_lower}
+    \derd{\theta_{(\wl)}}{\lambda}  \leq
+        - \frac{1}{n-2} \, \theta_{(\wl)}^2  .
+\ee
+Let us assume that at some point $p\in\Li\cap\Hor$, $\theta_{(\wl)} = \theta_0 < 0$.
+Without any loss of generality, we may assume that $\lambda(p) = 0$.
+Equation~(\ref{e:evo:der_theta_lower}) implies
+\be \label{e:evo:theta_lower_theta_bar}
+ \forall \lambda\geq 0,\quad \theta_{(\wl)}(\lambda) \leq \bar\theta(\lambda) ,
+\ee
+where $\bar\theta(\lambda)$ obeys
+\[
+    \frac{\D\bar\theta}{\D\lambda} = -  \frac{1}{2}  \bar\theta^2
+    \qand \bar\theta(0) = \theta_0 .
+\]
+The solution of the above differential equation is
+\[
+\bar\theta(\lambda) = \frac{\theta_0}{1 + \theta_0\lambda/2} .
+\]
+It follows that $\bar\theta \to -\infty$ as $\lambda \to -2/\theta_0 > 0$.
+The inequality~(\ref{e:evo:theta_lower_theta_bar}) then implies
+$\theta_{(\wl)} \to -\infty$ as $\lambda \to \lambda_*$
+with $0 < \lambda_* \leq -2/\theta_0$. Hence the point $p_*\in\Li$ of parameter $\lambda_*$ is a \emph{focusing point},
+i.e. a point where neighbouring null geodesic generators of $\Hor$ intersect.
+But according to Property~\ref{p:glo:prop3} of black hole event horizons (cf. Sec.~\ref{s:glo:properties_H}), this can happen
+only if $p_*$ is a point at which the null geodesic $\Li$ enters $\Hor$; however,
+this situation is excluded since $\lambda_* > 0$ implies that $p_*$ lies in the
+future of $p$, where $\Li$ was already in $\Hor$. Hence the hypothesis
+$\theta_0 < 0$ has lead us to a contradiction. It follows that $\theta_0 \geq 0$,
+i.e. at any point $p\in\Hor$,  $\theta_{(\wl)} \geq 0$.
+\end{proof}
+
+\subsection{The second law of black hole thermodynamics}
 
 
