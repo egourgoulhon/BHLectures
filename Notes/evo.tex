@@ -9,14 +9,15 @@ This chapter is in a draft stage.
 
 \section{Towards the first law of black hole dynamics}
 
-\subsection{The mass variation formula}
+\subsection{Mass variation formula for Kerr black holes}
 
+In this section, we assume 4-dimensional general relativity.
 Let us consider an initially isolated Kerr black hole, of parameters $(m,a)$,
 that is perturbed by the arrival of some external body or some gravitational
 radiation. After some transitory dynamical regime (e.g. absorption of the
 external body and emission of gravitational waves), the black hole relaxes
 to a new equilibrium configuration. According to the
-no-hair theorem (Sec.~\ref{s:sta:no-hair}),
+no-hair theorem (Property~\ref{p:sta:no-hair_thm}, Sec.~\ref{s:sta:no-hair}),
 the final state has to be a Kerr black hole, of
 parameters $(m+\D m, a+\D a)$ say.
 Let us investigate how the black hole global properties evolve during the
@@ -61,20 +62,28 @@ $\D A$, $\D J$ and $\D M$ via expressions (\ref{e:ker:kappa_m_a})
 and (\ref{e:ker:def_OmegaH}), one recovers Eq.~(\ref{e:evo:mass_variation}).
 \end{remark}
 
-\begin{remark}
-\label{r:evo:general_mass_variation}
+\subsection{General mass variation formula} \label{s:evo:gen_mass_variation}
+
 The mass variation formula (\ref{e:evo:mass_variation}) can be derived in
 a more general framework, without assuming that it describes changes between
-two nearby Kerr solutions \cite{BardeCH73,Carte79}. It even holds
+two nearby Kerr solutions \cite{BardeCH73,Carte79} and without restricting
+the spacetime dimension to 4. It even holds
 for gravitation theories other than general relativity, more specifically
 for any theory based on a diffeomorphism-covariant lagrangian; see Wald's review
 article~\cite{Wald01} for details.
-\end{remark}
+
+Here we establish the mass variation formula for quasi-stationary black holes,
+from integral mass formulas obtained in Chap.~\ref{s:sta}.
+
+... TO BE COMPLETED ...
+
 
 \begin{hist}
-The mass-variation formula (\ref{e:evo:mass_variation}) has been first
-derived for a Kerr black hole (as here) by Jacob Bekenstein\index[pers]{Bekenstein, J.D.}
-in 1973 \cite{Beken73a}. Its extension to generic stationary black hole configurations (cf. Remark~\ref{r:evo:general_mass_variation} above) has been
+The mass-variation formula (\ref{e:evo:mass_variation}) for Kerr black holes
+has been first
+derived by Jacob Bekenstein\index[pers]{Bekenstein, J.D.}
+in 1973 \cite{Beken73a}. Its extension to generic stationary black hole configurations
+(Sec.~\ref{s:evo:gen_mass_variation}) has been
 obtained by James Bardeen\index[pers]{Bardeen, J.M.}, Brandon Carter\index[pers]{Carter, B.}
 and Stephen Hawking\index[pers]{Hawking, S.W.} in 1973 \cite{BardeCH73}.
 \end{hist}
@@ -123,18 +132,20 @@ $\wl$ is necessarily tangent to the null geodesic geodesic generators of $\Hor$
 (Property~\ref{p:def:null_geod_generators}) and is thus a pregeodesic
 vector, i.e. it obeys Eq.~(\ref{e:def:wl_geod_kappa}):
 $\wnab_{\wl}\, \wl = \kappa \, \wl $.
-If $\wl$ is not geodesic, it is always possible to rescale it
+If $\wl$ is not geodesic ($\kappa\neq 0$), it is always possible to rescale it
 to $\wl' = \alpha \wl$ with $\alpha > 0$ so that $\wl'$ is a geodesic vector field:
 $\wnab_{\wl'}\, \wl' = 0$ [Eq.~(\ref{e:def:wlp_geod})].
 We have then $\theta_{(\wl')} = \alpha \theta_{(\wl)}$ [cf. Eq.~(\ref{e:def:rescale_lambda})],
 so that $\theta_{(\wl)} \geq 0 \iff \theta_{(\wl')} \geq 0$.
-Accordingly, in order to prove (\ref{e:evo:theta_positive}), there is no loss of generality in assuming that $\wl$ is a geodesic vector field, i.e. has a vanishing non-affinity coefficient: $\kappa=0$.
-Let then $\lambda$ be the affine parameter of the geodesic generators of $\Hor$ associated to $\wl$:
-$\wl = \D\w{x}/\D\lambda$ along any geodesic generator $\Li$. The evolution of
+Accordingly, for proving (\ref{e:evo:theta_positive}), there is no loss of generality in assuming that
+$\wl$ is a geodesic vector field.
+Let us consider a null geodesic generator $\Li$ of $\Hor$. Up to some additive constant, there is
+a unique affine parameter $\lambda$ of $\Li$ associated to $\wl$, i.e.  such that
+$\wl = \D\w{x}/\D\lambda$ along $\Li$. The evolution of
 $\theta_{(\wl)}$ along $\Li$
-is $\D\theta_{(\wl)}/\D\lambda = \wnab_{\el}\,  \theta_{(\wl)}$ and is given by
+is measured by $\D\theta_{(\wl)}/\D\lambda = \wnab_{\el}\,  \theta_{(\wl)}$ and is given by
 the null Raychaudhuri equation (\ref{e:def:null_Raychaud_Ricci}).
-Owing to $\kappa=0$, it simplifies to
+Owing to $\kappa=0$ (for $\wl$ is assumed to be a geodesic vector field), it simplifies to
 \[
     \derd{\theta_{(\wl)}}{\lambda}  =
         - \frac{1}{n-2} \, \theta_{(\wl)}^2
@@ -143,35 +154,37 @@ Owing to $\kappa=0$, it simplifies to
 \]
 where $\sigma_{ab} \sigma^{ab} \geq 0$ has been established in Sec.~\ref{s:neh:NEH_Theta_zero}
 [Eq.~(\ref{e:neh:sigma_square})] and $\w{R}(\wl, \wl) \geq 0$ by virtue of the null
-energy condition on $\Hor$. We have then
+energy condition on $\Hor$. Hence
 \be \label{e:evo:der_theta_lower}
     \derd{\theta_{(\wl)}}{\lambda}  \leq
         - \frac{1}{n-2} \, \theta_{(\wl)}^2  .
 \ee
 Let us assume that at some point $p\in\Li\cap\Hor$, $\theta_{(\wl)} = \theta_0 < 0$.
-Without any loss of generality, we may assume that $\lambda(p) = 0$.
-Equation~(\ref{e:evo:der_theta_lower}) implies
+By choosing the additive constant in the definition of the affine parameter $\lambda$,
+we may ensure $\lambda(p) = 0$.
+Equation~(\ref{e:evo:der_theta_lower}) implies then
 \be \label{e:evo:theta_lower_theta_bar}
  \forall \lambda\geq 0,\quad \theta_{(\wl)}(\lambda) \leq \bar\theta(\lambda) ,
 \ee
 where $\bar\theta(\lambda)$ obeys
 \[
-    \frac{\D\bar\theta}{\D\lambda} = -  \frac{1}{2}  \bar\theta^2
+    \frac{\D\bar\theta}{\D\lambda} = -  \frac{1}{n-2}  \bar\theta^2
     \qand \bar\theta(0) = \theta_0 .
 \]
-The solution of the above differential equation is
+The unique solution of this differential equation is
 \[
-\bar\theta(\lambda) = \frac{\theta_0}{1 + \theta_0\lambda/2} .
+\bar\theta(\lambda) = \frac{\theta_0}{1 + \theta_0\lambda/(n-2)} .
 \]
-It follows that $\bar\theta \to -\infty$ as $\lambda \to -2/\theta_0 > 0$.
+It follows that $\bar\theta \to -\infty$ as $\lambda \to -(n-2)/\theta_0 > 0$.
 The inequality~(\ref{e:evo:theta_lower_theta_bar}) then implies
 $\theta_{(\wl)} \to -\infty$ as $\lambda \to \lambda_*$
-with $0 < \lambda_* \leq -2/\theta_0$. Hence the point $p_*\in\Li$ of parameter $\lambda_*$ is a \emph{focusing point},
+with $0 < \lambda_* \leq -(n-2)/\theta_0$. Hence the point $p_*\in\Li$ of parameter $\lambda_*$ is a \emph{focusing point},
 i.e. a point where neighbouring null geodesic generators of $\Hor$ intersect.
 But according to Property~\ref{p:glo:prop3} of black hole event horizons (cf. Sec.~\ref{s:glo:properties_H}), this can happen
-only if $p_*$ is a point at which the null geodesic $\Li$ enters $\Hor$; however,
+only if $p_*$ is a crossover point, i.e.
+a point at which the null geodesic $\Li$ arrives in $\Hor$; however,
 this situation is excluded since $\lambda_* > 0$ implies that $p_*$ lies in the
-future of $p$, where $\Li$ was already in $\Hor$. Hence the hypothesis
+future of $p$, where $\Li$ is already in $\Hor$. Hence the hypothesis
 $\theta_0 < 0$ has lead us to a contradiction. It follows that $\theta_0 \geq 0$,
 i.e. at any point $p\in\Hor$,  $\theta_{(\wl)} \geq 0$.
 \end{proof}
