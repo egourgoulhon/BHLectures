@@ -665,40 +665,41 @@ discuss in the next section, after having introduced cross-sections.
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{def_cross_sections.pdf}}
 \caption[]{\label{f:def:hor_cylinder} \footnotesize
-The null hypersurface $\Hor$ and two cross-sections $\Sp$ and $\Sp'$.
+The null hypersurface $\Hor$ and two (complete) cross-sections $\Sp$ and $\Sp'$.
 The green curves represent some null geodesic generators, with the null normal
 $\wl$ tangent to them.}
 \end{figure}
 
-In the remaining of this chapter, we assume that the spacetime dimension $n$
-obeys $n\geq 3$. We define then a \defin{cross-section}\index{cross-section}
-of the null hypersurface $\Hor$
+
+\begin{greybox}
+Let $\Hor$ be a null hypersurface of a $n$-dimensional spacetime $(\M, \w{g})$
+with $n\geq 3$.
+We define a \defin{cross-section}\index{cross-section} of $\Hor$
 as a submanifold $\Sp$ of $\Hor$ of codimension 2 (i.e. $\dim \Sp=n-2$),
 such that (i) the null normal $\wl$ is nowhere tangent to $\Sp$ and (ii)
-each null geodesic generator of $\Hor$ intersects $\Sp$ once, and only once.
+each null geodesic generator of $\Hor$ intersects $\Sp$ at most once.
+If each null geodesic generator intersects $\Sp$ exactly once,
+we shall say that $\Sp$ is a
+\defin{complete cross-section}\index{cross-section!complete --}\index{complete!cross-section}
+(cf. Fig.~\ref{f:def:hor_cylinder}).
+\end{greybox}
 
 \begin{notation}
 Indices relative to a cross-section will range from $2$ to $n-1$ and
 will be denoted by a Latin letter from the beginning of the alphabet: $a$, $b$, etc.
 \end{notation}
 
-To encompass the idea that an event horizon delimitates some
-region of spacetime, we shall assume that the cross-sections
+To encompass the idea that an event horizon $\Hor$ delimitates some
+region of spacetime, we shall assume that its cross-sections
 are \defin{closed manifolds}\index{closed!manifold}, i.e.
 are compact without boundary. The simplest example is the sphere,
-more precisely the $(n-2)$-dimensional sphere $\mathbb{S}^{n-2}$, where $n$
-is the spacetime dimension. It is the one relevant for standard 4-dimensional
-black holes. But at this stage, we shall allow for other
-closed-manifold topologies, like that of a torus.
-
-Given the definition of a cross-section $\Sp$,
-the topology of $\Hor$ is then that of a ``tube'' or ``cylinder''
-(cf. Fig.~\ref{f:def:hor_cylinder}):
-\be \label{e:def:H_topology}
-    \Hor \simeq \R \times \Sp.
-\ee
-For the standard 4-dimensional black holes, this is
-$\Hor \simeq \R \times \mathbb{S}^{2}$.
+more precisely the $(n-2)$-dimensional sphere $\mathbb{S}^{n-2}$,
+as illustrated in Fig.~\ref{f:def:hor_cylinder}.
+This example is the one relevant for standard 4-dimensional
+stationary black holes, as we shall see in Sec.~\ref{s:sta:BH_stationary}.
+But for $n > 4$, other
+closed-manifold topologies, like that of a torus, are allowed for
+cross-sections of a stationary black hole.
 
 A first important property of cross-sections is the following one.
 \begin{prop}[spacelike character of cross-sections]
@@ -730,13 +731,12 @@ submanifold.
 \end{proof}
 
 \begin{example}[light cone] \label{x:def:light_cone4}
-From now on, we abandon the null hyperplane considered in Examples~\ref{x:def:null_hyp},
-\ref{x:def:null_hyp2} and \ref{x:def:null_hyp3}, since its topology is $\mathbb{R}^3$,
-and therefore not of the type (\ref{e:def:H_topology}) with $\Sp$ compact.
-On the other side, the future sheet $\Hor$ of the Minkowski-spacetime light cone considered in Examples~\ref{x:def:light_cone},
-\ref{x:def:light_cone2} and \ref{x:def:light_cone3} does obey (\ref{e:def:H_topology}),
+The future sheet $\Hor$ of the Minkowski-spacetime light cone considered in
+Examples~\ref{x:def:light_cone},
+\ref{x:def:light_cone2} and \ref{x:def:light_cone3} has the topology $\R \times \SS^2$
 since we have excluded the cone apex from $\Hor$.
-A natural choice of cross-section is a sphere defined by $t=t_0$ for some positive constant $t_0$:
+The complete cross-sections are then compact and a natural choice
+for them is that of the spheres defined by $t=t_0$ for some positive constant $t_0$:
 \[
     \Sp = \left\{ p \in \Hor,\  t(p) = t_0 \right\} .
 \]
@@ -752,7 +752,7 @@ radius of the sphere is $t_0$.
 
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor4}
 The 3-dimensional cylinder $\Hor$ introduced in Example~\ref{x:def:Schw_hor}
-has the topology (\ref{e:def:H_topology}), with $\Sp\simeq \mathbb{S}^2$
+has the topology $\R \times \SS^2$
 (cf. Fig.~\ref{f:def:Schwarz_horizon}).
 Since it is defined
 by $r=2m$ in terms of the ingoing Eddington-Finkelstein coordinates $(t,r,\th,\ph)$,
