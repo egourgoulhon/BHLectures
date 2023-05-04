@@ -201,15 +201,14 @@ generators of $\Hor$ (green curves).}
 
 
 
-\begin{prop}[area theorem \textnormal{(Hawking\index[pers]{Hawking, S.W.} 1971 \cite{Hawki71},
-Chru\'sciel\index[pers]{Chrusciel, P.T.@Chru\'sciel, P.T.} et al. 2001 \cite{ChrusDGH01})}]
+\begin{prop}[area theorem \textnormal{(Hawking\index[pers]{Hawking, S.W.} 1971 \cite{Hawki71})}]
 Let $(\M,\w{g})$ be a $n$-dimensional spacetime containing a black hole
 of event horizon $\Hor$ and such that the Ricci tensor $\w{R}$ fulfils the null
 energy condition (\ref{e:neh:null_energy_cond}), i.e.
 $\w{R}(\wl, \wl) \geq 0$ for any null vector $\wl$.
 Let $\Sigma_1$ and $\Sigma_2$ be spacelike hypersurfaces
-such that $\Sigma_2$ lies in the causal future of $\Sigma_1$ ($\Sigma_2\subset J^+(\Sigma_1)$,
-cf. Sec.~\ref{s:glo:causal_struct}). Let $\Sp_1 = \Hor \cap \Sigma_1$
+such that $\Sigma_2$ lies in the causal future of $\Sigma_1$: $\Sigma_2\subset J^+(\Sigma_1)$
+(cf. Sec.~\ref{s:glo:causal_struct}). Let $\Sp_1 = \Hor \cap \Sigma_1$
 and $\Sp_2 = \Hor\cap\Sigma_2$.
 If
 \begin{itemize}
@@ -222,20 +221,15 @@ makes sense.} of $\Hor$ that are intersected by the same null geodesic generator
 \end{itemize}
 or
 \begin{itemize}
-\item[(ii)] The future null infinity $\scri^+$ with respect to which the
-black hole is defined is $\Hor$-regular\footnote{The full definition
-of $\Hor$-regularity is provided in Def.~4.3 of Ref.~\cite{ChrusDGH01}
-or Def.~3.5.3 of Ref.~\cite{Chrus20}; when $\scri^+$ is a null hypersurface,
-this is equivalent to demanding the existence of a neighbourhood $\mathscr{U}$
-of $\Hor$ such that for every compact set $\mathscr{C}\subset\mathscr{U}$ whose
-chronological future $I^+(\mathscr{C})$ intersects $\scri^+$, there is a least one
-generator of $\scri^+$ that intersects $\overline{I^+(\mathscr{C})}$ and leaves it
-when followed to the past.},
-$J^-(\scri^+)\cup \Hor$ is included in a globally hyperbolic
-region $\mathscr{V}$ of $\M$ and $\Sigma_1$ and $\Sigma_2$ are Cauchy surfaces
+\item[(ii)]
+the closure of $J^-(\scri^+)\cup \Hor$ in
+the conformal manifold $\tilde{\M}\supset\M$ defining $\scri^+$
+is included in a globally hyperbolic
+region $\mathscr{V}$ of $(\tilde{\M},\tilde{\w{g}})$
+and $\Sigma_1$ and $\Sigma_2$ are Cauchy surfaces
 of $\mathscr{V}$,
 \end{itemize}
-then the areas $A(\Sp_1)$ and $A(\Sp_2)$ are well defined and obey
+then the areas $A(\Sp_1)$ and $A(\Sp_2)$ obey
 \be \label{e:evo:AS2_ge_AS1}
     A(\Sp_2) \geq A(\Sp_1) .
 \ee
@@ -291,13 +285,27 @@ i.e. the subset of $\Hor$ where new null geodesics enter $\Hor$ (cf. Sec.~\ref{s
 Naively, this reinforces the inequality $A(\Sp_2) > A(\Sp_1)$ since the new geodesics
 are generating new parts of $\Hor$ and therefore additional segments for $\Sp_2$
 with respect to those that can be connected to $\Sp_1$ by null geodesic generators
-(cf. Fig.~\ref{f:evo:area_theorem}). The formal proof of this requires the hypotheses
-stated in the point (ii) above and can be found in Ref.~\cite{ChrusDGH01}.
+(cf. Fig.~\ref{f:evo:area_theorem}). More precisely, let us assume (ii) and
+let us consider a point $p\in\Sp_1$. Let $\Li$ be the null geodesic
+generator of $\Hor$ through $p$. By property~\ref{p:glo:prop3}, $\Li$ stays in $\Hor$ for all its future after $p$. Since $\Sigma_2$ is a Cauchy surface lying in the causal future of $\Sigma_1$, $\Li$
+necessarily intersects $\Sigma_2$ at a unique point $q \in \Sigma_2\cap\Hor = \Sp_2$.
+Hence every point of $\Sp_1$ is mapped to a point of $\Sp_2$ by a null geodesic generator.
+Let $\Sp_2^*$ be the part of $\Sp_2$ covered by this map. We may apply (i) to the pair $(\Sp_1, \Sp_2^*)$
+and get $A(\Sp_2^*) \geq A(\Sp_1)$. Given that $\Sp_2^* \subset \Sp_2$, one has
+$A(\Sp_2) \geq A(\Sp_2^*)$ and (\ref{e:evo:AS2_ge_AS1}) follows.
 \end{proof}
 
 \begin{hist}
-Argument in Hawking \& Ellis \cite{HawkiE73} valid only for $\Hor$ piecewise smooth (cf. the
-discussion in Sec.~3.5.1 of Ref.~\cite{Chrus20}),
+The area theorem has been first established by Stephen Hawking\index[pers]{Hawking, S.W.}
+in 1971 \cite{Hawki71} and a detailed proof was given in
+Hawking \& Ellis' 1973 textbook (Proposition~9.2.7 in \cite{HawkiE73}).
+In 2001, Piotr Chru\'sciel\index[pers]{Chrusciel, P.T.@Chru\'sciel, P.T.},
+Erwann Delay\index[pers]{Delay, E.},
+Gregory Galloway\index[pers]{Galloway, G.J.} and Ralph Howard\index[pers]{Howard, R.}
+\cite{ChrusDGH01} pointed out that the Hawking \& Ellis proof is
+valid only for $\Hor$ piecewise smooth (cf. the
+discussion in Sec.~3.5.1 of Chru\'sciel's textbook \cite{Chrus20}) and constructed
+a new proof that does not assume the smoothness of $\Hor$.
 \end{hist}
 
 \subsection{The second law of black hole thermodynamics}
