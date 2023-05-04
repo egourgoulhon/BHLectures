@@ -5,20 +5,21 @@
 
 \section{Introduction}
 
-After having investigated black holes in equilibrium, via the
+After having investigated black holes in equilibrium, through the
 Schwarzschild and Kerr solutions, we move to dynamical black holes,
 more specifically to the standard process of
 black hole formation: \emph{gravitational collapse}\index{gravitational!collapse}.
 To deal with analytical solutions, we simplify the problem as much as
 possible. First we assume spherical symmetry, which is quite natural
 as a first approximation for modeling the gravitational collapse
-of a stellar core or a gas cloud. A drawback is that this forbids the
+of a stellar core or a gas cloud. A drawback of this approach is that it forbids the
 study of gravitational waves\index{gravitational!waves}, since by
-virtue of Birkhoff's theorem\index{Birkhoff's theorem} (to be proven in this chapter)
+virtue of the Jebsen-Birkhoff theorem\index{Jebsen-Birkhoff theorem}
+(to be proven in Sec.~\ref{s:lem:Birkhoff}),
 the exterior
 of any spherically symmetric collapsing object is a piece of Schwarzschild
-spacetime, i.e. it does not contain any gravitational radiation.
-The second major approximation is to consider \emph{pressureless matter},
+spacetime, which does not contain any gravitational radiation.
+The second major simplifying approximation is to consider \emph{pressureless matter},
 commonly referred to as \emph{dust}\index{dust}.
 
 We start by deriving from the Einstein equation the system of partial differential
@@ -275,7 +276,7 @@ Eq.~(\ref{e:lem:LTeqs2}), to get $\rho(\tau,\chi)$ and into
 \end{enumerate}
 \end{prop}
 
-\subsection{Vacuum solution and Birkhoff's theorem} \label{s:lem:Birkhoff}
+\subsection{Vacuum solution and the Jebsen-Birkhoff theorem} \label{s:lem:Birkhoff}
 
 Let us search for a solution in the vacuum case, i.e. $\rho=0$.
 Equation~(\ref{e:lem:LTeqs2}) with $\rho=0$ implies that $M(\chi)$ is a constant, which
@@ -315,34 +316,37 @@ but Schwartzschild metric expressed in Schwarzschild-Droste coordinates $(t,r,\t
 \[
     \left. \der{}{r}\left( \frac{1}{f(\chi)} \right) \right| _\tau
     = \left. \der{}{\tau}\left( \veps \frac{\sqrt{f(\chi)^2 - 1 + 2m/r}}{1 - 2m/r} \right)
-        \right| _r .
+        \right| _r ,
 \]
-This relation expresses the identity
+this relation expressing the identity
 $\partial^2 t / \partial r\partial\tau = \partial^2 t / \partial\tau\partial r$.
-In it, $\chi$ has to be considered as a function of $(\tau,r)$, given
+In it, $\chi$ has to be considered as a function of $(\tau,r)$, which is given
 implicitly by one of the three expressions (\ref{e:lem:sol_E_pos})-(\ref{e:lem:sol_E_neg})
-with $M(\chi)=m$, so that the above relation becomes
+with $M(\chi)=m$. Accordingly, the above condition becomes
 \[
     - \frac{f'(\chi)}{f(\chi)^2} \left. \der{\chi}{r} \right| _\tau =
     \frac{\veps}{\sqrt{f(\chi)^2 - 1 + 2m/r}} \frac{f'(\chi)}{f(\chi)^2}
     \left. \der{\chi}{\tau} \right| _r .
 \]
-Simplifying and invoking (\ref{e:lem:drdtau_eps}), we get
+Simplifying and invoking (\ref{e:lem:drdtau_eps}), we arrive at a condition
+independent of $f(\chi)$:
 \[
     \left. \der{\chi}{\tau} \right| _r  +
     \left. \der{\chi}{r} \right| _\tau \left. \der{r}{\tau} \right| _\chi = 0 .
 \]
-By the chain rule, the left-hand side is nothing but the partial derivative
+Now this condition is always fulfilled:
+by the chain rule, the left-hand side is nothing but the partial derivative
 $\left. \der{\chi}{\tau} \right| _\chi$, which is trivially zero
 if one considers $\chi$ as a function of $(\tau,\chi)$.
 We conclude that there exists a function $t$ obeying
 (\ref{e:lem:dt_dr_dtau_f}), which proves that $\w{g}$ is
-Schwarzschild metric. Since our starting point was
-the most general metric for a spherically symmetric spacetime
+Schwarzschild metric, whatever the choice of the function $f(\chi)$.
+Since our starting point was
+the most general metric for a (possibly non-stationary) spherically symmetric spacetime
 [Eq.~(\ref{e:lem:metric_sync_coord})], we have proven
 a famous theorem of general relativity:
 
-\begin{prop}[Birkhoff's theorem\index{Birkhoff's theorem}]
+\begin{prop}[Jebsen-Birkhoff theorem\index{Birkhoff's theorem}\index{Jebsen-Birkhoff theorem}]
 \label{p:lem:Birkhoff}
 In vacuum, the unique spherically symmetric solution of the 4-dimensional
 Einstein equation with $\Lambda=0$ [Eq.~(\ref{e:fra:vac_Einstein})]
@@ -355,16 +359,22 @@ spacetime is static, even if the central body is not (for instance it may oscill
 radially, keeping its spherical symmetry). In particular, there are no
 gravitational waves in spherical symmetry.
 \begin{remark}
-Birkhoff's theorem can be viewed as a generalization of the shell theorem\index{shell theorem} version
+The Jebsen-Birkhoff theorem can be viewed as a generalization of the shell theorem\index{shell theorem} version
 of Gauss's law\index{Gauss's law} in Newtonian gravity:
 the gravitational field outside any spherical source is entirely determined by the total
 mass $m$ of the source, being identical to that generated by a point of mass $m$
 located at the symmetry center.
 \end{remark}
 
+\begin{hist}
+The Jebsen-Birkhoff theorem has been first proved by the Norwegian physicist
+Jørg Tofte Jebsen\index[pers]{Jebsen, J.T.} in 1920 \cite{Jebse1921}. It was independently established by the American mathematician George D. Birkhoff\index[pers]{Birkhoff, G.D.} in 1923 \cite{Birkh1923} and became famous under the
+name \emph{Birkhoff's theorem}\index{Birkhoff's theorem}, the work of Jebsen remaining largely unknown until recently (see Ref.~\cite{JohanR06} for details).
+\end{hist}
+
 \subsection{Schwarzschild solution in Lemaître coordinates} \label{s:lem:Schwarzschild}
 
-The above derivation of the Birkhoff's theorem offers a way to express
+The above derivation of the Jebsen-Birkhoff theorem offers a way to express
 Schwarzschild metric in new sets of coordinates, not considered in Part~\ref{P:sch},
 namely Lemaître and Painlevé-Gullstrand coordinates.
 Since we have all freedom on the function $f(\chi)$, we will focuss on a subclass
@@ -392,7 +402,7 @@ and
 Accordingly, Eq.~(\ref{e:lem:metric_Lemaitre}) yieds
 \be \label{e:lem:Sch_met_Lem}
     \encadre{  \w{g} = - \dd\tau^2
-        + \frac{2m}{r} \dd\chi^2
+        + \frac{2m}{r(\tau,\chi)} \dd\chi^2
         + r(\tau,\chi)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)  } ,
 \ee
 where $r(\tau,\chi)$ is given by Eq.~(\ref{e:lem:r_tau_chi_Schwarz}).
@@ -548,7 +558,7 @@ pressure never vanishes, but after the collapse has reached a certain stage, it
 plays a negligible role on the dynamics, so that the pressureless (dust) approximation
 developed in this chapter is quite good.
 
-Given the assumed spherical symmetry, Birkhoff's theorem (Property~\ref{p:lem:Birkhoff})
+Given the assumed spherical symmetry, the Jebsen-Birkhoff theorem (Property~\ref{p:lem:Birkhoff})
 implies that the spacetime metric outside the star
 is Schwarzschild metric.
 Let us then characterize the star by its areal radius $r_0$
@@ -2531,7 +2541,8 @@ Although very relevant from an astrophysical point of view, rotation
 significantly complicates the problem of gravitational collapse,
 since gravitational waves\index{gravitational!waves} are emitted in this case.
 This prevents the exterior spacetime to be described by an exact solution,
-such as the Schwarzschild one\footnote{Note that there is no equivalent to the Birkhoff theorem
+such as the Schwarzschild one\footnote{Note that there is no equivalent to the
+Jebsen-Birkhoff theorem
 (Property~\ref{p:lem:Birkhoff}) for a non-spherically symmetric (e.g. flattened) body;
 in particular, the vacuum metric
 outside the body is \emph{not} Kerr metric.}. Only numerical solutions are known;
