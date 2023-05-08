@@ -24,7 +24,7 @@ light rays from some ``central region''. This far-away structure is best
 described in terms of the so-called \emph{conformal completion}, which brings
 the spacetime infinity(ies) to a finite distance in another manifold
 --- a technique initiated by R.~Penrose\index[pers]{Penrose, R.} \cite{Penro63,Penro64} (see
-Ref.~\cite{Fraue04} for a review).
+Refs.~\cite{Fraue04} and \cite{Nicol17} for a review).
 We start by investigating the conformal completion of the simplest
 spacetime: Minkowski spacetime.
 
@@ -86,7 +86,8 @@ time defined by (cf. Fig.~\ref{f:glo:null_coord})
     r = \frac{1}{2} (v-u) .
     \end{array} \right.
 \ee
-The metric tensor takes then the shape
+One has then $\dd u \, \dd v = \dd t^2 - \dd r^2$ and the
+metric tensor (\ref{e:glo:Mink_metric_spher}) takes the shape
 \be \label{e:glo:Mink_metric_uv}
     \w{g} = - \dd u \, \dd v
         + \frac{1}{4} (v-u)^2 \left(  \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) .
@@ -105,9 +106,9 @@ their arctangents (cf. Fig.~\ref{f:glo:atan}):
     v = \tan V .
     \end{array} \right.
 \ee
-Then the coordinates $(U,V)$ span the half part of $(-\pi/2, \pi/2)\times (-\pi/2, \pi/2)$
-defined by $U < V$
-(since $\arctan$ is a monotonically increasing function, cf. Fig.~\ref{f:glo:atan}):
+Given that $\arctan$ is a monotonically increasing function (cf. Fig.~\ref{f:glo:atan}),
+the coordinates $(U,V)$ span the half part of $(-\pi/2, \pi/2)\times (-\pi/2, \pi/2)$
+defined by $U < V$:
 \be \label{e:glo:span_UV}
     -\frac{\pi}{2} < U < \frac{\pi}{2}, \quad
     -\frac{\pi}{2} < V < \frac{\pi}{2}, \quad\mbox{and}\quad U < V.
@@ -224,7 +225,7 @@ a hypersurface $\Sigma$ is timelike (resp. null, spacelike) for $\w{\tilde{g}}$
 iff $\Sigma$ is timelike (resp. null, spacelike) for $\w{g}$.
 
 What about geodesics? Let us first recall that a null curve is not necessarily
-a null geodesic (cf. Remark~\ref{r:def:null_curves} on page~\pageref{r:def:null_curves}
+a null geodesic (cf. Remark~\ref{r:def:null_curves} on p.~\pageref{r:def:null_curves}
 and Appendix~\ref{s:geo}),
 so that one cannot deduce from the above results that conformal transformations
 preserve null geodesics. However, this turns out to be true:
@@ -232,10 +233,12 @@ preserve null geodesics. However, this turns out to be true:
 A smooth curve $\Li$ in $\M$ is a null geodesic for $\w{\tilde{g}}$ iff
 $\Li$ is a null geodesic for $\w{g}$.
 \end{prop}
-To prove it, it suffices to write explicitly the geodesic equation [Eq.~(\ref{e:geo:eq_geod})]
-and to express the Christoffel symbols of $\w{\tilde{g}}$ in terms of those
+\begin{proof}[Sketch of proof]
+Write explicitly the geodesic equation [Eq.~(\ref{e:geo:eq_geod})]
+and express the Christoffel symbols of $\w{\tilde{g}}$ in terms of those
 of $\w{g}$ and the derivatives of $\Omega$ (see e.g. Appendix~D of Wald's
 textbook \cite{Wald84} for details).
+\end{proof}
 
 On the contrary, conformal transformations preserve neither timelike
 geodesics nor spacelike ones.
@@ -367,7 +370,7 @@ $\tau = \chi - \pi $ and $-\pi  < \tau < 0$;
 \item $i^+$ is the point of $\mathscr{E}$ defined by $\tau=\pi$ and $\chi=0$;
 \item $i^-$ is the point of $\mathscr{E}$ defined by $\tau=-\pi$ and $\chi=0$.
 \end{itemize}
-It is customary to pronounce $\scri$ as ``scri'', for \emph{script i}.
+It is customary to pronounce $\scri$ as ``scri''\index{scri}, for \emph{script i}.
 
 \begin{remark}
 On $\mathbb{S}^3$, the hyperspherical coordinates $(\chi,\th,\ph)$
@@ -604,7 +607,7 @@ vicinity of $\scri$ (i.e. when $\Omega\rightarrow 0$), then
 \begin{proof}
 It follows from $\w{\tilde{g}} = \Omega^2 \w{g}$ that the Ricci scalars $\tilde{R}$
 and $R$ of respectively $\w{\tilde{g}}$ and $\w{g}$ are related by\footnote{This relation is
-easily established by starting from Eq.~(2.30) of Hawking \& Ellis textbook~\cite{HawkiE73} or Eq.~(2.19) on page~645 of Choquet-Bruhat one~\cite{Choqu09} and inverting the roles of $\w{\tilde{g}}$ and $\w{g}$, thereby substituting
+easily established by starting from Eq.~(2.30) of Hawking \& Ellis' textbook~\cite{HawkiE73} or Eq.~(2.19) on p.~645 of Choquet-Bruhat's one~\cite{Choqu09} and inverting the roles of $\w{\tilde{g}}$ and $\w{g}$, thereby substituting
 $\Omega^{-1}$ for $\Omega$.}
 \be \label{e:glo:tildeR_R}
     \Omega^2 \tilde{R} = R - (n-1) \left( 2 \Omega \, \tilde{g}^{\mu\nu} \tilde{\nabla}_\mu
@@ -868,17 +871,18 @@ region, it can be considered as being trapped somewhere else in spacetime: this
 \begin{greybox}
 Let $(\M,\w{g})$ be a spacetime with a conformal completion at null infinity
 such that $\scri^+$ is complete;
-the \defin{black hole region}\index{black hole!region}, or simply \defin{black hole}\index{black hole},
-is the set of points of $\M$ that are not in the causal past of the future null infinity:
+the \defin{black hole region}\index{black hole!region}
+is the set of points of $\M$ that are not in the causal past of the future null
+infinity (cf. Fig.~\ref{f:glo:def_bh}):
 \be \label{e:glo:def_BH}
     \encadre{\mathscr{B} := \M \setminus (J^-(\scri^+)\cap\M) } .
 \ee
-(cf. Fig.~\ref{f:glo:def_bh}).
+If $\mathscr{B} \neq \varnothing$, on says
+that the spacetime $(\M,\w{g})$ \defin{contains a black hole}\index{black hole} or that
+$(\M,\w{g})$ is a \defin{black hole spacetime}\index{black hole!spacetime}.
 \end{greybox}
 The black hole region is thus the set of points of $\M$
 from which no future-directed causal curve in $\tilde{\M}$ reaches $\scri^+$.
-Of course, it may be that $\mathscr{B} = \varnothing$, in which case one
-says that the spacetime $(\M,\w{g})$ contains no black hole.
 
 
 \begin{figure}
@@ -939,7 +943,7 @@ Cauchy surface\footnote{The concepts of \emph{partial Cauchy surface}
 and \emph{future development} are defined in Sec.~\ref{s:ker:Cauchy_hor}.} $S(0)$ such that the
 closure in $\tilde{\M}$ of the domain of dependence of $S(0)$ contains $\scri^+$.
 According to such a definition, a black hole is a $(n-1)$-dimensional object,
-while the black hole $\mathscr{B}$ defined above is a $n$-dimensional object.
+while the black hole region $\mathscr{B}$ defined above is a $n$-dimensional object.
 \end{remark}
 
 If $\mathscr{B}\not=\varnothing$, the boundary $\Hor$ of the black hole region
@@ -1225,7 +1229,7 @@ the causal curve $\Li_{f(n)}$ to the point $q_{f(n)}$ arbitrary close to $q$,
 one can show that
 there exists a future-directed causal curve $\Li$ connecting $p$ to $q$
 (cf. Fig.~\ref{f:glo:point_sequence}; see e.g.
-Lemma~6.2.1 of Hawking \& Ellis textbook \cite{HawkiE73}
+Lemma~6.2.1 of Hawking \& Ellis' textbook \cite{HawkiE73}
 for a precise demonstration).
 
 As the limit of points in $J^-(\scri^+)$, $q$ lies in the closure
