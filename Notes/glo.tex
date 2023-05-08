@@ -1040,14 +1040,22 @@ Brandon Carter\index[pers]{Carter, B.} \cite{Carte71}.
 
 \subsection{Properties of the future event horizon} \label{s:glo:properties_H}
 
-Having defined a black hole in full generality, let us derive the
+Having defined a black hole region in full generality, let us derive the
 main properties of its boundary --- the future event horizon $\Hor$.
+
 
 \begin{prop}[the event horizon as an achronal set]
 \label{p:glo:prop1}
-$\Hor$ is an \defin{achronal set}\index{achronal set}, i.e. no pair of points of $\Hor$ can be connected
+A black hole event horizon $\Hor$ is an \defin{achronal set}\index{achronal set}, i.e. no pair of points of $\Hor$ can be connected
 by a timelike curve of $\M$.
 \end{prop}
+
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{glo_timelike_stab.pdf}}
+\caption[]{\label{f:glo:timelike_stab} \footnotesize
+Lemma~\ref{p:glo:lem1}: moving slightly the ends $p$ and $q$ of a timelike curve $\Li$
+necessarily results in another timelike curve $\Li'$.}
+\end{figure}
 
 Note that in the definition of an achronal set, it is not demanded that the timelike
 curve lies entirely in the set (for instance, the set can be discrete, so that no curve
@@ -1055,18 +1063,8 @@ whatsoever lies in it). Accordingly,
 an equivalent statement of Property~\ref{p:glo:prop1} is: no timelike curve of $\M$
 encounters $\Hor$ at more than one point.
 
-\begin{figure}
-\centerline{\includegraphics[width=0.55\textwidth]{glo_achronal.pdf}}
-\caption[]{\label{f:glo:achronal} \footnotesize
-Proving that $\Hor$ is achronal.}
-\end{figure}
-
-\begin{proof}
-Let us assume the negation of Property~\ref{p:glo:prop1}, i.e. that there exists two points
-in $\Hor$ which are connected by a timelike curve $\Li$. Let us call $p$ and
-$q$ these two points, with $q$ in the future of $p$ (cf. Fig.~\ref{f:glo:achronal}).
-We shall then use the following lemma.
-\begin{lemma}
+The proof of Property~\ref{p:glo:prop1} relies of the following lemma:
+\begin{lemma}[stability of timelike curves with respect to their ends]
 \label{p:glo:lem1}
 One can ``move the ends'' of any timelike curve
 ``a little bit'' and still get a timelike curve. More precisely,
@@ -1075,24 +1073,31 @@ there exists
 a neighbourhood $U$ of $p$ and a neighbourhood $V$ of $q$ such that
 any point $p'\in U$ can be connected to any point $q'\in V$ by a timelike curve.
 \end{lemma}
-\begin{proof}[Proof of Lemma~\ref{p:glo:lem1}]
+\begin{proof}
 This is more or less evident on a spacetime diagram (cf. Fig.~\ref{f:glo:timelike_stab})
 and a formal proof
 can be found as Lemma~3 in Chap.~14 of O'Neill's textbook \cite{ONeil83}.
 \end{proof}
-Applying Lemma~\ref{p:glo:lem1},
-let us choose $p'\in U\cap\mathscr{B}$ and $q'\in V\cap J^-(\scri^+)$. Such a choice is
+
+\begin{proof}[Proof of Property~\ref{p:glo:prop1}]
+Let us assume the negation of Property~\ref{p:glo:prop1}, i.e. that there exists two points
+$p$ and $q$
+in $\Hor$ that are connected by a timelike curve $\Li$, with $q$
+lying in the future of $p$ (cf. Fig.~\ref{f:glo:achronal}).
+Invoking Lemma~\ref{p:glo:lem1}, let $U$ and $V$ be the neighbourhoods of respectively
+$p$ and $q$ within which one can deform $\Li$ to a timelike curve.
+Let us choose $p'\in U\cap\mathscr{B}$ ($\mathscr{B}$ being the black hole region)
+and $q'\in V\cap J^-(\scri^+)$. Such a choice is
 always possible since $p$ and $q$ lie on the boundary between $\mathscr{B}$
 and $J^-(\scri^+)$ (cf. Fig.~\ref{f:glo:achronal}).
-Since $q'\in J^-(\scri^+)$, the timelike curve linking $p'$ and $q'$ can then be extended in the future into a causal curve $\Li'$ reaching $\scri^+$. This implies $p'\in J^-(\scri^+)$,
+Since $q'\in J^-(\scri^+)$, the timelike curve linking $p'$ and $q'$ can then be extended to the future in a causal curve $\Li'$ reaching $\scri^+$. This implies $p'\in J^-(\scri^+)$,
 which contradicts $p'\in\mathscr{B}$.
 \end{proof}
 
 \begin{figure}
-\centerline{\includegraphics[height=0.3\textheight]{glo_timelike_stab.pdf}}
-\caption[]{\label{f:glo:timelike_stab} \footnotesize
-Lemma~\ref{p:glo:lem1}: moving slightly the ends $p$ and $q$ of a timelike curve $\Li$
-yields another timelike curve $\Li'$.}
+\centerline{\includegraphics[width=0.55\textwidth]{glo_achronal.pdf}}
+\caption[]{\label{f:glo:achronal} \footnotesize
+Proving that $\Hor$ is achronal.}
 \end{figure}
 
 
@@ -1141,12 +1146,12 @@ $C^0$ and $C^1$) is generally used to denote Lipschitz submanifolds.
 
 \begin{prop}[the event horizon ruled by never leaving null geodesics \textnormal{(Penrose\index[pers]{Penrose, R.} 1968 \cite{Penro68})}]
 \label{p:glo:prop3}
-$\Hor$ is ruled by a family of null geodesics that (i) either lie entirely
+A black hole event horizon $\Hor$ is ruled by a family of null geodesics that (i) either lie entirely
 in $\Hor$ or never leave $\Hor$ when followed into the future from the
-point where they arrive in $\Hor$, and
+point where they enter $\Hor$, and
 (ii) have no endpoint in the future.
 Moreover, there is exactly one null geodesic through each point of $\Hor$,
-except at special points where null geodesics arrive in $\Hor$, which are
+except at special points where null geodesics enter $\Hor$, which are
 called \defin{crossovers}\index{crossover point}. A special case
 of crossover, called \defin{caustic}\index{caustic}, is a point
 where neighbouring null geodesics focus and converge while arriving in $\Hor$.
@@ -1167,25 +1172,24 @@ $a$ and $b$ on the figure) can be deformed into a \emph{timelike} curve $\Li'$
 with the ends kept fixed (dashed curve).}
 \end{figure}
 
+The following proof of Property~\ref{p:glo:prop3}
+is adapted from that given in Box~34.1 of MTW \cite{MisneTW73}.
+In addition of Lemma~\ref{p:glo:lem1}, it relies on the following lemma.
 
-\begin{proof}
-The following proof is adapted from that presented in Box~34.1 of MTW \cite{MisneTW73}.
-It relies on the following lemma.
 \begin{lemma}
 \label{p:glo:lem2}
 Let $\Li$ be a causal curve connecting two points $p$ and $q$
 of $\M$. If $\Li$ contains a timelike segment, then there exists an
 entirely timelike curve connecting $p$ and $q$.
 \end{lemma}
-\begin{proof}[Proof of Lemma~\ref{p:glo:lem2}]
-We shall provide only a graphical ``proof'', based on the spacetime diagram
+\begin{proof}
+We shall only provide a graphical ``proof'', based on the spacetime diagram
 of Fig.~\ref{f:glo:timelike_arc}. The causal curve $\Li$ may have parts where it is null (segments $pa$ and $bq$ in Fig.~\ref{f:glo:timelike_arc}); these parts are drawn with
 an angle of incline $\theta = \pm 45^\circ$.
-If $\Li$ contains a timelike segment (as $ab$ in Fig.~\ref{f:glo:timelike_arc}), i.e. a segment with $|\theta|>45^\circ$,
+If $\Li$ contains a timelike segment (such as $ab$ in Fig.~\ref{f:glo:timelike_arc}), i.e. a segment with $|\theta|>45^\circ$,
 it can be deformed, while keeping the same ends, to a curve with $|\theta|>45^\circ$
 everywhere, i.e. to a timelike curve.
 \end{proof}
-
 
 \begin{figure}
 \centerline{\includegraphics[width=0.55\textwidth]{glo_point_sequence.pdf}}
@@ -1194,9 +1198,13 @@ Causal curve $\Li$ connecting $p$ to $q$ obtained as a limit of causal curves
 in $J^-(\scri^+)$.}
 \end{figure}
 
-
-Let $p\in\Hor$ and let $U$ be some convex open neighbourhood of $p$.
-Since $p$ lies in the boundary of $J^-(\scri^+)$, it is always possible to
+\begin{proof}[Proof of Property~\ref{p:glo:prop3}]
+Let $p\in\Hor$ and let $U$ be some convex normal neighbourhood\footnote{Basically,
+a convex normal neighbourhood is an open subset $U$ such that any two points of $U$
+can be connected by a geodesic lying entirely in $U$, cf. Sec.~\ref{s:geo:normal_coord}.
+There always exists a convex normal neighbourhood around any point of a pseudo-Riemannian manifold
+(cf. Proposition~7 p.~130 in O'Neill's textbook~\cite{ONeil83}).}
+of $p$. Since $p$ lies in the boundary of $J^-(\scri^+)$, it is always possible to
 consider
 a sequence of points $(p_n)_{n\in\mathbb{N}}$ converging toward $p$
 and such that $\forall n\in\mathbb{N},\ p_n \in U \cap J^-(\scri^+)$
@@ -1205,7 +1213,7 @@ Since $p_n\in J^-(\scri^+)$,
 there exists a future-directed causal curve $\Li_{n}$ from $p_n$ to $\scri^+$
 for each $n\in\mathbb{N}$.
 The neighbourhood $U$ being convex, each $\Li_n$ intersects its boundary $\partial U$
-at a unique point, $q_n$ say: $\{q_n\}=\Li_n \cap \partial U$
+at a unique point, $q_n$ say, in the future of $p_n$: $\{q_n\}=\Li_n \cap \partial U$
 (cf. Fig.~\ref{f:glo:point_sequence}).
 Since $\partial U$
 is compact, the sequence $(q_n)_{n\in\mathbb{N}}$ admits a subsequence,
@@ -1215,7 +1223,7 @@ that converges to some limit point $q$.
 Since from any point $p_{f(n)}$ arbitrary close to $p$, there is
 the causal curve $\Li_{f(n)}$ to the point $q_{f(n)}$ arbitrary close to $q$,
 one can show that
-there exists a causal curve $\Li$ connecting $p$ to $q$
+there exists a future-directed causal curve $\Li$ connecting $p$ to $q$
 (cf. Fig.~\ref{f:glo:point_sequence}; see e.g.
 Lemma~6.2.1 of Hawking \& Ellis textbook \cite{HawkiE73}
 for a precise demonstration).
@@ -1246,7 +1254,8 @@ Proving by contradiction that $q$ lies in $\Hor$.}
 
 The causal curve $\Li$ connecting $p$ to $q$ cannot be timelike since
 $p$ and $q$ are both in $\Hor$, which is achronal (Property~\ref{p:glo:prop1}).
-If $\Li$ would contain a timelike segment, then by Lemma~\ref{p:glo:lem2}, it could
+Actually, $\Li$ cannot even contain a timelike segment: if it would, then
+by Lemma~\ref{p:glo:lem2}, it could
 be deformed into a timelike curve between $p$ and $q$, which again would
 contradict the achronal character of $\Hor$. Hence $\Li$ is necessarily a null
 curve. Moreover, it is a geodesic. Indeed, let us assume it is not.
@@ -1263,11 +1272,10 @@ associated with $P$. For the null segment $ab$ of $\Li$, we have
 $E_{(a,b)}(P)=0$. Since $ab$ is assumed to be not geodesic, it is not a
 stationary point of $E_{(a,b)}(P)$, which
 implies that there exists a nearby curve from $a$ to $b$ with $E_{(a,b)}(P)<0$,
-i.e. there exists a curve from $a$ to $b$ with a timelike part.
+i.e. there exists a curve from $a$ to $b$ with some timelike part.
 It follows that $p$ and $q$ can be connected
-by a causal curve with a timelike segment. By Lemma~\ref{p:glo:lem2}, this curve can be
-deformed into a timelike curve from $p$ to $q$, which contradicts
-the achronal character of $\Hor$. Hence $\Li$ is a null geodesic.
+by a causal curve with a timelike segment. But this feature has been
+excluded above. We conclude that $\Li$ is a null geodesic.
 
 At this stage, we have shown that given $p\in\Hor$, there exists
 a future-directed null geodesic $\Li$ connecting $p$ to another point $q\in\Hor$.
@@ -1285,11 +1293,9 @@ to a causal curve to $\scri^+$  (the dashed curve
 in Fig.~\ref{f:glo:L_in_H}); hence
 $a'\in  J^-(\scri^+)$. Since $a'$ is arbitrary close to $a$, we conclude
 that $a\in\overline{J^-(\scri^+)}$.
-This property being valid for any point $a\in \Li$, we have
-shown in fact that $\Li\subset \overline{J^-(\scri^+)} = J^-(\scri^+)\cup \Hor$.
-Now it is easy to show that any point $a$ of $\Li$ actually lies in $\Hor$
-by repeating exactly the same reasoning as that employed above to show that
-$q\in\Hor$, by replacing $q$ by $a$. We therefore conclude that
+Then, by repeating the same reasoning as that employed above for proving
+$q\in\Hor$, simply replacing $q$ by $a$, we get that $a\in\Hor$. Since
+$a$ is a generic point of $\Li$, we conclude that
 $\Li$ lies entirely in $\Hor$.
 
 \begin{figure}
@@ -1309,11 +1315,10 @@ connecting $q$ to another point $q'\in\Hor$. Now $\Li$ and $\Li'$ must
 be two segments of the same null geodesic $\Li\cup\Li'$ by the following lemma.
 \begin{lemma}
 \label{p:glo:lem3}
-If from a point $q\in\Hor$, there exists a past-directed
-null geodesic $\Li\subset\Hor$ and a future-directed null geodesic $\Li'\subset\Hor$,
-then necessarily $\Li$ and $\Li'$ have collinear tangent vectors at their common point $q$.
-It follows that $\Li$ (with a time-reversed parametrization) and $\Li'$ are two segments
-of a same null geodesic through $q$.
+Let $q\in\Hor$. If $\Li\subset\Hor$ is a null geodesic having $q$ as future end point
+and $\Li'\subset\Hor$ is a null geodesic having $q$ as past end point, then
+$\Li$ and $\Li'$ have collinear tangent vectors at their common point $q$.
+It follows that $\Li$ and $\Li'$ are two segments of a same null geodesic through $q$.
 \end{lemma}
 \begin{figure}
 \centerline{\includegraphics[width=0.17\textwidth]{glo_unique_geod.pdf}}
@@ -1327,14 +1332,14 @@ such that $a$ and $b$ can be connected by a timelike curve (cf.
 Fig.~\ref{f:glo:unique_geod}). Since $\Li\subset\Hor$ and $\Li'\subset\Hor$, we have $a\in\Hor$ and
 $b\in\Hor$ and therefore we get a contradiction with $\Hor$ being achronal.
 \end{proof}
-Thanks to Lemma~\ref{p:glo:lem3}, we conclude that $\Li'$ extends $\Li$ to null geodesic
+Thanks to Lemma~\ref{p:glo:lem3}, we conclude that $\Li'$ extends $\Li$ to the null geodesic
 $\Li\cup\Li'$ entirely lying in $\Hor$. By iterating, we conclude that
 the null geodesic $\Li$ through $p$ can be extended indefinitely into the
-future. Moreover, it can never leave $\Hor$. Indeed, if it leaves $\Hor$ at
+future. Moreover, it can never leave $\Hor$. Indeed, if $\Li$ would leave $\Hor$ at
 some point $q$, by the same procedure used above for $p$, one could construct a future-directed null geodesic
-$\Li'\subset\Hor$ starting from $q$ and Lemma~\ref{p:glo:lem3} would imply that
-the extension of $\Li$ outside $\Hor$ has to coincide with $\Li'$, which is
-in contradiction with $\Li'\subset\Hor$.
+$\Li'\subset\Hor$ starting from $q$; then Lemma~\ref{p:glo:lem3} would imply that
+$\Li$ and $\Li'$ would have the same tangent at $q$, which is not compatible
+with $\Li$ leaving $\Hor$ at $q$.
 
 Another direct consequence of Lemma~\ref{p:glo:lem3} is that no two distinct null generators
 may intersect at a point $p\in\Hor$, except if their segments in the past of

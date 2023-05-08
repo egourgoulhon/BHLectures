@@ -470,7 +470,7 @@ Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$,
 let $\mathcal{E}_p$ be the subset of the tangent space $T_p\M$ defined
 by $\w{V}\in \mathcal{E}_p$ iff either $\w{V}=0$ or
 the affine parametrization $P_{\w{V}}$
-of the geodesic $\Li_{\w{V}}$
+of the geodesic $\Li_{\w{V}}$ associated to $\w{V}$ by Property~\ref{p:geo:inextend_unique}
 has a domain large enough to include the interval $[0,1]$.
 The \defin{exponential map at $p$}\index{exponential map} is then defined as
 \be
@@ -486,9 +486,9 @@ The \defin{exponential map at $p$}\index{exponential map} is then defined as
 \end{greybox}
 In other words, $\exp_p$ maps a nonzero vector $\w{V}$ in the tangent space to $\M$ at $p$
 to the point of $\M$ of affine parameter $\lambda=1$
-along the unique geodesic through $p$, the parameter $\lambda$ being such
-that (i) $\lambda=0$ corresponds to $p$ and (ii) the associated tangent vector
-$\D\w{x}/\D\lambda$ at $p$ is $\w{V}$.
+along the unique geodesic through $p$ such
+that (i) $\lambda=0$ corresponds to $p$ and (ii) the tangent vector
+$\D\w{x}/\D\lambda$ to the geodesic at $p$ is $\w{V}$.
 
 Note that if $(\M,\w{g})$ is geodesically complete, $\mathcal{E}_p = T_p\M$
 for every point $p\in\M$.
@@ -581,7 +581,11 @@ starshaped neighbourhood of $0\in T_p\M$ under the local diffeomorphism
 $\exp_p$ given by Property~\ref{p:geo:exp_diffeo}.
 By \defin{starshaped neighbourhood}\index{starshaped neighbourhood} of $0$, it
 is meant a neighbourhood $U$ of $0$ such that $\w{V}\in U$
-implies $t\w{V}\in U$ for any $t\in[0,1]$.
+implies $t\w{V}\in U$ for any $t\in[0,1]$. A
+\defin{convex normal neighbourhood}\index{convex normal neighbourhood}\index{normal!neighbourhood!convex --}
+$\mathscr{U}$ is an open subset of $\M$ that is a normal neighbourhood of each
+of its points. It follows that any two points $p$ and $q$ of a convex normal neighbourhood $\mathscr{U}$
+can be connected by a geodesic lying entirely in $\mathscr{U}$.
 \end{greybox}
 
 On a normal neighbourhood, one may define coordinates linked to geodesics
