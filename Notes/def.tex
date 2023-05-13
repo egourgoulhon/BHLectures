@@ -115,17 +115,17 @@ a timelike worldline from Region~2 to Region~1.}
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{def_spacelike_1way.pdf}}
 \caption[]{\label{f:def:spacelike_1way} \footnotesize
-A spacelike hypersurface is a one-way membrane: $\Li_{2\rightarrow 1}$ is
-a timelike worldline from Region~2 to Region~1, while there is no timelike or null
-worldline from Region~1 to Region~2.}
+A spacelike hypersurface is a one-way membrane: $\Li_{1\rightarrow 2}$ is
+a timelike worldline from Region~1 to Region~2, while there is no timelike or null
+worldline from Region~2 to Region~1.}
 \end{figure}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{def_null_1way.pdf}}
 \caption[]{\label{f:def:null_1way} \footnotesize
-A null hypersurface is a one-way membrane: $\Li_{2\rightarrow 1}$ is
-a timelike worldline from Region~2 to Region~1, while there is no timelike or null
-worldline from Region~1 to Region~2.}
+A null hypersurface is a one-way membrane: $\Li_{1\rightarrow 2}$ is
+a timelike worldline from Region~1 to Region~2, while there is no timelike or null
+worldline from Region~2 to Region~1.}
 \end{figure}
 
 A timelike hypersurface is a two-way membrane: it divides (locally)
@@ -134,9 +134,9 @@ worldline can cross it from Region~1 to Region~2, or from Region~2 to Region~1
 (see Fig.~\ref{f:def:timelike_2way}). On the contrary,
 a spacelike hypersurface is a one-way membrane: a future-directed timelike or null
 worldline, which is constrained to move inside the light cones,
-can cross it only from Region~2 to Region~1, say (see Fig.~\ref{f:def:spacelike_1way}).
+can cross it only from Region~1 to Region~2, say (see Fig.~\ref{f:def:spacelike_1way}).
 A null hypersurface is also a one-way membrane (see Fig.~\ref{f:def:null_1way}).
-At most, a null worldline that is not going from Region~2 to Region~1 must
+At most, a null worldline that is not going from Region~1 to Region~2 must
 stay on the hypersurface; an example of such null worldline is
 the one depicted in Fig.~\ref{f:def:null_1way} as the thin black line tangent to the normal $\w{n}$.
 
@@ -144,9 +144,9 @@ The limit case between two-way membranes (timelike hypersurfaces)
 and one-way ones being null hypersurfaces, it is quite natural to select the
 latter ones for the black hole boundary, rather than spacelike hypersurfaces.
 This choice will be fully justified in Chap.~\ref{s:glo}, where we shall see
-that the precise definition of a black hole implies that its boundary
+that the generic definition of a black hole implies that its boundary
 (the event horizon\index{event!horizon}\index{horizon!event --})
-is a null hypersurface as soon as it is smooth (Property~4 in Sec.~\ref{s:glo:properties_H}).
+is a null hypersurface as soon as it is smooth (Property~\ref{p:glo:prop4}).
 Note however that in Chap.~\ref{s:loc}, we shall see that spacelike hypersurfaces,
 called \emph{dynamical
 horizons}\index{dynamical!horizon}\index{horizon!dynamical --}, are involved
@@ -156,26 +156,29 @@ in quasi-local approaches to black holes.
 
 \section{Geometry of null hypersurfaces} \label{s:def:geom_null_hypsurf}
 
-Having decided that the black hole event horizon must be a null hypersurface,
-let us examine the geometrical properties of such hypersurfaces. We shall
+Since smooth black hole event horizon are null hypersurfaces,
+let us examine the geometrical properties of such objects. We shall
 denote the hypersurface under study by $\Hor$, for \emph{horizon}, but the results of this section
-will be valid for any null hypersurface.
+are valid for any null hypersurface.
 
 \subsection{Hypersurfaces as level sets}
 
-As any hypersurface, $\Hor$ can be locally considered as a level set\index{level set}:
+As any hypersurface, $\Hor$ can be locally considered as a \defin{level set}\index{level set}:
 around any point of $\Hor$, there exists an open subset $\mathscr{U}$
 of $\M$ (possibly  $\mathscr{U} = \M$) and
 a smooth scalar field $u:\ \mathscr{U} \rightarrow \R$ such that
 \be \label{e:def:Hor_u_zero}
-    \forall p \in \mathscr{U},\quad p\in \Hor \iff u(p) = 0 .
+    \forall p \in \mathscr{U},\quad p\in \Hor \iff u(p) = 0
 \ee
 and
 \be \label{e:def:du_not_zero}
-    \wnab u \not = 0 \quad \mbox{on}\ \Hor .
+    \dd u \not = 0 \quad \mbox{on}\ \Hor ,
 \ee
+where  $\dd u$ is the \emph{differential} of the scalar field $u$
+(cf. Sec.~\ref{s:bas:linear_form}): $\dd u = (\dert{u}{x^\alpha}) \, \dd x^\alpha$
+in any coordinate chart $(x^\alpha)$.
 Condition (\ref{e:def:du_not_zero}) ensures that $\Hor$ is a regular
-hypersurface (an \emph{embedded} submanifold, in mathematical terms); without it, $\Hor$ may be
+hypersurface (an \emph{embedded} submanifold, cf. Sec.~\ref{s:bas:embed}); without it, $\Hor$ could be
 self-intersecting.
 
 \begin{figure}
@@ -324,8 +327,8 @@ is null and normal to $\Hor_u$ for some value of $u$.
 \begin{figure}
 \centerline{\includegraphics[height=0.4\textheight]{def_Schwarz_Hu.pdf}}
 \caption[]{\label{f:def:Schwarz_Hu} \footnotesize
-Hypersurfaces $\Hor_u$ defined by $u=\mathrm{const}$ for the example
-of the Schwarzschild horizon (Example~\ref{x:def:Schw_hor}).}
+Hypersurfaces $\Hor_u$ defined by $u=\mathrm{const}$ for
+the Schwarzschild horizon (Example~\ref{x:def:Schw_hor}).}
 \end{figure}
 
 
@@ -351,14 +354,16 @@ of the foliation $\Hor_u$ once they are evaluated at $\Hor$.
 
 Since $\Hor$ is a hypersurface where $u$ is constant [Eq.~(\ref{e:def:Hor_u_zero})],
 we have, by definition,
-\bea
-    \forall \w{v}\in T_p\M,\quad \w{v} \mbox{\ tangent to\ }\Hor & \iff  &
-    \wnab_{\w{v}}\,  u = 0 \nonumber \\
-    & \iff  & \langle \wnab u , \w{v} \rangle = 0 \nonumber \\
-    & \iff & \vw{\nabla} u \cdot \w{v} = 0 ,   \label{e:def:nab_u_normal}
-\eea
-where $\vw{\nabla} u$ is the gradient vector field of the scalar field $u$,
-i.e. the vector field given in index-notation by (cf. Sec.~\ref{s:bas:metric_dual})
+\be
+    \forall \w{v}\in T_p\M,\quad \w{v} \mbox{\ tangent to\ }\Hor
+    \iff  \wnab_{\w{v}}\,  u = 0
+    \iff  \langle \dd u , \w{v} \rangle = 0
+    \iff  \vw{\nabla} u \cdot \w{v} = 0 ,   \label{e:def:nab_u_normal}
+\ee
+where $\vw{\nabla} u$ is the \defin{gradient}\index{gradient} of the scalar field $u$,
+i.e. the vector field that is the metric-dual of the 1-form $\dd u$
+(cf. Sec.~\ref{s:bas:metric_dual});
+in a coordinate chart $(x^\alpha)$, its components are given by
 \be \label{e:def:nab_up_u}
     \nabla^\alpha u = g^{\alpha\mu} \nabla_{\mu} u = g^{\alpha\mu} \der{u}{x^\mu} .
 \ee
@@ -370,32 +375,30 @@ field $\rho$ such that
     \encadre{\wl = - \mathrm{e}^\rho \, \vw{\nabla} u } .
 \ee
 We have chosen the
-coefficient linking $\wl$ and $\vw{\nabla} u $ to be strictly negative,
-i.e. under the form of minus an exponential. This is always possible by a suitable
+coefficient linking $\wl$ and $\vw{\nabla} u $ to be strictly negative
+(minus an exponential). This is always possible by a suitable
 choice of the scalar field $u$. The minus sign ensures that in the case
 of $u$ increasing toward the future, $\wl$ is future-directed,
 as the following example shows:
 
 \begin{example}[null hyperplane] \label{x:def:null_hyp2}
-We deduce from the
-expression (\ref{e:def:null_plane_u}) chosen for $u$ in Example~\ref{x:def:null_hyp} that
-\[
-    \wnab u = \dd t - \dd x .
-\]
+We deduce from
+expression (\ref{e:def:null_plane_u}) for $u$ in Example~\ref{x:def:null_hyp} that
+$\dd u = \dd t - \dd x$.
 The gradient vector field obtained by metric duality is
 $\vw{\nabla} u = - \wpar_t - \wpar_x$. Choosing for simplicity $\rho=0$,
-we get from formula~(\ref{e:def:wl_rho_u})
+formula~(\ref{e:def:wl_rho_u}) yields
 \be \label{e:def:wl_null_hyperplane}
     \wl =  \wpar_t + \wpar_x .
 \ee
-The vector field $\wl$ is depicted in Fig.~\ref{f:def:null_hplane}.
+This vector field is depicted in Fig.~\ref{f:def:null_hplane}.
 \end{example}
 
 \begin{example}[light cone] \label{x:def:light_cone2}
 Regarding Example~\ref{x:def:light_cone}, we have,
 given expression (\ref{e:def:light_cone_u}) for $u$,
 \[
-    \wnab u = \dd t - \frac{x}{r} \dd x - \frac{y}{r} \dd y - \frac{z}{r} \dd z,
+    \dd u = \dd t - \frac{x}{r} \dd x - \frac{y}{r} \dd y - \frac{z}{r} \dd z,
     \quad\mbox{with}\quad r:=\sqrt{x^2+y^2+z^2}.
 \]
 Choosing for simplicity $\rho=0$ in (\ref{e:def:wl_rho_u}), we get the
@@ -403,14 +406,14 @@ normal
 \be \label{e:def:wl_light_cone}
     \wl = \wpar_t + \frac{x}{r} \wpar_x + \frac{y}{r} \wpar_y + \frac{z}{r} \wpar_z .
 \ee
-The vector field $\wl$ is depicted in Fig.~\ref{f:def:future_light_cone}.
+This vector field is depicted in Fig.~\ref{f:def:future_light_cone}.
 \end{example}
 
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor2}
-We deduce from the expression (\ref{e:def:Schw_u}) chosen for $u$ in
+We deduce from expression (\ref{e:def:Schw_u}) for $u$ in
 Example~\ref{x:def:Schw_hor} that
 \[
-    \wnab u = \frac{1}{4 m} \mathrm{e}^{(r-t)/(4m)} \left[ - \left(1-\frac{r}{2m}  \right)
+    \dd u = \frac{1}{4 m} \mathrm{e}^{(r-t)/(4m)} \left[ - \left(1-\frac{r}{2m}  \right)
         \, \dd t
         - \left(1 + \frac{r}{2m}\right) \, \dd r \right] .
 \]
@@ -436,18 +439,16 @@ Given the metric (\ref{e:def:Schw_metric}), we check that $\w{g}(\wl, \wl)=0$.
 Since $\wl\not=0$, this proves that all hypersurfaces $\Hor_u$, and in particular $\Hor$,
 are null.
 The vector field $\wl$ is depicted on $\Hor$ in Fig.~\ref{f:def:Schwarz_horizon}
-and in all space in Fig.~\ref{f:def:Schw_hor_lk}.
+and in all $\M$ in Fig.~\ref{f:def:Schw_hor_lk}.
 \end{example}
 
 \subsection{Null geodesic generators} \label{s:def:null_geod_gen}
 
 \subsubsection{Frobenius identity} \label{s:def:Frobenius}
 
-Let us take the metric dual of relation (\ref{e:def:wl_rho_u}): it writes
-$\uu{\el} = - \mathrm{e}^\rho \, \wnab u$, or, in index notation,
-\be
-    \el_\alpha = - \mathrm{e}^\rho \, \nabla_\alpha u .
-\ee
+Let us take the metric dual of Eq.~(\ref{e:def:wl_rho_u}); it writes
+$\uu{\el} = - \mathrm{e}^\rho \, \dd u = - \mathrm{e}^\rho \, \wnab u $, or, in index notation,
+$\el_\alpha = - \mathrm{e}^\rho \, \nabla_\alpha u$.
 Taking the covariant derivative, we get
 \[
     \nabla_\alpha \el_\beta = - \mathrm{e}^\rho \nabla_\alpha \rho \nabla_\beta u
@@ -456,14 +457,14 @@ Taking the covariant derivative, we get
 \]
 Antisymmetrizing and using the torsion-free property of $\wnab$ (i.e.
 $\nabla_\alpha \nabla_\beta u - \nabla_\beta \nabla_\alpha u = 0$, cf.
-Eq.~(\ref{e:bas:torsion-free}) in Appendix~\ref{s:bas}), we get
+Eq.~(\ref{e:bas:torsion-free})), we get
 \be \label{e:def:ext_der_wl_comp}
   \nabla_\alpha \el_\beta - \nabla_\beta \el_\alpha =
   \nabla_\alpha \rho \, \el_\beta -  \nabla_\beta \rho \, \el_\alpha  .
 \ee
-In the left-hand side there appears the exterior derivative of
-the 1-form $\uu{\el}$ (cf. Sec.~\ref{s:bas:ext_deriv} in Appendix~\ref{s:bas}),
-while one recognize in the right-hand side the exterior product of
+In the left-hand side there appears the exterior derivative $\dd\uu{\el}$ of
+the 1-form $\uu{\el}$ [cf. Eq.~(\ref{e:bas:def_ext_1f_nab})],
+while one recognizes in the right-hand side the exterior product of
 the two 1-forms $\dd\rho$ and $\uu{\el}$. Hence we may rewrite (\ref{e:def:ext_der_wl_comp})
 as
 \be
@@ -472,9 +473,10 @@ as
 This reflects the \defin{Frobenius theorem}\index{Frobenius!theorem}
 in its dual formulation (see e.g.
 Theorem B.3.2 in Wald's textbook \cite{Wald84} or Theorem C.2 in
-Straumann's textbook \cite{Strau13}): the exterior derivative of
-the 1-form $\uu{\el}$ is the exterior product of $\uu{\el}$ itself with some
-1-form ($\dd\rho$ in the present case) if, and only if,
+Straumann's textbook \cite{Strau13}):
+the exterior derivative of
+the 1-form $\uu{\el}$ is the exterior product of
+some 1-form (here $\dd\rho$) with $\uu{\el}$ itself if, and only if,
 $\uu{\el}$ defines hyperplanes that are integrable in some hypersurface ($\Hor$ in the present case).
 
 \subsubsection{Geodesic generators} \label{s:def:geod_gener}
@@ -486,10 +488,8 @@ Let us contract the Frobenius identity (\ref{e:def:ext_der_wl_comp}) with $\wl$:
         - \underbrace{\el^\mu \el_\mu}_{0} \nabla_\alpha \rho .
 \ee
 Now, since $\wl$ is a null vector,
-\[
-    \el^\mu \nabla_\alpha \el_\mu = \nabla_\alpha (\underbrace{\el^\mu \el_\mu}_{0})
-        - \el_\mu \nabla_\alpha \el^\mu ,
-\]
+$\el^\mu \nabla_\alpha \el_\mu = \nabla_\alpha (\el^\mu \el_\mu)
+        - \el_\mu \nabla_\alpha \el^\mu = - \el_\mu \nabla_\alpha \el^\mu$,
 from which we get
 \be \label{e:def:el_nab_el_zero}
     \el^\mu \nabla_\alpha \el_\mu = 0 .
@@ -517,7 +517,7 @@ a \defin{geodesic vector field}\index{geodesic!vector field} $\wl'$, i.e.
 a vector field that obeys\footnote{A vector field that obeys the weaker condition
 (\ref{e:def:wl_geod_kappa}), with $\kappa$ possibly different from zero, is called
 a \defin{pregeodesic vector field}\index{pregeodesic!vector field}, cf.
-Sec.~\ref{s:geo:gener_param} in Appendix~\ref{s:geo}.} Eq.~(\ref{e:geo:geod_eq_v}):
+Sec.~\ref{s:geo:gener_param}.} Eq.~(\ref{e:geo:geod_eq_v}):
 \be \label{e:def:wlp_geod}
     \wnab_{\wl'}\, \wl' = 0 .
 \ee
@@ -530,15 +530,19 @@ Equations~(\ref{e:def:wl_rescale}) and
 \ee
 Hence, since $\alpha>0$,
 \[
-    \wnab_{\wl'}\, \wl' = 0  \iff  \wnab_{\wl}\, \ln \alpha = -\kappa .
+    \wnab_{\wl'}\, \wl' = 0  \iff  \wnab_{\wl}\, \ln \alpha = -\kappa
+    \iff \derd{}{\lambda} \ln \alpha = - \kappa ,
 \]
-Therefore, it suffices to solve $\wnab_{\wl}\, \ln \alpha = -\kappa$, which
-is a first-order ordinary differential equation along each field line of $\wl$,
-to ensure that $\wl'$ is a geodesic vector field.
+where $\lambda$ is the parameter associated to $\wl$ along its field lines $\Li$:
+$\wl = \left. \D\w{x}/\D\lambda \right| _\Li$.
+Therefore, setting $\alpha(\lambda) = \exp(- \int_0^\lambda \kappa(\lambda') \D\lambda')$
+along each field line $\Li$
+ensures that $\wl' = \alpha\wl$ fulfills Eq.~(\ref{e:def:wlp_geod}).
 \end{proof}
+
 Because of (\ref{e:def:wlp_geod}),
 the field lines of $\wl'$ are  null geodesics and $\wl'$ is the tangent
-vector to them associated with some affine parameter $\lambda$.
+vector to them associated with some \emph{affine} parameter $\lambda'$.
 On the other side, if $\kappa\not=0$, $\wl$ is not a geodesic vector field
 and therefore cannot be associated with some affine parameter. For this
 reason the quantity $\kappa$ is called the
@@ -546,20 +550,19 @@ reason the quantity $\kappa$ is called the
 the null normal $\wl$ (cf. Sec.~\ref{s:geo:gener_param} in Appendix~\ref{s:geo}).
 
 Since $\wl$ is collinear to $\wl'$, it obviously shares the same field lines,
-which have just been shown to be null geodesics. These field lines are called the
-\defin{null geodesic generators}\index{null!geodesic!generator}\index{generator!of a null hypersurface} of the hypersurface $\Hor$.
-Hence, we have shown the following result:
+which have just been shown to be null geodesics. Hence we may state:
+
 \begin{prop}[geodesic generators of a null hypersurface]
 \label{p:def:null_geod_generators}
 Any null hypersurface $\Hor$ is ruled by a family of null geodesics, called the
-\emph{generators of $\Hor$}, and each vector field $\wl$ normal to $\Hor$ is
+\defin{null geodesic generators}\index{null!geodesic!generator}\index{generator!of a null hypersurface} of $\Hor$, and each vector field $\wl$ normal to $\Hor$ is
 tangent to these null geodesics.
 \end{prop}
 
 \begin{remark}
 \label{r:def:null_curves}
 The above result is not trivial: while it is obvious that the field lines of the normal
-vector field $\wl$ are null curves that are tangent to $\Hor$, the reader must
+vector field $\wl$ are null curves that are tangent to $\Hor$, one must
 keep in mind that not all null curves are null geodesics. For instance, in
 Minkowski spacetime, the helix defined in terms of
 some Minkowskian coordinates $(x^\alpha)=(t,x,y,z)$ by the parametric equation
@@ -569,7 +572,7 @@ a null tangent vector at each point, but it is not a null geodesic: in Minkowski
 spacetime, all null geodesics are straight lines.
 \end{remark}
 
-As a by-product of (\ref{e:def:nab_lp_lp}), we get the behaviour of the
+As a by-product of Eq.~(\ref{e:def:nab_lp_lp}), we get the behaviour of the
 non-affinity coefficient under a rescaling of the null normal:
 \be \label{e:def:rescale_kappa}
     \wl' = \alpha \wl \ \Longrightarrow \ \kappa' = \alpha \kappa + \wnab_{\wl} \alpha .
@@ -579,10 +582,7 @@ non-affinity coefficient under a rescaling of the null normal:
 It is clear on expression (\ref{e:def:wl_null_hyperplane}) for $\wl$ that
 the covariant derivative
 $\wnab \wl$ vanishes identically. In particular $\wnab_{\wl} \wl = 0$.
-Equation~(\ref{e:def:wl_geod_kappa}) then implies
-\be \label{e:def:kappa_0_nullhyp}
-    \kappa = 0 ,
-\ee
+Equation~(\ref{e:def:wl_geod_kappa}) then implies $\kappa = 0$,
 which is in agreement with Eq.~(\ref{e:def:def_kappa}) and the choice $\rho=0$
 performed in Example~\ref{x:def:null_hyp2}. The null geodesic generators of $\Hor$ are the
 straight lines defined by $t=x$, $y=y_0$ and $z=z_0$ for some constants
@@ -608,10 +608,7 @@ in the Minkowskian coordinates $(t,x,y,z)$, we get
     \qquad {(\alpha = \mbox{row index}; \atop \beta = \mbox{column index}).}
 \ee
 We obtain then $\el^\mu \nabla_\mu \el^\alpha = 0$.
-From Eq.~(\ref{e:def:wl_geod_kappa}), we conclude that
-\[
-    \kappa = 0 ,
-\]
+From Eq.~(\ref{e:def:wl_geod_kappa}), we conclude that $\kappa = 0$,
 which is in agreement with Eq.~(\ref{e:def:def_kappa}) and the choice $\rho=0$
 performed in Example~\ref{x:def:light_cone2}. The null geodesic generators of $\Hor$
 are the half-lines defined by $x=a t$, $y=b t$, $z = \sqrt{1-a^2-b^2} t$, with
@@ -659,10 +656,23 @@ in Sec.~\ref{s:def:first_defin}: \emph{localization}.
 This feature is crucial to distinguish a black hole boundary from other kinds
 of null hypersurfaces. For instance the interior of a future null cone
 in Minkowski spacetime is a region from which no particle may escape,
-but since the null cone is expanding, particles can travel arbitrary far from
+but since the null cone is expanding indefinitely, particles can travel arbitrary far from
 the center. Therefore, a null cone does not define a black hole.
 A key parameter is hence the \emph{expansion} of null hypersurfaces, which we shall
 discuss in the next section, after having introduced cross-sections.
+
+\begin{greybox}
+Let $\Hor$ be a null hypersurface of a $n$-dimensional spacetime $(\M, \w{g})$
+with $n\geq 3$.
+We define a \defin{cross-section}\index{cross-section} of $\Hor$
+as a submanifold $\Sp$ of $\Hor$ of dimension $n-2$
+such that (i) the null normal $\wl$ is nowhere tangent to $\Sp$ and (ii)
+each null geodesic generator of $\Hor$ intersects $\Sp$ at most once.
+If each null geodesic generator intersects $\Sp$ exactly once,
+we shall say that $\Sp$ is a
+\defin{complete cross-section}\index{cross-section!complete --}\index{complete!cross-section}
+(cf. Fig.~\ref{f:def:hor_cylinder}).
+\end{greybox}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{def_cross_sections.pdf}}
@@ -672,21 +682,6 @@ The green curves represent some null geodesic generators, with the null normal
 $\wl$ tangent to them.}
 \end{figure}
 
-
-\begin{greybox}
-Let $\Hor$ be a null hypersurface of a $n$-dimensional spacetime $(\M, \w{g})$
-with $n\geq 3$.
-We define a \defin{cross-section}\index{cross-section} of $\Hor$
-as a submanifold $\Sp$ of $\Hor$ of codimension\footnote{Considered as a submanifold
-of $\M$, the codimension of $\Sp$ is 2, not 1.} 1 (i.e. $\dim \Sp=n-2$),
-such that (i) the null normal $\wl$ is nowhere tangent to $\Sp$ and (ii)
-each null geodesic generator of $\Hor$ intersects $\Sp$ at most once.
-If each null geodesic generator intersects $\Sp$ exactly once,
-we shall say that $\Sp$ is a
-\defin{complete cross-section}\index{cross-section!complete --}\index{complete!cross-section}
-(cf. Fig.~\ref{f:def:hor_cylinder}).
-\end{greybox}
-
 \begin{notation}
 Indices relative to a cross-section will range from $2$ to $n-1$ and
 will be denoted by a Latin letter from the beginning of the alphabet: $a$, $b$, etc.
@@ -695,26 +690,36 @@ will be denoted by a Latin letter from the beginning of the alphabet: $a$, $b$, 
 To encompass the idea that an event horizon $\Hor$ delimitates some
 region of spacetime, we shall assume that its cross-sections
 are \defin{closed manifolds}\index{closed!manifold}, i.e.
-are compact without boundary. The simplest example is the sphere,
+are compact without boundary\footnote{Scrictly speaking, a
+\emph{closed manifold} is simply a \emph{compact manifold},
+since a topological manifold, as defined in Sec.~\ref{s:bas:def_manif},
+has no boundary. Indeed, the concept of \emph{manifold with boundary} requires
+a separate definition (cf. Sec.~\ref{s:bas:manif_boundary}),
+so that a manifold with boundary is not a manifold.
+Hence, we may consider the terminology \emph{closed manifold}
+as stressing the no-boundary aspect of a compact manifold.}.
+The simplest example is the sphere,
 more precisely the $(n-2)$-dimensional sphere $\mathbb{S}^{n-2}$,
 as illustrated in Fig.~\ref{f:def:hor_cylinder}.
 This example is the one relevant for standard 4-dimensional
-stationary black holes, as we shall see in Sec.~\ref{s:sta:BH_stationary}.
+stationary black holes, thanks a topology theorem that
+we shall discuss in Sec.~\ref{s:sta:BH_stationary}.
 But for $n > 4$, other
-closed-manifold topologies, like that of a torus, are allowed for
+compact topologies, like that of a torus, are allowed for
 cross-sections of a stationary black hole.
 
-A first important property of cross-sections is the following one.
+A first important property of cross-sections, independently whether it is closed or not,
+is:
 \begin{prop}[spacelike character of cross-sections]
+\label{p:def:spacelike_cs}
 Any cross-section $\Sp$ of a null hypersurface is spacelike,
 i.e. all vectors tangent to $\Sp$ are spacelike.
 \end{prop}
-\begin{proof}
 The spacelike character of $\Sp$ follows from
 \begin{lemma}[tangent vectors to a null hypersurface]
 \label{p:def:tangent_to_null_hyp}
-Every nonzero tangent vector to a null hypersurface is either spacelike or null.
-Moreover, in the null case, the vector is tangent to a null geodesic generator, i.e. it is normal
+Every nonzero tangent vector $\w{v}$ to a null hypersurface is either spacelike or null.
+Moreover, if it is null, $\w{v}$ is tangent to a null geodesic generator, i.e. $\w{v}$ is normal
 to the hypersurface.
 \end{lemma}
 \begin{proof}
@@ -725,6 +730,7 @@ in Sec.~\ref{s:fra:time_orientation} that $\w{v}$ cannot be timelike.
 Besides, if $\w{v}$ is null, Property~\ref{p:fra:corol2} in Sec.~\ref{s:fra:time_orientation}
 implies that it must be collinear to $\wl$.
 \end{proof}
+\begin{proof}[Proof of Property~\ref{p:def:spacelike_cs}]
 Let $p \in \Sp$ and $\w{v}\in T_p\M$ be a nonzero vector tangent to $\Sp$.
 The above lemma implies that $\w{v}$ is either spacelike or tangent to the
 null geodesic generator $\Li$ going through $p$, but then $\Li$ would be tangent to $\Sp$,
