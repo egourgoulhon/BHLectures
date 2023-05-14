@@ -793,14 +793,14 @@ i.e. the bilinear form defined at any point $p\in\Sp$ by
 Saying that $\Sp$ is spacelike (Property~\ref{p:def:spacelike_cs})
 is equivalent to saying that $\w{q}$ is
 positive definite, i.e. $\w{q}(\w{v},\w{v}) \geq 0$ for all
-$\w{v}\in T_p\Sp$, with equality iff $\w{v} = 0$.
+$\w{v}\in T_p\Sp$, with $\w{q}(\w{v},\w{v}) = 0$ $\iff$ $\w{v} = 0$.
 In other words, $(\Sp, \w{q})$ is a \defin{Riemannian manifold}\index{Riemannian!manifold} (cf Sec.~\ref{s:bas:signature} in Appendix~\ref{s:bas}).
 
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor4a}
 The metric induced by $\w{g}$ on the cross-section
 $\Sp$ of the Schwarzschild horizon defined in Example~\ref{x:def:Schw_hor4} is readily obtained by
 setting $t=\mathrm{const}=t_0$ and $r=\mathrm{const}=2m$ in Eq.~(\ref{e:def:Schw_metric}),
-since  $x^a=(\th,\ph)$ is a coordinate system on $\Sp$:
+given that  $(x^a)=(\th,\ph)$ is a coordinate system on $\Sp$:
 \be \label{e:def:q_S_Schw_hor}
     \w{q} = 4m^2 \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) .
 \ee
@@ -816,65 +816,61 @@ the figure: $\Sp$ and $T_p\Sp$ are depicted as 1-dimensional
 objects, while they are truly $(n-2)$-dimensional ones.}
 \end{figure}
 
-An important consequence of $\Sp$ being spacelike is that, at each point
-$p\in \Sp$, the tangent space $T_p\Sp$ has an orthogonal complement
-$T_p^\perp\Sp$,  which is a timelike plane such that
-$T_p\M$ is the direct sum of $T_p\Sp$ and $T_p^\perp\Sp$ :
+An important consequence of $\Sp$ being spacelike is (cf. Fig.~\ref{f:def:TS_ortho}):
+
+\begin{prop}[orthogonal complement of a cross-section tangent space]
+At each point $p$ of a cross-section $\Sp$ of a null hypersurface $\Hor$,
+the tangent space $T_p\Sp$ has an \defin{orthogonal complement}\index{orthogonal!complement}
+$T_p^\perp\Sp$, i.e. a timelike 2-dimensional vector plane such that (i)
+the tangent space to $\M$ at $p$, $T_p\M$, is
+the direct sum of $T_p\Sp$ and $T_p^\perp\Sp$ :
 \be \label{e:def:TM_direct_sum}
-   \encadre{ \forall p\in \Sp,\quad T_p\M = T_p\Sp \oplus T_p^\perp\Sp }.
+   \encadre{ T_p\M = T_p\Sp \oplus T_p^\perp\Sp }
 \ee
-That $T_p^\perp\Sp$ is timelike is necessary for the signature of $\w{g}$
-to be $(-,+,\ldots,+)$. This can be seen by constructing an $\w{g}$-orthogonal
-basis of $T_p\M$ by the Gram-Schmidt process, starting form a
-$\w{q}$-orthogonal basis of $T_p\Sp$. Since $\dim T_p\Sp = n-2$, we have
-$\dim T_p^\perp\Sp = 2$, i.e. $T_p^\perp\Sp$ is a timelike 2-plane.
-In other words, the metric induced by $\w{g}$ on
-$T_p^\perp\Sp$ is Lorentzian:
-\be
-    \mathrm{sign}\, \left.\w{g}\right|_{T_p^\perp\Sp} = (-,+) .
-\ee
+and (ii) every vector in $ T_p^\perp\Sp$ is orthogonal to $\Sp$.
+\end{prop}
+\begin{proof}
+Using the Gram-Schmidt process to construct a $\w{g}$-orthogonal
+basis of $T_p\M$, starting form a
+$\w{q}$-orthogonal basis of $T_p\Sp$, one naturally ends up with
+a complenent of $T_p\Sp$ that is 2-dimensional
+and such that $\mathrm{sign}\, \left.\w{g}\right|_{T_p^\perp\Sp} = (-,+)$
+(timelike signature),
+in order to ensure that the signature of $\w{g}$ is $(-,+,\ldots,+)$.
+\end{proof}
+
 Since $\Sp\subset\Hor$, the null normal $\wl$ to $\Hor$ is orthogonal to any vector
-tangent to $\Sp$, i.e. $\wl \in T_p^\perp\Sp$.
-Now, as a timelike plane, $T_p^\perp\Sp$ has two independent null directions,
+tangent to $\Sp$, which implies $\wl \in T_p^\perp\Sp$. One can supplement $\wl$
+by another null vector to form a basis of $T_p^\perp\Sp$:
+\begin{prop}[complement null normal to a cross-section]
+At each point $p$ of a cross-section $\Sp$ of a null hypersurface $\Hor$
+with future-directed null normal $\wl$,
+there exists a unique future-directed null vector $\w{k}$ transverse to $\Hor$ such that
+\be \label{e:def:k_el_minus_one}
+        \w{k}\cdot\wl = -1 \qand
+        T_p^\perp\Sp = \mathrm{Span}\left( \wl, \w{k} \right) .
+\ee
+\end{prop}
+
+\begin{proof}
+As a timelike plane, $T_p^\perp\Sp$ has two independent null directions,
 which can be seen as the two intersections of the null cone at $p$ with
 the 2-plane $T_p^\perp\Sp$ (cf. Fig.~\ref{f:def:TS_ortho}).
 Let us denote by $\w{k}$ a future-directed null vector in the null direction of $T_p^\perp\Sp$
 that is not along $\wl$. By a proper rescaling $\w{k}\mapsto \alpha\w{k}$,
-we may choose $\w{k}$ so that
-\be \label{e:def:k_el_minus_one}
-        \w{k}\cdot\wl = -1 .
-\ee
-Given $\wl$ and $\Sp$, the condition (\ref{e:def:k_el_minus_one})
-determines the null vector $\w{k}$ uniquely.
+we may choose $\w{k}$ so that $\w{k}\cdot\wl = -1$ (cf. Lemma~\ref{p:fra:lem2}).
 Since $\wl$ and $\w{k}$ are non-collinear vectors of $T_p^\perp\Sp$ and
-$\dim T_p^\perp\Sp = 2$, they constitute a basis of $T_p^\perp\Sp$:
-\be \label{e:def:TSperp_Span_k_l}
-    T_p^\perp\Sp = \mathrm{Span}\left( \wl, \w{k} \right) .
-\ee
+$\dim T_p^\perp\Sp = 2$, they constitute a basis of $T_p^\perp\Sp$.
+\end{proof}
 
-A priori, the bilinear form $\w{q}$ is defined only on $T_p\Sp$, via (\ref{e:def:def_q_S}).
-However, thanks to the orthogonal decomposition (\ref{e:def:TM_direct_sum}),
-we can extend it to all vectors of $T_p\M$ by requiring
-\be \label{e:def:q_zero_TSperp}
-    \forall \w{u}\in T_p^\perp\Sp,\ \forall\w{v}\in T_p\M, \quad \w{q}(\w{u}, \w{v}) = 0 .
-\ee
-Indeed, given a pair $(\w{u},\w{v})$ of vectors in $T_p\M$, the direct sum (\ref{e:def:TM_direct_sum})
-implies that there are unique decompositions
-\be \label{e:def:decomp_u_v}
-  \w{u} = \w{u}^\parallel + \w{u}^\perp \quad\mbox{and}\quad
-    \w{v} = \w{v}^\parallel + \w{v}^\perp,\quad\mbox{with}\quad
-    \w{u}^\parallel,  \w{v}^\parallel \in T_p\Sp,\quad
-    \w{u}^\perp, \w{v}^\perp  \in T_p^\perp\Sp .
-\ee
-Then, using the bilinearity of $\w{q}$ and property (\ref{e:def:q_zero_TSperp}),
-we obtain
-\be \label{e:def:q_all_vectors}
-    \forall (\w{u},\w{v})\in T_p\M\times T_p\M, \quad
-     \w{q}(\w{u},\w{v}) = \w{q}(\w{u}^\parallel,\w{v}^\parallel) .
-\ee
-Equation~(\ref{e:def:q_all_vectors}), along with (\ref{e:def:def_q_S}), can
-be considered as the definition of $\w{q}$. An equivalent definition,
-which provides an explicit expression of $\w{q}$, is
+\begin{remark}
+While $\wl$ is independent of the choice of the cross-section $\Sp$ of $\Hor$
+through $p$, $\w{k}$ does depend on $\Sp$.
+\end{remark}
+
+\begin{prop}[extension of $\w{q}$]
+The bilinear form $\w{q}$, which has been defined only on $T_p\Sp$ via (\ref{e:def:def_q_S}),
+can be extended to all vectors of $T_p\M$ by setting
 \be \label{e:def:q_g_k_l}
     \encadre{ \w{q} = \w{g} + \uu{\el}\otimes\uu{k} + \uu{k}\otimes\uu{\el} } ,
 \ee
@@ -882,35 +878,39 @@ or, in index notation,
 \be
    \encadre{ q_{\alpha\beta} = g_{\alpha\beta} + \el_\alpha k_\beta + k_\alpha \el_\beta }.
 \ee
-\begin{proof}
-Let us show that (\ref{e:def:q_g_k_l}) implies
-(\ref{e:def:q_all_vectors})-(\ref{e:def:def_q_S}).
-Starting from (\ref{e:def:q_g_k_l}), we have for any pair of vectors $(\w{u},\w{v})$
-in $T_p\M$,
-\be \label{e:def:q_u_v_k_l}
-    \w{q}(\w{u},\w{v}) = \w{u}\cdot\w{v} + (\wl\cdot\w{u})(\w{k}\cdot\w{v})
-    + (\w{k}\cdot\w{u})(\wl\cdot\w{v}) .
+It obeys
+\be \label{e:def:q_all_vectors}
+    \forall (\w{u},\w{v})\in T_p\M\times T_p\M, \quad
+     \w{q}(\w{u},\w{v}) = \w{q}(\w{u}^\parallel,\w{v}^\parallel) ,
 \ee
-Now, thanks to (\ref{e:def:TSperp_Span_k_l}), we may write the
+where $\w{u}^\parallel$ and $\w{v}^\parallel$ are the tangent parts of $\w{u}$ and $\w{v}$
+to $\Sp$, which are uniquely defined by the direct sum (\ref{e:def:TM_direct_sum}):
+\be \label{e:def:decomp_u_v}
+  \w{u} = \w{u}^\parallel + \w{u}^\perp \quad\mbox{and}\quad
+    \w{v} = \w{v}^\parallel + \w{v}^\perp,\quad\mbox{with}\quad
+    \w{u}^\parallel,  \w{v}^\parallel \in T_p\Sp,\quad
+    \w{u}^\perp, \w{v}^\perp  \in T_p^\perp\Sp .
+\ee
+\end{prop}
+\begin{proof}
+Thanks to (\ref{e:def:k_el_minus_one}), we may write the
 orthogonal decompositions (\ref{e:def:decomp_u_v}) as
 \[
     \w{u} = \w{u}^\parallel + u^0 \wl + u^1 \w{k} \quad\mbox{and}\quad
     \w{v} = \w{v}^\parallel + v^0 \wl + v^1 \w{k} .
 \]
-Using $\wl\cdot\wl=0$, $\w{k}\cdot\w{k}=0$ and $\wl\cdot\w{k}=-1$
-[Eq.~(\ref{e:def:k_el_minus_one})], we have then
+Using $\wl\cdot\wl=0$, $\w{k}\cdot\w{k}=0$ and $\wl\cdot\w{k}=-1$, we have then
+$ \w{u}\cdot\w{v}  =  \w{u}^\parallel \cdot\w{v}^\parallel - u^0 v^1 - u^1 v^0$,
+so that $\w{q}$
+defined by (\ref{e:def:q_g_k_l}) obeys
 \bea
- & & \w{u}\cdot\w{v} = \w{u}^\parallel \cdot\w{v}^\parallel - u^0 v^1 - u^1 v^0 \nonumber \\
- & & \wl\cdot\w{u} = -u^1, \quad \w{k}\cdot\w{u} = -u^0, \quad
-  \wl\cdot\w{v} = -v^1, \quad \w{k}\cdot\w{v} = -v^0 .  \nonumber
+    \w{q}(\w{u},\w{v}) & = & \w{u}\cdot\w{v} + (\wl\cdot\w{u})(\w{k}\cdot\w{v})
+    + (\w{k}\cdot\w{u})(\wl\cdot\w{v}) \nonumber \\
+    & = & \w{u}^\parallel \cdot\w{v}^\parallel - u^0 v^1 - u^1 v^0
+ + u^1 v^0 + u^0 v^1 = \w{u}^\parallel \cdot\w{v}^\parallel . \nonumber
 \eea
-Hence (\ref{e:def:q_u_v_k_l}) results in
-\[
-    \w{q}(\w{u},\w{v}) = \w{u}^\parallel \cdot\w{v}^\parallel - u^0 v^1 - u^1 v^0
-            + u^1 v^0 + u^0 v^1 = \w{u}^\parallel \cdot\w{v}^\parallel,
-\]
-which is nothing but (\ref{e:def:q_all_vectors}).
 \end{proof}
+
 
 \begin{example}[light cone] \label{x:def:light_cone5}
 In continuation with Example~\ref{x:def:light_cone4}, the null
@@ -922,7 +922,7 @@ is
 \]
 Evaluating $\w{q}$ via (\ref{e:def:q_g_k_l}), given expression
 (\ref{e:def:wl_light_cone}) for $\wl$, we get the following components
-of $\w{q}$ with respect to the Minkowskian coordinates $x^\alpha=(t,x,y,z)$:
+of $\w{q}$ with respect to the Minkowskian coordinates $(x^\alpha)=(t,x,y,z)$:
 \[
     q_{\alpha\beta} = \left(
     \begin{array}{cccc}
@@ -932,18 +932,12 @@ of $\w{q}$ with respect to the Minkowskian coordinates $x^\alpha=(t,x,y,z)$:
     0 & - \frac{xz}{r^2} & - \frac{yz}{r^2} & \frac{x^2+y^2}{r^2}
     \end{array} \right) .
  \]
-If we consider the spherical coordinates ${x'}^{\alpha}=(t,r,\th,\ph)$
+If we consider the spherical coordinates $({x}^{\alpha})=(t,r,\th,\ph)$
 deduced from the Minkowskian ones via the standard formulas:
-\[
-    \left\{ \begin{array}{l}
-    x = r\sin\th\cos\ph \\
-    y = r\sin\th\sin\ph \\
-    z = r\cos\th
-    \end{array} \right. ,
-\]
+$x = r\sin\th\cos\ph$, $y = r\sin\th\sin\ph$ and $z = r\cos\th$,
 the components of $\w{q}$ become instead
 \be \label{e:def:q_light_cone_spher}
-    q'_{\alpha\beta} = \left(
+    q_{\alpha\beta} = \left(
     \begin{array}{cccc}
     0 & 0 & 0 & 0 \\
     0 & 0 & 0 & 0 \\
@@ -951,7 +945,7 @@ the components of $\w{q}$ become instead
     0 & 0 & 0 & r^2\sin^2\th
     \end{array} \right) .
 \ee
-and we recognize in $q'_{ab} = \mathrm{diag}(r^2, r^2 \sin^2\th)$ the
+and we recognize in $q_{ab} = \mathrm{diag}(r^2, r^2 \sin^2\th)$ the
 standard metric on the 2-sphere of radius $r$.
 \end{example}
 
@@ -969,8 +963,8 @@ since $\w{k}$ diverges at $r=0$ [cf. Eq.~(\ref{e:def:k_Schw_hor})], it is not re
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor5}
 For the Schwarzschild horizon case, we deduce from the metric (\ref{e:def:Schw_metric})
 and the expression (\ref{e:def:wl_Schw_hor}) for $\wl$ that the null
-vector $\w{k}$ orthogonal to the sphere $\Sp$ introduced
-in Example~\ref{x:def:Schw_hor4} and obeying $\w{k}\cdot\wl = -1$
+vector $\w{k}$ obeying $\w{k}\cdot\wl = -1$ and orthogonal to the sphere $\Sp$ introduced
+in Example~\ref{x:def:Schw_hor4}
 is
 \be
 \label{e:def:k_Schw_hor}
@@ -978,7 +972,7 @@ is
         - \left(\frac{1}{2} + \frac{m}{r} \right) \wpar_r .
 \ee
 The vector field $\w{k}$ is depicted in Fig.~\ref{f:def:Schw_hor_lk}.
-We have (cf. Appendix~\ref{s:sam})
+We have (cf. the notebook~\ref{s:sam:Schwarz_hor})
 \be \label{e:def:l_k_forms_Schw_hor}
     \uu{\el} = \frac{2m-r}{2m+r} \, \dd t  + \dd r
     \qquad\mbox{and}\qquad
@@ -998,33 +992,7 @@ in terms of the ingoing Eddington-Finkelstein coordinates $x^\alpha=(t,r,\th,\ph
 \ee
 \end{example}
 
-Having extended the definition of $\w{q}$ via (\ref{e:def:q_g_k_l}), we notice
-that the metric dual\footnote{See Eq.~(\ref{e:bas:arrow_endo}) of
-Appendix~\ref{s:bas} for the explanation of the arrow notation.}
- of $\w{q}$, i.e. the tensor of type $(1,1)$ defined by
-by
-\be \label{e:def:q_proj}
-    \encadre{ \vw{q} := \mathrm{Id} + \wl\otimes \uu{k} + \w{k}\otimes \uu{\el} },
-\ee
-or, in index notation,
-\be
-   \encadre{ q^\alpha_{\ \, \beta} = \delta^\alpha_{\ \, \beta}
-        + \el^\alpha \, k_\beta + k^\alpha \, \el_\beta },
-\ee
-is nothing but the \defin{orthogonal projector} onto the cross-section $\Sp$:
-\be
-    \forall \w{v}\in T_p\M, \quad \vw{q}(\w{v}) = \w{v}^\parallel .
-\ee
-The demonstration follows from the decomposition
-$\w{v} = \w{v}^\parallel + v^0 \wl + v^1 \w{k}$ used above.
-In particular, we have
-\be
-    \vw{q}(\wl) = 0 \quad\mbox{and}\quad \vw{q}(\w{k}) = 0 .
-\ee
-
-%%%%
-
-As stressed by (\ref{e:def:TSperp_Span_k_l}), $(\wl,\w{k})$ forms a null
+As stressed by (\ref{e:def:k_el_minus_one}), $(\wl,\w{k})$ forms a null
 basis\index{null!basis}\index{basis!null --} of $T_p^\perp\Sp$. One can construct
 from it an \emph{orthonormal} basis $(\w{n},\w{s})$ as follows:
 \be \label{e:def:ns_lk}
@@ -1032,10 +1000,8 @@ from it an \emph{orthonormal} basis $(\w{n},\w{s})$ as follows:
         \w{n} & = & \frac{1}{2} \wl + \w{k} \\
         \w{s} & = & \frac{1}{2} \wl - \w{k} .
         \end{array}\right.
-\ee
-This system is easily inverted:
-\be \label{e:def:lk_ns}
-    \left\{ \begin{array}{lcl}
+        \iff
+        \left\{ \begin{array}{lcl}
         \wl & = & \w{n} + \w{s} \\
         \w{k} & = & \frac{1}{2} \left( \w{n} - \w{s} \right).
         \end{array}\right.
@@ -1047,21 +1013,42 @@ easy to check that:
     \w{n}\cdot\w{s}=0.
 \ee
 In other words, $(\w{n},\w{s})$ is an orthonormal basis\index{orthonormal!basis}\index{basis!orthonormal --} of
-the Lorentzian plane $(T_p^\perp\Sp,\w{g})$; in particular:
-\be
-    T_p^\perp\Sp = \mathrm{Span}\left( \w{n}, \w{s} \right) .
-\ee
+the Lorentzian plane $(T_p^\perp\Sp,\w{g})$.
 
-If we substitute (\ref{e:def:lk_ns}) for $\wl$ and $\w{k}$ in (\ref{e:def:q_g_k_l}),
+If we substitute (\ref{e:def:ns_lk}) for $\wl$ and $\w{k}$ in Eq.~(\ref{e:def:q_g_k_l}),
 we get
-\[
-    \w{q} = \w{g} + \frac{1}{2} (\uu{n}+\uu{s})\otimes(\uu{n}-\uu{s})
-    + \frac{1}{2} (\uu{n}-\uu{s})\otimes(\uu{n}+\uu{s}) .
-\]
-Expanding and simplifying results in
 \be
     \w{q} = \w{g} + \uu{n}\otimes\uu{n} - \uu{s}\otimes\uu{s} .
 \ee
+
+\begin{prop}[orthogonal projector onto a cross-section]
+The metric dual\footnote{See Eq.~(\ref{e:bas:arrow_endo}) of
+Appendix~\ref{s:bas} for the arrow notation.} of the bilinear form
+$\w{q}$ defined by Eq.~(\ref{e:def:q_g_k_l}), i.e.
+the tensor of type $(1,1)$ defined by
+\be \label{e:def:q_proj}
+    \encadre{ \vw{q} := \mathrm{Id} + \wl\otimes \uu{k} + \w{k}\otimes \uu{\el} },
+\ee
+or, in index notation,
+\be
+   \encadre{ q^\alpha_{\ \, \beta} = \delta^\alpha_{\ \, \beta}
+        + \el^\alpha \, k_\beta + k^\alpha \, \el_\beta },
+\ee
+is nothing but the \defin{orthogonal projector}\index{orthogonal!projector} onto the cross-section $\Sp$:
+\be
+    \forall \w{v}\in T_p\M, \quad \vw{q}(\w{v}) = \w{v}^\parallel .
+\ee
+\end{prop}
+\begin{proof}
+This follows readily from the decomposition
+$\w{v} = \w{v}^\parallel + v^0 \wl + v^1 \w{k}$ used above.
+\end{proof}
+In particular, we have
+\be
+    \vw{q}(\wl) = 0 \quad\mbox{and}\quad \vw{q}(\w{k}) = 0 .
+\ee
+
+
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{def_expansion.pdf}}
