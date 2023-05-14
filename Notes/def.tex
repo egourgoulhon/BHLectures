@@ -992,8 +992,8 @@ in terms of the ingoing Eddington-Finkelstein coordinates $x^\alpha=(t,r,\th,\ph
 \ee
 \end{example}
 
-As stressed by (\ref{e:def:k_el_minus_one}), $(\wl,\w{k})$ forms a null
-basis\index{null!basis}\index{basis!null --} of $T_p^\perp\Sp$. One can construct
+The pair $(\wl,\w{k})$ forms a null
+basis\index{null!basis}\index{basis!null --} of $T_p^\perp\Sp$ [cf. Eq.~(\ref{e:def:k_el_minus_one})]. One can construct
 from it an \emph{orthonormal} basis $(\w{n},\w{s})$ as follows:
 \be \label{e:def:ns_lk}
     \left\{ \begin{array}{lcl}
@@ -1060,7 +1060,7 @@ $(n-2)$-dimensional one, $n$ being the spacetime dimension.}
 
 \subsection{Expansion along the null normal} \label{s:def:def_expansion}
 
-Let us define the expansion of the cross-section $\Sp$ along the vector
+One defines the expansion of the cross-section $\Sp$ along the vector
 field $\wl$ as follows. Given an infinitesimal parameter $\varepsilon\geq 0$, take a point
 $p\in \Sp$ and displace it by the (infinitesimal) vector $\varepsilon \wl$, thereby getting
 a nearby point $p_\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
@@ -1074,12 +1074,11 @@ Since $p_\varepsilon\in\Hor$ for every $p\in\Sp$, we have $\Sp_\varepsilon\subse
 Because the null direction $\wl$ is transverse to $\Sp_\varepsilon$ by construction, it
 follows that $\Sp_\varepsilon$ is spacelike (cf. Lemma~\ref{p:def:tangent_to_null_hyp}
 in Sec.~\ref{s:def:spacelike_sections}).
-
 At each point $p\in\Sp$, the \defin{expansion of $\Sp$ along $\wl$} is defined from the
 rate of change $\theta_{(\wl)}$ of the area\footnote{We are using the words
 \emph{area} and \emph{surface} even if $n-2 \not= 2$, i.e. even if $n\not = 4$,
 being aware that for $n=3$ the words \emph{length} and \emph{line} would
-be more appropriate, as well as \emph{volume} for $n=5$.}
+be more appropriate, as well as \emph{volume} for $n\geq 5$.}
  $\delta A$ of an element of surface $\delta S$ of
 $\Sp$ around $p$:
 \be \label{e:def:def_expansion}
@@ -1104,42 +1103,45 @@ $\D\w{x}_{(2)}$, $\ldots$, $\D\w{x}_{(n-1)}$. The area of $\delta S$ is then
 \ee
 where $\wepsS$ is the Levi-Civita tensor\index{Levi-Civita!tensor}
 associated with the metric $\w{q}$
-in $\Sp$ (cf. Sec.~\ref{s:bas:Levi-Civita_tensor} in Appendix~\ref{s:bas}).
-Since $\w{q}$ is the metric induced by $\w{g}$ in $\Sp$ and $(\w{n},\w{s})$
-is an orthonormal basis of $T_p^\perp \Sp$, $\wepsS$ is actually the
-alternating form induced on $\Sp$ by the spacetime Levi-Civita tensor
-$\weps$:
+of $\Sp$ (cf. Sec.~\ref{s:bas:Levi-Civita_tensor} in Appendix~\ref{s:bas}).
+
+\begin{prop}
+The Levi-Civita tensor $\wepsS$ associated with the metric $\w{q}$ of $\Sp$
+is expressible in terms of the spacetime Levi-Civita tensor
+$\weps$ as
 \be \label{e:def:epsS_ns}
-    \encadre{ \wepsS = \weps(\w{n},\w{s},\ldots) },
+    \encadre{ \wepsS = \weps(\w{n},\w{s},\ldots) = \weps(\w{k},\wl,\ldots) },
 \ee
 or, in index notation,
 \[
-    \epsS_{\alpha_1\cdots\alpha_{n-2}} = \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}} n^\mu s^\nu .
+    \epsS_{\alpha_1\cdots\alpha_{n-2}} = n^\mu s^\nu \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}}
+    = k^\mu \el^\nu \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}} ,
 \]
+where $(\w{n},\w{s})$ is the orthonormal basis of $T_p^\perp\Sp$ associated to the
+null basis $(\wl, \w{k})$ by Eq.~(\ref{e:def:ns_lk}).
+\end{prop}
+
 \begin{proof}
-To demonstrate (\ref{e:def:epsS_ns}), it suffices to note that its right-hand side
+We note that $\weps(\w{n},\w{s},\ldots)$
 defines a fully antisymmetric $(n-2)$-linear form on $T_p\Sp$. Since the space
-of such forms is 1-dimensional (for $\dim T_p\Sp = n-2$), we have then
-necessarily $\weps(\w{n},\w{s},\ldots) = a \wepsS$ for some proportionality factor $a$. Since
+of such forms is 1-dimensional (for $\dim T_p\Sp = n-2$), there exists necessarily
+some proportionality factor $a$ such that
+$\weps(\w{n},\w{s},\ldots) = a \, \wepsS$. Now
 $\weps(\w{n},\w{s},\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)})$ is the volume
-of the $n$-parallelepiped constructed on the vectors $\w{n},\w{s},\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}$ and $\w{n}$ and $\w{s}$ are unit-length vectors for the metric $\w{g}$,
-we have
+of the $n$-parallelepiped constructed on the vectors $\w{n},\w{s},\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}$.
+Given that $\w{n}$ and $\w{s}$ are unit-length vectors for the metric $\w{g}$,
+we have actually
 \[
     \weps(\w{n},\w{s},\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}) = \delta A.
 \]
-This implies that $a=1$, thereby establishing (\ref{e:def:epsS_ns}).
+This implies that $a=1$, thereby establishing the first equality
+in Eq.~(\ref{e:def:epsS_ns}). The second equality follows by substituting (\ref{e:def:ns_lk})
+for $\w{n}$ and $\w{s}$ in (\ref{e:def:epsS_ns}) and using the multilinearity
+and antisymmetry of $\weps$.
 \end{proof}
-An alternative expression of $\wepsS$ is obtained by substituting (\ref{e:def:ns_lk})
-for $\w{n}$ and $\w{s}$ in (\ref{e:def:epsS_ns}). Thanks to the multilinearity
-and antisymmetry of $\weps$, we get
-\be
-    \encadre{ \wepsS = \weps(\w{k},\wl,\ldots) } .
-\ee
 
 Let us consider in some vicinity of $\Sp$ a coordinate system
-\[
-    x^\alpha = \left(\varepsilon, u, x^2,\ldots, x^{n-1}\right)
-\]
+$(x^\alpha) = \left(\varepsilon, u, x^2,\ldots, x^{n-1}\right)$
 that is adapted to $\Sp$ and $\wl$ in the sense that
 \be \label{e:def:l_dsdeps}
     \wl = \der{}{\varepsilon}
@@ -1151,7 +1153,7 @@ have
     \Sp_\varepsilon = \left\{ p\in\M,\quad  (x^0(p), x^1(p)) = (\varepsilon,0)
                         \right\}
 \ee
-and  $x^a = (x^2,\ldots, x^{n-1})$ can  be viewed as a coordinate system\footnote{
+and  $(x^a) = (x^2,\ldots, x^{n-1})$ can  be viewed as a coordinate system\footnote{
 Let us recall that according to the convention stated in Sec.~\ref{s:def:spacelike_sections},  Latin indices from the beginning of the alphabet, $a$, $b$, etc. range from $2$
 to $n-1$.} on each surface $\Sp_\varepsilon$.
 Let us choose the $n-2$ infinitesimal displacement vectors in (\ref{e:def:A_wepsS_dx})
@@ -1164,8 +1166,7 @@ along the coordinate lines of this system:
 Then expression~(\ref{e:def:A_wepsS_dx}) for the area of $\delta S$ becomes
 \bea
     \delta A & = & \epsS_{a_1 \cdots a_{n-2}} \, \D x_{(2)}^{a_1} \cdots \D x_{(n-1)}^{a_{n-2}}
-                    \nonumber \\
-            & = & \epsS_{2\cdots(n-1)} \, \D x^2 \cdots \D x^{n-1} \nonumber \\
+      = \epsS_{2\cdots(n-1)} \, \D x^2 \cdots \D x^{n-1} \nonumber \\
      \delta A  & = & \sqrt{q} \, \D x^2 \cdots \D x^{n-1} , \label{e:def:A_sqrt_q}
 \eea
 where we have used (\ref{e:bas:eps_sqrt_g}) for the components of the
@@ -1234,8 +1235,8 @@ so that (\ref{e:def:theta_Lie_ln_q}) yields
 \eea
 where we have used
 (\ref{e:def:wl_Schw_hor}) for the components $\el^\mu$.
-The above expression is valid for any null hypersurface $\Hor_u$. For the
-specific case of the Schwarzschild horizon, $r=2m$ and (\ref{e:def:theta_Schw_hor_u})
+The above expression is valid for any hypersurface of the family $\Hor_u$. For the
+case of the Schwarzschild horizon, $r=2m$ and (\ref{e:def:theta_Schw_hor_u})
 yields a vanishing expansion:
 \be \label{e:def:theta_Schw_hor}
     \theta_{(\wl)} = 0 .
@@ -1321,11 +1322,9 @@ and the fact that the cross-sections
 $\Sp_\varepsilon$ are Lie-dragged along $\wl$, the vectors
 $\Lie{\el}\w{u}$ and $\Lie{\el}\w{v}$ are also tangent to $\Sp_\varepsilon$.
 Therefore, we have
-\[
-    \w{\bar q}\left(\Lie{\el}\w{u},\w{v}\right) = \w{q} \left(\Lie{\el}\w{u},\w{v}\right)
-    \quad\mbox{and}\quad
-    \w{\bar q}\left(\w{u},\Lie{\el}\w{v}\right) = \w{q}\left(\w{u},\Lie{\el}\w{v}\right)
-\]
+$\w{\bar q}\left(\Lie{\el}\w{u},\w{v}\right) = \w{q} \left(\Lie{\el}\w{u},\w{v}\right)$
+and
+$\w{\bar q}\left(\w{u},\Lie{\el}\w{v}\right) = \w{q}\left(\w{u},\Lie{\el}\w{v}\right)$
 as well. Thus, we may rewrite (\ref{e:def:Lie_l_bar_q}) as
 \[
      \Lie{\el} \w{\bar q} \, (\w{u},\w{v}) = \Lie{\el} \left[ \w{q}(\w{u},\w{v}) \right]
@@ -1334,19 +1333,16 @@ as well. Thus, we may rewrite (\ref{e:def:Lie_l_bar_q}) as
 \]
 The right-hand side is identical to what would be obtained by expressing
 $\Lie{\el} \w{q} \, (\w{u},\w{v})$ via the Leibniz rule. Hence we conclude
-that
-\[
-    \Lie{\el} \w{\bar q} \, (\w{u},\w{v}) = \Lie{\el} \w{q} \, (\w{u},\w{v}) .
-\]
+that $\Lie{\el} \w{\bar q} \, (\w{u},\w{v}) = \Lie{\el} \w{q} \, (\w{u},\w{v})$.
 Since this identity holds for a pair $(\w{u},\w{v})$ of vectors tangent
 to $\Sp_\varepsilon$, we may express it for any pair of vectors, i.e. not
 necessarily tangent to $\Sp_\varepsilon$ by introducing the orthogonal
 projector $\vw{q}$ onto $\Sp_\varepsilon$ [cf. Eq.~(\ref{e:def:q_proj})]:
 \be \label{e:def:Lie_ell_bar_q}
     \Lie{\el} \w{\bar q} \, (\vw{q}(\w{u}),\vw{q}(\w{v})) =
-    \Lie{\el} \w{q} \, (\vw{q}(\w{u}),\vw{q}(\w{v})) .
+    \Lie{\el} \w{q} \, (\vw{q}(\w{u}),\vw{q}(\w{v})) ,
 \ee
-Using index notation, this is equivalent to
+or, in index notation,
 \[
     \Liec{\el} {\bar q}_{\mu\nu} \, {\bar q}^\mu_{\ \, \alpha} {\bar q}^\nu_{\ \, \beta} =
         \Liec{\el} {q}_{ab} \, {\bar q}^a_{\ \, \alpha} {\bar q}^b_{\ \, \beta} .
@@ -1379,8 +1375,7 @@ Substituting (\ref{e:def:q_g_k_l}) for $q_{\mu\nu}$, and using the Leibniz rule,
            + \Liec{\el} k_\mu \; \el_\nu + k_\mu \, \Liec{\el} \el_\nu \right) .
 \]
 If we express the Lie derivative $\Liec{\el} g_{\mu\nu}$ in terms of the
-covariant derivative $\wnab$ via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of
-Appendix~{\ref{s:bas}, we get
+covariant derivative $\wnab$ via Eq.~(\ref{e:bas:Lie_der_comp_nab}), we get
 \[
     \Liec{\el} g_{\mu\nu} = \el^\sigma \underbrace{\nabla_\sigma g_{\mu\nu}}_{0}
         + \underbrace{g_{\sigma\nu} \nabla_\mu \el^\sigma}_{\nabla_\mu \el_\nu}
@@ -1402,13 +1397,12 @@ i.e. since $q^{\mu\nu}$ is symmetric,
 We can transform further this relation by expressing $q^{\mu\nu}$ via (\ref{e:def:q_g_k_l}):
 \bea
     \theta_{(\wl)} & = & \left( g^{\mu\nu} + \el^\mu k^\nu + k^\mu \el^\nu \right)
-        \nabla_\mu \el_\nu  \nonumber \\
-        & = & \nabla_\mu \el^\mu + k^\nu \underbrace{\el^\mu  \nabla_\mu \el_\nu }_{\kappa \el_\nu}
+        \nabla_\mu \el_\nu
+        = \nabla_\mu \el^\mu + k^\nu \underbrace{\el^\mu  \nabla_\mu \el_\nu }_{\kappa \el_\nu}
             + k^\mu \el^\nu  \nabla_\mu \el_\nu \nonumber \\
         & = & \nabla_\mu \el^\mu + \kappa \underbrace{k^\nu \el_\nu}_{-1}
             + \frac{1}{2} \underbrace{k^\mu \nabla_\mu (\el_\nu \el^\nu)}_{0}
-            \nonumber \\
-        & = & \nabla_\mu \el^\mu - \kappa , \label{e:def:theta_div_l_index}
+        = \nabla_\mu \el^\mu - \kappa , \nonumber
 \eea
 where we have used respectively the properties (\ref{e:def:wl_geod_kappa}),
 (\ref{e:def:el_nab_el_zero}) and (\ref{e:def:k_el_minus_one}).
@@ -1423,7 +1417,7 @@ on the extension of $\wl$ outside $\Hor$ (cf. the discussion in Sec.~\ref{s:def:
 For Eq.~(\ref{e:def:theta_div_l}) to hold, we have supposed that $\wl$ remains null
 outside $\Hor$, so that $k^\mu\nabla_\mu(\el_\nu \el^\nu)$, which is a
 derivative in a direction transverse to $\Hor$, could be set to zero
-in the computation leading to (\ref{e:def:theta_div_l_index}).
+in the computation leading to (\ref{e:def:theta_div_l}).
 \end{remark}
 
 \begin{example}[light cone]  \label{x:def:light_cone7}
@@ -1474,9 +1468,7 @@ be the point of $\Sp'$ located on the same null geodesic generator as $q$,
 i.e. $\overrightarrow{qq'} = \varepsilon \wl$, with $\varepsilon$ infinitely small.
 Let $\D\w{x}$ (resp. $\D\w{x'}$) be the infinitesimal vector connecting
 $p$ to $q$ (resp. $p$ to $q'$). We have then
-\[
-\D\w{x'} = \D\w{x} + \varepsilon \wl ,
-\]
+$\D\w{x'} = \D\w{x} + \varepsilon \wl$,
 the scalar square of which is
 \[
     \D\w{x'}\cdot\D\w{x'} =\D\w{x}\cdot\D\w{x}
@@ -1485,9 +1477,7 @@ the scalar square of which is
 \]
 where we have used the fact that $\wl$ is normal to any vector tangent to $\Hor$,
 such as $\D\w{x}$ and $\wl$ itself. Hence
-\[
-    \D\w{x'}\cdot\D\w{x'} = \D\w{x}\cdot\D\w{x} .
-\]
+$\D\w{x'}\cdot\D\w{x'} = \D\w{x}\cdot\D\w{x}$.
 In other words, the lengths of all segments from $p$ do not depend
 on the cross-section in which they are taken, provided their second end
 lies on the same null geodesic generator of $\Hor$. It follows that all infinitesimal surfaces
@@ -1833,7 +1823,7 @@ appends because $\wl$ is hypersurface-orthogonal, i.e. is normal to the
 hypersurface $\Hor$. The general case regards a generic
 \defin{congruence}\index{congruence} of null
 geodesics, i.e. a family of null geodesics, one, and exactly one, through
-each point of $\M$. A normal vector field $\wl$ tangent to the geodesics
+each point of $\M$. A null vector field $\wl$ tangent to the geodesics
 of the congruence has a priori some vorticity $\w{w}$ and a term
 $+w_{ab} w^{ab}$ must be added to the right-hand side of
 Eq.~(\ref{e:def:null_Raychaud_Ricci}) (see e.g. Eq.~(4.35) of \cite{HawkiE73}).
