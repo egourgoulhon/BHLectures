@@ -1061,15 +1061,18 @@ $(n-2)$-dimensional one, $n$ being the spacetime dimension.}
 \subsection{Expansion along the null normal} \label{s:def:def_expansion}
 
 One defines the expansion of the cross-section $\Sp$ along the vector
-field $\wl$ as follows. Given an infinitesimal parameter $\varepsilon\geq 0$, take a point
+field $\wl$ as follows.
+
+\begin{greybox}
+Given an infinitesimal parameter $\varepsilon\geq 0$, take a point
 $p\in \Sp$ and displace it by the (infinitesimal) vector $\varepsilon \wl$, thereby getting
 a nearby point $p_\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
 Since $\wl$ is tangent to $\Hor$ and $p\in\Hor$, we have $p_\varepsilon\in\Hor$.
 By repeating this for each point in $\Sp$,
-keeping the value of $\varepsilon$ fixed, we define a new codimension-2 surface,
+keeping the value of $\varepsilon$ fixed, we define a new $(n-2)$-dimensional surface,
 $\Sp_\varepsilon$ say (cf. Fig.~\ref{f:def:expansion}). One says that $\Sp_\varepsilon$ is obtained
 from $\Sp$ by \defin{Lie dragging along $\wl$ by the parameter $\varepsilon$}\index{Lie!dragging}.
-Note that $\Sp_0 = \Sp$.
+Note that $\Sp_{\varepsilon=0} = \Sp$.
 Since $p_\varepsilon\in\Hor$ for every $p\in\Sp$, we have $\Sp_\varepsilon\subset \Hor$.
 Because the null direction $\wl$ is transverse to $\Sp_\varepsilon$ by construction, it
 follows that $\Sp_\varepsilon$ is spacelike (cf. Lemma~\ref{p:def:tangent_to_null_hyp}
@@ -1079,7 +1082,7 @@ rate of change $\theta_{(\wl)}$ of the area\footnote{We are using the words
 \emph{area} and \emph{surface} even if $n-2 \not= 2$, i.e. even if $n\not = 4$,
 being aware that for $n=3$ the words \emph{length} and \emph{line} would
 be more appropriate, as well as \emph{volume} for $n\geq 5$.}
- $\delta A$ of an element of surface $\delta S$ of
+$\delta A$ of a surface element $\delta S$ of
 $\Sp$ around $p$:
 \be \label{e:def:def_expansion}
     \encadre{ \theta_{(\wl)} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
@@ -1088,6 +1091,9 @@ $\Sp$ around $p$:
 In the above formula, $\delta A_\varepsilon$ stands for the area of the
 surface element $\delta S_\varepsilon\subset \Sp_\varepsilon$ that is obtained from $\delta S$ by
 Lie dragging along $\wl$ by the parameter $\varepsilon$ (cf. Fig.~\ref{f:def:expansion}).
+\end{greybox}
+
+
 \begin{remark} \label{r:def:expansion_indpt_S}
 The reader may wonder why the expansion is not denoted by something like
 $\theta_{(\wl)}(\Sp)$, since its definition depends explicitly on
@@ -1095,17 +1101,22 @@ $\Sp$. We shall show below that, because $\Hor$ is a null hypersurface, $\theta_
 is actually independent of the choice of the cross-section $\Sp$.
 \end{remark}
 
-For concreteness, let us assume that the element of surface $\delta S \subset\Sp$ is a $(n-2)$-dimensional
+In formula (\ref{e:def:def_expansion}), the area $\delta A$ is measured with
+respect to the metric $\w{q}$ of $\Sp$ and similarly the area $\delta A_\varepsilon$
+is measured by the Riemannian metric induced by $\w{g}$ on $\Sp_\varepsilon$.
+For instance, if the surface element $\delta S \subset\Sp$ is a $(n-2)$-dimensional
 parallelogram delimited by some infinitesimal displacement vectors
-$\D\w{x}_{(2)}$, $\ldots$, $\D\w{x}_{(n-1)}$. The area of $\delta S$ is then
+$\D\w{x}_{(2)}$, $\ldots$, $\D\w{x}_{(n-1)}$, the area of $\delta S$ is
 \be \label{e:def:A_wepsS_dx}
     \delta A = \wepsS(\D\w{x}_{(2)},\ldots,\D\w{x}_{(n-1)}),
 \ee
 where $\wepsS$ is the Levi-Civita tensor\index{Levi-Civita!tensor}
 associated with the metric $\w{q}$
 of $\Sp$ (cf. Sec.~\ref{s:bas:Levi-Civita_tensor} in Appendix~\ref{s:bas}).
+The latter is connected to the Levi-Civita tensor of $\w{g}$ by
+the following property.
 
-\begin{prop}
+\begin{prop}[area $(n-2)$-form of a cross-section]
 The Levi-Civita tensor $\wepsS$ associated with the metric $\w{q}$ of $\Sp$
 is expressible in terms of the spacetime Levi-Civita tensor
 $\weps$ as
@@ -1147,34 +1158,28 @@ that is adapted to $\Sp$ and $\wl$ in the sense that
     \wl = \der{}{\varepsilon}
 \ee
 and the points of $\Sp$ are defined by $(\varepsilon,u) = (0,0)$.
-Then, from the very definition of the Lie dragging of $\Sp$ along $\wl$, we
-have
-\be
-    \Sp_\varepsilon = \left\{ p\in\M,\quad  (x^0(p), x^1(p)) = (\varepsilon,0)
-                        \right\}
-\ee
+Then, from the very definition of the Lie dragging of $\Sp$ along $\wl$,
+$\Sp_\varepsilon$ is defined as the set of points $p$
+such that $(x^0(p), x^1(p)) = (\varepsilon,0)$
 and  $(x^a) = (x^2,\ldots, x^{n-1})$ can  be viewed as a coordinate system\footnote{
 Let us recall that according to the convention stated in Sec.~\ref{s:def:spacelike_sections},  Latin indices from the beginning of the alphabet, $a$, $b$, etc. range from $2$
 to $n-1$.} on each surface $\Sp_\varepsilon$.
 Let us choose the $n-2$ infinitesimal displacement vectors in (\ref{e:def:A_wepsS_dx})
 along the coordinate lines of this system:
-\be
-    \D x_{(i)}^a = (\underbrace{0,\ldots,0}_{i-2},\D x^i,
-                    \underbrace{0,\ldots,0}_{n-1-i}), \qquad
-                    2\leq i \leq n-1 .
-\ee
+$\D\w{x}_{(a)} = \D x^a\, \wpar_a$ (no summation on $a$).
 Then expression~(\ref{e:def:A_wepsS_dx}) for the area of $\delta S$ becomes
 \bea
-    \delta A & = & \epsS_{a_1 \cdots a_{n-2}} \, \D x_{(2)}^{a_1} \cdots \D x_{(n-1)}^{a_{n-2}}
-      = \epsS_{2\cdots(n-1)} \, \D x^2 \cdots \D x^{n-1} \nonumber \\
+    \delta A & = & \D x^2 \cdots \D x^{n-1} \,  \wepsS(\wpar_2, \ldots, \wpar_{n-1})
+      = \D x^2 \cdots \D x^{n-1} \, \epsS_{2\cdots(n-1)}  \nonumber \\
      \delta A  & = & \sqrt{q} \, \D x^2 \cdots \D x^{n-1} , \label{e:def:A_sqrt_q}
 \eea
-where we have used (\ref{e:bas:eps_sqrt_g}) for the components of the
+where we have used the multilinearity of $\wepsS$ and Eq.~
+(\ref{e:bas:eps_sqrt_g}) for the components of the
 Levi-Civita tensor $\wepsS$, $q$ standing for the determinant of the metric
-$\w{q}$ with respect to the coordinates $(x^2,\ldots,x^{n-1})$.
+$\w{q}$ with respect to the coordinates $(x^a)$.
 By the very definition of the Lie dragging, the surface element
 $\delta S_\varepsilon$ on $\Sp_\varepsilon$
-is defined by the same values of the coordinates $(x^2,\ldots, x^{n-1})$
+is defined by the same values of the coordinates $(x^a)$
 as $\delta S$. In particular, the small coordinate increments $\D x^2$, ..., $\D x^{n-1}$
 take the same values as on $\Sp$. Therefore, the area of $\delta S_\varepsilon$
 is
@@ -1348,10 +1353,8 @@ or, in index notation,
         \Liec{\el} {q}_{ab} \, {\bar q}^a_{\ \, \alpha} {\bar q}^b_{\ \, \beta} .
 \]
 Taking the trace with respect to $\w{g}$, we get
-\[
-    \Liec{\el} {\bar q}_{\mu\nu} \, {\bar q}^\mu_{\ \, \sigma} {\bar q}^{\nu\sigma} =
-        \Liec{\el} {q}_{ab} \, {\bar q}^a_{\ \, \sigma} {\bar q}^{b\sigma} .
-\]
+$ \Liec{\el} {\bar q}_{\mu\nu} \, {\bar q}^\mu_{\ \, \sigma} {\bar q}^{\nu\sigma} =
+        \Liec{\el} {q}_{ab} \, {\bar q}^a_{\ \, \sigma} {\bar q}^{b\sigma}$.
 Now, since $\w{\bar q}$ is symmetric and $\vw{q}$ is a projector,
 ${\bar q}^\mu_{\ \, \sigma} {\bar q}^{\nu\sigma} = {\bar q}^\mu_{\ \, \sigma} {\bar q}^{\sigma\nu}
  = {\bar q}^{\mu\nu}$. Similarly, ${\bar q}^a_{\ \, \sigma} {\bar q}^{b\sigma} = {\bar q}^{ab}$.
@@ -1385,10 +1388,8 @@ covariant derivative $\wnab$ via Eq.~(\ref{e:bas:Lie_der_comp_nab}), we get
 Moreover, since $\wl$ and $\w{k}$ are orthogonal to $\Sp$, we have
 $q^{\mu\nu} \el_\nu = 0$ and $q^{\mu\nu} k_\nu = 0$.
 Hence we end up with
-\[
-    \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu}  \left( \nabla_\mu \el_\nu + \nabla_\nu \el_\mu
-        \right) ,
-\]
+$\theta_{(\wl)} = 1/2\, q^{\mu\nu}  \left( \nabla_\mu \el_\nu + \nabla_\nu \el_\mu
+        \right) $,
 i.e. since $q^{\mu\nu}$ is symmetric,
 \be
     \encadre{ \theta_{(\wl)} = q^{\mu\nu} \nabla_\mu \el_\nu } .
@@ -1635,16 +1636,13 @@ The $1/(n-2)$ factor arises from the trace of $\w{q}$, which is $n-2$.
 This follows immediately from $\w{q}$ being a metric tensor on the
 $(n-2)$-dimensional manifold $\Sp$; this can also be recovered from the
 spacetime extension (\ref{e:def:q_g_k_l}) of $\w{q}$:
-\[
-    q^\mu_{\ \, \mu} = \underbrace{\delta^\mu_{\ \, \mu}}_{n}
-                    + 2 \underbrace{\el^\mu k^\mu}_{-1} = n - 2 .
-\]
+$q^\mu_{\ \, \mu} = \delta^\mu_{\ \, \mu} + 2 \el_\mu k^\mu$,
+with $\delta^\mu_{\ \, \mu} = n$ and $\el_\mu k^\mu=-1$.
 \end{remark}
-By construction, we have thus
-\be
-    \sigma^\mu_{\ \, \mu} = g^{\mu\nu} \sigma_{\mu\nu} = q^{\mu\nu} \sigma_{\mu\nu} = 0 .
-\ee
-Note that $\w{\Theta}$ and $\w{\sigma}$ are tensor fields tangent to $\Sp$, in the sense
+By construction, we have
+$\sigma^\mu_{\ \, \mu} = g^{\mu\nu} \sigma_{\mu\nu} = q^{\mu\nu} \sigma_{\mu\nu} = 0$.
+Note that, as $\w{q}$, the tensor fields
+$\w{\Theta}$ and $\w{\sigma}$ are tangent to $\Sp$, in the sense
 that
 \be \label{e:def:Theta_sigma_tangent}
    \encadre{\forall \w{v}\in T_p^\perp \Sp, \quad \w{\Theta}(\w{v}, .) = \w{\sigma}(\w{v}, .) = 0 },
