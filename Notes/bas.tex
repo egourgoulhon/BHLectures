@@ -4,21 +4,12 @@
 
 \section{Introduction}
 
-The mathematical language of general relativity is mostly differential geometry.
-We recall in this appendix basic definitions and results in this field, which we will use
-throughout these lectures. The reader who has some knowledge of general relativity should be familiar with most of them. We recall them here to make the text fairly self-contained and also to provide definitions with sufficient generality, not limited to the dimension 4 --- the standard spacetime dimension. Indeed, even when restricted ourselves to
-a 4-dimensional spacetime, we have to deal with manifolds whose dimension differs from 4,
-such as hypersurfaces (e.g. the black hole event horizon) or 2-dimensional surfaces
-(e.g.  cross-sections of a horizon).
-In the same spirit, we do not stick to Lorentzian metrics
-(such as the spacetime one) but discuss pseudo-Riemannian metrics, which
-encompass both Lorentzian metrics and Riemannian ones.
-Accordingly, in this appendix, $\M$ denotes a generic manifold of any dimension
-and $\w{g}$ a pseudo-Riemannian metric on $\M$.
-
-This appendix is not intended to be some lecture on differential geometry, but
-a collection of basic definitions and useful results. In particular,
-contrary to the other parts of these notes, we state many results without proofs,
+We recall in this appendix basic definitions and results of differential geometry
+that are used in the main text.
+The reader who has some knowledge of general relativity should be familiar with most of them.
+It should be clear that this appendix is not intended to be some monograph on differential geometry.
+In particular, contrary to the other parts of these notes, we state many results
+without proofs,
 referring the reader to classical textbooks on the topic
 \cite{Lafon15,Lee13,Lee18,ONeil83,Berge03,ChoquDD77,Eschr11}, as well as
 to the differential geometry sections of the general relativity textbooks
@@ -33,11 +24,11 @@ to the differential geometry sections of the general relativity textbooks
 Given an integer $n\geq 1$, a \defin{manifold of dimension $n$}\index{manifold}\index{dimension of a manifold} is a topological space $\M$ obeying the following properties:
 \begin{enumerate}
 \item $\M$ is a \defin{separated space}\index{separated space} (also called \defin{Hausdorff space}\index{Hausdorff space}): any two distinct points of $\M$
-admit disjoint open neighbourhoods.
+admit disjoint open neighborhoods.
 \item $\M$ has a \defin{countable base}\index{countable base}\footnote{In the language of topology, one says that $\M$ is a \emph{second-countable space}.}:
 there exists a countable family
 $(\mathcal{U}_k)_{k\in\mathbb{N}}$ of open sets of $\M$ such that any open set of $\M$ can be written as the union (possibly infinite) of some members of the above family.
-\item Around each point of $\M$, there exists a neighbourhood which is
+\item Around each point of $\M$, there exists a neighborhood which is
 homeomorphic to an open subset of $\R^n$.
 \end{enumerate}
 Property 1 excludes manifolds with ``forks'' and is very reasonable from a physical point of view: it allows to distinguish between two points even after a small perturbation.
@@ -148,10 +139,10 @@ A (topological) \defin{manifold with boundary}\index{manifold!with boundary} $\M
 as a topological manifold, except that condition~3 in the definition given
 at the beginning of Sec.~\ref{s:bas:def_manif} is replaced by
 \begin{itemize}
-\item[3'.] Around each point of $\M$, there exists a neighbourhood which is
+\item[3'.] Around each point of $\M$, there exists a neighborhood which is
 homeomorphic either to an open subset of $\R^n$ or to an open subset\footnote{By \emph{open subset of $\mathbb{H}^n$}, it is meant a set $A\subset \mathbb{H}^n$ that is open with respect to the topology of $\mathbb{H}^n$; $A$ is then not necessarily open when considered
 as a subset of $\R^n$ (for instance $A=\mathbb{H}^n$).}
-the closed half-space
+of the closed half-space
 \be
     \mathbb{H}^n := \left\{ (x^1,\ldots,x^n) \in \R^n,\quad x^n \geq 0 \right\} .
 \ee
@@ -192,7 +183,7 @@ $I \rightarrow  \M$:
 Hence $\Li = P(I) := \{ P(\lambda) |\ \lambda\in I\}$. The function $P$ is called a
 \defin{parametrization}\index{parametrization} of $\Li$ and the real
 variable $\lambda$ is called a \defin{parameter along $\Li$}\index{parameter along a curve}. Given a coordinate system $(x^\alpha)$
-in a neighbourhood of a point $p\in\Li$, the parametrization $P$ is
+in a neighborhood of a point $p\in\Li$, the parametrization $P$ is
 defined by $n$ functions $X^\alpha : \ I \rightarrow \R$ such that
 \be \label{e:bas:curve_param_equation}
   x^\alpha(P(\lambda)) = X^\alpha(\lambda) .
@@ -861,7 +852,7 @@ Let us denote by $\mathfrak{X}(\M)$ the space of smooth
 vector fields on $\M$. $\mathfrak{X}(\M)$ is an infinite-dimensional
 vector space over $\R$.
 Given a vector field $\w{v}\in\mathfrak{X}(\M)$, it is not possible from the manifold structure
-alone to define its variation between two neighbouring points $p$ and $q$. Indeed
+alone to define its variation between two neighboring points $p$ and $q$. Indeed
 a formula like $\D \w{v} := \w{v}(q) - \w{v}(p)$ is meaningless because
 the vectors $\w{v}(q)$ and $\w{v}(p)$ belong to two distinct vector spaces,
 $T_q\M$ and $T_p\M$ respectively (cf. Fig.~\ref{f:bas:tang_space}), so that their
@@ -902,7 +893,7 @@ give the direction of the derivative of $\w{v}$.
 \end{remark}
 
 Given an affine connection, the variation of a vector field $\w{v}$ between
-two neighbouring points $p$ and $q$, is defined as
+two neighboring points $p$ and $q$, is defined as
 \be
   \D \w{v} := \wnab_{\D\w{x}} \, \w{v} ,
 \ee
@@ -1133,7 +1124,7 @@ concept of the \emph{Lie derivative}, which we discuss here.
 Consider a vector field $\w{u}$ on $\M$, called hereafter the \defin{flow}\index{flow}.
 Let $\w{v}$ be another vector field on $\M$, the variation of which is to be studied.
 We can use the flow $\w{u}$ to transport the vector $\w{v}$ from one point $p$ to
-a neighbouring one $q$ and then define rigorously the variation of $\w{v}$
+a neighboring one $q$ and then define rigorously the variation of $\w{v}$
 as the difference between the actual value of $\w{v}$ at $q$ and the transported
 value via $\w{u}$. More precisely the definition of the Lie derivative of
 $\w{v}$ with respect to $\w{u}$ is as follows (see Fig.~\ref{f:bas:deriv}).
