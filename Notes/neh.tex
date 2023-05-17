@@ -10,7 +10,8 @@ we move forward to distinguish a null hypersurface representing a black hole eve
 \emph{in equilibrium}. Indeed, for such objects, it is quite natural
 to assume a vanishing expansion. This leads us to the concept of \emph{non-expanding
 horizon} (Sec.~\ref{s:neh:neh}). A special kind of these objects is that
-of \emph{Killing horizons} (Sec.~\ref{s:neh:Killing_hor}). Actually, we shall
+of \emph{Killing horizons}, which occur in spacetimes that are globally
+stationary (Sec.~\ref{s:neh:Killing_hor}). Actually, we shall
 see in Chap.~\ref{s:sta} that the event horizon of a black hole in equilibrium
 must be a Killing horizon.
 
@@ -39,15 +40,19 @@ identically:
     \theta_{(\wl)} = 0 .
 \ee
 \end{greybox}
+
 \begin{remark}
-Note that, given the scaling law (\ref{e:def:rescale_lambda}),
+Given the scaling law (\ref{e:def:rescale_lambda}),
 if $\theta_{(\wl)} = 0$ for some normal $\wl$, then  $\theta_{(\wl')} = 0$
 for any other normal $\wl'$. Hence the definition of a non-expanding horizon
 does not depend on the choice of the null normal.
 \end{remark}
-As we shall discuss in detail in Chap.~\ref{s:sta}, this definition captures only
-the event horizon of black holes in equilibrium. For a black hole out of equilibrium,
-one has generically $\theta_{(\wl)} > 0$.
+
+The above definition captures only
+the event horizon of black holes in equilibrium, to be discussed in detail
+in Chap.~\ref{s:sta}.
+For a black hole out of equilibrium, one has generically $\theta_{(\wl)} > 0$,
+as we shall see in Chap.~\ref{s:evo}.
 
 \begin{example}[Schwarzschild horizon]
 In view of Eq.~(\ref{e:def:theta_Schw_hor}), we may assert that the
@@ -125,7 +130,8 @@ to that of $\Sp$.
 \begin{example}[Schwarzschild horizon] \label{x:neh:Schwarz_hor_area}
 The area of the Schwarzschild horizon is readily computed from
 the metric (\ref{e:def:q_S_Schw_hor}):
-$q_{ab} \D x^a \D x^b = 4m^2 \left( \D\th^2 + \sin^2\th \D^2\ph \right)$;
+$\w{q} = 4m^2 \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right)$, yielding
+$\sqrt{q}=4m^2$;
 we get
 \be \label{e:neh:area_Schwarz}
      A = 16\pi m^2 .
@@ -134,8 +140,9 @@ we get
 
 \subsection{Trapped surfaces} \label{s:neh:trapped_surfaces}
 
-If there exists some natural concept of \emph{outer}/\emph{inner} for $\Hor$, for
-instance the outer region being the one that contains an asymptotically flat end,
+If there exists some natural concept of \emph{outer}/\emph{inner} region with respect
+to $\Hor$, for
+instance the outer region being the one having some asymptotically flat end,
 and if the transverse null normals $\w{k}$ to cross-sections point to the inner region, then
 the property $\theta_{(\wl)}=0$ means that any cross-section $\Sp$ of the
 non-expanding horizon $\Hor$ is a
@@ -178,7 +185,7 @@ $\wl$ [cf. Eq.~(\ref{e:def:theta_l_all})]:
 \ee
 $\delta A^{(\w{k})}_\varepsilon$ being the area of the surface element
 that is deduced from the surface element of area $\delta A$ on $\Sp$ by the
-Lie dragging along $\w{k}$ by a parameter $\varepsilon$ (cf. Fig.~\ref{f:neh:trapped_surf} left).
+Lie dragging along $\w{k}$ by a parameter $\varepsilon$ (cf. Fig.~\ref{f:neh:trapped_surf}).
 The limit case $\theta_{(\wl)} = 0$ and $\theta_{(\w{k})}<0$ correspond
 to the so-called \defin{marginally trapped surface}\index{marginally!trapped surface}.
 
@@ -188,7 +195,7 @@ is no trapped surface.
 
 \begin{remark}
 The hypothesis of \emph{closed} surface is crucial in the definition of a
-trapped surface. For instance, there are non-closed spacelike surfaces in
+trapped surface. For instance, there are non-closed spacelike 2-surfaces in
 Minkowski spacetime having $\theta_{(\wl)} < 0$ and $\theta_{(\w{k})} < 0$.
 A well known such example is the intersection of two past null cones (see e.g.
 Fig.~5.13 of \cite{FroloN98}).
@@ -203,15 +210,9 @@ which $\theta_{(\w{k})} > 0$ at some points of $\Sp$ \cite{GerocH82}.
 Let us consider a cross-section $\Sp$ of the Schwarzschild horizon as
 defined in Example~\ref{x:def:Schw_hor4} of Chap.~\ref{s:def}.
 Computing $q^{\mu\nu} \nabla_\mu k_\nu$ from the components $k_\nu$
-given by (\ref{e:def:l_k_forms_Schw_hor}) we get (cf. Sec.~\ref{s:sam:Schwarz_hor} for
-the computation)
-\[
-    \theta_{(\w{k})} = - \frac{r+2m}{r^2} .
-\]
-In particular, on $\Sp$ ($r=2m$),
-\[
-    \theta_{(\w{k})}  = - \frac{1}{m} .
-\]
+given by (\ref{e:def:l_k_forms_Schw_hor}), we get (cf. the notebook~\ref{s:sam:Schwarz_hor} for
+the computation) $\theta_{(\w{k})} = - (r+2m)/r^2$.
+In particular, on $\Sp$ ($r=2m$), $\theta_{(\w{k})}  = - 1/m$.
 Hence $\theta_{(\w{k})} < 0$. Since we had already $\theta_{(\wl)}=0$
 [cf. Eq.~(\ref{e:def:theta_Schw_hor})], we conclude that $\Sp$ is a
 marginally trapped surface. This could also have been inferred from
@@ -234,17 +235,15 @@ Now, the first term is always non-negative:
 \be \label{e:neh:sigma_square}
     \sigma_{ab} \sigma^{ab} \geq 0 .
 \ee
-\begin{proof}
-Let us consider an orthonormal basis of $\w{q}$. Since
+Indeed, let us consider an $\w{q}$-orthonormal basis of $T_p\Sp$. Since
 $\w{q}$ is a Riemannian metric, the components of its inverse
 in that basis are $q^{ab} = \mathrm{diag}(1,\ldots,1) = \delta^{ab}$.
 Hence $\sigma^{ab} = q^{ac} q^{bd} \sigma_{cd} =
-\delta^{ac} \delta^{bd} \sigma_{cd} = \sigma_{ab}$ and
+\delta^{ac} \delta^{bd} \sigma_{cd} = \sigma_{ab}$, so that
 \be \label{e:neh:sigma_square_si}
    \sigma_{ab} \sigma^{ab}
-   = \sum_{a=1}^{n-2} \sum_{b=1}^{n-2} (\sigma_{ab})^2 \geq 0 .
+   = \sum_{a=2}^{n-1} \sum_{b=2}^{n-1} (\sigma_{ab})^2 \geq 0 .
 \ee
-\end{proof}
 
 Regarding the second term in (\ref{e:neh:null_Raychaud_theta_zero}),
 it is non-negative if the Ricci tensor obeys the so-called
@@ -266,10 +265,11 @@ The condition (\ref{e:neh:null_energy_cond_matter}) is pretty weak and is satisf
 \begin{itemize}
 \item vacuum: $\w{T}=0$;
 \item any ``reasonable'' matter model, such as a perfect fluid with a
-proper energy density $\varepsilon$ and pressure $p$ satisfying\footnote{Indeed, from the form $\w{T} = (\varepsilon+p)\uu{u}\otimes\uu{u} + p \w{g}$
-of the energy-momentum tensor of a perfect fluid, one has
-$\w{T}(\wl,\wl) = (\varepsilon+p)(\w{u}\cdot\wl)^2$ with $(\w{u}\cdot\wl)^2\geq 0$.}
-$\varepsilon+p\geq 0$;
+proper energy density $\varepsilon$ and pressure $p$ satisfying
+$\varepsilon+p\geq 0$ (\footnote{Indeed, for the perfect-fluid
+energy-momentum tensor $\w{T} = (\varepsilon+p)\uu{u}\otimes\uu{u} + p \w{g}$,
+one has
+$\w{T}(\wl,\wl) = (\varepsilon+p)(\w{u}\cdot\wl)^2$ with $(\w{u}\cdot\wl)^2\geq 0$.});
 \item any electromagnetic field\footnote{This is readily seen from the electromagnetic
 energy-momentum tensor (\ref{e:fra:T_em}), which yields $\w{T}(\wl,\wl) = \mu_0^{-1} \w{E}\cdot\w{E}$ where $E^\alpha := F^\alpha_{\ \, \mu} \el^\mu$. Thanks to the antisymmetry
 of $\w{F}$, the vector $\w{E}$ obeys $\w{E}\cdot\wl = 0$. It follows from
@@ -288,7 +288,7 @@ The null energy condition follows from the
 weak energy condition by continuity.
 Selecting for $\w{u}$ the 4-velocity of an observer, we see that
 the weak energy condition has a simple physical interpretation: the energy
-density as measured by any observer is non-negative,
+density $\veps=\w{T}(\w{u}, \w{u})$ as measured by any observer is non-negative,
 hence the name \emph{energy condition}.
 
 \begin{remark}
@@ -310,9 +310,7 @@ turns it into (\ref{e:neh:null_energy_cond_matter}).
 Let us assume that the null energy condition (\ref{e:neh:null_energy_cond})
 holds. Given (\ref{e:neh:sigma_square}),
 Eq.~(\ref{e:neh:null_Raychaud_theta_zero}) then implies both
-\be
-    \sigma_{ab} \sigma^{ab}  = 0
-\ee
+$\sigma_{ab} \sigma^{ab}  = 0$
 and
 \be \label{e:neh:R_l_l_zero}
     \encadre{ \w{R}(\wl, \wl) = 0  }.
@@ -322,7 +320,7 @@ the terms $\sigma_{ab}$ in the sum (\ref{e:neh:sigma_square_si}) is zero. Hence 
 \be
     \w{\sigma} = 0 .
 \ee
-Since we had already $\theta_{(\wl)}=0$ (non-expanding horizon), this implies that the full deformation rate tensor
+Since we had already $\theta_{(\wl)}=0$ ($\Hor$ non-expanding), this implies that the full deformation rate tensor
 vanishes identically [cf. Eq.~(\ref{e:def:def_shear})]:
 \be
     \w{\Theta} = 0 .
@@ -332,11 +330,11 @@ In view of (\ref{e:def:Theta}), this is equivalent to
      \vw{q}^* \Lie{\el} \w{q} = 0 .
 \ee
 We conclude:
-\begin{prop}[invariance of the cross-section 2-metric along the null generators]
+\begin{prop}[invariance of the cross-section metric along the null generators]
 \label{p:neh:invariance_of_2metric}
 Provided that the null energy condition (\ref{e:neh:null_energy_cond})
 holds,
-the whole metric (and not only the area element
+the whole metric (and not only the area form
 $\wepsS$, as a mere $\theta_{(\wl)}=0$ would suggest) of any cross-section
 of a non-expanding horizon is invariant along the null geodesic generators
 [Eq.~(\ref{e:neh:Lie_el_q_zero})].
@@ -352,7 +350,8 @@ of Chap.~\ref{s:def}].
 
 Since $\Hor$ is a null hypersurface, the ``metric'' $\left. \w{g}\right|_{\Hor}$
 induced on it by the spacetime metric $\w{g}$ is degenerate. As a consequence, there
-is a priori no unique connection on $\Hor$ associated with it. However, when
+is a priori no unique connection on $\Hor$ associated with
+$\left. \w{g}\right|_{\Hor}$. However, when
 $\Hor$ is a non-expanding horizon and the null energy condition holds on $\Hor$,
 so that $\w{\Theta}=0$, the spacetime connection $\wnab$ induces a unique
 connection ${}^\Hor\!\wnab$ on $\Hor$ as follows.
@@ -390,7 +389,8 @@ that $(\Hor, {}^\Hor\!\wnab)$ is a \defin{totally geodesic submanifold}\index{to
 i.e. any geodesic of $(\Hor, {}^\Hor\!\wnab)$ is also a geodesic of $(\M,\w{g})$
 (cf. the historical note on p.~\pageref{h:neh:NEH}).
 
-\begin{prop}
+\begin{prop}[horizon-intrinsic covariant derivative of the null normal]
+\label{p:neh:Hnab_l}
 The covariant derivative of the null normal $\wl$ with respect to the affine
 connection ${}^\Hor\!\wnab$ takes a rather simple form:
 \be \label{e:neh:nabH_ell}
@@ -399,7 +399,7 @@ connection ${}^\Hor\!\wnab$ takes a rather simple form:
 where ${}^\Hor\!\w{\omega}$ is the tensor field on $\Hor$
 defined as the restriction of the 1-form $\w{\omega}$
 introduced in Sec.~\ref{s:def:deformation_shear}
-to vectors tangent to $\Hor$ [cf. Eq.~(\ref{e:def:omega_restrict_H})].
+to tangent vectors to $\Hor$ [cf. Eq.~(\ref{e:def:omega_restrict_H})].
 In other words, ${}^\Hor\!\w{\omega}$ is the pullback $\iota^*\w{\omega}$ of
 $\w{\omega}$ by the inclusion map $\iota: \Hor \to \M$ (cf. Sec.~\ref{s:bas:lie_der_tensor}
 in Appendix~\ref{s:bas}).
@@ -503,7 +503,7 @@ an orbit, it is given by
 \ee
 where $\D\w{x}$ is the infinitesimal vector connecting the point $p$ to the point
 $\Phi_{\D t}(p)$ (cf. Sec.~\ref{s:bas:vectors} and Fig.~\ref{f:neh:orbit_group}).
-We have then
+Hence we may say:
 \begin{prop}
 The group action limited to infinitesimal transformations of parameter
 $\D t$ around the identity ($\D t =0$) amounts to translations by the infinitesimal vector $\D t\, \w{\xi}$.
@@ -519,6 +519,7 @@ generator associated with this parameter.}
 
 A 1-dimensional Lie group $G$ is said to be a
 \defin{symmetry group}\index{symmetry!group}\index{group!symmetry --}
+or a \defin{isometry group}\index{isometry!group}\index{group!isometry --}
 of the spacetime $(\M,\w{g})$ if there is an action $\Phi$ of $G$ on $\M$
 such that for any value of the parameter $t$ of $G$,
 $\Phi_t$ is an \defin{isometry}\index{isometry} of $(\M,\w{g})$, i.e. $\Phi_t$
@@ -781,30 +782,21 @@ Let $\Hor$ be a Killing horizon with complete cross-sections that are closed man
 i.e. the topology of $\Hor$ is (\ref{e:neh:H_topology}). Let us select the null normal $\wl$
 that coincides with the Killing vector $\w{\xi}$ on $\Hor$:
 $\wl \equalH \w{\xi}$.
-Equation~(\ref{e:neh:Lie_xi_g}) then implies:
-\[
-    \Lie{\el} \w{g} \equalH 0 .
-\]
+Equation~(\ref{e:neh:Lie_xi_g}) then implies: $\Lie{\el} \w{g} \equalH 0$.
 Let $\Sp$ be a cross-section of $\Hor$; since $\w{q}$ is the metric induced by $\w{g}$
 on $\Sp$, we deduce immediately that
-\[
-    \Lie{\el} \w{q} = 0 .
-\]
+$\Lie{\el} \w{q} = 0$.
 From the definition (\ref{e:def:Theta}), it follows that the expansion rate
 tensor of $\Sp$ vanishes identically:
 \be \label{e:neh:Theta_zero_KillingH}
    \encadre{ \w{\Theta} = 0 }.
 \ee
-In particular we have
-\[
-    \theta_{(\wl)} = 0 .
-\]
-We conclude:
+In particular we have $\theta_{(\wl)} = 0$, so that we conclude:
 \begin{prop}
 Any Killing horizon with closed-manifold cross-sections is a non-expanding horizon.
 \end{prop}
-Moreover, (\ref{e:neh:Theta_zero_KillingH}) shows that $\w{\Theta}$ vanishes
-for all Killing horizons, while to get the same result on a generic non-expanding
+Moreover, $\w{\Theta}$ vanishes
+for all Killing horizons [Eq.~(\ref{e:neh:Theta_zero_KillingH})], while to get the same result on a generic non-expanding
 horizon, one has to assume that the null energy condition holds on $\Hor$.
 
 \subsection{Expressions of the non-affinity coefficient}
@@ -817,10 +809,10 @@ on a Killing horizon $\Hor$. According to the definition
 \be \label{e:neh:xi_nab_xi_kappa}
     \wnab_{\w{\xi}}\, \w{\xi} \equalH \kappa \, \w{\xi} .
 \ee
-The metric dual of this relation is
-$\xi^\mu \nabla_\mu \xi_\alpha \equalH \kappa \, \xi_\alpha$.
-Using Killing equation (\ref{e:neh:Killing_equation}) under the form
-$\nabla_\mu \xi_\alpha = - \nabla_\alpha \xi_\mu$, we get
+Let us consider the metric dual of this relation, i.e.
+$\xi^\mu \nabla_\mu \xi_\alpha \equalH \kappa \, \xi_\alpha$,
+and use the Killing equation (\ref{e:neh:Killing_equation}) as
+$\nabla_\mu \xi_\alpha = - \nabla_\alpha \xi_\mu$; we get
 \[
     \xi^\mu \nabla_\alpha \xi_\mu \equalH - \kappa \, \xi_\alpha .
 \]
@@ -897,8 +889,7 @@ Besides, taking the square of (\ref{e:neh:Frobenius_xi_Killing}) leads to
             \underbrace{a_\mu \xi^\mu}_{2\kappa}
         + a_\nu  a^\nu
         \underbrace{ \xi_\mu \xi^\mu}_{\equalH 0}
-         \nonumber \\
-         & \equalH & - 8 \kappa^2 , \nonumber
+        \equalH  - 8 \kappa^2 , \nonumber
 \eea
 where we have used Eq.~(\ref{e:neh:a_xi_2_kappa}).
 Hence
@@ -940,34 +931,49 @@ Sec.~\ref{s:def:spacelike_sections}:
 \]
 where we have used $\Theta_{\nu\mu}  q^\nu_{\ \, \alpha} = \Theta_{\alpha\mu}$
 and $\el_\nu q^\nu_{\ \, \alpha} = 0$.
-Now, since $\Hor$ is a Killing horizon, we have $\w{\Theta}=0$ [cf. Eq.~(\ref{e:neh:Theta_zero_KillingH})] and in particular
+Now, since $\Hor$ is a Killing horizon, we have $\w{\Theta}=0$ [Eq.~(\ref{e:neh:Theta_zero_KillingH})] and in particular
 $\theta_{(\wl)} =0$. Accordingly, the above equation reduces to
 \be \label{e:neh:zeroth_law_step1}
     \el^\mu \nabla_\mu \omega_\nu q^\nu_{\ \, \alpha} - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
     + \kappa  \, \omega_\nu q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} .
 \ee
-Let us express $\el^\mu \nabla_\mu \omega_\nu$ in terms of the Lie derivative
-of $\w{\omega}$ along $\wl$ via formula (\ref{e:bas:Lie_der_comp_nab}) of Appendix~\ref{s:bas}:
-\be \label{e:neh:nab_l_omega_prov}
-    \el^\mu \nabla_\mu \omega_\nu q^\nu_{\ \, \alpha} = \left( \Liec{\el}\omega_\nu - \omega_\mu \nabla_\nu \el^\mu \right) q^\nu_{\ \, \alpha} .
+Let us make the Lie derivative
+of the 1-form $\w{\omega}$ along $\wl$
+appear via formula (\ref{e:bas:Lie_der_comp_nab})
+with $(k,\ell) = (0,1)$:
+\bea
+    \Liec{\el}\omega_\nu & =  & \el^\mu \nabla_\mu \omega_\nu + \omega_\mu \nabla_\nu \el^\mu
+     = \el^\mu \nabla_\mu \omega_\nu + \omega_\mu \left( \Theta_\nu^{\ \, \mu}
+     + \omega_\nu \el^\mu - \el_\nu k^\sigma \nabla_\sigma \el^\mu \right) \nonumber \\
+     & = & \el^\mu \nabla_\mu \omega_\nu  + \kappa \omega_\nu - \omega_\mu \el_\nu k^\sigma \nabla_\sigma \el^\mu , \nonumber
+\eea
+where we have expressed $\nabla_\nu \el^\mu$ via Eq.~(\ref{e:def:nab_l_Theta}) and used $\Theta_\nu^{\ \, \mu} = 0$ and $\omega_\mu \el^\mu = \kappa$
+[Eq.~(\ref{e:def:omega_l_kappa})].
+Given that $\el_\nu q^\nu_{\ \, \alpha} = 0$, Eq.~(\ref{e:neh:zeroth_law_step1})
+becomes
+\be  \label{e:neh:zeroth_law_step2}
+    \Liec{\el}\omega_\nu \, q^\nu_{\ \, \alpha}  - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
+    = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} .
 \ee
-Now, since $\wl$ is a symmetry generator on $\Hor$, we have
+It is then judicious to
+express $\Lie{\el}\w{\omega}$ in terms of $\Lie{\el}{}^{\Hor}\!\w{\omega}$,
+where ${}^{\Hor}\!\w{\omega}$ is the restriction of $\w{\omega}$ to tangent vectors
+to $\Hor$ introduced in Sec.~\ref{e:neh:induced_connection}.
+Indeed, it has been shown in Property~\ref{p:neh:Hnab_l}
+that ${}^{\Hor}\!\w{\omega}$ is a geometric quantity intrinsic to
+$\Hor$ and $\wl$, independent of $\w{k}$ and hence of the cross-section $\Sp$.
+It has therefore to obey the spacetime symmetry generated by $\w{\xi} \equalH \wl$.
+Hence one has necessarily
 \be \label{e:neh:Lie_l_Homeg_zero}
-    \Lie{\el} {}^{\Hor}\!\w{\omega} = 0 ,
+    \Lie{\el} {}^{\Hor}\!\w{\omega} = 0 .
 \ee
-where ${}^{\Hor}\!\w{\omega}$ is the restriction of $\w{\omega}$ to vectors
-tangent to $\Hor$, which has been shown to be a geometric quantity intrinsic to
-$\Hor$ and $\wl$ in Sec.~\ref{e:neh:induced_connection} and therefore has to
-obey the spacetime symmetry generated by $\w{\xi} \equalH \wl$.
 Any vector field $\w{v}$ defined on $\Hor$ but not necessarily tangent to $\Hor$ can
 be split in a unique way into a part tangent to $\Hor$, $\w{v}^\parallel$ say,
 and a part along the transverse null vector field $\w{k}$ according
-to\footnote{$\w{v}^\parallel = \w{\Pi}(\w{v})$, where $\w{\Pi}$ is the
-the projector onto $\Hor$ along $\w{k}$, as expressed by Eq.~(\ref{e:def:def_proj_H_along_k}).}
-\[
-     \w{v} = \w{v}^\parallel - \langle \uu{\ell}, \w{v} \rangle \w{k} ,
-\]
-so that
+to $\w{v} = \w{v}^\parallel - \langle \uu{\ell}, \w{v} \rangle \w{k}$.
+Actually $\w{v}^\parallel = \w{\Pi}(\w{v})$, where $\w{\Pi}$ is the
+the projector onto $\Hor$ along $\w{k}$ introduced by Eq.~(\ref{e:def:def_proj_H_along_k}).
+We have then
 \[
     \langle\Lie{\el}\w{\omega}, \w{v} \rangle =
     \langle\Lie{\el}\w{\omega}, \w{v}^\parallel \rangle
@@ -989,39 +995,14 @@ the Lie derivative of $\w{\omega}$ along $\wl$ being proportional to the
 \be
     \Lie{\el}\w{\omega} = - \langle\Lie{\el}\w{\omega}, \w{k} \rangle \, \uu{\ell} .
 \ee
-Using this formula into Eq.~(\ref{e:neh:nab_l_omega_prov}) leads to
-\[
-       \el^\mu \nabla_\mu \omega_\nu q^\nu_{\ \, \alpha} =
-       - k^\mu \Liec{\el} \omega_\mu  \underbrace{\ell_\nu q^\nu_{\ \, \alpha}}_{0}
-       - \omega_\mu \nabla_\nu \el^\mu  q^\nu_{\ \, \alpha}
-       = - \omega_\mu \nabla_\nu \el^\mu  q^\nu_{\ \, \alpha}  .
-\]
-Accordingly, Eq.~(\ref{e:neh:zeroth_law_step1}) becomes successively
-\bea
-   & & - \omega_\mu \nabla_\nu \el^\mu  q^\nu_{\ \, \alpha}
-     - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
-    + \kappa  \, \omega_\nu q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} \nonumber \\
-   & &  - \omega_\mu \left(\Theta_\nu^{\ \, \mu}
-        + \omega_\nu \el^\mu - \el_\nu k^\sigma \nabla_\sigma \el^\mu \right) q^\nu_{\ \, \alpha}
-     - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
-    + \kappa  \, \omega_\nu q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} \nonumber \\
-   & &   - \omega_\mu
-   \underbrace{\Theta_\alpha^{\ \, \mu}}_{0}
-        - \underbrace{\omega_\mu \el^\mu}_{\kappa} \omega_\nu q^\nu_{\ \, \alpha}
-     - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
-    + \kappa  \, \omega_\nu q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha}  \nonumber \\
-   & &
-   - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} , \nonumber \\
-   & & \DSc_\alpha \kappa = - R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} , \label{e:neh:DS_kappa_W}
-\eea
-where we have used (\ref{e:def:nab_l_Theta}) to get the second line,
-the identity
-$\el_\nu q^\nu_{\ \, \alpha} = 0$ to get the third one and
-(\ref{e:def:omega_l_kappa}) to substitute $\kappa$ for
-$\omega_\mu \el^\mu$.
-Finaly, in the last line, we have let appear
-the covariant derivative of $\kappa$ along $\Sp$,
-which we denote by $\DS$:
+Given that $\el_\nu  q^\nu_{\ \, \alpha}=0$, it follows that the first
+term in the left-hand side of Eq.~(\ref{e:neh:zeroth_law_step2}) is zero and we are
+left with
+\be \label{e:neh:DS_kappa_W}
+   \DSc_\alpha \kappa = - R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} ,
+\ee
+where $\DS$ stands for
+the covariant derivative in the Riemannian manifold $(\Sp,\w{q})$:
 $\DSc_\alpha \kappa := \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}$.
 
 To go further, we shall assume the (generalized)
@@ -1169,25 +1150,16 @@ as a Killing horizon with respect to the Killing vector field $-\w{\xi}$.
 The future-directed null normal coinciding with $-\w{\xi}$ on $\Hor_1$ is then
 $\wl_1 = - y\, \wl$. Since it is clearly constant along the null geodesic generators
 of $\Hor_1$, we have $\wnab_{\wl_1}\wl_1 = 0$, hence the
-associated non-affinity coefficient vanishes:
-\[
-    \kappa_1 = 0 .
-\]
+associated non-affinity coefficient vanishes: $\kappa_1 = 0$.
 On $\Hor_2$, $\w{\xi}$ is future-directed (cf. Fig.~\ref{f:neh:hplaneKilling-nullrot})
 and the null normal coinciding with it is $\wl_2 =  y\,  \wl$, whose non-affinity
-coefficient is
-\[
-    \kappa_2 = 0 .
-\]
+coefficient is $\kappa_2 = 0$.
 \end{example}
 
 \begin{example}[Schwarzschild and Kerr horizons]
 \label{x:neh:Schw_Kerr_kappa}
 We have found in Example~\ref{x:def:Schw_hor3} of Chap.~\ref{s:def} [cf. Eq.~(\ref{e:def:kappa_Schw_hor})]
-that on a Schwarzschild horizon:
-\[
-  \kappa = \frac{1}{4m},
-\]
+that on a Schwarzschild horizon $\kappa = 1/(4m)$,
 which is clearly constant. But
 this last feature is rather trivial since the Schwarzschild horizon is spherically
 symmetric, so that no dependence of $\kappa$ on $\th$ nor $\ph$ could have been expected.
@@ -1247,8 +1219,8 @@ The next example regards the anti-de Sitter spacetime and will play some
 role in the study of the extremal ($a=m$) Kerr black hole in Chap.~\ref{s:exk}.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.4\textwidth]{neh_AdS_Poincare_patch.pdf}\ \qquad \
-\includegraphics[width=0.4\textwidth]{neh_AdS_Killing_vec.pdf}
+\centerline{\includegraphics[width=0.35\textwidth]{neh_AdS_Poincare_patch.pdf}\ \qquad \
+\includegraphics[width=0.35\textwidth]{neh_AdS_Killing_vec.pdf}
 }
 \caption[]{\label{f:neh:AdS_example} \footnotesize
 \emph{Left:} 2-dimensional slice $(x,y)=(0,0)$ of the Poincaré patch $\M_{\rm P}$ of anti-de Sitter spacetime plotted in terms of the (global) coordinates $\tau$ and
@@ -1595,19 +1567,16 @@ can be shown explicitly by means of Killing equation (\ref{e:neh:Killing_equatio
 \]
 We have thus
 \be
-    \w{a} = \frac{1}{V^2} \, \wnab_{\w{\xi}}\, \w{\xi}  ,
+    \w{a} = \frac{1}{V^2} \, \wnab_{\w{\xi}}\, \w{\xi} .
 \ee
-from which
-\[
-    a_\alpha = \frac{1}{V^2} \, \xi^\mu \nabla_\mu \xi_\alpha .
-\]
 Thanks to Killing equation (\ref{e:neh:Killing_equation}), we may rewrite
 this relation as
 \[
-    a_\alpha = - \frac{1}{V^2} \, \xi^\mu \nabla_\alpha \xi_\mu
+    a_\alpha = \frac{1}{V^2} \, \xi^\mu \nabla_\mu \xi_\alpha
+    = - \frac{1}{V^2} \, \xi^\mu \nabla_\alpha \xi_\mu
         = - \frac{1}{2V^2} \, \nabla_\alpha (\xi_\mu \xi^\mu)
         = \frac{1}{2V^2} \, \nabla_\alpha V^2
-        = \frac{1}{2}\,  \nabla_\alpha \ln V^2  =  \nabla_\alpha \ln V ,
+         =  \nabla_\alpha \ln V ,
 \]
 hence
 \be
