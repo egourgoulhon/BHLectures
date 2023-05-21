@@ -437,7 +437,8 @@ Moreover, under a change of null normal, $\wl \mapsto \wl' = \alpha \wl$,
 it remains constant up to the addition of an exact 1-form:
 ${}^\Hor\!\w{\omega}' = {}^\Hor\!\w{\omega} + \dd\ln\alpha$.
 The 1-form ${}^\Hor\!\w{\omega}$
-is usually called the \defin{rotation 1-form} or \defin{connection 1-form}
+is usually called the \defin{rotation 1-form}\index{rotation!1-form} or
+\defin{connection 1-form}\index{connection!1-form}
 of $(\Hor, \wl)$ \cite{AshteBL02,GourgJ06}.
 
 \subsection{Going further}
@@ -827,6 +828,17 @@ replace the covariant derivative by the differential:
     \encadre{ \dd (\w{\xi}\cdot\w{\xi}) \equalH - 2 \kappa \, \uu{\xi} } .
 \ee
 
+\begin{remark}
+If $u:=\w{\xi}\cdot\w{\xi}$ is a regular scalar field in the vicinity of $\Hor$, in the sense
+that $\dd u \neq 0$, it is not surprising to have $\dd u$ proportional
+to $\uu{\xi}$ on $\Hor$. Indeed, if $\dd u \neq 0$, the hypersurface $\Hor$ can be considered
+as the level set $u=0$ for $\w{\xi}$ is null on $\Hor$ (cf. Sec.~\ref{s:def:hypsurf_level}).
+It follows that the gradient $\vw{\nabla} u$ must be collinear to
+the normal $\w{\xi}$ to $\Hor$ (cf. Sec.~\ref{s:def:null_normal}) or equivalently
+$\dd u \equalH \alpha\, \uu{\xi}$. Equation~(\ref{e:neh:dxi2_kappa}) simply shows
+that the proportionality factor is $\alpha = -2\kappa$.
+\end{remark}
+
 Another interesting relation is obtained from the Frobenius theorem\index{Frobenius!theorem}
 applied to $\w{\xi}$. Indeed, since on $\Hor$, $\w{\xi}$ is normal to a hypersurface
 ($\Hor$), the Frobenius theorem in its dual formulation
@@ -900,8 +912,8 @@ Hence
 This is an explicit expression of $\kappa$ in terms of the Killing vector
 field $\w{\xi}$.
 However, in actual calculations, it is generally preferable to employ
-(\ref{e:neh:dxi2_kappa}) for evaluating $\kappa$, because the latter does not involve
-the computation of any covariant derivative, contrary to (\ref{e:neh:kappa2}).
+formula~(\ref{e:neh:dxi2_kappa}) to evaluate $\kappa$, because it does not involve
+the computation of any covariant derivative, contrary to formula~(\ref{e:neh:kappa2}).
 
 
 \subsection{The zeroth law of black hole mechanics} \label{s:neh:zeroth_law}
@@ -1052,7 +1064,7 @@ By continuity, the null dominant energy condition is implied by the standard
 \ee
 Physically, the dominant energy condition states that, with respect to any
 observer (represented by its 4-velocity $\w{u}$, which is future-directed timelike),
-the energy of matter and non-gravitational fields moves not faster than light.
+the energy of matter and non-gravitational fields does not move faster than light.
 
 We note that in the right-hand side of Eq.~(\ref{e:neh:DS_kappa_W}), there appears the
 orthogonal projection onto $\Sp$ of the vector $\w{W}$
@@ -1105,6 +1117,33 @@ the zeroth law --- to be discussed in detail in Chap.~\ref{s:evo} ---
 states that the surface gravity of a black hole in equilibrium is
 constant and we shall see in Chap.~\ref{s:sta} that the event horizon of a black hole in
 equilibrium is a Killing horizon.
+
+
+\begin{remark}
+The standard proof of the zeroth law, based on the covariant derivative
+of Eq.~(\ref{e:neh:xi_nab_xi_kappa}) \cite{BardeCH73,Wald84} or of Eq.~(\ref{e:neh:dxi2_kappa})
+\cite{Heusl96} and on an identity expressing the second order derivative of
+a Killing vector in terms of the Riemann tensor, is quite long (see
+e.g. pp.~333-334 of Wald's textbook~\cite{Wald84} and the remark at the end of Sec.~5.5.2 of Poisson's
+textbook \cite{Poiss04}). The proof presented above is shorter but it relies on
+the concept of induced affine connection on a non-exanding horizon
+(Sec.~\ref{e:neh:induced_connection}) and the associated rotation
+1-form\index{rotation!1-form} ${}^{\Hor}\!\w{\omega}$ (cf.
+Property~\ref{p:neh:Hnab_l}).
+\end{remark}
+
+\begin{remark}
+\label{r:neh:zero_law_wo_NDEC}
+The constancy of $\kappa$ on a Killing horizon can also be proved without the
+null dominant energy condition, but a the price of additional hypotheses:
+either the Killing horizon $\Hor$ is part of a bifurcate Killing horizon
+(to be discussed in Sec.~\ref{s:sta:bifur_Killing_hor}) \cite{KayW91,Wald92,Poiss04}
+or the spacetime is axisymmetric, in addition to be stationary, and
+the two Killing vectors associated
+with stationarity and
+axisymmetry are orthogonal to $(n-2)$-dimensional
+surfaces \cite{Carte73b,RaczW96}.
+\end{remark}
 
 \begin{example}[null hyperplane as a translation-Killing horizon]
 \label{x:neh:transKH_kappa}
@@ -1176,9 +1215,10 @@ we recover the Schwarzschild value: $\kappa= 1/(4m)$.
 
 \begin{hist}
 The constancy of $\kappa$ for a Killing horizon has been proven by Stephen Hawking\index[pers]{Hawking, S.W.}
-in his lecture at the famous Les Houches School of Summer 1972 \cite{Hawki73} (p.~43).
+in his lecture at the famous Les Houches School of summer 1972 \cite{Hawki73} (p.~43).
 It has also been proven without requiring the dominant energy condition, but
-assuming axisymmetry by Brandon Carter\index[pers]{Carter, B.} in his lecture at the same Les Houches School
+assuming axisymmetry and orthogonal transitivy (cf. Remark~\ref{r:neh:zero_law_wo_NDEC} on p.~\pageref{r:neh:zero_law_wo_NDEC}) by Brandon Carter\index[pers]{Carter, B.} in his lecture at the same summer
+school
 \cite{Carte73b} (Theorem 8, p.~167).
 A third proof of the constancy of $\kappa$ using the dominant energy condition
 has also been given in 1973 by James Bardeen\index[pers]{Bardeen, J.M.}, Brandon Carter and
