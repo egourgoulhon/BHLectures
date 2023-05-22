@@ -28,8 +28,7 @@ focuses on global quantities characterizing Kerr spacetime: mass, angular
 momentum and horizon area.
 Section~\ref{s:ker:observers} presents various standard families of observers in
 Kerr spacetime.
-Finally, Sec.~\ref{s:ker:max_extension} concludes
-this chapter by discussing the maximal analytical extension of Kerr spacetime
+Finally, Sec.~\ref{s:ker:max_extension} discusses the maximal analytical extension of Kerr spacetime
 and the concept of Cauchy horizon.
 
 
@@ -76,7 +75,7 @@ Such coordinates have been introduced for pictorial purposes by O'Neill\index{O'
 
 In this section, we choose the spacetime manifold to be the open subset $\M_{\rm BL}$
 of $\R^2\times\SS^2$ formed by the disjoint union of
-the following three components (cf. Fig.~\ref{f:ker:spher_view}):
+the following three connected components (cf. Fig.~\ref{f:ker:spher_view}):
 \begin{subequations}
 \begin{align}
     \M_{\rm BL} & :=  \M_{\rm I} \cup \M_{\rm II} \cup \M_{\rm III} , \label{e:ker:def_M_BL} \\
@@ -124,7 +123,7 @@ Note also that $\ring$ is spanned by the coordinates $(t,\ph)$ and is diffeomorp
     \ring \simeq \R\times\SS^1 .
 \ee
 This is so because $r=0$ is \emph{not} a peculiar value of $r$ in $\R^2\times\SS^2$
-(cf. remark~\ref{r:ker:r_zero} above).
+(cf. Remark~\ref{r:ker:r_zero} above).
 In view of Eqs.~(\ref{e:ker:def_M_I})-(\ref{e:ker:def_M_III}) and (\ref{e:ker:def_ring}), it is clear that
 the various connected components of $\M_{\rm BL}$ are defined in terms of the
 Boyer-Lindquist coordinates $(t,r,\th,\ph)$ by
@@ -139,8 +138,9 @@ Boyer-Lindquist coordinates $(t,r,\th,\ph)$ by
 \end{subequations}
 
 
-The \defin{Kerr metric}\index{Kerr!metric} is defined by the following
-expression in terms of the Boyer-Lindquist coordinates $(x^\alpha)=(t,r,\th,\ph)$:
+The \defin{Kerr metric}\index{Kerr!metric} is defined
+in terms of the Boyer-Lindquist coordinates $(t,r,\th,\ph)$
+by
 \be \label{e:ker:metric_BL}
     \encadre{
     \begin{array}{ll}
@@ -167,13 +167,12 @@ of $\M_{\rm BL}$!), so that the metric components (\ref{e:ker:metric_BL})
 are regular in $\M_{\rm BL}$, except for the standard singularities of
 the spherical coordinates $(\th,\ph)$.
 
-By means of a computer algebra system (cf. the notebook~\ref{s:sam:Kerr_solution}),
-it is easy to check that we are dealing with a solution of the Einstein equation:
+By means of a computer algebra system (cf. the SageMath notebook~\ref{s:sam:Kerr_solution}),
+one checks easily:
 \begin{prop}[Kerr metric as a solution of the vacuum Einstein equation]
-$\left(\M_{\rm BL},\w{g}\right)$, with $\w{g}$ given
-by (\ref{e:ker:metric_BL}), is a solution of the vacuum
+The Kerr metric $\w{g}$ [Eq.~(\ref{e:ker:metric_BL})] is a solution of the vacuum
 Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation}
-(\ref{e:fra:vac_Einstein}).
+(\ref{e:fra:vac_Einstein}) on $\M_{\rm BL}$.
 \end{prop}
 
 \begin{hist}
@@ -187,7 +186,7 @@ congruence) had been treated by Ivor Robinson\index[pers]{Robinson, I.} and
 Andrzej Trautman\index[pers]{Trautman, A.} in 1962 \cite{RobinT62}.
 Kerr used
 Cartan's structure equations\index{Cartan!structure equations} in a null tetrad
-to manipulate the Einstein equation; he obtained the solution in coordinates different from the Boyer-Lindquist ones, namely \emph{Kerr coordinates},
+to manipulate the Einstein equation; he obtained the solution in coordinates different from the Boyer-Lindquist ones, known today as \emph{Kerr coordinates} and
 to be discussed in Sec.~\ref{s:ker:Kerr_coord} (cf. the historical note page~\pageref{h:ker:Kerr_coord}). For more details about this fantastic discovery, see the
 account by Kerr himself in Refs.~\cite{Kerr09,KrasiVK09}.
 The Boyer-Lindquist coordinates have been introduced in 1966 by Robert H.~Boyer\index[pers]{Boyer, R.H.} (see the historical note on p.~\pageref{h:sta:Boyer}) and Richard W. Lindquist\index[pers]{Lindquist, R.W.} \cite{BoyerL67} (compare Eq.~(2.13) of Ref.~\cite{BoyerL67} with
@@ -212,9 +211,9 @@ so that the metric (\ref{e:ker:metric_BL}) becomes
 \ee
 For $r>0$, we recognize the Schwarzschild metric\index{Schwarzschild!metric} expressed
 in Schwarzschild-Droste coordinates [cf. Eq.~(\ref{e:sch:Schwarz_metric_SD})].
-For $r<0$, the change of coordinate $r'=-r$ leads also to the Schwarzschild metric
-but with the negative mass parameter $m'=-m$.
-Hence, the Kerr metric has (at least) two asymptotically flat ends: one in
+For $r<0$, the change of coordinate $r'=-r$ leads to the Schwarzschild metric
+as well, but with the negative mass parameter $m'=-m$.
+Hence, the spacetime $(\M_{\rm BL},\w{g})$ has two asymptotically flat ends: one in
 $\M_{\rm I}$ for $r\rightarrow + \infty$ and one in $\M_{\rm III}$ for
 $r\rightarrow - \infty$.
 \item Since in (\ref{e:ker:metric_BL}) all the metric components $g_{\alpha\beta}$ are independent from $t$ and $\ph$, the
@@ -273,7 +272,7 @@ of $t$, the $r=0$ set
 \ee
 is made of two connected components, which are two \emph{flat open disks} of radius $a$, corresponding respectively to $\theta < \pi/2$ and $\theta>\pi/2$, since
 the equator $\theta=\pi/2$ is excluded by the very definition of $\M_{\rm III}$
-(cf. remark~\ref{r:ker:r_zero} above). The set $\mathcal{S}_{0,t}$ is depicted
+(cf. Remark~\ref{r:ker:r_zero} above). The set $\mathcal{S}_{0,t}$ is depicted
 by the dotted red line in Fig.~\ref{f:ker:spher_view}. It is also depicted
 in terms of the so-called Kerr-Schild coordinates in
 Figs.~\ref{f:ksm:phi_cut} - \ref{f:ksm:2_sheets} of Appendix~\ref{s:ksm}.
