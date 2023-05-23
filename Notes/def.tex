@@ -156,10 +156,10 @@ in quasi-local approaches to black holes.
 
 \section{Geometry of null hypersurfaces} \label{s:def:geom_null_hypsurf}
 
-Since smooth black hole event horizon are null hypersurfaces,
+Since smooth black hole event horizons are null hypersurfaces,
 let us examine the geometrical properties of such objects. We shall
 denote the hypersurface under study by $\Hor$, for \emph{horizon}, but the results of this section
-are valid for any null hypersurface.
+and of Sec.~\ref{s:def:null_raychaud} are valid for any null hypersurface.
 
 \subsection{Hypersurfaces as level sets} \label{s:def:hypsurf_level}
 
@@ -1044,7 +1044,7 @@ This follows readily from the decomposition
 $\w{v} = \w{v}^\parallel + v^0 \wl + v^1 \w{k}$ used above.
 \end{proof}
 In particular, we have
-\be
+\be \label{e:def:q_l_q_k_zero}
     \vw{q}(\wl) = 0 \quad\mbox{and}\quad \vw{q}(\w{k}) = 0 .
 \ee
 
@@ -1375,27 +1375,19 @@ Substituting (\ref{e:def:q_g_k_l}) for $q_{\mu\nu}$, and using the Leibniz rule,
 \[
     \theta_{(\wl)} = \frac{1}{2} \, q^{\mu\nu}  \left(
             \Liec{\el} g_{\mu\nu} + \Liec{\el}  \el_\mu \; k_\nu + \el_\mu \, \Liec{\el} k_\nu
-           + \Liec{\el} k_\mu \; \el_\nu + k_\mu \, \Liec{\el} \el_\nu \right) .
+           + \Liec{\el} k_\mu \; \el_\nu + k_\mu \, \Liec{\el} \el_\nu \right)
+           = \frac{1}{2} \, q^{\mu\nu}  \Liec{\el} g_{\mu\nu}  ,
 \]
-If we express the Lie derivative $\Liec{\el} g_{\mu\nu}$ in terms of the
-covariant derivative $\wnab$ via Eq.~(\ref{e:bas:Lie_der_comp_nab}), we get
-\[
-    \Liec{\el} g_{\mu\nu} = \el^\sigma \underbrace{\nabla_\sigma g_{\mu\nu}}_{0}
-        + \underbrace{g_{\sigma\nu} \nabla_\mu \el^\sigma}_{\nabla_\mu \el_\nu}
-        + \underbrace{g_{\mu\sigma} \nabla_\nu \el^\sigma}_{\nabla_\nu \el_\mu}
-       = \nabla_\mu \el_\nu + \nabla_\nu \el_\mu .
-\]
-Moreover, since $\wl$ and $\w{k}$ are orthogonal to $\Sp$, we have
-$q^{\mu\nu} \el_\nu = 0$ and $q^{\mu\nu} k_\nu = 0$.
-Hence we end up with
-$\theta_{(\wl)} = 1/2\, q^{\mu\nu}  \left( \nabla_\mu \el_\nu + \nabla_\nu \el_\mu
-        \right) $,
-i.e. since $q^{\mu\nu}$ is symmetric,
+where the last equality follows from $q^{\mu\nu} \el_\mu = 0$
+and  $q^{\mu\nu} k_\mu = 0$ [Eq.~(\ref{e:def:q_l_q_k_zero})]. Using
+the Killing expression (\ref{e:bas:Lie_g_Killing}) of the Lie derivative of $\w{g}$:
+$\Liec{\el} g_{\mu\nu} = \nabla_\mu \el_\nu + \nabla_\nu \el_\mu$, and
+the symmetry of $q^{\mu\nu}$, we arrive at
 \be
     \encadre{ \theta_{(\wl)} = q^{\mu\nu} \nabla_\mu \el_\nu } .
 \ee
 
-We can transform further this relation by expressing $q^{\mu\nu}$ via (\ref{e:def:q_g_k_l}):
+We can transform this relation further by expressing $q^{\mu\nu}$ via (\ref{e:def:q_g_k_l}):
 \bea
     \theta_{(\wl)} & = & \left( g^{\mu\nu} + \el^\mu k^\nu + k^\mu \el^\nu \right)
         \nabla_\mu \el_\nu
@@ -1408,7 +1400,7 @@ We can transform further this relation by expressing $q^{\mu\nu}$ via (\ref{e:de
 where we have used respectively the properties (\ref{e:def:wl_geod_kappa}),
 (\ref{e:def:el_nab_el_zero}) and (\ref{e:def:k_el_minus_one}).
 Denoting the divergence of $\wl$ by $\wnab\cdot\wl = \nabla_\mu \el^\mu$, we
-have then
+may write
 \be \label{e:def:theta_div_l}
     \encadre{\theta_{(\wl)} = \wnab\cdot\wl - \kappa } .
 \ee
@@ -1545,8 +1537,7 @@ to all vectors of $T_p\M$, for any $p\in\Sp$, via
          \Lie{\el} \w{q} \left( \vw{q}(\w{u}), \vw{q}(\w{v}) \right) .
 \ee
 Since $\w{q}$ is symmetric, it is clear from the above definition that
-$\w{\Theta}$ is a field on $\Sp$ of symmetric bilinear forms.
-
+$\w{\Theta}$ is a field of symmetric bilinear forms.
 Thanks to the identity (\ref{e:def:Lie_ell_bar_q}), we can use for $\w{q}$
 the spacetime extension (\ref{e:def:q_g_k_l})
 and write the index-notation version of the definition (\ref{e:def:Theta}) as
@@ -1554,25 +1545,23 @@ and write the index-notation version of the definition (\ref{e:def:Theta}) as
     \Theta_{\alpha\beta} = \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta}
             \Liec{\el} q_{\mu\nu} .
 \ee
-Expressing the Lie derivative in terms of the covariant derivative
-$\wnab$ via Eq.~(\ref{e:bas:Lie_der_comp_nab}) of Appendix~{\ref{s:bas}
-and using formula~(\ref{e:def:q_g_k_l}) for $\w{q}$, we get
-\bea
-    \Theta_{\alpha\beta} & = & \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta}
-        \left( \el^\sigma \nabla_\sigma q_{\mu\nu}
-            + q_{\sigma\nu}\nabla_\mu \el^\sigma
-            + q_{\mu\sigma}\nabla_\nu \el^\sigma \right) \nonumber \\
-            & = & \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \Big[
-                \el^\sigma \left( \nabla_\sigma \el_\mu k_\nu
-                    + \el_\mu \nabla_\sigma k_\nu +  \nabla_\sigma k_\mu \el_\nu
-                    + k_\mu \nabla_\sigma \el_\nu \right) \nonumber \\
-            & & \qquad\qquad + \nabla_\mu \el_\nu + k_\nu \underbrace{\el_\sigma \nabla_\mu \el^\sigma}_{0}
-                + k_\sigma \el_\nu \nabla_\mu \el^\sigma  + \nabla_\nu \el_\mu + \el_\mu k_\sigma \nabla_\nu \el^\sigma
-                + k_\mu \underbrace{\el_\sigma \nabla_\nu \el^\sigma}_{0}
-                                    \Big] . \nonumber
-\eea
-Since $q^\mu_{\ \, \alpha} \el_\mu = 0$ and $q^\mu_{\ \, \alpha} k_\mu = 0$,
-the above expression simplifies to
+Substituting $g_{\mu\nu} + \el_\mu k_\nu + k_\mu \el_\nu$ for $q_{\mu\nu}$
+[Eq.~(\ref{e:def:q_g_k_l})], we get
+\[
+    \Theta_{\alpha\beta} = \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta}
+    \left( \Liec{\el} g_{\mu\nu} + k_\nu \Liec{\el} \el_\mu + \el_\mu \Liec{\el} k_\nu
+    + \el_\nu \Liec{\el} k_\mu + k_\mu \Liec{\el} \ell_\nu \right)
+    = \frac{1}{2} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \Liec{\el} g_{\mu\nu} ,
+\]
+where the last equality follows from $q^\mu_{\ \, \alpha} \el_\mu = 0$
+and $q^\mu_{\ \, \alpha} k_\mu = 0$ [Eq.~(\ref{e:def:q_l_q_k_zero})].
+Now, using the Killing expression (\ref{e:bas:Lie_g_Killing})
+and the Frobenius identity (\ref{e:def:ext_der_wl_comp}), we may write
+\[
+    \Liec{\el} g_{\mu\nu} = \nabla_\mu \el_\nu + \nabla_\nu \el_\mu
+        = 2 \nabla_\mu \el_\nu + \nabla_\nu \rho \, \el_\mu - \nabla_\mu \rho \, \el_\nu .
+\]
+Given that $q^\mu_{\ \, \alpha}  \el_\mu = 0$, we obtain
 \be
     \Theta_{\alpha\beta}  = q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu \el_\nu .
 \ee
@@ -1592,9 +1581,9 @@ yields
 where we have let appear the 1-form $\w{\omega}$ defined by
 \be \label{e:def:def_omega}
     \omega_\alpha := - k^\mu \nabla_\nu \el_\mu \Pi^\nu_{\ \, \alpha}
-    = - k^\mu \nabla_\alpha \el_\mu - k^\mu k^\nu \nabla_\mu \el_\nu \, \el_\alpha ,
+    = - k^\mu \nabla_\alpha \el_\mu - k^\mu k^\nu \nabla_\mu \el_\nu \, \el_\alpha .
 \ee
-where $\w{\Pi}$ is the projector onto $\Hor$ along $\w{k}$:
+Here $\w{\Pi}$ is the projector onto $\Hor$ along $\w{k}$:
 \be \label{e:def:def_proj_H_along_k}
     \Pi^\alpha_{\ \, \beta} = \delta^\alpha_{\ \, \beta} + k^\alpha \ell_\beta .
 \ee
@@ -1744,8 +1733,8 @@ Expanding the left-hand side and using again Eqs.~(\ref{e:def:theta_div_l}) and
        - \nabla_\alpha \left( \theta_{(\wl)} + \kappa \right)
         + \left( \theta_{(\wl)} + \kappa \right) \omega_\alpha
         - \Theta_{\alpha\mu} k^\nu \nabla_\nu \el^\mu & & \nonumber \\
-    - \left( \omega_\mu k^\nu \nabla_\nu \el^\mu
-    + \nabla_\mu k^\nu \nabla_\nu \el^\mu + k^\nu \nabla_\mu \nabla_\nu \el^\mu \right)
+    - \left[ \omega_\mu k^\nu \nabla_\nu \el^\mu
+    + \nabla_\mu (k^\nu \nabla_\nu \el^\mu)  \right]
         \el_\alpha & = & R_{\mu\alpha} \el^\mu . \label{e:def:contract_Ricci_ident}
 \eea
 The above relation is a 1-form identity. Applying it to the vector field $\wl$
