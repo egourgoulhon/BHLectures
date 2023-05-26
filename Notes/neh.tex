@@ -354,7 +354,7 @@ is a priori no unique connection on $\Hor$ associated with
 $\left. \w{g}\right|_{\Hor}$. However, when
 $\Hor$ is a non-expanding horizon and the null energy condition holds on $\Hor$,
 so that $\w{\Theta}=0$, the spacetime connection $\wnab$ induces a unique
-connection ${}^\Hor\!\wnab$ on $\Hor$ as follows.
+torsion-free connection ${}^\Hor\!\wnab$ on $\Hor$ as follows.
 Let $\w{u}$ and $\w{v}$ be two vector fields on $\Hor$. We have, using
 (\ref{e:def:nab_l_Theta}) to express $\nabla_\nu \el_\mu$ in terms of $\Theta_{\nu\mu}$:
 \bea
@@ -930,52 +930,76 @@ $\wl$ is then a symmetry generator on $\Hor$, which implies
 \ee
 This means that $\kappa$ is constant along any field line of $\wl$ (i.e. any
 null geodesic generator of $\Hor$). It could however vary from one field line to another.
-To show that this is not the case, let us consider a cross-section
-$\Sp$ of $\Hor$ and project the contracted Ricci identity (\ref{e:def:contract_Ricci_ident})
-onto it, via the orthogonal projector $\vw{q}$ introduced in
-Sec.~\ref{s:def:spacelike_sections}:
-\[
-    \nabla_\mu \Theta^\mu_{\ \, \nu} q^\nu_{\ \, \alpha} + \el^\mu \nabla_\mu \omega_\nu q^\nu_{\ \, \alpha}
-       - \nabla_\nu \left( \theta_{(\wl)} + \kappa \right) q^\nu_{\ \, \alpha}
-        + \left( \theta_{(\wl)} + \kappa \right) \omega_\nu q^\nu_{\ \, \alpha}
-        - \Theta_{\alpha\mu} k^\nu \nabla_\nu \el^\mu \nonumber \\
-     = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha}, \nonumber
-\]
-where we have used $\Theta_{\nu\mu}  q^\nu_{\ \, \alpha} = \Theta_{\alpha\mu}$
-and $\el_\nu q^\nu_{\ \, \alpha} = 0$.
-Now, since $\Hor$ is a Killing horizon, we have $\w{\Theta}=0$ [Eq.~(\ref{e:neh:Theta_zero_KillingH})] and in particular
-$\theta_{(\wl)} =0$. Accordingly, the above equation reduces to
-\be \label{e:neh:zeroth_law_step1}
-    \el^\mu \nabla_\mu \omega_\nu q^\nu_{\ \, \alpha} - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
-    + \kappa  \, \omega_\nu q^\nu_{\ \, \alpha} = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} .
+To prove that this is not the case, let us consider a cross-section
+$\Sp$ of $\Hor$ and show that $\kappa$ is constant over $\Sp$. The starting
+point is applying the contracted Ricci identity (\ref{e:def:contract_Ricci_ident}),
+which is a 1-form, to a generic vector field $\w{v}$ tangent to $\Sp$,
+i.e. contract (\ref{e:def:contract_Ricci_ident}) with $v^\alpha$. Since $\el_\mu v^\mu = 0$, we get
+\be \label{e:def:0law_prov}
+    v^\nu \nabla_\mu \Theta^\mu_{\ \, \nu}  + v^\nu \el^\mu \nabla_\mu \omega_\nu
+       - v^\mu \nabla_\mu \left( \theta_{(\wl)} + \kappa \right)
+        + \left( \theta_{(\wl)} + \kappa \right) \omega_\mu v^\mu
+        - \Theta_{\mu\nu} v^\mu k^\sigma \nabla_\sigma \el^\nu
+     = R_{\mu\nu} \el^\mu v^\nu .
 \ee
-Let us make the Lie derivative
-of $\w{\omega}$ along $\wl$
-appear via formula (\ref{e:bas:Lie_der_comp_nab}):
+Now, since $\Hor$ is a Killing horizon, we have $\w{\Theta}=0$ [Eq.~(\ref{e:neh:Theta_zero_KillingH})] and in particular
+$\theta_{(\wl)} =0$, so that many terms in the above equation vanish.
+The term $\nabla_\mu \Theta^\mu_{\ \, \nu}$ requires some special treatment though, because it potentially
+involves derivatives of $\vw{\Theta}$ in directions transverse to $\Hor$. Let us then introduce
+in the vicinity of $\Sp$ a spacetime coordinate system $(x^\alpha) = (u,v,x^2,\ldots,x^{n-1})$
+adapted to $\Sp$, as the one introduced in Sec.~\ref{s:def:def_expansion}
+[cf. Eq.~(\ref{e:def:l_wpar_v})], namely a coordinate system such that $\Sp$
+is the set $(u,v) = (0,0)$. Then the components of $\vw{\Theta}$ with respect
+to $(x^\alpha)$ necessarily verify $\Theta^0_{\ \, \alpha} = 0$ and
+$\Theta^1_{\ \, \alpha} = 0$. Indeed, since $\vw{\Theta}$ is a tensor field
+tangent to $\Sp$, on which $u$ and $v$ are constant,
+we have $\Theta^\mu_{\ \, \alpha} \nabla_\mu u = 0$ and
+$\Theta^\mu_{\ \, \alpha} \nabla_\mu v= 0$ with $\nabla_\mu u = \partial_\mu u = \delta^0_{\ \, \mu}$
+and $\nabla_\mu v = \partial_\mu v = \delta^1_{\ \, \mu}$ by definition of $(x^\alpha)$.
+Expressing the covariant derivative via Eq.~(\ref{e:bas:der_cov_coord}), we get
+\[
+    \nabla_\mu \Theta^\mu_{\ \, \nu} = \partial_a \Theta^a_{\ \, \nu}
+        + \Gamma^\mu_{\ \, \mu\sigma} \Theta^\sigma_{\ \, \nu}
+        - \Gamma^\sigma_{\ \, \mu\nu}  \Theta^\mu_{\ \, \sigma} ,
+\]
+where the sum of the partial derivatives has been limited to the indices
+$a\in\{2,\ldots,n-1\}$ since $\Theta^0_{\ \, \nu} = \Theta^1_{\ \, \nu} = 0$.
+Given that the term $\partial_a \Theta^a_{\ \, \nu}$ involves only the variation
+of $\vw{\Theta}$ in directions tangent to $\Sp$, we conclude that
+$\nabla_\mu \Theta^\mu_{\ \, \nu} = 0$ if $\vw{\Theta} = 0$ on $\Sp$.
+Hence, for a Killing horizon,
+Eq.~(\ref{e:def:0law_prov}) reduces to
+\be \label{e:neh:zeroth_law_step1}
+  (\el^\nu \nabla_\nu \omega_\mu + \kappa  \, \omega_\mu) v^\mu
+    - v^\mu \nabla_\mu \kappa
+    = R_{\mu\nu} \el^\mu v^\nu .
+\ee
+The terms in the parentheses are related to the Lie derivative
+of $\w{\omega}$ along $\wl$; indeed formula (\ref{e:bas:Lie_der_comp_nab}) gives:
 \bea
-    \Liec{\el}\omega_\nu & =  & \el^\mu \nabla_\mu \omega_\nu + \omega_\mu \nabla_\nu \el^\mu
-     = \el^\mu \nabla_\mu \omega_\nu + \omega_\mu \left( \Theta_\nu^{\ \, \mu}
-     + \omega_\nu \el^\mu - \el_\nu k^\sigma \nabla_\sigma \el^\mu \right) \nonumber \\
-     & = & \el^\mu \nabla_\mu \omega_\nu  + \kappa \omega_\nu - \omega_\mu \el_\nu k^\sigma \nabla_\sigma \el^\mu , \nonumber
+    \Liec{\el}\omega_\mu & =  & \el^\nu \nabla_\nu \omega_\mu + \omega_\nu \nabla_\mu \el^\nu
+     = \el^\nu \nabla_\nu \omega_\mu + \omega_\nu \left( \Theta_\mu^{\ \, \nu}
+     + \omega_\mu \el^\nu - \el_\mu k^\sigma \nabla_\sigma \el^\nu \right) \nonumber \\
+     & = & \el^\nu \nabla_\nu \omega_\mu  + \kappa \omega_\mu - \omega_\nu \el_\mu k^\sigma \nabla_\sigma \el^\nu , \nonumber
 \eea
-where we have expressed $\nabla_\nu \el^\mu$ via Eq.~(\ref{e:def:nab_l_Theta}) and
-have used $\Theta_\nu^{\ \, \mu} = 0$ and $\omega_\mu \el^\mu = \kappa$
+where we have expressed $\nabla_\mu \el^\nu$ via Eq.~(\ref{e:def:nab_l_Theta}) and
+have used $\Theta_\mu^{\ \, \nu} = 0$ and $\omega_\nu \el^\nu = \kappa$
 [Eq.~(\ref{e:def:omega_l_kappa})].
-Given that $\el_\nu q^\nu_{\ \, \alpha} = 0$, Eq.~(\ref{e:neh:zeroth_law_step1})
+Given that $\el_\mu v^\mu = 0$, Eq.~(\ref{e:neh:zeroth_law_step1})
 becomes
 \be  \label{e:neh:zeroth_law_step2}
-    \Liec{\el}\omega_\nu \, q^\nu_{\ \, \alpha}  - \nabla_\nu \kappa \, q^\nu_{\ \, \alpha}
-    = R_{\mu\nu} \el^\mu q^\nu_{\ \, \alpha} .
+   \Liec{\el}\omega_\mu\, v^\mu   - v^\mu \nabla_\mu \kappa
+    = R_{\mu\nu} \el^\mu v^\nu .
 \ee
 It is then judicious to
 express $\Lie{\el}\w{\omega}$ in terms of $\Lie{\el}{}^{\Hor}\!\w{\omega}$,
 where ${}^{\Hor}\!\w{\omega}$ is the restriction of $\w{\omega}$ to tangent vectors
 to $\Hor$ introduced in Sec.~\ref{e:neh:induced_connection}.
-Indeed, it has been shown in Property~\ref{p:neh:Hnab_l}
-that ${}^{\Hor}\!\w{\omega}$ is a geometric quantity intrinsic to
-$\Hor$ and $\wl$, independent of $\w{k}$ and hence of the cross-section $\Sp$.
-It has therefore to obey the spacetime symmetry generated by $\w{\xi} \equalH \wl$.
-Hence one has necessarily
+The reason is that ${}^{\Hor}\!\w{\omega}$ is a geometric quantity intrinsic to
+$\Hor$ and $\wl$, independent of $\w{k}$ and hence of the cross-section $\Sp$
+(cf. Property~\ref{p:neh:Hnab_l}).
+It has therefore to obey the spacetime symmetry generated by $\w{\xi} \equalH \wl$,
+i.e. one has
 \be \label{e:neh:Lie_l_Homeg_zero}
     \Lie{\el} {}^{\Hor}\!\w{\omega} = 0 .
 \ee
