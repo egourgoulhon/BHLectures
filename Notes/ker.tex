@@ -637,6 +637,7 @@ that the null Kerr coordinates reduces to the ingoing null Eddington-Finkelstein
 ones in this limit.
 
 The expression of the metric tensor $\w{g}$ with respect to the null Kerr coordinates
+$(x^{\hat{\alpha}}) = (v,r,\th,\tph)$
 is computed from that with respect to the Boyer-Lindquist ones, as given
 by Eq.~(\ref{e:ker:metric_BL}), via (\ref{e:ker:Kerr_coord}).
 One gets (cf. Appendix~\ref{s:sam} or
@@ -684,8 +685,9 @@ we have $\det (g_{\hat{\alpha}\hat{\beta}}) \neq 0$ everywhere on $\M$, since
 $\rho$ vanishes only on $\ring$, which is excluded from $\M$.
 Hence we conclude
 \begin{prop}[Kerr spacetime]
-The symmetric bilinear form $\w{g}$ is non-degenerate on the manifold $\M$
-defined by Eq.~(\ref{e:ker:def_M_Kerr_spacetime}) and thus
+The symmetric bilinear form $\w{g}$ given by Eq.~(\ref{e:ker:metric_Kerr_coord})
+is regular and non-degenerate on the manifold $\M$
+defined by (\ref{e:ker:def_M_Kerr_spacetime}) and thus
 $(\M,\w{g})$ is a well-behaved spacetime --- our \defin{Kerr spacetime}\index{Kerr!spacetime}
 from now on. We note that, contrary to $\M_{\rm BL}$, $\M$ is a connected manifold.
 \end{prop}
@@ -827,10 +829,7 @@ timelike one by setting
     \encadre{\ti = v - r} \iff \encadre{v = \ti + r}
 \ee
 so that $v$ appears as the advanced time $\ti+r$ (compare with Eq.~(\ref{e:sch:ti_v_r})). We thus consider
-the coordinates
-\be
-    (x^{\tilde{\alpha}}) = (\ti, r, \th,\tph) ,
-\ee
+the coordinates $(x^{\tilde{\alpha}}) = (\ti, r, \th,\tph)$,
 which we shall call
 \defin{Kerr coordinates}\index{Kerr!coordinates}
 (cf. the historical note below).
@@ -928,7 +927,7 @@ a very simple form (see the notebook~\ref{s:sam:Kerr_Kerr_coord} for the computa
 \be \label{e:ker:det_g_3p1}
     \det\left( g_{\tilde{\alpha}\tilde{\beta}} \right) = - \rho^4\sin^2\th .
 \ee
-The inverse metric takes also a rather simple form in terms of the
+The inverse metric also takes a rather simple form in terms of the
 Kerr coordinates (see the notebook~\ref{s:sam:Kerr_Kerr_coord} for the computation):
 \be \label{e:ker:inv_met_3p1}
     g^{\tilde{\alpha}\tilde{\beta}} = \left(
@@ -954,8 +953,8 @@ $\Hor$ and $\Hor_{\rm in}$, contrary to Boyer-Lindquist coordinates.
 The last feature is all the more important that
 $\Hor$ is the future event horizon of Kerr spacetime,
 as we are going to see.
-Therefore, we shall continue our study of Kerr spacetime, and especially the
-black hole aspect, by means of the Kerr coordinates.
+Therefore, we shall continue our study of Kerr spacetime, and especially of the
+black hole feature, by means of the Kerr coordinates.
 
 \begin{remark} \label{r:ker:Kerr_slicing}
 The Kerr coordinates
@@ -964,10 +963,8 @@ spacetime. By \defin{3+1 slicing}\index{3+1 slicing}, it is meant a foliation of
 by spacelike hypersurfaces (see e.g. \cite{Gourg12}). Now, the hypersurfaces
 $\ti = \mathrm{const}$ are spacelike iff their normal $\vec{\nabla} \ti$ is timelike, which
 is equivalent to $\w{g}(\vec{\nabla} \ti, \vec{\nabla} \ti) < 0$, with
-\[
-    \w{g}(\vec{\nabla} \ti, \vec{\nabla} \ti) = g_{\tilde{\mu}\tilde{\nu}} \, \nabla^{\tilde{\mu}} \ti \nabla^{\tilde{\nu}} \ti
-    = g^{\tilde{\mu}\tilde{\nu}}\,  \partial_{\tilde{\mu}} \ti \, \partial_{\tilde{\nu}} \ti = g^{\ti\ti} .
-\]
+$\w{g}(\vec{\nabla} \ti, \vec{\nabla} \ti) = g_{\tilde{\mu}\tilde{\nu}} \, \nabla^{\tilde{\mu}} \ti \nabla^{\tilde{\nu}} \ti
+    = g^{\tilde{\mu}\tilde{\nu}}\,  \partial_{\tilde{\mu}} \ti \, \partial_{\tilde{\nu}} \ti = g^{\ti\ti}$.
 Given the value of $g^{\ti\ti}$ read on (\ref{e:ker:inv_met_3p1}), the hypersurface
 $\ti=\mathrm{const}$ is spacelike iff $\rho^2+2mr > 0$, or equivalently
 $r^2 + 2 mr + a^2\cos^2\th > 0$. Now this second-order polynomial in $r$
@@ -982,7 +979,7 @@ region defined by (\ref{e:ker:no_slicing}).
 \end{remark}
 
 \begin{hist}
-The coordinate $\ti$ has been introduced by Roy P.~Kerr\index[pers]{Kerr, R.P.}
+The coordinate $\ti$ has been introduced by Roy Kerr\index[pers]{Kerr, R.P.}
 in the 1963 discovery article \cite{Kerr63}, by exactly
 the same transformation as (\ref{e:ker:def_t_tilde}) ($\ti$ is denoted by $t$
 and $v$ by $u$ in Ref.~\cite{Kerr63}).
@@ -1000,7 +997,7 @@ $(v,r,\th,\tph)$ in which Kerr exhibited his solution
 \emph{null Kerr coordinates},
 and the Kerr-Schild coordinates $(\ti,x,y,z)$.
 The Kerr coordinates $(\ti, r, \th,\tph)$ have been first explicitely
-considered by Robert H.~Boyer\index[pers]{Boyer, R.H.} and Richard W. Lindquist\index[pers]{Lindquist, R.W.}
+considered by Robert Boyer\index[pers]{Boyer, R.H.} and Richard Lindquist\index[pers]{Lindquist, R.W.}
 in 1966 \cite{BoyerL67}, being called by them the ``(E) frame'' --- ``(E)'' standing
 for Eddington, since these coordinates generalize
 Eddington-Finkelstein coordinates to the rotating case.
@@ -1056,12 +1053,13 @@ we have, up to some additive constant,
 \ee
 The geodesics $\Li^{\rm in}_{(v,\th,\tph)}$
 are called the \defin{ingoing principal null geodesics}\index{principal!null geodesic!ingoing --}\index{ingoing!principal null geodesic}.
-The qualifier \emph{ingoing} stems from the fact that $r$ is decreasing along
-$\Li^{\rm in}_{(v,\th,\tph)}$ (in the future direction), which is an
+The qualifier \emph{ingoing} stems from the fact that $r$ is decreasing
+towards the future along
+$\Li^{\rm in}_{(v,\th,\tph)}$, which is an
 immediate consequence of $\lambda=-r$ being a future-directed parameter along $\Li^{\rm in}_{(v,\th,\tph)}$.
 The qualifier \emph{principal} arises from a relation between $\w{k}$
-and the Weyl conformal curvature tensor $\w{C}$ (cf. Sec.~\ref{s:bas:Weyl})
-of Kerr spacetime, namely:
+and the Weyl conformal curvature tensor $\w{C}$
+of Kerr spacetime (cf. Sec.~\ref{s:bas:Weyl}), namely:
 \be \label{e:ker:def_PND}
     C^\alpha_{\ \, \mu\nu[\beta} k_{\gamma]} k^\mu k^\nu = 0
     \qquad\mbox{and}\qquad
@@ -1109,10 +1107,11 @@ $\uu{k}$ with respect to the Boyer-Lindquist coordinate coframe:
 \ee
 \begin{remark}
 Expressions (\ref{e:ker:k_BL}) and (\ref{e:ker:k_form_BL}) are singular
-on the two horizons $\Hor$ and $\Hor_{\rm in}$, where $\Delta = 0$. This reflects
-of course not a pathology of the vector field $\w{k}$ but merely the
+on the two horizons $\Hor$ and $\Hor_{\rm in}$, where $\Delta = 0$.
+This reflects of course the
 singularity of the Boyer-Lindquist
-coordinates on $\Hor$ and $\Hor_{\rm in}$. The expressions of $\w{k}$ and
+coordinates on $\Hor$ and $\Hor_{\rm in}$, not any
+pathology of the vector field $\w{k}$. The expressions of $\w{k}$ and
 $\uu{k}$ in terms of the Kerr coordinates [Eqs.~(\ref{e:ker:k_ti_tr})
 and (\ref{e:ker:k_form_Kerr})] are perfectly regular in all $\M$.
 \end{remark}
@@ -1149,9 +1148,9 @@ Same as Fig.~\ref{f:ker:princ_null_geod_a90}, but for $a/m=0.5$.}
 
 \subsection{Outgoing principal null geodesics} \label{s:ker:out_princ_null_geod}
 
-One can construct a second congruence of principal null geodesics from
+One can construct a second congruence of principal null geodesics by considering
 the \emph{outgoing} Kerr coordinates instead of the ingoing ones
-considered in Sec.~\ref{s:ker:Kerr_coord}. The
+discussed in Sec.~\ref{s:ker:Kerr_coord}. The
 \defin{outgoing null Kerr coordinates}\index{outgoing!null Kerr coordinates}\index{Kerr!coordinates!outgoing null --}
 $(u,r,\th,\tilde{\tph})$ are defined by relations to Boyer-Lindquist
 coordinates that are similar to
@@ -1218,14 +1217,15 @@ $r$ in Fig.~\ref{f:ker:u_ttphi_r}. We see there that $u$ takes all values
 in the range $(-\infty,+\infty)$ in each of the regions $\M_{\rm I}$,
 $\M_{\rm II}$ and $\M_{\rm III}$. Accordingly, the 3-tuple
 $(u,\th,\tilde{\tph})$ defines uniquely an outgoing principal null geodesic
-only in each of these three regions. In other words, we have three families
+only in each of these three regions. In other words, the congruence
+of outgoing principal null geodesics can be split in
+three families
 $\Li^{\rm out,I}_{(u,\th,\tilde{\tph})}$,
 $\Li^{\rm out,II}_{(u,\th,\tilde{\tph})}$ and
-$\Li^{\rm out,III}_{(u,\th,\tilde{\tph})}$ of
-outgoing principal null geodesics, each family being labelled by $(u,\th,\tilde{\tph})$.
+$\Li^{\rm out,III}_{(u,\th,\tilde{\tph})}$,
+each family being labelled by $(u,\th,\tilde{\tph})$.
 In what follows, we shall denote by $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ any
-member of one of these families.
-
+member of one of these three families.
 
 
 \begin{figure}
@@ -1251,7 +1251,8 @@ ingoing ones, in Figs.~\ref{f:ker:princ_null_geod_a90} and
 outgoing geodesics, as expressed by Eq.~(\ref{e:ker:out_princ_geod_ttph}) with $\tilde{\tph}$
 held fixed, is not shown in these figures, which represent only traces
 in the $(\ti,r)$ plane. Actually the geodesics $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$
-are winding at the coordinate speed
+are winding with respect the Kerr coordinates $(\ti,r,\th,\tph)$
+at the coordinate speed
 \be \label{e:ker:wind_speed}
     \left. \frac{\D\tph}{\D\ti} \right| _{\Li^{\rm out}_{(u,\th,\tilde{\tph})}} =
     \frac{2a}{r^2 + 2m r + a^2} .
@@ -1268,7 +1269,7 @@ Dividing the second expression by the first one yields (\ref{e:ker:wind_speed}).
 
 Note that in both asymptotically flat regions, when $r\rightarrow +\infty$ and
 $r\rightarrow -\infty$, the winding speed (\ref{e:ker:wind_speed}) goes to zero
-and the two congruences of geodesics are $\pm 45^\circ$ lines
+and the two congruences of geodesics tend to $\pm 45^\circ$ lines
 in Figs.~\ref{f:ker:princ_null_geod_a90} and
 \ref{f:ker:princ_null_geod_a50}, as expected.
 Note also that, despite their name, the outgoing principal null geodesics are actually
@@ -1278,7 +1279,7 @@ towards the future, in agreement with Property~\ref{p:ker:r_decreasing_M_II}
 
 \begin{remark}
 In Fig.~\ref{f:ker:princ_null_geod_a50},
-the outgoing geodesics seem to go ``backward in time'' for $-2m \lesssim r \lesssim 0$. This
+the outgoing geodesics seem to go ``backward in time'' in the region $-2m \lesssim r \lesssim 0$. This
 is an artefact due to the hypersurfaces $\ti = \mathrm{const}$ being not spacelike
 there, as discussed in Remark~\ref{r:ker:Kerr_slicing}
 p.~\pageref{r:ker:Kerr_slicing}.
@@ -1299,10 +1300,10 @@ a parameter along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ when
 $\Delta=0$, i.e. on $\Hor$ and $\Hor_{\rm in}$. Actually, the family $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ is not even defined there, since we read on
 (\ref{e:ker:out_princ_geod}) and see on Fig.~\ref{f:ker:u_ttphi_r} that
 $u\to\pm\infty$ and $\tilde{\tph}\to \pm\infty$ when $r\to r_\pm$ (see also
-Fig.~\ref{f:sch:conf_compl2} for a pictorial view of $u\to+\infty$ when $r\to r_+$ in the Schwarzschild case).
+Fig.~\ref{f:sch:conf_compl2} for a pictorial view of $u\to+\infty$ when $r\to r_+$ in the Schwarzschild limit).
 In order to extend the outgoing principal null family to $\Hor$ and $\Hor_{\rm in}$,
 let us introduce
-along $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ in $\M_{\rm BL}$ the parameter $\lambda$
+along any geodesic $\Li^{\rm out}_{(u,\th,\tilde{\tph})}$ in $\M_{\rm BL}$ the parameter $\lambda$
 that is related to the affine parameter $r$ by
 \be \label{e:ker:dr_dl_out_princip}
     \frac{\D r}{\D\lambda} = \frac{\Delta}{2(r^2+a^2)} .
