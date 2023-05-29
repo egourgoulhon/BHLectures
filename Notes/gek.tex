@@ -371,7 +371,8 @@ $\w{K}$ is called a \defin{Killing tensor}\index{Killing!tensor} because its sym
 This property can be seen as a generalization of the Killing equation\index{Killing!equation}
 (\ref{e:neh:Killing_equation}) to tensors of valence 2.
 That the tensor $\w{K}$ defined by (\ref{e:gek:def_K}) obeys the Killing
-identity (\ref{e:gek:Killing_eq_K}) is established in the notebook~\ref{s:sam:Kerr_Killing_tensor}.
+identity (\ref{e:gek:Killing_eq_K}) is established in the
+SageMath notebook~\ref{s:sam:Kerr_Killing_tensor}.
 
 Killing tensors are discussed in Sec.~\ref{e:geo:Killing_tensor} of Appendix~\ref{s:geo}.
 It is shown there that the Killing identity (\ref{e:gek:Killing_eq_K}) implies that
@@ -449,6 +450,7 @@ the square of $\mathscr{P}$'s angular momentum as measured by the inertial obser
 We shall see later that one has always $\mathscr{K}\geq 0$. For now, let us
 establish the following characterization of null geodesics with $\mathscr{K} = 0$:
 \begin{prop}[null geodesics with vanishing Carter constant]
+\label{p:gek:null_geod_K_0}
 A null geodesic $\Li$ has a vanishing Carter constant $\mathscr{K}$ if, and
 only if, $\Li$ is a principal null geodesic:
 \be \label{e:gek:K_zero_null}
@@ -476,16 +478,14 @@ $r=0$ is excluded from the spacetime manifold), we have then
 \]
 The vectors $\w{k}$, $\wl$ and $\w{p}$ are all null.
 Now, according to Property~\ref{p:fra:corol2} in Sec.~\ref{s:fra:time_orientation},
-two null vectors are orthogonal iff they are collinear. Hence
-\[
-    \mathscr{K} = 0 \iff \w{p} = \alpha \w{k} \quad\mbox{or}\quad \w{p} = \alpha \wl.
-\]
+two null vectors are orthogonal iff they are collinear. Hence $\mathscr{K} = 0$
+is equivalent to $\w{p} = \alpha \w{k}$ or $ \w{p} = \alpha \wl$ with $\alpha > 0$.
 Since $\w{k}$ (resp. $\wl$) is tangent to $\Li^{\rm in}_{(v,\th,\tph)}$ (resp.
 $\Li^{\rm out}$), this completes the proof.
 \end{proof}
 
 \begin{remark}
-The result (\ref{e:gek:K_zero_null}) is consistent with the
+Property~\ref{p:gek:null_geod_K_0} is consistent with the
 interpretation (\ref{e:gek:Kcarter_asymptot}) of $\mathscr{K}$, since asymptotically
 the principal null geodesics are purely radial\footnote{Indeed,
 we deduce from Eqs.~(\ref{e:ker:k_BL}) and (\ref{e:ker:ell_BL}) that, for $r\to+\infty$,
@@ -1065,7 +1065,7 @@ in $\M\setminus\overline{\mathscr{G}}$. Moreover, it is
 future-directed there, given the time orientation defined in Sec.~\ref{s:ker:time_orientation}.
 The 4-momentum $\w{p}$ is either timelike or null and always future-directed.
 By Eq.~(\ref{e:fra:orient_time1}) in Lemma~\ref{p:fra:lem1}, one has then necessarily $\w{\xi}\cdot\w{p} < 0$; hence
-$E := - \w{\xi}\cdot\w{p} > 0$ in $\M\setminus \mathscr{G}$. Since $E$ is constant along $\Li$, it
+$E := - \w{\xi}\cdot\w{p} > 0$ in $\M\setminus \overline{\mathscr{G}}$. Since $E$ is constant along $\Li$, it
 follows that $E > 0$ everywhere.
 \end{proof}
 In particular, any timelike or null geodesic that reaches one of the asymptotic regions
@@ -1269,6 +1269,7 @@ so that we get
 \ee
 Hence, for $a\neq 0$, a geodesic with zero angular momentum about the
 symmetry axis has nevertheless a rotational motion around that axis.
+Moreover, this motion is independent of the geodesic's characteristics, i.e. $(\mu,E,Q)$.
 This is a manifestation of the \defin{Lense-Thirring effect}\index{Lense-Thirring effect},
 also called \defin{dragging of inertial frames}\index{dragging!of inertial frames}, or, in short, \defin{frame dragging}\index{frame!dragging}\index{dragging!frame --}.
 
@@ -1326,7 +1327,7 @@ converges to a finite value:
 \be \label{e:gek:lim_dphdt_Hor}
     \lim_{r\to r_+} \left. \derd{\ph}{t} \right| _{\Li} = \frac{a}{r_+^2 + a^2} = \Omega_{\Hor} ,
 \ee
-where the second equality follows from Eq.~(\ref{e:ker:def_OmegaH}), letting
+where the second equality follows from Eq.~(\ref{e:ker:def_OmegaH}), making
 the black hole rotation velocity $\Omega_{\Hor}$ appear.
 Hence we conclude:
 \begin{prop}[behaviour of $\ph$ near the event horizon]
