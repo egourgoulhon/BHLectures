@@ -609,7 +609,7 @@ This is a direct consequence of the identity (\ref{e:bas:Lie_adapted}).
 
 \begin{greybox}
 A \defin{Killing horizon}\index{Killing!horizon}\index{horizon!Killing --} is
-a null hypersurface $\Hor$ in a spacetime $(\M,\w{g})$ admitting a
+a connected null hypersurface $\Hor$ in a spacetime $(\M,\w{g})$ admitting a
 Killing vector field $\w{\xi}$ such that, on $\Hor$, $\w{\xi}$ is
 normal to $\Hor$.
 \end{greybox}
@@ -620,7 +620,7 @@ some continuous symmetry
 1-parameter group, as described in Sec.~\ref{s:neh:symmetries}.
 A definition equivalent to the above one is then:
 \begin{greybox}
-A \defin{Killing horizon} is a null
+A \defin{Killing horizon} is a connected null
 hypersurface $\Hor$ whose null geodesic generators are orbits of a
 1-parameter group of isometries of $(\M,\w{g})$.
 \end{greybox}
@@ -636,7 +636,7 @@ Indeed, if $\w{\xi}$ is vanishing at some point of $\Hor$, it cannot be
 considered as a normal vector to $\Hor$.
 \end{remark}
 
-We shall see in Chap.~\ref{s:sta} that in a stationary spacetime, a black hole
+We shall see in Chap.~\ref{s:sta} that in a stationary spacetime, a (connected part of a) black hole
 event horizon must be a Killing horizon.
 
 \begin{figure}
@@ -934,7 +934,7 @@ $\wl$ is then a symmetry generator on $\Hor$, which implies
 This means that $\kappa$ is constant along any field line of $\wl$ (i.e. any
 null geodesic generator of $\Hor$). It could however vary from one field line to another.
 To prove that this is not the case, let us consider a complete cross-section
-$\Sp$ of $\Hor$ and show that $\kappa$ is constant on each connected component of $\Sp$. The starting
+$\Sp$ of $\Hor$ and show that $\kappa$ is constant on $\Sp$. The starting
 point is applying the contracted Ricci identity (\ref{e:def:contract_Ricci_ident}),
 which is a 1-form, to a generic vector field $\w{v}$ tangent to $\Sp$,
 i.e. contract (\ref{e:def:contract_Ricci_ident}) with $v^\alpha$. Since $\el_\mu v^\mu = 0$, we get
@@ -1100,20 +1100,21 @@ spacelike. We conclude that $\w{W}$ is collinear to $\wl$. Consequently,
 we have $\w{W}\cdot\w{v} = 0$.
 Hence the right-hand side of Eq.~(\ref{e:neh:DS_kappa_W}) vanishes identically
 and we are left with $\wnab_{\w{v}} \, \kappa = 0$. Since $\w{v}$ is a generic
-vector field tangent to $\Sp$, this implies that
-$\kappa$ is constant over $\Sp$ if the latter is connected. If $\Sp$ is
-disconnected, the conclusion is that $\kappa$ is constant over any connected component of $\Sp$. Given that $\kappa$ is
+vector field tangent to $\Sp$ and $\Sp$ is connected (for it is a complete cross-section
+of a Killing horizon, which is connected by definition),
+this implies that
+$\kappa$ is constant over $\Sp$. Given that $\kappa$ is
 constant along each null geodesic generator of $\Hor$, this completes the demonstration
-that $\kappa$ is constant over connected components of $\Hor$. More precisely, we have established
+that $\kappa$ is constant over $\Hor$. More precisely, we have established
 the following property:
 
 \begin{prop}[zeroth law of black hole mechanics]
 \label{p:neh:zeroth_law}
 If the null dominant energy condition
 [Eq.~(\ref{e:neh:null_dominant_cond})]
-is fulfilled on the Killing horizon $\Hor$, then the non-affinity coefficient $\kappa$
-of the null normal coinciding with the Killing vector field on
-$\Hor$ is constant over any connected component of $\Hor$:
+is fulfilled on a Killing horizon $\Hor$, then the non-affinity coefficient $\kappa$
+of the null normal coinciding with the Killing vector $\w{\xi}$ defining $\Hor$
+is constant over $\Hor$:
 \be \label{e:neh:zeroth_law}
     \encadre{\kappa = \mathrm{const}.}
 \ee
@@ -1126,7 +1127,7 @@ and the result
 \defin{zeroth law of black hole mechanics}\index{zeroth law}. More precisely,
 the zeroth law --- to be discussed in detail in Chap.~\ref{s:evo} ---
 states that the surface gravity of a black hole in equilibrium is
-constant and we shall see in Chap.~\ref{s:sta} that (a connected part of)
+constant and we shall see in Chap.~\ref{s:sta} that (any connected part of)
 the event horizon of a black hole in equilibrium is a Killing horizon.
 
 
@@ -1247,8 +1248,8 @@ bubble's surface pressure, so that it must constant in equilibrium.
 
 \subsection{Classification of Killing horizons} \label{s:neh:classif_KH}
 
-Since $\kappa$ is constant on a connected Killing horizon $\Hor$ (assuming the dominant
-energy condition), we may use it to classify connected Killing horizons in two
+Since $\kappa$ is constant on a Killing horizon $\Hor$ (assuming the dominant
+energy condition), we may use it to classify Killing horizons in two
 categories, depending whether $\kappa$ vanishes or not:
 \begin{itemize}
 \item if $\kappa = 0$, the Killing vector $\w{\xi}$ is a geodesic vector on $\Hor$
@@ -1294,7 +1295,8 @@ curves of curves
 of constant $t$, i.e. integral curves of the coordinate vector field $\wpar_u$,
 with $t$ increasing from $-\infty$ to $+\infty$ from the bottom to the top
 of the diagram. The Poincaré horizon $\Hor$ is depicted in green.
-Each connected component of $\Hor$ appears as a straight line segment, since for $\th=\pi/2$
+The two connected components $\Hor_-$ and $\Hor_+$ of $\Hor$
+appear as straight line segments, since for $\th=\pi/2$
 and $\ph\in\{0,\pi\}$, $u = 0 \iff \cos\tau = \pm \sin\chi$ ($+$ for $\ph=0$ and $-$ for $\ph=\pi$).
 Note that the curves of constant $u$ tend to $\Hor$ when $u\to 0$, in agreement
 with the characterization of $\Hor$ by $u=0$. The curves of constant
@@ -1372,8 +1374,8 @@ is the hypersurface $\Hor$ bounding the Poincaré patch $\M_{\rm P}$ in $\M$. In
 \ee
 Note that $\Hor$ is not included in $\M_{\rm P}$, so that the Poincaré coordinates are not
 defined on $\Hor$ (except for $u$, they actually diverge in the vicinity of $\Hor$).
-Note also that $\Hor$ has two connected components, one with
-$\tau \in (-\pi,0)$ and the other one with $\tau \in (0,\pi)$, since $u=0$
+Note also that $\Hor$ has two connected components: $\Hor_-$, where
+$\tau \in (-\pi,0)$, and $\Hor_+$, where $\tau \in (0,\pi)$, since $u=0$
 cannot be achieved for $\tau=0$, as a consequence of
 formula~(\ref{e:neh:AdS:def_u}) and $|\sin\chi|<1$ on $\M$.
 The Poincaré horizon is depicted in Fig.~\ref{f:neh:AdS_example}.
@@ -1429,9 +1431,11 @@ follows immediately that, on $\Hor$, $\w{\xi}$ is collinear to
 the null normal to $\Hor$: $\w{\xi} \equalH (\sin\tau/\cos\chi)\,  \w{k}$,
 with $\sin\tau\neq 0$ (given that $\tau \neq 0$ on $\Hor$).
 Hence, $\w{\xi}$ is normal to the null hypersurface $\Hor$. We therefore
-conclude that the Poincaré horizon $\Hor$ is a Killing horizon.
+conclude that each of the connected components $\Hor_-$
+and $\Hor_+$ of the Poincaré horizon $\Hor$ is a Killing horizon
+with respect to $\w{\xi}$.
 Let us evaluate the
-non-affinity coefficient $\kappa$ of $\w{\xi}$ on $\Hor$ via
+non-affinity coefficient $\kappa$ of $\w{\xi}$ on $\Hor_{\pm}$ via
 formula (\ref{e:neh:dxi2_kappa}). First of all, we compute the
 scalar square of $\w{\xi}$ by noticing that on $\M_{\rm P}$,
 $\w{\xi} = \wpar_t$, so that $\w{\xi}\cdot\w{\xi} = g_{tt}$; with
@@ -1449,7 +1453,8 @@ Furthermore, formula (\ref{e:neh:AdS:xi_square}) results in
 $\dd(\w{\xi}\cdot\w{\xi}) = - 2 \ell^{-2} u\, \dd u$. Since
 $u\equalH 0$, this implies $\dd(\w{\xi}\cdot\w{\xi}) \equalH 0$, so that
 formula (\ref{e:neh:dxi2_kappa}) yields $\kappa = 0$.
-We conclude that the Poincaré horizon of AdS$_{4}$ is a degenerate Killing horizon.
+We conclude that the two connected components of the Poincaré horizon of AdS$_{4}$
+are degenerate Killing horizons.
 \end{example}
 
 \subsection{Interpretation of $\kappa$ as a ``surface gravity''}
