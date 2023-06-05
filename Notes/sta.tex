@@ -181,11 +181,18 @@ as defined in Sec.~\ref{s:sta:def_station}.
 Since $(\M,\w{g})$ is invariant under the action of the isometry group $(\mathbb{R},+)$,
 so is $\scri^+$ (under some proper extension of $\w{\xi}$ to the conformal
 completion $\tilde{\M}$)
-and therefore its causal past $J^-(\scri^+)$. As the boundary of $J^-(\scri^+)$
-inside $\M$ [cf. Eq.~(\ref{e:glo:Hor_bound_past_scrip})],
-the event horizon $\Hor$ must therefore be invariant under the
-action of the isometry group.
-Note that this means that $\Hor$ is invariant \emph{as a whole}, not that
+and therefore its causal past $J^-(\scri^+)$. Since the event horizon $\Hor$
+is the boundary of $J^-(\scri^+)$
+inside $\M$ [Eq.~(\ref{e:glo:Hor_bound_past_scrip})], we get
+
+\begin{prop}[stationary event horizon]
+\label{p:sta:stationary_hor}
+The event horizon $\Hor$ of a black hole in a stationary spacetime
+is globally invariant under the action of the stationary group $(\R,+)$.
+\end{prop}
+
+The word \emph{globally} stresses that
+$\Hor$ is invariant \emph{as a whole}, not that
 each point of $\Hor$ is a fixed point of the group action.
 Let us assume that $\Hor$ is smooth (this sounds likely in a stationary context;
 a rigorous proof can be found in Ref.~\cite{ChrusDGH01});
@@ -257,13 +264,14 @@ the matter dominant null energy condition (\ref{e:neh:null_dominant_cond_T})]
 and (ii) when
 displaced into the black hole region along the ingoing null normal $\w{k}$, the
 cross-sections of $\Hor$ become surfaces with $\theta_{(\wl)} < 0$.
-Then, any connected component $\Sp$ of a cross-section of $\Hor$
+Then, any connected component $\Sp$ of a complete cross-section of $\Hor$
 has the topology of the 2-sphere (i.e. $\Sp$ is
 \emph{homeomorphic}\index{homeomorphic} to $\SS^2$).
 \end{prop}
 \begin{proof}
-Let $\Sp$ be a cross-section of the event horizon $\Hor$,
-$\wl$ a future-directed null normal to $\Hor$ and $\w{k}$ a complementary
+Let $\Sp$ be a connected component of a cross-section of the event horizon $\Hor$.
+We assume that $\Sp$ is closed (compact without boundary) and orientable.
+Let $\wl$ be a future-directed null normal to $\Hor$ and $\w{k}$ a complementary
 future-directed null vector field
 normal to $\Sp$, normalized as in Eq.~(\ref{e:def:k_el_minus_one}), i.e.
 $\w{k}\cdot\wl = -1$. At each point $p\in \Sp$, the pair $(\w{k},\wl)$ is
@@ -296,7 +304,7 @@ connection associated to $\w{q}$,
 $\w{G}$ is the Einstein tensor
 of the spacetime metric $\w{g}$ and $\w{\Omega}$ is the 1-form on $\Sp$
 that is the pullback of the 1-form $\w{\omega}$ defined by Eq.~(\ref{e:def:def_omega}).
-We may also view $\w{\Omega}$ as a spacetime 1-form: it is then defined as
+We may also view $\w{\Omega}$ as a spacetime 1-form, defined as
 the composition of $\w{\omega}$ with the orthogonal projector $\vw{q}$ onto
 $\Sp$: $\w{\Omega} = \w{\omega} \circ \vw{q}$.
 In view of Eq.~(\ref{e:def:omega_restrict_H}), we may then write
@@ -304,7 +312,7 @@ $\langle\w{\Omega}, \w{v} \rangle = - \w{k} \cdot\wnab_{\vw{q}(\w{v})} \w{\ell}$
 or in index notation, $\Omega_\alpha  = - k_\mu \nabla_\nu \el^\mu q^\nu_{\ \, \alpha}$.
 Using Eq.~(\ref{e:neh:null_dominant_cond}), we may express $\w{G}(\w{k},\wl)$
 as $\w{G}(\w{k},\wl) = \w{G}(\wl, \w{k}) = - \w{W}\cdot\w{k} - f \wl\cdot \w{k} = - \w{W}\cdot\w{k} + f$.
-Then, integrating (\ref{e:sta:Lie_k_theta_l}) over $\Sp$
+Then, integrating (\ref{e:sta:Lie_k_theta_l}) over the compact manifold $\Sp$
 and setting the integral of the divergence term $\DSc_a \Omega^a$ to zero since
 $\Sp$ has no boundary, we get
 \be \label{e:sta:Euler_char}
@@ -387,12 +395,11 @@ will be discussed in Chap.~\ref{s:loc}.
 \begin{remark}
 \label{r:sta:Majumdar_Papapetrou}
 The topology theorems 1 and 2 regard only
-a \emph{connected component} of a given horizon cross-section.
-Generally, this corresponds to the whole cross-section, i.e. the cross-section
-is a connected 2-manifold, but there exist
+a \emph{connected component} of a given horizon complete cross-section.
+Generally, the latter is a connected 2-manifold, but there exist
 4-dimensional stationary (actually static) spacetimes containing a black hole,
 the event horizon of which has
-disconnected cross-sections: the
+disconnected complete cross-sections: the
 \emph{Majumdar-Papapetrou spacetimes}\index{Majumdar-Papapetrou!black hole}
 \cite{Majum47,Papap47,HartlH72}. They are solutions of the
 electrovacuum Einstein equation (cf. Sec.~\ref{e:fra:electrovacuum})
@@ -441,8 +448,8 @@ The theorem obtained by Piotr Chru\'sciel\index[pers]{Chrusciel, P.T.@Chru\'scie
 and Robert Wald\index[pers]{Wald, R.M.} in 1994 \cite{ChrusW94b}
 (Property~\ref{p:sta:topology2})
 relies on the \emph{topological censorship theorem}\index{topological censorship theorem} established by
-John L. Friedman\index[pers]{Friedman, J.L.}, Kristin Schleich\index[pers]{Schleich, K.}
-and Donald M. Witt\index[pers]{Witt, D.M.} in 1993 \cite{FriedSW93}.
+John Friedman\index[pers]{Friedman, J.L.}, Kristin Schleich\index[pers]{Schleich, K.}
+and Donald Witt\index[pers]{Witt, D.M.} in 1993 \cite{FriedSW93}.
 It leads directly to the spherical topology, excluding the toroidal one.
 \end{hist}
 
@@ -1792,8 +1799,29 @@ for $n>4$.
 Let us thus assume $n=4$ and that the (electro)vacuum Einstein equation holds.
 The null dominant energy condition is then satisfied and, since
 $\Hor$ is connected, the topology theorem 1 (Property~\ref{p:sta:topology1})
-implies that the cross-sections of $\Hor$ have the topology of $\SS^2$,
-or equivalently that the topology of $\Hor$ is $\R\times\SS^2$. One can define an abstract 2-dimensional manifold $\hat{\Sp}$
+implies that the complete cross-sections of $\Hor$ have the topology of $\SS^2$,
+or equivalently that the topology of $\Hor$ is $\R\times\SS^2$.
+Let $\Sp$ be a complete cross-section of $\Hor$ such that the stationary Killing
+vector $\w{\xi}$ is nowhere tangent to $\Sp$.
+Let $\w{q}$ be the metric induced by $\w{g}$ on $\Sp$.
+We are going to show that the
+spacetime stationary action $\M \to \M$, $p \mapsto \Phi_t(p)$
+induces a 1-dimensional group action $\Sp \to \Sp$, $p \mapsto \Psi_t(p)$
+such that each $\Psi_t$ is an isometry of $(\Sp,\w{g})$.
+For $t\in\R$ and $p\in\Sp$, let us define $\Psi_t(p)$ as follows: the point
+$\Phi_{-t}(p)$ lies in $\Hor$ since $\Hor$ is globally invariant by
+$\Phi_t$ (Property~\ref{p:sta:stationary_hor}). Let then $\Li$ be the unique
+null geodesic generator of $\Hor$ through $\Phi_{-t}(p)$. Since $\Sp$
+is a complete cross-section of $\Hor$, $\Li$ intersects $\Sp$ at a unique
+point, which we define as $\Psi_t(p)$ (cf. Fig.~??).
+In other words, $\Psi_t(p)$ is obtained by displacing $p$ by a parameter $-t$ along the field lines of $\w{\xi}$ and then going back to $\Sp$ along a null geodesic generator of $\Hor$.
+
+
+
+
+
+%@@@@@@@@@@@@@@@@
+One can define an abstract 2-dimensional manifold $\hat{\Sp}$
 by taking the quotient of $\Hor$ along its null generators, i.e. by identifying
 two points on $\Hor$ if they belong to the same null geodesic generator $\Li$. Given the
 topology of $\Hor$'s cross-sections, $\hat{\Sp}$ is clearly a 2-dimensional
