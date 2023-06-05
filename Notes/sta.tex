@@ -1801,22 +1801,65 @@ The null dominant energy condition is then satisfied and, since
 $\Hor$ is connected, the topology theorem 1 (Property~\ref{p:sta:topology1})
 implies that the complete cross-sections of $\Hor$ have the topology of $\SS^2$,
 or equivalently that the topology of $\Hor$ is $\R\times\SS^2$.
+
+Let us first show that the
+spacetime stationary action $\Phi:\  \R\times \M \to \M$, $(t,p) \mapsto \Phi_t(p)$
+induces a $\mathrm{U}(1)$ action $\hat{\Phi}$ on the set of
+null geodesic generators of $\Hor$.
+Each $\Phi_t$ being an isometry leaving $\Hor$ globally invariant (Property~\ref{p:sta:stationary_hor}), it maps
+any null geodesic $\Li$ of $\Hor$ to a null geodesic $\hat{\Phi}_t(\Li)$ of $\Hor$.
+Moreover, $\hat{\Phi}$ obeys the laws of a group action:
+obviously $\hat{\Phi}_0(\Li) = \Li$ and for any $(t_1, t_2)\in \R^2$
+and $p\in\Li$, we have
+$\Phi_{t_2 + t_1}(p)\in\hat{\Phi}_{t_2+t_1}(\Li)$ and
+$\Phi_{t_2 + t_1}(p) = \Phi_{t_2}(\Phi_{t_1}(p)) \in \hat{\Phi}_{t_2}(\hat{\Phi}_{t_1}(\Li))$,
+from which we conclude that $\hat{\Phi}_{t_2+t_1}(\Li) = \hat{\Phi}_{t_2}(\hat{\Phi}_{t_1}(\Li))$,
+given that there is only one null geodesic generator through the point $\Phi_{t_2 + t_1}(p)$.
+Moreover, the group action $\hat{\Phi}$ is periodic: due to the topology
+$\R\times\SS^2$ of $\Hor$,
+there exists a smallest $T>0$
+such that for any null generator $\Li$, $\hat{\Phi}_T(\Li) = \Li$
+(cf. Fig.~\ref{f:sta:rot_horizon}, where $a' = \Phi_T(a)$,
+$b' = \Phi_T(b)$, $c' = \Phi_T(c)$ and $d' = \Phi_T(d)$, noticing that
+each pair $(p,p')$ lie on the same generator). Hence $\hat{\Phi}$ is
+a $\mathrm{U}(1)$ group action on the set of null geodesic generators of $\Hor$.
+
 Let $\Sp$ be a complete cross-section of $\Hor$ such that the stationary Killing
 vector $\w{\xi}$ is nowhere tangent to $\Sp$.
 Let $\w{q}$ be the metric induced by $\w{g}$ on $\Sp$.
 We are going to show that the
-spacetime stationary action $\M \to \M$, $p \mapsto \Phi_t(p)$
-induces a 1-dimensional group action $\Sp \to \Sp$, $p \mapsto \Psi_t(p)$
-such that each $\Psi_t$ is an isometry of $(\Sp,\w{g})$.
-For $t\in\R$ and $p\in\Sp$, let us define $\Psi_t(p)$ as follows: the point
+spacetime stationary action $\Phi$
+induces a 1-dimensional group action $\Psi: \R\times \Sp \to \Sp$, $(t,p) \mapsto \Psi_t(p)$
+such that each $\Psi_t$ is an isometry of $(\Sp,\w{q})$.
+For $t\in\R$ and $p\in\Sp$, the point
 $\Phi_{-t}(p)$ lies in $\Hor$ since $\Hor$ is globally invariant by
 $\Phi_t$ (Property~\ref{p:sta:stationary_hor}). Let then $\Li$ be the unique
 null geodesic generator of $\Hor$ through $\Phi_{-t}(p)$. Since $\Sp$
 is a complete cross-section of $\Hor$, $\Li$ intersects $\Sp$ at a unique
 point, which we define as $\Psi_t(p)$ (cf. Fig.~??).
 In other words, $\Psi_t(p)$ is obtained by displacing $p$ by a parameter $-t$ along the field lines of $\w{\xi}$ and then going back to $\Sp$ along a null geodesic generator of $\Hor$.
+Equivalently, we may write
+\be \label{e:sta:def_Psi_action}
+    \Psi_t(p) = \hat{\Phi}_{-t}(\Li_p)\cap\Sp,
+\ee
+where $\Li_p$ is the null geodesic generator through $p$.
+Let us check that $\Psi$ is a 1-parameter group action on $\Sp$,
+i.e. fulfills $\Psi_0(p) = p$ and $\Psi_{t_2 + t_1}(p) = \Psi_{t_2} (\Psi_{t_1} (p))$
+for any $p\in \Sp$ (cf. Sec.~\ref{s:neh:symmetries}) and $(t_1, t_2)\in \R^2$.
+The first property is trivial. Regarding the second one,
+$\Psi_{t_1}(p)$ lies on the same
+null generator $\Li$ as $\Phi_{-t_1}(p)$ (by definition of $\Psi_{t_1}$).
+It follows that both $\Phi_{-t_2}(\Psi_{t_1}(p))$ and
+$\Phi_{-t_2}(\Phi_{-t_1}(p))$ lie on the null generator $\hat{\Phi}_{-t_2}(\Li)$.
+But $\Phi_{-t_2}(\Phi_{-1}(p)) = \Phi_{-t_2-t_1}(p)$, so that
+$\Psi_{t_2 + t_1}(p) = \hat{\Phi}_{-t_2}(\Li) \cap \Sp = \Psi_{t_2} (\Psi_{t_1} (p))$.
+Hence $\Psi: \R \times \Sp \to \Sp$, $(t,p) \mapsto \Psi_t(p)$ is 1-parameter
+group action on $\Sp$. Moreover this group action inherits the $T$-periodicity
+from $\hat{\Phi}$. Indeed, Eq.~(\ref{e:sta:def_Psi_action}) implies
+$\Psi_T(p) = \hat{\Phi}_{-T}(\Li_p)\cap\Sp = \Li_p \cap \Sp = p$.
 
-
+Let us now show that for any $t\in[0,T)$, %$]$
+$\Psi_t$ is an isometry of $(\Sp,\w{g})$.
 
 
 
