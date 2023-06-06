@@ -91,7 +91,7 @@ where $x^a = (x^2, \ldots, x^{n-1})$ is a coordinate system on $\Sp$ and $q$ is
 the determinant with respect to these coordinates of the Riemannian metric $\w{q}$
 induced by $\w{g}$ on $\Sp$.
 
-\begin{prop}
+\begin{prop}[area of a non-exapnding horizon]
 \label{p:neh:invariance_area}
 The area $A$ does not depend on the choice of the complete cross-section $\Sp$
 of $\Hor$.
@@ -101,30 +101,28 @@ $\Hor$.
 \end{prop}
 
 \begin{proof}
-Let $\Sp'$ be a second complete cross-section of $\Hor$ and let $\wl$ be a field of null normals
-of $\Hor$. Along the null geodesic generators of $\Hor$, we can always choose a parameter $\lambda$ associated with $\wl$ (i.e. such that $\wl = \D/\D\lambda$ along a given null geodesic generator)
-such that $\lambda=0$ on $\Sp$. By the very definition of a complete cross-section
-(cf. Sec.~\ref{s:def:spacelike_sections}),
-any null geodesic generator $\Li$ of $\Hor$ intersects $\Sp'$ at a single point. Let
-$\lambda_0$ be the value of $\lambda$ at this point. We may then introduce
-a new parameter $\lambda'$ along $\Li$ by $\lambda' := \lambda/\lambda_0$.
-If we repeat this for all null geodesic generators of $\Hor$, we obtain a parametrization
-of all the null geodesic generators that satisfies $\lambda'=0$ on $\Sp$ and $\lambda'=1$
-on $\Sp'$. Let $\wl'=\D/\D\lambda'$ be the (null) tangent vector associated
-with $\lambda'$. We may then say that the cross-section $\Sp'$ is deduced
-from $\Sp$ by the Lie dragging of $\Sp$ along $\wl'$ by the parameter increase $\delta\lambda'=1$.
+Let $\Sp'$ be a second complete cross-section of $\Hor$. Let us assume first that
+$\Sp'\cap\Sp = \varnothing$. Then each null geodesic generator $\Li$ of $\Hor$ intersects
+$\Sp$ and $\Sp'$ in two distinct points and it is possible to chose a parameter
+$\lambda$ of $\Li$ such that $\lambda=0$ on $\Sp$ and $\lambda=1$ on $\Sp'$.
+Let $\wl = \left. \D\w{x}/\D\lambda \right| _{\Li}$ be the associated tangent vector.
+We may then say that the cross-section $\Sp'$ is deduced
+from $\Sp$ by the Lie dragging of $\Sp$ along $\wl$ by the parameter increase $\delta\lambda=1$.
 More precisely, we may consider that $\Sp'$ is deduced from $\Sp$ by a
-continuous deformation, represented by a 1-parameter family $(\Sp_{\lambda'})$
+continuous deformation, represented by a 1-parameter family $(\Sp_{\lambda})$
 of cross-sections such that $\Sp_0 = \Sp$ and $\Sp_1 = \Sp'$. Associated
-with this family is a real-valued function $\lambda' \mapsto A(\lambda')$
-given the area of each element $\Sp_{\lambda'}$. By the very definition
-of the expansion along $\wl'$ [Eq.~(\ref{e:def:def_expansion})], we have then
+with this family is a real-valued function $\lambda \mapsto A(\lambda)$
+given the area of each element $\Sp_{\lambda}$. By the very definition
+of the expansion along $\wl$ [Eq.~(\ref{e:def:def_expansion})], we have then
 \[
-    \frac{\D A}{\D\lambda'} = \int_{\Sp_{\lambda'}} \theta_{(\wl')} \, \delta A .
+    \frac{\D A}{\D\lambda} = \int_{\Sp_{\lambda}} \theta_{(\wl)} \, \delta A .
 \]
-If $\Hor$ is a non-expanding horizon, then $\theta_{(\wl')}=0$ and it follows
-that $A(\lambda')$ is a constant function. Hence the area of $\Sp'$ is equal
-to that of $\Sp$.
+If $\Hor$ is a non-expanding horizon, then $\theta_{(\wl)}=0$ and it follows
+that $A(\lambda)$ is a constant function. Hence the area of $\Sp'$ is equal
+to that of $\Sp$. If $\Sp$ and $\Sp'$ have a non-empty intersecting part,
+the argument can be repeated on each of the non-intersecting parts, given
+that the area of the part $\Sp\cap\Sp'$ is obviously the same for $\Sp$
+and $\Sp'$.
 \end{proof}
 
 \begin{example}[Schwarzschild horizon] \label{x:neh:Schwarz_hor_area}

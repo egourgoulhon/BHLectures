@@ -1815,6 +1815,11 @@ $\Phi_{t_2 + t_1}(p)\in\hat{\Phi}_{t_2+t_1}(\Li)$ and
 $\Phi_{t_2 + t_1}(p) = \Phi_{t_2}(\Phi_{t_1}(p)) \in \hat{\Phi}_{t_2}(\hat{\Phi}_{t_1}(\Li))$,
 from which we conclude that $\hat{\Phi}_{t_2+t_1}(\Li) = \hat{\Phi}_{t_2}(\hat{\Phi}_{t_1}(\Li))$,
 given that there is only one null geodesic generator through the point $\Phi_{t_2 + t_1}(p)$.
+Since the stationary generator $\w{\xi}$ is assumed to be spacelike on some parts
+of $\Hor$, the group action is not trivial: there exist some null generators $\Li$ for which
+$\hat{\Phi}_t(\Li)\neq \Li$ (when $\w{\xi}$ is null on a part of $\Hor$, it is necessarily
+tangent to a null generator $\Li$, which is then a fixed point of the group action:
+$\forall t\in\R, \hat{\Phi}_t(\Li) = \Li$).
 Moreover, the group action $\hat{\Phi}$ is periodic: due to the topology
 $\R\times\SS^2$ of $\Hor$,
 there exists a smallest $T>0$
@@ -1855,60 +1860,59 @@ But $\Phi_{-t_2}(\Phi_{-1}(p)) = \Phi_{-t_2-t_1}(p)$, so that
 $\Psi_{t_2 + t_1}(p) = \hat{\Phi}_{-t_2}(\Li) \cap \Sp = \Psi_{t_2} (\Psi_{t_1} (p))$.
 Hence $\Psi: \R \times \Sp \to \Sp$, $(t,p) \mapsto \Psi_t(p)$ is 1-parameter
 group action on $\Sp$. Moreover this group action inherits the $T$-periodicity
-from $\hat{\Phi}$. Indeed, Eq.~(\ref{e:sta:def_Psi_action}) implies
+from $\hat{\Phi}$ and thus is a $\mathrm{U}(1)$ action.
+Indeed, Eq.~(\ref{e:sta:def_Psi_action}) implies
 $\Psi_T(p) = \hat{\Phi}_{-T}(\Li_p)\cap\Sp = \Li_p \cap \Sp = p$.
 
 Let us now show that for any $t\in[0,T)$, %$]$
 $\Psi_t$ is an isometry of $(\Sp,\w{g})$.
+Let $p$ and $q$ be infinitely close points of $\Sp$. Because $\Phi_{-t}$ is
+a spacetime isometry, we have
+\be \label{e:sta:q_pq_q0_p0q0}
+ \w{q}(\vp{pq},\vp{pq}) = \left.\w{g}\right| _p(\vp{pq},\vp{pq})
+= \left.\w{g}\right| _{p_0}(\vp{p_0q_0},\vp{p_0q_0}),
+\ee
+where $p_0 := \Phi_{-t}(p)$ and $q_0 := \Phi_{-t}(q)$.
+Now, $p_0$ and $q_0$ are two points of $\Sp_0 := \Phi_{-t}(\Sp)$, which
+is a complete cross-section of $\Hor$ that has no intersection with $\Sp$ for $t\neq 0$, given that $\w{\xi}$ is transverse to $\Sp$. One can then
+choose a parametrization $\lambda$ of the null generators $\Li$ of $\Hor$
+such that $\lambda=0$ on $\Sp_0$ and $\lambda=1$ on $\Sp$. Let
+$\wl = \left. \D\w{x}/\D\lambda \right| _{\Li}$ be the associated tangent vector.
+One may consider that $\Sp_0$ and $\Sp$ are the two ends of a foliation of $\Hor$
+by a family $(\Sp_\lambda)_{\lambda\in[0,1]}$ of complete cross-sections
+(same construction as in the proof of Property~\ref{p:neh:invariance_area}).
+By denoting by $\w{q}$ the metric induced by $\w{g}$ on each of the surfaces
+$\Sp_\lambda$, we have $\left.\w{g}\right| _{p_0}(\vp{p_0q_0},\vp{p_0q_0}) = \w{q}(\vp{p_0q_0},\vp{p_0q_0})$. Now, since $\Hor$ is a non-expanding horizon and the null
+energy condition is fulfilled, the metric $\w{q}$ is preserved along the null
+generators of $\Hor$: $\vw{q}^* \Lie{\el} \w{q} = 0$ [Property~\ref{p:neh:invariance_of_2metric}]. Since $p_1:= \Psi_t(p)$ and $q_1:=\Psi_t(q)$
+are obtained from $p_0$ and $q_0$ by transport along the null generators
+(displacement by a parameter $\delta\lambda=1$ along the field lines of $\wl$),
+we have $\w{q}(\vp{p_0q_0},\vp{p_0q_0}) =  \w{q}(\vp{p_1 q_1},\vp{p_1 q_1})$.
+By combining with Eq.~(\ref{e:sta:q_pq_q0_p0q0}), we get
+$\w{q}(\vp{pq},\vp{pq}) = \w{q}(\vp{p_1q_1},\vp{p_1q_1})$, which proves that
+$\Psi_t$ is an isometry of $(\Sp, \w{q})$.
 
+At this stage, we have shown that each cross section of $\Hor$ admits an
+isometry group isomorphic to $\mathrm{U}(1)$, i.e. is axisymmetric.
+One may say that, in addition to be stationary,
+$\Hor$ is axisymmetric, although the concept of axisymmetry as the result of the
+metric invariance under a group action (cf. Sec.~\ref{s:neh:symmetries})
+is ill-defined in the case of $\Hor$, given that, as null manifold, $\Hor$
+is not endowed with a proper metric tensor.
 
-
-%@@@@@@@@@@@@@@@@
-One can define an abstract 2-dimensional manifold $\hat{\Sp}$
-by taking the quotient of $\Hor$ along its null generators, i.e. by identifying
-two points on $\Hor$ if they belong to the same null geodesic generator $\Li$. Given the
-topology of $\Hor$'s cross-sections, $\hat{\Sp}$ is clearly a 2-dimensional
-manifold of $\SS^2$ topology. In view of the definition
-of a cross-section (cf. Sec.~\ref{s:def:spacelike_sections}),
-one can identify $\hat{\Sp}$
-with a given cross-section $\Sp_0$ of $\Hor$ if necessary.
-Taking advantage that $\Hor$ is a non-expanding horizon (Property~\ref{p:sta:hor_non_expanding}),
-one can endow $\hat{\Sp}$ with a unique Riemannian metric $\hat{\w{q}}$
-thanks to Property~\ref{p:neh:invariance_of_2metric}. If one sticks to the $\Sp_0$ model
-of $\hat{\Sp}$, this metric is nothing but the metric $\w{q}$ induced by
-the spacetime metric $\w{g}$ on $\Sp_0$. Now the spacetime stationary action
-$\M \to \M$, $p \mapsto \Phi_t(p)$
-induces an isometry group of $(\hat{\Sp},\hat{\w{q}})$ as follows.
-Let $\Li$ be a null geodesic generator of $\Hor$; for
-$t\in\R$, $\Phi_t(\Li)$ is a null geodesic of $(\M,\w{g})$ since $\Phi_t$ is
-an isometry. Furthermore, given that $\Hor$ is globally invariant by $\Phi_t$
-(cf. Sec.~\ref{s:sta:BH_stationary}), $\Phi_t(\Li) \subset \Hor$. Hence
-$\Phi_t(\Li)$ is a generator of $\Hor$ and we conclude that
-$\Phi_t$ maps generators of $\Hor$ to generators of $\Hor$. It therefore
-induces a map $\hat{\Phi}_t: \hat{\Sp} \to \hat{\Sp}$. Furthermore, this map
-is an isometry of the metric $\hat{\w{q}}$, given that $\Phi_t$ is an isometry
-on $\Hor$. Now, given the $\R\times \SS^2$ topology of $\Hor$, for each $p\in\Hor$,
-there is a smallest $T>0$ such that $\Phi_T(p)$ lies on the same null generator
-as $p$ (cf. Fig.~\ref{f:sta:rot_horizon}, where $a' = \Phi_T(a)$,
-$b' = \Phi_T(b)$, $c' = \Phi_T(c)$ and $d' = \Phi_T(d)$).
-It follows that
-$\hat{\Phi}_{t + T} = \hat{\Phi}_t$. In other words, the 1-dimensional group action
-defined by $\hat{\Phi}_t$ on $\hat{\Sp}$ has closed orbits, of period $T$.
-It follows that the underlying group is the rotation group $\mathrm{SO}(2)$
-and we conclude that $(\hat{\Sp},\hat{\w{q}})$ is an axisymmetric Riemannian manifold
-(cf. Sec.~\ref{s:sta:Komar_angu_mom}). This axisymmetry transfers immediately
-to the fiducial cross-section $\Sp_0$ and we conclude that, in addition to being
-stationary, the event horizon $\Hor$ is axisymmetric.
-
-The next step is to extend this axisymmetry to the whole spacetime.
-Let $\w{\chi}=\D\w{x}/\D v$ be the vector tangent to the null generators of $\Hor$
+The next step is to show that there exists a Killing vector
+field $\w{\chi}$ of $(\M,\w{g})$ that, on $\Hor$, is tangent to the null generators.
+Then the spacetime $(\M,\w{g})$ will be axisymmetric, the corresponding
+Killing vector being a linear combination of $\w{\xi}$ and $\w{\chi}$.
+We first define $\w{\chi}$ on $\Hor$ only by demanding that it is the vector tangent to the null generators of $\Hor$
 corresponding to a parameter $v$ of the generators that is connected to the parameter
-$t$ of the stationary action, in the sense that along a given null generator
-$\Li$,
+$t$ of the stationary action $\Phi$, in the sense that along a given null generator\footnote{Recall that on $\Hor$, $\Phi_T(p)$ and $p$ always lie on the same null generator.},
 \be
 \label{e:sta:vPhiT_v_p_T}
     v(\Phi_T(p)) = v(p) + T.
 \ee
+In addition, we require that the non-affinity coefficient $\kappa$ of
+$\w{\chi}$ is constant along each null generator.
 The vector $\w{\chi}$ is invariant
 under the stationary action, i.e. $\Lie{\xi} \w{\chi} = 0$, so that
 $\w{\xi}$ and $\w{\chi}$ commute: $[\w{\xi}, \w{\chi}] = 0$.
@@ -2102,8 +2106,8 @@ $\Omega^{(1)}_{\Hor_{\rm p}} \neq \Omega^{(1)}_{\Hor_{\rm r}}$, and hence
 different normal Killing vectors: $\w{\chi}_{\Hor_{\rm p}} \neq \w{\chi}_{\Hor_{\rm r}}$.
 \end{remark}
 
-In the literature, the strong rigidity theorem is sometimes simply called
-the \emph{rigidity theorem}\index{rigidity theorem}, without the qualifier \emph{strong}
+In the literature, the strong rigidity theorem is sometimes called
+simply the \emph{rigidity theorem}\index{rigidity theorem}, without the qualifier \emph{strong}
 (e.g. Refs.~\cite{Choqu09,HollaI12}).
 The terminology \emph{strong rigidity}, employed in Refs.~\cite{Carte99,ChrusLH12,Heusl96},
 aims to distinguish from the so-called
