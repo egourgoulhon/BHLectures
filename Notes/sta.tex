@@ -1750,9 +1750,8 @@ respectively.
 The color code is the same as in (a) and
 labelled points ($a$, $b$, etc.) help to identify
 the two figures. A few light cones are drawn in each figure; note that $\w{\xi}$,
-being spacelike,
-lies always outside of them,
-while the null normal $\wl$ is always tangent to them.
+being spacelike, lies outside of them,
+while the null normal $\wl$ is tangent to them.
 The strong rigidity theorem (Property~\ref{p:sta:strong_rigidity_thm}) states that
 $\wl$ is collinear to a Killing vector field $\w{\chi}$, making $\Hor$
 a Killing horizon.}
@@ -1791,6 +1790,20 @@ say, such that $\w{\xi}$ and $\w{\chi}$ commute: $[\w{\xi}, \w{\chi}] = 0$ and
 $\Hor$ is a Killing horizon with respect to $\w{\chi}$.
 \end{prop}
 
+\begin{figure}
+\centerline{\includegraphics[height=0.4\textheight]{sta_axisym_sections.pdf}}
+\caption[]{\label{f:sta:axisym_sections} \footnotesize
+Action $\Psi$ induced by the spacetime stationary action $\Phi$ (Killing vector $\w{\xi}$)
+on a cross-section $\Sp$ of a rotating event horizon $\Hor$: for $p\in\Sp$ and $t\in\R$,
+$\Psi_t(p)$ is denoted by $p_1$ on the figure, while
+$p_0 = \Phi_{-t}(p)$. Similarly, for a point $q\in\Sp$
+close to $p$, $q_0 = \Phi_{-t}(q)$ and $q_1 = \Psi_t(q)$. Note that this figure is
+drawn following the same convention as Fig.~\ref{f:sta:rot_horizon}a, namely the
+null geodesic generators of $\Hor$ appear as vertical lines.
+}
+\end{figure}
+
+
 \begin{proof}[Sketch of proof]
 The proof of the strong rigidity theorem is pretty long and we
 give here only a sketch for $n=4$, referring to Hawking \& Ellis' textbook~\cite{HawkiE73} (Proposition~9.3.6)
@@ -1811,8 +1824,9 @@ any null geodesic $\Li$ of $\Hor$ to a null geodesic $\hat{\Phi}_t(\Li)$ of $\Ho
 Moreover, $\hat{\Phi}$ obeys the laws of a group action:
 obviously $\hat{\Phi}_0(\Li) = \Li$ and for any $(t_1, t_2)\in \R^2$
 and $p\in\Li$, we have
-$\Phi_{t_2 + t_1}(p)\in\hat{\Phi}_{t_2+t_1}(\Li)$ and
-$\Phi_{t_2 + t_1}(p) = \Phi_{t_2}(\Phi_{t_1}(p)) \in \hat{\Phi}_{t_2}(\hat{\Phi}_{t_1}(\Li))$,
+$\Phi_{t_2 + t_1}(p)\in\hat{\Phi}_{t_2+t_1}(\Li)$ but
+$\Phi_{t_2 + t_1}(p) = \Phi_{t_2}(\Phi_{t_1}(p)) \in \hat{\Phi}_{t_2}(\hat{\Phi}_{t_1}(\Li))$
+as well,
 from which we conclude that $\hat{\Phi}_{t_2+t_1}(\Li) = \hat{\Phi}_{t_2}(\hat{\Phi}_{t_1}(\Li))$,
 given that there is only one null geodesic generator through the point $\Phi_{t_2 + t_1}(p)$.
 Since the stationary generator $\w{\xi}$ is assumed to be spacelike on some parts
@@ -1851,13 +1865,14 @@ $\Phi_{-t}(p)$ lies in $\Hor$ since $\Hor$ is globally invariant by
 $\Phi_t$ (Property~\ref{p:sta:stationary_hor}). Let then $\Li$ be the unique
 null generator of $\Hor$ through $\Phi_{-t}(p)$. Since $\Sp$
 is a complete cross-section of $\Hor$, $\Li$ intersects $\Sp$ at a unique
-point, which we define as $\Psi_t(p)$ (cf. Fig.~??).
+point, which we define as $\Psi_t(p)$ (cf. Fig.~\ref{f:sta:axisym_sections}, where
+$\Li$ is denoted $\hat{\Phi}_{-t}(\Li_p)$).
 In other words, $\Psi_t(p)$ is obtained by displacing $p$ by a parameter $-t$ along the field lines of $\w{\xi}$ and then going back to $\Sp$ along a null generator of $\Hor$.
 Equivalently, we may write
 \be \label{e:sta:def_Psi_action}
     \Psi_t(p) = \hat{\Phi}_{-t}(\Li_p)\cap\Sp,
 \ee
-where $\Li_p$ is the null geodesic generator through $p$.
+where $\Li_p$ is the null geodesic generator through $p$ (cf. Fig.~\ref{f:sta:axisym_sections}).
 Let us check that $\Psi$ is a 1-parameter group action on $\Sp$,
 i.e. fulfills $\Psi_0(p) = p$ and $\Psi_{t_2 + t_1}(p) = \Psi_{t_2} (\Psi_{t_1} (p))$
 for any $p\in \Sp$ (cf. Sec.~\ref{s:neh:symmetries}) and $(t_1, t_2)\in \R^2$.
@@ -1882,7 +1897,7 @@ a spacetime isometry, we have
  \w{q}(\vp{pq},\vp{pq}) = \left.\w{g}\right| _p(\vp{pq},\vp{pq})
 = \left.\w{g}\right| _{p_0}(\vp{p_0q_0},\vp{p_0q_0}),
 \ee
-where $p_0 := \Phi_{-t}(p)$ and $q_0 := \Phi_{-t}(q)$.
+where $p_0 := \Phi_{-t}(p)$ and $q_0 := \Phi_{-t}(q)$ (cf. Fig.~\ref{f:sta:axisym_sections}).
 Now, $p_0$ and $q_0$ are two points of $\Sp_0 := \Phi_{-t}(\Sp)$, which
 is a complete cross-section of $\Hor$ that has no intersection with $\Sp$ for $t\neq 0$, given that $\w{\xi}$ is transverse to $\Sp$. One can then
 choose a parametrization $\lambda$ of the null generators $\Li$ of $\Hor$
@@ -1894,7 +1909,8 @@ by a family $(\Sp_\lambda)_{\lambda\in[0,1]}$ of complete cross-sections
 By denoting by $\w{q}$ the metric induced by $\w{g}$ on each of the surfaces
 $\Sp_\lambda$, we have $\left.\w{g}\right| _{p_0}(\vp{p_0q_0},\vp{p_0q_0}) = \w{q}(\vp{p_0q_0},\vp{p_0q_0})$. Now, since $\Hor$ is a non-expanding horizon and the null
 energy condition is fulfilled, the metric $\w{q}$ is preserved along $\wl$: $\vw{q}^* \Lie{\el} \w{q} = 0$[Property~\ref{p:neh:invariance_of_2metric}]. Since $p_1:= \Psi_t(p)$ and $q_1:=\Psi_t(q)$
-are obtained from $p_0$ and $q_0$ by displacement along $\wl$ (by a parameter $\delta\lambda= 1$),
+are obtained from $p_0$ and $q_0$ by the same displacement $\delta\lambda=1$
+along $\wl$ (cf. Fig.~\ref{f:sta:axisym_sections}),
 it follows that $\w{q}(\vp{p_0q_0},\vp{p_0q_0}) =  \w{q}(\vp{p_1 q_1},\vp{p_1 q_1})$.
 By combining with Eq.~(\ref{e:sta:q_pq_q0_p0q0}), we get
 $\w{q}(\vp{pq},\vp{pq}) = \w{q}(\vp{p_1q_1},\vp{p_1q_1})$, which proves that
@@ -1912,17 +1928,22 @@ The major step is to show that there exists a Killing vector
 field $\w{\chi}$ of $(\M,\w{g})$ that, on $\Hor$, is tangent to the null generators;
 it will then follow that the whole spacetime $(\M,\w{g})$ is axisymmetric,
 the generator of the $\mathrm{SO}(2)$ isometry being $T/(2\pi)(\w{\chi} - \w{\xi})$.
-We first define $\w{\chi}$ on $\Hor$ only, by demanding that $\w{\chi}$  is the vector tangent to the null generators of $\Hor$
-corresponding to a parameter $v$ of the generators that is connected to the parameter
-$t$ of the stationary action $\Phi$, in the sense that along a given null generator\footnote{Recall that on $\Hor$, $\Phi_T(p)$ and $p$ always lie on the same null generator.},
+We first define $\w{\chi}$ on $\Hor$ only, by demanding that $\w{\chi}$ is the tangent vector to the null generators $\Li$ of $\Hor$
+corresponding to a parameter $v$ of $\Li$ that is connected to the parameter
+$t$ of the stationary action $\Phi$, in the sense that for any point $p$
+of a given null generator\footnote{Recall that on $\Hor$, $\Phi_T(p)$ and $p$ always lie on the same null generator.} $\Li$,
 \be
 \label{e:sta:vPhiT_v_p_T}
     v(\Phi_T(p)) = v(p) + T.
 \ee
 The above condition is not sufficient to fully specify the parameter $v$, and hence $\w{\chi}$,
-along a null generator $\Li$. We require the supplementary condition that
+along $\Li$. We require in addition that
 the non-affinity coefficient $\kappa$ of
 $\w{\chi}$ is constant along $\Li$: $\wnab_{\w{\chi}} \kappa = 0$.
+In view of Eq.~(\ref{e:def:def_kappa}),
+this is equivalent to $\w{\chi} = - \mathrm{e}^{\rho} \, \vw{\nabla} u$
+with $\D^2\rho/\D v^2 = 0$ along $\Li$,  where $u$ is a scalar field
+such that $\Hor$ is the hypersurface $u=0$.
 By construction, the vector field $\w{\chi}$ on $\Hor$ is invariant
 under the stationary action, i.e. $\Lie{\xi} \w{\chi} = 0$, so that
 $\w{\xi}$ and $\w{\chi}$ commute: $[\w{\xi}, \w{\chi}] = 0$.
