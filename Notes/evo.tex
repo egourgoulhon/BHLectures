@@ -12,17 +12,17 @@ This chapter is in a draft stage.
 \subsection{Mass variation formula for Kerr black holes}
 
 In this section, we assume 4-dimensional general relativity.
-Let us consider an initially isolated Kerr black hole, of parameters $(m,a)$,
+Let us consider an initially isolated Kerr black hole of mass and spin parameters $(m,a)$
 that is perturbed by the arrival of some external body or some gravitational
 radiation. After some transitory dynamical regime (e.g. absorption of the
 external body and emission of gravitational waves), the black hole relaxes
 to a new equilibrium configuration. According to the
 no-hair theorem (Property~\ref{p:sta:no-hair_thm}, Sec.~\ref{s:sta:no-hair}),
 the final state has to be a Kerr black hole, of
-parameters $(m+\D m, a+\D a)$ say.
-Let us investigate how the black hole global properties evolve during the
-process. More precisely, we would like to relate the change
-in the Komar mass $M = m$ [Eq.~(\ref{e:ker:M_m})] to the change in
+parameters $(m+\D m, a+\D a)$ say. All global properties of the black
+hole (cf. Sec.~\ref{s:ker:global_quantities})
+are changed accordingly and we are going to express the change in
+the Komar mass $M = m$ [Eq.~(\ref{e:ker:M_m})] in terms of the change in
 the area $A = 8 \pi m (m + \sqrt{m^2-a^2})$ [Eq.~(\ref{e:ker:A_a_m})]
 and in the angular momentum $J = a m$ [Eq.~(\ref{e:ker:J_am})].
 
@@ -46,20 +46,20 @@ and (\ref{e:ker:def_OmegaH}) respectively. Hence we get
 \ee
 \begin{remark}
 The mass variation formula (\ref{e:evo:mass_variation}) is \emph{not}
-the mere differential of the Smarr formula (\ref{e:ker:Smarr}). Indeed, differentiating
-the latter yields
+the mere differential of the Smarr formula (\ref{e:ker:Smarr}):
+$ M =  \kappa A/(4\pi) + 2 \Omega_{\Hor} J$.
+Indeed, differentiating the latter yields
 \[
     \D M = \frac{\kappa}{4\pi} \, \D A +  \frac{A}{4\pi} \, \D \kappa
-        + 2 \Omega_{\Hor} \, \D J  + 2 J \, \D\Omega_{\Hor} ,
+        + 2 \Omega_{\Hor} \, \D J  + 2 J \, \D\Omega_{\Hor} .
 \]
-with $\D\kappa \neq 0$ and $\D\Omega_{\Hor}\neq 0$ in the process
-that makes the Kerr black hole evolve from $(m,a)$ to $(m+\D m, a+\D a)$.
-If one were (wrongly) assuming that $\D\kappa = 0$ and $\D\Omega_{\Hor} = 0$, one would
+Since $\kappa$ and $\Omega_{\Hor}$ depend on $m$ and $a$ [Eqs.~(\ref{e:ker:kappa_m_a})
+and (\ref{e:ker:def_OmegaH})], one has
+$\D\kappa \neq 0$ and $\D\Omega_{\Hor}\neq 0$ when moving
+from $(m,a)$ to $(m+\D m, a+\D a)$.
+If one were (wrongly) assuming $\D\kappa = 0$ and $\D\Omega_{\Hor} = 0$, one would
 be wrong by a factor of 2 in recovering the right-hand side of
-Eq.~(\ref{e:evo:mass_variation}). Of course, if ones
-expresses properly $\D\kappa$ and $\D\Omega_{\Hor}$ in terms of
-$\D A$, $\D J$ and $\D M$ via expressions (\ref{e:ker:kappa_m_a})
-and (\ref{e:ker:def_OmegaH}), one recovers Eq.~(\ref{e:evo:mass_variation}).
+Eq.~(\ref{e:evo:mass_variation}).
 \end{remark}
 
 \subsection{General mass variation formula} \label{s:evo:gen_mass_variation}
@@ -83,7 +83,7 @@ The mass-variation formula (\ref{e:evo:mass_variation}) for Kerr black holes
 has been first
 derived by Jacob Bekenstein\index[pers]{Bekenstein, J.D.}
 in 1973 \cite{Beken73a}. Its extension to generic stationary black hole configurations
-(Sec.~\ref{s:evo:gen_mass_variation}) has been
+(Sec.~\ref{s:evo:gen_mass_variation}) for $n=4$ has been
 obtained by James Bardeen\index[pers]{Bardeen, J.M.}, Brandon Carter\index[pers]{Carter, B.}
 and Stephen Hawking\index[pers]{Hawking, S.W.} in 1973 \cite{BardeCH73}.
 \end{hist}
@@ -91,13 +91,14 @@ and Stephen Hawking\index[pers]{Hawking, S.W.} in 1973 \cite{BardeCH73}.
 
 
 \subsection{A first law?}
+\label{s:evo:a_first_law_question}
 
 At this stage, it would be premature to call formula~(\ref{e:evo:mass_variation})
 the first law of black hole dynamics by analogy to the first law of thermodynamics
 $\D E = T \D S - P \D V$. One can reasonably interpret $\D M$
 as some energy variation and the term
 $\Omega_{\Hor} \, \D J$ as the work\footnote{In Newtonian mechanics, the
-work done by a torque $\tau$ during the time $\D t$ by which a body is rotating by $\D\ph$
+work done by a torque $\tau$ on a body that is rotating by $\D\ph$
 is $\D W = \tau \, \D\ph$. Given that $\tau := \D J/\D t$, one gets $\D W = \Omega \, \D J$, where
 $\Omega = \D\ph/\D t$ is the body's angular velocity.} performed by the torque
 that is changing by $\D J$ the angular momentum $J$ of a body rotating
@@ -146,7 +147,7 @@ $\wl = \D\w{x}/\D\lambda$ along $\Li$. The evolution of
 $\theta_{(\wl)}$ along $\Li$
 is measured by $\D\theta_{(\wl)}/\D\lambda = \wnab_{\el}\,  \theta_{(\wl)}$ and is given by
 the null Raychaudhuri equation (\ref{e:def:null_Raychaud_Ricci}).
-Owing to $\kappa=0$ (for $\wl$ is assumed to be a geodesic vector field), it simplifies to
+Owing to $\kappa=0$ (for $\wl$ is assumed to be geodesic), it simplifies to
 \[
     \derd{\theta_{(\wl)}}{\lambda}  =
         - \frac{1}{n-2} \, \theta_{(\wl)}^2
@@ -160,7 +161,8 @@ energy condition on $\Hor$. Hence
     \derd{\theta_{(\wl)}}{\lambda}  \leq
         - \frac{1}{n-2} \, \theta_{(\wl)}^2  .
 \ee
-Let us assume that at some point $p\in\Li\cap\Hor$, $\theta_{(\wl)} = \theta_0 < 0$.
+Let us assume the negation of (\ref{e:evo:theta_positive}), i.e. that there
+exists a point $p\in\Li\cap\Hor$ where $\theta_{(\wl)} = \theta_0 < 0$.
 By choosing the additive constant in the definition of the affine parameter $\lambda$,
 we may ensure $\lambda(p) = 0$.
 Equation~(\ref{e:evo:der_theta_lower}) implies then
@@ -183,10 +185,10 @@ with $0 < \lambda_* \leq -(n-2)/\theta_0$. Hence the point $p_*\in\Li$ of parame
 i.e. a point where neighboring null geodesic generators of $\Hor$ intersect.
 But according to Property~\ref{p:glo:prop3} of black hole event horizons (cf. Sec.~\ref{s:glo:properties_H}), this can happen
 only if $p_*$ is a crossover point, i.e.
-a point at which the null geodesic $\Li$ arrives in $\Hor$; however,
+a point at which the null geodesic $\Li$ enters $\Hor$; however,
 this situation is excluded since $\lambda_* > 0$ implies that $p_*$ lies in the
 future of $p$, where $\Li$ is already in $\Hor$. Hence the hypothesis
-$\theta_0 < 0$ has lead us to a contradiction. It follows that $\theta_0 \geq 0$,
+$\theta_0 < 0$ leads to a contradiction. It follows that $\theta_0 \geq 0$,
 i.e. at any point $p\in\Hor$,  $\theta_{(\wl)} \geq 0$.
 \end{proof}
 
@@ -201,7 +203,12 @@ generators of $\Hor$ (green curves).}
 
 
 
-\begin{prop}[area theorem \textnormal{(Hawking\index[pers]{Hawking, S.W.} 1971 \cite{Hawki71})}]
+\begin{prop}[area theorem \textnormal{(Hawking\index[pers]{Hawking, S.W.} 1971 \cite{Hawki71},
+Chru\'sciel\index[pers]{Chrusciel, P.T.@Chru\'sciel, P.T.},
+Delay\index[pers]{Delay, E.},
+Galloway\index[pers]{Galloway, G.J.} and Howard\index[pers]{Howard, R.} 2001
+\cite{ChrusDGH01})}]
+\label{p:evo:area_thm}
 Let $(\M,\w{g})$ be a $n$-dimensional spacetime containing a black hole
 of event horizon $\Hor$ and such that the Ricci tensor $\w{R}$ fulfills the null
 energy condition (\ref{e:neh:null_energy_cond}), i.e.
@@ -243,8 +250,8 @@ and $\Sigma_2$ on the event horizon $\Hor$ corresponding to a black hole merger.
 All solid dark green and light green curves are null geodesic generators of $\Hor$.
 The light green part of $\Hor$ is generated by null geodesics that
 entered $\Hor$ at some caustic points (three of them are indicated as
-light green dots); the part of these geodesics outside $\Hor$ is drawn as
-a light green dashed curve. The dark green dashed curves depict other null geodesics that
+light green dots); the parts of these geodesics outside $\Hor$ are drawn as
+light green dot-dashed curves. The dark green dashed curves depict other null geodesics that
 enter $\Hor$ at the same caustic points.}
 \end{figure}
 
@@ -283,16 +290,20 @@ and Eq.~(\ref{e:evo:AS2_ge_AS1}) holds.
 If $\Hor$ is not smooth between $\Sp_1$ and $\Sp_2$, this is due to the crease set\index{crease set},
 i.e. the subset of $\Hor$ where new null geodesics enter $\Hor$ (cf. Sec.~\ref{s:glo:properties_H}).
 Naively, this reinforces the inequality $A(\Sp_2) > A(\Sp_1)$ since the new geodesics
-are generating new parts of $\Hor$ and therefore additional segments for $\Sp_2$
+are generating new parts of $\Hor$ and therefore new parts of $\Sp_2$
 with respect to those that can be connected to $\Sp_1$ by null geodesic generators
 (cf. Fig.~\ref{f:evo:area_theorem}). More precisely, let us assume (ii) and
 let us consider a point $p\in\Sp_1$. Let $\Li$ be the null geodesic
 generator of $\Hor$ through $p$. By property~\ref{p:glo:prop3}, $\Li$ stays in $\Hor$ for all its future after $p$. Since $\Sigma_2$ is a Cauchy surface lying in the causal future of $\Sigma_1$, $\Li$
 necessarily intersects $\Sigma_2$ at a unique point $q \in \Sigma_2\cap\Hor = \Sp_2$.
 Hence every point of $\Sp_1$ is mapped to a point of $\Sp_2$ by a null geodesic generator.
-Let $\Sp_2^*$ be the part of $\Sp_2$ covered by this map. We may apply (i) to the pair $(\Sp_1, \Sp_2^*)$
+Let $\Sp_2^*$ be the part of $\Sp_2$ covered by this map.
+If we assume that the part of $\Hor$ between $\Sp_1$ and $\Sp_2^*$ is smooth,
+we may apply (i) to the pair $(\Sp_1, \Sp_2^*)$
 and get $A(\Sp_2^*) \geq A(\Sp_1)$. Given that $\Sp_2^* \subset \Sp_2$, one has
 $A(\Sp_2) \geq A(\Sp_2^*)$ and (\ref{e:evo:AS2_ge_AS1}) follows.
+We refer to the article \cite{ChrusDGH01} for the proof in the case where
+$\Hor$ is not assumed smooth between $\Sp_1$ and $\Sp_2^*$ (70 pages!).
 \end{proof}
 
 \begin{hist}
@@ -308,6 +319,22 @@ discussion in Sec.~3.5.1 of Chru\'sciel's textbook \cite{Chrus20}) and construct
 a new proof that does not assume the smoothness of $\Hor$.
 \end{hist}
 
-\subsection{The second law of black hole thermodynamics}
+\subsection{A second law?}
 
-
+Basically the area theorem~\ref{p:evo:area_thm} states that
+the area of cross-sections of a black hole event horizon
+cannot decrease from the past to the future.
+By its irreversible character, this property bears some resemblance
+with the second law of thermodynamics.
+By itself, this is of course not sufficient to identify the black hole area
+with some entropy (any nondecaying physical quantity has not to be an entropy!).
+However, we have seen in Sec.~\ref{s:evo:a_first_law_question} that the
+candidate $T\D S$ term for a possible first law could be $\kappa/(8\pi)\D A$.
+It is thus tempting to identify $A$ with some entropy $S$, up to some
+constant factor $\alpha$. Then the temperature $T$ would be $\kappa/(8\pi\alpha)$:
+\be
+    S = \alpha A \qand T = \frac{1}{8 \pi\alpha}\, \kappa ,
+\ee
+so that we get $T\D S = \kappa/(8\pi)\D A$ and could make
+the mass variation formula (\ref{e:evo:mass_variation}) looks pretty much like
+the first law of thermodynamics.
