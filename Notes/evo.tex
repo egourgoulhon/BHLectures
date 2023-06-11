@@ -110,7 +110,7 @@ This will be performed in the next section.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Evolution of the area of a black hole}
+\section{Evolution of the black hole area}
 
 \subsection{Hawking's area theorem}
 
@@ -306,6 +306,35 @@ We refer to the article \cite{ChrusDGH01} for the proof in the case where
 $\Hor$ is not assumed smooth between $\Sp_1$ and $\Sp_2^*$ (70 pages!).
 \end{proof}
 
+\begin{example}[Oppenheimer-Snyder collapse]
+Let us consider the black hole formed by the collapse
+of a ball of pressureless matter, as described by the Oppenheimer-Snyder
+model studied in Sec.~\ref{s:lem:OS}. Let $\Sp_{\ti}$ be a
+cross-section of the event horizon at constant ingoing Eddington-Finkelstein coordinate $\ti$.
+The area of $\Sp_{\ti}$ is simply $A = 4\pi r^2$,
+where $r$ is the areal radius (cf. Sec.~\ref{s:lem:OS:BH_formation}). Its
+evolution can thus be read directly on Fig.~\ref{f:lem:OS:diag_int_EF} (right):
+it is increasing from $A = 0$ (at $\ti\simeq 5.6\, m$) to the Schwarzschild
+value $A = 16\pi m^2$ (at $\ti\simeq 9.7\, m$). This fully agrees
+with the area theorem, given that the null energy condition
+is fulfilled by virtue of the Einstein equation (\ref{e:fra:Einstein_eq}) and the form
+(\ref{e:lem:T_pressureless})
+of the energy-momentum tensor of the collapsing matter: $\w{R}(\wl,\wl)
+= 8\pi \w{T}(\wl,\wl) = 8\pi \rho (\w{u}\cdot\wl)^2 \geq 0$ since $\rho \geq 0$.
+\end{example}
+
+\begin{example}[Vaidya collapse]
+Similarly, we check on Figs.~\ref{f:vai:diag_S0} and \ref{f:vai:diag_S2}
+that for the radiation shell collapse studied in Chap.~\ref{s:vai},
+the area of cross-sections of the event horizon
+at constant ingoing Eddington-Finkelstein coordinate $t$
+is increasing towards the future, for $r$ is again the areal radius
+[cf. the metric (\ref{e:vai:metric_IEF})]. As we have already noticed in
+Sec.~\ref{s:vai:general}, the radiation energy-momentum tensor (\ref{e:vai:ener_mom_tensor})
+fulfills the null energy condition, given that $M'(v) \geq 0$ (cf. Fig.~\ref{f:vai:mass_function}).
+\end{example}
+
+
 \begin{hist}
 The area theorem has been first established by Stephen Hawking\index[pers]{Hawking, S.W.}
 in 1971 \cite{Hawki71} and a detailed proof was given in
@@ -332,9 +361,52 @@ However, we have seen in Sec.~\ref{s:evo:a_first_law_question} that the
 candidate $T\D S$ term for a possible first law could be $\kappa/(8\pi)\D A$.
 It is thus tempting to identify $A$ with some entropy $S$, up to some
 constant factor $\alpha$. Then the temperature $T$ would be $\kappa/(8\pi\alpha)$:
-\be
+\be \label{e:evo:identif_S_T}
     S = \alpha A \qand T = \frac{1}{8 \pi\alpha}\, \kappa ,
 \ee
-so that we get $T\D S = \kappa/(8\pi)\D A$ and could make
-the mass variation formula (\ref{e:evo:mass_variation}) looks pretty much like
+so that we get $T\D S = \kappa/(8\pi)\D A$, making
+the mass variation formula (\ref{e:evo:mass_variation}) look pretty much like
 the first law of thermodynamics.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Zeroth and Third laws of black hole dynamics}
+
+\subsection{Zeroth law}
+
+We have already established a so-called \emph{zeroth law of black hole dynamics}
+in Chap.~\ref{s:neh}: Property~\ref{p:neh:zeroth_law}, which states that
+if the null dominant energy condition is fulfilled, the surface gravity
+$\kappa$ of a Killing horizon is constant. Now, by Properties~\ref{p:sta:H_Killing_hor_xi_null}
+and \ref{p:sta:strong_rigidity_thm}, (a connected component of) the event horizon
+of a stationary black hole must be a Killing horizon. Hence, we may extend
+the zeroth law to black holes\index{zeroth law of BH dynamics}:
+
+\begin{prop}[zeroth law of black hole dynamics]
+Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 4$ containing a black
+hole. Let $\Hor$ be a connected component of the black hole event horizon.
+If the null dominant energy condition [Eq.~(\ref{e:neh:null_dominant_cond})]
+is fulfilled on $\Hor$ and under the hypotheses of
+Property~\ref{p:sta:strong_rigidity_thm} if $\Hor$ is rotating
+(i.e. if the stationary Killing vector $\w{\xi}$ is spacelike on some parts
+of $\Hor$), then the surface gravity $\kappa$ is constant over $\Hor$.
+\end{prop}
+
+This property bears a strong resemblance with
+the zeroth law of thermodynamics: the temperature of a body in equilibrium
+is uniform over the entire body.
+This strengthens the interpretation of the surface gravity
+$\kappa$ as the temperature $T$ (up to some factor) performed in
+Eq.~(\ref{e:evo:identif_S_T}).
+
+
+\subsection{Third law}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Black hole thermodynamics}
+
+\subsection{The four laws}
+
+\subsection{Hawking radiation and Bekenstein-Hawking entropy}
