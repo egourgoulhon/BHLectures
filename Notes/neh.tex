@@ -495,27 +495,32 @@ common to use the shorthand notation
 \be
         \Phi_t := \Phi_{g_t} .
 \ee
-Because $G$ is a 1-dimensional Lie group, the orbit of a given point $p\in\M$ under the group action is then either $\{p\}$ (when $p$ is a fixed point of the
-group action) or a curve of $\M$. In the latter case,
-$t$ is a natural parameter along the curve (cf. Fig.~\ref{f:neh:orbit_group}). The tangent vector corresponding to that parameter is called the \defin{generator of the group} $G$
-(associated with the $t$-parametrization). At each point $p$ of
-an orbit, it is given by
+When $G$ is a 1-dimensional Lie group, the orbit of a given point $p\in\M$ under the group action is then either $\{p\}$ (when $p$ is a fixed point of the
+group action) or a curve $\Li_p$ of $\M$. In the latter case,
+$t$ is a natural parameter along $\Li_p$ (cf. Fig.~\ref{f:neh:orbit_group}). The tangent vector $\w{\xi}$ to $\Li_p$
+corresponding to that parameter is called the \defin{generator of the group} $G$
+(associated with the $t$-parametrization of $G$). At each point of
+the orbit $\Li_p$, it is given by
+(cf. Sec.~\ref{s:bas:vectors} and Fig.~\ref{f:neh:orbit_group})
 \be \label{e:neh:xi_dxdt}
-    \w{\xi} = \frac{\D\w{x}}{\D t} ,
+    \w{\xi} = \left. \frac{\D\w{x}}{\D t} \right|_{\Li_p} .
 \ee
-where $\D\w{x}$ is the infinitesimal vector connecting the point $p$ to the point
-$\Phi_{\D t}(p)$ (cf. Sec.~\ref{s:bas:vectors} and Fig.~\ref{f:neh:orbit_group}).
-Hence we may say:
-\begin{prop}
-The group action limited to infinitesimal transformations of parameter
-$\D t$ around the identity ($\D t =0$) amounts to translations by the infinitesimal vector $\D t\, \w{\xi}$.
+We can extend $\w{\xi}$ to a vector field on all $\M$, by varying $p$
+over $\M$ and setting $\w{\xi} = 0$ if $p$ is a fixed point
+of the group action.
+For any $p\in\M$ and $\D t$ infinitesimal, the (infinitesimal)
+vector connecting $p$ to $\Phi_{\D t}(p)$ is then $\D\w{x} = \D t \, \w{\xi}$
+(cf. Fig.~\ref{f:neh:orbit_group}), so that we may state:
+\begin{prop}[infinitesimal transformations as displacements along the generator]
+A 1-dimensional group action limited to infinitesimal transformations of parameter
+$\D t$ around the identity ($\D t =0$) amounts to displacements by the infinitesimal vector $\D t\, \w{\xi}$, where $\w{\xi}$ is the generator of the group.
 \end{prop}
 
 \begin{figure}
 \centerline{\includegraphics[height=0.25\textheight]{def_orbit_group.pdf}}
 \caption[]{\label{f:neh:orbit_group} \footnotesize
-Orbit of a point $p$ under the action $\Phi$ of a 1-dimensional Lie group, parameterized
-by $t\in\R$. The vector $\w{\xi} = \D\w{x}/\D t$ is the group
+Orbit $\Li_p$ of a point $p$ under the action $\Phi$ of a 1-dimensional Lie group, parameterized
+by $t\in\R$. The tangent vector $\w{\xi} = \left. \D\w{x}/\D t \right| _{\Li_p}$ is the group
 generator associated with this parameter.}
 \end{figure}
 
@@ -563,7 +568,7 @@ pullback of $\w{g}$ by $\Phi_t$:
     \Phi_t^*\w{g} = \w{g} .
 \ee
 According the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie
-derivative, we have
+derivative\index{Lie!derivative}, we have
 \be
     \Lie{\xi} \w{g} := \lim_{t \rightarrow 0} \frac{1}{t}
     \left( \Phi_t^*\w{g} - \w{g} \right) .
