@@ -269,7 +269,7 @@ has the topology of the 2-sphere (i.e. $\Sp$ is
 \emph{homeomorphic}\index{homeomorphic} to $\SS^2$).
 \end{prop}
 \begin{proof}
-Let $\Sp$ be a connected component of a cross-section of the event horizon $\Hor$.
+Let $\Sp$ be a connected component of a complete cross-section of the event horizon $\Hor$.
 We assume that $\Sp$ is closed (compact without boundary) and orientable.
 Let $\wl$ be a future-directed null normal to $\Hor$ and $\w{k}$ a complementary
 future-directed null vector field
@@ -296,7 +296,7 @@ Eq.~(5.1) of \cite{Cao11} or Eq.~(36) of \cite{Jaram13})
 expresses $\Lie{k}\theta_{(\wl)}$ as
 \be \label{e:sta:Lie_k_theta_l}
     \Lie{k} \theta_{(\wl)} = - \frac{1}{2} {}^\Sp\!\! R - \DSc_a \Omega^a
-    +  \Omega_a \Omega^a + \w{G}(\w{k},\wl) ,
+    +  \Omega_a \Omega^a + \w{G}(\wl,\w{k}) ,
 \ee
 where ${}^\Sp\!\! R$ is the Ricci scalar of the Riemannian metric $\w{q}$ on
 $\Sp$ induced by the spacetime metric $\w{g}$, $\DS$ is the Levi-civita
@@ -310,8 +310,8 @@ $\Sp$: $\w{\Omega} = \w{\omega} \circ \vw{q}$.
 In view of Eq.~(\ref{e:def:omega_restrict_H}), we may then write
 $\langle\w{\Omega}, \w{v} \rangle = - \w{k} \cdot\wnab_{\vw{q}(\w{v})} \w{\ell}$,
 or in index notation, $\Omega_\alpha  = - k_\mu \nabla_\nu \el^\mu q^\nu_{\ \, \alpha}$.
-Using Eq.~(\ref{e:neh:null_dominant_cond}), we may express $\w{G}(\w{k},\wl)$
-as $\w{G}(\w{k},\wl) = \w{G}(\wl, \w{k}) = - \w{W}\cdot\w{k} - f \wl\cdot \w{k} = - \w{W}\cdot\w{k} + f$.
+Besides, using Eq.~(\ref{e:neh:null_dominant_cond}), we have
+$\w{G}(\wl, \w{k}) = \vw{G}(\wl)\cdot\w{k} = - \w{W}\cdot\w{k} - f \wl\cdot \w{k} = - \w{W}\cdot\w{k} + f$.
 Then, integrating (\ref{e:sta:Lie_k_theta_l}) over the compact manifold $\Sp$
 and setting the integral of the divergence term $\DSc_a \Omega^a$ to zero since
 $\Sp$ has no boundary, we get
@@ -1735,7 +1735,9 @@ in Sec.~\ref{s:sta:BH_stationary} (Property~\ref{p:sta:xi_tangent_H}).
 
 \begin{figure}
 \centerline{\includegraphics[height=0.4\textheight]{sta_rot_horizon_gen.pdf}
-\qquad\includegraphics[height=0.4\textheight]{sta_rot_horizon_kil.pdf}}
+\textbf{\large (a)}
+\quad\includegraphics[height=0.4\textheight]{sta_rot_horizon_kil.pdf}
+\textbf{\large (b)}}
 \caption[]{\label{f:sta:rot_horizon} \footnotesize
 Event horizon $\Hor$ with cross-sections of $\SS^2$ topology
 and with a stationary Killing vector field $\w{\xi}$ that is
@@ -1910,7 +1912,8 @@ by a family $(\Sp_\lambda)_{\lambda\in[0,1]}$ of complete cross-sections
 (same construction as in the proof of Property~\ref{p:neh:invariance_area}).
 By denoting by $\w{q}$ the metric induced by $\w{g}$ on each of the surfaces
 $\Sp_\lambda$, we have $\left.\w{g}\right| _{p_0}(\vp{p_0q_0},\vp{p_0q_0}) = \w{q}(\vp{p_0q_0},\vp{p_0q_0})$. Now, since $\Hor$ is a non-expanding horizon and the null
-energy condition is fulfilled, the metric $\w{q}$ is preserved along $\wl$: $\vw{q}^* \Lie{\el} \w{q} = 0$[Property~\ref{p:neh:invariance_of_2metric}]. Since $p_1:= \Psi_t(p)$ and $q_1:=\Psi_t(q)$
+energy condition is fulfilled, the metric $\w{q}$ is preserved along
+$\wl$: $\vw{q}^* \Lie{\el} \w{q} = 0$ [Property~\ref{p:neh:invariance_of_2metric}]. Since $p_1:= \Psi_t(p)$ and $q_1:=\Psi_t(q)$
 are obtained from $p_0$ and $q_0$ by the same displacement $\delta\lambda=1$
 along $\wl$ (cf. Fig.~\ref{f:sta:axisym_sections}),
 it follows that $\w{q}(\vp{p_0q_0},\vp{p_0q_0}) =  \w{q}(\vp{p_1 q_1},\vp{p_1 q_1})$.
