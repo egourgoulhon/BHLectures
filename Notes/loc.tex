@@ -85,7 +85,37 @@ Trapped surfaces are the key ingredient of Penrose's singularity theorem,
 which basically states that, modulo some assumptions, if gravity is
 strong enough that a trapped surface occurs, then some singularity will
 appear in the future of it.
-Before stating the theorem, let us recall a few definitions.
+Before stating the theorem, let us recall a few concept on which it relies.
+
+First of all, a \defin{Cauchy surface}\index{Cauchy!surface}
+$\Sigma$ of a spacetime $(\M,\w{g})$ is a spacelike
+hypersurface such that every inextendible timelike curve of $\M$
+intersects $\Sigma$ exactly once (cf. Sec.~\ref{s:sta:BH_stationary}). If $(\M,\w{g})$
+admits a Cauchy surface, it is said to be a
+\defin{globally hyperbolic}\index{globally!hyperbolic} spacetime.
+On such a spacetime, general relativity can be formulated as a well posed
+Cauchy problem \cite{ChoquG69},
+i.e. there exists a unique solution $\w{g}$ of the Einstein equation
+in $\M$ from initial data prescribed on $\Sigma$, provided that the initial data
+fulfill four components of the Einstein equations known as the
+\emph{constraint equations}\index{constraint!equations}.
+
+The second concept involved in Penrose's theorem is that of
+an \emph{inextendible incomplete} geodesic. As stated in
+Appendix~\ref{s:geo} (Sec.~\ref{s:geo:existence_uniqueness}), a
+geodesic $\Li$ of a spacetime $(\M,\w{g})$ is \defin{incomplete}\index{incomplete geodesic}\index{geodesic!incomplete --} if some affine parameter $\lambda$ does take all
+possible real values along the whole of $\Li$.
+Given that any two affine parameters are related by
+an affine transformation, if this holds for a given affine parameter, this holds for all.
+More precisely, if $\Li$ is a causal (i.e. timelike or null) geodesic and $\lambda$ is increasing to the future, one says that $\Li$
+is \defin{future-incomplete}\index{future!incomplete geodesic}\index{geodesic!future-incomplete --}\index{incomplete!future -- geodesic} if, and only if, $\lambda$ spans the interval
+$(-\infty,\lambda_{\rm max})$ along $\Li$, for some $\lambda_{\rm max}\in\R$.
+Similarly, one says that $\Li$
+is \defin{past-incomplete}\index{past!incomplete geodesic}\index{geodesic!past-incomplete --}\index{incomplete!past -- geodesic} if, and only if,
+$\lambda\in(\lambda_{\rm min},+\infty)$ along $\Li$, for some $\lambda_{\rm min}\in\R$.
+Furthermore, a geodesic $\Li$ is said \defin{inextendible}\index{inextendible geodesic}\index{geodesic!inextendible --} if, and only if,
+there does not exist any geodesic $\Li'$ of $(\M,\w{g})$ distinct from $\Li$
+and such that $\Li\subset\Li'$.
 
 
 \begin{prop}[Penrose's singularity theorem \textnormal{(Penrose 1965 \cite{Penro65})}]
@@ -98,7 +128,7 @@ $\w{g}$'s Ricci tensor;
 \item there exists a trapped surface $\Sp$.
 \end{itemize}
 Then there exists at least one null geodesic emerging orthogonally from $\Sp$
-that is inextendible and incomplete towards the future.
+that is inextendible and future-incomplete.
 \end{prop}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
