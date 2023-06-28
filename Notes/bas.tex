@@ -1145,26 +1145,26 @@ infinitesimal vector at $q$ and we
 define the transport by the distance $\varepsilon$ of the vector $\w{v}(p)$
 along the field lines of $\w{u}$ according to
 \be \label{e:bas:def_Phi_eps}
-    \Phi_\varepsilon^*(\w{v}(p)) := \frac{1}{\lambda} \, \overrightarrow{qq'}.
+    \Phi_{\veps*}(\w{v}(p)) := \frac{1}{\lambda} \, \overrightarrow{qq'}.
 \ee
-$\Phi_\varepsilon^*(\w{v}(p))$ is a vector in $T_q\M$.
-The map $\Phi_\varepsilon^*: T_p\M \rightarrow T_q\M$
+$\Phi_{\veps*}(\w{v}(p))$ is a vector in $T_q\M$.
+The map $\Phi_{\veps*}: T_p\M \rightarrow T_q\M$
 hence defined is called the \defin{pushforward}\index{pushforward}
 of the flow map $\Phi_\varepsilon$. Actually it is nothing but
 the \emph{differential}\index{differential!of a smooth map}
 of the flow map $\Phi_\varepsilon: \M \rightarrow \M$,
 as defined in Sec.~\ref{s:bas:embed}:
 \be
-    \Phi_\varepsilon^*(\w{v}(p)) = \left.\D\Phi_\varepsilon \right| _p ((\w{v}(p)) .
+    \Phi_{\veps*}(\w{v}(p)) = \left.\D\Phi_\varepsilon \right| _p ((\w{v}(p)) .
 \ee
-We may then subtract the vector $\Phi_\varepsilon^*(\w{v}(p))$ from the
+We may then subtract the vector $\Phi_{\veps*}(\w{v}(p))$ from the
 actual value of the field $\w{v}$ at $q=\Phi_\varepsilon(p)$ and define the \defin{Lie derivative}\index{Lie!derivative}
 of $\w{v}$ along $\w{u}$ at the point $p$ by
 \be \label{e:bas:def_Lie_der}
     \encadre{
     \Lie{u} \w{v} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
     \left[ \w{v}\left(\Phi_\varepsilon(p)\right)
-        - \Phi_\varepsilon^*\left(\w{v}(p)\right) \right] }.
+        - \Phi_{\veps*}\left(\w{v}(p)\right) \right] }.
 \ee
 
 \begin{figure}
@@ -1176,7 +1176,7 @@ vector field $\w{v}$ along a vector field $\w{u}$:
 given a small parameter $\lambda$, each extremity of the arrow
 $\lambda\w{v}$ is dragged by some small parameter $\varepsilon$
 along $\w{u}$, to form
-the vector denoted by $\Phi_\varepsilon^*(\lambda\w{v})$. The latter is then compared with
+the vector denoted by $\Phi_{\veps*}(\lambda\w{v})$. The latter is then compared with
 the actual value of $\lambda\w{v}$ at the point $q$, the difference (divided
 by $\lambda\varepsilon$) defining the Lie derivative $\Lie{u}\w{v}$.}
 \end{figure}
@@ -1243,13 +1243,13 @@ $\wnab$ associated with some metric $\w{g}$, yielding
 If $\w{T}$ is tensor field of type $(0,\ell)$ on $\M$ (with $\ell \geq 1$)
 its \defin{pullback}\index{pullback}
 by the flow map
-$\Phi_\varepsilon$ is the tensor field $\Phi_\varepsilon^*\w{T}$ of type $(0,\ell)$
+$\Phi_\varepsilon$ is the tensor field $\Phi_\veps^*\w{T}$ of type $(0,\ell)$
 defined by applying $\w{T}$ to pushforwarded vectors:
 \be \label{e:bas:def_pullback}
     \forall (\w{v}_1,\ldots,\w{v}_\ell)\in (T_p\M)^\ell,\quad
-    \left. \Phi_\varepsilon^*\w{T}\right| _p(\w{v}_1,\ldots,\w{v}_\ell) :=
-        \left.\w{T}\right| _{\Phi_\varepsilon(p)} \left( \Phi_\varepsilon^*(\w{v}_1),
-         \ldots, \Phi_\varepsilon^*(\w{v}_\ell) \right) .
+    \left. \Phi_\veps^*\w{T}\right| _p(\w{v}_1,\ldots,\w{v}_\ell) :=
+        \left.\w{T}\right| _{\Phi_\varepsilon(p)} \left( \Phi_{\veps*}(\w{v}_1),
+         \ldots, \Phi_{\veps*}(\w{v}_\ell) \right) .
 \ee
 The \defin{Lie derivative} of $\w{T}$ along $\w{u}$ is then defined
 by comparing the pullback image at some point $p$ to the actual value
@@ -1320,14 +1320,6 @@ Note that this formula is a direct consequence of (\ref{e:Lie_der_comp})
 since in adapted coordinates, $u^\alpha = (1,0,\ldots,0)$, so that
 $u^\mu \dert{}{x^\mu} = \dert{}{x^0}$ and $\dert{u^\alpha}{x^\beta} = 0$.
 
-\begin{remark}
-We use the same notation $\Phi_\varepsilon^*$ to denote the pushforward
-and pullback operators associated with the differentiable map $\Phi_\varepsilon$.
-In the mathematical literature (e.g. \cite{Lee13}), the pushforward operator is usually
-denoted with the star as a subscript rather than a superscript, i.e.
-$(\Phi_\varepsilon)_*$, the superscript notation being reserved for the
-pullback operator.
-\end{remark}
 
 \subsection{Exterior derivative} \label{s:bas:ext_deriv}
 
