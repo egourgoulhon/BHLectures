@@ -174,9 +174,10 @@ $\left. \D\w{x}/\D\bar\lambda \right| _{\bar{\Li}}= \w{k}$.
 By hypothesis, $\Li$ and $\bar{\Li}$ are future-complete.
 Since $\Sp$ is a trapped surface, $\theta_0 := \left. \theta_{(\wl)} \right| _{\Sp} < 0$
 and $\bar\theta_0 := \left. \theta_{(\w{k})} \right|_{\Sp}<0$.
-Then, the null energy condition $\w{R}(\wl,\wl) \geq 0$ implies, via the
+Then, thanks to the
 null Raychaudhuri equation\index{null!Raychaudhuri equation}\index{Raychaudhuri!null --  equation}
-(\ref{e:def:null_Raychaud_Ricci}), that there exists $\lambda_* \in (0, (n-2)/|\theta_0|]$
+(\ref{e:def:null_Raychaud_Ricci}),
+the null energy condition $\w{R}(\wl,\wl) \geq 0$ implies that there exists $\lambda_* \in (0, (n-2)/|\theta_0|]$
 such that $\theta_{(\wl)} \to -\infty$ for $\lambda\to \lambda_*$ along $\Li$.
 The reasoning is exactly the same at that used in the proof of
 Property~\ref{p:evo:positive_expansion} and we shall
@@ -198,8 +199,37 @@ Let
 Since $\Sp$ is compact, $\lambda_{\rm max}$ and $\bar\lambda_{\rm max}$ are finite.
 Let us then consider the map $f: \Sp \times [0,\lambda_{\rm max}] \to \M$,
 $(p,\lambda) \mapsto q$, where $q$ is the point of affine parameter $\lambda$
-on the null geodesic of the $\Li$ family through $p$.
+on the null geodesic of the $\Li$-family through $p$.
+Since all the $\Li$ geodesics are assumed to be future-complete, $f$ is well defined.
+Moreover, $f$ is clearly continuous. Then, given that
+$\Sp \times [0,\lambda_{\rm max}]$ is a compact set, the image set
+$f(\Sp \times [0,\lambda_{\rm max}])$ is necessarily compact. Similarly, the image set
+$\bar{f}(\Sp \times [0,\bar\lambda_{\rm max}])$ is compact, where
+$\bar{f}: \Sp \times [0,\bar\lambda_{\rm max}] \to \M$, $(p,\lambda) \mapsto \bar{q}$ --- the point of affine parameter $\bar\lambda$
+on the null geodesic of the $\bar{\Li}$-family through $p$.
+The set
+\[
+    \mathscr{V} := f\left(\Sp \times [0,\lambda_{\rm max}]\right)
+        \cup \bar{f}\left(\Sp \times [0,\bar\lambda_{\rm max}]\right)
+\]
+is then a compact subset of $\M$, as the union of two such sets. By construction, for each $p\in\Sp$, the
+point $q = f(p,\lambda_{\rm max})$ (resp. $\bar{q} = f(p,\lambda_{\rm max})$)
+lies beyond the caustic point on the geodesic $\Li$ (resp. $\bar{\Li}$)
+through $p$. It follows that $\mathscr{F} \subset \mathscr{V}$. Given that $\mathscr{F}$
+is closed, being a topological boundary ($\mathscr{F} := \partial J^+(\Sp)$),
+and $\mathscr{V}$ is compact, we conclude that $\mathscr{F}$ is compact.
 
+Because $(\M,\w{g})$ admits a Cauchy surface $\Sigma$, there exists a
+congruence of timelike curves $\mathscr{C}$ in $\M$, such that
+each point of $\M$ is connected to $\Sigma$ by a unique curve $\mathscr{C}$.
+We may then define a map $\Phi: \mathscr{F} \to \Sigma$,
+$p \mapsto \mathscr{C}_p \cap \Sigma$, where $\mathscr{C}_p$ is the unique
+timelike curve of the $\mathscr{C}$ congruence through $p$.
+The map $\Phi$ is clearly continuous. Moreover, it is injective given that
+$\mathscr{F}$ is achronal (if a point $q\in\Sigma$ was the image of two distincts
+points $p$ and $p'$ of $\mathscr{F}$, this would mean that $p$ and $p'$
+are connected by a timelike curve, namely a segment of $\mathscr{C}_p$).
+$\Phi$ is then a continuous bijective map from $\mathscr{F}$ to $\Phi(\mathscr{F})$.
 \end{proof}
 
 \subsection{Hawking \& Penrose's singularity theorem}
