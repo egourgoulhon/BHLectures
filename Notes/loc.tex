@@ -141,9 +141,65 @@ that is inextendible and future-incomplete.
 We shall prove the theorem by contradiction. Hence let us assume that all
 null geodesics emerging orthogonally from $\Sp$ are future-complete. Let $\mathscr{F}$
 be the boundary of the causal future of $\Sp$
-(cf. Sec.~\ref{s:glo:causal_struct}): $\mathscr{F} = \partial J^+(\Sp)$.
-$\mathscr{F}$ is a so-called \defin{achronal boundary}\index{achronal!boundary}\index{boundary!achronal},
+(cf. Sec.~\ref{s:glo:causal_struct}): $\mathscr{F} := \partial J^+(\Sp)$.
+$\mathscr{F}$ is an \emph{achronal boundary}\index{achronal!boundary}\index{boundary!achronal},
 namely the boundary of the causal future or past of a given set.
+As mentioned in Sec.~\ref{s:glo:properties_H} (Remark~\ref{r:glo:achronal_boundaries}),
+the properties of an achronal boundary are the same as those established for a black hole event horizon
+$\Hor = \partial J^-(\scri^+) \cap \M$ (Properties~\ref{p:glo:prop1} to \ref{p:glo:prop4}),
+provided one changes \emph{future} to \emph{past} when appropriate.
+It follows that $\mathscr{F}$ is an achronal $(n-1)$-dimensional topological manifold
+(Properties~\ref{p:glo:prop1} and \ref{p:glo:prop2}) that is ruled by null geodesics,
+called the \emph{generators}\index{generator!of an achronal boundary} of $\mathscr{F}$,
+obeying the following properties (Property~\ref{p:glo:prop3}):
+once followed to the past, a generator never leaves $\mathscr{F}$ until it encounters $\Sp$
+and there is a unique generator through each point of $\mathscr{F}$, except at special
+points, named \emph{crossovers}\index{crossover point}, where the generators leave
+$\mathscr{F}$, i.e. are future-extended to null geodesics of $\M$ that do not belong
+to $\mathscr{F}$.
+
+We actually need an additional property of $\mathscr{F}$,
+which has not been established in Sec.~\ref{s:glo:properties_H}:
+on  $\Sp$ (which is part of $\mathscr{F}$, cf. Sec.~\ref{s:glo:causal_struct}),
+the generators of $\mathscr{F}$ are orthogonal to $\Sp$ (cf. e.g. Theorem~9.3.11
+in Wald's textbook~\cite{Wald84}). They therefore start from $\Sp$ along
+the two null directions $\wl$ and $\w{k}$ normal to $\Sp$. Let us denote by $\Li$ the null
+generators along $\wl$ and by $\lambda$ the affine parameter of $\Li$
+such that, on $\Sp$, $\lambda = 0$ and $\left. \D\w{x}/\D\lambda\right| _\Li = \wl$. We shall use
+the latter relation to extended the definition of $\wl$ along $\Li$
+away from $\Sp$. Similarly, let us denote by $\bar{\Li}$ the null
+generators along $\w{k}$ and by $\bar\lambda$ the affine parameter of $\bar{\Li}$
+such that $\bar\lambda = 0$ on $\Sp$ and
+$\left. \D\w{x}/\D\bar\lambda \right| _{\bar{\Li}}= \w{k}$.
+By hypothesis, $\Li$ and $\bar{\Li}$ are future-complete.
+Since $\Sp$ is a trapped surface, $\theta_0 := \left. \theta_{(\wl)} \right| _{\Sp} < 0$
+and $\bar\theta_0 := \left. \theta_{(\w{k})} \right|_{\Sp}<0$.
+Then, the null energy condition $\w{R}(\wl,\wl) \geq 0$ implies, via the
+null Raychaudhuri equation\index{null!Raychaudhuri equation}\index{Raychaudhuri!null --  equation}
+(\ref{e:def:null_Raychaud_Ricci}), that there exists $\lambda_* \in (0, (n-2)/|\theta_0|]$
+such that $\theta_{(\wl)} \to -\infty$ for $\lambda\to \lambda_*$ along $\Li$.
+The reasoning is exactly the same at that used in the proof of
+Property~\ref{p:evo:positive_expansion} and we shall
+not repeat it here. The point $\lambda=\lambda_*$ on $\Li$ is a caustic point,
+where all nearby geodesics starting from $\Sp$ along $\wl$ converge.
+Given the properties of $\mathscr{F}$, we conclude that for $\lambda > \lambda_*$, $\Li$
+ceases to a be null generator of $\mathscr{F}$, i.e.
+$\Li_{\lambda > \lambda_*} \not\in \mathscr{F}$.
+Similarly, along $\bar{\Li}$,
+$\theta_{(\w{k})} \to -\infty$ for $\bar\lambda\to \bar\lambda_*$
+with $\bar\lambda_* \in (0, (n-2)/|\bar\theta_0|]$, so that
+$\bar{\Li}_{\bar\lambda > \bar\lambda_*} \not\in \mathscr{F}$.
+Let
+\[
+    \lambda_{\rm max} := \sup_{p\in\Sp} \left(  \frac{n-2}{|\theta_{(\wl)} (p)|} \right)
+    \qand
+    \bar\lambda_{\rm max} := \sup_{p\in\Sp} \left(  \frac{n-2}{|\bar\theta_{(\w{k})}(p)|} \right)    .
+\]
+Since $\Sp$ is compact, $\lambda_{\rm max}$ and $\bar\lambda_{\rm max}$ are finite.
+Let us then consider the map $f: \Sp \times [0,\lambda_{\rm max}] \to \M$,
+$(p,\lambda) \mapsto q$, where $q$ is the point of affine parameter $\lambda$
+on the null geodesic of the $\Li$ family through $p$.
+
 \end{proof}
 
 \subsection{Hawking \& Penrose's singularity theorem}
