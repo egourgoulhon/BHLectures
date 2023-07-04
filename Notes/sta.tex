@@ -50,7 +50,7 @@ they are Kerr black holes, to be explored in Part.~\ref{P:ker}.
 \begin{greybox}
 A spacetime $(\M,\w{g})$ is called \defin{stationary}\index{stationary!spacetime}
 iff (i) it is invariant under
-the action of the translation group $(\mathbb{R},+)$ and (ii) the orbits of
+the action of the translation group $(\R,+)$ and (ii) the orbits of
 the group action (cf. Sec.~\ref{s:neh:symmetries})
 are everywhere timelike curves or (ii') $(\M,\w{g})$
 admits a conformal completion (cf. Sec.~\ref{s:glo:conf_compl})
@@ -76,6 +76,22 @@ Heusler \cite{Heusl96},
 Chru\'sciel, Lopes Costa \& Heusler \cite{ChrusLH12}
 and Choquet-Bruhat \cite{Choqu09}.
 \end{remark}
+
+The Killing vector field $\w{\xi}$ is a priori not unique: the translation group $(\R,+)$
+admits the reparametrizations
+$t\mapsto t' = \alpha t$, where $\alpha$ is a nonzero constant, which yield
+the rescallings $\w{\xi} \mapsto \w{\xi'} = \alpha^{-1} \w{\xi}$
+of the Killing vector fields [cf. Eq.~(\ref{e:neh:xi_dxdt})]. When the
+spacetime admits a conformal boundary $\scri$ --- which is required if a black hole
+is present, given the definition (\ref{e:glo:def_BH}) ---, then
+one selects $\w{\xi}$ by demanding that
+\be \label{e:sta:xi_scri}
+    \w{\xi}\cdot\w{\xi} \to -1 \quad \mbox{near\ } \scri .
+\ee
+This determines $\w{\xi}$ uniquely, up to a factor $\pm 1$, since this fixes
+the rescaling constant $\alpha$ to $\pm 1$. If the spacetime is time-orientable, one
+can get rid of the $\pm 1$ ambiguity by demanding that $\w{\xi}$
+is future-oriented near $\scri$.
 
 If the stationary spacetime is endowed with electromagnetic and/or
 matter fields, they must respect the stationarity as well. For the electromagnetic
@@ -742,8 +758,8 @@ on the null 2-plane of equation $t=x$, $y=0$.
 
 \begin{hist} \label{h:sta:Boyer}
 The concept of bifurcate Killing horizons has been introduced by Robert H. Boyer\index[pers]{Boyer, R.H.}
-(1932-1966), a young American mathematical physicist just appointed to the University
-of Liverpool. Sadly, Boyer was killed, among 14 victims, in a mass murder that
+(1932-1966), a young American mathematical physicist who had just been appointed
+to the University of Liverpool. Sadly, Boyer was killed, among 14 victims, in a mass murder that
 occurred in the University of Texas at Austin on 1 August 1966.
 His last notes, containing the definition of a bifurcate Killing horizon
 and the proof of Property~\ref{p:sta:Boyer_thm}, have been turned into an article
@@ -766,7 +782,8 @@ of \emph{Komar angular momentum}, which we shall introduce in Sec.~\ref{s:sta:Ko
 
 Let $(\M, \w{g})$ be an asymptotically flat spacetime of dimension $n \geq 4$
 that is stationary,
-with stationary Killing vector $\w{\xi}$.
+with stationary Killing vector $\w{\xi}$, normalized such that $\w{\xi}\cdot\w{\xi} \to -1$
+near the asymptotic boundary [Eq.~(\ref{e:sta:xi_scri})].
 Given a spacelike closed $(n-2)$-surface $\Sp\subset\M$,
 the \defin{Komar mass over}\index{Komar!mass}\index{mass!Komar --} $\Sp$ is
 defined by
