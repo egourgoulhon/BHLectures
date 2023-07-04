@@ -278,12 +278,17 @@ is fulfilled on $\Hor$ for some scalar field $f \geq 0$
 this is equivalent to assuming $\Lambda \geq 0$ and
 the matter dominant null energy condition (\ref{e:neh:null_dominant_cond_T})]
 and (ii) when
-displaced into the black hole region along the ingoing null normal $\w{k}$, the
-cross-sections of $\Hor$ become surfaces with $\theta_{(\wl)} < 0$.
+displaced into the black hole exterior along $-\w{k}$ (the opposite of
+the ingoing null normal $\w{k}$ to $\Sp$), the
+cross-sections of $\Hor$ become surfaces with $\theta_{(\wl)} > 0$.
 Then, any connected component $\Sp$ of a complete cross-section of $\Hor$
-has the topology of the 2-sphere (i.e. $\Sp$ is
-\emph{homeomorphic}\index{homeomorphic} to $\SS^2$).
+has \emph{generically} the topology of the 2-sphere (i.e. $\Sp$ is
+\emph{homeomorphic}\index{homeomorphic} to $\SS^2$). The non-generic case
+is that of $\Sp$ having the topology of the 2-torus $\mathbb{T}^2 = \SS^1\times\SS^1$. It can occur
+only under special circumstances, when the metric induced by $\w{g}$ on $\Sp$
+is flat.
 \end{prop}
+
 \begin{proof}
 Let $\Sp$ be a connected component of a complete cross-section of the event horizon $\Hor$.
 We assume that $\Sp$ is closed (compact without boundary) and orientable.
@@ -298,15 +303,16 @@ is the level set $u=0$ of 1-parameter family of hypersurfaces $(\Hor_u)_{u\in\R}
 This extends $\wl$ in the vicinity of $\Hor$ via Eq.~(\ref{e:def:wl_rho_u})
 as a null vector field normal to each $\Hor_u$.
 By Property~\ref{p:sta:hor_non_expanding}, we have $\theta_{(\wl)} = 0$
-on $\Sp$. Let us displace $\Sp$ by a small parameter $\eps>0$ along the inward
-null normal $\w{k}$. The expansion along $\wl$ of the obtained surface is
-negative by hypothesis (ii). By taking the limit $\eps\to 0$, we form the
-derivative $\Lie{k} \theta_{(\wl)}$, which must obey
+on $\Sp$. Let us displace $\Sp$ by a small parameter $\eps>0$ along $-\w{k}$. The expansion along $\wl$ of the obtained surface is
+positive by hypothesis (ii). By taking the limit $\eps\to 0$, we form the
+derivative $\Lie{-k} \theta_{(\wl)}$, which must obey
+$\Lie{-k} \theta_{(\wl)} \geq 0$ since $\theta_{(\wl)} = 0$ on $\Sp$ and
+$\theta_{(\wl)} > 0$ on the displaced surface. Given that
+$\Lie{-k} \theta_{(\wl)} = -\Lie{k} \theta_{(\wl)}$, we see that hypothesis
+(ii) implies
 \be \label{e:sta:Lie_k_l}
-    \Lie{k} \theta_{(\wl)} < 0 .
+    \Lie{k} \theta_{(\wl)} \leq 0 .
 \ee
-since $\theta_{(\wl)} = 0$ on $\Sp$ and
-$\theta_{(\wl)} < 0$ on the displaced surface.
 A standard identity (cf. e.g. Eq.~(3b) of \cite{Haywa94}, Eq.~(3.1) of \cite{BoothF07},
 Eq.~(5.1) of \cite{Cao11} or Eq.~(36) of \cite{Jaram13})
 expresses $\Lie{k}\theta_{(\wl)}$ as
@@ -336,7 +342,7 @@ $\Sp$ has no boundary, we get
     \underbrace{\Omega_a \Omega^a}_{\geq 0}
     \, \underbrace{- \w{W}\cdot\w{k}}_{\geq 0}
     + \underbrace{f}_{\geq 0}
-    \, \underbrace{- \Lie{k} \theta_{(\wl)}}_{> 0} \Big]
+    \, \underbrace{- \Lie{k} \theta_{(\wl)}}_{\geq 0} \Big]
           \sqrt{q} \, \D^2 x .
 \ee
 In the left-hand side, we have invoked the Gauss-Bonnet theorem\index{Gauss-Bonnet theorem}
@@ -351,20 +357,32 @@ $\Omega_a \Omega^a = q^{ab} \Omega_a \Omega_b \geq 0$ because $\w{q}$ is a Riema
 $- \w{W}\cdot\w{k} \geq 0$ by Lemma~\ref{p:fra:lem2} in Sec.~\ref{s:fra:time_orientation},
 given that $\w{k}$ is a future-directed null vector and $\w{W}$ is a future-directed
 causal vector thanks to the null dominant energy condition (\ref{e:neh:null_dominant_cond}),
-$f\geq 0$ by hypothesis and $- \Lie{k} \theta_{(\wl)} > 0$
+$f\geq 0$ by hypothesis and $- \Lie{k} \theta_{(\wl)} \geq 0$
 follows from Eq.~(\ref{e:sta:Lie_k_l}). Now, the Euler characteristic $\chi$ is a topological
 invariant, which is $2$ for the sphere $\SS^2$, $0$ for the torus $\mathbb{T}^2$
 and $-2(g-1)$
 for a connected orientable surface of genus $g$, i.e. with $g$ ``holes''.
-Equation~(\ref{e:sta:Euler_char}) yields $\chi > 0$. Given that the only orientable
-compact 2-manifolds
-with positive Euler characteristic are those homeomorphic to $\SS^2$ or
-to some disjoint union of $\SS^2$'s, the theorem follows.
+Equation~(\ref{e:sta:Euler_char}) yields $\chi \geq 0$.
+The only possibilities for $\Sp$ compact, connected and orientable
+are $\SS^2$ ($\chi = 2$) and $\mathbb{T}^2$ ($\chi = 0$).
+However the torus case is very special. Indeed, setting $\chi=0$ in Eq.~(\ref{e:sta:Euler_char})
+implies that each term in the integrand of the right-hand side vanishes separately:
+$\Omega_a \Omega^a = 0$, $\w{W}\cdot\w{k} = 0$, $f=0$ and $\Lie{k} \theta_{(\wl)} = 0$.
+The last condition is the marginal case in the inequality (\ref{e:sta:Lie_k_l}). Moreover,
+since $\w{q}$ is positive definite, $\Omega_a \Omega^a = 0$ implies $\w{\Omega} = 0$,
+which in turn implies $\DSc_a \Omega^a = 0$. In addition,
+$\w{G}(\wl, \w{k}) = - \w{W}\cdot\w{k} + f = 0$. We then deduce immediately from
+Eq.~(\ref{e:sta:Lie_k_theta_l}) that ${}^\Sp\!\! R = 0$, i.e.
+the Ricci scalar of $\w{q}$ is identically zero. Given that the Riemann
+curvature tensor of a 2-dimensional metric is proportional to its
+Ricci scalar [cf. Eq.~(\ref{e:bas:Riem_n_2})], it follows that $\w{q}$
+is a flat metric.
 \end{proof}
 
 Another version of the topology theorem relies on the null energy
 condition, which is weaker than the dominant energy condition assumed in (i) above,
-and replaces the hypothesis (ii) by other ones, which are more global:
+and replaces the hypothesis (ii) by other ones, which are more global. It also
+fully excludes the 2-torus topology:
 
 \begin{prop}[topology theorem 2 \textnormal{(Chru\'sciel\index[pers]{Chrusciel, P.T.@Chru\'sciel, P.T.} \& Wald\index[pers]{Wald, R.M.} 1994 \cite{ChrusW94b})}]
 \label{p:sta:topology2}
@@ -391,9 +409,13 @@ be found in the original article by Chru\'sciel \& Wald \cite{ChrusW94b}.
 
 \begin{remark}
 The topology theorem 1, as stated above, is slightly different from the original
-version given by Hawking \cite{Hawki72,Hawki73,HawkiE73}, for it adds the ``outermost'' hypothesis (ii).
-The latter is very mild and fixes some shortcoming in Hawking's proof
-(cf. the historical note below).
+version given by Hawking \cite{Hawki72,Hawki73,HawkiE73}, for it adds the ``outermost'' hypothesis (ii),
+which is very mild. Another difference with Hawking's version,
+as stated in Proposition~9.3.2 of Ref.~\cite{HawkiE73}, is that
+the case of a torus topology is not fully excluded. However, as discussed in
+the historical note below, it seems that the exclusion of the torus in
+Hawking's proof requires some additional hypotheses, not explicitely stated
+in Refs.~\cite{Hawki72,HawkiE73}.
 \end{remark}
 
 \begin{remark}
@@ -451,13 +473,13 @@ The topology theorem for the spacetime dimension $n=4$ has been formulated
 first by Stephen Hawking\index[pers]{Hawking, S.W.} in 1992 \cite{Hawki72}
 (see also p.~34 of Ref.~\cite{Hawki73} and Proposition~9.3.2 in Hawking \& Ellis' textbook
 \cite{HawkiE73}).
-However, in 1993, Gregory Galloway\index[pers]{Galloway, G.J.} \cite{Gallo94}
+However, in 1993, Gregory Galloway\index[pers]{Galloway, G.J.} \cite{Gallo94} (p.~119)
 pointed out some limitation in Hawking's proof, namely that it cannot
 exclude the torus topology ($\chi = 0$) for the horizon's cross-sections
-without assuming that the spacetime is analytic, which is a much stronger
-assumption than the usually assumed smoothness.
-The proof presented above is free from this limitation, since it leads to
-$\chi > 0$, which excludes the torus. This proof is based on that given
+without any extra hypothesis. For instance, for the proof given in Ref.~\cite{Hawki72},
+one shall require that the spacetime is analytic, not merely smooth, as
+usually assumed.
+The proof presented above is based on that given
 by Sean Hayward\index[pers]{Hayward, S.} in 1994 \cite{Haywa94}
 for future outer trapping horizons (see also the proof of Theorem~6.3 in Ref.~\cite{Newma87}).
 The theorem obtained by Piotr Chru\'sciel\index[pers]{Chrusciel, P.T.@Chru\'sciel, P.T.}
