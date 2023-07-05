@@ -61,7 +61,7 @@ Eqs.~(\ref{e:sch:outgoing_null_geod})-(\ref{e:sch:ingoing_null_geod}):
     r + 2 m \ln \left| \frac{r}{2m} - 1 \right| = \frac{1}{2} (v-u).
     \end{array}\right.
 \ee
-Despite one cannot express explicitly $r$ in terms of $(u,v)$,
+Although $r$ cannot be explicitly expressed in terms of $(u,v)$,
 the function $r\mapsto r + 2 m \ln \left| \frac{r}{2m} - 1 \right|$ is
 invertible on $(2m,+\infty)$ (cf. Fig.~\ref{f:sch:tortoise}), so that (\ref{e:sch:u_v_r_t}) does define a coordinate system on $\M_{\rm I}$.
 The range of $(u,v)$ is $\R^2$.
@@ -103,8 +103,17 @@ is also reflected by the fact that
 vanishes for $r\rightarrow 2m$, which would make $\w{g}$ a degenerate bilinear
 form at $r=2m$, while it is not of course.
 
-Instead of $(u,v)$, let us use on $\M_{\rm I}$
-the coordinates $(U,V)$ defined by
+On $\M_{\rm I}$, $r>2m$ and (\ref{e:sch:u_v_r_t}) yields
+\be \label{e:sch:r_u_v_exp}
+    r + 2 m \ln \left( \frac{r}{2m} - 1 \right) = \frac{1}{2} (v-u)
+    \quad
+    \Longrightarrow
+    \quad
+     \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)  =
+    \mathrm{e}^{(v-u)/4m}  ,
+\ee
+This motivates to introduce
+the coordinates $(U,V)$ defined on $\M_{\rm I}$ by
 \be \label{e:sch:def_U_V}
     \left\{\begin{array}{l}
     U := - \mathrm{e}^{-u/4m} \\
@@ -120,16 +129,7 @@ We have
     \qand
     \dd u \, \dd v = 16 m^2 \mathrm{e}^{(u-v)/4m} \, \dd U \, \dd V .
 \]
-Now, on $\M_{\rm I}$, $r>2m$ and (\ref{e:sch:u_v_r_t}) yields
-\be \label{e:sch:r_u_v_exp}
-    r + 2 m \ln \left( \frac{r}{2m} - 1 \right) = \frac{1}{2} (v-u)
-    \quad
-    \Longrightarrow
-    \quad
-     \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right)  =
-    \mathrm{e}^{(v-u)/4m}  ,
-\ee
-so that
+In view of Eq.~(\ref{e:sch:r_u_v_exp}), we get
 \[
      \dd u \, \dd v = 16 m^2 \, \mathrm{e}^{-r/2m}
         \left( \frac{r}{2m} - 1 \right) ^{-1} \dd U \, \dd V
@@ -138,7 +138,7 @@ so that
 \]
 Substituting this expression in (\ref{e:sch:Schwarz_metric_uv}) yields
 the expression of the metric with respect to
-coordinates $X^{\hat{\alpha}} := (U,V,\th,\ph)$:
+the coordinates $X^{\hat{\alpha}} := (U,V,\th,\ph)$:
 \be \label{e:sch:metric_UV}
     \encadre{
     \w{g} =
@@ -146,8 +146,8 @@ coordinates $X^{\hat{\alpha}} := (U,V,\th,\ph)$:
      +  r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) }.
 \ee
 In this formula, $r$ has to be considered as a function of $(U,V)$, whose
-implicit expression is found by combining
-(\ref{e:sch:def_U_V}) and (\ref{e:sch:r_u_v_exp}):
+implicit expression is found by combining (\ref{e:sch:r_u_v_exp}) and
+(\ref{e:sch:def_U_V}):
 \be \label{e:max:r_UV_M_I}
     \encadre{ \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) = - U V } .
 \ee
@@ -160,7 +160,7 @@ This relation takes a very simple form in terms of the tortoise coordinate
 \end{remark}
 
 We notice that the factor $(1-2m/r)$ has disappeared in the metric
-components (\ref{e:sch:metric_UV}), which are perfectly regular as
+components (\ref{e:sch:metric_UV}), which are thus perfectly regular as
 $r\rightarrow 2m$.
 
 We read on (\ref{e:sch:metric_UV}) that $g_{UU} = 0$ and $g_{VV} = 0$.
