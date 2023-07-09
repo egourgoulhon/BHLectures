@@ -237,7 +237,7 @@ Hence $\sigma^{ab} = q^{ac} q^{bd} \sigma_{cd} =
 
 Regarding the second term in (\ref{e:neh:null_Raychaud_theta_zero}),
 it is non-negative if the Ricci tensor obeys the so-called
-\defin{null energy condition}\index{null!energy condition}\index{energy!condition!null --}:
+\defin{null convergence condition}\index{null!convergence condition}\index{convergence!condition!null --}:
 \be \label{e:neh:null_energy_cond}
     \encadre{ \w{R}(\wl, \wl) \geq 0 \quad \mbox{for any null vector $\wl$} }.
 \ee
@@ -245,13 +245,14 @@ If general relativity is assumed, i.e. if the Einstein equation
 (\ref{e:fra:Einstein_eq}) is fulfilled, we have
 $\w{R}(\wl, \wl) = 8\pi \w{T}(\wl,\wl)$ [Eq.~(\ref{e:def:Rll_Tll})],
 where $\w{T}$ is the total energy-momentum tensor of the matter and
-non-gravitational fields. Accordingly, the null energy condition
-is equivalent to
+non-gravitational fields. Accordingly, the null convergence condition
+is equivalent to the so-called
+\defin{null energy condition}\index{null!energy condition}\index{energy!condition!null --}:
 \be \label{e:neh:null_energy_cond_matter}
     \encadre{ \w{T}(\wl, \wl) \geq 0 \quad \mbox{for any null vector $\wl$} }_{\rm\,  GR},
 \ee
 where the index `GR' stands for \emph{general relativity}.
-The condition (\ref{e:neh:null_energy_cond_matter}) is pretty weak and is satisfied by
+The null energy condition (\ref{e:neh:null_energy_cond_matter}) is pretty weak and is satisfied by
 \begin{itemize}
 \item vacuum: $\w{T}=0$;
 \item any ``reasonable'' matter model, such as a perfect fluid with a
@@ -265,7 +266,7 @@ energy-momentum tensor (\ref{e:fra:T_em}), which yields $\w{T}(\wl,\wl) = \mu_0^
 of $\w{F}$, the vector $\w{E}$ obeys $\w{E}\cdot\wl = 0$. It follows from
 Property~\ref{p:fra:corol1} that $\w{E}$ cannot be timelike. Hence
 $\w{E}\cdot\w{E}\geq 0$ and $\w{T}(\wl,\wl)\geq 0$.};
-\item any real or complex scalar field;
+\item any massless scalar field \cite{HawkiE73};
 \item ``dark energy''\index{dark energy} modelled by $\w{T} = -\frac{\Lambda}{8\pi}\, \w{g}$.
 \end{itemize}
 Note also that the null energy condition is implied by the
@@ -281,23 +282,22 @@ the weak energy condition has a simple physical interpretation: the energy
 density $\veps=\w{T}(\w{u}, \w{u})$ as measured by any observer is non-negative,
 hence the name \emph{energy condition}.
 
-\begin{remark}
-Condition (\ref{e:neh:null_energy_cond}) is also called
-the \defin{null convergence condition}\index{null!convergence condition}\index{convergence!null -- condition} \cite{HawkiE73,Senov22a,SenovG15}, which better reflects its geometrical
-significance\footnote{In view of the Raychaudhuri equation (\ref{e:def:null_Raychaud_Ricci})
-and property~(\ref{e:neh:sigma_square}),
-condition~(\ref{e:neh:null_energy_cond}) implies
+The geometric significance of the null convergence condition (\ref{e:neh:null_energy_cond})
+stems from the Raychaudhuri equation.
+Indeed, when (\ref{e:neh:null_energy_cond}) holds, the
+null Raychaudhuri equation\index{null!Raychaudhuri equation}\index{Raychaudhuri!null -- equation} (\ref{e:def:null_Raychaud_Ricci}),
+along with property~(\ref{e:neh:sigma_square}),
+implies
 $\wnab_{\el}\,  \theta_{(\wl)} -  \kappa \theta_{(\wl)}\leq 0$ on any null hypersurface
 $\Hor$. If one considers
 a null normal $\wl$ corresponding to an affine parametrization of $\Hor$'s null generators,
 then $\kappa=0$ and we are left with $\wnab_{\el}\,  \theta_{(\wl)} \leq 0$, which means
-that $\theta_{(\wl)}$ monotonically decreases along the null geodesic generators of $\Hor$.}.
-Strictly speaking, (\ref{e:neh:null_energy_cond})
-is indeed an \emph{energy} condition only if some field equation, like the Einstein equation,
-turns it into (\ref{e:neh:null_energy_cond_matter}).
-\end{remark}
+that $\theta_{(\wl)}$ monotonically decreases along the null geodesic generators of $\Hor$.
 
-Let us assume that the null energy condition (\ref{e:neh:null_energy_cond})
+In the case of a non-expanding horizon, $\theta_{(\wl)} = 0$
+and the null Raychaudhuri equation (\ref{e:def:null_Raychaud_Ricci})
+reduces to Eq.~(\ref{e:neh:null_Raychaud_theta_zero}).
+Let us assume that the null convergence condition (\ref{e:neh:null_energy_cond})
 holds. Given (\ref{e:neh:sigma_square}),
 Eq.~(\ref{e:neh:null_Raychaud_theta_zero}) then implies both
 $\sigma_{ab} \sigma^{ab}  = 0$
@@ -322,8 +322,10 @@ In view of (\ref{e:def:Theta}), this is equivalent to
 We conclude:
 \begin{prop}[invariance of the cross-section metric along the null generators]
 \label{p:neh:invariance_of_2metric}
-Provided that the null energy condition (\ref{e:neh:null_energy_cond})
-holds,
+Provided that the null convergence condition (\ref{e:neh:null_energy_cond})
+holds --- which occurs in general relativity if the null energy condition
+(\ref{e:neh:null_energy_cond_matter})
+holds ---,
 the whole metric (and not only the area form
 $\wepsS$, as a mere $\theta_{(\wl)}=0$ would suggest) of any cross-section
 of a non-expanding horizon is invariant along the null geodesic generators
@@ -342,7 +344,7 @@ Since $\Hor$ is a null hypersurface, the ``metric'' $\left. \w{g}\right|_{\Hor}$
 induced on it by the spacetime metric $\w{g}$ is degenerate. As a consequence, there
 is a priori no unique connection on $\Hor$ associated with
 $\left. \w{g}\right|_{\Hor}$. However, when
-$\Hor$ is a non-expanding horizon and the null energy condition holds on $\Hor$,
+$\Hor$ is a non-expanding horizon and the null convergence condition holds on $\Hor$,
 so that $\w{\Theta}=0$, the spacetime connection $\wnab$ induces a unique
 torsion-free connection ${}^\Hor\!\wnab$ on $\Hor$ as follows.
 Let $\w{u}$ and $\w{v}$ be two vector fields on $\Hor$. We have, using
@@ -796,7 +798,7 @@ Any Killing horizon with closed-manifold cross-sections is a non-expanding horiz
 \end{prop}
 Moreover, $\w{\Theta}$ vanishes
 for all Killing horizons [Eq.~(\ref{e:neh:Theta_zero_KillingH})], while to get the same result on a generic non-expanding
-horizon, one has to assume that the null energy condition holds on $\Hor$.
+horizon, one has to assume that the null convergence condition holds on $\Hor$.
 
 \subsection{Expressions of the non-affinity coefficient}
 
@@ -1041,7 +1043,7 @@ We have, in index notation [cf. Eq.~(\ref{e:bas:arrow_endo_index})]
 \be \label{e:neh:def_W_index}
     W^\alpha = - G^\alpha_{\ \, \mu} \el^\mu - f \ell^\alpha .
 \ee
-Note that the null dominant energy condition implies the null energy condition
+Note that the null dominant energy condition implies the null convergence condition
 (\ref{e:neh:null_energy_cond}) since
 \be \label{e:neh:R_ll_W_l}
     \w{R}(\wl, \wl) = \w{R}(\wl, \wl) - \frac{R}{2} \underbrace{\w{g}(\wl, \wl)}_{0}
@@ -1082,7 +1084,7 @@ defined by Eq.~(\ref{e:neh:null_dominant_cond}) with $\w{v}$:
     = - \w{R}(\wl, \w{v}) + \left( \frac{R}{2} - f \right) \underbrace{\wl\cdot\w{v}}_{0}
     = - \w{R}(\wl, \w{v}) .
 \]
-If we assume the null dominant energy condition, the null energy condition
+If we assume the null dominant energy condition, the null convergence condition
 holds, so that $\w{R}(\wl, \wl) = 0$ on $\Hor$ [Eq.~(\ref{e:neh:R_l_l_zero})].
 Then, according to Eq.~(\ref{e:neh:R_ll_W_l}),
 $\wl \cdot \w{W} = - \w{R}(\wl, \wl) = 0$.
@@ -1693,7 +1695,7 @@ for black hole physics.
 Here is an inheritance diagram summarizing the main results of this chapter.
 The vertical arrow means ``is a'', i.e. the element at the bottom of the arrow
 is a special case of the element at the top of the arrow.
-``NEC'' stands for ``Null Energy Condition'' [Eq.~(\ref{e:neh:null_energy_cond})]
+``NCC'' stands for ``Null Convergence Condition'' [Eq.~(\ref{e:neh:null_energy_cond})]
 and ``NDEC'' for ``Null Dominant Energy condition'' [Eq.~(\ref{e:neh:null_dominant_cond})].
 
 \begin{center}
@@ -1710,7 +1712,7 @@ closed-manifold cross-sections\\
 $\theta_{(\wl)}=0$\\
 area independent of the cross-section\\
 \begin{tabular}{lcl}
-NEC &$\Longrightarrow$ & $\w{\Theta}=0$ \\
+NCC &$\Longrightarrow$ & $\w{\Theta}=0$ \\
  & $\Longrightarrow$ & induced affine connection
 \end{tabular}
 };
