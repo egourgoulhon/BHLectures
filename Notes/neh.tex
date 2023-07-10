@@ -221,85 +221,12 @@ to
     \sigma_{ab} \sigma^{ab} + \w{R}(\wl, \wl) = 0 ,
 \ee
 where $\w{R}$ is the Ricci tensor of the metric $\w{g}$.
-Now, the first term is always non-negative:
-\be \label{e:neh:sigma_square}
-    \sigma_{ab} \sigma^{ab} \geq 0 .
-\ee
-Indeed, let us consider an $\w{q}$-orthonormal basis of $T_p\Sp$. Since
-$\w{q}$ is a Riemannian metric, the components of its inverse
-in that basis are $q^{ab} = \mathrm{diag}(1,\ldots,1) = \delta^{ab}$.
-Hence $\sigma^{ab} = q^{ac} q^{bd} \sigma_{cd} =
-\delta^{ac} \delta^{bd} \sigma_{cd} = \sigma_{ab}$, so that
-\be \label{e:neh:sigma_square_si}
-   \sigma_{ab} \sigma^{ab}
-   = \sum_{a=2}^{n-1} \sum_{b=2}^{n-1} (\sigma_{ab})^2 \geq 0 .
-\ee
-
-Regarding the second term in (\ref{e:neh:null_Raychaud_theta_zero}),
-it is non-negative if the Ricci tensor obeys the so-called
-\defin{null convergence condition}\index{null!convergence condition}\index{convergence!condition!null --}:
-\be \label{e:neh:null_energy_cond}
-    \encadre{ \w{R}(\wl, \wl) \geq 0 \quad \mbox{for any null vector $\wl$} }.
-\ee
-If general relativity is assumed, i.e. if the Einstein equation
-(\ref{e:fra:Einstein_eq}) is fulfilled, we have
-$\w{R}(\wl, \wl) = 8\pi \w{T}(\wl,\wl)$ [Eq.~(\ref{e:def:Rll_Tll})],
-where $\w{T}$ is the total energy-momentum tensor of the matter and
-non-gravitational fields. Accordingly, the null convergence condition
-is equivalent to the so-called
-\defin{null energy condition}\index{null!energy condition}\index{energy!condition!null --}:
-\be \label{e:neh:null_energy_cond_matter}
-    \encadre{ \w{T}(\wl, \wl) \geq 0 \quad \mbox{for any null vector $\wl$} }_{\rm\,  GR},
-\ee
-where the index `GR' stands for \emph{general relativity}.
-The null energy condition (\ref{e:neh:null_energy_cond_matter}) is pretty weak and is satisfied by
-\begin{itemize}
-\item vacuum: $\w{T}=0$;
-\item any ``reasonable'' matter model, such as a perfect fluid with a
-proper energy density $\varepsilon$ and pressure $p$ satisfying
-$\varepsilon+p\geq 0$ (\footnote{Indeed, for the perfect-fluid
-energy-momentum tensor $\w{T} = (\varepsilon+p)\uu{u}\otimes\uu{u} + p \w{g}$,
-one has
-$\w{T}(\wl,\wl) = (\varepsilon+p)(\w{u}\cdot\wl)^2$ with $(\w{u}\cdot\wl)^2\geq 0$.});
-\item any electromagnetic field\footnote{This is readily seen from the electromagnetic
-energy-momentum tensor (\ref{e:fra:T_em}), which yields $\w{T}(\wl,\wl) = \mu_0^{-1} \w{E}\cdot\w{E}$ where $E^\alpha := F^\alpha_{\ \, \mu} \el^\mu$. Thanks to the antisymmetry
-of $\w{F}$, the vector $\w{E}$ obeys $\w{E}\cdot\wl = 0$. It follows from
-Property~\ref{p:fra:corol1} that $\w{E}$ cannot be timelike. Hence
-$\w{E}\cdot\w{E}\geq 0$ and $\w{T}(\wl,\wl)\geq 0$.};
-\item any massless scalar field \cite{HawkiE73};
-\item ``dark energy''\index{dark energy} modelled by $\w{T} = -\frac{\Lambda}{8\pi}\, \w{g}$.
-\end{itemize}
-Note also that the null energy condition is implied by the
-so-called \defin{weak energy condition}\index{weak!energy condition}\index{energy!condition!weak --},
-which states that
-\be
-    \w{T}(\w{u}, \w{u}) \geq 0 \quad \mbox{for any timelike vector $\w{u}$}.
-\ee
-The null energy condition follows from the
-weak energy condition by continuity.
-Selecting for $\w{u}$ the 4-velocity of an observer, we see that
-the weak energy condition has a simple physical interpretation: the energy
-density $\veps=\w{T}(\w{u}, \w{u})$ as measured by any observer is non-negative,
-hence the name \emph{energy condition}.
-
-The geometric significance of the null convergence condition (\ref{e:neh:null_energy_cond})
-stems from the Raychaudhuri equation.
-Indeed, when (\ref{e:neh:null_energy_cond}) holds, the
-null Raychaudhuri equation\index{null!Raychaudhuri equation}\index{Raychaudhuri!null -- equation} (\ref{e:def:null_Raychaud_Ricci}),
-along with property~(\ref{e:neh:sigma_square}),
-implies
-$\wnab_{\el}\,  \theta_{(\wl)} -  \kappa \theta_{(\wl)}\leq 0$ on any null hypersurface
-$\Hor$. If one considers
-a null normal $\wl$ corresponding to an affine parametrization of $\Hor$'s null generators,
-then $\kappa=0$ and we are left with $\wnab_{\el}\,  \theta_{(\wl)} \leq 0$, which means
-that $\theta_{(\wl)}$ cannot increase along the null geodesic generators of $\Hor$.
-
-In the case of a non-expanding horizon, $\theta_{(\wl)} = 0$
-and the null Raychaudhuri equation (\ref{e:def:null_Raychaud_Ricci})
-reduces to Eq.~(\ref{e:neh:null_Raychaud_theta_zero}).
-Let us assume that the null convergence condition (\ref{e:neh:null_energy_cond})
-holds. Given (\ref{e:neh:sigma_square}),
-Eq.~(\ref{e:neh:null_Raychaud_theta_zero}) then implies both
+Let us assume that the null convergence condition
+discussed in Sec.~\ref{s:def:null_convergence_cond}
+holds: $\w{R}(\wl, \wl) \geq 0$ [Eq.~(\ref{e:neh:null_energy_cond})].
+Then, given the property $\sigma_{ab} \sigma^{ab} \geq 0$
+[Eq.~(\ref{e:neh:sigma_square})],
+Eq.~(\ref{e:neh:null_Raychaud_theta_zero}) implies both
 $\sigma_{ab} \sigma^{ab}  = 0$
 and
 \be \label{e:neh:R_l_l_zero}
@@ -322,8 +249,9 @@ In view of (\ref{e:def:Theta}), this is equivalent to
 We conclude:
 \begin{prop}[invariance of the cross-section metric along the null generators]
 \label{p:neh:invariance_of_2metric}
-Provided that the null convergence condition (\ref{e:neh:null_energy_cond})
-holds --- which occurs in general relativity if the null energy condition
+Provided that the null convergence condition\index{null!convergence condition}\index{convergence!condition!null --} (\ref{e:neh:null_energy_cond})
+holds --- which occurs in general relativity if the
+null energy condition\index{null!energy condition}\index{energy!condition!null --}
 (\ref{e:neh:null_energy_cond_matter})
 holds ---,
 the whole metric (and not only the area form
