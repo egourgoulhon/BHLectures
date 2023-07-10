@@ -292,7 +292,7 @@ $\wnab_{\el}\,  \theta_{(\wl)} -  \kappa \theta_{(\wl)}\leq 0$ on any null hyper
 $\Hor$. If one considers
 a null normal $\wl$ corresponding to an affine parametrization of $\Hor$'s null generators,
 then $\kappa=0$ and we are left with $\wnab_{\el}\,  \theta_{(\wl)} \leq 0$, which means
-that $\theta_{(\wl)}$ monotonically decreases along the null geodesic generators of $\Hor$.
+that $\theta_{(\wl)}$ cannot increase along the null geodesic generators of $\Hor$.
 
 In the case of a non-expanding horizon, $\theta_{(\wl)} = 0$
 and the null Raychaudhuri equation (\ref{e:def:null_Raychaud_Ricci})
@@ -1027,23 +1027,23 @@ only:
     \wnab_{\w{v}} \, \kappa = - \w{R}(\wl, \w{v}) .
 \ee
 
-To go further, we shall assume the (generalized)
-\defin{null dominant energy condition}\index{null!dominant energy condition}\index{energy!condition!null dominant--} \cite{Racz08}, namely that there
+To go further, we shall assume the
+\defin{null dominance condition}\index{null!dominance condition}\index{dominance!null -- condition} \cite{Racz08}, namely that there
 exists a scalar field $f$ such that
 \be \label{e:neh:null_dominant_cond}
   \encadre{  \begin{array}{ll}
-    \w{W} := - \vw{G}(\wl) - f \wl \ & \mbox{is future-directed null or timelike} \\
+    \mbox{the vector} \ \w{W} := - \vw{G}(\wl) - f \wl \ & \mbox{is future-directed null or timelike} \\
     & \mbox{for any future-directed null vector $\wl$}
     \end{array} } .
 \ee
 In the above equation, $\vw{G}$ stands for the type-$(1,1)$ tensor
 associated by metric duality to the Einstein tensor\index{Einstein!tensor}
-$\w{G}$ [Eq.~(\ref{e:bas:Einstein_tensor})].
-We have, in index notation [cf. Eq.~(\ref{e:bas:arrow_endo_index})]
+$\w{G}$ [Eq.~(\ref{e:bas:Einstein_tensor})], so that the expression of $\w{W}$
+in index notation is [cf. Eq.~(\ref{e:bas:arrow_endo_index})]
 \be \label{e:neh:def_W_index}
     W^\alpha = - G^\alpha_{\ \, \mu} \el^\mu - f \ell^\alpha .
 \ee
-Note that the null dominant energy condition implies the null convergence condition
+Note that the null dominance condition implies the null convergence condition
 (\ref{e:neh:null_energy_cond}) since
 \be \label{e:neh:R_ll_W_l}
     \w{R}(\wl, \wl) = \w{R}(\wl, \wl) - \frac{R}{2} \underbrace{\w{g}(\wl, \wl)}_{0}
@@ -1053,22 +1053,23 @@ Note that the null dominant energy condition implies the null convergence condit
 the inequality holding because both $\w{W}$ and $\wl$ are future-directed
 (cf. Lemma~\ref{p:fra:lem2}).
 
-If general relativity is assumed, i.e. if the metric $\w{g}$
+If gravity is described by general relativity, i.e. if the metric $\w{g}$
 fulfills the Einstein equation (\ref{e:fra:Einstein_eq_G}), then
-the null dominant energy condition with $f = \Lambda$ is
-equivalent to
+the null dominance condition with $f = \Lambda$ is
+equivalent to the
+\defin{null dominant energy condition}\index{null!dominant energy condition}\index{energy!condition!null dominant --}:
 \be \label{e:neh:null_dominant_cond_T}
   \encadre{ \begin{array}{ll}
-    \w{W} := - \vw{T}(\wl) \ & \mbox{is future-directed null or timelike} \\
+    \mbox{The vector} \ \w{W} := - \vw{T}(\wl) \ & \mbox{is future-directed null or timelike} \\
     & \mbox{for any future-directed null vector $\wl$}
     \end{array} }_{\rm \, GR},
 \ee
 where $\w{T}$ is the energy-momentum tensor of matter and non-gravitational fields.
 By continuity, the null dominant energy condition is implied by the standard
-\defin{dominant energy condition}\index{dominant energy condition}\index{energy!condition!dominant--}:
+\defin{dominant energy condition}\index{dominant energy condition}\index{energy!condition!dominant --}:
 \be
    \begin{array}{ll}
-    \w{W} := - \vw{T}(\w{u}) \ & \mbox{is future-directed null or timelike} \\
+     \mbox{The vector} \ \w{W} := - \vw{T}(\w{u}) \ & \mbox{is future-directed null or timelike} \\
     & \mbox{for any future-directed timelike vector $\w{u}$}
     \end{array}  .
 \ee
@@ -1076,22 +1077,33 @@ Physically, the dominant energy condition states that, with respect to any
 observer (represented by its 4-velocity $\w{u}$, which is future-directed timelike),
 the energy of matter and non-gravitational fields does not move faster than light.
 
-We note that the right-hand side of Eq.~(\ref{e:neh:DS_kappa_W}) is nothing but the
-scalar product of the vector $\w{W}$
+\begin{remark}
+While the name \emph{null convergence condition} for $\w{R}(\wl,\wl) \geq 0$
+[Eq.~(\ref{e:neh:null_energy_cond})] is standard in the literature
+(e.g. \cite{HawkiE73,Senov22a,SenovG15}), the name \emph{null dominance condition}
+for (\ref{e:neh:null_dominant_cond}) is not standard. We are using it to
+distinguish from the \emph{null dominant energy condition} (\ref{e:neh:null_dominant_cond_T});
+which a condition on the matter energy-momentum tensor, while (\ref{e:neh:null_dominant_cond})
+is a pure geometrical identity, independent of the Einstein equation. In this way,
+\emph{null dominance condition} is on the same footing as \emph{null convergence condition}.
+\end{remark}
+
+Coming back to Eq.~(\ref{e:neh:DS_kappa_W}), we note that its right-hand side
+is nothing but the scalar product of the vector $\w{W}$
 defined by Eq.~(\ref{e:neh:null_dominant_cond}) with $\w{v}$:
 \[
     \w{W}\cdot\w{v} = - (\vw{G}(\wl) + f \wl)\cdot\w{v}
     = - \w{R}(\wl, \w{v}) + \left( \frac{R}{2} - f \right) \underbrace{\wl\cdot\w{v}}_{0}
     = - \w{R}(\wl, \w{v}) .
 \]
-If we assume the null dominant energy condition, the null convergence condition
+If we assume the null dominance condition, the null convergence condition
 holds, so that $\w{R}(\wl, \wl) = 0$ on $\Hor$ [Eq.~(\ref{e:neh:R_l_l_zero})].
 Then, according to Eq.~(\ref{e:neh:R_ll_W_l}),
 $\wl \cdot \w{W} = - \w{R}(\wl, \wl) = 0$.
 This implies that the vector $\w{W}$ is tangent to $\Hor$. The latter
 being a null hypersurface, $\w{W}$ must then be
 either collinear to $\wl$ or spacelike (cf. Lemma~\ref{p:def:tangent_to_null_hyp} in Sec.~\ref{s:def:spacelike_sections}).
-Now, according to the null dominant energy condition (\ref{e:neh:null_dominant_cond}),
+Now, according to the null dominance condition (\ref{e:neh:null_dominant_cond}),
 $\w{W}$ cannot be
 spacelike. We conclude that $\w{W}$ is collinear to $\wl$. Consequently,
 we have $\w{W}\cdot\w{v} = 0$.
@@ -1107,9 +1119,10 @@ the following property:
 
 \begin{prop}[zeroth law of black hole dynamics]
 \label{p:neh:zeroth_law}
-If the null dominant energy condition
-[Eq.~(\ref{e:neh:null_dominant_cond})]
-is fulfilled on a Killing horizon $\Hor$, then the non-affinity coefficient $\kappa$
+If the null dominance condition
+(\ref{e:neh:null_dominant_cond})
+is fulfilled on a Killing horizon $\Hor$ --- which is the case in general relativity
+if the null dominant energy condition (\ref{e:neh:null_dominant_cond_T}) holds ---, then the non-affinity coefficient $\kappa$
 of the null normal coinciding with the Killing vector $\w{\xi}$ defining $\Hor$
 is constant over $\Hor$:
 \be \label{e:neh:zeroth_law}
@@ -1146,7 +1159,7 @@ also Ref.~\cite{AshteBL01} for a related proof regarding isolated horizons.
 \begin{remark}
 \label{r:neh:zero_law_wo_NDEC}
 The constancy of $\kappa$ on a Killing horizon can also be proved without the
-null dominant energy condition, but at the price of additional hypotheses:
+null dominance condition, but at the price of additional hypotheses:
 either the Killing horizon $\Hor$ is part of a bifurcate Killing horizon
 (to be discussed in Sec.~\ref{s:sta:bifur_Killing_hor}) \cite{KayW91,Wald92,Poiss04}
 or the spacetime is axisymmetric, in addition to be stationary, and
@@ -1227,11 +1240,11 @@ we recover the Schwarzschild value: $\kappa= 1/(4m)$.
 \begin{hist}
 The constancy of $\kappa$ for a Killing horizon has been proven by Stephen Hawking\index[pers]{Hawking, S.W.}
 in his lecture at the famous Les Houches School of summer 1972 \cite{Hawki73} (p.~43).
-It has also been proven without requiring the dominant energy condition, but
+It has also been proven without requiring the null dominance condition, but
 assuming axisymmetry and orthogonal transitivy (cf. Remark~\ref{r:neh:zero_law_wo_NDEC} on p.~\pageref{r:neh:zero_law_wo_NDEC}) by Brandon Carter\index[pers]{Carter, B.} in his lecture at the same summer
 school
 \cite{Carte73b} (Theorem 8, p.~167).
-A third proof of the constancy of $\kappa$ using the dominant energy condition
+A third proof of the constancy of $\kappa$ using the null dominance condition
 has also been given in 1973 by James Bardeen\index[pers]{Bardeen, J.M.}, Brandon Carter and
 Stephen Hawking
 in their seminal article \emph{The Four Laws of Black Hole Mechanics}
@@ -1245,8 +1258,8 @@ bubble's surface pressure, so that it must constant in equilibrium.
 
 \subsection{Classification of Killing horizons} \label{s:neh:classif_KH}
 
-Since $\kappa$ is constant on a Killing horizon $\Hor$ (assuming the dominant
-energy condition), we may use it to classify Killing horizons in two
+Since $\kappa$ is constant on a Killing horizon $\Hor$ (assuming the null dominance
+condition), we may use it to classify Killing horizons in two
 categories, depending whether $\kappa$ vanishes or not:
 \begin{itemize}
 \item if $\kappa = 0$, the Killing vector $\w{\xi}$ is a geodesic vector on $\Hor$
@@ -1693,10 +1706,10 @@ for black hole physics.
 \section{Summary}
 
 Here is an inheritance diagram summarizing the main results of this chapter.
-The vertical arrow means ``is a'', i.e. the element at the bottom of the arrow
+The vertical arrow means ``is a'', i.e. the element at the bottom of an arrow
 is a special case of the element at the top of the arrow.
 ``NCC'' stands for ``Null Convergence Condition'' [Eq.~(\ref{e:neh:null_energy_cond})]
-and ``NDEC'' for ``Null Dominant Energy condition'' [Eq.~(\ref{e:neh:null_dominant_cond})].
+and ``NDC'' for ``Null Dominance Condition'' [Eq.~(\ref{e:neh:null_dominant_cond})].
 
 \begin{center}
 
@@ -1719,7 +1732,7 @@ NCC &$\Longrightarrow$ & $\w{\Theta}=0$ \\
 \node[boxst] (K) at (0,0) {\textbf{Killing horizon}\\
 \textbf{\small with closed-manifold cross-sections}\\
 $\w{\Theta}=0$ \\
-NDEC $\Longrightarrow \kappa=\mathrm{const}$ (Zeroth Law)};
+NDC $\Longrightarrow \kappa=\mathrm{const}$ (Zeroth Law)};
 \draw[inherits] (H)--(N);
 \draw[inherits] (K)--(H);
 \end{tikzpicture}
