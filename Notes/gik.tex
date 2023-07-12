@@ -252,7 +252,7 @@ from a point $A$ in the equatorial plane ($\th=\pi/2$).
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{gik_zero_ener_merid.pdf}}
 \caption[]{\label{f:gik:zero_ener_merid} \footnotesize
-Trajectory in the meridional plane, as given by Eq.~(\ref{e:gik:E_zero_r_theta}), of a null geodesic (green curve)
+Trajectory in a meridional plane, as given by Eq.~(\ref{e:gik:E_zero_r_theta}), of a null geodesic (green curve)
 with $E=0$, $Q>0$, $L = - \sqrt{Q}$ and $r(\th_{\rm m}) = 1.5 \, m$
 in the Kerr spacetime with $a/m = 0.9$.
 The meridional plane is described in terms of
@@ -471,13 +471,6 @@ in the equatorial plane, the polynomial simplifies even further:
 \ee
 \end{example}
 
-\begin{figure}
-\centerline{\includegraphics[width=0.6\textwidth]{gik_obs_screen.pdf}}
-\caption[]{\label{f:gik:obs_screen} \footnotesize
-Impact of a null geodesic $\Li$ onto the screen of a remote observer. $(x,y,z)$ are the Cartesian Boyer-Lindquist coordinates
-defined by Eq.~(\ref{e:gek:Cartesian_BL}).
-}
-\end{figure}
 
 \subsection{Position on a remote observer's screen} \label{s:gik:remote_screen}
 
@@ -502,6 +495,15 @@ constraint is equivalent to
 \ee
 If $\sin\th_{\Obs}$ is small,
 this constraint limits significantly the amplitude of $\ell$.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gik_obs_screen.pdf}}
+\caption[]{\label{f:gik:obs_screen} \footnotesize
+Impact of a null geodesic $\Li$ onto the screen of a remote observer. $(x,y,z)$ are the Cartesian Boyer-Lindquist coordinates
+defined by Eq.~(\ref{e:gek:Cartesian_BL}).
+}
+\end{figure}
+
 
 \subsubsection{Observer not located on the rotation axis}
 
@@ -529,8 +531,8 @@ $p^t = E$ and
     + \frac{p^\ph}{E} r_{\Obs} \sin\th_{\Obs} \, \w{e}_{(\ph)} .
 \]
 With respect to $\Obs$, the incoming direction of the photon is given by
-the vector $-\w{n}$ and the trace on the screen is indicated by the component of that
-vector that is tangent to the screen, namely
+the vector $-\w{n}$ and the trace on the screen is indicated by the component of
+$-\w{n}$ that is tangent to the screen, namely
 \be \label{e:gik:m_screen_p}
     \w{m} = - \w{n}_{\parallel} = - \frac{p^\th}{E} r_{\Obs} \, \w{e}_{(\th)}
     -  \frac{p^\ph}{E} r_{\Obs} \sin\th_{\Obs} \, \w{e}_{(\ph)}
@@ -1079,11 +1081,14 @@ In view of expression (\ref{e:gik:mcR_Delta}) for $\mathcal{R}(r)$, the system
     & 2 r_0 (r_0^2 + a^2 - a \ell) - \tilde{q} (r_0 - m) = 0 , \label{e:gik:syst_spherical_orbit_2}
 \end{align}
 \end{subequations}
-where $\Delta_0 := r_0^2 - 2 m r_0 + a^2$ and
+where $\Delta_0 := r_0^2 - 2 m r_0 + a^2$ and $\tilde{q}$ is the reduced
+Carter constant $\mathscr{K}$:
 \be \label{e:gik:def_tq}
-    \tilde{q} := q + (\ell - a)^2 .
+    \encadre{ \tilde{q} := \frac{\mathscr{K}}{E^2} = q + (\ell - a)^2 },
 \ee
-This is a system of 2 equations for 3 unknowns: $(r_0,\ell,q)$. We thus
+where the second equality follows from relation~(\ref{e:gek:def_Q})
+between $\mathscr{K}$ and $Q$.
+The system (\ref{e:gik:syst_spherical_orbit}) has 2 equations for 3 unknowns: $(r_0,\ell,q)$. We thus
 expect a one-parameter family of solutions. It is convenient to consider
 $r_0$ as the parameter and to solve the system (\ref{e:gik:syst_spherical_orbit})
 for $(\ell,q)$.
@@ -2033,7 +2038,7 @@ The thin dotted grey half-circle marks $r=r_{\rm ph}^{**}$.
 
 A corollary of the results obtained in Sec.~\ref{s:gik:radial_motion}
 is that outside the black hole, i.e. in region $\M_{\rm I}$, a photon
-cannot be trapped (i.e. move in a limited range of $r$) unless it moves
+cannot be trapped (i.e. have a limited range of $r$) unless it moves
 on a (unstable) spherical orbit. The part of Kerr spacetime made of points
 through which a spherical photon orbit can pass is called the
 \defin{photon region}\index{photon!region} or sometimes the \defin{photon shell}\index{photon!shell} \cite{Johns_al20}. In terms of the Boyer-Lindquist $r$-coordinate, the photon region
