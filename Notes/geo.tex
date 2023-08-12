@@ -1264,3 +1264,109 @@ For the Walker-Penrose Killing tensor $\w{K}$ of Kerr spacetime, the conserved q
 $\w{K}(\w{v},\w{v})$ leads to the Carter constant\index{Carter!constant} (cf. Chap.~\ref{s:gek}).
 \end{example}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Geodesics and curvature}
+
+Let $(\Li_s)_{s\in\R}$ be a smooth 1-parameter family of non-intersecting geodesics in a
+pseudo-Riemannian manifold $(\M,\w{g})$. Let $\lambda$ be an affine parameter
+along each geodesic $\Li_s$, such that $\lambda$ varies smoothly from one geodesic to the
+next one, i.e. such that the map $\Phi: I\times \R\to \M$,
+$(\lambda,s) \mapsto P_s(\lambda)$ is smooth, $P_s: I \to \M$ being the parametrization
+of $\Li_s$ associated to $\lambda$ (cf. Sec.~\ref{s:geo:def}). Note that the union of all $\Li_s$ forms a
+2-dimensional surface $\Sp$ of $\M$, which is parametrized by $(\lambda,s)$
+($\Sp$ is the image of the map $\Phi$ defined above). On $\Sp$,
+let us denote by $\w{v}$ and $\w{z}$ the vector fields of the natural basis
+associated with the coordinates $(\lambda,s)$:
+\be
+    \w{v} := \wpar_\lambda   \qand \w{z} := \wpar_s .
+\ee
+By construction, $\w{v}$
+coincides with the tangent vector field $\D\w{x}/\D\lambda$ associated to
+the affine parameter $\lambda$ along each geodesic $\Li_s$ [Eq.~(\ref{e:geo:v_dxdlambda})].
+The vector field $\w{z}$ is called the \defin{separation vector at fixed $\lambda$}\index{separation vector} of the
+family $(\Li_s)_{s\in\R}$ because at a fixed value of $\lambda$, two infinitely close geodesics $\Li_s$ and $\Li_{s + \D s}$ are connected by the vector $\D\w{x} = \D s \, \w{z}$
+(cf. Fig.~??). Note that the separation vector depends upon the choice of the
+affine parameter $\lambda$.
+
+When the geodesics $\Li_s$ are timelike or null, $\w{v}$
+is the evolution vector along $\Li_s$ associated to the affine parameter $\lambda$.
+One may then consider the covariant derivative $\wnab_{\w{v}} \w{z}$ as
+the \emph{relative velocity} of nearby geodesics and the second order derivative
+$\wnab_{\w{v}} \wnab_{\w{v}} \w{z}$ as the \emph{relative acceleration} of nearby
+geodesics. Even if $\Li_s$ is spacelike, we keep the terms \emph{relative velocity}
+and \emph{relative acceleration}.
+
+\begin{prop}[geodesic deviation equation]
+\label{p:geo:geod_deviation}
+The relative acceleration of nearby members of a 1-parameter family $(\Li_s)_{s\in\R}$
+of geodesics in a pseudo-Riemannian manifold $(\M,\w{g})$ is given
+by
+\be \label{e:geo:geod_deviation}
+   \wnab_{\w{v}} \wnab_{\w{v}} \w{z} =   \mathrm{\bf Riem}\left( . , \w{v}, \w{v}, \w{z} \right) ,
+\ee
+where $\w{v}$ is the evolution vector along $\Li_s$ associated to some affine parameter $\lambda$
+and $\w{z}$ is the separation vector at fixed $\lambda$
+and $\mathrm{\bf Riem}$ is the
+Riemann curvature tensor\index{Riemann!curvature}\index{curvature!tensor} of
+$\w{g}$ (cf. Sec.~\ref{s:bas:curvat}).
+Equation~(\ref{e:geo:geod_deviation}) is the called the
+\defin{geodesic deviation equation}\index{geodesic!deviation equation}\index{deviation!geodesic --}
+or the \defin{Jacobi equation}\index{Jacobi equation}.
+In index notation, Eq.~(\ref{e:geo:geod_deviation}) becomes
+\be
+v^\mu \nabla_\mu( v^\nu \nabla_\nu z^\alpha)
+  = R^\alpha_{\ \, \rho \mu\nu} v^\rho v^\mu z^\nu .
+\ee
+\end{prop}
+
+\begin{proof}
+Because they are vector fields associated to the coordinate system $(\lambda,s)$
+of $\Sp$, it is obvious that the vector fields $\w{v}$ and $\w{z}$ commute:
+$[\w{v},\w{z}] = 0$. This can also be seen from
+the identity $[\w{v},\w{z}] = \Lie{\w{v}} \w{z}$ [Eq.~(\ref{e:bas:Lie_commut})
+and the very definition of the Lie derivative
+$\Lie{\w{v}} \w{z}$ (cf. Sec.~\ref{s:bas:Lie_der_vector}), which in
+the present case yields $\Lie{\w{v}} \w{z} = 0$.
+Hence we have $v^\nu \nabla_\nu z^\alpha = z^\nu \nabla_\nu v^\alpha$.
+Taking another derivative along $\w{v}$, we get successively
+\bea
+   v^\mu \nabla_\mu( v^\nu \nabla_\nu z^\alpha)  & = &
+  v^\mu \nabla_\mu( z^\nu \nabla_\nu v^\alpha) =  v^\mu \nabla_\mu z^\nu \, \nabla_\nu v^\alpha
+  + z^\nu v^\mu \nabla_\mu \nabla_\nu v^\alpha \nonumber \\
+  & = &v^\mu \nabla_\mu z^\nu \, \nabla_\nu v^\alpha
+  + z^\nu v^\mu (\nabla_\nu \nabla_\mu v^\alpha + R^\alpha_{\ \, \rho \mu\nu} v^\rho ) \nonumber \\
+  & = & z^\mu \nabla_\mu v^\nu \, \nabla_\nu v^\alpha
+  + z^\mu v^\nu \nabla_\mu \nabla_\nu v^\alpha
+  + R^\alpha_{\ \, \rho \mu\nu} v^\rho v^\mu z^\nu \nonumber \\
+  & = & z^\mu \nabla_\mu (  \underbrace{v^\nu \nabla_\nu v^\alpha}_{0} )
+  + R^\alpha_{\ \, \rho \mu\nu} v^\rho v^\mu z^\nu =  R^\alpha_{\ \, \rho \mu\nu} v^\rho v^\mu z^\nu \nonumber ,
+\eea
+where the Ricci identity (\ref{e:bas:Ricci_ident}) has been used to get the second line and again
+the commutation property $v^\mu \nabla_\mu z^\nu =  z^\mu \nabla_\mu v^\nu$
+to get the third line. Finally, $v^\nu \nabla_\nu v^\alpha = 0$ in the last line
+follows from the geodesic character of $\w{v}$ [Eq.~(\ref{e:geo:geod_eq_v})], given that
+it is the tangent vector corresponding to an affine parametrization of $\Li_{\rm s}$.
+\end{proof}
+The geodesic deviation equation (\ref{e:geo:geod_deviation}) is a
+second order linear differential equation for the vector field $\w{z}$.
+Thanks to it, the curvature of the pseudo-Riemannian manifold $(\M,\w{g})$ can
+be interpreted as the obstruction for neighboring geodesics that are
+initially parallel (zero relative velocity $\wnab_{\w{v}} \w{z}$ at
+$\lambda=0$) to stay parallel for $\lambda\neq 0$. Actually, Eq.~(\ref{e:geo:geod_deviation})
+can even be used to \emph{define} the Riemann curvature tensor $\mathrm{\bf Riem}$,
+instead of Eq.~(\ref{e:bas:def_Riemann})
+(see e.g. Chap.~11 of MTW \cite{MisneTW73} for details).
+
+
+
+
+
+
+
+
+
+
+
+
+
