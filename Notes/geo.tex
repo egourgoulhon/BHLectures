@@ -1273,11 +1273,13 @@ pseudo-Riemannian manifold $(\M,\w{g})$. Let $\lambda$ be an affine parameter
 along each geodesic $\Li_s$, such that $\lambda$ varies smoothly from one geodesic to the
 next one, i.e. such that the map $\Phi: I\times \R\to \M$,
 $(\lambda,s) \mapsto P_s(\lambda)$ is smooth, $P_s: I \to \M$ being the parametrization
-of $\Li_s$ associated to $\lambda$ (cf. Sec.~\ref{s:geo:def}). Note that the union of all $\Li_s$ forms a
-2-dimensional surface $\Sp$ of $\M$, which is parametrized by $(\lambda,s)$
-($\Sp$ is the image of the map $\Phi$ defined above). On $\Sp$,
+of $\Li_s$ associated to $\lambda$ (cf. Sec.~\ref{s:geo:def}). Note that
+$\Sp := \bigcup_{s\in\R} \Li_s$ is a
+2-dimensional surface of $\M$, which is parametrized by $(\lambda,s)$
+(cf. Fig.~\ref{f:geo:deviation});
+$\Sp$ is actually the image of the map $\Phi$ defined above. On $\Sp$,
 let us denote by $\w{v}$ and $\w{z}$ the vector fields of the natural basis
-associated with the coordinates $(\lambda,s)$:
+associated to the coordinates $(\lambda,s)$:
 \be
     \w{v} := \wpar_\lambda   \qand \w{z} := \wpar_s .
 \ee
@@ -1286,16 +1288,28 @@ coincides with the tangent vector field $\D\w{x}/\D\lambda$ associated to
 the affine parameter $\lambda$ along each geodesic $\Li_s$ [Eq.~(\ref{e:geo:v_dxdlambda})].
 The vector field $\w{z}$ is called the \defin{separation vector at fixed $\lambda$}\index{separation vector} of the
 family $(\Li_s)_{s\in\R}$ because at a fixed value of $\lambda$, two infinitely close geodesics $\Li_s$ and $\Li_{s + \D s}$ are connected by the vector $\D\w{x} = \D s \, \w{z}$
-(cf. Fig.~??). Note that the separation vector depends upon the choice of the
+(cf. Fig.~\ref{f:geo:deviation}). Note that the separation vector depends upon the choice of the
 affine parameter $\lambda$.
 
 When the geodesics $\Li_s$ are timelike or null, $\w{v}$
 is the evolution vector along $\Li_s$ associated to the affine parameter $\lambda$.
 One may then consider the covariant derivative $\wnab_{\w{v}} \w{z}$ as
-the \emph{relative velocity} of nearby geodesics and the second order derivative
-$\wnab_{\w{v}} \wnab_{\w{v}} \w{z}$ as the \emph{relative acceleration} of nearby
+the \emph{relative velocity} of neighboring geodesics and the second order derivative
+$\wnab_{\w{v}} \wnab_{\w{v}} \w{z}$ as the \emph{relative acceleration} of neighboring
 geodesics. Even if $\Li_s$ is spacelike, we keep the terms \emph{relative velocity}
 and \emph{relative acceleration}.
+
+\begin{figure}
+\centerline{\includegraphics[height=0.3\textheight]{geo_deviation.pdf}}
+\caption[]{\label{f:geo:deviation} \footnotesize
+1-parameter family of geodesics $(\Li_s)_{s\in\R}$ affinely parametrized by $\lambda$. The 2-surface
+$\Sp$ formed by the geodesic family is spanned by the coordinates $(\lambda,s)$.
+The infinitesimal vector connecting a point of $\Li_{s}$ to the point of $\Li_{s + \D s}$ having
+the same value of $\lambda$ is $\D\w{x} = \D s \, \w{z}$, where $\w{z}$ is the separation vector
+at fixed $\lambda$.
+}
+\end{figure}
+
 
 \begin{prop}[geodesic deviation equation]
 \label{p:geo:geod_deviation}
@@ -1305,11 +1319,12 @@ by
 \be \label{e:geo:geod_deviation}
    \wnab_{\w{v}} \wnab_{\w{v}} \w{z} =   \mathrm{\bf Riem}\left( . , \w{v}, \w{v}, \w{z} \right) ,
 \ee
-where $\w{v}$ is the evolution vector along $\Li_s$ associated to some affine parameter $\lambda$
-and $\w{z}$ is the separation vector at fixed $\lambda$
-and $\mathrm{\bf Riem}$ is the
-Riemann curvature tensor\index{Riemann!curvature}\index{curvature!tensor} of
-$\w{g}$ (cf. Sec.~\ref{s:bas:curvat}).
+where $\w{v}$ is the evolution vector along $\Li_s$ associated to some affine parameter $\lambda$,
+$\w{z}$ is the separation vector at fixed $\lambda$,
+$\wnab$ is the Levi-Civita connection of $\w{g}$ and
+$\mathrm{\bf Riem}$ is the aassociated
+Riemann curvature tensor\index{Riemann!curvature}\index{curvature!tensor}
+(cf. Sec.~\ref{s:bas:curvat}).
 Equation~(\ref{e:geo:geod_deviation}) is the called the
 \defin{geodesic deviation equation}\index{geodesic!deviation equation}\index{deviation!geodesic --}
 or the \defin{Jacobi equation}\index{Jacobi equation}.
@@ -1324,7 +1339,7 @@ v^\mu \nabla_\mu( v^\nu \nabla_\nu z^\alpha)
 Because they are vector fields associated to the coordinate system $(\lambda,s)$
 of $\Sp$, it is obvious that the vector fields $\w{v}$ and $\w{z}$ commute:
 $[\w{v},\w{z}] = 0$. This can also be seen from
-the identity $[\w{v},\w{z}] = \Lie{\w{v}} \w{z}$ [Eq.~(\ref{e:bas:Lie_commut})
+the identity $[\w{v},\w{z}] = \Lie{\w{v}} \w{z}$ [Eq.~(\ref{e:bas:Lie_commut})]
 and the very definition of the Lie derivative
 $\Lie{\w{v}} \w{z}$ (cf. Sec.~\ref{s:bas:Lie_der_vector}), which in
 the present case yields $\Lie{\w{v}} \w{z} = 0$.
