@@ -444,7 +444,8 @@ There exist solutions of the Einstein equation (with some rather exotic matter s
 corresponding to a black hole
 without any curvature singularity. They are called \defin{regular black holes}\index{regular!black!hole}\index{black!hole!regular --} (see e.g. the recent book~\cite{Bambi23}).
 A well known example (historically the first one)
-is the \defin{Bardeen black hole}\index{Bardeen black hole} \cite{Barde68}. The underlying spacetime $(\M,\w{g})$
+is the \defin{Bardeen black hole}\index{Bardeen black hole}
+\cite{Barde68} (see also Sec.~V of Ref.~\cite{Borde94}). The underlying spacetime $(\M,\w{g})$
 is static and spherically symmetric; in some part of it, the metric is
 expressed in terms of the Schwarzschild-Droste-like coordinates $(t,r,\th,\ph)$
 by
@@ -464,7 +465,7 @@ one has instead
 \be
     M(r) \underset{r\to 0}{\sim} \frac{m}{\ell^3} r^3 .
 \ee
-This implies that $\w{g}$ is regular at $r=0$, contrary to the Schwarzschild case.
+This implies that $\w{g}$ is regular at $r=0$, contrary to the Schwarzschild metric.
 More precisely, setting $\Lambda := 6m/\ell^3$, we get
 \be
 \w{g} \underset{r\to 0}{\sim}  -\left( 1 - \frac{\Lambda}{3} r^2 \right)\, \dd t^2
@@ -476,36 +477,46 @@ of cosmological constant $\Lambda$
 expressed in the so-called static coordinates (see e.g. Sec.~4.3 of Ref.~\cite{GriffP09}).
 On the other side, the metric components
 (\ref{e:loc:Bardeen_metric}) are singular at values of $r$ for which
-$2 M(r) = r$. This equation admits two roots $r=r_\pm$ with $0 < r_- < r_+$.
+$2 M(r) = r$. This equation admits two solutions: $r=r_\pm$ with $0 < r_- < r_+$.
 By introducing coordinates $(\ti, r, \th, \ph)$ of Eddington-Finkelstein type,
 one can show that $\w{g}$ is regular at $r=r_\pm$. The hypersurfaces $r=r_\pm$
-turn out to be two Killing horizons; the outermost one, i.e. the $r=r_+$ hypersurface
+turn out to be two Killing horizons; the outermost one ($r=r_+$)
 is the black hole event horizon, while the innermost one is a Cauchy horizon
 in the maximally extended spacetime (see Fig.~1 of Ref.~\cite{Ansol08}).
 The Bardeen metric $\w{g}$ is a solution of the Einstein equation
 (\ref{e:fra:Einstein_eq}) sourced by a magnetic monopole in some nonlinear
-electromadynamics \cite{AyonG00}. By \defin{nonlinear electrodynamics}\index{nonlinear electrodynamics},
+electrodynamics \cite{AyonG00}. By \defin{nonlinear electrodynamics}\index{nonlinear electrodynamics},
 it is meant a theory involving an electromagnetic 2-form $\w{F}$ and for which
 the Lagrangian density $\mathcal{L}$ is
 a nonlinear function of the electromagnetic invariant $\mathcal{F} := F_{\mu\nu} F^{\mu\nu} / 4$,
-while for the standard Maxwell theory one has simply $\mathcal{L} = \mathcal{F}$.
+the standard Maxwell theory corresponding to the linear case: $\mathcal{L} = - \mathcal{F}/\mu_0$.
 Specifically, for the Bardeen black hole, the nonlinear electrodynamics is defined by \cite{AyonG00}
 \be \label{e:loc:Lagrangian_Bardeen}
-    \mathcal{L} = \frac{3 m}{|\ell|\ell^2} \left(
+    \mathcal{L} = - \frac{3 m}{\mu_0 |\ell|\ell^2} \left(
     \frac{\sqrt{2\ell^2 \mathcal{F}}}{1 + \sqrt{2\ell^2 \mathcal{F}}} \right) ^{5/2}
 \ee
 and the electromagnetic field is
 \be
-    \w{F} = \ell \sin\th \, \dd\th \wedge \dd\ph,
+    \w{F} = \frac{\mu_0}{4\pi} \ell \sin\th \, \dd\th \wedge \dd\ph,
 \ee
 which corresponds to a magnetic monopole $\ell$ located at the center of symmetry
 (cf. Remark~\ref{r:sta:magnetic_monopole} on p.~\pageref{r:sta:magnetic_monopole}).
 
-The energy-momentum tensor $\w{T}$ derived from the Lagrangian density (\ref{e:loc:Lagrangian_Bardeen})
-fulfils the weak energy condition (\ref{e:def:WEC}), which implies the null energy condition and
-thus the null convergence condition $\w{R}(\wl, \wl) \geq 0$.
+The energy-momentum tensor\footnote{For a Lagrangian density $\mathcal{L} = \mathcal{L}(\mathcal{F})$,
+the energy-momentum tensor is
+$T_{\alpha\beta} = - \mathcal{L}'(\mathcal{F}) F_{\mu\alpha} F^\mu_{\ \, \beta}
+        + \mathcal{L}(\mathcal{F}) \, g_{\alpha\beta}$,
+which generalizes the Maxwellian expression~(\ref{e:fra:T_em}) to nonlinear electrodynamics.}
+$\w{T}$ derived from the Lagrangian density (\ref{e:loc:Lagrangian_Bardeen})
+fulfills the weak energy condition (\ref{e:def:WEC}), which implies the null energy condition and
+thus the null convergence condition.
 Moreover, the Bardeen spacetime contains trapped surfaces in the region $r_- < r < r_+$. Yet all inextendible null geodesics are complete. The Bardeen spacetime evades Penrose's singularity theorem
-because it does not admit any Cauchy surface.
+because it does not admit any non-compact Cauchy surface (actually no Cauchy surface at all). More precisely, in the internal region
+it admits a \emph{partial} Cauchy surface $\Sigma$ to which the boundary $\mathscr{F}$
+of the causal future of a given trapped surface $\Sp$ can be mapped injectively.
+However $\Sigma$ is compact,
+having the topology of $\SS^3$ (see \cite{Borde97} for details), so that one cannot reach
+the contradiction completing the proof of Penrose's theorem.
 \end{example}
 
 
