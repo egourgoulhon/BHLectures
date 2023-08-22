@@ -168,17 +168,17 @@ is future-incomplete.
 \begin{figure}
 \centerline{\includegraphics[width=0.7\textwidth]{loc_penrose_thm.pdf}}
 \caption[]{\label{f:loc:penrose_thm} \footnotesize
-2D spacetime diagram representing various objects involved in the
+Spacetime diagram representing various objects involved in the
 proof of Penrose's singularity theorem (Property~\ref{p:loc:Penrose_sing_thm}):
 the trapped surface $\Sp$ (the two red dots),
 the two null directions $\wl$ and $\w{k}$ normal to $\Sp$,
 the causal future of $\Sp$, $J^+(\Sp)$ (pale green region),
-the boundary $\mathscr{F}$ (dark green curve)
-of $J^+(\Sp)$, the compact space $\mathscr{V}$ containing $\mathscr{F}$ (light green curve)
+the boundary $\mathscr{F}$ of $J^+(\Sp)$ (dark green curve),
+the compact space $\mathscr{V}$ containing $\mathscr{F}$ (light green curve)
 and the image $\Phi(\mathscr{F})$ of $\mathscr{F}$ (orange segment) into
 the Cauchy surface $\Sigma$ (blue line) by the topological embedding $\Phi$
-constructed from the field lines (maroon lines) of a global timelike vector
-$\w{\xi}$. The two dark green dots are crossover points, where null
+constructed from the field lines of a global timelike vector
+$\w{\xi}$ (maroon lines). The two dark green dots are crossover points, where null
 geodesics leave $\mathscr{F}$ to the interior of $J^+(\Sp)$.
 The compact $(n-2)$-dimensional surface $\Sp$ appears disconnected and reduced
 to two points because this 2D figure is the cut by a vertical plane $\Pi$
@@ -437,6 +437,75 @@ normal to the null hypersurfaces $v=\mathrm{const}$ (cf. Property~\ref{p:vai:nul
 As it is clear on Fig.~\ref{f:vai:CPdiag_thin}, all the geodesics $\Li^{\rm in}_{(v,\th,\ph)}$
 terminate at the curvature singularity $r=0$, $v>0$. Since $-r$ is an affine parameter along
 them (Property~\ref{p:vai:source_Vaidya_metric}), we conclude that they are future-incomplete.
+\end{example}
+
+\begin{example}[Bardeen regular black hole as a counter-example]
+There exist solutions of the Einstein equation (with some rather exotic matter sources)
+corresponding to a black hole
+without any curvature singularity. They are called \defin{regular black holes}\index{regular!black!hole}\index{black!hole!regular --} (see e.g. the recent book~\cite{Bambi23}).
+A well known example (historically the first one)
+is the \defin{Bardeen black hole}\index{Bardeen black hole} \cite{Barde68}. The underlying spacetime $(\M,\w{g})$
+is static and spherically symmetric; in some part of it, the metric is
+expressed in terms of the Schwarzschild-Droste-like coordinates $(t,r,\th,\ph)$
+by
+\be \label{e:loc:Bardeen_metric}
+ \w{g} = -\left( 1 - \frac{2 M(r)}{r} \right)\, \dd t^2
+            + \left( 1 - \frac{2 M(r)}{r} \right) ^{-1}\, \dd r^2 +
+        r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
+\ee
+where
+\be
+    M(r) := m \frac{r^3}{(r^2 + \ell^2)^{3/2}} ,
+\ee
+$m$ and $\ell$ being two positive constants obeying $\ell < 4m/(3\sqrt{3})$.
+Would $M(r)$ be a constant function, one would get the Schwarzschild metric (\ref{e:sch:Schwarz_metric_SD}). Actually the Schwarzschild metric is recovered
+asymptotically, since $M(r) \to  m$ for $r\to +\infty$. For small values of $r$,
+one has instead
+\be
+    M(r) \underset{r\to 0}{\sim} \frac{m}{\ell^3} r^3 .
+\ee
+This implies that $\w{g}$ is regular at $r=0$, contrary to the Schwarzschild case.
+More precisely, setting $\Lambda := 6m/\ell^3$, we get
+\be
+\w{g} \underset{r\to 0}{\sim}  -\left( 1 - \frac{\Lambda}{3} r^2 \right)\, \dd t^2
+            + \left( 1 - \frac{\Lambda}{3} r^2  \right) ^{-1}\, \dd r^2 +
+        r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
+\ee
+We recognize in the right-hand side the metric of de Sitter spacetime\index{de Sitter spacetime}
+of cosmological constant $\Lambda$
+expressed in the so-called static coordinates (see e.g. Sec.~4.3 of Ref.~\cite{GriffP09}).
+On the other side, the metric components
+(\ref{e:loc:Bardeen_metric}) are singular at values of $r$ for which
+$2 M(r) = r$. This equation admits two roots $r=r_\pm$ with $0 < r_- < r_+$.
+By introducing coordinates $(\ti, r, \th, \ph)$ of Eddington-Finkelstein type,
+one can show that $\w{g}$ is regular at $r=r_\pm$. The hypersurfaces $r=r_\pm$
+turn out to be two Killing horizons; the outermost one, i.e. the $r=r_+$ hypersurface
+is the black hole event horizon, while the innermost one is a Cauchy horizon
+in the maximally extended spacetime (see Fig.~1 of Ref.~\cite{Ansol08}).
+The Bardeen metric $\w{g}$ is a solution of the Einstein equation
+(\ref{e:fra:Einstein_eq}) sourced by a magnetic monopole in some nonlinear
+electromadynamics \cite{AyonG00}. By \defin{nonlinear electrodynamics}\index{nonlinear electrodynamics},
+it is meant a theory involving an electromagnetic 2-form $\w{F}$ and for which
+the Lagrangian density $\mathcal{L}$ is
+a nonlinear function of the electromagnetic invariant $\mathcal{F} := F_{\mu\nu} F^{\mu\nu} / 4$,
+while for the standard Maxwell theory one has simply $\mathcal{L} = \mathcal{F}$.
+Specifically, for the Bardeen black hole, the nonlinear electrodynamics is defined by \cite{AyonG00}
+\be \label{e:loc:Lagrangian_Bardeen}
+    \mathcal{L} = \frac{3 m}{|\ell|\ell^2} \left(
+    \frac{\sqrt{2\ell^2 \mathcal{F}}}{1 + \sqrt{2\ell^2 \mathcal{F}}} \right) ^{5/2}
+\ee
+and the electromagnetic field is
+\be
+    \w{F} = \ell \sin\th \, \dd\th \wedge \dd\ph,
+\ee
+which corresponds to a magnetic monopole $\ell$ located at the center of symmetry
+(cf. Remark~\ref{r:sta:magnetic_monopole} on p.~\pageref{r:sta:magnetic_monopole}).
+
+The energy-momentum tensor $\w{T}$ derived from the Lagrangian density (\ref{e:loc:Lagrangian_Bardeen})
+fulfils the weak energy condition (\ref{e:def:WEC}), which implies the null energy condition and
+thus the null convergence condition $\w{R}(\wl, \wl) \geq 0$.
+Moreover, the Bardeen spacetime contains trapped surfaces in the region $r_- < r < r_+$. Yet all inextendible null geodesics are complete. The Bardeen spacetime evades Penrose's singularity theorem
+because it does not admit any Cauchy surface.
 \end{example}
 
 
