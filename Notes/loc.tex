@@ -13,7 +13,7 @@ This chapter is in a draft stage.
 
 The concept of trapped surfaces has been introduced in Sec.~\ref{s:neh:trapped_surfaces}
 (see in particular Fig.~\ref{f:neh:trapped_surf}). Let us recall that
-a submanifold $\Sp$ of a $n$-dimensional spacetime ($n\ge 3$) is
+a submanifold $\Sp$ of a $n$-dimensional spacetime $(\M, \w{g})$ ($n\ge 3$) is
 a \defin{trapped surface}\index{trapped!surface} iff (i) $\Sp$ is a compact $(n-2)$-dimensional manifold
 (without boundary), (ii) $\Sp$ is spacelike (positive definite induced metric)
 and the two systems of null geodesics emerging orthogonally from $\Sp$ towards the future
@@ -36,8 +36,8 @@ Let $(\M,\w{g})$ be the Schwarzschild spacetime as defined in Sec.~\ref{s:sch:ti
 $(\ti,r,\th,\ph)$. Let $\Sp$ be any surface $(\ti,r) = \mathrm{const}$.
 $\Sp$ is diffeomorphic to $\mathbb{S}^2$ and thus compact.
 Moreover, from Eq.~(\ref{e:sch:Schwarz_metric_EF}), the metric induced by $\w{g}$
-on $\Sp$ is $\w{q} = r^2 (\D\th^2 + \sin^2\th\D\ph^2)$, which is clearly positive definite, so
-that $\Sp$ is spacelike. One reads also on the expression of $\w{q}$
+on $\Sp$ is $\w{q} = r^2 (\dd\th^2 + \sin^2\th\,\dd\ph^2)$, which is clearly positive definite;
+hence $\Sp$ is spacelike. One also reads on the expression of $\w{q}$
 that the area of  $\Sp$ is simply $A = 4\pi r^2$ (i.e. $r$ is the areal radius, cf. Sec.~\ref{s:sch:static_spher}).
 If $\Sp$ is located in the black hole interior, i.e. if $0<r < 2m$,
 Property~\ref{p:sch:r_decreasing} implies that $A$ is decreasing along any future-directed null
@@ -123,7 +123,8 @@ Cauchy problem \cite{ChoquG69},
 i.e. there exists a unique solution $\w{g}$ of the Einstein equation
 in $\M$ from initial data prescribed on $\Sigma$, provided that the initial data
 fulfill four components of the Einstein equation known as the
-\emph{constraint equations}\index{constraint!equations}.
+\emph{constraint equations}\index{constraint!equations}
+(see e.g. Ref.~\cite{Gourg12}).
 
 The second concept involved in Penrose's theorem is that of
 an \emph{inextendible incomplete} geodesic. As defined in
@@ -141,9 +142,9 @@ $\lambda > \lambda_{\rm min}$ along $\Li$, for some $\lambda_{\rm min}\in\R$.
 Furthermore, a geodesic $\Li$ is said \defin{inextendible}\index{inextendible geodesic}\index{geodesic!inextendible --} if, and only if,
 there does not exist any geodesic $\Li'$ of $(\M,\w{g})$ distinct from $\Li$
 and such that $\Li\subset\Li'$. An inextendible incomplete causal geodesic
-marks the existence of a singularity\index{singularity} of some kind. For instance the existence of an
-inextendible future-incomplete timelike geodesic $\Li$ implies that the free-falling
-observer having $\Li$ as worldline has his proper time\footnote{Recall that
+marks the existence of a singularity\index{singularity} of some kind.
+For instance a free-falling observer having an
+inextendible future-incomplete timelike geodesic as worldline has his proper time\footnote{Recall that
 the proper time is an affine parameter along a timelike geodesic (Property~\ref{p:geo:proper_time_affine}).} abruptly
 stopping at some finite value!
 We shall discuss this further on later; for the moment, we have enough material
@@ -219,12 +220,12 @@ which has not been established in Sec.~\ref{s:glo:properties_H}:
 on  $\Sp$ (which is part of $\mathscr{F}$, cf. Sec.~\ref{s:glo:causal_struct}),
 the generators of $\mathscr{F}$ are orthogonal to $\Sp$ (cf. e.g. Theorem~9.3.11
 in Wald's textbook~\cite{Wald84}). They therefore start from $\Sp$ along
-the two null directions $\wl$ and $\w{k}$ normal to $\Sp$ (cf. Fig.~\ref{f:loc:penrose_thm}). Let us denote by $\Li$ the null
-generators along $\wl$ and by $\lambda$ the affine parameter of $\Li$
+the two null directions $\wl$ and $\w{k}$ normal to $\Sp$ (cf. Fig.~\ref{f:loc:penrose_thm}). Let us denote by $\Li$ a generic null
+generator along $\wl$ and by $\lambda$ the affine parameter of $\Li$
 such that, on $\Sp$, $\lambda = 0$ and $\left. \D\w{x}/\D\lambda\right| _\Li = \wl$. We shall use
 the latter relation to extend the definition of $\wl$ along $\Li$
-away from $\Sp$. Similarly, let us denote by $\bar{\Li}$ the null
-generators along $\w{k}$ and by $\bar\lambda$ the affine parameter of $\bar{\Li}$
+away from $\Sp$. Similarly, let us denote by $\bar{\Li}$ a generic null
+generator along $\w{k}$ and by $\bar\lambda$ the affine parameter of $\bar{\Li}$
 such that $\bar\lambda = 0$ on $\Sp$ and
 $\left. \D\w{x}/\D\bar\lambda \right| _{\bar{\Li}}= \w{k}$.
 By hypothesis, $\Li$ and $\bar{\Li}$ are future-complete.
@@ -319,8 +320,8 @@ It is worth to stress that Penrose's singularity theorem is \emph{not}
 telling that a curvature singularity, as decribed in Sec.~\ref{s:sch:singularities},
 must exist in spacetime (or at some ``boundary'' of it, since
 usually curvature singularities are excluded from the spacetime manifold).
-The theorem only stipulates that an inextentible geodesic is incomplete. However,
-a good reason for a geodesic to be incomplete is to hit a curvature singularity
+The theorem only stipulates that some inextentible null geodesic is future-incomplete. However,
+a good reason for a null geodesic to be future-incomplete is to hit a curvature singularity
 as the examples below are going to illustrate.
 
 Another cause of incompleteness could be
@@ -365,16 +366,16 @@ Property~\ref{p:sch:radial_null_geod}).
 \begin{example}[Oppenheimer-Snyder collapse]
 The gravitational collapse of a homogeneous pressureless ball, as
 described by the Oppenheimer-Snyder model discussed in Sec.~\ref{s:lem:OS},
-provides an example of a dynamical spacetime for illustrating
-Penrose's singularity theorem.
+provides an example of a dynamical spacetime illustrating
+Penrose's theorem.
 The hypersurface $\Sigma$ defined by $\ti=0$ in terms of the global
 IEF coordinates $(\ti, r, \th, \ph)$ is a non-compact Cauchy surface of
 the underlying spacetime $(\M,\w{g})$ (cf. the Carter-Penrose diagram
 of Fig.~\ref{f:lem:OS:CP_diag}). Since $\w{g}$ is a solution of the Einstein
 equation, the null convergence condition reduces to the null energy condition:
 $\w{T}(\wl,\wl) \geq 0$ for any null vector $\wl$.  Given the form
-(\ref{e:lem:T_pressureless}) of the energy-momentum tensor $\w{T}$, we get
-inside the star,
+(\ref{e:lem:T_pressureless}) of the energy-momentum tensor $\w{T}$, we get,
+inside the collapsing star,
 $\w{T}(\wl,\wl) = \rho (\w{u}\cdot\wl)^2 > 0$ since $\rho > 0$, while
 $\w{T}(\wl,\wl) = 0$ outside the star. Hence the null convergence condition
 is fulfilled. Finally, as detailed in Example~\ref{x:loc:trapped_surf_OS}
