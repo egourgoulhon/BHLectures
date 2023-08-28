@@ -195,6 +195,14 @@ We shall prove the theorem by contradiction. Hence let us assume that all
 inextendible null geodesics emerging orthogonally from $\Sp$ are future-complete. Let $\mathscr{F}$
 be the boundary of the causal future of $\Sp$
 (cf. Sec.~\ref{s:glo:causal_struct} and Fig.~\ref{f:loc:penrose_thm}): $\mathscr{F} := \partial J^+(\Sp)$.
+Since $(\M,\w{g})$ is globally hyperbolic (it admits $\Sigma$ as a Cauchy surface),
+it is necessarily causally simple\index{causally simple}\index{simple!causally --}
+(cf. Proposition~6.6.1 of HE \cite{HawkiE73}).
+By the very definition of \emph{causally simple}
+(cf. Sec.~\ref{s:glo:causal_struct}) and the compacity of $\Sp$, it follows that
+$\mathscr{F}$ coincides with the future horismos\index{future!horismos}\index{horismos} of $\Sp$:
+$\mathscr{F} = E^+(\Sp)$. This implies that points of $\mathscr{F}$ are connected to $\Sp$
+by null geodesics. More precisely, we note that
 $\mathscr{F}$ is an \emph{achronal boundary}\index{achronal!boundary}\index{boundary!achronal},
 namely the boundary of the causal future or past of a given set.
 As mentioned in Sec.~\ref{s:glo:properties_H} (Remark~\ref{r:glo:achronal_boundaries}),
@@ -211,7 +219,7 @@ points, named \emph{crossovers}\index{crossover point}, where the generators lea
 $\mathscr{F}$ in the future direction,
 i.e. are future-extended to null geodesics of $\M$ that do not belong\footnote{They actually
 belong to the interior of $J^+(\Sp)$, i.e. to the chronological future $I^+(\Sp)$
-[Eq.~(\ref{e:glo:int_JS_IS})] (see e.g. Proposition~4.5.14 in Ref.~\cite{HawkiE73}).}
+[Eq.~(\ref{e:glo:int_JS_IS})] (see e.g. Proposition~4.5.14 in HE~\cite{HawkiE73}).}
 to $\mathscr{F}$ (Property~\ref{p:glo:prop3}). Note that two crossovers are shown in
 Fig.~\ref{f:loc:penrose_thm}.
 
@@ -441,6 +449,7 @@ them (Property~\ref{p:vai:source_Vaidya_metric}), we conclude that they are futu
 \end{example}
 
 \begin{example}[Bardeen regular black hole as a counter-example]
+\label{x:loc:Bardeen_BH}
 There exist solutions of the Einstein equation (with some rather exotic matter sources)
 corresponding to a black hole
 without any curvature singularity. They are called \defin{regular black holes}\index{regular!black!hole}\index{black!hole!regular --} (see e.g. the recent book~\cite{Bambi23}).
@@ -523,6 +532,46 @@ the contradiction completing the proof of Penrose's theorem.
 
 \subsection{Hawking \& Penrose's singularity theorem}
 
+Among the three hypotheses of Penrose's singularity theorem (Property~\ref{p:loc:Penrose_sing_thm}),
+the first one, namely there exists a non-compact Cauchy surface, is an assumption about the global structure of spacetime, which cannot be checked by local physical experiments.
+As the Bardeen black hole (Example~\ref{x:loc:Bardeen_BH}) shows, one cannot get rid of this hypothesis
+without replacing it by other ones.
+It turns out that it is possible find more local hypotheses:
+a stronger convergence condition and the non-existence of closed timelike curve.
+
+\begin{prop}[Hawking \& Penrose theorem\index{Hawking \& Penrose theorem}\index{singularity!Hawking \& Penrose -- theorem} \textnormal{(Hawking\index[pers]{Hawking, S.W.} \& Penrose\index[pers]{Penrose, R.} 1970 \cite{HawkiP70})}]
+\label{p:loc:Hawking_Penrose_thm}
+Let $(\M,\w{g})$ be a $n$-dimensional time-orientable spacetime ($n\ge 3$) such that
+\begin{enumerate}
+\item $\M$ does not contain any closed timelike curve;
+\item the \defin{causal convergence condition}\index{causal!convergence condition}\index{convergence!condition!causal --} holds on $\M$:
+\be \label{e:loc:conver_cond}
+    \encadre{ \w{R}(\w{v}, \w{v}) \geq 0 \quad \mbox{for any timelike or null vector $\w{v}$} },
+\ee
+where $\w{R}$ is
+$\w{g}$'s Ricci tensor --- for general relativity with a cosmological constant $\Lambda$,
+such a condition is
+equivalent to the strong energy
+condition\index{strong!energy condition}\index{energy!condition!strong --}:
+\be
+  \w{T}(\w{v}, \w{v}) - \frac{1}{n-2}\left(T - \frac{\Lambda}{4\pi} \right) \w{v}\cdot\w{v} \geq 0 \quad \mbox{for any timelike or null vector $\w{v}$} ,
+\ee
+where $\w{T}$ is the matter energy-momentum tensor and $T := g^{\mu\nu} T_{\mu\nu}$ is its trace;
+\item the following generic curvature condition holds: each causal geodesic contains at least one point at which
+any tangent vector $\w{v}$ fulfills
+\be
+    v_{[\alpha} R_{\beta]\mu\nu[\gamma} v_{\delta]} v^\mu v^\nu \neq 0 ;
+\ee
+\item $\M$ contains at least one of the following:
+\begin{enumerate}
+\item a trapped surface,
+\item a point $p$ for which the expansion of all the future-directed null geodesics
+through $p$ becomes negative in the future of $p$,
+\item a compact spacelike hypersurface.
+\end{enumerate}
+\end{enumerate}
+Then $\M$ contains at least one incomplete inextendible causal geodesic.
+\end{prop}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
