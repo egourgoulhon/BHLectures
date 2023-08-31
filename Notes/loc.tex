@@ -325,10 +325,10 @@ is assumed non-compact.
 \end{proof}
 
 It is worth to stress that Penrose's singularity theorem is \emph{not}
-telling that a curvature singularity, as decribed in Sec.~\ref{s:sch:singularities},
+telling that a curvature singularity, as described in Sec.~\ref{s:sch:singularities},
 must exist in spacetime (or at some ``boundary'' of it, since
 usually curvature singularities are excluded from the spacetime manifold).
-The theorem only stipulates that some inextentible null geodesic is future-incomplete. However,
+The theorem only stipulates that some inextendible null geodesic is future-incomplete. However,
 a good reason for a null geodesic to be future-incomplete is to hit a curvature singularity
 as the examples below are going to illustrate.
 
@@ -350,6 +350,7 @@ $\Hor$ in a possibly complete geodesic of $(\tilde{\M},\w{\tilde{g}})$ and
 there might be no curvature singularity in the spacetime $(\tilde{\M},\w{\tilde{g}})$.
 
 \begin{example}[Schwarzschild spacetime]
+\label{x:loc:Penrose_thm_Schwarz}
 Let us consider the maximally extended Schwarzschild spacetime $(\M,\w{g})$
 discussed in Chap.~\ref{s:max}.
 The hypersurface $\Sigma$ defined by $T=0$ in terms of the Kruskal-Szekeres coordinates
@@ -372,6 +373,7 @@ Property~\ref{p:sch:radial_null_geod}).
 \end{example}
 
 \begin{example}[Oppenheimer-Snyder collapse]
+\label{x:loc:Penrose_thm_OS}
 The gravitational collapse of a homogeneous pressureless ball, as
 described by the Oppenheimer-Snyder model discussed in Sec.~\ref{s:lem:OS},
 provides an example of a dynamical spacetime illustrating
@@ -422,11 +424,12 @@ both $\Li$ and $\bar{\Li}$ are future-incomplete.
 \end{example}
 
 \begin{example}[Vaidya collapse]
+\label{x:loc:Penrose_thm_Vaidya}
 Let us consider the collapse of a radiation shell
 as studied in Sec.~\ref{s:vai:infall}, assuming that the shell is thin
 (large radiation density): $\alpha := 2m/v_0 > 1/8$
 [cf. Eqs.~(\ref{e:vai:def_alpha}) and (\ref{e:vai:v0_small})].
-As it can be infered from the Carter-Penrose diagram of Fig.~\ref{f:vai:CPdiag_thin},
+As it can be inferred from the Carter-Penrose diagram of Fig.~\ref{f:vai:CPdiag_thin},
 a hypersurface $t=\mathrm{const}$ in the black hole exterior
 is a non-compact Cauchy surface (for instance the hypersurface $t=-3m$ in
 the $\alpha=2/3$ model considered in Fig.~\ref{f:vai:diag_S0}).
@@ -534,7 +537,7 @@ the contradiction completing the proof of Penrose's theorem.
 
 Among the three hypotheses of Penrose's singularity theorem (Property~\ref{p:loc:Penrose_sing_thm}),
 the first one, namely there exists a non-compact Cauchy surface, is an assumption about the global structure of spacetime, which cannot be checked by local physical experiments.
-As the Bardeen black hole (Example~\ref{x:loc:Bardeen_BH}) shows, one cannot get rid of this hypothesis
+As the Bardeen black hole shows (Example~\ref{x:loc:Bardeen_BH}), one cannot get rid of this hypothesis
 without replacing it by other ones.
 It turns out that it is possible find more local hypotheses:
 a stronger convergence condition and the non-existence of closed timelike curve.
@@ -560,7 +563,7 @@ equivalent to the
 where $\w{T}$ is the matter energy-momentum tensor and $T := g^{\mu\nu} T_{\mu\nu}$ is its trace;
 \item the following \defin{generic condition}\index{generic!condition} holds: every causal geodesic contains at least one point at which
 the (nonzero) tangent vectors $\w{v}$ fulfill
-\be
+\be \label{e:loc:generic_cond}
     v^{[\alpha} R^{\beta]}_{\ \; \mu\nu[\gamma} v_{\delta]} v^\mu v^\nu \neq 0 ,
 \ee
 where $R^\alpha_{\ \; \beta\gamma\delta}$ is $\w{g}$'s Riemann curvature tensor;
@@ -569,16 +572,20 @@ where $R^\alpha_{\ \; \beta\gamma\delta}$ is $\w{g}$'s Riemann curvature tensor;
 \item a trapped surface,
 \item a point $p$ such that the expansions of all the future-directed null geodesics
 through $p$ become negative in the future of $p$,
-\item a compact spacelike hypersurface.
+\item a spacelike compact hypersurface without boundary (i.e. an embedded compact manifold of
+dimension $(n-1)$).
 \end{enumerate}
 \end{enumerate}
 Then $\M$ contains at least one incomplete inextendible causal geodesic.
 \end{prop}
 The proof is quite long and we refer to HE \cite{HawkiE73}, p.~267, where
 it is given for $n=4$, the generalization to any dimension being
-straightforward.
+straightforward (see also Sec.~5 of Ref.~\cite{Senov98} and Sec.~5.1.4 of Ref.~\cite{SenovG15}).
 A few comments are in order:
 \begin{itemize}
+\item The non-existence of closed timelike curves is implied by the
+existence of a Cauchy surface required in Penrose's theorem
+(Property~\ref{p:loc:Penrose_sing_thm}), but it is a much weaker condition.
 \item The causal convergence condition (\ref{e:loc:conver_cond}) is stronger
 than the null convergence condition (\ref{e:neh:null_energy_cond}) involved
 in Penrose's theorem (Property~\ref{p:loc:Penrose_sing_thm}), for
@@ -594,13 +601,66 @@ $\w{T} = (\rho + p) \uu{u}\otimes\uu{u} + p \w{g}$ and the strong energy conditi
 \be \label{e:loc:SEC_fluid}
     (n-3) \rho + (n-1) p - \frac{\Lambda}{4\pi} \geq 0 .
 \ee
-Note that, despite their names, the strong energy condition does \emph{not} imply
-the weak energy condition, as stated in Sec.~\ref{s:def:null_convergence_cond}
-[Eq.~(\ref{e:def:WEC}). In particular, for a perfect fluid,
-the weak energy condition is $\rho + p \geq 0$, which is logically independent
-from (\ref{e:loc:SEC_fluid}), even if $\Lambda=0$.
-\item
+Note that, event for $\Lambda=0$, the strong energy condition does \emph{not} imply the
+weak energy condition\index{weak!energy condition}\index{energy!condition!weak --}
+introduced in Sec.~\ref{s:def:null_convergence_cond} [Eq.~(\ref{e:def:WEC})],
+contrary to what the names may suggest. The only logical connection between
+the two conditions is that both imply the null energy condition (\ref{e:neh:null_energy_cond_matter}).
+\item For timelike geodesics, the generic condition (\ref{e:loc:generic_cond})
+is equivalent to\footnote{It suffices to contract (\ref{e:loc:generic_cond}) by
+$v_\alpha v^\delta$ and use the symmetries of the Riemann tensor (cf. Sec.~\ref{s:bas:curvat})
+to get (\ref{e:loc:gen_cond_timelike}).}
+\be \label{e:loc:gen_cond_timelike}
+    R^\alpha_{\ \; \mu\nu\beta} v^\mu v^\nu \neq 0 .
+\ee
+In view of the geodesic deviation equation\index{geodesic!deviation equation}\index{deviation!geodesic --}
+(\ref{e:geo:geod_deviation_index}), this implies that the relative acceleration in any timelike
+geodesic congruence cannot vanish identically along the geodesics. In physical terms, this means
+that tidal forces\index{tidal force} are necessarily felt somewhere along the worldline of any inertial observer. Apart from flat (Minkowski) spacetime, this condition is violated only in peculiar cases,
+involving a high degree of symmetry, hence the qualifier \emph{generic}. An example is the Einstein static universe\index{Einstein!static universe}\index{static!universe (Einstein)} considered in Sec.~\ref{s:glo:conf_complet_Mink} [Eq.~(\ref{e:glo:tg_Einstein})]:
+it can be shown \cite{Senov98} that the curves $(\chi,\th,\ph) = \mathrm{const}$ are timelike geodesics that have $R^\alpha_{\ \; \mu\nu\beta} v^\mu v^\nu  = 0$ all along them.
+\item Hypothesis 4 of the Hawking-Penrose theorem is more general than the requirement of
+a trapped surface in Penrose's theorem (Property~\ref{p:loc:Penrose_sing_thm}), since the
+trapped surface can be replaced by a light cone that reconverges in the future
+(case (b)) or a spacelike compact hypersurface (case (c)). The latter possibility arises
+in spatially closed cosmological models, such as the de Sitter spacetime\index{de Sitter spacetime}
+(cf. Example~\ref{x:glo:dS4} on p.~\pageref{x:glo:dS4}), which admits spacelike hypersurfaces of $\SS^3$ topology. This does not occur in Minkowski spacetime: embedded hypersurfaces with $\SS^3$ topology
+are of course possible (the unit sphere of $\R^4$ !), but they cannot be everywhere spacelike.
 \end{itemize}
+\begin{remark}
+Hypothesis (4c) (existence of a spacelike compact hypersurface) is
+that stated in the original article by Hawking \& Penrose \cite{HawkiP70}.
+It can be generalized to the existence of an achronal\index{achronal} compact set without
+edge (cf. Theorem~2 on p.~266 of HE \cite{HawkiE73} and Theorem~5.6 of Ref.~\cite{Senov98}).
+\end{remark}
+
+\begin{example}[strong energy condition]
+Let us check that the strong energy condition (\ref{e:loc:SEC}) holds for the classical
+spacetimes involved in Examples~\ref{x:loc:Penrose_thm_Schwarz} (Schwarzschild),
+\ref{x:loc:Penrose_thm_OS} (Oppenheimer-Snyder) and \ref{x:loc:Penrose_thm_Vaidya} (Vaidya).
+For the Schwarzschild black hole, this is trivial since $\w{T} = 0$ and $\Lambda=0$.
+For the Oppenheimer-Snyder collapse, still $\Lambda=0$ and we note that the matter is a
+perfect fluid with $\rho \geq 0$ and $p=0$,
+so that the fluid strong energy condition~(\ref{e:loc:SEC_fluid}) is fulfilled.
+For the Vaidya collapse, the energy-momentum tensor $\w{T}$ is given by Eq.~(\ref{e:vai:ener_mom_tensor}),
+which yields $\w{T}(\w{v},\w{v}) = M'(v) (\w{k}\cdot\w{v})^2 / (4\pi r^2)$ and $T = 0$. Given that
+$M'(v) \geq 0$ and $\Lambda=0$, it is clear that (\ref{e:loc:SEC}) is satisfied.
+\end{example}
+
+\begin{example}[Bardeen regular black hole as a counter-example]
+We have seen in Example~\ref{x:loc:Bardeen_BH} that the Bardeen
+black hole, which has no singularity and is geodesically complete, evades
+Penrose's theorem \ref{p:loc:Penrose_sing_thm} because it has no Cauchy surface. It must evade the
+Hawking-Penrose theorem~\ref{p:loc:Hawking_Penrose_thm} as well.
+Hypothesis~1 of
+that theorem
+is fulfilled: the Bardeen spacetime does not contain any closed timelike curve.
+Hypotheses~3 and 4a are fulfilled as well. The only reason for which the Hawking-Penrose theorem
+does not apply is actually hypothesis~2: the strong energy condition is violated
+by the nonlinear-electrodynamics energy-momentum tensor sourcing the Bardeen solution
+(albeit the weak energy condition is not).
+\end{example}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
