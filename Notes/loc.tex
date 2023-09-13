@@ -378,7 +378,7 @@ is assumed non-compact.
 It is worth to stress that Penrose's singularity theorem is \emph{not}
 telling that a curvature singularity, as described in Sec.~\ref{s:sch:singularities},
 must exist in spacetime (or at some ``boundary'' of it, since
-usually curvature singularities are excluded from the spacetime manifold).
+curvature singularities are usually excluded from the spacetime manifold).
 The theorem only stipulates that some inextendible null geodesic is future-incomplete. However,
 a good reason for a null geodesic to be future-incomplete is to hit a curvature singularity
 as the examples below are going to illustrate.
@@ -398,7 +398,7 @@ $\Sigma$ is only a \emph{partial} Cauchy surface\index{partial!Cauchy surface}\i
 and Fig.~\ref{f:ker:cauchy_hor}).
 The geodesic $\Li$, which was inextendible within $\M$, can then be extended beyond
 $\Hor$ in a possibly complete geodesic of $(\tilde{\M},\w{\tilde{g}})$ and
-there might be no curvature singularity in the spacetime $(\tilde{\M},\w{\tilde{g}})$.
+there might be no curvature singularity at all in the spacetime $(\tilde{\M},\w{\tilde{g}})$.
 
 \begin{example}[Schwarzschild spacetime]
 \label{x:loc:Penrose_thm_Schwarz}
@@ -587,7 +587,7 @@ the contradiction completing the proof of Penrose's theorem.
 \subsection{Hawking \& Penrose's singularity theorem}
 
 Among the three hypotheses of Penrose's singularity theorem (Property~\ref{p:loc:Penrose_sing_thm}),
-the first one, namely there exists a non-compact Cauchy surface, is an assumption about the global structure of spacetime, which cannot be checked by local physical experiments.
+the first one, namely there exists a non-compact Cauchy surface, is an assumption about the \emph{global} structure of spacetime. It cannot be checked by any local physical experiment.
 As the Bardeen black hole shows (Example~\ref{x:loc:Bardeen_BH}), one cannot get rid of this hypothesis
 without replacing it by other ones.
 It turns out that it is possible find more local hypotheses:
@@ -624,7 +624,7 @@ where $R^\alpha_{\ \; \beta\gamma\delta}$ is $\w{g}$'s Riemann curvature tensor;
 \item a point $p$ such that the expansions of all the future-directed null geodesics
 through $p$ become negative in the future of $p$,
 \item a spacelike compact hypersurface without boundary (i.e. an embedded compact manifold of
-dimension $(n-1)$).
+dimension $n-1$).
 \end{enumerate}
 \end{enumerate}
 Then $\M$ contains at least one incomplete inextendible causal geodesic.
@@ -632,14 +632,14 @@ Then $\M$ contains at least one incomplete inextendible causal geodesic.
 The proof is quite long and we refer to HE \cite{HawkiE73}, p.~267, where
 it is given for $n=4$, the generalization to any dimension being
 straightforward (see also Sec.~5 of Ref.~\cite{Senov98} and Sec.~5.1.4 of Ref.~\cite{SenovG15}).
-A few comments are in order:
+Here, we shall limit ourselves to a few comments:
 \begin{itemize}
-\item The non-existence of closed timelike curves is implied by the
-existence of a Cauchy surface required in Penrose's theorem
-(Property~\ref{p:loc:Penrose_sing_thm}), but it is a much weaker condition.
-\item The causal convergence condition (\ref{e:loc:conver_cond}) is stronger
+\item The non-existence of closed timelike curves is a much weaker condition
+than the existence of a Cauchy surface required in Penrose's theorem
+(Property~\ref{p:loc:Penrose_sing_thm}), the latter condition implying the former one.
+\item On the other side, the causal convergence condition (\ref{e:loc:conver_cond}) is stronger
 than the null convergence condition (\ref{e:neh:null_energy_cond}) involved
-in Penrose's theorem (Property~\ref{p:loc:Penrose_sing_thm}), for
+in Penrose's theorem, for
 it has to hold for timelike vectors, in addition to null ones.
 \item For general relativity,
 the causal convergence condition (\ref{e:loc:conver_cond}) is equivalent to
@@ -652,22 +652,21 @@ $\w{T} = (\rho + p) \uu{u}\otimes\uu{u} + p \w{g}$ and the strong energy conditi
 \be \label{e:loc:SEC_fluid}
     (n-3) \rho + (n-1) p - \frac{\Lambda}{4\pi} \geq 0 .
 \ee
-Note that, event for $\Lambda=0$, the strong energy condition does \emph{not} imply the
+Note that, even for $\Lambda=0$, the strong energy condition does \emph{not} imply the
 weak energy condition\index{weak!energy condition}\index{energy!condition!weak --}
 introduced in Sec.~\ref{s:def:null_convergence_cond} [Eq.~(\ref{e:def:WEC})],
 contrary to what the names may suggest. The only logical connection between
 the two conditions is that both imply the null energy condition (\ref{e:neh:null_energy_cond_matter}).
 \item For timelike geodesics, the generic condition (\ref{e:loc:generic_cond})
-is equivalent to\footnote{It suffices to contract (\ref{e:loc:generic_cond}) by
-$v_\alpha v^\delta$ and use the symmetries of the Riemann tensor (cf. Sec.~\ref{s:bas:curvat})
-to get (\ref{e:loc:gen_cond_timelike}).}
+is equivalent to\footnote{To see it, it suffices to contract (\ref{e:loc:generic_cond}) by
+$v_\alpha v^\delta$ and use the symmetries of the Riemann tensor (cf. Sec.~\ref{s:bas:curvat}).}
 \be \label{e:loc:gen_cond_timelike}
     R^\alpha_{\ \; \mu\nu\beta} v^\mu v^\nu \neq 0 .
 \ee
 In view of the geodesic deviation equation\index{geodesic!deviation equation}\index{deviation!geodesic --}
 (\ref{e:geo:geod_deviation_index}), this implies that the relative acceleration in any timelike
 geodesic congruence cannot vanish identically along the geodesics. In physical terms, this means
-that tidal forces\index{tidal force} are necessarily felt somewhere along the worldline of any inertial observer. Apart from flat (Minkowski) spacetime, this condition is violated only in peculiar cases,
+that tidal forces\index{tidal force} are necessarily felt sometime along the worldline of any inertial observer. Apart from flat (Minkowski) spacetime, this condition is violated only in peculiar cases,
 involving a high degree of symmetry, hence the qualifier \emph{generic}. An example is the Einstein static universe\index{Einstein!static universe}\index{static!universe (Einstein)} considered in Sec.~\ref{s:glo:conf_complet_Mink} [Eq.~(\ref{e:glo:tg_Einstein})]:
 it can be shown \cite{Senov98} that the curves $(\chi,\th,\ph) = \mathrm{const}$ are timelike geodesics that have $R^\alpha_{\ \; \mu\nu\beta} v^\mu v^\nu  = 0$ all along them.
 \item Hypothesis 4 of the Hawking-Penrose theorem is more general than the requirement of
