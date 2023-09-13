@@ -103,12 +103,56 @@ However, $\Sp$ fails to be a trapped surface for it is not compact. Truncating t
 would not help, because this would make $\Sp$ a manifold with boundary and hence not a closed one.
 \end{example}
 
-It is worth noticing that some peculiar black hole spacetimes
-do not contain any trapped surface in the strict sense ($\theta_{(\w{k})} < 0$ and $\theta_{(\wl)} < 0$), but only \emph{marginally trapped surfaces}\index{marginally!trapped surface}\index{trapped!surface!marginally --} ($\theta_{(\w{k})} < 0$ and $\theta_{(\wl)} = 0$), as the
-following example shows:
+It is worth noticing that some (peculiar) black hole spacetimes
+do not contain any trapped surface in the strict sense ($\theta_{(\w{k})} < 0$ and $\theta_{(\wl)} < 0$), but only \emph{marginally trapped surfaces}\index{marginally!trapped surface}\index{trapped!surface!marginally --} ($\theta_{(\w{k})} < 0$ and $\theta_{(\wl)} = 0$).
+This is demonstrated by the following example:
 
 \begin{example}[no trapped surface in the extremal Reissner-Nordström spacetime]
-The \defin{extremal Reissner-Nordström black hole}
+The \defin{extremal Reissner-Nordström black hole}\index{Reissner-Nordström!black hole!extremal --}\index{extremal!Reissner-Nordström black hole} is defined by setting
+$Q = \sqrt{4\pi/\mu_0}\, M$ and $P=0$ in Eq.~(\ref{e:sta:ReiNor_n4}). Performing the
+change of notation
+$M\to m$, this yields the metric
+\be \label{e:loc:metric_ERN}
+    \w{g}  =  -\left( 1 - \frac{m}{r} \right)^2 \dd t^2
+    + \left( 1 - \frac{m}{r}  \right) ^{-2} \dd r^2
+     + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
+\ee
+The coordinates $(t,r,\th,\ph)$ are singular at $r=m$. One can introduce
+Eddington-Finkelstein-like coordinates $(\ti,r,\th,\ph)$ via
+\be
+    \ti := t + 2 m \ln \left| \frac{r}{m} - 1 \right| + \frac{m}{1 - r/m}
+\ee
+(compare with Eq.~(\ref{e:sch:ti_t_r}) in the Schwarzschild case)
+to get a regular coordinate system
+in the whole range $r\in(0, +\infty)$. The hypersurface $\Hor$ defined by $r=m$ appears then as
+a black hole event horizon. $\Hor$ is
+a \emph{degenerate} Killing horizon\index{degenerate!Killing horizon}\index{Killing!horizon!degenerate --} with respect to the Killing vector $\w{\xi} = \wpar_t = \wpar_{\ti}$
+(cf. Sec.~\ref{s:neh:classif_KH}) ({\emph Exercise:} prove it!). This is similar to
+the event horizon
+of the extremal Kerr spacetime (cf. Chap.~\ref{s:exk}) being a degenerate Killing horizon
+(Property~\ref{p:exk:H_degenerate_KH}).
+From the metric (\ref{e:loc:metric_ERN}), it
+appears that the vector field $\wpar_t$ is timelike in both regions $r<m$
+(black hole interior)
+and $r>m$ (black hole exterior), since $g_{tt} < 0$ there.
+Moreover, for the standard time orientation given by $\wpar_{\ti}$,
+$\wpar_t$ is future-directed in these two regions.
+Let us consider a 2-sphere $\Sp$ defined by $(t,r) = \mathrm{const}$
+with $r\neq m$. The two families of null geodesics $\Li_{\pm}$ normal to $\Sp$ are
+ruled by the equations $(\th,\ph) = \mathrm{const}$ and
+\be \label{e:loc:radial_geod_ERN}
+    \left. \derd{r}{t} \right| _{\Li_{\pm}}= \pm \left( 1  - \frac{m}{r} \right) ^2 ,
+\ee
+the latter being deduced from Eq.~(\ref{e:loc:metric_ERN})
+by setting $\D s^2 := \w{g}(\D\w{x},\D\w{x}) = 0$ with
+$\D\w{x} = \D t \, \wpar_t + \D r \, \wpar_r$ along $\Li_{\pm}$.
+One reads on the metric (\ref{e:loc:metric_ERN}) that the area of $\Sp$ is
+$A=4\pi r^2$, as in the Schwarzschild case (Example~\ref{x:loc:trapped_surf_Schwarz}).
+Now, since $\wpar_t$ is future-directed timelike, it appears from Eq.~(\ref{e:loc:radial_geod_ERN}) that $r$ increases (resp. decreases)
+towards to the future along $\Li_+$ (resp. $\Li_-$), in both regions $r<m$ and $r>m$. It
+follows immediately that $\Sp$ is not trapped. Actually, there exists only
+\emph{marginally} trapped surfaces in this spacetime: the cross-sections of
+the event horizon $\Hor$.
 \end{example}
 
 \subsection{Penrose's singularity theorem}
