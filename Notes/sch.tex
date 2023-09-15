@@ -673,6 +673,51 @@ A metric of the type (\ref{e:sch:Kerr_Schild}) is said to be a
 are discussed in Appendix~\ref{s:ksm}.
 \end{remark}
 
+\begin{hist} \label{n:sch:Eddington_coord}
+Eddington-Finkelstein coordinates have been introduced by
+Arthur Eddington\index[pers]{Eddington, A.} in 1924 \cite{Eddin1924}. More precisely, Eddington
+introduced the \emph{outgoing} version of these coordinates,
+while we have focused above on the \emph{ingoing} version. Indeed
+Eddington's Eq.~(2) is $\ti = t - 2m \ln(r-m)$, which mainly differs from
+our Eq.~(\ref{e:sch:ti_t_r}) by the minus sign in front of the logarithm\footnote{The other differences with (\ref{e:sch:ti_t_r}) are a constant additive term
+and a misprint in Eddington's formula: the term $\ln(r-m)$ should be replaced
+by $\ln(r-2m)$.},
+which means that Eddington's time coordinate is actually $\ti = u + r$, instead of
+$\ti = v - r$ (our Eq.~(\ref{e:sch:ti_v_r})). Eddington used his transformation
+to get the Kerr-Schild form (\ref{e:sch:Kerr_Schild}) of Schwarzschild metric,
+with $(\D \ti + \D r)^2$ replaced by $(\D \ti - \D r)^2$ due to the change
+ingoing $\leftrightarrow$ outgoing. For a modern reader, it is quite surprising
+that Eddington did not point out that the metric components w.r.t. $(\ti,r,\th,\ph)$
+are regular at $r=2m$. Actually the main purpose of Eddington's article
+\cite{Eddin1924} was elsewhere, in the comparison of general relativity to an alternative theory proposed in 1922 by the mathematician Alfred N. Whitehead
+(see e.g. \cite{GibboW08}).
+Only in 1958 did David Finkelstein\index[pers]{Finkelstein, D.} reintroduce the Eddington transformation
+and conclude that the Schwarzschild metric is analytic over the whole domain
+$r\in(0,+\infty)$ \cite{Finke58}. Meanwhile the regularity of Schwarzschild metric
+at $r=2m$ had been proven by Georges Lemaître\index[pers]{Lemaitre, G.@Lemaître, G.} in 1932 \cite{Lemai32}, via
+another coordinate system, which we shall introduce in
+Sec.~\ref{s:lem:Schwarzschild} (see also \cite{Eisen93} for a detailed discussion),
+as well as by John Synge\index[pers]{Synge, J.L.} in 1950 \cite{Synge50}, by means of yet another coordinate
+system (cf. the historical note on p.~\pageref{n:max:KS_coord}).
+\end{hist}
+
+\begin{remark}
+In the literature, the terminology \emph{Eddington-Finkelstein coordinates}
+is often used for the coordinates $(v,r,\th,\ph)$ (or $(u,r,\th,\ph)$),
+i.e. for what we have called the \emph{null Eddington-Finkelstein coordinates},
+and the regularity of the metric tensor at $r=2m$ is demonstrated by
+considering the components (\ref{e:sch:Schwarz_metric_NIEF}).
+However, neither
+Eddington \cite{Eddin1924} nor Finkelstein \cite{Finke58}
+considered this null version: they used coordinates $(\ti,r,\th,\ph)$
+and they exhibited (the outgoing version of) the
+metric components (\ref{e:sch:Schwarz_metric_EF}).
+Hence our terminology is more faithful to history.
+\end{remark}
+
+
+
+
 \subsection{The Schwarzschild horizon} \label{s:sch:Schwarz_hor}
 
 Contrary to the Schwarzschild-Droste components (\ref{e:sch:Schwarz_metric_SD}),
@@ -732,6 +777,23 @@ $\Hor$ is depicted in Fig.~\ref{f:def:Schwarz_horizon}.
 We shall see in Sec.~\ref{s:sch:BH} that $\Hor$ is actually a
 black hole event horizon in Schwarzschild spacetime.
 
+\begin{hist}
+The first author to recognize that the hypersurface $r=2m$ in Schwarzschild spacetime
+is a one-way membrane, i.e. a horizon, is David Finkelstein\index[pers]{Finkelstein, D.}
+in 1958~\cite{Finke58}. Amazingly, Finkelstein stressed rather $r=2m$
+as a \emph{white hole} boundary in a time-reversed version of $(\M_{\rm IEF},\w{g})$. In particular, he
+wrote \emph{``causal influences propagating into the "future" can cross the Schwarzschild surface only
+in an outward direction''} (see also his Fig.~1). The reason is that Finkelstein considered
+the extension of the $\M_{\rm I}$ region to $r\leq 2m$ constructed with
+the \emph{outgoing}
+coordinate $\tilde{\tilde t} = t - 2 m \ln ( {r}/(2m) - 1 )$ [his Eq.~(2.3) in our notations] instead of $\ti$ as given by Eq.~(\ref{e:sch:ti_t_r}). However, he noticed that another
+extension of $\M_{\rm I}$ can be obtained by time inversion,
+corresponding to a \emph{``surface that is permeable inwards''}. As we shall see in Chap.~\ref{s:max},
+both black hole and white hole regions actually exist in the maximal extension
+of Schwarzschild spacetime.
+\end{hist}
+
+
 \subsection{Coordinate singularity vs. curvature singularity}
 \label{s:sch:singularities}
 
@@ -770,47 +832,6 @@ neighboring timelike geodesics and that acceleration is
 governed by the Riemann tensor,
 via the \emph{geodesic deviation equation}\index{geodesic!deviation equation}\index{deviation!geodesic --}, cf. Property~\ref{p:geo:geod_deviation} (see Chap.~11 of MTW \cite{MisneTW73} for more details).
 
-\begin{hist} \label{n:sch:Eddington_coord}
-Eddington-Finkelstein coordinates have been introduced by
-Arthur Eddington\index[pers]{Eddington, A.} in 1924 \cite{Eddin1924}. More precisely, Eddington
-introduced the \emph{outgoing} version of these coordinates,
-while we have focused above on the \emph{ingoing} version. Indeed
-Eddington's Eq.~(2) is $\ti = t - 2m \ln(r-m)$, which mainly differs from
-our Eq.~(\ref{e:sch:ti_t_r}) by the minus sign in front of the logarithm\footnote{The other differences with (\ref{e:sch:ti_t_r}) are a constant additive term
-and a misprint in Eddington's formula: the term $\ln(r-m)$ should be replaced
-by $\ln(r-2m)$.},
-which means that Eddington's time coordinate is actually $\ti = u + r$, instead of
-$\ti = v - r$ (our Eq.~(\ref{e:sch:ti_v_r})). Eddington used his transformation
-to get the Kerr-Schild form (\ref{e:sch:Kerr_Schild}) of Schwarzschild metric,
-with $(\D \ti + \D r)^2$ replaced by $(\D \ti - \D r)^2$ due to the change
-ingoing $\leftrightarrow$ outgoing. For a modern reader, it is quite surprising
-that Eddington did not point out that the metric components w.r.t. $(\ti,r,\th,\ph)$
-are regular at $r=2m$. Actually the main purpose of Eddington's article
-\cite{Eddin1924} was elsewhere, in the comparison of general relativity to an alternative theory proposed in 1922 by the mathematician Alfred N. Whitehead
-(see e.g. \cite{GibboW08}).
-Only in 1958 did David Finkelstein\index[pers]{Finkelstein, D.} reintroduce the Eddington transformation
-to show that the Schwarzschild metric is analytic over the whole domain
-$r\in(0,+\infty)$ \cite{Finke58}. Meanwhile the regularity of Schwarzschild metric
-at $r=2m$ had been proven by Georges Lemaître\index[pers]{Lemaitre, G.@Lemaître, G.} in 1932 \cite{Lemai32}, via
-another coordinate system, which we shall introduce in
-Sec.~\ref{s:lem:Schwarzschild} (see also \cite{Eisen93} for a detailed discussion),
-as well as by John Synge\index[pers]{Synge, J.L.} in 1950 \cite{Synge50}, by means of yet another coordinate
-system (cf. the historical note on p.~\pageref{n:max:KS_coord}).
-\end{hist}
-
-\begin{remark}
-In the literature, the terminology \emph{Eddington-Finkelstein coordinates}
-is often used for the coordinates $(v,r,\th,\ph)$ (or $(u,r,\th,\ph)$),
-i.e. for what we have called the \emph{null Eddington-Finkelstein coordinates},
-and the regularity of the metric tensor at $r=2m$ is demonstrated by
-considering the components (\ref{e:sch:Schwarz_metric_NIEF}).
-However, neither
-Eddington \cite{Eddin1924} nor Finkelstein \cite{Finke58}
-considered this null version: they used coordinates $(\ti,r,\th,\ph)$
-and they exhibited (the outgoing version of) the
-metric components (\ref{e:sch:Schwarz_metric_EF}).
-Hence our terminology is more faithful to history.
-\end{remark}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{sch_rad_null_geod_EF.pdf}}
@@ -1354,6 +1375,4 @@ of Schwarzschild spacetime, does \emph{not} provide any
 conformal completion, as it will be discussed in
 Sec.~\ref{s:max:discus_hUhV}.
 \end{remark}
-
-
 
