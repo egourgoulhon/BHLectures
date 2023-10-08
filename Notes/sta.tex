@@ -815,29 +815,111 @@ of \emph{Komar angular momentum}, which we shall introduce in Sec.~\ref{s:sta:Ko
 We shall call a \defin{weekly relativistic system}\index{weekly relativistic}
 a $n$-dimensional spacetime $(\M,\w{g})$
 such that $\M$ is diffeomorphic to $\R^n$, the metric tensor can be expressed as
-\be
-    \w{g} = \w{\eta} + \w{h} ,
+\be \label{e:sta:weak_g_f_h}
+    \w{g} = \w{f} + \w{h} ,
 \ee
-where $\w{\eta}$ is Minkowski metric on $\M$ and $\w{h}$ is small in the following
-sense: in any Minkowskian coordinates $(x^\alpha)$, i.e. in coordinates
-such that $(\eta_{\alpha\beta}) = \mathrm{diag}(-1,1,\ldots,1)$, the components
-of $\w{h}$ obey $|h_{\alpha\beta}| \ll 1$. Moreover, we assume that $\w{g}$
+where $\w{f}$ is a flat Lorentzian metric on $\M$ and $\w{h}$ is small in the following
+sense: in any \emph{Minkowskian} coordinates\index{Minkowskian coordinates} for $\w{f}$, i.e. coordinates
+$(x^\alpha)$ such that\footnote{We keep the notation $\eta$ for the matrix $\mathrm{diag}(-1,1,\ldots,1)$, so that
+$(\eta_{\alpha\beta})$ stands for the components of $\w{f}$ in Minkowskina coordinates only.}
+$(f_{\alpha\beta}) = \eta := \mathrm{diag}(-1,1,\ldots,1)$, the components
+of $\w{h}$ obey $|h_{\alpha\beta}| \ll 1$. Furthermore, we assume that $\w{g}$
 is ruled by the Einstein equation (\ref{e:fra:Einstein_eq}) with $\Lambda=0$
 and a compactly-supported energy momentum tensor $\w{T}$ in which the
 spatial stresses are dominated by the energy and momentum densities, i.e.
 such that $|T_{ij}| \ll \mathrm{min}(|T_{00}|,|T_{0k}|)$ in Minkowkian coordinates.
-Let us introduce
+Given the flat metric $\w{f}$, the Minkowskian coordinates $(x^\alpha)$ on $\M$
+are not unique: any Poincaré transformation\index{Poincaré!transformation}
+${\tilde x}^\alpha = \Lambda^\alpha_{\ \, \mu} x^\mu + c^\alpha$, where
+$(\Lambda^\alpha_{\ \, \beta})$ is a Lorentz matrix and the $c^\alpha$'s are
+constant, leads to a coordinate system $({\tilde x}^\alpha)$ on $\M$ that is Minkowskian for $\w{f}$.
+The flat metric $\w{f}$ on $\M$, and hence the decomposition (\ref{e:sta:weak_g_f_h}), is
+highly non-unique.
+Indeed any change of coordinates of the form ${x'}^\alpha = x^\alpha + \zeta^\alpha(x^0,\ldots,x^{n-1})$
+where $(x^\alpha)$ are Minkowskian coordinates for $\w{f}$ and $\zeta^\alpha$ are infinitesimal functions,
+leads to the following components of the metric tensor with respect to $(x^{\alpha'})$:
+\[
+    {g'}_{\alpha\beta} = g_{\mu\nu} \der{x^\mu}{{x'}^\alpha} \der{x^\nu}{{x'}^\beta}
+    = \left( \eta_{\mu\nu} + h_{\mu\nu}\right) \left( \delta^\mu_{\ \, \alpha} - \partial_\alpha \zeta^\mu \right)
+     \left( \delta^\nu_{\ \, \beta} - \partial_\beta \zeta^\nu \right) ,
+\]
+where we have used $x^\alpha = x^{\alpha'} - \zeta^\alpha$
+and $\dert{\zeta^\alpha}{x^{\beta'}} = \dert{\zeta^\alpha}{x^\sigma} \times \dert{x^\sigma}{x^{\beta'}} \simeq
+\dert{\zeta^\alpha}{x^\beta} =: \partial_\beta \zeta^\alpha$ to the first order in $\zeta^\alpha$.
+Expanding to the first order in $\zeta^\alpha$ and $\w{h}$, we get
+\[
+    {g'}_{\alpha\beta}  = \eta_{\alpha\beta} + h_{\alpha\beta}
+    - \partial_\alpha \zeta_\beta - \partial_\beta \zeta_\alpha ,
+\]
+where $\zeta_\alpha := f_{\alpha\mu} \zeta^\mu$.
+We may recast the above expression of $\w{g}$ as
+$\w{g} = \w{f'} + \w{h'}$,
+where $\w{f'}$ is the metric whose the components in the coordinates $({x'}^\alpha)$ are\footnote{Note that
+the components of $\w{f}$ with respect to the coordinates $({x'}^\alpha)$ are $\eta_{\alpha\beta} - \partial_\alpha \zeta_\beta - \partial_\beta \zeta_\alpha$.}
+$\eta_{\alpha\beta}$ (hence $\w{f'}$ is flat) and $\w{h'}$ has the following components with respect to the coordinates $({x'}^\alpha)$:
 \be
-    \w{\bar{h}} := \w{h} - \frac{1}{2} h \, \w{\eta} ,
+    {h'}_{\alpha\beta} = h_{\alpha\beta} - \partial_\alpha \zeta_\beta - \partial_\beta \zeta_\alpha .
+\ee
+The above relation can be viewed as expressing some \emph{gauge freedom}\index{gauge!freedom} on
+$\w{h}$. This freedom arises from the freedom in the choice of the flat background metric $\w{f}$ in the
+decomposition (\ref{e:sta:weak_g_f_h}).
+One may use it to ensure that the metric perturbation $\w{h}$ fulfills
+\be
+    \partial_\mu \left( f^{\mu\nu} \bar{h}_{\alpha\nu} \right)  = 0,
+\ee
+where
+\be \label{e:sta:Lorenz_h}
+    \w{\bar{h}} := \w{h} - \frac{1}{2} h \, \w{f} ,
 \ee
 where $h$ stands for the trace of $\w{h}$ with respect
-to\footnote{$\eta^{\alpha\beta}$ denote the components of
-the inverse metric $\w{\eta}^{-1}$; in Minkowskian coordinates,
-the matrix $(\eta^{\alpha\beta})$ is identical to $(\eta_{\alpha\beta})$.}
-$\w{\eta}$: $h := \eta^{\mu\nu} h_{\mu\nu}$.
-Assuming the \defin{Lorenz gauge}\index{Lorenz gauge} (also called
-\defin{Hilbert gauge}\index{Hilbert gauge} \cite{Strau13})...
-
+to\footnote{the notation $f^{\alpha\beta}$ stands for the components of
+the inverse metric $\w{f}^{-1}$; in Minkowskian coordinates,
+the matrix $(f^{\alpha\beta})$ is nothing but $\eta$.}
+$\w{f}$: $h := f^{\mu\nu} h_{\mu\nu}$.
+The choice (\ref{e:sta:Lorenz_h}) is referred to as the
+\defin{Lorenz gauge}\index{Lorenz gauge} (sometimes
+\defin{Hilbert gauge}\index{Hilbert gauge} \cite{Strau13}).
+\begin{remark}
+The Lorenz gauge (\ref{e:sta:Lorenz_h}) is equivalent
+to the condition defining \defin{harmonic coordinates}\index{harmonic coordinates},
+i.e.
+\be
+   \Box_{\w{g}} x^\alpha = 0 \iff  \partial_\mu \left( \sqrt{-g} \, g^{\mu\alpha} \right) = 0 ,
+\ee
+expanded at first order in $\w{h}$.
+\end{remark}
+A standard computation (see e.g. Chap.~18 of \cite{MisneTW73} or Chap.~5 of \cite{Strau13},
+noticing that the computation is independent of the spacetime dimension $n$)
+shows that, at the first order in $\w{h}$ and in the Lorenz gauge,
+the Einstein tensor of $\w{g}$ is
+\be \label{e:sta:G_box_hb}
+    \w{G} = - \frac{1}{2} \Box_{\w{f}} \w{\bar{h}} ,
+\ee
+where $\Box_{\w{f}}$ stands for the d'Alembertian operator for the metric $\w{f}$.
+Let us consider that $(\M,\w{g})$ is a stationary spacetime, with Killing vector
+$\w{\xi}$. We may then choose $\w{f}$ such that the Minkowskian
+coordinates $(x^\alpha)$ of $\w{f}$ are adapted to stationarity, i.e.
+$x^0$ is an ignorable coordinate, or equivalently
+$\wpar_0=\w{\xi}$. Let $\Sigma$ be a hypersurface $x^0 = \mathrm{const}$
+and $\w{\gamma}$ the metric induced by $\w{f}$ in $\Sigma$. $(x^i)_{1\leq i \leq n-1}$ is
+a Cartesian coordinate system with respect to $\w{\gamma}$:
+$\w{\gamma} = \delta_{ij} \dd x^i \otimes \dd x^j = (\dd x^1)^2 + \cdots + (\dd x^{n-1})^2$.
+The operator $\Box_{\w{f}}$ reduces then to the Laplace operator of $\w{\gamma}$,
+$\Delta$ say, and, thanks to property (\ref{e:sta:G_box_hb}), the
+Einstein equation (\ref{e:fra:Einstein_eq}) becomes a system of
+$n(n+1)/2$ independent Poisson equations:
+\be
+    \Delta {\bar{h}}_{\alpha\beta} = - 16 \pi T_{\alpha\beta} .
+\ee
+The solutions are obtained via the Green function of the $(n-1)$-dimensional
+Laplace operator:
+\be
+    {\bar{h}}_{\alpha\beta}(x)  = \frac{16\pi}{(n-3)\Omega_{n-2}}
+    \int_\Sigma \frac{T_{\alpha\beta}(y)}{|x - y|^{n-3}} \, \D^{n-1} y ,
+\ee
+where $x$ stands for $(x^1, \ldots, x^{n-1})$, $y$ for $(y^1, \ldots, y^{n-1})$,
+$|x - y| := \sqrt{(x^1 - y^1)^2 + \cdots + (x^{n-1} - y^{n-1})^2}$
+and $\Omega_{n-2}$ is the area of the sphere $\SS^{n-2}$.
 
 \subsection{Komar mass} \label{s:sta:Komar_mass}
 
@@ -1299,7 +1381,7 @@ results in
 \]
 Now, for a weakly relativistic star, $|p| \ll \rho$ and
  in coordinates $(t, x^i)$ such that
-$\w{\xi} = \wpar_t$,
+$\w{\xi} = \wpar_t$, we have
  $V = \sqrt{- \w{\xi}\cdot\w{\xi} } = \sqrt{- g_{tt}} \simeq 1 + \Phi$, where
 $\Phi$ is the Newtonian gravitational potential\index{gravitational!potential},
 i.e. the solution of
