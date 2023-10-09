@@ -857,18 +857,21 @@ $\w{g} = \w{f'} + \w{h'}$,
 where $\w{f'}$ is the metric whose the components in the coordinates $({x'}^\alpha)$ are\footnote{Note that
 the components of $\w{f}$ with respect to the coordinates $({x'}^\alpha)$ are $\eta_{\alpha\beta} - \partial_\alpha \zeta_\beta - \partial_\beta \zeta_\alpha$.}
 $\eta_{\alpha\beta}$ (hence $\w{f'}$ is flat) and $\w{h'}$ has the following components with respect to the coordinates $({x'}^\alpha)$:
-\be
+\be \label{e:sta:hprime_h_zeta}
     {h'}_{\alpha\beta} = h_{\alpha\beta} - \partial_\alpha \zeta_\beta - \partial_\beta \zeta_\alpha .
 \ee
 The above relation can be viewed as expressing some \emph{gauge freedom}\index{gauge!freedom} on
 $\w{h}$. This freedom arises from the freedom in the choice of the flat background metric $\w{f}$ in the
 decomposition (\ref{e:sta:weak_g_f_h}).
-One may use it to ensure that the metric perturbation $\w{h}$ fulfills
-\be
-    \partial_\mu \left( f^{\mu\nu} \bar{h}_{\alpha\nu} \right)  = 0,
+
+\begin{prop}[Lorenz gauge for the metric perturbation]
+The gauge freedom (\ref{e:sta:hprime_h_zeta}) can be used
+to ensure that the metric perturbation $\w{h}$ fulfills
+\be \label{e:sta:Lorenz_h}
+    \encadre{ \partial_\mu \left( f^{\mu\nu} \bar{h}_{\alpha\nu} \right)  = 0 },
 \ee
 where
-\be \label{e:sta:Lorenz_h}
+\be
     \w{\bar{h}} := \w{h} - \frac{1}{2} h \, \w{f} ,
 \ee
 where $h$ stands for the trace of $\w{h}$ with respect
@@ -879,6 +882,22 @@ $\w{f}$: $h := f^{\mu\nu} h_{\mu\nu}$.
 The choice (\ref{e:sta:Lorenz_h}) is referred to as the
 \defin{Lorenz gauge}\index{Lorenz gauge} (sometimes
 \defin{Hilbert gauge}\index{Hilbert gauge} \cite{Strau13}).
+\end{prop}
+
+\begin{proof}
+From Eq.~(\ref{e:sta:hprime_h_zeta}), we get $h' := f^{\mu\nu} {h'}_{\mu\nu} = h - 2 \partial_\mu \zeta^\mu$,
+so that ${\bar{h}}'_{\alpha\beta} = \bar{h}_{\alpha\beta}
+- \partial_\alpha \zeta_\beta - \partial_\beta \zeta_\alpha +  \partial_\mu \zeta^\mu f_{\alpha\beta}$.
+It follows then that $\partial_\mu \left( f^{\mu\nu} {\bar{h}'}_{\alpha\nu} \right) =  \partial_\mu \left( f^{\mu\nu} \bar{h}_{\alpha\nu} \right) - \Box_{\w{f}} \zeta_\alpha$,
+where $\Box_{\w{f}} := f^{\mu\nu} \partial_\mu \partial_\nu$ is the d'Alembertian\index{d'Alembertian} operator with respect to $\w{f}$. Accordingly, if the Lorenz gauge (\ref{e:sta:Lorenz_h}) is not fulfilled,
+it suffices to solve the d'Alembert equation
+\be \label{e:sta:Box_zeta}
+    \Box_{\w{f}} \zeta_\alpha = \partial_\mu \left( f^{\mu\nu} \bar{h}_{\alpha\nu} \right)
+\ee
+and plug the solution $\zeta_\alpha$ into Eq.~(\ref{e:sta:hprime_h_zeta})
+to get a metric pertubation $\w{h'}$ that obeys the Lorenz gauge.
+\end{proof}
+
 \begin{remark}
 The Lorenz gauge (\ref{e:sta:Lorenz_h}) is equivalent
 to the condition defining \defin{harmonic coordinates}\index{harmonic coordinates},
@@ -888,9 +907,15 @@ i.e.
 \ee
 expanded at first order in $\w{h}$.
 \end{remark}
+
+\begin{remark}
+The Lorenz gauge does not fully determine the pair $(\w{f},\w{h})$, for the solutions of the
+d'Alembert equation (\ref{e:sta:Box_zeta}) are highly non unique: they depend on some initial and boundary data.
+\end{remark}
+
 A standard computation (see e.g. Chap.~18 of \cite{MisneTW73} or Chap.~5 of \cite{Strau13},
 noticing that the computation is independent of the spacetime dimension $n$)
-shows that, at the first order in $\w{h}$ and in the Lorenz gauge,
+shows that, at first order in $\w{h}$ and in the Lorenz gauge,
 the Einstein tensor of $\w{g}$ is
 \be \label{e:sta:G_box_hb}
     \w{G} = - \frac{1}{2} \Box_{\w{f}} \w{\bar{h}} ,
@@ -917,7 +942,7 @@ Laplace operator:
     {\bar{h}}_{\alpha\beta}(x)  = \frac{16\pi}{(n-3)\Omega_{n-2}}
     \int_\Sigma \frac{T_{\alpha\beta}(y)}{|x - y|^{n-3}} \, \D^{n-1} y ,
 \ee
-where $x$ stands for $(x^1, \ldots, x^{n-1})$, $y$ for $(y^1, \ldots, y^{n-1})$,
+where $x:=(x^1, \ldots, x^{n-1})$, $y :=(y^1, \ldots, y^{n-1})$,
 $|x - y| := \sqrt{(x^1 - y^1)^2 + \cdots + (x^{n-1} - y^{n-1})^2}$
 and $\Omega_{n-2}$ is the area of the sphere $\SS^{n-2}$.
 
