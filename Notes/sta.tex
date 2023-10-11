@@ -938,32 +938,36 @@ $n(n+1)/2$ independent Poisson equations:
 \ee
 The solutions are obtained via the Green function of the $(n-1)$-dimensional
 Laplace operator:
-\be
+\be \label{e:sta:hbar_Green_function}
     {\bar{h}}_{\alpha\beta}(x)  = \frac{16\pi}{(n-3)\Omega_{n-2}}
     \int_\Sigma \frac{T_{\alpha\beta}(\bar{x})}{|x - \bar{x}|^{n-3}} \, \D^{n-1} \bar{x},
 \ee
 where $x:=(x^1, \ldots, x^{n-1})$, $\bar{x} :=(\bar{x}^1, \ldots, \bar{x}^{n-1})$,
 $|x - \bar{x}| := \sqrt{(x^1 - \bar{x}^1)^2 + \cdots + (x^{n-1} - \bar{x}^{n-1})^2}$
 and $\Omega_{n-2}$ is the area of the sphere $\SS^{n-2}$, which is given by the formula
-$\Omega_{n-2} = 2\pi^{(n-1)/2}/\Gamma((n-1)/2)$, with $\Gamma(u) := \int_0^{+\infty} t^{u-1} e^{-t} \D t$,
+$\Omega_{n-2} = 2\pi^{(n-1)/2}/\Gamma((n-1)/2)$, with $\Gamma(u) := \int_0^{+\infty} t^{u-1} \mathrm{e}^{-t} \D t$,
 so that
 \be
    \Omega_2 = 4\pi,\quad \Omega_3 = 2\pi^2 \qand  \Omega_4 = \frac{8}{3} \pi^2 .
 \ee
 Far from the matter sources (i.e. far from the region where $\w{T}\neq 0$), one may perform an expansion
-of $1/|x - \bar{x}|^{n-3}$ in powers of $\bar{x}^i/r$, where $r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$
-via the identity
+of $1/|x - \bar{x}|^{n-3}$ in powers of $\bar{x}^i/r$, where $r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$:
 \[
     \frac{1}{|x - \bar{x}|^{n-3}} = \frac{1}{r^{n-3}} \left( 1 + (n-3) \sum_{i=1}^{n-1} \frac{x^i}{r} \frac{\bar{x}^i}{r}
         + \cdots \right) .
 \]
-We get
+Formula~(\ref{e:sta:hbar_Green_function}) becomes then
 \be
-    {\bar{h}}_{\alpha\beta}(x)  = \frac{16\pi}{(n-3)\Omega_{n-2}}
-        \left( \frac{1}{r^{n-3}} \int_\Sigma T_{\alpha\beta}(\bar{x}) \, \D^{n-1} \bar{x}
-        + (n-3) \frac{x^i}{r^{n-1}}  \int_\Sigma \bar{x}^i T_{\alpha\beta}(\bar{x}) \, \D^{n-1} \bar{x}
+    {\bar{h}}_{\alpha\beta}(x)  = \frac{16\pi}{\Omega_{n-2}}
+        \left( \frac{1}{(n-3)r^{n-3}} \int_\Sigma T_{\alpha\beta}(\bar{x}) \, \D^{n-1} \bar{x}
+        + \frac{x^i}{r^{n-1}}  \int_\Sigma \bar{x}^i T_{\alpha\beta}(\bar{x}) \, \D^{n-1} \bar{x}
         + \cdots \right) .
 \ee
+Hence
+\be
+    {\bar{h}}_{00} = \frac{16\pi}{\Omega_{n-2}}
+\ee
+
 
 \subsection{Komar mass} \label{s:sta:Komar_mass}
 
