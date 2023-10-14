@@ -812,28 +812,27 @@ of \emph{Komar angular momentum}, which we shall introduce in Sec.~\ref{s:sta:Ko
 
 \subsection{Mass and angular momentum of weekly relativistic stationary systems}
 
-We shall call a \defin{weekly relativistic system}\index{weekly relativistic}
+We shall call \defin{weakly relativistic}\index{weekly relativistic}
 a $n$-dimensional spacetime $(\M,\w{g})$
-such that $\M$ is diffeomorphic to $\R^n$, the metric tensor can be expressed as
+such that $\M$ is diffeomorphic to $\R^n$ and the metric tensor can be expressed as
 \be \label{e:sta:weak_g_f_h}
     \w{g} = \w{f} + \w{h} ,
 \ee
 where $\w{f}$ is a flat Lorentzian metric on $\M$ and $\w{h}$ is small in the following
-sense: in any \emph{Minkowskian} coordinates\index{Minkowskian coordinates} for $\w{f}$, i.e. coordinates
-$(x^\alpha)$ such that\footnote{We keep the notation $\eta$ for the matrix $\mathrm{diag}(-1,1,\ldots,1)$, so that
+sense: in any \defin{Minkowskian coordinates for}\index{Minkowskian coordinates} $\w{f}$, i.e. coordinates
+$(x^\alpha)$ on $\M$ such that\footnote{We keep the notation $\eta$ for the matrix $\mathrm{diag}(-1,1,\ldots,1)$, so that
 $(\eta_{\alpha\beta})$ stands for the components of $\w{f}$ in Minkowskian coordinates only.}
 $(f_{\alpha\beta}) = \eta := \mathrm{diag}(-1,1,\ldots,1)$, the components
-of $\w{h}$ obey $|h_{\alpha\beta}| \ll 1$. Furthermore, we assume that $\w{g}$
+of $\w{h}$ obey $|h_{\alpha\beta}| \ll 1$. In addition, we assume that $\w{g}$
 is ruled by the Einstein equation (\ref{e:fra:Einstein_eq}) with $\Lambda=0$
-and a compactly-supported energy momentum tensor $\w{T}$ in which the
-spatial stresses are dominated by the energy and momentum densities, i.e.
-such that $|T_{ij}| \ll \mathrm{min}(|T_{00}|,|T_{0k}|)$ in Minkowkian coordinates.
-Given the flat metric $\w{f}$, the Minkowskian coordinates $(x^\alpha)$ on $\M$
-are not unique: any Poincaré transformation\index{Poincaré!transformation}
+and an energy momentum tensor $\w{T}$ of compact support.
+
+Given the flat metric $\w{f}$, the Minkowskian coordinates $(x^\alpha)$
+are not unique: any Poincaré transformation\index{Poincaré!transformation}\label{p:sta:Poincare_transf}
 ${\tilde x}^\alpha = \Lambda^\alpha_{\ \, \mu} x^\mu + c^\alpha$, where
 $(\Lambda^\alpha_{\ \, \beta})$ is a Lorentz matrix and the $c^\alpha$'s are
 constant, leads to a coordinate system $({\tilde x}^\alpha)$ on $\M$ that is Minkowskian for $\w{f}$.
-The flat metric $\w{f}$ on $\M$, and hence the decomposition (\ref{e:sta:weak_g_f_h}), is
+Furthermore, the flat metric $\w{f}$ on $\M$, and hence the decomposition (\ref{e:sta:weak_g_f_h}), is
 highly non-unique.
 Indeed any change of coordinates of the form ${x'}^\alpha = x^\alpha + \zeta^\alpha(x^0,\ldots,x^{n-1})$
 where $(x^\alpha)$ are Minkowskian coordinates for $\w{f}$ and $\zeta^\alpha$ are infinitesimal functions,
@@ -863,7 +862,7 @@ and $\w{h'}$ has the following components with respect to the coordinates $({x'}
     {h'}_{\alpha\beta} = h_{\alpha\beta} - \partial_\alpha \zeta_\beta - \partial_\beta \zeta_\alpha .
 \ee
 The above relation can be viewed as expressing some \emph{gauge freedom}\index{gauge!freedom} on
-$\w{h}$. This freedom arises from the freedom in the choice of the flat background metric $\w{f}$ in the
+$\w{h}$. This freedom actually reflects the freedom in the choice of the flat background metric $\w{f}$ in the
 decomposition (\ref{e:sta:weak_g_f_h}).
 
 \begin{prop}[Lorenz gauge for the metric perturbation]
@@ -909,7 +908,7 @@ on $\M$, i.e.
 \end{remark}
 
 \begin{remark} \label{r:sta:freedom_Lorenz}
-The Lorenz gauge does not fully determine the pair $(\w{f},\w{h})$, for the solutions of the
+The Lorenz gauge does not fully specify the pair $(\w{f},\w{h})$. Indeed, the solutions of the
 d'Alembert equation (\ref{e:sta:Box_zeta}) are highly non unique: they depend on initial and boundary data.
 \end{remark}
 
@@ -924,11 +923,11 @@ where $\Box_{\w{f}}$ stands for the d'Alembertian operator for the metric $\w{f}
 in $\w{f}$-Minkowskian coordinates $(x^\alpha)$,
 $\Box_{\w{f}} \bar{h}_{\alpha\beta} = \eta^{\mu\nu} \partial_\mu \partial_\nu \bar{h}_{\alpha\beta}$.
 
-Let us consider that $(\M,\w{g})$ is a stationary spacetime, with Killing vector
-$\w{\xi}$. We may then choose $\w{f}$ such that the Minkowskian
-coordinates $(x^\alpha)$ of $\w{f}$ are adapted to stationarity, i.e.
+Let us now assume that $(\M,\w{g})$ is a stationary spacetime, with Killing vector
+$\w{\xi}$. We may then choose $\w{f}$ so that the $\w{f}$-Minkowskian
+coordinates $(x^\alpha)$ are adapted to stationarity, i.e.
 $x^0$ is an ignorable coordinate, or equivalently
-$\wpar_0=\w{\xi}$. Let $\Sigma$ be a hypersurface $x^0 = \mathrm{const}$
+$\wpar_0=\w{\xi}$. Let then $\Sigma$ be a hypersurface $x^0 = \mathrm{const}$
 and $\w{\gamma}$ the metric induced by $\w{f}$ in $\Sigma$. $(x^i)_{1\leq i \leq n-1}$ is
 a Cartesian coordinate system with respect to $\w{\gamma}$:
 $\w{\gamma} = \delta_{ij} \dd x^i \otimes \dd x^j = (\dd x^1)^2 + \cdots + (\dd x^{n-1})^2$.
@@ -947,45 +946,113 @@ Laplace operator:
 \ee
 where $x:=(x^1, \ldots, x^{n-1})$, ${x'} :=({x'}^1, \ldots, {x'}^{n-1})$,
 $|x - {x'}| := \sqrt{(x^1 - {x'}^1)^2 + \cdots + (x^{n-1} - {x'}^{n-1})^2}$
-and $\Omega_{n-2}$ is the area of the sphere $\SS^{n-2}$, which is given by the formula
+and $\Omega_{n-2}$ is the area of the sphere $\SS^{n-2}$; the latter is given by the formula
 $\Omega_{n-2} = 2\pi^{(n-1)/2}/\Gamma((n-1)/2)$, with $\Gamma(u) := \int_0^{+\infty} t^{u-1} \mathrm{e}^{-t} \D t$,
 so that
 \be
    \Omega_2 = 4\pi,\quad \Omega_3 = 2\pi^2,\quad  \Omega_4 = \frac{8}{3} \pi^2
    \qand \Omega_5 = \pi^3 .
 \ee
-Far from the matter sources (i.e. far from the region where $\w{T}\neq 0$), one may perform an expansion
-of $1/|x - {x'}|^{n-3}$ in powers of ${x'}^i/r$, where $r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$:
-\[
-    \frac{1}{|x - {x'}|^{n-3}} = \frac{1}{r^{n-3}} \left( 1 + (n-3) \sum_{i=1}^{n-1} \frac{x^i}{r} \frac{{x'}^i}{r}
-        + \cdots \right) .
-\]
-Formula~(\ref{e:sta:hbar_Green_function}) becomes then
-\be
-    {\bar{h}}_{\alpha\beta}(x)  = \frac{16\pi}{\Omega_{n-2}}
-        \left( \frac{1}{(n-3)r^{n-3}} \int_\Sigma T_{\alpha\beta}({x'}) \, \D^{n-1} {x'}
-        + \frac{x^i}{r^{n-1}}  \int_\Sigma {x'}^i T_{\alpha\beta}({x'}) \, \D^{n-1} {x'}
-        + \cdots \right) .
+
+\begin{prop}[asymptotic metric of a weakly relativistic system]
+Let $(\M,\w{g})$ be a weakly relativistic stationary spacetime of dimension $n\geq 4$, with
+$\w{g}$ obeying the Einstein equation (\ref{e:fra:Einstein_eq}) with $\Lambda=0$
+and an energy momentum tensor $\w{T}$ of compact support (the ``source''),
+where the energy-density dominates over the spatial stresses.
+Within the Lorenz gauge, there exists
+a coordinate system $(x^\alpha)$ such that the metric tensor has the following behavior when
+$r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2} \to +\infty$:
+\begin{subequations}
+\begin{align}
+g_{00} = & - 1 +  \frac{16\pi}{(n-2)\Omega_{n-2}} \frac{M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-1}} \right) \\
+g_{0i} = & \frac{8\pi}{\Omega_{n-2}} \frac{J_{ij} x^j}{r^{n-1}} + \bigO\left( \frac{1}{r^{n-1}} \right) \\
+g_{ij} = & \left(1 + \frac{16\pi}{(n-2)(n-3)\Omega_{n-2}} \frac{M}{r^{n-3}} \right) \delta_{ij}
++ \bigO\left( \frac{1}{r^{n-2}} \right) ,
+\end{align}
+\end{subequations}
+where
+\be \label{e:sta:mass_weakly_relat}
+    M := \int_\Sigma T_{00}({x}) \, \D^{n-1} {x}
 \ee
-We may then use some of the degrees of freedom within the Lorenz gauge (cf. Remark~\ref{r:sta:freedom_Lorenz})
-to consider that the coordinates $(x^\alpha)$ correspond to the \emph{central source rest-frame}
+and
+\be \label{e:sta:J_weakly_relat}
+    J_{ij} := \int_\Sigma \left( x^j T_{0i}(x) - x^i T_{0j}(x) \right) \, \D^{n-1} {x} ,
+\ee
+$\Sigma$ being any hypersurface $x^0 = \mathrm{const}$.
+The quantities $M$ and $J_{ij}$ are called respectively the \defin{mass} and
+the \defin{angular momentum} of the central source.
+The coordinates $(x^\alpha)$ are correspond to the \emph{central source rest-frame}
 and take their origin at the \emph{center of mass}, in the sense
 that
-\be
-    \int_\Sigma T_{0i}(x')  \, \D^{n-1} {x'} = 0
+\be \label{e:sta:rest_frame_mass_center}
+    \int_\Sigma T_{0i}(x)  \, \D^{n-1} {x} = 0
     \qand
-    \int_\Sigma {x'}^i T_{00}(x') \, \D^{n-1} {x'} = 0 .
+    \int_\Sigma {x}^i T_{00}(x) \, \D^{n-1} {x} = 0
 \ee
+The dominance of the energy-density over
+the spatial stresses is expressed in terms of the components of $\w{T}$ with respect to
+the coordinates $(x^\alpha)$ as $|T_{00}| \gg |T_{ij}|$.
+\end{prop}
 
-
-Definining the \defin{mass} of the central source as
-\be
-    M := \int_\Sigma T_{00}({x'}) \, \D^{n-1} {x'}
+\begin{proof}
+Let $(\w{f},\w{h})$ obeys the Lorenz gauge and $(x^\alpha)$ be the corresponding
+$\w{f}$-Minkowskian coordinates. By a Poincaré transformation (cf. p.~\pageref{p:sta:Poincare_transf}),
+one can inforce (\ref{e:sta:rest_frame_mass_center}).
+Far from the source, one may expand
+the term $1/|x - {x'}|^{n-3}$ in Eq.~(\ref{e:sta:hbar_Green_function})
+in powers of ${x'}^i/r$:
+\[
+    \frac{1}{|x - {x'}|^{n-3}} = \frac{1}{r^{n-3}} \left( 1 + (n-3) \frac{x^j}{r} \frac{{x'}^j}{r}
+        + \bigO\left( \frac{|x'|^2}{r^2} \right) \right) ,
+\]
+where Einstein's summation convention is assumed on the repeated index
+$j\in\{1,\ldots,n-1\}$.
+This leads to
+\be \label{e:sta:bar_h_expand}
+    {\bar{h}}_{\alpha\beta}(x)  = \frac{16\pi}{\Omega_{n-2}}
+        \left( \frac{1}{(n-3)r^{n-3}} \int_\Sigma T_{\alpha\beta}({x'}) \, \D^{n-1} {x'}
+        + \frac{x^j}{r^{n-1}}  \int_\Sigma {x'}^j T_{\alpha\beta}({x'}) \, \D^{n-1} {x'}
+         \right)  + \bigO\left( \frac{1}{r^{n-1}} \right) .
 \ee
-the component $00$ of the above equation yields
+For the component $00$, the first integral in the right-hand side
+is nothing but $M$
+as defined by Eq.~(\ref{e:sta:mass_weakly_relat}), while the second integral
+vanishes due to the second equation in~(\ref{e:sta:rest_frame_mass_center}).
+Hence, we get
 \be
-    {\bar{h}}_{00}(x) = \frac{16\pi}{(n-3)\Omega_{n-2}} \frac{M}{r^{n-3}} .
+    {\bar{h}}_{00}(x) = \frac{16\pi}{(n-3)\Omega_{n-2}} \frac{M}{r^{n-3}}
+     + \bigO\left( \frac{1}{r^{n-1}} \right) .
 \ee
+Regarding the component $0i$ of Eq.~(\ref{e:sta:bar_h_expand}),
+the first integral in the right-hand side vanishes due to the first
+equation in~(\ref{e:sta:rest_frame_mass_center}). There remains then
+\[
+     {\bar{h}}_{0i}(x) = \frac{16\pi}{\Omega_{n-2}} \frac{x^j}{r^{n-1}}
+     \int_\Sigma {x'}^j T_{0i}({x'}) \, \D^{n-1} {x'}
+     + \bigO\left( \frac{1}{r^{n-1}} \right)
+     =  \frac{8\pi}{\Omega_{n-2}} \frac{J_{ij} x^j}{r^{n-1}} + \bigO\left( \frac{1}{r^{n-1}} \right) ,
+\]
+where the second equality follows from the identity
+\be \label{e:sta:indent_J}
+    J_{ij} = 2  \int_\Sigma {x}^j T_{0i}({x}) \, \D^{n-1} {x} .
+\ee
+To prove this identity, consider
+\[
+    \partial_k (x^i x^j T^{0k}) =  \delta^i_{\ k} x^j T^{0k} + x^i \delta^j_{\  k} T^{0k}
+    + x^i x^j \underbrace{\partial_k T^{0k}}_{0}
+    = x^j  T^{0i} + x^i  T^{0j} ,
+\]
+where $\partial_k T^{0k} = 0$ results from the equation of energy-momentum conservation
+(\ref{e:fra:divT}) specialized to stationary spacetimes and expressed at 0th order in $\w{h}$.
+Integrating over $\Sigma$ and invoking Gauss theorem to set the integral of
+the divergence term $ \partial_k (x^i x^j T^{0k}) $ to zero (since $\w{T}$ is has compact support),
+we get
+\[
+    \int_\Sigma x^j T^{0i}(x) \, \D^{n-1} {x} + \int_\Sigma x^i T^{0j}(x) \, \D^{n-1} {x} = 0 .
+\]
+In view of the definition (\ref{e:sta:J_weakly_relat}) of $J_{\ij}$, the
+identity (\ref{e:sta:indent_J}) follows, since $T^{0i} = - T_{0i}$ at the 0th order in $\w{h}$.
+\end{proof}
 
 
 \subsection{Komar mass} \label{s:sta:Komar_mass}
