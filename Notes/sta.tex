@@ -873,7 +873,7 @@ the metric perturbation $\w{h}$ fulfills
     \encadre{ \partial_\mu \left( \eta^{\mu\nu} \bar{h}_{\alpha\nu} \right)  = 0 },
 \ee
 where
-\be
+\be \label{e:sta:def_h_bar}
     \w{\bar{h}} := \w{h} - \frac{1}{2} h \, \w{f} ,
 \ee
 $h$ standing for the trace of $\w{h}$ with respect
@@ -958,11 +958,12 @@ so that
 Let $(\M,\w{g})$ be a weakly relativistic stationary spacetime of dimension $n\geq 4$, with
 $\w{g}$ obeying the Einstein equation (\ref{e:fra:Einstein_eq}) with $\Lambda=0$
 and an energy momentum tensor $\w{T}$ of compact support (the ``source''),
-where the energy-density dominates over the spatial stresses.
+where the energy-density dominates over the spatial stresses (weakly relativistic matter).
 Within the Lorenz gauge, there exists
 a coordinate system $(x^\alpha)$ such that the metric tensor has the following behavior when
 $r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2} \to +\infty$:
 \begin{subequations}
+\label{e:sta:metric_weakly_relat}
 \begin{align}
 g_{00} = & - 1 +  \frac{16\pi}{(n-2)\Omega_{n-2}} \frac{M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-1}} \right) \\
 g_{0i} = & \frac{8\pi}{\Omega_{n-2}} \frac{J_{ij} x^j}{r^{n-1}} + \bigO\left( \frac{1}{r^{n-1}} \right) \\
@@ -991,7 +992,7 @@ that
 \ee
 The dominance of the energy-density over
 the spatial stresses is expressed in terms of the components of $\w{T}$ with respect to
-the coordinates $(x^\alpha)$ as $|T_{00}| \gg |T_{ij}|$.
+the coordinates $(x^\alpha)$ as $T_{00} \gg |T_{ij}|$.
 \end{prop}
 
 \begin{proof}
@@ -1019,19 +1020,19 @@ is nothing but $M$
 as defined by Eq.~(\ref{e:sta:mass_weakly_relat}), while the second integral
 vanishes due to the second equation in~(\ref{e:sta:rest_frame_mass_center}).
 Hence, we get
-\be
+\be \label{e:sta:h_bar_00}
     {\bar{h}}_{00}(x) = \frac{16\pi}{(n-3)\Omega_{n-2}} \frac{M}{r^{n-3}}
      + \bigO\left( \frac{1}{r^{n-1}} \right) .
 \ee
 Regarding the component $0i$ of Eq.~(\ref{e:sta:bar_h_expand}),
 the first integral in the right-hand side vanishes due to the first
 equation in~(\ref{e:sta:rest_frame_mass_center}). There remains then
-\[
+\be \label{e:sta:h_bar_0i}
      {\bar{h}}_{0i}(x) = \frac{16\pi}{\Omega_{n-2}} \frac{x^j}{r^{n-1}}
      \int_\Sigma {x'}^j T_{0i}({x'}) \, \D^{n-1} {x'}
      + \bigO\left( \frac{1}{r^{n-1}} \right)
      =  \frac{8\pi}{\Omega_{n-2}} \frac{J_{ij} x^j}{r^{n-1}} + \bigO\left( \frac{1}{r^{n-1}} \right) ,
-\]
+\ee
 where the second equality follows from the identity
 \be \label{e:sta:indent_J}
     J_{ij} = 2  \int_\Sigma {x}^j T_{0i}({x}) \, \D^{n-1} {x} .
@@ -1044,7 +1045,7 @@ To prove this identity, consider
 \]
 where $\partial_k T^{0k} = 0$ results from the equation of energy-momentum conservation
 (\ref{e:fra:divT}) specialized to stationary spacetimes and expressed at 0th order in $\w{h}$.
-Integrating over $\Sigma$ and invoking Gauss theorem to set the integral of
+Integrating over $\Sigma$ and invoking the Gauss-Ostrogradsky theorem to set the integral of
 the divergence term $ \partial_k (x^i x^j T^{0k}) $ to zero (since $\w{T}$ is has compact support),
 we get
 \[
@@ -1052,6 +1053,69 @@ we get
 \]
 In view of the definition (\ref{e:sta:J_weakly_relat}) of $J_{\ij}$, the
 identity (\ref{e:sta:indent_J}) follows, since $T^{0i} = - T_{0i}$ at the 0th order in $\w{h}$.
+
+Let us now reconstruct $\w{h}$ from $\w{\bar{h}}$. Taking the trace of Eq.~(\ref{e:sta:def_h_bar}) with respect to $\w{f}$
+yields $\bar{h} := \eta^{\mu\nu} \bar{h}_{\mu\nu} = h - (h/2) \times n = (2 - n) h / 2$.
+Hence we may inverse Eq.~(\ref{e:sta:def_h_bar}) to
+\be \label{e:sta:h_h_bar}
+    \w{h} = \w{\bar{h}} - \frac{\bar{h}}{n-2} \w{f}
+    \quad\mbox{with}\quad
+    \bar{h} = - \bar{h}_{00} + \bar{h}_{ii} .
+\ee
+The part\footnote{Note that Einstein's summation convention is used:
+$\bar{h}_{ii} = \bar{h}_{11} + \cdots + \bar{h}_{n-1,n-1}$.}
+ $\bar{h}_{ii}$ of the trace $\bar{h}$ is deduced from
+Eq.~(\ref{e:sta:bar_h_expand}):
+\[
+    {\bar{h}}_{ii}(x)  = \frac{16\pi}{\Omega_{n-2}}
+        \left( \frac{1}{(n-3)r^{n-3}} \int_\Sigma T_{ii}({x'}) \, \D^{n-1} {x'}
+        + \frac{x^j}{r^{n-1}}  \int_\Sigma {x'}^j T_{ii}({x'}) \, \D^{n-1} {x'}
+         \right)  + \bigO\left( \frac{1}{r^{n-1}} \right) .
+\]
+It turns out that the second integral vanishes identically, so that one is left
+with
+\be \label{e:sta:h_bar_ii}
+    {\bar{h}}_{ii}(x)  = \frac{16\pi}{(n-3)\Omega_{n-2}}
+        \frac{1}{r^{n-3}} \int_\Sigma T_{ii}({x'}) \, \D^{n-1} {x'}
+            + \bigO\left( \frac{1}{r^{n-1}} \right) .
+\ee
+To show it, one can use the identity
+\begin{align}
+    \partial_i \left( x^k x^j T^{ik}  - \frac{1}{2} r^2 T^{ij} \right) & =
+    \delta^k_{\ i} x^j T^{ik} + x^k \delta^j_{\ i} T^{ik} +
+    x^k x^j \underbrace{\partial_i T^{ik}}_{0}
+    - r \underbrace{\partial_i r}_{x^i/r} T^{ij} - \frac{1}{2} r^2 \underbrace{\partial_i T^{ij}}_{0} \nonumber \\
+    & = x^j T^{ii} = x^j T_{ii} , \nonumber
+\end{align}
+where, as above for $\partial_k T^{0k} = 0$, $\partial_i T^{ij}=0$ follows from the equation of energy-momentum conservation (\ref{e:fra:divT}). Hence the integral of $x^j T_{ii}$ over $\Sigma$ is that of the divergence of a vector
+field and the Gauss-Ostrogradsky theorem allows one to set it to zero.
+Gathering Eqs.~(\ref{e:sta:h_bar_00}) and (\ref{e:sta:h_bar_ii}), we get
+\[
+    \bar{h} = \frac{16\pi}{(n-3)\Omega_{n-2}}
+        \frac{1}{r^{n-3}} \left( - M + \int_\Sigma T_{ii}({x'}) \, \D^{n-1} {x'} \right)
+            + \bigO\left( \frac{1}{r^{n-1}} \right) .
+\]
+However, given expression (\ref{e:sta:mass_weakly_relat}) for $M$, the weakly relativistic matter condition
+$T_{00} \gg |T_{ij}|$ implies that the integral of $T_{ii}$ over $\Sigma$ is negligible in front of $M$. We conclude that
+\[
+    \bar{h} = - \bar{h}_{00} + \bigO\left( \frac{1}{r^{n-1}} \right) .
+\]
+It follows then from Eq.~(\ref{e:sta:h_h_bar}) that, up to terms decaying at least as $1/r^{n-1}$,
+\begin{align}
+  h_{00} & = \bar{h}_{00} + \frac{\bar{h}_{00}}{n-2} \times (-1) = \frac{n-3}{n-2}\,  \bar{h}_{00} \nonumber \\
+  h_{0i} & = \bar{h}_{0i} \nonumber \\
+  h_{ij} & = \bar{h}_{ij} + \frac{\bar{h}_{00}}{n-2} \, \delta_{ij} =
+    \frac{\bar{h}_{00}}{n-2} \, \delta_{ij} + \bigO\left( \frac{1}{r^{n-2}} \right)
+  \nonumber .
+\end{align}
+The last equality holds because the $1/r^{n-3}$ term in $\bar{h}_{ij}$, which is proportional
+to the integral of $T_{ij}$ over $\Sigma$ according to Eq.~(\ref{e:sta:bar_h_expand}),
+is negligible in front of the $1/r^{n-3}$ term in $\bar{h}_{00}$, given
+that $T_{00} \gg |T_{ij}|$. The above three equations, along with the values
+(\ref{e:sta:h_bar_00}) and (\ref{e:sta:h_bar_0i}) for $\bar{h}_{00}$
+and $\bar{h}_{0i}$, establish formulas (\ref{e:sta:metric_weakly_relat}) for
+the components $g_{\alpha\beta} = \eta_{\alpha\beta} + h_{\alpha\beta}$
+of the metric tensor.
 \end{proof}
 
 
