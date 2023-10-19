@@ -668,12 +668,18 @@ whereas vectors for which $\w{g}(\w{v},\w{v}) > 0$ are called \defin{spacelike}\
 and those for which $\w{g}(\w{v},\w{v}) = 0$ are called \defin{null}\index{null!vector}. The subset of $T_p\M$ formed by all null
 vectors is termed the \defin{null cone}\index{null!cone} of $\w{g}$ at $p$.
 A coordinate $x^\alpha$ of a coordinate system $(x^0,\ldots,x^{n-1})$ is said to be a \defin{timelike coordinate}\index{timelike!coordinate}
-(resp. a \defin{spacelike coordinate}\index{spacelike!coordinate} or a \defin{null coordinate}\index{null!coordinate}) iff the associated basis vector $\wpar_\alpha$
-is timelike (resp. spacelike or null).
+(resp. a \defin{spacelike coordinate}\index{spacelike!coordinate} or a \defin{null coordinate}\index{null!coordinate}) iff
+the hypersurfaces defined by $x^\alpha = \mathrm{const}$ are
+spacelike\footnote{Cf. Sec.~\ref{s:def:hor_as_null} for the definition of
+spacelike, timelike and null hypersurfaces.} (resp. timelike or null).
+
 \begin{remark}
-Being timelike, spacelike or null is not a property of the coordinate $x^\alpha$ per se (i.e. considering $x^\alpha$ as a scalar field $\M\to \R$) but depends on the coordinate system $(x^0,\ldots,x^{n-1})$, since $\wpar_\alpha$
-depends on the latter by definition; cf. Remark~\ref{r:sch:r_causal_type} on p.~\pageref{r:sch:r_causal_type}
-for an example).
+Being timelike, spacelike or null is a property of the coordinate $x^\alpha$ per se (i.e. considering $x^\alpha$ as a scalar field $\M\to \R$); on the contrary the causal type of the coordinate vector $\wpar_\alpha$ depends on the
+coordinate system $(x^0,\ldots,x^{n-1})$ to which $x^\alpha$ belongs.
+More precisely, whatever the causal type of $x^\alpha$, the vector
+$\wpar_\alpha$ can be made spacelike, timelike or null by a proper choice of the complementary coordinates
+$(x^\beta)_{\beta\neq\alpha}$.
+%cf. Remark~\ref{r:sch:r_causal_type} on p.~\pageref{r:sch:r_causal_type}
 \end{remark}
 
 A basis $(\w{e}_\alpha)$ of $T_p\M$ is called a \defin{$\w{g}$-orthonormal basis}\index{g-orthonormal basis} (or simply \defin{orthonormal basis}\index{orthonormal basis} if there
@@ -828,12 +834,31 @@ $\D\lambda$ along $\w{v}$; thanks to Eqs.~(\ref{e:bas:dell_f}),
 $\w{v}(f) = v^\mu\,  \dert{f}{x^\mu} = 0$,
 or to $\w{g}(\w{n},\w{v}) = 0$,
 where we have let appear the gradient vector $\w{n} := \vw{\nabla} f$; in
-terms of components:
-\be
+terms of components with respect to a coordinate system $(x^\alpha)$:
+\be \label{e:bas:gradient_comp}
     n^\alpha = \nabla^\alpha f = g^{\alpha\mu} \der{f}{x^\mu} .
 \ee
 The vector field $\w{n}$ is called a \defin{normal}\index{normal!to a hypersurface}
 to $\Sigma$. All normal vectors to $\Sigma$ are collinear to each other.
+
+It follows from the definitions given in Sec.~\ref{s:bas:signature} that
+for any coordinate $x^\alpha$ of a given chart $(x^0,\ldots,x^{n-1})$,
+\begin{subequations}
+\label{e:bas:char_causal_type_coord}
+\begin{align}
+& x^\alpha \ \mbox{timelike coordinate}  \iff \vw{\nabla} x^\alpha \ \mbox{timelike vector}
+  \iff g^{\alpha\alpha} < 0  \\
+& x^\alpha \ \mbox{null coordinate}  \iff \vw{\nabla} x^\alpha \ \mbox{null vector}
+  \iff g^{\alpha\alpha} = 0  \\
+& x^\alpha \ \mbox{spacelike coordinate}  \iff \vw{\nabla} x^\alpha \ \mbox{spacelike vector}
+  \iff g^{\alpha\alpha} > 0 ,
+\end{align}
+\end{subequations}
+where $g^{\alpha\alpha}$ is the component $(\alpha,\alpha)$ of the inverse metric
+(no summation on $\alpha$). It appears here because, according to Eq.~(\ref{e:bas:gradient_comp}),
+$\w{g}(\vw{\nabla} x^\alpha , \vw{\nabla} x^\alpha ) = g_{\mu\nu} g^{\mu\rho} \dert{x^\alpha}{x^\rho}
+ g^{\nu\sigma} \dert{x^\alpha}{x^\sigma} = \delta^\rho_{\ \, \nu} \, \delta^\alpha_{\ \rho} \, g^{\nu\sigma}\,
+ \delta^\alpha_{\ \sigma} = g^{\alpha\alpha}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

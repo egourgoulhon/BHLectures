@@ -339,10 +339,13 @@ isometry group of $(\M_{\rm II},\w{g})$, but its orbits are spacelike curves.
 We note that $g_{rr} < 0$ in $\M_{\rm II}$, so that the
 metric (\ref{e:sch:Schwarz_metric_SD}) keeps a Lorentzian signature,
 as it should!
-In other words, in $\M_{\rm II}$, $t$ becomes a spacelike coordinate and
-$r$ a timelike one (cf. the definition given in Sec.~\ref{s:bas:signature}).
 Accordingly, the axes of the light cones
 in Fig.~\ref{f:sch:rad_null_geod} are horizontal lines for $r<2m$.
+We also note that, in $\M_{\rm II}$, $t$ becomes a spacelike coordinate
+(i.e. the hypersurfaces $t=\mathrm{const}$ are timelike, cf. Sec.~\ref{s:bas:signature})
+and $r$ a timelike one (i.e. the hypersurfaces $r=\mathrm{const}$ are spacelike).
+This follows from $g^{tt} > 0$ and $g^{rr} < 0$ in
+$\M_{\rm II}$ [cf. Eq.~(\ref{e:bas:char_causal_type_coord})].
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -470,8 +473,7 @@ Despite their name, geodesics of the outgoing family $\Li^{\rm out}_{(u,\th,\ph)
 \emph{ingoing} in the region $r<2m$, in the sense that
 $r$ is decreasing along them when moving towards the future. Indeed,
 as noticed in Sec.~\ref{s:sch:SD_domain},
-for $r<2m$, $r$ is a timelike coordinate in the system $(t,r,\th,\ph)$,
-i.e. $\wpar_r$ is a timelike vector and we shall see in Sec.~\ref{s:sch:time_orientation}
+for $r<2m$, $\wpar_r$ is a timelike vector and we shall see in Sec.~\ref{s:sch:time_orientation}
 that $-\wpar_r$ is oriented towards the future (cf. the ``tilted'' light cone
 in Fig.~\ref{f:sch:rad_null_geod}).
 \end{remark}
@@ -506,12 +508,10 @@ $(x^{\hat{\alpha}}) := (v,r,\th,\ph)$:
 \ee
 The coordinates $(x^{\hat{\alpha}}) = (v,r,\th,\ph)$ are called the
 \defin{null ingoing Eddington-Finkelstein (NIEF) coordinates}\index{Eddington-Finkelstein!coordinates}\index{null!ingoing Eddington-Finkelstein coordinates}\index{NIEF}. The qualifier \emph{null} stems from the fact that
-$r$ is a null coordinate\index{null!coordinate} in this system, i.e. the vector $\wpar_r$ of the coordinate
-basis associated with $(v,r,\th,\ph)$ is a null
-vector, as it follows from $g_{rr}=0$ in Eq.~(\ref{e:sch:Schwarz_metric_NIEF})
-(cf. Sec.~\ref{s:bas:signature}).
+$v$ is a null coordinate\index{null!coordinate}, i.e. the level sets $v = \mathrm{const}$ are null hypersurfaces
+(cf. Sec.~\ref{s:bas:signature}). This can be seen from $g^{vv} = 0$ [cf. Eq.~(\ref{e:bas:char_causal_type_coord})].
 
-To deal with a ``standard'' time $+$ space coordinate system instead of a null one, let us set
+To deal with a timelike coordinate instead of a null one, let us set
 \be  \label{e:sch:ti_v_r}
     \encadre{\ti := v - r} \iff \encadre{v = \ti + r}
 \ee
@@ -557,34 +557,7 @@ into (\ref{e:sch:Schwarz_metric_NIEF}) yields
             + \left( 1 + \frac{2 m}{r} \right)\, \dd r^2
         + r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) }.
 \ee
-We check that $g_{\ti\ti} < 0$ in $\M_{\rm I}$, hence $\ti$ is
-a timelike coordinate there (cf. the definition given in Sec.~\ref{s:bas:signature}).
-In $\M_{\rm II}$, $g_{\ti\ti} > 0$, so that $\ti$ becomes spacelike
-there, as for the Schwarzschild-Droste coordinate $t$ (cf. Sec.~\ref{s:sch:SD_domain}).
-On the other side, we have $g_{rr} = 1+2m/r > 0$ everywhere, so that $r$ remains a spacelike coordinate (for the IEF system) in
-$\M_{\rm II}$, contrary to what happens with Schwarzschild-Droste coordinates
-(cf. Sec.~\ref{s:sch:SD_domain}).
 
-\begin{remark} \label{r:sch:r_causal_type}
-The above property regarding the coordinate $r$ shows that being timelike, null or spacelike
-is not intrinsic to a given coordinate. It is instead a property
-of the whole coordinate system under consideration. This is understandable
-since $r$ spacelike means that the line along which $r$ varies while the
-three other coordinates $(x^0,x^2,x^3)$ are kept constant is a spacelike curve
-(cf. Sec.~\ref{s:bas:signature}).
-For the Schwarzschild-Droste system $(x^0,x^2,x^3) = (t,\th,\ph)$,
-while for the NIEF system
-$(x^0,x^2,x^3) = (v,\th,\ph)$ and for
-the IEF system $(x^0,x^2,x^3) = (\ti,\th,\ph)$.
-Hence the three sets of $r$-lines differ.
-Equivalently, the coordinate vectors $\wpar_r$
-tangent to the three kinds of $r$-lines are different:
-\[
-    \left. \der{}{r} \right| _{t,\th,\ph} \not=
-    \left. \der{}{r} \right| _{v,\th,\ph} \not=
-    \left. \der{}{r} \right| _{\ti,\th,\ph} .
-\]
-\end{remark}
 To avoid any ambiguity, we shall denote by $\wpar_{\tilde{r}}$ the
 coordinate vector of the IEF frame and by
 $\wpar_r$ the coordinate vector of the Schwarzschild-Droste frame:
@@ -633,13 +606,14 @@ Since $\ti \sim t$ when $r\rightarrow +\infty$, we get $\alpha=1$.
 \end{remark}
 
 \begin{remark}
-In region $\M_{\rm II}$, the four coordinates $(\ti,r,\th,\ph)$ are
-spacelike\footnote{This was established above but this can also be seen
+In region $\M_{\rm II}$,
+the four vectors $(\wpar_{\ti},\wpar_{\tilde{r}}, \wpar_\th, \wpar_\ph)$
+are spacelike\footnote{This follows from the diagonal components $g_{\alpha\alpha}$
+read on (\ref{e:sch:Schwarz_metric_EF}) being positive for $r<2m$,
+but this can also be seen
 graphically on Fig.~\ref{f:sch:rad_null_geod_EF} below: for $r<2m$,
 both the $\ti$ and $r$ coordinate lines, i.e. the vertical and horizontal lines,
-are outside the light cones.}, i.e.
-the four vectors $(\wpar_{\ti},\wpar_{\tilde{r}}, \wpar_\th, \wpar_\ph)$
-are spacelike. There is nothing wrong about that; in particular this does not
+are outside the light cones.}. There is nothing wrong about that; in particular this does not
 contradict the signature $(-,+,+,+)$ of the metric. The latter is related
 to the type of the basis vectors only when the metric components take
 a \emph{diagonal} form, which is not the case here, since
