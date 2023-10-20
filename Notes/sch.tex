@@ -325,27 +325,59 @@ A more appropriate name would have been the \emph{Schwarzschild areal radius},
 for $r$ does not describe a \emph{radius} (in the sense of a distance from
 some ``origin'') but rather an \emph{area}, as discussed in Sec.~\ref{s:sch:static_spher}.
 
-A first property of the Schwarzschild metric is that $\M_{\rm I}$ has an
-asymptotically flat end: it is clear on (\ref{e:sch:Schwarz_metric_SD})
-that the metric $\w{g}$ tends to Minkowski metric (\ref{e:glo:Mink_metric_spher})
-when $r\rightarrow +\infty$ [see also Eq.~(\ref{e:sch:Schwarz_metric_large_r})].
+Immediate properties of the Schwarzschild-Droste domain are:
 
-Besides, in region $\M_{\rm II}$, we notice on (\ref{e:sch:Schwarz_metric_SD})
-that $g_{tt} > 0$. Since $g_{tt} = \w{g}(\wpar_t,\wpar_t)$, this implies
-that the Killing vector field $\w{\xi} = \wpar_t$ is spacelike. Hence,
-$(\M_{\rm II},\w{g})$ is not static, in the sense defined in
-Sec.~\ref{s:sch:static_spher}: the translation group $(\R,+)$ is still an
-isometry group of $(\M_{\rm II},\w{g})$, but its orbits are spacelike curves.
-We note that $g_{rr} < 0$ in $\M_{\rm II}$, so that the
-metric (\ref{e:sch:Schwarz_metric_SD}) keeps a Lorentzian signature,
-as it should!
-Accordingly, the axes of the light cones
-in Fig.~\ref{f:sch:rad_null_geod} are horizontal lines for $r<2m$.
-We also note that, in $\M_{\rm II}$, $t$ becomes a spacelike coordinate
+\begin{prop}[the Schwarzschild exterior $\M_{\rm I}$]
+The region $(\M_{\rm I}, \w{g})$ is strictly static, in the sense defined in
+Sec.~\ref{s:sta:def_station}: the Killing vector $\w{\xi} = \wpar_t$ is
+timelike on all $\M_{\rm I}$ and is orthogonal to the hypersurfaces $t= \mathrm{const}$.
+Moreover, $(\M_{\rm I}, \w{g})$ is asymptotically flat: the metric $\w{g}$ tends to Minkowski metric
+when $r\rightarrow +\infty$.
+\end{prop}
+
+\begin{proof}
+From expression (\ref{e:sch:Schwarz_metric_SD}), we see that $g_{tt} < 0$ for $r > 2 m$.
+Since $g_{tt} = \w{g}(\wpar_t, \wpar_t)$, this implies that $\wpar_t$ is timelike.
+Moreover $\wpar_t$ is orthogonal to any hypersurface $\Sigma_t$ defined by a constant
+value of $t$, since we read on (\ref{e:sch:Schwarz_metric_SD}) that
+$\w{g}(\wpar_t, \wpar_i) = g_{ti} = 0$ for $i\in\{1,2,3\}$ and by definition,
+the vectors $(\wpar_i) = (\wpar_r,\wpar_\th,\wpar_\ph)$ form a basis of the tangent planes to $\Sigma_t$.
+Finally, for $r\to +\infty$, all the metric components given by (\ref{e:sch:Schwarz_metric_SD})
+tend to those of the Minkowksi metric (\ref{e:glo:Mink_metric_spher})
+[see also Eq.~(\ref{e:sch:Schwarz_metric_large_r})].
+\end{proof}
+
+\begin{prop}[the Schwarzschild interior $\M_{\rm II}$]
+\label{p:sch:prop_M_II}
+In the region $\M_{\rm II}$, the Killing vector $\w{\xi} = \wpar_t$ is spacelike.
+It follows that $(\M_{\rm II},\w{g})$ is \emph{not} static:
+the translation group $(\R,+)$ is still an
+isometry group of $(\M_{\rm II},\w{g})$, but its orbits are spacelike curves
+(cf. Sec.~\ref{s:sta:def_station}).
+Besides, in $\M_{\rm II}$, $t$ is a spacelike coordinate
 (i.e. the hypersurfaces $t=\mathrm{const}$ are timelike, cf. Sec.~\ref{s:bas:signature})
-and $r$ a timelike one (i.e. the hypersurfaces $r=\mathrm{const}$ are spacelike).
-This follows from $g^{tt} > 0$ and $g^{rr} < 0$ in
-$\M_{\rm II}$ [cf. Eq.~(\ref{e:bas:char_causal_type_coord})].
+and $r$ is a timelike one (i.e. the hypersurfaces $r=\mathrm{const}$ are spacelike).
+\end{prop}
+
+\begin{proof}
+We see from (\ref{e:sch:Schwarz_metric_SD}) that $g_{tt} > 0$ for $r< 2m$,
+which implies that $\wpar_t$ is spacelike there.
+Moreover, we have $g^{tt} > 0$ and $g^{rr} < 0$ in
+$\M_{\rm II}$, which, according to the criterion~(\ref{e:bas:char_causal_type_coord}),
+implies that $t$ is a spacelike coordinate
+and $r$ a timelike one.
+\end{proof}
+
+\begin{remark}
+In the region $\M_{\rm II}$, $g_{rr} < 0$, so that the
+metric $\w{g}$ keeps a Lorentzian signature, as it should!
+\end{remark}
+
+\begin{remark}
+As a consequence of Property~\ref{p:sch:prop_M_II} and of the diagonal character of
+the metric components (\ref{e:sch:Schwarz_metric_SD}),
+the axes of the light cones are horizontal lines for $r<2m$ in Fig.~\ref{f:sch:rad_null_geod} below.
+\end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -715,6 +747,17 @@ The components of the inverse metric with respect to the IEF coordinates are
     \end{array} \right) .
 \ee
 In particular, the components $g^{\tilde{\alpha}\tilde{\beta}}$ are regular at $r=2m$.
+Moreover we notice that $g^{\ti\ti} < 0$ for all $r\in(0,+\infty)$. In view of
+the criterion~(\ref{e:bas:char_causal_type_coord}), we may assert
+
+\begin{prop}[Timelike character of the IEF coordinate $\ti$]
+\label{p:sch:ti_timelike}
+The coordinate $\ti$ is timelike in all $\M_{\rm IEF}$.
+\end{prop}
+This is in contrast with the Schwarzschild-Droste coordinate $t$, which is
+timelike in $\M_{\rm I}$ but spacelike
+in $\M_{\rm II}$ (Property~\ref{p:sch:prop_M_II}).
+
 
 The IEF domain is an extension of the Schwarzschild-Droste domain
 introduced in Sec.~\ref{s:sch:SD_domain}:
@@ -810,12 +853,17 @@ via the \emph{geodesic deviation equation}\index{geodesic!deviation equation}\in
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{sch_rad_null_geod_EF.pdf}}
 \caption[]{\label{f:sch:rad_null_geod_EF} \footnotesize
-Radial null geodesics of Schwarzschild spacetime, plotted in terms
+Radial null geodesics of Schwarzschild spacetime, plottved in terms
 of ingoing Eddington-Finkelstein coordinates $(\ti,r)$: the solid (resp. dashed) lines
 correspond to outgoing (resp. ingoing) geodesics $\Li^{\rm out}_{(u,\th,\ph)}$
 (resp. $\Li^{\rm in}_{(v,\th,\ph)}$), as given by Eq.~(\ref{e:sch:outgoing_null_geod_EF})
 (resp. Eq.~(\ref{e:sch:ingoing_null_geod_EF})). The interiors of some future light
-cones are depicted in yellow.}
+cones are depicted in yellow. Note that the hypersurfaces of constant $\ti$
+(horizontal lines) always lie outside the light cones, i.e. are spacelike, in agreement with
+$\ti$ being everywhere a timelike coordinate (Property~\ref{p:sch:ti_timelike}).
+Similarly the hypersurfaces of constant $r$ (vertical lines) lie outside the light cones
+for $r<2m$, in agreement with $r$ being a timelike coordinate in $\M_{\rm II}$
+(Property~\ref{p:sch:prop_M_II}).}
 \end{figure}
 
 \subsection{Radial null geodesics in terms of the Eddington-Finkelstein coordinates}
@@ -971,12 +1019,11 @@ is everywhere future-directed.
 
 The above choice induces a time orientation of the subdomains
 $\M_{\rm I}$ and $\M_{\rm II}$ of $\M$.
-In Sec.~\ref{s:sch:SD_domain},
-we have noticed that the coordinate vector
-$\wpar_r$ of Schwarzschild-Droste coordinates is timelike in $\M_{\rm II}$;
-according to Lemma~\ref{p:fra:lem2} (Sec.~\ref{s:fra:time_orientation}),
-we may then get its time
-orientation form the scalar product $\w{k}\cdot\wpar_r$. Given
+We read on the metric components (\ref{e:sch:Schwarz_metric_SD}) that $g_{rr} < 0$
+for $r< 2m$, so that the coordinate vector
+$\wpar_r$ of Schwarzschild-Droste coordinates is timelike in $\M_{\rm II}$.
+According to Lemma~\ref{p:fra:lem2} (Sec.~\ref{s:fra:time_orientation}) with $\w{u}=\w{k}$,
+its time orientation is given by the scalar product $\w{k}\cdot\wpar_r$. Given
 Eqs.~(\ref{e:sch:wpar_tilde_r}) and (\ref{e:sch:wpar_tilde_t}), we have
 \[
     \wpar_r = - \left( 1 - \frac{2m}{r} \right) ^{-1} \wpar_{\ti}
@@ -988,14 +1035,14 @@ then that
     \w{k}\cdot\wpar_r = \frac{r}{2m} \left( 1 - \frac{r}{2m} \right) ^{-1}
     > 0 \quad\mbox{in} \ \M_{\rm II} .
 \]
-In view of Eq.~(\ref{e:fra:orient_null3}) in Lemma~\ref{p:fra:lem2} (Sec.~\ref{s:fra:time_orientation}), we conclude:
+In view of Eq.~(\ref{e:fra:orient_null3}) in Lemma~\ref{p:fra:lem2}, we conclude:
 
 \begin{prop}[$\wpar_r$ past-directed timelike in the black hole region]
 \label{p:sch:wpar_r_past_MII}
 In region $\M_{\rm II}$, the vector $\wpar_r$ of Schwarzschild-Droste coordinates
 is a past-directed timelike vector.
 \end{prop}
-This explains why the future null cones are along $-\wpar_r$
+This explains why $-\wpar_r$ lies within the future null cones
 in Fig.~\ref{f:sch:rad_null_geod} for $r<2m$.
 
 A corollary is:
@@ -1023,7 +1070,7 @@ is thus equivalent to $\D r/ \D\lambda < 0$, which proves that $r$ is decreasing
 along $\Li$ as $\lambda$ increases.
 \end{proof}
 Thus not only an observer in $\M_{\rm II}$ cannot cross $\M_{\rm II}$'s outer boundary
-$\Hor$ to reach $\M_{\rm I}$, $\Hor$ being a null hypersurface, but he is forced
+$\Hor$ to visit $\M_{\rm I}$, $\Hor$ being a null hypersurface, but he is forced
 to move to decreasing $r$ until he reaches the curvature singularity at $r\rightarrow 0$.
 We shall study this motion in detail in Sec.~\ref{s:ges:radial_free_fall}.
 
