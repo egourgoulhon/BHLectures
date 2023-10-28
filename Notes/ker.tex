@@ -170,7 +170,7 @@ are regular in $\M_{\rm BL}$, except for the standard singularities of
 the spherical coordinates $(\th,\ph)$.
 
 By means of a computer algebra system (cf. the SageMath notebook~\ref{s:sam:Kerr_solution}),
-one checks easily:
+one easily checks:
 \begin{prop}[Kerr metric as a solution of the vacuum Einstein equation]
 The Kerr metric $\w{g}$ [Eq.~(\ref{e:ker:metric_BL})] is a solution of the vacuum
 Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation}
@@ -594,9 +594,9 @@ other coordinates, as we shall see in the next section.
 \section{Kerr coordinates and extension of the spacetime ma\-ni\-fold through $\Delta=0$}
 \label{s:ker:extension}
 
-\subsection{Null Kerr coordinates} \label{s:ker:Kerr_coord}
+\subsection{Advanced Kerr coordinates} \label{s:ker:Kerr_coord}
 
-The \defin{(ingoing) null Kerr coordinates}\index{Kerr!coordinates!null --}\index{null!Kerr coordinates} are coordinates
+The \defin{advanced Kerr coordinates}\index{Kerr!coordinates!advanced --}\index{advanced!Kerr coordinates} are coordinates
 $(x^{\hat{\alpha}}) = (v,r,\th,\tph)$ defined on $\R^2\times\SS^2$ and related to the Boyer-Lindquist coordinates
 $(x^\alpha) = (t,r,\th,\ph)$ introduced in Sec.~\ref{s:ker:expr_BL} by
 \begin{subequations}
@@ -606,7 +606,7 @@ $(x^\alpha) = (t,r,\th,\ph)$ introduced in Sec.~\ref{s:ker:expr_BL} by
 & \encadre{\dd \tph = \dd \ph + \frac{a}{\Delta}\, \dd r} . \label{e:ker:Kerr_coord_tph}
 \end{align}
 \end{subequations}
-If $a=0$, we note that the null Kerr coordinates are nothing but the null
+If $a=0$, we note that the advanced Kerr coordinates are nothing but the null
 ingoing Eddington-Finkelstein
 coordinates on Schwarzschild spacetime (cf. Sec.~\ref{s:sch:EF_coord} and compare
 (\ref{e:ker:Kerr_coord_v}) with (\ref{e:sch:dt_dv_NIEF})).
@@ -633,13 +633,13 @@ so that Eqs.~(\ref{e:ker:Kerr_coord}) can be readily integrated to
 \end{subequations}
 up to some additive constants.
 When $a\rightarrow 0$, we have $r_+\rightarrow 2m$ and $r_-\rightarrow 0$
-and by comparing Eq.~(\ref{e:ker:Kerr_coord_v_int}) with Eq.~(\ref{e:sch:v_t_r}), we recover the fact
-that the null Kerr coordinates reduces to the ingoing null Eddington-Finkelstein
+and by comparing Eq.~(\ref{e:ker:Kerr_coord_v_int}) with Eq.~(\ref{e:sch:v_t_r}), we recover
+that the advanced Kerr coordinates reduces to the null ingoing Eddington-Finkelstein
 ones in this limit.
 
-The expression of the metric tensor $\w{g}$ with respect to the null Kerr coordinates
-$(x^{\hat{\alpha}}) = (v,r,\th,\tph)$
-is computed from that with respect to the Boyer-Lindquist ones, as given
+The expression of the metric tensor $\w{g}$ in terms of the advanced Kerr coordinates
+$(v,r,\th,\tph)$
+is computed from that in terms the Boyer-Lindquist ones, as given
 by Eq.~(\ref{e:ker:metric_BL}), via (\ref{e:ker:Kerr_coord}).
 One gets (cf. Appendix~\ref{s:sam} or
 Eq.~(5.31) of Ref.~\cite{HawkiE73}, or Lemma~2.5.2 of \cite{ONeil95}):
@@ -676,12 +676,13 @@ as the spacetime manifold. In order for $\w{g}$ defined by (\ref{e:ker:metric_Ke
 to be a well-defined metric on $\M$, it does not suffice that the components
 $g_{\hat{\alpha}\hat{\beta}}$ do not diverge at $\Hor$ and $\Hor_{\rm in}$: one shall
 check as well that the bilinear form $\w{g}$ is non-degenerate there.
-This is easily proven by considering the determinant of the metric components,
-which turns out to have a simple form (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}):
+This is easily proven by considering the determinant of the metric components
+(\ref{e:ker:metric_Kerr_coord}),
+which turns out to have a simple form:
 \be
     \det (g_{\hat{\alpha}\hat{\beta}}) = -\rho^4 \sin^2\th .
 \ee
-Except at $\th=0$ and $\th=\pi$ (the usual singularity of spherical coordinates),
+Except at $\th=0$ and $\th=\pi$ (the usual singularities of spherical coordinates),
 we have $\det (g_{\hat{\alpha}\hat{\beta}}) \neq 0$ everywhere on $\M$, since
 $\rho$ vanishes only on $\ring$, which is excluded from $\M$.
 Hence we conclude
@@ -700,8 +701,8 @@ We deduce from (\ref{e:ker:Kerr_coord}) that
     \left. \der{\tph}{r} \right| _{t,\th,\ph} = \frac{a}{\Delta},\qquad
     \left. \der{\tph}{\ph} \right| _{t,r,\th} = 1.
 \]
-It follows then from the chain rule that
-the null Kerr coordinate frame
+It follows from the chain rule that
+the advanced Kerr coordinate frame
 is related to the Boyer-Lindquist coordinate frame by
 \begin{subequations}
 \label{e:ker:frame_Kerr_BL}
@@ -714,11 +715,11 @@ is related to the Boyer-Lindquist coordinate frame by
 \end{align}
 \end{subequations}
 Note that we are using the notation $\wpar_{\hat{r}}$ for the $\partial/\partial r$
-vector of the null Kerr coordinate system $(x^{\hat{\alpha}}) = (v,r,\th,\tph)$, to distinguish
+vector of the advanced Kerr coordinate system $(x^{\hat{\alpha}}) = (v,r,\th,\tph)$, to distinguish
 it from the $\partial/\partial r$ vector of Boyer-Lindquist coordinates.
 
 \begin{hist} \label{h:ker:Kerr_coord}
-The null Kerr coordinates are those in which Roy P.~Kerr\index[pers]{Kerr, R.P.} originally presented his
+The advanced Kerr coordinates are those in which Roy P.~Kerr\index[pers]{Kerr, R.P.} originally presented his
 solution in 1963 \cite{Kerr63}. As noted by Kerr himself later \cite{Kerr09}, he used $-a$ instead of $a$,
 because he was ``rather hurried in performing
 this calculation (angular momentum) and got the sign wrong'' (footnote in Sec.~2.5 of
@@ -727,7 +728,7 @@ Actually, it was shown in 1964
 by Robert H.~Boyer\index[pers]{Boyer, R.H.} and
 T.G.~Price\index[pers]{Price, T.G.} \cite{BoyerP65}
 that the angular momentum about the rotation axis of the Kerr solution is $J=- a m$,
-where $a$ is Kerr's $a$.
+where $a$ is Kerr's one.
 Taking this into account, the correspondence between our notations and those of Kerr's article \cite{Kerr63}
 is $v\leftrightarrow u$ and $a\leftrightarrow -a$. Then we can check that
 the metric (\ref{e:ker:metric_Kerr_coord}) coincides with that given
@@ -769,7 +770,7 @@ which may be qualified of \emph{ingoing} since, by definition, $-\wpar_{\hat{r}}
 decreasing values of $r$. Note that, by the very definition of
 the coordinate vector $\wpar_{\hat{r}}$,
 the values of the coordinates $(v,\th,\tph)$ are fixed along each of these
-null curves. We therefore denote them by $\Li^{\rm in}_{(v,\th,\tph)}$.
+null curves. We may therefore denote them by $\Li^{\rm in}_{(v,\th,\tph)}$.
 We shall see in Sec.~\ref{s:ker:principal_geod} that each $\Li^{\rm in}_{(v,\th,\tph)}$ is actually a null geodesic.
 
 \subsubsection{Decaying of $r$ towards the future in $\M_{\rm II}$}
