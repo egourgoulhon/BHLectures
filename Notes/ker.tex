@@ -591,7 +591,7 @@ other coordinates, as we shall see in the next section.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Kerr coordinates and extension of the spacetime ma\-ni\-fold through $\Delta=0$}
+\section{Extension of the spacetime manifold through $\Delta=0$}
 \label{s:ker:extension}
 
 \subsection{Advanced Kerr coordinates} \label{s:ker:Kerr_coord}
@@ -610,6 +610,16 @@ If $a=0$, we note that the advanced Kerr coordinates are nothing but the null
 ingoing Eddington-Finkelstein
 coordinates on Schwarzschild spacetime (cf. Sec.~\ref{s:sch:EF_coord} and compare
 (\ref{e:ker:Kerr_coord_v}) with (\ref{e:sch:dt_dv_NIEF})).
+
+\begin{remark}
+In the literature, the advanced Kerr coordinates are often simply called \emph{Kerr coordinates} (e.g. \cite{MisneTW73,Strau13}). However,
+we prefer to keep this short name for closely related coordinates to be introduced in Sec.~\ref{s:ker:3p1_Kerr_coord}.
+Both systems originate in Kerr's seminal article \cite{Kerr63} (cf. the historical notes on p.~\pageref{h:ker:Kerr_coord}
+and p.~\pageref{h:ker:coord_ti}).
+The advanced Kerr coordinates are also called \emph{Kerr-star coordinates}\index{Kerr-star coordinates}
+by O'Neill\index[pers]{O'Neill, B.} \cite{ONeil95}.
+\end{remark}
+
 
 Given that $\Delta = (r-r_-)(r-r_+) = r^2+a^2 - 2mr$ [Eq.~(\ref{e:ker:def_Delta})], we have
 the identities
@@ -715,12 +725,23 @@ is related to the Boyer-Lindquist coordinate frame by
 \end{align}
 \end{subequations}
 Note that we are using the notation $\wpar_{\hat{r}}$ for the $\partial/\partial r$
-vector of the advanced Kerr coordinate system $(x^{\hat{\alpha}}) = (v,r,\th,\tph)$, to distinguish
+vector of the advanced Kerr coordinates $(x^{\hat{\alpha}}) = (v,r,\th,\tph)$, to distinguish
 it from the $\partial/\partial r$ vector of Boyer-Lindquist coordinates.
+
+\begin{remark}
+Contrary to the Schwarzschild case (cf. Sec.~\ref{s:sch:EF_coord}), $v$ is not a null coordinate
+for $a\neq 0$, but rather a spacelike one, i.e. the hypersurfaces of constant $v$
+are timelike (cf. the definitions given in Sec.~\ref{s:bas:signature}). Indeed,
+the component $g^{vv}$ of the inverse metric in advanced Kerr coordinates is
+$g^{vv} = a^2 \sin^2\theta /\rho^2$ (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}-1),
+so that $g^{vv} > 0$ outside the rotation
+axis. The criterion (\ref{e:bas:char_causal_type_coord}) allows us to conclude
+that $v$ is a spacelike coordinate.
+\end{remark}
 
 \begin{hist} \label{h:ker:Kerr_coord}
 The advanced Kerr coordinates are those in which Roy P.~Kerr\index[pers]{Kerr, R.P.} originally presented his
-solution in 1963 \cite{Kerr63}. As noted by Kerr himself later \cite{Kerr09}, he used $-a$ instead of $a$,
+solution in 1963 \cite{Kerr63}. As noted by Kerr himself later on \cite{Kerr09}, he used $-a$ instead of $a$,
 because he was ``rather hurried in performing
 this calculation (angular momentum) and got the sign wrong'' (footnote in Sec.~2.5 of
 Ref.~\cite{Kerr09}).
@@ -825,7 +846,7 @@ along $\Li$ as $\lambda$ increases.
 \subsection{Kerr coordinates} \label{s:ker:3p1_Kerr_coord}
 
 As in Sec.~\ref{s:sch:EF_coord},
-we shall move from the null coordinate $v$ to a (asymptotically)
+we shall move from the coordinate $v$ to a (asymptotically)
 timelike one by setting
 \be \label{e:ker:def_t_tilde}
     \encadre{\ti = v - r} \iff \encadre{v = \ti + r}
@@ -845,7 +866,7 @@ by combining (\ref{e:ker:Kerr_coord}) with $\dd\ti = \dd v - \dd r$:
 & \encadre{\dd \tph = \dd \ph + \frac{a}{\Delta}\, \dd r} .
 \end{align}
 \end{subequations}
-The integrated version is deduced obtained by substituting (\ref{e:ker:def_t_tilde}) in
+The integrated version is obtained by substituting (\ref{e:ker:def_t_tilde}) in
 Eq.~(\ref{e:ker:Kerr_coord_int}):
 \begin{subequations}
 \label{e:ker:Kerr_3p1_BL_int}
@@ -880,7 +901,7 @@ Kerr coordinates $(\ti,r,\th,\tph)$ is easily deduced from
 \ee
 
 Since we kept $r$, $\th$ and $\tph$ and simply changed
-$v$ to $\ti$ via (\ref{e:ker:def_t_tilde}) when moving from the null Kerr
+$v$ to $\ti$ via (\ref{e:ker:def_t_tilde}) when moving from the advanced Kerr
 coordinates to the Kerr ones, we easily get the link
 between the two coordinate frames:
 \begin{subequations}
@@ -889,13 +910,13 @@ between the two coordinate frames:
     & \wpar_\ti = \wpar_v \\
     & \wpar_{\tilde r} = \wpar_v + \wpar_{\hat{r}} \\
     & \wpar_\th = \wpar_\th \\
-    & \wpar_\tph = \wpar_\ph .
+    & \wpar_\tph = \wpar_\tph .
 \end{align}
 \end{subequations}
 Note that we have denoted by $\wpar_{\tilde r}$ the second vector of the
 coordinate frame associated to the Kerr coordinates
 $(x^{\tilde{\alpha}}) = (\ti, r, \th,\tph)$, in order to distinguish it from
-the coordinate vector $\wpar_{\hat r}$ of the null Kerr coordinates
+the coordinate vector $\wpar_{\hat r}$ of the advanced Kerr coordinates
 $(x^{\hat{\alpha}}) = (v, r, \th,\tph)$, as well as from the coordinate vector
 $\wpar_r$ of the Boyer-Lindquist coordinates
 $(x^\alpha) = (t,r,\th,\ph)$.
@@ -925,16 +946,16 @@ the metric components (\ref{e:ker:metric_Kerr_3p1}) do not depend on $\ti$
 nor on $\tph$.
 
 The determinant of the metric components (\ref{e:ker:metric_Kerr_3p1}) takes
-a very simple form (see the notebook~\ref{s:sam:Kerr_Kerr_coord} for the computation):
+a very simple form:
 \be \label{e:ker:det_g_3p1}
     \det\left( g_{\tilde{\alpha}\tilde{\beta}} \right) = - \rho^4\sin^2\th .
 \ee
 The inverse metric also takes a rather simple form in terms of
-Kerr coordinates (see the notebook~\ref{s:sam:Kerr_Kerr_coord} for the computation):
+Kerr coordinates (see the notebook~\ref{s:sam:Kerr_Kerr_coord}-2 for the computation):
 \be \label{e:ker:inv_met_3p1}
     g^{\tilde{\alpha}\tilde{\beta}} = \left(
     \begin{array}{cccc}
-    - \left( 1 + \frac{2m r}{\rho^2} \right) & \frac{2m r}{\rho^2} & 0 & 0 \\[1ex]
+    - 1 - \frac{2m r}{\rho^2}  & \frac{2m r}{\rho^2} & 0 & 0 \\[1ex]
     \frac{2m r}{\rho^2} & \frac{\Delta}{\rho^2} & 0 & \frac{a}{\rho^2} \\[1ex]
     0 & 0 &\frac{1}{\rho^2} & 0 \\[1ex]
     0 & \frac{a}{\rho^2} & 0 & \frac{1}{\rho^2\sin^2\th}
@@ -942,7 +963,7 @@ Kerr coordinates (see the notebook~\ref{s:sam:Kerr_Kerr_coord} for the computati
     \right) .
 \ee
 
-Comparing (\ref{e:ker:frame_Kerr3p1_BL}) with (\ref{e:ker:metric_BL}), we
+Comparing (\ref{e:ker:metric_Kerr_3p1}) with (\ref{e:ker:metric_BL}), we
 note that the metric components in Kerr coordinates are slightly more
 complicated than those in Boyer-Lindquist coordinates, for they contain
 extra off-diagonal terms: $g_{\ti r}$ and $g_{r \tph}$. However
@@ -959,28 +980,31 @@ Therefore, we shall continue our study of Kerr spacetime, and especially of the
 black hole feature, by means of Kerr coordinates.
 
 \begin{remark} \label{r:ker:Kerr_slicing}
-The Kerr coordinates
-$(\ti,r,\th,\tph)$ are not related everywhere to a 3+1 slicing of
-spacetime. By \defin{3+1 slicing}\index{3+1 slicing}, it is meant a foliation of $\M$
-by spacelike hypersurfaces (see e.g. \cite{Gourg12}). Now, the hypersurfaces
-$\ti = \mathrm{const}$ are spacelike iff their normal $\vec{\nabla} \ti$ is timelike, which
-is equivalent to $\w{g}(\vec{\nabla} \ti, \vec{\nabla} \ti) < 0$, with
-$\w{g}(\vec{\nabla} \ti, \vec{\nabla} \ti) = g_{\tilde{\mu}\tilde{\nu}} \, \nabla^{\tilde{\mu}} \ti \nabla^{\tilde{\nu}} \ti
-    = g^{\tilde{\mu}\tilde{\nu}}\,  \partial_{\tilde{\mu}} \ti \, \partial_{\tilde{\nu}} \ti = g^{\ti\ti}$.
-Given the value of $g^{\ti\ti}$ read on (\ref{e:ker:inv_met_3p1}), the hypersurface
-$\ti=\mathrm{const}$ is spacelike iff $\rho^2+2mr > 0$, or equivalently
-$r^2 + 2 mr + a^2\cos^2\th > 0$. Now this second-order polynomial in $r$
+The coordinate $\ti$ is not everywhere timelike, i.e. the hypersurfaces
+of constant $\ti$ are not everywhere spacelike.
+Indeed, according to the
+criterion (\ref{e:bas:char_causal_type_coord}), $\ti$ is timelike iff
+$g^{\ti\ti} < 0$ and we read on Eq.~(\ref{e:ker:inv_met_3p1}) that
+$g^{\ti\ti} = - 1 - {2m r}/{\rho^2}$. Hence $\ti$ is timelike iff
+$\rho^2+2mr > 0$, or equivalently
+$r^2 + 2 mr + a^2\cos^2\th > 0$. This quadratic polynomial in $r$
 is positive everywhere except in the region of $\M_{\rm III}$ defined by
 \be \label{e:ker:no_slicing}
     - m - \sqrt{m^2-a^2\cos^2\th} \leq r \leq -m + \sqrt{m^2-a^2\cos^2\th} .
 \ee
 Note that this region is contained in the negative-$r$ part of $\M_{\rm III}$.
-We conclude that the coordinates $(\ti,r,\th,\tph)$ define a 3+1 slicing of $\M$
+We conclude that the coordinate $\ti$ is timelike
 in $\M_{\rm I}$, $\M_{\rm II}$ and in the part of $\M_{\rm III}$ outside the
 region defined by (\ref{e:ker:no_slicing}).
+Consequently, the Kerr coordinates
+$(\ti,r,\th,\tph)$ are related to a 3+1 slicing of
+spacetime only outside the region (\ref{e:ker:no_slicing}).
+By \defin{3+1 slicing}\index{3+1 slicing}, it is meant a foliation of $\M$
+by spacelike hypersurfaces (see e.g. \cite{Gourg12}).
 \end{remark}
 
 \begin{hist}
+\label{h:ker:coord_ti}
 The coordinate $\ti$ has been introduced by Roy Kerr\index[pers]{Kerr, R.P.}
 in the 1963 discovery article \cite{Kerr63}, by exactly
 the same transformation as (\ref{e:ker:def_t_tilde}) ($\ti$ is denoted by $t$
@@ -996,7 +1020,7 @@ the \emph{Kerr coordinates} $(\ti, r, \th,\tph)$ defined above
 are a mix of the coordinates
 $(v,r,\th,\tph)$ in which Kerr exhibited his solution
 (cf. the historical note on p.~\pageref{h:ker:Kerr_coord}), called here
-\emph{null Kerr coordinates},
+\emph{advanced Kerr coordinates},
 and the Kerr-Schild coordinates $(\ti,x,y,z)$.
 The Kerr coordinates $(\ti, r, \th,\tph)$ have been first explicitely
 considered by Robert Boyer\index[pers]{Boyer, R.H.} and Richard Lindquist\index[pers]{Lindquist, R.W.}
@@ -1018,7 +1042,7 @@ the historical note on p.~\pageref{h:ker:Kerr_coord}).
 
 \subsection{Ingoing principal null geodesics}
 
-We have seen that the null Kerr coordinates $(v,r,\th,\tph)$ introduced in
+We have seen that the advanced Kerr coordinates $(v,r,\th,\tph)$ introduced in
 Sec.~\ref{s:ker:Kerr_coord} are such that
 the curves $\Li^{\rm in}_{(v,\th,\tph)}$ defined by $(v,\th,\tph)=\mathrm{const}$ are null curves
 (cf. Sec.~\ref{s:ker:time_orientation}). Their future-directed tangent
@@ -1037,7 +1061,7 @@ $k_{\tilde{\alpha}} = (-1, -1, 0, a\sin^2\th)$, i.e.
     \encadre{ \uu{k} = - \dd \ti - \dd r + a\sin^2\th \, \dd\tph } .
 \ee
 
-A direct computation (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}) shows
+A direct computation (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}-2) shows
 that
 \be \label{e:ker:nab_k_k}
     \wnab_{\w{k}}\, \w{k} = 0.
@@ -1046,9 +1070,7 @@ It follows that each curve $\Li^{\rm in}_{(v,\th,\tph)}$ is a geodesic
 and that the parameter $\lambda$ associated with $\w{k}$ is an
 affine parameter of this geodesic (cf. Sec.~\ref{s:geo:def} in Appendix~\ref{s:geo}).
 Since Eq.~(\ref{e:ker:k_ti_tr}) implies
-\[
-    k^r = \frac{\D r}{\D\lambda} = - 1 ,
-\]
+$k^r = {\D r}/{\D\lambda} = - 1$,
 we have, up to some additive constant,
 \be \label{e:ker:lambda_minus_r}
 \lambda = -r .
@@ -1150,9 +1172,9 @@ Same as Fig.~\ref{f:ker:princ_null_geod_a90}, but for $a/m=0.5$.}
 \subsection{Outgoing principal null geodesics} \label{s:ker:out_princ_null_geod}
 
 One can construct a second congruence of principal null geodesics by considering
-the \emph{outgoing} Kerr coordinates instead of the ingoing ones
+the \emph{retarded} Kerr coordinates instead of the advanced ones
 discussed in Sec.~\ref{s:ker:Kerr_coord}. The
-\defin{outgoing null Kerr coordinates}\index{outgoing!null Kerr coordinates}\index{Kerr!coordinates!outgoing null --}
+\defin{retarded Kerr coordinates}\index{retarded!Kerr coordinates}\index{Kerr!coordinates!retarded --}
 $(u,r,\th,\tilde{\tph})$ are defined by relations to Boyer-Lindquist
 coordinates that are similar to
 (\ref{e:ker:Kerr_coord}), up to a change of sign:
@@ -1268,8 +1290,8 @@ $\D u = 0$ and $\D\tilde{\tph}=0$, so that (\ref{e:ker:out_Kerr_Kerr_3p1}) yield
 Dividing the second expression by the first one yields (\ref{e:ker:wind_speed}).
 \end{proof}
 
-Note that in both asymptotically flat regions, when $r\rightarrow +\infty$ and
-$r\rightarrow -\infty$, the winding speed (\ref{e:ker:wind_speed}) goes to zero
+Note that in both asymptotically flat regions, when $r\rightarrow \pm\infty$,
+the winding speed (\ref{e:ker:wind_speed}) goes to zero
 and the two congruences of geodesics tend to $\pm 45^\circ$ lines
 in Figs.~\ref{f:ker:princ_null_geod_a90} and
 \ref{f:ker:princ_null_geod_a50}, as expected.
@@ -1330,7 +1352,7 @@ In other words, we have
 It is clear that this vector field is regular everywhere in $\M$.
 Given the metric components (\ref{e:ker:metric_Kerr_3p1}), it is easy
 to check that $\w{g}(\wl,\wl)=0$, i.e. that $\wl$ is a null vector.
-Moreover, an explicit computation (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}) reveals that
+Moreover, an explicit computation (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}-2) reveals that
 \be \label{e:ker:pregeod_ell}
     \wnab_{\wl}\, \wl = \kappa_{\wl} \, \wl,
     \quad\mbox{with}\quad
@@ -1456,8 +1478,8 @@ $\w{\hat{\el}}$ is used in many studies, we prefer $\wl$ here because it
 coincides with the Killing vector $\w{\xi} + \Omega_{\Hor} \w{\eta}$
 on the event horizon, as we shall see in Sec.~\ref{s:ker:event_hor_gen}
 [Eq.~(\ref{e:ker:l_eqH_chi})]. In particular, its
-non-affinity coefficient $\kappa_{\w{\el}}$ gives there the so-called
-black hole's surface gravity (Sec.~\ref{s:ker:surf_grav} below).
+non-affinity coefficient $\kappa_{\w{\el}}$ yields the so-called
+\emph{black hole's surface gravity} (Sec.~\ref{s:ker:surf_grav} below).
 \end{remark}
 
 
@@ -1484,9 +1506,7 @@ of the matrix (\ref{e:ker:inv_met_3p1}). Hence
         +  \frac{a}{\rho^2} \wpar_\tph .
 \]
 Instead of $ \vw{\nabla} r$, it is quite natural to consider the rescaled vector field
-\be
-    \w{n} := \rho^2 \vw{\nabla} r
-\ee
+$\w{n} := \rho^2 \vw{\nabla} r$
 as the normal to the hypersurfaces $r=\mathrm{const}$, for it
 has simpler components in the Kerr frame:
 \be \label{e:ker:normal_r}
@@ -1499,7 +1519,7 @@ Hence, in view of (\ref{e:ker:normal_r}),
     \w{n}\cdot\w{n} = \rho^2 \Delta .
 \ee
 Since $\rho^2>0$ everywhere on $\M$ and $\Delta = (r-r_+)(r-r_-)$ [Eq.~(\ref{e:ker:def_Delta})], we conclude:
-\begin{prop}[causal type of the hypersurfaces $r=\mathrm{const}$]
+\begin{prop}[causal type of the hypersurfaces of constant $r$]
 \begin{itemize}
 \item The hypersurfaces $r=\mathrm{const}$ are timelike in regions $\M_{\rm I}$ and $\M_{\rm III}$;
 \item The hypersurfaces $r=\mathrm{const}$ are spacelike in region $\M_{\rm II}$;
@@ -1562,10 +1582,11 @@ is actually (part of) a so-called \emph{Cauchy horizon}.
 \begin{hist}
 The identification of the hypersurfaces $\Hor$ and $\Hor_{\rm in}$
 as the only two null hypersurfaces of Kerr spacetime that are stationary
-(i.e. Killing horizons in the modern language) has been first performed in
+(i.e. that are Killing horizons in the modern language) has been first performed in
 1964 by Robert H. Boyer\index[pers]{Boyer, R.H.}
 and T.G. Price\index[pers]{Price, T.G.} \cite{BoyerP65}, who claimed: ``These are `horizons'
-in the sense that there can be a flow of matter or radiation across them in only one dimension. They are the analogues of the Schwarzschild null sphere or `singularity'.''
+in the sense that there can be a flow of matter or radiation across them in only one direction.
+They are the analogues of the Schwarzschild null sphere or `singularity'.''
 \end{hist}
 
 \subsection{Black hole character} \label{s:ker:event_hor}
@@ -2089,7 +2110,7 @@ by introducing $\omega := \beta/\alpha$, we may rewrite
 \ee
 The coefficient $\omega$ gives the rate of variation of the azimuthal coordinate along the observer's worldline $\Li$
 in any coordinate system adapted to the spacetime symmetries, like the Boyer-Lindquist ones
-$(t,r,\th,\ph)$, the Kerr ones $(\ti, r, \th, \tph)$, or the null Kerr ones $(v,r,\th,\tph)$,
+$(t,r,\th,\ph)$, the advanced Kerr ones $(v,r,\th,\tph)$ or the Kerr ones $(\ti, r, \th, \tph)$,
 according to
 \be \label{e:ker:omega_angular_vel}
     \encadre{ \omega = \left. \frac{\D\ph}{\D t} \right| _\Li  =
@@ -2104,7 +2125,7 @@ and ${\D \tau}/{\D t} = (u^t)^{-1}$. We have thus $\D\ph/\D t |_\Li= u^\ph/u^t$.
 From Eq.~(\ref{e:ker:4vel_stat_obs_omega}) along with
 $\w{\xi} = \wpar_t$ and $\w{\eta} = \wpar_\ph$, we read $u^t = \alpha$
 and $u^\ph = \alpha\omega$. Hence $\D\ph/\D t |_\Li=\omega$.
-The same demonstration applies to Kerr and null Kerr coordinates because
+The same demonstration applies to Kerr and advanced Kerr coordinates because
 $\w{\xi} = \wpar_v = \wpar_{\ti}$ and $\w{\eta} = \wpar_{\tph}$.
 \end{proof}
 \begin{remark}
