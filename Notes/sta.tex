@@ -851,7 +851,7 @@ Expanding to the first order in $\zeta^\alpha$ and $\w{h}$, we get
     - \partial_\alpha \zeta_\beta - \partial_\beta \zeta_\alpha ,
 \]
 where $\zeta_\alpha := \eta_{\alpha\mu} \zeta^\mu$.
-We may recast the above expression of $\w{g}$ as
+We may recast the above expression as
 $\w{g} = \w{f'} + \w{h'}$,
 where $\w{f'}$ is the metric whose components in the coordinates $({x'}^\alpha)$ are
 $\eta_{\alpha\beta}$ (hence $\w{f'}$ is flat, as\footnote{Note that
@@ -900,7 +900,7 @@ to get a metric pertubation $\w{h'}$ that obeys the Lorenz gauge.
 \begin{remark}
 The Lorenz gauge (\ref{e:sta:Lorenz_h}) is equivalent
 to the first-order expansion in $\w{h}$ of
-the condition defining \defin{harmonic coordinates}\index{harmonic coordinates}
+the relation defining \defin{harmonic coordinates}\index{harmonic coordinates}
 on $\M$, i.e.
 \be
    \Box_{\w{g}} x^\alpha = 0 \iff  \partial_\mu \left( \sqrt{-g} \, g^{\mu\alpha} \right) = 0 .
@@ -909,7 +909,7 @@ on $\M$, i.e.
 
 \begin{remark} \label{r:sta:freedom_Lorenz}
 The Lorenz gauge does not fully specify the pair $(\w{f},\w{h})$. Indeed, the solutions of the
-d'Alembert equation (\ref{e:sta:Box_zeta}) are highly non unique: they depend on initial and boundary data.
+d'Alembert equation (\ref{e:sta:Box_zeta}) are non-unique: they depend on initial and boundary data.
 \end{remark}
 
 A standard computation (see e.g. Chap.~18 of \cite{MisneTW73} or Chap.~5 of \cite{Strau13},
@@ -919,7 +919,7 @@ the Einstein tensor\index{Einstein!tensor!linearized --} of $\w{g}$ is
 \be \label{e:sta:G_box_hb}
     \w{G} = - \frac{1}{2} \Box_{\w{f}} \w{\bar{h}} ,
 \ee
-where $\Box_{\w{f}}$ stands for the d'Alembertian operator for the metric $\w{f}$:
+where $\Box_{\w{f}}$ stands for the d'Alembertian operator relative to the metric $\w{f}$:
 in $\w{f}$-Minkowskian coordinates $(x^\alpha)$,
 $\Box_{\w{f}} \bar{h}_{\alpha\beta} = \eta^{\mu\nu} \partial_\mu \partial_\nu \bar{h}_{\alpha\beta}$.
 
@@ -928,10 +928,11 @@ $\w{\xi}$. We may then choose $\w{f}$ so that the $\w{f}$-Minkowskian
 coordinates $(x^\alpha)$ are adapted to stationarity, i.e.
 $x^0$ is an ignorable coordinate, or equivalently
 $\wpar_0=\w{\xi}$. Let then $\Sigma$ be a hypersurface $x^0 = \mathrm{const}$
-and $\w{\gamma}$ the metric induced by $\w{f}$ in $\Sigma$. $(x^i)_{1\leq i \leq n-1}$ is
-a Cartesian coordinate system with respect to $\w{\gamma}$:
+and $\w{\gamma}$ the metric induced by $\w{f}$ on $\Sigma$.
+The coordinates $(x^i)_{1\leq i \leq n-1}$ form a
+a Cartesian coordinate system of $(\Sigma,\w{\gamma})$:
 $\w{\gamma} = \delta_{ij} \dd x^i \otimes \dd x^j = (\dd x^1)^2 + \cdots + (\dd x^{n-1})^2$.
-The operator $\Box_{\w{f}}$ reduces then to the Laplace operator of $\w{\gamma}$,
+The operator $\Box_{\w{f}}$ reduces to the Laplace operator of $\w{\gamma}$,
 $\Delta$ say, and, thanks to property (\ref{e:sta:G_box_hb}), the
 Einstein equation (\ref{e:fra:Einstein_eq}) becomes a system of
 $n(n+1)/2$ independent Poisson equations:
@@ -980,9 +981,10 @@ and
     J_{ij} := \int_\Sigma \left( x^j T_{0i}(x) - x^i T_{0j}(x) \right) \, \D^{n-1} {x} ,
 \ee
 $\Sigma$ being any hypersurface $x^0 = \mathrm{const}$.
-The quantities $M$ and $J_{ij}$ are called respectively the \defin{mass} and
+The quantities $M$ and $J_{ij}$ are independent of $\Sigma$ and are
+called respectively the \defin{mass} and
 the \defin{angular momentum} of the central source.
-The coordinates $(x^\alpha)$ are correspond to the \emph{central source rest-frame}
+The coordinates $(x^\alpha)$ correspond to the \emph{central source rest-frame}
 and take their origin at the \emph{center of mass}, in the sense
 that
 \be \label{e:sta:rest_frame_mass_center}
@@ -996,7 +998,7 @@ the coordinates $(x^\alpha)$ as $T_{00} \gg |T_{ij}|$.
 \end{prop}
 
 \begin{proof}
-Let $(\w{f},\w{h})$ obeys the Lorenz gauge and $(x^\alpha)$ be the corresponding
+Let $(\w{f},\w{h})$ obeys the Lorenz gauge and $(x^\alpha)$ be some corresponding
 $\w{f}$-Minkowskian coordinates. By a Poincaré transformation (cf. p.~\pageref{p:sta:Poincare_transf}),
 one can inforce (\ref{e:sta:rest_frame_mass_center}).
 Far from the source, one may expand
@@ -1008,7 +1010,7 @@ in powers of ${x'}^i/r$:
 \]
 where Einstein's summation convention is assumed on the repeated index
 $j\in\{1,\ldots,n-1\}$.
-This leads to
+Accordingly, Eq.~(\ref{e:sta:hbar_Green_function}) yields
 \be \label{e:sta:bar_h_expand}
     {\bar{h}}_{\alpha\beta}(x)  = \frac{16\pi}{\Omega_{n-2}}
         \left( \frac{1}{(n-3)r^{n-3}} \int_\Sigma T_{\alpha\beta}({x'}) \, \D^{n-1} {x'}
@@ -1016,8 +1018,8 @@ This leads to
          \right)  + \bigO\left( \frac{1}{r^{n-1}} \right) .
 \ee
 For the component $00$, the first integral in the right-hand side
-is nothing but $M$
-as defined by Eq.~(\ref{e:sta:mass_weakly_relat}), while the second integral
+is nothing but $M$,
+as defined by (\ref{e:sta:mass_weakly_relat}), while the second integral
 vanishes due to the second equation in~(\ref{e:sta:rest_frame_mass_center}).
 Hence, we get
 \be \label{e:sta:h_bar_00}
@@ -1037,7 +1039,7 @@ where the second equality follows from the identity
 \be \label{e:sta:indent_J}
     J_{ij} = 2  \int_\Sigma {x}^j T_{0i}({x}) \, \D^{n-1} {x} .
 \ee
-To prove this identity, consider
+To prove it, consider
 \[
     \partial_k (x^i x^j T^{0k}) =  \delta^i_{\ k} x^j T^{0k} + x^i \delta^j_{\  k} T^{0k}
     + x^i x^j \underbrace{\partial_k T^{0k}}_{0}
@@ -1051,12 +1053,12 @@ we get
 \[
     \int_\Sigma x^j T^{0i}(x) \, \D^{n-1} {x} + \int_\Sigma x^i T^{0j}(x) \, \D^{n-1} {x} = 0 .
 \]
-In view of the definition (\ref{e:sta:J_weakly_relat}) of $J_{\ij}$, the
+In view of the definition (\ref{e:sta:J_weakly_relat}) of $J_{ij}$, the
 identity (\ref{e:sta:indent_J}) follows, since $T^{0i} = - T_{0i}$ at the 0th order in $\w{h}$.
 
 Let us now reconstruct $\w{h}$ from $\w{\bar{h}}$. Taking the trace of Eq.~(\ref{e:sta:def_h_bar}) with respect to $\w{f}$
 yields $\bar{h} := \eta^{\mu\nu} \bar{h}_{\mu\nu} = h - (h/2) \times n = (2 - n) h / 2$.
-Hence we may inverse Eq.~(\ref{e:sta:def_h_bar}) to
+Hence we may invert Eq.~(\ref{e:sta:def_h_bar}) to
 \be \label{e:sta:h_h_bar}
     \w{h} = \w{\bar{h}} - \frac{\bar{h}}{n-2} \w{f}
     \quad\mbox{with}\quad
@@ -1072,14 +1074,7 @@ Eq.~(\ref{e:sta:bar_h_expand}):
         + \frac{x^j}{r^{n-1}}  \int_\Sigma {x'}^j T_{ii}({x'}) \, \D^{n-1} {x'}
          \right)  + \bigO\left( \frac{1}{r^{n-1}} \right) .
 \]
-It turns out that the second integral vanishes identically, so that one is left
-with
-\be \label{e:sta:h_bar_ii}
-    {\bar{h}}_{ii}(x)  = \frac{16\pi}{(n-3)\Omega_{n-2}}
-        \frac{1}{r^{n-3}} \int_\Sigma T_{ii}({x'}) \, \D^{n-1} {x'}
-            + \bigO\left( \frac{1}{r^{n-1}} \right) .
-\ee
-To show it, one can use the identity
+The second integral vanishes identically, as it can be seen from the identity
 \begin{align}
     \partial_i \left( x^k x^j T^{ik}  - \frac{1}{2} r^2 T^{ij} \right) & =
     \delta^k_{\ i} x^j T^{ik} + x^k \delta^j_{\ i} T^{ik} +
@@ -1087,8 +1082,14 @@ To show it, one can use the identity
     - r \underbrace{\partial_i r}_{x^i/r} T^{ij} - \frac{1}{2} r^2 \underbrace{\partial_i T^{ij}}_{0} \nonumber \\
     & = x^j T^{ii} = x^j T_{ii} , \nonumber
 \end{align}
-where, as above for $\partial_k T^{0k} = 0$, $\partial_i T^{ij}=0$ follows from the equation of energy-momentum conservation (\ref{e:fra:divT}). Hence the integral of $x^j T_{ii}$ over $\Sigma$ is that of the divergence of a vector
+where $\partial_i T^{ij}=0$ follows from the energy-momentum conservation law (\ref{e:fra:divT}). Hence the integral of $x^j T_{ii}$ over $\Sigma$ is that of the divergence of a vector
 field and the Gauss-Ostrogradsky theorem allows one to set it to zero.
+We are thus left with
+\be \label{e:sta:h_bar_ii}
+    {\bar{h}}_{ii}(x)  = \frac{16\pi}{(n-3)\Omega_{n-2}}
+        \frac{1}{r^{n-3}} \int_\Sigma T_{ii}({x'}) \, \D^{n-1} {x'}
+            + \bigO\left( \frac{1}{r^{n-1}} \right) .
+\ee
 Gathering Eqs.~(\ref{e:sta:h_bar_00}) and (\ref{e:sta:h_bar_ii}), we get
 \[
     \bar{h} = \frac{16\pi}{(n-3)\Omega_{n-2}}
