@@ -966,7 +966,8 @@ $r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2} \to +\infty$:
 \begin{subequations}
 \label{e:sta:metric_weakly_relat}
 \begin{align}
-g_{00} = & - 1 +  \frac{16\pi}{(n-2)\Omega_{n-2}} \frac{M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-1}} \right) \\
+g_{00} = & - 1 +  \frac{16\pi}{(n-2)\Omega_{n-2}} \frac{M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-1}} \right)
+    \label{e:sta:g00_weakly_relat} \\
 g_{0i} = & \frac{8\pi}{\Omega_{n-2}} \frac{J_{ij} x^j}{r^{n-1}} + \bigO\left( \frac{1}{r^{n-1}} \right) \\
 g_{ij} = & \left(1 + \frac{16\pi}{(n-2)(n-3)\Omega_{n-2}} \frac{M}{r^{n-3}} \right) \delta_{ij}
 + \bigO\left( \frac{1}{r^{n-2}} \right) ,
@@ -1121,6 +1122,40 @@ of the metric tensor.
 
 
 \subsection{Komar mass} \label{s:sta:Komar_mass}
+
+In Newtonian gravity, the mass $M$ of an isolated body is defined
+similarly to Eq.~(\ref{e:sta:mass_weakly_relat}), namely by the integral
+of the mass density $\rho \sim T_{00}$ over the body. An alternative formula
+for $M$ is provided by \defin{Gauss's law}\index{Gauss's law}: $M$ is $-1/(4\pi)$ times the flux of the gravitational field
+through any closed surface $\Sp$ surrounding the body, namely
+\be \label{e:sta:Newtonian_mass}
+    M = \frac{1}{4\pi} \int_{\Sp} \vw{\nabla}{\Phi}\cdot \D \w{S} ,
+\ee
+where $\Phi$ is the Newtonian gravitational and
+$\D \w{S}$ is the area element vector normal to $\Sp$. The above formula
+is easily derived when $\Sp$ is a sphere of large radius, using spherical coordinates
+$(r,\th,\ph)$. Indeed, for large $r$,
+one has $\Phi \sim - M/r$, so that $\vw{\nabla}\Phi \sim (M/r^2) \, \wpar_r$. Given that
+$\D \w{S} = r^2 \sin\th \, \D\th\, \D\ph\, \wpar_r$ and $\wpar_r\cdot\wpar_r = 1$,
+one gets immediately formula~(\ref{e:sta:Newtonian_mass}). This formula is
+actually not restricted to a remote sphere, but is valid for any surface
+$\Sp$ surrounding the body (this follows from the Gauss-Ostrogradsky theorem and Laplace's equation, $\Delta \Phi = 0$, which holds outside the central body).
+Gauss's law (\ref{e:sta:Newtonian_mass}) reflects the ``gravitating aspect'' of the mass, while the
+volume integral (\ref{e:sta:mass_weakly_relat}) identifies the mass to the ``amount of matter'' constituting
+the central body. The latter definition would yield $M=0$ for any vacuum spacetimes
+(set $\w{T}=0$ in Eq.~(\ref{e:sta:mass_weakly_relat})) and therefore cannot be used to generalize
+the concept of mass to strongly relativistic systems. In  particular, one would certainly
+demand $M > 0$ for the gravitating mass of stationary black holes such as Schwarzschild and Kerr ones, which are pure vacuum solutions of the Einstein equation.
+
+Accordingly, let us focus on Gauss's law (\ref{e:sta:Newtonian_mass}) in order to
+generalize the definition of mass to strongly relativistic spacetimes.
+The mass appears as the coefficient of the dominant $1/r^{n-3}$ in the asymptotic
+expansion of $g_{00}$ in Eq.~(\ref{e:sta:g00_weakly_relat}), so one could
+recover it by considering the flux integral of $\partial g_{00}/\partial r$ over
+a $(n-2)$-dimensional surface at large distance. In order to have a coordinate-independent
+definition, it is more appropriate to focus on the
+
+
 
 Let $(\M, \w{g})$ be an asymptotically flat spacetime of dimension $n \geq 4$
 that is stationary,
