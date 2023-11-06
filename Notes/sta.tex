@@ -1212,7 +1212,7 @@ $\w{\epsilon}$ is the Levi-Civita tensor associated with the metric $\w{g}$
 (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
 \end{greybox}
 
-We shall check below that, for a weakly relativistic system, the Komar mass
+We shall check below (Example~\ref{x:sta:Komar_mass_weakly_relat} on p.~\pageref{x:sta:Komar_mass_weakly_relat}) that, for a weakly relativistic system, the Komar mass
 (\ref{e:sta:def_Komar_mass}) reduces to the mass defined by Eq.~(\ref{e:sta:mass_weakly_relat}).
 
 \begin{remark}
@@ -1391,12 +1391,46 @@ can be used for explicit computations:
 \ee
 
 \begin{example}[Komar mass of a weakly relativistic system]
-Let $(\M,\w{g})$ be a $n$-dimensional stationary spacetime, with stationary Killing vector
-$\w{\xi}$, that is weakly relativistic
+\label{x:sta:Komar_mass_weakly_relat}
+Let $(\M,\w{g})$ be a $n$-dimensional spacetime that is stationary
+(Killing vector $\w{\xi}$) and weakly relativistic
 in the sense defined in Sec.~\ref{s:sta:weakly_relativistic}. Let
 $(\w{f},\w{h})$ be a decomposition of $\w{g}$ fulfilling the Lorenz gauge
 and ($x^\alpha$) an associated $\w{f}$-Minkowskian coordinate system, adpated
 to stationarity: $\w{\xi} = \wpar_0$.
+Let us evaluate the Komar via the integral (\ref{e:sta:M_Komar_partial_der}) taken on
+a sphere $\Sp$ of constant $(x^0,r)$ with $r := \sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$,
+in the limit $r\to\infty$, denoting the surface element of $\Sp$ by $\sqrt{q} \, \D^{n-2} y$
+instead of $\sqrt{q} \, \D^{n-2} x$ in Eq.~(\ref{e:sta:M_Komar_partial_der}) to avoid any
+confusion with the $\w{f}$-Minkowskian coordinates $(x^\alpha)$.
+We have $\xi_\alpha = g_{\alpha\mu} \xi^\mu = g_{0\alpha}$,
+with $g_{0\alpha}$ given by formulas (\ref{e:sta:metric_weakly_relat}) for large $r$,
+so that
+\[
+    \partial_0 \xi_\alpha = 0, \quad
+    \partial_i \xi_0 \simeq - \frac{n-3}{n-2} \frac{16\pi}{\Omega_{n-2}} \frac{M}{r^{n-2}} \frac{x^i}{r}
+    \qand
+    \partial_i \xi_j \simeq \frac{8\pi}{\Omega_{n-2}} \frac{J_{jk}}{r^{n-1}}
+    \left( \delta_{ki} - (n-1) \frac{x^k x^i}{r^2} \right) ,
+\]
+where $M$ is the mass defined by the volume integral (\ref{e:sta:mass_weakly_relat}).
+On the other hand, for $r\to +\infty$, we have
+$s^\alpha \simeq \left(0,\frac{x^1}{r}, \ldots,\frac{x^{n-1}}{r} \right)$,
+$n^\alpha \simeq (1, 0, \ldots, 0)$ and $\sqrt{q} \, \D^{n-2}y = r^{n-2} \sqrt{\bar{q}} \, \D^{n-2} y$,
+where $\bar{q}$ stands for the determinant of the round metric of the unit sphere $\SS^{n-2}$ with
+respect to the coordinates $(y^1,\ldots,y^{n-2})$. Given that $\partial_i \xi_j$ decays as $1/r^{n-1}$,
+it follows that only the terms
+involving $\partial_i \xi_0$ contribute to the integral (\ref{e:sta:M_Komar_partial_der}), which becomes
+\begin{align}
+    M_{\Sp} & = -\frac{n-2}{16\pi(n-3)}
+    \int_{\Sp} \partial_i \xi_0 \left( \frac{x^i}{r} \times 1 - 0\times 0 \right) r^{n-2} \sqrt{\bar{q}} \, \D^{n-2} y
+    = \frac{M}{\Omega_{n-2}} \int_{\Sp} \underbrace{\frac{x^i}{r} \frac{x^i}{r}}_{1}
+     \sqrt{\bar{q}} \, \D^{n-2} y \nonumber \\
+     & = \frac{M}{\Omega_{n-2}} \underbrace{ \int_{\Sp} \sqrt{\bar{q}} \, \D^{n-2} y }_{\Omega_{n-2}} .
+       \nonumber
+\end{align}
+Hence, we get $M_{\Sp} = M$, which shows that for a weakly relativistic system the Komar mass reduces
+to the integral of the matter energy density $T_{00}$, as given by formula (\ref{e:sta:mass_weakly_relat}).
 \end{example}
 
 \begin{example}[Komar mass in Schwarzschild spacetime]
