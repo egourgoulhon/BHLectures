@@ -811,6 +811,7 @@ for stationary rotating black holes, there is in addition the concept
 of \emph{Komar angular momentum}, which we shall introduce in Sec.~\ref{s:sta:Komar_angu_mom}.
 
 \subsection{Mass and angular momentum of weekly relativistic stationary systems}
+\label{s:sta:weakly_relativistic}
 
 We shall call \defin{weakly relativistic}\index{weekly relativistic}
 a $n$-dimensional spacetime $(\M,\w{g})$
@@ -1164,8 +1165,10 @@ are $\xi_\alpha = g_{0\alpha}$, so that in particular $\xi_0 = g_{00}$.
 Instead of the partial derivative $\partial g_{00}/\partial r$, a natural coordinate-independent
 quantity in then the exterior derivative\index{exterior!derivative}\index{derivative!exterior --} $\dd \uu{\xi}$ (cf. Sec.~\ref{s:bas:ext_deriv}). Since the concept of flux
 is naturally conveyed by the integral of the Hodge dual (see e.g. Sec.~16.4.7 of Ref.~\cite{Gourg13}), one arrives at the
-definition mass given below [Eq.~(\ref{e:sta:def_Komar_mass})], named \emph{Komar mass}. In addition to be coordinate-invariant, it shares the same property as the Newtonian mass (\ref{e:sta:Newtonian_mass}),
-namely to be independent from the integration surface outside the central body
+definition of mass given below [Eq.~(\ref{e:sta:def_Komar_mass})], named \emph{Komar mass}.
+In addition to be coordinate-invariant, it shares the same property as the Newtonian mass (\ref{e:sta:Newtonian_mass}),
+namely to be independent from the integration surface outside the central body,
+at least within general relativity
 (Property~\ref{p:sta:Komar_mass_invariant} below).
 
 
@@ -1209,6 +1212,9 @@ $\w{\epsilon}$ is the Levi-Civita tensor associated with the metric $\w{g}$
 (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
 \end{greybox}
 
+We shall check below that, for a weakly relativistic system, the Komar mass
+(\ref{e:sta:def_Komar_mass}) reduces to the mass defined by Eq.~(\ref{e:sta:mass_weakly_relat}).
+
 \begin{remark}
 \label{r:sta:Komar_well_posed}
 As the integral of a $(n-2)$-form over a $(n-2)$-dimensional manifold, formula
@@ -1246,7 +1252,7 @@ for spherically symmetric fields $\Phi(r)$.}
 $\Phi = -M/r^{n-3}$,
 where the constant $M$ is interpreted as the \emph{gravitational mass}\index{gravitational!mass}\index{mass!gravitational --} of the central source.
 For $n=3$, the solutions of $\Delta \Phi = 0$ are $\Phi = a \ln r + b$ ($a$ and $b$ being constant), while
-for $n=2$, they are $\Phi = a r + b$, none of them decaying for $r\to +\infty$.
+for $n=2$, they are $\Phi = a r + b$, none of them decaying as $r\to +\infty$.
 \end{remark}
 
 In view of Eq.~(\ref{e:sta:Hodge_dual}) with $p=2$ and the last equality in Eq.~(\ref{e:sta:duxi_nab}),
@@ -1363,7 +1369,7 @@ Thanks to Lemma~\ref{p:sta:flux_integ_2form}, we may re-express the Komar mass
 \be \label{e:sta:M_Komar_dS}
    M_{\Sp} = - \frac{n-2}{32\pi(n-3)}  \int_{\Sp} (\dd \uu{\xi})_{\mu\nu} \,  \D S^{\mu\nu} .
 \ee
-Using the last equality in Eq.~(\ref{e:sta:duxi_nab}), this becomes
+Using Eq.~(\ref{e:sta:duxi_nab}), this becomes
 \be \label{e:sta:Komar_mass_flux_nabla_xi}
     \encadre{ M_{\Sp} = - \frac{n-2}{16\pi(n-3)} \int_{\Sp} \nabla_\mu \xi_\nu \,  \D S^{\mu\nu} } .
 \ee
@@ -1383,6 +1389,15 @@ can be used for explicit computations:
     \int_{\Sp} \partial_\mu \xi_\nu (s^\mu   n^\nu - n^\mu s^\nu)
     \sqrt{q}\,  \D^{n-2} x } .
 \ee
+
+\begin{example}[Komar mass of a weakly relativistic system]
+Let $(\M,\w{g})$ be a $n$-dimensional stationary spacetime, with stationary Killing vector
+$\w{\xi}$, that is weakly relativistic
+in the sense defined in Sec.~\ref{s:sta:weakly_relativistic}. Let
+$(\w{f},\w{h})$ be a decomposition of $\w{g}$ fulfilling the Lorenz gauge
+and ($x^\alpha$) an associated $\w{f}$-Minkowskian coordinate system, adpated
+to stationarity: $\w{\xi} = \wpar_0$.
+\end{example}
 
 \begin{example}[Komar mass in Schwarzschild spacetime]
 \label{x:sta:Komar_mass_Schw}
@@ -2183,7 +2198,7 @@ Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 4$ containing a b
 hole. Let $\Hor$ be a connected component of the black hole event horizon.
 Let us assume that the stationary Killing vector $\w{\xi}$
 is spacelike on some parts of $\Hor$. If
-\begin{itemize}
+\begin{enumerate}
 \item $\M$ and $\Hor$ are (real) analytic manifolds
 (cf. Remark~\ref{r:bas:analytic} in Sec.~\ref{s:bas:def_manif}),
 with $\w{g}$ being an analytic field,
@@ -2192,7 +2207,7 @@ or the electrovacuum Einstein equation (\ref{e:fra:electrovac_Einstein}),
 \item $n=4$ or $\Hor$ has a null geodesic generator that is incomplete,
 \item $\Hor$ has compact cross-sections,
 \item $\w{\xi}$ is transverse to some cross-sections,
-\end{itemize}
+\end{enumerate}
 then the spacetime $(\M,\w{g})$ admits a second Killing vector, $\w{\chi}$
 say, such that $\w{\xi}$ and $\w{\chi}$ commute: $[\w{\xi}, \w{\chi}] = 0$ and
 $\Hor$ is a Killing horizon with respect to $\w{\chi}$.
@@ -2319,8 +2334,8 @@ One may consider that $\Sp_0$ and $\Sp$ are the two ends of a foliation of $\Hor
 by a family $(\Sp_\lambda)_{\lambda\in[0,1]}$ of complete cross-sections
 (same construction as in the proof of Property~\ref{p:neh:invariance_area}).
 By denoting by $\w{q}$ the metric induced by $\w{g}$ on each of the surfaces
-$\Sp_\lambda$, we have $\left.\w{g}\right| _{p_0}(\vp{p_0q_0},\vp{p_0q_0}) = \w{q}(\vp{p_0q_0},\vp{p_0q_0})$. Now, since $\Hor$ is a non-expanding horizon and the null
-energy condition is fulfilled, the metric $\w{q}$ is preserved along
+$\Sp_\lambda$, we have $\left.\w{g}\right| _{p_0}(\vp{p_0q_0},\vp{p_0q_0}) = \w{q}(\vp{p_0q_0},\vp{p_0q_0})$. Now, since $\Hor$ is a non-expanding horizon (Property~\ref{p:sta:hor_non_expanding}) and the null
+energy condition is fulfilled (since we are considering the (electro)vacuum Einstein equation), the metric $\w{q}$ is preserved along
 $\wl$: $\vw{q}^* \Lie{\el} \w{q} = 0$ [Property~\ref{p:neh:invariance_of_2metric}]. Since $p_1:= \Psi_t(p)$ and $q_1:=\Psi_t(q)$
 are obtained from $p_0$ and $q_0$ by the same displacement $\delta\lambda=1$
 along $\wl$ (cf. Fig.~\ref{f:sta:axisym_sections}),
@@ -2440,6 +2455,17 @@ the future of the past null infinity $\scri^-$. Actually it can be shown
 that the latter implies the former (see e.g. the proof of Proposition~9.3.1
 in Ref.~\cite{HawkiE73}).
 \end{remark}
+
+\begin{remark}
+The strong ridigity theorem may not hold in theories of gravity distinct
+from general relativity (hypothesis~2 of Property~\ref{p:sta:strong_rigidity_thm}).
+For instance, the so-called \emph{disformed Kerr solution}\index{disformed Kerr solution}\index{Kerr!metric!disformed --}
+\cite{AnsonBCH21,BenAc_al20}
+describes a $n=4$ stationary black hole in a higher-order scalar-tensor theory (belonging to the
+so-called \emph{DHOST}\index{DHOST} family, for \emph{Degenerate Higher-Order Scalar-Tensor} \cite{Langl19}), the event horizon of which does not seem to be a Killing horizon
+\cite{AnsonBCH21}.
+\end{remark}
+
 
 \begin{hist}
 Stephen Hawking\index[pers]{Hawking, S.W.} first established the strong rigidity
