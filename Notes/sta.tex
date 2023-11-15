@@ -813,7 +813,7 @@ of \emph{Komar angular momentum}, which we shall introduce in Sec.~\ref{s:sta:Ko
 \subsection{Mass and angular momentum of weekly relativistic stationary systems}
 \label{s:sta:weakly_relativistic}
 
-We shall call \defin{weakly relativistic}\index{weekly relativistic}
+We shall call \defin{weakly relativistic}\index{weakly relativistic}
 a $n$-dimensional spacetime $(\M,\w{g})$
 such that $\M$ is diffeomorphic to $\R^n$ and the metric tensor can be expressed as
 \be \label{e:sta:weak_g_f_h}
@@ -1222,7 +1222,7 @@ of a weakly relativistic statrionary system, we notice that
 the mass $M$ appears as the coefficient of the dominant $1/r^{n-3}$ term
 in the expansion of $g_{00}$, so that one could
 recover it by considering the flux integral of $\partial g_{00}/\partial r$ over
-a $(n-2)$-dimensional surface at large $r$. In order to have a coordinate-independent
+a $(n-2)$-dimensional surface at large $r$. In order to have a coordinate-invariant
 definition, it is more appropriate to consider the 1-form $\uu{\xi}$ metric-dual
 to the stationary Killing vector $\w{\xi}$. Indeed, in any coordinate system
 adapted to stationarity, i.e. such that the components of
@@ -1254,7 +1254,8 @@ where
 (i) $\uu{\xi}$ is the 1-form associated to $\w{\xi}$
 by metric duality (cf. Sec.~\ref{s:bas:metric_dual}), i.e. the 1-form
 of components $\xi_\alpha = g_{\alpha\mu} \xi^\mu$, (ii) $\dd \uu{\xi}$ is
-the exterior derivative of $\uu{\xi}$ (cf. Sec.~\ref{s:bas:ext_deriv}, especially Eqs.~(\ref{e:bas:def_ext_1f}) and (\ref{e:bas:def_ext_1f_nab})):
+the exterior derivative of $\uu{\xi}$ (cf. Sec.~\ref{s:bas:ext_deriv}, especially Eqs.~(\ref{e:bas:def_ext_1f}) and (\ref{e:bas:def_ext_1f_nab})), namely the 2-form whose components
+are
 \be \label{e:sta:duxi_nab}
     (\dd \uu{\xi})_{\alpha\beta} =
         \partial_\alpha \xi_\beta - \partial_\beta \xi_\alpha =
@@ -1278,8 +1279,10 @@ $\w{\epsilon}$ is the Levi-Civita tensor associated with the metric $\w{g}$
 (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
 \end{greybox}
 
-We shall check below (Example~\ref{x:sta:Komar_mass_weakly_relat} on p.~\pageref{x:sta:Komar_mass_weakly_relat}) that, for a weakly relativistic system, the Komar mass
-(\ref{e:sta:def_Komar_mass}) reduces to the mass defined by Eq.~(\ref{e:sta:mass_weakly_relat}).
+We shall check below (Property~\ref{p:sta:Komar_mass_asymp_metric}) that
+the Komar mass (\ref{e:sta:def_Komar_mass}) gives the coefficient $M$ that
+appears in the asymptotic expansion (\ref{e:sta:asymptotic_metric}) of the
+metric tensor.
 
 \begin{remark}
 \label{r:sta:Komar_well_posed}
@@ -1299,8 +1302,7 @@ $p\in\Sp$ to vectors tangent to $\Sp$. One says that $\iota^* \w{\omega}$ is the
 The numerical prefactor $- (n-2)/(16\pi(n-3))$ in the definition~(\ref{e:sta:def_Komar_mass})
 is adjusted so that for weakly relativistic isolated objects, the Komar mass coincides
 with the volume integral of the matter energy density, as it will be shown in
-Examples~\ref{x:sta:Komar_mass_star} ($n=4$)
-and \ref{x:sta:Komar_mass_star_dim_n} (generic $n$) below.
+Property~\ref{p:sta:Komar_mass_asymp_metric}.
 For $n=4$ (the standard spacetime dimension), this prefactor is $-1/(8\pi)$,
 while for $n=5$, it becomes $-3/(32\pi)$.
 \end{remark}
@@ -1455,49 +1457,6 @@ can be used for explicit computations:
     \sqrt{q}\,  \D^{n-2} x } .
 \ee
 
-\begin{example}[Komar mass of a weakly relativistic system]
-\label{x:sta:Komar_mass_weakly_relat}
-Let $(\M,\w{g})$ be a $n$-dimensional spacetime that is stationary
-(Killing vector $\w{\xi}$) and weakly relativistic
-in the sense defined in Sec.~\ref{s:sta:weakly_relativistic}. Let
-$(\w{f},\w{h})$ be a decomposition of $\w{g}$ fulfilling the Lorenz gauge
-and ($x^\alpha$) an associated $\w{f}$-Minkowskian coordinate system, adpated
-to stationarity: $\w{\xi} = \wpar_0$.
-Let us evaluate the Komar via the integral (\ref{e:sta:M_Komar_partial_der}) taken on
-a sphere $\Sp$ of constant $(x^0,r)$ with $r := \sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$,
-in the limit $r\to\infty$, denoting the surface element of $\Sp$ by $\sqrt{q} \, \D^{n-2} y$
-instead of $\sqrt{q} \, \D^{n-2} x$ in Eq.~(\ref{e:sta:M_Komar_partial_der}) to avoid any
-confusion with the $\w{f}$-Minkowskian coordinates $(x^\alpha)$.
-We have $\xi_\alpha = g_{\alpha\mu} \xi^\mu = g_{0\alpha}$,
-with $g_{0\alpha}$ given by formulas (\ref{e:sta:metric_weakly_relat}) for large $r$,
-so that
-\[
-    \partial_0 \xi_\alpha = 0, \quad
-    \partial_i \xi_0 \simeq - \frac{n-3}{n-2} \frac{16\pi}{\Omega_{n-2}} \frac{M}{r^{n-2}} \frac{x^i}{r}
-    \qand
-    \partial_i \xi_j \simeq \frac{8\pi}{\Omega_{n-2}} \frac{J_{jk}}{r^{n-1}}
-    \left( \delta_{ki} - (n-1) \frac{x^k x^i}{r^2} \right) ,
-\]
-where $M$ is the mass defined by the volume integral (\ref{e:sta:mass_weakly_relat}).
-On the other hand, for $r\to +\infty$, we have
-$s^\alpha \simeq \left(0,\frac{x^1}{r}, \ldots,\frac{x^{n-1}}{r} \right)$,
-$n^\alpha \simeq (1, 0, \ldots, 0)$ and $\sqrt{q} \, \D^{n-2}y = r^{n-2} \sqrt{\bar{q}} \, \D^{n-2} y$,
-where $\bar{q}$ stands for the determinant of the round metric of the unit sphere $\SS^{n-2}$ with
-respect to the coordinates $(y^1,\ldots,y^{n-2})$. Given that $\partial_i \xi_j$ decays as $1/r^{n-1}$,
-it follows that only the terms
-involving $\partial_i \xi_0$ contribute to the integral (\ref{e:sta:M_Komar_partial_der}), which becomes
-\begin{align}
-    M_{\Sp} & = -\frac{n-2}{16\pi(n-3)}
-    \int_{\Sp} \partial_i \xi_0 \left( \frac{x^i}{r} \times 1 - 0\times 0 \right) r^{n-2} \sqrt{\bar{q}} \, \D^{n-2} y
-    = \frac{M}{\Omega_{n-2}} \int_{\Sp} \underbrace{\frac{x^i}{r} \frac{x^i}{r}}_{1}
-     \sqrt{\bar{q}} \, \D^{n-2} y \nonumber \\
-     & = \frac{M}{\Omega_{n-2}} \underbrace{ \int_{\Sp} \sqrt{\bar{q}} \, \D^{n-2} y }_{\Omega_{n-2}} .
-       \nonumber
-\end{align}
-Hence, we get $M_{\Sp} = M$, which shows that for a weakly relativistic system the Komar mass reduces
-to the integral of the matter energy density $T_{00}$, as given by formula (\ref{e:sta:mass_weakly_relat}).
-\end{example}
-
 \begin{example}[Komar mass in Schwarzschild spacetime]
 \label{x:sta:Komar_mass_Schw}
 Let us consider the Schwarzschild spacetime $(\M,\w{g})$
@@ -1545,6 +1504,64 @@ Since the remaining integral is nothing but $4\pi$, we get simply
 We note that $M_{\Sp}$ does not depend on $r$, i.e. does not depend on the
 choice of the sphere $\Sp$.
 \end{example}
+
+More generally, we have:
+
+\begin{prop}[Komar mass in the asymptotic expression of the metric]
+\label{p:sta:Komar_mass_asymp_metric}
+The coefficient $M$ that appears in the expression (\ref{e:sta:asymptotic_metric})
+of the metric tensor of a stationary asymptotically flat $n$-dimensional spacetime
+in some asymptotically Minkowskian coordinates $(x^\alpha)$
+coincides in the limit $r\to +\infty$ with
+the Komar mass over a sphere $\Sp$
+of constant $(x^0,r)$,
+where $r := \sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$.
+In particular, for a weakly relativistic system, the Komar mass over a sphere at infinity is equal
+to the integral of the matter energy density $T_{00}$, as given by formula
+(\ref{e:sta:mass_weakly_relat}).
+\end{prop}
+
+\begin{proof}
+Without any loss of generality, the coordinate system $(x^\alpha)$ leading
+to the expansion (\ref{e:sta:asymptotic_metric}) can be chosen to be adapted
+to stationarity, i.e. such that  $\wpar_0 = \w{\xi}$, where $\w{\xi}$ is the
+stationary Killing vector.
+Let us evaluate the Komar mass $M_\Sp$
+via the integral (\ref{e:sta:M_Komar_partial_der}),
+denoting the surface element of $\Sp$ by $\sqrt{q} \, \D^{n-2} y$
+instead of $\sqrt{q} \, \D^{n-2} x$  to avoid any
+confusion with the asymptotic Minkowskian coordinates $(x^\alpha)$.
+We have $\xi_\alpha = g_{\alpha\mu} \xi^\mu = g_{0\alpha}$,
+with $g_{0\alpha}$ given by formulas (\ref{e:sta:asymptotic_metric}) for large $r$,
+so that
+\[
+    \partial_0 \xi_\alpha = 0, \quad
+    \partial_i \xi_0 \simeq - \frac{n-3}{n-2} \frac{16\pi}{\Omega_{n-2}} \frac{M}{r^{n-2}} \frac{x^i}{r}
+    \quad \mbox{and} \quad
+    \partial_i \xi_j \simeq \frac{8\pi}{\Omega_{n-2}} \frac{J_{jk}}{r^{n-1}}
+    \left( \delta_{ki} - (n-1) \frac{x^k x^i}{r^2} \right) .
+\]
+On the other hand, for $r\to +\infty$, we have
+$s^\alpha \simeq \left(0,\frac{x^1}{r}, \ldots,\frac{x^{n-1}}{r} \right)$,
+$n^\alpha \simeq (1, 0, \ldots, 0)$ and $\sqrt{q} \, \D^{n-2}y = r^{n-2} \sqrt{\bar{q}} \, \D^{n-2} y$,
+where $\bar{q}$ stands for the determinant of the round metric of the unit sphere $\SS^{n-2}$ with
+respect to the coordinates $(y^1,\ldots,y^{n-2})$. Given that $\partial_i \xi_j$ decays as $1/r^{n-1}$,
+it follows that only the terms
+involving $\partial_i \xi_0$ contribute to the integral (\ref{e:sta:M_Komar_partial_der}), which becomes
+\begin{align}
+    M_{\Sp} & = -\frac{n-2}{16\pi(n-3)}
+    \int_{\Sp} \partial_i \xi_0 \left( \frac{x^i}{r} \times 1 - 0\times 0 \right) r^{n-2} \sqrt{\bar{q}} \, \D^{n-2} y
+    = \frac{M}{\Omega_{n-2}} \int_{\Sp} \underbrace{\frac{x^i}{r} \frac{x^i}{r}}_{1}
+     \sqrt{\bar{q}} \, \D^{n-2} y \nonumber \\
+     & = \frac{M}{\Omega_{n-2}} \underbrace{ \int_{\Sp} \sqrt{\bar{q}} \, \D^{n-2} y }_{\Omega_{n-2}} .
+       \nonumber
+\end{align}
+Hence $M_{\Sp} = M$. The statement about a weakly relativistic system is an immediate consequence
+of the expansion (\ref{e:sta:metric_weakly_relat}) being a particular case of
+(\ref{e:sta:asymptotic_metric}), given that $M$ in (\ref{e:sta:metric_weakly_relat}) has
+the integral form (\ref{e:sta:mass_weakly_relat}).
+\end{proof}
+
 
 \subsubsection{Volume integral formula for the Komar mass}
 
@@ -1804,9 +1821,6 @@ they are taken in vacuum, outside the sources of the Einstein equation
 dimensions $n\geq 4$ has been performed by
 Robert Myers\index[pers]{Myers, R.C.} and Malcolm Perry\index[pers]{Perry, M.J.} in 1986 \cite{MyersP86}
 [cf. their Eq.~(4.1), where $N=n-1$].
-They obtained the prefactor $(n-2)/(n-3)$ in Eq.~(\ref{e:sta:Komar_mass_flux_nabla_xi})
-by considering solutions of the linearized Einstein equation in the weak field limit and
-defining the mass as the integral of $T_{00}$ over a $t=\mathrm{const}$ hypersurface.
 \end{hist}
 
 \subsection{N+1 decomposition} \label{s:sta:np1_decomp}
@@ -1885,18 +1899,18 @@ This establishes Eq.~(\ref{e:sta:Komar_mass_3p1}).
 
 \begin{example}[Komar mass of a weakly relativistic star]
 \label{x:sta:Komar_mass_star_dim_n}
-In Example~\ref{x:sta:Komar_mass_star}, we have considered a star
-in a 4-dimensional spacetime. Here let us keep the spacetime dimension $n$
-general. We will then say that star is \emph{weakly relativistic}\index{weakly relativistic}
-if $(\M,\w{g})$ is close to
-the $n$-dimensional Minkowski spacetime. One has then $N\simeq 1$ and
+Let us check that formula (\ref{e:sta:Komar_mass_3p1}) reduces
+to (\ref{e:sta:mass_weakly_relat}) for a weakly relativistic\index{weakly relativistic}
+star in a $n$-dimensional spacetime.
+In this case, we have $N\simeq 1$ and
 $\w{\beta} \to 0$. Furthermore,
 the matter constituting the star shall
 be weakly relativistic as well, which implies that the trace $S$ of the stress
 tensor is negligible in front of the energy density $E$. Under these
 hypotheses, Eq.~(\ref{e:sta:Komar_mass_3p1}) with $M_{\Sp_{\rm int}} =0$
-shows that the Komar mass at infinity is nothing but the $(n-1)$-volume integral of
-the matter energy density $E$.
+yields $M_{\Sp_{\rm ext}} = M$, where
+$M$ is given by (\ref{e:sta:mass_weakly_relat}),
+given that $T_{00} \simeq E$.
 \end{example}
 
 \subsection{Link between the Komar mass and the ADM mass}  \label{s:sta:Komar_ADM}
