@@ -951,11 +951,14 @@ Laplace operator:
 where $x:=(x^1, \ldots, x^{n-1})$, ${x'} :=({x'}^1, \ldots, {x'}^{n-1})$,
 $|x - {x'}|^2 := \sum_{i=1}^{n-1}(x^i - {x'}^i)^2$
 and $\Omega_{n-2}$ is the area of the unit sphere $\SS^{n-2}$; the latter is given by the formula
-$\Omega_{n-2} = 2\pi^{(n-1)/2}/\Gamma((n-1)/2)$, with $\Gamma(u) := \int_0^{+\infty} t^{u-1} \mathrm{e}^{-t} \D t$,
+\be \label{e:sta:area_p_sphere}
+\Omega_{p} = \frac{2\pi^{(p+1)/2}}{\Gamma((p+1)/2)}, \qquad \mbox{with}\quad
+\Gamma(u) := \int_0^{+\infty} t^{u-1} \mathrm{e}^{-t}\,  \D t,
+\ee
 so that
-\be
-   \Omega_2 = 4\pi,\quad \Omega_3 = 2\pi^2,\quad  \Omega_4 = \frac{8}{3} \pi^2
-   \qand \Omega_5 = \pi^3 .
+\be \label{e:sta:area_p_sphere_examples}
+   \Omega_2 = 4\pi,\quad \Omega_3 = 2\pi^2,\quad  \Omega_4 = \frac{8}{3} \pi^2, \quad
+   \Omega_5 = \pi^3,\ \ldots
 \ee
 
 \begin{prop}[asymptotic metric of a weakly relativistic system]
@@ -1123,7 +1126,7 @@ the components $g_{\alpha\beta} = \eta_{\alpha\beta} + h_{\alpha\beta}$
 of the metric tensor.
 \end{proof}
 
-\subsection{Asymptotic expression of the metric in a stationary asymptotically flat spacetime}
+\subsection{Asymptotic expression of the metric in stationary asymptotically flat spacetimes}
 
 Let us now consider a generic (not necessarily weakly relativistic) $n$-dimensional spacetime
 $(\M,\w{g})$ that is stationary and asymptotically flat, with $\w{g}$
@@ -1142,15 +1145,16 @@ the difference being that the constants
 $M$ and $J_{ij}$ can no longer be expressed by integrals of the energy-momentum
 tensor, as in Eqs.~(\ref{e:sta:mass_weakly_relat}) and (\ref{e:sta:J_weakly_relat}).
 This can be shown rigorously by using the expansion in powers of $1/r$ of
-the generic solution of $\Delta f = 0$ (harmonic function) and the Lorenz
+the generic solution of $\Delta f = 0$ and the Lorenz
 gauge (to set some terms to zero), cf. Exercice~19.3 of MTW \cite{MisneTW73}
 or Sec.~5.7 of Straumann's textbook \cite{Strau13} for details.
-Going beyong the first order expansion in $\w{h}$ does not spoil
-the first terms in the expansions (\ref{e:sta:metric_weakly_relat}) of
-the components of $\w{g}$. It simply adds terms with a higher power
-of $1/r$. For instance, the second term in the expansion
-of $g_{00}$ becomes of order $1/r^{n-2}$ and not $1/r^{n-1}$ as in
-Eq.~(\ref{e:sta:g00_weakly_relat}) (see the above references for details).
+For a configuration that is not assumed to be weakly relativistic, one
+should not limit oneself to the linearized Einstein equation.
+However, going beyong the first order expansion in $\w{h}$
+does not spoil the first terms in the expansions (\ref{e:sta:metric_weakly_relat}) of
+$\w{g}$'s components. This simply adds terms with a higher power
+of $1/r$. For instance, for $n=4$, the second order expansion in $\w{h}$ introduces
+the term $-2M^2/r^2$ in $g_{00}$ (see the above references for details).
 We may then assert:
 
 
@@ -1166,20 +1170,22 @@ $r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2} \to +\infty$:
 \label{e:sta:asymptotic_metric}
 \begin{align}
 g_{00} = & - 1 +  \frac{16\pi}{(n-2)\Omega_{n-2}} \frac{M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-2}} \right)
-   \\
+   \label{e:sta:asymptotic_g00} \\
 g_{0i} = & \frac{8\pi}{\Omega_{n-2}} \frac{J_{ij} x^j}{r^{n-1}} + \bigO\left( \frac{1}{r^{n-1}} \right) \\
 g_{ij} = & \left(1 + \frac{16\pi}{(n-2)(n-3)\Omega_{n-2}} \frac{M}{r^{n-3}} \right) \delta_{ij}
 + \bigO\left( \frac{1}{r^{n-2}} \right) ,
 \end{align}
 \end{subequations}
-where $M$ is a constant and $(J_{ij})$ is an antisymmetric constant $(n-1)\times(n-1)$
+where $\Omega_{n-2}$ is the area of the sphere $\SS^{n-2}$
+[Eqs.~(\ref{e:sta:area_p_sphere})-(\ref{e:sta:area_p_sphere_examples})],
+$M$ is a constant and $(J_{ij})$ is a constant antisymmetric $(n-1)\times(n-1)$
 matrix.
 \end{prop}
-
-
-
-
-
+Note that the difference with the asymptotic expansion for
+a weakly relativistic system [Eq.~(\ref{e:sta:metric_weakly_relat})] is
+$\bigO\left( {1}/{r^{n-2}} \right)$ in Eq.~(\ref{e:sta:asymptotic_g00})
+versus $\bigO\left( {1}/{r^{n-1}} \right)$ in Eq.~(\ref{e:sta:g00_weakly_relat}).
+As discussed above, this results from nonlinear terms in the expansion of the Einstein equation.
 
 
 \subsection{Komar mass} \label{s:sta:Komar_mass}
@@ -1309,8 +1315,7 @@ that decays with the radius $r$ exists only for $n \geq 4$: this solution is\foo
 to get since in the Euclidean space of dimension $n-1$ the Laplace
 operator\index{Laplace operator} is $\Delta\Phi = \frac{1}{r^{n-2}} \derd{}{r} \left( r^{n-2} \derd{\Phi}{r} \right)$
 for spherically symmetric fields $\Phi(r)$.}
-$\Phi = -M/r^{n-3}$,
-where the constant $M$ is interpreted as the \emph{gravitational mass}\index{gravitational!mass}\index{mass!gravitational --} of the central source.
+$\Phi = - K/r^{n-3}$ where the constant $K$ is proportional to the mass $M$ of the central source.
 For $n=3$, the solutions of $\Delta \Phi = 0$ are $\Phi = a \ln r + b$ ($a$ and $b$ being constant), while
 for $n=2$, they are $\Phi = a r + b$, none of them decaying as $r\to +\infty$.
 \end{remark}
@@ -3335,10 +3340,9 @@ and the constant $\mu>0$ is related to the spacetime Komar mass (or ADM mass, cf
 \be
     \mu = \frac{16\pi M}{(n-2) \Omega_{n-2}} .
 \ee
-$\Omega_{n-2}$ is the area of $\SS^{n-2}$ and is given by the formula
-$\Omega_{n-2} = 2\pi^{(n-1)/2}/\Gamma((n-1)/2)$, with $\Gamma(x) := \int_0^{+\infty} t^{x-1} e^{-t} \D t$,
-so that $\Omega_2 = 4\pi$, $\Omega_3 = 2\pi^2$ and $\Omega_4 = 8\pi^2/3$,
-yielding $\mu = 2 M$ for $n=4$, $\mu = 8M/(3\pi)$ for $n=5$ and
+$\Omega_{n-2}$ is the area of $\SS^{n-2}$, as given by
+Eqs.~(\ref{e:sta:area_p_sphere})-(\ref{e:sta:area_p_sphere_examples}),
+so that $\mu = 2 M$ for $n=4$, $\mu = 8M/(3\pi)$ for $n=5$ and
 $\mu = 3M/(2\pi)$ for $n=6$. In particular, the event horizon $\Hor$ is
 connected and is a non-degenerate Killing horizon.
 \end{prop}
@@ -3556,12 +3560,13 @@ spanned by $(\th_1,\ldots,\th_{n-3},\ph)$,
 $Q$ is the black hole electric charge (cf. Property~\ref{p:sta:electric_charge}) and
 the constants $\mu$ and $q$ are related to the Komar mass at infinity (or ADM mass)
 $M$ and to the electric charge $Q$ by
-\be
+\be \label{e:sta:ReiNorTang_mu_q}
     \mu = \frac{16\pi M}{(n-2) \Omega_{n-2}}
     \qand
     q^2 = \frac{8\pi \mu_0 Q^2}{(n-2)(n-3) \Omega_{n-2}^2} ,
 \ee
-where $\Omega_{n-2}$ is the area of $\SS^{n-2}$ (cf. Property~\ref{p:sta:Israel_uniqueness_thm}).
+where $\Omega_{n-2}$ is the area of $\SS^{n-2}$
+[Eqs.~(\ref{e:sta:area_p_sphere})-(\ref{e:sta:area_p_sphere_examples})].
 The constants $\mu$ and $q$ must fulfill the constraint $\mu > 2 q$ and the lower bound
 of $r$ on $\langle\langle \M\rangle\rangle$ is
 $r_\Hor = \left( \mu/2 + \sqrt{\mu^2/4 - q^2}\right) ^{1/(n-3)}$.
@@ -3570,20 +3575,17 @@ For a proof, see Ref.~\cite{GibboIS02a} under the additional assumption
 that the magnetic field vanishes (i.e. that $\w{\xi}\cdot\star\w{F}=0$) and Ref.~\cite{KunduL18} for relaxing this assumption.
 
 \begin{example}
-For $n=5$, $\Omega_{n-2} = \Omega_3 = 2\pi^2$ and Eq.~(\ref{e:sta:ReiNorTang}) become
+For $n=5$, $\Omega_{n-2} = \Omega_3 = 2\pi^2$ [Eq.~(\ref{e:sta:area_p_sphere_examples})]
+and Eqs.~(\ref{e:sta:ReiNorTang})-(\ref{e:sta:ReiNorTang_mu_q}) become
 \begin{align}
     \w{g} & =  - \left( 1 - \frac{\mu}{r^2} + \frac{q^2}{r^{4}} \right)  \dd t^2
     +  \left( 1 - \frac{\mu}{r^{2}} + \frac{q^2}{r^{4}}  \right) ^{-1} \dd r^2
     + r^2 \left[ \dd\th_1^2 + \sin^2\th_1( \dd\th_2^2 + \sin^2\th_2 \dd\ph^2 ) \right]
         \nonumber \\
-    \w{F} & = - \frac{\mu_0}{2\pi^2} \frac{Q}{r^3} \,  \dd t \wedge \dd r , \nonumber
+    \w{F} & = - \frac{\mu_0}{2\pi^2} \frac{Q}{r^3} \,  \dd t \wedge \dd r  \nonumber \\
+    \mu & = \frac{8 M}{3\pi} \qand
+    q^2 = \frac{\mu_0 Q^2}{3\pi^3} . \nonumber
 \end{align}
-with
-\[
-    \mu = \frac{8 M}{3\pi}
-    \qand
-    q^2 = \frac{\mu_0 Q^2}{3\pi^3} .
-\]
 \end{example}
 
 
