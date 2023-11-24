@@ -1700,60 +1700,111 @@ thus get $2 s^i V_i \sqrt{q} \, \D^{n-2} x = A_{\mu\nu} \D S^{\mu\nu}$, so
 that Eq.~(\ref{e:sta:flux_div_2form}) follows.
 \end{proof}
 
+Let us apply Lemma~\ref{p:sta:flux_div_2_form} to the 2-form $\w{A} := \dd \uu{\xi}$, i.e.
+to the 2-form of components
+$A_{\alpha\beta} := \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha = 2 \nabla_\alpha \xi_\beta $
+[cf. Eq.~(\ref{e:sta:duxi_nab})]. The 1-form $2 \nabla^\nu A_{\mu\nu}$ which appears in
+the left-hand side of Eq.~(\ref{e:sta:flux_div_2form}) is then, up to a sign,
+the metric dual of a vector field $\w{J}$ that is called the
+\defin{Komar current of}\index{Komar!current}\index{current!Komar --}
+$\w{\xi}$:  $2 \nabla^\nu A_{\mu\nu} = - J_\mu$, where
+\be \label{e:sta:def_Komar_current}
+    J^\alpha := - 2 \nabla_\mu \left( \nabla^\alpha \xi^\mu - \nabla^\mu \xi^\alpha \right) .
+\ee
+The Komar current is actually a conserved current, independently of the Killing nature of $\w{\xi}$:
+
+\begin{prop}[Conservation of the Komar current]
+For any vector field $\w{\xi}$ defined on the spacetime $(\M,\w{g})$ (not necessarily a Killing vector field), the Komar current defined by Eq.~(\ref{e:sta:def_Komar_current}) is conserved:
+\be
+    \nabla_\mu J^\mu = 0 .
+\ee
+\end{prop}
+\begin{proof}
+We have, from the definition (\ref{e:sta:def_Komar_current}),
+$J^\alpha = - 2 \nabla_\nu A^{\alpha\nu}$ with
+$A^{\alpha\beta} :=  \nabla^\alpha \xi^\beta - \nabla^\beta \xi^\alpha$.
+Let $(x^\alpha)$ be a coordinate system on $\M$.
+Since $\w{A}$ is antisymmetric, its divergence can be expressed in terms of partial derivatives as
+$\nabla_\nu A^{\alpha\nu} = \partial_\nu \left( \sqrt{-g} A^{\alpha\nu} \right) / \sqrt{-g}$,
+where $g$ is the determinant of $\w{g}$ with respect to $(x^\alpha)$.
+Similarly the divergence of $\w{J}$ can be written as
+$\nabla_\mu J^\mu  =  \partial_\mu \left( \sqrt{-g} J^\mu \right) / \sqrt{-g}$.
+Combining the above formulas leads to
+$\nabla_\mu J^\mu = -2 \partial_\mu \partial_\nu  \left( \sqrt{-g} A^{\mu\nu} \right) /  \sqrt{-g}$.
+Since $\partial_\mu \partial_\nu = \partial_\nu \partial_\mu$ and $A^{\mu\nu} = - A^{\nu\mu}$,
+we get immediately $\nabla_\mu J^\mu = 0$.
+\end{proof}
+
+Thanks to the identities $A_{\alpha\beta} = 2 \nabla_\alpha \xi_\beta$ and
+$J_\alpha = - 2 \nabla^\mu A_{\alpha\mu}$, we may use Lemma~\ref{p:sta:flux_div_2_form} to write
+\[
+   -  \int_{\Sigma} J_\mu \, \D V^\mu
+    = 2 \int_{\Sp_{\rm ext}} \nabla_\mu \xi_\nu \, \D S^{\mu\nu}
+      - 2 \int_{\Sp_{\rm int}} \nabla_\mu \xi_\nu \, \D S^{\mu\nu} .
+\]
+Using expression~(\ref{e:sta:Komar_mass_flux_nabla_xi}) of the Komar mass,
+we get
+\be \label{e:sta:Komar_mass_vol_integ_J}
+    \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + \frac{n-2}{32\pi(n-3)}
+    \int_{\Sigma} J_\mu \, \D V^\mu } .
+\ee
+
+Thanks to the Killing equation (\ref{e:neh:Killing_equation}),
+expression (\ref{e:sta:def_Komar_current}) for the Komar current $\w{J}$
+simplifies to  $J^\alpha = - 4 \nabla_\mu \nabla^\alpha \xi^\mu$.
+Now, the Ricci identity (\ref{e:bas:Ricci_ident})
+applied to the vector field $\w{\xi}$ yields
+$\nabla_\alpha \nabla_\beta \xi^\gamma - \nabla_\beta \nabla_\alpha \xi^\gamma
+= R^\gamma_{\ \  \nu \alpha\beta} \, \xi^\nu$. Contracting on the indices
+$\alpha$ and $\gamma$ makes the Ricci tensor $R_{\alpha\beta}$ appear:
+$\nabla_\mu \nabla_\beta \xi^\mu - \nabla_\beta \nabla_\mu \xi^\mu = R_{\mu\beta} \xi^\mu$.
+Thanks to the Killing equation (\ref{e:neh:Killing_equation}), the divergence
+of $\w{\xi}$ is zero: $\nabla_\mu \xi^\mu = 0$. Using the symmetry of the Ricci tensor,
+we get the following identity, valid for any Killing vector:
+\be
+    \encadre{ \nabla_\mu \nabla_\alpha \xi^\mu = R_{\alpha\mu} \xi^\mu } .
+\ee
+Accordingly, the Komar current of $\w{\xi}$ can be written as
+\be
+    \encadre{ J^\alpha = - 4 R^\alpha_{\ \, \mu} \xi^\mu } .
+\ee
+Pluging this relation into formula (\ref{e:sta:Komar_mass_vol_integ_J})
+and using expression~(\ref{e:sta:normal_vol_element}) for $\D V^\mu$,
+we arrive at the following property.
+
 \begin{prop}[volume integral formula for the Komar mass]
 \label{p:sta:Komar_mass_vol_integ}
 Let $(\M, \w{g})$ be an asymptotically flat stationary $n$-dimensional spacetime,
-with stationary Killing vector $\w{\xi}$. Let us assume that $\w{g}$
-obeys the Einstein equation (\ref{e:fra:Einstein_eq}) with some energy-momentum
-tensor $\w{T}$ and a vanishing cosmological constant.
+with stationary Killing vector $\w{\xi}$.
 Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed $(n-2)$-surfaces:
 an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
 $\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
 The Komar masses over $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ are then
 related by
+\be \label{e:sta:Komar_mass_vol_integ_R}
+    \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + \frac{n-2}{8\pi(n-3)}
+    \int_{\Sigma} \w{R}(\w{n}, \w{\xi}) \sqrt{\gamma} \, \D^{n-1} x , }
+\ee
+where $\w{R}$ is the Ricci tensor of $\w{g}$,
+$\w{n}$ is the future-directed unit normal to $\Sigma$,
+$\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
+induced by $\w{g}$.
+If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq_n}) with some energy-momentum
+tensor $\w{T}$ and a vanishing cosmological constant, then we may rewrite
+the above formula as
 \be \label{e:sta:Komar_mass_vol_integ}
     \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + \frac{n-2}{n-3}
     \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T}{n-2} \, \w{n}\cdot \w{\xi} \right)
     \sqrt{\gamma} \, \D^{n-1} x , }
 \ee
-where $\w{n}$ is the future-directed unit normal to $\Sigma$,
-$\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
-induced by $\w{g}$ and $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
+where $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
 \end{prop}
-\begin{proof}
-Let us apply Lemma~\ref{p:sta:flux_div_2_form} to $A_{\alpha\beta} := \nabla_\alpha \xi_\beta$,
-which does define a 2-form thanks to the  Killing equation (\ref{e:neh:Killing_equation}).
-In the left-hand side of Eq.~(\ref{e:sta:flux_div_2form}), there appears then
-$\nabla^\nu \nabla_\mu \xi_\nu$. Now, the Ricci identity (\ref{e:bas:Ricci_ident})
-applied to the vector field $\w{\xi}$ yields
-$\nabla_\alpha \nabla_\beta \xi^\gamma - \nabla_\beta \nabla_\alpha \xi^\gamma
-= R^\gamma_{\ \  \nu \alpha\beta} \, \xi^\nu$. Contracting on the indices
-$\alpha$ and $\gamma$ makes the Ricci tensor $R_{\alpha\beta}$ appear:
-$\nabla_\nu \nabla_\mu \xi^\nu - \nabla_\mu \nabla_\nu \xi^\nu = R_{\nu\mu} \xi^\nu$.
-Thanks to the Killing equation (\ref{e:neh:Killing_equation}), the divergence
-of $\w{\xi}$ is zero: $\nabla_\nu \xi^\nu = 0$. Using the symmetry of the Ricci tensor,
-we get
-\[
-    \nabla^\nu \nabla_\mu \xi_\nu = R_{\mu\nu} \xi^\nu .
-\]
-Equation~(\ref{e:sta:flux_div_2form}) yields then
-\[
-    2 \int_{\Sigma} R_{\mu\nu} \xi^\nu \D V^\mu =
-    - \frac{16\pi(n-3)}{n-2} \left( M_{\Sp_{\rm ext}} -  M_{\Sp_{\rm int}} \right),
-\]
-where we have used Eq.~(\ref{e:sta:Komar_mass_flux_nabla_xi})
-to let appear the Komar masses $M_{\Sp_{\rm ext}}$ and $M_{\Sp_{\rm int}}$.
-Finaly, making use of the Einstein equation in the form
-(\ref{e:fra:Einstein_eq_n}) with $\Lambda=0$, along with expression
-(\ref{e:sta:normal_vol_element}) for $\D V^\mu$, we get
-Eq.~(\ref{e:sta:Komar_mass_vol_integ}).
-\end{proof}
 
 \begin{remark}
 \label{r:sta:Komar_mass_single_boundary}
 If $\Sigma$ is a compact spacelike hypersurface bounded by a single closed
-$(n-2)$-surface, $\Sp_{\rm ext}$ say, formula~(\ref{e:sta:Komar_mass_vol_integ})
-still holds, provided that $M_{\Sp_{\rm int}}$ is replaced by zero. This follows
+$(n-2)$-surface, $\Sp_{\rm ext}$ say, formulas~(\ref{e:sta:Komar_mass_vol_integ_R}) and (\ref{e:sta:Komar_mass_vol_integ})
+still hold, provided that $M_{\Sp_{\rm int}}$ is replaced by zero. This follows
 directly from Eq.~(\ref{e:sta:flux_div_2form}) with the integral on $\Sp_{\rm int}$
 set to zero, since the boundary of $\Sigma$, which appears in the
 Gauss-Ostrogradsky theorem, is only made of $\Sp_{\rm ext}$.
