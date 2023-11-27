@@ -8,6 +8,7 @@ Lectures notes [Geometry and physics of black holes](https://relativite.obspm.fr
 - Les Houches, France, July 2018
 - CSGC, Chennai, India (online), January 2022
 - ENS, Paris, France, May-June 2023
+- AEI, Potsdam, Germany, December 2023
 
 Home page: [https://relativite.obspm.fr/blackholes](https://relativite.obspm.fr/blackholes)
 
