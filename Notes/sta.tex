@@ -1155,7 +1155,8 @@ However, going beyong the first order expansion in $\w{h}$
 does not spoil the first terms in the expansions (\ref{e:sta:metric_weakly_relat}) of
 $\w{g}$'s components. This simply adds terms with a higher power
 of $1/r$. For instance, for $n=4$, the second order expansion in $\w{h}$ introduces
-the term $-2M^2/r^2$ in $g_{00}$ (see the above references for details).
+the term $-2M^2/r^2$ in $g_{00}$ (see the above references for details, as well
+as Refs.~\cite{Blanc14,PoissW14} for the nonlinear expansion within a post-Newtonian framework).
 We may then assert:
 
 
@@ -1735,7 +1736,7 @@ The Komar current is actually a conserved current, independently of the Killing 
 
 \begin{prop}[Conservation of the Komar current]
 For any vector field $\w{\xi}$ defined on the spacetime $(\M,\w{g})$ (not necessarily a Killing vector field), the Komar current defined by Eq.~(\ref{e:sta:def_Komar_current}) is conserved:
-\be
+\be \label{e:sta:divJ_zero}
     \nabla_\mu J^\mu = 0 .
 \ee
 \end{prop}
@@ -1780,12 +1781,12 @@ $\alpha$ and $\gamma$ makes the Ricci tensor $R_{\alpha\beta}$ appear:
 $\nabla_\mu \nabla_\beta \xi^\mu - \nabla_\beta \nabla_\mu \xi^\mu = R_{\mu\beta} \xi^\mu$.
 Thanks to the Killing equation (\ref{e:neh:Killing_equation}), the divergence
 of $\w{\xi}$ is zero: $\nabla_\mu \xi^\mu = 0$. Using the symmetry of the Ricci tensor,
-we get the following identity, valid for any Killing vector:
+we then get the following identity, valid for any Killing vector:
 \be
     \encadre{ \nabla_\mu \nabla_\alpha \xi^\mu = R_{\alpha\mu} \xi^\mu } .
 \ee
 Accordingly, the Komar current of $\w{\xi}$ can be written as
-\be
+\be \label{e:sta:J_Killing_Ricci}
     \encadre{ J^\alpha = - 4 R^\alpha_{\ \, \mu} \xi^\mu } .
 \ee
 Pluging this relation into formula (\ref{e:sta:Komar_mass_vol_integ_J})
@@ -1920,11 +1921,17 @@ $(\M,\w{g})$ and denote it by $M_\infty$.
 \end{prop}
 
 \begin{hist}
-Surface integrals associated to any spacetime Killing vector $\w{\xi}$,
-in the form of Eq.~(\ref{e:sta:Komar_mass_flux_nabla_xi}) with $n=4$,
-have been introduced by Arthur Komar in 1962 \cite{Komar62}. He proved
-that these integrals are independent of the surface when
-they are taken in vacuum, outside the sources of the Einstein equation
+The Komar current (\ref{e:sta:def_Komar_current}) associated to any vector field
+of spacetime has been introduced by Arthur Komar\index[pers]{Komar, A.} in 1959 \cite{Komar59};
+he showed that this current is conserved (divergence-free) [Eq.~(\ref{e:sta:divJ_zero})].
+In a subsequent study published in  1962 \cite{Komar62}, Komar showed that
+the Komar current $\w{J}$ associated to a Killing vector $\w{\xi}$ is, up to a factor, the
+Ricci tensor applied to $\w{\xi}$ [Eq.~(\ref{e:sta:J_Killing_Ricci})] and that
+the converved integral representing the flux of $\w{J}$ through a one-ended hypersurface $\Sigma$
+can be transformed into a surface integral on the boundary $\Sp$ of $\Sigma$,
+which is nothing by Eq.~(\ref{e:sta:Komar_mass_flux_nabla_xi}) with $n=4$.
+He proved that such a integral is independent of the surface $\Sp$ as soon as
+$\Sp$ is located outside the sources of the Einstein equation
 (Property~\ref{p:sta:Komar_mass_invariant}). The generalization to
 dimensions $n\geq 4$ has been performed by
 Robert Myers\index[pers]{Myers, R.C.} and Malcolm Perry\index[pers]{Perry, M.J.} in 1986 \cite{MyersP86}
@@ -2120,7 +2127,9 @@ and stationary, with axisymmetric Killing vector $\w{\eta}$.
 Let $(x^\alpha)$ be an asymptotically Minkowskian coordinate system
 in which $\w{g}$ admits the expansion (\ref{e:sta:asymptotic_metric})
 and that is adapted to the axisymmetry in the sense
-that $\w{\eta} = - x^2 \wpar_{x^1} + x^1 \wpar_{x^2}$.
+that $\w{\eta} = - x^2 \wpar_{x^1} + x^1 \wpar_{x^2}$
+(i.e. the rotation axis of the $\mathrm{SO}(2)$ action
+is the $(n-2)$-dimensional surface $(x^1,x^2) = (0,0)$).
 Then the coefficient $J_{(1)} = J_{12}$ in the expansion
 (\ref{e:sta:asymptotic_metric})-(\ref{s:sta:J_block_diagonal}) of $\w{g}$
 coincides in the limit $r := \sqrt{(x^1)^2 + \cdots + (x^{n-1})^2} \to +\infty$ with
@@ -2131,10 +2140,111 @@ where $J_{12}$ is given by the volume integral (\ref{e:sta:J_weakly_relat}).
 \end{prop}
 
 \begin{proof}
-As for the proof of Property~\ref{p:sta:Komar_mass_asymp_metric}, we shall
-use formula (\ref{e:sta:J_Komar_partial_der}) to evaluate
-$J_{\Sp}$. The difference with the proof of Property~\ref{p:sta:Komar_mass_asymp_metric} is that
-...
+Let us use formula (\ref{e:sta:J_Komar_partial_der}) to evaluate
+$J_{\Sp}$.
+From $\w{\eta} = - x^2 \wpar_{x^1} + x^1 \wpar_{x^2}$ and the asymptotic
+expression (\ref{e:sta:asymptotic_metric}) of $\w{g}$, we get the following
+components of $\uu{\eta}$ with respect to the coordinates $(x^\alpha)$
+in the limit $r\to +\infty$:
+$\eta_\alpha = g_{\alpha\mu} \eta^\mu = g_{\alpha 1} (-x^2) + g_{\alpha 2} x^1
+\simeq (\eta_0, -x^2, x^1, 0, \ldots, 0)$, with
+\[
+    \eta_0 = - g_{01} x^2 + g_{02} x^1 = - \frac{8\pi}{\Omega_{n-2}} \frac{J_{(1)} x^2}{r^{n-1}} x^2
+    + \frac{8\pi}{\Omega_{n-2}} \frac{(-J_{(1)}) x^1}{r^{n-1}} x^1
+    = - \frac{8\pi J_{(1)}}{\Omega_{n-2}} \frac{(x^1)^2 + (x^2)^2}{r^{n-1}} .
+\]
+The integrand in Eq.~(\ref{e:sta:J_Komar_partial_der}) is then, taking into account that $\partial_0 = 0$
+(stationarity) and $s^0 = 0$ ($\w{s}$ tangent to the hypersurface $x^0 = \mathrm{const})$:
+\begin{align}
+\partial_\mu \eta_\nu (s^\mu n^\nu - n^\mu s^\nu)
+  & = \partial_i \eta_0 \, s^i n^0 + \underbrace{\partial_i(-x^2)}_{-\delta^2_{\ \, i}} (s^i n^1 - n^i s^1)
+    +  \underbrace{\partial_i x^1}_{\delta^1_{\ \, i}}(s^i n^2 - n^i s^2) \nonumber \\
+ & = n^0 s^i \partial_i \eta_0  + 2 (s^1 n^2 - s^2 n^1) . \nonumber
+\end{align}
+Since $s^i \simeq x^i / r$ and $\partial_i r = x^i / r$,
+we deduce from the above expression of $\eta_0$ that
+\[
+    s^i \partial_i \eta_0 = \frac{8\pi (n-3) J_{(1)}}{\Omega_{n-2}} \, \frac{(x^1)^2 + (x^2)^2}{r^n} .
+\]
+In the proof of Property~\ref{p:sta:Komar_mass_asymp_metric} for the Komar mass,
+it was sufficient to consider only
+$\partial_i\xi_0$ and to express the components of $\w{n}$ to the lowest order in
+$1/r$, namely $n^\alpha \simeq (1,0,\ldots,0)$. Here we have $\partial_i \eta_j = O(1)$,
+so that we must consider the next order in the spatial components $n^i$ of
+$\w{n}$. They are given by $n^i = -\beta^i/N$ (e.g. Eq.~(5.36) in Ref.~\cite{Gourg12}) where $N$ is the lapse function and the $\beta^i$'s are the components of the shift vector
+(cf. Sec.~\ref{s:sta:np1_decomp}).
+For $r$ large, we may take $N\simeq 1$ and
+$\beta^i \simeq \beta_i = g_{0i}$ (Eq.~(5.49) in Ref.~\cite{Gourg12}).
+Hence $n^1 \simeq - g_{01} = - 8\pi J_{(1)} x^2 / (\Omega_{n-2} r^{n-1})$
+and $n^2 \simeq - g_{02} = 8\pi J_{(1)} x^1 / (\Omega_{n-2} r^{n-1})$.
+On the other side, $n^0 = 1/N \simeq 1$. Hence
+the integrand becomes
+\begin{align}
+  \partial_\mu \eta_\nu (s^\mu n^\nu - n^\mu s^\nu) & =
+   \frac{8\pi J_{(1)}}{\Omega_{n-2}} \left[
+   (n-3) \frac{(x^1)^2 + (x^2)^2}{r^n} + 2 \left( \frac{x^1}{r}\times \frac{x^1}{r^{n-1}}
+   - \frac{x^2}{r}\times \left(- \frac{x^2}{r^{n-1}} \right) \right) \right] \nonumber \\
+   & = \frac{8\pi (n-1) J_{(1)}}{\Omega_{n-2}} \, \frac{(x^1)^2 + (x^2)^2}{r^n} . \nonumber
+\end{align}
+Accordingly, formula~(\ref{e:sta:J_Komar_partial_der}) yields
+\[
+    J_{\Sp} =  \frac{(n-1)J_{(1)}}{2\Omega_{n-2}}  \int_{\Sp}
+    \frac{(x^1)^2 + (x^2)^2}{r^n} \, \sqrt{q}\, \D^{n-2} y ,
+\]
+where we have denoted the surface element of $\Sp$ by $\sqrt{q} \, \D^{n-2} y$
+to avoid any
+confusion with the coordinates $(x^\alpha)$.
+Let us use spherical coordinates $(y^a)_{1\leq a \leq n-2} = (\th_1,\th_2,\ldots,\th_{n-3},\ph)$
+on $\Sp$, i.e. coordinates such that all the $\th_k$'s span $(0,\pi)$,
+$\ph$ spans $(0,2\pi)$
+and the asymptotically Minkowskian coordinates
+$(x^i)_{1\leq i \leq n-1}$ write
+\[
+    \left\{ \begin{array}{rcl}
+    x^1 & = & r \sin\th_1 \sin\th_2 \cdots \sin \th_{n-4} \sin \th_{n-3} \cos\ph \\
+    x^2 & = & r \sin\th_1 \sin\th_2 \cdots \sin \th_{n-4} \sin \th_{n-3} \sin\ph \\
+    x^3 & = & r \sin\th_1 \sin\th_2 \cdots \sin \th_{n-4} \cos \th_{n-3} \\
+    x^4 & = & r \sin\th_1 \sin\th_2 \cdots \cos \th_{n-4} \\
+     &\vdots & \\
+    x^{n-2} & = & r \sin\th_1 \cos\th_2 \\
+    x^{n-1} & = & r \cos\th _1
+     \end{array} \right .
+\]
+Then $(x^1)^2 + (x^2)^2 = r^2 \sin^2\th_1 \cdots \sin^2 \th_{n-3}$
+and, at the limit $r\to+\infty$, $\sqrt{q} = r^{n-2} \sqrt{\bar{q}}$,
+where $\bar{q}$ is the determinant with respect to the coordinates
+$(y^a)$ of the round metric on $\SS^{n-2}$:
+\be \label{e:sta:sqrt_barq_spher}
+ \sqrt{\bar{q}} = \sin^{n-3}\th_1 \sin^{n-4}\th_2 \cdots \sin^2 \th_{n-4} \sin \th_{n-3} .
+\ee
+It follows that
+\begin{align}
+    J_{\Sp} &=  \frac{(n-1)J_{(1)}}{2\Omega_{n-2}}  \int_{\Sp}
+     \sin^{n-1}\th_1 \sin^{n-2}\th_2 \cdots \sin^4 \th_{n-4} \sin^3 \th_{n-3}
+     \, \D \th_1 \cdots \D \th_{n-3} \, \D \ph \nonumber  \\
+     & = \frac{(n-1) J_{(1)}}{2\Omega_{n-2}} \times 2\pi I_{n-1} I_{n-2} \cdots I_3 ,
+     \label{s:sta:J_Sp_integral_prov}
+\end{align}
+where we have introduced
+\[
+    I_k := \int_0^\pi \sin^k \th \, \D \th .
+\]
+For $k\geq 2$, writing $\sin^k\th = \sin^{k-1}\th \sin\th$ and integrating by part,
+we easily get the relation
+\[
+    I_{k} = \frac{k-1}{k} I_{k - 2} .
+\]
+Hence
+\[
+     I_{n-1} I_{n-2} \cdots I_3 = \frac{n-2}{n-1} I_{n-3} \times \frac{n-3}{n-2} I_{n-4}
+     \times \cdots \times \frac{3}{4} I_2 \times \frac{2}{3} I_1
+     = \frac{2}{n-1} I_{n-3} I_{n-4} \cdots I_1 .
+\]
+Now by the very definition of $\Omega_{n-2}$ as the area of $\SS^{n-2}$, we
+have, given expression (\ref{e:sta:sqrt_barq_spher}) for $\sqrt{\bar{q}}$,
+$\Omega_{n-2} = 2\pi I_{n-3} I_{n-4} \cdots I_1$.
+Equation~(\ref{s:sta:J_Sp_integral_prov}) reduces then to
+$J_{\Sp} = J_{(1)}$.
 \end{proof}
 
 
