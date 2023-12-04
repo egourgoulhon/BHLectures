@@ -544,7 +544,7 @@ A first step is the concept of conformal completion.
 
 \begin{greybox}
 A spacetime $(\M,\w{g})$ admits a
-\defin{conformal completion}\index{conformal!completion}
+\defin{conformal completion at infinity}\index{conformal!completion!at infinity}\index{completion!conformal --}
 iff there exists a Lorentzian manifold with boundary
 $(\tilde{\M},\w{\tilde{g}})$ (cf. Sec.~\ref{s:bas:manif_boundary} for the definition)
 equipped with a smooth non-negative scalar field
@@ -713,37 +713,38 @@ Given the link between the causal type of a hypersurface and the causal type of 
 (cf. Sec.~\ref{s:def:hor_as_null}), this completes the proof.
 \end{proof}
 
-The definition of a black hole shall involve a subcategory of conformal completions:
+One may distinguish two subparts of the conformal boundary:
 
 \begin{greybox}
-Let $(\M,\w{g})$ be a time-orientable\footnote{Cf. Sec.~\ref{s:fra:time_orientation}.} spacetime admitting a conformal completion $(\tilde{\M},\w{\tilde{g}})$.
-One says that $(\tilde{\M},\w{\tilde{g}})$ is a
+Let $(\M,\w{g})$ be a time-orientable\footnote{Cf. Sec.~\ref{s:fra:time_orientation}.} spacetime admitting a conformal completion at infinity $(\tilde{\M},\w{\tilde{g}})$, with conformal boundary $\scri$.
+One defines the \defin{future infinity}\index{future!infinity} of $(\M,\w{g})$ as the subset $\scri^+$ of $\scri$ whose points can be reached from a point in $\M$ by a future-directed causal curve in $\tilde{\M}$.
+Similarly the \defin{past infinity}\index{past!infinity}  of $(\M,\w{g})$ is the subset $\scri^-$ of
+$\scri$ whose points can be reached from a point in $\M$ by a past-directed causal curve in $\tilde{\M}$.
+If $\scri^+$ (resp. $\scri^-$) is a null hypersurface, it is called the
+\defin{future null infinity}\index{future!null infinity}\index{null!future -- infinity}
+(resp. \defin{past null infinity}\index{past!null infinity}\index{null!past -- infinity})
+of $(\M,\w{g})$.
+Furthermore if $\scri = \scri^+ \cup \scri^-$, one says that $(\tilde{\M},\w{\tilde{g}})$ is a
 \defin{conformal completion at null infinity}\index{conformal!completion!at null infinity}
-of $(\M,\w{g})$
-iff the boundary $\scri := \partial\tilde{\M}$ obeys
-\be \label{e:glo:conf_comp_null_inf}
-    \scri = \scri^+ \cup \scri^-,
-\ee
-with $\scri^+$ (resp. $\scri^-$) being never intersected by any past-directed
-(resp. future-directed) causal
-curve originating in $\M$. Let us recall that a
-\defin{causal curve}\index{causal!curve} is
-curve whose tangent vectors are nowhere spacelike.
-As for Minkowksi spacetime, we shall call $\scri^+$ the
-\defin{future null infinity}\index{future!null infinity}\index{null!infinity}\index{infinity!future null --}
-and $\scri^-$ the \defin{past null infinity}\index{past!null infinity}\index{infinity!past null --}
 of $(\M,\w{g})$.
 \end{greybox}
 
+
 \begin{remark}
-The above definition of $\scri^+$ and $\scri^-$ does not require
-that these two sets are null hypersurfaces of $(\tilde{\M},\w{\tilde{g}})$.
-This is true for Minkowski spacetime (Property~\ref{p:glo:Mink_scri_null}),
-but cannot hold for spacetimes with a
-non-zero cosmological constant (Property~\ref{p:glo:type_scri_sign_Lambda}).
+The above definitions of $\scri^+$ and $\scri^-$
+generalize those given for the Minkowski spacetime in Sec.~\ref{s:glo:conf_complet_Mink}.
+Note that, contrary to the Minkowski case, $\scri^+$ and $\scri^-$ are not null
+for spacetimes with a non-zero cosmological constant (cf. Property~\ref{p:glo:type_scri_sign_Lambda}).
 In particular, the following
-example exhibits spacelike $\scri^+$ and $\scri^-$.
+examples exhibit respectively timelike and spacelike $\scri^+$ and $\scri^-$.
 \end{remark}
+
+\begin{example}[Future and past infinities of AdS$_{4}$ spacetime]
+Let us consider the conformal completion of AdS$_{4}$ discussed in Example~\ref{x:glo:AdS}.
+It is evident from behavior of radial null geodesics (the green curves plotted in Fig.~\ref{f:glo:AdS_completion}) that any point of $\scri$ can be connected to $\M$ by a
+future-directed null geodesic as well as by a past-directed one. It follows that
+$\scri^+ = \scri^- = \scri$ and both $\scri^+$ and $\scri^-$ are timelike hypersurfaces.
+\end{example}
 
 \begin{example}[Conformal completion of dS$_{4}$ spacetime]
 \label{x:glo:dS4}
@@ -789,20 +790,17 @@ This 3-metric is clearly Riemannian (this is actually the standard round metric
 of $\mathbb{S}^3$), which shows that $\scri$ is a spacelike
 hypersurface of $(\tilde{\M},\w{\tilde{g}})$. This of course agrees with
 Property~\ref{p:glo:type_scri_sign_Lambda}, given that $\Lambda > 0$.
-Finally, it is clear that
-any causal curve originating in $\M$ that intersects $\scri^+$ must approach
-$\tau=\pi/2$ from below, i.e. cannot be past-directed. Similarly any
-causal curve originating in $\M$ that intersects $\scri^-$ must approach
-$\tau=-\pi/2$ from above, i.e. cannot be future-directed. We conclude
-that $(\tilde{\M},\w{\tilde{g}})$ is a conformal completion at null infinity
-of the de Sitter spacetime.
+Finally, it is clear that $\scri^+$ (resp. $\scri^-$)
+matches the definition of a future (resp. past) infinity given above.
+We conclude that $(\tilde{\M},\w{\tilde{g}})$ is a conformal completion at null infinity
+of de Sitter spacetime.
 \end{example}
 
 \subsection{Asymptotic flatness} \label{s:glo:asymp_flat}
 
 Penrose\index[pers]{Penrose, R.} \cite{Penro64,Penro68} has defined
 a spacetime $(\M,\w{g})$ to be \defin{asymptotically simple}\index{asymptotically!simple} iff there exists
-a conformal completion $(\tilde{\M},\w{\tilde{g}})$
+a conformal completion at infinity $(\tilde{\M},\w{\tilde{g}})$
 of $(\M,\w{g})$
 such that every null geodesic in $\M$ has two endpoints in $\scri$.
 
@@ -937,9 +935,9 @@ equivalent to saying that $J^+(K)$ and $J^-(K)$ are closed subsets of $\M$.
 
 We are now in position to give the general definition of a black hole.
 We shall do it for a spacetime $(\M,\w{g})$ that admits a conformal completion
-at null infinity as defined in Sec.~\ref{s:glo:conf_compl} and thus
-possesses a future null infinity $\scri^+$.
-Moreover, we shall assume that $\scri^+$ is \defin{complete}\index{complete!future null infinity}: if $\scri^+$
+at infinity as defined in Sec.~\ref{s:glo:def_conf_compl} and
+such that the future infinity $\scri^+$ is
+\defin{complete}\index{complete!future null infinity}: if $\scri^+$
 is a null hypersurface, which occurs if $(\M,\w{g})$ is asymptotically flat
 (cf. Propery~\ref{p:glo:null_scri}),
 this means that $\scri^+$ is generated by complete\footnote{Let us recall
@@ -956,11 +954,10 @@ region, it can be considered as being trapped somewhere else in spacetime: this
 ``somewhere else'' constitutes the black hole region. More precisely:
 
 \begin{greybox}
-Let $(\M,\w{g})$ be a spacetime with a conformal completion at null infinity
-such that $\scri^+$ is complete;
+Let $(\M,\w{g})$ be a time-oriented spacetime with a conformal completion at infinity
+such that the future infinity $\scri^+$ is complete;
 the \defin{black hole region}\index{black hole!region}
-is the set of points of $\M$ that are not in the causal past of the future null
-infinity (cf. Fig.~\ref{f:glo:def_bh}):
+is the set of points of $\M$ that do not belong to the causal past of $\scri^+$ (cf. Fig.~\ref{f:glo:def_bh}):
 \be \label{e:glo:def_BH}
     \encadre{\mathscr{B} := \M \setminus (J^-(\scri^+)\cap\M) } .
 \ee
@@ -976,23 +973,21 @@ from which no future-directed causal curve in $\tilde{\M}$ reaches $\scri^+$.
 \centerline{\includegraphics[width=0.6\textwidth]{glo_def_bh.pdf}}
 \caption[]{\label{f:glo:def_bh} \footnotesize
 The black hole region $\mathscr{B}$ defined as the complement of
-the causal past of the future null infinity, $J^-(\scri^+)$.}
+the causal past of the future infinity, $J^-(\scri^+)$.}
 \end{figure}
 
 
 \begin{example}
 The Minkowski spacetime contains no black hole, for all future-directed null geodesics
 terminate at $\scri^+$ (cf. Fig.~\ref{f:glo:conf_Mink_null}).
-More generally, any asymptotically simple spacetime contains no black hole.
+More generally, any asymptotically simple spacetime contains no black hole
+(cf. Sec.~\ref{s:glo:asymp_flat}).
 \end{example}
 
-\begin{example}
-The prototype of a black hole is the \emph{Schwarzschild black hole}; it will
-be shown in Sec.~\ref{s:sch:BH} that the Schwarzschild spacetime contains
-a region $\mathscr{B}$ that fulfills the above definition of a black hole.
-The corresponding event horizon is nothing but the
-Schwarzschild horizon\index{Schwarzschild!horizon} considered in the examples
-of Chaps.~\ref{s:def} and \ref{s:neh}.
+\begin{example} \label{x:glo:Schwarztschild_BH}
+The prototype of a black hole is the \emph{Schwarzschild black hole}\index{Schwarzschild!black hole};
+it will be shown in Sec.~\ref{s:sch:BH} that the Schwarzschild spacetime contains
+a region $\mathscr{B}$ that fulfills the above definition of a black hole region.
 \end{example}
 
 \begin{remark} \label{s:glo:spurious_bh}
@@ -1057,19 +1052,27 @@ $\partial J^-(\scri^+) \cap \M =  \partial(J^-(\scri^+)\cap\M)$; hence
     \encadre{\Hor = \partial J^-(\scri^+) \cap \M }.
 \ee
 In words: the future event horizon $\Hor$ is the part of the boundary of the causal past
-of the future null infinity $\scri^+$ that lies in $\M$ (cf. Fig.~\ref{f:glo:def_bh}).
+of the future infinity $\scri^+$ that lies in $\M$ (cf. Fig.~\ref{f:glo:def_bh}).
 Note that thanks to property~(\ref{e:glo:boundary_JS_IS}), we can write as
 well
 \be
     \Hor = \partial I^-(\scri^+) \cap \M .
 \ee
 
+\begin{example}
+The event horizon of the Schwarzschild black hole (Example~\ref{x:glo:Schwarztschild_BH})
+is nothing but the
+Schwarzschild horizon\index{Schwarzschild!horizon} $\Hor$ considered in the examples
+of Chaps.~\ref{s:def} and \ref{s:neh}.
+\end{example}
+
+
 \subsubsection{White hole}
 
 By inverting past and future in the black hole definition (\ref{e:glo:def_BH}), one defines
 the \defin{white hole region}\index{white hole} of a
-spacetime $(\M,\w{g})$ with a conformal completion at null infinity as the
-complement within $\M$ of the causal future of the past null infinity $\scri^-$:
+spacetime $(\M,\w{g})$ with a conformal completion at infinity as the
+complement within $\M$ of the causal future of the past infinity $\scri^-$:
 \be \label{e:glo:def_white_hole}
     \encadre{\mathscr{W} := \M \setminus (J^+(\scri^-)\cap \M) } .
 \ee
