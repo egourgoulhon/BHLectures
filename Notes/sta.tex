@@ -1810,12 +1810,12 @@ related by
     \int_{\Sigma} \w{R}(\w{n}, \w{\xi}) \sqrt{\gamma} \, \D^{n-1} x , }
 \ee
 where $\w{R}$ is the Ricci tensor of $\w{g}$,
-$\w{n}$ is the future-directed unit normal to $\Sigma$,
-$\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
+$\w{n}$ is the future-directed unit normal to $\Sigma$
+and $\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
 induced by $\w{g}$.
 If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq_n}) with some energy-momentum
-tensor $\w{T}$ and a vanishing cosmological constant, then we may rewrite
-the above formula as
+tensor $\w{T}$ and $\Lambda=0$, then
+the above formula may be rewritten as
 \be \label{e:sta:Komar_mass_vol_integ}
     \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + \frac{n-2}{n-3}
     \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T}{n-2} \, \w{n}\cdot \w{\xi} \right)
@@ -2279,22 +2279,29 @@ We may therefore transpose it to the Komar angular momentum:
 
 \begin{prop}[volume integral formula for the Komar angular momentum]
 Let $(\M, \w{g})$ be an axisymmetric $n$-dimensional spacetime,
-with axisymmetric Killing vector $\w{\eta}$. Let us assume that $\w{g}$
-obeys the Einstein equation (\ref{e:fra:Einstein_eq}) with some energy-momentum
-tensor $\w{T}$ and a vanishing cosmological constant.
+with axisymmetric Killing vector $\w{\eta}$.
 Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed $(n-2)$-surfaces:
 an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
 $\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
 The Komar angular momenta over $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ are then
 related by
+\be \label{e:sta:Komar_angul_vol_integ_R}
+    \encadre{ J_{\Sp_{\rm ext}} = J_{\Sp_{\rm int}} - \frac{1}{8\pi}
+    \int_{\Sigma} \w{R}(\w{n}, \w{\eta}) \sqrt{\gamma} \, \D^{n-1} x  , }
+\ee
+where $\w{R}$ is the Ricci tensor of $\w{g}$,
+$\w{n}$ is the future-directed unit normal to $\Sigma$
+and $\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
+induced by $\w{g}$.
+If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq_n}) with some energy-momentum
+tensor $\w{T}$ and $\Lambda=0$, then
+the above formula may be rewritten as
 \be \label{e:sta:Komar_angul_vol_integ}
     \encadre{ J_{\Sp_{\rm ext}} = J_{\Sp_{\rm int}} -
     \int_{\Sigma} \left( \w{T}(\w{n}, \w{\eta}) - \frac{T}{n-2} \, \w{n}\cdot\w{\eta} \right)
     \sqrt{\gamma} \, \D^{n-1} x  , }
 \ee
-where $\w{n}$ is the future-directed unit normal to $\Sigma$,
-$\sqrt{\gamma}\,\D^{n-1} x$ is the volume element on $\Sigma$
-induced by $\w{g}$ and $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
+where $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
 \end{prop}
 
 \begin{remark}
@@ -3109,6 +3116,22 @@ one has noticed that $\Sp_{\rm int} = \bigcup_{k=1}^K \Sp_{k}$,
 so that $M_{\Sp_{\rm int}} = \sum_{k=1}^K M_{\Hor_{k}}$.
 \end{proof}
 
+\begin{example}[black saturn]
+For the \emph{black saturn}\index{black!saturn} solution discussed in Remark~\ref{r:sta:dep_eta_Omega},
+one has $n=5$, $K=2$, $L_1 = L_2 = 1$ and formula (\ref{e:sta:Smarr_H_k})
+reduces to
+\be \label{e:sta:Smarr_H_k_saturn}
+    M_{\Hor_{k}} = \frac{3}{32\pi} \kappa_{k} A_{k}
+    + \frac{3}{2} \Omega_{\Hor_k} J_{\Hor_k}, \qquad k \in \{1, 2\} ,
+\ee
+where $k=1$ corresponds to the ``planet'' component of the event horizon
+and $k=2$ corresponds to the ``ring'' component. Equation~(\ref{e:sta:Smarr_H_k_saturn})
+coincides with the two formulas given in Eq.~(3.43) of the black saturn discovery
+article \cite{ElvanF07}, which were obtained from the explicit expressions of $M_{\Hor_{k}}$,
+$A_k$, $J_{\Hor_k}$, $\kappa_k$ and $\Omega_{\Hor_k}$ in terms of the solution parameters.
+For the same solution, the Smarr formula (\ref{e:sta:Smarr_M_infty}) with $\w{T}=0$ is recovered
+by combining Eqs.~(3.36) and (3.43) of Ref.~\cite{ElvanF07}.
+\end{example}
 
 It is worth to specialize the generalized Smarr formula to
 a 4-dimensional spacetime and to a connected event horizon,
