@@ -1935,6 +1935,7 @@ hence $M_\infty = M_{\Sp_r}$.
 \end{proof}
 
 \begin{example}[Total mass of Schwarzschild spacetime]
+\label{x:sta:Komar_mass_infty_Schwarz}
 We have already noticed in Example~\ref{x:sta:Komar_mass_Schw} that in the Schwarzschild
 spacetime, the Komar mass $M_{\Sp}$ is equal to the mass parameter $m$
 of Schwarzschild's metric, whatever the 2-surface $\Sp$ [Eq.~(\ref{e:sta:Komar_mass_Schwarz})].
@@ -3078,7 +3079,7 @@ any cross-section of $\Hor_{k}$
 as given by Eq.~(\ref{e:sta:def_Komar_J}).
 In Eq.~(\ref{e:sta:Smarr_H_k}), it is intended that $L_{k} = 0$ if
 $\w{\chi}_{k} = \w{\xi}$, so that there is no sum over $i$ in that case.
-Furthermore, the Komar mass at infinity of the spacetime $(\M,\w{g})$
+Furthermore, the Komar mass at infinity
 (cf. Property~\ref{p:sta:Komar_mass_inf}) obeys the \defin{generalized Smarr formula}\index{generalized Smarr formula}\index{Smarr formula!generalized --}:
 \be
 \label{e:sta:Smarr_M_infty_R}
@@ -3178,7 +3179,7 @@ by combining Eqs.~(3.36) and (3.43) of Ref.~\cite{ElvanF07}.
 It is worth to specialize the generalized Smarr formula to
 a 4-dimensional spacetime and to a connected event horizon,
 by setting $n=4$, $K=1$ and $L_{1}=1$ (cf. Property~\ref{p:sta:axisymmetry_BH})
-in Eqs.~(\ref{e:sta:Smarr_H_k}) and (\ref{e:sta:Smarr_M_infty}):
+in Eqs.~(\ref{e:sta:Smarr_H_k}), (\ref{e:sta:Smarr_M_infty_R}) and (\ref{e:sta:Smarr_M_infty}):
 
 \begin{prop}[4-dimensional generalized Smarr formula]
 \label{p:sta:Smarr_n4}
@@ -3203,20 +3204,27 @@ of $\Hor$ [cf. Eq.~(\ref{e:sta:def_Komar_mass})] obeys
 where $A$ is the area of $\Hor$ (cf. Property~\ref{p:neh:invariance_area})
 and $J_{\Hor}$ is the Komar angular momentum over any cross-section
 of $\Hor$ [cf. Eq.~(\ref{e:sta:def_Komar_J})].
-Furthermore, if $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq})
-with $\Lambda=0$, the Komar mass at infinity of the spacetime $(\M,\w{g})$
-(cf. Property~\ref{p:sta:Komar_mass_inf}) obeys:
-\be \label{e:sta:Smarr_M_infty_n4}
+Furthermore, the Komar mass at infinity
+(cf. Property~\ref{p:sta:Komar_mass_inf}) obeys
+\be \label{e:sta:Smarr_M_infty_n4_R}
     M_\infty = \frac{\kappa}{4\pi} A + 2 \Omega_{\Hor} J_{\Hor}
-    + \int_{\Sigma} \left(2 \w{T}(\w{n}, \w{\xi}) - T\,  \w{n}\cdot \w{\xi}  \right)
-    \sqrt{\gamma} \, \D^3 x ,
+    +  \frac{1}{4\pi}  \int_{\Sigma} \w{R}(\w{\xi}, \w{n}) \sqrt{\gamma} \, \D^3 x ,
 \ee
 where $\Sigma$ is an asymptotically flat spacelike hypersurface, the inner boundary
-of which is a cross-section of $\Hor$, $\w{n}$ is the future-directed unit normal
-to $\Sigma$ and $\w{T}$ is the matter energy-momentum tensor.
+of which is a cross-section of $\Hor$,
+$\w{R}$ is the Ricci tensor of $\w{g}$ and
+$\w{n}$ is the future-directed unit normal to $\Sigma$.
+If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq})
+with $\Lambda=0$, this formula can be rewritten as
+\be \label{e:sta:Smarr_M_infty_n4}
+    M_\infty = \frac{\kappa}{4\pi} A + 2 \Omega_{\Hor} J_{\Hor}
+    + \int_{\Sigma} \left(2 \w{T}(\w{\xi}, \w{n}) - T\,  \w{\xi}\cdot \w{n}  \right)
+    \sqrt{\gamma} \, \D^3 x ,
+\ee
+where $\w{T}$ is the matter energy-momentum tensor.
 \end{prop}
 
-For black holes in vacuum, $\w{T} = 0$ and the generalized Smarr formulas (\ref{e:sta:Smarr_M_infty})
+For vacuum black holes of general relativity, $\w{T} = 0$ and the generalized Smarr formulas (\ref{e:sta:Smarr_M_infty})
 and (\ref{e:sta:Smarr_M_infty_n4}) simplify since the integral
 term disappears.
 
@@ -3228,10 +3236,9 @@ for it. From Example~\ref{x:def:Schw_hor3} of Chap.~\ref{s:def}, we have
 $\kappa = 1/(4 m)$ [Eq.~(\ref{e:def:kappa_Schw_hor})], while from
 Example~\ref{x:neh:Schwarz_hor_area} of Chap.~\ref{s:neh} we have
 $A = 16\pi m^2$ [Eq.~(\ref{e:neh:area_Schwarz})]. Hence
-$\kappa A / (4\pi) = m$. Since we have seen in Example~\ref{x:sta:Komar_mass_Schw}
+$\kappa A / (4\pi) = m$. Since we have seen in Example~\ref{x:sta:Komar_mass_infty_Schwarz}
 of the current chapter that the parameter $m$ is nothing but the Komar mass
-over any closed spacelike 2-surface $\Sp$ [Eq.~(\ref{e:sta:Komar_mass_Schwarz})],
-we have $m = M_\infty$, so that
+at infinity $M_\infty$, we get
 \be
     M_\infty = \frac{\kappa}{4\pi} A .
 \ee
@@ -3243,7 +3250,8 @@ for a static ($\Omega_{\Hor} = 0$) black hole in vaccum ($\w{T}=0$).
 
 Besides the vacuum case, the generalized Smarr formulas (\ref{e:sta:Smarr_M_infty})
 and (\ref{e:sta:Smarr_M_infty_n4}) simplifies significantly for
-electrovacuum spacetimes, i.e. spacetimes for which $\w{T}$ is the energy-momentum
+electrovacuum spacetimes, i.e. spacetimes ruled by general relativity and
+for which $\w{T}$ is the energy-momentum
 tensor of a source-free electromagnetic field (cf. Sec.~\ref{e:fra:electrovacuum}).
 To perform the computation of the integral involving $\w{T}$,
 we need first to characterize a stationary electromagnetic field on
@@ -3430,28 +3438,26 @@ electric charge of $\Hor_k$, as defined by Property~\ref{p:sta:electric_charge}.
 \end{prop}
 
 \begin{proof}
-Let us start from the general Smarr formula~(\ref{e:sta:Smarr_M_infty}).
+Let us start from the general Smarr formula~(\ref{e:sta:Smarr_M_infty_R}).
 Thanks to the independence of $\Omega^{(i)}$ and $\w{\eta}_{(i)}$
 from $\Hor_k$, we may permute the sums over $k$ and $i$ in it and write
 \[
     \frac{2(n- 3)}{n - 2}  M_\infty =
     \sum_{k = 1}^K \frac{\kappa_{k} A_{k}}{4\pi}
     + 2  \sum_{i=1}^{L} \Omega^{(i)} \sum_{k = 1}^K J_{\Hor_{k}(i)}
-    + 2
-    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T \w{n}\cdot \w{\xi}}{n-2}  \right)
-    \sqrt{\gamma} \, \D^{n-1} x ,
+    + \frac{1}{4\pi}
+    \int_{\Sigma}  \w{R}(\w{\xi}, \w{n}) \sqrt{\gamma} \, \D^{n-1} x ,
 \]
 where $\Sigma$ is an asymptotically flat spacelike hypersurface,
 of future-directed unit normal $\w{n}$ to $\Sigma$ and of
-inner boundary being a cross-section $\Sp_{\rm int}$ of the event horizon,
+inner boundary a cross-section $\Sp_{\rm int}$ of the event horizon,
 i.e. $\Sp_{\rm int} = \bigcup_{k=1}^K \Sp_k$, where $\Sp_k$ is a
 cross-section of $\Hor_{k}$.
-Now, according to Eq.~(\ref{e:sta:Komar_angul_vol_integ})
+Now, according to Eq.~(\ref{e:sta:Komar_angul_vol_integ_R})
 with $\Sp_{\rm ext}$ going to infinity, we have
 \[
      \sum_{k=1}^K J_{\Hor_k(i)} =  J_{\Sp_{\rm int}(i)}
-    = J_{(i)}^\infty + \int_{\Sigma} \left( \w{T}(\w{n}, \w{\eta}_{(i)})
-     - \frac{T}{n-2} \, \w{n}\cdot\w{\eta}_{(i)} \right)
+    = J_{(i)}^\infty + \frac{1}{8\pi} \int_{\Sigma}  \w{R}(\w{\eta}_{(i)}, \w{n})
     \sqrt{\gamma} \, \D^{n-1} x .
 \]
 Hence
@@ -3459,19 +3465,17 @@ Hence
     \frac{2(n- 3)}{n - 2}  M_\infty =
     \sum_{k = 1}^K \frac{\kappa_{k} A_{k}}{4\pi}
     + 2  \sum_{i=1}^{L} \Omega^{(i)} J_{(i)}^\infty
-    + 2
-    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\chi}) - \frac{T \w{n}\cdot \w{\chi}}{n-2}  \right)
-    \sqrt{\gamma} \, \D^{n-1} x ,
+    + \frac{1}{4\pi}
+    \int_{\Sigma} \w{R}(\w{\chi}, \w{n}) \sqrt{\gamma} \, \D^{n-1} x ,
 \ee
 where we have used the identity
 $\w{\xi} + \sum_{i=1}^{L} \Omega^{(i)} \w{\eta}_{(i)} = \w{\chi}$
 to collect all the integrals on $\Sigma$.
-Let us now evaluate the integral by using the electromagnetic form
-(\ref{e:fra:T_em})-(\ref{e:fra:trace_T_em}) for $\w{T}$ and $T$.
-Thanks to these formulas, the integrand becomes
+Let us evaluate the integral by using the electrovacuum Einstein equation
+(\ref{e:fra:electrovac_Einstein}), which yields
 \be \label{e:sta:Smarr_em_integrand}
-\w{T}(\w{n}, \w{\chi}) - \frac{T \w{n}\cdot \w{\chi}}{n-2} =
-\frac{n^\mu}{\mu_0} \left( F_{\sigma\mu} F^\sigma_{\ \, \nu} \chi^\nu
+\frac{1}{4\pi}\w{R}(\w{\chi}, \w{n}) =
+\frac{2 n^\mu}{\mu_0} \left( F_{\sigma\mu} F^\sigma_{\ \, \nu} \chi^\nu
     - \frac{1}{2(n-2)} F_{\rho\sigma} F^{\rho\sigma} \chi_\mu \right) .
 \ee
 We recognize the pseudo-electric field $E^\sigma = F^\sigma_{\ \, \nu} \chi^\nu$
@@ -3529,8 +3533,8 @@ and $\Liec{\chi} A_\rho = 0$ in the second line. Hence, we get
 Together with Eq.~(\ref{e:sta:FF_chi}), this expression allows us to
 rewrite Eq.~(\ref{e:sta:Smarr_em_integrand}) as
 \[
-\w{T}(\w{n}, \w{\chi}) - \frac{T \w{n}\cdot \w{\chi}}{n-2} =
-\frac{n^\mu}{\mu_0} \nabla^\nu \Omega_{\mu\nu}
+\frac{1}{4\pi} \w{R}(\w{\chi}, \w{n})  =
+\frac{2 n^\mu}{\mu_0} \nabla^\nu \Omega_{\mu\nu}
 \quad\mbox{with}\quad
 \Omega_{\mu\nu} := \Phi F_{\mu\nu} +
  \frac{1}{n-2} \left( \chi_\mu A_\rho  F^\rho_{\ \, \nu}
@@ -3540,13 +3544,12 @@ Note that $\Omega_{\mu\nu}$ defines a 2-form, since
 $\Omega_{\mu\nu} = - \Omega_{\nu\mu}$. It follows then from Lemma~\ref{p:sta:flux_div_2_form}
 that
 \bea
-    I & := & 2 \int_{\Sigma} \left( \w{T}(\w{n}, \w{\chi}) - \frac{T \w{n}\cdot \w{\chi}}{n-2}  \right)
-    \sqrt{\gamma} \, \D^{n-1} x
+    I & := & \frac{1}{4\pi} \int_{\Sigma}  \w{R}(\w{\chi}, \w{n}) \sqrt{\gamma} \, \D^{n-1} x
    = \frac{2}{\mu_0} \int_{\Sigma} \nabla^\nu \Omega_{\mu\nu} n^\mu \sqrt{\gamma}
-   \, \D^{n-1} x \nonumber \\
+   \, \D^{n-1} x
+   =  - \frac{2}{\mu_0} \int_{\Sigma} \nabla^\nu \Omega_{\mu\nu}  \D V^\mu \nonumber \\
    & = &
-    - \frac{2}{\mu_0} \int_{\Sigma} \nabla^\nu \Omega_{\mu\nu}  \D V^\mu
-    = -\frac{1}{\mu_0} \Big( \underbrace{\int_{\Sp_\infty} \Omega_{\mu\nu} \, \D S^{\mu\nu}}_{0}
+    -\frac{1}{\mu_0} \Big( \underbrace{\int_{\Sp_\infty} \Omega_{\mu\nu} \, \D S^{\mu\nu}}_{0}
       - \int_{\Sp_{\rm int}} \Omega_{\mu\nu} \, \D S^{\mu\nu} \Big) \nonumber
 \eea
 We have set the integral on $\Sp_\infty$ to zero since
