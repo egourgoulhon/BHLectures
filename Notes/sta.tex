@@ -1131,6 +1131,7 @@ of the metric tensor.
 \end{proof}
 
 \subsection{Asymptotic expression of the metric in stationary asymptotically flat spacetimes}
+\label{s:sta:asymptotic_metric}
 
 Let us now consider a generic (not necessarily weakly relativistic) $n$-dimensional spacetime
 $(\M,\w{g})$ that is stationary and asymptotically flat, with $\w{g}$
@@ -1807,18 +1808,18 @@ The Komar masses over $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ are then
 related by
 \be \label{e:sta:Komar_mass_vol_integ_R}
     \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + \frac{n-2}{8\pi(n-3)}
-    \int_{\Sigma} \w{R}(\w{n}, \w{\xi}) \sqrt{\gamma} \, \D^{n-1} x , }
+    \int_{\Sigma} \w{R}(\w{\xi}, \w{n}) \sqrt{\gamma} \, \D^{n-1} x , }
 \ee
 where $\w{R}$ is the Ricci tensor of $\w{g}$,
 $\w{n}$ is the future-directed unit normal to $\Sigma$
-and $\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
+and $\sqrt{\gamma}\,\D^{n-1} x$ is the volume element on $\Sigma$
 induced by $\w{g}$.
 If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq_n}) with some energy-momentum
 tensor $\w{T}$ and $\Lambda=0$, then
 the above formula may be rewritten as
 \be \label{e:sta:Komar_mass_vol_integ}
     \encadre{ M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} + \frac{n-2}{n-3}
-    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T}{n-2} \, \w{n}\cdot \w{\xi} \right)
+    \int_{\Sigma} \left( \w{T}(\w{\xi}, \w{n}) - \frac{T}{n-2} \, \w{\xi}\cdot \w{n} \right)
     \sqrt{\gamma} \, \D^{n-1} x , }
 \ee
 where $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
@@ -1860,8 +1861,8 @@ the value of $V$ being determined to ensure $\w{u}\cdot\w{u} = -1$.
 Let us choose for $\Sigma$ a hypersurface orthogonal to $\w{\xi}$
 with an outer boundary  $\Sp_{\rm ext}$ but no inner boundary $\Sp_{\rm int}$.
 Since $\Sigma$ is orthogonal to $\w{\xi}$, we have
-necessarily $\w{n} = \w{u}$, so that $\w{T}(\w{n},\w{\xi}) = V \w{T}(\w{u},\w{u})
-= V \rho$ and $\w{g}(\w{n},\w{\xi}) = V \w{g}(\w{u},\w{u}) = -V$. Given that
+necessarily $\w{n} = \w{u}$, so that $\w{T}(\w{\xi},\w{n}) = V \w{T}(\w{u},\w{u})
+= V \rho$ and $\w{\xi}\cdot\w{n} = V \w{u}\cdot\w{u} = -V$. Given that
 $T = 3 p  - \rho$, formula~(\ref{e:sta:Komar_mass_vol_integ}) with $n=4$ and
 $M_{\Sp_{\rm int}} =  0$ (cf. Remark~\ref{r:sta:Komar_mass_single_boundary} above)
 results in
@@ -1907,21 +1908,31 @@ with $\Lambda=0$ share the same Komar mass:
     M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} .
 \ee
 \end{prop}
-We then have:
+
+The concept of ``total mass'' of a stationary and asymptotically flat spacetime is well captured by
+the Komar mass at infinity:
+
 \begin{prop}[Komar mass at infinity]
 \label{p:sta:Komar_mass_inf}
 Let $(\M,\w{g})$ be a stationary and asymptotically flat $n$-dimensional spacetime.
-Let $\Sigma$ be any spacelike hypersurface that is asymptotically orthogonal
-to the stationary Killing vector field $\w{\xi}$.
-If the energy-momentum tensor $\w{T}$ has a compact support
-$\mathscr{D}\subset \M$, the Komar mass over a closed $(n-2)$-surface $\Sp$ lying in
-$\Sigma$ is independent of $\Sp$ as long as $\Sp$ lies outside
-$\mathscr{D}$. Moreover, it is independent of the choice of $\Sigma$ as well.
-We shall call it the
-\defin{Komar mass at infinity}\index{Komar!mass!at infinity}\index{mass!Komar -- at infinity}
+Let $(x^\alpha)$ be an asymptotically Minkowskian coordinate system (cf. Sec.~\ref{s:sta:asymptotic_metric})
+such that $\wpar_0 = \w{\xi}$ (the stationary Killing vector). Let $\Sp_r$ be the
+$(n-2)$-surface defined by $(x^0, r) = \mathrm{const}$, where $r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$.
+If the Komar mass $M_{\Sp_r}$ converges when $r\to +\infty$, we call
+\be \label{e:sta:def_M_infty}
+    M_\infty := \lim_{r\to +\infty} M_{\Sp_r}
+\ee
+the \defin{Komar mass at infinity}\index{Komar!mass!at infinity}\index{mass!Komar -- at infinity}
 or \defin{total mass}\index{total!mass}\index{mass!total --} of the spacetime
-$(\M,\w{g})$ and denote it by $M_\infty$.
+$(\M,\w{g})$. Moreover, if $\w{g}$ obeys the Einstein equation with $\Lambda=0$
+and if the energy-momentum tensor $\w{T}$ vanishes for $r$ larger than some threshold $r_0$,
+one has $M_\infty = M_{\Sp_r}$ for any $r\geq r_0$.
 \end{prop}
+\begin{proof}
+Since for $r\geq r_0$, $\Sp_r$ is located in a vacuum region of spacetime,
+the value of  $M_{\Sp_r}$ is independent of $r$ by Property~\ref{p:sta:Komar_mass_invariant},
+hence $M_\infty = M_{\Sp_r}$.
+\end{proof}
 
 \begin{example}[Total mass of Schwarzschild spacetime]
 We have already noticed in Example~\ref{x:sta:Komar_mass_Schw} that in the Schwarzschild
@@ -1932,7 +1943,7 @@ We thus conclude that $M_\infty = m$.
 
 
 \begin{example}[Vanishing total mass of cubic Galileon black holes]
-In an asymptotically flat and stationary 4-dimensional spacetime, if $\dd\uu{\xi}$
+In a stationary and asymptotically flat 4-dimensional spacetime, if $\dd\uu{\xi}$
 decays faster that $1/r^2$, then $M_\infty = 0$.
 This happens for black holes in a scalar-tensor theory of gravity known as the \emph{cubic Galileon}\index{cubic Galileon}, as shown in Sec.~5.1 of Ref.~\cite{VanaeGGC20}.
 Actually, for these black holes, the spacetime metric tends to Minkowsky metric as fast as
@@ -2273,8 +2284,8 @@ $J_{\Sp} = J_{(1)}$.
 \end{proof}
 
 
-The volume integral formula (\ref{e:sta:Komar_mass_vol_integ}) for the
-Komar mass relies only the Einstein equation and $\w{\xi}$ being a Killing vector.
+The volume integral formula (\ref{e:sta:Komar_mass_vol_integ_R}) for the
+Komar mass relies only on $\w{\xi}$ being a Killing vector.
 We may therefore transpose it to the Komar angular momentum:
 
 \begin{prop}[volume integral formula for the Komar angular momentum]
@@ -2287,18 +2298,18 @@ The Komar angular momenta over $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ are then
 related by
 \be \label{e:sta:Komar_angul_vol_integ_R}
     \encadre{ J_{\Sp_{\rm ext}} = J_{\Sp_{\rm int}} - \frac{1}{8\pi}
-    \int_{\Sigma} \w{R}(\w{n}, \w{\eta}) \sqrt{\gamma} \, \D^{n-1} x  , }
+    \int_{\Sigma} \w{R}(\w{\eta}, \w{n}) \sqrt{\gamma} \, \D^{n-1} x  , }
 \ee
 where $\w{R}$ is the Ricci tensor of $\w{g}$,
 $\w{n}$ is the future-directed unit normal to $\Sigma$
-and $\sqrt{\gamma}\,\D x^1 \cdots \D x^{n-1}$ is the volume element on $\Sigma$
+and $\sqrt{\gamma}\,\D^{n-1} x$ is the volume element on $\Sigma$
 induced by $\w{g}$.
 If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq_n}) with some energy-momentum
 tensor $\w{T}$ and $\Lambda=0$, then
 the above formula may be rewritten as
 \be \label{e:sta:Komar_angul_vol_integ}
     \encadre{ J_{\Sp_{\rm ext}} = J_{\Sp_{\rm int}} -
-    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\eta}) - \frac{T}{n-2} \, \w{n}\cdot\w{\eta} \right)
+    \int_{\Sigma} \left( \w{T}(\w{\eta}, \w{n}) - \frac{T}{n-2} \, \w{\eta}\cdot\w{n} \right)
     \sqrt{\gamma} \, \D^{n-1} x  , }
 \ee
 where $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
@@ -2307,10 +2318,10 @@ where $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
 \begin{remark}
 Since the axisymmetry generator $\w{\eta}$ is spacelike, the spacelike hypersurface
 $\Sigma$ can be chosen so that $\w{\eta}$ is tangent to it; one has then
-$\w{n}\cdot\w{\eta} = 0$ and the second term in the integrand of
+$\w{\eta}\cdot\w{n} = 0$ and the second term in the integrand of
 Eq.~(\ref{e:sta:Komar_angul_vol_integ}) vanishes identically.
 Moreover, if one expresses $\w{T}$ via the $\mathcal{N}$+1 decomposition (\ref{e:sta:T_3p1}),
-one can write the first term as $\w{T}(\w{n}, \w{\eta}) = - \langle \w{p}, \w{\eta} \rangle$,
+one can write the first term as $\w{T}(\w{\eta}, \w{n}) = - \langle \w{p}, \w{\eta} \rangle$,
 so that formula (\ref{e:sta:Komar_angul_vol_integ}) simplifies to
 \be
     J_{\Sp_{\rm ext}} = J_{\Sp_{\rm int}} +
@@ -2334,11 +2345,30 @@ angular momentum:
 \end{prop}
 
 
+As for the total mass (cf. Property~\ref{p:sta:Komar_mass_inf}), the concept of ``total angular momentum'' of an axisymmetric and asymptotically flat spacetime is well captured by the Komar angular momentum at infinity:
+
+\begin{prop}[Komar angular momentum at infinity]
+Let $(\M,\w{g})$ be an axisymmetric and asymptotically flat $n$-dimensional spacetime.
+Let $(x^\alpha)$ be an asymptotically Minkowskian coordinate system (cf. Sec.~\ref{s:sta:asymptotic_metric})
+such that the axisymmetric Killing vector $\w{\eta}$ is tangent to the hypersurfaces $x^0 = \mathrm{const}$.
+Let $\Sp_r$ be the $(n-2)$-surface defined by $(x^0, r) = \mathrm{const}$, where $r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$.
+If the Komar angular momentum $J_{\Sp_r}$ converges when $r\to +\infty$, we call
+\be
+    J_\infty := \lim_{r\to +\infty} J_{\Sp_r}
+\ee
+the \defin{Komar angular momentum at infinity}\index{Komar!angular momentum!at infinity}\index{angular!momentum!Komar -- at infinity}
+or \defin{total angular momentum}\index{total!angular momentum}\index{angular!momentum!total --} of the spacetime $(\M,\w{g})$. Moreover, if $\w{g}$ obeys the Einstein equation with $\Lambda=0$
+and if the energy-momentum tensor $\w{T}$ vanishes for $r$ larger than some threshold $r_0$,
+one has $J_\infty = J_{\Sp_r}$ for any $r\geq r_0$.
+\end{prop}
+
+
+
 \begin{remark}
 There is no concept of ``ADM angular momentum'' (due to the so-called
-\emph{supertranslation ambiguity} at spatial infinity, cf. e.g. Sec.~8.5
-of Ref.~\cite{Gourg12}), so there is no point in comparing the Komar angular momentum
-with it, contrary to what was done in Sec.~\ref{s:sta:Komar_ADM} for the mass.
+\emph{supertranslation ambiguity} at spatial infinity, cf. e.g. Sec.~6 of Ref.~\cite{York79}
+or Sec.~8.5 of Ref.~\cite{Gourg12}). Consequently, there is no point in comparing the Komar angular momentum
+with an ``ADM'' counterpart, contrary to what was done in Sec.~\ref{s:sta:Komar_ADM} for the mass.
 \end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3048,22 +3078,34 @@ any cross-section of $\Hor_{k}$
 as given by Eq.~(\ref{e:sta:def_Komar_J}).
 In Eq.~(\ref{e:sta:Smarr_H_k}), it is intended that $L_{k} = 0$ if
 $\w{\chi}_{k} = \w{\xi}$, so that there is no sum over $i$ in that case.
-Furthermore, if $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq})
-with $\Lambda=0$, the Komar mass at infinity of the spacetime $(\M,\w{g})$
+Furthermore, the Komar mass at infinity of the spacetime $(\M,\w{g})$
 (cf. Property~\ref{p:sta:Komar_mass_inf}) obeys the \defin{generalized Smarr formula}\index{generalized Smarr formula}\index{Smarr formula!generalized --}:
+\be
+\label{e:sta:Smarr_M_infty_R}
+    \encadre{ \frac{2(n- 3)}{n - 2}  M_\infty = \sum_{k = 1}^K
+    \left(
+    \frac{\kappa_{k} A_{k}}{4\pi}
+    + 2  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} J_{\Hor_{k}(i)} \right)
+     + \frac{1}{4\pi}  \int_{\Sigma} \w{R}(\w{\xi}, \w{n}) \sqrt{\gamma} \, \D^{n-1} x },
+\ee
+where $\Sigma$ is an asymptotically flat spacelike hypersurface, the inner boundary
+of which is a cross-section of the event horizon, i.e. some union of cross-sections
+of the connected components $\Hor_{k}$,
+$\w{R}$ is the Ricci tensor of $\w{g}$
+and $\w{n}$ is the future-directed unit normal
+to $\Sigma$.
+If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq})
+with $\Lambda=0$, this formula can be rewritten as
 \bea
     \frac{2(n- 3)}{n - 2}  M_\infty & = & \sum_{k = 1}^K
     \left(
     \frac{\kappa_{k} A_{k}}{4\pi}
     + 2  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} J_{\Hor_{k}(i)} \right) \nonumber \\
     & & + 2
-    \int_{\Sigma} \left( \w{T}(\w{n}, \w{\xi}) - \frac{T \w{n}\cdot \w{\xi}}{n-2}  \right)
+    \int_{\Sigma} \left( \w{T}(\w{\xi}, \w{n}) - \frac{T \w{\xi}\cdot \w{n}}{n-2}  \right)
     \sqrt{\gamma} \, \D^{n-1} x , \label{e:sta:Smarr_M_infty}
 \eea
-where $\Sigma$ is an asymptotically flat spacelike hypersurface, the inner boundary
-of which is a cross-section of the event horizon, i.e. some union of cross-sections
-of the connected components $\Hor_{k}$, $\w{n}$ is the future-directed unit normal
-to $\Sigma$ and $\w{T}$ is the matter energy-momentum tensor.
+where $\w{T}$ is the matter energy-momentum tensor.
 \end{prop}
 
 \begin{proof}
@@ -3110,8 +3152,8 @@ Given that $\kappa_{k}$ is constant (Property~\ref{p:neh:zeroth_law}), the integ
 of the above expression over $\Sp_{k}$ reduces to $-2\kappa_{k} A_{k}$, by the
 very definition of the area $A_{k}$ [cf. Eq.~(\ref{e:neh:total_area})].
 This establishes Eq.~(\ref{e:sta:Smarr_H_k}).
-Finally, Eq.~(\ref{e:sta:Smarr_M_infty}) follows from
-Eqs.~(\ref{e:sta:Komar_mass_vol_integ}) and (\ref{e:sta:Smarr_H_k}), once
+Finally, Eq.~(\ref{e:sta:Smarr_M_infty_R}) follows from
+Eqs.~(\ref{e:sta:def_M_infty}), (\ref{e:sta:Komar_mass_vol_integ_R}) and (\ref{e:sta:Smarr_H_k}), once
 one has noticed that $\Sp_{\rm int} = \bigcup_{k=1}^K \Sp_{k}$,
 so that $M_{\Sp_{\rm int}} = \sum_{k=1}^K M_{\Hor_{k}}$.
 \end{proof}
@@ -3368,7 +3410,7 @@ all the connected components $\Hor_k$ are assumed to be Killing horizons with
 respect to the same Killing vector $\w{\chi}$; in other words, the
 rotation velocities
 $\Omega^{(i)}$ and axisymmetric Killing vectors $\w{\eta}_{(i)}$
-are the same for all the $\Hor_k$'s. We may have $L=0$,
+are the same for all the $\Hor_k$'s. One may have $L=0$,
 i.e. $\w{\chi} = \w{\xi}$ (static configuration).
 The Komar mass formula is then
 \be \label{e:sta:Smarr_electrovac}
