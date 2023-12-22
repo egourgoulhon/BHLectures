@@ -2399,7 +2399,7 @@ first case, but not trivial for the second one.
 
 By Lemma~\ref{p:def:tangent_to_null_hyp} (Sec.~\ref{s:def:spacelike_sections}),
 if the Killing vector
-field $\w{\xi}$ is null on all $\Hor$, it is necessarily tangent to the null geodesic generators
+field $\w{\xi}$ is null on $\Hor$, it is necessarily tangent to the null geodesic generators
 of $\Hor$ and therefore collinear to the null normals $\wl$ of $\Hor$. From the definition
 of a Killing horizon
 given in Sec.~\ref{s:neh:def_Killing_hor}, we get immediately:
@@ -3046,27 +3046,32 @@ we shall specialize it to electrovacuum black holes (Sec.~\ref{s:sta:Smarr_elect
 
 \begin{prop}[generalized Smarr formula]
 \label{p:sta:Smarr_gen}
-Let $(\M,\w{g})$ be a $n$-dimensional stationary spacetime, with stationary
-Killing vector $\w{\xi}$. Let us assume that $(\M,\w{g})$ contains a black
+Let $(\M,\w{g})$ be a $n$-dimensional stationary spacetime (stationary
+Killing vector $\w{\xi}$) that contains a black
 hole, the event horizon of which has $K \geq 1$ connected components
-$\Hor_{1}$, $\ldots$, $\Hor_{K}$. Each $\Hor_{k}$ ($1\leq k \leq K$)
-is a Killing horizon with respect to a Killing vector $\w{\chi}_{k}$,
-with either $\w{\chi}_{k} = \w{\xi}$ if $\w{\xi}$ is null on all $\Hor_{k}$
-(Property~\ref{p:sta:H_Killing_hor_xi_null}) or
-$\w{\chi}_{k} = \w{\xi} + \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \w{\eta}_{\Hor_k(i)}$
-(Properties~\ref{p:sta:strong_rigidity_thm} and \ref{p:sta:axisymmetry_BH}),
+$\Hor_{1}$, $\ldots$, $\Hor_{K}$.
+We shall assume that each $\Hor_{k}$ is a Killing horizon
+with respect to a Killing vector $\w{\chi}_{k}$.
+This is guaranteed with $\w{\chi}_k = \w{\xi}$
+if $\Hor_{k}$ is non-rotating ($\w{\xi}$ null on all $\Hor_{k}$;
+Property~\ref{p:sta:H_Killing_hor_xi_null}), while if
+$\Hor_{k}$ is rotating ($\w{\xi}$ spacelike on some parts of $\Hor_{k}$),
+this holds under the hypotheses of the strong rigidity theorem
+(Property~\ref{p:sta:strong_rigidity_thm}),
+with $\w{\chi}_{k} = \w{\xi} + \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \w{\eta}_{\Hor_k(i)}$,
 where the $\Omega^{(i)}_{\Hor_k}$ are constants and
-the $\w{\eta}_{\Hor_k(i)}$ are axisymmetric Killing vectors, which
-a priori depend on the connected component $\Hor_{k}$ (cf. Remark~\ref{r:sta:dep_eta_Omega}
-above). Being a non-expanding horizon, each
+the $\w{\eta}_{\Hor_k(i)}$ are axisymmetric Killing vectors
+(Property~\ref{p:sta:axisymmetry_BH}).
+Being a non-expanding horizon, each
 $\Hor_{k}$ has a well defined area $A_{k}$ (Property~\ref{p:neh:invariance_area}).
 Let $\kappa_{k}$ be the surface gravity of $\Hor_{k}$, i.e.
-the coefficient such that the identity
+the coefficient such that
 $\wnab_{\w{\chi}_{k}}\w{\chi}_{k} =  \kappa_{k} \w{\chi}_{k}$
-holds on $\Hor_{k}$ [cf. Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
-According to the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law}),
-$\kappa_{k}$ is constant.
-Then the Komar mass $M_{\Hor_{k}}$ over any cross-section
+ on $\Hor_{k}$ [cf. Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
+Let us assume that the null dominance condition (\ref{e:neh:null_dominant_cond}) is fulfilled
+on $\Hor_{k}$; the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law})
+implies then that $\kappa_{k}$ is constant.
+The Komar mass $M_{\Hor_{k}}$ over any cross-section
 of $\Hor_{k}$, as defined by Eq.~(\ref{e:sta:def_Komar_mass}), obeys
 \be \label{e:sta:Smarr_H_k}
     M_{\Hor_{k}} = \frac{n - 2}{2(n- 3)}\left(
@@ -3552,7 +3557,7 @@ that
     -\frac{1}{\mu_0} \Big( \underbrace{\int_{\Sp_\infty} \Omega_{\mu\nu} \, \D S^{\mu\nu}}_{0}
       - \int_{\Sp_{\rm int}} \Omega_{\mu\nu} \, \D S^{\mu\nu} \Big) \nonumber
 \eea
-We have set the integral on $\Sp_\infty$ to zero since
+We have set the integral on $\Sp_\infty$ to zero because
 $\w{F}$ decays to zero sufficiently fast at the asymptotically
 flat end of $\Sigma$ (otherwise $(\M,\w{g})$ could not be asymptotically flat).
 Since $\Sp_{\rm int} = \bigcup_{k=1}^K \Sp_k$, we may write
