@@ -3069,9 +3069,9 @@ the coefficient such that
 $\wnab_{\w{\chi}_{k}}\w{\chi}_{k} =  \kappa_{k} \w{\chi}_{k}$
  on $\Hor_{k}$ [cf. Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
 Let us assume that the null dominance condition (\ref{e:neh:null_dominant_cond}) is fulfilled
-on $\Hor_{k}$; the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law})
-implies then that $\kappa_{k}$ is constant.
-The Komar mass $M_{\Hor_{k}}$ over any cross-section
+on $\Hor_{k}$, so that the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law})
+implies that $\kappa_{k}$ is constant.
+Then the Komar mass $M_{\Hor_{k}}$ over any cross-section
 of $\Hor_{k}$, as defined by Eq.~(\ref{e:sta:def_Komar_mass}), obeys
 \be \label{e:sta:Smarr_H_k}
     M_{\Hor_{k}} = \frac{n - 2}{2(n- 3)}\left(
@@ -3100,7 +3100,7 @@ of the connected components $\Hor_{k}$,
 $\w{R}$ is the Ricci tensor of $\w{g}$
 and $\w{n}$ is the future-directed unit normal
 to $\Sigma$.
-If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq})
+If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq_n})
 with $\Lambda=0$, this formula can be rewritten as
 \bea
     \frac{2(n- 3)}{n - 2}  M_\infty & = & \sum_{k = 1}^K
@@ -3191,17 +3191,24 @@ in Eqs.~(\ref{e:sta:Smarr_H_k}), (\ref{e:sta:Smarr_M_infty_R}) and (\ref{e:sta:S
 Let $(\M, \w{g})$ be a stationary 4-dimensional spacetime
 (stationary Killing vector $\w{\xi}$) containing
 a black hole with a connected event horizon $\Hor$.
-$\Hor$ is necessarily a Killing horizon with respect to either the Killing
-vector $\w{\xi}$ (Property~\ref{p:sta:H_Killing_hor_xi_null})
-or the Killing vector $\w{\chi} = \w{\xi} + \Omega_{\Hor} \w{\eta}$
-(Property~\ref{p:sta:strong_rigidity_thm} and Eq.~(\ref{e:sta:chi_xi_OmegaH_eta})),
+If $\Hor$ is non-rotating ($\w{\xi}$ null on all $\Hor$), it is necessarily
+a Killing horizon with respect to $\w{\xi}$. If $\Hor$ is rotating
+($\w{\xi}$ partly spacelike on $\Hor$), we shall assumes that
+the hypotheses of the strong rigidity theorem
+(Property~\ref{p:sta:strong_rigidity_thm}) are fulfilled, so that
+$\Hor$ is a Killing horizon with respect to the
+Killing vector $\w{\chi} = \w{\xi} + \Omega_{\Hor} \w{\eta}$
+[Eq.~(\ref{e:sta:chi_xi_OmegaH_eta})],
 where $\Omega_{\Hor}$ is the angular velocity of $\Hor$ and $\w{\eta}$ is
-an axisymmetric Killing vector. We shall combine these two cases by stating
+an axisymmetric Killing vector.
+We shall combine these two cases by stating
 that the former corresponds to $\Omega_{\Hor} = 0$, so that $\w{\chi} = \w{\xi}$.
 The surface gravity $\kappa$ of $\Hor$ is defined by the identity
 $\wnab_{\w{\chi}}\w{\chi} \equalH \kappa \w{\chi}$ [cf. Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
-By Property~\ref{p:neh:zeroth_law} (zeroth law), $\kappa$
-is a constant. Then the Komar mass $M_{\Hor}$ over any cross-section
+Assuming that the null dominance condition (\ref{e:neh:null_dominant_cond}) is fulfilled
+on $\Hor$, the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law})
+leads to $\kappa = \mathrm{const}$.
+Then the Komar mass $M_{\Hor}$ over any cross-section
 of $\Hor$ [cf. Eq.~(\ref{e:sta:def_Komar_mass})] obeys
 \be
     M_{\Hor} = \frac{\kappa}{4\pi} A + 2 \Omega_{\Hor} J_{\Hor} ,
@@ -3219,7 +3226,7 @@ where $\Sigma$ is an asymptotically flat spacelike hypersurface, the inner bound
 of which is a cross-section of $\Hor$,
 $\w{R}$ is the Ricci tensor of $\w{g}$ and
 $\w{n}$ is the future-directed unit normal to $\Sigma$.
-If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq})
+If $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq_n})
 with $\Lambda=0$, this formula can be rewritten as
 \be \label{e:sta:Smarr_M_infty_n4}
     M_\infty = \frac{\kappa}{4\pi} A + 2 \Omega_{\Hor} J_{\Hor}
@@ -3253,7 +3260,7 @@ for a static ($\Omega_{\Hor} = 0$) black hole in vaccum ($\w{T}=0$).
 
 \subsection{Electrovacuum Smarr formula} \label{s:sta:Smarr_electrovac}
 
-Besides the vacuum case, the generalized Smarr formulas (\ref{e:sta:Smarr_M_infty})
+Beside the vacuum case, the generalized Smarr formulas (\ref{e:sta:Smarr_M_infty})
 and (\ref{e:sta:Smarr_M_infty_n4}) simplifies significantly for
 electrovacuum spacetimes, i.e. spacetimes ruled by general relativity and
 for which $\w{T}$ is the energy-momentum
