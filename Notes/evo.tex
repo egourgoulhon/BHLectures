@@ -82,12 +82,69 @@ There is no loss of generality in doing so, since the ``nearby'' manifold
 must be diffeomorphic to the original one, so that
 we can identify the two manifolds. In particular, both manifolds have the same
 topology, since one would not qualify as ``nearby'' a manifold with a distinct topology.
-Furthermore, we may consider that the black hole event horizon $\Hor$ is the same
-hypersurface of $\M$ in both spacetimes. Again, if they would differ, we could find a diffeomorphism
+
+
+\begin{prop}[mass variation formula for generic black holes]
+\label{p:evo:first_law_gen}
+Let $(\M,\w{g})$ be a $n$-dimensional stationary spacetime (stationary
+Killing vector $\w{\xi}$) that contains a black
+hole, the event horizon of which has $K \geq 1$ connected components
+$\Hor_{1}$, $\ldots$, $\Hor_{K}$.
+We shall assume that each $\Hor_{k}$ is a Killing horizon
+with respect to a Killing vector $\w{\chi}_{k}$.
+This is guaranteed with $\w{\chi}_k = \w{\xi}$
+if $\Hor_{k}$ is non-rotating ($\w{\xi}$ null on all $\Hor_{k}$;
+Property~\ref{p:sta:H_Killing_hor_xi_null}), while if
+$\Hor_{k}$ is rotating ($\w{\xi}$ spacelike on some parts of $\Hor_{k}$),
+this holds under the hypotheses of the strong rigidity theorem
+(Property~\ref{p:sta:strong_rigidity_thm}),
+with $\w{\chi}_{k} = \w{\xi} + \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \w{\eta}_{\Hor_k(i)}$,
+where the $\Omega^{(i)}_{\Hor_k}$ are constants and
+the $\w{\eta}_{\Hor_k(i)}$ are axisymmetric Killing vectors
+(Property~\ref{p:sta:axisymmetry_BH}).
+Let $J_{\Hor_{k}(i)}$ be the Komar angular momentum with respect to
+$\w{\eta}_{\Hor_k(i)}$ over any cross-section of $\Hor_{k}$
+[Eq.~(\ref{e:sta:def_Komar_J})].
+Being a non-expanding horizon, each
+$\Hor_{k}$ has a well defined area $A_{k}$ (Property~\ref{p:neh:invariance_area}).
+Let $\kappa_{k}$ be the surface gravity of $\Hor_{k}$, i.e.
+the coefficient such that
+$\wnab_{\w{\chi}_{k}}\w{\chi}_{k} =  \kappa_{k} \w{\chi}_{k}$
+ on $\Hor_{k}$ [cf. Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
+Let us assume that the null dominance condition (\ref{e:neh:null_dominant_cond}) is fulfilled
+on $\Hor_{k}$; by the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law}), this
+implies that $\kappa_{k}$ is constant.
+Let $(\M,\w{g}+\delta\w{g})$ be a nearby stationary spacetime sharing the same characteristics.
+The change $\delta M_\infty$ of the Komar at infinity between the two spacetimes
+(cf. Property~\ref{p:sta:Komar_mass_inf})
+is related to the changes $\delta A_k$ in the areas and to the changes
+$\delta J_{\Hor_{k}(i)}$ in the Komar angular momenta by
+\bea
+    \delta  M_\infty & = & \sum_{k = 1}^K
+    \left(
+    \frac{\kappa_{k}}{8\pi}\, \delta A_k
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right) \nonumber \\
+    & & + \frac{1}{16\pi}
+    \int_{\Sigma} G^{\mu\nu} \delta g_{\mu\nu} \, \xi_\rho \D V^\rho
+        - \frac{1}{8\pi} \,
+   \delta  \int_{\Sigma} G_{\mu\nu} \, \xi^\mu \D V^\nu ,
+\eea
+where $\Sigma$ is an asymptotically flat spacelike hypersurface, the inner boundary
+of which is a cross-section of the event horizon, i.e. some union of cross-sections
+of the connected components $\Hor_{k}$,
+$\w{G}$ is the Einstein tensor of $\w{g}$
+and $\D\w{V}$
+is the normal volume element vector of $\Sigma$, as defined by Eq.~(\ref{e:sta:normal_vol_element}).
+\end{prop}
+
+\begin{proof}
+We may consider that the black hole event horizon $\Hor$ is the same
+hypersurface of $\M$ in both spacetimes. If they would differ, we could find a diffeomorphism
 $\M\to\M$ that would map the original horizon to the ``nearby'' one.
 
-
 ... TO BE COMPLETED ...
+
+\end{proof}
 
 
 \begin{hist}
