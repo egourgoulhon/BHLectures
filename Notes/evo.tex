@@ -159,14 +159,50 @@ Note that $h^{\alpha\beta} \neq \delta g^{\alpha\beta}$. Actually, by variation 
 identity $g^{\alpha\mu} g_{\mu\beta} = \delta^\alpha_{\ \, \beta}$, one gets
 $\delta g^{\alpha\beta} = - h^{\alpha\beta}$.
 
-The starting point for the proof of (\ref{e:evo:mass_variation_gal})
+The starting point for proving (\ref{e:evo:mass_variation_gal})
 is the variation of the generalized Smarr formula (\ref{e:sta:Smarr_M_infty_R}):
+\bea
+ \frac{2(n- 3)}{n - 2} \delta  M_\infty& = &\sum_{k = 1}^K
+    \left[
+    \frac{1}{4\pi} \left( A_k\,  \delta \kappa_{k}  + \kappa_k \, \delta A_k \right)
+    + 2  \sum_{i=1}^{L_{k}} \left( J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_k}
+    + \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right) \right] \nonumber \\
+    & &
+     - \frac{1}{4\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu ,
+\eea
+where $\Sigma$ is any asymptotically flat spacelike hypersurface, the inner boundary
+of which is a cross-section of the event horizon, i.e. some union of cross-sections $\Sp_k$
+of the connected components $\Hor_{k}$ and $\D V^\mu$ is the normal volume element vector
+of $\Sigma$ defined by Eq.~(\ref{e:sta:normal_vol_element}).
+Let us start by evaluating the term $A_k\,  \delta \kappa_{k}$ in the above formula.
+For the sake of brevity, let us drop the index $k$ in what follows, given that
+we temporarily focuss on a single connected component $\Hor_k$ of the event horizon $\Hor$.
+The surface gravity $\kappa$ $(= \kappa_k)$ is given by Eq.~(\ref{e:neh:dxi2_kappa}):
+$2\kappa = \zeta^\mu \partial_\mu(\chi_\nu \chi^\nu)$, where $\w{\chi}$ ($ = \w{\chi}_k$) is the Killing vector
+normal to the Killing horizon $\Hor_k$ and $\w{\zeta}$ is a null vector field defined on $\Hor_k$,
+transverse to $\Hor_k$, normal
+to the cross-section $\Sp_k = \Hor_k \cap \Sigma$
+and normalized by $\w{\chi}\cdot\w{\zeta}=-1$.
+Note that the pair
+$(\w{\chi},\w{\zeta})$ is a null basis of the normal plane $T^\perp_p \Sp_k$
+at each point $p\in\Sp_k$,
+$\w{\chi}$ and $\w{\zeta}$ playing the role of the vectors $\wl$ and $\w{k}$ in Fig.~\ref{f:def:TS_ortho}.
+Varying the above expression of $\kappa$ yields
+\bea
+    2 \delta \kappa & = & \delta \zeta^\mu \partial_\mu ( \chi_\nu \chi^\nu )
+    + \zeta^\mu \partial_\mu \left( \delta\chi_\nu \, \chi^\nu
+        + \chi_\nu \, \delta \chi^\nu \right) \nonumber \\
+        & = & \delta \zeta^\mu \nabla_\mu ( \chi_\nu \chi^\nu )
+    +  \zeta^\mu \nabla_\mu \left( \delta\chi_\nu \, \chi^\nu
+        + \chi_\nu \, \delta \chi^\nu \right)  \nonumber \\
+        & = & 2 \delta \zeta^\mu  \chi^\nu \nabla_\mu  \chi_\nu
+        + \zeta^\mu \left( \chi^\nu \nabla_\mu \delta\chi_\nu
+         + \delta\chi_\nu  \nabla_\mu \chi^\nu
+         + \delta \chi^\nu  \nabla_\mu \chi_\nu  +  \chi_\nu \nabla_\mu \delta \chi^\nu
+        \right) . \nonumber
+\eea
 
-%\frac{2(n- 3)}{n - 2}  M_\infty = \sum_{k = 1}^K
-    %\left(
-    %\frac{\kappa_{k} A_{k}}{4\pi}
-    %+ 2  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} J_{\Hor_{k}(i)} \right)
-     %+ \frac{1}{4\pi}  \int_{\Sigma} \w{R}(\w{\xi}, \w{n}) \sqrt{\gamma} \, \D^{n-1} x },
+
 
 
 ... TO BE COMPLETED ...
