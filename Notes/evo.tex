@@ -101,10 +101,17 @@ Property~\ref{p:sta:H_Killing_hor_xi_null}), while if
 $\Hor_{k}$ is rotating ($\w{\xi}$ spacelike on some parts of $\Hor_{k}$),
 this holds under the hypotheses of the strong rigidity theorem
 (Property~\ref{p:sta:strong_rigidity_thm}),
-with $\w{\chi}_{k} = \w{\xi} + \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \w{\eta}_{\Hor_k(i)}$,
-where the $\Omega^{(i)}_{\Hor_k}$ are constants and
-the $\w{\eta}_{\Hor_k(i)}$ are axisymmetric Killing vectors
+with
+\be \label{e:evo:chi_k}
+\w{\chi}_{k} = \w{\xi} + \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \w{\eta}_{\Hor_k(i)},
+\ee
+where $1 \leq L_k \leq [(n-1)/2]$,
+the $\Omega^{(i)}_{\Hor_k}$'s are constants and
+the $\w{\eta}_{\Hor_k(i)}$'s are axisymmetric Killing vectors
 (Property~\ref{p:sta:axisymmetry_BH}).
+We shall encompass both the non-rotating case and the rotating one by allowing
+$L_k$ to take the value $0$ in Eq.~(\ref{e:evo:chi_k}) to
+recover $\w{\chi}_k = \w{\xi}$  if $\Hor_k$ is non-rotating.
 Let $J_{\Hor_{k}(i)}$ be the Komar angular momentum with respect to
 $\w{\eta}_{\Hor_k(i)}$ over any cross-section of $\Hor_{k}$
 [Eq.~(\ref{e:sta:def_Komar_J})].
@@ -146,9 +153,9 @@ hypersurface in both spacetimes $(\M,\w{g})$ and $(\M,\w{g}+\delta\w{g})$. If th
 $\M\to\M$ that would map the original horizon to the perturbed spacetime's horizon.
 Similarly, there is no loss of generality in considering that the Killing vectors
 $\w{\xi}$ and $\w{\eta}_{\Hor_k(i)}$ generating the stationarity and axisymmetries are identical, as vector fields on $\M$:
-\[
+\be \label{e:evo:delta_xi_eta}
     \delta\w{\xi} = 0 \qand \delta \w{\eta}_{\Hor_k(i)} = 0 .
-\]
+\ee
  This amounts to identifying the orbits
 of the isometry group actions in the two spacetimes. Given that $\Hor$ is globally invariant by these
 group actions, this requirement is compatible with the identification of $\Hor$ in both spacetimes.
@@ -158,7 +165,6 @@ with the unperturbed metric $\w{g}$. In particular, $h^{\alpha\beta} := g^{\alph
 Note that $h^{\alpha\beta} \neq \delta g^{\alpha\beta}$. Actually, by variation of the
 identity $g^{\alpha\mu} g_{\mu\beta} = \delta^\alpha_{\ \, \beta}$, one gets
 $\delta g^{\alpha\beta} = - h^{\alpha\beta}$.
-
 The starting point for proving (\ref{e:evo:mass_variation_gal})
 is the variation of the generalized Smarr formula (\ref{e:sta:Smarr_M_infty_R}):
 \bea
@@ -178,32 +184,116 @@ Let us start by evaluating the term $A_k\,  \delta \kappa_{k}$ in the above form
 For the sake of brevity, let us drop the index $k$ in what follows, given that
 we temporarily focuss on a single connected component $\Hor_k$ of the event horizon $\Hor$.
 The surface gravity $\kappa$ $(= \kappa_k)$ is given by Eq.~(\ref{e:neh:dxi2_kappa}):
-$2\kappa = \zeta^\mu \partial_\mu(\chi_\nu \chi^\nu)$, where $\w{\chi}$ ($ = \w{\chi}_k$) is the Killing vector
-normal to the Killing horizon $\Hor_k$ and $\w{\zeta}$ is a null vector field defined on $\Hor_k$,
+$2\kappa = k^\mu \partial_\mu(\chi_\nu \chi^\nu)$, where $\w{\chi}$ ($ = \w{\chi}_k$) is the Killing vector
+normal to the Killing horizon $\Hor_k$ and $\w{k}$ is a null vector field defined on $\Hor_k$,
 transverse to $\Hor_k$, normal
 to the cross-section $\Sp_k = \Hor_k \cap \Sigma$
-and normalized by $\w{\chi}\cdot\w{\zeta}=-1$.
+and normalized by $\w{\chi}\cdot\w{k}=-1$.
 Note that the pair
-$(\w{\chi},\w{\zeta})$ is a null basis of the normal plane $T^\perp_p \Sp_k$
+$(\w{\chi},\w{k})$ is a null basis of the normal plane $T^\perp_p \Sp_k$
 at each point $p\in\Sp_k$,
-$\w{\chi}$ and $\w{\zeta}$ playing the role of the vectors $\wl$ and $\w{k}$ in Fig.~\ref{f:def:TS_ortho}.
+$\w{\chi}$ playing the role of the vector $\wl$ in Fig.~\ref{f:def:TS_ortho}.
 Varying the above expression of $\kappa$ yields
 \bea
-    2 \delta \kappa & = & \delta \zeta^\mu \partial_\mu ( \chi_\nu \chi^\nu )
-    + \zeta^\mu \partial_\mu \left( \delta\chi_\nu \, \chi^\nu
+    2 \delta \kappa & = & \delta k^\mu \partial_\mu ( \chi_\nu \chi^\nu )
+    + k^\mu \partial_\mu \left( \delta\chi_\nu \, \chi^\nu
         + \chi_\nu \, \delta \chi^\nu \right) \nonumber \\
-        & = & \delta \zeta^\mu \nabla_\mu ( \chi_\nu \chi^\nu )
-    +  \zeta^\mu \nabla_\mu \left( \delta\chi_\nu \, \chi^\nu
+        & = & \delta k^\mu \nabla_\mu ( \chi_\nu \chi^\nu )
+    +  k^\mu \nabla_\mu \left( \delta\chi_\nu \, \chi^\nu
         + \chi_\nu \, \delta \chi^\nu \right)  \nonumber \\
-        & = & 2 \delta \zeta^\mu  \chi^\nu \nabla_\mu  \chi_\nu
-        + \zeta^\mu \left( \chi^\nu \nabla_\mu \delta\chi_\nu
+        & = & 2 \delta k^\mu  \chi^\nu \nabla_\mu  \chi_\nu
+        + k^\mu \left( \chi^\nu \nabla_\mu \delta\chi_\nu
          + \delta\chi_\nu  \nabla_\mu \chi^\nu
          + \delta \chi^\nu  \nabla_\mu \chi_\nu  +  \chi_\nu \nabla_\mu \delta \chi^\nu
-        \right) . \nonumber
+        \right)  \nonumber \\
+    & = &  2 \delta k^\mu  \chi^\nu \nabla_\mu  \chi_\nu + k^\mu \left[
+        \chi^\nu ( \nabla_\mu \delta\chi_\nu + \nabla_\nu \delta \chi_\mu )
+        + 2 \delta\chi_\nu \nabla_\mu \chi^\nu
+        + \delta \chi^\nu \nabla_\mu \chi_\nu + \chi_\nu \nabla_\mu \delta\chi^\nu \right]  \nonumber \\
+    & = &  2 \delta k^\mu  \chi_\nu \nabla_\mu  \chi^\nu +
+        (\chi^\mu k^\nu + k^\mu\chi^\nu)\nabla_\mu \delta\chi_\nu
+        + k^\mu \left(
+        2 \delta\chi_\nu \nabla_\mu \chi^\nu
+        + \delta \chi^\nu \nabla_\mu \chi_\nu + \chi_\nu \nabla_\mu \delta\chi^\nu \right) . \nonumber
 \eea
-
-
-
+To get the last but one line, we have used the identity
+$\chi^\nu \nabla_\nu \delta \chi_\mu + \delta\chi_\nu \nabla_\mu \chi^\nu = 0$, which expresses
+the vanishing of the Lie derivative of the 1-form $\delta\uu{\chi}$ along $\w{\chi}$
+[Eq.~(\ref{e:bas:Lie_der_comp_nab}) with $(k,\ell)=(0,1)$]:
+\be \label{e:evo:Lie_chi_dchi}
+    \Lie{\chi} \delta\uu{\chi} = 0 .
+\ee
+The invariance property (\ref{e:evo:Lie_chi_dchi}) holds because $\uu{\chi}$ is a normal 1-form to
+$\Hor_k$ (i.e. a vector $\w{v}$ is tangent to $\Hor_k$ iff $\langle \uu{\chi}, \w{v} \rangle = 0$)
+and since $\Hor_k$ is the same hypersurface in the original and the perturbed spacetime,
+$\uu{\chi} + \delta\uu{\chi}$ is a normal 1-form of $\Hor_k$ as well. Two normal 1-forms to a given
+hypersurface are necessarily collinear: there exists a scalar field $\lambda$ such that
+$\uu{\chi} + \delta\uu{\chi} = \lambda \uu{\chi}$. Setting $\delta\lambda := \lambda - 1$, we get
+\be \label{e:evo:delta_chi_form}
+    \delta\uu{\chi} = \delta\lambda\, \uu{\chi} .
+\ee
+Then $\Lie{\chi} \delta\uu{\chi} = (\Lie{\chi} \delta\lambda)\, \uu{\chi} + \delta\lambda \,\Lie{\chi} \uu{\chi}$. But $\Lie{\chi} \uu{\chi} = 0 $ for $\w{\chi}$ is a Killing vector of $(\M,\w{g})$ and,
+thanks to Eq.~(\ref{e:evo:delta_xi_eta}),
+ $\Lie{\chi} \delta\lambda = \Lie{\xi} \delta\lambda
++ \sum_{i=1}^L  \Omega^{(i)} \Liesymbol_{\w{\eta}_{(i)}} \delta\lambda = 0 + 0 = 0$, since
+$\w{\xi}$ and $\w{\eta}_{(i)}$ are symmetry generators of both
+$(\M,\w{g})$ and $(\M,\w{g}+\delta\w{g})$
+[cf. Eq.~(\ref{e:evo:delta_xi_eta})]; this establishes (\ref{e:evo:Lie_chi_dchi}).
+On the other side, we have
+\be \label{e:evo:delta_chi}
+    \delta\chi^\alpha = \sum_{i=1}^L \delta \Omega^{(i)} \, \eta_{(i)}^\alpha
+    \qand
+    \delta\chi_\alpha = h_{\alpha\mu} \chi^\mu + \sum_{i=1}^L \delta \Omega^{(i)}\, \eta_{(i)\alpha} .
+\ee
+The first formula readily follows from Eqs.~(\ref{e:evo:chi_k}) and
+(\ref{e:evo:delta_xi_eta}), while the second one follows from
+$\chi_\alpha = g_{\alpha\mu} \chi^\mu$, which implies $\delta\chi_\alpha = \delta g_{\alpha\mu} \, \chi^\mu
++ g_{\alpha\mu} \, \delta \chi^\mu$,
+where $\delta g_{\alpha\mu} =: h_{\alpha\mu}$.
+By means of Eq.~(\ref{e:evo:delta_chi}), we can rewrite the last two terms in the
+above expression of $\delta\kappa$ as\footnote{Note that $\nabla_\mu \delta\Omega^{(i)} = 0$
+since both $\Omega^{(i)}$ and $\Omega^{(i)}+\delta\Omega^{(i)}$ are constant.}
+\[
+    \delta \chi^\nu \nabla_\mu \chi_\nu + \chi_\nu \nabla_\mu \delta\chi^\nu
+    = \sum_{i=1}^L \delta \Omega^{(i)} \left( \eta_{(i)}^\nu \nabla_\mu \chi_\nu
+    + \chi_\nu \nabla_\mu \eta_{(i)}^\nu  \right)
+    = 2 \sum_{i=1}^L \delta \Omega^{(i)} \chi_\nu \nabla_\mu \eta_{(i)}^\nu .
+\]
+The last equality follows from $\eta_{(i)}^\nu \nabla_\mu \chi_\nu = - \eta_{(i)}^\nu \nabla_\nu \chi_\mu$
+(Killing equation for $\w{\chi}$) $= - g_{\mu\sigma} \eta_{(i)}^\nu \nabla_\nu \chi^\sigma =
+- g_{\mu\sigma} \chi^\nu \nabla_\nu \eta_{(i)}^\sigma$ ($\w{\chi}$ and $\w{\eta}_{(i)}$ commute,
+cf. Property~\ref{p:sta:axisymmetry_BH}) $= - \chi^\nu \nabla_\nu \eta_{(i)\mu}
+= \chi^\nu \nabla_\mu \eta_{(i)\nu}$ (Killing equation for $\w{\eta}_{(i)}$).
+Accordingly, the formula for $\delta\kappa$ becomes
+\[
+   \delta\kappa = \frac{1}{2}(k^\mu\chi^\nu  + \chi^\mu k^\nu)\nabla_\mu \delta\chi_\nu
+    + \sum_{i=1}^L \delta \Omega^{(i)} k^\mu \chi^\nu \nabla_\mu \eta_{(i)\nu}
+    + \underbrace{(\delta k^\mu  \chi_ \nu +
+    k^\mu \delta\chi_\nu) \nabla_\mu \chi^\nu}_{\mathcal{A}} .
+\]
+Let us show that $\mathcal{A}=0$. Thanks to Eq.~(\ref{e:evo:delta_chi_form}), we have
+$\mathcal{A} = (\delta k^\mu  \chi_ \nu + \delta\lambda\, k^\mu  \chi_\nu) \nabla_\mu \chi^\nu
+= (\delta k^\mu  +  \delta\lambda\, k^\mu) \nabla_\mu (\chi_\nu \chi^\nu) / 2$.
+Now, since $\Hor_k$ is a Killing horizon, we have $\nabla_\mu (\chi_\nu \chi^\nu) = 2 \kappa \chi_\mu$
+on $\Hor_k$ [Eq.~(\ref{e:neh:dxi2_kappa})]. This yields
+$\mathcal{A} = \kappa \chi_\mu (\delta k^\mu  +  \delta\lambda\, k^\mu) = \kappa(\chi_\mu \, \delta k^\mu - \delta\lambda)$, since $\chi_\mu k^\mu = -1$ from the definition of $\w{k}$.
+Now, the variation of $\chi_\mu k^\mu = -1$ gives $\delta\chi_\mu\, k^\mu + \chi_\mu \, \delta k^\mu = 0$, which in view of Eq.~(\ref{e:evo:delta_chi_form}), can be rewritten as
+$\delta\lambda \, \chi_\mu k^\mu  + \chi_\mu \, \delta k^\mu = 0$, or equivalently
+$- \delta\lambda  + \chi_\mu \, \delta k^\mu = 0$. We conclude that $\mathcal{A} = 0$.
+Let us now consider the first term in the above expression of $\delta\kappa$. We may rewrite it as
+\[
+    (\chi^\mu k^\nu + k^\mu\chi^\nu )\nabla_\mu , \delta\chi_\nu = (q^{\mu\nu} - g^{\mu\nu}) \nabla_\mu \delta\chi_\nu ,
+\]
+where $q^{\mu\nu}$ stands for the double metric dual of the metric $\w{q}$ induced by $\w{g}$
+on the cross-section $\Sp_k$ of $\Hor_k$:
+$\w{q} = \w{g} + \uu{\chi}\otimes\uu{k} + \uu{k}\otimes\uu{\chi}$
+(cf. Eq.~(\ref{e:def:q_g_k_l}) with $\wl$ standing for $\w{\chi}$).
+Now, thanks to Eq.~(\ref{e:evo:delta_chi_form}),
+\[
+    q^{\mu\nu} \nabla_\mu \delta\chi_\nu  = q^{\mu\nu} \nabla_\mu (\delta\lambda \chi_\nu)
+    = \nabla_\mu\delta\lambda \underbrace{q^{\mu\nu} \chi_\nu}_{0}
+    + \delta \lambda \underbrace{q^{\mu\nu} \nabla_\mu \chi_\nu }_{0} = 0 .
+\]
 
 ... TO BE COMPLETED ...
 
