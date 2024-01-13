@@ -265,12 +265,12 @@ The last equality follows from $\eta_{(i)}^\nu \nabla_\mu \chi_\nu = - \eta_{(i)
 cf. Property~\ref{p:sta:axisymmetry_BH}) $= - \chi^\nu \nabla_\nu \eta_{(i)\mu}
 = \chi^\nu \nabla_\mu \eta_{(i)\nu}$ (Killing equation for $\w{\eta}_{(i)}$).
 Accordingly, the formula for $\delta\kappa$ becomes
-\[
+\be \label{e:evo:delta_kappa_prov}
    \delta\kappa = \frac{1}{2}(k^\mu\chi^\nu  + \chi^\mu k^\nu)\nabla_\mu \delta\chi_\nu
     + \sum_{i=1}^L \delta \Omega^{(i)} k^\mu \chi^\nu \nabla_\mu \eta_{(i)\nu}
     + \underbrace{(\delta k^\mu  \chi_ \nu +
     k^\mu \delta\chi_\nu) \nabla_\mu \chi^\nu}_{\mathcal{A}} .
-\]
+\ee
 Let us show that $\mathcal{A}=0$. Thanks to Eq.~(\ref{e:evo:delta_chi_form}), we have
 $\mathcal{A} = (\delta k^\mu  \chi_ \nu + \delta\lambda\, k^\mu  \chi_\nu) \nabla_\mu \chi^\nu
 = (\delta k^\mu  +  \delta\lambda\, k^\mu) \nabla_\mu (\chi_\nu \chi^\nu) / 2$.
@@ -282,7 +282,7 @@ $\delta\lambda \, \chi_\mu k^\mu  + \chi_\mu \, \delta k^\mu = 0$, or equivalent
 $- \delta\lambda  + \chi_\mu \, \delta k^\mu = 0$. We conclude that $\mathcal{A} = 0$.
 Let us now consider the first term in the above expression of $\delta\kappa$. We may rewrite it as
 \[
-    (\chi^\mu k^\nu + k^\mu\chi^\nu )\nabla_\mu , \delta\chi_\nu = (q^{\mu\nu} - g^{\mu\nu}) \nabla_\mu \delta\chi_\nu ,
+    (\chi^\mu k^\nu + k^\mu\chi^\nu )\nabla_\mu \, \delta\chi_\nu = (q^{\mu\nu} - g^{\mu\nu}) \nabla_\mu \delta\chi_\nu ,
 \]
 where $q^{\mu\nu}$ stands for the double metric dual of the metric $\w{q}$ induced by $\w{g}$
 on the cross-section $\Sp_k$ of $\Hor_k$:
@@ -291,9 +291,36 @@ $\w{q} = \w{g} + \uu{\chi}\otimes\uu{k} + \uu{k}\otimes\uu{\chi}$
 Now, thanks to Eq.~(\ref{e:evo:delta_chi_form}),
 \[
     q^{\mu\nu} \nabla_\mu \delta\chi_\nu  = q^{\mu\nu} \nabla_\mu (\delta\lambda \chi_\nu)
-    = \nabla_\mu\delta\lambda \underbrace{q^{\mu\nu} \chi_\nu}_{0}
-    + \delta \lambda \underbrace{q^{\mu\nu} \nabla_\mu \chi_\nu }_{0} = 0 .
+    = \nabla_\mu\delta\lambda \, \underbrace{q^{\mu\nu} \chi_\nu}_{0}
+    + \delta \lambda \underbrace{q^{\mu\nu} \nabla_\mu \chi_\nu }_{0} = 0 ,
 \]
+where $q^{\mu\nu} \chi_\nu = 0$ holds for $\w{\chi}$ is normal to $\Sp_k$
+(cf. Eq.~(\ref{e:def:q_l_q_k_zero}) with $\wl$ standing for $\w{\chi}$) and $q^{\mu\nu} \nabla_\mu \chi_\nu = 0$
+follows from
+$\nabla_\mu \chi_\nu = (a_\mu \chi_\nu - a_\nu \chi_\mu)/2$ on $\Hor_k$
+[Eq.~(\ref{e:neh:Frobenius_xi_Killing})]
+combined with $q^{\mu\nu} \nabla_\mu \chi_\nu = 0$. Hence
+\bea
+    (\chi^\mu k^\nu + k^\mu\chi^\nu )\nabla_\mu \, \delta\chi_\nu & = & - g^{\mu\nu} \nabla_\mu \delta\chi_\nu
+    = - \nabla^\mu \delta\chi_\mu
+    = - \nabla^\mu \left( h_{\mu\nu} \chi^\nu + \sum_{i=1}^L \delta \Omega^{(i)}\, \eta_{(i)\mu} \right)
+    \nonumber \\
+    & = & - \chi^\nu \nabla^\mu h_{\mu\nu}
+    - \underbrace{h_{\mu\nu} \nabla^\mu \chi^\nu}_{0}
+    - \sum_{i=1}^L \delta \Omega^{(i)}\, \underbrace{\nabla^\mu \eta_{(i)\mu}}_{0}
+    =  -  \chi^\nu  \nabla^\mu h_{\mu\nu} ,
+    \nonumber
+\eea
+where Eq.~(\ref{e:evo:delta_chi}) has been used to
+express $\delta\chi_\mu$ and $h_{\mu\nu} \nabla^\mu \chi^\nu = 0$ follows from
+the Killing equation for $\w{\chi}$ and the symmetry of $\w{h}$, while
+$\nabla^\mu \eta_{(i)\mu} = 0$ follows from the Killing equation for $\w{\eta}_{(i)}$.
+Together with $\mathcal{A} = 0$, this results allows us rewrite Eq.~(\ref{e:evo:delta_kappa_prov})
+as
+\be
+\delta\kappa = - \frac{1}{2} \chi^\nu \nabla^\mu h_{\mu\nu}
+    + \sum_{i=1}^L \delta \Omega^{(i)} k^\mu \chi^\nu \nabla_\mu \eta_{(i)\nu} .
+\ee
 
 ... TO BE COMPLETED ...
 
