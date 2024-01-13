@@ -279,7 +279,7 @@ on $\Hor_k$ [Eq.~(\ref{e:neh:dxi2_kappa})]. This yields
 $\mathcal{A} = \kappa \chi_\mu (\delta k^\mu  +  \delta\lambda\, k^\mu) = \kappa(\chi_\mu \, \delta k^\mu - \delta\lambda)$, since $\chi_\mu k^\mu = -1$ from the definition of $\w{k}$.
 Now, the variation of $\chi_\mu k^\mu = -1$ gives $\delta\chi_\mu\, k^\mu + \chi_\mu \, \delta k^\mu = 0$, which in view of Eq.~(\ref{e:evo:delta_chi_form}), can be rewritten as
 $\delta\lambda \, \chi_\mu k^\mu  + \chi_\mu \, \delta k^\mu = 0$, or equivalently
-$- \delta\lambda  + \chi_\mu \, \delta k^\mu = 0$. We conclude that $\mathcal{A} = 0$.
+$- \delta\lambda  + \chi_\mu \, \delta k^\mu = 0$, hence $\mathcal{A} = 0$.
 Let us now consider the first term in the above expression of $\delta\kappa$. We may rewrite it as
 \[
     (\chi^\mu k^\nu + k^\mu\chi^\nu )\nabla_\mu \, \delta\chi_\nu = (q^{\mu\nu} - g^{\mu\nu}) \nabla_\mu \delta\chi_\nu ,
@@ -299,7 +299,7 @@ where $q^{\mu\nu} \chi_\nu = 0$ holds for $\w{\chi}$ is normal to $\Sp_k$
 follows from
 $\nabla_\mu \chi_\nu = (a_\mu \chi_\nu - a_\nu \chi_\mu)/2$ on $\Hor_k$
 [Eq.~(\ref{e:neh:Frobenius_xi_Killing})]
-combined with $q^{\mu\nu} \nabla_\mu \chi_\nu = 0$. Hence
+combined with $q^{\mu\nu} \chi_\nu = 0$. Hence
 \bea
     (\chi^\mu k^\nu + k^\mu\chi^\nu )\nabla_\mu \, \delta\chi_\nu & = & - g^{\mu\nu} \nabla_\mu \delta\chi_\nu
     = - \nabla^\mu \delta\chi_\mu
@@ -318,9 +318,20 @@ $\nabla^\mu \eta_{(i)\mu} = 0$ follows from the Killing equation for $\w{\eta}_{
 Together with $\mathcal{A} = 0$, this results allows us rewrite Eq.~(\ref{e:evo:delta_kappa_prov})
 as
 \be
-\delta\kappa = - \frac{1}{2} \chi^\nu \nabla^\mu h_{\mu\nu}
+\delta\kappa = - \frac{1}{2} \chi_\mu \nabla^\nu h^\mu_{\ \, \nu}
     + \sum_{i=1}^L \delta \Omega^{(i)} k^\mu \chi^\nu \nabla_\mu \eta_{(i)\nu} .
 \ee
+Let us integrate this relation over the cross-section $\Sp_k$. Since $\delta\kappa$ and $\delta \Omega^{(i)}$
+are constant, we get
+\[
+    \delta\kappa  \underbrace{\int_{\Sp_k} \, \sqrt{q}\,  \D^{n-2} x}_{A_k} =
+    - \underbrace{\frac{1}{2}  \int_{\Sp_k} \chi_\mu \nabla^\nu h^\mu_{\ \, \nu} \, \sqrt{q} \, \D^{n-2} x}_{I_{\Sp_k}}
+    + \sum_{i=1}^L \delta \Omega^{(i)}
+       \underbrace{\int_{\Sp_k} \nabla_\mu \eta_{(i)\nu} \, k^\mu \chi^\nu \, \sqrt{q}\,  \D^{n-2} x}_{-8\pi J_{\Hor_{k}(i)}} .
+\]
+The identification of the last integral with $-8\pi J_{\Hor_{k}(i)}$ readily follows from expression
+(\ref{e:sta:J_Komar_cov_der}) for the Komar angular momentum, once the area element bivector normal to $\Sp_k$
+is expressed as $\D S^{\mu\nu}=(\chi^\mu k^\nu - k^\mu \chi^\nu) \sqrt{q}\, \D^{n-2} x $ [Eq.~(\ref{e:sta:dS_chi_k})].
 
 ... TO BE COMPLETED ...
 
