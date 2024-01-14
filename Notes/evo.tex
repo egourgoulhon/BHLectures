@@ -174,7 +174,7 @@ is the variation of the generalized Smarr formula (\ref{e:sta:Smarr_M_infty_R}):
     + 2  \sum_{i=1}^{L_{k}} \left( J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_k}
     + \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right) \right] \nonumber \\
     & &
-     - \frac{1}{4\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu ,
+     - \frac{1}{4\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu , \label{e:evo:start_proof_1law}
 \eea
 where $\Sigma$ is any asymptotically flat spacelike hypersurface, the inner boundary
 of which is a cross-section of the event horizon, i.e. some union of cross-sections $\Sp_k$
@@ -233,9 +233,9 @@ $\uu{\chi} + \delta\uu{\chi} = \lambda \uu{\chi}$. Setting $\delta\lambda := \la
     \delta\uu{\chi} = \delta\lambda\, \uu{\chi} .
 \ee
 Then $\Lie{\chi} \delta\uu{\chi} = (\Lie{\chi} \delta\lambda)\, \uu{\chi} + \delta\lambda \,\Lie{\chi} \uu{\chi}$. But $\Lie{\chi} \uu{\chi} = 0 $ for $\w{\chi}$ is a Killing vector of $(\M,\w{g})$ and,
-thanks to Eq.~(\ref{e:evo:delta_xi_eta}),
+thanks to Eq.~(\ref{e:evo:chi_k}),
  $\Lie{\chi} \delta\lambda = \Lie{\xi} \delta\lambda
-+ \sum_{i=1}^L  \Omega^{(i)} \Liesymbol_{\w{\eta}_{(i)}} \delta\lambda = 0 + 0 = 0$, since
++ \sum_{i=1}^L  \Omega^{(i)} \Liesymbol_{\w{\eta}_{(i)}} \delta\lambda = 0 + 0 = 0$ because
 $\w{\xi}$ and $\w{\eta}_{(i)}$ are symmetry generators of both
 $(\M,\w{g})$ and $(\M,\w{g}+\delta\w{g})$
 [cf. Eq.~(\ref{e:evo:delta_xi_eta})]; this establishes (\ref{e:evo:Lie_chi_dchi}).
@@ -321,17 +321,83 @@ as
 \delta\kappa = - \frac{1}{2} \chi_\mu \nabla^\nu h^\mu_{\ \, \nu}
     + \sum_{i=1}^L \delta \Omega^{(i)} k^\mu \chi^\nu \nabla_\mu \eta_{(i)\nu} .
 \ee
-Let us integrate this relation over the cross-section $\Sp_k$. Since $\delta\kappa$ and $\delta \Omega^{(i)}$
+Let us integrate this relation over the cross-section $\Sp_k$,
+setting  $\D S := \sqrt{q}\,  \D^{n-2} x$ (the surface element of $\Sp_k$).
+Since $\delta\kappa$ and $\delta \Omega^{(i)}$
 are constant, we get
-\[
-    \delta\kappa  \underbrace{\int_{\Sp_k} \, \sqrt{q}\,  \D^{n-2} x}_{A_k} =
-    - \underbrace{\frac{1}{2}  \int_{\Sp_k} \chi_\mu \nabla^\nu h^\mu_{\ \, \nu} \, \sqrt{q} \, \D^{n-2} x}_{I_{\Sp_k}}
+\be \label{e:evo:delta_kappa_integrated}
+    \delta\kappa \underbrace{\int_{\Sp_k} \D S}_{A_k} =
+    - \frac{1}{2} \underbrace{  \int_{\Sp_k} \chi_\mu \nabla^\nu h^\mu_{\ \, \nu} \, \D S }_{I_{\Sp_k}}
     + \sum_{i=1}^L \delta \Omega^{(i)}
-       \underbrace{\int_{\Sp_k} \nabla_\mu \eta_{(i)\nu} \, k^\mu \chi^\nu \, \sqrt{q}\,  \D^{n-2} x}_{-8\pi J_{\Hor_{k}(i)}} .
-\]
-The identification of the last integral with $-8\pi J_{\Hor_{k}(i)}$ readily follows from expression
+       \underbrace{\int_{\Sp_k} \nabla_\mu \eta_{(i)\nu} \, k^\mu \chi^\nu \, \D S}_{-8\pi J_{\Hor_{k}(i)}} .
+\ee
+The identification of the last integral with $-8\pi J_{\Hor_{k}(i)}$ readily follows from formula
 (\ref{e:sta:J_Komar_cov_der}) for the Komar angular momentum, once the area element bivector normal to $\Sp_k$
-is expressed as $\D S^{\mu\nu}=(\chi^\mu k^\nu - k^\mu \chi^\nu) \sqrt{q}\, \D^{n-2} x $ [Eq.~(\ref{e:sta:dS_chi_k})].
+is expressed as $\D S^{\mu\nu}=(\chi^\mu k^\nu - k^\mu \chi^\nu) \D S $ [Eq.~(\ref{e:sta:dS_chi_k})]. As for the integral $I_{\Sp_k}$, it can be rewritten as an integral involving
+$\w{h}$ and the stationary Killing vector $\w{\xi}$ instead of the Killing vector $\w{\chi}$ (which depends
+on $\Hor_k$), namely
+\be \label{e:evo:I_Sk_int_Omega}
+    I_{\Sp_k} =  \int_{\Sp_k} \omega_{\mu\nu} \,\D S^{\mu\nu} ,
+    \quad \mbox{with} \quad
+    \omega_{\alpha\beta} := \left( \uu{\xi} \wedge \uu{H} \right)_{\alpha\beta} = \xi_\alpha H_\beta -
+    H_\alpha \xi_\beta ,
+\ee
+where $\w{H}$ is the vector field defined by
+\[
+    H^\alpha := \nabla^{[\mu} h^{\alpha]}_{\ \ \mu} = \frac{1}{2} \left( \nabla^\mu h^\alpha_{\ \, \mu}
+        - \nabla^\alpha h^\mu_{\ \, \mu} \right) .
+\]
+To prove (\ref{e:evo:I_Sk_int_Omega}), let us evaluate $\omega_{\mu\nu} \,\D S^{\mu\nu}$,
+using successively Eq.~(\ref{e:sta:dS_chi_k}),
+$\xi_\mu \chi^\mu = 0$ ($\w{\xi}$ tangent to $\Hor_k$) and
+$\eta_{(i)\mu} k^\mu = 0$ ($\w{\eta}_{(i)}$ tangent to $\Sp_k$):
+\bea
+    \omega_{\mu\nu} \,\D S^{\mu\nu} & = & \left( \xi_\mu H_\nu - H_\mu \xi_\nu \right)
+        \left(\chi^\mu k^\nu - k^\mu \chi^\nu\right)\, \D S
+        =  2 ( \underbrace{\xi_\mu \chi^\mu}_{0} \, H_\nu k^\nu
+        - \xi_\mu  k^\mu H_\nu \chi^\nu) \,\D S  \nonumber \\
+    & = & - 2 \Big( \underbrace{\chi_\mu k^\mu}_{-1} -
+        \sum_{i=1}^L \Omega^{(i)}  \underbrace{\eta_{(i)\mu} k^\mu}_{0} \Big)
+        H_\nu \chi^\nu \, \D S
+        = 2 \chi_\mu H^\mu \, \D S \nonumber \\
+    & = &  ( \chi_\mu \nabla^\nu h^\mu_{\ \, \nu}
+        - \chi^\mu \nabla_\mu h^\nu_{\ \, \nu} ) \, \D S \nonumber \\
+    & = & ( \chi_\mu \nabla^\nu h^\mu_{\ \, \nu}
+        - \underbrace{\Lie{\xi} h^\nu_{\ \, \nu}}_{0}
+        - \sum_{i=1}^L  \Omega^{(i)}
+        \underbrace{\Liesymbol_{\w{\eta}_{(i)}} h^\nu_{\ \, \nu}}_{0} ) \, \D S
+        = \chi_\mu \nabla^\nu h^\mu_{\ \, \nu} \, \D S .
+    \nonumber
+\eea
+In the last line, $\Lie{\xi} h^\nu_{\ \, \nu} = 0$ follows from
+$h^\nu_{\ \, \nu} = g^{\mu\nu} h_{\mu\nu}$,
+$\Liec{\xi} g^{\mu\nu} = 0$ ($\w{\xi}$ Killing vector of $\w{g}$) and
+$\Liec{\xi} h_{\mu\nu} = 0$, the latter being a consequence
+of $\w{\xi}$ being a Killing vector of both $\w{g}$ and $\w{g} + \delta\w{g} = \w{g} + \w{h}$
+(cf. Eq.~(\ref{e:evo:delta_xi_eta})), so that
+$\Lie{\xi} \w{h}  = \Lie{\xi} (\w{g} + \delta\w{g}) - \Lie{\xi} \w{g} = 0 - 0 = 0$.
+Similarly, $\Liesymbol_{\w{\eta}_{(i)}} h^\nu_{\ \, \nu} = 0$.
+In view of the above result and the definition of $I_{\Sp_k}$ in
+Eq.~(\ref{e:evo:delta_kappa_integrated}), we conclude that Eq.~(\ref{e:evo:I_Sk_int_Omega}) holds.
+Therefore, Eq.~(\ref{e:evo:delta_kappa_integrated}) can be rewritten as
+\be
+    A_k \, \delta\kappa_k = - \frac{1}{2} \int_{\Sp_k} \omega_{\mu\nu} \,\D S^{\mu\nu}
+    -8\pi \sum_{i=1}^L J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_{k}} ,
+\ee
+where we have restored the index $k$ on $\kappa$ and the subscript $\Hor_{k}$
+on $\Omega^{(i)}$. If we plug this relation into Eq.~(\ref{e:evo:start_proof_1law}), the
+terms in $ J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_{k}}$ cancel out and we are left
+with
+\bea
+ \frac{(n- 3)}{n - 2} \delta  M_\infty& = &
+ \sum_{k = 1}^K \left(
+    \frac{\kappa_{k}}{8\pi}\, \delta A_k
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
+    - \frac{1}{16\pi} \sum_{k = 1}^K \int_{\Sp_k} \omega_{\mu\nu} \,\D S^{\mu\nu} \nonumber \\
+    & &
+     - \frac{1}{8\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu .
+\eea
+
 
 ... TO BE COMPLETED ...
 
