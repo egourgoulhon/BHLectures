@@ -19,7 +19,7 @@ external body and emission of gravitational waves), the black hole relaxes
 to a new equilibrium configuration. According to the
 no-hair theorem (Property~\ref{p:sta:no-hair_thm}, Sec.~\ref{s:sta:no-hair}),
 the final state has to be a Kerr black hole, of
-parameters $(m+\D m, a+\D a)$ say. All global properties of the black
+parameters $(m+\delta m, a+\delta a)$ say. All global properties of the black
 hole (cf. Sec.~\ref{s:ker:global_quantities})
 are changed accordingly and we are going to express the change in
 the Komar mass $M = m$ [Eq.~(\ref{e:ker:M_m})] in terms of the change in
@@ -27,22 +27,23 @@ the area $A = 8 \pi m (m + \sqrt{m^2-a^2})$ [Eq.~(\ref{e:ker:A_a_m})]
 and in the angular momentum $J = a m$ [Eq.~(\ref{e:ker:J_am})].
 
 Rewriting Eq.~(\ref{e:ker:A_a_m}) as $A = 8 \pi (M^2 + \sqrt{M^4 - J^2})$
-and differentiating, we get
+and differentiating, we get, for small variations $\delta M$ and $\delta J$
+of $M$ and $J$,
 \[
-\frac{1}{8\pi} \, \D A =  2 M\,  \D M + \frac{2M^3}{\sqrt{M^4-J^2}}\, \D M
-    - \frac{J}{\sqrt{M^4-J^2}}\, \D J ,
+\frac{1}{8\pi} \, \delta A =  2 M\,  \delta M + \frac{2M^3}{\sqrt{M^4-J^2}}\, \delta M
+    - \frac{J}{\sqrt{M^4-J^2}}\, \delta J ,
 \]
 or equivalently
 \[
-    \D M = \frac{1}{8\pi}
-\underbrace{\frac{\sqrt{M^4-J^2}}{2M(M^2+\sqrt{M^4-J^2})}}_{\kappa} \, \D A
-+ \underbrace{\frac{J}{2M(M^2+\sqrt{M^4-J^2})}}_{\Omega_{\Hor}} \, \D J  ,
+    \delta M = \frac{1}{8\pi}
+\underbrace{\frac{\sqrt{M^4-J^2}}{2M(M^2+\sqrt{M^4-J^2})}}_{\kappa} \, \delta A
++ \underbrace{\frac{J}{2M(M^2+\sqrt{M^4-J^2})}}_{\Omega_{\Hor}} \, \delta J  ,
 \]
 where the identifications of the black hole's surface gravity $\kappa$ and
 rotation velocity $\Omega_{\Hor}$ result from Eqs.~(\ref{e:ker:kappa_m_a})
 and (\ref{e:ker:def_OmegaH}) respectively. Hence we get
 \be \label{e:evo:mass_variation}
-    \encadre{ \D M = \frac{\kappa}{8\pi} \, \D A + \Omega_{\Hor} \, \D J } .
+    \encadre{ \delta M = \frac{\kappa}{8\pi} \, \delta A + \Omega_{\Hor} \, \delta J } .
 \ee
 \begin{remark}
 The mass variation formula (\ref{e:evo:mass_variation}) is \emph{not}
@@ -50,14 +51,14 @@ the mere differential of the Smarr formula (\ref{e:ker:Smarr}):
 $ M =  \kappa A/(4\pi) + 2 \Omega_{\Hor} J$.
 Indeed, differentiating the latter yields
 \[
-    \D M = \frac{\kappa}{4\pi} \, \D A +  \frac{A}{4\pi} \, \D \kappa
-        + 2 \Omega_{\Hor} \, \D J  + 2 J \, \D\Omega_{\Hor} .
+    \delta M = \frac{\kappa}{4\pi} \, \delta A +  \frac{A}{4\pi} \, \delta \kappa
+        + 2 \Omega_{\Hor} \, \delta J  + 2 J \, \delta\Omega_{\Hor} .
 \]
 Since $\kappa$ and $\Omega_{\Hor}$ depend on $m$ and $a$ [Eqs.~(\ref{e:ker:kappa_m_a})
 and (\ref{e:ker:def_OmegaH})], one has
-$\D\kappa \neq 0$ and $\D\Omega_{\Hor}\neq 0$ when moving
-from $(m,a)$ to $(m+\D m, a+\D a)$.
-If one were (wrongly) assuming $\D\kappa = 0$ and $\D\Omega_{\Hor} = 0$, one would
+$\delta\kappa \neq 0$ and $\delta\Omega_{\Hor}\neq 0$ when moving
+from $(m,a)$ to $(m+\delta m, a+\delta a)$.
+If one were (wrongly) assuming $\delta\kappa = 0$ and $\delta\Omega_{\Hor} = 0$, one would
 be wrong by a factor of 2 in recovering the right-hand side of
 Eq.~(\ref{e:evo:mass_variation}).
 \end{remark}
@@ -135,7 +136,7 @@ $\delta J_{\Hor_{k}(i)}$ in the Komar angular momenta by
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
     +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right) \nonumber \\
     & & + \frac{1}{16\pi}
-    \int_{\Sigma} G^{\mu\nu} \delta g_{\mu\nu} \, \xi_\rho \D V^\rho
+    \int_{\Sigma} G^{\mu\nu} \delta g_{\mu\nu} \, \xi_\rho \, \D V^\rho
         - \frac{1}{8\pi} \,
    \delta  \int_{\Sigma} G_{\mu\nu} \, \xi^\mu \D V^\nu ,  \label{e:evo:mass_variation_gal}
 \eea
@@ -168,7 +169,7 @@ $\delta g^{\alpha\beta} = - h^{\alpha\beta}$.
 The starting point for proving (\ref{e:evo:mass_variation_gal})
 is the variation of the generalized Smarr formula (\ref{e:sta:Smarr_M_infty_R}):
 \bea
- \frac{2(n- 3)}{n - 2} \delta  M_\infty& = &\sum_{k = 1}^K
+ \frac{2(n- 3)}{n - 2} \, \delta  M_\infty& = &\sum_{k = 1}^K
     \left[
     \frac{1}{4\pi} \left( A_k\,  \delta \kappa_{k}  + \kappa_k \, \delta A_k \right)
     + 2  \sum_{i=1}^{L_{k}} \left( J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_k}
@@ -336,7 +337,7 @@ The identification of the last integral with $-8\pi J_{\Hor_{k}(i)}$ readily fol
 is expressed as $\D S^{\mu\nu}=(\chi^\mu k^\nu - k^\mu \chi^\nu) \D S $ [Eq.~(\ref{e:sta:dS_chi_k})]. As for the integral $I_{\Sp_k}$, it can be rewritten as an integral involving
 $\w{h}$ and the stationary Killing vector $\w{\xi}$ instead of the Killing vector $\w{\chi}$ (which depends
 on $\Hor_k$), namely
-\be \label{e:evo:I_Sk_int_Omega}
+\be \label{e:evo:I_Sk_int_omega}
     I_{\Sp_k} =  \int_{\Sp_k} \omega_{\mu\nu} \,\D S^{\mu\nu} ,
     \quad \mbox{with} \quad
     \omega_{\alpha\beta} := \left( \uu{\xi} \wedge \uu{H} \right)_{\alpha\beta} = \xi_\alpha H_\beta -
@@ -347,7 +348,7 @@ where $\w{H}$ is the vector field defined by
     H^\alpha := \nabla^{[\mu} h^{\alpha]}_{\ \ \mu} = \frac{1}{2} \left( \nabla^\mu h^\alpha_{\ \, \mu}
         - \nabla^\alpha h^\mu_{\ \, \mu} \right) .
 \ee
-To prove (\ref{e:evo:I_Sk_int_Omega}), let us evaluate $\omega_{\mu\nu} \,\D S^{\mu\nu}$,
+To prove (\ref{e:evo:I_Sk_int_omega}), let us evaluate $\omega_{\mu\nu} \,\D S^{\mu\nu}$,
 using successively Eq.~(\ref{e:sta:dS_chi_k}),
 $\xi_\mu \chi^\mu = 0$ ($\w{\xi}$ tangent to $\Hor_k$) and
 $\eta_{(i)\mu} k^\mu = 0$ ($\w{\eta}_{(i)}$ tangent to $\Sp_k$):
@@ -378,7 +379,7 @@ of $\w{\xi}$ being a Killing vector of both $\w{g}$ and $\w{g} + \delta\w{g} = \
 $\Lie{\xi} \w{h}  = \Lie{\xi} (\w{g} + \delta\w{g}) - \Lie{\xi} \w{g} = 0 - 0 = 0$.
 Similarly, $\Liesymbol_{\w{\eta}_{(i)}} h^\nu_{\ \, \nu} = 0$.
 In view of the above result and the definition of $I_{\Sp_k}$ in
-Eq.~(\ref{e:evo:delta_kappa_integrated}), we conclude that Eq.~(\ref{e:evo:I_Sk_int_Omega}) holds.
+Eq.~(\ref{e:evo:delta_kappa_integrated}), we conclude that Eq.~(\ref{e:evo:I_Sk_int_omega}) holds.
 Therefore, Eq.~(\ref{e:evo:delta_kappa_integrated}) can be rewritten as
 \be
     A_k \, \delta\kappa_k = - \frac{1}{2} \int_{\Sp_k} \omega_{\mu\nu} \,\D S^{\mu\nu}
@@ -389,7 +390,7 @@ on $\Omega^{(i)}$. If we plug this relation into Eq.~(\ref{e:evo:start_proof_1la
 terms $ J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_{k}}$ cancel out and we are left
 with
 \bea
- \frac{(n- 3)}{n - 2} \delta  M_\infty& = &
+ \frac{(n- 3)}{n - 2} \, \delta  M_\infty& = &
  \sum_{k = 1}^K \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
     +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
@@ -401,43 +402,86 @@ $\Sp_{\rm int} = \cup_{k=1}^K \Sp_k$, so that the sum of the integrals over the 
 actually an integral over $\Sp_{\rm int}$ and we may apply formula (\ref{e:sta:flux_div_2form})
 regarding the flux of a 2-form (here $\w{\omega}$) to write
 \bea
- \frac{(n- 3)}{n - 2} \delta  M_\infty& = &
+ \frac{(n- 3)}{n - 2}\,  \delta  M_\infty& = &
  \sum_{k = 1}^K \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
     +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
     - \frac{1}{16\pi}  \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} \nonumber \\
     & & + \frac{1}{8\pi} \int_{\Sigma} \nabla^\nu \omega_{\mu\nu}\,  \D V^\mu
      - \frac{1}{8\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu ,
+        \label{e:evo:mass_var_prov}
 \eea
 where $\Sp_\infty$ stands for the outer boundary of $\Sigma$, i.e. the limit
 $r\to +\infty$ of a sphere $\Sp$ of constant value of $(x^0,r)$, $(x^\alpha)$
 being an asymptotically Minkowkskian coordinate system such that $\Sigma$
-is a hypersurface $x^0 = \mathrm{const}$, $\w{\xi} = \partial_0$ and
+is a hypersurface $x^0 = \mathrm{const}$, $\w{\xi} = \wpar_0$ and
 $r := \sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$.
-In view of Eqs.~(\ref{e:evo:I_Sk_int_Omega})-(\ref{e:evo:def_H})
+In view of Eqs.~(\ref{e:evo:I_Sk_int_omega})-(\ref{e:evo:def_H})
 and (\ref{e:sta:area_bivector}), we may write
 \[
     \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} =
     2 \int_{\Sp_\infty} \xi_\mu H_\nu \,\D S^{\mu\nu}
     = \int_{\Sp_\infty} \xi_\mu (\nabla^\sigma h_{\nu\sigma}
-    - \nabla_\nu h^\sigma_{\ \, \sigma}) (s^\mu n^\nu - n^\mu s^\nu) \sqrt{q} \, \D^{n-2} x ,
+    - \nabla_\nu h^\sigma_{\ \, \sigma}) (s^\mu n^\nu - n^\mu s^\nu) \sqrt{q} \, \D^{n-2} y ,
 \]
-where on $\Sp_\infty$, $\w{n} = \w{\xi}$ and $\w{s} = (x^i/r)\wpar_i$, with
+where $(y_a)_{1\leq a \leq n-2}$ is a coordinate system of $\Sp_\infty$
+and $q$ is the determinant with respect to it of the metric $\w{q}$ induced by $\w{g}$
+on $\Sp_\infty$. Now, on $\Sp_\infty$, $\w{n} = \w{\xi}$ and $\w{s} = (x^i/r)\wpar_i$, with
 $\xi_\mu n^\mu = \xi_\mu \xi^\mu = -1$ and $\xi_\mu s^\mu = 0$. Moreover, since
 $(x^\alpha)$ is asymptotically Minkowkskian, we may substitute the covariant derivatives
-with partial ones. Hence we get
+with partial ones. Hence we get, accounting for $\partial_0 h_{i0} = 0$,
 \[
     \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} =
-    \int_{\Sp_\infty} \frac{x^i}{r} ( - \partial_0 h_{i0} + \partial_j h_{ij} -
-    \partial_i h^\sigma_{\ \, \sigma}) \sqrt{q} \, \D^{n-2} x .
+    \int_{\Sp_\infty} \frac{x^i}{r} ( \partial_j h_{ij} -
+    \partial_i h^\sigma_{\ \, \sigma}) \sqrt{q} \, \D^{n-2} y .
 \]
 Given the asymptotic behavior (\ref{e:sta:asymptotic_metric}) of the metric tensor,
-we get
+we have, for $r\to+\infty$,
 \[
-    h_{00} = \alpha_n \frac{\delta M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-2}} \right),\quad
-    h_{0i} = \bigO\left( \frac{1}{r^{n-2}} \right), \quad
-    h_{ij} = \frac{\alpha_n}{n-3} \frac{\delta M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-2}} \right) ,
+    h_{00} = \alpha_n \frac{\delta M_\infty}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-2}} \right)
+    \qand
+    h_{ij} = \frac{\alpha_n}{n-3} \frac{\delta M_\infty}{r^{n-3}} \delta_{ij}
+    + \bigO\left( \frac{1}{r^{n-2}} \right) ,
 \]
+where $\alpha_n := 16\pi/((n-2)\Omega_{n-2})$, $\Omega_{n-2}$ being the area of the
+unit sphere $\SS^{n-2}$, cf. Eqs.~(\ref{e:sta:area_p_sphere})-(\ref{e:sta:area_p_sphere_examples}). According to Property~\ref{p:sta:Komar_mass_asymp_metric},
+$\delta M_\infty$ in the above formulas is the same variation
+of the Komar mass at infinity as in the left-hand side of Eq.~(\ref{e:evo:mass_var_prov}).
+The trace of $\w{h}$ takes the asymptotic value
+$h^\sigma_{\ \, \sigma} = - h_{00} + \sum_{i=1}^{n-1} h_{ii} =
+2\alpha_n \delta M_\infty / ((n-3) r^{n-3}) +  \bigO\left( {1}/{r^{n-2}} \right)$.
+It follows that
+\[
+  \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} =
+  - \frac{\alpha_n \, \delta M_\infty}{n-3} \int_{\Sp_\infty}
+  \underbrace{\frac{x^i}{r} \der{}{x^i} \left( \frac{1}{r^{n-3}} \right)}_{-(n-3)/r^{n-2}}
+  \underbrace{\sqrt{q}}_{r^{n-2} \sqrt{\bar{q}}} \, \D^{n-2} y
+  = \alpha_n \, \delta M_\infty
+  \underbrace{\int_{\Sp_\infty} \sqrt{\bar{q}} \, \D^{n-2} y}_{\Omega_{n-2}} ,
+\]
+where $\bar{q}$ stands for the determinant of the round metric of the unit sphere $\SS^{n-2}$ with respect to the coordinates $(y^a)$. Substituting $\alpha_n$ by its value, we get
+\[
+    \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} = \frac{16\pi}{n-2} \delta M_\infty .
+\]
+Accordingly, Eq.~(\ref{e:evo:mass_var_prov}) simplifies to
+\be
+ \delta  M_\infty =
+ \sum_{k = 1}^K \left(
+    \frac{\kappa_{k}}{8\pi}\, \delta A_k
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
+     +  \int_{\Sigma} \nabla^\nu \omega_{\mu\nu}\,  \D V^\mu
+     - \frac{1}{8\pi} \delta \! \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu .
+\ee
+Now, from Eq.~(\ref{e:evo:I_Sk_int_omega}),
+\bea
+    \nabla^\nu \omega_{\mu\nu} \, \D V^\mu & =&
+    \nabla_\nu ( \xi^\mu H^\nu - H^\mu \xi^\nu ) \D V_\mu
+    = ( \xi^\mu \nabla_\nu H^\nu
+    + \underbrace{H^\nu \nabla_\nu \xi^\mu - \xi^\nu \nabla_\nu H^\mu}_{0}
+    - H^\mu \underbrace{\nabla_\nu \xi^\nu}_{0}) \D V_\mu
+    \nonumber \\
+    & = &   \nonumber
+\eea
 
 ... TO BE COMPLETED ...
 
