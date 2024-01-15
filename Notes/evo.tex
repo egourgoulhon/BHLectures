@@ -464,14 +464,14 @@ where $\bar{q}$ stands for the determinant of the round metric of the unit spher
     \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} = \frac{16\pi}{n-2} \delta M_\infty .
 \]
 Accordingly, Eq.~(\ref{e:evo:mass_var_prov}) simplifies to
-\be
+\[
  \delta  M_\infty =
  \sum_{k = 1}^K \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
     +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
-     +  \int_{\Sigma} \nabla^\nu \omega_{\mu\nu}\,  \D V^\mu
+     +  \frac{1}{8\pi} \int_{\Sigma} \nabla^\nu \omega_{\mu\nu}\,  \D V^\mu
      - \frac{1}{8\pi} \delta \! \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu .
-\ee
+\]
 Now, from Eq.~(\ref{e:evo:I_Sk_int_omega}),
 \bea
     \nabla^\nu \omega_{\mu\nu} \, \D V^\mu & =&
@@ -480,8 +480,22 @@ Now, from Eq.~(\ref{e:evo:I_Sk_int_omega}),
     + \underbrace{H^\nu \nabla_\nu \xi^\mu - \xi^\nu \nabla_\nu H^\mu}_{0}
     - H^\mu \underbrace{\nabla_\nu \xi^\nu}_{0}) \D V_\mu
     \nonumber \\
-    & = &   \nonumber
+    & = & \nabla_\nu H^\nu  \, \xi_\mu \, \D V^\mu ,\nonumber
 \eea
+where $\nabla_\nu \xi^\nu = 0$ holds because $\w{\xi}$ is a Killing vector
+and we have used $H^\nu \nabla_\nu \xi^\mu - \xi^\nu \nabla_\nu H^\mu = [\w{H},\w{\xi}]^\mu = - [\w{\xi},\w{H}]^\mu = - \Liec{\xi} H^\mu = 0$
+because $\Lie{\xi} \w{h} = 0$ and $\w{\xi}$ is a Killing vector, so that $\wnab$ and
+$\Lie{\xi}$ commute\footnote{This is easy to see in a coordinate system $(x^\alpha)$ such that $\w{\xi} = \wpar_0$, cf. Eq.~(\ref{e:bas:Lie_adapted}).},
+which implies $\Lie{\xi} \w{H} = 0$ from Eq.~(\ref{e:evo:def_H}).
+Hence
+\be
+   \delta  M_\infty =
+ \sum_{k = 1}^K \left(
+    \frac{\kappa_{k}}{8\pi}\, \delta A_k
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
+     +  \frac{1}{8\pi} \int_{\Sigma} \nabla_\nu H^\nu  \, \xi_\mu \, \D V^\mu
+     - \frac{1}{8\pi} \delta \! \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu .
+\ee
 
 ... TO BE COMPLETED ...
 
