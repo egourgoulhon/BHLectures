@@ -343,10 +343,10 @@ on $\Hor_k$), namely
     H_\alpha \xi_\beta ,
 \ee
 where $\w{H}$ is the vector field defined by
-\[
+\be \label{e:evo:def_H}
     H^\alpha := \nabla^{[\mu} h^{\alpha]}_{\ \ \mu} = \frac{1}{2} \left( \nabla^\mu h^\alpha_{\ \, \mu}
         - \nabla^\alpha h^\mu_{\ \, \mu} \right) .
-\]
+\ee
 To prove (\ref{e:evo:I_Sk_int_Omega}), let us evaluate $\omega_{\mu\nu} \,\D S^{\mu\nu}$,
 using successively Eq.~(\ref{e:sta:dS_chi_k}),
 $\xi_\mu \chi^\mu = 0$ ($\w{\xi}$ tangent to $\Hor_k$) and
@@ -386,7 +386,7 @@ Therefore, Eq.~(\ref{e:evo:delta_kappa_integrated}) can be rewritten as
 \ee
 where we have restored the index $k$ on $\kappa$ and the subscript $\Hor_{k}$
 on $\Omega^{(i)}$. If we plug this relation into Eq.~(\ref{e:evo:start_proof_1law}), the
-terms in $ J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_{k}}$ cancel out and we are left
+terms $ J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_{k}}$ cancel out and we are left
 with
 \bea
  \frac{(n- 3)}{n - 2} \delta  M_\infty& = &
@@ -394,10 +394,50 @@ with
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
     +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
     - \frac{1}{16\pi} \sum_{k = 1}^K \int_{\Sp_k} \omega_{\mu\nu} \,\D S^{\mu\nu} \nonumber \\
-    & &
-     - \frac{1}{8\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu .
+    & & - \frac{1}{8\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu .  \nonumber
 \eea
-
+We note that the inner boundary of the hypersurface $\Sigma$ is
+$\Sp_{\rm int} = \cup_{k=1}^K \Sp_k$, so that the sum of the integrals over the $\Sp_k$'s is
+actually an integral over $\Sp_{\rm int}$ and we may apply formula (\ref{e:sta:flux_div_2form})
+regarding the flux of a 2-form (here $\w{\omega}$) to write
+\bea
+ \frac{(n- 3)}{n - 2} \delta  M_\infty& = &
+ \sum_{k = 1}^K \left(
+    \frac{\kappa_{k}}{8\pi}\, \delta A_k
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
+    - \frac{1}{16\pi}  \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} \nonumber \\
+    & & + \frac{1}{8\pi} \int_{\Sigma} \nabla^\nu \omega_{\mu\nu}\,  \D V^\mu
+     - \frac{1}{8\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu ,
+\eea
+where $\Sp_\infty$ stands for the outer boundary of $\Sigma$, i.e. the limit
+$r\to +\infty$ of a sphere $\Sp$ of constant value of $(x^0,r)$, $(x^\alpha)$
+being an asymptotically Minkowkskian coordinate system such that $\Sigma$
+is a hypersurface $x^0 = \mathrm{const}$, $\w{\xi} = \partial_0$ and
+$r := \sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$.
+In view of Eqs.~(\ref{e:evo:I_Sk_int_Omega})-(\ref{e:evo:def_H})
+and (\ref{e:sta:area_bivector}), we may write
+\[
+    \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} =
+    2 \int_{\Sp_\infty} \xi_\mu H_\nu \,\D S^{\mu\nu}
+    = \int_{\Sp_\infty} \xi_\mu (\nabla^\sigma h_{\nu\sigma}
+    - \nabla_\nu h^\sigma_{\ \, \sigma}) (s^\mu n^\nu - n^\mu s^\nu) \sqrt{q} \, \D^{n-2} x ,
+\]
+where on $\Sp_\infty$, $\w{n} = \w{\xi}$ and $\w{s} = (x^i/r)\wpar_i$, with
+$\xi_\mu n^\mu = \xi_\mu \xi^\mu = -1$ and $\xi_\mu s^\mu = 0$. Moreover, since
+$(x^\alpha)$ is asymptotically Minkowkskian, we may substitute the covariant derivatives
+with partial ones. Hence we get
+\[
+    \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} =
+    \int_{\Sp_\infty} \frac{x^i}{r} ( - \partial_0 h_{i0} + \partial_j h_{ij} -
+    \partial_i h^\sigma_{\ \, \sigma}) \sqrt{q} \, \D^{n-2} x .
+\]
+Given the asymptotic behavior (\ref{e:sta:asymptotic_metric}) of the metric tensor,
+we get
+\[
+    h_{00} = \alpha_n \frac{\delta M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-2}} \right),\quad
+    h_{0i} = \bigO\left( \frac{1}{r^{n-2}} \right), \quad
+    h_{ij} = \frac{\alpha_n}{n-3} \frac{\delta M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-2}} \right) ,
+\]
 
 ... TO BE COMPLETED ...
 
