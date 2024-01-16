@@ -480,7 +480,7 @@ Now, from Eq.~(\ref{e:evo:I_Sk_int_omega}),
     + \underbrace{H^\nu \nabla_\nu \xi^\mu - \xi^\nu \nabla_\nu H^\mu}_{0}
     - H^\mu \underbrace{\nabla_\nu \xi^\nu}_{0}) \D V_\mu
     \nonumber \\
-    & = & \nabla_\nu H^\nu  \, \xi_\mu \, \D V^\mu ,\nonumber
+    & = & \nabla_\nu H^\nu  \, \xi^\mu \, \D V_\mu ,\nonumber
 \eea
 where $\nabla_\nu \xi^\nu = 0$ holds because $\w{\xi}$ is a Killing vector
 and we have used $H^\nu \nabla_\nu \xi^\mu - \xi^\nu \nabla_\nu H^\mu = [\w{H},\w{\xi}]^\mu = - [\w{\xi},\w{H}]^\mu = - \Liec{\xi} H^\mu = 0$
@@ -488,14 +488,49 @@ because $\Lie{\xi} \w{h} = 0$ and $\w{\xi}$ is a Killing vector, so that $\wnab$
 $\Lie{\xi}$ commute\footnote{This is easy to see in a coordinate system $(x^\alpha)$ such that $\w{\xi} = \wpar_0$, cf. Eq.~(\ref{e:bas:Lie_adapted}).},
 which implies $\Lie{\xi} \w{H} = 0$ from Eq.~(\ref{e:evo:def_H}).
 Hence
+\[
+   \delta  M_\infty =
+ \sum_{k = 1}^K \left(
+    \frac{\kappa_{k}}{8\pi}\, \delta A_k
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
+     +  \frac{1}{8\pi} \int_{\Sigma} \nabla_\nu H^\nu  \, \xi^\mu \, \D V_\mu
+     - \frac{1}{8\pi} \delta \! \int_{\Sigma} R^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu .
+\]
+Let us make the Einstein tensor $\w{G}$ appear in the last integral via Eq.~(\ref{e:bas:Einstein_tensor}):
+$R^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu = G^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu + R\, \xi^\mu \, \D V_\mu / 2$.
+Given that $\delta\xi^\mu = 0$ [Eq.~(\ref{e:evo:delta_xi_eta})], we have
+$\delta(R \, \xi^\mu \, \D V_\mu) = \xi^\mu (\delta R \, \D V_\mu + R \, \delta(\D V_\mu))$, so that
+we may write
 \be
    \delta  M_\infty =
  \sum_{k = 1}^K \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
     +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
-     +  \frac{1}{8\pi} \int_{\Sigma} \nabla_\nu H^\nu  \, \xi_\mu \, \D V^\mu
-     - \frac{1}{8\pi} \delta \! \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu .
+    + \frac{1}{8\pi} \, I - \frac{1}{8\pi} \delta \! \int_{\Sigma} G^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu ,
 \ee
+with
+\[
+    I :=  \int_{\Sigma} \xi^\mu  \left[ \nabla_\nu H^\nu \, \D V_\mu - \frac{1}{2}
+    \delta R \, \D V_\mu + \frac{1}{2} R \, \delta(\D V_\mu)  \right] .
+\]
+Now from Eq.~(\ref{e:sta:normal_vol_element}), $\D V_\alpha = - n_\alpha \sqrt{\gamma} \, \D^{n-1} x$,
+where $(x^i)_{1\leq i \leq n-1}$ are coordinates on $\Sigma$, $\gamma$ is the determinant with respect to
+$(x^i)$ of the metric $\w{\gamma}$ induced by $\w{g}$ on $\Sigma$ and  the normal 1-form
+$n_\alpha$ is collinear to the differential of $t$, the latter being a scalar field defining $\Sigma$
+as a hypersurface $t = \mathrm{const}$: $n_\alpha = -N (\dd t)_\alpha = - N \partial_\alpha t$.
+Given the identity $\sqrt{-g} = N\sqrt{\gamma}$ (see e.g. Eq.~(5.55) of Ref.~\cite{Gourg12}), we get
+$\D V_\alpha = \partial_\alpha t \, \sqrt{-g} \, \D^{n-1} x$. Since $\delta(\partial_\alpha t) = 0$
+and $\delta(\D^{n-1} x) = 0$, we get
+\[
+    \delta(\D V_\alpha) = \partial_\alpha t \, \delta\sqrt{-g} \, \D^{n-1} x
+        = \frac{1}{\sqrt{-g}} \delta\sqrt{-g}\,
+            \D V_\alpha .
+\]
+Hence
+\[
+    I =  \int_{\Sigma}  \left[ \nabla_\nu H^\nu - \frac{1}{2\sqrt{-g}} \delta\left(R \sqrt{-g}\right)  \right] \xi^\mu \D V_\mu.
+\]
+
 
 ... TO BE COMPLETED ...
 
