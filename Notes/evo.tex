@@ -507,6 +507,7 @@ we may write
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
     +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
     + \frac{1}{8\pi} \, I - \frac{1}{8\pi} \delta \! \int_{\Sigma} G^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu ,
+    \label{e:evo:mass_variation_gal_I}
 \ee
 with
 \[
@@ -519,7 +520,7 @@ $(x^i)$ of the metric $\w{\gamma}$ induced by $\w{g}$ on $\Sigma$ and  the norma
 $n_\alpha$ is collinear to the differential of $t$, the latter being a scalar field defining $\Sigma$
 as a hypersurface $t = \mathrm{const}$: $n_\alpha = -N (\dd t)_\alpha = - N \partial_\alpha t$.
 Given the identity $\sqrt{-g} = N\sqrt{\gamma}$ (see e.g. Eq.~(5.55) of Ref.~\cite{Gourg12}), we get
-$\D V_\alpha = \partial_\alpha t \, \sqrt{-g} \, \D^{n-1} x$. Since $\delta(\partial_\alpha t) = 0$
+$\D V_\alpha = \partial_\alpha t \, \sqrt{-g} \, \D^{n-1} x$. Since obviously $\delta(\partial_\alpha t) = 0$
 and $\delta(\D^{n-1} x) = 0$, we get
 \[
     \delta(\D V_\alpha) = \partial_\alpha t \, \delta\sqrt{-g} \, \D^{n-1} x
@@ -530,10 +531,53 @@ Hence
 \[
     I =  \int_{\Sigma}  \left[ \nabla_\nu H^\nu - \frac{1}{2\sqrt{-g}} \delta\left(R \sqrt{-g}\right)  \right] \xi^\mu \D V_\mu.
 \]
-
-
-... TO BE COMPLETED ...
-
+Now, a standard identity\footnote{See e.g. Eq.~(E.1.18) in Wald's textbook~\cite{Wald84}, where
+$\w{v} = 2\w{H}$ (compare Wald's Eq.~(E.1.16) with Eq.~(\ref{e:evo:def_H})).}, which is at the root of the derivation of the Einstein equation by extremalization of
+the Einstein-Hilbert action\index{Einstein-Hilbert action}, is
+\be \label{e:evo:proto_EH}
+    \delta\left(R \sqrt{-g}\right) = G_{\mu\nu} \, \delta g^{\mu\nu} \, \sqrt{-g}
+    + 2 \nabla_\mu H^\mu \, \sqrt{-g} .
+\ee
+It's rather straightforward to establish (\ref{e:evo:proto_EH}) from the \defin{Palatini identity}\index{Palatini identity}\index{Palatini identity}\footnote{See e.g. Eq.~(21.21) in MTW \cite{MisneTW73}, Eq.~(3.86) in Straumann's textbook \cite{Strau13}
+or Eq.~(4.62) in Carroll's textbook \cite{Carro04}.}:
+\be \label{e:evo:Palatini}
+    \delta R_{\alpha\beta} = \nabla_\mu \delta\Gamma^\mu_{\ \, \alpha\beta}
+        - \nabla_\beta \delta \Gamma^\mu_{\ \, \alpha\mu} ,
+\ee
+where the variations $\delta\Gamma^\gamma_{\ \, \alpha\beta}$ of the Christofell symbols are actually
+tensor fields on $\M$ (contrary to the Christofell symbols themselves), being expressible via the
+manifestly tensorial relation\footnote{See e.g. Eq.~(3.93) in Straumann's textbook \cite{Strau13}.}
+\be \label{e:evo:delta_Gamma}
+    \delta\Gamma^\gamma_{\ \, \alpha\beta} = \frac{1}{2} g^{\gamma\mu} \left( \nabla_\alpha h_{\mu\beta}
+        + \nabla_\beta h_{\alpha\mu} - \nabla_\mu h_{\alpha\beta} \right) .
+\ee
+Using $R := g^{\mu\nu} R_{\mu\nu}$, we have indeed
+\[
+    \delta\left(R \sqrt{-g}\right) = \delta g^{\mu\nu} \, R_{\mu\nu}\,  \sqrt{-g}
+    + g^{\mu\nu} \, \delta R_{\mu\nu}  \, \sqrt{-g}
+    + g^{\mu\nu} \, R_{\mu\nu} \, \delta \sqrt{-g} ,
+\]
+where the second term can be expressed by combining Eqs.~(\ref{e:evo:Palatini}),
+(\ref{e:evo:delta_Gamma}) and (\ref{e:evo:def_H}):
+\[
+    g^{\mu\nu} \, \delta R_{\mu\nu}
+     = \nabla_\mu \left( \nabla^\nu h^\mu_{\ \, \nu} - \nabla^\mu h^\nu_{\ \, \nu} \right)
+     = 2 \nabla_\mu H^\mu .
+\]
+On the other side, using formula (\ref{e:bas:variation_det}) for the variation
+of the determinant $g$ of the matrix $(g_{\mu\nu})$, we have
+\[
+    \delta \sqrt{-g} = \frac{1}{2} \sqrt{-g} \, \delta \ln |g| = \frac{1}{2} \sqrt{-g} \, g^{\mu\nu}\,
+    \delta g_{\mu\nu} .
+\]
+The above three equations establish (\ref{e:evo:proto_EH}). It immediately follows that
+\[
+    I = - \frac{1}{2} \int_{\Sigma} G_{\mu\nu} \, \delta g^{\mu\nu} \, \xi^\rho \D V_\rho
+     =  \frac{1}{2} \int_{\Sigma} G^{\mu\nu} \, \delta g_{\mu\nu} \,  \xi_\rho \D V^\rho ,
+\]
+where the second equality results from $\delta g^{\mu\nu} = - g^{\mu\rho} g^{\nu\sigma}
+\delta g_{\rho\sigma}$. In view of Eq.~(\ref{e:evo:mass_variation_gal_I}), this
+completes the proof of the mass variation formula (\ref{e:evo:mass_variation_gal}).
 \end{proof}
 
 
