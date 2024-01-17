@@ -280,7 +280,7 @@ $\mathcal{A} = \kappa \chi_\mu (\delta k^\mu  +  \delta\lambda\, k^\mu) = \kappa
 Now, the variation of $\chi_\mu k^\mu = -1$ gives $\delta\chi_\mu\, k^\mu + \chi_\mu \, \delta k^\mu = 0$, which in view of Eq.~(\ref{e:evo:delta_chi_form}), can be rewritten as
 $\delta\lambda \, \chi_\mu k^\mu  + \chi_\mu \, \delta k^\mu = 0$, or equivalently
 $- \delta\lambda  + \chi_\mu \, \delta k^\mu = 0$, hence $\mathcal{A} = 0$.
-Let us now consider the first term in the above expression of $\delta\kappa$. We may rewrite it as
+Let us now consider the first term in the right-hand side of Eq.~(\ref{e:evo:delta_kappa_prov}); we may rewrite it as
 \[
     (\chi^\mu k^\nu + k^\mu\chi^\nu )\nabla_\mu \, \delta\chi_\nu = (q^{\mu\nu} - g^{\mu\nu}) \nabla_\mu \delta\chi_\nu ,
 \]
@@ -315,7 +315,7 @@ where Eq.~(\ref{e:evo:delta_chi}) has been used to
 express $\delta\chi_\mu$ and $h_{\mu\nu} \nabla^\mu \chi^\nu = 0$ follows from
 the Killing equation for $\w{\chi}$ and the symmetry of $\w{h}$, while
 $\nabla^\mu \eta_{(i)\mu} = 0$ follows from the Killing equation for $\w{\eta}_{(i)}$.
-Together with $\mathcal{A} = 0$, this results allows us rewrite Eq.~(\ref{e:evo:delta_kappa_prov})
+Together with $\mathcal{A} = 0$, this result allows us rewrite Eq.~(\ref{e:evo:delta_kappa_prov})
 as
 \be
 \delta\kappa = - \frac{1}{2} \chi_\mu \nabla^\nu h^\mu_{\ \, \nu}
@@ -333,9 +333,9 @@ are constant, we get
 \ee
 The identification of the last integral with $-8\pi J_{\Hor_{k}(i)}$ readily follows from formula
 (\ref{e:sta:J_Komar_cov_der}) for the Komar angular momentum, once the area element bivector normal to $\Sp_k$
-is expressed as $\D S^{\mu\nu}=(\chi^\mu k^\nu - k^\mu \chi^\nu) \D S $ [Eq.~(\ref{e:sta:dS_chi_k})]. As for the integral $I_{\Sp_k}$, it can be rewritten as an integral involving
+is expressed as $\D S^{\mu\nu}=(\chi^\mu k^\nu - k^\mu \chi^\nu) \, \D S $ [Eq.~(\ref{e:sta:dS_chi_k})]. As for the integral denoted $I_{\Sp_k}$ in Eq.~(\ref{e:evo:delta_kappa_integrated}), it can be rewritten as an integral involving
 $\w{h}$ and the stationary Killing vector $\w{\xi}$ instead of the Killing vector $\w{\chi}$ (which depends
-on $\Hor_k$), namely
+on $\Hor_k$, contrary to $\w{\xi}$), namely
 \be \label{e:evo:I_Sk_int_omega}
     I_{\Sp_k} =  \int_{\Sp_k} \omega_{\mu\nu} \,\D S^{\mu\nu} ,
     \quad \mbox{with} \quad
@@ -483,9 +483,9 @@ Now, from Eq.~(\ref{e:evo:I_Sk_int_omega}),
 \eea
 where $\nabla_\nu \xi^\nu = 0$ holds because $\w{\xi}$ is a Killing vector
 and we have used $H^\nu \nabla_\nu \xi^\mu - \xi^\nu \nabla_\nu H^\mu = [\w{H},\w{\xi}]^\mu = - [\w{\xi},\w{H}]^\mu = - \Liec{\xi} H^\mu = 0$
-because $\Lie{\xi} \w{h} = 0$ and $\w{\xi}$ is a Killing vector, so that $\wnab$ and
-$\Lie{\xi}$ commute\footnote{This is easy to see in a coordinate system $(x^\alpha)$ such that $\w{\xi} = \wpar_0$, cf. Eq.~(\ref{e:bas:Lie_adapted}).},
-which implies $\Lie{\xi} \w{H} = 0$ from Eq.~(\ref{e:evo:def_H}).
+because $\Lie{\xi} \w{h} = 0$ and Eq.~(\ref{e:evo:def_H}) imply
+$\Lie{\xi} \w{H} = 0$, for $\wnab$ and
+$\Lie{\xi}$ commute, $\w{\xi}$ being a Killing vector\footnote{This is easy to see in a coordinate system $(x^\alpha)$ such that $\w{\xi} = \wpar_0$, cf. Eq.~(\ref{e:bas:Lie_adapted}).}.
 Hence
 \[
    \delta  M_\infty =
@@ -518,7 +518,7 @@ where $(x^i)_{1\leq i \leq n-1}$ are coordinates on $\Sigma$, $\gamma$ is the de
 $(x^i)$ of the metric $\w{\gamma}$ induced by $\w{g}$ on $\Sigma$ and  the normal 1-form
 $n_\alpha$ is collinear to the differential of $t$, the latter being a scalar field defining $\Sigma$
 as a hypersurface $t = \mathrm{const}$: $n_\alpha = -N (\dd t)_\alpha = - N \partial_\alpha t$.
-Given the identity $\sqrt{-g} = N\sqrt{\gamma}$ (see e.g. Eq.~(5.55) of Ref.~\cite{Gourg12}), we get
+Given the identity $\sqrt{-g} = N\sqrt{\gamma}$ (see e.g. Eq.~(5.55) of Ref.~\cite{Gourg12}), we have
 $\D V_\alpha = \partial_\alpha t \, \sqrt{-g} \, \D^{n-1} x$. Since obviously $\delta(\partial_\alpha t) = 0$
 and $\delta(\D^{n-1} x) = 0$, we get
 \[
@@ -531,7 +531,7 @@ Hence
     I =  \int_{\Sigma}  \left[ \nabla_\nu H^\nu - \frac{1}{2\sqrt{-g}} \delta\left(R \sqrt{-g}\right)  \right] \xi^\mu \D V_\mu.
 \]
 Now, a standard identity\footnote{See e.g. Eq.~(E.1.18) in Wald's textbook~\cite{Wald84}, where
-$\w{v} = 2\w{H}$ (compare Wald's Eq.~(E.1.16) with Eq.~(\ref{e:evo:def_H})).}, which is at the root of the derivation of the Einstein equation by extremalization of
+$\w{v} = 2\w{H}$ (compare Wald's Eq.~(E.1.16) with Eq.~(\ref{e:evo:def_H})).}, which is at the root of the derivation of the Einstein equation by extremalizing
 the Einstein-Hilbert action\index{Einstein-Hilbert action}, is
 \be \label{e:evo:proto_EH}
     \delta\left(R \sqrt{-g}\right) = G_{\mu\nu} \, \delta g^{\mu\nu} \, \sqrt{-g}
@@ -563,8 +563,8 @@ where the second term can be expressed by combining Eqs.~(\ref{e:evo:Palatini}),
      = \nabla_\mu \left( \nabla^\nu h^\mu_{\ \, \nu} - \nabla^\mu h^\nu_{\ \, \nu} \right)
      = 2 \nabla_\mu H^\mu .
 \]
-On the other side, using formula (\ref{e:bas:variation_det}) for the variation
-of the determinant $g$ of the matrix $(g_{\mu\nu})$, we have
+On the other side, formula (\ref{e:bas:variation_det}) for the variation
+of the determinant $g$ leads to
 \[
     \delta \sqrt{-g} = \frac{1}{2} \sqrt{-g} \, \delta \ln |g| = \frac{1}{2} \sqrt{-g} \, g^{\mu\nu}\,
     \delta g_{\mu\nu} = - \frac{1}{2} \sqrt{-g} \, g_{\mu\nu}\,
