@@ -15,7 +15,7 @@ In this section, we assume 4-dimensional general relativity.
 Let us consider an initially isolated Kerr black hole of mass and spin parameters $(m,a)$
 that is perturbed by the arrival of some external body or some gravitational
 radiation. After some transitory dynamical regime (e.g. absorption of the
-external body and emission of gravitational waves), the black hole relaxes
+incoming body and emission of gravitational waves), the black hole relaxes
 to a new equilibrium configuration. According to the
 no-hair theorem (Property~\ref{p:sta:no-hair_thm}, Sec.~\ref{s:sta:no-hair}),
 the final state has to be a Kerr black hole, of
@@ -42,11 +42,11 @@ or equivalently
 where the identifications of the black hole's surface gravity $\kappa$ and
 rotation velocity $\Omega_{\Hor}$ result from Eqs.~(\ref{e:ker:kappa_m_a})
 and (\ref{e:ker:def_OmegaH}) respectively. Hence we get
-\be \label{e:evo:mass_variation}
+\be \label{e:evo:mass_variation_Kerr}
     \encadre{ \delta M = \frac{\kappa}{8\pi} \, \delta A + \Omega_{\Hor} \, \delta J } .
 \ee
 \begin{remark}
-The mass variation formula (\ref{e:evo:mass_variation}) is \emph{not}
+The mass variation formula (\ref{e:evo:mass_variation_Kerr}) is \emph{not}
 the mere differential of the Smarr formula (\ref{e:ker:Smarr}):
 $ M =  \kappa A/(4\pi) + 2 \Omega_{\Hor} J$.
 Indeed, differentiating the latter yields
@@ -60,16 +60,16 @@ $\delta\kappa \neq 0$ and $\delta\Omega_{\Hor}\neq 0$ when moving
 from $(m,a)$ to $(m+\delta m, a+\delta a)$.
 If one were (wrongly) assuming $\delta\kappa = 0$ and $\delta\Omega_{\Hor} = 0$, one would
 be wrong by a factor of 2 in recovering the right-hand side of
-Eq.~(\ref{e:evo:mass_variation}).
+Eq.~(\ref{e:evo:mass_variation_Kerr}).
 \end{remark}
 
 \subsection{General mass variation formula} \label{s:evo:gen_mass_variation}
 
-The mass variation formula (\ref{e:evo:mass_variation}) can be derived in
-a more general framework, without assuming that it describes changes between
-two nearby Kerr solutions \cite{BardeCH73,Carte79} and without restricting
-the spacetime dimension to 4. It even holds
-for other gravity theories than general relativity, more specifically
+The mass variation formula (\ref{e:evo:mass_variation_Kerr}) can be derived in
+a much more general framework, without assuming that it corresponds to changes between
+two nearby Kerr solutions and without restricting
+the spacetime dimension to 4 or assuming that the event horizon is connected.
+It even holds for other gravity theories than general relativity, more specifically
 for any theory based on a diffeomorphism-covariant lagrangian; see Wald's review
 article~\cite{Wald01} for details.
 
@@ -85,7 +85,7 @@ Note that the same manifold $\M$ is used for both spacetimes.
 There is no loss of generality in doing so, since the perturbed manifold
 must be diffeomorphic to the original one, which allows one to
 identify the two manifolds. In particular, both manifolds have the same
-topology, since one would not qualify as ``nearby'' a manifold with a distinct topology.
+topology: one would not qualify as ``nearby'' a manifold with a distinct topology.
 
 
 \begin{prop}[mass variation formula for generic black holes]
@@ -100,8 +100,7 @@ This is guaranteed with $\w{\chi}_k = \w{\xi}$
 if $\Hor_{k}$ is non-rotating ($\w{\xi}$ null on all $\Hor_{k}$;
 Property~\ref{p:sta:H_Killing_hor_xi_null}), while if
 $\Hor_{k}$ is rotating ($\w{\xi}$ spacelike on some parts of $\Hor_{k}$),
-this holds under the hypotheses of the strong rigidity theorem
-(Property~\ref{p:sta:strong_rigidity_thm}),
+this holds under the hypotheses of the strong rigidity theorem\index{strong!rigidity theorem}\index{rigidity theorem!strong --} (Property~\ref{p:sta:strong_rigidity_thm}),
 with
 \be \label{e:evo:chi_k}
 \w{\chi}_{k} = \w{\xi} + \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \w{\eta}_{\Hor_k(i)},
@@ -126,7 +125,7 @@ Let us assume that the null dominance condition (\ref{e:neh:null_dominant_cond})
 on $\Hor_{k}$; by the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law}), this
 implies that $\kappa_{k}$ is constant.
 Let $(\M,\w{g}+\delta\w{g})$ be a nearby stationary spacetime sharing the same characteristics.
-The change $\delta M_\infty$ of the Komar at infinity between the two spacetimes
+The change $\delta M_\infty$ of the Komar mass at infinity between the two spacetimes
 (cf. Property~\ref{p:sta:Komar_mass_inf})
 is related to the changes $\delta A_k$ in the areas and to the changes
 $\delta J_{\Hor_{k}(i)}$ in the Komar angular momenta by
@@ -157,17 +156,17 @@ $\w{\xi}$ and $\w{\eta}_{\Hor_k(i)}$ generating the stationarity and axisymmetri
 \be \label{e:evo:delta_xi_eta}
     \delta\w{\xi} = 0 \qand \delta \w{\eta}_{\Hor_k(i)} = 0 .
 \ee
- This amounts to identifying the orbits
+This amounts to identifying the orbits
 of the isometry group actions in the two spacetimes. Given that $\Hor$ is globally invariant by these
 group actions, this requirement is compatible with the identification of $\Hor$ in both spacetimes.
 Let us introduce the short-hand notation $\w{h} := \delta\w{g}$, or in index notation
-$h_{\alpha\beta} = \delta g_{\alpha\beta}$. In all what follows, indices will be raised or lowered
+$h_{\alpha\beta} = \delta g_{\alpha\beta}$. In what follows, indices are raised or lowered
 with the unperturbed metric $\w{g}$. In particular, $h^{\alpha\beta} := g^{\alpha\mu} g^{\beta\nu} h_{\mu\nu}$.
 Note that $h^{\alpha\beta} \neq \delta g^{\alpha\beta}$. Actually, by variation of the
 identity $g^{\alpha\mu} g_{\mu\beta} = \delta^\alpha_{\ \, \beta}$, one gets
 $\delta g^{\alpha\beta} = - h^{\alpha\beta}$.
 The starting point for proving (\ref{e:evo:mass_variation_gal})
-is the variation of the generalized Smarr formula (\ref{e:sta:Smarr_M_infty_R}):
+is the variation of the generalized Smarr formula\index{generalized Smarr formula}\index{Smarr formula!generalized --} (\ref{e:sta:Smarr_M_infty_R}):
 \bea
  \frac{2(n- 3)}{n - 2} \, \delta  M_\infty& = &\sum_{k = 1}^K
     \left[
@@ -182,8 +181,8 @@ of which is a cross-section of the event horizon, i.e. some union of cross-secti
 of the connected components $\Hor_{k}$ and $\D V^\mu$ is the normal volume element vector
 of $\Sigma$ defined by Eq.~(\ref{e:sta:normal_vol_element}).
 Let us start by evaluating the term $A_k\,  \delta \kappa_{k}$ in the above formula.
-For the sake of brevity, let us drop the index $k$ in what follows, given that
-we temporarily focuss on a single connected component $\Hor_k$ of the event horizon $\Hor$.
+For the sake of brevity, we shall drop the index $k$ in what follows, given that
+we temporarily focus on a single connected component $\Hor_k$ of the event horizon $\Hor$.
 The surface gravity $\kappa$ $(= \kappa_k)$ is given by Eq.~(\ref{e:neh:dxi2_kappa}):
 $2\kappa = k^\mu \partial_\mu(\chi_\nu \chi^\nu)$, where $\w{\chi}$ ($ = \w{\chi}_k$) is the Killing vector
 normal to the Killing horizon $\Hor_k$ and $\w{k}$ is a null vector field defined on $\Hor_k$,
@@ -413,7 +412,7 @@ regarding the flux of a 2-form (here $\w{\omega}$) to write
 \eea
 where $\Sp_\infty$ stands for the outer boundary of $\Sigma$, i.e. the limit
 $r\to +\infty$ of a sphere $\Sp$ of constant value of $(x^0,r)$, $(x^\alpha)$
-being an asymptotically Minkowkskian coordinate system such that $\Sigma$
+being an asymptotically Minkowskian coordinate system such that $\Sigma$
 is a hypersurface $x^0 = \mathrm{const}$, $\w{\xi} = \wpar_0$ and
 $r := \sqrt{(x^1)^2 + \cdots + (x^{n-1})^2}$.
 In view of Eqs.~(\ref{e:evo:I_Sk_int_omega})-(\ref{e:evo:def_H})
@@ -428,7 +427,7 @@ where $(y_a)_{1\leq a \leq n-2}$ is a coordinate system of $\Sp_\infty$
 and $q$ is the determinant with respect to it of the metric $\w{q}$ induced by $\w{g}$
 on $\Sp_\infty$. Now, on $\Sp_\infty$, $\w{n} = \w{\xi}$ and $\w{s} = (x^i/r)\wpar_i$, with
 $\xi_\mu n^\mu = \xi_\mu \xi^\mu = -1$ and $\xi_\mu s^\mu = 0$. Moreover, since
-$(x^\alpha)$ is asymptotically Minkowkskian, we may substitute the covariant derivatives
+$(x^\alpha)$ is asymptotically Minkowskian, we may substitute the covariant derivatives
 with partial ones. Hence we get, accounting for $\partial_0 h_{i0} = 0$,
 \[
     \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} =
@@ -581,9 +580,49 @@ where the second equality results from $\delta g^{\mu\nu} = - g^{\mu\rho} g^{\nu
 completes the proof of the mass variation formula (\ref{e:evo:mass_variation_gal}).
 \end{proof}
 
+\begin{remark}
+Contrary to the generalized Smarr formula\index{generalized Smarr formula}\index{Smarr formula!generalized --} (\ref{e:sta:Smarr_M_infty_R}), the spacetime dimension $n$ does not appear in the mass variation
+formula (\ref{e:evo:mass_variation_gal}).
+\end{remark}
+
+A special case of the mass variation formula (\ref{e:evo:mass_variation_gal}) is worth to be considered: that of a solution of the vacuum Einstein equation (\ref{e:fra:vac_Einstein}):
+the Ricci tensor then vanishes identically, and so does the Einstein tensor: $\w{G} = 0$.
+Accordingly one gets rid of the integrals in the
+right-hand side of formula~(\ref{e:evo:mass_variation_gal}). Moreover, in that case,
+the null dominance condition is automatically fulfilled, which guarantees that the surface gravities
+$\kappa_k$ are constant on each connected component of the event horizon. We may therefore state:
+
+\begin{prop}[mass variation formula for black holes in vacuum general relativity]
+Let $(\M,\w{g})$ be a $n$-dimensional stationary spacetime such that $\w{g}$ obeys
+the vacuum Einstein equation $\w{R} = 0$ [Eq.~(\ref{e:fra:vac_Einstein})]. Let us
+suppose that $(\M,\w{g})$ contains a black
+hole, the event horizon of which has $K \geq 1$ connected components
+$\Hor_{1}$, $\ldots$, $\Hor_{K}$, each of them being assumed to be a Killing horizon.
+Let $(\M,\w{g}+\delta\w{g})$ be a nearby stationary spacetime sharing the same characteristics.
+Using the same notations as in Property~\ref{p:evo:first_law_gen}, the
+change $\delta M$ of the Komar mass between the two spacetimes
+is given by\footnote{We have dropped the subscript $\infty$ on $\delta M$ because, in
+the vacuum case, the Komar mass is independent of the integration surface
+(Property~\ref{p:sta:Komar_mass_invariant}) and hence needs not to be taken at the asymptotically flat
+end of the stationary spacetime.}
+\be \label{e:evo:mass_variation_vacuum}
+   \encadre{ \delta  M = \sum_{k = 1}^K
+    \left(
+    \frac{\kappa_{k}}{8\pi}\, \delta A_k
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right) } .
+\ee
+In the particular case $n=4$ (which implies $0 \leq L_k \leq 1$) and $K=1$
+(connected event horizon), this formula reduces to
+\be \label{e:evo:mass_variation_vacuum_n4}
+   \encadre{ \delta M = \frac{\kappa}{8\pi} \, \delta A + \Omega_{\Hor} \, \delta J } .
+\ee
+In particular, one recovers formula~(\ref{e:evo:mass_variation_Kerr}), which was obtained
+for a Kerr black hole.
+\end{prop}
+
 
 \begin{hist}
-The mass-variation formula (\ref{e:evo:mass_variation}) for Kerr black holes
+The mass-variation formula (\ref{e:evo:mass_variation_Kerr}) for Kerr black holes
 has been first
 derived by Jacob Bekenstein\index[pers]{Bekenstein, J.D.}
 in 1973 \cite{Beken73a}. Its extension to generic stationary black hole configurations
@@ -597,17 +636,18 @@ and Stephen Hawking\index[pers]{Hawking, S.W.} in 1973 \cite{BardeCH73}.
 \subsection{A first law?}
 \label{s:evo:a_first_law_question}
 
-At this stage, it would be premature to call formula~(\ref{e:evo:mass_variation})
+At this stage, it would be premature to call formula~(\ref{e:evo:mass_variation_vacuum}) or
+(\ref{e:evo:mass_variation_vacuum_n4})
 the first law of black hole dynamics by analogy to the first law of thermodynamics
-$\D E = T \D S - P \D V$. One can reasonably interpret $\D M$
+$\D E = T \D S - P \D V$. One can reasonably interpret $\delta M$
 as some energy variation and the term
-$\Omega_{\Hor} \, \D J$ as the work\footnote{In Newtonian mechanics, the
+$\Omega_{\Hor} \, \delta J$ as the work\footnote{In Newtonian mechanics, the
 work done by a torque $\tau$ on a body that is rotating by $\D\ph$
 is $\D W = \tau \, \D\ph$. Given that $\tau := \D J/\D t$, one gets $\D W = \Omega \, \D J$, where
 $\Omega = \D\ph/\D t$ is the body's angular velocity.} performed by the torque
-that is changing by $\D J$ the angular momentum $J$ of a body rotating
+that is changing by $\delta J$ the angular momentum $J$ of a body rotating
 at the angular velocity $\Omega_{\Hor}$. However, we have not got any argument yet
-to identify the term $(\kappa/8\pi) \, \D A$ with the classical heat exchange term $T\D S$.
+to identify the term $(\kappa/8\pi) \, \delta A$ with the classical heat exchange term $T\D S$.
 For this, we need first to identify the entropy $S$ with the black hole area $A$.
 This will be performed in the next section.
 
@@ -869,7 +909,7 @@ constant factor $\alpha$. Then the temperature $T$ would be $\kappa/(8\pi\alpha)
     S = \alpha A \qand T = \frac{1}{8 \pi\alpha}\, \kappa ,
 \ee
 so that we get $T\D S = \kappa/(8\pi)\D A$, making
-the mass variation formula (\ref{e:evo:mass_variation}) look pretty much like
+the mass variation formula (\ref{e:evo:mass_variation_vacuum_n4}) look pretty much like
 the first law of thermodynamics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
