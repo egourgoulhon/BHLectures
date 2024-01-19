@@ -200,13 +200,6 @@ dashed curves have $r=\mathrm{const}$ (spaced apart by $\delta r = m/2$).
 \end{figure}
 
 
-\begin{figure}
-\centerline{\includegraphics[height=0.32\textheight]{max_X2mT2.pdf}}
-\caption[]{\label{f:max:X2mT2} \footnotesize
-Function $F:\; x\mapsto \mathrm{e}^{x}(x-1)$, yielding
-$X^2-T^2 = F(r/2m)$, cf. Eq.~(\ref{e:sch:X2mT2}).}
-\end{figure}
-
 We have $\dd U \, \dd V = (\dd T - \dd X) (\dd T + \dd X)  = \dd T^2 - \dd X^2$,
 so that the metric components with respect to the Kruskal-Szekeres coordinates
 are easily deduced from Eq.~(\ref{e:sch:metric_UV}):
@@ -223,10 +216,7 @@ by
    \encadre{ \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) = X^2 - T^2 } .
 \ee
 This relation is a direct consequence of (\ref{e:max:r_UV_M_I}) and (\ref{e:sch:def_T_X}).
-We may rewrite it as
-\be
-    F\left( \frac{r}{2m} \right) = X^2 - T^2,
-\ee
+We may rewrite it as $F( {r}/{2m}) = X^2 - T^2$,
 where $F$ is the function defined by
 \be \label{e:sch:def_F}
     \begin{array}{cccc}
@@ -237,51 +227,54 @@ where $F$ is the function defined by
 The graph of $F$  is shown in Fig.~\ref{f:max:X2mT2}. We see clearly that $F$ is a bijective map.
 In particular, $F$ induces a bijection between $(1,+\infty)$ (the range of $r/2m$ on $\M_{\rm I}$)
 and $(0,+\infty)$ (the range of $X^2-T^2$ on $\M_{\rm I}$, according to (\ref{e:sch:X_T_range_I})). The inverse of $F$ can be expressed in terms of
-the \defin{Lambert function}\index{Lambert function} $W_0$, which is defined as
+the \defin{Lambert function}\index{Lambert function} $W_0$ \cite{AbramS72}, which is defined as
 the inverse of $x\mapsto x \mathrm{e}^x$:
 \be \label{e:sch:def_W0}
     \begin{array}{cccl}
     W_0: & (-1/\mathrm{e},+\infty) & \longrightarrow & (-1,+\infty) \\
-        & x & \longmapsto & y \mbox{\ such that\ } y \mathrm{e}^{y} = x .
+        & x & \longmapsto & y \mbox{\ \ such that\ \ } y \mathrm{e}^{y} = x .
     \end{array}
 \ee
-Noticing that
-\[
-    F(x) = \mathrm{e}^x(x-1) = \mathrm{e}\times (x-1) \mathrm{e}^{x-1}
-\]
-we may write
-\be
-    F^{-1} = \tilde{W}_0 ,
-\ee
-where $\tilde{W}_0$ is the rescaled Lambert function defined by
+Noticing that $F(x) = \mathrm{e}^x(x-1) = \mathrm{e}\times (x-1) \mathrm{e}^{x-1}$,
+we may write $F^{-1} = W$,
+where $W$ is the rescaled Lambert function defined by
 \be \label{e:max:def_tilde_W0}
-    \encadre{ \tilde{W}_0(x) := W_0\left(\frac{x}{\mathrm{e}}\right) + 1 }.
+    \encadre{ W(x) := W_0\left(\frac{x}{\mathrm{e}}\right) + 1 }.
 \ee
-Note that $\tilde{W}_0$ is a bijection $(-1,+\infty) \to (0, +\infty)$, which
+By construction, $W$ is a bijection $(-1,+\infty) \to (0, +\infty)$, which
 obeys
 \be \label{e:max:exp_tW0}
-    \mathrm{e}^{\tilde{W}_0(x)} \left( \tilde{W}_0(x) - 1 \right) = x .
+    \mathrm{e}^{W(x)} \left( W(x) - 1 \right) = x .
 \ee
 Its graph is shown in Fig.~\ref{f:max:lambert_rescaled}.
 
 \begin{figure}
-\centerline{\includegraphics[width=0.7\textwidth]{max_lambert_rescaled.pdf}}
-\caption[]{\label{f:max:lambert_rescaled} \footnotesize
-Rescaled Lambert function $\tilde{W}_0$, defined by (\ref{e:max:def_tilde_W0})
-and obeying
-$\mathrm{e}^{\tilde{W}_0(x)}(\tilde{W}_0(x)-1) = x$.}
+\centerline{\includegraphics[height=0.25\textheight]{max_X2mT2.pdf}}
+\caption[]{\label{f:max:X2mT2} \footnotesize
+Function $F:\; x\mapsto \mathrm{e}^{x}(x-1)$, yielding
+$X^2-T^2 = F(r/2m)$, cf. Eq.~(\ref{e:sch:X2mT2}).}
 \end{figure}
 
-Using $F^{-1} = \tilde{W}_0$, we may invert the relation (\ref{e:sch:X2mT2})
-to $r = 2m \tilde{W}_0(X^2-T^2)$. Noticing that
-$2m/r \, \mathrm{e}^{-r/2m} = (X^2-T^2 + \mathrm{e}^{r/2m})^{-1}$
-[cf. Eq.~(\ref{e:sch:X2mT2})], we may eliminate $r$ from the metric expression
-(\ref{e:sch:metric_KS}) in Kruskal-Szekeres coordinates:
+\begin{figure}
+\centerline{\includegraphics[width=0.7\textwidth]{max_lambert_rescaled.pdf}}
+\caption[]{\label{f:max:lambert_rescaled} \footnotesize
+Rescaled Lambert function $W = F^{-1}$, defined by (\ref{e:max:def_tilde_W0})
+and obeying
+$\mathrm{e}^{W(x)}(W(x)-1) = x$.}
+\end{figure}
+
+Since $F^{-1} = W$, we may invert relation~(\ref{e:sch:X2mT2})
+to $r = 2m \, W(X^2-T^2)$.
+This allows us to eliminate $r$ from the metric expression
+(\ref{e:sch:metric_KS});
+using Eq.~(\ref{e:max:exp_tW0}) to get rid of $\mathrm{e}^{W(X^2 - T^2)}$, we
+arrive at a fully explicit expression of Schwarzschild metric in terms
+of the Kruskal-Szekeres coordinates:
 \be \label{e:sch:metric_KS_TX_partial}
    \encadre{
     \w{g}  =  4m^2 \left[
-    \frac{4 \left( - \dd T^2 + \dd X^2 \right)}{X^2-T^2 + \mathrm{e}^{\tilde{W}_0(X^2-T^2)} }
-    +  \tilde{W}_0(X^2-T^2)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)
+    \frac{4  (W(X^2-T^2) - 1)}{(X^2-T^2) W(X^2-T^2)}\left( - \dd T^2 + \dd X^2 \right)
+    +  W(X^2-T^2)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)
     \right] } .
 \ee
 
@@ -304,11 +297,9 @@ In particular, we have
 \be \label{e:max:TsX_tanh_t}
     \frac{T}{X} = \tanh\left( \frac{t}{4m} \right) .
 \ee
-From Eq.~(\ref{e:sch:def_tortoise}), we have
-\[
-    \mathrm{e}^{r_*/4m} = \mathrm{e}^{r/4m} \sqrt{ \frac{r}{2m} - 1 } .
-\]
-We may summarize the above relations as follows:
+Since Eq.~(\ref{e:sch:def_tortoise}) yields
+$\mathrm{e}^{r_*/4m} = \mathrm{e}^{r/4m} \sqrt{ r/(2m) - 1 }$,
+the above relations can be written as
 \be \label{e:sch:KS_SD_I}
     \M_{\rm I}: \quad \encadre{ \left\{\begin{array}{l}
     T = \mathrm{e}^{r/4m} \sqrt{ \frac{r}{2m} - 1 } \sinh\left( \frac{t}{4m} \right)
@@ -318,7 +309,7 @@ We may summarize the above relations as follows:
     \iff
     \encadre{ \left\{\begin{array}{l}
     t = 2 m \,  \ln \left( \frac{X+T}{X-T} \right) \\[2ex]
-    r = 2 m \tilde{W}_0(X^2 - T^2) .
+    r = 2 m \, W(X^2 - T^2) .
         \end{array}\right. }
 \ee
 Note that we have used the identity $\artanh x = 1/2 \ln\left[(1+x)/(1-x)\right]$.
@@ -394,8 +385,8 @@ the Kruskal-Szekeres ones on $\M_{\rm IEF}$:
     \end{array}\right. }
     \iff
     \encadre{\left\{\begin{array}{l}
-     \ti =  2 m \left[ 2 \ln (T+X) - \tilde{W}_0(X^2 - T^2) \right] \\[1ex]
-    r = 2 m \tilde{W}_0(X^2 - T^2)
+     \ti =  2 m \left[ 2 \ln (T+X) - W(X^2 - T^2) \right] \\[1ex]
+    r = 2 m \, W(X^2 - T^2)
     \end{array}\right. }
 \ee
 The various subsets of $\M_{\rm IEF}$ correspond then to the following
@@ -422,9 +413,9 @@ dashed red curves have $r=\mathrm{const}$ (spaced apart by $\delta r = m/2$).
 
 Since the relation between IEF coordinates and Kruskal-Szekeres ones is the
 same in $\M_{\rm II}$ as in $\M_{\rm I}$ (being given by (\ref{e:sch:KS_IEF})
-in both cases), we conclude that the expression (\ref{e:sch:metric_KS})
-of the metric components with respect to
-Kruskal-Szekeres coordinates is valid in all $\M_{\rm IEF}$.
+in both cases), we conclude that expressions (\ref{e:sch:metric_KS}) and (\ref{e:sch:metric_KS_TX_partial})
+for the metric components with respect to
+Kruskal-Szekeres coordinates are valid in all $\M_{\rm IEF}$.
 
 Let us determine the relation between the Kruskal-Szekeres coordinates and
 the Schwarz\-schild-Droste ones in $\M_{\rm II}$. Since $r<2m$ in $\M_{\rm II}$,
@@ -450,7 +441,7 @@ We obtain then
     \iff
     \encadre{ \left\{\begin{array}{l}
     t = 2 m \,  \ln \left( \frac{T+X}{T-X} \right) \\[2ex]
-    r = 2 m \tilde{W}_0(X^2 - T^2) .
+    r = 2 m \, W(X^2 - T^2) .
         \end{array}\right. }
 \ee
 This is to be compared with (\ref{e:sch:KS_SD_I}).
@@ -609,11 +600,11 @@ The metric $\w{g}$ on the whole $\M$ is then defined by (\ref{e:sch:metric_KS_TX
 \be \label{e:sch:metric_KS_TX}
    \encadre{
     \w{g}  =  4m^2 \left[
-    \frac{4 \left( - \dd T^2 + \dd X^2 \right)}{X^2-T^2 + \mathrm{e}^{\tilde{W}_0(X^2-T^2)} }
-    +  \tilde{W}_0(X^2-T^2)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)
+    \frac{4  (W(X^2-T^2) - 1)}{(X^2-T^2) W(X^2-T^2)}\left( - \dd T^2 + \dd X^2 \right)
+    +  W(X^2-T^2)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)
     \right] } ,
 \ee
-where $\tilde{W}_0$ is the rescaled Lambert function defined by
+where $W$ is the rescaled Lambert function defined by
 (\ref{e:max:def_tilde_W0}) (cf. Fig.~\ref{f:max:lambert_rescaled}); it is the inverse of the function
 $x\mapsto \mathrm{e}^{x} (x-1)$,
 which establishes a bijection from $(0,+\infty)$ to $(-1,+\infty)$.
@@ -662,7 +653,7 @@ and $X$ to $-X$:
     \iff
     \encadre{ \left\{\begin{array}{l}
     t' = 2 m \,  \ln \left( \frac{X+T}{X-T} \right) \\[2ex]
-    r' = 2 m \tilde{W}_0(X^2 - T^2) .
+    r' = 2 m \, W(X^2 - T^2) .
         \end{array}\right. }
 \ee
 \be \label{e:sch:KS_SD_IV}
@@ -674,7 +665,7 @@ and $X$ to $-X$:
     \iff
     \encadre{ \left\{\begin{array}{l}
     t' = 2 m \,  \ln \left( \frac{T+X}{T-X} \right) \\[2ex]
-    r' = 2 m \tilde{W}_0(X^2 - T^2) .
+    r' = 2 m \, W(X^2 - T^2) .
         \end{array}\right. }
 \ee
 
@@ -739,8 +730,8 @@ is deduced from (\ref{e:sch:metric_KS_TX}):
 \be
     \encadre{
       \w{g} = 4m^2 \left[
-      \frac{4}{UV - \mathrm{e}^{\tilde{W}_0(-UV)} } \, \dd U \, \dd V
-      + \tilde{W}_0(-UV)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right] .
+      \frac{4(W(-UV) - 1)}{UV \, W(-UV)} \, \dd U \, \dd V
+      + W(-UV)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right] .
     }
 \ee
 We can also rewrite it as (\ref{e:sch:metric_UV}):
@@ -751,9 +742,9 @@ We can also rewrite it as (\ref{e:sch:metric_UV}):
 \ee
 where $r$ is the function of $(U,V)$ given by
 \be \label{e:max:r_W0_UV}
-    r = 2 m \tilde{W}_0(-UV) .
+    r = 2 m \, W(-UV) .
 \ee
-Note that the relation (\ref{e:max:r_UV_M_I}) between $r$ and $(U,V)$ holds
+Note that relation (\ref{e:max:r_UV_M_I}) between $r$ and $(U,V)$ holds
 in all $\M$:
 \be \label{e:max:r_UV}
     \encadre{ \mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) = - U V } .
@@ -887,8 +878,8 @@ definition of $\M$ as a part of $\R^2\times\mathbb{S}^2$
 center of Fig.~\ref{f:sch:xi_extend}.
 The areal radius of $\Sp$ is found by setting
 $\dd T = 0$, $\dd X = 0$ and $(T,X)=(0,0)$ in the metric expression
-(\ref{e:sch:metric_KS_TX}): $r_{\Sp}^2 = 4m^2 \tilde{W}_0(0)^2$.
-Since $\tilde{W}_0(0)=1$ (cf. Fig.~\ref{f:max:lambert_rescaled}), we get
+(\ref{e:sch:metric_KS_TX}): $r_{\Sp}^2 = 4m^2 W(0)^2$.
+Since $W(0)=1$ (cf. Fig.~\ref{f:max:lambert_rescaled}), we get
 \be
     \encadre{r_{\Sp} = 2 m } .
 \ee
@@ -954,7 +945,7 @@ $x^\alpha = (\hat{U}, \hat{V}, \th,\ph)$:
 \ee
 where [cf. Eq.~(\ref{e:max:r_W0_UV})]
 \be \label{e:max:r_hUhV}
-    r = 2 m \tilde{W}_0(-\tan \hat{U} \tan \hat{V}) .
+    r = 2 m\, W(-\tan \hat{U} \tan \hat{V}) .
 \ee
 
 To depict $\M$, let us introduce  ``time+space'' coordinates $(\hat{T},\hat{X})$,
@@ -1266,7 +1257,7 @@ $x^\alpha=(\tilde{U},\tilde{V},\th,\ph)$ is easily deduced from
 \ee
 where $r$ is the function of $(\tilde{U},\tilde{V})$ given by
 \be \label{e:max:r_tUtV}
-    r = 2 m \tilde{W}_0\!\left(-\sinh(\tan \tilde{U}) \sinh(\tan \tilde{V})\right) .
+    r = 2 m\,  W\!\left(-\sinh(\tan \tilde{U}) \sinh(\tan \tilde{V})\right) .
 \ee
 As we did for $(\hat{U},\hat{V})$, let us rewrite (\ref{e:max:metric_tUtV}) in
 a form that is better adapted to the null asymptotics.
@@ -1706,7 +1697,7 @@ induced on it by $\w{g}$:
 \ee
 where $r$ is the function of $X$ defined by
 \be \label{e:max:Sigma0_r_X}
-    r = r(X) = 2 m  \tilde{W}_0(X^2 - T_0^2) .
+    r = r(X) = 2 m  W(X^2 - T_0^2) .
 \ee
 The metric (\ref{e:max:gam_induced}) is obtained by setting $T=T_0$ and
 $\dd T = 0$ in (\ref{e:sch:metric_KS_TX}).
@@ -1724,12 +1715,12 @@ $(X_0, +\infty)\rightarrow (r_0, +\infty)$ (resp. $(-\infty, -X_0)\rightarrow (r
         \end{array} \right.
     \quad \mbox{and}\quad
     r_0 = \left\{ \begin{array}{ll}
-        2m \tilde{W}_0(-T_0^2) & \ \mbox{if}\quad  |T_0| < 1 \\
+        2m\,  W(-T_0^2) & \ \mbox{if}\quad  |T_0| < 1 \\
         0 & \ \mbox{if}\quad  |T_0| \geq 1.
         \end{array} \right.
 \ee
 The inverse of this bijection is\footnote{Let us recall that
-$\tilde{W}_0^{-1}(x) = \mathrm{e}^x (x-1)$.}
+$W^{-1}(x) = \mathrm{e}^x (x-1)$.}
 \be \label{e:max:Sigma0_X_r}
     X = X(r) = \pm \sqrt{\mathrm{e}^{r/2m} \left( \frac{r}{2m} - 1 \right) + T_0^2} ,
 \ee
@@ -1895,7 +1886,7 @@ is sufficient...
 \end{remark}
 
 Via (\ref{e:max:Sigma0_r_X}) and the fact that the rescaled Lambert function
-$\tilde{W}_0$ is an increasing function (cf. Fig.~\ref{f:max:lambert_rescaled}), of inverse $F(x)=\mathrm{e}^x(x-1)$,
+$W$ is an increasing function (cf. Fig.~\ref{f:max:lambert_rescaled}), of inverse $F(x)=\mathrm{e}^x(x-1)$,
 the condition (\ref{e:max:cond_r_embed}) can be turned into a condition
 on $X$:
 \be
@@ -1919,7 +1910,7 @@ $r_0$ [cf. Eq.~(\ref{e:max:def_X0_r0})] for $|T_0|\leq 1$ or
 $r_{\rm emb}(T_0)$ for $|T_0| > 1$:
 \be
     r_{\rm min}(T_0) = \left\{ \begin{array}{ll}
-        2m \tilde{W}_0(-T_0^2) & \ \mbox{if}\quad  |T_0| \leq 1 \\
+        2m\,  W(-T_0^2) & \ \mbox{if}\quad  |T_0| \leq 1 \\
         4 m \ln |T_0| & \ \mbox{if}\quad  |T_0| > 1.
         \end{array} \right.
 \ee
