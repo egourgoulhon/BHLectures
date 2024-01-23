@@ -267,13 +267,14 @@ Since $F^{-1} = W$, we may invert relation~(\ref{e:sch:X2mT2})
 to $r = 2m \, W(X^2-T^2)$.
 This allows us to eliminate $r$ from the metric expression
 (\ref{e:sch:metric_KS});
-using Eq.~(\ref{e:max:exp_tW0}) to get rid of $\mathrm{e}^{W(X^2 - T^2)}$, we
-arrive at a fully explicit expression of Schwarzschild metric in terms
+using Eq.~(\ref{e:max:exp_tW0}) to substitute $W(X^2 - T^2) \mathrm{e}^{W(X^2 - T^2)}$
+by $X^2 - T^2 + \mathrm{e}^{W(X^2 - T^2)}$,
+we arrive at a fully explicit expression of Schwarzschild metric in terms
 of the Kruskal-Szekeres coordinates:
 \be \label{e:sch:metric_KS_TX_partial}
    \encadre{
     \w{g}  =  4m^2 \left[
-    \frac{4  (W(X^2-T^2) - 1)}{(X^2-T^2) W(X^2-T^2)}\left( - \dd T^2 + \dd X^2 \right)
+    \frac{4}{X^2-T^2 + \mathrm{e}^{W(X^2 - T^2)}}\left( - \dd T^2 + \dd X^2 \right)
     +  W(X^2-T^2)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)
     \right] } .
 \ee
@@ -281,18 +282,15 @@ of the Kruskal-Szekeres coordinates:
 The relation between the Kruskal-Szekeres coordinates and the
 Schwarzschild-Droste ones is obtained by combining (\ref{e:sch:def_T_X}),
 (\ref{e:sch:def_U_V}) and (\ref{e:sch:u_v_r_t}):
-\bea
-    T &=& \frac{1}{2}(U+V) = \frac{1}{2} \left( \mathrm{e}^{v/4m}
-        - \mathrm{e}^{-u/4m)} \right) =
-        \frac{1}{2} \left( \mathrm{e}^{(t+r_*)/4m}
-        - \mathrm{e}^{(r_*-t)/4m} \right) \nonumber \\
-     & = & \mathrm{e}^{r_*/4m} \sinh\left( \frac{t}{4m} \right) ,\nonumber
-\eea
-where $r_*$ is related to $r$ by (\ref{e:sch:def_tortoise}).
-Similarly
 \[
-     X = \mathrm{e}^{r_*/4m} \cosh\left( \frac{t}{4m} \right) .
+    T = \frac{1}{2}(U+V) = \frac{1}{2} \left( \mathrm{e}^{v/4m}
+        - \mathrm{e}^{-u/4m} \right) =
+        \frac{1}{2} \left( \mathrm{e}^{(t+r_*)/4m}
+        - \mathrm{e}^{(r_*-t)/4m} \right)
+        = \mathrm{e}^{r_*/4m} \sinh\left( \frac{t}{4m} \right) ,
 \]
+where $r_*$ is related to $r$ by (\ref{e:sch:def_tortoise}).
+Similarly $X = \mathrm{e}^{r_*/4m} \cosh(t/4m)$.
 In particular, we have
 \be \label{e:max:TsX_tanh_t}
     \frac{T}{X} = \tanh\left( \frac{t}{4m} \right) .
@@ -600,7 +598,7 @@ The metric $\w{g}$ on the whole $\M$ is then defined by (\ref{e:sch:metric_KS_TX
 \be \label{e:sch:metric_KS_TX}
    \encadre{
     \w{g}  =  4m^2 \left[
-    \frac{4  (W(X^2-T^2) - 1)}{(X^2-T^2) W(X^2-T^2)}\left( - \dd T^2 + \dd X^2 \right)
+    \frac{4}{X^2-T^2 + \mathrm{e}^{W(X^2 - T^2)}}\left( - \dd T^2 + \dd X^2 \right)
     +  W(X^2-T^2)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right)
     \right] } ,
 \ee
@@ -608,6 +606,13 @@ where $W$ is the rescaled Lambert function defined by
 (\ref{e:max:def_tilde_W0}) (cf. Fig.~\ref{f:max:lambert_rescaled}); it is the inverse of the function
 $x\mapsto \mathrm{e}^{x} (x-1)$,
 which establishes a bijection from $(0,+\infty)$ to $(-1,+\infty)$.
+Note that the metric components $g_{\alpha\beta}$ appearing in Eq.~(\ref{e:sch:metric_KS_TX})
+are regular functions of $(T,X)$ in all $\M$. In particular, the denominator
+$X^2-T^2 + \mathrm{e}^{W(X^2 - T^2)}$ of $g_{TT}$ and $g_{XX}$ never vanishes
+for $X^2 - T^2 > -1$, which is the range of variation of $(T,X)$ on $\M$ according
+to Eq.~(\ref{e:sch:def_M_extend}). For $|T| = |X|$, and in particular
+at $(T,X) = (0,0)$, we have, since $W(0)=1$ (cf. Fig.~\ref{f:max:lambert_rescaled}),
+$g_{XX} = - g_{TT} = 16 m^2 / \mathrm{e}$.
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{max_kruskal_diag.pdf}}
@@ -673,7 +678,8 @@ The extended Schwarzschild spacetime $(\M,\w{g})$ is depicted in
 Fig.~\ref{f:sch:kruskal_diag}, which is usually called a
 \defin{Kruskal diagram}\index{Kruskal!diagram}.
 There are two curvature singularities, which formally are not part of $\M$:
-the hypersurfaces $r=0$ and $r'=0$.
+the hypersurfaces $r=0$ and $r'=0$, which are the two branches of
+the hyperbola $T^2 - X^2 = 1$.
 As discussed in Sec.~\ref{s:sch:rad_null_geod_KS}, the radial null
 geodesics appear as straight lines of slope $\pm 45^\circ$ ($+$ for the
 outgoing family, and $-$ for the ingoing one).
@@ -730,7 +736,7 @@ is deduced from (\ref{e:sch:metric_KS_TX}):
 \be
     \encadre{
       \w{g} = 4m^2 \left[
-      \frac{4(W(-UV) - 1)}{UV \, W(-UV)} \, \dd U \, \dd V
+      \frac{4}{UV - \mathrm{e}^{W(-UV)}} \, \dd U \, \dd V
       + W(-UV)^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) \right] .
     }
 \ee
@@ -988,6 +994,25 @@ spacetime [Eq.~(\ref{e:glo:tau_chi_t_r})]:
     \end{array} \right.
 \ee
 
+\begin{figure}
+\centerline{\includegraphics[width=0.9\textwidth]{max_carter-penrose-std.pdf}}
+\caption[]{\label{f:max:carter-penrose-std} \footnotesize
+Carter-Penrose diagram of the Schwarzschild spacetime
+constructed with the compactified coordinates $(\hat{T},\hat{X})$.
+Solid curves denote hypersurfaces of constant Schwarzschild-Droste coordinate
+$t$: in region $\M_{\rm I}$, from the $\hat{X}$-axis to the top: $t=0$, $2m$,
+$5m$, $10m$, $20m$ and $50m$, the last two being barely visible;
+in region $\M_{\rm II}$, from the $\hat{T}$-axis
+to the right: $t=0$, $2m$, $5m$, $10m$, $20m$ and $50m$,
+Dashed curves denote hypersurfaces of constant Schwarzschild-Droste coordinate
+$r$: in region $\M_{\rm I}$, from the left to the right: $r=2.01m$, $2.1m$, $2.5m$ (almost vertical), $4m$, $8m$, $12m$, $20m$ and $100m$, the last three being barely visible;
+in region $\M_{\rm II}$, from the bottom to the top: $r=1.98m$, $1.9m$, $1.7m$,
+$1.5m$, $1.25m$, $m$, $0.5m$ and $0.1m$.
+The color code is the same as in Fig.~\ref{f:sch:kruskal_diag}.
+\textsl{[Figure generated by the notebook \ref{s:sam:Schwarz_conformal_std}]}
+}
+\end{figure}
+
 The maximal extension of Schwarzschild spacetime is depicted with respect
 to the coordinates $(\hat{T},\hat{X})$ in Fig.~\ref{f:max:carter-penrose-std}.
 Such a plot is called a \defin{Carter-Penrose diagram}\index{Carter-Penrose diagram}
@@ -1008,27 +1033,6 @@ are obtained for specific values of $\hat{U}$ and $\hat{V}$:
 \end{subequations}
 These relations follow immediately from (\ref{e:max:Hor_U_V}) and
 (\ref{e:max:def_hUhV}).
-
-
-\begin{figure}
-\centerline{\includegraphics[width=0.9\textwidth]{max_carter-penrose-std.pdf}}
-\caption[]{\label{f:max:carter-penrose-std} \footnotesize
-Carter-Penrose diagram of the Schwarzschild spacetime
-constructed with the compactified coordinates $(\hat{T},\hat{X})$.
-Solid curves denote hypersurfaces of constant Schwarzschild-Droste coordinate
-$t$: in region $\M_{\rm I}$, from the $\hat{X}$-axis to the top: $t=0$, $2m$,
-$5m$, $10m$, $20m$ and $50m$, the last two being barely visible;
-in region $\M_{\rm II}$, from the $\hat{T}$-axis
-to the right: $t=0$, $2m$, $5m$, $10m$, $20m$ and $50m$,
-Dashed curves denote hypersurfaces of constant Schwarzschild-Droste coordinate
-$r$: in region $\M_{\rm I}$, from the left to the right: $r=2.01m$, $2.1m$, $2.5m$ (almost vertical), $4m$, $8m$, $12m$, $20m$ and $100m$, the last three being barely visible;
-in region $\M_{\rm II}$, from the bottom to the top: $r=1.98m$, $1.9m$, $1.7m$,
-$1.5m$, $1.25m$, $m$, $0.5m$ and $0.1m$.
-The color code is the same as in Fig.~\ref{f:sch:kruskal_diag}.
-\textsl{[Figure generated by the notebook \ref{s:sam:Schwarz_conformal_std}]}
-}
-\end{figure}
-
 
 We have seen in Sec.~\ref{s:sch:BH} that the future null infinity $\scri^+$
 corresponds to $v\rightarrow +\infty$ and that the past null infinity
