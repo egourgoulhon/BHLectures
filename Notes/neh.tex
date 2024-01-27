@@ -11,8 +11,8 @@ we move forward to distinguish a null hypersurface representing a black hole eve
 to assume a vanishing expansion. This leads us to the concept of \emph{non-expanding
 horizon} (Sec.~\ref{s:neh:neh}). A special kind of these objects is that
 of \emph{Killing horizons}, which occur in spacetimes that are globally
-stationary (Sec.~\ref{s:neh:Killing_hor}). Actually, we shall
-see in Chap.~\ref{s:sta} that the event horizon of a black hole in equilibrium
+stationary (Secs.~\ref{s:neh:Killing_hor} and \ref{s:sta:bifur_Killing_hor}). Actually, we shall
+see in Chap.~\ref{s:sta} that, under some rather general hypotheses, the event horizon of a black hole in equilibrium
 must be a Killing horizon.
 
 
@@ -542,25 +542,25 @@ Thus the existence of a Killing horizon requires that the spacetime $(\M,\w{g})$
 some continuous symmetry
 (usually stationarity), namely that it is invariant under the action of a
 1-parameter group, as described in Sec.~\ref{s:neh:symmetries}.
-A definition equivalent to the above one is then:
+Since the normal to a null hypersurface is tangent to its null geodesic
+generators and a Killing vector is tangent to the orbits of the isometry group,
+a definition equivalent to the above one is:
 \begin{greybox}
 A \defin{Killing horizon} is a connected null
 hypersurface $\Hor$ whose null geodesic generators are orbits of a
 1-parameter group of isometries of $(\M,\w{g})$.
 \end{greybox}
 
-\begin{remark}
-The above definition implies that the Killing vector field $\w{\xi}$ is null
-and non-vanishing on $\Hor$:
+Its immediately follows from the definition that the Killing vector $\w{\xi}$ is non-vanishing
+on $\Hor$ (a normal to a hypersurface cannot vanish) and is null on $\Hor$:
 \be \label{s:neh:xi_on_KH}
-    \left. \w{\xi}\cdot\w{\xi} \right| _{\Hor} = 0 \qquad\mbox{and}\qquad
-    \left. \w{\xi} \right| _{\Hor} \not= 0 .
+    \left. \w{\xi} \right| _{\Hor} \not= 0
+    \qquad\mbox{and}\qquad
+    \left. \w{\xi}\cdot\w{\xi} \right| _{\Hor} = 0 .
 \ee
-Indeed, if $\w{\xi}$ is vanishing at some point of $\Hor$, it cannot be
-considered as a normal vector to $\Hor$.
-\end{remark}
 
-We shall see in Chap.~\ref{s:sta} that in a stationary spacetime, a (connected part of a) black hole
+We shall see in Chap.~\ref{s:sta} that in a stationary spacetime, under some rather generic
+hypotheses, a (connected part of a) black hole
 event horizon must be a Killing horizon.
 
 \begin{figure}
@@ -1179,7 +1179,7 @@ It has also been proven without requiring the null dominance condition, but
 assuming axisymmetry and orthogonal transitivy\index{orthogonally transitive} (cf. Remark~\ref{r:neh:zero_law_wo_NDEC} on p.~\pageref{r:neh:zero_law_wo_NDEC}) by Brandon Carter\index[pers]{Carter, B.} in his lecture at the same summer
 school
 \cite{Carte73b} (Theorem 8, p.~167).
-A third proof of the constancy of $\kappa$ using the null dominance condition
+A third proof of the constancy of $\kappa$, using the null dominance condition,
 has also been given in 1973 by James Bardeen\index[pers]{Bardeen, J.M.}, Brandon Carter and
 Stephen Hawking
 in their seminal article \emph{The Four Laws of Black Hole Mechanics}
@@ -1627,11 +1627,296 @@ of unit mass close to $\Hor$ by means of an infinitely long massless string
 (see e.g. Sec.~5.2.4 of Poisson's textbook \cite{Poiss04}).
 \end{remark}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Bifurcate Killing horizons} \label{s:sta:bifur_Killing_hor}
+
+We shall extend here the study of Killing horizons
+by introducing the concept of bifurcate Killing horizon, which is
+particularly important for black hole physics.
+
+\subsection{Definition and first properties} \label{s:sta:bifur_def}
+
+\begin{greybox}
+Let $(\M,\w{g})$ be a $n$-dimensional spacetime endowed with a Killing vector
+field $\w{\xi}$. A
+\defin{bifurcate Killing horizon}\index{bifurcate!Killing horizon}\index{Killing!horizon!bifurcate --}\index{horizon!bifurcate Killing --} is the
+union
+\be
+    \Hor = \Hor_1 \cup \Hor_2 ,
+\ee
+such that
+\begin{itemize}
+\item $\Hor_1$ and $\Hor_2$ are two null hypersurfaces;
+\item $\Sp:=\Hor_1\cap\Hor_2$ is a spacelike $(n-2)$-surface;
+\item each of the sets $\Hor_1\setminus\Sp$ and $\Hor_2\setminus\Sp$ has two connected components, which are
+Killing horizons\footnote{Cf. Sec.~\ref{s:neh:def_Killing_hor} for the
+definition of a Killing horizon.} with respect to $\w{\xi}$.
+\end{itemize}
+The $(n-2)$-dimensional submanifold $\Sp$ is called the
+\defin{bifurcation surface}\index{bifurcation!surface} of $\Hor$.
+\end{greybox}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{sta_bifur_Kill_hor.pdf}}
+\caption[]{\label{f:sta:bifur_Kill_hor} \footnotesize
+Bifurcate Killing horizon $\Hor_1\cup\Hor_2$ with respect to the Killing vector
+field $\w{\xi}$; $\Sp$ is the bifurcation surface. $\Li_1$ and $\Li_2$ are
+null geodesic generators of respectively $\Hor_1$ and $\Hor_2$, which cross
+each other at the point $p\in\Sp$.}
+\end{figure}
+
+Hence we may say that a bifurcate Killing horizon is formed by four Killing horizons,
+$\Hor_1^+$, $\Hor_1^-$, $\Hor_2^+$ and $\Hor_2^-$ say,
+which are glued together at the bifurcation surface $\Sp$ (cf. Fig.~\ref{f:sta:bifur_Kill_hor}), in such a way that
+\[
+    \Hor_1 = \Hor_1^- \cup \Sp \cup \Hor_1^+ \quad \mbox{and}\quad
+    \Hor_2 = \Hor_2^- \cup \Sp \cup \Hor_2^+
+\]
+are null hypersurfaces.
+
+A first property of bifurcate Killing horizons is
+\begin{prop}[vanishing of the Killing vector on the bifurcation surface]
+\label{p:sta:xi_S_zero}
+The Killing vector field vanishes on the bifurcation surface of
+a bifurcate Killing horizon:
+\be \label{e:sta:xi_S_zero}
+    \encadre{\left. \w{\xi} \right| _{\Sp} = 0 } .
+\ee
+\end{prop}
+\begin{proof}
+Let $p\in \Sp$ and let us assume that $\left.\w{\xi}\right| _p\not=0$.
+Let $\Li_1$ (resp. $\Li_2$) be the null geodesic generator of $\Hor_1$
+(resp. $\Hor_2$) that intersects $\Sp$ at $p$ (cf. Fig.~\ref{f:sta:bifur_Kill_hor}).
+By definition of a Killing horizon,
+$\w{\xi}$ is tangent to $\Li_1\cap\Hor_1^+$ and to $\Li_1\cap\Hor_1^-$,
+i.e. to $\Li_1\setminus\{p\}$.
+If $\left.\w{\xi}\right| _p \not=0$, then by continuity,
+$\w{\xi}$ is a (non-vanishing) tangent vector field all along $\Li_1$.
+Similarly, $\w{\xi}$ is tangent to all $\Li_2$.
+At their intersection point $p$, the geodesics $\Li_1$ and $\Li_2$ have thus a common tangent
+vector, namely $\left.\w{\xi}\right| _p$.
+The geodesic uniqueness theorem (Property~\ref{p:geo:exist_uniq_geod} in Appendix~\ref{s:geo})
+then implies $\Li_1 = \Li_2$, so that
+$\Li_1 \subset \Hor_1 \cap \Hor_2 = \Sp$. But since $\Sp$ is spacelike and
+$\Li_1$ is null, we reach a contradiction. Hence we must have
+$\left.\w{\xi}\right| _p = 0$.
+\end{proof}
+
 \begin{remark}
-We shall extend the study of Killing horizons in Sec.~\ref{s:sta:bifur_Killing_hor},
-by introducing the concept of bifurcate Killing horizon, which is important
-for black hole physics.
+\label{r:sta:zero_Killing}
+Having a Killing vector field that vanishes somewhere (here $\Sp$) is not the sign
+of any pathology: it simply means that the points of $\Sp$ are fixed points of
+the isometries generated by $\w{\xi}$, since
+setting $\w{\xi}=0$ in Eq.~(\ref{e:neh:xi_dxdt}) leads to $\D\w{x}=0$, i.e.
+to $\Phi_{\D t}(p) = p$.
 \end{remark}
+
+\begin{remark}
+Contrary to what the name may suggest, a bifurcate Killing horizon is \emph{not}
+a Killing horizon, for the latter, as defined in Sec.~\ref{s:neh:def_Killing_hor},
+is a regular (i.e. embedded) hypersurface
+of $\M$ (cf. Sec.~\ref{s:bas:embed} in Appendix~\ref{s:bas}), while
+the union of two hypersurfaces is not in general a hypersurface. Moreover
+on a Killing horizon, the Killing vector field is nowhere vanishing
+[cf. Eq.~(\ref{s:neh:xi_on_KH})], while on
+a bifurcate Killing horizon, it is vanishing at the bifurcation surface.
+\end{remark}
+
+\begin{example}[bifurcate Killing horizon w.r.t. Lorentz boost]
+\label{x:sta:bif-KH-boost}
+Let us consider Minkowski spacetime and the boost Killing vector given
+by Eq.~(\ref{e:neh:boost-Killing}): $\w{\xi} := x \wpar_t + t \wpar_x$
+and let us take for $\Hor_1$ the null hyperplane $t=x$
+considered in Example~\ref{x:neh:boostKH} in Chap.~\ref{s:neh} and denoted there
+by $\Hor$. The two half-hyperplanes defined by
+Eq.~(\ref{e:neh:boost-Killing_hor}) are then the Killing horizons $\Hor_1^+$ and
+$\Hor_1^-$. The union $\Hor_1 \cup \Hor_2$, where $\Hor_2$ is the null hyperplane $t=-x$ is a bifurcate Killing horizon with respect to $\w{\xi}$,
+with the 2-plane $(t,x)=(0,0)$ as bifurcation surface
+(cf. Fig.~\ref{f:sta:hplane_bifur}). Note that on $\Hor_1$, the Killing vector
+$\w{\xi}$ points away from $\Sp$, while on $\Hor_2$, it points towards $\Sp$.
+\end{example}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{sta_hplane_bifur.pdf}}
+\caption[]{\label{f:sta:hplane_bifur} \footnotesize
+Bifurcate Killing horizon $\Hor_1\cup\Hor_2$ with respect to the Killing vector
+field $\w{\xi} = x \wpar_t + t \wpar_x$ generating Lorentz boosts in the plane $(t,x)$ of Minkowski spacetime. The dimension along $z$ having been suppressed, the bifurcation
+surface $\Sp$ appears as a line, while it is actually a 2-plane.}
+\end{figure}
+
+
+
+\subsection{Non-degenerate Killing horizons and Boyer's theorem}
+\label{s:sta:non-degenerate_KH}
+
+Let us consider a Killing horizon $\Hor$ with respect to some Killing vector
+$\w{\xi}$, such that the surface gravity\index{surface!gravity} $\kappa$
+is constant over $\Hor$. According to the zeroth law (Property~\ref{p:neh:zeroth_law}), this
+is guaranteed if the null dominance condition is fulfiled.
+In what follows, we focus on the case where $\kappa\neq 0$, i.e. $\Hor$
+is a non-degenerate Killing horizon (cf. Sec.~\ref{s:neh:classif_KH}).
+In this case, the parameter $t$ of the null geodesic generators of $\Hor$
+associated to $\w{\xi}$ is not affine
+(for $\kappa$ is the non-affinity coefficient\index{non-affinity coefficient}
+of $\w{\xi}$). However, we may
+rescale $\w{\xi}$ to get an affine parameter, at the price of loosing
+the Killing vector feature:
+
+
+\begin{prop}[affine parametrization of a non-degenerate Killing horizon]
+Let $\Hor$ be a Killing horizon (with respect to
+a Killing vector $\w{\xi}$) of constant nonzero surface gravity $\kappa$.
+Let $t$ be the parameter
+of the null geodesic generators $\Li$ of $\Hor$
+associated to $\w{\xi}$ ($\w{\xi} = \D\w{x}/\D t$ along $\Li$).
+The null vector field $\wl$ defined on $\Hor$ by
+\be \label{e:sta:el_kappa_xi}
+    \wl = \mathrm{e}^{-\kappa t} \, \w{\xi} \quad \iff\quad
+    \w{\xi} = \mathrm{e}^{\kappa t} \, \wl
+\ee
+is a geodesic vector field and the affine parameter associated to it is
+\be \label{e:sta:lambda_t}
+    \lambda = \frac{\mathrm{e}^{\kappa t}}{\kappa} + \lambda_0 ,
+\ee
+where $\lambda_0$ is constant along a given geodesic generator.
+\end{prop}
+
+\begin{proof}
+We have
+\[
+\wnab_{\wl}\, \wl = \wnab_{\mathrm{e}^{-\kappa t} \w{\xi}} \left( \mathrm{e}^{-\kappa t} \, \w{\xi} \right) = \mathrm{e}^{-\kappa t} \wnab_{\w{\xi}} \left( \mathrm{e}^{-\kappa t} \, \w{\xi} \right)
+= \mathrm{e}^{-\kappa t} \big[ \big( \underbrace{\wnab_{\w{\xi}} \mathrm{e}^{-\kappa t}}_{\D \mathrm{e}^{-\kappa t}/\D t} \big) \w{\xi}
+    + \mathrm{e}^{-\kappa t} \underbrace{\wnab_{\w{\xi}}\, \w{\xi}}_{\kappa\w{\xi}}
+    \big] = 0 .
+\]
+Hence $\wl$ is a geodesic vector. Besides, along any null generator of $\Hor$,
+one has [cf. Eq.~(\ref{e:bas:def_vector})]
+\[
+    \frac{\D\lambda}{\D t} = \w{\xi}(\lambda) = \mathrm{e}^{\kappa t}
+    \underbrace{\wl(\lambda)}_{1} = \mathrm{e}^{\kappa t} ,
+\]
+which, once integrated, yields Eq.~(\ref{e:sta:lambda_t}).
+\end{proof}
+
+Let us assume $\kappa>0$ and consider a
+null geodesic generator $\Li$ of $\Hor$; $\Li$ can be parameterized by $t$, the corresponding
+tangent vector being $\w{\xi}$. When $t$ spans the whole interval $(-\infty,+\infty)$,
+Eq.~(\ref{e:sta:lambda_t}) implies that $\lambda$ spans the
+interval $(\lambda_0,+\infty)$ only. Since $\lambda$ is an affine parameter of $\Li$,
+this means that $\Li$ is an \emph{incomplete} geodesic\index{incomplete geodesic}\index{geodesic!incomplete --} (cf. Sec.~\ref{s:geo:existence_uniqueness}).
+Moreover, Eq.~(\ref{e:sta:el_kappa_xi}) leads to
+\be \label{e:sta:xi_zero_t_inf}
+    \w{\xi} \rightarrow 0 \quad\mbox{when}\quad t\rightarrow -\infty \qquad (\kappa>0).
+\ee
+In other words, the Killing vector field $\w{\xi}$ vanishes and
+the null geodesic $\Li$ stops at the ``edge'' of $\Hor$ corresponding to
+$t\rightarrow -\infty$.
+If there is no obstacle (spacetime singularity or spacetime edge\footnote{A spacetime edge is generally not a genuine obstacle for extending an incomplete geodesic: it simply indicates
+that the spacetime itself needs to be extended so that the geodesic becomes complete,
+cf. Remark~\ref{r:sta:extension_bifurcate} below.}),
+$\Li$ can be
+extended to $\lambda\in(-\infty,\lambda_0]$, giving rise to a complete
+null geodesic $\tilde\Li$. This operation can be performed for all the
+null geodesic generators of $\Hor$ and we have the freedom to choose the same value
+of $\lambda_0$ in Eq.~(\ref{e:sta:lambda_t}) for all of them. In this process,
+one gives birth to a null hypersurface, $\tilde\Hor$ say, which contains $\Hor$. Let $\Sp\subset\tilde\Hor$ be the set of points of
+affine parameter $\lambda=\lambda_0$ along all the extended null geodesics
+$\tilde\Li$. $\Sp$ is clearly a cross-section of $\tilde\Hor$
+(cf. Sec.~\ref{s:def:spacelike_sections}); it is then a
+spacelike $(n-2)$-dimensional surface.
+Assuming that $\w{\xi}$ is future-directed on $\Hor$,
+$\Sp$ constitutes the past boundary of $\Hor$, i.e. the boundary corresponding to $t\rightarrow -\infty$.
+Since $\w{\xi}$ is a smooth vector field on $\M$, Eq.~(\ref{e:sta:xi_zero_t_inf})
+implies that $\w{\xi}$ vanishes on $\Sp$.
+In other words, $\Sp$ is a set of fixed points for the isometry group generated
+by $\w{\xi}$ (cf. Remark~\ref{r:sta:zero_Killing} above).
+Let us denote by $\Hor^-$ the subset of $\tilde\Hor$
+generated by the segments $\lambda<\lambda_0$ of the null geodesics $\tilde\Li$:
+$\Hor^- = \tilde\Hor\setminus(\Hor\cup\Sp)$.
+$\Hor^-$ is clearly a null hypersurface.
+Since $\Sp$ is spacelike and $(n-2)$-dimensional, there are, at each point
+$p\in\Sp$, only two null directions normal to $\Sp$ (cf. Sec.~\ref{s:def:spacelike_sections}). One of them is along $\wl$. The set of all null geodesics
+departing from $\Sp$ along the other null direction forms a null hypersurface,
+$\Hor_2^+$ say, in the future of $\Sp$ and another null hypersurface, $\Hor_2^-$
+say, in the past of $\Sp$.
+By studying the behaviour of a Killing vector field around the set of its
+fixed points (here $\Sp$), Boyer \cite{Boyer69} has shown that in
+the current setting (i.e. $\Sp$ spacelike), $\w{\xi}$ acts \emph{locally}
+as the generator of Lorentz boosts in Minkowski spacetime and $\Sp$ is the bifurcation surface
+of a bifurcate Killing horizon similar to that of Example~\ref{x:sta:bif-KH-boost}
+(cf. Fig.~\ref{f:sta:hplane_bifur}).
+More precisely, Boyer proved the following:
+
+\begin{prop}[Boyer's theorem\index{Boyer's theorem} \textnormal{(Boyer\index[pers]{Boyer, R.H.} 1969 \cite{Boyer69})}]
+\label{p:sta:Boyer_thm}
+A Killing horizon $\Hor$ with respect to a Killing vector $\w{\xi}$
+is contained in a bifurcate Killing horizon if and
+only if $\Hor$ contains at least one null geodesic orbit of the isometry group that is
+complete as an orbit, i.e. such that the group parameter $t$ associated to $\w{\xi}$ takes
+all values in $\R$, but that is incomplete and extendable as
+a geodesic.
+\end{prop}
+
+That $\Hor$ contains an orbit that is an incomplete geodesic is guaranteed by
+$\kappa\not=0$, as we have just seen.
+It follows that $\Hor^-$, $\Hor_2^+$ and $\Hor_2^-$
+are three Killing horizons, so that $\Hor\cup\Hor^-\cup\Hor_2^+\cup\Hor_2^-\cup\Sp$
+is a bifurcate Killing horizon.
+
+If $\kappa<0$, we see from Eq.~(\ref{e:sta:lambda_t}) that while $t$ spans the
+whole interval $(-\infty,+\infty)$, the affine parameter $\lambda$ spans the
+interval $(-\infty,\lambda_0)$ only. Moreover, Eq.~(\ref{e:sta:el_kappa_xi})
+leads to
+\be
+    \w{\xi} \rightarrow 0 \quad\mbox{when}\quad t\rightarrow +\infty  \qquad (\kappa<0).
+\ee
+The reasoning developed for $\kappa>0$ can be applied mutatis mutandis,
+leading to a bifurcate Killing horizon with a bifurcation surface $\Sp$ that
+is the future boundary of $\Hor$. Hence we conclude:
+\begin{prop}[non-degenerate Killing horizons and bifurcate Killing horizons]
+\label{p:sta:non_degen_bifurcate}
+The null geodesic generators of a non-degenerate Killing horizon $\Hor$ are
+incomplete; if they can be extended, $\Hor$ is contained in a
+bifurcate Killing horizon, the bifurcation surface of which is the past
+(resp. future) boundary of $\Hor$ if $\kappa>0$ (resp. $\kappa<0$).
+\end{prop}
+
+\begin{remark}
+\label{r:sta:extension_bifurcate}
+It could be that the generators of $\Hor$ cannot be extended simply
+because the spacetime $(\M,\w{g})$ is not been chosen ``large enough''.
+I.~R\'acz\index[pers]{Racz, I.@R\'acz, I.} and R.M.~Wald\index[pers]{Wald, R.M.} \cite{RaczW96}
+have shown that under some mild hypotheses (in particular that $(\M,\w{g})$ is globally
+hyperbolic), one can extend $(\M,\w{g})$ to a larger spacetime with a bifurcate
+Killing horizon containing $\Hor$.
+\end{remark}
+
+\begin{remark}
+For a degenerate Killing horizon, the problem of extension disappears, since
+$t$ is then an affine parameter of the null generators. Consequently if $t$ spans
+the whole interval $(-\infty,\infty)$, the null generators are complete
+geodesics. One can still have $\w{\xi}\rightarrow 0$ at some boundary
+of $\Hor$, but this is a null boundary, not a spacelike one, and it does not
+correspond to a bifurcation surface. An example is the Killing horizon with
+respect to a null-rotation Killing vector in Minkowski spacetime, exhibited
+as Examples~\ref{x:neh:nullrotKH} and \ref{x:neh:nullrotKH_kappa}
+in Chap.~\ref{s:neh}, p.~\pageref{x:neh:nullrotKH} and \pageref{x:neh:nullrotKH_kappa}
+respectively (cf. Fig.~\ref{f:neh:hplaneKilling-nullrot}): $\w{\xi}=0$
+on the null 2-plane of equation $t=x$, $y=0$.
+\end{remark}
+
+\begin{hist} \label{h:sta:Boyer}
+The concept of bifurcate Killing horizons has been introduced by Robert H. Boyer\index[pers]{Boyer, R.H.}
+(1932-1966), a young American mathematical physicist who had just been appointed
+to the University of Liverpool. Sadly, Boyer was killed, among 14 victims, in a mass murder that
+occurred in the University of Texas at Austin on 1 August 1966.
+His last notes, containing the definition of a bifurcate Killing horizon
+and the proof of Property~\ref{p:sta:Boyer_thm}, have been turned into an article
+by Jürgen Ehlers\index[pers]{Ehlers, J.} and John Stachel\index[pers]{Stachel, J.L.}, which has
+been published in 1969 \cite{Boyer69}.
+\end{hist}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
