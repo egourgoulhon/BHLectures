@@ -389,9 +389,10 @@ Group action of $G$ on $\M$.}
 
 \subsection{Spacetime symmetries} \label{s:neh:symmetries}
 
-Symmetries of spacetime are described in a coordinate-independent way by means of
-a (symmetry) group acting on the spacetime manifold $\M$.
-Through this action, each transformation belonging to the group displaces points within $\M$ and one demands that the metric $\w{g}$ is invariant under such displacement.
+Symmetries of spacetime, such as stationarity and axisymmetry,
+are described in a coordinate-independent way by means of
+a group acting on the spacetime manifold $\M$.
+Through this action, each element of the group displaces points within $\M$ and one demands that the metric $\w{g}$ is invariant under such displacement.
 More precisely, given
 a group $G$, a \defin{group action}\index{group!action} of $G$ on $\M$ is a map\footnote{Do no confuse the generic element $g$ of group $G$ with the metric tensor $\w{g}$.}
 \be
@@ -405,22 +406,22 @@ such that (cf. Fig.~\ref{f:neh:group_action})
 \item $\forall p\in \M,\  \Phi_e(p) = p$, where $e$ is the identity element of $G$;
 \item $\forall (g,h) \in G^2,\  \forall p\in\M,\  \Phi_g(\Phi_h(p)) = \Phi_{gh}(p)$, where $gh$ stands for the product of $g$ by $h$ according to $G$'s group law.
 \end{itemize}
-The \defin{orbit}\index{orbit!under a group action} of a point $p\in\M$ is the set $\{g(p),\ g\in G\}\subset\M$, i.e. the set of points which are connected to $p$ by some group transformation. One says that $p$ is a
+The \defin{orbit}\index{orbit!under a group action} of a point $p\in\M$ is the set $\{g(p),\ g\in G\}\subset\M$, i.e. the set of points which are connected to $p$ by some transformation belonging to $G$. One says that $p$ is a
 \defin{fixed point}\index{fixed!point} of the group action if its orbit is
 reduced to $\{p\}$.
 
 An important class of group actions are those for which $G$ is a 1-dimensional
-\emph{Lie group}, i.e. a ``continuous'' group (actually a ``differentiable'' group).
+\emph{Lie group}, i.e. a so-called ``continuous group'' (actually a \emph{differentiable} group).
 Then around $e$, the elements of $G$ can be labelled by a parameter $t\in \R$, such that $g_{t=0} = e$. It is then
 common to use the shorthand notation
 \be
         \Phi_t := \Phi_{g_t} .
 \ee
-When $G$ is a 1-dimensional Lie group, the orbit of a given point $p\in\M$ under the group action is then either $\{p\}$ (when $p$ is a fixed point of the
+If $G$ is a 1-dimensional Lie group, the orbit of a given point $p\in\M$ under the group action is then either $\{p\}$ (when $p$ is a fixed point of the
 group action) or a curve $\Li_p$ of $\M$. In the latter case,
 $t$ is a natural parameter along $\Li_p$ (cf. Fig.~\ref{f:neh:orbit_group}). The tangent vector $\w{\xi}$ to $\Li_p$
 corresponding to that parameter is called the \defin{generator of the group} $G$
-(associated with the $t$-parametrization of $G$). At each point of
+associated with the $t$-parametrization of $G$. At each point of
 the orbit $\Li_p$, it is given by
 (cf. Sec.~\ref{s:bas:vectors} and Fig.~\ref{f:neh:orbit_group})
 \be \label{e:neh:xi_dxdt}
@@ -467,8 +468,8 @@ $T_{\Phi_t(p)}\M$ by the map $\Phi_t$
 (cf. Sec.~\ref{s:bas:Lie_der_vector} of Appendix~\ref{s:bas}),
 and similarly $\D\w{y}'$ is the pushforward of $\D\w{y}$ by $\Phi_t$:
 \[
-    \D\w{x}' = \Phi_t^*(\D\w{x}) \quad\mbox{and}\quad
-    \D\w{y}' = \Phi_t^*(\D\w{y}) .
+    \D\w{x}' = \Phi_{t*}(\D\w{x}) \quad\mbox{and}\quad
+    \D\w{y}' = \Phi_{t*}(\D\w{y}) .
 \]
 By rescaling by infinitely small parameters (using the bilinearity of $\w{g}$),
 it is clear that (\ref{e:neh:isometry_dx})
@@ -476,10 +477,11 @@ holds for finite vectors as well, so that we may say that $\Phi_t$ is an
 isometry of $(\M,\w{g})$ iff
 \be \label{e:neh:isometry}
     \forall p\in\M,\  \forall (\w{u},\w{v}) \in (T_p\M)^2,\quad
-    \left. \w{g}\right| _{\Phi_t(p)} \left(\Phi_t^*\w{u}, \Phi_t^*\w{v}\right) =
+    \left. \w{g}\right| _{\Phi_t(p)} \left(\Phi_{t*}\w{u}, \Phi_{t*}\w{v}\right) =
     \left. \w{g}\right| _{p} (\w{u},\w{v}) ,
 \ee
-where $\Phi_t^* \w{u}$ (resp. $\Phi_t^* \w{v}$) is the pushforward of the vector $\w{u}\in T_p\M$ (resp. $\w{v}\in T_p\M$)
+where $\Phi_{t*} \w{u}$ (resp. $\Phi_{t*} \w{v}$) is the pushforward of the vector
+$\w{u}\in T_p\M$ (resp. $\w{v}\in T_p\M$)
 to the tangent space $T_{\Phi_t(p)}\M$ by $\Phi_t$ [cf. Eq.~(\ref{e:bas:def_Phi_eps})].
 Given the definition (\ref{e:bas:def_pullback}) of the pullback of
 a bilinear form, we may reexpress the isometry condition (\ref{e:neh:isometry})
@@ -488,18 +490,8 @@ pullback of $\w{g}$ by $\Phi_t$:
 \be \label{e:neh:isometry_pullback}
     \Phi_t^*\w{g} = \w{g} .
 \ee
-According the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie
-derivative\index{Lie!derivative}, we have
-\be
-    \Lie{\xi} \w{g} := \lim_{t \rightarrow 0} \frac{1}{t}
-    \left( \Phi_t^*\w{g} - \w{g} \right) .
-\ee
-If $G$ is a symmetry group of $(\M,\w{g})$ with generator $\w{\xi}$,
-the isometry condition
-(\ref{e:neh:isometry_pullback}) leads then to
-$\Lie{\xi}\w{g} = 0$. The reverse is true by integration. Hence
-we conclude:
-\begin{prop}
+We may re-express this condition in terms of the Lie derivative as follows:
+\begin{prop}[characterization of continuous spacetime isometries]
 A 1-dimensional Lie group $G$
 is a symmetry group of the spacetime $(\M,\w{g})$ iff the Lie derivative
 of the metric tensor along a generator $\w{\xi}$ of $G$
@@ -508,22 +500,40 @@ vanishes identically:
     \encadre{\Lie{\xi}\w{g} = 0 } .
 \ee
 The vector field $\w{\xi}$ is then called a \defin{Killing vector}\index{Killing!vector field}
-of $(\M,\w{g})$.
-\end{prop}
-Expressing the Lie derivative of $\w{g}$ via Eq.~(\ref{e:bas:Lie_g_Killing}),
-we see immediately that Eq.~(\ref{e:neh:Lie_xi_g}) is equivalent to the so-called
+of $(\M,\w{g})$. Equation~(\ref{e:neh:Lie_xi_g}) is equivalent to the
+so-called
 \defin{Killing equation}\index{Killing!equation}:
 \be \label{e:neh:Killing_equation}
     \encadre{ \nabla_\alpha \xi_\beta + \nabla_\beta \xi_\alpha = 0 }.
 \ee
+\end{prop}
+\begin{proof}
+According the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie
+derivative\index{Lie!derivative}, we have
+\[
+    \Lie{\xi} \w{g} := \lim_{t \rightarrow 0} \frac{1}{t}
+    \left( \Phi_t^*\w{g} - \w{g} \right) .
+\]
+The isometry condition
+(\ref{e:neh:isometry_pullback}) implies then
+$\Lie{\xi}\w{g} = 0$. The reverse is true by integration.
+The equivalence between Eqs.~(\ref{e:neh:Lie_xi_g})
+and (\ref{e:neh:Killing_equation}) immediately results from
+expression~(\ref{e:bas:Lie_g_Killing}) for the Lie derivative of
+$\w{g}$.
+\end{proof}
 
-If terms of the components $g_{\alpha\beta}$ of $\w{g}$ with respect to
+\begin{prop}[isometry in adapted coordinates]
+\label{p:neh:isometry_adapt_coord}
+In terms of the components $g_{\alpha\beta}$ of $\w{g}$ with respect to
 coordinates $(x^\alpha) = (t,x^1,\ldots,x^{n-1})$ adapted to the Killing vector $\w{\xi}$,
 i.e. such that $\w{\xi} = \wpar_t$, the isometry condition (\ref{e:neh:Lie_xi_g})
 is equivalent to
 \be \label{e:neh:dgabdt_zero}
     \der{g_{\alpha\beta}}{t} = 0 .
 \ee
+$t$ is then called an \defin{ignorable coordinate}\index{ignorable coordinate}\index{coordinate!ignorable --}.
+\end{prop}
 \begin{proof}
 This is a direct consequence of the identity (\ref{e:bas:Lie_adapted}).
 \end{proof}
@@ -1741,7 +1751,7 @@ $\w{\xi}$ points away from $\Sp$, while on $\Hor_2$, it points towards $\Sp$.
 \centerline{\includegraphics[width=0.6\textwidth]{sta_hplane_bifur.pdf}}
 \caption[]{\label{f:sta:hplane_bifur} \footnotesize
 Bifurcate Killing horizon $\Hor_1\cup\Hor_2$ with respect to the Killing vector
-field $\w{\xi} = x \wpar_t + t \wpar_x$ generating Lorentz boosts in the plane $(t,x)$ of Minkowski spacetime. The dimension along $z$ having been suppressed, the bifurcation
+$\w{\xi} = x \wpar_t + t \wpar_x$ generating Lorentz boosts in the plane $(t,x)$ of Minkowski spacetime. The dimension along $z$ having been suppressed, the bifurcation
 surface $\Sp$ appears as a line, while it is actually a 2-plane.}
 \end{figure}
 
