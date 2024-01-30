@@ -233,19 +233,13 @@ and
 \ee
 The identity $\sigma_{ab} \sigma^{ab} = 0$ is possible only if each of
 the terms $\sigma_{ab}$ in the sum (\ref{e:neh:sigma_square_si}) is zero. Hence we have necessarily
-\be
-    \w{\sigma} = 0 .
-\ee
+$\w{\sigma} = 0$.
 Since we had already $\theta_{(\wl)}=0$ ($\Hor$ non-expanding), this implies that the full deformation rate tensor
-vanishes identically [cf. Eq.~(\ref{e:def:def_shear})]:
-\be
-    \w{\Theta} = 0 .
-\ee
-In view of (\ref{e:def:Theta}), this is equivalent to
-\be \label{e:neh:Lie_el_q_zero}
-     \encadre{ \vw{q}^* \Lie{\el} \w{q} = 0 }.
-\ee
-We conclude:
+$\w{\Theta}$
+vanishes identically [cf. Eq.~(\ref{e:def:def_shear})]. Moreover,
+given the scaling law (\ref{e:def:rescale_deform_shear}), this holds for
+any null normal $\wl$. We can thus conclude:
+
 \begin{prop}[invariance of the cross-section metric along the null generators]
 \label{p:neh:invariance_of_2metric}
 Provided that the null convergence condition\index{null!convergence condition}\index{convergence!condition!null --} (\ref{e:neh:null_energy_cond})
@@ -253,10 +247,15 @@ holds --- which occurs in general relativity if the
 null energy condition\index{null!energy condition}\index{energy!condition!null --}
 (\ref{e:neh:null_energy_cond_matter})
 holds ---,
-the whole metric (and not only the area form
+the deformation rate of any cross-section $\Sp$ of a non-expanding horizon $\Hor$
+along any null normal $\wl$ is identically zero:
+\be \label{e:neh:Lie_el_q_zero}
+    \encadre{ \w{\Theta} := \frac{1}{2} \vw{q}^* \Lie{\el} \w{q} = 0 }.
+\ee
+In other words,
+the whole metric $\w{q}$ (and not only the area form
 $\wepsS$, as a mere $\theta_{(\wl)}=0$ would suggest) of any cross-section
-of a non-expanding horizon is invariant along the null geodesic generators
-[Eq.~(\ref{e:neh:Lie_el_q_zero})].
+$\Sp$ is invariant along the geodesic generators of $\Hor$.
 \end{prop}
 
 \begin{example}[Schwarzschild horizon]
@@ -272,19 +271,20 @@ induced on it by the spacetime metric $\w{g}$ is degenerate. As a consequence, t
 is a priori no unique connection on $\Hor$ associated with
 $\left. \w{g}\right|_{\Hor}$. However, when
 $\Hor$ is a non-expanding horizon and the null convergence condition holds on $\Hor$,
-so that $\w{\Theta}=0$, the spacetime connection $\wnab$ induces a unique
+so that $\w{\Theta}=0$ (Property~\ref{p:neh:invariance_of_2metric}),
+the spacetime connection $\wnab$ induces a unique
 torsion-free connection ${}^\Hor\!\wnab$ on $\Hor$ as follows.
 Let $\w{u}$ and $\w{v}$ be two vector fields on $\Hor$. We have, using
 (\ref{e:def:nab_l_Theta}) to express $\nabla_\nu \el_\mu$ in terms of $\Theta_{\nu\mu}$:
-\bea
-    \el_\mu u^\nu \nabla_\nu v^\mu &= &
+\[
+    \el_\mu u^\nu \nabla_\nu v^\mu =
         u^\nu \nabla_\nu ( \underbrace{\el_\mu v^\mu}_{0} )
-        - v^\mu u^\nu \nabla_\nu \el_\mu \nonumber \\
-        & = & - \underbrace{\Theta_{\nu\mu}}_{0} v^\mu u^\nu  - \omega_\nu u^\nu
+        - v^\mu u^\nu \nabla_\nu \el_\mu
+        =  - \underbrace{\Theta_{\nu\mu}}_{0} v^\mu u^\nu  - \omega_\nu u^\nu
             \underbrace{\el_\mu v^\mu}_{0}
             + v^\mu \underbrace{u^\nu \el_\nu}_{0} k^\sigma\nabla_\sigma \el_\mu
-             = 0    \nonumber .
-\eea
+             = 0 .
+\]
 Hence $\wl$ is orthogonal to the vector field $\wnab_{\w{u}} \w{v}$. It follows
 immediately that $\wnab_{\w{u}} \w{v}$ is tangent to $\Hor$.
 We conclude that the operator
@@ -337,15 +337,17 @@ In view of (\ref{e:neh:def_induced_connection}) and using Eq.~(\ref{e:def:nab_l_
 to express $\wnab\wl$, we get
 \begin{align}
     {}^\Hor\!\wnab \wl (\w{a}, \w{u}) & = \langle \w{a}, \wnab_{\w{u}} \wl \rangle
-       = a_\mu u^\nu \nabla_\nu \ell^\mu \nonumber \\
-        & = a_\mu u^\nu \Big( \underbrace{\Theta^\mu_{\ \, \nu}}_{0} + \omega_\nu \ell^\mu
+       = a_\mu u^\nu \nabla_\nu \ell^\mu
+       = a_\mu u^\nu \Big( \underbrace{\Theta^\mu_{\ \, \nu}}_{0} + \omega_\nu \ell^\mu
             - \ell_\nu k^\rho \nabla_\rho \ell^\mu \Big)
-         = a_\mu \ell^\mu \, \omega_\nu u^\nu - \underbrace{\ell_\nu u^\nu}_{0}
-            a_\mu k^\rho \nabla_\rho \ell^\mu \nonumber \\
-         & = \langle \w{a}, \wl \rangle \, \langle \w{\omega}, \w{u} \rangle . \nonumber
+        \nonumber \\
+        & = a_\mu \ell^\mu \, \omega_\nu u^\nu - \underbrace{\ell_\nu u^\nu}_{0}
+            a_\mu k^\rho \nabla_\rho \ell^\mu
+             = \langle \w{a}, \wl \rangle \, \langle \w{\omega}, \w{u} \rangle
+             = \langle \w{a}, \wl \rangle \, \langle {}^\Hor\!\w{\omega}, \w{u} \rangle . \nonumber
 \end{align}
-Given the definition of a tensor product and the fact that $\w{u}$ is tangent to $\Hor$,
-this proves (\ref{e:neh:nabH_ell}).
+Given the definition of a tensor product,
+this proves Eq.~(\ref{e:neh:nabH_ell}).
 \end{proof}
 A priori the 1-form ${}^\Hor\!\w{\omega}$ depends upon the choice of the cross-section $\Sp$
 of $\Hor$, via the vector $\w{k}$ involved in Eq.~(\ref{e:def:omega_restrict_H}):
@@ -716,26 +718,50 @@ Sec.~\ref{s:sta:bifur_Killing_hor} (cf. the historical note on p.~\pageref{h:sta
 
 \subsection{Killing horizons as non-expanding horizons}
 
-Let $\Hor$ be a Killing horizon with complete cross-sections that are closed manifolds,
-i.e. the topology of $\Hor$ is (\ref{e:neh:H_topology}). Let us select the null normal $\wl$
-that coincides with the Killing vector $\w{\xi}$ on $\Hor$:
-$\wl \equalH \w{\xi}$.
-Equation~(\ref{e:neh:Lie_xi_g}) then implies: $\Lie{\el} \w{g} \equalH 0$.
-Let $\Sp$ be a cross-section of $\Hor$; since $\w{q}$ is the metric induced by $\w{g}$
-on $\Sp$, we deduce immediately that
-$\Lie{\el} \w{q} = 0$.
-From the definition (\ref{e:def:Theta}), it follows that the expansion rate
-tensor of $\Sp$ vanishes identically:
+Let us consider a cross-section $\Sp$ of a Killing horizon $\Hor$ with respect to a Killing vector $\w{\xi}$
+and let us select the null normal $\wl$ to coincide with $\w{\xi}$ on $\Hor$:
+$\wl \equalH \w{\xi}$. Since $\w{\xi}$ is an isometry generator, it is pretty obvious that the
+metric $\w{q}$ induced by $\w{g}$ on $\Sp$ will not evolve when Lie dragged along $\w{\xi}$ and
+hence that the deformation rate $\w{\Theta}$ of $\Sp$ along $\w{\xi}$, as defined by
+Eq.~(\ref{e:def:Theta}), vanishes identically.
+One can establish this rigorously from expression~(\ref{e:def:Theta_q_nabla_l}) for $\w{\Theta}$.
+Indeed, without any loss of generality, we may express
+the null vector field $\wl$ in a neighborhood of $\Hor$ as $\wl = \w{\xi} + u \w{w}$ where $u$ is a scalar field
+defining $\Hor$ as the level set $u=0$, i.e. a scalar field obeying Eqs.~(\ref{e:def:Hor_u_zero})-(\ref{e:def:du_not_zero}). Then Eq.~(\ref{e:def:Theta_q_nabla_l}) leads to
+\[
+    \Theta_{\alpha\beta}  = q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu \xi_\nu
+        + \underbrace{u}_{0} q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu w_\nu
+        + \underbrace{q^\mu_{\ \, \alpha} \nabla_\mu u}_{0} \; q^\nu_{\ \, \beta}  w_\nu
+        = q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu \xi_\nu ,
+\]
+where the identifications with zero hold on $\Sp$, the second one because $u$ is constant (being equal to zero) on
+$\Sp$. Now thanks to the Killing equation (\ref{e:neh:Killing_equation}), $q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu \xi_\nu$ is an antisymmetric tensor field, while $\Theta_{\alpha\beta}$ is symmetric
+(cf. Sec.~\ref{s:def:deformation_shear}). It follows that $\Theta_{\alpha\beta}=0$.
+In view of the scaling law (\ref{e:def:rescale_deform_shear}), we can extend this result to the deformation rate
+of $\Sp$ along any null normal to $\Hor$ and therefore state:
+
+\begin{prop}[vanishing of the deformation rate of cross-sections of a Killing horizon]
+On a Killing horizon $\Hor$,
+the deformation rate $\w{\Theta}$ of any cross-section along any null normal $\wl$
+is identically zero:
 \be \label{e:neh:Theta_zero_KillingH}
    \encadre{ \w{\Theta} = 0 }.
 \ee
-In particular we have $\theta_{(\wl)} = 0$, so that we conclude:
-\begin{prop}
+This implies that the expansion of $\Hor$ along any null normal $\wl$ vanishes:
+\be
+    \theta_{(\wl)} = 0 .
+\ee
+\end{prop}
+In view of the definition of a non-expanding horizon (cf. Sec.~\ref{s:neh:def}),
+an immediate corollary is
+\begin{prop}[Killing horizons as non-expanding horizons]
 Any Killing horizon with closed-manifold cross-sections is a non-expanding horizon.
 \end{prop}
-Moreover, $\w{\Theta}$ vanishes
-for all Killing horizons [Eq.~(\ref{e:neh:Theta_zero_KillingH})], while to get the same result on a generic non-expanding
-horizon, one has to assume that the null convergence condition holds on $\Hor$.
+
+\begin{remark}
+$\w{\Theta}$ vanishes for any Killing horizon [Eq.~(\ref{e:neh:Theta_zero_KillingH})], while to get the same result on a generic non-expanding horizon, one has to assume that the null convergence condition holds on $\Hor$
+(Property~\ref{p:neh:invariance_of_2metric}).
+\end{remark}
 
 \subsection{Expressions of the non-affinity coefficient}
 
@@ -1927,7 +1953,35 @@ by Jürgen Ehlers\index[pers]{Ehlers, J.} and John Stachel\index[pers]{Stachel, 
 been published in 1969 \cite{Boyer69}.
 \end{hist}
 
+\subsection{Zeroth law for bifurcate Killing horizons}
 
+For a Killing horizon that is part of a bifurcate Killing horizon, one can establish
+the constancy of the surface gravity $\kappa$ (the ``zeroth law'') by means of the vanishing of
+the Killing vector $\w{\xi}$
+at the bifurcation surface, without requiring the null dominance condition as for a generic Killing horizon
+in Property~\ref{p:neh:zeroth_law}:
+
+\begin{prop}[zeroth law\index{zeroth law!of BH dynamics} for bifurcate Killing horizons]
+\label{p:neh:zeroth_law_bifur}
+The surface gravity is constant over a bifurcate Killing horizon:
+\be
+    \encadre{\kappa = \mathrm{const}.}
+\ee
+\end{prop}
+\begin{proof}
+Let $\Hor$ be a Killing horizon with respect to a Killing vector $\w{\xi}$
+and $\w{v}$ be a generic non-vanishing vector field tangent to $\Hor$. Let us
+evaluate the derivative of $\kappa$ along $\w{v}$ from expression (\ref{e:neh:kappa2}):
+\[ 2 \kappa v^\rho \nabla_\rho \kappa =
+    - \frac{1}{2} v^\rho \nabla_\rho \left( \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu \right) =
+    - v^\rho \nabla_\rho \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu .\]
+Now a standard identity valid for any Killing vector $\w{\xi}$ is\footnote{To prove it, use
+...}
+\be
+    \nabla_\gamma \nabla_\beta \xi^\alpha = R^\alpha_{\ \, \beta\gamma\mu} \xi^\mu ,
+\ee
+where $R^\alpha_{\ \, \beta\gamma\mu}$ is the Riemann curvature tensor of $\w{g}$.
+\end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Summary}

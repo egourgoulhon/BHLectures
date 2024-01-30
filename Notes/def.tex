@@ -1381,7 +1381,7 @@ and  $q^{\mu\nu} k_\mu = 0$ [Eq.~(\ref{e:def:q_l_q_k_zero})]. Using
 the Killing expression (\ref{e:bas:Lie_g_Killing}) of the Lie derivative of $\w{g}$:
 $\Liec{\el} g_{\mu\nu} = \nabla_\mu \el_\nu + \nabla_\nu \el_\mu$, and
 the symmetry of $q^{\mu\nu}$, we arrive at
-\be
+\be \label{e:def:theta_q_nabla_ell}
     \encadre{ \theta_{(\wl)} = q^{\mu\nu} \nabla_\mu \el_\nu } .
 \ee
 
@@ -1477,26 +1477,37 @@ area $\delta A$. Hence the expansion $\theta_{(\wl)}$ at $p$
 does not depend on the choice of $\delta S$.
 We conclude:
 \begin{prop}[independence of the expansion from the cross-section]
+\label{p:def:expansion_indep_cs}
 The expansion $\theta_{(\wl)}$ at a point $p$ of a null hypersurface $\Hor$
 does not depend on the choice of the cross-section through $p$.
 It depends  only on the null normal $\wl$ of $\Hor$.
-\end{prop}
-For this reason, from now on, we shall call $\theta_{(\wl)}$
+Accordingly, from now on, we shall call $\theta_{(\wl)}$
 the \defin{expansion of the null hypersurface $\Hor$ along $\wl$}\index{expansion!of a null hypersurface}.
+\end{prop}
 
-The dependency of the expansion on $\wl$ is given by the following
-behaviour under a rescaling of $\wl$:
+The dependency of the expansion on $\wl$ is given by:
+\begin{prop}[rescaling of the expansion upon a change of null normal]
+Two null normals $\wl$ and $\wl'$ to a null hypersurface $\Hor$ are necessarily collinear:
+$\wl' = \alpha \wl$, where $\alpha$ is a non-vanishing scalar field on $\Hor$.
+We have then the following scaling law:
 \be \label{e:def:rescale_lambda}
-   \wl' = \alpha \wl \ \Longrightarrow \ \theta_{(\wl')} = \alpha \theta_{(\wl)} ,
+   \wl' = \alpha \wl \ \Longrightarrow \ \theta_{(\wl')} = \alpha \theta_{(\wl)} .
 \ee
-where $\alpha$ is any positive scalar field on $\Hor$. This follows immediately
-from the expression (\ref{e:def:theta_Lie_ln_q}) of $\theta_{(\wl)}$, given
+\end{prop}
+\begin{proof}
+This follows immediately
+from expression (\ref{e:def:theta_Lie_ln_q}) for $\theta_{(\wl)}$, given
 that the metric $\w{q}$ is independent of $\wl$ and
 $\w{\Liesymbol}_{\alpha\wl}\,\ln q = \alpha \Lie{\wl}\ln q$.
+One can also get the result from Eq.~(\ref{e:def:theta_q_nabla_ell}):
+$\theta_{(\wl')} = q^{\mu\nu} \nabla_\mu (\alpha\el_\nu) = \alpha q^{\mu\nu} \nabla_\mu \el_\nu = \alpha \theta_{(\wl)}$,
+since $q^{\mu\nu} \ell_\nu = 0$ [Eq.~(\ref{e:def:q_l_q_k_zero})].
+\end{proof}
+
 \begin{remark}
 The reader may check that the rescaling laws (\ref{e:def:rescale_kappa})
 and (\ref{e:def:rescale_lambda}) for respectively $\kappa$ and $\theta_{(\wl)}$
-are compatible with the expression (\ref{e:def:theta_div_l}) of $\theta_{(\wl)}$,
+are compatible with expression (\ref{e:def:theta_div_l}) for $\theta_{(\wl)}$,
 given that $\wnab\cdot \wl' = \alpha\wnab\cdot\wl + \wnab_{\wl} \alpha$.
 \end{remark}
 
@@ -1560,8 +1571,8 @@ and the Frobenius identity (\ref{e:def:ext_der_wl_comp}), we may write
         = 2 \nabla_\mu \el_\nu + \nabla_\nu \rho \, \el_\mu - \nabla_\mu \rho \, \el_\nu .
 \]
 Given that $q^\mu_{\ \, \alpha}  \el_\mu = 0$, we obtain
-\be
-    \Theta_{\alpha\beta}  = q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu \el_\nu .
+\be \label{e:def:Theta_q_nabla_l}
+    \encadre{ \Theta_{\alpha\beta}  = q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu \el_\nu }.
 \ee
 Let us substitute (\ref{e:def:q_proj}) for the projector $\vw{q}$:
 \[
@@ -1696,6 +1707,35 @@ case of the Schwarzschild horizon $\Hor$, $r=2m$ and it reduces to
 \ee
 \end{example}
 
+\begin{prop}[rescaling of the deformation rate and shear upon a change of null normal]
+Two null normals $\wl$ and $\wl'$ to a null hypersurface $\Hor$ are necessarily collinear:
+$\wl' = \alpha \wl$, where $\alpha$ is a non-vanishing scalar field on $\Hor$.
+The deformation rates $\w{\Theta}$ and $\w{\Theta}'$ and shear tensors
+$\w{\sigma}$ and $\w{\sigma}'$ of a given cross-section $\Sp$
+of $\Hor$ along respectively $\wl$ and $\wl'$ obey the following scaling law:
+\be \label{e:def:rescale_deform_shear}
+   \wl' = \alpha \wl \ \Longrightarrow \ \w{\Theta}' = \alpha \w{\Theta}
+   \ \ \mbox{and}\  \ \w{\sigma}' = \alpha \w{\sigma} .
+\ee
+\end{prop}
+\begin{proof}
+Equation~(\ref{e:def:Theta_q_nabla_l}) yields
+${\Theta'}_{\alpha\beta}  = q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu (\alpha \el_\nu) =
+\alpha q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu \el_\nu
++ q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \el_\nu \nabla_\mu \alpha = \alpha \Theta_{\alpha\beta} + 0$
+since $q^\nu_{\ \, \beta} \el_\nu = 0$ [Eq.~(\ref{e:def:q_l_q_k_zero})].
+The result for the shear tensor follows then from the definition~(\ref{e:def:def_shear}) along
+with the scaling law (\ref{e:def:rescale_lambda}) for the expansion.
+\end{proof}
+
+\begin{remark}
+\label{r:def:shear_dep_cs}
+The scaling law (\ref{e:def:rescale_deform_shear}) shows explicitely that the deformation rate $\w{\Theta}$
+and shear tensor $\w{\sigma}$ depend on the choice of the null normal $\wl$ to $\Hor$.
+Both tensors also depend on the choice of the cross-section $\Sp$ of $\Hor$,
+contrary to the expansion $\theta_{(\wl)}$ (Property~\ref{p:def:expansion_indep_cs}).
+\end{remark}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Evolution of the expansion} \label{s:def:null_raychaud}
@@ -1776,8 +1816,7 @@ Accordingly Eq.~(\ref{e:def:Raychaud_step1}) simplifies to
     + \kappa \theta_{(\wl)} = R_{\mu\nu} \el^\mu \el^\nu .
 \ee
 The first term in the left-hand side can be evaluated by expressing
-$\w{\Theta}$ in terms of the shear tensor $\w{\sigma}$
-and $\theta_{(\wl)}$ [Eq.~(\ref{e:def:def_shear})]:
+$\w{\Theta}$ in terms of $\theta_{(\wl)}$ and the shear tensor $\w{\sigma}$ [Eq.~(\ref{e:def:def_shear})]:
 \bea
     \Theta_{\mu\nu} \Theta^{\mu\nu} & = & \left( \sigma_{\mu\nu}
         + \frac{1}{n-2} \, \theta_{(\wl)} q_{\mu\nu} \right)
@@ -1793,8 +1832,8 @@ and $\theta_{(\wl)}$ [Eq.~(\ref{e:def:def_shear})]:
 Hence Eq.~(\ref{e:def:Raychaud_step2}) leads to:
 
 \begin{prop}[null Raychaudhuri equation]
-Any normal vector field $\wl$ to a null hypersurface $\Hor$ obeys
-the
+Any normal vector field $\wl$ to a null hypersurface $\Hor$ of a $n$-dimensional spacetime
+$(\M,\w{g})$ obeys the
 \defin{null Raychaudhuri equation}\index{null!Raychaudhuri equation}\index{Raychaudhuri!null -- equation}:
 \be \label{e:def:null_Raychaud_Ricci}
     \encadre{ \wnab_{\wl}\,  \theta_{(\wl)} = \kappa \theta_{(\wl)}
@@ -1819,6 +1858,12 @@ $+w_{ab} w^{ab}$ must be added to the right-hand side of
 Eq.~(\ref{e:def:null_Raychaud_Ricci}) (see e.g. Eq.~(4.35) of Ref.~\cite{HawkiE73}).
 \end{remark}
 
+\begin{remark}
+Since $\theta_{(\wl)}$ is a scalar field on $\Hor$, $\wnab_{\wl}\,  \theta_{(\wl)}$
+can be replaced by the Lie derivative $\Lie{\wl} \theta_{(\wl)}$ in the left-hand side of the Raychaudhuri
+equation.
+\end{remark}
+
 If the spacetime $(\M,\w{g})$ is ruled by general relativity, i.e. if
 $\w{g}$ obeys Einstein equation (\ref{e:fra:Einstein_eq_n}), we may express
 the term involving the Ricci tensor in terms of the total energy-momentum tensor
@@ -1835,11 +1880,6 @@ The null Raychaudhuri equation becomes then
         - 8\pi \w{T}(\wl, \wl) .
 \ee
 
-\begin{remark}
-Since $\theta_{(\wl)}$ is a scalar field on $\Hor$, $\wnab_{\wl}\,  \theta_{(\wl)}$
-can be replaced by the Lie derivative $\Lie{\wl} \theta_{(\wl)}$ in the left-hand side of the Raychaudhuri
-equation.
-\end{remark}
 
 \begin{remark}
 The cosmological constant $\Lambda$ does not appear in
@@ -1848,6 +1888,15 @@ latter involves the Einstein equation with $\Lambda$
 [Eq.~(\ref{e:fra:Einstein_eq_n})].
 \end{remark}
 
+\begin{remark}
+We have stressed above that the shear tensor $\w{\sigma}$ does depend on
+the choice of a cross-section of $\Hor$, in addition to $\wl$
+(cf. Remark~\ref{r:def:shear_dep_cs} on p.~\pageref{r:def:shear_dep_cs}).
+The null Raychaudhuri equation (\ref{e:def:null_Raychaud_Ricci}) shows that
+the ``shear square'' $\sigma_{ab} \sigma^{ab}$ does \emph{not} depend on the choice
+of a cross-section, for all the other terms in (\ref{e:def:null_Raychaud_Ricci}) are
+independent of it.
+\end{remark}
 
 \begin{example}[light cone]
 Let us check the null Raychaudhuri equation on the light cone in Minkowski
@@ -1920,11 +1969,11 @@ is equivalent to the so-called
     \encadre{ \w{T}(\wl, \wl) \geq 0 \quad \mbox{for any null vector $\wl$} }_{\rm\,  GR},
 \ee
 where the index `GR' stands for \emph{general relativity}.
-The null energy condition (\ref{e:neh:null_energy_cond_matter}) is pretty weak and is satisfied by
+The null energy condition (\ref{e:neh:null_energy_cond_matter}) is a pretty weak physical requirement: it is satisfied by
 \begin{itemize}
 \item vacuum: $\w{T}=0$;
 \item any ``reasonable'' matter model, such as a perfect fluid\index{perfect fluid}\index{fluid!perfect --} with a
-proper energy density $\rho$ and pressure $p$ satisfying
+proper energy density $\rho$ and pressure $p$ obeying
 $\rho+p\geq 0$ (\footnote{Indeed, for the perfect-fluid
 energy-momentum tensor $\w{T} = (\rho+p)\uu{u}\otimes\uu{u} + p \w{g}$,
 one has
