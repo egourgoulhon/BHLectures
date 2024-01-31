@@ -1045,7 +1045,7 @@ While the name \emph{null convergence condition} for $\w{R}(\wl,\wl) \geq 0$
 [Eq.~(\ref{e:neh:null_energy_cond})] is standard in the literature
 (e.g. \cite{HawkiE73,Senov22a,SenovG15}), the name \emph{null dominance condition}
 for (\ref{e:neh:null_dominant_cond}) is not standard. We are using it to
-distinguish from the \emph{null dominant energy condition} (\ref{e:neh:null_dominant_cond_T});
+distinguish from the \emph{null dominant energy condition} (\ref{e:neh:null_dominant_cond_T}),
 which a condition on the matter energy-momentum tensor, while (\ref{e:neh:null_dominant_cond})
 is a pure geometrical identity, independent of the Einstein equation. In this way,
 \emph{null dominance condition} is on the same footing as \emph{null convergence condition}.
@@ -1105,10 +1105,11 @@ the event horizon of a black hole in equilibrium is a Killing horizon.
 
 
 \begin{remark}
+\label{r:neh:proof_zeroth_law}
 The standard proof of the zeroth law, based on taking the covariant derivative
 of Eq.~(\ref{e:neh:xi_nab_xi_kappa}) \cite{BardeCH73,Carte87,Wald84} or of Eq.~(\ref{e:neh:dxi2_kappa})
 \cite{Heusl96} and on an identity expressing the second order derivative of
-a Killing vector in terms of the Riemann tensor, is quite long (see
+a Killing vector in terms of the Riemann tensor [Eq.~(\ref{e:neh:nabnab_xi_Riem}) below], is quite long (see
 e.g. pp.~333-334 of Wald's textbook~\cite{Wald84} and the remark at the end of Sec.~5.5.2 of Poisson's
 textbook \cite{Poiss04}). The proof presented above is shorter but it relies on
 the concept of induced affine connection on a non-exanding horizon
@@ -1123,8 +1124,8 @@ also Ref.~\cite{AshteBL01} for a related proof regarding isolated horizons.
 \label{r:neh:zero_law_wo_NDEC}
 The constancy of $\kappa$ on a Killing horizon can also be proved without the
 null dominance condition, but at the price of additional hypotheses:
-either the Killing horizon $\Hor$ is part of a bifurcate Killing horizon
-(to be discussed in Sec.~\ref{s:sta:bifur_Killing_hor}) \cite{KayW91,Wald92,Poiss04}
+either the Killing horizon $\Hor$ is part of a so-called bifurcate Killing horizon,
+as we shall see in Sec.~\ref{s:neh:zeroth_law_bifur} (Property~\ref{p:neh:zeroth_law_bifur})
 or the spacetime is axisymmetric, in addition to be stationary, and
 the two Killing vectors associated
 with stationarity and
@@ -1224,7 +1225,8 @@ in their seminal article \emph{The Four Laws of Black Hole Mechanics}
 In Damour's framework, the pullback of the 1-form  $-\w{\omega}/(8\pi)$ to the cross-section
 $\Sp$ is considered as the momentum surface density of the fluid bubble and Eq.~(\ref{e:def:0law_prov})
 is turned into a 2-dimensional Navier-Stokes equation (see e.g. Sec.~6.3 of Ref.~\cite{GourgJ06} for details), where $\kappa/(8\pi)$ plays the role of the
-bubble's surface pressure, so that it must constant in equilibrium.
+bubble's surface pressure, so that it must constant in equilibrium. As mentioned in Remark~\ref{r:neh:proof_zeroth_law},
+the proof presented above is derived from Damour's one.
 \end{hist}
 
 \subsection{Classification of Killing horizons} \label{s:neh:classif_KH}
@@ -1953,7 +1955,7 @@ by Jürgen Ehlers\index[pers]{Ehlers, J.} and John Stachel\index[pers]{Stachel, 
 been published in 1969 \cite{Boyer69}.
 \end{hist}
 
-\subsection{Zeroth law for bifurcate Killing horizons}
+\subsection{Zeroth law for bifurcate Killing horizons} \label{s:neh:zeroth_law_bifur}
 
 For a Killing horizon that is part of a bifurcate Killing horizon, one can establish
 the constancy of the surface gravity $\kappa$ (the ``zeroth law'') by means of the vanishing of
@@ -2049,6 +2051,14 @@ and $\Hor_2^-\cup \Hor_2^+$.
 \end{remark}
 
 
+\begin{hist}
+The proof of the zeroth law for Killing horizons that are part of a bifurcate Killing horizon (Property~\ref{p:neh:zeroth_law_bifur}) has been first presented by Bernard Kay\index[pers]{Kay, B.}
+and Robert Wald\index[pers]{Wald, R.M.} in 1991 \cite{KayW91}; these authors mentioned that the proof had been suggested
+to them by Robert Geroch\index[pers]{Geroch, R.}. The proof appears also in the notes from a lecture
+given by Wald at a school held in Erice in May 1991 \cite{Wald92}. It can also be found in
+Poisson's\index[pers]{Poisson, E.} textbook \cite{Poiss04}.
+\end{hist}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Summary}
@@ -2078,7 +2088,7 @@ NCC &$\Longrightarrow$ & $\w{\Theta}=0$ \\
  & $\Longrightarrow$ & induced affine connection
 \end{tabular}
 };
-\node[boxst] (K) at (0,0) {\textbf{Killing horizon}\\
+\node[boxst] (K) at (0,-0.7) {\textbf{Killing horizon}\\
 \textbf{\small with closed-manifold cross-sections}\\
 $\w{\Theta}=0$ \\
 NDC $\Longrightarrow \kappa=\mathrm{const}$ (Zeroth Law 1) \\
