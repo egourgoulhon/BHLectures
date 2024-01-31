@@ -610,7 +610,7 @@ with another Killing vector of Minkowski spacetime:
 \be \label{e:neh:boost-Killing}
     \w{\xi} := x \wpar_t + t \wpar_x .
 \ee
-This vector is indeed the
+This vector is the
 generator of the 1-parameter group of Lorentz boosts\index{boost} in the $(t,x)$ plane.
 On $\Hor$ we have (cf. Fig.~\ref{f:neh:hplaneKilling-boost}):
 \[
@@ -888,7 +888,7 @@ is constant on a Killing horizon, provided some mild energy condition holds.
 Let us denote by $\wl$ the null normal to $\Hor$ that coincides with
 the Killing vector field: $\wl \equalH \w{\xi}$. The vector field
 $\wl$ is then a symmetry generator on $\Hor$, which implies
-\be
+\be \label{e:neh:kappa_const_along_L}
     \Lie{\el} \kappa = 0 .
 \ee
 This means that $\kappa$ is constant along any field line of $\wl$ (i.e. any
@@ -1759,20 +1759,6 @@ on a Killing horizon, the Killing vector field is nowhere vanishing
 a bifurcate Killing horizon, it is vanishing at the bifurcation surface.
 \end{remark}
 
-\begin{example}[bifurcate Killing horizon w.r.t. Lorentz boost]
-\label{x:sta:bif-KH-boost}
-Let us consider Minkowski spacetime and the boost Killing vector given
-by Eq.~(\ref{e:neh:boost-Killing}): $\w{\xi} := x \wpar_t + t \wpar_x$
-and let us take for $\Hor_1$ the null hyperplane $t=x$
-considered in Example~\ref{x:neh:boostKH} in Chap.~\ref{s:neh} and denoted there
-by $\Hor$. The two half-hyperplanes defined by
-Eq.~(\ref{e:neh:boost-Killing_hor}) are then the Killing horizons $\Hor_1^+$ and
-$\Hor_1^-$. The union $\Hor_1 \cup \Hor_2$, where $\Hor_2$ is the null hyperplane $t=-x$ is a bifurcate Killing horizon with respect to $\w{\xi}$,
-with the 2-plane $(t,x)=(0,0)$ as bifurcation surface
-(cf. Fig.~\ref{f:sta:hplane_bifur}). Note that on $\Hor_1$, the Killing vector
-$\w{\xi}$ points away from $\Sp$, while on $\Hor_2$, it points towards $\Sp$.
-\end{example}
-
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{sta_hplane_bifur.pdf}}
 \caption[]{\label{f:sta:hplane_bifur} \footnotesize
@@ -1781,6 +1767,20 @@ $\w{\xi} = x \wpar_t + t \wpar_x$ generating Lorentz boosts in the plane $(t,x)$
 surface $\Sp$ appears as a line, while it is actually a 2-plane.}
 \end{figure}
 
+\begin{example}[Lorentz-boost bifurcate Killing horizon]
+\label{x:sta:bif-KH-boost}
+Let us consider Minkowski spacetime and the Killing vector given
+by Eq.~(\ref{e:neh:boost-Killing}): $\w{\xi} := x \wpar_t + t \wpar_x$, namely
+the generator of Lorentz boosts in the $(t,x)$ plane.
+Let us take for $\Hor_1$ the null hyperplane $t=x$
+considered in Example~\ref{x:neh:boostKH} and denoted there
+by $\Hor$. The two half-hyperplanes defined by
+Eq.~(\ref{e:neh:boost-Killing_hor}) are then the Killing horizons $\Hor_1^+$ and
+$\Hor_1^-$. The union $\Hor_1 \cup \Hor_2$, where $\Hor_2$ is the null hyperplane $t=-x$ is a bifurcate Killing horizon with respect to $\w{\xi}$,
+with the 2-plane $(t,x)=(0,0)$ as bifurcation surface
+(cf. Fig.~\ref{f:sta:hplane_bifur}). Note that on $\Hor_1$, the Killing vector
+$\w{\xi}$ points away from $\Sp$, while on $\Hor_2$, it points towards $\Sp$.
+\end{example}
 
 
 \subsection{Non-degenerate Killing horizons and Boyer's theorem}
@@ -1936,8 +1936,8 @@ geodesics. One can still have $\w{\xi}\rightarrow 0$ at some boundary
 of $\Hor$, but this is a null boundary, not a spacelike one, and it does not
 correspond to a bifurcation surface. An example is the Killing horizon with
 respect to a null-rotation Killing vector in Minkowski spacetime, exhibited
-as Examples~\ref{x:neh:nullrotKH} and \ref{x:neh:nullrotKH_kappa}
-in Chap.~\ref{s:neh}, p.~\pageref{x:neh:nullrotKH} and \pageref{x:neh:nullrotKH_kappa}
+as Examples~\ref{x:neh:nullrotKH} and \ref{x:neh:nullrotKH_kappa},
+p.~\pageref{x:neh:nullrotKH} and \pageref{x:neh:nullrotKH_kappa}
 respectively (cf. Fig.~\ref{f:neh:hplaneKilling-nullrot}): $\w{\xi}=0$
 on the null 2-plane of equation $t=x$, $y=0$.
 \end{remark}
@@ -1963,16 +1963,18 @@ in Property~\ref{p:neh:zeroth_law}:
 
 \begin{prop}[zeroth law\index{zeroth law!of BH dynamics} for bifurcate Killing horizons]
 \label{p:neh:zeroth_law_bifur}
-The surface gravity is constant over a bifurcate Killing horizon:
+The surface gravity is a nonzero constant over any Killing horizon that is part of a
+bifurcate Killing horizon:
 \be
-    \encadre{\kappa = \mathrm{const}.}
+    \encadre{\kappa = \mathrm{const} \neq 0.}
 \ee
 \end{prop}
 \begin{proof}
-Let $\Hor$ be a Killing horizon with respect to a Killing vector $\w{\xi}$
-and $\w{v}$ be a generic non-vanishing vector field tangent to $\Hor$. Let us
+Let $\Hor$ be a Killing horizon that is part of a bifurcate Killing horizon
+$\hat{\Hor}$ with respect to a Killing vector $\w{\xi}$.
+Let $\w{v}$ be a generic non-vanishing vector field tangent to $\Hor$. Let us
 evaluate the derivative of $\kappa$ along $\w{v}$ from expression (\ref{e:neh:kappa2}):
-\[ 2 \kappa v^\rho \nabla_\rho \kappa =
+\[ 2 \kappa \wnab_{\w{v}} \kappa =
     - \frac{1}{2} v^\rho \nabla_\rho \left( \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu \right) =
     - v^\rho \nabla_\rho \nabla_\mu \xi_\nu \nabla^\mu \xi^\nu .\]
 Now a standard identity valid for any Killing vector $\w{\xi}$ is\footnote{To prove it, use
@@ -1987,14 +1989,66 @@ right-hand side is $(R_{\gamma\mu \alpha\beta} - R_{\alpha\mu\beta\gamma} - R_{\
 Now, using the antisymmetry properties (\ref{e:bas:Riemann_antisym34}) and (\ref{e:bas:Riemann_antisym12}) of the Riemann tensor and then the cyclic symmetry (\ref{e:bas:Riemann_cyclic}),
 $- R_{\alpha\mu\beta\gamma} - R_{\beta\mu\gamma\alpha} = - R_{\mu\alpha\gamma\beta} - R_{\mu\beta\alpha\gamma}
 = R_{\mu\gamma\beta\alpha}$. This turns the right-hand side into $(R_{\gamma\mu \alpha\beta} + R_{\mu\gamma\beta\alpha})\xi^\mu = 2 R_{\gamma\mu \alpha\beta} \xi^\mu = 2 R_{\alpha\beta\gamma\mu} \xi^\mu$, the last equality following from
-property (\ref{e:bas:Riemann_sym}). This establishes Eq.~(\ref{e:neh:nabnab_xi_Riem}).}
+Eq.~(\ref{e:bas:Riemann_sym}). This establishes Eq.~(\ref{e:neh:nabnab_xi_Riem}).}
 \be \label{e:neh:nabnab_xi_Riem}
     \nabla_\gamma \nabla_\beta \xi^\alpha = R^\alpha_{\ \, \beta\gamma\mu} \xi^\mu ,
 \ee
-where $R^\alpha_{\ \, \beta\gamma\mu}$ is the Riemann curvature tensor of $\w{g}$.
-
-... TO BE CONTINUED ...
+where $R^\alpha_{\ \, \beta\gamma\mu}$ is the Riemann curvature tensor of $\w{g}$. We thus get,
+making use of the antisymmetry property~(\ref{e:bas:Riemann_antisym12}) to
+set $-R_{\nu\mu\rho\sigma} = R_{\mu\nu\rho\sigma}$,
+\be \label{e:neh:v_nab_kappa}
+    2 \kappa \wnab_{\w{v}}  \kappa = v^\rho R_{\mu\nu\rho\sigma} \xi^\sigma \nabla^\mu \xi^\nu .
+\ee
+If we choose the vector $\w{v}$ to be the null normal $\wl \equalH \w{\xi}$, we get immediately
+$2\kappa \wnab_{\wl}  \kappa = 0$, given that $R_{\mu\nu\rho\sigma} \xi^\rho \xi^\sigma = 0$
+(property~(\ref{e:bas:Riemann_antisym34})). Then $\kappa = 0$ or $\wnab_{\wl}\kappa = 0$. In both
+cases, this means that $\kappa$ must be constant along a given null generator $\Li$ of $\Hor$.
+We thus recover the result (\ref{e:neh:kappa_const_along_L}).
+There remains to prove that $\kappa$ does not vary from one generator to the other.
+For this, we shall use that $\Hor$ belongs to the bifurcate Killing horizon $\hat{\Hor}$.
+By virtue of Boyer's theorem (Property~\ref{p:sta:Boyer_thm}), one has $\kappa\neq 0$, for if $\kappa$
+would be zero along $\Li$, the latter would be a complete geodesic and $\Hor$ could not be part of a
+bifurcate Killing horizon. The bifurcation
+surface $\Sp$ of $\hat{\Hor}$ is part of the topological closure of $\Hor$
+(cf. Fig.~\ref{f:sta:bifur_Kill_hor}, with e.g. $\Hor_1^+$ standing for $\Hor$), so it is meaningfull to consider
+the limit of Eq.~(\ref{e:neh:v_nab_kappa}) to $\Sp$ for a vector field $\w{v}$ on $\Hor$ that tends to a nonzero
+vector field tangent to $\Sp$. Given that
+$\w{\xi}\equalS 0$ and $\wnab\w{\xi}$ remains finite at $\Sp$ for
+$\w{\xi}$ is a smooth vector field on $\M$, the limit yields (taking into account $\kappa\neq 0$)
+\[
+    \wnab_{\w{v}}  \kappa \equalS 0 .
+\]
+It follows that $\kappa$ (or more precisely the limit to $\Sp$ of $\Hor$'s surface gravity $\kappa$) is uniform
+over $\Sp$. Each null generator $\Li$ of $\Hor$ is an incomplete geodesic, which once extended to a complete geodesic, intersects $\Sp$ at single point. The constancy of $\kappa$ on $\Sp$ implies then that $\kappa$ cannot vary from one
+null generator to the other. $\kappa$ is thus uniform over $\Hor$.
 \end{proof}
+
+\begin{example}[Lorentz-boost bifurcate Killing horizon]
+Let us consider the bifurcate Killing horizon $\hat{\Hor}$
+of Minkowski spacetime discussed in Example~\ref{x:sta:bif-KH-boost} and illustrated
+in Fig.~\ref{f:sta:hplane_bifur}. The corresponding Killing vector is
+the Lorentz-boost generator $\w{\xi} := x \wpar_t + t \wpar_x$. An easy computation
+yields $\wnab_{\w{\xi}} \w{\xi} = t \wpar_t + x \wpar_x$. On the components
+$\Hor_1^+$ and $\Hor_1^-$ of $\hat{\Hor}$ (cf. Fig.~\ref{f:sta:hplane_bifur}),
+one has $t=x$, so that $\w{\xi} =  t (\wpar_t + \wpar_x)$ and
+$\wnab_{\w{\xi}} \w{\xi} = t (\wpar_t + \wpar_x)$. Hence $\wnab_{\w{\xi}} \w{\xi} = \w{\xi}$
+and $\kappa = 1$ there.
+On the components $\Hor_2^+$ and $\Hor_2^-$ of $\hat{\Hor}$ (cf. Fig.~\ref{f:sta:hplane_bifur}),
+one has $t=-x$, so that $\w{\xi} =  t (-\wpar_t + \wpar_x)$
+and
+$\wnab_{\w{\xi}} \w{\xi} = t (\wpar_t - \wpar_x)$.
+Hence  $\wnab_{\w{\xi}} \w{\xi} = - \w{\xi}$ and $\kappa = -1$ there.
+We conclude that $\kappa$ is constant over any of the four Killing horizons
+constituting $\hat{\Hor}$.
+\end{example}
+
+\begin{remark}
+As the above example shows, the surface gravity is \emph{not} uniform over
+all the bifurcate Killing horizon $\hat{\Hor}$; it keeps the same value only on the subsets $\Hor_1^-\cup \Hor_1^+$
+and $\Hor_2^-\cup \Hor_2^+$.
+\end{remark}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Summary}
@@ -2002,8 +2056,9 @@ where $R^\alpha_{\ \, \beta\gamma\mu}$ is the Riemann curvature tensor of $\w{g}
 Here is an inheritance diagram summarizing the main results of this chapter.
 The vertical arrow means ``is a'', i.e. the element at the bottom of an arrow
 is a special case of the element at the top of the arrow.
-``NCC'' stands for ``Null Convergence Condition'' [Eq.~(\ref{e:neh:null_energy_cond})]
-and ``NDC'' for ``Null Dominance Condition'' [Eq.~(\ref{e:neh:null_dominant_cond})].
+``NCC'' stands for ``Null Convergence Condition'' [Eq.~(\ref{e:neh:null_energy_cond})],
+``NDC'' for ``Null Dominance Condition'' [Eq.~(\ref{e:neh:null_dominant_cond})]
+and ``BKH`` for ``Bifurcate Killing Horizon'' (Sec.~\ref{s:sta:bifur_def}).
 
 \begin{center}
 
@@ -2026,7 +2081,8 @@ NCC &$\Longrightarrow$ & $\w{\Theta}=0$ \\
 \node[boxst] (K) at (0,0) {\textbf{Killing horizon}\\
 \textbf{\small with closed-manifold cross-sections}\\
 $\w{\Theta}=0$ \\
-NDC $\Longrightarrow \kappa=\mathrm{const}$ (Zeroth Law)};
+NDC $\Longrightarrow \kappa=\mathrm{const}$ (Zeroth Law 1) \\
+part of BKH $\Longrightarrow \kappa=\mathrm{const}\neq 0$ (Zeroth Law 2)};
 \draw[inherits] (H)--(N);
 \draw[inherits] (K)--(H);
 \end{tikzpicture}
