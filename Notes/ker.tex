@@ -490,7 +490,7 @@ hypersurface. Further details about the outer ergosphere $\E^+$, especially
 the 2-dimensional geometry of its time slices, are discussed in Ref.~\cite{JacobS09}.
 \end{remark}
 
-We shall see in Sec.~\ref{s:ker:Penrose_proc} that the outer ergoregion
+We shall see in Sec.~\ref{s:gek:Penrose_proc} that the outer ergoregion
 plays a key role in an energy extraction mechanism known as the
 \emph{Penrose process}.
 
@@ -1459,6 +1459,7 @@ the spacetime manifold $\M$).
 Using Lemma~\ref{p:fra:lem2} (Sec.~\ref{s:fra:time_orientation}) with $\w{u}=\w{k}$ and
 $\w{v} = \wl$, we conclude
 \begin{prop}[$\wl$ future-directed]
+\label{p:ker:el_future_directed}
 The tangent vector $\wl$ to the outgoing principal null geodesics
 is future-directed in all the Kerr spacetime $\M$.
 \end{prop}
@@ -1758,108 +1759,6 @@ As a check, if we let $a\rightarrow 0$ in Eq.~(\ref{e:ker:kappa_m_a}), we get
 $\kappa = 1/(4m)$, i.e. we recover the Schwarzschild horizon value computed in
 Example~\ref{x:def:Schw_hor3} of Chap.~\ref{s:def} [cf. Eq.~(\ref{e:def:kappa_Schw_hor})].
 \end{remark}
-
-\subsection{The Penrose process} \label{s:ker:Penrose_proc}
-
-\begin{figure}
-\centerline{\includegraphics[width=0.6\textwidth]{ker_penrose_proc.pdf}}
-\caption[]{\label{f:ker:penrose_proc} \footnotesize
-Projection in the equatorial plane $t=\mathrm{const}$
-and $\th=\pi/2$ of the worldline of a particle and its 4-momentum $\w{p}$,
-which decay at event $A$ in two particles: one with 4-momentum
-$\w{p'}$, which leaves to infinity, and one with 4-momentum
-$\w{p''}$, which falls into the black hole (black region).
-The grey zone is the outer ergoregion.
-}
-\end{figure}
-
-Having established that the black hole event horizon is $\Hor$, i.e.
-the boundary between $\M_{\rm I}$ and $\M_{\rm II}$, implies that
-one can escape from the outer ergoregion $\mathscr{G}^+$
-introduced in Sec.~\ref{s:ker:ergoregion}, since $\mathscr{G}^+ \subset \M_{\rm I}$.
-Moreover, we are going to see that $\mathscr{G}^+$  is a region where energy can be extracted ``from''
-the black hole. This results from the stationarity Killing
-vector $\w{\xi}$ being spacelike there --- the very definition of an
-ergoregion. Indeed, let us consider a particle $\mathscr{P}$, of 4-momentum $\w{p}$,
-in free fall from infinity into the outer ergoregion. At some point $A\in \mathscr{G}^+$, the particle $\mathscr{P}$
-splits (or decays) into two particles: $\mathscr{P}'$, of 4-momentum $\w{p'}$, which leaves to infinity, and $\mathscr{P}''$, of 4-momentum $\w{p''}$, which falls into the black hole (cf. Fig.~\ref{f:ker:penrose_proc}).
-
-We shall define the \emph{energy gain} in the above scenario by
-\be \label{e:ker:DE_Penrose_def}
-    \Delta E = E_{\rm out} - E_{\rm in} ,
-\ee
-where $E_{\rm in}$ (resp. $E_{\rm out}$) is the energy of $\mathscr{P}$
-(resp. $\mathscr{P}'$) as measured by an inertial observer at rest with respect to the black hole and far from it (cf. Sec.~\ref{s:fra:measure}):
-\be \label{e:ker:E_in_out}
-    E_{\rm in} = - \left.  \w{\xi} \cdot \w{p} \right| _{\infty}
-    \qquad \mbox{and}\qquad
-    E_{\rm out} = - \left.  \w{\xi} \cdot \w{p'} \right| _{\infty}  .
-\ee
-The above formulas hold because the 4-velocity of the inertial observer
-is precisely the time-translation Killing vector $\w{\xi} = \wpar_t$
-in the far region (since $\w{\xi}\cdot\w{\xi} = g_{tt}  \rightarrow -1$
-as  $r\rightarrow +\infty$) (compare with Eq.~(\ref{e:fra:E_obs})).
-Assuming that particles $\mathscr{P}$
-and $\mathscr{P}'$ are subject only to gravitation, i.e. are in free fall,
-their worldlines are timelike geodesics. $\w{\xi}$ being a Killing vector,
-it follows then that the scalar products $\w{\xi} \cdot \w{p}$ and
-$\w{\xi} \cdot \w{p'}$ are constant along the worldlines of $\mathscr{P}$
-and $\mathscr{P}'$ respectively (cf. Sec.~\ref{s:geo:sym}). In particular, we have
-$\left. \w{\xi} \cdot \w{p} \right| _{\infty} = \left. \w{\xi} \cdot \w{p} \right| _{A}$
-and $\left. \w{\xi} \cdot \w{p'} \right| _{\infty} = \left. \w{\xi} \cdot \w{p'} \right| _{A}$. Accordingly, Eqs.~(\ref{e:ker:DE_Penrose_def}) and
-(\ref{e:ker:E_in_out}) leads to
-\[
-    \Delta E = \left. \w{\xi} \cdot \w{p} \right| _{A} - \left. \w{\xi} \cdot \w{p'} \right| _{A} =
-    \left.  \w{\xi} \right| _{A} \cdot (\left. \w{p} \right| _{A}
-        - \left. \w{p'} \right| _{A}) .
-\]
-Now, the conservation of energy-momentum at event $A$
-writes $\left. \w{p} \right| _{A} = \left. \w{p'} \right| _{A} + \left. \w{p''} \right| _{A}$, hence
-\be \label{e:ker:DE_Penrose}
-    \Delta E =   \left. \w{\xi} \cdot \w{p''} \right| _{A} .
-\ee
-As the 4-momentum of a (non-tachyonic) particle, $\w{p''}$ is always a
-future-directed timelike ($\mathscr{P}''$ massive) or null ($\mathscr{P}''$ massless) vector.
-If $A$ were located outside the ergoregion, then $\w{\xi}$ would be a
-future-directed timelike vector and the scalar product
-$ \w{\xi} \cdot  \w{p''}$ would necessarily be negative, leading to
-$\Delta E < 0$, i.e. a net loss of energy. However, in the ergoregion,
-$\w{\xi}$ is a spacelike vector and it is possible to have $\w{\xi} \cdot \w{p''} > 0$
-with $\w{p''}$ future-directed timelike or null.
-If this occurs, then $\Delta E > 0$: the outgoing particle has more energy
-than the ingoing one. The above process is then called a
-\defin{Penrose process}\index{Penrose!process}.
-It is particulary relevant to astrophysics, notably via the so-called
-\emph{Blanford-Znajek mechanism}\index{Blanford-Znajek mechanism} or via
-some magnetohydrodynamical processes (see Ref.~\cite{LasotGATN14} for an extended
-discussion).
-
-\begin{remark}
-Assuming that the particle $\mathscr{P}''$ follows a geodesic,
-the scalar product $\w{\xi} \cdot \w{p''}$ in the right-hand side of Eq.~(\ref{e:ker:DE_Penrose}) is actually constant along the worldline of
-$\mathscr{P}''$, so that the mention of the point $A$ can be omitted in
-Eq.~(\ref{e:ker:DE_Penrose}).
-\end{remark}
-
-\begin{remark} \label{r:ker:negative_energy}
-If the Penrose process does occur, i.e. if
-$\Delta E > 0$, the particle $\mathscr{P}''$ is called a
-\defin{negative-energy particle}\index{negative-energy particle}\index{particle!negative-energy --}. This
-stems from the fact that the quantity
-$E_\mathscr{P''} := - \w{\xi}\cdot\w{p''}$ obeys
-then $E_\mathscr{P''} < 0$. However, it should be stressed that
-$E_\mathscr{P''}$ does not correspond to a locally measured energy by some
-physical observer, as given by formula~(\ref{e:fra:E_obs}), since $\w{\xi}$ cannot be identified with any observer
-4-velocity, being spacelike in the ergoregion, where $\mathscr{P}''$ lives.
-\end{remark}
-
-\begin{hist}
-The Penrose process has first been suggested by Roger Penrose\index[pers]{Penrose, R.}
-in 1969,
-in the review article \cite{Penro69} (cf. the footnote 7 in this article);
-the detailed calculation has been presented subsequently in an
-article with Roger Floyd\index[pers]{Floyd, R.M.} published in 1971 \cite{PenroF71}.
-\end{hist}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

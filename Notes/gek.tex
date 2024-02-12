@@ -1082,10 +1082,12 @@ either positive, zero or negative.
 A particle with $E<0$ (resp. $E=0$) is called a
 \defin{negative-energy particle}\index{negative-energy particle}\index{particle!negative-energy --}
 (resp. a \defin{zero-energy particle}\index{zero-energy particle}\index{particle!zero-energy --}).
+Note that according to Property~\ref{p:gek:E_positive}, neither a negative-energy particle nor a zero-energy one can exist outside the ergoregion.
+
+\begin{example}[Generators of the event and inner horizons]
 We have already encountered zero-energy particles in Example~\ref{x:gek:null_generator_hor} of Sec.~\ref{s:gek:int_motion_sym}: the photons whose worldlines are the null generators of the horizons $\Hor$
-and $\Hor_{\rm in}$.
-Negative-energy particles are those involved in the Penrose process discussed in Sec.~\ref{s:ker:Penrose_proc}.
-Note that according to Property~\ref{p:gek:E_positive}, neither a negative-energy particle nor a zero-energy one can exist in the exterior of the ergoregion.
+and $\Hor_{\rm in}$ [cf. Eq.~(\ref{e:gek:generator_hor_E_L_zero})].
+\end{example}
 
 \begin{example}[Outgoing principal null geodesics in $\M_{\rm II}$]
 We have seen in Example~\ref{x:gek:outgoing_null_E_L} (p.~\pageref{x:gek:outgoing_null_E_L})
@@ -1095,10 +1097,128 @@ Property~\ref{p:gek:E_positive} because $\M_{\rm II}$ is entirely contained in t
 \end{example}
 
 \begin{remark}
-As already stressed in Remark~\ref{r:ker:negative_energy} on p.~\pageref{r:ker:negative_energy}, any local
+It should be stressed that, for a particle lying in the ergoregion,
+the quantity $E$ is \emph{not} the particle's energy measured by some
+physical observer, as given by formula~(\ref{e:fra:E_obs}).
+Indeed, since $\w{\xi}$ is a spacelike vector in the ergoregion,
+it cannot be identified with any observer
+4-velocity.
+In other words, any local
 observer measuring the energy of a negative-energy particle or a zero-energy one, according to the process described in Sec.~\ref{s:fra:measure}, will
 find a positive value. Hence there is nothing mysterious about such particles.
 \end{remark}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.6\textwidth]{gek_penrose_proc.pdf}}
+\caption[]{\label{f:gek:penrose_proc} \footnotesize
+Projection in the equatorial plane $t=\mathrm{const}$
+and $\th=\pi/2$ of the worldline of a particle and its 4-momentum $\w{p}$,
+which decay at event $A$ in two particles: one with 4-momentum
+$\w{p'}$, which leaves to infinity, and one with 4-momentum
+$\w{p''}$, which falls into the black hole (black region).
+The grey zone is the outer ergoregion.
+}
+\end{figure}
+
+\subsection{The Penrose process} \label{s:gek:Penrose_proc}
+
+The possibility of having negative-energy particles\index{negative-energy particle}\index{particle!negative-energy --} in the outer ergoregion $\mathscr{G}^+$ allows
+for energy extraction from a rotating black hole.
+Indeed, let us consider a particle $\mathscr{P}$, of 4-momentum $\w{p}$,
+in free fall from infinity into the outer ergoregion. At some point $A\in \mathscr{G}^+$, the particle $\mathscr{P}$
+splits (or decays) into two particles: $\mathscr{P}'$, of 4-momentum $\w{p'}$, which
+subsequently exits the ergoregion and leaves to infinity, and $\mathscr{P}''$, of 4-momentum $\w{p''}$, which falls into the black hole (cf. Fig.~\ref{f:gek:penrose_proc}).
+We assume that, once created, all particles $\mathscr{P}$, $\mathscr{P}'$,
+and $\mathscr{P}''$ are subject only to gravitation, so that their worldlines are
+geodesics. Let us define the \emph{energy gain} in the above scenario by
+\be \label{e:ker:DE_Penrose_def}
+    \Delta E = E_{\rm out} - E_{\rm in} ,
+\ee
+where $E_{\rm in}$ (resp. $E_{\rm out}$) is the energy of $\mathscr{P}$
+(resp. $\mathscr{P}'$) as measured by an asymptotic inertial observer
+at rest with respect to the black hole (cf. Sec.~\ref{s:ker:asymp_inertial_obs}).
+$E_{\rm in}$ and $E_{\rm out}$ are actually nothing but the conserved
+energies of particles $\mathscr{P}$ and $\mathscr{P}'$ as defined in
+Sec.~\ref{s:gek:int_motion_sym}. They are thus given by Eq.~(\ref{e:gek:def_E}):
+\be \label{e:ker:E_in_out}
+    E_{\rm in} = - \left.  \w{\xi} \cdot \w{p} \right| _{\infty}
+    \qquad \mbox{and}\qquad
+    E_{\rm out} = - \left.  \w{\xi} \cdot \w{p'} \right| _{\infty}  ,
+\ee
+where the subscript $\infty$ refers to the location of the asymptotic inertial observer.
+Since $E_{\rm in}$ and $E_{\rm out}$ are constant along the geodesic worldlines
+of $\mathscr{P}$ and $\mathscr{P}'$, we have
+$E_{\rm in} = - \left. \w{\xi} \cdot \w{p} \right| _{A}$
+and $E_{\rm out} = - \left. \w{\xi} \cdot \w{p'} \right| _{A}$. Accordingly, Eqs.~(\ref{e:ker:DE_Penrose_def}) and
+(\ref{e:ker:E_in_out}) lead to
+\[
+    \Delta E = \left. \w{\xi} \cdot \w{p} \right| _{A} - \left. \w{\xi} \cdot \w{p'} \right| _{A} =
+    \left.  \w{\xi} \right| _{A} \cdot (\left. \w{p} \right| _{A}
+        - \left. \w{p'} \right| _{A}) .
+\]
+Now, the conservation of energy-momentum at event $A$
+implies $\left. \w{p} \right| _{A} = \left. \w{p'} \right| _{A} + \left. \w{p''} \right| _{A}$, hence
+\be \label{e:ker:DE_Penrose}
+    \Delta E =   \left. \w{\xi} \cdot \w{p''} \right| _{A} = - E'' ,
+\ee
+where $E''$ is the conserved energy of particle $\mathscr{P}''$.
+If $\mathscr{P}''$ happens to be a negative-energy particle, which is allowed since
+$\mathscr{P}''$ is confined to the ergoregion, then $E'' < 0$ and
+Eq.~(\ref{e:ker:DE_Penrose}) implies $\Delta E > 0$,
+i.e. the outgoing particle has more energy
+than the ingoing one. The above process is then called a
+\defin{Penrose process}\index{Penrose!process}.
+It is particulary relevant to astrophysics, notably via the so-called
+\emph{Blanford-Znajek mechanism}\index{Blanford-Znajek mechanism} or via
+some magnetohydrodynamical processes (see Ref.~\cite{LasotGATN14} for an extended
+discussion).
+
+\begin{remark}
+No peculiar property of the Kerr spacetime, except for the existence of an outer
+ergoregion, has been invoked in the above reasoning. Consequently, the Penrose process
+can occur for any stationary rotating body (not necessarily a black hole) that
+is endowed with an ergoregion that one can visit from infinity.
+\end{remark}
+
+Since the particle $\mathscr{P}''$ is assumed to fall into the black hole region,
+it must cross the event horizon $\Hor$ at some point, $B$ say. At $B$, the
+Killing vector $\w{\chi} := \w{\xi} + \Omega_{\Hor} \, \w{\eta}$ of Kerr spacetime [Eq.~(\ref{e:ker:def_chi})] is null (being a null normal to $\Hor$, cf. Eq.~(\ref{e:ker:l_eqH_chi}))
+and future-directed (Property~\ref{p:ker:el_future_directed}).
+On the other side, the
+energy-momentum vector $\w{p''}$ is necessarily a future-directed causal vector,
+which is transverse to $\Hor$ at $B$ (for $\mathscr{P}''$ is crossing $\Hor$)
+and therefore cannot be collinear to $\w{\chi}$, which is tangent to $\Hor$.
+We may then invoke Lemma~\ref{p:fra:lem2} (case~(\ref{e:fra:orient_null1}))
+to assert that $\left. \w{\chi}\cdot\w{p''} \right| _B < 0$, or equivalently
+[cf. Eq.~(\ref{e:ker:def_chi})],
+\[
+    \underbrace{\left.\w{\xi}\cdot\w{p''} \right| _B}_{-E''}
+    + \Omega_{\Hor} \, \underbrace{\left.\w{\eta}\cdot\w{p''} \right| _B}_{L''} < 0 ,
+\]
+where $L''$ is the conserved angular momentum of $\mathscr{P}''$ [Eq.~(\ref{e:gek:def_L})].
+We thus get
+\be
+    \encadre{E'' - \Omega_{\Hor} L'' > 0 }.
+\ee
+Consequently, if a Penrose process occurs ($\Delta E >0$), we have
+$\Omega_{\Hor} L'' < E'' < 0$. We conclude:
+
+\begin{prop}[Penrose process]
+In a Penrose process, both the conserved energy $E''$ and the
+conserved angular momentum $L''$ of the particle falling into the black hole
+are negative, $L''$ being bounded from above by $E''/\Omega_{\Hor}$.
+\end{prop}
+
+
+\begin{hist}
+The Penrose process has first been suggested by Roger Penrose\index[pers]{Penrose, R.}
+in 1969,
+in the review article \cite{Penro69} (cf. the footnote 7 in this article);
+the detailed calculation has been presented subsequently in an
+article with Roger Floyd\index[pers]{Floyd, R.M.} published in 1971 \cite{PenroF71}.
+\end{hist}
+
+
 
 \subsection{Future-directed condition}
 
@@ -1249,7 +1369,6 @@ shows that $p^t \leq 0$ is not allowed.
 That $E \leq 0$ in the outer ergoregion implies $L<0$ (Property~\ref{p:gek:E_neg_implies_L_neg})
 has been shown for equatorial geodesics by George Contopoulos\index[pers]{Contopoulos, G.} in 1984 \cite{Conto84}.
 \end{hist}
-
 
 
 \subsection{Lense-Thirring effect} \label{s:gek:Lense-Thirring}
