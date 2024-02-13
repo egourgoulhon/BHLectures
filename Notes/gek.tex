@@ -97,6 +97,7 @@ which makes the problem integrable (Secs.~\ref{s:gek:first_order_system} to
 As for Schwarzschild spacetime (cf. Sec.~\ref{s:ges:fiom}), we have the following
 property:
 \begin{prop}[conserved quantities along causal geodesics]
+\label{p:gek:conserved_E_L}
 The Killing vectors $\w{\xi}$ and $\w{\eta}$ of Kerr spacetime,
 associated respectively with
 stationarity and axisymmetry [cf. Eq.~(\ref{e:ker:def_xi_eta})],
@@ -1044,7 +1045,7 @@ obtained equivalent ones for the Kerr coordinates $v$ and $\tph$, which he was u
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{General properties of geodesics} \label{s:ges:general_prop}
+\section{Main properties of geodesics} \label{s:ges:general_prop}
 
 \subsection{Sign of $E$} \label{s:gek:sign_E}
 
@@ -1122,17 +1123,22 @@ The grey zone is the outer ergoregion.
 
 \subsection{The Penrose process} \label{s:gek:Penrose_proc}
 
-The possibility of having negative-energy particles\index{negative-energy particle}\index{particle!negative-energy --} in the outer ergoregion $\mathscr{G}^+$ allows
-for energy extraction from a rotating black hole.
-Indeed, let us consider a particle $\mathscr{P}$, of 4-momentum $\w{p}$,
-in free fall from infinity into the outer ergoregion. At some point $A\in \mathscr{G}^+$, the particle $\mathscr{P}$
-splits (or decays) into two particles: $\mathscr{P}'$, of 4-momentum $\w{p'}$, which
-subsequently exits the ergoregion and leaves to infinity, and $\mathscr{P}''$, of 4-momentum $\w{p''}$, which falls into the black hole (cf. Fig.~\ref{f:gek:penrose_proc}).
-We assume that, once created, all particles $\mathscr{P}$, $\mathscr{P}'$,
-and $\mathscr{P}''$ are subject only to gravitation, so that their worldlines are
-geodesics. Let us define the \emph{energy gain} in the above scenario by
+The possibility of having negative-energy particles\index{negative-energy particle}\index{particle!negative-energy --} in the outer ergoregion opens the path
+to a mechanism of energy extraction from a rotating black hole.
+To see this, consider a particle $\mathscr{P}$
+in free fall from infinity into the outer ergoregion $\mathscr{G}^+$. At some point $A\in \mathscr{G}^+$, suppose that $\mathscr{P}$
+splits (or decays) into two particles: $\mathscr{P}'$
+and $\mathscr{P}''$, such that $\mathscr{P}'$
+subsequently exits the ergoregion and leaves to infinity,
+while $\mathscr{P}''$ falls into the black hole (cf. Fig.~\ref{f:gek:penrose_proc}).
+The particles $\mathscr{P}$, $\mathscr{P}'$,
+and $\mathscr{P}''$ can be either massive or massless and we
+assume that, once created, they are subject only to gravitation, so that their worldlines are
+timelike or null geodesics. Let $\w{p}$,  $\w{p'}$ and $\w{p''}$
+be the 4-momentum vectors of respectively $\mathscr{P}$, $\mathscr{P}'$ and $\mathscr{P}''$.
+We define the \emph{energy gain} in the above process by
 \be \label{e:ker:DE_Penrose_def}
-    \Delta E = E_{\rm out} - E_{\rm in} ,
+    \Delta E := E_{\rm out} - E_{\rm in} ,
 \ee
 where $E_{\rm in}$ (resp. $E_{\rm out}$) is the energy of $\mathscr{P}$
 (resp. $\mathscr{P}'$) as measured by an asymptotic inertial observer
@@ -1147,7 +1153,7 @@ Sec.~\ref{s:gek:int_motion_sym}. They are thus given by Eq.~(\ref{e:gek:def_E}):
 \ee
 where the subscript $\infty$ refers to the location of the asymptotic inertial observer.
 Since $E_{\rm in}$ and $E_{\rm out}$ are constant along the geodesic worldlines
-of $\mathscr{P}$ and $\mathscr{P}'$, we have
+of $\mathscr{P}$ and $\mathscr{P}'$ (Property~\ref{p:gek:conserved_E_L}), we have
 $E_{\rm in} = - \left. \w{\xi} \cdot \w{p} \right| _{A}$
 and $E_{\rm out} = - \left. \w{\xi} \cdot \w{p'} \right| _{A}$. Accordingly, Eqs.~(\ref{e:ker:DE_Penrose_def}) and
 (\ref{e:ker:E_in_out}) lead to
@@ -1168,47 +1174,98 @@ Eq.~(\ref{e:ker:DE_Penrose}) implies $\Delta E > 0$,
 i.e. the outgoing particle has more energy
 than the ingoing one. The above process is then called a
 \defin{Penrose process}\index{Penrose!process}.
-It is particulary relevant to astrophysics, notably via the so-called
-\emph{Blanford-Znajek mechanism}\index{Blanford-Znajek mechanism} or via
-some magnetohydrodynamical processes (see Ref.~\cite{LasotGATN14} for an extended
-discussion).
+It is particulary relevant to astrophysics, via some electromagnetic variants of it,
+notably the so-called
+\emph{Blandford-Znajek mechanism}\index{Blandford-Znajek mechanism}
+(see Ref.~\cite{LasotGATN14} for an extended discussion and Box.~15.1
+of Ref.~\cite{Hartl03} for an
+elementary presentation of the Blandford-Znajek mechanism).
 
 \begin{remark}
 No peculiar property of the Kerr spacetime, except for the existence of an outer
 ergoregion, has been invoked in the above reasoning. Consequently, the Penrose process
-can occur for any stationary rotating body (not necessarily a black hole) that
+can occur for any stationary rotating body (not even necessarily a black hole) that
 is endowed with an ergoregion that one can visit from infinity.
 \end{remark}
 
-Since the particle $\mathscr{P}''$ is assumed to fall into the black hole region,
+Since the particle $\mathscr{P}''$ is assumed to fall into the black hole,
 it must cross the event horizon $\Hor$ at some point, $B$ say. At $B$, the
 Killing vector $\w{\chi} := \w{\xi} + \Omega_{\Hor} \, \w{\eta}$ of Kerr spacetime [Eq.~(\ref{e:ker:def_chi})] is null (being a null normal to $\Hor$, cf. Eq.~(\ref{e:ker:l_eqH_chi}))
 and future-directed (Property~\ref{p:ker:el_future_directed}).
 On the other side, the
-energy-momentum vector $\w{p''}$ is necessarily a future-directed causal vector,
-which is transverse to $\Hor$ at $B$ (for $\mathscr{P}''$ is crossing $\Hor$)
+4-momentum $\w{p''}$ is necessarily a future-directed timelike or null vector.
+Moreover, $\w{p''}$
+is transverse to $\Hor$ at $B$ (for $\mathscr{P}''$ is crossing $\Hor$)
 and therefore cannot be collinear to $\w{\chi}$, which is tangent to $\Hor$.
 We may then invoke Lemma~\ref{p:fra:lem2} (case~(\ref{e:fra:orient_null1}))
 to assert that $\left. \w{\chi}\cdot\w{p''} \right| _B < 0$, or equivalently
-[cf. Eq.~(\ref{e:ker:def_chi})],
+[thanks to Eq.~(\ref{e:ker:def_chi})],
 \[
     \underbrace{\left.\w{\xi}\cdot\w{p''} \right| _B}_{-E''}
     + \Omega_{\Hor} \, \underbrace{\left.\w{\eta}\cdot\w{p''} \right| _B}_{L''} < 0 ,
 \]
 where $L''$ is the conserved angular momentum of $\mathscr{P}''$ [Eq.~(\ref{e:gek:def_L})].
 We thus get
-\be
-    \encadre{E'' - \Omega_{\Hor} L'' > 0 }.
+\be \label{e:gek:OmegaH_Lpp_Epp}
+    \encadre{\Omega_{\Hor} L'' < E''}.
 \ee
-Consequently, if a Penrose process occurs ($\Delta E >0$), we have
-$\Omega_{\Hor} L'' < E'' < 0$. We conclude:
+Given that $\Omega_{\Hor} > 0$ [cf. Eqs.~(\ref{e:ker:def_OmegaH}) and (\ref{e:ker:a_lower_m})],
+we deduce that if a Penrose process occurs, i.e. if $E'' < 0$, then $L'' < 0$.
+Similarly to the energy gain (\ref{e:ker:DE_Penrose_def}), we may define the
+angular momentum gain of the process $\mathscr{P} \to \mathscr{P}' + \mathscr{P}''$ by
+\be
+    \Delta L := L_{\rm out} - L_{\rm in} ,
+\ee
+where $L_{\rm in}$ (resp. $L_{\rm out}$) is the angular momentum of $\mathscr{P}$
+(resp. $\mathscr{P}'$) as measured by an asymptotic inertial observer, i.e.
+the conserved angular momenta of particles $\mathscr{P}$ and $\mathscr{P}'$
+as defined in Sec.~\ref{s:gek:int_motion_sym}:
+$L_{\rm in} =  \left.  \w{\eta} \cdot \w{p} \right| _{\infty}$
+and
+$L_{\rm out} = \left.  \w{\eta} \cdot \w{p'} \right| _{\infty}$
+[Eq.~(\ref{e:gek:def_L})]. The same computation as above for
+$\Delta E$, except for $\w{\xi}$ replaced by $\w{\eta}$, shows that the
+energy-momentum conservation law
+$\left. \w{p} \right| _{A} = \left. \w{p'} \right| _{A} + \left. \w{p''} \right| _{A}$
+leads to a result similar to (\ref{e:ker:DE_Penrose}):
+\be
+    \Delta L = - \left. \w{\eta} \cdot \w{p''} \right| _{A} = - L'' .
+\ee
+Along with Eq.~(\ref{e:ker:DE_Penrose}), this relation turns the inequality
+(\ref{e:gek:OmegaH_Lpp_Epp}) into $\Omega_{\Hor}\Delta L > \Delta E$.
+This shows that any Penrose process yields $\Delta L > 0$ in addition to
+to $\Delta E > 0$. Let us summarize:
+
 
 \begin{prop}[Penrose process]
-In a Penrose process, both the conserved energy $E''$ and the
-conserved angular momentum $L''$ of the particle falling into the black hole
-are negative, $L''$ being bounded from above by $E''/\Omega_{\Hor}$.
+The Penrose process as described above and illustrated in Fig.~\ref{f:gek:penrose_proc}
+extracts both some energy $\Delta E > 0$  and some angular momentum $\Delta L > 0$ from
+a rotating black hole, in such a way that
+\be \label{e:gek:penrose_proc_OmHDL_DE}
+    \Omega_{\Hor}\Delta L > \Delta E > 0 ,
+\ee
+where $\Omega_{\Hor}$ is the black hole rotation velocity\index{black!hole!rotation velocity}\index{rotation!velocity} [cf. Eq.~(\ref{e:ker:def_OmegaH})].
+The secondary particle $\mathscr{P}''$ falling into the black hole during the
+process has both a negative conserved energy $E''$ and a negative conserved angular
+momentum $L''$, obeying Eq.~(\ref{e:gek:OmegaH_Lpp_Epp}):
+$\Omega_{\Hor} L'' < E'' < 0$.
 \end{prop}
 
+\begin{remark}
+Setting $\Omega_{\Hor} = 0$ in Eq.~(\ref{e:gek:penrose_proc_OmHDL_DE}) shows
+that the Penrose process is not possible for a non-rotating (Schwarzschild) black hole.
+This is not surprising since there is no outer ergoregion for such a black hole, the
+ergosphere coinciding with the event horizon (cf. Remark~\ref{r:ker:no_outer_ergo_a_zero} on
+p.~\pageref{r:ker:no_outer_ergo_a_zero}).
+\end{remark}
+
+Ultimately, the energy and angular momentum extracted via the Penrose process
+are taken from the mass $m$ and the angular momentum $J = am$
+of the black hole, so that these two quantities must decrease slightly
+(i.e. in a infinitely small manner, given that $\mathscr{P}$, $\mathscr{P}'$
+and $\mathscr{P}''$ are assumed to be ``test particles'' (geodesic worldlines),
+which implies $\Delta E \ll m$ and $\Delta L \ll J$).
+This will be discussed in details in Chap.~\ref{s:evo}.
 
 \begin{hist}
 The Penrose process has first been suggested by Roger Penrose\index[pers]{Penrose, R.}
@@ -1216,6 +1273,7 @@ in 1969,
 in the review article \cite{Penro69} (cf. the footnote 7 in this article);
 the detailed calculation has been presented subsequently in an
 article with Roger Floyd\index[pers]{Floyd, R.M.} published in 1971 \cite{PenroF71}.
+In particular, Penrose and Floyd have derived the inequality~(\ref{e:gek:OmegaH_Lpp_Epp}) [Eq.~(4) in Ref.~\cite{PenroF71}, taking into account that $\Omega_{\Hor} = a/(2mr_+)$, cf. Eq.~(\ref{e:ker:def_OmegaH})].
 \end{hist}
 
 
