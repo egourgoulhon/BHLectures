@@ -453,20 +453,24 @@ by $t\in\R$. The tangent vector $\w{\xi} = \left. \D\w{x}/\D t \right| _{\Li_p}$
 generator associated with this parameter.}
 \end{figure}
 
-A 1-dimensional Lie group $G$ is said to be a
+Let $(\M,\w{g})$ be a spacetime and $G$ a 1-dimensional Lie group.
+One says that $G$ is a
 \defin{symmetry group}\index{symmetry!group}\index{group!symmetry --}
 or a \defin{isometry group}\index{isometry!group}\index{group!isometry --}
-of the spacetime $(\M,\w{g})$ if there is an action $\Phi$ of $G$ on $\M$
+of $(\M,\w{g})$, or equivalently that
+$(\M,\w{g})$ is
+\defin{invariant under the action of}\index{invariance!under a group action} $G$,
+iff there is an action $\Phi$ of $G$ on $\M$
 such that for any value of the parameter $t$ of $G$,
 $\Phi_t$ is an \defin{isometry}\index{isometry} of $(\M,\w{g})$, i.e. $\Phi_t$
-preserves the ``distances'' and more generally the ``scalar products'' on
-$(\M,\w{g})$, in the following sense: for any $p\in\M$ and any pair of points $(q,r)$
-infinitely close to $p$, we shall have
+preserves the ``scalar products'' (and hence the ``distances'')
+in the following sense: for any $p\in\M$ and any pair of points $(q,r)$
+infinitely close to $p$, one has
 \be \label{e:neh:isometry_dx}
     \left.\w{g}\right| _{\Phi_t(p)}(\D\w{x}', \D\w{y}') =
         \left.\w{g}\right| _{p}(\D\w{x}, \D\w{y}) ,
 \ee
-with the infinitesimal displacement vectors $\D\w{x} := \vp{pq}$, $\D\w{y} := \vp{pr}$,
+for the infinitesimal displacement vectors $\D\w{x} := \vp{pq}$, $\D\w{y} := \vp{pr}$,
 $\D\w{x}' := \vp{\Phi_t(p)\Phi_t(q)}$ and $\D\w{y}' := \vp{\Phi_t(p)\Phi_t(r)}$
 (cf. Sec.~\ref{s:fra:spacetime}).
 Now, by definition, $\D\w{x}'$ is nothing but the pushforward
@@ -497,7 +501,8 @@ pullback of $\w{g}$ by $\Phi_t$:
 \be \label{e:neh:isometry_pullback}
     \Phi_t^*\w{g} = \w{g} .
 \ee
-We may re-express this condition in terms of the Lie derivative as follows:
+This is equivalent to the vanishing of the Lie derivative
+of $\w{g}$ along the generators of $G$:
 \begin{prop}[characterization of continuous spacetime isometries]
 A 1-dimensional Lie group $G$
 is a symmetry group of the spacetime $(\M,\w{g})$ iff the Lie derivative
@@ -507,7 +512,7 @@ vanishes identically:
     \encadre{\Lie{\xi}\w{g} = 0 } .
 \ee
 The vector field $\w{\xi}$ is then called a \defin{Killing vector}\index{Killing!vector field}
-of $(\M,\w{g})$. Equation~(\ref{e:neh:Lie_xi_g}) is equivalent to the
+of $(\M,\w{g})$, Eq.~(\ref{e:neh:Lie_xi_g}) being equivalent to the
 so-called
 \defin{Killing equation}\index{Killing!equation}:
 \be \label{e:neh:Killing_equation}
