@@ -125,8 +125,8 @@ Let us assume that the null dominance condition (\ref{e:neh:null_dominant_cond})
 on $\Hor_{k}$; by the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law}), this
 implies that $\kappa_{k}$ is constant.
 Let $(\M,\w{g}+\delta\w{g})$ be a nearby stationary spacetime sharing the same characteristics.
-The change $\delta M_\infty$ of the Komar mass at infinity between the two spacetimes
-(cf. Property~\ref{p:sta:Komar_mass_inf})
+The change $\delta M_\infty$ of the Komar mass at infinity
+(cf. Property~\ref{p:sta:Komar_mass_inf}) between the two spacetimes
 is related to the changes $\delta A_k$ in the areas and to the changes
 $\delta J_{\Hor_{k}(i)}$ in the Komar angular momenta by
 \bea
@@ -680,11 +680,12 @@ Given a spacelike hypersurface $\Sigma$, the conserved currents
 $n_{\rm b} \w{u}$ and $s \w{u}$ give rise
 to the concepts of \emph{total number of baryons} $\mathscr{N}_{\rm b}$ in $\Sigma$
 and \emph{total fluid entropy} $S_{\rm f}$ in $\Sigma$:
-\be
+\be \label{e:evo:def_Nb_Sf}
     \mathscr{N}_{\rm b} := \int_{\Sigma} n_{\rm b} u^\mu \D V_{\mu}
     \qand
-    S_{\rm f} =  \int_{\Sigma} s u^\mu \D V_{\mu} .
+    S_{\rm f} =  \int_{\Sigma} s u^\mu \D V_{\mu} ,
 \ee
+where $\D\w{V}$ is $\Sigma$'s normal volume element vector [Eq.~(\ref{e:sta:normal_vol_element})].
 If the spacetime $(\M,\w{g})$ is axisymmetric (Killing vector $\w{\eta}$),
 a third conserved current is the Komar current\index{Komar!current}\index{current!Komar --}
 of $\w{\eta}$, as given by Eq.~(\ref{e:sta:Komar_angul_vol_integ_R}):
@@ -695,24 +696,77 @@ Thanks to the Einstein equation
 (i.e. $\w{n}\cdot\w{\eta} = 0$),
 we get $\w{\mathcal{J}} = \vw{T}\cdot\w{\eta} = (\veps + p) (\w{u}\cdot\w{\eta}) \,\w{u}$,
 giving rise to the concept of the \emph{total fluid angular momentum} $J_{\rm f}$ in $\Sigma$:
-\be
+\be \label{e:evo:def_Jf}
    J_{\rm f} = \int_{\Sigma}  (\veps + p) u_\nu \eta^\nu \, u^\mu \D V_\mu .
 \ee
+The three quantities $\mathscr{N}_{\rm b}$,  $S_{\rm f}$ and $J_{\rm f}$ do not depend
+upon the choice of the hypersurface $\Sigma$ as long as
+the latter is large enough to encompass all the fluid, i.e. $\Sigma$ intersects
+each fluid line exactly once (cf. Fig.~??).
 \end{prop}
 
 \begin{proof}
 The entropy conservation $\wnab \cdot (s \w{u}) = 0$ follows straightforwardly from $\wnab\cdot\vw{T} = 0$
-projected along $\w{u}$, the identities (\ref{e:evo:first_law_simple_fluid}), (\ref{e:evo:pressure_simple_fluid})
+projected along $\w{u}$, using the identities (\ref{e:evo:first_law_simple_fluid}), (\ref{e:evo:pressure_simple_fluid})
 and $\wnab \cdot (n_{\rm b} \w{u}) = 0$ (see e.g. Ref.~\cite{Gourg06} for details).
+Because they are fluxes of conserved currents, the quantities $\mathscr{N}_{\rm b}$,  $S_{\rm f}$ and $J_{\rm f}$
+take the same values on two hypersurfaces $\Sigma_1$ and $\Sigma_2$ that are connected by a (timelike or null) hypersuface $\mathscr{V}$ with all the currents vanishing on $\mathscr{V}$, i.e. outside the fluid worldtube.
 \end{proof}
 
-\begin{prop}[mass variation formula for a black hole surrounded by a fluid in general relativity]
-Let $(\M,\w{g})$ be a stationary and axisymmetric 4-dimensional spacetime
-such that $\w{g}$ obeys Einstein equation (\ref{e:fra:Einstein_eq_G}) with $\Lambda=0$:
-$\w{G} = 8\pi \w{T}$, where $\w{T}$ is the energy-momentum tensor
-of a simple perfect fluid as described in Propery~\ref{p:evo:simple_fluid}.
+We are now in position to state:
 
-...
+\begin{prop}[mass variation formula for a black hole surrounded by a fluid]
+Let $(\M,\w{g})$ be a stationary (Killing vector $\w{\xi}$) and
+axisymmetric (Killing vector $\w{\eta}$) 4-dimensional spacetime
+that contains a black hole with a connected event horizon
+$\Hor$. We assume that $\Hor$ is a Killing horizon with respect to
+the Killing vector $\w{\chi} = \w{\xi} + \Omega_{\Hor} \w{\eta}$.
+If $\Omega_{\Hor}\neq 0$, this requires the hypotheses of the strong
+rigidity theorem (Property~\ref{p:sta:strong_rigidity_thm}).
+Let us suppose that $\w{g}$ obeys
+the Einstein equation (\ref{e:fra:Einstein_eq_G}) with $\Lambda=0$:
+$\w{G} = 8\pi \w{T}$, where $\w{T}$ is the energy-momentum tensor
+of a perfect fluid located in the black hole exterior and whose features are
+described in Property~\ref{p:evo:simple_fluid}.
+Moreover, let us assume that the fluid is in \defin{circular motion}\index{circular!motion},
+i.e. the fluid's 4-velocity $\w{u}$ is a linear combination
+of the two Killing vectors:
+\be
+    \w{u} = u^t \left( \w{\xi} + \Omega \w{\eta} \right) ,
+\ee
+where $u^t$ and $\Omega$ are two scalar fields. $\Omega$ is called the
+\defin{fluid angular velocity} because $\Omega = \D\ph/\D t$ along a fluid line,
+where $t$ and $\ph$ are adapted coordinates: $\wpar_t = \w{\xi}$ and $\wpar_\ph = \w{\eta}$.
+The notation $u^t$ reminds that this factor is the component of $\w{u}$ along $\wpar_t$ in
+adapted coordinates. It is
+fully determined by $\Omega$ and the three scalar products formed from the Killing vectors:
+\be
+    u^t = \left( - \w{\xi}\cdot\w{\xi} - 2 \Omega \w{\xi}\cdot\w{\eta}
+                 - \Omega^2 \w{\eta}\cdot\w{\eta} \right) ^{-1/2} .
+\ee
+Let $(\M,\w{g}+\delta\w{g})$ be a nearby stationary spacetime sharing the same characteristics.
+The change $\delta M_\infty$ of the Komar mass at infinity between the two spacetimes
+is given by
+\be
+ \encadre{\delta M_\infty = \frac{\kappa}{8\pi} \, \delta A + \Omega_{\Hor} \, \delta J_{\Hor}
+    + \int_\Sigma \frac{T}{u^t} \, \delta(\D S_{\rm f})
+    + \int_\Sigma \frac{\mu_{\rm b}}{u^t} \, \delta(\D \mathscr{N}_{\rm b})
+    + \int_\Sigma \Omega \,\delta(\D J_{\rm f}) } ,
+\ee
+where $\kappa$ is $\Hor$'s surface gravity, $A$ is $\Hor$'s area, $J_{\Hor}$
+is $\Hor$'s Komar angular momentum,
+$\Sigma$ is any spacelike hypersurface that intersects each fluid line
+exactly once and that admits $\w{\eta}$ as a tangent vector,
+$T$ is the fluid temperature, $\mu_{\rm b}$ is
+the baryon chemical potential and $\D S_{\rm f}$, $\D \mathscr{N}_{\rm b}$
+and $\D J_{\rm f}$ are the infinitesimal increments in the integrals
+(\ref{e:evo:def_Nb_Sf}) and (\ref{e:evo:def_Jf}) defining respectively
+the fluid's entropy, baryon number and angular momentum:
+\be
+    \D S_{\rm f} := s u^\mu \D V_\mu,\quad
+    \D \mathscr{N}_{\rm b} := n_{\rm b}  u^\mu \D V_\mu \qand
+    \D J_{\rm f} := (\veps + p) u_\nu \eta^\nu u^\mu \D V_\mu .
+\ee
 \end{prop}
 
 \begin{hist}
