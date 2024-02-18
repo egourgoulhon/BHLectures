@@ -627,22 +627,92 @@ for a Kerr black hole.
 
 \subsection{Mass variation formula for a black hole surrounded by a fluid}
 
-Let us apply the general mass variation formula (\ref{e:evo:mass_variation_gal}) to a black hole surruounded
+Let us apply the general mass variation formula (\ref{e:evo:mass_variation_gal}) to a black hole surrounded
 by some perfect-fluid matter in 4-dimensional general relativity.
+We first need some prelimaries about the perfect fluid model:
 
-\begin{prop}[mass variation formula for black holes surrounded by a fluid in general relativity]
+\begin{prop}[Simple perfect fluid in axisymmetric spacetimes]
+\label{p:evo:simple_fluid}
+In a given $n$-dimensional spacetime $(\M,\w{g})$, the energy-momentum
+tensor of a perfect fluid\index{perfect fluid}\index{fluid!perfect --}
+of 4-velocity $\w{u}$, proper energy density $\veps$ and pressure $p$
+is
+\be
+    \w{T} = (\veps + p) \uu{u} \otimes \uu{u} + p\w{g} .
+\ee
+A \defin{simple fluid}\footnote{See Refs.~\cite{MisneTW73} (Chap.~22),
+\cite{Carte79a,Gourg06} or \cite{Gourg13} (Chap.~21).}
+is defined by an equation of state\index{equation!of state}
+of the type
+\be
+    \veps = \veps(s, n_{\rm b}),
+\ee
+where $s$ and $n_{\rm b}$ are respectively the entropy density\index{entropy!density} and
+the baryon density\index{baryon!density}, both measured in the fluid's frame. The fluid's
+\defin{thermodynamic temperature}\index{thermodynamic temperature}\index{temperature!thermodynamics --} $T$
+and the
+baryon \defin{relativistic chemical potential}\footnote{By \emph{relativisitc} it is meant that the rest mass is included in the chemical potential.}\index{chemical potential}\index{potential!chemical --} $\mu_{\rm b}$ are then
+defined as the partial derivatives $T:= (\dert{\veps}{s})_{n_{\rm b}}$
+and $\mu_{\rm b} := (\dert{\veps}{n_{\rm b}})_{s}$. The resulting identity
+\be \label{e:evo:first_law_simple_fluid}
+    \D \veps = T \D s + \mu_{\rm b} \D n_{\rm b}
+\ee
+expresses the \emph{first law of thermodynamics}\index{first law!of thermodynamics} for a small \emph{fixed} comoving volume. The fluid's pressure $p$ is not an independent function of $(s,n_{\rm b})$ but rather is given
+by the thermodynamic identity
+\be \label{e:evo:pressure_simple_fluid}
+    p = T s + \mu_{\rm b} n_{\rm b} - \veps,
+\ee
+which, along with (\ref{e:evo:first_law_simple_fluid}), implies the Gibbs-Duhem relation
+$\D p = s\, \D T + n_{\rm b} \D \mu_{\rm b}$.
+
+The law of baryon number conservation\index{baryon!number conservation}
+asserts that $n_{\rm b} \w{u}$ is a conserved current:
+$\wnab \cdot (n_{\rm b} \w{u}) = 0$.
+Let us assume that $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq_G});
+then the equation of
+energy-momentum conservation\index{energy-momentum!conservation}\index{conservation!of energy-momentum}
+(\ref{e:fra:divT}) holds:
+$\wnab\cdot\vw{T} = 0$. Its projection along $\w{u}$
+lead to the conservation of the entropy current $s \w{u}$, i.e.
+$\wnab \cdot (s \w{u}) = 0$ (there is no heat exchange between neighboring elements
+of a perfect fluid).
+Given a spacelike hypersurface $\Sigma$, the conserved currents
+$n_{\rm b} \w{u}$ and $s \w{u}$ give rise
+to the concepts of \emph{total number of baryons} $\mathscr{N}_{\rm b}$ in $\Sigma$
+and \emph{total fluid entropy} $S_{\rm f}$ in $\Sigma$:
+\be
+    \mathscr{N}_{\rm b} := \int_{\Sigma} n_{\rm b} u^\mu \D V_{\mu}
+    \qand
+    S_{\rm f} =  \int_{\Sigma} s u^\mu \D V_{\mu} .
+\ee
+If the spacetime $(\M,\w{g})$ is axisymmetric (Killing vector $\w{\eta}$),
+a third conserved current is the Komar current\index{Komar!current}\index{current!Komar --}
+of $\w{\eta}$, as given by Eq.~(\ref{e:sta:Komar_angul_vol_integ_R}):
+$\w{\mathcal{J}} = 1/(8\pi) \vw{R}\cdot\w{\eta}$
+(cf. Eq.~(\ref{e:sta:divJ_zero}) with $\w{\xi}$ replaced by $\w{\eta}$).
+Thanks to the Einstein equation
+(\ref{e:fra:Einstein_eq_n}) and assuming that $\w{\eta}$ is tangent to $\Sigma$
+(i.e. $\w{n}\cdot\w{\eta} = 0$),
+we get $\w{\mathcal{J}} = \vw{T}\cdot\w{\eta} = (\veps + p) (\w{u}\cdot\w{\eta}) \,\w{u}$,
+giving rise to the concept of the \emph{total fluid angular momentum} $J_{\rm f}$ in $\Sigma$:
+\be
+   J_{\rm f} = \int_{\Sigma}  (\veps + p) u_\nu \eta^\nu \, u^\mu \D V_\mu .
+\ee
+\end{prop}
+
+\begin{proof}
+The entropy conservation $\wnab \cdot (s \w{u}) = 0$ follows straightforwardly from $\wnab\cdot\vw{T} = 0$
+projected along $\w{u}$, the identities (\ref{e:evo:first_law_simple_fluid}), (\ref{e:evo:pressure_simple_fluid})
+and $\wnab \cdot (n_{\rm b} \w{u}) = 0$ (see e.g. Ref.~\cite{Gourg06} for details).
+\end{proof}
+
+\begin{prop}[mass variation formula for a black hole surrounded by a fluid in general relativity]
 Let $(\M,\w{g})$ be a stationary and axisymmetric 4-dimensional spacetime
 such that $\w{g}$ obeys Einstein equation (\ref{e:fra:Einstein_eq_G}) with $\Lambda=0$:
 $\w{G} = 8\pi \w{T}$, where $\w{T}$ is the energy-momentum tensor
-of a perfect fluid\index{perfect fluid}\index{fluid!perfect --}
-of 4-velocity $\w{u}$, proper energy density $\veps$ and pressure $p$:
-\be
-    \w{T} = (\veps + p) \uu{u} \otimes \uu{u} + p\w{g}
-\ee
-We shall assume the equation of state\index{equation!of state}
-$\veps = \veps(n_{\rm b},s)$, where $n_{\rm b}$ is the proper baryon density\index{baryon!density}
-and $s$ the proper entropy density\index{entropy!density}.
+of a simple perfect fluid as described in Propery~\ref{p:evo:simple_fluid}.
 
+...
 \end{prop}
 
 \begin{hist}
