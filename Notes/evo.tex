@@ -637,7 +637,7 @@ In a given $n$-dimensional spacetime $(\M,\w{g})$, the energy-momentum
 tensor of a perfect fluid\index{perfect fluid}\index{fluid!perfect --}
 of 4-velocity $\w{u}$, proper energy density $\veps$ and pressure $p$
 is
-\be
+\be \label{e:evo:perfect_fluid_T}
     \w{T} = (\veps + p) \uu{u} \otimes \uu{u} + p\w{g} .
 \ee
 A \defin{simple fluid}\footnote{See Refs.~\cite{MisneTW73} (Chap.~22),
@@ -651,7 +651,7 @@ where $s$ and $n_{\rm b}$ are respectively the entropy density\index{entropy!den
 the baryon density\index{baryon!density}, both measured in the fluid's frame. The fluid's
 \defin{thermodynamic temperature}\index{thermodynamic temperature}\index{temperature!thermodynamics --} $T$
 and the
-baryon \defin{relativistic chemical potential}\footnote{By \emph{relativisitc} it is meant that the rest mass is included in the chemical potential.}\index{chemical potential}\index{potential!chemical --} $\mu_{\rm b}$ are then
+baryon \defin{relativistic chemical potential}\footnote{By \emph{relativistic} it is meant that the rest mass is included in the chemical potential.}\index{chemical potential}\index{potential!chemical --} $\mu_{\rm b}$ are then
 defined as the partial derivatives $T:= (\dert{\veps}{s})_{n_{\rm b}}$
 and $\mu_{\rm b} := (\dert{\veps}{n_{\rm b}})_{s}$. The resulting identity
 \be \label{e:evo:first_law_simple_fluid}
@@ -668,18 +668,17 @@ $\D p = s\, \D T + n_{\rm b} \D \mu_{\rm b}$.
 The law of baryon number conservation\index{baryon!number conservation}
 asserts that $n_{\rm b} \w{u}$ is a conserved current:
 $\wnab \cdot (n_{\rm b} \w{u}) = 0$.
-Let us assume that $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq_G});
-then the equation of
-energy-momentum conservation\index{energy-momentum!conservation}\index{conservation!of energy-momentum}
+Furthermore, if we assume that $\w{g}$ obeys the Einstein equation (\ref{e:fra:Einstein_eq_G}),
+the energy-momentum conservation\index{energy-momentum!conservation}\index{conservation!of energy-momentum}
 (\ref{e:fra:divT}) holds:
 $\wnab\cdot\vw{T} = 0$. Its projection along $\w{u}$
 lead to the conservation of the entropy current $s \w{u}$, i.e.
-$\wnab \cdot (s \w{u}) = 0$ (there is no heat exchange between neighboring elements
+$\wnab \cdot (s \w{u}) = 0$ (no heat exchange between neighboring elements
 of a perfect fluid).
 Given a spacelike hypersurface $\Sigma$, the conserved currents
 $n_{\rm b} \w{u}$ and $s \w{u}$ give rise
-to the concepts of \emph{total number of baryons} $\mathscr{N}_{\rm b}$ in $\Sigma$
-and \emph{total fluid entropy} $S_{\rm f}$ in $\Sigma$:
+to the concepts of \emph{number of baryons} $\mathscr{N}_{\rm b}$ in $\Sigma$
+and \emph{fluid entropy} $S_{\rm f}$ in $\Sigma$:
 \be \label{e:evo:def_Nb_Sf}
     \mathscr{N}_{\rm b} := \int_{\Sigma} n_{\rm b} u^\mu \D V_{\mu}
     \qand
@@ -695,7 +694,7 @@ Thanks to the Einstein equation
 (\ref{e:fra:Einstein_eq_n}) and assuming that $\w{\eta}$ is tangent to $\Sigma$
 (i.e. $\w{n}\cdot\w{\eta} = 0$),
 we get $\w{\mathcal{J}} = \vw{T}\cdot\w{\eta} = (\veps + p) (\w{u}\cdot\w{\eta}) \,\w{u}$,
-giving rise to the concept of the \emph{total fluid angular momentum} $J_{\rm f}$ in $\Sigma$:
+so that the \emph{fluid angular momentum} in $\Sigma$ is
 \be \label{e:evo:def_Jf}
    J_{\rm f} = \int_{\Sigma}  (\veps + p) u_\nu \eta^\nu \, u^\mu \D V_\mu .
 \ee
@@ -710,10 +709,15 @@ The entropy conservation $\wnab \cdot (s \w{u}) = 0$ follows straightforwardly f
 projected along $\w{u}$, using the identities (\ref{e:evo:first_law_simple_fluid}), (\ref{e:evo:pressure_simple_fluid})
 and $\wnab \cdot (n_{\rm b} \w{u}) = 0$ (see e.g. Ref.~\cite{Gourg06} for details).
 Because they are fluxes of conserved currents, the quantities $\mathscr{N}_{\rm b}$,  $S_{\rm f}$ and $J_{\rm f}$
-take the same values on two hypersurfaces $\Sigma_1$ and $\Sigma_2$ that are connected by a (timelike or null) hypersuface $\mathscr{V}$ with all the currents vanishing on $\mathscr{V}$, i.e. outside the fluid worldtube.
+take the same values on two hypersurfaces $\Sigma_1$ and $\Sigma_2$ that are connected by a (timelike or null) hypersuface $\mathscr{V}$ with all the currents vanishing on
+$\mathscr{V}$, which happens if $\mathscr{V}$ is located outside the fluid worldtube.
 \end{proof}
 
-We are now in position to state:
+From an astrophysical point of view, it is natural to consider that the
+matter surrounding the black hole forms an accretion disk\index{accretion!disk} or an accretion torus, so that it can be modeled by a perfect fluid in
+circular motion around the black hole
+rotation axis. One then derives from the general law (\ref{e:evo:mass_variation_gal})
+the following mass variation formula:
 
 \begin{prop}[mass variation formula for a black hole surrounded by a fluid]
 Let $(\M,\w{g})$ be a stationary (Killing vector $\w{\xi}$) and
@@ -768,6 +772,23 @@ the fluid's entropy, baryon number and angular momentum:
     \D J_{\rm f} := (\veps + p) u_\nu \eta^\nu u^\mu \D V_\mu .
 \ee
 \end{prop}
+
+\begin{proof}
+Let us specialize the general formula (\ref{e:evo:mass_variation_gal})
+to the case $n=4$, $K=1$, $L_1 = 1$ and $\w{g}$ fulfilling the Einstein equation
+(so that Einstein tensor $\w{G}$ can be replaced by $8\pi\w{T}$). We obtain
+\be
+    \delta M_\infty = \frac{\kappa}{8\pi} \, \delta A + \Omega_{\Hor} \, \delta J_{\Hor}
+    + \frac{1}{2}
+    \int_{\Sigma} T^{\mu\nu} \delta g_{\mu\nu} \, \xi^\rho \, \D V_\rho
+        - \delta  \int_{\Sigma} T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu .
+\ee
+Using the perfect fluid expression (\ref{e:evo:perfect_fluid_T}) for $\w{T}$,
+we rewrite the integrand of the last integral as
+\[
+     T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu =
+\]
+\end{proof}
 
 \begin{hist}
 The mass-variation formula (\ref{e:evo:mass_variation_Kerr}) for Kerr black holes
