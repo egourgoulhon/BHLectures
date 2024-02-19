@@ -521,11 +521,11 @@ as a hypersurface $t = \mathrm{const}$: $n_\alpha = -N (\dd t)_\alpha = - N \par
 Given the identity $\sqrt{-g} = N\sqrt{\gamma}$ (see e.g. Eq.~(5.55) of Ref.~\cite{Gourg12}), we have
 $\D V_\alpha = \partial_\alpha t \, \sqrt{-g} \, \D^{n-1} x$. Since obviously $\delta(\partial_\alpha t) = 0$
 and $\delta(\D^{n-1} x) = 0$, we get
-\[
+\be \label{e:evo:delta_DV}
     \delta(\D V_\alpha) = \partial_\alpha t \, \delta\sqrt{-g} \, \D^{n-1} x
         = \frac{1}{\sqrt{-g}} \delta\sqrt{-g}\,
             \D V_\alpha .
-\]
+\ee
 Hence
 \[
     I =  \int_{\Sigma}  \left[ \nabla_\nu H^\nu - \frac{1}{2\sqrt{-g}} \delta\left(R \sqrt{-g}\right)  \right] \xi^\mu \D V_\mu.
@@ -566,11 +566,11 @@ where the second term can be expressed by combining Eqs.~(\ref{e:evo:Palatini}),
 \]
 On the other side, formula (\ref{e:bas:variation_det}) for the variation
 of the determinant $g$ leads to
-\[
+\be \label{e:evo:delta_sqrt_g}
     \delta \sqrt{-g} = \frac{1}{2} \sqrt{-g} \, \delta \ln |g| = \frac{1}{2} \sqrt{-g} \, g^{\mu\nu}\,
     \delta g_{\mu\nu} = - \frac{1}{2} \sqrt{-g} \, g_{\mu\nu}\,
     \delta g^{\mu\nu} .
-\]
+\ee
 The above three equations establish (\ref{e:evo:proto_EH}). It immediately follows that
 \[
     I = - \frac{1}{2} \int_{\Sigma} G_{\mu\nu} \, \delta g^{\mu\nu} \, \xi^\rho \D V_\rho
@@ -735,7 +735,7 @@ described in Property~\ref{p:evo:simple_fluid}.
 Moreover, let us assume that the fluid is in \defin{circular motion}\index{circular!motion},
 i.e. the fluid's 4-velocity $\w{u}$ is a linear combination
 of the two Killing vectors:
-\be
+\be \label{e:evo:u_circular}
     \w{u} = u^t \left( \w{\xi} + \Omega \w{\eta} \right) ,
 \ee
 where $u^t$ and $\Omega$ are two scalar fields. $\Omega$ is called the
@@ -751,7 +751,7 @@ fully determined by $\Omega$ and the three scalar products formed from the Killi
 Let $(\M,\w{g}+\delta\w{g})$ be a nearby stationary spacetime sharing the same characteristics.
 The change $\delta M_\infty$ of the Komar mass at infinity between the two spacetimes
 is given by
-\be
+\be \label{e:evo:mass_variation_fluid}
  \encadre{\delta M_\infty = \frac{\kappa}{8\pi} \, \delta A + \Omega_{\Hor} \, \delta J_{\Hor}
     + \int_\Sigma \frac{T}{u^t} \, \delta(\D S_{\rm f})
     + \int_\Sigma \frac{\mu_{\rm b}}{u^t} \, \delta(\D \mathscr{N}_{\rm b})
@@ -766,7 +766,7 @@ the baryon chemical potential and $\D S_{\rm f}$, $\D \mathscr{N}_{\rm b}$
 and $\D J_{\rm f}$ are the infinitesimal increments in the integrals
 (\ref{e:evo:def_Nb_Sf}) and (\ref{e:evo:def_Jf}) defining respectively
 the fluid's entropy, baryon number and angular momentum:
-\be
+\be \label{e:evo:def_DS_DN_DJ}
     \D S_{\rm f} := s u^\mu \D V_\mu,\quad
     \D \mathscr{N}_{\rm b} := n_{\rm b}  u^\mu \D V_\mu \qand
     \D J_{\rm f} := (\veps + p) u_\nu \eta^\nu u^\mu \D V_\mu .
@@ -775,19 +775,100 @@ the fluid's entropy, baryon number and angular momentum:
 
 \begin{proof}
 Let us specialize the general formula (\ref{e:evo:mass_variation_gal})
-to the case $n=4$, $K=1$, $L_1 = 1$ and $\w{g}$ fulfilling the Einstein equation
-(so that Einstein tensor $\w{G}$ can be replaced by $8\pi\w{T}$). We obtain
-\be
+to the case $n=4$, $K=1$, $L_1 = 1$ and $\w{g}$ obeying the Einstein equation
+(so that the Einstein tensor $\w{G}$ can be replaced by $8\pi\w{T}$):
+\be \label{e:evo:var_M_fluid_prov}
     \delta M_\infty = \frac{\kappa}{8\pi} \, \delta A + \Omega_{\Hor} \, \delta J_{\Hor}
     + \frac{1}{2}
     \int_{\Sigma} T^{\mu\nu} \delta g_{\mu\nu} \, \xi^\rho \, \D V_\rho
         - \delta  \int_{\Sigma} T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu .
 \ee
-Using the perfect fluid expression (\ref{e:evo:perfect_fluid_T}) for $\w{T}$,
-we rewrite the integrand of the last integral as
+Let us rewrite the integrand of the last integral by means of
+the perfect fluid expression (\ref{e:evo:perfect_fluid_T}) for $\w{T}$:
 \[
-     T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu =
+     T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu = \left[(\veps + p) u^\mu u_\nu \xi^\nu
+     + p \xi^\mu \right] \D V_\mu .
 \]
+Substituting $(u^t)^{-1} \w{u} - \Omega \w{\eta}$ for $\w{\xi}$ [Eq.~(\ref{e:evo:u_circular})]
+and using $u_\nu u^\nu = -1$ and
+$\eta^\mu \D V_\mu = 0$ (since $\w{\eta}$ is tangent to $\Sigma$),
+we get
+\[
+    T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu = - \frac{\veps}{u^t} u^\mu \D V_\mu
+        - \Omega \,  \D J_{\rm f} ,
+\]
+where use has been made of Eq.~(\ref{e:evo:def_DS_DN_DJ}) to let appear
+$\D J_{\rm f}$. Let us perform the variation of this expression
+and use $\delta \veps = T\,  \delta s + \mu_{\rm b} \, \delta n_{\rm b}$
+in agreement with Eq.~(\ref{e:evo:first_law_simple_fluid}):
+\[
+    \delta \left( T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu \right) = - \frac{1}{u^t}
+    (T \, \delta s + \mu_{\rm b} \,  \delta n_{\rm b}) u^\mu \D V_\mu
+    + \frac{\veps \, \delta u^t}{(u^t)^2} u^\mu \D V_\mu - \frac{\veps}{u^t}
+    \delta \left( u^\mu \D V_\mu \right) - \delta \Omega \, \D J_{\rm f}
+    - \Omega \, \delta(\D J_{\rm f}) .
+\]
+Using Eq.~(\ref{e:evo:def_DS_DN_DJ}) to let appear $\delta (\D S_{\rm f})$
+and $\delta( \D \mathscr{N}_{\rm b} )$
+and substituting $p$ for $T s + \mu_{\rm b} n_{\rm b} - \veps$
+[Eq.~(\ref{e:evo:pressure_simple_fluid})], we get
+\[
+     \delta \left( T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu \right) =
+     - \frac{T}{u^t} \, \delta(\D S_{\rm f})
+     -  \frac{\mu_{\rm b}}{u^t} \, \delta(\D \mathscr{N}_{\rm b})
+     - \Omega \,\delta(\D J_{\rm f})
+     + \frac{p}{u^t} \delta( u^\mu \D V_\mu)
+     + \frac{\veps \, \delta u^t}{(u^t)^2} u^\mu \D V_\mu - \delta \Omega \, \D J_{\rm f} .
+\]
+Now $\delta ( u^\mu \D V_\mu ) = \delta u^\mu \, \D V_\mu + u^\mu \delta( \D V_\mu)$,
+with, according to Eqs.~(\ref{e:evo:u_circular}) and (\ref{e:evo:delta_xi_eta}),
+\be \label{e:evo:delta_u}
+    \delta u^\mu  = (\delta u^t/u^t) u^\mu + u^t \delta \Omega\,  \eta^\mu
+\ee
+and, according to Eqs.~(\ref{e:evo:delta_DV})  and (\ref{e:evo:delta_sqrt_g}),
+$\delta(\D V_\mu) = (1/2) g^{\rho\sigma} \delta g_{\rho\sigma}\, \D V_\mu$.
+Hence, using $\eta^\mu \D V_\mu = 0$,
+\[
+    \delta  ( u^\mu \D V_\mu ) = \left( \frac{\delta u^t}{u^t}
+        + \frac{1}{2} g^{\rho\sigma} \delta g_{\rho\sigma} \right)  u^\mu \D V_\mu .
+\]
+The above expression of $\delta \left( T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu \right)$
+becomes then
+\bea
+     \delta \left( T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu \right) & = &
+     - \frac{T}{u^t} \, \delta(\D S_{\rm f})
+     -  \frac{\mu_{\rm b}}{u^t} \, \delta(\D \mathscr{N}_{\rm b})
+     - \Omega \,\delta(\D J_{\rm f}) \nonumber \\
+     & & + \left[ \left( \frac{\delta u^t}{(u^t)^2} - \delta \Omega u_\nu \eta^\nu \right) (\veps + p)  + \frac{1}{2} \frac{p}{u^t} g^{\rho\sigma} \delta g_{\rho\sigma} \right]u^\mu \D V_\mu
+      . \nonumber
+\eea
+Note that we have used Eq.~(\ref{e:evo:def_DS_DN_DJ}) as
+$\delta \Omega \, \D J_{\rm f} = (\veps + p) \delta \Omega \, u_\nu \eta^\nu u^\mu \D V_\mu$.
+Now, from  Eq.~(\ref{e:evo:delta_u}),
+$\delta u^t/u^t - u^t \delta\Omega u_\nu \eta^\nu = - u_\nu \delta u^\nu$. Hence
+\[
+    \delta \left( T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu \right) =
+     - \frac{T}{u^t} \, \delta(\D S_{\rm f})
+     -  \frac{\mu_{\rm b}}{u^t} \, \delta(\D \mathscr{N}_{\rm b})
+     - \Omega \,\delta(\D J_{\rm f})
+     + \left[  \frac{p}{2} g^{\rho\sigma} \delta g_{\rho\sigma} - (\veps + p) u_\nu \delta u^\nu \right]
+      \frac{1}{u^t} u^\mu \D V_\mu .
+\]
+Since $g_{\rho\sigma} u^\rho u^\sigma = -1$
+implies $u_\rho \delta u^\rho = -(1/2) \delta g_{\rho\sigma} u^\rho u^\sigma$,
+we may rewrite the above relation as
+\[
+    \delta \left( T^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu \right) =
+     - \frac{T}{u^t} \, \delta(\D S_{\rm f})
+     -  \frac{\mu_{\rm b}}{u^t} \, \delta(\D \mathscr{N}_{\rm b})
+     - \Omega \,\delta(\D J_{\rm f})
+    + \frac{1}{2} T^{\rho\sigma} \delta g_{\rho\sigma} \, \xi^\mu \D V_\mu ,
+\]
+where we have used Eq.~(\ref{e:evo:perfect_fluid_T}) to let appear $T^{\rho\sigma}$
+and Eq.~(\ref{e:evo:u_circular}) along with $\eta^\mu \D V_\mu = 0$
+to write $(u^t)^{-1} u^\mu \D V_\mu = \xi^\mu \D V_\mu$.
+Injecting the above expression into Eq.~(\ref{e:evo:var_M_fluid_prov})
+yields formula~(\ref{e:evo:mass_variation_fluid}).
 \end{proof}
 
 \begin{hist}
