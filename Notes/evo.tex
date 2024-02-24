@@ -112,7 +112,7 @@ the $\w{\eta}_{\Hor_k(i)}$'s are axisymmetric Killing vectors
 We shall encompass both the non-rotating case and the rotating one by allowing
 $L_k$ to take the value $0$ in Eq.~(\ref{e:evo:chi_k}) to
 recover $\w{\chi}_k = \w{\xi}$  if $\Hor_k$ is non-rotating.
-Let $J_{\Hor_{k}(i)}$ be the Komar angular momentum with respect to
+Let $J_{\Hor_k}^{(i)}$ be the Komar angular momentum with respect to
 $\w{\eta}_{\Hor_k(i)}$ over any cross-section of $\Hor_{k}$
 [Eq.~(\ref{e:sta:def_Komar_J})].
 Being a non-expanding horizon, each
@@ -128,12 +128,12 @@ Let $(\M,\w{g}+\delta\w{g})$ be a nearby stationary spacetime sharing the same c
 The change $\delta M_\infty$ of the Komar mass at infinity
 (cf. Property~\ref{p:sta:Komar_mass_inf}) between the two spacetimes
 is related to the changes $\delta A_k$ in the areas and to the changes
-$\delta J_{\Hor_{k}(i)}$ in the Komar angular momenta by
+$\delta J_{\Hor_k}^{(i)}$ in the Komar angular momenta by
 \bea
     \delta  M_\infty & = & \sum_{k = 1}^K
     \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
-    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right) \nonumber \\
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_k}^{(i)} \right) \nonumber \\
     & & + \frac{1}{16\pi}
     \int_{\Sigma} G^{\mu\nu} \delta g_{\mu\nu} \, \xi_\rho \, \D V^\rho
         - \frac{1}{8\pi} \,
@@ -171,8 +171,8 @@ is the variation of the generalized Smarr formula\index{generalized Smarr formul
  \frac{2(n- 3)}{n - 2} \, \delta  M_\infty& = &\sum_{k = 1}^K
     \left[
     \frac{1}{4\pi} \left( A_k\,  \delta \kappa_{k}  + \kappa_k \, \delta A_k \right)
-    + 2  \sum_{i=1}^{L_{k}} \left( J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_k}
-    + \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right) \right] \nonumber \\
+    + 2  \sum_{i=1}^{L_{k}} \left( J_{\Hor_k}^{(i)} \, \delta \Omega^{(i)}_{\Hor_k}
+    + \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_k}^{(i)} \right) \right] \nonumber \\
     & &
      - \frac{1}{4\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu , \label{e:evo:start_proof_1law}
 \eea
@@ -322,17 +322,17 @@ as
     + \sum_{i=1}^L \delta \Omega^{(i)} k^\mu \chi^\nu \nabla_\mu \eta_{(i)\nu} .
 \ee
 Let us integrate this relation over the cross-section $\Sp_k$,
-setting  $\D S := \sqrt{q}\,  \D^{n-2} x$ (the surface element of $\Sp_k$).
+setting  $\D S := \sqrt{q}\,  \D^{n-2} x$ (the area element of $\Sp_k$).
 Since $\delta\kappa$ and $\delta \Omega^{(i)}$
 are constant, we get
 \be \label{e:evo:delta_kappa_integrated}
     \delta\kappa \underbrace{\int_{\Sp_k} \D S}_{A_k} =
     - \frac{1}{2} \underbrace{  \int_{\Sp_k} \chi_\mu \nabla^\nu h^\mu_{\ \, \nu} \, \D S }_{I_{\Sp_k}}
     + \sum_{i=1}^L \delta \Omega^{(i)}
-       \underbrace{\int_{\Sp_k} \nabla_\mu \eta_{(i)\nu} \, k^\mu \chi^\nu \, \D S}_{-8\pi J_{\Hor_{k}(i)}} .
+       \underbrace{\int_{\Sp_k} \nabla_\mu \eta_{(i)\nu} \, k^\mu \chi^\nu \, \D S}_{-8\pi J_{\Hor_k}^{(i)}} .
 \ee
-The identification of the last integral with $-8\pi J_{\Hor_{k}(i)}$ readily follows from formula
-(\ref{e:sta:J_Komar_cov_der}) for the Komar angular momentum, once the area element bivector normal to $\Sp_k$
+The identification of the last integral with $-8\pi J_{\Hor_k}^{(i)}$ readily follows from formula
+(\ref{e:sta:J_Komar_cov_der}) for the Komar angular momentum, once the area element normal bivector to $\Sp_k$
 is expressed as $\D S^{\mu\nu}=(\chi^\mu k^\nu - k^\mu \chi^\nu) \, \D S $ [Eq.~(\ref{e:sta:dS_chi_k})]. As for the integral denoted $I_{\Sp_k}$ in Eq.~(\ref{e:evo:delta_kappa_integrated}), it can be rewritten as an integral involving
 $\w{h}$ and the stationary Killing vector $\w{\xi}$ instead of the Killing vector $\w{\chi}$ (which depends
 on $\Hor_k$, contrary to $\w{\xi}$), namely
@@ -382,17 +382,17 @@ Eq.~(\ref{e:evo:delta_kappa_integrated}), we conclude that Eq.~(\ref{e:evo:I_Sk_
 Therefore, Eq.~(\ref{e:evo:delta_kappa_integrated}) can be rewritten as
 \be
     A_k \, \delta\kappa_k = - \frac{1}{2} \int_{\Sp_k} \omega_{\mu\nu} \,\D S^{\mu\nu}
-    -8\pi \sum_{i=1}^L J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_{k}} ,
+    -8\pi \sum_{i=1}^L J_{\Hor_k}^{(i)} \, \delta \Omega^{(i)}_{\Hor_{k}} ,
 \ee
 where we have restored the index $k$ on $\kappa$ and the subscript $\Hor_{k}$
 on $\Omega^{(i)}$. If we plug this relation into Eq.~(\ref{e:evo:start_proof_1law}), the
-terms $ J_{\Hor_{k}(i)} \, \delta \Omega^{(i)}_{\Hor_{k}}$ cancel out and we are left
+terms $ J_{\Hor_k}^{(i)} \, \delta \Omega^{(i)}_{\Hor_{k}}$ cancel out and we are left
 with
 \bea
  \frac{(n- 3)}{n - 2} \, \delta  M_\infty& = &
  \sum_{k = 1}^K \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
-    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_k}^{(i)} \right)
     - \frac{1}{16\pi} \sum_{k = 1}^K \int_{\Sp_k} \omega_{\mu\nu} \,\D S^{\mu\nu} \nonumber \\
     & & - \frac{1}{8\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu .  \nonumber
 \eea
@@ -404,7 +404,7 @@ regarding the flux of a 2-form (here $\w{\omega}$) to write
  \frac{(n- 3)}{n - 2}\,  \delta  M_\infty& = &
  \sum_{k = 1}^K \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
-    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_k}^{(i)} \right)
     - \frac{1}{16\pi}  \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} \nonumber \\
     & & + \frac{1}{8\pi} \int_{\Sigma} \nabla^\nu \omega_{\mu\nu}\,  \D V^\mu
      - \frac{1}{8\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu ,
@@ -467,7 +467,7 @@ Accordingly, Eq.~(\ref{e:evo:mass_var_prov}) simplifies to
  \delta  M_\infty =
  \sum_{k = 1}^K \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
-    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_k}^{(i)} \right)
      +  \frac{1}{8\pi} \int_{\Sigma} \nabla^\nu \omega_{\mu\nu}\,  \D V^\mu
      - \frac{1}{8\pi} \delta \! \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu .
 \]
@@ -491,7 +491,7 @@ Hence
    \delta  M_\infty =
  \sum_{k = 1}^K \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
-    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_k}^{(i)} \right)
      +  \frac{1}{8\pi} \int_{\Sigma} \nabla_\nu H^\nu  \, \xi^\mu \, \D V_\mu
      - \frac{1}{8\pi} \delta \! \int_{\Sigma} R^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu .
 \]
@@ -504,7 +504,7 @@ we may write
    \delta  M_\infty =
  \sum_{k = 1}^K \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
-    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right)
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_k}^{(i)} \right)
     + \frac{1}{8\pi} \, I - \frac{1}{8\pi} \delta \! \int_{\Sigma} G^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu ,
     \label{e:evo:mass_variation_gal_I}
 \ee
@@ -611,7 +611,7 @@ end of the stationary spacetime.}
    \encadre{ \delta  M = \sum_{k = 1}^K
     \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
-    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_{k}(i)} \right) } .
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_k}^{(i)} \right) } .
 \ee
 In the particular case $K=1$
 (connected event horizon) and

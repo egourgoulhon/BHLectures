@@ -1070,9 +1070,9 @@ express the Komar mass as a \emph{flux integral}\index{flux!integral}\index{inte
 contracted with some ``area element'', which is \emph{normal} to $\Sp$.
 Let us introduce the latter first.
 
-\begin{prop}[area element bivector normal to a codimension-2 surface]
+\begin{prop}[area element normal bivector to a codimension-2 surface]
 Given a spacelike $(n-2)$-dimensional surface $\Sp\subset \M$, the
-\defin{area element bivector normal to}\index{normal!area element}\index{bivector!area element --}\index{area!element bivector} $\Sp$
+\defin{area element normal bivector to}\index{normal!area element}\index{normal!bivector}\index{bivector!area element --}\index{area!element bivector} $\Sp$
 is the infinitesimal antisymmetric type-(2,0) tensor field defined on $\Sp$ by
 \be
     \D \w{S} := (\w{s} \wedge \w{n}) \, \sqrt{q}\, \D^{n-2} x,
@@ -1126,7 +1126,7 @@ shows that the bivector $\w{s}\wedge\w{n}$, and hence $\D \w{S}$, does not depen
 choice of the orthonormal basis $(\w{n},\w{s})$.
 \end{proof}
 
-The normal area element bivector $\D\w{S}$ appears in the following useful lemma.
+The area element normal bivector $\D\w{S}$ appears in the following useful lemma.
 
 \begin{lemma}[flux integral of a 2-form]
 \label{p:sta:flux_integ_2form}
@@ -2800,9 +2800,9 @@ of $\Hor_{k}$, as defined by Eq.~(\ref{e:sta:def_Komar_mass}), obeys
 \be \label{e:sta:Smarr_H_k}
     M_{\Hor_{k}} = \frac{n - 2}{2(n- 3)}\left(
     \frac{\kappa_{k} A_{k}}{4\pi}
-    + 2  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} J_{\Hor_{k}(i)} \right) ,
+    + 2  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} J_{\Hor_{k}}^{(i)} \right) ,
 \ee
-where $J_{\Hor_{k}(i)}$ is the Komar angular momentum with respect to
+where $J_{\Hor_{k}}^{(i)}$ is the Komar angular momentum with respect to
 the axisymmetric Killing vector $\w{\eta}_{\Hor_k(i)}$ over
 any cross-section of $\Hor_{k}$
 as given by Eq.~(\ref{e:sta:def_Komar_J}).
@@ -2815,7 +2815,7 @@ Furthermore, the Komar mass at infinity
     \encadre{ \frac{2(n- 3)}{n - 2}  M_\infty = \sum_{k = 1}^K
     \left(
     \frac{\kappa_{k} A_{k}}{4\pi}
-    + 2  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} J_{\Hor_{k}(i)} \right)
+    + 2  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} J_{\Hor_{k}}^{(i)} \right)
      + \frac{1}{4\pi}  \int_{\Sigma} \w{R}(\w{\xi}, \w{n}) \sqrt{\gamma} \, \D^{n-1} x },
 \ee
 where $\Sigma$ is any asymptotically flat spacelike hypersurface, the inner boundary
@@ -2830,7 +2830,7 @@ with $\Lambda=0$, this formula can be rewritten as
     \frac{2(n- 3)}{n - 2}  M_\infty & = & \sum_{k = 1}^K
     \left(
     \frac{\kappa_{k} A_{k}}{4\pi}
-    + 2  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} J_{\Hor_{k}(i)} \right) \nonumber \\
+    + 2  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} J_{\Hor_{k}}^{(i)} \right) \nonumber \\
     & & + 2
     \int_{\Sigma} \left( \w{T}(\w{\xi}, \w{n}) - \frac{T \w{\xi}\cdot \w{n}}{n-2}  \right)
     \sqrt{\gamma} \, \D^{n-1} x , \label{e:sta:Smarr_M_infty}
@@ -2855,9 +2855,9 @@ a single connected component $\Hor_k$.}
         \underbrace{\int_{\Sp_{k}} \nabla_\mu \chi_\nu \, \D S^{\mu\nu}}_{-2 \kappa_{k} A_{k}}
         - \sum_{i=1}^{L_{k}} \Omega^{(i)}
         \underbrace{\int_{\Sp_{k}} \nabla_\mu \eta_{(i)\nu}
-        \, \D S^{\mu\nu}}_{16\pi J_{\Hor_{k}(i)}} \Bigg] . \nonumber
+        \, \D S^{\mu\nu}}_{16\pi J_{\Hor_{k}}^{(i)}} \Bigg] . \nonumber
 \eea
-The second surface integral being $16\pi J_{\Hor_{k}(i)}$ follows
+The second surface integral being $16\pi J_{\Hor_{k}}^{(i)}$ follows
 directly from Eq.~(\ref{e:sta:J_Komar_cov_der}).
 As for the first integral, the value $-2 \kappa_{k} A_{k}$
 is obtained by introducing a null vector $\w{k}$ normal to $\Sp_{k}$
@@ -2865,7 +2865,7 @@ such that $\w{\chi}\cdot\w{k} = -1$.
 At each point $p\in\Sp_{k}$,
 the pair $(\w{\chi},\w{k})$ is then a null basis of the 2-plane $T_p^\perp\Sp_{k}$
 (cf. Fig.~\ref{f:def:TS_ortho} where $\wl$ stands for $\w{\chi}$) and
-we may rewrite the normal area element bivector $\D S^{\alpha\beta}$
+we may rewrite the area element normal bivector $\D S^{\alpha\beta}$
 as\footnote{This follows readily by setting $\w{n} = (\w{\chi} + \w{k})/\sqrt{2}$
 and $\w{s} = (\w{\chi} - \w{k})/\sqrt{2}$ in formula~(\ref{e:sta:area_bivector}).}
 \be \label{e:sta:dS_chi_k}
@@ -2887,6 +2887,11 @@ Eqs.~(\ref{e:sta:def_M_infty}), (\ref{e:sta:Komar_mass_vol_integ_R}) and (\ref{e
 one has noticed that $\Sp_{\rm int} = \bigcup_{k=1}^K \Sp_{k}$,
 so that $M_{\Sp_{\rm int}} = \sum_{k=1}^K M_{\Hor_{k}}$.
 \end{proof}
+
+For vacuum black holes of general relativity, $\w{T} = 0$ and the generalized Smarr formula (\ref{e:sta:Smarr_M_infty})
+simplifies since the integral
+term disappears.
+
 
 \begin{example}[black saturn]
 For the \emph{black saturn}\index{black!saturn} solution discussed in Remark~\ref{r:sta:dep_eta_Omega},
@@ -2941,10 +2946,10 @@ where $A$ is the area of $\Hor$ (cf. Property~\ref{p:neh:invariance_area})
 and $J_{\Hor}$ is the Komar angular momentum over any cross-section
 of $\Hor$ [cf. Eq.~(\ref{e:sta:def_Komar_J})].
 Furthermore, the Komar mass at infinity
-(cf. Property~\ref{p:sta:Komar_mass_inf}) obeys
+(cf. Property~\ref{p:sta:Komar_mass_inf}) obeys\index{Smarr formula!4-dimensional --}
 \be \label{e:sta:Smarr_M_infty_n4_R}
-    M_\infty = \frac{\kappa}{4\pi} A + 2 \Omega_{\Hor} J_{\Hor}
-    +  \frac{1}{4\pi}  \int_{\Sigma} \w{R}(\w{\xi}, \w{n}) \sqrt{\gamma} \, \D^3 x ,
+   \encadre{ M_\infty = \frac{\kappa}{4\pi} A + 2 \Omega_{\Hor} J_{\Hor}
+    +  \frac{1}{4\pi}  \int_{\Sigma} \w{R}(\w{\xi}, \w{n}) \sqrt{\gamma} \, \D^3 x },
 \ee
 where $\Sigma$ is an asymptotically flat spacelike hypersurface, the inner boundary
 of which is a cross-section of $\Hor$,
@@ -2960,9 +2965,6 @@ with $\Lambda=0$, this formula can be rewritten as
 where $\w{T}$ is the matter energy-momentum tensor.
 \end{prop}
 
-For vacuum black holes of general relativity, $\w{T} = 0$ and the generalized Smarr formulas (\ref{e:sta:Smarr_M_infty})
-and (\ref{e:sta:Smarr_M_infty_n4}) simplify since the integral
-term disappears.
 
 \begin{example}[Schwarzschild black hole]
 The Schwarzschild black hole will be discussed in details in Chap.~\ref{s:sch};
@@ -2982,7 +2984,7 @@ This is nothing but the Smarr formula (\ref{e:sta:Smarr_M_infty_n4})
 for a static ($\Omega_{\Hor} = 0$) black hole in vaccum ($\w{T}=0$).
 \end{example}
 
-\subsection{Electrovacuum Smarr formula} \label{s:sta:Smarr_electrovac}
+\subsection{Smarr formula for charged black holes} \label{s:sta:Smarr_electrovac}
 
 Beside the vacuum case, the generalized Smarr formulas (\ref{e:sta:Smarr_M_infty})
 and (\ref{e:sta:Smarr_M_infty_n4}) simplifies significantly for
@@ -3136,7 +3138,7 @@ of the above equation identically vanishes. Hence $Q'_{\Hor} = Q_{\Hor}$.
 
 We are now in position to state:
 
-\begin{prop}[generalized Smarr formula in electrovacuum spacetimes]
+\begin{prop}[generalized Smarr formula for charged black holes]
 Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 4$, with stationary
 Killing vector $\w{\xi}$, endowed with a source-free electromagnetic field
 $\w{F}$ such that $(\w{g},\w{F})$ obeys the electrovacuum Einstein equation
@@ -3156,16 +3158,16 @@ rotation velocities
 $\Omega^{(i)}$ and axisymmetric Killing vectors $\w{\eta}_{(i)}$
 are the same for all the $\Hor_k$'s. One may have $L=0$,
 i.e. $\w{\chi} = \w{\xi}$ (static configuration).
-The Komar mass formula is then
+The Smarr formula is then\index{Smarr formula!for charged black holes}
 \be \label{e:sta:Smarr_electrovac}
-    \frac{2(n- 3)}{n - 2}  M_\infty = \sum_{k = 1}^K
+    \encadre{\frac{2(n- 3)}{n - 2}  M_\infty = \sum_{k = 1}^K
     \left(
     \frac{\kappa_{k} A_{k}}{4\pi}
     + \frac{2(n- 3)}{n - 2} \Phi_{\Hor_k} Q_{\Hor_k} \right)
-    + 2 \sum_{i=1}^{L} \Omega^{(i)} J_{(i)}^\infty ,
+    + 2 \sum_{i=1}^{L} \Omega^{(i)} J_\infty^{(i)} },
 \ee
 where $M_\infty$ is the Komar mass at infinity,
-$J_{(i)}^\infty$ is the Komar angular momentum at infinity with respect
+$J_\infty^{(i)}$ is the Komar angular momentum at infinity with respect
 to the axisymmetric Killing vector $\w{\eta}_{(i)}$, $\kappa_k$ is the
 surface gravity of $\Hor_k$, $A_k$ is the area of $\Hor_k$,
 $\Phi_{\Hor_k}$ is the electric potential of $\Hor_k$, as defined by
@@ -3180,7 +3182,7 @@ from $\Hor_k$, we may permute the sums over $k$ and $i$ in it and write
 \[
     \frac{2(n- 3)}{n - 2}  M_\infty =
     \sum_{k = 1}^K \frac{\kappa_{k} A_{k}}{4\pi}
-    + 2  \sum_{i=1}^{L} \Omega^{(i)} \sum_{k = 1}^K J_{\Hor_{k}(i)}
+    + 2  \sum_{i=1}^{L} \Omega^{(i)} \sum_{k = 1}^K J_{\Hor_{k}}^{(i)}
     + \frac{1}{4\pi}
     \int_{\Sigma}  \w{R}(\w{\xi}, \w{n}) \sqrt{\gamma} \, \D^{n-1} x ,
 \]
@@ -3192,15 +3194,15 @@ cross-section of $\Hor_{k}$.
 Now, according to Eq.~(\ref{e:sta:Komar_angul_vol_integ_R})
 with $\Sp_{\rm ext}$ going to infinity, we have
 \[
-     \sum_{k=1}^K J_{\Hor_k(i)} =  J_{\Sp_{\rm int}(i)}
-    = J_{(i)}^\infty + \frac{1}{8\pi} \int_{\Sigma}  \w{R}(\w{\eta}_{(i)}, \w{n})
+     \sum_{k=1}^K J_{\Hor_k}^{(i)} =  J_{\Sp_{\rm int}}^{(i)}
+    = J_\infty^{(i)} + \frac{1}{8\pi} \int_{\Sigma}  \w{R}(\w{\eta}_{(i)}, \w{n})
     \sqrt{\gamma} \, \D^{n-1} x .
 \]
 Hence
 \be \label{e:sta:Smarr_electrovac_prov}
     \frac{2(n- 3)}{n - 2}  M_\infty =
     \sum_{k = 1}^K \frac{\kappa_{k} A_{k}}{4\pi}
-    + 2  \sum_{i=1}^{L} \Omega^{(i)} J_{(i)}^\infty
+    + 2  \sum_{i=1}^{L} \Omega^{(i)} J_\infty^{(i)}
     + \frac{1}{4\pi}
     \int_{\Sigma} \w{R}(\w{\chi}, \w{n}) \sqrt{\gamma} \, \D^{n-1} x ,
 \ee
@@ -3328,15 +3330,15 @@ In view of Eq.~(\ref{e:sta:Smarr_electrovac_prov}), the above value for $I$
 proves the Smarr formula (\ref{e:sta:Smarr_electrovac}).
 \end{proof}
 
-\begin{prop}[4-dimensional electrovacuum Smarr formula for a connected horizon]
+\begin{prop}[4-dimensional Smarr formula for a connected charged black hole]
 For $n=4$ (which implies $L\leq 1$) and for a connected black hole event horizon
 $\Hor$ ($K=1$) of surface gravity $\kappa$, area $A$, angular velocity
 $\Omega_{\Hor}$, electric charge $Q$ and electric potential $\Phi_{\Hor}$,
 the electrovacuum Smarr formula
 (\ref{e:sta:Smarr_electrovac}) simplifies to
 \be \label{e:sta:Smarr_electrovac_n4}
-        M_\infty = \frac{\kappa}{4\pi}  A + 2 \Omega_{\Hor} J_\infty
-                    + \Phi_{\Hor} Q.
+    \encadre{  M_\infty = \frac{\kappa}{4\pi}  A + 2 \Omega_{\Hor} J_\infty
+                    + \Phi_{\Hor} Q }.
 \ee
 \end{prop}
 
@@ -3344,13 +3346,13 @@ the electrovacuum Smarr formula
 Formula~(\ref{e:sta:Smarr_electrovac_n4}) has been first derived in 1972 (published: 1973)
 by Larry Smarr\index[pers]{Smarr, L.}
 \cite{Smarr73} in the case of the Kerr-Newman black hole\index{Kerr-Newman!black hole}.
-Actually, Smarr obtained it not from integral formulas for $M_\infty$ and $J_\infty$,
-as presented here, but from an explicit expression of $M_\infty$ in terms
+Actually, Smarr did not obtain it from integral formulas for $M_\infty$ and $J_\infty$,
+as presented here; rather he used an explicit expression of $M_\infty$ in terms
 of $A$, $J_\infty$ and $Q$, which holds for the Kerr-Newman solution.
 After noticing that this expression is a homogeneous function of degree $1/2$
 of $(A,J_\infty,Q^2)$, he applied Euler's homogeneous function theorem to get
 Eq.~(\ref{e:sta:Smarr_electrovac_n4}). The derivation of Smarr formula
-from generic integral Komar-type formulas for mass and angular momentum,
+from generic Komar-type integral formulas for mass and angular momentum,
 possibly with some non-vacuum exterior,
 is due to James Bardeen\index[pers]{Bardeen, J.M.}, Brandon Carter\index[pers]{Carter, B.}
 and Stephen Hawking\index[pers]{Hawking, S.W.} in 1973 \cite{BardeCH73}. They obtained
