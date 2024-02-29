@@ -2794,8 +2794,8 @@ the coefficient such that
 $\wnab_{\w{\chi}_{k}}\w{\chi}_{k} =  \kappa_{k} \w{\chi}_{k}$
  on $\Hor_{k}$ [cf. Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
 Let us assume that the null dominance condition (\ref{e:neh:null_dominant_cond}) is fulfilled
-on $\Hor_{k}$, so that the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law})
-implies that $\kappa_{k}$ is constant.
+on $\Hor_{k}$ or that $\Hor_{k}$ is part of a bifurcate Killing horizon;
+by the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law} or Property~\ref{p:neh:zeroth_law_bifur}), this implies that $\kappa_{k}$ is constant.
 Then the Komar mass $M_{\Hor_{k}}$ over any cross-section
 of $\Hor_{k}$, as defined by Eq.~(\ref{e:sta:def_Komar_mass}), obeys
 \be \label{e:sta:Smarr_H_k}
@@ -2879,7 +2879,8 @@ We have then
  & = & 2 \kappa_{k} \underbrace{\chi_\nu k^\nu}_{-1} \, \sqrt{q}\, \D^{n-2} x
     = - 2 \kappa_{k} \, \sqrt{q}\, \D^{n-2} x . \nonumber
 \eea
-Given that $\kappa_{k}$ is constant (Property~\ref{p:neh:zeroth_law}), the integral
+Given that $\kappa_{k}$ is constant (Property~\ref{p:neh:zeroth_law} or Property~\ref{p:neh:zeroth_law_bifur}),
+the integral
 of the above expression over $\Sp_{k}$ reduces to $-2\kappa_{k} A_{k}$, by the
 very definition of the area $A_{k}$ [cf. Eq.~(\ref{e:neh:total_area})].
 This establishes Eq.~(\ref{e:sta:Smarr_H_k}).
@@ -2889,7 +2890,7 @@ one has noticed that $\Sp_{\rm int} = \bigcup_{k=1}^K \Sp_{k}$,
 so that $M_{\Sp_{\rm int}} = \sum_{k=1}^K M_{\Hor_{k}}$.
 \end{proof}
 
-For vacuum black holes of general relativity, $\w{T} = 0$ and the generalized Smarr formula (\ref{e:sta:Smarr_M_infty})
+For vacuum black holes of general relativity, $\w{T} = 0$, the null dominance condition is trivially fulfilled and the generalized Smarr formula (\ref{e:sta:Smarr_M_infty})
 simplifies since the integral
 term disappears.
 
@@ -2904,7 +2905,7 @@ reduces to
 \ee
 where $k=1$ corresponds to the ``planet'' component of the event horizon
 and $k=2$ corresponds to the ``ring'' component. Equation~(\ref{e:sta:Smarr_H_k_saturn})
-coincides with the two formulas given in Eq.~(3.43) of the black saturn discovery
+coincides with the two formulas given in Eq.~(3.43) of the discovery
 article \cite{ElvanF07}, which were obtained from the explicit expressions of $M_{\Hor_{k}}$,
 $A_k$, $J_{\Hor_k}$, $\kappa_k$ and $\Omega_{\Hor_k}$ in terms of the solution parameters.
 For the same solution, the Smarr formula (\ref{e:sta:Smarr_M_infty}) with $\w{T}=0$ is recovered
@@ -2936,7 +2937,8 @@ that the former corresponds to $\Omega_{\Hor} = 0$, so that $\w{\chi} = \w{\xi}$
 The surface gravity $\kappa$ of $\Hor$ is defined by the identity
 $\wnab_{\w{\chi}}\w{\chi} \equalH \kappa \w{\chi}$ [cf. Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
 Assuming that the null dominance condition (\ref{e:neh:null_dominant_cond}) is fulfilled
-on $\Hor$, the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law})
+on $\Hor$ or that $\Hor$ is part of a bifurcate Killing horizon,
+the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law} or \ref{p:neh:zeroth_law_bifur})
 leads to $\kappa = \mathrm{const}$.
 Then the Komar mass $M_{\Hor}$ over any cross-section
 of $\Hor$ [cf. Eq.~(\ref{e:sta:def_Komar_mass})] obeys
@@ -3176,7 +3178,13 @@ electric charge of $\Hor_k$, as defined by Property~\ref{p:sta:electric_charge}.
 \end{prop}
 
 \begin{proof}
-Let us start from the general Smarr formula~(\ref{e:sta:Smarr_M_infty_R}).
+The electromagnetic field energy-momentum tensor (\ref{e:fra:T_em}) obeys the
+null dominant energy condition\index{dominant energy condition}
+(\ref{e:neh:null_dominant_cond_T}) \cite{KontoS20},
+so that the surface gravities $\kappa_k$ are constant over each Killing horizon
+$\Hor_k$ (cf. Property~\ref{p:neh:zeroth_law}). All
+the hypotheses of Property~\ref{p:sta:Smarr_gen} are thus fulfilled
+and the Smarr formula~(\ref{e:sta:Smarr_M_infty_R}) holds.
 Thanks to the independence of $\Omega^{(i)}$ and $\w{\eta}_{(i)}$
 from $\Hor_k$, we may permute the sums over $k$ and $i$ in it and write
 \[
