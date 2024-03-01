@@ -706,7 +706,7 @@ to $ \w{\xi}\cdot\w{F} + \dd \langle \w{A}, \w{\xi} \rangle = 0$
 or $F_{\alpha\nu} \xi^\nu = \nabla_\alpha (A_\nu \xi^\nu)$. It follows
 then that $F_{\rho\mu} F^\rho_{\ \, \nu} \xi^\nu
 = F_{\rho\mu} \nabla^\rho (A_\nu \xi^\nu) = \nabla^\rho( A_\nu \xi^\nu F_{\rho\mu})$,
-where the last equality follows from the source-free
+where the last equality stems from the source-free
 Maxwell equation $\nabla^\rho F_{\rho\mu} = 0$ [Eq.~(\ref{e:fra:Maxwell_comp}) with $j^\alpha=0$].
 We may then use Lemma~\ref{p:sta:flux_div_2_form} to turn the first term in $I$ into a surface
 integral:
@@ -715,7 +715,52 @@ integral:
         - \frac{1}{4\mu_0} \int_\Sigma F_{\mu\nu} F^{\mu\nu} \xi^\rho \D V_\rho ,
 \]
 where $\Sp_{\rm int} := \cup_{k=1}^K \Sp_k$ is the inner boundary of $\Sigma$ ($\Sp_k := \Hor_k \cup \Sigma$)
-and we have set the surface integral at infinity to zero, due to the decay of $\w{F}$ and $\w{A}$.
+and we have set the surface integral at infinity to zero, thanks to the decay of $\w{F}$ and $\w{A}$, at
+least as $1/r^{n-2}$ and $1/r^{n-3}$ respectively. Let us evaluate the variation of the integral over $\Sigma$.
+We have, using $\delta \xi^\rho = 0$ [Eq.~(\ref{e:evo:delta_xi_eta})],
+\[
+    \delta (F_{\mu\nu} F^{\mu\nu} \xi^\rho \D V_\rho ) =
+    \delta (F_{\mu\nu} F^{\mu\nu}) \, \xi^\rho \D V_\rho  + F_{\mu\nu} F^{\mu\nu} \xi^\rho \delta( \D V_\rho ) .
+\]
+Now, $\delta( \D V_\rho ) = (1/2) \, g^{\mu\nu} h_{\mu\nu} \D V_\rho$ [cf. Eqs.~(\ref{e:evo:delta_DV}) and (\ref{e:evo:delta_sqrt_g})] and
+\bea
+    \delta (F_{\mu\nu} F^{\mu\nu}) & = & \delta  F_{\mu\nu} \, F^{\mu\nu}
+        + F_{\mu\nu} \delta( g^{\mu\rho} g^{\nu\sigma} F_{\rho\sigma} ) \nonumber \\
+    &= &
+    \delta  F_{\mu\nu} \, F^{\mu\nu} + F_{\mu\nu} \underbrace{\delta g^{\mu\rho}}_{-h^{\mu\rho}}g^{\nu\sigma} F_{\rho\sigma}
+    + F_{\mu\nu}  g^{\mu\rho} \,  \underbrace{\delta g^{\nu\sigma}}_{-h^{\nu\sigma}} F_{\rho\sigma}
+    + \underbrace{F_{\mu\nu} g^{\mu\rho} g^{\nu\sigma}}_{F^{\rho\sigma}} \, \delta F_{\rho\sigma}
+     \nonumber \\
+    & = & 2  F^{\mu\nu}  \delta  F_{\mu\nu} - 2 F_{\rho\mu} F^\rho_{\ \,  \nu} h^{\mu\nu} \nonumber \\
+    & = & 2 F^{\mu\nu} \delta (\partial_\mu A_\nu - \partial_\nu A_\mu)
+    - 2 F_\rho^{\ \, \mu} F^{\rho\nu} h_{\mu\nu}
+        \nonumber \\
+    & = & 2 F^{\mu\nu} (\partial_\mu \delta A_\nu - \partial_\nu \delta A_\mu)
+      - 2 F_\sigma^{\ \, \mu} F^{\sigma\nu} h_{\mu\nu}
+        \nonumber \\
+    & = & 2 F^{\mu\nu} (\nabla_\mu \delta A_\nu - \nabla_\nu \delta A_\mu)
+        - 2 F_\sigma^{\ \, \mu} F^{\sigma\nu} h_{\mu\nu}
+        \nonumber \\
+    & = & 4 F^{\mu\nu} \nabla_\mu \delta A_\nu - 2 F_\sigma^{\ \, \mu} F^{\sigma\nu} h_{\mu\nu}  . \nonumber
+\eea
+Hence
+\bea
+        \delta (F_{\mu\nu} F^{\mu\nu} \xi^\rho \D V_\rho ) & = &
+        \left( 4 F^{\mu\nu} \nabla_\mu \delta A_\nu - 2 F_\sigma^{\ \, \mu} F^{\sigma\nu} h_{\mu\nu}
+        + \frac{1}{2} F_{\sigma\tau} F^{\sigma\tau} g^{\mu\nu} h_{\mu\nu} \right) \xi^\rho \D V_\rho \nonumber \\
+        & = &  \left( 4 F^{\mu\nu} \nabla_\mu \delta A_\nu - 2 \mu_0 T^{\mu\nu} h_{\mu\nu} \right)
+               \xi^\rho \D V_\rho \nonumber \\
+        & = & 4 \nabla_\nu \Omega^{\mu\nu}\, \D V_\mu - 2 \mu_0 T^{\mu\nu} h_{\mu\nu} \,  \xi^\rho \D V_\rho ,
+            \label{e:evo:var_FFxidV}
+\eea
+where
+\be
+    \Omega^{\mu\nu} := \delta A_\sigma \left( F^{\sigma\mu} \xi^\nu - F^{\sigma\nu} \xi^\mu \right) .
+\ee
+To prove (\ref{e:evo:var_FFxidV}), we need to show that
+$F^{\nu\sigma} \nabla_\nu \delta A_\sigma \xi^\mu = \nabla_\nu \Omega^{\mu\nu}$.
+
+to be continued...
 \end{proof}
 
 \begin{remark}
