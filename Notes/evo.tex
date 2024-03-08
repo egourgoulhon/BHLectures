@@ -686,7 +686,7 @@ $\delta \w{\eta}_{(i)} = 0$.
 By virtue of Einstein's equation~(\ref{e:fra:Einstein_eq_G}) (with $\Lambda=0$),
 we may substitute $\w{G}$ in the last integral of the general formula (\ref{e:evo:mass_variation_gal}) by
 $8\pi\w{T}$, where $\w{T}$ is given by Eq.~(\ref{e:fra:T_em}); we get
-\be
+\be \label{e:evo:delta_M_em_prov}
      \delta  M_\infty = \sum_{k = 1}^K
     \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
@@ -710,10 +710,10 @@ where the last equality stems from the source-free
 Maxwell equation $\nabla^\rho F_{\rho\mu} = 0$ [Eq.~(\ref{e:fra:Maxwell_comp}) with $j^\alpha=0$].
 We may then use Lemma~\ref{p:sta:flux_div_2_form} to turn the first term in $I$ into a surface
 integral:
-\[
+\be \label{e:evo:I_prov}
     I = \frac{1}{2\mu_0} \int_{\Sp_{\rm int}} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
         - \frac{1}{4\mu_0} \int_\Sigma F_{\mu\nu} F^{\mu\nu} \xi^\rho \D V_\rho ,
-\]
+\ee
 where $\Sp_{\rm int} := \cup_{k=1}^K \Sp_k$ is the inner boundary of $\Sigma$ ($\Sp_k := \Hor_k \cup \Sigma$)
 and we have set the surface integral at infinity to zero, thanks to the decay of $\w{F}$ and $\w{A}$, at
 least as $1/r^{n-2}$ and $1/r^{n-3}$ respectively. Let us evaluate the variation of the integral over $\Sigma$.
@@ -754,12 +754,57 @@ Hence
             \label{e:evo:var_FFxidV}
 \eea
 where
-\be
+\be \label{e:evo:def_Omega_AFxi}
     \Omega^{\mu\nu} := \delta A_\sigma \left( F^{\sigma\mu} \xi^\nu - F^{\sigma\nu} \xi^\mu \right) .
 \ee
 To prove (\ref{e:evo:var_FFxidV}), we need to show that
 $F^{\nu\sigma} \nabla_\nu \delta A_\sigma \, \xi^\mu = \nabla_\nu \Omega^{\mu\nu}$.
-
+This is easily done by a direct computation of $\nabla_\nu  \Omega^{\mu\nu}$ from (\ref{e:evo:def_Omega_AFxi}),
+using $\nabla_\nu \xi^\nu = 0$ (Killing equation) and $\nabla_\nu F^{\sigma\nu} = 0$ (source-free Maxwell equation):
+\[
+    \nabla_\nu \Omega^{\mu\nu} = \nabla_\nu \delta A_\sigma  F^{\sigma\mu} \xi^\nu
+    - \nabla_\nu \delta A_\sigma  \underbrace{F^{\sigma\nu}}_{-F^{\nu\sigma}} \xi^\mu
+    + \delta A_\sigma ( \nabla_\nu F^{\sigma\mu} \xi^\nu  + F^{\sigma\mu} \underbrace{\nabla_\nu \xi^\nu}_{0}
+    - \underbrace{\nabla_\nu F^{\sigma\nu}}_{0} \xi^\mu  - F^{\sigma\nu} \nabla_\nu \xi^\mu ) .
+\]
+Expressing the symmetry properties $\Lie{\xi}\!\vvw{F} = 0$
+and $\Lie{\xi}\delta \w{A} = 0$ as respectively $\xi^\nu \nabla_\nu F^{\sigma\mu} - F^{\sigma\nu} \nabla_\nu \xi^\mu =
+F^{\nu\mu} \nabla_\nu \xi^\sigma$ and $\xi^\nu \nabla_\nu \delta A_\sigma = - \delta A_\nu \nabla_\sigma \xi^\nu$
+[cf. Eq.~(\ref{e:bas:Lie_der_comp_nab})],
+we get
+\[
+    \nabla_\nu \Omega^{\mu\nu} = - F^{\sigma\mu} \delta A_\nu \nabla_\sigma \xi^\nu
+        + F^{\nu\sigma} \nabla_\nu \delta A_\sigma \, \xi^\mu
+        + \delta A_\sigma F^{\nu\mu} \nabla_\nu \xi^\sigma = F^{\nu\sigma} \nabla_\nu \delta A_\sigma \, \xi^\mu .
+\]
+Hence Eq.~(\ref{e:evo:var_FFxidV}) holds. We may then use expression~(\ref{e:evo:I_prov}) to write the variation of $I$
+as
+\[
+    \delta I = \frac{1}{2\mu_0} \, \delta \int_{\Sp_{\rm int}} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
+        - \frac{1}{\mu_0} \int_\Sigma \nabla^\nu \Omega_{\mu\nu} \, \D V^\mu
+        + \frac{1}{2} \int_\Sigma T^{\mu\nu} h_{\mu\nu} \,  \xi^\rho \D V_\rho .
+\]
+Since $\w{\Omega}$ is antisymmetric, $\Omega_{\mu\nu}$ are the components of a 2-form and we may invoke
+Lemma~\ref{p:sta:flux_div_2_form} to express the second integral as a flux integral through $\Sp_{\rm int}$
+(setting to zero the flux through $\Sp_{\infty}$ due to the fast decay of $\w{A}$ and $\w{F}$ and hence of
+$\w{\Omega}$). We thus get
+\[
+  \delta I = \frac{1}{2\mu_0} \, \delta \int_{\Sp_{\rm int}} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
+  + \frac{1}{\mu_0}  \int_{\Sp_{\rm int}} \delta A_\rho F^\rho_{\ \, \mu} \xi_\nu \, \D S^{\mu\nu}
+  + \frac{1}{2} \int_\Sigma T^{\mu\nu} h_{\mu\nu} \,  \xi^\rho \D V_\rho ,
+\]
+where we have used Eq.~(\ref{e:evo:def_Omega_AFxi}) and the antisymmetry of $\D S^{\mu\nu}$ to write
+$\Omega_{\mu\nu} \D S^{\mu\nu} = \delta A_\rho ( F^\rho_{\ \, \mu} \xi_\nu - F^\rho_{\ \, \nu} \xi_\mu)  \D S^{\mu\nu}
+= 2 \delta A_\rho F^\rho_{\ \, \mu} \xi_\nu\, \D S^{\mu\nu}$.
+Substituting the above expression for $\delta I$ into Eq.~(\ref{e:evo:delta_M_em_prov}) leads to
+\[
+     \delta  M_\infty = \sum_{k = 1}^K
+    \left(
+    \frac{\kappa_{k}}{8\pi}\, \delta A_k
+    +  \sum_{i=1}^{L_{k}} \Omega^{(i)} \, \delta J_{\Hor_k}^{(i)} \right)
+    - \frac{1}{2\mu_0} \, \delta \int_{\Sp_{\rm int}} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
+    - \frac{1}{\mu_0}  \int_{\Sp_{\rm int}} \delta A_\rho F^\rho_{\ \, \mu} \xi_\nu \, \D S^{\mu\nu} .
+\]
 to be continued...
 \end{proof}
 
