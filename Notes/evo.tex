@@ -140,11 +140,13 @@ $\delta J_{\Hor_k}^{(i)}$ of the Komar angular momenta by
         - \frac{1}{8\pi} \,
    \delta  \int_{\Sigma} G_{\mu\nu} \, \xi^\mu \D V^\nu ,  \label{e:evo:mass_variation_gal}
 \eea
-where $\Sigma$ is any asymptotically flat spacelike hypersurface, the inner boundary
-of which is a cross-section of the event horizon, i.e. some union of cross-sections
-of the connected components $\Hor_{k}$,
+where (i) $\Sigma$ is any asymptotically flat spacelike hypersurface, the inner boundary
+of which is an axisymmetric cross-section $\Sp$ of the event horizon, i.e.
+$\Sp = \cup_{k=1}^K \Sp_k$ with $\Sp_k := \Sigma\cap\Hor_k$ and
+$\w{\eta}_{\Hor_k(i)}$ tangent to $\Sp_k$ for $i\in\{1,\ldots,L_k\}$,
+(ii)
 $\w{G}$ is the Einstein tensor of $\w{g}$
-and $\D\w{V}$
+and (iii) $\D\w{V}$
 is the normal volume element vector of $\Sigma$, as defined by Eq.~(\ref{e:sta:normal_vol_element}).
 \end{prop}
 
@@ -398,7 +400,7 @@ with
     & & - \frac{1}{8\pi} \delta \int_{\Sigma} R_{\mu\nu} \, \xi^\nu \D V^\mu .  \nonumber
 \eea
 We note that the inner boundary of the hypersurface $\Sigma$ is
-$\Sp_{\rm int} = \cup_{k=1}^K \Sp_k$, so that the sum of the integrals over the $\Sp_k$'s is
+$\Sp_{\rm int} = \Sp = \cup_{k=1}^K \Sp_k$, so that the sum of the integrals over the $\Sp_k$'s is
 actually an integral over $\Sp_{\rm int}$ and we may apply formula (\ref{e:sta:flux_div_2form})
 regarding the flux of a 2-form (here $\w{\omega}$) to write
 \bea
@@ -711,10 +713,10 @@ Maxwell equation $\nabla^\rho F_{\rho\mu} = 0$ [Eq.~(\ref{e:fra:Maxwell_comp}) w
 We may then use Lemma~\ref{p:sta:flux_div_2_form} to turn the first term in $I$ into a surface
 integral:
 \be \label{e:evo:I_prov}
-    I = \frac{1}{2\mu_0} \int_{\Sp_{\rm int}} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
+    I = \frac{1}{2\mu_0} \int_{\Sp} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
         - \frac{1}{4\mu_0} \int_\Sigma F_{\mu\nu} F^{\mu\nu} \xi^\rho \D V_\rho ,
 \ee
-where $\Sp_{\rm int} := \cup_{k=1}^K \Sp_k$ is the inner boundary of $\Sigma$ ($\Sp_k := \Hor_k \cup \Sigma$)
+where $\Sp := \cup_{k=1}^K \Sp_k$ is the inner boundary of $\Sigma$ ($\Sp_k := \Hor_k \cup \Sigma$)
 and we have set the surface integral at infinity to zero, thanks to the decay of $\w{F}$ and $\w{A}$, at
 least as $1/r^{n-2}$ and $1/r^{n-3}$ respectively. Let us evaluate the variation of the integral over $\Sigma$.
 We have, using $\delta \xi^\rho = 0$ [Eq.~(\ref{e:evo:delta_xi_eta})],
@@ -780,31 +782,89 @@ we get
 Hence Eq.~(\ref{e:evo:var_FFxidV}) holds. We may then use expression~(\ref{e:evo:I_prov}) to write the variation of $I$
 as
 \[
-    \delta I = \frac{1}{2\mu_0} \, \delta \int_{\Sp_{\rm int}} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
+    \delta I = \frac{1}{2\mu_0} \, \delta \int_{\Sp} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
         - \frac{1}{\mu_0} \int_\Sigma \nabla^\nu \Omega_{\mu\nu} \, \D V^\mu
         + \frac{1}{2} \int_\Sigma T^{\mu\nu} h_{\mu\nu} \,  \xi^\rho \D V_\rho .
 \]
-Since $\w{\Omega}$ is antisymmetric, $\Omega_{\mu\nu}$ are the components of a 2-form and we may invoke
-Lemma~\ref{p:sta:flux_div_2_form} to express the second integral as a flux integral through $\Sp_{\rm int}$
+In view of the definition (\ref{e:evo:def_Omega_AFxi}), $\Omega^{\mu\nu}$ is antisymmetric,
+so that $\Omega_{\mu\nu}$ describes a 2-form and we may invoke
+Lemma~\ref{p:sta:flux_div_2_form} with $\Sp_{\rm int} := \Sp$ to express the second integral as a flux integral through $\Sp$
 (setting to zero the flux through $\Sp_{\infty}$ due to the fast decay of $\w{A}$ and $\w{F}$ and hence of
 $\w{\Omega}$). We thus get
 \[
-  \delta I = \frac{1}{2\mu_0} \, \delta \int_{\Sp_{\rm int}} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
-  + \frac{1}{\mu_0}  \int_{\Sp_{\rm int}} \delta A_\rho F^\rho_{\ \, \mu} \xi_\nu \, \D S^{\mu\nu}
+  \delta I = \frac{1}{2\mu_0} \, \delta \int_{\Sp} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
+  + \frac{1}{\mu_0}  \int_{\Sp} \delta A_\sigma F^\sigma_{\ \, \mu} \xi_\nu \, \D S^{\mu\nu}
   + \frac{1}{2} \int_\Sigma T^{\mu\nu} h_{\mu\nu} \,  \xi^\rho \D V_\rho ,
 \]
 where we have used Eq.~(\ref{e:evo:def_Omega_AFxi}) and the antisymmetry of $\D S^{\mu\nu}$ to write
-$\Omega_{\mu\nu} \D S^{\mu\nu} = \delta A_\rho ( F^\rho_{\ \, \mu} \xi_\nu - F^\rho_{\ \, \nu} \xi_\mu)  \D S^{\mu\nu}
-= 2 \delta A_\rho F^\rho_{\ \, \mu} \xi_\nu\, \D S^{\mu\nu}$.
+$\Omega_{\mu\nu} \D S^{\mu\nu} = \delta A_\sigma ( F^\sigma_{\ \, \mu} \xi_\nu - F^\sigma_{\ \, \nu} \xi_\mu)  \D S^{\mu\nu}
+= 2 \delta A_\sigma F^\sigma_{\ \, \mu} \xi_\nu\, \D S^{\mu\nu}$.
 Substituting the above expression for $\delta I$ into Eq.~(\ref{e:evo:delta_M_em_prov}) leads to
-\[
+\be \label{e:evo:delta_M_infty_EM_prov}
      \delta  M_\infty = \sum_{k = 1}^K
     \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
-    +  \sum_{i=1}^{L_{k}} \Omega^{(i)} \, \delta J_{\Hor_k}^{(i)} \right)
-    - \frac{1}{2\mu_0} \, \delta \int_{\Sp_{\rm int}} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
-    - \frac{1}{\mu_0}  \int_{\Sp_{\rm int}} \delta A_\rho F^\rho_{\ \, \mu} \xi_\nu \, \D S^{\mu\nu} .
+    +  \sum_{i=1}^{L} \Omega^{(i)} \, \delta J_{\Hor_k}^{(i)} \right)
+    + \delta M_\infty^{\rm EM} ,
+\ee
+where the electromagnetic part is defined by
+\[
+   \delta M_\infty^{\rm EM} := - \frac{1}{2\mu_0} \, \delta \int_{\Sp} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
+    - \frac{1}{\mu_0}  \int_{\Sp} \delta A_\sigma F^\sigma_{\ \, \mu} \xi_\nu \, \D S^{\mu\nu} .
 \]
+Let us use $\w{\xi} = \w{\chi} - \sum_{i=1}^{L} \Omega^{(i)} \w{\eta}_{(i)}$ to let appear the null normal
+$\w{\chi}$ of the event horizon. Taking into account that $\eta_{(i)\nu}\, \D S^{\mu\nu} = 0$
+for $\w{\eta}_{(i)}$ is tangent to $\Sp$, we get
+\[
+   \delta M_\infty^{\rm EM} = - \frac{1}{2\mu_0} \, \delta \int_{\Sp}
+   \left( A_\sigma \chi^\sigma - \sum_{i=1}^L \Omega^{(i)} A_\sigma  \eta_{(i)}^\sigma \right) F_{\mu\nu} \D S^{\mu\nu}
+    - \frac{1}{\mu_0}  \int_{\Sp} \delta A_\sigma F^\sigma_{\ \, \mu} \chi_\nu \, \D S^{\mu\nu} .
+\]
+Now, on each connected component $\Sp_k$ of $\Sp$, Eq.~(\ref{e:sta:FmnDSmn}) gives
+$F_{\mu\nu} \D S^{\mu\nu} = 2\mu_0 \sigma_k \D S $, where
+$\sigma_k$ is the effective electric charge density of $\Sp_k$ (cf. Property~\ref{p:sta:electromag_Killing_hor})
+and $\D S := \sqrt{q}\,  \D^{n-2} x$ is the area element of $\Sp_k$.
+Furthermore, thanks to Eq.~(\ref{e:sta:dS_chi_k}),
+$\chi_\nu \, \D S^{\mu\nu} = \chi_\nu (\chi^\mu k^\nu - k^\nu \chi^\nu) \D S = - \chi^\mu \D S$.
+Hence
+\[
+    \delta M_\infty^{\rm EM} = \sum_{k=1}^K \left[
+    - \delta \int_{\Sp_k} A_\sigma \chi^\sigma \sigma_k \D S
+    + \sum_{i=1}^L \delta \int_{\Sp_k}  \Omega^{(i)} A_\sigma  \eta_{(i)}^\sigma \sigma_k \D S
+    + \frac{1}{\mu_0}  \int_{\Sp_k} \delta A_\sigma F^\sigma_{\ \, \mu} \chi^\mu \, \D S \right] .
+\]
+But, $F^\sigma_{\ \, \mu} \chi^\mu  = E^\sigma  = \mu_0 \sigma_k \chi^\sigma$
+on $\Sp_k$
+[Eqs.~(\ref{e:sta:def_elec_field}) and (\ref{e:sta:E_collin_chi})]. Consequently,
+the last integral cancels out with the part $\delta A_\sigma \chi^\sigma \sigma_k \D S$
+arising from the first integral and we are left with
+\[
+    \delta M_\infty^{\rm EM} = \sum_{k=1}^K \left[
+    - \int_{\Sp_k} A_\sigma \delta\chi^\sigma \, \sigma_k \D S
+    - \int_{\Sp_k} A_\sigma \chi^\sigma  \delta(\sigma_k \D S)
+    + \sum_{i=1}^L \delta \int_{\Sp_k}  \Omega^{(i)} A_\sigma  \eta_{(i)}^\sigma \sigma_k \D S \right] .
+\]
+Now, from Eq.~(\ref{e:evo:delta_chi}), $\delta\chi^\sigma = \sum_{i=1}^L \delta  \Omega^{(i)} \, \eta_{(i)}^\sigma$,
+so that the first integral cancels out with the $\delta \Omega^{(i)}$ part arising from the last
+integral. Moreover, on $\Sp_k$, $A_\sigma \chi^\sigma = - \Phi_{\Hor_k} =\mathrm{const}$ [Eq.~(\ref{e:sta:Phi_A_chi}) with the
+constant set to zero by a proper choice of $\w{A}$], so that the second integral can be written
+as $- \Phi_{\Hor_k} \delta Q_{\Hor_k}$, where use has been made of Eq.~(\ref{e:sta:Q_sigma}) to
+let appear the electric charge $Q_{\Hor_k}$. Hence, we get
+\[
+    \delta M_\infty^{\rm EM} = \sum_{k=1}^K \left[ \Phi_{\Hor_k} \delta  Q_{\Hor_k}
+    + \sum_{i=1}^L  \Omega^{(i)} \delta \int_{\Sp_k}  A_\sigma  \eta_{(i)}^\sigma \sigma_k \D S \right] .
+\]
+Consequently, we may rewrite Eq.~(\ref{e:evo:delta_M_infty_EM_prov}) as
+\be
+\delta  M_\infty = \sum_{k = 1}^K
+    \left[
+    \frac{\kappa_{k}}{8\pi}\, \delta A_k
+    +  \sum_{i=1}^{L} \Omega^{(i)} \left( \delta J_{\Hor_k}^{(i)}
+     + \delta \int_{\Sp_k}  A_\sigma  \eta_{(i)}^\sigma \sigma_k \D S \right)
+    + \Phi_{\Hor_k} \delta  Q_{\Hor_k} \right] .
+\ee
+
+
 to be continued...
 \end{proof}
 
