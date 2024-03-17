@@ -91,7 +91,7 @@ where $x^a = (x^2, \ldots, x^{n-1})$ is a coordinate system on $\Sp$ and $q$ is
 the determinant with respect to these coordinates of the Riemannian metric $\w{q}$
 induced by $\w{g}$ on $\Sp$.
 
-\begin{prop}[area of a non-exapnding horizon]
+\begin{prop}[area of a non-expanding horizon]
 \label{p:neh:invariance_area}
 The area $A$ does not depend on the choice of the complete cross-section $\Sp$
 of $\Hor$.
@@ -306,13 +306,14 @@ We naturally call ${}^\Hor\!\wnab$ the \defin{affine connection induced on $\Hor
 by}\index{induced! affine connection}\index{affine!connection!induced --}\index{connection!induced --} $\wnab$.
 \end{prop}
 
-A geometrical consequence of the identity
-${}^\Hor\!\wnab_{\w{u}}\w{v} = \wnab_{\w{u}}\w{v}$ is
-that $(\Hor, {}^\Hor\!\wnab)$ is a \defin{totally geodesic submanifold}\index{totally geodesic} of $(\M,\w{g})$:
+As a consequence of the identity
+${}^\Hor\!\wnab_{\w{u}}\w{v} = \wnab_{\w{u}}\w{v}$ for tangent vector fields to $\Hor$,
+$(\Hor, {}^\Hor\!\wnab)$ is a \defin{totally geodesic submanifold}\index{totally geodesic}
+of $(\M,\w{g})$,
 i.e. any geodesic of $(\Hor, {}^\Hor\!\wnab)$ is also a geodesic of $(\M,\w{g})$
 (cf. the historical note on p.~\pageref{h:neh:NEH}).
 
-\begin{prop}[horizon-intrinsic covariant derivative of the null normal]
+\begin{prop}[horizon-intrinsic derivative of the null normal]
 \label{p:neh:Hnab_l}
 Under the hypotheses of Property~\ref{p:neh:invariance_of_2metric},
 the covariant derivative of the null normal $\wl$ with respect to the affine
@@ -333,22 +334,27 @@ By definition of the covariant derivative with respect to an
 affine connection [cf. Eq.~(\ref{e:bas:def_cov_deriv}) in Appendix~\ref{s:bas}],
 ${}^\Hor\!\wnab \wl$ is a tensor field of type $(1,1)$ on $\Hor$,
 the action of which on any pair
-$(\w{a}, \w{u})$ formed by a 1-form $\w{a}$ and a vector field $\w{u}$
+$(\w{a}, \w{u})$ formed by a 1-form $\w{a}$ on $\Hor$ and a vector field $\w{u}$
 on $\Hor$ is
 \[
     {}^\Hor\!\wnab \wl (\w{a}, \w{u}) = \langle \w{a}, {}^\Hor\!\wnab_{\w{u}} \wl \rangle .
 \]
+Let $\w{\bar{a}}$ be the extension of $\w{a}$ to a 1-form on $\M$ defined by
+$\w{\bar{a}} = \w{a} \circ \w{\Pi}$, where $\w{\Pi}$ is the projector onto $\Hor$
+along $\w{k}$ [Eq.~(\ref{e:def:def_proj_H_along_k})]. Since ${}^\Hor\!\wnab_{\w{u}} \wl$
+is tangent to $\Hor$, we have
+$\langle \w{a}, {}^\Hor\!\wnab_{\w{u}} \wl \rangle = \langle \w{\bar{a}}, {}^\Hor\!\wnab_{\w{u}} \wl \rangle$.
 In view of (\ref{e:neh:def_induced_connection}) and using Eq.~(\ref{e:def:nab_l_Theta})
-to express $\wnab\wl$, we get
+to express $\wnab\wl$, we then get
 \begin{align}
-    {}^\Hor\!\wnab \wl (\w{a}, \w{u}) & = \langle \w{a}, \wnab_{\w{u}} \wl \rangle
-       = a_\mu u^\nu \nabla_\nu \ell^\mu
-       = a_\mu u^\nu \Big( \underbrace{\Theta^\mu_{\ \, \nu}}_{0} + \omega_\nu \ell^\mu
+    {}^\Hor\!\wnab \wl (\w{a}, \w{u}) & = \langle \w{\bar{a}}, \wnab_{\w{u}} \wl \rangle
+       = \bar{a}_\mu u^\nu \nabla_\nu \ell^\mu
+       = \bar{a}_\mu u^\nu \Big( \underbrace{\Theta^\mu_{\ \, \nu}}_{0} + \omega_\nu \ell^\mu
             - \ell_\nu k^\rho \nabla_\rho \ell^\mu \Big)
         \nonumber \\
-        & = a_\mu \ell^\mu \, \omega_\nu u^\nu - \underbrace{\ell_\nu u^\nu}_{0}
-            a_\mu k^\rho \nabla_\rho \ell^\mu
-             = \langle \w{a}, \wl \rangle \, \langle \w{\omega}, \w{u} \rangle
+        & = \bar{a}_\mu \ell^\mu \, \omega_\nu u^\nu - \underbrace{\ell_\nu u^\nu}_{0}
+            \bar{a}_\mu k^\rho \nabla_\rho \ell^\mu
+             = \langle \w{\bar{a}}, \wl \rangle \, \langle \w{\omega}, \w{u} \rangle
              = \langle \w{a}, \wl \rangle \, \langle {}^\Hor\!\w{\omega}, \w{u} \rangle . \nonumber
 \end{align}
 Given the definition of a tensor product,

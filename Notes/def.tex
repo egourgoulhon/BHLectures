@@ -788,7 +788,7 @@ $\w{g}$ on a cross-section $\Sp$,
 i.e. the bilinear form defined at any point $p\in\Sp$ by
 \be \label{e:def:def_q_S}
     \forall (\w{u},\w{v})\in T_p\Sp\times T_p\Sp, \quad
-     \w{q}(\w{u},\w{v}) = \w{g}(\w{u},\w{v}) .
+     \w{q}(\w{u},\w{v}) := \w{g}(\w{u},\w{v}) .
 \ee
 Saying that $\Sp$ is spacelike (Property~\ref{p:def:spacelike_cs})
 is equivalent to saying that $\w{q}$ is
@@ -872,11 +872,11 @@ through $p$, $\w{k}$ does depend on $\Sp$.
 The bilinear form $\w{q}$, which has been defined only on $T_p\Sp$ via (\ref{e:def:def_q_S}),
 can be extended to all vectors of $T_p\M$ by setting
 \be \label{e:def:q_g_k_l}
-    \encadre{ \w{q} = \w{g} + \uu{\el}\otimes\uu{k} + \uu{k}\otimes\uu{\el} } ,
+    \encadre{ \w{q} := \w{g} + \uu{\el}\otimes\uu{k} + \uu{k}\otimes\uu{\el} } ,
 \ee
 or, in index notation,
 \be
-   \encadre{ q_{\alpha\beta} = g_{\alpha\beta} + \el_\alpha k_\beta + k_\alpha \el_\beta }.
+   \encadre{ q_{\alpha\beta} := g_{\alpha\beta} + \el_\alpha k_\beta + k_\alpha \el_\beta }.
 \ee
 It obeys
 \be \label{e:def:q_all_vectors}
@@ -1031,7 +1031,7 @@ the tensor of type $(1,1)$ defined by
 \ee
 or, in index notation,
 \be
-   \encadre{ q^\alpha_{\ \, \beta} = \delta^\alpha_{\ \, \beta}
+   \encadre{ q^\alpha_{\ \, \beta} := \delta^\alpha_{\ \, \beta}
         + \el^\alpha \, k_\beta + k^\alpha \, \el_\beta },
 \ee
 is nothing but the \defin{orthogonal projector}\index{orthogonal!projector} onto the cross-section $\Sp$:
@@ -1187,8 +1187,8 @@ Therefore, the area of $\delta S_\varepsilon$ is
 \ee
 where $q(\varepsilon)$ stands for the determinant of the components with respect to
 the coordinates $(x^a)$ of the
-metric $\w{q}(\varepsilon)$ induced by $\w{g}$ on $\Sp_\varepsilon$. Since
-$\Sp_\varepsilon$ is spacelike (cf. above), $\w{q}(\varepsilon)$ is positive definite, so
+metric $\w{q}_\veps$ induced by $\w{g}$ on $\Sp_\varepsilon$. Since
+$\Sp_\varepsilon$ is spacelike (cf. above), $\w{q}_\veps$ is positive definite, so
 that $q(\varepsilon) > 0$.
 In view of (\ref{e:def:A_sqrt_q})-(\ref{e:def:A_eps_sqrt_q}), the definition (\ref{e:def:def_expansion})
 of the expansion of $\Sp$ along $\wl$ can be rewritten as
@@ -1262,9 +1262,9 @@ in Appendix~\ref{s:bas}, Eq.~(\ref{e:def:theta_Lie_ln_q}) can be rewritten as
 \[
     \theta_{(\wl)} = \frac{1}{2} \, \mathrm{tr} \left(Q^{-1} \times \Lie{\el} Q \right) ,
 \]
-when $Q$ is the matrix representing the components of $\w{q}$ with respect to the
-coordinates $(x^a) = (x^2,\ldots, x^{n-1})$. In index notation, we have
-$Q = (q_{ab})$ and $Q^{-1} = (q^{ab})$. Hence
+where $Q$ is the matrix representing the components of $\w{q}$ with respect to the
+coordinates $(x^a) = (x^2,\ldots, x^{n-1})$: $Q = (q_{ab})$. Since
+$Q^{-1} = (q^{ab})$, there comes
 \be \label{e:def:theta_q_ab}
     \encadre{ \theta_{(\wl)} = \frac{1}{2} \, q^{ab} \Liec{\el} q_{ab} } .
 \ee
@@ -1280,10 +1280,10 @@ of bilinear forms on $\Sp$ defined by the following action on any pair of vector
 tangent to $\Sp$ at the same point $p$:
 \be \label{e:def:def_Lie_ell_q}
    \encadre{ \Lie{\el} \w{q}\, (\w{u},\w{v}) := \lim_{\veps\to 0} \frac{1}{\veps}
-    \left[ \w{q}(\veps)\!\left( \Phi_{\veps*} \w{u}, \Phi_{\veps*} \w{v} \right)
+    \left[ \w{q}_\veps\!\left( \Phi_{\veps*} \w{u}, \Phi_{\veps*} \w{v} \right)
         - \w{q}(\w{u}, \w{v}) \right] },
 \ee
-where, as above, $\w{q}(\veps)$ is the metric induced by $\w{g}$ on the $(n-2)$-surface
+where, as above, $\w{q}_\veps$ is the metric induced by $\w{g}$ on the $(n-2)$-surface
 $\Sp_\veps$ deduced from $\Sp$ by Lie dragging along $\wl$ by the quantity $\veps$
 and
 $\Phi_{\veps*} \w{u}$ (resp. $\Phi_{\veps*} \w{v}$) is the tangent vector to $\Sp_\veps$
@@ -1542,7 +1542,7 @@ for vectors of $T_p\Sp$ by Eq.~(\ref{e:def:def_Lie_ell_q}),
 to all vectors of $T_p\M$, for any $p\in\Sp$, via
 \be
     \forall (\w{u},\w{v}) \in T_p\M \times T_p\M, \quad
-         \vw{q}^* \Lie{\el} \w{q}\,  (\w{u}, \w{v}) =
+         \vw{q}^* \Lie{\el} \w{q}\,  (\w{u}, \w{v}) :=
          \Lie{\el} \w{q} \left( \vw{q}(\w{u}), \vw{q}(\w{v}) \right) .
 \ee
 Since $\w{q}$ is symmetric, it is clear from the above definition that
@@ -1628,8 +1628,8 @@ $\theta_{(\wl)}$:
 \be
    \encadre{ \theta_{(\wl)} = g^{\mu\nu} \Theta_{\mu\nu} = q^{\mu\nu} \Theta_{\mu\nu} = \Theta^\mu_{\ \, \mu} }.
 \ee
-The trace-free part of $\w{\Theta}$ is called the \defin{shear tensor}\index{shear!tensor}
-of $\Sp$:
+The trace-free part of $\w{\Theta}$ is called the
+\defin{shear tensor of $\Sp$ along $\wl$}\index{shear!tensor}:
 \be \label{e:def:def_shear}
     \encadre{ \w{\sigma} := \w{\Theta} - \frac{1}{n-2} \theta_{(\wl)} \, \w{q} } ,
 \ee
