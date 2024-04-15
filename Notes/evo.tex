@@ -1028,7 +1028,8 @@ where $u^t$ and $\Omega$ are two scalar fields. $\Omega$ is called the
 where $t$ and $\ph$ are adapted coordinates: $\wpar_t = \w{\xi}$ and $\wpar_\ph = \w{\eta}$.
 The notation $u^t$ reminds that this factor is the component of $\w{u}$ along $\wpar_t$ in
 adapted coordinates. It is
-fully determined by $\Omega$ and the three scalar products formed from the Killing vectors:
+fully determined by $\Omega$ and the three scalar products formed from the
+two Killing vectors:
 \be
     u^t = \left( - \w{\xi}\cdot\w{\xi} - 2 \Omega \w{\xi}\cdot\w{\eta}
                  - \Omega^2 \w{\eta}\cdot\w{\eta} \right) ^{-1/2} .
@@ -1624,7 +1625,7 @@ cross-section $\Sp_1$.
 \end{prop}
 
 
-\subsection{Hawking radiation and Bekenstein-Hawking entropy}
+\subsection{Hawking radiation}
 
 From a pure classical (i.e. non-quantum) point of view, if one would like to attribute some
 temperature $T$ to a black hole, it should be $T=0$, since a black hole does not radiate at all.
@@ -1645,8 +1646,8 @@ is
 \be \label{e:evo:Hawking_temp}
     \encadre{T_{\rm H} = \frac{\hbar}{k_{\rm B}} \frac{\kappa}{2\pi} } ,
 \ee
-where $\hbar$ is the reduced Planck constant and
-$k_{\rm B}$ is the Botlzmann constant. $T_{\rm H}$ is called the
+where $\hbar \simeq 1.05457\; 10^{-34} {\rm\; J\, s}$ is the reduced Planck constant and
+$k_{\rm B} \simeq 1.38065\; 10^{-23} {\rm\;  J\, K}^{-1}$ is the Botlzmann constant. $T_{\rm H}$ is called the
 \defin{Hawking temperature}\index{Hawking!temperature}.
 \end{prop}
 
@@ -1654,8 +1655,15 @@ We shall not establish this property here; this is done in many textbooks,
 e.g. \cite{Wald84,Wald94,FroloN98,Carro04}. Rather, we shall limit
 ourselves to a few remarks:
 
+\begin{remark}\label{r:evo:Hawking_temp_units}
+Formula~(\ref{e:evo:Hawking_temp}) is given within the
+units $c=1$, which we are using throughout. If one restores $c$ and assumes
+that $\kappa$ has the dimension of an acceleration, the formula should read
+$T_{\rm H} = \frac{\hbar}{k_{\rm B}} \frac{\kappa}{2\pi c}$.
+\end{remark}
+
 \begin{remark}
-The phenomenon of Hawking radiation is essentially kinematics and is independent from any field equation for the
+The phenomenon of Hawking radiation is essentially kinematic and does not depend on any field equation for the
 metric $\w{g}$. In particular it does not rely on the Einstein equation.
 Moreover, the Hawking temperature, as given by formula~(\ref{e:evo:Hawking_temp}), is independent from the spacetime dimension
 (see e.g. Ref.~\cite{KantiW15} for a detailed discussion).
@@ -1675,9 +1683,9 @@ of 4-velocity $\w{u} = \w{\xi} / V$, where $V := \sqrt{-\w{\xi}\cdot\w{\xi}}$
 Then these observers find the temperature of the Hawking radiation to
 be $T = T_{\rm H} / V$. In particular, $T\to +\infty$ when the static observers
 are located infinitely close to the event horizon ($V\to 0$). Note that those observers are
-also experiency a diverging acceleration [cf. Eq.~(\ref{e:neh_diverging_accel})].
+also experiencing a diverging acceleration [cf. Eq.~(\ref{e:neh_diverging_accel})].
 On the contrary, a freely-falling observer crossing the horizon measures
-$T=0$, i.e. does not detect the Hawking radiation.
+$T=0$, i.e. she does not detect the Hawking radiation.
 \end{remark}
 
 
@@ -1692,17 +1700,39 @@ $k_{\rm B} T > m$, where $m$ is the particle mass.
 The observed radiation spectrum at infinity is not exactly that
 of a black body\index{black!body} of temperature $T_{\rm H}$: it is corrected
 by greybody factors, which take into account the interaction of the radiation
-with the spacetime curvature.
+with the spacetime curvature (backscatterng).
 \end{remark}
 
 For a Kerr black hole, the surface gravity is given by formula (\ref{e:ker:kappa_m_a}),
 so that the Hawking temperature can be expressed in terms
 of the black hole mass $M=m$ and reduced angular momentum parameter
-$\bar{a} := a/m = J/M^2$:
+$\bar{a} := a/m = J/M^2$ ($0\leq \bar{a}\leq 1$):
 \be
-    T_{\rm H} = \frac{\hbar}{k_{\rm B}} \frac{1}{8\pi M}
+    T_{\rm H} = \frac{\hbar}{k_{\rm B}} \frac{c^3}{8\pi G M}
     \frac{2 \sqrt{1 - \bar{a}^2}}{1 + \sqrt{1 - \bar{a}^2}} .
 \ee
+Note that we have restored the gravitational constant $G$ and the speed of light $c$
+(cf. Remark~\ref{r:evo:Hawking_temp_units}). Numerically, we get
+\be \label{e:evo:T_H_Kerr_num}
+    T_{\rm H} = 6.17\; 10^{-8} \left( \frac{M_\odot}{M} \right) \frac{2 \sqrt{1 - \bar{a}^2}}{1 + \sqrt{1 - \bar{a}^2}} {\rm\; K} .
+\ee
+Hence, for a Schwarzschild black hole ($\bar{a}=0$),
+$T_{\rm H} = 6.17\; 10^{-8} ({M_\odot}/{M}) {\rm\; K}$. For astrophysical black holes,
+this leads to tiny values: $T_{\rm H} \simeq 4\; 10^{-9} {\rm\; K}$
+for a $15 \, M_\odot$ stellar black hole (e.g. Cyg X-1, cf. Table~\ref{t:ges:time_free_fall}),
+$T_{\rm H} \simeq 1.6\; 10^{-14} {\rm\; K}$ for the Milky Way central black hole Sgr~A*
+($M=4.1\; 10^{6} \, M_\odot$)
+and $T_{\rm H} \simeq 9\; 10^{-18} {\rm\; K}$ for M87*
+($M=6.5\; 10^{9} \, M_\odot$). The value $T_{\rm H} = 1 {\rm\; K}$ is achieved
+for a black hole of mass $6.17\; 10^{-8} \, M_\odot$, i.e. $2\, \%$ of the
+Earth's mass.
+
+Another conclusion that one can draw from formula (\ref{e:evo:T_H_Kerr_num}) is
+that $T_{\rm H}=0$ for an extremal Kerr black hole ($\bar{a}=1$): such a black
+hole does not emit any Hawking radiation.
+
+\subsection{Bekenstein-Hawking entropy}
+
 
 \subsection{The generalized second law}
 
