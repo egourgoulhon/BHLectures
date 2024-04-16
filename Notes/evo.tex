@@ -1567,7 +1567,7 @@ $\ell>0$. This appears clearly on the shadow picture of Fig.~\ref{f:gik:shadow_a
 where the part $\alpha>0$, which is due to photons
 with $\ell < 0$ (cf. Eq.~\ref{e:gik:shadow_param_eq_alpha}), is much larger than the part $\alpha<0$
 corresponding to $\ell > 0$. Consequently, the black hole absorbs more photons with $\ell < 0$
-than with $\ell>0$; this diminishes the increase of the black hole spin $a$ resulting form the accretion of  matter from the disk (which has a positive angular momentum). Thorne\index[pers]{Thorne, K.S.} has shown in 1974 \cite{Thorn74} that the balance between the two processes leads to a final reduced spin $a \simeq 0.998 \, m$, quite insensitive to the details
+than with $\ell>0$; this diminishes the increase of the black hole spin $a$ resulting form the accretion of  matter from the disk (which has a positive angular momentum). Thorne\index[pers]{Thorne, K.S.} has shown in 1974 \cite{Thorn74} that the balance between the two processes leads to a final spin parameter $a \simeq 0.998 \, m$, quite insensitive to the details
 of the emission mechanism in the accretion disk. This is close to, but strictly lower than, the critical
 value $a = m$ that would have yield a zero surface gravity. Hence, in this respect, we can say that
 astrophysical black holes absorbing matter from an accretion disk obey a kind of third law of thermodynamics.
@@ -1656,8 +1656,8 @@ e.g. \cite{Wald84,Wald94,FroloN98,Carro04}. Rather, we shall limit
 ourselves to a few remarks:
 
 \begin{remark}\label{r:evo:Hawking_temp_units}
-Formula~(\ref{e:evo:Hawking_temp}) is given within the
-units $c=1$, which we are using throughout. If one restores $c$ and assumes
+Formula~(\ref{e:evo:Hawking_temp}) is given for $c=1$
+units, which are used throughout the text. If one restores $c$ and considers
 that $\kappa$ has the dimension of an acceleration, the formula should read
 $T_{\rm H} = \frac{\hbar}{k_{\rm B}} \frac{\kappa}{2\pi c}$.
 \end{remark}
@@ -1665,29 +1665,52 @@ $T_{\rm H} = \frac{\hbar}{k_{\rm B}} \frac{\kappa}{2\pi c}$.
 \begin{remark}
 The phenomenon of Hawking radiation is essentially kinematic and does not depend on any field equation for the
 metric $\w{g}$. In particular it does not rely on the Einstein equation.
-Moreover, the Hawking temperature, as given by formula~(\ref{e:evo:Hawking_temp}), is independent from the spacetime dimension
-(see e.g. Ref.~\cite{KantiW15} for a detailed discussion).
+Moreover, the Hawking temperature (\ref{e:evo:Hawking_temp}) is independent from the spacetime dimension
+$n$ (see e.g. Ref.~\cite{KantiW15} for a detailed discussion).
 \end{remark}
 
-\begin{remark}
+\begin{remark}\label{r:evo:local_Hawking_rad}
 The Hawking temperature $T_{\rm H}$ is the radiation temperature measured
 infinitely far from the black hole; it is therefore not a ``local'' temperature
-at the level of the event horizon.
+at the level of the event horizon $\Hor$.
 More precisely, let us assume for simplicity that the black hole is non-rotating,
 (cf. Property~\ref{p:sta:xi_tangent_H}) and that its exterior is strictly static. In other words,
-the stationary Killing vector $\w{\xi}$ is assumed to be null on the event horizon and
+the stationary Killing vector $\w{\xi}$ is assumed to be null on $\Hor$  and
 timelike in the black hole exterior. Let us then consider static observers at a finite distance
-from the black hole, i.e. observers
+from $\Hor$, i.e. observers
 of 4-velocity $\w{u} = \w{\xi} / V$, where $V := \sqrt{-\w{\xi}\cdot\w{\xi}}$
-(cf. Eqs.~(\ref{e:neh:def_u_stationary_obs}) and (\ref{e:neh:def_V_norm_xi})).
+[cf. Eqs.~(\ref{e:neh:def_u_stationary_obs}) and (\ref{e:neh:def_V_norm_xi})].
 Then these observers find the temperature of the Hawking radiation to
-be $T = T_{\rm H} / V$. In particular, $T\to +\infty$ when the static observers
-are located infinitely close to the event horizon ($V\to 0$). Note that those observers are
+be\footnote{We may say
+that Hawking radiation obeys \defin{Tolman-Ehrenfest law}\index{Tolman-Ehrenfest law}, which
+states that the temperature $T$ of a medium in thermal equilibrium in a stationary gravitational field
+obeys $T V = \mathrm{const}$ \cite{SantiV19}.}
+\be \label{e:evo:Hawking_temp_local}
+    T = \frac{T_{\rm H}}{V} .
+\ee
+For infinitely distant observers, $V\to 1$ [cf. Eq.~(\ref{e:sta:xi_scri})], and we recover $T=T_{\rm H}$.
+For static observers infinitely close to the event horizon ($V\to 0$), we get
+$T\to +\infty$. Note that those observers are
 also experiencing a diverging acceleration [cf. Eq.~(\ref{e:neh_diverging_accel})].
 On the contrary, a freely-falling observer crossing the horizon measures
 $T=0$, i.e. she does not detect the Hawking radiation.
 \end{remark}
 
+\begin{remark}
+The Hawking radiation is closely related to the
+\defin{Unruh effect}\index{Unruh effect}, which is another prediction of quantum field theory:
+in vacuum Minkowski spacetime, a uniformly accelerated observer measures a black-body radiation
+of all particle species at the temperature $T_{\rm U} = (\hbar/k_{\rm B}) \, a / (2\pi)$, where
+$a = \sqrt{\w{a}\cdot\w{a}}$ is the norm of the observer's 4-acceleration \cite{Unruh76,Wald94,Carro04}.
+A static observer $\Obs$ close to the black hole horizon $\Hor$, as considered in Remark~\ref{r:evo:local_Hawking_rad},
+feels an acceleration given by Eq.~(\ref{e:neh:kappa_lim_Va}): $a \sim \kappa / V$.
+By combining formulas~(\ref{e:evo:Hawking_temp_local}) and (\ref{e:evo:Hawking_temp}),
+we may then rewrite the radiation temperature $T$ measured by $\Obs$ as
+$T \sim (\hbar/k_{\rm B}) \, a / (2\pi)$. Hence, it coincides with the Unruh temperature $T_{\rm U}$ of
+the observer in Minkowski spacetime sharing the same acceleration $a$ as $\Obs$, which is somehow expected
+if one assumes that freely-falling observers near $\Hor$ perceive quantum states identical to
+the Minkowski vacuum (no radiation).
+\end{remark}
 
 \begin{remark}
 In terms of elementary particles, the Hawking radiation is composed of
@@ -1700,12 +1723,12 @@ $k_{\rm B} T > m$, where $m$ is the particle mass.
 The observed radiation spectrum at infinity is not exactly that
 of a black body\index{black!body} of temperature $T_{\rm H}$: it is corrected
 by greybody factors, which take into account the interaction of the radiation
-with the spacetime curvature (backscatterng).
+with the spacetime curvature (backscattering).
 \end{remark}
 
 For a Kerr black hole, the surface gravity is given by formula (\ref{e:ker:kappa_m_a}),
 so that the Hawking temperature can be expressed in terms
-of the black hole mass $M=m$ and reduced angular momentum parameter
+of the black hole mass $M=m$ and the dimensionless spin parameter
 $\bar{a} := a/m = J/M^2$ ($0\leq \bar{a}\leq 1$):
 \be
     T_{\rm H} = \frac{\hbar}{k_{\rm B}} \frac{c^3}{8\pi G M}
@@ -1718,7 +1741,7 @@ Note that we have restored the gravitational constant $G$ and the speed of light
 \ee
 Hence, for a Schwarzschild black hole ($\bar{a}=0$),
 $T_{\rm H} = 6.17\; 10^{-8} ({M_\odot}/{M}) {\rm\; K}$. For astrophysical black holes,
-this leads to tiny values: $T_{\rm H} \simeq 4\; 10^{-9} {\rm\; K}$
+this leads to tiny temperatures: $T_{\rm H} \simeq 4\; 10^{-9} {\rm\; K}$
 for a $15 \, M_\odot$ stellar black hole (e.g. Cyg X-1, cf. Table~\ref{t:ges:time_free_fall}),
 $T_{\rm H} \simeq 1.6\; 10^{-14} {\rm\; K}$ for the Milky Way central black hole Sgr~A*
 ($M=4.1\; 10^{6} \, M_\odot$)
@@ -1728,8 +1751,7 @@ for a black hole of mass $6.17\; 10^{-8} \, M_\odot$, i.e. $2\, \%$ of the
 Earth's mass.
 
 Another conclusion that one can draw from formula (\ref{e:evo:T_H_Kerr_num}) is
-that $T_{\rm H}=0$ for an extremal Kerr black hole ($\bar{a}=1$): such a black
-hole does not emit any Hawking radiation.
+that $T_{\rm H}=0$ for an extremal Kerr black hole\index{extremal!Kerr!spacetime}\index{Kerr!extremal -- spacetime} ($\bar{a}=1$): such an object does not emit any Hawking radiation.
 
 \subsection{Bekenstein-Hawking entropy}
 
