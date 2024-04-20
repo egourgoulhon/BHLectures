@@ -1639,15 +1639,15 @@ spacetime that is stationary and contains a black hole, the event horizon
 of which is a Killing horizon of constant surface gravity $\kappa$.
 Then, quantum field theory in the curved background $(\M,\w{g})$
 predicts that any quantum field gives birth to a thermal radiation
-from the black hole to infinity, called the
+from the black hole to infinity, called
 \defin{Hawking radiation}\index{Hawking!radiation}. The radiation temperature
 as measured by asymptotic inertial observers at rest with respect to the black hole
 is
 \be \label{e:evo:Hawking_temp}
     \encadre{T_{\rm H} = \frac{\hbar}{k_{\rm B}} \frac{\kappa}{2\pi} } ,
 \ee
-where $\hbar \simeq 1.05457\; 10^{-34} {\rm\; J\, s}$ is the reduced Planck constant and
-$k_{\rm B} \simeq 1.38065\; 10^{-23} {\rm\;  J\, K}^{-1}$ is the Botlzmann constant. $T_{\rm H}$ is called the
+where $\hbar = 1.054571817\; 10^{-34} {\rm\; J\, s}$ is the reduced Planck constant and
+$k_{\rm B} = 1.380649\; 10^{-23}$ ${\rm\;  J\, K}^{-1}$ is the Boltzmann constant. $T_{\rm H}$ is called the
 \defin{Hawking temperature}\index{Hawking!temperature}.
 \end{prop}
 
@@ -1713,11 +1713,15 @@ if one assumes that freely-falling observers near $\Hor$ perceive quantum states
 the Minkowski vacuum (no radiation).
 \end{remark}
 
-\begin{remark}
+\begin{remark} \label{r:evo:comp_Hawking_rad}
 In terms of elementary particles, the Hawking radiation is composed of
 all existing species of massless and massive particles. For the latter ones,
 the contribution is significant only if
-$k_{\rm B} T > m_{\rm p}$, where $m_{\rm p}$ is the particle's mass.
+$k_{\rm B} T_{\rm H} > m_{\rm p}$, where $m_{\rm p}$ is the particle's mass.
+For Schwarzschild black holes of mass $M \gg 2\; 10^{13} {\rm\; kg}$ (the threshold
+for $k_{\rm B} T_{\rm H}$ being equal to the electron mass, see below), the Hawking radiation
+is composed quasi-exclusively of neutrinos ($87\%$ of the radiated energy),
+photons ($12\%$) and possibly gravitons ($1\%$) \cite{Page76,ThornZP86}.
 \end{remark}
 
 \begin{remark}
@@ -1731,14 +1735,20 @@ For a Kerr black hole, the surface gravity is given by formula (\ref{e:ker:kappa
 so that the Hawking temperature can be expressed in terms
 of the black hole mass $M=m$ and the dimensionless spin parameter
 $\bar{a} := a/m = J/M^2$ ($0\leq \bar{a}\leq 1$):
-\be
+\be \label{e:evo:T_H_Kerr}
    \encadre{ T_{\rm H} = \frac{\hbar}{k_{\rm B}} \frac{c^3}{8\pi G M}
-    \frac{2 \sqrt{1 - \bar{a}^2}}{1 + \sqrt{1 - \bar{a}^2}} } _{\rm\; Kerr}.
+   \; \frac{2}{1 + (1 - \bar{a}^2)^{-1/2}} } _{\rm\; Kerr}.
 \ee
 Note that we have restored the gravitational constant $G$ and the speed of light $c$
 (cf. Remark~\ref{r:evo:Hawking_temp_units}). Numerically, we get
-\be \label{e:evo:T_H_Kerr_num}
-    T_{\rm H} = 6.17\; 10^{-8} \left( \frac{M_\odot}{M} \right) \frac{2 \sqrt{1 - \bar{a}^2}}{1 + \sqrt{1 - \bar{a}^2}} {\rm\; K} .
+\be
+    T_{\rm H} = 6.17\; 10^{-8} \left( \frac{M_\odot}{M} \right)
+    \frac{2}{1 + (1 - \bar{a}^2)^{-1/2}} {\rm\; K},
+\ee
+or, in units more adapted to small black holes,
+\be
+    k_{\rm B} T_{\rm H}= 1.057\; 10^{10} \left( \frac{1 {\rm\; kg}}{M} \right)
+    \frac{2}{1 + (1 - \bar{a}^2)^{-1/2}} {\rm\; GeV}.
 \ee
 Hence, for a Schwarzschild black hole ($\bar{a}=0$),
 $T_{\rm H} = 6.17\; 10^{-8} ({M_\odot}/{M}) {\rm\; K}$. For astrophysical black holes,
@@ -1749,10 +1759,43 @@ $T_{\rm H} \simeq 1.6\; 10^{-14} {\rm\; K}$ for the Milky Way central black hole
 and $T_{\rm H} \simeq 9\; 10^{-18} {\rm\; K}$ for M87*
 ($M=6.5\; 10^{9} \, M_\odot$). The value $T_{\rm H} = 1 {\rm\; K}$ is achieved
 for a black hole of mass $6.17\; 10^{-8} \, M_\odot$, i.e. $2\, \%$ of the
-Earth's mass.
+Earth's mass, while the value $k_{\rm B} T_{\rm H} = m_{\rm e} c^2$
+($m_{\rm e} = 9.11\; 10^{-31}\; {\rm kg}$ being the electron mass) is achieved
+for $M = 2.07\; 10^{13}\; {\rm kg}$.
 
-Another conclusion that one can draw from formula (\ref{e:evo:T_H_Kerr_num}) is
+Another conclusion that one can draw from formula (\ref{e:evo:T_H_Kerr}) is
 that $T_{\rm H}=0$ for an extremal Kerr black hole\index{extremal!Kerr!spacetime}\index{Kerr!extremal -- spacetime} ($\bar{a}=1$): such an object does not emit any Hawking radiation.
+
+Since it emits some radiation to infinity, the black hole loses energy, which
+makes its mass decrease. For a Kerr black hole, according to formula~(\ref{e:evo:T_H_Kerr}),
+this yields an increase
+of the temperature and hence an enhanced Hawking radiation. Furthermore,
+the higher the temperature,
+the more quantum fields join the radiation
+(cf. Remark~\ref{r:evo:comp_Hawking_rad}), which enhances
+the rate of energy loss. This is then a runaway process, in which the whole
+black hole eventually disappears --- a phenomenon that is called
+\defin{black hole evaporation}\index{black!hole!evaporation}\index{evaporation (black hole)}
+or \defin{Hawking evaporation}\index{Hawking!evaporation}.
+However, this evaporation occurs on extremly long time scales for astrophysical black holes.
+To get a rough estimate of the evaporation time, let us consider that the total power $L$
+(energy radiated per unit time) received at infinity from
+Hawking radiation obeys the Stefan-Boltzmann law\index{Stefan-Boltzmann law}:
+$L = \mathcal{A} \sigma T_{\rm H}^4$, where $\sigma$ is Stefan-Boltzmann constant:
+$\sigma = \pi^2 k_{\rm B}^4/(60 \hbar^3)$ and $\mathcal{A}$ is some ``emission area''.
+For simplicity, let us restrict to a Schwarzschld black hole of mass $M$.
+A good value for $\mathcal{A}$ is then $\mathcal{A} = 4\pi b_{\rm c}^2$, where
+$b_{\rm c} = 3\sqrt{3} M$ is the critical impact parameter for null geodesics
+introduced in Chap.~\ref{s:gis} [cf. Eq.~(\ref{e:ges:b_crit})]. Indeed, $4 \pi b_{\rm c}^2$
+can be viewed as the black hole's area ``seen from infinity'' (cf. Fig.~\ref{f:gis:shadow}).
+Hence $\mathcal{A} = 108\pi M^2$. Given that
+$k_{\rm B} T_{\rm H} = \hbar/(8\pi M)$ [Eq.~(\ref{e:evo:T_H_Kerr}) with $\bar{a}=0$],
+Stefan-Boltzmann law yields
+\be
+    L = \frac{9}{81920 \pi} \frac{\hbar}{M^2} .
+\ee
+
+
 
 \subsection{Bekenstein-Hawking entropy}
 
