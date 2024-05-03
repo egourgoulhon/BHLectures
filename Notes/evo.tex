@@ -1463,11 +1463,15 @@ By itself, this is of course not sufficient to identify the black hole area
 with some entropy (any nondecaying physical quantity has not to be an entropy!).
 However, we have seen in Sec.~\ref{s:evo:a_first_law_question} that the
 candidate $T\D S$ term for a possible first law could be $\kappa/(8\pi)\D A$.
-It is thus tempting to identify $A$ with some entropy $S$, up to some
+It is thus tempting to identify $A$ with an entropy $S$, up to some
 constant factor $\alpha$. Then the temperature $T$ would be $\kappa/(8\pi\alpha)$:
-\be \label{e:evo:identif_S_T}
-    S = \alpha A \qand T = \frac{1}{8 \pi\alpha}\, \kappa ,
-\ee
+\begin{subequations}
+\label{e:evo:identif_S_T}
+\begin{align}
+  S & = \alpha A \label{e:evo:identif_S_A}\\
+  T &= \frac{1}{8 \pi\alpha}\, \kappa , \label{e:evo:identif_T_kappa}
+\end{align}
+\end{subequations}
 so that we get $T\D S = \kappa/(8\pi)\D A$, making
 the mass variation formula (\ref{e:evo:mass_variation_vacuum_n4}) look pretty much like
 the first law of thermodynamics.
@@ -1588,10 +1592,11 @@ Let us summarize the results obtained so far, in the form of three laws
 analogous to the laws of thermodynamics. To stress the analogy, we are using the phrase
 \emph{black hole in equilibrium}\index{black!hole!in equilibrium} for \emph{black hole in a stationary spacetime}. Besides, for the sake of brevity, we shall not repeat
 the various assumptions underlying these laws, referring to previously
-stated properties for all the details. Moreover, for simplicity, we consider
-a connected event horizon.
+stated properties for all the details. Furthermore, we consider
+a connected event horizon for simplicity.
 
 \begin{prop}[laws of black hole dynamics]
+\label{p:evo:laws_BH_dyn}
 \begin{description}
 \item[Zeroth law:] Under the hypotheses of Property~\ref{p:evo:zeroth_law},
 the surface gravity $\kappa$ of the event horizon of a black hole in equilibrium is
@@ -1608,7 +1613,7 @@ by\footnote{For simplicity, we are considering
 black holes with a connected horizon and a single angular momentum; see
 Eq.~(\ref{e:evo:mass_variation_electovac}) for the general formula, where $M$ is denoted by
 $M_\infty$ and $J$ by $J_\infty$.}
-\be
+\be \label{e:evo:first_law}
 \delta M = \frac{\kappa}{8\pi} \, \delta A + \Omega_{\Hor} \, \delta J
     + \Phi_{\Hor} \, \delta Q_{\Hor} ,
 \ee
@@ -1795,21 +1800,21 @@ $\mathcal{A} = 108\pi M^2$. Given that
 $k_{\rm B} T_{\rm H} = \hbar/(8\pi M)$ [Eq.~(\ref{e:evo:T_H_Kerr}) with $\bar{a}=0$],
 Stefan-Boltzmann law yields
 \be \label{e:evo:Hawking_rad_power}
-    L = \alpha \frac{\hbar}{M^2} ,
+    L = C \frac{\hbar}{M^2} ,
 \ee
-with $\alpha = 9 / (20480\pi) \simeq 1.40\; 10^{-4}$.
+where $C = 9 / (20480\pi) \simeq 1.40\; 10^{-4}$ is a dimensionless constant.
 Acually, a precise computation, taking
 into account the propagation of quantum fields in the Schwarzschild geometry
 and various particle species
 leads to the same formula (\ref{e:evo:Hawking_rad_power}) with \cite{ThornZP86,Page76,Page05}
 \be \label{e:evo:Hawking_rad_power_alpha}
-    \alpha = 2.83\; 10^{-4}.
+    C = 2.83\; 10^{-4}.
 \ee
 This value is valid for $M \gg 2\; 10^{13} {\rm\; kg}$ ($T_{\rm H}$
 below the electron threshold, cf. Remark~\ref{r:evo:comp_Hawking_rad}), so that the Hawking radiation
 contains only photons, neutrinos and gravitons\footnote{The original computation,
 performed by Page\index[pers]{Page, D.N.} in 1976 \cite{Page76}, resulted
-in $\alpha=2.01\; 10^{-4}$ but it took into account only the four species
+in $C=2.01\; 10^{-4}$ but it took into account only the four species
 of neutrinos known at that time ($\nu_{\rm e}$, $\bar{\nu}_{\rm e}$, $\nu_\mu$ and
 $\bar{\nu}_\mu$), in addition to photons and gravitons. It has been updated
 by adding the tau neutrinos ($\nu_\tau$ and $\bar{\nu}_\tau$)
@@ -1818,27 +1823,27 @@ The value (\ref{e:evo:Hawking_rad_power_alpha}) is also recovered by
 setting $n_{1/2}=3$, $n_1=1$ and $n_2=1$ in Eq.~(19) of Page's review article~\cite{Page05}.}.
 The black hole mass decreases according to $\D M/\D t = - L$, i.e.
 \be \label{e:evo:Hawking_rad_mass_decrease}
-    \derd{M}{t} = - \alpha \frac{\hbar}{M^2} .
+    \derd{M}{t} = - C \frac{\hbar}{M^2} .
 \ee
 Here $t$ is the time measured by an inertial observer at infinity.
 This differential equation is easily integrated into
 \be
-    M(t) = \left( M_0^3 - 3 \alpha \hbar t \right) ^{1/3} ,
+    M(t) = \left( M_0^3 - 3 C \hbar t \right) ^{1/3} ,
 \ee
 where $M_0$ is the mass at $t=0$. Defining the evaporation time $t_{\rm evap}$
 as the time to reach $M=0$ from $M = M_0$, we get immediately
 \be \label{e:evo:t_evap}
-    t_{\rm evap} = \frac{M_0^3}{3\alpha\hbar} .
+    t_{\rm evap} = \frac{M_0^3}{3C\hbar} .
 \ee
-With $\alpha$ given by
+With $C$ given by
 (\ref{e:evo:Hawking_rad_power_alpha}), this yields the numerical value
 \be
     t_{\rm evap} = 1.54\; 10^{66} \left( \frac{M_0}{M_\odot} \right) ^3 {\rm\; yr} .
 \ee
-For an astrophysical black hole ($M_0 >  1 M_\odot$), this is a huge duration, many
-orders of magnitude larger than the Universe's age ($t_{\rm Univ} \simeq 1.38\; 10^{10} {\rm\; yr}$).
+For an astrophysical black hole ($M_0 >  1 M_\odot$), this is a huge duration --- more than 56
+orders of magnitude larger than the Universe's age ($t_{\rm Univ} \simeq 1.38\; 10^{10} {\rm\; yr}$)!
 We conclude that for astrophysical black holes, the Hawking radiation is ultra-negligible and
-does not play any role on the black hole dynamics. Hawking radiation becomes relevant only when
+does not play any role in the black hole dynamics. Hawking radiation becomes relevant only when
 $t_{\rm evap} < t_{\rm Univ}$, say. From Eq.~(\ref{e:evo:t_evap}), we get
 $t_{\rm evap} < t_{\rm Univ} \iff M_0 < 4.15\; 10^{11} {\rm\; kg}$. Actually, this value
 is below $2\; 10^{13}{\rm\; kg}$ so that electrons, and even muons, should have been included into the Hawking radiation
@@ -1846,8 +1851,8 @@ is below $2\; 10^{13}{\rm\; kg}$ so that electrons, and even muons, should have 
 \be
     t_{\rm evap} < t_{\rm Univ} \iff M_0 < 5.00\; 10^{11} {\rm\; kg} .
 \ee
-The upper bound is roughly the mass of an asteroid of half-kilometer size
-and a black hole of that mass has a Schwarzschild radius
+The upper bound is roughly the mass of an asteroid of half-kilometer size.
+Note that a black hole of that mass has a Schwarzschild radius
 of only $0.74{\rm \; fm}$ (around the proton size!); it
 would pertain to the hypothetical class
 of the so-called
@@ -1859,16 +1864,38 @@ i.e. black holes of subsolar mass that could have formed in the primordial unive
 For a Schwarzschild-like black hole, the horizon area $A$ is proportional to the square
 of the mass: $A = 16\pi M^2$ [Eq.~(\ref{e:neh:area_Schwarz})], so that
 the evolution law~(\ref{e:evo:Hawking_rad_mass_decrease}) implies $\D A / \D t < 0$.
-In other words, the horizon area decreases as a consequence of Hawking radiation.
-This seems to contradict the area theorem (Property~\ref{p:evo:area_thm}).
-Actually there is no logical contradiction since one of the hypotheses of
+In other words, the horizon area decreases as the black hole evaporates via Hawking radiation.
+At frst glance,  this seems to contradict the second law of black hole dynamics
+(Property~\ref{p:evo:laws_BH_dyn}), i.e. the
+area theorem~\ref{p:evo:area_thm}.
+Actually there is no contradiction since one of the hypotheses of
 the area theorem is not fulfilled for evaporating black holes, namely
-the null convergence condition. Indeed, the effective energy-momentum tensor of
-the quantum fields that generates the Hawking radiation does not obey the
+the null convergence condition. Indeed, the effective energy-momentum tensor\footnote{See e.g.
+Ref.~\cite{FroloT89} for the computation of the renormalized expectation value of the energy-momentum tensor of a quantum field near the black hole horizon.}
+of the quantum fields generating the Hawking radiation does not obey the
 null energy condition (\ref{e:neh:null_energy_cond_matter}).
 \end{remark}
 
 \subsection{Bekenstein-Hawking entropy}
+
+The phenomenon of Hawking radiation puts on firm grounds the identification
+of the surface gravity as the black hole temperature and fully fixes the coefficient $\alpha$
+that appears in Eq.~(\ref{e:evo:identif_S_T}): comparing Eq.~(\ref{e:evo:identif_T_kappa})
+with formula~(\ref{e:evo:Hawking_temp}) for the Hawking temperature, we get $\alpha = k_{\rm B}/(4\hbar)$. Accordingly, Eq.~(\ref{e:evo:identif_S_A}) becomes
+$S = k_{\rm B} A/(4\hbar)$ and we may state
+\begin{prop}[Bekenstein-Hawking entropy]
+A black hole in equilibrium
+is endowed with the \defin{Bekenstein-Hawking entropy}\index{Bekenstein-Hawking entropy}\index{entropy!Bekenstein-Hawking --} $S_{\rm BH}$, which is proportional to the black hole area $A$ according to the formula:
+\be
+    \encadre{S_{\rm BH} = k_{\rm B}\frac{A}{4\hbar} }.
+\ee
+The first law of black hole dynamics (\ref{e:evo:first_law}) writes then
+\be
+    \delta M = T_{\rm H} \, \delta S_{\rm BH} + \Omega_{\Hor} \, \delta J
+    + \Phi_{\Hor} \, \delta Q_{\Hor} ,
+\ee
+where $T_{\rm H}$ is the Hawking temperature.
+\end{prop}
 
 
 \subsection{The generalized second law}
