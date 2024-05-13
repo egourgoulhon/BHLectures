@@ -53,8 +53,8 @@ a much more general framework, without assuming that it corresponds to changes b
 two nearby Kerr solutions and without restricting
 the spacetime dimension to 4 or assuming that the event horizon is connected.
 It even holds for other gravity theories than general relativity, more specifically
-for any theory based on a diffeomorphism-covariant lagrangian; see Wald's review
-article~\cite{Wald01} for details.
+for any theory based on a diffeomorphism-covariant lagrangian, provided that
+the area $A$ is replaced by some other quantity, named the \emph{Wald entropy}\index{Wald entropy}\index{entropy!Wald --}, which reduces to $A$ for general relativity (see Remark~?? below).
 
 Here we establish the mass variation formula for two nearby black hole
 equilibrium configurations, from integral mass formulas obtained in Chap.~\ref{s:sta}.
@@ -572,11 +572,13 @@ Contrary to the generalized Smarr formula\index{generalized Smarr formula}\index
 formula (\ref{e:evo:mass_variation_gal}).
 \end{remark}
 
-A special case of the mass variation formula (\ref{e:evo:mass_variation_gal}) is worth to be considered: that of a solution of the vacuum Einstein equation (\ref{e:fra:vac_Einstein}):
-the Ricci tensor then vanishes identically, and so does the Einstein tensor: $\w{G} = 0$.
+Let us apply the general mass variation formula (\ref{e:evo:mass_variation_gal})
+to a solution of the vacuum Einstein equation (\ref{e:fra:vac_Einstein}).
+In this case, the Ricci tensor vanishes identically, and so does the Einstein tensor: $\w{G} = 0$.
 Accordingly one gets rid of the integrals in the
-right-hand side of formula~(\ref{e:evo:mass_variation_gal}). Moreover, in that case,
-the null dominance condition is automatically fulfilled, which guarantees that the surface gravities
+right-hand side of formula~(\ref{e:evo:mass_variation_gal}). Moreover,
+the null dominance condition is automatically fulfilled by $\w{G}=0$,
+which guarantees that the surface gravities
 $\kappa_k$ are constant on each connected component of the event horizon. We may therefore state:
 
 \begin{prop}[mass variation formula for black holes in vacuum general relativity]
@@ -600,7 +602,7 @@ end of the stationary spacetime.}
     +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_k}^{(i)} \right) } .
 \ee
 In the case of a connected event horizon ($K=1$)
-with at most one axisymmetry ($0 \leq L_1 \leq 1$, the only possibility for $n=4$),
+with at most one axisymmetry ($0 \leq L_1 \leq 1$, which is the only possibility if $n=4$),
 this formula reduces to
 \be \label{e:evo:mass_variation_vacuum_n4}
    \encadre{ \delta M = \frac{\kappa}{8\pi} \, \delta A + \Omega_{\Hor} \, \delta J } .
@@ -908,6 +910,17 @@ formula~(\ref{e:evo:mass_variation_vacuum_n4}), given that $M_\infty = M$
 and $J_\infty = J$ are independent of the integration surface in vacuum.
 \end{remark}
 
+\begin{remark}
+An alternative derivation of the mass variation formulas
+(\ref{e:evo:mass_variation_vacuum_n4}) and
+(\ref{e:evo:mass_variation_electovac_K1}) can be performed within the
+ADM Hamiltonian formulation of general relativity\index{Hamiltonian!formulation of general relativity}\index{ADM!Hamiltonian formulation}, as shown by Sudarsky and Wald
+\cite{SudarW92,SudarW93} (see also Sec.~6.2 of Ref.~\cite{Wald94}).
+This derivation does not rely on the generalized Smarr formula (used in the proof of
+Property~\ref{p:evo:first_law_gen}, from which formulas (\ref{e:evo:mass_variation_vacuum_n4}) and
+(\ref{e:evo:mass_variation_electovac_K1}) are derived) but it requires that the black hole event horizon is
+part of a bifurcate Killing horizon.
+\end{remark}
 
 \subsection{Mass variation formula for a black hole surrounded by a fluid}
 
@@ -1653,7 +1666,7 @@ is
 \ee
 where $\hbar = 1.054571817\; 10^{-34} {\rm\; J\, s}$ is the reduced Planck constant and
 $k_{\rm B} = 1.380649\; 10^{-23}$ ${\rm\;  J\, K}^{-1}$ is the Boltzmann constant. $T_{\rm H}$ is called the
-\defin{Hawking temperature}\index{Hawking!temperature}.
+\defin{Hawking temperature}\index{Hawking!temperature} of the black hole.
 \end{prop}
 
 We shall not establish this property here; this is done in many textbooks,
@@ -1912,11 +1925,24 @@ For a Kerr black hole, the area $A$ is related to the mass $M$ and to the spin
 parameter $a = \bar{a} M$ via Eq.~(\ref{e:ker:A_a_m}),
 so that the Bekenstein-Hawking entropy (\ref{e:evo:S_BH}) can be written as
 \be
-    \encadre{S_{\rm BH} = 2\pi k_{\rm B} \frac{G M^2}{\hbar c}
-        \left( 1 + \sqrt{1 - \bar{a}^2}  \right) } _{\rm\; Kerr} .
+    \encadre{S_{\rm BH} = 4\pi k_{\rm B} \frac{G M^2}{\hbar c} \,
+        \frac{1 + \sqrt{1 - \bar{a}^2}}{2} } _{\rm\; Kerr} .
 \ee
 Note that, as in formula~(\ref{e:evo:T_H_Kerr}) for the Hawking temperature,
-we have restored $G$ and $c$ in the above formula.
+we have restored $G$ and $c$ in the above formula. Numerically, we get
+\be
+    S_{\rm BH} = 1.05\; 10^{77}\; \left( \frac{M}{M_\odot} \right) ^2
+    \frac{1 + \sqrt{1 - \bar{a}^2}}{2} \; k_{\rm B} .
+\ee
+Hence, for a Schwarzschild black hole ($\bar{a} = 0$),
+$S_{\rm BH} = 1.05\; 10^{77} (M/M_\odot)^2  \; k_{\rm B}$.
+This yields huge values for astrophysical black holes:
+$S_{\rm BH} \simeq 2\; 10^{79} \; k_{\rm B}$
+for a $15 \, M_\odot$ stellar black hole,
+$S_{\rm BH} \simeq 2\; 10^{90} \; k_{\rm B}$ for Sgr~A*
+($M=4.1\; 10^{6} \, M_\odot$)
+and $S_{\rm BH} \simeq 4\; 10^{96} \; k_{\rm B}$
+for M87* ($M=6.5\; 10^{9} \, M_\odot$).
 
 \subsection{The generalized second law}
 
