@@ -108,8 +108,12 @@ Let us assume that the null dominance condition (\ref{e:neh:null_dominant_cond})
 on $\Hor_{k}$ or that $\Hor_{k}$ is part of a bifurcate Killing horizon;
 by the zeroth law of black hole dynamics (Property~\ref{p:neh:zeroth_law} or \ref{p:neh:zeroth_law_bifur}), this
 implies that $\kappa_{k}$ is constant.
-Let $(\M,\w{g}+\delta\w{g})$ be a nearby stationary spacetime sharing the same characteristics.
-The change $\delta M_\infty$ in Komar mass at infinity
+Finally let us assume that $(\M,\w{g})$ is asymptotically flat with the
+$\w{g}$ having the same asymptotic behavior (\ref{e:sta:asymptotic_metric})
+as in general relativity\footnote{Note that $\w{g}$ is not required to
+obey the Einstein equation in $\M$.}.
+Let $(\M,\w{g}+\delta\w{g})$ be a nearby stationary spacetime sharing the same characteristics
+as $(\M,\w{g})$. Then, the change $\delta M_\infty$ in Komar mass at infinity
 (cf. Property~\ref{p:sta:Komar_mass_inf}) between the two spacetimes
 is related to the changes $\delta A_k$ in area and to the
 changes $\delta J_{\Hor_k}^{(i)}$ in Komar angular momentum by
@@ -420,8 +424,9 @@ with partial ones. Hence we get, accounting for $\partial_0 h_{i0} = 0$,
     \int_{\Sp_\infty} \frac{x^i}{r} ( \partial_j h_{ij} -
     \partial_i h^\sigma_{\ \, \sigma}) \sqrt{q} \, \D^{n-2} y .
 \]
-Given the asymptotic behavior (\ref{e:sta:asymptotic_metric}) of the metric tensor,
-we have, for $r\to+\infty$,
+By hypothesis, the metric tensor has the
+asymptotic behavior (\ref{e:sta:asymptotic_metric}); it follows that,
+for $r\to+\infty$,
 \[
     h_{00} = \alpha_n \frac{\delta M_\infty}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-2}} \right)
     \qand
@@ -435,7 +440,7 @@ of the Komar mass at infinity as in the left-hand side of Eq.~(\ref{e:evo:mass_v
 The trace of $\w{h}$ takes the asymptotic value
 $h^\sigma_{\ \, \sigma} = - h_{00} + \sum_{i=1}^{n-1} h_{ii} =
 2\alpha_n \delta M_\infty / ((n-3) r^{n-3}) +  \bigO\left( {1}/{r^{n-2}} \right)$.
-It follows that
+Hence we get
 \[
   \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} =
   - \frac{\alpha_n \, \delta M_\infty}{n-3} \int_{\Sp_\infty}
@@ -444,9 +449,10 @@ It follows that
   = \alpha_n \, \delta M_\infty
   \underbrace{\int_{\Sp_\infty} \sqrt{\bar{q}} \, \D^{n-2} y}_{\Omega_{n-2}} ,
 \]
-where $\bar{q}$ stands for the determinant of the round metric of the unit sphere $\SS^{n-2}$ with respect to the coordinates $(y^a)$. Substituting $\alpha_n$ by its value, we get
+where $\bar{q}$ stands for the determinant of the round metric of the unit sphere $\SS^{n-2}$ with respect to the coordinates $(y^a)$. Substituting $\alpha_n$ by its
+expression in terms of $\Omega_{n-2}$ yields
 \[
-    \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} = \frac{16\pi}{n-2} \delta M_\infty .
+    \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} = \frac{16\pi}{n-2} \, \delta M_\infty .
 \]
 Accordingly, Eq.~(\ref{e:evo:mass_var_prov}) simplifies to
 \[
@@ -1224,6 +1230,68 @@ This is going to be performed in the next section.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Evolution of the black hole area}
+
+\subsection{Irreversibily in the evolution of a Kerr black hole}
+
+Let us consider a particle $\mathscr{P}$ in free fall from infinity into a
+(non-extremal) Kerr
+black hole of mass $M$ and spin $J= a M$, with
+$a < M$. Let us denote by $E$ and $L$ the
+conserved energy and conserved angular momentum of $\mathscr{P}$ (cf. Property~\ref{p:gek:conserved_E_L}), with $E\ll M$ and $|L| \ll J$.
+At some event $A$ in the outer ergoregion, we allow $\mathscr{P}$ to split
+in two particles, $\mathscr{P}'$ and $\mathscr{P}''$ of conserved
+energy and conserved angular momentum $(E',L')$ and $(E'',L'')$ respectively,
+such that $\mathscr{P}''$ falls into the black hole and $\mathscr{P}'$
+escapes to infinity, as in the Penrose process\index{Penrose!process} described
+in Sec.~\ref{s:gek:Penrose_proc}. As shown in Sec.~\ref{s:gek:Penrose_proc},
+one has $E = E' + E''$ and $L = L' + L''$. If the particle split does not occur
+(direct fall into a black hole), then we shall set $E'=0$, $E''=E$, $L'=0$
+and $L''=L$.
+By virtue of the no-hair theorem~\ref{p:sta:no-hair_thm},
+after $\mathscr{P}'$ has gone sufficiently far,
+the black hole
+appears to the exterior world as a Kerr black hole of mass $M +\delta M$
+and angular momentum $J + \delta J$, say.
+When $\mathscr{P}$ was far apart from the black hole, the total energy (ADM mass)
+of the spacetime was $M + E$ (recall that $E$ is the energy at infinity
+of $\mathscr{P}$, cf. Sec.~\ref{s:gek:int_motion_sym}) and similarly the
+total angular momentum was $J + L$.
+To the first order in $E/M$, we may neglect the energy and angular momentum
+of the gravitational radiation generated
+by the capture of $\mathscr{P}$, so that the final spacetime energy is
+$M + \delta M + E'$ and the final angular momentum is $J + \delta J + L'$.
+By conservation of the total energy and angular momentum, we then get
+$\delta M = E - E'$ and $\delta J = L - L'$, i.e.
+\be \label{e:evo:dM_E_dJ_L}
+    \delta M = E'' \qand \delta J = L'' .
+\ee
+From Eqs.~(\ref{e:evo:mass_variation_Kerr}) and (\ref{e:evo:dM_E_dJ_L}), the evolution of the black hole
+area $A$ in the process is
+\be
+    \delta A = \frac{8\pi}{\kappa} \left( \delta M - \Omega_{\Hor} \delta J \right)
+        =  \frac{8\pi}{\kappa} \left( E'' - \Omega_{\Hor}  L'' \right) .
+\ee
+Note that $\kappa > 0$ since the black is not extremal.
+Now, we have established in Sec.~\ref{s:gek:Penrose_proc} that
+$E'' - \Omega_{\Hor}  L'' > 0$ [Eq.~(\ref{e:gek:OmegaH_Lpp_Epp})] as
+necessary condition for $\mathscr{P}''$ to cross the event horizon.
+It follows immediately that
+\be
+    \delta A > 0 .
+\ee
+Hence in the process of particle accretion, the area of a Kerr black hole
+necessarily increases. This holds even if $\delta M < 0$, which occurs
+for a Penrose process ($E'>E$), since then $E''<0$ and Eq.~(\ref{e:evo:dM_E_dJ_L})
+implies $\delta M < 0$. The limit $ E'' - \Omega_{\Hor}  L'' = 0$,
+which would yield $\delta A = 0$, would correspond to the particle $\mathscr{P}$
+having a vanishing radial affine velocity $\D r / \D\lambda$ on the event horizon
+$\Hor$. Indeed, the equation of geodesic motion (\ref{e:gek:drdl}) at
+$r=r_+$ writes
+\be
+    (r_+^2 + a^2 \cos^\th) \derd{r}{\lambda} = - (r_+^2 + a^2) \left| E'' - \Omega_{\Hor}  L'' \right| ,
+\ee
+where we have specialized expression (\ref{e:gek:def_R_Q}) for $R(r)$ to $\Delta = 0$
+and used the identity $a^2 / (r_+^2 + a^2) =\Omega_{\Hor}$.
 
 \subsection{Hawking's area theorem}
 
