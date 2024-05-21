@@ -1231,24 +1231,26 @@ This is going to be performed in the next section.
 
 \section{Evolution of the black hole area}
 
-\subsection{Irreversibily in the evolution of a Kerr black hole}
+\subsection{Irreversibily in the evolution of a Kerr black hole} \label{s:evo:irreversible_mass}
 
 Let us consider a particle $\mathscr{P}$ in free fall from infinity into a
-(non-extremal) Kerr
-black hole of mass $M$ and spin $J= a M$, with
-$a < M$. Let us denote by $E$ and $L$ the
+Kerr black hole of mass $M$ and spin $J= a M$, with
+$a < M$ (non-extremal black hole). Let us denote by $E$ and $L$ the
 conserved energy and conserved angular momentum of $\mathscr{P}$ (cf. Property~\ref{p:gek:conserved_E_L}), with $E\ll M$ and $|L| \ll J$.
-At some event $A$ in the outer ergoregion, we allow $\mathscr{P}$ to split
-in two particles, $\mathscr{P}'$ and $\mathscr{P}''$ of conserved
-energy and conserved angular momentum $(E',L')$ and $(E'',L'')$ respectively,
-such that $\mathscr{P}''$ falls into the black hole and $\mathscr{P}'$
+At some event $A$ in the ergoregion, we allow $\mathscr{P}$ to split
+in two particles, $\mathscr{P}'$ and $\mathscr{P}_*$,
+such that $\mathscr{P}_*$ falls into the black hole and $\mathscr{P}'$
 escapes to infinity, as in the Penrose process\index{Penrose!process} described
-in Sec.~\ref{s:gek:Penrose_proc}. As shown in Sec.~\ref{s:gek:Penrose_proc},
-one has $E = E' + E''$ and $L = L' + L''$. If the particle split does not occur
-(direct fall into a black hole), then we shall set $E'=0$, $E''=E$, $L'=0$
-and $L''=L$.
+in Sec.~\ref{s:gek:Penrose_proc}.
+Let $(E',L')$ and $(E_*,L_*)$ be the conserved
+energy and angular momentum of $\mathscr{P}'$ and $\mathscr{P}_*$, respectively.
+As shown in Sec.~\ref{s:gek:Penrose_proc}, these quantities fulfill
+$E = E' + E_*$ and $L = L' + L_*$. If the particle split does not occur
+($\mathscr{P}$ falling directly into the black hole), we shall set $E'=0$, $E_*=E$, $L'=0$
+and $L_*=L$.
 By virtue of the no-hair theorem~\ref{p:sta:no-hair_thm},
-after $\mathscr{P}'$ has gone sufficiently far,
+after $\mathscr{P}_*$ has been captured by the black hole and
+$\mathscr{P}'$ has gone sufficiently far,
 the black hole
 appears to the exterior world as a Kerr black hole of mass $M +\delta M$
 and angular momentum $J + \delta J$, say.
@@ -1263,35 +1265,50 @@ $M + \delta M + E'$ and the final angular momentum is $J + \delta J + L'$.
 By conservation of the total energy and angular momentum, we then get
 $\delta M = E - E'$ and $\delta J = L - L'$, i.e.
 \be \label{e:evo:dM_E_dJ_L}
-    \delta M = E'' \qand \delta J = L'' .
+    \delta M = E_* \qand \delta J = L_* .
 \ee
-From Eqs.~(\ref{e:evo:mass_variation_Kerr}) and (\ref{e:evo:dM_E_dJ_L}), the evolution of the black hole
-area $A$ in the process is
+From Eq.~(\ref{e:evo:mass_variation_Kerr}), the evolution of the black hole
+area $A$ in the process is $\delta A = 8\pi/\kappa \left( \delta M - \Omega_{\Hor} \delta J \right)$.
+In view of Eq.~(\ref{e:evo:dM_E_dJ_L}), this yields
 \be
-    \delta A = \frac{8\pi}{\kappa} \left( \delta M - \Omega_{\Hor} \delta J \right)
-        =  \frac{8\pi}{\kappa} \left( E'' - \Omega_{\Hor}  L'' \right) .
+    \delta A = \frac{8\pi}{\kappa} \left( E_* - \Omega_{\Hor}  L_* \right) .
 \ee
-Note that $\kappa > 0$ since the black is not extremal.
+Note that the above equation is well-posed, given that $\kappa > 0$ since the black hole is not extremal.
 Now, we have established in Sec.~\ref{s:gek:Penrose_proc} that
-$E'' - \Omega_{\Hor}  L'' > 0$ [Eq.~(\ref{e:gek:OmegaH_Lpp_Epp})] as
-necessary condition for $\mathscr{P}''$ to cross the event horizon.
+$E_* > \Omega_{\Hor}  L_*$ [Eq.~(\ref{e:gek:OmegaH_Lpp_Epp})] as
+a necessary condition for $\mathscr{P}_*$ to cross the event horizon.
 It follows immediately that
 \be
-    \delta A > 0 .
+    \encadre{\delta A > 0} .
 \ee
 Hence in the process of particle accretion, the area of a Kerr black hole
 necessarily increases. This holds even if $\delta M < 0$, which occurs
-for a Penrose process ($E'>E$), since then $E''<0$ and Eq.~(\ref{e:evo:dM_E_dJ_L})
-implies $\delta M < 0$. The limit $ E'' - \Omega_{\Hor}  L'' = 0$,
-which would yield $\delta A = 0$, would correspond to the particle $\mathscr{P}$
+for a Penrose process ($E'>E$), since then $E_*<0$ and Eq.~(\ref{e:evo:dM_E_dJ_L})
+implies $\delta M < 0$.
+The particle accretion is thus an \emph{irreversible transformation}
+\index{irreversible transformation} of the black hole. The irreversibility traces back
+to the fundamental inequality $E_* > \Omega_{\Hor}  L_*$ [Eq.~(\ref{e:gek:OmegaH_Lpp_Epp})],
+which must hold if $\mathscr{P}_*$ crosses the event horizon: in view of Eq.~(\ref{e:evo:dM_E_dJ_L}),
+one may think naively that one could revert the transformation $(M,J)\to (M+\delta M, J+\delta J)$
+by throwing into the black hole a particle of conserved energy $E'_* = - E_*$
+and conserved angular momentum $L'_* = - L_*$. However this is not permitted
+because the constraint $E'_* > \Omega_{\Hor}  L'_*$ is violated if
+$E_* > \Omega_{\Hor} L_*$ holds.
+
+The limit case $ E_* = \Omega_{\Hor}  L_*$,
+which would yield $\delta A = 0$, would correspond to the particle $\mathscr{P}_*$
 having a vanishing radial affine velocity $\D r / \D\lambda$ on the event horizon
-$\Hor$. Indeed, the equation of geodesic motion (\ref{e:gek:drdl}) at
-$r=r_+$ writes
+$\Hor$ ($\lambda$ being the affine parameter along $\mathscr{P}_*$'s worldline associated
+with $\mathscr{P}_*$'s 4-momentum).
+Indeed, the equation of geodesic motion (\ref{e:gek:drdl}) on $\Hor$ ($r=r_+$) yields
 \be
-    (r_+^2 + a^2 \cos^\th) \derd{r}{\lambda} = - (r_+^2 + a^2) \left| E'' - \Omega_{\Hor}  L'' \right| ,
+    (r_+^2 + a^2 \cos^2 \th) \derd{r}{\lambda} = - (r_+^2 + a^2) ( E_* - \Omega_{\Hor}  L_* ) .
 \ee
-where we have specialized expression (\ref{e:gek:def_R_Q}) for $R(r)$ to $\Delta = 0$
-and used the identity $a^2 / (r_+^2 + a^2) =\Omega_{\Hor}$.
+Note that we have set $\eps_r  = -1$ in Eq.~(\ref{e:gek:drdl}) to account for the infall motion
+of $\mathscr{P}_*$ and have specialized expression (\ref{e:gek:def_R_Q}) for $R(r)$ to $\Delta = 0$
+($r = r_+$), which yields $\sqrt{R(r)} = |E_* - \Omega_{\Hor}  L_*| = E_* - \Omega_{\Hor}  L_*$
+thanks to Eq.~(\ref{e:gek:OmegaH_Lpp_Epp}) and the
+identity $a / (r_+^2 + a^2) =\Omega_{\Hor}$ [Eq.~(\ref{e:ker:def_OmegaH})].
 
 \subsection{Hawking's area theorem}
 
