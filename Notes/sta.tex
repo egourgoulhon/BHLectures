@@ -678,14 +678,14 @@ $r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2} \to +\infty$:
 \begin{subequations}
 \label{e:sta:metric_weakly_relat}
 \begin{align}
-g_{00} = & - 1 +  \frac{16\pi}{(n-2)\Omega_{n-2}} \frac{M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-1}} \right)
+g_{00} = & - 1 + \alpha_n  \frac{M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-1}} \right)
     \label{e:sta:g00_weakly_relat} \\
-g_{0i} = & \frac{8\pi}{\Omega_{n-2}} \frac{J_{ij} x^j}{r^{n-1}} + \bigO\left( \frac{1}{r^{n-1}} \right) \\
-g_{ij} = & \left(1 + \frac{16\pi}{(n-2)(n-3)\Omega_{n-2}} \frac{M}{r^{n-3}} \right) \delta_{ij}
+g_{0i} = & \frac{n-2}{2} \alpha_n \frac{J_{ij} x^j}{r^{n-1}} + \bigO\left( \frac{1}{r^{n-1}} \right) \\
+g_{ij} = & \left(1 + \frac{\alpha_n}{n-3} \, \frac{M}{r^{n-3}} \right) \delta_{ij}
 + \bigO\left( \frac{1}{r^{n-2}} \right) ,
 \end{align}
 \end{subequations}
-where
+where $\alpha_n := 16\pi/((n-2)\Omega_{n-2})$,
 \be \label{e:sta:mass_weakly_relat}
     M := \int_\Sigma T_{00}({x}) \, \D^{n-1} {x}
 \ee
@@ -870,23 +870,33 @@ We may then assert:
 Let $(\M,\w{g})$ be a stationary asymptotically flat spacetime of dimension $n\geq 4$, with
 $\w{g}$ obeying the Einstein equation (\ref{e:fra:Einstein_eq}) with $\Lambda=0$
 and with the energy-momentum tensor $\w{T}$ vanishing in the
-asymptotic region.
-There exists a coordinate system $(x^\alpha)$ in the asymptotic region
+asymptotic region. Then there exists a coordinate system $(x^\alpha)$ in the asymptotic region
 such that the metric tensor has the following behavior when
 $r:=\sqrt{(x^1)^2 + \cdots + (x^{n-1})^2} \to +\infty$:
 \begin{subequations}
 \label{e:sta:asymptotic_metric}
 \begin{align}
-g_{00} = & - 1 +  \frac{16\pi}{(n-2)\Omega_{n-2}} \frac{M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-2}} \right)
+g_{00} = & - 1 +  \alpha_n \frac{M}{r^{n-3}} + \bigO\left( \frac{1}{r^{n-2}} \right)
    \label{e:sta:asymptotic_g00} \\
-g_{0i} = & \frac{8\pi}{\Omega_{n-2}} \frac{J_{ij} x^j}{r^{n-1}} + \bigO\left( \frac{1}{r^{n-1}} \right)
+g_{0i} = & \frac{n-2}{2} \alpha_n \frac{J_{ij} x^j}{r^{n-1}} + \bigO\left( \frac{1}{r^{n-1}} \right)
      \label{e:sta:asymptotic_g0i} \\
-g_{ij} = & \left(1 + \frac{16\pi}{(n-2)(n-3)\Omega_{n-2}} \frac{M}{r^{n-3}} \right) \delta_{ij}
+g_{ij} = & \left(1 + \frac{\alpha_n}{n-3} \, \frac{M}{r^{n-3}} \right) \delta_{ij}
 + \bigO\left( \frac{1}{r^{n-2}} \right) ,
 \end{align}
 \end{subequations}
-where $\Omega_{n-2}$ is the area of the sphere $\SS^{n-2}$
-[Eqs.~(\ref{e:sta:area_p_sphere})-(\ref{e:sta:area_p_sphere_examples})],
+where
+\be \label{e:sta:def_alpha_n}
+    \alpha_n := \frac{16\pi}{(n-2)\Omega_{n-2}} ,
+\ee
+($\Omega_{n-2}$ being the area of the unit sphere $\SS^{n-2}$, cf.
+Eqs.~(\ref{e:sta:area_p_sphere})-(\ref{e:sta:area_p_sphere_examples})),
+so that
+\be
+    \alpha_4 = 2,\quad
+    \alpha_5 = \frac{8}{3\pi},\quad
+    \alpha_6 = \frac{3}{2\pi},\quad
+    \alpha_7 = \frac{16}{5\pi^2},
+\ee
 $M$ is a constant and $(J_{ij})$ is a constant antisymmetric $(n-1)\times(n-1)$
 matrix. Furthermore, by a suitable $\mathrm{SO}(n-1)$ transformation of the coordinates
 $(x^i)_{1\leq i\leq n-1}$, $(J_{ij})$ can be brought to the following block diagonal form,
@@ -1300,9 +1310,9 @@ with $g_{\alpha 0} = g_{0\alpha}$ given by formulas (\ref{e:sta:asymptotic_metri
 so that
 \[
     \partial_0 \xi_\alpha = 0, \quad
-    \partial_i \xi_0 \simeq - \frac{n-3}{n-2} \frac{16\pi}{\Omega_{n-2}} \frac{M}{r^{n-2}} \frac{x^i}{r}
+    \partial_i \xi_0 \simeq - (n-3)\alpha_n\frac{M}{r^{n-2}} \frac{x^i}{r }
     \quad \mbox{and} \quad
-    \partial_i \xi_j \simeq \frac{8\pi}{\Omega_{n-2}} \frac{J_{jk}}{r^{n-1}}
+    \partial_i \xi_j \simeq \frac{n-2}{2}\alpha_n \frac{J_{jk}}{r^{n-1}}
     \left( \delta_{ki} - (n-1) \frac{x^k x^i}{r^2} \right) .
 \]
 On the other hand, for $r\to +\infty$, we have
@@ -1314,13 +1324,14 @@ it follows that only the terms
 involving $\partial_i \xi_0$ contribute to the integral (\ref{e:sta:M_Komar_partial_der}), which becomes
 \begin{align}
     M_{\Sp} & = -\frac{n-2}{16\pi(n-3)}
-    \int_{\Sp} \partial_i \xi_0 \left( \frac{x^i}{r} \times 1 - 0\times 0 \right) r^{n-2} \sqrt{\bar{q}} \, \D^{n-2} y
-    = \frac{M}{\Omega_{n-2}} \int_{\Sp} \underbrace{\frac{x^i}{r} \frac{x^i}{r}}_{1}
-     \sqrt{\bar{q}} \, \D^{n-2} y \nonumber \\
-     & = \frac{M}{\Omega_{n-2}} \underbrace{ \int_{\Sp} \sqrt{\bar{q}} \, \D^{n-2} y }_{\Omega_{n-2}} .
+    \int_{\Sp} \partial_i \xi_0 \left( \frac{x^i}{r} \times 1 - 0\times 0 \right) r^{n-2} \sqrt{\bar{q}} \, \D^{n-2} y \nonumber \\
+    & = \frac{n-2}{16\pi} \alpha_n M \int_{\Sp} \underbrace{\frac{x^i}{r} \frac{x^i}{r}}_{1}
+     \sqrt{\bar{q}} \, \D^{n-2} y
+      = \frac{n-2}{16\pi} \alpha_n M  \underbrace{ \int_{\Sp} \sqrt{\bar{q}} \, \D^{n-2} y }_{\Omega_{n-2}} .
        \nonumber
 \end{align}
-Hence $M_{\Sp} = M$. The statement about a weakly relativistic system is an immediate consequence
+Since $\alpha_n\Omega_{n-2} = 16\pi/(n-2)$ [cf. Eq.~(\ref{e:sta:def_alpha_n})],
+we get $M_{\Sp} = M$. The statement about a weakly relativistic system is an immediate consequence
 of expansion (\ref{e:sta:metric_weakly_relat}) being a particular case of
 (\ref{e:sta:asymptotic_metric}), given that $M$ in (\ref{e:sta:metric_weakly_relat}) has
 the integral form (\ref{e:sta:mass_weakly_relat}).
@@ -1901,10 +1912,13 @@ in the limit $r\to +\infty$:
 $\eta_\alpha = g_{\alpha\mu} \eta^\mu = g_{\alpha 1} (-x^2) + g_{\alpha 2} x^1
 \simeq (\eta_0, -x^2, x^1, 0, \ldots, 0)$, with
 \[
-    \eta_0 = - g_{01} x^2 + g_{02} x^1 = - \frac{8\pi}{\Omega_{n-2}} \frac{J_{(1)} x^2}{r^{n-1}} x^2
-    + \frac{8\pi}{\Omega_{n-2}} \frac{(-J_{(1)}) x^1}{r^{n-1}} x^1
-    = - \frac{8\pi J_{(1)}}{\Omega_{n-2}} \frac{(x^1)^2 + (x^2)^2}{r^{n-1}} .
+    \eta_0 = - g_{01} x^2 + g_{02} x^1 =
+    \frac{n-2}{2} \alpha_n \left[
+    - \frac{J_{(1)} x^2}{r^{n-1}} x^2
+    + \frac{(-J_{(1)}) x^1}{r^{n-1}} x^1 \right]
+    = - \frac{8\pi J_{(1)}}{\Omega_{n-2}} \frac{(x^1)^2 + (x^2)^2}{r^{n-1}} ,
 \]
+where we have used Eq.~(\ref{e:sta:def_alpha_n}) to express $\alpha_n$.
 The integrand in Eq.~(\ref{e:sta:J_Komar_partial_der}) is then, taking into account that $\partial_0 = 0$
 (stationarity) and $s^0 = 0$ ($\w{s}$ tangent to the hypersurface $x^0 = \mathrm{const})$:
 \begin{align}
