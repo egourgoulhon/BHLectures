@@ -1278,16 +1278,25 @@ Note that the above equation is well-posed since $\kappa > 0$ (the black hole is
 Now, we have established in Sec.~\ref{s:gek:Penrose_proc} that
 $E_* > \Omega_{\Hor}  L_*$ [Eq.~(\ref{e:gek:OmegaH_Lpp_Epp})] as
 a necessary condition for $\mathscr{P}_*$ to cross the event horizon.
-It follows immediately that
+It follows immediately that $\delta A > 0$:
+
+\begin{prop}[area increase of accreting Kerr black holes]
+Under the accretion of particles of energy sufficiently small to neglect
+gravitational radiation, the area $A$ of a Kerr black hole
+necessarily increases:
 \be \label{e:evo:dA_positive_Kerr}
     \encadre{\delta A > 0} .
 \ee
-Hence in the process of particle accretion, the area of a Kerr black hole
-necessarily increases. This holds even if the mass $M$ decreases, which occurs
+\end{prop}
+
+\begin{remark}
+The area increase holds even if the mass $M$ decreases, which occurs
 for a Penrose process ($E'>E$), since then $E_*<0$ and thus $\delta M < 0$
 by virtue of
 Eq.~(\ref{e:evo:dM_E_dJ_L}).
-Any transformation of a black hole with $\delta A > 0$ is called a
+\end{remark}
+
+Any transformation of a black hole with $\delta A > 0$ is called an
 \defin{irreversible transformation} \index{irreversible transformation}.
 For particle accretion, the irreversibility traces back
 to the inequality $E_* > \Omega_{\Hor}  L_*$ [Eq.~(\ref{e:gek:OmegaH_Lpp_Epp})],
@@ -1302,7 +1311,7 @@ $E_* > \Omega_{\Hor} L_*$ holds.
 
 A \defin{reversible transformation}\index{reversible transformation}
 is a transformation such that $\delta A = 0$. For particle accretion, it is
-acheived in the limit case $E_* = \Omega_{\Hor}  L_*$ [cf. Eq.~(\ref{e:evo:dA_Estar_Jstar})].
+achieved in the limit case $E_* = \Omega_{\Hor}  L_*$ [cf. Eq.~(\ref{e:evo:dA_Estar_Jstar})].
 The particle $\mathscr{P}_*$ reaches then the event horizon $\Hor$ with
 a vanishing radial affine velocity $\D r / \D\lambda$,
 $\lambda$ being the affine parameter along $\mathscr{P}_*$'s worldline associated
@@ -1310,11 +1319,12 @@ with $\mathscr{P}_*$'s 4-momentum (cf. Sec.~\ref{s:gek:geod_motion_intro}).
 Indeed, the equation of geodesic motion (\ref{e:gek:drdl}) yields,
 on $\Hor$ ($r=r_+$),
 \be \label{e:evo:drdlambda_E_L}
-    (r_+^2 + a^2 \cos^2 \th) \derd{r}{\lambda} = - (r_+^2 + a^2) ( E_* - \Omega_{\Hor}  L_* ) .
+    \left. \derd{r}{\lambda} \right| _{r=r_+} =
+     - \frac{r_+^2 + a^2}{r_+^2 + a^2 \cos^2 \th} ( E_* - \Omega_{\Hor}  L_* ) .
 \ee
 Note that we have set $\eps_r  = -1$ in Eq.~(\ref{e:gek:drdl}) to account for the infall motion
 of $\mathscr{P}_*$ and have specialized expression (\ref{e:gek:def_R_Q}) for $R(r)$ to $\Delta = 0$
-($r = r_+$), which yields $\sqrt{R(r)} = (r_+^2 + a^2) |E_* - \Omega_{\Hor}  L_*| =
+($r = r_+$), which yields $\sqrt{R(r_+)} = (r_+^2 + a^2) |E_* - \Omega_{\Hor}  L_*| =
 (r_+^2 + a^2)(E_* - \Omega_{\Hor}  L_*)$
 thanks to Eq.~(\ref{e:gek:OmegaH_Lpp_Epp}) and the
 identity $a / (r_+^2 + a^2) =\Omega_{\Hor}$ [Eq.~(\ref{e:ker:def_OmegaH})].
@@ -1326,7 +1336,7 @@ $R'(r_+) = - 2 \sqrt{m^2 - a^2} (\mu_*^2  r_+^2 + \mathscr{K}_*)$, where $\mu_*$
 mass of $\mathscr{P}_*$ and $\mathscr{K}_*$ is the Carter constant of $\mathscr{P}_*$.
 Given that $m^2 - a^2\neq 0$ (non-extremal Kerr) and $\mathscr{K}_* \geq 0$ [Eq.~(\ref{e:gek:R_non_neg})], we obtain $R'(r_+) \neq 0$, except if $\mu_*=0$ and $\mathscr{K}_* = 0$.
 According to Property~\ref{p:gek:null_geod_K_0},
-the last case would occur only if $\mathscr{P}_*$ would follow a principal null geodesic of Kerr
+the last case would occur only if $\mathscr{P}_*$ followed a principal null geodesic of Kerr
 spacetime. However, this is excluded since those geodesics do not fulfill
 $\Omega_{\Hor}  L_* = E_*$ in the black hole exterior: they obey $L_* = a E_* \sin^2\th$
 [Eqs.~(\ref{e:gek:ingoing_null_E_L}) and (\ref{e:gek:E_L_outgoing_MI_III})],
@@ -1337,7 +1347,27 @@ that $\mathscr{P}_*$ has necessarily a $r$-turning point on $\Hor$
 (cf. Sec.~\ref{s:gek:turning_points}).
 Hence a reversible transformation corresponds to the idealized case where
 the particle $\mathscr{P}_*$ is on the verge of being accreted by the black hole
-but is actually not.
+but is actually not. This case is approached when $\mathscr{P}_*$ crosses $\Hor$
+with an affine velocity $\D r / \D\lambda$ as small as possible.
+
+The square root of the horizon area $A$ (rescaled by $1/(16\pi)$) is called
+the black hole's \defin{irreducible mass}\index{irreducible mass}\index{mass!irreducible --}:
+\be
+    M_{\rm irr}^2 := \frac{A}{16\pi} .
+\ee
+$M_{\rm irr}$ has the dimension of a mass and
+Eq.~(\ref{e:evo:dA_positive_Kerr}) is equivalent to $\delta M_{\rm irr} > 0$,
+i.e. $M_{\rm irr}$ cannot decrease in any accretion process,
+hence its name. This contrasts with $M$, which may decrease (Penrose process).
+Formula~(\ref{e:ker:A_a_m}) for $A$ can be turned into an expression
+for $M_{\rm irr}$ in terms of $M$ and $J=aM$ (cf. Fig.~\ref{f:evo:irred_mass}):
+\be \label{e:evo:M_irr_M_J}
+    M_{\rm irr} = M \sqrt{\frac{1}{2} \left( 1 + \sqrt{1 - \frac{J^2}{M^4}}\right) } .
+\ee
+This relation is easily inverted to express $M$ in terms of $M_{\rm irr}$ and $J$:
+\be
+    M^2 = M_{\rm irr}^2 + \frac{J^2}{4 M_{\rm irr}^2} .
+\ee
 
 \begin{figure}
 \centerline{\includegraphics[width=0.6\textwidth]{evo_irred_mass.pdf}}
@@ -1350,31 +1380,34 @@ area depicts the maximal energy that can be extracted from the black hole by
 a Penrose process bringing $J$ down to $0$.}
 \end{figure}
 
-The square root of the horizon area $A$ (rescaled by $1/(16\pi)$) is called
-the black hole's \defin{irreducible mass}\index{irreducible mass}\index{mass!irreducible --}:
+Suppose some energy is extracted by a sequence of Penrose processes\index{Penrose!process}
+(cf. Sec.~\ref{s:gek:Penrose_proc}) from a Kerr black hole of initial mass $M$ and angular momentum $J$,
+leading to a final state corresponding to a Kerr black hole of mass $M_0$ and angular
+momentum $J_0$. The maximal energy $\Delta M = M - M_0$ that can be extracted is achieved when the
+final state is a Schwarzschild black hole ($J_0=0$), since then the Penrose process
+necessarily stops, due to the lack of an outer ergoregion (cf. Sec.~\ref{s:gek:Penrose_proc}).
+Since the irreducible mass of a Schwarzschild black hole coincides with its mass
+(set $J=0$ in Eq.~(\ref{e:evo:M_irr_M_J})), the irreducible mass
+of the final state is $M_{{\rm irr},0} = M_0$ and we have $\Delta M = M - M_{{\rm irr},0}$.
+The evolution law $M_{{\rm irr},0} \geq M_{\rm irr}$ provides then a upper bound
+on the extracted energy:
 \be
-    M_{\rm irr}^2 := \frac{A}{16\pi} .
+    \Delta M \leq M - M_{\rm irr} ,
 \ee
-$M_{\rm irr}$ has the dimension of a mass and
-Eq.~(\ref{e:evo:dA_positive_Kerr}) is equivalent to $\delta M_{\rm irr} > 0$,
-i.e. $M_{\rm irr}$ cannot decrease in any accretion process (contrary to $M$
-for instance), hence its name.
-Formula~(\ref{e:ker:A_a_m}) for $A$ can be turned into an expresson
-of $M_{\rm irr}$ in terms of $M$ and $J=aM$ (cf. Fig.~\ref{f:evo:irred_mass}):
-\be \label{e:evo:M_irr_M_J}
-    M_{\rm irr} = M \sqrt{\frac{1}{2} \left( 1 + \sqrt{1 - \frac{J^2}{M^4}}\right) } .
-\ee
-This relation is easily inverted to express $M$ in terms of $M_{\rm irr}$ and $J$:
+with equilatity only for a sequence of reversible transformations.
+Figure~\ref{f:evo:irred_mass} shows that $\Delta M/M$ is maximal when the
+initial state is (close to) an extremal Kerr black hole ($J=M^2$). From
+Eq.~(\ref{e:evo:M_irr_M_J}), one gets
 \be
-    M^2 = M_{\rm irr}^2 + \frac{J^2}{4 M_{\rm irr}^2} .
+    \max \frac{\Delta M}{M} = 1 - \frac{1}{\sqrt{2}} \simeq 0.293 .
 \ee
-
-Suppose some energy is extracted by a Penrose process\index{Penrose!process}
-(cf. Sec.~\ref{s:gek:Penrose_proc}) from a Kerr black hole of initial mass $M$ and angular momentum $J$
-leading to a final state corresponding to a Kerr black hole of mass$M_0$ and angular
-momentum $J_0$.
-
-
+We conclude:
+\begin{prop}[maximal energy extraction by a Penrose process]
+A sequence of Penrose processes can extract up to $29 \%$ of the mass
+of a Kerr black hole. This upper bound is achieved for
+a maximally spinning black hole, by bringing it down to a non spinning
+state via reversible transformations only.
+\end{prop}
 
 \subsection{Hawking's area theorem}
 
