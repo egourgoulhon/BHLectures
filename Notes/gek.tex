@@ -3494,7 +3494,7 @@ the quadratic equation $(r_{\rm ISCO}^\pm)^2 - 6 m r_{\rm ISCO}^\pm \pm 8 a \sqr
     4 - \sqrt{3\frac{r_{\rm ISCO}^\pm}{m} - 2} \right)  }  ,
 \ee
 where the overall factor $\pm$ must be the same as in\footnote{Note that
-for $\pm=-$, formula (\ref{e:gek:a_r_ISCO}) still yields $a\geq 0$ since
+for $\pm=-$, formula (\ref{e:gek:a_r_ISCO}) still yields $a\geq 0$, since
 $r_{\rm ISCO}^- \geq 6 m$.} $r_{\rm ISCO}^\pm$.
 
 \begin{remark}
@@ -3638,12 +3638,22 @@ curves in the region $r_0 \leq m$ of Figs.~\ref{f:gek:eps_circ_orb} and \ref{f:g
 In particular, there are no equatorial circular orbits in region $\M_{\rm II}$ of Kerr spacetime.
 \end{prop}
 
-\subsection{Astrophysical application: energy radiated from an accretion disk around a black hole}
+\subsection{Radiated energy from an accretion disk around a black hole}
 
 The prograde ISCO around a Kerr black hole plays an important role in astrophysics:
 accretion of matter onto black holes proceeds via an accretion disk\index{accretion!disk} and
 the inner edge of the disk is located at the ISCO, either exactly (low luminosity thin disk)
 or very close to it \cite{AbramF13,King23}.
+Matter slowly inspiral in the accretion disk, losing energy and angular momentum due to the
+friction induced by the disk's differential rotation. The friction heats the disk and the
+energy is taken away by electromagnetic radiation. At a given orbit in the disk,
+the conserved energy of a particle of mass $\mu$ is $E = \mu \veps$ and the
+difference $E_{\rm rad}=|E - \mu|=\mu(1 - \veps)$ can be considered as the energy radiated away to reach this
+orbit (\emph{binding energy}\index{binding energy}) starting from rest far from the
+black hole (its energy was then $E_\infty=\mu$).
+According to Property~\ref{p:gek:ISCO_extremum_eps_ell}, this radiated energy
+is maximal when the particle has reached the ISCO. Let us then evaluate $\veps$
+at the ISCO.
 
 The values of $\veps$ and $\ell$ at the ISCO depend on $a$ (cf. Fig.~\ref{f:gek:eps_ell_isco});
 they take a simple form when expressed in terms of $r_{\rm ISCO}^\pm$, instead of directly $a$:
@@ -3694,7 +3704,7 @@ by $\sqrt{3u - 2} + 1$ and simplification, results in the second formula in Eq.~
 \end{proof}
 For $r_{\rm ISCO}^\pm = 6 m$ (i.e. $a=0$), formula (\ref{e:gek:veps_ell_ISCO})
 yields
-\be
+\be \label{e:gek:eps_ISCO_a_0}
     \veps_{\rm ISCO}^\pm = \frac{2\sqrt{2}}{3} \simeq 0.943
     \qand
     \ell_{\rm ISCO}^\pm = \pm 2 \sqrt{3}\, m \simeq 3.46\, m \qquad (a=0) ,
@@ -3705,7 +3715,7 @@ while for $r_{\rm ISCO}^+ = m$ and $r_{\rm ISCO}^- = 9m$ (i.e. $a=m$), formula
 \begin{align}
     & \veps_{\rm ISCO}^+ = \frac{1}{\sqrt{3}} \simeq 0.577
     \qand
-    \ell_{\rm ISCO}^+ = \frac{2 m}{\sqrt{3}} \simeq 1.15 \, m \qquad (a=m)  \\
+    \ell_{\rm ISCO}^+ = \frac{2 m}{\sqrt{3}} \simeq 1.15 \, m \qquad (a=m) \label{e:gek:eps_ISCOp_a_1} \\
     & \veps_{\rm ISCO}^- = \frac{5}{3\sqrt{3}} \simeq 0.962
     \qand
     \ell_{\rm ISCO}^- = -\frac{22 m}{3\sqrt{3}} \simeq - 4.23 \, m \qquad (a=m) .
@@ -3715,7 +3725,21 @@ For $a=0$, we recover the value of $\veps_{\rm ISCO}$ obtained in
 Chap.~\ref{s:ges} for the Schwarzschild metric [Eq.~(\ref{e:ges:veps_ISCO})],
 while the value of $|\ell_{\rm ISCO}^\pm|$ coincides with the value
 $\ell_{\rm crit}$ given by Eq.~(\ref{e:ges:ell_crit}), as it should.
+For $a=m$, the values of $\veps_{\rm ISCO}^\pm$ and
+$\ell_{\rm ISCO}^\pm$ are the extremal ones among all values of $a$,
+as it appears clearly on Fig.~\ref{f:gek:eps_ell_isco}.
 
+From the numerical values (\ref{e:gek:eps_ISCO_a_0})-(\ref{e:gek:eps_ISCOp_a_1}),
+the energy per unit mass radiated away to reach the prograde ISCO,
+i.e. $E_{\rm rad}/\mu = 1 - \veps_{\rm ISCO}^+$, is $0.057$ for $a=0$
+and $0.423$ for $a=m$, which leads to the important conclusion:
+
+\begin{prop}[Released energy in an accretion disk around a black hole]
+Accretion onto a black hole via an accretion disk releases a significant
+fraction of the rest mass energy of matter: from $6\%$ for a non-rotating
+black hole (Schwarzschild) up to $42\%$ for a maximally rotating black hole
+(extremal Kerr).
+\end{prop}
 
 \subsection{4-velocity and angular velocities} \label{s:gek:circ_velocities}
 
