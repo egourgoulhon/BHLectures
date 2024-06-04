@@ -53,7 +53,7 @@ a much more general framework, without assuming that it corresponds to changes b
 two nearby Kerr solutions and without restricting
 the spacetime dimension to 4 or assuming that the event horizon is connected.
 It even holds for other gravity theories than general relativity, more specifically
-for any theory based on a diffeomorphism-covariant lagrangian, provided that
+for any theory based on a diffeomorphism-covariant Lagrangian, provided that
 the area $A$ is replaced by some other quantity, named the \emph{Wald entropy}\index{Wald entropy}\index{entropy!Wald --}, which reduces to $A$ for general relativity (see Remark~?? below).
 
 Here we establish the mass variation formula for two nearby black hole
@@ -418,7 +418,8 @@ and $q$ is the determinant with respect to it of the metric $\w{q}$ induced by $
 on $\Sp_\infty$. Now, on $\Sp_\infty$, $\w{n} = \w{\xi}$ and $\w{s} = (x^i/r)\wpar_i$, with
 $\xi_\mu n^\mu = \xi_\mu \xi^\mu = -1$ and $\xi_\mu s^\mu = 0$. Moreover, since
 $(x^\alpha)$ is asymptotically Minkowskian, we may substitute the covariant derivatives
-with partial ones. Hence we get, accounting for $\partial_0 h_{i0} = 0$,
+with partial ones. Hence we get, accounting for $\partial_0 h_{i0} = 0$
+($\w{h}=\delta\w{g}$ is stationary, since both $\w{g}$ and $\w{g}+\delta\w{g}$ are),
 \[
     \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} =
     \int_{\Sp_\infty} \frac{x^i}{r} ( \partial_j h_{ij} -
@@ -476,9 +477,10 @@ Now, from Eq.~(\ref{e:evo:I_Sk_int_omega}),
 \eea
 where $\nabla_\nu \xi^\nu = 0$ holds because $\w{\xi}$ is a Killing vector
 and we have used $H^\nu \nabla_\nu \xi^\mu - \xi^\nu \nabla_\nu H^\mu = [\w{H},\w{\xi}]^\mu = - [\w{\xi},\w{H}]^\mu = - \Liec{\xi} H^\mu = 0$
-because $\Lie{\xi} \w{h} = 0$ and Eq.~(\ref{e:evo:def_H}) imply
+because $\Lie{\xi} \w{h} = 0$ and Eq.~(\ref{e:evo:def_H}) implies
 $\Lie{\xi} \w{H} = 0$, for $\wnab$ and
-$\Lie{\xi}$ commute, $\w{\xi}$ being a Killing vector\footnote{This is easy to see in a coordinate system $(x^\alpha)$ such that $\w{\xi} = \wpar_0$, cf. Eq.~(\ref{e:bas:Lie_adapted}).}.
+$\Lie{\xi}$ commute, $\w{\xi}$ being a Killing vector\footnote{This is easy to see in a coordinate system $(x^\alpha)$ such that $\w{\xi} = \wpar_0$, cf. Eq.~(\ref{e:bas:Lie_adapted});
+see also Appendix~E2 of Ref.~\cite{RamonL21} for a covariant proof.}.
 Hence
 \[
    \delta  M_\infty =
@@ -504,7 +506,7 @@ we may write
 with
 \[
     I :=  \int_{\Sigma} \xi^\mu  \left[ \nabla_\nu H^\nu \, \D V_\mu - \frac{1}{2}
-    \delta R \, \D V_\mu + \frac{1}{2} R \, \delta(\D V_\mu)  \right] .
+    \left(\delta R \, \D V_\mu +  R \, \delta(\D V_\mu) \right)  \right] .
 \]
 Now from Eq.~(\ref{e:sta:normal_vol_element}), $\D V_\alpha = - n_\alpha \sqrt{\gamma} \, \D^{n-1} x$,
 where $(x^i)_{1\leq i \leq n-1}$ are coordinates on $\Sigma$, $\gamma$ is the determinant with respect to
@@ -537,8 +539,8 @@ or Eq.~(4.62) in Carroll's textbook \cite{Carro04}.}:
     \delta R_{\alpha\beta} = \nabla_\mu \delta\Gamma^\mu_{\ \, \alpha\beta}
         - \nabla_\beta \delta \Gamma^\mu_{\ \, \alpha\mu} ,
 \ee
-where the variations $\delta\Gamma^\gamma_{\ \, \alpha\beta}$ of the Christofell symbols are actually
-tensor fields on $\M$ (contrary to the Christofell symbols themselves), being expressible via the
+where the variations $\delta\Gamma^\gamma_{\ \, \alpha\beta}$ of the Christoffel symbols are actually
+tensor fields on $\M$ (contrary to the Christoffel symbols themselves), being expressible via the
 manifestly tensorial relation\footnote{See e.g. Eq.~(3.93) in Straumann's textbook \cite{Strau13}.}
 \be \label{e:evo:delta_Gamma}
     \delta\Gamma^\gamma_{\ \, \alpha\beta} = \frac{1}{2} g^{\gamma\mu} \left( \nabla_\alpha h_{\mu\beta}
@@ -808,18 +810,18 @@ Substituting the above expression for $\delta I$ into Eq.~(\ref{e:evo:delta_M_em
     \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
     +  \sum_{i=1}^{L} \Omega^{(i)} \, \delta J_{\Hor_k}^{(i)} \right)
-    + \delta M_\infty^{\rm EM} ,
+    + (\delta M_\infty)^{\rm EM} ,
 \ee
 where the electromagnetic part is defined by
 \[
-   \delta M_\infty^{\rm EM} := - \frac{1}{2\mu_0} \, \delta \int_{\Sp} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
+   (\delta M_\infty)^{\rm EM} := - \frac{1}{2\mu_0} \, \delta \int_{\Sp} A_\sigma \xi^\sigma F_{\mu\nu} \D S^{\mu\nu}
     - \frac{1}{\mu_0}  \int_{\Sp} \delta A_\sigma F^\sigma_{\ \, \mu} \xi_\nu \, \D S^{\mu\nu} .
 \]
 Let us use $\w{\xi} = \w{\chi} - \sum_{i=1}^{L} \Omega^{(i)} \w{\eta}_{(i)}$ to let appear the null normal
 $\w{\chi}$ of the event horizon. Taking into account that $\eta_{(i)\nu}\, \D S^{\mu\nu} = 0$
 for $\w{\eta}_{(i)}$ is tangent to $\Sp$, we get
 \[
-   \delta M_\infty^{\rm EM} = - \frac{1}{2\mu_0} \, \delta \int_{\Sp}
+   (\delta M_\infty)^{\rm EM} = - \frac{1}{2\mu_0} \, \delta \int_{\Sp}
    \left( A_\sigma \chi^\sigma - \sum_{i=1}^L \Omega^{(i)} A_\sigma  \eta_{(i)}^\sigma \right) F_{\mu\nu} \D S^{\mu\nu}
     - \frac{1}{\mu_0}  \int_{\Sp} \delta A_\sigma F^\sigma_{\ \, \mu} \chi_\nu \, \D S^{\mu\nu} .
 \]
@@ -831,7 +833,7 @@ Furthermore, thanks to Eq.~(\ref{e:sta:dS_chi_k}),
 $\chi_\nu \, \D S^{\mu\nu} = \chi_\nu (\chi^\mu k^\nu - k^\nu \chi^\nu) \D S = - \chi^\mu \D S$.
 Hence
 \[
-    \delta M_\infty^{\rm EM} = \sum_{k=1}^K \left[
+    (\delta M_\infty)^{\rm EM} = \sum_{k=1}^K \left[
     - \delta \int_{\Sp_k} A_\sigma \chi^\sigma \sigma_k \D S
     + \sum_{i=1}^L \delta \int_{\Sp_k}  \Omega^{(i)} A_\sigma  \eta_{(i)}^\sigma \sigma_k \D S
     + \frac{1}{\mu_0}  \int_{\Sp_k} \delta A_\sigma F^\sigma_{\ \, \mu} \chi^\mu \, \D S \right] .
@@ -842,7 +844,7 @@ on $\Sp_k$
 the last integral cancels out with the part $\delta A_\sigma \chi^\sigma \sigma_k \D S$
 arising from the first integral and we are left with
 \[
-    \delta M_\infty^{\rm EM} = \sum_{k=1}^K \left[
+    (\delta M_\infty)^{\rm EM} = \sum_{k=1}^K \left[
     - \int_{\Sp_k} A_\sigma \delta\chi^\sigma \, \sigma_k \D S
     - \int_{\Sp_k} A_\sigma \chi^\sigma  \delta(\sigma_k \D S)
     + \sum_{i=1}^L \delta \int_{\Sp_k}  \Omega^{(i)} A_\sigma  \eta_{(i)}^\sigma \sigma_k \D S \right] .
@@ -854,7 +856,7 @@ constant set to zero by a proper choice of $\w{A}$], so that the second integral
 as $- \Phi_{\Hor_k} \delta Q_{\Hor_k}$, where use has been made of Eq.~(\ref{e:sta:Q_sigma}) to
 let appear the electric charge $Q_{\Hor_k}$. Hence, we get
 \[
-    \delta M_\infty^{\rm EM} = \sum_{k=1}^K \left[ \Phi_{\Hor_k} \delta  Q_{\Hor_k}
+    (\delta M_\infty)^{\rm EM} = \sum_{k=1}^K \left[ \Phi_{\Hor_k} \delta  Q_{\Hor_k}
     + \sum_{i=1}^L  \Omega^{(i)} \delta \int_{\Sp_k}  A_\sigma  \eta_{(i)}^\sigma \sigma_k \D S \right] .
 \]
 Consequently, we may rewrite Eq.~(\ref{e:evo:delta_M_infty_EM_prov}) as
@@ -921,12 +923,13 @@ and $J_\infty = J$ are independent of the integration surface in vacuum.
 An alternative derivation of the mass variation formulas
 (\ref{e:evo:mass_variation_vacuum_n4}) and
 (\ref{e:evo:mass_variation_electovac_K1}) can be performed within the
-ADM Hamiltonian formulation of general relativity\index{Hamiltonian!formulation of general relativity}\index{ADM!Hamiltonian formulation}, as shown by Sudarsky and Wald
+ADM Hamiltonian formulation of general relativity\index{Hamiltonian!formulation of general relativity}\index{ADM!Hamiltonian formulation}, as shown by Sudarsky and Wald (1992)
 \cite{SudarW92,SudarW93} (see also Sec.~6.2 of Ref.~\cite{Wald94}).
 This derivation does not rely on the generalized Smarr formula (used in the proof of
 Property~\ref{p:evo:first_law_gen}, from which formulas (\ref{e:evo:mass_variation_vacuum_n4}) and
 (\ref{e:evo:mass_variation_electovac_K1}) are derived) but it requires that the black hole event horizon is
-part of a bifurcate Killing horizon.
+part of a bifurcate Killing horizon. This last assumption has been removed
+by Gao and Wald in 2001 \cite{GaoW01}.
 \end{remark}
 
 \subsection{Mass variation formula for a black hole surrounded by a fluid}
@@ -934,7 +937,7 @@ part of a bifurcate Killing horizon.
 Another interesting application of the
 general mass variation formula (\ref{e:evo:mass_variation_gal}) regards a black hole surrounded
 by some perfect-fluid matter in 4-dimensional general relativity.
-We first need some prelimaries about the perfect fluid model:
+We first need some preliminaries about the perfect fluid model:
 
 \begin{prop}[simple perfect fluid in axisymmetric spacetimes]
 \label{p:evo:simple_fluid}
