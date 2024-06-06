@@ -1363,8 +1363,8 @@ with an affine velocity $\D r / \D\lambda$ as small as possible.
 
 The square root of the horizon area $A$ (rescaled by $1/(16\pi)$) is called
 the black hole's \defin{irreducible mass}\index{irreducible mass}\index{mass!irreducible --}:
-\be
-    M_{\rm irr}^2 := \frac{A}{16\pi} .
+\be \label{e:evo:Mirr_A}
+    \encadre{ M_{\rm irr}^2 := \frac{A}{16\pi} }.
 \ee
 $M_{\rm irr}$ has the dimension of a mass and
 Eq.~(\ref{e:evo:dA_positive_Kerr}) is equivalent to $\delta M_{\rm irr} > 0$,
@@ -1376,7 +1376,7 @@ for $M_{\rm irr}$ in terms of $M$ and $J=aM$ (cf. Fig.~\ref{f:evo:irred_mass}):
     M_{\rm irr} = M \sqrt{\frac{1}{2} \left( 1 + \sqrt{1 - \frac{J^2}{M^4}}\right) } .
 \ee
 This relation is easily inverted to express $M$ in terms of $M_{\rm irr}$ and $J$:
-\be
+\be \label{e:evo:M_M_irr_J}
     M^2 = M_{\rm irr}^2 + \frac{J^2}{4 M_{\rm irr}^2} .
 \ee
 
@@ -1420,13 +1420,38 @@ a maximally spinning black hole (extremal Kerr), by bringing it down to a nonrot
 state (Schwarzschild) via reversible transformations.
 \end{prop}
 
+\begin{hist}
+\label{h:evo:irreducible_mass}
+Demetrios Christodoulou\index[pers]{Christodoulou, D.} introduced the
+concepts of \emph{irreversible transformation} and \emph{irreducible mass} of a Kerr black
+hole in 1970 \cite{Chris70}, establishing formula (\ref{e:evo:M_M_irr_J}).
+Actually, he did not make any consideration about the black hole area but rather
+integrated the relation $\D M = \Omega_{\Hor} \, \D J$, which holds when
+the black hole is accreting a particle with $E_* = \Omega_{\Hor} L_*$, i.e.
+at the saturation limit of the inequality (\ref{e:gek:OmegaH_Lpp_Epp}). Indeed, by expressing
+$\Omega_{\Hor}$ as a function of $(M,J)$ via Eq.~(\ref{e:ker:def_OmegaH}),
+one gets $\D M = J\D J/(2M(M^2 + \sqrt{M^4 - J^2}))$, which is equivalent
+to $\D(M^2 + \sqrt{M^4 - J^2}) = 0$.
+The irreducible mass $M_{\rm irr}$
+then appears when writing the integration constant for this equation as $2 M_{\rm irr}^2$,
+i.e. $M^2 + \sqrt{M^4 - J^2} = 2 M_{\rm irr}^2$, which is equivalent to Eq.~(\ref{e:evo:M_irr_M_J}).
+The connection (\ref{e:evo:Mirr_A}) with the black hole area has been
+performed in a second study, with Remo Ruffini\index[pers]{Ruffini, R.}, published in 1971
+\cite{ChrisR71} and which extends Christodoulou's results to Kerr-Newmann
+black holes\index{Kerr-Newman!black hole}. Meanwhile,
+Roger Penrose\index[pers]{Penrose, R.}
+and Roger Floyd\index[pers]{Floyd, R.M.} \cite{PenroF71} noticed at the end of 1970 (published 1971)
+that the area of a Kerr black hole necessarily increases under particle accretion, i.e.
+they established Property~\ref{p:evo:area_law_Kerr}.
+\end{hist}
+
 \subsection{Hawking's area theorem}
 
 The area increase law turns out to be far
 more general than established in Property~\ref{p:evo:area_law_Kerr},
 which regards only a Kerr black hole accreting particles:
 the law actually applies to any black hole evolving under
-any process (not necessary a small perturbation) such that the null convergence condition
+any process (not necessarily a small perturbation) such that the null convergence condition
 [Eq.~(\ref{e:neh:null_energy_cond})]
 is satisfied in the vicinity of the event horizon.
 This is the essence of the famous \emph{area theorem}, first established
@@ -1654,10 +1679,12 @@ fulfills the null energy condition, given that $M'(v) \geq 0$ (cf. Fig.~\ref{f:v
 
 
 \begin{hist}
-It has been noticed in 1970 (published 1971) by Roger Penrose\index[pers]{Penrose, R.}
+As mentioned in the historical note on p.~\pageref{h:evo:irreducible_mass},
+Roger Penrose\index[pers]{Penrose, R.}
 and Roger Floyd\index[pers]{Floyd, R.M.} \cite{PenroF71}
-that the area of a Kerr black hole increases, despite its mass is decreasing, when
-some energy is extracted by means of a Penrose process (Property~\ref{p:evo:area_law_Kerr}).
+have shown in 1970 (published 1971)
+that the area of a Kerr black hole always increases during particle accretion,
+even if its mass is decreasing, as in a Penrose process (Property~\ref{p:evo:area_law_Kerr}).
 Soon after, in 1971, Stephen Hawking\index[pers]{Hawking, S.W.}
 \cite{Hawki71} established the area theorem for generic
 dynamical black holes and a detailed proof was given in
