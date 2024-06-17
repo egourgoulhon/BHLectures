@@ -1901,7 +1901,7 @@ $k_{\rm B} = 1.380649\; 10^{-23}$ ${\rm\;  J\, K}^{-1}$ is the Boltzmann constan
 
 We shall not establish this property here; this is done in many textbooks,
 e.g. \cite{Wald84,Wald94,FroloN98,Carro04,FabbrN05}, as well in some review
-articles, e.g. \cite{BroutMPS95,Damou04}. Rather, we shall limit
+articles, e.g. \cite{BroutMPS95,Damou04,Jacob96}. Rather, we shall limit
 ourselves to a few remarks:
 
 \begin{remark}\label{r:evo:Hawking_temp_units}
@@ -2088,7 +2088,7 @@ as the time to reach $M=0$ from $M = M_0$, we deduce from Eq.~(\ref{e:evo:M_t_ev
 following:
 
 \begin{prop}[Hawking evaporation of a Schwarzschild black hole]
-As seen by an inertial observer at infinity, a Schwarzschild black hole of mass $M_0$ fully evaporates via Hawking radiation within a time
+As seen by an inertial observer at infinity, a Schwarzschild black hole of initial mass $M_0$ fully evaporates via Hawking radiation within a time
 \be \label{e:evo:t_evap}
     \encadre{ t_{\rm evap} = \frac{M_0^3}{3C\hbar}
       = 1.54\; 10^{66} \left( \frac{M_0}{M_\odot} \right) ^3 {\rm\; yr} } ,
@@ -2143,12 +2143,15 @@ appearing in Eq.~(\ref{e:evo:identif_S_T}): comparing Eq.~(\ref{e:evo:identif_T_
 with formula~(\ref{e:evo:Hawking_temp}) for $T=T_{\rm H}$, we get $\alpha = k_{\rm B}/(4\hbar)$. Accordingly, Eq.~(\ref{e:evo:identif_S_A}) becomes
 $S = k_{\rm B} A/(4\hbar)$ and we may state
 \begin{prop}[Bekenstein-Hawking entropy]
-A black hole in equilibrium
-is endowed with the \defin{Bekenstein-Hawking entropy}\index{Bekenstein-Hawking entropy}\index{entropy!Bekenstein-Hawking --} $S_{\rm BH}$, which is proportional to the black hole area $A$ according to the formula:
+A $n$-dimensional ($n\geq 3$) black hole in equilibrium
+is endowed with the \defin{Bekenstein-Hawking entropy}\index{Bekenstein-Hawking entropy}\index{entropy!Bekenstein-Hawking --} $S_{\rm BH}$, which is proportional to the area $A$ of
+the event horizon according to the formula:
 \be \label{e:evo:S_BH}
     \encadre{S_{\rm BH} = k_{\rm B}\frac{A}{4\hbar} }.
 \ee
-The first law of black hole dynamics (\ref{e:evo:first_law}) writes then
+For $n\geq 4$ and Einstein-Maxwell theory (see Property~\ref{p:evo:mass_var_electrovac}
+for detailed assumptions),
+the first law of black hole dynamics (\ref{e:evo:first_law}) writes then
 \be
     \delta M = T_{\rm H} \, \delta S_{\rm BH} + \Omega_{\Hor} \, \delta J
     + \Phi_{\Hor} \, \delta Q_{\Hor} ,
@@ -2157,7 +2160,13 @@ where $T_{\rm H}$ is the Hawking temperature.
 \end{prop}
 
 \begin{remark}
-If one restores the $G$'s and $c$'s, formula~(\ref{e:evo:S_BH}) reads
+As for the Hawking temperature (\ref{e:evo:Hawking_temp}),
+formula~(\ref{e:evo:S_BH}) for the Bekenstein-Hawking entropy
+does not depend on the spacetime dimension $n$.
+\end{remark}
+
+\begin{remark}
+For $n=4$, if one restores the $G$'s and $c$'s, formula~(\ref{e:evo:S_BH}) reads
 $S_{\rm BH} = k_{\rm B}\frac{c^3 A}{4G \hbar}$. One then recognizes the square
 of the \defin{Planck length}\index{Planck!length}:
 $\ell_{\rm P} := \sqrt{G\hbar / c^3} \simeq 1.62\; 10^{-35} {\rm\; m}$,
@@ -2240,11 +2249,33 @@ naively conceived to violate it \cite{Carli14,Wald01,Wall09}.
 
 By superseding the standard second law of thermodynamics, the GSL provides a
 genuine thermodynamical meaning to the Bekenstein-Hawking entropy
-(note that by adding it $S_{\rm mat}$, formula (\ref{e:evo:def_gen_entropy})
+(note that by adding it to the ``ordinary'' entropy $S_{\rm mat}$, formula (\ref{e:evo:def_gen_entropy})
 puts $S_{\rm BH}$ on the same ground as $S_{\rm mat}$). It would be fully satisfactory though to
-find a ``statistical mechanics'' origin to $S_{\rm BH}$, i.e. to interpret $S_{\rm BH}$
+find a ``statistical mechanics'' origin for $S_{\rm BH}$, i.e. to interpret $S_{\rm BH}$
 as counting the microscopic states that are compatible with a given macroscopic
-state of the black hole. This clearly requires a quantum theory of gravity,
-which we do not have yet.
+state of the black hole. Defining the microscopic states clearly requires a quantum theory of gravity, which we do not have yet. However some partial results have been
+obtained, based on two current approaches to quantum gravity: string theory and loop quantum
+gravity. Regarding the former, Andrew Strominger\index[pers]{Strominger, A.} and Cumrun Vafa\index[pers]{Vafa, C.} \cite{StromV96} have established
+the Bekenstein-Hawking formula (\ref{e:evo:S_BH}) for the entropy in the specific case of
+an extremal supersymmetric black hole in dimension $n=5$. By \emph{extremal}\index{extremal!black hole}, it is meant
+that the event horizon is a degenerate Killing horizon ($\kappa = 0$, cf. Sec.~\ref{s:neh:classif_KH}), i.e. the Hawking temperature is zero. By \emph{supersymmetric}, it is meant that these black hole
+solutions have been obtained within a $N=4$ supersymmetric Yang-Mills theory,
+which corresponds to a low energy limit of a string theory. Further developments are
+discussed in the review articles \cite{Horow98,Carli14,Wald01,Walla19}; they are
+still limited to extremal black holes or near-extremal ones. In particular,
+the Bekenstein-Hawking entropy of a Schwarzschild black hole has not been
+recovered by string theory yet.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
