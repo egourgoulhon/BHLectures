@@ -2165,7 +2165,7 @@ formula~(\ref{e:evo:S_BH}) for the Bekenstein-Hawking entropy
 does not depend on the spacetime dimension $n$.
 \end{remark}
 
-\begin{remark}
+\begin{remark}  \label{r:evo:SBH_Planck_length}
 For $n=4$, if one restores the $G$'s and $c$'s, formula~(\ref{e:evo:S_BH}) reads
 $S_{\rm BH} = k_{\rm B}\frac{c^3 A}{4G \hbar}$. One then recognizes the square
 of the \defin{Planck length}\index{Planck!length}:
@@ -2268,25 +2268,37 @@ which corresponds to a low energy limit of a string theory. Further developments
 discussed in the review articles \cite{Carli14,Damou04,Horow98,Wald01,Walla19}; they are
 still limited to extremal black holes or near-extremal ones. In particular,
 the Bekenstein-Hawking entropy of a Schwarzschild black hole has not been
-recovered by string theory yet. The reason why computations are easier for
+recovered by string theory yet. The reason for which computations are easier for
 extremal black holes is that their near-horizon geometries have additional
 symmetries, as we have seen in the example of the extremal Kerr black hole
 (cf. Sec.~\ref{s:exk:NHEK}).
 
 Regarding loop quantum gravity, first approaches, devised by Rovelli in 1996 \cite{Rovel96}
-and by Ashtekar, Baez, Corichi and Krasnov in 1997 \cite{AshteBCK98}
+and by Ashtekar, Baez, Corichi and Krasnov in 1997 \cite{AshteBCK98},
 resulted in a statistical entropy propotional to the black hole area,
 as for the Bekenstein-Hawking entropy (\ref{e:evo:S_BH}). Subsequent studies
-(cf. Refs.~\cite{BarbeP23,Perez17} for reviews) lead to the following
-formula for the entropy of a spherically symmetric black hole evaluated
-by counting the number of geometric states of the horizon:
-\be
-    S \simeq \frac{\gamma_0}{\gamma} k_{\rm B} \frac{A}{4\hbar},
+lead to the following
+formula for the entropy of a spherically symmetric macroscopic black hole of area $A$ evaluated
+by counting the number of geometric states of the horizon (see e.g. Ref.~\cite{EngleNP10} and
+Refs.~\cite{BarbeP23,Carli14,Perez17} for reviews):
+\be \label{e:evo:entropy_LQG}
+    S = k_{\rm B}  \left[
+    \frac{\gamma_0}{\gamma} \frac{A}{4\hbar} - \frac{3}{2} \ln \left( \frac{A}{\hbar} \right) \right],
 \ee
 where $\gamma_0 \simeq 0.274$ and the dimensionless quantity $\gamma$ is the so-called
-\emph{Immirzi paramater}\index{Immirzi parameter} (or \emph{Barbero-Immirzi} parameter), whose
-value is not set by the theory.
+\emph{Barbero-Immirzi parameter}\index{Barbero-Immirzi parameter}.
+The value of this parameter is not set (yet) by the theory. In particular, at the classical limit,
+loop quantum gravity reduces to general relativity independently of the value of $\gamma$.
+On the contrary, in the quantum regime, $\gamma$ plays a significant role
+by determining the quantum of area $a_0$ in terms of
+the Planck length $\ell_{\rm P} := \sqrt{Gh/c^3}$ (cf. Remark~\ref{r:evo:SBH_Planck_length}) as
+$a_0 = 4\sqrt{3}\pi \gamma \ell_{\rm P}^2$ \cite{Rovel04}.
+For large values of $A$, i.e.  for $A\gg \hbar$,
+the logarithmic term can be neglected in formula~(\ref{e:evo:entropy_LQG}) and one recovers the
+Bekenstein-Hawking entropy (\ref{e:evo:S_BH}), provided that $\gamma = \gamma_0$.
 
+Other attempts to derive the Bekenstein-Hawking entropy from statistical mechanics
+within quantum gravity are described in Sec.~7 of Carlip's review~\cite{Carli14}.
 
 
 
