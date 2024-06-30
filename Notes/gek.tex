@@ -1178,7 +1178,7 @@ than the ingoing one. The above process is then called a
 It is particulary relevant to astrophysics, via some electromagnetic variants of it,
 notably the so-called
 \emph{Blandford-Znajek mechanism}\index{Blandford-Znajek mechanism}
-(see Ref.~\cite{LasotGATN14} for an extended discussion and Box.~15.1
+(see e.g. Ref.~\cite{LasotGATN14} for an extended discussion and Box.~15.1
 of Ref.~\cite{Hartl03} for an
 elementary presentation of the Blandford-Znajek mechanism).
 
@@ -1186,7 +1186,7 @@ elementary presentation of the Blandford-Znajek mechanism).
 No peculiar property of the Kerr spacetime, except for the existence of an outer
 ergoregion, has been invoked in the above reasoning. Consequently, the Penrose process
 can occur for any stationary rotating body (not even necessarily a black hole) that
-is endowed with an ergoregion that one can visit from infinity.
+is endowed with an ergoregion in which a round trip from infinity is possible.
 \end{remark}
 
 Since the particle $\mathscr{P}_*$ is assumed to fall into the black hole,
@@ -1268,6 +1268,60 @@ and $\mathscr{P}_*$ are assumed to be ``test particles'' (geodesic worldlines),
 which implies $\Delta E \ll m$ and $\Delta L \ll J$).
 This will be discussed in details in Sec.~\ref{s:evo:irreversible_mass}.
 
+The Penrose process can be extended from particles to fields; it is then
+known as the phenomenon of \defin{superradiance}\index{superradiance}, also
+called \defin{superradiant scattering}\index{superradiant scattering}.
+This occurs when the scattering of a scalar, vector or tensor
+field by a rotating black hole results in a outgoing field energy larger than the ingoing one.
+The energy of the field is defined from its energy-momentum tensor $\w{T}$ by constructing
+the ``energy density'' vector $\w{P}$ as $P^\alpha := - T^\alpha_{\ \, \mu} \xi^\mu$
+(compare with Eq.~(\ref{e:gek:def_E})). The energy of the field through a hypersuface
+$\Sigma$ is then $E_\Sigma := \int_\Sigma \star\uu{P}$, where $\star\uu{P}$ is the
+the Hodge dual\index{Hodge dual}\index{dual!Hodge --} of the 1-form $\uu{P}$, i.e. the 3-form defined by
+$(\star \underline{P})_{\alpha\beta\gamma} := P^\mu \veps_{\mu\alpha\beta\gamma}$
+[cf. Eq.~(\ref{e:sta:Hodge_dual}) with $n=4$ and $p=1$]. Now,
+by combining the energy-momentum conservation law $\nabla_\mu T^\mu_{\ \, \alpha} = 0$
+[Eq.~(\ref{e:fra:divT})] and the Killing equation for $\w{\xi}$,
+it is easy to show that $\w{P}$ is a conserved current: $\nabla_\mu P^\mu = 0$.
+This is equivalent to the 3-form $\star\uu{P}$ being closed: $\dd\!\star\!\uu{P} = 0$,
+since $\dd\!\star\!\uu{P} = (\nabla_\mu P^\mu) \, \w{\veps}$.
+The Stokes theorem (\ref{e:bas:Stokes}) leads then to
+$E_{\Sigma}= 0$ as soon as $\Sigma$ is a closed oriented hypersurface.
+Let us choose $\Sigma = \Sigma_1 \cup \Delta \Hor \cup \Sigma_2 \cup \Sigma_{\rm ext}$,
+where (i) $\Sigma_1$ and $\Sigma_2$ are two spacelike hypersufaces intersecting the
+event horizon $\Hor$ and such that $\Sigma_2$ lies in the future of $\Sigma_1$ (\footnote{For instance,
+$\Sigma_1$ is a hypersurface of constant Kerr coordinate $\ti = \ti_1$ and
+$\Sigma_2$ is a hypersurface $\ti = \ti_2$, with $\ti_2 > \ti_1$.}),
+(ii) $\Delta\Hor$ is the portion of $\Hor$ between $\Hor\cap\Sigma_1$ and
+$\Hor\cap\Sigma_2$ and (iii) $\Sigma_{\rm ext}$ is a timelike hypersurface
+connecting $\Sigma_1$ and $\Sigma_2$ far from $\Hor$.
+We have then $E_\Sigma = E_{\Sigma_1} + E_{\Delta\Hor} + E_{\Sigma_2} + E_{\Sigma_{\rm ext}} = 0$.
+Assuming that $\w{T}$ decays sufficiently fast so that $E_{\Sigma_{\rm ext}} = 0$,
+we arrive at
+\be
+    E_2 = E_1 - E_* ,
+\ee
+where $E_2 := E_{\Sigma_2}$, $E_1 := - E_{\Sigma_1}$ (the change of sign
+occurs because the orientation of $\Sigma_1$ inherited from that of $\Sigma$
+is the opposite of that induced by the future-directed unit normal $\w{n}$
+to $\Sigma_1$) and $E_* :=  E_{\Delta\Hor} = \int_{\Delta\Hor} \star\uu{P}$.
+Viewing the spacelike hypersurfaces $\Sigma_1$ and $\Sigma_2$ as ``time slices'',
+we may say that $E_1$ (resp. $E_2$) is the field energy at ``time $\Sigma_1$''
+(resp.  ``time $\Sigma_2$'') \footnote{One can easily express $E_1$ and $E_2$ in terms
+of the normal volume element vector $\D\w{V}$ introduced by Eq.~(\ref{e:sta:normal_vol_element}):
+$E_{1,2} = \int_{\Sigma_{1,2}} P_\mu \, \D V^\mu$.}, while $E_*$ is the field energy
+captured by the black hole.
+Superradiance occurs iff $E_2 > E_1$, i.e. iff
+$E_* < 0$, as in the Penrose process. For a scalar field of the
+form $\Phi = \Phi_0(r,\th) \mathrm{e}^{\mathrm{i}(\omega t - m \ph)}$,
+it can be shown that $E_*<0$ is equivalent to \cite{Carte79c,Wald84,LasotGATN14}
+\be
+    0 < \omega < m \Omega_{\Hor} .
+\ee
+Actually the same superradiance condition holds for the Fourier modes of
+electromagnetic waves \cite{TeukoP74,Carte79c}, as well as
+gravitational waves \cite{TeukoP74}.
+
 \begin{hist}
 The Penrose process has first been suggested by Roger Penrose\index[pers]{Penrose, R.}
 in 1969,
@@ -1275,8 +1329,13 @@ in the review article \cite{Penro69} (cf. the footnote 7 in this article);
 the detailed calculation has been presented subsequently in an
 article with Roger Floyd\index[pers]{Floyd, R.M.} published in 1971 \cite{PenroF71}.
 In particular, Penrose and Floyd have derived the inequality~(\ref{e:gek:OmegaH_Lpp_Epp}) [Eq.~(4) in Ref.~\cite{PenroF71}, taking into account that $a/(2mr_+) = \Omega_{\Hor}$, cf. Eq.~(\ref{e:ker:def_OmegaH})].
+The extension to fields (superradiance) was introduced by Yakov Zeldovich\index[pers]{Zeldovich, Ya.B.}
+in 1971 \cite{Zeldo71,Zeldo72} and explicit computations for a scalar field in the Kerr metric
+have been performed by his doctoral student
+Alexei Starobinsky in 1972 (published: 1973) \cite{Staro73}, as well as by
+William Press\index[pers]{Press, W.H.} and Saul Teukolsky\index[pers]{Teukolsky, S.A} in the same year \cite{PressT72}.
+The term \emph{superradiant scattering} has been coined by these last two authors.
 \end{hist}
-
 
 
 \subsection{Future-directed condition}
