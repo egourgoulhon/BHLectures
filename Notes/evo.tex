@@ -7,7 +7,7 @@
 
 This chapter is in a draft stage.
 
-\section{Towards the first law of black hole dynamics}
+\section{Towards the first law of black hole dynamics} \label{s:evo:towards_1st_law}
 
 \subsection{Mass variation formula for Kerr black holes} \label{s:evo:mass_variation_Kerr}
 
@@ -1214,7 +1214,7 @@ The mass variation formula with a fluid (\ref{e:evo:mass_variation_fluid}) has b
 At this stage, it would be premature to call any of the formulas~(\ref{e:evo:mass_variation_vacuum}),
 (\ref{e:evo:mass_variation_vacuum_n4}), (\ref{e:evo:mass_variation_electovac})
 or (\ref{e:evo:mass_variation_fluid})
-the first law of black hole dynamics by analogy to the first law of thermodynamics
+the first law of black hole dynamics by analogy with the first law of thermodynamics
 $\D E = T \D S - P \D V$. One can reasonably interpret $\delta M$
 as some energy variation, the term
 $\Omega_{\Hor} \, \delta J$ as the work\footnote{In Newtonian mechanics, the
@@ -1224,7 +1224,7 @@ $\Omega = \D\ph/\D t$ is the body's angular velocity.} performed by the torque
 that is changing by $\delta J$ the angular momentum $J$ of a body rotating
 at the angular velocity $\Omega_{\Hor}$ and the term $\Phi_{\Hor} \delta Q_{\Hor}$
 as the work performed to change by an amount $\delta Q_{\Hor}$ the electric charge
-of a body at an electric potential $\Phi_{\Hor}$.
+of a body at the electric potential $\Phi_{\Hor}$.
 However, we have not got any argument yet
 to identify the term $(\kappa/8\pi) \, \delta A$ with the classical heat exchange term $T\D S$.
 For this, we need first to identify the entropy $S$ with the black hole area $A$.
@@ -1233,7 +1233,7 @@ This is going to be performed in the next section.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Evolution of the black hole area}
+\section{Evolution of the black hole area} \label{s:evo:evol_area}
 
 \subsection{Irreversibily in the evolution of a Kerr black hole} \label{s:evo:irreversible_mass}
 
@@ -1559,8 +1559,8 @@ Delay\index[pers]{Delay, E.},
 Galloway\index[pers]{Galloway, G.J.} and Howard\index[pers]{Howard, R.} 2001
 \cite{ChrusDGH01})}]
 \label{p:evo:area_thm}
-Let $(\M,\w{g})$ be a $n$-dimensional spacetime containing a black hole
-of event horizon $\Hor$ and such that the Ricci tensor $\w{R}$ fulfills the null
+Let $(\M,\w{g})$ be a spacetime of dimension $n\geq 2$ that contains a black hole
+of event horizon $\Hor$. Let us assume that the Ricci tensor $\w{R}$ fulfills the null
 convergence condition\index{null!convergence condition}\index{convergence!condition!null --} (\ref{e:neh:null_energy_cond}), i.e.
 $\w{R}(\wl, \wl) \geq 0$ for any null vector $\wl$
 --- which holds in general relativity if the null energy condition\index{null!energy condition}\index{energy!condition!null --} (\ref{e:neh:null_energy_cond_matter}) is fulfilled.
@@ -1608,7 +1608,10 @@ enter $\Hor$ at the same caustic points.}
 
 
 \begin{proof}
-Let us consider first the case (i) ($\Hor$ smooth between
+For $n=2$, the theorem is trivial since $\Sp_1$ and $\Sp_2$ are reduced to
+points, so that $A(\Sp_1) = A(\Sp_2) = 0$ and Eq.~(\ref{e:evo:AS2_ge_AS1}) is fulfilled.
+Let us then assume $n\geq 3$.
+We consider first the case (i) ($\Hor$ smooth between
 $\Sp_1$ and $\Sp_2$).
 $\Sp_1$ and $\Sp_2$ are then cross-sections of $\Hor$
 that are connected by null geodesic generators of $\Hor$
@@ -1729,7 +1732,11 @@ the first law of thermodynamics.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{The other laws of black hole dynamics}
+\section{The laws of black hole dynamics}
+
+In Secs.~\ref{s:evo:towards_1st_law} and \ref{s:evo:evol_area}, we have established black hole
+properties that are quite analog to the first and second laws of thermodynamics. Let us now
+examine the zeroth and third laws of thermodynamics.
 
 \subsection{Zeroth law}
 
@@ -1769,15 +1776,15 @@ the \emph{zeroth law of thermodynamics}\index{zeroth law!of thermodynamics}, whi
 is uniform over the entire body.
 This strengthens the interpretation of the surface gravity
 $\kappa$ as the temperature $T$ (up to some factor) performed in
-Eq.~(\ref{e:evo:identif_S_T}).
+Eq.~(\ref{e:evo:identif_T_kappa}).
 
 
-\subsection{What about the third law?}
+\subsection{What about the third law?} \label{s:evo:third_law}
 
 The classical Nernst formulation of the \emph{third law of thermodynamics}\index{third law!of thermodynamics}
 states that the entropy of a system must approach zero (or a universal constant)
 as its temperature tends to zero. In this form and with the identification (\ref{e:evo:identif_S_T}), this law certainly does not hold for black holes, because
-extremal black holes, which have $\kappa=0$, have a non-vanishing area. For
+extremal\index{extremal!black hole} black holes, which have $\kappa=0$, have a non-vanishing area. For
 instance, the area of the extremal Kerr black hole\index{extremal!Kerr!spacetime}\index{Kerr!extremal -- spacetime} of mass $m$ (Chap.~\ref{s:exk}) is
 $A = 8\pi m^2$ (take the limit $a\to m$ in Eq.~(\ref{e:ker:A_a_m})),
 which is neither zero, nor a universal constant. Similarly, the area of
@@ -1797,8 +1804,7 @@ within a finite advanced time.
 However, as pointed out recently by Kehle\index[pers]{Kehle, C.} and Unger\index[pers]{Unger, R.} \cite{KehleU23}, Israel's proof
 is restricted to the case where outermost trapped surfaces evolve smoothly, while, as we shall discuss in Chap.~\ref{s:loc},
 their evolution generically presents discontinuous jumps, even if the spacetime
-and all the matter fields remain perfectly smooth. In particular, Kehle and Unger \cite{KehleU23} have exhibited
-a spacetime where the collapse of a $C^k$-regular charged scalar field (obeying the dominant, and hence the weak, energy condition) turns a (piece of) Schwarzschild black hole
+and all the matter fields remain perfectly smooth. In particular, Kehle and Unger \cite{KehleU23} have exhibited a regular spacetime where the collapse of a charged scalar field (obeying the dominant, and hence the weak, energy condition) turns a Schwarzschild black hole
 into an extremal Reissner-Nordström black hole within a finite advanced time\footnote{As shown
 in Sec.~5.5.6 of Poisson's textbook \cite{Poiss04}, this cannot happen with a charged null dust
 (i.e. a charged generalization of Vaidya collapse discussed in Chap.~\ref{s:vai}) that obeys
@@ -1806,8 +1812,8 @@ the weak energy condition.}.
 
 From an astrophysical point of view, Bardeen\index[pers]{Bardeen, J.M.} has shown in 1970 \cite{Barde70a}
 that a Schwarzschild black hole
-of mass $m_0$ ($\kappa = 1/(4m_0) > 0$, Eq.~(\ref{e:def:kappa_Schw_hor}))
-can in principle be spun up to an extremal Kerr black hole
+of mass $m_0$, and hence of surface gravity $\kappa = 1/(4m_0) > 0$ [Eq.~(\ref{e:def:kappa_Schw_hor})],
+can in principle be spun up to an extremal\index{extremal!Kerr!spacetime} Kerr black hole
 ($\kappa = 0$)
 by accreting matter from an accretion disk\index{accretion!disk}
 terminating at the innermost stable circular orbit\index{innermost!stable circular orbit}\index{circular!orbit!innermost stable --} (ISCO, cf. Sec.~\ref{s:gek:circ_orb_stab}). The total rest-mass of accreted matter is then
@@ -1830,15 +1836,12 @@ In particular it can be violated by some rather simple systems (see Ref.~\cite{W
 
 For all the above reasons, we shall no longer discuss the third law here.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Black hole thermodynamics}
+\subsection{Summary: the three laws}
 
-\subsection{The three laws}
-
-Let us summarize the results obtained so far, in the form of three laws
-analogous to the laws of thermodynamics. To stress the analogy, we are using the phrase
-\emph{black hole in equilibrium}\index{black!hole!in equilibrium} for \emph{black hole in a stationary spacetime}. Besides, for the sake of brevity, we shall not repeat
+Let us collect the results obtained so far, in the form of three laws
+similar to the laws of thermodynamics. To stress the analogy, we are using the phrase
+\emph{black hole in equilibrium}\index{black!hole!in equilibrium} for \emph{black hole in a stationary spacetime} (cf. Chap.~\ref{s:sta}). Besides, for the sake of brevity, we shall not repeat
 the various assumptions underlying these laws, referring to previously
 stated properties for all the details. Furthermore, we consider
 a connected event horizon for simplicity.
@@ -1852,7 +1855,7 @@ uniform over the horizon:
 \be
     \kappa = \mathrm{const}.
 \ee
-\item[First law:]\index{first law!of BH dynamics} Under the hypotheses of Property~\ref{p:evo:mass_var_electrovac},
+\item[First law:]\index{first law!of BH dynamics} Under the hypotheses of Property~\ref{p:evo:mass_var_electrovac} (in particular, general relativity),
 the change $\delta M$ in total mass  between two nearby electrovacuum configurations of
 a black hole in equilibrium is related to the change $\delta A$ in horizon area,
 the change $\delta J$ in total angular momentum and the change
@@ -1877,14 +1880,37 @@ cross-section $\Sp_1$.
 \end{description}
 \end{prop}
 
+\begin{remark}
+The three laws are valid for any spacetime dimension $n\geq 4$, and even
+$n\geq 2$ for the second law. If one assumes that the event horizon is a Killing
+horizon, then the zeroth law is valid for $n\geq 2$ as well.
+\end{remark}
+
+\begin{hist}
+The above ensemble of laws, plus a tentative third law, has been first stated in 1973 by
+James Bardeen\index[pers]{Bardeen, J.M.}, Brandon Carter\index[pers]{Carter, B.}
+and Stephen Hawking\index[pers]{Hawking, S.W.} in a seminal article
+entitled \emph{The Four Laws of Black Hole Mechanics} \cite{BardeCH73}. This
+article, which was mostly written during the famous 1972 Les Houches summer school \cite{DeWit73}, exhibits proofs of the zeroth and first laws for $n=4$,
+relies on Hawking's article \cite{Hawki72} for the second law, and presents
+the third law as a conjecture, saying that \emph{``there are strong reasons for believing in it''}
+(cf. Sec.~\ref{s:evo:third_law}).
+\end{hist}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Black hole thermodynamics}
+
+In Property~\ref{p:evo:laws_BH_dyn}, we have listed the three laws as those of black hole \emph{dynamics} and not \emph{thermodynamics}, because this still appears as a pure mathematical analogy, without any clear physical content. In particular, if we stick to a
+pure classical (i.e. non-quantum) point of view and would like to attribute some
+thermodynamic temperature $T$ to a black hole, it should be $T=0$. Indeed, if the black hole is placed in contact with a thermal reservoir of temperature $T_0>0$, energy will necessarily flow from the reservoir to the black hole and not in the reverse way; this implies $T<T_0$, whatever $T_0$.
+For a stationary non-extremal black hole ($\kappa\neq 0$), $T=0$ contradicts the tentative identification (\ref{e:evo:identif_T_kappa}) between $T$ and $\kappa$.
+It is striking that quantum field theory in curved spacetime
+restores the identification, thereby opening the path to a true thermodynamics of
+black holes. The identification $T\propto \kappa$ arises with the Hawking radiation,
+which we examine first.
 
 \subsection{Hawking radiation} \label{s:evo:Hawking_rad}
-
-From a pure classical (i.e. non-quantum) point of view, if one would like to attribute some
-temperature $T$ to a black hole, it should be $T=0$. Indeed, if the black hole is placed in contact with a thermal reservoir of temperature $T_0>0$, energy will flow from the reservoir to the black hole and not in the reverse way; this implies $T<T_0$, whatever $T_0$.
-For a stationary black hole with nonzero surface gravity $\kappa$, $T=0$ contradicts the tentative identification (\ref{e:evo:identif_S_T}) between $T$ and $\kappa$.
-It is striking that quantum field theory in curved spacetime
-restores the identification:
 
 \begin{prop}[Hawking radiation]
 Let $(\M,\w{g})$ be a $n$-dimensional ($n\geq 2$) asymptotically flat
@@ -2139,17 +2165,22 @@ Ref.~\cite{FroloT89} for the computation of the renormalized expectation value o
 of the quantum fields generating the Hawking radiation does not obey the
 null energy condition (\ref{e:neh:null_energy_cond_matter}).
 
-\begin{hist}
+\begin{hist} \label{h:evo:Hawking_rad}
 In 1971, while introducing the superradiant scattering\index{superradiance}\index{superradiant scattering}
 of classical fields by a Kerr black hole
 (cf. Sec.~\ref{s:gek:Penrose_proc} and
 the historical note on p.~\pageref{h:gek:Penrose_superradiance}),
 Yakov Zeldovich\index[pers]{Zeldovich, Ya.B.} \cite{Zeldo71} pointed out that the quantum analog of the field superradiance
-would be the spontaneaous creation of particle/antiparticle pairs,  with one particle falling into the black hole
+would be the spontaneous creation of particle/antiparticle pairs,  with one particle falling into the black hole
 and the other one escaping to infinity. Zeldovich and his doctoral student Alexei Starobinsky\index[pers]{Starobinsky, A.A.} presented a computation of this effect to Stephen Hawking\index[pers]{Hawking, S.W.} while he was visiting Moscow
 in September 1973, accompanied by Kip Thorne\index[pers]{Thorne, K.S.} (see Hawking's account in Chap.~7 of \cite{Hawki88} and Thorne's one in Chap.~12 of \cite{Thorn94}).
-
-...
+Hawking tried to rederive the effect using a different approach
+of quantum field theory in curved spacetime and he realized that superradiance
+is not at all required for particle creation: the spontaneous radiation takes place even for
+a nonrotating black hole, which has no outer ergoregion and thus cannot trigger
+any Penrose/superradiance process. This fantastic discovery was presented
+in short article published in early 1974 \cite{Hawki74} and the computations were detailled in a subsequent one published in 1975 \cite{Hawki75}. Both articles give formula (\ref{e:evo:Hawking_temp})
+relating the radiation temperature to the surface gravity and discuss the black hole evaporation.
 \end{hist}
 
 
@@ -2287,7 +2318,7 @@ between $S$ and $A$ must be $S = \eta k_{\rm B} A/(4\pi\hbar)$, where $\eta$ is 
 order unity \cite{Beken72,Beken73b}. This is exactly formula~(\ref{e:evo:S_BH}) provided that $\eta = \pi$.
 This value of $\eta$ was determined only after the black hole temperature was set to the Hawking temperature
 (\ref{e:evo:Hawking_temp}), as put forward in 1975 by Stephen Hawking in the article detailing the
-computation of the Hawking radiation \cite{Hawki75}.
+computation of the Hawking radiation \cite{Hawki75} (cf. historical note on p.~\pageref{h:evo:Hawking_rad}).
 \end{hist}
 
 \subsection{Black hole entropy as a statistical entropy}
