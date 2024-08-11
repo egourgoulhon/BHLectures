@@ -518,9 +518,9 @@ that ``approximates'' $\Phi$ in the following sense: if $\D\w{x}\in T_p\M$ is th
 infinitesimal displacement vector from $p$ to some (infinitesimally close) point $q$,
 then
 \be \label{e:bas:def_diff_map}
-    \left.\D\Phi \right| _p(\D\w{x}) = \D\w{L},
+    \left.\D\Phi \right| _p(\D\w{x}) = \D\w{y},
 \ee
-where $\D\w{L}$ is the infinitesimal displacement vector of $T_{\Phi(p)}\mathscr{N}$
+where $\D\w{y}$ is the infinitesimal displacement vector of $T_{\Phi(p)}\mathscr{N}$
 connecting $\Phi(p)$ to $\Phi(q)$ (cf. Fig.~??).
 Using the characterization of vectors by their action on scalar fields
 [Eqs.~(\ref{e:bas:def_vector}) and (\ref{e:bas:dell_f})], it is easy to see
@@ -869,11 +869,9 @@ pseudo-Riemannian manifold. One of them depends on the metric:
 the \emph{covariant derivative} $\wnab$ (Sec.~\ref{s:bas:cov_deriv}).
 Another one depends on the choice of a
 reference vector field: the \emph{Lie derivative} $\Lie{}$ (Sec.~\ref{s:bas:Lie}).
-The third one depends only on the smooth-manifold structure, i.e.
-is independent of any (metric or vector) field, but, on the other side,
-it is applicable
-only to a specific kind of tensor fields: the $p$-forms; it is the
-\emph{exterior derivative} $\dd$ (Sec.~\ref{s:bas:ext_deriv}).
+The third one, called the \emph{exterior derivative} $\dd$, depends only on the smooth-manifold structure, i.e.
+it is independent of any (metric or vector) field; on the other side,
+it is applicable only to a specific kind of tensor fields: the $p$-forms (Sec.~\ref{s:bas:ext_deriv}).
 
 
 \subsection{Covariant derivative} \label{s:bas:cov_deriv}
@@ -1142,11 +1140,10 @@ of type $(2,0)$:
 
 \subsection{Lie derivative} \label{s:bas:Lie}
 
-As discussed in Sec.~\ref{s:bas:affine_connect}, the notion of a derivative of a vector field on a manifold $\M$
-requires the introduction of some extra-structure on $\M$.
-In Sec.~\ref{s:bas:affine_connect}, this extra-structure was an affine connection
-and in Sec.~\ref{s:bas:Levi-Civita_connect} a metric
-$\w{g}$ (which provides naturally an affine connection: the Levi-Civita one).
+As discussed in Sec.~\ref{s:bas:affine_connect}, the concept of a derivative of a vector field on a manifold $\M$
+requires the introduction of some extra-structure on $\M$. The extra-structure considered in
+Sec.~\ref{s:bas:affine_connect} is an affine connection, possibly (by not necessarily)
+provided by a metric tensor (case of the Levi-Civita connection).
 Another possible extra-structure is a ``reference''
 vector field, with respect to which the derivative is to be defined. This leads to the
 concept of the \emph{Lie derivative}, which we discuss here.
@@ -1157,33 +1154,30 @@ concept of the \emph{Lie derivative}, which we discuss here.
 Consider a vector field $\w{u}$ on $\M$, called hereafter the \defin{flow}\index{flow}.
 Let $\w{v}$ be another vector field on $\M$, the variation of which is to be studied.
 We can use the flow $\w{u}$ to transport the vector $\w{v}$ from one point $p$ to
-a neighboring one $q$ and then define rigorously the variation of $\w{v}$
+a neighboring one $q$ and then define the variation of $\w{v}$
 as the difference between the actual value of $\w{v}$ at $q$ and the transported
-value via $\w{u}$. More precisely the definition of the Lie derivative of
-$\w{v}$ with respect to $\w{u}$ is as follows (see Fig.~\ref{f:bas:deriv}).
-We first define the image $\Phi_\varepsilon(p)$ of the point $p$ by the transport by an infinitesimal ``distance'' $\varepsilon$ along the field lines of $\w{u}$ as
-$\Phi_\varepsilon(p)=q$, where $q$ is the point close to $p$ such that
-the infinitesimal displacement vector from $p$ to $q$ is
+value via $\w{u}$. More precisely (cf. Fig.~\ref{f:bas:deriv}), given an infinitesimal
+parameter $\veps$, let us first define the \defin{flow map along}\index{flow!map} $\w{u}$
+as the map $\Phi_\veps: \M \to \M$ such that
+$\Phi_\varepsilon(p)=q$, where $q$ is the point connected to $p$ by the infinitesimal
+displacement vector
 $\overrightarrow{pq}=\varepsilon\w{u}(p)$ (cf. Sec.~\ref{s:bas:vectors}).
-We shall call the map $\Phi_\varepsilon:\M\rightarrow \M$ hence defined
-the \defin{flow map}\index{flow!map} along $\w{u}$.
-Besides, if we multiply the vector $\w{v}(p)$ by
+If we multiply the vector $\w{v}(p)$ by
 some infinitesimal parameter $\lambda$, it becomes an infinitesimal vector at $p$.
 Then there exists a unique point $p'$ close to $p$ such that
 $\lambda\w{v}(p)=\overrightarrow{pp'}$.
 We may transport the point $p'$ to a point $q'$ along the field lines of
 $\w{u}$ by the same ``distance'' $\varepsilon$ as that used to transport
 $p$ to $q$: $q'=\Phi_\varepsilon(p')$ (see Fig.~\ref{f:bas:deriv}). $\overrightarrow{qq'}$ is then an
-infinitesimal vector at $q$ and we
-define the transport by the distance $\varepsilon$ of the vector $\w{v}(p)$
-along the field lines of $\w{u}$ according to
+infinitesimal vector at $q$, which, up to a scale factor $\lambda$,
+can be interpreted as the vector $\w{v}(p)$ transported along the field lines
+of $\w{u}$ by the distance $\varepsilon$:
 \be \label{e:bas:def_Phi_eps}
     \Phi_{\veps*}(\w{v}(p)) := \frac{1}{\lambda} \, \overrightarrow{qq'}.
 \ee
-$\Phi_{\veps*}(\w{v}(p))$ is a vector in $T_q\M$.
 The map $\Phi_{\veps*}: T_p\M \rightarrow T_q\M$
 hence defined is called the \defin{pushforward}\index{pushforward}
-of the flow map $\Phi_\varepsilon$. Actually it is nothing but
+by the flow map $\Phi_\varepsilon$. Actually it is nothing but
 the \emph{differential}\index{differential!of a smooth map}
 of the flow map $\Phi_\varepsilon: \M \rightarrow \M$,
 as defined in Sec.~\ref{s:bas:embed}:
@@ -1191,9 +1185,11 @@ as defined in Sec.~\ref{s:bas:embed}:
     \Phi_{\veps*}(\w{v}(p)) = \left.\D\Phi_\varepsilon \right| _p ((\w{v}(p)) .
 \ee
 We may then subtract the vector $\Phi_{\veps*}(\w{v}(p))$ from the
-actual value of the field $\w{v}$ at $q=\Phi_\varepsilon(p)$ and define the
+actual value of the field $\w{v}$ at $q=\Phi_\varepsilon(p)$ since both
+vectors belong to the same vector space $T_q\M$;
+this leads to the definition of the
 \defin{Lie derivative}\index{Lie!derivative}\index{derivative!Lie --}
-of $\w{v}$ along $\w{u}$ at the point $p$ by
+of $\w{v}$ along $\w{u}$ at the point $p$:
 \be \label{e:bas:def_Lie_der}
     \encadre{
     \Lie{u} \w{v} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
