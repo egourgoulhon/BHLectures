@@ -2455,7 +2455,9 @@ second equality stems from the identity $\w{L} = L \, \weps$, where $L$ is the
 \emph{Lagrangian scalar}, and the third identity provides an expression of the integral
 in terms of a coordinate system $(x^\alpha)$ on $\M$, $g$ being the determinant of
 $\w{g}$ with respect to these coordinates [cf. Eq.~(\ref{e:bas:eps_sqrt_g})].
-We shall assume that $L$ is a function of the metric tensor, the Riemann tensor and a finite number of symmetrized covariant derivatives of the latter:
+We shall assume that $L$ is a function of the metric tensor, the Riemann tensor and a finite number of symmetrized\footnote{There is no loss of generality in considering only symmetrized derivatives, since
+any antisymmetrized combination can be reexpressed in term of the Riemann tensor itself and
+lower order derivatives.} covariant derivatives of the latter:
 \be \label{e:evo:Lagrangian_diffeo_inv}
     L = L\left(g_{\alpha\beta}, R_{\alpha\beta\gamma\delta}, \nabla_\lambda R_{\alpha\beta\gamma\delta},\ldots,
     \nabla_{(\lambda_1} \cdots\nabla_{\lambda_m)} R_{\alpha\beta\gamma\delta} \right) .
@@ -2464,7 +2466,18 @@ It can be shown \cite{IyerW94} that any diffeomorphism-invariant theory of gravi
 involving only the metric tensor and its derivatives (with respect to an arbitrary connection on $\M$) can
 be recast in the form (\ref{e:evo:Lagrangian_diffeo_inv}).
 In particular, for general relativity, $L = R = g^{\mu\nu} g^{\rho\sigma} R_{\sigma\mu\rho\nu}$
-(Einstein-Hilbert action\index{Einstein-Hilbert action}).
+(Einstein-Hilbert action\index{Einstein-Hilbert action}). By \emph{diffeomorphism-invariant}, it is meant
+that the Lagrangian $n$-form $\w{L}$ is covariant under
+the action of a diffeomorphism $\Phi:\M \to \M$. More precisely, under such an action, the metric tensor
+and the Levi-Civita tensors are transformed to their pullbacks $\Phi^*\w{g}$ and $\Phi^*\weps$ by
+$\Phi^{-1}$
+(cf. Secs.~\ref{s:neh:symmetries} and \ref{s:bas:Lie}).
+Let $\w{L'}$ be the Lagrangian $n$-form constructed by keeping the same functional
+dependence in $\Phi^*\w{g}$ as (\ref{e:evo:Lagrangian_diffeo_inv}), i.e.
+$\w{L'} = L(\Phi^* g_{\alpha\beta}, \Phi^* R_{\alpha\beta\gamma\delta}, \ldots) \, \Phi^*\weps$
+with the same function $L$ as in (\ref{e:evo:Lagrangian_diffeo_inv}). The \emph{diffeomorphism-invariant}
+condition amounts to demand that $\w{L'}$ coincides with the pullback of the $n$-form $\w{L}$ by $\Phi$:
+$\w{L'} = \Phi^*\w{L}$, i.e. $\w{L'}$ and $\w{L}$ are basically the same objects.
 
 
 

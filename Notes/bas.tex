@@ -1192,7 +1192,7 @@ this leads to the definition of the
 of $\w{v}$ along $\w{u}$ at the point $p$:
 \be \label{e:bas:def_Lie_der}
     \encadre{
-    \Lie{u} \w{v} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \left. \Lie{u} \w{v} \right| _p := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
     \left[ \w{v}\left(\Phi_\varepsilon(p)\right)
         - \Phi_{\veps*}\left(\w{v}(p)\right) \right] }.
 \ee
@@ -1211,16 +1211,32 @@ the actual value of $\lambda\w{v}$ at the point $q$, the difference (divided
 by $\lambda\varepsilon$) defining the Lie derivative $\Lie{u}\w{v}$.}
 \end{figure}
 
+\begin{remark}
+The term $\w{v}\left(\Phi_\varepsilon(p)\right) - \Phi_{\veps*}\left(\w{v}(p)\right)$
+in the right-hand side of Eq.~(\ref{e:bas:def_Lie_der})
+is the difference between two vectors of $T_q\M$ and thus
+a vector of $T_q\M$. One gets a vector of $T_p\M$ in the left-hand side
+only because $q = \Phi_\veps(p) \to p$ in the limit $\veps \to 0$. Some authors (e.g. \cite{Lee13,Wald84}) prefer to define the Lie derivative from a difference of vectors of $T_p\M$, by carrying $\w{v}(q)$
+in $T_p\M$ via the pushforward by $\Phi_\eps^{-1}$ and comparing it with $\w{v}(p)$,
+which results in the formula
+\be \label{e:bas:def_Lie_der_alt}
+    \left. \Lie{u} \w{v} \right| _p := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \left[ (\Phi_\veps^{-1})_* (\w{v}\left(\Phi_\varepsilon(p)\right)) - \w{v}(p) \right] .
+\ee
+Thanks to the limit $\veps\to 0$, formulas~(\ref{e:bas:def_Lie_der}) and (\ref{e:bas:def_Lie_der_alt})
+are equivalent. Formula~(\ref{e:bas:def_Lie_der}) is preferred here in so far as it corresponds
+to the geometrical construction of Fig.~\ref{f:bas:deriv}.
+\end{remark}
 
 Let us consider a coordinate system $(x^\alpha)$ adapted to the
 field $\w{u}$ in the sense that $\w{u}=\wpar_0$, where $\wpar_0$ is the first
 vector of the natural basis associated with the coordinates $(x^\alpha)$.
-We have, from the definitions of points $q$, $p'$ and $q'$,
-\bea
-  & & x^\alpha(q) = x^\alpha(p)+\varepsilon \delta^\alpha_{\ \ 0}  \nonumber \\
-  & & x^\alpha(p')= x^\alpha(p)+ \lambda v^\alpha(p) \nonumber \\
-  & & x^\alpha(q')= x^\alpha(p')+\varepsilon \delta^\alpha_{\ \ 0} ,\nonumber
-\eea
+Given the definitions of points $q$, $p'$ and $q'$, we have
+\[
+  x^\alpha(q) = x^\alpha(p)+\varepsilon \delta^\alpha_{\ \ 0} ,\quad
+  x^\alpha(p')= x^\alpha(p)+ \lambda v^\alpha(p) , \quad
+  x^\alpha(q')= x^\alpha(p')+\varepsilon \delta^\alpha_{\ \ 0} ,
+\]
 so that
 \[
   (qq')^\alpha = x^\alpha(p')-x^\alpha(p) = \lambda v^\alpha(p) .
