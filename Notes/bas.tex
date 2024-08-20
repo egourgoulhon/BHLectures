@@ -579,7 +579,7 @@ Given a smooth map $\Phi: \M\to\mathscr{N}$ and a vector $\w{v}$ in the tangent
 space to $\M$ at a point $p$, the image of $\w{v}$ by the differential
 of $\Phi$ at $p$ is called the \defin{pushforward of $\w{v}$ on $\mathscr{N}$ by $\Phi$}\index{pushforward}
 and is denoted by $\Phi_* \w{v}$:
-\be
+\be \label{e:bas:def_pushforward}
     \Phi_* \w{v} := \left.\D\Phi \right| _p (\w{v}) .
 \ee
 The pushforward can be geometrically interpreted as follows:
@@ -601,7 +601,7 @@ of type $(0,\ell)$ on $\mathscr{N}$ for some $\ell \geq 0$. The
 is the tensor field of type $(0,\ell)$ on $\M$ denoted by
 $\Phi^*\w{T}$ and
 defined as follows:
-\be
+\be \label{e:bas:def_pullback}
     \forall p\in\M,\quad
     \forall (\w{v}_1,\ldots\w{v}_\ell)\in \left( T_p\M \right) ^\ell,\quad
     \left. \Phi^* \w{T} \right| _p := \left. \w{T} \right| _{\Phi(p)}
@@ -1217,51 +1217,27 @@ Let $\w{v}$ be another vector field on $\M$, the variation of which is to be stu
 We can use the flow $\w{u}$ to transport the vector $\w{v}$ from one point $p$ to
 a neighboring one $q$ and then define the variation of $\w{v}$
 as the difference between the actual value $\left. \w{v} \right| _q$ of $\w{v}$ at $q$ and the transported
-value via $\w{u}$. More precisely (cf. Fig.~\ref{f:bas:deriv}), given an infinitesimal
-parameter $\veps$, let us first define the \defin{flow map along}\index{flow!map} $\w{u}$
+value via $\w{u}$. More precisely, given an infinitesimal
+parameter $\veps$, we define the \defin{flow map along}\index{flow!map} $\w{u}$
 as the map $\Phi_\veps: \M \to \M$ such that
 $\Phi_\varepsilon(p)=q$, where $q$ is the point connected to $p$ by the infinitesimal
 displacement vector
-$\overrightarrow{pq}=\varepsilon \left. \w{u} \right| _p$ (cf. Sec.~\ref{s:bas:vectors}).
-The natural reference vector to compare $\left. \w{v} \right| _q$ with is then the pushforward of
-$\left. \w{v} \right| _p$ by $\Phi_\varepsilon$
-
-...
-
-%@@@@@@
-If we multiply the vector $\w{v}(p)$ by
-some infinitesimal parameter $\lambda$, it becomes an infinitesimal vector at $p$.
-Then there exists a unique point $p'$ close to $p$ such that
-$\lambda\w{v}(p)=\overrightarrow{pp'}$.
-We may transport the point $p'$ to a point $q'$ along the field lines of
-$\w{u}$ by the same ``distance'' $\varepsilon$ as that used to transport
-$p$ to $q$: $q'=\Phi_\varepsilon(p')$ (see Fig.~\ref{f:bas:deriv}). $\overrightarrow{qq'}$ is then an
-infinitesimal vector at $q$, which, up to a scale factor $\lambda$,
-can be interpreted as the vector $\w{v}(p)$ transported along the field lines
-of $\w{u}$ by the distance $\varepsilon$:
-\be \label{e:bas:def_Phi_eps}
-    \Phi_{\veps*}(\w{v}(p)) := \frac{1}{\lambda} \, \overrightarrow{qq'}.
-\ee
-The map $\Phi_{\veps*}: T_p\M \rightarrow T_q\M$
-hence defined is called the \defin{pushforward}\index{pushforward}
-by the flow map $\Phi_\varepsilon$. Actually it is nothing but
-the \emph{differential}\index{differential!of a smooth map}
-of the flow map $\Phi_\varepsilon: \M \rightarrow \M$,
-as defined in Sec.~\ref{s:bas:embed}:
-\be
-    \Phi_{\veps*}(\w{v}(p)) = \left.\D\Phi_\varepsilon \right| _p ((\w{v}(p)) .
-\ee
-We may then subtract the vector $\Phi_{\veps*}(\w{v}(p))$ from the
-actual value of the field $\w{v}$ at $q=\Phi_\varepsilon(p)$ since both
-vectors belong to the same vector space $T_q\M$;
-this leads to the definition of the
-\defin{Lie derivative}\index{Lie!derivative}\index{derivative!Lie --}
-of $\w{v}$ along $\w{u}$ at the point $p$:
+$\overrightarrow{pq}=\varepsilon \left. \w{u} \right| _p$ (cf. Sec.~\ref{s:bas:vectors} and
+Fig.~\ref{f:bas:deriv}).
+The natural reference vector to compare $\left. \w{v} \right| _q$ with is then the
+pushforward\index{pushforward} of
+$\left. \w{v} \right| _p$ by $\Phi_\varepsilon$, i.e.
+$\Phi_{\veps*} \left. \w{v} \right| _p$. Since
+$\left. \w{v} \right| _q = \left. \w{v} \right| _{\Phi_\veps(p)}$ and
+$\Phi_{\veps*} \left. \w{v} \right| _p$ belong to the same vector space $T_q\M$,
+one may subtract the latter from the former and define
+the \defin{Lie derivative}\index{Lie!derivative}\index{derivative!Lie --}
+of $\w{v}$ along $\w{u}$ at $p$ by
 \be \label{e:bas:def_Lie_der}
     \encadre{
     \left. \Lie{u} \w{v} \right| _p := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
-    \left[ \w{v}\left(\Phi_\varepsilon(p)\right)
-        - \Phi_{\veps*}\left(\w{v}(p)\right) \right] }.
+    \left( \left. \w{v} \right| _{\Phi_\veps(p)}
+        - \Phi_{\veps*} \left. \w{v} \right| _p \right) }.
 \ee
 
 \begin{figure}
@@ -1270,55 +1246,52 @@ of $\w{v}$ along $\w{u}$ at the point $p$:
 \footnotesize
 Geometrical construction of the Lie derivative of a
 vector field $\w{v}$ along a vector field $\w{u}$:
-given a small parameter $\lambda$, each extremity of the arrow
-$\lambda\w{v}$ is dragged by some small parameter $\varepsilon$
+given an infinitesimal parameter $\D\lambda$, each extremity of the arrow
+$\D\lambda \left. \w{v} \right| _p$ is dragged by some small parameter $\veps$
 along $\w{u}$, to form
-the vector denoted by $\Phi_{\veps*}(\lambda\w{v})$. The latter is then compared with
-the actual value of $\lambda\w{v}$ at the point $q$, the difference (divided
-by $\lambda\varepsilon$) defining the Lie derivative $\Lie{u}\w{v}$.}
+the vector denoted by $\Phi_{\veps*}\D\lambda \left. \w{v} \right| _p$ (cf. Sec.~\ref{s:bas:push_pull}).
+The latter is then compared with
+the actual value of $\D\lambda\, \w{v}$ at the point $q$, the difference (divided
+by $\veps\D\lambda$) defining the Lie derivative $\Lie{u}\w{v}$ at $p$.}
 \end{figure}
 
 \begin{remark}
-The term $\w{v}\left(\Phi_\varepsilon(p)\right) - \Phi_{\veps*}\left(\w{v}(p)\right)$
+The term between parentheses
 in the right-hand side of Eq.~(\ref{e:bas:def_Lie_der})
 is the difference between two vectors of $T_q\M$ and thus
 a vector of $T_q\M$. One gets a vector of $T_p\M$ in the left-hand side
-only because $q = \Phi_\veps(p) \to p$ in the limit $\veps \to 0$. Some authors (e.g. \cite{Lee13,Wald84}) prefer to define the Lie derivative from a difference of vectors of $T_p\M$, by carrying $\w{v}(q)$
-in $T_p\M$ via the pushforward by $\Phi_\eps^{-1}$ and comparing it with $\w{v}(p)$,
-which results in the formula
+only because $q = \Phi_\veps(p)$ tends to $p$ in the limit $\veps \to 0$. Some authors (e.g. \cite{Lee13,Wald84}) prefer to define the Lie derivative from a difference of vectors of $T_p\M$, by carrying
+$\left. \w{v} \right| _q$ in $T_p\M$ via the pushforward by $\Phi_\eps^{-1}$ and comparing it with
+$\left. \w{v} \right| _p$; this results in the formula
 \be \label{e:bas:def_Lie_der_alt}
     \left. \Lie{u} \w{v} \right| _p := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
-    \left[ (\Phi_\veps^{-1})_* (\w{v}\left(\Phi_\varepsilon(p)\right)) - \w{v}(p) \right] .
+    \left( (\Phi_\veps^{-1})_* \left. \w{v} \right| _{\Phi_\veps(p)}
+    -  \left. \w{v} \right| _p\right) .
 \ee
 Thanks to the limit $\veps\to 0$, formulas~(\ref{e:bas:def_Lie_der}) and (\ref{e:bas:def_Lie_der_alt})
 are equivalent. Formula~(\ref{e:bas:def_Lie_der}) is preferred here in so far as it corresponds
-to the geometrical construction of Fig.~\ref{f:bas:deriv}.
+to the geometrical construction displayed in Fig.~\ref{f:bas:deriv}.
 \end{remark}
 
-Let us consider a coordinate system $(x^\alpha)$ adapted to the
-field $\w{u}$ in the sense that $\w{u}=\wpar_0$, where $\wpar_0$ is the first
-vector of the natural basis associated with the coordinates $(x^\alpha)$.
-Given the definitions of points $q$, $p'$ and $q'$, we have
-\[
-  x^\alpha(q) = x^\alpha(p)+\varepsilon \delta^\alpha_{\ \ 0} ,\quad
-  x^\alpha(p')= x^\alpha(p)+ \lambda v^\alpha(p) , \quad
-  x^\alpha(q')= x^\alpha(p')+\varepsilon \delta^\alpha_{\ \ 0} ,
-\]
-so that
-\[
-  (qq')^\alpha = x^\alpha(p')-x^\alpha(p) = \lambda v^\alpha(p) .
-\]
-Accordingly, (\ref{e:bas:def_Phi_eps}) and (\ref{e:bas:def_Lie_der}) result in
+Let $(x^\alpha)$ be a coordinate system adapted to the
+field $\w{u}$ in the sense that the first
+vector of the natural basis $(\wpar_\alpha)$ associated with $(x^\alpha)$
+is $\wpar_0 = \w{u}$. The coordinate
+expression of the flow map $\Phi_\veps$ is then $(x^\alpha) \to (x^\alpha + \veps \delta^\alpha_{\ \,  0})$.
+The corresponding Jacobian matrix is the identity matrix so that the coordinate components of
+$\Phi_{\veps*} \left. \w{v} \right| _p$ are identical to those of $\left. \w{v} \right| _p$
+(cf. Sec.~\ref{s:bas:embed}). It follows that the component expression of Eq.~(\ref{e:bas:def_Lie_der})
+is
 \bea
-  \left( \Lie{u} \w{v} \right)^\alpha & = &\lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
-  \left[ v^\alpha(q) - v^\alpha(p) \right] \nonumber \\
-  & = &
-  \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
-  \left[ v^\alpha(x^0+\varepsilon,\; x^1,\; \ldots,\; x^{n-1}) -
-  v^\alpha(x^0, \; x^1,\; \ldots,\; x^{n-1}) \right] . \nonumber
+     \left(  \left. \Lie{u} \w{v} \right| _p \right)^\alpha & = &
+   \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \left[ (\left. \w{v} \right| _{\Phi_\veps(p)})^\alpha
+        - ( \left. \w{v} \right| _p )^\alpha \right] \nonumber \\
+   &  = & \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \left[ v^\alpha(x^0 + \veps, x^1, \ldots, x^{n-1})
+    - v^\alpha(x^0, x^1, \ldots, x^{n-1}) \right] . \nonumber
 \eea
-Hence, in adapted coordinates, the Lie derivative is simply obtained by taking the partial derivative of the vector components
-with respect to $x^0$:
+Hence, in adapted coordinates, the Lie derivative is simply obtained by taking the partial derivative of the vector components with respect to $x^0$:
 \be \label{e:bas:Lie_adapted_vec}
     \Liec{u} v^\alpha  = \der{v^\alpha}{x^0} ,
 \ee
@@ -1327,11 +1300,9 @@ $\Liec{u} v^\alpha := \left( \Lie{u} \w{v} \right)^\alpha$.
 Besides, using the fact that the components of $\w{u}$
 are $u^\alpha=(1,0,\ldots,0)$ in the adapted coordinate system, we notice that the components
 of the commutator of $\w{u}$ and $\w{v}$, as given by (\ref{e:bas:commut_comp}), are
-\[
-  [\w{u},\w{v}]^\alpha = \der{v^\alpha}{x^0} .
-\]
+$[\w{u},\w{v}]^\alpha = \dert{v^\alpha}{x^0}$.
 This is exactly (\ref{e:bas:Lie_adapted_vec}): $[\w{u},\w{v}]^\alpha = \Liec{u} v^\alpha$. We conclude that the Lie derivative of a vector with respect to another
-one is actually nothing but the commutator of these two vectors:
+one is actually nothing but the commutator\index{commutator} of these two vectors:
 \be \label{e:bas:Lie_commut}
     \encadre{ \Lie{u} \w{v} = [\w{u},\w{v}] } .
 \ee
@@ -1342,10 +1313,9 @@ derivative in an arbitrary coordinate system:
     - v^\mu \der{u^\alpha}{x^\mu} } .
 \ee
 
-Thanks to the symmetry property of the Christoffel symbols,
+In view of the symmetry of the Christoffel symbols,
 the partial derivatives in Eq.~(\ref{e:bas:Lie_vect}) can be
-replaced by the Levi-Civita connection
-$\wnab$ associated with some metric $\w{g}$, yielding
+replaced by the covariant derivative $\wnab$, yielding
 \be \label{e:bas:Lie_vect_nab}
   \Liec{u} v^\alpha = u^\mu \nabla_\mu v^\alpha
     - v^\mu \nabla_\mu u^\alpha .
@@ -1353,27 +1323,21 @@ $\wnab$ associated with some metric $\w{g}$, yielding
 
 \subsubsection{Generalization to any tensor field} \label{s:bas:lie_der_tensor}
 
-If $\w{T}$ is tensor field of type $(0,\ell)$ on $\M$ (with $\ell \geq 1$)
-its \defin{pullback}\index{pullback}
-by the flow map
-$\Phi_\varepsilon$ is the tensor field $\Phi_\veps^*\w{T}$ of type $(0,\ell)$
-defined by applying $\w{T}$ to pushforwarded vectors:
-\be \label{e:bas:def_pullback}
-    \forall (\w{v}_1,\ldots,\w{v}_\ell)\in (T_p\M)^\ell,\quad
-    \left. \Phi_\veps^*\w{T}\right| _p(\w{v}_1,\ldots,\w{v}_\ell) :=
-        \left.\w{T}\right| _{\Phi_\varepsilon(p)} \left( \Phi_{\veps*}(\w{v}_1),
-         \ldots, \Phi_{\veps*}(\w{v}_\ell) \right) .
-\ee
-The \defin{Lie derivative}\index{Lie!derivative}\index{derivative!Lie --} of $\w{T}$ along $\w{u}$ is then defined
-by comparing the pullback image at some point $p$ to the actual value
-of $\w{\omega}$ at the same point:
+Let $\w{T}$ be a tensor field of type $(0,\ell)$ on $\M$, with $\ell \geq 0$.
+The \defin{Lie derivative}\index{Lie!derivative}\index{derivative!Lie --} of $\w{T}$ along $\w{u}$ is then
+defined by comparing the pullback of $\w{T}$ by the flow map $\Phi_\veps$ at some point $p$
+(cf. Sec.~\ref{s:bas:push_pull})
+to the actual value of $\w{T}$ at the same point:
 \be \label{e:bas:def_Lie_der_covar}
     \encadre{ \Lie{u} \w{T} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
     \left( \Phi_\varepsilon^*\w{T} - \w{T} \right) }.
 \ee
+For a scalar field $f$, one has $\Phi_\varepsilon^* f = f\circ \Phi_\varepsilon$
+(cf. Sec.~\ref{s:bas:push_pull}), so that the above definition with $\ell=0$
+yields
+$\Lie{u} f = \w{u}(f) = \langle\dd f, \w{u} \rangle = u^\mu \partial_\mu f$ [cf. Eq.~(\ref{e:bas:def_vector})].
 
-Finally, the Lie derivative is extended to any tensor field by (i) demanding that for
-a scalar field $f$, $\Lie{u} f = \langle\wnab f,\w{u}\rangle$ and (ii) using the Leibniz
+Finally, the Lie derivative is extended to any tensor field by means of the Leibniz
 rule. As a result, the Lie derivative $\Lie{u}\w{T}$ of a tensor field $\w{T}$ of type
 $(k,\ell)$ is a tensor field of the same type, the components of which
 with respect to a given coordinate system $(x^\alpha)$ are
@@ -1423,13 +1387,14 @@ of the Lie derivative of the metric tensor:
    \encadre{ \Liec{u} g_{\alpha\beta} = \nabla_\alpha u_\beta + \nabla_\beta u_\alpha }.
 \ee
 
-In adapted coordinates, we have, similarly to Eq.~(\ref{e:bas:Lie_adapted_vec}),
+In coordinates adapted to the vector field $\w{u}$,
+we have, similarly to Eq.~(\ref{e:bas:Lie_adapted_vec}),
 \be \label{e:bas:Lie_adapted}
     \Liec{u} T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}
      = \der{}{x^0} T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}
      \qquad \mbox{(coordinates adapted to $\w{u}$)}.
 \ee
-Note that this formula is a direct consequence of (\ref{e:Lie_der_comp})
+Note that this formula follows directly from (\ref{e:Lie_der_comp})
 since in adapted coordinates, $u^\alpha = (1,0,\ldots,0)$, so that
 $u^\mu \dert{}{x^\mu} = \dert{}{x^0}$ and $\dert{u^\alpha}{x^\beta} = 0$.
 
@@ -1450,7 +1415,7 @@ gives the volume with respect to the metric $\w{g}$.
 Regarding physics, the
 electromagnetic field is a 2-form $\w{F}$ (cf. Sec.~\ref{e:fra:electrovacuum});
 in relativistic hydrodynamics, the vorticity of a fluid is also described by a 2-form
-(see e.g. \cite{Gourg13}).
+(see e.g. Ref.~\cite{Gourg13}).
 
 Being tensor fields, differential forms are subject to the covariant
 and Lie derivatives discussed above. But, in addition, they are subject to a third kind
