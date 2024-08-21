@@ -219,8 +219,8 @@ $P$ is the operator $\w{v}$ which maps every scalar field $f$ defined around
 $p$ to the real number
 \be \label{e:bas:def_vector}
   \w{v}(f) = \left. \frac{\D f}{\D \lambda} \right|_{\Li} :=
-  \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
-  \left[ f(P(\lambda+\varepsilon)) - f(P(\lambda)) \right] .
+  \lim_{\veps\rightarrow 0} \frac{1}{\veps}
+  \left[ f(P(\lambda+\veps)) - f(P(\lambda)) \right] .
 \ee
 Given a coordinate system $(x^\alpha)$ around some point $p\in\M$, there are
 $n$ curves $\Li_\alpha$ through $p$ associated with $(x^\alpha)$ and called the
@@ -243,8 +243,8 @@ $f$ with respect to $x^\alpha$. Hence
 \ee
 Similarly, we may rewrite (\ref{e:bas:def_vector}) as
 \bea
-  \w{v}(f) & = & \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
-  \left[ f(X^0(\lambda+\varepsilon),\ldots,X^{n-1}(\lambda+\varepsilon))
+  \w{v}(f) & = & \lim_{\veps\rightarrow 0} \frac{1}{\veps}
+  \left[ f(X^0(\lambda+\veps),\ldots,X^{n-1}(\lambda+\veps))
   - f(X^0(\lambda),\ldots,X^{n-1}(\lambda)) \right] \nonumber \\
   & = & \der{f}{x^\alpha} \frac{\D X^\alpha}{\D \lambda}
   = \wpar_\alpha(f) \frac{\D X^\alpha}{\D \lambda} . \nonumber
@@ -1203,8 +1203,8 @@ of type $(2,0)$:
 
 As discussed in Sec.~\ref{s:bas:affine_connect}, the concept of a derivative of a vector field on a manifold $\M$
 requires the introduction of some extra-structure on $\M$. The extra-structure considered in
-Sec.~\ref{s:bas:affine_connect} is an affine connection, possibly (by not necessarily)
-provided by a metric tensor (case of the Levi-Civita connection).
+Sec.~\ref{s:bas:affine_connect} is an affine connection, possibly
+provided by some metric tensor (case of the Levi-Civita connection).
 Another possible extra-structure is a ``reference''
 vector field, with respect to which the derivative is to be defined. This leads to the
 concept of the \emph{Lie derivative}, which we discuss here.
@@ -1214,28 +1214,28 @@ concept of the \emph{Lie derivative}, which we discuss here.
 
 Consider a vector field $\w{u}$ on $\M$, called hereafter the \defin{flow}\index{flow}.
 Let $\w{v}$ be another vector field on $\M$, the variation of which is to be studied.
-We can use the flow $\w{u}$ to transport the vector $\w{v}$ from one point $p$ to
+One can use the flow $\w{u}$ to transport the vector $\w{v}$ from one point $p$ to
 a neighboring one $q$ and then define the variation of $\w{v}$
 as the difference between the actual value $\left. \w{v} \right| _q$ of $\w{v}$ at $q$ and the transported
 value via $\w{u}$. More precisely, given an infinitesimal
 parameter $\veps$, we define the \defin{flow map along}\index{flow!map} $\w{u}$
 as the map $\Phi_\veps: \M \to \M$ such that
-$\Phi_\varepsilon(p)=q$, where $q$ is the point connected to $p$ by the infinitesimal
+$\Phi_\veps(p)=q$, where $q$ is the point connected to $p$ by the infinitesimal
 displacement vector
-$\overrightarrow{pq}=\varepsilon \left. \w{u} \right| _p$ (cf. Sec.~\ref{s:bas:vectors} and
+$\overrightarrow{pq}=\veps \left. \w{u} \right| _p$ (cf. Sec.~\ref{s:bas:vectors} and
 Fig.~\ref{f:bas:deriv}).
 The natural reference vector to compare $\left. \w{v} \right| _q$ with is then the
 pushforward\index{pushforward} of
-$\left. \w{v} \right| _p$ by $\Phi_\varepsilon$, i.e.
-$\Phi_{\veps*} \left. \w{v} \right| _p$. Since
-$\left. \w{v} \right| _q = \left. \w{v} \right| _{\Phi_\veps(p)}$ and
+$\left. \w{v} \right| _p$ by $\Phi_\veps$, i.e. the vector
+$\Phi_{\veps*} \left. \w{v} \right| _p$ as defined in Sec.~\ref{s:bas:push_pull}.
+Since $\left. \w{v} \right| _q = \left. \w{v} \right| _{\Phi_\veps(p)}$ and
 $\Phi_{\veps*} \left. \w{v} \right| _p$ belong to the same vector space $T_q\M$,
 one may subtract the latter from the former and define
 the \defin{Lie derivative}\index{Lie!derivative}\index{derivative!Lie --}
 of $\w{v}$ along $\w{u}$ at $p$ by
 \be \label{e:bas:def_Lie_der}
     \encadre{
-    \left. \Lie{u} \w{v} \right| _p := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \left. \Lie{u} \w{v} \right| _p := \lim_{\veps\rightarrow 0} \frac{1}{\veps}
     \left( \left. \w{v} \right| _{\Phi_\veps(p)}
         - \Phi_{\veps*} \left. \w{v} \right| _p \right) }.
 \ee
@@ -1260,11 +1260,11 @@ The term between parentheses
 in the right-hand side of Eq.~(\ref{e:bas:def_Lie_der})
 is the difference between two vectors of $T_q\M$ and thus
 a vector of $T_q\M$. One gets a vector of $T_p\M$ in the left-hand side
-only because $q = \Phi_\veps(p)$ tends to $p$ in the limit $\veps \to 0$. Some authors (e.g. \cite{Lee13,Wald84}) prefer to define the Lie derivative from a difference of vectors of $T_p\M$, by carrying
-$\left. \w{v} \right| _q$ in $T_p\M$ via the pushforward by $\Phi_\eps^{-1}$ and comparing it with
+only because $q = \Phi_\veps(p)$ tends to $p$ in the limit $\veps \to 0$. Some authors (e.g. \cite{Lee13,Wald84}) prefer to define the Lie derivative from the difference of vectors of $T_p\M$, by carrying
+$\left. \w{v} \right| _q$ in $T_p\M$ via the pushforward by $\Phi_\veps^{-1}$ and comparing it with
 $\left. \w{v} \right| _p$; this results in the formula
 \be \label{e:bas:def_Lie_der_alt}
-    \left. \Lie{u} \w{v} \right| _p := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+    \left. \Lie{u} \w{v} \right| _p := \lim_{\veps\rightarrow 0} \frac{1}{\veps}
     \left( (\Phi_\veps^{-1})_* \left. \w{v} \right| _{\Phi_\veps(p)}
     -  \left. \w{v} \right| _p\right) .
 \ee
@@ -1284,10 +1284,10 @@ $\Phi_{\veps*} \left. \w{v} \right| _p$ are identical to those of $\left. \w{v} 
 is
 \bea
      \left(  \left. \Lie{u} \w{v} \right| _p \right)^\alpha & = &
-   \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+   \lim_{\veps\rightarrow 0} \frac{1}{\veps}
     \left[ (\left. \w{v} \right| _{\Phi_\veps(p)})^\alpha
         - ( \left. \w{v} \right| _p )^\alpha \right] \nonumber \\
-   &  = & \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
+   &  = & \lim_{\veps\rightarrow 0} \frac{1}{\veps}
     \left[ v^\alpha(x^0 + \veps, x^1, \ldots, x^{n-1})
     - v^\alpha(x^0, x^1, \ldots, x^{n-1}) \right] . \nonumber
 \eea
@@ -1329,10 +1329,10 @@ defined by comparing the pullback of $\w{T}$ by the flow map $\Phi_\veps$ at som
 (cf. Sec.~\ref{s:bas:push_pull})
 to the actual value of $\w{T}$ at the same point:
 \be \label{e:bas:def_Lie_der_covar}
-    \encadre{ \Lie{u} \w{T} := \lim_{\varepsilon\rightarrow 0} \frac{1}{\varepsilon}
-    \left( \Phi_\varepsilon^*\w{T} - \w{T} \right) }.
+    \encadre{ \Lie{u} \w{T} := \lim_{\veps\rightarrow 0} \frac{1}{\veps}
+    \left( \Phi_\veps^*\w{T} - \w{T} \right) }.
 \ee
-For a scalar field $f$, one has $\Phi_\varepsilon^* f = f\circ \Phi_\varepsilon$
+For a scalar field $f$, one has $\Phi_\veps^* f = f\circ \Phi_\veps$
 (cf. Sec.~\ref{s:bas:push_pull}), so that the above definition with $\ell=0$
 yields
 $\Lie{u} f = \w{u}(f) = \langle\dd f, \w{u} \rangle = u^\mu \partial_\mu f$ [cf. Eq.~(\ref{e:bas:def_vector})].
