@@ -453,7 +453,7 @@ type $(k,\ell)$ for which the image of  $(\w{\omega}_1,\ldots,\w{\omega}_k,\w{v}
     \prod_{j=1}^\ell \langle \w{e}^{\beta_j},\w{v}_j\rangle .
 \]
 Notice that all the products in the above formula are simply products in $\R$.
-The $n^{k+\ell}$ scalar coefficients  $T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}$ in (\ref{e:bas:def_components}) are called the \defin{components
+The $n^{k+\ell}$ real coefficients  $T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}$ in (\ref{e:bas:def_components}) are called the \defin{components
 of the tensor $\w{T}$ with respect to the basis $(\w{e}_\alpha)$}\index{component!of a tensor}.
 These components are unique and fully characterize
 the tensor $\w{T}$.
@@ -469,12 +469,13 @@ in addition, $\w{e}_\alpha=\wpar_\alpha$ and $\w{e}^\alpha = \dd x^\alpha$.
 
 \subsection{Tensor fields on a manifold} \label{s:bas:fields}
 
-A \defin{tensor field of type}\index{tensor!field}\index{field!tensor --} $(k,\ell)$ is a map
+A \defin{tensor field of type}\index{tensor!field}\index{field!tensor --} $(k,\ell)$ is a map $\w{T}$
 which associates to each point $p\in\M$ a tensor of type $(k,\ell)$ on $T_p\M$.
 A \defin{vector field}\index{vector!field}\index{field!vector --} is naturally a tensor field
 of type $(1,0)$.
 By convention, a scalar field\index{scalar!field}\index{field!scalar --} is considered as a tensor field of type $(0,0)$.
-We shall consider only smooth fields.
+We shall consider only smooth fields. We shall denote by $\left. \w{T} \right| _p$ the tensor
+representing the value of the tensor field $\w{T}$ at a point $p\in\M$.
 
 Given a non-negative integer $p$, a
 \defin{differential form of degree $p$}\index{form!differential}\index{differential!form},
@@ -485,7 +486,7 @@ This definition generalizes that of a 1-form given in Sec.~\ref{s:bas:linear_for
 
 A \defin{frame field}\index{frame!field}\index{field!frame --} or
 \defin{moving frame}\index{moving!frame} is a $n$-tuple of vector fields
-$(\w{e}_\alpha)$ such that at each point $p\in\M$, $(\w{e}_\alpha(p))$ is
+$(\w{e}_\alpha)$ such that at each point $p\in\M$, $(\left. \w{e}_\alpha\right| _p)$ is
 a basis of the tangent space $T_p\M$.
 If $n=4$, a frame field is also called a \defin{tetrad}\index{tetrad} and if $n=3$,
 it is called a
@@ -583,8 +584,9 @@ and is denoted by $\Phi_* \w{v}$:
     \Phi_* \w{v} := \left.\D\Phi \right| _p (\w{v}) .
 \ee
 The pushforward can be geometrically interpreted as follows:
-consider that $\w{v}$ is the tangent vector
-to a curve $\Li$ through $p$ associated to some parameter $\lambda$ and let $q$ be
+consider $\w{v}$ as the tangent vector
+to a curve $\Li$ through $p$ associated to some parameter $\lambda$ (cf. Sec.~\ref{s:bas:vectors})
+and let $q$ be
 the point of $\Li$ separated from $p$ by the infinitesimal parameter increase $\D\lambda$.
 One has then $\w{v} = \D\w{x} / \D\lambda$, where $\D\w{x}$ is the infinitesimal
 vector connecting $p$ to $q$. Thanks to the linearity of $\left.\D\Phi \right| _p$
@@ -600,7 +602,7 @@ of type $(0,\ell)$ on $\mathscr{N}$ for some $\ell \geq 0$. The
 \defin{pullback of $\w{T}$ on $\M$ by $\Phi$}\index{pullback}
 is the tensor field of type $(0,\ell)$ on $\M$ denoted by
 $\Phi^*\w{T}$ and
-defined as follows:
+defined by
 \be \label{e:bas:def_pullback}
     \forall p\in\M,\quad
     \forall (\w{v}_1,\ldots\w{v}_\ell)\in \left( T_p\M \right) ^\ell,\quad
@@ -614,14 +616,15 @@ the pullback is nothing but the map composition:
 $\Phi^* f = f \circ \Phi$.
 
 \begin{remark}
-A smooth map $\Phi : \M \to \mathscr{N}$ naturally carries tangent vectors from $\M$ to $\mathscr{N}$
-(essentially because it carries curves in $\M$ to curves in $\mathscr{N}$, as discussed above),
-while it carries covariant tensors, among which linear forms, in the reverse way, i.e. from
+Via the pushforward operation,
+a smooth map $\Phi : \M \to \mathscr{N}$ naturally carries tangent vectors from $\M$ to $\mathscr{N}$
+(essentially because it carries curves in $\M$ to curves in $\mathscr{N}$, as discussed above), but
+it carries covariant tensors, among which linear forms, in the reverse way, i.e. from
 $\mathscr{N}$ to $\M$ (pullback operation). Another difference is that
 the pushforward is a pointwise operation and does not extend a priori to vector \emph{fields}
 (cf. Fig.~??),
 while the pullback is well defined for any covariant tensor field. A case where the
-pushforward extends to vector fields is when $\Phi$ is a diffeomorphism.
+pushforward extends to vector fields though is when $\Phi$ is a diffeomorphism.
 \end{remark}
 
 
@@ -635,12 +638,12 @@ A \defin{pseudo-Riemannian manifold}\index{pseudo-Riemannian manifold}\index{man
 and $\w{g}$ is a \defin{metric tensor}\index{metric!tensor}\index{metric} on $\M$,
 i.e. a tensor field obeying the following properties:
 \begin{enumerate}
-\item $\w{g}$ is a tensor field of type $(0,2)$: at each point $p\in\M$, $\w{g}(p)$ is a
-bilinear form acting on vectors in the tangent space $T_p\M$:
+\item $\w{g}$ is a tensor field of type $(0,2)$: at each point $p\in\M$, $\left. \w{g} \right| _p$ is a
+bilinear form acting on pairs of vectors in the tangent space $T_p\M$:
 \be
     \begin{array}{rccl}
-    \w{g}(p): & {T_p\M}\times{T_p\M} & \longrightarrow & \R \\
-        & (\w{u},\w{v}) & \longmapsto & \w{g}(\w{u},\w{v}) .
+    \left. \w{g} \right| _p: & {T_p\M}\times{T_p\M} & \longrightarrow & \R \\
+        & (\w{u},\w{v}) & \longmapsto & \left. \w{g} \right| _p (\w{u},\w{v}) =: \w{g}(\w{u},\w{v})
     \end{array}
 \ee
 \item $\w{g}$ is \defin{symmetric}\index{symmetric}: $\w{g}(\w{u},\w{v}) = \w{g}(\w{v},\w{u})$.
@@ -667,26 +670,25 @@ formula (\ref{e:bas:def_components}) with $(k,\ell)=(0,2)$:
   \encadre{ \w{g} = g_{\alpha\beta} \, \w{e}^\alpha \otimes \w{e}^\beta }.
 \ee
 For any pair $(\w{u},\w{v})$ of vectors we have then
-\be
-  \w{g}(\w{u},\w{v}) = g_{\alpha\beta} u^\alpha v^\beta .
-\ee
+$\w{g}(\w{u},\w{v}) = g_{\alpha\beta} u^\alpha v^\beta$.
 In particular, considering the natural basis associated with some coordinate system
 $(x^\alpha)$, the scalar square of an infinitesimal displacement vector $\D\w{x} = \D x^\alpha\wpar_\alpha$
 [cf. Eqs.~(\ref{e:bas:dell_f}) and (\ref{e:bas:dell_dxa_wpar})] is
 \be \label{e:bas:line_element}
   \encadre{ \D s^2 := \w{g}(\D\w{x},\D\w{x}) = g_{\alpha\beta} \, \D x^\alpha \, \D x^\beta }.
 \ee
-This formula is called the expression of the \defin{line element}\index{line!element}
+This formula is called the \defin{line element}\index{line!element} expression
 on the pseudo-Riemannian manifold $(\M,\w{g})$. It is often used to define the metric tensor in
-general relativity texts. Note that contrary to what the notation may suggest, $\D s^2$ is not necessarily a positive quantity.
+general relativity texts. Note that contrary to what the notation may suggest, $\D s^2$
+can be negative.
 
-For the dual basis associated with coordinates
+For the dual basis associated with the coordinates
 $(x^\alpha)$, one has $\w{e}^\alpha = \dd x^\alpha$ (cf. Sec.~\ref{s:bas:linear_form}), so that
 Eq.~(\ref{e:bas:g_components}) can be rewritten as
 \be \label{e:bas:g_components_natural}
     \w{g} = g_{\alpha\beta} \, \dd x^\alpha \otimes \dd x^\beta .
 \ee
-One can give a form to this relation which reminds the line element (\ref{e:bas:line_element}) by
+One can recast this relation in a form which reminds the line element (\ref{e:bas:line_element}) by
 introducing the symmetric product notation (cf. e.g. Refs.~\cite{Lee18} or \cite{Strau13}):
 \be \label{e:bas:sym_tensor_prod}
     \dd x^\alpha \dd x^\beta := \frac{1}{2} \left(\dd x^\alpha \otimes \dd x^\beta + \dd x^\beta \otimes \dd x^\alpha \right) \qand
@@ -714,10 +716,7 @@ of the basis where $(g_{\alpha\beta})$ is diagonal is a basic result of linear a
 
 If $s=0$, $\w{g}$ is called a \defin{Riemannian metric}\index{Riemannian!metric} and
 $(\M,\w{g})$ a \defin{Riemannian manifold}\index{Riemannian!manifold}. In this case, $\w{g}$ is
-\defin{positive-definite}, which means that
-\be
-  \forall \w{v}\in{T_p\M},\quad \w{g}(\w{v},\w{v}) \geq 0
-\ee
+\defin{positive-definite}, which means that $\w{g}(\w{v},\w{v}) \geq 0$ for all $\w{v}\in{T_p\M}$
 and $\w{g}(\w{v},\w{v}) = 0$ iff $\w{v}=0$.
 A standard example of Riemannian metric is of course the scalar product of the Euclidean space
 $\R^n$.
@@ -819,12 +818,14 @@ as an endomorphism ${T_p\M}\rightarrow {T_p\M}$, which is always possible for a 
 type $(1,1)$.
 If $T_{\alpha\beta}$ are the components of $\w{T}$
 in some basis $(\w{e}_\alpha)$, the components of $\vw{T}$ and $\vvw{T}$ are respectively
-\bea
-  & & (\vw{T})^\alpha_{\ \  \beta} = T^\alpha_{\ \  \beta} = g^{\alpha\mu} T_{\mu\beta}
+\begin{subequations}
+\begin{align}
+  & (\vw{T})^\alpha_{\ \  \beta} = T^\alpha_{\ \  \beta} = g^{\alpha\mu} T_{\mu\beta}
     \label{e:bas:arrow_endo_index}\\
-  & & (\vvw{T})^{\alpha\beta} = T^{\alpha\beta} = g^{\alpha\mu} g^{\beta\nu} T_{\mu\nu} .
+  & (\vvw{T})^{\alpha\beta} = T^{\alpha\beta} = g^{\alpha\mu} g^{\beta\nu} T_{\mu\nu} .
     \label{e:bas:arrow_double_index}
-\eea
+\end{align}
+\end{subequations}
 \end{enumerate}
 
 \begin{remark}
@@ -932,7 +933,7 @@ Another one depends on the choice of a
 reference vector field: the \emph{Lie derivative} $\Lie{}$ (Sec.~\ref{s:bas:Lie}).
 The third one, called the \emph{exterior derivative} $\dd$, depends only on the smooth-manifold structure, i.e.
 it is independent of any (metric or vector) field; on the other side,
-it is applicable only to a specific kind of tensor fields: the $p$-forms (Sec.~\ref{s:bas:ext_deriv}).
+it is applicable only to a specific kind of tensor fields: the differential forms (Sec.~\ref{s:bas:ext_deriv}).
 
 
 \subsection{Covariant derivative} \label{s:bas:cov_deriv}
@@ -945,8 +946,8 @@ vector fields on $\M$. $\mathfrak{X}(\M)$ is an infinite-dimensional
 vector space over $\R$.
 Given a vector field $\w{v}\in\mathfrak{X}(\M)$, it is not possible from the manifold structure
 alone to define its variation between two neighboring points $p$ and $q$. Indeed
-a formula like $\D \w{v} := \w{v}(q) - \w{v}(p)$ is meaningless because
-the vectors $\w{v}(q)$ and $\w{v}(p)$ belong to two distinct vector spaces,
+a formula like $\D \w{v} := \left. \w{v} \right| _q - \left. \w{v} \right| _p$ is meaningless because
+the vectors $\left. \w{v} \right| _q$ and $\left. \w{v} \right| _p$ belong to two distinct vector spaces,
 $T_q\M$ and $T_p\M$ respectively (cf. Fig.~\ref{f:bas:tang_space}), so that their
 subtraction is a priori not defined.
 Note that this issue does not arise for a scalar field [cf. Eq.~(\ref{e:bas:df})].
@@ -971,60 +972,59 @@ that satisfies the following properties:
 following Leibniz rule holds:
 \be
   \wnab_{\w{u}}\, (f\w{v}) =
-    \langle \wnab f, \,\w{u}\rangle\,  \w{v} + f \wnab_{\w{u}}\, \w{v} ,
+    \langle \dd f, \,\w{u}\rangle\,  \w{v} + f \wnab_{\w{u}}\, \w{v} ,
 \ee
-where $\wnab f$ stands for the differential of $f$ as defined in Sec.~\ref{s:bas:linear_form}.
+where $\dd f$ is the differential of $f$ as defined in Sec.~\ref{s:bas:linear_form}.
 \end{enumerate}
 The vector $\wnab_{\w{u}} \,\w{v}$ is called the \defin{covariant derivative of $\w{v}$
 along $\w{u}$}\index{covariant!derivative!along a vector}\index{derivative!covariant --}.
 \begin{remark} \label{r:bas:def_connection}
-Property~2 is not implied by property~1, for $f$ is a scalar field, not a real number. Actually, property~2 ensures that at a given point $p\in\M$, the value
-of $\wnab_{\w{u}} \,\w{v}$ depends only on the vector $\w{u}(p)\in{T_p\M}$ and
-not on the behaviour of $\w{u}$ around $p$; therefore the role of $\w{u}$ is only to
+Property~2 is not implied by property~1, for $f$ is a scalar field, not a real number. Actually, property~2 ensures that the value of $\wnab_{\w{u}} \,\w{v}$
+at a given point $p\in\M$ depends only on the vector $\left. \w{u} \right| _p \in{T_p\M}$ and
+not on the behavior of $\w{u}$ around $p$; therefore the role of $\w{u}$ is only to
 give the direction of the derivative of $\w{v}$.
 \end{remark}
 
 Given an affine connection, the variation of a vector field $\w{v}$ between
-two neighboring points $p$ and $q$, is defined as
+two neighboring points, $p$ and $q$ say, is defined as
 \be
   \D \w{v} := \wnab_{\D\w{x}} \, \w{v} ,
 \ee
-$\D\w{x}$ being the infinitesimal displacement vector connecting $p$ and $q$
+where
+$\D\w{x}$ is the infinitesimal displacement vector connecting $p$ and $q$
 [cf Eq.~(\ref{e:bas:dell_f})].
 One says that $\w{v}$ is \defin{parallelly transported from $p$ to $q$ with respect to the connection $\wnab$}\index{parallel transport}\index{parallelly transported} iff $\D\w{v} = 0$.
 
 Given a frame field $(\w{e}_\alpha)$ on $\M$, the
 \defin{connection coefficients}\index{connection!coefficients}
 of an affine connection $\wnab$ with respect to $(\w{e}_\alpha)$ are the
-scalar fields $\Gamma^\gamma_{\ \ \alpha\beta}$ defined by the
+$n^3$ scalar fields $\Gamma^\gamma_{\ \ \alpha\beta}$ defined by the
 expansion, at each point $p\in\M$, of the vector
-$\wnab_{\w{e}_\beta}\, \w{e}_\alpha (p)$ onto the basis $(\w{e}_\alpha(p))$:
+$\left. \wnab_{\w{e}_\beta}\, \w{e}_\alpha \right| _p$ onto the basis $(\left. \w{e}_\alpha \right| _p)$:
 \be
     \encadre{ \wnab_{\w{e}_\beta}\, \w{e}_\alpha =:
     \Gamma^\mu_{\ \ \alpha\beta} \, \w{e}_\mu }.
 \ee
-An affine connection is entirely defined by the connection coefficients. In other words, there are as many affine connections on a manifold of dimension $n$ as there are possibilities of choosing $n^3$ scalar fields $\Gamma^\gamma_{\ \ \alpha\beta}$.
+An affine connection is entirely defined by its connection coefficients in a given
+frame field. In other words, there are as many affine connections on a manifold of dimension $n$ as there are possibilities of choosing $n^3$ scalar fields $\Gamma^\gamma_{\ \ \alpha\beta}$.
 
-Given $\w{v}\in\mathfrak{X}(\M)$, one defines a tensor field of type $(1,1)$,
-$\wnab\w{v}$, called the
-\defin{covariant derivative of $\w{v}$ with respect to the affine connection $\wnab$}\index{covariant!derivative}, by the following action at each
-point $p\in\M$:
+Given $\w{v}\in\mathfrak{X}(\M)$, the \defin{covariant derivative of $\w{v}$ with respect to the affine connection $\wnab$}\index{covariant!derivative} is the tensor field  $\wnab\w{v}$
+of type $(1,1)$ defined by the following action at each point $p\in\M$:
 \be \label{e:bas:def_cov_deriv}
     \begin{array}{cccc}
-    \wnab\w{v}(p) \ : & {T_p^*\M}\times{T_p\M} & \longrightarrow & \R \\
+    \left. \wnab\w{v} \right| _p \ : & {T_p^*\M}\times{T_p\M} & \longrightarrow & \R \\
         & (\w{\omega},\w{u}) & \longmapsto &
-    \langle \w{\omega},\, \wnab_{\w{\tilde u}} \, \w{v}(p) \rangle
-    \end{array} ,
+    \langle \w{\omega},\, \left. \wnab_{\w{\tilde u}} \, \w{v} \right| _p \rangle ,
+    \end{array}
 \ee
 where $\w{\tilde u}$ is any vector field which performs some extension of $\w{u}$ around
-$p$: $\w{\tilde u}(p) = \w{u}$. As already noted
-(cf. Remark~\ref{r:bas:def_connection}), $\wnab_{\w{\tilde u}} \, \w{v}(p)$ is
+$p$: $\left.  \w{\tilde u} \right| _p = \w{u}$. As already noted
+(cf. Remark~\ref{r:bas:def_connection}), $\left. \wnab_{\w{\tilde u}} \, \w{v} \right| _p$ is
 independent of the choice of $\w{\tilde u}$, so that the mapping (\ref{e:bas:def_cov_deriv}) is well-defined. By comparing with (\ref{e:bas:def_tensor}),
-we verify that $\wnab\w{v}(p)$ is a tensor of type $(1,1)$.
+we verify that $\left. \wnab\w{v}\right| _p $ is a tensor of type $(1,1)$.
 
-One can extend the covariant derivative to all tensor fields by
-(i) demanding that for a scalar field the action of the affine connection
-is nothing but taking the differential (hence the same notation $\wnab f$)
+The \defin{covariant derivative} is extended to all tensor fields by
+(i) demanding that for a scalar field it coincides with the differential: $\wnab f := \dd f$
 and (ii) using the Leibniz rule.
 As a result, the covariant derivative\index{derivative!covariant --} of a tensor field $\w{T}$ of type $(k,\ell)$ is
 a tensor field $\w{\nabla}\w{T}$ of type $(k,\ell+1)$.
@@ -1049,7 +1049,7 @@ T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots
 \eea
 where $\w{e}_\gamma (T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell})$
 stands for the action of the vector $\w{e}_\gamma$ on the scalar field
-$T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}$, resulting from the
+$T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}$ resulting from the
 very definition of a vector (cf. Sec.~\ref{s:bas:vectors}).
 In particular, if $(\w{e}_\alpha)$ is a natural frame associated with some
 coordinate system $(x^\alpha)$, then $\w{e}_\alpha = \wpar_\alpha$ and
@@ -1100,12 +1100,8 @@ The components of $\w{\nabla}_{\w{v}}\w{T}$ are then
 $v^\mu \nabla_{\mu}
 T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}$.
 Note that $\w{\nabla}_{\w{v}}\w{T}$ is a tensor field of the same type as $\w{T}$.
-In the particular case of a scalar field $f$, we will use the notation
-$\w{v}\cdot\wnab f$ for $\wnab_{\w{v}} f$:
-\be
-  \w{v}\cdot\wnab f := \wnab_{\w{v}} f = \langle \wnab f , \w{v} \rangle
-   = \w{v}(f) .
-\ee
+In the particular case of a scalar field $f$, one has
+$\wnab_{\w{v}} f = \langle \wnab f , \w{v} \rangle = \w{v}(f) $.
 
 The \defin{divergence}\index{divergence!tensor} with respect to the affine connection $\wnab$ of a tensor field $\w{T}$ of type $(k,\ell)$ with $k\geq 1$ is the tensor field
 denoted $\wnab\cdot\w{T}$ of type $(k-1,\ell)$ and whose components with respect to any
@@ -1124,7 +1120,7 @@ On a pseudo-Riemannian manifold $(\M,\w{g})$ there is a unique affine connection
 $\wnab$ such that
 \begin{enumerate}
 \item $\wnab$ is \defin{torsion-free}\index{torsion-free}, i.e. for any scalar field $f$,
-$\wnab\wnab f$ is a field of \emph{symmetric} bilinear forms; in components:
+$\wnab\wnab f$ is a field of \emph{symmetric} bilinear forms:
 \be \label{e:bas:torsion-free}
   \nabla_\alpha\nabla_\beta f = \nabla_\beta\nabla_\alpha f .
 \ee
@@ -1134,7 +1130,6 @@ $\wnab\wnab f$ is a field of \emph{symmetric} bilinear forms; in components:
 \ee
 \end{enumerate}
 $\wnab$ is called the \defin{Levi-Civita connection associated with $\w{g}$}\index{Levi-Civita!connection}\index{connection!Levi-Civita --}.
-In this book, we shall consider only such connections.
 
 With respect to the Levi-Civita connection, the Levi-Civita tensor $\weps$ introduced
 in Sec.~\ref{s:bas:Levi-Civita_tensor} shares the same property as $\w{g}$:
@@ -1144,7 +1139,7 @@ in Sec.~\ref{s:bas:Levi-Civita_tensor} shares the same property as $\w{g}$:
 
 Given a coordinate system $(x^\alpha)$ on $\M$, the connection coefficients of the
 Levi-Civita connection with respect to the natural basis $(\wpar_\alpha)$
-are called the \defin{Christoffel symbols}\index{Christoffel symbols}; they
+are called the \defin{Christoffel symbols}\index{Christoffel symbols} of $\w{g}$; they
 can be evaluated
 from the partial derivatives of the metric components with respect to the coordinates:
 \be \label{e:bas:Christoffel}
@@ -1155,12 +1150,10 @@ from the partial derivatives of the metric components with respect to the coordi
 Note that the Christoffel symbols are symmetric with respect to the lower two indices.
 
 For the Levi-Civita connection, the expression for the divergence of a vector takes
-a rather simple form in a natural basis associated with some coordinates $(x^\alpha)$.
+a rather simple form in a natural basis.
 Indeed, combining Eqs.~(\ref{e:bas:def_divergence}) and (\ref{e:bas:der_cov_coord}),
 we get for $\w{v}\in\mathfrak{X}(\M)$,
-\[
-  \wnab\cdot\w{v} = \nabla_\mu v^\mu = \der{v^\mu}{x^\mu} + \Gamma^\mu_{\ \ \sigma\mu} v^\sigma   .
-\]
+$\wnab\cdot\w{v} = \nabla_\mu v^\mu = \dert{v^\mu}{x^\mu} + \Gamma^\mu_{\ \ \sigma\mu} v^\sigma $.
 Now, from (\ref{e:bas:Christoffel}),  we have
 \be \label{e:bas:trGam_det_g}
   \Gamma^\mu_{\ \ \alpha\mu} =  \frac{1}{2} g^{\mu\nu} \der{g_{\mu\nu}}{x^\alpha}
@@ -1424,19 +1417,21 @@ The \defin{exterior derivative}\index{exterior!derivative}\index{derivative!exte
  of a $p$-form $\w{\omega}$ is a
 $(p+1)$-form which is denoted $\dd\w{\omega}$ and whose components
 with respect to a given coordinate system $(x^\alpha)$ are defined by
-\bea
-    \mbox{0-form (scalar field)} & : & (\dd\w{\omega})_\alpha :=
+\begin{subequations}
+\begin{align}
+    \mbox{0-form (scalar field): \ }  & (\dd\w{\omega})_\alpha :=
         \der{\omega}{x^\alpha} \label{e:bas:def_ext_0f} \\
-    \mbox{1-form} & : & (\dd\w{\omega})_{\alpha\beta} :=
+    \mbox{1-form: \ }  & (\dd\w{\omega})_{\alpha\beta} :=
     \der{\omega_\beta}{x^\alpha} - \der{\omega_\alpha}{x^\beta}
              \label{e:bas:def_ext_1f} \\
-    \mbox{2-form} & : & (\dd\w{\omega})_{\alpha\beta\gamma} :=
+    \mbox{2-form: \ }  & (\dd\w{\omega})_{\alpha\beta\gamma} :=
     \der{\omega_{\beta\gamma}}{x^\alpha} +
     \der{\omega_{\gamma\alpha}}{x^\beta} +
     \der{\omega_{\alpha\beta}}{x^\gamma} \label{e:bas:def_ext_2f} \\
     \mbox{etc...} \nonumber
-\eea
-It can be easily checked that these formul\ae, although expressed in terms of
+\end{align}
+\end{subequations}
+It can be easily checked that these formulas, although expressed in terms of
 partial derivatives of components in a coordinate system, do define tensor fields.
 Moreover, the result is clearly antisymmetric (assuming that $\w{\omega}$ is), so
 that we end up with $(p+1)$-forms.
@@ -1451,17 +1446,19 @@ Although the exterior derivative does not depend on the metric $\w{g}$ and
 hence on the Levi-Civita connection $\wnab$, one may replace
 all partial derivatives in the formul\ae\
 (\ref{e:bas:def_ext_0f})-(\ref{e:bas:def_ext_2f}) by covariant derivatives:
-\bea
-    \mbox{0-form} & : & (\dd\w{\omega})_\alpha =
+\begin{subequations}
+\begin{align}
+    \mbox{0-form: \ } & (\dd\w{\omega})_\alpha =
         \nabla_\alpha \omega \label{e:bas:def_ext_0f_nab} \\
-    \mbox{1-form} & : & (\dd\w{\omega})_{\alpha\beta} =
+    \mbox{1-form: \ } & (\dd\w{\omega})_{\alpha\beta} =
         \nabla_\alpha \omega_\beta - \nabla_\beta \omega_\alpha
             \label{e:bas:def_ext_1f_nab} \\
-    \mbox{2-form} & : & (\dd\w{\omega})_{\alpha\beta\gamma} =
+    \mbox{2-form: \ } & (\dd\w{\omega})_{\alpha\beta\gamma} =
     \nabla_\alpha\omega_{\beta\gamma} +
     \nabla_\beta\omega_{\gamma\alpha} +
     \nabla_\gamma\omega_{\alpha\beta} \label{e:bas:def_ext_2f_nab}
-\eea
+\end{align}
+\end{subequations}
 The above identities hold thanks to the symmetry of the Christoffel symbols
 on their last two indices (and thanks to (\ref{e:bas:grad_f_der_f}) for
 a 0-form).
@@ -1488,10 +1485,10 @@ $\dd\w{\omega}$ is a $d$-form, so that each side of
 (\ref{e:bas:Stokes}) is (of course !) a well-defined quantity,
 as the integral of a $p$-form over a $p$-dimensional manifold.
 
-Another very important formula involving the exterior derivative is
-the \defin{Cartan identity}\index{Cartan!identity}, which states that the
-Lie derivative of a differential form
-$\w{\omega}$ along a vector field $\w{u}$ is expressible as
+Another important formula involving the exterior derivative is
+the \defin{Cartan identity}\index{Cartan!identity}, which
+expresses the Lie derivative of a differential form
+$\w{\omega}$ along a vector field $\w{u}$ as
 \be \label{e:bas:Cartan}
     \encadre{ \Lie{u}\w{\omega} = \w{u}\cdot\dd\w{\omega}
     + \dd(\w{u}\cdot\w{\omega}) }.
@@ -1536,14 +1533,14 @@ formula does define a tensor field on $\M$, i.e. the value
 of $\mathrm{\bf Riem}(\w{\omega},\w{w},\w{u},\w{v})$ at a given
 point $p\in\M$ depends only upon the values of the fields
 $\w{\omega}$, $\w{w}$, $\w{u}$ and $\w{v}$ at $p$ and not
-upon their behaviours away from $p$, as the covariant derivatives in
+upon their behaviors away from $p$, as the covariant derivatives in
 Eq.~(\ref{e:bas:def_Riemann}) might suggest.
 We denote the components of this tensor in
-a given basis $(\w{e}_\alpha)$, not by
-${\rm Riem}^\gamma_{\ \  \delta \alpha\beta}$, but by
-$R^\gamma_{\ \  \delta \alpha\beta}$.
-The definition (\ref{e:bas:def_Riemann}) leads then to the
-following expression, named the \defin{Ricci identity}\index{Ricci!identity}:
+a given basis $(\w{e}_\alpha)$
+by $R^\gamma_{\ \  \delta \alpha\beta}$, instead of
+${\rm Riem}^\gamma_{\ \  \delta \alpha\beta}$.
+The definition (\ref{e:bas:def_Riemann}) leads to the
+following formula, named the \defin{Ricci identity}\index{Ricci!identity}:
 \be \label{e:bas:Ricci_ident}
     \forall\w{w}\in\mathfrak{X}(\M),\quad
         \left(\nabla_\alpha\nabla_\beta
@@ -1626,14 +1623,14 @@ In terms of components:
     \encadre{ R_{\alpha\beta} := R^\mu_{\ \  \alpha\mu\beta} }.
 \ee
 \begin{remark}
-Following the standard usage, we denote the components
+Following standard usage, we denote the components
 of the Riemann and Ricci tensors by the same letter $R$, the
 number of indices allowing us to distinguish between the two tensors.
 On the other hand, we are using different symbols, $\mathrm{\bf Riem}$ and
 $\w{R}$, when employing the index-free notation.
 \end{remark}
 
-For the Levi-Civita connection associated with the metric $\w{g}$, the property (\ref{e:bas:Riemann_sym}) implies that the Ricci tensor is symmetric:
+For the Levi-Civita connection associated with the metric $\w{g}$, property (\ref{e:bas:Riemann_sym}) implies that the Ricci tensor is symmetric:
 \be
   \w{R}(\w{u},\w{v}) = \w{R}(\w{v},\w{u}) .
 \ee
