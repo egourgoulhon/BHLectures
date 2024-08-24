@@ -2469,7 +2469,8 @@ It can be shown \cite{IyerW94} that any diffeomorphism-invariant theory of gravi
 involving only the metric tensor and its derivatives (with respect to an arbitrary affine connection on $\M$) can
 be recast in the form (\ref{e:evo:Lagrangian_diffeo_inv}).
 
-\begin{example} \label{x:evo:EH_Lagrangian}
+\begin{example}[general relativity]
+\label{x:evo:EH_Lagrangian}
 For general relativity, $L = R = g^{\mu\nu} g^{\rho\sigma} R_{\sigma\mu\rho\nu}$
 (Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}).
 \end{example}
@@ -2504,7 +2505,7 @@ expressed in Eq.~(\ref{e:evo:Lagrangian_diffeo_inv}) does not depend upon
 the choice of coordinates.
 
 The variation of the Lagrangian $n$-form resulting from a generic variation $\delta\w{g}$ of
-the metric tensor can always be written as \cite{IyerW94,Compe19}
+the metric tensor can always be written as \cite{LeeW90,IyerW94,Compe19}
 \be \label{e:evo:delta_L_E_Theta}
     \delta \w{L} = E^{\mu\nu} \delta g_{\mu\nu} \, \weps + \dd \w{\Theta} ,
 \ee
@@ -2515,7 +2516,7 @@ linear dependence in the latter.
 The $n$-form  $\dd \w{\Theta}$ is the exterior derivative of $\w{\Theta}$
 (cf. Sec.~\ref{s:bas:ext_deriv}).
 
-\begin{example}
+\begin{example}[variation of the Einstein-Hilbert Lagrangian]
 For general relativity, one has $\w{L} = R \weps$ (Example~\ref{x:evo:EH_Lagrangian}).
 Given a coordinate system $(x^\alpha)$
 on $\M$,
@@ -2537,7 +2538,7 @@ $(\nabla\cdot\w{H}) \weps = \dd (\w{H}\cdot\weps)$, so that
 $\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps + 2 \dd (\w{H}\cdot\weps)$.
 We conclude that the variation of the Einstein-Hilbert Lagrangian is indeed of the form
 (\ref{e:evo:delta_L_E_Theta}) with
-\be
+\be \label{e:evo:E_Theta_GR}
     E^{\alpha\beta} = - G^{\alpha\beta}
     \qand
     \w{\Theta} = 2 \w{H}\cdot\weps .
@@ -2553,14 +2554,24 @@ in terms of $\w{g}$ and $\delta\w{g}$:
 Notice that $\w{\Theta}$ linear in  $\delta\w{g}$.
 \end{example}
 
-The extremalization of the action (\ref{e:evo:action_L}) is equivalent to
-$\int_\M \delta\w{L} = 0$. Now the part $\dd\w{\Theta}$ of $\delta\w{L}$ in
+The extremalization $\delta S = 0$ of the action (\ref{e:evo:action_L}) is equivalent to
+$\int_\M \delta\w{L} = 0$. The part $\dd\w{\Theta}$ of $\delta\w{L}$ in
 expression~(\ref{e:evo:delta_L_E_Theta}) does not contribute:
 the integral of $\dd\w{\Theta}$  over $\M$
 can be reduced to a surface integral thanks to the Stokes theorem (\ref{e:bas:Stokes}) and provided
 $\delta\w{g}$ is
 compactly supported or decay sufficiently fast, this surface integral vanishes.
+Consequently, having $\delta S = 0$ for any variation $\delta\w{g}$ is equivalent to
+\be \label{e:evo:eom_E}
+    \w{E} = 0 .
+\ee
+This is the so-called \emph{Euler-Lagrange equations}\index{Euler-Lagrange equations} or \emph{equations of motion} for the considered gravity theory.
 
+\begin{example}[Einstein equation]
+For general relativity, in view of Eq.~(\ref{e:evo:E_Theta_GR}),
+the equations of motion (\ref{e:evo:eom_E}) become $\w{G} = 0$, which constitutes
+the vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation}.
+\end{example}
 
 ...
 
