@@ -530,8 +530,8 @@ $\w{v} = 2\w{H}$
 or Eqs.~(4.18)-(4.19) and the unnumbered equation below (4.20) on p.~437-438 of Deruelle \& Uzan's textbook \cite{DerueU18}, where $\w{V} = 2\w{H}$.}, which is at the root of the derivation of the Einstein equation by extremalizing
 the Einstein-Hilbert action\index{Einstein-Hilbert action}, is
 \be \label{e:evo:proto_EH}
-    \delta\left(R \sqrt{-g}\right) = G_{\mu\nu} \, \delta g^{\mu\nu} \, \sqrt{-g}
-    + 2 \nabla_\mu H^\mu \, \sqrt{-g} .
+    \delta\left(R \sqrt{-g}\right) = \left( G_{\mu\nu} \, \delta g^{\mu\nu}
+    + 2 \nabla_\mu H^\mu \right) \sqrt{-g} .
 \ee
 It's rather straightforward to establish (\ref{e:evo:proto_EH}) from the \defin{Palatini identity}\index{Palatini identity}\index{Palatini identity}\footnote{See e.g. Eq.~(21.21) in MTW \cite{MisneTW73}, Eq.~(3.86) in Straumann's textbook \cite{Strau13}
 or Eq.~(4.62) in Carroll's textbook \cite{Carro04}.}:
@@ -2444,7 +2444,7 @@ the identification of the entropy $S$ with the black hole area $A$, i.e.
 the Bekenstein-Hawking formula (\ref{e:evo:S_BH}).
 To investigate this, let us consider a generic theory of gravity
 based on a least-action principle\index{least action} involving the action
-\be
+\be \label{e:evo:action_L}
     S = \int_{\M} \w{L} = \int_{\M} L \, \weps = \int_{\M} L \sqrt{-g} \, \D^n x,
 \ee
 where $\w{L}$ is the \defin{Lagrangian $n$-form}\index{Lagragian!form}\footnote{As the integral of a $n$-form over a $n$-dimensional manifold, $S$ is well-posed and coordinate independent.},
@@ -2457,7 +2457,8 @@ necessarily proportional, so that there is no loss of generality in the writing
 $\w{L} = L \, \weps$.} $\w{L} = L \, \weps$ and the third one provides an expression of the integral
 in terms of a coordinate system $(x^\alpha)$ on $\M$, $g$ being the determinant of
 $\w{g}$ with respect to these coordinates [cf. Eq.~(\ref{e:bas:eps_sqrt_g})].
-We shall assume that $L$ is a function of the metric tensor, the Riemann tensor and a finite number of symmetrized\footnote{There is no loss of generality in considering only symmetrized derivatives, since
+Disregarding any matter field for simplicity,
+we shall assume that $L$ is a function of the metric tensor, the Riemann tensor and a finite number of symmetrized\footnote{There is no loss of generality in considering only symmetrized derivatives, since
 any antisymmetrized combination can be reexpressed in term of the Riemann tensor itself and
 lower order derivatives.} covariant derivatives of the latter:
 \be \label{e:evo:Lagrangian_diffeo_inv}
@@ -2467,20 +2468,99 @@ lower order derivatives.} covariant derivatives of the latter:
 It can be shown \cite{IyerW94} that any diffeomorphism-invariant theory of gravity based on a Lagrangian
 involving only the metric tensor and its derivatives (with respect to an arbitrary affine connection on $\M$) can
 be recast in the form (\ref{e:evo:Lagrangian_diffeo_inv}).
-In particular, for general relativity, $L = R = g^{\mu\nu} g^{\rho\sigma} R_{\sigma\mu\rho\nu}$
-(Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}). By \defin{diffeomorphism-invariant}, it is meant
+
+\begin{example} \label{x:evo:EH_Lagrangian}
+For general relativity, $L = R = g^{\mu\nu} g^{\rho\sigma} R_{\sigma\mu\rho\nu}$
+(Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}).
+\end{example}
+
+By \emph{diffeomorphism-invariant}, it is meant
 that the Lagrangian $n$-form $\w{L}$ is covariant under
 the action of any diffeomorphism $\Phi:\M \to \M$. More precisely, under such an action, the metric tensor
 and the Levi-Civita tensors are transformed to their pullbacks $(\Phi^{-1})^*\w{g}$ and $(\Phi^{-1})^*\weps$ by
-$\Phi^{-1}$, since they are tensors of type $(0,\ell)$
-(cf. Sec.~\ref{s:bas:push_pull}).
+$\Phi^{-1}$ (cf. Sec.~\ref{s:bas:push_pull} for the definition of the pullback).
+The inverse of $\Phi$ is invoked here because, as $\w{g}$ and $\weps$ are
+tensors of type $(0,\ell)$, $\Phi$ itself would carry them from\footnote{Since $\Phi$ is a diffeomorphism
+$\M\to \M$, we have of course $\Phi(\M)=\M$; however we keep the notation $\Phi(\M)$ to stress the image character of this set.} $\Phi(\M)$ to $\M$, while
+we are considering the transformation from $\M$ to $\Phi(\M)$ (cf. Remark~\ref{r:bas:comp_push_pull} on
+p.~\pageref{r:bas:comp_push_pull}).
 Let $\w{L'}$ be the Lagrangian $n$-form constructed by keeping the same functional
-dependence in $(\Phi^{-1})^*\w{g}$ as (\ref{e:evo:Lagrangian_diffeo_inv}), i.e.
+dependence in $(\Phi^{-1})^*\w{g}$ as in (\ref{e:evo:Lagrangian_diffeo_inv}), i.e.
 $\w{L'} = L((\Phi^{-1})^* g_{\alpha\beta}, (\Phi^{-1})^* R_{\alpha\beta\gamma\delta}, \ldots) \,
 (\Phi^{-1})^*\weps$
-with the same function $L$ as in (\ref{e:evo:Lagrangian_diffeo_inv}). The \emph{diffeomorphism-invariant}
-condition amounts to demanding that $\w{L'}$ coincides with the pullback of the $n$-form $\w{L}$ by $\Phi^{-1}$:
-$\w{L'} = (\Phi^{-1})^*\w{L}$, i.e. $\w{L'}$ and $\w{L}$ are basically the same objects.
+with the same function $L$ as in (\ref{e:evo:Lagrangian_diffeo_inv}). The
+\defin{diffeomorphism-invariance}\index{diffeomorphism!invariance}
+condition amounts to demanding that, as a $n$-form on $\M$, $\w{L'}$ is nothing but
+the $n$-form $\w{L}$ transformed under the action of $\Phi$, i.e. the pullback of $\w{L}$ by
+$\Phi^{-1}$:  $\w{L'} = (\Phi^{-1})^*\w{L}$.
+Given that the spacetimes
+$(\M, \w{g})$ and $(\Phi(\M),(\Phi^{-1})^* \w{g})$ are physically equivalent,
+this means that $\w{L}$ and $\w{L'}$ are basically the same object.
+In particular, the action (\ref{e:evo:action_L}) takes the same value if
+$\w{L'}$ is substituted for $\w{L}$. If one interprets the diffeomorphism
+action in a ``passive'' way, i.e. as a change of coordinates on $\M$, the
+diffeomorphism-invariance condition simply means that the functional form of $L$
+expressed in Eq.~(\ref{e:evo:Lagrangian_diffeo_inv}) does not depend upon
+the choice of coordinates.
+
+The variation of the Lagrangian $n$-form resulting from a generic variation $\delta\w{g}$ of
+the metric tensor can always be written as \cite{IyerW94,Compe19}
+\be \label{e:evo:delta_L_E_Theta}
+    \delta \w{L} = E^{\mu\nu} \delta g_{\mu\nu} \, \weps + \dd \w{\Theta} ,
+\ee
+where $E^{\mu\nu}$ are the components of a symmetric type-$(2,0)$ tensor field $\w{E}$, which does
+not depend on $\delta\w{g}$ and
+$\w{\Theta}$ is a $(n-1)$-form, which is a function of $\w{g}$ and $\delta\w{g}$, with a
+linear dependence in the latter.
+The $n$-form  $\dd \w{\Theta}$ is the exterior derivative of $\w{\Theta}$
+(cf. Sec.~\ref{s:bas:ext_deriv}).
+
+\begin{example}
+For general relativity, one has $\w{L} = R \weps$ (Example~\ref{x:evo:EH_Lagrangian}).
+Given a coordinate system $(x^\alpha)$
+on $\M$,
+this can be rewritten as $\w{L} = R \sqrt{-g} \, \w{e}$, where
+$g$ is the determinant of $\w{g}$ with respect to $(x^\alpha)$ and
+$\w{e}$ is the $n$-form whose components with respect to $(x^\alpha)$
+are $e_{\alpha_1\cdots\alpha_n} = 1$ (resp. $-1$) if $(\alpha_1,\ldots,\alpha_n)$ is an
+even (resp. odd) permutation of $(0,\ldots,n)$ and $0$ otherwise [cf. Eq.~(\ref{e:bas:eps_sqrt_g})].
+One has then $\delta\w{L} = \delta(R \sqrt{-g}) \, \w{e}$, since obviously $(x^\alpha)$, and thus
+$\w{e}$, is not altered by the variation $\delta\w{g}$.
+From the expression of $\delta(R\sqrt{-g})$ given by Eq.~(\ref{e:evo:proto_EH})
+and using $G_{\mu\nu} \delta g^{\mu\nu} = - G^{\mu\nu} \delta g_{\mu\nu}$,
+we get $\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps + 2 (\nabla\cdot\w{H}) \weps$,
+where $G^{\mu\nu}$ is the double metric dual of the Einstein tensor and
+$\w{H}$ is the vector field defined in terms of $\delta\w{g}$ by Eq.~(\ref{e:evo:def_H}),
+where $h^\alpha_{\ \, \beta} = g^{\alpha\mu} \delta  g_{\mu\beta}$
+since $h_{\alpha\beta}:= \delta g_{\alpha\beta}$. Now, the identity (\ref{e:bas:dveps_divv}) yields
+$(\nabla\cdot\w{H}) \weps = \dd (\w{H}\cdot\weps)$, so that
+$\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps + 2 \dd (\w{H}\cdot\weps)$.
+We conclude that the variation of the Einstein-Hilbert Lagrangian is indeed of the form
+(\ref{e:evo:delta_L_E_Theta}) with
+\be
+    E^{\alpha\beta} = - G^{\alpha\beta}
+    \qand
+    \w{\Theta} = 2 \w{H}\cdot\weps .
+\ee
+In index notation,  $\Theta_{\alpha\beta\gamma} = 2  H^\mu \eps_{\mu\alpha\beta\gamma}$.
+Substituting Eq.~(\ref{e:evo:def_H}) for $H^\mu$, we get the explicit expression of $\w{\Theta}$
+in terms of $\w{g}$ and $\delta\w{g}$:
+\be
+    \Theta_{\alpha\beta\gamma} = g^{\mu\nu} g^{\rho\sigma}
+    \left( \nabla_\sigma \delta g_{\nu\rho} - \nabla_\nu \delta g_{\rho\sigma} \right)
+    \epsilon_{\mu\alpha\beta\gamma} .
+\ee
+Notice that $\w{\Theta}$ linear in  $\delta\w{g}$.
+\end{example}
+
+The extremalization of the action (\ref{e:evo:action_L}) is equivalent to
+$\int_\M \delta\w{L} = 0$. Now the part $\dd\w{\Theta}$ of $\delta\w{L}$ in
+expression~(\ref{e:evo:delta_L_E_Theta}) does not contribute:
+the integral of $\dd\w{\Theta}$  over $\M$
+can be reduced to a surface integral thanks to the Stokes theorem (\ref{e:bas:Stokes}) and provided
+$\delta\w{g}$ is
+compactly supported or decay sufficiently fast, this surface integral vanishes.
+
 
 ...
 
