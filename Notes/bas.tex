@@ -1553,9 +1553,9 @@ The definition (\ref{e:bas:def_Riemann}) leads to the
 following formula, named the \defin{Ricci identity}\index{Ricci!identity}:
 \be \label{e:bas:Ricci_ident}
     \forall\w{w}\in\mathfrak{X}(\M),\quad
-        \left(\nabla_\alpha\nabla_\beta
+       \encadre{ \left(\nabla_\alpha\nabla_\beta
         - \nabla_\beta\nabla_\alpha\right) w^\gamma
-        = R^\gamma_{\ \  \mu \alpha\beta} \, w^\mu .
+        = R^\gamma_{\ \  \mu \alpha\beta} \, w^\mu }.
 \ee
 \begin{remark}
 In view of this identity, one may say that the Riemann tensor measures the lack of
@@ -1639,6 +1639,15 @@ number of indices allowing us to distinguish between the two tensors.
 On the other hand, we are using different symbols, $\mathrm{\bf Riem}$ and
 $\w{R}$, when employing the index-free notation.
 \end{remark}
+
+The Ricci tensor naturally appears in the \defin{contracted Ricci identity}\index{Ricci!identity!contracted --}:
+\be \label{e:bas:contract_Ricci_ident}
+    \forall\w{w}\in\mathfrak{X}(\M),\quad
+    \encadre{ \nabla_\mu \nabla_\alpha w^\mu - \nabla_\alpha \nabla_\mu w^\mu =
+        R_{\mu\alpha} w^\mu },
+\ee
+which is obtained by taking the trace of the Ricci identity (\ref{e:bas:Ricci_ident}) on the indices $(\alpha,\gamma)$ and relabelling $\beta\rightarrow\alpha$.
+
 
 For the Levi-Civita connection associated with the metric $\w{g}$, property (\ref{e:bas:Riemann_sym}) implies that the Ricci tensor is symmetric:
 \be
