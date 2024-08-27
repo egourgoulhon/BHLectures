@@ -329,27 +329,27 @@ on $\Hor_k$, contrary to $\w{\xi}$), namely
 \be \label{e:evo:I_Sk_int_omega}
     I_{\Sp_k} =  \int_{\Sp_k} \omega_{\mu\nu} \,\D S^{\mu\nu} ,
     \quad \mbox{with} \quad
-    \omega_{\alpha\beta} := \left( \uu{\xi} \wedge \uu{H} \right)_{\alpha\beta} = \xi_\alpha H_\beta -
-    H_\alpha \xi_\beta ,
+    \omega_{\alpha\beta} := \frac{1}{2}
+        \left( \uu{\xi} \wedge \uu{H} \right)_{\alpha\beta} = \frac{1}{2} \left( \xi_\alpha H_\beta -
+    H_\alpha \xi_\beta \right) ,
 \ee
 where $\w{H}$ is the vector field defined by
 \be \label{e:evo:def_H}
-    H^\alpha := \nabla^{[\mu} h^{\alpha]}_{\ \ \mu} = \frac{1}{2} \left( \nabla^\mu h^\alpha_{\ \, \mu}
-        - \nabla^\alpha h^\mu_{\ \, \mu} \right) .
+    H^\alpha := \nabla^\mu h^\alpha_{\ \, \mu} - \nabla^\alpha h^\mu_{\ \, \mu}  .
 \ee
 To prove (\ref{e:evo:I_Sk_int_omega}), let us evaluate $\omega_{\mu\nu} \,\D S^{\mu\nu}$,
 using successively Eq.~(\ref{e:sta:dS_chi_k}),
 $\xi_\mu \chi^\mu = 0$ ($\w{\xi}$ tangent to $\Hor_k$) and
 $\eta_{(i)\mu} k^\mu = 0$ ($\w{\eta}_{(i)}$ tangent to $\Sp_k$):
 \bea
-    \omega_{\mu\nu} \,\D S^{\mu\nu} & = & \left( \xi_\mu H_\nu - H_\mu \xi_\nu \right)
+    \omega_{\mu\nu} \,\D S^{\mu\nu} & = & \frac{1}{2}\left( \xi_\mu H_\nu - H_\mu \xi_\nu \right)
         \left(\chi^\mu k^\nu - k^\mu \chi^\nu\right)\, \D S
-        =  2 ( \underbrace{\xi_\mu \chi^\mu}_{0} \, H_\nu k^\nu
+        =  ( \underbrace{\xi_\mu \chi^\mu}_{0} \, H_\nu k^\nu
         - \xi_\mu  k^\mu H_\nu \chi^\nu) \,\D S  \nonumber \\
-    & = & - 2 \Big( \underbrace{\chi_\mu k^\mu}_{-1} -
+    & = & - \Big( \underbrace{\chi_\mu k^\mu}_{-1} -
         \sum_{i=1}^L \Omega^{(i)}  \underbrace{\eta_{(i)\mu} k^\mu}_{0} \Big)
         H_\nu \chi^\nu \, \D S
-        = 2 \chi_\mu H^\mu \, \D S \nonumber \\
+        =  \chi_\mu H^\mu \, \D S \nonumber \\
     & = &  ( \chi_\mu \nabla^\nu h^\mu_{\ \, \nu}
         - \chi^\mu \nabla_\mu h^\nu_{\ \, \nu} ) \, \D S \nonumber \\
     & = & ( \chi_\mu \nabla^\nu h^\mu_{\ \, \nu}
@@ -409,7 +409,7 @@ In view of Eqs.~(\ref{e:evo:I_Sk_int_omega})-(\ref{e:evo:def_H})
 and (\ref{e:sta:area_bivector}), we may write
 \[
     \int_{\Sp_\infty} \omega_{\mu\nu} \,\D S^{\mu\nu} =
-    2 \int_{\Sp_\infty} \xi_\mu H_\nu \,\D S^{\mu\nu}
+    \int_{\Sp_\infty} \xi_\mu H_\nu \,\D S^{\mu\nu}
     = \int_{\Sp_\infty} \xi_\mu (\nabla^\sigma h_{\nu\sigma}
     - \nabla_\nu h^\sigma_{\ \, \sigma}) (s^\mu n^\nu - n^\mu s^\nu) \sqrt{q} \, \D^{n-2} y ,
 \]
@@ -467,7 +467,7 @@ Accordingly, Eq.~(\ref{e:evo:mass_var_prov}) simplifies to
 \]
 Now, from Eq.~(\ref{e:evo:I_Sk_int_omega}),
 \bea
-    \nabla^\nu \omega_{\mu\nu} \, \D V^\mu & =&
+    2 \nabla^\nu \omega_{\mu\nu} \, \D V^\mu & =&
     \nabla_\nu ( \xi^\mu H^\nu - H^\mu \xi^\nu ) \D V_\mu
     = ( \xi^\mu \nabla_\nu H^\nu
     + \underbrace{H^\nu \nabla_\nu \xi^\mu - \xi^\nu \nabla_\nu H^\mu}_{0}
@@ -487,7 +487,7 @@ Hence
  \sum_{k = 1}^K \left(
     \frac{\kappa_{k}}{8\pi}\, \delta A_k
     +  \sum_{i=1}^{L_{k}} \Omega^{(i)}_{\Hor_k} \, \delta J_{\Hor_k}^{(i)} \right)
-     +  \frac{1}{8\pi} \int_{\Sigma} \nabla_\nu H^\nu  \, \xi^\mu \, \D V_\mu
+     +  \frac{1}{16\pi} \int_{\Sigma} \nabla_\nu H^\nu  \, \xi^\mu \, \D V_\mu
      - \frac{1}{8\pi} \delta \! \int_{\Sigma} R^\mu_{\ \, \nu} \, \xi^\nu \D V_\mu .
 \]
 Let us make the Einstein tensor $\w{G}$ appear in the last integral via Eq.~(\ref{e:bas:Einstein_tensor}):
@@ -505,7 +505,7 @@ we may write
 \ee
 with
 \[
-    I :=  \int_{\Sigma} \xi^\mu  \left[ \nabla_\nu H^\nu \, \D V_\mu - \frac{1}{2}
+    I := \frac{1}{2} \int_{\Sigma} \xi^\mu  \left[ \nabla_\nu H^\nu \, \D V_\mu -
     \left(\delta R \, \D V_\mu +  R \, \delta(\D V_\mu) \right)  \right] .
 \]
 Now from Eq.~(\ref{e:sta:normal_vol_element}), $\D V_\alpha = - n_\alpha \sqrt{\gamma} \, \D^{n-1} x$,
@@ -523,15 +523,15 @@ and $\delta(\D^{n-1} x) = 0$, we get
 \ee
 Hence
 \[
-    I =  \int_{\Sigma}  \left[ \nabla_\nu H^\nu - \frac{1}{2\sqrt{-g}} \delta\left(R \sqrt{-g}\right)  \right] \xi^\mu \D V_\mu.
+    I = \frac{1}{2} \int_{\Sigma}  \left[ \nabla_\nu H^\nu - \frac{1}{\sqrt{-g}} \delta\left(R \sqrt{-g}\right)  \right] \xi^\mu \D V_\mu.
 \]
 Now, a standard identity\footnote{See e.g. Eq.~(E.1.18) in Wald's textbook~\cite{Wald84}, where
-$\w{v} = 2\w{H}$
-or Eqs.~(4.18)-(4.19) and the unnumbered equation below (4.20) on p.~437-438 of Deruelle \& Uzan's textbook \cite{DerueU18}, where $\w{V} = 2\w{H}$.}, which is at the root of the derivation of the Einstein equation by extremalizing
+$\w{v} = \w{H}$
+or Eqs.~(4.18)-(4.19) and the unnumbered equation below (4.20) on p.~437-438 of Deruelle \& Uzan's textbook \cite{DerueU18}, where $\w{V} = \w{H}$.}, which is at the root of the derivation of the Einstein equation by extremalizing
 the Einstein-Hilbert action\index{Einstein-Hilbert action}, is
 \be \label{e:evo:proto_EH}
     \delta\left(R \sqrt{-g}\right) = \left( G_{\mu\nu} \, \delta g^{\mu\nu}
-    + 2 \nabla_\mu H^\mu \right) \sqrt{-g} .
+    + \nabla_\mu H^\mu \right) \sqrt{-g} .
 \ee
 It's rather straightforward to establish (\ref{e:evo:proto_EH}) from the \defin{Palatini identity}\index{Palatini identity}\index{Palatini identity}\footnote{See e.g. Eq.~(21.21) in MTW \cite{MisneTW73}, Eq.~(3.86) in Straumann's textbook \cite{Strau13}
 or Eq.~(4.62) in Carroll's textbook \cite{Carro04}.}:
@@ -557,7 +557,7 @@ where the second term can be expressed by combining Eqs.~(\ref{e:evo:Palatini}),
 \[
     g^{\mu\nu} \, \delta R_{\mu\nu}
      = \nabla_\mu \left( \nabla^\nu h^\mu_{\ \, \nu} - \nabla^\mu h^\nu_{\ \, \nu} \right)
-     = 2 \nabla_\mu H^\mu .
+     =  \nabla_\mu H^\mu .
 \]
 On the other side, formula (\ref{e:bas:variation_det}) for the variation
 of the determinant $g$ leads to
@@ -2530,28 +2530,30 @@ One has then $\delta\w{L} = \delta(R \sqrt{-g}) \, \w{e}$, since obviously $(x^\
 $\w{e}$, is not altered by the variation $\delta\w{g}$.
 From the expression of $\delta(R\sqrt{-g})$ given by Eq.~(\ref{e:evo:proto_EH})
 and using $G_{\mu\nu} \delta g^{\mu\nu} = - G^{\mu\nu} \delta g_{\mu\nu}$,
-we get $\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps + 2 (\nabla\cdot\w{H}) \weps$,
+we get $\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps + \nabla_\mu H^\mu \, \weps$,
 where $G^{\mu\nu}$ is the double metric dual of the Einstein tensor and
 $\w{H}$ is the vector field defined in terms of $\delta\w{g}$ by Eq.~(\ref{e:evo:def_H}),
 where $h^\alpha_{\ \, \beta} = g^{\alpha\mu} \delta  g_{\mu\beta}$
-since $h_{\alpha\beta}:= \delta g_{\alpha\beta}$. Now, the identity (\ref{e:bas:dveps_divv}) yields
-$(\nabla\cdot\w{H}) \weps = \dd (\w{H}\cdot\weps)$, so that
-$\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps + 2 \dd (\w{H}\cdot\weps)$.
+since $h_{\alpha\beta}:= \delta g_{\alpha\beta}$. Now, the identity (\ref{e:bas:dveps_divv})
+yields $\nabla_\mu H^\mu \,  \weps = \dd (\w{H}\cdot\weps)$, so that
+$\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps +  \dd (\w{H}\cdot\weps)$.
 We conclude that the variation of the Einstein-Hilbert Lagrangian is indeed of the form
 (\ref{e:evo:delta_L_E_Theta}) with
 \be \label{e:evo:E_Theta_GR}
     E^{\alpha\beta} = - G^{\alpha\beta}
     \qand
-    \w{\Theta} = 2 \w{H}\cdot\weps .
+    \w{\Theta} =  \w{H}\cdot\weps = \star\uu{H} ,
 \ee
-For $n=4$, $\w{\Theta}$ is a 3-form and its expression in index notation
-is $\Theta_{\alpha\beta\gamma} = 2  H^\mu \eps_{\mu\alpha\beta\gamma}$.
+where the last equality stems from the definition of the Hodge dual
+of a 1-form [Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$] ($\uu{H}$ being the 1-form
+metric dual of the vector $\w{H}$).
+In index notation, $\Theta_{\alpha_1\cdots\alpha_{n-1}} =   H^\mu \eps_{\mu\alpha_1\cdots\alpha_{n-1}}$.
 Substituting Eq.~(\ref{e:evo:def_H}) for $H^\mu$, we get the explicit expression of $\w{\Theta}$
 in terms of $\w{g}$ and $\delta\w{g}$:
-\be
-    \Theta_{\alpha\beta\gamma} = g^{\mu\nu} g^{\rho\sigma}
+\be \label{e:evo:Theta_GR}
+    \Theta_{\alpha_1\cdots\alpha_{n-1}} = g^{\mu\nu} g^{\rho\sigma}
     \left( \nabla_\sigma \delta g_{\nu\rho} - \nabla_\nu \delta g_{\rho\sigma} \right)
-    \epsilon_{\mu\alpha\beta\gamma} .
+    \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
 \ee
 Notice that $\w{\Theta}$ is linear in $\delta\w{g}$, as stated above.
 \end{example}
@@ -2567,11 +2569,11 @@ Consequently, having $\delta S = 0$ for any variation $\delta\w{g}$ is equivalen
 \be \label{e:evo:eom_E}
     \w{E} = 0 .
 \ee
-This is the so-called \emph{Euler-Lagrange equations}\index{Euler-Lagrange equations} or \emph{equations of motion} for the considered gravity theory.
+This is the so-called \emph{Euler-Lagrange equations}\index{Euler-Lagrange equations}, for the considered gravity theory, also called the \emph{field equations} or \emph{equations of motion}.
 
-\begin{example}
+\begin{example} \label{x:evo:field_equations_GR}
 For general relativity, in view of Eq.~(\ref{e:evo:E_Theta_GR}),
-the equations of motion (\ref{e:evo:eom_E}) become $\w{G} = 0$, which
+the field equations (\ref{e:evo:eom_E}) become $\w{G} = 0$, which
 is equivalent to $\w{R}=0$ --- the
 vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation}
 (\ref{e:fra:vac_Einstein}).
@@ -2620,8 +2622,8 @@ In view of the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie derivative,
 When comparing with Eq.~(\ref{e:bas:delta_g_Lie_xi_g}), we see that the derivative-based definition has the advantage of getting rid of the infinitesimal factor $t$, which is not particularly significant.
 \end{remark}
 
-One defines the \defin{Noether current $(n-1)$-form associated to $\w{\xi}$} by \cite{Wald93,IyerW94}
-\be
+One defines the \defin{Noether current $(n-1)$-form of $\w{\xi}$} by \cite{Wald93,IyerW94}
+\be \label{e:evo:def_Noether_current}
     \w{J} := \w{\bar\Theta}(\w{g},\Lie{\xi}\w{g}) - \w{\xi}\cdot\w{L} .
 \ee
 This differential form is closed as soon as the equations of motion (\ref{e:evo:eom_E}) are satisfied:
@@ -2637,7 +2639,7 @@ Hence
 \[
     \dd\w{J} = \dd[ \w{\bar\Theta}(\w{g},\Lie{\xi}\w{g}) ]  - \Lie{\xi} \w{L}  .
 \]
-By combining Eqs.~(\ref{e:evo:delta_L_E_Theta}) and (\ref{e:bas:delta_L_Lie_xi_L}), we get
+On the other hand, by combining Eqs.~(\ref{e:evo:delta_L_E_Theta}) and (\ref{e:bas:delta_L_Lie_xi_L}), we get
 \[
     \Lie{\xi} \w{L}  = - \frac{1}{t} \left( E^{\mu\nu} \delta g_{\mu\nu} \, \weps
         + \dd [\w{\bar\Theta}(\w{g},\delta\w{g})] \right) .
@@ -2653,6 +2655,48 @@ It immediately follows that
 \ee
 Accordingly, $\dd\w{J} = 0$ if $\w{E} = 0$ holds.
 \end{proof}
+
+\begin{example}
+Let us continue with the example of general relativity. From
+expression (\ref{e:evo:Theta_GR}) for $\w{\Theta}$ with
+$\delta g_{\mu\nu} = - t \Liec{\xi} g_{\mu\nu}$ and $\Liec{\xi} g_{\mu\nu} = \nabla_\mu \xi_\nu + \nabla_\nu \xi_\mu$ [Eq.~(\ref{e:bas:Lie_g_Killing})], we get
+\bea
+  \w{\bar\Theta}(\w{g},\Lie{\xi}\w{g})_{\alpha_1\cdots\alpha_{n-1}} & = &
+  g^{\mu\nu} \left( \nabla_\sigma \nabla_\nu \xi^\sigma + \nabla_\sigma \nabla^\sigma \xi_\nu
+    - 2 \nabla_\nu \nabla_\rho \xi^\rho \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} \nonumber \\
+    & = & g^{\mu\nu} \left( 2 R_{\nu\sigma} \xi^\sigma - \nabla_\sigma \nabla_\nu \xi^\sigma
+     + \nabla_\sigma \nabla^\sigma \xi_\nu \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} \nonumber \\
+    & = & \left( 2 R^\mu_{\ \, \nu} \xi^\nu + \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu
+        \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} , \nonumber
+\eea
+where the contracted Ricci identity (\ref{e:bas:contract_Ricci_ident}) has been used to write the second
+line. Plugging this formula, as well as $\w{L} = R \weps$ (Example~\ref{x:evo:EH_Lagrangian}) into
+the definition (\ref{e:evo:def_Noether_current}) of $\w{J}$ yields
+\[
+    J_{\alpha_1\cdots\alpha_{n-1}} = \left(2 G^\mu_{\ \, \nu} \xi^\nu +
+        \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
+\]
+If the field equations are obeyed, then $\w{G}=0$ (Example~\ref{x:evo:field_equations_GR}) and the above
+expression reduces to
+\be
+    J_{\alpha_1\cdots\alpha_{n-1}} = \left(
+        \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
+\ee
+We recognize in the term within parentheses the \emph{Komar current of $\w{\xi}$}\index{Komar!current}\index{current!Komar --}  as defined by Eq.~(\ref{e:sta:def_Komar_current}):
+$\mathcal{J}^\mu := \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu$.
+Accordingly, we may write
+\be
+    \w{J} = \w{\mathcal{J}} \cdot \weps = \star\uu{\mathcal{J}} ,
+\ee
+where the last equality stems from Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$.
+Hence, for general relativity, the Noether current $(n-1)$-form of $\w{\xi}$ is nothing but the
+Hodge dual of the (metric dual of) Komar current of $\w{\xi}$.
+That $\w{J}$ is closed in that case follows readily from the identity (\ref{e:bas:dveps_divv}):
+$\dd\w{J} = \dd( \w{\mathcal{J}} \cdot \weps ) = (\wnab\cdot\w{\mathcal{J}}) \weps$, along
+with the conservation law (\ref{e:sta:divJ_zero}): $\wnab\cdot\w{\mathcal{J}} = 0$.
+\end{example}
+
+
 
 
 
