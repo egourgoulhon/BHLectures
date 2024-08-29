@@ -2482,7 +2482,7 @@ and the Levi-Civita tensors are transformed to their pullbacks $(\Phi^{-1})^*\w{
 $\Phi^{-1}$ (cf. Sec.~\ref{s:bas:push_pull} for the definition of the pullback).
 The inverse of $\Phi$ is invoked here because, as $\w{g}$ and $\weps$ are
 tensors of type $(0,\ell)$, $\Phi$ itself would carry them from\footnote{Since $\Phi$ is a diffeomorphism
-$\M\to \M$, we have of course $\Phi(\M)=\M$; however we keep the notation $\Phi(\M)$ to stress the image character of this set.} $\Phi(\M)$ to $\M$, while
+$\M\to \M$, we have of course $\Phi(\M)=\M$; however we keep the notation $\Phi(\M)$ to stress the image character by $\Phi$.} $\Phi(\M)$ to $\M$, while
 we are considering the transformation from $\M$ to $\Phi(\M)$ (cf. Remark~\ref{r:bas:comp_push_pull} on
 p.~\pageref{r:bas:comp_push_pull}).
 Let $\w{L'}$ be the Lagrangian $n$-form constructed by keeping the same functional
@@ -2515,7 +2515,10 @@ $\w{\Theta}$ is a $(n-1)$-form, called the
 \defin{symplectic potential form}\index{symplectic!potential form} \cite{IyerW94}, which depends on $\w{g}$ and $\delta\w{g}$, in a linear way for $\delta\w{g}$. We shall write $\w{\Theta} = \w{\bar\Theta}(\w{g},\delta\w{g})$
 to stress this dependence.
 The $n$-form  $\dd \w{\Theta}$ is the exterior derivative of $\w{\Theta}$
-(cf. Sec.~\ref{s:bas:ext_deriv}).
+(cf. Sec.~\ref{s:bas:ext_deriv}). Note that $\w{\Theta}$ is not uniquely determined by
+(\ref{e:evo:delta_L_E_Theta}): any change $\w{\Theta} \to \w{\Theta} + \dd \w{Y}$, where $\w{Y}$ is an
+arbitrary $(n-2)$-form would result in the same formula (\ref{e:evo:delta_L_E_Theta}), since $\dd$ is nilpotent
+[Eq.~(\ref{e:ext_der_nilpot})].
 
 \begin{example}
 For general relativity, one has $\w{L} = R \weps$ (Example~\ref{x:evo:EH_Lagrangian}).
@@ -2569,7 +2572,7 @@ Consequently, having $\delta S = 0$ for any variation $\delta\w{g}$ is equivalen
 \be \label{e:evo:eom_E}
     \w{E} = 0 .
 \ee
-This is the so-called \emph{Euler-Lagrange equations}\index{Euler-Lagrange equations}, for the considered gravity theory, also called the \emph{field equations} or \emph{equations of motion}.
+This constitutes the so-called \emph{Euler-Lagrange equations}\index{Euler-Lagrange equations} for the considered gravity theory, also called the \emph{field equations} or \emph{equations of motion}.
 
 \begin{example} \label{x:evo:field_equations_GR}
 For general relativity, in view of Eq.~(\ref{e:evo:E_Theta_GR}),
@@ -2597,9 +2600,11 @@ It follows that, in the limit $t\to 0$,
     \delta\w{g} = - t \Lie{\xi} \w{g} .
 \ee
 The corresponding variation of the Lagrangian $n$-form is $\delta\w{L} = \w{L'} - \w{L}$, where
-$\w{L'}$ is the $n$-form introduced above. The diffeomorphism invariance of the theory implies
-that $\w{L}' = (\Phi_t^{-1})^* \w{L}$ and hence that $\delta\w{L} = (\Phi_t^{-1})^* \w{L} - \w{L}$. This
-is the same form as the variation of $\w{g}$ expressed in Eq.~(\ref{e:evo:delta_g_Phistar}) and, again, the
+$\w{L'}$ is the $n$-form obtained by substuting $(\Phi_t^{-1})^* \w{g}$ and $(\Phi_t^{-1})^* \weps$
+for $\w{g}$ and $\weps$ in the expression of $\w{L}$, as described above.
+Since the theory is assumed to be diffeomorphism-invariant, one has
+$\w{L}' = (\Phi_t^{-1})^* \w{L}$, which yields $\delta\w{L} = (\Phi_t^{-1})^* \w{L} - \w{L}$. This
+is the same form as $\w{g}$'s variation expressed in Eq.~(\ref{e:evo:delta_g_Phistar}) and, again, the
 definition (\ref{e:bas:def_Lie_der_covar}) of the Lie derivative (which is applicable here since
 $\w{L}$ is a tensor of type $(0,n)$) leads to
 \be \label{e:bas:delta_L_Lie_xi_L}
@@ -2607,7 +2612,7 @@ $\w{L}$ is a tensor of type $(0,n)$) leads to
 \ee
 
 \begin{remark}
-The variation $\delta\w{g}$ is often defined as a \emph{variation rate} instead of a genuine variation, namely
+The variation $\delta\w{g}$ is often defined as a \emph{variation rate} rather than a genuine variation, namely
 as the \emph{derivative} of a 1-parameter family of metric tensors $\w{g}(\lambda)$ such that
 $\w{g}(0) = \w{g}$. Using the symbol $\hat\delta$ to distinguish from the variation considered here,
 the definition is
@@ -2616,10 +2621,13 @@ Since the metric family induced by the diffemorphism group is
 $\w{g}(t) = (\Phi^{-1}_t)^* \w{g} = \Phi_{-t}^*\, \w{g}$, one gets
 $\hat{\delta}\w{g} = \lim_{t\to 0} t^{-1} \left( \Phi_{-t}^*\, \w{g} - \w{g} \right)$.
 In view of the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie derivative, this yields
-\be
+\be \label{e:evo:hat_delta_g_Lie}
     \hat{\delta}\w{g} = - \Lie{\xi} \w{g} .
 \ee
-When comparing with Eq.~(\ref{e:bas:delta_g_Lie_xi_g}), we see that the derivative-based definition has the advantage of getting rid of the infinitesimal factor $t$, which is not particularly significant.
+When comparing with Eq.~(\ref{e:bas:delta_g_Lie_xi_g}), we see that the derivative-based definition has the advantage of getting rid of the (not particularly significant) infinitesimal factor $t$.
+Besides, since the variation formula (\ref{e:evo:delta_L_E_Theta}) is linear in $\delta\w{g}$, the minus
+sign in Eq.~(\ref{e:evo:hat_delta_g_Lie}) is not significant as well and many authors get rid of it
+by defining $\hat{\delta}\w{g} := \Lie{\xi} \w{g}$.
 \end{remark}
 
 One defines the \defin{Noether current $(n-1)$-form of $\w{\xi}$} by \cite{Wald93,IyerW94}
