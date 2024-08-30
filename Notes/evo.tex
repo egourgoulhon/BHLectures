@@ -2475,47 +2475,69 @@ For general relativity, $L = R = g^{\mu\nu} g^{\rho\sigma} R_{\sigma\mu\rho\nu}$
 (Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}).
 \end{example}
 
-By \emph{diffeomorphism-invariant}, it is meant
-that the Lagrangian $n$-form $\w{L}$ is covariant under
-the action of any diffeomorphism $\Phi:\M \to \M$. More precisely, under such an action, the metric tensor
-and the Levi-Civita tensors are transformed to their pullbacks $(\Phi^{-1})^*\w{g}$ and $(\Phi^{-1})^*\weps$ by
+By \emph{diffeomorphism-invariant} theory, it is meant
+that the Lagrangian $n$-form $\w{L}$ is covariant under the group of diffeomorphisms of $\M$.
+More precisely, under the action of a diffeomorphism $\Phi:\M \to \M$, the metric tensor
+is transformed to its pullback $(\Phi^{-1})^*\w{g}$ by
 $\Phi^{-1}$ (cf. Sec.~\ref{s:bas:push_pull} for the definition of the pullback).
-The inverse of $\Phi$ is invoked here because, as $\w{g}$ and $\weps$ are
-tensors of type $(0,\ell)$, $\Phi$ itself would carry them from\footnote{Since $\Phi$ is a diffeomorphism
+The inverse of $\Phi$ is invoked here because, as $\w{g}$ is a
+tensor of type $(0,2)$, $\Phi$ itself would carry it from\footnote{Since $\Phi$ is a diffeomorphism
 $\M\to \M$, we have of course $\Phi(\M)=\M$; however we keep the notation $\Phi(\M)$ to stress the image character by $\Phi$.} $\Phi(\M)$ to $\M$, while
 we are considering the transformation from $\M$ to $\Phi(\M)$ (cf. Remark~\ref{r:bas:comp_push_pull} on
 p.~\pageref{r:bas:comp_push_pull}).
-Let $\w{L'}$ be the Lagrangian $n$-form constructed by keeping the same functional
-dependence in $(\Phi^{-1})^*\w{g}$ as in (\ref{e:evo:Lagrangian_diffeo_inv}), i.e.
-$\w{L'} = L((\Phi^{-1})^* g_{\alpha\beta}, (\Phi^{-1})^* R_{\alpha\beta\gamma\delta}, \ldots) \,
-(\Phi^{-1})^*\weps$
-with the same function $L$ as in (\ref{e:evo:Lagrangian_diffeo_inv}). The
-\defin{diffeomorphism-invariance}\index{diffeomorphism!invariance}
-condition amounts to demanding that, as a $n$-form on $\M$, $\w{L'}$ is nothing but
-the $n$-form $\w{L}$ transformed under the action of $\Phi$, i.e. the pullback of $\w{L}$ by
-$\Phi^{-1}$:  $\w{L'} = (\Phi^{-1})^*\w{L}$.
+Let $\w{L}[(\Phi^{-1})^*\w{g}]$ be the Lagrangian $n$-form constructed by keeping the same functional
+dependence in $(\Phi^{-1})^*\w{g}$ as $\w{L}$ has in $\w{g}$,
+i.e. $\w{L}[(\Phi^{-1})^*\w{g}] := L((\Phi^{-1})^* g_{\alpha\beta}, R_{\alpha\beta\gamma\delta}[(\Phi^{-1})^*\w{g}], \ldots) \,
+\weps[(\Phi^{-1})^*\w{g}]$
+with the same function $L$ as in (\ref{e:evo:Lagrangian_diffeo_inv}).
+In what follows, we shall denote by $\w{L}[\w{g}]$ the original Lagrangian $n$-form, instead of merely $\w{L}$.
+The invariance of the theory by diffeomorphism
+amounts to demanding that, as a $n$-form on $\M$, $\w{L}[(\Phi^{-1})^*\w{g}]$ is nothing but
+the $n$-form $\w{L}[\w{g}]$ transformed under the action of $\Phi$, i.e. the pullback of $\w{L}[\w{g}]$ by
+$\Phi^{-1}$:  $\w{L}[(\Phi^{-1})^*\w{g}] = (\Phi^{-1})^*\w{L}[\w{g}]$.
 Given that the spacetimes
 $(\M, \w{g})$ and $(\Phi(\M),(\Phi^{-1})^* \w{g})$ are physically equivalent,
-this means that $\w{L}$ and $\w{L'}$ are basically the same object.
-In particular, the action (\ref{e:evo:action_L}) takes the same value if
-$\w{L'}$ is substituted for $\w{L}$. If one interprets the diffeomorphism
+this means that $\w{L}[\w{g}]$ and $\w{L}[(\Phi^{-1})^*\w{g}]$ are basically the same object.
+In particular, the action $S$ [Eq.~(\ref{e:evo:action_L})] takes the same value if
+$\w{L}[(\Phi^{-1})^*\w{g}]$ is substituted for $\w{L}[\w{g}]$. If one interprets the diffeomorphism
 action in a ``passive'' way, i.e. as a change of coordinates on $\M$, the
 diffeomorphism-invariance condition simply means that the functional form of $L$
 expressed in Eq.~(\ref{e:evo:Lagrangian_diffeo_inv}) does not depend upon
-the choice of coordinates.
+the choice of coordinates. Since the condition  $\w{L}[(\Phi^{-1})^*\w{g}] = (\Phi^{-1})^*\w{L}[\w{g}]$
+must hold for any diffeomorphism, we may simplify it
+by introducing $\Phi' := \Phi^{-1}$ and
+renaming $\Phi'$ to $\Phi$:
+\begin{greybox}
+A gravitation theory is said
+to be \defin{diffeomorphism invariant}\index{diffeomorphism!invariance} iff
+the corresponding Lagrangian $n$-form $\w{L}$ is \defin{covariant}\index{covariant} under the group
+of diffeomorphisms of $\M$, i.e. iff for
+any diffeomorphism $\Phi: \M \to \M$,
+\be
+    \w{L}[\Phi^*\w{g}] = \Phi^*\w{L}[\w{g}] .
+\ee
+\end{greybox}
 
-The variation of the Lagrangian $n$-form resulting from a generic variation $\delta\w{g}$ of
-the metric tensor can always be written as \cite{LeeW90,IyerW94,Compe19}
+A standard computation (see e.g \cite{Compe19}) enables one to write the
+variation of the Lagrangian $n$-form resulting from a generic variation $\delta\w{g}$ of
+the metric tensor as
 \be \label{e:evo:delta_L_E_Theta}
     \delta \w{L} = E^{\mu\nu} \delta g_{\mu\nu} \, \weps + \dd \w{\Theta} ,
 \ee
-where $E^{\mu\nu}$ are the components of a symmetric type-$(2,0)$ tensor field $\w{E}$, which does
-not depend on $\delta\w{g}$ and
-$\w{\Theta}$ is a $(n-1)$-form, called the
-\defin{symplectic potential form}\index{symplectic!potential form} \cite{IyerW94}, which depends on $\w{g}$ and $\delta\w{g}$, in a linear way for $\delta\w{g}$. We shall write $\w{\Theta} = \w{\bar\Theta}(\w{g},\delta\w{g})$
+where $E^{\mu\nu}$ are the components of a symmetric type-$(2,0)$ tensor field $\w{E}$,
+called the \defin{Euler-Lagrange tensor},
+which depends of $\w{g}$ but not on $\delta\w{g}$,
+and $\w{\Theta}$ is a $(n-1)$-form, called the
+\defin{symplectic potential form}\index{symplectic!potential form} \cite{IyerW94},
+ which depends on $\w{g}$ and $\delta\w{g}$, in a linear way for $\delta\w{g}$.
+We shall write $\w{\Theta} = \w{\Theta}[\w{g},\delta\w{g}]$
 to stress this dependence.
 The $n$-form  $\dd \w{\Theta}$ is the exterior derivative of $\w{\Theta}$
-(cf. Sec.~\ref{s:bas:ext_deriv}). Note that $\w{\Theta}$ is not uniquely determined by
+(cf. Sec.~\ref{s:bas:ext_deriv}).
+It collects all the derivatives of $\delta\w{g}$, which have been gathered
+by means of the Leibniz rule, so that the term $E^{\mu\nu} \delta g_{\mu\nu} \, \weps$
+in Eq.~(\ref{e:evo:delta_L_E_Theta}) does not contain any derivative of $\delta\w{g}$.
+Note that $\w{\Theta}$ is not uniquely determined by
 (\ref{e:evo:delta_L_E_Theta}): any change $\w{\Theta} \to \w{\Theta} + \dd \w{Y}$, where $\w{Y}$ is an
 arbitrary $(n-2)$-form would result in the same formula (\ref{e:evo:delta_L_E_Theta}), since $\dd$ is nilpotent
 [Eq.~(\ref{e:ext_der_nilpot})].
