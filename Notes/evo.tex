@@ -2513,12 +2513,12 @@ to be \defin{diffeomorphism invariant}\index{diffeomorphism!invariance} iff
 the corresponding Lagrangian $n$-form $\w{L}$ is \defin{covariant}\index{covariant} under the group
 of diffeomorphisms of $\M$, i.e. iff for
 any diffeomorphism $\Phi: \M \to \M$,
-\be
+\be \label{e:evo:covariant_Lagrangian}
     \w{L}[\Phi^*\w{g}] = \Phi^*\w{L}[\w{g}] .
 \ee
 \end{greybox}
 
-A standard computation (see e.g \cite{Compe19}) enables one to write the
+A standard computation (see e.g \cite{Compe19,LeeW90}) enables one to write the
 variation of the Lagrangian $n$-form resulting from a generic variation $\delta\w{g}$ of
 the metric tensor as
 \be \label{e:evo:delta_L_E_Theta}
@@ -2573,28 +2573,31 @@ where the last equality stems from the definition of the Hodge dual
 of a 1-form [Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$] ($\uu{H}$ being the 1-form
 metric dual of the vector $\w{H}$).
 In index notation, $\Theta_{\alpha_1\cdots\alpha_{n-1}} =   H^\mu \eps_{\mu\alpha_1\cdots\alpha_{n-1}}$.
-Substituting Eq.~(\ref{e:evo:def_H}) for $H^\mu$, we get the explicit expression of $\w{\Theta}$
-in terms of $\w{g}$ and $\delta\w{g}$:
+Substituting Eq.~(\ref{e:evo:def_H}) for $H^\mu$, we get the explicit expression of
+$\w{\Theta}[\w{g},\delta\w{g}]$:
 \be \label{e:evo:Theta_GR}
     \Theta_{\alpha_1\cdots\alpha_{n-1}} = g^{\mu\nu} g^{\rho\sigma}
     \left( \nabla_\sigma \delta g_{\nu\rho} - \nabla_\nu \delta g_{\rho\sigma} \right)
     \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
 \ee
-Notice that $\w{\Theta}$ is linear in $\delta\w{g}$, as stated above.
+Notice that $\w{\Theta}[\w{g},\delta\w{g}]$ is linear in $\delta\w{g}$, as stated above.
 \end{example}
 
-The extremalization $\delta S = 0$ of the action (\ref{e:evo:action_L}) is equivalent to
-$\int_\M \delta\w{L} = 0$. The part $\dd\w{\Theta}$ of $\delta\w{L}$ in
+The
+extremalization $\delta S = 0$ of the action (\ref{e:evo:action_L}) is equivalent to
+$\int_\M \delta\w{L} = 0$.
+Assuming that $\delta\w{g}$ has compact support,
+the part $\dd\w{\Theta}$ of $\delta\w{L}$ in
 expression~(\ref{e:evo:delta_L_E_Theta}) does not contribute:
 the integral of $\dd\w{\Theta}$  over $\M$
-can be reduced to a surface integral thanks to the Stokes theorem (\ref{e:bas:Stokes}) and provided
-$\delta\w{g}$ is
-compactly supported or decay sufficiently fast, this surface integral vanishes.
+can be reduced to a surface integral of $\w{\Theta}$ thanks to Stokes' theorem (\ref{e:bas:Stokes}),
+which vanishes outside the support of $\delta\w{g}$, since $\w{\Theta}$ is linear in $\delta\w{g}$.
 Consequently, having $\delta S = 0$ for any variation $\delta\w{g}$ is equivalent to
 \be \label{e:evo:eom_E}
     \w{E} = 0 .
 \ee
-This constitutes the so-called \emph{Euler-Lagrange equations}\index{Euler-Lagrange equations} for the considered gravity theory, also called the \emph{field equations} or \emph{equations of motion}.
+This constitutes the so-called \defin{Euler-Lagrange equations}\index{Euler-Lagrange equations} for the considered gravity theory, also called the \defin{field equations}\index{field!equations} or
+\defin{equations of motion}.
 
 \begin{example} \label{x:evo:field_equations_GR}
 For general relativity, in view of Eq.~(\ref{e:evo:E_Theta_GR}),
@@ -2606,79 +2609,76 @@ vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstei
 
 Let us consider a variation $\delta\w{g}$ induced by a diffeomorphism $\Phi_t: \M \to \M$ that
 belongs to a 1-dimensional Lie group of diffeomorphisms, parametrized by $t\in\R$
-(cf. Sec.~\ref{s:neh:symmetries}).
-According to the above discussion regarding the action
-of a diffeomorphism on tensors of type $(0,\ell)$, the variation of $\w{g}$ induced by $\Phi_t$ is
+(cf. Sec.~\ref{s:neh:symmetries}). Actually, to simplify expressions, we shall consider the
+transformation of $\w{g}$ under $\Phi_t^{-1}$, so that the pullback
+$\Phi_t^*\w{g}$ appears instead of $(\Phi_t^{-1})^*\w{g}$
+(cf. the above discussion). The variation of $\w{g}$ is then
 \be \label{e:evo:delta_g_Phistar}
-    \delta\w{g} = (\Phi_t^{-1})^* \w{g} - \w{g} = \Phi_{-t}^* \, \w{g} - \w{g} ,
+    \delta\w{g} = \Phi_t^* \w{g} - \w{g} .
 \ee
-where the second equality stems from $\Phi_t^{-1} = \Phi_{-t}$.
 Let us consider an infinitesimal diffeomorphism, i.e. $|t| \ll 1$. From the very definition of the
 Lie derivative, as given by Eq.~(\ref{e:bas:def_Lie_der_covar}), we have then
-$\Phi_{-t}^* \, \w{g} - \w{g} \simeq -t \Lie{\xi} \w{g}$, where the vector field $\w{\xi}$ is the
+$\Phi_t^*\w{g} - \w{g} \simeq t \Lie{\xi} \w{g}$, where the vector field $\w{\xi}$ is the
 generator of the diffeomorphism group associated to the $t$-parametrization [cf. Eq.~(\ref{e:neh:xi_dxdt})].
 It follows that, in the limit $t\to 0$,
 \be  \label{e:bas:delta_g_Lie_xi_g}
-    \delta\w{g} = - t \Lie{\xi} \w{g} .
+    \delta\w{g} = t \Lie{\xi} \w{g} .
 \ee
-The corresponding variation of the Lagrangian $n$-form is $\delta\w{L} = \w{L'} - \w{L}$, where
-$\w{L'}$ is the $n$-form obtained by substuting $(\Phi_t^{-1})^* \w{g}$ and $(\Phi_t^{-1})^* \weps$
-for $\w{g}$ and $\weps$ in the expression of $\w{L}$, as described above.
-Since the theory is assumed to be diffeomorphism-invariant, one has
-$\w{L}' = (\Phi_t^{-1})^* \w{L}$, which yields $\delta\w{L} = (\Phi_t^{-1})^* \w{L} - \w{L}$. This
+The corresponding variation of the Lagrangian $n$-form is $\delta\w{L} = \w{L}[\Phi_t^*\w{g}] - \w{L}[\w{g}]$.
+Since the theory is assumed to be diffeomorphism-invariant, the covariance property
+(\ref{e:evo:covariant_Lagrangian}) holds: $\w{L}[\Phi_t^*\w{g}] = \Phi_t^*\w{L}[\w{g}]$.
+This yields $\delta\w{L} = \Phi_t^* \w{L}[\w{g}] - \w{L}[\w{g}]$. This
 is the same form as $\w{g}$'s variation expressed in Eq.~(\ref{e:evo:delta_g_Phistar}) and, again, the
 definition (\ref{e:bas:def_Lie_der_covar}) of the Lie derivative (which is applicable here since
-$\w{L}$ is a tensor of type $(0,n)$) leads to
+$\w{L}$ is a tensor field of type $(0,n)$) leads to
 \be \label{e:bas:delta_L_Lie_xi_L}
-    \delta\w{L} = - t \Lie{\xi} \w{L} .
+    \delta\w{L} = t \Lie{\xi} \w{L} .
 \ee
 
 \begin{remark}
 The variation $\delta\w{g}$ is often defined as a \emph{variation rate} rather than a genuine variation, namely
-as the \emph{derivative} of a 1-parameter family of metric tensors $\w{g}(\lambda)$ such that
-$\w{g}(0) = \w{g}$. Using the symbol $\hat\delta$ to distinguish from the variation considered here,
+as the \emph{derivative} of a 1-parameter family of metric tensors $\hat{\w{g}}(\lambda)$ such that
+$\hat{\w{g}}(0) = \w{g}$. Using the symbol $\hat\delta$ to distinguish from the variation considered here,
 the definition is
-$\hat{\delta}\w{g} := \left. \D{\w{g}}/\D{\lambda} \right|_{\lambda=0}$.
+$\hat{\delta}\w{g} := \left. \D{\hat{\w{g}}}/\D{\lambda} \right|_{\lambda=0}$.
 Since the metric family induced by the diffemorphism group is
-$\w{g}(t) = (\Phi^{-1}_t)^* \w{g} = \Phi_{-t}^*\, \w{g}$, one gets
-$\hat{\delta}\w{g} = \lim_{t\to 0} t^{-1} \left( \Phi_{-t}^*\, \w{g} - \w{g} \right)$.
+$\hat{\w{g}}(t) = \Phi_t^*\, \w{g}$, one gets
+$\hat{\delta}\w{g} = \lim_{t\to 0} t^{-1} \left( \Phi_t^* \w{g} - \w{g} \right)$.
 In view of the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie derivative, this yields
 \be \label{e:evo:hat_delta_g_Lie}
-    \hat{\delta}\w{g} = - \Lie{\xi} \w{g} .
+    \hat{\delta}\w{g} =  \Lie{\xi} \w{g} .
 \ee
-When comparing with Eq.~(\ref{e:bas:delta_g_Lie_xi_g}), we see that the derivative-based definition has the advantage of getting rid of the (not particularly significant) infinitesimal factor $t$.
-Besides, since the variation formula (\ref{e:evo:delta_L_E_Theta}) is linear in $\delta\w{g}$, the minus
-sign in Eq.~(\ref{e:evo:hat_delta_g_Lie}) is not significant as well and many authors get rid of it
-by defining $\hat{\delta}\w{g} := \Lie{\xi} \w{g}$.
+Similarly, one defines $\hat{\delta}\w{L} :=  \left. \D{\w{L}[\hat{\w{g}}(\lambda)]}/\D{\lambda} \right|_{\lambda=0}$, which yields $\hat{\delta}\w{L} =  \Lie{\xi} \w{L}$.
+When comparing with Eqs.~(\ref{e:bas:delta_g_Lie_xi_g}) and(\ref{e:bas:delta_L_Lie_xi_L}), we see that the derivative-based definition has the advantage of getting rid of the (not particularly significant) infinitesimal factor $t$.
 \end{remark}
 
 One defines the \defin{Noether current $(n-1)$-form of $\w{\xi}$} by \cite{Wald93,IyerW94}
 \be \label{e:evo:def_Noether_current}
-    \w{J} := \w{\bar\Theta}(\w{g},\Lie{\xi}\w{g}) - \w{\xi}\cdot\w{L} .
+    \w{J} := \w{\Theta}[\w{g},\Lie{\xi}\w{g}] - \w{\xi}\cdot\w{L} .
 \ee
 This differential form is closed as soon as the equations of motion (\ref{e:evo:eom_E}) are satisfied:
 \be
     \dd \w{J} = 0 .
 \ee
 \begin{proof}
-We have $\dd\w{J} = \dd[ \w{\bar\Theta}(\w{g},\Lie{\xi}\w{g}) ] - \dd(\w{\xi}\cdot\w{L})$.
+We have $\dd\w{J} = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}]) - \dd(\w{\xi}\cdot\w{L})$.
 Now, the Cartan identity (\ref{e:bas:Cartan}) implies
 $\dd(\w{\xi}\cdot\w{L}) = \Lie{\xi} \w{L} - \w{\xi} \cdot\dd \w{L} = \Lie{\xi} \w{L}$,
 since $\dd \w{L} = 0$, as any $(n+1)$-form on a manifold of dimension $n$.
 Hence
 \[
-    \dd\w{J} = \dd[ \w{\bar\Theta}(\w{g},\Lie{\xi}\w{g}) ]  - \Lie{\xi} \w{L}  .
+    \dd\w{J} = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}])  - \Lie{\xi} \w{L}  .
 \]
 On the other hand, by combining Eqs.~(\ref{e:evo:delta_L_E_Theta}) and (\ref{e:bas:delta_L_Lie_xi_L}), we get
 \[
-    \Lie{\xi} \w{L}  = - \frac{1}{t} \left( E^{\mu\nu} \delta g_{\mu\nu} \, \weps
-        + \dd [\w{\bar\Theta}(\w{g},\delta\w{g})] \right) .
+    \Lie{\xi} \w{L}  = \frac{1}{t} \left( E^{\mu\nu} \delta g_{\mu\nu} \, \weps
+        + \dd (\w{\Theta}[\w{g},\delta\w{g}]) \right) .
 \]
 Substituting expression (\ref{e:bas:delta_g_Lie_xi_g}) for $\delta\w{g}$ and using the linearity
-of $\w{\bar\Theta}$ with respect to its second argument to write
-$\w{\bar\Theta}(\w{g},-t \Lie{\xi} \w{g}) = - t \w{\bar\Theta}(\w{g},\Lie{\xi} \w{g})$,
+of $\w{\Theta}[\w{g},\delta\w{g}]$ with respect to its second argument to write
+$\w{\Theta}[\w{g},t \Lie{\xi} \w{g}] = t \w{\Theta}[\w{g},\Lie{\xi} \w{g}]$,
 we get
-$\Lie{\xi} \w{L}  = E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd[ \w{\bar\Theta}(\w{g},\Lie{\xi}\w{g}) ]$.
+$\Lie{\xi} \w{L}  = E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}])$.
 It immediately follows that
 \be
     \dd\w{J} = - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps .
@@ -2689,9 +2689,9 @@ Accordingly, $\dd\w{J} = 0$ if $\w{E} = 0$ holds.
 \begin{example}
 Let us continue with the example of general relativity. From
 expression (\ref{e:evo:Theta_GR}) for $\w{\Theta}$ with
-$\delta g_{\mu\nu} = - t \Liec{\xi} g_{\mu\nu}$ and $\Liec{\xi} g_{\mu\nu} = \nabla_\mu \xi_\nu + \nabla_\nu \xi_\mu$ [Eq.~(\ref{e:bas:Lie_g_Killing})], we get
+$\delta g_{\mu\nu} = t \Liec{\xi} g_{\mu\nu}$ and $\Liec{\xi} g_{\mu\nu} = \nabla_\mu \xi_\nu + \nabla_\nu \xi_\mu$ [Eq.~(\ref{e:bas:Lie_g_Killing})], we get
 \bea
-  \w{\bar\Theta}(\w{g},\Lie{\xi}\w{g})_{\alpha_1\cdots\alpha_{n-1}} & = &
+  \w{\Theta}[\w{g},\Lie{\xi}\w{g}]_{\alpha_1\cdots\alpha_{n-1}} & = &
   g^{\mu\nu} \left( \nabla_\sigma \nabla_\nu \xi^\sigma + \nabla_\sigma \nabla^\sigma \xi_\nu
     - 2 \nabla_\nu \nabla_\rho \xi^\rho \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} \nonumber \\
     & = & g^{\mu\nu} \left( 2 R_{\nu\sigma} \xi^\sigma - \nabla_\sigma \nabla_\nu \xi^\sigma
