@@ -2654,20 +2654,20 @@ When comparing with Eqs.~(\ref{e:bas:delta_g_Lie_xi_g}) and(\ref{e:bas:delta_L_L
 
 One defines the \defin{Noether current $(n-1)$-form of $\w{\xi}$} by \cite{Wald93,IyerW94}
 \be \label{e:evo:def_Noether_current}
-    \w{J} := \w{\Theta}[\w{g},\Lie{\xi}\w{g}] - \w{\xi}\cdot\w{L} .
+    \w{J}[\w{\xi}] := \w{\Theta}[\w{g},\Lie{\xi}\w{g}] - \w{\xi}\cdot\w{L} .
 \ee
 This differential form is closed as soon as the equations of motion (\ref{e:evo:eom_E}) are satisfied:
 \be
-    \dd \w{J} = 0 .
+    \dd \w{J}[\w{\xi}]  = 0 .
 \ee
 \begin{proof}
-We have $\dd\w{J} = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}]) - \dd(\w{\xi}\cdot\w{L})$.
+We have $\dd\w{J}[\w{\xi}]  = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}]) - \dd(\w{\xi}\cdot\w{L})$.
 Now, the Cartan identity (\ref{e:bas:Cartan}) implies
 $\dd(\w{\xi}\cdot\w{L}) = \Lie{\xi} \w{L} - \w{\xi} \cdot\dd \w{L} = \Lie{\xi} \w{L}$,
 since $\dd \w{L} = 0$, as any $(n+1)$-form on a manifold of dimension $n$.
 Hence
 \[
-    \dd\w{J} = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}])  - \Lie{\xi} \w{L}  .
+    \dd\w{J}[\w{\xi}]  = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}])  - \Lie{\xi} \w{L}  .
 \]
 On the other hand, by combining Eqs.~(\ref{e:evo:delta_L_E_Theta}) and (\ref{e:bas:delta_L_Lie_xi_L}), we get
 \[
@@ -2681,9 +2681,9 @@ we get
 $\Lie{\xi} \w{L}  = E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}])$.
 It immediately follows that
 \be
-    \dd\w{J} = - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps .
+    \dd\w{J}[\w{\xi}]  = - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps .
 \ee
-Accordingly, $\dd\w{J} = 0$ if $\w{E} = 0$ holds.
+Accordingly, $\dd\w{J}[\w{\xi}]  = 0$ if $\w{E} = 0$ holds.
 \end{proof}
 
 \begin{example}
@@ -2701,29 +2701,29 @@ $\delta g_{\mu\nu} = t \Liec{\xi} g_{\mu\nu}$ and $\Liec{\xi} g_{\mu\nu} = \nabl
 \eea
 where the contracted Ricci identity (\ref{e:bas:contract_Ricci_ident}) has been used to write the second
 line. Plugging this formula, as well as $\w{L} = R \weps$ (Example~\ref{x:evo:EH_Lagrangian}) into
-the definition (\ref{e:evo:def_Noether_current}) of $\w{J}$ yields
+the definition (\ref{e:evo:def_Noether_current}) of $\w{J}[\w{\xi}]$ yields
 \[
-    J_{\alpha_1\cdots\alpha_{n-1}} = \left(2 G^\mu_{\ \, \nu} \xi^\nu +
+    J[\w{\xi}]_{\alpha_1\cdots\alpha_{n-1}} = \left(2 G^\mu_{\ \, \nu} \xi^\nu +
         \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
 \]
 If the field equations are obeyed, then $\w{G}=0$ (Example~\ref{x:evo:field_equations_GR}) and the above
 expression reduces to
 \be
-    J_{\alpha_1\cdots\alpha_{n-1}} = \left(
+    J[\w{\xi}]_{\alpha_1\cdots\alpha_{n-1}} = \left(
         \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
 \ee
 We recognize in the term within parentheses the \emph{Komar current of $\w{\xi}$}\index{Komar!current}\index{current!Komar --}  as defined by Eq.~(\ref{e:sta:def_Komar_current}):
-$\mathcal{J}^\mu := \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu$.
+$\mathcal{J}[\w{\xi}]^\mu := \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu$.
 Accordingly, we may write
 \be
-    \w{J} = \w{\mathcal{J}} \cdot \weps = \star\uu{\mathcal{J}} ,
+    \w{J}[\w{\xi}] = \w{\mathcal{J}}[\w{\xi}]  \cdot \weps = \star\uu{\mathcal{J}}[\w{\xi}]  ,
 \ee
 where the last equality stems from Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$.
 Hence, for general relativity, the Noether current $(n-1)$-form of $\w{\xi}$ is nothing but the
 Hodge dual of the (metric dual of) Komar current of $\w{\xi}$.
-That $\w{J}$ is closed in that case follows readily from the identity (\ref{e:bas:dveps_divv}):
-$\dd\w{J} = \dd( \w{\mathcal{J}} \cdot \weps ) = (\wnab\cdot\w{\mathcal{J}}) \weps$, along
-with the conservation law (\ref{e:sta:divJ_zero}): $\wnab\cdot\w{\mathcal{J}} = 0$.
+That $\w{J}[\w{\xi}]$ is closed in that case follows readily from the identity (\ref{e:bas:dveps_divv}):
+$\dd\w{J}[\w{\xi}] = \dd( \w{\mathcal{J}}[\w{\xi}] \cdot \weps ) = (\wnab\cdot\w{\mathcal{J}}[\w{\xi}]) \weps$, along
+with the conservation law (\ref{e:sta:divJ_zero}): $\wnab\cdot\w{\mathcal{J}}[\w{\xi}] = 0$.
 \end{example}
 
 
