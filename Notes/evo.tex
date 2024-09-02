@@ -2443,7 +2443,7 @@ on p.~\pageref{r:evo:Hawking_rad_kinematic}). This would then question
 the identification of the entropy $S$ with the black hole area $A$, i.e.
 the Bekenstein-Hawking formula (\ref{e:evo:S_BH}).
 To investigate this, let us consider a generic theory of gravity
-based on a least-action principle\index{least action} involving the action
+based on a least action principle\index{least action} involving the action
 \be \label{e:evo:action_L}
     S = \int_{\M} \w{L} = \int_{\M} L \, \weps = \int_{\M} L \sqrt{-g} \, \D^n x,
 \ee
@@ -2509,38 +2509,58 @@ by introducing $\Phi' := \Phi^{-1}$ and
 renaming $\Phi'$ to $\Phi$:
 \begin{greybox}
 A gravitation theory is said
-to be \defin{diffeomorphism invariant}\index{diffeomorphism!invariance} iff
+to be \defin{diffeomorphism-invariant}\index{diffeomorphism!invariance} iff
 the corresponding Lagrangian $n$-form $\w{L}$ is \defin{covariant}\index{covariant} under the group
 of diffeomorphisms of $\M$, i.e. iff for
 any diffeomorphism $\Phi: \M \to \M$,
 \be \label{e:evo:covariant_Lagrangian}
-    \w{L}[\Phi^*\w{g}] = \Phi^*\w{L}[\w{g}] .
+    \w{L}[\Phi^*\w{g}] = \Phi^*\w{L}[\w{g}] ,
 \ee
+where $\Phi^*$ stands for the pullback by $\Phi$, as defined in Sec.~\ref{s:bas:push_pull}.
 \end{greybox}
 
-A standard computation (see e.g \cite{Compe19,LeeW90}) enables one to write the
-variation of the Lagrangian $n$-form resulting from a generic variation $\delta\w{g}$ of
-the metric tensor as
+A standard computation (see e.g \cite{Compe19,LeeW90}) leads to
+
+\begin{prop}[variation of the Lagrangian of a pure metric theory]
+\label{p:evo:var_Lagrangian}
+Let $\w{L}$ be a Lagrangian $n$-form that depends only of the metric tensor $\w{g}$
+and its derivatives, as in Eq.~(\ref{e:evo:Lagrangian_diffeo_inv}).
+The variation of $\w{L}$ resulting from a generic variation $\delta\w{g}$ of $\w{g}$ is
+expressible as
 \be \label{e:evo:delta_L_E_Theta}
     \delta \w{L} = E^{\mu\nu} \delta g_{\mu\nu} \, \weps + \dd \w{\Theta} ,
 \ee
 where $E^{\mu\nu}$ are the components of a symmetric type-$(2,0)$ tensor field $\w{E}$,
 called the \defin{Euler-Lagrange tensor},
-which depends of $\w{g}$ but not on $\delta\w{g}$,
 and $\w{\Theta}$ is a $(n-1)$-form, called the
-\defin{symplectic potential form}\index{symplectic!potential form} \cite{IyerW94},
- which depends on $\w{g}$ and $\delta\w{g}$, in a linear way for $\delta\w{g}$.
-We shall write $\w{\Theta} = \w{\Theta}[\w{g},\delta\w{g}]$
-to stress this dependence.
-The $n$-form  $\dd \w{\Theta}$ is the exterior derivative of $\w{\Theta}$
+\defin{symplectic potential form}\index{symplectic!potential form} \cite{IyerW94}.
+The $n$-form $\dd \w{\Theta}$ is the exterior derivative of $\w{\Theta}$
 (cf. Sec.~\ref{s:bas:ext_deriv}).
-It collects all the derivatives of $\delta\w{g}$, which have been gathered
+$\w{E}$ depends on $\w{g}$ but not on $\delta\w{g}$, while $\w{\Theta}$
+depends on both $\w{g}$ and $\delta\w{g}$, in a linear way for $\delta\w{g}$.
+All these dependencies are \emph{local}: at a given point $p\in\M$, $\w{E}$ and $\w{\Theta}$
+depend only on the values of $\w{g}$, $\delta\w{g}$ and their derivatives at $p$.
+We shall write $\w{E} = \w{E}[\w{g}]$ and $\w{\Theta} = \w{\Theta}[\w{g},\delta\w{g}]$
+to stress these dependencies.
+\end{prop}
+
+\begin{notation}
+In all this section, we shall use square brackets, e.g. $\w{\Theta}[\w{g},\delta\w{g}]$, to
+denote a \emph{local} function of tensor fields, as defined above.
+\end{notation}
+
+\begin{remark}
+The term $\dd\w{\Theta}$ collects all the derivatives of $\delta\w{g}$, which have been gathered
 by means of the Leibniz rule, so that the term $E^{\mu\nu} \delta g_{\mu\nu} \, \weps$
 in Eq.~(\ref{e:evo:delta_L_E_Theta}) does not contain any derivative of $\delta\w{g}$.
-Note that $\w{\Theta}$ is not uniquely determined by
-(\ref{e:evo:delta_L_E_Theta}): any change $\w{\Theta} \to \w{\Theta} + \dd \w{Y}$, where $\w{Y}$ is an
+\end{remark}
+
+\begin{remark} \label{r:evo:Theta_not_unique}
+The symplectic potential form $\w{\Theta}$ is not uniquely determined by
+(\ref{e:evo:delta_L_E_Theta}): any change $\w{\Theta} \to \w{\Theta} + \dd \w{Y}$, where $\w{Y}=\w{Y}[\w{g},\delta\w{g}]$ is an
 arbitrary $(n-2)$-form would result in the same formula (\ref{e:evo:delta_L_E_Theta}), since $\dd$ is nilpotent
 [Eq.~(\ref{e:ext_der_nilpot})].
+\end{remark}
 
 \begin{example}
 For general relativity, one has $\w{L} = R \weps$ (Example~\ref{x:evo:EH_Lagrangian}).
@@ -2578,30 +2598,42 @@ $\w{\Theta}[\w{g},\delta\w{g}]$:
 \be \label{e:evo:Theta_GR}
     \Theta_{\alpha_1\cdots\alpha_{n-1}} = g^{\mu\nu} g^{\rho\sigma}
     \left( \nabla_\sigma \delta g_{\nu\rho} - \nabla_\nu \delta g_{\rho\sigma} \right)
-    \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
+    \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}}  .
 \ee
-Notice that $\w{\Theta}[\w{g},\delta\w{g}]$ is linear in $\delta\w{g}$, as stated above.
+We check that $\w{\Theta}[\w{g},\delta\w{g}]$ is linear in $\delta\w{g}$, as stated in Property~\ref{p:evo:var_Lagrangian}.
 \end{example}
 
-The
-extremalization $\delta S = 0$ of the action (\ref{e:evo:action_L}) is equivalent to
-$\int_\M \delta\w{L} = 0$.
-Assuming that $\delta\w{g}$ has compact support,
-the part $\dd\w{\Theta}$ of $\delta\w{L}$ in
-expression~(\ref{e:evo:delta_L_E_Theta}) does not contribute:
-the integral of $\dd\w{\Theta}$  over $\M$
-can be reduced to a surface integral of $\w{\Theta}$ thanks to Stokes' theorem (\ref{e:bas:Stokes}),
-which vanishes outside the support of $\delta\w{g}$, since $\w{\Theta}$ is linear in $\delta\w{g}$.
-Consequently, having $\delta S = 0$ for any variation $\delta\w{g}$ is equivalent to
+\begin{prop}[field equations from least action principle]
+The action $S$ defined by (\ref{e:evo:action_L}) is extremal with respect to any
+metric tensor variation $\delta\w{g}$ that has compact support if, and only if,
 \be \label{e:evo:eom_E}
     \w{E} = 0 .
 \ee
 This constitutes the so-called \defin{Euler-Lagrange equations}\index{Euler-Lagrange equations} for the considered gravity theory, also called the \defin{field equations}\index{field!equations} or
 \defin{equations of motion}.
+\end{prop}
+\begin{proof}
+Since $\delta\w{g}$ is assumed to have compact support, let $\mathscr{D}$ be
+a submanifold with boundary of $\M$ enclosing the support of $\delta\w{g}$, i.e. such that
+$\delta\w{g} = 0$ on the boundary $\partial\mathscr{D}$ and outside $\mathscr{D}$.
+In view of Eqs.~(\ref{e:evo:action_L}) and (\ref{e:evo:delta_L_E_Theta}), we have then
+\[
+    \delta S = \int_\M \delta\w{L} = \int_{\mathscr{D}} E^{\mu\nu} \delta g_{\mu\nu} \, \weps
+        + \int_{\mathscr{D}} \dd \w{\Theta}
+     = \int_{\mathscr{D}} E^{\mu\nu} \delta g_{\mu\nu} \, \weps
+        + \underbrace{\int_{\partial\mathscr{D}} \w{\Theta}}_{0}
+     =  \int_{\mathscr{D}} E^{\mu\nu} \delta g_{\mu\nu} \, \weps ,
+\]
+where Stokes' theorem (\ref{e:bas:Stokes}) has been used to let appear the integral
+of $\w{\Theta}$ on $\partial\mathscr{D}$ and this integral has been set to zero due
+to the linearity of $\w{\Theta}$ in $\delta\w{g}$ and $\left. \delta\w{g} \right |_{\partial\mathscr{D}} = 0$.
+Consequently, having $\delta S = 0$ for any variation $\delta\w{g}$ is equivalent to
+Eq.~(\ref{e:evo:eom_E}).
+\end{proof}
 
 \begin{example} \label{x:evo:field_equations_GR}
-For general relativity, in view of Eq.~(\ref{e:evo:E_Theta_GR}),
-the field equations (\ref{e:evo:eom_E}) become $\w{G} = 0$, which
+For general relativity, $\w{E}$ is given by Eq.~(\ref{e:evo:E_Theta_GR}).
+Hence the field equations (\ref{e:evo:eom_E}) become $\w{G} = 0$, which
 is equivalent to $\w{R}=0$ --- the
 vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation}
 (\ref{e:fra:vac_Einstein}).
@@ -2616,7 +2648,7 @@ $\Phi_t^*\w{g}$ appears instead of $(\Phi_t^{-1})^*\w{g}$
 \be \label{e:evo:delta_g_Phistar}
     \delta\w{g} = \Phi_t^* \w{g} - \w{g} .
 \ee
-Let us consider an infinitesimal diffeomorphism, i.e. $|t| \ll 1$. From the very definition of the
+Let us restrict to an infinitesimal diffeomorphism, i.e. $|t| \ll 1$. From the very definition of the
 Lie derivative, as given by Eq.~(\ref{e:bas:def_Lie_der_covar}), we have then
 $\Phi_t^*\w{g} - \w{g} \simeq t \Lie{\xi} \w{g}$, where the vector field $\w{\xi}$ is the
 generator of the diffeomorphism group associated to the $t$-parametrization [cf. Eq.~(\ref{e:neh:xi_dxdt})].
@@ -2652,15 +2684,29 @@ Similarly, one defines $\hat{\delta}\w{L} :=  \left. \D{\w{L}[\hat{\w{g}}(\lambd
 When comparing with Eqs.~(\ref{e:bas:delta_g_Lie_xi_g}) and(\ref{e:bas:delta_L_Lie_xi_L}), we see that the derivative-based definition has the advantage of getting rid of the (not particularly significant) infinitesimal factor $t$.
 \end{remark}
 
-One defines the \defin{Noether current $(n-1)$-form of $\w{\xi}$} by \cite{Wald93,IyerW94}
+\begin{prop}[Noether current form]
+Given any smooth vector field $\w{\xi}$ on $\M$,
+the \defin{Noether current $(n-1)$-form of $\w{\xi}$}\index{Noether!current form} is defined by \cite{Wald93,IyerW94}
 \be \label{e:evo:def_Noether_current}
-    \w{J}[\w{\xi}] := \w{\Theta}[\w{g},\Lie{\xi}\w{g}] - \w{\xi}\cdot\w{L} .
+    \w{J}[\w{\xi}] := \w{\Theta}[\w{g},\Lie{\xi}\w{g}] - \w{\xi}\cdot\w{L} ,
 \ee
-This differential form is closed as soon as the equations of motion (\ref{e:evo:eom_E}) are satisfied:
-\be
+where $\w{\Theta}[\w{g},\Lie{\xi}\w{g}]$ is the $(n-1)$-form obtained by setting the second
+argument of the symplectic potential form $\w{\Theta}[\w{g},\delta\w{g}]$
+to $\Lie{\xi}\w{g}$ (cf. Property~\ref{p:evo:var_Lagrangian}).
+$\w{J}[\w{\xi}]$ is a linear and local function of $\w{\xi}$.
+
+If the gravity theory described by the Lagrangian $n$-form $\w{L}$ is diffeomorphism-invariant, then
+the differential form $\w{J}[\w{\xi}]$ is closed as soon as the equations of motion (\ref{e:evo:eom_E}) are satisfied:
+\be \label{e:evo:J_closed}
     \dd \w{J}[\w{\xi}]  = 0 .
 \ee
+\end{prop}
+
 \begin{proof}
+That $\w{J}[\w{\xi}]$ is a linear function of $\w{\xi}$ follows immediately from
+the linearity of $\w{\Theta}[.,.]$ with respect to its second argument. Also the
+locality of $\w{J}[\w{\xi}]$ with respect of $\w{\xi}$ is inherited from
+that of $\w{\Theta}[.,.]$.
 We have $\dd\w{J}[\w{\xi}]  = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}]) - \dd(\w{\xi}\cdot\w{L})$.
 Now, the Cartan identity (\ref{e:bas:Cartan}) implies
 $\dd(\w{\xi}\cdot\w{L}) = \Lie{\xi} \w{L} - \w{\xi} \cdot\dd \w{L} = \Lie{\xi} \w{L}$,
@@ -2669,22 +2715,37 @@ Hence
 \[
     \dd\w{J}[\w{\xi}]  = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}])  - \Lie{\xi} \w{L}  .
 \]
-On the other hand, by combining Eqs.~(\ref{e:evo:delta_L_E_Theta}) and (\ref{e:bas:delta_L_Lie_xi_L}), we get
+Let $\Phi_t$ be the flow map along
+$\w{\xi}$ corresponding to an infinitesimal parameter $t$,
+as defined in Sec.~\ref{s:bas:Lie_der_vector}. In other words,
+$\Phi_t$ is an infinitesimal diffeomorphism of $\M$
+belonging to a 1-dimensional Lie group whose generator is $\w{\xi}$.
+It induces the variation (\ref{e:bas:delta_g_Lie_xi_g}) of $\w{g}$, namely
+$\delta\w{g} = t \Lie{\xi} \w{g}$. Since the gravity theory is diffeomorphism-invariant,
+the corresponding variation of $\w{L}$ obeys Eq.~(\ref{e:bas:delta_L_Lie_xi_L}):
+$\delta\w{L} = t \Lie{\xi} \w{L}$.
+Equation~(\ref{e:evo:delta_L_E_Theta}) then yields
 \[
     \Lie{\xi} \w{L}  = \frac{1}{t} \left( E^{\mu\nu} \delta g_{\mu\nu} \, \weps
         + \dd (\w{\Theta}[\w{g},\delta\w{g}]) \right) .
 \]
-Substituting expression (\ref{e:bas:delta_g_Lie_xi_g}) for $\delta\w{g}$ and using the linearity
+Substituting (\ref{e:bas:delta_g_Lie_xi_g}) for $\delta\w{g}$ and using the linearity
 of $\w{\Theta}[\w{g},\delta\w{g}]$ with respect to its second argument to write
 $\w{\Theta}[\w{g},t \Lie{\xi} \w{g}] = t \w{\Theta}[\w{g},\Lie{\xi} \w{g}]$,
 we get
 $\Lie{\xi} \w{L}  = E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}])$.
-It immediately follows that
+The above expression of $\dd\w{J}[\w{\xi}]$ reduces then to
 \be
     \dd\w{J}[\w{\xi}]  = - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps .
 \ee
-Accordingly, $\dd\w{J}[\w{\xi}]  = 0$ if $\w{E} = 0$ holds.
+Accordingly, $\dd\w{J}[\w{\xi}]  = 0$ if $\w{E} = 0$ holds (or if $\w{\xi}$ is a Killing vector).
 \end{proof}
+
+\begin{remark} \label{r:evo:J_not_unique}
+As the symplectic potential form $\w{\Theta}$ (cf. Remark~\ref{r:evo:Theta_not_unique}), the Noether current form $\w{J}$ is not unique: any change
+$\w{\Theta} \to \w{\Theta} + \dd \w{Y}$ yields a change $\w{J} \to \w{J} + \dd \w{Y}$,
+for any $(n-2)$-form $\w{Y} = \w{Y}[\w{g},\Lie{\xi}\w{g}]$.
+\end{remark}
 
 \begin{example}
 Let us continue with the example of general relativity. From
@@ -2708,14 +2769,14 @@ the definition (\ref{e:evo:def_Noether_current}) of $\w{J}[\w{\xi}]$ yields
 \]
 If the field equations are obeyed, then $\w{G}=0$ (Example~\ref{x:evo:field_equations_GR}) and the above
 expression reduces to
-\be
+\be \label{e:evo:J_GR_comp}
     J[\w{\xi}]_{\alpha_1\cdots\alpha_{n-1}} = \left(
         \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
 \ee
 We recognize in the term within parentheses the \emph{Komar current of $\w{\xi}$}\index{Komar!current}\index{current!Komar --}  as defined by Eq.~(\ref{e:sta:def_Komar_current}):
 $\mathcal{J}[\w{\xi}]^\mu := \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu$.
 Accordingly, we may write
-\be
+\be \label{e:evo:J_GR_Komar}
     \w{J}[\w{\xi}] = \w{\mathcal{J}}[\w{\xi}]  \cdot \weps = \star\uu{\mathcal{J}}[\w{\xi}]  ,
 \ee
 where the last equality stems from Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$.
@@ -2726,9 +2787,52 @@ $\dd\w{J}[\w{\xi}] = \dd( \w{\mathcal{J}}[\w{\xi}] \cdot \weps ) = (\wnab\cdot\w
 with the conservation law (\ref{e:sta:divJ_zero}): $\wnab\cdot\w{\mathcal{J}}[\w{\xi}] = 0$.
 \end{example}
 
+\begin{prop}[Noether charge form]
+Given a diffeomorphism-invariant theory described by the Lagrangian $n$-form $\w{L}$ and
+a vector field $\w{\xi}$ on $\M$, there exists a $(n-2)$-form $\w{Q}[\w{\xi}]$ on $\M$,
+which is a linear local function of $\w{\xi}$, such that
+the Noether current $(n-1)$-form of $\w{\xi}$ is the exterior derivative of $\w{Q}[\w{\xi}]$:
+\be \label{e:evo:J_dQ}
+    \w{J}[\w{\xi}] = \dd \w{Q}[\w{\xi}] .
+\ee
+$\w{Q}[\w{\xi}]$ is called the \defin{Noether charge $(n-2)$-form of $\w{\xi}$}\index{Noether!charge form}
+\cite{Wald93}.
+\end{prop}
+\begin{proof}
+Since $\w{J}[\w{\xi}]$ is a closed differential form [Eq.~(\ref{e:evo:J_closed})], the Poincaré lemma
+states that it is locally exact (on a contractible open set, cf. Sec.~\ref{s:bas:ext_deriv}). However, because
+$\dd \w{J}[\w{\xi}]  = 0$ holds for any vector field $\w{\xi}$, it can be shown that
+$\w{J}[\w{\xi}]$ is globally exact, i.e. takes the form (\ref{e:evo:J_dQ})
+with $\w{Q}[\w{\xi}]$ being a local function of $\w{\xi}$ \cite{Wald90}.
+\end{proof}
 
+\begin{remark}
+The Noether charge form $\w{Q}[\w{\xi}]$ is not unique: for one hand, Eq.~(\ref{e:evo:J_dQ}) defines
+$\w{Q}$ up to the addition of the exterior derivative of a $(n-3)$-form, $\w{Z}$ say:
+$\w{Q} \to \w{Q} + \dd \w{Z}$ and on the other hand, $\w{Q}$ inherits from the ambiguity
+$\w{J} \to \w{J} + \dd \w{Y}$ in the definition of $\w{J}$ (cf. Remark~\ref{r:evo:J_not_unique}), which yields
+$\w{Q} \to \w{Q} + \w{Y}$. In total, one has the freedom
+$\w{Q} \to \w{Q} + \w{Y} + \dd\w{Z}$, with $\w{Y} = \w{Y}[\w{g},\Lie{\xi}\w{g}]$
+and $\w{Z} = \w{Z}[\w{g},\w{\xi}]$. Moreover, $\w{Z}$ can be chosen so that it does not contain
+any derivative of $\w{\xi}$ (cf. Lemma~1 in Ref.~\cite{Wald90}).
+\end{remark}
 
-
+\begin{example}
+For general relativity, $\w{J}[\w{\xi}]$ is given by Eq.~(\ref{e:evo:J_GR_comp}), or Eq.~(\ref{e:evo:J_GR_Komar}) in terms of the Komar current of $\w{\xi}$.
+The Noether charge $(n-2)$-form is then nothing but minus the Hodge dual of the exterior derivative
+of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$):
+\be
+    \w{Q}[\w{\xi}] = - \star (\dd \uu{\xi}) .
+\ee
+Given the expression of the Hodge dual
+of a 2-form [Eq.~(\ref{e:sta:Hodge_dual}) with $p=2$], the identity
+$(\dd\uu{\xi})_{\alpha\beta} = \nabla_\alpha  \xi_\beta - \nabla_\beta \xi_\alpha$
+[Eq.~(\ref{e:bas:def_ext_1f_nab})] and the antisymmetry of $\weps$, we get
+\be
+    Q[\w{\xi}]_{\alpha_1\cdots\alpha_{n-2}} = - \nabla^\mu \xi^\nu
+        \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}} .
+\ee
+\end{example}
 
 ...
 
