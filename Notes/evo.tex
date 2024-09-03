@@ -941,7 +941,7 @@ We first need some preliminaries about the perfect fluid model:
 
 \begin{prop}[simple perfect fluid in axisymmetric spacetimes]
 \label{p:evo:simple_fluid}
-In a given $n$-dimensional spacetime $(\M,\w{g})$, the energy-momentum
+In a given 4-dimensional spacetime $(\M,\w{g})$, the energy-momentum
 tensor of a perfect fluid\index{perfect fluid}\index{fluid!perfect --}
 of 4-velocity $\w{u}$, proper energy density $\veps$ and pressure $p$
 is
@@ -994,13 +994,17 @@ and \emph{fluid entropy} $S_{\rm f}$ in $\Sigma$:
 \ee
 where $\D\w{V}$ is $\Sigma$'s normal volume element vector [Eq.~(\ref{e:sta:normal_vol_element})].
 If the spacetime $(\M,\w{g})$ is axisymmetric (Killing vector $\w{\eta}$),
-a third conserved current is the Komar current\index{Komar!current}\index{current!Komar --}
+a third conserved current is
+$\w{j} := -1/(16\pi) \w{\mathcal{J}}[\w{\eta}]$,
+where $\w{\mathcal{J}}[\w{\eta}]$ is
+ the Komar current\index{Komar!current}\index{current!Komar --}
 of $\w{\eta}$, as given by Eq.~(\ref{e:sta:Komar_angul_vol_integ_R}):
-$\w{\mathcal{J}} = 1/(8\pi) \vw{R}\cdot\w{\eta}$.
+$\w{\mathcal{J}}[\w{\eta}] = -2 \vw{R}\cdot\w{\eta}$.
 Thanks to the Einstein equation
 (\ref{e:fra:Einstein_eq_n}),
-$\w{\mathcal{J}} = \vw{T}\cdot\w{\eta} = (\veps + p) (\w{u}\cdot\w{\eta}) \,\w{u} + p \, \w{\eta}$.
-The \emph{fluid angular momentum} in $\Sigma$ is the integral of $\w{\mathcal{J}} \cdot \D\w{V}$;
+$\w{j} = \vw{T}\cdot\w{\eta} - (T^\mu_{\ \,  \mu}/2) \w{\eta}
+    = (\veps + p) (\w{u}\cdot\w{\eta}) \,\w{u} + (\veps - p)/2 \, \w{\eta}$.
+The \emph{fluid angular momentum} in $\Sigma$ is the integral of $\w{j} \cdot \D\w{V}$;
 assuming that $\w{\eta}$ is tangent to $\Sigma$
 (i.e. $\w{\eta}\cdot\D\w{V} = 0$), we get
 \be \label{e:evo:def_Jf}
@@ -1028,8 +1032,8 @@ rotation axis. One then derives from the general law (\ref{e:evo:mass_variation_
 the following mass variation formula:
 
 \begin{prop}[mass variation formula for a black hole surrounded by a fluid]
-Let $(\M,\w{g})$ be a stationary (Killing vector $\w{\xi}$) and
-axisymmetric (Killing vector $\w{\eta}$) 4-dimensional spacetime
+Let $(\M,\w{g})$ be a 4-dimensional stationary (Killing vector $\w{\xi}$) and
+axisymmetric (Killing vector $\w{\eta}$)  spacetime
 that contains a black hole with a connected event horizon
 $\Hor$. We assume that $\Hor$ is a Killing horizon with respect to
 the Killing vector $\w{\chi} = \w{\xi} + \Omega_{\Hor} \w{\eta}$.
@@ -2404,7 +2408,11 @@ Other attempts to derive the Bekenstein-Hawking entropy from statistical mechani
 within quantum gravity are described in Sec.~7 of Carlip's review~\cite{Carli14}.
 See also Ref.~\cite{GrumiMS15} for an historical review up to 2013.
 
-\subsection{Beyond general relativity: Wald entropy and generalizations} \label{s:evo:Wald_entropy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Beyond general relativity: Wald entropy and generalizations} \label{s:evo:Wald_entropy}
+
+\subsection{Introduction}
 
 The first law of black hole dynamics (\ref{e:evo:first_law}) strongly depends
 on the theory of gravity being general relativity. Indeed, it is derived
@@ -2442,7 +2450,10 @@ the universal character of Hawking radiation (cf. Remark~\ref{r:evo:Hawking_rad_
 on p.~\pageref{r:evo:Hawking_rad_kinematic}). This would then question
 the identification of the entropy $S$ with the black hole area $A$, i.e.
 the Bekenstein-Hawking formula (\ref{e:evo:S_BH}).
-To investigate this, let us consider a generic theory of gravity
+
+\subsection{Diffeomorphism-invariant theories of gravity}
+
+To search for some black hole entropy beyond general relativity, let us consider a generic theory of gravity
 based on a least action principle\index{least action} involving the action
 \be \label{e:evo:action_L}
     S = \int_{\M} \w{L} = \int_{\M} L \, \weps = \int_{\M} L \sqrt{-g} \, \D^n x,
@@ -2557,9 +2568,13 @@ in Eq.~(\ref{e:evo:delta_L_E_Theta}) does not contain any derivative of $\delta\
 
 \begin{remark} \label{r:evo:Theta_not_unique}
 The symplectic potential form $\w{\Theta}$ is not uniquely determined by
-(\ref{e:evo:delta_L_E_Theta}): any change $\w{\Theta} \to \w{\Theta} + \dd \w{Y}$, where $\w{Y}=\w{Y}[\w{g},\delta\w{g}]$ is an
-arbitrary $(n-2)$-form would result in the same formula (\ref{e:evo:delta_L_E_Theta}), since $\dd$ is nilpotent
-[Eq.~(\ref{e:ext_der_nilpot})].
+(\ref{e:evo:delta_L_E_Theta}):
+since $\dd$ is nilpotent
+[Eq.~(\ref{e:ext_der_nilpot})],
+any change $\w{\Theta} \to \w{\Theta} + \dd \w{Y}$, where $\w{Y}=\w{Y}[\w{g},\delta\w{g}]$ is an
+arbitrary $(n-2)$-form that is a local function of $\w{g}$ and $\delta\w{g}$
+and depends linearly on $\delta\w{g}$,
+would result in the same formula (\ref{e:evo:delta_L_E_Theta}).
 \end{remark}
 
 \begin{example}
@@ -2639,6 +2654,10 @@ vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstei
 (\ref{e:fra:vac_Einstein}).
 \end{example}
 
+\subsection{Noether currents and charges  associated to diffeomorphism invariance}
+
+%Let $\w{\xi}$ be a smooth vector field on $\M$.
+
 Let us consider a variation $\delta\w{g}$ induced by a diffeomorphism $\Phi_t: \M \to \M$ that
 belongs to a 1-dimensional Lie group of diffeomorphisms, parametrized by $t\in\R$
 (cf. Sec.~\ref{s:neh:symmetries}). Actually, to simplify expressions, we shall consider the
@@ -2704,7 +2723,7 @@ the differential form $\w{J}[\w{\xi}]$ is closed as soon as the equations of mot
 
 \begin{proof}
 That $\w{J}[\w{\xi}]$ is a linear function of $\w{\xi}$ follows immediately from
-the linearity of $\w{\Theta}[.,.]$ with respect to its second argument. Also the
+the linearity of $\w{\Theta}[.,.]$ with respect to its second argument. Similarly the
 locality of $\w{J}[\w{\xi}]$ with respect of $\w{\xi}$ is inherited from
 that of $\w{\Theta}[.,.]$.
 We have $\dd\w{J}[\w{\xi}]  = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}]) - \dd(\w{\xi}\cdot\w{L})$.
@@ -2806,7 +2825,7 @@ $\w{J}[\w{\xi}]$ is globally exact, i.e. takes the form (\ref{e:evo:J_dQ})
 with $\w{Q}[\w{\xi}]$ being a local function of $\w{\xi}$ \cite{Wald90}.
 \end{proof}
 
-\begin{remark}
+\begin{remark} \label{r:evo:Q_not_unique}
 The Noether charge form $\w{Q}[\w{\xi}]$ is not unique: for one hand, Eq.~(\ref{e:evo:J_dQ}) defines
 $\w{Q}$ up to the addition of the exterior derivative of a $(n-3)$-form, $\w{Z}$ say:
 $\w{Q} \to \w{Q} + \dd \w{Z}$ and on the other hand, $\w{Q}$ inherits from the ambiguity
@@ -2821,7 +2840,7 @@ any derivative of $\w{\xi}$ (cf. Lemma~1 in Ref.~\cite{Wald90}).
 For general relativity, $\w{J}[\w{\xi}]$ is given by Eq.~(\ref{e:evo:J_GR_comp}), or Eq.~(\ref{e:evo:J_GR_Komar}) in terms of the Komar current of $\w{\xi}$.
 The Noether charge $(n-2)$-form is then nothing but minus the Hodge dual of the exterior derivative
 of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$):
-\be
+\be \label{e:evo:Q_GR_Komar}
     \w{Q}[\w{\xi}] = - \star (\dd \uu{\xi}) .
 \ee
 Given the expression of the Hodge dual
@@ -2832,7 +2851,66 @@ $(\dd\uu{\xi})_{\alpha\beta} = \nabla_\alpha  \xi_\beta - \nabla_\beta \xi_\alph
     Q[\w{\xi}]_{\alpha_1\cdots\alpha_{n-2}} = - \nabla^\mu \xi^\nu
         \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}} .
 \ee
+To prove that $\w{Q}[\w{\xi}]$ as given by (\ref{e:evo:Q_GR_Komar}) obeys
+$\dd\w{Q}[\w{\xi}] = \w{J}[\w{\xi}]$ [Eq.~(\ref{e:evo:J_dQ})], let us establish the
+Hodge dual of this relation: $\star\dd\w{Q}[\w{\xi}] = \star\w{J}[\w{\xi}]$,
+which is an equality between 1-forms. From Eq.~(\ref{e:evo:Q_GR_Komar}), we have
+$\star\dd\w{Q}[\w{\xi}] = - \star\dd \star (\dd \uu{\xi})$.
+Now, the operator $\star\dd\star$ is, up to a sign, the \defin{codifferential}\index{codifferential}
+$\w{\delta}$, which maps a $p$-form to a $(p-1)$-form and is defined by\footnote{See e.g. Eq.~(14.35) of Straumann's book \cite{Strau13}, whose sign
+convention we follow here. Note that the same letter $\delta$
+is used to denote the codifferential and the variation operator; to distinguish between the two,
+we are using a boldface symbol for the codifferential.}
+$\w{\delta} := (-1)^{n(p+1)+1} \star\dd\star$. Since $\dd \uu{\xi}$ is a 2-form, we get
+$\star\dd\w{Q}[\w{\xi}] = (-1)^n \w{\delta}(\dd \uu{\xi})$. From the expression of the
+codifferential in a coordinate chart $(x^\alpha)$ (cf. e.g. Eq.~(14.37) in Ref.~\cite{Strau13}), we may
+write, for any 2-form $\w{A}$:
+\[
+        (\w{\delta}\w{A})^\alpha = \frac{1}{\sqrt{-g}} \der{}{x^\mu} \left(\sqrt{-g} A^{\mu\alpha} \right)
+            = - \nabla_\mu A^{\alpha\mu} ,
+\]
+where the last equality follows from the identity (\ref{e:bas:div_antisym}).
+Applying the above formula to $\w{A} := \dd\uu{\xi}$,  we get
+$\w{\delta}(\dd\uu{\xi})^\alpha = - \nabla_\mu (\nabla^\alpha \xi^\mu - \nabla^\mu \xi^\alpha) = \mathcal{J}[\w{\xi}]^\alpha$, i.e. $\w{\delta}(\dd\uu{\xi}) = \uu{\mathcal{J}}[\w{\xi}]$,
+where $\w{\mathcal{J}}[\w{\xi}]$ is the Komar current of $\w{\xi}$
+defined by Eq.~(\ref{e:sta:def_Komar_current}).
+Hence $\star\dd\w{Q}[\w{\xi}] = (-1)^n \uu{\mathcal{J}}[\w{\xi}]$. On the other hand, we have
+$\star \w{J}[\w{\xi}] =\star \star\uu{\mathcal{J}}[\w{\xi}]$ from
+Eq.~(\ref{e:evo:J_GR_Komar}). Since $\star\star = (-1)^n \mathrm{Id}$ for a 1-form
+(cf. e.g. formula (14.26) in Ref.~\cite{Strau13}), we get immediately
+$\star \w{J}[\w{\xi}]  = \star\dd\w{Q}[\w{\xi}]$, which is equivalent to
+Eq.~(\ref{e:evo:J_dQ}).
 \end{example}
+
+From the above example, we note that the $(n-2)$-form $\star (\dd \uu{\xi})$ defining $\w{Q}[\w{\xi}]$
+in Eq.~(\ref{e:evo:Q_GR_Komar}) is exactly the differential form that constitutes the integrand in
+formula (\ref{e:sta:def_Komar_mass}) defining the Komar mass or in formula
+(\ref{e:sta:def_Komar_J}) defining the Komar angular momentum ($\w{\xi} := \w{\eta}$ in that case).
+We conclude that
+
+\begin{prop}[Komar mass and angular momentum as Noether charges]
+\label{p:evo:Komar_Noether}
+In a stationary spacetime governed by general relativity, the Komar mass\index{Komar!mass}\index{mass!Komar --} over a $(n-2)$-dimensional closed spacelike surface $\Sp$
+[Eq.~(\ref{e:sta:def_Komar_mass})]
+is, up to a constant factor, the integral over $\Sp$ of the
+Noether charge $(n-2)$-form of the stationary Killing vector $\w{\xi}$.
+Similarly, in an axisymmetric spacetime governed by general relativity,
+the Komar angular momentum\index{Komar!angular momentum}\index{angular!momentum!Komar --} over $\Sp$ [Eq.~(\ref{e:sta:def_Komar_J})] is, up to a constant factor, the integral over $\Sp$ of the
+Noether charge $(n-2)$-form of the axisymmetric Killing vector $\w{\eta}$.
+\end{prop}
+
+\begin{remark}
+We have stressed in Remark~\ref{r:evo:Q_not_unique} that the Noether charge form of a given vector fied
+$\w{\xi}$ is nonunique, being subject to the ambiguity
+$\w{Q}[\w{\xi}] \to \w{Q}[\w{\xi}] +  \w{Y}[\w{g},\Lie{\xi}\w{g}] + \dd \w{Z}[\w{g},\w{\xi}]$.
+However, when $\w{\xi}$ is a Killing vector, $\Lie{\xi}\w{g}= 0$, which
+implies $\w{Y}[\w{g},\Lie{\xi}\w{g}] = 0$ since $\w{Y}$ is linear in its second argument
+(cf. Remark~\ref{r:evo:Theta_not_unique} on p.~\pageref{r:evo:Theta_not_unique}).
+Moreover the second ambiguity term, $\dd\w{Z}[\w{g},\w{\xi}]$, is an exact form and therefore does not contribute to the integral of
+$\w{Q}[\w{\xi}]$ over any closed surface. Hence the Komar mass and Komar angular momentum over a given
+closed surface $\Sp$ take a unique value, even if computed from distinct Noether charge forms of the involved
+Killing vector.
+\end{remark}
 
 ...
 
