@@ -1198,13 +1198,13 @@ concept of the \emph{Lie derivative}, which we discuss here.
 
 \subsubsection{Lie derivative of a vector field} \label{s:bas:Lie_der_vector}
 
-Consider a vector field $\w{u}$ on $\M$, called hereafter the \defin{flow}\index{flow}.
+Consider a vector field $\w{u}$ on $\M$, which shall serve as our ``reference flow''.
 Let $\w{v}$ be another vector field on $\M$, the variation of which is to be studied.
-One can use the flow $\w{u}$ to transport the vector $\w{v}$ from one point $p$ to
+One can use $\w{u}$ to transport $\w{v}$ from one point $p$ to
 a neighboring one $q$ and then define the variation of $\w{v}$
 as the difference between the actual value $\left. \w{v} \right| _q$ of $\w{v}$ at $q$ and the transported
 value via $\w{u}$. More precisely, given an infinitesimal
-parameter $\veps$, we define the \defin{flow map along}\index{flow!map} $\w{u}$
+parameter $\veps$, we define the \defin{flow map along}\index{flow map} $\w{u}$
 as the map $\Phi_\veps: \M \to \M$ such that
 $\Phi_\veps(p)=q$, where $q$ is the point connected to $p$ by the infinitesimal
 displacement vector
@@ -1213,7 +1213,7 @@ Fig.~\ref{f:bas:deriv}).
 The natural reference vector to compare $\left. \w{v} \right| _q$ with is then the
 pushforward\index{pushforward} of
 $\left. \w{v} \right| _p$ by $\Phi_\veps$, i.e. the vector
-$\Phi_{\veps*} \left. \w{v} \right| _p$ as defined in Sec.~\ref{s:bas:push_pull}.
+$\Phi_{\veps*} \left. \w{v} \right| _p$ defined in Sec.~\ref{s:bas:push_pull}.
 Since $\left. \w{v} \right| _q = \left. \w{v} \right| _{\Phi_\veps(p)}$ and
 $\Phi_{\veps*} \left. \w{v} \right| _p$ belong to the same vector space $T_q\M$,
 one may subtract the latter from the former and define
@@ -1247,7 +1247,7 @@ in the right-hand side of Eq.~(\ref{e:bas:def_Lie_der})
 is the difference between two vectors of $T_q\M$ and thus
 a vector of $T_q\M$. One gets a vector of $T_p\M$ in the left-hand side
 only because $q = \Phi_\veps(p)$ tends to $p$ in the limit $\veps \to 0$. Some authors (e.g. \cite{Lee13,Wald84}) prefer to define the Lie derivative from the difference of vectors of $T_p\M$, by carrying
-$\left. \w{v} \right| _q$ in $T_p\M$ via the pushforward by $\Phi_\veps^{-1}$ and comparing it with
+$\left. \w{v} \right| _q$ in $T_p\M$ via the pushforward by $\Phi_\veps^{-1}=\Phi_{-\veps}$ and comparing it with
 $\left. \w{v} \right| _p$; this results in the formula
 \be \label{e:bas:def_Lie_der_alt}
     \left. \Lie{u} \w{v} \right| _p := \lim_{\veps\rightarrow 0} \frac{1}{\veps}

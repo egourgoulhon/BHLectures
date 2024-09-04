@@ -2654,28 +2654,28 @@ vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstei
 (\ref{e:fra:vac_Einstein}).
 \end{example}
 
-\subsection{Noether currents and charges  associated to diffeomorphism invariance}
+\subsection{Noether charges associated to diffeomorphism invariance}
 
-%Let $\w{\xi}$ be a smooth vector field on $\M$.
-
-Let us consider a variation $\delta\w{g}$ induced by a diffeomorphism $\Phi_t: \M \to \M$ that
-belongs to a 1-dimensional Lie group of diffeomorphisms, parametrized by $t\in\R$
-(cf. Sec.~\ref{s:neh:symmetries}). Actually, to simplify expressions, we shall consider the
-transformation of $\w{g}$ under $\Phi_t^{-1}$, so that the pullback
-$\Phi_t^*\w{g}$ appears instead of $(\Phi_t^{-1})^*\w{g}$
+Let $\w{\xi}$ be a smooth vector field on $\M$. $\w{\xi}$ generates a family of
+infinitesimal diffeomorphisms, namely the flow maps $\Phi_t: \M \to \M$, where
+$t$ is an infinitesimal parameter. As described in Sec.~\ref{s:bas:Lie_der_vector}, each $\Phi_t$ displaces any point $p\in\M$ by the infinitesimal vector $t\left.\w{\xi}\right| _p$.
+The flow map $\Phi_t$ is clearly a diffeomorphism, whose inverse is $\Phi_t^{-1} = \Phi_{-t}$.
+Let us consider a variation $\delta\w{g}$ induced $\Phi_t$,
+or more precisely by $\Phi_t^{-1}$ in order to simplify expressions:
+choosing $\Phi_t^{-1}$ makes indeed the pullback $\Phi_t^*\w{g}$ appear instead of $(\Phi_t^{-1})^*\w{g}$
 (cf. the above discussion). The variation of $\w{g}$ is then
 \be \label{e:evo:delta_g_Phistar}
     \delta\w{g} = \Phi_t^* \w{g} - \w{g} .
 \ee
-Let us restrict to an infinitesimal diffeomorphism, i.e. $|t| \ll 1$. From the very definition of the
-Lie derivative, as given by Eq.~(\ref{e:bas:def_Lie_der_covar}), we have then
-$\Phi_t^*\w{g} - \w{g} \simeq t \Lie{\xi} \w{g}$, where the vector field $\w{\xi}$ is the
-generator of the diffeomorphism group associated to the $t$-parametrization [cf. Eq.~(\ref{e:neh:xi_dxdt})].
-It follows that, in the limit $t\to 0$,
+Since $t$ is infinitesimal, the very definition of the
+Lie derivative [Eq.~(\ref{e:bas:def_Lie_der_covar})] leads to
+$\Phi_t^*\w{g} - \w{g} = t \Lie{\xi} \w{g}$.
+It follows immediately that
 \be  \label{e:bas:delta_g_Lie_xi_g}
     \delta\w{g} = t \Lie{\xi} \w{g} .
 \ee
-The corresponding variation of the Lagrangian $n$-form is $\delta\w{L} = \w{L}[\Phi_t^*\w{g}] - \w{L}[\w{g}]$.
+The variation of the Lagrangian $n$-form induced by $\delta\w{g}$
+is $\delta\w{L} = \w{L}[\Phi_t^*\w{g}] - \w{L}[\w{g}]$.
 Since the theory is assumed to be diffeomorphism-invariant, the covariance property
 (\ref{e:evo:covariant_Lagrangian}) holds: $\w{L}[\Phi_t^*\w{g}] = \Phi_t^*\w{L}[\w{g}]$.
 This yields $\delta\w{L} = \Phi_t^* \w{L}[\w{g}] - \w{L}[\w{g}]$. This
@@ -2692,8 +2692,8 @@ as the \emph{derivative} of a 1-parameter family of metric tensors $\hat{\w{g}}(
 $\hat{\w{g}}(0) = \w{g}$. Using the symbol $\hat\delta$ to distinguish from the variation considered here,
 the definition is
 $\hat{\delta}\w{g} := \left. \D{\hat{\w{g}}}/\D{\lambda} \right|_{\lambda=0}$.
-Since the metric family induced by the diffemorphism group is
-$\hat{\w{g}}(t) = \Phi_t^*\, \w{g}$, one gets
+Since the metric family induced by the flow maps along $\w{\xi}$ is
+$\hat{\w{g}}(t) := \Phi_t^*\, \w{g}$, one gets
 $\hat{\delta}\w{g} = \lim_{t\to 0} t^{-1} \left( \Phi_t^* \w{g} - \w{g} \right)$.
 In view of the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie derivative, this yields
 \be \label{e:evo:hat_delta_g_Lie}
@@ -2702,6 +2702,27 @@ In view of the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie derivative,
 Similarly, one defines $\hat{\delta}\w{L} :=  \left. \D{\w{L}[\hat{\w{g}}(\lambda)]}/\D{\lambda} \right|_{\lambda=0}$, which yields $\hat{\delta}\w{L} =  \Lie{\xi} \w{L}$.
 When comparing with Eqs.~(\ref{e:bas:delta_g_Lie_xi_g}) and(\ref{e:bas:delta_L_Lie_xi_L}), we see that the derivative-based definition has the advantage of getting rid of the (not particularly significant) infinitesimal factor $t$.
 \end{remark}
+
+If one plugs Eqs.~(\ref{e:bas:delta_g_Lie_xi_g}) and (\ref{e:bas:delta_L_Lie_xi_L})
+into the generic Lagrangian variation formula (\ref{e:evo:delta_L_E_Theta}), one gets
+$t \Lie{\xi} \w{L}  = t E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd( \w{\Theta}[\w{g},t\Lie{\xi}\w{g}])$.
+Since $\w{\Theta}$ is linear with respect to its second argument (cf. Property~\ref{p:evo:var_Lagrangian}),
+one has
+$\dd( \w{\Theta}[\w{g},t\Lie{\xi}\w{g}]) =  t \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}])$, so that there comes
+\[
+    \Lie{\xi} \w{L}  = E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}]) .
+\]
+Now, the Cartan identity (\ref{e:bas:Cartan}) gives
+$\Lie{\xi} \w{L} = \w{\xi} \cdot\dd \w{L} + \dd(\w{\xi}\cdot\w{L}) = \dd(\w{\xi}\cdot\w{L})$
+since $\dd \w{L} = 0$, as any $(n+1)$-form on a manifold of dimension $n$.
+Hence, we may rewrite the above equation as
+\be \label{e:evo:dd_pre_J_E}
+    \dd\left(  \w{\Theta}[\w{g},\Lie{\xi}\w{g}] - \w{\xi}\cdot\w{L} \right) =
+    - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps .
+\ee
+If the field equations are fulfilled, i.e. if $\w{E} = 0$ [Eq.~(\ref{e:evo:eom_E})], the
+argument of the exterior derivative in the left-hand side is a closed
+$(n-1)$-form. This defines a conserved current and motivates the following definition and property.
 
 \begin{prop}[Noether current form]
 Given any smooth vector field $\w{\xi}$ on $\M$,
@@ -2726,38 +2747,10 @@ That $\w{J}[\w{\xi}]$ is a linear function of $\w{\xi}$ follows immediately from
 the linearity of $\w{\Theta}[.,.]$ with respect to its second argument. Similarly the
 locality of $\w{J}[\w{\xi}]$ with respect of $\w{\xi}$ is inherited from
 that of $\w{\Theta}[.,.]$.
-We have $\dd\w{J}[\w{\xi}]  = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}]) - \dd(\w{\xi}\cdot\w{L})$.
-Now, the Cartan identity (\ref{e:bas:Cartan}) implies
-$\dd(\w{\xi}\cdot\w{L}) = \Lie{\xi} \w{L} - \w{\xi} \cdot\dd \w{L} = \Lie{\xi} \w{L}$,
-since $\dd \w{L} = 0$, as any $(n+1)$-form on a manifold of dimension $n$.
-Hence
-\[
-    \dd\w{J}[\w{\xi}]  = \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}])  - \Lie{\xi} \w{L}  .
-\]
-Let $\Phi_t$ be the flow map along
-$\w{\xi}$ corresponding to an infinitesimal parameter $t$,
-as defined in Sec.~\ref{s:bas:Lie_der_vector}. In other words,
-$\Phi_t$ is an infinitesimal diffeomorphism of $\M$
-belonging to a 1-dimensional Lie group whose generator is $\w{\xi}$.
-It induces the variation (\ref{e:bas:delta_g_Lie_xi_g}) of $\w{g}$, namely
-$\delta\w{g} = t \Lie{\xi} \w{g}$. Since the gravity theory is diffeomorphism-invariant,
-the corresponding variation of $\w{L}$ obeys Eq.~(\ref{e:bas:delta_L_Lie_xi_L}):
-$\delta\w{L} = t \Lie{\xi} \w{L}$.
-Equation~(\ref{e:evo:delta_L_E_Theta}) then yields
-\[
-    \Lie{\xi} \w{L}  = \frac{1}{t} \left( E^{\mu\nu} \delta g_{\mu\nu} \, \weps
-        + \dd (\w{\Theta}[\w{g},\delta\w{g}]) \right) .
-\]
-Substituting (\ref{e:bas:delta_g_Lie_xi_g}) for $\delta\w{g}$ and using the linearity
-of $\w{\Theta}[\w{g},\delta\w{g}]$ with respect to its second argument to write
-$\w{\Theta}[\w{g},t \Lie{\xi} \w{g}] = t \w{\Theta}[\w{g},\Lie{\xi} \w{g}]$,
-we get
-$\Lie{\xi} \w{L}  = E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd( \w{\Theta}[\w{g},\Lie{\xi}\w{g}])$.
-The above expression of $\dd\w{J}[\w{\xi}]$ reduces then to
-\be
-    \dd\w{J}[\w{\xi}]  = - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps .
-\ee
-Accordingly, $\dd\w{J}[\w{\xi}]  = 0$ if $\w{E} = 0$ holds (or if $\w{\xi}$ is a Killing vector).
+Finally, if the theory diffeomorphism-invariant, Eq.~(\ref{e:evo:dd_pre_J_E}) holds. Given the
+definition of $\w{J}[\w{\xi}]$, it is equivalent to
+$\dd\w{J}[\w{\xi}]  = - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps$,
+so that $\dd\w{J}[\w{\xi}]  = 0$ if $\w{E} = 0$ is fulfilled (or if $\w{\xi}$ is a Killing vector).
 \end{proof}
 
 \begin{remark} \label{r:evo:J_not_unique}
