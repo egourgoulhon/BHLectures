@@ -853,28 +853,26 @@ Picking one of these two $n$-forms amounts to choosing an
 is then called the \defin{Levi-Civita tensor}\index{Levi-Civita!tensor} associated with
 the metric $\w{g}$. It is also called the \defin{volume form}\index{volume!form}\index{form!volume --}
 of $\w{g}$ (cf. Sec.~\ref{s:bas:ext_deriv}).
-Bases for which the right-hand side of (\ref{e:bas:eps_base_pm_un})
-is $+1$ are called \defin{right-handed}\index{right-handed basis}\index{basis!right-handed --}, and those for which it is $-1$ are called
-\defin{left-handed}\index{left-handed basis}\index{basis!left-handed --}.
+The sign in the right-hand side of (\ref{e:bas:eps_base_pm_un})
+gives then the orientation of the basis $(\w{e}_\alpha)$.
 More generally, given a (not necessarily orthonormal) basis $(\w{e}_\alpha)$ of $T_p\M$,
-one has necessarily $\weps(\w{e}_0,\ldots, \w{e}_{n-1}) \not =0$
+one has $\weps(\w{e}_0,\ldots, \w{e}_{n-1}) \neq 0$
 and one says that the basis is \defin{right-handed}\index{right-handed basis}\index{basis!right-handed --}
-or \defin{left-handed}\index{left-handed basis}\index{basis!left-handed --}
-iff $\weps(\w{e}_0,\ldots, \w{e}_{n-1}) > 0$ or $<0$, respectively.
-The components of $\weps$ with
-respect to $(\w{e}_\alpha)$ are given by
+(resp. \defin{left-handed}\index{left-handed basis}\index{basis!left-handed --})
+iff $\weps(\w{e}_0,\ldots, \w{e}_{n-1}) > 0$ (resp. $<0$).
+The components of $\weps$ with respect to $(\w{e}_\alpha)$ are
 \be \label{e:bas:eps_sqrt_g}
   \encadre{ \epsilon_{\alpha_1\; \ldots\; \alpha_n} = \pm \sqrt{|g|} \;  [\alpha_1, \ldots, \alpha_n] },
 \ee
-where $\pm$ must be $+$ (resp. $-$) for a right-handed basis (resp. left-handed basis),
+where $\pm$ must be $+$ (resp. $-$) for a right-handed (resp. left-handed) basis,
 $g$ stands for the determinant of the matrix of $\w{g}$'s components with respect
 to the basis $(\w{e}_\alpha)$:
 \be \label{e:bas:def_det_g}
   \encadre{ g := \det (g_{\alpha\beta}) }
 \ee
 and the symbol $[\alpha_1, \ldots, \alpha_n]$ takes the value $0$ if any two indices
-$(\alpha_1, \ldots, \alpha_n)$ are equal and takes the value $1$ or $-1$ if
-$(\alpha_1, \ldots, \alpha_n)$ is an even or odd permutation, respectively, of
+$(\alpha_1, \ldots, \alpha_n)$ are equal and takes the value $1$ (resp. $-1$) if
+$(\alpha_1, \ldots, \alpha_n)$ is an even (resp. odd) permutation of
 $(0,\ldots,n-1)$.
 
 \subsection{Vector normal to a hypersurface} \label{s:bas:hyp_normal}
@@ -1469,29 +1467,50 @@ $\w{\omega} = \dd\w{\sigma}$. From property (\ref{e:ext_der_nilpot}),
 any exact $p$-form is closed. The \defin{Poincaré lemma}\index{Poincaré!lemma} states that the converse is true,
 at least locally, on a contractible open set.
 
-The exterior derivative enters in the well known \defin{Stokes' theorem}\index{Stokes!theorem}:
-if $\mathscr{D}$ is a $d$-dimensional submanifold with boundary of $\M$, then for any
-$(d-1)$-form $\w{\omega}$,
-\be \label{e:bas:Stokes}
-   \encadre{ \int_{\partial\mathscr{D}} \w{\omega} =
-    \int_{\mathscr{D}} \dd\w{\omega} },
-\ee
-where $\partial\mathscr{D}$ is the boundary of $\mathscr{D}$ (cf. Sec.~\ref{s:bas:manif_boundary}).
-Note that $\partial\mathscr{D}$ is a manifold of dimension $d-1$ and
-$\dd\w{\omega}$ is a $d$-form, so that each side of
-(\ref{e:bas:Stokes}) is (of course !) well-defined,
-as the integral of a $p$-form over a $p$-dimensional manifold.
-
-Given a vector field $\w{v}$ on a pseudo-Riemannian manifold $(\M,\w{g})$ of dimension $n$,
+Given a vector field $\w{v}$ on an oriented pseudo-Riemannian manifold $(\M,\w{g})$ of dimension $n$,
 the tensor field formed by setting $\w{v}$ as the first argument of the
 Levi-Civita tensor $\weps$ while leaving the other slots free, i.e. $\weps(\w{v},.,\ldots,.)$,
-is denoted\footnote{More generally, the dot notation stands for the contraction on adjacent indices; here: $(\w{v}\cdot\weps)_{\alpha_1\cdots\alpha_{n-1}} := v^\mu \eps_{\mu\alpha_1\cdots\alpha_{n-1}}$.}
-$\w{v}\cdot\weps$ and is a $(n-1)$-form. Its exterior
+is a $(n-1)$-form
+denoted\footnote{More generally, the dot notation stands for the contraction on adjacent indices; here: $(\w{v}\cdot\weps)_{\alpha_1\cdots\alpha_{n-1}} := v^\mu \eps_{\mu\alpha_1\cdots\alpha_{n-1}}$.}
+$\w{v}\cdot\weps$. Its exterior
 derivative is thus a $n$-form, which is expressible in terms of the divergence
 of $\w{v}$ [cf. Eq.~(\ref{e:bas:div_vect})] as
 \be \label{e:bas:dveps_divv}
     \encadre{ \dd (\w{v}\cdot\weps) = (\wnab\cdot\w{v})\, \weps }.
 \ee
+
+The exterior derivative enters in the famous \defin{Stokes' theorem}\index{Stokes!theorem}:
+if $\mathscr{D}$ is an oriented $d$-dimensional manifold with boundary (cf. Sec.~\ref{s:bas:manif_boundary}), then for any
+$(d-1)$-form $\w{\omega}$ on $\mathscr{D}$,
+\be \label{e:bas:Stokes}
+   \encadre{ \int_{\partial\mathscr{D}} \w{\omega} =
+    \int_{\mathscr{D}} \dd\w{\omega} },
+\ee
+where $\partial\mathscr{D}$ is $\mathscr{D}$'s boundary
+oriented according to the \emph{outward convention}: if $\weps_{\mathscr{D}}$ is the $d$-form defining
+the orientation of $\mathscr{D}$ (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}), the $(d-1)$-form
+defining the orientation of $\partial\mathscr{D}$ is chosen to be $\w{v}\cdot\weps_{\mathscr{D}}$,
+where $\w{v}$ is an outward-pointing\footnote{By \defin{outward-pointing}\index{outward-pointing}, it is meant
+that at each point $p\in\partial\mathscr{D}$, $\left.\w{v}\right| _p$ is not tangent to $\partial\mathscr{D}$
+and there exists a curve in $\mathscr{D}$ starting from $p$ whose tangent vector at $p$ is
+$-\left.\w{v}\right| _p$.}
+vector field along $\partial\mathscr{D}$.
+Note that each side of
+(\ref{e:bas:Stokes}) is (of course!) well-defined,
+as the integral of a $p$-form over an oriented $p$-dimensional manifold.
+
+\begin{remark}
+If $\mathscr{D}$ is a submanifold of an oriented pseudo-Riemannian manifold
+$(\M,\w{g})$ of dimension $n$, the orientation of $\mathscr{D}$ is naturally set by choosing
+$\weps_{\mathscr{D}} = \weps$ if $d=n$, where $\weps$
+is the Levi-Civita tensor of $\w{g}$ (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
+If $d<n$, a free family of $(n-d)$ vector fields $(\w{u}_1,\ldots,\w{u}_{n-d})$
+nowhere tangent to $\mathscr{D}$ has to be chosen first and $\weps_{\mathscr{D}}$ is then
+defined by
+$\weps_{\mathscr{D}} = \weps(\w{u}_1,\ldots,\w{u}_{n-d},.,\ldots,.)$.
+Accordingly, the orientation of $\partial\mathscr{D}$ is set by
+$\weps_{\partial\mathscr{D}} = \w{v}\cdot\weps_{\mathscr{D}} = \weps(\w{u}_1,\ldots,\w{u}_{n-d},\w{v},.,\ldots,.)$.
+\end{remark}
 
 Another important formula involving the exterior derivative is
 the \defin{Cartan identity}\index{Cartan!identity}, which

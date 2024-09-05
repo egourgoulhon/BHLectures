@@ -988,9 +988,11 @@ defined by
     \encadre{M_{\Sp} := - \frac{n-2}{16\pi(n-3)} \int_{\Sp} \star(\dd \uu{\xi}) },
 \ee
 where
-(i) $\uu{\xi}$ is the 1-form associated to $\w{\xi}$
+\begin{itemize}
+\item[(i)] $\uu{\xi}$ is the 1-form associated to $\w{\xi}$
 by metric duality (cf. Sec.~\ref{s:bas:metric_dual}), i.e. the 1-form
-of components $\xi_\alpha = g_{\alpha\mu} \xi^\mu$, (ii) $\dd \uu{\xi}$ is
+of components $\xi_\alpha = g_{\alpha\mu} \xi^\mu$;
+\item[(ii)] $\dd \uu{\xi}$ is
 the exterior derivative of $\uu{\xi}$ (cf. Sec.~\ref{s:bas:ext_deriv}, especially Eqs.~(\ref{e:bas:def_ext_1f}) and (\ref{e:bas:def_ext_1f_nab})), namely the 2-form whose components
 are
 \be \label{e:sta:duxi_nab}
@@ -999,8 +1001,8 @@ are
         \nabla_\alpha \xi_\beta - \nabla_\beta \xi_\alpha
         = 2 \nabla_\alpha \xi_\beta ,
 \ee
-the last equality following from the Killing equation (\ref{e:neh:Killing_equation}),
-and (iii) $\star(\dd \uu{\xi})$ is the $(n-2)$-form that is the
+the last equality following from the Killing equation (\ref{e:neh:Killing_equation});
+\item[(iii)] $\star(\dd \uu{\xi})$ is the $(n-2)$-form that is the
 Hodge dual of the 2-form $\dd \uu{\xi}$. The
 \defin{Hodge dual}\index{Hodge dual}\index{dual!Hodge --} of
 any $p$-form $\w{A}$ is defined\footnote{See e.g.
@@ -1012,8 +1014,23 @@ as the $(n-p)$-form $\star\w{A}$ given by
         A^{\mu_1\ldots\mu_p} \, \epsilon_{\mu_1\ldots\mu_p\alpha_1\ldots\alpha_{n-p}} ,
 \ee
 where
-$\w{\epsilon}$ is the Levi-Civita tensor associated with the metric $\w{g}$
-(cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
+$\weps$ is the Levi-Civita tensor associated with the metric $\w{g}$
+(cf. Sec.~\ref{s:bas:Levi-Civita_tensor});
+\item[(iv)] the orientation of $\Sp$ (which is required to define the integral of
+$\star(\dd \uu{\xi})$ over $\Sp$)
+is set by the $(n-2)$-form\footnote{See Sec.~\ref{s:bas:Levi-Civita_tensor} for the definition of an oriented
+manifold.}
+\be \label{e:sta:def_weps_S}
+    {}^\Sp\!\!\weps := \weps(\w{n}, \w{s},\underbrace{.,\ldots,.}_{n-2\ \mbox{\scriptsize{slots}}}) ,
+\ee
+where $\w{n}$ is any future-directed unit timelike vector field normal to $\Sp$
+and $\w{s}$ is a unit spacelike vector field normal to $\w{n}$, orthogonal to $\w{n}$ and directed
+towards the ``exterior'' of $\Sp$ in the following sense: assume that $\Sp$ can be
+embedded into a spacelike hypersurface $\Sigma$ that extends towards the asymptotic flat end
+of $(\M,\w{g})$; then for any point $p\in\Sp$, there exists a curve entirely lying in $\Sigma$, starting from
+$p$ with tangent vector $\left.\w{s}\right| _p$ and extending to the asympotic flat end without crossing
+$\Sp$ again.
+\end{itemize}
 \end{greybox}
 
 We shall check below (Property~\ref{p:sta:Komar_mass_asymp_metric}) that
@@ -1023,7 +1040,7 @@ metric tensor.
 
 \begin{remark}
 \label{r:sta:Komar_well_posed}
-As the integral of a $(n-2)$-form over a $(n-2)$-dimensional manifold, formula
+As the integral of a $(n-2)$-form over an oriented $(n-2)$-dimensional manifold, formula
 (\ref{e:sta:def_Komar_mass}) is well posed. More precisely, on the $(n-2)$-dimensional
 manifold $\Sp$, the theory of integration is defined for $(n-2)$-forms \emph{on} $\Sp$,
 while $\star(\dd \uu{\xi})$ is a $(n-2)$-form \emph{on} $\M$. However, any
@@ -1100,22 +1117,19 @@ or, in index notation,
 \ee
 where
 \begin{itemize}
-\item $\w{n}$ is a unit future-directed timelike vector\footnote{Do not confuse the vector $\w{n}$
-with the spacetime dimension $n$.} normal to $\Sp$
-and $\w{s}$ is a unit spacelike vector normal to $\Sp$
-such that (i) $\w{s}$ points towards the ``exterior'' of $\Sp$, i.e.
-towards the asymptotically flat end of $(\M, \w{g})$ and
-(ii) at each point $p\in\Sp$, $(\w{n},\w{s})$ is an orthonormal basis
+\item[(i)] $\w{n}$ and $\w{s}$ are unit timelike and spacelike vector fields normal to $\Sp$
+obeying the same properties as in item (iv) of the above definition of the Komar mass;
+in particular at each point $p\in\Sp$, $(\left.\w{n}\right| _p,\left. \w{s}\right| _p)$ is an orthonormal basis
 of the timelike plane $T^\perp_p\Sp$ normal to $\Sp$ (cf. Fig.~??);
-\item $\w{s}\wedge\w{n}$ stands for the \defin{exterior product}\index{exterior!product}
+\item[(ii)] $\w{s}\wedge\w{n}$ stands for the \defin{exterior product}\index{exterior!product}
 of $\w{s}$ by $\w{n}$: $\w{s}\wedge\w{n} := \w{s}\otimes\w{n} -  \w{n}\otimes\w{s}$
 (hence formula (\ref{e:sta:area_bivector}));
-\item $\D^{n-2} x := \D x^1 \cdots \D x^{n-2}$, where
+\item[(iii)] $\D^{n-2} x := \D x^1 \cdots \D x^{n-2}$, where
 $(x^a)=(x^1,\ldots,x^{n-2})$ is a coordinate system on $\Sp$
-such that $(\w{n},\w{s},\wpar_1,\ldots,\wpar_{n-2})$ is a right-handed basis of $T_p\M$
-for any $p\in\Sp$,
-i.e. $\w{\eps}(\w{n},\w{s},\wpar_1,\ldots,\wpar_{n-2}) > 0$;
-\item $q := \det(q_{ab})$ is the determinant w.r.t. $(x^a)$ of
+such that $(\wpar_1,\ldots,\wpar_{n-2})$ is a right-handed basis for the orientation
+of $\Sp$ defined by ${}^\Sp\!\!\weps$ [Eq.~(\ref{e:sta:def_weps_S})], i.e.
+$\w{\eps}(\w{n},\w{s},\wpar_1,\ldots,\wpar_{n-2}) > 0$;
+\item[(iv)] $q := \det(q_{ab})$ is the determinant w.r.t. $(x^a)$ of
 the metric $\w{q}$
 induced on $\Sp$ by the spacetime metric $\w{g}$.
 \end{itemize}
@@ -1162,7 +1176,7 @@ Using the definition (\ref{e:sta:Hodge_dual}) with $p=2$, we have
         \frac{1}{2} \int_{\Sp} A^{\mu\nu} \,
         \epsilon_{\mu\nu\alpha_1\ldots\alpha_{n-2}} =
          \frac{1}{2} \int_{\Sp} \w{A}^\sharp (\w{e}^{(\mu)}, \w{e}^{(\nu)})
-                \, \w{\epsilon}(\w{e}_{(\mu)}, \w{e}_{(\nu)}, \D\w{\ell}_{1},
+                \, \weps(\w{e}_{(\mu)}, \w{e}_{(\nu)}, \D\w{\ell}_{1},
                     \ldots, \D\w{\ell}_{n-2}) ,
 \]
 where $\w{A}^\sharp$ is the tensor field of components $A^{\alpha\beta}$,
@@ -1177,7 +1191,7 @@ definition of the integral of a $(n-2)$-form over a $(n-2)$-surface.
 Given the definition of the tetrad $(\w{e}_{(\alpha)})$, $(\w{e}_{(2)}, \ldots, \w{e}_{(n-1)})$
 is necessarily a basis of the tangent space $T_p\Sp$; consequently
 $\D\w{\ell}_{1}$, $\ldots$, $\D\w{\ell}_{n-2}$ are linear combinations of $\w{e}_{(2)}$,
-$\ldots$, $\w{e}_{(n-1)}$. Thanks to the alternate character of $\w{\epsilon}$,
+$\ldots$, $\w{e}_{(n-1)}$. Thanks to the alternate character of $\weps$,
 we may then restrict the sum over the indices $\mu$ and $\nu$ to
 $(\mu,\nu) = (0,1)$ and $(\mu,\nu) = (1,0)$.
 Hence
@@ -1185,9 +1199,9 @@ Hence
      \int_{\Sp} \star \w{A}
      = \int_{\Sp}
     \w{A}^\sharp (\w{e}^{(0)}, \w{e}^{(1)})
-            \, \w{\epsilon}(\w{e}_{(0)}, \w{e}_{(1)}, \D\w{\ell}_{1}, \ldots , \D\w{\ell}_{n-2})
+            \, \weps(\w{e}_{(0)}, \w{e}_{(1)}, \D\w{\ell}_{1}, \ldots , \D\w{\ell}_{n-2})
     =  \int_{\Sp} A^{(0)(1)}
-    \, \w{\epsilon}(\w{n}, \w{s}, \D\w{\ell}_{1}, \ldots , \D\w{\ell}_{n-2}) .
+    \, \weps(\w{n}, \w{s}, \D\w{\ell}_{1}, \ldots , \D\w{\ell}_{n-2}) .
 \]
 Now, since $(\w{e}_{(\alpha)})$ is an orthonormal basis,
 \[
@@ -1200,12 +1214,17 @@ with
         = A_{\mu\nu} n^\mu s^\nu = - A_{\mu\nu} s^\mu n^\nu
         = - \frac{1}{2} A_{\mu\nu} (s^\mu n^\nu - n^\mu s^\nu) .
 \]
-On the other side, we recognize in ${}^\Sp\!\!\w{\epsilon} := \w{\epsilon}(\w{n}, \w{s}, \ldots)$ the
-``area'' element $(n-2)$-form on $\Sp$ (see e.g. Sec.~16.4.3 of Ref.~\cite{Gourg13}),
-so that we may write, for
+On the other side,
+$\weps(\w{n}, \w{s}, \ldots)$, which appears above, is the $(n-2)$-form
+${}^\Sp\!\!\weps$ defined by Eq.~(\ref{e:sta:def_weps_S}). Actually, it is
+nothing but the volume (area) form of $(\Sp,\w{q})$, i.e. the Levi-Civita tensor of the metric $\w{q}$
+(see e.g. Sec.~16.4.3 of Ref.~\cite{Gourg13}).
+In particular, ${}^\Sp\!\!\weps$ is independent of the choice of the orthonormal
+basis $(\w{n},\w{s})$ of $T_p^\perp\Sp$.
+Hence we may write, for
 $\D\w{\ell}_{a} = \D x^a \, \wpar_a$,
 \[
-    \w{\epsilon}(\w{n}, \w{s}, \D\w{\ell}_{1}, \ldots , \D\w{\ell}_{n-2}) =
+    \weps(\w{n}, \w{s}, \D\w{\ell}_{1}, \ldots , \D\w{\ell}_{n-2}) =
         {}^\Sp\!\!\epsilon_{a_1\ldots a_{n-2}} \, \D\ell_{1}^{a_1}\cdots  \D\ell_{n-2}^{a_{n-2}}
         = \sqrt{q} \, \D x^1 \cdots  \D x^{n-2} .
 \]
