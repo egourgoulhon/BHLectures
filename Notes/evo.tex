@@ -2725,6 +2725,7 @@ argument of the exterior derivative in the left-hand side is a closed
 $(n-1)$-form. This defines a conserved current and motivates the following definition and property.
 
 \begin{prop}[Noether current form]
+\label{p:evo:Noether_current}
 Given any smooth vector field $\w{\xi}$ on $\M$,
 the \defin{Noether current $(n-1)$-form of $\w{\xi}$}\index{Noether!current form} is defined by \cite{Wald93,IyerW94}
 \be \label{e:evo:def_Noether_current}
@@ -2877,7 +2878,7 @@ Eq.~(\ref{e:evo:J_dQ}).
 
 From the above example, we note that the $(n-2)$-form $\star (\dd \uu{\xi})$ defining $\w{Q}[\w{\xi}]$
 in Eq.~(\ref{e:evo:Q_GR_Komar}) is exactly the differential form that constitutes the integrand in
-formula (\ref{e:sta:def_Komar_mass}) defining the Komar mass or in formula
+formula (\ref{e:sta:def_Komar_mass}) defining the Komar mass or in formulahttps://www.decitre.fr/livres/pauline-kergomard-9791093661469.html
 (\ref{e:sta:def_Komar_J}) defining the Komar angular momentum ($\w{\xi} := \w{\eta}$ in that case).
 We conclude that
 
@@ -2905,7 +2906,99 @@ closed surface $\Sp$ take a unique value, even if computed from distinct Noether
 Killing vector.
 \end{remark}
 
-...
+\begin{prop}[Noether charge of a spacelike hypersurface]
+\label{p:evo:Noether_charge_hypersurf}
+Let us consider a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$.
+Given a spacelike hypersurface $\Sigma$, the
+\defin{Noether charge of $\Sigma$ with respect to $\w{\xi}$}\index{Noether!charge of a hypersurface} is
+\be
+    \mathscr{Q}_{\Sigma,\w{\xi}} := \int_{\Sigma} \w{J}[\w{\xi}] ,
+\ee
+where $\w{J}[\w{\xi}]$ is the Noether current $(n-1)$-form of $\w{\xi}$ (Property~\ref{p:evo:Noether_current})
+and the integral is taken with respect to $\Sigma$ endowed with the \defin{future orientation},
+i.e. the orientation defined by $\w{n}\cdot\weps$, where $\w{n}$ is the future-directed timelike unit normal
+to $\Sigma$.
+
+Let $\Sigma_1$ and $\Sigma_2$ be two spacelike hypersurfaces, such that $\Sigma_2$ lies
+in the future of $\Sigma_1$ and both hypersurfaces are connected by a hypersurface $\mathscr{W}$, i.e.
+$\Sigma_1\cup\Sigma_2\cup\mathscr{W}$ is a closed hypersurface consituting
+the boundary of a $n$-dimensional manifold  $\mathscr{D}\subset\M$ (cf. Fig.~??).
+Then the following conservation law holds:
+\be \label{e:evo:Noether_Q_Sigma_1_2}
+    \mathscr{Q}_{\Sigma_2,\w{\xi}}  = \mathscr{Q}_{\Sigma_1,\w{\xi}}
+    + \int_{\mathscr{W}^{\swarrow}} \w{J}[\w{\xi}] ,
+\ee
+where the integral over $\mathscr{W}$ is taken with respect to the \emph{inward} orientation (indicated by
+the arrow), i.e. the orientation
+defined by $\w{v}\cdot\weps$, where $\w{v}$ is any vector field pointing into $\mathscr{D}$.
+\end{prop}
+\begin{proof}
+This is a direct consequence of Stokes' theorem and
+the closedness of $\w{J}[\w{\xi}]$ (Property~\ref{p:evo:Noether_current}). Indeed, given
+that $\partial\mathscr{D} = \Sigma_1\cup\Sigma_2\cup\mathscr{W}$, Stokes' theorem (\ref{e:bas:Stokes})
+along with $\dd \w{J}[\w{\xi}] = 0$ [Eq.~(\ref{e:evo:J_closed})] yields
+\[
+     \int_{\Sigma_1^{\nearrow}} \w{J}[\w{\xi}] + \int_{\Sigma_2^{\nearrow}} \w{J}[\w{\xi}]
+      + \int_{\mathscr{W}^{\nearrow}} \w{J}[\w{\xi}] = 0 ,
+\]
+where the arrows mean that $\Sigma_1$, $\Sigma_2$ and $\mathscr{W}$ are oriented according to the outward
+convention (with respect to $\mathscr{D}$).
+Noticing that $\int_{\Sigma_1^{\nearrow}} \w{J}[\w{\xi}] = -\mathscr{Q}_{\Sigma_1,\w{\xi}}$,
+$\int_{\Sigma_2^{\nearrow}} \w{J}[\w{\xi}] = \mathscr{Q}_{\Sigma_1,\w{\xi}}$
+and $\int_{\mathscr{W}^{\nearrow}} \w{J}[\w{\xi}] = - \int_{\mathscr{W}^{\swarrow}} \w{J}[\w{\xi}]$
+yields the identity (\ref{e:evo:Noether_Q_Sigma_1_2}).
+\end{proof}
+
+The integral over $\mathscr{W}$ in Eq.~(\ref{e:evo:Noether_Q_Sigma_1_2}) can be interpreted an
+an ``inward flux'' integral, especially if $\mathscr{W}$ is a timelike hypersurface.
+If this flux integral vanishes,
+Eq.~(\ref{e:evo:Noether_Q_Sigma_1_2}) expresses the
+invariance of the Noether charge with respect to the choice of the hypersurface
+(conservation during ``time evolution''). This occurs
+if $\w{J}[\w{\xi}] = 0$ on $\mathscr{W}$ or if  $\mathscr{W}$ is at some asymptotically flat end
+of $\M$ with $\w{J}[\w{\xi}]$ decaying sufficiently fast so that its integral on $\mathscr{W}$ is zero.
+
+\begin{prop}[Noether charge of a spacelike $(n-2)$-surface]
+Let us consider a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$.
+Let assume further that $(\M,\w{g})$ is asymptotically flat.
+Given a closed $(n-2)$-surface $\Sp\subset\M$, the
+\defin{Noether charge of $\Sp$ with respect to $\w{\xi}$}\index{Noether!surface charge} is
+\be
+    \mathscr{Q}_{\Sp,\w{\xi}} := \int_{\Sp} \w{Q}[\w{\xi}] ,
+\ee
+where $\w{Q}[\w{\xi}]$ is the Noether charge $(n-2)$-form of $\w{\xi}$
+and the orientation of $\Sp$ for the above integral is the \emph{future-outward} orientation
+defined by Eq.~(\ref{e:sta:def_weps_S}).
+
+Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed $(n-2)$-surfaces:
+an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
+$\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
+Then
+\be
+     \mathscr{Q}_{\Sp_{\rm ext},\w{\xi}} = \mathscr{Q}_{\Sp_{\rm int},\w{\xi}}
+        + \mathscr{Q}_{\Sigma,\w{\xi}}  .
+\ee
+\end{prop}
+\begin{proof}
+Let us apply Stokes' theorem (\ref{e:bas:Stokes}) on $\Sigma$ oriented endowed with the future
+orientation (cf. Property~\ref{p:evo:Noether_charge_hypersurf}); given
+that $\partial\Sigma = $ $\dd \w{Q}[\w{\xi}] =  \w{J}[\w{\xi}]$ [Eq.~(\ref{e:evo:J_dQ})],  we get
+\[
+    \mathscr{Q}_{\Sp_{\rm int},\w{\xi}}
+\]
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
