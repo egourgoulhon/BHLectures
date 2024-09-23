@@ -2553,6 +2553,17 @@ All these dependencies are \emph{local}: at a given point $p\in\M$, $\w{E}$ and 
 depend only on the values of $\w{g}$, $\delta\w{g}$ and their derivatives at $p$.
 We shall write $\w{E} = \w{E}[\w{g}]$ and $\w{\Theta} = \w{\Theta}[\w{g},\delta\w{g}]$
 to stress these dependencies.
+
+For a given $\w{L}$, the symplectic potential form is not unique: since
+$\dd$ is nilpotent
+[Eq.~(\ref{e:ext_der_nilpot})], $\w{\Theta}$ in formula~(\ref{e:evo:delta_L_E_Theta})
+can be substituted by
+\be \label{e:evo:Theta_not_unique}
+  \w{\Theta'} = \w{\Theta} + \dd \w{Y},
+\ee
+where $\w{Y}=\w{Y}[\w{g},\delta\w{g}]$ is an
+arbitrary $(n-2)$-form that is a local function of $\w{g}$ and $\delta\w{g}$,
+with a linear dependence on $\delta\w{g}$.
 \end{prop}
 
 \begin{notation}
@@ -2566,15 +2577,13 @@ by means of the Leibniz rule, so that the term $E^{\mu\nu} \delta g_{\mu\nu} \, 
 in Eq.~(\ref{e:evo:delta_L_E_Theta}) does not contain any derivative of $\delta\w{g}$.
 \end{remark}
 
-\begin{remark} \label{r:evo:Theta_not_unique}
-The symplectic potential form $\w{\Theta}$ is not uniquely determined by
-(\ref{e:evo:delta_L_E_Theta}):
-since $\dd$ is nilpotent
-[Eq.~(\ref{e:ext_der_nilpot})],
-any change $\w{\Theta} \to \w{\Theta} + \dd \w{Y}$, where $\w{Y}=\w{Y}[\w{g},\delta\w{g}]$ is an
-arbitrary $(n-2)$-form that is a local function of $\w{g}$ and $\delta\w{g}$
-and depends linearly on $\delta\w{g}$,
-would result in the same formula (\ref{e:evo:delta_L_E_Theta}).
+\begin{remark}
+For a given theory, the Lagrangian $n$-form itself is not unique:
+$\w{L'} = \w{L} + \dd\w{\mu}$, where $\w{\mu}$ is an arbitrary $(n-1)$-form with compact
+support, leads to the same action (\ref{e:evo:action_L}). If one takes this into account,
+the full degrees of freedom $\w{\Theta}$ are
+$\w{\Theta'} = \w{\Theta} + \dd \w{Y} + \delta\w{\mu}$, instead of (\ref{e:evo:Theta_not_unique}).
+However, for simplicity, we shall not consider $\w{\mu}$ here.
 \end{remark}
 
 \begin{example}
