@@ -2688,10 +2688,10 @@ $\w{L}$ is a tensor field of type $(0,n)$) leads to
 
 \begin{remark}
 The variation $\delta\w{g}$ is often defined as a \emph{variation rate} rather than a genuine variation, namely
-as the \emph{derivative} of a 1-parameter family of metric tensors $\hat{\w{g}}(\lambda)$ such that
+as the \emph{derivative} of a 1-parameter family of metric tensors $\hat{\w{g}}(t)$ such that
 $\hat{\w{g}}(0) = \w{g}$. Using the symbol $\hat\delta$ to distinguish from the variation considered here,
 the definition is
-$\hat{\delta}\w{g} := \left. \D{\hat{\w{g}}}/\D{\lambda} \right|_{\lambda=0}$.
+$\hat{\delta}\w{g} := \left. \D{\hat{\w{g}}}/\D{t} \right|_{t=0}$.
 Since the metric family induced by the flow maps along $\w{\xi}$ is
 $\hat{\w{g}}(t) := \Phi_t^*\, \w{g}$, one gets
 $\hat{\delta}\w{g} = \lim_{t\to 0} t^{-1} \left( \Phi_t^* \w{g} - \w{g} \right)$.
@@ -2801,6 +2801,7 @@ with the conservation law (\ref{e:sta:divJ_zero}): $\wnab\cdot\w{\mathcal{J}}[\w
 \end{example}
 
 \begin{prop}[Noether charge form]
+\label{p:evo:Noether_charge_form}
 Given a diffeomorphism-invariant theory described by the Lagrangian $n$-form $\w{L}$ and
 a vector field $\w{\xi}$ on $\M$, there exists a $(n-2)$-form $\w{Q}[\w{\xi}]$ on $\M$,
 which is a linear local function of $\w{\xi}$, such that
@@ -2878,7 +2879,7 @@ Eq.~(\ref{e:evo:J_dQ}).
 
 From the above example, we note that the $(n-2)$-form $\star (\dd \uu{\xi})$ defining $\w{Q}[\w{\xi}]$
 in Eq.~(\ref{e:evo:Q_GR_Komar}) is exactly the differential form that constitutes the integrand in
-formula (\ref{e:sta:def_Komar_mass}) defining the Komar mass or in formulahttps://www.decitre.fr/livres/pauline-kergomard-9791093661469.html
+formula (\ref{e:sta:def_Komar_mass}) defining the Komar mass or in formula
 (\ref{e:sta:def_Komar_J}) defining the Komar angular momentum ($\w{\xi} := \w{\eta}$ in that case).
 We conclude that
 
@@ -2967,7 +2968,7 @@ Given a closed $(n-2)$-surface $\Sp\subset\M$, the
     \mathscr{Q}_{\Sp,\w{\xi}} := \int_{\Sp} \w{Q}[\w{\xi}] ,
 \ee
 where $\w{Q}[\w{\xi}]$ is the Noether charge $(n-2)$-form of $\w{\xi}$
-and the orientation of $\Sp$ for the above integral is the \emph{future-outward} orientation
+(Property~\ref{p:evo:Noether_charge_form}) and the orientation of $\Sp$ for the above integral is the \emph{future-outward} orientation
 defined by Eq.~(\ref{e:sta:def_weps_S}).
 
 Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed $(n-2)$-surfaces:
@@ -2979,6 +2980,7 @@ Then
         + \mathscr{Q}_{\Sigma,\w{\xi}}  .
 \ee
 \end{prop}
+
 \begin{proof}
 Let us apply Stokes' theorem (\ref{e:bas:Stokes}) on $\Sigma$ oriented endowed with the future
 orientation (cf. Property~\ref{p:evo:Noether_charge_hypersurf}); given
