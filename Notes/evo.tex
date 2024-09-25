@@ -2743,10 +2743,16 @@ the \defin{Noether current $(n-1)$-form of $\w{\xi}$}\index{Noether!current form
 where $\w{\Theta}[\w{g},\Lie{\xi}\w{g}]$ is the $(n-1)$-form obtained by setting the second
 argument of the symplectic potential form $\w{\Theta}[\w{g},\delta\w{g}]$
 to $\Lie{\xi}\w{g}$ (cf. Property~\ref{p:evo:var_Lagrangian}).
-$\w{J}[\w{\xi}]$ is a linear and local function of $\w{\xi}$.
+$\w{J}[\w{\xi}]$ is a linear and local function of $\w{\xi}$. It is a priori not unique,
+some ambiguity $\w{J}\mapsto \w{J'}$ resulting from (\ref{e:evo:Theta_not_unique}):
+\be \label{e:evo:J_not_unique}
+     \w{J'}[\w{\xi}] =  \w{J}[\w{\xi}]  + \dd \w{Y}[\w{g},\Lie{\xi}\w{g}],
+\ee
+where $\w{Y}[\w{g},\Lie{\xi}\w{g}]$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
 
 If the gravity theory described by the Lagrangian $n$-form $\w{L}$ is diffeomorphism-invariant, then
-the differential form $\w{J}[\w{\xi}]$ is closed as soon as the equations of motion (\ref{e:evo:eom_E}) are satisfied:
+the differential form $\w{J}[\w{\xi}]$ is closed as soon as the equations of motion (\ref{e:evo:eom_E}) are
+satisfied or $\w{\xi}$ is a Killing vector:
 \be \label{e:evo:J_closed}
     \dd \w{J}[\w{\xi}]  = 0 .
 \ee
@@ -2758,16 +2764,11 @@ the linearity of $\w{\Theta}[.,.]$ with respect to its second argument. Similarl
 locality of $\w{J}[\w{\xi}]$ with respect of $\w{\xi}$ is inherited from
 that of $\w{\Theta}[.,.]$.
 Finally, if the theory diffeomorphism-invariant, Eq.~(\ref{e:evo:dd_pre_J_E}) holds. Given the
-definition of $\w{J}[\w{\xi}]$, it is equivalent to
+definition of $\w{J}[\w{\xi}]$, Eq.~(\ref{e:evo:dd_pre_J_E}) is equivalent to
 $\dd\w{J}[\w{\xi}]  = - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps$,
-so that $\dd\w{J}[\w{\xi}]  = 0$ if $\w{E} = 0$ is fulfilled (or if $\w{\xi}$ is a Killing vector).
+so that $\dd\w{J}[\w{\xi}]  = 0$ if $\w{E} = 0$ is fulfilled or $\w{\xi}$ is a Killing vector
+($\Lie{\xi}\w{g} = 0$).
 \end{proof}
-
-\begin{remark} \label{r:evo:J_not_unique}
-As the symplectic potential form $\w{\Theta}$ (cf. Remark~\ref{r:evo:Theta_not_unique}), the Noether current form $\w{J}$ is not unique: any change
-$\w{\Theta} \to \w{\Theta} + \dd \w{Y}$ yields a change $\w{J} \to \w{J} + \dd \w{Y}$,
-for any $(n-2)$-form $\w{Y} = \w{Y}[\w{g},\Lie{\xi}\w{g}]$.
-\end{remark}
 
 \begin{example}
 Let us continue with the example of general relativity. From
@@ -2811,36 +2812,35 @@ with the conservation law (\ref{e:sta:divJ_zero}): $\wnab\cdot\w{\mathcal{J}}[\w
 
 \begin{prop}[Noether charge form]
 \label{p:evo:Noether_charge_form}
-Given a diffeomorphism-invariant theory described by the Lagrangian $n$-form $\w{L}$ and
-a vector field $\w{\xi}$ on $\M$, there exists a $(n-2)$-form $\w{Q}[\w{\xi}]$ on $\M$,
+Given a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$, there exists a $(n-2)$-form $\w{Q}[\w{\xi}]$ on $\M$,
 which is a linear local function of $\w{\xi}$, such that
 the Noether current $(n-1)$-form of $\w{\xi}$ is the exterior derivative of $\w{Q}[\w{\xi}]$:
 \be \label{e:evo:J_dQ}
     \w{J}[\w{\xi}] = \dd \w{Q}[\w{\xi}] .
 \ee
 $\w{Q}[\w{\xi}]$ is called the \defin{Noether charge $(n-2)$-form of $\w{\xi}$}\index{Noether!charge form}
-\cite{Wald93}.
+    \cite{Wald93}. It is not unique, being subject to the ambiguity
+$\w{Q} \mapsto \w{Q'}$, with
+\be \label{e:evo:Q_not_unique}
+    \w{Q'}[\w{\xi}] = \w{Q}[\w{\xi}] + \w{Y}[\w{g},\Lie{\xi}\w{g}] + \dd\w{Z}[\w{g},\w{\xi}] ,
+\ee
+where $\w{Y}[\w{g},\Lie{\xi}\w{g}]$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$ and
+$\w{Z}[\w{g},\w{\xi}] $ is any $(n-3)$-form that is linear in $\w{\xi}$.
 \end{prop}
+
 \begin{proof}
 Since $\w{J}[\w{\xi}]$ is a closed differential form [Eq.~(\ref{e:evo:J_closed})], the Poincaré lemma
 states that it is locally exact (on a contractible open set, cf. Sec.~\ref{s:bas:ext_deriv}). However, because
 $\dd \w{J}[\w{\xi}]  = 0$ holds for any vector field $\w{\xi}$, it can be shown that
-$\w{J}[\w{\xi}]$ is globally exact, i.e. takes the form (\ref{e:evo:J_dQ})
+$\w{J}[\w{\xi}]$ is \emph{globally} exact, i.e. takes the form (\ref{e:evo:J_dQ})
 with $\w{Q}[\w{\xi}]$ being a local function of $\w{\xi}$ \cite{Wald90}.
+Finally, the $\w{Y}$ ambiguity  in (\ref{e:evo:Q_not_unique}) is inherited from the ambiguity of $\w{J}$ [Eq.~(\ref{e:evo:J_not_unique})], while the $\w{Z}$ ambiguity stems from Eq.~(\ref{e:evo:J_dQ}) defining
+$\w{Q}$ up to the addition of a closed $(n-2)$-form (cf. Lemma~1 in Ref.~\cite{Wald90}).
 \end{proof}
 
-\begin{remark} \label{r:evo:Q_not_unique}
-The Noether charge form $\w{Q}[\w{\xi}]$ is not unique: for one hand, Eq.~(\ref{e:evo:J_dQ}) defines
-$\w{Q}$ up to the addition of the exterior derivative of a $(n-3)$-form, $\w{Z}$ say:
-$\w{Q} \to \w{Q} + \dd \w{Z}$ and on the other hand, $\w{Q}$ inherits from the ambiguity
-$\w{J} \to \w{J} + \dd \w{Y}$ in the definition of $\w{J}$ (cf. Remark~\ref{r:evo:J_not_unique}), which yields
-$\w{Q} \to \w{Q} + \w{Y}$. In total, one has the freedom
-$\w{Q} \to \w{Q} + \w{Y} + \dd\w{Z}$, with $\w{Y} = \w{Y}[\w{g},\Lie{\xi}\w{g}]$
-and $\w{Z} = \w{Z}[\w{g},\w{\xi}]$. Moreover, $\w{Z}$ can be chosen so that it does not contain
-any derivative of $\w{\xi}$ (cf. Lemma~1 in Ref.~\cite{Wald90}).
-\end{remark}
 
 \begin{example}
+\label{x:evo:Noether_charge_form_GR}
 For general relativity, $\w{J}[\w{\xi}]$ is given by Eq.~(\ref{e:evo:J_GR_comp}), or Eq.~(\ref{e:evo:J_GR_Komar}) in terms of the Komar current of $\w{\xi}$.
 The Noether charge $(n-2)$-form is then nothing but minus the Hodge dual of the exterior derivative
 of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$):
@@ -2850,7 +2850,8 @@ of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$):
 Given the expression of the Hodge dual
 of a 2-form [Eq.~(\ref{e:sta:Hodge_dual}) with $p=2$], the identity
 $(\dd\uu{\xi})_{\alpha\beta} = \nabla_\alpha  \xi_\beta - \nabla_\beta \xi_\alpha$
-[Eq.~(\ref{e:bas:def_ext_1f_nab})] and the antisymmetry of $\weps$, we get
+[Eq.~(\ref{e:bas:def_ext_1f_nab})] and the antisymmetry of $\weps$, an expression
+equivalent to (\ref{e:evo:Q_GR_Komar}) is
 \be
     Q[\w{\xi}]_{\alpha_1\cdots\alpha_{n-2}} = - \nabla^\mu \xi^\nu
         \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}} .
@@ -2886,48 +2887,26 @@ $\star \w{J}[\w{\xi}]  = \star\dd\w{Q}[\w{\xi}]$, which is equivalent to
 Eq.~(\ref{e:evo:J_dQ}).
 \end{example}
 
-From the above example, we note that the $(n-2)$-form $\star (\dd \uu{\xi})$ defining $\w{Q}[\w{\xi}]$
-in Eq.~(\ref{e:evo:Q_GR_Komar}) is exactly the differential form that constitutes the integrand in
-formula (\ref{e:sta:def_Komar_mass}) defining the Komar mass or in formula
-(\ref{e:sta:def_Komar_J}) defining the Komar angular momentum ($\w{\xi} := \w{\eta}$ in that case).
-We conclude that
-
-\begin{prop}[Komar mass and angular momentum as Noether charges]
-\label{p:evo:Komar_Noether}
-In a stationary spacetime governed by general relativity, the Komar mass\index{Komar!mass}\index{mass!Komar --} over a $(n-2)$-dimensional closed spacelike surface $\Sp$
-[Eq.~(\ref{e:sta:def_Komar_mass})]
-is, up to a constant factor, the integral over $\Sp$ of the
-Noether charge $(n-2)$-form of the stationary Killing vector $\w{\xi}$.
-Similarly, in an axisymmetric spacetime governed by general relativity,
-the Komar angular momentum\index{Komar!angular momentum}\index{angular!momentum!Komar --} over $\Sp$ [Eq.~(\ref{e:sta:def_Komar_J})] is, up to a constant factor, the integral over $\Sp$ of the
-Noether charge $(n-2)$-form of the axisymmetric Killing vector $\w{\eta}$.
-\end{prop}
-
-\begin{remark}
-We have stressed in Remark~\ref{r:evo:Q_not_unique} that the Noether charge form of a given vector fied
-$\w{\xi}$ is nonunique, being subject to the ambiguity
-$\w{Q}[\w{\xi}] \to \w{Q}[\w{\xi}] +  \w{Y}[\w{g},\Lie{\xi}\w{g}] + \dd \w{Z}[\w{g},\w{\xi}]$.
-However, when $\w{\xi}$ is a Killing vector, $\Lie{\xi}\w{g}= 0$, which
-implies $\w{Y}[\w{g},\Lie{\xi}\w{g}] = 0$ since $\w{Y}$ is linear in its second argument
-(cf. Remark~\ref{r:evo:Theta_not_unique} on p.~\pageref{r:evo:Theta_not_unique}).
-Moreover the second ambiguity term, $\dd\w{Z}[\w{g},\w{\xi}]$, is an exact form and therefore does not contribute to the integral of
-$\w{Q}[\w{\xi}]$ over any closed surface. Hence the Komar mass and Komar angular momentum over a given
-closed surface $\Sp$ take a unique value, even if computed from distinct Noether charge forms of the involved
-Killing vector.
-\end{remark}
 
 \begin{prop}[Noether charge of a spacelike hypersurface]
 \label{p:evo:Noether_charge_hypersurf}
 Let us consider a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$.
 Given a spacelike hypersurface $\Sigma$, the
 \defin{Noether charge of $\Sigma$ with respect to $\w{\xi}$}\index{Noether!charge of a hypersurface} is
-\be
+\be \label{e:evo:def_Q_hypersurf}
     \mathscr{Q}_{\Sigma,\w{\xi}} := \int_{\Sigma} \w{J}[\w{\xi}] ,
 \ee
 where $\w{J}[\w{\xi}]$ is the Noether current $(n-1)$-form of $\w{\xi}$ (Property~\ref{p:evo:Noether_current})
 and the integral is taken with respect to $\Sigma$ endowed with the \defin{future orientation},
 i.e. the orientation defined by $\w{n}\cdot\weps$, where $\w{n}$ is the future-directed timelike unit normal
-to $\Sigma$.
+to $\Sigma$. The Noether charge is a priori not unique, since any change $\w{J} \mapsto \w{J'}$
+obeying (\ref{e:evo:J_not_unique}) leads to $\mathscr{Q}_{\Sigma,\w{\xi}} \mapsto \mathscr{Q'}_{\Sigma,\w{\xi}}$
+with
+\be \label{e:evo:Q_hyper_not_unique}
+    \mathscr{Q'}_{\Sigma,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}} +
+    \int_{\partial\Sigma} \w{Y}[\w{g},\Lie{\xi}\w{g}] ,
+\ee
+where $\w{Y}[\w{g},\Lie{\xi}\w{g}]$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
 
 Let $\Sigma_1$ and $\Sigma_2$ be two spacelike hypersurfaces, such that $\Sigma_2$ lies
 in the future of $\Sigma_1$ and both hypersurfaces are connected by a hypersurface $\mathscr{W}$, i.e.
@@ -2942,10 +2921,11 @@ where the integral over $\mathscr{W}$ is taken with respect to the \emph{inward}
 the arrow), i.e. the orientation
 defined by $\w{v}\cdot\weps$, where $\w{v}$ is any vector field pointing into $\mathscr{D}$.
 \end{prop}
+
 \begin{proof}
-This is a direct consequence of Stokes' theorem and
-the closedness of $\w{J}[\w{\xi}]$ (Property~\ref{p:evo:Noether_current}). Indeed, given
-that $\partial\mathscr{D} = \Sigma_1\cup\Sigma_2\cup\mathscr{W}$, Stokes' theorem (\ref{e:bas:Stokes})
+Equation~(\ref{e:evo:Q_hyper_not_unique}) readily follows from (\ref{e:evo:J_not_unique}) and
+Stokes' theorem (\ref{e:bas:Stokes}). As for Eq.~(\ref{e:evo:Noether_Q_Sigma_1_2}),
+given that $\partial\mathscr{D} = \Sigma_1\cup\Sigma_2\cup\mathscr{W}$, Stokes' theorem (\ref{e:bas:Stokes})
 along with $\dd \w{J}[\w{\xi}] = 0$ [Eq.~(\ref{e:evo:J_closed})] yields
 \[
      \int_{\Sigma_1^{\nearrow}} \w{J}[\w{\xi}] + \int_{\Sigma_2^{\nearrow}} \w{J}[\w{\xi}]
@@ -2956,7 +2936,7 @@ convention (with respect to $\mathscr{D}$).
 Noticing that $\int_{\Sigma_1^{\nearrow}} \w{J}[\w{\xi}] = -\mathscr{Q}_{\Sigma_1,\w{\xi}}$,
 $\int_{\Sigma_2^{\nearrow}} \w{J}[\w{\xi}] = \mathscr{Q}_{\Sigma_1,\w{\xi}}$
 and $\int_{\mathscr{W}^{\nearrow}} \w{J}[\w{\xi}] = - \int_{\mathscr{W}^{\swarrow}} \w{J}[\w{\xi}]$
-yields the identity (\ref{e:evo:Noether_Q_Sigma_1_2}).
+yields (\ref{e:evo:Noether_Q_Sigma_1_2}).
 \end{proof}
 
 The integral over $\mathscr{W}$ in Eq.~(\ref{e:evo:Noether_Q_Sigma_1_2}) can be interpreted an
@@ -2973,33 +2953,83 @@ Let us consider a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant 
 Let assume further that $(\M,\w{g})$ is asymptotically flat.
 Given a closed $(n-2)$-surface $\Sp\subset\M$, the
 \defin{Noether charge of $\Sp$ with respect to $\w{\xi}$}\index{Noether!surface charge} is
-\be
+\be \label{e:evo:def_Noether_Q_surf}
     \mathscr{Q}_{\Sp,\w{\xi}} := \int_{\Sp} \w{Q}[\w{\xi}] ,
 \ee
 where $\w{Q}[\w{\xi}]$ is the Noether charge $(n-2)$-form of $\w{\xi}$
 (Property~\ref{p:evo:Noether_charge_form}) and the orientation of $\Sp$ for the above integral is the \emph{future-outward} orientation
 defined by Eq.~(\ref{e:sta:def_weps_S}).
+The Noether charge is a priori not unique, since any change $\w{Q} \mapsto \w{Q'}$
+obeying (\ref{e:evo:Q_not_unique}) leads to $\mathscr{Q}_{\Sp,\w{\xi}} \mapsto \mathscr{Q'}_{\Sp,\w{\xi}}$
+with
+\be \label{e:evo:Q_surf_not_unique}
+    \mathscr{Q'}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sp,\w{\xi}} + \int_{\Sp} \w{Y}[\w{g},\Lie{\xi}\w{g}] ,
+\ee
+where $\w{Y}[\w{g},\Lie{\xi}\w{g}]$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
 
 Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed $(n-2)$-surfaces:
 an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
 $\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
 Then
-\be
+\be \label{e:evo:Noether_Q_S_ext_int}
      \mathscr{Q}_{\Sp_{\rm ext},\w{\xi}} = \mathscr{Q}_{\Sp_{\rm int},\w{\xi}}
         + \mathscr{Q}_{\Sigma,\w{\xi}}  .
 \ee
 \end{prop}
 
 \begin{proof}
-Let us apply Stokes' theorem (\ref{e:bas:Stokes}) on $\Sigma$ oriented endowed with the future
-orientation (cf. Property~\ref{p:evo:Noether_charge_hypersurf}); given
-that $\partial\Sigma = $ $\dd \w{Q}[\w{\xi}] =  \w{J}[\w{\xi}]$ [Eq.~(\ref{e:evo:J_dQ})],  we get
+Equation~(\ref{e:evo:Q_surf_not_unique}) readily follows from (\ref{e:evo:Q_not_unique})
+along with $\int_{\Sp} \dd\w{Z} = 0$ as a result of Stokes' theorem (\ref{e:bas:Stokes}),
+given that $\Sp$ is a closed manifold:
+$\partial\Sp = \varnothing$.
+Regarding Eq.~(\ref{e:evo:Noether_Q_S_ext_int}),
+let us substitute $\dd\w{Q}$ for $\w{J}$ [cf. Eq.~(\ref{e:evo:J_dQ})]
+in expression (\ref{e:evo:def_Q_hypersurf}) of
+$\mathscr{Q}_{\Sigma,\w{\xi}}$. Applying
+Stokes' theorem (\ref{e:bas:Stokes}) and using
+$\partial\Sigma = \Sp_{\rm int} \cup \Sp_{\rm ext}$, we get
 \[
-    \mathscr{Q}_{\Sp_{\rm int},\w{\xi}}
+    \mathscr{Q}_{\Sigma,\w{\xi}} = \int_{\Sp_{\rm int}^\nearrow} \w{Q}[\w{\xi}]
+    + \int_{\Sp_{\rm ext}^\nearrow} \w{Q}[\w{\xi}] ,
 \]
-
+where the arrows mean that $\Sp_{\rm int}$ and  $\Sp_{\rm ext}$
+are outward-oriented with respect to $\Sigma$ (which is itself future-oriented).
+Noticing that $\int_{\Sp_{\rm int}^\nearrow} \w{Q}[\w{\xi}] = - \mathscr{Q}_{\Sp_{\rm int},\w{\xi}}$
+and $\int_{\Sp_{\rm ext}^\nearrow} \w{Q}[\w{\xi}] = \mathscr{Q}_{\Sp_{\rm ext},\w{\xi}}$
+yields (\ref{e:evo:Noether_Q_S_ext_int}).
 \end{proof}
 
+From Example~\ref{x:evo:Noether_charge_form_GR},
+we note that the $(n-2)$-form $\star (\dd \uu{\xi})$ giving $\w{Q}[\w{\xi}]$
+for general relativity [cf. Eq.~(\ref{e:evo:Q_GR_Komar})]
+is exactly the differential form that constitutes the integrand in
+formula (\ref{e:sta:def_Komar_mass}) defining the Komar mass or in formula
+(\ref{e:sta:def_Komar_J}) defining the Komar angular momentum ($\w{\xi} := \w{\eta}$ in that case).
+In view of the definition (\ref{e:evo:def_Noether_Q_surf}) of the Noether charge, we conclude that
+
+\begin{prop}[Komar mass and angular momentum as Noether charges]
+\label{p:evo:Komar_Noether}
+In a stationary spacetime governed by general relativity, the Komar mass\index{Komar!mass}\index{mass!Komar --} over a $(n-2)$-dimensional closed spacelike surface $\Sp$
+[Eq.~(\ref{e:sta:def_Komar_mass})]
+is, up to a constant factor,
+the Noether charge of $\Sp$ with respect to the stationary Killing vector $\w{\xi}$.
+Similarly, in an axisymmetric spacetime governed by general relativity,
+the Komar angular momentum\index{Komar!angular momentum}\index{angular!momentum!Komar --} over $\Sp$ [Eq.~(\ref{e:sta:def_Komar_J})] is, up to a constant factor,
+the Noether charge of $\Sp$ with respect to the axisymmetric Killing vector $\w{\eta}$.
+\end{prop}
+
+\begin{remark}
+The Noether charge is subject to the ambiguity (\ref{e:evo:Q_surf_not_unique}).
+However, when $\w{\xi}$ is a Killing vector, this ambiguity disappears.
+Indeed, by the very definition of a Killing vector (cf. Property~\ref{p:def_Killing_vector}),
+$\Lie{\xi}\w{g}= 0$, which
+implies $\w{Y}[\w{g},\Lie{\xi}\w{g}] = 0$ in the
+right-hand side of Eq.~(\ref{e:evo:Q_surf_not_unique}), given that
+$\w{Y}$ must be linear in its second argument. Hence there is a unique
+Noether charge with respect to a Killing vector. For general relativity,
+this Noether charge is the Komar mass ($\w{\xi}$ stationary) or
+the Komar angular momentum ($\w{\xi}$ axisymmetric).
+\end{remark}
 
 
 
