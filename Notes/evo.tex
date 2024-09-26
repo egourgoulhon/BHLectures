@@ -2914,8 +2914,8 @@ $\Sigma_1\cup\Sigma_2\cup\mathscr{W}$ is a closed hypersurface consituting
 the boundary of a $n$-dimensional manifold  $\mathscr{D}\subset\M$ (cf. Fig.~??).
 Then the following conservation law holds:
 \be \label{e:evo:Noether_Q_Sigma_1_2}
-    \mathscr{Q}_{\Sigma_2,\w{\xi}}  = \mathscr{Q}_{\Sigma_1,\w{\xi}}
-    + \int_{\mathscr{W}^{\swarrow}} \w{J}[\w{\xi}] ,
+    \encadre{ \mathscr{Q}_{\Sigma_2,\w{\xi}}  = \mathscr{Q}_{\Sigma_1,\w{\xi}}
+    + \int_{\mathscr{W}^{\swarrow}} \w{J}[\w{\xi}] },
 \ee
 where the integral over $\mathscr{W}$ is taken with respect to the \emph{inward} orientation (indicated by
 the arrow), i.e. the orientation
@@ -2949,6 +2949,7 @@ if $\w{J}[\w{\xi}] = 0$ on $\mathscr{W}$ or if  $\mathscr{W}$ is at some asympto
 of $\M$ with $\w{J}[\w{\xi}]$ decaying sufficiently fast so that its integral on $\mathscr{W}$ is zero.
 
 \begin{prop}[Noether charge of a spacelike $(n-2)$-surface]
+\label{p:evo:Noether_charge_surf}
 Let us consider a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$.
 Let assume further that $(\M,\w{g})$ is asymptotically flat.
 Given a closed $(n-2)$-surface $\Sp\subset\M$, the
@@ -2972,8 +2973,8 @@ an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
 $\Sp_{\rm ext}$, the exterior direction being that of the asymptotic flat end of $(\M, \w{g})$.
 Then
 \be \label{e:evo:Noether_Q_S_ext_int}
-     \mathscr{Q}_{\Sp_{\rm ext},\w{\xi}} = \mathscr{Q}_{\Sp_{\rm int},\w{\xi}}
-        + \mathscr{Q}_{\Sigma,\w{\xi}}  .
+     \encadre{ \mathscr{Q}_{\Sp_{\rm ext},\w{\xi}} = \mathscr{Q}_{\Sp_{\rm int},\w{\xi}}
+        + \mathscr{Q}_{\Sigma,\w{\xi}}  }.
 \ee
 \end{prop}
 
@@ -2998,6 +2999,32 @@ Noticing that $\int_{\Sp_{\rm int}^\nearrow} \w{Q}[\w{\xi}] = - \mathscr{Q}_{\Sp
 and $\int_{\Sp_{\rm ext}^\nearrow} \w{Q}[\w{\xi}] = \mathscr{Q}_{\Sp_{\rm ext},\w{\xi}}$
 yields (\ref{e:evo:Noether_Q_S_ext_int}).
 \end{proof}
+
+\begin{remark}
+We are using the same letter $\mathscr{Q}$ to denote the Noether charge of a hypersurface
+(Property~\ref{p:evo:Noether_charge_hypersurf}) and the Noether charge of
+a $(n-2)$-surface (Property~\ref{p:evo:Noether_charge_surf}). The distinction between the two quantities
+occurs only through the index: $\mathscr{Q}_{\Sigma,\w{\xi}}$ versus $\mathscr{Q}_{\Sp,\w{\xi}}$.
+This common notation is justified in so far as both quantities are strongly related by
+Eq.~(\ref{e:evo:Noether_Q_S_ext_int}). In particular, if the hyprsurface $\Sigma$ has
+a single (external) boundary $\Sp$, i.e. $\Sp_{\rm int} = \varnothing$, Eq.~(\ref{e:evo:Noether_Q_S_ext_int}) reduces to
+$\mathscr{Q}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}}$.
+\end{remark}
+
+\begin{remark}
+The name \emph{charge} in the expression \emph{Noether charge} comes of course from the analogy
+with electromagnetism: considering $n=4$ for simplicity, the analog of the Noether current 3-form $\w{J}$ is the Hodge dual of the 1-form $\uu{j}$, metric dual of the electric 4-current $\w{j}$:
+$\w{J} = \star\uu{j}$, while the analog of the Noether charge 2-form $\w{Q}$ is the Hodge dual
+of the electromagnetic field tensor $\w{F}$ divided by $\mu_0$: $\w{Q} =\mu_0^{-1}\star\!\w{F}$. The relation
+$\dd \w{Q} = \w{J}$ [Eq.~(\ref{e:evo:J_dQ})] is then nothing but the Maxwell
+equation\index{Maxwell equations} (\ref{e:fra:Maxwell_forms}): $\dd\star\!\w{F} = \mu_0 \star\!\uu{j}$.
+Then $\mathscr{Q}_{\Sigma}$ is the electric charge in the volume $\Sigma$
+(cf. e.g. Eq.~(18.2) in Ref.~\cite{Gourg13}) and $\mathscr{Q}_{\Sp}$ is $\mu_0^{-1}$ times the flux of the electromagnetic
+field through the surface $\Sp$. Accordingly,
+Eq.~(\ref{e:evo:Noether_Q_Sigma_1_2}) expresses the \emph{conservation of electric charge}
+and Eq.~(\ref{e:evo:Noether_Q_S_ext_int})
+with $\Sp_{\rm int} = \varnothing$ is nothing but \emph{Gauss's law}\index{Gauss's law} (cf. e.g. Eq.~(18.40) in Ref.~\cite{Gourg13}).
+\end{remark}
 
 From Example~\ref{x:evo:Noether_charge_form_GR},
 we note that the $(n-2)$-form $\star (\dd \uu{\xi})$ giving $\w{Q}[\w{\xi}]$
