@@ -2458,7 +2458,7 @@ based on a least action principle\index{least action} involving the action
 \be \label{e:evo:action_L}
     S = \int_{\M} \w{L} = \int_{\M} L \, \weps = \int_{\M} L \sqrt{-g} \, \D^n x,
 \ee
-where $\w{L}$ is the \defin{Lagrangian $n$-form}\index{Lagragian!form}\footnote{As the integral of a $n$-form over a $n$-dimensional manifold, $S$ is well-posed and coordinate independent.},
+where $\w{L}$ is the \defin{Lagrangian $n$-form}\index{Lagrangian!form}\footnote{As the integral of a $n$-form over a $n$-dimensional manifold, $S$ is well-posed and coordinate independent.},
 $L$ is the \defin{Lagrangian scalar}\index{Lagrangian!scalar}
 and
 $\weps$ is the Levi-Civita tensor (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}).
@@ -2663,7 +2663,7 @@ vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstei
 (\ref{e:fra:vac_Einstein}).
 \end{example}
 
-\subsection{Noether charges associated to diffeomorphism invariance}
+\subsection{Noether charges related to diffeomorphism invariance}
 
 Let $\w{\xi}$ be a smooth vector field on $\M$. $\w{\xi}$ generates a family of
 infinitesimal diffeomorphisms, namely the flow maps $\Phi_t: \M \to \M$, where
@@ -2818,7 +2818,7 @@ the Noether current $(n-1)$-form of $\w{\xi}$ is the exterior derivative of $\w{
 \be \label{e:evo:J_dQ}
     \w{J}[\w{\xi}] = \dd \w{Q}[\w{\xi}] .
 \ee
-$\w{Q}[\w{\xi}]$ is called the \defin{Noether charge $(n-2)$-form of $\w{\xi}$}\index{Noether!charge form}
+$\w{Q}[\w{\xi}]$ is called the \defin{Noether charge $(n-2)$-form of $\w{\xi}$}\index{Noether!charge!form}
     \cite{Wald93}. It is not unique, being subject to the ambiguity
 $\w{Q} \mapsto \w{Q'}$, with
 \be \label{e:evo:Q_not_unique}
@@ -2892,7 +2892,7 @@ Eq.~(\ref{e:evo:J_dQ}).
 \label{p:evo:Noether_charge_hypersurf}
 Let us consider a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$.
 Given a spacelike hypersurface $\Sigma$, the
-\defin{Noether charge of $\Sigma$ with respect to $\w{\xi}$}\index{Noether!charge of a hypersurface} is
+\defin{Noether charge of $\Sigma$ with respect to $\w{\xi}$}\index{Noether!charge!of a hypersurface} is
 \be \label{e:evo:def_Q_hypersurf}
     \mathscr{Q}_{\Sigma,\w{\xi}} := \int_{\Sigma} \w{J}[\w{\xi}] ,
 \ee
@@ -2940,7 +2940,8 @@ yields (\ref{e:evo:Noether_Q_Sigma_1_2}).
 \end{proof}
 
 The integral over $\mathscr{W}$ in Eq.~(\ref{e:evo:Noether_Q_Sigma_1_2}) can be interpreted an
-an ``inward flux'' integral, especially if $\mathscr{W}$ is a timelike hypersurface.
+an ``inward flux'' integral, especially if $\mathscr{W}$ is a timelike hypersurface
+(cf. the electromagnetic analogy detailed in Remark~\ref{r:evo:charge_em_analogy} below).
 If this flux integral vanishes,
 Eq.~(\ref{e:evo:Noether_Q_Sigma_1_2}) expresses the
 invariance of the Noether charge with respect to the choice of the hypersurface
@@ -2953,7 +2954,7 @@ of $\M$ with $\w{J}[\w{\xi}]$ decaying sufficiently fast so that its integral on
 Let us consider a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$.
 Let assume further that $(\M,\w{g})$ is asymptotically flat.
 Given a closed $(n-2)$-surface $\Sp\subset\M$, the
-\defin{Noether charge of $\Sp$ with respect to $\w{\xi}$}\index{Noether!surface charge} is
+\defin{Noether charge of $\Sp$ with respect to $\w{\xi}$}\index{Noether!charge!of a surface} is
 \be \label{e:evo:def_Noether_Q_surf}
     \mathscr{Q}_{\Sp,\w{\xi}} := \int_{\Sp} \w{Q}[\w{\xi}] ,
 \ee
@@ -3012,14 +3013,15 @@ $\mathscr{Q}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}}$.
 \end{remark}
 
 \begin{remark}
+\label{r:evo:charge_em_analogy}
 The name \emph{charge} in the expression \emph{Noether charge} comes of course from the analogy
 with electromagnetism: considering $n=4$ for simplicity, the analog of the Noether current 3-form $\w{J}$ is the Hodge dual of the 1-form $\uu{j}$, metric dual of the electric 4-current $\w{j}$:
 $\w{J} = \star\uu{j}$, while the analog of the Noether charge 2-form $\w{Q}$ is the Hodge dual
 of the electromagnetic field tensor $\w{F}$ divided by $\mu_0$: $\w{Q} =\mu_0^{-1}\star\!\w{F}$. The relation
 $\dd \w{Q} = \w{J}$ [Eq.~(\ref{e:evo:J_dQ})] is then nothing but the Maxwell
 equation\index{Maxwell equations} (\ref{e:fra:Maxwell_forms}): $\dd\star\!\w{F} = \mu_0 \star\!\uu{j}$.
-Then $\mathscr{Q}_{\Sigma}$ is the electric charge in the volume $\Sigma$
-(cf. e.g. Eq.~(18.2) in Ref.~\cite{Gourg13}) and $\mathscr{Q}_{\Sp}$ is $\mu_0^{-1}$ times the flux of the electromagnetic
+Then $\mathscr{Q}_{\Sigma,\w{\xi}}$ is the total electric charge within the volume $\Sigma$
+(cf. e.g. Eq.~(18.2) in Ref.~\cite{Gourg13}) and $\mathscr{Q}_{\Sp,\w{\xi}}$ is $\mu_0^{-1}$ times the flux of the electromagnetic
 field through the surface $\Sp$. Accordingly,
 Eq.~(\ref{e:evo:Noether_Q_Sigma_1_2}) expresses the \emph{conservation of electric charge}
 and Eq.~(\ref{e:evo:Noether_Q_S_ext_int})
@@ -3053,12 +3055,35 @@ $\Lie{\xi}\w{g}= 0$, which
 implies $\w{Y}[\w{g},\Lie{\xi}\w{g}] = 0$ in the
 right-hand side of Eq.~(\ref{e:evo:Q_surf_not_unique}), given that
 $\w{Y}$ must be linear in its second argument. Hence there is a unique
-Noether charge with respect to a Killing vector. For general relativity,
-this Noether charge is the Komar mass ($\w{\xi}$ stationary) or
-the Komar angular momentum ($\w{\xi}$ axisymmetric).
+Noether charge of a closed spacelike $(n-2)$-surface $\Sp$ with respect to a given Killing vector. For general relativity,
+this Noether charge is the Komar mass over $\Sp$ ($\w{\xi}$ stationary) or
+the Komar angular momentum over $\Sp$ ($\w{\xi}$ axisymmetric).
 \end{remark}
 
+\subsection{Wald entropy}
 
+Having introduced the concept of Noether charge related to diffeomorphism invariance,
+we are in position to define the Wald entropy of a stationary black hole.
+This requires the concepts of \emph{bifurcate Killing horizon} and \emph{bifurcation
+surface}, which have been introduced in Sec.~\ref{s:sta:bifur_Killing_hor}.
+
+\begin{prop}[Wald entropy as a Noether charge]
+Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 3$ governed
+by a diffeomorphism-invariant theory and containing a black hole, whose
+event horizon $\Hor$ is a Killing horizon that is part of a bifurcate
+Killing horizon of bifurcation surface $\Sp$. Let $\w{\chi}$ be the Killing
+vector generating $\Hor$ and $\kappa$ the corresponding surface gravity:
+$\wnab_{\w{\chi}}\w{\chi} \equalH \kappa \w{\chi}$ [Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
+By virtue of Property~\ref{p:neh:zeroth_law_bifur}, $\kappa$ is a nonzero constant.
+The \defin{Wald entropy}\index{Wald entropy}\index{entropy!Wald --} of the black hole is defined as $2\pi/\kappa$ times
+the Noether charge of the bifurcation surface $\Sp$ with respect to $\w{\chi}$:
+\be
+    \encadre{ S_{\rm W} := \frac{2\pi}{\kappa} \mathcal{Q}_{\Sp,\w{\chi}}
+    = \frac{2\pi}{\kappa} \int_{\Sp} \w{Q}[\w{\chi}] } ,
+\ee
+where $\w{Q}[\w{\chi}]$ is the Noether charge $(n-2)$-form of $\w{\chi}$,
+as defined in Property~\ref{p:evo:Noether_charge_form}.
+\end{prop}
 
 
 
