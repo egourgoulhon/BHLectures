@@ -2521,7 +2521,7 @@ renaming $\Phi'$ to $\Phi$:
 \begin{greybox}
 A gravitation theory is said
 to be \defin{diffeomorphism-invariant}\index{diffeomorphism!invariance} iff
-the corresponding Lagrangian $n$-form $\w{L}$ is \defin{covariant}\index{covariant} under the group
+its Lagrangian $n$-form $\w{L}$ is \defin{covariant}\index{covariant} under the group
 of diffeomorphisms of $\M$, i.e. iff for
 any diffeomorphism $\Phi: \M \to \M$,
 \be \label{e:evo:covariant_Lagrangian}
@@ -2900,13 +2900,15 @@ where $\w{J}[\w{\xi}]$ is the Noether current $(n-1)$-form of $\w{\xi}$ (Propert
 and the integral is taken with respect to $\Sigma$ endowed with the \defin{future orientation},
 i.e. the orientation defined by $\w{n}\cdot\weps$, where $\w{n}$ is the future-directed timelike unit normal
 to $\Sigma$. The Noether charge is a priori not unique, since any change $\w{J} \mapsto \w{J'}$
-obeying (\ref{e:evo:J_not_unique}) leads to $\mathscr{Q}_{\Sigma,\w{\xi}} \mapsto \mathscr{Q'}_{\Sigma,\w{\xi}}$
+allowed by (\ref{e:evo:J_not_unique}) leads to $\mathscr{Q}_{\Sigma,\w{\xi}} \mapsto \mathscr{Q'}_{\Sigma,\w{\xi}}$
 with
 \be \label{e:evo:Q_hyper_not_unique}
     \mathscr{Q'}_{\Sigma,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}} +
     \int_{\partial\Sigma} \w{Y}[\w{g},\Lie{\xi}\w{g}] ,
 \ee
 where $\w{Y}[\w{g},\Lie{\xi}\w{g}]$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
+However, if $\w{\xi}$ is a Killing vector ($\Lie{\xi}\w{g}=0$), the Noether charge is
+uniquely defined: $\w{J'}[\w{\xi}] = \w{J}[\w{\xi}]$ and $\mathscr{Q'}_{\Sigma,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}}$.
 
 Let $\Sigma_1$ and $\Sigma_2$ be two spacelike hypersurfaces, such that $\Sigma_2$ lies
 in the future of $\Sigma_1$ and both hypersurfaces are connected by a hypersurface $\mathscr{W}$, i.e.
@@ -2924,7 +2926,13 @@ defined by $\w{v}\cdot\weps$, where $\w{v}$ is any vector field pointing into $\
 
 \begin{proof}
 Equation~(\ref{e:evo:Q_hyper_not_unique}) readily follows from (\ref{e:evo:J_not_unique}) and
-Stokes' theorem (\ref{e:bas:Stokes}). As for Eq.~(\ref{e:evo:Noether_Q_Sigma_1_2}),
+Stokes' theorem (\ref{e:bas:Stokes}). If $\w{\xi}$ is a Killing vector, then
+$\Lie{\xi}\w{g}= 0$ by definition (cf. Property~\ref{p:def_Killing_vector}); this implies
+$\w{Y}[\w{g},\Lie{\xi}\w{g}] = 0$ in the
+right-hand side of Eq.~(\ref{e:evo:Q_hyper_not_unique}), given that
+$\w{Y}$ must be linear in its second argument. Hence
+$\mathscr{Q'}_{\Sigma,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}}$.
+As for Eq.~(\ref{e:evo:Noether_Q_Sigma_1_2}),
 given that $\partial\mathscr{D} = \Sigma_1\cup\Sigma_2\cup\mathscr{W}$, Stokes' theorem (\ref{e:bas:Stokes})
 along with $\dd \w{J}[\w{\xi}] = 0$ [Eq.~(\ref{e:evo:J_closed})] yields
 \[
@@ -2968,6 +2976,8 @@ with
     \mathscr{Q'}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sp,\w{\xi}} + \int_{\Sp} \w{Y}[\w{g},\Lie{\xi}\w{g}] ,
 \ee
 where $\w{Y}[\w{g},\Lie{\xi}\w{g}]$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
+However, if $\w{\xi}$ is a Killing vector ($\Lie{\xi}\w{g}=0$), the Noether charge is
+uniquely defined: $\mathscr{Q'}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sp,\w{\xi}}$.
 
 Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed $(n-2)$-surfaces:
 an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
@@ -2984,7 +2994,10 @@ Equation~(\ref{e:evo:Q_surf_not_unique}) readily follows from (\ref{e:evo:Q_not_
 along with $\int_{\Sp} \dd\w{Z} = 0$ as a result of Stokes' theorem (\ref{e:bas:Stokes}),
 given that $\Sp$ is a closed manifold:
 $\partial\Sp = \varnothing$.
-Regarding Eq.~(\ref{e:evo:Noether_Q_S_ext_int}),
+If $\w{\xi}$ is a Killing vector, then
+$\w{Y}[\w{g},\Lie{\xi}\w{g}] = 0$ in the right-hand side of (\ref{e:evo:Q_surf_not_unique}), thanks to the linearity of $\w{Y}$ with respect to its
+second argument; hence $\mathscr{Q'}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sp,\w{\xi}}$.
+Finally, to prove (\ref{e:evo:Noether_Q_S_ext_int}),
 let us substitute $\dd\w{Q}$ for $\w{J}$ [cf. Eq.~(\ref{e:evo:J_dQ})]
 in expression (\ref{e:evo:def_Q_hypersurf}) of
 $\mathscr{Q}_{\Sigma,\w{\xi}}$. Applying
@@ -3041,24 +3054,13 @@ In view of the definition (\ref{e:evo:def_Noether_Q_surf}) of the Noether charge
 In a stationary spacetime governed by general relativity, the Komar mass\index{Komar!mass}\index{mass!Komar --} over a $(n-2)$-dimensional closed spacelike surface $\Sp$
 [Eq.~(\ref{e:sta:def_Komar_mass})]
 is, up to a constant factor,
-the Noether charge of $\Sp$ with respect to the stationary Killing vector $\w{\xi}$.
+the Noether charge\footnote{The Noether charge is uniquely defined in the present case, since
+$\w{\xi}$ is a Killing vector, cf. Property~\ref{p:evo:Noether_charge_surf}.}
+of $\Sp$ with respect to the stationary Killing vector $\w{\xi}$.
 Similarly, in an axisymmetric spacetime governed by general relativity,
 the Komar angular momentum\index{Komar!angular momentum}\index{angular!momentum!Komar --} over $\Sp$ [Eq.~(\ref{e:sta:def_Komar_J})] is, up to a constant factor,
 the Noether charge of $\Sp$ with respect to the axisymmetric Killing vector $\w{\eta}$.
 \end{prop}
-
-\begin{remark}
-The Noether charge is subject to the ambiguity (\ref{e:evo:Q_surf_not_unique}).
-However, when $\w{\xi}$ is a Killing vector, this ambiguity disappears.
-Indeed, by the very definition of a Killing vector (cf. Property~\ref{p:def_Killing_vector}),
-$\Lie{\xi}\w{g}= 0$, which
-implies $\w{Y}[\w{g},\Lie{\xi}\w{g}] = 0$ in the
-right-hand side of Eq.~(\ref{e:evo:Q_surf_not_unique}), given that
-$\w{Y}$ must be linear in its second argument. Hence there is a unique
-Noether charge of a closed spacelike $(n-2)$-surface $\Sp$ with respect to a given Killing vector. For general relativity,
-this Noether charge is the Komar mass over $\Sp$ ($\w{\xi}$ stationary) or
-the Komar angular momentum over $\Sp$ ($\w{\xi}$ axisymmetric).
-\end{remark}
 
 \subsection{Wald entropy}
 
@@ -3075,11 +3077,13 @@ Killing horizon of bifurcation surface $\Sp$. Let $\w{\chi}$ be the Killing
 vector generating $\Hor$ and $\kappa$ the corresponding surface gravity:
 $\wnab_{\w{\chi}}\w{\chi} \equalH \kappa \w{\chi}$ [Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
 By virtue of Property~\ref{p:neh:zeroth_law_bifur}, $\kappa$ is a nonzero constant.
-The \defin{Wald entropy}\index{Wald entropy}\index{entropy!Wald --} of the black hole is defined as $2\pi/\kappa$ times
-the Noether charge of the bifurcation surface $\Sp$ with respect to $\w{\chi}$:
+The \defin{Wald entropy}\index{Wald entropy}\index{entropy!Wald --} of the black hole is
+then defined as $\kappa^{-1}$ times
+the Noether charge of the bifurcation surface $\Sp$ with respect to $\w{\chi}$,
+up to the constant $\pi k_{\rm B}/(2 \hbar)$:
 \be
-    \encadre{ S_{\rm W} := \frac{2\pi}{\kappa} \mathcal{Q}_{\Sp,\w{\chi}}
-    = \frac{2\pi}{\kappa} \int_{\Sp} \w{Q}[\w{\chi}] } ,
+    \encadre{ S_{\rm W} := \frac{\pi k_{\rm B}}{2\hbar\kappa} \, \mathcal{Q}_{\Sp,\w{\chi}}
+    = \frac{\pi k_{\rm B}}{2\hbar\kappa}  \int_{\Sp} \w{Q}[\w{\chi}] } ,
 \ee
 where $\w{Q}[\w{\chi}]$ is the Noether charge $(n-2)$-form of $\w{\chi}$,
 as defined in Property~\ref{p:evo:Noether_charge_form}.
