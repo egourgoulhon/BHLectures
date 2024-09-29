@@ -2482,7 +2482,7 @@ be recast in the form (\ref{e:evo:Lagrangian_diffeo_inv}).
 
 \begin{example}
 \label{x:evo:EH_Lagrangian}
-For general relativity, $L = R = g^{\mu\nu} g^{\rho\sigma} R_{\sigma\mu\rho\nu}$
+For general relativity, $L = (16\pi)^{-1} R = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\sigma\mu\rho\nu}$
 (Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}).
 \end{example}
 
@@ -2852,7 +2852,7 @@ of a 2-form [Eq.~(\ref{e:sta:Hodge_dual}) with $p=2$], the identity
 $(\dd\uu{\xi})_{\alpha\beta} = \nabla_\alpha  \xi_\beta - \nabla_\beta \xi_\alpha$
 [Eq.~(\ref{e:bas:def_ext_1f_nab})] and the antisymmetry of $\weps$, an expression
 equivalent to (\ref{e:evo:Q_GR_Komar}) is
-\be
+\be \label{e:evo:Noether_Q_GR}
     Q[\w{\xi}]_{\alpha_1\cdots\alpha_{n-2}} = - \nabla^\mu \xi^\nu
         \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}} .
 \ee
@@ -3007,7 +3007,7 @@ $\partial\Sigma = \Sp_{\rm int} \cup \Sp_{\rm ext}$, we get
     \mathscr{Q}_{\Sigma,\w{\xi}} = \int_{\Sp_{\rm int}^\nearrow} \w{Q}[\w{\xi}]
     + \int_{\Sp_{\rm ext}^\nearrow} \w{Q}[\w{\xi}] ,
 \]
-where the arrows mean that $\Sp_{\rm int}$ and  $\Sp_{\rm ext}$
+where the arrows indicate that $\Sp_{\rm int}$ and  $\Sp_{\rm ext}$
 are outward-oriented with respect to $\Sigma$ (which is itself future-oriented).
 Noticing that $\int_{\Sp_{\rm int}^\nearrow} \w{Q}[\w{\xi}] = - \mathscr{Q}_{\Sp_{\rm int},\w{\xi}}$
 and $\int_{\Sp_{\rm ext}^\nearrow} \w{Q}[\w{\xi}] = \mathscr{Q}_{\Sp_{\rm ext},\w{\xi}}$
@@ -3066,34 +3066,92 @@ the Noether charge of $\Sp$ with respect to the axisymmetric Killing vector $\w{
 
 Having introduced the concept of Noether charge related to diffeomorphism invariance,
 we are in position to define the Wald entropy of a stationary black hole.
-This requires the concepts of \emph{bifurcate Killing horizon} and \emph{bifurcation
-surface}, which have been introduced in Sec.~\ref{s:sta:bifur_Killing_hor}.
 
-\begin{greybox}
+\begin{prop}[Wald entropy as a Noether charge]
 Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 3$ governed
 by a diffeomorphism-invariant theory and containing a black hole, whose
-event horizon $\Hor$ is a Killing horizon that is part of a bifurcate
-Killing horizon of bifurcation surface $\Sp$. Let $\w{\chi}$ be the Killing
+event horizon $\Hor$ is a Killing horizon. Let $\w{\chi}$ be the Killing
 vector generating $\Hor$ and $\kappa$ the corresponding surface gravity:
 $\wnab_{\w{\chi}}\w{\chi} \equalH \kappa \w{\chi}$ [Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
-By virtue of Property~\ref{p:neh:zeroth_law_bifur}, $\kappa$ is a nonzero constant.
+Let us assume that the zeroth law holds, i.e. that $\kappa$ is constant over $\Hor$
+(cf. Property~\ref{p:evo:zeroth_law}). Morever,  let us assume $\kappa \neq 0$.
+Let $\Sp$ be a complete cross-section of $\Hor$.
 The \defin{Wald entropy}\index{Wald entropy}\index{entropy!Wald --} of the black hole is
 then defined as $\kappa^{-1}$ times
-the Noether charge of the bifurcation surface $\Sp$ with respect to $\w{\chi}$,
-up to the constant $\pi k_{\rm B}/(2 \hbar)$:
+the Noether charge of $\Sp$ with respect to $\w{\chi}$,
+up to the constant $2\pi k_{\rm B}/\hbar$:
 \be
-    \encadre{ S_{\rm W} := \frac{\pi k_{\rm B}}{2\hbar\kappa} \, \mathcal{Q}_{\Sp,\w{\chi}}
-    = \frac{\pi k_{\rm B}}{2\hbar\kappa}  \int_{\Sp} \w{Q}[\w{\chi}] } ,
+    \encadre{ S_{\rm W} := \frac{2 \pi k_{\rm B}}{\hbar\kappa} \, \mathcal{Q}_{\Sp,\w{\chi}}
+    = \frac{2 \pi k_{\rm B}}{\hbar\kappa}  \int_{\Sp} \w{Q}[\w{\chi}] } ,
 \ee
 where $\w{Q}[\w{\chi}]$ is the Noether charge $(n-2)$-form of $\w{\chi}$,
 as defined in Property~\ref{p:evo:Noether_charge_form}.
 Since $\w{\chi}$ is a Killing vector, $\mathcal{Q}_{\Sp,\w{\chi}}$ does not suffer from
 the ambiguity (\ref{e:evo:Q_surf_not_unique}), so that $S_{\rm W}$ is uniquely defined.
-\end{greybox}
+Moreover, $S_{\rm W}$ is independent of the choice of the cross-section $\Sp$ of $\Hor$.
+\end{prop}
+
+\begin{proof}
+Let us consider another complete cross-section $\Sp'$ of $\Hor$ lying entirely in the future of $\Hor$.
+Then $\Sp\cup\Sp'$ can be considered as the boundary of a part of $\Hor$, that we shall denote by
+$\Delta\Hor$. Stokes' theorem (\ref{e:bas:Stokes}) and the identity
+$\dd \w{Q}[\w{\chi}] = \w{J}[\w{\chi}]$ [Eq.~(\ref{e:evo:J_dQ})] gives
+\be \label{e:evo:start_proof_Wald_entr}
+    \int_{\Sp^\nearrow} \w{Q}[\w{\chi}] +  \int_{{\Sp'}^\nearrow} \w{Q}[\w{\chi}]
+    = \int_{\Delta\Hor} \w{J}[\w{\chi}] ,
+\ee
+where the arrows indicate that $\Sp$ and  $\Sp'$
+are outward-oriented with respect to $\Delta\Hor$, the orientation of the latter
+being set by a future-directed null vector field $\w{k}$ transverse to $\Hor$.
+From the definition (\ref{e:evo:def_Noether_current}),
+$\w{J}[\w{\chi}] := \w{\Theta}[\w{g},\Lie{\chi}\w{g}] - \w{\chi}\cdot\w{L}
+= - \w{\chi}\cdot\w{L}$, since $\Lie{\chi}\w{g}=0$ ($\w{\chi}$ Killing)
+along with the linearity of $\w{\Theta}$ imply $\w{\Theta}[\w{g},\Lie{\chi}\w{g}] =0$.
+From the very definition of the integral of a $(n-1)$-form over a $(n-1)$-dimensional
+manifold, we have then
+\[
+    \int_{\Delta\Hor} \w{J}[\w{\chi}] = - \int_{\Delta\Hor} \w{\chi}\cdot\w{L} = - \int_{\Delta\Hor} \w{L}(\w{\chi},\D\w{x}_1,\ldots,
+    \D\w{x}_{n-1}) ,
+\]
+where $\D\w{x}_1$, $\ldots$, $\D\w{x}_{n-1}$ are infinitesimal displacement vectors on $\Delta\Hor$
+forming a mesh of it. Now, since $\w{\chi}$ is tangent to $\Delta\Hor$ and $\w{L}$ is a
+$n$-form, we have necessarily $\w{L}(\w{\chi},\D\w{x}_1,\ldots,\D\w{x}_{n-1})=0$.
+Accordingly, the integral of $\w{J}[\w{\chi}]$ in the right-hand side of Eq.~(\ref{e:evo:start_proof_Wald_entr}) is zero. Given that
+$ \int_{\Sp^\nearrow} \w{Q}[\w{\chi}] = -  \mathcal{Q}_{\Sp,\w{\chi}}$ and
+$ \int_{{\Sp'}^\nearrow} \w{Q}[\w{\chi}] =  \mathcal{Q}_{\Sp',\w{\chi}}$,
+it follows that $\mathcal{Q}_{\Sp',\w{\chi}} = \mathcal{Q}_{\Sp,\w{\chi}}$,
+which shows that $S_{\rm W}$ does not depend on the choice of $\Sp$.
+\end{proof}
 
 
+If the considered diffeomorphism-invariant theory is general relativity,
+the Wald entropy coincides with the Bekenstein-Hawking entropy:
 
+\begin{prop}[Wald entropy for general relativity]
+For general relativity, the Wald entropy of a stationary black hole
+is its Bekenstein-Hawking entropy, as given by formula (\ref{e:evo:S_BH}):
+\be
+    S_{\rm W} = S_{\rm BH} = k_{\rm B}\frac{A}{4\hbar} \quad\mbox{(general relativity)}
+\ee
+$A$ being the black hole area.
+\end{prop}
 
+\begin{proof}
+For general relativity, the Noether charge $(n-2)$-form is given by Eq.~(\ref{e:evo:Q_GR_Komar}):
+$\w{Q}[\w{\chi}] = - \star (\dd \uu{\chi})$. We have then
+\[
+    \mathcal{Q}_{\Sp,\w{\chi}} = - \int_{\Sp}  \star (\dd \uu{\chi})
+    = - \frac{1}{2} \int_{\Sp} (\dd\w{\chi})_{\mu\nu} \, \D S^{\mu\nu}
+    = - \int_{\Sp} \nabla_\mu \chi_\nu  \, \D S^{\mu\nu} ,
+\]
+where the second equality follows from Lemma~\ref{p:sta:flux_integ_2form}
+and the third one from expression (\ref{e:bas:def_ext_1f_nab}) of the exterior
+derivative and the antisymmetric character of $\D S^{\mu\nu}$.
+Now, from Eq.~(\ref{e:sta:nab_chi_DS}),
+$\nabla_\mu \chi_\nu  \, \D S^{\mu\nu} = -2 \kappa \, \D S$,
+where $\D S := \sqrt{q}\, \D^{n-2} x$ is the area element of $\Sp$. Since $\kappa$
+is constant, there comes $\mathcal{Q}_{\Sp,\w{\chi}}  = 2 \kappa A$.
+\end{proof}
 
 
 
