@@ -2410,7 +2410,7 @@ See also Ref.~\cite{GrumiMS15} for an historical review up to 2013.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Beyond general relativity: Wald entropy and generalizations} \label{s:evo:Wald_entropy}
+\section{Thermodynamics beyond general relativity} \label{s:evo:Wald_entropy}
 
 \subsection{Introduction}
 
@@ -2587,40 +2587,40 @@ However, for simplicity, we shall not consider $\w{\mu}$ here.
 \end{remark}
 
 \begin{example}
-For general relativity, one has $\w{L} = R \weps$ (Example~\ref{x:evo:EH_Lagrangian}).
+For general relativity, one has $\w{L} = (16\pi)^{-1} R \weps$ (Example~\ref{x:evo:EH_Lagrangian}).
 Given a coordinate system $(x^\alpha)$
 on $\M$,
-this can be rewritten as $\w{L} = R \sqrt{-g} \, \w{e}$, where
+this can be rewritten as $\w{L} = (16\pi)^{-1} R \sqrt{-g} \, \w{e}$, where
 $g$ is the determinant of $\w{g}$ with respect to $(x^\alpha)$ and
 $\w{e}$ is the $n$-form whose components with respect to $(x^\alpha)$
 are $e_{\alpha_1\cdots\alpha_n} = 1$ (resp. $-1$) if $(\alpha_1,\ldots,\alpha_n)$ is an
 even (resp. odd) permutation of $(0,\ldots,n)$ and $0$ otherwise [cf. Eq.~(\ref{e:bas:eps_sqrt_g})].
-One has then $\delta\w{L} = \delta(R \sqrt{-g}) \, \w{e}$, since obviously $(x^\alpha)$, and thus
+One has then $\delta\w{L} = (16\pi)^{-1} \delta(R \sqrt{-g}) \, \w{e}$, since obviously $(x^\alpha)$, and thus
 $\w{e}$, is not altered by the variation $\delta\w{g}$.
 From the expression of $\delta(R\sqrt{-g})$ given by Eq.~(\ref{e:evo:proto_EH})
 and using $G_{\mu\nu} \delta g^{\mu\nu} = - G^{\mu\nu} \delta g_{\mu\nu}$,
-we get $\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps + \nabla_\mu H^\mu \, \weps$,
+we get $16\pi\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps + \nabla_\mu H^\mu \, \weps$,
 where $G^{\mu\nu}$ is the double metric dual of the Einstein tensor and
 $\w{H}$ is the vector field defined in terms of $\delta\w{g}$ by Eq.~(\ref{e:evo:def_H}),
 where $h^\alpha_{\ \, \beta} = g^{\alpha\mu} \delta  g_{\mu\beta}$
 since $h_{\alpha\beta}:= \delta g_{\alpha\beta}$. Now, the identity (\ref{e:bas:dveps_divv})
 yields $\nabla_\mu H^\mu \,  \weps = \dd (\w{H}\cdot\weps)$, so that
-$\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps +  \dd (\w{H}\cdot\weps)$.
+$16\pi \delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps +  \dd (\w{H}\cdot\weps)$.
 We conclude that the variation of the Einstein-Hilbert Lagrangian is indeed of the form
 (\ref{e:evo:delta_L_E_Theta}) with
 \be \label{e:evo:E_Theta_GR}
-    E^{\alpha\beta} = - G^{\alpha\beta}
+    E^{\alpha\beta} = - (16\pi)^{-1} \, G^{\alpha\beta}
     \qand
-    \w{\Theta} =  \w{H}\cdot\weps = \star\uu{H} ,
+    \w{\Theta} =  (16\pi)^{-1} \, \w{H}\cdot\weps = (16\pi)^{-1}\,  \star\!\uu{H} ,
 \ee
 where the last equality stems from the definition of the Hodge dual
 of a 1-form [Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$] ($\uu{H}$ being the 1-form
 metric dual of the vector $\w{H}$).
-In index notation, $\Theta_{\alpha_1\cdots\alpha_{n-1}} =   H^\mu \eps_{\mu\alpha_1\cdots\alpha_{n-1}}$.
+In index notation, $\Theta_{\alpha_1\cdots\alpha_{n-1}} = (16\pi)^{-1}  H^\mu \eps_{\mu\alpha_1\cdots\alpha_{n-1}}$.
 Substituting Eq.~(\ref{e:evo:def_H}) for $H^\mu$, we get the explicit expression of
 $\w{\Theta}[\w{g},\delta\w{g}]$:
 \be \label{e:evo:Theta_GR}
-    \Theta_{\alpha_1\cdots\alpha_{n-1}} = g^{\mu\nu} g^{\rho\sigma}
+    \Theta_{\alpha_1\cdots\alpha_{n-1}} = (16\pi)^{-1}\, g^{\mu\nu} g^{\rho\sigma}
     \left( \nabla_\sigma \delta g_{\nu\rho} - \nabla_\nu \delta g_{\rho\sigma} \right)
     \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}}  .
 \ee
@@ -2775,7 +2775,7 @@ Let us continue with the example of general relativity. From
 expression (\ref{e:evo:Theta_GR}) for $\w{\Theta}$ with
 $\delta g_{\mu\nu} = t \Liec{\xi} g_{\mu\nu}$ and $\Liec{\xi} g_{\mu\nu} = \nabla_\mu \xi_\nu + \nabla_\nu \xi_\mu$ [Eq.~(\ref{e:bas:Lie_g_Killing})], we get
 \bea
-  \w{\Theta}[\w{g},\Lie{\xi}\w{g}]_{\alpha_1\cdots\alpha_{n-1}} & = &
+ 16\pi   \w{\Theta}[\w{g},\Lie{\xi}\w{g}]_{\alpha_1\cdots\alpha_{n-1}} & = &
   g^{\mu\nu} \left( \nabla_\sigma \nabla_\nu \xi^\sigma + \nabla_\sigma \nabla^\sigma \xi_\nu
     - 2 \nabla_\nu \nabla_\rho \xi^\rho \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} \nonumber \\
     & = & g^{\mu\nu} \left( 2 R_{\nu\sigma} \xi^\sigma - \nabla_\sigma \nabla_\nu \xi^\sigma
@@ -2787,26 +2787,28 @@ where the contracted Ricci identity (\ref{e:bas:contract_Ricci_ident}) has been 
 line. Plugging this formula, as well as $\w{L} = R \weps$ (Example~\ref{x:evo:EH_Lagrangian}) into
 the definition (\ref{e:evo:def_Noether_current}) of $\w{J}[\w{\xi}]$ yields
 \[
-    J[\w{\xi}]_{\alpha_1\cdots\alpha_{n-1}} = \left(2 G^\mu_{\ \, \nu} \xi^\nu +
+    J[\w{\xi}]_{\alpha_1\cdots\alpha_{n-1}} = (16\pi)^{-1} \left(2 G^\mu_{\ \, \nu} \xi^\nu +
         \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
 \]
 If the field equations are obeyed, then $\w{G}=0$ (Example~\ref{x:evo:field_equations_GR}) and the above
 expression reduces to
 \be \label{e:evo:J_GR_comp}
-    J[\w{\xi}]_{\alpha_1\cdots\alpha_{n-1}} = \left(
+    J[\w{\xi}]_{\alpha_1\cdots\alpha_{n-1}} = (16\pi)^{-1} \left(
         \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
 \ee
 We recognize in the term within parentheses the \emph{Komar current of $\w{\xi}$}\index{Komar!current}\index{current!Komar --}  as defined by Eq.~(\ref{e:sta:def_Komar_current}):
 $\mathcal{J}[\w{\xi}]^\mu := \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu$.
 Accordingly, we may write
 \be \label{e:evo:J_GR_Komar}
-    \w{J}[\w{\xi}] = \w{\mathcal{J}}[\w{\xi}]  \cdot \weps = \star\uu{\mathcal{J}}[\w{\xi}]  ,
+    \w{J}[\w{\xi}] = (16\pi)^{-1}\, \w{\mathcal{J}}[\w{\xi}]  \cdot \weps
+    = (16\pi)^{-1} \star\uu{\mathcal{J}}[\w{\xi}]  ,
 \ee
 where the last equality stems from Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$.
 Hence, for general relativity, the Noether current $(n-1)$-form of $\w{\xi}$ is nothing but the
-Hodge dual of the (metric dual of) Komar current of $\w{\xi}$.
-That $\w{J}[\w{\xi}]$ is closed in that case follows readily from the identity (\ref{e:bas:dveps_divv}):
-$\dd\w{J}[\w{\xi}] = \dd( \w{\mathcal{J}}[\w{\xi}] \cdot \weps ) = (\wnab\cdot\w{\mathcal{J}}[\w{\xi}]) \weps$, along
+Hodge dual of the (metric dual of) Komar current of $\w{\xi}$, up to the factor
+$(16\pi)^{-1}$.
+That $\w{J}[\w{\xi}]$ is closed in this case follows readily from the identity (\ref{e:bas:dveps_divv}):
+$16\pi \, \dd\w{J}[\w{\xi}] = \dd( \w{\mathcal{J}}[\w{\xi}] \cdot \weps ) = (\wnab\cdot\w{\mathcal{J}}[\w{\xi}]) \weps$, along
 with the conservation law (\ref{e:sta:divJ_zero}): $\wnab\cdot\w{\mathcal{J}}[\w{\xi}] = 0$.
 \end{example}
 
@@ -2843,31 +2845,31 @@ $\w{Q}$ up to the addition of a closed $(n-2)$-form (cf. Lemma~1 in Ref.~\cite{W
 \label{x:evo:Noether_charge_form_GR}
 For general relativity, $\w{J}[\w{\xi}]$ is given by Eq.~(\ref{e:evo:J_GR_comp}), or Eq.~(\ref{e:evo:J_GR_Komar}) in terms of the Komar current of $\w{\xi}$.
 The Noether charge $(n-2)$-form is then nothing but minus the Hodge dual of the exterior derivative
-of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$):
+of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$), up to the factor $(16\pi)^{-1}$:
 \be \label{e:evo:Q_GR_Komar}
-    \w{Q}[\w{\xi}] = - \star (\dd \uu{\xi}) .
+    \w{Q}[\w{\xi}] = - (16\pi)^{-1}\, \star (\dd \uu{\xi}) .
 \ee
 Given the expression of the Hodge dual
 of a 2-form [Eq.~(\ref{e:sta:Hodge_dual}) with $p=2$], the identity
 $(\dd\uu{\xi})_{\alpha\beta} = \nabla_\alpha  \xi_\beta - \nabla_\beta \xi_\alpha$
-[Eq.~(\ref{e:bas:def_ext_1f_nab})] and the antisymmetry of $\weps$, an expression
+[Eq.~(\ref{e:bas:def_ext_1f_nab})] and the antisymmetry of $\weps$, a formula
 equivalent to (\ref{e:evo:Q_GR_Komar}) is
 \be \label{e:evo:Noether_Q_GR}
-    Q[\w{\xi}]_{\alpha_1\cdots\alpha_{n-2}} = - \nabla^\mu \xi^\nu
+    Q[\w{\xi}]_{\alpha_1\cdots\alpha_{n-2}} = -  (16\pi)^{-1}\,  \nabla^\mu \xi^\nu
         \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}} .
 \ee
 To prove that $\w{Q}[\w{\xi}]$ as given by (\ref{e:evo:Q_GR_Komar}) obeys
 $\dd\w{Q}[\w{\xi}] = \w{J}[\w{\xi}]$ [Eq.~(\ref{e:evo:J_dQ})], let us establish the
 Hodge dual of this relation: $\star\dd\w{Q}[\w{\xi}] = \star\w{J}[\w{\xi}]$,
 which is an equality between 1-forms. From Eq.~(\ref{e:evo:Q_GR_Komar}), we have
-$\star\dd\w{Q}[\w{\xi}] = - \star\dd \star (\dd \uu{\xi})$.
+$\star\dd\w{Q}[\w{\xi}] = - (16\pi)^{-1}\,  \star\dd \star (\dd \uu{\xi})$.
 Now, the operator $\star\dd\star$ is, up to a sign, the \defin{codifferential}\index{codifferential}
 $\w{\delta}$, which maps a $p$-form to a $(p-1)$-form and is defined by\footnote{See e.g. Eq.~(14.35) of Straumann's book \cite{Strau13}, whose sign
 convention we follow here. Note that the same letter $\delta$
 is used to denote the codifferential and the variation operator; to distinguish between the two,
 we are using a boldface symbol for the codifferential.}
 $\w{\delta} := (-1)^{n(p+1)+1} \star\dd\star$. Since $\dd \uu{\xi}$ is a 2-form, we get
-$\star\dd\w{Q}[\w{\xi}] = (-1)^n \w{\delta}(\dd \uu{\xi})$. From the expression of the
+$\star\dd\w{Q}[\w{\xi}] = (-1)^n (16\pi)^{-1}\, \w{\delta}(\dd \uu{\xi})$. From the expression of the
 codifferential in a coordinate chart $(x^\alpha)$ (cf. e.g. Eq.~(14.37) in Ref.~\cite{Strau13}), we may
 write, for any 2-form $\w{A}$:
 \[
@@ -2879,10 +2881,10 @@ Applying the above formula to $\w{A} := \dd\uu{\xi}$,  we get
 $\w{\delta}(\dd\uu{\xi})^\alpha = - \nabla_\mu (\nabla^\alpha \xi^\mu - \nabla^\mu \xi^\alpha) = \mathcal{J}[\w{\xi}]^\alpha$, i.e. $\w{\delta}(\dd\uu{\xi}) = \uu{\mathcal{J}}[\w{\xi}]$,
 where $\w{\mathcal{J}}[\w{\xi}]$ is the Komar current of $\w{\xi}$
 defined by Eq.~(\ref{e:sta:def_Komar_current}).
-Hence $\star\dd\w{Q}[\w{\xi}] = (-1)^n \uu{\mathcal{J}}[\w{\xi}]$. On the other hand, we have
-$\star \w{J}[\w{\xi}] =\star \star\uu{\mathcal{J}}[\w{\xi}]$ from
+Hence $\star\dd\w{Q}[\w{\xi}] = (-1)^n (16\pi)^{-1}\, \uu{\mathcal{J}}[\w{\xi}]$. On the other hand, we have
+$\star \w{J}[\w{\xi}] =(16\pi)^{-1}\, \star \star\uu{\mathcal{J}}[\w{\xi}]$ from
 Eq.~(\ref{e:evo:J_GR_Komar}). Since $\star\star = (-1)^n \mathrm{Id}$ for a 1-form
-(cf. e.g. formula (14.26) in Ref.~\cite{Strau13}), we get immediately
+(cf. e.g. formula (14.26) in Ref.~\cite{Strau13}), we immediately get
 $\star \w{J}[\w{\xi}]  = \star\dd\w{Q}[\w{\xi}]$, which is equivalent to
 Eq.~(\ref{e:evo:J_dQ}).
 \end{example}
@@ -3080,7 +3082,7 @@ The \defin{Wald entropy}\index{Wald entropy}\index{entropy!Wald --} of the black
 then defined as $\kappa^{-1}$ times
 the Noether charge of $\Sp$ with respect to $\w{\chi}$,
 up to the constant $2\pi k_{\rm B}/\hbar$:
-\be
+\be \label{e:evo:def_Wald_entropy}
     \encadre{ S_{\rm W} := \frac{2 \pi k_{\rm B}}{\hbar\kappa} \, \mathcal{Q}_{\Sp,\w{\chi}}
     = \frac{2 \pi k_{\rm B}}{\hbar\kappa}  \int_{\Sp} \w{Q}[\w{\chi}] } ,
 \ee
@@ -3130,7 +3132,7 @@ the Wald entropy coincides with the Bekenstein-Hawking entropy:
 \begin{prop}[Wald entropy for general relativity]
 For general relativity, the Wald entropy of a stationary black hole
 is its Bekenstein-Hawking entropy, as given by formula (\ref{e:evo:S_BH}):
-\be
+\be \label{e:evo:S_W_S_BH_GR}
     S_{\rm W} = S_{\rm BH} = k_{\rm B}\frac{A}{4\hbar} \quad\mbox{(general relativity)}
 \ee
 $A$ being the black hole area.
@@ -3138,9 +3140,9 @@ $A$ being the black hole area.
 
 \begin{proof}
 For general relativity, the Noether charge $(n-2)$-form is given by Eq.~(\ref{e:evo:Q_GR_Komar}):
-$\w{Q}[\w{\chi}] = - \star (\dd \uu{\chi})$. We have then
+$\w{Q}[\w{\chi}] = - (16\pi)^{-1}\, \star (\dd \uu{\chi})$. We have then
 \[
-    \mathcal{Q}_{\Sp,\w{\chi}} = - \int_{\Sp}  \star (\dd \uu{\chi})
+   16\pi  \mathcal{Q}_{\Sp,\w{\chi}} = - \int_{\Sp}  \star (\dd \uu{\chi})
     = - \frac{1}{2} \int_{\Sp} (\dd\w{\chi})_{\mu\nu} \, \D S^{\mu\nu}
     = - \int_{\Sp} \nabla_\mu \chi_\nu  \, \D S^{\mu\nu} ,
 \]
@@ -3150,7 +3152,9 @@ derivative and the antisymmetric character of $\D S^{\mu\nu}$.
 Now, from Eq.~(\ref{e:sta:nab_chi_DS}),
 $\nabla_\mu \chi_\nu  \, \D S^{\mu\nu} = -2 \kappa \, \D S$,
 where $\D S := \sqrt{q}\, \D^{n-2} x$ is the area element of $\Sp$. Since $\kappa$
-is constant, there comes $\mathcal{Q}_{\Sp,\w{\chi}}  = 2 \kappa A$.
+is constant, there comes $\mathcal{Q}_{\Sp,\w{\chi}}  = \kappa A/(8\pi)$.
+In view of the definition (\ref{e:evo:def_Wald_entropy}) of $S_{\rm W}$,
+this establishes (\ref{e:evo:S_W_S_BH_GR}).
 \end{proof}
 
 
