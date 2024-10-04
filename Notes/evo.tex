@@ -2482,8 +2482,8 @@ be recast in the form (\ref{e:evo:Lagrangian_diffeo_inv}).
 
 \begin{example}
 \label{x:evo:EH_Lagrangian}
-For general relativity, $L = (16\pi)^{-1} R = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\sigma\mu\rho\nu}$
-(Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}).
+For general relativity, $L$ is the Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}:
+$L = (16\pi)^{-1} R = (16\pi)^{-1} g^{\mu\nu} R_{\mu\nu} =  (16\pi)^{-1} g^{\mu\nu} R^\sigma_{\ \,\mu\sigma\nu}$, hence $L = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu}$.
 \end{example}
 
 By \emph{diffeomorphism-invariant} theory, it is meant
@@ -3156,6 +3156,48 @@ is constant, there comes $\mathcal{Q}_{\Sp,\w{\chi}}  = \kappa A/(8\pi)$.
 In view of the definition (\ref{e:evo:def_Wald_entropy}) of $S_{\rm W}$,
 this establishes (\ref{e:evo:S_W_S_BH_GR}).
 \end{proof}
+
+\begin{prop}[Explicit expression of the Wald entropy]
+Let us consider a stationary black hole in diffeomorphism-invariant theory,
+whose Lagrangian scalar $L$ is recast as
+(\ref{e:evo:Lagrangian_diffeo_inv}). Assuming that the black hole event
+horizon is part of a bifurcate Killing horizon, with bifurcation surface ${\hat \Sp}$,
+the Wald entropy is expressible as
+\be \label{e:evo:S_Wald_explicit}
+    S_{\rm W} = - 2\pi \int_{\hat{\Sp}} \frac{\delta L}{\delta R_{\rho\sigma\mu\nu}}
+        \; {}^{\hat{\Sp}}\!\!\eps^\perp_{\mu\nu}\,  \eps_{\rho\sigma\alpha_1\dots\alpha_{n-2}} ,
+\ee
+where
+\begin{itemize}
+\item ${\delta L}/{\delta R_{\alpha\beta\gamma\delta}}$ is the Euler-Lagrange derivative
+of $L$ with respect to $R_{\alpha\beta\gamma\delta}$, if the latter were considered as a field independent
+of $g_{\alpha\beta}$ in expression~(\ref{e:evo:Lagrangian_diffeo_inv}) of $L$:
+\be
+    \frac{\delta L}{\delta R_{\alpha\beta\gamma\delta}} := \der{L}{R_{\alpha\beta\gamma\delta}}
+        - \nabla_\mu  \der{L}{\nabla_\mu R_{\alpha\beta\gamma\delta}}
+        + \nabla_{(\mu} \nabla_{\nu)} \der{L}{\nabla_{(\mu} \nabla_{\nu)} R_{\alpha\beta\gamma\delta}}
+        - \cdots
+\ee
+\item ${}^{\hat{\Sp}}\!\!\weps^\perp$ is the \defin{binormal 2-form}\index{binormal 2-form}
+to $\hat{\Sp}$, i.e. the 2-form defined by
+\be
+    {}^{\hat{\Sp}}\!\!\weps^\perp := \uu{s} \wedge \uu{n} \quad \iff \quad
+    {}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta} = s_\alpha n_\beta
+        - n_\alpha s_\beta ,
+\ee
+where the vector fields $(\w{n},\w{s})$ form at each point $p\in\hat{\Sp}$
+an orthonormal basis of the vector space $T_p^\perp  \hat{\Sp}$ normal to $\hat{\Sp}$,
+with $\w{n}$ future-directed unit timelike and $\w{s}$ outward-directed\footnote{See item (iv)
+on p.~\pageref{e:sta:def_weps_S} for details.} unit spacelike; the binormal 2-form
+is independent of the choice of the orthonormal basis $(\w{n},\w{s})$
+and is related to the area element normal bivector
+to $\hat{\Sp}$, $\D\w{S}$ (cf. Property~\ref{p:sta:area_elem_bivector}), by
+$\D S_{\alpha\beta} = {}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta} \,  \sqrt{q}\, \D^{n-2} x$;
+\item $\eps_{\rho\sigma\alpha_1\dots\alpha_{n-2}}$ is the spacetime Levi-Civita tensor,
+so that the integral over the $(n-2)$-dimensional manifold $\hat{\Sp}$ in Eq.~(\ref{e:evo:S_Wald_explicit})
+is that of the $(n-2)$-form corresponding to the free indices $\alpha_1\dots\alpha_{n-2}$.
+\end{itemize}
+\end{prop}
 
 
 
