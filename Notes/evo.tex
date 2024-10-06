@@ -2542,7 +2542,7 @@ expressible as
     \delta \w{L} = E^{\mu\nu} \delta g_{\mu\nu} \, \weps + \dd \w{\Theta} ,
 \ee
 where $E^{\mu\nu}$ are the components of a symmetric type-$(2,0)$ tensor field $\w{E}$,
-called the \defin{Euler-Lagrange tensor},
+called the \defin{Euler-Lagrange tensor}\index{Euler-Lagrange!tensor},
 and $\w{\Theta}$ is a $(n-1)$-form, called the
 \defin{symplectic potential form}\index{symplectic!potential form} \cite{IyerW94}.
 The $n$-form $\dd \w{\Theta}$ is the exterior derivative of $\w{\Theta}$
@@ -2633,7 +2633,7 @@ metric tensor variation $\delta\w{g}$ that has compact support if, and only if,
 \be \label{e:evo:eom_E}
     \w{E} = 0 .
 \ee
-This constitutes the so-called \defin{Euler-Lagrange equations}\index{Euler-Lagrange equations} for the considered gravity theory, also called the \defin{field equations}\index{field!equations} or
+This constitutes the so-called \defin{Euler-Lagrange equations}\index{Euler-Lagrange!equation} for the considered gravity theory, also called the \defin{field equations}\index{field!equations} or
 \defin{equations of motion}.
 \end{prop}
 \begin{proof}
@@ -3164,12 +3164,12 @@ whose Lagrangian scalar $L$ is recast as
 horizon is part of a bifurcate Killing horizon, with bifurcation surface ${\hat \Sp}$,
 the Wald entropy is expressible as
 \be \label{e:evo:S_Wald_explicit}
-    S_{\rm W} = - 2\pi \int_{\hat{\Sp}} \frac{\delta L}{\delta R_{\rho\sigma\mu\nu}}
-        \; {}^{\hat{\Sp}}\!\!\eps^\perp_{\mu\nu}\,  \eps_{\rho\sigma\alpha_1\dots\alpha_{n-2}} ,
+    \encadre{ S_{\rm W} = - 2\pi \frac{k_{\rm B}}{\hbar} \int_{\hat{\Sp}} \frac{\delta L}{\delta R_{\mu\nu\rho\sigma}}
+        \; {}^{\hat{\Sp}}\!\!\eps^\perp_{\rho\sigma}\,  \D S_{\mu\nu} },
 \ee
 where
 \begin{itemize}
-\item ${\delta L}/{\delta R_{\alpha\beta\gamma\delta}}$ is the Euler-Lagrange derivative
+\item ${\delta L}/{\delta R_{\alpha\beta\gamma\delta}}$ stands for the type-$(4,0)$ tensor field that is the \defin{Euler-Lagrange derivative}\index{Euler-Lagrange!derivative}
 of $L$ with respect to $R_{\alpha\beta\gamma\delta}$, if the latter were considered as a field independent
 of $g_{\alpha\beta}$ in expression~(\ref{e:evo:Lagrangian_diffeo_inv}) of $L$:
 \be
@@ -3178,28 +3178,66 @@ of $g_{\alpha\beta}$ in expression~(\ref{e:evo:Lagrangian_diffeo_inv}) of $L$:
         + \nabla_{(\mu} \nabla_{\nu)} \der{L}{\nabla_{(\mu} \nabla_{\nu)} R_{\alpha\beta\gamma\delta}}
         - \cdots
 \ee
+\item $\D S_{\alpha\beta}$ is the metric dual of the area element normal bivector
+$\D S^{\alpha\beta}$ to $\hat{\Sp}$, as defined by Eq.~(\ref{e:sta:area_bivector});
 \item ${}^{\hat{\Sp}}\!\!\weps^\perp$ is the \defin{binormal 2-form}\index{binormal 2-form}
-to $\hat{\Sp}$, i.e. the 2-form defined by
-\be
-    {}^{\hat{\Sp}}\!\!\weps^\perp := \uu{s} \wedge \uu{n} \quad \iff \quad
+to $\hat{\Sp}$, i.e. for each point $p\in\hat{\Sp}$,
+${}^{\hat{\Sp}}\!\!\weps^\perp | _p$ is
+the volume 2-form of the metric induced by $\w{g}$ in
+the vector space $T_p^\perp  \hat{\Sp}$ normal to $\hat{\Sp}$ equipped with the
+future-outward orientation\footnote{See item (iv)
+on p.~\pageref{e:sta:def_weps_S} for details.}; ${}^{\hat{\Sp}}\!\!\weps^\perp$ can be expressed
+as the exterior product $\uu{s} \wedge \uu{n}$ of
+any pair of vector fields $(\w{n},\w{s})$ along  $\hat{\Sp}$ forming
+an orthonormal basis of $T_p^\perp  \hat{\Sp}$ at each $p\in\hat{\Sp}$,
+with $\w{n}$ future-directed unit timelike and $\w{s}$ outward-directed unit spacelike:
+\be \label{e:evo:eps_perp_s_wedge_n}
+    {}^{\hat{\Sp}}\!\!\weps^\perp = \uu{s} \wedge \uu{n} \quad \iff \quad
     {}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta} = s_\alpha n_\beta
-        - n_\alpha s_\beta ,
+        - n_\alpha s_\beta .
 \ee
-where the vector fields $(\w{n},\w{s})$ form at each point $p\in\hat{\Sp}$
-an orthonormal basis of the vector space $T_p^\perp  \hat{\Sp}$ normal to $\hat{\Sp}$,
-with $\w{n}$ future-directed unit timelike and $\w{s}$ outward-directed\footnote{See item (iv)
-on p.~\pageref{e:sta:def_weps_S} for details.} unit spacelike; the binormal 2-form
-is independent of the choice of the orthonormal basis $(\w{n},\w{s})$
-and is related to the area element normal bivector
-to $\hat{\Sp}$, $\D\w{S}$ (cf. Property~\ref{p:sta:area_elem_bivector}), by
-$\D S_{\alpha\beta} = {}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta} \,  \sqrt{q}\, \D^{n-2} x$;
-\item $\eps_{\rho\sigma\alpha_1\dots\alpha_{n-2}}$ is the spacetime Levi-Civita tensor,
-so that the integral over the $(n-2)$-dimensional manifold $\hat{\Sp}$ in Eq.~(\ref{e:evo:S_Wald_explicit})
-is that of the $(n-2)$-form corresponding to the free indices $\alpha_1\dots\alpha_{n-2}$.
 \end{itemize}
+Note that Eqs.~(\ref{e:sta:area_bivector}) and (\ref{e:evo:eps_perp_s_wedge_n})
+establish the following relation between
+the area element normal bivector $\D\w{S}$ and
+the binormal 2-form ${}^{\hat{\Sp}}\!\!\weps^\perp$:
+\be \label{e:evo:DS_eps_perp}
+    \D S_{\alpha\beta} = {}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta} \; \D S ,
+\ee
+where $\D S =  \sqrt{q}\, \D^{n-2} x$ is the area element of $\hat{\Sp}$.
 \end{prop}
+We refer to Ref.~\cite{IyerW94} for the proof.
+Here, we shall just check that formula~(\ref{e:evo:S_Wald_explicit}) yields the
+correct value for general relativity:
 
+\begin{example}
+For general relativity,  $L = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu}$
+(cf. Example~\ref{x:evo:EH_Lagrangian}), so that
+\[
+    \frac{\delta L}{\delta R_{\alpha\beta\gamma\delta}} = \der{L}{R_{\alpha\beta\gamma\delta}}
+    = \frac{1}{16\pi} g^{\alpha\gamma} g^{\beta\delta} .
+\]
+Accordingly, formula~(\ref{e:evo:S_Wald_explicit}), combined with Eq.~(\ref{e:evo:DS_eps_perp}), yields
+\[
+    \frac{\hbar}{k_{\rm  B}} \, S_{\rm W}  = -\frac{1}{8} \int_{\hat{\Sp}} g^{\mu\rho} g^{\nu\sigma} \,
+    {}^{\hat{\Sp}}\!\!\eps^\perp_{\rho\sigma} \, {}^{\hat{\Sp}}\!\!\eps^\perp_{\mu\nu} \,
+    \D S
+    = - \frac{1}{8} \int_{\hat{\Sp}}
+    \underbrace{({}^{\hat{\Sp}}\!\!\eps^\perp)^{\mu\nu} \, {}^{\hat{\Sp}}\!\!\eps^\perp_{\mu\nu}}_{-2} \,  \D S
+    = \frac{1}{4} \int_{\hat{\Sp}} \D S  = \frac{A}{4} ,
+\]
+where $A$ is the area of $\hat{\Sp}$ and $({}^{\hat{\Sp}}\!\!\eps^\perp)^{\mu\nu} \, {}^{\hat{\Sp}}\!\!\eps^\perp_{\mu\nu}=-2$
+follows immediately from Eq.~(\ref{e:evo:eps_perp_s_wedge_n}) along with
+$n_\mu n^\mu = -1$, $n_\mu s^\mu = 0$ and $s_\mu s^\mu = 1$.
+Hence we recover formula~(\ref{e:evo:S_W_S_BH_GR}) --- the Bekenstein-Hawking entropy.
+\end{example}
 
+Of course, being defined by a formula that reduces to the Bekenstein-Hawking entropy
+for general relativity is not sufficient by itself to assert that the Wald entropy
+is the correct definition of entropy for all diffeomorphism-invariant theories
+of gravity. This holds because the Wald entropy naturally enters in the
+generalization of the first law to all diffeomorphism-invariant theories
+that admit a Hamiltonian formulation.
 
 
 
