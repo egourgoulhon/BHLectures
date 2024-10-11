@@ -392,8 +392,15 @@ Hence the dual basis to the natural basis $(\wpar_\alpha)$ is formed by the
 differentials of the coordinates. This justifies the notation $\dd x^\alpha$ used for its elements.
 \end{remark}
 
-Of course natural bases are not the only bases in the vector
-space $T_p\M$. One may use a basis $(\w{e}_\alpha)$ that is not related to a coordinate system on $\M$, for instance an orthonormal basis with respect to some metric.
+By combining Eqs.~(\ref{e:bas:grad_f_der_f}), (\ref{e:bas:v_va_wpar_a}) and (\ref{e:bas:dual_basis_nat}), it is
+easy to see that the 1-form $\dd f$ acting on a vector $\w{v}$ is nothing but $\w{v}$ acting on the scalar field
+$f$:
+\be \label{e:bas:df_v_eq_v_f}
+    \encadre{ \langle\dd f, \w{v} \rangle = \w{v}(f) }.
+\ee
+
+Natural bases are of course not the only bases in the vector
+space $T_p\M$. One may use a basis $(\w{e}_\alpha)$ that is not related to any coordinate system on $\M$, for instance an orthonormal basis with respect to some metric.
 There exists then a unique basis $(\w{e}^\alpha)$
 of the dual space ${T_p^*\M}$ such that\footnote{Notice that,
 according to the standard usage, the symbol for the vector $\w{e}_\alpha$ and that for the linear form $\w{e}^\alpha$ differ only by the position of the index $\alpha$.}
@@ -1400,43 +1407,59 @@ in relativistic hydrodynamics (cf. e.g. Ref.~\cite{Gourg13}).
 
 Being tensor fields, differential forms are subject to the covariant
 and Lie derivatives discussed above. In addition, they are subject to a third kind
-of derivative, called the \emph{exterior derivative}.
-The \defin{exterior derivative}\index{exterior!derivative}\index{derivative!exterior --}
- of a $p$-form $\w{\omega}$ is a
-$(p+1)$-form that is denoted $\dd\w{\omega}$ and whose components
-with respect to a given coordinate system $(x^\alpha)$ are defined by
-\begin{subequations}
+of derivative defined as follows.  For any $p$-form $\w{\omega}$,
+its \defin{exterior derivative}\index{exterior!derivative}\index{derivative!exterior --}
+is the $(p+1)$-form $\dd\w{\omega}$
+whose action on a $(p+1)$-uple of vector fields $(\w{v}_1,\ldots,\w{v}_{p+1})$
+is given by
 \begin{align}
-    \mbox{0-form: \ }  & (\dd\w{\omega})_\alpha :=
+\dd\w{\omega}(\w{v}_1,\ldots,\w{v}_{p+1}) := & \sum_{i=1}^{p+1} (-1)^{i+1}
+    \w{v}_i\left(\w{\omega}(\w{v}_1,\ldots,\w{v}_{i-1},\w{v}_{i+1},\ldots,\w{v}_{p+1})\right) \nonumber \\
+    & + \sum_{i,j=1\atop i < j}^{p+1}
+    (-1)^{i+j} \w{\omega}\left([\w{v}_i,\w{v}_j],\w{v}_1,\ldots,\w{v}_{i-1},\w{v}_{i+1},
+        \ldots,\w{v}_{j-1},\w{v}_{j+1},\ldots,\w{v}_{p+1}\right) , \label{e:bas:def_ext_der}
+\end{align}
+where in the first line $\w{v}_i\left(\cdots\right)$ stands for the action of the vector field
+$\w{v}_i$ on the scalar field $\w{\omega}(\w{v}_1,\ldots,\w{v}_{i-1},\w{v}_{i+1},\ldots,\w{v}_{p+1})$
+[cf. Eq.~(\ref{e:bas:def_vector})].
+For $p=0$ (scalar field), Eq.~(\ref{e:bas:def_ext_der}) with $\w{\omega}\to f$  reduces
+to $\langle \dd f, \w{v}_1 \rangle := \w{v}_1(f)$, i.e. one recovers Eq.~(\ref{e:bas:df_v_eq_v_f}). Hence, for a
+scalar field, the exterior derivative is nothing but the differential. For $p=1$, Eq.~(\ref{e:bas:def_ext_der})
+becomes
+\be
+    \dd\w{\omega}(\w{v}_1,\w{v}_2) = \w{v}_1 \left( \langle \w{\omega}, \w{v}_2 \rangle \right)
+        - \w{v}_2 \left( \langle \w{\omega}, \w{v}_1 \rangle \right)
+        - \left\langle \w{\omega},\, [\w{v}_1,\w{v}_2] \right\rangle .
+\ee
+In terms of components with respect to a coordinate system $(x^\alpha)$,
+the definition (\ref{e:bas:def_ext_der}) yields
+\begin{subequations}
+\label{e:bas:def_der_ext_comp}
+\begin{align}
+    \mbox{0-form: \ }  & (\dd\w{\omega})_\alpha =
         \der{\omega}{x^\alpha} \label{e:bas:def_ext_0f} \\
-    \mbox{1-form: \ }  & (\dd\w{\omega})_{\alpha\beta} :=
+    \mbox{1-form: \ }  & (\dd\w{\omega})_{\alpha\beta} =
     \der{\omega_\beta}{x^\alpha} - \der{\omega_\alpha}{x^\beta}
              \label{e:bas:def_ext_1f} \\
-    \mbox{2-form: \ }  & (\dd\w{\omega})_{\alpha\beta\gamma} :=
+    \mbox{2-form: \ }  & (\dd\w{\omega})_{\alpha\beta\gamma} =
     \der{\omega_{\beta\gamma}}{x^\alpha} -
     \der{\omega_{\alpha\gamma}}{x^\beta} +
     \der{\omega_{\alpha\beta}}{x^\gamma} \label{e:bas:def_ext_2f} \\
      \mbox{$p$-form: \ }  &
-     (\dd\w{\omega})_{\alpha_1\cdots\alpha_{p+1}} :=
+     (\dd\w{\omega})_{\alpha_1\cdots\alpha_{p+1}} =
      \sum_{i=1}^{p+1} (-1)^{i+1} \der{}{x^{\alpha_i}}
      \omega_{\alpha_1\cdots\alpha_{i-1}\alpha_{i+1}\cdots\alpha_{p+1}} .
 \end{align}
 \end{subequations}
-It can be easily checked that these formulas, although expressed in terms of
-partial derivatives of components in a coordinate system, do define tensor fields.
-Moreover, the result is clearly antisymmetric (assuming that $\w{\omega}$ is), so
-that we end up with $(p+1)$-forms.
-Notice that for a scalar field (0-form), the exterior derivative is nothing but the
-differential 1-form $\dd f$ already defined in Sec.~\ref{s:bas:linear_form}.
-Notice also that the exterior derivative appeals only to the
-manifold structure. It does not depend upon the metric tensor  $\w{g}$, nor upon
-any other extra structure on $\M$.
 
 \begin{remark}
-Although the exterior derivative does not depend on the metric $\w{g}$ and
-hence on the Levi-Civita connection $\wnab$, one may replace
-all partial derivatives in formulas
-(\ref{e:bas:def_ext_0f})-(\ref{e:bas:def_ext_2f}) by covariant derivatives,
+The exterior derivative appeals only to the
+manifold structure; it does not depend upon the metric tensor $\w{g}$, nor upon
+any other extra structure on $\M$.
+Nevertheless, one may replace
+all partial derivatives in formulas (\ref{e:bas:def_der_ext_comp})
+by covariant derivatives taken with respect to the Levi-Civita connection $\wnab$
+of $\w{g}$,
 thanks to the symmetry of the Christoffel symbols on their last two indices:
 \begin{subequations}
 \begin{align}
@@ -1487,7 +1510,7 @@ $(d-1)$-form $\w{\omega}$ on $\mathscr{D}$,
     \int_{\mathscr{D}} \dd\w{\omega} },
 \ee
 where $\partial\mathscr{D}$ is $\mathscr{D}$'s boundary
-oriented according to the \emph{outward convention}: if $\weps_{\mathscr{D}}$ is the $d$-form defining
+oriented according to the \defin{outward convention}: if $\weps_{\mathscr{D}}$ is the $d$-form defining
 the orientation of $\mathscr{D}$ (cf. Sec.~\ref{s:bas:Levi-Civita_tensor}), the $(d-1)$-form
 defining the orientation of $\partial\mathscr{D}$ is chosen to be $\w{v}\cdot\weps_{\mathscr{D}}$,
 where $\w{v}$ is an outward-pointing\footnote{By \defin{outward-pointing}\index{outward-pointing}, it is meant
