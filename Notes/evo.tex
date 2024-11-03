@@ -3249,13 +3249,61 @@ of total mass $M$ --- the variation of which constitutes the left-hand side of t
 thereby generalizating the concept of ADM mass\index{ADM!mass} beyond general relativity.
 The covariant phase space formalism is an approach to Hamiltonian mechanics that
 preserves general covariance, while the standard approach relies on the choice of
-a time function $t$, with respect to which the evolution of the system is governed by
-Hamilton's equations\index{Hamilton's equations}:
-\be
-    \derd{q}{t} = \{q, H \} \qand \derd{p}{t} = \{p, H\} ,
+a time function $t$, with respect to which the evolution is governed by
+\emph{Hamilton's equations}. For a system with $N$ degrees of freedom,
+\defin{Hamilton's equations}\index{Hamilton's equations} are
+\be \label{e:evo_Hamilton_eqs_finite}
+    \derd{q^i}{t} = \{q^i, H \} \qand \derd{p_i}{t} = \{p_i, H\} , \quad 1 \leq i \leq N
 \ee
-where $(q,p)$ are canonical coordinates on the system's phase space and $\{.,.\}$
-stands for the Poisson bracket\index{Poisson!bracket}.
+where the $q^i$'s are coordinates describing the system's configuration,
+the $p_i$'s are the conjuguate momenta (i.e. $p_i := \dert{L}{{\dot q}^i}$, where
+$L = L(q^i,{\dot q}^i)$ is the system's Lagrangian),
+$H$ is the system's Hamiltonian
+and $\{.,.\}$
+stands for the Poisson bracket\index{Poisson!bracket}:
+\be
+ \{f,g\} := \sum_{i=1}^N \left( \der{f}{q^i} \, \der{g}{p_i} - \der{g}{q^i} \, \der{f}{p_i} \right) .
+\ee
+The coordinates $(y^a) := (q^1,\ldots,q^N,p_1,\ldots,p_N)$ span a manifold $\mathcal{F}$ of dimension
+$2N$ called the \defin{phase space}\index{phase space} of the system.
+The Poisson bracket can be rewritten covariantly (i.e. in a form independent of the
+coordinates $(y^a)$) by introducing the following 2-form on $\mathcal{F}$:
+\be \label{e:evo:def_symplectic_finite}
+    \Omega := \sum_{i=1}^N \Dd p_i \wedge \Dd q^i ,
+\ee
+where $\Dd$ stands for the exterior derivative\footnote{On phase space manifolds, we are
+not using boldface notations for operators and tensor fields, keeping them for the spacetime
+manifold only. Hence the exterior derivative on $\mathcal{F}$ is denoted by $\Dd$, and not
+$\dd$, as introduced in Sec.~\ref{s:bas:ext_deriv}, the 2-form (\ref{e:evo:def_symplectic_finite}) is denoted $\Omega$ and not $\w{\Omega}$, etc.}
+ on $\mathcal{F}$,
+so that $\Dd p_i$ (resp. $\Dd q^i$) is the differential 1-form of $p_i$
+(resp. $q^i$) considered as a scalar field on $\mathcal{F}$.
+Given that $q^i = y^i$ and $p_i = y^{i+N}$,
+the components of $\Omega$ with respect to the coordinates
+$(y^a)$ are $\Omega_{ab} = \left( \sum_{i=1}^N \delta^{i+N}_a \delta^i_b - \delta^i_a \delta^{i+N}_b\right) = \delta_{a,b+N} - \delta_{b,a+N}$. Hence, we may write,
+using block matrix notation,
+\be
+    \Omega_{ab} = \begin{pmatrix}
+                    0 & - I_N \\
+                    I_N & 0
+                  \end{pmatrix} ,
+\ee
+where $a$ and $b$ are respectively the row and column indices
+and $I_N$ stands for the identity matrix of size $N$.
+
+
+The 2-form $\Omega$ is exact:
+\be
+    \Omega = \Dd \Theta,
+\ee
+where $\Theta$ is the 1-form defined by
+\be
+    \Theta := \sum_{i=1}^N  p_i\,  \Dd q^i .
+\ee
+$\Theta$ is called the \defin{canonical 1-form}\index{canonical!1-form} or the
+\defin{symplectic potential}\index{symplectic!potential}.
+
+
 
 
 
