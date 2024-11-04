@@ -3260,8 +3260,8 @@ the $p_i$'s are the conjuguate momenta (i.e. $p_i := \dert{L}{{\dot q}^i}$, wher
 $L = L(q^i,{\dot q}^i)$ is the system's Lagrangian),
 $H$ is the system's Hamiltonian
 and $\{.,.\}$
-stands for the Poisson bracket\index{Poisson!bracket}:
-\be
+stands for the \defin{Poisson bracket}\index{Poisson!bracket}:
+\be \label{e:evo:Poisson_bracket_canon}
  \{f,g\} := \sum_{i=1}^N \left( \der{f}{q^i} \, \der{g}{p_i} - \der{g}{q^i} \, \der{f}{p_i} \right) .
 \ee
 The coordinates $(y^a) := (q^1,\ldots,q^N,p_1,\ldots,p_N)$ span a manifold $\mathcal{F}$ of dimension
@@ -3280,9 +3280,9 @@ so that $\Dd p_i$ (resp. $\Dd q^i$) is the differential 1-form of $p_i$
 (resp. $q^i$) considered as a scalar field on $\mathcal{F}$.
 Given that $q^i = y^i$ and $p_i = y^{i+N}$,
 the components of $\Omega$ with respect to the coordinates
-$(y^a)$ are $\Omega_{ab} = \left( \sum_{i=1}^N \delta^{i+N}_a \delta^i_b - \delta^i_a \delta^{i+N}_b\right) = \delta_{a,b+N} - \delta_{b,a+N}$. Hence, we may write,
+$(y^a)$ are $\Omega_{ab} =  \sum_{i=1}^N \left( \delta^{i+N}_a \delta^i_b - \delta^i_a \delta^{i+N}_b\right) = \delta_{a,b+N} - \delta_{b,a+N}$. Hence, we may write,
 using block matrix notation,
-\be
+\be \label{e:evo:Omega_ab}
     \Omega_{ab} = \begin{pmatrix}
                     0 & - I_N \\
                     I_N & 0
@@ -3290,9 +3290,46 @@ using block matrix notation,
 \ee
 where $a$ and $b$ are respectively the row and column indices
 and $I_N$ stands for the identity matrix of size $N$.
+Any coordinate system on $\mathcal{F}$ in which the 2-form $\Omega$
+is expressible as (\ref{e:evo:def_symplectic_finite}), or equivalenty
+in which the components of $\Omega$ are the matrix (\ref{e:evo:Omega_ab}),
+are called  \defin{canonical coordinates}\index{canonical!coordinates}\index{coordinates!canonical --}.
+The matrix $(\Omega_{ab})$
+is clearly invertible, its inverse being its opposite:
+\be \label{e:evo:inv_Omega_ab}
+    (\Omega^{-1})^{ab} = \begin{pmatrix}
+                    0 & I_N \\
+                    - I_N & 0
+                  \end{pmatrix} .
+\ee
+This implies that the 2-form $\Omega$ is non-degenerate and allows one
+to define an antisymmetric type-$(2,0)$ tensor field on $\mathscr{F}$,
+called the \defin{Poisson bivector}\index{Poisson!bivector}\index{bivector!Poisson --},
+by
+\be
+    \Omega^{-1} = (\Omega^{-1})^{ab}\,  \partial_a \otimes\partial_b .
+\ee
+As a tensor of type $(2,0)$, $\Omega^{-1}$ acts bilinearly on 1-forms (cf. Sec.~\ref{s:bas:tensors}) and one may define the \defin{Poisson bracket} of two
+scalar fields $f$ and $g$ on $\mathcal{F}$ by letting $\Omega^{-1}$ act on
+the pair of 1-forms $(\Dd f, \Dd g)$:
+\be \label{e:evo:Poisson_bracket}
+   \encadre{ \{f,g\} := \Omega^{-1}(\Dd f, \Dd g) }.
+\ee
+Given the components (\ref{e:evo:inv_Omega_ab}) of $\Omega^{-1}$ in canonical
+coordinates, one easily check that this definition reduces to
+(\ref{e:evo:Poisson_bracket_canon}) for these type of coordinates.
 
-
-The 2-form $\Omega$ is exact:
+Because $\Dd  \Dd =  0$ (nilpotence of the exterior derivative, cf. Eq.~(\ref{e:ext_der_nilpot})), it follows immediately from expression (\ref{e:evo:def_symplectic_finite}) that the 2-form $\Omega$ is closed:
+$\Dd \Omega = 0$.
+This is also obvious from the coordinate expression (\ref{e:bas:def_ext_2f})
+of the exterior derivative, given that the components $\Omega_{ab}$
+are constant in canonical coordinates [Eq.~(\ref{e:evo:Omega_ab})].
+Generically, a closed non-degenerate 2-form $\Omega$ on a smooth manifold $\mathcal{F}$
+is called a \defin{symplectic form}\index{symplectic!form}
+and the pair $(\mathcal{F},\Omega)$ is called a \defin{symplectic manifold}\defin{symplectic!manifold}\index{manifold!symplectic --}.
+Therefore the phase space $\mathcal{F}$ endowed with $\Omega$ is a
+symplectic manifold. Not only $\Omega$ is closed, but it is exact. Indeed, it
+follows from expression (\ref{e:evo:def_symplectic_finite}) that
 \be
     \Omega = \Dd \Theta,
 \ee
@@ -3303,9 +3340,42 @@ where $\Theta$ is the 1-form defined by
 $\Theta$ is called the \defin{canonical 1-form}\index{canonical!1-form} or the
 \defin{symplectic potential}\index{symplectic!potential}.
 
+To any scalar field $f$ on $\mathcal{F}$, one associate a unique vector
+field $X_f$ on $\mathcal{F}$ via the Poisson bivector:
+\be \label{e:evo:def_X_f}
+    \encadre{X_f := \Omega^{-1}(., \Dd f) }.
+\ee
+Specically, for any 1-form $\sigma$ on $\mathcal{F}$, one has
+\be
+    \langle \sigma, X_f \rangle = X_f(\sigma) = \Omega^{-1}(\sigma, \Dd f) .
+\ee
+It follows immediately that the components of $X_f$ with respect to
+any coordinate system $(y^a)$ on $\mathcal{F}$ are
+\be \label{e:evo:X_f_comp}
+    X_f^a =  \left( \Omega^{-1} \right)^{ab} \der{f}{y^b} .
+\ee
+In particular, for canonical coordinates $(y^a) = (q^i, p_i)$, Eq.~(\ref{e:evo:inv_Omega_ab})
+leads to
+\be
+    X_f = \der{f}{p_i} \, \partial_{q^i} - \der{f}{q^i} \, \partial_{p_i} .
+\ee
+Equation~(\ref{e:evo:def_X_f}) can be inverted to
+\be \label{e:evo:Df_Omega_X_f}
+    \encadre{\Dd f = \Omega(., X_f)} .
+\ee
+Indeed,  $\Omega(., X_f)$ is a 1-form whose components
+are  $\Omega_{ab} X_f^b$. Thanks to Eq.~(\ref{e:evo:X_f_comp}), we get
+$\Omega_{ab} X_f^b = \Omega_{ab}(\Omega^{-1})^{bc}\partial_c f
+= \delta^c_{\ \, a} \partial_c f = \partial_a f$, which proves (\ref{e:evo:Df_Omega_X_f}).
 
-
-
+The Poisson bracket (\ref{e:evo:Poisson_bracket}) can be expressed
+in terms of the symplectic form $\Omega$ acting of the pair of
+vector fields $(X_f, X_g)$:
+\be
+    \encadre{ \{f,g\} = - \Omega(X_f, X_g) }.
+\ee
+Notice the minus sign; of course, since $\Omega$ is antisymmetric, this
+formula can be rewritten as $\{f,g\} = \Omega(X_g, X_f)$.
 
 
 
