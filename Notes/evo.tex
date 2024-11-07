@@ -3253,7 +3253,7 @@ a time function $t$, with respect to which the evolution is governed by
 \emph{Hamilton's equations}. For a system with $N$ degrees of freedom,
 \defin{Hamilton's equations}\index{Hamilton's equations} are
 \be \label{e:evo_Hamilton_eqs_finite}
-    \derd{q^i}{t} = \{q^i, H \} \qand \derd{p_i}{t} = \{p_i, H\} , \quad 1 \leq i \leq N
+    \derd{q^i}{t} = \{q^i, H \} \qand \derd{p_i}{t} = \{p_i, H\} , \quad 1 \leq i \leq N,
 \ee
 where the $q^i$'s are coordinates describing the system's configuration,
 the $p_i$'s are the conjuguate momenta (i.e. $p_i := \dert{L}{{\dot q}^i}$, where
@@ -3380,12 +3380,40 @@ and $\w{g}$ are \emph{non-degenerate} bilinear forms.
 The Poisson bracket (\ref{e:evo:Poisson_bracket}) can be expressed
 in terms of the symplectic form $\Omega$ acting of the pair of
 vector fields $(X_f, X_g)$:
-\be
+\be \label{e:evo:Poisson_bracket_X}
     \encadre{ \{f,g\} = - \Omega(X_f, X_g) }.
 \ee
 Notice the minus sign; of course, since $\Omega$ is antisymmetric, this
 formula can be rewritten as $\{f,g\} = \Omega(X_g, X_f)$.
 
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{evo_pendulum_phase.pdf}}
+\caption[]{\label{f:evo:pendulum_phase} \footnotesize
+Phase space of a simple gravity pendulum: this is a system with $N=1$, ruled by the Hamiltonian $H = H(\theta,p_\theta) = p_\theta^2 / (2m\ell^2) - mg\ell\cos\theta$,
+where $\ell$ is the cord's length, $m$ the bob's mass and $g$
+the magnitude of the vertical gravity field.}
+\end{figure}
+
+
+The \defin{Hamiltonian vector field}\index{Hamiltonian!vector field} is
+the vector field $X_H$ on $\mathcal{F}$ associated to the Hamiltonian $H$
+by symplectic duality. It obeys thus to Eq.~(\ref{e:evo:Df_Omega_X_f}):
+\be
+    \Dd H = \Omega(., X_H) .
+\ee
+By combining Eqs.~(\ref{e:evo:Poisson_bracket_X}) and (\ref{e:evo:Df_Omega_X_f}), one
+gets, for any scalar field $f$ on $\mathcal{F}$,
+$\{f,H\} = \Omega(X_H,X_f) = \langle\Dd f,X_H\rangle = X_H(f)$, where $X_H(f)$
+stands for the vector $X_H$ acting on the scalar field $f$:  $X_H(f) = X_H^a \partial_a f$
+[Eq.~(\ref{e:bas:v_f_partial_f})]. Accordingly, Hamilton's equations (\ref{e:evo_Hamilton_eqs_finite}) can be rewritten as
+\be \label{e:evo_Hamilton_eqs_X_H}
+    \derd{q^i}{t} = X_H(q^i) \qand \derd{p_i}{t} = X_H(p_i) , \quad 1 \leq i \leq N .
+\ee
+It follows that any solution $(q^i(t),p_i(t))$ to the equations of motion is an
+integral curve of the Hamiltonian vector field in the phase space. Such a
+curve is entirely determined by a point of $\mathcal{F}$, since there
+is one, and exactly one,
+integral curve of $X_H$ through each point of $\mathcal{F}$ (except at possibe singular points of $H$).
 
 
 

@@ -228,7 +228,8 @@ $n$ curves $\Li_\alpha$ through $p$ associated with $(x^\alpha)$ and called the
 for each $\alpha\in\{0,\ldots,n-1\}$, $\Li_\alpha$ is defined as the curve through $p$ parameterized by $\lambda = x^\alpha$ and having constant coordinates
 $x^\beta$ for all $\beta\not=\alpha$.
 The tangent vector to $\Li_\alpha$ parameterized by $x^\alpha$ is
-denoted $\wpar_\alpha$. Its action on a scalar field $f$ is by definition
+denoted $\wpar_\alpha$. From the definition (\ref{e:bas:def_vector}), its
+action on a scalar field $f$ is
 \[
   \wpar_\alpha(f) =
   \left. \frac{\D f}{\D x^\alpha} \right|_{\Li_\alpha}
@@ -242,23 +243,26 @@ $f$ with respect to $x^\alpha$. Hence
  \encadre{ \wpar_\alpha(f) = \der{f}{x^\alpha} } .
 \ee
 Similarly, we may rewrite (\ref{e:bas:def_vector}) as
-\bea
-  \w{v}(f) & = & \lim_{\veps\rightarrow 0} \frac{1}{\veps}
+\[
+\w{v}(f) = \lim_{\veps\rightarrow 0} \frac{1}{\veps}
   \left[ f(X^0(\lambda+\veps),\ldots,X^{n-1}(\lambda+\veps))
-  - f(X^0(\lambda),\ldots,X^{n-1}(\lambda)) \right] \nonumber \\
-  & = & \der{f}{x^\alpha} \frac{\D X^\alpha}{\D \lambda}
-  = \wpar_\alpha(f) \frac{\D X^\alpha}{\D \lambda} . \nonumber
-\eea
-In the above equation,
-we are using the \defin{Einstein summation convention}\index{Einstein!summation convention}: a repeated index implies a summation over all the possible values of this index
-(here from $\alpha=0$ to $\alpha=n-1$).
-The above identity being valid for any scalar field $f$, we conclude that
-\be \label{e:bas:v_va_wpar_a}
-  \encadre{ \w{v} = v^\alpha \, \wpar_\alpha } ,
+  - f(X^0(\lambda),\ldots,X^{n-1}(\lambda)) \right]
+  = \der{f}{x^\alpha} \frac{\D X^\alpha}{\D \lambda} ,
+\]
+i.e., in view of Eq.~(\ref{e:bas:wpar_partial})
+\be \label{e:bas:v_f_partial_f}
+  \encadre{ \w{v}(f) = v^\alpha \, \wpar_\alpha(f) } ,
 \ee
-with the $n$ real numbers
+where
 \be \label{e:bas:va_dXadlamb}
   v^\alpha := \frac{\D X^\alpha}{\D \lambda} , \qquad 0 \leq \alpha\leq n-1 .
+\ee
+In Eq.~(\ref{e:bas:v_f_partial_f}),
+we are using the \defin{Einstein summation convention}\index{Einstein!summation convention}: a repeated index implies a summation over all the values taken by this index
+(here, from $\alpha=0$ to $\alpha=n-1$).
+The identity (\ref{e:bas:v_f_partial_f}) being valid for any scalar field $f$, we conclude that
+\be \label{e:bas:v_va_wpar_a}
+  \encadre{ \w{v} = v^\alpha \, \wpar_\alpha } .
 \ee
 Since every tangent vector to a curve at $p$ is expressible as (\ref{e:bas:v_va_wpar_a}), we conclude that
 the set of all tangent vectors to a curve at $p$ is a vector space of dimension $n$ and that $(\wpar_\alpha)$ constitutes a basis of it. This vector space is
