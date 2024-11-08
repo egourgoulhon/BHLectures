@@ -3256,7 +3256,7 @@ a time function $t$, with respect to which the evolution is governed by
     \derd{q^i}{t} = \{q^i, H \} \qand \derd{p_i}{t} = \{p_i, H\} , \quad 1 \leq i \leq N,
 \ee
 where the $q^i$'s are coordinates describing the system's configuration,
-the $p_i$'s are the conjuguate momenta (i.e. $p_i := \dert{L}{{\dot q}^i}$, where
+the $p_i$'s are the conjugate momenta (i.e. $p_i := \dert{L}{{\dot q}^i}$, where
 $L = L(q^i,{\dot q}^i)$ is the system's Lagrangian),
 $H$ is the system's Hamiltonian
 and $\{.,.\}$
@@ -3355,7 +3355,7 @@ any coordinate system $(y^a)$ on $\mathcal{F}$ are
 \ee
 In particular, for canonical coordinates $(y^a) = (q^i, p_i)$, Eq.~(\ref{e:evo:inv_Omega_ab})
 leads to
-\be
+\be \label{e:evo:X_f_canonical}
     X_f = \der{f}{p_i} \, \partial_{q^i} - \der{f}{q^i} \, \partial_{p_i} .
 \ee
 Equation~(\ref{e:evo:def_X_f}) can be inverted to
@@ -3389,9 +3389,7 @@ formula can be rewritten as $\{f,g\} = \Omega(X_g, X_f)$.
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{evo_pendulum_phase.pdf}}
 \caption[]{\label{f:evo:pendulum_phase} \footnotesize
-Phase space of a simple gravity pendulum: this is a system with $N=1$, ruled by the Hamiltonian $H = H(\theta,p_\theta) = p_\theta^2 / (2m\ell^2) - mg\ell\cos\theta$,
-where $\ell$ is the cord's length, $m$ the bob's mass and $g$
-the magnitude of the vertical gravity field.}
+Phase space of a simple gravity pendulum.}
 \end{figure}
 
 
@@ -3405,7 +3403,7 @@ By combining Eqs.~(\ref{e:evo:Poisson_bracket_X}) and (\ref{e:evo:Df_Omega_X_f})
 gets, for any scalar field $f$ on $\mathcal{F}$,
 $\{f,H\} = \Omega(X_H,X_f) = \langle\Dd f,X_H\rangle = X_H(f)$, where $X_H(f)$
 stands for the vector $X_H$ acting on the scalar field $f$:  $X_H(f) = X_H^a \partial_a f$
-[Eq.~(\ref{e:bas:v_f_partial_f})]. Accordingly, Hamilton's equations (\ref{e:evo_Hamilton_eqs_finite}) can be rewritten as
+[cf. Eq.~(\ref{e:bas:v_f_partial_f})]. Accordingly, Hamilton's equations (\ref{e:evo_Hamilton_eqs_finite}) can be rewritten as
 \be \label{e:evo_Hamilton_eqs_X_H}
     \derd{q^i}{t} = X_H(q^i) \qand \derd{p_i}{t} = X_H(p_i) , \quad 1 \leq i \leq N .
 \ee
@@ -3415,6 +3413,23 @@ curve is entirely determined by a point of $\mathcal{F}$, since there
 is one, and exactly one,
 integral curve of $X_H$ through each point of $\mathcal{F}$ (except at possibe singular points of $H$).
 
+\begin{example}[phase space of a pendulum]
+A simple gravity pendulum is a system with $N=1$, the unique degree of
+freedom being the angle $\theta\in(-\pi,\pi]$ with respect to the vertical direction.
+For a unit mass, it is described by the Lagrangian
+$L(\th,\dot{\th}) = (\ell\dot{\th})^2/2 + g \ell \cos\th$,
+where $\ell$ is the cord's length and $g$
+the magnitude of the vertical gravity field. The momentum conjugate to $\th$
+is $p_\th = \dert{L}{\dot{\th}} = \ell^2\dot{\th}$. Since the latter can
+take any real value, the phase space $\mathcal{F}$ is the 2-dimensional infinite cylinder
+$\SS^1 \times \mathbb{R}$,
+spanned by the canonical coordinates $(\th,p_\th)$. The
+Hamiltonian is deduced from $L$ by a Legendre transform: $H = p_\th \dot{\th} - L$,
+yielding
+$H(\theta,p_\theta) = p_\theta^2 / (2\ell^2) - g\ell\cos\theta$.
+The Hamiltonian vector field is obtained via Eq.~(\ref{e:evo:X_f_canonical}):
+$X_H = (p_\th)/\ell^2 \, \partial_\th - g \ell \sin\th \, \partial_{p_\th}$.
+\end{example}
 
 
 
