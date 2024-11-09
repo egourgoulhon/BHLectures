@@ -3386,12 +3386,6 @@ vector fields $(X_f, X_g)$:
 Notice the minus sign; of course, since $\Omega$ is antisymmetric, this
 formula can be rewritten as $\{f,g\} = \Omega(X_g, X_f)$.
 
-\begin{figure}
-\centerline{\includegraphics[width=0.8\textwidth]{evo_pendulum_phase.pdf}}
-\caption[]{\label{f:evo:pendulum_phase} \footnotesize
-Phase space of a simple gravity pendulum.}
-\end{figure}
-
 
 The \defin{Hamiltonian vector field}\index{Hamiltonian!vector field} is
 the vector field $X_H$ on $\mathcal{F}$ associated to the Hamiltonian $H$
@@ -3399,24 +3393,22 @@ by symplectic duality. It obeys thus to Eq.~(\ref{e:evo:Df_Omega_X_f}):
 \be
     \Dd H = \Omega(., X_H) .
 \ee
-By combining Eqs.~(\ref{e:evo:Poisson_bracket_X}) and (\ref{e:evo:Df_Omega_X_f}), one
-gets, for any scalar field $f$ on $\mathcal{F}$,
-$\{f,H\} = \Omega(X_H,X_f) = \langle\Dd f,X_H\rangle = X_H(f)$, where $X_H(f)$
-stands for the vector $X_H$ acting on the scalar field $f$:  $X_H(f) = X_H^a \partial_a f$
-[cf. Eq.~(\ref{e:bas:v_f_partial_f})]. Accordingly, Hamilton's equations (\ref{e:evo_Hamilton_eqs_finite}) can be rewritten as
-\be \label{e:evo_Hamilton_eqs_X_H}
-    \derd{q^i}{t} = X_H(q^i) \qand \derd{p_i}{t} = X_H(p_i) , \quad 1 \leq i \leq N .
-\ee
-It follows that any solution $(q^i(t),p_i(t))$ to the equations of motion is an
-integral curve of the Hamiltonian vector field in the phase space. Such a
-curve is entirely determined by a point of $\mathcal{F}$, since there
-is one, and exactly one,
-integral curve of $X_H$ through each point of $\mathcal{F}$ (except at possibe singular points of $H$).
+\begin{figure}
+\centerline{\includegraphics[width=0.8\textwidth]{evo_pendulum_phase.pdf}}
+\caption[]{\label{f:evo:pendulum_phase} \footnotesize
+Phase space of a simple gravity pendulum, depicted in terms of the
+canonical coordinates $(\th,p_\th)$ (cf. Example~\ref{x:evo:pendulum}).
+The grey arrows depict the Hamiltonian vector field $X_H$ and the grey
+lines are some of its integral curves. Two of them are highlighted: the red
+one correspond to oscillating solutions ($p_\th$ taking positive and negative values), while the blue one to solutions
+rotating indefinitely in the anticlockwise direction ($p_\th>0$).}
+\end{figure}
 
 \begin{example}[phase space of a pendulum]
+\label{x:evo:pendulum}
 A simple gravity pendulum is a system with $N=1$, the unique degree of
 freedom being the angle $\theta\in(-\pi,\pi]$ with respect to the vertical direction.
-For a unit mass, it is described by the Lagrangian
+For a unit mass, the Lagrangian is
 $L(\th,\dot{\th}) = (\ell\dot{\th})^2/2 + g \ell \cos\th$,
 where $\ell$ is the cord's length and $g$
 the magnitude of the vertical gravity field. The momentum conjugate to $\th$
@@ -3428,8 +3420,27 @@ Hamiltonian is deduced from $L$ by a Legendre transform: $H = p_\th \dot{\th} - 
 yielding
 $H(\theta,p_\theta) = p_\theta^2 / (2\ell^2) - g\ell\cos\theta$.
 The Hamiltonian vector field is obtained via Eq.~(\ref{e:evo:X_f_canonical}):
-$X_H = (p_\th)/\ell^2 \, \partial_\th - g \ell \sin\th \, \partial_{p_\th}$.
+$X_H = \ell^{-2} p_\th \, \partial_\th - g \ell \sin\th \, \partial_{p_\th}$.
+It is depicted in Fig.~\ref{f:evo:pendulum_phase}.
 \end{example}
+
+By combining Eqs.~(\ref{e:evo:Poisson_bracket_X}) and (\ref{e:evo:Df_Omega_X_f}), one
+gets, for any scalar field $f$ on $\mathcal{F}$,
+$\{f,H\} = \Omega(X_H,X_f) = \langle\Dd f,X_H\rangle = X_H(f)$, where $X_H(f)$
+stands for the vector $X_H$ acting on the scalar field $f$:  $X_H(f) = X_H^a \partial_a f$
+[cf. Eq.~(\ref{e:bas:v_f_partial_f})]. Accordingly, Hamilton's equations (\ref{e:evo_Hamilton_eqs_finite}) can be rewritten as
+\be \label{e:evo_Hamilton_eqs_X_H}
+    \derd{q^i}{t} = X_H(q^i) \qand \derd{p_i}{t} = X_H(p_i) , \quad 1 \leq i \leq N .
+\ee
+It follows that any solution $(q^i(t),p_i(t))$ to the equations of motion is an
+integral curve of the Hamiltonian vector field in the phase space
+(cf. Fig.~\ref{x:evo:pendulum}). Since there is one, and exactly one,
+integral curve of $X_H$ through each point of $\mathcal{F}$, it follows
+that a solution is entirely determined by a point $a\in\mathcal{F}$,
+which can be thought of representing the state of the system at the initial
+instant $t=0$, i.e. the coordinates of $a$ are $(q^i(0),p_i(0))$.
+
+
 
 
 
