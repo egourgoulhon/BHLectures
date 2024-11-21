@@ -3244,14 +3244,14 @@ that admit a Hamiltonian formulation, to which we turn now.
 
 The extension of the first law beyond general relativity has been achieved
 by Wald in 1993 \cite{Wald93}, within a Hamiltonian
-framework based on the co-called \emph{covariant phase space}\index{covariant!phase space} approach. The Hamiltonian formulation naturally provides the concept
+framework based on the co-called \emph{covariant phase space}\index{covariant!phase space} approach. The Hamiltonian formalism naturally provides the concept
 of total mass $M$ --- the variation of which constitutes the left-hand side of the first law --- as the \emph{canonical energy} of the system (value of the Hamiltonian),
 thereby generalizing the concept of ADM mass\index{ADM!mass} beyond general relativity.
 The covariant phase space formalism is an approach to Hamiltonian mechanics that
 preserves general covariance, while the standard approach relies on the choice of
 a time function $t$, with respect to which the evolution is governed by
-\emph{Hamilton's equations}. For a system with $N$ degrees of freedom,
-\defin{Hamilton's equations}\index{Hamilton's equations} are
+\emph{Hamilton's equations}\index{Hamilton's equations}. For a system with $N$ degrees of freedom,
+they read
 \be \label{e:evo_Hamilton_eqs_finite}
     \derd{q^i}{t} = \{q^i, H \} \qand \derd{p_i}{t} = \{p_i, H\} , \quad 1 \leq i \leq N,
 \ee
@@ -3265,7 +3265,7 @@ stands for the \defin{Poisson bracket}\index{Poisson!bracket}:
  \{f,g\} := \sum_{i=1}^N \left( \der{f}{q^i} \, \der{g}{p_i} - \der{g}{q^i} \, \der{f}{p_i} \right) .
 \ee
 The coordinates $(y^a) := (q^1,\ldots,q^N,p_1,\ldots,p_N)$ span a manifold $\mathcal{F}$ of dimension
-$2N$ called the \defin{phase space}\index{phase space} of the system.
+$2N$ called the system's \defin{phase space}\index{phase space}.
 The Poisson bracket can be rewritten covariantly (i.e. in a form independent of the
 coordinates $(y^a)$) by introducing the following 2-form on $\mathcal{F}$:
 \be \label{e:evo:def_symplectic_finite}
@@ -3274,7 +3274,7 @@ coordinates $(y^a)$) by introducing the following 2-form on $\mathcal{F}$:
 where $\Dd$ stands for the exterior derivative\footnote{On phase space manifolds, we are
 not using boldface notations for operators and tensor fields, keeping them for the spacetime
 manifold only. Hence the exterior derivative on $\mathcal{F}$ is denoted by $\Dd$, and not
-$\dd$, as introduced in Sec.~\ref{s:bas:ext_deriv}, the 2-form (\ref{e:evo:def_symplectic_finite}) is denoted $\Omega$ and not $\w{\Omega}$, etc.}
+$\dd$, as defined in Sec.~\ref{s:bas:ext_deriv}, the 2-form (\ref{e:evo:def_symplectic_finite}) is denoted $\Omega$ and not $\w{\Omega}$, etc.}
  on $\mathcal{F}$,
 so that $\Dd p_i$ (resp. $\Dd q^i$) is the differential 1-form of $p_i$
 (resp. $q^i$) considered as a scalar field on $\mathcal{F}$.
@@ -3291,9 +3291,9 @@ using block matrix notation,
 where $a$ and $b$ are respectively the row and column indices
 and $I_N$ stands for the identity matrix of size $N$.
 Any coordinate system on $\mathcal{F}$ in which the 2-form $\Omega$
-is expressible as (\ref{e:evo:def_symplectic_finite}), or equivalenty
+is expressible as (\ref{e:evo:def_symplectic_finite}), or equivalenty,
 in which the components of $\Omega$ are the matrix (\ref{e:evo:Omega_ab}),
-are called  \defin{canonical coordinates}\index{canonical!coordinates}\index{coordinates!canonical --}.
+is called a system of \defin{canonical coordinates}\index{canonical!coordinates}\index{coordinates!canonical --}.
 The matrix $(\Omega_{ab})$
 is clearly invertible, its inverse being its opposite:
 \be \label{e:evo:inv_Omega_ab}
@@ -3303,7 +3303,7 @@ is clearly invertible, its inverse being its opposite:
                   \end{pmatrix} .
 \ee
 This implies that the 2-form $\Omega$ is non-degenerate and allows one
-to define an antisymmetric type-$(2,0)$ tensor field on $\mathscr{F}$,
+to define an antisymmetric type-$(2,0)$ tensor field on $\mathcal{F}$,
 called the \defin{Poisson bivector}\index{Poisson!bivector}\index{bivector!Poisson --},
 by
 \be
@@ -3339,7 +3339,7 @@ where $\Theta$ is the 1-form defined by
 $\Theta$ is called the \defin{canonical 1-form}\index{canonical!1-form} or the
 \defin{symplectic potential}\index{symplectic!potential}.
 
-To any scalar field $f$ on $\mathcal{F}$, one associate a unique vector
+To any scalar field $f$ on $\mathcal{F}$, one associates a unique vector
 field $X_f$ on $\mathcal{F}$ via the Poisson bivector:
 \be \label{e:evo:def_X_f}
     \encadre{X_f := \Omega^{-1}(., \Dd f) }.
@@ -3348,8 +3348,8 @@ Specifically, for any 1-form $\sigma$ on $\mathcal{F}$, one has
 \be
     \langle \sigma, X_f \rangle = X_f(\sigma) = \Omega^{-1}(\sigma, \Dd f) .
 \ee
-It follows immediately that the components of $X_f$ with respect to
-any coordinate system $(y^a)$ on $\mathcal{F}$ are
+It follows that the components of $X_f$ with respect to
+any coordinate system $(y^a)$ are
 \be \label{e:evo:X_f_comp}
     X_f^a =  \left( \Omega^{-1} \right)^{ab} \der{f}{y^b} .
 \ee
@@ -3358,14 +3358,16 @@ leads to
 \be \label{e:evo:X_f_canonical}
     X_f = \der{f}{p_i} \, \partial_{q^i} - \der{f}{q^i} \, \partial_{p_i} .
 \ee
-Equation~(\ref{e:evo:def_X_f}) can be inverted to
+Formula~(\ref{e:evo:def_X_f}) can be inverted to
 \be \label{e:evo:Df_Omega_X_f}
     \encadre{\Dd f = \Omega(., X_f)} .
 \ee
-Indeed,  $\Omega(., X_f)$ is a 1-form whose components
+\begin{proof}
+$\Omega(., X_f)$ is a 1-form whose components
 are  $\Omega_{ab} X_f^b$. Thanks to Eq.~(\ref{e:evo:X_f_comp}), we get
 $\Omega_{ab} X_f^b = \Omega_{ab}(\Omega^{-1})^{bc}\partial_c f
 = \delta^c_{\ \, a} \partial_c f = \partial_a f$, which proves (\ref{e:evo:Df_Omega_X_f}).
+\end{proof}
 
 \begin{remark}
 The vector field $X_f$ and the 1-form $\Dd f$ can be considered as being dual to each other
@@ -3383,14 +3385,23 @@ vector fields $(X_f, X_g)$:
 \be \label{e:evo:Poisson_bracket_X}
     \encadre{ \{f,g\} = - \Omega(X_f, X_g) }.
 \ee
-Notice the minus sign; of course, since $\Omega$ is antisymmetric, this
-formula can be rewritten as $\{f,g\} = \Omega(X_g, X_f)$.
-
+\begin{proof}
+Starting from Eq.~(\ref{e:evo:Poisson_bracket}) and using Eq.~(\ref{e:evo:Df_Omega_X_f}),
+we have $\{f,g\} = (\Omega^{-1})^{ab} \partial_a f \, \partial_b g
+= (\Omega^{-1})^{ab} \Omega_{ac} X_f^c \, \Omega_{bd} X_g^d
+= \delta^a_{\ \, d}  \Omega_{ac} X_f^c X_g^d = \Omega_{dc}  X_f^c X_g^d = \Omega(X_g, X_f)
+= -  \Omega(X_f, X_g)$.
+\end{proof}
+\begin{remark}
+Notice the minus sign in Eq.~(\ref{e:evo:Poisson_bracket_X}), as compared to Eq.~(\ref{e:evo:Poisson_bracket}); of course,
+since $\Omega$ is antisymmetric, Eq.~(\ref{e:evo:Poisson_bracket_X})
+can be recast as $\{f,g\} = \Omega(X_g, X_f)$.
+\end{remark}
 
 The \defin{Hamiltonian vector field}\index{Hamiltonian!vector field} is
 the vector field $X_H$ on $\mathcal{F}$ associated to the Hamiltonian $H$
 by symplectic duality. It obeys thus to Eq.~(\ref{e:evo:Df_Omega_X_f}):
-\be
+\be \label{e:evo:DH_Omega_X_H}
     \Dd H = \Omega(., X_H) .
 \ee
 \begin{figure}
@@ -3398,9 +3409,9 @@ by symplectic duality. It obeys thus to Eq.~(\ref{e:evo:Df_Omega_X_f}):
 \caption[]{\label{f:evo:pendulum_phase} \footnotesize
 Phase space of a simple gravity pendulum, depicted in terms of the
 canonical coordinates $(\th,p_\th)$ (cf. Example~\ref{x:evo:pendulum}).
-The grey arrows depict the Hamiltonian vector field $X_H$ and the grey
-lines are some of its integral curves. Two of them are highlighted: the red
-one correspond to oscillating solutions ($p_\th$ taking positive and negative values), while the blue one to solutions
+The grey arrows show the Hamiltonian vector field $X_H$ and the grey
+lines are some of the integral curves of $X_H$. Two of them are highlighted: the red
+one corresponds to oscillating solutions ($\th$ having a limited range and $p_\th$ taking positive and negative values), while the blue one corresponds to solutions
 rotating indefinitely in the anticlockwise direction ($p_\th>0$).}
 \end{figure}
 
@@ -3434,7 +3445,31 @@ stands for the vector $X_H$ acting on the scalar field $f$:  $X_H(f) = X_H^a \pa
 \ee
 It follows that any solution $(q^i(t),p_i(t))$ to the equations of motion is an
 integral curve of the Hamiltonian vector field in the phase space
-(cf. Fig.~\ref{x:evo:pendulum}). Since there is one, and exactly one,
+(cf. Fig.~\ref{x:evo:pendulum}). $H$ is constant along such a curve, since,
+from Eq.~(\ref{e:evo:DH_Omega_X_H}),
+$X_H(H) = \langle \Dd H, X_H \rangle = \Omega(X_H, X_H) = 0$.
+For any scalar field $f$ on $\mathcal{F}$,
+Eq.~(\ref{e:evo_Hamilton_eqs_X_H}) implies
+\be \label{e:evo:dfdt_X_H_f}
+    \derd{f}{t} = X_H(f).
+\ee
+Hence one may see the vector field $X_H$ as
+defining the ``time'' evolution without having to refer to the time coordinate $t$.
+Of course, we recover from Eq.~(\ref{e:evo:dfdt_X_H_f})
+that $\D H/\D t = 0$ since $X_H(H) = 0$.
+For tensor fields on $\mathcal{F}$ of valence higher than a scalar field, the evolution
+is naturally given by the \emph{Lie derivative} $\Liesymbol_{X_H}$ along the Hamiltonian vector field $X_H$. Recall that for a scalar field,
+$\Liesymbol_{X_H} f = X_H(f)$ (cf. Sec.~\ref{s:bas:Lie}).
+An important property it that the symplectic form is preserved by such an evolution:
+\be
+    \Liesymbol_{X_H} \Omega = 0 .
+\ee
+\begin{proof}
+The proof relies on the fact that $\Omega$ is closed. Indeed, thanks to Cartan
+identity (\ref{e:bas:Cartan}), we have ...
+\end{proof}
+
+Since there is one, and exactly one,
 integral curve of $X_H$ through each point of $\mathcal{F}$, it follows
 that a solution is entirely determined by a point $a\in\mathcal{F}$,
 which can be thought of representing the state of the system at the initial
