@@ -3400,15 +3400,17 @@ can be recast as $\{f,g\} = \Omega(X_g, X_f)$.
 
 The \defin{Hamiltonian vector field}\index{Hamiltonian!vector field} is
 the vector field $X_H$ on $\mathcal{F}$ associated to the Hamiltonian $H$
-by symplectic duality. It obeys thus to Eq.~(\ref{e:evo:Df_Omega_X_f}):
+by symplectic duality. It thus obeys Eq.~(\ref{e:evo:Df_Omega_X_f}):
 \be \label{e:evo:DH_Omega_X_H}
-    \Dd H = \Omega(., X_H) .
+    \encadre{ \Dd H = \Omega(., X_H) }.
 \ee
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{evo_pendulum_phase.pdf}}
 \caption[]{\label{f:evo:pendulum_phase} \footnotesize
-Phase space of a simple gravity pendulum, depicted in terms of the
+Phase space $\mathcal{F}$ of a simple gravity pendulum, depicted in terms of the
 canonical coordinates $(\th,p_\th)$ (cf. Example~\ref{x:evo:pendulum}).
+The vertical lines $\th=-\pi$ and $\th=\pi$ shall be identified to reflect
+that $\mathcal{F} = \SS^1 \times \mathbb{R}$.
 The grey arrows show the Hamiltonian vector field $X_H$ and the grey
 lines are some of the integral curves of $X_H$. Two of them are highlighted: the red
 one corresponds to oscillating solutions ($\th$ having a limited range and $p_\th$ taking positive and negative values), while the blue one corresponds to solutions
@@ -3454,26 +3456,71 @@ Eq.~(\ref{e:evo_Hamilton_eqs_X_H}) implies
     \derd{f}{t} = X_H(f).
 \ee
 Hence one may see the vector field $X_H$ as
-defining the ``time'' evolution without having to refer to the time coordinate $t$.
+defining the ``time evolution'' without having to refer to the time coordinate $t$.
 Of course, we recover from Eq.~(\ref{e:evo:dfdt_X_H_f})
 that $\D H/\D t = 0$ since $X_H(H) = 0$.
-For tensor fields on $\mathcal{F}$ of valence higher than a scalar field, the evolution
-is naturally given by the \emph{Lie derivative} $\Liesymbol_{X_H}$ along the Hamiltonian vector field $X_H$. Recall that for a scalar field,
-$\Liesymbol_{X_H} f = X_H(f)$ (cf. Sec.~\ref{s:bas:Lie}).
-An important property it that the symplectic form is preserved by such an evolution:
+
+For tensor fields on $\mathcal{F}$ of valence higher than a scalar field,
+one  defines the ``time evolution'' as the
+\emph{Lie derivative} $\Liesymbol_{X_H}$ along the Hamiltonian vector field $X_H$.
+This is quite natural since the vanishing of $\Liesymbol_{X_H} T$ means
+that the tensor field $T$ is transported identically to itself along the flow
+defined by $X_H$ (cf. Sec.~\ref{s:bas:Lie}).
+In particular, this encloses Eq.~(\ref{e:evo:dfdt_X_H_f}), since
+$\Liesymbol_{X_H} f = X_H(f)$ for any scalar field $f$.
+An important feature of the evolution hence defined is that
+the symplectic form is conserved:
 \be
     \Liesymbol_{X_H} \Omega = 0 .
 \ee
 \begin{proof}
-The proof relies on the fact that $\Omega$ is closed. Indeed, thanks to Cartan
-identity (\ref{e:bas:Cartan}), we have ...
+The proof relies on the fact that $\Omega$ is closed, i.e. $\Dd\Omega = 0$.
+Indeed, using successively the Cartan
+identity (\ref{e:bas:Cartan}) and Eq.~(\ref{e:evo:DH_Omega_X_H}), we get
+\[
+     \Liesymbol_{X_H} \Omega  = X_H \cdot \underbrace{\Dd \Omega}_{0}
+     + \Dd(\underbrace{X_H\cdot\Omega}_{\Omega(X_H, .)})
+     = - \Dd(\underbrace{\Omega(., X_H)}_{\Dd H})
+     = - \Dd \Dd H = 0 ,
+\]
+the last equality following from the nilpotence of the exterior derivative
+[Eq.~(\ref{e:ext_der_nilpot})].
 \end{proof}
+
+Let us summarize the above results as follows:
+
+\begin{prop}[Hamiltonian system]
+A \defin{Hamiltonian system}\index{Hamiltonian!system}
+is a triplet $(\mathcal{F},\Omega,H)$ where $\mathcal{F}$ is a smooth
+manifold, called the \defin{phase space} of the system, $\Omega$ is
+a \defin{symplectic form} on $\mathcal{F}$, i.e. a closed non-degenerate
+2-form, and $H$ is a smooth function $\mathcal{F} \to \R$ called
+the \defin{Hamiltonian}.
+The differential of $H$ is a 1-form $\Dd H$ on
+$\mathcal{F}$, whose symplectic dual defines
+the \defin{Hamiltonian vector field}, i.e. the unique vector field $X_H$
+on $\mathcal{F}$ such that
+\be
+\Dd H = \Omega(., X_H) .
+\ee
+The \defin{Poisson bracket} of two smooth
+functions $f:\ \mathcal{F} \to \R$ and $g:\ \mathcal{F} \to \R$
+is defined by any of the following equivalent equalities:
+\be
+     \{f,g\} := \Omega^{-1}(\Dd f, \Dd g)  = \Omega(X_g, X_f)
+     = \langle \Dd f, X_g \rangle = X_g(f) ,
+\ee
+where $X_f$ and $X_g$ are the vector fields associated to $\Dd f$ and
+$\Dd g$ by symplectic duality: $X_f := \Omega^{-1}(., \Dd f)$ $\iff$
+$\Dd f =: \Omega(., X_f)$.
+\end{prop}
 
 Since there is one, and exactly one,
 integral curve of $X_H$ through each point of $\mathcal{F}$, it follows
 that a solution is entirely determined by a point $a\in\mathcal{F}$,
 which can be thought of representing the state of the system at the initial
 instant $t=0$, i.e. the coordinates of $a$ are $(q^i(0),p_i(0))$.
+
 
 
 
