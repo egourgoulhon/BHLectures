@@ -3379,6 +3379,7 @@ with (\ref{e:bas:arrow_form_comp}). These dualities occur because both $\Omega$
 and $\w{g}$ are \emph{non-degenerate} bilinear forms.
 \end{remark}
 
+
 The Poisson bracket (\ref{e:evo:Poisson_bracket}) can be expressed
 in terms of the symplectic form $\Omega$ acting of the pair of
 vector fields $(X_f, X_g)$:
@@ -3398,12 +3399,32 @@ since $\Omega$ is antisymmetric, Eq.~(\ref{e:evo:Poisson_bracket_X})
 can be recast as $\{f,g\} = \Omega(X_g, X_f)$.
 \end{remark}
 
+By combining Eqs.~(\ref{e:evo:Df_Omega_X_f}) and (\ref{e:evo:Poisson_bracket_X})
+there comes $\langle \Dd f, X_g \rangle = \Omega(X_g, X_f) = \{f,g\}$.
+Hence, we get various equivalent expressions for the
+Poisson bracket:
+\be \label{e:evo:crochet_Poisson_equiv}
+     \{f,g\} := \Omega^{-1}(\Dd f, \Dd g)  = \Omega(X_g, X_f)
+     = \langle \Dd f, X_g \rangle = X_g(f) .
+\ee
+
+
 The \defin{Hamiltonian vector field}\index{Hamiltonian!vector field} is
-the vector field $X_H$ on $\mathcal{F}$ associated to the Hamiltonian $H$
-by symplectic duality. It thus obeys Eq.~(\ref{e:evo:Df_Omega_X_f}):
+the vector field on $\mathcal{F}$ associated to the Hamiltonian differential $\Dd H$
+by symplectic duality, i.e. the vector field $X_H$.
+It obeys Eq.~(\ref{e:evo:Df_Omega_X_f}):
 \be \label{e:evo:DH_Omega_X_H}
     \encadre{ \Dd H = \Omega(., X_H) }.
 \ee
+
+\begin{remark}
+In the mathematical literature (e.g. \cite{Lee13}), the vector field
+$X_f$ associated to any scalar function $f$ on $\mathcal{F}$
+is called the \emph{Hamiltonian vector field of} $f$. This reflects the
+fact that any scalar function $f$ can the considered as the Hamiltonian
+of some theory, even if the latter is unphysical.
+\end{remark}
+
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{evo_pendulum_phase.pdf}}
 \caption[]{\label{f:evo:pendulum_phase} \footnotesize
@@ -3451,7 +3472,9 @@ integral curve of the Hamiltonian vector field in the phase space
 from Eq.~(\ref{e:evo:DH_Omega_X_H}),
 $X_H(H) = \langle \Dd H, X_H \rangle = \Omega(X_H, X_H) = 0$.
 For any scalar field $f$ on $\mathcal{F}$,
-Eq.~(\ref{e:evo_Hamilton_eqs_X_H}) implies
+the variation of $f$ during the evolution of the system
+is deduced from
+Eq.~(\ref{e:evo_Hamilton_eqs_X_H}):
 \be \label{e:evo:dfdt_X_H_f}
     \derd{f}{t} = X_H(f).
 \ee
@@ -3459,16 +3482,15 @@ Hence one may see the vector field $X_H$ as
 defining the ``time evolution'' without having to refer to the time coordinate $t$.
 Of course, we recover from Eq.~(\ref{e:evo:dfdt_X_H_f})
 that $\D H/\D t = 0$ since $X_H(H) = 0$.
-
 For tensor fields on $\mathcal{F}$ of valence higher than a scalar field,
 one  defines the ``time evolution'' as the
 \emph{Lie derivative} $\Liesymbol_{X_H}$ along the Hamiltonian vector field $X_H$.
 This is quite natural since the vanishing of $\Liesymbol_{X_H} T$ means
 that the tensor field $T$ is transported identically to itself along the flow
 defined by $X_H$ (cf. Sec.~\ref{s:bas:Lie}).
-In particular, this encloses Eq.~(\ref{e:evo:dfdt_X_H_f}), since
+In particular, this encompasses Eq.~(\ref{e:evo:dfdt_X_H_f}), since
 $\Liesymbol_{X_H} f = X_H(f)$ for any scalar field $f$.
-An important feature of the evolution hence defined is that
+An important feature of the evolution thus defined is that
 the symplectic form is conserved:
 \be
     \Liesymbol_{X_H} \Omega = 0 .
@@ -3498,25 +3520,27 @@ a \defin{symplectic form} on $\mathcal{F}$, i.e. a closed non-degenerate
 the \defin{Hamiltonian}.
 The differential of $H$ is a 1-form $\Dd H$ on
 $\mathcal{F}$, whose symplectic dual defines
-the \defin{Hamiltonian vector field}, i.e. the unique vector field $X_H$
+the \defin{Hamiltonian vector field}, namely the unique vector field $X_H$
 on $\mathcal{F}$ such that
-\be
+\be \label{e:evo:DH_Omega_X_H_2}
 \Dd H = \Omega(., X_H) .
 \ee
-The \defin{Poisson bracket} of two smooth
-functions $f:\ \mathcal{F} \to \R$ and $g:\ \mathcal{F} \to \R$
-is defined by any of the following equivalent equalities:
-\be
-     \{f,g\} := \Omega^{-1}(\Dd f, \Dd g)  = \Omega(X_g, X_f)
-     = \langle \Dd f, X_g \rangle = X_g(f) ,
-\ee
-where $X_f$ and $X_g$ are the vector fields associated to $\Dd f$ and
-$\Dd g$ by symplectic duality: $X_f := \Omega^{-1}(., \Dd f)$ $\iff$
-$\Dd f =: \Omega(., X_f)$.
+The evolution of the underlying physical system is entirely determined
+by the Hamiltonian vector field: any solution of the equation of motion
+is an integral curve of $X_H$.
+A smooth function $f: \ \mathcal{F} \to \R$ is called a
+\defin{conserved quantity} iff $f$ is constant on every integral curve
+of $X_H$, i.e. iff $X_H(f) = 0$. In view of Eq.~(\ref{e:evo:crochet_Poisson_equiv}),
+this is equivalent to $\{f,H\} = 0$.
+An \defin{equilibrium point} is a point of $\mathcal{F}$ where $X_H = 0$,
+or equivalently, given Eq.~(\ref{e:evo:DH_Omega_X_H_2}), a point where
+$\Dd H = 0$.
 \end{prop}
 
-Since there is one, and exactly one,
-integral curve of $X_H$ through each point of $\mathcal{F}$, it follows
+Except at equilibrium points,
+there is one, and exactly one,
+integral curve of $X_H$ through each point of $\mathcal{F}$.
+It follows
 that a solution is entirely determined by a point $a\in\mathcal{F}$,
 which can be thought of representing the state of the system at the initial
 instant $t=0$, i.e. the coordinates of $a$ are $(q^i(0),p_i(0))$.
