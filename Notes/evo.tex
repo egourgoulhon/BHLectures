@@ -3264,6 +3264,10 @@ stands for the \defin{Poisson bracket}\index{Poisson!bracket}:
 \be \label{e:evo:Poisson_bracket_canon}
  \{f,g\} := \sum_{i=1}^N \left( \der{f}{q^i} \, \der{g}{p_i} - \der{g}{q^i} \, \der{f}{p_i} \right) .
 \ee
+More generally, for any scalar function $f=f(q^i,p_i)$, one has
+\be \label{e:evo:dfdt_Poisson_fH}
+     \derd{f}{t} = \{f, H \} .
+\ee
 The coordinates $(y^a) := (q^1,\ldots,q^N,p_1,\ldots,p_N)$ span a manifold $\mathcal{F}$ of dimension
 $2N$ called the system's \defin{phase space}\index{phase space}.
 The Poisson bracket can be rewritten covariantly (i.e. in a form independent of the
@@ -3462,7 +3466,12 @@ By combining Eqs.~(\ref{e:evo:Poisson_bracket_X}) and (\ref{e:evo:Df_Omega_X_f})
 gets, for any scalar field $f$ on $\mathcal{F}$,
 $\{f,H\} = \Omega(X_H,X_f) = \langle\Dd f,X_H\rangle = X_H(f)$, where $X_H(f)$
 stands for the vector $X_H$ acting on the scalar field $f$:  $X_H(f) = X_H^a \partial_a f$
-[cf. Eq.~(\ref{e:bas:v_f_partial_f})]. Accordingly, Hamilton's equations (\ref{e:evo_Hamilton_eqs_finite}) can be rewritten as
+[cf. Eq.~(\ref{e:bas:v_f_partial_f})]. Accordingly, we may rewrite the evolution
+equation (\ref{e:evo:dfdt_Poisson_fH}) as
+\be \label{e:evo:dfdt_X_H_f}
+    \derd{f}{t} = X_H(f).
+\ee
+In particular, Hamilton's equations (\ref{e:evo_Hamilton_eqs_finite}) can be rewritten as
 \be \label{e:evo_Hamilton_eqs_X_H}
     \derd{q^i}{t} = X_H(q^i) \qand \derd{p_i}{t} = X_H(p_i) , \quad 1 \leq i \leq N .
 \ee
@@ -3471,14 +3480,8 @@ integral curve of the Hamiltonian vector field in the phase space
 (cf. Fig.~\ref{x:evo:pendulum}). $H$ is constant along such a curve, since,
 from Eq.~(\ref{e:evo:DH_Omega_X_H}),
 $X_H(H) = \langle \Dd H, X_H \rangle = \Omega(X_H, X_H) = 0$.
-For any scalar field $f$ on $\mathcal{F}$,
-the variation of $f$ during the evolution of the system
-is deduced from
-Eq.~(\ref{e:evo_Hamilton_eqs_X_H}):
-\be \label{e:evo:dfdt_X_H_f}
-    \derd{f}{t} = X_H(f).
-\ee
-Hence one may see the vector field $X_H$ as
+
+In view of Eq.~(\ref{e:evo:dfdt_X_H_f}), one may consider the vector field $X_H$ as
 defining the ``time evolution'' without having to refer to the time coordinate $t$.
 Of course, we recover from Eq.~(\ref{e:evo:dfdt_X_H_f})
 that $\D H/\D t = 0$ since $X_H(H) = 0$.
