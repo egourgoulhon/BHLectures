@@ -3297,7 +3297,7 @@ and $I_N$ stands for the identity matrix of size $N$.
 Any coordinate system on $\mathcal{F}$ in which the 2-form $\Omega$
 is expressible as (\ref{e:evo:def_symplectic_finite}), or equivalenty,
 in which the components of $\Omega$ are the matrix (\ref{e:evo:Omega_ab}),
-is called a system of \defin{canonical coordinates}\index{canonical!coordinates}\index{coordinates!canonical --}.
+is called a system of \defin{canonical coordinates}\index{canonical!coordinates}\index{coordinate!canonical --}.
 The matrix $(\Omega_{ab})$
 is clearly invertible, its inverse being its opposite:
 \be \label{e:evo:inv_Omega_ab}
@@ -3362,6 +3362,14 @@ leads to
 \be \label{e:evo:X_f_canonical}
     X_f = \der{f}{p_i} \, \partial_{q^i} - \der{f}{q^i} \, \partial_{p_i} .
 \ee
+As a vector field, $X_f$ is a derivative operator on scalar fields [cf. Eq.~(\ref{e:bas:v_f_partial_f})], which we may
+express in terms of the Poisson bracket by combining Eqs.~(\ref{e:evo:def_X_f}) and (\ref{e:evo:Poisson_bracket}):
+\be \label{e:evo:Xf_Poisson_f}
+    \encadre{ X_f = \{., f\} },
+\ee
+the above identity meaning that for any scalar field $g$, $X_f(g) = \{g,f\}$,
+with $X_f(g) = X_f^a \partial_a g$.
+
 Formula~(\ref{e:evo:def_X_f}) can be inverted to
 \be \label{e:evo:Df_Omega_X_f}
     \encadre{\Dd f = \Omega(., X_f)} .
@@ -3448,7 +3456,7 @@ A simple gravity pendulum is a system with $N=1$, the unique degree of
 freedom being the angle $\theta\in(-\pi,\pi]$ with respect to the vertical direction.
 For a unit mass, the Lagrangian is
 $L(\th,\dot{\th}) = (\ell\dot{\th})^2/2 + g \ell \cos\th$,
-where $\ell$ is the cord's length and $g$
+where $\ell$ is the length of the (massless) and $g$
 the magnitude of the vertical gravity field. The momentum conjugate to $\th$
 is $p_\th = \dert{L}{\dot{\th}} = \ell^2\dot{\th}$. Since the latter can
 take any real value, the phase space $\mathcal{F}$ is the 2-dimensional infinite cylinder
@@ -3462,16 +3470,22 @@ $X_H = \ell^{-2} p_\th \, \partial_\th - g \ell \sin\th \, \partial_{p_\th}$.
 It is depicted in Fig.~\ref{f:evo:pendulum_phase}.
 \end{example}
 
-By combining Eqs.~(\ref{e:evo:Poisson_bracket_X}) and (\ref{e:evo:Df_Omega_X_f}), one
-gets, for any scalar field $f$ on $\mathcal{F}$,
-$\{f,H\} = \Omega(X_H,X_f) = \langle\Dd f,X_H\rangle = X_H(f)$, where $X_H(f)$
-stands for the vector $X_H$ acting on the scalar field $f$:  $X_H(f) = X_H^a \partial_a f$
-[cf. Eq.~(\ref{e:bas:v_f_partial_f})]. Accordingly, we may rewrite the evolution
-equation (\ref{e:evo:dfdt_Poisson_fH}) as
+%\begin{example}[phase space as the cotangent bundle of configuration space]
+%In Example~\ref{x:evo:pendulum}, the space in which the degree of
+%freedom $\theta$ evolves is the 1-dimensional manifold $\mathcal{C} = \mathbb{S}^1$.
+%More generally, for a system of $N$ degrees of freedom, the space spanned by the
+%latter is a $N$-dimensional manifold $\mathcal{C}$, called the
+%\defin{configuration space}\index{configuration space}.
+%\end{example}
+
+Equation~(\ref{e:evo:Xf_Poisson_f}) with $f=H$ leads to
+$\{f,H\} = X_H(f)$ for any scalar field $f$ on $\mathcal{F}$.
+Accordingly, the evolution
+equation (\ref{e:evo:dfdt_Poisson_fH}) can be rewritten as
 \be \label{e:evo:dfdt_X_H_f}
     \derd{f}{t} = X_H(f).
 \ee
-In particular, Hamilton's equations (\ref{e:evo_Hamilton_eqs_finite}) can be rewritten as
+In particular, Hamilton's equations (\ref{e:evo_Hamilton_eqs_finite}) become
 \be \label{e:evo_Hamilton_eqs_X_H}
     \derd{q^i}{t} = X_H(q^i) \qand \derd{p_i}{t} = X_H(p_i) , \quad 1 \leq i \leq N .
 \ee
@@ -3517,37 +3531,46 @@ Let us summarize the above results as follows:
 \begin{prop}[Hamiltonian system]
 A \defin{Hamiltonian system}\index{Hamiltonian!system}
 is a triplet $(\mathcal{F},\Omega,H)$ where $\mathcal{F}$ is a smooth
-manifold, called the \defin{phase space} of the system, $\Omega$ is
-a \defin{symplectic form} on $\mathcal{F}$, i.e. a closed non-degenerate
+manifold, called the \defin{phase space}\index{phase space} of the system, $\Omega$ is
+a \defin{symplectic form}\index{symplectic!form} on $\mathcal{F}$, i.e. a closed non-degenerate
 2-form, and $H$ is a smooth function $\mathcal{F} \to \R$ called
 the \defin{Hamiltonian}.
 The differential of $H$ is a 1-form $\Dd H$ on
 $\mathcal{F}$, whose symplectic dual defines
-the \defin{Hamiltonian vector field}, namely the unique vector field $X_H$
+the \defin{Hamiltonian vector field}\index{Hamiltonian!vector field},
+namely the unique vector field $X_H$
 on $\mathcal{F}$ such that
 \be \label{e:evo:DH_Omega_X_H_2}
 \Dd H = \Omega(., X_H) .
 \ee
 The evolution of the underlying physical system is entirely determined
-by the Hamiltonian vector field: any solution of the equation of motion
+by the Hamiltonian vector field: any solution of the equations of motion
 is an integral curve of $X_H$.
 A smooth function $f: \ \mathcal{F} \to \R$ is called a
-\defin{conserved quantity} iff $f$ is constant on every integral curve
+\defin{conserved quantity}\index{conserved!quantity} iff $f$ is constant on every integral curve
 of $X_H$, i.e. iff $X_H(f) = 0$. In view of Eq.~(\ref{e:evo:crochet_Poisson_equiv}),
 this is equivalent to $\{f,H\} = 0$.
+A conserved quantity is $H$ itself. Its value for a given solution of the equations of motion
+is called the \defin{energy}\index{energy!in Hamiltonian framework} of the solution.
 An \defin{equilibrium point} is a point of $\mathcal{F}$ where $X_H = 0$,
 or equivalently, given Eq.~(\ref{e:evo:DH_Omega_X_H_2}), a point where
 $\Dd H = 0$.
 \end{prop}
 
-Except at equilibrium points,
-there is one, and exactly one,
-integral curve of $X_H$ through each point of $\mathcal{F}$.
-It follows
-that a solution is entirely determined by a point $a\in\mathcal{F}$,
-which can be thought of as representing the state of the system at the initial
-instant $t=0$, i.e. the coordinates of $a$ are $(q^i(0),p_i(0))$.
+\begin{remark}
+The above formulation of Hamiltonian mechanics is quite covariant: it does not
+refer to some specific canonical coordinates $(q^i, p_i)$. It even does not rely
+on a split between the ``configuration space'',  spanned by some coordinates $(q^i)$
+and the ``momentum space''
+momenta coordinates $(p_i)$.
+\end{remark}
 
+Except at equilibrium points, there is one, and exactly one,
+integral curve of $X_H$ through each point of $\mathcal{F}$.
+It follows that a solution is entirely determined by a point $a\in\mathcal{F}$,
+which can be thought of as representing the state of the system at some initial
+instant $t=0$, i.e. the coordinates of $a$ are $(q^i(0),p_i(0))$.
+There is a
 
 
 
