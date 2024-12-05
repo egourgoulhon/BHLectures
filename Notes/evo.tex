@@ -3447,7 +3447,10 @@ that $\mathcal{F} = \SS^1 \times \mathbb{R}$.
 The grey arrows show the Hamiltonian vector field $X_H$ and the grey
 lines are some of the integral curves of $X_H$. Two of them are highlighted: the red
 one corresponds to oscillating solutions ($\th$ having a limited range and $p_\th$ taking positive and negative values), while the blue one corresponds to solutions
-rotating indefinitely in the anticlockwise direction ($p_\th>0$).}
+rotating indefinitely in the anticlockwise direction ($p_\th>0$).
+The points $a$ and $b$ each represent the initial data of a
+given solution in these families; these points can also be viewed as defining
+the solution itself (covariant phase space approach).}
 \end{figure}
 
 \begin{example}[phase space of a pendulum]
@@ -3496,7 +3499,8 @@ from Eq.~(\ref{e:evo:DH_Omega_X_H}),
 $X_H(H) = \langle \Dd H, X_H \rangle = \Omega(X_H, X_H) = 0$.
 
 In view of Eq.~(\ref{e:evo:dfdt_X_H_f}), one may consider the vector field $X_H$ as
-defining the ``time evolution'' without having to refer to the time coordinate $t$.
+defining the ``time evolution'' without having to refer explicitely
+to the time coordinate $t$.
 Of course, we recover from Eq.~(\ref{e:evo:dfdt_X_H_f})
 that $\D H/\D t = 0$ since $X_H(H) = 0$.
 For tensor fields on $\mathcal{F}$ of valence higher than a scalar field,
@@ -3509,8 +3513,8 @@ In particular, this encompasses Eq.~(\ref{e:evo:dfdt_X_H_f}), since
 $\Liesymbol_{X_H} f = X_H(f)$ for any scalar field $f$.
 An important feature of the evolution thus defined is that
 the symplectic form is conserved:
-\be
-    \Liesymbol_{X_H} \Omega = 0 .
+\be \label{e:evo:Lie_X_H_Omega}
+   \encadre{ \Liesymbol_{X_H} \Omega = 0 }.
 \ee
 \begin{proof}
 The proof relies on the fact that $\Omega$ is closed, i.e. $\Dd\Omega = 0$.
@@ -3543,6 +3547,8 @@ on $\mathcal{F}$ such that
 \be \label{e:evo:DH_Omega_X_H_2}
 \Dd H = \Omega(., X_H) .
 \ee
+By construction, $X_H$ preserves the symplectic
+form: $\Liesymbol_{X_H} \Omega = 0$ [Eq.~(\ref{e:evo:Lie_X_H_Omega})].
 The evolution of the underlying physical system is entirely determined
 by the Hamiltonian vector field: any solution of the equations of motion
 is an integral curve of $X_H$.
@@ -3557,13 +3563,22 @@ or equivalently, given Eq.~(\ref{e:evo:DH_Omega_X_H_2}), a point where
 $\Dd H = 0$.
 \end{prop}
 
+\begin{example}[solutions for the pendulum motion]
+The integral curves of $X_H$ are depicted in Fig.~\ref{f:evo:pendulum_phase}
+for the gravity pendulum (Example~\ref{x:evo:pendulum}). Two of them are
+are represented by the red and the blue curves. It is clear from the figure
+that $X_H$ vanishes at two points: $(\th,p_\th) = (0,0)$ and $(\th,p_\th) = (\pi,0)$,
+which are thus two equilibrium points (respectively stable and unstable).
+\end{example}
+
 \begin{remark}
-The above formulation of Hamiltonian systems is quite covariant: it does not
-refer to any coordinate system on $\mathcal{F}$, not even speaking
-about canonical coordinates $(q^i, p_i)$.
+The above formulation of Hamiltonian systems is covariant: it does not
+refer to any system of canonical coordinates $(q^i, p_i)$ on $\mathcal{F}$
+and, more generally, to any kind of coordinates.
 It does not even assumes that $\mathcal{F}$ is the cotangent bundle $T^*\mathcal{C}$
-of some ``configuration space'' $\mathcal{C}$, which is the standard
-arena for Hamiltonian mechanics \cite{AbrahM78}.
+of some ``configuration space'' $\mathcal{C}$, the latter structure being the standard
+arena for the Hamiltonian mechanics with finite number of degrees
+of freedom \cite{AbrahM78}.
 \end{remark}
 
 There is one, and exactly one,
@@ -3571,10 +3586,11 @@ integral curve of $X_H$ through each point\footnote{At an equilibrium point, the
 integral curve is reduced to the point itself.} of $\mathcal{F}$.
 It follows that a solution is entirely determined by a single point $a\in\mathcal{F}$,
 which can be thought of as representing the state of the system at some initial
-instant $t=0$, i.e. the coordinates of $a$ are $(q^i(0),p_i(0))$.
+instant $t=0$, i.e. the coordinates of $a$ are $(q^i(0),p_i(0))$
+(cf. Fig.~\ref{f:evo:pendulum_phase}).
 If the initial value problem is well posed, there is a one-to-one
 correspondance between a point of $\mathcal{F}$ and a solution.
-Consequently, one may view $\mathcal{F}$ as the space of solutions
+Consequently, one may view $\mathcal{F}$ as the \emph{space of solutions}
 to the equations of motion. This is the essence of the
 so-called \defin{covariant phase space}\index{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --} approach.
 
