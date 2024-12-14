@@ -3249,17 +3249,21 @@ by Wald in 1993 \cite{Wald93}, within a Hamiltonian
 framework based on the co-called \emph{covariant phase space}\index{covariant!phase space} approach. The Hamiltonian formalism naturally provides the concept
 of total mass $M$ --- the variation of which constitutes the left-hand side of the first law --- as the \emph{canonical energy} of the system (value of the Hamiltonian),
 thereby generalizing the concept of ADM mass\index{ADM!mass} beyond general relativity.
-The covariant phase space formalism is an approach to Hamiltonian mechanics that
-preserves general covariance, while the standard approach relies on the choice of
+The \emph{covariant phase space} formalism is a Hamiltonian formulation that
+is adapted to field theories, perserving general covariance.
+On the contrary, the standard approach relies on the choice of
 a time function $t$, with respect to which the evolution is governed by
-\emph{Hamilton's equations}\index{Hamilton's equations}. For a system with $N$ degrees of freedom,
-they read
+Hamilton's equations.
+For a system with $N$ degrees of freedom,
+described by some configuration coordinates $(q^i)_{1\leq i \leq N}$
+and a Lagrangian $L = L(q^i,{\dot q}^i)$ (with ${\dot q}^i := \D q^i/\D t$),
+\defin{Hamilton's equations}\index{Hamilton's equations} read
+${\dot q}^i = \dert{H}{p_i}$ and ${\dot p}_i = - \dert{H}{q^i}$, or equivalently,
 \be \label{e:evo_Hamilton_eqs_finite}
     \derd{q^i}{t} = \{q^i, H \} \qand \derd{p_i}{t} = \{p_i, H\} , \quad 1 \leq i \leq N,
 \ee
-where the $q^i$'s are coordinates describing the system's configuration,
-the $p_i$'s are the conjugate momenta (i.e. $p_i := \dert{L}{{\dot q}^i}$, where
-$L = L(q^i,{\dot q}^i)$ is the system's Lagrangian),
+where
+the $p_i$'s are the conjugate momenta (i.e. $p_i := \dert{L}{{\dot q}^i}$),
 $H$ is the system's Hamiltonian ($H = \sum_{i=1}^N p_i {\dot q}^i - L$)
 and $\{.,.\}$
 stands for the \defin{Poisson bracket}\index{Poisson!bracket}:
@@ -3604,10 +3608,13 @@ so-called \defin{covariant phase space}\index{covariant phase space}\index{covar
 Let us apply the above considerations to a gravity
 theory governed by a Lagrangian of the type (\ref{e:evo:Lagrangian_diffeo_inv}).
 A difference with what precedes is that
-we are dealing with a field theory, which by essence has
+we are dealing with a field theory, which, by essence, has
 an infinite number of degrees of freedom. In other words,
 the space $\mathcal{F}$ of solutions $\w{g}$ to the field equations is
-a manifold of infinite dimension.
+an \emph{infinite-dimensional manifold}, more precisely a
+\emph{infinite-dimensional Banach manifold}, i.e. a topological space
+that locally resembles a Banach space \cite{Lang95}, in the same
+way that a $n$-dimensional manifold locally resembles the vector space $\mathbb{R}^n$.
 
 
 
