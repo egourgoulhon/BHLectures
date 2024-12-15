@@ -3274,20 +3274,20 @@ More generally, for any scalar function $f=f(q^i,p_i)$, one has
 \be \label{e:evo:dfdt_Poisson_fH}
      \derd{f}{t} = \{f, H \} .
 \ee
-The coordinates $(y^a) := (q^1,\ldots,q^N,p_1,\ldots,p_N)$ span a manifold $\mathcal{F}$ of dimension
+The coordinates $(y^a) := (q^1,\ldots,q^N,p_1,\ldots,p_N)$ span a manifold $\FF$ of dimension
 $2N$ called the system's \defin{phase space}\index{phase space}.
 The Poisson bracket can be rewritten covariantly (i.e. in a form independent of the
-coordinates $(y^a)$) by introducing the following 2-form on $\mathcal{F}$:
+coordinates $(y^a)$) by introducing the following 2-form on $\FF$:
 \be \label{e:evo:def_symplectic_finite}
     \Omega := \sum_{i=1}^N \Dd p_i \wedge \Dd q^i ,
 \ee
 where $\Dd$ stands for the exterior derivative\footnote{On phase space manifolds, we are
 not using boldface notations for operators and tensor fields, keeping them for the spacetime
-manifold only. Hence the exterior derivative on $\mathcal{F}$ is denoted by $\Dd$, and not
+manifold only. Hence the exterior derivative on $\FF$ is denoted by $\Dd$, and not
 $\dd$, as defined in Sec.~\ref{s:bas:ext_deriv}, the 2-form (\ref{e:evo:def_symplectic_finite}) is denoted $\Omega$ and not $\w{\Omega}$, etc.}
- on $\mathcal{F}$,
+ on $\FF$,
 so that $\Dd p_i$ (resp. $\Dd q^i$) is the differential 1-form of $p_i$
-(resp. $q^i$) considered as a scalar field on $\mathcal{F}$.
+(resp. $q^i$) considered as a scalar field on $\FF$.
 Given that $q^i = y^i$ and $p_i = y^{i+N}$,
 the components of $\Omega$ with respect to the coordinates
 $(y^a)$ are $\Omega_{ab} =  \sum_{i=1}^N \left( \delta^{i+N}_a \delta^i_b - \delta^i_a \delta^{i+N}_b\right) = \delta_{a,b+N} - \delta_{b,a+N}$. Hence, we may write,
@@ -3300,7 +3300,7 @@ using block matrix notation,
 \ee
 where $a$ and $b$ are respectively the row and column indices
 and $I_N$ stands for the identity matrix of size $N$.
-Any coordinate system on $\mathcal{F}$ in which the 2-form $\Omega$
+Any coordinate system on $\FF$ in which the 2-form $\Omega$
 is expressible as (\ref{e:evo:def_symplectic_finite}), or equivalenty,
 in which the components of $\Omega$ are the matrix (\ref{e:evo:Omega_ab}),
 is called a system of \defin{canonical coordinates}\index{canonical!coordinates}\index{coordinate!canonical --}.
@@ -3313,14 +3313,14 @@ is clearly invertible, its inverse being its opposite:
                   \end{pmatrix} .
 \ee
 This implies that the 2-form $\Omega$ is non-degenerate and allows one
-to define an antisymmetric type-$(2,0)$ tensor field on $\mathcal{F}$,
+to define an antisymmetric type-$(2,0)$ tensor field on $\FF$,
 called the \defin{Poisson bivector}\index{Poisson!bivector}\index{bivector!Poisson --},
 by
 \be
     \Omega^{-1} = (\Omega^{-1})^{ab}\,  \partial_a \otimes\partial_b .
 \ee
 As a tensor of type $(2,0)$, $\Omega^{-1}$ acts bilinearly on 1-forms (cf. Sec.~\ref{s:bas:tensors}) and one may define the \defin{Poisson bracket} of two
-scalar fields $f$ and $g$ on $\mathcal{F}$ by letting $\Omega^{-1}$ act on
+scalar fields $f$ and $g$ on $\FF$ by letting $\Omega^{-1}$ act on
 the pair of 1-forms $(\Dd f, \Dd g)$:
 \be \label{e:evo:Poisson_bracket}
    \encadre{ \{f,g\} := \Omega^{-1}(\Dd f, \Dd g) }.
@@ -3334,9 +3334,9 @@ $\Dd \Omega = 0$.
 This is also obvious from the coordinate expression (\ref{e:bas:def_ext_2f})
 of the exterior derivative, given that the components $\Omega_{ab}$
 are constant in canonical coordinates [Eq.~(\ref{e:evo:Omega_ab})].
-Generically, a closed non-degenerate 2-form $\Omega$ on a smooth manifold $\mathcal{F}$
+Generically, a closed non-degenerate 2-form $\Omega$ on a smooth manifold $\FF$
 is called a \defin{symplectic form}\index{symplectic!form}
-and the pair $(\mathcal{F},\Omega)$ is called a \defin{symplectic manifold}\index{symplectic!manifold}\index{manifold!symplectic --} (see e.g. Chap.~22 of Lee's textbook \cite{Lee13}).
+and the pair $(\FF,\Omega)$ is called a \defin{symplectic manifold}\index{symplectic!manifold}\index{manifold!symplectic --} (see e.g. Chap.~22 of Lee's textbook \cite{Lee13}).
 Not only $\Omega$ is closed, but it is exact. Indeed, it
 follows from expression (\ref{e:evo:def_symplectic_finite}) that
 \be \label{e:evo:Omega_dTheta}
@@ -3349,17 +3349,17 @@ where $\Theta$ is the 1-form defined by
 Because of (\ref{e:evo:Omega_dTheta}), the 1-form $\Theta$ is called the
 \defin{symplectic potential}\index{symplectic!potential}.
 It is also called the
-\defin{canonical 1-form}\index{canonical!1-form} on $\mathcal{F}$, because its expression
+\defin{canonical 1-form}\index{canonical!1-form} on $\FF$, because its expression
 (\ref{e:evo:Theta_pdq}) is independent of the choice of the
 canonical coordinates $(q^i,p_i)$.
 
 
-To any scalar field $f$ on $\mathcal{F}$, one associates a unique vector
-field $X_f$ on $\mathcal{F}$ via the Poisson bivector:
+To any scalar field $f$ on $\FF$, one associates a unique vector
+field $X_f$ on $\FF$ via the Poisson bivector:
 \be \label{e:evo:def_X_f}
     \encadre{X_f := \Omega^{-1}(., \Dd f) }.
 \ee
-Specifically, for any 1-form $\sigma$ on $\mathcal{F}$, one has
+Specifically, for any 1-form $\sigma$ on $\FF$, one has
 \be
     \langle \sigma, X_f \rangle = X_f(\sigma) = \Omega^{-1}(\sigma, \Dd f) .
 \ee
@@ -3433,7 +3433,7 @@ Poisson bracket:
 
 
 The \defin{Hamiltonian vector field}\index{Hamiltonian!vector field} is
-the vector field on $\mathcal{F}$ associated to the Hamiltonian differential $\Dd H$
+the vector field on $\FF$ associated to the Hamiltonian differential $\Dd H$
 by symplectic duality, i.e. the vector field $X_H$.
 It obeys Eq.~(\ref{e:evo:Df_Omega_X_f}):
 \be \label{e:evo:DH_Omega_X_H}
@@ -3442,7 +3442,7 @@ It obeys Eq.~(\ref{e:evo:Df_Omega_X_f}):
 
 \begin{remark}
 In the mathematical literature (e.g. \cite{Lee13}), the vector field
-$X_f$ associated to any scalar function $f$ on $\mathcal{F}$
+$X_f$ associated to any scalar function $f$ on $\FF$
 is called the \emph{Hamiltonian vector field of} $f$. This reflects the
 fact that any scalar function $f$ can the considered as the Hamiltonian
 of some theory, even if the latter is unphysical.
@@ -3451,10 +3451,10 @@ of some theory, even if the latter is unphysical.
 \begin{figure}
 \centerline{\includegraphics[width=0.8\textwidth]{evo_pendulum_phase.pdf}}
 \caption[]{\label{f:evo:pendulum_phase} \footnotesize
-Phase space $\mathcal{F}$ of a simple gravity pendulum, depicted in terms of the
+Phase space $\FF$ of a simple gravity pendulum, depicted in terms of the
 canonical coordinates $(\th,p_\th)$ (cf. Example~\ref{x:evo:pendulum}).
 The vertical lines $\th=-\pi$ and $\th=\pi$ shall be identified to reflect
-that $\mathcal{F} = \SS^1 \times \mathbb{R}$.
+that $\FF = \SS^1 \times \mathbb{R}$.
 The grey arrows show the Hamiltonian vector field $X_H$ and the grey
 lines are some of the integral curves of $X_H$. Two of them are highlighted: the red
 one corresponds to oscillating solutions ($\th$ having a limited range and $p_\th$ taking positive and negative values), while the blue one corresponds to solutions
@@ -3473,7 +3473,7 @@ $L(\th,\dot{\th}) = (\ell\dot{\th})^2/2 + g \ell \cos\th$,
 where $\ell$ is the length of the (massless) and $g$
 the magnitude of the vertical gravity field. The momentum conjugate to $\th$
 is $p_\th = \dert{L}{\dot{\th}} = \ell^2\dot{\th}$. Since the latter can
-take any real value, the phase space $\mathcal{F}$ is the 2-dimensional infinite cylinder
+take any real value, the phase space $\FF$ is the 2-dimensional infinite cylinder
 $\SS^1 \times \mathbb{R}$,
 spanned by the canonical coordinates $(\th,p_\th)$. The
 Hamiltonian is deduced from $L$ by a Legendre transform: $H = p_\th \dot{\th} - L$,
@@ -3493,7 +3493,7 @@ It is depicted in Fig.~\ref{f:evo:pendulum_phase}.
 %\end{example}
 
 Equation~(\ref{e:evo:Xf_Poisson_f}) with $f=H$ leads to
-$\{f,H\} = X_H(f)$ for any scalar field $f$ on $\mathcal{F}$.
+$\{f,H\} = X_H(f)$ for any scalar field $f$ on $\FF$.
 Accordingly, the evolution
 equation (\ref{e:evo:dfdt_Poisson_fH}) can be rewritten as
 \be \label{e:evo:dfdt_X_H_f}
@@ -3514,7 +3514,7 @@ defining the ``time evolution'' without having to refer explicitely
 to the time coordinate $t$.
 Of course, we recover from Eq.~(\ref{e:evo:dfdt_X_H_f})
 that $\D H/\D t = 0$ since $X_H(H) = 0$.
-For tensor fields on $\mathcal{F}$ of valence higher than a scalar field,
+For tensor fields on $\FF$ of valence higher than a scalar field,
 one  defines the ``time evolution'' as the
 \emph{Lie derivative} $\Liesymbol_{X_H}$ along the Hamiltonian vector field $X_H$.
 This is quite natural since the vanishing of $\Liesymbol_{X_H} T$ means
@@ -3545,16 +3545,16 @@ Let us summarize the above results as follows:
 
 \begin{prop}[Hamiltonian system]
 A \defin{Hamiltonian system}\index{Hamiltonian!system}
-is a triplet $(\mathcal{F},\Omega,H)$ where $\mathcal{F}$ is a smooth
+is a triplet $(\FF,\Omega,H)$ where $\FF$ is a smooth
 manifold, called the \defin{phase space}\index{phase space} of the system, $\Omega$ is
-a \defin{symplectic form}\index{symplectic!form} on $\mathcal{F}$, i.e. a closed non-degenerate
-2-form, and $H$ is a smooth function $\mathcal{F} \to \R$ called
+a \defin{symplectic form}\index{symplectic!form} on $\FF$, i.e. a closed non-degenerate
+2-form, and $H$ is a smooth function $\FF \to \R$ called
 the \defin{Hamiltonian}.
 The differential of $H$ is a 1-form $\Dd H$ on
-$\mathcal{F}$, whose symplectic dual defines
+$\FF$, whose symplectic dual defines
 the \defin{Hamiltonian vector field}\index{Hamiltonian!vector field},
 namely the unique vector field $X_H$
-on $\mathcal{F}$ such that
+on $\FF$ such that
 \be \label{e:evo:DH_Omega_X_H_2}
 \Dd H = \Omega(., X_H) .
 \ee
@@ -3563,13 +3563,13 @@ form: $\Liesymbol_{X_H} \Omega = 0$ [Eq.~(\ref{e:evo:Lie_X_H_Omega})].
 The evolution of the underlying physical system is entirely determined
 by the Hamiltonian vector field: any solution of the equations of motion
 is an integral curve of $X_H$.
-A smooth function $f: \ \mathcal{F} \to \R$ is called a
+A smooth function $f: \ \FF \to \R$ is called a
 \defin{conserved quantity}\index{conserved!quantity} iff $f$ is constant on every integral curve
 of $X_H$, i.e. iff $X_H(f) = 0$. In view of Eq.~(\ref{e:evo:crochet_Poisson_equiv}),
 this is equivalent to $\{f,H\} = 0$.
 A conserved quantity is $H$ itself. Its value for a given solution of the equations of motion
 is called the \defin{energy}\index{energy!in Hamiltonian framework} of the solution.
-An \defin{equilibrium point} is a point of $\mathcal{F}$ where $X_H = 0$,
+An \defin{equilibrium point} is a point of $\FF$ where $X_H = 0$,
 or equivalently, given Eq.~(\ref{e:evo:DH_Omega_X_H_2}), a point where
 $\Dd H = 0$.
 \end{prop}
@@ -3584,9 +3584,9 @@ which are thus two equilibrium points (respectively stable and unstable).
 
 \begin{remark}
 The above formulation of Hamiltonian systems is covariant: it does not
-refer to any system of canonical coordinates $(q^i, p_i)$ on $\mathcal{F}$
+refer to any system of canonical coordinates $(q^i, p_i)$ on $\FF$
 and, more generally, to any kind of coordinates.
-It does not even assume that $\mathcal{F}$ is the cotangent bundle $T^*\mathcal{C}$
+It does not even assume that $\FF$ is the cotangent bundle $T^*\mathcal{C}$
 of some ``configuration space'' $\mathcal{C}$, the latter structure being the standard
 arena for the Hamiltonian mechanics with finite number of degrees
 of freedom \cite{AbrahM78}.
@@ -3594,14 +3594,14 @@ of freedom \cite{AbrahM78}.
 
 There is one, and exactly one,
 integral curve of $X_H$ through each point\footnote{At an equilibrium point, the
-integral curve is reduced to the point itself.} of $\mathcal{F}$.
-It follows that a solution is entirely determined by a single point $a\in\mathcal{F}$,
+integral curve is reduced to the point itself.} of $\FF$.
+It follows that a solution is entirely determined by a single point $a\in\FF$,
 which can be thought of as representing the state of the system at some initial
 instant $t=0$, i.e. the coordinates of $a$ are $(q^i(0),p_i(0))$
 (cf. Fig.~\ref{f:evo:pendulum_phase}).
 If the initial value problem is well posed, there is a one-to-one
-correspondance between a point of $\mathcal{F}$ and a solution.
-Consequently, one may view $\mathcal{F}$ as the \emph{space of solutions}
+correspondance between a point of $\FF$ and a solution.
+Consequently, one may view $\FF$ as the \emph{space of solutions}
 to the equations of motion. This is the essence of the
 so-called \defin{covariant phase space}\index{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --} approach.
 
@@ -3610,11 +3610,32 @@ theory governed by a Lagrangian of the type (\ref{e:evo:Lagrangian_diffeo_inv}).
 A difference with what precedes is that
 we are dealing with a field theory, which, by essence, has
 an infinite number of degrees of freedom. In other words,
-the space $\mathcal{F}$ of solutions $\w{g}$ to the field equations is
-an \emph{infinite-dimensional manifold}, more precisely a
-\emph{infinite-dimensional Banach manifold}, i.e. a topological space
-that locally resembles a Banach space \cite{Lang95}, in the same
-way that a $n$-dimensional manifold locally resembles the vector space $\mathbb{R}^n$.
+the space $\FF$ of solutions $\w{g}$ to the field equations is
+an \emph{infinite-dimensional manifold}, more precisely an
+infinite-dimensional \defin{Banach manifold}\index{Banach manifold}\index{manifold!Banach --}, i.e. a topological space that locally resembles\footnote{Cf. Lang's book~\cite{Lang95} for a
+precise definition.} a Banach space of infinite dimension, in the same
+way as a $n$-dimensional manifold locally resembles the vector space $\mathbb{R}^n$.
+Since any point of $\FF$ is a metric field $\w{g}$ on $\M$, a variation $\delta\w{g}$
+can be viewed as an infinitesimal displacement vector between two neighboring points of the manifold
+$\FF$, similar to the displacement vector $\D\w{x}$ on $\M$ introduced in Secs.~\ref{s:fra:general_settings} and \ref{s:bas:vectors}.
+As in the finite dimensional case
+(cf. Sec.~\ref{s:bas:vectors}), finite vectors on $\FF$
+are defined\footnote{Notice that the definition (\ref{e:bas:def_vector}) of a tangent vector
+does not require the manifold to be of finite dimension.} as tangent vectors
+along \emph{curves of} $\FF$, the latter being the images of smooth maps
+$P: I\subset \R \to  \FF$, $\lambda\mapsto P(\lambda) =: \w{g}(\lambda)$. Here
+$\w{g}(\lambda)$ stands for a 1-parameter family of metric fields
+on $\M$, this family constituting a parametrization of a given curve $\mathcal{L}$ of $\FF$.
+Any vector $X$ at a point $\w{g}_0 \in \FF$ can then be written as in Eq.~(\ref{e:bas:dell_v_dlamb}):
+\be
+    X = \frac{\delta\w{g}}{\delta\lambda} ,
+\ee
+where $\delta\w{g}$ is the infinitesimal displacement vector connecting $\w{g}_0 =: \w{g}(\lambda)$
+and $\w{g}(\lambda+\delta\lambda)$ along the curve $\mathcal{L}$
+to which $X$ is tangent to; $\lambda$ is then the parameter of $\mathcal{L}$ associated to $X$
+and we denote by $\delta\lambda$ its small increment, instead of $\D\lambda$ as in Sec.~\ref{s:bas:vectors}.
+
+
 
 
 

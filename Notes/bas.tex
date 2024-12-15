@@ -84,15 +84,16 @@ The above definition of a manifold lies at the \emph{topological} level
 a \defin{smooth manifold}\index{smooth!manifold}\index{manifold!smooth --},
 is a manifold $\M$ equipped with an atlas
 $(\mathscr{U}_i,\Phi_i)_{i\in I}$ such that for any non-empty intersection
-$\mathscr{U}_i \cap \mathscr{U}_j$, the mapping
+$\mathscr{U}_i \cap \mathscr{U}_j$, the map
 \be \label{e:bas:transition_map}
     \Phi_i \circ \Phi_j^{-1} : \Phi_j(\mathscr{U}_i \cap \mathscr{U}_j)
     \subset \R^n \longrightarrow \Phi_i(\mathscr{U}_i \cap \mathscr{U}_j)
     \subset \R^n
 \ee
 is smooth (i.e. $C^\infty$).
-Note that the above mapping is from an open set of $\R^n$ to an open set of $\R^n$, so that the invoked differentiability is nothing but that of $\R^n$.
-Such a mapping is called a \defin{change of coordinates}\index{change!of coordinates}\index{coordinate!change} or, in the mathematically-oriented literature, a
+Note that the above map is from an open set of $\R^n$ to an open set of $\R^n$, so that the
+invoked $C^\infty$ differentiability is nothing but that of $\R^n$.
+Such a map is called a \defin{change of coordinates}\index{change!of coordinates}\index{coordinate!change} or, in the mathematical literature, a
 \defin{transition map}\index{transition map}.
 The atlas $(\mathscr{U}_i,\Phi_i)_{i\in I}$  is called a
 \defin{smooth atlas}\index{smooth!atlas}\index{atlas!smooth --}.
@@ -108,15 +109,15 @@ that are homeomorphic to $\mathbb{S}^7$ but not diffeomorphic
 to $\mathbb{S}^7$.  On the other side, for $n\leq 6$, there is a unique smooth
 structure for the sphere $\mathbb{S}^n$.
 Moreover, any manifold of dimension $n\leq 3$ admits a unique smooth structure.
-Amazingly, in the case of $\R^n$, there exists a unique smooth structure (the standard one) for any $n\not=4$, but for $n=4$ (the spacetime case!) there exist uncountably many non-equivalent smooth structures, the so-called
+Amazingly, in the case of $\R^n$, there exists a unique smooth structure (the standard one) for any $n\not=4$, but for $n=4$ (the standard spacetime case!) there exist uncountably many non-equivalent smooth structures, the so-called
 \emph{exotic $\R^4$}\index{exotic!$\R^4$} \cite{Taube87}.
 \end{remark}
 
 \begin{remark} \label{r:bas:analytic}
-When discussing the no-hair theorem in Chap.~\ref{s:sta}, we
-refer to the concept of
+When discussing the no-hair theorem in Chap.~\ref{s:sta}, one
+refers to the concept of
 \emph{analytic manifold},
-which is a special case of that of smooth manifold. Indeed, an
+which is a special case of smooth manifold. Indeed, an
 \defin{analytic manifold}\index{analytic!manifold}\index{manifold!analytic --}
 is defined as a manifold equipped with an atlas for which all the changes of coordinates
 $\Phi_i \circ \Phi_j^{-1}$ are real analytic functions.
@@ -187,10 +188,10 @@ from an open subset of $\R^n$ to $\R^n$.
 
 \subsection{Curves and vectors on a manifold} \label{s:bas:vectors}
 
-On a manifold, vectors are defined as tangent vectors to a curve.
-Given an interval $I\subset\R$, a (smooth)
+On a smooth manifold, vectors are defined as tangent vectors to a curve.
+Given an interval $I\subset\R$, a
 \defin{curve}\index{curve} is a subset $\Li\subset \M$ that is the image of a smooth map
-$I \rightarrow  \M$:
+$I \to  \M$:
 \be
     \begin{array}{rccl}
     P: & I & \longrightarrow & \M \\
@@ -207,18 +208,19 @@ defined by $n$ functions $X^\alpha : \ I \rightarrow \R$ such that
 \ee
 
 \begin{remark} \label{r:bas:curve_def}
-In the literature, especially in the mathematical one, a curve is often defined
+In the literature, a curve is often defined
 as a map $P:\ I \rightarrow  \M$ and not as
-the image of $P$. According to this definition, different parametrizations
+the image of $P$. According to that definition, different parametrizations
 give birth to different curves.
 \end{remark}
 
 A \defin{scalar field}\index{scalar!field} on $\M$ is a function
-$f:\ \M \rightarrow \R$. In practice, we will always consider smooth scalar fields. At a point $p=P(\lambda)\in\Li$, the \defin{tangent vector to $\Li$}\index{vector!tangent --}\index{tangent!vector} associated with the parametrization
+$f:\ \M \rightarrow \R$. Unless specified, we shall always consider \emph{smooth} scalar fields,
+i.e. smooth maps as defined in Sec.~\ref{s:bas:def_manif}. At a point $p=P(\lambda)\in\Li$, the \defin{tangent vector to $\Li$}\index{vector!tangent --}\index{tangent!vector} associated with the parametrization
 $P$ is the operator $\w{v}$ which maps every scalar field $f$ defined around
 $p$ to the real number
 \be \label{e:bas:def_vector}
-  \w{v}(f) = \left. \frac{\D f}{\D \lambda} \right|_{\Li} :=
+  \w{v}(f) := \left. \frac{\D f}{\D \lambda} \right|_{\Li} =
   \lim_{\veps\rightarrow 0} \frac{1}{\veps}
   \left[ f(P(\lambda+\veps)) - f(P(\lambda)) \right] .
 \ee
@@ -284,7 +286,7 @@ the tangent spaces $T_p\M$ and $T_q\M$.}
 Contrary to what happens for an affine space, one cannot define a vector connecting two distinct points $p$ and $q$ on a generic manifold, except if $p$ and $q$ are infinitesimally close to each other. Indeed, in the latter case, one defines
 the \defin{infinitesimal displacement vector from $p$ to $q$}\index{infinitesimal! displacement vector}\index{vector!infinitesimal --} as the vector $\D\w{x}\in{{T_p\M}}$ whose action on a scalar field $f$ is
 \be \label{e:bas:dell_f}
-  \D\w{x}(f) = \left. \D f \right| _{p\rightarrow q} = f(q) - f(p) .
+  \D\w{x}(f) := \left. \D f \right| _{p\rightarrow q} = f(q) - f(p) .
 \ee
 Since $p$ and $q$ are infinitesimally close, there is a unique (piece of) curve
 $\Li$ going
@@ -295,19 +297,18 @@ from $p$ to $q$ and one has
 where $\lambda$ is a parameter along $\Li$, $\w{v}$ the associated tangent
 vector at $p$ and $\D\lambda$ the parameter
 increment from $p$ to $q$: $p=P(\lambda)$ and $q=P(\lambda+\D\lambda)$.
-The relation (\ref{e:bas:dell_v_dlamb}) follows immediately from the definition
-(\ref{e:bas:def_vector}) of $\w{v}$.
+The relation (\ref{e:bas:dell_v_dlamb}) follows immediately from the definitions
+(\ref{e:bas:def_vector}) and (\ref{e:bas:dell_f}) for respectively $\w{v}$ and $\D\w{x}$.
 Given a coordinate system, let $(x^\alpha)$ be the coordinates
-of $p$ and $(x^\alpha+\D x^\alpha)$ those of $q$. Then from Eq.~(\ref{e:bas:dell_f}),
-\[
-  \D\w{x}(f) =   \D f  = \der{f}{x^\alpha} \, \D x^\alpha
-  = \D x^\alpha \, \wpar_\alpha(f) .
-\]
+of $p$ and $(x^\alpha+\D x^\alpha)$ those of $q$. Then from Eqs.~(\ref{e:bas:dell_f})
+and (\ref{e:bas:wpar_partial}),
+$\D\w{x}(f) =   \D f  = \dert{f}{x^\alpha} \, \D x^\alpha
+  = \D x^\alpha \, \wpar_\alpha(f)$.
 The scalar field $f$ being arbitrary, we conclude that
 \be \label{e:bas:dell_dxa_wpar}
   \encadre{ \D\w{x} = \D x^\alpha \, \wpar_\alpha } .
 \ee
-In other words, the components of the infinitesimal displacement vector with respect
+In other words, the components of the infinitesimal displacement vector $\D\w{x}$ with respect
 to the coordinates $(x^\alpha)$ are nothing but the infinitesimal coordinate
 increments $\D x^\alpha$.
 
