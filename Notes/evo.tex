@@ -2344,7 +2344,7 @@ computation of Hawking radiation \cite{Hawki75} (cf. historical note on p.~\page
 As for the generalized second law of thermodynamics, it was proposed by Bekenstein himself in the 1972-73 articles introducing the Bekenstein-Hawking entropy \cite{Beken72,Beken73b}.
 Further arguments for its validity have been provided in a subsequent article \cite{Beken74}.
 Previously, it was said that the (standard) second law of thermodynamics was \emph{transcended}\index{transcended law}
-in presence of a black hole \cite{BardeCH73,Carte73b}: it could not hold when some matter (and its entropy!) is thrown into the black hole.
+in presence of a black hole \cite{BardeCH73,Carte73b}, for it could not hold when some matter (and its entropy!) is thrown into the black hole.
 \end{hist}
 
 \subsection{Black hole entropy as a statistical entropy from quantum gravity}
@@ -3242,7 +3242,7 @@ of gravity. This holds because the Wald entropy naturally enters in the
 generalization of the first law to all diffeomorphism-invariant theories
 that admit a Hamiltonian formulation, to which we turn now.
 
-\subsection{First law for diffeomorphism-invariant theories}
+\subsection{The covariant phase space approach}
 
 The extension of the first law beyond general relativity has been achieved
 by Wald in 1993 \cite{Wald93}, within a Hamiltonian
@@ -3605,6 +3605,10 @@ Consequently, one may view $\FF$ as the \emph{space of solutions}
 to the equations of motion. This is the essence of the
 so-called \defin{covariant phase space}\index{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --} approach.
 
+
+\subsection{First law for diffeomorphism-invariant theories}
+
+
 Let us apply the above considerations to a gravity
 theory governed by a Lagrangian of the type (\ref{e:evo:Lagrangian_diffeo_inv}).
 A difference with what precedes is that
@@ -3657,7 +3661,7 @@ is a submanifold of $\M$ of dimension $n-1$. Moreover, we assume that the asympt
 ensure that the integral is always convergent, giving birth a finite real number.
 Since $\w{\theta}[\w{g},\delta\w{g}]$ is linear in its argument $\delta\w{g}$
 (cf. Property~\ref{p:evo:var_Lagrangian}), we may rewrite (\ref{e:evo:def_Theta_X_theta}) as
-\be
+\be \label{e:evo:Theta_X_theta_partial}
     \langle \Theta, X \rangle := \int_{\Sigma} \w{\theta}\left[\w{g},\frac{\delta\w{g}}{\delta\lambda}\right] .
 \ee
 The map $\Theta: T_{\w{g}} \FF \to \R$ thus defined is clearly linear, given that
@@ -3667,9 +3671,13 @@ that it is continuous (recall that linearity does not imply continuity in infini
 so that $\Theta$ belongs to the dual space of the tangent space to $\FF$ at $\w{g}$:
 $\Theta \in T_{\w{g}}^* \FF$. By letting the point $\w{g}$ vary over all $\FF$, this defines
 a 1-form on $\FF$, which we shall denote by the same symbol $\Theta$.
-In order to endow $\FF$ with a symplectic form for defining a covariant phase space,
+In order to endow $\FF$ with a symplectic form, hence turning it into a covariant phase space,
 let us consider the exterior derivative of $\Theta$, i.e.
-the 2-form $\Omega := \Dd \Theta$. This is analogous to Eq.~(\ref{e:evo:Omega_dTheta})
+the 2-form
+\be
+    \Omega := \Dd \Theta .
+\ee
+This is analogous to Eq.~(\ref{e:evo:Omega_dTheta})
 and explains why $\w{\theta}$ has been called the \emph{symplectic potential $(n-1)$-form}.
 Let us evaluate the action of $\Omega$ on a pair of two vectors fields $(X_1, X_2)$
 on $\FF$. According to Eq.~(\ref{e:evo:X_dg/dlambda}),
@@ -3682,12 +3690,91 @@ $\w{g}(\lambda_1,\lambda_2)$
 of metric tensors. The vector field $X_1$ (resp. $X_2$) on $\FF$ corresponds then to variations
 $\delta\w{g}$
 along curves $\lambda_2 = \mathrm{const}$ (resp. $\lambda_1 = \mathrm{const}$) in the 2-surface $\mathcal{S}$, i.e. to partial derivatives:
-\be
+\be \label{e:evo:def_X1_X2}
     X_1 = \left. \frac{\delta\w{g}}{\delta\lambda_1} \right| _{\lambda_2=\mathrm{const}}
       =: \der{\w{g}}{\lambda_1}  \qand
     X_2 = \left. \frac{\delta\w{g}}{\delta\lambda_2} \right| _{\lambda_1=\mathrm{const}}
-      =: \der{\w{g}}{\lambda_2}
+      =: \der{\w{g}}{\lambda_2} .
 \ee
+Let us compute $\Omega(X_1,X_2) = \Dd \Theta (X_1,X_2)$ via formula
+(\ref{e:bas:def_ext_der_p1}) for the exterior derivative, noticing that (i) this formula
+does not involve the manifold dimensionality (contrary to formula (\ref{e:bas:def_ext_1f}),
+which applies to finite dimensions only) and (ii) the last term in its right-hand
+side vanishes since $[X_1,X_2] = 0$ (commutation of partial derivatives).
+We get
+\begin{align}
+    \Omega(X_1,X_2) & = X_1\left( \langle \Theta, X_2 \rangle \right)
+        -  X_2\left( \langle \Theta, X_1 \rangle \right) \nonumber \\
+        & =  \der{}{\lambda_1} \langle \Theta, X_2 \rangle -
+            \der{}{\lambda_2} \langle \Theta, X_1 \rangle \nonumber \\
+        & = \der{}{\lambda_1} \int_{\Sigma} \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_2} \right]
+        - \der{}{\lambda_2} \int_{\Sigma} \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_1} \right]   \nonumber \\
+        & = \int_{\Sigma} \left\{ \der{}{\lambda_1}
+        \left( \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_2} \right]\right)
+        - \der{}{\lambda_2}\left( \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_1} \right] \right) \right\} .
+        \nonumber
+\end{align}
+The second equality results from $X_1(f) = \dert{f}{\lambda_1}$ for the scalar field
+$f := \langle \Theta, X_2 \rangle$ [cf. Eq.~(\ref{e:bas:def_vector})], the third equality
+makes use of Eqs.~(\ref{e:evo:Theta_X_theta_partial}) and (\ref{e:evo:def_X1_X2})
+and the last equality stems from the linearity of the integral.
+We may write the above result as
+\be
+    \encadre{ \Omega(X_1,X_2) =  \int_{\Sigma} \w{\omega}\left[\w{g},  \der{\w{g}}{\lambda_1},
+                            \der{\w{g}}{\lambda_2} \right] } ,
+\ee
+with
+\be \label{e:evo:def_omega_der_theta}
+ \encadre{ \w{\omega}\left[\w{g},  \der{\w{g}}{\lambda_1}, \der{\w{g}}{\lambda_2} \right]
+    :=  \der{}{\lambda_1}
+        \left( \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_2} \right]\right)
+        - \der{}{\lambda_2}\left( \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_1} \right] \right) } .
+\ee
+$\w{\omega}$ is a $(n-1)$-form on spacetime, which depends locally on the metric tensor $\w{g}$,
+and the derivatives $\dert{\w{g}}{\lambda_1}$ and $\dert{\w{g}}{\lambda_2}$
+associated to the 2-parameter family $\w{g}(\lambda_1,\lambda_2)$. We observe
+that $\w{\omega}$ does not depend on the second derivative
+$\frac{\partial^2\w{g}}{\partial\lambda_1\partial\lambda_2}$ because the second derivatives,
+which appear in each of the two terms of the right-hand side of
+Eq.~(\ref{e:evo:def_omega_der_theta}), cancel each other thanks to the
+identity
+$\frac{\partial^2\w{g}}{\partial\lambda_1\partial\lambda_2} = \frac{\partial^2\w{g}}{\partial\lambda_2\partial\lambda_1}$.
+Moreover, we observe as well that $\w{\omega}$ is linear with respect to $\der{\w{g}}{\lambda_1}$
+and with respect to $\der{\w{g}}{\lambda_2}$.
+
+An important property of $\w{\omega}$ is to be a closed $(n-1)$-form:
+\be \label{e:evo:omega_closed}
+    \dd \w{\omega} = 0 .
+\ee
+\begin{proof}
+The 2-parameter family of metric tensors $\w{g}(\lambda_1,\lambda_2)$ gives birth
+to a 2-parameter family of Lagrangian $n$-forms
+$\w{L}(\lambda_1,\lambda_2) := \w{L}[\w{g}(\lambda_1,\lambda_2)]$.
+The variation $\delta_1\w{L}$ of $\w{L}$ corresponding to a variation of $\lambda_1$ is
+given by Eq.~(\ref{e:evo:delta_L_E_Theta}) with $E^{\mu\nu} = 0$ since
+we are considering only families of solutions of the field equations (equivalently,
+all displacements $\delta\w{g}$ are taking place within the 2-surface
+$\mathcal{S}$, which is part of the space $\FF$ of solutions). Hence
+$\delta_1 \w{L} = \dd \left( \w{\theta}[\w{g}, \delta_1 \w{g}] \right)$.
+Given that $\delta_1 \w{L} = \der{\w{L}}{\lambda_1}  \, \delta \lambda_1$,
+$\delta_1 \w{g} = \der{\w{g}}{\lambda_1} \, \delta \lambda_1$
+and $\w{\theta}[.,.]$ is linear with respect to its second argument, we get
+\[
+    \der{\w{L}}{\lambda_1} = \dd \left( \w{\theta} \left[\w{g},  \der{\w{g}}{\lambda_1} \right] \right) .
+\]
+Taking the derivative of this expression with respect to $\lambda_2$ yields
+\[
+    \frac{\partial^2\w{L}}{\partial\lambda_2\partial\lambda_1} = \der{}{\lambda_2}
+        \dd \left( \w{\theta} \left[\w{g},  \der{\w{g}}{\lambda_1} \right] \right)
+        = \dd  \der{}{\lambda_2} \left( \w{\theta} \left[\w{g},  \der{\w{g}}{\lambda_1} \right] \right) .
+\]
+Performing a swap of $\lambda_1$ and $\lambda_2$ and subtracting the above formula
+yields, in view of $\w{\omega}$'s definition (\ref{e:evo:def_omega_der_theta}),
+$\frac{\partial^2\w{L}}{\partial\lambda_1\partial\lambda_2} - \frac{\partial^2\w{L}}{\partial\lambda_2\partial\lambda_1} = \dd\w{\omega}$. But the left-hand side of this equation
+is trivially zero, hence the result (\ref{e:evo:omega_closed}).
+\end{proof}
+
+
 
 
 
