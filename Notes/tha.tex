@@ -519,7 +519,7 @@ along with $\dd \w{J}\lld\w{\xi}\rld = 0$ [Eq.~(\ref{e:tha:J_closed})] yields
 where the arrows mean that $\Sigma_1$, $\Sigma_2$ and $\mathscr{W}$ are oriented according to the outward
 convention (with respect to $\mathscr{D}$).
 Noticing that $\int_{\Sigma_1^{\nearrow}} \w{J}\lld\w{\xi}\rld = -\mathscr{Q}_{\Sigma_1,\w{\xi}}$,
-$\int_{\Sigma_2^{\nearrow}} \w{J}\lld\w{\xi}\rld = \mathscr{Q}_{\Sigma_1,\w{\xi}}$
+$\int_{\Sigma_2^{\nearrow}} \w{J}\lld\w{\xi}\rld = \mathscr{Q}_{\Sigma_2,\w{\xi}}$
 and $\int_{\mathscr{W}^{\nearrow}} \w{J}\lld\w{\xi}\rld = - \int_{\mathscr{W}^{\swarrow}} \w{J}\lld\w{\xi}\rld$
 yields (\ref{e:tha:Noether_Q_Sigma_1_2}).
 \end{proof}
@@ -1223,7 +1223,9 @@ From the spacetime symplectic potential $(n-1)$-form $\w{\theta}\lld\w{g},\delta
 (cf. Property~\ref{p:tha:var_Lagrangian}), we may define a 1-form $\Theta$ on $\FF$ as follows.
 Let us assume that the spacetime $(\M,\w{g})$ is globally hyperbolic and asymptotically flat.
 Let then $\Sigma$ be a Cauchy surface\index{Cauchy!surface}
-(cf. the definition given on p.~\pageref{d:sta:Cauchy_surface}).
+(cf. the definition given on p.~\pageref{d:sta:Cauchy_surface}), oriented
+so that the $(n-1)$-form $\w{n}\cdot\weps$ is right-handed for $\w{n}$ future-directed
+unit normal to $\Sigma$.
 At a point $\w{g}\in\FF$, we define the action of $\Theta$ on a vector $X$ in the
 tangent space $T_{\w{g}} \FF$ by
 \be \label{e:tha:def_Theta_X_theta}
@@ -1236,7 +1238,7 @@ so that
 Eq.~(\ref{e:tha:X_dg/dlambda}) holds, i.e. $\delta\w{g} = \delta\lambda \, X$.
 The integral in the right-hand side of Eq.~(\ref{e:tha:def_Theta_X_theta}) is a priori well-defined
 since $\w{\theta}\lld\w{g},\delta\w{g}\rld$ is a $(n-1)$-form on $\M$ and $\Sigma$
-is a submanifold of $\M$ of dimension $n-1$. Moreover, we assume that the asymptotic flatness conditions
+is an oriented submanifold of $\M$ of dimension $n-1$. Moreover, we assume that the asymptotic flatness conditions
 ensure that the integral is always convergent, giving birth a finite real number.
 Since $\w{\theta}\lld\w{g},\delta\w{g}\rld$ is linear in its argument $\delta\w{g}$
 (cf. Property~\ref{p:tha:var_Lagrangian}), we may rewrite (\ref{e:tha:def_Theta_X_theta}) as
@@ -1254,7 +1256,7 @@ In order to endow $\FF$ with a symplectic form, hence turning it into a covarian
 let us consider the exterior derivative of $\Theta$, i.e.
 the 2-form
 \be
-    \Omega := \Dd \Theta .
+   \encadre{ \Omega := \Dd \Theta }.
 \ee
 This is analogous to Eq.~(\ref{e:tha:Omega_dTheta})
 and explains why $\w{\theta}$ has been called the \emph{symplectic potential $(n-1)$-form}.
@@ -1298,7 +1300,7 @@ $f := \langle \Theta, X_2 \rangle$ [cf. Eq.~(\ref{e:bas:def_vector})], the third
 makes use of Eqs.~(\ref{e:tha:Theta_X_theta_partial}) and (\ref{e:tha:def_X1_X2})
 and the last equality stems from the linearity of the integral.
 We may write the above result as
-\be
+\be \label{e:tha:Omega_int_omega}
     \encadre{ \Omega(X_1,X_2) =  \int_{\Sigma} \w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1},
                             \der{\w{g}}{\lambda_2} \Rld } ,
 \ee
@@ -1321,7 +1323,7 @@ $\frac{\partial^2\w{g}}{\partial\lambda_1\partial\lambda_2} = \frac{\partial^2\w
 Moreover, we observe as well that $\w{\omega}$ is linear with respect to $\der{\w{g}}{\lambda_1}$
 and with respect to $\der{\w{g}}{\lambda_2}$.
 
-An important property of $\w{\omega}$ is to be a closed $(n-1)$-form:
+An important property of $\w{\omega}$ is to be a closed differential form:
 \be \label{e:tha:omega_closed}
     \dd \w{\omega} = 0 .
 \ee
@@ -1352,7 +1354,15 @@ yields, in view of $\w{\omega}$'s definition (\ref{e:tha:def_omega_der_theta}),
 $\frac{\partial^2\w{L}}{\partial\lambda_1\partial\lambda_2} - \frac{\partial^2\w{L}}{\partial\lambda_2\partial\lambda_1} = \dd\w{\omega}$. But the left-hand side of this equation
 is trivially zero, hence the result (\ref{e:tha:omega_closed}).
 \end{proof}
-
+It follows from $\dd\w{\omega} = 0$ and the Stokes theorem (\ref{e:bas:Stokes})
+that the value of $\Omega(X_1,X_2)$ given by Eq.~(\ref{e:tha:Omega_int_omega})
+depends on the choice of the
+Cauchy surface $\Sigma$ only up to some boundary integral at asymptotic infinity.
+The argument is the same as in the proof of Eq.~(\ref{e:tha:Noether_Q_Sigma_1_2}).
+However, for ``reasonable'' asymptotic flatness conditions on $\w{g}$, the
+boundary integral vanishes (cf. Ref.~\cite{IyerW94} for details). We conclude that
+the 2-form $\Omega$ does not depend on the choice of $\Sigma$ in the definition
+(\ref{e:tha:def_Theta_X_theta}) of $\Theta$.
 
 
 
