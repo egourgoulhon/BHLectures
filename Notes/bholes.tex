@@ -22,7 +22,10 @@
 \usepackage{minitoc}
 \usepackage{graphicx}
 \usepackage{color}
+
 \usepackage{bm} % bold math
+\SetSymbolFont{largesymbols}{bold}{OMX}{txex}{b}{n}  % to have bold large parentheses
+
 \usepackage{mathrsfs} % -> \mathscr
 \usepackage{ifthen}
 \usepackage{tikz}
@@ -129,6 +132,10 @@
 \newcommand{\qand}{\qquad\mbox{and}\qquad}
 \newcommand{\bigO}{\mathcal{O}}
 \newcommand{\FF}{\mathcal{F}}
+\newcommand{\lld}{\textbf{(}}
+\newcommand{\rld}{\textbf{)}}
+\newcommand{\Lld}{\bm{\big(}}
+\newcommand{\Rld}{\bm{\big)}}
 
 \renewcommand{\labelitemii}{$\circ$} % to avoid --
 
@@ -165,10 +172,6 @@
 \par\medskip\noindent\small\textbf{Example \theexampleCounter\ifthenelse{\equal{#1}{}}{: }{ (#1):}}}%
 {\par\medskip}
 
-\newenvironment{notation}%
-{\par\medskip\noindent\textbf{Notation:}}%
-{\par\medskip}
-
 \newenvironment{hist}[1][]%
 %{\par\medskip\noindent\small\textbf{Historical note:}}%
 {\par\medskip\noindent\small\textbf{Historical note \ifthenelse{\equal{#1}{}}{: }{ (#1):}}}%
@@ -191,6 +194,22 @@ innertopmargin=\topskip,
 
 \mdtheorem[style=propstyle]{prop}{Property}[chapter]
 \mdtheorem[style=propstyle]{lemma}[prop]{Lemma}
+
+\mdfdefinestyle{notationstyle}{%
+hidealllines=true,
+backgroundcolor=gray!10!white,
+roundcorner=5pt
+}
+
+\newenvironment{notation}%
+{\par\smallskip\noindent\textbf{Notation:}}%
+{\par\smallskip}
+
+\surroundwithmdframed[style=notationstyle]{notation}
+
+%\newmdenv[style=notationstyle]{notation}%
+%{\par\medskip\noindent\textbf{Notation:}}
+
 
 %\newenvironment{remark}[1][]%
 %{\begin{description} \item[\emph{Remark #1:}]\it}%

@@ -27,62 +27,47 @@ necessarily proportional, so that there is no loss of generality in the writing
 $\w{L} = L \, \weps$.} $\w{L} = L \, \weps$ and the third one provides an expression of the integral
 in terms of a coordinate system $(x^\alpha)$ on $\M$, $g$ being the determinant of
 $\w{g}$ with respect to these coordinates [cf. Eq.~(\ref{e:bas:eps_sqrt_g})].
-Disregarding any matter field for simplicity,
+Disregarding any matter field or extra scalar field for simplicity,
 we shall assume that $\w{L}$ is a function of the metric tensor only.
 More precisely, we assume that at a given point $p\in\M$, $\w{L}$ depends only
 on the values of $\w{g}$ and its derivatives at $p$. By \emph{derivative}, it is
 meant derivative with respect to any affine connection on $\M$, for instance one
 formed by the partial derivatives with respect to a coordinate system. We shall
-write $\w{L(g)}$ to stress this dependency of $\w{L}$ on $\w{g}$, according
-to the following notation
+write $\w{L}\lld\w{g}\rld$ to stress this dependency of $\w{L}$ on $\w{g}$, according
+to the following notation:
+\begin{notation}
+\label{n:tha:bold_parentheses}
+Boldface parentheses are used to denote the local (pointwise) dependency of a
+tensor field on $\M$ with respect to other ones: $\w{A}\lld \w{B}, \w{C} \rld$
+means that at a given point $p\in\M$, $\w{A}$ depends only
+on the values of the tensor fields $\w{B}$ and $\w{C}$ and their derivatives at $p$.
+\end{notation}
 
-
- the Riemann tensor and a finite number of symmetrized\footnote{There is no loss of generality in considering only symmetrized derivatives, since
-any antisymmetrized combination can be reexpressed in term of the Riemann tensor itself and
-lower order derivatives.} covariant derivatives of the latter:
-\be \label{e:tha:Lagrangian_diffeo_inv}
-    L = L\left(g_{\alpha\beta}, R_{\alpha\beta\gamma\delta}, \nabla_\lambda R_{\alpha\beta\gamma\delta},\ldots,
-    \nabla_{(\lambda_1} \cdots\nabla_{\lambda_m)} R_{\alpha\beta\gamma\delta} \right) .
-\ee
-It can be shown \cite{IyerW94} that any diffeomorphism-invariant theory of gravity based on a Lagrangian
-involving only the metric tensor and its derivatives (with respect to an arbitrary affine connection on $\M$) can
-be recast in the form (\ref{e:tha:Lagrangian_diffeo_inv}).
-
-\begin{example}
-\label{x:tha:EH_Lagrangian}
-For general relativity, $L$ is the Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}:
-$L = (16\pi)^{-1} R = (16\pi)^{-1} g^{\mu\nu} R_{\mu\nu} =  (16\pi)^{-1} g^{\mu\nu} R^\sigma_{\ \,\mu\sigma\nu}$, hence $L = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu}$, which is of the form (\ref{e:tha:Lagrangian_diffeo_inv}).
-\end{example}
-
-By \emph{diffeomorphism-invariant} theory, it is meant
-that the Lagrangian $n$-form $\w{L}$ is covariant under the group of diffeomorphisms of $\M$.
+We shall consider only gravity theories whose
+Lagrangian $n$-form $\w{L}$ is covariant under the group of diffeomorphisms of $\M$.
 More precisely, under the action of a diffeomorphism $\Phi:\M \to \M$, the metric tensor
 is transformed to its pullback $(\Phi^{-1})^*\w{g}$ by
 $\Phi^{-1}$ (cf. Sec.~\ref{s:bas:push_pull} for the definition of the pullback).
 The inverse of $\Phi$ is invoked here because, as $\w{g}$ is a
-tensor of type $(0,2)$, $\Phi$ itself would carry it from\footnote{Since $\Phi$ is a diffeomorphism
+tensor of type $(0,2)$, $\Phi^*$ would carry it from\footnote{Since $\Phi$ is a diffeomorphism
 $\M\to \M$, we have of course $\Phi(\M)=\M$; however we keep the notation $\Phi(\M)$ to stress the image character by $\Phi$.} $\Phi(\M)$ to $\M$, while
 we are considering the transformation from $\M$ to $\Phi(\M)$ (cf. Remark~\ref{r:bas:comp_push_pull} on
 p.~\pageref{r:bas:comp_push_pull}).
-Let $\w{L}[(\Phi^{-1})^*\w{g}]$ be the Lagrangian $n$-form constructed by keeping the same functional
-dependence in $(\Phi^{-1})^*\w{g}$ as $\w{L}$ has in $\w{g}$,
-i.e. $\w{L}[(\Phi^{-1})^*\w{g}] := L((\Phi^{-1})^* g_{\alpha\beta}, R_{\alpha\beta\gamma\delta}[(\Phi^{-1})^*\w{g}], \ldots) \,
-\weps[(\Phi^{-1})^*\w{g}]$
-with the same function $L$ as in (\ref{e:tha:Lagrangian_diffeo_inv}).
-In what follows, we shall denote by $\w{L}[\w{g}]$ the original Lagrangian $n$-form, instead of merely $\w{L}$.
+Let $\w{L}\lld(\Phi^{-1})^*\w{g}\rld$ be the Lagrangian $n$-form constructed by keeping the same functional
+dependence in $(\Phi^{-1})^*\w{g}$ as $\w{L}\lld\w{g}\rld$ has in $\w{g}$.
 The invariance of the theory under diffeomorphisms
-amounts to demanding that, as a $n$-form on $\M$, $\w{L}[(\Phi^{-1})^*\w{g}]$ is nothing but
-the $n$-form $\w{L}[\w{g}]$ transformed under the action of $\Phi$, i.e. the pullback of $\w{L}[\w{g}]$ by
-$\Phi^{-1}$:  $\w{L}[(\Phi^{-1})^*\w{g}] = (\Phi^{-1})^*\w{L}[\w{g}]$.
+amounts to demanding that, as a $n$-form on $\M$, $\w{L}\lld(\Phi^{-1})^*\w{g}\rld$ is nothing but
+the $n$-form $\w{L}\lld\w{g}\rld$ transformed under the action of $\Phi$, i.e. the pullback of $\w{L}\lld\w{g}\rld$ by
+$\Phi^{-1}$:  $\w{L}\lld(\Phi^{-1})^*\w{g}\rld = (\Phi^{-1})^*\w{L}\lld\w{g}\rld$.
 Given that the spacetimes
 $(\M, \w{g})$ and $(\Phi(\M),(\Phi^{-1})^* \w{g})$ are physically equivalent,
-this means that $\w{L}[\w{g}]$ and $\w{L}[(\Phi^{-1})^*\w{g}]$ are basically the same object.
+this means that $\w{L}\lld\w{g}\rld$ and $\w{L}\lld(\Phi^{-1})^*\w{g}\rld$ are basically the same object.
 In particular, the action $\mathcal{S}$ [Eq.~(\ref{e:tha:action_L})] takes the same value if
-$\w{L}[(\Phi^{-1})^*\w{g}]$ is substituted for $\w{L}[\w{g}]$. If one interprets the diffeomorphism
+$\w{L}\lld(\Phi^{-1})^*\w{g}\rld$ is substituted for $\w{L}\lld\w{g}\rld$. If one interprets the diffeomorphism
 action in a ``passive'' way, i.e. as a change of coordinates on $\M$, the
 diffeomorphism-invariance condition simply means that the functional form of $L$
 expressed in Eq.~(\ref{e:tha:Lagrangian_diffeo_inv}) does not depend upon
-the choice of coordinates. Since the condition  $\w{L}[(\Phi^{-1})^*\w{g}] = (\Phi^{-1})^*\w{L}[\w{g}]$
+the choice of coordinates. Since the condition  $\w{L}\lld(\Phi^{-1})^*\w{g}\rld = (\Phi^{-1})^*\w{L}\lld\w{g}\rld$
 must hold for any diffeomorphism, we may simplify it
 by introducing $\Phi' := \Phi^{-1}$ and
 renaming $\Phi'$ to $\Phi$:
@@ -93,10 +78,38 @@ its Lagrangian $n$-form $\w{L}$ is \defin{covariant}\index{covariant} under the 
 of diffeomorphisms of $\M$, i.e. iff for
 any diffeomorphism $\Phi: \M \to \M$,
 \be \label{e:tha:covariant_Lagrangian}
-    \w{L}[\Phi^*\w{g}] = \Phi^*\w{L}[\w{g}] ,
+    \w{L}\lld\Phi^*\w{g}\rld = \Phi^*\w{L}\lld\w{g}\rld ,
 \ee
 where $\Phi^*$ stands for the pullback by $\Phi$, as defined in Sec.~\ref{s:bas:push_pull}.
 \end{greybox}
+We have then
+
+\begin{prop}[Lagrangian of diffeomorphism-invariant theories
+\textnormal{(Iyer\index[pers]{Iyer, V.} \& Wald\index[pers]{Wald, R.M.} 1994 \cite{IyerW94})}]
+Any diffeomorphism-invariant theory of gravity based on a Lagrangian
+involving only the metric tensor $\w{g}$ and a finite number of its derivatives (with respect to an arbitrary affine connection on $\M$) can be recast in terms of a Lagrangian involving only $\w{g}$, its
+Riemann tensor and a finite number of symmetrized\footnote{There is no loss of generality in considering only symmetrized derivatives, since
+any antisymmetrized combination can be reexpressed in term of the Riemann tensor itself and
+lower order derivatives.} covariant derivatives of the latter:
+\be \label{e:tha:Lagrangian_diffeo_inv}
+    L\lld\w{g}\rld =
+    L\left(g_{\alpha\beta}, R_{\alpha\beta\gamma\delta}, \nabla_\lambda R_{\alpha\beta\gamma\delta},\ldots,
+    \nabla_{(\lambda_1} \cdots\nabla_{\lambda_m)} R_{\alpha\beta\gamma\delta} \right) .
+\ee
+\end{prop}
+The reader is referred to the original article \cite{IyerW94} for the proof.
+
+\begin{example}
+\label{x:tha:EH_Lagrangian}
+For general relativity, $L$ is the Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}:
+\[
+L = (16\pi)^{-1} R = (16\pi)^{-1} g^{\mu\nu} R_{\mu\nu}
+ =  (16\pi)^{-1} g^{\mu\nu} R^\sigma_{\ \,\mu\sigma\nu},
+\]
+hence $L = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu}$,
+which is of the form (\ref{e:tha:Lagrangian_diffeo_inv}).
+\end{example}
+
 
 A standard computation (see e.g \cite{Compe19,LeeW90}) leads to
 
@@ -115,12 +128,11 @@ and $\w{\theta}$ is a $(n-1)$-form, called the
 \defin{symplectic potential form}\index{symplectic!potential form} \cite{IyerW94}.
 The $n$-form $\dd \w{\theta}$ is the exterior derivative of $\w{\theta}$
 (cf. Sec.~\ref{s:bas:ext_deriv}).
-$\w{E}$ depends on $\w{g}$ but not on $\delta\w{g}$, while $\w{\theta}$
+$\w{E}$ depends on $\w{g}$ but \emph{not} on $\delta\w{g}$, while $\w{\theta}$
 depends on both $\w{g}$ and $\delta\w{g}$, in a linear way for $\delta\w{g}$.
-All these dependencies are \emph{local}: at a given point $p\in\M$, $\w{E}$ and $\w{\theta}$
-depend only on the values of $\w{g}$, $\delta\w{g}$ and their derivatives at $p$.
-We shall write $\w{E} = \w{E}[\w{g}]$ and $\w{\theta} = \w{\theta}[\w{g},\delta\w{g}]$
-to stress these dependencies.
+All these dependencies are \emph{local}, so if we want to stress them, we shall write
+$\w{E} = \w{E}\lld\w{g}\rld$ and $\w{\theta} = \w{\theta}\lld\w{g},\delta\w{g}\rld$
+according to the notation introduced on p.~\pageref{n:tha:bold_parentheses}.
 
 For a given $\w{L}$, the symplectic potential form is not unique: since
 $\dd$ is nilpotent
@@ -129,15 +141,10 @@ can be substituted by
 \be \label{e:tha:Theta_not_unique}
   \w{\theta'} = \w{\theta} + \dd \w{Y},
 \ee
-where $\w{Y}=\w{Y}[\w{g},\delta\w{g}]$ is an
+where $\w{Y}=\w{Y}\lld\w{g},\delta\w{g}\rld$ is an
 arbitrary $(n-2)$-form that is a local function of $\w{g}$ and $\delta\w{g}$,
 with a linear dependence on $\delta\w{g}$.
 \end{prop}
-
-\begin{notation}
-In all this section, we shall use square brackets, e.g. $\w{\theta}[\w{g},\delta\w{g}]$, to
-denote a \emph{local} function of tensor fields, as defined above.
-\end{notation}
 
 \begin{remark}
 The term $\dd\w{\theta}$ collects all the derivatives of $\delta\w{g}$, which have been gathered
@@ -165,11 +172,11 @@ are $e_{\alpha_1\cdots\alpha_n} = 1$ (resp. $-1$) if $(\alpha_1,\ldots,\alpha_n)
 even (resp. odd) permutation of $(0,\ldots,n)$ and $0$ otherwise [cf. Eq.~(\ref{e:bas:eps_sqrt_g})].
 One has then $\delta\w{L} = (16\pi)^{-1} \delta(R \sqrt{-g}) \, \w{e}$, since obviously $(x^\alpha)$, and thus
 $\w{e}$, is not altered by the variation $\delta\w{g}$.
-From the expression of $\delta(R\sqrt{-g})$ given by Eq.~(\ref{e:tha:proto_EH})
+From the expression of $\delta(R\sqrt{-g})$ given by Eq.~(\ref{e:evo:proto_EH})
 and using $G_{\mu\nu} \delta g^{\mu\nu} = - G^{\mu\nu} \delta g_{\mu\nu}$,
 we get $16\pi\delta\w{L} = - G^{\mu\nu} \delta g_{\mu\nu} \, \weps + \nabla_\mu H^\mu \, \weps$,
 where $G^{\mu\nu}$ is the double metric dual of the Einstein tensor and
-$\w{H}$ is the vector field defined in terms of $\delta\w{g}$ by Eq.~(\ref{e:tha:def_H}),
+$\w{H}$ is the vector field defined in terms of $\delta\w{g}$ by Eq.~(\ref{e:evo:def_H}),
 where $h^\alpha_{\ \, \beta} = g^{\alpha\mu} \delta  g_{\mu\beta}$
 since $h_{\alpha\beta}:= \delta g_{\alpha\beta}$. Now, the identity (\ref{e:bas:dveps_divv})
 yields $\nabla_\mu H^\mu \,  \weps = \dd (\w{H}\cdot\weps)$, so that
@@ -185,14 +192,14 @@ where the last equality stems from the definition of the Hodge dual
 of a 1-form [Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$] ($\uu{H}$ being the 1-form
 metric dual of the vector $\w{H}$).
 In index notation, $\theta_{\alpha_1\cdots\alpha_{n-1}} = (16\pi)^{-1}  H^\mu \eps_{\mu\alpha_1\cdots\alpha_{n-1}}$.
-Substituting Eq.~(\ref{e:tha:def_H}) for $H^\mu$, we get the explicit expression of
-$\w{\theta}[\w{g},\delta\w{g}]$:
+Substituting Eq.~(\ref{e:evo:def_H}) for $H^\mu$, we get the explicit expression of
+$\w{\theta}\lld\w{g},\delta\w{g}\rld$:
 \be \label{e:tha:Theta_GR}
     \theta_{\alpha_1\cdots\alpha_{n-1}} = (16\pi)^{-1}\, g^{\mu\nu} g^{\rho\sigma}
     \left( \nabla_\sigma \delta g_{\nu\rho} - \nabla_\nu \delta g_{\rho\sigma} \right)
     \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}}  .
 \ee
-We check that $\w{\theta}[\w{g},\delta\w{g}]$ is linear in $\delta\w{g}$, as stated in Property~\ref{p:tha:var_Lagrangian}.
+We check that $\w{\theta}\lld\w{g},\delta\w{g}\rld$ is linear in $\delta\w{g}$, as stated in Property~\ref{p:tha:var_Lagrangian}.
 \end{example}
 
 \begin{prop}[field equations from least action principle]
@@ -252,10 +259,10 @@ It follows immediately that
     \delta\w{g} = t \Lie{\xi} \w{g} .
 \ee
 The variation of the Lagrangian $n$-form induced by $\delta\w{g}$
-is $\delta\w{L} = \w{L}[\Phi_t^*\w{g}] - \w{L}[\w{g}]$.
+is $\delta\w{L} = \w{L}\lld\Phi_t^*\w{g}\rld - \w{L}\lld\w{g}\rld$.
 Since the theory is assumed to be diffeomorphism-invariant, the covariance property
-(\ref{e:tha:covariant_Lagrangian}) holds: $\w{L}[\Phi_t^*\w{g}] = \Phi_t^*\w{L}[\w{g}]$.
-This yields $\delta\w{L} = \Phi_t^* \w{L}[\w{g}] - \w{L}[\w{g}]$. This
+(\ref{e:tha:covariant_Lagrangian}) holds: $\w{L}\lld\Phi_t^*\w{g}\rld = \Phi_t^*\w{L}\lld\w{g}\rld$.
+This yields $\delta\w{L} = \Phi_t^* \w{L}\lld\w{g}\rld - \w{L}\lld\w{g}\rld$. This
 is the same form as $\w{g}$'s variation expressed in Eq.~(\ref{e:tha:delta_g_Phistar}) and, again, the
 definition (\ref{e:bas:def_Lie_der_covar}) of the Lie derivative (which is applicable here since
 $\w{L}$ is a tensor field of type $(0,n)$) leads to
@@ -282,19 +289,19 @@ When comparing with Eqs.~(\ref{e:bas:delta_g_Lie_xi_g}) and(\ref{e:bas:delta_L_L
 
 If one plugs Eqs.~(\ref{e:bas:delta_g_Lie_xi_g}) and (\ref{e:bas:delta_L_Lie_xi_L})
 into the generic Lagrangian variation formula (\ref{e:tha:delta_L_E_Theta}), one gets
-$t \Lie{\xi} \w{L}  = t E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd( \w{\theta}[\w{g},t\Lie{\xi}\w{g}])$.
+$t \Lie{\xi} \w{L}  = t E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd( \w{\theta}\lld\w{g},t\Lie{\xi}\w{g}\rld)$.
 Since $\w{\theta}$ is linear with respect to its second argument (cf. Property~\ref{p:tha:var_Lagrangian}),
 one has
-$\dd( \w{\theta}[\w{g},t\Lie{\xi}\w{g}]) =  t \dd( \w{\theta}[\w{g},\Lie{\xi}\w{g}])$, so that there comes
+$\dd( \w{\theta}\lld\w{g},t\Lie{\xi}\w{g}\rld) =  t \dd( \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld)$, so that there comes
 \[
-    \Lie{\xi} \w{L}  = E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd( \w{\theta}[\w{g},\Lie{\xi}\w{g}]) .
+    \Lie{\xi} \w{L}  = E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps + \dd( \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld) .
 \]
 Now, the Cartan identity (\ref{e:bas:Cartan}) gives
 $\Lie{\xi} \w{L} = \w{\xi} \cdot\dd \w{L} + \dd(\w{\xi}\cdot\w{L}) = \dd(\w{\xi}\cdot\w{L})$
 since $\dd \w{L} = 0$, as any $(n+1)$-form on a manifold of dimension $n$.
 Hence, we may rewrite the above equation as
 \be \label{e:tha:dd_pre_J_E}
-    \dd\left(  \w{\theta}[\w{g},\Lie{\xi}\w{g}] - \w{\xi}\cdot\w{L} \right) =
+    \dd\left(  \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld - \w{\xi}\cdot\w{L} \right) =
     - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps .
 \ee
 If the field equations are fulfilled, i.e. if $\w{E} = 0$ [Eq.~(\ref{e:tha:eom_E})], the
@@ -306,17 +313,17 @@ $(n-1)$-form. This defines a conserved current and motivates the following defin
 Given any smooth vector field $\w{\xi}$ on $\M$,
 the \defin{Noether current $(n-1)$-form of $\w{\xi}$}\index{Noether!current form} is defined by \cite{Wald93,IyerW94}
 \be \label{e:tha:def_Noether_current}
-    \w{J}[\w{\xi}] := \w{\theta}[\w{g},\Lie{\xi}\w{g}] - \w{\xi}\cdot\w{L} ,
+    \w{J}[\w{\xi}] := \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld - \w{\xi}\cdot\w{L} ,
 \ee
-where $\w{\theta}[\w{g},\Lie{\xi}\w{g}]$ is the $(n-1)$-form obtained by setting the second
-argument of the symplectic potential form $\w{\theta}[\w{g},\delta\w{g}]$
+where $\w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld$ is the $(n-1)$-form obtained by setting the second
+argument of the symplectic potential form $\w{\theta}\lld\w{g},\delta\w{g}\rld$
 to $\Lie{\xi}\w{g}$ (cf. Property~\ref{p:tha:var_Lagrangian}).
 $\w{J}[\w{\xi}]$ is a linear and local function of $\w{\xi}$. It is a priori not unique,
 some ambiguity $\w{J}\mapsto \w{J'}$ resulting from (\ref{e:tha:Theta_not_unique}):
 \be \label{e:tha:J_not_unique}
-     \w{J'}[\w{\xi}] =  \w{J}[\w{\xi}]  + \dd \w{Y}[\w{g},\Lie{\xi}\w{g}],
+     \w{J'}[\w{\xi}] =  \w{J}[\w{\xi}]  + \dd \w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld,
 \ee
-where $\w{Y}[\w{g},\Lie{\xi}\w{g}]$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
+where $\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
 
 If the gravity theory described by the Lagrangian $n$-form $\w{L}$ is diffeomorphism-invariant, then
 the differential form $\w{J}[\w{\xi}]$ is closed as soon as the equations of motion (\ref{e:tha:eom_E}) are
@@ -343,7 +350,7 @@ Let us continue with the example of general relativity. From
 expression (\ref{e:tha:Theta_GR}) for $\w{\theta}$ with
 $\delta g_{\mu\nu} = t \Liec{\xi} g_{\mu\nu}$ and $\Liec{\xi} g_{\mu\nu} = \nabla_\mu \xi_\nu + \nabla_\nu \xi_\mu$ [Eq.~(\ref{e:bas:Lie_g_Killing})], we get
 \bea
- 16\pi   \w{\theta}[\w{g},\Lie{\xi}\w{g}]_{\alpha_1\cdots\alpha_{n-1}} & = &
+ 16\pi   \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld_{\alpha_1\cdots\alpha_{n-1}} & = &
   g^{\mu\nu} \left( \nabla_\sigma \nabla_\nu \xi^\sigma + \nabla_\sigma \nabla^\sigma \xi_\nu
     - 2 \nabla_\nu \nabla_\rho \xi^\rho \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} \nonumber \\
     & = & g^{\mu\nu} \left( 2 R_{\nu\sigma} \xi^\sigma - \nabla_\sigma \nabla_\nu \xi^\sigma
@@ -392,10 +399,10 @@ $\w{Q}[\w{\xi}]$ is called the \defin{Noether charge $(n-2)$-form of $\w{\xi}$}\
     \cite{Wald93}. It is not unique, being subject to the ambiguity
 $\w{Q} \mapsto \w{Q'}$, with
 \be \label{e:tha:Q_not_unique}
-    \w{Q'}[\w{\xi}] = \w{Q}[\w{\xi}] + \w{Y}[\w{g},\Lie{\xi}\w{g}] + \dd\w{Z}[\w{g},\w{\xi}] ,
+    \w{Q'}[\w{\xi}] = \w{Q}[\w{\xi}] + \w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld + \dd\w{Z}\lld\w{g},\w{\xi}] ,
 \ee
-where $\w{Y}[\w{g},\Lie{\xi}\w{g}]$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$ and
-$\w{Z}[\w{g},\w{\xi}] $ is any $(n-3)$-form that is linear in $\w{\xi}$.
+where $\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$ and
+$\w{Z}\lld\w{g},\w{\xi}] $ is any $(n-3)$-form that is linear in $\w{\xi}$.
 \end{prop}
 
 \begin{proof}
@@ -474,9 +481,9 @@ allowed by (\ref{e:tha:J_not_unique}) leads to $\mathscr{Q}_{\Sigma,\w{\xi}} \ma
 with
 \be \label{e:tha:Q_hyper_not_unique}
     \mathscr{Q'}_{\Sigma,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}} +
-    \int_{\partial\Sigma} \w{Y}[\w{g},\Lie{\xi}\w{g}] ,
+    \int_{\partial\Sigma} \w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld ,
 \ee
-where $\w{Y}[\w{g},\Lie{\xi}\w{g}]$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
+where $\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
 However, if $\w{\xi}$ is a Killing vector ($\Lie{\xi}\w{g}=0$), the Noether charge is
 uniquely defined: $\w{J'}[\w{\xi}] = \w{J}[\w{\xi}]$ and $\mathscr{Q'}_{\Sigma,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}}$.
 
@@ -498,7 +505,7 @@ defined by $\w{v}\cdot\weps$, where $\w{v}$ is any vector field pointing into $\
 Equation~(\ref{e:tha:Q_hyper_not_unique}) readily follows from (\ref{e:tha:J_not_unique}) and
 Stokes' theorem (\ref{e:bas:Stokes}). If $\w{\xi}$ is a Killing vector, then
 $\Lie{\xi}\w{g}= 0$ by definition (cf. Property~\ref{p:def_Killing_vector}); this implies
-$\w{Y}[\w{g},\Lie{\xi}\w{g}] = 0$ in the
+$\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld = 0$ in the
 right-hand side of Eq.~(\ref{e:tha:Q_hyper_not_unique}), given that
 $\w{Y}$ must be linear in its second argument. Hence
 $\mathscr{Q'}_{\Sigma,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}}$.
@@ -543,9 +550,9 @@ The Noether charge is a priori not unique, since any change $\w{Q} \mapsto \w{Q'
 obeying (\ref{e:tha:Q_not_unique}) leads to $\mathscr{Q}_{\Sp,\w{\xi}} \mapsto \mathscr{Q'}_{\Sp,\w{\xi}}$
 with
 \be \label{e:tha:Q_surf_not_unique}
-    \mathscr{Q'}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sp,\w{\xi}} + \int_{\Sp} \w{Y}[\w{g},\Lie{\xi}\w{g}] ,
+    \mathscr{Q'}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sp,\w{\xi}} + \int_{\Sp} \w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld ,
 \ee
-where $\w{Y}[\w{g},\Lie{\xi}\w{g}]$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
+where $\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
 However, if $\w{\xi}$ is a Killing vector ($\Lie{\xi}\w{g}=0$), the Noether charge is
 uniquely defined: $\mathscr{Q'}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sp,\w{\xi}}$.
 
@@ -565,7 +572,7 @@ along with $\int_{\Sp} \dd\w{Z} = 0$ as a result of Stokes' theorem (\ref{e:bas:
 given that $\Sp$ is a closed manifold:
 $\partial\Sp = \varnothing$.
 If $\w{\xi}$ is a Killing vector, then
-$\w{Y}[\w{g},\Lie{\xi}\w{g}] = 0$ in the right-hand side of (\ref{e:tha:Q_surf_not_unique}), thanks to the linearity of $\w{Y}$ with respect to its
+$\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld = 0$ in the right-hand side of (\ref{e:tha:Q_surf_not_unique}), thanks to the linearity of $\w{Y}$ with respect to its
 second argument; hence $\mathscr{Q'}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sp,\w{\xi}}$.
 Finally, to prove (\ref{e:tha:Noether_Q_S_ext_int}),
 let us substitute $\dd\w{Q}$ for $\w{J}$ [cf. Eq.~(\ref{e:tha:J_dQ})]
@@ -644,7 +651,7 @@ event horizon $\Hor$ is a Killing horizon. Let $\w{\chi}$ be the Killing
 vector generating $\Hor$ and $\kappa$ the corresponding surface gravity:
 $\wnab_{\w{\chi}}\w{\chi} \equalH \kappa \w{\chi}$ [Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
 Let us assume that the zeroth law holds, i.e. that $\kappa$ is constant over $\Hor$
-(cf. Property~\ref{p:tha:zeroth_law}). Moreover,  let us assume $\kappa \neq 0$.
+(cf. Property~\ref{p:evo:zeroth_law}). Moreover,  let us assume $\kappa \neq 0$.
 Let $\Sp$ be a complete cross-section of $\Hor$.
 The \defin{Wald entropy}\index{Wald entropy}\index{entropy!Wald --} of the black hole is
 then defined as $\kappa^{-1}$ times
@@ -674,9 +681,9 @@ where the arrows indicate that $\Sp$ and  $\Sp'$
 are outward-oriented with respect to $\Delta\Hor$, the orientation of the latter
 being set by a future-directed null vector field $\w{k}$ transverse to $\Hor$.
 From the definition (\ref{e:tha:def_Noether_current}),
-$\w{J}[\w{\chi}] := \w{\theta}[\w{g},\Lie{\chi}\w{g}] - \w{\chi}\cdot\w{L}
+$\w{J}[\w{\chi}] := \w{\theta}\lld\w{g},\Lie{\chi}\w{g}\rld - \w{\chi}\cdot\w{L}
 = - \w{\chi}\cdot\w{L}$, since $\Lie{\chi}\w{g}=0$ ($\w{\chi}$ Killing)
-along with the linearity of $\w{\theta}$ imply $\w{\theta}[\w{g},\Lie{\chi}\w{g}] =0$.
+along with the linearity of $\w{\theta}$ imply $\w{\theta}\lld\w{g},\Lie{\chi}\w{g}\rld =0$.
 From the very definition of the integral of a $(n-1)$-form over a $(n-1)$-dimensional
 manifold, we have then
 \[
@@ -1207,7 +1214,7 @@ and $\w{g}(\lambda+\delta\lambda)$ along the curve $\mathcal{L}$
 to which $X$ is tangent to; $\lambda$ is then the parameter of $\mathcal{L}$ associated to $X$
 and we denote by $\delta\lambda$ its small increment, instead of $\D\lambda$ as in Sec.~\ref{s:bas:vectors}.
 
-From the spacetime symplectic potential $(n-1)$-form $\w{\theta}[\w{g},\delta\w{g}]$
+From the spacetime symplectic potential $(n-1)$-form $\w{\theta}\lld\w{g},\delta\w{g}\rld$
 (cf. Property~\ref{p:tha:var_Lagrangian}), we may define a 1-form $\Theta$ on $\FF$ as follows.
 Let us assume that the spacetime $(\M,\w{g})$ is globally hyperbolic and asymptotically flat.
 Let then $\Sigma$ be a Cauchy surface\index{Cauchy!surface}
@@ -1215,7 +1222,7 @@ Let then $\Sigma$ be a Cauchy surface\index{Cauchy!surface}
 At a point $\w{g}\in\FF$, we define the action of $\Theta$ on a vector $X$ in the
 tangent space $T_{\w{g}} \FF$ by
 \be \label{e:tha:def_Theta_X_theta}
-    \langle \Theta, X \rangle\,  \delta\lambda := \int_{\Sigma} \w{\theta}[\w{g},\delta\w{g}],
+    \langle \Theta, X \rangle\,  \delta\lambda := \int_{\Sigma} \w{\theta}\lld\w{g},\delta\w{g}\rld,
 \ee
 where $\delta\w{g}$ is the variation of $\w{g}$ along the vector $X$ in the space of solutions $\FF$
 and $\delta\lambda$ is the small parameter increment along the curve connecting
@@ -1223,13 +1230,13 @@ $\w{g}$ to $\w{g}+\delta\w{g}$ in $\FF$,
 so that
 Eq.~(\ref{e:tha:X_dg/dlambda}) holds, i.e. $\delta\w{g} = \delta\lambda \, X$.
 The integral in the right-hand side of Eq.~(\ref{e:tha:def_Theta_X_theta}) is a priori well-defined
-since $\w{\theta}[\w{g},\delta\w{g}]$ is a $(n-1)$-form on $\M$ and $\Sigma$
+since $\w{\theta}\lld\w{g},\delta\w{g}\rld$ is a $(n-1)$-form on $\M$ and $\Sigma$
 is a submanifold of $\M$ of dimension $n-1$. Moreover, we assume that the asymptotic flatness conditions
 ensure that the integral is always convergent, giving birth a finite real number.
-Since $\w{\theta}[\w{g},\delta\w{g}]$ is linear in its argument $\delta\w{g}$
+Since $\w{\theta}\lld\w{g},\delta\w{g}\rld$ is linear in its argument $\delta\w{g}$
 (cf. Property~\ref{p:tha:var_Lagrangian}), we may rewrite (\ref{e:tha:def_Theta_X_theta}) as
 \be \label{e:tha:Theta_X_theta_partial}
-    \langle \Theta, X \rangle := \int_{\Sigma} \w{\theta}\left[\w{g},\frac{\delta\w{g}}{\delta\lambda}\right] .
+    \langle \Theta, X \rangle := \int_{\Sigma} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld .
 \ee
 The map $\Theta: T_{\w{g}} \FF \to \R$ thus defined is clearly linear, given that
 $\w{\theta}[\cdot,\cdot]$ is linear in its second argument.
@@ -1274,11 +1281,11 @@ We get
         -  X_2\left( \langle \Theta, X_1 \rangle \right) \nonumber \\
         & =  \der{}{\lambda_1} \langle \Theta, X_2 \rangle -
             \der{}{\lambda_2} \langle \Theta, X_1 \rangle \nonumber \\
-        & = \der{}{\lambda_1} \int_{\Sigma} \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_2} \right]
-        - \der{}{\lambda_2} \int_{\Sigma} \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_1} \right]   \nonumber \\
+        & = \der{}{\lambda_1} \int_{\Sigma} \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld
+        - \der{}{\lambda_2} \int_{\Sigma} \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld   \nonumber \\
         & = \int_{\Sigma} \left\{ \der{}{\lambda_1}
-        \left( \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_2} \right]\right)
-        - \der{}{\lambda_2}\left( \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_1} \right] \right) \right\} .
+        \left( \w{\theta} \Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld \right)
+        - \der{}{\lambda_2}\left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right) \right\} .
         \nonumber
 \end{align}
 The second equality results from $X_1(f) = \dert{f}{\lambda_1}$ for the scalar field
@@ -1287,15 +1294,15 @@ makes use of Eqs.~(\ref{e:tha:Theta_X_theta_partial}) and (\ref{e:tha:def_X1_X2}
 and the last equality stems from the linearity of the integral.
 We may write the above result as
 \be
-    \encadre{ \Omega(X_1,X_2) =  \int_{\Sigma} \w{\omega}\left[\w{g},  \der{\w{g}}{\lambda_1},
-                            \der{\w{g}}{\lambda_2} \right] } ,
+    \encadre{ \Omega(X_1,X_2) =  \int_{\Sigma} \w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1},
+                            \der{\w{g}}{\lambda_2} \Rld } ,
 \ee
 with
 \be \label{e:tha:def_omega_der_theta}
- \encadre{ \w{\omega}\left[\w{g},  \der{\w{g}}{\lambda_1}, \der{\w{g}}{\lambda_2} \right]
+ \encadre{ \w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1}, \der{\w{g}}{\lambda_2} \Rld
     :=  \der{}{\lambda_1}
-        \left( \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_2} \right]\right)
-        - \der{}{\lambda_2}\left( \w{\theta}\left[\w{g}, \der{\w{g}}{\lambda_1} \right] \right) } .
+        \left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
+        - \der{}{\lambda_2}\left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right) } .
 \ee
 $\w{\omega}$ is a $(n-1)$-form on spacetime, which depends locally on the metric tensor $\w{g}$,
 and the derivatives $\dert{\w{g}}{\lambda_1}$ and $\dert{\w{g}}{\lambda_2}$
@@ -1316,24 +1323,24 @@ An important property of $\w{\omega}$ is to be a closed $(n-1)$-form:
 \begin{proof}
 The 2-parameter family of metric tensors $\w{g}(\lambda_1,\lambda_2)$ gives birth
 to a 2-parameter family of Lagrangian $n$-forms
-$\w{L}(\lambda_1,\lambda_2) := \w{L}[\w{g}(\lambda_1,\lambda_2)]$.
+$\w{L}(\lambda_1,\lambda_2) := \w{L}\lld\w{g}(\lambda_1,\lambda_2)]$.
 The variation $\delta_1\w{L}$ of $\w{L}$ corresponding to a variation of $\lambda_1$ is
 given by Eq.~(\ref{e:tha:delta_L_E_Theta}) with $E^{\mu\nu} = 0$ since
 we are considering only families of solutions of the field equations (equivalently,
 all displacements $\delta\w{g}$ are taking place within the 2-surface
 $\mathcal{S}$, which is part of the space $\FF$ of solutions). Hence
-$\delta_1 \w{L} = \dd \left( \w{\theta}[\w{g}, \delta_1 \w{g}] \right)$.
+$\delta_1 \w{L} = \dd \left( \w{\theta}\lld\w{g}, \delta_1 \w{g}\rld \right)$.
 Given that $\delta_1 \w{L} = \der{\w{L}}{\lambda_1}  \, \delta \lambda_1$,
 $\delta_1 \w{g} = \der{\w{g}}{\lambda_1} \, \delta \lambda_1$
 and $\w{\theta}[.,.]$ is linear with respect to its second argument, we get
 \[
-    \der{\w{L}}{\lambda_1} = \dd \left( \w{\theta} \left[\w{g},  \der{\w{g}}{\lambda_1} \right] \right) .
+    \der{\w{L}}{\lambda_1} = \dd \left( \w{\theta} \Lld\w{g},  \der{\w{g}}{\lambda_1} \Rld \right) .
 \]
 Taking the derivative of this expression with respect to $\lambda_2$ yields
 \[
     \frac{\partial^2\w{L}}{\partial\lambda_2\partial\lambda_1} = \der{}{\lambda_2}
-        \dd \left( \w{\theta} \left[\w{g},  \der{\w{g}}{\lambda_1} \right] \right)
-        = \dd  \der{}{\lambda_2} \left( \w{\theta} \left[\w{g},  \der{\w{g}}{\lambda_1} \right] \right) .
+        \dd \left( \w{\theta} \Lld\w{g},  \der{\w{g}}{\lambda_1} \Rld \right)
+        = \dd  \der{}{\lambda_2} \left( \w{\theta} \Lld\w{g},  \der{\w{g}}{\lambda_1} \Rld \right) .
 \]
 Performing a swap of $\lambda_1$ and $\lambda_2$ and subtracting the above formula
 yields, in view of $\w{\omega}$'s definition (\ref{e:tha:def_omega_der_theta}),
