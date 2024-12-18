@@ -125,7 +125,8 @@ expressible as
 where $E^{\mu\nu}$ are the components of a symmetric type-$(2,0)$ tensor field $\w{E}$,
 called the \defin{Euler-Lagrange tensor}\index{Euler-Lagrange!tensor},
 and $\w{\theta}$ is a $(n-1)$-form, called the
-\defin{symplectic potential form}\index{symplectic!potential form} \cite{IyerW94}.
+\defin{presymplectic potential current $(n-1)$-form}\index{presymplectic!potential current form}
+(this long name will be justified below).
 The $n$-form $\dd \w{\theta}$ is the exterior derivative of $\w{\theta}$
 (cf. Sec.~\ref{s:bas:ext_deriv}).
 $\w{E}$ depends on $\w{g}$ but \emph{not} on $\delta\w{g}$, while $\w{\theta}$
@@ -134,7 +135,7 @@ All these dependencies are \emph{local}, so if we want to stress them, we shall 
 $\w{E} = \w{E}\lld\w{g}\rld$ and $\w{\theta} = \w{\theta}\lld\w{g},\delta\w{g}\rld$
 according to the notation introduced on p.~\pageref{n:tha:bold_parentheses}.
 
-For a given $\w{L}$, the symplectic potential form is not unique: since
+For a given $\w{L}$, the presymplectic potential current $(n-1)$-form is not unique: since
 $\dd$ is nilpotent
 [Eq.~(\ref{e:ext_der_nilpot})], $\w{\theta}$ in formula~(\ref{e:tha:delta_L_E_Theta})
 can be substituted by
@@ -305,6 +306,7 @@ Hence, we may rewrite the above equation as
     - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps .
 \ee
 If the field equations are fulfilled, i.e. if $\w{E} = 0$ [Eq.~(\ref{e:tha:eom_E})], the
+right-hand side of the above equation is zero, which means that the
 argument of the exterior derivative in the left-hand side is a closed
 $(n-1)$-form. This defines a conserved current and motivates the following definition and property.
 
@@ -316,7 +318,7 @@ the \defin{Noether current $(n-1)$-form of $\w{\xi}$}\index{Noether!current form
     \w{J}\lld\w{\xi}\rld := \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld - \w{\xi}\cdot\w{L} ,
 \ee
 where $\w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld$ is the $(n-1)$-form obtained by setting the second
-argument of the symplectic potential form $\w{\theta}\lld\w{g},\delta\w{g}\rld$
+argument of the presymplectic potential current form $\w{\theta}\lld\w{g},\delta\w{g}\rld$
 to $\Lie{\xi}\w{g}$ (cf. Property~\ref{p:tha:var_Lagrangian}).
 $\w{J}\lld\w{\xi}\rld$ is a linear and local function of $\w{\xi}$. It is a priori not unique,
 some ambiguity $\w{J}\mapsto \w{J'}$ resulting from (\ref{e:tha:Theta_not_unique}):
@@ -1049,13 +1051,13 @@ A simple gravity pendulum is a system with $N=1$, the unique degree of
 freedom being the angle $\theta\in(-\pi,\pi]$ with respect to the vertical direction.
 For a unit mass, the Lagrangian is
 $L(\th,\dot{\th}) = (\ell\dot{\th})^2/2 + g \ell \cos\th$,
-where $\ell$ is the length of the (massless) and $g$
+where $\ell$ is the length of the (massless) rod and $g$
 the magnitude of the vertical gravity field. The momentum conjugate to $\th$
 is $p_\th = \dert{L}{\dot{\th}} = \ell^2\dot{\th}$. Since the latter can
 take any real value, the phase space $\FF$ is the 2-dimensional infinite cylinder
 $\SS^1 \times \mathbb{R}$,
 spanned by the canonical coordinates $(\th,p_\th)$. The
-Hamiltonian is deduced from $L$ by a Legendre transform: $H = p_\th \dot{\th} - L$,
+Hamiltonian is deduced from $L$ by the Legendre transform $H = p_\th \dot{\th} - L$,
 yielding
 $H(\theta,p_\theta) = p_\theta^2 / (2\ell^2) - g\ell\cos\theta$.
 The Hamiltonian vector field is obtained via Eq.~(\ref{e:tha:X_f_canonical}):
@@ -1076,7 +1078,7 @@ $\{f,H\} = X_H(f)$ for any scalar field $f$ on $\FF$.
 Accordingly, the evolution
 equation (\ref{e:tha:dfdt_Poisson_fH}) can be rewritten as
 \be \label{e:tha:dfdt_X_H_f}
-    \derd{f}{t} = X_H(f).
+    \encadre{ \derd{f}{t} = X_H(f) }.
 \ee
 In particular, Hamilton's equations (\ref{e:evo_Hamilton_eqs_finite}) become
 \be \label{e:evo_Hamilton_eqs_X_H}
@@ -1219,7 +1221,7 @@ and $\w{g}(\lambda+\delta\lambda)$ along the curve $\mathcal{L}$
 to which $X$ is tangent to; $\lambda$ is then the parameter of $\mathcal{L}$ associated to $X$
 and we denote by $\delta\lambda$ its small increment, instead of $\D\lambda$ as in Sec.~\ref{s:bas:vectors}.
 
-From the spacetime symplectic potential $(n-1)$-form $\w{\theta}\lld\w{g},\delta\w{g}\rld$
+From the spacetime presymplectic potential current $(n-1)$-form $\w{\theta}\lld\w{g},\delta\w{g}\rld$
 (cf. Property~\ref{p:tha:var_Lagrangian}), we may define a 1-form $\Theta$ on $\FF$ as follows.
 Let us assume that the spacetime $(\M,\w{g})$ is globally hyperbolic and asymptotically flat.
 Let then $\Sigma$ be a Cauchy surface\index{Cauchy!surface}
@@ -1252,14 +1254,13 @@ that it is continuous (recall that linearity does not imply continuity in infini
 so that $\Theta$ belongs to the dual space of the tangent space to $\FF$ at $\w{g}$:
 $\Theta \in T_{\w{g}}^* \FF$. By letting the point $\w{g}$ vary over all $\FF$, this defines
 a 1-form on $\FF$, which we shall denote by the same symbol $\Theta$.
-In order to endow $\FF$ with a symplectic form, hence turning it into a covariant phase space,
+In an attempt to endow $\FF$ with a symplectic form, thereby turning it into a phase space,
 let us consider the exterior derivative of $\Theta$, i.e.
 the 2-form
 \be
    \encadre{ \Omega := \Dd \Theta }.
 \ee
-This is analogous to Eq.~(\ref{e:tha:Omega_dTheta})
-and explains why $\w{\theta}$ has been called the \emph{symplectic potential $(n-1)$-form}.
+This is analogous to Eq.~(\ref{e:tha:Omega_dTheta}).
 Let us evaluate the action of $\Omega$ on a pair of two vectors fields $(X_1, X_2)$
 on $\FF$. According to Eq.~(\ref{e:tha:X_dg/dlambda}),
 each vector field describes the variation of $\w{g}$ along some curves of $\FF$
@@ -1311,7 +1312,9 @@ with
         \left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
         - \der{}{\lambda_2}\left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right) } .
 \ee
-$\w{\omega}$ is a $(n-1)$-form on spacetime, which has a local dependence on the metric tensor $\w{g}$,
+$\w{\omega}$ is a $(n-1)$-form on spacetime, called the
+\defin{presymplectic current $(n-1)$-form}\index{presymplectic!current form};
+it has a local dependence on the metric tensor $\w{g}$,
 and the derivatives $\dert{\w{g}}{\lambda_1}$ and $\dert{\w{g}}{\lambda_2}$
 associated to the 2-parameter family $\w{g}(\lambda_1,\lambda_2)$. We observe
 that $\w{\omega}$ does not depend on the second derivative
@@ -1361,7 +1364,8 @@ Cauchy surface $\Sigma$ only up to some boundary integral at asymptotic infinity
 The argument is the same as in the proof of Eq.~(\ref{e:tha:Noether_Q_Sigma_1_2}).
 However, for ``reasonable'' asymptotic flatness conditions on $\w{g}$, the
 boundary integral vanishes (cf. Ref.~\cite{IyerW94} for details). We conclude that
-the 2-form $\Omega$ does not depend on the choice of $\Sigma$ in the definition
+the 2-form $\Omega$ does not depend on the choice of the hypersurface
+$\Sigma$ involved in the definition
 (\ref{e:tha:def_Theta_X_theta}) of $\Theta$.
 
 
