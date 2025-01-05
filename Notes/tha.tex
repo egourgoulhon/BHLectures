@@ -10,7 +10,7 @@ This chapter is in a draft stage.
 
 \section{Diffeomorphism-invariant theories of gravity}
 
-\subsection{Framework}
+\subsection{Framework} \label{s:tha:framework}
 
 We consider that the spacetime $(\M,\w{g})$ is ruled by a metric theory of gravity built upon
 a least action principle\index{least action}, with the following action:
@@ -109,7 +109,7 @@ The reader is referred to the original article \cite{IyerW94} for the proof.
 \begin{example}
 \label{x:tha:EH_Lagrangian}
 For general relativity, $L$ is the Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}:
-\be
+\be \label{e:tha:Hilbert_Lagrangian}
 L = (16\pi)^{-1} R = (16\pi)^{-1} g^{\mu\nu} R_{\mu\nu}
  =  (16\pi)^{-1} g^{\mu\nu} R^\sigma_{\ \,\mu\sigma\nu}
  = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu} .
@@ -162,16 +162,18 @@ in Eq.~(\ref{e:tha:delta_L_E_Theta}) does not contain any derivative of $\delta\
 \end{remark}
 
 \begin{remark}
-For a given theory, the Lagrangian $n$-form itself is not unique:
+For a given gravity theory, the Lagrangian $n$-form itself is not unique:
 $\w{L'} = \w{L} + \dd\w{\mu}$, where $\w{\mu}$ is an arbitrary $(n-1)$-form with compact
-support, leads to the same action (\ref{e:tha:action_L}). If one takes this into account,
-the full degrees of freedom $\w{\theta}$ are
+support, leads to the same action (\ref{e:tha:action_L}) by virtue of
+Stokes' theorem (\ref{e:bas:Stokes}). If one takes this into account,
+the full degrees of freedom on $\w{\theta}$ are
 $\w{\theta'} = \w{\theta} + \dd \w{Y} + \delta\w{\mu}$, instead of (\ref{e:tha:Theta_not_unique}).
 However, for simplicity, we shall not consider $\w{\mu}$ here.
 \end{remark}
 
 \begin{example}
-For general relativity, one has $\w{L} = (16\pi)^{-1} R \weps$ (Example~\ref{x:tha:EH_Lagrangian}).
+For general relativity, one has $\w{L} = (16\pi)^{-1} R \weps$
+[Eq.~(\ref{e:tha:Hilbert_Lagrangian})].
 Given a coordinate system $(x^\alpha)$
 on $\M$,
 this can be rewritten as $\w{L} = (16\pi)^{-1} R \sqrt{-g} \, \w{e}$, where
@@ -198,8 +200,7 @@ We conclude that the variation of the Einstein-Hilbert Lagrangian is indeed of t
     \w{\theta} =  (16\pi)^{-1} \, \w{H}\cdot\weps = (16\pi)^{-1}\,  \star\!\uu{H} ,
 \ee
 where the last equality stems from the definition of the Hodge dual
-of a 1-form [Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$] ($\uu{H}$ being the 1-form
-metric dual of the vector $\w{H}$).
+of a 1-form [Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$].
 In index notation, $\theta_{\alpha_1\cdots\alpha_{n-1}} = (16\pi)^{-1}  H^\mu \eps_{\mu\alpha_1\cdots\alpha_{n-1}}$.
 Substituting Eq.~(\ref{e:evo:def_H}) for $H^\mu$, we get the explicit expression of
 $\w{\theta}\lld\w{g},\delta\w{g}\rld$:
@@ -211,9 +212,9 @@ $\w{\theta}\lld\w{g},\delta\w{g}\rld$:
 We check that $\w{\theta}\lld\w{g},\delta\w{g}\rld$ is linear in $\delta\w{g}$, as stated in Property~\ref{p:tha:var_Lagrangian}.
 \end{example}
 
-\begin{prop}[field equations from least action principle]
+\begin{prop}[field equations from the least action principle]
 The action $\mathcal{S}$ defined by (\ref{e:tha:action_L}) is extremal with respect to any
-metric tensor variation $\delta\w{g}$ that has compact support if, and only if,
+metric variation $\delta\w{g}$ that has compact support if, and only if,
 \be \label{e:tha:eom_E}
     \w{E} = 0 .
 \ee
@@ -249,14 +250,17 @@ vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstei
 
 \subsection{Noether charges related to diffeomorphism invariance}
 
-Let $\w{\xi}$ be a smooth vector field on $\M$. $\w{\xi}$ generates a family of
-infinitesimal diffeomorphisms, namely the flow maps $\Phi_t: \M \to \M$, where
+Any smooth vector field $\w{\xi}$ on $\M$ generates a 1-parameter family of
+infinitesimal diffeomorphisms, namely the flow maps along $\w{\xi}$:
+$\Phi_t: \M \to \M$, where
 $t$ is an infinitesimal parameter. As described in Sec.~\ref{s:bas:Lie_der_vector}, each $\Phi_t$ displaces any point $p\in\M$ by the infinitesimal vector $t\left.\w{\xi}\right| _p$.
 The flow map $\Phi_t$ is clearly a diffeomorphism, whose inverse is $\Phi_t^{-1} = \Phi_{-t}$.
-Let us consider a variation $\delta\w{g}$ induced $\Phi_t$,
-or more precisely by $\Phi_t^{-1}$ in order to simplify expressions:
-choosing $\Phi_t^{-1}$ makes indeed the pullback $\Phi_t^*\w{g}$ appear instead of $(\Phi_t^{-1})^*\w{g}$
-(cf. the above discussion). The variation of $\w{g}$ is then
+Let us consider the variation $\delta\w{g}$ induced by $\Phi_t$,
+or more precisely by $\Phi_t^{-1}$ in order to simplify expressions;
+indeed
+choosing $\Phi_t^{-1}$ makes the pullback $\Phi_t^*\w{g}$ appear instead of
+$(\Phi_t^{-1})^*\w{g}$, as discussed in Sec.~\ref{s:tha:framework}.
+The variation of $\w{g}$ is then
 \be \label{e:tha:delta_g_Phistar}
     \delta\w{g} = \Phi_t^* \w{g} - \w{g} .
 \ee
@@ -292,8 +296,10 @@ In view of the definition (\ref{e:bas:def_Lie_der_covar}) of the Lie derivative,
 \be \label{e:tha:hat_delta_g_Lie}
     \hat{\delta}\w{g} =  \Lie{\xi} \w{g} .
 \ee
-Similarly, one defines $\hat{\delta}\w{L} :=  \left. \D{\w{L}[\hat{\w{g}}(\lambda)]}/\D{\lambda} \right|_{\lambda=0}$, which yields $\hat{\delta}\w{L} =  \Lie{\xi} \w{L}$.
-When comparing with Eqs.~(\ref{e:bas:delta_g_Lie_xi_g}) and(\ref{e:bas:delta_L_Lie_xi_L}), we see that the derivative-based definition has the advantage of getting rid of the (not particularly significant) infinitesimal factor $t$.
+Similarly, one defines
+$\hat{\delta}\w{L} :=  \left. \D{\w{L}\lld\hat{\w{g}}(t)\rld}/\D t \right|_{t=0}$,
+which yields $\hat{\delta}\w{L} =  \Lie{\xi} \w{L}$.
+When comparing with Eqs.~(\ref{e:bas:delta_g_Lie_xi_g}) and (\ref{e:bas:delta_L_Lie_xi_L}), we see that the derivative-based definition has the advantage of getting rid of the (not particularly significant) infinitesimal factor $t$.
 \end{remark}
 
 If one plugs Eqs.~(\ref{e:bas:delta_g_Lie_xi_g}) and (\ref{e:bas:delta_L_Lie_xi_L})
@@ -307,20 +313,20 @@ $\dd( \w{\theta}\lld\w{g},t\Lie{\xi}\w{g}\rld) =  t \dd( \w{\theta}\lld\w{g},\Li
 \]
 Now, the Cartan identity (\ref{e:bas:Cartan}) gives
 $\Lie{\xi} \w{L} = \w{\xi} \cdot\dd \w{L} + \dd(\w{\xi}\cdot\w{L}) = \dd(\w{\xi}\cdot\w{L})$
-since $\dd \w{L} = 0$, as any $(n+1)$-form on a manifold of dimension $n$.
-Hence, we may rewrite the above equation as
+since $\dd \w{L} = 0$, as any $(n+1)$-form on a $n$-dimensional manifold.
+Accordingly, we may rewrite the above equation as
 \be \label{e:tha:dd_pre_J_E}
     \dd\left(  \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld - \w{\xi}\cdot\w{L} \right) =
     - E^{\mu\nu} \Liec{\xi} g_{\mu\nu} \,\weps .
 \ee
 If the field equations are fulfilled, i.e. if $\w{E} = 0$ [Eq.~(\ref{e:tha:eom_E})], the
-right-hand side of the above equation is zero, which means that the
+right-hand side of Eq.~(\ref{e:tha:dd_pre_J_E}) is zero, which implies that the
 argument of the exterior derivative in the left-hand side is a closed
 $(n-1)$-form. This defines a conserved current and motivates the following definition and property.
 
 \begin{prop}[Noether current form]
 \label{p:tha:Noether_current}
-Given any smooth vector field $\w{\xi}$ on $\M$,
+Given a smooth vector field $\w{\xi}$ on $\M$,
 the \defin{Noether current $(n-1)$-form of $\w{\xi}$}\index{Noether!current form} is defined by \cite{Wald93,IyerW94}
 \be \label{e:tha:def_Noether_current}
     \w{J}\lld\w{\xi}\rld := \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld - \w{\xi}\cdot\w{L} ,
@@ -336,8 +342,7 @@ some ambiguity $\w{J}\mapsto \w{J'}$ resulting from (\ref{e:tha:Theta_not_unique
 where $\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
 
 If the gravity theory described by the Lagrangian $n$-form $\w{L}$ is diffeomorphism-invariant, then
-the differential form $\w{J}\lld\w{\xi}\rld$ is closed as soon as the equations of motion (\ref{e:tha:eom_E}) are
-satisfied or $\w{\xi}$ is a Killing vector:
+the differential form $\w{J}\lld\w{\xi}\rld$ is closed as soon as the equations of motion (\ref{e:tha:eom_E}) are fulfilled  or $\w{\xi}$ is a Killing vector:
 \be \label{e:tha:J_closed}
     \dd \w{J}\lld\w{\xi}\rld  = 0 .
 \ee
@@ -368,14 +373,14 @@ $\delta g_{\mu\nu} = t \Liec{\xi} g_{\mu\nu}$ and $\Liec{\xi} g_{\mu\nu} = \nabl
     & = & \left( 2 R^\mu_{\ \, \nu} \xi^\nu + \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu
         \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} , \nonumber
 \eea
-where the contracted Ricci identity (\ref{e:bas:contract_Ricci_ident}) has been used to write the second
-line. Plugging this formula, as well as $\w{L} = R \weps$ (Example~\ref{x:tha:EH_Lagrangian}) into
+where the contracted Ricci identity (\ref{e:bas:contract_Ricci_ident}) has been used to get the second
+line. Plugging this formula, as well as $\w{L} = R \weps$ (cf. Example~\ref{x:tha:EH_Lagrangian}) into
 the definition (\ref{e:tha:def_Noether_current}) of $\w{J}\lld\w{\xi}\rld$ yields
 \[
     J\lld\w{\xi}\rld_{\alpha_1\cdots\alpha_{n-1}} = (16\pi)^{-1} \left(2 G^\mu_{\ \, \nu} \xi^\nu +
         \nabla_\nu \nabla^\nu \xi^\mu - \nabla_\nu \nabla^\mu \xi^\nu \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} .
 \]
-If the field equations are obeyed, then $\w{G}=0$ (Example~\ref{x:tha:field_equations_GR}) and the above
+If the field equations are obeyed, then $\w{G}=0$ (cf. Example~\ref{x:tha:field_equations_GR}) and the above
 expression reduces to
 \be \label{e:tha:J_GR_comp}
     J\lld\w{\xi}\rld_{\alpha_1\cdots\alpha_{n-1}} = (16\pi)^{-1} \left(
@@ -390,7 +395,7 @@ Accordingly, we may write
 \ee
 where the last equality stems from Eq.~(\ref{e:sta:Hodge_dual}) with $p=1$.
 Hence, for general relativity, the Noether current $(n-1)$-form of $\w{\xi}$ is nothing but the
-Hodge dual of the (metric dual of) Komar current of $\w{\xi}$, up to the factor
+Hodge dual of the (metric dual of the) Komar current of $\w{\xi}$, up to the factor
 $(16\pi)^{-1}$.
 That $\w{J}\lld\w{\xi}\rld$ is closed in this case follows readily from the identity (\ref{e:bas:dveps_divv}):
 $16\pi \, \dd\w{J}\lld\w{\xi}\rld = \dd( \w{\mathcal{J}}\lld\w{\xi}\rld \cdot \weps ) = (\wnab\cdot\w{\mathcal{J}}\lld\w{\xi}\rld) \weps$, along
@@ -429,7 +434,7 @@ $\w{Q}$ up to the addition of a closed $(n-2)$-form (cf. Lemma~1 in Ref.~\cite{W
 \begin{example}
 \label{x:tha:Noether_charge_form_GR}
 For general relativity, $\w{J}\lld\w{\xi}\rld$ is given by Eq.~(\ref{e:tha:J_GR_comp}), or Eq.~(\ref{e:tha:J_GR_Komar}) in terms of the Komar current of $\w{\xi}$.
-The Noether charge $(n-2)$-form is then nothing but minus the Hodge dual of the exterior derivative
+Let us show that the corresponding Noether charge $(n-2)$-form is nothing but minus the Hodge dual of the exterior derivative
 of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$), up to the factor $(16\pi)^{-1}$:
 \be \label{e:tha:Q_GR_Komar}
     \w{Q}\lld\w{\xi}\rld = - (16\pi)^{-1}\, \star (\dd \uu{\xi}) .
@@ -450,9 +455,9 @@ which is an equality between 1-forms. From Eq.~(\ref{e:tha:Q_GR_Komar}), we have
 $\star\dd\w{Q}\lld\w{\xi}\rld = - (16\pi)^{-1}\,  \star\dd \star (\dd \uu{\xi})$.
 Now, the operator $\star\dd\star$ is, up to a sign, the \defin{codifferential}\index{codifferential}
 $\w{\delta}$, which maps a $p$-form to a $(p-1)$-form and is defined by\footnote{See e.g. Eq.~(14.35) of Straumann's book \cite{Strau13}, whose sign
-convention we follow here. Note that the same letter $\delta$
-is used to denote the codifferential and the variation operator; to distinguish between the two,
-we are using a boldface symbol for the codifferential.}
+convention is followed here. Since the same letter $\delta$
+is used to denote the codifferential and the variation operator,
+we are using a boldface symbol to distinguish the codifferential.}
 $\w{\delta} := (-1)^{n(p+1)+1} \star\dd\star$. Since $\dd \uu{\xi}$ is a 2-form, we get
 $\star\dd\w{Q}\lld\w{\xi}\rld = (-1)^n (16\pi)^{-1}\, \w{\delta}(\dd \uu{\xi})$. From the expression of the
 codifferential in a coordinate chart $(x^\alpha)$ (cf. e.g. Eq.~(14.37) in Ref.~\cite{Strau13}), we may
@@ -477,8 +482,9 @@ Eq.~(\ref{e:tha:J_dQ}).
 
 \begin{prop}[Noether charge of a spacelike hypersurface]
 \label{p:tha:Noether_charge_hypersurf}
-Let us consider a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$.
-Given a spacelike hypersurface $\Sigma$, the
+Let us consider a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$.
+Given a vector field $\w{\xi}$ on $\M$ and
+a spacelike hypersurface $\Sigma$, the
 \defin{Noether charge of $\Sigma$ with respect to $\w{\xi}$}\index{Noether!charge!of a hypersurface} is
 \be \label{e:tha:def_Q_hypersurf}
     \mathscr{Q}_{\Sigma,\w{\xi}} := \int_{\Sigma} \w{J}\lld\w{\xi}\rld ,
@@ -493,7 +499,8 @@ with
     \mathscr{Q'}_{\Sigma,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}} +
     \int_{\partial\Sigma} \w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld ,
 \ee
-where $\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
+where $\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld$ is any $(n-2)$-form with a linear dependence
+in $\Lie{\xi}\w{g}$.
 However, if $\w{\xi}$ is a Killing vector ($\Lie{\xi}\w{g}=0$), the Noether charge is
 uniquely defined: $\w{J'}\lld\w{\xi}\rld = \w{J}\lld\w{\xi}\rld$ and $\mathscr{Q'}_{\Sigma,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}}$.
 
@@ -517,11 +524,11 @@ Stokes' theorem (\ref{e:bas:Stokes}). If $\w{\xi}$ is a Killing vector, then
 $\Lie{\xi}\w{g}= 0$ by definition (cf. Property~\ref{p:def_Killing_vector}); this implies
 $\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld = 0$ in the
 right-hand side of Eq.~(\ref{e:tha:Q_hyper_not_unique}), given that
-$\w{Y}$ must be linear in its second argument. Hence
+$\w{Y}$ is linear with respect to $\Lie{\xi}\w{g}$. Hence
 $\mathscr{Q'}_{\Sigma,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}}$.
 As for Eq.~(\ref{e:tha:Noether_Q_Sigma_1_2}),
 given that $\partial\mathscr{D} = \Sigma_1\cup\Sigma_2\cup\mathscr{W}$, Stokes' theorem (\ref{e:bas:Stokes})
-along with $\dd \w{J}\lld\w{\xi}\rld = 0$ [Eq.~(\ref{e:tha:J_closed})] yields
+and $\dd \w{J}\lld\w{\xi}\rld = 0$ [Eq.~(\ref{e:tha:J_closed})] lead to
 \[
      \int_{\Sigma_1^{\nearrow}} \w{J}\lld\w{\xi}\rld + \int_{\Sigma_2^{\nearrow}} \w{J}\lld\w{\xi}\rld
       + \int_{\mathscr{W}^{\nearrow}} \w{J}\lld\w{\xi}\rld = 0 ,
@@ -534,10 +541,10 @@ and $\int_{\mathscr{W}^{\nearrow}} \w{J}\lld\w{\xi}\rld = - \int_{\mathscr{W}^{\
 yields (\ref{e:tha:Noether_Q_Sigma_1_2}).
 \end{proof}
 
-The integral over $\mathscr{W}$ in Eq.~(\ref{e:tha:Noether_Q_Sigma_1_2}) can be interpreted an
-an ``inward flux'' integral, especially if $\mathscr{W}$ is a timelike hypersurface
+The integral over $\mathscr{W}$ in Eq.~(\ref{e:tha:Noether_Q_Sigma_1_2}) can be interpreted as
+an ``inward flux'', especially if $\mathscr{W}$ is a timelike hypersurface
 (cf. the electromagnetic analogy detailed in Remark~\ref{r:tha:charge_em_analogy} below).
-If this flux integral vanishes,
+If this inward flux vanishes,
 Eq.~(\ref{e:tha:Noether_Q_Sigma_1_2}) expresses the
 invariance of the Noether charge with respect to the choice of the hypersurface
 (conservation during ``time evolution''). This occurs
@@ -546,9 +553,10 @@ of $\M$ with $\w{J}\lld\w{\xi}\rld$ decaying sufficiently fast so that its integ
 
 \begin{prop}[Noether charge of a spacelike $(n-2)$-surface]
 \label{p:tha:Noether_charge_surf}
-Let us consider a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$.
-Let assume further that $(\M,\w{g})$ is asymptotically flat.
-Given a closed $(n-2)$-surface $\Sp\subset\M$, the
+Let us consider a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$
+and let assume that $(\M,\w{g})$ is asymptotically flat.
+Given a vector field $\w{\xi}$ on $\M$
+and a closed spacelike $(n-2)$-surface $\Sp\subset\M$, the
 \defin{Noether charge of $\Sp$ with respect to $\w{\xi}$}\index{Noether!charge!of a surface} is
 \be \label{e:tha:def_Noether_Q_surf}
     \mathscr{Q}_{\Sp,\w{\xi}} := \int_{\Sp} \w{Q}\lld\w{\xi}\rld ,
@@ -605,9 +613,9 @@ yields (\ref{e:tha:Noether_Q_S_ext_int}).
 We are using the same letter $\mathscr{Q}$ to denote the Noether charge of a hypersurface
 (Property~\ref{p:tha:Noether_charge_hypersurf}) and the Noether charge of
 a $(n-2)$-surface (Property~\ref{p:tha:Noether_charge_surf}). The distinction between the two quantities
-occurs only through the index: $\mathscr{Q}_{\Sigma,\w{\xi}}$ versus $\mathscr{Q}_{\Sp,\w{\xi}}$.
+occurs only through the subscript: $\mathscr{Q}_{\Sigma,\w{\xi}}$ versus $\mathscr{Q}_{\Sp,\w{\xi}}$.
 This common notation is justified in so far as both quantities are strongly related by
-Eq.~(\ref{e:tha:Noether_Q_S_ext_int}). In particular, if the hyprsurface $\Sigma$ has
+Eq.~(\ref{e:tha:Noether_Q_S_ext_int}). In particular, if the hypersurface $\Sigma$ has
 a single (external) boundary $\Sp$, i.e. $\Sp_{\rm int} = \varnothing$, Eq.~(\ref{e:tha:Noether_Q_S_ext_int}) reduces to
 $\mathscr{Q}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}}$.
 \end{remark}
@@ -618,7 +626,7 @@ The name \emph{charge} in the expression \emph{Noether charge} comes of course f
 with electromagnetism: considering $n=4$ for simplicity, the analog of the Noether current 3-form $\w{J}$ is the Hodge dual of the 1-form $\uu{j}$, metric dual of the electric 4-current $\w{j}$:
 $\w{J} = \star\uu{j}$, while the analog of the Noether charge 2-form $\w{Q}$ is the Hodge dual
 of the electromagnetic field tensor $\w{F}$ divided by $\mu_0$: $\w{Q} =\mu_0^{-1}\star\!\w{F}$. The relation
-$\dd \w{Q} = \w{J}$ [Eq.~(\ref{e:tha:J_dQ})] is then nothing but the Maxwell
+$\dd \w{Q} = \w{J}$ [Eq.~(\ref{e:tha:J_dQ})] is then nothing but Maxwell
 equation\index{Maxwell equations} (\ref{e:fra:Maxwell_forms}): $\dd\star\!\w{F} = \mu_0 \star\!\uu{j}$.
 Then $\mathscr{Q}_{\Sigma,\w{\xi}}$ is the total electric charge within the volume $\Sigma$
 (cf. e.g. Eq.~(18.2) in Ref.~\cite{Gourg13}) and $\mathscr{Q}_{\Sp,\w{\xi}}$ is $\mu_0^{-1}$ times the flux of the electromagnetic
