@@ -12,8 +12,8 @@ This chapter is in a draft stage.
 
 \subsection{Framework}
 
-We consider a generic metric theory of gravity on the spacetime $(\M,\w{g})$
-constructed on a least action principle\index{least action}, with the following action:
+We consider that the spacetime $(\M,\w{g})$ is ruled by a metric theory of gravity built upon
+a least action principle\index{least action}, with the following action:
 \be \label{e:tha:action_L}
     \mathcal{S} = \int_{\M} \w{L} = \int_{\M} L \, \weps = \int_{\M} L \sqrt{-g} \, \D^n x .
 \ee
@@ -27,14 +27,18 @@ necessarily proportional, so that there is no loss of generality in the writing
 $\w{L} = L \, \weps$.} $\w{L} = L \, \weps$ and the third one provides an expression of the integral
 in terms of a coordinate system $(x^\alpha)$ on $\M$, $g$ being the determinant of
 $\w{g}$ with respect to these coordinates [cf. Eq.~(\ref{e:bas:eps_sqrt_g})].
-Disregarding any matter field or extra scalar field for simplicity,
-we shall assume that $\w{L}$ is a function of the metric tensor only.
+For simplicity we disregard any scalar or matter field, so that
+$\w{L}$ is a function of the metric tensor $\w{g}$ only.
+Actually all that follows can be easily generalized to account for
+any extra fields, like in scalar-tensor theories, where $\w{L}$ is a function
+of $\w{g}$ and a scalar field $\phi$. We limit ourselves here to $\w{g}$,
+mostly in order to keep notations simple.
 More precisely, we assume that at a given point $p\in\M$, $\w{L}$ depends only
 on the values of $\w{g}$ and its derivatives at $p$. By \emph{derivative}, it is
-meant derivative with respect to any affine connection on $\M$, for instance one
-formed by the partial derivatives with respect to a coordinate system. We shall
+meant derivative with respect to some affine connection on $\M$, for instance the one
+formed by the partial derivatives with respect to some given coordinates. We shall
 write $\w{L}\lld\w{g}\rld$ to stress this dependency of $\w{L}$ on $\w{g}$, according
-to the following notation:
+to the following convention:
 \begin{notation}
 \label{n:tha:bold_parentheses}
 Boldface parentheses are used to denote the local (pointwise) dependency of a
@@ -44,6 +48,9 @@ on the values of the tensor fields $\w{B}$ and $\w{C}$ and their derivatives at 
 \end{notation}
 
 We shall consider only gravity theories whose
+formulation does not depend upon some specific coordinates on $\M$, nor upon
+some extra-structure on $\M$, like a privileged vector field.
+This amounts to demanding that the
 Lagrangian $n$-form $\w{L}$ is covariant under the group of diffeomorphisms of $\M$.
 More precisely, under the action of a diffeomorphism $\Phi:\M \to \M$, the metric tensor
 is transformed to its pullback $(\Phi^{-1})^*\w{g}$ by
@@ -62,11 +69,11 @@ $\Phi^{-1}$:  $\w{L}\lld(\Phi^{-1})^*\w{g}\rld = (\Phi^{-1})^*\w{L}\lld\w{g}\rld
 Given that the spacetimes
 $(\M, \w{g})$ and $(\Phi(\M),(\Phi^{-1})^* \w{g})$ are physically equivalent,
 this means that $\w{L}\lld\w{g}\rld$ and $\w{L}\lld(\Phi^{-1})^*\w{g}\rld$ are basically the same object.
-In particular, the action $\mathcal{S}$ [Eq.~(\ref{e:tha:action_L})] takes the same value if
+In particular, the action $\mathcal{S}$ given by Eq.~(\ref{e:tha:action_L}) takes the same value if
 $\w{L}\lld(\Phi^{-1})^*\w{g}\rld$ is substituted for $\w{L}\lld\w{g}\rld$. If one interprets the diffeomorphism
 action in a ``passive'' way, i.e. as a change of coordinates on $\M$, the
 diffeomorphism-invariance condition simply means that the functional form of $L$
-expressed in Eq.~(\ref{e:tha:Lagrangian_diffeo_inv}) does not depend upon
+expressed in Eq.~(\ref{e:tha:Lagrangian_diffeo_inv}) below does not depend upon
 the choice of coordinates. Since the condition  $\w{L}\lld(\Phi^{-1})^*\w{g}\rld = (\Phi^{-1})^*\w{L}\lld\w{g}\rld$
 must hold for any diffeomorphism, we may simplify it
 by introducing $\Phi' := \Phi^{-1}$ and
@@ -102,12 +109,13 @@ The reader is referred to the original article \cite{IyerW94} for the proof.
 \begin{example}
 \label{x:tha:EH_Lagrangian}
 For general relativity, $L$ is the Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}:
-\[
+\be
 L = (16\pi)^{-1} R = (16\pi)^{-1} g^{\mu\nu} R_{\mu\nu}
- =  (16\pi)^{-1} g^{\mu\nu} R^\sigma_{\ \,\mu\sigma\nu},
-\]
-hence $L = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu}$,
-which is of the form (\ref{e:tha:Lagrangian_diffeo_inv}).
+ =  (16\pi)^{-1} g^{\mu\nu} R^\sigma_{\ \,\mu\sigma\nu}
+ = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu} .
+\ee
+The last expression is clearly of the form (\ref{e:tha:Lagrangian_diffeo_inv}), given that
+the components $(g^{\alpha\beta})$ are functions of the components $(g_{\alpha\beta})$ only.
 \end{example}
 
 
@@ -122,7 +130,7 @@ expressible as
 \be \label{e:tha:delta_L_E_Theta}
     \delta \w{L} = E^{\mu\nu} \delta g_{\mu\nu} \, \weps + \dd \w{\theta} ,
 \ee
-where $E^{\mu\nu}$ are the components of a symmetric type-$(2,0)$ tensor field $\w{E}$,
+where $E^{\mu\nu}$ stands for the components of a symmetric type-$(2,0)$ tensor field $\w{E}$,
 called the \defin{Euler-Lagrange tensor}\index{Euler-Lagrange!tensor},
 and $\w{\theta}$ is a $(n-1)$-form, called the
 \defin{presymplectic potential current $(n-1)$-form}\index{presymplectic!potential current form}
