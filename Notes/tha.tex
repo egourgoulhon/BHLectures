@@ -161,7 +161,7 @@ by means of the Leibniz rule, so that the term $E^{\mu\nu} \delta g_{\mu\nu} \, 
 in Eq.~(\ref{e:tha:delta_L_E_Theta}) does not contain any derivative of $\delta\w{g}$.
 \end{remark}
 
-\begin{remark}
+\begin{remark} \label{r:tha:Lagrangian_dep_mu}
 For a given gravity theory, the Lagrangian $n$-form itself is not unique:
 $\w{L'} = \w{L} + \dd\w{\mu}$, where $\w{\mu}$ is an arbitrary $(n-1)$-form with compact
 support, leads to the same action (\ref{e:tha:action_L}) by virtue of
@@ -342,7 +342,7 @@ some ambiguity $\w{J}\mapsto \w{J'}$ resulting from (\ref{e:tha:Theta_not_unique
 where $\w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld$ is any $(n-2)$-form that is linear in $\Lie{\xi}\w{g}$.
 
 If the gravity theory described by the Lagrangian $n$-form $\w{L}$ is diffeomorphism-invariant, then
-the differential form $\w{J}\lld\w{\xi}\rld$ is closed as soon as the equations of motion (\ref{e:tha:eom_E}) are fulfilled  or $\w{\xi}$ is a Killing vector:
+the $(n-1)$-form $\w{J}\lld\w{\xi}\rld$ is closed as soon as the equations of motion (\ref{e:tha:eom_E}) are fulfilled  or $\w{\xi}$ is a Killing vector:
 \be \label{e:tha:J_closed}
     \dd \w{J}\lld\w{\xi}\rld  = 0 .
 \ee
@@ -434,8 +434,8 @@ $\w{Q}$ up to the addition of a closed $(n-2)$-form (cf. Lemma~1 in Ref.~\cite{W
 \begin{example}
 \label{x:tha:Noether_charge_form_GR}
 For general relativity, $\w{J}\lld\w{\xi}\rld$ is given by Eq.~(\ref{e:tha:J_GR_comp}), or Eq.~(\ref{e:tha:J_GR_Komar}) in terms of the Komar current of $\w{\xi}$.
-Let us show that the corresponding Noether charge $(n-2)$-form is nothing but minus the Hodge dual of the exterior derivative
-of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$), up to the factor $(16\pi)^{-1}$:
+Let us show that the corresponding Noether charge $(n-2)$-form is nothing but the Hodge dual of the exterior derivative
+of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$), up to the factor $-(16\pi)^{-1}$:
 \be \label{e:tha:Q_GR_Komar}
     \w{Q}\lld\w{\xi}\rld = - (16\pi)^{-1}\, \star (\dd \uu{\xi}) .
 \ee
@@ -1210,8 +1210,7 @@ to the equations of motion. This is the essence of the
 so-called \defin{covariant phase space}\index{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --} approach.
 
 
-\subsection{First law for diffeomorphism-invariant theories}
-
+\subsection{Covariant phase space for gravity theories}
 
 Let us apply the above considerations to a gravity
 theory governed by a Lagrangian of the type (\ref{e:tha:Lagrangian_diffeo_inv}).
@@ -1269,8 +1268,75 @@ that it is continuous (recall that linearity does not imply continuity in infini
 so that $\Theta$ belongs to the dual space of the tangent space to $\FF$ at $\w{g}$:
 $\Theta \in T_{\w{g}}^* \FF$. By letting the point $\w{g}$ vary over all $\FF$, this defines
 a 1-form on $\FF$, which we shall denote by the same symbol $\Theta$.
+
 In an attempt to endow $\FF$ with a symplectic form, thereby turning it into a phase space,
-let us consider the exterior derivative of $\Theta$, i.e.
+let us consider the 2-form $\Omega$ that is the exterior derivative of $\Theta$,
+i.e. $\Omega := \Dd \Theta$. Notice that this is analogous to Eq.~(\ref{e:tha:Omega_dTheta}).
+While $\Theta$ depends on the choice of $\Sigma$, $\Omega$ does not and is moreover
+insensitive to the ambiguities arising in the definition of $\w{\theta}$
+(cf. Eq.~(\ref{e:tha:Theta_not_unique}) and Remark~\ref{r:tha:Lagrangian_dep_mu} on
+p.~\pageref{r:tha:Lagrangian_dep_mu}):
+
+\begin{prop}[Presymplectic form in the space of solutions of a gravity theory]
+Let $\FF$ be the (Banach) manifold of solutions to the field equations
+of a gravity theory on the
+globally hyperbolic
+$n$-dimensional spacetime $(\M,\w{g})$, equipped with a Cauchy surface $\Sigma$.
+The 2-form
+\be
+   \encadre{ \Omega := \Dd \Theta },
+\ee
+where $\Theta$ is the 1-form on $\FF$ defined by Eq.~(\ref{e:tha:def_Theta_X_theta}),
+is a \defin{presymplectic form} on $\FF$, i.e. a closed 2-form:
+$\Dd\Omega = 0$.
+
+The action of $\Omega$ on a pair of commuting vector fields $(X_1,X_2)$ of $\FF$
+is expressible as follows.
+According to Eq.~(\ref{e:tha:X_dg/dlambda}),
+each vector field describes the variation of $\w{g}$ along some curves of $\FF$,
+Since they commute, the vector fields $(X_1,X_2)$ can be associated
+to a 2-parameter family $\w{g}(\lambda_1,\lambda_2)$ of metric tensors,
+spanning a 2-surface $\mathcal{S}\subset \FF$.
+The vector field $X_1$ (resp. $X_2$) on $\FF$ corresponds then to variations
+$\delta\w{g}$
+along curves $\lambda_2 = \mathrm{const}$ (resp. $\lambda_1 = \mathrm{const}$) in the 2-surface $\mathcal{S}$, i.e. to partial derivatives:
+\be \label{e:tha:def_X1_X2}
+    X_1 = \left. \frac{\delta\w{g}}{\delta\lambda_1} \right| _{\lambda_2=\mathrm{const}}
+      =: \der{\w{g}}{\lambda_1}  \qand
+    X_2 = \left. \frac{\delta\w{g}}{\delta\lambda_2} \right| _{\lambda_1=\mathrm{const}}
+      =: \der{\w{g}}{\lambda_2} .
+\ee
+We have then
+\be \label{e:tha:Omega_int_omega}
+    \encadre{ \Omega(X_1,X_2) =  \int_{\Sigma} \w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1},
+                            \der{\w{g}}{\lambda_2} \Rld } ,
+\ee
+where $\w{\omega}$ is the $(n-1)$-form on $\M$ defined from the
+presymplectic potential current $(n-1)$-form $\w{\theta}$
+of the gravity theory
+(cf. Property~\ref{p:tha:var_Lagrangian}) by
+\be \label{e:tha:def_omega_der_theta}
+ \encadre{ \w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1}, \der{\w{g}}{\lambda_2} \Rld
+    :=  \der{}{\lambda_1}
+        \left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
+        - \der{}{\lambda_2}\left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right) } .
+\ee
+$\w{\omega}$ is called the
+\defin{presymplectic current $(n-1)$-form}\index{presymplectic!current form} \cite{WaldZ00}.
+It has a local dependence on the metric tensor $\w{g}$
+and on the derivatives $\dert{\w{g}}{\lambda_1}$ and $\dert{\w{g}}{\lambda_2}$
+associated to the 2-parameter family $\w{g}(\lambda_1,\lambda_2)$,
+and is linear with respect to these derivatives.
+
+The presymplectic form $\Omega$ is unique for a given gravity theory with
+appropriate asymptotic flatness conditions: it
+does not depend on the choice of the
+Cauchy surface $\Sigma$, nor on the freedom (\ref{e:tha:Theta_not_unique})
+in the choice of $\theta$.
+\end{prop}
+
+
+
 the 2-form
 \be
    \encadre{ \Omega := \Dd \Theta }.
@@ -1385,6 +1451,8 @@ $\Sigma$ involved in the definition
 
 
 
+
+\subsection{First law for diffeomorphism-invariant theories}
 
 
 
