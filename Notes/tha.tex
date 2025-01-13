@@ -1221,7 +1221,7 @@ the space $\FF$ of solutions $\w{g}$ to the field equations is
 an \emph{infinite-dimensional manifold}. More precisely, it can be given the structure of an
 infinite-dimensional \defin{Banach manifold}\index{Banach manifold}\index{manifold!Banach --}
 \cite{LeeW90,HarloW20}, i.e. a topological space that locally resembles\footnote{Cf. Lang's book~\cite{Lang95} for a
-precise definition.} a Banach space of infinite dimension, in the same
+precise definition of a Banach manifold.} a Banach space of infinite dimension, in the same
 way as a $n$-dimensional manifold locally resembles the vector space $\mathbb{R}^n$.
 Since any point of $\FF$ is a metric field $\w{g}$ on $\M$, a variation $\delta\w{g}$
 can be viewed as an infinitesimal displacement vector between two neighboring points of the manifold
@@ -1243,17 +1243,24 @@ and $\w{g}(\lambda+\delta\lambda)$ along the curve $\mathcal{L}$
 to which $X$ is tangent to; $\lambda$ is then the parameter of $\mathcal{L}$ associated to $X$
 and we denote by $\delta\lambda$ its small increment, instead of $\D\lambda$ as in Sec.~\ref{s:bas:vectors}.
 
+In what follows, we assume that the $n$-dimensional spacetime manifold $\M$ is diffeomorphic to $\R\times\hat{\Sigma}$,
+where $\hat{\Sigma}$ is an oriented manifold of dimension $(n-1)$ with an
+\defin{asymptotically Euclidean end}\index{asymptotically!Euclidean end},
+i.e. there exists a compact subset $K$ of $\hat{\Sigma}$ such that
+$\hat{\Sigma}_{\rm ext} := \hat{\Sigma}\setminus K$
+is diffeomorphic to $\R^{n-1} \setminus \mathbb{B}^{n-1}$, where $\mathbb{B}^{n-1}$ is the unit ball of
+$\R^{n-1}$. We shall restrict the space $\FF$ of solutions $\w{g}$ of the considered gravity theory
+to those that are asymptotically flat, with the asymptotically flat end corresponding to
+$\hat{\Sigma}_{\rm ext}$.
+
+Let $\Sigma$ be a hypersurface of $\M$ diffeomorphic to $\hat{\Sigma}$, i.e. such that $\Psi(\Sigma) = \hat{\Sigma}$,
+where $\Psi$ is a diffeomorphism $\M \to \R\times \hat{\Sigma}$.
 From the spacetime presymplectic potential current $(n-1)$-form $\w{\theta}\lld\w{g},\delta\w{g}\rld$
-(cf. Property~\ref{p:tha:var_Lagrangian}), we define a 1-form $\Theta$ on $\FF$ as follows.
-Let us assume that the spacetime $(\M,\w{g})$ is globally hyperbolic and asymptotically flat.
-Let then $\Sigma$ be a Cauchy surface\index{Cauchy!surface}
-(cf. the definition given on p.~\pageref{d:sta:Cauchy_surface}), oriented
-so that the $(n-1)$-form $\w{n}\cdot\weps$ is right-handed for $\w{n}$ future-directed
-unit normal to $\Sigma$.
-At any point $\w{g}\in\FF$, we define the action of $\Theta$ on a vector $X$ in the
-tangent space $T_{\w{g}} \FF$ by
+(cf. Property~\ref{p:tha:var_Lagrangian}), one defines a 1-form $\Theta_\Sigma$ on $\FF$ as follows.
+At any point $\w{g}\in\FF$, the action of $\Theta_\Sigma$ on a vector $X$ in the
+tangent space $T_{\w{g}} \FF$ is defined by
 \be \label{e:tha:def_Theta_X_theta}
-    \langle \Theta, X \rangle := \int_{\Sigma} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld ,
+    \langle \Theta_\Sigma, X \rangle := \int_{\Sigma} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld ,
 \ee
 where $\delta\w{g}/\delta\lambda$ is the relative variation of $\w{g}$ defining the
 vector $X$ by Eq.~(\ref{e:tha:X_dg/dlambda}).
@@ -1261,39 +1268,39 @@ The integral in the right-hand side of Eq.~(\ref{e:tha:def_Theta_X_theta}) is a 
 since $\w{\theta}\lld\w{g},\delta\w{g}/\delta\lambda\rld$ is a $(n-1)$-form on $\M$ and $\Sigma$
 is an oriented submanifold of $\M$ of dimension $n-1$. Moreover, we assume that the asymptotic flatness conditions
 ensure that this integral is always convergent, giving birth a finite real number.
-The map $\Theta: T_{\w{g}} \FF \to \R$ thus defined is clearly linear, given that
+The map $\Theta_\Sigma: T_{\w{g}} \FF \to \R$ thus defined is clearly linear, given that
 $\w{\theta}\lld\cdot,\cdot\rld$ is linear in its second argument.
-Hence $\Theta$ is a linear form on the tangent space $T_{\w{g}} \FF$; furthermore we shall assume
+Hence $\Theta_\Sigma$ is a linear form on the tangent space $T_{\w{g}} \FF$; furthermore we shall assume
 that it is continuous (recall that linearity does not imply continuity in infinite dimension),
-so that $\Theta$ belongs to the dual space of the tangent space to $\FF$ at $\w{g}$:
-$\Theta \in T_{\w{g}}^* \FF$. By letting the point $\w{g}$ vary over all $\FF$, this defines
-a 1-form on $\FF$, which we shall denote by the same symbol $\Theta$.
+so that $\Theta_\Sigma$ belongs to the dual space of the tangent space to $\FF$ at $\w{g}$:
+$\Theta_\Sigma \in T_{\w{g}}^* \FF$. By letting the point $\w{g}$ vary over all $\FF$, this defines
+a 1-form on $\FF$, which we shall denote by the same symbol $\Theta_\Sigma$.
 
 In an attempt to endow $\FF$ with a symplectic form, thereby turning it into a phase space,
-let us consider the 2-form $\Omega$ that is the exterior derivative of $\Theta$,
-i.e. $\Omega := \Dd \Theta$. Notice that this is analogous to Eq.~(\ref{e:tha:Omega_dTheta}).
-While $\Theta$ depends on the choice of $\Sigma$, $\Omega$ does not and is moreover
+let us consider the 2-form $\Omega$ that is the exterior derivative of $\Theta_\Sigma$,
+i.e. $\Omega := \Dd \Theta_\Sigma$. Notice that this is analogous to Eq.~(\ref{e:tha:Omega_dTheta}).
+While $\Theta_\Sigma$ depends on the choice of $\Sigma$, $\Omega$ does not and is moreover
 insensitive to the ambiguities arising in the definition of $\w{\theta}$
 (cf. Eq.~(\ref{e:tha:Theta_not_unique}) and Remark~\ref{r:tha:Lagrangian_dep_mu} on
 p.~\pageref{r:tha:Lagrangian_dep_mu}):
 
 \begin{prop}[Presymplectic form in the space of solutions of a gravity theory]
-Let $\FF$ be the (Banach) manifold of solutions to the field equations
-of a gravity theory on the
-globally hyperbolic
-$n$-dimensional spacetime $(\M,\w{g})$, equipped with a Cauchy surface $\Sigma$.
+Let $\FF$ be the (Banach) manifold of solutions $\w{g}$ to the field equations
+that are asymptotically flat in the asymptotically Euclidean end of the
+$n$-dimensional manifold $\M \sim \R \times \hat{\Sigma}$. Let
+$\Sigma$ be a hypersurface of $\M$ diffeomorphic to $\hat{\Sigma}$.
 The 2-form
-\be
-   \encadre{ \Omega := \Dd \Theta },
+\be \label{e:tha:def_Omega_gravity}
+   \encadre{ \Omega := \Dd \Theta_\Sigma },
 \ee
-where $\Theta$ is the 1-form on $\FF$ defined by Eq.~(\ref{e:tha:def_Theta_X_theta}),
+where $\Theta_\Sigma$ is the 1-form on $\FF$ defined by Eq.~(\ref{e:tha:def_Theta_X_theta}),
 is a \defin{presymplectic form} on $\FF$, i.e. a closed 2-form:
 $\Dd\Omega = 0$.
 
 The action of $\Omega$ on a pair of commuting vector fields $(X_1,X_2)$ of $\FF$
 is expressible as follows.
 According to Eq.~(\ref{e:tha:X_dg/dlambda}),
-each vector field describes the variation of $\w{g}$ along some curves of $\FF$,
+each vector field describes the variation of $\w{g}$ along some curves of $\FF$.
 Since they commute, the vector fields $(X_1,X_2)$ can be associated
 to a 2-parameter family $\w{g}(\lambda_1,\lambda_2)$ of metric tensors,
 spanning a 2-surface $\mathcal{S}\subset \FF$.
@@ -1313,7 +1320,7 @@ We have then
 \ee
 where $\w{\omega}$ is the $(n-1)$-form on $\M$ defined from the
 presymplectic potential current $(n-1)$-form $\w{\theta}$
-of the gravity theory
+of the considered gravity theory
 (cf. Property~\ref{p:tha:var_Lagrangian}) by
 \be \label{e:tha:def_omega_der_theta}
  \encadre{ \w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1}, \der{\w{g}}{\lambda_2} \Rld
@@ -1329,47 +1336,28 @@ associated to the 2-parameter family $\w{g}(\lambda_1,\lambda_2)$,
 and is linear with respect to these derivatives.
 
 The presymplectic form $\Omega$ is unique for a given gravity theory with
-appropriate asymptotic flatness conditions: it
+appropriate asymptotic flatness conditions. In particular, it
 does not depend on the choice of the
-Cauchy surface $\Sigma$, nor on the freedom (\ref{e:tha:Theta_not_unique})
-in the choice of $\theta$.
+hypersurface $\Sigma$, nor on the freedom $\w{\theta} \to \w{\theta} + \dd \w{Y}$
+in the choice of $\w{\theta}$ [Eq.~(\ref{e:tha:Theta_not_unique})].
 \end{prop}
 
-
-
-the 2-form
-\be
-   \encadre{ \Omega := \Dd \Theta }.
-\ee
-This is analogous to Eq.~(\ref{e:tha:Omega_dTheta}).
-Let us evaluate the action of $\Omega$ on a pair of vectors fields $(X_1, X_2)$
-on $\FF$. According to Eq.~(\ref{e:tha:X_dg/dlambda}),
-each vector field describes the variation of $\w{g}$ along some curves of $\FF$
-and we choose $(X_1, X_2)$ to describe two \emph{independent} variations as follows.
-Let us consider a parametrized 2-surface on $\FF$,
-i.e. the image $\mathcal{S}\subset \FF$ of a map $\Phi: I_1\times I_2 \to \FF$, $(\lambda_1,\lambda_2) \mapsto \w{g}(\lambda_1,\lambda_2)$,
-where $I_1$ and $I_2$ are two real intervals. This amounts to considering a 2-parameter family
-$\w{g}(\lambda_1,\lambda_2)$
-of metric tensors. The vector field $X_1$ (resp. $X_2$) on $\FF$ corresponds then to variations
-$\delta\w{g}$
-along curves $\lambda_2 = \mathrm{const}$ (resp. $\lambda_1 = \mathrm{const}$) in the 2-surface $\mathcal{S}$, i.e. to partial derivatives:
-\be \label{e:tha:def_X1_X2}
-    X_1 = \left. \frac{\delta\w{g}}{\delta\lambda_1} \right| _{\lambda_2=\mathrm{const}}
-      =: \der{\w{g}}{\lambda_1}  \qand
-    X_2 = \left. \frac{\delta\w{g}}{\delta\lambda_2} \right| _{\lambda_1=\mathrm{const}}
-      =: \der{\w{g}}{\lambda_2} .
-\ee
-Let us compute $\Omega(X_1,X_2) = \Dd \Theta (X_1,X_2)$ via the exterior derivative formula
+\begin{proof}
+That $\Omega$, as defined by Eq.~(\ref{e:tha:def_Omega_gravity}), is a closed
+2-form is obvious: $\Dd\Omega = \Dd\Dd \Theta_\Sigma = 0$ (nilpotence of the exterior
+derivative, cf. Eq.~(\ref{e:ext_der_nilpot})).
+To establish Eq.~(\ref{e:tha:Omega_int_omega}), let
+ us compute $\Omega(X_1,X_2) = \Dd \Theta_\Sigma (X_1,X_2)$ via the exterior derivative formula
 (\ref{e:bas:def_ext_der_p1}), noticing that (i) this formula
 does not involve the manifold dimensionality (contrary to formula (\ref{e:bas:def_ext_1f}),
 which applies to finite dimensions only) and (ii) the last term in the right-hand
-side of (\ref{e:bas:def_ext_der_p1}) vanishes since $[X_1,X_2] = 0$ (commutation of partial derivatives).
+side of (\ref{e:bas:def_ext_der_p1}) vanishes since $[X_1,X_2] = 0$.
 We get
 \begin{align}
-    \Omega(X_1,X_2) & = X_1\left( \langle \Theta, X_2 \rangle \right)
-        -  X_2\left( \langle \Theta, X_1 \rangle \right) \nonumber \\
-        & =  \der{}{\lambda_1} \langle \Theta, X_2 \rangle -
-            \der{}{\lambda_2} \langle \Theta, X_1 \rangle \nonumber \\
+    \Omega(X_1,X_2) & = X_1\left( \langle \Theta_\Sigma, X_2 \rangle \right)
+        -  X_2\left( \langle \Theta_\Sigma, X_1 \rangle \right) \nonumber \\
+        & =  \der{}{\lambda_1} \langle \Theta_\Sigma, X_2 \rangle -
+            \der{}{\lambda_2} \langle \Theta_\Sigma, X_1 \rangle \nonumber \\
         & = \der{}{\lambda_1} \int_{\Sigma} \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld
         - \der{}{\lambda_2} \int_{\Sigma} \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld   \nonumber \\
         & = \int_{\Sigma} \left\{ \der{}{\lambda_1}
@@ -1378,48 +1366,61 @@ We get
         \nonumber
 \end{align}
 The second equality results from $X_1(f) = \dert{f}{\lambda_1}$ for the scalar field
-$f := \langle \Theta, X_2 \rangle$ [cf. Eq.~(\ref{e:bas:def_vector})], the third equality
+$f := \langle \Theta_\Sigma, X_2 \rangle$ [cf. Eq.~(\ref{e:bas:def_vector})], the third equality
 makes use of Eqs.~(\ref{e:tha:def_Theta_X_theta}) and (\ref{e:tha:def_X1_X2})
 and the last equality stems from the linearity of the integral.
-We may write the above result as
-\be \label{e:tha:Omega_int_omega}
-    \encadre{ \Omega(X_1,X_2) =  \int_{\Sigma} \w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1},
-                            \der{\w{g}}{\lambda_2} \Rld } ,
-\ee
-with
-\be \label{e:tha:def_omega_der_theta}
- \encadre{ \w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1}, \der{\w{g}}{\lambda_2} \Rld
-    :=  \der{}{\lambda_1}
-        \left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
-        - \der{}{\lambda_2}\left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right) } .
-\ee
-$\w{\omega}$ is a $(n-1)$-form on spacetime, called the
-\defin{presymplectic current $(n-1)$-form}\index{presymplectic!current form} \cite{WaldZ00};
-it has a local dependence on the metric tensor $\w{g}$,
-and the derivatives $\dert{\w{g}}{\lambda_1}$ and $\dert{\w{g}}{\lambda_2}$
-associated to the 2-parameter family $\w{g}(\lambda_1,\lambda_2)$. We observe
-that $\w{\omega}$ does not depend on the second derivative
+This proves Eq.~(\ref{e:tha:Omega_int_omega}), provided that
+$\w{\omega}$ is defined by (\ref{e:tha:def_omega_der_theta}).
+The $(n-1)$-form $\w{\omega}$ does not depend on the second derivative
 $\frac{\partial^2\w{g}}{\partial\lambda_1\partial\lambda_2}$ because the second derivatives,
 which appear in each of the two terms of the right-hand side of
-Eq.~(\ref{e:tha:def_omega_der_theta}), cancel each other thanks to the
+Eq.~(\ref{e:tha:def_omega_der_theta}), cancel out thanks to the
 identity
 $\frac{\partial^2\w{g}}{\partial\lambda_1\partial\lambda_2} = \frac{\partial^2\w{g}}{\partial\lambda_2\partial\lambda_1}$.
-We observe as well that $\w{\omega}$ is linear with respect to $\der{\w{g}}{\lambda_1}$
-and with respect to $\der{\w{g}}{\lambda_2}$.
+Hence the notation $\w{\omega} = \w{\omega}\lld\w{g},  \dert{\w{g}}{\lambda_1}, \dert{\w{g}}{\lambda_2} \rld$.
+The change  $\w{\theta'}\lld\w{g},\delta\w{g}\rld = \w{\theta}\lld\w{g},\delta\w{g}\rld
++ \dd \left(\w{Y}\lld\w{g},\delta\w{g}\rld \right)$, as permitted by Eq.~(\ref{e:tha:Theta_not_unique}),
+leads to the following change in the presymplectic form:
+\[
+    \Omega'(X_1, X_2) = \Omega(X_1, X_2) + \int_{\Sp_\infty}
+    \left[ \der{}{\lambda_1}
+        \left( \w{Y}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
+        - \der{}{\lambda_2}\left( \w{Y}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right) \right] ,
+\]
+where use has been made of Eqs.~(\ref{e:tha:Omega_int_omega})-(\ref{e:tha:def_omega_der_theta}),
+as well as the Stokes' theorem (\ref{e:bas:Stokes}),
+$\Sp_\infty$ standing for the ``outer boundary'' of $\Sigma$, i.e. the limit
+$r\to +\infty$ of a $(n-2)$-sphere $\Sp_r$ of radius $r$ in the asymptotically Euclidean end
+of $\Sigma$. Now, given that the $(n-2)$ form $\w{Y}$ must be constructed from
+$\w{g}$, $\delta\w{g}$ and their derivatives in a covariant manner, the fall-off
+conditions from standard asymptotic flatness are sufficient to make
+the above integral over $\Sp_\infty$ vanish \cite{IyerW94}. Hence $\Omega' = \Omega$.
+As for the independence of $\Omega$ from $\Sigma$, it follows
+from $\dd \w{\omega} = 0$ (Property~\ref{p:tha:omega_closed} below). Indeed, via
+Stokes' theorem (\ref{e:bas:Stokes}),
+ $\dd \w{\omega} = 0$ implies that the
+value of $\Omega(X_1,X_2)$ given by Eq.~(\ref{e:tha:Omega_int_omega})
+depends on the choice of the
+Cauchy surface $\Sigma$ only up to some boundary integral at asymptotic infinity.
+The argument is the same as in the proof of Eq.~(\ref{e:tha:Noether_Q_Sigma_1_2}).
+However, for ``reasonable'' asymptotic flatness conditions on $\w{g}$, the
+boundary integral vanishes (cf. Ref.~\cite{IyerW94} for details).
+\end{proof}
 
-An important property of $\w{\omega}$ is to be a closed differential form:
+\begin{prop}[Closedness of the presymplectic current $(n-1)$-form]
+\label{p:tha:omega_closed}
+The presymplectic current $(n-1)$-form $\w{\omega}$ is closed:
 \be \label{e:tha:omega_closed}
     \dd \w{\omega} = 0 .
 \ee
+\end{prop}
 \begin{proof}
 The 2-parameter family of metric tensors $\w{g}(\lambda_1,\lambda_2)$ gives birth
 to a 2-parameter family of Lagrangian $n$-forms
 $\w{L}(\lambda_1,\lambda_2) := \w{L}\lld\w{g}(\lambda_1,\lambda_2)\rld$.
 The variation $\delta_1\w{L}$ of $\w{L}$ corresponding to a variation of $\lambda_1$ is
 given by Eq.~(\ref{e:tha:delta_L_E_Theta}) with $E^{\mu\nu} = 0$ since
-we are considering only families of solutions of the field equations (equivalently,
-all displacements $\delta\w{g}$ are taking place within the 2-surface
-$\mathcal{S}$, which is part of the space $\FF$ of solutions). Hence
+we are considering only families of solutions of the field equations. Hence
 $\delta_1 \w{L} = \dd \left( \w{\theta}\lld\w{g}, \delta_1 \w{g}\rld \right)$.
 Given that $\delta_1 \w{L} = \der{\w{L}}{\lambda_1}  \, \delta \lambda_1$,
 $\delta_1 \w{g} = \der{\w{g}}{\lambda_1} \, \delta \lambda_1$
@@ -1433,21 +1434,11 @@ Taking the derivative of this expression with respect to $\lambda_2$ yields
         \dd \left( \w{\theta} \Lld\w{g},  \der{\w{g}}{\lambda_1} \Rld \right)
         = \dd  \der{}{\lambda_2} \left( \w{\theta} \Lld\w{g},  \der{\w{g}}{\lambda_1} \Rld \right) .
 \]
-Performing a swap of $\lambda_1$ and $\lambda_2$ and subtracting the above formula
+Swapping $\lambda_1$ and $\lambda_2$ and subtracting the above formula
 yields, in view of $\w{\omega}$'s definition (\ref{e:tha:def_omega_der_theta}),
 $\frac{\partial^2\w{L}}{\partial\lambda_1\partial\lambda_2} - \frac{\partial^2\w{L}}{\partial\lambda_2\partial\lambda_1} = \dd\w{\omega}$. But the left-hand side of this equation
 is trivially zero, hence the result (\ref{e:tha:omega_closed}).
 \end{proof}
-It follows from $\dd\w{\omega} = 0$ and the Stokes theorem (\ref{e:bas:Stokes})
-that the value of $\Omega(X_1,X_2)$ given by Eq.~(\ref{e:tha:Omega_int_omega})
-depends on the choice of the
-Cauchy surface $\Sigma$ only up to some boundary integral at asymptotic infinity.
-The argument is the same as in the proof of Eq.~(\ref{e:tha:Noether_Q_Sigma_1_2}).
-However, for ``reasonable'' asymptotic flatness conditions on $\w{g}$, the
-boundary integral vanishes (cf. Ref.~\cite{IyerW94} for details). We conclude that
-the 2-form $\Omega$ does not depend on the choice of the hypersurface
-$\Sigma$ involved in the definition
-(\ref{e:tha:def_Theta_X_theta}) of $\Theta$.
 
 
 
