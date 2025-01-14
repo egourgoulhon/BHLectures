@@ -163,7 +163,7 @@ in Eq.~(\ref{e:tha:delta_L_E_Theta}) does not contain any derivative of $\delta\
 
 \begin{remark} \label{r:tha:Lagrangian_dep_mu}
 For a given gravity theory, the Lagrangian $n$-form itself is not unique:
-$\w{L'} = \w{L} + \dd\w{\mu}$, where $\w{\mu}$ is an arbitrary $(n-1)$-form with compact
+$\w{L'} = \w{L} + \dd\w{\mu}$, where $\w{\mu} = \w{\mu}\lld\w{g}\rld$ is an arbitrary $(n-1)$-form with compact
 support, leads to the same action (\ref{e:tha:action_L}) by virtue of
 Stokes' theorem (\ref{e:bas:Stokes}). If one takes this into account,
 the full degrees of freedom on $\w{\theta}$ are
@@ -171,7 +171,7 @@ $\w{\theta'} = \w{\theta} + \dd \w{Y} + \delta\w{\mu}$, instead of (\ref{e:tha:T
 However, for simplicity, we shall not consider $\w{\mu}$ here.
 \end{remark}
 
-\begin{example}
+\begin{example} \label{x:tha:theta_GR}
 For general relativity, one has $\w{L} = (16\pi)^{-1} R \weps$
 [Eq.~(\ref{e:tha:Hilbert_Lagrangian})].
 Given a coordinate system $(x^\alpha)$
@@ -1303,8 +1303,8 @@ According to Eq.~(\ref{e:tha:X_dg/dlambda}),
 each vector field describes the variation of $\w{g}$ along some curves of $\FF$.
 Since they commute, the vector fields $(X_1,X_2)$ can be associated
 to a 2-parameter family $\w{g}(\lambda_1,\lambda_2)$ of metric tensors,
-spanning a 2-surface $\mathcal{S}\subset \FF$.
-The vector field $X_1$ (resp. $X_2$) on $\FF$ corresponds then to variations
+spanning a 2-surface $\mathcal{S}\subset \FF$, so that $X_1$
+(resp. $X_2$) corresponds to variations
 $\delta\w{g}$
 along curves $\lambda_2 = \mathrm{const}$ (resp. $\lambda_1 = \mathrm{const}$) in the 2-surface $\mathcal{S}$, i.e. to partial derivatives:
 \be \label{e:tha:def_X1_X2}
@@ -1329,7 +1329,10 @@ of the considered gravity theory
         - \der{}{\lambda_2}\left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right) } .
 \ee
 $\w{\omega}$ is called the
-\defin{presymplectic current $(n-1)$-form}\index{presymplectic!current form} \cite{WaldZ00}.
+\defin{presymplectic current $(n-1)$-form}\index{presymplectic!current form}
+\cite{WaldZ00}\footnote{It is called the \emph{symplectic current $(n-1)$-form}
+in articles by Wald and Iyer \cite{Wald93,IyerW94} preceding \cite{WaldZ00}, but as
+discussed below, \emph{presymplectic} is a better qualifier than \emph{symplectic}.}.
 It has a local dependence on the metric tensor $\w{g}$
 and on the derivatives $\dert{\w{g}}{\lambda_1}$ and $\dert{\w{g}}{\lambda_2}$
 associated to the 2-parameter family $\w{g}(\lambda_1,\lambda_2)$,
@@ -1407,9 +1410,45 @@ However, for ``reasonable'' asymptotic flatness conditions on $\w{g}$, the
 boundary integral vanishes (cf. Ref.~\cite{IyerW94} for details).
 \end{proof}
 
+\begin{example}
+For general relativity, one deduces from expression~(\ref{e:tha:Theta_GR})
+for $\w{\theta}$ and the definition (\ref{e:tha:def_omega_der_theta}) that
+the presymplectic current $(n-1)$-form is
+\be
+    \omega\lld \w{g}, \delta_1 \w{g}, \delta_2 \w{g} \rld _{\alpha_1\cdots\alpha_{n-1}} =
+     (32\pi)^{-1}\, P^{\lambda\mu\nu\tau\rho\sigma}
+    \left( \delta_2 g_{\mu\nu} \nabla_\tau \delta_1 g_{\rho\sigma}
+    - \delta_1 g_{\mu\nu} \nabla_\tau \delta_2 g_{\rho\sigma} \right)
+    \epsilon_{\lambda\alpha_1\cdots\alpha_{n-1}} ,
+\ee
+with
+\be
+    P^{\alpha\beta\gamma\delta\epsilon\lambda}
+    := 2 g^{\alpha\epsilon} g^{\lambda\beta} g^{\gamma\delta}
+       - g^{\alpha\delta} g^{\beta\epsilon} g^{\lambda\gamma}
+       - g^{\alpha\beta} g^{\gamma\delta} g^{\epsilon\lambda}
+       - g^{\beta\gamma} g^{\alpha\epsilon} g^{\lambda\delta}
+       + g^{\beta\gamma} g^{\alpha\delta} g^{\epsilon\lambda} .
+\ee
+We shall not detail the computation, which is straightforward but rather lengthy.
+Let us simply mention that one shall start by expressing the
+covariant derivatives in expression~(\ref{e:tha:Theta_GR})
+for $\w{\theta}$ in terms of $\w{g}$'s Christoffel symbols [Eq.~(\ref{e:bas:der_cov_coord})
+with $(k,\ell) = (0,2)$] and replace $\weps$ by $\sqrt{-g}\, \w{e}$ as in Example~\ref{x:tha:theta_GR},
+plug the result in Eq.~(\ref{e:tha:def_omega_der_theta}) and
+make use of the identities
+(\ref{e:evo:delta_Gamma}) and (\ref{e:evo:delta_sqrt_g}).
+As a check, one can compare with
+Eqs.~(21)-(23) of Ref.~\cite{HollaW13} or
+Eqs.~(41)-(43) of Ref.~\cite{WaldZ00}.
+\end{example}
+
 \begin{prop}[Closedness of the presymplectic current $(n-1)$-form]
 \label{p:tha:omega_closed}
-The presymplectic current $(n-1)$-form $\w{\omega}$ is closed:
+Provided that the 2-parameter family $\w{g}(\lambda_1,\lambda_2)$
+involved in the definition (\ref{e:tha:def_omega_der_theta}) regards
+only solutions to the field equations (i.e. $\w{g}(\lambda_1,\lambda_2) \in \FF$),
+the presymplectic current $\w{\omega}$ is a closed $(n-1)$-form:
 \be \label{e:tha:omega_closed}
     \dd \w{\omega} = 0 .
 \ee
@@ -1420,7 +1459,7 @@ to a 2-parameter family of Lagrangian $n$-forms
 $\w{L}(\lambda_1,\lambda_2) := \w{L}\lld\w{g}(\lambda_1,\lambda_2)\rld$.
 The variation $\delta_1\w{L}$ of $\w{L}$ corresponding to a variation of $\lambda_1$ is
 given by Eq.~(\ref{e:tha:delta_L_E_Theta}) with $E^{\mu\nu} = 0$ since
-we are considering only families of solutions of the field equations. Hence
+$\w{g}(\lambda_1,\lambda_2)$ fulfills the field equations. Hence
 $\delta_1 \w{L} = \dd \left( \w{\theta}\lld\w{g}, \delta_1 \w{g}\rld \right)$.
 Given that $\delta_1 \w{L} = \der{\w{L}}{\lambda_1}  \, \delta \lambda_1$,
 $\delta_1 \w{g} = \der{\w{g}}{\lambda_1} \, \delta \lambda_1$
