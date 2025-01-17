@@ -30,8 +30,8 @@ $\w{g}$ with respect to these coordinates [cf. Eq.~(\ref{e:bas:eps_sqrt_g})].
 For simplicity we disregard any scalar or matter field, so that
 $\w{L}$ is a function of the metric tensor $\w{g}$ only.
 Actually all that follows can be easily generalized to account for
-any extra fields, like in scalar-tensor theories, where $\w{L}$ is a function
-of $\w{g}$ and a scalar field $\phi$. We limit ourselves here to $\w{g}$,
+extra fields, like in scalar-tensor theories, where $\w{L}$ is a function
+of $\w{g}$ and some scalar field $\phi$. We limit ourselves here to $\w{g}$,
 mostly in order to keep notations simple.
 More precisely, we assume that at a given point $p\in\M$, $\w{L}$ depends only
 on the values of $\w{g}$ and its derivatives at $p$. By \emph{derivative}, it is
@@ -1058,8 +1058,8 @@ of some theory, even if the latter is unphysical.
 \caption[]{\label{f:tha:pendulum_phase} \footnotesize
 Phase space $\FF$ of a simple gravity pendulum, depicted in terms of the
 canonical coordinates $(\th,p_\th)$ (cf. Example~\ref{x:tha:pendulum}).
-The vertical lines $\th=-\pi$ and $\th=\pi$ shall be identified to reflect
-that $\FF = \SS^1 \times \mathbb{R}$.
+The vertical lines $\th=-\pi$ and $\th=\pi$ must be identified,
+since $\FF = \SS^1 \times \mathbb{R}$.
 The grey arrows show the Hamiltonian vector field $X_H$ and the grey
 lines are some of its integral curves. Two of them are highlighted: the red
 one corresponds to oscillating solutions ($\th$ having a limited range and $p_\th$ taking positive and negative values), while the blue one corresponds to solutions
@@ -1153,13 +1153,13 @@ manifold, called the \defin{phase space}\index{phase space} of the system, $\Ome
 a \defin{symplectic form}\index{symplectic!form} on $\FF$, i.e. a closed non-degenerate
 2-form, and $H$ is a smooth function $\FF \to \R$ called
 the \defin{Hamiltonian}.
-The differential of $H$ is a 1-form $\Dd H$ on
+The differential $\Dd H$ of $H$ is a 1-form  on
 $\FF$, whose symplectic dual defines
 the \defin{Hamiltonian vector field}\index{Hamiltonian!vector field},
 namely the unique vector field $X_H$
 on $\FF$ such that
 \be \label{e:tha:DH_Omega_X_H_2}
-\Dd H = \Omega(., X_H) .
+\encadre{ \Dd H = \Omega(., X_H) }.
 \ee
 By construction, $X_H$ preserves the symplectic
 form: $\Liesymbol_{X_H} \Omega = 0$ [Eq.~(\ref{e:tha:Lie_X_H_Omega})].
@@ -1243,6 +1243,8 @@ and $\w{g}(\lambda+\delta\lambda)$ along the curve $\mathcal{L}$
 to which $X$ is tangent to; $\lambda$ is then the parameter of $\mathcal{L}$ associated to $X$
 and we denote by $\delta\lambda$ its small increment, instead of $\D\lambda$ as in Sec.~\ref{s:bas:vectors}.
 
+
+\begin{prop}[Space of asymptotically flat solutions]
 In what follows, we assume that the $n$-dimensional spacetime manifold $\M$ is diffeomorphic to $\R\times\hat{\Sigma}$,
 where $\hat{\Sigma}$ is an oriented manifold of dimension $(n-1)$ with an
 \defin{asymptotically Euclidean end}\index{asymptotically!Euclidean end},
@@ -1251,7 +1253,46 @@ $\hat{\Sigma}_{\rm ext} := \hat{\Sigma}\setminus K$
 is diffeomorphic to $\R^{n-1} \setminus \mathbb{B}^{n-1}$, where $\mathbb{B}^{n-1}$ is the unit ball of
 $\R^{n-1}$. We shall restrict the space $\FF$ of solutions $\w{g}$ of the considered gravity theory
 to those that are asymptotically flat, with the asymptotically flat end corresponding to
-$\hat{\Sigma}_{\rm ext}$.
+$\hat{\Sigma}_{\rm ext}$. The precise definition of \defin{asympotically flat}\index{asympotically!flat}\index{flat!asymptotically --} depends on the gravity theory
+and should be such that some integrals considered below converge and that
+the asymptotic limit of some surface integrals is zero.
+By ``asymptotic limit'' it is meant
+the limit $r\to +\infty$ of a family $(\Sp_r)$ of closed $(n-2)$-surfaces
+that lie in a hyprsurface $\Sigma$ of $\M$ such that
+$\Sigma = \Psi(\hat{\Sigma})$, where $\Psi$ is a diffeomorphism
+$\R\times \hat{\Sigma} \to \M$, and
+$\Sp_r = \Psi(\hat{\Sp}_r)$, where $\hat{\Sp}_r$ is the $(n-2)$-sphere of Euclidean radius
+$r$ in $\hat{\Sigma}_{\rm ext}$. For general relativity, a precise definition
+of asymptotic flatness fulfilling these requirements is given in Ref.~\cite{AshteBR91}.
+\end{prop}
+
+Let
+$\Sigma$ and $\Sigma'$ be two non-intersectic hypersurfaces of $\M$,
+both diffeomorphic to $\hat{\Sigma}$, and let $\mathscr{D}$ be the part
+of $\M$ bounded by $\Sigma$ and $\Sigma'$. Let us then consider the
+action (\ref{e:tha:action_L}) restricted to $\mathscr{D}$:
+\be \label{e:tha:def_action_S_D}
+    \mathcal{S}_{\mathscr{D}}[\w{g}] := \int_{\mathscr{D}} \w{L}\lld\w{g}\rld .
+\ee
+We are using the \emph{functional} notation $\mathcal{S}_{\mathscr{D}}[\w{g}]$,
+but, when restricted to solutions $\w{g}$ of the field equations,
+$\mathcal{S}_{\mathscr{D}}$ is merely a scalar field on the manifold $\FF$,
+i.e. a \emph{function} $\FF\to \R$.
+The variation $\delta\mathcal{S}_{\mathscr{D}}$ of $\mathcal{S}_{\mathscr{D}}$
+due to a small displacement $\delta\w{g}$ on $\FF$ can then be viewed
+as the action of the differential 1-form $\Dd \mathcal{S}_{\mathscr{D}}$
+on the infinitesimal vector $\delta\w{g}$:
+$\delta\mathcal{S}_{\mathscr{D}} =
+\langle \Dd \mathcal{S}_{\mathscr{D}},\delta\w{g}\rangle$
+[cf. Eq.~(\ref{e:bas:df})]. Now, from the definition~(\ref{e:tha:def_action_S_D}),
+$\delta\mathcal{S}_{\mathscr{D}} = \int_{\mathscr{D}} \delta \w{L}\lld\w{g}\rld$,
+with $\delta\w{L}\lld\w{g}\rld$ given by Eq.~(\ref{e:tha:delta_L_E_Theta}),
+in which $\w{E}$ is set to zero for elements of $\FF$ are solutions of the field equations.
+Hence
+$\langle \Dd \mathcal{S}_{\mathscr{D}},\delta\w{g}\rangle =
+\int_{\mathscr{D}} \dd( \w{\theta}\lld\w{g},\delta\w{g}\rld)$.
+
+
 
 Let $\Sigma$ be a hypersurface of $\M$ diffeomorphic to $\hat{\Sigma}$, i.e. such that $\Psi(\Sigma) = \hat{\Sigma}$,
 where $\Psi$ is a diffeomorphism $\M \to \R\times \hat{\Sigma}$.
