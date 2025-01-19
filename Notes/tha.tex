@@ -402,16 +402,15 @@ $16\pi \, \dd\w{J}\lld\w{\xi}\rld = \dd( \w{\mathcal{J}}\lld\w{\xi}\rld \cdot \w
 with the conservation law (\ref{e:sta:divJ_zero}): $\wnab\cdot\w{\mathcal{J}}\lld\w{\xi}\rld = 0$.
 \end{example}
 
-\begin{prop}[Noether charge form]
-\label{p:tha:Noether_charge_form}
+\begin{prop}[Noether potential form]
+\label{p:tha:Noether_pot_form}
 Given a vector field $\w{\xi}$ on $\M$ and a diffeomorphism-invariant theory described by a Lagrangian $n$-form $\w{L}$, there exists a $(n-2)$-form $\w{Q}\lld\w{\xi}\rld$ on $\M$,
 which is a linear local function of $\w{\xi}$, such that
 the Noether current $(n-1)$-form of $\w{\xi}$ is the exterior derivative of $\w{Q}\lld\w{\xi}\rld$:
 \be \label{e:tha:J_dQ}
     \w{J}\lld\w{\xi}\rld = \dd \w{Q}\lld\w{\xi}\rld .
 \ee
-$\w{Q}\lld\w{\xi}\rld$ is called the \defin{Noether charge $(n-2)$-form of $\w{\xi}$}\index{Noether!charge!form}
-    \cite{Wald93}. It is not unique, being subject to the ambiguity
+$\w{Q}\lld\w{\xi}\rld$ is called the \defin{Noether potential $(n-2)$-form of $\w{\xi}$}\index{Noether!potential!form}. It is not unique, being subject to the ambiguity
 $\w{Q} \mapsto \w{Q'}$, with
 \be \label{e:tha:Q_not_unique}
     \w{Q'}\lld\w{\xi}\rld = \w{Q}\lld\w{\xi}\rld + \w{Y}\lld\w{g},\Lie{\xi}\w{g}\rld + \dd\w{Z}\lld\w{g},\w{\xi}\rld ,
@@ -430,11 +429,18 @@ Finally, the $\w{Y}$ ambiguity  in (\ref{e:tha:Q_not_unique}) is inherited from 
 $\w{Q}$ up to the addition of a closed $(n-2)$-form (cf. Lemma~1 in Ref.~\cite{Wald90}).
 \end{proof}
 
+\begin{remark}
+The $(n-2)$-form $\w{Q}\lld\w{\xi}\rld$ has been introduced by Wald (1993) \cite{Wald93} under
+the name \emph{Noether charge $(n-2)$-form}. However, as argued by Harlow \& Wu (2020) \cite{HarloW20}, the name
+\emph{Noether potential $(n-2)$-form} is more relevant, since $\w{Q}\lld\w{\xi}\rld$
+is not conserved: a priori $\dd\w{Q}\lld\w{\xi}\rld \neq 0$ and Eq.~(\ref{e:tha:J_dQ}) shows
+clearly that $\w{Q}\lld\w{\xi}\rld$ plays the role of a potential.
+\end{remark}
 
 \begin{example}
-\label{x:tha:Noether_charge_form_GR}
+\label{x:tha:Noether_potential_form_GR}
 For general relativity, $\w{J}\lld\w{\xi}\rld$ is given by Eq.~(\ref{e:tha:J_GR_comp}), or Eq.~(\ref{e:tha:J_GR_Komar}) in terms of the Komar current of $\w{\xi}$.
-Let us show that the corresponding Noether charge $(n-2)$-form is nothing but the Hodge dual of the exterior derivative
+Let us show that the corresponding Noether potential $(n-2)$-form is nothing but the Hodge dual of the exterior derivative
 of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$), up to the factor $-(16\pi)^{-1}$:
 \be \label{e:tha:Q_GR_Komar}
     \w{Q}\lld\w{\xi}\rld = - (16\pi)^{-1}\, \star (\dd \uu{\xi}) .
@@ -561,8 +567,8 @@ and a closed spacelike $(n-2)$-surface $\Sp\subset\M$, the
 \be \label{e:tha:def_Noether_Q_surf}
     \mathscr{Q}_{\Sp,\w{\xi}} := \int_{\Sp} \w{Q}\lld\w{\xi}\rld ,
 \ee
-where $\w{Q}\lld\w{\xi}\rld$ is the Noether charge $(n-2)$-form of $\w{\xi}$
-(Property~\ref{p:tha:Noether_charge_form}) and the orientation of $\Sp$ for the above integral is the \emph{future-outward} orientation
+where $\w{Q}\lld\w{\xi}\rld$ is the Noether potential $(n-2)$-form of $\w{\xi}$
+(Property~\ref{p:tha:Noether_pot_form}) and the orientation of $\Sp$ for the above integral is the \emph{future-outward} orientation
 defined by Eq.~(\ref{e:sta:def_weps_S}).
 The Noether charge is a priori not unique, since any change $\w{Q} \mapsto \w{Q'}$
 obeying (\ref{e:tha:Q_not_unique}) leads to $\mathscr{Q}_{\Sp,\w{\xi}} \mapsto \mathscr{Q'}_{\Sp,\w{\xi}}$
@@ -624,7 +630,7 @@ $\mathscr{Q}_{\Sp,\w{\xi}} = \mathscr{Q}_{\Sigma,\w{\xi}}$.
 \label{r:tha:charge_em_analogy}
 The name \emph{charge} in the expression \emph{Noether charge} comes of course from the analogy
 with electromagnetism: considering $n=4$ for simplicity, the analog of the Noether current 3-form $\w{J}$ is the Hodge dual of the 1-form $\uu{j}$, metric dual of the electric 4-current $\w{j}$:
-$\w{J} = \star\uu{j}$, while the analog of the Noether charge 2-form $\w{Q}$ is the Hodge dual
+$\w{J} = \star\uu{j}$, while the analog of the Noether potential 2-form $\w{Q}$ is the Hodge dual
 of the electromagnetic field tensor $\w{F}$ divided by $\mu_0$: $\w{Q} =\mu_0^{-1}\star\!\w{F}$. The relation
 $\dd \w{Q} = \w{J}$ [Eq.~(\ref{e:tha:J_dQ})] is then nothing but Maxwell
 equation\index{Maxwell equations} (\ref{e:fra:Maxwell_forms}): $\dd\star\!\w{F} = \mu_0 \star\!\uu{j}$.
@@ -636,7 +642,7 @@ and Eq.~(\ref{e:tha:Noether_Q_S_ext_int})
 with $\Sp_{\rm int} = \varnothing$ is nothing but \emph{Gauss's law}\index{Gauss's law} (cf. e.g. Eq.~(18.40) in Ref.~\cite{Gourg13}).
 \end{remark}
 
-From Example~\ref{x:tha:Noether_charge_form_GR},
+From Example~\ref{x:tha:Noether_potential_form_GR},
 we note that the $(n-2)$-form $\star (\dd \uu{\xi})$ giving $\w{Q}\lld\w{\xi}\rld$
 for general relativity [cf. Eq.~(\ref{e:tha:Q_GR_Komar})]
 is exactly the differential form that constitutes the integrand in
@@ -690,8 +696,8 @@ up to the constant $2\pi k_{\rm B}/\hbar$:
     \encadre{ S_{\rm W} := \frac{2 \pi k_{\rm B}}{\hbar\kappa} \, \mathcal{Q}_{\Sp,\w{\chi}}
     = \frac{2 \pi k_{\rm B}}{\hbar\kappa}  \int_{\Sp} \w{Q}\lld\w{\chi}\rld } ,
 \ee
-where $\w{Q}\lld\w{\chi}\rld$ is the Noether charge $(n-2)$-form of $\w{\chi}$,
-as defined in Property~\ref{p:tha:Noether_charge_form}.
+where $\w{Q}\lld\w{\chi}\rld$ is the Noether potential $(n-2)$-form of $\w{\chi}$,
+as defined in Property~\ref{p:tha:Noether_pot_form}.
 Since $\w{\chi}$ is a Killing vector, $\mathcal{Q}_{\Sp,\w{\chi}}$ does not suffer from
 the ambiguity (\ref{e:tha:Q_surf_not_unique}), so that $S_{\rm W}$ is uniquely defined.
 Moreover, $S_{\rm W}$ is independent of the choice of the cross-section $\Sp$ of $\Hor$.
@@ -745,7 +751,7 @@ $A$ being the black hole area.
 \end{prop}
 
 \begin{proof}
-For general relativity, the Noether charge $(n-2)$-form is given by Eq.~(\ref{e:tha:Q_GR_Komar}):
+For general relativity, the Noether potential $(n-2)$-form is given by Eq.~(\ref{e:tha:Q_GR_Komar}):
 $\w{Q}\lld\w{\chi}\rld = - (16\pi)^{-1}\, \star (\dd \uu{\chi})$. We have then
 \[
    16\pi  \mathcal{Q}_{\Sp,\w{\chi}} = - \int_{\Sp}  \star (\dd \uu{\chi})
@@ -763,7 +769,7 @@ In view of the definition (\ref{e:tha:def_Wald_entropy}) of $S_{\rm W}$,
 this establishes (\ref{e:tha:S_W_S_BH_GR}).
 \end{proof}
 
-\begin{prop}[Explicit expression of the Wald entropy]
+\begin{prop}[explicit expression of the Wald entropy]
 Let us consider a stationary black hole in a diffeomorphism-invariant theory,
 whose Lagrangian scalar $L$ is recast as
 (\ref{e:tha:Lagrangian_diffeo_inv}). Assuming that the black hole event
@@ -1244,9 +1250,9 @@ to which $X$ is tangent to; $\lambda$ is then the parameter of $\mathcal{L}$ ass
 and we denote by $\delta\lambda$ its small increment, instead of $\D\lambda$ as in Sec.~\ref{s:bas:vectors}.
 
 
-\begin{prop}[Space of asymptotically flat solutions]
+\begin{prop}[space of asymptotically flat solutions]
 In what follows, we assume that the $n$-dimensional spacetime manifold $\M$ is diffeomorphic to $\R\times\hat{\Sigma}$,
-where $\hat{\Sigma}$ is an oriented manifold of dimension $(n-1)$ with an
+where $\hat{\Sigma}$ is an orientable manifold of dimension $(n-1)$ with an
 \defin{asymptotically Euclidean end}\index{asymptotically!Euclidean end},
 i.e. there exists a compact subset $K$ of $\hat{\Sigma}$ such that
 $\hat{\Sigma}_{\rm ext} := \hat{\Sigma}\setminus K$
@@ -1258,17 +1264,22 @@ and should be such that some integrals considered below converge and that
 the asymptotic limit of some surface integrals is zero.
 By ``asymptotic limit'' it is meant
 the limit $r\to +\infty$ of a family $(\Sp_r)$ of closed $(n-2)$-surfaces
-that lie in a hyprsurface $\Sigma$ of $\M$ such that
-$\Sigma = \Psi(\hat{\Sigma})$, where $\Psi$ is a diffeomorphism
-$\R\times \hat{\Sigma} \to \M$, and
-$\Sp_r = \Psi(\hat{\Sp}_r)$, where $\hat{\Sp}_r$ is the $(n-2)$-sphere of Euclidean radius
+that lie in a hypersurface $\Sigma$ of $\M$ such that
+$\Psi(\Sigma) = \hat{\Sigma}$, where $\Psi$ is a diffeomorphism
+$\M \to \R\times \hat{\Sigma}$, and
+$\Psi(\Sp_r)$ is the $(n-2)$-sphere $\hat{\Sp}_r$  of Euclidean radius
 $r$ in $\hat{\Sigma}_{\rm ext}$. For general relativity, a precise definition
 of asymptotic flatness fulfilling these requirements is given in Ref.~\cite{AshteBR91}.
 \end{prop}
 
+
+Given two points $p$ and $p'$ in $\M$, we shall say that $p'$ lies in the
+\defin{background future}\index{background!future}\index{future!background --} of $p$ iff for any orientation-preserving diffeomorphism $\Psi: \M \to \R\times \hat{\Sigma}$,
+$\Psi(p') = (t', q')$ and $\Psi(p) = (t, q)$ with $t'>t$.
 Let
 $\Sigma$ and $\Sigma'$ be two non-intersectic hypersurfaces of $\M$,
-both diffeomorphic to $\hat{\Sigma}$, and let $\mathscr{D}$ be the part
+both diffeomorphic to $\hat{\Sigma}$ and such that $\Sigma'$ lies in the
+background future of $\Sigma$. Let $\mathscr{D}$ be the part
 of $\M$ bounded by $\Sigma$ and $\Sigma'$. Let us then consider the
 action (\ref{e:tha:action_L}) restricted to $\mathscr{D}$:
 \be \label{e:tha:def_action_S_D}
@@ -1278,54 +1289,79 @@ We are using the \emph{functional} notation $\mathcal{S}_{\mathscr{D}}[\w{g}]$,
 but, when restricted to solutions $\w{g}$ of the field equations,
 $\mathcal{S}_{\mathscr{D}}$ is merely a scalar field on the manifold $\FF$,
 i.e. a \emph{function} $\FF\to \R$.
-The variation $\delta\mathcal{S}_{\mathscr{D}}$ of $\mathcal{S}_{\mathscr{D}}$
-due to a small displacement $\delta\w{g}$ on $\FF$ can then be viewed
+Accordingly, the variation $\delta\mathcal{S}_{\mathscr{D}}$ of $\mathcal{S}_{\mathscr{D}}$
+due to a small displacement $\delta\w{g}$ on $\FF$ can be viewed
 as the action of the differential 1-form $\Dd \mathcal{S}_{\mathscr{D}}$
 on the infinitesimal vector $\delta\w{g}$:
 $\delta\mathcal{S}_{\mathscr{D}} =
 \langle \Dd \mathcal{S}_{\mathscr{D}},\delta\w{g}\rangle$
 [cf. Eq.~(\ref{e:bas:df})]. Now, from the definition~(\ref{e:tha:def_action_S_D}),
-$\delta\mathcal{S}_{\mathscr{D}} = \int_{\mathscr{D}} \delta \w{L}\lld\w{g}\rld$,
+we get $\delta\mathcal{S}_{\mathscr{D}} = \int_{\mathscr{D}} \delta \w{L}\lld\w{g}\rld$,
 with $\delta\w{L}\lld\w{g}\rld$ given by Eq.~(\ref{e:tha:delta_L_E_Theta}),
 in which $\w{E}$ is set to zero for elements of $\FF$ are solutions of the field equations.
 Hence
 $\langle \Dd \mathcal{S}_{\mathscr{D}},\delta\w{g}\rangle =
-\int_{\mathscr{D}} \dd( \w{\theta}\lld\w{g},\delta\w{g}\rld)$.
-
-
-
-Let $\Sigma$ be a hypersurface of $\M$ diffeomorphic to $\hat{\Sigma}$, i.e. such that $\Psi(\Sigma) = \hat{\Sigma}$,
-where $\Psi$ is a diffeomorphism $\M \to \R\times \hat{\Sigma}$.
-From the spacetime presymplectic potential current $(n-1)$-form $\w{\theta}\lld\w{g},\delta\w{g}\rld$
-(cf. Property~\ref{p:tha:var_Lagrangian}), one defines a 1-form $\Theta_\Sigma$ on $\FF$ as follows.
-At any point $\w{g}\in\FF$, the action of $\Theta_\Sigma$ on a vector $X$ in the
-tangent space $T_{\w{g}} \FF$ is defined by
+\int_{\mathscr{D}} \dd \w{\theta}\lld\w{g},\delta\w{g}\rld$.
+By linearity\footnote{Recall that $\w{\theta}\lld\w{g},\delta\w{g}\rld$ is linear
+with respect to $\delta\w{g}$, cf. Property~\ref{p:tha:var_Lagrangian}.}, we get for any vector $X = \delta\w{g}/\delta\lambda$ at a point $\w{g}\in\FF$,
+\[
+    \langle \Dd \mathcal{S}_{\mathscr{D}}, X\rangle =
+\int_{\mathscr{D}} \dd \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld .
+\]
+Thanks to Stokes' theorem (\ref{e:bas:Stokes}),
+we rewrite the right-hand side as a surface integral:
+\be \label{e:tha:dS_D_3int}
+ \langle \Dd \mathcal{S}_{\mathscr{D}}, X\rangle =
+\int_{{\Sigma'}^{\nearrow}} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld
++ \int_{\Sigma^{\nearrow}} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld
++ \int_{\mathscr{W}_\infty^{\nearrow}}
+    \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld ,
+\ee
+where the arrows indicate the outward orientation of the various hypersurfaces
+with respect to $\mathscr{D}$ and $\mathscr{W}_\infty$ is a hypersuface
+connecting $\Sigma$ to $\Sigma'$ ``at infinity'' so as to make
+$\Sigma\cup\Sigma'\cup\mathscr{W}_\infty$ the ``boundary'' of  $\mathscr{D}$.
+More rigourously, one may introduce compact subparts $\Sigma_r$ and $\Sigma'_r$
+of $\Sigma$ and $\Sigma'$
+extending in the asymptotic flat end and corresponding to balls of radius $r$
+in $\hat{\Sigma}_{\rm ext}$, as well as the hypercylinder $\mathscr{W}_r$
+connecting $\Sigma_r$ to $\Sigma'_r$ (cf. Fig.~??). Equation~(\ref{e:tha:dS_D_3int}) can then
+be viewed as the limit $r\to +\infty$ of Stokes' theorem
+applied to the closed surface $\Sigma_r\cup\Sigma'_r\cup\mathscr{W}_r$.
+Since Eq.~(\ref{e:tha:dS_D_3int}) is valid for any vector $X$ on $\FF$, we may rewrite
+it as an identity between 1-forms:
+\be \label{e:tha:dS_D_Theta_Upsilon}
+    \Dd \mathcal{S}_{\mathscr{D}} = \Theta_{\Sigma'} - \Theta_{\Sigma}
+    + \Upsilon_{\Sigma,\Sigma'} .
+\ee
+Here $\Theta_{\Sigma}$ stands the 1-form on $\FF$ defined for any hypersurface
+$\Sigma$ of $\M$ diffeomorphic to $\hat{\Sigma}$ by
+the following action on a vector $X$ in the
+tangent space $T_{\w{g}} \FF$:
 \be \label{e:tha:def_Theta_X_theta}
     \langle \Theta_\Sigma, X \rangle := \int_{\Sigma} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld ,
 \ee
 where $\delta\w{g}/\delta\lambda$ is the relative variation of $\w{g}$ defining the
-vector $X$ by Eq.~(\ref{e:tha:X_dg/dlambda}).
-The integral in the right-hand side of Eq.~(\ref{e:tha:def_Theta_X_theta}) is a priori well-defined
-since $\w{\theta}\lld\w{g},\delta\w{g}/\delta\lambda\rld$ is a $(n-1)$-form on $\M$ and $\Sigma$
-is an oriented submanifold of $\M$ of dimension $n-1$. Moreover, we assume that the asymptotic flatness conditions
-ensure that this integral is always convergent, giving birth a finite real number.
-The map $\Theta_\Sigma: T_{\w{g}} \FF \to \R$ thus defined is clearly linear, given that
-$\w{\theta}\lld\cdot,\cdot\rld$ is linear in its second argument.
-Hence $\Theta_\Sigma$ is a linear form on the tangent space $T_{\w{g}} \FF$; furthermore we shall assume
-that it is continuous (recall that linearity does not imply continuity in infinite dimension),
-so that $\Theta_\Sigma$ belongs to the dual space of the tangent space to $\FF$ at $\w{g}$:
-$\Theta_\Sigma \in T_{\w{g}}^* \FF$. By letting the point $\w{g}$ vary over all $\FF$, this defines
-a 1-form on $\FF$, which we shall denote by the same symbol $\Theta_\Sigma$.
+vector $X$ by Eq.~(\ref{e:tha:X_dg/dlambda}) and the orientation of $\Sigma$
+is that provided by any background-future directed vector transverse to $\Sigma$.
+Similarly, $\Upsilon_{\Sigma,\Sigma'}$ stands for the 1-form on $\FF$ defined
+by
+\be \label{e:tha:def_Upsilon}
+    \langle \Upsilon_{\Sigma,\Sigma'}, X \rangle :=
+    \lim_{r\to+\infty} \int_{\mathscr{W}_r^{\nearrow}} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld ,
+\ee
+with $\mathscr{W}_r$ defined as above.
+Note that since $\w{\theta}\lld\cdot,\cdot\rld$ is linear in its second argument,
+the maps $\Theta_\Sigma$ and $\Upsilon_{\Sigma,\Sigma'}$ introduced above
+are linear and hence define 1-forms on $\FF$
 
 In an attempt to endow $\FF$ with a symplectic form, thereby turning it into a phase space,
 let us consider the 2-form $\Omega$ that is the exterior derivative of $\Theta_\Sigma$,
 i.e. $\Omega := \Dd \Theta_\Sigma$. Notice that this is analogous to Eq.~(\ref{e:tha:Omega_dTheta}).
-While $\Theta_\Sigma$ depends on the choice of $\Sigma$, $\Omega$ does not and is moreover
-insensitive to the ambiguities arising in the definition of $\w{\theta}$
-(cf. Eq.~(\ref{e:tha:Theta_not_unique}) and Remark~\ref{r:tha:Lagrangian_dep_mu} on
-p.~\pageref{r:tha:Lagrangian_dep_mu}):
+While $\Theta_\Sigma$ depends on the choice of $\Sigma$, $\Omega$ does not:
 
-\begin{prop}[Presymplectic form in the space of solutions of a gravity theory]
+\begin{prop}[presymplectic form in the space of solutions of a gravity theory]
+\label{p:tha:presymplectic_form}
 Let $\FF$ be the (Banach) manifold of solutions $\w{g}$ to the field equations
 that are asymptotically flat in the asymptotically Euclidean end of the
 $n$-dimensional manifold $\M \sim \R \times \hat{\Sigma}$. Let
@@ -1337,8 +1373,29 @@ The 2-form
 where $\Theta_\Sigma$ is the 1-form on $\FF$ defined by Eq.~(\ref{e:tha:def_Theta_X_theta}),
 is a \defin{presymplectic form} on $\FF$, i.e. a closed 2-form:
 $\Dd\Omega = 0$.
+Moreover, $\Omega$ does not depend on the choice of the hypersurface $\Sigma$.
+\end{prop}
 
-The action of $\Omega$ on a pair of commuting vector fields $(X_1,X_2)$ of $\FF$
+\begin{proof}
+That $\Omega$, as defined by Eq.~(\ref{e:tha:def_Omega_gravity}), is a closed
+2-form is obvious: $\Dd\Omega = \Dd\Dd \Theta_\Sigma = 0$ (nilpotence of the exterior
+derivative, cf. Eq.~(\ref{e:ext_der_nilpot})).
+As for the independence of $\Omega$ from $\Sigma$, it follows from the following
+identity obtained by taking the exterior derive of Eq.~(\ref{e:tha:dS_D_Theta_Upsilon})
+and using $\Dd\Dd \mathcal{S}_{\mathscr{D}} = 0$
+in the left-hand side:
+\[
+    0 = \Dd \Theta_{\Sigma'} - \Dd \Theta_{\Sigma}
+    + \Dd \Upsilon_{\Sigma,\Sigma'} .
+\]
+The result follows the asymptotic flatness conditions, which
+ensure that $\Dd \Upsilon_{\Sigma,\Sigma'}$ is vanishing (Lemma~\ref{p:tha:Upsilon_closed} below),
+leaving us with $\Dd \Theta_{\Sigma'} = \Dd \Theta_{\Sigma}$.
+\end{proof}
+
+
+\begin{prop}[presymplectic current $(n-1)$-form]
+The action of the presymplectic form $\Omega$ on a pair of commuting vector fields $(X_1,X_2)$ of $\FF$
 is expressible as follows.
 According to Eq.~(\ref{e:tha:X_dg/dlambda}),
 each vector field describes the variation of $\w{g}$ along some curves of $\FF$.
@@ -1378,20 +1435,10 @@ It has a local dependence on the metric tensor $\w{g}$
 and on the derivatives $\dert{\w{g}}{\lambda_1}$ and $\dert{\w{g}}{\lambda_2}$
 associated to the 2-parameter family $\w{g}(\lambda_1,\lambda_2)$,
 and is linear with respect to these derivatives.
-
-The presymplectic form $\Omega$ is unique for a given gravity theory with
-appropriate asymptotic flatness conditions. In particular, it
-does not depend on the choice of the
-hypersurface $\Sigma$, nor on the freedom $\w{\theta} \to \w{\theta} + \dd \w{Y}$
-in the choice of $\w{\theta}$ [Eq.~(\ref{e:tha:Theta_not_unique})].
 \end{prop}
 
 \begin{proof}
-That $\Omega$, as defined by Eq.~(\ref{e:tha:def_Omega_gravity}), is a closed
-2-form is obvious: $\Dd\Omega = \Dd\Dd \Theta_\Sigma = 0$ (nilpotence of the exterior
-derivative, cf. Eq.~(\ref{e:ext_der_nilpot})).
-To establish Eq.~(\ref{e:tha:Omega_int_omega}), let
- us compute $\Omega(X_1,X_2) = \Dd \Theta_\Sigma (X_1,X_2)$ via the exterior derivative formula
+Let us compute $\Omega(X_1,X_2) = \Dd \Theta_\Sigma (X_1,X_2)$ via the exterior derivative formula
 (\ref{e:bas:def_ext_der_p1}), noticing that (i) this formula
 does not involve the manifold dimensionality (contrary to formula (\ref{e:bas:def_ext_1f}),
 which applies to finite dimensions only) and (ii) the last term in the right-hand
@@ -1422,33 +1469,6 @@ Eq.~(\ref{e:tha:def_omega_der_theta}), cancel out thanks to the
 identity
 $\frac{\partial^2\w{g}}{\partial\lambda_1\partial\lambda_2} = \frac{\partial^2\w{g}}{\partial\lambda_2\partial\lambda_1}$.
 Hence the notation $\w{\omega} = \w{\omega}\lld\w{g},  \dert{\w{g}}{\lambda_1}, \dert{\w{g}}{\lambda_2} \rld$.
-The change  $\w{\theta'}\lld\w{g},\delta\w{g}\rld = \w{\theta}\lld\w{g},\delta\w{g}\rld
-+ \dd \left(\w{Y}\lld\w{g},\delta\w{g}\rld \right)$, as permitted by Eq.~(\ref{e:tha:Theta_not_unique}),
-leads to the following change in the presymplectic form:
-\[
-    \Omega'(X_1, X_2) = \Omega(X_1, X_2) + \int_{\Sp_\infty}
-    \left[ \der{}{\lambda_1}
-        \left( \w{Y}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
-        - \der{}{\lambda_2}\left( \w{Y}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right) \right] ,
-\]
-where use has been made of Eqs.~(\ref{e:tha:Omega_int_omega})-(\ref{e:tha:def_omega_der_theta}),
-as well as the Stokes' theorem (\ref{e:bas:Stokes}),
-$\Sp_\infty$ standing for the ``outer boundary'' of $\Sigma$, i.e. the limit
-$r\to +\infty$ of a $(n-2)$-sphere $\Sp_r$ of radius $r$ in the asymptotically Euclidean end
-of $\Sigma$. Now, given that the $(n-2)$ form $\w{Y}$ must be constructed from
-$\w{g}$, $\delta\w{g}$ and their derivatives in a covariant manner, the fall-off
-conditions from standard asymptotic flatness are sufficient to make
-the above integral over $\Sp_\infty$ vanish \cite{IyerW94}. Hence $\Omega' = \Omega$.
-As for the independence of $\Omega$ from $\Sigma$, it follows
-from $\dd \w{\omega} = 0$ (Property~\ref{p:tha:omega_closed} below). Indeed, via
-Stokes' theorem (\ref{e:bas:Stokes}),
- $\dd \w{\omega} = 0$ implies that the
-value of $\Omega(X_1,X_2)$ given by Eq.~(\ref{e:tha:Omega_int_omega})
-depends on the choice of the
-Cauchy surface $\Sigma$ only up to some boundary integral at asymptotic infinity.
-The argument is the same as in the proof of Eq.~(\ref{e:tha:Noether_Q_Sigma_1_2}).
-However, for ``reasonable'' asymptotic flatness conditions on $\w{g}$, the
-boundary integral vanishes (cf. Ref.~\cite{IyerW94} for details).
 \end{proof}
 
 \begin{example}
@@ -1484,7 +1504,62 @@ Eqs.~(21)-(23) of Ref.~\cite{HollaW13} or
 Eqs.~(41)-(43) of Ref.~\cite{WaldZ00}.
 \end{example}
 
-\begin{prop}[Closedness of the presymplectic current $(n-1)$-form]
+\begin{lemma}[vanishing of $\Dd \Upsilon_{\Sigma,\Sigma'}$]
+\label{p:tha:Upsilon_closed}
+The 1-form $\Upsilon_{\Sigma,\Sigma'}$ defined by Eq.~(\ref{e:tha:def_Upsilon})
+is closed: $\Dd \Upsilon_{\Sigma,\Sigma'} = 0$.
+\end{lemma}
+\begin{proof}
+By exactly the same computation as that leading to Eq.~(\ref{e:tha:Omega_int_omega}),
+we have
+\[
+     \Dd \Upsilon_{\Sigma,\Sigma'}(X_1,X_2) =
+     \lim_{r\to+\infty} \int_{\mathscr{W}_r^{\nearrow}}
+     \w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1},
+                            \der{\w{g}}{\lambda_2} \Rld .
+\]
+Now the asymptotic flatness conditions must be such that the integral
+in the right-hand side tends to zero when $r\to +\infty$. We shall not prove
+it in fully generality here. In Ref.~\cite{IyerW94}, it is argued that
+if the asymptotic flatness conditions ensure that the integral (\ref{e:tha:Omega_int_omega})
+on the unbounded hypersurface $\Sigma$ is convergent, then the integral of
+the same integrand $\w{\omega}$ over $\mathscr{W}_r$ must tend to zero for $r\to +\infty$.
+\end{proof}
+
+
+
+\begin{prop}[uniqueness of the presymplectic form]
+The presymplectic form $\Omega$ is unique for a given gravity theory with
+appropriate asymptotic flatness conditions. Not only it is
+does not depend on the choice of the
+hypersurface $\Sigma$ (Property~\ref{p:tha:presymplectic_form}),
+but it is unaffected by the
+change $\w{\theta} \to \w{\theta} + \dd \w{Y}$
+(cf. Eq.~(\ref{e:tha:Theta_not_unique}) and Remark~\ref{r:tha:Lagrangian_dep_mu} on
+p.~\pageref{r:tha:Lagrangian_dep_mu}).
+\end{prop}
+\begin{proof}
+The change  $\w{\theta'}\lld\w{g},\delta\w{g}\rld = \w{\theta}\lld\w{g},\delta\w{g}\rld
++ \dd \left(\w{Y}\lld\w{g},\delta\w{g}\rld \right)$, as permitted by Eq.~(\ref{e:tha:Theta_not_unique}),
+leads to the following change in the presymplectic form:
+\[
+    \Omega'(X_1, X_2) = \Omega(X_1, X_2) + \int_{\Sp_\infty}
+    \left[ \der{}{\lambda_1}
+        \left( \w{Y}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
+        - \der{}{\lambda_2}\left( \w{Y}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right) \right] ,
+\]
+where use has been made of Eqs.~(\ref{e:tha:Omega_int_omega})-(\ref{e:tha:def_omega_der_theta}),
+as well as the Stokes' theorem (\ref{e:bas:Stokes}),
+$\Sp_\infty$ standing for the ``outer boundary'' of $\Sigma$, i.e. the limit
+$r\to +\infty$ of a $(n-2)$-sphere $\Sp_r$ of radius $r$ in the asymptotically Euclidean end
+of $\Sigma$. Now, given that the $(n-2)$ form $\w{Y}$ must be constructed from
+$\w{g}$, $\delta\w{g}$ and their derivatives in a covariant manner, the fall-off
+conditions from standard asymptotic flatness are sufficient to make
+the above integral over $\Sp_\infty$ vanish \cite{IyerW94}. Hence $\Omega' = \Omega$.
+\end{proof}
+
+
+\begin{prop}[closedness of the presymplectic current $(n-1)$-form]
 \label{p:tha:omega_closed}
 Provided that the 2-parameter family $\w{g}(\lambda_1,\lambda_2)$
 involved in the definition (\ref{e:tha:def_omega_der_theta}) regards
