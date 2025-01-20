@@ -1260,15 +1260,9 @@ is diffeomorphic to $\R^{n-1} \setminus \mathbb{B}^{n-1}$, where $\mathbb{B}^{n-
 $\R^{n-1}$. We shall restrict the space $\FF$ of solutions $\w{g}$ of the considered gravity theory
 to those that are asymptotically flat, with the asymptotically flat end corresponding to
 $\hat{\Sigma}_{\rm ext}$. The precise definition of \defin{asympotically flat}\index{asympotically!flat}\index{flat!asymptotically --} depends on the gravity theory
-and should be such that some integrals considered below converge and that
+and should be such that some integrals indicated below converge and that
 the asymptotic limit of some surface integrals is zero.
-By ``asymptotic limit'' it is meant
-the limit $r\to +\infty$ of a family $(\Sp_r)$ of closed $(n-2)$-surfaces
-that lie in a hypersurface $\Sigma$ of $\M$ such that
-$\Psi(\Sigma) = \hat{\Sigma}$, where $\Psi$ is a diffeomorphism
-$\M \to \R\times \hat{\Sigma}$, and
-$\Psi(\Sp_r)$ is the $(n-2)$-sphere $\hat{\Sp}_r$  of Euclidean radius
-$r$ in $\hat{\Sigma}_{\rm ext}$. For general relativity, a precise definition
+For general relativity, a precise definition
 of asymptotic flatness fulfilling these requirements is given in Ref.~\cite{AshteBR91}.
 \end{prop}
 
@@ -1279,8 +1273,15 @@ $\Psi(p') = (t', q')$ and $\Psi(p) = (t, q)$ with $t'>t$.
 Let
 $\Sigma$ and $\Sigma'$ be two non-intersectic hypersurfaces of $\M$,
 both diffeomorphic to $\hat{\Sigma}$ and such that $\Sigma'$ lies in the
-background future of $\Sigma$. Let $\mathscr{D}$ be the part
-of $\M$ bounded by $\Sigma$ and $\Sigma'$. Let us then consider the
+background future of $\Sigma$. Let $\Sigma_r$ and $\Sigma'_r$
+be compact subparts
+of $\Sigma$ and $\Sigma'$ respectively,
+extending in the asymptotic flat end and corresponding to balls of Euclidean radius $r$
+in $\hat{\Sigma}_{\rm ext}$. We shall introduce as
+the hypercylinder $\mathscr{W}_r$
+connecting $\Sigma_r$ to $\Sigma'_r$ (cf. Fig.~??)
+Let us denote by $\mathscr{D}$ be the part
+of $\M$ bounded by $\Sigma_r$, $\Sigma'_r$ and $\mathscr{W}_r$. Let us then consider the
 action (\ref{e:tha:action_L}) restricted to $\mathscr{D}$:
 \be \label{e:tha:def_action_S_D}
     \mathcal{S}_{\mathscr{D}}[\w{g}] := \int_{\mathscr{D}} \w{L}\lld\w{g}\rld .
@@ -1309,89 +1310,110 @@ with respect to $\delta\w{g}$, cf. Property~\ref{p:tha:var_Lagrangian}.}, we get
 \int_{\mathscr{D}} \dd \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld .
 \]
 Thanks to Stokes' theorem (\ref{e:bas:Stokes}),
-we rewrite the right-hand side as a surface integral:
+we rewrite the right-hand side as a surface integral, taking into
+account that $\partial\mathscr{D} = \Sigma'_r \cup \Sigma_r \cup \mathscr{W}_r$:
 \be \label{e:tha:dS_D_3int}
  \langle \Dd \mathcal{S}_{\mathscr{D}}, X\rangle =
-\int_{{\Sigma'}^{\nearrow}} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld
-+ \int_{\Sigma^{\nearrow}} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld
-+ \int_{\mathscr{W}_\infty^{\nearrow}}
+\int_{{\Sigma'_r}^{\nearrow}} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld
++ \int_{\Sigma_r^{\nearrow}} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld
++ \int_{\mathscr{W}_r^{\nearrow}}
     \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld ,
 \ee
 where the arrows indicate the outward orientation of the various hypersurfaces
-with respect to $\mathscr{D}$ and $\mathscr{W}_\infty$ is a hypersuface
-connecting $\Sigma$ to $\Sigma'$ ``at infinity'' so as to make
-$\Sigma\cup\Sigma'\cup\mathscr{W}_\infty$ the ``boundary'' of  $\mathscr{D}$.
-More rigourously, one may introduce compact subparts $\Sigma_r$ and $\Sigma'_r$
-of $\Sigma$ and $\Sigma'$
-extending in the asymptotic flat end and corresponding to balls of radius $r$
-in $\hat{\Sigma}_{\rm ext}$, as well as the hypercylinder $\mathscr{W}_r$
-connecting $\Sigma_r$ to $\Sigma'_r$ (cf. Fig.~??). Equation~(\ref{e:tha:dS_D_3int}) can then
-be viewed as the limit $r\to +\infty$ of Stokes' theorem
-applied to the closed surface $\Sigma_r\cup\Sigma'_r\cup\mathscr{W}_r$.
+with respect to $\mathscr{D}$.
 Since Eq.~(\ref{e:tha:dS_D_3int}) is valid for any vector $X$ on $\FF$, we may rewrite
 it as an identity between 1-forms:
 \be \label{e:tha:dS_D_Theta_Upsilon}
-    \Dd \mathcal{S}_{\mathscr{D}} = \Theta_{\Sigma'} - \Theta_{\Sigma}
-    + \Upsilon_{\Sigma,\Sigma'} .
+    \Dd \mathcal{S}_{\mathscr{D}} = \Theta_{\Sigma'_r} - \Theta_{\Sigma_r}
+    + \Upsilon_{\Sigma_r,\Sigma'_r} .
 \ee
-Here $\Theta_{\Sigma}$ stands the 1-form on $\FF$ defined for any hypersurface
-$\Sigma$ of $\M$ diffeomorphic to $\hat{\Sigma}$ by
+Here $\Theta_{\Sigma_r}$ stands the 1-form on $\FF$ defined by
 the following action on a vector $X$ in the
 tangent space $T_{\w{g}} \FF$:
 \be \label{e:tha:def_Theta_X_theta}
-    \langle \Theta_\Sigma, X \rangle := \int_{\Sigma} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld ,
+    \langle \Theta_{\Sigma_r}, X \rangle := \int_{\Sigma_r} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld ,
 \ee
 where $\delta\w{g}/\delta\lambda$ is the relative variation of $\w{g}$ defining the
-vector $X$ by Eq.~(\ref{e:tha:X_dg/dlambda}) and the orientation of $\Sigma$
-is that provided by any background-future directed vector transverse to $\Sigma$.
-Similarly, $\Upsilon_{\Sigma,\Sigma'}$ stands for the 1-form on $\FF$ defined
+vector $X$ by Eq.~(\ref{e:tha:X_dg/dlambda}) and the orientation of $\Sigma_r$
+is that provided by any background-future directed vector transverse to $\Sigma_r$.
+Note that $\Theta_{\Sigma_r}$ is well defined, i.e. the integral in Eq.~(\ref{e:tha:def_Theta_X_theta}) is finite, because $\Sigma_r$ is compact
+and $\w{\theta}$ is smooth; moreover, $\Theta_{\Sigma_r}$ is
+linear for $\w{\theta}\lld\cdot,\cdot\rld$ is linear in its second argument.
+The same definition holds for $\Theta_{\Sigma'_r}$.
+Similarly, $\Upsilon_{\Sigma_r,\Sigma'_r}$ stands for the 1-form on $\FF$ defined
 by
 \be \label{e:tha:def_Upsilon}
-    \langle \Upsilon_{\Sigma,\Sigma'}, X \rangle :=
-    \lim_{r\to+\infty} \int_{\mathscr{W}_r^{\nearrow}} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld ,
+    \langle \Upsilon_{\Sigma_r,\Sigma'_r}, X \rangle :=
+    \int_{\mathscr{W}_r^{\nearrow}} \w{\theta}\Lld\w{g},\frac{\delta\w{g}}{\delta\lambda}\Rld ,
 \ee
 with $\mathscr{W}_r$ defined as above.
-Note that since $\w{\theta}\lld\cdot,\cdot\rld$ is linear in its second argument,
-the maps $\Theta_\Sigma$ and $\Upsilon_{\Sigma,\Sigma'}$ introduced above
-are linear and hence define 1-forms on $\FF$
+Note that the minus sign in front of $\Theta_{\Sigma_r}$ in Eq.~(\ref{e:tha:dS_D_Theta_Upsilon}) occurs because of the change
+of orientation of $\Sigma_r$ between Eqs.~(\ref{e:tha:dS_D_3int}) and (\ref{e:tha:dS_D_Theta_Upsilon}).
 
 In an attempt to endow $\FF$ with a symplectic form, thereby turning it into a phase space,
-let us consider the 2-form $\Omega$ that is the exterior derivative of $\Theta_\Sigma$,
-i.e. $\Omega := \Dd \Theta_\Sigma$. Notice that this is analogous to Eq.~(\ref{e:tha:Omega_dTheta}).
-While $\Theta_\Sigma$ depends on the choice of $\Sigma$, $\Omega$ does not:
+let us consider the 2-form $\Omega$ that is the limit $\Sigma_r \to \Sigma$
+(i.e. the limit $r\to +\infty$) of the exterior derivative of $\Theta_{\Sigma_r}$.
+While $\Theta_{\Sigma_r}$ depends on the choice of $\Sigma$, $\Omega$ does not:
 
 \begin{prop}[presymplectic form in the space of solutions of a gravity theory]
 \label{p:tha:presymplectic_form}
 Let $\FF$ be the (Banach) manifold of solutions $\w{g}$ to the field equations
 that are asymptotically flat in the asymptotically Euclidean end of the
 $n$-dimensional manifold $\M \sim \R \times \hat{\Sigma}$. Let
-$\Sigma$ be a hypersurface of $\M$ diffeomorphic to $\hat{\Sigma}$.
-The 2-form
+$\Sigma$ be a hypersurface of $\M$ diffeomorphic to $\hat{\Sigma}$
+and $\Sigma_r$ a compact subpart
+of $\Sigma$ corresponding to a ball of Euclidean radius $r$
+in $\hat{\Sigma}_{\rm ext}$.
+Given the 1-form $\Theta_{\Sigma_r}$ defined on $\FF$ by Eq.~(\ref{e:tha:def_Theta_X_theta}),
+the asymptotically flatness conditions of the gravity theory must insure that the limit
 \be \label{e:tha:def_Omega_gravity}
-   \encadre{ \Omega := \Dd \Theta_\Sigma },
+   \encadre{ \Omega := \lim_{r\to +\infty} \Dd \Theta_{\Sigma_r} },
 \ee
-where $\Theta_\Sigma$ is the 1-form on $\FF$ defined by Eq.~(\ref{e:tha:def_Theta_X_theta}),
-is a \defin{presymplectic form} on $\FF$, i.e. a closed 2-form:
-$\Dd\Omega = 0$.
+is well defined, i.e. yields a finite 2-form on $\FF$. This 2-form is closed:
+$\Dd\Omega = 0$. One then says that $\Omega$ is a
+\defin{presymplectic form}\index{presymplectic!form}\footnote{Recall that a \emph{symplectic form} is a 2-form that is closed \emph{and} non-degenerate; as we shall discuss
+below, $\Omega$ is actually degenerate.} on $\FF$.
 Moreover, $\Omega$ does not depend on the choice of the hypersurface $\Sigma$.
 \end{prop}
 
 \begin{proof}
-That $\Omega$, as defined by Eq.~(\ref{e:tha:def_Omega_gravity}), is a closed
-2-form is obvious: $\Dd\Omega = \Dd\Dd \Theta_\Sigma = 0$ (nilpotence of the exterior
-derivative, cf. Eq.~(\ref{e:ext_der_nilpot})).
+Assuming that the limit exists, we have
+$\Dd\Omega = \Dd( \lim_{r\to +\infty} \Dd \Theta_{\Sigma_r}) =
+    \lim_{r \to \infty} \Dd \Dd \Theta_{\Sigma_r} = 0$,
+by nilpotence of the exterior
+derivative, cf. Eq.~(\ref{e:ext_der_nilpot}).
 As for the independence of $\Omega$ from $\Sigma$, it follows from the following
 identity obtained by taking the exterior derive of Eq.~(\ref{e:tha:dS_D_Theta_Upsilon})
 and using $\Dd\Dd \mathcal{S}_{\mathscr{D}} = 0$
 in the left-hand side:
 \[
-    0 = \Dd \Theta_{\Sigma'} - \Dd \Theta_{\Sigma}
-    + \Dd \Upsilon_{\Sigma,\Sigma'} .
+    0 = \Dd \Theta_{\Sigma'_r} - \Dd \Theta_{\Sigma_r}
+    + \Dd \Upsilon_{\Sigma_r,\Sigma'_r} .
 \]
+Taking the limit $r\to +\infty$ yields
+$\displaystyle \Omega_{\Sigma'} - \Omega_\Sigma  + \lim_{r\to+\infty} \Dd \Upsilon_{\Sigma_r,\Sigma'_r} = 0$.
 The result follows the asymptotic flatness conditions, which
-ensure that $\Dd \Upsilon_{\Sigma,\Sigma'}$ is vanishing (Lemma~\ref{p:tha:Upsilon_closed} below),
-leaving us with $\Dd \Theta_{\Sigma'} = \Dd \Theta_{\Sigma}$.
+ensure that $\displaystyle\lim_{r\to+\infty} \Dd \Upsilon_{\Sigma_r,\Sigma'_r} = 0$ (Lemma~\ref{p:tha:Upsilon_closed} below),
+leaving us with $\Omega_{\Sigma'} = \Omega_{\Sigma}$.
 \end{proof}
+
+\begin{remark}
+It could have seemed simpler to define the presymplectic form
+as $\Omega := \Dd\Theta_{\Sigma}$, where
+$\Theta_{\Sigma}$ is defined as in Eq.~(\ref{e:tha:def_Theta_X_theta}) but extending the
+integral to the whole of $\Sigma$. However, the standard asymptotic flatness conditions
+are such the integral would diverge, so that $\Theta_{\Sigma}$ would be ill-defined.
+For instance, for general relativity, this can be seen for stationary solutions, which have
+the asymptotic behavior (\ref{e:sta:asymptotic_metric}), yielding the following
+dominant terms of $\delta\w{g}$ when $r\to+\infty$:
+\be
+    \delta g_{00} \simeq \alpha_n \frac{\delta M}{r^{n-3}},\quad
+    \delta g_{0i} \simeq \frac{n-2}{2} \alpha_n \frac{\delta J_{ij} x^j}{r^{n-1}}, \quad
+    \delta g_{ij} \simeq \frac{\alpha_n}{n-3} \, \frac{\delta M}{r^{n-3}} \delta_{ij} .
+\ee
+Given the expression
+(\ref{e:tha:Theta_GR}) of $\w{\theta}$, this would make $\Theta_{\Sigma}$ to diverge as $\ln r$.
+\end{remark}
 
 
 \begin{prop}[presymplectic current $(n-1)$-form]
@@ -1438,29 +1460,31 @@ and is linear with respect to these derivatives.
 \end{prop}
 
 \begin{proof}
-Let us compute $\Omega(X_1,X_2) = \Dd \Theta_\Sigma (X_1,X_2)$ via the exterior derivative formula
+Let us compute $\Dd \Theta_{\Sigma_r} (X_1,X_2)$ via the exterior derivative formula
 (\ref{e:bas:def_ext_der_p1}), noticing that (i) this formula
-does not involve the manifold dimensionality (contrary to formula (\ref{e:bas:def_ext_1f}),
+does not involve the manifold dimensionality (contrary to (\ref{e:bas:def_ext_1f}),
 which applies to finite dimensions only) and (ii) the last term in the right-hand
 side of (\ref{e:bas:def_ext_der_p1}) vanishes since $[X_1,X_2] = 0$.
 We get
 \begin{align}
-    \Omega(X_1,X_2) & = X_1\left( \langle \Theta_\Sigma, X_2 \rangle \right)
-        -  X_2\left( \langle \Theta_\Sigma, X_1 \rangle \right) \nonumber \\
-        & =  \der{}{\lambda_1} \langle \Theta_\Sigma, X_2 \rangle -
-            \der{}{\lambda_2} \langle \Theta_\Sigma, X_1 \rangle \nonumber \\
-        & = \der{}{\lambda_1} \int_{\Sigma} \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld
-        - \der{}{\lambda_2} \int_{\Sigma} \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld   \nonumber \\
-        & = \int_{\Sigma} \left\{ \der{}{\lambda_1}
+    \Dd \Theta_{\Sigma_r} (X_1,X_2) & = X_1\left( \langle \Theta_{\Sigma_r}, X_2 \rangle \right)
+        -  X_2\left( \langle \Theta_{\Sigma_r}, X_1 \rangle \right) \nonumber \\
+        & =  \der{}{\lambda_1} \langle \Theta_{\Sigma_r}, X_2 \rangle -
+            \der{}{\lambda_2} \langle \Theta_{\Sigma_r}, X_1 \rangle \nonumber \\
+        & = \der{}{\lambda_1} \int_{\Sigma_r} \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld
+        - \der{}{\lambda_2} \int_{\Sigma_r} \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld   \nonumber \\
+        & = \int_{\Sigma_r} \left\{ \der{}{\lambda_1}
         \left( \w{\theta} \Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld \right)
         - \der{}{\lambda_2}\left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right) \right\} .
         \nonumber
 \end{align}
 The second equality results from $X_1(f) = \dert{f}{\lambda_1}$ for the scalar field
-$f := \langle \Theta_\Sigma, X_2 \rangle$ [cf. Eq.~(\ref{e:bas:def_vector})], the third equality
+$f := \langle \Theta_{\Sigma_r}, X_2 \rangle$ [cf. Eq.~(\ref{e:bas:def_vector})], the third equality
 makes use of Eqs.~(\ref{e:tha:def_Theta_X_theta}) and (\ref{e:tha:def_X1_X2})
 and the last equality stems from the linearity of the integral.
-This proves Eq.~(\ref{e:tha:Omega_int_omega}), provided that
+Since $\Omega(X_1,X_2) = \lim_{r\to+\infty} \Dd \Theta_{\Sigma_r} (X_1,X_2)$ and
+$\Sigma_r \to \Sigma$ for $r\to+\infty$,
+this proves Eq.~(\ref{e:tha:Omega_int_omega}), provided that
 $\w{\omega}$ is defined by (\ref{e:tha:def_omega_der_theta}).
 The $(n-1)$-form $\w{\omega}$ does not depend on the second derivative
 $\frac{\partial^2\w{g}}{\partial\lambda_1\partial\lambda_2}$ because the second derivatives,
@@ -1504,23 +1528,21 @@ Eqs.~(21)-(23) of Ref.~\cite{HollaW13} or
 Eqs.~(41)-(43) of Ref.~\cite{WaldZ00}.
 \end{example}
 
-\begin{lemma}[vanishing of $\Dd \Upsilon_{\Sigma,\Sigma'}$]
+\begin{lemma}[asymptotic vanishing of $\Dd \Upsilon_{\Sigma_r,\Sigma'_r}$]
 \label{p:tha:Upsilon_closed}
-The 1-form $\Upsilon_{\Sigma,\Sigma'}$ defined by Eq.~(\ref{e:tha:def_Upsilon})
-is closed: $\Dd \Upsilon_{\Sigma,\Sigma'} = 0$.
+The 1-form $\Upsilon_{\Sigma_r,\Sigma'_r}$ defined by Eq.~(\ref{e:tha:def_Upsilon})
+obeys $\lim_{r\to+\infty} \Dd \Upsilon_{\Sigma_r,\Sigma'_r} = 0$.
 \end{lemma}
 \begin{proof}
 By exactly the same computation as that leading to Eq.~(\ref{e:tha:Omega_int_omega}),
 we have
 \[
-     \Dd \Upsilon_{\Sigma,\Sigma'}(X_1,X_2) =
-     \lim_{r\to+\infty} \int_{\mathscr{W}_r^{\nearrow}}
+     \Dd \Upsilon_{\Sigma_r,\Sigma'_r}(X_1,X_2) =
+      \int_{\mathscr{W}_r^{\nearrow}}
      \w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1},
                             \der{\w{g}}{\lambda_2} \Rld .
 \]
-Now the asymptotic flatness conditions must be such that the integral
-in the right-hand side tends to zero when $r\to +\infty$. We shall not prove
-it in fully generality here. In Ref.~\cite{IyerW94}, it is argued that
+As argued in Ref.~\cite{IyerW94},
 if the asymptotic flatness conditions ensure that the integral (\ref{e:tha:Omega_int_omega})
 on the unbounded hypersurface $\Sigma$ is convergent, then the integral of
 the same integrand $\w{\omega}$ over $\mathscr{W}_r$ must tend to zero for $r\to +\infty$.
