@@ -180,7 +180,7 @@ instead of (\ref{e:tha:Theta_not_unique}).
 However, we shall see that the main objects considered in this chapter,
 namely the presymplectic current $(n-1)$-form $\w{\omega}$ and
 the presymplectic form $\Omega$ are totally independent from $\w{\mu}$
-(Property~\ref{p:tha:uniqueness_presympl} below). So, for
+(Property~\ref{p:tha:uniqueness_presympl} below). So,
 for simplicity, we shall no longer consider the $\delta\w{\mu}$
 degree of freedom in the choice of $\w{\theta}$.
 \end{remark}
@@ -445,7 +445,8 @@ $\w{Q}$ up to the addition of a closed $(n-2)$-form (cf. Lemma~1 in Ref.~\cite{W
 
 \begin{remark}
 The $(n-2)$-form $\w{Q}\lld\w{\xi}\rld$ has been introduced by Wald (1993) \cite{Wald93} under
-the name \emph{Noether charge $(n-2)$-form}. However, as argued by Harlow \& Wu (2020) \cite{HarloW20}, the name
+the name \emph{Noether charge $(n-2)$-form}. However, as argued by
+other authors \cite{JacobKM94,HarloW20}, the name
 \emph{Noether potential $(n-2)$-form} is more relevant, since $\w{Q}\lld\w{\xi}\rld$
 is not conserved: a priori $\dd\w{Q}\lld\w{\xi}\rld \neq 0$ and Eq.~(\ref{e:tha:J_dQ}) shows
 clearly that $\w{Q}\lld\w{\xi}\rld$ plays the role of a potential.
@@ -1395,7 +1396,7 @@ Assuming that the limit exists, we have
 $\Dd\Omega = \Dd( \lim_{r\to +\infty} \Dd \Theta_{\Sigma_r}) =
     \lim_{r \to \infty} \Dd \Dd \Theta_{\Sigma_r} = 0$,
 by nilpotence of the exterior
-derivative, cf. Eq.~(\ref{e:ext_der_nilpot}).
+derivative [Eq.~(\ref{e:ext_der_nilpot})].
 As for the independence of $\Omega$ from $\Sigma$, it follows from the following
 identity obtained by taking the exterior derive of Eq.~(\ref{e:tha:dS_D_Theta_Upsilon})
 and using $\Dd\Dd \mathcal{S}_{\mathscr{D}} = 0$
@@ -1572,22 +1573,28 @@ does not depend on the choice of the
 hypersurface $\Sigma$ (Property~\ref{p:tha:presymplectic_form}),
 but it is unaffected by the ambiguities
 $\w{\theta} \to \w{\theta} + \dd \w{Y} + \delta\w{\mu}$
-[Eq.~(\ref{e:tha:Theta_gal_freedom})] in the definition of $\w{\theta}$.
+in the definition of $\w{\theta}$ [cf. Eq.~(\ref{e:tha:Theta_gal_freedom})].
+Moreover, the presymplectic current $(n-1)$-form $\w{\omega}$ itself is unaffected
+by the ambiguity
+$\w{\theta} \to \w{\theta} + \delta\w{\mu}$.
 \end{prop}
+
 \begin{proof}
-First of all, the change $\w{\theta'} = \w{\theta} + \delta\w{\mu}$,
-in Eq.~(\ref{e:tha:Theta_gal_freedom}) has no impact
-on the value of the presymplectic current $(n-1)$-form $\w{\omega}$.
-Indeed,
-we may write the variation of the $(n-1)$-form $\w{\mu} = \w{\mu}\lld\w{g}\rld$
-as $\delta\w{\mu}=
+Let us first show the last point, by evaluating $\w{\omega}$
+from Eq.~(\ref{e:tha:def_omega_der_theta})
+for $\w{\theta'}\lld\w{g},\delta\w{g}\rld = \w{\theta}\lld\w{g},\delta\w{g}\rld
++ \delta \w{\mu}\lld\w{g}\rld$.
+We may write
+$\delta\w{\mu}\lld\w{g}\rld=
 \w{\mu}^{(1)\mu\nu} \delta g_{\mu\nu}$,
 where $\w{\mu}^{(1)} = \w{\mu}^{(1)}  \lld\w{g}\rld$ is a tensor field
 of type $(2,n-1)$ (for the sake of consiceness, we omit the covariant indices
 $\alpha_1\cdots\alpha_{n-1}$).
-Introducing furthermore the type-$(4,n-1)$ tensor
+Introducing further the type-$(4,n-1)$ tensor
 field $\w{\mu}^{(2)} =  \w{\mu}^{(2)}  \lld\w{g}\rld$ such that
-$\delta \w{\mu}^{(1)\mu\nu} = \w{\mu}^{(2)\rho\sigma\mu\nu} \delta g_{\rho\sigma}$, we get
+$\delta \w{\mu}^{(1)\mu\nu} = \w{\mu}^{(2)\rho\sigma\mu\nu} \delta g_{\rho\sigma}$,
+the first term in the right-hand side of Eq.~(\ref{e:tha:def_omega_der_theta})
+becomes
 \[
   \der{}{\lambda_1}
         \left( \w{\theta'}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
@@ -1597,8 +1604,12 @@ $\delta \w{\mu}^{(1)\mu\nu} = \w{\mu}^{(2)\rho\sigma\mu\nu} \delta g_{\rho\sigma
         +  \w{\mu}^{(2)\rho\sigma\mu\nu} \der{g_{\rho\sigma}}{\lambda_1}
              \der{g_{\mu\nu}}{\lambda_2} .
 \]
-It is then clear from Eq.~(\ref{e:tha:def_omega_der_theta}) that the terms
-involving $\w{\mu}^{(1)}$ and $\w{\mu}^{(2)}$ do not contribute to $\w{\omega}$.
+It is then clear that the terms
+involving $\w{\mu}^{(1)}$ and $\w{\mu}^{(2)}$ cancel with those
+arising from the term $\lambda_1 \leftrightarrow \lambda_2$
+in Eq.~(\ref{e:tha:def_omega_der_theta}).
+Hence the $(n-1)$-form $\w{\omega}$ computed from $\w{\theta'}$
+is the same as that computed from $\w{\theta}$.
 It follows then from Eq.~(\ref{e:tha:Omega_int_omega}) that
 the presymplectic form $\Omega$ is independent of $\w{\mu}$ as well.
 On the other side,
