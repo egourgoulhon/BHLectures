@@ -7,12 +7,17 @@
 
 This chapter is in a draft stage.
 
+\medskip
+
+This chapter relies heavily on exterior calculus, i.e. on calculus on differential forms.
+The unfamiliar reader is urged to take a look at Sec.~\ref{s:bas:ext_deriv} of
+Appendix~\ref{s:bas} first.
 
 \section{Diffeomorphism-invariant theories of gravity}
 
 \subsection{Framework} \label{s:tha:framework}
 
-We consider that the spacetime $(\M,\w{g})$ is ruled by a metric theory of gravity built upon
+We consider that the $n$-dimensional spacetime $(\M,\w{g})$ is ruled by a metric theory of gravity built upon
 a least action principle\index{least action}, with the following action:
 \be \label{e:tha:action_L}
     \mathcal{S} = \int_{\M} \w{L} = \int_{\M} L \, \weps = \int_{\M} L \sqrt{-g} \, \D^n x .
@@ -30,11 +35,12 @@ $\w{g}$ with respect to these coordinates [cf. Eq.~(\ref{e:bas:eps_sqrt_g})].
 For simplicity we disregard any scalar or matter field, so that
 $\w{L}$ is a function of the metric tensor $\w{g}$ only.
 Actually all that follows can be easily generalized to account for
-extra fields, like in scalar-tensor theories, where $\w{L}$ is a function
+extra fields, as in scalar-tensor theories for instance, where $\w{L}$ is a function
 of $\w{g}$ and some scalar field $\phi$. We limit ourselves here to $\w{g}$,
 mostly in order to keep notations simple.
 More precisely, we assume that at a given point $p\in\M$, $\w{L}$ depends only
-on the values of $\w{g}$ and its derivatives at $p$. By \emph{derivative}, it is
+on the values of $\w{g}$ and its derivatives at $p$, up to a certain order.
+By \emph{derivative}, it is
 meant derivative with respect to some affine connection on $\M$, for instance the one
 formed by the partial derivatives with respect to some given coordinates. We shall
 write $\w{L}\lld\w{g}\rld$ to stress this dependency of $\w{L}$ on $\w{g}$, according
@@ -48,8 +54,8 @@ on the values of the tensor fields $\w{B}$ and $\w{C}$ and their derivatives at 
 \end{notation}
 
 We shall consider only gravity theories whose
-formulation does not depend upon some specific coordinates on $\M$, nor upon
-some extra-structure on $\M$, like a privileged vector field.
+formulation does not depend upon any specific coordinates on $\M$, nor upon
+any extra-structure on $\M$, like a privileged vector field.
 This amounts to demanding that the
 Lagrangian $n$-form $\w{L}$ is covariant under the group of diffeomorphisms of $\M$.
 More precisely, under the action of a diffeomorphism $\Phi:\M \to \M$, the metric tensor
@@ -79,7 +85,7 @@ must hold for any diffeomorphism, we may simplify it
 by introducing $\Phi' := \Phi^{-1}$ and
 renaming $\Phi'$ to $\Phi$:
 \begin{greybox}
-A gravitation theory is said
+A gravity theory is said
 to be \defin{diffeomorphism-invariant}\index{diffeomorphism!invariance} iff
 its Lagrangian $n$-form $\w{L}$ is \defin{covariant}\index{covariant} under the group
 of diffeomorphisms of $\M$, i.e. iff for
@@ -143,7 +149,7 @@ All these dependencies are \emph{local}, so if we want to stress them, we shall 
 $\w{E} = \w{E}\lld\w{g}\rld$ and $\w{\theta} = \w{\theta}\lld\w{g},\delta\w{g}\rld$
 according to the notation introduced on p.~\pageref{n:tha:bold_parentheses}.
 
-For a given $\w{L}$, the presymplectic potential current $(n-1)$-form is not unique: since
+For a given Lagrangian $n$-form $\w{L}$, the presymplectic potential current $(n-1)$-form is not unique: since
 $\dd$ is nilpotent
 [Eq.~(\ref{e:ext_der_nilpot})], $\w{\theta}$ in formula~(\ref{e:tha:delta_L_E_Theta})
 can be substituted by
@@ -167,8 +173,16 @@ $\w{L'} = \w{L} + \dd\w{\mu}$, where $\w{\mu} = \w{\mu}\lld\w{g}\rld$ is an arbi
 support, leads to the same action (\ref{e:tha:action_L}) by virtue of
 Stokes' theorem (\ref{e:bas:Stokes}). If one takes this into account,
 the full degrees of freedom on $\w{\theta}$ are
-$\w{\theta'} = \w{\theta} + \dd \w{Y} + \delta\w{\mu}$, instead of (\ref{e:tha:Theta_not_unique}).
-However, for simplicity, we shall not consider $\w{\mu}$ here.
+\be \label{e:tha:Theta_gal_freedom}
+    \w{\theta'} = \w{\theta} + \dd \w{Y} + \delta\w{\mu},
+\ee
+instead of (\ref{e:tha:Theta_not_unique}).
+However, we shall see that the main objects considered in this chapter,
+namely the presymplectic current $(n-1)$-form $\w{\omega}$ and
+the presymplectic form $\Omega$ are totally independent from $\w{\mu}$
+(Property~\ref{p:tha:uniqueness_presympl} below). So, for
+for simplicity, we shall no longer consider the $\delta\w{\mu}$
+degree of freedom in the choice of $\w{\theta}$.
 \end{remark}
 
 \begin{example} \label{x:tha:theta_GR}
@@ -1508,16 +1522,16 @@ the presymplectic current $(n-1)$-form is
 \ee
 with
 \be
-    P^{\alpha\beta\gamma\delta\epsilon\lambda}
-    := 2 g^{\alpha\epsilon} g^{\lambda\beta} g^{\gamma\delta}
-       - g^{\alpha\delta} g^{\beta\epsilon} g^{\lambda\gamma}
-       - g^{\alpha\beta} g^{\gamma\delta} g^{\epsilon\lambda}
-       - g^{\beta\gamma} g^{\alpha\epsilon} g^{\lambda\delta}
-       + g^{\beta\gamma} g^{\alpha\delta} g^{\epsilon\lambda} .
+    P^{\lambda\mu\nu\tau\rho\sigma}
+    := 2 g^{\lambda\rho} g^{\sigma\mu} g^{\nu\tau}
+       - g^{\lambda\tau} g^{\mu\rho} g^{\sigma\nu}
+       - g^{\lambda\mu} g^{\nu\tau} g^{\rho\sigma}
+       - g^{\mu\nu} g^{\lambda\rho} g^{\sigma\tau}
+       + g^{\mu\nu} g^{\lambda\tau} g^{\rho\sigma} .
 \ee
 We shall not detail the computation, which is straightforward but rather lengthy.
 Let us simply mention that one shall start by expressing the
-covariant derivatives in expression~(\ref{e:tha:Theta_GR})
+covariant derivatives in formula~(\ref{e:tha:Theta_GR})
 for $\w{\theta}$ in terms of $\w{g}$'s Christoffel symbols [Eq.~(\ref{e:bas:der_cov_coord})
 with $(k,\ell) = (0,2)$] and replace $\weps$ by $\sqrt{-g}\, \w{e}$ as in Example~\ref{x:tha:theta_GR},
 plug the result in Eq.~(\ref{e:tha:def_omega_der_theta}) and
@@ -1551,17 +1565,44 @@ the same integrand $\w{\omega}$ over $\mathscr{W}_r$ must tend to zero for $r\to
 
 
 \begin{prop}[uniqueness of the presymplectic form]
+\label{p:tha:uniqueness_presympl}
 The presymplectic form $\Omega$ is unique for a given gravity theory with
 appropriate asymptotic flatness conditions. Not only it is
 does not depend on the choice of the
 hypersurface $\Sigma$ (Property~\ref{p:tha:presymplectic_form}),
-but it is unaffected by the
-change $\w{\theta} \to \w{\theta} + \dd \w{Y}$
-(cf. Eq.~(\ref{e:tha:Theta_not_unique}) and Remark~\ref{r:tha:Lagrangian_dep_mu} on
-p.~\pageref{r:tha:Lagrangian_dep_mu}).
+but it is unaffected by the ambiguities
+$\w{\theta} \to \w{\theta} + \dd \w{Y} + \delta\w{\mu}$
+[Eq.~(\ref{e:tha:Theta_gal_freedom})] in the definition of $\w{\theta}$.
 \end{prop}
 \begin{proof}
-The change  $\w{\theta'}\lld\w{g},\delta\w{g}\rld = \w{\theta}\lld\w{g},\delta\w{g}\rld
+First of all, the change $\w{\theta'} = \w{\theta} + \delta\w{\mu}$,
+in Eq.~(\ref{e:tha:Theta_gal_freedom}) has no impact
+on the value of the presymplectic current $(n-1)$-form $\w{\omega}$.
+Indeed,
+we may write the variation of the $(n-1)$-form $\w{\mu} = \w{\mu}\lld\w{g}\rld$
+as $\delta\w{\mu}=
+\w{\mu}^{(1)\mu\nu} \delta g_{\mu\nu}$,
+where $\w{\mu}^{(1)} = \w{\mu}^{(1)}  \lld\w{g}\rld$ is a tensor field
+of type $(2,n-1)$ (for the sake of consiceness, we omit the covariant indices
+$\alpha_1\cdots\alpha_{n-1}$).
+Introducing furthermore the type-$(4,n-1)$ tensor
+field $\w{\mu}^{(2)} =  \w{\mu}^{(2)}  \lld\w{g}\rld$ such that
+$\delta \w{\mu}^{(1)\mu\nu} = \w{\mu}^{(2)\rho\sigma\mu\nu} \delta g_{\rho\sigma}$, we get
+\[
+  \der{}{\lambda_1}
+        \left( \w{\theta'}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
+    = \der{}{\lambda_1}
+        \left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
+        +  \w{\mu}^{(1)\mu\nu} \frac{\partial^2 g_{\mu\nu}}{\partial\lambda_1\partial\lambda_2}
+        +  \w{\mu}^{(2)\rho\sigma\mu\nu} \der{g_{\rho\sigma}}{\lambda_1}
+             \der{g_{\mu\nu}}{\lambda_2} .
+\]
+It is then clear from Eq.~(\ref{e:tha:def_omega_der_theta}) that the terms
+involving $\w{\mu}^{(1)}$ and $\w{\mu}^{(2)}$ do not contribute to $\w{\omega}$.
+It follows then from Eq.~(\ref{e:tha:Omega_int_omega}) that
+the presymplectic form $\Omega$ is independent of $\w{\mu}$ as well.
+On the other side,
+the change  $\w{\theta'}\lld\w{g},\delta\w{g}\rld = \w{\theta}\lld\w{g},\delta\w{g}\rld
 + \dd \left(\w{Y}\lld\w{g},\delta\w{g}\rld \right)$, as permitted by Eq.~(\ref{e:tha:Theta_not_unique}),
 leads to the following change in the presymplectic form:
 \[
