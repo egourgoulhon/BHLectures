@@ -230,7 +230,7 @@ We check that $\w{\theta}\lld\w{g},\delta\w{g}\rld$ is linear in $\delta\w{g}$, 
 The action $\mathcal{S}$ defined by (\ref{e:tha:action_L}) is extremal with respect to any
 metric variation $\delta\w{g}$ that has compact support if, and only if,
 \be \label{e:tha:eom_E}
-    \w{E} = 0 .
+    \w{E}\lld\w{g}\rld = 0 .
 \ee
 This constitutes the so-called \defin{Euler-Lagrange equations}\index{Euler-Lagrange!equation} for the considered gravity theory, also called the \defin{field equations}\index{field!equations} or
 \defin{equations of motion}.
@@ -379,7 +379,7 @@ Let us continue with the example of general relativity. From
 expression (\ref{e:tha:Theta_GR}) for $\w{\theta}$ with
 $\delta g_{\mu\nu} = t \Liec{\xi} g_{\mu\nu}$ and $\Liec{\xi} g_{\mu\nu} = \nabla_\mu \xi_\nu + \nabla_\nu \xi_\mu$ [Eq.~(\ref{e:bas:Lie_g_Killing})], we get
 \bea
- 16\pi   \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld_{\alpha_1\cdots\alpha_{n-1}} & = &
+ 16\pi   \theta\lld\w{g},\Lie{\xi}\w{g}\rld_{\alpha_1\cdots\alpha_{n-1}} & = &
   g^{\mu\nu} \left( \nabla_\sigma \nabla_\nu \xi^\sigma + \nabla_\sigma \nabla^\sigma \xi_\nu
     - 2 \nabla_\nu \nabla_\rho \xi^\rho \right) \epsilon_{\mu\alpha_1\cdots\alpha_{n-1}} \nonumber \\
     & = & g^{\mu\nu} \left( 2 R_{\nu\sigma} \xi^\sigma - \nabla_\sigma \nabla_\nu \xi^\sigma
@@ -1168,6 +1168,7 @@ and the nilpotence property (\ref{e:ext_der_nilpot}), we get
 Let us summarize the above results as follows:
 
 \begin{prop}[Hamiltonian system]
+\label{p:tha:Hamiltonian_system}
 A \defin{Hamiltonian system}\index{Hamiltonian!system}
 is a triplet $(\FF,\Omega,H)$ where $\FF$ is a smooth
 manifold, called the \defin{phase space}\index{phase space} of the system, $\Omega$ is
@@ -1207,38 +1208,138 @@ that $X_H$ vanishes at two points: $(\th,p_\th) = (0,0)$ and $(\th,p_\th) = (\pi
 which are thus two equilibrium points (respectively stable and unstable).
 \end{example}
 
+
 \begin{remark}
-The above formulation of Hamiltonian systems is covariant: it does not
-refer to any system of canonical coordinates $(q^i, p_i)$ on $\FF$
+The above formulation of Hamiltonian systems does not
+refer to any system of canonical coordinates $(q^i, p_i)$ on
+the phase space $\FF$
 and, more generally, to any kind of coordinates.
 It does not even assume that $\FF$ is the cotangent bundle $T^*\mathcal{C}$
-of some ``configuration space'' $\mathcal{C}$, the latter structure being the standard
+of some ``configuration space'' $\mathcal{C}$,
+while the cotangent bundle\index{cotangent bundle} structure is the standard
 arena for the Hamiltonian mechanics with a finite number of degrees
 of freedom \cite{AbrahM78}.
 \end{remark}
+
+Despite the above remark, the Hamiltonian formulation sketched in
+Property~\ref{p:tha:Hamiltonian_system} is not fully covariant.
+Indeed, via the Hamiltonian
+vector field $X_H$, it describes the evolution of the system with
+respect to some ``privileged time'' $t$ [cf. Eq.~(\ref{e:tha:dfdt_X_H_f})].
+To treat covariantly relativistic systems, it would be desirable to get
+rid of the choice of a time function. This can be acheived as follows.
 
 There is one, and exactly one,
 integral curve of $X_H$ through each point\footnote{At an equilibrium point, the
 integral curve is reduced to the point itself.} of $\FF$.
 It follows that a solution is entirely determined by a single point $a\in\FF$,
 which can be thought of as representing the state of the system at some initial
-instant $t=0$, i.e. the coordinates of $a$ are $(q^i(0),p_i(0))$
+instant $t=t_0$, i.e. the coordinates of $a$ are $(q^i(t_0),p_i(t_0))$
 (cf. Fig.~\ref{f:tha:pendulum_phase}).
 If the initial value problem is well posed, there is a one-to-one
 correspondance between a point of $\FF$ and a solution.
 Consequently, one may view $\FF$ as the \emph{space of solutions}
-to the equations of motion. This is the essence of the
-so-called \defin{covariant phase space}\index{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --} approach.
+to the equations of motion.
+This is the essence of the
+so-called \emph{covariant phase space}\index{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --} approach:
+
+\begin{prop}[covariant phase space]
+\label{p:tha:cov_phase_space}
+Let $(\FF,\Omega,H)$ be a Hamiltonian system whose
+equations of motion constitute a well
+posed initial value problem. Each solution to the equations of motion
+is a curve $S: \R \to \FF$, $t\mapsto S(t)$, which admits the
+Hamiltonian vector field $X_H$ as tangent vector.
+The set $\FF_{\rm sol}$ of all solutions
+can be given the structure of a smooth manifold diffeomorphic to $\FF$,
+and for each $t_0\in \R$, an explicit diffeomorphism is
+the ``initial data'' map
+\be
+    \begin{array}{rccl}
+    \Phi_{t_0}: & \FF_{\rm sol} & \longrightarrow & \FF \\
+        & S & \longmapsto & S(t_0) .
+    \end{array}
+\ee
+Moreover, the pullback of the symplectic form $\Omega$ by $\Phi_{t_0}$,
+\be \label{e:tha:Omega_sol_pullback}
+    \Omega_{\rm sol} := \Phi_{t_0}^* \Omega ,
+\ee
+defines a symplectic form on $\FF_{\rm sol}$, which
+is actually independent of $t_0$. This makes $(\FF_{\rm sol},\Omega_{\rm sol})$
+a well-defined symplectic manifold, called the \defin{covariant phase space}\index{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --}
+of the system.
+Infinitesimal displacement vectors on the manifold $\FF_{\rm sol}$
+correspond to infinitesimal variations $\delta S$ between solutions,
+so that Eq.~(\ref{e:tha:Omega_sol_pullback}) is equivalent to
+\be \label{e:tha:Omega_sol_explicit}
+    \Omega_{\rm sol}(\delta_1 S, \delta_2 S) :=
+    \Omega\left(\overrightarrow{S(t_0)S_1(t_0)},\; \overrightarrow{S(t_0)S_2(t_0)} \right) ,
+\ee
+where $S$, $S_1 = S+\delta_1 S$ and $S_2 = S+\delta_2 S$ stand for three
+nearby solutions.
+
+Similarly, the pullback of the Hamiltonian $H$ by $\Phi_{t_0}$, i.e
+$H_{\rm sol} := H \circ \Phi_{t_0}$, or equivalently,
+\be \label{e:tha:def_H_sol}
+    H_{\rm sol}(S) := H(S(t_0)) ,
+\ee
+defines a scalar field $H_{\rm sol}$
+on $\FF_{\rm sol}$, which is independent of the choice of $t_0$.
+\end{prop}
+\begin{proof}
+The equivalence between Eqs.~(\ref{e:tha:Omega_sol_pullback}) and (\ref{e:tha:Omega_sol_explicit}) follows readily from the definition of the pullback
+map given in Sec.~\ref{s:bas:push_pull}. The independence
+of $\Omega_{\rm sol}(\delta_1 S, \delta_2 S)$ from the choice of $t_0$
+follows from the constancy of $\Omega$ along the Hamiltonian flow, i.e.
+Eq.~(\ref{e:tha:Lie_X_H_Omega}). Indeed $\Omega_{\rm sol}(\delta_1 S, \delta_2 S)$,
+as defined by Eq.~(\ref{e:tha:Omega_sol_explicit}), is independent of $t_0$
+iff $\D f / \D t = 0$, where
+$f(t) := \Omega (Y_1(t), Y_2(t))$
+and we have introduced the separation vectors $Y_1(t) := \overrightarrow{S(t)S_1(t)}$ and $Y_2(t) := \overrightarrow{S(t)S_2(t)}$. Now, from Eq.~(\ref{e:tha:dfdt_X_H_f})
+and the Leibniz rule,
+\[
+    \derd{f}{t} = \Liesymbol_{X_H} f
+    = \Liesymbol_{X_H} \left[ \Omega (Y_1, Y_2) \right]
+    = \underbrace{\Liesymbol_{X_H} \Omega}_{0} \,  (Y_1, Y_2)
+        + \Omega( \underbrace{\Liesymbol_{X_H} Y_1}_{0}, \, Y_2 )
+        + \Omega(  Y_1,\,  \underbrace{\Liesymbol_{X_H} Y_2}_{0} )
+    = 0,
+\]
+where $\Liesymbol_{X_H} \Omega = 0$ is the invariance property (\ref{e:tha:Lie_X_H_Omega})
+and $\Liesymbol_{X_H} Y_1 = 0$ and $\Liesymbol_{X_H} Y_2 = 0$ follows from the very definition
+of a Lie derivative (cf. Sec.~\ref{s:bas:Lie}),
+the separation vectors $Y_1$ and $Y_2$ being naturally Lie-dragged by $X_H$.
+Finally, the independence of $H_{\rm sol}$ from the choice of $t_0$
+is immediate from Eq.~(\ref{e:tha:def_H_sol}), which shows that
+$H_{\rm sol}(S)$ is the energy of the solution $S$
+(cf. Property~\ref{p:tha:Hamiltonian_system}).
+\end{proof}
+
+The triplet $(\FF_{\rm sol}, \Omega_{\rm sol}, H_{\rm sol})$ clearly constitutes
+a Hamiltonian system, as defined in Property~\ref{p:tha:Hamiltonian_system}, but
+without reference to any ``time evolution'', given that each point $S\in\FF_{\rm sol}$
+is a fully evolved solution by itself. The fully covariant picture is thus achieved.
+The Hamiltonian vector field $X_{H_{\rm sol}}$ is a vector field on $\FF_{\rm sol}$,
+which generates 1-dimensional families of solutions. Two solutions $S_1$ and $S_2$
+that lie on the same integral curve of $X_{H_{\rm sol}}$ are then
+solutions to the original equations of motion that only differ by a time translation,
+i.e. $S_2(t) = S_1(t + t_0)$ for some $t_0\in\R$. In particular $S_1$ and $S_2$
+have the same energy.
+
 
 
 \subsection{Covariant phase space for gravity theories}
 
-Let us apply the above considerations to a gravity
-theory governed by a Lagrangian of the type (\ref{e:tha:Lagrangian_diffeo_inv}).
+In order to apply the covariant phase space approach to
+a gravity theory governed by a Lagrangian of the type (\ref{e:tha:Lagrangian_diffeo_inv}),
+let us consider the
+space $\FF_{\rm sol}$ of solutions $\w{g}$ to the field equations
+(\ref{e:tha:eom_E}). Since no confusion may arise, for simplicity,
+we shall drop the index ``sol'' and denote this space simply by $\FF$.
 A difference with what precedes is that
 we are dealing with a field theory, which, by essence, has
 an infinite number of degrees of freedom. In other words,
-the space $\FF$ of solutions $\w{g}$ to the field equations is
+the space of solutions $\FF$ is
 an \emph{infinite-dimensional manifold}. More precisely, it can be given the structure of an
 infinite-dimensional \defin{Banach manifold}\index{Banach manifold}\index{manifold!Banach --}
 \cite{LeeW90,HarloW20}, i.e. a topological space that locally resembles\footnote{Cf. Lang's book~\cite{Lang95} for a
