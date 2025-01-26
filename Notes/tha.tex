@@ -1373,7 +1373,12 @@ where $\hat{\Sigma}$ is an orientable manifold of dimension $(n-1)$ with an
 i.e. there exists a compact subset $K$ of $\hat{\Sigma}$ such that
 $\hat{\Sigma}_{\rm ext} := \hat{\Sigma}\setminus K$
 is diffeomorphic to $\R^{n-1} \setminus \mathbb{B}^{n-1}$, where $\mathbb{B}^{n-1}$ is the unit ball of
-$\R^{n-1}$. We shall restrict the space $\FF$ of solutions $\w{g}$ of the considered gravity theory
+$\R^{n-1}$. Furthermore,
+given two points $p$ and $p'$ in $\M$, we shall say that $p'$ lies in the
+\defin{background future}\index{background!future}\index{future!background --} of $p$ iff for any orientation-preserving diffeomorphism $\Psi: \M \to \R\times \hat{\Sigma}$,
+$\Psi(p') = (t', q')$ and $\Psi(p) = (t, q)$ with $t'>t$.
+
+We shall restrict the space $\FF$ of solutions $\w{g}$ of the considered gravity theory
 to those that are asymptotically flat, with the asymptotically flat end corresponding to
 $\hat{\Sigma}_{\rm ext}$. The precise definition of \defin{asympotically flat}\index{asympotically!flat}\index{flat!asymptotically --} depends on the gravity theory
 and should be such that some integrals indicated below converge and that
@@ -1382,10 +1387,8 @@ For general relativity, a precise definition
 of asymptotic flatness fulfilling these requirements is given in Ref.~\cite{AshteBR91}.
 \end{prop}
 
-
-Given two points $p$ and $p'$ in $\M$, we shall say that $p'$ lies in the
-\defin{background future}\index{background!future}\index{future!background --} of $p$ iff for any orientation-preserving diffeomorphism $\Psi: \M \to \R\times \hat{\Sigma}$,
-$\Psi(p') = (t', q')$ and $\Psi(p) = (t, q)$ with $t'>t$.
+We are going to see that, from the action (\ref{e:tha:action_L}),
+we can endow $\FF$ with a (pre)symplectic form $\Omega$.
 Let
 $\Sigma$ and $\Sigma'$ be two non-intersectic hypersurfaces of $\M$,
 both diffeomorphic to $\hat{\Sigma}$ and such that $\Sigma'$ lies in the
@@ -1393,10 +1396,10 @@ background future of $\Sigma$. Let $\Sigma_r$ and $\Sigma'_r$
 be compact subparts
 of $\Sigma$ and $\Sigma'$ respectively,
 extending in the asymptotic flat end and corresponding to balls of Euclidean radius $r$
-in $\hat{\Sigma}_{\rm ext}$. We shall introduce as
-the hypercylinder $\mathscr{W}_r$
+in $\hat{\Sigma}_{\rm ext}$. Let $\mathscr{W}_r$
+be the hypercylinder
 connecting $\Sigma_r$ to $\Sigma'_r$ (cf. Fig.~??)
-Let us denote by $\mathscr{D}$ be the part
+and $\mathscr{D}$ be the part
 of $\M$ bounded by $\Sigma_r$, $\Sigma'_r$ and $\mathscr{W}_r$. Let us then consider the
 action (\ref{e:tha:action_L}) restricted to $\mathscr{D}$:
 \be \label{e:tha:def_action_S_D}
@@ -1514,21 +1517,12 @@ leaving us with $\Omega_{\Sigma'} = \Omega_{\Sigma}$.
 \end{proof}
 
 \begin{remark}
-It could have seemed simpler to define the presymplectic form
+Instead of the limit~(\ref{e:tha:def_Omega_gravity}),
+it could have seemed simpler to define the presymplectic form
 as $\Omega := \Dd\Theta_{\Sigma}$, where
-$\Theta_{\Sigma}$ is defined as in Eq.~(\ref{e:tha:def_Theta_X_theta}) but extending the
-integral to the whole of $\Sigma$. However, the standard asymptotic flatness conditions
-are such the integral would diverge, so that $\Theta_{\Sigma}$ would be ill-defined.
-For instance, for general relativity, this can be seen for stationary solutions, which have
-the asymptotic behavior (\ref{e:sta:asymptotic_metric}), yielding the following
-dominant terms of $\delta\w{g}$ when $r\to+\infty$:
-\be
-    \delta g_{00} \simeq \alpha_n \frac{\delta M}{r^{n-3}},\quad
-    \delta g_{0i} \simeq \frac{n-2}{2} \alpha_n \frac{\delta J_{ij} x^j}{r^{n-1}}, \quad
-    \delta g_{ij} \simeq \frac{\alpha_n}{n-3} \, \frac{\delta M}{r^{n-3}} \delta_{ij} .
-\ee
-Given the expression
-(\ref{e:tha:Theta_GR}) of $\w{\theta}$, this would make $\Theta_{\Sigma}$ to diverge as $\ln r$.
+$\Theta_{\Sigma}$ is defined as in Eq.~(\ref{e:tha:def_Theta_X_theta}) but with the
+integral extended to the whole of $\Sigma$. However, as noticed in Ref.~\cite{AshteBR91} (p.~429), standard asymptotic flatness conditions
+do not guarantee that this integral is convergent; hence the 1-form $\Theta_{\Sigma}$ would be ill-defined.
 \end{remark}
 
 
@@ -1770,7 +1764,41 @@ $\frac{\partial^2\w{L}}{\partial\lambda_1\partial\lambda_2} - \frac{\partial^2\w
 is trivially zero, hence the result (\ref{e:tha:omega_closed}).
 \end{proof}
 
+It turns out that in general, $\Omega$ is a \emph{degenerate} 2-form on $\FF$:
+there exists nonzero vectors $X$ on $\FF$, such that $\Omega(X,.) = 0$.
+Hence $\Omega$ fails to be a symplectic form.
+For instance, one may conceive that some nonzero variation $\delta\w{g}$ in the space of solutions
+is such that $\delta\w{g} = 0$ on the hypersurface $\Sigma$ involved
+in Eq.~(\ref{e:tha:Omega_int_omega}). Then, by linearity of $\w{\omega}$,
+$\w{\omega}\lld\w{g},\delta\w{g},.) = 0$ on $\Sigma$, so that $\delta\w{g}$ defines
+a degeneracy direction of $\Omega$. More generally, the degeneracy of $\Omega$
+is related to the gauge freedom of the gravity theory, i.e. to the
+invariance by diffeomorphism. For general relativity, it has been shown
+\cite{AshteBR91} that the degeneracy directions of $\Omega$ are exactly
+those generated by diffeomorphisms of $\M$ [cf.
+Eqs.~(\ref{e:tha:delta_g_Phistar})-(\ref{e:bas:delta_g_Lie_xi_g})] that reduce to the identity at infinity
+(i.e. such that $\w{\xi}$ in Eq.~(\ref{e:bas:delta_g_Lie_xi_g}) tends to
+zero for $r\to +\infty$). The gauge freedom is intimately related to the
+initial value problem of the theory being \emph{not} well posed (it becomes
+well posed only in a fixed gauge, cf. Chap.~VI of Ref.~\cite{Choqu09}). Recall that in the covariant phase space
+construction of Property~\ref{p:tha:cov_phase_space}, it was required
+that the initial value problem is well posed to endow the space of solutions
+with a (non-degenerate) symplectic form.
 
+Fortunately, the degeneracy directions of $\Omega$ are integrable in
+submanifolds of $\FF$. Indeed, according to Frobenius theorem
+(Theorem~B.3.1 in Ref.~\cite{Wald84}), the integrability is equivalent to
+the commutator $[X_1,X_2]$ being a degeneracy vector field for any two
+degeneracy vector fields $X_1$ and $X_2$. This is easy to show: via the
+identity (\ref{e:bas:Lie_commut}) and the Leibniz rule, we get
+$\Omega([X_1, X_2], .) = \Omega( \Liesymbol_{X_1} X_2, .) =
+\Liesymbol_{X_1} [\Omega(X_2, .)] - \Liesymbol_{X_1} \Omega \, (X_2, .) =
+- \Liesymbol_{X_1} \Omega \, (X_2, .)$ since $\Omega(X_2, .) = 0$. Now, thanks to Cartan identity (\ref{e:bas:Cartan}),
+$\Liesymbol_{X_1} \Omega = \Dd\Omega (X_1,.,.) + \Dd[\Omega(X_1, .)] = 0$,
+since $\Dd\Omega = 0$ (Property~\ref{p:tha:presymplectic_form}) and
+$\Omega(X_1, .) = 0$. Hence $\Omega([X_1, X_2], .) = 0$
+and the degeneracy directions of $\Omega$ are integrable in a family
+of submanifods foliating $\FF$.
 
 
 \subsection{First law for diffeomorphism-invariant theories}
