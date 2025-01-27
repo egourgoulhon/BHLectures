@@ -1767,7 +1767,7 @@ is trivially zero, hence the result (\ref{e:tha:omega_closed}).
 It turns out that in general, $\Omega$ is a \emph{degenerate} 2-form on $\FF$:
 there exists nonzero vectors $X$ on $\FF$, such that $\Omega(X,.) = 0$.
 Hence $\Omega$ fails to be a symplectic form.
-For instance, one may conceive that some nonzero variation $\delta\w{g}$ in the space of solutions
+For instance, one may conceive that some nonzero variation $\delta\w{g}$
 is such that $\delta\w{g} = 0$ on the hypersurface $\Sigma$ involved
 in Eq.~(\ref{e:tha:Omega_int_omega}). Then, by linearity of $\w{\omega}$,
 $\w{\omega}\lld\w{g},\delta\w{g},.) = 0$ on $\Sigma$, so that $\delta\w{g}$ defines
@@ -1785,21 +1785,48 @@ construction of Property~\ref{p:tha:cov_phase_space}, it was required
 that the initial value problem is well posed to endow the space of solutions
 with a (non-degenerate) symplectic form.
 
-Fortunately, the degeneracy directions of $\Omega$ are integrable in
-submanifolds of $\FF$. Indeed, according to Frobenius theorem
+It is however possible to introduce a quotient space $\bar{\FF} = \FF / \mathcal{R}$
+on which $\Omega$ gives birth to a true symplectic form.
+The idea is to ``factor out'' the  degeneracy directions of $\Omega$. This is
+possible because these directions are integrable into
+submanifolds of $\FF$. According to Frobenius theorem
 (Theorem~B.3.1 in Ref.~\cite{Wald84}), the integrability is equivalent to
 the commutator $[X_1,X_2]$ being a degeneracy vector field for any two
-degeneracy vector fields $X_1$ and $X_2$. This is easy to show: via the
-identity (\ref{e:bas:Lie_commut}) and the Leibniz rule, we get
+degeneracy vector fields $X_1$ and $X_2$. To show this property, let us
+use the
+identity (\ref{e:bas:Lie_commut}) and the Leibniz rule to write
 $\Omega([X_1, X_2], .) = \Omega( \Liesymbol_{X_1} X_2, .) =
 \Liesymbol_{X_1} [\Omega(X_2, .)] - \Liesymbol_{X_1} \Omega \, (X_2, .) =
 - \Liesymbol_{X_1} \Omega \, (X_2, .)$ since $\Omega(X_2, .) = 0$. Now, thanks to Cartan identity (\ref{e:bas:Cartan}),
 $\Liesymbol_{X_1} \Omega = \Dd\Omega (X_1,.,.) + \Dd[\Omega(X_1, .)] = 0$,
-since $\Dd\Omega = 0$ (Property~\ref{p:tha:presymplectic_form}) and
+given that $\Dd\Omega = 0$ (Property~\ref{p:tha:presymplectic_form}) and
 $\Omega(X_1, .) = 0$. Hence $\Omega([X_1, X_2], .) = 0$
-and the degeneracy directions of $\Omega$ are integrable in a family
-of submanifods foliating $\FF$.
-
+and the degeneracy directions of $\Omega$ are integrable into
+submanifods of $\FF$. Assuming that these submanifolds provide a regular
+foliation of $\FF$ (cf. the discussion in Ref.~\cite{LeeW90}), one defines
+an equivalence relation $\mathcal{R}$ on $\FF$ by setting $\w{g}_1\mathcal{R} \w{g}_2$
+iff the points $\w{g}_1$ and $\w{g}_2$ of $\FF$ belong to the same
+degeneracy submanifold. The set of equivalence classes $\bar{\FF} := \FF / \mathcal{R}$
+can be given the structure of Banach manifold, such that the canonical projection
+$\pi: \FF \to \bar{\FF}$ is a smooth map. One may then define
+a 2-form $\bar{\Omega}$ on $\bar{\FF}$ by setting, for any pair $(\bar{X}_1,\bar{X}_2)$
+of tangent vectors at a point $\w{\bar{g}}\in\bar{\FF}$,
+$\bar{\Omega}(\bar{X}_1, \bar{X}_2) := \Omega(X_1, X_2)$, where
+$(X_1,X_2) \in (T_{\w{g}}\FF)^2$, such that $\pi(\w{g}) = \w{\bar{g}}$,
+$\pi_* X_1 = \bar{X}_1$ and $\pi_* X_2 = \bar{X}_2$ (pushforward by $\pi$,
+cf. Sec.~\ref{s:bas:push_pull}).
+Because $\Omega$ is preserved along its degeneracy directions (cf.
+$\Liesymbol_{X_1} \Omega = 0$ in the above proof), the definition
+of $\bar{\Omega}(\bar{X}_1, \bar{X}_2)$ is independent of the choice
+of $\w{g}$ in the fiber $\pi^{-1}(\w{\bar{g}})$. It is also independent
+of the choice of $X_1$ and $X_2$ in $T_{\w{g}}\FF$ because
+two vectors $X_1$ and $X'_1$ such that $\pi_* X_1 = \pi_* X_1'$ differ
+only by a vector along a degeneracy direction of $\Omega$. Hence
+$\bar{\Omega}(\bar{X}_1, \bar{X}_2)$ is unambiguously  defined. It can be shown
+that $\bar{\Omega}$ is a closed non-degenerate 2-form, i.e.
+a symplectic form (cf. Refs.~\cite{HarloW20,LeeW90} for details).
+The genuine covariant phase space of the considered gravity theory
+is then $(\bar{\FF},\bar{\Omega})$.
 
 \subsection{First law for diffeomorphism-invariant theories}
 
