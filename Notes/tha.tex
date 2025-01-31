@@ -345,9 +345,12 @@ the \defin{Noether current $(n-1)$-form of $\w{\xi}$}\index{Noether!current form
 \be \label{e:tha:def_Noether_current}
     \w{J}\lld\w{\xi}\rld := \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld - \w{\xi}\cdot\w{L} ,
 \ee
-where $\w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld$ is the $(n-1)$-form obtained by setting the second
-argument of the presymplectic potential form $\w{\theta}\lld\w{g},\delta\w{g}\rld$
-to $\Lie{\xi}\w{g}$ (cf. Property~\ref{p:tha:var_Lagrangian}).
+where $\w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld$ is the $(n-1)$-form obtained
+by substituting $\Lie{\xi}\w{g}$ for $\delta\w{g}$ in the
+presymplectic potential form $\w{\theta}\lld\w{g},\delta\w{g}\rld$
+(cf. Property~\ref{p:tha:var_Lagrangian}) and $\w{\xi}\cdot\w{L}$
+is the $(n-1)$-form obtained by setting the first argument of the $n$-form $\w{L}$
+to $\w{\xi}$:  $\w{\xi}\cdot\w{L} := \w{L}(\w{\xi},\cdots)$.
 $\w{J}\lld\w{\xi}\rld$ is a linear and local function of $\w{\xi}$. It is a priori not unique,
 some ambiguity $\w{J}\mapsto \w{J'}$ resulting from (\ref{e:tha:Theta_not_unique}):
 \be \label{e:tha:J_not_unique}
@@ -1476,7 +1479,8 @@ of orientation of $\Sigma_r$ between Eqs.~(\ref{e:tha:dS_D_3int}) and (\ref{e:th
 In an attempt to endow $\FF$ with a symplectic form, thereby turning it into a phase space,
 let us consider the 2-form $\Omega$ that is the limit $\Sigma_r \to \Sigma$
 (i.e. the limit $r\to +\infty$) of the exterior derivative of $\Theta_{\Sigma_r}$.
-While $\Theta_{\Sigma_r}$ depends on the choice of $\Sigma$, $\Omega$ does not:
+This defines a closed 2-form, which turns out to be independent of
+the choice of $\Sigma$:
 
 \begin{prop}[presymplectic form in the space of solutions of a gravity theory]
 \label{p:tha:presymplectic_form}
@@ -1500,12 +1504,27 @@ Moreover, $\Omega$ does not depend on the choice of the hypersurface $\Sigma$.
 \end{prop}
 
 \begin{proof}
-Assuming that the limit exists, we have
-$\Dd\Omega = \Dd( \lim_{r\to +\infty} \Dd \Theta_{\Sigma_r}) =
-    \lim_{r \to \infty} \Dd \Dd \Theta_{\Sigma_r} = 0$,
-by nilpotence of the exterior
-derivative [Eq.~(\ref{e:ext_der_nilpot})].
-As for the independence of $\Omega$ from $\Sigma$, it follows from the following
+For each value of $r$, $\Dd \Theta_{\Sigma_r}$ is a 2-form on $\FF$, so if the
+limit (\ref{e:tha:def_Omega_gravity}) exists, it clearly defines a 2-form
+$\Omega$ on $\FF$.
+Let us evaluate its exterior derivative, $\Dd \Omega$, by means of formula
+(\ref{e:bas:def_ext_der}) with $p=2$: for any 3-tuple $(X_1,X_2,X_3)$ of
+vector fields on $\FF$, we have
+$\Dd\Omega(X_1,X_2,X_3) = X_1(\Omega(X_2,X_3)) -  X_2(\Omega(X_1,X_3))
++  X_3(\Omega(X_1,X_2)) - \Omega([X_1,X_2], X_3) + \Omega([X_1,X_3], X_2)
+- \Omega([X_2,X_3], X_1)$.
+Now
+\[
+X_1(\Omega(X_2,X_3)) = X_1 \left( \lim_{r\to +\infty} \Dd \Theta_{\Sigma_r}(X_2,X_3) \right)
+    = \lim_{r\to +\infty}  X_1 \left( \Dd \Theta_{\Sigma_r}(X_2,X_3) \right) ,
+\]
+with similar formulas for $X_2(\Omega(X_1,X_3))$ and $X_3(\Omega(X_1,X_2))$.
+There comes then
+$\Dd\Omega(X_1,X_2,X_3) =
+    \lim_{r \to \infty} \Dd \Dd \Theta_{\Sigma_r}(X_1,X_2,X_3)$.
+But $\Dd \Dd \Theta_{\Sigma_r} = 0$ (nilpotence of the exterior
+derivative, cf. Eq.~(\ref{e:ext_der_nilpot})). We conclude that $\Dd\Omega = 0$.
+As for the independence of $\Omega$ from $\Sigma$, it arises from the following
 identity obtained by taking the exterior derive of Eq.~(\ref{e:tha:dS_D_Theta_Upsilon})
 and using $\Dd\Dd \mathcal{S}_{\mathscr{D}} = 0$
 in the left-hand side:
@@ -1515,7 +1534,7 @@ in the left-hand side:
 \]
 Taking the limit $r\to +\infty$ yields
 $\displaystyle \Omega_{\Sigma'} - \Omega_\Sigma  + \lim_{r\to+\infty} \Dd \Upsilon_{\Sigma_r,\Sigma'_r} = 0$.
-The result follows the asymptotic flatness conditions, which
+The asymptotic flatness conditions
 ensure that $\displaystyle\lim_{r\to+\infty} \Dd \Upsilon_{\Sigma_r,\Sigma'_r} = 0$ (Lemma~\ref{p:tha:Upsilon_closed} below),
 leaving us with $\Omega_{\Sigma'} = \Omega_{\Sigma}$.
 \end{proof}
@@ -1926,12 +1945,12 @@ If we substitute Eq.~(\ref{e:tha:fund_identity}) for $\w{\omega} \lld\w{g},\delt
 \ee
 where $\Sp_\infty = \lim_{r\to +\infty} \Sp_r$, $\Sp_r$ being the boundary
 of the hypersurface $\Sigma_r \subset \Sigma$ considered in Sec.~\ref{s:tha:cps_gravity}.
-If there exists a $(n-1)$-form $\w{B}\lld\w{g}\rld$ on $\M$ such that
+Let us suppose that there exists a $(n-1)$-form $\w{B}\lld\w{g}\rld$ on $\M$ such that
 \be \label{e:tha:theta_asymp_B}
    \w{\theta}\lld\w{g},\delta\w{g}\rld
-    \underset{r\to +\infty}{\sim} \delta \w{B}\lld\w{g}\rld ,
+    \underset{r\to +\infty}{\sim} \delta \w{B}\lld\w{g}\rld .
 \ee
-then we may rewrite Eq.~(\ref{e:tha:Omega_dg_X_xi}) as
+Then we may rewrite Eq.~(\ref{e:tha:Omega_dg_X_xi}) as
 \be \label{e:tha:delta_H_xi}
     \delta H_{\w{\xi}} = \Omega(\delta\w{g}, X_{\w{\xi}}) ,
 \ee
@@ -1960,8 +1979,40 @@ the dynamics generated on the prephase space $(\FF,\Omega)$ by the vector field
 $X_{\w{\xi}}$ (action of the diffeomorphism group generated by $\w{\xi}$ on the solutions
 $\w{g}$ of the field equatons) is a Hamiltonian dynamics.
 
-
-
+\begin{prop}[existence criterion for a Hamiltonian conjugate to a vector field
+\textnormal{(Wald\index[pers]{Wald, R.M.} \& Zoupas\index[pers]{Zoupas, A.} 2000
+\cite{WaldZ00})}]
+A necessary condition for the existence of a Hamiltonian $H_{\w{\xi}}: \FF \to \R$ conjugate to the vector field $\w{\xi}$ is that
+\be \label{e:tha:crit_Hamil_exists}
+    \int_{\Sp_\infty} \w{\xi}\cdot\w{\omega}(\w{g},\delta_1\w{g},\delta_2\w{g}) = 0
+\ee
+for
+any pair of variations $(\delta_1\w{g},\delta_2\w{g})$ among the solutions to the field
+equations. Furthermore, if the prephase space $\FF$ is simply connected, this condition
+is sufficient.
+\end{prop}
+\begin{proof}
+If  $H_{\w{\xi}}$ exists, then by combining Eqs.~(\ref{e:tha:delta_H_xi}) and (\ref{e:tha:Omega_dg_X_xi}), we get
+\[
+    \delta_2 H_{\w{\xi}} = \delta_2 \mathscr{Q}_{\Sp_\infty,\w{\xi}}
+    \  -  \int_{\Sp_\infty} \!\! \w{\xi}\cdot\w{\theta}\lld\w{g},\delta_2\w{g}\rld ,
+\]
+where $\mathscr{Q}_{\Sp_\infty,\w{\xi}}$ is the
+Noether charge of $\Sp_\infty$ with respect to $\w{\xi}$
+[cf. Eq.~(\ref{e:tha:def_Noether_Q_surf})]. Performing the variation $\delta_1$ yields
+\[
+    \delta_1 \delta_2 H_{\w{\xi}} = \delta_1 \delta_2 \mathscr{Q}_{\Sp_\infty,\w{\xi}}
+    \ -  \int_{\Sp_\infty} \!\! \w{\xi}\cdot\delta_1\left(\w{\theta}\lld\w{g},\delta_2\w{g}\rld\right)  .
+\]
+By subtracting the term $1\leftrightarrow 2$ and using
+$(\delta_1 \delta_2 - \delta_2 \delta_1) H_{\w{\xi}} = 0$, as well
+as $(\delta_1 \delta_2 - \delta_2 \delta_1) \mathscr{Q}_{\Sp_\infty,\w{\xi}} = 0$,
+we obtain (\ref{e:tha:crit_Hamil_exists}), given the definition (\ref{e:tha:def_omega_der_theta})
+of $\w{\omega}$. Hence (\ref{e:tha:crit_Hamil_exists}) appears as a necessary
+condition for a Hamiltonian conjugate to $\w{\xi}$ to exist.
+To prove that it is sufficient when $\FF$ is simply connected, let us select
+a point $\w{g}_0\in\FF$ and define for any point ...
+\end{proof}
 
 
 
