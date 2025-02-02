@@ -455,6 +455,7 @@ $\w{Q}$ up to the addition of a closed $(n-2)$-form (cf. Lemma~1 in Ref.~\cite{W
 \end{proof}
 
 \begin{remark}
+\label{r:tha:notation_Q}
 As for $\w{J}\lld\w{\xi}\rld$ (cf. Remark~\ref{r:tha:notation_J} on p.~\pageref{r:tha:notation_J}), $\w{Q}\lld\w{\xi}\rld$ is a local function of $\w{g}$, in addition
 to $\w{\xi}$, although the dependency on $\w{g}$ is not explicited in the notation
 $\w{Q}\lld\w{\xi}\rld$.
@@ -1717,30 +1718,22 @@ Let us first show the last point, by evaluating $\w{\omega}$
 from Eq.~(\ref{e:tha:def_omega_der_theta})
 for $\w{\theta'}\lld\w{g},\delta\w{g}\rld = \w{\theta}\lld\w{g},\delta\w{g}\rld
 + \delta \w{\mu}\lld\w{g}\rld$.
-We may write
-$\delta\w{\mu}\lld\w{g}\rld=
-\w{\mu}^{(1)\mu\nu} \delta g_{\mu\nu}$,
-where $\w{\mu}^{(1)} = \w{\mu}^{(1)}  \lld\w{g}\rld$ is a tensor field
-of type $(2,n-1)$ (for the sake of consiceness, we omit the covariant indices
-$\alpha_1\cdots\alpha_{n-1}$).
-Introducing further the type-$(4,n-1)$ tensor
-field $\w{\mu}^{(2)} =  \w{\mu}^{(2)}  \lld\w{g}\rld$ such that
-$\delta \w{\mu}^{(1)\mu\nu} = \w{\mu}^{(2)\rho\sigma\mu\nu} \delta g_{\rho\sigma}$,
-the first term in the right-hand side of Eq.~(\ref{e:tha:def_omega_der_theta})
-becomes
+For $\delta\w{g} = (\dert{\w{g}}{\lambda_2}) \, \delta \lambda_2$, we get
+\[
+\w{\theta'}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld = \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld + \der{}{\lambda_2} \w{\mu}\lld\w{g}\rld ,
+\]
+so that
 \[
   \der{}{\lambda_1}
         \left( \w{\theta'}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
     = \der{}{\lambda_1}
         \left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld\right)
-        +  \w{\mu}^{(1)\mu\nu} \frac{\partial^2 g_{\mu\nu}}{\partial\lambda_1\partial\lambda_2}
-        +  \w{\mu}^{(2)\rho\sigma\mu\nu} \der{g_{\rho\sigma}}{\lambda_1}
-             \der{g_{\mu\nu}}{\lambda_2} .
+        + \frac{\partial^2}{\partial\lambda_1\partial\lambda_2} \w{\mu}\lld\w{g}\rld
+ .
 \]
-It is then clear that the terms
-involving $\w{\mu}^{(1)}$ and $\w{\mu}^{(2)}$ cancel with those
-arising from the term $\lambda_1 \leftrightarrow \lambda_2$
-in Eq.~(\ref{e:tha:def_omega_der_theta}).
+Thanks to the commutativity of partial derivatives, the terms
+involving $\w{\mu}$ cancel each other when substituting $\w{\theta'}$
+for $\w{\theta}$ in Eq.~(\ref{e:tha:def_omega_der_theta}).
 Hence the $(n-1)$-form $\w{\omega}$ computed from $\w{\theta'}$
 is the same as that computed from $\w{\theta}$.
 It follows then from Eq.~(\ref{e:tha:Omega_int_omega}) that
@@ -1802,13 +1795,17 @@ $\frac{\partial^2\w{L}}{\partial\lambda_1\partial\lambda_2} - \frac{\partial^2\w
 is trivially zero, hence the result (\ref{e:tha:omega_closed}).
 \end{proof}
 
-It turns out that in general, $\Omega$ is a \emph{degenerate} 2-form on $\FF$:
+It turns out that in general, the presymplectic form $\Omega$
+is \emph{degenerate}:
 there exists nonzero vectors $X$ on $\FF$, such that $\Omega(X,.) = 0$.
-Hence $\Omega$ fails to be a symplectic form.
-For instance, one may conceive that some nonzero variation $\delta\w{g}$
-is such that $\delta\w{g} = 0$ on the hypersurface $\Sigma$ involved
-in Eq.~(\ref{e:tha:Omega_int_omega}). Then, by linearity of $\w{\omega}$,
-$\w{\omega}\lld\w{g},\delta\w{g},.) = 0$ on $\Sigma$, so that $\delta\w{g}$ defines
+Hence $\Omega$ fails to be a symplectic form on $\FF$.
+For instance, one may conceive a nonzero variation $\delta\w{g}$
+of $\w{g}$ such that $\delta\w{g} = 0$ on the hypersurface $\Sigma$ involved
+in Eq.~(\ref{e:tha:Omega_int_omega}). Then, by linearity of
+$\w{\omega}\lld\w{g},\delta_1\w{g},\delta_2\w{g}\rld$ with respect to
+$\delta_1\w{g}$ and $\delta_2\w{g}$ (cf. Property~\ref{p:tha:presymplectic_current}), one has
+$\w{\omega}\lld\w{g},\delta\w{g},.\rld = 0$ on $\Sigma$
+and Eq.~(\ref{e:tha:Omega_int_omega}) shows that $\delta\w{g}$ defines
 a degeneracy direction of $\Omega$. More generally, the degeneracy of $\Omega$
 is related to the gauge freedom of the gravity theory, i.e. to the
 invariance by diffeomorphism. For general relativity, it has been shown
@@ -1818,7 +1815,7 @@ Eqs.~(\ref{e:tha:delta_g_Phistar})-(\ref{e:bas:delta_g_Lie_xi_g})] that reduce t
 (i.e. such that $\w{\xi}$ in Eq.~(\ref{e:bas:delta_g_Lie_xi_g}) tends to
 zero for $r\to +\infty$). The gauge freedom is intimately related to the
 initial value problem of the theory being \emph{not} well posed (it becomes
-well posed only in a fixed gauge, cf. Chap.~VI of Ref.~\cite{Choqu09}). Recall that in the covariant phase space
+well posed only in a fixed gauge, see e.g. Chap.~VI of Ref.~\cite{Choqu09}). Recall that in the covariant phase space
 construction of Property~\ref{p:tha:cov_phase_space}, it was required
 that the initial value problem is well posed to endow the space of solutions
 with a (non-degenerate) symplectic form.
@@ -1873,7 +1870,8 @@ Let $(\M,\w{g})$ be a $n$-dimensional spacetime governed by a
 diffeomorphism-invariant theory and let $\w{\xi}$ be a vector field on $\M$.
 Any variation $\delta\w{g}$ among the solutions to the field equations
 generates a variation $\delta\w{Q}\lld\w{\xi}\rld$ of the
-Noether potential $(n-2)$-form of $\w{\xi}$ (cf. Property~\ref{p:tha:Noether_pot_form}),
+Noether potential $(n-2)$-form of $\w{\xi}$ (cf. Property~\ref{p:tha:Noether_pot_form}
+and Remark~\ref{r:tha:notation_Q} on p.~\pageref{r:tha:notation_Q}),
 which obeys
 \be \label{e:tha:fund_identity}
     \w{\omega}\lld\w{g},\delta\w{g}, \Lie{\xi}\w{g}\rld =
@@ -1924,8 +1922,8 @@ Property~\ref{p:tha:omega_closed} tells that the $(n-1)$-form
 $\w{\omega}(\w{g},\delta_1\w{g},\delta_2\w{g})$ is closed for any pair
 of variations $(\delta_1\w{g},\delta_2\w{g})$ among the solutions to the field equations.
 Equation~(\ref{e:tha:fund_identity}) shows that, not only $\w{\omega}$ is closed, but it is
-\emph{globally}\footnote{Let us recall that thanks to Poincaré lemma (cf. Sec.~\ref{s:bas:ext_deriv}), one has \emph{locally}:
-$\w{\omega}$ closed $\implies$ $\w{\omega}$ exact.} exact as soon as one of these variations results from an infinitesimal diffeomorphism
+\emph{globally}\footnote{Let us recall that thanks to Poincaré lemma (cf. Sec.~\ref{s:bas:ext_deriv}),
+$\w{\omega}$ closed $\implies$ $\w{\omega}$ \emph{locally} exact.} exact as soon as one of these variations results from an infinitesimal diffeomorphism
 generated by a vector field $\w{\xi}$.
 \end{remark}
 
@@ -1936,7 +1934,7 @@ the \emph{fundamental identity} of the covariant phase space formalism for field
 \cite{HollaW13,HollaWZ24,GrumiS22,HajiaS16}.
 \end{remark}
 
-Let us assume the vector field $\w{\xi}$ is such that the diffeomorphisms of $\M$ generated
+Let us assume that the diffeomorphisms of $\M$ generated
 by $\w{\xi}$ preserve the asymptotic flatness conditions stated in Property~\ref{p:tha:asymp_flat_sol}. One may then associate to $\w{\xi}$ a vector field
 $X_{\w{\xi}}$ on the space $\FF$ of
 asymptotically flat solutions to the field equations,
@@ -1959,26 +1957,19 @@ If we substitute Eq.~(\ref{e:tha:fund_identity}) for $\w{\omega} \lld\w{g},\delt
 \ee
 where $\Sp_\infty = \lim_{r\to +\infty} \Sp_r$, $\Sp_r$ being the boundary
 of the hypersurface $\Sigma_r \subset \Sigma$ considered in Sec.~\ref{s:tha:cps_gravity}.
-Let us suppose that there exists a $(n-1)$-form $\w{B}\lld\w{g}\rld$ on $\M$ such that
-\be \label{e:tha:theta_asymp_B}
-   \w{\theta}\lld\w{g},\delta\w{g}\rld
-    \underset{r\to +\infty}{\sim} \delta \w{B}\lld\w{g}\rld .
-\ee
-Then we may rewrite Eq.~(\ref{e:tha:Omega_dg_X_xi}) as
+Let us suppose that the right-hand side of Eq.~(\ref{e:tha:Omega_dg_X_xi}) is a
+pure variation, i.e. that there exists a function $H_{\w{\xi}}: \FF \to \R$,
+$\w{g}\mapsto H_{\w{\xi}}[\w{g}]$ such that
 \be \label{e:tha:delta_H_xi}
-    \delta H_{\w{\xi}} = \Omega(\delta\w{g}, X_{\w{\xi}}) ,
+    \delta H_{\w{\xi}} = \delta \int_{\Sp_\infty}\!\! \w{Q}\lld\w{\xi}\rld
+    \ -  \int_{\Sp_\infty} \!\! \w{\xi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld .
 \ee
-with
-\be
-    H_{\w{\xi}} := \int_{\Sp_\infty}\!\! \left( \w{Q}\lld\w{\xi}\rld
-    - \w{\xi}\cdot  \w{B}\lld\w{g}\rld  \right) .
-\ee
-$H_{\w{\xi}} = H_{\w{\xi}}[\w{g}]$ can be considered as a scalar field on $\FF$
-and, since $\delta\w{g}$ is an infinitesimal displacement vector on $\FF$,
-we may write $\delta H_{\w{\xi}} = \langle \Dd H_{\w{\xi}}, \delta\w{g} \rangle$
-[cf. Eq.~(\ref{e:bas:df})].
-Given that $\delta\w{g}$ is a generic variation, we see
-that Eq.~(\ref{e:tha:delta_H_xi}) is equivalent to
+Then we can rewrite Eq.~(\ref{e:tha:Omega_dg_X_xi}) as
+$\delta H_{\w{\xi}} = \Omega(\delta\w{g}, X_{\w{\xi}})$.
+Given that
+$\delta H_{\w{\xi}} = \langle \Dd H_{\w{\xi}}, \delta\w{g} \rangle$
+[cf. Eq.~(\ref{e:bas:df})] and $\delta\w{g}$ is a generic variation, this is
+actually equivalent to
 \be \label{e:tha:DHxi_Omega_X_xi}
     \encadre{ \Dd H_{\w{\xi}} = \Omega( . , X_{\w{\xi}}) } .
 \ee
@@ -1986,12 +1977,31 @@ We recognize Eq.~(\ref{e:tha:DH_Omega_X_H_2}), which defines the Hamiltonian
 vector field $X_H$ in terms of the Hamiltonian $H$. The difference is that here $\Omega$
 is only a presymplectic form, while it was a true symplectic form
 in Eq.~(\ref{e:tha:DH_Omega_X_H_2}).
-Nevertheless, one says that $H_{\w{\xi}}$ is the
+Hence we could not invert $\Omega$ to define $X_{\w{\xi}}$ in terms of $H_{\w{\xi}}$,
+but this is not a problem here since $X_{\w{\xi}}$ is given a priori (as
+$\Lie{\xi} \w{g}$) and Eq.~(\ref{e:tha:DHxi_Omega_X_xi}) can rather be seen
+as defining $H_{\w{\xi}}$ from it.
+One says that $H_{\w{\xi}}$ is the
 \defin{Hamiltonian conjugate to the vector field $\w{\xi}$}\index{Hamiltonian!conjugate to a vector field}
-\cite{WaldZ00}. Hence if the asymptotic property (\ref{e:tha:theta_asymp_B}) is fulfilled,
+\cite{WaldZ00}. Hence, if there exists a function $H_{\w{\xi}}$ on $\FF$
+fulfilling (\ref{e:tha:delta_H_xi}),
 the dynamics generated on the prephase space $(\FF,\Omega)$ by the vector field
 $X_{\w{\xi}}$ (action of the diffeomorphism group generated by $\w{\xi}$ on the solutions
 $\w{g}$ of the field equatons) is a Hamiltonian dynamics.
+
+A natural question is then to determine under which conditions the vector field
+$\w{\xi}$ admits a conjugate Hamiltonian. A sufficient condition, independent
+of $\w{\xi}$, is that there exists a $(n-1)$-form $\w{B}\lld\w{g}\rld$ on $\M$ such that
+\be \label{e:tha:theta_asymp_B}
+   \w{\theta}\lld\w{g},\delta\w{g}\rld
+    \underset{r\to +\infty}{\sim} \delta \w{B}\lld\w{g}\rld .
+\ee
+Then a function $H_{\w{\xi}}$ fulfilling (\ref{e:tha:delta_H_xi}) is
+\be
+    H_{\w{\xi}}[\w{g}] := \int_{\Sp_\infty}\!\! \left( \w{Q}\lld\w{\xi}\rld
+    - \w{\xi}\cdot  \w{B}\lld\w{g}\rld  \right) .
+\ee
+More generally, a necessary and sufficient criterion is
 
 \begin{prop}[existence of a Hamiltonian conjugate to a vector field
 \textnormal{(Wald\index[pers]{Wald, R.M.} \& Zoupas\index[pers]{Zoupas, A.} 2000
@@ -2006,18 +2016,15 @@ equations. Furthermore, if the prephase space $\FF$ is simply connected, this co
 is sufficient.
 \end{prop}
 \begin{proof}
-If  $H_{\w{\xi}}$ exists, then by combining Eqs.~(\ref{e:tha:delta_H_xi}) and (\ref{e:tha:Omega_dg_X_xi}), we get
+Let us suppose that $H_{\w{\xi}}$ exists. Then, by taking the variation $\delta_1$
+of Eq.~(\ref{e:tha:delta_H_xi}) written for $\delta = \delta_2$, we get
 \[
-    \delta_2 H_{\w{\xi}} = \delta_2 \mathscr{Q}_{\Sp_\infty,\w{\xi}}
-    \  -  \int_{\Sp_\infty} \!\! \w{\xi}\cdot\w{\theta}\lld\w{g},\delta_2\w{g}\rld ,
+    \delta_1 \delta_2 H_{\w{\xi}} = \delta_1 \delta_2 \mathscr{Q}_{\Sp_\infty,\w{\xi}}
+    \ -  \int_{\Sp_\infty} \!\! \w{\xi}\cdot\delta_1\left(\w{\theta}\lld\w{g},\delta_2\w{g}\rld\right)  ,
 \]
 where $\mathscr{Q}_{\Sp_\infty,\w{\xi}}$ is the
 Noether charge of $\Sp_\infty$ with respect to $\w{\xi}$
-[cf. Eq.~(\ref{e:tha:def_Noether_Q_surf})]. Performing the variation $\delta_1$ yields
-\[
-    \delta_1 \delta_2 H_{\w{\xi}} = \delta_1 \delta_2 \mathscr{Q}_{\Sp_\infty,\w{\xi}}
-    \ -  \int_{\Sp_\infty} \!\! \w{\xi}\cdot\delta_1\left(\w{\theta}\lld\w{g},\delta_2\w{g}\rld\right)  .
-\]
+[cf. Eq.~(\ref{e:tha:def_Noether_Q_surf})].
 By subtracting the term $1\leftrightarrow 2$ and using
 $(\delta_1 \delta_2 - \delta_2 \delta_1) H_{\w{\xi}} = 0$, as well
 as $(\delta_1 \delta_2 - \delta_2 \delta_1) \mathscr{Q}_{\Sp_\infty,\w{\xi}} = 0$,
@@ -2025,7 +2032,27 @@ we obtain (\ref{e:tha:crit_Hamil_exists}), given the definition (\ref{e:tha:def_
 of $\w{\omega}$. Hence (\ref{e:tha:crit_Hamil_exists}) appears as a necessary
 condition for a Hamiltonian conjugate to $\w{\xi}$ to exist.
 To prove that it is sufficient when $\FF$ is simply connected, let us select
-a point $\w{g}_0\in\FF$ and define for any point ...
+a point $\w{g}_0\in\FF$ and define for any point $\w{g}\in\FF$ and any
+curve $\Li$ from $\w{g}_0$ to $\w{g}$,
+\[
+    \mathcal{H}(\w{g},\Li) := \int_{\Li} \alpha
+\]
+where $\alpha$ is the 1-form on $\FF$ defined by the following action on
+a vector $X = \dert{\w{g}}{\lambda}$:
+\[
+    \langle\alpha, X \rangle =
+    \int_{\Sp_\infty}\!\! \left(  \der{}{\lambda} \w{Q}\lld\w{\xi}\rld
+    - \w{\xi}\cdot\w{\theta}\Lld\w{g},\der{\w{g}}{\lambda}\Rld \right) .
+\]
+Let $\Li'$ be another curve of $\FF$ connecting $\w{g}_0$ to $\w{g}$.
+If $\FF$ is simply connected, there exists a homotopy from $\Li$ to $\Li'$.
+This defines a 2-surface $\mathcal{W}$ of $\FF$, the boundary of which is
+$\Li\cup (-\Li')$, which is spanned by a 2-parameter family $\w{g}(\lambda_1,\lambda_2)$
+of solutions to the field equations. Stokes' theorem (\ref{e:bas:Stokes}) yields then
+\[
+    \mathcal{H}(\w{g},\Li) - \mathcal{H}(\w{g},\Li') = \int_{\mathcal{W}} \Dd \alpha .
+\]
+
 \end{proof}
 
 
