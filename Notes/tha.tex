@@ -1262,7 +1262,7 @@ correspondance between a point of $\FF$ and a solution.
 Consequently, one may view $\FF$ as the \emph{space of solutions}
 to the equations of motion.
 This is the essence of the
-so-called \emph{covariant phase space}\index{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --} approach:
+so-called \emph{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --} approach:
 
 \begin{prop}[covariant phase space]
 \label{p:tha:cov_phase_space}
@@ -1287,7 +1287,7 @@ Moreover, the pullback of the symplectic form $\Omega$ by $\Phi_{t_0}$,
 \ee
 defines a symplectic form on $\FF_{\rm sol}$, which
 is actually independent of $t_0$. This makes $(\FF_{\rm sol},\Omega_{\rm sol})$
-a well-defined symplectic manifold, called the \defin{covariant phase space}\index{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --}
+a well-defined symplectic manifold, called the \defin{covariant phase space}\index{covariant!phase space}\index{phase space!covariant --}
 of the system.
 Infinitesimal displacement vectors on the manifold $\FF_{\rm sol}$
 correspond to infinitesimal variations $\delta S$ between solutions,
@@ -1356,7 +1356,12 @@ a gravity theory governed by a Lagrangian of the type (\ref{e:tha:Lagrangian_dif
 let us consider the
 space $\FF_{\rm sol}$ of solutions $\w{g}$ to the field equations
 (\ref{e:tha:eom_E}). Since no confusion may arise, for simplicity,
-we shall drop the index ``sol'' and denote this space simply by $\FF$.
+we shall drop the index ``sol'' and denote this space simply by\footnote{Be aware that in
+some part of the
+literature \cite{AshteBR91,LeeW90,WaldZ00}, $\FF$ denotes instead the space of all fields $\w{g}$
+that are required to only obey some asymptotic flatness conditions, but necessarily the field equations;
+the subspace of solutions to the field equations --- our $\FF$ --- is then denoted
+by $\bar{\FF}$ \cite{LeeW90,WaldZ00} or $\Gamma$ \cite{AshteBR91}.} $\FF$.
 A difference with what precedes is that
 we are dealing with a field theory, which, by essence, has
 an infinite number of degrees of freedom. In other words,
@@ -1370,7 +1375,7 @@ Since any point of $\FF$ is a metric field $\w{g}$ on $\M$, a variation $\delta\
 can be viewed as an infinitesimal displacement vector between two neighboring points of the manifold
 $\FF$, similar to the displacement vector $\D\w{x}$ on $\M$ introduced in Secs.~\ref{s:fra:general_settings} and \ref{s:bas:vectors}.
 As in the finite dimensional case
-(cf. Sec.~\ref{s:bas:vectors}), finite vectors on $\FF$
+(cf. Sec.~\ref{s:bas:vectors}), (non-infinitesimal) vectors on $\FF$
 are defined\footnote{Notice that the definition (\ref{e:bas:def_vector}) of a tangent vector
 does not require the manifold to be of finite dimension.} as tangent vectors
 along \emph{curves of} $\FF$, the latter being the images of smooth maps
@@ -1402,11 +1407,9 @@ $\Psi(p') = (t', q')$ and $\Psi(p) = (t, q)$ with $t'>t$.
 
 We shall restrict the space $\FF$ of solutions $\w{g}$ of the considered gravity theory
 to those that are asymptotically flat, with the asymptotically flat end corresponding to
-$\hat{\Sigma}_{\rm ext}$. The precise definition of \defin{asympotically flat}\index{asympotically!flat}\index{flat!asymptotically --} depends on the gravity theory
+$\hat{\Sigma}_{\rm ext}$. The precise definition of \defin{asymptotically flat}\index{asymptotically!flat}\index{flat!asymptotically --} depends on the gravity theory
 and should be such that some integrals indicated below converge and that
 the asymptotic limit of some surface integrals is zero.
-For general relativity, a precise definition
-of asymptotic flatness fulfilling these requirements is given in Ref.~\cite{AshteBR91}.
 \end{prop}
 
 We are going to see that, from the action (\ref{e:tha:action_L}),
@@ -1516,6 +1519,8 @@ $\Dd\Omega = 0$. One then says that $\Omega$ is a
 \defin{presymplectic form}\index{presymplectic!form}\footnote{Recall that a \emph{symplectic form} is a 2-form that is closed \emph{and} non-degenerate; as we shall discuss
 below, $\Omega$ is actually degenerate.} on $\FF$.
 Moreover, $\Omega$ does not depend on the choice of the hypersurface $\Sigma$.
+The pair $(\FF,\Omega)$ is called the \defin{prephase space}\index{prephase space} of the considered gravity theory
+(and asymptotic flatness conditions).
 \end{prop}
 
 \begin{proof}
@@ -1600,7 +1605,7 @@ of the considered gravity theory
 $\w{\omega}$ is called the
 \defin{presymplectic current $(n-1)$-form}\index{presymplectic!current form}
 \cite{WaldZ00}\footnote{It is called the \emph{symplectic current $(n-1)$-form}
-in articles by Wald and Iyer \cite{Wald93,IyerW94} preceding \cite{WaldZ00}, but as
+in articles by Wald and Iyer \cite{Wald93,IyerW94} preceding \cite{WaldZ00}, but, as
 discussed below, \emph{presymplectic} is a better qualifier than \emph{symplectic}.}.
 It has a local dependence on the metric tensor $\w{g}$
 and on the derivatives $\dert{\w{g}}{\lambda_1}$ and $\dert{\w{g}}{\lambda_2}$
@@ -1861,7 +1866,8 @@ $\bar{\Omega}(\bar{X}_1, \bar{X}_2)$ is unambiguously  defined. It can be shown
 that $\bar{\Omega}$ is a closed non-degenerate 2-form, i.e.
 a symplectic form (cf. Refs.~\cite{HarloW20,LeeW90} for details).
 The genuine covariant phase space of the considered gravity theory
-is then $(\bar{\FF},\bar{\Omega})$.
+is then $(\bar{\FF},\bar{\Omega})$. However, in what follows, we will deal
+only with the prephase space $(\FF,\Omega)$.
 
 \subsection{First law for diffeomorphism-invariant theories}
 
@@ -1934,15 +1940,19 @@ the \emph{fundamental identity} of the covariant phase space formalism for field
 \cite{HollaW13,HollaWZ24,Compe19,GrumiS22,HajiaS16}.
 \end{remark}
 
-Let us assume that the diffeomorphisms of $\M$ generated
-by $\w{\xi}$ preserve the asymptotic flatness conditions stated in Property~\ref{p:tha:asymp_flat_sol}. One may then associate to $\w{\xi}$ a vector field
+One says that the vector field $\w{\xi}$ on $\M$ is a
+\defin{generator of an asymptotic symmetry}\index{asymptotic!symmetry!generator}
+iff the diffeomorphisms of $\M$ generated
+by $\w{\xi}$ preserve the asymptotic flatness conditions stated in Property~\ref{p:tha:asymp_flat_sol}.
+Equivalently, $\Phi_*\w{g}\in \FF$ for any $\w{g}\in\FF$ and any diffeomorphism $\Phi$
+in the 1-dimensional diffeomorphism group $G$ generated by $\w{\xi}$.
+One may then associate to $\w{\xi}$ a vector field
 $X_{\w{\xi}}$ on the space $\FF$ of
 asymptotically flat solutions to the field equations,
-as the tangent vector to the orbits of the diffeomorphism group generated by
-$\w{\xi}$ acting on $\FF$: $X_{\w{\xi}}$ is the
+as the tangent vector to the orbits of $G$ acting on $\FF$: $X_{\w{\xi}}$ is the
 vector field defined by Eq.~(\ref{e:tha:X_dg/dlambda}):
 $X_{\w{\xi}} = \delta\w{g} / \delta\lambda$, with $\delta\w{g}$ given
-by Eq.~(\ref{e:bas:delta_g_Lie_xi_g}): $\delta\w{g} = \delta\lambda\, \Lie{\xi} \w{g}$.
+by Eq.~(\ref{e:bas:delta_g_Lie_xi_g}) with $t=\delta\lambda$: $\delta\w{g} = \delta\lambda\, \Lie{\xi} \w{g}$.
 The presymplectic product of a generic infinitesimal displacement $\delta\w{g}$ on
 $\FF$ by $X_{\w{\xi}}$ is then given by Eq.~(\ref{e:tha:Omega_int_omega}):
 \[
