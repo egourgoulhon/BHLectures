@@ -112,7 +112,7 @@ lower order derivatives.} covariant derivatives of the latter:
 \end{prop}
 The reader is referred to the original article \cite{IyerW94} for the proof.
 
-\begin{example}
+\begin{example}[Lagrangian of general relativity]
 \label{x:tha:EH_Lagrangian}
 For general relativity, $L$ is the Einstein-Hilbert Lagrangian\index{Einstein-Hilbert action}:
 \be \label{e:tha:Hilbert_Lagrangian}
@@ -185,7 +185,8 @@ for simplicity, we shall no longer consider the $\delta\w{\mu}$
 degree of freedom in the choice of $\w{\theta}$.
 \end{remark}
 
-\begin{example} \label{x:tha:theta_GR}
+\begin{example}[presymplectic potential form of general relativity]
+\label{x:tha:theta_GR}
 For general relativity, one has $\w{L} = (16\pi)^{-1} R \weps$
 [Eq.~(\ref{e:tha:Hilbert_Lagrangian})].
 Given a coordinate system $(x^\alpha)$
@@ -254,7 +255,8 @@ Consequently, having $\delta \mathcal{S} = 0$ for any variation $\delta\w{g}$ is
 Eq.~(\ref{e:tha:eom_E}).
 \end{proof}
 
-\begin{example} \label{x:tha:field_equations_GR}
+\begin{example}[field equations of general relativity]
+\label{x:tha:field_equations_GR}
 For general relativity, $\w{E}$ is given by Eq.~(\ref{e:tha:E_Theta_GR}).
 Hence the field equations (\ref{e:tha:eom_E}) become $\w{G} = 0$, which
 is equivalent to $\w{R}=0$ --- the
@@ -385,10 +387,9 @@ $\w{J}\lld\w{g},\w{\xi}\rld$. However for the sake of brevety, we use
 $\w{J}\lld\w{\xi}\rld$, leaving the dependency on $\w{g}$ implicit.
 \end{remark}
 
-\begin{example}
-Let us continue with the example of general relativity. From
-expression (\ref{e:tha:Theta_GR}) for $\w{\theta}$ with
-$\delta g_{\mu\nu} = t \Liec{\xi} g_{\mu\nu}$ and $\Liec{\xi} g_{\mu\nu} = \nabla_\mu \xi_\nu + \nabla_\nu \xi_\mu$ [Eq.~(\ref{e:bas:Lie_g_Killing})], we get
+\begin{example}[Noether current form of general relativity]
+From expression (\ref{e:tha:Theta_GR}) for $\w{\theta}$ in general relativity
+with $\delta g_{\mu\nu} = t \Liec{\xi} g_{\mu\nu} = t(\nabla_\mu \xi_\nu + \nabla_\nu \xi_\mu)$[Eq.~(\ref{e:bas:Lie_g_Killing})], we get
 \bea
  16\pi   \theta\lld\w{g},\Lie{\xi}\w{g}\rld_{\alpha_1\cdots\alpha_{n-1}} & = &
   g^{\mu\nu} \left( \nabla_\sigma \nabla_\nu \xi^\sigma + \nabla_\sigma \nabla^\sigma \xi_\nu
@@ -473,10 +474,10 @@ the \emph{Noether-Wald charge density}\index{Noether-Wald charge density}
 \cite{GrumiS22,HajiaS16}.
 \end{remark}
 
-\begin{example}
+\begin{example}[Noether potential form of general relativity]
 \label{x:tha:Noether_potential_form_GR}
 For general relativity, $\w{J}\lld\w{\xi}\rld$ is given by Eq.~(\ref{e:tha:J_GR_comp}), or Eq.~(\ref{e:tha:J_GR_Komar}) in terms of the Komar current of $\w{\xi}$.
-Let us show that the corresponding Noether potential $(n-2)$-form is nothing but the Hodge dual of the exterior derivative
+Let us show that $\w{Q}\lld\w{\xi}\rld$ is then nothing but the Hodge dual of the exterior derivative
 of the 1-form $\uu{\xi}$ (the metric dual to $\w{\xi}$), up to the factor $-(16\pi)^{-1}$:
 \be \label{e:tha:Q_GR_Komar}
     \w{Q}\lld\w{\xi}\rld = - (16\pi)^{-1}\, \star (\dd \uu{\xi}) .
@@ -820,7 +821,7 @@ where
 \item ${\delta L}/{\delta R_{\alpha\beta\gamma\delta}}$ stands for the type-$(4,0)$ tensor field that is the \defin{Euler-Lagrange derivative}\index{Euler-Lagrange!derivative}
 of $L$ with respect to $R_{\alpha\beta\gamma\delta}$, if the latter were considered as a field independent
 of $g_{\alpha\beta}$ in expression~(\ref{e:tha:Lagrangian_diffeo_inv}) of $L$:
-\be
+\be \label{e:tha:dLdRiem}
     \frac{\delta L}{\delta R_{\alpha\beta\gamma\delta}} := \der{L}{R_{\alpha\beta\gamma\delta}}
         - \nabla_\mu  \der{L}{\nabla_\mu R_{\alpha\beta\gamma\delta}}
         + \nabla_{(\mu} \nabla_{\nu)} \der{L}{\nabla_{(\mu} \nabla_{\nu)} R_{\alpha\beta\gamma\delta}}
@@ -856,11 +857,9 @@ where $\D S =  \sqrt{q}\, \D^{n-2} x$ is the area element of $\hat{\Sp}$.
 \end{prop}
 We refer to Ref.~\cite{IyerW94} for the proof.
 Here, we shall just check that formula~(\ref{e:tha:S_Wald_explicit}) yields the
-correct value for general relativity:
-
-\begin{example}
-For general relativity,  $L = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu}$
-[Eq.~(\ref{e:tha:Hilbert_Lagrangian})], so that
+correct value for general relativity: in this case,
+$L = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu}$
+[Eq.~(\ref{e:tha:Hilbert_Lagrangian})], so that Eq.~(\ref{e:tha:dLdRiem}) results in
 \[
     \frac{\delta L}{\delta R_{\alpha\beta\gamma\delta}} = \der{L}{R_{\alpha\beta\gamma\delta}}
     = \frac{1}{16\pi} g^{\alpha\gamma} g^{\beta\delta} .
@@ -878,12 +877,12 @@ where $A$ is the area of $\hat{\Sp}$ and $({}^{\hat{\Sp}}\!\!\eps^\perp)^{\mu\nu
 follows immediately from Eq.~(\ref{e:tha:eps_perp_s_wedge_n}) along with
 $n_\mu n^\mu = -1$, $n_\mu s^\mu = 0$ and $s_\mu s^\mu = 1$.
 Hence we recover formula~(\ref{e:tha:S_W_S_BH_GR}) --- the Bekenstein-Hawking entropy.
-\end{example}
+
 
 Of course, being defined by a formula that reduces to the Bekenstein-Hawking entropy
 for general relativity (Property~\ref{p:tha:Wald_S_for_GR})
 is not sufficient by itself to assert that the Wald entropy
-is the correct concept of entropy for all theories
+is the correct concept of black hole entropy for all theories
 of gravity. This holds because the Wald entropy naturally enters in the
 generalization of the first law to all diffeomorphism-invariant theories
 that admit a Hamiltonian formulation, to which we turn now.
@@ -1649,7 +1648,7 @@ $\frac{\partial^2\w{g}}{\partial\lambda_1\partial\lambda_2} = \frac{\partial^2\w
 Hence the notation $\w{\omega} = \w{\omega}\lld\w{g},  \dert{\w{g}}{\lambda_1}, \dert{\w{g}}{\lambda_2} \rld$.
 \end{proof}
 
-\begin{example}
+\begin{example}[presymplectic current form of general relativity]
 For general relativity, one deduces from expression~(\ref{e:tha:Theta_GR})
 for $\w{\theta}$ and the definition (\ref{e:tha:def_omega_der_theta}) that
 the presymplectic current $(n-1)$-form is
@@ -2131,6 +2130,32 @@ of the spacetime $(\M,\w{g})$ is then the value of $H_{\w{\xi}}$ at $\w{g}$:
     - \w{\xi}\cdot  \w{B} \right) .
 \ee
 \end{greybox}
+
+\begin{example}[canonical energy for general relativity is ADM energy]
+From expression~(\ref{e:tha:Q_GR_Komar}) for $\w{Q}\lld\w{\xi}\rld$
+in general relativity, we get
+\[
+   \int_{\Sp_\infty}\!\! \w{Q}\lld\w{\xi}\rld = - \frac{1}{16\pi}
+        \int_{\Sp_\infty}\!\! \star (\dd \uu{\xi})
+        = - \frac{1}{32\pi}
+        \int_{\Sp_\infty}\!\! (\dd \uu{\xi})_{\mu\nu} \, \D S^{\mu\nu}
+        = - \frac{1}{16\pi}
+        \int_{\Sp_\infty}\!\! \nabla_\mu \xi_\nu  \, \D S^{\mu\nu} ,
+\]
+where we have used Lemma~\ref{p:sta:flux_integ_2form} to express the integral
+in terms of the area element normal bivector $\D\w{S}$ to $\Sp_\infty$
+and have used formula (\ref{e:bas:def_ext_1f_nab}) and the antisymmetry of $\D\w{S}$
+to get the last equality. Now, since $\w{\xi}$ generates an asymptotic time translation,
+there exists in the vicinity of $\Sp_\infty$ a coordinate system
+$(x^\alpha)=(t,x^i)$
+($1\leq i \leq n-1$) such that, for $r\to+\infty$, $\w{\xi} \sim \wpar_t$
+and $\w{g}\sim \w{f}$, where
+$\w{f} = - \dd t^2 + f_{ij} \dd x^i \otimes \dd x^j$ is a flat metric.
+$\Sp_{\infty}$ can be considered as the limit $r\to+\infty$ of a $(n-2)$-dimensional
+surface lying in the hypersurface
+
+
+\end{example}
 
 \subsection{First law for diffeomorphism-invariant theories}
 
