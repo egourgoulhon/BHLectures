@@ -2140,20 +2140,84 @@ in general relativity, we get
         = - \frac{1}{32\pi}
         \int_{\Sp_\infty}\!\! (\dd \uu{\xi})_{\mu\nu} \, \D S^{\mu\nu}
         = - \frac{1}{16\pi}
-        \int_{\Sp_\infty}\!\! \nabla_\mu \xi_\nu  \, \D S^{\mu\nu} ,
+        \int_{\Sp_\infty}\!\! \partial_\mu \xi_\nu  \, \D S^{\mu\nu} ,
 \]
 where we have used Lemma~\ref{p:sta:flux_integ_2form} to express the integral
 in terms of the area element normal bivector $\D\w{S}$ to $\Sp_\infty$
-and have used formula (\ref{e:bas:def_ext_1f_nab}) and the antisymmetry of $\D\w{S}$
+and have used formula (\ref{e:bas:def_ext_1f}) and the antisymmetry of $\D\w{S}$
 to get the last equality. Now, since $\w{\xi}$ generates an asymptotic time translation,
-there exists in the vicinity of $\Sp_\infty$ a coordinate system
-$(x^\alpha)=(t,x^i)$
-($1\leq i \leq n-1$) such that, for $r\to+\infty$, $\w{\xi} \sim \wpar_t$
-and $\w{g}\sim \w{f}$, where
-$\w{f} = - \dd t^2 + f_{ij} \dd x^i \otimes \dd x^j$ is a flat metric.
-$\Sp_{\infty}$ can be considered as the limit $r\to+\infty$ of a $(n-2)$-dimensional
-surface lying in the hypersurface
-
+we have $\w{\xi} = \wpar_t$, where $t$ is the first coordinate of
+an \emph{asymptotically Minkowskian system}
+$(x^\alpha)=(t,x^1,\ldots,x^{n-1})$, i.e. a coordinate system such that
+$\w{g} \sim \w{f}$ for $r:=\sqrt{(x^1)^2 + \cdots (x^{n-1})^2}\to +\infty$,
+where $\w{f}$ is the flat metric whose components w.r.t. $(x^\alpha)$ are
+$f_{\alpha\beta} = \mathrm{diag}(-1,1,\ldots,1)$.
+This proprety is in agreement with the asymptotic flatness conditions.
+$\Sp_{\infty}$ can then be considered as the limit $r\to+\infty$ of a $(n-2)$-sphere
+$\Sp_{t,r}$ defined by $(t,r)=\mathrm{const}$.
+From Eq.~(\ref{e:sta:area_bivector}), we have
+$\D S^{\mu\nu} := (s^\mu n^\nu - n^\mu s^\nu) \, \D S$,
+with $\D S := \sqrt{q}\, \D^{n-2} y$ (the area element of $\Sp_{t,r}$)
+and, at the limit $r\to+\infty$,
+$n^\mu = \xi^\mu = \delta^\mu_{\ \, t}$ and $s^\mu = (0, s^i)$, with $s^i := x^i/r$
+for $i\in \{1,\ldots,n-1\}$. Furthermore, $\xi_\nu = g_{\nu\sigma} \xi^\sigma
+= g_{t\nu}$. Hence, there comes
+\[
+   \int_{\Sp_\infty}\!\! \w{Q}\lld\w{\xi}\rld =  - \frac{1}{16\pi}
+        \int_{\Sp_\infty}\!\! \partial_\mu g_{t\nu}
+        (s^\mu \delta^\nu_{\ \, t} - \delta^\mu_{\ \, t} s^\nu) \, \D S
+        =  - \frac{1}{16\pi}  \int_{\Sp_\infty}\!\!
+            \left( \partial_i g_{tt} - \partial_t g_{ti} \right) s^i \, \D S .
+\]
+On the other hand, given expression~(\ref{e:tha:E_Theta_GR}) for $\w{\theta}$ in
+general relativity, we may write
+\be \label{e:tha:theta_GR_asymp_barH}
+\w{\theta} \underset{r\to +\infty}{\sim}  (16\pi)^{-1} \, \w{\bar{H}}\cdot\w{e}
+\ee
+where $\w{e}$ is the Levi-Civita tensor of the flat metric $\w{f}$ and
+$\w{\bar{H}}$ is the vector defined from $\delta\w{g}$ in the same
+way as $\w{H}$ in Eq.~(\ref{e:evo:def_H}), but substituting $\w{f}$ for $\w{g}$:
+\[
+    \bar{H}^\alpha = f^{\alpha\rho} f^{\mu\nu} \left( \mathcal{D}_\nu \delta g_{\rho\mu}
+        - \mathcal{D}_\rho \delta g_{\mu\nu} \right)
+        = \delta K^\alpha, \quad\mbox{with}\quad
+        K^\alpha := f^{\alpha\rho} f^{\mu\nu} \left( \mathcal{D}_\nu g_{\rho\mu}
+        - \mathcal{D}_\rho g_{\mu\nu} \right) ,
+\]
+where $\w{\mathcal{D}}$ stands for the covariant derivative associated to $\w{f}$.
+The identity $\bar{H}^\alpha = \delta K^\alpha$ holds because
+$\delta \w{f} = 0$ and $\w{\mathcal{D}}\delta = \delta\w{\mathcal{D}}$,
+given that $\w{f}$ is independent of $\w{g}$. For the same reason, $\delta\w{e} = 0$
+and we deduce from Eq.~(\ref{e:tha:theta_GR_asymp_barH}) that
+\[
+    \w{\theta} \underset{r\to +\infty}{\sim} \delta \w{B},
+    \quad\mbox{with}\quad
+    \w{B} := (16\pi)^{-1} \, \w{K}\cdot\w{e} .
+\]
+The $(n-1)$-form $\w{B}$
+defined above is thus fulfilling Eq.~(\ref{e:tha:int_xi_theta_B}),
+thereby ensuring that a Hamiltonian conjugate to $\w{\xi}$ exists.
+We have then
+$\w{\xi}\cdot\w{B} = (16\pi)^{-1} \, \w{\xi}\cdot(\w{K}\cdot\w{e})
+= (16\pi)^{-1} \, \w{e}(\w{K},\w{\xi},\ldots) = (16\pi)^{-1} \star_f (\uu{K}_{f}\wedge\uu{\xi}_f)$,
+where $\uu{K}\wedge\uu{\xi}$ stands for the 2-form of components
+$(\uu{K}\wedge\uu{\xi})_{\alpha\beta} = K_\alpha \xi_\beta - \xi_\alpha K_\beta$
+and we have used Eq.~(\ref{e:sta:Hodge_dual}) with $p=2$ to let appear the Hodge dual
+of $\uu{H}\wedge\uu{\xi}$. Using again Lemma~\ref{p:sta:flux_integ_2form}
+and the antisymmetry property
+$(H_\mu \xi_\nu - \xi_\mu H_\nu) \, \D S^{\mu\nu} = 2 H_\mu \xi_\nu \, \D S^{\mu\nu}$,
+we arrive at
+\bea
+\int_{\Sp_\infty}\!\! \w{\xi}\cdot\w{\theta}
+        & = & \frac{1}{16\pi}
+        \int_{\Sp_\infty}\!\! H_\mu \xi_\nu  \, \D S^{\mu\nu}
+        = \frac{1}{16\pi}
+        \int_{\Sp_\infty}\!\! H_\mu g_{t\nu}
+        (s^\mu \delta^\nu_{\ \, t} - \delta^\mu_{\ \, t} s^\nu) \,  \D S \nonumber \\
+    & = & \frac{1}{16\pi}
+        \int_{\Sp_\infty}\!\!  (H_i  \underbrace{g_{tt}}_{-1} - H_t
+        \underbrace{g_{ti}}_{0} ) s^i \, \D S  \nonumber
+\eea
 
 \end{example}
 
