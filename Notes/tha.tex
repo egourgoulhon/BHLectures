@@ -2011,6 +2011,52 @@ the presymplectic potential $(n-1)$-form is
 $\w{\theta}\lld\w{g},\delta\w{g}\rld
     \underset{r\to +\infty}{\sim} \delta \w{B}\lld\w{g}\rld$
 for some $(n-1)$-form $\w{B}\lld\w{g}\rld$.
+
+\begin{example}[asymptotic behavior of the presymplectic potential form of general relativity]
+Thanks to the asymptotic flatness conditions, let us introduce a flat metric
+$\w{f}$ on $\M$ (or at least in the asymptotic region of $\M$)
+such that $\w{g} \sim \w{f}$ for $r\to+\infty$.
+In general relativity, $\w{\theta}$ is given by Eq.~(\ref{e:tha:E_Theta_GR}):
+$\w{\theta} =  (16\pi)^{-1} \, \w{H}\cdot\weps$.
+We may then write
+\be \label{e:tha:theta_GR_asymp_barH}
+\w{\theta}\lld\w{g},\delta\w{g}\rld \underset{r\to +\infty}{\sim}  (16\pi)^{-1} \,
+\w{\bar{H}}\lld\delta\w{g}\rld\cdot\w{e} ,
+\ee
+where $\w{e}$ is the Levi-Civita tensor of $\w{f}$ and
+$\w{\bar{H}}\lld\delta\w{g}\rld$ is the vector defined from $\delta\w{g}$ in the same
+way as $\w{H}$ in Eq.~(\ref{e:evo:def_H}), but substituting $\w{f}$ for $\w{g}$:
+$\bar{H}^\alpha := f^{\alpha\rho} f^{\mu\nu} \left( \mathcal{D}_\nu \delta g_{\rho\mu}
+        - \mathcal{D}_\rho \delta g_{\mu\nu} \right)$,
+where $\w{\mathcal{D}}$ stands for the covariant derivative associated to $\w{f}$.
+Since $\delta \w{f} = 0$ and $\w{\mathcal{D}}\delta = \delta\w{\mathcal{D}}$,
+for $\w{f}$ is independent of $\w{g}$, we may write
+$\w{\bar{H}}\lld\delta\w{g}\rld = \delta\w{K}\lld\w{g}\rld$, where $\w{K}\lld\w{g}\rld$ is the vector field defined by
+\be \label{e:tha:def_K_f_Dg}
+    K^\alpha := f^{\alpha\rho} f^{\mu\nu} \left( \mathcal{D}_\nu g_{\rho\mu}
+        - \mathcal{D}_\rho g_{\mu\nu} \right) .
+\ee
+Since $\delta\w{e} = 0$ (for $\w{f}$ is independent of $\w{g}$), we
+deduce from Eq.~(\ref{e:tha:theta_GR_asymp_barH}) that
+\be \label{e:tha:B_K_GR}
+    \w{\theta}\lld\w{g},\delta\w{g}\rld \underset{r\to +\infty}{\sim} \delta \w{B}\lld\w{g}\rld,
+    \quad\mbox{with}\quad
+    \w{B}\lld\w{g}\rld := (16\pi)^{-1} \, \w{K}\lld\w{g}\rld\cdot\w{e} .
+\ee
+The $(n-1)$-form $\w{B}\lld\w{g}\rld$
+defined above fulfills Eq.~(\ref{e:tha:int_xi_theta_B}),
+thereby ensuring that a conjugate Hamiltonian $H_{\w{\xi}}$ exists
+for any asymptotic symmetry generator $\w{\xi}$.
+\end{example}
+
+\begin{remark}
+As the above example shows, the $(n-1)$-form $\w{B}\lld\w{g}\rld$ does not need
+to be covariantly defined: the $(n-1)$-form defined by Eq.~(\ref{e:tha:B_K_GR})
+depends of the flat metric $\w{f}$, which is arbitrarily chosen.
+In particular, $\w{B}\lld\w{g}\rld$ is highly non-unique; what matters is only
+its asymptotic behavior.
+\end{remark}
+
 If condition (\ref{e:tha:int_xi_theta_B}) is satisfied, then
 a function $H_{\w{\xi}}$ fulfilling (\ref{e:tha:delta_H_xi}) is
 \be \label{e:tha:Hxi_Q_B}
@@ -2125,7 +2171,7 @@ a Hamiltonian $H_{\w{\xi}}$ conjugate to $\w{\xi}$ exists and there exists a $(n
 $\w{B}$ on $\M$ such that $H_{\w{\xi}}$ takes the form
 (\ref{e:tha:Hxi_Q_B}). The \defin{canonical energy}\index{canonical!energy}\index{energy!canonical --}
 of the spacetime $(\M,\w{g})$ is then the value of $H_{\w{\xi}}$ at $\w{g}$:
-\be
+\be \label{e:tha:def_canonical_energy}
     \mathcal{E} :=  \int_{\Sp_\infty}\!\! \left( \w{Q}\lld\w{\xi}\rld
     - \w{\xi}\cdot  \w{B} \right) .
 \ee
@@ -2148,11 +2194,10 @@ and have used formula (\ref{e:bas:def_ext_1f}) and the antisymmetry of $\D\w{S}$
 to get the last equality. Now, since $\w{\xi}$ generates an asymptotic time translation,
 we have $\w{\xi} = \wpar_t$, where $t$ is the first coordinate of
 an \emph{asymptotically Minkowskian system}
-$(x^\alpha)=(t,x^1,\ldots,x^{n-1})$, i.e. a coordinate system such that
-$\w{g} \sim \w{f}$ for $r:=\sqrt{(x^1)^2 + \cdots (x^{n-1})^2}\to +\infty$,
-where $\w{f}$ is the flat metric whose components w.r.t. $(x^\alpha)$ are
-$f_{\alpha\beta} = \mathrm{diag}(-1,1,\ldots,1)$.
-This proprety is in agreement with the asymptotic flatness conditions.
+$(x^\alpha)=(t,x^1,\ldots,x^{n-1})$, i.e. a $\w{f}$-Minkowskian coordinate
+system (cf. Sec.~\ref{s:sta:weakly_relativistic})
+for a flat metric $\w{f}$ such that
+$\w{g} \sim \w{f}$ for $r:=\sqrt{(x^1)^2 + \cdots (x^{n-1})^2}\to +\infty$.
 $\Sp_{\infty}$ can then be considered as the limit $r\to+\infty$ of a $(n-2)$-sphere
 $\Sp_{t,r}$ defined by $(t,r)=\mathrm{const}$.
 From Eq.~(\ref{e:sta:area_bivector}), we have
@@ -2162,64 +2207,82 @@ and, at the limit $r\to+\infty$,
 $n^\mu = \xi^\mu = \delta^\mu_{\ \, t}$ and $s^\mu = (0, s^i)$, with $s^i := x^i/r$
 for $i\in \{1,\ldots,n-1\}$. Furthermore, $\xi_\nu = g_{\nu\sigma} \xi^\sigma
 = g_{t\nu}$. Hence, there comes
-\[
+\be \label{e:tha:int_inf_Q_xi_GR}
    \int_{\Sp_\infty}\!\! \w{Q}\lld\w{\xi}\rld =  - \frac{1}{16\pi}
         \int_{\Sp_\infty}\!\! \partial_\mu g_{t\nu}
         (s^\mu \delta^\nu_{\ \, t} - \delta^\mu_{\ \, t} s^\nu) \, \D S
         =  - \frac{1}{16\pi}  \int_{\Sp_\infty}\!\!
             \left( \partial_i g_{tt} - \partial_t g_{ti} \right) s^i \, \D S .
-\]
-On the other hand, given expression~(\ref{e:tha:E_Theta_GR}) for $\w{\theta}$ in
-general relativity, we may write
-\be \label{e:tha:theta_GR_asymp_barH}
-\w{\theta} \underset{r\to +\infty}{\sim}  (16\pi)^{-1} \, \w{\bar{H}}\cdot\w{e}
 \ee
-where $\w{e}$ is the Levi-Civita tensor of the flat metric $\w{f}$ and
-$\w{\bar{H}}$ is the vector defined from $\delta\w{g}$ in the same
-way as $\w{H}$ in Eq.~(\ref{e:evo:def_H}), but substituting $\w{f}$ for $\w{g}$:
-\[
-    \bar{H}^\alpha = f^{\alpha\rho} f^{\mu\nu} \left( \mathcal{D}_\nu \delta g_{\rho\mu}
-        - \mathcal{D}_\rho \delta g_{\mu\nu} \right)
-        = \delta K^\alpha, \quad\mbox{with}\quad
-        K^\alpha := f^{\alpha\rho} f^{\mu\nu} \left( \mathcal{D}_\nu g_{\rho\mu}
-        - \mathcal{D}_\rho g_{\mu\nu} \right) ,
-\]
-where $\w{\mathcal{D}}$ stands for the covariant derivative associated to $\w{f}$.
-The identity $\bar{H}^\alpha = \delta K^\alpha$ holds because
-$\delta \w{f} = 0$ and $\w{\mathcal{D}}\delta = \delta\w{\mathcal{D}}$,
-given that $\w{f}$ is independent of $\w{g}$. For the same reason, $\delta\w{e} = 0$
-and we deduce from Eq.~(\ref{e:tha:theta_GR_asymp_barH}) that
-\[
-    \w{\theta} \underset{r\to +\infty}{\sim} \delta \w{B},
-    \quad\mbox{with}\quad
-    \w{B} := (16\pi)^{-1} \, \w{K}\cdot\w{e} .
-\]
-The $(n-1)$-form $\w{B}$
-defined above is thus fulfilling Eq.~(\ref{e:tha:int_xi_theta_B}),
-thereby ensuring that a Hamiltonian conjugate to $\w{\xi}$ exists.
-We have then
+On the other hand, from the $(n-1)$-form $\w{B}$
+obtained in Eq.~(\ref{e:tha:B_K_GR}), we have
 $\w{\xi}\cdot\w{B} = (16\pi)^{-1} \, \w{\xi}\cdot(\w{K}\cdot\w{e})
-= (16\pi)^{-1} \, \w{e}(\w{K},\w{\xi},\ldots) = (16\pi)^{-1} \star_f (\uu{K}_{f}\wedge\uu{\xi}_f)$,
+= (16\pi)^{-1} \, \w{e}(\w{K},\w{\xi},\ldots)$.
+For $r\to+\infty$, $\w{e}\sim\weps$ and
+we may write
+$\w{\xi}\cdot\w{B} \sim (16\pi)^{-1} \, \weps(\w{K},\w{\xi},\ldots)
+= (16\pi)^{-1} \star (\uu{K}\wedge\uu{\xi})$,
 where $\uu{K}\wedge\uu{\xi}$ stands for the 2-form of components
 $(\uu{K}\wedge\uu{\xi})_{\alpha\beta} = K_\alpha \xi_\beta - \xi_\alpha K_\beta$
 and we have used Eq.~(\ref{e:sta:Hodge_dual}) with $p=2$ to let appear the Hodge dual
-of $\uu{H}\wedge\uu{\xi}$. Using again Lemma~\ref{p:sta:flux_integ_2form}
+of $\uu{K}\wedge\uu{\xi}$. Using again Lemma~\ref{p:sta:flux_integ_2form}
 and the antisymmetry property
-$(H_\mu \xi_\nu - \xi_\mu H_\nu) \, \D S^{\mu\nu} = 2 H_\mu \xi_\nu \, \D S^{\mu\nu}$,
+$(K_\mu \xi_\nu - \xi_\mu K_\nu) \, \D S^{\mu\nu} = 2 K_\mu \xi_\nu \, \D S^{\mu\nu}$,
 we arrive at
 \bea
-\int_{\Sp_\infty}\!\! \w{\xi}\cdot\w{\theta}
+\int_{\Sp_\infty}\!\! \w{\xi}\cdot\w{B}
         & = & \frac{1}{16\pi}
-        \int_{\Sp_\infty}\!\! H_\mu \xi_\nu  \, \D S^{\mu\nu}
+        \int_{\Sp_\infty}\!\! K_\mu \xi_\nu  \, \D S^{\mu\nu}
         = \frac{1}{16\pi}
-        \int_{\Sp_\infty}\!\! H_\mu g_{t\nu}
+        \int_{\Sp_\infty}\!\! K_\mu g_{t\nu}
         (s^\mu \delta^\nu_{\ \, t} - \delta^\mu_{\ \, t} s^\nu) \,  \D S \nonumber \\
     & = & \frac{1}{16\pi}
-        \int_{\Sp_\infty}\!\!  (H_i  \underbrace{g_{tt}}_{-1} - H_t
-        \underbrace{g_{ti}}_{0} ) s^i \, \D S  \nonumber
+        \int_{\Sp_\infty}\!\!  (K_i  \underbrace{g_{tt}}_{-1} - K_t
+        \underbrace{g_{ti}}_{0} ) s^i \, \D S
+        = - \frac{1}{16\pi}
+        \int_{\Sp_\infty}\!\!  K_i s^i \, \D S . \nonumber
 \eea
-
+Now, from Eq.~(\ref{e:tha:def_K_f_Dg}), we have, on $\Sp_\infty$,
+$K_i = f^{\mu\nu} (\mathcal{D}_\nu g_{i\mu} - \mathcal{D}_i g_{\mu\nu})
+= - (\partial_t g_{it} - \partial_i g_{tt})
+  + \delta^{kl} (\partial_l g_{ik} - \partial_i g_{kl})$.
+Hence
+\[
+    \int_{\Sp_\infty}\!\! \w{\xi}\cdot\w{B}
+    = - \frac{1}{16\pi}  \int_{\Sp_\infty}\!\!
+            \left( \partial_i g_{tt} - \partial_t g_{ti} \right) s^i \, \D S
+        - \frac{1}{16\pi}  \int_{\Sp_\infty}\!\!
+        \delta^{kl} \left(\partial_l g_{ik} - \partial_i g_{kl} \right) s^i \, \D S .
+\]
+We notice that the first integral on the right-hand side is exactly that
+appearing in Eq.~(\ref{e:tha:int_inf_Q_xi_GR}), so that they cancel each other
+in formula~(\ref{e:tha:def_canonical_energy}) for the canonical energy,
+leaving
+\be \label{e:tha:energy_GR_ADM}
+    \mathcal{E} = \frac{1}{16\pi}  \int_{\Sp_\infty}\!\!
+        \delta^{kl} \left(\partial_l g_{ik} - \partial_i g_{kl} \right) s^i \, \D S .
+\ee
+This is exactly the formula giving the ADM energy\index{ADM!energy}
+(cf. Sec.~\ref{s:sta:Komar_ADM}):
+compare Eq.~(\ref{e:tha:energy_GR_ADM}) with e.g. Eq.~(8.11) in Ref.~\cite{Gourg12}.
 \end{example}
+
+\begin{remark}
+The integral of $\w{Q}\lld\w{\xi}\rld$ over $\Sp_\infty$, which appears
+in formula~(\ref{e:tha:def_canonical_energy}), is the
+Noether charge $\mathscr{Q}_{\Sp_\infty,\w{\xi}}$
+of $\Sp_\infty$ with respect to $\w{\xi}$
+(cf. Property~\ref{p:tha:Noether_charge_surf}).
+For a stationary spacetime in general relativity,
+we have noticed that
+$\mathscr{Q}_{\Sp_\infty,\w{\xi}}$ is $(n-3)/(n-2)$ times the
+Komar mass at infinity
+(cf. Property~\ref{p:tha:Komar_Noether}). The latter is identical to the ADM
+energy (cf. Property~\ref{p:sta:Komar_ADM_mass}). Hence
+the contribution to $\mathcal{E}$ of the $\w{Q}\lld\w{\xi}\rld$ and
+$-\w{\xi}\cdot\w{B}$ terms in Eq.~(\ref{e:tha:def_canonical_energy})
+are respectively  $(n-3)/(n-2)$ and $1/(n-2)$, i.e. $1/2$ and $1/2$ for $n=4$.
+\end{remark}
 
 \subsection{First law for diffeomorphism-invariant theories}
 
