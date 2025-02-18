@@ -2319,7 +2319,7 @@ Then a Hamiltonian $H_{\w{\eta}}$ conjugate to $\w{\eta}$ always exists
 and the \defin{canonical angular momentum}\index{canonical!angular momentum}\index{angular!momentum!canonical --}
 of the spacetime $(\M,\w{g})$ relative to $\w{\eta}$ is the value of $-H_{\w{\eta}}$
 at $\w{g}$:
-\be \label{e:tha:def_canonical_energy}
+\be \label{e:tha:def_canonical_angu}
     \mathcal{J} := - \int_{\Sp_\infty}\!\! \w{Q}\lld\w{\eta}\rld .
 \ee
 $\mathcal{J}$ is actually the opposite of the Noether charge $\mathscr{Q}_{\Sp_\infty,\w{\eta}}$
@@ -2339,18 +2339,59 @@ is nothing than the Komar angular momentum relative to $\w{\eta}$ at infinity.
 \subsection{First law for diffeomorphism-invariant theories}
 
 \begin{prop}[first law of black hole thermodynamics for diffeomorphism-invariant theories
-\textnormal{(Wald\index[pers]{Wald, R.M.} \& Iyer\index[pers]{Iyer, V.} 1993, 1994
-\cite{Wald93,IyerW94})}]
+\textnormal{(Iyer\index[pers]{Iyer, V.} \& Wald\index[pers]{Wald, R.M.} 1994
+\cite{IyerW94,Wald93})}]
 Let $(\M,\w{g})$ be a $n$-dimensional stationary spacetime governed by a diffeomorphism-invariant gravity theory. Let us assume that  $(\M,\w{g})$ contains a black hole, the
-event horizon of which is a bifurcate Killing horizon with respect to the
-Killing vector
+event horizon of which is part of a bifurcate Killing horizon (cf. Sec.~\ref{s:sta:bifur_Killing_hor})
+with respect to the Killing vector
 \be
 \w{\chi} = \w{\xi} + \sum_{i=1}^{L} \Omega^{(i)} \w{\eta}_{(i)},
 \ee
 where $\w{\xi}$ is the stationary Killing vector, the $\w{\eta}_{(i)}$'s are
 $L$ axisymmetric Killing vectors ($1 \leq L \leq [(n-1)/2]$) and the $\Omega^{(i)}$'s
 are $L$ real constants.
+Let us consider any variation $\delta\w{g}$ in the space $\FF$
+of asymptotically flat solutions to the field equations, i.e.
+any asymptotically flat solution $\delta\w{g}$ to the linearized field equations around $\w{g}$
+($\delta\w{g}$ is not required to be stationary). Let us assume that the
+asymptotic flatness conditions ensure that a Hamiltonian conjugate to $\w{\xi}$ exists.
+Then $\delta\w{g}$ generates a variation
+$\delta\mathcal{E}$ of the canonical energy relative to $\w{\xi}$ [Eq.~(\ref{e:tha:def_canonical_energy})]
+obeying
+\be
+   \encadre{ \delta\mathcal{E} = T_{\rm H} \, \delta S_{\rm W}
+        + \sum_{i=1}^{L} \Omega^{(i)} \delta \mathcal{J}_{(i)} },
+\ee
+where $T_{\rm H}$ is the Hawking temperature (\ref{e:evo:Hawking_temp}),
+$S_{\rm W}$ is the Wald entropy (\ref{e:tha:def_Wald_entropy})
+and $\mathcal{J}_{(i)}$ is the canonical angular momenta relative
+to $\w{\eta}_{(i)}$ [Eq.~(\ref{e:tha:def_canonical_angu})].
 \end{prop}
+
+\begin{proof}
+Let us consider the identity (\ref{e:tha:fund_identity}) with $\w{\xi} = \w{\chi}$.
+We may set $\w{\omega}\lld\w{g},\delta\w{g}, \Lie{\chi}\w{g}\rld = 0$ in
+its left-hand side since $\w{\omega}\lld\w{g},\delta\w{g}, \Lie{\chi}\w{g}\rld$
+is linear with respect to $\Lie{\chi}\w{g}$ (Property~\ref{p:tha:presymplectic_current})
+and $\Lie{\chi}\w{g} = 0$ for $\w{\chi}$ is a Killing vector of $\w{g}$.
+There remains then
+\[
+    \dd \left[ \delta\w{Q}\lld\w{\chi}\rld
+    - \w{\chi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right] = 0 .
+\]
+The left-hand side is a $(n-1)$-form. Let us integrate it on a hypersurface $\Sigma$
+extending from the bifurcation surface $\Sp_{\rm b}$ of the bifurcate
+Killing horizon to the asymptotically flat end. Using
+Stokes' theorem (\ref{e:bas:Stokes}) with $\partial\Sigma = \Sp_{\rm b} \cup \Sp_\infty$,
+we get
+\[
+    \int_{\Sp_{\rm b}} \delta\w{Q}\lld\w{\chi}\rld
+    = \int_{\Sp_\infty} \left[ \delta\w{Q}\lld\w{\chi}\rld
+    - \w{\chi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right] .
+\]
+Note that we have used the vanishing of $\w{\chi}$ on $\Sp_{\rm b}$ (Property~\ref{p:sta:xi_S_zero})
+to get the integral in the left-hand side.
+\end{proof}
 
 \section{To go further}
 
