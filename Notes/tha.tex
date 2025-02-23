@@ -42,7 +42,7 @@ More precisely, we assume that at a given point $p\in\M$, $\w{L}$ depends only
 on the values of $\w{g}$ and its derivatives at $p$, up to a certain order.
 By \emph{derivative}, it is
 meant derivative with respect to some affine connection on $\M$, for instance the one
-formed by the partial derivatives with respect to some given coordinates. We shall
+formed by the partial derivatives with respect to given coordinates. We shall
 write $\w{L}\lld\w{g}\rld$ to stress this dependency of $\w{L}$ on $\w{g}$, according
 to the following convention:
 \begin{notation}
@@ -895,7 +895,7 @@ framework based on the co-called \emph{covariant phase space}\index{covariant!ph
 of total mass $M$ --- the variation of which constitutes the left-hand side of the first law --- as the \emph{canonical energy} of the system (value of the Hamiltonian),
 thereby generalizing the concept of ADM mass\index{ADM!mass} beyond general relativity.
 
-The \emph{covariant phase space} approach is a Hamiltonian formulation that
+The \emph{covariant phase space} approach is a Hamiltonian formalism that
 is adapted to field theories, preserving general covariance.
 On the contrary, the standard approach relies on the choice of
 a time function $t$, with respect to which the evolution is governed by
@@ -2166,6 +2166,7 @@ energy of the system as the value of the conjugate Hamiltonian
 (cf. Property~\ref{p:tha:Hamiltonian_system}):
 
 \begin{prop}[canonical energy relative to an asymptotic time translation]
+\label{p:tha:canonical_energy}
 Let $(\M,\w{g})$ be an asymptotically flat spacetime governed by some
 diffeomorphism-invariant theory of gravity. Let $\w{\xi}$ be a vector field on $\M$,
 generator of an asymptotic symmetry corresponding to a time translation.
@@ -2312,6 +2313,7 @@ The negative of its value for a given solution $\w{g}$ to the field equation
 defines the canonical angular momentum of that solution relative to $\w{\eta}$:
 
 \begin{prop}[canonical angular momentum relative to an asymptotic spatial rotation]
+\label{p:tha:canonical_angu}
 Let $(\M,\w{g})$ be an asymptotically flat spacetime governed by some
 diffeomorphism-invariant theory of gravity. Let $\w{\eta}$ be a vector field on $\M$,
 generator of an asymptotic symmetry corresponding to a spatial rotation.
@@ -2341,11 +2343,11 @@ is nothing than the Komar angular momentum relative to $\w{\eta}$ at infinity.
 \begin{prop}[first law of black hole thermodynamics for diffeomorphism-invariant theories
 \textnormal{(Iyer\index[pers]{Iyer, V.} \& Wald\index[pers]{Wald, R.M.} 1994
 \cite{IyerW94,Wald93})}]
-Let $(\M,\w{g})$ be a $n$-dimensional stationary spacetime governed by a diffeomorphism-invariant gravity theory. Let us assume that  $(\M,\w{g})$ contains a black hole, the
-event horizon of which is part of a bifurcate Killing horizon (cf. Sec.~\ref{s:sta:bifur_Killing_hor})
+Let $(\M,\w{g})$ be a $n$-dimensional stationary spacetime governed by a diffeomorphism-invariant gravity theory. Let us assume that  $(\M,\w{g})$ contains a black hole, whose
+event horizon $\Hor$ is part of a bifurcate Killing horizon (cf. Sec.~\ref{s:sta:bifur_Killing_hor})
 with respect to the Killing vector
-\be
-\w{\chi} = \w{\xi} + \sum_{i=1}^{L} \Omega^{(i)} \w{\eta}_{(i)},
+\be \label{e:tha:chi_xi_eta_i}
+    \w{\chi} = \w{\xi} + \sum_{i=1}^{L} \Omega^{(i)} \w{\eta}_{(i)},
 \ee
 where $\w{\xi}$ is the stationary Killing vector, the $\w{\eta}_{(i)}$'s are
 $L$ axisymmetric Killing vectors ($1 \leq L \leq [(n-1)/2]$) and the $\Omega^{(i)}$'s
@@ -2358,12 +2360,15 @@ asymptotic flatness conditions ensure that a Hamiltonian conjugate to $\w{\xi}$ 
 Then $\delta\w{g}$ generates a variation
 $\delta\mathcal{E}$ of the canonical energy relative to $\w{\xi}$ [Eq.~(\ref{e:tha:def_canonical_energy})]
 obeying
-\be
+\be \label{e:tha:first_law_canon}
    \encadre{ \delta\mathcal{E} = T_{\rm H} \, \delta S_{\rm W}
         + \sum_{i=1}^{L} \Omega^{(i)} \delta \mathcal{J}_{(i)} },
 \ee
 where $T_{\rm H}$ is the Hawking temperature (\ref{e:evo:Hawking_temp}),
-$S_{\rm W}$ is the Wald entropy (\ref{e:tha:def_Wald_entropy})
+$S_{\rm W}$ is the Wald entropy (\ref{e:tha:def_Wald_entropy}) ---
+which is well defined since the surface
+gravity of
+$\Hor$ is necessarily nonzero (Property~\ref{p:neh:zeroth_law_bifur}) ---
 and $\mathcal{J}_{(i)}$ is the canonical angular momenta relative
 to $\w{\eta}_{(i)}$ [Eq.~(\ref{e:tha:def_canonical_angu})].
 \end{prop}
@@ -2390,7 +2395,27 @@ we get
     - \w{\chi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right] .
 \]
 Note that we have used the vanishing of $\w{\chi}$ on $\Sp_{\rm b}$ (Property~\ref{p:sta:xi_S_zero})
-to get the integral in the left-hand side.
+to get the integral in the left-hand side. Since $\w{Q}\lld\w{\chi}\rld$
+is linear with respect to $\w{\chi}$ (Property~\ref{p:tha:Noether_pot_form}),
+Eq.~(\ref{e:tha:chi_xi_eta_i}) leads to
+\[
+    \delta \underbrace{\int_{\Sp_{\rm b}}
+    \w{Q}\lld\w{\chi}\rld}_{\frac{\hbar \kappa}{2\pi k_{\rm B}} S_{\rm W}} =
+    \underbrace{\int_{\Sp_\infty} \left[ \delta\w{Q}\lld\w{\xi}\rld
+    - \w{\xi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right]}_{\delta H_{\w{\xi}}}
+    + \sum_{i=1}^{L} \Omega^{(i)}
+    \underbrace{\int_{\Sp_\infty} \left[ \delta\w{Q}\lld\w{\eta}_{(i)}\rld
+    - \w{\eta}_{(i)}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right]}_{\delta H_{\w{\eta}_{(i)}}} ,
+\]
+where we have used Eq.~(\ref{e:tha:def_Wald_entropy}) to let appear
+the Wald entropy $S_{\rm W}$ and
+Eq.~(\ref{e:tha:delta_H_xi}) to let appear the
+variations of the Hamiltonians $H_{\w{\xi}}$ and $H_{\w{\eta}_{(i)}}$ conjugate
+to $\w{\xi}$ and $\w{\eta}_{(i)}$ respectively. Given that
+$\hbar \kappa/(2\pi k_{\rm B}) = T_{\rm H}$ [Eq.~(\ref{e:evo:Hawking_temp})],
+$H_{\w{\xi}} = \mathcal{E}$ (Property~\ref{p:tha:canonical_energy})
+and $H_{\w{\eta}_{(i)}} = - \mathcal{J}_{(i)}$ (Property~\ref{p:tha:canonical_angu}),
+we get Eq.~(\ref{e:tha:first_law_canon}).
 \end{proof}
 
 \section{To go further}
