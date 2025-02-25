@@ -148,17 +148,6 @@ depends on both $\w{g}$ and $\delta\w{g}$, in a linear way in terms of $\delta\w
 All these dependencies are \emph{local}, so if we want to stress them, we shall write
 $\w{E} = \w{E}\lld\w{g}\rld$ and $\w{\theta} = \w{\theta}\lld\w{g},\delta\w{g}\rld$
 according to the notation introduced on p.~\pageref{n:tha:bold_parentheses}.
-
-For a given Lagrangian $n$-form $\w{L}$, the presymplectic potential $(n-1)$-form is not unique: since
-$\dd$ is nilpotent
-[Eq.~(\ref{e:ext_der_nilpot})], $\w{\theta}$ in formula~(\ref{e:tha:delta_L_E_Theta})
-can be substituted by
-\be \label{e:tha:Theta_not_unique}
-  \w{\theta'} = \w{\theta} + \dd \w{Y},
-\ee
-where $\w{Y}=\w{Y}\lld\w{g},\delta\w{g}\rld$ is an
-arbitrary $(n-2)$-form that is a local function of $\w{g}$ and $\delta\w{g}$,
-with a linear dependence on $\delta\w{g}$.
 \end{prop}
 
 \begin{remark}
@@ -167,23 +156,47 @@ by means of the Leibniz rule, so that the term $E^{\mu\nu} \delta g_{\mu\nu} \, 
 in Eq.~(\ref{e:tha:delta_L_E_Theta}) does not contain any derivative of $\delta\w{g}$.
 \end{remark}
 
-\begin{remark} \label{r:tha:Lagrangian_dep_mu}
-For a given gravity theory, the Lagrangian $n$-form itself is not unique:
+It must be stressed immediately that the presymplectic potential $(n-1)$-form
+$\w{\theta}$ is not unique.
+First of all, since
+$\dd$ is nilpotent [Eq.~(\ref{e:ext_der_nilpot})], $\w{\theta}$ in formula~(\ref{e:tha:delta_L_E_Theta})
+can be substituted by $\w{\theta'} = \w{\theta} + \dd \w{Y}$,
+where $\w{Y}=\w{Y}\lld\w{g},\delta\w{g}\rld$ is an
+arbitrary $(n-2)$-form. Secondly,
+for a given gravity theory, the Lagrangian $n$-form itself is not unique.
+Indeed the $n$-form
 $\w{L'} = \w{L} + \dd\w{\mu}$, where $\w{\mu} = \w{\mu}\lld\w{g}\rld$ is an arbitrary $(n-1)$-form with compact
 support, leads to the same action (\ref{e:tha:action_L}) by virtue of
-Stokes' theorem (\ref{e:bas:Stokes}). If one takes this into account,
-the full degrees of freedom on $\w{\theta}$ are
-\be \label{e:tha:Theta_gal_freedom}
-    \w{\theta'} = \w{\theta} + \dd \w{Y} + \delta\w{\mu},
+Stokes' theorem (\ref{e:bas:Stokes}). The corresponding change in the presymplectic potential
+is $\w{\theta} \to  \w{\theta} + \delta\w{\mu}$.
+From these two facts, we conclude:
+
+\begin{prop}[ambiguities in the presymplectic potential $(n-1)$-form]
+For a given gravity theory, the presymplectic potential $(n-1)$-form $\w{\theta}$
+is not unique: it can be substituted by
+\be \label{e:tha:Theta_not_unique}
+  \w{\theta'} = \w{\theta} + \dd \w{Y} + \delta\w{\mu},
 \ee
-instead of (\ref{e:tha:Theta_not_unique}).
-However, we shall see that the main objects considered in this chapter,
-namely the presymplectic current $(n-1)$-form $\w{\omega}$ and
-the presymplectic form $\Omega$ are totally independent from $\w{\mu}$
-(Property~\ref{p:tha:uniqueness_presympl} below). So,
-for simplicity, we shall no longer consider the $\delta\w{\mu}$
-degree of freedom in the choice of $\w{\theta}$.
-\end{remark}
+where (i) $\w{Y}=\w{Y}\lld\w{g},\delta\w{g}\rld$ is an
+arbitrary $(n-2)$-form that is a local function of $\w{g}$ and $\delta\w{g}$,
+with a linear dependence on $\delta\w{g}$ and (ii)
+$\delta\w{\mu}$ is the variation triggered by $\delta\w{g}$
+of an arbitrary $(n-1)$-form $\w{\mu} = \w{\mu}\lld\w{g}\rld$
+that is a local function of $\w{g}$ and has compact support.
+The $\w{\mu}$ term in Eq.~(\ref{e:tha:Theta_not_unique}) arises from the allowed
+change
+\be
+    \w{L'} = \w{L} + \dd\w{\mu}
+\ee
+in the Lagrangian $n$-form.
+\end{prop}
+
+
+%\begin{remark} \label{r:tha:Lagrangian_dep_mu}
+%For a given gravity theory, the Lagrangian $n$-form itself is not unique:
+%\be \label{e:tha:Theta_gal_freedom}
+%    \w{\theta'} = \w{\theta} + \dd \w{Y} + \delta\w{\mu},
+%\ee
 
 \begin{example}[presymplectic potential form of general relativity]
 \label{x:tha:theta_GR}
@@ -238,8 +251,8 @@ This constitutes the so-called \defin{Euler-Lagrange equations}\index{Euler-Lagr
 \end{prop}
 \begin{proof}
 Since $\delta\w{g}$ is assumed to have compact support, let $\mathscr{D}$ be
-a submanifold with boundary of $\M$ enclosing the support of $\delta\w{g}$, i.e. such that
-$\delta\w{g} = 0$ on the boundary $\partial\mathscr{D}$ and outside $\mathscr{D}$.
+a $n$-dimensional submanifold with boundary of $\M$ such that
+$\delta\w{g} = 0$ in the neighborhood of the boundary $\partial\mathscr{D}$ and outside $\mathscr{D}$.
 In view of Eqs.~(\ref{e:tha:action_L}) and (\ref{e:tha:delta_L_E_Theta}), we have then
 \[
     \delta \mathcal{S} = \int_\M \delta\w{L} = \int_{\mathscr{D}} E^{\mu\nu} \delta g_{\mu\nu} \, \weps
@@ -249,9 +262,11 @@ In view of Eqs.~(\ref{e:tha:action_L}) and (\ref{e:tha:delta_L_E_Theta}), we hav
      =  \int_{\mathscr{D}} E^{\mu\nu} \delta g_{\mu\nu} \, \weps ,
 \]
 where Stokes' theorem (\ref{e:bas:Stokes}) has been used to let appear the integral
-of $\w{\theta}$ on $\partial\mathscr{D}$ and this integral has been set to zero due
-to the linearity of $\w{\theta}$ in $\delta\w{g}$, given that $\left. \delta\w{g} \right |_{\partial\mathscr{D}} = 0$.
-Consequently, having $\delta \mathcal{S} = 0$ for any variation $\delta\w{g}$ is equivalent to
+of $\w{\theta}$ on $\partial\mathscr{D}$, which has been set to zero due
+to $\left. \w{\theta}\lld\w{g},\delta\w{g}\rld \right|_{\partial\mathscr{D}} = 0$.
+This last property results from the linearity of $\w{\theta}$ in $\delta\w{g}$, given that
+$\delta\w{g}$ and all its derivatives are vanishing on $\partial\mathscr{D}$.
+From the above expression of $\delta\mathcal{S}$ it is clear that having $\delta \mathcal{S} = 0$ for any variation $\delta\w{g}$ is equivalent to
 Eq.~(\ref{e:tha:eom_E}).
 \end{proof}
 
@@ -329,7 +344,7 @@ $\dd( \w{\theta}\lld\w{g},t\Lie{\xi}\w{g}\rld) =  t \dd( \w{\theta}\lld\w{g},\Li
 \]
 Now, the Cartan identity (\ref{e:bas:Cartan}) gives
 $\Lie{\xi} \w{L} = \w{\xi} \cdot\dd \w{L} + \dd(\w{\xi}\cdot\w{L}) = \dd(\w{\xi}\cdot\w{L})$
-since $\dd \w{L} = 0$, as any $(n+1)$-form on a $n$-dimensional manifold.
+since $\dd \w{L} = 0$, as for any $(n+1)$-form on a $n$-dimensional manifold.
 Accordingly, we may rewrite the above equation as
 \be \label{e:tha:dd_pre_J_E}
     \dd\left(  \w{\theta}\lld\w{g},\Lie{\xi}\w{g}\rld - \w{\xi}\cdot\w{L} \right) =
@@ -811,7 +826,7 @@ this establishes (\ref{e:tha:S_W_S_BH_GR}).
 Let us consider a stationary black hole in a diffeomorphism-invariant theory,
 whose Lagrangian scalar $L$ is recast as
 (\ref{e:tha:Lagrangian_diffeo_inv}). Assuming that the black hole event
-horizon is part of a bifurcate Killing horizon, with bifurcation surface ${\hat \Sp}$,
+horizon is part of a bifurcate Killing horizon, with bifurcation surface $\hat{\Sp}$,
 the Wald entropy is expressible as
 \be \label{e:tha:S_Wald_explicit}
     \encadre{ S_{\rm W} = - 2\pi \frac{k_{\rm B}}{\hbar} \int_{\hat{\Sp}} \frac{\delta L}{\delta R_{\mu\nu\rho\sigma}}
@@ -2389,21 +2404,21 @@ There remains then
     - \w{\chi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right] = 0 .
 \]
 The left-hand side is a $(n-1)$-form. Let us integrate it on a hypersurface $\Sigma$
-extending from the bifurcation surface $\Sp_{\rm b}$ of the bifurcate
+extending from the bifurcation surface $\hat{\Sp}$ of the bifurcate
 Killing horizon to the asymptotically flat end. Using
-Stokes' theorem (\ref{e:bas:Stokes}) with $\partial\Sigma = \Sp_{\rm b} \cup \Sp_\infty$,
+Stokes' theorem (\ref{e:bas:Stokes}) with $\partial\Sigma = \hat{\Sp} \cup \Sp_\infty$,
 we get
 \[
-    \int_{\Sp_{\rm b}} \delta\w{Q}\lld\w{\chi}\rld
+    \int_{\hat{\Sp}} \delta\w{Q}\lld\w{\chi}\rld
     = \int_{\Sp_\infty} \left[ \delta\w{Q}\lld\w{\chi}\rld
     - \w{\chi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right] .
 \]
-Note that we have used the vanishing of $\w{\chi}$ on $\Sp_{\rm b}$ (Property~\ref{p:sta:xi_S_zero})
+Note that we have used the vanishing of $\w{\chi}$ on $\hat{\Sp}$ (Property~\ref{p:sta:xi_S_zero})
 to get the integral in the left-hand side. Since $\w{Q}\lld\w{\chi}\rld$
 is linear with respect to $\w{\chi}$ (Property~\ref{p:tha:Noether_pot_form}),
 Eq.~(\ref{e:tha:chi_xi_eta_i}) leads to
 \[
-    \delta \underbrace{\int_{\Sp_{\rm b}}
+    \delta \underbrace{\int_{\hat{\Sp}}
     \w{Q}\lld\w{\chi}\rld}_{\frac{\hbar \kappa}{2\pi k_{\rm B}} S_{\rm W}} =
     \underbrace{\int_{\Sp_\infty} \left[ \delta\w{Q}\lld\w{\xi}\rld
     - \w{\xi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right]}_{\delta H_{\w{\xi}}}
