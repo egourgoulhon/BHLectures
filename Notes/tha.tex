@@ -172,6 +172,7 @@ is $\w{\theta} \to  \w{\theta} + \delta\w{\mu}$.
 From these two facts, we conclude:
 
 \begin{prop}[ambiguities in the presymplectic potential form]
+\label{p:tha:ambiguities_theta}
 For a given gravity theory, the presymplectic potential $(n-1)$-form $\w{\theta}$
 is not unique: it can be substituted by
 \be \label{e:tha:Theta_not_unique}
@@ -771,11 +772,12 @@ we are in position to define the Wald entropy of a stationary black hole.
 \begin{prop}[Wald entropy as a Noether charge]
 Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 3$ governed
 by a diffeomorphism-invariant theory and containing a black hole, whose
-event horizon $\Hor$ is a Killing horizon. Let $\w{\chi}$ be the Killing
+event horizon $\Hor$ is part of a bifurcate Killing horizon (cf. Sec.~\ref{s:sta:bifur_Killing_hor}).
+Let $\w{\chi}$ be the Killing
 vector generating $\Hor$ and $\kappa$ the corresponding surface gravity:
 $\wnab_{\w{\chi}}\w{\chi} \equalH \kappa \w{\chi}$ [Eq.~(\ref{e:neh:xi_nab_xi_kappa})].
-Let us assume that the zeroth law holds, i.e. that $\kappa$ is constant over $\Hor$
-(cf. Property~\ref{p:evo:zeroth_law}). Moreover,  let us assume $\kappa \neq 0$.
+By virtue of the zeroth law for bifurcate Killing horizons (Property~\ref{p:neh:zeroth_law_bifur}),
+$\kappa$ is constant over $\Hor$ and $\kappa \neq 0$.
 Let $\Sp$ be a complete cross-section of $\Hor$.
 The \defin{Wald entropy}\index{Wald entropy}\index{entropy!Wald --} of the black hole is
 then defined as $\kappa^{-1}$ times
@@ -783,18 +785,18 @@ the Noether charge of $\Sp$ with respect to $\w{\chi}$,
 up to the constant $2\pi k_{\rm B}/\hbar$:
 \be \label{e:tha:def_Wald_entropy}
     \encadre{ S_{\rm W} := \frac{2 \pi k_{\rm B}}{\hbar\kappa} \, \mathcal{Q}_{\Sp,\w{\chi}}
-    = \frac{2 \pi k_{\rm B}}{\hbar\kappa}  \int_{\Sp} \w{Q}\lld\w{\chi}\rld } ,
+    = \frac{2 \pi k_{\rm B}}{\hbar\kappa}  \int_{\Sp} \w{Q}\lld\w{\chi}\rld } .
 \ee
-where $\w{Q}\lld\w{\chi}\rld$ is the Noether potential $(n-2)$-form of $\w{\chi}$,
+Here $\w{Q}\lld\w{\chi}\rld$ is the Noether potential $(n-2)$-form of $\w{\chi}$,
 as defined in Property~\ref{p:tha:Noether_pot_form}.
-Since $\w{\chi}$ is a Killing vector, $\mathcal{Q}_{\Sp,\w{\chi}}$ does not suffer from
+$S_{\rm W}$ is independent of the choice of the cross-section $\Sp$ of $\Hor$.
+Moreover, the Noether charge $\mathcal{Q}_{\Sp,\w{\chi}}$ does not suffer from
 the ambiguity (\ref{e:tha:Q_surf_not_unique}), so that $S_{\rm W}$ is uniquely defined.
-Moreover, $S_{\rm W}$ is independent of the choice of the cross-section $\Sp$ of $\Hor$.
 \end{prop}
 
 \begin{proof}
-Let us consider another complete cross-section $\Sp'$ of $\Hor$ lying entirely in the future of $\Sp$.
-Then $\Sp\cup\Sp'$ can be considered as the boundary of a portion of $\Hor$, which we shall denote by
+Let $\Sp'$ be another complete cross-section of $\Hor$ lying entirely in the future of $\Sp$.
+Then $\Sp\cup\Sp'$ constitutes the boundary of a portion of $\Hor$, which we shall denote by
 $\Delta\Hor$. Stokes' theorem (\ref{e:bas:Stokes}) and the identity
 $\dd \w{Q}\lld\w{\chi}\rld = \w{J}\lld\w{\chi}\rld$ [Eq.~(\ref{e:tha:J_dQ})] give
 \be \label{e:tha:start_proof_Wald_entr}
@@ -808,21 +810,23 @@ From the definition (\ref{e:tha:def_Noether_current}),
 $\w{J}\lld\w{\chi}\rld := \w{\theta}\lld\w{g},\Lie{\chi}\w{g}\rld - \w{\chi}\cdot\w{L}
 = - \w{\chi}\cdot\w{L}$, since $\Lie{\chi}\w{g}=0$ ($\w{\chi}$ Killing)
 along with $\w{\theta}$ being linear in $\Lie{\chi}\w{g}$ imply $\w{\theta}\lld\w{g},\Lie{\chi}\w{g}\rld =0$.
-From the very definition of the integral of a $(n-1)$-form over a $(n-1)$-dimensional
-manifold, we have then
-\[
-    \int_{\Delta\Hor} \w{J}\lld\w{\chi}\rld = - \int_{\Delta\Hor} \w{\chi}\cdot\w{L} = - \int_{\Delta\Hor} \w{L}(\w{\chi},\D\w{x}_1,\ldots,
-    \D\w{x}_{n-1}) ,
-\]
-where $\D\w{x}_1$, $\ldots$, $\D\w{x}_{n-1}$ are infinitesimal displacement vectors on $\Delta\Hor$
-forming a mesh of it. Now, since $\w{\chi}$ is tangent to $\Delta\Hor$ (for $\w{\chi}$ is a null normal to $\Hor$)
-and $\w{L}$ is a
-$n$-form, we have necessarily $\w{L}(\w{\chi},\D\w{x}_1,\ldots,\D\w{x}_{n-1})=0$.
-Accordingly, the integral of $\w{J}\lld\w{\chi}\rld$ in the right-hand side of Eq.~(\ref{e:tha:start_proof_Wald_entr}) is zero. Given that
+Now, when restricted to $\Delta\Hor$ (i.e. applied to $(n-1)$-tuples of vectors tangent to $\Delta\Hor$,
+or equivalently, considered as the pullback $\iota^*(\w{\chi}\cdot\w{L})$ of
+$\w{\chi}\cdot\w{L}$ by the inclusion map $\iota: \Delta\Hor \to \M$, cf. Sec.~\ref{s:bas:push_pull}),
+$\w{\chi}\cdot\w{L}$ is a vanishing $(n-1)$-form, since $\w{\chi}\cdot\w{L} := \w{L}(\w{\chi},\ldots)$,
+$\w{\chi}$ is tangent to $\Delta\Hor$ and $\w{L}$ is a $n$-form.
+Accordingly, the integral of $\w{J}\lld\w{\chi}\rld = - \w{\chi}\cdot\w{L}$ in the right-hand side of Eq.~(\ref{e:tha:start_proof_Wald_entr}) is zero. Given that
 $ \int_{\Sp^\nearrow} \w{Q}\lld\w{\chi}\rld = -  \mathcal{Q}_{\Sp,\w{\chi}}$ and
 $ \int_{{\Sp'}^\nearrow} \w{Q}\lld\w{\chi}\rld =  \mathcal{Q}_{\Sp',\w{\chi}}$,
 it follows that $\mathcal{Q}_{\Sp',\w{\chi}} = \mathcal{Q}_{\Sp,\w{\chi}}$,
 which shows that $S_{\rm W}$ does not depend on the choice of $\Sp$.
+Regarding the ambiguity (\ref{e:tha:Q_surf_not_unique}), the term $\w{Y}\lld\w{g},\Lie{\chi}\w{g}\rld$
+does not contribute since
+$\w{Y}\lld\w{g},\Lie{\chi}\w{g}\rld$ is linear in $\Lie{\chi}\w{g}$ (Propery~\ref{p:tha:ambiguities_theta}),
+so that $\Lie{\chi}\w{g} = 0$ ($\w{\chi}$ Killing) implies $\w{Y}\lld\w{g},\Lie{\chi}\w{g}\rld=0$.
+The term $\w{\chi}\cdot\w{\mu}\lld\w{g}\rld$ does not contribute either because, taking advantage of the independence of
+$\mathcal{Q}_{\Sp,\w{\chi}}$ from $\Sp$, we are free to choose $\Sp$ as the bifurcation surface, where
+$\w{\chi} = 0$ (Property~\ref{p:sta:xi_S_zero}).
 \end{proof}
 
 
@@ -856,8 +860,16 @@ $\nabla_\mu \chi_\nu  \, \D S^{\mu\nu} = -2 \kappa \, \D S$,
 where $\D S := \sqrt{q}\, \D^{n-2} x$ is the area element of $\Sp$. Since $\kappa$
 is constant, there comes $\mathcal{Q}_{\Sp,\w{\chi}}  = \kappa A/(8\pi)$.
 In view of the definition (\ref{e:tha:def_Wald_entropy}) of $S_{\rm W}$,
-this establishes (\ref{e:tha:S_W_S_BH_GR}).
+we get (\ref{e:tha:S_W_S_BH_GR}).
 \end{proof}
+
+The Bekenstein-Hawking entropy does not involve directly the horizon
+Killing vector $\w{\chi}$, but a geometrical quantity
+related to a cross-section $\Sp$ of the horizon, namely the area $A$ of
+$\Sp$, which is independent of $\Sp$ for a Killing horizon.
+Similarly, one can recast the Wald entropy in a form that gets rid of
+$\w{\chi}$ and $\kappa$, refering only to geometrical quantities related to the
+bifurcation surface (and to the Lagrangian scalar):
 
 \begin{prop}[explicit expression of the Wald entropy]
 Let us consider a stationary black hole in a diffeomorphism-invariant theory,
@@ -908,7 +920,10 @@ the binormal 2-form ${}^{\hat{\Sp}}\!\!\weps^\perp$:
 \ee
 where $\D S =  \sqrt{q}\, \D^{n-2} x$ is the area element of $\hat{\Sp}$.
 \end{prop}
+
+\begin{proof}[Partial proof]
 We refer to Ref.~\cite{IyerW94} for the proof.
+\end{proof}
 Here, we shall just check that formula~(\ref{e:tha:S_Wald_explicit}) yields the
 correct value for general relativity: in this case,
 $L = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu}$
