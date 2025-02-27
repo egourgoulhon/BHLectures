@@ -912,7 +912,7 @@ with $\w{n}$ future-directed unit timelike and $\w{s}$ outward-directed unit spa
 \ee
 \end{itemize}
 Note that Eqs.~(\ref{e:sta:area_bivector}) and (\ref{e:tha:eps_perp_s_wedge_n})
-establish the following relation between
+yield the following relation between
 the area element normal bivector $\D\w{S}$ and
 the binormal 2-form ${}^{\hat{\Sp}}\!\!\weps^\perp$:
 \be \label{e:tha:DS_eps_perp}
@@ -922,10 +922,44 @@ where $\D S =  \sqrt{q}\, \D^{n-2} x$ is the area element of $\hat{\Sp}$.
 \end{prop}
 
 \begin{proof}[Partial proof]
-We refer to Ref.~\cite{IyerW94} for the proof.
+$\w{Q}\lld\w{\chi}\rld$ has a linear dependence on $\w{\chi}$
+(cf. Property~\ref{p:tha:Noether_pot_form}).
+It may contain high order covariant derivatives of $\w{\chi}$ but since the
+latter is a Killing vector,
+one may use iteratively Kostant formula (\ref{e:neh:nabnab_xi_Riem}) to express
+all derivatives of order higher than one in terms of $\w{\chi}$
+and $\wnab\w{\chi}$, so that $\w{Q}\lld\w{\chi}\rld$ is expressible as
+\[
+    Q\lld\w{\chi}\rld_{\alpha_1\cdots\alpha_{n-2}}
+    = \chi^\mu W_{\mu\alpha_1\cdots\alpha_{n-2}} +
+      \nabla_\mu \chi_\nu X^{\mu\nu}_{\ \ \ \alpha_1\cdots\alpha_{n-2}} ,
+\]
+where $\w{W}$ and $\w{X}$ are tensor fields of type $(0,n-1)$ and
+$(2,n-2)$ respectively, which are antisymmetric with respect to their
+last $n-2$ arguments.
+Let us evaluate the Wald entropy $S_{\rm W}$ by selecting the bifurcation surface $\hat{\Sp}$
+for $\Sp$ in formula~(\ref{e:tha:def_Wald_entropy}). Given that $\w{\chi} = 0$
+on $\hat{\Sp}$ (Property~\ref{p:sta:xi_S_zero}), the term in $\w{W}$ does not
+contribute to $S_{\rm W}$.
+Furthermore, the following identity holds on $\hat{\Sp}$:
+\be
+    \nabla_\alpha \chi_\beta \stackrel{\hat{\Sp}}{=}
+    \kappa \; {}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta} .
+\ee
+Indeed, since $\w{\chi} = 0$ on $\hat{\Sp}$, we have, for any vector $\w{v}$
+tangent to $\hat{\Sp}$, $v^\mu \nabla_\mu \chi_\alpha = 0$. This shows that,
+at each point $p\in\hat{\Sp}$,
+the 2-form $\nabla_\alpha \chi_\beta = \nabla_{[\alpha} \chi_{\beta]}$
+leaves in the vector space $T_p^\perp  \hat{\Sp}$ normal to $\hat{\Sp}$, as
+the 2-form ${}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta}$. Since $T_p^\perp  \hat{\Sp}$
+is 2-dimensional, these 2-forms are necessarily proportional:
+$\nabla_\alpha \chi_\beta \stackrel{\hat{\Sp}}{=} \lambda \; {}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta}$ for some scalar field $\lambda$ on $\Sp$.
+TBC...
+%We refer to Ref.~\cite{IyerW94}
 \end{proof}
-Here, we shall just check that formula~(\ref{e:tha:S_Wald_explicit}) yields the
-correct value for general relativity: in this case,
+
+\begin{example}[Wald entropy from formula (\ref{e:tha:S_Wald_explicit}) for general relativity]
+For general relativity,
 $L = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu}$
 [Eq.~(\ref{e:tha:Hilbert_Lagrangian})], so that Eq.~(\ref{e:tha:dLdRiem}) results in
 \[
@@ -942,10 +976,10 @@ Accordingly, formula~(\ref{e:tha:S_Wald_explicit}), combined with Eq.~(\ref{e:th
     = \frac{1}{4} \int_{\hat{\Sp}} \D S  = \frac{A}{4} ,
 \]
 where $A$ is the area of $\hat{\Sp}$ and $({}^{\hat{\Sp}}\!\!\eps^\perp)^{\mu\nu} \, {}^{\hat{\Sp}}\!\!\eps^\perp_{\mu\nu}=-2$
-follows immediately from Eq.~(\ref{e:tha:eps_perp_s_wedge_n}) along with
+follows from Eq.~(\ref{e:tha:eps_perp_s_wedge_n}) along with
 $n_\mu n^\mu = -1$, $n_\mu s^\mu = 0$ and $s_\mu s^\mu = 1$.
 Hence we recover formula~(\ref{e:tha:S_W_S_BH_GR}) --- the Bekenstein-Hawking entropy.
-
+\end{example}
 
 Of course, being defined by a formula that reduces to the Bekenstein-Hawking entropy
 for general relativity (Property~\ref{p:tha:Wald_S_for_GR})
@@ -1779,7 +1813,7 @@ does not depend on the choice of the
 hypersurface $\Sigma$ (Property~\ref{p:tha:presymplectic_form}),
 but it is unaffected by the ambiguities
 $\w{\theta} \to \w{\theta} + \dd \w{Y} + \delta\w{\mu}$
-in the definition of $\w{\theta}$ [cf. Eq.~(\ref{e:tha:Theta_gal_freedom})].
+in the definition of $\w{\theta}$ [cf. Eq.~(\ref{e:tha:Theta_not_unique})].
 Moreover, the presymplectic current $(n-1)$-form $\w{\omega}$ itself is unaffected
 by the ambiguity
 $\w{\theta} \to \w{\theta} + \delta\w{\mu}$.
