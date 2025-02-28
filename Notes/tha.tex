@@ -871,7 +871,9 @@ Similarly, one can recast the Wald entropy in a form that gets rid of
 $\w{\chi}$ and $\kappa$, refering only to geometrical quantities related to the
 bifurcation surface (and to the Lagrangian scalar):
 
-\begin{prop}[explicit expression of the Wald entropy]
+\begin{prop}[explicit expression of the Wald entropy
+\textnormal{(Iyer\index[pers]{Iyer, V.} \& Wald\index[pers]{Wald, R.M.} 1994
+\cite{IyerW94})}]
 Let us consider a stationary black hole in a diffeomorphism-invariant theory,
 whose Lagrangian scalar $L$ is recast as
 (\ref{e:tha:Lagrangian_diffeo_inv}). Assuming that the black hole event
@@ -936,13 +938,15 @@ and $\wnab\w{\chi}$, so that $\w{Q}\lld\w{\chi}\rld$ is expressible as
 \]
 where $\w{W}$ and $\w{X}$ are tensor fields of type $(0,n-1)$ and
 $(2,n-2)$ respectively, which are antisymmetric with respect to their
-last $n-2$ arguments.
+last $n-2$ arguments. For instance, in the case of general relativity, we read on
+(\ref{e:tha:Noether_Q_GR}) that $\w{W}=0$ and
+$X^{\mu\nu}_{\ \ \ \alpha_1\cdots\alpha_{n-2}} = -  (16\pi)^{-1} \eps^{\mu\nu}_{\ \ \ \alpha_1\cdots\alpha_{n-2}}$.
 Let us evaluate the Wald entropy $S_{\rm W}$ by selecting the bifurcation surface $\hat{\Sp}$
 for $\Sp$ in formula~(\ref{e:tha:def_Wald_entropy}). Given that $\w{\chi} = 0$
 on $\hat{\Sp}$ (Property~\ref{p:sta:xi_S_zero}), the term in $\w{W}$ does not
 contribute to $S_{\rm W}$.
 Furthermore, the following identity holds on $\hat{\Sp}$:
-\be
+\be \label{e:tha:nab_chi_eps_perp}
     \nabla_\alpha \chi_\beta \stackrel{\hat{\Sp}}{=}
     \kappa \; {}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta} .
 \ee
@@ -954,8 +958,45 @@ leaves in the vector space $T_p^\perp  \hat{\Sp}$ normal to $\hat{\Sp}$, as
 the 2-form ${}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta}$. Since $T_p^\perp  \hat{\Sp}$
 is 2-dimensional, these 2-forms are necessarily proportional:
 $\nabla_\alpha \chi_\beta \stackrel{\hat{\Sp}}{=} \lambda \; {}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta}$ for some scalar field $\lambda$ on $\Sp$.
-TBC...
-%We refer to Ref.~\cite{IyerW94}
+By combining Eqs.~(\ref{e:sta:dS_chi_k}) and (\ref{e:tha:DS_eps_perp}),
+we get ${}^{\hat{\Sp}}\!\!\eps^\perp_{\alpha\beta}
+= \chi_\alpha k_\beta - k_\alpha \chi_\beta$, where $\w{k}$ is the future-directed null
+vector of $T_p^\perp  \hat{\Sp}$ such that $\w{k}\cdot\w{\chi} = -1$.
+Then, Eq.~(\ref{e:neh:xi_nab_xi_kappa}) yields $\kappa \chi_\alpha = \chi^\mu \nabla_\mu \chi_\alpha = \lambda (\chi^\mu \chi_\mu
+k_\alpha - \chi^\mu k_\mu \chi_\alpha) = \lambda (0 + \chi_\alpha)$, from which $\lambda = \kappa$, thereby establishing (\ref{e:tha:nab_chi_eps_perp}).
+We have then
+$Q\lld\w{\chi}\rld_{\alpha_1\cdots\alpha_{n-2}} \stackrel{\hat{\Sp}}{=}
+\kappa \,  {}^{\hat{\Sp}}\!\!\eps^\perp_{\rho\sigma}
+X^{\rho\sigma}_{\ \ \ \alpha_1\cdots\alpha_{n-2}}$.
+Then Eq.~(\ref{e:tha:def_Wald_entropy}) yields
+\be \label{e:tha:S_W_no_chi}
+    S_{\rm W}
+    = 2 \pi  \frac{k_{\rm B}}{\hbar}  \int_{\hat{\Sp}}
+        {}^{\hat{\Sp}}\!\!\eps^\perp_{\rho\sigma}
+        X^{\rho\sigma}_{\ \ \ \alpha_1\cdots\alpha_{n-2}} .
+\ee
+This expression of $S_{\rm W}$ does no longer
+involve $\w{\chi}$, nor $\kappa$, but only the geometrical quantity
+${}^{\hat{\Sp}}\!\!\weps^\perp$ defined
+on $\hat{\Sp}$ and $\w{X}$, which depends on the
+Lagrangian $n$-form $\w{L}$.
+To go further, we must invoke a result of Wald and Iyer
+(cf. Eqs~(31) and (52) of Ref.~\cite{IyerW94}), namely
+\be
+     X^{\rho\sigma}_{\ \ \ \alpha_1\cdots\alpha_{n-2}} =
+     - \frac{\delta L}{\delta R_{\mu\nu\rho\sigma}}
+     \, \eps_{\mu\nu\alpha_1\cdots\alpha_{n-2}} .
+\ee
+Accordingly, given the definition (\ref{e:sta:Hodge_dual}) of the Hodge dual,
+Eq.~(\ref{e:tha:S_W_no_chi}) becomes
+\[
+    S_{\rm W} = - 4 \pi  \frac{k_{\rm B}}{\hbar}  \int_{\hat{\Sp}} \star \w{A} ,
+    \quad\mbox{with}\quad
+    A_{\alpha\beta} := g_{\alpha\mu} g_{\beta\nu}
+        \frac{\delta L}{\delta R_{\mu\nu\rho\sigma}}
+        {}^{\hat{\Sp}}\!\!\eps^\perp_{\rho\sigma} .
+\]
+Lemma~\ref{p:sta:flux_integ_2form} leads then to (\ref{e:tha:S_Wald_explicit}).
 \end{proof}
 
 \begin{example}[Wald entropy from formula (\ref{e:tha:S_Wald_explicit}) for general relativity]
