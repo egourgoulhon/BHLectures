@@ -936,7 +936,8 @@ and $\wnab\w{\chi}$, so that $\w{Q}\lld\w{\chi}\rld$ is expressible as
     = \chi^\mu W_{\mu\alpha_1\cdots\alpha_{n-2}} +
       \nabla_\mu \chi_\nu X^{\mu\nu}_{\ \ \ \alpha_1\cdots\alpha_{n-2}} ,
 \]
-where $\w{W}$ and $\w{X}$ are tensor fields of type $(0,n-1)$ and
+where $\w{W}=\w{W}\lld\w{g}\rld$ and $\w{X}=\w{X}\lld\w{g}\rld$ are tensor fields of
+type $(0,n-1)$ and
 $(2,n-2)$ respectively, which are antisymmetric with respect to their
 last $n-2$ arguments. For instance, in the case of general relativity, we read on
 (\ref{e:tha:Noether_Q_GR}) that $\w{W}=0$ and
@@ -2266,10 +2267,10 @@ Stokes' theorem (\ref{e:bas:Stokes}) yields then
 \]
 To evaluate the 2-form $\Dd \alpha$ on $\mathcal{S}$, let us compute
 $\Dd \alpha(X_1,X_2)$ for a pair of vectors $(X_1,X_2)$ associated to a
-2-parameter family $\w{g}(\lambda_1,\lambda_2)$ spanning $\mathcal{S}$
+2-parameter family $\w{\bar{g}}(\lambda_1,\lambda_2)$ spanning $\mathcal{S}$
 [cf. Eq.~(\ref{e:tha:def_X1_X2})]. We may choose $(\lambda_1,\lambda_2)\in[0,1]^2$,
-with $\w{g}(\lambda_1,0)$ spanning $\Li$, $\w{g}(\lambda_1,1)$ spanning $\Li'$,
-$\w{g}(0,0) = \w{g}(0,1) = \w{g}_0$ and $\w{g}(1,0) = \w{g}(1,1) = \w{g}$.
+with $\w{\bar{g}}(\lambda_1,0)$ spanning $\Li$, $\w{\bar{g}}(\lambda_1,1)$ spanning $\Li'$,
+$\w{\bar{g}}(0,0) = \w{\bar{g}}(0,1) = \w{g}_0$ and $\w{\bar{g}}(1,0) = \w{\bar{g}}(1,1) = \w{g}$.
 By a computation similar to that of $\Dd \Theta_{\Sigma_r} (X_1,X_2)$ in the proof
 of Property~\ref{p:tha:presymplectic_current}, we arrive at
 \[
@@ -2280,9 +2281,9 @@ of Property~\ref{p:tha:presymplectic_current}, we arrive at
     - \w{\xi}\cdot \Bigg[
     \underbrace{
     \der{}{\lambda_1}
-        \left( \w{\theta} \Lld\w{g}, \der{\w{g}}{\lambda_2} \Rld \right)
-        - \der{}{\lambda_2}\left( \w{\theta}\Lld\w{g}, \der{\w{g}}{\lambda_1} \Rld \right)
-    }_{\w{\omega}\Lld\w{g},  \der{\w{g}}{\lambda_1}, \der{\w{g}}{\lambda_2} \Rld}
+        \left( \w{\theta} \Lld\w{\bar{g}}, \der{\w{\bar{g}}}{\lambda_2} \Rld \right)
+        - \der{}{\lambda_2}\left( \w{\theta}\Lld\w{\bar{g}}, \der{\w{\bar{g}}}{\lambda_1} \Rld \right)
+    }_{\w{\omega}\Lld\w{\bar{g}},  \der{\w{\bar{g}}}{\lambda_1}, \der{\w{\bar{g}}}{\lambda_2} \Rld}
         \Bigg] \Bigg\} .
 \]
 Hence if Eq.~(\ref{e:tha:crit_Hamil_exists}) holds, $\Dd\alpha(X_1,X_2) = 0$.
@@ -2316,8 +2317,8 @@ Let $(\M,\w{g})$ be an asymptotically flat spacetime governed by some
 diffeomorphism-invariant theory of gravity. Let $\w{\xi}$ be a vector field on $\M$,
 generator of an asymptotic symmetry corresponding to a time translation.
 Let us assume that the asymptotic flatness conditions guarantee that
-a Hamiltonian $H_{\w{\xi}}$ conjugate to $\w{\xi}$ exists and there exists a $(n-1)$-form
-$\w{B}$ on $\M$ such that $H_{\w{\xi}}$ takes the shape
+a Hamiltonian $H_{\w{\xi}}$ conjugate to $\w{\xi}$ exists, as well as a $(n-1)$-form
+$\w{B}$ such that $H_{\w{\xi}}$ takes the shape
 (\ref{e:tha:Hxi_Q_B}). The \defin{canonical energy}\index{canonical!energy}\index{energy!canonical --}
 of the spacetime $(\M,\w{g})$ relative to $\w{\xi}$ is then the value of $H_{\w{\xi}}$ at $\w{g}$:
 \be \label{e:tha:def_canonical_energy}
@@ -2486,6 +2487,8 @@ is nothing than the Komar angular momentum relative to $\w{\eta}$ at infinity.
 
 \subsection{First law for diffeomorphism-invariant theories}
 
+Finally, we arrive at the first law:
+
 \begin{prop}[first law of black hole thermodynamics for diffeomorphism-invariant theories
 \textnormal{(Iyer\index[pers]{Iyer, V.} \& Wald\index[pers]{Wald, R.M.} 1994
 \cite{IyerW94,Wald93})}]
@@ -2502,9 +2505,9 @@ are $L$ real constants.
 By virtue of Property~\ref{p:neh:zeroth_law_bifur}, the surface gravity $\kappa$ of $\Hor$
 is constant, so that the Hawking temperature of $\Hor$ is well defined:
 $T_{\rm H} = \hbar \kappa / (2\pi k_{\rm B})$ [Eq.~(\ref{e:evo:Hawking_temp})].
-Let us consider any variation $\delta\w{g}$ in the space $\FF$
+Let us consider a variation $\delta\w{g}$ in the space $\FF$
 of asymptotically flat solutions to the field equations, i.e.
-any asymptotically flat solution $\delta\w{g}$ to the linearized field equations around $\w{g}$
+an asymptotically flat solution $\delta\w{g}$ to the linearized field equations around $\w{g}$
 ($\delta\w{g}$ is not required to be stationary). Let us assume that the
 asymptotic flatness conditions ensure that a Hamiltonian conjugate to $\w{\xi}$ exists.
 Then $\delta\w{g}$ generates a variation
@@ -2522,7 +2525,7 @@ to $\w{\eta}_{(i)}$ [Eq.~(\ref{e:tha:def_canonical_angu})].
 \end{prop}
 
 \begin{proof}
-Let us consider the identity (\ref{e:tha:fund_identity}) with $\w{\xi} = \w{\chi}$.
+Let us consider the fundamental identity (\ref{e:tha:fund_identity}) with $\w{\xi} = \w{\chi}$.
 We may set $\w{\omega}\lld\w{g},\delta\w{g}, \Lie{\chi}\w{g}\rld = 0$ in
 its left-hand side since $\w{\omega}\lld\w{g},\delta\w{g}, \Lie{\chi}\w{g}\rld$
 is linear with respect to $\Lie{\chi}\w{g}$ (Property~\ref{p:tha:presymplectic_current})
@@ -2543,7 +2546,7 @@ we get
     - \w{\chi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right] .
 \]
 Note that we have used the vanishing of $\w{\chi}$ on $\hat{\Sp}$ (Property~\ref{p:sta:xi_S_zero})
-to get the integral in the left-hand side. Since $\w{Q}\lld\w{\chi}\rld$
+to write the integral in the left-hand side. Since $\w{Q}\lld\w{\chi}\rld$
 is linear with respect to $\w{\chi}$ (Property~\ref{p:tha:Noether_pot_form}),
 Eq.~(\ref{e:tha:chi_xi_eta_i}) leads to
 \[
