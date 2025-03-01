@@ -489,10 +489,12 @@ $\w{Z}\lld\w{g},\w{\xi}\rld $ is any $(n-3)$-form that is linear in $\w{\xi}$.
 
 \begin{proof}
 Since $\w{J}\lld\w{\xi}\rld$ is a closed differential form [Eq.~(\ref{e:tha:J_closed})], the Poincaré lemma
-states that it is locally exact (on a contractible open set, cf. Sec.~\ref{s:bas:ext_deriv}). However, because
+states that it is \emph{locally} exact (on a contractible open set, cf. Sec.~\ref{s:bas:ext_deriv}). However, because
 $\dd \w{J}\lld\w{\xi}\rld  = 0$ holds for any vector field $\w{\xi}$, it can be shown that
 $\w{J}\lld\w{\xi}\rld$ is \emph{globally} exact, i.e. takes the form (\ref{e:tha:J_dQ})
 with $\w{Q}\lld\w{\xi}\rld$ being a local function of $\w{\xi}$ \cite{Wald90}.
+The linearity of $\w{Q}\lld\w{\xi}\rld$ in terms of $\w{\xi}$ arises from the linearity
+of $\w{J}\lld\w{\xi}\rld$ (cf. Property~\ref{p:tha:Noether_current}).
 Finally, the $\w{Y}$ and $\w{\mu}$ ambiguities in (\ref{e:tha:Q_not_unique}) are inherited from the ambiguities of $\w{J}$ [Eq.~(\ref{e:tha:J_not_unique})], while the $\w{Z}$ ambiguity stems from Eq.~(\ref{e:tha:J_dQ}) defining
 $\w{Q}$ up to the addition of a closed $(n-2)$-form (cf. Lemma~1 in Ref.~\cite{Wald90}).
 \end{proof}
@@ -2505,10 +2507,18 @@ are $L$ real constants.
 By virtue of Property~\ref{p:neh:zeroth_law_bifur}, the surface gravity $\kappa$ of $\Hor$
 is constant, so that the Hawking temperature of $\Hor$ is well defined:
 $T_{\rm H} = \hbar \kappa / (2\pi k_{\rm B})$ [Eq.~(\ref{e:evo:Hawking_temp})].
-Let us consider a variation $\delta\w{g}$ in the space $\FF$
-of asymptotically flat solutions to the field equations, i.e.
-an asymptotically flat solution $\delta\w{g}$ to the linearized field equations around $\w{g}$
-($\delta\w{g}$ is not required to be stationary). Let us assume that the
+Let us consider an asymptotically flat solution $\delta\w{g}$ to the linearized field equations around $\w{g}$, i.e. a variation $\delta\w{g}$ in the space $\FF$
+of asymptotically flat solutions to the field equations
+($\delta\w{g}$ is not required to be stationary).
+Let us define the \defin{Wald entropy} of the black hole in the perturbed spacetime
+$(\M,\w{g}+\delta\w{g})$ by the same formula as in the stationary case, namely
+Eq.~(\ref{e:tha:def_Wald_entropy}), but with the integral taken at the
+bifurcation surface $\Sp$ of the unperturbed configuration:
+\be \label{e:tha:def_Wald_entropy_bif}
+    S_{\rm W} :=
+    \frac{2 \pi k_{\rm B}}{\hbar\kappa}  \int_{\hat{\Sp}} \w{Q}\lld\w{\chi}\rld  .
+\ee
+Finally, let us assume that the
 asymptotic flatness conditions ensure that a Hamiltonian conjugate to $\w{\xi}$ exists.
 Then $\delta\w{g}$ generates a variation
 $\delta\mathcal{E}$ of the canonical energy relative to $\w{\xi}$ [Eq.~(\ref{e:tha:def_canonical_energy})]
@@ -2518,9 +2528,7 @@ obeying
         + \sum_{i=1}^{L} \Omega^{(i)} \delta \mathcal{J}_{(i)} },
 \ee
 where
-$S_{\rm W}$ is the Wald entropy (\ref{e:tha:def_Wald_entropy}) ---
-which is well defined since $\kappa\neq 0$ (Property~\ref{p:neh:zeroth_law_bifur}) ---
-and $\mathcal{J}_{(i)}$ is the canonical angular momenta relative
+$\mathcal{J}_{(i)}$ is the canonical angular momenta relative
 to $\w{\eta}_{(i)}$ [Eq.~(\ref{e:tha:def_canonical_angu})].
 \end{prop}
 
@@ -2558,7 +2566,7 @@ Eq.~(\ref{e:tha:chi_xi_eta_i}) leads to
     \underbrace{\int_{\Sp_\infty} \left[ \delta\w{Q}\lld\w{\eta}_{(i)}\rld
     - \w{\eta}_{(i)}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right]}_{\delta H_{\w{\eta}_{(i)}}} ,
 \]
-where we have used Eq.~(\ref{e:tha:def_Wald_entropy}) to let appear
+where we have used Eq.~(\ref{e:tha:def_Wald_entropy_bif}) to let appear
 the Wald entropy $S_{\rm W}$ and
 Eq.~(\ref{e:tha:delta_H_xi}) to let appear the
 variations of the Hamiltonians $H_{\w{\xi}}$ and $H_{\w{\eta}_{(i)}}$ conjugate
