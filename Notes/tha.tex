@@ -876,6 +876,7 @@ bifurcation surface (and to the Lagrangian scalar):
 \begin{prop}[explicit expression of the Wald entropy
 \textnormal{(Iyer\index[pers]{Iyer, V.} \& Wald\index[pers]{Wald, R.M.} 1994
 \cite{IyerW94})}]
+\label{p:tha:S_Wald_explicit}
 Let us consider a stationary black hole in a diffeomorphism-invariant theory,
 whose Lagrangian scalar $L$ is recast as
 (\ref{e:tha:Lagrangian_diffeo_inv}). Assuming that the black hole event
@@ -2512,8 +2513,24 @@ of asymptotically flat solutions to the field equations
 ($\delta\w{g}$ is not required to be stationary).
 Let us define the \defin{Wald entropy} of the black hole in the perturbed spacetime
 $(\M,\w{g}+\delta\w{g})$ by the same formula as in the stationary case, namely
-Eq.~(\ref{e:tha:def_Wald_entropy}), but with the integral taken at the
-bifurcation surface $\Sp$ of the unperturbed configuration:
+Eq.~(\ref{e:tha:def_Wald_entropy}), but with the integral taken on the
+bifurcation surface $\hat{\Sp}$ of the unperturbed
+configuration\footnote{\label{ft:tha:bif_sur} As discussed in
+the proof of Property~\ref{p:evo:first_law_gen}, there is no loss of generality
+in considering that the event horizons of the stationary spacetime $(\M,\w{g})$
+and the perturbed one $(\M,\w{g}+\delta\w{g})$ are described by the same
+hypersurface $\Hor$ of $\M$. A priori $\Hor$ is not a Killing horizon
+in $(\M,\w{g}+\delta\w{g})$, since the latter is not assumed stationary.
+The submanifold $\hat{\Sp}$ of $\Hor$ is thus not a bifurcation surface in
+$(\M,\w{g}+\delta\w{g})$. However, this does not prevent ones
+to define the integral of the $(n-2)$-form
+$\w{Q}\lld\w{\chi}\rld$ in $(\M,\w{g}+\delta\w{g})$
+(i.e. $\w{Q}\lld\w{\chi}\rld = \w{Q}\lld(\w{g}+\delta\w{g},\w{\chi}\rld$,
+if the dependence of $\w{Q}$ on $\w{g}$ is made explicit)
+on the $(n-2)$-surface $\hat{\Sp}$, as in Eq.~(\ref{e:tha:def_Wald_entropy_bif}).
+Similarly, in Eq.~(\ref{e:tha:def_Wald_entropy_bif}), $\kappa$ is the
+surface gravity of $\Hor$ in $(\M,\w{g})$, given that there is no well-defined
+concept of surface gravity if $\Hor$ is not a Killing horizon.}:
 \be \label{e:tha:def_Wald_entropy_bif}
     S_{\rm W} :=
     \frac{2 \pi k_{\rm B}}{\hbar\kappa}  \int_{\hat{\Sp}} \w{Q}\lld\w{\chi}\rld  .
@@ -2571,14 +2588,15 @@ the Wald entropy $S_{\rm W}$ and
 Eq.~(\ref{e:tha:delta_H_xi}) to let appear the
 variations of the Hamiltonians $H_{\w{\xi}}$ and $H_{\w{\eta}_{(i)}}$ conjugate
 to $\w{\xi}$ and $\w{\eta}_{(i)}$ respectively. Given that
+$\delta\kappa = 0$ (for $\kappa$ in Eq.~(\ref{e:tha:def_Wald_entropy_bif})
+is set to the surface gravity in the unperturbed spacetime, cf. footnote~\ref{ft:tha:bif_sur}),
 $\hbar \kappa/(2\pi k_{\rm B}) = T_{\rm H}$ [Eq.~(\ref{e:evo:Hawking_temp})],
 $H_{\w{\xi}}[\w{g}] = \mathcal{E}$ (Property~\ref{p:tha:canonical_energy})
 and $H_{\w{\eta}_{(i)}}[\w{g}] = - \mathcal{J}_{(i)}$ (Property~\ref{p:tha:canonical_angu}),
 we get Eq.~(\ref{e:tha:first_law_canon}).
 \end{proof}
 
-Property~\ref{p:tha:first_law}
-clearly generalizes the first law of
+Property~\ref{p:tha:first_law} generalizes the first law of
 black hole thermodynamics obtained for general relativity in Chap.~\ref{s:evo}
 to any diffeomorphism-invariant theory of gravity:
 compare Eqs.~(\ref{e:tha:first_law_canon}) with
@@ -2596,13 +2614,29 @@ the reference configuration is assumed to be stationary.
 We have already noticed that the Hawking temperature $T_{\rm H}$
 is independent of the gravity theory
 (cf. Remark~\ref{r:evo:Hawking_rad_kinematic} on p.~\pageref{r:evo:Hawking_rad_kinematic}).
-Contrary to the entropy, there was thus no need to modify it to get the first law
+Thus, contrary to the entropy, there was no need to amend it to get the first law
 in any diffeomorphism-invariant gravity theory.
 \end{remark}
 
+\begin{remark}
+In the original work by Iyer \& Wald \cite{IyerW94},
+the black hole entropy in the perturbed
+configuration is defined by formula~(\ref{e:tha:S_Wald_explicit})
+instead of formula~(\ref{e:tha:def_Wald_entropy_bif}).
+Formula~(\ref{e:tha:S_Wald_explicit}) makes
+sense for a nonstationary black hole as well, provided that $\hat{\Sp}$
+is the bifurcation surface in the unperturbed configuration.
+For a stationary black hole, both definitions are equivalent
+(Property~\ref{p:tha:S_Wald_explicit}). However, for a nonstationary one,
+this is not obvious. However, it has been proven by Iyer \& Wald, that
+$\delta S_{\rm W} = \delta {S'}_{\rm W}$,
+where $S_{\rm W}$ is defined by (\ref{e:tha:def_Wald_entropy_bif})
+and ${S'}_{\rm W}$ is defined by (\ref{e:tha:S_Wald_explicit})
+(cf. Eq.~(94) in Ref.~\cite{IyerW94}).
+\end{remark}
 
 
-\section{To go further}
+\section{What about the second law?}
 
 Recently, Hollands, Wald and Zhang \cite{HollaWZ24,Wald24} put forward a proposal
 for defining the entropy of a dynamical black hole in a diffeomorphism-invariant
