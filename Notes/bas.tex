@@ -1355,6 +1355,17 @@ In particular, for a 1-form,
     \Liec{u} \omega_\alpha = u^\mu \der{\omega_\alpha}{x^\mu}
     + \omega_\mu \der{u^\mu}{x^\alpha} .
 \ee
+In coordinates adapted to the vector field $\w{u}$, we have
+$u^\alpha = (1,0,\ldots,0)$, so that
+$u^\mu \dert{}{x^\mu} = \dert{}{x^0}$ and $\dert{u^\alpha}{x^\beta} = 0$.
+Accordingly, Eq.~(\ref{e:Lie_der_comp}) reduces to
+\be \label{e:bas:Lie_adapted}
+    \Liec{u} T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}
+     = \der{}{x^0} T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}
+     \qquad \mbox{(coordinates adapted to $\w{u}$)}.
+\ee
+This generalizes Eq.~(\ref{e:bas:Lie_adapted_vec}) obtained for vector fields.
+
 As for the vector case [Eq.~(\ref{e:bas:Lie_vect})], the
 partial derivatives in Eq.~(\ref{e:Lie_der_comp}) can be
 replaced by the covariant derivative $\wnab$ (or any other connection without torsion),
@@ -1374,23 +1385,11 @@ u^\mu \nabla_\mu T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}
 A special case of this formula is worth considering, namely
 $\w{T}=\w{g}$ (the metric tensor). Since $\nabla_\mu g_{\alpha\beta} = 0$,
 and $g_{\sigma\beta} \nabla_\alpha u^\sigma = \nabla_\alpha u_\beta$ (both thanks to
-Eq.~(\ref{e:bas:nabla_g_zero})), one obtains
-readily the so-called \defin{Killing expression}\index{Killing!expression}
+Eq.~(\ref{e:bas:nabla_g_zero})), one gets the so-called \defin{Killing expression}\index{Killing!expression}
 of the Lie derivative of the metric tensor:
 \be \label{e:bas:Lie_g_Killing}
    \encadre{ \Liec{u} g_{\alpha\beta} = \nabla_\alpha u_\beta + \nabla_\beta u_\alpha }.
 \ee
-
-In coordinates adapted to the vector field $\w{u}$,
-we have, similarly to Eq.~(\ref{e:bas:Lie_adapted_vec}),
-\be \label{e:bas:Lie_adapted}
-    \Liec{u} T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}
-     = \der{}{x^0} T^{\alpha_1\ldots\alpha_k}_{\qquad\ \; \beta_1\ldots\beta_\ell}
-     \qquad \mbox{(coordinates adapted to $\w{u}$)}.
-\ee
-This formula follows directly from (\ref{e:Lie_der_comp})
-since in adapted coordinates, $u^\alpha = (1,0,\ldots,0)$, so that
-$u^\mu \dert{}{x^\mu} = \dert{}{x^0}$ and $\dert{u^\alpha}{x^\beta} = 0$.
 
 
 \subsection{Exterior derivative} \label{s:bas:ext_deriv}

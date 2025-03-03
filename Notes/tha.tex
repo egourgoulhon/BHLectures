@@ -124,7 +124,7 @@ The last expression is clearly of the form (\ref{e:tha:Lagrangian_diffeo_inv}), 
 the components $(g^{\alpha\beta})$ are functions of the components $(g_{\alpha\beta})$ only.
 \end{example}
 
-\subsection{Lagrangian variation and presymplectic potential}
+\subsection{Lagrangian variation and presymplectic potential form}
 
 A standard computation (see e.g \cite{Compe19,LeeW90}) leads to
 
@@ -425,7 +425,7 @@ and we obtain (\ref{e:tha:J_not_unique}).
 \begin{remark}
 \label{r:tha:notation_J}
 From the definition (\ref{e:tha:def_Noether_current}), it is clear that
-$\w{J}\lld\w{\xi}\rld$ is a local function of $\w{g}$ (and its derivatives), in addition to $\w{\xi}$. So, according to the notation introduced in Sec.~\ref{s:tha:framework}, we could have written
+$\w{J}\lld\w{\xi}\rld$ is a local function of $\w{g}$ (and its derivatives), in addition to $\w{\xi}$. So, following the notation introduced in Sec.~\ref{s:tha:framework}, we could have written
 $\w{J}\lld\w{g},\w{\xi}\rld$. However for the sake of brevety, we use
 $\w{J}\lld\w{\xi}\rld$, leaving the dependency on $\w{g}$ implicit.
 \end{remark}
@@ -767,9 +767,9 @@ the Noether charge of $\Sp$ with respect to the axisymmetric Killing vector $\w{
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Wald entropy and the first law}
+\section{Wald entropy}
 
-\subsection{Wald entropy}
+\subsection{Wald entropy as a Noether charge}
 
 Having introduced the concept of Noether charge related to diffeomorphism invariance,
 we are in position to define the Wald entropy of a stationary black hole.
@@ -868,6 +868,8 @@ In view of the definition (\ref{e:tha:def_Wald_entropy}) of $S_{\rm W}$,
 we get (\ref{e:tha:S_W_S_BH_GR}).
 \end{proof}
 
+\subsection{Geometric expression of the Wald entropy}
+
 The Bekenstein-Hawking entropy does not involve directly the horizon
 Killing vector $\w{\chi}$, but a geometrical quantity
 related to a cross-section $\Sp$ of the horizon, namely the area $A$ of
@@ -876,7 +878,7 @@ Similarly, one can recast the Wald entropy in a form that gets rid of
 $\w{\chi}$ and $\kappa$, refering only to geometrical quantities related to the
 bifurcation surface (and to the Lagrangian scalar):
 
-\begin{prop}[explicit expression of the Wald entropy
+\begin{prop}[geometric expression of the Wald entropy
 \textnormal{(Iyer\index[pers]{Iyer, V.} \& Wald\index[pers]{Wald, R.M.} 1994
 \cite{IyerW94})}]
 \label{p:tha:S_Wald_explicit}
@@ -1037,7 +1039,9 @@ of gravity. This holds because the Wald entropy naturally enters in the
 generalization of the first law to all diffeomorphism-invariant theories
 that admit a Hamiltonian formulation, to which we turn now.
 
-\subsection{The covariant phase space approach}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Covariant phase space formalism}
 
 The extension of the first law beyond general relativity has been achieved
 by Wald in 1993 \cite{Wald93}, within a Hamiltonian
@@ -1045,9 +1049,12 @@ framework based on the co-called \emph{covariant phase space}\index{covariant!ph
 of total mass $M$ --- the variation of which constitutes the left-hand side of the first law --- as the \emph{canonical energy} of the system (value of the Hamiltonian),
 thereby generalizing the concept of ADM mass\index{ADM!mass} beyond general relativity.
 
+\subsection{Hamiltonian formalism without canonical coordinates}
+
 The \emph{covariant phase space} approach is a Hamiltonian formalism that
 is adapted to field theories, preserving general covariance.
 On the contrary, the standard approach relies on the choice of
+canonical coordinates and of
 a time function $t$, with respect to which the evolution is governed by
 Hamilton's equations.
 For a system with $N$ degrees of freedom,
@@ -1380,6 +1387,7 @@ which are thus two equilibrium points (respectively stable and unstable).
 
 
 \begin{remark}
+\label{r:tha:Ham_syst_no_canonical_coord}
 The above formulation of Hamiltonian systems does not
 refer to any system of canonical coordinates $(q^i, p_i)$ on
 the phase space $\FF$
@@ -1391,7 +1399,9 @@ arena for the Hamiltonian mechanics with a finite number of degrees
 of freedom \cite{AbrahM78}.
 \end{remark}
 
-Despite the above remark, the Hamiltonian formulation sketched in
+\subsection{Covariant phase space}
+
+Despite Remark~\ref{r:tha:Ham_syst_no_canonical_coord}, the Hamiltonian formulation sketched in
 Property~\ref{p:tha:Hamiltonian_system} is not fully covariant.
 Indeed, via the Hamiltonian
 vector field $X_H$, it describes the evolution of the system with
@@ -2019,7 +2029,7 @@ The genuine covariant phase space of the considered gravity theory
 is then $(\bar{\FF},\bar{\Omega})$. However, in what follows, we will deal
 only with the prephase space $(\FF,\Omega)$.
 
-\subsection{Hamiltonian conjugate to an asymptotic symmetry}
+\subsection{Fundamental identity of the covariant phase space formalism}
 
 Property~\ref{p:tha:omega_closed} tells that the $(n-1)$-form
 $\w{\omega}(\w{g},\delta_1\w{g},\delta_2\w{g})$ is closed for any pair
@@ -2035,7 +2045,10 @@ of $\w{\xi}$'s Noether potential $(n-2)$-form. More precisely, we have:
 \begin{prop}[fundamental identity of the covariant phase space formalism]
 Let $(\M,\w{g})$ be a $n$-dimensional spacetime governed by a
 diffeomorphism-invariant theory and let $\w{\xi}$ be a vector field on $\M$.
-Any variation $\delta\w{g}$ among the solutions to the field equations
+Any variation $\delta\w{g}$ among the solutions to the field equations\footnote{This means
+that both $\w{g}$ and $\w{g}+\delta\w{g}$ are assumed to be
+solutions to the field equations, which
+implies that $\delta\w{g}$ is a solution to the linearized field equation.}
 generates a variation $\delta\w{Q}\lld\w{\xi}\rld$ of the
 Noether potential $(n-2)$-form of $\w{\xi}$ (cf. Property~\ref{p:tha:Noether_pot_form}
 and Remark~\ref{r:tha:notation_Q} on p.~\pageref{r:tha:notation_Q}),
@@ -2078,18 +2091,37 @@ the above equation becomes
     \delta \w{J}\lld\w{\xi}\rld = \w{\omega}\lld\w{g},\delta\w{g}, \Lie{\xi}\w{g}\rld
         + \dd\left[ \w{\xi}\cdot \w{\theta}\lld\w{g},\delta\w{g}\rld \right] .
 \]
-Finally, Eq.~(\ref{e:tha:J_dQ}) yields $\delta\w{J}\lld\w{\xi}\rld
-= \delta \dd \w{Q}\lld\w{\xi}\rld  = \dd \left[  \delta \w{Q}\lld\w{\xi}\rld \right]$,
-hence the result (\ref{e:tha:fund_identity}).
+Finally, restoring the explicit dependence of $\w{J}$ on $\w{g}$
+(cf. Remark~\ref{r:tha:notation_J} on p.~\pageref{r:tha:notation_J}),
+we have
+$\delta \w{J}\lld\w{\xi}\rld :=
+\w{J}\lld\w{g}+\delta\w{g},\w{\xi}\rld - \w{J}\lld\w{g},\w{\xi}\rld$.
+Since both $\w{g}$ and $\w{g}+\delta\w{g}$ are
+solutions to the field equations, we may invoke
+Eq.~(\ref{e:tha:J_dQ}) to write
+$\w{J}\lld\w{g}+\delta\w{g},\w{\xi}\rld = \dd  \w{Q}\lld\w{g}+\delta\w{g},\w{\xi}\rld$
+and
+$\w{J}\lld\w{g},\w{\xi}\rld = \dd  \w{Q}\lld\w{g},\w{\xi}\rld$.
+Hence there comes
+$\delta \w{J}\lld\w{\xi}\rld = \dd[\w{Q}\lld\w{g}+\delta\w{g},\w{\xi}\rld -
+ \w{Q}\lld\w{g},\w{\xi}\rld] = \dd \delta \w{Q}\lld\w{\xi}\rld$,
+from which Eq.~(\ref{e:tha:fund_identity}) follows.
 \end{proof}
 
 \begin{remark}
-In the literature \cite{HollaW13,HollaWZ24,Compe19,GrumiS22,HajiaS16}, it is rather
-a generalization of
-Equation~(\ref{e:tha:fund_identity}), holding
-even if $\w{g}$ does not satisfy the field equations, which is called
-the \emph{fundamental identity} of the covariant phase space formalism.
+The denomination \emph{fundamental identity of the covariant phase space formalism}
+for Eq.~(\ref{e:tha:fund_identity})
+is used in some part of the literature \cite{Compe19,GrumiS22,HajiaS16}, as here, while in another part \cite{HollaW13,HollaWZ24},
+it is given
+to a generalization of it, which holds
+even if $\w{g}$ and $\w{g}+\delta\w{g}$ do not satisfy the field equations.
 \end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{First law for diffeomorphism-invariant theories}
+
+\subsection{Hamiltonian conjugate to an asymptotic symmetry}
 
 A vector field $\w{\xi}$ on $\M$ is said to be a
 \defin{generator of an asymptotic symmetry}\index{asymptotic!symmetry!generator}
