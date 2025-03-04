@@ -10,6 +10,7 @@ Lectures notes [Geometry and physics of black holes](https://relativite.obspm.fr
 - ENS, Paris, France, May-June 2023
 - AEI, Potsdam, Germany, December 2023
 - IHP, Paris, France, March 2024
+- ENS, Paris, France, April-June 2025
 
 Home page: [https://relativite.obspm.fr/blackholes](https://relativite.obspm.fr/blackholes)
 
