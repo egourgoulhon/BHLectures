@@ -1008,6 +1008,11 @@ Eq.~(\ref{e:tha:S_W_no_chi}) becomes
 Lemma~\ref{p:sta:flux_integ_2form} leads then to (\ref{e:tha:S_Wald_explicit}).
 \end{proof}
 
+Let us stress that the integral in expression (\ref{e:tha:S_Wald_explicit}) of
+the Wald entropy has to be taken on the bifurcation surface $\hat{\Sp}$, while
+in the Noether charge expression (\ref{e:tha:def_Wald_entropy}), the integral
+can be taken on any complete cross-section $\Sp$ of the event horizon.
+
 \begin{example}[Wald entropy from formula (\ref{e:tha:S_Wald_explicit}) for general relativity]
 For general relativity,
 $L = (16\pi)^{-1} g^{\mu\nu} g^{\rho\sigma} R_{\rho\mu\sigma\nu}$
@@ -1037,38 +1042,39 @@ is not sufficient by itself to assert that the Wald entropy
 is the correct concept of black hole entropy for all theories
 of gravity. This holds because the Wald entropy naturally enters in the
 generalization of the first law to all diffeomorphism-invariant theories
-that admit a Hamiltonian formulation, to which we turn now.
+that admit a Hamiltonian formulation, which we will discuss in Sec.~\ref{s:tha:first_law},
+after having introduced the covariant phase space formalism.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Covariant phase space formalism}
 
-The extension of the first law beyond general relativity has been achieved
-by Wald in 1993 \cite{Wald93}, within a Hamiltonian
-framework based on the co-called \emph{covariant phase space}\index{covariant!phase space} approach. The Hamiltonian formalism is relevant here for it naturally provides the concept
+The extension of the first law beyond general relativity is naturally achieved
+within a Hamiltonian framework. Indeed, such a framework provides the concept
 of total mass $M$ --- the variation of which constitutes the left-hand side of the first law --- as the \emph{canonical energy} of the system (value of the Hamiltonian),
-thereby generalizing the concept of ADM mass\index{ADM!mass} beyond general relativity.
-
-\subsection{Hamiltonian formalism without canonical coordinates}
-
-The \emph{covariant phase space} approach is a Hamiltonian formalism that
-is adapted to field theories, preserving general covariance.
+thereby generalizing the concept of Kormar\index{Komar!mass} or ADM masses\index{ADM!mass} beyond general relativity.
+The relevant Hamiltonian framework is the co-called \emph{covariant phase space}\index{covariant!phase space} approach,
+which is adapted to field theories, preserving general covariance.
 On the contrary, the standard approach relies on the choice of
 canonical coordinates and of
 a time function $t$, with respect to which the evolution is governed by
 Hamilton's equations.
-For a system with $N$ degrees of freedom,
-described by some configuration coordinates $(q^i)_{1\leq i \leq N}$
-and a Lagrangian $L = L(q^i,{\dot q}^i)$ (with ${\dot q}^i := \D q^i/\D t$),
-\defin{Hamilton's equations}\index{Hamilton's equations} read
+
+\subsection{Hamiltonian formalism without canonical coordinates}
+
+In standard mechanics, a system with $N$ degrees of freedom
+is described by some configuration coordinates $(q^i)_{1\leq i \leq N}$
+and a Lagrangian $L = L(q^i,{\dot q}^i)$ (with ${\dot q}^i := \D q^i/\D t$).
+The system's Hamiltonian is then $H(q^i,p_i) = \sum_{i=1}^N p_i {\dot q}^i - L$,
+where $p_i$'s are the conjugate momenta: $p_i := \dert{L}{{\dot q}^i}$,
+and the system's motion is governed by
+\defin{Hamilton's equations}\index{Hamilton's equations}:
 ${\dot q}^i = \dert{H}{p_i}$ and ${\dot p}_i = - \dert{H}{q^i}$, or equivalently,
 \be \label{e:evo_Hamilton_eqs_finite}
     \derd{q^i}{t} = \{q^i, H \} \qand \derd{p_i}{t} = \{p_i, H\} , \quad 1 \leq i \leq N,
 \ee
-where
-the $p_i$'s are the conjugate momenta (i.e. $p_i := \dert{L}{{\dot q}^i}$),
-$H$ is the system's Hamiltonian ($H = \sum_{i=1}^N p_i {\dot q}^i - L$)
-and $\{.,.\}$
+where $\{.,.\}$
 stands for the \defin{Poisson bracket}\index{Poisson!bracket}:
 \be \label{e:tha:Poisson_bracket_canon}
  \{f,g\} := \sum_{i=1}^N \left( \der{f}{q^i} \, \der{g}{p_i} - \der{g}{q^i} \, \der{f}{p_i} \right) .
@@ -1077,10 +1083,10 @@ More generally, for any scalar function $f=f(q^i,p_i)$, one has
 \be \label{e:tha:dfdt_Poisson_fH}
      \derd{f}{t} = \{f, H \} .
 \ee
-The coordinates $(y^a) := (q^1,\ldots,q^N,p_1,\ldots,p_N)$ span a manifold $\FF$ of dimension
+The coordinates $(y^a) := (q^1,\ldots,q^N,p_1,\ldots,p_N)$ span a smooth manifold $\FF$ of dimension
 $2N$ called the system's \defin{phase space}\index{phase space}.
-The Poisson bracket can be rewritten covariantly (i.e. in a form independent of the
-coordinates $(y^a)$) by introducing the following 2-form on $\FF$:
+The Poisson bracket can be rewritten covariantly, i.e. in a form independent of the
+coordinates $(y^a)$, by introducing the following 2-form on $\FF$:
 \be \label{e:tha:def_symplectic_finite}
     \Omega := \sum_{i=1}^N \Dd p_i \wedge \Dd q^i ,
 \ee
@@ -1518,7 +1524,7 @@ space $\FF_{\rm sol}$ of solutions $\w{g}$ to the field equations
 we shall drop the index ``sol'' and denote this space simply by\footnote{Be aware that in
 some part of the
 literature \cite{AshteBR91,LeeW90,WaldZ00}, $\FF$ denotes instead the space of all fields $\w{g}$
-that are required to only obey some asymptotic flatness conditions, but necessarily the field equations;
+that are required to only obey some asymptotic flatness conditions, but not necessarily the field equations;
 the subspace of solutions to the field equations --- our $\FF$ --- is then denoted
 by $\bar{\FF}$ \cite{LeeW90,WaldZ00} or $\Gamma$ \cite{AshteBR91}.} $\FF$.
 A difference with what precedes is that
@@ -2119,7 +2125,7 @@ even if $\w{g}$ and $\w{g}+\delta\w{g}$ do not satisfy the field equations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{First law for diffeomorphism-invariant theories}
+\section{First law for diffeomorphism-invariant theories} \label{s:tha:first_law}
 
 \subsection{Hamiltonian conjugate to an asymptotic symmetry}
 
@@ -2560,7 +2566,7 @@ The submanifold $\hat{\Sp}$ of $\Hor$ is thus not a bifurcation surface in
 $(\M,\w{g}+\delta\w{g})$. However, this does not prevent ones
 to define the integral of the $(n-2)$-form
 $\w{Q}\lld\w{\chi}\rld$ in $(\M,\w{g}+\delta\w{g})$
-(i.e. $\w{Q}\lld\w{\chi}\rld = \w{Q}\lld(\w{g}+\delta\w{g},\w{\chi}\rld$,
+(i.e. $\w{Q}\lld\w{\chi}\rld = \w{Q}\lld\w{g}+\delta\w{g},\w{\chi}\rld$,
 if the dependence of $\w{Q}$ on $\w{g}$ is made explicit)
 on the $(n-2)$-surface $\hat{\Sp}$, as in Eq.~(\ref{e:tha:def_Wald_entropy_bif}).
 Similarly, in Eq.~(\ref{e:tha:def_Wald_entropy_bif}), $\kappa$ is the
@@ -2568,8 +2574,10 @@ surface gravity of $\Hor$ in $(\M,\w{g})$, given that there is no well-defined
 concept of surface gravity if $\Hor$ is not a Killing horizon.}:
 \be \label{e:tha:def_Wald_entropy_bif}
     S_{\rm W} :=
-    \frac{2 \pi k_{\rm B}}{\hbar\kappa}  \int_{\hat{\Sp}} \w{Q}\lld\w{\chi}\rld  .
+    \frac{2 \pi k_{\rm B}}{\hbar\kappa}  \int_{\hat{\Sp}} \w{Q}\lld\w{\chi}\rld  ,
 \ee
+where $\w{\chi}$ is the same vector field on $\M$ as in the unperturbed
+configuration (in other words, $\delta\w{\chi} = 0$).
 Finally, let us assume that the
 asymptotic flatness conditions ensure that a Hamiltonian conjugate to $\w{\xi}$ exists.
 Then $\delta\w{g}$ generates a variation
@@ -2585,7 +2593,9 @@ to $\w{\eta}_{(i)}$ [Eq.~(\ref{e:tha:def_canonical_angu})].
 \end{prop}
 
 \begin{proof}
-Let us consider the fundamental identity (\ref{e:tha:fund_identity}) with $\w{\xi} = \w{\chi}$.
+Let us consider the fundamental identity (\ref{e:tha:fund_identity}) with $\w{\xi} = \w{\chi}$,
+which holds since we assume that $\w{\chi}$ is a fixed vector field on $\M$
+($\delta\w{\chi}=0$).
 We may set $\w{\omega}\lld\w{g},\delta\w{g}, \Lie{\chi}\w{g}\rld = 0$ in
 its left-hand side since $\w{\omega}\lld\w{g},\delta\w{g}, \Lie{\chi}\w{g}\rld$
 is linear with respect to $\Lie{\chi}\w{g}$ (Property~\ref{p:tha:presymplectic_current})
@@ -2631,26 +2641,115 @@ and $H_{\w{\eta}_{(i)}}[\w{g}] = - \mathcal{J}_{(i)}$ (Property~\ref{p:tha:canon
 we get Eq.~(\ref{e:tha:first_law_canon}).
 \end{proof}
 
-Property~\ref{p:tha:first_law} generalizes the first law of
+At first glance, Property~\ref{p:tha:first_law} generalizes the first law of
 black hole thermodynamics obtained for general relativity in Chap.~\ref{s:evo}
 to any diffeomorphism-invariant theory of gravity:
-compare Eqs.~(\ref{e:tha:first_law_canon}) with
+compare Eq.~(\ref{e:tha:first_law_canon}) with
 Eq.~(\ref{e:evo:first_law_TH}), taking into account that, for general relativity,
-$\mathcal{E} = M$ (cf. Example~\ref{x:tha:E_GR_ADM} on p.~\pageref{x:tha:E_GR_ADM})
-and $S_{\rm W} = S_{\rm BH}$ [Eq.~(\ref{e:tha:S_W_S_BH_GR})].
-Even if one sticks to general relativity, Property~\ref{p:tha:first_law} extends
-the results of Chap.~\ref{s:evo} to non-stationary variations
-$\delta\w{g}$. Indeed, the mass variation formula, as obtained in
-Property~\ref{p:evo:first_vac_GR}, assumes a variation between two nearby
-stationary configurations, while in Property~\ref{p:tha:first_law}, only
-the reference configuration is assumed to be stationary.
+$\mathcal{E} = M$ (cf. Example~\ref{x:tha:E_GR_ADM} on p.~\pageref{x:tha:E_GR_ADM}).
+However, one should
+notice that $\delta S_{\rm W}$ in Eq.~(\ref{e:tha:first_law_canon}) is the variation of the entropy defined
+by Eq.~(\ref{e:tha:def_Wald_entropy_bif}), while in Eq.~(\ref{e:evo:first_law_TH}),
+$\delta S_{\rm BH}$ was the variation of entropy between two nearby
+\emph{stationary} configurations. Given that for a stationary configuration,
+the Wald entropy $S_{\rm W} =: S_{\rm W}^{\rm eq}$
+is defined by Eq.~(\ref{e:tha:def_Wald_entropy}), where
+$\kappa$ is the surface gravity corresponding to that configuration and not of
+some reference configuration as in Eq.~(\ref{e:tha:def_Wald_entropy_bif}),
+one should prove that $\delta S_{\rm W} = \delta S_{\rm W}^{\rm eq}$
+to claim that Eq.~(\ref{e:tha:first_law_canon}) truely generalizes
+the first law (\ref{e:evo:first_law_TH}). Specifically, let us use the
+same framework as in Chap.~\ref{s:evo}, namely the perturbed configuration
+is a stationary black hole, the horizon of which is a Killing horizon with
+respect to the Killing vector
+\be \label{e:tha:chi_delta_chi}
+    \w{\chi} + \delta\w{\chi}_{\rm eq} = \w{\xi} + \sum_{i=1}^{L} (\Omega^{(i)} + \delta\Omega^{(i)}) \w{\eta}_{(i)},
+\ee
+and the corresponding surface gravity is $\kappa+\delta\kappa$. Note that we are using the
+same gauge freedom as in Chap.~\ref{s:evo}, namely the horizon is the same
+hypersurface of $\M$ and the stationary and axisymmetric Killing vectors are
+held fixed: $\delta\w{\xi} = 0$ and $\delta\w{\eta}_{(i)} = 0$ [Eq.~(\ref{e:evo:delta_xi_eta})].
+We are using the subscript ``eq'' in $\delta\w{\chi}_{\rm eq}$ to avoid any confusion
+with $\delta\w{\chi} = 0$ assumed in Property~\ref{p:tha:first_law}.
+We have then, from Eq.~(\ref{e:tha:def_Wald_entropy}) with $\Sp = \hat{\Sp}$,
+\[
+     \delta S_{\rm W}^{\rm eq} = \frac{2 \pi k_{\rm B}}{\hbar(\kappa+\delta\kappa)}
+     \int_{\hat{\Sp}} \w{Q}\lld\w{g} + \delta\w{g},\w{\chi} + \delta\w{\chi}_{\rm eq}\rld
+     - \frac{2 \pi k_{\rm B}}{\hbar\kappa}
+     \int_{\hat{\Sp}} \w{Q}\lld\w{g},\w{\chi}\rld .
+\]
+Using the linearity of $\w{Q}\lld\w{g},\w{\chi}\rld$ with respect to $\w{\chi}$
+(cf. Property~\ref{p:tha:Noether_pot_form}) and keeping the linear order in the
+perturbation, we get
+\[
+     \delta S_{\rm W}^{\rm eq} = \frac{2 \pi k_{\rm B}}{\hbar\kappa} \int_{\hat{\Sp}}
+    \left[  \w{Q}\lld\w{g} + \delta\w{g},\w{\chi}\rld + \w{Q}\lld\w{g},\delta\w{\chi}_{\rm eq}\rld
+    -  \w{Q}\lld\w{g},\w{\chi}\rld \right]
+    - \frac{2 \pi k_{\rm B}\delta\kappa}{\hbar\kappa^2} \int_{\hat{\Sp}} \w{Q}\lld\w{g},\w{\chi}\rld  .
+\]
+Now, the difference between the first and third terms in the first integral
+corresponds exactly to $\delta S_{\rm W}$ with $S_{\rm W}$ defined
+by Eq.~(\ref{e:tha:def_Wald_entropy_bif}). Hence there comes
+\[
+     \delta S_{\rm W}^{\rm eq} =  \delta S_{\rm W}
+     + \frac{2 \pi k_{\rm B}}{\hbar\kappa} \left[
+     \int_{\hat{\Sp}} \w{Q}\lld\delta\w{\chi}_{\rm eq}\rld
+     - \frac{\delta\kappa}{\kappa}  \int_{\hat{\Sp}} \w{Q}\lld\w{\chi}\rld
+     \right] ,
+\]
+where we have suppressed the  explicit dependence of $\w{Q}$ on $\w{g}$.
+From Eqs.~(\ref{e:tha:chi_xi_eta_i}) and (\ref{e:tha:chi_delta_chi}), one
+has $\delta\w{\chi}_{\rm eq} =  \sum_{i=1}^{L} \delta\Omega^{(i)} \w{\eta}_{(i)}$
+(in agreement with Eq.~(\ref{e:evo:delta_chi})).
+Given that $\w{Q}\lld\w{\chi}\rld$ is linear in $\w{\chi}$, this
+yields $\w{Q}\lld\delta\w{\chi}_{\rm eq}\rld =  \sum_{i=1}^{L} \delta\Omega^{(i)} \w{Q}\lld\w{\eta}_{(i)}\rld$.
+On the other hand, we may express $\delta\kappa$ in terms of the $\delta\Omega^{(i)}$'s as well,
+thanks to Eq.~(\ref{e:evo:delta_kappa_integrated}), which is purely kinematic and thus
+independent of the gravity theory:
+\be
+    \delta\kappa = - \frac{1}{2A}\sum_{i=1}^L  \delta\Omega^{(i)}
+    \int_{\hat{\Sp}} \nabla_\mu \eta_{(i)\nu} \, \D S^{\mu\nu} ,
+\ee
+where $A$ is the horizon area. Note that we have set to zero the term $I_{\Sp_k}$
+in Eq.~(\ref{e:evo:delta_kappa_integrated}) since $\w{\chi} = 0$ on $\hat{\Sp}$
+and $\nabla^\nu h_{\mu\nu} := \nabla^\nu \delta g_{\mu\nu}$ is assumed
+regular on $\hat{\Sp}$.  Hence we obtain
+\[
+    \delta S_{\rm W}^{\rm eq} =  \delta S_{\rm W}
+     + \frac{2 \pi k_{\rm B}}{\hbar\kappa}
+     \sum_{i=1}^L  \delta\Omega^{(i)}\Bigg[
+     \underbrace{\int_{\hat{\Sp}}  \w{Q}\lld\w{\eta}_{(i)}\rld}_{-J^{(i)}_{\hat{\Sp}}}
+     + \frac{1}{2\kappa A}
+     \underbrace{\int_{\hat{\Sp}} \nabla_\mu \eta_{(i)\nu} \, \D S^{\mu\nu}}_{16\pi J^{(i)}_{\hat{\Sp}}}
+     \times
+     \underbrace{\int_{\hat{\Sp}} \w{Q}\lld\w{\chi}\rld}_{\kappa A/(8\pi)}
+     \Bigg] .
+\]
+The values indicated below the underbraces are those obtained for general relativity,
+resulting respectively from Eqs.~(\ref{e:tha:J_Komar_Noether}),
+(\ref{e:sta:J_Komar_cov_der}) and (\ref{e:tha:S_W_S_BH_GR}).
+The terms between the square brackets then cancel each other, leaving us
+with $\delta S_{\rm W}^{\rm eq} =  \delta S_{\rm W}$.
+We thus conclude:
+
+\begin{prop}[first law for general relativity]
+\label{p:tha:first_law_GR}
+For vacuum general relativity and for a variation between two stationary black holes,
+the first law (\ref{e:tha:first_law_canon}) reduces
+to the ``comparison'' first law obtained in Property~\ref{p:evo:first_vac_GR}:
+Eq.~(\ref{e:tha:first_law_canon}) is identical to
+Eq.~(\ref{e:evo:mass_variation_vacuum}) with $K=1$.
+Morever, still within general relativity, Property~\ref{p:tha:first_law} extends
+Property~\ref{p:evo:first_vac_GR} to non-stationary variations
+$\delta\w{g}$.
+\end{prop}
 
 \begin{remark}
 We have already noticed that the Hawking temperature $T_{\rm H}$
 is independent of the gravity theory
 (cf. Remark~\ref{r:evo:Hawking_rad_kinematic} on p.~\pageref{r:evo:Hawking_rad_kinematic}).
 Thus, contrary to the entropy, there was no need to amend it to get the first law
-in any diffeomorphism-invariant gravity theory.
+in a generic diffeomorphism-invariant gravity theory.
 \end{remark}
 
 \begin{remark}
@@ -2668,6 +2767,9 @@ $\delta S_{\rm W} = \delta {S'}_{\rm W}$,
 where $S_{\rm W}$ is defined by (\ref{e:tha:def_Wald_entropy_bif})
 and ${S'}_{\rm W}$ is defined by (\ref{e:tha:S_Wald_explicit})
 (cf. Eq.~(94) in Ref.~\cite{IyerW94}).
+It is then obvious that $\delta {S'}_{\rm W}^{\rm eq} =  \delta {S'}_{\rm W}$,
+so that using Iyer \& Wald's definition, Property~\ref{p:tha:first_law_GR}
+would having immediate.
 \end{remark}
 
 
