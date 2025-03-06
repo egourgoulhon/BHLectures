@@ -2610,13 +2610,16 @@ extending from the bifurcation surface $\hat{\Sp}$ of the bifurcate
 Killing horizon to the asymptotically flat end. Using
 Stokes' theorem (\ref{e:bas:Stokes}) with $\partial\Sigma = \hat{\Sp} \cup \Sp_\infty$,
 we get
-\[
-    \int_{\hat{\Sp}} \delta\w{Q}\lld\w{\chi}\rld
+\be \label{e:tha:delta_int_Q_bif}
+    \delta \int_{\hat{\Sp}} \w{Q}\lld\w{\chi}\rld
     = \int_{\Sp_\infty} \left[ \delta\w{Q}\lld\w{\chi}\rld
     - \w{\chi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld \right] .
-\]
+\ee
 Note that we have used the vanishing of $\w{\chi}$ on $\hat{\Sp}$ (Property~\ref{p:sta:xi_S_zero})
-to write the integral in the left-hand side. Since $\w{Q}\lld\w{\chi}\rld$
+to write the integral in the left-hand side as
+$\int_{\hat{\Sp}} \delta\w{Q}\lld\w{\chi}\rld$,
+which is equal to
+$\delta \int_{\hat{\Sp}}\w{Q}\lld\w{\chi}\rld$. Since $\w{Q}\lld\w{\chi}\rld$
 is linear with respect to $\w{\chi}$ (Property~\ref{p:tha:Noether_pot_form}),
 Eq.~(\ref{e:tha:chi_xi_eta_i}) leads to
 \[
@@ -2803,10 +2806,31 @@ cannot play this role, even for linear perturbations of a stationary black hole,
 for it requires to be evaluated at the bifurcation surface, which is a
 specific ``time'' in the black hole history, and which may even not exist
 for black holes born in gravitational collapse, as studied in Chap.~\ref{s:lem}.
-The entropy has to be defined for arbitrary cross-sections of the event horizon.
+The entropy of dynamical black holes has to be defined for arbitrary cross-sections of the event horizon. In the proof of the first law (Property~\ref{p:tha:first_law}),
+sticking to the bifurcation surface was crucial to set to zero the term
+$\w{\chi}\cdot\w{\theta}\lld\w{g},\delta\w{g}\rld$ in the left-hand side of
+Eq.~(\ref{e:tha:delta_int_Q_bif}), so that it becomes the variation of
+the Noether charge of $\w{\chi}$ and hence the variation of the Wald enthalpy.
+If the integration would have been performed on an arbitrary cross-section,
+this would a priori not have lead to an exact variation,
+contrary to what happens for the right-hand side of Eq.~(\ref{e:tha:delta_int_Q_bif}),
+where the integration over $\Sp_\infty$ leads to exact variations, thanks to
+the existence of Hamiltonians conjugate
+to $\w{\xi}$ and the $\w{\eta}_{(i)}$'s.
 
-
-Recently, Hollands, Wald and Zhang \cite{HollaWZ24,Wald24} put forward a proposal
+However, recently, Hollands, Wald and Zhang \cite{HollaWZ24,Wald24}
+have shown that, \emph{for first-order perturbations $\delta\w{g}$ of a stationary
+black hole}, one can define a $(n-1)$-form $\w{B}_\Hor$ on the event horizon
+$\Hor$, such the pullback $\iota^*\w{\theta}\lld\w{g},\delta\w{g}\rld$
+of $\w{\theta}\lld\w{g},\delta\w{g}\rld$
+on $\Hor$ (i.e. the restriction of the $(n-1)$-form $\w{\theta}$ to vectors
+tangent to $\Hor$) writes
+$\iota^*\w{\theta}\lld\w{g},\delta\w{g}\rld \equalH \delta \w{B}_{\Hor}$.
+This allows one to define the entropy of an arbitrary cross-section $\Sp$ by
+\be
+    S_{\rm HWZ} :=
+\ee
+put forward a proposal
 for defining the entropy of a dynamical black hole in a diffeomorphism-invariant
 theory of gravity, thereby generalizing Wald's definition \cite{Wald93} to
 the non-stationary case. Their proposal actually applies to the leading order
