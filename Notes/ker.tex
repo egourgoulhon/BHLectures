@@ -164,10 +164,20 @@ and
 \ee
 \end{greybox}
 
-Note that on $\M_{\rm BL}$, $\rho\not=0$ and $\Delta\not=0$ (by construction
+\begin{remark}
+Since $\dd t\, \dd\ph := 1/2 \, (\dd t\otimes \dd\ph +  \dd\ph\otimes\dd t)$
+[cf. Eq.~(\ref{e:bas:sym_tensor_prod})], the metric component $g_{t\ph}$
+is \emph{one half} of the coefficient of the $\dd t\, \dd\ph$ term
+in Eq.~(\ref{e:ker:metric_BL}), i.e.
+$ g_{t\ph} = - 2 a m  r \sin^2\th/\rho^2$.
+\end{remark}
+
+\begin{remark}
+On $\M_{\rm BL}$, $\rho\not=0$ and $\Delta\not=0$ (by construction
 of $\M_{\rm BL}$!), so that the metric components (\ref{e:ker:metric_BL})
 are regular in $\M_{\rm BL}$, except for the standard singularities of
 the spherical coordinates $(\th,\ph)$.
+\end{remark}
 
 By means of a computer algebra system (cf. the SageMath notebook~\ref{s:sam:Kerr_solution}),
 one easily checks:
@@ -614,9 +624,9 @@ $(x^\alpha) = (t,r,\th,\ph)$ introduced in Sec.~\ref{s:ker:expr_BL} by
 & \encadre{\dd \tph = \dd \ph + \frac{a}{\Delta}\, \dd r} . \label{e:ker:Kerr_coord_tph}
 \end{align}
 \end{subequations}
-If $a=0$, we note that the advanced Kerr coordinates are nothing but the null
-ingoing Eddington-Finkelstein
-coordinates on Schwarzschild spacetime (cf. Sec.~\ref{s:sch:EF_coord} and compare
+If $a=0$, we note that the advanced Kerr coordinates are nothing but the
+\emph{null ingoing Eddington-Finkelstein coordinates}\index{Eddington-Finkelstein!coordinates}\index{null!ingoing Eddington-Finkelstein coordinates} on Schwarzschild spacetime
+(cf. Sec.~\ref{s:sch:EF_coord} and compare
 (\ref{e:ker:Kerr_coord_v}) with (\ref{e:sch:dt_dv_NIEF})).
 
 \begin{remark}
@@ -672,7 +682,19 @@ Eq.~(5.31) of Ref.~\cite{HawkiE73}, or Lemma~2.5.2 of \cite{ONeil95}):
     \sin^2\th \, \dd \tph^2 .
     \end{array}
 \ee
-We note that the above metric components do not have any divergence when
+The inverse metric is pretty simple (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}-1):
+\be \label{e:ker:inv_metric_AK}
+    g^{\hat{\alpha}\hat{\beta}} = \frac{1}{\rho^2} \left(
+    \begin{array}{cccc}
+    a^2 \sin^2\th & r^2 + a^2 & 0 & a \\
+    r^2 + a^2 & \Delta & 0 & a \\
+    0 & 0 & 1 & 0 \\
+    a & a & 0 & \frac{1}{\sin^2\th}
+    \end{array}
+    \right) .
+\ee
+
+We note that the metric components (\ref{e:ker:metric_Kerr_coord}) do not show any divergence when
 $\Delta\rightarrow 0$, contrary to the Boyer-Lindquist ones. Hence, we may extend
 the Kerr metric to the points of $\R^2\times\SS^2$ where $\Delta=0$, i.e.
 to the hypersurfaces (cf. Fig.~\ref{f:ker:spher_view})
@@ -740,10 +762,10 @@ it from the $\partial/\partial r$ vector of Boyer-Lindquist coordinates.
 Contrary to the Schwarzschild case (cf. Sec.~\ref{s:sch:EF_coord}), $v$ is not a null coordinate
 for $a\neq 0$, but rather a spacelike one, i.e. the hypersurfaces of constant $v$
 are timelike (cf. the definitions given in Sec.~\ref{s:bas:signature}). Indeed,
-the component $g^{vv}$ of the inverse metric in advanced Kerr coordinates is
-$g^{vv} = a^2 \sin^2\theta /\rho^2$ (cf. the notebook~\ref{s:sam:Kerr_Kerr_coord}-1),
-so that $g^{vv} > 0$ outside the rotation
-axis. The criterion (\ref{e:bas:char_causal_type_coord}) allows us to conclude
+we read on (\ref{e:ker:inv_metric_AK}) that
+$g^{vv} = a^2 \sin^2\theta /\rho^2)$, which shows that
+$g^{vv} > 0$ outside the rotation
+axis for $a\neq 0$. The criterion (\ref{e:bas:char_spacelike_coord}) allows us to conclude
 that $v$ is a spacelike coordinate.
 \end{remark}
 
