@@ -1208,31 +1208,50 @@ Proving that $\Hor$ is achronal.}
 \end{figure}
 
 
-\begin{prop}[the event horizon as manifold of codimension 1]
+\begin{prop}[the event horizon as a manifold of codimension 1]
 \label{p:glo:prop2}
 $\Hor$ is a topological manifold of dimension $n-1$, $n$ being the spacetime
 dimension.
 \end{prop}
 
-\begin{figure}
-\centerline{\includegraphics[width=0.45\textwidth]{glo_hor_manifold.pdf}}
-\caption[]{\label{f:glo:hor_manifold} \footnotesize
-Proving that $\Hor$ is a topological manifold of dimension $n-1$.}
-\end{figure}
+%\begin{figure}
+%\centerline{\includegraphics[width=0.45\textwidth]{glo_hor_manifold.pdf}}
+%\caption[]{\label{f:glo:hor_manifold} \footnotesize
+%Proving that $\Hor$ is a topological manifold of dimension $n-1$.}
+%\end{figure}
 
 \begin{proof}
-Let $p\in\Hor$ and $U$ some open neighborhood of $p$ where one can define
-a normal coordinate system $(x^\alpha)$. We have then $\wpar_0$ timelike,
-$\wpar_i$ spacelike for $i\in\{1,\ldots,n-1\}$ and $\w{g}(\wpar_0, \wpar_i) = 0$.
-Let us consider a curve in $U$ defined by $x^1 = a_1$,..., $x^{n-1} = a_{n-1}$,
-where $a_1$, ..., $a_{n-1}$ are $n-1$ constants.
-This curve is timelike, since it has $\wpar_0$ as a tangent vector
-(cf. Fig.~\ref{f:glo:hor_manifold}).
-It therefore intersects $\Hor$ at a single point $q$, for $\Hor$ is achronal
-(Property~\ref{p:glo:prop1}).
-Let us then give the coordinates $(y^i) = (a_1,\ldots,a_{n-1})$ to $q$.
+Let us first show that the chronological past of any point $p\in\Hor$, $I^-(p)$
+(cf. Sec.~\ref{s:glo:causal_struct}), lies entirely in $J^-(\scri^+)$.
+For any $q\in I^-(p)$, we have by definition $p\in I^+(q)$
+and since $I^+(q)$ is an open set (cf. Sec.~\ref{s:glo:causal_struct}), this means that
+$I^+(q)$ is an open neighborhood of $p$. Given that $p$ lies on the boundary
+of $\mathscr{B}$, we have necessarily $I^+(q)\cap (\M\setminus\mathscr{B}) \neq \varnothing$.
+Let then $a\in I^+(q)\cap (\M\setminus\mathscr{B}) = I^+(q)\cap J^-(\scri^+)$.
+By definition, there exists a future-directed timelike curve from $q$ to $a$ and a future-directed causal curve from $a$ to
+$\scri^+$, hence a future-directed causal curve from $q$ to $\scri^+$, which proves that  $q\in J^-(\scri^+)$. We conclude that $I^-(p)\subset J^-(\scri^+)$.
+On the other hand, let us show that the chronological future of $p$, $I^+(p)$,
+lies entirely in $\mathscr{B}$. For any $q\in I^+(p)$,  we have $p\in I^-(q)$. Since $I^-(q)$ is open, it constitutes an open neighborhood of $p$. Given that $p\in\partial\mathscr{B}$, we have
+then $I^-(q) \cap \mathscr{B} \neq \varnothing$ and we may pick a point
+$a\in I^-(q) \cap \mathscr{B}$. There exists a future-directed timelike curve from $a$ to $q$.
+If $q\not\in\mathscr{B}$, there would exist a future-directed causal curve from $q$ to $\scri^+$
+and hence a future-directed causal curve from $a$ to $\scri^+$, which would contradict
+$a\in\mathscr{B}$. We conclude that $q\in\mathscr{B}$ and thus that $I^+(p)\subset\mathscr{B}$.
+For $p\in\Hor$, let us consider an open neighborhood $U$ of $p$ and a coordinate chart
+$\Phi: U \to (-1,1)\times V$, $q\mapsto (x^0,x^1,\ldots,x^{n-1})$ where $V$ is an open subset of $\R^{n-1}$, such that $x^0(p) = 0$ and the vector $\wpar_0$ is future-directed timelike.
+By choosing $U$ sufficiently small, we may ensure that the slice $x^0=-1/2$ lies in $I^-(p)$
+and the slice $x^0=1/2$ lies in $I^+(p)$ (cf. Fig.~??). Any coordinate line defined by
+$(x^1,\ldots,x^{n-1}) = (a_1,\ldots,a_{n-1})$,
+where $a_1$, ..., $a_{n-1}$ are $n-1$ constants, is a timelike curve which connects
+the point $(x^\alpha)=(-1/2,a_1,\ldots,a_{n-1})$ of $I^-(p)$ to
+the point $(x^\alpha)=(1/2,a_1,\ldots,a_{n-1})$ of $I^+(p)$. Given that $I^-(p)\subset \M\setminus\mathscr{B}$, $I^+(p)\subset\mathscr{B}$ and $\Hor = \partial\mathscr{B}$,
+such a curve necessarily intersects  $\Hor$. Moreover the intersection is reduced
+to a single point $p'\in\Hor$ for the curve is timelike and $\Hor$ is
+achronal (Property~\ref{p:glo:prop1}).
+Let us then give the coordinates $(y^i) = (a_1,\ldots,a_{n-1})$ to $p'$.
 By varying $(a_1,\ldots,a_{n-1})$, we get a homeomorphism from $U\cap\Hor$
-to an open subset of $\mathbb{R}^{n-1}$.
+to the open subset $V$ of $\R^{n-1}$. This makes $\Hor$ a topological manifold of
+dimension $n-1$ (cf. Sec.~\ref{s:bas:def_manif}).
 \end{proof}
 
 \begin{remark}
