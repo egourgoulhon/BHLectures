@@ -1186,6 +1186,12 @@ and a formal proof
 can be found as Lemma~3 in Chap.~14 of O'Neill's textbook \cite{ONeil83}.
 \end{proof}
 
+\begin{figure}
+\centerline{\includegraphics[width=0.55\textwidth]{glo_achronal.pdf}}
+\caption[]{\label{f:glo:achronal} \footnotesize
+Proving that $\Hor$ is achronal.}
+\end{figure}
+
 \begin{proof}[Proof of Property~\ref{p:glo:prop1}]
 Let us assume the negation of Property~\ref{p:glo:prop1}, i.e. that there exist two points
 $p$ and $q$
@@ -1201,18 +1207,28 @@ Since $q'\in J^-(\scri^+)$, the timelike curve linking $p'$ and $q'$ can then be
 which contradicts $p'\in\mathscr{B}$.
 \end{proof}
 
-\begin{figure}
-\centerline{\includegraphics[width=0.55\textwidth]{glo_achronal.pdf}}
-\caption[]{\label{f:glo:achronal} \footnotesize
-Proving that $\Hor$ is achronal.}
-\end{figure}
-
 
 \begin{prop}[the event horizon as a manifold of codimension 1]
 \label{p:glo:prop2}
 $\Hor$ is a topological manifold of dimension $n-1$, $n$ being the spacetime
 dimension.
 \end{prop}
+
+
+\begin{figure}
+\centerline{\includegraphics[width=0.42\textwidth]{glo_topmanif_past.pdf}\qquad\qquad
+\includegraphics[width=0.42\textwidth]{glo_topmanif_fut.pdf}
+}
+\caption[]{\label{f:glo:topmanif_Ip_Im} \footnotesize
+Proving that, for any $p\in\Hor$, $I^-(p)\subset J^-(\scri^+)$ (left)
+and  $I^+(p)\subset \mathscr{B}$ (right).}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.45\textwidth]{glo_topmanif_chart.pdf}}
+\caption[]{\label{f:glo:topmanif_chart} \footnotesize
+Proving that $\Hor$ is a topological manifold of dimension $n-1$.}
+\end{figure}
 
 %\begin{figure}
 %\centerline{\includegraphics[width=0.45\textwidth]{glo_hor_manifold.pdf}}
@@ -1223,7 +1239,7 @@ dimension.
 \begin{proof}
 Let us first show that the chronological past of any point $p\in\Hor$, $I^-(p)$
 (cf. Sec.~\ref{s:glo:causal_struct}), lies entirely in $J^-(\scri^+)$.
-For any $q\in I^-(p)$, we have by definition $p\in I^+(q)$
+For any $q\in I^-(p)$, we have by definition $p\in I^+(q)$ (cf. Fig.~\ref{f:glo:topmanif_Ip_Im} left)
 and since $I^+(q)$ is an open set (cf. Sec.~\ref{s:glo:causal_struct}), this means that
 $I^+(q)$ is an open neighborhood of $p$. Given that $p$ lies on the boundary
 of $\mathscr{B}$, we have necessarily $I^+(q)\cap (\M\setminus\mathscr{B}) \neq \varnothing$.
@@ -1231,21 +1247,23 @@ Let then $a\in I^+(q)\cap (\M\setminus\mathscr{B}) = I^+(q)\cap J^-(\scri^+)$.
 By definition, there exists a future-directed timelike curve from $q$ to $a$ and a future-directed causal curve from $a$ to
 $\scri^+$, hence a future-directed causal curve from $q$ to $\scri^+$, which proves that  $q\in J^-(\scri^+)$. We conclude that $I^-(p)\subset J^-(\scri^+)$.
 On the other hand, let us show that the chronological future of $p$, $I^+(p)$,
-lies entirely in $\mathscr{B}$. For any $q\in I^+(p)$,  we have $p\in I^-(q)$. Since $I^-(q)$ is open, it constitutes an open neighborhood of $p$. Given that $p\in\partial\mathscr{B}$, we have
+lies entirely in $\mathscr{B}$. For any $q\in I^+(p)$,  we have $p\in I^-(q)$  (cf. Fig.~\ref{f:glo:topmanif_Ip_Im} right). Since $I^-(q)$ is open, it constitutes an open neighborhood of $p$. Given that $p\in\partial\mathscr{B}$, we have
 then $I^-(q) \cap \mathscr{B} \neq \varnothing$ and we may pick a point
 $a\in I^-(q) \cap \mathscr{B}$. There exists a future-directed timelike curve from $a$ to $q$.
 If $q\not\in\mathscr{B}$, there would exist a future-directed causal curve from $q$ to $\scri^+$
 and hence a future-directed causal curve from $a$ to $\scri^+$, which would contradict
 $a\in\mathscr{B}$. We conclude that $q\in\mathscr{B}$ and thus that $I^+(p)\subset\mathscr{B}$.
+
 For $p\in\Hor$, let us consider an open neighborhood $U$ of $p$ and a coordinate chart
 $\Phi: U \to (-1,1)\times V$, $q\mapsto (x^0,x^1,\ldots,x^{n-1})$ where $V$ is an open subset of $\R^{n-1}$, such that $x^0(p) = 0$ and the vector $\wpar_0$ is future-directed timelike.
 By choosing $U$ sufficiently small, we may ensure that the slice $x^0=-1/2$ lies in $I^-(p)$
-and the slice $x^0=1/2$ lies in $I^+(p)$ (cf. Fig.~??). Any coordinate line defined by
+and the slice $x^0=1/2$ lies in $I^+(p)$ (cf. Fig.~\ref{f:glo:topmanif_chart}). Any coordinate line defined by
 $(x^1,\ldots,x^{n-1}) = (a_1,\ldots,a_{n-1})$,
 where $a_1$, ..., $a_{n-1}$ are $n-1$ constants, is a timelike curve which connects
 the point $(x^\alpha)=(-1/2,a_1,\ldots,a_{n-1})$ of $I^-(p)$ to
 the point $(x^\alpha)=(1/2,a_1,\ldots,a_{n-1})$ of $I^+(p)$. Given that $I^-(p)\subset \M\setminus\mathscr{B}$, $I^+(p)\subset\mathscr{B}$ and $\Hor = \partial\mathscr{B}$,
-such a curve necessarily intersects  $\Hor$. Moreover the intersection is reduced
+such a curve (like the purple one in Fig.~\ref{f:glo:topmanif_chart})
+necessarily intersects  $\Hor$. Moreover the intersection is reduced
 to a single point $p'\in\Hor$ for the curve is timelike and $\Hor$ is
 achronal (Property~\ref{p:glo:prop1}).
 Let us then give the coordinates $(y^i) = (a_1,\ldots,a_{n-1})$ to $p'$.
@@ -1261,7 +1279,7 @@ Actually $\Hor$ is slightly more than a mere topological submanifold of $\M$: it
 \emph{Lipschitz submanifold} of $\M$. The latter is
 intermediate between a topological submanifold, i.e.
 a submanifold of class $C^0$ (continuous), and a differentiable submanifold of
-class $C^1$. On $U\cap\Hor$, the function $x^0$ is a Lipschitz function
+class $C^1$. On $U\cap\Hor$, the coordinate $x^0$ is a Lipschitz function
 of the coordinates $(y^i)$: $\left|x^0(y^i) - x^0({y'}^i)\right| < K \sqrt{\sum_i (y^i - {y'}^i)^2}$.
 This follows from the achronal character of $\Hor$: the points of coordinates
 $(y^i)$ and $({y'}^i)$ cannot have a too large separation in terms of $x^0$,
@@ -1269,6 +1287,8 @@ otherwise they would be timelike separated.
 Hence, one says that $\Hor$ is a \defin{Lipschitz submanifold}\index{Lipschitz submanifold} of $\M$. The notation $C^{1-}$ (i.e. a kind of intermediate between
 $C^0$ and $C^1$) is generally used to denote Lipschitz submanifolds.
 \end{remark}
+
+Beside being achronal topological submanifolds of codimension 1, the main property of black hole horizons is:
 
 \begin{prop}[the event horizon ruled by never leaving null geodesics \textnormal{(Penrose\index[pers]{Penrose, R.} 1968 \cite{Penro68})}]
 \label{p:glo:prop3}
