@@ -1220,15 +1220,10 @@ dimension.
 \includegraphics[width=0.42\textwidth]{glo_topmanif_fut.pdf}
 }
 \caption[]{\label{f:glo:topmanif_Ip_Im} \footnotesize
-Proving that, for any $p\in\Hor$, $I^-(p)\subset J^-(\scri^+)$ (left)
+Proving that, for any $p\in\Hor$, $I^-(p)\subset \M\setminus\mathscr{B}$ (left)
 and  $I^+(p)\subset \mathscr{B}$ (right).}
 \end{figure}
 
-\begin{figure}
-\centerline{\includegraphics[width=0.45\textwidth]{glo_topmanif_chart.pdf}}
-\caption[]{\label{f:glo:topmanif_chart} \footnotesize
-Proving that $\Hor$ is a topological manifold of dimension $n-1$.}
-\end{figure}
 
 %\begin{figure}
 %\centerline{\includegraphics[width=0.45\textwidth]{glo_hor_manifold.pdf}}
@@ -1238,14 +1233,17 @@ Proving that $\Hor$ is a topological manifold of dimension $n-1$.}
 
 \begin{proof}
 Let us first show that the chronological past of any point $p\in\Hor$, $I^-(p)$
-(cf. Sec.~\ref{s:glo:causal_struct}), lies entirely in $J^-(\scri^+)$.
-For any $q\in I^-(p)$, we have by definition $p\in I^+(q)$ (cf. Fig.~\ref{f:glo:topmanif_Ip_Im} left)
+(cf. Sec.~\ref{s:glo:causal_struct}), lies entirely in $\M\setminus\mathscr{B}$ (the black
+hole exterior).
+For any $q\in I^-(p)$, we have by definition $p\in I^+(q)$
 and since $I^+(q)$ is an open set (cf. Sec.~\ref{s:glo:causal_struct}), this means that
-$I^+(q)$ is an open neighborhood of $p$. Given that $p$ lies on the boundary
+$I^+(q)$ is an open neighborhood of $p$ (cf. Fig.~\ref{f:glo:topmanif_Ip_Im} left). Given that $p$ lies on the boundary
 of $\mathscr{B}$, we have necessarily $I^+(q)\cap (\M\setminus\mathscr{B}) \neq \varnothing$.
 Let then $a\in I^+(q)\cap (\M\setminus\mathscr{B}) = I^+(q)\cap J^-(\scri^+)$.
 By definition, there exists a future-directed timelike curve from $q$ to $a$ and a future-directed causal curve from $a$ to
-$\scri^+$, hence a future-directed causal curve from $q$ to $\scri^+$, which proves that  $q\in J^-(\scri^+)$. We conclude that $I^-(p)\subset J^-(\scri^+)$.
+$\scri^+$, hence a future-directed causal curve from $q$ to $\scri^+$, which proves that
+$q\in J^-(\scri^+)$, i.e. $q\in \M\setminus\mathscr{B}$. We conclude that
+$I^-(p)\subset \M\setminus\mathscr{B}$.
 On the other hand, let us show that the chronological future of $p$, $I^+(p)$,
 lies entirely in $\mathscr{B}$. For any $q\in I^+(p)$,  we have $p\in I^-(q)$  (cf. Fig.~\ref{f:glo:topmanif_Ip_Im} right). Since $I^-(q)$ is open, it constitutes an open neighborhood of $p$. Given that $p\in\partial\mathscr{B}$, we have
 then $I^-(q) \cap \mathscr{B} \neq \varnothing$ and we may pick a point
@@ -1254,15 +1252,17 @@ If $q\not\in\mathscr{B}$, there would exist a future-directed causal curve from 
 and hence a future-directed causal curve from $a$ to $\scri^+$, which would contradict
 $a\in\mathscr{B}$. We conclude that $q\in\mathscr{B}$ and thus that $I^+(p)\subset\mathscr{B}$.
 
-For $p\in\Hor$, let us consider an open neighborhood $U$ of $p$ and a coordinate chart
-$\Phi: U \to (-1,1)\times V$, $q\mapsto (x^0,x^1,\ldots,x^{n-1})$ where $V$ is an open subset of $\R^{n-1}$, such that $x^0(p) = 0$ and the vector $\wpar_0$ is future-directed timelike.
+For $p\in\Hor$, let us consider a coordinate chart
+$\Phi: U \to (-1,1)\times V$, $q\mapsto (x^0,x^1,\ldots,x^{n-1})$ where
+$U$ is an open neighborhood of $p$ and
+$V$ is an open subset of $\R^{n-1}$, such that $x^0(p) = 0$ and the coordinate vector $\wpar_0$ is future-directed timelike.
 By choosing $U$ sufficiently small, we may ensure that the slice $x^0=-1/2$ lies in $I^-(p)$
 and the slice $x^0=1/2$ lies in $I^+(p)$ (cf. Fig.~\ref{f:glo:topmanif_chart}). Any coordinate line defined by
 $(x^1,\ldots,x^{n-1}) = (a_1,\ldots,a_{n-1})$,
 where $a_1$, ..., $a_{n-1}$ are $n-1$ constants, is a timelike curve which connects
 the point $(x^\alpha)=(-1/2,a_1,\ldots,a_{n-1})$ of $I^-(p)$ to
-the point $(x^\alpha)=(1/2,a_1,\ldots,a_{n-1})$ of $I^+(p)$. Given that $I^-(p)\subset \M\setminus\mathscr{B}$, $I^+(p)\subset\mathscr{B}$ and $\Hor = \partial\mathscr{B}$,
-such a curve (like the purple one in Fig.~\ref{f:glo:topmanif_chart})
+the point $(x^\alpha)=(1/2,a_1,\ldots,a_{n-1})$ of $I^+(p)$ (cf. the purple curve in Fig.~\ref{f:glo:topmanif_chart}). Given that $I^-(p)\subset \M\setminus\mathscr{B}$, $I^+(p)\subset\mathscr{B}$ and $\Hor = \partial\mathscr{B}$,
+such a curve
 necessarily intersects  $\Hor$. Moreover the intersection is reduced
 to a single point $p'\in\Hor$ for the curve is timelike and $\Hor$ is
 achronal (Property~\ref{p:glo:prop1}).
@@ -1271,6 +1271,15 @@ By varying $(a_1,\ldots,a_{n-1})$, we get a homeomorphism from $U\cap\Hor$
 to the open subset $V$ of $\R^{n-1}$. This makes $\Hor$ a topological manifold of
 dimension $n-1$ (cf. Sec.~\ref{s:bas:def_manif}).
 \end{proof}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.45\textwidth]{glo_topmanif_chart.pdf}}
+\caption[]{\label{f:glo:topmanif_chart} \footnotesize
+Coordinate chart $(x^\alpha)$ in the vicinity of $p\in\Hor$, such that
+$\wpar_0$ is future-directed timelike and the slice $x^0=-1/2$ (resp. $x^0=1/2$)
+lies in $I^-(p)$ (resp. $I^+(p)$). Any coordinate line along which $x^0$ varies,
+such as the purple line, is timelike and intersects $\Hor$ at a single point $p'$.}
+\end{figure}
 
 \begin{remark}
 Generically, the topological manifold $\Hor$ is not a smooth manifold, for it
