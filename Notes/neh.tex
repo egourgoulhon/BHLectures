@@ -268,13 +268,13 @@ of Chap.~\ref{s:def}].
 
 Since $\Hor$ is a null hypersurface, the ``metric'' $\left. \w{g}\right|_{\Hor}$
 induced on it by the spacetime metric $\w{g}$ is degenerate. As a consequence, there
-is a priori no unique connection on $\Hor$ associated with
+is a priori no unique affine connection on $\Hor$ associated with
 $\left. \w{g}\right|_{\Hor}$. However, when
 $\Hor$ is a non-expanding horizon and the null convergence condition holds on $\Hor$,
 so that $\w{\Theta}=0$ (Property~\ref{p:neh:invariance_of_2metric}),
-the spacetime connection $\wnab$ induces a unique
-torsion-free connection ${}^\Hor\!\wnab$ on $\Hor$ as follows.
-Let $\w{u}$ and $\w{v}$ be two vector fields on $\Hor$. We have, using
+the spacetime Levi-Civita connection $\wnab$ induces a unique
+torsion-free connection ${}^\Hor\!\wnab$ on $\Hor$.
+Indeed, let $\w{u}$ and $\w{v}$ be two vector fields on $\Hor$. We have, using
 (\ref{e:def:nab_l_Theta}) to express $\nabla_\nu \el_\mu$ in terms of $\Theta_{\nu\mu}$:
 \[
     \el_\mu u^\nu \nabla_\nu v^\mu =
@@ -289,17 +289,17 @@ Hence $\wl$ is orthogonal to the vector field $\wnab_{\w{u}} \w{v}$. It follows
 immediately that $\wnab_{\w{u}} \w{v}$ is tangent to $\Hor$.
 We conclude:
 \begin{prop}[induced affine connection]
+Let $\mathfrak{X}(\Hor)$ be the space of vector fields tangent to the non-expanding horizon $\Hor$.
 Under the hypotheses of Property~\ref{p:neh:invariance_of_2metric},
 the operator
 \be \label{e:neh:def_induced_connection}
     \begin{array}{cccc}
     {}^\Hor\!\wnab \ : & \mathfrak{X}(\Hor)\times\mathfrak{X}(\Hor) & \longrightarrow & \mathfrak{X}(\Hor) \\
-    & (\w{u},\w{v}) & \longmapsto & \wnab_{\w{u}} \,\w{v} ,
+    & (\w{u},\w{v}) & \longmapsto & {}^\Hor\!\wnab_{\w{u}}\w{v} := \wnab_{\w{u}} \,\w{v} ,
     \end{array}
 \ee
-where $\mathfrak{X}(\Hor)$ stands for the space of vector fields on $\Hor$, is
-well-defined (i.e. ${}^\Hor\!\wnab_{\w{u}}\w{v}$  belongs to
-$\mathfrak{X}(\Hor)$).
+is well-defined, i.e. ${}^\Hor\!\wnab_{\w{u}}\w{v}$  belongs to
+$\mathfrak{X}(\Hor)$.
 Moreover, this operator fulfills all the properties of an affine connection
 (cf. Sec.~\ref{s:bas:affine_connect}), since $\wnab$ does.
 We naturally call ${}^\Hor\!\wnab$ the \defin{affine connection induced on $\Hor$
@@ -335,14 +335,12 @@ ${}^\Hor\!\wnab \wl$ is a tensor field of type $(1,1)$ on $\Hor$,
 the action of which on any pair
 $(\w{a}, \w{u})$ formed by a 1-form $\w{a}$ on $\Hor$ and a vector field $\w{u}$
 on $\Hor$ is
-\[
-    {}^\Hor\!\wnab \wl (\w{a}, \w{u}) = \langle \w{a}, {}^\Hor\!\wnab_{\w{u}} \wl \rangle .
-\]
+${}^\Hor\!\wnab \wl (\w{a}, \w{u}) = \langle \w{a}, {}^\Hor\!\wnab_{\w{u}} \wl \rangle$.
 Let $\w{\bar{a}}$ be the extension of $\w{a}$ to a 1-form on $\M$ defined by
-$\w{\bar{a}} = \w{a} \circ \w{\Pi}$, where $\w{\Pi}$ is the projector onto $\Hor$
-along $\w{k}$ [Eq.~(\ref{e:def:def_proj_H_along_k})]. Since ${}^\Hor\!\wnab_{\w{u}} \wl$
+$\w{\bar{a}} := \w{a} \circ \w{\Pi}$, where $\w{\Pi}$ is the projector onto $\Hor$
+along $\w{k}$ [Eq.~(\ref{e:def:def_proj_H_along_k})]. Since $\wnab_{\w{u}} \wl$
 is tangent to $\Hor$, we have
-$\langle \w{a}, {}^\Hor\!\wnab_{\w{u}} \wl \rangle = \langle \w{\bar{a}}, {}^\Hor\!\wnab_{\w{u}} \wl \rangle$.
+$\langle \w{a}, {}^\Hor\!\wnab_{\w{u}} \wl \rangle = \langle \w{\bar{a}}, \wnab_{\w{u}} \wl \rangle$.
 In view of (\ref{e:neh:def_induced_connection}) and using Eq.~(\ref{e:def:nab_l_Theta})
 to express $\wnab\wl$, we then get
 \begin{align}
@@ -365,19 +363,19 @@ $\langle {}^\Hor\!\w{\omega}, \w{v} \rangle = - \w{k} \cdot\wnab_{\w{v}} \w{\ell
 for any $\w{v}\in T_p\Hor$. Formula~(\ref{e:neh:nabH_ell}) shows that for a non-expanding
 horizon, this is not the case: ${}^\Hor\!\w{\omega}$ is  a quantity intrinsic to $\Hor$ and to the value of $\wl$ on $\Hor$.
 Moreover, under a change of null normal, $\wl \mapsto \wl' = \alpha \wl$,
-it remains constant up to the addition of an exact 1-form:
+${}^\Hor\!\w{\omega}$ remains constant up to the addition of an exact 1-form:
 ${}^\Hor\!\w{\omega}' = {}^\Hor\!\w{\omega} + \dd\ln\alpha$.
 The 1-form ${}^\Hor\!\w{\omega}$
 is usually called the \defin{connection 1-form}\index{connection!1-form}
 or \defin{rotation 1-form}\index{rotation!1-form}
 of $(\Hor, \wl)$ \cite{AshteBL02,GourgJ06}; the term \emph{rotation}
-stems from the angular momentum of the non-expanding horizon
+stems from the angular momentum of a non-expanding horizon
 being given by an integral involving ${}^\Hor\!\w{\omega}$, as we shall see
 in Chap.~\ref{s:loc}.
 
 \subsection{Going further}
 
-See Refs.~\cite{AshteK04,GourgJ06,Jaram13} for more
+See Refs.~\cite{AshteK04,GourgJ06,Jaram13,AshteKKL22a} for more
 about non-expanding horizons, in particular for a subclass of them
 called \emph{isolated horizons}\index{isolated!horizon}\index{horizon!isolated}.
 
@@ -440,14 +438,14 @@ the orbit $\Li_p$, it is given by
     \w{\xi} = \left. \frac{\D\w{x}}{\D t} \right|_{\Li_p} .
 \ee
 We can extend $\w{\xi}$ to a vector field on all $\M$, by varying $p$
-over $\M$ and setting $\w{\xi} = 0$ if $p$ is a fixed point
+over $\M$ and setting $\w{\xi} = 0$ at fixed points
 of the group action.
 For any $p\in\M$ and $\D t$ infinitesimal, the (infinitesimal)
 vector connecting $p$ to $\Phi_{\D t}(p)$ is then $\D\w{x} = \D t \, \w{\xi}$
 (cf. Fig.~\ref{f:neh:orbit_group}), so that we may state:
 \begin{prop}[infinitesimal transformations as displacements along the generator]
 A 1-dimensional group action limited to infinitesimal transformations of parameter
-$\D t$ around the identity ($\D t =0$) amounts to displacements by the infinitesimal vector $\D t\, \w{\xi}$, where $\w{\xi}$ is the generator of the group.
+$\D t$ around the identity ($\D t =0$) amounts to displacements of points of $\M$ by the infinitesimal vector $\D t\, \w{\xi}$, where $\w{\xi}$ is the generator of the group.
 \end{prop}
 
 \begin{figure}
