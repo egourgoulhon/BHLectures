@@ -585,8 +585,8 @@ Note also that
 
 It is easy to express two of the zeros in terms of the third one. For instance,
 let us pick $u_{\rm p}$. From $P_b(u_{\rm p}) = 0$, we have immediately
-$b^2/m^2 = - 2 u_{\rm p}^3 + u_{\rm p}^2$. If we substitute this expression
-for $b^2/m^2$ into $P_b(u)$, we get
+$m^2/b^2 = - 2 u_{\rm p}^3 + u_{\rm p}^2$. If we substitute this expression
+for $m^2/b^2$ into $P_b(u)$, we get
 \bea
     P_b(u) = 0 & \iff &  2 u^3 - u^2 - 2 u_{\rm p}^3 + u_{\rm p}^2 = 0  \nonumber \\
     & \iff & (u - u_{\rm p})\left[ 2 (u^2 + u_{\rm p} u + u_{\rm p}^2)
@@ -1742,9 +1742,9 @@ Let us express $\Delta\ph$ is terms of the deflection angle $\Theta$ and
 the winding number $n$ through Eqs.~(\ref{e:gis:def_Dph_bar}) and
 (\ref{e:gis:def_deflection_angle}):
 \be
-    \Delta\ph = \Theta - \eps_L \pi + 2\pi n .
+    \Delta\ph = \Theta + \eps_L \pi + 2\pi n .
 \ee
-We can then deduce from (\ref{e:gis:Dph_ln_b_bc}) that
+We deduce then from (\ref{e:gis:Dph_ln_b_bc}) that
 \be \label{e:ges:b_bc_exp_Theta}
    \encadre{ b - b_{\rm c} \underset{b\to b_{\rm c}^+}{\sim}
     \underbrace{648(7\sqrt{3} - 12)\mathrm{e}^{-\pi}}_{\simeq 3.482284} m \, \mathrm{e}^{-\eps_L \Theta - 2\pi |n|}  }.
@@ -2039,13 +2039,16 @@ three distinct images of $S$ on $\Obs$'s screen, which are represented by the
 open circles labelled 1 to 3 in the right part of the figure. These three
 geodesics can be distinguished by their deflection angle $\Theta$
 and their winding number $n$ (cf. Sec.~\ref{s:gis:deflect_winding}).
-The geodesic giving image 1 is the less deflected one: it has $\Theta \simeq - \pi/4$
-and $n=0$, while that
-of image 2 has $\Theta\simeq 2\pi/3$ and $n=0$.
-The geodesic giving image 3 is much more deflected
-it makes a full turn around
-the black hole before reaching $\Obs$; it's winding number is $n=-1$ and
-it has $\Theta\simeq -\pi/6$.
+The geodesic giving image 1 is the less deflected one: it has $L<0$,
+$\ph_{-\infty}\simeq 5\pi/4$, $\overline{\Delta\ph} \simeq -5\pi/4$, $n=0$ and hence, from
+Eq.~(\ref{e:gis:def_deflection_angle}), a deflection angle
+$\Theta \simeq -\pi/4$.
+The geodesic giving image 2 has $L>0$, $\ph_{-\infty}\simeq -4\pi/3$,
+$\overline{\Delta\ph} \simeq 4\pi/3$, $n=0$ and hence $\Theta\simeq \pi/3$.
+Finally, the geodesic giving image 3 has $L<0$, $\ph_{-\infty}\simeq2\pi + 7\pi/6$,
+$\overline{\Delta\ph} \simeq -7\pi/6$, $n=-1$ and hence $\Theta\simeq -\pi/6$.
+It it the most deflected of the three, having a winding number of $n=-1$, i.e. it makes a full turn around
+the black hole before reaching $\Obs$.
 We note that the more deflected the geodesic,
 the closer the image with respect to the circle $b = b_{\rm c}$ on $\Obs$'s
 screen.
@@ -2105,7 +2108,7 @@ Note that the first vector of the tetrad is necessarily the
 \end{subequations}
 where $(\wpar_t, \wpar_r, \wpar_\th, \wpar_\ph)$ is the natural basis associated
 with Schwarzschild-Droste coordinates and $r_{\rm em}$ is the (constant) $r$-coordinate of
-$\Obs_{\rm em}$, and hence of $\Obs_{\rm em}$.
+$\Obs_{\rm em}$.
 It is immediate that $\left(\w{u}_{\rm em}, \w{e}_{(r)}, \w{e}_{(\th)}, \w{e}_{(\ph)}\right)$
 is an orthonormal tetrad with respect to the Schwarzschild metric
 (\ref{e:sch:Schwarz_metric_SD}). Moreover,
