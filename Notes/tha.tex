@@ -1067,7 +1067,7 @@ In standard mechanics, a system with $N$ degrees of freedom
 is described by some configuration coordinates $(q^i)_{1\leq i \leq N}$
 and a Lagrangian $L = L(q^i,{\dot q}^i)$ (with ${\dot q}^i := \D q^i/\D t$).
 The system's Hamiltonian is then $H(q^i,p_i) = \sum_{i=1}^N p_i {\dot q}^i - L$,
-where $p_i$'s are the conjugate momenta: $p_i := \dert{L}{{\dot q}^i}$,
+where the $p_i$'s are the conjugate momenta: $p_i := \dert{L}{{\dot q}^i}$,
 and the system's motion is governed by
 \defin{Hamilton's equations}\index{Hamilton's equations}:
 ${\dot q}^i = \dert{H}{p_i}$ and ${\dot p}_i = - \dert{H}{q^i}$, or equivalently,
@@ -1091,8 +1091,8 @@ coordinates $(y^a)$, by introducing the following 2-form on $\FF$:
     \Omega := \sum_{i=1}^N \Dd p_i \wedge \Dd q^i ,
 \ee
 where $\Dd$ stands for the exterior derivative\footnote{On phase space manifolds, we are
-not using boldface notations for operators and tensor fields, keeping them for the spacetime
-manifold only. Hence the exterior derivative on $\FF$ is denoted by $\Dd$, and not
+not using boldface notations for operators and tensor fields, keeping them for spacetime
+manifolds only. Hence the exterior derivative on $\FF$ is denoted by $\Dd$, and not
 $\dd$, as defined in Sec.~\ref{s:bas:ext_deriv}, the 2-form (\ref{e:tha:def_symplectic_finite}) is denoted $\Omega$ and not $\w{\Omega}$, etc.}
  on $\FF$,
 so that $\Dd p_i$ (resp. $\Dd q^i$) is the differential 1-form of $p_i$
@@ -1138,7 +1138,7 @@ Given the components (\ref{e:tha:inv_Omega_ab}) of $\Omega^{-1}$ in canonical
 coordinates, it is easy to check that this definition reduces to
 (\ref{e:tha:Poisson_bracket_canon}) for these type of coordinates.
 
-Because $\Dd  \Dd =  0$ (nilpotence of the exterior derivative, cf. Eq.~(\ref{e:ext_der_nilpot})), it follows immediately from Eq.~(\ref{e:tha:def_symplectic_finite}) that the 2-form $\Omega$ is closed:
+Because $\Dd  \Dd =  0$ (nilpotence of the exterior derivative, cf. Eq.~(\ref{e:ext_der_nilpot})), it follows from Eq.~(\ref{e:tha:def_symplectic_finite}) that the 2-form $\Omega$ is closed:
 $\Dd \Omega = 0$.
 This is also obvious from the coordinate expression (\ref{e:bas:def_ext_2f})
 of the exterior derivative, given that the components $\Omega_{ab}$
@@ -1330,15 +1330,15 @@ that the tensor field $T$ is transported identically to itself along the flow
 defined by $X_H$ (cf. Sec.~\ref{s:bas:Lie}).
 In particular, this encompasses Eq.~(\ref{e:tha:dfdt_X_H_f}), since
 $\Liesymbol_{X_H} f = X_H(f)$ for any scalar field $f$.
-An important feature of the evolution thus defined is that
-the symplectic form is conserved:
+An important feature of the evolution thus defined is the conservation of
+the symplectic form:
 \be \label{e:tha:Lie_X_H_Omega}
    \encadre{ \Liesymbol_{X_H} \Omega = 0 }.
 \ee
 \begin{proof}
 The proof relies on the fact that $\Omega$ is closed, i.e. $\Dd\Omega = 0$.
 Indeed, using successively the Cartan
-identity (\ref{e:bas:Cartan}), Eq.~(\ref{e:tha:DH_Omega_X_H})
+identity (\ref{e:bas:Cartan}), expression~(\ref{e:tha:DH_Omega_X_H})
 and the nilpotence property (\ref{e:ext_der_nilpot}), we get
 \[
      \Liesymbol_{X_H} \Omega  = X_H \cdot \underbrace{\Dd \Omega}_{0}
@@ -1413,7 +1413,7 @@ Indeed, via the Hamiltonian
 vector field $X_H$, it describes the evolution of the system with
 respect to some ``privileged time'' $t$ [cf. Eq.~(\ref{e:tha:dfdt_X_H_f})].
 To treat covariantly relativistic systems, it would be desirable to get
-rid of the choice of a time function. This can be acheived as follows.
+rid of the choice of a time function. This can be achieved as follows.
 
 There is one, and exactly one,
 integral curve of $X_H$ through each point\footnote{At an equilibrium point, the
@@ -1608,7 +1608,7 @@ $\delta\mathcal{S}_{\mathscr{D}} =
 [cf. Eq.~(\ref{e:bas:df})]. Now, from the definition~(\ref{e:tha:def_action_S_D}),
 we get $\delta\mathcal{S}_{\mathscr{D}} = \int_{\mathscr{D}} \delta \w{L}\lld\w{g}\rld$,
 with $\delta\w{L}\lld\w{g}\rld$ given by Eq.~(\ref{e:tha:delta_L_E_Theta}),
-in which $\w{E}$ is set to zero for elements of $\FF$ are solutions of the field equations.
+in which $\w{E}$ is set to zero since elements of $\FF$ are solutions of the field equations.
 Hence
 $\langle \Dd \mathcal{S}_{\mathscr{D}},\delta\w{g}\rangle =
 \int_{\mathscr{D}} \dd \w{\theta}\lld\w{g},\delta\w{g}\rld$.
