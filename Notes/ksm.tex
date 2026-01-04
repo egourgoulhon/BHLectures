@@ -7,8 +7,10 @@
 
 \subsection{Definition} \label{s:ksm:def_Kerr_Schild}
 
-A spacetime $(\M,\w{g})$ is said to have a
-\defin{Kerr-Schild metric}\index{Kerr-Schild!metric} iff the metric tensor $\w{g}$
+A spacetime $(\M,\w{g})$ of dimension $n\geq 2$ is said to be
+\defin{Kerr-Schild}\index{Kerr-Schild!spacetime}, or
+to have a
+\defin{Kerr-Schild metric}\index{Kerr-Schild!metric}, iff the metric tensor $\w{g}$
 can be written
 \be \label{e:ksm:g_KerrSchild}
    \encadre{ \w{g} = \w{f} + 2 H \uu{k}\otimes\uu{k} },
@@ -19,8 +21,8 @@ or equivalently (in index notation):
 \ee
 where $\w{f}$ is a \emph{flat} Lorentzian metric on $\M$ (Minkowski metric\index{Minkowski!metric}),
 $H$ is a scalar field on $\M$ and $\uu{k}$ is a 1-form on $\M$ such that the
-vector associated to it via $\w{f}$ is a null vector of the metric
-$\w{f}$:
+vector associated to it via $\w{f}$-duality (cf. Sec.~\ref{s:bas:metric_dual})
+is a null vector of $\w{f}$. The last requirement is equivalent to
 \be
      f^{\mu\nu} k_\mu k_\nu = 0 ,
 \ee
@@ -73,22 +75,24 @@ both metrics:
 
 If $(\M,\w{g})$ is a spacetime of Kerr-Schild type, then \defin{Kerr-Schild
 coordinates}\index{Kerr-Schild!coordinates}
-are coordinates $(x^\alpha) = (t,x,y,z)$ that are \emph{Minkowskian}\index{Minkowskian coordinates}
+are coordinates $(x^\alpha) = (t,x^1,\ldots,x^{n-1})$ that are \emph{Minkowskian}\index{Minkowskian coordinates}
 for $\w{f}$, i.e. coordinates in which the flat metric
 $\w{f}$ takes the form
-\be \label{e:ksm:ds_eta}
-    \w{f} = - \dd t^2 + \dd x^2 + \dd y^2 + \dd z^2 .
+\be
+    \w{f} = - \dd t^2 + (\dd x^1)^2 + \cdots + (\dd x^{n-1})^2 .
 \ee
 
-\subsection{Basic property}
+\subsection{Geodesic character of $\w{k}$ for Einstein metrics} \index{Einstein!metric}
 
 \begin{prop}[null vector of Kerr-Schild metric as a geodesic vector]
-Let $\w{g}$ be a Kerr-Schild metric.
-If $\w{g}$ obeys the vacuum Einstein
-equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation}
-(\ref{e:fra:vac_Einstein}),
-i.e. if the Ricci tensor of $\w{g}$ vanishes identically,
-then the scalar field $H$ appearing in Eq.~(\ref{e:ksm:g_KerrSchild})
+Let $\w{g}$ be a Kerr-Schild metric
+such that the Ricci tensor $\w{R}$ of $\w{g}$ obeys $\w{R}(\w{k},\w{k}) = 0$.
+In particular, this holds if $\w{g}$ obeys the vacuum Einstein
+equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation},
+with or without any cosmological constant,
+i.e. if $\w{R} = 0$ [Eq.~(\ref{e:fra:vac_Einstein})]
+or $\w{R} \propto \w{g}$ [Eq.~(\ref{e:fra:vac_Einstein_Lambda})].
+Then the scalar field $H$ appearing in Eq.~(\ref{e:ksm:g_KerrSchild})
 can be chosen so that $\w{k}$ is a geodesic vector field\footnote{See Sec.~\ref{s:geo:gener_param} for the definition of a geodesic vector field.}:
 \be \label{e:ksm:k_geodesic}
     \encadre{ k^\mu \nabla_\mu k^\alpha = 0 },
@@ -96,7 +100,8 @@ can be chosen so that $\w{k}$ is a geodesic vector field\footnote{See Sec.~\ref{
 where $\nabla$ stands for the covariant derivative associated with $\w{g}$.
 \end{prop}
 
-The proof of the above proposition can be found in Ref.~\cite{KerrS65}.
+The proof can be found in Ref.~\cite{OrtagPP09} (or Ref.~\cite{KerrS65} for the case
+special case $\w{R} = 0$).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -105,15 +110,14 @@ The proof of the above proposition can be found in Ref.~\cite{KerrS65}.
 
 \subsection{Kerr-Schild form}
 
-Let consider the Kerr spacetime $(\M,\w{g})$, where $\M$ is the manifold
+Let us consider the Kerr spacetime $(\M,\w{g})$: $n=4$,  $\M$ is the manifold
 (\ref{e:ker:def_M_Kerr_spacetime}): $\M = \R^2\times\SS^2 \setminus \ring$
 and $\w{g}$ is the metric tensor given by Eq.~(\ref{e:ker:metric_Kerr_3p1})
-in terms of the Kerr coordinates $(\ti, r, \th,\tph)$ introduced in
-Sec.~\ref{s:ker:3p1_Kerr_coord}.
+in terms of the Kerr coordinates $(\ti, r, \th,\tph)$.
 Let us show that $\w{g}$ is a Kerr-Schild metric, with the associated null vector
 field $\w{k}$ being nothing but the vector field generating the
 ingoing principal null geodesics\index{principal!null geodesic} $\Li^{\rm in}_{(v,\th,\tph)}$  discussed in Sec.~\ref{s:ker:principal_geod}.
-Its expression in terms of the Kerr coordinates is given by Eq.~(\ref{e:ker:k_ti_tr}):
+Its expression in terms of Kerr coordinates is given by Eq.~(\ref{e:ker:k_ti_tr}):
 \be \label{e:ksm:k_Kerr}
     \encadre{ \w{k} = \wpar_\ti - \wpar_{\tilde r} } .
 \ee
