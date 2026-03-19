@@ -129,8 +129,8 @@ and $\Sp'$.
 The area of the Schwarzschild horizon is readily computed from
 the metric (\ref{e:def:q_S_Schw_hor}):
 $\w{q} = 4m^2 \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right)$, yielding
-$\sqrt{q}=4m^2$;
-we get
+$\sqrt{q}=4m^2 \sin\th$; formula~(\ref{e:neh:total_area}) then
+results in $A = 4 m^2 \times 4\pi$, i.e.
 \be \label{e:neh:area_Schwarz}
      A = 16\pi m^2 .
 \ee
@@ -903,13 +903,38 @@ is constant on a Killing horizon, provided some mild energy condition holds.
 
 Let us denote by $\wl$ the null normal to $\Hor$ that coincides with
 the Killing vector field: $\wl \equalH \w{\xi}$. The vector field
-$\wl$ is then a symmetry generator on $\Hor$, which implies
+$\wl$ is then a symmetry generator on $\Hor$ and one may expect that $\kappa$
+is invariant along $\wl$; this is indeed the case:
+\begin{lemma}[constancy of $\kappa$ along the generators of $\Hor$]
+\label{p:neh:kappa_along_field_lines}
+On any Killing horizon $\Hor$, the non-affinity coefficient $\kappa$ associated
+to the Killing vector [Eq.~(\ref{e:neh:xi_nab_xi_kappa})] is constant along the null geodesic generators of $\Hor$, i.e.
 \be \label{e:neh:kappa_const_along_L}
     \Lie{\el} \kappa = 0 .
 \ee
-This means that $\kappa$ is constant along any field line of $\wl$ (i.e. any
-null geodesic generator of $\Hor$). It could however vary from one field line to another.
-To prove that this is not the case, let us consider a complete cross-section
+\end{lemma}
+\begin{proof}
+Since $\w{\xi}$ is tangent to $\Hor$, we may take
+the Lie derivative along $\w{\xi}$ of the 1-form identity (\ref{e:neh:dxi2_kappa}):
+$\Lie{\xi} \left( \dd (\w{\xi}\cdot\w{\xi}) \right) \equalH - 2 \Lie{\xi} ( \kappa \, \uu{\xi})$. Using the Cartan identity (\ref{e:bas:Cartan}) to express the left-hand side and
+the Leibniz rule to expand the right-hand side, we get
+\[
+    \w{\xi} \cdot \underbrace{\dd \dd (\w{\xi}\cdot\w{\xi})}_{0}
+    + \dd ( \underbrace{\w{\xi}\cdot\dd(\w{\xi}\cdot\w{\xi})}_{0} )
+    \equalH - 2 \Lie{\xi} \kappa \, \uu{\xi} - 2 \kappa \underbrace{\Lie{\xi} \uu{\xi}}_{0}  .
+\]
+The first zero arises from $\dd\dd = 0$ [Eq.~(\ref{e:ext_der_nilpot})], the second
+one from $\w{\xi}$ tangent to $\Hor$ and $\w{\xi}\cdot\w{\xi} \equalH 0$ and
+the third one from
+$\Lie{\xi} \uu{\xi} = \Lie{\xi}(\w{g}(.,\w{\xi})) = \Lie{\xi}\w{g}(.,\w{\xi}) +
+\w{g}(., \Lie{\xi}\w{\xi})=0$, since $\Lie{\xi}\w{g} = 0$ by definition of a Killing vector
+and $\Lie{\xi}\w{\xi}=0$ by definition of the Lie derivative. Given that
+$\wl \equalH \w{\xi}$ and $\uu{\xi}\neq 0$, this proves (\ref{e:neh:kappa_const_along_L}).
+\end{proof}
+
+To establish that $\kappa$ is contant is constant over $\Hor$, there remains to prove
+that $\kappa$ does not vary from one null geodesic generator to another.
+To this aim, let us consider a complete cross-section
 $\Sp$ of $\Hor$ and show that $\kappa$ is constant on $\Sp$. The starting
 point is applying the 1-form identity (\ref{e:def:contract_Ricci_ident}) to a generic vector field $\w{v}$ tangent to $\Sp$,
 i.e. contract (\ref{e:def:contract_Ricci_ident}) with $v^\alpha$. Since $\el_\mu v^\mu = 0$, we get
