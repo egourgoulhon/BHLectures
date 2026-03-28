@@ -13,7 +13,7 @@ null hypersurface, not necessarily a black hole horizon.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Geometry of null hypersurfaces} \label{s:def:geom_null_hypsurf}
+\section{Geodesic generators of a null hypersurface} \label{s:def:geom_null_hypsurf}
 
 Null hypersurfaces have been defined in Sec.~\ref{s:def:hor_as_null}.
 Hereafter, we denote by $\Hor$ a generic null hypersurface in a $n$-dimensional spacetime
@@ -506,7 +506,11 @@ is \emph{not} an affine parameter. The null geodesic generators are depicted
 as vertical green lines in Fig.~\ref{f:def:Schwarz_horizon}.
 \end{example}
 
-\subsection{Cross-sections} \label{s:def:spacelike_sections}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Cross-sections of a null hypersuface}
+
+\subsection{Definition and first properties} \label{s:def:spacelike_sections}
 
 \begin{greybox}
 Let $\Hor$ be a null hypersurface of a $n$-dimensional spacetime $(\M, \w{g})$
@@ -534,9 +538,10 @@ Indices relative to a cross-section will range from $2$ to $n-1$ and
 will be denoted by a Latin letter from the beginning of the alphabet: $a$, $b$, etc.
 \end{notation}
 
-To encompass the idea that an event horizon $\Hor$ delimitates some
-region of spacetime, we shall assume that its cross-sections
-are \defin{closed manifolds}\index{closed!manifold}, i.e.
+At this stage, we put no restriction on the topology of cross-sections.
+We simply note that if the null hypersurface $\Hor$ is a black hole event
+horizon, the complete cross-sections are generically
+\defin{closed manifolds}\index{closed!manifold}, i.e.
 are compact without boundary\footnote{Scrictly speaking, a
 \emph{closed manifold} is simply a \emph{compact manifold},
 since a topological manifold, as defined in Sec.~\ref{s:bas:def_manif},
@@ -553,10 +558,11 @@ stationary black holes, thanks a topology theorem that
 we shall discuss in Sec.~\ref{s:sta:BH_stationary}.
 But for $n > 4$, other
 compact topologies, like that of a torus, are allowed for
-cross-sections of a stationary black hole.
+cross-sections of the event horizon of a stationary black hole, as we
+shall discuss in Sec.~\ref{s:sta:topology}.
 
-A first important property of cross-sections, independently of whether they are closed or not,
-is:
+A first important property of cross-sections is:
+
 \begin{prop}[spacelike character of cross-sections]
 \label{p:def:spacelike_cs}
 Any cross-section $\Sp$ of a null hypersurface is spacelike,
@@ -629,19 +635,21 @@ generated binary black hole spacetimes are displayed in Figs.~\ref{f:glo:EH_head
 and \ref{f:glo:EH_binspir} of Chap.~\ref{s:glo}.
 \end{example}
 
-Let us denote by $\w{q}$ the
-\defin{metric induced by}\index{induced!metric}\index{metric!induced --}
-$\w{g}$ on a cross-section $\Sp$,
-i.e. the bilinear form defined at any point $p\in\Sp$ by
+\begin{prop}[Riemannian induced metric]
+The symmetric bilinear form $\w{q}$ defined at any point $p$ of a cross-section $\Sp$
+by
 \be \label{e:def:def_q_S}
     \forall (\w{u},\w{v})\in T_p\Sp\times T_p\Sp, \quad
-     \w{q}(\w{u},\w{v}) := \w{g}(\w{u},\w{v}) .
+     \w{q}(\w{u},\w{v}) := \w{g}(\w{u},\w{v})
 \ee
-Saying that $\Sp$ is spacelike (Property~\ref{p:def:spacelike_cs})
-is equivalent to saying that $\w{q}$ is
-positive definite, i.e. $\w{q}(\w{v},\w{v}) \geq 0$ for all
+is called the \defin{metric induced by}\index{induced!metric}\index{metric!induced --}
+$\w{g}$ on $\Sp$.
+It is a Riemannian metric\index{Riemannian!metric}, i.e. $\w{q}$ is positive definite: $\w{q}(\w{v},\w{v}) \geq 0$ for all
 $\w{v}\in T_p\Sp$, with $\w{q}(\w{v},\w{v}) = 0$ $\iff$ $\w{v} = 0$.
-In other words, $(\Sp, \w{q})$ is a \defin{Riemannian manifold}\index{Riemannian!manifold} (cf Sec.~\ref{s:bas:signature} in Appendix~\ref{s:bas}).
+\end{prop}
+\begin{proof}
+That $\w{q}$ is Riemannian follows immediately from the spacelike character of $\Sp$ (Property~\ref{p:def:spacelike_cs})
+\end{proof}
 
 \begin{example}[Schwarzschild horizon] \label{x:def:Schw_hor4a}
 The metric induced by $\w{g}$ on the cross-section
@@ -717,7 +725,7 @@ through $p$, $\w{k}$ does depend on $\Sp$.
 
 \begin{prop}[extension of $\w{q}$]
 The bilinear form $\w{q}$, which has been defined only on $T_p\Sp$ via (\ref{e:def:def_q_S}),
-can be extended to all vectors of $T_p\M$ by setting
+can be extended to all vectors of $T_p\M$ for $p\in\Sp$ by setting
 \be \label{e:def:q_g_k_l}
     \encadre{ \w{q} := \w{g} + \uu{\el}\otimes\uu{k} + \uu{k}\otimes\uu{\el} } ,
 \ee
