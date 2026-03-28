@@ -1,32 +1,175 @@
-\chapter{The concept of black hole 3: The global view}
+\chapter{Defining a black hole}
 \label{s:glo}
 
 \minitoc
 
 \section{Introduction}
 
-Having attempted in Chaps.~\ref{s:def} and \ref{s:neh} to characterize a black hole by the local
-properties of its boundary, we turn now to the general definition of a black
-hole. As it could have been anticipated from the naive ``definition'' given
-in Sec.~\ref{s:def:first_defin}, the mathematically meaningful definition
-of a black hole cannot be local: it has to take into account the full
-spacetime structure, in particular its future asymptotics. Indeed, to conclude
-firmly that a particle has escaped from a given region, one has to wait until the ``end
-of time'' to make sure that the particle will never be back...
+In this chapter, we shall start by a naive definition of a black hole
+and some reflexions about what the black hole boundary could be (Sec.~\ref{s:def:BH_null_hypsurf}).
+We shall then coinvince ourselves that a rigourous definition of a black hole
+requires to take into account the global structure of spacetime, in particular its
+asymptotics.  This far-away structure is best
+described in terms of the so-called \emph{conformal completion}, which we
+discuss first for Minkowski spacetime (Sec.~\ref{s:glo:conf_Mink}),
+before considering the conformal completion of general spacetimes (Sec.~\ref{s:glo:conf_compl}).
+This will allow us to express the rigorous definition of a black hole
+and to study the main properties that directly follow from it
+(Sec.~\ref{s:glo:BH}), independently of any gravity theory.
 
-In this chapter, we therefore consider the global spacetime picture to
-arrive at the general definition of a black hole in
-Sec.~\ref{s:glo:BH}.
-This amounts to focusing on the
-spacetime asymptotics, which can be seen as
-the region where the ``distant observers'' live and may, or may not, receive
-light signal from some ``central region''. This far-away structure is best
-described in terms of the so-called \emph{conformal completion}, which brings
-the spacetime infinity(ies) to a finite distance in another manifold
---- a technique initiated by R.~Penrose\index[pers]{Penrose, R.} \cite{Penro63,Penro64} (see
-Refs.~\cite{Fraue04} and \cite{Nicol17} for a review).
-We start by investigating the conformal completion of the simplest
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Preliminary reflexions about black holes} \label{s:def:BH_null_hypsurf}
+
+\subsection{A naive definition} \label{s:def:first_defin}
+
+Given a $n$-dimensional spacetime $(\M,\w{g})$ as presented in Chap.~\ref{s:fra}
+(with $n\geq 2$),
+a naive definition of a black hole, involving only words, could be
+\begin{greybox}
+A \defin{black hole}\index{black!hole} is a localized region of spacetime
+from which neither massive particles nor massless ones (photons) can escape.
+\end{greybox}
+There are essentially two features in this definition: \emph{localization}
+and \emph{inescapability}. Let us for a moment focus on the latter.
+It implies the existence of a \emph{boundary}, which no
+particle emitted in the black hole region can cross.
+This boundary is called the
+\defin{event horizon}\index{event!horizon}\index{horizon!event --} and is
+quite often referred to simply as the \defin{horizon}.
+It is a \defin{one-way membrane}\index{one-way membrane}\index{membrane!one-way --},
+in the sense that it can be crossed from the black hole ``exterior'' towards
+the black hole ``interior'', but not in the reverse way. The one-way membrane must be
+a hypersurface of the spacetime manifold $\M$, for it has to divide $\M$ in two regions:
+the interior (the black hole itself) and the exterior region.
+Let us recall that a \defin{hypersurface}\index{hypersurface} is an
+embedded submanifold of $\M$ of codimension 1
+(cf. Sec.~\ref{s:bas:embed} in Appendix~\ref{s:bas}).
+
+\begin{figure}
+\centerline{\includegraphics[width=0.45\textwidth]{def_spacelike_hyp.pdf}
+\includegraphics[width=0.25\textwidth]{def_timelike_hyp.pdf}
+\includegraphics[width=0.30\textwidth]{def_null_hyp.pdf}}
+\caption[]{\label{f:def:hypersurfaces} \footnotesize
+The three causal types of hypersurfaces:
+spacelike (left), timelike (middle) and null (right).}
+\end{figure}
+
+\subsection{Hypersurfaces in spacetime and black hole boundaries} \label{s:def:hor_as_null}
+
+To discuss further which hypersurface could act as a black hole boundary,
+one should recall that, on a Lorentzian manifold $(\M,\w{g})$,
+a (smooth) hypersurface $\Sigma$ can locally be classified in three categories.
+The classification, called the \defin{causal type}\index{causal!type},
+depends on the signature of metric induced by $\w{g}$ on
+$\Sigma$  --- the
+\defin{induced metric}\index{induced!metric}\index{metric!induced --} being
+nothing but the restriction $\left.\w{g}\right| _{\Sigma}$ of $\w{g}$
+to vector fields tangent to $\Sigma$.
+The hypersurface $\Sigma$ is said to be
+\begin{itemize}
+\item \defin{spacelike} iff $\left.\w{g}\right| _{\Sigma}$ is positive definite,
+i.e. iff $\mathrm{sign} \left.\w{g}\right| _{\Sigma} = (+,\cdots,+)$ ($n-1$ plus signs),
+i.e. iff $(\Sigma,  \left.\w{g}\right| _{\Sigma})$ is a Riemannian manifold;
+\item \defin{timelike} iff $\left.\w{g}\right| _{\Sigma}$ is a Lorentzian metric,
+i.e. iff $\mathrm{sign} \left.\w{g}\right| _{\Sigma} = (-,+,\cdots,+)$ (1 minus sign and
+$n-2$ plus signs),
+i.e. iff $(\Sigma,  \left.\w{g}\right| _{\Sigma})$ is a Lorentzian manifold;
+\item \defin{null} iff $\left.\w{g}\right| _{\Sigma}$ is degenerate\footnote{
+Cf. Sec.~\ref{s:bas:metric} in Appendix~\ref{s:bas} for the definition of a
+degenerate bilinear form; the degeneracy
+implies that the bilinear form $\left.\w{g}\right| _{\Sigma}$ is not,
+strictly speaking, a metric on $\Sigma$.}
+i.e. iff $\mathrm{sign} \left.\w{g}\right| _{\Sigma} = (0,+,\cdots,+)$
+(1 zero and $n-2$ plus signs).
+\end{itemize}
+All these definitions are local, i.e. apply to a point $p\in\Sigma$.
+Of course, it may happen that $\Sigma$ has not the same causal type
+among all its points.
+
+The causal type of the hypersurface $\Sigma$
+can also be deduced from any normal vector\footnote{
+The definition of a vector normal to a hypersurface is recalled in Sec.~\ref{s:bas:hyp_normal} of Appendix~\ref{s:bas}.}
+$\w{n}$ to it (cf. Fig.~\ref{f:def:hypersurfaces}):
+\begin{itemize}
+\item $\Sigma$ spacelike $\iff$ $\w{n}$ timelike;
+\item $\Sigma$ timelike $\iff$ $\w{n}$ spacelike;
+\item $\Sigma$ null $\iff$ $\w{n}$ null.
+\end{itemize}
+These equivalences are easily proved by considering a $\w{g}$-orthogonal basis
+adapted to $\Sigma$.
+
+\begin{remark}
+Null hypersurfaces have the distinctive feature that their normals are
+also tangent to them. Indeed, by definition, the normal $\w{n}$ is null iff
+$\w{n}\cdot\w{n}=0$, which is nothing but the condition
+for $\w{n}$ to be tangent to $\Sigma$.
+\end{remark}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{def_timelike_2way.pdf}}
+\caption[]{\label{f:def:timelike_2way} \footnotesize
+A timelike hypersurface is a two-way membrane: $\Li_{1\rightarrow 2}$ is
+a timelike worldline from Region~1 to Region~2, while $\Li_{2\rightarrow 1}$ is
+a timelike worldline from Region~2 to Region~1.}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{def_spacelike_1way.pdf}}
+\caption[]{\label{f:def:spacelike_1way} \footnotesize
+A spacelike hypersurface is a one-way membrane: $\Li_{1\rightarrow 2}$ is
+a timelike worldline from Region~1 to Region~2, while there is no timelike or null
+worldline from Region~2 to Region~1.}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.5\textwidth]{def_null_1way.pdf}}
+\caption[]{\label{f:def:null_1way} \footnotesize
+A null hypersurface is a one-way membrane: $\Li_{1\rightarrow 2}$ is
+a timelike worldline from Region~1 to Region~2, while there is no timelike or null
+worldline from Region~2 to Region~1.}
+\end{figure}
+
+A timelike hypersurface is a two-way membrane: it divides (locally)
+the spacetime in two regions, 1 and 2 say, and a future-directed timelike or null
+worldline can cross it from Region~1 to Region~2, or from Region~2 to Region~1
+(see Fig.~\ref{f:def:timelike_2way}). On the contrary,
+a spacelike hypersurface is a one-way membrane: a future-directed timelike or null
+worldline, which is constrained to move inside the light cones,
+can cross it only from Region~1 to Region~2, say (see Fig.~\ref{f:def:spacelike_1way}).
+A null hypersurface is also a one-way membrane (see Fig.~\ref{f:def:null_1way}).
+At most, a null worldline that is not going from Region~1 to Region~2 must
+stay on the hypersurface; an example of such null worldline is
+the one depicted in Fig.~\ref{f:def:null_1way} as the thin black line tangent to the normal $\w{n}$.
+
+Hence the black hole boundary can either be a null hypersurface or a spacelike one.
+Actually, we shall see in Sec.~\ref{s:glo:properties_H} that, wherever it is smooth,
+the event horizon is a null hypersurface  (Property~\ref{p:glo:prop4}).
+However we shall also see in Chap.~\ref{s:loc} that spacelike hypersurfaces,
+called \emph{dynamical
+horizons}\index{dynamical!horizon}\index{horizon!dynamical --}, are involved
+in quasi-local approaches to black holes. So both types (null or spacelike) of one-way membranes
+are useful in the theory of black holes!
+
+\subsection{Reaching or not infinitely remote regions}
+
+Of course any region bounded by a null hypersurface cannot be qualified as
+a ``black hole''. For instance, the interior of a future light cone in Minkowski
+spacetime is such a region. It is true then any particle moving inside it is
+trapped: it cannot cross the light-cone boundary. However the particle can travel
+infinitely far from any ``center'' in that region. This is where the ``localized''
+facet of the naive definition given in Sec.~\ref{s:def:first_defin} enters:
+it forces the black hole region to have some ``finite spatial extent'',
+so that particles inside it cannot travel to infinitely remote regions.
+To formalize the concept of ``infinitely remote region'' in a coordinate independent way, one
+introduces a so-called \emph{conformal completion} of the spacetime $(\M,\w{g})$, which brings
+the infinity(ies) in $(\M,\w{g})$ to a finite distance in another manifold.
+This technique has been initiated by Roger Penrose\index[pers]{Penrose, R.} \cite{Penro63,Penro64} (see
+Refs.~\cite{Fraue04} and \cite{Nicol17} for reviews). We present it now, by
+starting by the conformal completion of the simplest
 of all spacetimes: Minkowski spacetime.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
