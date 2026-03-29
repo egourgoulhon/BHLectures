@@ -1,26 +1,40 @@
-\chapter{Null hypersurfaces}
+\chapter{Geometry of null hypersurfaces}
 \label{s:def}
 
 \minitoc
 
 \section{Introduction}
 
-Having established in the preceding chapter that the (smooth part of the) event horizon of
+Having established in the preceding chapter that (the smooth part of) the event horizon of
 a black hole in a null hypersurface (Property~\ref{p:glo:prop4}),
-we examine here the basic properties of this type of hypersurfaces. The results
-established in this chapter are fully generic, i.e. they are valid for any
-null hypersurface, not necessarily a black hole horizon.
+we examine here the basic properties of this type of hypersurfaces.
+Null hypersurfaces have been defined in Sec.~\ref{s:def:hor_as_null}
+as hypersurfaces of spacetime
+for which the induced metric is degenerate, or equivalently, for which
+any normal vector is null. They can also be characterized as having their normal
+vectors tangent to them. Here, we shall show that the integral lines
+of the normal vectors form a congruence of null geodesics on the hypersurface
+(Sec.~\ref{s:def:geom_null_hypsurf}). Then, in Sec.~\ref{s:nul:cross_sections}, we discuss the
+surfaces transverse to this geodesic congruence, called the
+\emph{cross-sections}, and study their
+properties. This allows us
+to introduce the concepts of expansion and shear along the null normals.
+Finally, in Sec.~\ref{s:def:null_raychaud},
+we derive the null version of the famous Raychaudhuri equation
+and draw from it a law of non-increase of the expansion.
+This law will be of great importance for black hole theory.
+
+The results established in this chapter are fully generic, i.e. they are valid for any
+null hypersurface, not necessarily a black hole horizon. They are also fully
+geometric, i.e. independent of any theory of gravity.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Geodesic generators of a null hypersurface} \label{s:def:geom_null_hypsurf}
 
-Null hypersurfaces have been defined in Sec.~\ref{s:def:hor_as_null}.
-Hereafter, we denote by $\Hor$ a generic null hypersurface in a $n$-dimensional spacetime
-$(\M,\w{g})$.
-
 \subsection{Hypersurfaces as level sets} \label{s:def:hypsurf_level}
 
+Let $\Hor$ be a null hypersurface in a $n$-dimensional spacetime $(\M,\w{g})$.
 As any hypersurface, $\Hor$ can be locally considered as a \defin{level set}\index{level set}:
 around any point of $\Hor$, there exists an open subset $\mathscr{U}$
 of $\M$ (possibly  $\mathscr{U} = \M$) and
@@ -106,7 +120,7 @@ coordinates different from the standard Schwarzschild-Droste ones,  $(\bar t, r,
 say, the link between the two being
 $t = {\bar t} + 2m\ln|r/(2m)-1|$. The present coordinates are called the
 \defin{ingoing Eddington-Finkelstein coordinates}\index{Eddington-Finkelstein!coordinates}
-and have the advantage over the standard ones to be regular on the event horizon,
+and have the advantage over the Schwarzschild-Droste ones to be regular on the event horizon,
 which is located at $r=2m$. Indeed, the metric components (\ref{e:def:Schw_metric})
 remain finite when $r\rightarrow 2m$, as do those of the inverse metric, which are
 \be \label{e:def:Schw_metric_inv}
@@ -127,7 +141,9 @@ It is then clear that the hypersurface $u=0$ is the
 3-dimensional ``cylinder'' $\Hor$ of equation
 $r=2m$ (cf. Fig.~\ref{f:def:Schwarz_horizon}). We shall see below\footnote{This should be obvious to the experienced
 reader, since a normal 1-form to $\Hor$ is $\dd r$ and
-from Eq.~(\ref{e:def:Schw_metric_inv}), $g^{\mu\nu} \partial_\mu r \, \partial_\nu r = g^{rr}=0$ on $\Hor$.} that $\Hor$ is indeed a null hypersurface.
+from Eq.~(\ref{e:def:Schw_metric_inv}), $g^{\mu\nu} \partial_\mu r \, \partial_\nu r = g^{rr}=0$ on $\Hor$.} that $\Hor$ is indeed a null hypersurface. We shall call it the
+\defin{Schwarzschild horizon}\index{Schwarzschild!horizon} for it is the event
+horizon of the Schwarzschild black hole, as we shall see in Sec.~\ref{s:sch:BH}.
 \end{example}
 
 \begin{figure}
@@ -412,15 +428,20 @@ which have just been shown to be null geodesics. Hence we may state:
 
 \begin{prop}[geodesic generators of a null hypersurface]
 \label{p:def:null_geod_generators}
-Any null hypersurface $\Hor$ is ruled by a family of null geodesics, called the
+Any null hypersurface $\Hor$ is ruled\index{ruled!null hypersurface}\footnote{See Remark~\ref{r:glo:ruled} on p.~\pageref{r:glo:ruled} for the justification of the term ``ruled''.}
+by a family of null geodesics, called the
 \defin{null geodesic generators}\index{null!geodesic!generator}\index{generator!of a null hypersurface} of $\Hor$, and each vector field $\wl$ normal to $\Hor$ is
-tangent to these null geodesics.
+tangent to these null geodesics. The null geodesic generators
+form a congruence\footnote{Let us recall that a \defin{congruence}\index{congruence} on a
+submanifold $\Sigma$ of $\M$ is a family of curves tangent to $\Sigma$, one, and exactly one, through
+each point of $\Sigma$.}
+in $\Hor$.
 \end{prop}
 
 \begin{remark}
 \label{r:def:null_curves}
 The above result is not trivial: while it is obvious that the field lines of the normal
-vector field $\wl$ are null curves that are tangent to $\Hor$, one must
+vector field $\wl$ are null curves tangent to $\Hor$, one must
 keep in mind that not all null curves are null geodesics. For instance, in
 Minkowski spacetime, the helix defined in terms of
 some Minkowskian coordinates $(x^\alpha)=(t,x,y,z)$ by the parametric equation
@@ -429,11 +450,10 @@ it has a null tangent vector at each point, but it is not a geodesic, given that
 all geodesics of Minkowski spacetime are straight lines.
 \end{remark}
 
-As a by-product of Eq.~(\ref{e:def:nab_lp_lp}), we get the behavior of the
-non-affinity coefficient under a rescaling of the null normal:
-\be \label{e:def:rescale_kappa}
-   \encadre{ \wl' = \alpha \wl \ \Longrightarrow \ \kappa' = \alpha \kappa + \wnab_{\wl} \alpha }.
-\ee
+For a smooth black hole event horizon, which is a null hypersurface (Property~\ref{p:glo:prop4}),
+the \emph{null geodesic generators} defined
+by Property~\ref{p:def:null_geod_generators} are the same as those
+defined in Property~\ref{p:glo:prop3}.
 
 \begin{example}[null hyperplane] \label{x:def:null_hyp3}
 It is clear on expression (\ref{e:def:wl_null_hyperplane}) for $\wl$ that
@@ -506,9 +526,16 @@ is \emph{not} an affine parameter. The null geodesic generators are depicted
 as vertical green lines in Fig.~\ref{f:def:Schwarz_horizon}.
 \end{example}
 
+As a by-product of Eq.~(\ref{e:def:nab_lp_lp}), we get the behavior of the
+non-affinity coefficient under a rescaling of the null normal:
+\be \label{e:def:rescale_kappa}
+   \encadre{ \wl' = \alpha \wl \ \Longrightarrow \ \kappa' = \alpha \kappa + \wnab_{\wl} \alpha }.
+\ee
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Cross-sections of a null hypersuface}
+\section{Cross-sections of a null hypersuface} \label{s:nul:cross_sections}
 
 \subsection{Definition and first properties} \label{s:def:spacelike_sections}
 
