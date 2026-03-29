@@ -68,14 +68,17 @@ Let $\Sp$ be some generic 2-sphere orbit. The static Killing vector field $\w{\x
 must be orthogonal to $\Sp$, otherwise the orthogonal projection of $\w{\xi}$
 onto $\Sp$ would define some privileged direction on $\Sp$, which is incompatible
 with spherical symmetry. The orthogonality of $\w{\xi}$ and $\Sp$ implies
-that $\Sp\subset\Sigma_t$. Let $(x^a)=(\th,\ph)$ be spherical coordinates on
-$\Sp$. The (Riemannian) metric $\w{q}$ induced by $\w{g}$ on $\Sp$ is given by
+that $\Sp\subset\Sigma_t$. Because of the spherical symmetry, the Riemannian
+metric $\w{q}$ induced by $\w{g}$ on $\Sp$ is necessarily of constant curvature
+(i.e. its Ricci scalar is constant over $\Sp$). This implies that there exists
+a coordinate system $(\th,\ph)$ on
+$\Sp$ such that $\theta\in[0,\pi]$, $\ph\in[0,2\pi)$ %]$
+and
 \be
-    \w{q} = r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) .
+    \w{q} = r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) ,
 \ee
-The positive coefficient $r^2$ in front of the standard spherical element must be
-constant over $\Sp$, by virtue of spherical symmetry. The area of $\Sp$ is
-then $A=4\pi r^2$. For this reason, $r$ is called the \defin{areal radius}\index{areal!radius}
+where $r$ is a positive constant.
+The area of $\Sp$ with respect to $\w{q}$ is then $A=4\pi r^2$. Accordingly, $r$ is called the \defin{areal radius}\index{areal!radius}
 of $\Sp$. Letting $\Sp$ vary, $r$ can be considered as a scalar field on
 $\M$. If $\dd r \not = 0$, we may use it as a coordinate\footnote{An example of spherically symmetric spacetime with $\dd r = 0$ somewhere is the maximally extended Schwarzschild spacetime,
 to be studied in Chap.~\ref{s:max}: $\dd r = 0$ on the so-called
@@ -119,7 +122,7 @@ areal coordinates are (cf. Sec.~\ref{s:sam:Kottler_solution} for the computation
 \Gamma^\ph_{\ \, \th\ph} = \Gamma^\ph_{\ \, \ph\th} = \frac{1}{\tan\th} ,
 \end{array}
 \ee
-the Christoffel symbols not listed above being zero.
+the remaining Christoffel symbols being zero.
 
 The $tt$ component of the Einstein equation (\ref{e:sch:vac_Einstein_eq})
 leads to (cf. Sec.~\ref{s:sam:Kottler_solution} for the computation)
@@ -131,7 +134,7 @@ while the $rr$ component leads to
         r \derd{A}{r} + A - (1 - \Lambda r^2) AB = 0 .
 \ee
 Finally, the $\th\th$ and $\ph\ph$ components lead to the same equation:
-\be
+\be \label{e:sch:EE_pp}
     2  \frac{\D^2 A}{\D r^2} + \frac{2}{r} \derd{A}{r}
         - \frac{1}{B} \left( \derd{A}{r} + \frac{2A}{r} \right) \derd{B}{r}
         - \frac{1}{A} \left( \derd{A}{r} \right) ^2
@@ -162,7 +165,7 @@ yields
 \]
 which is exactly the solution corresponding to $C=1$. Hence from now on,
 we set $C=1$, i.e.
-\be
+\be \label{e:sch:B_1_over_A}
     B(r) = \frac{1}{A(r)} .
 \ee
 Substituting this expression in Eq.~(\ref{e:sch:EE_rr}) yields an ordinary
@@ -171,12 +174,18 @@ differential equation for $A(r)$:
     r \derd{A}{r} + A - 1 + \Lambda r^2 = 0 ,
 \]
 the solution to which is
-\be
+\be \label{e:sch:A_sol}
     A(r) = 1 - \frac{2 m}{r} - \frac{\Lambda}{3} \,  r^2 ,
 \ee
 where $m$ is a constant.
+Furthermore, we check easily that the component
+(\ref{e:sch:EE_pp}) of the Einstein equation, which is reduced to
+$\D^2 A / \D r^2 + (2/r) \D A / \D r + 2\Lambda = 0$ thanks to (\ref{e:sch:B_1_over_A}),
+is fulfilled by (\ref{e:sch:A_sol}),
+We therefore conclude:
+\begin{prop}[static and spherically symmetric solutions to the vacuum Einstein equation]
 The general static and spherically symmetric solution to the vacuum
-Einstein equation (\ref{e:sch:vac_Einstein_eq_Lamb}) is therefore
+Einstein equation (\ref{e:sch:vac_Einstein_eq_Lamb}) is, in terms of areal coordinates,
 \be \label{e:sch:Kottler_metric}
     \encadre{
         \w{g} =
@@ -187,21 +196,22 @@ Einstein equation (\ref{e:sch:vac_Einstein_eq_Lamb}) is therefore
 It is called the \defin{Kottler metric}\index{Kottler metric} (cf. the historical
 note below).
 The  \defin{Schwarzschild metric}\index{Schwarzschild!metric} is the
-particular case $\Lambda=0$. If $\Lambda>0$,
-(\ref{e:sch:Kottler_metric}) is called the
-\defin{Schwarzschild-de Sitter metric}\index{Schwarzschild!de Sitter metric},
-often abridged as \defin{Schwarzschild-dS metric}, while if $\Lambda<0$, it
-is called the \defin{Schwarzschild-anti-de Sitter metric}\index{Schwarzschild!anti-de Sitter metric},
-often abridged as \defin{Schwarzschild-AdS metric}\index{Schwarzschild!AdS metric}.
-
-In the rest of this chapter, we will focus on the Schwarzschild metric,
-i.e. on the version $\Lambda=0$ of Eq.~(\ref{e:sch:Kottler_metric}):
+particular case $\Lambda=0$:
 \be \label{e:sch:Schwarz_metric_SD}
     \encadre{
         \w{g} = -\left( 1 - \frac{2 m}{r} \right)\, \dd t^2
             + \left( 1 - \frac{2 m}{r} \right) ^{-1}\, \dd r^2 +
         r^2 \left( \dd\th^2 + \sin^2\th\, \dd\ph^2 \right) }.
 \ee
+If $\Lambda>0$,
+(\ref{e:sch:Kottler_metric}) is called the
+\defin{Schwarzschild-de Sitter metric}\index{Schwarzschild!de Sitter metric},
+often abridged as \defin{Schwarz\-schild-dS metric}, while if $\Lambda<0$, it
+is called the \defin{Schwarzschild-anti-de Sitter metric}\index{Schwarzschild!anti-de Sitter metric},
+often abridged as \defin{Schwarzschild-AdS metric}\index{Schwarzschild!AdS metric}.
+\end{prop}
+
+In the rest of this chapter, we shall focus on the Schwarzschild metric (\ref{e:sch:Schwarz_metric_SD}).
 The areal coordinates $(t,r,\th,\ph)$ are then called the
 \defin{Schwarzschild-Droste coordinates}\index{Schwarzschild-Droste!coordinates}\footnote{In the literature they are often referred to as simply
 \defin{Schwarzschild coordinates}\index{Schwarzschild!coordinates}; we follow
@@ -234,7 +244,7 @@ Chap.~\ref{s:ges} that an observer on a circular orbit at a large value
 of $r$ has an orbital period $T$ obeying Kepler's third law:
 $T^2 = 4\pi^2 r^3 / m$. Without waiting for Chap.~\ref{s:ges}, we may notice
 that for $r\gg |m|$, the metric (\ref{e:sch:Schwarz_metric_SD})
-takes the standard weak-field form (see e.g. \cite{Carro04,MisneTW73}):
+takes the standard weak-field form (see e.g. \cite{Carro04,MisneTW73} or Eq.~(\ref{e:sta:asymptotic_metric}) with $n=4$ and $J_{ij}=0$):
 \be \label{e:sch:Schwarz_metric_large_r}
         \w{g} \simeq
             -\left( 1 + 2\Phi(r) \right) \, \dd t^2
