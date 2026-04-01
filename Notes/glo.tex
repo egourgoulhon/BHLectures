@@ -1126,20 +1126,20 @@ If $\mathscr{B} \neq \varnothing$, one says
 that the spacetime $(\M,\w{g})$ \defin{contains a black hole}\index{black!hole} or that
 $(\M,\w{g})$ is a \defin{black hole spacetime}\index{black!hole!spacetime}.
 The boundary $\Hor$ of the black hole region
-is called the \defin{future event horizon}\index{future!event horizon}
+is then called the \defin{future event horizon}\index{future!event horizon}
 (or simply the \defin{event horizon}\index{event!horizon}
 when no ambiguity may arise):
-\be
+\be \label{e:glo:def_horizon}
     \encadre{\Hor := \partial \mathscr{B}}.
 \ee
 \end{greybox}
-The black hole region is thus the set of points of $\M$
+From Eq.~(\ref{e:glo:def_BH}), one sees that the black hole region is the set of points of $\M$
 from which no future-directed causal curve in $\tilde{\M}$ reaches $\scri^+$.
 
 By plugging expression (\ref{e:glo:def_BH}) for $\mathscr{B}$ in the standard
 identity $\partial \mathscr{B} =
-\overline{\mathscr{B}} \cap \overline{\M\setminus \mathscr{B}}$, we get
-an equivalent expression for $\Hor$:
+\overline{\mathscr{B}} \cap \overline{\M\setminus \mathscr{B}}$,
+we can rewrite Eq.~(\ref{e:glo:def_horizon}) as
 \[
     \Hor = \overline{\M \setminus (J^-(\scri^+)\cap\M)} \cap
         \overline{(J^-(\scri^+)\cap\M)}
@@ -1167,6 +1167,9 @@ Maximally extended Schwarzschild spacetime, depicted in a Carter-Penrose diagram
 the grey area is the black hole region $\mathscr{B}$.}
 \end{figure}
 
+Let us illustrate the above black hole definition by a few examples, starting
+from a trivial one:
+
 \begin{example}[no black hole in Minkowski spacetime]
 The Minkowski spacetime contains no black hole, since all future-directed null geodesics
 terminate at $\scri^+$ (cf. Fig.~\ref{f:glo:conf_Mink_null}).
@@ -1176,18 +1179,35 @@ More generally, any asymptotically simple spacetime contains no black hole
 (cf. Sec.~\ref{s:glo:asymp_flat}).
 \end{example}
 
+Then, we turn to three basic examples of spherically symmetric black holes.
+All of them belong to the family of Schwarzschild-(anti)-(de Sitter) solutions
+to the vacuum Einstein equation with a cosmological constant $\Lambda$,
+which will be studied in Sec.~\ref{s:sch:Sch_sol_lamb}.
+Their metric tensor is given by Eq.~(\ref{e:sch:Kottler_metric}). These three
+examples show various causal character of the future infinity (arising
+from various values of $\Lambda$, cf. Property~\ref{p:glo:type_scri_sign_Lambda}):
+$\scri^+$ null ($\Lambda = 0$, Example~\ref{x:glo:Schwarzschild_BH}),
+$\scri^+$ spacelike ($\Lambda > 0$, Example~\ref{x:glo:de_Sitter_BH})
+and $\scri^+$ timelike ($\Lambda < 0$, Example~\ref{x:glo:anti_de_Sitter_BH}).
 
 \begin{example}[Schwarzschild black hole]
-\label{x:glo:Schwarztschild_BH}
+\label{x:glo:Schwarzschild_BH}
 The prototype of a black hole is the \emph{Schwarzschild black hole}\index{Schwarzschild!black hole}.
 It will be studied in full details in Part~\ref{P:sch}. In particular,
 it will be shown in Sec.~\ref{s:sch:BH} that the Schwarzschild spacetime contains
 a region $\mathscr{B}$ that fulfills the above definition of a black hole region.
 Here we simply illustrate graphically the definition (\ref{e:glo:def_BH}) by
-presenting the conformal diagram of the maximally extended Schwarzschild spacetime
-(Fig.~\ref{f:glo:Schwarz_BH}). Such a conformal diagram will
-be constructed rigorously in Sec.~\ref{s:max:Carter-Penrose}.
-Note that the Schwarzschild black hole is asymptotically flat, so that
+presenting in Fig.~\ref{f:glo:Schwarz_BH}
+the conformal diagram of the maximally extended Schwarzschild spacetime.
+Such a diagram, called a \emph{Carter-Penrose diagram}\index{Carter-Penrose diagram},
+will be constructed rigorously in Sec.~\ref{s:max:Carter-Penrose}. For the present
+purpose, it is sufficient to tell that it
+shares the same properties as the conformal diagrams of Minkowkski spacetime
+depicted in Figs.~\ref{f:glo:conf_diag_Mink} and \ref{f:glo:conf_Mink_null},
+namely each point in the diagram is actually a sphere $\mathbb{S}^2$ of
+metric area $4\pi r^2$ (some hypersurfaces of constant $r$ are indicated in Fig.~\ref{f:glo:conf_Mink_null}) and the radial null geodesics are straight lines inclined
+at $\pm 45^\circ$.
+Note that the Schwarzschild spacetime is asymptotically flat, so that
 $\scri^+$ is a null hypersurface of $(\tilde{\M},\w{\tilde{g}})$ and hence
 drawn with a $\pm 45^\circ$ inclination in Fig.~\ref{f:glo:Schwarz_BH}.
 \end{example}
@@ -1201,9 +1221,10 @@ area is the black hole region $\mathscr{B}$.}
 \end{figure}
 
 \begin{example}[Schwarzschild-de Sitter black hole]
+\label{x:glo:de_Sitter_BH}
 A black hole example in a spacetime with a spacelike $\scri^+$ is provided by the
 \defin{Schwarzschild-de Sitter black hole}\index{Schwarzschild-de Sitter!black hole},
-cf. Fig.~\ref{f:glo:de_Sitter_BH}.
+cf. Fig.~\ref{f:glo:de_Sitter_BH}. TBC.
 \end{example}
 
 \begin{figure}
@@ -1214,9 +1235,10 @@ area is the black hole region $\mathscr{B}$.}
 \end{figure}
 
 \begin{example}[Schwarzschild-anti de Sitter black hole]
+\label{x:glo:anti_de_Sitter_BH}
 A black hole example in a spacetime with a timelike $\scri^+$ is provided by the
 \defin{Schwarzschild-anti de Sitter black hole}\index{Schwarzschild-anti de Sitter!black hole},
-cf. Fig.~\ref{f:glo:anti_dS_BH}.
+cf. Fig.~\ref{f:glo:anti_dS_BH}. TBC.
 \end{example}
 
 \begin{remark} \label{s:glo:spurious_bh}
