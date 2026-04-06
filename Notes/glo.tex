@@ -776,18 +776,28 @@ is a radial timelike geodesic, bouncing back and forth around $\chi=0$.
 \end{figure}
 
 \begin{example}[conformal completion of AdS$_{4}$ spacetime] \label{x:glo:AdS}
-The 4-dimensional anti-de Sitter spacetime\index{anti-de Sitter spacetime}
-$(\M,\w{g})$
-has been introduced in Example~\ref{x:neh:AdS} of Chap.~\ref{s:neh}.
-The metric tensor expressed in the conformal coordinates
-$(\tau,\chi,\th,\ph)$ is given by Eq.~(\ref{e:neh:metrix_AdS_conformal}):
-\be
-    \w{g} = \frac{\ell^2}{\cos^2\chi} \left[ - \dd \tau^2
-    + \dd \chi^2 + \sin^2\chi \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) \right] ,
+The 4-dimensional \defin{anti-de Sitter spacetime}\index{anti-de Sitter spacetime} (AdS$_{4}$)
+is $(\M,\w{g})$ with $\M\simeq \mathbb{R}^4$ and $\w{g}$ is the metric
+whose components in the so-called \emph{global static coordinates}
+$(\tau,r,\th,\ph)$ are given by
+\be \label{e:glo:AdS4}
+    \w{g} = \ell^2 \left[ - (1 + r^2) \, \dd \tau^2
+    + \frac{\dd r^2}{1 + r^2} + r^2 \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) \right] ,
 \ee
-where $\tau\in\R$, $\chi \in (0,\pi/2)$, $\th\in(0,\pi)$, $\ph\in(0,2\pi)$
-and the constant length scale $\ell$ is related to the negative cosmological constant
-$\Lambda$ by $\ell^2 = -3/\Lambda$.
+where $\ell$ is a positive constant.
+Note that $\tau$ and $r$ are dimensionless, $\tau$ spans $\mathbb{R}$ and $r$ spans $(0,+\infty)$,
+while $(\th,\ph)$ are standard spherical coordinates on $\mathbb{S}^2$:
+$\th\in(0,\pi)$ and $\ph\in(0,2\pi)$.
+The metric (\ref{e:glo:AdS4}) is a solution to
+the vacuum Einstein equation\index{Einstein!equation!vacuum --}\index{vacuum!Einstein equation} (\ref{e:fra:vac_Einstein_Lambda}) with
+the negative cosmological constant $\Lambda = - 3/\ell^2$.
+Using the so-called \emph{conformal coordinates} $(\tau,\chi,\th,\ph)$ with
+$\chi := \arctan r \in (0,\pi/2)$, one gets
+\be \label{e:glo:metrix_AdS_conformal}
+   \w{g} = \frac{\ell^2}{\cos^2\chi} \left[ - \dd \tau^2
+    + \dd \chi^2 + \sin^2\chi \left( \dd\th^2 + \sin^2\th \, \dd\ph^2 \right) \right] .
+\ee
+Note that, since $\chi < \pi/2$ (and not $\pi$), $(\chi,\th,\ph)$ spans only one half of the hypersphere\index{hypersphere} $\mathbb{S}^3$.
 Defining $\Omega := \ell^{-1}\cos\chi$, we notice that
 a conformal completion of $(\M,\w{g})$ is $(\tilde{\M},\w{\tilde{g}})$
 where (i) $\tilde{\M}$ is the part $\chi \leq \pi/2$ of the Einstein cylinder\footnote{Recall that on the
@@ -912,7 +922,7 @@ $(t,\chi,\th,\ph)$ is
     + \cosh^2 t \left(
     \dd \chi^2 + \sin^2\chi \left( \dd\th^2 + \sin^2\th \, \dd \ph^2 \right) \right) \right] ,
 \ee
-where $\ell$ is a positive constant. Note that $t$ spans $\mathbb{R}$
+where $\ell$ is a positive constant. Note that $t$ is dimensionless and spans $\mathbb{R}$,
 while $(\chi,\th,\ph)$ are standard polar coordinates on $\mathbb{S}^3$:
 $\chi\in(0,\pi)$, $\th\in(0,\pi)$ and $\ph\in(0,2\pi)$.
  The metric (\ref{e:glo:dS4}) is a solution
@@ -1218,7 +1228,7 @@ Both are asymptotically flat: note that their large $r$ parts
 resemble the Minkowski diagram of Fig.~\ref{f:glo:conf_Mink_null}.
 In agreement with Property~\ref{p:glo:type_scri_sign_Lambda},
 their future conformal boundaries $\scri^+_{\rm I}$ and $\scri^+_{\rm III}$
-are null hypersurfaces of $(\tilde{\M},\tilde{\w{g}})$ and therefore
+are null hypersurfaces of $(\tilde{\M},\w{\tilde{g}})$ and therefore
 are drawn with a inclination of $\pm 45^\circ$ in Fig.~\ref{f:glo:Schwarz_BH}.
 The full future infinity $\scri^+ = \scri^+_{\rm I} \cup \scri^+_{\rm III}$
 is thus a null hypersurface with two connected components.
@@ -1281,9 +1291,8 @@ Finally, an example of black hole in a spacetime with a timelike $\scri^+$ is pr
 \defin{Schwarzschild-anti de Sitter black hole}\index{Schwarzschild-anti de Sitter!black hole},
 whose Carter-Penrose diagram is shown in Fig.~\ref{f:glo:anti_dS_BH}.
 In areal coordinates, the metric is given by Eq.~(\ref{e:sch:Kottler_metric}) with $\Lambda < 0$.
-For large values of the areal radius $r$, the spacetime approaches the anti-de Sitter spacetime\index{anti-de Sitter spacetime}, for which $\scri^+$ and $\scri^-$
-
-
+For large values of the areal radius $r$, the spacetime approaches the anti-de Sitter spacetime\index{anti-de Sitter spacetime}, for which $\scri^+ = \scri^- = \scri$ and $\scri^+$
+is a timelike hypersurface of $(\tilde{\M},\w{\tilde{g}})$, as shown in Example~\ref{x:glo:AdS} (Sec.~\ref{s:glo:def_conf_compl}).
 \end{example}
 
 \begin{remark} \label{s:glo:spurious_bh}
