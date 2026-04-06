@@ -1281,8 +1281,12 @@ in de Sitter spacetime (see e.g. Ref.~\cite{GriffP09}).
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{glo_anti_dS_BH.pdf}}
 \caption[]{\label{f:glo:anti_dS_BH} \footnotesize
-Schwarzschild-anti-de Sitter spacetime, depicted in a Carter-Penrose diagram; the grey
-area is the black hole region $\mathscr{B}$.}
+Schwarzschild-anti-de Sitter spacetime, depicted in a Carter-Penrose diagram;
+the pale yellow area corresponds to the causal past of the future infinity, $J^-(\scri^+)$,
+while the grey area is the black hole region $\mathscr{B}$.
+As in Figs.~\ref{f:glo:Schwarz_BH} and \ref{f:glo:de_Sitter_BH},
+green lines are radial null geodesics and
+the orange zig-zag lines at $r=0$ denote curvature singularities.}
 \end{figure}
 
 \begin{example}[Schwarzschild-anti de Sitter black hole]
@@ -1293,11 +1297,18 @@ whose Carter-Penrose diagram is shown in Fig.~\ref{f:glo:anti_dS_BH}.
 In areal coordinates, the metric is given by Eq.~(\ref{e:sch:Kottler_metric}) with $\Lambda < 0$.
 For large values of the areal radius $r$, the spacetime approaches the anti-de Sitter spacetime\index{anti-de Sitter spacetime}, for which $\scri^+ = \scri^- = \scri$ and $\scri^+$
 is a timelike hypersurface of $(\tilde{\M},\w{\tilde{g}})$, as shown in Example~\ref{x:glo:AdS} (Sec.~\ref{s:glo:def_conf_compl}).
+It is clear from Fig.~\ref{f:glo:anti_dS_BH} that
+$J^-(\scri^+) \cap \M$ fails to cover all of $\M$, hence
+there is a black hole region $\mathscr{B}$. The event horizon $\Hor$ is located
+at $r=r_{\rm h}$, where $r_{\rm h}$ is the only value of $r$ for which
+the contant-$r$ hypersurfaces are null, being the only positive zero of
+$g^{rr}$ for $\Lambda < 0$ (cf. the discussion in Example~\ref{x:glo:de_Sitter_BH}).
 \end{example}
 
 \begin{remark} \label{s:glo:spurious_bh}
-If we release the assumption of $\scri^+$-completeness in the above definition,
-we may end up with unphysical or ``spurious'' black holes \cite{GerocH78}.
+If one releases the assumption of $\scri^+$-completeness in the definition of a black hole
+given above,
+one may end up with unphysical or ``spurious'' black holes \cite{GerocH78}.
 For instance, let us consider the conformal completion of Minkowski spacetime
 $(\M,\w{g})$ resulting from its embedding in the Einstein cylinder
 $(\E,\w{\tilde{g}})$, as in
@@ -1330,7 +1341,8 @@ hypersurface that is a slice of the future development of a partial
 Cauchy surface\footnote{The concepts of \emph{partial Cauchy surface}
 and \emph{future development} are defined in Sec.~\ref{s:ker:Cauchy_hor}.} $\Sigma(0)$ such that the
 closure in $\tilde{\M}$ of the domain of dependence of $\Sigma(0)$ contains $\scri^+$.
-According to such a definition, a black hole is a $(n-1)$-dimensional object,
+According to such a definition, if $n = \dim \M$,
+a black hole is a $(n-1)$-dimensional object,
 while the black hole region $\mathscr{B}$ defined above is a $n$-dimensional object.
 \end{remark}
 
@@ -1339,14 +1351,15 @@ while the black hole region $\mathscr{B}$ defined above is a $n$-dimensional obj
 \subsection{White holes}
 
 By inverting past and future in the black hole definition (\ref{e:glo:def_BH}), one defines
-the \defin{white hole region}\index{white hole} of a
+the \defin{white hole region}\index{white!hole} of a
 spacetime $(\M,\w{g})$ with a conformal completion at infinity as the
 complement within $\M$ of the causal future of the past infinity $\scri^-$:
 \be \label{e:glo:def_white_hole}
     \encadre{\mathscr{W} := \M \setminus (J^+(\scri^-)\cap \M) } .
 \ee
 The white hole region is thus the set of points of $\M$
-from which no past-directed causal curve in $\tilde{\M}$ reaches $\scri^-$.
+that cannot be reached by a (future-directed) causal curve emanating
+from $\scri^-$.
 The boundary of white hole region is called the
 \defin{past event horizon}\index{past!event horizon}:
 \be
@@ -1357,12 +1370,16 @@ The boundary of white hole region is called the
 The name \defin{white fountain}\index{white!fountain} is sometimes used
 instead of \emph{white hole}. Actually, this name may seem better suited
 to describe the time symmetric of a black hole: one can fall into a hole, while
-one is expelled by a fountain.
+one is expelled, rather than absorbed, by a fountain.
 \end{remark}
 
-\begin{example}
-We shall encounter an example of white hole in the maximal extension of
-Schwarzschild spacetime, to be discussed in Chap.~\ref{s:max} (cf. Sec.~\ref{s:max:black_white}).
+\begin{example}[Schwarzschild white hole]
+In the maximally extended Schwarzschild spacetime depicted in Fig.~\ref{f:glo:Schwarz_BH}
+and described in Example~\ref{x:glo:Schwarzschild_BH}, the region marked $\mathscr{W}$ is
+a white hole\index{Schwarzschild!white hole}, with the past event horizon $\Hor^-$ being a null hypersurface $r=2m$. Similarly, the regions marked by $\mathscr{W}$ in the
+Carter-Penrose diagrams of the Schwarzschild-de Sitter and Schwarzschild-anti-de Sitter
+spacetimes in Figs.~\ref{f:glo:de_Sitter_BH} and \ref{f:glo:anti_dS_BH}
+are white holes.
 \end{example}
 
 The \defin{domain of outer communications}\index{domain of outer communications}
