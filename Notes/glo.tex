@@ -481,7 +481,7 @@ $(\mathscr{E},\w{\tilde{g}})$ is nothing but the
 a static solution to the Einstein equation (\ref{e:fra:Einstein_eq})
 with $\Lambda > 0$ and some pressureless matter of uniform density
 $\rho = \Lambda/(4\pi)$.
-We have thus an embedding\footnote{Cf. Sec.~\ref{s:bas:embed} of Appendix~A} of Minkowski spacetime into the Einstein cylinder (cf. Fig.~\ref{f:glo:Einstcyl_Mink}):
+We have thus an embedding\footnote{Cf. Sec.~\ref{s:bas:embed} of Appendix~A.} of Minkowski spacetime into the Einstein cylinder (cf. Fig.~\ref{f:glo:Einstcyl_Mink}):
 \be \label{e:glo:embed_Mink_Einst}
      \Phi:\ \M \longrightarrow \mathscr{E}
 \ee
@@ -719,8 +719,9 @@ of $(\M,\w{g})$ within
 the conformal completion $(\tilde{\M},\w{\tilde{g}})$.
 \end{greybox}
 Condition~1 expresses that $\M$ has been endowed with some boundary.
-A rigorous formulation of it would be via an embedding $\Phi:\M \rightarrow \tilde{\M}$,
-as in Eq.~(\ref{e:glo:embed_Mink_Einst}), so that
+A rigorous formulation of it would be that there exists an
+embedding $\Phi:\M \rightarrow \tilde{\M}$,
+as in Eq.~(\ref{e:glo:embed_Mink_Einst}), such that
 $\tilde{\M} = \Phi(\M) \cup \scri$. However, as above, we identify $\Phi(\M)$
 with $\M$ and therefore simply write $\tilde{\M} = \M \cup \scri$.
 Conditions~2 and 3 express that the boundary of $\M$, which ``lies at an infinite
@@ -730,8 +731,7 @@ length elements [cf. Eq.~(\ref{e:fra:line_element})], condition~2 implies
 \[
     \D s^2 = \frac{1}{\Omega^2} \, \D {\tilde s}^2
 \]
-with $1/\Omega^2 \rightarrow +\infty$ as one approaches $\scri$
-(condition~3).
+with condition~3 telling $1/\Omega^2 \rightarrow +\infty$ as one approaches $\scri$.
 Finally, condition~4 ensures
 that $\scri$ is a regular hypersurface of $\tilde{\M}$.
 It is of course fulfilled by Minkowski spacetime, as we can check graphically
@@ -751,8 +751,9 @@ we have necessarily $\Omega > 0$ on $\M$.
 \end{remark}
 
 \begin{remark}
-The conformal infinity $\scri$ is not part of the physical spacetime
-$\M$, but only of the conformal completion $\tilde{\M}$.
+The conformal infinity $\scri$ is \emph{not} part of the physical spacetime
+$\M$. In other words, $\scri$ and $\M$ are both subsets of $\tilde{\M}$
+that obeys $\scri \cap \M = \varnothing$.
 \end{remark}
 
 \begin{remark}
@@ -1085,6 +1086,7 @@ of $S$ and $\mathrm{int}\, S$ its interior.}:
     \partial J^\pm(S) = \partial I^\pm(S).
 \ee
 \end{itemize}
+
 The subset of the causal future (resp. past) of $S$ formed by points that cannot be connected
 to $S$ by a timelike curve is called the \defin{future horismos}\index{future!horismos}\index{horismos}
 (resp. \defin{past horismos}\index{past!horismos})
@@ -1100,6 +1102,18 @@ The spacetime $(\M,\w{g})$
 is said to be \defin{causally simple}\index{causally simple}\index{simple!causally --}
 iff for every compact set $K\subset \M$, $E^\pm(K) = \partial J^\pm(K)$. This is
 equivalent to saying that $J^+(K)$ and $J^-(K)$ are closed subsets of $\M$.
+
+If the spacetime $(\M,\w{g})$ admits a conformal completion at infinity $(\tilde{\M},\w{\tilde{g}})$
+with conformal infinity $\scri$, it follows immediately from the above definitions
+of causal future and past, combined with the definitions of future and past
+infinities given in Sec.~\ref{s:glo:def_conf_compl}, that the future and past
+infinity of $\M$ are expressible as
+\be
+    \scri^+ = \scri \cap J^+(\M) \qand
+    \scri^- = \scri \cap J^-(\M) .
+\ee
+Note that in the above relations, $J^+(\M)$ (resp. $J^-(\M)$) is the causal future (resp. past)
+of $\M$ \emph{considered as a subset of $\tilde{\M}$}.
 
 \subsection{Definition and examples} \label{s:glo:def_BH}
 
@@ -1225,9 +1239,9 @@ purpose, it is sufficient to mention that it
 shares the same properties as the conformal diagram of Minkowski spacetime
 depicted in Figs.~\ref{f:glo:conf_diag_Mink} and \ref{f:glo:conf_Mink_null},
 namely it offers a compactified view of the entire spacetime, with each point being actually a 2-sphere of
-metric area $4\pi r^2$ (some hypersurfaces of constant $r$ are indicated in Fig.~\ref{f:glo:conf_Mink_null}), the radial null geodesics are straight lines inclined
-at $\pm 45^\circ$ and the metric null cones have everywhere a vertical axis and an
-opening angle of $90^\circ$.
+metric area $4\pi r^2$ (some hypersurfaces of constant $r$ are indicated in Fig.~\ref{f:glo:Schwarz_BH}), all radial null geodesics being straight lines inclined
+at $\pm 45^\circ$ and the metric null cones having everywhere a vertical axis and a
+$90^\circ$ opening angle.
 The extended Schwarzschild spacetime has two (causally disconnected) regions where $2m < r < +\infty$,
 which are denoted by $\M_{\rm I}$ and $\M_{\rm III}$ in Fig.~\ref{f:glo:Schwarz_BH}.
 Both are asymptotically flat: note that their large $r$ parts
