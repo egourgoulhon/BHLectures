@@ -2316,7 +2316,7 @@ $S_{\rm gen}$ by
 where $S_{\rm mat}$ is the ordinary entropy of the matter and radiation and
 $S_{\rm BH}$ is the Bekenstein-Hawking entropy (\ref{e:evo:S_BH}) of the black hole.
 Then, any physical process makes $S_{\rm gen}$ increase, or at the very least, stay constant:
-\be
+\be \label{e:evo:GSL}
     \Delta S_{\rm gen} \geq 0 .
 \ee
 \end{prop}
@@ -2390,7 +2390,7 @@ discussed in the review articles \cite{Carli14,Damou04,Horow98,Wald01,Walla19,Za
 still limited to extremal black holes or near-extremal ones.
 Computations are indeed easier for such black holes because their near-horizon geometries
 have additional symmetries, as we have seen for the extremal Kerr case
-(cf. Sec.~\ref{s:exk:NHEK}). For the latter, the Bekenstein-Hawking entropy of
+(cf. Sec.~\ref{s:exk:NHEK}). For the latter, the Bekenstein-Hawking entropy
 has been recovered via some
 holographic duality\footnote{This is the \emph{Kerr/CFT correspondence}\index{Kerr/CFT correspondence}
 mentioned in Sec.~\ref{s:exk:applications}.} \cite{GuicaHSS09,Compe17}.
@@ -2431,14 +2431,14 @@ See also Ref.~\cite{GrumiMS15} for an historical review up to 2013.
 
 \subsection{Black hole entropy and the holographic principle}
 
-The entropy being proportional to the area, as exhibited by the
-Bekenstein-Hawking formula (\ref{e:evo:S_BH}), is definitely a peculiarty
+The fact that the entropy of black holes is proportional to their area, as exhibited by the
+Bekenstein-Hawking formula (\ref{e:evo:S_BH}), is definitely a peculiarity
 of black holes: ordinary physical systems have an entropy that scales with
-their \emph{volume}, not their \emph{area}. This feature turned out to have profound
+their \emph{volume}, not their \emph{area}. This particular feature turned out to have profound
 consequences, being at the root of a major paradigm in modern
 theoretical physics, namely the \defin{holographic principle}\index{holographic principle}.
 This principle states that all physical processes in a given region
-can be entirely described in terms of the fundamental degrees of freedom at the boundary
+can be entirely described in terms of fundamental degrees of freedom at the boundary
 of this region (see e.g. Ref.~\cite{Bouss02} for a review).
 
 By itself, the Bekenstein-Hawking formula suggests that the (quantum) microscopic degrees of
@@ -2459,17 +2459,23 @@ must obey:
 \end{prop}
 
 \begin{proof}
-Let us assume that (\ref{e:evo:spher_ent_bound}) is violated. Then by throwing
-a sufficient large amount of matter to the system, one may increase its mass
-until it collapse to a black hole.
+If the system is a black hole, then $S = S_{\rm BH}$ and (\ref{e:evo:spher_ent_bound}) is fulfilled
+by virtue of Eq.~(\ref{e:evo:S_BH}) (the inequality is saturated).
+In the opposite case, the system has necessarily a gravitational
+mass $M$ that obeys $2M < R$, where $R := \sqrt{A/(4\pi)}$. Let us then throw to the system some
+matter arranged in a spherical shell, of gravitational mass $R/2 - M$. The initial system and the shell
+will necessarily collapse to a spherical black hole of mass $R/2$ and hence of area $A$.
+In this process, the initial total entropy is $S + S_{\rm shell}$ and the final one
+is $S_{\rm BH} = k_{\rm B} A / (4\hbar)$ [Eq.~(\ref{e:evo:S_BH})]. The GSL [Eq.~(\ref{e:evo:GSL})]
+then implies $k_{\rm B} A / (4\hbar) \geq S + S_{\rm shell}$. Given that $S_{\rm shell} \geq 0$,
+the inequality (\ref{e:evo:spher_ent_bound}) follows.
 \end{proof}
 
 \begin{remark}
 For weakly gravitating systems, Property~\ref{p:evo:spher_ent_bound} can be shown to follow from
-a more general entropy bound, called the \defin{Bekenstein bound}\index{Bekenstein}\index[pers]{Bekenstein, J.D.}  \cite{Beken81}, namely
+a more general entropy bound, also derived from the GSL, called the \defin{Bekenstein bound}\index{Bekenstein}\index[pers]{Bekenstein, J.D.}  \cite{Beken81}. The latter states that
 $S \leq 2\pi k_{\rm B} R E/\hbar$, where $E$ is the total energy of the system and
-$R$ the radius of a sphere that encloses it. The Bekenstein bound is also derived
-from the GSL \cite{Beken81}.
+$R$ the radius of a sphere enclosing it.
 \end{remark}
 
 \begin{remark}
@@ -2478,7 +2484,9 @@ Property~\ref{p:evo:spher_ent_bound} is not a rigorous theorem; see Wald's artic
 for a critical assesment and counter-examples.
 \end{remark}
 
-A famous realization of the holographic principle is the AdS/CFT correspondance,
+A famous realization of the holographic principle is the AdS/CFT correspondence,
+
+TBC...
 
 \subsection{Dependency on general relativity}
 
