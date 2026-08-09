@@ -373,7 +373,7 @@ a null geodesic (cf. Remark~\ref{r:def:null_curves} on p.~\pageref{r:def:null_cu
 and Appendix~\ref{s:geo}),
 so that one cannot deduce from the above results that conformal transformations
 preserve null geodesics. However, this turns out to be true:
-\begin{prop}[null geodesics preserved by conformal transformations]
+\begin{tprop}{null geodesics preserved by conformal transformations}{}
 Let $\w{g}$ and $\w{\tilde{g}}$ be two Lorentzian metrics on a manifold
 $\M$ that are conformally related: $\w{\tilde{g}} = \Omega^2 \w{g}$.
 A smooth curve $\Li$ in $\M$ is a null geodesic for $\w{\tilde{g}}$ iff
@@ -384,7 +384,8 @@ $\lambda$ of $\Li$ as a $\w{g}$-geodesic by
      \derd{\tilde{\lambda}}{\lambda} = a\,  \Omega^2 ,
 \ee
 where $a$ is a constant.
-\end{prop}
+\end{tprop}
+
 \begin{proof}[Sketch of proof]
 Write explicitly the geodesic equation [Eq.~(\ref{e:geo:eq_geod})]
 and express the Christoffel symbols of $\w{\tilde{g}}$ in terms of those
@@ -640,10 +641,10 @@ $i^-$ the \defin{past timelike infinity}\index{past!timelike infinity}\index{inf
 of $(\M,\w{g})$
 and $i^0$ the \defin{spacelike infinity}\index{spacelike!infinity}\index{infinity!spacelike --} of $(\M,\w{g})$.
 
-\begin{prop}
-\label{p:glo:Mink_scri_null}
+\begin{tprop}{}{glo:Mink_scri_null}
 $\scri^+$ and $\scri^-$ are null hypersurfaces of $(\tilde{\M},\w{\tilde{g}})$.
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 Since $\scri^+$ is defined by $V=\pi/2$, a valid coordinate
 system on $\scri^+$ is $(U,\th,\ph)$ with $U$ spanning $(-\pi/2, \pi/2)$.
@@ -826,8 +827,7 @@ The above example shows that $\scri$ is not necessarily a null hypersurface,
 as it is for Minkowski spacetime (cf. Sec.~\ref{s:glo:conf_complet_Mink}).
 Actually the causal type of $\scri$ is determined by the cosmological
 constant, as follows:
-\begin{prop}[causal type of $\scri$ and sign of the cosmological constant]
-\label{p:glo:type_scri_sign_Lambda}
+\begin{tprop}{causal type of $\scri$ and sign of the cosmological constant}{glo:type_scri_sign_Lambda}
 If the spacetime dimension obeys\footnote{Cf. Remark~\ref{r:fra:Einstein_eq_n_2} in
 Sec.~\ref{s:fra:Einstein_eq}.}
 $n\geq 3$ and $\w{g}$ is a solution to the Einstein equation with
@@ -839,7 +839,8 @@ vicinity of $\scri$ (i.e. when $\Omega\rightarrow 0$), then
 \item $\scri$ is a spacelike hypersurface of $(\tilde{\M},\w{\tilde{g}})$ iff $\Lambda>0$;
 \item $\scri$ is a timelike hypersurface of $(\tilde{\M},\w{\tilde{g}})$ iff $\Lambda<0$.
 \end{itemize}
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 It follows from $\w{\tilde{g}} = \Omega^2 \w{g}$ that the Ricci scalars $\tilde{R}$
 and $R$ of respectively $\w{\tilde{g}}$ and $\w{g}$ are related by\footnote{This relation is
@@ -1012,11 +1013,11 @@ Ricci tensor is zero, this implies that the full Riemann curvature tensor vanish
 at $\scri$ [cf. Eq.~(\ref{e:bas:Weyl})], hence the qualifier \emph{asymptotically flat}.
 
 The following property holds:
-\begin{prop}[null $\scri$ for asymptotically flat spacetimes]
-\label{p:glo:null_scri}
+\begin{tprop}{null $\scri$ for asymptotically flat spacetimes}{glo:null_scri}
 The conformal infinity $\scri$ of an asymptotically flat spacetime $(\M,\w{g})$
 is a null hypersurface of the conformal completion $(\tilde{\M},\w{\tilde{g}})$.
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 Consider Eq.~(\ref{e:glo:tildeR_R}). Near $\scri$, we have $R=0$ by the
 very definition of asymptotic flatness. The limit $\Omega\rightarrow 0$
@@ -1503,11 +1504,10 @@ main properties of its boundary --- the future event horizon $\Hor$.
 
 \subsection{Achronal character}
 
-\begin{prop}[the event horizon as an achronal set]
-\label{p:glo:prop1}
+\begin{tprop}{the event horizon as an achronal set}{glo:prop1}
 A black hole event horizon $\Hor$ is an \defin{achronal set}\index{achronal!set}, i.e. no pair of points of $\Hor$ can be connected
 by a timelike curve of $\M$.
-\end{prop}
+\end{tprop}
 
 \begin{figure}
 \centerline{\includegraphics[height=0.3\textheight]{glo_timelike_stab.pdf}}
@@ -1523,15 +1523,14 @@ an equivalent statement of Property~\ref{p:glo:prop1} is: no timelike curve of $
 meets $\Hor$ at more than one point.
 The proof of Property~\ref{p:glo:prop1} relies on the following lemma:
 
-\begin{lemma}[stability of timelike curves with respect to their ends]
-\label{p:glo:lem1}
+\begin{tlemma}{stability of timelike curves with respect to their ends}{glo:lem1}
 One can ``move the ends'' of any timelike curve
 ``a little bit'' and still get a timelike curve. More precisely,
 if two points $p,q\in\M$ are connected by a timelike curve,
 there exist
 a neighborhood $U$ of $p$ and a neighborhood $V$ of $q$ such that
 any point $p'\in U$ can be connected to any point $q'\in V$ by a timelike curve.
-\end{lemma}
+\end{tlemma}
 
 \begin{proof}
 This is more or less evident on a spacetime diagram (cf. Fig.~\ref{f:glo:timelike_stab})
@@ -1570,11 +1569,10 @@ $\Hor$ is not differentiable. Only the continuous structure of the manifold hold
 everywhere, i.e. $\Hor$ is guaranteed to be a \emph{topological} manifold, if not
 a smooth one:
 
-\begin{prop}[the event horizon as a topological manifold of codimension 1]
-\label{p:glo:prop2}
+\begin{tprop}{the event horizon as a topological manifold of codimension 1}{glo:prop2}
 A black hole event horizon $\Hor$ in a $n$-dimensional spacetime
 is a topological manifold of dimension $n-1$.
-\end{prop}
+\end{tprop}
 
 
 \begin{figure}
@@ -1661,8 +1659,7 @@ $C^0$ and $C^1$) is generally used to denote Lipschitz submanifolds.
 
 Beside being achronal topological submanifolds of codimension 1, the main property of black hole horizons is:
 
-\begin{prop}[the event horizon ruled by never leaving null geodesics \textnormal{(Penrose\index[pers]{Penrose, R.} 1968 \cite{Penro68})}]
-\label{p:glo:prop3}
+\begin{tprop}{the event horizon ruled by never leaving null geodesics \textnormal{(Penrose\index[pers]{Penrose, R.} 1968 \cite{Penro68})}}{glo:prop3}
 A black hole event horizon $\Hor$ is ruled by a family of null geodesics,
 called the \defin{generators of}\index{generator!of an event horizon} $\Hor$,
  that (i) either lie entirely
@@ -1674,7 +1671,7 @@ except at special points where null geodesics enter $\Hor$, which are
 called \defin{crossovers}\index{crossover point}. A special case
 of crossover, called \defin{caustic}\index{caustic}, is a point
 where neighboring null geodesics focus and converge while arriving in $\Hor$.
-\end{prop}
+\end{tprop}
 In particular, once a null geodesic has
 merged with $\Hor$ (at a point where it may intersect other null geodesics),
 it will stay forever on $\Hor$ and will never intersect any other generator.
@@ -1701,12 +1698,12 @@ The following proof of Property~\ref{p:glo:prop3}
 is adapted from that given in Box~34.1 of MTW \cite{MisneTW73}.
 In addition of Lemma~\ref{p:glo:lem1}, it relies on the following lemma.
 
-\begin{lemma}
-\label{p:glo:lem2}
+\begin{tlemma}{}{glo:lem2}
 Let $\Li$ be a causal curve connecting two points $p$ and $q$
 of $\M$. If $\Li$ contains a timelike segment, then there exists an
 entirely timelike curve connecting $p$ and $q$.
-\end{lemma}
+\end{tlemma}
+
 \begin{proof}
 We shall only provide a graphical ``proof'', based on the spacetime diagram
 of Fig.~\ref{f:glo:timelike_arc}. The causal curve $\Li$ may have parts where it is null (segments $pa$ and $bq$ in Fig.~\ref{f:glo:timelike_arc}); these parts are drawn with
@@ -1838,13 +1835,12 @@ repeat the construction
 from the point $q$ to get another future-directed null geodesic $\Li'\subset\Hor$
 connecting $q$ to another point $q'\in\Hor$. Now $\Li$ and $\Li'$ must
 be two segments of the same null geodesic $\Li\cup\Li'$ by the following lemma.
-\begin{lemma}
-\label{p:glo:lem3}
+\begin{tlemma}{}{glo:lem3}
 Let $q\in\Hor$. If $\Li\subset\Hor$ is a null geodesic having $q$ as future end point
 and $\Li'\subset\Hor$ is a null geodesic having $q$ as past end point, then
 $\Li$ and $\Li'$ have collinear tangent vectors at their common point $q$.
 It follows that $\Li$ and $\Li'$ are two segments of a same null geodesic through $q$.
-\end{lemma}
+\end{tlemma}
 \begin{figure}
 \centerline{\includegraphics[width=0.17\textwidth]{glo_unique_geod.pdf}}
 \caption[]{\label{f:glo:unique_geod} \footnotesize
@@ -1960,10 +1956,9 @@ $\Hor$ and is bounded by the set of caustic points, which forms a 1-dimensional
 subset of $\Hor$ \cite{Siino98a,Siino98b,HusaW99,CohenKS12}.
 
 
-\begin{prop}[the event horizon as a null hypersurface]
-\label{p:glo:prop4}
+\begin{tprop}{the event horizon as a null hypersurface}{glo:prop4}
 Wherever it is smooth, $\Hor$ is a null hypersurface.
-\end{prop}
+\end{tprop}
 
 \begin{proof}
 Let us assume that $\Hor$ is smooth in some open subset $U$ of $\M$.

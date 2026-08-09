@@ -426,8 +426,7 @@ the null normal $\wl$ (cf. Sec.~\ref{s:geo:gener_param} in Appendix~\ref{s:geo})
 Since $\wl$ is collinear to $\wl'$, it obviously shares the same field lines,
 which have just been shown to be null geodesics. Hence we may state:
 
-\begin{prop}[geodesic generators of a null hypersurface]
-\label{p:def:null_geod_generators}
+\begin{tprop}{geodesic generators of a null hypersurface}{def:null_geod_generators}
 Any null hypersurface $\Hor$ is ruled\index{ruled!null hypersurface}\footnote{See Remark~\ref{r:glo:ruled} on p.~\pageref{r:glo:ruled} for the justification of the term ``ruled''.}
 by a family of null geodesics, called the
 \defin{null geodesic generators}\index{null!geodesic!generator}\index{generator!of a null hypersurface} of $\Hor$, and each vector field $\wl$ normal to $\Hor$ is
@@ -436,7 +435,7 @@ form a congruence\footnote{Let us recall that a \defin{congruence}\index{congrue
 submanifold $\Sigma$ of $\M$ is a family of curves tangent to $\Sigma$, one, and exactly one, through
 each point of $\Sigma$.}
 in $\Hor$.
-\end{prop}
+\end{tprop}
 
 \begin{remark}
 \label{r:def:null_curves}
@@ -590,18 +589,17 @@ shall discuss in Sec.~\ref{s:sta:topology}.
 
 A first important property of cross-sections is:
 
-\begin{prop}[spacelike character of cross-sections]
-\label{p:def:spacelike_cs}
+\begin{tprop}{spacelike character of cross-sections}{def:spacelike_cs}
 Any cross-section $\Sp$ of a null hypersurface is spacelike,
 i.e. all vectors tangent to $\Sp$ are spacelike.
-\end{prop}
+\end{tprop}
 The spacelike character of $\Sp$ follows from
-\begin{lemma}[tangent vectors to a null hypersurface]
-\label{p:def:tangent_to_null_hyp}
+\begin{tlemma}{tangent vectors to a null hypersurface}{def:tangent_to_null_hyp}
 Every nonzero tangent vector $\w{v}$ to a null hypersurface is either spacelike or null.
 Moreover, if it is null, $\w{v}$ is tangent to a null geodesic generator, i.e. $\w{v}$ is normal
 to the hypersurface.
-\end{lemma}
+\end{tlemma}
+
 \begin{proof}
 Tangent vectors to a null hypersurface $\Hor$ are by definition
 vectors $\w{v}$ such that $\w{g}(\wl,\w{v})=0$, where $\wl$ is the normal
@@ -662,7 +660,7 @@ generated binary black hole spacetimes are displayed in Figs.~\ref{f:glo:EH_head
 and \ref{f:glo:EH_binspir} of Chap.~\ref{s:glo}.
 \end{example}
 
-\begin{prop}[Riemannian induced metric]
+\begin{tprop}{Riemannian metric on cross-sections}{}
 The symmetric bilinear form $\w{q}$ defined at any point $p$ of a cross-section $\Sp$
 by
 \be \label{e:def:def_q_S}
@@ -673,7 +671,7 @@ is called the \defin{metric induced by}\index{induced!metric}\index{metric!induc
 $\w{g}$ on $\Sp$.
 It is a Riemannian metric\index{Riemannian!metric}, i.e. $\w{q}$ is positive definite: $\w{q}(\w{v},\w{v}) \geq 0$ for all
 $\w{v}\in T_p\Sp$, with $\w{q}(\w{v},\w{v}) = 0$ $\iff$ $\w{v} = 0$.
-\end{prop}
+\end{tprop}
 \begin{proof}
 That $\w{q}$ is Riemannian follows immediately from the spacelike character of $\Sp$ (Property~\ref{p:def:spacelike_cs})
 \end{proof}
@@ -700,7 +698,7 @@ objects, while they are truly $(n-2)$-dimensional ones.}
 
 An important consequence of $\Sp$ being spacelike is (cf. Fig.~\ref{f:def:TS_ortho}):
 
-\begin{prop}[orthogonal complement of a cross-section tangent space]
+\begin{tprop}{orthogonal complement of a cross-section tangent space}{}
 At each point $p$ of a cross-section $\Sp$ of a null hypersurface $\Hor$,
 the tangent space $T_p\Sp$ has an \defin{orthogonal complement}\index{orthogonal!complement}
 $T_p^\perp\Sp$, i.e. a timelike 2-dimensional vector plane such that (i)
@@ -710,7 +708,8 @@ the direct sum of $T_p\Sp$ and $T_p^\perp\Sp$ :
    \encadre{ T_p\M = T_p\Sp \oplus T_p^\perp\Sp }
 \ee
 and (ii) every vector in $ T_p^\perp\Sp$ is orthogonal to $\Sp$.
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 Using the Gram-Schmidt process to construct a $\w{g}$-orthogonal
 basis of $T_p\M$, starting form a
@@ -724,7 +723,7 @@ in order to ensure that the signature of $\w{g}$ is $(-,+,\ldots,+)$.
 Since $\Sp\subset\Hor$, the null normal $\wl$ to $\Hor$ is orthogonal to any vector
 tangent to $\Sp$, which implies $\wl \in T_p^\perp\Sp$. One can supplement $\wl$
 by another null vector to form a basis of $T_p^\perp\Sp$:
-\begin{prop}[complement null normal to a cross-section]
+\begin{tprop}{complement null normal to a cross-section}{}
 At each point $p$ of a cross-section $\Sp$ of a null hypersurface $\Hor$
 with future-directed null normal $\wl$,
 there exists a unique future-directed null vector $\w{k}$ transverse to $\Hor$ such that
@@ -732,7 +731,7 @@ there exists a unique future-directed null vector $\w{k}$ transverse to $\Hor$ s
         \w{k}\cdot\wl = -1 \qand
         T_p^\perp\Sp = \mathrm{Span}\left( \wl, \w{k} \right) .
 \ee
-\end{prop}
+\end{tprop}
 
 \begin{proof}
 As a timelike plane, $T_p^\perp\Sp$ has two independent null directions,
@@ -750,7 +749,7 @@ While $\wl$ is independent of the choice of the cross-section $\Sp$ of $\Hor$
 through $p$, $\w{k}$ does depend on $\Sp$.
 \end{remark}
 
-\begin{prop}[extension of $\w{q}$]
+\begin{tprop}{extension of $\w{q}$}{}
 The bilinear form $\w{q}$, which has been defined only on $T_p\Sp$ via (\ref{e:def:def_q_S}),
 can be extended to all vectors of $T_p\M$ for $p\in\Sp$ by setting
 \be \label{e:def:q_g_k_l}
@@ -773,7 +772,8 @@ to $\Sp$, which are uniquely defined by the direct sum (\ref{e:def:TM_direct_sum
     \w{u}^\parallel,  \w{v}^\parallel \in T_p\Sp,\quad
     \w{u}^\perp, \w{v}^\perp  \in T_p^\perp\Sp .
 \ee
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 Thanks to (\ref{e:def:k_el_minus_one}), we may write the
 orthogonal decompositions (\ref{e:def:decomp_u_v}) as
@@ -903,7 +903,7 @@ we get
     \w{q} = \w{g} + \uu{n}\otimes\uu{n} - \uu{s}\otimes\uu{s} .
 \ee
 
-\begin{prop}[orthogonal projector onto a cross-section]
+\begin{tprop}{orthogonal projector onto a cross-section}{}
 The metric dual\footnote{See Eq.~(\ref{e:bas:arrow_endo}) of
 Appendix~\ref{s:bas} for the arrow notation.} of the bilinear form
 $\w{q}$ defined by Eq.~(\ref{e:def:q_g_k_l}), i.e.
@@ -920,7 +920,8 @@ is nothing but the \defin{orthogonal projector}\index{orthogonal!projector} onto
 \be
     \forall \w{v}\in T_p\M, \quad \vw{q}(\w{v}) = \w{v}^\parallel .
 \ee
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 This follows readily from the decomposition
 $\w{v} = \w{v}^\parallel + v^0 \wl + v^1 \w{k}$ used above.
@@ -998,7 +999,7 @@ of $\Sp$ (cf. Sec.~\ref{s:bas:Levi-Civita_tensor} in Appendix~\ref{s:bas}).
 The latter is connected to the Levi-Civita tensor of $\w{g}$ by
 the following property.
 
-\begin{prop}[area $(n-2)$-form of a cross-section]
+\begin{tprop}{area $(n-2)$-form of a cross-section}{}
 The Levi-Civita tensor $\wepsS$ associated with the metric $\w{q}$ of $\Sp$
 is expressible in terms of the spacetime Levi-Civita tensor
 $\weps$ as
@@ -1012,7 +1013,7 @@ or, in index notation,
 \]
 where $(\w{n},\w{s})$ is the orthonormal basis of $T_p^\perp\Sp$ associated to the
 null basis $(\wl, \w{k})$ by Eq.~(\ref{e:def:ns_lk}).
-\end{prop}
+\end{tprop}
 
 \begin{proof}
 We note that $\weps(\w{n},\w{s},\ldots)$
@@ -1358,26 +1359,25 @@ $\delta S$ that (i) contain $p$ and (ii) are enclosed in a tube made of null geo
 area $\delta A$. Hence the expansion $\theta_{(\wl)}$ at $p$
 does not depend on the choice of $\delta S$.
 We conclude:
-\begin{prop}[independence of the expansion from the cross-section]
-\label{p:def:expansion_indep_cs}
+\begin{tprop}{independence of the expansion from the cross-section}{def:expansion_indep_cs}
 The expansion $\theta_{(\wl)}$ at a point $p$ of a null hypersurface $\Hor$
 does not depend on the choice of the cross-section through $p$.
 It depends  only on the null normal $\wl$ of $\Hor$.
 Accordingly, from now on, we shall call $\theta_{(\wl)}$
 the \defin{expansion of the null hypersurface $\Hor$ along $\wl$}\index{expansion!of a null hypersurface}.
-\end{prop}
+\end{tprop}
 
 The dependency of the expansion on $\wl$ is given by:
 
-\begin{prop}[rescaling of the expansion upon a change of null normal]
-\label{p:def:rescaling_expansion}
+\begin{tprop}{rescaling of the expansion upon a change of null normal}{def:rescaling_expansion}
 Two null normals $\wl$ and $\wl'$ to a null hypersurface $\Hor$ are necessarily collinear:
 $\wl' = \alpha \wl$, where $\alpha$ is a non-vanishing scalar field on $\Hor$.
 We have then the following scaling law:
 \be \label{e:def:rescale_lambda}
    \wl' = \alpha \wl \ \Longrightarrow \ \theta_{(\wl')} = \alpha \theta_{(\wl)} .
 \ee
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 This follows immediately
 from expression (\ref{e:def:theta_Lie_ln_q}) for $\theta_{(\wl)}$, given
@@ -1591,7 +1591,7 @@ case of the Schwarzschild horizon $\Hor$, $r=2m$ and it reduces to
 \ee
 \end{example}
 
-\begin{prop}[rescaling of the deformation rate and shear upon a change of null normal]
+\begin{tprop}{rescaling of the deformation rate and shear upon a change of null normal}{}
 Two null normals $\wl$ and $\wl'$ to a null hypersurface $\Hor$ are necessarily collinear:
 $\wl' = \alpha \wl$, where $\alpha$ is a non-vanishing scalar field on $\Hor$.
 The deformation rates $\w{\Theta}$ and $\w{\Theta}'$ and shear tensors
@@ -1601,7 +1601,8 @@ of $\Hor$ along respectively $\wl$ and $\wl'$ obey the following scaling law:
    \wl' = \alpha \wl \ \Longrightarrow \ \w{\Theta}' = \alpha \w{\Theta}
    \ \ \mbox{and}\  \ \w{\sigma}' = \alpha \w{\sigma} .
 \ee
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 Equation~(\ref{e:def:Theta_q_nabla_l}) yields
 ${\Theta'}_{\alpha\beta}  = q^\mu_{\ \, \alpha} q^\nu_{\ \, \beta} \nabla_\mu (\alpha \el_\nu) =
@@ -1706,7 +1707,7 @@ $\w{\Theta}$ in terms of $\theta_{(\wl)}$ and the shear tensor $\w{\sigma}$ [Eq.
 \eea
 Hence Eq.~(\ref{e:def:Raychaud_step2}) leads to:
 
-\begin{prop}[null Raychaudhuri equation]
+\begin{tprop}{null Raychaudhuri equation}{}
 Any normal vector field $\wl$ to a null hypersurface $\Hor$ of a $n$-dimensional spacetime
 $(\M,\w{g})$ obeys the
 \defin{null Raychaudhuri equation}\index{null!Raychaudhuri equation}\index{Raychaudhuri!null -- equation}:
@@ -1717,7 +1718,7 @@ $(\M,\w{g})$ obeys the
 \ee
 If $\wl$ is future-directed, this is an evolution equation for
 $\theta_{(\wl)}$ along the null generators of $\Hor$.
-\end{prop}
+\end{tprop}
 
 \begin{remark}
 Actually Eq.~(\ref{e:def:null_Raychaud_Ricci}) is a particular case of
@@ -1878,8 +1879,7 @@ If the null convergence condition holds, all the terms in the right-hand side
 of the reduced Raychaudhuri equation~(\ref{e:def:null_Raychaud_Ricci_affine})
 are non-positive and we may conclude:
 
-\begin{prop}[non-increase of the expansion]
-\label{p:def:non_inc_expans}
+\begin{tprop}{non-increase of the expansion}{def:non_inc_expans}
 If the null convergence condition (\ref{e:neh:null_energy_cond}) is fulfilled
 on a null hypersurface $\Hor$
 --- for general relativity, this is equivalent to demanding
@@ -1891,7 +1891,7 @@ of $\Hor$'s null generators cannot increase along $\wl$, i.e. it obeys
 \be
     \wnab_{\wl}\,  \theta_{(\wl)} \leq 0.
 \ee
-\end{prop}
+\end{tprop}
 
 This property justifies the name \emph{convergence condition}
 given to $\w{R}(\wl,\wl) \geq 0$: if

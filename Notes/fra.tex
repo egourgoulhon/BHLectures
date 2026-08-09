@@ -129,10 +129,9 @@ The vectors belonging to the chosen equivalence class are called
 As a characterization of future-directed causal vectors,
 we shall often use the following lemmas:
 
-\begin{lemma}[scalar product of a timelike vector with a causal vector]
-\label{p:fra:lem1}
+\begin{tlemma}{scalar product of a timelike vector with a causal vector}{fra:lem1}
 Let $(\M,\w{g})$ be a time-orientable spacetime and $\w{u}$ a future-directed
-timelike vector. For any null or timelike (nonzero) vector $\w{v}$, we have necessarily
+timelike vector. For any null or timelike (nonzero) vector $\w{v}$, one has necessarily
 $\w{g}(\w{u},\w{v}) \neq 0$ and
 \begin{subequations}
 \begin{align}
@@ -140,7 +139,8 @@ $\w{g}(\w{u},\w{v}) \neq 0$ and
 & \w{g}(\w{u},\w{v}) > 0 \iff \w{v} \ \mbox{is past-directed} . \label{e:fra:orient_time2}
 \end{align}
 \end{subequations}
-\end{lemma}
+\end{tlemma}
+
 \begin{proof}
 Without any loss of generality, we may assume that $\w{u}$ is a unit vector: $\w{g}(\w{u},\w{u}) = -1$.
 Let then $(\w{e}_i)_{1\leq i \leq n-1}$ be a family of $n-1$ unit spacelike vectors such
@@ -154,10 +154,9 @@ iff $v^0>0$. Since $\w{g}(\w{u},\w{v}) = - v^0$, this
 establishes (\ref{e:fra:orient_time1}) and (\ref{e:fra:orient_time2}).
 \end{proof}
 
-\begin{lemma}[scalar product of a null vector with a causal vector]
-\label{p:fra:lem2}
+\begin{tlemma}{scalar product of a null vector with a causal vector}{fra:lem2}
 Let $(\M,\w{g})$ be a time-orientable spacetime and $\w{u}$ a future-directed
-null vector. For any null or timelike vector $\w{v}$, we have
+null vector. For any null or timelike vector $\w{v}$, one has
 \begin{subequations}
 \begin{align}
 & \w{g}(\w{u},\w{v}) < 0 \iff \w{v} \ \mbox{is not collinear with $\w{u}$ and is future-directed} \label{e:fra:orient_null1} \\
@@ -165,7 +164,7 @@ null vector. For any null or timelike vector $\w{v}$, we have
 & \w{g}(\w{u},\w{v}) > 0 \iff \w{v} \ \mbox{is not collinear with $\w{u}$ and is past-directed} . \label{e:fra:orient_null3}
 \end{align}
 \end{subequations}
-\end{lemma}
+\end{tlemma}
 
 \begin{proof}
 Without any loss of generality,
@@ -201,17 +200,15 @@ and (\ref{e:fra:orient_null3}).
 Two useful properties are immediate consequences of the above lemmas.
 From Lem\-ma~\ref{p:fra:lem1}, we get
 
-\begin{prop}[no causal orthogonality to a timelike vector]
-\label{p:fra:corol1}
-A timelike vector cannot be orthogonal to a timelike vector or to a null vector.
-\end{prop}
+\begin{tprop}{no causal orthogonality to a timelike vector}{fra:corol1}
+A timelike vector is never orthogonal to a timelike vector or to a null vector.
+\end{tprop}
 
 From the part (\ref{e:fra:orient_null2}) of Lemma~\ref{p:fra:lem2}, we get
 
-\begin{prop}[orthogonality of two null vectors]
-\label{p:fra:corol2}
+\begin{tprop}{orthogonality of two null vectors}{fra:corol2}
 Two null vectors are orthogonal if, and only if, they are collinear.
-\end{prop}
+\end{tprop}
 
 
 \section{Worldlines} \label{s:fra:worldlines}
@@ -257,9 +254,9 @@ for which $\Li$ is a null curve, or equivalently, for which  $\w{p}$ is a null v
 \end{itemize}
 In both cases, the \defin{mass} of the particle is defined by\footnote{Unless specified, we use geometrized units, for which $G=1$ and $c=1$.}
 \be \label{e:fra:def_mass}
-   m = \sqrt{- \w{p}\cdot\w{p}} .
+   m := \sqrt{- \w{p}\cdot\w{p}} .
 \ee
-Of course, for a massless particle, we get $m=0$.
+Of course, for a massless particle, Eq.~\eqref{e:fra:def_mass} leads to $m=0$.
 
 \subsection{Geodesic motion} \label{s:fra:geod_motion}
 

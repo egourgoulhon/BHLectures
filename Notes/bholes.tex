@@ -33,6 +33,9 @@
 \usepackage{cases} % numbered cases equations
 \usepackage{microtype}
 
+\usepackage[theorems]{tcolorbox}  % framed theorems
+
+
 \usepackage{hyperref}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -218,6 +221,12 @@ roundcorner=5pt
 %\theoremstyle{remark}
 %\newtheorem{remark}{Remark}
 
+\newtcbtheorem[number within=chapter]{tprop}{Property}%
+{colback=red!5!white,colframe=red!50!black,fonttitle=\bfseries}{p}
+
+\newtcbtheorem[number within=chapter, use counter from=tprop]{tlemma}{Lemma}%
+{colback=red!5!white,colframe=red!50!black,fonttitle=\bfseries}{p}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -251,7 +260,7 @@ CNRS, Observatoire de Paris - PSL, Sorbonne Université\\
 \href{mailto:eric.gourgoulhon@obspm.fr}{\texttt{eric.gourgoulhon@obspm.fr}}\\[8ex]
 \url{https://relativite.obspm.fr/blackholes}\\[8ex]
 {\Huge --- DRAFT ---}\\[2ex]
-{version of 7 August 2026}\\[2ex]
+{version of 9 August 2026}\\[2ex]
 \emph{\Large Corrections and comments are welcome}
 \end{center}
 \end{titlepage}
