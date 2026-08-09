@@ -33,7 +33,8 @@
 \usepackage{cases} % numbered cases equations
 \usepackage{microtype}
 
-\usepackage[theorems]{tcolorbox}  % framed theorems
+%\usepackage[breakable,theorems]{tcolorbox}  % framed theorems
+\usepackage[most]{tcolorbox}  % framed theorems
 
 
 \usepackage{hyperref}
@@ -222,10 +223,10 @@ roundcorner=5pt
 %\newtheorem{remark}{Remark}
 
 \newtcbtheorem[number within=chapter]{tprop}{Property}%
-{colback=red!5!white,colframe=red!50!black,fonttitle=\bfseries}{p}
+{breakable, enhanced, colback=red!5!white,colframe=red!50!black,fonttitle=\bfseries}{p}
 
 \newtcbtheorem[number within=chapter, use counter from=tprop]{tlemma}{Lemma}%
-{colback=red!5!white,colframe=red!50!black,fonttitle=\bfseries}{p}
+{breakable, enhanced, colback=red!5!white,colframe=red!50!black,fonttitle=\bfseries}{p}
 
 
 
