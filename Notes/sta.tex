@@ -1154,8 +1154,7 @@ express the Komar mass as a \emph{flux integral}\index{flux!integral}\index{inte
 contracted with some ``area element'', which is \emph{normal} to $\Sp$.
 Let us introduce the latter first.
 
-\begin{prop}[area element normal bivector to a codimension-2 surface]
-\label{p:sta:area_elem_bivector}
+\begin{tprop}{area element normal bivector to a codimension-2 surface}{sta:area_elem_bivector}
 Given a spacelike $(n-2)$-dimensional surface $\Sp\subset \M$, the
 \defin{area element normal bivector to}\index{normal!area element}\index{normal!bivector}\index{bivector!area element --}\index{area!element bivector} $\Sp$
 is the infinitesimal antisymmetric type-(2,0) tensor field defined on $\Sp$ by
@@ -1186,7 +1185,7 @@ induced on $\Sp$ by the spacetime metric $\w{g}$.
 \end{itemize}
 The bivector $\D\w{S}$ is independent of the choice of the coordinates $(x^a)$ on $\Sp$ and of the
 orthonormal basis $(\w{n},\w{s})$ of $T^\perp_p\Sp$.
-\end{prop}
+\end{tprop}
 
 \begin{proof}
 The combination $\sqrt{q}\, \D^{n-2} x = \sqrt{q}\, \D x^1 \cdots \D x^{n-2}$ with
@@ -1211,8 +1210,7 @@ choice of the orthonormal basis $(\w{n},\w{s})$.
 
 The area element normal bivector $\D\w{S}$ appears in the following useful lemma.
 
-\begin{lemma}[flux integral of a 2-form]
-\label{p:sta:flux_integ_2form}
+\begin{tlemma}{flux integral of a 2-form}{sta:flux_integ_2form}
 For any 2-form $\w{A}$ defined in the vicinity of a spacelike $(n-2)$-dimensional
 surface $\Sp$, one has
 \be \label{e:sta:int_star_A}
@@ -1220,7 +1218,8 @@ surface $\Sp$, one has
 \ee
 where the $(n-2)$-form $\star\w{A}$ is the Hodge dual of $\w{A}$, as
 defined by Eq.~(\ref{e:sta:Hodge_dual}) with $p=2$.
-\end{lemma}
+\end{tlemma}
+
 \begin{proof}
 Using the definition (\ref{e:sta:Hodge_dual}) with $p=2$, we have
 \[
@@ -1360,8 +1359,7 @@ choice of the sphere $\Sp$.
 
 More generally, we have:
 
-\begin{prop}[Komar mass in the asymptotic expression of the metric]
-\label{p:sta:Komar_mass_asymp_metric}
+\begin{tprop}{Komar mass in the asymptotic expression of the metric}{sta:Komar_mass_asymp_metric}
 The coefficient $M$ that appears in expression (\ref{e:sta:asymptotic_metric})
 of the metric tensor of a stationary asymptotically flat $n$-dimensional spacetime
 in some asymptotically Minkowskian coordinates $(x^\alpha)$
@@ -1371,7 +1369,7 @@ of constant $(x^0,r)$.
 In particular, for a weakly relativistic system, the Komar mass over $\Sp$ is equal
 to the volume integral of the matter energy density $T_{00}$, as given by formula
 (\ref{e:sta:mass_weakly_relat}).
-\end{prop}
+\end{tprop}
 
 \begin{proof}
 Without any loss of generality, the coordinate system $(x^\alpha)$ leading
@@ -1423,8 +1421,7 @@ the independence of $M_{\Sp}$ from the choice of $\Sp$ in
 the vacuum case, thereby generalizing the result of Example~\ref{x:sta:Komar_mass_Schw}.
 To this aim, we shall make use of the following lemma:
 
-\begin{lemma}[flux integral of the divergence of a 2-form]
-\label{p:sta:flux_div_2_form}
+\begin{tlemma}{flux integral of the divergence of a 2-form}{sta:flux_div_2_form}
 In a $n$-dimensional asymptotically flat spacetime $(\M, \w{g})$,
 let $\Sigma$ be a compact spacelike hypersurface bounded by two closed $(n-2)$-surfaces:
 an ``internal'' one, $\Sp_{\rm int}$, and an ``external'' one,
@@ -1449,7 +1446,8 @@ Then, for any 2-form $\w{A}$, we have
 where $\D S^{\mu\nu}$
 is defined by Eq.~(\ref{e:sta:area_bivector}) with $\w{s}$ pointing to the
 asymptotic flat end of $(\M,\w{g})$ for both $\Sp_{\rm ext}$ and $\Sp_{\rm int}$.
-\end{lemma}
+\end{tlemma}
+
 \begin{proof}
 Let $(t,x^1, \ldots, x^{n-1})$ be a local coordinate system adapted to $\Sigma$,
 i.e. such that $\Sigma$ is the hypersurface $t=0$, and let $\w{V}$
@@ -1529,12 +1527,13 @@ $\w{\xi}$:  $\nabla^\nu A_{\mu\nu} = - \mathcal{J}\lld\w{\xi}\rld_\mu$, where
 \ee
 The Komar current is actually a conserved current, independently of the Killing nature of $\w{\xi}$:
 
-\begin{prop}[Conservation of the Komar current]
+\begin{tprop}{conservation of the Komar current}{}
 For any vector field $\w{\xi}$ defined on the spacetime $(\M,\w{g})$ (not necessarily a Killing vector field), the Komar current defined by Eq.~(\ref{e:sta:def_Komar_current}) is conserved:
 \be \label{e:sta:divJ_zero}
     \nabla_\mu \mathcal{J}\lld\w{\xi}\rld^\mu = 0 .
 \ee
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 We have, from the definition (\ref{e:sta:def_Komar_current}),
 $\mathcal{J}\lld\w{\xi}\rld^\alpha = - \nabla_\nu A^{\alpha\nu}$ with
@@ -1577,8 +1576,7 @@ Pluging this relation into formula (\ref{e:sta:Komar_mass_vol_integ_J})
 and using expression~(\ref{e:sta:normal_vol_element}) for $\D V^\mu$,
 we arrive at the following property.
 
-\begin{prop}[volume integral formula for the Komar mass]
-\label{p:sta:Komar_mass_vol_integ}
+\begin{tprop}{volume integral formula for the Komar mass}{sta:Komar_mass_vol_integ}
 %Let $(\M, \w{g})$ be an asymptotically flat stationary $n$-dimensional spacetime ($n\geq 4$),
 Let $(\M, \w{g})$ be an asymptotically flat stationary spacetime of dimension $n\geq 4$,
 with stationary Killing vector $\w{\xi}$.
@@ -1604,7 +1602,7 @@ the above formula may be rewritten as
     \sqrt{\gamma} \, \D^{n-1} x , }
 \ee
 where $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
-\end{prop}
+\end{tprop}
 
 \begin{remark}
 \label{r:sta:Komar_mass_single_boundary}
@@ -1679,8 +1677,7 @@ reduces to the classical expression of mass of a Newtonian body.
 Since in vacuum $\w{T} = 0$, an immediate
 corollary of Property~\ref{p:sta:Komar_mass_vol_integ} is:
 
-\begin{prop}[independence of the Komar mass from the integration surface]
-\label{p:sta:Komar_mass_invariant}
+\begin{tprop}{independence of the Komar mass from the integration surface}{sta:Komar_mass_invariant}
 Two $(n-2)$-surfaces $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ that are connected by
 a spacelike hypersurface $\Sigma$ in a \emph{vacuum} region of an
 asymptotically flat stationary spacetime ruled by the Einstein equation
@@ -1688,13 +1685,12 @@ with $\Lambda=0$ share the same Komar mass:
 \be
     M_{\Sp_{\rm ext}} = M_{\Sp_{\rm int}} .
 \ee
-\end{prop}
+\end{tprop}
 
 The concept of ``total mass'' of a stationary and asymptotically flat spacetime is well captured by
 the Komar mass at infinity:
 
-\begin{prop}[Komar mass at infinity]
-\label{p:sta:Komar_mass_inf}
+\begin{tprop}{Komar mass at infinity}{sta:Komar_mass_inf}
 Let $(\M,\w{g})$ be a stationary and asymptotically flat spacetime of dimension $n\geq 4$.
 Let $(x^\alpha)$ be an asymptotically Minkowskian coordinate system (cf. Sec.~\ref{s:sta:asymptotic_metric})
 such that $\wpar_0 = \w{\xi}$ (the stationary Killing vector). Let $\Sp_r$ be the
@@ -1708,7 +1704,8 @@ or \defin{total mass}\index{total!mass}\index{mass!total --} of the spacetime
 $(\M,\w{g})$. Moreover, if $\w{g}$ obeys the Einstein equation with $\Lambda=0$
 and if the energy-momentum tensor $\w{T}$ vanishes for $r$ larger than some threshold $r_0$,
 one has $M_\infty = M_{\Sp_r}$ for any $r\geq r_0$.
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 Since for $r\geq r_0$, $\Sp_r$ is located in a vacuum region of spacetime,
 the value of  $M_{\Sp_r}$ is independent of $r$ by Property~\ref{p:sta:Komar_mass_invariant},
@@ -1798,7 +1795,7 @@ is the matter energy density measured by the observer $\Obs$ of 4-velocity $\w{n
 $\w{p}$ is the matter momentum
 density measured by $\Obs$ and $\w{S}$ is the matter stress tensor measured by $\Obs$.
 
-\begin{prop}[$\bm{\mathcal{N}}$+1 expression of the Komar mass]
+\begin{tprop}{$\bm{\mathcal{N}}$+1 expression of the Komar mass}{}
 Under the same hypotheses as Property~\ref{p:sta:Komar_mass_vol_integ},
 one can rewrite Eq.~(\ref{e:sta:Komar_mass_vol_integ}) as
 \be \label{e:sta:Komar_mass_3p1}
@@ -1810,7 +1807,8 @@ one can rewrite Eq.~(\ref{e:sta:Komar_mass_vol_integ}) as
 \ee
 where $S := g^{\mu\nu} S_{\mu\nu} = \gamma^{ij} S_{ij}$
 is the trace of the stress tensor $\w{S}$.
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 From Eq.~(\ref{e:sta:T_3p1}), the trace of the energy-momentum tensor
 is $T := g^{\mu\nu} T_{\mu\nu} = E n_\mu n^\mu + n_\mu p^\mu + p_\mu n^\mu + S = - E + S$,
@@ -1864,12 +1862,11 @@ is then defined as the Minkowskian norm of the ADM energy-momentum.
 For a vanishing ADM momentum, the ADM mass coincides with the ADM energy.
 One may then ask the relation with the Komar mass if the spacetime is stationary.
 The answer is very simple:
-\begin{prop}[equality of Komar and ADM masses \textnormal{(Beig 1978)}]
-\label{p:sta:Komar_ADM_mass}
+\begin{tprop}{equality of Komar and ADM masses \textnormal{(Beig 1978)}}{sta:Komar_ADM_mass}
 If $(\M,\w{g})$ is a stationary and asymptotically flat $n$-dimensional spacetime,
 its Komar mass at infinity equals the ADM mass of any spacelike hypersurface
 $\Sigma$ that is asymptotically orthogonal to the stationary Killing vector $\w{\xi}$.
-\end{prop}
+\end{tprop}
 For $n=4$, the proof can be found in R.~Beig's\index[pers]{Beig, R.} article \cite{Beig78}
 (see also Ref.~\cite{AshteM79} for a different proof), while the proof
 for $n>4$ has been obtained by H.~Barzegar, P.T.~Chruściel and M.~Hörzinger \cite{BarzgCH17}.
@@ -1949,7 +1946,7 @@ and
 As for the Komar mass (cf. Property~\ref{p:sta:Komar_mass_asymp_metric}), one can read the
 Komar angular momentum in the asymptotic expansion of the metric tensor in appropriate coordinates:
 
-\begin{prop}[Komar angular momentum in the asymptotic expression of the metric]
+\begin{tprop}{Komar angular momentum in the asymptotic expression of the metric}{}
 Let $(\M,\w{g})$ be an asymptotically flat spacetime of dimension $n\geq 4$ that is axisymmetric
 and stationary, with axisymmetric Killing vector $\w{\eta}$.
 Let $(x^\alpha)$ be an asymptotically Minkowskian coordinate system
@@ -1965,7 +1962,7 @@ the Komar angular momentum $J_{\Sp}$ over the sphere $\Sp$
 of constant $(x^0,r)$.
 In particular, for a weakly relativistic system, $J_{\Sp} = J_{12}$,
 where $J_{12}$ is given by the volume integral (\ref{e:sta:J_weakly_relat}).
-\end{prop}
+\end{tprop}
 
 \begin{proof}
 Let us use formula (\ref{e:sta:J_Komar_partial_der}) to evaluate
@@ -2082,7 +2079,7 @@ The volume integral formula (\ref{e:sta:Komar_mass_vol_integ_R}) for the
 Komar mass relies only on $\w{\xi}$ being a Killing vector.
 We may therefore transpose it to the Komar angular momentum:
 
-\begin{prop}[volume integral formula for the Komar angular momentum]
+\begin{tprop}{volume integral formula for the Komar angular momentum}{}
 Let $(\M, \w{g})$ be an axisymmetric spacetime of dimension $n\geq 3$,
 with axisymmetric Killing vector $\w{\eta}$.
 Let $\Sigma$ be a compact spacelike hypersurface bounded by two closed $(n-2)$-surfaces:
@@ -2111,7 +2108,7 @@ the above formula may be rewritten as
     \sqrt{\gamma} \, \D^{n-1} x  , }
 \ee
 where $T:= \mathrm{tr}_{\w{g}} \w{T} = g^{\mu\nu} T_{\mu\nu}$.
-\end{prop}
+\end{tprop}
 
 \begin{remark}
 Since the axisymmetry generator $\w{\eta}$ is spacelike, the spacelike hypersurface
@@ -2131,8 +2128,7 @@ so that formula (\ref{e:sta:Komar_angul_vol_integ}) simplifies to
 As for the Komar mass (Property~\ref{p:sta:Komar_mass_invariant}), it follows
 immediately from Eq.~(\ref{e:sta:Komar_angul_vol_integ}) that
 
-\begin{prop}[independence of the Komar angular momentum from the integration surface]
-\label{p:sta:invariance_Komar_angu}
+\begin{tprop}{independence of the Komar angular momentum from the integration surface}{sta:invariance_Komar_angu}
 Two $(n-2)$-surfaces $\Sp_{\rm ext}$ and $\Sp_{\rm int}$ that are connected by
 a spacelike hypersurface $\Sigma$ in a \emph{vacuum} region of an
 axisymmetric spacetime ruled by the Einstein equation share the same Komar
@@ -2140,13 +2136,12 @@ angular momentum:
 \be
     J_{\Sp_{\rm ext}} = J_{\Sp_{\rm int}} .
 \ee
-\end{prop}
+\end{tprop}
 
 
 As for the total mass (cf. Property~\ref{p:sta:Komar_mass_inf}), the concept of ``total angular momentum'' of an axisymmetric and asymptotically flat spacetime is well captured by the Komar angular momentum at infinity:
 
-\begin{prop}[Komar angular momentum at infinity]
-\label{p:sta:Komar_ang_mom_infty}
+\begin{tprop}{Komar angular momentum at infinity}{sta:Komar_ang_mom_infty}
 Let $(\M,\w{g})$ be an axisymmetric and asymptotically flat spacetime of dimension $n\geq 3$.
 Let $(x^\alpha)$ be an asymptotically Minkowskian coordinate system (cf. Sec.~\ref{s:sta:asymptotic_metric})
 such that the axisymmetric Killing vector $\w{\eta}$ is tangent to the hypersurfaces $x^0 = \mathrm{const}$.
@@ -2159,7 +2154,7 @@ the \defin{Komar angular momentum at infinity}\index{Komar!angular momentum!at i
 or \defin{total angular momentum}\index{total!angular momentum}\index{angular!momentum!total --} of the spacetime $(\M,\w{g})$. Moreover, if $\w{g}$ obeys the Einstein equation with $\Lambda=0$
 and if the energy-momentum tensor $\w{T}$ vanishes for $r$ larger than some threshold $r_0$,
 one has $J_\infty = J_{\Sp_r}$ for any $r\geq r_0$.
-\end{prop}
+\end{tprop}
 
 
 
@@ -2201,12 +2196,11 @@ field $\w{\xi}$ is null on $\Hor$, it is necessarily tangent to the null geodesi
 of $\Hor$ and therefore collinear to the null normals $\wl$ of $\Hor$. From the definition
 of a Killing horizon (cf. Sec.~\ref{s:neh:def_Killing_hor}), we get immediately:
 
-\begin{prop}[event horizon as a Killing horizon for $\w{\xi}$ null on it]
-\label{p:sta:H_Killing_hor_xi_null}
+\begin{tprop}{event horizon as a Killing horizon for $\w{\xi}$ null on it}{sta:H_Killing_hor_xi_null}
 In a stationary spacetime $(\M,\w{g})$ containing a black hole,
 if the stationary Killing vector $\w{\xi}$
 is null on the whole of a connected component $\Hor$ of the event horizon, then $\Hor$ is a Killing horizon with respect to $\w{\xi}$.
-\end{prop}
+\end{tprop}
 
 It follows that, on $\Hor$, the Killing vector field $\w{\xi}$
 is hypersurface-orthogonal, being normal to $\Hor$.
@@ -2216,8 +2210,7 @@ that the electrovacuum Einstein equation is fulfilled), one can go further
 and prove that $\w{\xi}$ must actually be hypersurface-orthogonal everywhere in $\M$,
 i.e. that $(\M,\w{g})$ is \emph{static}, according to the definition given in Sec.~\ref{s:sta:def_station}:
 
-\begin{prop}[staticity theorem\index{staticity theorem} \textnormal{(Sudarsky\index[pers]{Sudarsky, D.} \& Wald\index[pers]{Wald, R.M.}  1993 \cite{SudarW93})}]
-\label{p:sta:staticity_thm}
+\begin{tprop}{staticity theorem\index{staticity theorem} \textnormal{(Sudarsky\index[pers]{Sudarsky, D.} \& Wald\index[pers]{Wald, R.M.}  1993 \cite{SudarW93})}}{sta:staticity_thm}
 Let $(\M,\w{g})$ be an asymptotically flat stationary spacetime of dimension $n\geq 4$
 that contains a black hole of event horizon $\Hor$ so that
 the stationary Killing vector $\w{\xi}$ is null on all $\Hor$. By Property~\ref{p:sta:H_Killing_hor_xi_null}, $\Hor$ is a Killing horizon. If $\Hor$ is
@@ -2225,7 +2218,7 @@ non-degenerate (i.e. has a non-vanishing surface gravity $\kappa$, cf. Sec.~\ref
 and $\w{g}$ obeys the vacuum or electrovacuum Einstein equation (cf. Sec.~\ref{e:fra:electrovacuum}),
 then the spacetime
 is static\index{static!spacetime} and the domain of outer communications\index{domain of outer communications} (cf. Sec.~\ref{s:glo:def_BH}) is strictly static.
-\end{prop}
+\end{tprop}
 
 \begin{proof}
 For simplicity, we give only the proof for the case of the vacuum Einstein equation
@@ -2414,8 +2407,7 @@ Hollands, Ishibashi \& Wald (2007) \cite{HollaIW07}
 and Moncrief \& Isenberg (2008) \cite{MoncrI08} (see also
 Theorem~8.1 p.~470 of Choquet-Bruhat's textbook \cite{Choqu09}).
 
-\begin{prop}[strong rigidity theorem]
-\label{p:sta:strong_rigidity_thm}
+\begin{tprop}{strong rigidity theorem}{sta:strong_rigidity_thm}
 Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 4$ containing a black
 hole. Let $\Hor$ be a connected component of the black hole event horizon.
 Let us assume that the stationary Killing vector $\w{\xi}$
@@ -2433,7 +2425,7 @@ or the electrovacuum Einstein equation (\ref{e:fra:electrovac_Einstein}),
 then the spacetime $(\M,\w{g})$ admits a second Killing vector, $\w{\chi}$
 say, such that $\w{\xi}$ and $\w{\chi}$ commute: $[\w{\xi}, \w{\chi}] = 0$ and
 $\Hor$ is a Killing horizon with respect to $\w{\chi}$.
-\end{prop}
+\end{tprop}
 
 \begin{figure}
 \centerline{\includegraphics[height=0.4\textheight]{sta_axisym_sections.pdf}}
@@ -2744,8 +2736,7 @@ Killing vector $\w{\chi}$ is expressible as a linear combination of
 the stationary Killing vector $\w{\xi}$ and some Killing vectors
 generating axisymmetries:
 
-\begin{prop}[axisymmetry\index{axisymmetric spacetime} of stationary black holes]
-\label{p:sta:axisymmetry_BH}
+\begin{tprop}{axisymmetry\index{axisymmetric spacetime} of stationary black holes}{sta:axisymmetry_BH}
 Under the same hypotheses as in Property~\ref{p:sta:strong_rigidity_thm},
 there exist $L$ Killing vectors $\w{\eta}_{(1)},\ldots,\w{\eta}_{(L)}$
 with $1 \leq L \leq [(n-1)/2]$, which have closed orbits of period $2\pi$,
@@ -2770,7 +2761,7 @@ Eq.~(\ref{e:sta:chi_xi_Omega_i_eta_i}) reduces to
 The constant $\Omega_{\Hor}$ is then called the
 \defin{black hole rotation velocity}\index{black!hole!rotation velocity}\index{rotation!velocity} if $\Hor$ coincides with
 the whole event horizon (i.e. if the event horizon is connected).
-\end{prop}
+\end{tprop}
 
 Since it has closed orbits, the isometry group generated by each Killing vector
 $\w{\eta}_{(i)}$ is $\mathrm{SO}(2)$. Each isometry is thus an
@@ -2876,8 +2867,7 @@ we shall specialize it to electrovacuum black holes (Sec.~\ref{s:sta:Smarr_elect
 
 \subsection{General form} \label{s:sta:Smarr_general}
 
-\begin{prop}[generalized Smarr formula]
-\label{p:sta:Smarr_gen}
+\begin{tprop}{generalized Smarr formula}{sta:Smarr_gen}
 Let $(\M,\w{g})$ be a stationary spacetime of dimension $n \geq 4$ (stationary
 Killing vector $\w{\xi}$) that contains a black
 hole, the event horizon of which has $K \geq 1$ connected components
@@ -2944,7 +2934,7 @@ with $\Lambda=0$, this formula can be rewritten as
     \sqrt{\gamma} \, \D^{n-1} x , \label{e:sta:Smarr_M_infty}
 \eea
 where $\w{T}$ is the matter energy-momentum tensor.
-\end{prop}
+\end{tprop}
 
 \begin{proof}
 Let us evaluate the Komar mass $M_{\Hor_k}$ via
@@ -3026,8 +3016,7 @@ a 4-dimensional spacetime and to a connected event horizon,
 by setting $n=4$, $K=1$ and $L_{1}=1$ (cf. Property~\ref{p:sta:axisymmetry_BH})
 in Eqs.~(\ref{e:sta:Smarr_H_k}), (\ref{e:sta:Smarr_M_infty_R}) and (\ref{e:sta:Smarr_M_infty}):
 
-\begin{prop}[4-dimensional generalized Smarr formula]
-\label{p:sta:Smarr_n4}
+\begin{tprop}{4-dimensional generalized Smarr formula}{sta:Smarr_n4}
 Let $(\M, \w{g})$ be a 4-dimensional stationary spacetime
 (stationary Killing vector $\w{\xi}$) containing
 a black hole with a connected event horizon $\Hor$.
@@ -3075,7 +3064,7 @@ with $\Lambda=0$, this formula can be rewritten as
     \sqrt{\gamma} \, \D^3 x ,
 \ee
 where $\w{T}$ is the matter energy-momentum tensor.
-\end{prop}
+\end{tprop}
 
 
 \begin{example}[Schwarzschild black hole]
@@ -3107,8 +3096,7 @@ To perform the computation of the integral involving $\w{T}$,
 we need first to characterize a stationary electromagnetic field on
 a Killing horizon:
 
-\begin{prop}[electromagnetic field on a Killing horizon]
-\label{p:sta:electromag_Killing_hor}
+\begin{tprop}{electromagnetic field on a Killing horizon}{sta:electromag_Killing_hor}
 Let $(\M,\w{g})$ be a $n$-dimensional asymptotically flat spacetime endowed with some Killing vector field $\w{\chi}$
 and containing a Killing horizon $\Hor$ with respect to $\w{\chi}$.
 Let us assume
@@ -3152,7 +3140,8 @@ Finally, the Killing electric potential $\Phi$ is constant on $\Hor$:
 \ee
 The constant $\Phi_{\Hor}$ is called the
 \defin{electric potential of the Killing horizon}\index{electric!potential of a Killing horizon}\index{Killing!horizon!electric potential of a --} $\Hor$.
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 Let $\w{A}$ be some electromagnetic potential associated to $\w{F}$ ($\w{F} = \dd \w{A}$)
 such that $\Lie{\chi} \w{A} = 0$.
@@ -3205,8 +3194,7 @@ Damour's work~\cite{Damou78} for interpreting $\sigma$ as the component along $\
 of an effective surface current 4-vector on $\Hor$.}
 surface charge density follows from:
 
-\begin{prop}[electric charge of a Killing horizon]
-\label{p:sta:electric_charge}
+\begin{tprop}{electric charge of a Killing horizon}{sta:electric_charge}
 Under the same assumptions as in Property~\ref{p:sta:electromag_Killing_hor},
 the electric charge within any cross-section $\Sp$ of the Killing horizon $\Hor$ is
 \be \label{e:sta:Q_sigma}
@@ -3215,7 +3203,7 @@ the electric charge within any cross-section $\Sp$ of the Killing horizon $\Hor$
 \ee
 The quantity $Q_{\Hor}$ is independent of the choice of the cross-section $\Sp$ and
 is called the \defin{electric charge of the Killing horizon}\index{electric!charge!of a Killing horizon} $\Hor$.
-\end{prop}
+\end{tprop}
 
 \begin{proof}
 The first equality in Eq.~(\ref{e:sta:Q_sigma}) is the Gauss-law\index{Gauss's law} expression
@@ -3250,7 +3238,7 @@ of the above equation identically vanishes. Hence $Q'_{\Hor} = Q_{\Hor}$.
 
 We are now in position to state:
 
-\begin{prop}[generalized Smarr formula for charged black holes]
+\begin{tprop}{generalized Smarr formula for charged black holes}{}
 Let $(\M,\w{g})$ be a stationary spacetime of dimension $n\geq 4$, with stationary
 Killing vector $\w{\xi}$, endowed with a source-free electromagnetic field
 $\w{F}$ such that $(\w{g},\w{F})$ obeys the electrovacuum Einstein equation
@@ -3284,7 +3272,7 @@ surface gravity of $\Hor_k$, $A_k$ is the area of $\Hor_k$,
 $\Phi_{\Hor_k}$ is the electric potential of $\Hor_k$, as defined by
 Property~\ref{p:sta:electromag_Killing_hor}, and $Q_{\Hor_k}$ is the
 electric charge of $\Hor_k$, as defined by Property~\ref{p:sta:electric_charge}.
-\end{prop}
+\end{tprop}
 
 \begin{proof}
 The electromagnetic field energy-momentum tensor (\ref{e:fra:T_em}) obeys the
@@ -3447,7 +3435,7 @@ In view of Eq.~(\ref{e:sta:Smarr_electrovac_prov}), the above value for $I$
 proves the Smarr formula (\ref{e:sta:Smarr_electrovac}).
 \end{proof}
 
-\begin{prop}[4-dimensional Smarr formula for a connected charged black hole]
+\begin{tprop}{4-dimensional Smarr formula for a connected charged black hole}{}
 For $n=4$ (which implies $L\leq 1$) and for a connected black hole event horizon
 $\Hor$ ($K=1$) of surface gravity $\kappa$, area $A$, angular velocity
 $\Omega_{\Hor}$, electric charge $Q$ and electric potential $\Phi_{\Hor}$,
@@ -3457,7 +3445,7 @@ the electrovacuum Smarr formula
     \encadre{  M_\infty = \frac{\kappa}{4\pi}  A + 2 \Omega_{\Hor} J_\infty
                     + \Phi_{\Hor} Q }.
 \ee
-\end{prop}
+\end{tprop}
 
 \begin{hist}
 Formula~(\ref{e:sta:Smarr_electrovac_n4}) has been first derived in 1972 (published: 1973)
@@ -3524,9 +3512,8 @@ and electrovacuum configurations \cite{Israe68}. Both were derived in dimension 
 and for non-degenerate horizons. They have been generalized to higher dimensions
 and to degenerate horizons; we present these generalized versions here.
 
-\begin{prop}[generalized Israel uniqueness theorem (vacuum)
-\index{Israel uniqueness theorem!vacuum}]
-\label{p:sta:Israel_uniqueness_thm}
+\begin{tprop}{generalized Israel uniqueness theorem (vacuum)
+\index{Israel uniqueness theorem!vacuum}}{sta:Israel_uniqueness_thm}
 Let $(\M,\w{g})$ be a static and asymptotically flat spacetime of dimension $n\geq 4$
 containing a black hole of event horizon $\Hor$. If
 \begin{itemize}
@@ -3559,7 +3546,7 @@ Eqs.~(\ref{e:sta:area_p_sphere})-(\ref{e:sta:area_p_sphere_examples}),
 so that $\mu = 2 M$ for $n=4$, $\mu = 8M/(3\pi)$ for $n=5$ and
 $\mu = 3M/(2\pi)$ for $n=6$. In particular, the event horizon $\Hor$ is
 connected and is a non-degenerate Killing horizon.
-\end{prop}
+\end{tprop}
 The proof can be found in Ref.~\cite{GibboIS02b}, which relies on the assumption that
 the connected components of $\Hor$ are non-degenerate Killing horizons.
 The fact that this assumption is not necessary for $n=4$ has been proven in Ref.~\cite{ChrusRT06}.
@@ -3616,9 +3603,8 @@ Frank Tangherlini\index[pers]{Tangherlini, F.R.} in 1963 \cite{Tangh63}.
 For the static electrovacuum uniqueness theorem, we shall distinguish
 the dimension $n=4$ from $n \geq 5$. Starting by the former, we have:
 
-\begin{prop}[generalized Israel uniqueness theorem ($\bm{n = 4}$ electrovacuum)
-\index{Israel uniqueness theorem!electrovacuum}]
-\label{p:sta:Israel_uniq_electrovac_n4}
+\begin{tprop}{generalized Israel uniqueness theorem ($\bm{n = 4}$ electrovacuum)
+\index{Israel uniqueness theorem!electrovacuum}}{sta:Israel_uniq_electrovac_n4}
 Let $(\M,\w{g})$ be a 4-dimensional static and asymptotically flat spacetime
 endowed with an electromagnetic field $\w{F}$
 such that
@@ -3679,7 +3665,7 @@ charge $Q_k$ of $\Hor_k$ is proportional to $\mu_k$:
 where the $\pm$ sign is the same as in
 expression (\ref{e:sta:MajPap_n4_g_F}) for $\w{F}$; in particular it must be the same
 for all the components $\Hor_k$, i.e. the charges $Q_k$ are either all positive or all negative.
-\end{prop}
+\end{tprop}
 For a proof, see Secs.~9.3 and 9.4 of Heusler's textbook \cite{Heusl96}
 for the case where all connected components of the event horizon are assumed to be
 non-degenerate and Ref.~\cite{ChrusT07} for the complementary case.
@@ -3740,9 +3726,8 @@ with $M = \mu_1$,  $Q=\pm\sqrt{4\pi/\mu_0} \, \mu_1$ and $P=0$.
 
 In higher dimensions, the static electrovacuum uniqueness theorem is
 
-\begin{prop}[generalized Israel uniqueness theorem ($\bm{n\geq 5}$ electrovacuum)
-\index{Israel uniqueness theorem!electrovacuum}]
-\label{p:sta:Israel_uniq_electrovac_n5}
+\begin{tprop}{generalized Israel uniqueness theorem ($\bm{n\geq 5}$ electrovacuum)
+\index{Israel uniqueness theorem!electrovacuum}}{sta:Israel_uniq_electrovac_n5}
 Let $(\M,\w{g})$ be a static and asymptotically flat spacetime of dimension $n\geq 5$.
 Let us assume that $(\M,\w{g})$ is
 endowed with an electromagnetic field $\w{F}$ and
@@ -3785,7 +3770,7 @@ where $\Omega_{n-2}$ is the area of $\SS^{n-2}$
 The constants $\mu$ and $q$ must fulfill the constraint $\mu > 2 q$ and the lower bound
 of $r$ on $\langle\langle \M\rangle\rangle$ is
 $r_\Hor = \left( \mu/2 + \sqrt{\mu^2/4 - q^2}\right) ^{1/(n-3)}$.
-\end{prop}
+\end{tprop}
 For a proof, see Ref.~\cite{GibboIS02a} under the additional assumption
 that the magnetic field vanishes (i.e. that $\w{\xi}\cdot\star\w{F}=0$) and Ref.~\cite{KunduL18} for relaxing this assumption.
 
@@ -3872,10 +3857,9 @@ equation has to be axisymmetric.
 A crucial step towards the no-hair theorem is then the following uniqueness theorem
 for axisymmetric stationary black holes:
 
-\begin{prop}[Carter-Robinson theorem
-\textnormal{(Carter\index[pers]{Carter, B.} 1971 \cite{Carte71}, Robinson\index[pers]{Robinson, D.C.} 1975 \cite{Robin75})}]
+\begin{tprop}{Carter-Robinson theorem
+\textnormal{(Carter\index[pers]{Carter, B.} 1971 \cite{Carte71}, Robinson\index[pers]{Robinson, D.C.} 1975 \cite{Robin75})}}{sta:Carter_Robinson_thm}
 \index{Carter-Robinson theorem}
-\label{p:sta:Carter_Robinson_thm}
 Let $(\M,\w{g})$ be a 4-dimensional asymptotically flat spacetime
 containing a black hole of event horizon $\Hor$. If
 \begin{itemize}
@@ -3887,7 +3871,7 @@ containing a black hole of event horizon $\Hor$. If
 then $\langle\langle \M\rangle\rangle$ is isometric
 to the domain of outer communications of the
 \emph{Kerr spacetime}\index{Kerr!spacetime}\footnote{We shall not define the Kerr spacetime here; this will be done in Chap.~\ref{s:ker}.}.
-\end{prop}
+\end{tprop}
 
 \begin{remark}
 In their original works, Carter and Robinson assumed that $\Hor$ is a
@@ -3914,10 +3898,9 @@ cannot contain any closed causal curve.
 
 The electrovacuum version of the Carter-Robinson theorem is
 
-\begin{prop}[Bunting-Mazur theorem
-\textnormal{(Bunting\index[pers]{Bunting, G.L.} 1983 \cite{Bunti83}, Mazur\index[pers]{Mazur, P.O.} 1982 \cite{Mazur82})}]
+\begin{tprop}{Bunting-Mazur theorem
+\textnormal{(Bunting\index[pers]{Bunting, G.L.} 1983 \cite{Bunti83}, Mazur\index[pers]{Mazur, P.O.} 1982 \cite{Mazur82})}}{sta:Bunting_Mazur_thm}
 \index{Bunting-Mazur theorem}
-\label{p:sta:Bunting_Mazur_thm}
 Let $(\M,\w{g})$ be a 4-dimensional asymptotically flat spacetime
 containing a black hole of event horizon $\Hor$. If
 \begin{itemize}
@@ -3935,7 +3918,7 @@ and $J$, the latter being the total angular momentum.
 One may say as well that the Kerr-Newman solution extends the Kerr solution,
 which depends only on $(M,J)$, to the electromagnetic case.
 See e.g. Eq.~(5.54) of Ref.~\cite{Carte73a} for the explicit form of the Kerr-Newman metric.}.
-\end{prop}
+\end{tprop}
 The proof of Property~\ref{p:sta:Bunting_Mazur_thm}
 with the additional assumption that the horizon is non-degenerate
 can be found in Chap.~10 of Heusler's textbook \cite{Heusl96}
@@ -3992,8 +3975,7 @@ found his famous solution \cite{Kerr63}. A historical note about the discovery o
 \subsection{The 4-dimensional no-hair theorem} \label{s:sta:the_no-hair_thm}
 
 We are now is position to state the famous theorem:
-\begin{prop}[no-hair theorem\index{no-hair theorem}]
-\label{p:sta:no-hair_thm}
+\begin{tprop}{no-hair theorem\index{no-hair theorem}}{sta:no-hair_thm}
 Let $(\M,\w{g})$ be a spacetime that
 \begin{itemize}
 \item is 4-dimensional,
@@ -4021,7 +4003,8 @@ monopole charge $P$, with the following subcases:
 \end{itemize}
 In the last two cases, the electromagnetic field vanishes and $\w{g}$
 fulfills the vacuum Einstein equation (\ref{e:fra:vac_Einstein}).
-\end{prop}
+\end{tprop}
+
 \begin{proof}
 Let $\Hor$ be the black hole event horizon.
 In case (i) ($\Hor$ rotating), we may invoke the strong rigidity
