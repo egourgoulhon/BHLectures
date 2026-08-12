@@ -29,13 +29,11 @@
 \usepackage{mathrsfs} % -> \mathscr
 \usepackage{ifthen}
 \usepackage{tikz}
-\usepackage[framemethod=TikZ]{mdframed} % -> grey boxes
 \usepackage{cases} % numbered cases equations
 \usepackage{microtype}
 
 \usepackage[theorems,breakable,skins]{tcolorbox}  % framed theorems
                                                   % skins --> option "enhanced" in \newtcbtheorem
-
 
 \usepackage{hyperref}
 
@@ -181,46 +179,13 @@
 {\par\medskip\noindent\small\textbf{Historical note \ifthenelse{\equal{#1}{}}{: }{ (#1):}}}%
 {\par\medskip}
 
-\newmdenv[backgroundcolor=gray!10!white,roundcorner=5pt,hidealllines=true]{greybox}
-
-
 %\theoremstyle{definition} % upright text in theorems
-
-\mdfdefinestyle{propstyle}{%
-linecolor=black,linewidth=2pt,%
-hidealllines=true,
-frametitlerule=true,%
-frametitlebackgroundcolor=gray!20,
-backgroundcolor=gray!10!white,
-roundcorner=5pt,
-innertopmargin=\topskip,
-}
-
-\mdtheorem[style=propstyle]{prop}{Property}[chapter]
-\mdtheorem[style=propstyle]{lemma}[prop]{Lemma}
-
-\mdfdefinestyle{notationstyle}{%
-hidealllines=true,
-backgroundcolor=gray!10!white,
-roundcorner=5pt
-}
 
 \newenvironment{notation}%
 {\par\smallskip\noindent\textbf{Notation:}}%
 {\par\smallskip}
 
-\surroundwithmdframed[style=notationstyle]{notation}
-
-%\newmdenv[style=notationstyle]{notation}%
-%{\par\medskip\noindent\textbf{Notation:}}
-
-
-%\newenvironment{remark}[1][]%
-%{\begin{description} \item[\emph{Remark #1:}]\it}%
-%{\end{description}}
-
-%\theoremstyle{remark}
-%\newtheorem{remark}{Remark}
+\tcolorboxenvironment{notation}{colback=olive!5!white}
 
 \newtcbtheorem[number within=chapter]{tprop}{Property}%
 {breakable, enhanced, colback=red!5!white,colframe=red!50!black,fonttitle=\bfseries}{p}
@@ -230,7 +195,6 @@ roundcorner=5pt
 
 \newtcbtheorem[number within=chapter]{tdef}{Definition}%
 {breakable, enhanced, colback=olive!5!white,colframe=olive!80!black,fonttitle=\bfseries}{d}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
