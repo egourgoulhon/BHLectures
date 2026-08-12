@@ -46,7 +46,7 @@ Moreover, we exclude the case where $\Li$ is reduced to a single point
 of $\M$, i.e. where $P$ is a constant function.
 We are now in position to define a geodesic as a ``straight'' curve:
 
-\begin{greybox}
+\begin{tdef}{geodesic}{}
 A smooth curve $\Li$ of a pseudo-Riemannian manifold $(\M,\w{g})$ is
 called a \defin{geodesic} iff it admits a parametrization $P$ whose associated
 tangent vector field $\w{v}$ is transported parallelly to itself along
@@ -66,7 +66,7 @@ geodesic $\Li$. Note that the relation between $\w{v}$ and $\lambda$ is
 where $\D\w{x}$ is the infinitesimal displacement along $\Li$ corresponding
 to the change $\D\lambda$ in the parameter $\lambda$
 (cf. Eq.~(\ref{e:bas:dell_v_dlamb})).
-\end{greybox}
+\end{tdef}
 
 The qualifier \emph{affine} in the above definition stems from:
 \begin{tprop}{affine parametrizations of a geodesic}{}
@@ -217,12 +217,12 @@ This differential equation has the following solution:
 where $a$, $b$, $\lambda_0$ and $\lambda_1$ are constants, with $a\not = 0$ and $\lambda_0,\lambda_1\in I$.
 \end{proof}
 Property~\ref{p:geo:v_pregeodesic} motivates the following definitions:
-\begin{greybox}
+\begin{tdef}{geodesic and pregeodesic vector fields}{}
 A vector field $\w{v}$ obeying (\ref{e:geo:v_pregeodesic}) is called
 a \defin{pregeodesic vector field}\index{pregeodesic!vector field}.
 The scalar field $\kappa$ is then called the \defin{non-affinity coefficient}\index{non-affinity coefficient} of $\w{v}$.
 If $\kappa=0$, $\w{v}$ is naturally called a \defin{geodesic vector field}\index{geodesic!vector field}.
-\end{greybox}
+\end{tdef}
 Note that Property~\ref{p:geo:v_pregeodesic} is equivalent to stating that the
 field lines of a pregeodesic vector field are geodesics.
 
@@ -386,17 +386,17 @@ guarantee the existence and uniqueness of the solution.
 
 A few definitions follow naturally:
 
-\begin{greybox}
+\begin{tdef}{inextendible geodesic}{}
 A geodesic $\Li$ is said to be \defin{inextendible}\index{inextendible geodesic}\index{geodesic!inextendible --}
 or \defin{maximal}\index{maximal!geodesic}\index{geodesic!maximal --}
 iff there does not exist any geodesic $\Li'\neq\Li$ such that $\Li\subset\Li'$.
-\end{greybox}
+\end{tdef}
 
-\begin{greybox}
+\begin{tdef}{complete geodesic}{}
 A geodesic $\Li$ is \defin{complete}\index{complete!geodesic}\index{geodesic!complete --}
 iff the interval spanned by any of its affine parameters is the whole real line:
 $I=\R$. A geodesic that is not complete is called \defin{incomplete}\index{incomplete geodesic}\index{geodesic!incomplete --}.
-\end{greybox}
+\end{tdef}
 
 It is easy to show:
 \begin{tprop}{inextendibility of complete geodesics}{}
@@ -425,11 +425,11 @@ a larger one or (ii) the ending of worldline $\Li$ at some (curvature)
 singularity\index{singularity}. A spacetime in which this does not occur
 is called \defin{timelike geodesically complete}\index{timelike!geodesically complete}.
 More generally:
-\begin{greybox}
+\begin{tdef}{geodesically complete manifold}{}
 The pseudo-Riemannian manifold $(\M,\w{g})$ is said to be
 \defin{geodesically complete}\index{geodesically complete}\index{complete!geodesically -- spacetime}
 iff every inextendible geodesic is complete.
-\end{greybox}
+\end{tdef}
 
 \begin{remark}
 A well-known theorem of differential geometry, namely the \defin{Hopf-Rinow theorem}\index{Hopf-Rinow theorem},
@@ -467,7 +467,7 @@ We refer to O'Neill's textbook \cite{ONeil83}, p.~68 for the proof.
 One can make use of geodesics to map a tangent space to
 the base manifold:
 
-\begin{greybox}
+\begin{tdef}{exponential map}{}
 Given a point $p$ in a pseudo-Riemannian manifold $(\M,\w{g})$,
 let $\mathcal{E}_p$ be the subset of the tangent space $T_p\M$ defined
 by $\w{V}\in \mathcal{E}_p$ iff either $\w{V}=0$ or
@@ -485,7 +485,7 @@ The \defin{exponential map at $p$}\index{exponential map} is then defined as
         \end{array} \right.
     \end{array}
 \ee
-\end{greybox}
+\end{tdef}
 In other words, $\exp_p$ maps a nonzero vector $\w{V}$ in the tangent space to $\M$ at $p$
 to the point of $\M$ of affine parameter $\lambda=1$
 along the unique geodesic through $p$ such
@@ -577,7 +577,7 @@ In particular, $\left.\D\exp_p\right| _0$ is invertible.
 
 \subsection{Normal coordinates} \label{s:geo:normal_coord}
 
-\begin{greybox}
+\begin{tdef}{normal neighborhood}{}
 Given $p\in\M$, a \defin{normal neighborhood}\index{normal!neighborhood}\index{neighborhood!normal --}
 of $p$ is a neighborhood $\mathscr{U}$ of $p$ that is the image of a
 starshaped neighborhood of $0\in T_p\M$ under the local diffeomorphism
@@ -589,12 +589,12 @@ implies $t\w{V}\in U$ for any $t\in[0,1]$. A
 $\mathscr{U}$ is an open subset of $\M$ that is a normal neighborhood of each
 of its points. It follows that any two points $p$ and $q$ of a convex normal neighborhood $\mathscr{U}$
 can be connected by a geodesic lying entirely in $\mathscr{U}$.
-\end{greybox}
+\end{tdef}
 
 On a normal neighborhood, one may define coordinates linked to geodesics
 as follows.
 
-\begin{greybox}
+\begin{tdef}{geodesic normal coordinates}{}
 Let $\mathscr{U}$ be a normal neighborhood of $p\in\M$ and $(\w{E}_\alpha)_{0\leq \alpha\leq n-1}$
 be a basis of $T_p\M$. If $(\w{E}^\alpha)$ stands for the basis of $T_p^*\M$
 dual to $(\w{E}_\alpha)$, the map
@@ -609,7 +609,7 @@ is a coordinate chart on $\mathscr{U}$, which is called
 \defin{geodesic normal coordinates}\index{geodesic!normal coordinates}
 (often shorten to \defin{normal coordinates}\index{normal!coordinates})
 \defin{associated with the basis} $(\w{E}_\alpha)$.
-\end{greybox}
+\end{tdef}
 In other words, normal coordinates $(x^\alpha)$ on $\mathscr{U}$ are such
 that the tangent vector $x^\mu(q) \w{E}_\mu\in T_p\M$ has precisely
 $q$ as image by the exponential map:
@@ -733,7 +733,7 @@ i.e. $\D s := \sqrt{\w{g}(\D\w{x},\D\w{x})}$, since $\w{g}(\D\w{x},\D\w{x})$
 can be negative. Rather, it is quite natural to employ instead
 $\D s := \sqrt{|\w{g}(\D\w{x},\D\w{x})|}$. Using $\D\w{x} = \w{v}\,\D \lambda$
 [Eq.~(\ref{e:bas:dell_v_dlamb})], we end up with the following definition:
-\begin{greybox}
+\begin{tdef}{length of a curve}{}
 The \defin{length}\index{length of a curve} of a curve
 $\Li$ connecting two points $p$ and $q$
 in a pseudo-Riemannian manifold $(\M,\w{g})$ is the real number
@@ -745,7 +745,7 @@ where $\lambda$ is some parameter along $\Li$, $\lambda_p$
 (resp. $\lambda_q$) being its value at $p$ (resp. $q$),
 $\w{v} = \D\w{x}/\D\lambda$ is the associated tangent vector field,
 and we assume $\lambda_q \geq \lambda_p$.
-\end{greybox}
+\end{tdef}
 Thanks to the transformation law (\ref{e:geo:change_tangent_vector}), it is
 easy to check that the value of $L_{(p,q)}(\Li) $ is independent from
 the choice of the parametrization of $\Li$, i.e. for a fixed
@@ -1201,7 +1201,7 @@ symmetry (isometry), there is a generalization of the Killing equation
 (\ref{e:neh:Killing_equation}) to tensors of higher ranks, which is not directly related to any symmetry of the metric tensor. It is
 however interesting since it leads to conserved quantities along geodesics.
 
-\begin{greybox}
+\begin{tdef}{Killing tensor}{}
 A \defin{Killing tensor}\index{Killing!tensor} (also called a
 \defin{Stäckel-Killing tensor}\index{Stäckel-Killing tensor} \cite{Carte73a})
 of rank $p\geq 1$ in the
@@ -1210,7 +1210,7 @@ that is fully symmetric and whose covariant derivative obeys
 \be \label{e:geo:def_Killing_tensor}
     \nabla_{(\alpha_1} K_{\alpha_2\ldots\alpha_{p+1})} = 0 .
 \ee
-\end{greybox}
+\end{tdef}
 
 \begin{example} \label{x:geo:trivial_Killing_tensors}
 A trivial example of Killing tensor is the metric tensor $\w{g}$ itself.

@@ -24,24 +24,26 @@ must be a Killing horizon.
 
 To model the event horizon of a black hole in equilibrium, it is quite
 natural to consider a null hypersurface with a vanishing expansion along
-its null normals and whose cross-sections are
-closed (compact without boundary\footnote{Cf. the discussion in Sec.~\ref{s:def:spacelike_sections}.}).
-The closed aspect enforces the ``localized'' facet
-in the naive definition of a black hole (Definition~\ref{d:glo:naive_BH}), while
-the vanishing expansion reflects the equilibrium state.
+its null normals (cf. Property~\ref{p:def:expansion_indep_cs}) and whose cross-sections are
+closed (compact without boundary\footnote{Cf. the discussion in Sec.~\ref{s:def:spacelike_sections}.}, like the sphere or the torus). The vanishing expansion reflects the equilibrium state, while
+the closed character of cross-sections enforces the ``localized'' facet
+in the naive definition of a black hole (Definition~\ref{d:glo:naive_BH}).
 
 \begin{tdef}{non-expanding horizon}{}
-A \defin{non-expanding horizon}\index{non-expanding horizon}\index{horizon!non-expanding --} is a null hypersurface $\Hor$ having the
-topology
-\be \label{e:neh:H_topology}
-    \Hor \simeq \R \times \Sp,
-\ee
-where $\Sp$ is a closed manifold\index{closed!manifold} of dimension $n-2$,
-and such that the expansion of $\Hor$ along any null normal $\wl$ vanishes
+A \defin{non-expanding horizon}\index{non-expanding horizon}\index{horizon!non-expanding --} in a $n$-dimensional spacetime is a null hypersurface $\Hor$ such that
+\begin{itemize}
+\item[(i)] the expansion of $\Hor$ along any null normal $\wl$ vanishes
 identically:
 \be
-    \theta_{(\wl)} = 0 .
+    \theta_{(\wl)} = 0 ;
 \ee
+\item[(ii)] the topology of $\Hor$ is
+\be \label{e:neh:H_topology}
+    \Hor \sim \R \times \Sp_0 ,
+\ee
+where $\Sp_0$ is a closed manifold\index{closed!manifold} of dimension $n-2$,
+and all the complete cross-sections of $\Hor$ have the topology of $\Sp_0$.
+\end{itemize}
 \end{tdef}
 
 \begin{remark}
@@ -58,12 +60,13 @@ For a black hole out of equilibrium, one has generically $\theta_{(\wl)} > 0$,
 as we shall see in Chap.~\ref{s:evo}.
 
 \begin{example}[Schwarzschild horizon]
-In view of Eq.~(\ref{e:def:theta_Schw_hor}), we may assert that the
-Schwarz\-schild horizon considered in Examples~\ref{x:def:Schw_hor}, \ref{x:def:Schw_hor2},
+The Schwarzschild horizon $\Hor$ considered in Examples~\ref{x:def:Schw_hor}, \ref{x:def:Schw_hor2},
 \ref{x:def:Schw_hor3}, \ref{x:def:Schw_hor4}, \ref{x:def:Schw_hor5}, \ref{x:def:Schw_hor6},
 \ref{x:def:Schw_hor7}, \ref{x:def:Schw_hor8} and \ref{x:def:Schw_hor9}
-of Chap.~\ref{s:def}
-is a non-expanding horizon.
+of Chap.~\ref{s:def} has $\theta_{(\wl)} = 0$ [Eq.~(\ref{e:def:theta_Schw_hor})]
+and has the topology $\Hor \sim \R\times \SS^2$ (cf. Fig.~\ref{f:def:Schwarz_horizon}),
+with the complete cross-sections having the topology $\SS^2$ (cf. Example~\ref{x:def:Schw_hor4}).
+Hence $\Hor$ is a non-expanding horizon.
 \end{example}
 
 \begin{example}[null hyperplane and light cone as counter-examples]
@@ -560,12 +563,12 @@ This is a direct consequence of the identity (\ref{e:bas:Lie_adapted}).
 
 \subsection{Definition and examples of Killing horizons} \label{s:neh:def_Killing_hor}
 
-\begin{greybox}
+\begin{tdef}{Killing horizon}{neh:Killing_horizon}
 A \defin{Killing horizon}\index{Killing!horizon}\index{horizon!Killing --} is
 a connected null hypersurface $\Hor$ in a spacetime $(\M,\w{g})$ admitting a
 Killing vector field $\w{\xi}$ such that, on $\Hor$, $\w{\xi}$ is
 normal to $\Hor$.
-\end{greybox}
+\end{tdef}
 
 Thus the existence of a Killing horizon requires that the spacetime $(\M,\w{g})$ has
 some continuous symmetry
@@ -573,14 +576,15 @@ some continuous symmetry
 1-parameter group, as described in Sec.~\ref{s:neh:symmetries}.
 Since the normal to a null hypersurface is tangent to its null geodesic
 generators and a Killing vector is tangent to the orbits of the isometry group,
-a definition equivalent to the above one is:
-\begin{greybox}
+a definition equivalent to the above one is
+
+\begin{tdef}{Killing horizon}{}
 A \defin{Killing horizon} is a connected null
 hypersurface $\Hor$ whose null geodesic generators are orbits of a
 1-parameter group of isometries of $(\M,\w{g})$.
-\end{greybox}
+\end{tdef}
 
-Its immediately follows from the definition that the Killing vector $\w{\xi}$ is non-vanishing
+It immediately follows from the definition that the Killing vector $\w{\xi}$ is non-vanishing
 on $\Hor$ (a normal to a hypersurface cannot vanish) and is null on $\Hor$:
 \be \label{s:neh:xi_on_KH}
     \left. \w{\xi} \right| _{\Hor} \not= 0
@@ -588,7 +592,7 @@ on $\Hor$ (a normal to a hypersurface cannot vanish) and is null on $\Hor$:
     \left. \w{\xi}\cdot\w{\xi} \right| _{\Hor} = 0 .
 \ee
 
-We shall see in Chap.~\ref{s:sta} that in a stationary spacetime, under some rather generic
+We shall see in Chap.~\ref{s:sta} that in a stationary spacetime ruled by general relativity and under some rather generic
 hypotheses, a (connected part of a) black hole
 event horizon must be a Killing horizon.
 
@@ -695,10 +699,10 @@ under the action of a single 1-dimensional subgroup of the Lorentz group.
 Actually the future light cone is an example of a more general structure,
 which Carter has termed a
 \defin{local isometry horizon}\index{local isometry horizon}\index{isometry!horizon}\index{horizon!local isometry --} \cite{Carte67,Carte69}: a null hypersurface that is invariant under
-some group $G$ of isometries (here: the Lorentz group) and such that each null
+some group $G$ of isometries (here, the Lorentz group) and such that each null
 geodesic generator is an orbit of some 1-dimensional subgroup of $G$,
 this subgroup being not necessarily the same from one null generator to the next
-(here: using Minkowskian spherical
+(here, using Minkowskian spherical
 coordinates $(t,r,\th,\ph)$,
 the null geodesic generator through the point of coordinates $(1,1,\th_0,\ph_0)$
 is the orbit of this point under the subgroup of boosts in the plane
@@ -1712,7 +1716,7 @@ particularly important for black hole physics.
 
 \subsection{Definition and first properties} \label{s:sta:bifur_def}
 
-\begin{greybox}
+\begin{tdef}{bifurcate Killing horizon}{}
 Let $(\M,\w{g})$ be a $n$-dimensional spacetime endowed with a Killing vector
 field $\w{\xi}$. A
 \defin{bifurcate Killing horizon}\index{bifurcate!Killing horizon}\index{Killing!horizon!bifurcate --}\index{horizon!bifurcate Killing --} is the
@@ -1729,7 +1733,7 @@ Killing horizons with respect to $\w{\xi}$.
 \end{itemize}
 The $(n-2)$-dimensional submanifold $\Sp$ is called the
 \defin{bifurcation surface}\index{bifurcation!surface} of $\Hor$.
-\end{greybox}
+\end{tdef}
 
 \begin{figure}
 \centerline{\includegraphics[width=0.5\textwidth]{sta_bifur_Kill_hor.pdf}}
@@ -1788,9 +1792,9 @@ to $\Phi_{\D t}(p) = p$.
 
 \begin{remark}
 Contrary to what the name may suggest, a bifurcate Killing horizon is \emph{not}
-a Killing horizon, for the latter, as defined in Sec.~\ref{s:neh:def_Killing_hor},
+a Killing horizon. Indeed, according to Definition~\ref{d:neh:Killing_horizon} (Sec.~\ref{s:neh:def_Killing_hor}), a Killing horizon
 is a regular (i.e. embedded) hypersurface
-of $\M$ (cf. Sec.~\ref{s:bas:embed} in Appendix~\ref{s:bas}), while
+of $\M$ (cf. Sec.~\ref{s:bas:embed}), while
 the union of two hypersurfaces is not in general a hypersurface. Moreover
 on a Killing horizon, the Killing vector field is nowhere vanishing
 [cf. Eq.~(\ref{s:neh:xi_on_KH})], while on
