@@ -173,6 +173,14 @@
 {\refstepcounter{exampleCounter}
 \par\medskip\noindent\small\textbf{Example \theexampleCounter\ifthenelse{\equal{#1}{}}{: }{ (#1):}}}%
 {\par\medskip}
+%\tcolorboxenvironment{example}{breakable, enhanced, colback=green!5!white,
+%left=0.5ex, right=0.5ex, top=0.5ex, bottom=0.5ex, boxsep=0.5ex,
+%fontupper=\small}
+
+%\newtcolorbox[auto counter,counter within=chapter]{texample}[1][]{%
+%colback=green!5!white,colframe=green!75!black,fonttitle=\bfseries,
+%title=Example~\thetcbcounter: #1}
+
 
 \newenvironment{hist}[1][]%
 %{\par\medskip\noindent\small\textbf{Historical note:}}%
@@ -184,17 +192,21 @@
 \newenvironment{notation}%
 {\par\smallskip\noindent\textbf{Notation:}}%
 {\par\smallskip}
-
 \tcolorboxenvironment{notation}{colback=olive!5!white}
 
 \newtcbtheorem[number within=chapter]{tprop}{Property}%
-{breakable, enhanced, colback=red!5!white,colframe=red!50!black,fonttitle=\bfseries}{p}
+{breakable, enhanced, colback=red!5!white, colframe=red!50!black, fonttitle=\bfseries}{p}
 
 \newtcbtheorem[number within=chapter, use counter from=tprop]{tlemma}{Lemma}%
-{breakable, enhanced, colback=red!5!white,colframe=red!50!black,fonttitle=\bfseries}{p}
+{breakable, enhanced, colback=red!5!white, colframe=red!50!black, fonttitle=\bfseries}{p}
 
 \newtcbtheorem[number within=chapter]{tdef}{Definition}%
-{breakable, enhanced, colback=olive!5!white,colframe=olive!80!black,fonttitle=\bfseries}{d}
+{breakable, enhanced, colback=olive!5!white, colframe=olive!80!black, fonttitle=\bfseries}{d}
+
+\newtcbtheorem[number within=chapter]{texample}{Example}%
+{breakable, enhanced, colback=green!5!white, colframe=green!50!black,%
+left=0.5ex, right=0.5ex, top=0.5ex, bottom=0.5ex, boxsep=0.5ex,%
+fonttitle=\bfseries, fontupper=\small}{x}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -228,7 +240,7 @@ CNRS, Observatoire de Paris - PSL, Sorbonne Université\\
 \href{mailto:eric.gourgoulhon@obspm.fr}{\texttt{eric.gourgoulhon@obspm.fr}}\\[8ex]
 \url{https://relativite.obspm.fr/blackholes}\\[8ex]
 {\Huge --- DRAFT ---}\\[2ex]
-{version of 12 August 2026}\\[2ex]
+{version of 13 August 2026}\\[2ex]
 \emph{\Large Corrections and comments are welcome}
 \end{center}
 \end{titlepage}
