@@ -21,7 +21,7 @@
 \usepackage{fancyhdr}
 \usepackage{minitoc}
 \usepackage{graphicx}
-\usepackage{color}
+\usepackage[x11names]{xcolor}
 
 \usepackage{bm} % bold math
 \SetSymbolFont{largesymbols}{bold}{OMX}{txex}{b}{n}  % to have bold large parentheses
@@ -174,10 +174,9 @@
 %\par\medskip\noindent\small\textbf{Example \theexampleCounter\ifthenelse{\equal{#1}{}}{: }{ (#1):}}}%
 %{\par\medskip}
 
-\newenvironment{hist}[1][]%
-%{\par\medskip\noindent\small\textbf{Historical note:}}%
-{\par\medskip\noindent\small\textbf{Historical note \ifthenelse{\equal{#1}{}}{: }{ (#1):}}}%
-{\par\medskip}
+%\newenvironment{hist}[1][]%
+%{\par\medskip\noindent\small\textbf{Historical note \ifthenelse{\equal{#1}{}}{: }{ (#1):}}}%
+%{\par\medskip}
 
 \newenvironment{notation}%
 {\par\smallskip\noindent\textbf{Notation:}}%
@@ -196,9 +195,19 @@
 {breakable, enhanced, colback=olive!5!white, colframe=olive!80!black, fonttitle=\bfseries}{d}
 
 \newtcbtheorem[number within=chapter]{texample}{Example}%
-{breakable, enhanced, colback=green!5!white, colframe=green!50!black,%
+{breakable, enhanced, colback=green!5!white, colframe=green!40!black,%
 left=0.5ex, right=0.5ex, top=0.5ex, bottom=0.5ex, boxsep=0.5ex,%
 fonttitle=\bfseries, fontupper=\small}{x}
+
+\newtcolorbox{hist}[1][]{title=Historical note \ifthenelse{\equal{#1}{}}{ }{: #1},%
+breakable, enhanced, colback=PaleTurquoise3!5!white, colframe=PaleTurquoise3!50!black,%
+left=0.5ex, right=0.5ex, top=0.5ex, bottom=0.5ex, boxsep=0.5ex,%
+fonttitle=\bfseries, fontupper=\small}
+
+%\newtcbtheorem[number within=chapter]{thist}{Historical note}%
+%{breakable, enhanced, colback=PaleTurquoise3!5!white, colframe=PaleTurquoise3!50!black,%
+%left=0.5ex, right=0.5ex, top=0.5ex, bottom=0.5ex, boxsep=0.5ex,%
+%fonttitle=\bfseries, fontupper=\small}{h}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -232,7 +241,7 @@ CNRS, Observatoire de Paris - PSL, Sorbonne Université\\
 \href{mailto:eric.gourgoulhon@obspm.fr}{\texttt{eric.gourgoulhon@obspm.fr}}\\[8ex]
 \url{https://relativite.obspm.fr/blackholes}\\[8ex]
 {\Huge --- DRAFT ---}\\[2ex]
-{version of 16 August 2026}\\[2ex]
+{version of 17 August 2026}\\[2ex]
 \emph{\Large Corrections and comments are welcome}
 \end{center}
 \end{titlepage}
