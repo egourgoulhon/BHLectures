@@ -1,6 +1,6 @@
 # BHLectures
 
-Lectures notes [Geometry and physics of black holes](https://relativite.obspm.fr/blackholes)
+Lectures notes [Black hole theory](https://relativite.obspm.fr/blackholes)
 
 - IAP, Paris, France, March-April 2016
 - CP3, Louvain-la-Neuve, Belgium, November-December 2016
