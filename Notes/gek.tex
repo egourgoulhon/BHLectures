@@ -6,15 +6,18 @@
 
 \section{Introduction}
 
-In various occasions during our study of Kerr spacetime in Chap.~\ref{s:ker}, we have already
+In various occasions during our study of Kerr spacetime in Chap.~\ref{s:ker}, we have
 encountered some peculiar geodesics, namely
 the principal null geodesics. In this chapter, we begin the systematic study of causal
-(timelike or null) geodesics in Kerr spacetime.
-First, taking advantage of an algebraic particularity of this spacetime, giving
-birth to a non-trivial Killing tensor and the associated Carter constant,
-we shall see in Sec.~\ref{s:ges:equat_geod_motion}
-that Kerr geodesic motion is fully governed by a system of first order equations,
-the solution of which can be obtained by quadrature.
+(i.e. timelike or null) geodesics in Kerr spacetime.
+We shall start by investigating the first integrals of geodesic motion
+(Sec.~\ref{s:gek:integrals_motion}), among which the Carter constant.
+The latter arises from an algebraic particularity of Kerr spacetime, which gives
+birth to a non-trivial Killing tensor. Along with the conserved energy $E$, conserved angular
+momentum $L$ and the particle mass $\mu$, it provides a fourth constant of motion,
+which allows us to reduce the geodesic motion to a system of first order equations,
+the solution of which can be obtained by quadrature, as we shall see
+in Sec.~\ref{s:ges:equat_geod_motion}.
 The basic properties of geodesics that can be inferred from this system are derived
 in Sec.~\ref{s:ges:general_prop}.
 Then we focus on timelike geodesics (Sec.~\ref{s:gek:timelike}) and in particular
@@ -25,11 +28,13 @@ The detailed study of null geodesics is deferred to the next chapter.
 
 Of course, when the Kerr spin parameter $a$ tends to zero, all
 results in this chapter reduce to those obtained for Schwarzschild geodesics
-in Chap.~\ref{s:ges}. As already suggested in the introduction of Chap.~\ref{s:ges}, before moving on, the reader might want to have
+in Chap.~\ref{s:ges}. As already suggested in the introduction of Chap.~\ref{s:ges}, before moving on, the reader might want to take
 a look at Appendix~\ref{s:geo}, which recaps the properties of geodesics in
 pseudo-Riemannian manifolds.
 
-\section{Equations of geodesic motion} \label{s:ges:equat_geod_motion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{First integrals of motion} \label{s:gek:integrals_motion}
 
 \subsection{Introduction} \label{s:gek:geod_motion_intro}
 
@@ -88,8 +93,7 @@ this property here. Fortunately there exists another
 integral of motion, known as the \emph{Carter constant}; it arises from a remarkable property
 of Kerr spacetime: the existence of a non-trivial Killing tensor (Sec.~\ref{s:gek:Carter_const}).
 This makes a total of four integral of motions,
-which makes the problem integrable (Secs.~\ref{s:gek:first_order_system} to
-\ref{e:gek:integration}).
+which makes the problem integrable (Sec.~\ref{s:ges:equat_geod_motion}).
 
 
 \subsection{Integrals of motion from spacetime symmetries} \label{s:gek:int_motion_sym}
@@ -415,8 +419,28 @@ which can be rewritten as
 \ee
 Note that we have expressed $p_r$ in terms of $p^r$ via Eq.~(\ref{e:gek:p_r_p_th_cov_con}).
 
-Some physical interpretation of the Carter constant can be inferred from the above
-expression, as soon as the particle $\mathscr{P}$ of worldline $\Li$ visits the asymptotic region $r\to+\infty$. Indeed, given
+\begin{texample}{Carter constant for equatorial motion in Schwarzschild spacetime}{x:gek:K_Schwarz}
+For $a=0$ (Schwarzschild limit), $\Delta = r(r - 2m)$, $\rho = r$
+and Eq.~\eqref{e:gek:Kcarter_first_int} reduces to
+\[
+    \mathscr{K} = r^2 \left[ \left( 1 - \frac{2m}{r} \right) ^{-1} \left( E^2 -  (p^r)^2 \right)
+        - \mu^2 \right] .
+\]
+Now, for a motion in the equatorial plane ($\th=\pi/2$), Eq.~\eqref{e:ges:dot_r_square} gives
+$E^2 -  (p^r)^2 =  ( 1 - {2m}/{r} ) \left( \mu^2 + {L^2}/{r^2} \right)$.
+Hence there comes a very simple expression for the Carter constant:
+\be \label{e:gek:K_Schwarz}
+    \encadre{ \mathscr{K} = L^2}_{\; a=0,\, \th=\frac{\pi}{2}} \ .
+\ee
+Since in Schwarzschild spacetime there is no loss of generality to consider that
+a geodesic lies in the equatorial plane (Property~\ref{p:ges:planar_motion}), we conclude
+that the Carter constant does not bring any new piece of information for
+Schwarzschild geodesics. This is of course not the case for $a\neq 0$.
+\end{texample}
+
+Beside the Schwarzschild limit, some physical interpretation of the Carter constant
+can be inferred from
+expression~\eqref{e:gek:Kcarter_first_int}, as soon as the particle $\mathscr{P}$ of worldline $\Li$ visits the asymptotic region $r\to+\infty$. Indeed, given
 that $\Delta := r^2 - 2m r + a^2 \sim r^2$  and $\rho^4 := (r^2 + a^2\cos^2\th)^2 \sim r^4$
 as $r\to+\infty$, we deduce from Eq.~(\ref{e:gek:Kcarter_first_int})
 that
@@ -447,6 +471,11 @@ the square of $\mathscr{P}$'s angular momentum as measured by the inertial obser
 \be \label{e:gek:Kcarter_asymptot}
     \mathscr{K} \underset{r\to + \infty}{\sim} \w{L}_{\rm tot} \cdot \w{L}_{\rm tot} .
 \ee
+Of course, at the Schwarzschild limit and for $\th=\pi/2$,
+we recover the value \eqref{e:gek:K_Schwarz} since
+$\w{L}_{\rm tot} = L \w{e}_{(z)}$ with $\w{e}_{(z)} = - \w{e}_{(\th)}$
+in the equatorial plane.
+
 
 We shall see later that one has always $\mathscr{K}\geq 0$. For now, let us
 establish the following characterization of null geodesics with $\mathscr{K} = 0$:
@@ -543,10 +572,14 @@ Zden\v{e}k Stuchl\'{\i}k\index[pers]{Stuchl\'{\i}k, Z.}
 in 1976 \cite{BicakS76}.
 \end{hist}
 
-\subsection{First order equations of motion} \label{s:gek:first_order_system}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We have thus four first integrals of the geodesic equation
-(\ref{e:gek:eq_geod}) at disposal:
+\section{First order system for geodesic motion} \label{s:ges:equat_geod_motion}
+
+\subsection{Reduction to first order equations} \label{s:gek:first_order_system}
+
+We have obtained in Sec.~\ref{s:gek:integrals_motion} four first integrals of the geodesic equation
+(\ref{e:gek:eq_geod}):
 $E$ [Eq.~(\ref{e:gek:E_first_int})], $L$ [Eq.~(\ref{e:gek:L_first_int})],
 $\mu^2$ [Eq.~(\ref{e:gek:mu2_first_int})] and $\mathscr{K}$
 [Eq.~(\ref{e:gek:Kcarter_first_int})]. In the expressions of each of these integrals,
@@ -608,7 +641,7 @@ Thanks to it, we may rewrite (\ref{e:gek:def_Theta}) as
     \encadre{ \Theta(\th) = Q + \cos^2\th \left[ a^2 (E^2 - \mu^2)
     - \frac{L^2}{\sin^2\th} \right] } .
 \ee
-Following the standard usage, we call $Q$ the \defin{Carter constant}\index{Carter!constant}
+Following standard usage, we call $Q$ the \defin{Carter constant}\index{Carter!constant}
 as well. To distinguish between the two Carter constants, we shall specify \emph{Carter constant $Q$}
 or \emph{Carter constant $\mathscr{K}$}. As we shall see in Sec.~\ref{s:gek:th_motion},
 $Q$ is well adapted to the description of the $\th$-motion of geodesics. On the other
@@ -624,9 +657,22 @@ Eqs.~(\ref{e:gek:def_Q}) and (\ref{e:gek:Kcarter_asymptot}) the following behavi
    Q \underset{r\to + \infty}{\sim} \w{L}_{\rm tot} \cdot \w{L}_{\rm tot}
     - L^2 + a E (2 L - a E) .
 \ee
-Hence, if $a=0$, $Q$ can be interpreted as the square of
+
+\begin{texample}{Carter constant $Q$ in Schwarzschild spacetime}{}
+If $a=0$ (Schwarzschild limit), Eq.~\eqref{e:gek:def_Q} reduces to
+$Q = \mathscr{K} - L^2$ and
+Eq.~\eqref{e:gek:Q_Ltot2_L2} shows that
+$Q$ can be interpreted as the square of
 the part of $\mathscr{P}$'s angular momentum (measured by the asymptotic inertial
 observer) that is not in $L$.
+Moreover, for a geodesic in the equatorial plane, Eq.~\eqref{e:gek:K_Schwarz} yields
+\be
+    \encadre{ Q = 0}_{\; a=0,\, \th=\frac{\pi}{2}} \ .
+\ee
+Actually we shall see that $Q=0$ for equatorial geodesics
+even for $a \neq 0$
+(Property~\ref{p:gek:latitudinal_motion} below).
+\end{texample}
 
 \begin{texample}{Carter constant $Q$ of the principal null geodesics}{}
 As (\ref{e:gek:K_zero_null}) shows, for a principal null geodesic, be it ingoing
@@ -688,7 +734,13 @@ the inverse metric (cf. the notebook~\ref{s:sam:Kerr_Killing_tensor}):
 In view of the relation (\ref{e:gek:pa_der_xa}) between the $p^\alpha$'s
 and the derivatives of the functions $x^\alpha(\lambda)$, we may
 collect Eqs.~(\ref{e:gek:rho2_pt}), (\ref{e:gek:rho2_pph}), (\ref{e:gek:p_r_R})
-and (\ref{e:gek:def_Theta}) as the first-order system
+and (\ref{e:gek:def_Theta}) as the first-order system:
+
+\begin{tprop}{system of first order equations for geodesic motion}{}
+The geodesic motion in Kerr spacetime is
+governed by four first-order equations expressing the derivatives of
+the Boyer-Lindquist coordinates $(t,r,\th,\ph)$ with respect to the affine
+parameter $\lambda$ (associated to the 4-momentum $\w{p}$, cf. Eq.~\eqref{e:gek:pa_der_xa}) along the geodesic:
 \begin{subequations}
 \label{e:gek:eom_first_order}
 \begin{align}
@@ -707,6 +759,7 @@ is $+1$ (resp. $-1$) in the parts of the geodesic $\Li$ where $r$ increases
 (resp. decreases) with $\lambda$. Similarly, $\eps_\th$
 is $+1$ (resp. $-1$) in the parts of $\Li$ where $\th$ increases
 (resp. decreases) with $\lambda$.
+\end{tprop}
 
 We may rewrite Eq.~(\ref{e:gek:def_R}) for $R(r)$ in terms of $Q$
 instead of $\mathscr{K}$, via Eq.~(\ref{e:gek:def_Q}):
@@ -725,11 +778,10 @@ $R(r) \geq 0$ [Eq.~(\ref{e:gek:R_non_neg})] and $\Theta(\th) \geq 0$
 
 Let $\Li$ be a geodesic that is not stuck at some constant value of the
 coordinate $r$.
-We define a \defin{$r$-turning point}\index{turning point!$r$-turning point} of $\Li$ as a point $p_0\in\Li$, the $r$-coordinate $r_0$ of which obeys
+We define a \defin{$r$-turning point}\index{turning point!$r$-turning point} of $\Li$ as a point $p_0\in\Li$, the $r$-coordinate $r_0$ of which is a simple root of the polynomial $R$:
 \be \label{e:gek:def_r_turning}
-    R(r_0) = 0 \quad\mbox{and}\quad R'(r_0) \neq 0 ,
+    R(r_0) = 0 \quad\mbox{and}\quad R'(r_0) \neq 0 .
 \ee
-i.e. $r_0$ is a simple root of the polynomial $R$.
 
 We have then
 \be \label{e:gek:der_r_turning}
