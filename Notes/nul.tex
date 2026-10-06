@@ -723,7 +723,8 @@ in order to ensure that the signature of $\w{g}$ is $(-,+,\ldots,+)$.
 Since $\Sp\subset\Hor$, the null normal $\wl$ to $\Hor$ is orthogonal to any vector
 tangent to $\Sp$, which implies $\wl \in T_p^\perp\Sp$. One can supplement $\wl$
 by another null vector to form a basis of $T_p^\perp\Sp$:
-\begin{tprop}{complement null normal to a cross-section}{}
+
+\begin{tprop}{transverse null vector normal to a cross-section}{}
 At each point $p$ of a cross-section $\Sp$ of a null hypersurface $\Hor$
 with future-directed null normal $\wl$,
 there exists a unique future-directed null vector $\w{k}$ transverse to $\Hor$ such that
@@ -731,6 +732,8 @@ there exists a unique future-directed null vector $\w{k}$ transverse to $\Hor$ s
         \w{k}\cdot\wl = -1 \qand
         T_p^\perp\Sp = \mathrm{Span}\left( \wl, \w{k} \right) .
 \ee
+We call $\w{k}$ the \defin{transverse null vector normal to}\index{transverse null normal} $\Sp$. Its direction is
+fixed and its ``length'' is fixed by $\w{k}\cdot\wl = -1$.
 \end{tprop}
 
 \begin{proof}
@@ -744,9 +747,20 @@ Since $\wl$ and $\w{k}$ are non-collinear vectors of $T_p^\perp\Sp$ and
 $\dim T_p^\perp\Sp = 2$, they constitute a basis of $T_p^\perp\Sp$.
 \end{proof}
 
+\begin{figure}
+\centerline{\includegraphics[width=0.45\textwidth]{nul_transverse_normal.pdf}}
+\caption[]{\label{f:nul:transverse_normal} \footnotesize
+Two null vectors $\w{k}$ and $\w{k}'$ both transverse to the null
+hypersurface $\Hor$ at a given point $p$ and obeing $\wl\cdot\w{k} = -1$ and
+$\wl\cdot\w{k}' = -1$, but with $\w{k}$ normal to the cross-section $\Sp$
+and $\w{k}'$ normal to the cross-section $\Sp'$.
+The straight lines $\Delta$ and $\Delta'$, which are tangent to the null cone at $p$, indicate the directions of $\w{k}$ and $\w{k}'$ respectively.
+}
+\end{figure}
+
 \begin{remark}
 While $\wl$ is independent of the choice of the cross-section $\Sp$ of $\Hor$
-through $p$, $\w{k}$ does depend on $\Sp$.
+through $p$, $\w{k}$ does depend on $\Sp$ (cf. Fig.~\ref{f:nul:transverse_normal}).
 \end{remark}
 
 \begin{tprop}{extension of $\w{q}$}{}
@@ -777,10 +791,9 @@ to $\Sp$, which are uniquely defined by the direct sum (\ref{e:def:TM_direct_sum
 \begin{proof}
 Thanks to (\ref{e:def:k_el_minus_one}), we may write the
 orthogonal decompositions (\ref{e:def:decomp_u_v}) as
-\[
-    \w{u} = \w{u}^\parallel + u^0 \wl + u^1 \w{k} \quad\mbox{and}\quad
-    \w{v} = \w{v}^\parallel + v^0 \wl + v^1 \w{k} .
-\]
+$\w{u} = \w{u}^\parallel + u^0 \wl + u^1 \w{k}$ and
+$\w{v} = \w{v}^\parallel + v^0 \wl + v^1 \w{k}$, where $u^0$, $u^1$, $v^0$ and $v^1$
+are some real numbers.
 Using $\wl\cdot\wl=0$, $\w{k}\cdot\w{k}=0$ and $\wl\cdot\w{k}=-1$, we have then
 $ \w{u}\cdot\w{v}  =  \w{u}^\parallel \cdot\w{v}^\parallel - u^0 v^1 - u^1 v^0$,
 so that $\w{q}$
@@ -1477,7 +1490,7 @@ where we have let appear the 1-form $\w{\omega}$ defined by
     \omega_\alpha := - k^\mu \nabla_\nu \el_\mu \Pi^\nu_{\ \, \alpha}
     = - k^\mu \nabla_\alpha \el_\mu - k^\mu k^\nu \nabla_\mu \el_\nu \, \el_\alpha .
 \ee
-Here $\w{\Pi}$ is the projector onto $\Hor$ along $\w{k}$:
+Here $\w{\Pi}$ is the projector onto $\Hor$ along the transverse null vector $\w{k}$:
 \be \label{e:def:def_proj_H_along_k}
     \Pi^\alpha_{\ \, \beta} = \delta^\alpha_{\ \, \beta} + k^\alpha \ell_\beta .
 \ee
